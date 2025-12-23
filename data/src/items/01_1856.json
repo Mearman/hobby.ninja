@@ -2,9 +2,60 @@
 	"id": "01_1856",
 	"type": "item",
 	"name": {
-		"ja": "ガンダムデカールNo.47 HG 1/144 機動戦士ガンダム OO用2",
-		"en": "Gundam Decal No.47 HG 1/144 Mobile Suit Gundam OO 2"
+		"ja": "ガンダムデカールNo.47 HG 1/144 機動戦士ガンダムOO用2",
+		"en": "GUNDAM DECAL 47 GUNDAM OO MULTIUSE 2"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		},
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]",
+			"en": "MOBILE SUIT GUNDAM OO"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3670",
+			"url": "https://bandai-hobby.net/item/01_3670/",
+			"ja": "ガンダムデカールNo.127 HG 1/144 劇場版 機動戦士ガンダム00汎用1"
+		},
+		{
+			"id": "01_3671",
+			"url": "https://bandai-hobby.net/item/01_3671/",
+			"ja": "ガンダムデカールNo.128 HG 1/144 劇場版 機動戦士ガンダム00汎用2"
+		},
+		{
+			"id": "01_1954",
+			"url": "https://bandai-hobby.net/item/01_1954/",
+			"ja": "HG 1/144 「機動戦士ガンダム00」 2nd Season MSセット[クリアカラー]"
+		},
+		{
+			"id": "01_1953",
+			"url": "https://bandai-hobby.net/item/01_1953/",
+			"ja": "HG 1/144 「機動戦士ガンダム00」 1st Season MSセット[クリアカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,38 +69,27 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"100点以上のラインナップを誇る、大人気ガンダムデカールのシリーズ商品が登場。",
-			"HG 1/144 機動戦士ガンダム OO用2のデカールです。",
+			"HG 1/144 機動戦士ガンダムOO用2のデカールです。",
 			"水転写式デカール"
 		],
 		"en": [
-			"Introducing the popular Gundam decal series, which boasts a lineup of over 100 items.",
-			"Decal for HG 1/144 Mobile Suit Gundam OO 2.",
-			"water transfer decal"
+			"Boasting a lineup of more than 100 items, the popular GUNDAM DECAL series products are now available. HG 1/144 MOBILE SUIT GUNDAM 2 decals for OO. Waterslide decals"
 		]
 	},
-	"images": [
-		"/images/items/01_1856/1000126463_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126463_1.jpg",
+				"path": "/images/items/01_1856/1000126463_1.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1856/",
-	"brandIds": [
-		"hg",
-		"gundam_decal"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3670",
-		"01_3671",
-		"01_1954",
-		"01_1953"
-	],
-	"manualId": "0195"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1856/"
+	}
 }

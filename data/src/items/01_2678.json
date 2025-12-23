@@ -5,6 +5,43 @@
 		"ja": "HGBD:R モビルドールメイ",
 		"en": "HGBD:R Mobile Doll May"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3503",
+			"url": "https://bandai-hobby.net/item/01_3503/",
+			"ja": "ガンダムデカールNo.124 ガンダムビルドダイバーズシリーズ汎用1"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		}
+	],
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -27,62 +64,114 @@
 			"• 表情パーツが３種類付属"
 		],
 		"en": [
-			"• \"Mobile Doll May \" is now available from \" Gundam Build Divers Re:RISE\"!",
+			"• \"Mobile Doll May\" is now available from \"Gundam Build Divers Re:RISE\"!",
 			"• It is possible to rearrange the MS state that Mei is piloting in GBN and her appearance in real life!",
 			"• The beam handgun suspended from the thigh can be held in both hands to recreate battle scenes!",
 			"• Comes with a beam saber and beam seal, allowing you to pose in impressive action poses!",
 			"• Comes with 3 types of expression parts"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ドール状態用表情パーツ×3種",
-			"ドール状態用頭部パーツ×1",
-			"MS状態用頭部パーツ×1",
-			"ライフル×2",
-			"ビームシールド×1",
-			"ビームサーベル×2",
-			"ディスプレイベース×1",
-			"ホイルシール×１",
-			"水転写式デカール×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ドール状態用表情パーツ"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "ドール状態用頭部パーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "MS状態用頭部パーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ライフル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビームシールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール×１"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3601_s_7pj2s6i6bz9b74h6gdg2pljd1sm7.jpg",
+				"path": "/images/items/01_2678/153_3601.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3601_s_o9dwbfhiazzshxvz37oz0ezftzsw.jpg",
+				"path": "/images/items/01_2678/155_3601.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3601_s_aibqnij6ta80tv9cqx8k1oxcu4rb.jpg",
+				"path": "/images/items/01_2678/156_3601.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3601_s_uf7s2outs5cmldo16km9pakmp1k3.jpg",
+				"path": "/images/items/01_2678/157_3601.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3601_s_r5c8mnf77d0m4z4xirbr577yafo2.jpg",
+				"path": "/images/items/01_2678/158_3601.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3601_s_h48005nu26svbh3e2zyp32oe5yxo.jpg",
+				"path": "/images/items/01_2678/159_3601.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3601_s_7gpjrvv9zppsg196lc6a1wjpgjki.jpg",
+				"path": "/images/items/01_2678/189_3601.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3601_s_xtb4n2bo7alpk4cncby9kq60w30e.jpg",
+				"path": "/images/items/01_2678/190_3601.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3601_s_mw7ih5vz0nkzzoo7vzz05mhukb9k.jpg",
+				"path": "/images/items/01_2678/191_3601.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3601_s_hz4ncg0o1mp82c4kqmx79u7hngpr.jpg",
+				"path": "/images/items/01_2678/192_3601.jpg"
+			}
 		],
-		"en": [
-			"Facial expression parts for doll status x 3 types",
-			"Head parts for doll status x 1",
-			"Head parts for MS status x 1",
-			"Rifle x 2",
-			"Beam Seal × 1",
-			"Beam saber x2",
-			"Display base x 1",
-			"Foil Seal×1",
-			"Water transfer decal x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2678/153_3601.jpg",
-		"/images/items/01_2678/155_3601.jpg",
-		"/images/items/01_2678/156_3601.jpg",
-		"/images/items/01_2678/157_3601.jpg",
-		"/images/items/01_2678/158_3601.jpg",
-		"/images/items/01_2678/159_3601.jpg",
-		"/images/items/01_2678/189_3601.jpg",
-		"/images/items/01_2678/190_3601.jpg",
-		"/images/items/01_2678/191_3601.jpg",
-		"/images/items/01_2678/192_3601.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2678/",
-	"brandIds": [],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3503",
-		"01_3562",
-		"01_3565"
-	],
-	"manualId": "0084"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2678/"
 }

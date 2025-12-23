@@ -5,6 +5,54 @@
 		"ja": "ＭＧ 1/100 RGM-89D ジェガン Ｄ型（先行配備機）",
 		"en": "MG 1/100 RGM-89D Jegan D type (advanced deployment machine)"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "item-1000220190",
+			"url": "https://p-bandai.jp/item/item-1000220190/",
+			"ja": "ＨＧ 1/144 ザク・デザートタイプ ピンクパンサー隊機"
+		},
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "item-1000216105",
+			"url": "https://p-bandai.jp/item/item-1000216105/",
+			"ja": "RG 1/144 ソードインパルスガンダムＳｐｅｃＩＩ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4620,
 		"currency": "JPY",
@@ -16,7 +64,6 @@
 		"year": 2020,
 		"month": 6
 	},
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"－－－－－",
@@ -54,7 +101,7 @@
 			"－－－－－",
 			"Earth Federation Military Mass Production Type MS -",
 			"－－－－－",
-			"From \"Mobile Suit Gundam UC MSV\", the Jegan D type pre-deployed machine is made into a master grade three-dimensional figure!",
+			"From \"Mobile Suit GundamUC MSV\", the Jegan D type pre-deployed machine is made into a master grade three-dimensional figure!",
 			"Based on the MG Jegan D type, the characteristic aircraft color is thoroughly reproduced with molding color!",
 			"● Reproduce the characteristic body color of Jegan D type (advanced deployment machine) with molding color.",
 			"The body coloring of the pre-deployed machine, which is based on white and consists of red arranged in various places, is reproduced by parts division and molding color.",
@@ -83,36 +130,46 @@
 			"- Product specifications are scheduled as of 20202. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2798/153_3785.jpg",
-		"/images/items/01_2798/155_3785.jpg",
-		"/images/items/01_2798/156_3785.jpg",
-		"/images/items/01_2798/157_3785.jpg",
-		"/images/items/01_2798/158_3785.jpg",
-		"/images/items/01_2798/159_3785.jpg",
-		"/images/items/01_2798/189_3785.jpg",
-		"/images/items/01_2798/190_3785.jpg",
-		"/images/items/01_2798/191_3785.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2798/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"item-1000220190",
-		"item-1000220189",
-		"item-1000216105"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3785_s_uldgy18riyiow2yzycy767e5cazy.jpg",
+				"path": "/images/items/01_2798/153_3785.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3785_s_5v3vethr7gmsm1tru2nhggr5665o.jpg",
+				"path": "/images/items/01_2798/155_3785.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3785_s_vxs3fv8u4ve8yx4bjyz5nxz2rzmv.jpg",
+				"path": "/images/items/01_2798/156_3785.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3785_s_wyv2d12ij4poxg9rzti3nxcyzuyv.jpg",
+				"path": "/images/items/01_2798/157_3785.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3785_s_jz3pgybi2wcqug7rifou9dxvwxk9.jpg",
+				"path": "/images/items/01_2798/158_3785.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3785_s_lyv7i5c6trtbkpv0zl8vfbpyn0vj.jpg",
+				"path": "/images/items/01_2798/159_3785.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3785_s_7uv8kz5hyh60nlf48jjdvjx0ooji.jpg",
+				"path": "/images/items/01_2798/189_3785.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3785_s_9bckwbvfh5a9t1takmzom4rvrrde.jpg",
+				"path": "/images/items/01_2798/190_3785.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3785_s_bnc8fahm8yxbvynmjbxnf122zd45.jpg",
+				"path": "/images/items/01_2798/191_3785.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "2568"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2798/"
 }

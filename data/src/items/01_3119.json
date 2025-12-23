@@ -5,6 +5,44 @@
 		"ja": "1/100 シャア専用ザク",
 		"en": "1/100 Char's Zaku"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 7
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、1/100スケールで、シャア専用ザクが登場。",
@@ -28,22 +65,18 @@
 			"The left and right swing function of the head and the sealing of the mono eye allow for more expressive facial expressions. The hip joints can be opened and closed to the left and right, and can also be opened in a V-shape. Heat Hawk can be attached to the waist armor. The right hand grip for the bazooka and Zaku machine gun can be replaced with a regular fist."
 		]
 	},
-	"images": [
-		"/images/items/01_3119/153_4084.jpg",
-		"/images/items/01_3119/155_4084.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3119/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4084_s_0ibdvotwyndzyjhz4clc7l4gqzy3.jpg",
+				"path": "/images/items/01_3119/153_4084.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4084_s_ppbbtmiqi0twnsn1bkqwxkik6y5q.jpg",
+				"path": "/images/items/01_3119/155_4084.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3119/"
 }

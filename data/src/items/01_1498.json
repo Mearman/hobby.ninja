@@ -2,9 +2,47 @@
 	"id": "01_1498",
 	"type": "item",
 	"name": {
-		"ja": "1/100 V ガンダム",
-		"en": "1/100 V Gundam"
+		"ja": "1/100 Vガンダム",
+		"en": "1/100 VGundam"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "v-gundam",
+			"url": "https://bandai-hobby.net/series/v-gundam/",
+			"ja": "機動戦士Vガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4978",
+			"url": "https://bandai-hobby.net/item/01_4978/",
+			"ja": "HG 1/144 V2アサルトバスターガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_3311",
+			"url": "https://bandai-hobby.net/item/01_3311/",
+			"ja": "HG 1/144 ガンダムベース限定 セカンドV[クリアカラー]"
+		},
+		{
+			"id": "01_2835",
+			"url": "https://bandai-hobby.net/item/01_2835/",
+			"ja": "MG 1/100 ガンダムベース限定 V2アサルトバスターガンダムVer.Ka [チタニウムフィニッシュ]"
+		},
+		{
+			"id": "item-1000142101",
+			"url": "https://p-bandai.jp/item/item-1000142101/",
+			"ja": "ＲＥ/100 1/100 シャッコー"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 4
 	},
 	"targetAge": 8,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"ＴＶ「機動戦士Ｖガンダム」で、帝政への反抗の象徴となったビクトリー・ガンダムを1/100スケールでキット化しました。手首パーツと機首パーツの差替えにより、上半身ユニットからトップファイターへの変形が可能です。コア・ファイターは別ユニットとしてついており、脚部と差し替えパーツの使用でボトムファイターへの変形が可能です。背面のメインブースターと腰部リアアーマーブースターは開閉します。ビーム・シールドはクリアパーツ成形で基部が可動します。ビーム・ライフル、ビーム・サーベル2種がついています。指は可動します。"
@@ -26,22 +63,18 @@
 			"The Victory Gundam, which became a symbol of rebellion against the imperial government on the TV \"Mobile Suit V Gundam\", has been made into a 1/100 scale kit. By replacing the wrist parts and nose parts, it is possible to transform the upper body unit into a top fighter. The core fighter is included as a separate unit, and can be transformed into a bottom fighter using the legs and replacement parts. The main booster on the back and the rear armor booster on the waist can be opened and closed. The base of the beam and seal is molded with clear parts and can be moved. Comes with a beam rifle and two types of beam sabers. The fingers are movable."
 		]
 	},
-	"images": [
-		"/images/items/01_1498/153_2418.jpg",
-		"/images/items/01_1498/155_2418.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1498/",
-	"brandIds": [],
-	"seriesIds": [
-		"v-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4978",
-		"01_3311",
-		"01_2835",
-		"item-1000142101"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2418_s_ku9etfx2no9fl51w1v3pvxkzatat.jpg",
+				"path": "/images/items/01_1498/153_2418.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2418_s_9g4uxaxh3g13lqant4nc4z9pvrtw.jpg",
+				"path": "/images/items/01_1498/155_2418.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1498/"
 }

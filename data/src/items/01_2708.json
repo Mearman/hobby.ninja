@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 アルスアースリィガンダム",
 		"en": "HGBD:R 1/144 Ars Earthly Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 25
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズRe:RISE』2nd season",
@@ -35,49 +78,74 @@
 			"• Create your own original Gundam by combining core Gundam and armor!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームライフル×１",
-			"平手(左右)×各１",
-			"ビーム手刀×１",
-			"アーマー台座×１",
-			"差し替え用頭部パーツ×１",
-			"ホイルシール×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "平手(左右)×各１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム手刀×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "アーマー台座×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "差し替え用頭部パーツ×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール×１"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3701_s_b8d4msv7cx9lv4zjo3uy0vmfjcrd.jpg",
+				"path": "/images/items/01_2708/153_3701.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3701_s_ta1jhzhgmc2r1gz1ghh6w3rod7lv.jpg",
+				"path": "/images/items/01_2708/155_3701.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3701_s_uqjwe1pdp9wv9toit2uwhifsf02a.jpg",
+				"path": "/images/items/01_2708/156_3701.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3701_s_7kqvivn003xxm5hza9sr9l881ur2.jpg",
+				"path": "/images/items/01_2708/157_3701.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3701_s_dws5fngnko6pipi32607j2dcypzg.jpg",
+				"path": "/images/items/01_2708/158_3701.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3701_s_6yzolcttf8iajtdg4exnybcl6v5w.jpg",
+				"path": "/images/items/01_2708/159_3701.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3701_s_sfvw9jaoukrmnny1ia51wqii3262.jpg",
+				"path": "/images/items/01_2708/189_3701.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3701_s_rxhpl4x88xr3oyrtcm7b5o5w08x1.jpg",
+				"path": "/images/items/01_2708/190_3701.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x1",
-			"Hirate (left and right) x 1 each",
-			"Beam sword x1",
-			"Armor pedestal x 1",
-			"Replacement head parts x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2708/153_3701.jpg",
-		"/images/items/01_2708/155_3701.jpg",
-		"/images/items/01_2708/156_3701.jpg",
-		"/images/items/01_2708/157_3701.jpg",
-		"/images/items/01_2708/158_3701.jpg",
-		"/images/items/01_2708/159_3701.jpg",
-		"/images/items/01_2708/189_3701.jpg",
-		"/images/items/01_2708/190_3701.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2708/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0093"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2708/"
 }

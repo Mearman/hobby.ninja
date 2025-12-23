@@ -5,6 +5,16 @@
 		"ja": "機動戦士ガンダム ガンプラ ランナー Tシャツ MS-06S シャアザク",
 		"en": "Mobile Suit Gundam Gunpla Runner T-shirt MS-06S Char's Zaku"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "item_all",
+			"url": "https://bandai-hobby.net/item_all",
+			"ja": "商品一覧"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -26,20 +36,22 @@
 			"This is a T-shirt with a design inspired by Gunpla's Runner."
 		]
 	},
-	"images": [
-		"/images/items/01_2465/153_3393.jpg",
-		"/images/items/01_2465/155_3393.jpg",
-		"/images/items/01_2465/156_3393.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2465/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
-	"relatedItemIds": [],
-	"tag": {
-		"ja": "ガンダムベースグッズ",
-		"en": "Gundam Base Goods"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3393_o_1dfvn9am01rb7hghfd11bq11shn23.jpg",
+				"path": "/images/items/01_2465/153_3393.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3393_o_1dfvnp71g12pnohkjem1f777m2i.jpg",
+				"path": "/images/items/01_2465/155_3393.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3393_o_1dfvnplro13g4156b1ia7205172t2n.jpg",
+				"path": "/images/items/01_2465/156_3393.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2465/"
 }

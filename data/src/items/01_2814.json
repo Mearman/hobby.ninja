@@ -5,6 +5,43 @@
 		"ja": "ＢＢ戦士 85犀頑駄無",
 		"en": "BB Senshi 85 Sai Gundam"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,22 +55,18 @@
 		"day": 10
 	},
 	"targetAge": 8,
-	"images": [
-		"/images/items/01_2814/153_37.jpg",
-		"/images/items/01_2814/155_37.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2814/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_37_s_n1ujbyo4jg8a3e7tj1pyovzssitb.jpg",
+				"path": "/images/items/01_2814/153_37.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_37_s_rx78xzsnu55eclamztxgzu4juz6m.jpg",
+				"path": "/images/items/01_2814/155_37.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2814/"
 }

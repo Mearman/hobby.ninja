@@ -5,6 +5,49 @@
 		"ja": "HG ジプシー・アベンジャー（最終決戦仕様）",
 		"en": "HG Gypsy Avenger (final battle specification)"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "pacificrim",
+			"url": "https://bandai-hobby.net/series/pacificrim/",
+			"ja": "パシフィック・リム"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1270",
+			"url": "https://bandai-hobby.net/item/01_1270/",
+			"ja": "HG ジプシー・アベンジャー"
+		},
+		{
+			"id": "01_1271",
+			"url": "https://bandai-hobby.net/item/01_1271/",
+			"ja": "HG ブレーサー・フェニックス"
+		},
+		{
+			"id": "01_1272",
+			"url": "https://bandai-hobby.net/item/01_1272/",
+			"ja": "HG ジプシー・アベンジャー DXセット"
+		},
+		{
+			"id": "01_1273",
+			"url": "https://bandai-hobby.net/item/01_1273/",
+			"ja": "HG オブシディアン・フューリー"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -28,78 +71,152 @@
 		],
 		"en": [
 			"The Gypsy Avenger is now available in a luxurious version that allows you to recreate the final battle from the movie.",
-			"• A unit that reproduces the rear thruster pod equipment form used when heading into the final battle and back parts are included.",
+			"• Comes with a unit that reproduces the rear thruster pod equipment form used when heading into the final battle, and back parts.",
 			"• Two types of scrappers are included.",
-			"• Parts that reproduce the Twin Plasma chainsaw equipped state are included.",
-			"• A display base is included that allows you to display images of flight scenes."
+			"• Includes parts to reproduce the Twin Plasma Chainsaw equipped state.",
+			"• Comes with a display base that allows you to display images of flight scenes."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"グラビティスリング発射形態再現用パーツ×1",
-			"プラズマキャスター発射形態再現用パーツ×1",
-			"チェーンソード2.0装備状態再現用パーツ×1",
-			"スラスターポッド×1",
-			"ハンドスラスター×1",
-			"ハンドスラスター接続用ハンド(右)×1",
-			"ディスプレイ台座×1",
-			"ツインプラズマチェーンソー×1セット",
-			"ツインプラズマチェーンソー接続用腕×1セット",
-			"スクラッパー×2種（ ハンドスラスター持ち上げ、ジプシー・アベンジャー搭乗）"
+	"accessories": [
+		{
+			"name": {
+				"ja": "グラビティスリング発射形態再現用パーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "プラズマキャスター発射形態再現用パーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "チェーンソード2.0装備状態再現用パーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "スラスターポッド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドスラスター"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドスラスター接続用ハンド(右)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ツインプラズマチェーンソー"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "セット"
+			}
+		},
+		{
+			"name": {
+				"ja": "ツインプラズマチェーンソー接続用腕"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "セット"
+			}
+		},
+		{
+			"name": {
+				"ja": "スクラッパー"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 8
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132804_1.jpg",
+				"path": "/images/items/01_2083/1000132804_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132804_2.jpg",
+				"path": "/images/items/01_2083/1000132804_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132804_3.jpg",
+				"path": "/images/items/01_2083/1000132804_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132804_4.jpg",
+				"path": "/images/items/01_2083/1000132804_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132804_5.jpg",
+				"path": "/images/items/01_2083/1000132804_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132804_6.jpg",
+				"path": "/images/items/01_2083/1000132804_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132804_7.jpg",
+				"path": "/images/items/01_2083/1000132804_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132804_8.jpg",
+				"path": "/images/items/01_2083/1000132804_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132804_9.jpg",
+				"path": "/images/items/01_2083/1000132804_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132804_10.jpg",
+				"path": "/images/items/01_2083/1000132804_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132804_11.jpg",
+				"path": "/images/items/01_2083/1000132804_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132804_12.jpg",
+				"path": "/images/items/01_2083/1000132804_12.jpg"
+			}
 		],
-		"en": [
-			"Gravity sling firing form reproduction parts x 1",
-			"Plasma caster firing form reproduction parts x 1",
-			"Chainsword 2.0 equipment state reproduction parts x 1",
-			"Thruster pod x 1",
-			"Hand thruster x 1",
-			"Hand thruster connection hand (right) x 1",
-			"Display pedestal x 1",
-			"Twin plasma chainsaw x 1 set",
-			"Twin plasma chainsaw connection arm x 1 set",
-			"Scrapper x 2 types (lifting hand thruster, riding Gypsy Avenger)"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×8",
-			"マーキングシール×2",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 8",
-			"MarkingSeal×2",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2083/1000132804_1.jpg",
-		"/images/items/01_2083/1000132804_10.jpg",
-		"/images/items/01_2083/1000132804_11.jpg",
-		"/images/items/01_2083/1000132804_12.jpg",
-		"/images/items/01_2083/1000132804_2.jpg",
-		"/images/items/01_2083/1000132804_3.jpg",
-		"/images/items/01_2083/1000132804_4.jpg",
-		"/images/items/01_2083/1000132804_5.jpg",
-		"/images/items/01_2083/1000132804_6.jpg",
-		"/images/items/01_2083/1000132804_7.jpg",
-		"/images/items/01_2083/1000132804_8.jpg",
-		"/images/items/01_2083/1000132804_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2083/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"pacificrim"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1270",
-		"01_1271",
-		"01_1272",
-		"01_1273"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2083/"
 }

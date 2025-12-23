@@ -5,6 +5,29 @@
 		"ja": "RE/100 1/100 ザクII改",
 		"en": "RE/100 1/100 Zaku II Kai"
 	},
+	"brands": [
+		{
+			"id": "re100",
+			"url": "https://bandai-hobby.net/brand/re100/",
+			"ja": "RE/100[リボーンワンハンドレッド]"
+		}
+	],
+	"series": [
+		{
+			"id": "g-0080",
+			"url": "https://bandai-hobby.net/series/g-0080/",
+			"ja": "機動戦士ガンダム0080 ポケットの中の戦争"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/100",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -18,7 +41,6 @@
 		"day": 20
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"RE/100シリーズにザクII改が登場！",
@@ -32,61 +54,106 @@
 		"en": [
 			"Zaku II Kai appears in the RE/100 series!",
 			"• The RE/100 series adopts a structure that does not use PC parts for the first time. Pursuing ease of assembly with KPS material.",
-			"• In addition to the regular version's head, \"commander's \" and \" Fritzhelm\" heads are included as original parts.",
-			"• Divided down to the smallest parts. Achieves highly reproducible color coding just by assembling.",
-			"• Achieves an expanded range of motion. In addition to pulling the chest armor diagonally forward, the cockpit block can be pulled forward to avoid interference when bending forward.",
+			"• In addition to the standard version's head, \"commander's\" and \"Fritzhelm\" heads are included as original parts.",
+			"• Split down to the smallest parts. Achieves highly reproducible color coding just by assembling.",
+			"• Expanded range of motion. In addition to pulling the chest armor diagonally forward, the cockpit block can be pulled forward to avoid interference when bending forward.",
 			"• Reproduce the deployment of weapon mounting racks in various parts of the aircraft.",
-			"• MMP-80 machine gun, heat hawk, and hand grenade are included."
+			"• Includes MMP-80 machine gun, heat hawk, and hand grenade."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ヒート・ホーク×1",
-			"MMP-80マシンガン×1",
-			"ハンドグレネード×1セット",
-			"指揮官用頭部／フリックヘルム用頭部×各1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヒート・ホーク"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "MMP-80マシンガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドグレネード"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "セット"
+			}
+		},
+		{
+			"name": {
+				"ja": "指揮官用頭部／フリックヘルム用頭部×各1"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 12
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3203_s_joskci8qb0seoybplyvms1m0bwdv.jpg",
+				"path": "/images/items/01_2260/153_3203.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3203_s_g1i2liqcv5ojnwo02wijdrs4nwrd.jpg",
+				"path": "/images/items/01_2260/155_3203.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3203_s_wh3d4yviiqdgp2o950zsz2vt9x5q.jpg",
+				"path": "/images/items/01_2260/156_3203.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3203_s_ig56uv9g43ou3enrsupq87cv5eij.jpg",
+				"path": "/images/items/01_2260/157_3203.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3203_s_ld9wci62dmk75j7aoxv1fmiyzla1.jpg",
+				"path": "/images/items/01_2260/158_3203.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3203_s_2fdn6a74dhif58vd2wzitfuizkxq.jpg",
+				"path": "/images/items/01_2260/159_3203.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3203_s_s7dxkfxcqfoum8mbvwomg5t2ok2o.jpg",
+				"path": "/images/items/01_2260/189_3203.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3203_s_rvrnuk7p19ct3jeep8pauvf1ypm1.jpg",
+				"path": "/images/items/01_2260/190_3203.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3203_s_65rd2up2o8uei9c0lit18opzsmfh.jpg",
+				"path": "/images/items/01_2260/191_3203.jpg"
+			}
 		],
-		"en": [
-			"Heat Hawk x1",
-			"MMP-80 machine gun x 1",
-			"Hand grenade x 1 set",
-			"Commander head/flick helm head x 1 each"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×12",
-			"シール×1",
-			"マーキングシール×１",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 12",
-			"Seal×1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2260/153_3203.jpg",
-		"/images/items/01_2260/155_3203.jpg",
-		"/images/items/01_2260/156_3203.jpg",
-		"/images/items/01_2260/157_3203.jpg",
-		"/images/items/01_2260/158_3203.jpg",
-		"/images/items/01_2260/159_3203.jpg",
-		"/images/items/01_2260/189_3203.jpg",
-		"/images/items/01_2260/190_3203.jpg",
-		"/images/items/01_2260/191_3203.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2260/",
-	"brandIds": [
-		"re100"
-	],
-	"seriesIds": [
-		"g-0080"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_2260/"
 }

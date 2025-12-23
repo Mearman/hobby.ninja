@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard 仮面ライダー電王 ソードフォーム&プラットフォーム",
 		"en": "Figure-rise Standard Kamen Rider Den-O Sword Form & Platform"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "rider",
+			"url": "https://bandai-hobby.net/series/rider/",
+			"ja": "仮面ライダーシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5451",
+			"url": "https://bandai-hobby.net/item/01_5451/",
+			"ja": "Figure-rise Standard 仮面ライダーゼロワン ライジングホッパー"
+		},
+		{
+			"id": "item-1000215369",
+			"url": "https://p-bandai.jp/item/item-1000215369/",
+			"ja": "Figure-rise Standard 仮面ライダーファイズ ブラスターフォーム"
+		},
+		{
+			"id": "01_5276",
+			"url": "https://bandai-hobby.net/item/01_5276/",
+			"ja": "Figure-rise Standard 仮面ライダークウガ アルティメットフォーム"
+		},
+		{
+			"id": "01_5175",
+			"url": "https://bandai-hobby.net/item/01_5175/",
+			"ja": "Figure-rise Standard 仮面ライダーキバ キバフォーム"
+		}
+	],
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -26,70 +69,142 @@
 			"• デンガッシャーソードモードが付属。先端のオーラソードを分離しクリアのオーラソードを使用すれば、「俺の必殺技パート２」が再現できる。"
 		],
 		"en": [
-			"\"Sword Form & Platform \" from \" Kamen Rider Den-O\" is now available in the Figure-rise Standard lineup!",
+			"\"Sword Form & Platform\" from \"Kamen Rider Den-O\" is now available in the Figure-rise Standard lineup!",
 			"• You can experience the image of creating the sword form in the play via the platform!",
 			"• Reproduce the characteristic shape by finely dividing the parts.",
 			"• Comes with Den Gasher Sword Mode. If you separate the aura sword at the tip and use a clear aura sword, you can recreate \"My Special Move Part 2\"."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ソードフォーム用パーツ×1式",
-			"プラットフォーム用パーツ×1式",
-			"デンガッシャーソードモード×1",
-			"オーラソードエフェクト×1",
-			"ハンドパーツ（左右）×各3種",
-			"ライダーパス×１",
-			"ライダーパス持ち手(右)×1",
-			"サムズアップ手(右)×1",
-			"Figure-rise Effect台座×1",
-			"オーラソードエフェクト用台座×1",
-			"ホイルシール×1",
-			"ネーマーシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ソードフォーム用パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "プラットフォーム用パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "デンガッシャーソードモード"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "オーラソードエフェクト"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ（左右）×各3種"
+			}
+		},
+		{
+			"name": {
+				"ja": "ライダーパス×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ライダーパス持ち手(右)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "サムズアップ手(右)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "Figure-rise Effect台座"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "オーラソードエフェクト用台座"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ネーマーシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148157_1.jpg",
+				"path": "/images/items/01_2768/1000148157_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148157_2.jpg",
+				"path": "/images/items/01_2768/1000148157_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148157_3.jpg",
+				"path": "/images/items/01_2768/1000148157_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148157_4.jpg",
+				"path": "/images/items/01_2768/1000148157_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148157_5.jpg",
+				"path": "/images/items/01_2768/1000148157_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148157_6.jpg",
+				"path": "/images/items/01_2768/1000148157_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148157_7.jpg",
+				"path": "/images/items/01_2768/1000148157_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148157_8.jpg",
+				"path": "/images/items/01_2768/1000148157_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148157_9.jpg",
+				"path": "/images/items/01_2768/1000148157_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148157_10.jpg",
+				"path": "/images/items/01_2768/1000148157_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148157_11.jpg",
+				"path": "/images/items/01_2768/1000148157_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148157_12.jpg",
+				"path": "/images/items/01_2768/1000148157_12.jpg"
+			}
 		],
-		"en": [
-			"Sword form parts x 1 set",
-			"Platform parts x 1 set",
-			"Dengasher sword mode x 1",
-			"Aura sword effect x1",
-			"Hand parts (left and right) x 3 types each",
-			"Rider pass x1",
-			"Rider pass handle (right) x 1",
-			"Thumbs up hand (right) x 1",
-			"Figure-rise Effect pedestal x 1",
-			"Aura sword effect pedestal x 1",
-			"Foil Seal×1",
-			"Namer Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2768/1000148157_1.jpg",
-		"/images/items/01_2768/1000148157_10.jpg",
-		"/images/items/01_2768/1000148157_11.jpg",
-		"/images/items/01_2768/1000148157_12.jpg",
-		"/images/items/01_2768/1000148157_2.jpg",
-		"/images/items/01_2768/1000148157_3.jpg",
-		"/images/items/01_2768/1000148157_4.jpg",
-		"/images/items/01_2768/1000148157_5.jpg",
-		"/images/items/01_2768/1000148157_6.jpg",
-		"/images/items/01_2768/1000148157_7.jpg",
-		"/images/items/01_2768/1000148157_8.jpg",
-		"/images/items/01_2768/1000148157_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2768/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"rider"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5451",
-		"item-1000215369",
-		"01_5276",
-		"01_5175"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2768/"
 }

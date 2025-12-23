@@ -5,6 +5,49 @@
 		"ja": "メカコレクション 地球連邦主力戦艦 ドレッドノート級セット1",
 		"en": "Mecha Collection Earth Federation Main Battleship Dreadnought Class Set 1"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "yamato",
+			"url": "https://bandai-hobby.net/series/yamato/",
+			"ja": "宇宙戦艦ヤマトシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5498",
+			"url": "https://bandai-hobby.net/item/01_5498/",
+			"ja": "メカコレクションDX 1式空間戦闘攻撃機 コスモタイガーII(単座型/銃座型) [2機セット]"
+		},
+		{
+			"id": "01_5500",
+			"url": "https://bandai-hobby.net/item/01_5500/",
+			"ja": "メカコレクションDX 試製空間戦闘攻撃機 コスモパイソン [2機セット]"
+		},
+		{
+			"id": "01_3667",
+			"url": "https://bandai-hobby.net/item/01_3667/",
+			"ja": "メカコレクション ガイペロン級多層式航宙母艦 バルメス(外洋機動艦隊仕様)"
+		},
+		{
+			"id": "01_3650",
+			"url": "https://bandai-hobby.net/item/01_3650/",
+			"ja": "メカコレクション デウスーラIII世"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -25,48 +68,52 @@
 		],
 		"en": [
 			"From \"Space Battleship Yamato 2202 Warriors of Love\", the main battleship of the Earth Federation fleet joins the mecha collection!",
-			"• Set 1 is the Earth Fleet's main battleship set (D-class) and the Mars-Earth Defense Line set."
+			"• Set 1 is the Earth fleet's main battleship set (D-class) and the Mars-Earth defense line set."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ディスプレイベース×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書(箱裏側に記載)"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/156_3044_s_34paxxap2im2w1pty1ru3savzgnc.jpg",
+				"path": "/images/items/01_2096/156_3044.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_3044_s_rome0037jcps1z8tdegwk56vt4vd.jpg",
+				"path": "/images/items/01_2096/153_3044.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3044_s_43kdqsno0flgwyxa77t5y3spl0n3.jpg",
+				"path": "/images/items/01_2096/155_3044.jpg"
+			}
 		],
-		"en": [
-			"Display base x 2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×6",
-			"水転写式デカール×1",
-			"取扱説明書(箱裏側に記載)"
-		],
-		"en": [
-			"Molded product x 6",
-			"Water transfer decal x 1",
-			"Instruction manual (written on the back of the box)"
-		]
-	},
-	"images": [
-		"/images/items/01_2096/153_3044.jpg",
-		"/images/items/01_2096/155_3044.jpg",
-		"/images/items/01_2096/156_3044.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2096/",
-	"brandIds": [
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"yamato"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5498",
-		"01_5500",
-		"01_3667",
-		"01_3650"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2096/"
 }

@@ -2,9 +2,53 @@
 	"id": "01_1954",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 「機動戦士ガンダム 00」 2nd Season MSセット[クリアカラー]",
-		"en": "HG 1/144 \"Mobile Suit Gundam 00\" 2nd Season MS Set [Clear Color]"
+		"ja": "HG 1/144 「機動戦士ガンダム00」 2nd Season MSセット[クリアカラー]",
+		"en": "HG 1/144 \"Mobile Suit Gundam00\" 2nd Season MS Set [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1953",
+			"url": "https://bandai-hobby.net/item/01_1953/",
+			"ja": "HG 1/144 「機動戦士ガンダム00」 1st Season MSセット[クリアカラー]"
+		},
+		{
+			"id": "item-1000114085",
+			"url": "https://p-bandai.jp/item/item-1000114085",
+			"ja": "ＨＧ 1/144 ＧＮアームズ ＴＹＰＥ-Ｅ（リアルカラーＶｅｒ．）"
+		},
+		{
+			"id": "01_957",
+			"url": "https://bandai-hobby.net/item/01_957/",
+			"ja": "HG 1/144 ブレイヴ指揮官用試験機"
+		},
+		{
+			"id": "01_958",
+			"url": "https://bandai-hobby.net/item/01_958/",
+			"ja": "HG 1/144 ブレイヴ一般用試験機"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 9350,
 		"currency": "JPY",
@@ -17,44 +61,48 @@
 		"month": 5
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
-			"HG 「機動戦士ガンダム 00」 2nd Season MSセットがイベント限定のクリアカラーで登場！"
+			"HG  「機動戦士ガンダム00」 2nd Season MSセットがイベント限定のクリアカラーで登場！"
 		],
 		"en": [
 			"Event-limited Gunpla sold at various event venues.",
-			"HG \"Mobile Suit Gundam 00\" 2nd Season MS set is now available in event-limited clear color!"
+			"HG \"Mobile Suit Gundam00\" 2nd Season MS set is now available in event-limited clear color!"
 		]
 	},
-	"images": [
-		"/images/items/01_1954/153_2887.jpg",
-		"/images/items/01_1954/155_2887.jpg",
-		"/images/items/01_1954/156_2887.jpg",
-		"/images/items/01_1954/157_2887.jpg",
-		"/images/items/01_1954/158_2887.jpg",
-		"/images/items/01_1954/159_2887.jpg",
-		"/images/items/01_1954/189_2887.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1954/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1953",
-		"item-1000114085",
-		"01_957",
-		"01_958"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2887_s_lca2livwu6lwwr9m8cnlwc4b32m4.jpg",
+				"path": "/images/items/01_1954/153_2887.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2887_s_56ifr9oygmgj7g9m3q22keqlbvs4.jpg",
+				"path": "/images/items/01_1954/155_2887.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2887_s_1ezd4xh6io0rhxjw3ej4zxmxzxtc.jpg",
+				"path": "/images/items/01_1954/156_2887.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2887_s_6i4mq6jgnxj19m8khzd2kscevx3e.jpg",
+				"path": "/images/items/01_1954/157_2887.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2887_s_qai7ic2gsq83oz616wd3r41l256l.jpg",
+				"path": "/images/items/01_1954/158_2887.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2887_s_944ly7sh9kdesemo91oyldkrf12u.jpg",
+				"path": "/images/items/01_1954/159_2887.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2887_s_ziizirfiellvr1ek1urd3krw7lp5.jpg",
+				"path": "/images/items/01_1954/189_2887.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1954/"
 }

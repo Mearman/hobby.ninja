@@ -5,6 +5,55 @@
 		"ja": "ガンダムデカールNo.35 HGUC 1/144 アドバンス オブ ゼータ シリーズ用",
 		"en": "Gundam Decal No.35 HGUC 1/144 Advance of Zeta Series"
 	},
+	"brands": [
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		},
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000159026",
+			"url": "https://p-bandai.jp/item/item-1000159026/",
+			"ja": "ＨＧ 1/144 バウンド・ドック（ゲーツ・キャパ専用機）"
+		},
+		{
+			"id": "item-1000155118",
+			"url": "https://p-bandai.jp/item/item-1000155118/",
+			"ja": "ＨＧ 1/144 リック・ディアス"
+		},
+		{
+			"id": "01_2848",
+			"url": "https://bandai-hobby.net/item/01_2848/",
+			"ja": "HGUC 1/144 バウンド・ドック"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 17
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"100点以上のラインナップを誇る、大人気ガンダムデカールのシリーズ商品が登場。",
@@ -31,24 +79,14 @@
 			"water transfer decal"
 		]
 	},
-	"images": [
-		"/images/items/01_1846/153_2782.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1846/",
-	"brandIds": [
-		"hguc",
-		"gundam_decal"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4971",
-		"item-1000159026",
-		"item-1000155118",
-		"01_2848"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2782_s_mfgdekx6h8x8r88t4kgur2iwnk6w.jpg",
+				"path": "/images/items/01_1846/153_2782.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1846/"
 }

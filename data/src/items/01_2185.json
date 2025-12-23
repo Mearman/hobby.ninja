@@ -5,6 +5,50 @@
 		"ja": "Figure-rise Standard 1/12 ULTRAMAN SUIT A",
 		"en": "Figure-rise Standard 1/12 ULTRAMAN SUIT A"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "ultraman",
+			"url": "https://bandai-hobby.net/series/ultraman/",
+			"ja": "ウルトラマン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5371",
+			"url": "https://bandai-hobby.net/item/01_5371/",
+			"ja": "Figure-rise Standard ウルトラマンティガ マルチタイプ"
+		},
+		{
+			"id": "01_5198",
+			"url": "https://bandai-hobby.net/item/01_5198/",
+			"ja": "Figure-rise Standard ウルトラマンジード プリミティブ"
+		},
+		{
+			"id": "01_5096",
+			"url": "https://bandai-hobby.net/item/01_5096/",
+			"ja": "Figure-rise Standard ULTRAMAN SUIT JACK -ACTION-"
+		},
+		{
+			"id": "01_5046",
+			"url": "https://bandai-hobby.net/item/01_5046/",
+			"ja": "Figure-rise Standard ウルトラマンブレーザー"
+		}
+	],
+	"scale": "1/12",
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 25
 	},
 	"targetAge": 15,
-	"scale": "1/12",
 	"description": {
 		"ja": [
 			"「月刊ヒーローズ」で連載中の『ULTRAMAN』より「ULTRAMAN SUIT A」がFigure-rise Standardに登場！",
@@ -29,70 +72,116 @@
 			"• 原作者・清水栄一氏によるオリジナルデザインのガントレットがオリジナルの武器パーツとして付属。"
 		],
 		"en": [
-			"\"ULTRAMAN SUIT A \" from \" ULTRAMAN \" currently being serialized in \" Heroes\" is now available in Figure-rise Standard!",
+			"\"ULTRAMAN SUIT A\" from \"ULTRAMAN\" currently being serialized in \"Heroes\" is now available in Figure-rise Standard!",
 			"• The silver color on the main body surface is extra finish, and the red color is gloss injection to reproduce the texture.",
-			"• Comes with an LED unit that can be stored in the body. The eyes and chest S.S.C generator can be made to glow.",
+			"• Comes with an LED unit that can be placed in the body. The eyes and chest S.S.C generator can be made to glow.",
 			"• The S.S.C generator on the chest reproduces two colors: blue and red.",
 			"• Vertical guillotine effect parts are included.",
 			"• A gauntlet originally designed by the original author Eiichi Shimizu is included as an original weapon part."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"オリジナル武器ガントレット×2",
-			"バーチカルギロチンエフェクトパーツ×1",
-			"ビーム発生装置パーツ×1",
-			"ディスプレイ台座×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "オリジナル武器ガントレット"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "バーチカルギロチンエフェクトパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム発生装置パーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成型品"
+			},
+			"count": 9
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "LEDユニット"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3132_s_wxnpshx8l9lh4kqigq4zor8zf84d.jpg",
+				"path": "/images/items/01_2185/153_3132.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3132_s_m8jhhl1ai8xlwbkirl4xsa4gtjto.jpg",
+				"path": "/images/items/01_2185/155_3132.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3132_s_3ucqhwe1envmvw3ftd9axf7z4s4g.jpg",
+				"path": "/images/items/01_2185/156_3132.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3132_s_8gsidfacxl9bdp842bavgu5fp27y.jpg",
+				"path": "/images/items/01_2185/157_3132.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3132_s_i86xatfany31jlnt6jh8zezfjzv6.jpg",
+				"path": "/images/items/01_2185/158_3132.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3132_s_vnlljrjg3mawzqvirjbjhvbjbmnz.jpg",
+				"path": "/images/items/01_2185/159_3132.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3132_s_36s1s006qvxdbh0n9msers3rfmel.jpg",
+				"path": "/images/items/01_2185/189_3132.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3132_s_4uq1tswwldn7k7makbdiuqb1v0g2.jpg",
+				"path": "/images/items/01_2185/190_3132.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3132_s_lka2fsamkyctdnb5ry56idahfcg6.jpg",
+				"path": "/images/items/01_2185/191_3132.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3132_s_jp4kcdp8xt9xluxv4hlsa3wgewg6.jpg",
+				"path": "/images/items/01_2185/192_3132.jpg"
+			}
 		],
-		"en": [
-			"Original weapon gauntlet x2",
-			"Vertical guillotine effect parts x 1",
-			"Beam generator parts x 1",
-			"Display pedestal x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成型品×9",
-			"ホイルシール×1",
-			"マーキングシール×1",
-			"LEDユニット×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 9",
-			"Foil Seal×1",
-			"MarkingSeal×1",
-			"LED unit x 1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2185/153_3132.jpg",
-		"/images/items/01_2185/155_3132.jpg",
-		"/images/items/01_2185/156_3132.jpg",
-		"/images/items/01_2185/157_3132.jpg",
-		"/images/items/01_2185/158_3132.jpg",
-		"/images/items/01_2185/159_3132.jpg",
-		"/images/items/01_2185/189_3132.jpg",
-		"/images/items/01_2185/190_3132.jpg",
-		"/images/items/01_2185/191_3132.jpg",
-		"/images/items/01_2185/192_3132.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2185/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"ultraman"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5371",
-		"01_5198",
-		"01_5096",
-		"01_5046"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2185/"
 }

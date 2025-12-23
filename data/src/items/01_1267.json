@@ -5,6 +5,55 @@
 		"ja": "ガンダムデカールNo.119 HG 1/144 機動戦士ガンダム THE ORIGIN汎用3",
 		"en": "Gundam Decal No.119 HG 1/144 Mobile Suit Gundam THE ORIGIN General Purpose 3"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "origin",
+			"url": "https://bandai-hobby.net/series/origin/",
+			"ja": "機動戦士ガンダム THE ORIGIN"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3711",
+			"url": "https://bandai-hobby.net/item/01_3711/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)[クリアカラー]"
+		},
+		{
+			"id": "01_3502",
+			"url": "https://bandai-hobby.net/item/01_3502/",
+			"ja": "ガンダムデカールNo.123 機動戦士ガンダム THE ORIGIN汎用4"
+		},
+		{
+			"id": "01_2828",
+			"url": "https://bandai-hobby.net/item/01_2828/",
+			"ja": "HG 1/144 ガンダムベース限定 ザクII TYPE C-6/R6 [ペインティングモデル]"
+		},
+		{
+			"id": "01_2707",
+			"url": "https://bandai-hobby.net/item/01_2707/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 27
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"100点以上のラインナップを誇る、大人気ガンダムデカールのシリーズ商品が登場。",
@@ -31,25 +79,14 @@
 			"water transfer decal"
 		]
 	},
-	"images": [
-		"/images/items/01_1267/153_2199.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1267/",
-	"brandIds": [
-		"hg",
-		"gundam_decal"
-	],
-	"seriesIds": [
-		"origin"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3711",
-		"01_3502",
-		"01_2828",
-		"01_2707"
-	],
-	"manualId": "0045"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2199_s_ajhy9xyv7ppbc8mb8f4ncb4gwce4.jpg",
+				"path": "/images/items/01_1267/153_2199.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1267/"
 }

@@ -5,6 +5,50 @@
 		"ja": "HGBF 1/144 GM／GM",
 		"en": "HGBF 1/144 GM/GM"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 『ガンダムビルドファイターズ』シリーズ新プロジェクトから、アクション性抜群のジムが登場！",
@@ -26,61 +69,82 @@
 			"• 腕や腰など各部に3mmジョイントを設けることで、武器など様々なパーツを装着することができ、カスタマイズ性も抜群の仕様となっている！"
 		],
 		"en": [
-			"• A gym with outstanding action has appeared from the new project in the \"Gundam Build Fighters\" series!",
-			"• This is a highly actionable gym-type Gunpla with the same chest part structure as Build Burning Gundam. Three types of heads are included, and you can choose and attach your favorite head!",
+			"• A gym with outstanding action is now available from the new project in the Gundam Build Fighters series!",
+			"• A highly actionable gym-type Gunpla with the same chest part structure as the Build Burning Gundam. Three types of heads are included, and you can choose and attach your favorite head!",
 			"• By providing 3mm joints in each part such as the arms and waist, various parts such as weapons can be attached, making it highly customizable!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームスプレーガン×1",
-			"シールド×1",
-			"ビームサーベル×２",
-			"頭部パーツ（3種）×各１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームスプレーガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル×２"
+			}
+		},
+		{
+			"name": {
+				"ja": "頭部パーツ（3種）×各１"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 7
+		},
+		{
+			"name": {
+				"ja": "シール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2013_s_eyawm20bokpi8wir1b5tewcngkfx.jpg",
+				"path": "/images/items/01_1081/153_2013.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2013_s_6ma6x04feklnepn9lgwcpatlvrpw.jpg",
+				"path": "/images/items/01_1081/155_2013.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2013_s_8sde624i7pcdy7yj8f0s15zrjesz.jpg",
+				"path": "/images/items/01_1081/156_2013.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2013_s_jihbhk5vhiapsrjud19fwu7p59cx.jpg",
+				"path": "/images/items/01_1081/157_2013.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2013_s_0empuk7sjlourevwpdz46g7wmv53.jpg",
+				"path": "/images/items/01_1081/158_2013.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2013_s_72o7435eusahvwc24edmz6gfo2l5.jpg",
+				"path": "/images/items/01_1081/159_2013.jpg"
+			}
 		],
-		"en": [
-			"Beam spray gun x 1",
-			"Seal × 1",
-			"Beam saber x2",
-			"Head parts (3 types) x 1 each"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×7",
-			"シール×１",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 7",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1081/153_2013.jpg",
-		"/images/items/01_1081/155_2013.jpg",
-		"/images/items/01_1081/156_2013.jpg",
-		"/images/items/01_1081/157_2013.jpg",
-		"/images/items/01_1081/158_2013.jpg",
-		"/images/items/01_1081/159_2013.jpg",
-		"/images/items/01_1081/01_1081_inst_1.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1081/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
-	"manualId": "0055"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1081/"
 }

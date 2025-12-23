@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムベース限定 セカンドV[クリアカラー]",
 		"en": "HG 1/144 Gundam Base Limited Second V [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "v-gundam",
+			"url": "https://bandai-hobby.net/series/v-gundam/",
+			"ja": "機動戦士Vガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4978",
+			"url": "https://bandai-hobby.net/item/01_4978/",
+			"ja": "HG 1/144 V2アサルトバスターガンダム [クリアカラー]"
+		},
+		{
+			"id": "item-1000137105",
+			"url": "https://p-bandai.jp/item/item-1000137105",
+			"ja": "ＨＧ 1/144 セカンドＶ"
+		},
+		{
+			"id": "01_333",
+			"url": "https://bandai-hobby.net/item/01_333/",
+			"ja": "HGUC 1/144 V2アサルトバスターガンダム"
+		},
+		{
+			"id": "item-1000098694",
+			"url": "https://p-bandai.jp/item/item-1000098694/",
+			"ja": "HGUC 1/144 Ｖ２ガンダム用拡張エフェクトユニット“光の翼”"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -17,11 +61,10 @@
 		"month": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"小説版「機動戦士V ガンダム」に登場する幻の試作機、セカンドVが、クリアカラーになって登場！",
+			"小説版「機動戦士Vガンダム」に登場する幻の試作機、セカンドVが、クリアカラーになって登場！",
 			"• ミノフスキー・ドライブ・ユニットをはじめとした各種装甲を忠実に再現！",
 			"• ミノフスキー・シールドは、パーツの差し替えにより、展開状態を再現可能！",
 			"• 主力武装であるメガビーム・キャノンは、ウエポン・プラットフォーム装着時の発射ポーズに加え、白兵戦時の切り離し運用も再現可能！"
@@ -34,31 +77,30 @@
 			"• The main weapon, the Mega Beam Cannon, can be recreated not only in the firing pose when the weapon platform is attached, but also in detachable operation during hand-to-hand combat!"
 		]
 	},
-	"images": [
-		"/images/items/01_3311/153_4266.jpg",
-		"/images/items/01_3311/155_4266.jpg",
-		"/images/items/01_3311/156_4266.jpg",
-		"/images/items/01_3311/157_4266.jpg",
-		"/images/items/01_3311/158_4266.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3311/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"v-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4978",
-		"item-1000137105",
-		"01_333",
-		"item-1000098694"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4266_s_9ydt0iwltr9yiwqmnduxlknt8xvf.jpg",
+				"path": "/images/items/01_3311/153_4266.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4266_s_o5i5a5e41ciwmmb15v4c1wozlpmk.jpg",
+				"path": "/images/items/01_3311/155_4266.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4266_s_1jxmwe8wdmuedhg9mkd6e5efxpxz.jpg",
+				"path": "/images/items/01_3311/156_4266.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4266_s_wom2esm7o461bhoj3eu4k9xnc6tl.jpg",
+				"path": "/images/items/01_3311/157_4266.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4266_s_p8zc7tgmm8uvuzlbr8dh7sbnt4fn.jpg",
+				"path": "/images/items/01_3311/158_4266.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3311/"
 }

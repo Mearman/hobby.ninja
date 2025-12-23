@@ -2,9 +2,46 @@
 	"id": "01_2178",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット シスクード",
-		"en": "SD Gundam Cross Silhouette Siskudo"
+		"ja": "SDガンダム クロスシルエット シスクード",
+		"en": "SDGundam Cross Silhouette Siskudo"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5275",
+			"url": "https://bandai-hobby.net/item/01_5275/",
+			"ja": "SDガンダム クロスシルエット マイティーストライクフリーダムガンダム"
+		},
+		{
+			"id": "01_5191",
+			"url": "https://bandai-hobby.net/item/01_5191/",
+			"ja": "SDガンダム クロスシルエット ガンダムキャリバーン"
+		},
+		{
+			"id": "01_5014",
+			"url": "https://bandai-hobby.net/item/01_5014/",
+			"ja": "SDガンダム クロスシルエット F9ノ1改"
+		},
+		{
+			"id": "01_4893",
+			"url": "https://bandai-hobby.net/item/01_4893/",
+			"ja": "SDガンダムクロスシルエット ユニコーンガンダム2号機バンシィ（デストロイモード）＆バンシィ・ノルン パーツセット"
+		}
+	],
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -20,62 +57,82 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"SD ガンダムクロスシルエットに「モノアイガンダム」シスクードが登場！",
+			"SDガンダムクロスシルエットに「モノアイガンダム」シスクードが登場！",
 			"• シスクードの特徴であるモノアイは可動式構造にジュエルシールでリアルに再現。",
 			"• フレキシブルに可動するバインダーにより高速巡航形態への変形が可能。",
 			"• 大型のIフィールド・ランチャーは圧倒的サイズで再現。さらに左右どちらでも構えることができる構造を採用。",
 			"• クリアパーツを使用したビーム・サーベルが２本付属。"
 		],
 		"en": [
-			"\"Monoeye Gundam\" Siskudo is now available in the SD Gundam cross silhouette!",
-			"• Characteristics of Siskudo The mono eye is realistically reproduced with a movable structure and jewel seal.",
-			"• A flexible binder allows it to transform into a high-speed cruising mode.",
-			"• Large I-field launcher is reproduced in overwhelming size. Furthermore, it has a structure that allows it to be held on either the left or right side.",
+			"\"Monoeye Gundam\" Siskudo is now available in the SDGundam cross silhouette!",
+			"• Siskudo's characteristic mono-eye is realistically reproduced with a movable structure and jewel seal.",
+			"• Flexible binder allows transformation into high-speed cruising mode.",
+			"• The large I-field launcher is reproduced in overwhelming size. Furthermore, it has a structure that allows it to be held on either the left or right side.",
 			"• Two beam sabers using clear parts are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・サーベル×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成型品"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジュエルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3126_s_7zs4w1odatcdtklko2f6baj611bm.jpg",
+				"path": "/images/items/01_2178/153_3126.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3126_s_cdua9syitnww0lbvips6ew7sy7zx.jpg",
+				"path": "/images/items/01_2178/155_3126.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3126_s_b7g55doy2bs7cpha1cotdszk4xxj.jpg",
+				"path": "/images/items/01_2178/156_3126.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3126_s_mj5dxk7wia9qmu3z1bnoiviww5s0.jpg",
+				"path": "/images/items/01_2178/157_3126.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3126_s_bfyod0i5e482gvbbw8qj77p40pcf.jpg",
+				"path": "/images/items/01_2178/158_3126.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3126_s_xb07odm784tiec5zauburtzr9dcy.jpg",
+				"path": "/images/items/01_2178/159_3126.jpg"
+			}
 		],
-		"en": [
-			"Beam saber x2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成型品×6",
-			"ホイルシール×1",
-			"ジュエルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 6",
-			"Foil Seal×1",
-			"Jewel Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2178/153_3126.jpg",
-		"/images/items/01_2178/155_3126.jpg",
-		"/images/items/01_2178/156_3126.jpg",
-		"/images/items/01_2178/157_3126.jpg",
-		"/images/items/01_2178/158_3126.jpg",
-		"/images/items/01_2178/159_3126.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2178/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5275",
-		"01_5191",
-		"01_5014",
-		"01_4893"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2178/"
 }

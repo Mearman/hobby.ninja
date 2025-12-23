@@ -5,6 +5,43 @@
 		"ja": "BB戦士325 徐晃サーペント",
 		"en": "BB Senshi 325 Xu Huang Serpent"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -25,23 +62,22 @@
 			"Machinery's loyal retainer \"Xu Huang Serpent\" has finally become three-dimensional and appears in BB Senshi! The weapon ax can be rearranged into various shapes. The armor and backpack can be combined into a large weapon. The wing-shaped parts on the back can be used as power-up parts for Cao Cao Gundam (sold separately)."
 		]
 	},
-	"images": [
-		"/images/items/01_1702/153_2611.jpg",
-		"/images/items/01_1702/155_2611.jpg",
-		"/images/items/01_1702/156_2611.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1702/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2611_s_hy5s4l1wddrdwcrxqz0j9qkxepov.jpg",
+				"path": "/images/items/01_1702/153_2611.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2611_s_fen0tfkug550ezhhm6wrr8m53c50.jpg",
+				"path": "/images/items/01_1702/155_2611.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2611_s_ktz9s9r66dn4qidrysqtjr7lqs3h.jpg",
+				"path": "/images/items/01_1702/156_2611.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1702/"
 }

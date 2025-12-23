@@ -2,9 +2,52 @@
 	"id": "01_2356",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット ザクII(クロスシルエットフレームVer.) [クリアカラー]",
-		"en": "SD Gundam Cross Silhouette Zaku II (Cross Silhouette Frame Ver.) [Clear Color]"
+		"ja": "SDガンダム クロスシルエット ザクII(クロスシルエットフレームVer.) [クリアカラー]",
+		"en": "SDGundam Cross Silhouette Zaku II (Cross Silhouette Frame Ver.) [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4132",
+			"url": "https://bandai-hobby.net/item/01_4132/",
+			"ja": "SDガンダム クロスシルエット ガンダムベース限定 RX-78-2 ガンダム(クロスシルエットフレームVer.)[ガンダムベースカラー]"
+		},
+		{
+			"id": "01_3495",
+			"url": "https://bandai-hobby.net/item/01_3495/",
+			"ja": "ハローキティ/ザクII[SDガンダムクロスシルエット][クリアカラー]"
+		},
+		{
+			"id": "01_3321",
+			"url": "https://bandai-hobby.net/item/01_3321/",
+			"ja": "SDガンダムクロスシルエット RX-78F00 ガンダム"
+		},
+		{
+			"id": "01_2806",
+			"url": "https://bandai-hobby.net/item/01_2806/",
+			"ja": "SDガンダムクロスシルエット RX-78-2 ガンダム＆シャア専用ザクII"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -20,41 +63,34 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"2つのシルエットが楽しめる「SD ガンダム クロスシルエット」シリーズから、ザクIIがクリアカラーになって登場！",
+			"2つのシルエットが楽しめる「SDガンダム クロスシルエット」シリーズから、ザクIIがクリアカラーになって登場！",
 			"• モノアイはレールにより可動！",
 			"• おなじみのザク・マシンガンに加え、ザク・バズーカ、ミサイルポッド、ヒート・ホークが付属！",
-			"• 同梱の「SD ガンダム クロスシルエットフレーム」により高頭身化を実現！"
+			"• 同梱の「SDガンダム クロスシルエットフレーム」により高頭身化を実現！"
 		],
 		"en": [
 			"From the \"SD Gundam Cross Silhouette\" series, where you can enjoy two silhouettes, Zaku II is now available in clear color!",
-			"• Mono eye is movable by rail!",
-			"• In addition to the familiar Zaku machine gun, Zaku bazooka, missile pod, and heat hawk are included!",
+			"• Monoeye is movable using rails!",
+			"• In addition to the familiar Zaku machine gun, a Zaku bazooka, missile pod, and heat hawk are included!",
 			"• Achieve a taller head with the included \"SD Gundam Cross Silhouette Frame\"!"
 		]
 	},
-	"images": [
-		"/images/items/01_2356/153_3292.jpg",
-		"/images/items/01_2356/155_3292.jpg",
-		"/images/items/01_2356/156_3292.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2356/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4132",
-		"01_3495",
-		"01_3321",
-		"01_2806"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3292_o_1d9rpa2dm198eluq1ngm1g2q1diu23.jpg",
+				"path": "/images/items/01_2356/153_3292.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3292_o_1d9rpactksjgmvr1q7f18hkb5n2d.jpg",
+				"path": "/images/items/01_2356/155_3292.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3292_o_1d9rpv7kh1c7ad821s1q89n1lap23.jpg",
+				"path": "/images/items/01_2356/156_3292.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2356/"
 }

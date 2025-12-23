@@ -3,8 +3,67 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC 1/144 クロスボーン・ガンダムＸ２改",
-		"en": "HGUC 1/144 Crossbone Gundam X2 modified"
+		"en": "HGUC 1/144 Crossbone GundamX2 modified"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "crossbone",
+			"url": "https://bandai-hobby.net/series/crossbone/",
+			"ja": "機動戦士クロスボーン・ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000154150",
+			"url": "https://p-bandai.jp/item/item-1000154150/",
+			"ja": "ＲＥ/100 1/100 ビギナ・ギナＩＩ（木星決戦仕様）"
+		},
+		{
+			"id": "item-1000142961",
+			"url": "https://p-bandai.jp/item/item-1000142961/",
+			"ja": "ＲＧ 1/144 クロスボーン・ガンダムＸ２"
+		},
+		{
+			"id": "item-1000136952",
+			"url": "https://p-bandai.jp/item/item-1000136952",
+			"ja": "ＭＧ 1/100 ガンダムＦ９１ Ｖｅｒ．２．０（ハリソン・マディン専用機）"
+		},
+		{
+			"id": "item-1000113952",
+			"url": "http://p-bandai.jp/item/item-1000113952/",
+			"ja": "ＭＧ 1/100 クロスボーン・ガンダムＸ２改 Ｖｅｒ．Ｋａ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -16,7 +75,6 @@
 		"year": 2015,
 		"month": 6
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士クロスボーン・ガンダム』から、復元された宇宙海賊 クロスボーン・ガンダムＸ２改がＨＧＵＣシリーズで登場！",
@@ -56,7 +114,7 @@
 		"en": [
 			"From \"Mobile Suit Crossbone Gundam\", the restored space pirate Crossbone Gundam X2 Kai is now available in the HGUC series!",
 			"From \"Mobile Suit Crossbone Gundam\", Crossbone Gundam X2 Kai is commercialized in the HGUC series.",
-			"Reproduce the characteristic body shape and weapons of Crossbone Gundam X2 Kai!",
+			"Reproduce the characteristic body shape and weapons of Crossbone GundamX2 Kai!",
 			"● Reproduce the body shape unique to X2 Kai!",
 			"The head and blade antenna, which have a different shape from the X1, and part of the back thruster are reproduced with new modeling.",
 			"・Head and blade antenna",
@@ -65,7 +123,7 @@
 			"・Back thruster",
 			"The shape of the tip of the thruster, which is said to be larger, is reproduced with new parts.",
 			"● Buster launcher included!",
-			"The special large weapon buster launcher used by Crossbone Gundam X2 Kai is included with a new model with rich details.",
+			"The special large weapon buster launcher used by Crossbone GundamX2 Kai is included with a new model with rich details.",
 			"Total length approximately 150mm.",
 			"● A wide variety of attached weapons such as scissors and anchors. Weapon-specific hand parts are also available.",
 			"Attached weapons: Buster launcher / Scissor anchor / Heat dagger / Beam saber /",
@@ -89,40 +147,50 @@
 			"- Product specifications are scheduled as of 20154. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2905/153_3883.jpg",
-		"/images/items/01_2905/155_3883.jpg",
-		"/images/items/01_2905/156_3883.jpg",
-		"/images/items/01_2905/157_3883.jpg",
-		"/images/items/01_2905/158_3883.jpg",
-		"/images/items/01_2905/159_3883.jpg",
-		"/images/items/01_2905/189_3883.jpg",
-		"/images/items/01_2905/190_3883.jpg",
-		"/images/items/01_2905/191_3883.jpg",
-		"/images/items/01_2905/192_3883.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2905/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla",
-		"hguc"
-	],
-	"seriesIds": [
-		"crossbone"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000154150",
-		"item-1000142961",
-		"item-1000136952",
-		"item-1000113952"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3883_s_u27z4ap4ymjawkzvcbjlxjqm4xxq.jpg",
+				"path": "/images/items/01_2905/153_3883.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3883_s_n4yif3tbsy13poppvb41bnep0una.jpg",
+				"path": "/images/items/01_2905/155_3883.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3883_s_f4bmposyb5r7qslv94dh68554eq3.jpg",
+				"path": "/images/items/01_2905/156_3883.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3883_s_12lgdxcf2hkyeci0wfwwfu2udrh0.jpg",
+				"path": "/images/items/01_2905/157_3883.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3883_s_1u7cy45x0atgcnoebpzu08yedq04.jpg",
+				"path": "/images/items/01_2905/158_3883.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3883_s_jfw38tl3ir1h6gsb7ot9ashe8jw1.jpg",
+				"path": "/images/items/01_2905/159_3883.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3883_s_pl4ie1gd8ca08ottt0h36fsd2u9q.jpg",
+				"path": "/images/items/01_2905/189_3883.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3883_s_sro9y8vadzpkesrjvug393cj71wf.jpg",
+				"path": "/images/items/01_2905/190_3883.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3883_s_ndqb0c76m1li8kwt9ppc4h92jcns.jpg",
+				"path": "/images/items/01_2905/191_3883.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3883_s_oyqnqw41et4tmzj9rneascrts1rs.jpg",
+				"path": "/images/items/01_2905/192_3883.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "2280"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2905/"
 }

@@ -5,6 +5,50 @@
 		"ja": "ガンダムデカールNo.64 1/100 ケルディムガンダム用",
 		"en": "Gundam Decal No.64 1/100 for Cherudim Gundam"
 	},
+	"brands": [
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3670",
+			"url": "https://bandai-hobby.net/item/01_3670/",
+			"ja": "ガンダムデカールNo.127 HG 1/144 劇場版 機動戦士ガンダム00汎用1"
+		},
+		{
+			"id": "01_3671",
+			"url": "https://bandai-hobby.net/item/01_3671/",
+			"ja": "ガンダムデカールNo.128 HG 1/144 劇場版 機動戦士ガンダム00汎用2"
+		},
+		{
+			"id": "01_1265",
+			"url": "https://bandai-hobby.net/item/01_1265/",
+			"ja": "ガンダムデカールNo.117 RG 1/144 ダブルオークアンタ用"
+		},
+		{
+			"id": "01_1136",
+			"url": "https://bandai-hobby.net/item/01_1136/",
+			"ja": "ガンダムデカールNo.109 RG 1/144 ダブルオーライザー用"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 25
 	},
 	"targetAge": 8,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"100点以上のラインナップを誇る、大人気ガンダムデカールのシリーズ商品が登場。",
@@ -31,23 +74,14 @@
 			"water transfer decal"
 		]
 	},
-	"images": [
-		"/images/items/01_1873/153_2806.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1873/",
-	"brandIds": [
-		"gundam_decal"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3670",
-		"01_3671",
-		"01_1265",
-		"01_1136"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2806_s_g9vd5i1gak5wcx6l70n1kkbzs0ib.jpg",
+				"path": "/images/items/01_1873/153_2806.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1873/"
 }

@@ -5,6 +5,45 @@
 		"ja": "RE/100 1/100 ヤクト・ドーガ（ギュネイ・ガス機）",
 		"en": "RE/100 1/100 Jagd Doga (Gyunei Gas Machine)"
 	},
+	"brands": [
+		{
+			"id": "re100",
+			"url": "https://bandai-hobby.net/brand/re100/",
+			"ja": "RE/100[リボーンワンハンドレッド]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4366",
+			"url": "https://bandai-hobby.net/item/01_4366/",
+			"ja": "RE/100 1/100 ヤクト・ドーガ (ギュネイ・ガス機) [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000129742",
+			"url": "http://p-bandai.jp/item/item-1000129742",
+			"ja": "ＲＥ/100 1/100 ヤクト・ドーガ（クェス・エア機）"
+		},
+		{
+			"id": "item-1000127034",
+			"url": "http://p-bandai.jp/item/item-1000127034",
+			"ja": "ＲＥ/100 1/100 ８９式ベース・ジャバー"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -18,7 +57,6 @@
 		"day": 22
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム 逆襲のシャア』に登場するヤクト・ドーガ（ギュネイ・ガス機）が、RE/100で登場！",
@@ -29,64 +67,102 @@
 		],
 		"en": [
 			"Yakut Doga (Gyunei Gas Machine) that appears in \"Mobile Suit Gundam: Char's Counterattack\" is now available in RE/100!",
-			"• Achieving a distinctive design with a shape comparable to the MG series!",
-			"• While following the image in the play, small details have been added to increase the sense of density!",
-			"• All the sub-thruster funnels can be removed individually, and it also has an expansion gimmick!",
-			"• In addition, a clear support is included to display all 6 funnels in the expanded state!"
+			"• Achieving a distinctive design with a form comparable to the MG series!",
+			"• While following the image from the movie, small details have been added to increase the sense of density!",
+			"• All of the sub-thruster funnels can be removed individually and are equipped with an expansion gimmick!",
+			"• Also included is a clear support that allows you to display all 6 funnels in the expanded state!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・アサルトライフル×1",
-			"ビーム・サーベル×1",
-			"ファンネル×6",
-			"シールド×1",
-			"ファンネル用ディスプレイアーム×6"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・アサルトライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ファンネル"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ファンネル用ディスプレイアーム"
+			},
+			"count": 6
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 16
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2982_s_2f36mavcysjgl0h8ni65v5622hps.jpg",
+				"path": "/images/items/01_1882/153_2982.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2982_s_cg13fk0gv26l1bd3rq6pmxm18xb1.jpg",
+				"path": "/images/items/01_1882/155_2982.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2982_s_ugotls344ei0jbipcfvh5mylcrv8.jpg",
+				"path": "/images/items/01_1882/156_2982.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2982_s_xkoca71c3q31hxeci92ag6svzrqa.jpg",
+				"path": "/images/items/01_1882/157_2982.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2982_s_iwadwnow2zkd5xgk3gqyeymo3lbz.jpg",
+				"path": "/images/items/01_1882/158_2982.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2982_s_yu0y6pkv4r9m970ig3wa8v96mmuy.jpg",
+				"path": "/images/items/01_1882/159_2982.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2982_s_vwzlo2ldd5s40xglcx9rj93oqin1.jpg",
+				"path": "/images/items/01_1882/189_2982.jpg"
+			}
 		],
-		"en": [
-			"Beam assault rifle x1",
-			"Beam saber x 1",
-			"Funnel x 6",
-			"Seal × 1",
-			"Funnel display arm x 6"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×16",
-			"マーキングシール×1",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 16",
-			"MarkingSeal×1",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1882/153_2982.jpg",
-		"/images/items/01_1882/155_2982.jpg",
-		"/images/items/01_1882/156_2982.jpg",
-		"/images/items/01_1882/157_2982.jpg",
-		"/images/items/01_1882/158_2982.jpg",
-		"/images/items/01_1882/159_2982.jpg",
-		"/images/items/01_1882/189_2982.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1882/",
-	"brandIds": [
-		"re100"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4366",
-		"item-1000129742",
-		"item-1000127034"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1882/"
 }

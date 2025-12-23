@@ -5,6 +5,50 @@
 		"ja": "HGBF 1/144 ストライカージンクス",
 		"en": "HGBF 1/144 Striker Jinx"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 20
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 『ガンダムビルドファイターズ バトローグ』第4話に登場する新機体「ストライカージンクス」がHGBFで立体化！",
@@ -26,64 +69,98 @@
 			"• 付属する新設定の大型ライフルは、各所のグリップにより両手で保持が出来る構造になっており、ダイナミックな射撃ポーズが可能！"
 		],
 		"en": [
-			"• The new aircraft \"Striker Jinx \" appearing in the 4th episode of \" Gundam Build Fighters Battlogue\" is now three-dimensional in HGBF!",
+			"• The new aircraft \"Striker Jinx\" appearing in the 4th episode of \"Gundam Build Fighters Battlogue\" is now three-dimensional with HGBF!",
 			"• In addition to heavy additional armor reminiscent of full armor, armored parts such as defense rods and the head are reproduced with new modeling! Furthermore, customized armor can be purged to recreate a lightly armored state!",
 			"• The newly designed large rifle that comes with it has a structure that allows it to be held with both hands with grips in various places, allowing for dynamic shooting poses!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"GNスマートガン×1",
-			"GNディスチャージャー×1",
-			"GNディフェンスロッド×2",
-			"GNビームサーベル×2",
-			"アーマー×1式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "GNスマートガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GNディスチャージャー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GNディフェンスロッド"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "GNビームサーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "アーマー"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 8
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2167_s_4ms3hy9m8c15eblyse4m8n5mko3d.jpg",
+				"path": "/images/items/01_1234/153_2167.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2167_s_sfvzfnf5eoe6cluu657zks4fe7sm.jpg",
+				"path": "/images/items/01_1234/155_2167.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2167_s_np4kx858u7akkvx2vrnb7o8k5jad.jpg",
+				"path": "/images/items/01_1234/156_2167.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2167_s_z93gd22l73i7gm4sbgetm77gqw1j.jpg",
+				"path": "/images/items/01_1234/157_2167.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2167_s_7c4ybk6jr46pisijpun1o4cf7r7r.jpg",
+				"path": "/images/items/01_1234/158_2167.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2167_s_3dxphtzzis8n3ixlclc3mq8bxbmo.jpg",
+				"path": "/images/items/01_1234/159_2167.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2167_s_zfpke65dbi0urpqs2udlo946zbi4.jpg",
+				"path": "/images/items/01_1234/189_2167.jpg"
+			}
 		],
-		"en": [
-			"GN smart gun x1",
-			"GN Discharger x 1",
-			"GN defense rod x2",
-			"GN beam saber x2",
-			"Armor x 1 set"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×8",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 8",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1234/153_2167.jpg",
-		"/images/items/01_1234/155_2167.jpg",
-		"/images/items/01_1234/156_2167.jpg",
-		"/images/items/01_1234/157_2167.jpg",
-		"/images/items/01_1234/158_2167.jpg",
-		"/images/items/01_1234/159_2167.jpg",
-		"/images/items/01_1234/189_2167.jpg",
-		"/images/items/01_1234/01_1234_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1234/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
-	"manualId": "0062"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1234/"
 }

@@ -5,6 +5,44 @@
 		"ja": "1/144 モビルカプル",
 		"en": "1/144 Mobile Couple"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "turn-a",
+			"url": "https://bandai-hobby.net/series/turn-a/",
+			"ja": "∀ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000135920",
+			"url": "https://p-bandai.jp/item/item-1000135920",
+			"ja": "ＭＧ 1/100 ∀ガンダム／ターンＸ［ナノスキンイメージ］"
+		},
+		{
+			"id": "item-1000099631",
+			"url": "https://p-bandai.jp/item/item-1000099631",
+			"ja": "ＭＧ 1/100 ターンエーガンダム（月光蝶Ver.）"
+		},
+		{
+			"id": "item-1000165581",
+			"url": "https://p-bandai.jp/item/item-1000165581",
+			"ja": "ＭＧ 1/100 ターンエーガンダム用拡張エフェクトユニット “月光蝶”"
+		},
+		{
+			"id": "01_120",
+			"url": "https://bandai-hobby.net/item/01_120/",
+			"ja": "MG 1/100 Concept-X 6-1-2 ターンX"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"TV「∀ガンダム」に登場したモビルスーツをキット化しました。胸部のハッチが可動し、ミサイルの発射形態を再現できます。頭頂部は装甲の開閉が可能です。肩のアーマーは可動式です。腕部のジャバラ部分には複数の関節を採用し、独自の動きとポージングを再現できるようになっています。クロー（爪）は可動します。着脱可能なハンドガンがついています。"
@@ -26,25 +63,30 @@
 			"The mobile suit that appeared on TV \"∀Gundam\" has been made into a kit. The chest hatch is movable, allowing you to recreate the missile launch form. The armor can be opened and closed on the top of the head. The shoulder armor is movable. The bellows on the arms have multiple joints, allowing you to recreate unique movements and poses. The claws are movable. Comes with a detachable handgun."
 		]
 	},
-	"images": [
-		"/images/items/01_2413/153_3345.jpg",
-		"/images/items/01_2413/155_3345.jpg",
-		"/images/items/01_2413/156_3345.jpg",
-		"/images/items/01_2413/157_3345.jpg",
-		"/images/items/01_2413/158_3345.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2413/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000135920",
-		"item-1000099631",
-		"item-1000165581",
-		"01_120"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3345_o_1dc1qq64l17m5jif1lq1lsac923.jpg",
+				"path": "/images/items/01_2413/153_3345.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3345_o_1dc1qqhh8136ei45hn8s5112372d.jpg",
+				"path": "/images/items/01_2413/155_3345.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3345_o_1dc1qqn231cudbf015061tqj10992i.jpg",
+				"path": "/images/items/01_2413/156_3345.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3345_o_1dc1qs0q010ta1o41fi81ujp16m2s.jpg",
+				"path": "/images/items/01_2413/157_3345.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3345_o_1dc1qs6pqg391glv1doomp197a31.jpg",
+				"path": "/images/items/01_2413/158_3345.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2413/"
 }

@@ -2,9 +2,53 @@
 	"id": "01_1902",
 	"type": "item",
 	"name": {
-		"ja": "PG 1/60 ガンダムベース限定 RX-78-3 G-3 ガンダム [エクストラフィニッシュ]",
-		"en": "PG 1/60 Gundam Base Limited RX-78-3 G-3 Gundam [Extra Finish]"
+		"ja": "PG 1/60 ガンダムベース限定 RX-78-3 G-3ガンダム [エクストラフィニッシュ]",
+		"en": "PG 1/60 Gundam Base Limited RX-78-3 G-3Gundam [Extra Finish]"
 	},
+	"brands": [
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3373",
+			"url": "https://bandai-hobby.net/item/01_3373/",
+			"ja": "ＰＧ ＵＮＬＥＡＳＨＥＤ 1/60 RX-78-2 ガンダム クリアカラーボディ"
+		},
+		{
+			"id": "01_3328",
+			"url": "https://bandai-hobby.net/item/01_3328/",
+			"ja": "PG UNLEASHED 1/60 RX-78-2 ガンダム"
+		},
+		{
+			"id": "01_2829",
+			"url": "https://bandai-hobby.net/item/01_2829/",
+			"ja": "PG 1/60 ガンダムベース限定 RX-78-2 ガンダム [チタニウムフィニッシュ]"
+		},
+		{
+			"id": "01_4875",
+			"url": "https://bandai-hobby.net/item/01_4875/",
+			"ja": "PG 1/60 MS-06F「ザクII」+ウエポンズ アニメーションカラーバージョン"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 26400,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 6
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。"
@@ -26,28 +69,18 @@
 			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world."
 		]
 	},
-	"images": [
-		"/images/items/01_1902/153_2837.jpg",
-		"/images/items/01_1902/155_2837.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1902/",
-	"brandIds": [
-		"pg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3373",
-		"01_3328",
-		"01_2829",
-		"01_4875"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2837_s_zlgsa0suf7jx35c96b8pyzcb47fl.jpg",
+				"path": "/images/items/01_1902/153_2837.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2837_s_6lclceg7yowsyccgoiventbnjo8e.jpg",
+				"path": "/images/items/01_1902/155_2837.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1902/"
 }

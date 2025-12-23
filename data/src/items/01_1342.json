@@ -5,6 +5,49 @@
 		"ja": "ＲＥ/100 1/100 ガンキャノン・ディテクター（Ｚ-ＭＳＶ Ｖｅｒ.）",
 		"en": "RE/100 1/100 Guncannon Detector (Z-MSV Ver.)"
 	},
+	"brands": [
+		{
+			"id": "re100",
+			"url": "https://bandai-hobby.net/brand/re100/",
+			"ja": "RE/100[リボーンワンハンドレッド]"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000220190",
+			"url": "https://p-bandai.jp/item/item-1000220190/",
+			"ja": "ＨＧ 1/144 ザク・デザートタイプ ピンクパンサー隊機"
+		},
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "item-1000216105",
+			"url": "https://p-bandai.jp/item/item-1000216105/",
+			"ja": "RG 1/144 ソードインパルスガンダムＳｐｅｃＩＩ"
+		},
+		{
+			"id": "item-1000216112",
+			"url": "https://p-bandai.jp/item/item-1000216112/",
+			"ja": "HG 1/144 デルタザイン"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -17,28 +60,14 @@
 		"month": 4
 	},
 	"targetAge": 15,
-	"scale": "1/100",
-	"images": [
-		"/images/items/01_1342/153_2270.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1342/",
-	"brandIds": [
-		"re100",
-		"pb_gunpla"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000220190",
-		"item-1000220189",
-		"item-1000216105",
-		"item-1000216112"
-	],
-	"manualId": "2709",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2270_o_1c5imnl0ieak1u4r115o1litvsq23.jpg",
+				"path": "/images/items/01_1342/153_2270.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1342/"
 }

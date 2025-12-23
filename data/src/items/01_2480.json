@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 マーズフォーウェポンズ",
 		"en": "HGBD:R 1/144 Mars for Weapons"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"2019年10月からガンダムチャンネルで配信スタートの『ガンダムビルドダイバーズRe:RISE』 より、マーズフォーガンダム用武器セットが登場！",
@@ -29,44 +72,50 @@
 		],
 		"en": [
 			"Mars Four Gundam weapon set is now available from \"Gundam Build Divers Re:RISE\", which will be distributed on the Gundam channel from 201910!",
-			"• Equipped with a gimmick where two weapons consisting of a large ax and a large sword combine to form an even larger weapon.",
-			"• Mars Four Gundam can be completed by combining it with the separately sold Core Gundam and Mars Four Gundam armor parts.",
+			"• Equipped with a gimmick that allows two weapons, consisting of a large ax and a large sword, to combine and transform into an even larger weapon.",
+			"• Mars Four Gundam can be completed by combining with Core Gundam and Mars Four Gundam armor parts (sold separately).",
 			"• In addition to the core Gundam, it can also be equipped to existing 1/144 Scale Gunpla. You can enjoy strengthening existing HG and wide range of customization.",
 			"• Original joint parts included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ジョイントパーツ×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ジョイントパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3408_s_zyeecn3sxdibvfpnj7gghr7yphht.jpg",
+				"path": "/images/items/01_2480/153_3408.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3408_s_ge1k3eryda4bvnkl6d13u3fr2psr.jpg",
+				"path": "/images/items/01_2480/155_3408.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3408_s_q96gusr6fii9ctfwlw6n3wrfsog0.jpg",
+				"path": "/images/items/01_2480/156_3408.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3408_s_9jt5sw28dxik2v7r0dway2waafsz.jpg",
+				"path": "/images/items/01_2480/157_3408.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3408_s_zaan1uk8977a6980ecf50g1nadpd.jpg",
+				"path": "/images/items/01_2480/158_3408.jpg"
+			}
 		],
-		"en": [
-			"Joint parts x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2480/153_3408.jpg",
-		"/images/items/01_2480/155_3408.jpg",
-		"/images/items/01_2480/156_3408.jpg",
-		"/images/items/01_2480/157_3408.jpg",
-		"/images/items/01_2480/158_3408.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2480/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0075"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2480/"
 }

@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ブルーディスティニー1号機“EXAM”",
 		"en": "HGUC 1/144 Blue Destiny Unit 1 “EXAM”"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 5
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 『機動戦士ガンダム外伝 THE BLUE DESTINY』に登場する主人公機“蒼い死神”ブルーディスティニー1号機が新たにHGで登場！",
@@ -26,64 +74,92 @@
 			"• 100mmマシンガン、シールドが付属！"
 		],
 		"en": [
-			"• The main character “Blue Reaper” Blue Destiny Unit 1 from “Mobile Suit Gundam Gaiden THE BLUE DESTINY” is now available in HG!",
+			"• Blue Destiny Unit 1, the main character “Blue Reaper” from “Mobile Suit Gundam Gaiden THE BLUE DESTINY”, is now available in HG!",
 			"• In addition to the game version, a head that can reproduce the version of ``The Blue Destiny'' currently being serialized in ``Gundam Ace'' is also included. In both cases, the main camera while the EXAM system is activated can be selectively reproduced.",
 			"• 100mm machine gun, Seal included!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"100mmマシンガン×1",
-			"ショート・シールド×1",
-			"ビーム・サーベル×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "100mmマシンガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ショート・シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 9
+		},
+		{
+			"name": {
+				"ja": "シール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2019_s_ue2har8ghu1lm6z77ydughlvxd6e.jpg",
+				"path": "/images/items/01_1087/153_2019.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2019_s_pzwiq7syd7h2rjyoqcx9pc5fjbco.jpg",
+				"path": "/images/items/01_1087/155_2019.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2019_s_cikkrdozhqw4brkpfi1aogkyggmk.jpg",
+				"path": "/images/items/01_1087/156_2019.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2019_s_a44wxuupt1b5b2ok9mhg9saa7f9r.jpg",
+				"path": "/images/items/01_1087/157_2019.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2019_s_8xh73f41vlpl3b1xch6cqhjw16vr.jpg",
+				"path": "/images/items/01_1087/158_2019.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2019_s_5mdzdb3asvngf1r3dmb111g7dwzd.jpg",
+				"path": "/images/items/01_1087/159_2019.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2019_s_odi72gxyq83w52sro0tkj7m35ach.jpg",
+				"path": "/images/items/01_1087/189_2019.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2019_s_6pbdmw3fk23vz4j4bgmeixlnz0nv.jpg",
+				"path": "/images/items/01_1087/190_2019.jpg"
+			}
 		],
-		"en": [
-			"100mm machine gun x 1",
-			"Short・Seal×1",
-			"Beam saber x2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×9",
-			"シール×１",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 9",
-			"Seal×1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1087/153_2019.jpg",
-		"/images/items/01_1087/155_2019.jpg",
-		"/images/items/01_1087/156_2019.jpg",
-		"/images/items/01_1087/157_2019.jpg",
-		"/images/items/01_1087/158_2019.jpg",
-		"/images/items/01_1087/159_2019.jpg",
-		"/images/items/01_1087/189_2019.jpg",
-		"/images/items/01_1087/190_2019.jpg",
-		"/images/items/01_1087/01_1087_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1087/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
-	"manualId": "0474"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1087/"
 }

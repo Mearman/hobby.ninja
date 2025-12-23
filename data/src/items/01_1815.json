@@ -2,9 +2,53 @@
 	"id": "01_1815",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 ガンダム AGE-2 ノーマル",
-		"en": "HG 1/144 Gundam AGE-2 Normal"
+		"ja": "HG 1/144 ガンダムAGE-2 ノーマル",
+		"en": "HG 1/144 GundamAGE-2 Normal"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "age",
+			"url": "https://bandai-hobby.net/series/age/",
+			"ja": "機動戦士ガンダムAGE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000170540",
+			"url": "https://p-bandai.jp/item/item-1000170540/",
+			"ja": "ＨＧ 1/144 フォーンファルシア"
+		},
+		{
+			"id": "item-1000169836",
+			"url": "https://p-bandai.jp/item/item-1000169836/",
+			"ja": "ＨＧ 1/144 ガンダムＡＧＥ-１ レイザー＆ガンダムＡＧＥ-２ アルティメス セット"
+		},
+		{
+			"id": "01_3738",
+			"url": "https://bandai-hobby.net/item/01_3738/",
+			"ja": "HG 1/144 「機動戦士ガンダムAGE」 MSセット[クリアカラー]"
+		},
+		{
+			"id": "item-1000082540",
+			"url": "https://p-bandai.jp/item/item-1000082540",
+			"ja": "ＨＧ 1/144 ガンダムレギルス〔MEMORY OF EDEN〕"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,47 +62,54 @@
 		"day": 21
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 第２世代主役機、ガンダム AGE-2が登場。",
+			"• 第２世代主役機、ガンダムAGE-2が登場。",
 			"• 色プラとホイルシールで設定カラーリングを再現。",
 			"• 全身フル可動でダイナミックなポージングを楽しめる。",
 			"• 躍動感を与える手首パーツが付属。",
 			"成形品×6、ホイルシール×1、組立説明書"
 		],
 		"en": [
-			"• The 2nd generation main machine, Gundam AGE-2, is now available.",
+			"• The 2nd generation main machine, GundamAGE-2, is released.",
 			"• Reproduce the set coloring with colored plastic and foil seal.",
 			"• Enjoy dynamic poses with full body movement.",
-			"• Wrist parts that give a sense of dynamism are included.",
+			"• Includes wrist parts that give a sense of dynamism.",
 			"Molded product x 6, foil seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_1815/153_2752.jpg",
-		"/images/items/01_1815/155_2752.jpg",
-		"/images/items/01_1815/156_2752.jpg",
-		"/images/items/01_1815/157_2752.jpg",
-		"/images/items/01_1815/158_2752.jpg",
-		"/images/items/01_1815/159_2752.jpg",
-		"/images/items/01_1815/189_2752.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1815/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
-	"manualId": "0942"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2752_o_1cetedvp3pns1nlt1q59162ii3h23.jpg",
+				"path": "/images/items/01_1815/153_2752.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2752_o_1ceteea46ue1140v1f2n14mt1mb42d.jpg",
+				"path": "/images/items/01_1815/155_2752.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2752_o_1ceteeeh5rdo2pe1qg03t1n2p2i.jpg",
+				"path": "/images/items/01_1815/156_2752.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2752_o_1ceteejpl1mna136tovd196aqrv2n.jpg",
+				"path": "/images/items/01_1815/157_2752.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2752_o_1ceteeoad1h6o1ead485168k1e7q2s.jpg",
+				"path": "/images/items/01_1815/158_2752.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2752_o_1ceteesn520n6sc1175gfn1fg131.jpg",
+				"path": "/images/items/01_1815/159_2752.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2752_o_1cetefaqf1i3m1fjp1gi01f201coi36.jpg",
+				"path": "/images/items/01_1815/189_2752.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1815/"
 }

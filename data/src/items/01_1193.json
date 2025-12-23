@@ -5,6 +5,48 @@
 		"ja": "BB戦士220 斗機丸零参（トキマルゼロスリー）",
 		"en": "BB Senshi 220 Tokimaru Reisan (Tokimaru Zero Three)"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		},
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -23,29 +65,30 @@
 			"通常形態の「トッキー」がバトル形態の「斗機丸」に変身する遊びを再現しています。マンガと合わせてお楽しみ下さい。"
 		],
 		"en": [
-			"A plastic model of the character \"Tokimaru \" that appears in \" Musha○den\" which is being serialized in Comic Bonbon.",
-			"It recreates the play in which the normal form of \"Tocky \" transforms into the battle form of \" Tokimaru\". Please enjoy it together with the manga."
+			"A plastic model of the character \"Tokimaru\" that appears in \"Musha○den\" which is being serialized in Comic Bonbon.",
+			"It recreates the play in which the normal form of \"Tocky\" transforms into the battle form of \"Tokimaru\". Please enjoy it together with the manga."
 		]
 	},
-	"images": [
-		"/images/items/01_1193/153_211.jpg",
-		"/images/items/01_1193/155_211.jpg",
-		"/images/items/01_1193/156_211.jpg",
-		"/images/items/01_1193/157_211.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1193/",
-	"brandIds": [
-		"sdgundamseries",
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/157_211_s_p9mk9jijm7a4jy5ar0dftxu1ugjh.jpg",
+				"path": "/images/items/01_1193/157_211.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_211_s_68yh863cfho5nwzo40oft1ou15cj.jpg",
+				"path": "/images/items/01_1193/153_211.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_211_s_u0fgyzrbsuvrripb2y9a0t3qjtzo.jpg",
+				"path": "/images/items/01_1193/155_211.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_211_s_em09c7w1nkkitv9bp1y8ojd2hmgr.jpg",
+				"path": "/images/items/01_1193/156_211.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1193/"
 }

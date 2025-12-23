@@ -2,9 +2,48 @@
 	"id": "01_1417",
 	"type": "item",
 	"name": {
-		"ja": "PG 1/60 ガンダム Mk-II",
-		"en": "PG 1/60 Gundam Mk-II"
+		"ja": "PG 1/60 ガンダムMk-II",
+		"en": "PG 1/60 GundamMk-II"
 	},
+	"brands": [
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4870",
+			"url": "https://bandai-hobby.net/item/01_4870/",
+			"ja": "PG 1/60 RX-178 ガンダム Mk-II マルチコーティングバージョン"
+		},
+		{
+			"id": "01_4475",
+			"url": "https://bandai-hobby.net/item/01_4475/",
+			"ja": "PG 1/60 MSZ-006 ゼータガンダム"
+		},
+		{
+			"id": "01_1832",
+			"url": "https://bandai-hobby.net/item/01_1832/",
+			"ja": "PG 1/60 ガンダムMk-II(ティターンズカラー)"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 16500,
 		"currency": "JPY",
@@ -17,42 +56,44 @@
 		"month": 11
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
-			"待望のパーフェクトグレード・シリーズに、「機動戦士Z ガンダム」に登場するモビルスーツ「ガンダム Mk-II」が登場。機体設定の特徴であるムーバブルフレームの再現と、可動を両立。",
+			"待望のパーフェクトグレード・シリーズに、「機動戦士Zガンダム」に登場するモビルスーツ「ガンダムMk-II」が登場。機体設定の特徴であるムーバブルフレームの再現と、可動を両立。",
 			"また、組み立てたあとでも各ブロックハッチの開閉も可能です。",
 			"頭部カメラとコクピット内部がLED使用で点灯します。",
 			"武器には、ビームライフル、ビームサーベル、シールド、ハイパーバズーカが付属します。"
 		],
 		"en": [
-			"The long-awaited Perfect Grade series includes the mobile suit \"Gundam Mk-II \" that appears in \" Mobile Suit Z Gundam\". Features of the aircraft setting: Reproduces a movable frame and is movable.",
+			"The long-awaited Perfect Grade series includes the mobile suit \"Gundam Mk-II\" that appears in \"Mobile Suit ZGundam\". Features of the aircraft setting: Reproduces a movable frame and is movable.",
 			"In addition, each block hatch can be opened and closed even after assembly.",
 			"The head camera and cockpit interior are illuminated using LEDs.",
 			"Weapons include a beam rifle, beam saber, seal, and hyper bazooka."
 		]
 	},
-	"images": [
-		"/images/items/01_1417/153_233.jpg",
-		"/images/items/01_1417/155_233.jpg",
-		"/images/items/01_1417/156_233.jpg",
-		"/images/items/01_1417/157_233.jpg",
-		"/images/items/01_1417/158_233.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1417/",
-	"brandIds": [
-		"pg"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4870",
-		"01_4475",
-		"01_1832"
-	],
-	"manualId": "0651"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_233_s_iye3xft93jj1cvje80xxc0nb7k5z.jpg",
+				"path": "/images/items/01_1417/153_233.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_233_s_73pg9ynr06vvi6d6vqlqsk6m9bb1.jpg",
+				"path": "/images/items/01_1417/155_233.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_233_s_dxmcb21p10sila4wf8dj4coxhrbn.jpg",
+				"path": "/images/items/01_1417/156_233.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_233_s_ws1gaqorexw9jah54y10veg1f6pa.jpg",
+				"path": "/images/items/01_1417/157_233.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_233_s_elnlri86wqp3586h54gd5hpgsheo.jpg",
+				"path": "/images/items/01_1417/158_233.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1417/"
 }

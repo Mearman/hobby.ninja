@@ -5,6 +5,50 @@
 		"ja": "HGBF 1/144 ケルディムガンダムサーガ TYPE.GBF",
 		"en": "HGBF 1/144 Cherudim Gundam Saga TYPE.GBF"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 「ケルディムガンダムサーガ」がビルドファイターズ仕様で登場！",
@@ -31,57 +74,80 @@
 			"• The wide range of motion allows for various shooting poses that Cherudim Gundam Saga specializes in, and the \"GN Assault Carbine\" can be held with both hands to recreate sniper poses!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"GNビームピストル×２",
-			"GNサブマシンガン×２",
-			"GNアサルトカービン×1",
-			"GNビームピストルII×2",
-			"GNスモールシールド×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "GNビームピストル×２"
+			}
+		},
+		{
+			"name": {
+				"ja": "GNサブマシンガン×２"
+			}
+		},
+		{
+			"name": {
+				"ja": "GNアサルトカービン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GNビームピストルII"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "GNスモールシールド"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 8
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2091_s_jhu2xsv0dd2jfvy5upj6zhge4oua.jpg",
+				"path": "/images/items/01_1161/153_2091.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2091_s_4wuxd20wkd8sifhvrbhyv4mrcmbl.jpg",
+				"path": "/images/items/01_1161/155_2091.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2091_s_rksmho8pyw2etaunbl456u8ql4h2.jpg",
+				"path": "/images/items/01_1161/156_2091.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2091_s_0mahqkmuk1bgk3wx2ufezta3dl9c.jpg",
+				"path": "/images/items/01_1161/157_2091.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2091_s_pzp39yoj0bhc2aqhkxmghan0il1t.jpg",
+				"path": "/images/items/01_1161/158_2091.jpg"
+			}
 		],
-		"en": [
-			"GN beam pistol x2",
-			"GN submachine gun x2",
-			"GN Assault Carbine x 1",
-			"GN Beam Pistol II x 2",
-			"GN Small Seal ×1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×8",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 8",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1161/153_2091.jpg",
-		"/images/items/01_1161/155_2091.jpg",
-		"/images/items/01_1161/156_2091.jpg",
-		"/images/items/01_1161/157_2091.jpg",
-		"/images/items/01_1161/158_2091.jpg",
-		"/images/items/01_1161/01_1161_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1161/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
-	"manualId": "0757"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1161/"
 }

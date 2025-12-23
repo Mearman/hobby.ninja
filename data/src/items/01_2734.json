@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "RG 1/144 ガンダムベース限定 νガンダム[チタニウムフィニッシュ]",
-		"en": "RG 1/144 Gundam Base Limited νGundam [Titanium Finish]"
+		"en": "RG 1/144 THE GUNDAM BASE LIMITED νGUNDAM[TITANIUM FINISH]"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］",
+			"en": "RG [REAL GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア",
+			"en": "MOBILE SUIT GUNDAM Char’s Counterattack"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4121",
+			"url": "https://bandai-hobby.net/item/01_4121/",
+			"ja": "RG 1/144 ガンダムベース限定 Hi-νガンダム[チタニウムフィニッシュ]"
+		},
+		{
+			"id": "item-1000136789",
+			"url": "https://p-bandai.jp/item/item-1000136789",
+			"ja": "ＲＧ 1/144 νガンダム用ダブル・フィン・ファンネル拡張ユニット"
+		},
+		{
+			"id": "01_2343",
+			"url": "https://bandai-hobby.net/item/01_2343/",
+			"ja": "RG 1/144 νガンダム"
+		},
+		{
+			"id": "01_1408",
+			"url": "https://bandai-hobby.net/item/01_1408/",
+			"ja": "RG 1/144 サザビー"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 9790,
 		"currency": "JPY",
@@ -18,7 +64,6 @@
 		"day": 8
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
@@ -29,38 +74,24 @@
 			"• 限定品ならではの美しいパッケージデザイン！商品の持つ高級感、金属感を表現した豪華仕様でございます！"
 		],
 		"en": [
-			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"The RG 1/144 νGundam, which boasts outstanding articulation and an overwhelming amount of information, is now available in a super luxurious limited edition!",
-			"• The white exterior is treated with a titanium finish for a very luxurious finish!",
-			"• The blade antenna and chest parts are plated with semi-matte gold for a majestic finish!",
-			"• Metallic molding colors are used for the internal frame and weapon parts!",
-			"• Beautiful package design unique to limited edition items! It has a luxurious specification that expresses the luxury and metallic feel of the product!"
+			"For GUNPLA fans around the world, this is a limited edition GUNPLA at the official GUNPLA complex \"GUNDAM Base\". Boasting an overwhelming amount of information in outstanding mobility, RG 1/144 νGUNDAM is now available in a super luxurious limited specification!",
+			"• The white exterior is treated with a titanium finish, making it a very luxurious finish!",
+			"• The blade antenna and chest parts are semi-matte gold plated for a solemn finish!",
+			"• Metallic molding colors are used for internal frames and weapon parts!",
+			"• Beautiful package design unique to limited edition products! It is a luxurious specification that expresses the luxurious and metallic feeling of the product!"
 		]
 	},
-	"images": [
-		"/images/items/01_2734/01_2734_0.jpg",
-		"/images/items/01_2734/01_2734_1.jpg",
-		"/images/items/01_2734/01_2734_2.jpg",
-		"/images/items/01_2734/01_2734_3.jpg"
-	],
+	"images": {
+		"product": [
+			{},
+			{},
+			{},
+			{}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2734/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4121",
-		"item-1000136789",
-		"01_2343",
-		"01_1408"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2734/"
 	}
 }

@@ -5,6 +5,44 @@
 		"ja": "PERFECT GRADE 1/72 ミレニアム・ファルコン",
 		"en": "PERFECT GRADE 1/72 Millennium Falcon"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3515",
+			"url": "https://bandai-hobby.net/item/01_3515/",
+			"ja": "1/12 ザ・マンダロリアン(ベスカーアーマー)"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 44000,
 		"currency": "JPY",
@@ -17,26 +55,14 @@
 		"month": 8
 	},
 	"targetAge": 15,
-	"scale": "1/72",
-	"images": [
-		"/images/items/01_1117/153_2049.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1117/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3515"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2049_o_1bj4ift731rrkfjqqre18cp1pgr23.jpg",
+				"path": "/images/items/01_1117/153_2049.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1117/"
 }

@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ゼクアイン",
 		"en": "HGUC 1/144 Zekuain"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "sentinel",
+			"url": "https://bandai-hobby.net/series/sentinel/",
+			"ja": "ガンダム・センチネル"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4064",
+			"url": "https://bandai-hobby.net/item/01_4064/",
+			"ja": "ＨＧ 1/144 ゼータプラス（テスト機イメージカラー）"
+		},
+		{
+			"id": "item-1000143361",
+			"url": "https://p-bandai.jp/item/item-1000143361/",
+			"ja": "HGUC 1/144 ゼータプラスＣ１"
+		},
+		{
+			"id": "01_1247",
+			"url": "https://bandai-hobby.net/item/01_1247/",
+			"ja": "HGUC 1/144 MSA-0011 Sガンダム"
+		},
+		{
+			"id": "01_1700",
+			"url": "https://bandai-hobby.net/item/01_1700/",
+			"ja": "HGUC 1/144 Ex-S ガンダム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -17,7 +66,6 @@
 		"month": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムセンチネル』よりゼクアインが登場。",
@@ -32,46 +80,62 @@
 			"Attached weapons: Dedicated machine gun / ammunition tank x 2 / ammunition belt / left and right seal / beam saber"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用マシンガン",
-			"弾装タンク×2",
-			"弾装ベルト",
-			"左右シールド",
-			"ビーム・サーベル"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用マシンガン"
+			}
+		},
+		{
+			"name": {
+				"ja": "弾装タンク"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "弾装ベルト"
+			}
+		},
+		{
+			"name": {
+				"ja": "左右シールド"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/159_223_s_plxcauretui84sxfifxo1xvwl64d.jpg",
+				"path": "/images/items/01_1310/159_223.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_223_s_ty18ofrdvdfahn9h7606urmjfaex.jpg",
+				"path": "/images/items/01_1310/153_223.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_223_s_zb72daskcqj34rtyh3mnhtty8esl.jpg",
+				"path": "/images/items/01_1310/155_223.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_223_s_km3mtdk9uhtkfjviv6nmikatm6lj.jpg",
+				"path": "/images/items/01_1310/156_223.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_223_s_h09qb4wsq5fc0k29dh6fxwojtc1t.jpg",
+				"path": "/images/items/01_1310/157_223.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_223_s_5rss87x00q57sgpcr40iwpsjpbgc.jpg",
+				"path": "/images/items/01_1310/158_223.jpg"
+			}
 		],
-		"en": [
-			"dedicated machine gun",
-			"Ammunition tank x 2",
-			"bullet belt",
-			"Seal left and right",
-			"beam saber"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1310/153_223.jpg",
-		"/images/items/01_1310/155_223.jpg",
-		"/images/items/01_1310/156_223.jpg",
-		"/images/items/01_1310/157_223.jpg",
-		"/images/items/01_1310/158_223.jpg",
-		"/images/items/01_1310/159_223.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1310/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"sentinel"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4064",
-		"item-1000143361",
-		"01_1247",
-		"01_1700"
-	],
-	"manualId": "0224"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1310/"
 }

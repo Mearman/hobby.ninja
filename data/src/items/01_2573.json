@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 bEXM-15 ポルタノヴァ（宇宙仕様）[グレー]",
 		"en": "30MM 1/144 bEXM-15 Portanova (Space specification) [Gray]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 25
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMシリーズに局地戦用改装タイプ、ポルタノヴァ（宇宙仕様）が登場！",
@@ -31,38 +73,56 @@
 			"• Arm unit rifle/large claw included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"宇宙用バックパック/装甲×1式",
-			"アームユニット ライフル/大型クロー×1式",
-			"マーキングシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "宇宙用バックパック/装甲"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "アームユニット ライフル/大型クロー"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3499_s_qcenkv7f22iyl1k891dz6q71g5ht.jpg",
+				"path": "/images/items/01_2573/153_3499.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3499_s_7l6piv8iici9uu6ze5tde0bgda8g.jpg",
+				"path": "/images/items/01_2573/155_3499.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3499_s_q91wqm2nzfrv5dd9vkacyuy7m2bp.jpg",
+				"path": "/images/items/01_2573/156_3499.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3499_s_vld365dvbejto51lyhbhab485cc8.jpg",
+				"path": "/images/items/01_2573/157_3499.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3499_s_9if54bvvhbqez1ydq5k3r2sipzrg.jpg",
+				"path": "/images/items/01_2573/158_3499.jpg"
+			}
 		],
-		"en": [
-			"Space backpack/armor x 1 set",
-			"Arm unit rifle/large claw x 1 set",
-			"MarkingSeal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2573/153_3499.jpg",
-		"/images/items/01_2573/155_3499.jpg",
-		"/images/items/01_2573/156_3499.jpg",
-		"/images/items/01_2573/157_3499.jpg",
-		"/images/items/01_2573/158_3499.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2573/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3670"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2573/"
 }

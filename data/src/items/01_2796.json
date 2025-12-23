@@ -5,6 +5,60 @@
 		"ja": "ＲＧ 1/144 トールギス（ＴＶアニメカラーVer.）",
 		"en": "RG 1/144 Tallgeese (TV anime color Ver.)"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000213249",
+			"url": "https://p-bandai.jp/item/item-1000213249/",
+			"ja": "ＨＧ 1/144 アルトロンガンダム"
+		},
+		{
+			"id": "item-1000194972",
+			"url": "https://p-bandai.jp/item/item-1000194972/",
+			"ja": "ＭＧ 1/100 ガンダムエピオン EW (シュトゥルム・ウント・ドラング装備)"
+		},
+		{
+			"id": "item-1000183318",
+			"url": "https://p-bandai.jp/item/item-1000183318/",
+			"ja": "ＨＧ 1/144 ガンダムデスサイズヘル"
+		},
+		{
+			"id": "item-1000170382",
+			"url": "https://p-bandai.jp/item/item-1000170382/",
+			"ja": "ＨＧ 1/144 ガンダムヘビーアームズ改"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -16,7 +70,6 @@
 		"year": 2020,
 		"month": 6
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－",
@@ -85,38 +138,50 @@
 			"- Product specifications are scheduled as of 20202. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2796/153_3783.jpg",
-		"/images/items/01_2796/155_3783.jpg",
-		"/images/items/01_2796/156_3783.jpg",
-		"/images/items/01_2796/157_3783.jpg",
-		"/images/items/01_2796/158_3783.jpg",
-		"/images/items/01_2796/159_3783.jpg",
-		"/images/items/01_2796/189_3783.jpg",
-		"/images/items/01_2796/190_3783.jpg",
-		"/images/items/01_2796/191_3783.jpg",
-		"/images/items/01_2796/192_3783.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2796/",
-	"brandIds": [
-		"rg",
-		"pb_rg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000213249",
-		"item-1000194972",
-		"item-1000183318",
-		"item-1000170382"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3783_s_bxodif847drild7z0g76d0swim1k.jpg",
+				"path": "/images/items/01_2796/153_3783.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3783_s_tizuioq68aof9p87sjx33gqico5l.jpg",
+				"path": "/images/items/01_2796/155_3783.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3783_s_4b6d3zwy8qwr6i9vlgkma732kh9m.jpg",
+				"path": "/images/items/01_2796/156_3783.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3783_s_is5c102s0sv3xw4aj67m73lvbp1s.jpg",
+				"path": "/images/items/01_2796/157_3783.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3783_s_q7dpmidkoujr5vtsqbd7ed1u7gqi.jpg",
+				"path": "/images/items/01_2796/158_3783.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3783_s_igc4dvtk2qzhmnoje4b2bumuk1e4.jpg",
+				"path": "/images/items/01_2796/159_3783.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3783_s_uqyc0a6uba8c1qrwo8num5tf4kei.jpg",
+				"path": "/images/items/01_2796/189_3783.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3783_s_gxsmader7t954ecwtoj9inxczbil.jpg",
+				"path": "/images/items/01_2796/190_3783.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3783_s_m1p2gwj7vm2twq127j9uiwbb0z9m.jpg",
+				"path": "/images/items/01_2796/191_3783.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3783_s_ldlpfk6gm1iig1n891mkwq0ccyvo.jpg",
+				"path": "/images/items/01_2796/192_3783.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2796/"
 }

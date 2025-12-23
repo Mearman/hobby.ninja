@@ -5,6 +5,43 @@
 		"ja": "LEGEND BB ガンダムベース限定 騎士スペリオルドラゴン［クリアカラー］",
 		"en": "LEGEND BB Gundam Base Limited Knight Superior Dragon [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -27,29 +64,30 @@
 			"LEGEND BB Superior Dragon is now available in Gundam base limited clear color."
 		]
 	},
-	"images": [
-		"/images/items/01_1077/153_2009.jpg",
-		"/images/items/01_1077/155_2009.jpg",
-		"/images/items/01_1077/156_2009.jpg",
-		"/images/items/01_1077/157_2009.jpg",
-		"/images/items/01_1077/158_2009.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1077/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2009_s_k4prpcp5kk9du0n5dcymipxwtym9.jpg",
+				"path": "/images/items/01_1077/153_2009.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2009_s_0hq7yebc053liav7kcqqm4rg6x58.jpg",
+				"path": "/images/items/01_1077/155_2009.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2009_s_l5asujt7cfuvruxtynodk1zi2p24.jpg",
+				"path": "/images/items/01_1077/156_2009.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2009_s_6ehcn4v4kxbnyddp3uep1ae49l32.jpg",
+				"path": "/images/items/01_1077/157_2009.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2009_s_lc36fao87cp5njtry3epca6ms9he.jpg",
+				"path": "/images/items/01_1077/158_2009.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1077/"
 }

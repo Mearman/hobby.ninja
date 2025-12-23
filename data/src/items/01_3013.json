@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 bEXM-14T シエルノヴァ[ホワイト]",
 		"en": "30MM 1/144 bEXM-14T Cielnova [White]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1518,
 		"currency": "JPY",
@@ -18,14 +61,13 @@
 		"day": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMシリーズより、「シエルノヴァ」にカスタマイズの幅が広がる新色が登場！",
-			"■他の色と合わせやすいホワイトカラー。",
-			"■マッシヴな脚部、長い前腕、上方向に拡張できるバックパックなど、特徴的なパーツ構成。",
-			"■拡張可能な関節機構を採用。新規の股関節パーツを既存の機体に組み込み、体型のアレンジが可能。",
-			"■指揮官機用、特殊部隊用、近接格闘用オプションアーマーの胸部パーツはポルタノヴァと連動。"
+			"• 他の色と合わせやすいホワイトカラー。",
+			"• マッシヴな脚部、長い前腕、上方向に拡張できるバックパックなど、特徴的なパーツ構成。",
+			"• 拡張可能な関節機構を採用。新規の股関節パーツを既存の機体に組み込み、体型のアレンジが可能。",
+			"• 指揮官機用、特殊部隊用、近接格闘用オプションアーマーの胸部パーツはポルタノヴァと連動。"
 		],
 		"en": [
 			"From the 30MM series, a new color has been released for \"Ciel Nova\" that expands the range of customization!",
@@ -35,40 +77,61 @@
 			"• The chest parts of optional armor for commander aircraft, special forces, and close combat are linked with Portanova."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ハンドガン×1",
-			"バックパック×1式",
-			"マーキングシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハンドガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バックパック"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3985_s_yykix3wzb1vahlucb1fxcyg1mroy.jpg",
+				"path": "/images/items/01_3013/153_3985.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3985_s_vm5v1cso6g58qsfhnimlb1hk500i.jpg",
+				"path": "/images/items/01_3013/155_3985.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3985_s_cduc8m7v0omaywwrdm8n9lipfmgw.jpg",
+				"path": "/images/items/01_3013/156_3985.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3985_s_7wsndknzi5yvk97u0po7esn4hsny.jpg",
+				"path": "/images/items/01_3013/157_3985.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3985_s_v0zndhh9havxvg2fiftqty1qniri.jpg",
+				"path": "/images/items/01_3013/158_3985.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3985_s_aszmqkovgsjptu0c5x1nvtcw141d.jpg",
+				"path": "/images/items/01_3013/159_3985.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3985_s_6le66ayiwo2yxrabdd518u4rrwvp.jpg",
+				"path": "/images/items/01_3013/189_3985.jpg"
+			}
 		],
-		"en": [
-			"Hand gun x 1",
-			"Backpack x 1 set",
-			"MarkingSeal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3013/153_3985.jpg",
-		"/images/items/01_3013/155_3985.jpg",
-		"/images/items/01_3013/156_3985.jpg",
-		"/images/items/01_3013/157_3985.jpg",
-		"/images/items/01_3013/158_3985.jpg",
-		"/images/items/01_3013/159_3985.jpg",
-		"/images/items/01_3013/189_3985.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3013/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3704"
+	"sourceUrl": "https://bandai-hobby.net/item/01_3013/"
 }

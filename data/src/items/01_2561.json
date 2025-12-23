@@ -5,6 +5,44 @@
 		"ja": "1/12 ファースト・オーダー ストームトルーパー(スター・ウォーズ／スカイウォーカーの夜明け)",
 		"en": "1/12 First Order Stormtrooper (Star Wars/The Rise of Skywalker)"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3513",
+			"url": "https://bandai-hobby.net/item/01_3513/",
+			"ja": "ビークルモデル レイザー・クレスト"
+		}
+	],
+	"scale": "1/12",
 	"price": {
 		"amount": 2970,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 30
 	},
 	"targetAge": 15,
-	"scale": "1/12",
 	"description": {
 		"ja": [
 			"『スター・ウォーズ／スカイウォーカーの夜明け』より、ファースト・オーダー ストームトルーパーが1/12プラモデルで登場！",
@@ -28,55 +65,106 @@
 		"en": [
 			"From \"Star Wars: The Rise of Skywalker\", the First Order Stormtrooper is now available as a 1/12 plastic model!",
 			"• The newly sculpted shoulder parts can be reproduced in three colors: black, white, and red by using MarkingSeal or water transfer decals.",
-			"• The blaster pistol has been made into a plastic model with a new shape."
+			"• Blaster pistol is made into a plastic model with new modeling."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用ディスプレイベース×1",
-			"肩パーツ×3",
-			"ブラスター×2種",
-			"トンファー×1",
-			"シールド×1",
-			"ハンドパーツ×6種(武器持ち手×2、平手×2、こぶし×2）",
-			"水転写式デカール×1",
-			"マーキングシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "肩パーツ"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "ブラスター"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "トンファー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3487_s_fhmbd6g8fo9nou4krf2gqvke4kxx.jpg",
+				"path": "/images/items/01_2561/153_3487.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3487_s_puqgasce8h2kj089abqgvaz9cfyx.jpg",
+				"path": "/images/items/01_2561/155_3487.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3487_s_v0cp7cu4l4wd2ki61lmwiwf4hec6.jpg",
+				"path": "/images/items/01_2561/156_3487.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3487_s_yteoo1lvbbevzwzodp0hhedhkuxm.jpg",
+				"path": "/images/items/01_2561/157_3487.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3487_s_g97lx9e39cklvmrh0shhb0ney4ml.jpg",
+				"path": "/images/items/01_2561/158_3487.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3487_s_g2ch0ne6fweve8vfejfgyyhbh0xs.jpg",
+				"path": "/images/items/01_2561/159_3487.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3487_s_nsgirvh2zi8uc362s0mswiylsqil.jpg",
+				"path": "/images/items/01_2561/189_3487.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3487_s_24w1c3z6w1m163tms21x0tu50nkd.jpg",
+				"path": "/images/items/01_2561/190_3487.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3487_s_v1vh8brzey2wte7ay616xd207dso.jpg",
+				"path": "/images/items/01_2561/191_3487.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3487_s_cmza1j0zd8lf3x2aely7j48kwn7u.jpg",
+				"path": "/images/items/01_2561/192_3487.jpg"
+			}
 		],
-		"en": [
-			"Dedicated display base x 1",
-			"Shoulder parts x 3",
-			"Blaster x 2 types",
-			"Tonfa x1",
-			"Seal × 1",
-			"Hand parts x 6 types (weapon holder x 2, open hand x 2, fist x 2)",
-			"Water transfer decal x 1",
-			"MarkingSeal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2561/153_3487.jpg",
-		"/images/items/01_2561/155_3487.jpg",
-		"/images/items/01_2561/156_3487.jpg",
-		"/images/items/01_2561/157_3487.jpg",
-		"/images/items/01_2561/158_3487.jpg",
-		"/images/items/01_2561/159_3487.jpg",
-		"/images/items/01_2561/189_3487.jpg",
-		"/images/items/01_2561/190_3487.jpg",
-		"/images/items/01_2561/191_3487.jpg",
-		"/images/items/01_2561/192_3487.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2561/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3513"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2561/"
 }

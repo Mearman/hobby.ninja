@@ -5,6 +5,43 @@
 		"ja": "バトルピカちんキット05バッジDJリミックスシューター",
 		"en": "Battle Pikachin Kit05 Badge DJ Remix Shooter"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		},
+		{
+			"id": "01_2546",
+			"url": "https://bandai-hobby.net/item/01_2546/",
+			"ja": "ピカちんバッジVol.4 ～襲来! ピカちんノットリガー編～"
+		}
+	],
 	"price": {
 		"amount": 4620,
 		"currency": "JPY",
@@ -36,45 +73,68 @@
 		],
 		"en": [
 			"• Introducing an item that can detect all Pikachin badges!",
-			"• Set the badge into the Pikachin badge insertion slot and call out the sound!",
-			"• By rotating the disc that functions as a turntable, you can make the sound higher or lower! Challenge yourself to DJ!",
-			"• If you set the badge, you can summon the character sounds of all Pikachin badges!",
-			"• Have fun using the \"free hand button \" and \" sound selection button\"!",
-			"• LED flashes in 7 colors along with the sound!",
+			"• Set the badge in the Pikachin badge insertion slot and call out the sound!",
+			"• By rotating a disc that functions as a turntable, you can make the sound higher or lower! Challenge yourself to DJ!",
+			"• If you set a badge, you can summon the character sounds of all Pikachin badges!",
+			"• Have fun using the \"Free hand button\" and \"Sound selection button\"!",
+			"• LED lights flash in 7 colors along with the sound!",
 			"[Set contents]",
-			"• Body x 1",
+			"• Main unit x 1",
 			"• Runner×3 (badge)",
-			"• Handling Manual×1",
+			"• Handling manual×1",
 			"• Seal×1",
 			"[battery]",
 			"• AAA batteries x 3 (sold separately)"
 		]
 	},
-	"images": [
-		"/images/items/01_2605/153_3527.jpg",
-		"/images/items/01_2605/155_3527.jpg",
-		"/images/items/01_2605/156_3527.jpg",
-		"/images/items/01_2605/157_3527.jpg",
-		"/images/items/01_2605/158_3527.jpg",
-		"/images/items/01_2605/159_3527.jpg",
-		"/images/items/01_2605/189_3527.jpg",
-		"/images/items/01_2605/190_3527.jpg",
-		"/images/items/01_2605/191_3527.jpg",
-		"/images/items/01_2605/192_3527.jpg",
-		"/images/items/01_2605/193_3527.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2605/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2606",
-		"01_2607",
-		"01_2545",
-		"01_2546"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3527_s_2v3snh517kw0pfl9scc7dvaf9b0q.jpg",
+				"path": "/images/items/01_2605/153_3527.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3527_s_x37rl2o1frt63ycj8txywuyc3bw6.jpg",
+				"path": "/images/items/01_2605/155_3527.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3527_s_t9vi28krj252lbqqqd695ndc20y9.jpg",
+				"path": "/images/items/01_2605/156_3527.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3527_s_58avri8xvpq7hungn3jmgrhhuabp.jpg",
+				"path": "/images/items/01_2605/157_3527.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3527_s_0qvddpe7sc965g5c7ons19gqt00x.jpg",
+				"path": "/images/items/01_2605/158_3527.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3527_s_w69roh793h190l38c6ty1iv96tzk.jpg",
+				"path": "/images/items/01_2605/159_3527.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3527_s_g8ur6edml21yygrzm2fkw6jpy1gh.jpg",
+				"path": "/images/items/01_2605/189_3527.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3527_s_pfbmbq3o5cnlhb3a7ckh6aq4ibub.jpg",
+				"path": "/images/items/01_2605/190_3527.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3527_s_qsjftlnr8p8ez34sig50obaqnnfj.jpg",
+				"path": "/images/items/01_2605/191_3527.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3527_s_79z8au8f1qssu6nykvpawg4ons0z.jpg",
+				"path": "/images/items/01_2605/192_3527.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_3527_s_cuuh7j8wv5izi7wlzr3pkdmnc9xu.jpg",
+				"path": "/images/items/01_2605/193_3527.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2605/"
 }

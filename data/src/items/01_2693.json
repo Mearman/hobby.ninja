@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 カラミティガンダム",
 		"en": "HG 1/144 Calamity Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181726",
+			"url": "https://p-bandai.jp/item/item-1000181726/",
+			"ja": "ＨＧ 1/144 ストライクダガー"
+		},
+		{
+			"id": "01_1930",
+			"url": "https://bandai-hobby.net/item/01_1930/",
+			"ja": "HG 1/144 ガンダムベース限定 フリーダムガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_384",
+			"url": "https://bandai-hobby.net/item/01_384/",
+			"ja": "HGCE 1/144 フリーダムガンダム"
+		},
+		{
+			"id": "01_83",
+			"url": "https://bandai-hobby.net/item/01_83/",
+			"ja": "HGCE 1/144 ストライクルージュ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -17,36 +61,34 @@
 		"month": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム SEED」に登場する新ライバル機「カラミティガンダム」の1/144スケールHG仕様のプラモデル。特徴的なバックウェポンや肩部二連キャノン、シールド二連砲は可動式です。HGならではのパーツの分割により、機体の細かな色分けも実現しています。"
+			"「機動戦士ガンダムSEED」に登場する新ライバル機「カラミティガンダム」の1/144スケールHG仕様のプラモデル。特徴的なバックウェポンや肩部二連キャノン、シールド二連砲は可動式です。HGならではのパーツの分割により、機体の細かな色分けも実現しています。"
 		],
 		"en": [
-			"A 1/144 Scale HG plastic model of the new rival machine \"Calamity Gundam \" appearing in \" Mobile Suit Gundam SEED\". The characteristic back weapon, shoulder double cannon, and Seal double cannon are movable. By dividing the parts unique to HG, detailed color coding of the aircraft is also realized."
+			"A 1/144 Scale HG plastic model of the new rival machine \"Calamity Gundam\" that appears in \"Mobile Suit Gundam SEED\". The characteristic back weapon, shoulder double cannon, and Seal double cannon are movable. By dividing the parts unique to HG, detailed color coding of the aircraft is also realized."
 		]
 	},
-	"images": [
-		"/images/items/01_2693/153_367.jpg",
-		"/images/items/01_2693/155_367.jpg",
-		"/images/items/01_2693/156_367.jpg",
-		"/images/items/01_2693/157_367.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2693/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181726",
-		"01_1930",
-		"01_384",
-		"01_83"
-	],
-	"manualId": "0879"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_367_s_zlvis53nbxq6cpiv17k3umn7e3r7.jpg",
+				"path": "/images/items/01_2693/153_367.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_367_s_zvsaywjfma12kgk7v0jgypzjn83c.jpg",
+				"path": "/images/items/01_2693/155_367.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_367_s_v5az46kyypow5muctr9jvul5hpmy.jpg",
+				"path": "/images/items/01_2693/156_367.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_367_s_a2p0s4h9f5bfgka5pb7g5ocet0mk.jpg",
+				"path": "/images/items/01_2693/157_367.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2693/"
 }

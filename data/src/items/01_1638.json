@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 フリーダムガンダムエクストラフィニッシュ",
 		"en": "MG 1/100 Freedom Gundam Extra Finish"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5421",
+			"url": "https://bandai-hobby.net/item/01_5421/",
+			"ja": "MG 1/100 ガンダムベース限定 デスティニーガンダム (ハイネ専用機)"
+		},
+		{
+			"id": "item-1000183862",
+			"url": "https://p-bandai.jp/item/item-1000183862/",
+			"ja": "ＭＧ 1/100 ガナーウィザード／スラッシュウィザード／ブレイズウィザードセット"
+		},
+		{
+			"id": "01_3712",
+			"url": "https://bandai-hobby.net/item/01_3712/",
+			"ja": "MG 1/100 ガナーザクウォーリア(ルナマリア・ホーク専用機)[クリアカラー]"
+		},
+		{
+			"id": "item-1000155441",
+			"url": "https://p-bandai.jp/item/item-1000155441/",
+			"ja": "ＭＧ 1/100 ブレイズザクファントム（レイ・ザ・バレル専用機）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 8800,
 		"currency": "JPY",
@@ -17,33 +61,26 @@
 		"month": 9
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム SEEDデスティニー」にも登場した“フリーダムガンダム”のスペシャルバージョンがMGシリーズで登場しました。PHASE 34「悪夢」の衝撃がよみがえる全身にメッキ加工を施したエクストラフィニッシュ仕様 です。劇中に見せたハイマットフルバーストを再現可能。付属のソードシルエットを用い、フリーダムガンダム撃破時の最強装備を再現することが可能です。"
+			"「機動戦士ガンダムSEEDデスティニー」にも登場した“フリーダムガンダム”のスペシャルバージョンがMGシリーズで登場しました。PHASE 34「悪夢」の衝撃がよみがえる全身にメッキ加工を施したエクストラフィニッシュ仕様 です。劇中に見せたハイマットフルバーストを再現可能。付属のソードシルエットを用い、フリーダムガンダム撃破時の最強装備を再現することが可能です。"
 		],
 		"en": [
-			"A special version of \"Freedom Gundam \" that also appeared in \" Mobile Suit Gundam SEED Destiny \" has appeared in the MG series. Extra finish specification with plating applied to the whole body that brings back the impact of PHASE 34 \" Nightmare\". It is possible to reproduce the Heimat full burst shown in the movie. Using the included sword silhouette, it is possible to reproduce the strongest equipment used when defeating Freedom Gundam."
+			"A special version of \"Freedom Gundam\" that also appeared in \"Mobile Suit Gundam SEED Destiny\" has appeared in the MG series. Extra finish specification with plating applied to the whole body that brings back the impact of PHASE 34 \"Nightmare\". It is possible to reproduce the Heimat full burst shown in the movie. Using the included sword silhouette, it is possible to reproduce the strongest equipment used when defeating Freedom Gundam."
 		]
 	},
-	"images": [
-		"/images/items/01_1638/153_2548.jpg",
-		"/images/items/01_1638/155_2548.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1638/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5421",
-		"item-1000183862",
-		"01_3712",
-		"item-1000155441"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2548_s_d6zqsvbyf8spn1czv9i8ncs7l0sg.jpg",
+				"path": "/images/items/01_1638/153_2548.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2548_s_1hsswq555q3h00e7wjcmqk83rcik.jpg",
+				"path": "/images/items/01_1638/155_2548.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1638/"
 }

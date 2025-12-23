@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 シャア専用ゲルググ",
 		"en": "MG 1/100 Char's Gelgoog"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,36 +61,34 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム」より、１年戦争末期に使用されたジオン公国軍の名機「ゲルググ」の「シャア・アズナブル」大佐専用機を重モビルスーツならではのボリュームで再現しています。胴部、腕部、足部には内部機構が再現されており、完成後に外装を外し見ることが可能です。スネ内部の動力パイプはメッシュパイプを用いて、質感までも再現しました。ジオン軍初装備のビームライフル、ビームナギナタ、シールドの他に、B型用のバックパックが付いています。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam \", Colonel \" Char Aznable \"'s special machine of the Zeon Principality's famous \" Gelgoog\" used at the end of the First War has been reproduced with the volume unique to a heavy mobile suit. The internal mechanisms are reproduced in the torso, arms, and legs, and the exterior can be removed and viewed after completion. The power pipe inside the shin uses a mesh pipe to reproduce the texture. In addition to the Zeon army's first equipment, the beam rifle, beam naginata, and Seal, it also comes with a backpack for the B type."
+			"From \"Mobile Suit Gundam\", Colonel \"Char Aznable\"'s special machine of the Zeon Principality's famous \"Gelgoog\" used at the end of the First War has been reproduced with the volume unique to a heavy mobile suit. The internal mechanisms are reproduced in the torso, arms, and legs, and the exterior can be removed and viewed after completion. The power pipe inside the shin uses a mesh pipe to reproduce the texture. In addition to the Zeon army's first equipment, the beam rifle, beam naginata, and Seal, it also comes with a backpack for the B type."
 		]
 	},
-	"images": [
-		"/images/items/01_1563/153_2479.jpg",
-		"/images/items/01_1563/155_2479.jpg",
-		"/images/items/01_1563/156_2479.jpg",
-		"/images/items/01_1563/157_2479.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1563/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
-	"manualId": "0983"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2479_s_ztcxwb3hbvcm4uisglqn3h2rtewu.jpg",
+				"path": "/images/items/01_1563/153_2479.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2479_s_vbhog579q4hjfpd448kd38ygbs1r.jpg",
+				"path": "/images/items/01_1563/155_2479.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2479_s_jrc9rvygo881wgpa6yliyt1e8h4j.jpg",
+				"path": "/images/items/01_1563/156_2479.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2479_s_orr8ezpo82m2zz1rlrjxdnu8814f.jpg",
+				"path": "/images/items/01_1563/157_2479.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1563/"
 }

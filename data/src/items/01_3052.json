@@ -5,6 +5,44 @@
 		"ja": "1/144 ミレーヌバルキリー",
 		"en": "1/144 Mylene Valkyrie"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "macross",
+			"url": "https://bandai-hobby.net/series/macross/",
+			"ja": "マクロスシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5944",
+			"url": "https://bandai-hobby.net/item/01_5944/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機)"
+		},
+		{
+			"id": "01_5945",
+			"url": "https://bandai-hobby.net/item/01_5945/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) 専用水転写式デカール"
+		},
+		{
+			"id": "01_5946",
+			"url": "https://bandai-hobby.net/item/01_5946/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) デラックスセット"
+		},
+		{
+			"id": "01_5465",
+			"url": "https://bandai-hobby.net/item/01_5465/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(マクシミリアン・ジーナス機)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 990,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 21
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「1/144 ミレーヌバルキリー」が登場！"
@@ -27,21 +64,14 @@
 			"\"1/144 Mylene Valkyrie\" is now available!"
 		]
 	},
-	"images": [
-		"/images/items/01_3052/153_4021.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3052/",
-	"brandIds": [],
-	"seriesIds": [
-		"macross"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5944",
-		"01_5945",
-		"01_5946",
-		"01_5465"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4021_s_zdh2kqlxskqeao0wg6mg7nqx3y24.jpg",
+				"path": "/images/items/01_3052/153_4021.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3052/"
 }

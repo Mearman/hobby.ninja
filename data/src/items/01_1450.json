@@ -5,6 +5,54 @@
 		"ja": "ＢＢ戦士 298ブレイズザクファントム(ハイネ機)",
 		"en": "BB Senshi 298 Blaze Zaku Phantom (Heine machine)"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		},
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5365",
+			"url": "https://bandai-hobby.net/item/01_5365/",
+			"ja": "BB戦士 C.E.運命の対決セット"
+		},
+		{
+			"id": "01_3843",
+			"url": "https://bandai-hobby.net/item/01_3843/",
+			"ja": "BB戦士268 ジャスティスガンダム"
+		},
+		{
+			"id": "01_3103",
+			"url": "https://bandai-hobby.net/item/01_3103/",
+			"ja": "BB戦士261 イージスガンダム"
+		},
+		{
+			"id": "01_4274",
+			"url": "https://bandai-hobby.net/item/01_4274/",
+			"ja": "BB戦士276 デュエルガンダム"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -26,25 +74,18 @@
 			"The Blaze Zaku Phantom in a color exclusive to Heine, the ace of the ZAFT army, is now available in the BB Senshi lineup.The axis added to the shoulder allows you to recreate the pose of holding a beam machine gun.The Blaze Wizard on the back is removable, and the missile hatch can also be opened and closed.Beam rifle and beam tomahawk are included as weapons."
 		]
 	},
-	"images": [
-		"/images/items/01_1450/153_2373.jpg",
-		"/images/items/01_1450/155_2373.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1450/",
-	"brandIds": [
-		"sdgundamseries",
-		"bb"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5365",
-		"01_3843",
-		"01_3103",
-		"01_4274"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2373_s_58rbta31h61osqoebqmn8u54hqx4.jpg",
+				"path": "/images/items/01_1450/153_2373.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2373_s_56w1olmh21qz5ietbs31ac7gugzt.jpg",
+				"path": "/images/items/01_1450/155_2373.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1450/"
 }

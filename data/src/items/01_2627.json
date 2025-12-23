@@ -5,6 +5,43 @@
 		"ja": "ハイパーファンクション LBXルシファー",
 		"en": "Hyperfunction LBX Lucifer"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "lbx",
+			"url": "https://bandai-hobby.net/series/lbx/",
+			"ja": "ダンボール戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000215196",
+			"url": "https://p-bandai.jp/item/item-1000215196/",
+			"ja": "ＬＢＸイカロス・フォース"
+		},
+		{
+			"id": "item-1000215197",
+			"url": "https://p-bandai.jp/item/item-1000215197/",
+			"ja": "ＬＢＸイカロス・ゼロ"
+		},
+		{
+			"id": "item-1000210042",
+			"url": "https://p-bandai.jp/item/item-1000210042/",
+			"ja": "ＬＢＸエルシオン"
+		},
+		{
+			"id": "item-1000210041",
+			"url": "https://p-bandai.jp/item/item-1000210041/",
+			"ja": "ＬＢＸペルセウス"
+		}
+	],
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -27,47 +64,63 @@
 			"• 背面のビーム翼はクリアパーツで再現。"
 		],
 		"en": [
-			"From \"Danball Senki \", \" LBX Lucifer\", who has two faces, an angel and a devil, is now available from the Hyper Function series!",
+			"From \"Danball Senki\", \"LBX Lucifer\", who has two faces, an angel and a devil, is now available from the Hyper Function series!",
 			"• Built-in core skeleton with precise mechanical details.",
 			"• The core skeleton joints have an amazing range of motion. You can reproduce various action poses.",
-			"• Each armor reproduced with multicolored molding can be attached and detached, allowing you to recreate a colorful aircraft just by assembling it.",
+			"• Each armor reproduced with multi-colored molding can be attached and removed, allowing you to recreate a colorful aircraft just by assembling it.",
 			"• The beam wings on the back are reproduced with clear parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ヘブンズエッジ×１",
-			"天帝ネメシスシールド×１",
-			"ホイルシール×１",
-			"マーキングシール×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヘブンズエッジ×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "天帝ネメシスシールド×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール×１"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/159_3548_s_i5fz8sq2yse2iskc5icefyamxh11.jpg",
+				"path": "/images/items/01_2627/159_3548.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_3548_s_hg94c7kkonbamr7wfvyjiz7v6wnv.jpg",
+				"path": "/images/items/01_2627/153_3548.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3548_s_42e21yn32qh9jpg6n3nduw10pm53.jpg",
+				"path": "/images/items/01_2627/155_3548.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3548_s_8nws9ukntqhijnlrgcqr7qr2td7w.jpg",
+				"path": "/images/items/01_2627/156_3548.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3548_s_g7xn9jq1kcxtolvspgphdo7tgp1x.jpg",
+				"path": "/images/items/01_2627/157_3548.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3548_s_oeu225x0pl0pi846lgln61c5gpep.jpg",
+				"path": "/images/items/01_2627/158_3548.jpg"
+			}
 		],
-		"en": [
-			"Heaven's Edge x1",
-			"Tentei Nemesis Seal×1",
-			"Foil Seal×1",
-			"MarkingSeal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2627/153_3548.jpg",
-		"/images/items/01_2627/155_3548.jpg",
-		"/images/items/01_2627/156_3548.jpg",
-		"/images/items/01_2627/157_3548.jpg",
-		"/images/items/01_2627/158_3548.jpg",
-		"/images/items/01_2627/159_3548.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2627/",
-	"brandIds": [],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2627/"
 }

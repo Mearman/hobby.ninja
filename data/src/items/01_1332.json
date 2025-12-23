@@ -5,6 +5,43 @@
 		"ja": "ピカちんキット09 びっくりカンカン",
 		"en": "Pikachin Kit09 Surprise Kankan"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -25,51 +62,63 @@
 			"• テレビ番組「ポチっと発明 ピカちんキット」に登場するびっくりカンカンが商品化！",
 			"• 時間が経つと音をたててバラバラになるドリンク缶の発明品！",
 			"• ピカちん大百科に綴じられるピカちんシートも付いてくるぞ！"
-		],
-		"en": [
-			"• For you who want to avoid a pinch by distracting your target!",
-			"• The most powerful weapon that can repel enemies with flashy sounds and movements!",
-			"• The surprising can-can that appears on the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!",
-			"• An invention of a drink can that makes noise and falls apart over time!",
-			"• It also comes with a Pikachin sheet that can be bound into the Pikachin Encyclopedia!"
 		]
 	},
-	"contents": {
-		"ja": [
-			"びっくりカンカン…1（成形品…5）",
-			"輪ゴム…3",
-			"ピカちんQRコードステッカー…1",
-			"取扱説明書…1",
-			"ピカちんシート…1"
+	"contents": [
+		{
+			"name": {
+				"ja": "びっくりカンカン…1（成形品…5）"
+			}
+		},
+		{
+			"name": {
+				"ja": "輪ゴム…3"
+			}
+		},
+		{
+			"name": {
+				"ja": "ピカちんQRコードステッカー…1"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書…1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ピカちんシート…1"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2260_s_mbzpuzf30w2793cvbxmssgujm996.jpg",
+				"path": "/images/items/01_1332/153_2260.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2260_s_uw5r2baxz4tlun5dnit5yo469bmw.jpg",
+				"path": "/images/items/01_1332/155_2260.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2260_s_b1woqlnvnszc5115j8mcf9qrqmet.jpg",
+				"path": "/images/items/01_1332/156_2260.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2260_s_80ocgwgi4xo26dp4fdgbg0f0zkq7.jpg",
+				"path": "/images/items/01_1332/157_2260.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2260_s_1e06pmmtgk7zaeigy0pw5da1uc5z.jpg",
+				"path": "/images/items/01_1332/158_2260.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2260_s_ixcsbhz0akybsbgdwbqvyrgt6208.jpg",
+				"path": "/images/items/01_1332/159_2260.jpg"
+			}
 		],
-		"en": [
-			"Surprising click...1 (molded product...5)",
-			"rubber band...3",
-			"Pikachin QR code Sticker...1",
-			"Handling Manual...1",
-			"Pikachin sheet...1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1332/153_2260.jpg",
-		"/images/items/01_1332/155_2260.jpg",
-		"/images/items/01_1332/156_2260.jpg",
-		"/images/items/01_1332/157_2260.jpg",
-		"/images/items/01_1332/158_2260.jpg",
-		"/images/items/01_1332/159_2260.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1332/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1332/"
 }

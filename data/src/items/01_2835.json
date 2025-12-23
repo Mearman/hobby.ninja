@@ -2,9 +2,40 @@
 	"id": "01_2835",
 	"type": "item",
 	"name": {
-		"ja": "MG 1/100 ガンダムベース限定 V2アサルトバスターガンダム Ver.Ka [チタニウムフィニッシュ]",
-		"en": "MG 1/100 Gundam Base Limited V2 Assault Buster Gundam Ver.Ka [Titanium Finish]"
+		"ja": "MG 1/100 ガンダムベース限定 V2アサルトバスターガンダムVer.Ka [チタニウムフィニッシュ]",
+		"en": "MG 1/100 GUNDAM Base Limited V2 Assault Buster GUNDAM Ver.Ka [Titanium Finish]"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]",
+			"en": "MG [MASTER GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "v-gundam",
+			"url": "https://bandai-hobby.net/series/v-gundam/",
+			"ja": "機動戦士Vガンダム",
+			"en": "MOBILE SUIT V GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4821",
+			"url": "https://bandai-hobby.net/item/01_4821/",
+			"ja": "MG 1/100 V2ガンダム Ver.Ka メカニカルクリア/ゴールドメッキVer."
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 17600,
 		"currency": "JPY",
@@ -18,7 +49,6 @@
 		"day": 30
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
@@ -29,35 +59,32 @@
 			"●Ｖ２アサルトガンダム、Ｖ２バスターガンダムも組み換え式で再現可能！"
 		],
 		"en": [
-			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"The ultimate MS created by the Universal Century is now available in a super luxurious limited edition!",
-			"●The white exterior is treated with a titanium finish for a luxurious finish!",
-			"●The gold part is plated to give it a more dazzling look!",
-			"- Use metallic molding colors for internal frames and weapon parts!",
-			"-V2 Assault Gundam and V2 Buster Gundam can also be recombined and reproduced!"
+			"For GUNPLA fans around the world, this is a limited edition GUNPLA at the official GUNPLA complex \"GUNDAM Base\". The ultimate MS created by the Universal Century is now available in a super luxurious limited edition! -The white exterior is treated with a titanium finish, giving it a luxurious finish! -The gold part is glazed and plated for a more glittering impression! -Metallic molding colors are used for internal frames and weapon parts! -V2 Assault GUNDAM and V2 Buster GUNDAM can also be reproduced with a recombinant type!"
 		]
 	},
-	"images": [
-		"/images/items/01_2835/1000145248_1.jpg",
-		"/images/items/01_2835/1000145248_2.jpg",
-		"/images/items/01_2835/1000145248_3.jpg",
-		"/images/items/01_2835/1000145248_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145248_1.jpg",
+				"path": "/images/items/01_2835/1000145248_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145248_2.jpg",
+				"path": "/images/items/01_2835/1000145248_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145248_3.jpg",
+				"path": "/images/items/01_2835/1000145248_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145248_4.jpg",
+				"path": "/images/items/01_2835/1000145248_4.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2835/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"v-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4821"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2835/"
 	}
 }

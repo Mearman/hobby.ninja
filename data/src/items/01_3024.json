@@ -5,6 +5,60 @@
 		"ja": "ＨＧ 1/144 ドートレス",
 		"en": "HG 1/144 Dotress"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "x",
+			"url": "https://bandai-hobby.net/series/x/",
+			"ja": "機動新世紀ガンダムＸ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000147187",
+			"url": "https://p-bandai.jp/item/item-1000147187/",
+			"ja": "ＨＧ 1/144 ガンダムエアマスターバースト"
+		},
+		{
+			"id": "item-1000124674",
+			"url": "http://p-bandai.jp/item/item-1000124674",
+			"ja": "ＭＧ 1/100 ガンダムＸ３号機"
+		},
+		{
+			"id": "01_160",
+			"url": "https://bandai-hobby.net/item/01_160/",
+			"ja": "HGAW 1/144 ガンダムエアマスター"
+		},
+		{
+			"id": "01_5876",
+			"url": "https://bandai-hobby.net/item/01_5876/",
+			"ja": "HGAW 1/144 ガンダムダブルエックス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"か つ て 、 戦 争 が あ っ た ―",
@@ -53,7 +106,7 @@
 		"en": [
 			"Once upon a time, there was a war.",
 			"The main force of the former Earth Federation army, MS Dortres, is activated!",
-			"The general-purpose mass-produced MS \"Dortress \", which appears in \" Mobile New Century Gundam X\" and is used by the former Earth Federation forces, has been commercialized with HGKit.",
+			"The general-purpose mass-produced MS \"Dotless\", which appears in \"Mobile New Century GundamX\" and is used by the former Earth Federation forces, has been commercialized with HGKit.",
 			"The characteristic head, torso, legs, weapons, etc. are reproduced with new molded parts, and the impressive aircraft color is reproduced with molded colors.",
 			"● Reproduce the Dotress styling with new modeling parts",
 			"Using new parts for the head, torso, and legs, the body form of the mass-produced MS \"Dortress\" has been made into a three-dimensional model that adheres to the set image.",
@@ -82,49 +135,62 @@
 			"- Product specifications are scheduled as of 20206. Please note that there may be changes."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"９０ｍｍマシンガン",
-			"シールド"
+	"accessories": [
+		{
+			"name": {
+				"ja": "９０ｍｍマシンガン"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/192_3997_s_ok7kefl8o89wffrilfes3uo0hemy.jpg",
+				"path": "/images/items/01_3024/192_3997.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_3997_s_b01u1yw4v00eon7yc0brocjnd5h1.jpg",
+				"path": "/images/items/01_3024/153_3997.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3997_s_6iktdt3bqhfao4iz2438myj25u8l.jpg",
+				"path": "/images/items/01_3024/155_3997.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3997_s_pv5fhrgxbxwbzh9fa81mi6d0crvm.jpg",
+				"path": "/images/items/01_3024/156_3997.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3997_s_6almyk4tbc4pmg923yygh4mk710a.jpg",
+				"path": "/images/items/01_3024/157_3997.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3997_s_cu5j2dj7iqstjco69256ykqiwv5w.jpg",
+				"path": "/images/items/01_3024/158_3997.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3997_s_apv9m78ivhwpfi5kl9alu4cm3n71.jpg",
+				"path": "/images/items/01_3024/159_3997.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3997_s_s2rj9hy3n67ndragaf81zcdp1c4u.jpg",
+				"path": "/images/items/01_3024/189_3997.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3997_s_ouocecjrp15whcl5m55068g2s5vp.jpg",
+				"path": "/images/items/01_3024/190_3997.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3997_s_cqolvehnbhnfh7lt20hyyflauy8t.jpg",
+				"path": "/images/items/01_3024/191_3997.jpg"
+			}
 		],
-		"en": [
-			"90mm machine gun",
-			"Seal de"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3024/153_3997.jpg",
-		"/images/items/01_3024/155_3997.jpg",
-		"/images/items/01_3024/156_3997.jpg",
-		"/images/items/01_3024/157_3997.jpg",
-		"/images/items/01_3024/158_3997.jpg",
-		"/images/items/01_3024/159_3997.jpg",
-		"/images/items/01_3024/189_3997.jpg",
-		"/images/items/01_3024/190_3997.jpg",
-		"/images/items/01_3024/191_3997.jpg",
-		"/images/items/01_3024/192_3997.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3024/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"x"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000147187",
-		"item-1000124674",
-		"01_160",
-		"01_5876"
-	],
-	"manualId": "2583",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3024/"
 }

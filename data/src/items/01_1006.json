@@ -5,6 +5,49 @@
 		"ja": "メカコレクション　ドラゴンボール　1巻　ブルマのカプセルNO.9バイク",
 		"en": "Mecha Collection Dragon Ball Volume 1 Bulma's Capsule NO.9 Bike"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1107",
+			"url": "https://bandai-hobby.net/item/01_1107/",
+			"ja": "メカコレクション　ドラゴンボール　7巻 亀仙人のワゴン車"
+		},
+		{
+			"id": "01_1093",
+			"url": "https://bandai-hobby.net/item/01_1093/",
+			"ja": "メカコレクション　ドラゴンボール　6巻　ウーロンのロードバギー"
+		},
+		{
+			"id": "01_1060",
+			"url": "https://bandai-hobby.net/item/01_1060/",
+			"ja": "メカコレクション　ドラゴンボール　5巻　ヤムチャのマイティマウス号"
+		},
+		{
+			"id": "01_1016",
+			"url": "https://bandai-hobby.net/item/01_1016/",
+			"ja": "メカコレクション　ドラゴンボール　3巻　ランチの一輪バイク"
+		}
+	],
 	"price": {
 		"amount": 715,
 		"currency": "JPY",
@@ -33,7 +76,7 @@
 			"• 1巻は初回生産限定で「カプセルコーポレーション メカニックガイド」が付属！「メカコレクション ドラゴンボール」に登場する鳥山メカのディテールを徹底解説！"
 		],
 		"en": [
-			"• Mecha Collection Dragon Ball series starts! Toriyama Mecha is now available in a palm-sized size that is easy to collect!",
+			"• Mecha Collection Dragon Ball series started! Toriyama Mecha is now available in a palm-sized size that is easy to collect!",
 			"• Volume 1 is Bulma's capsule NO.9 bike! !",
 			"• HANDY SIZE",
 			"A cute palm-sized plastic model of the Dragon Ball mecha!",
@@ -43,54 +86,73 @@
 			"• DETAILED MECHANICS",
 			"Although it is mini size, the structure of the mechanism is detailed and thoroughly modeled.",
 			"• The package design is reminiscent of comics! Furthermore, the sides have a connected picture style design, so collect 7 types and display them!",
-			"• Volume 1 is limited to the first production and includes the \"Capsule Corporation Mechanic Guide \"! A thorough explanation of the details of Toriyama's mecha that appears in \" Mecha Collection Dragon Ball\"!"
+			"• Volume 1 is limited to the first production and includes the \"Capsule Corporation Mechanic Guide\"! A thorough explanation of the details of Toriyama's mecha that appears in \"Mecha Collection Dragon Ball\"!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"バイク×1",
-			"ブルマ×1",
-			"悟空×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "バイク"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ブルマ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "悟空"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1942_s_rpnwixiy37l82pmytepbvyoghs1p.jpg",
+				"path": "/images/items/01_1006/153_1942.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1942_s_14f6djc5j8mrgmafq7o2w2x4ta43.jpg",
+				"path": "/images/items/01_1006/155_1942.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_1942_s_8y30k01f6lih7kgui4w4worffoie.jpg",
+				"path": "/images/items/01_1006/156_1942.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_1942_s_4x01ipjdds5px8l41kxhhztbc8oo.jpg",
+				"path": "/images/items/01_1006/157_1942.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_1942_s_dfi2m5s9xvc6nh2zqs8u2ekmkf7f.jpg",
+				"path": "/images/items/01_1006/158_1942.jpg"
+			}
 		],
-		"en": [
-			"Bike x 1",
-			"Bloomers x 1",
-			"Goku×1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×2",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 2",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1006/153_1942.jpg",
-		"/images/items/01_1006/155_1942.jpg",
-		"/images/items/01_1006/156_1942.jpg",
-		"/images/items/01_1006/157_1942.jpg",
-		"/images/items/01_1006/158_1942.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1006/",
-	"brandIds": [
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"dragonball"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1107",
-		"01_1093",
-		"01_1060",
-		"01_1016"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1006/"
 }

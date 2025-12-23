@@ -2,9 +2,52 @@
 	"id": "01_1012",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 ガンダム AN-01 トリスタン",
-		"en": "HG 1/144 Gundam AN-01 Tristan"
+		"ja": "HG 1/144 ガンダムAN-01 トリスタン",
+		"en": "HG 1/144 GundamAN-01 Tristan"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 『機動戦士ガンダム Twilight AXIS』に登場する、主人公の駆る赤いザクIII改と交戦するガンダムタイプのMSが最速立体化！",
@@ -33,58 +75,82 @@
 			"• High color-coded reproduction achieved by dividing parts!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・サーベル×２",
-			"シールド×１",
-			"ビーム・ライフル×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・サーベル×２"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・ライフル×１"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 7
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1948_s_u3p3b9snvb181ke1dj7wwv5p6a28.jpg",
+				"path": "/images/items/01_1012/153_1948.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1948_s_ddndcovbp04029tq0qfhddqyy56o.jpg",
+				"path": "/images/items/01_1012/155_1948.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_1948_s_zhib0x43ubsht1gm4okj3m0g2vul.jpg",
+				"path": "/images/items/01_1012/156_1948.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_1948_s_pb5kthqh6vhtblkic5uepj0xsd3r.jpg",
+				"path": "/images/items/01_1012/157_1948.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_1948_s_wtk4st5xtajurwgm60j94puz47nh.jpg",
+				"path": "/images/items/01_1012/158_1948.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_1948_s_xxoddrvbp54i4i3gw3esqd4pxij3.jpg",
+				"path": "/images/items/01_1012/159_1948.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_1948_s_su9ij8u3c6hw8ku1bhyl4szpt56w.jpg",
+				"path": "/images/items/01_1012/189_1948.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_1948_s_m0trfy6ftsy0xnyl7zm6q95gn8cn.jpg",
+				"path": "/images/items/01_1012/190_1948.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_1948_s_236rnw4ugfjfwl3g1iqrvmc16p8l.jpg",
+				"path": "/images/items/01_1012/191_1948.jpg"
+			}
 		],
-		"en": [
-			"Beam saber x2",
-			"Seal de x1",
-			"Beam rifle x1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×7",
-			"シール×1",
-			"取扱説明書"
-		],
-		"en": [
-			"Molded product x 7",
-			"Seal×1",
-			"Handling manual"
-		]
-	},
-	"images": [
-		"/images/items/01_1012/153_1948.jpg",
-		"/images/items/01_1012/155_1948.jpg",
-		"/images/items/01_1012/156_1948.jpg",
-		"/images/items/01_1012/157_1948.jpg",
-		"/images/items/01_1012/158_1948.jpg",
-		"/images/items/01_1012/159_1948.jpg",
-		"/images/items/01_1012/189_1948.jpg",
-		"/images/items/01_1012/190_1948.jpg",
-		"/images/items/01_1012/191_1948.jpg",
-		"/images/items/01_1012/01_1012_inst_0.jpg",
-		"/images/items/01_1012/01_1012_inst_1.jpg",
-		"/images/items/01_1012/01_1012_inst_4.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1012/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	],
-	"manualId": "0477"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1012/"
 }

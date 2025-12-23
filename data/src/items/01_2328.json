@@ -5,6 +5,43 @@
 		"ja": "ピカちんトリガー",
 		"en": "pikachin trigger"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -31,35 +68,37 @@
 			"• 単3電池×2(別)"
 		],
 		"en": [
-			"• The \"Pikachin Trigger\" that the Ages actually use in the play is now available!",
+			"• Introducing the \"Pikachin Trigger\" that the Ages actually use in the movie!",
 			"• Key items appearing in the anime! Built-in electric motor.",
-			"• Let's combine it with attachments and enjoy various games!",
+			"• Combine it with attachments and enjoy various games!",
 			"[Set contents]",
-			"• Pikachin trigger (finished product)...1",
+			"• Pikachin Trigger (finished product)...1",
 			"• Seal...1",
 			"• Handling Manual...1",
 			"[battery]",
-			"• AA batteries x 2 (separate)"
+			"• AA batteries x 2 (not included)"
 		]
 	},
-	"images": [
-		"/images/items/01_2328/153_3265.jpg",
-		"/images/items/01_2328/155_3265.jpg",
-		"/images/items/01_2328/156_3265.jpg",
-		"/images/items/01_2328/157_3265.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2328/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3265_s_85i089tv3rz1mmqsockw5izpaf3f.jpg",
+				"path": "/images/items/01_2328/153_3265.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3265_s_zrcua5weurjpoq9ad5yum8lx3osp.jpg",
+				"path": "/images/items/01_2328/155_3265.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3265_s_iptmdxtsvwbdnprp68uywir4ncuk.jpg",
+				"path": "/images/items/01_2328/156_3265.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3265_s_rotzqsw2ykelqk3o7qqcot3ahg7v.jpg",
+				"path": "/images/items/01_2328/157_3265.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2328/"
 }

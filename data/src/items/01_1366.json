@@ -5,6 +5,43 @@
 		"ja": "1％ピカちんカスタムクラフト ポチっとピラメキパック",
 		"en": "1% Pikachin Custom Craft Pochitto Pirameki Pack"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 1078,
 		"currency": "JPY",
@@ -28,49 +65,68 @@
 		],
 		"en": [
 			"• A pack full of mysterious mechanisms! Play with your friends and surprise them!",
-			"• 3 types of custom crafts and glitter custom stickers are included in the set!",
+			"• Set includes 3 types of custom crafts and glitter custom stickers!",
 			"• Diorama search custom...You can play by assembling the familiar Eiji house! moreover! When you shine a zero-zero marker on the house, a hidden illustration will appear!",
-			"• Custom piggy bank...I put money in it but can't see it! ? A mysterious piggy bank using a mirror! moreover! By combining it with my only lock, you can create an impenetrable guard piggy bank!",
+			"• Custom piggy bank...I put money in it, but I can't see it! ? A mysterious piggy bank using a mirror! moreover! By combining it with my only lock, you can create an impenetrable guard piggy bank!",
 			"• Anime film custom...Can be used as a card! Furthermore, if you customize the tissue box camera and use your own flashlight, you can recreate a scene from the anime on your wall!"
 		]
 	},
-	"contents": {
-		"ja": [
-			"貯金箱カスタム…1",
-			"ジオラマ捜索カスタム…1",
-			"アニメフィルムカスタム…1",
-			"キラキラカスタムステッカー…1",
-			"取扱説明書…1",
-			"ピカちんQR コードステッカー…1"
+	"contents": [
+		{
+			"name": {
+				"ja": "貯金箱カスタム…1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジオラマ捜索カスタム…1"
+			}
+		},
+		{
+			"name": {
+				"ja": "アニメフィルムカスタム…1"
+			}
+		},
+		{
+			"name": {
+				"ja": "キラキラカスタムステッカー…1"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書…1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ピカちんQR コードステッカー…1"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2293_s_x9zqu0hcxooxmc9k0g8cgt1b3cag.jpg",
+				"path": "/images/items/01_1366/153_2293.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2293_s_dv703968izeovx1xlkg81se5k1ue.jpg",
+				"path": "/images/items/01_1366/155_2293.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2293_s_jjr8y2w9xmaeov49ymjmejuclwvv.jpg",
+				"path": "/images/items/01_1366/156_2293.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2293_s_cscr87yv8403ydci4kspb79r4gs2.jpg",
+				"path": "/images/items/01_1366/157_2293.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2293_s_z1bqnggs3wvfebhtic78dkoxkmko.jpg",
+				"path": "/images/items/01_1366/158_2293.jpg"
+			}
 		],
-		"en": [
-			"Piggy bank custom...1",
-			"Diorama search custom...1",
-			"Anime film custom...1",
-			"Glitter custom Sticker...1",
-			"Handling Manual...1",
-			"Pikachin QR code Sticker...1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1366/153_2293.jpg",
-		"/images/items/01_1366/155_2293.jpg",
-		"/images/items/01_1366/156_2293.jpg",
-		"/images/items/01_1366/157_2293.jpg",
-		"/images/items/01_1366/158_2293.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1366/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1366/"
 }

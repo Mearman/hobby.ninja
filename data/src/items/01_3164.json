@@ -5,6 +5,44 @@
 		"ja": "1/144 ガンダムフルアーマータイプ",
 		"en": "1/144 Gundam full armor type"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -17,11 +55,10 @@
 		"month": 7
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、1/144スケールでMSVシリーズガンダムフルアーマータイプが登場。",
-			"連邦軍RX-78 ガンダムの性能を最大限に引き出すフル装備タイプをキット化しました。",
+			"連邦軍RX-78ガンダムの性能を最大限に引き出すフル装備タイプをキット化しました。",
 			"股関節部は左右開閉が可能です",
 			"。腕は前後スイングおよび回転が可能です",
 			"。足首は前後左右にスイング可能です。",
@@ -40,22 +77,18 @@
 			"Comes with a special decal."
 		]
 	},
-	"images": [
-		"/images/items/01_3164/153_4125.jpg",
-		"/images/items/01_3164/155_4125.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3164/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4125_s_ypvs9uesr251i5zh5rkibeu5alvt.jpg",
+				"path": "/images/items/01_3164/153_4125.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4125_s_0m5u0eo7pntpa9313gldqya9g6r5.jpg",
+				"path": "/images/items/01_3164/155_4125.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3164/"
 }

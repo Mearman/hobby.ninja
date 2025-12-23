@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "ビルダーズパーツ システムベース001",
-		"en": "Builder's Parts System Base 001"
+		"en": "SYSTEM BASE"
 	},
+	"brands": [
+		{
+			"id": "parts",
+			"url": "https://bandai-hobby.net/brand/parts/",
+			"ja": "ビルダーズパーツ",
+			"en": "BUILDERS PARTS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3582",
+			"url": "https://bandai-hobby.net/item/01_3582/",
+			"ja": "1/100 ガンダムベース限定 MSエフェクト01(クリアブルー)"
+		},
+		{
+			"id": "01_3563",
+			"url": "https://bandai-hobby.net/item/01_3563/",
+			"ja": "1/100 ガンダムベース限定 MSバーニア01&エモーションマニピュレーター(連邦系)"
+		},
+		{
+			"id": "01_3564",
+			"url": "https://bandai-hobby.net/item/01_3564/",
+			"ja": "1/100 ガンダムベース限定 MSスパイク01&エモーションマニピュレーター(ジオン系)"
+		},
+		{
+			"id": "01_636",
+			"url": "https://bandai-hobby.net/item/01_636/",
+			"ja": "BPHD ノンスケール MSサイトレンズ01(レッド)"
+		}
+	],
 	"price": {
 		"amount": 1210,
 		"currency": "JPY",
@@ -26,29 +64,24 @@
 			"成形品×3、組立説明書"
 		],
 		"en": [
-			"• Expansion parts series to make Gunpla even more fun.",
-			"• System base ideal for immersive displays.",
-			"• The back part can be expanded and contracted left and right.",
-			"• A weapon rack can be added to the side.",
-			"Molded product x 3, assembly manual"
+			"• A series of equipment parts that make GUNPLA even more fun.",
+			"• The ideal system base for immersive displays.",
+			"• The back part can be extended to the left and right.",
+			"• You can add a weapon rack to the side. Molded product ×3, assembly instructions"
 		]
 	},
-	"images": [
-		"/images/items/01_3074/01_3074_0.jpg",
-		"/images/items/01_3074/155_4043.jpg"
-	],
+	"images": {
+		"product": [
+			{},
+			{
+				"src": "https://bandai-hobby.net/images/155_4043_o_1eefeclkr172maji114k18c01h4i2i.jpg",
+				"path": "/images/items/01_3074/155_4043.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3074/",
-	"brandIds": [
-		"parts"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3582",
-		"01_3563",
-		"01_3564",
-		"01_636"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_3074/"
+	}
 }

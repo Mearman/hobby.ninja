@@ -5,6 +5,44 @@
 		"ja": "1/144 リグシャッコー",
 		"en": "1/144 Rig Shakko"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "v-gundam",
+			"url": "https://bandai-hobby.net/series/v-gundam/",
+			"ja": "機動戦士Vガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4978",
+			"url": "https://bandai-hobby.net/item/01_4978/",
+			"ja": "HG 1/144 V2アサルトバスターガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_3311",
+			"url": "https://bandai-hobby.net/item/01_3311/",
+			"ja": "HG 1/144 ガンダムベース限定 セカンドV[クリアカラー]"
+		},
+		{
+			"id": "01_2835",
+			"url": "https://bandai-hobby.net/item/01_2835/",
+			"ja": "MG 1/100 ガンダムベース限定 V2アサルトバスターガンダムVer.Ka [チタニウムフィニッシュ]"
+		},
+		{
+			"id": "item-1000142101",
+			"url": "https://p-bandai.jp/item/item-1000142101/",
+			"ja": "ＲＥ/100 1/100 シャッコー"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ＴＶ「機動戦士Ｖガンダム」で、クロノクル・アシャー中尉がテストパイロットを務めたシャッコーの量産型機体をキット化しました。ビーム・シールドはクリアパーツ製で、本体への脱着が可能です。ビーム・ファンの基部2個はバックパックへマウント可能です。ビーム・ピストル2丁は左右ひざ横へマウントできます。ビーム・ライフル、ビーム・ファンがついています。ディスプレイ用のスタンドとカードがついています。"
@@ -26,22 +63,18 @@
 			"On the TV show \"Mobile Suit V Gundam,\" Lieutenant Chronicle Asher served as a test pilot for the Shakko mass-produced aircraft, which was turned into a kit. The beam and seal are made of clear parts and can be attached to and detached from the main body. The two bases of the beam fan can be mounted on a backpack. Two beam pistols can be mounted next to the left and right knees. Comes with a beam rifle and beam fan. Comes with a display stand and card."
 		]
 	},
-	"images": [
-		"/images/items/01_1517/153_2435.jpg",
-		"/images/items/01_1517/155_2435.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1517/",
-	"brandIds": [],
-	"seriesIds": [
-		"v-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4978",
-		"01_3311",
-		"01_2835",
-		"item-1000142101"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2435_s_s7akccwd5i64hkjg16349wbzmng4.jpg",
+				"path": "/images/items/01_1517/153_2435.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2435_s_ywh0l3qxs0w68rv6303css73dp58.jpg",
+				"path": "/images/items/01_1517/155_2435.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1517/"
 }

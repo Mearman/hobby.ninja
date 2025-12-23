@@ -2,9 +2,42 @@
 	"id": "01_2884",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム Gジェネレーション8 ザク3改",
-		"en": "SD Gundam G Generation 8 Zaku 3 Kai"
+		"ja": "SDガンダムGジェネレーション8 ザク3改",
+		"en": "SDGundamG Generation 8 Zaku 3 Kai"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-zz",
+			"url": "https://bandai-hobby.net/series/gundam-zz/",
+			"ja": "機動戦士ガンダムＺＺ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2886",
+			"url": "https://bandai-hobby.net/item/01_2886/",
+			"ja": "SDガンダムGジェネレーション12 ZZガンダム & メガライダー"
+		},
+		{
+			"id": "01_814",
+			"url": "https://bandai-hobby.net/item/01_814/",
+			"ja": "SDガンダムGジェネレーション53 クインマンサ"
+		}
+	],
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -25,23 +58,22 @@
 			"\"SD Gundam G Generation 8 Zaku 3 Kai\" is now available!"
 		]
 	},
-	"images": [
-		"/images/items/01_2884/153_3864.jpg",
-		"/images/items/01_2884/155_3864.jpg",
-		"/images/items/01_2884/156_3864.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2884/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"gundam-zz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2886",
-		"01_814"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3864_s_4t1lbzw9weprhtbejbe0z7pxwim7.jpg",
+				"path": "/images/items/01_2884/153_3864.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3864_s_nfti87rqs9h2ekf17d9z2l6jxa7j.jpg",
+				"path": "/images/items/01_2884/155_3864.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3864_s_l5trrj7g0zkuv80ig463ue9p4v7q.jpg",
+				"path": "/images/items/01_2884/156_3864.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2884/"
 }

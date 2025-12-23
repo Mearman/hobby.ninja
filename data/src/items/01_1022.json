@@ -5,6 +5,55 @@
 		"ja": "HGPG 1/144　プチッガイ きゃらっがい ギャン子",
 		"en": "HGPG 1/144 Petit'gguy Charagguy Gyanko"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "petitgguy",
+			"url": "https://bandai-hobby.net/brand/petitgguy/",
+			"ja": "プチッガイ/ベアッガイ"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 990,
 		"currency": "JPY",
@@ -18,66 +67,84 @@
 		"day": 24
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 大人気のプチッガイがギャン子にかわいく変身した「きゃらっがい」登場！",
 			"• プリティなツインテールが再現されているほか、ギャン子カラーのプチッガイへ組み換えも可能！"
 		],
 		"en": [
-			"• \"Charagguy\", a cute version of the popular Petitgguy transformed into Gyanko, is now available!",
-			"• In addition to the pretty twin tails, it can also be converted into a Gyanko-colored Petit'gguy!"
+			"• Introducing \"Chara'g Guy\", a cute version of the popular Petit'g Guy transformed into Gyanko!",
+			"• In addition to the pretty twin tails, it can also be rearranged into a Gyanko-colored Petit'gguy!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ギャン子ヘッド×１",
-			"ディスプレイ台座×１",
-			"ジョイントパーツ×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ギャン子ヘッド×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ×１"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1957_s_mpph7024vod01qeq6okpaaggzt0d.jpg",
+				"path": "/images/items/01_1022/153_1957.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1957_s_3zkbgpy1d87puus37hg4q5ad9zur.jpg",
+				"path": "/images/items/01_1022/155_1957.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_1957_s_n8527g4q1lnlptaf5dmngvliovsm.jpg",
+				"path": "/images/items/01_1022/156_1957.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_1957_s_bi6au34f4athe6bt4bbybe3tkn36.jpg",
+				"path": "/images/items/01_1022/157_1957.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_1957_s_kib35ohx8cefqlmx3qeeia5ids3k.jpg",
+				"path": "/images/items/01_1022/158_1957.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_1957_s_dkekjmbvs0oli7jpaqh62dayhqye.jpg",
+				"path": "/images/items/01_1022/159_1957.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_1957_s_8yv68l586mqlsdxq2q9ie79ht2jw.jpg",
+				"path": "/images/items/01_1022/189_1957.jpg"
+			}
 		],
-		"en": [
-			"Gyanko head x 1",
-			"Display pedestal x 1",
-			"Joint parts x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"シール×1",
-			"取扱説明書"
-		],
-		"en": [
-			"Molded product x 4",
-			"Seal×1",
-			"Handling manual"
-		]
-	},
-	"images": [
-		"/images/items/01_1022/153_1957.jpg",
-		"/images/items/01_1022/155_1957.jpg",
-		"/images/items/01_1022/156_1957.jpg",
-		"/images/items/01_1022/157_1957.jpg",
-		"/images/items/01_1022/158_1957.jpg",
-		"/images/items/01_1022/159_1957.jpg",
-		"/images/items/01_1022/189_1957.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1022/",
-	"brandIds": [
-		"hg",
-		"petitgguy"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
-	"manualId": "2625"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1022/"
 }

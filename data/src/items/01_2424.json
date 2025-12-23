@@ -5,6 +5,60 @@
 		"ja": "ＲＧ 1/144 パーフェクトストライクガンダム",
 		"en": "RG 1/144 Perfect Strike Gundam"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181726",
+			"url": "https://p-bandai.jp/item/item-1000181726/",
+			"ja": "ＨＧ 1/144 ストライクダガー"
+		},
+		{
+			"id": "item-1000146930",
+			"url": "https://p-bandai.jp/item/item-1000146930/",
+			"ja": "ＭＧ 1/100 エールストライクガンダム Ver.ＲＭ用 ランチャーストライカー/ソードストライカーパック"
+		},
+		{
+			"id": "item-1000140845",
+			"url": "https://p-bandai.jp/item/item-1000140845/",
+			"ja": "ＰＧ 1/60 ストライクガンダム用 パーフェクトストライクガンダム拡張パーツ"
+		},
+		{
+			"id": "01_1254",
+			"url": "https://bandai-hobby.net/item/01_1254/",
+			"ja": "ＭＧ 1/100 プロヴィデンスガンダム [スペシャルコーティング]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 9
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ス ト ラ イ ク ガ ン ダ ム 最 強 兵 装  －",
@@ -58,7 +111,7 @@
 		"en": [
 			"Strike Gundam Strongest Weapon -",
 			"GAT-X105+AQM/E-YM1 Perfect Strike Gundam",
-			"From the HD remastered version of \"Mobile Suit Gundam SEED\", Perfect Strike Gundam appears in real grade.",
+			"From the HD remastered version of \"Mobile Suit GundamSEED\", Perfect Strike Gundam appears in real grade.",
 			"Reproduce the Multiple Assault Striker with some new modeling. Commercialized in the RG series, which pursues unparalleled detailed expression and \"realism\" in 1/144.",
 			"● Reproduce the multiple assault striker with new modeling",
 			"The base of the backpack is newly molded to reproduce the multiple assault striker that combines the three functions of ale, sword, and launcher.",
@@ -92,39 +145,50 @@
 			"・Product specifications are scheduled as of 20196. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2424/153_3355.jpg",
-		"/images/items/01_2424/155_3355.jpg",
-		"/images/items/01_2424/156_3355.jpg",
-		"/images/items/01_2424/157_3355.jpg",
-		"/images/items/01_2424/158_3355.jpg",
-		"/images/items/01_2424/159_3355.jpg",
-		"/images/items/01_2424/189_3355.jpg",
-		"/images/items/01_2424/190_3355.jpg",
-		"/images/items/01_2424/191_3355.jpg",
-		"/images/items/01_2424/192_3355.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2424/",
-	"brandIds": [
-		"rg",
-		"pb_rg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181726",
-		"item-1000146930",
-		"item-1000140845",
-		"01_1254"
-	],
-	"manualId": "2567",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3355_s_opzdxv1tu99tm2sinyxcjzkfd40e.jpg",
+				"path": "/images/items/01_2424/153_3355.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3355_s_9wya988u0xj4k7yz7g3vq27c5571.jpg",
+				"path": "/images/items/01_2424/155_3355.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3355_s_m9mgwb9dz445sxfe07g1u8c4ya70.jpg",
+				"path": "/images/items/01_2424/156_3355.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3355_s_5ga86w38be0rrdqh4exqjf67ib6z.jpg",
+				"path": "/images/items/01_2424/157_3355.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3355_s_jibulslh2c6om3v8oda7qvt5pc45.jpg",
+				"path": "/images/items/01_2424/158_3355.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3355_s_v96a6xxc83ms25y55eih53946vf5.jpg",
+				"path": "/images/items/01_2424/159_3355.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3355_s_gt5z4xg8jgce40t9u5y0hdfnuxc3.jpg",
+				"path": "/images/items/01_2424/189_3355.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3355_s_tszbx1bjyx3ppg763osroh1l1rvc.jpg",
+				"path": "/images/items/01_2424/190_3355.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3355_s_edikojbg3zk45c200c7opcsi88hl.jpg",
+				"path": "/images/items/01_2424/191_3355.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3355_s_9va5lcw86b2njflezhymrmm41iel.jpg",
+				"path": "/images/items/01_2424/192_3355.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2424/"
 }

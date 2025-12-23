@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 ジュピターヴガンダム",
 		"en": "HGBD:R 1/144 Jupiter Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズRe:RISE』より、主人公機の宇宙戦仕様「ジュピターヴガンダム」がコアガンダム＆ユニットで登場！",
@@ -29,54 +72,80 @@
 			"• ビームガトリングガンを装備。"
 		],
 		"en": [
-			"From \"Gundam Build Divers Re:RISE \", the main character's space battle specification \" Jupiter Gundam\" is now available as a core Gundam and unit!",
-			"• New color for the main character. Core Gundam with space battle image color is also included.",
-			"• Equip a backpack on your arm and use it as a weapon or a seal.",
+			"From \"Gundam Build Divers Re:RISE\", the main character's space battle specification \"Jupiter Gundam\" is now available as a core Gundam and unit!",
+			"• New colors for the main model. Core Gundam with space battle image color is also included.",
+			"• A backpack can be attached to your arm and used as a weapon or a shield.",
 			"• The backpack can also be displayed as a funnel bit.",
-			"• The armor unit transforms into two forms: \"normal form \" and \" high speed form\".",
+			"• Armor units can be transformed into two forms: \"normal form\" and \"high speed form\".",
 			"• Equipped with a beam gatling gun."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームライフル×1",
-			"ビームサーベル×2",
-			"エフェクトパーツ×4",
-			"台座×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "エフェクトパーツ"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "台座"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3524_s_9kgghxiap5qek51kgfhgnrdu3zja.jpg",
+				"path": "/images/items/01_2602/153_3524.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3524_s_xvsfviyifive3gr618csjzgljknw.jpg",
+				"path": "/images/items/01_2602/155_3524.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3524_s_cgmiw5aftddrw2hj4zzhirpn8dts.jpg",
+				"path": "/images/items/01_2602/156_3524.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3524_s_9xaqkvalhl36ix6yev3lsj969i9i.jpg",
+				"path": "/images/items/01_2602/157_3524.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3524_s_47whoh6tj7nmpnqpo5dhs9bl0tgi.jpg",
+				"path": "/images/items/01_2602/158_3524.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3524_s_thmuz7pisadyu4pzbyqqddbho2b4.jpg",
+				"path": "/images/items/01_2602/159_3524.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3524_s_ly7tr253yadcawbw5u9kjcqjaih1.jpg",
+				"path": "/images/items/01_2602/189_3524.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3524_s_fcle7hiy0px7uzrh7brwvauyztd4.jpg",
+				"path": "/images/items/01_2602/190_3524.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3524_s_ivejkwi6pevmnttvdwn5cz630dpz.jpg",
+				"path": "/images/items/01_2602/191_3524.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x 1",
-			"Beam saber x2",
-			"Effect parts x 4",
-			"Pedestal x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2602/153_3524.jpg",
-		"/images/items/01_2602/155_3524.jpg",
-		"/images/items/01_2602/156_3524.jpg",
-		"/images/items/01_2602/157_3524.jpg",
-		"/images/items/01_2602/158_3524.jpg",
-		"/images/items/01_2602/159_3524.jpg",
-		"/images/items/01_2602/189_3524.jpg",
-		"/images/items/01_2602/190_3524.jpg",
-		"/images/items/01_2602/191_3524.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2602/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0083"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2602/"
 }

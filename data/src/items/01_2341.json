@@ -5,6 +5,43 @@
 		"ja": "LBXジョーカー",
 		"en": "LBX Joker"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "lbx",
+			"url": "https://bandai-hobby.net/series/lbx/",
+			"ja": "ダンボール戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000215196",
+			"url": "https://p-bandai.jp/item/item-1000215196/",
+			"ja": "ＬＢＸイカロス・フォース"
+		},
+		{
+			"id": "item-1000215197",
+			"url": "https://p-bandai.jp/item/item-1000215197/",
+			"ja": "ＬＢＸイカロス・ゼロ"
+		},
+		{
+			"id": "item-1000210042",
+			"url": "https://p-bandai.jp/item/item-1000210042/",
+			"ja": "ＬＢＸエルシオン"
+		},
+		{
+			"id": "item-1000210041",
+			"url": "https://p-bandai.jp/item/item-1000210041/",
+			"ja": "ＬＢＸペルセウス"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -26,48 +63,75 @@
 		],
 		"en": [
 			"Introducing an LBX with the motif of Trump's \"Joker\"!",
-			"• A large sickle \"Joker's Soul\" is included, allowing you to recreate scenes from the play.",
-			"• A dedicated display base is included."
+			"• A large sickle \"Joker's Soul\" is included, allowing you to recreate scenes from the movie.",
+			"• Comes with a dedicated display base."
 		]
 	},
-	"contents": {
-		"ja": [
-			"ジョーカーズソウル×1",
-			"専用ディスプレイベース×1",
-			"【商品内容】",
-			"成形品×4",
-			"ホイルシール×1",
-			"取扱説明書×1"
+	"contents": [
+		{
+			"name": {
+				"ja": "ジョーカーズソウル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "【商品内容】"
+			}
+		},
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3279_s_k8y5t9m639hmfzqlvzbtb6wlhu1s.jpg",
+				"path": "/images/items/01_2341/153_3279.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3279_s_rblaz2mu7vhdatuhp83oyi1mcaaj.jpg",
+				"path": "/images/items/01_2341/155_3279.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3279_s_4hpobexwxmcvjgomcqyig0fmy66w.jpg",
+				"path": "/images/items/01_2341/156_3279.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3279_s_3eeq9n9nniceql64bvajklyq71li.jpg",
+				"path": "/images/items/01_2341/157_3279.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3279_s_clz88c1954q87dy3rna5dsyj1mdt.jpg",
+				"path": "/images/items/01_2341/158_3279.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3279_s_o77s8bn2z9mbbkvbfch514p19sx5.jpg",
+				"path": "/images/items/01_2341/159_3279.jpg"
+			}
 		],
-		"en": [
-			"Joker's Soul x1",
-			"Dedicated display base x 1",
-			"[Product contents]",
-			"Molded product x 4",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2341/153_3279.jpg",
-		"/images/items/01_2341/155_3279.jpg",
-		"/images/items/01_2341/156_3279.jpg",
-		"/images/items/01_2341/157_3279.jpg",
-		"/images/items/01_2341/158_3279.jpg",
-		"/images/items/01_2341/159_3279.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2341/",
-	"brandIds": [],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2341/"
 }

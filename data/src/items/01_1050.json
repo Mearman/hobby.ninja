@@ -5,6 +5,50 @@
 		"ja": "HGBC 1/144 忍パルスビームズ",
 		"en": "HGBC 1/144 Shinobi Pulse Beams"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -18,59 +62,65 @@
 		"day": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 様々なガンプラに対応したビームエフェクトセットが登場！",
 			"• 多種多様なサイズと形状で再現され、2つのエフェクトパーツを連結させることも可能となっている！"
 		],
 		"en": [
-			"• Beam effect set compatible with various Gunpla is now available!",
-			"• It is reproduced in a wide variety of sizes and shapes, and it is also possible to connect two effect parts!"
+			"• Beam effect sets compatible with various Gunpla are now available!",
+			"• It is reproduced in a wide variety of sizes and shapes, and it is even possible to connect two effect parts!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームエフェクトパーツ8種×各2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームエフェクトパーツ8種×各2"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/159_1985_s_csvieh1xj683i1akczp5dutravpa.jpg",
+				"path": "/images/items/01_1050/159_1985.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_1985_s_1y89il67xtpn5w57ah2zyemccgvy.jpg",
+				"path": "/images/items/01_1050/153_1985.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1985_s_cqc2vj3f1pqs1n2tzpthwgpsvbph.jpg",
+				"path": "/images/items/01_1050/155_1985.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_1985_s_eums5p232xg045vnfwo590zutt6w.jpg",
+				"path": "/images/items/01_1050/156_1985.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_1985_s_qafkc1fs2k25ge5euatt7ou8kz5z.jpg",
+				"path": "/images/items/01_1050/157_1985.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_1985_s_d9n6e8xenwpojdgm515n9kl7jhm4.jpg",
+				"path": "/images/items/01_1050/158_1985.jpg"
+			}
 		],
-		"en": [
-			"Beam effect parts 8 types x 2 each"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×2",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 2",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1050/153_1985.jpg",
-		"/images/items/01_1050/155_1985.jpg",
-		"/images/items/01_1050/156_1985.jpg",
-		"/images/items/01_1050/157_1985.jpg",
-		"/images/items/01_1050/158_1985.jpg",
-		"/images/items/01_1050/159_1985.jpg",
-		"/images/items/01_1050/01_1050_inst_1.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1050/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
-	"manualId": "0053"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1050/"
 }

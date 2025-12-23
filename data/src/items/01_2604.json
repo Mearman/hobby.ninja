@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムベース限定 ナラティブガンダム C装備[チタニウムフィニッシュ]",
 		"en": "HG 1/144 Gundam Base Limited Narrative Gundam C Equipment [Titanium Finish]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "narrative",
+			"url": "https://bandai-hobby.net/series/narrative/",
+			"ja": "機動戦士ガンダムNT[ナラティブ]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5039",
+			"url": "https://bandai-hobby.net/item/01_5039/",
+			"ja": "HG 1/144 ナラティブガンダム C装備 [覚醒イメージカラー]"
+		},
+		{
+			"id": "01_5038",
+			"url": "https://bandai-hobby.net/item/01_5038/",
+			"ja": "HG 1/144 ナラティブガンダム A装備 [クリアカラー]"
+		},
+		{
+			"id": "01_3460",
+			"url": "https://bandai-hobby.net/item/01_3460/",
+			"ja": "HG 1/144 シルヴァ・バレト・サプレッサー[クリアカラー]"
+		},
+		{
+			"id": "01_2666",
+			"url": "https://bandai-hobby.net/item/01_2666/",
+			"ja": "HG 1/144 ガンダムベース限定 ナラティブガンダム B装備"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 6160,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 1
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"HGナラティブ C装備が、チタニウムフィニッシュや艶消しメッキの外装を使用した、ガンダムベース限定品になって新登場！",
@@ -33,39 +76,38 @@
 			"• The frame and armed parts use metallic colors, giving it a solid feel."
 		]
 	},
-	"contents": {
-		"ja": [
-			"成形品×11、ホイルシール×1、組立説明書"
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 11
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3526_s_9q9y4tgjtdfulkm263mf15j3avpu.jpg",
+				"path": "/images/items/01_2604/153_3526.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3526_s_190xijf0bfkvt6kc9njsc971swn6.jpg",
+				"path": "/images/items/01_2604/155_3526.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3526_s_fpbknkm7z9mprkacs57yr7krh7i1.jpg",
+				"path": "/images/items/01_2604/156_3526.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3526_s_hwh21kptm4cwu6mkxayxzjkxb01h.jpg",
+				"path": "/images/items/01_2604/157_3526.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3526_s_8l942wncpoqec62adhpqg5mcvsvz.jpg",
+				"path": "/images/items/01_2604/158_3526.jpg"
+			}
 		],
-		"en": [
-			"Molded product x 11, foil seal x 1, assembly manual"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2604/153_3526.jpg",
-		"/images/items/01_2604/155_3526.jpg",
-		"/images/items/01_2604/156_3526.jpg",
-		"/images/items/01_2604/157_3526.jpg",
-		"/images/items/01_2604/158_3526.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2604/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"narrative"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5039",
-		"01_5038",
-		"01_3460",
-		"01_2666"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_2604/"
 }

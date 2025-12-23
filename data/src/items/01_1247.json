@@ -2,9 +2,58 @@
 	"id": "01_1247",
 	"type": "item",
 	"name": {
-		"ja": "HGUC 1/144 MSA-0011 S ガンダム",
-		"en": "HGUC 1/144 MSA-0011 S Gundam"
+		"ja": "HGUC 1/144 MSA-0011 Sガンダム",
+		"en": "HGUC 1/144 MSA-0011 SGundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "sentinel",
+			"url": "https://bandai-hobby.net/series/sentinel/",
+			"ja": "ガンダム・センチネル"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4064",
+			"url": "https://bandai-hobby.net/item/01_4064/",
+			"ja": "ＨＧ 1/144 ゼータプラス（テスト機イメージカラー）"
+		},
+		{
+			"id": "item-1000143361",
+			"url": "https://p-bandai.jp/item/item-1000143361/",
+			"ja": "HGUC 1/144 ゼータプラスＣ１"
+		},
+		{
+			"id": "01_1700",
+			"url": "https://bandai-hobby.net/item/01_1700/",
+			"ja": "HGUC 1/144 Ex-S ガンダム"
+		},
+		{
+			"id": "01_1310",
+			"url": "https://bandai-hobby.net/item/01_1310/",
+			"ja": "HGUC 1/144 ゼクアイン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -17,7 +66,6 @@
 		"month": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「ガンダムセンチネル」に登場する主役ＭＳを好評のＨＧユニバーサルセンチュリーシリーズでプラモデル化。",
@@ -32,28 +80,26 @@
 			"Also included is a core fighter display model."
 		]
 	},
-	"images": [
-		"/images/items/01_1247/153_217.jpg",
-		"/images/items/01_1247/155_217.jpg",
-		"/images/items/01_1247/156_217.jpg",
-		"/images/items/01_1247/157_217.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1247/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"sentinel"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4064",
-		"item-1000143361",
-		"01_1700",
-		"01_1310"
-	],
-	"manualId": "0223"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/157_217_s_9j2lgumuyhskolygwr35lxev2uu4.jpg",
+				"path": "/images/items/01_1247/157_217.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_217_s_n1r5mxcnasc6ie3kvg1xxjcqjm3z.jpg",
+				"path": "/images/items/01_1247/153_217.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_217_s_3k0we40ga27zbf1y6mfr0ks09769.jpg",
+				"path": "/images/items/01_1247/155_217.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_217_s_73mvgu3ouz5hjzb8o14j3ix4ec2v.jpg",
+				"path": "/images/items/01_1247/156_217.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1247/"
 }

@@ -5,6 +5,44 @@
 		"ja": "MG 1/100 ガンダムベース限定 カタパルトベース",
 		"en": "MG 1/100 Gundam Base Limited Catapult Base"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "01_5469",
+			"url": "https://bandai-hobby.net/item/01_5469/",
+			"ja": "MG 1/100 ガンダムヴィダール"
+		},
+		{
+			"id": "01_5593",
+			"url": "https://bandai-hobby.net/item/01_5593/",
+			"ja": "MG 1/100 ガンダムMk-V [クリアカラー]"
+		},
+		{
+			"id": "item-1000216602",
+			"url": "https://p-bandai.jp/item/item-1000216602/",
+			"ja": "ＭＧ 1/100 ガンダムアストレア＋プロトＧＮツインブロードブレイド"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 12
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
@@ -39,29 +76,30 @@
 			"• Includes pilot and maintenance crew figures!"
 		]
 	},
-	"images": [
-		"/images/items/01_2991/153_3963.jpg",
-		"/images/items/01_2991/155_3963.jpg",
-		"/images/items/01_2991/156_3963.jpg",
-		"/images/items/01_2991/157_3963.jpg",
-		"/images/items/01_2991/158_3963.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2991/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5469",
-		"01_5593",
-		"item-1000216602"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3963_s_zdzqw0axzo93jvmy8mp1tz8pprpc.jpg",
+				"path": "/images/items/01_2991/153_3963.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3963_s_iu3xq7cx75mxrv57aku12qq0qt5s.jpg",
+				"path": "/images/items/01_2991/155_3963.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3963_s_kk4vk2gsc63vltgvczwzhifnj1pt.jpg",
+				"path": "/images/items/01_2991/156_3963.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3963_s_ok5szjbhepjjvzzc2wr6393tp9c6.jpg",
+				"path": "/images/items/01_2991/157_3963.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3963_s_819ufseayp3joxa1regjtqc43iqd.jpg",
+				"path": "/images/items/01_2991/158_3963.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2991/"
 }

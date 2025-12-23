@@ -5,6 +5,40 @@
 		"ja": "HG 1/300 グランザウラー",
 		"en": "HG 1/300 Gransaurer"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gosaurar",
+			"url": "https://bandai-hobby.net/series/gosaurar/",
+			"ja": "熱血最強ゴウザウラー"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000132814",
+			"url": "https://p-bandai.jp/item/item-1000132814",
+			"ja": "ＨＧ 1/300 ダークゴウザウラー"
+		},
+		{
+			"id": "01_1994",
+			"url": "https://bandai-hobby.net/item/01_1994/",
+			"ja": "HG 1/300 ゴウザウラー"
+		}
+	],
+	"scale": "1/300",
 	"price": {
 		"amount": 5720,
 		"currency": "JPY",
@@ -18,7 +52,6 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"scale": "1/300",
 	"description": {
 		"ja": [
 			"『熱血最強ゴウザウラー』より、グランザウラーがHGにラインアップ！",
@@ -30,51 +63,96 @@
 			"From “Nekketsu Strongest Go-Saurer”, Gran Saurer is now available as HG!",
 			"• Under the thorough supervision of Mr. Takahiro Yamada of Gozaurer Design Works, the majestic appearance of Gozaurer can be reproduced using only Assembly.",
 			"• King Blade (total length approx. 300mm), Big Lancer, and Tricera Seal are included.",
-			"• By combining it with \"HG 1/300 Gousaurer \" and \" HG 1/300 Magnasaurer \" (both sold separately), \" King Gousaurer\" can be reproduced."
+			"• By combining it with \"HG 1/300 Gousaurer\" and \"HG 1/300 Magnasaurer\" (both sold separately), \"King Gousaurer\" can be reproduced."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビッグランサー×1",
-			"トリケラシールド×1",
-			"キングブレード×1",
-			"キングゴウザウラー用合体パーツ×1式",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビッグランサー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "トリケラシールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "キングブレード"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "キングゴウザウラー用合体パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148162_12.jpg",
+				"path": "/images/items/01_2820/1000148162_12.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148162_1.jpg",
+				"path": "/images/items/01_2820/1000148162_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148162_2.jpg",
+				"path": "/images/items/01_2820/1000148162_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148162_3.jpg",
+				"path": "/images/items/01_2820/1000148162_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148162_4.jpg",
+				"path": "/images/items/01_2820/1000148162_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148162_5.jpg",
+				"path": "/images/items/01_2820/1000148162_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148162_6.jpg",
+				"path": "/images/items/01_2820/1000148162_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148162_7.jpg",
+				"path": "/images/items/01_2820/1000148162_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148162_8.jpg",
+				"path": "/images/items/01_2820/1000148162_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148162_9.jpg",
+				"path": "/images/items/01_2820/1000148162_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148162_10.jpg",
+				"path": "/images/items/01_2820/1000148162_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148162_11.jpg",
+				"path": "/images/items/01_2820/1000148162_11.jpg"
+			}
 		],
-		"en": [
-			"Big Lancer x1",
-			"Tricera Seal×1",
-			"King blade x1",
-			"Combined parts for King Gousaurer x 1 set",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2820/1000148162_1.jpg",
-		"/images/items/01_2820/1000148162_10.jpg",
-		"/images/items/01_2820/1000148162_11.jpg",
-		"/images/items/01_2820/1000148162_12.jpg",
-		"/images/items/01_2820/1000148162_2.jpg",
-		"/images/items/01_2820/1000148162_3.jpg",
-		"/images/items/01_2820/1000148162_4.jpg",
-		"/images/items/01_2820/1000148162_5.jpg",
-		"/images/items/01_2820/1000148162_6.jpg",
-		"/images/items/01_2820/1000148162_7.jpg",
-		"/images/items/01_2820/1000148162_8.jpg",
-		"/images/items/01_2820/1000148162_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2820/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gosaurar"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000132814",
-		"01_1994"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2820/"
 }

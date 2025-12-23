@@ -3,8 +3,62 @@
 	"type": "item",
 	"name": {
 		"ja": "ＭＧ 1/100 ガンダムＸ３号機",
-		"en": "MG 1/100 Gundam X Unit 3"
+		"en": "MG 1/100 GundamX Unit 3"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "x",
+			"url": "https://bandai-hobby.net/series/x/",
+			"ja": "機動新世紀ガンダムＸ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000147185",
+			"url": "https://p-bandai.jp/item/item-1000147185/",
+			"ja": "ＨＧ 1/144 ドートレス"
+		},
+		{
+			"id": "item-1000147187",
+			"url": "https://p-bandai.jp/item/item-1000147187/",
+			"ja": "ＨＧ 1/144 ガンダムエアマスターバースト"
+		},
+		{
+			"id": "01_298",
+			"url": "https://bandai-hobby.net/item/01_298/",
+			"ja": "MG 1/100 ガンダムダブルエックス"
+		},
+		{
+			"id": "01_33",
+			"url": "https://bandai-hobby.net/item/01_33/",
+			"ja": "MG 1/100 ガンダムX"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -17,31 +71,14 @@
 		"month": 7
 	},
 	"targetAge": 15,
-	"scale": "1/100",
-	"images": [
-		"/images/items/01_1387/153_2311.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1387/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"x"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000147185",
-		"item-1000147187",
-		"01_298",
-		"01_33"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2311_o_1c9qrh2ii41kmrnug47m71n6f23.jpg",
+				"path": "/images/items/01_1387/153_2311.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "0619"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1387/"
 }

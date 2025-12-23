@@ -5,6 +5,60 @@
 		"ja": "ＭＧ 1/100 RMS-179 ジムＩＩ（ユニコーンＶｅｒ．）",
 		"en": "MG 1/100 RMS-179 Jim II (Unicorn Ver.)"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216106",
+			"url": "https://p-bandai.jp/item/item-1000216106/",
+			"ja": "RG 1/144 ユニコーンガンダム２号機 バンシィ・ノルン (最終決戦仕様) [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000183366",
+			"url": "https://p-bandai.jp/item/item-1000183366/",
+			"ja": "ＭＧ 1/100 スタークジェガン"
+		},
+		{
+			"id": "01_4271",
+			"url": "https://bandai-hobby.net/item/01_4271/",
+			"ja": "MG 1/100 ガンダムベース限定 ユニコーンガンダム(光の結晶体)"
+		},
+		{
+			"id": "item-1000164780",
+			"url": "https://p-bandai.jp/item/item-1000164780/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム ペルフェクティビリティ用 ディバイン拡張セット"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4070,
 		"currency": "JPY",
@@ -17,31 +71,14 @@
 		"month": 9
 	},
 	"targetAge": 15,
-	"scale": "1/100",
-	"images": [
-		"/images/items/01_1124/153_2057.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1124/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216106",
-		"item-1000183366",
-		"01_4271",
-		"item-1000164780"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2057_o_1bkt554lffn35slr8j1s5t12gj23.jpg",
+				"path": "/images/items/01_1124/153_2057.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "2684"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1124/"
 }

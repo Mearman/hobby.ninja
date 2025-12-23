@@ -5,6 +5,16 @@
 		"ja": "ガンプラランナーエプロン",
 		"en": "GunplaRunner apron"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "item_all",
+			"url": "https://bandai-hobby.net/item_all",
+			"ja": "商品一覧"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -28,20 +38,22 @@
 			"It also has a pocket, so you can store small items."
 		]
 	},
-	"images": [
-		"/images/items/01_2271/153_3213.jpg",
-		"/images/items/01_2271/155_3213.jpg",
-		"/images/items/01_2271/156_3213.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2271/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
-	"relatedItemIds": [],
-	"tag": {
-		"ja": "ガンダムベースグッズ",
-		"en": "Gundam Base Goods"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3213_o_1d5723grg1rob1e2m172e1f1car23.jpg",
+				"path": "/images/items/01_2271/153_3213.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3213_o_1d5723ric816as91nvficacss2d.jpg",
+				"path": "/images/items/01_2271/155_3213.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3213_o_1d57240ba2bfcjmr07jqf11lj2i.jpg",
+				"path": "/images/items/01_2271/156_3213.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2271/"
 }

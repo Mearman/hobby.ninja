@@ -5,6 +5,49 @@
 		"ja": "ＢＢ戦士 10 ジェガン",
 		"en": "BB Senshi 10 Jegan"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4975",
+			"url": "https://bandai-hobby.net/item/01_4975/",
+			"ja": "BB戦士 MSN-04FF サザビー"
+		},
+		{
+			"id": "01_4190",
+			"url": "https://bandai-hobby.net/item/01_4190/",
+			"ja": "BB戦士 RX-93ff νガンダム"
+		},
+		{
+			"id": "01_2323",
+			"url": "https://bandai-hobby.net/item/01_2323/",
+			"ja": "BB戦士 ガンダムベース限定 Hi-νガンダム[スペシャルコーティング]"
+		},
+		{
+			"id": "01_46",
+			"url": "https://bandai-hobby.net/item/01_46/",
+			"ja": "BB戦士387 νガンダム"
+		}
+	],
 	"price": {
 		"amount": 330,
 		"currency": "JPY",
@@ -18,23 +61,14 @@
 		"day": 15
 	},
 	"targetAge": 15,
-	"images": [
-		"/images/items/01_3232/153_4187.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3232/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4975",
-		"01_4190",
-		"01_2323",
-		"01_46"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4187_s_befofpca7cfm1pr6mk0uqxnd4y6q.jpg",
+				"path": "/images/items/01_3232/153_4187.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3232/"
 }

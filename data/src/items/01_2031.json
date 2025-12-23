@@ -5,6 +5,43 @@
 		"ja": "ポケモンプラモコレクション No.42 セレクトシリーズ イーブイ",
 		"en": "Pokemon Plastic Model Collection No.42 Select Series Eevee"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5984",
+			"url": "https://bandai-hobby.net/item/01_5984/",
+			"ja": "ポケモンプラモコレクション 60 セレクトシリーズ コライドン"
+		},
+		{
+			"id": "01_5958",
+			"url": "https://bandai-hobby.net/item/01_5958/",
+			"ja": "ポケモンプラモコレクション 59 セレクトシリーズ ミライドン"
+		},
+		{
+			"id": "01_5947",
+			"url": "https://bandai-hobby.net/item/01_5947/",
+			"ja": "ポケモンプラモコレクション クイック!! 23 ジラーチ"
+		},
+		{
+			"id": "01_5568",
+			"url": "https://bandai-hobby.net/item/01_5568/",
+			"ja": "ポケモンプラモコレクション 58 セレクトシリーズ グレンアルマ"
+		}
+	],
 	"price": {
 		"amount": 836,
 		"currency": "JPY",
@@ -26,46 +63,65 @@
 			"Eevee, which is very popular in various places such as TV anime, movies, and Twitter, is now available in a select series!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"表情パーツ×2（通常・笑み）"
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情パーツ"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "（通常・笑み）"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2973_s_q25by35ufj8zp4rk2i39wqk4p4q1.jpg",
+				"path": "/images/items/01_2031/153_2973.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2973_s_va3e5sysrrjktkw19ogn4dx9tipy.jpg",
+				"path": "/images/items/01_2031/155_2973.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2973_s_xbdj32djlicna2fadqg15ff730u4.jpg",
+				"path": "/images/items/01_2031/156_2973.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2973_s_5rpjwaypydhgehqdyk6vecioyvlk.jpg",
+				"path": "/images/items/01_2031/157_2973.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2973_s_gtf2r9qijka4lnsgrobuy05z4bje.jpg",
+				"path": "/images/items/01_2031/158_2973.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2973_s_5ydavv68w5l3l3zj99ww0sf76oof.jpg",
+				"path": "/images/items/01_2031/159_2973.jpg"
+			}
 		],
-		"en": [
-			"Facial expression parts x 2 (normal/smile)"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×3",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 3",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2031/153_2973.jpg",
-		"/images/items/01_2031/155_2973.jpg",
-		"/images/items/01_2031/156_2973.jpg",
-		"/images/items/01_2031/157_2973.jpg",
-		"/images/items/01_2031/158_2973.jpg",
-		"/images/items/01_2031/159_2973.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2031/",
-	"brandIds": [],
-	"seriesIds": [
-		"pokemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2031/"
 }

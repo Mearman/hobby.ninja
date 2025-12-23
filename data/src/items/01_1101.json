@@ -5,6 +5,37 @@
 		"ja": "Figure-riseEffect グラウンドエフェクト",
 		"en": "Figure-riseEffect Ground Effect"
 	},
+	"brands": [
+		{
+			"id": "figurerise-effect",
+			"url": "https://bandai-hobby.net/brand/figurerise-effect/",
+			"ja": "Figure-rise Effect[フィギュアライズエフェクト]"
+		}
+	],
+	"series": [],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_2346",
+			"url": "https://bandai-hobby.net/item/01_2346/",
+			"ja": "Figure-rise Effect ジェットエフェクト(クリアイエロー)"
+		},
+		{
+			"id": "01_2347",
+			"url": "https://bandai-hobby.net/item/01_2347/",
+			"ja": "Figure-rise Effect ジェットエフェクト(クリアブルー)"
+		},
+		{
+			"id": "01_2183",
+			"url": "https://bandai-hobby.net/item/01_2183/",
+			"ja": "Figure-rise Effect バーストエフェクト(スペースピンク)"
+		},
+		{
+			"id": "01_1418",
+			"url": "https://bandai-hobby.net/item/01_1418/",
+			"ja": "Figure-rise Effect 衝撃波 イエロー"
+		}
+	],
 	"price": {
 		"amount": 990,
 		"currency": "JPY",
@@ -30,55 +61,76 @@
 		],
 		"en": [
 			"Grand effect is now available in Figure-riseEffect!",
-			"• More faithful reproduction of landing scenes and battle scenes! The width of the display is even wider!",
+			"• More faithful reproduction of landing and battle scenes! The width of the display is even wider!",
 			"• The ground parts can also be used as a base! If you use a clear base, you can recreate the effect of peeling off ground floating in the air!",
-			"• A special action base is included, so you can freely combine it with effects!",
-			"• The prop of the dedicated action base is movable on three axes and can be flexibly adjusted in position.",
+			"• Comes with a special action base, so you can freely combine it with effects!",
+			"• The prop of the dedicated action base is movable on three axes and can be flexibly adjusted.",
 			"Furthermore, by combining the included joint parts, you can move the effect parts away from the pedestal to secure a foothold, or attach them to a post three-dimensionally, allowing for a wide range of displays!",
-			"• It goes perfectly with the Figure-rise Effect that is currently being released!"
+			"• Perfect compatibility with the currently released Figure-rise Effect!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"アクションベース×1",
-			"ジョイントパーツ×4",
-			"支柱パーツ大×2",
-			"支柱パーツ小×2",
-			"台座用ジョイントパーツ×1"
-		],
-		"en": [
-			"Action base x 1",
-			"Joint parts x 4",
-			"Large pillar parts x 2",
-			"Support parts small x 2",
-			"Joint parts for pedestal x 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×3",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 3",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1101/153_2031.jpg",
-		"/images/items/01_1101/155_2031.jpg",
-		"/images/items/01_1101/156_2031.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "アクションベース"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "支柱パーツ大"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "支柱パーツ小"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "台座用ジョイントパーツ"
+			},
+			"count": 1
+		}
 	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1101/",
-	"brandIds": [
-		"figurerise-effect"
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
 	],
-	"seriesIds": [],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"01_2346",
-		"01_2347",
-		"01_2183",
-		"01_1418"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2031_o_1bmj9eub41fri1uc015uq57c1gql23.jpg",
+				"path": "/images/items/01_1101/153_2031.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2031_o_1bmj9gt8s1epe16td137768j19mr2i.jpg",
+				"path": "/images/items/01_1101/155_2031.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2031_o_1bmmhh17n13uirioln1df6e9523.jpg",
+				"path": "/images/items/01_1101/156_2031.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1101/"
 }

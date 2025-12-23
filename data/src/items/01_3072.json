@@ -5,6 +5,54 @@
 		"ja": "ＨＧ 1/144 トライエイジガンダム",
 		"en": "HG 1/144 Try Age Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2970,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガ ン ダ ム ト ラ イ エ イ ジ ９ 周 年 記 念",
@@ -54,7 +101,7 @@
 		"en": [
 			"Gundam Try Age 9th Anniversary",
 			"The original Gundam has been commercialized! ! !",
-			"Commercialization of the original Gundam \"Try Age Gundam \" that appears in \" Gundam Try Age\", which is reaching its 9th edition.",
+			"Commercialization of the original Gundam \"Try Age Gundam\" that appears in \"Gundam Try Age\", which is reaching its 9th edition.",
 			"The aircraft coloring is reproduced with tricolor color and clear red. Comes with original color effects that can reproduce the activities in the game.",
 			"● Thoroughly reproduce the characteristic aircraft color with molding color",
 			"The tricolor color mainly consisting of white, blue, and red is reproduced with molded colors.",
@@ -84,49 +131,67 @@
 			"- Product specifications are scheduled as of 20207. Please note that there may be changes."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"トライドッズライフル",
-			"トライスラッシュブレイド",
-			"トライアームソード"
+	"accessories": [
+		{
+			"name": {
+				"ja": "トライドッズライフル"
+			}
+		},
+		{
+			"name": {
+				"ja": "トライスラッシュブレイド"
+			}
+		},
+		{
+			"name": {
+				"ja": "トライアームソード"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4041_s_zq2dw6zcnltk54sw4us1rzk1l10o.jpg",
+				"path": "/images/items/01_3072/153_4041.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4041_s_fs1gd93ekp5ejhl3kzp9bilh8y2o.jpg",
+				"path": "/images/items/01_3072/155_4041.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4041_s_zpvh4po326k8lisfzbkbxilpswq2.jpg",
+				"path": "/images/items/01_3072/156_4041.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4041_s_mpxq3zgnmx3933bbm18x15tm7s3u.jpg",
+				"path": "/images/items/01_3072/157_4041.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4041_s_z26p2kzun2tk7bhzfmyzg6r2a0cf.jpg",
+				"path": "/images/items/01_3072/158_4041.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4041_s_2llodm39ncr6mpgbvpmwyrcyesh0.jpg",
+				"path": "/images/items/01_3072/159_4041.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4041_s_6n5hrz0kdam581cnw4ktzeg986gn.jpg",
+				"path": "/images/items/01_3072/189_4041.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4041_s_8234vaguovn2yurn5alp7z8bbopv.jpg",
+				"path": "/images/items/01_3072/190_4041.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4041_s_mlgiw8fnykpumamr1eith8vyoxgy.jpg",
+				"path": "/images/items/01_3072/191_4041.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4041_s_aniq6j0bol1tryjvl9zzlq4go0ie.jpg",
+				"path": "/images/items/01_3072/192_4041.jpg"
+			}
 		],
-		"en": [
-			"tridods rifle",
-			"tri-slash blade",
-			"tri-arm sword"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3072/153_4041.jpg",
-		"/images/items/01_3072/155_4041.jpg",
-		"/images/items/01_3072/156_4041.jpg",
-		"/images/items/01_3072/157_4041.jpg",
-		"/images/items/01_3072/158_4041.jpg",
-		"/images/items/01_3072/159_4041.jpg",
-		"/images/items/01_3072/189_4041.jpg",
-		"/images/items/01_3072/190_4041.jpg",
-		"/images/items/01_3072/191_4041.jpg",
-		"/images/items/01_3072/192_4041.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3072/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	],
-	"manualId": "2602",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3072/"
 }

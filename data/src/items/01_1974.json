@@ -5,6 +5,43 @@
 		"ja": "ピカちんキットS03 空耳ボイスチェンジャー",
 		"en": "Pikachin KitS03 Sorami Voice Changer"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -33,8 +70,8 @@
 			"接点金具…4"
 		],
 		"en": [
-			"• Pikachin KitS, which has hidden electronic power, is here!",
-			"• Frequency change device is 1% pyramid! Just flip the switch to make your voice higher or lower!",
+			"• Introducing Pikachin KitS, which has the power of electronics!",
+			"• The frequency change device is 1% pyramidal! Just flip the switch to make your voice higher or lower!",
 			"• Hide your true identity with a dandy voice!",
 			"[Set contents]",
 			"Sorami voice changer...1 (molded product...2)",
@@ -46,25 +83,30 @@
 			"Contact fittings...4"
 		]
 	},
-	"images": [
-		"/images/items/01_1974/153_2904.jpg",
-		"/images/items/01_1974/155_2904.jpg",
-		"/images/items/01_1974/156_2904.jpg",
-		"/images/items/01_1974/157_2904.jpg",
-		"/images/items/01_1974/158_2904.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1974/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2904_s_owsb6gjihle59lfiuspi6mt053y6.jpg",
+				"path": "/images/items/01_1974/153_2904.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2904_s_nmsp18apz6gxj5s5wbixyj4yi84x.jpg",
+				"path": "/images/items/01_1974/155_2904.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2904_s_snrd4ze8alxfmzdmk1uplq7j4v4f.jpg",
+				"path": "/images/items/01_1974/156_2904.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2904_s_317fpjd86o6sh6u180tpkf8xpzm5.jpg",
+				"path": "/images/items/01_1974/157_2904.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2904_s_yy9nwtt4x9sxjb6gj9n4df3d3aby.jpg",
+				"path": "/images/items/01_1974/158_2904.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1974/"
 }

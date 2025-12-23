@@ -5,6 +5,28 @@
 		"ja": "SDEXスタンダード014　ガンダムバルバトスルプス",
 		"en": "SDEX Standard 014 Gundam Barbatos Lupus"
 	},
+	"brands": [
+		{
+			"id": "SDEX",
+			"url": "https://bandai-hobby.net/brand/SDEX/",
+			"ja": "SDEXスタンダード"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -20,34 +42,48 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"• 海外で展開されていた「SD ガンダム EXスタンダード」シリーズが日本上陸！",
-			"• 従来のSD ガンダムシリーズキットに比べ可動域が大幅に向上し、様々なポージングが可能で、洗練されたスタイリッシュなプロポーションとの両立を実現！",
+			"• 海外で展開されていた「SDガンダム EXスタンダード」シリーズが日本上陸！",
+			"• 従来のSDガンダムシリーズキットに比べ可動域が大幅に向上し、様々なポージングが可能で、洗練されたスタイリッシュなプロポーションとの両立を実現！",
 			"• さらに、HGシリーズとの互換性を備え、パーツ交換によるカスタマイズの幅を広げている！"
 		],
 		"en": [
-			"• The \"SD Gundam EX Standard\" series, which was developed overseas, has finally arrived!",
-			"• The range of motion has been greatly improved compared to the previous SD Gundam series kit, allowing for a variety of poses and achieving both sophisticated and stylish proportions!",
+			"• The \"SDGundam EX Standard\" series, which has been sold overseas, has finally arrived!",
+			"• The range of motion has been greatly improved compared to the previous SDGundam series kit, allowing for various poses and achieving both sophisticated and stylish proportions!",
 			"• Furthermore, it is compatible with the HG series, expanding the range of customization by replacing parts!"
 		]
 	},
-	"images": [
-		"/images/items/01_2156/153_3106.jpg",
-		"/images/items/01_2156/155_3106.jpg",
-		"/images/items/01_2156/156_3106.jpg",
-		"/images/items/01_2156/157_3106.jpg",
-		"/images/items/01_2156/158_3106.jpg",
-		"/images/items/01_2156/159_3106.jpg",
-		"/images/items/01_2156/189_3106.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2156/",
-	"brandIds": [
-		"SDEX"
-	],
-	"seriesIds": [
-		"tekketsu"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": []
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3106_s_v1wzj8bu1ik2vqjmkji8sjffotmp.jpg",
+				"path": "/images/items/01_2156/153_3106.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3106_s_t9eky5uylgmre8tqt2vlbr94joli.jpg",
+				"path": "/images/items/01_2156/155_3106.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3106_s_64e7wc6oop5pqzkm19asu2axv4ae.jpg",
+				"path": "/images/items/01_2156/156_3106.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3106_s_iftatoc5v8sueahwic7ys8ey89dp.jpg",
+				"path": "/images/items/01_2156/157_3106.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3106_s_qt5khsot0avv9vn7tmop2uwyvuyl.jpg",
+				"path": "/images/items/01_2156/158_3106.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3106_s_yhg07yzhs26dyrvflcz9ayxuvqzh.jpg",
+				"path": "/images/items/01_2156/159_3106.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3106_s_2583oqirg98m83b7cut07xk3a7hl.jpg",
+				"path": "/images/items/01_2156/189_3106.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2156/"
 }

@@ -3,8 +3,53 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 ジャスティスガンダム",
-		"en": "MG 1/100 Justice Gundam"
+		"en": "MG 1/100 JUSTICE GUNDAM"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED",
+			"en": "MOBILE SUIT GUNDAM SEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "01_6679",
+			"url": "https://bandai-hobby.net/item/01_6679/",
+			"ja": "MG 1/100 ジャスティスガンダム [CROSS CONTRAST COLORS / CLEAR GREEN]"
+		},
+		{
+			"id": "01_6678",
+			"url": "https://bandai-hobby.net/item/01_6678/",
+			"ja": "MG 1/100 フリーダムガンダム Ver.2.0 [CROSS CONTRAST COLORS / CLEAR BLUE]"
+		},
+		{
+			"id": "01_5221",
+			"url": "https://bandai-hobby.net/item/01_5221/",
+			"ja": "MG 1/100 イージスガンダム [クリアカラー]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5280,
 		"currency": "JPY",
@@ -17,71 +62,97 @@
 		"month": 6
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"• 『機動戦士ガンダム SEED』に登場する「ジャスティスガンダム」が、ついにMG化！",
+			"• 『機動戦士ガンダムSEED』に登場する「ジャスティスガンダム」が、ついにMG化！",
 			"• 発売中のSEED系MGシリーズと一部共通フレームを使用することで設定が再現されているほか、情報量の多いディテールが施され、劇中のイメージも実現可能！",
 			"• フルギミックのファトゥム-00は飛行形態へ展開可能なほか、搭乗させたポーズも再現できる！",
 			"• 握り手パーツを使って保持することも可能なバッセルビームブーメランをはじめとする数々の武装に加え、パイロットフィギュアも付属！"
 		],
 		"en": [
-			"• \"Justice Gundam \" that appears in \" Mobile Suit Gundam SEED\" is finally made into MG!",
-			"• By using some common frames with the currently released SEED series MG series, the setting is reproduced, and a large amount of detail has been added, making it possible to realize the image from the movie!",
-			"• Full gimmick Fatum-00 can be deployed into flight mode, and you can also recreate the pose of riding it!",
-			"• In addition to a number of weapons, including a bassel beam boomerang that can be held using the grip parts, a pilot figure is also included!"
+			"• \"Justice GUNDAM\" that appears in \"MOBILE SUIT GUNDAM SEED\" is finally MG!",
+			"• In addition to reproducing the setting by using some common frames with the SEED series MG series on sale, the details with a large amount of information are applied, and the image in the play can be realized!",
+			"• The full gimmick Fatum-00 can be expanded into a flight form, and the pose on board can also be reproduced!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"RQM51バッセル ビームブーメラン×2",
-			"MA-M01ラケルタ ビームサーベル×2",
-			"MA-M20ルプス ビームライフル×１",
-			"ラミネートアンチビームシールド×１"
-		],
-		"en": [
-			"RQM51 Bassel Beam Boomerang x 2",
-			"MA-M01 Lacerta Beam Saber x 2",
-			"MA-M20 Lupus beam rifle x 1",
-			"Laminate anti-beam seal × 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×16",
-			"シール×1",
-			"マーキングシール×1",
-			"ドライデカール×1",
-			"取扱説明書"
-		],
-		"en": [
-			"Molded product x 16",
-			"Seal×1",
-			"MarkingSeal×1",
-			"Dry decal x 1",
-			"Handling manual"
-		]
-	},
-	"images": [
-		"/images/items/01_1019/1000115115_1.jpg",
-		"/images/items/01_1019/1000115115_2.jpg",
-		"/images/items/01_1019/1000115115_3.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "RQM51バッセル ビームブーメラン",
+				"en": "• RQM51 Bassel Beam Boomerang"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "MA-M01ラケルタ ビームサーベル",
+				"en": "• Laminated anti-beam shield"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "MA-M20ルプス ビームライフル×１",
+				"en": "• Molded products"
+			}
+		},
+		{
+			"name": {
+				"ja": "ラミネートアンチビームシールド×１",
+				"en": "• Seal"
+			}
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 16
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ドライデカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115115_1.jpg",
+				"path": "/images/items/01_1019/1000115115_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115115_2.jpg",
+				"path": "/images/items/01_1019/1000115115_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115115_3.jpg",
+				"path": "/images/items/01_1019/1000115115_3.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1019/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_6679",
-		"01_6678",
-		"01_5221"
-	],
-	"manualId": "0627"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1019/"
+	}
 }

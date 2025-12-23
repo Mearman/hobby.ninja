@@ -5,6 +5,43 @@
 		"ja": "LEGENDBB ガンダムベース限定 飛駆鳥大将軍 [クリアカラー]",
 		"en": "LEGENDBB Gundam Base Limited Asukacho Daishogun [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -24,14 +61,14 @@
 			"歴代最強のパワーを秘めた若き大将軍が、ガンダムベース限定のシルバーメッキ増量&クリアカラーになって見参！！",
 			"さらに父親である新世大将軍と同じ形状の戦武面＜バトルマスク＞とシルバーメッキの光鳳剣が付属！",
 			"※戦武面＜バトルマスク＞はLEGENDBB新世大将軍には装着できません。",
-			"■兜・前立て・鎧・翼・足首・大砲など、全身の至る所に金メッキを採用。",
+			"• 兜・前立て・鎧・翼・足首・大砲など、全身の至る所に金メッキを採用。",
 			"討魔八紘剣と足の爪にもシルバーメッキを施しメッキ箇所を増量！",
 			"燃え上がるような２枚の翼・魔破閃光翼＜マッハ・ビームウイング＞は２色のクリアパーツで色分け。",
 			"さらに、きらめく翼をラメで表現した超豪華仕様！",
-			"■兜の鳳凰にある討魔の宝珠と、肩の大天幻石にはジュエルシールを使用。",
+			"• 兜の鳳凰にある討魔の宝珠と、肩の大天幻石にはジュエルシールを使用。",
 			"肩アーマーの鳳翼鏡にはプリズムシールを使用し、豪華な鎧を再現！",
-			"■シルバーメッキの討魔八紘剣には、ＢＢ戦士 七人の超将軍シリーズ(別売り)の閃光結晶＜ビームクリスタル＞を取り付け可能！",
-			"■LEGENDBB 新世大将軍（別売り）の翼の取り付けが可能。",
+			"• シルバーメッキの討魔八紘剣には、ＢＢ戦士 七人の超将軍シリーズ(別売り)の閃光結晶＜ビームクリスタル＞を取り付け可能！",
+			"• LEGENDBB 新世大将軍（別売り）の翼の取り付けが可能。",
 			"さらにLEGENDBBオリジナルのギミックとして、翼と大目牙撃砲＜オメガスマッシャー＞も装備が可能に！",
 			"飛駆鳥大将軍が”神馬凰形態”へと超パワーアップ！"
 		],
@@ -52,34 +89,50 @@
 			"General Asukatou super powers up to “Jinbaou form”!"
 		]
 	},
-	"images": [
-		"/images/items/01_2724/153_3716.jpg",
-		"/images/items/01_2724/155_3716.jpg",
-		"/images/items/01_2724/156_3716.jpg",
-		"/images/items/01_2724/157_3716.jpg",
-		"/images/items/01_2724/158_3716.jpg",
-		"/images/items/01_2724/159_3716.jpg",
-		"/images/items/01_2724/189_3716.jpg",
-		"/images/items/01_2724/190_3716.jpg",
-		"/images/items/01_2724/191_3716.jpg",
-		"/images/items/01_2724/192_3716.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2724/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3716_s_a97vsphes5evbo707ddkck7tcwxq.jpg",
+				"path": "/images/items/01_2724/153_3716.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3716_s_3ikpvoyvsf1ae0fmx94k4nc8n4yh.jpg",
+				"path": "/images/items/01_2724/155_3716.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3716_s_numsj3zwmsi940itq8n9049r8256.jpg",
+				"path": "/images/items/01_2724/156_3716.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3716_s_qx8id5ri7ojc2afc50dvd3810m07.jpg",
+				"path": "/images/items/01_2724/157_3716.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3716_s_27cccmltoaz63e7lv9nn107u1ma0.jpg",
+				"path": "/images/items/01_2724/158_3716.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3716_s_j8000wfvl61mqglw94eb25ldjx6k.jpg",
+				"path": "/images/items/01_2724/159_3716.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3716_s_z7z7xo50qht8n37msh74lxwl8unr.jpg",
+				"path": "/images/items/01_2724/189_3716.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3716_s_b7ftbdv6kv13lghvkrf334l1g5h9.jpg",
+				"path": "/images/items/01_2724/190_3716.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3716_s_znempzzik8a1n1vdmtrdxwxgmsxg.jpg",
+				"path": "/images/items/01_2724/191_3716.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3716_s_qcwhefhyo0vif5nshofqga3l7vnj.jpg",
+				"path": "/images/items/01_2724/192_3716.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2724/"
 }

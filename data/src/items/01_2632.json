@@ -5,6 +5,49 @@
 		"ja": "RG 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン初号機",
 		"en": "RG General-purpose humanoid decisive battle weapon Android Evangelion Unit-01"
 	},
+	"brands": [
+		{
+			"id": "rg-c",
+			"url": "https://bandai-hobby.net/brand/rg-c/",
+			"ja": "RG［ リアルグレード ］"
+		}
+	],
+	"series": [
+		{
+			"id": "evangelion",
+			"url": "https://bandai-hobby.net/series/evangelion/",
+			"ja": "エヴァンゲリオン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000163344",
+			"url": "https://p-bandai.jp/item/item-1000163344/",
+			"ja": "ＲＧ エヴァンゲリオン専用拘束兼移動式射出台セット"
+		},
+		{
+			"id": "01_3617",
+			"url": "https://bandai-hobby.net/item/01_3617/",
+			"ja": "RG 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン 正規実用型 3号機 ESVシールド セット"
+		},
+		{
+			"id": "01_2855",
+			"url": "https://bandai-hobby.net/item/01_2855/",
+			"ja": "RG 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン 正規実用型 2号機（先行量産機）"
+		},
+		{
+			"id": "01_2765",
+			"url": "https://bandai-hobby.net/item/01_2765/",
+			"ja": "RG 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン試作零号機DX 陽電子砲セット"
+		}
+	],
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -34,59 +77,91 @@
 		"en": [
 			"The first Evangelion unit is added to the RG series!",
 			"As RG, we are pursuing the reproduction of Evangelion's action pose as an android.",
-			"• Thorough pursuit of precise coloring expression by molding color. Colorful color coding can be expressed just by assembling.",
-			"• When bending forward or looking up, the parts on the chest, abdomen, and back move together like multi-layered armor. In particular, the chest parts move greatly, ensuring a large range of motion.",
-			"• Reduced interference with armored parts that occurs when bending the knee significantly. The back part of the knee sinks in like a real muscle, successfully expressing human-like joints.",
+			"• Thorough pursuit of precise coloring expression using molded colors. Colorful color coding can be expressed just by assembling.",
+			"• When bending forward or looking up, the chest, abdomen, and back parts move together like multilayered armor. In particular, the chest parts move greatly, ensuring a large range of motion.",
+			"• Reduced interference between armored parts when bending the knee significantly. The back part of the knee sinks in like a real muscle, successfully expressing human-like joints.",
 			"• Internal parts interlock when the neck moves. Natural poses and expressions can be reproduced.",
-			"• The internal frames work together to create a joint expression that includes the shoulders and twists the arms. Impressive crouching poses can be reproduced in a form that is close to natural without collapsing.",
-			"• When the legs are opened, internal parts that resemble muscles work together to create a natural standing posture.",
+			"• The internal frames interlock to create a joint expression that includes the shoulders and twists the arms. Impressive crouching poses can be reproduced in a form that is close to natural without collapsing.",
+			"• When you open your legs, internal parts that resemble muscles work together to create a natural standing posture.",
 			"• Entry plug is included as a separate part.",
-			"• A wealth of optional parts are included, including 2 types of progressive knives, 1 type of pallet rifle, 6 types of left and right hand parts, and an umbilical cable."
+			"• A variety of optional parts are included, including 2 types of progressive knives, 1 type of pallet rifle, 6 types of left and right hand parts, and an umbilical cable."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"プログレッシブナイフ×２種（通常時・格納時）",
-			"パレットライフル×１",
-			"ハンドパーツ（左右）×各６種",
-			"アンビリカルケーブル×１",
-			"リアリスティックデカール×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "プログレッシブナイフ×２種（通常時・格納時）"
+			}
+		},
+		{
+			"name": {
+				"ja": "パレットライフル×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ（左右）×各６種"
+			}
+		},
+		{
+			"name": {
+				"ja": "アンビリカルケーブル×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール×１"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3552_s_56m4sc6ls37p81ct73zj48lg58hr.jpg",
+				"path": "/images/items/01_2632/153_3552.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3552_s_bz8wdyn3vz3pj9tioq0zglx6clm0.jpg",
+				"path": "/images/items/01_2632/155_3552.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3552_s_mt4ye13xcw1tdwdwyjc58s4d2769.jpg",
+				"path": "/images/items/01_2632/156_3552.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3552_s_3dmwdnkdvcn9r3fijr088qqf3213.jpg",
+				"path": "/images/items/01_2632/157_3552.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3552_s_vq41w5n5keaud4ortpd4mbqac978.jpg",
+				"path": "/images/items/01_2632/158_3552.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3552_s_3zst98vmlk7wtlclfyugatpo1pho.jpg",
+				"path": "/images/items/01_2632/159_3552.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3552_s_j8cb5yeajkak2erxl0iw1bvpw3xn.jpg",
+				"path": "/images/items/01_2632/189_3552.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3552_s_tdi9ov9r5wf657qt51m8zszk3suh.jpg",
+				"path": "/images/items/01_2632/190_3552.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3552_s_dbil8dg7n5r1bphmmpz2o5w49hm0.jpg",
+				"path": "/images/items/01_2632/191_3552.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3552_s_j05cudc8w3q32vvvrp8j7k5xzdv1.jpg",
+				"path": "/images/items/01_2632/192_3552.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_3552_s_vqfspsdvnf19e8ymaevnjunrlua6.jpg",
+				"path": "/images/items/01_2632/193_3552.jpg"
+			}
 		],
-		"en": [
-			"Progressive knife x 2 types (normal/stored)",
-			"Pallet rifle x1",
-			"Hand parts (left and right) x 6 types each",
-			"Umbilical cable x 1",
-			"Realistic decal x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2632/153_3552.jpg",
-		"/images/items/01_2632/155_3552.jpg",
-		"/images/items/01_2632/156_3552.jpg",
-		"/images/items/01_2632/157_3552.jpg",
-		"/images/items/01_2632/158_3552.jpg",
-		"/images/items/01_2632/159_3552.jpg",
-		"/images/items/01_2632/189_3552.jpg",
-		"/images/items/01_2632/190_3552.jpg",
-		"/images/items/01_2632/191_3552.jpg",
-		"/images/items/01_2632/192_3552.jpg",
-		"/images/items/01_2632/193_3552.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2632/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"evangelion"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000163344",
-		"01_3617",
-		"01_2855",
-		"01_2765"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2632/"
 }

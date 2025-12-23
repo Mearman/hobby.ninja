@@ -5,6 +5,16 @@
 		"ja": "機動戦士ガンダム ガンプラ ランナー Tシャツ RX-78-2 ガンダム",
 		"en": "Mobile Suit Gundam Gunpla Runner T-shirt RX-78-2 Gundam"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "item_all",
+			"url": "https://bandai-hobby.net/item_all",
+			"ja": "商品一覧"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -26,20 +36,22 @@
 			"This is a T-shirt with a design inspired by Gunpla's Runner."
 		]
 	},
-	"images": [
-		"/images/items/01_2466/153_3395.jpg",
-		"/images/items/01_2466/155_3395.JPG",
-		"/images/items/01_2466/156_3395.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2466/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
-	"relatedItemIds": [],
-	"tag": {
-		"ja": "ガンダムベースグッズ",
-		"en": "Gundam Base Goods"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3395_o_1dfvntk981topmjq1g5h1atn1u3u2d.jpg",
+				"path": "/images/items/01_2466/153_3395.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3395_o_1dfvnu6k51a8b176v1v04rug2u2n.JPG",
+				"path": "/images/items/01_2466/155_3395.JPG"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3395_o_1dfvnvdnll0q42g159a1g04tee2s.jpg",
+				"path": "/images/items/01_2466/156_3395.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2466/"
 }

@@ -5,6 +5,60 @@
 		"ja": "ＲＧ 1/144 ビルドストライクガンダム フルパッケージ（RGシステムイメージカラー）",
 		"en": "RG 1/144 Build Strike Gundam Full Package (RG System Image Color)"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_756",
+			"url": "https://bandai-hobby.net/item/01_756/",
+			"ja": "RG 1/144 GAT-X105B/FP ビルドストライクガンダム フルパッケージ"
+		},
+		{
+			"id": "item-1000105824",
+			"url": "https://p-bandai.jp/item/item-1000105824",
+			"ja": "HGBF 1/144 ガーベラ・テトラ（キララ専用機）"
+		},
+		{
+			"id": "item-1000106283",
+			"url": "https://p-bandai.jp/item/item-1000106283",
+			"ja": "ＭＧ 1/100 スタービルドストライクガンダム（ＲＧシステムＶｅｒ．）"
+		},
+		{
+			"id": "item-1000106282",
+			"url": "https://p-bandai.jp/item/item-1000106282",
+			"ja": "ＭＧ 1/100 ガンダムアメイジングエクシア"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -17,31 +71,14 @@
 		"month": 11
 	},
 	"targetAge": 15,
-	"scale": "1/144",
-	"images": [
-		"/images/items/01_1152/153_2083.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1152/",
-	"brandIds": [
-		"rg",
-		"pb_rg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_756",
-		"item-1000105824",
-		"item-1000106283",
-		"item-1000106282"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2083_o_1bn5c5hie4001a2tj5ihoa1cnv23.jpg",
+				"path": "/images/items/01_1152/153_2083.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "0671"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1152/"
 }

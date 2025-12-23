@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ズゴックＥ",
 		"en": "HGUC 1/144 Z'Gok E"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "g-0080",
+			"url": "https://bandai-hobby.net/series/g-0080/",
+			"ja": "機動戦士ガンダム0080 ポケットの中の戦争"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5429",
+			"url": "https://bandai-hobby.net/item/01_5429/",
+			"ja": "HG ガンダムベース限定 ドラケンE"
+		},
+		{
+			"id": "01_5768",
+			"url": "https://bandai-hobby.net/item/01_5768/",
+			"ja": "HGUC 1/144 ジム・スナイパーII"
+		},
+		{
+			"id": "01_2436",
+			"url": "https://bandai-hobby.net/item/01_2436/",
+			"ja": "HGUC 1/144 リック・ドムII ライトグリーンバージョン"
+		},
+		{
+			"id": "01_1686",
+			"url": "https://bandai-hobby.net/item/01_1686/",
+			"ja": "HGUC 1/144 ケンプファー"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -17,39 +66,42 @@
 		"month": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム 0080」に登場する「ズゴックE」のHGUC仕様のプラモデル。腕、脚のジャバラ部分は節ごとにパーツを分割しており、独特な層になった構造をリアルに再現しています。モノアイにはクリアパーツを使用し、両手のツメは可動式です。背部に取り付けられるジェットパックが付属します。"
+			"「機動戦士ガンダム0080」に登場する「ズゴックE」のHGUC仕様のプラモデル。腕、脚のジャバラ部分は節ごとにパーツを分割しており、独特な層になった構造をリアルに再現しています。モノアイにはクリアパーツを使用し、両手のツメは可動式です。背部に取り付けられるジェットパックが付属します。"
 		],
 		"en": [
-			"An HGUC plastic model of \"Z'Gok E \" that appears in \" Mobile Suit Gundam 0080\". The bellows on the arms and legs are divided into parts for each node, realistically reproducing the unique layered structure. Clear parts are used for the mono-eye, and the claws on both hands are movable. Comes with a jet pack that can be attached to the back."
+			"HGUC specification plastic model of \"Z'Gok E\" that appears in \"Mobile Suit Gundam 0080\". The bellows on the arms and legs are divided into parts for each node, realistically reproducing the unique layered structure. Clear parts are used for the mono-eye, and the claws on both hands are movable. Comes with a jet pack that can be attached to the back."
 		]
 	},
-	"images": [
-		"/images/items/01_2705/153_369.jpg",
-		"/images/items/01_2705/155_369.jpg",
-		"/images/items/01_2705/156_369.jpg",
-		"/images/items/01_2705/157_369.jpg",
-		"/images/items/01_2705/158_369.jpg",
-		"/images/items/01_2705/159_369.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2705/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"g-0080"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5429",
-		"01_5768",
-		"01_2436",
-		"01_1686"
-	],
-	"manualId": "0236"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_369_s_gp02bl7plsoxix4r34tayzt0yhtz.jpg",
+				"path": "/images/items/01_2705/153_369.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_369_s_qaa9ry8etwbq58rjagk6d97n8qst.jpg",
+				"path": "/images/items/01_2705/155_369.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_369_s_3xhz65naq1d99g3621r07jul3kgy.jpg",
+				"path": "/images/items/01_2705/156_369.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_369_s_c0ivi5nsiqdq1jqze1dltda0sq4v.jpg",
+				"path": "/images/items/01_2705/157_369.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_369_s_82hupubeuoon20xx0amzi4hakqzy.jpg",
+				"path": "/images/items/01_2705/158_369.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_369_s_ttgwurrpsbp7szwsl6dkk1n33mgn.jpg",
+				"path": "/images/items/01_2705/159_369.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2705/"
 }

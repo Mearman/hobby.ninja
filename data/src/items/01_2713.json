@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 eEXM-21 ラビオット[ホワイト]",
 		"en": "30MM 1/144 eEXM-21 Rabiot [White]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1518,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 25
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMシリーズ地球連合軍に新機体「ラビオット」登場！アルトとの連動でカスタマイズの幅がより広がる！",
@@ -33,38 +75,47 @@
 			"• Can be linked with previous Weapon sets. By separating the grip parts and using the included relay parts, it can be combined with the optional Weapon 1 for Alto."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ショットガン×１",
-			"バックパック×１",
-			"マーキングシール×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ショットガン×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "バックパック×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール×１"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3706_s_yc2kadjrura4nkbjjvm4flh6k1hh.jpg",
+				"path": "/images/items/01_2713/153_3706.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3706_s_dhxaxap97w80oev772dmszn0jcux.jpg",
+				"path": "/images/items/01_2713/155_3706.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3706_s_0qcqp1qqn304w46hstenqio0vly0.jpg",
+				"path": "/images/items/01_2713/156_3706.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3706_s_baliq199u3b4d7dt5nimsmseckcj.jpg",
+				"path": "/images/items/01_2713/157_3706.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3706_s_dzb2hma2akj3lti7gaqvud3fumud.jpg",
+				"path": "/images/items/01_2713/158_3706.jpg"
+			}
 		],
-		"en": [
-			"Shotgun x1",
-			"Backpack x 1",
-			"MarkingSeal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2713/153_3706.jpg",
-		"/images/items/01_2713/155_3706.jpg",
-		"/images/items/01_2713/156_3706.jpg",
-		"/images/items/01_2713/157_3706.jpg",
-		"/images/items/01_2713/158_3706.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2713/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3677"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2713/"
 }

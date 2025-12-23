@@ -5,6 +5,44 @@
 		"ja": "1/550 ミデア",
 		"en": "1/550 Midea"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/550",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 1
 	},
 	"targetAge": 15,
-	"scale": "1/550",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、1/550スケールで、ミデアが登場。",
@@ -28,23 +65,18 @@
 			"The container hatch can be opened or closed. Comes with 3 Doms of the same scale. Comes with a dedicated display stand."
 		]
 	},
-	"images": [
-		"/images/items/01_3153/153_4115.jpg",
-		"/images/items/01_3153/155_4115.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3153/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	],
-	"manualId": "1978"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4115_s_a4ppwy9bnc48rn4n2r42eu8hvbn6.jpg",
+				"path": "/images/items/01_3153/153_4115.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4115_s_sn1tesbohzw7u1jbmqzvbp9lmwr4.jpg",
+				"path": "/images/items/01_3153/155_4115.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3153/"
 }

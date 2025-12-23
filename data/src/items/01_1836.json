@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "ガンダムデカールNo.23 MG 1/100 機動戦士ガンダム 逆襲のシャアシリーズ用",
-		"en": "Gundam Decal No.23 MG 1/100 for Mobile Suit Gundam Char's Counterattack series"
+		"en": "GUNDAM DECAL 23 MG MULTIUSE - CHAR'S COUNTERATTACK"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア",
+			"en": "MOBILE SUIT GUNDAM Char’s Counterattack"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "item-1000219110",
+			"url": "https://p-bandai.jp/item/item-1000219110/",
+			"ja": "MG 1/100 リ・ガズィ (逆襲のシャアVer.)"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_3672",
+			"url": "https://bandai-hobby.net/item/01_3672/",
+			"ja": "ガンダムデカールNo.129 HG 1/144 ナイチンゲール用"
+		},
+		{
+			"id": "01_3675",
+			"url": "https://bandai-hobby.net/item/01_3675/",
+			"ja": "ガンダムデカールNo.132 RG 1/144 Hi-νガンダム用"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,7 +51,6 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"100点以上のラインナップを誇る、大人気ガンダムデカールのシリーズ商品が登場。",
@@ -26,24 +58,20 @@
 			"水転写式デカール"
 		],
 		"en": [
-			"Introducing the popular Gundam decal series, which boasts a lineup of over 100 items.",
-			"Decal for MG 1/100 Mobile Suit Gundam Char's Counterattack series.",
-			"water transfer decal"
+			"Boasting a lineup of more than 100 items, the popular GUNDAM DECAL series products are now available. Decal for MG 1/100 MOBILE SUIT GUNDAM Char’s Counterattack series. Waterslide decals"
 		]
 	},
-	"images": [
-		"/images/items/01_1836/1000126446_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126446_1.jpg",
+				"path": "/images/items/01_1836/1000126446_1.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1836/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"item-1000219110",
-		"01_4971",
-		"01_3672",
-		"01_3675"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1836/"
+	}
 }

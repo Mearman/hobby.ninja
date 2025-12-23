@@ -5,6 +5,29 @@
 		"ja": "ハイレゾリューションモデル 1/100 ゴッドガンダム",
 		"en": "High resolution Model 1/100 God Gundam"
 	},
+	"brands": [
+		{
+			"id": "hirm",
+			"url": "https://bandai-hobby.net/brand/hirm/",
+			"ja": "Hi-Resolution Model[ハイレゾリューションモデル]"
+		}
+	],
+	"series": [
+		{
+			"id": "ggundam",
+			"url": "https://bandai-hobby.net/series/ggundam/",
+			"ja": "機動武闘伝Ｇガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/100",
 	"price": {
 		"amount": 14300,
 		"currency": "JPY",
@@ -18,10 +41,9 @@
 		"day": 26
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"『機動武闘伝G ガンダム』より、高解像度化されたゴッドガンダムがハイレゾリューションモデルシリーズにラインナップ！格闘戦特化型フレーム採用でシリーズ最高峰の可動を実現！",
+			"『機動武闘伝Gガンダム』より、高解像度化されたゴッドガンダムがハイレゾリューションモデルシリーズにラインナップ！格闘戦特化型フレーム採用でシリーズ最高峰の可動を実現！",
 			"• ダイキャストを使用した重厚感ある塗装済みフレームを使用。",
 			"• 格闘戦に特化したフレームはさらに進化しており、肘、膝、肩は可動時の連動スライドギミックを搭載。",
 			"• 前屈を可能にする腹部の構造は筋肉のように可動し、大胆な蹴り上げアクションも可能。",
@@ -34,68 +56,116 @@
 			"• ゴッドフィンガー用のクリアオレンジパーツも同梱。"
 		],
 		"en": [
-			"From \"Mobile Fighter G Gundam\", the high-resolution God Gundam is now available in the high-resolution Model series! Achieves the highest range of movement in the series by adopting a frame specialized for combat!",
+			"From \"Mobile Fighter GGundam\", the high-resolution God Gundam is now available in the high-resolution Model series! Achieves the highest range of movement in the series by adopting a frame specialized for combat!",
 			"• Uses a painted die-cast frame with a solid feel.",
-			"• The frame specialized for combat has evolved further, and the elbows, knees, and shoulders are equipped with interlocking sliding gimmicks when movable.",
+			"• The frame specialized for combat has evolved further, and the elbows, knees, and shoulders are equipped with interlocking sliding gimmicks when moving.",
 			"• The abdominal structure that allows forward bending moves like a muscle, allowing for bold kicking actions.",
-			"• Secure the range of motion by connecting the side armor to the back armor. You can take dynamic poses.",
+			"• The range of movement is ensured by connecting the side armor to the back armor. You can take dynamic poses.",
 			"• Movable toe parts improve ground contact. Rubber parts are applied to the soles of the feet to improve grip.",
 			"• The thumb has three movable joints, allowing for rich expression.",
-			"• The ring effect is expressed using a PET sheet, and the hyper mode that releases the chest and shoulders can be reproduced.",
+			"• The ring effect can be expressed using PET sheet to recreate the hyper mode that releases the chest and shoulders.",
 			"• Jewel Seal is used as the chest energy multiplier.",
 			"• Hand parts can be replaced with flat hands, etc.",
 			"• Clear orange parts for Godfinger are also included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"完成品フレーム",
-			"ジュエルシール×1",
-			"ラバーシート×1",
-			"PETシート×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "完成品フレーム"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジュエルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ラバーシート"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "PETシート"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 10
+		},
+		{
+			"name": {
+				"ja": "テトロンシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140244_1.jpg",
+				"path": "/images/items/01_2444/1000140244_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140244_2.jpg",
+				"path": "/images/items/01_2444/1000140244_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140244_3.jpg",
+				"path": "/images/items/01_2444/1000140244_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140244_4.jpg",
+				"path": "/images/items/01_2444/1000140244_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140244_5.jpg",
+				"path": "/images/items/01_2444/1000140244_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140244_6.jpg",
+				"path": "/images/items/01_2444/1000140244_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140244_7.jpg",
+				"path": "/images/items/01_2444/1000140244_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140244_8.jpg",
+				"path": "/images/items/01_2444/1000140244_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140244_9.jpg",
+				"path": "/images/items/01_2444/1000140244_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140244_10.jpg",
+				"path": "/images/items/01_2444/1000140244_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140244_11.jpg",
+				"path": "/images/items/01_2444/1000140244_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140244_12.jpg",
+				"path": "/images/items/01_2444/1000140244_12.jpg"
+			}
 		],
-		"en": [
-			"finished product frame",
-			"Jewel Seal×1",
-			"Rubber sheet x 1",
-			"PET sheet x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×10",
-			"テトロンシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 10",
-			"Tetron Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2444/1000140244_1.jpg",
-		"/images/items/01_2444/1000140244_10.jpg",
-		"/images/items/01_2444/1000140244_11.jpg",
-		"/images/items/01_2444/1000140244_12.jpg",
-		"/images/items/01_2444/1000140244_2.jpg",
-		"/images/items/01_2444/1000140244_3.jpg",
-		"/images/items/01_2444/1000140244_4.jpg",
-		"/images/items/01_2444/1000140244_5.jpg",
-		"/images/items/01_2444/1000140244_6.jpg",
-		"/images/items/01_2444/1000140244_7.jpg",
-		"/images/items/01_2444/1000140244_8.jpg",
-		"/images/items/01_2444/1000140244_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2444/",
-	"brandIds": [
-		"hirm"
-	],
-	"seriesIds": [
-		"ggundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_2444/"
 }

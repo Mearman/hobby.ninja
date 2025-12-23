@@ -5,6 +5,43 @@
 		"ja": "ＢＢ戦士 42 殺駆三兄弟",
 		"en": "BB Senshi 42 Three Killing Brothers"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -26,25 +63,30 @@
 			"The eerie trio of the dark army, the three terrifying murderous brothers, gather here. The three killing brothers appear from SD Sengokuden!"
 		]
 	},
-	"images": [
-		"/images/items/01_3276/153_4227.jpg",
-		"/images/items/01_3276/155_4227.jpg",
-		"/images/items/01_3276/156_4227.jpg",
-		"/images/items/01_3276/157_4227.jpg",
-		"/images/items/01_3276/158_4227.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3276/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4227_s_cmh5wb8v5k82wmf8vbvp00fyg8ox.jpg",
+				"path": "/images/items/01_3276/153_4227.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4227_s_bi2bxf7s35ln29t88q1ud4mexslc.jpg",
+				"path": "/images/items/01_3276/155_4227.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4227_s_d1mqdyzfz33hb5j839rpeq5ikwu6.jpg",
+				"path": "/images/items/01_3276/156_4227.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4227_s_vpko26e5arofv957re4nuuroutl8.jpg",
+				"path": "/images/items/01_3276/157_4227.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4227_s_16ktnv84mcnq0pdkvq05r93ggi7q.jpg",
+				"path": "/images/items/01_3276/158_4227.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3276/"
 }

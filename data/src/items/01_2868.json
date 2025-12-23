@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 レイダーガンダム",
 		"en": "HG 1/144 Raider Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181726",
+			"url": "https://p-bandai.jp/item/item-1000181726/",
+			"ja": "ＨＧ 1/144 ストライクダガー"
+		},
+		{
+			"id": "01_1930",
+			"url": "https://bandai-hobby.net/item/01_1930/",
+			"ja": "HG 1/144 ガンダムベース限定 フリーダムガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_384",
+			"url": "https://bandai-hobby.net/item/01_384/",
+			"ja": "HGCE 1/144 フリーダムガンダム"
+		},
+		{
+			"id": "01_83",
+			"url": "https://bandai-hobby.net/item/01_83/",
+			"ja": "HGCE 1/144 ストライクルージュ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -17,36 +61,34 @@
 		"month": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム SEED」に登場するライバル機「レイダーガンダム」の1/144スケールHG仕様のプラモデル。特徴的なバックパックのウイングは可動により展開し、飛行形態を再現可能です。腰部のクローアームはABS製アームで可動式、各関節も従来のHGシリーズ同様広範囲に可動します。ビーム砲付きシールドを右腕に装備出来ます。"
+			"「機動戦士ガンダムSEED」に登場するライバル機「レイダーガンダム」の1/144スケールHG仕様のプラモデル。特徴的なバックパックのウイングは可動により展開し、飛行形態を再現可能です。腰部のクローアームはABS製アームで可動式、各関節も従来のHGシリーズ同様広範囲に可動します。ビーム砲付きシールドを右腕に装備出来ます。"
 		],
 		"en": [
-			"A 1/144 Scale HG plastic model of the rival machine \"Raider Gundam \" that appears in \" Mobile Suit Gundam SEED\". The distinctive wings of the backpack can be moved and expanded to recreate the flying form. The claw arm on the waist is movable with an ABS arm, and each joint can move over a wide range like the conventional HG series. A Seal with a beam cannon can be equipped on the right arm."
+			"A 1/144 Scale HG plastic model of the rival machine \"Raider Gundam\" that appears in \"Mobile Suit Gundam SEED\". The distinctive wings of the backpack can be moved and expanded to recreate the flying form. The claw arm at the waist is movable with an ABS arm, and each joint can move over a wide range like the conventional HG series. A Seal with a beam cannon can be equipped on the right arm."
 		]
 	},
-	"images": [
-		"/images/items/01_2868/153_384.jpg",
-		"/images/items/01_2868/155_384.jpg",
-		"/images/items/01_2868/156_384.jpg",
-		"/images/items/01_2868/157_384.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2868/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181726",
-		"01_1930",
-		"01_384",
-		"01_83"
-	],
-	"manualId": "0883"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_384_s_lbsu8lglf43p1rymxg0n1x8xkgtn.jpg",
+				"path": "/images/items/01_2868/153_384.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_384_s_4ndvky8rugykzm1c4qh6l5m370lr.jpg",
+				"path": "/images/items/01_2868/155_384.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_384_s_ouadau8shmp4uim22n516mvl5ulo.jpg",
+				"path": "/images/items/01_2868/156_384.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_384_s_ru6r4g356r5n5i1f3xalql9314d2.jpg",
+				"path": "/images/items/01_2868/157_384.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2868/"
 }

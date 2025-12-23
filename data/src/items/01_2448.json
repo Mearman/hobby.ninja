@@ -5,6 +5,43 @@
 		"ja": "LBXオーディーン",
 		"en": "LBX Odin"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "lbx",
+			"url": "https://bandai-hobby.net/series/lbx/",
+			"ja": "ダンボール戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000215196",
+			"url": "https://p-bandai.jp/item/item-1000215196/",
+			"ja": "ＬＢＸイカロス・フォース"
+		},
+		{
+			"id": "item-1000215197",
+			"url": "https://p-bandai.jp/item/item-1000215197/",
+			"ja": "ＬＢＸイカロス・ゼロ"
+		},
+		{
+			"id": "item-1000210042",
+			"url": "https://p-bandai.jp/item/item-1000210042/",
+			"ja": "ＬＢＸエルシオン"
+		},
+		{
+			"id": "item-1000210041",
+			"url": "https://p-bandai.jp/item/item-1000210041/",
+			"ja": "ＬＢＸペルセウス"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -27,60 +64,99 @@
 		],
 		"en": [
 			"From \"Danball Senki\" comes a variable LBX exclusively for Yamano Van!",
-			"• Added blue and white Runner and reproduced the color-coded head and arms.",
+			"• Added blue and white Runner and reproduced color-coded head and arms.",
 			"• Reproduce the mechanism of transformation into flight form.",
 			"• A special pedestal is included, allowing display on a mobile phone."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"リタリエイター×1",
-			"専用ディスプレイベース×1",
-			"変形用腕差し替えパーツ×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "リタリエイター"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "変形用腕差し替えパーツ"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 7
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3377_s_tl55kho6ne1gv61966f8ux9mqc8o.jpg",
+				"path": "/images/items/01_2448/153_3377.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3377_s_1aknt7qvyg1zdcbdcpmbjcbbbdkz.jpg",
+				"path": "/images/items/01_2448/155_3377.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3377_s_jf1yvqrhkt3b1fc1b8j2pdjhq4he.jpg",
+				"path": "/images/items/01_2448/156_3377.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3377_s_pg6b8rs7n4hg9g57d1d5ypn99g7a.jpg",
+				"path": "/images/items/01_2448/157_3377.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3377_s_9ihe6cexrm63wmecqg1f3vcd9fc9.jpg",
+				"path": "/images/items/01_2448/158_3377.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3377_s_93wj4zlrv5cfzhxgpybnqx6wejio.jpg",
+				"path": "/images/items/01_2448/159_3377.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3377_s_lz21s0ariihkm7tc2i7uw8dy59zm.jpg",
+				"path": "/images/items/01_2448/189_3377.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3377_s_zy7ntpfg9u8d0llou7bx96fi0col.jpg",
+				"path": "/images/items/01_2448/190_3377.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3377_s_irom3icfyiog2eg549mjrn8pikab.jpg",
+				"path": "/images/items/01_2448/191_3377.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3377_s_dlaxxkzi60bhjy3qn4m5w0t5du2o.jpg",
+				"path": "/images/items/01_2448/192_3377.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_3377_s_alqqjkms3jdbex35ykptay787njd.jpg",
+				"path": "/images/items/01_2448/193_3377.jpg"
+			}
 		],
-		"en": [
-			"Retaliator x 1",
-			"Dedicated display base x 1",
-			"Deformation arm replacement parts x 2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×7",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 7",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2448/153_3377.jpg",
-		"/images/items/01_2448/155_3377.jpg",
-		"/images/items/01_2448/156_3377.jpg",
-		"/images/items/01_2448/157_3377.jpg",
-		"/images/items/01_2448/158_3377.jpg",
-		"/images/items/01_2448/159_3377.jpg",
-		"/images/items/01_2448/189_3377.jpg",
-		"/images/items/01_2448/190_3377.jpg",
-		"/images/items/01_2448/191_3377.jpg",
-		"/images/items/01_2448/192_3377.jpg",
-		"/images/items/01_2448/193_3377.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2448/",
-	"brandIds": [],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2448/"
 }

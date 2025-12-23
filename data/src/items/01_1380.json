@@ -5,6 +5,43 @@
 		"ja": "デス・スター攻略セット",
 		"en": "Death Star Strategy Set"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3513",
+			"url": "https://bandai-hobby.net/item/01_3513/",
+			"ja": "ビークルモデル レイザー・クレスト"
+		}
+	],
 	"price": {
 		"amount": 3960,
 		"currency": "JPY",
@@ -26,56 +63,89 @@
 		],
 		"en": [
 			"Introducing a set that allows you to recreate some of the most popular scenes from the \"Star Wars\" series!",
-			"• By combining the highly requested \"Death Star surface pedestal \" with the new \" L-shaped joint \" part, anyone can easily recreate the scene in \" Battle of Yavin \" from \" Star Wars: Episode IV: A New Hope\" where the X-wing starfighter driven by Luke fires a proton torpedo into the heat exhaust port of the Death Star.",
+			"• By combining the highly requested ``Death Star surface pedestal'' with the new part ``L-shaped joint'', anyone can easily recreate the scene in ``Star Wars: Episode IV: A New Hope'' where the X-wing starfighter driven by Luke fires a proton torpedo into the Death Star's heat exhaust port during the ``Battle of Yavin''.",
 			"• The included 1/144 Scale X-wing starfighter can reproduce Red 5, Red 2, and Red 3 using decals."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"Xウイング・スターファイター×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "Xウイング・スターファイター"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品×８"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126287_1.jpg",
+				"path": "/images/items/01_1380/1000126287_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126287_2.jpg",
+				"path": "/images/items/01_1380/1000126287_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126287_3.jpg",
+				"path": "/images/items/01_1380/1000126287_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126287_4.jpg",
+				"path": "/images/items/01_1380/1000126287_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126287_5.jpg",
+				"path": "/images/items/01_1380/1000126287_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126287_6.jpg",
+				"path": "/images/items/01_1380/1000126287_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126287_7.jpg",
+				"path": "/images/items/01_1380/1000126287_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126287_8.jpg",
+				"path": "/images/items/01_1380/1000126287_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126287_9.jpg",
+				"path": "/images/items/01_1380/1000126287_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126287_10.jpg",
+				"path": "/images/items/01_1380/1000126287_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126287_11.jpg",
+				"path": "/images/items/01_1380/1000126287_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126287_12.jpg",
+				"path": "/images/items/01_1380/1000126287_12.jpg"
+			}
 		],
-		"en": [
-			"X-wing starfighter x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×８",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 8",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1380/1000126287_1.jpg",
-		"/images/items/01_1380/1000126287_10.jpg",
-		"/images/items/01_1380/1000126287_11.jpg",
-		"/images/items/01_1380/1000126287_12.jpg",
-		"/images/items/01_1380/1000126287_2.jpg",
-		"/images/items/01_1380/1000126287_3.jpg",
-		"/images/items/01_1380/1000126287_4.jpg",
-		"/images/items/01_1380/1000126287_5.jpg",
-		"/images/items/01_1380/1000126287_6.jpg",
-		"/images/items/01_1380/1000126287_7.jpg",
-		"/images/items/01_1380/1000126287_8.jpg",
-		"/images/items/01_1380/1000126287_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1380/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3513"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1380/"
 }

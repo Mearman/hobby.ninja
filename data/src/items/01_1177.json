@@ -5,6 +5,44 @@
 		"ja": "HGPG 1/144 プチッガイ アレルヤ・ハプティズムオレンジ&プラカード",
 		"en": "HGPG 1/144 Petitgguy Alleluia Haptism Orange & Placard"
 	},
+	"brands": [
+		{
+			"id": "petitgguy",
+			"url": "https://bandai-hobby.net/brand/petitgguy/",
+			"ja": "プチッガイ/ベアッガイ"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_1178",
+			"url": "https://bandai-hobby.net/item/01_1178/",
+			"ja": "HGPG 1/144 プチッガイ ティエリア・アーデパープル&プラカード"
+		},
+		{
+			"id": "01_1176",
+			"url": "https://bandai-hobby.net/item/01_1176/",
+			"ja": "HGPG 1/144 プチッガイ グラハム・エーカーホワイト&プラカード"
+		},
+		{
+			"id": "01_1163",
+			"url": "https://bandai-hobby.net/item/01_1163/",
+			"ja": "HGPG 1/144 プチッガイ ロックオン・ストラトスグリーン&プラカード"
+		},
+		{
+			"id": "01_1153",
+			"url": "https://bandai-hobby.net/item/01_1153/",
+			"ja": "HGPG 1/144 プチッガイ 刹那・F・セイエイブルー&プラカード"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,62 +56,82 @@
 		"day": 27
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 『機動戦士ガンダム 00』10周年にあわせ、「アレルヤ・ハプティズム」のパイロットスーツをイメージした、ガンダムマイスターカラーのプチッガイが登場！",
+			"• 『機動戦士ガンダム00』10周年にあわせ、「アレルヤ・ハプティズム」のパイロットスーツをイメージした、ガンダムマイスターカラーのプチッガイが登場！",
 			"• 胴体に貼るパイロットスーツをイメージしたシールに加え、プラカードに貼って楽しむキャラクターの名セリフを表記したシールが付属！",
 			"• いろいろな場所に貼れるおまけのシールも登場！"
 		],
 		"en": [
-			"• To coincide with the 10th episode of \"Mobile Suit Gundam 00 \", Petit'gguy in Gundam Meister color, inspired by the pilot suit of \" Alleluia Haptism\", is now available!",
-			"• In addition to a seal inspired by a pilot suit that can be pasted on the torso, a seal with famous lines from characters that can be pasted on placards is also included!",
-			"• Additional Seals that can be pasted in various places are also available!"
+			"• To coincide with the 10th episode of \"Mobile Suit Gundam 00\", Petit'gguy in Gundam Meister color, inspired by the pilot suit of \"Alleluia Haptism\", will be released!",
+			"• In addition to a Seal inspired by a pilot suit that can be pasted on the torso, a Seal with the character's famous lines that can be pasted on placards is also included!",
+			"• Bonus Seals that can be pasted in various places are also available!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"プラカード×1",
-			"プラカードジョイント×1",
-			"ディスプレイ台座×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "プラカード"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "プラカードジョイント"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2105_s_e4jxevdmd5zx2dgpj9mh6gk8f2e6.jpg",
+				"path": "/images/items/01_1177/153_2105.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2105_s_t486rapz31ygqt94r8t6md36j5dm.jpg",
+				"path": "/images/items/01_1177/155_2105.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2105_s_iac17244ix3ksc98v4j1gx30h7ie.jpg",
+				"path": "/images/items/01_1177/156_2105.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2105_s_jznsiecljrwmsf9c013vugcysie6.jpg",
+				"path": "/images/items/01_1177/157_2105.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2105_s_wd2hppa6h0d3sodqfgpljchjpz4s.jpg",
+				"path": "/images/items/01_1177/158_2105.jpg"
+			}
 		],
-		"en": [
-			"Placard x 1",
-			"Placard joint x 1",
-			"Display pedestal x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 4",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1177/153_2105.jpg",
-		"/images/items/01_1177/155_2105.jpg",
-		"/images/items/01_1177/156_2105.jpg",
-		"/images/items/01_1177/157_2105.jpg",
-		"/images/items/01_1177/158_2105.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1177/",
-	"brandIds": [
-		"petitgguy"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"01_1178",
-		"01_1176",
-		"01_1163",
-		"01_1153"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1177/"
 }

@@ -3,8 +3,59 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC 1/144 サザビー",
-		"en": "HGUC 1/144 Sozabi"
+		"en": "1/144 HGUC SAZABI"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア",
+			"en": "MOBILE SUIT GUNDAM Char’s Counterattack"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5346",
+			"url": "https://bandai-hobby.net/item/01_5346/",
+			"ja": "HG 1/144 ジムIII(アクシズ・ショックイメージカラー)"
+		},
+		{
+			"id": "01_5210",
+			"url": "https://bandai-hobby.net/item/01_5210/",
+			"ja": "HG 1/144 ギラ・ドーガ(アクシズ・ショックイメージカラー)"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4408",
+			"url": "https://bandai-hobby.net/item/01_4408/",
+			"ja": "HG 1/144 サイコ・ドーガ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,35 +68,29 @@
 		"month": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム 逆襲のシャア」より人気MS“サザビー”がHGUCにラインナップ 各部に新規構造を採用して全てのパーツが後ハメが可能 新型ポリキャップの採用でポージング性がさらに向上 重厚な装甲の厚みを再現しマッシブな機体イメージを表現 武器はビーム・ライフル、ビーム・サーベル、ビーム・トマホーク、シールド、ファンネルが付属"
 		],
 		"en": [
-			"The popular MS \"Sazabi \" from \" Mobile Suit Gundam: Char's Counterattack\" is now available in HGUC. New structure has been adopted for each part, and all parts can be post-fitted. Posability is further improved with the adoption of a new polycap. The thickness of the heavy armor is reproduced to express a massive aircraft image. Weapons include a beam rifle, beam saber, beam tomahawk, seal do, and funnel."
+			"The popular MS \"Sotheby\" from \"MOBILE SUIT GUNDAM Char’s Counterattack\" is in the HGUC lineup. A new structure is adopted for each part, and all parts can be re-saddened. The use of a new poly cap further improves posing. Reproduce the thickness of heavy armor to express the image of a massive aircraft Weapons include beam rifles, beam sabers, beam tomahawks, shields, and funnels"
 		]
 	},
-	"images": [
-		"/images/items/01_1683/1000092241_1.jpg",
-		"/images/items/01_1683/1000092241_2.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092241_1.jpg",
+				"path": "/images/items/01_1683/1000092241_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092241_2.jpg",
+				"path": "/images/items/01_1683/1000092241_2.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1683/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5346",
-		"01_5210",
-		"01_4971",
-		"01_4408"
-	],
-	"manualId": "0403"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1683/"
+	}
 }

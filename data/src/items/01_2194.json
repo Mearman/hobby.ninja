@@ -2,9 +2,31 @@
 	"id": "01_2194",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム Gジェネレーション 24 V2 ガンダム(フル装備型)",
-		"en": "SD Gundam G Generation 24 V2 Gundam (fully equipped)"
+		"ja": "SDガンダムGジェネレーション 24 V2ガンダム(フル装備型)",
+		"en": "SDGundamG Generation 24 V2Gundam (fully equipped)"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "v-gundam",
+			"url": "https://bandai-hobby.net/series/v-gundam/",
+			"ja": "機動戦士Vガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -19,31 +41,48 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"• SD ガンダム GジェネレーションにV2 ガンダム(フル装備型)が登場！"
+			"• SDガンダムGジェネレーションにV2ガンダム(フル装備型)が登場！"
 		],
 		"en": [
-			"• V2 Gundam (fully equipped) is now available in SD Gundam G generation!"
+			"• V2Gundam (fully equipped) is now available in SDGundamG generation!"
 		]
 	},
-	"images": [
-		"/images/items/01_2194/153_3140.jpg",
-		"/images/items/01_2194/155_3140.jpg",
-		"/images/items/01_2194/156_3140.jpg",
-		"/images/items/01_2194/157_3140.jpg",
-		"/images/items/01_2194/158_3140.jpg",
-		"/images/items/01_2194/159_3140.jpg",
-		"/images/items/01_2194/189_3140.jpg",
-		"/images/items/01_2194/190_3140.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2194/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"v-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": []
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3140_s_ttvozheh641x1l7x943tuz46aaax.jpg",
+				"path": "/images/items/01_2194/153_3140.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3140_s_3j0l2umyvkptvh0ol36np288plzm.jpg",
+				"path": "/images/items/01_2194/155_3140.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3140_s_d5g1j5odf0p3e1lds7mon5jvuxnn.jpg",
+				"path": "/images/items/01_2194/156_3140.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3140_s_z6kj7qstpxc6br5v97fiayo1tjoz.jpg",
+				"path": "/images/items/01_2194/157_3140.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3140_s_h6fpats0xuq1g6dphpdxwna9hgc5.jpg",
+				"path": "/images/items/01_2194/158_3140.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3140_s_8ccyl9j1z19vyd41ao4v1x0azp2y.jpg",
+				"path": "/images/items/01_2194/159_3140.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3140_s_rvkp9hpiqzo5n1h27om0pd42wiem.jpg",
+				"path": "/images/items/01_2194/189_3140.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3140_s_yk73794gzqnxc9myz6r3aoyy5hla.jpg",
+				"path": "/images/items/01_2194/190_3140.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2194/"
 }

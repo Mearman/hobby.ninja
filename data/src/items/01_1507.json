@@ -5,6 +5,44 @@
 		"ja": "1/144 コンティオ",
 		"en": "1/144 Contio"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "v-gundam",
+			"url": "https://bandai-hobby.net/series/v-gundam/",
+			"ja": "機動戦士Vガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4978",
+			"url": "https://bandai-hobby.net/item/01_4978/",
+			"ja": "HG 1/144 V2アサルトバスターガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_3311",
+			"url": "https://bandai-hobby.net/item/01_3311/",
+			"ja": "HG 1/144 ガンダムベース限定 セカンドV[クリアカラー]"
+		},
+		{
+			"id": "01_2835",
+			"url": "https://bandai-hobby.net/item/01_2835/",
+			"ja": "MG 1/100 ガンダムベース限定 V2アサルトバスターガンダムVer.Ka [チタニウムフィニッシュ]"
+		},
+		{
+			"id": "item-1000142101",
+			"url": "https://p-bandai.jp/item/item-1000142101/",
+			"ja": "ＲＥ/100 1/100 シャッコー"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ＴＶ「機動戦士Ｖガンダム」で、ザンスカール帝国の主力宇宙戦用モビルスーツ・ゾロアットの後継機となった機体を立体化しました。ショルダー・ビッグ・クローは基部が可動、開閉の状態はパーツ差替えで再現します。ビーム・シールドはクリアパーツ成形で本体への脱着が可能です。ビーム・ライフル、ビーム・サーベルがついています。ディスプレイ用スタンドとカードがついています。"
@@ -26,22 +63,18 @@
 			"TV's \"Mobile Suit V Gundam\" features a three-dimensional version of the successor to the Zanscare Empire's main space battle mobile suit, Zoroat. The base of the shoulder big claw is movable, and the opening and closing state can be recreated by replacing parts. The beam and seal are made of clear parts and can be attached and detached from the main body. Comes with a beam rifle and beam saber. Includes display stand and card."
 		]
 	},
-	"images": [
-		"/images/items/01_1507/153_2426.jpg",
-		"/images/items/01_1507/155_2426.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1507/",
-	"brandIds": [],
-	"seriesIds": [
-		"v-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4978",
-		"01_3311",
-		"01_2835",
-		"item-1000142101"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2426_s_bbhzq7glexkxclmqb4ze8x99u5jo.jpg",
+				"path": "/images/items/01_1507/153_2426.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2426_s_zvfx38feovowx01j7iqfaazbr94k.jpg",
+				"path": "/images/items/01_1507/155_2426.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1507/"
 }

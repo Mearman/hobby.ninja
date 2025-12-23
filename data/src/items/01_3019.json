@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "ポケモンプラモコレクション 46 セレクトシリーズ レックウザ",
-		"en": "Pokemon Plastic Model Collection 46 Select Series Rayquaza"
+		"en": "Pokémon Model Kit RAYQUAZA"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター",
+			"en": "Pokémon"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5984",
+			"url": "https://bandai-hobby.net/item/01_5984/",
+			"ja": "ポケモンプラモコレクション 60 セレクトシリーズ コライドン"
+		},
+		{
+			"id": "01_5958",
+			"url": "https://bandai-hobby.net/item/01_5958/",
+			"ja": "ポケモンプラモコレクション 59 セレクトシリーズ ミライドン"
+		},
+		{
+			"id": "01_5947",
+			"url": "https://bandai-hobby.net/item/01_5947/",
+			"ja": "ポケモンプラモコレクション クイック!! 23 ジラーチ"
+		},
+		{
+			"id": "01_5568",
+			"url": "https://bandai-hobby.net/item/01_5568/",
+			"ja": "ポケモンプラモコレクション 58 セレクトシリーズ グレンアルマ"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -20,7 +58,8 @@
 	"targetAge": 6,
 	"description": {
 		"ja": [
-			"伝説のポケモン「レックウザ」が「ポケモンプラモコレクション セレクトシリーズ」から登場。壮大な雄姿を自分の手で再現しよう！",
+			"伝説のポケモン「レックウザ」が「ポケモンプラモコレクション セレクトシリーズ」から登場。",
+			"壮大な雄姿を自分の手で再現しよう！",
 			"• 胴体の各節は回転可動となっていて、ダイナミックなポージングが可能。",
 			"• ディスプレイ時の長さは200mm超えで、シリーズ史上最大級のボリューム。",
 			"• 下あごや腕も可動し、さまざまなポージングを楽しめる。",
@@ -28,48 +67,77 @@
 			"• 雲をイメージした専用台座が付属。"
 		],
 		"en": [
-			"The legendary Pokemon \"Rayquaza \" appears from the \" Pokemon Plastic Model Collection Select Series\". Let's recreate the magnificent figure with your own hands!",
-			"• Each section of the torso is rotatable, allowing for dynamic poses.",
-			"• The display length is over 200mm, making it one of the largest volumes in the history of the series.",
-			"• The lower jaw and arms are also movable, allowing you to enjoy various poses.",
-			"• The color coding of the body is reproduced by dividing the parts.",
-			"• Comes with a special pedestal inspired by clouds."
+			"The legendary Pokemon \"Rayquaza\" is now available in the \"Pokemon Plastic Model Collection Select Series\". Let's recreate the magnificent majesty with your own hands!",
+			"• Each node of the torso is rotatable and movable, allowing for dynamic posing.",
+			"• The length of the display exceeds 200 mm, making it one of the largest volumes in the history of the series.",
+			"• The lower jaw and arms can also be moved, allowing you to enjoy various poses.",
+			"• The color coding of the body is reproduced by dividing it into parts.",
+			"• Comes with a dedicated pedestal with the image of clouds."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用台座×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用台座",
+				"en": "• Dedicated pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "• Foil seal"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151932_1.jpg",
+				"path": "/images/items/01_3019/1000151932_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151932_2.jpg",
+				"path": "/images/items/01_3019/1000151932_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151932_3.jpg",
+				"path": "/images/items/01_3019/1000151932_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151932_4.jpg",
+				"path": "/images/items/01_3019/1000151932_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151932_5.jpg",
+				"path": "/images/items/01_3019/1000151932_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151932_6.jpg",
+				"path": "/images/items/01_3019/1000151932_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151932_7.jpg",
+				"path": "/images/items/01_3019/1000151932_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151932_8.jpg",
+				"path": "/images/items/01_3019/1000151932_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151932_9.jpg",
+				"path": "/images/items/01_3019/1000151932_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151932_10.jpg",
+				"path": "/images/items/01_3019/1000151932_10.jpg"
+			}
 		],
-		"en": [
-			"Dedicated pedestal x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3019/1000151932_1.jpg",
-		"/images/items/01_3019/1000151932_10.jpg",
-		"/images/items/01_3019/1000151932_2.jpg",
-		"/images/items/01_3019/1000151932_3.jpg",
-		"/images/items/01_3019/1000151932_4.jpg",
-		"/images/items/01_3019/1000151932_5.jpg",
-		"/images/items/01_3019/1000151932_6.jpg",
-		"/images/items/01_3019/1000151932_7.jpg",
-		"/images/items/01_3019/1000151932_8.jpg",
-		"/images/items/01_3019/1000151932_9.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3019/",
-	"brandIds": [],
-	"seriesIds": [
-		"pokemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_3019/"
+	}
 }

@@ -3,8 +3,58 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC ザクII (ガルマ専用機)",
-		"en": "HGUC Zaku II (Garma exclusive machine)"
+		"en": "HGUC 1/144 GARMA'S ZAKU"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -21,31 +71,36 @@
 			"「機動戦士ガンダム」に登場するライバル機「ガルマ専用ザクII」のプラモデル。特徴的なカラーリングや頭部のバルカンなどをリアルに再現しています。また肩と胴体の接続部に関節を追加することにより、劇中での両腕でマシンガンを構えるポーズを再現できます。専用ヒートホークが付属し、腰サイドアーマーに取り付けが可能です。"
 		],
 		"en": [
-			"A plastic model of the rival machine \"Garma's Zaku II \" that appears in \" Mobile Suit Gundam\". The characteristic coloring and Vulcan head are realistically reproduced. In addition, by adding joints to the joint between the shoulders and torso, you can recreate the pose in the movie where he holds a machine gun with both arms. A special heat hawk is included and can be attached to the waist side armor."
+			"A plastic model of the rival aircraft \"Garma exclusive Zaku II\" that appears in \"MOBILE SUIT GUNDAM\". The characteristic coloring and Vulcan of the head are realistically reproduced. In addition, by adding joints to the connection between the shoulders and the torso, you can recreate the pose of holding a machine gun with both arms in the play. It comes with a special heat hawk and can be attached to the waist side armor."
 		]
 	},
-	"images": [
-		"/images/items/01_1991/1000074607_1.jpg",
-		"/images/items/01_1991/1000074607_2.jpg",
-		"/images/items/01_1991/1000074607_3.jpg",
-		"/images/items/01_1991/1000074607_4.jpg",
-		"/images/items/01_1991/1000074607_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074607_1.jpg",
+				"path": "/images/items/01_1991/1000074607_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074607_2.jpg",
+				"path": "/images/items/01_1991/1000074607_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074607_3.jpg",
+				"path": "/images/items/01_1991/1000074607_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074607_4.jpg",
+				"path": "/images/items/01_1991/1000074607_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074607_5.jpg",
+				"path": "/images/items/01_1991/1000074607_5.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1991/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1991/"
+	}
 }

@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]",
 		"en": "HG 1/144 Gundam Base Limited Uining Fumina [Gundam Base Color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		},
+		{
+			"id": "01_1262",
+			"url": "https://bandai-hobby.net/item/01_1262/",
+			"ja": "HGBC 1/144 ギャラクシーブースター"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 5
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
@@ -28,30 +71,22 @@
 			"Uiningu Fumina is now available in a limited edition with Gundam Base limited coloring and Gundam Base logo markings placed in various places."
 		]
 	},
-	"images": [
-		"/images/items/01_1942/153_2875.jpg",
-		"/images/items/01_1942/155_2875.jpg",
-		"/images/items/01_1942/156_2875.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1942/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1288",
-		"01_1261",
-		"01_1262"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2875_s_t5z2kg2clf9k4csrokhdp85fcelh.jpg",
+				"path": "/images/items/01_1942/153_2875.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2875_s_rluyecp2hbk1lp9hdgwnmz9zbv53.jpg",
+				"path": "/images/items/01_1942/155_2875.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2875_s_t28k0znj0l3m7jz6yuhsa17v82sd.jpg",
+				"path": "/images/items/01_1942/156_2875.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "2627"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1942/"
 }

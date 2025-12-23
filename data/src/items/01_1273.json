@@ -5,6 +5,49 @@
 		"ja": "HG オブシディアン・フューリー",
 		"en": "HG Obsidian Fury"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "pacificrim",
+			"url": "https://bandai-hobby.net/series/pacificrim/",
+			"ja": "パシフィック・リム"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2083",
+			"url": "https://bandai-hobby.net/item/01_2083/",
+			"ja": "HG ジプシー・アベンジャー（最終決戦仕様）"
+		},
+		{
+			"id": "01_1270",
+			"url": "https://bandai-hobby.net/item/01_1270/",
+			"ja": "HG ジプシー・アベンジャー"
+		},
+		{
+			"id": "01_1271",
+			"url": "https://bandai-hobby.net/item/01_1271/",
+			"ja": "HG ブレーサー・フェニックス"
+		},
+		{
+			"id": "01_1272",
+			"url": "https://bandai-hobby.net/item/01_1272/",
+			"ja": "HG ジプシー・アベンジャー DXセット"
+		}
+	],
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -30,55 +73,91 @@
 			"The characteristic armament on both arms \"twin plasma chainsaw\" can be reproduced by replacing it!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ツインプラズマチェーンソー×1式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ツインプラズマチェーンソー"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 5
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2204_s_p47u6lzvhthe573l2b5lfdj16rd2.jpg",
+				"path": "/images/items/01_1273/153_2204.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2204_s_lcwaudit8jj4z0l0158lx18xyx88.jpg",
+				"path": "/images/items/01_1273/155_2204.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2204_s_bppgjqu4ufuiju60v9sbfwnkhs3p.jpg",
+				"path": "/images/items/01_1273/156_2204.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2204_s_y31ihh36xk1thlqisno201p2h0fv.jpg",
+				"path": "/images/items/01_1273/157_2204.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2204_s_afgvt3i62shvfsmi4s9qe57qj1a9.jpg",
+				"path": "/images/items/01_1273/158_2204.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2204_s_kbmlb5hmjgrw3s9utm6d8xtdka8j.jpg",
+				"path": "/images/items/01_1273/159_2204.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2204_s_fw61ad7iw6q8pihwgvq0n4t3569s.jpg",
+				"path": "/images/items/01_1273/189_2204.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2204_s_p5igjctb1pfwl18jv88ozpjz8f4f.jpg",
+				"path": "/images/items/01_1273/190_2204.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2204_s_0vfpsz6kowt83wrhbogyplnzunex.jpg",
+				"path": "/images/items/01_1273/191_2204.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2204_s_g1zwixvw4y0chq9fhni4elxyco44.jpg",
+				"path": "/images/items/01_1273/192_2204.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_2204_s_we02c1f9ntrd252xvipcy6whra4a.jpg",
+				"path": "/images/items/01_1273/193_2204.jpg"
+			}
 		],
-		"en": [
-			"Twin plasma chainsaw x 1 set"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×5",
-			"マーキングシール×1",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 5",
-			"MarkingSeal×1",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1273/153_2204.jpg",
-		"/images/items/01_1273/155_2204.jpg",
-		"/images/items/01_1273/156_2204.jpg",
-		"/images/items/01_1273/157_2204.jpg",
-		"/images/items/01_1273/158_2204.jpg",
-		"/images/items/01_1273/159_2204.jpg",
-		"/images/items/01_1273/189_2204.jpg",
-		"/images/items/01_1273/190_2204.jpg",
-		"/images/items/01_1273/191_2204.jpg",
-		"/images/items/01_1273/192_2204.jpg",
-		"/images/items/01_1273/193_2204.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1273/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"pacificrim"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2083",
-		"01_1270",
-		"01_1271",
-		"01_1272"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1273/"
 }

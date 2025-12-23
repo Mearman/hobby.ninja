@@ -5,6 +5,55 @@
 		"ja": "HG 1/144 バーザム[クリアカラー]",
 		"en": "HG 1/144 Barzam [Clear color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -17,7 +66,6 @@
 		"month": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"HG バーサムがクリアカラーとなってイベント限定品として登場。",
@@ -28,35 +76,24 @@
 		],
 		"en": [
 			"HG Versam is available in clear color as an event limited item.",
-			"• Complete reproduction of the characteristic MS design and back vernier!",
+			"• Complete reproduction of the distinctive MS design and back vernier!",
 			"• The shoulders can be moved forward and backward and up and down using ball joint parts, allowing for a wide range of motion that allows for a variety of poses!",
-			"• The coloring of the aircraft is reproduced down to the details such as the clear parts of the mono-eye and the yellow lines on the chest and waist!",
+			"• The coloring of the aircraft is reproduced down to the details, such as the clear parts of the mono-eye and the yellow lines on the chest and waist!",
 			"• Includes distinctive beam rifle, Vulcan pod system, beam saber, and more!"
 		]
 	},
-	"images": [
-		"/images/items/01_2145/153_3097.jpg",
-		"/images/items/01_2145/155_3097.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2145/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3097_o_1cu1av3rl1oj3bdakh11n5vve23.jpg",
+				"path": "/images/items/01_2145/153_3097.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3097_o_1cu1avg368h0j3pr61gv31mdk2d.jpg",
+				"path": "/images/items/01_2145/155_3097.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2145/"
 }

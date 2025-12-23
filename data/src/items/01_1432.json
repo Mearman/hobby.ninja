@@ -5,6 +5,44 @@
 		"ja": "1/20 スコープドッグ(ペールゼン･ファイルズ版)",
 		"en": "1/20 Scopedog (Pailsen Files version)"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "votoms",
+			"url": "https://bandai-hobby.net/series/votoms/",
+			"ja": "装甲騎兵ボトムズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000223037",
+			"url": "https://p-bandai.jp/item/item-1000223037/",
+			"ja": "ＨＧ スコープドッグ用拡張パーツセット6"
+		},
+		{
+			"id": "01_5553",
+			"url": "https://bandai-hobby.net/item/01_5553/",
+			"ja": "HG スコープドッグターボカスタム"
+		},
+		{
+			"id": "item-1000209959",
+			"url": "https://p-bandai.jp/item/item-1000209959/",
+			"ja": "ＨＧ スコープドッグ用拡張パーツセット3"
+		},
+		{
+			"id": "item-1000209960",
+			"url": "https://p-bandai.jp/item/item-1000209960/",
+			"ja": "ＨＧ スコープドッグ用拡張パーツセット4"
+		}
+	],
+	"scale": "1/20",
 	"price": {
 		"amount": 6050,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 9
 	},
 	"targetAge": 15,
-	"scale": "1/20",
 	"description": {
 		"ja": [
 			"• OVA「装甲騎兵ボトムズ ペールゼン・ファイルズ」より、設定にあわせ各部ディテールを変更したPF版スコープドッグが登場。",
@@ -26,37 +63,60 @@
 			"• ウインチガンバックパック、ミサイルポッドが付属。"
 		],
 		"en": [
-			"• From the OVA \"Armored Trooper Votoms Pailzen Files\" comes a PF version of Scope Dog with details changed to match the setting.",
-			"• The position of the base of the legs can be adjusted using new hip joint parts.",
-			"• Heavy machine gun can be recombined from normal to short barrel.",
-			"• Winch gun backpack and missile pod included."
+			"• From the OVA \"Armored Trooper Votoms: Pailzen Files\", a PF version of Scope Dog with details changed to match the setting appears.",
+			"• New hip joint parts allow adjustment of the groin position.",
+			"• Heavy machine gun can be converted from normal to short barrel.",
+			"• Includes winch gun backpack and missile pod."
 		]
 	},
-	"images": [
-		"/images/items/01_1432/153_2354.jpg",
-		"/images/items/01_1432/155_2354.jpg",
-		"/images/items/01_1432/156_2354.jpg",
-		"/images/items/01_1432/157_2354.jpg",
-		"/images/items/01_1432/158_2354.jpg",
-		"/images/items/01_1432/159_2354.jpg",
-		"/images/items/01_1432/189_2354.jpg",
-		"/images/items/01_1432/190_2354.jpg",
-		"/images/items/01_1432/191_2354.jpg",
-		"/images/items/01_1432/192_2354.jpg",
-		"/images/items/01_1432/193_2354.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1432/",
-	"brandIds": [],
-	"seriesIds": [
-		"votoms"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000223037",
-		"01_5553",
-		"item-1000209959",
-		"item-1000209960"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2354_o_1ccdsl6ai186i12mregd1c673323.jpg",
+				"path": "/images/items/01_1432/153_2354.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2354_o_1ccdslgms1uge4ah1naoceg11ks2d.jpg",
+				"path": "/images/items/01_1432/155_2354.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2354_o_1ccdslksc10qn5ondto198112d32i.jpg",
+				"path": "/images/items/01_1432/156_2354.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2354_o_1ccdslpcgcrjj81kagnb953o2n.jpg",
+				"path": "/images/items/01_1432/157_2354.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2354_o_1ccdslv3a1oda1tm85r019ssh502s.jpg",
+				"path": "/images/items/01_1432/158_2354.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2354_o_1ccdsm37gjci1gub1v2p1rdu1ubu31.jpg",
+				"path": "/images/items/01_1432/159_2354.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2354_o_1ccdsm7k61213piu16s8dul1uka36.jpg",
+				"path": "/images/items/01_1432/189_2354.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2354_o_1ccdsmbre43t1ero6al1av113743b.jpg",
+				"path": "/images/items/01_1432/190_2354.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2354_o_1ccdsmffu1r7e1lf1m6s1oen1rul3g.jpg",
+				"path": "/images/items/01_1432/191_2354.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2354_o_1ccdsmk1q1cicaoje6tn2ns413l.jpg",
+				"path": "/images/items/01_1432/192_2354.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_2354_o_1ccdsmp5e1c7klo41a5b1i521bvb3q.jpg",
+				"path": "/images/items/01_1432/193_2354.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1432/"
 }

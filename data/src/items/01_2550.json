@@ -5,6 +5,38 @@
 		"ja": "1/144 ガンダムベース限定 システムウェポンキット002",
 		"en": "1/144 Gundam Base Limited System WeaponKit002"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5987",
+			"url": "https://bandai-hobby.net/item/01_5987/",
+			"ja": "ガンダムデカールNo.139 機動戦士Gundam GQuuuuuuX汎用1"
+		},
+		{
+			"id": "01_5988",
+			"url": "https://bandai-hobby.net/item/01_5988/",
+			"ja": "ガンダムデカールNo.140 機動戦士Gundam GQuuuuuuX汎用2"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -18,7 +50,6 @@
 		"day": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダムベース限定のシステムウェポンキットが登場！",
@@ -39,25 +70,22 @@
 			"Various hand parts"
 		]
 	},
-	"images": [
-		"/images/items/01_2550/153_3476.jpg",
-		"/images/items/01_2550/155_3476.jpg",
-		"/images/items/01_2550/156_3476.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2550/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5986",
-		"01_5987",
-		"01_5988"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3476_s_9puimtih3hzb6h5fli2vcuk18mlp.jpg",
+				"path": "/images/items/01_2550/153_3476.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3476_s_jg2nws9gtnnfth0mr49mpa8acvne.jpg",
+				"path": "/images/items/01_2550/155_3476.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3476_s_6ciakmmx0g6fulur9rxt2w1c1pna.jpg",
+				"path": "/images/items/01_2550/156_3476.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2550/"
 }

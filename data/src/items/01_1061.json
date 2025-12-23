@@ -5,6 +5,49 @@
 		"ja": "メカコレクション ウルトラマンシリーズ No.12 ハイドランジャー",
 		"en": "Mecha Collection Ultraman Series No.12 Hydranger"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "ultraman",
+			"url": "https://bandai-hobby.net/series/ultraman/",
+			"ja": "ウルトラマン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000118308",
+			"url": "http://p-bandai.jp/item/item-1000118308/",
+			"ja": "メカコレクション ウルトラマンシリーズ ウルトラ警備隊セット [エクストラフィニッシュ]"
+		},
+		{
+			"id": "item-1000115996",
+			"url": "http://p-bandai.jp/item/item-1000115996/",
+			"ja": "メカコレクション ウルトラマンシリーズ 科学特捜隊セット [エクストラフィニッシュ]"
+		},
+		{
+			"id": "01_1090",
+			"url": "https://bandai-hobby.net/item/01_1090/",
+			"ja": "メカコレクション ウルトラマンシリーズ No.13 ウルトラホーク１号 α号"
+		},
+		{
+			"id": "01_1091",
+			"url": "https://bandai-hobby.net/item/01_1091/",
+			"ja": "メカコレクション ウルトラマンシリーズ No.14 ウルトラホーク１号 β号"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -25,52 +68,62 @@
 			"• 魚雷は選択式で有り無しどちらも楽しめる！1号、2号両方のマーキングが付属し2隻とも再現可能！"
 		],
 		"en": [
-			"• Hydranger, which appeared in Ultra Seven, is now available in the Ultraman series, a palm-sized and precisely detailed mechanical collection!",
+			"• The Hydranger from Ultra Seven is now available in the Ultraman series, a palm-sized mechanical collection with precise details!",
 			"• Although it is palm-sized, it accurately reproduces Hydranger's characteristic hull windows!",
-			"• Torpedoes are selectable and can be enjoyed with or without torpedoes! Markings for both No. 1 and No. 2 are included and both ships can be reproduced!"
+			"• You can choose between torpedoes and enjoy them with or without torpedoes! Markings for both No. 1 and No. 2 are included and both ships can be reproduced!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ディスプレイ台座×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイ台座"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書（箱裏に印刷）"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1995_s_gwiause168nooshrowu8fden0djo.jpg",
+				"path": "/images/items/01_1061/153_1995.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1995_s_chooakwtv8gsbfn2harqhb4arud9.jpg",
+				"path": "/images/items/01_1061/155_1995.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_1995_s_uc6lgpd2gprl6ydl1646g69cwz3s.jpg",
+				"path": "/images/items/01_1061/156_1995.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_1995_s_blvgb8vooy49592dw1rdpla3rpj0.jpg",
+				"path": "/images/items/01_1061/157_1995.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_1995_s_rfkj74fadv9qgm5648pqdj9huyts.jpg",
+				"path": "/images/items/01_1061/158_1995.jpg"
+			}
 		],
-		"en": [
-			"Display pedestal x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"水転写式デカール×1",
-			"取扱説明書（箱裏に印刷）"
-		],
-		"en": [
-			"Molded product x 4",
-			"Water transfer decal x 1",
-			"Instruction manual (printed on the back of the box)"
-		]
-	},
-	"images": [
-		"/images/items/01_1061/153_1995.jpg",
-		"/images/items/01_1061/155_1995.jpg",
-		"/images/items/01_1061/156_1995.jpg",
-		"/images/items/01_1061/157_1995.jpg",
-		"/images/items/01_1061/158_1995.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1061/",
-	"brandIds": [
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"ultraman"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000118308",
-		"item-1000115996",
-		"01_1090",
-		"01_1091"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1061/"
 }

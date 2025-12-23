@@ -2,9 +2,57 @@
 	"id": "01_3070",
 	"type": "item",
 	"name": {
-		"ja": "ＨＧ 1/144 ガンダム TR-1［ハイゼンスレイ・ラーII］（ADVANCE OF Z ティターンズの旗のもとに）",
-		"en": "HG 1/144 Gundam TR-1 [Heizensley Raa II] (ADVANCE OF Z Under the banner of Titans)"
+		"ja": "ＨＧ 1/144 ガンダムTR-1［ハイゼンスレイ・ラーII］（ADVANCE OF Z ティターンズの旗のもとに）",
+		"en": "HG 1/144 GundamTR-1 [Heizensley Raa II] (ADVANCE OF Z Under the banner of Titans)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 5940,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"Ｔ Ｒ - １ 最 終 進 化 ― ―",
@@ -56,7 +103,7 @@
 		],
 		"en": [
 			"TR-1 Final Evolution - -",
-			"From \"ADVANCE OF Z ~Under the Flag of the Titans~\", the enhanced specification [Heizensley Ra II], which can be said to be the final evolution of the Gundam TR-1 series, is commercialized in the HG series.",
+			"From \"ADVANCE OF Z ~Under the Flag of the Titans~\", the enhanced specification [Heisenslei Ra II], which can be said to be the final evolution of the Gundam TR-1 series, is commercialized in the HG series.",
 			"The \"Psycho Blade\" on the head and the joint parts for connecting [Furudodo II] are included with new modeling. Reproduce the characteristic styling.",
 			"● Reproduce the styling of TR-1 [Heizensley] with new modeling parts",
 			"New modeling parts have been added to the head, torso, back, etc., and the form and details of the TR-1 [Heizensley Ra II] have been thoroughly investigated. Reproduce the impressive Titans color with molded color.",
@@ -90,37 +137,50 @@
 			"- Product specifications are scheduled as of 20207. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_3070/153_4039.jpg",
-		"/images/items/01_3070/155_4039.jpg",
-		"/images/items/01_3070/156_4039.jpg",
-		"/images/items/01_3070/157_4039.jpg",
-		"/images/items/01_3070/158_4039.jpg",
-		"/images/items/01_3070/159_4039.jpg",
-		"/images/items/01_3070/189_4039.jpg",
-		"/images/items/01_3070/190_4039.jpg",
-		"/images/items/01_3070/191_4039.jpg",
-		"/images/items/01_3070/192_4039.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3070/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	],
-	"manualId": "2607",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4039_s_wuz027khi0hzyqa425ooomgl5l3a.jpg",
+				"path": "/images/items/01_3070/153_4039.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4039_s_0l0gscxf0vfouu0gksfxv9b14cdm.jpg",
+				"path": "/images/items/01_3070/155_4039.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4039_s_ql3fslo03cdubff2na0c9maqj5gy.jpg",
+				"path": "/images/items/01_3070/156_4039.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4039_s_w7oc08hz4i5yv2bn4k2w8tdyz6ep.jpg",
+				"path": "/images/items/01_3070/157_4039.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4039_s_jfvekhjmpahfos4hbybf703pg509.jpg",
+				"path": "/images/items/01_3070/158_4039.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4039_s_ohncxqrtr73rhosm7lfcpjq7l6y8.jpg",
+				"path": "/images/items/01_3070/159_4039.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4039_s_6s5lbtfsspe9950reun9r9naehcl.jpg",
+				"path": "/images/items/01_3070/189_4039.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4039_s_5wxpclyenvzfswjxlltmxkmi77zf.jpg",
+				"path": "/images/items/01_3070/190_4039.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4039_s_20shc9h2nu4cho85iqry9p4efwof.jpg",
+				"path": "/images/items/01_3070/191_4039.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4039_s_a35ze3dfgz913d6vi11nhaxfudre.jpg",
+				"path": "/images/items/01_3070/192_4039.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3070/"
 }

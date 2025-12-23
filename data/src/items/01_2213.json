@@ -5,6 +5,43 @@
 		"ja": "LBXアキレス",
 		"en": "LBX Achilles"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "lbx",
+			"url": "https://bandai-hobby.net/series/lbx/",
+			"ja": "ダンボール戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000215196",
+			"url": "https://p-bandai.jp/item/item-1000215196/",
+			"ja": "ＬＢＸイカロス・フォース"
+		},
+		{
+			"id": "item-1000215197",
+			"url": "https://p-bandai.jp/item/item-1000215197/",
+			"ja": "ＬＢＸイカロス・ゼロ"
+		},
+		{
+			"id": "item-1000210042",
+			"url": "https://p-bandai.jp/item/item-1000210042/",
+			"ja": "ＬＢＸエルシオン"
+		},
+		{
+			"id": "item-1000210041",
+			"url": "https://p-bandai.jp/item/item-1000210041/",
+			"ja": "ＬＢＸペルセウス"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -25,52 +62,75 @@
 		],
 		"en": [
 			"Introducing the LBX operated by the main character Ban Yamano!",
-			"• Achilles Lance and Achilles Seal are included."
+			"• Achilles Lance and Achilles Seal included"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"アキレスランス×1",
-			"アキレスシールド×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "アキレスランス"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アキレスシールド"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成型品"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3158_s_9cq5u2nw4f8u8zfa0l0mg0g2k6t4.jpg",
+				"path": "/images/items/01_2213/153_3158.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3158_s_9xa1yoh0tshsufids99xux71dz36.jpg",
+				"path": "/images/items/01_2213/155_3158.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3158_s_mh6v0t0z6h4f5h3pwl21b5ethkxi.jpg",
+				"path": "/images/items/01_2213/156_3158.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3158_s_ydfpo5065od94hr2vklpcbbuelv3.jpg",
+				"path": "/images/items/01_2213/157_3158.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3158_s_j5z8vxfgfojtnkryf0hq8chl514o.jpg",
+				"path": "/images/items/01_2213/158_3158.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3158_s_emd32zzusjeubee4lub7rpvxg2wb.jpg",
+				"path": "/images/items/01_2213/159_3158.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3158_s_18khioy4fl4lpoz9hemgmrhj24d9.jpg",
+				"path": "/images/items/01_2213/189_3158.jpg"
+			}
 		],
-		"en": [
-			"Achilles Lance x1",
-			"Achilles Seal × 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成型品×6",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 6",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2213/153_3158.jpg",
-		"/images/items/01_2213/155_3158.jpg",
-		"/images/items/01_2213/156_3158.jpg",
-		"/images/items/01_2213/157_3158.jpg",
-		"/images/items/01_2213/158_3158.jpg",
-		"/images/items/01_2213/159_3158.jpg",
-		"/images/items/01_2213/189_3158.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2213/",
-	"brandIds": [],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2213/"
 }

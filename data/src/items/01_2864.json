@@ -5,6 +5,16 @@
 		"ja": "THE GUNDAM BASE ガンダムバースデーキーチェーン",
 		"en": "THE GUNDAM BASE Gundam Birthday Keychain"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "item_all",
+			"url": "https://bandai-hobby.net/item_all",
+			"ja": "商品一覧"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -31,20 +41,22 @@
 			"This product is recommended as a gift for yourself or a loved one!"
 		]
 	},
-	"images": [
-		"/images/items/01_2864/153_3846.jpg",
-		"/images/items/01_2864/155_3846.jpg",
-		"/images/items/01_2864/156_3846.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2864/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
-	"relatedItemIds": [],
-	"tag": {
-		"ja": "ガンダムベースグッズ",
-		"en": "Gundam Base Goods"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3846_o_1i35akp0a1umgnv71tp41rgmeer23.jpg",
+				"path": "/images/items/01_2864/153_3846.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3846_o_1i35al2knf7ud011dsgbpn2p2d.jpg",
+				"path": "/images/items/01_2864/155_3846.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3846_o_1i35al665a7k14dp13au1noi1c3g2i.jpg",
+				"path": "/images/items/01_2864/156_3846.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2864/"
 }

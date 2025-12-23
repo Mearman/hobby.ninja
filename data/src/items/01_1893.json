@@ -5,6 +5,50 @@
 		"ja": "HGBD 1/144 インパルスガンダムランシエ",
 		"en": "HGBD 1/144 Impulse Gundam Rancier"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -18,68 +62,101 @@
 		"day": 29
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズ』に登場する新機体「インパルスガンダムランシエ」が登場！",
 			"• 変形・分離・合体ができるギミック満載の仕様となっており、特徴的なランス、シールドのほか、背部にマウント可能な水中航行用ブースターも付属！"
 		],
 		"en": [
-			"The new aircraft \"Impulse Gundam Rancier \" appearing in \" Gundam Build Divers\" is now available!",
+			"The new aircraft \"Impulse Gundam Rancier\" appearing in \"Gundam Build Divers\" is now available!",
 			"• It is full of gimmicks that can be transformed, separated, and combined, and in addition to the characteristic lance and seal, it also comes with an underwater navigation booster that can be mounted on the back!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ランス（仮）×1",
-			"シールド（仮）×1",
-			"水中航行用ブースター×1",
-			"変形用ジョイントパーツ×1式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ランス（仮）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド（仮）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水中航行用ブースター"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "変形用ジョイントパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 12
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2825_s_nh1c8rqhsrxdr5wqn77csh0kff2v.jpg",
+				"path": "/images/items/01_1893/153_2825.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2825_s_qmxbdb3r3f9h9uo61mbu0vjzpspp.jpg",
+				"path": "/images/items/01_1893/155_2825.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2825_s_epvkhxbnytyamrpc2r0p5sadomf2.jpg",
+				"path": "/images/items/01_1893/156_2825.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2825_s_bqdh4pc4hnm02imf0z36b696nxn0.jpg",
+				"path": "/images/items/01_1893/157_2825.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2825_s_i58cvsow0rap76bzxmr6sorgce4j.jpg",
+				"path": "/images/items/01_1893/158_2825.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2825_s_vbvjbnfv8lngokxjejh2iq0o9ezo.jpg",
+				"path": "/images/items/01_1893/159_2825.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2825_s_t7mau582leus4izhvn3zwvd3kjvi.jpg",
+				"path": "/images/items/01_1893/189_2825.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2825_s_j93k97tzp204xzb0ip8t75p87aer.jpg",
+				"path": "/images/items/01_1893/190_2825.jpg"
+			}
 		],
-		"en": [
-			"Lance (temporary) x 1",
-			"Seal de (temporary) × 1",
-			"Underwater navigation booster x 1",
-			"Deformation joint parts x 1 set"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×12",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 12",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1893/153_2825.jpg",
-		"/images/items/01_1893/155_2825.jpg",
-		"/images/items/01_1893/156_2825.jpg",
-		"/images/items/01_1893/157_2825.jpg",
-		"/images/items/01_1893/158_2825.jpg",
-		"/images/items/01_1893/159_2825.jpg",
-		"/images/items/01_1893/189_2825.jpg",
-		"/images/items/01_1893/190_2825.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1893/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "1035"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1893/"
 }

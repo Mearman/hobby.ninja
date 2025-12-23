@@ -2,9 +2,55 @@
 	"id": "01_1074",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 ガンダムベース限定 RX-78-2 ガンダム ［メタリックグロスインジェクション］",
-		"en": "HG 1/144 Gundam Base Limited RX-78-2 Gundam [Metallic Gloss Injection]"
+		"ja": "HG 1/144 ガンダムベース限定 RX-78-2ガンダム ［メタリックグロスインジェクション］",
+		"en": "HG 1/144 THE GUNDAM BASE LIMITED RX-78-2 GUNDAM ［METALLIC GLOSS INJECTION］"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -17,40 +63,34 @@
 		"month": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"ハイグレード RX-78-2 ガンダムが、艶感のあるメタリックグロスインジェクションで登場。ガンダムベースのロゴがデザインされた、ディスプレイ台座が付属。"
+			"ハイグレード RX-78-2ガンダムが、艶感のあるメタリックグロスインジェクションで登場。ガンダムベースのロゴがデザインされた、ディスプレイ台座が付属。"
 		],
 		"en": [
-			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"The high-grade RX-78-2 Gundam is now available with metallic gloss injection. A display pedestal with the Gundam base logo designed is included."
+			"For GUNPLA fans around the world, this is a limited edition GUNPLA at the official GUNPLA complex \"GUNDAM Base\". The high-grade RX-78-2 GUNDAM is now available with a glossy metallic gloss injection. Comes with a display pedestal with a logo design on the GUNDAM base."
 		]
 	},
-	"images": [
-		"/images/items/01_1074/1000115753_1.jpg",
-		"/images/items/01_1074/1000115753_2.jpg",
-		"/images/items/01_1074/1000115753_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115753_1.jpg",
+				"path": "/images/items/01_1074/1000115753_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115753_2.jpg",
+				"path": "/images/items/01_1074/1000115753_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115753_3.jpg",
+				"path": "/images/items/01_1074/1000115753_3.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1074/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1074/"
 	}
 }

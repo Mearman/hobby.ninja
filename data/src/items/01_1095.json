@@ -5,6 +5,43 @@
 		"ja": "ビークルモデル 010 Aウイング・スターファイター",
 		"en": "Vehicle Model 010 A-wing starfighter"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3513",
+			"url": "https://bandai-hobby.net/item/01_3513/",
+			"ja": "ビークルモデル レイザー・クレスト"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -29,51 +66,59 @@
 		],
 		"en": [
 			"The Rebel Alliance's new machine that was active in \"Episode 6: Return of the Jedi\" is now available as a vehicle model!",
-			"• High value product that is a set of 2 machines.",
-			"• The palm-sized fuselage has been carefully molded to accurately reproduce details such as the intricate exhaust port.",
-			"• Coloring can be reproduced using marking decals!",
+			"• A high value product that comes in a set of 2 machines.",
+			"• The palm-sized fuselage has been carefully molded, and details such as the intricate exhaust ports have been precisely reproduced.",
+			"• Coloring can be reproduced using Marking decals!",
 			"• A new display base is included, allowing you to adjust the angle and display the two machines in the set.",
 			"Total length: approx. 66mm"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 5
+		},
+		{
+			"name": {
+				"ja": "シール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書（箱裏側に記載）"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/157_2026_s_1m5jysby0d0xx0t2aqp5fao1wiju.jpg",
+				"path": "/images/items/01_1095/157_2026.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_2026_s_3jxxuf36gjdudbc336hwqljxmkg4.jpg",
+				"path": "/images/items/01_1095/153_2026.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2026_s_qa62llozgxu53qan51agl6q23ze4.jpg",
+				"path": "/images/items/01_1095/155_2026.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2026_s_rfsl0mvfq7dy6zc9vt9rw8uzvg7c.jpg",
+				"path": "/images/items/01_1095/156_2026.jpg"
+			}
 		],
-		"en": [
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×5",
-			"シール×１",
-			"取扱説明書（箱裏側に記載）"
-		],
-		"en": [
-			"Molded product x 5",
-			"Seal×1",
-			"Instruction manual (written on the back of the box)"
-		]
-	},
-	"images": [
-		"/images/items/01_1095/153_2026.jpg",
-		"/images/items/01_1095/155_2026.jpg",
-		"/images/items/01_1095/156_2026.jpg",
-		"/images/items/01_1095/157_2026.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1095/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3513"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1095/"
 }

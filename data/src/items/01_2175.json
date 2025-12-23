@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ザクII C-6/R6型",
 		"en": "HG 1/144 Zaku II C-6/R6 type"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "origin",
+			"url": "https://bandai-hobby.net/series/origin/",
+			"ja": "機動戦士ガンダム THE ORIGIN"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3711",
+			"url": "https://bandai-hobby.net/item/01_3711/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)[クリアカラー]"
+		},
+		{
+			"id": "01_2828",
+			"url": "https://bandai-hobby.net/item/01_2828/",
+			"ja": "HG 1/144 ガンダムベース限定 ザクII TYPE C-6/R6 [ペインティングモデル]"
+		},
+		{
+			"id": "01_2707",
+			"url": "https://bandai-hobby.net/item/01_2707/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)"
+		},
+		{
+			"id": "item-1000135687",
+			"url": "https://p-bandai.jp/item/item-1000135687",
+			"ja": "ＨＧ 1/144 MS-05S シャア専用ザクＩ（ＬＩＭＩＴＥＤ ＭＯＤＥＬ）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 27
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム THE ORIGIN』に登場するザクII C-6/R6型が登場！",
@@ -29,72 +72,116 @@
 		],
 		"en": [
 			"The Zaku II C-6/R6 type that appears in \"Mobile Suit Gundam THE ORIGIN\" is now available!",
-			"• Newly shaped armed parts that will make you want to recreate the Falmer squad similar to the one in the play, create an attractive mass-produced machine.",
-			"• By marking each part, Sergeant Denim machine, Corporal Slender machine, Corporal Gene machine, and Pacheco machine can be reproduced.",
+			"• Newly designed armed parts that will make you want to recreate the Falmer squad similar to the one in the movie, creating an attractive mass-produced machine.",
+			"• Sergeant Denim machine, Corporal Slender machine, Corporal Gene machine, and Pacheco machine can be reproduced by marking each part.",
 			"• The spike armor connection point on the shoulder and the Vulcan cannon on the chest armor are also precisely reproduced.",
-			"• A wide variety of armaments are included, including a belt-fed machine gun."
+			"• Comes with a wide variety of armaments, including a belt-fed machine gun."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ベルト給弾式マシンガン×1",
-			"バズーカ×1",
-			"バズーカ用予備マガジン×2",
-			"対艦ライフル×1",
-			"ヒート・ホーク×各1（展開・収納）",
-			"ライフル/バズーカ用右手首×1",
-			"拳(左右)×一式",
-			"左平手×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ベルト給弾式マシンガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バズーカ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バズーカ用予備マガジン"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "対艦ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ヒート・ホーク×各1（展開・収納）"
+			}
+		},
+		{
+			"name": {
+				"ja": "ライフル/バズーカ用右手首"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "拳(左右)×一式"
+			}
+		},
+		{
+			"name": {
+				"ja": "左平手"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成型品"
+			},
+			"count": 12
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3123_s_fw3wfxa02qilnts2d1bf8ri576c6.jpg",
+				"path": "/images/items/01_2175/153_3123.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3123_s_11r72z88txcxtqq6x54scde2c9im.jpg",
+				"path": "/images/items/01_2175/155_3123.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3123_s_9r74wnwq5vi8g9ubg9tb955jibs0.jpg",
+				"path": "/images/items/01_2175/156_3123.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3123_s_kqx2zzg19947wuoewnc09ud7e1m3.jpg",
+				"path": "/images/items/01_2175/157_3123.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3123_s_giv7acmf7onmi6n6a7q44cysdgt5.jpg",
+				"path": "/images/items/01_2175/158_3123.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3123_s_9wbfj48no5lglkv9jhn0mlxmd778.jpg",
+				"path": "/images/items/01_2175/159_3123.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3123_s_y04q7wy962dmw4v6x50gnmxbkvr2.jpg",
+				"path": "/images/items/01_2175/189_3123.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3123_s_8ae02gt5rhj95xra180yfik3osgi.jpg",
+				"path": "/images/items/01_2175/190_3123.jpg"
+			}
 		],
-		"en": [
-			"Belt-fed machine gun x 1",
-			"Bazooka×1",
-			"Spare magazine for bazooka x 2",
-			"Anti-ship rifle x1",
-			"Heat Hawk x 1 each (deployed/stored)",
-			"Right wrist for rifle/bazooka x 1",
-			"Fists (left and right) x set",
-			"Left palm x1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成型品×12",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 12",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2175/153_3123.jpg",
-		"/images/items/01_2175/155_3123.jpg",
-		"/images/items/01_2175/156_3123.jpg",
-		"/images/items/01_2175/157_3123.jpg",
-		"/images/items/01_2175/158_3123.jpg",
-		"/images/items/01_2175/159_3123.jpg",
-		"/images/items/01_2175/189_3123.jpg",
-		"/images/items/01_2175/190_3123.jpg",
-		"/images/items/01_2175/01_2175_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2175/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"origin"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3711",
-		"01_2828",
-		"01_2707",
-		"item-1000135687"
-	],
-	"manualId": "0067"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2175/"
 }

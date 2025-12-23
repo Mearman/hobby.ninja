@@ -5,6 +5,38 @@
 		"ja": "1/100 ヘイルバスタ－ガンダム",
 		"en": "1/100 Hail Buster Gundam"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5987",
+			"url": "https://bandai-hobby.net/item/01_5987/",
+			"ja": "ガンダムデカールNo.139 機動戦士Gundam GQuuuuuuX汎用1"
+		},
+		{
+			"id": "01_5988",
+			"url": "https://bandai-hobby.net/item/01_5988/",
+			"ja": "ガンダムデカールNo.140 機動戦士Gundam GQuuuuuuX汎用2"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -17,41 +49,46 @@
 		"month": 8
 	},
 	"targetAge": 8,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"●「機動戦士ガンダム SEED VS ASTRAY（ヴァーサス アストレイ）」に登場する“ヘイルバスターガンダム”が1/100スケールモデル化",
+			"●「機動戦士ガンダムSEED VS ASTRAY（ヴァーサス アストレイ）」に登場する“ヘイルバスターガンダム”が1/100スケールモデル化",
 			"●脚部などに追加された新造パーツにより、スタイリッシュなプロポーションを実現",
 			"●背部に装備した2本の火砲は、フレキシブルに可動する接続アームで前方へ展開可能",
 			"●ミサイルポッドのハッチを兼ねたガトリング砲は展開し、発射形態を再現",
 			"●バックパックは取り外し、ゲイルストライクガンダム（別売）など同シリーズのキットと交換可能"
 		],
 		"en": [
-			"●“Hailbuster Gundam” that appears in “Mobile Suit Gundam SEED VS ASTRAY” has been made into a 1/100 Scale Model",
+			"●“Hailbuster Gundam” that appears in “Mobile Suit GundamSEED VS ASTRAY” has been made into a 1/100 Scale Model",
 			"- New parts added to the legs etc. achieve stylish proportions",
 			"-The two cannons mounted on the back can be deployed forward with a flexible connecting arm.",
 			"-The Gatling gun, which also serves as the hatch of the missile pod, is expanded to reproduce the firing form.",
 			"-Backpack can be removed and replaced with kits from the same series such as Gale Strike Gundam (sold separately)"
 		]
 	},
-	"images": [
-		"/images/items/01_2655/153_3577.jpg",
-		"/images/items/01_2655/155_3577.jpg",
-		"/images/items/01_2655/156_3577.jpg",
-		"/images/items/01_2655/157_3577.jpg",
-		"/images/items/01_2655/158_3577.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2655/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5986",
-		"01_5987",
-		"01_5988"
-	],
-	"manualId": "1174"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3577_o_1dpkju6g630d12p118ek1bnl1lrc23.jpg",
+				"path": "/images/items/01_2655/153_3577.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3577_o_1dpkjugs11q7o1fl11116120n17go2d.jpg",
+				"path": "/images/items/01_2655/155_3577.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3577_o_1dpkjulkbq24t1jerk9b6i2i.jpg",
+				"path": "/images/items/01_2655/156_3577.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3577_o_1dpkk0pi21mefjmjmtv1f3r15ni2s.jpg",
+				"path": "/images/items/01_2655/157_3577.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3577_o_1dpkk7t63mmi1ird1s40vmoic536.jpg",
+				"path": "/images/items/01_2655/158_3577.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2655/"
 }

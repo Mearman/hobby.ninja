@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムベース限定 すーぱーふみな [ガンダムベースカラー]",
 		"en": "HG 1/144 Gundam Base Limited Super Fumina [Gundam Base Color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
@@ -28,34 +71,38 @@
 			"Gundam base limited edition Super Fumina is now available. The Gundam base emblem hat is reproduced with new parts."
 		]
 	},
-	"images": [
-		"/images/items/01_1920/153_2853.jpg",
-		"/images/items/01_1920/155_2853.jpg",
-		"/images/items/01_1920/156_2853.jpg",
-		"/images/items/01_1920/157_2853.jpg",
-		"/images/items/01_1920/158_2853.jpg",
-		"/images/items/01_1920/159_2853.jpg",
-		"/images/items/01_1920/189_2853.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1920/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2853_s_x11okctokq70sr679jnqz3r6st8h.jpg",
+				"path": "/images/items/01_1920/153_2853.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2853_s_uuoxmdbure5ps1e4ej03rnhm78ke.jpg",
+				"path": "/images/items/01_1920/155_2853.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2853_s_czjefczpzj5ek2f5nf1wr4mov0wf.jpg",
+				"path": "/images/items/01_1920/156_2853.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2853_s_av84zeu1hpqwi2vdya8kx4164fbs.jpg",
+				"path": "/images/items/01_1920/157_2853.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2853_s_4aso947mal9nro6439fakg2razqs.jpg",
+				"path": "/images/items/01_1920/158_2853.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2853_s_v7l47y4oqe4ye4eh4nnouy79pxla.jpg",
+				"path": "/images/items/01_1920/159_2853.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2853_s_pm0nq82jh6czfza6fyqz2z3otizm.jpg",
+				"path": "/images/items/01_1920/189_2853.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "2697"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1920/"
 }

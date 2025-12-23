@@ -5,6 +5,44 @@
 		"ja": "1/72 VF-31J改 ジークフリード (ハヤテ機) デカルチャーVer.",
 		"en": "1/72 VF-31J Kai Siegfried (Hayate Custom) Deculture Ver."
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "macross",
+			"url": "https://bandai-hobby.net/series/macross/",
+			"ja": "マクロスシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5944",
+			"url": "https://bandai-hobby.net/item/01_5944/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機)"
+		},
+		{
+			"id": "01_5945",
+			"url": "https://bandai-hobby.net/item/01_5945/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) 専用水転写式デカール"
+		},
+		{
+			"id": "01_5946",
+			"url": "https://bandai-hobby.net/item/01_5946/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) デラックスセット"
+		},
+		{
+			"id": "01_5465",
+			"url": "https://bandai-hobby.net/item/01_5465/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(マクシミリアン・ジーナス機)"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 6050,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 10
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"• 最終決戦でハヤテが搭乗したVF-31ジークフリードが1/72可変モデルで待望のキット化！",
@@ -28,83 +65,165 @@
 			"• コックピットは複座・単座の選択式。フレイアと共に搭乗する様子も再現可能！"
 		],
 		"en": [
-			"• VF-31 Siegfried, which Hayate piloted in the final battle, is now a long-awaited 1/72 variable model kit!",
-			"• Lumpika version depicting the popular character \"Freya Wion\" comes in a deluxe version that comes with a deculture decal!!",
-			"• Hayate's exclusive marking, which expresses his feelings for Messer, is also reproduced! Markings and decals compatible with the three forms are included.",
-			"• A metal shaft is used in part of the body structure that supports the complex deformation mechanism. Lock mechanisms built into each part allow each form to be held stably.",
-			"• Cockpit can be selected from two-seater or single-seater. You can also recreate the appearance of boarding with Freya!"
+			"• The long-awaited VF-31 Siegfried, which Hayate piloted in the final battle, has been made into a 1/72 variable model kit!",
+			"• Now available in a deluxe version that comes with Lumpika Ver. Deculture decal depicting the popular character \"Freya Wion\"!!",
+			"• Hayate's exclusive markings, which reflect his feelings for Messer, are also reproduced! Markings and decals compatible with the three forms are included.",
+			"• Part of the body structure that supports the complex deformation mechanism uses a metal shaft. Lock mechanisms built into each part allow each form to be held stably.",
+			"• The cockpit is selectable between two-seater and single-seater. You can also recreate the appearance of boarding with Freya!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"コンテナユニット×1",
-			"ガンポッド×1",
-			"腕部GUN(左右)×各1",
-			"シールド(左右)×各1",
-			"ナイフ×2",
-			"ランディングギア×3",
-			"［前輪×1、後輪（左右）×各1］",
-			"フィギュア×2",
-			"手首（左右）×3種",
-			"アクションベース1用ジョイント×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "コンテナユニット"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ガンポッド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "腕部GUN(左右)×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド(左右)×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ナイフ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ランディングギア"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "［前輪"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "フィギュア"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "手首（左右）"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "アクションベース1用ジョイント"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 10
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シャフト"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115591_1.jpg",
+				"path": "/images/items/01_1013/1000115591_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115591_2.jpg",
+				"path": "/images/items/01_1013/1000115591_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115591_3.jpg",
+				"path": "/images/items/01_1013/1000115591_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115591_4.jpg",
+				"path": "/images/items/01_1013/1000115591_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115591_5.jpg",
+				"path": "/images/items/01_1013/1000115591_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115591_6.jpg",
+				"path": "/images/items/01_1013/1000115591_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115591_7.jpg",
+				"path": "/images/items/01_1013/1000115591_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115591_8.jpg",
+				"path": "/images/items/01_1013/1000115591_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115591_9.jpg",
+				"path": "/images/items/01_1013/1000115591_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115591_10.jpg",
+				"path": "/images/items/01_1013/1000115591_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115591_11.jpg",
+				"path": "/images/items/01_1013/1000115591_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115591_12.jpg",
+				"path": "/images/items/01_1013/1000115591_12.jpg"
+			}
 		],
-		"en": [
-			"Container unit x 1",
-			"Gun pod x 1",
-			"Arm GUN (left and right) x 1 each",
-			"Seal de (left and right) x 1 each",
-			"Knife x 2",
-			"Landing gear x3",
-			"[Front wheel x 1, rear wheel (left and right) x 1 each]",
-			"Figure x2",
-			"Wrist (left and right) x 3 types",
-			"Joint for action base 1 x 2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×10",
-			"マーキングシール×2",
-			"水転写式デカール×1",
-			"ホイルシール×1",
-			"シャフト×4",
-			"取扱説明書"
-		],
-		"en": [
-			"Molded product x 10",
-			"MarkingSeal×2",
-			"Water transfer decal x 1",
-			"Foil Seal×1",
-			"Shaft x 4",
-			"Handling manual"
-		]
-	},
-	"images": [
-		"/images/items/01_1013/1000115591_1.jpg",
-		"/images/items/01_1013/1000115591_10.jpg",
-		"/images/items/01_1013/1000115591_11.jpg",
-		"/images/items/01_1013/1000115591_12.jpg",
-		"/images/items/01_1013/1000115591_2.jpg",
-		"/images/items/01_1013/1000115591_3.jpg",
-		"/images/items/01_1013/1000115591_4.jpg",
-		"/images/items/01_1013/1000115591_5.jpg",
-		"/images/items/01_1013/1000115591_6.jpg",
-		"/images/items/01_1013/1000115591_7.jpg",
-		"/images/items/01_1013/1000115591_8.jpg",
-		"/images/items/01_1013/1000115591_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1013/",
-	"brandIds": [],
-	"seriesIds": [
-		"macross"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5944",
-		"01_5945",
-		"01_5946",
-		"01_5465"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1013/"
 }

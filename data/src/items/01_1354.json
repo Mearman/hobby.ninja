@@ -5,6 +5,40 @@
 		"ja": "RE/100 1/100 ビギナ・ギナ",
 		"en": "RE/100 1/100 Begina Guina"
 	},
+	"brands": [
+		{
+			"id": "re100",
+			"url": "https://bandai-hobby.net/brand/re100/",
+			"ja": "RE/100[リボーンワンハンドレッド]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundamf91",
+			"url": "https://bandai-hobby.net/series/gundamf91/",
+			"ja": "機動戦士ガンダムF91"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3484",
+			"url": "https://bandai-hobby.net/item/01_3484/",
+			"ja": "ＲＥ/100 1/100 ビギナ・ギナ ［エクストラフィニッシュ］"
+		},
+		{
+			"id": "01_2252",
+			"url": "https://bandai-hobby.net/item/01_2252/",
+			"ja": "RE/100 1/100 ビギナ・ギナII"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -18,11 +52,10 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム F91』よりビギナ・ギナがRE/100のフォーマットで立体化！",
-			"• 「MG ガンダム F91 Ver.2.0」との並びを意識した高密度のディテール、プロポーションが採用され、曲面主体で構成された美しいフォルムを追求！",
+			"『機動戦士ガンダムF91』よりビギナ・ギナがRE/100のフォーマットで立体化！",
+			"• 「MG ガンダムF91 Ver.2.0」との並びを意識した高密度のディテール、プロポーションが採用され、曲面主体で構成された美しいフォルムを追求！",
 			"• 頭部の「クロスボーン・バンガード」マークはマーキングシールで再現され、コックピットハッチは2種類が付属！",
 			"• 頭部のマーキングシールと合わせて両状態を再現可能！",
 			"• ふくらはぎダクトがヒザ関節と連動して可動し、機体デザインを崩さずに深い曲げを実現！",
@@ -35,59 +68,92 @@
 			"• The \"Crossbone Vanguard\" mark on the head is reproduced with MarkingSeal, and two types of cockpit hatches are included!",
 			"• Both states can be reproduced with the MarkingSeal on the head!",
 			"• The calf duct moves in conjunction with the knee joint, allowing deep bending without compromising the aircraft design!",
-			"• Each of the characteristic 8 fin nozzles can be moved independently!",
-			"• A wide variety of weapons are included, and the beam and seal are reproduced with clear molding!"
+			"• Each of the characteristic 8 fin nozzles can move independently!",
+			"• Comes with a variety of weapons, and the beam and seal are reproduced with clear molding!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"ビーム・シールド×1",
-			"ビーム・ランチャー×1",
-			"ビーム・サーベル×2",
-			"リペア後コックピットハッチ再現パーツ×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・ランチャー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "リペア後コックピットハッチ再現パーツ"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 14
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2281_s_hrqagt4eyjmggiu8caa1w9zsikji.jpg",
+				"path": "/images/items/01_1354/153_2281.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2281_s_pmdwp33i9g5cbxxjopv3ki9y0m1s.jpg",
+				"path": "/images/items/01_1354/155_2281.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2281_s_16nwubujijd14f6j2uyf9dug21kt.jpg",
+				"path": "/images/items/01_1354/156_2281.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2281_s_02wu6te2akzgd4cvkuuf33ih839p.jpg",
+				"path": "/images/items/01_1354/157_2281.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2281_s_19lt998rgu787krjlo14636m52af.jpg",
+				"path": "/images/items/01_1354/158_2281.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x1",
-			"Beam Seal×1",
-			"Beam launcher x 1",
-			"Beam saber x2",
-			"After repair cockpit hatch reproduction parts x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×14",
-			"ホイルシール×1",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 14",
-			"Foil Seal×1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1354/153_2281.jpg",
-		"/images/items/01_1354/155_2281.jpg",
-		"/images/items/01_1354/156_2281.jpg",
-		"/images/items/01_1354/157_2281.jpg",
-		"/images/items/01_1354/158_2281.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1354/",
-	"brandIds": [
-		"re100"
-	],
-	"seriesIds": [
-		"gundamf91"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3484",
-		"01_2252"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1354/"
 }

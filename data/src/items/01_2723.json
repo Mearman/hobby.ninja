@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "ビークルモデル Xウイング・ファイター (スター・ウォーズ/スカイウォーカーの夜明け)",
-		"en": "Vehicle Model X-Wing Fighter (Star Wars: The Rise of Skywalker)"
+		"en": "VEHICLE MODEL 017 X-WING FIGHTER (STAR WARS:THE RISE OF SKYWALKER)"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS",
+			"en": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3515",
+			"url": "https://bandai-hobby.net/item/01_3515/",
+			"ja": "1/12 ザ・マンダロリアン(ベスカーアーマー)"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -25,38 +63,43 @@
 			"• 宇宙空間をイメージしたブラックのディスプレイ台座を付属。飛行シーンを再現できる。"
 		],
 		"en": [
-			"From \"Star Wars Episode 9: The Rise of Skywalker \", \" X-Wing Fighter\" is available as a vehicle model!",
-			"• The coloring of the aircraft is reproduced with molding color and Kynas Seal.",
-			"• A black display pedestal inspired by outer space is included. You can recreate flight scenes."
+			"From \"Star Wars: Episode IX: The Rise of Skywalker\", \"X-Wing Fighter\" is a vehicle model!",
+			"• The coloring of the aircraft color is reproduced with molding color and cainus seal."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"カイナスシール×１",
-			"専用ディスプレイベース×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "カイナスシール×１",
+				"en": "• Cainas Seal"
+			}
+		},
+		{
+			"name": {
+				"ja": "専用ディスプレイベース×１",
+				"en": "• Dedicated display base"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145224_1.jpg",
+				"path": "/images/items/01_2723/1000145224_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145224_2.jpg",
+				"path": "/images/items/01_2723/1000145224_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145224_3.jpg",
+				"path": "/images/items/01_2723/1000145224_3.jpg"
+			}
 		],
-		"en": [
-			"Cainus Seal×1",
-			"Dedicated display base x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2723/1000145224_1.jpg",
-		"/images/items/01_2723/1000145224_2.jpg",
-		"/images/items/01_2723/1000145224_3.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2723/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3515"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2723/"
+	}
 }

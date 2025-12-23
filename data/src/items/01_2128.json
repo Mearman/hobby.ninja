@@ -5,6 +5,50 @@
 		"ja": "HG 1/60 ガーンズバックVer.IV(アグレッサー部隊機)",
 		"en": "HG 1/60 Gernsback Ver.IV (Aggressor unit machine)"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "fullmetal_panic",
+			"url": "https://bandai-hobby.net/series/fullmetal_panic/",
+			"ja": "フルメタル・パニック!"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2186",
+			"url": "https://bandai-hobby.net/item/01_2186/",
+			"ja": "HG 1/60 M9Dファルケ Ver.IV"
+		},
+		{
+			"id": "01_2119",
+			"url": "https://bandai-hobby.net/item/01_2119/",
+			"ja": "HG 1/60 アーバレストVer.IV(緊急展開ブースター装備仕様)"
+		},
+		{
+			"id": "01_1889",
+			"url": "https://bandai-hobby.net/item/01_1889/",
+			"ja": "HG 1/60 レーバテイン Ver.IV"
+		},
+		{
+			"id": "01_1304",
+			"url": "https://bandai-hobby.net/item/01_1304/",
+			"ja": "1/60 アーバレスト Ver.IV"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -18,73 +62,120 @@
 		"day": 9
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
 			"『フルメタル・パニック！ Invisible Victory』に登場したアグレッサー部隊のガーンズバックを立体化。",
 			"• 成形色によるアグレッサー部隊のカラーリングを再現！"
 		],
 		"en": [
-			"\"Full Metal Panic! Gernsback of the aggressor unit that appeared in \" Invisible Victory\" has been made into a three-dimensional figure.",
-			"• Reproduce the coloring of the aggressor troops by molding color!"
+			"\"Full Metal Panic! Gernsback of the aggressor unit that appeared in \"Invisible Victory\" has been made into a three-dimensional figure.",
+			"• Reproduce the coloring of the aggressor troops using molding colors!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"76mm 狙撃砲×1",
-			"GEC-B 40mm ライフル×1",
-			"GRAW-2 単分子カッター×1",
-			"M1108 対戦車ダガー×1",
-			"グラーツ・マンリッヒャー AWS2000(アサルト・カービンタイプ)×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "76mm 狙撃砲"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GEC-B 40mm ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GRAW-2 単分子カッター"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "M1108 対戦車ダガー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "グラーツ・マンリッヒャー AWS2000(アサルト・カービンタイプ)"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 17
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134100_1.jpg",
+				"path": "/images/items/01_2128/1000134100_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134100_2.jpg",
+				"path": "/images/items/01_2128/1000134100_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134100_3.jpg",
+				"path": "/images/items/01_2128/1000134100_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134100_4.jpg",
+				"path": "/images/items/01_2128/1000134100_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134100_5.jpg",
+				"path": "/images/items/01_2128/1000134100_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134100_6.jpg",
+				"path": "/images/items/01_2128/1000134100_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134100_7.jpg",
+				"path": "/images/items/01_2128/1000134100_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134100_8.jpg",
+				"path": "/images/items/01_2128/1000134100_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134100_9.jpg",
+				"path": "/images/items/01_2128/1000134100_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134100_10.jpg",
+				"path": "/images/items/01_2128/1000134100_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134100_11.jpg",
+				"path": "/images/items/01_2128/1000134100_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134100_12.jpg",
+				"path": "/images/items/01_2128/1000134100_12.jpg"
+			}
 		],
-		"en": [
-			"76mm sniper gun x 1",
-			"GEC-B 40mm rifle x 1",
-			"GRAW-2 Single molecule cutter x 1",
-			"M1108 Anti-tank dagger x 1",
-			"Graz Mannlicher AWS2000 (assault carbine type) x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×17",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 17",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2128/1000134100_1.jpg",
-		"/images/items/01_2128/1000134100_10.jpg",
-		"/images/items/01_2128/1000134100_11.jpg",
-		"/images/items/01_2128/1000134100_12.jpg",
-		"/images/items/01_2128/1000134100_2.jpg",
-		"/images/items/01_2128/1000134100_3.jpg",
-		"/images/items/01_2128/1000134100_4.jpg",
-		"/images/items/01_2128/1000134100_5.jpg",
-		"/images/items/01_2128/1000134100_6.jpg",
-		"/images/items/01_2128/1000134100_7.jpg",
-		"/images/items/01_2128/1000134100_8.jpg",
-		"/images/items/01_2128/1000134100_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2128/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"fullmetal_panic"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2186",
-		"01_2119",
-		"01_1889",
-		"01_1304"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2128/"
 }

@@ -3,8 +3,49 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 νガンダム Ver.ka",
-		"en": "MG 1/100 νGundam Ver.ka"
+		"en": "MG 1/100 νGUNDAM Ver. Ka"
 	},
+	"brands": [
+		{
+			"id": "mgka",
+			"url": "https://bandai-hobby.net/brand/mgka/",
+			"ja": "MG Ver.Ka［マスターグレード バージョンカトキ］",
+			"en": "MG Ver.Ka [MASTER GRADE Ver.Katoki]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア",
+			"en": "MOBILE SUIT GUNDAM Char’s Counterattack"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4275",
+			"url": "https://bandai-hobby.net/item/01_4275/",
+			"ja": "MG 1/100 GUNDAM SIDE-F限定 RX-93 νガンダム Ver.Ka (サイコフレーム発動イメージカラー)"
+		},
+		{
+			"id": "01_1997",
+			"url": "https://bandai-hobby.net/item/01_1997/",
+			"ja": "MG 1/100 ガンダムベース限定 MSN-04 サザビーVer.Ka[スペシャルコーティング]"
+		},
+		{
+			"id": "01_4818",
+			"url": "https://bandai-hobby.net/item/01_4818/",
+			"ja": "MG 1/100 FA-93-ν2HWS Hi-νガンダム H.W.S. Ver.Ka メカニカルクリア"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 8140,
 		"currency": "JPY",
@@ -18,33 +59,30 @@
 		"day": 15
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"• 『機動戦士ガンダム　逆襲のシャア』よりνガンダムが新たなる挑戦とともにVer.Kaで登場。 • メカニックデザイナーカトキハジメ氏描き起こしのディテールとマーキングをはじめ、こだわり抜いたハイクオリティーを実現。 成形品×25、シール×3、組立説明書×1"
+			"• 『機動戦士ガンダム　逆襲のシャア』よりνガンダムが新たなる挑戦とともにVer.Kaで登場。 ■メカニックデザイナーカトキハジメ氏描き起こしのディテールとマーキングをはじめ、こだわり抜いたハイクオリティーを実現。 成形品×25、シール×3、組立説明書×1"
 		],
 		"en": [
-			"• From ``Mobile Suit Gundam: Char's Counterattack'', νGundam appears in Ver.Ka with a new challenge. • Achieved high quality with attention to detail, including details and markings drawn by mechanic designer Hajime Katoki. Molded product x 25, Seal x 3, Assembly manual x 1"
+			"• ν GUNDAM from \"MOBILE SUIT GUNDAM Char’s Counterattack\" is now available in Ver.Ka with a new challenge.",
+			"• Mechanic designer Hajime Katoki's details and markings are all carefully selected to achieve high quality. Molded ×25, seals ×3, assembly instructions ×1"
 		]
 	},
-	"images": [
-		"/images/items/01_1798/1000092384_1.jpg",
-		"/images/items/01_1798/1000092384_2.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092384_1.jpg",
+				"path": "/images/items/01_1798/1000092384_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092384_2.jpg",
+				"path": "/images/items/01_1798/1000092384_2.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1798/",
-	"brandIds": [
-		"mgka"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4275",
-		"01_1997",
-		"01_4818"
-	],
-	"manualId": "0604"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1798/"
+	}
 }

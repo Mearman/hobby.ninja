@@ -2,9 +2,47 @@
 	"id": "01_1011",
 	"type": "item",
 	"name": {
-		"ja": "1/48 & 1/144 スノースピーダーセット",
+		"ja": "1/48 & 1/144  スノースピーダーセット",
 		"en": "1/48 & 1/144 Snow Speeder Set"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3513",
+			"url": "https://bandai-hobby.net/item/01_3513/",
+			"ja": "ビークルモデル レイザー・クレスト"
+		}
+	],
+	"scale": "1/48",
 	"price": {
 		"amount": 2970,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"scale": "1/48",
 	"description": {
 		"ja": [
 			"• 惑星ホスの戦いで活躍したスノースピーダーが、1/48スケールと1/144スケールがセットになった豪華版！",
@@ -28,63 +65,105 @@
 			"• 「1/144AT-AT（別売）」と「ビークルモデル008AT-ST&スノースピーダー（別売）」とを組み合わせることで、ホスの戦いの1シーンを再現可能。"
 		],
 		"en": [
-			"• The snowspeeder that was active in the battle for the planet Hoth is a deluxe version that includes 1/48 Scale and 1/144 Scale!",
-			"• The orange line that gives a strong impression of the wedge machine is reproduced in the 1/48 Scale version by molding color and seal. The 1/144 Scale version reproduces the orange line with Seal.",
-			"• The 1/48 Scale version has four \"air brakes\" on the top, bottom, left and right that can be expanded by replacing parts.",
+			"• A deluxe version of the snowspeeder that was active in the battle for the planet Hoth is a set of 1/48 Scale and 1/144 Scale!",
+			"• The 1/48 Scale version reproduces the orange line that gives a strong impression of the wedge machine with the molding color and seal. The 1/144 Scale version reproduces the orange line with Seal.",
+			"• In the 1/48 Scale version, the four \"air brakes\" on the top, bottom, left, and right can be expanded by replacing parts.",
 			"• A \"power harpoon\" that overturns the AT-AT is also included, allowing you to recreate impressive scenes.",
-			"• By combining \"1/144AT-AT (sold separately)\" and \" Vehicle Model008AT-ST & Snowspeeder (sold separately)\", you can recreate a scene from the Battle of Hoth."
+			"• By combining \"1/144AT-AT (sold separately)\" and \"Vehicle Model008AT-ST & Snowspeeder (sold separately)\", you can recreate a scene from the Battle of Hoth."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"パイロット×1",
-			"専用ディスプレイベース ×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "パイロット"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 7
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000114567_1.jpg",
+				"path": "/images/items/01_1011/1000114567_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000114567_2.jpg",
+				"path": "/images/items/01_1011/1000114567_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000114567_3.jpg",
+				"path": "/images/items/01_1011/1000114567_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000114567_4.jpg",
+				"path": "/images/items/01_1011/1000114567_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000114567_5.jpg",
+				"path": "/images/items/01_1011/1000114567_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000114567_6.jpg",
+				"path": "/images/items/01_1011/1000114567_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000114567_7.jpg",
+				"path": "/images/items/01_1011/1000114567_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000114567_8.jpg",
+				"path": "/images/items/01_1011/1000114567_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000114567_9.jpg",
+				"path": "/images/items/01_1011/1000114567_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000114567_10.jpg",
+				"path": "/images/items/01_1011/1000114567_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000114567_11.jpg",
+				"path": "/images/items/01_1011/1000114567_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000114567_12.jpg",
+				"path": "/images/items/01_1011/1000114567_12.jpg"
+			}
 		],
-		"en": [
-			"Pilot x 1",
-			"Dedicated display base x2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×7",
-			"水転写式デカール×1",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 7",
-			"Water transfer decal x 1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1011/1000114567_1.jpg",
-		"/images/items/01_1011/1000114567_10.jpg",
-		"/images/items/01_1011/1000114567_11.jpg",
-		"/images/items/01_1011/1000114567_12.jpg",
-		"/images/items/01_1011/1000114567_2.jpg",
-		"/images/items/01_1011/1000114567_3.jpg",
-		"/images/items/01_1011/1000114567_4.jpg",
-		"/images/items/01_1011/1000114567_5.jpg",
-		"/images/items/01_1011/1000114567_6.jpg",
-		"/images/items/01_1011/1000114567_7.jpg",
-		"/images/items/01_1011/1000114567_8.jpg",
-		"/images/items/01_1011/1000114567_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1011/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3513"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1011/"
 }

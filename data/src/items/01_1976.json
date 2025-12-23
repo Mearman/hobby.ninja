@@ -5,6 +5,43 @@
 		"ja": "ピカちんキットS04 ゴミ箱センサー",
 		"en": "Pikachin KitS04 trash can sensor"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -33,8 +70,8 @@
 			"接点金具…3"
 		],
 		"en": [
-			"• Pikachin KitS, which has hidden electronic power, is here!",
-			"• Pirameki with 1% light sensor! A buzzer sounds when the brightness changes!",
+			"• Introducing Pikachin KitS, which has the power of electronics!",
+			"• 1% light sensor! A buzzer sounds when the brightness changes!",
 			"• Surprise the intruder and protect the secret!",
 			"[Set contents]",
 			"Trash can sensor...1 (molded product...2)",
@@ -46,23 +83,22 @@
 			"Contact metal fittings...3"
 		]
 	},
-	"images": [
-		"/images/items/01_1976/153_2906.jpg",
-		"/images/items/01_1976/155_2906.jpg",
-		"/images/items/01_1976/156_2906.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1976/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2906_s_60zwfu3qmy1qrb6tzom6z6h4um3i.jpg",
+				"path": "/images/items/01_1976/153_2906.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2906_s_q3ltfvnfo7tdzl1dl3ocg34cnh5v.jpg",
+				"path": "/images/items/01_1976/155_2906.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2906_s_hzq7pzedjihgc4ps552rbzyk355b.jpg",
+				"path": "/images/items/01_1976/156_2906.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1976/"
 }

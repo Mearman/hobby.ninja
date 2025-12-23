@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 アイザック",
 		"en": "HGUC 1/144 Isaac"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-zz",
+			"url": "https://bandai-hobby.net/series/gundam-zz/",
+			"ja": "機動戦士ガンダムＺＺ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_2079",
+			"url": "https://bandai-hobby.net/item/01_2079/",
+			"ja": "HGUC 1/144 R・ジャジャ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -17,37 +66,34 @@
 		"month": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム ZZ」より地上のジオン軍残党が使用した“アイザック”がHGUCシリーズに登場 頭部レドーム、バック・パック、腰部センサーなど各部を再現 頭部レドームには回転ギミックを搭載 武装はザク・マシンガン改、シールドが付属"
+			"「機動戦士ガンダムZZ」より地上のジオン軍残党が使用した“アイザック”がHGUCシリーズに登場 頭部レドーム、バック・パック、腰部センサーなど各部を再現 頭部レドームには回転ギミックを搭載 武装はザク・マシンガン改、シールドが付属"
 		],
 		"en": [
-			"\"Isaac \" used by the remnants of the Zeon army on the ground from \" Mobile Suit Gundam ZZ\" appears in the HGUC series. Various parts such as the head radome, back pack, and waist sensor are reproduced. The head radome is equipped with a rotating gimmick. Armed with a modified Zaku machine gun and Seal de."
+			"\"Isaac\" used by the remnants of the Zeon army on the ground from \"Mobile Suit GundamZZ\" appears in the HGUC series. Various parts such as the head radome, back pack, and waist sensor are reproduced. The head radome is equipped with a rotating gimmick. Armed with a modified Zaku machine gun and Seal de."
 		]
 	},
-	"images": [
-		"/images/items/01_1707/153_2616.jpg",
-		"/images/items/01_1707/155_2616.jpg",
-		"/images/items/01_1707/156_2616.jpg",
-		"/images/items/01_1707/157_2616.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1707/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam-zz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5963",
-		"01_4985",
-		"01_4971",
-		"01_2079"
-	],
-	"manualId": "0917"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2616_s_5qa6f4bm3l3o3h2g9tng7vxoshux.jpg",
+				"path": "/images/items/01_1707/153_2616.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2616_s_lqb2rknlegt9gb5bf47ukl1yegau.jpg",
+				"path": "/images/items/01_1707/155_2616.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2616_s_umyidojyzqthaubs9rq57xfzf47v.jpg",
+				"path": "/images/items/01_1707/156_2616.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2616_s_9zosbobofpt0znab0mxk3a06041p.jpg",
+				"path": "/images/items/01_1707/157_2616.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1707/"
 }

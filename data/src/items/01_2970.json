@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 bEXM-15 ポルタノヴァ(水中仕様)[ブルーグレー]",
 		"en": "30MM 1/144 bEXM-15 Portanova (underwater specification) [Blue Gray]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,13 +61,12 @@
 		"day": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMシリーズのポルタノヴァ（水中仕様）に新カラーのブルーグレーが登場！",
-			"■水中用タンクは組み替えることで腕や脚に装着できる。",
-			"■既存のアイテムとの連動も可能。",
-			"■アンカークローが付属。"
+			"• 水中用タンクは組み替えることで腕や脚に装着できる。",
+			"• 既存のアイテムとの連動も可能。",
+			"• アンカークローが付属。"
 		],
 		"en": [
 			"A new color blue gray is now available for the 30MM series Portanova (underwater specification)!",
@@ -33,45 +75,78 @@
 			"• Anchor claw included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"水中用バックパック/装甲×1式",
-			"アンカークロー×1",
-			"マーキングシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "水中用バックパック/装甲"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "アンカークロー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151941_1.jpg",
+				"path": "/images/items/01_2970/1000151941_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151941_2.jpg",
+				"path": "/images/items/01_2970/1000151941_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151941_3.jpg",
+				"path": "/images/items/01_2970/1000151941_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151941_4.jpg",
+				"path": "/images/items/01_2970/1000151941_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151941_5.jpg",
+				"path": "/images/items/01_2970/1000151941_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151941_6.jpg",
+				"path": "/images/items/01_2970/1000151941_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151941_7.jpg",
+				"path": "/images/items/01_2970/1000151941_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151941_8.jpg",
+				"path": "/images/items/01_2970/1000151941_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151941_9.jpg",
+				"path": "/images/items/01_2970/1000151941_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151941_10.jpg",
+				"path": "/images/items/01_2970/1000151941_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151941_12.jpg",
+				"path": "/images/items/01_2970/1000151941_12.jpg"
+			},
+			{}
 		],
-		"en": [
-			"Underwater backpack/armor x 1 set",
-			"Anchor claw x 1",
-			"MarkingSeal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2970/01_2970_11.jpg",
-		"/images/items/01_2970/1000151941_1.jpg",
-		"/images/items/01_2970/1000151941_10.jpg",
-		"/images/items/01_2970/1000151941_12.jpg",
-		"/images/items/01_2970/1000151941_2.jpg",
-		"/images/items/01_2970/1000151941_3.jpg",
-		"/images/items/01_2970/1000151941_4.jpg",
-		"/images/items/01_2970/1000151941_5.jpg",
-		"/images/items/01_2970/1000151941_6.jpg",
-		"/images/items/01_2970/1000151941_7.jpg",
-		"/images/items/01_2970/1000151941_8.jpg",
-		"/images/items/01_2970/1000151941_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2970/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3703"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2970/"
 }

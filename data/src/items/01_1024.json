@@ -5,6 +5,43 @@
 		"ja": "ビークルモデル 009 ジェダイ・スターファイター",
 		"en": "Vehicle Model 009 Jedi Starfighter"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3513",
+			"url": "https://bandai-hobby.net/item/01_3513/",
+			"ja": "ビークルモデル レイザー・クレスト"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -29,52 +66,58 @@
 			"「1/144 スレーヴＩ ジャンゴ・フェット機」と並べて劇中のドッグファイトシーンを再現可能。"
 		],
 		"en": [
-			"The \"Jedi Starfighter \" that appeared in \" Episode 2/Attack of the Clones\" is now available as a vehicle model!",
+			"The \"Jedi Starfighter\" that appeared in \"Episode 2/Attack of the Clones\" is now available as a vehicle model!",
 			"• Fine details",
 			"A fine mold is condensed into a small size that fits in the palm of your hand.",
-			"• Reproduction of the gimmick in the play",
+			"• Reproduction of gimmicks from the movie",
 			"\"Hyperdrive Docking Ring\" can be removed.",
 			"• Scene reproduction",
 			"You can recreate the dogfight scene from the movie by placing it alongside the \"1/144 Slave I Jango Fett Machine\"."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用ディスプレイベース ×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 5
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書（箱裏に印刷）"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1959_s_ae68qehl2ncjb2la1h03yyfwd4u1.jpg",
+				"path": "/images/items/01_1024/153_1959.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1959_s_foxft5lj5tqhbv9rhqgnyfiftdix.jpg",
+				"path": "/images/items/01_1024/155_1959.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_1959_s_nrghemja6aa1aamcq1n1b3ojcn4u.jpg",
+				"path": "/images/items/01_1024/156_1959.jpg"
+			}
 		],
-		"en": [
-			"Dedicated display base x1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×5",
-			"マーキングシール×1",
-			"取扱説明書（箱裏に印刷）"
-		],
-		"en": [
-			"Molded product x 5",
-			"MarkingSeal×1",
-			"Instruction manual (printed on the back of the box)"
-		]
-	},
-	"images": [
-		"/images/items/01_1024/153_1959.jpg",
-		"/images/items/01_1024/155_1959.jpg",
-		"/images/items/01_1024/156_1959.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1024/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3513"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1024/"
 }

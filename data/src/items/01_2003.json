@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "ハロプラ ハロ ベーシックグリーン[クリアカラー]",
-		"en": "Haropura Haro Basic Green [Clear Color]"
+		"en": "HAROPLA HARO BASIC GREEN [CLEAR COLOR]"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ",
+			"en": "GUNDAM BUILD DIVERS"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5189",
+			"url": "https://bandai-hobby.net/item/01_5189/",
+			"ja": "オプションパーツセット ガンプラ 04 (ビルドハンズ 丸型)"
+		},
+		{
+			"id": "01_5190",
+			"url": "https://bandai-hobby.net/item/01_5190/",
+			"ja": "オプションパーツセット ガンプラ 03 (ビルドハンズ 角型)"
+		},
+		{
+			"id": "01_3063",
+			"url": "https://bandai-hobby.net/item/01_3063/",
+			"ja": "ハロプラ ガンダムベース限定 モビルハロ[ガンダムベースカラー]"
+		},
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -24,31 +62,18 @@
 			"かわいらしいハロのメカニカルな構造も見える仕様に!"
 		],
 		"en": [
-			"Event-limited Gunpla sold at various event venues.",
-			"From Haropura, Haro is released in a bright clear color!",
-			"The mechanical structure of the cute halo can also be seen!"
+			"It is an event-limited GUNPLA that will be sold at various event venues. From Halopla, halo is released in a vivid clear color! You can also see the mechanical structure of the cute halo!"
 		]
 	},
-	"images": [
-		"/images/items/01_2003/01_2003_0.jpg",
-		"/images/items/01_2003/01_2003_1.jpg"
-	],
+	"images": {
+		"product": [
+			{},
+			{}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2003/",
-	"brandIds": [],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5189",
-		"01_5190",
-		"01_3063",
-		"01_2623"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2003/"
 	}
 }

@@ -5,6 +5,44 @@
 		"ja": "1/72 RVF-25 メサイアバルキリー ルカ機",
 		"en": "1/72 RVF-25 Messiah Valkyrie Luca Machine"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "macross",
+			"url": "https://bandai-hobby.net/series/macross/",
+			"ja": "マクロスシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5944",
+			"url": "https://bandai-hobby.net/item/01_5944/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機)"
+		},
+		{
+			"id": "01_5945",
+			"url": "https://bandai-hobby.net/item/01_5945/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) 専用水転写式デカール"
+		},
+		{
+			"id": "01_5946",
+			"url": "https://bandai-hobby.net/item/01_5946/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) デラックスセット"
+		},
+		{
+			"id": "01_5465",
+			"url": "https://bandai-hobby.net/item/01_5465/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(マクシミリアン・ジーナス機)"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 6380,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 28
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"「1/72 ＲＶＦ－２５ メサイアバルキリー ルカ機」が登場！"
@@ -27,24 +64,26 @@
 			"\"1/72 RVF-25 Messiah Valkyrie Luca Machine\" is now available!"
 		]
 	},
-	"images": [
-		"/images/items/01_3054/153_4023.jpg",
-		"/images/items/01_3054/155_4023.jpg",
-		"/images/items/01_3054/156_4023.jpg",
-		"/images/items/01_3054/157_4023.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3054/",
-	"brandIds": [],
-	"seriesIds": [
-		"macross"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5944",
-		"01_5945",
-		"01_5946",
-		"01_5465"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4023_s_tdevjnb2orw1158vzas3gpqfvb3c.jpg",
+				"path": "/images/items/01_3054/153_4023.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4023_s_lbwncoaxpjm9ck350ntgj8rphxe3.jpg",
+				"path": "/images/items/01_3054/155_4023.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4023_s_2qntphd8pbbu4fde4cs4unnscc3f.jpg",
+				"path": "/images/items/01_3054/156_4023.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4023_s_unli7w57dlaqjw1tipesyjhzutel.jpg",
+				"path": "/images/items/01_3054/157_4023.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3054/"
 }

@@ -5,6 +5,44 @@
 		"ja": "1/100 モビルスモー／ゴールドタイプ",
 		"en": "1/100 Mobile Sumo/Gold Type"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "turn-a",
+			"url": "https://bandai-hobby.net/series/turn-a/",
+			"ja": "∀ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000135920",
+			"url": "https://p-bandai.jp/item/item-1000135920",
+			"ja": "ＭＧ 1/100 ∀ガンダム／ターンＸ［ナノスキンイメージ］"
+		},
+		{
+			"id": "item-1000099631",
+			"url": "https://p-bandai.jp/item/item-1000099631",
+			"ja": "ＭＧ 1/100 ターンエーガンダム（月光蝶Ver.）"
+		},
+		{
+			"id": "item-1000165581",
+			"url": "https://p-bandai.jp/item/item-1000165581",
+			"ja": "ＭＧ 1/100 ターンエーガンダム用拡張エフェクトユニット “月光蝶”"
+		},
+		{
+			"id": "01_120",
+			"url": "https://bandai-hobby.net/item/01_120/",
+			"ja": "MG 1/100 Concept-X 6-1-2 ターンX"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 1
 	},
 	"targetAge": 8,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"TV「∀ガンダム」登場の金色に輝く機体を、メッキパーツでキット化しました。すべての装甲にメッキパーツを使用し、ゴールド色を完全再現しています。頭部フェイスパターンはノーマルとオープンの２種がついています。胸部およびふくらはぎのハッチは開閉機構を再現できます。肩部アーマーは二重構造により再現しています。キャノピーはクリアパーツ成形で、内部コクピットのディテールが確認できます。IFジェネレーターはクリアパーツを使用し、先端のビームには２種類の形態を選択可能です。クリアパーツを使用したハンドビーム・ガンがついています。"
@@ -27,26 +64,34 @@
 			"The golden shining aircraft that appeared on TV \"∀Gundam\" has been made into a kit with plated parts. All armor uses plated parts to perfectly reproduce the gold color. There are two types of head face patterns: normal and open. The opening and closing mechanism of the chest and calf hatches can be reproduced. The shoulder armor is reproduced with a double structure. The canopy is made of clear parts, allowing you to see the details of the internal cockpit. The IF generator uses clear parts, and you can choose from two types of beams at the tip. Comes with a hand beam gun using clear parts."
 		]
 	},
-	"images": [
-		"/images/items/01_2368/153_3303.jpg",
-		"/images/items/01_2368/155_3303.jpg",
-		"/images/items/01_2368/156_3303.jpg",
-		"/images/items/01_2368/157_3303.jpg",
-		"/images/items/01_2368/158_3303.jpg",
-		"/images/items/01_2368/159_3303.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2368/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000135920",
-		"item-1000099631",
-		"item-1000165581",
-		"01_120"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3303_s_loij45suzybxmnwa3u0uohmznt00.jpg",
+				"path": "/images/items/01_2368/153_3303.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3303_s_vgc25k57o1gmfcz8mwohhm4is09a.jpg",
+				"path": "/images/items/01_2368/155_3303.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3303_s_eafe6k6bdxsw7np2q6wo3vg5qvi5.jpg",
+				"path": "/images/items/01_2368/156_3303.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3303_s_zxoon10ylxlo1l0ei7c4h4ltyufr.jpg",
+				"path": "/images/items/01_2368/157_3303.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3303_s_jnf55i6ltnalrdjdd6um7pw3d2ft.jpg",
+				"path": "/images/items/01_2368/158_3303.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3303_s_cokn2q8lrto35mrwanqsizu0l18a.jpg",
+				"path": "/images/items/01_2368/159_3303.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2368/"
 }

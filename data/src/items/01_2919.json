@@ -5,6 +5,54 @@
 		"ja": "ＭＧ 1/100 MS-09R ドズル・ザビ専用リック・ドム",
 		"en": "MG 1/100 MS-09R Rick Dom for Dozle Zabi"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "item-1000220190",
+			"url": "https://p-bandai.jp/item/item-1000220190/",
+			"ja": "ＨＧ 1/144 ザク・デザートタイプ ピンクパンサー隊機"
+		},
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "item-1000216105",
+			"url": "https://p-bandai.jp/item/item-1000216105/",
+			"ja": "RG 1/144 ソードインパルスガンダムＳｐｅｃＩＩ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -16,7 +64,6 @@
 		"year": 2015,
 		"month": 3
 	},
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"ジオン公国軍最大規模の軍事パレードにふさわしい雄麗な装飾で宇宙へ！",
@@ -87,37 +134,50 @@
 			"- Product specifications are scheduled as of 201412. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2919/153_3896.jpg",
-		"/images/items/01_2919/155_3896.jpg",
-		"/images/items/01_2919/156_3896.jpg",
-		"/images/items/01_2919/157_3896.jpg",
-		"/images/items/01_2919/158_3896.jpg",
-		"/images/items/01_2919/159_3896.jpg",
-		"/images/items/01_2919/189_3896.jpg",
-		"/images/items/01_2919/190_3896.jpg",
-		"/images/items/01_2919/191_3896.jpg",
-		"/images/items/01_2919/192_3896.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2919/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"item-1000220190",
-		"item-1000220189",
-		"item-1000216105"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3896_s_r45simrb84z4z6t2bn3zkayifxlk.jpg",
+				"path": "/images/items/01_2919/153_3896.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3896_s_awrhm8l6ylqln8680rih47tjhm2f.jpg",
+				"path": "/images/items/01_2919/155_3896.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3896_s_o515fu93p9rl7icf7zmmeyewsjqa.jpg",
+				"path": "/images/items/01_2919/156_3896.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3896_s_9y0tozwl2urbtxyphcwbvni4d5lg.jpg",
+				"path": "/images/items/01_2919/157_3896.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3896_s_ry38910pzhab4363iic848krx3mm.jpg",
+				"path": "/images/items/01_2919/158_3896.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3896_s_duonid5kmxgg8x7zpupc27boxud7.jpg",
+				"path": "/images/items/01_2919/159_3896.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3896_s_hv3010mjurs69fbhkc14277tk0xf.jpg",
+				"path": "/images/items/01_2919/189_3896.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3896_s_hbfqkqj4r8tfgzs97rbcyarbjy5t.jpg",
+				"path": "/images/items/01_2919/190_3896.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3896_s_3vr6fjrjhbriza807p2hf0syi7u3.jpg",
+				"path": "/images/items/01_2919/191_3896.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3896_s_tjwg6an5j7gollzgv8jkjk62jn4i.jpg",
+				"path": "/images/items/01_2919/192_3896.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "2239"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2919/"
 }

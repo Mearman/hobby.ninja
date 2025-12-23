@@ -5,6 +5,50 @@
 		"ja": "HGBD 1/144 ガンダムダブルオーダイバー",
 		"en": "HGBD 1/144 Gundam Double O Diver"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 『ガンダムビルドダイバーズ』主人公リクの操るガンプラがスペシャルプライスで登場！",
@@ -28,56 +71,69 @@
 			"• 広い可動域で、自由自在なポージングが可能！"
 		],
 		"en": [
-			"• Gunpla operated by Riku, the main character of \"Gundam Build Divers\", is now available at a special price!",
-			"• Based on the 00 Gundam, it has a specification that allows you to enjoy a wide range of customization.",
-			"• It comes with three types of weapon holders on each side to accommodate a variety of weapons, allowing you to equip it with a wide range of weapons, including those from the HGBC series and other Gunpla!",
+			"• “Gundam Build Divers” Gunpla operated by the main character Riku is now available at a special price!",
+			"• It is based on the 00 Gundam and has a specification that allows for a wide range of customization.",
+			"• Comes with 3 types of weapon holders on each side to accommodate a variety of weapons, allowing you to carry a wide range of weapons such as the HGBC series and other Gunpla weapons!",
 			"• 3mm joints installed in each part expand the range of mixing!",
 			"• Wide range of motion allows for flexible posing!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"GNソードII×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "GNソードII"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 7
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2243_s_qyu7gatqimgc1ehpb120vaz68dpo.jpg",
+				"path": "/images/items/01_1314/153_2243.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2243_s_c5r6qb59jak0ou9e2wdqnpm6qqpz.jpg",
+				"path": "/images/items/01_1314/155_2243.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2243_s_cwdbxyo3q8ouuxshe5ykjaof1dht.jpg",
+				"path": "/images/items/01_1314/156_2243.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2243_s_emxk8yzfl3c9ulr2kv9xxiersfmm.jpg",
+				"path": "/images/items/01_1314/157_2243.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2243_s_2j8vp0ipmdrjnvnav6f6y8akzryb.jpg",
+				"path": "/images/items/01_1314/158_2243.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2243_s_dax2qqf6d84px1mrk298uah3rjnq.jpg",
+				"path": "/images/items/01_1314/159_2243.jpg"
+			}
 		],
-		"en": [
-			"GN Sword II×2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×7",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 7",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1314/153_2243.jpg",
-		"/images/items/01_1314/155_2243.jpg",
-		"/images/items/01_1314/156_2243.jpg",
-		"/images/items/01_1314/157_2243.jpg",
-		"/images/items/01_1314/158_2243.jpg",
-		"/images/items/01_1314/159_2243.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1314/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "1015"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1314/"
 }

@@ -2,9 +2,31 @@
 	"id": "01_2321",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット ガンダムベース限定 ナイチンゲール [スペシャルコーティング]",
-		"en": "SD Gundam Cross Silhouette Gundam Base Limited Nightingale [Special Coating]"
+		"ja": "SDガンダム クロスシルエット ガンダムベース限定 ナイチンゲール [スペシャルコーティング]",
+		"en": "SDGundam Cross Silhouette Gundam Base Limited Nightingale [Special Coating]"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -20,34 +42,38 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"頭身自在の「SD ガンダム クロスシルエット」シリーズより、「機動戦士ガンダム 逆襲のシャア ベルトーチカ・チルドレン」に登場する大型MS「ナイチンゲール」がスペシャルコーティングで発売！",
+			"頭身自在の「SDガンダム クロスシルエット」シリーズより、「機動戦士ガンダム 逆襲のシャア ベルトーチカ・チルドレン」に登場する大型MS「ナイチンゲール」がスペシャルコーティングで発売！",
 			"• 大型モデルながらSDフレームを搭載し、CSフレームにも対応！"
 		],
 		"en": [
-			"From the flexible \"SD Gundam Cross Silhouette \" series, the large MS \" Nightingale \" that appears in \" Mobile Suit Gundam Char's Counterattack Beltorchka Children\" is released with a special coating!",
+			"From the flexible \"SD Gundam Cross Silhouette\" series, the large MS \"Nightingale\" that appears in \"Mobile Suit Gundam Char's Counterattack Beltorchika Children\" is released with a special coating!",
 			"• Although it is a large model, it is equipped with an SD frame and also supports CS frames!"
 		]
 	},
-	"images": [
-		"/images/items/01_2321/153_3259.jpg",
-		"/images/items/01_2321/155_3259.jpg",
-		"/images/items/01_2321/156_3259.jpg",
-		"/images/items/01_2321/157_3259.jpg",
-		"/images/items/01_2321/158_3259.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2321/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3259_s_hwgi3hnsq8e6b4vqxv36j86xj6ku.jpg",
+				"path": "/images/items/01_2321/153_3259.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3259_s_ur082jmpvibl4ji23xbpw6cerhe1.jpg",
+				"path": "/images/items/01_2321/155_3259.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3259_s_st9fogj46rbrveyxvjylksefpygu.jpg",
+				"path": "/images/items/01_2321/156_3259.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3259_s_p1nop2v1jefbsqtr9q119vfikr72.jpg",
+				"path": "/images/items/01_2321/157_3259.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3259_s_zkvb13483bc79sd45yp5dqb2atci.jpg",
+				"path": "/images/items/01_2321/158_3259.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2321/"
 }

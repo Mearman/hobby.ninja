@@ -5,6 +5,43 @@
 		"ja": "SDBD RX-零丸 神気結晶",
 		"en": "SDBD RX-Zeromaru Divine Spirit Crystal"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5189",
+			"url": "https://bandai-hobby.net/item/01_5189/",
+			"ja": "オプションパーツセット ガンプラ 04 (ビルドハンズ 丸型)"
+		},
+		{
+			"id": "01_5190",
+			"url": "https://bandai-hobby.net/item/01_5190/",
+			"ja": "オプションパーツセット ガンプラ 03 (ビルドハンズ 角型)"
+		},
+		{
+			"id": "01_3063",
+			"url": "https://bandai-hobby.net/item/01_3063/",
+			"ja": "ハロプラ ガンダムベース限定 モビルハロ[ガンダムベースカラー]"
+		},
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		}
+	],
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -30,61 +67,105 @@
 			"• It is also possible to reproduce realistic forms and combine weapons."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"新規シールド×3",
-			"バズーカ砲身パーツ×2",
-			"クナイ×2",
-			"刀×1",
-			"ライフル×1",
-			"エフェクト×1",
-			"手首2種（左右）×各1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "新規シールド"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "バズーカ砲身パーツ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "クナイ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "刀"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "エフェクト"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "手首2種（左右）×各1"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3034_s_enxujnabgcnxrcudk38rm6oz9rr5.jpg",
+				"path": "/images/items/01_2085/153_3034.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3034_s_7fyeosfj04wlphj98fr5jrk97n27.jpg",
+				"path": "/images/items/01_2085/155_3034.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3034_s_avftgpl1c312l4cnjn2zf4jaxa0s.jpg",
+				"path": "/images/items/01_2085/156_3034.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3034_s_58tfu10uj2paitqw9iyjh9vqpxf5.jpg",
+				"path": "/images/items/01_2085/157_3034.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3034_s_xcsob2ik1wrnyq7uk4ztf8x2dwnw.jpg",
+				"path": "/images/items/01_2085/158_3034.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3034_s_9yz0yzo9au1qg5j5v6rvhrd9pu0d.jpg",
+				"path": "/images/items/01_2085/159_3034.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3034_s_5kkab1gszbcck7aqrqohyi0qdiec.jpg",
+				"path": "/images/items/01_2085/189_3034.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3034_s_bh1b04e8pa5mooyohv7m1f3e4dyt.jpg",
+				"path": "/images/items/01_2085/190_3034.jpg"
+			}
 		],
-		"en": [
-			"New Seal ×3",
-			"Bazooka barrel parts x 2",
-			"Kunai x 2",
-			"Sword x1",
-			"Rifle x 1",
-			"Effect x 1",
-			"2 types of wrists (left and right) x 1 each"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×6",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 6",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2085/153_3034.jpg",
-		"/images/items/01_2085/155_3034.jpg",
-		"/images/items/01_2085/156_3034.jpg",
-		"/images/items/01_2085/157_3034.jpg",
-		"/images/items/01_2085/158_3034.jpg",
-		"/images/items/01_2085/159_3034.jpg",
-		"/images/items/01_2085/189_3034.jpg",
-		"/images/items/01_2085/190_3034.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2085/",
-	"brandIds": [],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5189",
-		"01_5190",
-		"01_3063",
-		"01_2623"
-	],
-	"manualId": "1045"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2085/"
 }

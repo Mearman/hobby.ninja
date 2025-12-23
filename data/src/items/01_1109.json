@@ -5,6 +5,49 @@
 		"ja": "Figure-riseStandard　孫悟空＆クリリン DXセット",
 		"en": "Figure-riseStandard Son Goku & Krillin DX Set"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4901",
+			"url": "https://bandai-hobby.net/item/01_4901/",
+			"ja": "Figure-rise Standard ベジータ (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_4219",
+			"url": "https://bandai-hobby.net/item/01_4219/",
+			"ja": "Figure-rise Standard 孫悟空 (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_2974",
+			"url": "https://bandai-hobby.net/item/01_2974/",
+			"ja": "Figure-rise Standard アルティメット孫悟飯"
+		},
+		{
+			"id": "01_2769",
+			"url": "https://bandai-hobby.net/item/01_2769/",
+			"ja": "Figure-rise Standard ジレン"
+		}
+	],
 	"price": {
 		"amount": 5170,
 		"currency": "JPY",
@@ -27,77 +70,141 @@
 		"en": [
 			"Figure-riseStandard Son Goku and Krillin are now available as a DX set! !",
 			"• A set of Goku and Krillin is now available in a battle aura color that is exclusive to the DX set!",
-			"• One clear pedestal of Figure-rise Effect limited to DX set is included. Reenactment from the movie is even more interesting!"
+			"• One clear pedestal of Figure-riseEffect limited to DX set is included. Reenactment from the movie is even more interesting!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"アクションベース×1",
-			"ジョイントパーツ×4",
-			"台座用ジョイントパーツ×1",
-			"＜孫悟空付属品＞",
-			"必殺技エフェクト2種（かめはめ波溜め、かめはめ波放出）×各１",
-			"表情パーツ3種（通常、怒り、笑顔）×各1",
-			"手首パーツ5種（左右握り手、左右かめはめ波手、右平手）×各1",
-			"＜クリリン付属品＞",
-			"必殺技エフェクト2種（連続気功波、気円斬）×各１",
-			"表情",
-			"手首パーツ6種（左右握り手、左右平手、左右持ち手）×各1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "アクションベース"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "台座用ジョイントパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "＜孫悟空付属品＞"
+			}
+		},
+		{
+			"name": {
+				"ja": "必殺技エフェクト2種（かめはめ波溜め、かめはめ波放出）×各１"
+			}
+		},
+		{
+			"name": {
+				"ja": "表情パーツ3種（通常、怒り、笑顔）×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "手首パーツ5種（左右握り手、左右かめはめ波手、右平手）×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "＜クリリン付属品＞"
+			}
+		},
+		{
+			"name": {
+				"ja": "必殺技エフェクト2種（連続気功波、気円斬）×各１"
+			}
+		},
+		{
+			"name": {
+				"ja": "表情"
+			}
+		},
+		{
+			"name": {
+				"ja": "手首パーツ6種（左右握り手、左右平手、左右持ち手）×各1"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 13
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 3
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117997_1.jpg",
+				"path": "/images/items/01_1109/1000117997_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117997_2.jpg",
+				"path": "/images/items/01_1109/1000117997_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117997_3.jpg",
+				"path": "/images/items/01_1109/1000117997_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117997_4.jpg",
+				"path": "/images/items/01_1109/1000117997_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117997_5.jpg",
+				"path": "/images/items/01_1109/1000117997_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117997_6.jpg",
+				"path": "/images/items/01_1109/1000117997_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117997_7.jpg",
+				"path": "/images/items/01_1109/1000117997_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117997_8.jpg",
+				"path": "/images/items/01_1109/1000117997_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117997_9.jpg",
+				"path": "/images/items/01_1109/1000117997_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117997_10.jpg",
+				"path": "/images/items/01_1109/1000117997_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117997_11.jpg",
+				"path": "/images/items/01_1109/1000117997_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117997_12.jpg",
+				"path": "/images/items/01_1109/1000117997_12.jpg"
+			}
 		],
-		"en": [
-			"Action base x 1",
-			"Joint parts x 4",
-			"Joint parts for pedestal x 1",
-			"<Son Goku accessories>",
-			"2 types of special move effects (Kamehameha reservoir, Kamehameha release) x 1 each",
-			"3 types of facial expression parts (normal, angry, smiling) x 1 each",
-			"5 types of wrist parts (left and right grip hands, left and right Kamehameha hands, right palm) x 1 each",
-			"<Krillin accessories>",
-			"2 types of special move effects (continuous Qigong wave, Qienzan) x 1 each",
-			"facial expression",
-			"6 types of wrist parts (left and right gripping hands, left and right palms, left and right holding hands) x 1 each"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×13",
-			"シール×2",
-			"取扱説明書×3"
-		],
-		"en": [
-			"Molded products x 13",
-			"Seal×2",
-			"Handling manual×3"
-		]
-	},
-	"images": [
-		"/images/items/01_1109/1000117997_1.jpg",
-		"/images/items/01_1109/1000117997_10.jpg",
-		"/images/items/01_1109/1000117997_11.jpg",
-		"/images/items/01_1109/1000117997_12.jpg",
-		"/images/items/01_1109/1000117997_2.jpg",
-		"/images/items/01_1109/1000117997_3.jpg",
-		"/images/items/01_1109/1000117997_4.jpg",
-		"/images/items/01_1109/1000117997_5.jpg",
-		"/images/items/01_1109/1000117997_6.jpg",
-		"/images/items/01_1109/1000117997_7.jpg",
-		"/images/items/01_1109/1000117997_8.jpg",
-		"/images/items/01_1109/1000117997_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1109/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"dragonball"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4901",
-		"01_4219",
-		"01_2974",
-		"01_2769"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1109/"
 }

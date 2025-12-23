@@ -5,6 +5,60 @@
 		"ja": "ＨＧ 1/144 イフリート（ダグ・シュナイド機）",
 		"en": "HG 1/144 Ifrit (Doug Schneid machine)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "missinglink",
+			"url": "https://bandai-hobby.net/series/missinglink/",
+			"ja": "機動戦士ガンダム外伝 ミッシングリンク"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000152855",
+			"url": "https://p-bandai.jp/item/item-1000152855/",
+			"ja": "ＨＧ 1/144 ペイルライダー・キャバルリー"
+		},
+		{
+			"id": "item-1000148541",
+			"url": "https://p-bandai.jp/item/item-1000148541/",
+			"ja": "ＨＧ 1/144 トーリスリッター"
+		},
+		{
+			"id": "item-1000140492",
+			"url": "https://p-bandai.jp/item/item-1000140492/",
+			"ja": "ＨＧ 1/144 陸戦型ジム（スレイヴ・レイス隊仕様）（パラシュート・パック仕様）"
+		},
+		{
+			"id": "item-1000140220",
+			"url": "https://p-bandai.jp/item/item-1000140220/",
+			"ja": "ＨＧ 1/144 スレイヴ・レイス（パラシュート・パック仕様）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -16,7 +70,6 @@
 		"year": 2020,
 		"month": 3
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ヒ ー ト ・ ラ ン サ ー を 携 え る 猛 き 炎 神 ―",
@@ -55,7 +108,7 @@
 			"From ``Mobile Suit Gundam Gaiden Missing Link'', we commercialize the aircraft flown by Captain Doug Schneid, who leads the special competitive unit ``Marcosias Squad''.",
 			"Parts such as the characteristic heat lancer and forearm are reproduced with new modeling, and the styling that matches the setting is faithfully reproduced.",
 			"●Reproduce Heat Lancer and part of the main body with new molded parts",
-			"The special armament \"Heat Lancer \" and \" triple 35mm Gatling gun\" are reproduced with new modeling.",
+			"The special armament \"Heat Lancer\" and \"triple 35mm Gatling gun\" are reproduced with new modeling.",
 			"In addition, new parts have been adopted that reproduce the details and color coding of the forearms, etc.",
 			"● Reproduce your personal color with molded color",
 			"The personal color based on purple, which was inherited by the later Ifrit Schneid, is reproduced in molding color.",
@@ -83,51 +136,67 @@
 			"- Product specifications are scheduled as of 201911. Please note that there may be changes."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ヒート・ランサー",
-			"３連装３５ｍｍガトリング砲",
-			"ショットガン"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヒート・ランサー"
+			}
+		},
+		{
+			"name": {
+				"ja": "３連装３５ｍｍガトリング砲"
+			}
+		},
+		{
+			"name": {
+				"ja": "ショットガン"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3585_s_jps6re5fs0nj1902ydyfud2lt1hr.jpg",
+				"path": "/images/items/01_2662/153_3585.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3585_s_sp7b34r7a3jylvce7wiv10wuzrla.jpg",
+				"path": "/images/items/01_2662/155_3585.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3585_s_4nwb5eedvmp22ksaaio0g6lptox2.jpg",
+				"path": "/images/items/01_2662/156_3585.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3585_s_b0fn0qag08rn7v57zda5rfjzyd4q.jpg",
+				"path": "/images/items/01_2662/157_3585.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3585_s_9w2uw9kjsfy6fibhyqvemvmdb9x6.jpg",
+				"path": "/images/items/01_2662/158_3585.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3585_s_eownqnei5bllyn73vqnivkk764fa.jpg",
+				"path": "/images/items/01_2662/159_3585.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3585_s_dw41qmftyxt05p6f5zf8coraaj8k.jpg",
+				"path": "/images/items/01_2662/189_3585.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3585_s_a1qg5iqgz6dyoih0gsg0o33gsyq2.jpg",
+				"path": "/images/items/01_2662/190_3585.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3585_s_980b923g55rg0tl66qvc92pdaopx.jpg",
+				"path": "/images/items/01_2662/191_3585.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3585_s_x5b554wvcvx8yrdj4smj9hwfpe4h.jpg",
+				"path": "/images/items/01_2662/192_3585.jpg"
+			}
 		],
-		"en": [
-			"heat lancer",
-			"Triple 35mm gatling gun",
-			"shotgun"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2662/153_3585.jpg",
-		"/images/items/01_2662/155_3585.jpg",
-		"/images/items/01_2662/156_3585.jpg",
-		"/images/items/01_2662/157_3585.jpg",
-		"/images/items/01_2662/158_3585.jpg",
-		"/images/items/01_2662/159_3585.jpg",
-		"/images/items/01_2662/189_3585.jpg",
-		"/images/items/01_2662/190_3585.jpg",
-		"/images/items/01_2662/191_3585.jpg",
-		"/images/items/01_2662/192_3585.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2662/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"missinglink"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000152855",
-		"item-1000148541",
-		"item-1000140492",
-		"item-1000140220"
-	],
-	"manualId": "2570",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_2662/"
 }

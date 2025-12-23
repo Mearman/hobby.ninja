@@ -5,6 +5,44 @@
 		"ja": "1/72 攻撃用デストロイド・スパルタン",
 		"en": "1/72 Attack Destroid Spartan"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "macross",
+			"url": "https://bandai-hobby.net/series/macross/",
+			"ja": "マクロスシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5944",
+			"url": "https://bandai-hobby.net/item/01_5944/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機)"
+		},
+		{
+			"id": "01_5945",
+			"url": "https://bandai-hobby.net/item/01_5945/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) 専用水転写式デカール"
+		},
+		{
+			"id": "01_5946",
+			"url": "https://bandai-hobby.net/item/01_5946/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) デラックスセット"
+		},
+		{
+			"id": "01_5465",
+			"url": "https://bandai-hobby.net/item/01_5465/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(マクシミリアン・ジーナス機)"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"「1/72 攻撃用デストロイド・スパルタン」が登場！"
@@ -27,24 +64,26 @@
 			"\"1/72 Attack Destroid Spartan\" is now available!"
 		]
 	},
-	"images": [
-		"/images/items/01_3038/153_4008.jpg",
-		"/images/items/01_3038/155_4008.jpg",
-		"/images/items/01_3038/156_4008.jpg",
-		"/images/items/01_3038/157_4008.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3038/",
-	"brandIds": [],
-	"seriesIds": [
-		"macross"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5944",
-		"01_5945",
-		"01_5946",
-		"01_5465"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4008_s_dkia7z95tyrqgfbdyk16e0ukqf1u.jpg",
+				"path": "/images/items/01_3038/153_4008.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4008_s_v75amb9vih8mnwoiz5h2llgfyk1d.jpg",
+				"path": "/images/items/01_3038/155_4008.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4008_s_411f788hxo8mku2t1rv2p26ox04q.jpg",
+				"path": "/images/items/01_3038/156_4008.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4008_s_f6823wmwbjcqdixpu7d15lx49qlr.jpg",
+				"path": "/images/items/01_3038/157_4008.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3038/"
 }

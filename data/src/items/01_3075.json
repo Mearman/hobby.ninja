@@ -5,6 +5,43 @@
 		"ja": "ビルダーズパーツHD12 MSブレード01",
 		"en": "Builders Parts HD12 MS Blade 01"
 	},
+	"brands": [
+		{
+			"id": "parts",
+			"url": "https://bandai-hobby.net/brand/parts/",
+			"ja": "ビルダーズパーツ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3582",
+			"url": "https://bandai-hobby.net/item/01_3582/",
+			"ja": "1/100 ガンダムベース限定 MSエフェクト01(クリアブルー)"
+		},
+		{
+			"id": "01_3563",
+			"url": "https://bandai-hobby.net/item/01_3563/",
+			"ja": "1/100 ガンダムベース限定 MSバーニア01&エモーションマニピュレーター(連邦系)"
+		},
+		{
+			"id": "01_3564",
+			"url": "https://bandai-hobby.net/item/01_3564/",
+			"ja": "1/100 ガンダムベース限定 MSスパイク01&エモーションマニピュレーター(ジオン系)"
+		},
+		{
+			"id": "01_636",
+			"url": "https://bandai-hobby.net/item/01_636/",
+			"ja": "BPHD ノンスケール MSサイトレンズ01(レッド)"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -31,22 +68,18 @@
 			"Molded product x 2"
 		]
 	},
-	"images": [
-		"/images/items/01_3075/153_4044.jpg",
-		"/images/items/01_3075/155_4044.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3075/",
-	"brandIds": [
-		"parts"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3582",
-		"01_3563",
-		"01_3564",
-		"01_636"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4044_o_1eefep9fj164c1513f29i3b5qr23.jpg",
+				"path": "/images/items/01_3075/153_4044.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4044_o_1eefepi21ennsnam8pom51p9r2d.jpg",
+				"path": "/images/items/01_3075/155_4044.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3075/"
 }

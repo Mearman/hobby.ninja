@@ -5,6 +5,37 @@
 		"ja": "Bトレインショーティー 885系1次車 「かもめ」",
 		"en": "B Train Shorty 885 series 1st car \"Kamome\""
 	},
+	"brands": [
+		{
+			"id": "train",
+			"url": "https://bandai-hobby.net/brand/train/",
+			"ja": "Bトレインショーティー"
+		}
+	],
+	"series": [],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_1276",
+			"url": "https://bandai-hobby.net/item/01_1276/",
+			"ja": "Bトレインショーティー 伊豆箱根鉄道3000系　ラブライブ！サンシャイン!!　ラッピング電車　HAPPY PARTY TRAIN　3種アソート"
+		},
+		{
+			"id": "01_1277",
+			"url": "https://bandai-hobby.net/item/01_1277/",
+			"ja": "Bトレインショーティー 伊豆箱根鉄道3000系　ラブライブ！サンシャイン!!  ラッピング電車　HAPPY PARTY TRAIN 1"
+		},
+		{
+			"id": "01_1278",
+			"url": "https://bandai-hobby.net/item/01_1278/",
+			"ja": "Bトレインショーティー 伊豆箱根鉄道3000系　ラブライブ！サンシャイン!!  ラッピング電車　HAPPY PARTY TRAIN 2"
+		},
+		{
+			"id": "01_1280",
+			"url": "https://bandai-hobby.net/item/01_1280/",
+			"ja": "Bトレインショーティー 伊豆箱根鉄道3000系　ラブライブ！サンシャイン!!  ラッピング電車　HAPPY PARTY TRAIN 3"
+		}
+	],
 	"price": {
 		"amount": 5280,
 		"currency": "JPY",
@@ -46,38 +77,57 @@
 			"Compatible with N scale by attaching power unit 3 and traveling trolley T (sold separately)."
 		]
 	},
-	"contents": {
-		"ja": [
-			"4両入り（先頭車×2、中間車×2）",
-			"バリエーションパーツ",
-			"NewSGフレーム",
-			"ステッカー",
-			"取扱説明書"
+	"contents": [
+		{
+			"name": {
+				"ja": "4両入り（先頭車"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "、中間車×2）"
+			}
+		},
+		{
+			"name": {
+				"ja": "バリエーションパーツ"
+			}
+		},
+		{
+			"name": {
+				"ja": "NewSGフレーム"
+			}
+		},
+		{
+			"name": {
+				"ja": "ステッカー"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2042_s_zv122303s3lgf9m4ohd3omsy80qv.jpg",
+				"path": "/images/items/01_1110/153_2042.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2042_s_ka8i9ql372v23gzolel7xswj2ao2.jpg",
+				"path": "/images/items/01_1110/155_2042.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2042_s_x629rjt471qd0da9wd8uqdnyjl99.jpg",
+				"path": "/images/items/01_1110/156_2042.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2042_s_2yz8lb7v8a1tl70jpecrwn9mdgow.jpg",
+				"path": "/images/items/01_1110/157_2042.jpg"
+			}
 		],
-		"en": [
-			"Contains 4 cars (first car x 2, middle car x 2)",
-			"variation parts",
-			"NewSG frame",
-			"Sticker",
-			"Handling manual"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1110/153_2042.jpg",
-		"/images/items/01_1110/155_2042.jpg",
-		"/images/items/01_1110/156_2042.jpg",
-		"/images/items/01_1110/157_2042.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1110/",
-	"brandIds": [
-		"train"
-	],
-	"seriesIds": [],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1110/"
 }

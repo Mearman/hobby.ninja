@@ -5,6 +5,44 @@
 		"ja": "1/144 武器セット",
 		"en": "1/144 weapon set"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 330,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 4
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダムハンマー、ハイパー・ハンマー、ハイパー・バズーカ（弾２個付き）、ビームジャベリン、ヒート・ホーク、ザクバズーカ（弾２個付き）、ミサイルポッド（弾３個付き）、クラッカー（２個付き）、グフ・サーベルがセットになっています。"
@@ -26,23 +63,18 @@
 			"The set includes Gundam Hammer, Hyper Hammer, Hyper Bazooka (with 2 bullets), Beam Javelin, Heat Hawk, Zaku Bazooka (with 2 bullets), Missile Pod (with 3 bullets), Cracker (with 2 bullets), and Gouf Saber."
 		]
 	},
-	"images": [
-		"/images/items/01_3094/153_4061.jpg",
-		"/images/items/01_3094/155_4061.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3094/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	],
-	"manualId": "1962"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4061_s_q77xlv41twg6grv6qf741t1g11x2.jpg",
+				"path": "/images/items/01_3094/153_4061.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4061_s_7l1kl6c1gekupri76qgf0i34vfys.jpg",
+				"path": "/images/items/01_3094/155_4061.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3094/"
 }

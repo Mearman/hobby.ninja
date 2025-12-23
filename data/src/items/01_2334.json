@@ -5,6 +5,50 @@
 		"ja": "ＭＧ 1/100 ガンダムＦ９０用 ミッションパック Ｅタイプ＆Ｓタイプ",
 		"en": "Mission pack for MG 1/100 Gundam F90 E type & S type"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "f90",
+			"url": "https://bandai-hobby.net/series/f90/",
+			"ja": "機動戦士ガンダムF90"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7056",
+			"url": "https://bandai-hobby.net/item/01_7056/",
+			"ja": "MG 1/100 F90IIIY クラスターガンダム用 ミッションパック Xタイプ"
+		},
+		{
+			"id": "item-1000224327",
+			"url": "https://p-bandai.jp/item/item-1000224327/",
+			"ja": "ＭＧ 1/100 Ｆ８０ ガンレイド"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -16,7 +60,6 @@
 		"year": 2019,
 		"month": 8
 	},
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"長 距 離 支 援 仕 様 の Ｓ タ イ プ、",
@@ -78,7 +121,7 @@
 			"Introducing a mission pack that can be jointed with \"MG 1/100 Gundam F90\" (sold separately) to reproduce the long-range support specification S type and electronic warfare specification E type!",
 			"---",
 			"*The MS body is not included with this product.",
-			"* To reproduce the posted photo, this product and \"MG 1/100 Gundam F90\" (sold separately/Premium Bandai sales item) are required.",
+			"* To reproduce the posted photo, this product and \"MG 1/100 GundamF90\" (sold separately/Premium Bandai sales item) are required.",
 			"A mission pack developed for the prototype MS Gundam F90 of the \"Formula Plan\" by Sanary (S・N・R・I).",
 			"S type and E type appear in master grade with completely new modeling!",
 			"<Two types of mission packs can be reproduced! ＞",
@@ -125,37 +168,50 @@
 			"- Product specifications are scheduled as of 20194. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2334/1000134980_1.jpg",
-		"/images/items/01_2334/1000134980_10.jpg",
-		"/images/items/01_2334/1000134980_2.jpg",
-		"/images/items/01_2334/1000134980_3.jpg",
-		"/images/items/01_2334/1000134980_4.jpg",
-		"/images/items/01_2334/1000134980_5.jpg",
-		"/images/items/01_2334/1000134980_6.jpg",
-		"/images/items/01_2334/1000134980_7.jpg",
-		"/images/items/01_2334/1000134980_8.jpg",
-		"/images/items/01_2334/1000134980_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2334/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"f90"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_7056",
-		"item-1000224327"
-	],
-	"manualId": "2740",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134980_1.jpg",
+				"path": "/images/items/01_2334/1000134980_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134980_2.jpg",
+				"path": "/images/items/01_2334/1000134980_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134980_3.jpg",
+				"path": "/images/items/01_2334/1000134980_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134980_4.jpg",
+				"path": "/images/items/01_2334/1000134980_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134980_5.jpg",
+				"path": "/images/items/01_2334/1000134980_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134980_6.jpg",
+				"path": "/images/items/01_2334/1000134980_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134980_7.jpg",
+				"path": "/images/items/01_2334/1000134980_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134980_8.jpg",
+				"path": "/images/items/01_2334/1000134980_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134980_9.jpg",
+				"path": "/images/items/01_2334/1000134980_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134980_10.jpg",
+				"path": "/images/items/01_2334/1000134980_10.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2334/"
 }

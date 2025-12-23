@@ -5,6 +5,39 @@
 		"ja": "ＭＧ 1/100 ジム （ホワイト・ディンゴ隊仕様）",
 		"en": "MG 1/100 Jim (White Dingo Corps specification)"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/100",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -17,26 +50,14 @@
 		"month": 9
 	},
 	"targetAge": 15,
-	"scale": "1/100",
-	"images": [
-		"/images/items/01_1944/153_2877.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1944/",
-	"brandIds": [
-		"mg",
-		"pb_gunpla",
-		"pb_mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2877_o_1cgt3b5k7ldqunt1sgj17is7im23.jpg",
+				"path": "/images/items/01_1944/153_2877.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "2390"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1944/"
 }

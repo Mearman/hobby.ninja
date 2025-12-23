@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "RG 1/144 サザビー [クリアカラー]",
-		"en": "RG 1/144 Sazabi [Clear Color]"
+		"en": "RG 1/144 SAZABI[CLEAR COLOR]"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］",
+			"en": "RG [REAL GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア",
+			"en": "MOBILE SUIT GUNDAM Char’s Counterattack"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4121",
+			"url": "https://bandai-hobby.net/item/01_4121/",
+			"ja": "RG 1/144 ガンダムベース限定 Hi-νガンダム[チタニウムフィニッシュ]"
+		},
+		{
+			"id": "01_2734",
+			"url": "https://bandai-hobby.net/item/01_2734/",
+			"ja": "RG 1/144 ガンダムベース限定 νガンダム[チタニウムフィニッシュ]"
+		},
+		{
+			"id": "item-1000136789",
+			"url": "https://p-bandai.jp/item/item-1000136789",
+			"ja": "ＲＧ 1/144 νガンダム用ダブル・フィン・ファンネル拡張ユニット"
+		},
+		{
+			"id": "01_2343",
+			"url": "https://bandai-hobby.net/item/01_2343/",
+			"ja": "RG 1/144 νガンダム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -18,7 +64,6 @@
 		"day": 11
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"1/144スケール史上最大級のギミックを搭載した「RG サザビー」がクリアカラーになって登場！",
@@ -26,34 +71,30 @@
 			"• 豊富なハンドパーツ、サザビーを象徴する武装が付属し、各種ハンドパーツと高い可動域によって、両手持ちポーズなど劇中のポージングが再現できる！"
 		],
 		"en": [
-			"\"RG Sazabi\" equipped with the largest gimmick in 1/144 Scale history is now available in clear color!",
-			"• Weapons such as arm cylinders and funnels have been faithfully reproduced, and deployment mechanisms have been installed in propulsion parts such as verniers and backpacks based on actual machine research!",
-			"• A wealth of hand parts and armaments that symbolize Sazabi are included, and various hand parts and a high range of motion allow you to recreate poses from the play, such as a two-handed pose!"
+			"Equipped with one of the largest gimmicks in 1/144 scale history, \"RG Sotheby\" is now available in clear color!",
+			"• Armament such as cylinders and funnels on the arms are faithfully reproduced, and deployment mechanisms are installed in the propulsion parts such as verniers and backpacks according to actual machine examination!",
+			"• A wide variety of hand parts and weapons that symbolize Sotheby's are included, and various hand parts and a high range of motion allow you to reproduce poses in the play, such as two-handed poses!"
 		]
 	},
-	"images": [
-		"/images/items/01_2326/1000160168_1.jpg",
-		"/images/items/01_2326/1000160168_2.jpg",
-		"/images/items/01_2326/1000160168_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160168_1.jpg",
+				"path": "/images/items/01_2326/1000160168_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160168_2.jpg",
+				"path": "/images/items/01_2326/1000160168_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160168_3.jpg",
+				"path": "/images/items/01_2326/1000160168_3.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2326/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4121",
-		"01_2734",
-		"item-1000136789",
-		"01_2343"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2326/"
 	}
 }

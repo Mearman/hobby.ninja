@@ -3,8 +3,43 @@
 	"type": "item",
 	"name": {
 		"ja": "RG 1/144 ユニコーンガンダム",
-		"en": "RG 1/144 Unicorn Gundam"
+		"en": "RG 1/144 UNICORN GUNDAM"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]",
+			"en": "MOBILE SUIT GUNDAM UC (Unicorn)"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000225937",
+			"url": "https://p-bandai.jp/item/item-1000225937/",
+			"ja": "ＲＧ 1/144 シナンジュ用 拡張セット"
+		},
+		{
+			"id": "01_660",
+			"url": "https://bandai-hobby.net/item/01_660/",
+			"ja": "RG 1/144 MSN-06S シナンジュ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -18,7 +53,6 @@
 		"day": 5
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• GUNPLA EVOLUTION PROJECT第2弾として、リアリティを追求したフォルムと変身ギミックが再現された「RG ユニコーンガンダム」がついに登場！",
@@ -27,63 +61,106 @@
 			"• 通常パッケージのほか、初回限定パッケージ［プレミアム“ユニコーンモード”ボックス］も登場！"
 		],
 		"en": [
-			"• As the second installment of GUNPLA EVOLUTION PROJECT, \"RG Unicorn Gundam\", which reproduces the realistic form and transformation gimmick, is finally here!",
-			"• \"EVOLUTION POINT \" is \" TRANSFORMATION\", achieving transformation that exceeds the limits within the constraints of 1/144 Scale!",
-			"• The new mechanism \"Advanced MS Framework\" equipped with three gimmicks achieves both high stability after assembly and movability of each part!",
-			"• In addition to the regular package, a first-time limited package [Premium “Unicorn Mode” Box] is also available!"
+			"• As the second installment of the GUNPLA EVOLUTION PROJECT, the \"RG Unicorn GUNDAM\" is finally here, with a realistic form and transformation gimmick!",
+			"• \"EVOLUTION POINT\" is a \"TRANSFORMATION\" that realizes a transformation that exceeds the limit within the constraints of 1/144 scale!",
+			"• The new \"Advanced MS Framework\" mechanism equipped with three gimmicks achieves both high stability after assembly and the movement of each part!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・マグナム×1",
-			"ビーム・サーベル×2",
-			"シールド×1",
-			"ハイパー・バズーカ×１"
-		],
-		"en": [
-			"Beam Magnum x 1",
-			"Beam saber x2",
-			"Seal × 1",
-			"Hyper bazooka x1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×10",
-			"リアリスティックデカール×１",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 10",
-			"Realistic decal x 1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1085/1000117156_1.jpg",
-		"/images/items/01_1085/1000117156_10.jpg",
-		"/images/items/01_1085/1000117156_2.jpg",
-		"/images/items/01_1085/1000117156_3.jpg",
-		"/images/items/01_1085/1000117156_4.jpg",
-		"/images/items/01_1085/1000117156_5.jpg",
-		"/images/items/01_1085/1000117156_6.jpg",
-		"/images/items/01_1085/1000117156_7.jpg",
-		"/images/items/01_1085/1000117156_8.jpg",
-		"/images/items/01_1085/1000117156_9.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・マグナム",
+				"en": "Beam Magnum"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "• Molded product"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "• Realistic Decal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハイパー・バズーカ×１",
+				"en": "• Instruction manual"
+			}
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 10
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117156_1.jpg",
+				"path": "/images/items/01_1085/1000117156_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117156_2.jpg",
+				"path": "/images/items/01_1085/1000117156_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117156_3.jpg",
+				"path": "/images/items/01_1085/1000117156_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117156_4.jpg",
+				"path": "/images/items/01_1085/1000117156_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117156_5.jpg",
+				"path": "/images/items/01_1085/1000117156_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117156_6.jpg",
+				"path": "/images/items/01_1085/1000117156_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117156_7.jpg",
+				"path": "/images/items/01_1085/1000117156_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117156_8.jpg",
+				"path": "/images/items/01_1085/1000117156_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117156_9.jpg",
+				"path": "/images/items/01_1085/1000117156_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000117156_10.jpg",
+				"path": "/images/items/01_1085/1000117156_10.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1085/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000225937",
-		"01_660"
-	],
-	"manualId": "0674"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1085/"
+	}
 }

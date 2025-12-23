@@ -5,6 +5,50 @@
 		"ja": "HGBD 1/144　ガンダムダブルオースカイ",
 		"en": "HGBD 1/144 Gundam Double O Sky"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 31
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ダブルオーダイバーエースに大改修を行い、新たに生まれ変わったリクのガンプラが登場！",
@@ -28,63 +71,93 @@
 		],
 		"en": [
 			"00 Diver Ace has undergone a major renovation, and Riku's Gunpla has been reborn!",
-			"• Reproduce the shape of this machine's unique equipment \"Sky Drive Unit\" which incorporates Destiny's wing unit into GN Drive!",
-			"• A variety of weapons are included, including a beam rifle, beam saber, buster sword, and long rifle, and the buster sword and long rifle can be suspended on the sky drive unit!",
+			"• Reproduce the shape of this machine's unique equipment \"Sky Drive Unit\", which incorporates Destiny's wing unit into the GN Drive!",
+			"• Comes with a variety of weapons such as a beam rifle, beam saber, buster sword, and long rifle, and the buster sword and long rifle can be suspended on the sky drive unit!",
 			"• With a wide range of motion, you can enjoy powerful action poses just like in the movie!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームライフル×1",
-			"ビームサーベル×2",
-			"バスターソード×1",
-			"ロングライフル×1",
-			"バックパック用ジョイントパーツ×1",
-			"手首パーツ（左平手）×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "バスターソード"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ロングライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バックパック用ジョイントパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "手首パーツ（左平手）"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 8
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2331_o_1ckhv6j8u1p2itne1pbbgcp4o723.jpg",
+				"path": "/images/items/01_1409/153_2331.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2331_o_1ckhv6u5216qs52k1oi6137h4dl2d.jpg",
+				"path": "/images/items/01_1409/155_2331.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2331_o_1ckhv72vj1b7ifr2i2b10am1v9f2i.jpg",
+				"path": "/images/items/01_1409/156_2331.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2331_o_1ckhv787b14t61qph101o1ukj7c42n.jpg",
+				"path": "/images/items/01_1409/157_2331.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2331_o_1ckhv7i7c1hlc1e581qb3kjm1apq2s.jpg",
+				"path": "/images/items/01_1409/158_2331.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x 1",
-			"Beam saber x2",
-			"Buster sword x1",
-			"Long rifle x 1",
-			"Backpack joint parts x 1",
-			"Wrist parts (left palm) x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×8",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 8",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1409/153_2331.jpg",
-		"/images/items/01_1409/155_2331.jpg",
-		"/images/items/01_1409/156_2331.jpg",
-		"/images/items/01_1409/157_2331.jpg",
-		"/images/items/01_1409/158_2331.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1409/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "1028"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1409/"
 }

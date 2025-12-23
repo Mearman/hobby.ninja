@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 ガンダムデュナメス",
-		"en": "MG 1/100 Gundam Dynames"
+		"en": "MG 1/100 GUNDAM DYNAMES"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]",
+			"en": "MG [MASTER GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]",
+			"en": "MOBILE SUIT GUNDAM OO"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216602",
+			"url": "https://p-bandai.jp/item/item-1000216602/",
+			"ja": "ＭＧ 1/100 ガンダムアストレア＋プロトＧＮツインブロードブレイド"
+		},
+		{
+			"id": "01_5526",
+			"url": "https://bandai-hobby.net/item/01_5526/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムエクシア [クリアカラー]"
+		},
+		{
+			"id": "01_5102",
+			"url": "https://bandai-hobby.net/item/01_5102/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムナドレ"
+		},
+		{
+			"id": "01_4422",
+			"url": "https://bandai-hobby.net/item/01_4422/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムキュリオス[クリアカラー］"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -18,84 +64,140 @@
 		"day": 22
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム 00』よりガンダムデュナメスがついに完全新規造形でMGに登場！",
+			"『機動戦士ガンダム00』よりガンダムデュナメスがついに完全新規造形でMGに登場！",
 			"• GNスナイパーライフルのスタンドを展開し、本体を地面に伏せた「狙撃」の構えも再現可能。",
 			"• スナイプポーズの動きに対応した頭部ギミック、脚部関節構造により緊張感が漂うポージングを再現できる。",
 			"• GNフル・シールドの展開を再現。",
 			"• 腰部・膝部のミサイル・信号弾のハッチ開閉やGNスラスターの展開ギミックなどMGならではのギミックを搭載"
 		],
 		"en": [
-			"Gundam Dynames from \"Mobile Suit Gundam 00\" finally appears in MG with a completely new model!",
-			"• It is also possible to recreate the \"sniper\" stance with the GN sniper rifle's stand expanded and the main body face down on the ground.",
-			"• The head gimmick corresponds to the movement of the snipe pose, and the leg joint structure allows you to recreate tense poses.",
-			"• Reproduce the development of GN Full Seal.",
-			"• Equipped with gimmicks unique to MG, such as opening and closing hatches for missiles and signal bullets on the waist and knees, and deploying GN thrusters."
+			"From \"MOBILE SUIT GUNDAM 00\" GUNDAM Dynames finally appears in MG in a completely new model!",
+			"• The stand of the GN sniper rifle can be unfolded, and the \"sniping\" stance with the main body face down on the ground can also be reproduced.■ The head gimmick that corresponds to the movement of the snipe pose and the leg joint structure can reproduce poses with a sense of tension.■ Reproduced the deployment of the GN Full Shield.■ Equipped with gimmicks unique to MG, such as opening and closing the hatches of missiles and signal bullets in the waist and knees, and the deployment gimmick of the GN thruster."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"GNスナイパーライフル×1",
-			"GNビームピストル＆ホルスター×2",
-			"GNビームサーベル×2",
-			"GNシールド×2",
-			"GNフルシールド×2"
-		],
-		"en": [
-			"GN sniper rifle x1",
-			"GN beam pistol & holster x2",
-			"GN beam saber x2",
-			"GNSeal × 2",
-			"GN Full Seal ×2"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×17",
-			"ホイルシール×1",
-			"マーキングシール×1",
-			"PPシート×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 17",
-			"Foil Seal×1",
-			"MarkingSeal×1",
-			"PP sheet x 1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2127/1000134089_1.jpg",
-		"/images/items/01_2127/1000134089_10.jpg",
-		"/images/items/01_2127/1000134089_11.jpg",
-		"/images/items/01_2127/1000134089_12.jpg",
-		"/images/items/01_2127/1000134089_2.jpg",
-		"/images/items/01_2127/1000134089_3.jpg",
-		"/images/items/01_2127/1000134089_4.jpg",
-		"/images/items/01_2127/1000134089_5.jpg",
-		"/images/items/01_2127/1000134089_6.jpg",
-		"/images/items/01_2127/1000134089_7.jpg",
-		"/images/items/01_2127/1000134089_8.jpg",
-		"/images/items/01_2127/1000134089_9.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "GNスナイパーライフル",
+				"en": "• GN Sniper Rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GNビームピストル＆ホルスター",
+				"en": "【Product details】■ Molded products"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "GNビームサーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "GNシールド"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "GNフルシールド"
+			},
+			"count": 2
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 17
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "PPシート"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134089_1.jpg",
+				"path": "/images/items/01_2127/1000134089_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134089_2.jpg",
+				"path": "/images/items/01_2127/1000134089_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134089_3.jpg",
+				"path": "/images/items/01_2127/1000134089_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134089_4.jpg",
+				"path": "/images/items/01_2127/1000134089_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134089_5.jpg",
+				"path": "/images/items/01_2127/1000134089_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134089_6.jpg",
+				"path": "/images/items/01_2127/1000134089_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134089_7.jpg",
+				"path": "/images/items/01_2127/1000134089_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134089_8.jpg",
+				"path": "/images/items/01_2127/1000134089_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134089_9.jpg",
+				"path": "/images/items/01_2127/1000134089_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134089_10.jpg",
+				"path": "/images/items/01_2127/1000134089_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134089_11.jpg",
+				"path": "/images/items/01_2127/1000134089_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134089_12.jpg",
+				"path": "/images/items/01_2127/1000134089_12.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2127/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216602",
-		"01_5526",
-		"01_5102",
-		"01_4422"
-	],
-	"manualId": "0862"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2127/"
+	}
 }

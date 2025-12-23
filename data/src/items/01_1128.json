@@ -5,6 +5,50 @@
 		"ja": "HGBF 1/144 リバーシブルガンダム",
 		"en": "HGBF 1/144 Reversible Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 新作ショートフィルム『ガンダムビルドファイターズ バトローグ』第1話に登場する、リボーンズガンダムベースの新ガンプラがHGBF化！",
@@ -28,56 +71,73 @@
 		"en": [
 			"• The new Gunpla based on Reborns Gundam, which appears in the first episode of the new short film \"Gundam Build Fighters Battlogue\", is now HGBF!",
 			"• The GN beam pistol and claw equipped on both arms are reproduced with new modeling and can be flexibly moved!",
-			"• By replacing it, it is possible to transform into tank mode and cannon mode, and by deploying the GN dragon claws on both arms, you can reproduce a more aggressive style!"
+			"• By replacing it, it can be transformed into tank mode or cannon mode, and by deploying the GN dragon claws on both arms, you can recreate a more aggressive style!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"GNビームピストル×2",
-			"GNドラゴンクロー×2",
-			"大型GNビームサーベル×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "GNビームピストル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "GNドラゴンクロー"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "大型GNビームサーベル"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 10
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2060_s_wpjhx54btecw2269wskmp0sm0qbl.jpg",
+				"path": "/images/items/01_1128/153_2060.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2060_s_8vfvqe3nw6uakoa3z2hajmqdmtp2.jpg",
+				"path": "/images/items/01_1128/155_2060.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2060_s_xa2498hgr2k5koffcwwy57av79i2.jpg",
+				"path": "/images/items/01_1128/156_2060.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2060_s_gij7xnrqsrefuwrqamxexivzjlg8.jpg",
+				"path": "/images/items/01_1128/157_2060.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2060_s_7jcpkceb2w4wjue377swrxujdwmn.jpg",
+				"path": "/images/items/01_1128/158_2060.jpg"
+			}
 		],
-		"en": [
-			"GN beam pistol x2",
-			"GN Dragon Claw x2",
-			"Large GN beam saber x2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×10",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 10",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1128/153_2060.jpg",
-		"/images/items/01_1128/155_2060.jpg",
-		"/images/items/01_1128/156_2060.jpg",
-		"/images/items/01_1128/157_2060.jpg",
-		"/images/items/01_1128/158_2060.jpg",
-		"/images/items/01_1128/01_1128_inst_1.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1128/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
-	"manualId": "0058"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1128/"
 }

@@ -5,6 +5,49 @@
 		"ja": "メカコレクション ウルトラマンシリーズ No.14 ウルトラホーク１号 β号",
 		"en": "Mecha Collection Ultraman Series No.14 Ultra Hawk No. 1 β"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "ultraman",
+			"url": "https://bandai-hobby.net/series/ultraman/",
+			"ja": "ウルトラマン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000118308",
+			"url": "http://p-bandai.jp/item/item-1000118308/",
+			"ja": "メカコレクション ウルトラマンシリーズ ウルトラ警備隊セット [エクストラフィニッシュ]"
+		},
+		{
+			"id": "item-1000115996",
+			"url": "http://p-bandai.jp/item/item-1000115996/",
+			"ja": "メカコレクション ウルトラマンシリーズ 科学特捜隊セット [エクストラフィニッシュ]"
+		},
+		{
+			"id": "01_1090",
+			"url": "https://bandai-hobby.net/item/01_1090/",
+			"ja": "メカコレクション ウルトラマンシリーズ No.13 ウルトラホーク１号 α号"
+		},
+		{
+			"id": "01_1092",
+			"url": "https://bandai-hobby.net/item/01_1092/",
+			"ja": "メカコレクション ウルトラマンシリーズ No.15 ウルトラホーク１号 γ号"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -27,50 +70,53 @@
 		],
 		"en": [
 			"Ultra Hawk No. 1 β of the Ultra Guard that appears in \"Ultra Seven\" is now available!",
-			"• Palm size and reasonable price, perfect for collection and display. Although small, the form and details of the machine are faithfully reproduced.",
-			"• No. 13 Ultra Hawk No. 1 α and No. 15 Ultra Hawk No. 1 γ can be combined!",
+			"• Palm-sized and reasonably priced, perfect for collection and display. Although small, the form and details of the machine are faithfully reproduced.",
+			"• No. 13 Ultra Hawk 1 α and No. 15 Ultra Hawk 1 γ can be combined!",
 			"• A pedestal inspired by the opening is completed by combining the three pieces!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書（箱裏側に記載）"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2022_s_de954gnfusk8iaxq90b28s69i5ik.jpg",
+				"path": "/images/items/01_1091/153_2022.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2022_s_7y37zc87gy5ycggtm0x7i0fpqjz0.jpg",
+				"path": "/images/items/01_1091/155_2022.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2022_s_hhdc3z68oc4ehzs5laf0det1v3jv.jpg",
+				"path": "/images/items/01_1091/156_2022.jpg"
+			}
 		],
-		"en": [
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"水転写式デカール×１",
-			"取扱説明書（箱裏側に記載）"
-		],
-		"en": [
-			"Molded product x 4",
-			"Water transfer decal x 1",
-			"Instruction manual (written on the back of the box)"
-		]
-	},
-	"images": [
-		"/images/items/01_1091/153_2022.jpg",
-		"/images/items/01_1091/155_2022.jpg",
-		"/images/items/01_1091/156_2022.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1091/",
-	"brandIds": [
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"ultraman"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000118308",
-		"item-1000115996",
-		"01_1090",
-		"01_1092"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1091/"
 }

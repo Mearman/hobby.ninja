@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムバルバトスルプスレクス[クリアカラー]",
 		"en": "HG 1/144 Gundam Barbatos Lupus Rex [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6773",
+			"url": "https://bandai-hobby.net/item/01_6773/",
+			"ja": "HG 1/144 ガンダムザガン"
+		},
+		{
+			"id": "01_6763",
+			"url": "https://bandai-hobby.net/item/01_6763/",
+			"ja": "HG 1/144 モンキーロディ(598機)/モンキークラブロディ"
+		},
+		{
+			"id": "01_4103",
+			"url": "https://bandai-hobby.net/item/01_4103/",
+			"ja": "HG 1/144 ジークルーネ"
+		},
+		{
+			"id": "01_4240",
+			"url": "https://bandai-hobby.net/item/01_4240/",
+			"ja": "HG 1/144 ガンダム端白星[クリアカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1870,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
@@ -28,28 +71,14 @@
 			"HG Gundam Barbatos Lupus Rex is now available in event-limited clear color!"
 		]
 	},
-	"images": [
-		"/images/items/01_1918/153_2851.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1918/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"tekketsu"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4103",
-		"01_4240",
-		"01_4188",
-		"01_4094"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2851_s_uvs0ra6r9rxlqu3xsmlhssnpwspj.jpg",
+				"path": "/images/items/01_1918/153_2851.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "0795"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1918/"
 }

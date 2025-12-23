@@ -5,6 +5,49 @@
 		"ja": "BB戦士239 シャイニングガンダム",
 		"en": "BB Senshi 239 Shining Gundam"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "ggundam",
+			"url": "https://bandai-hobby.net/series/ggundam/",
+			"ja": "機動武闘伝Ｇガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2322",
+			"url": "https://bandai-hobby.net/item/01_2322/",
+			"ja": "BB戦士245 デビルガンダム"
+		},
+		{
+			"id": "01_5846",
+			"url": "https://bandai-hobby.net/item/01_5846/",
+			"ja": "ＢＢ戦士 138Gガンダム"
+		},
+		{
+			"id": "01_5828",
+			"url": "https://bandai-hobby.net/item/01_5828/",
+			"ja": "ＢＢ戦士 136ガンダムマックスター"
+		},
+		{
+			"id": "01_5807",
+			"url": "https://bandai-hobby.net/item/01_5807/",
+			"ja": "ＢＢ戦士 134ドラゴンガンダム"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -19,31 +62,28 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"「機動武闘伝G ガンダム」に登場するシャイニングガンダムをBB戦士でリニューアル商品化。今までのSDにはない関節を設けて、腕、肩、足、腰、首の可動をリアルに再現しています。ノーマルモードからスーパーモードへの変形が可能です。また、MGシリーズの手首を取り付けることが出来ます。"
+			"「機動武闘伝Gガンダム」に登場するシャイニングガンダムをBB戦士でリニューアル商品化。今までのSDにはない関節を設けて、腕、肩、足、腰、首の可動をリアルに再現しています。ノーマルモードからスーパーモードへの変形が可能です。また、MGシリーズの手首を取り付けることが出来ます。"
 		],
 		"en": [
-			"The Shining Gundam that appears in \"Mobile Fighter G Gundam\" has been renewed and commercialized as a BB Senshi. It has joints that were not found in previous SD models, and realistically reproduces the movement of the arms, shoulders, legs, hips, and neck. Can transform from normal mode to super mode. Also, the wrist of the MG series can be attached."
+			"The Shining Gundam that appears in \"Mobile Fighter GGundam\" has been renewed and commercialized as a BB Senshi. It has joints that were not found in previous SD models, and realistically reproduces the movement of the arms, shoulders, legs, hips, and neck. Can transform from normal mode to super mode. Also, the wrist of the MG series can be attached."
 		]
 	},
-	"images": [
-		"/images/items/01_1980/153_290.jpg",
-		"/images/items/01_1980/155_290.jpg",
-		"/images/items/01_1980/156_290.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1980/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"ggundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2322",
-		"01_5846",
-		"01_5828",
-		"01_5807"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_290_s_mqj2jw79oqpremax6et8pwewb90s.jpg",
+				"path": "/images/items/01_1980/153_290.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_290_s_uoxrersesrmlhs9uy2fxn85v7o1y.jpg",
+				"path": "/images/items/01_1980/155_290.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_290_s_wiacq18fqs97wd6w6vdy9yxkkrhz.jpg",
+				"path": "/images/items/01_1980/156_290.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1980/"
 }

@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 防衛作戦用オプションアーマー[シエルノヴァ用/グレー]",
 		"en": "30MM 1/144 Optional Armor for Defense Operations [For Cielnova/Gray]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 13
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMのオプションアーマーシリーズにシエルノヴァ用アイテムが登場！",
@@ -31,36 +73,42 @@
 			"• The armor is equipped with an opening and closing gimmick."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"アーマー×１式",
-			"大型ハンドパーツ×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "アーマー×１式"
+			}
+		},
+		{
+			"name": {
+				"ja": "大型ハンドパーツ×１"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3745_s_3u20inpt8h7v83qq5rdnb6m2peyb.jpg",
+				"path": "/images/items/01_2756/153_3745.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3745_s_z3jods4h13srha6s28qczcpak3jt.jpg",
+				"path": "/images/items/01_2756/155_3745.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3745_s_9v45n4vu37nqxi6yw039t3f9l2gb.jpg",
+				"path": "/images/items/01_2756/156_3745.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3745_s_v28b5usoikkm5t79i019nvjujufe.jpg",
+				"path": "/images/items/01_2756/157_3745.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3745_s_6kpxg3m7tjvbm5ukolqdjs8p3tvz.jpg",
+				"path": "/images/items/01_2756/158_3745.jpg"
+			}
 		],
-		"en": [
-			"Armor x 1 set",
-			"Large hand parts x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2756/153_3745.jpg",
-		"/images/items/01_2756/155_3745.jpg",
-		"/images/items/01_2756/156_3745.jpg",
-		"/images/items/01_2756/157_3745.jpg",
-		"/images/items/01_2756/158_3745.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2756/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3688"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2756/"
 }

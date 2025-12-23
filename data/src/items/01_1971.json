@@ -5,6 +5,60 @@
 		"ja": "ＲＧ 1/144 ウイングガンダムゼロ ＥＷ & ドライツバーク［チタニウムフィニッシュ］",
 		"en": "RG 1/144 Wing Gundam Zero EW & Dryzberg [Titanium Finish]"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000213249",
+			"url": "https://p-bandai.jp/item/item-1000213249/",
+			"ja": "ＨＧ 1/144 アルトロンガンダム"
+		},
+		{
+			"id": "item-1000194972",
+			"url": "https://p-bandai.jp/item/item-1000194972/",
+			"ja": "ＭＧ 1/100 ガンダムエピオン EW (シュトゥルム・ウント・ドラング装備)"
+		},
+		{
+			"id": "item-1000183318",
+			"url": "https://p-bandai.jp/item/item-1000183318/",
+			"ja": "ＨＧ 1/144 ガンダムデスサイズヘル"
+		},
+		{
+			"id": "item-1000170382",
+			"url": "https://p-bandai.jp/item/item-1000170382/",
+			"ja": "ＨＧ 1/144 ガンダムヘビーアームズ改"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 7260,
 		"currency": "JPY",
@@ -17,31 +71,14 @@
 		"month": 10
 	},
 	"targetAge": 15,
-	"scale": "1/144",
-	"images": [
-		"/images/items/01_1971/153_2901.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1971/",
-	"brandIds": [
-		"rg",
-		"pb_rg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000213249",
-		"item-1000194972",
-		"item-1000183318",
-		"item-1000170382"
-	],
-	"manualId": "2728",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2901_o_1ci3m5qme1e6eco6tj01aug1tni23.jpg",
+				"path": "/images/items/01_1971/153_2901.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1971/"
 }

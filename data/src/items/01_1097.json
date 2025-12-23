@@ -5,6 +5,34 @@
 		"ja": "ぷちゅあらいず ガールズ＆パンツァー みほ・沙織・華セット",
 		"en": "Puchuaraiz Girls & Panzer Miho, Saori, Hana Set"
 	},
+	"brands": [
+		{
+			"id": "peti",
+			"url": "https://bandai-hobby.net/brand/peti/",
+			"ja": "ぷちゅあらいず"
+		}
+	],
+	"series": [
+		{
+			"id": "garupan",
+			"url": "https://bandai-hobby.net/series/garupan/",
+			"ja": "ガールズ＆パンツァー"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1098",
+			"url": "https://bandai-hobby.net/item/01_1098/",
+			"ja": "ぷちゅあらいず ガールズ＆パンツァー 優花里・麻子セット"
+		}
+	],
 	"price": {
 		"amount": 3190,
 		"currency": "JPY",
@@ -32,67 +60,118 @@
 			"Girls & Panzer is Panzer Four!",
 			"Girls & Panzer is now available in the deformed plastic model series \"Puchuaraiz\", where you can create multiple characters at once without any tools and enjoy reproducing various scenes by playing with recombination!",
 			"• Body parts for all members and panzer jackets for changing clothes are included! You can enjoy various reenactments from the play!",
-			"• A wealth of limb parts are included! Various poses are possible!",
-			"• Reproduce various expressions with Tetron Seal! Furthermore, the surfaces of the parts are matte processed to express the particular skin texture!",
-			"• General-purpose face parts are included, and multiple types of Seals with different facial expressions for each character are included!",
+			"• Includes a variety of limb parts! Various poses are possible!",
+			"• Recreate various expressions with Tetron Seal! Furthermore, the surfaces of the parts are matte processed to express the particular skin texture!",
+			"• Comes with general-purpose face parts and multiple types of Seals with different facial expressions for each character!",
 			"• The pedestal is designed with the school emblem of Oarai Girls' High School!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"共通ディスプレイベース×3",
-			"共通ボディ×3",
-			"共通脚・腕・掌パーツ×3",
-			"共通汎用顔パーツ×3",
-			"共通制服×3",
-			"共通パンツァージャケット×3",
-			"専用顔・髪パーツ×各1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "共通ディスプレイベース"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "共通ボディ"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "共通脚・腕・掌パーツ"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "共通汎用顔パーツ"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "共通制服"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "共通パンツァージャケット"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "専用顔・髪パーツ×各1"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 10
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "取扱説明書×１"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2028_s_6jbplgcxgn2fp7gutgvougmngfz7.jpg",
+				"path": "/images/items/01_1097/153_2028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2028_s_u6svbtbjcrgjx513fqeawfn786cb.jpg",
+				"path": "/images/items/01_1097/155_2028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2028_s_ex647c2vvejsjn9u6q1rpecg6p1a.jpg",
+				"path": "/images/items/01_1097/156_2028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2028_s_m1adwvxiq63hj7whalyntpad3682.jpg",
+				"path": "/images/items/01_1097/157_2028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2028_s_h5y9gs7so4qyculvj8gump6hl47z.jpg",
+				"path": "/images/items/01_1097/158_2028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2028_s_n8keuzdppwqyl3qcl610sr4am40x.jpg",
+				"path": "/images/items/01_1097/159_2028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2028_s_x5wbathp5ud7qq3n98cvc42jmw8n.jpg",
+				"path": "/images/items/01_1097/189_2028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2028_s_qo6u1dqkz3glnfcyl36uk9vi2xlj.jpg",
+				"path": "/images/items/01_1097/190_2028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2028_s_8jui4k63nn1wgwtcwpgli3w4dswn.jpg",
+				"path": "/images/items/01_1097/191_2028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2028_s_uoupxz2vxbltaiuj2y6y6ced89hs.jpg",
+				"path": "/images/items/01_1097/192_2028.jpg"
+			}
 		],
-		"en": [
-			"Common display base x 3",
-			"Common body x 3",
-			"Common leg/arm/palm parts x3",
-			"Common general purpose face parts x 3",
-			"Common uniform x3",
-			"Common panzer jacket x 3",
-			"Exclusive face/hair parts x 1 each"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×10",
-			"シール×2",
-			"取扱説明書×１"
-		],
-		"en": [
-			"Molded product x 10",
-			"Seal×2",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1097/153_2028.jpg",
-		"/images/items/01_1097/155_2028.jpg",
-		"/images/items/01_1097/156_2028.jpg",
-		"/images/items/01_1097/157_2028.jpg",
-		"/images/items/01_1097/158_2028.jpg",
-		"/images/items/01_1097/159_2028.jpg",
-		"/images/items/01_1097/189_2028.jpg",
-		"/images/items/01_1097/190_2028.jpg",
-		"/images/items/01_1097/191_2028.jpg",
-		"/images/items/01_1097/192_2028.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1097/",
-	"brandIds": [
-		"peti"
-	],
-	"seriesIds": [
-		"garupan"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1098"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1097/"
 }

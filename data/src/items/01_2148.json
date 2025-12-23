@@ -5,6 +5,44 @@
 		"ja": "1/100 エールストライクガンダム",
 		"en": "1/100 Ale Strike Gundam"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "01_5440",
+			"url": "https://bandai-hobby.net/item/01_5440/",
+			"ja": "ENTRY GRADE 1/144 ストライクルージュ"
+		},
+		{
+			"id": "01_5441",
+			"url": "https://bandai-hobby.net/item/01_5441/",
+			"ja": "オプションパーツセット ガンプラ14(ガンバレルストライカー)"
+		},
+		{
+			"id": "01_5365",
+			"url": "https://bandai-hobby.net/item/01_5365/",
+			"ja": "BB戦士 C.E.運命の対決セット"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,39 +56,54 @@
 		"day": 7
 	},
 	"targetAge": 8,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム SEED」に登場する主人公機「エールストライクガンダム」の1/100スケールのプラモデル。1/100スケールならではのパーツの細分化によって、よりリアルに設定のカラーリングを再現しています。増加装備「エールストライカー」は着脱式でバーニア部分は可動します。主人公キラ・ヤマトの1/20フィギュアが付属します。"
+			"「機動戦士ガンダムSEED」に登場する主人公機「エールストライクガンダム」の1/100スケールのプラモデル。1/100スケールならではのパーツの細分化によって、よりリアルに設定のカラーリングを再現しています。増加装備「エールストライカー」は着脱式でバーニア部分は可動します。主人公キラ・ヤマトの1/20フィギュアが付属します。"
 		],
 		"en": [
-			"A 1/100 scale plastic model of the protagonist machine \"Ale Strike Gundam \" that appears in \" Mobile Suit Gundam SEED \". By subdividing parts unique to 1/100 Scale, the coloring of the setting is reproduced more realistically. The additional equipment \" Ale Striker\" is removable and the vernier part is movable. A 1/20 figure of the main character Kira Yamato is included."
+			"A 1/100 scale plastic model of the protagonist machine \"Ale Strike Gundam\" that appears in \"Mobile Suit Gundam SEED\". By subdividing parts unique to 1/100 Scale, the coloring of the setting is reproduced more realistically. The additional equipment \"Ale Striker\" is removable and the vernier part is movable. A 1/20 figure of the main character Kira Yamato is included."
 		]
 	},
-	"images": [
-		"/images/items/01_2148/153_309.jpg",
-		"/images/items/01_2148/155_309.jpg",
-		"/images/items/01_2148/156_309.jpg",
-		"/images/items/01_2148/157_309.jpg",
-		"/images/items/01_2148/158_309.jpg",
-		"/images/items/01_2148/159_309.jpg",
-		"/images/items/01_2148/189_309.jpg",
-		"/images/items/01_2148/190_309.jpg",
-		"/images/items/01_2148/191_309.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2148/",
-	"brandIds": [],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5440",
-		"01_5441",
-		"01_5365"
-	],
-	"manualId": "1127"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_309_s_nmincz2vjffn83upex6g8wzqwuoa.jpg",
+				"path": "/images/items/01_2148/153_309.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_309_s_20paa26rb9yrkwi4e2p0lqixuant.jpg",
+				"path": "/images/items/01_2148/155_309.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_309_s_xewisxka3r3uw6iy4r1i2vdipvpf.jpg",
+				"path": "/images/items/01_2148/156_309.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_309_s_yngjtm9rkz9uj7rfilcsy431npah.jpg",
+				"path": "/images/items/01_2148/157_309.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_309_s_7baxt0mbp39egzx6rinpsujqfowi.jpg",
+				"path": "/images/items/01_2148/158_309.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_309_s_5gkr2b66m9kaa27ep9831nmcosof.jpg",
+				"path": "/images/items/01_2148/159_309.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_309_s_3vr9ay0y4pckv7qtho4yk5mfat7t.jpg",
+				"path": "/images/items/01_2148/189_309.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_309_s_8yjj9of9mpfn9d3caer4o8fina45.jpg",
+				"path": "/images/items/01_2148/190_309.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_309_s_kdfod550op1d8n54j6er4nzhm5nz.jpg",
+				"path": "/images/items/01_2148/191_309.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2148/"
 }

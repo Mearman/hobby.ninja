@@ -5,6 +5,44 @@
 		"ja": "1/100 リアルタイプ 旧型ザク",
 		"en": "1/100 real type old model Zaku"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 4
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、1/100スケールで、MSVシリーズリアルタイプ旧ザクが登場。",
@@ -28,22 +65,18 @@
 			"A model that pursues realism with a military-style molding color. Comes with a special decal. The head swings back and forth and reproduces the movement of the mono-eye. The legs can move in a V-shape, and the ankles can also swing forward, backward, left and right. Zaku Bazooka and Heat Hawk are included. Heat Hawk can be attached to the main body."
 		]
 	},
-	"images": [
-		"/images/items/01_3156/153_4118.jpg",
-		"/images/items/01_3156/155_4118.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3156/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4118_s_0pv8wosd04pq9fb2naymtlm23ke4.jpg",
+				"path": "/images/items/01_3156/153_4118.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4118_s_jdockimkhisnbabxxu66es63nhht.jpg",
+				"path": "/images/items/01_3156/155_4118.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3156/"
 }

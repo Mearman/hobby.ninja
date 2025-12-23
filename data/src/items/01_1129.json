@@ -5,6 +5,50 @@
 		"ja": "HGBC 1/144 バリスティックウエポンズ",
 		"en": "HGBC 1/144 Ballistic Weapons"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• ジオン系MSに相性抜群の多彩な武器セットがHGBCで登場！",
@@ -28,65 +71,94 @@
 			"• さらに、片手持ちに適した小型のライフルが付属！"
 		],
 		"en": [
-			"• A variety of weapon sets that are perfect for Zeon MS are now available at HGBC!",
-			"• \"W Beam Tomahawk\" is equipped with a telescopic gimmick that can be rearranged to make it larger than the HG main body!",
-			"• The \"Funnel Pod\" comes with three funnels, and the design is an arrangement of those equipped with Sazabi!",
-			"• The \"bazooka\" can be equipped in your backpack, and can be held with both hands using the grip and connecting arm! Also, it can be attached to Gunpla with a 3mm hole via the arm!",
-			"• In addition, a small rifle suitable for one-handed holding is included!"
+			"• A variety of weapon sets that are perfectly compatible with Zeon-based MS are now available at HGBC!",
+			"• \"W Beam Tomahawk\" is equipped with a telescoping gimmick that can be recombined to make it larger than the HG main body!",
+			"• \"Funnel Pod\" comes with 3 funnels, and the design is an arrangement of the Sazabi equipment!",
+			"• \"Bazooka\" can be equipped in your backpack, and can be held with both hands using the grip and connecting arm! Also, it can be attached to Gunpla with a 3mm hole via the arm!",
+			"• Additionally, a small rifle suitable for one-handed holding is included!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"Wビームトマホーク×１",
-			"ライフル×1",
-			"バズーカ×1",
-			"ファンネルポッド×1",
-			"ファンネル×3"
+	"accessories": [
+		{
+			"name": {
+				"ja": "Wビームトマホーク×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バズーカ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ファンネルポッド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ファンネル"
+			},
+			"count": 3
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2061_s_8lemzku556bble2vpkcwcw0xgmtm.jpg",
+				"path": "/images/items/01_1129/153_2061.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2061_s_n28db6z9dk7y6q6to7o2601ozll4.jpg",
+				"path": "/images/items/01_1129/155_2061.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2061_s_twa8c1ptci9o8ogbg3fvmc6o1iqg.jpg",
+				"path": "/images/items/01_1129/156_2061.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2061_s_354i6to3z6qeaw6zo0c6j9oq69v2.jpg",
+				"path": "/images/items/01_1129/157_2061.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2061_s_ymgf97df4wu9ecxytbmovffu22n2.jpg",
+				"path": "/images/items/01_1129/158_2061.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2061_s_2vascbdpopasgd5ynx8vfjie1a5z.jpg",
+				"path": "/images/items/01_1129/159_2061.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2061_s_6vn72a2w7qai51b6snz30bnxko2p.jpg",
+				"path": "/images/items/01_1129/189_2061.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2061_s_p3yedaz35drm5w2ss4e0fc0ypth0.jpg",
+				"path": "/images/items/01_1129/190_2061.jpg"
+			}
 		],
-		"en": [
-			"W beam tomahawk x 1",
-			"Rifle x 1",
-			"Bazooka×1",
-			"Funnel pod x 1",
-			"Funnel x3"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×2",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 2",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1129/153_2061.jpg",
-		"/images/items/01_1129/155_2061.jpg",
-		"/images/items/01_1129/156_2061.jpg",
-		"/images/items/01_1129/157_2061.jpg",
-		"/images/items/01_1129/158_2061.jpg",
-		"/images/items/01_1129/159_2061.jpg",
-		"/images/items/01_1129/189_2061.jpg",
-		"/images/items/01_1129/190_2061.jpg",
-		"/images/items/01_1129/01_1129_inst_1.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1129/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
-	"manualId": "0059"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1129/"
 }

@@ -5,6 +5,43 @@
 		"ja": "ねこぶそう 並盛り",
 		"en": "Nekobusou (standard size)"
 	},
+	"brands": [
+		{
+			"id": "nekobusou",
+			"url": "https://bandai-hobby.net/brand/nekobusou/",
+			"ja": "ねこぶそう"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2100",
+			"url": "https://bandai-hobby.net/item/01_2100/",
+			"ja": "ねこぶそう3 中盛り"
+		},
+		{
+			"id": "01_2101",
+			"url": "https://bandai-hobby.net/item/01_2101/",
+			"ja": "ねこぶそう3 舟盛り"
+		},
+		{
+			"id": "01_1979",
+			"url": "https://bandai-hobby.net/item/01_1979/",
+			"ja": "ねこぶそう2 並盛り"
+		},
+		{
+			"id": "01_1981",
+			"url": "https://bandai-hobby.net/item/01_1981/",
+			"ja": "ねこぶそう2 てんこ盛り"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -29,55 +66,95 @@
 			"• 〈並盛り〉はA,B,C,Dの４種。Aはエジプト座りねこ「グレー」とランチャーメカのぶそうセット。Bはエジプト座りねこ「シロ」とヘリメカのぶそうセット。Cは香箱座りねこ「茶トラ」とタンクメカのぶそうセット。Dは香箱座りねこ「クロ」とジェットメカのぶそうセット。"
 		],
 		"en": [
-			"Let's let the cute cat \"buso \". A new sensation \" cat\" Hobby appears.",
+			"Let's let the cute cat \"buso\". A new sensation \"cat\" Hobby appears.",
 			"• Collaboration between cat sculptor and cat-loving modeler!",
-			"• Let's enjoy wearing the \"jacket \" on the \" cat \" figure and equipping it with \" buso\" parts.",
-			"• The total length of the \"cat\" is approximately 5cm. Based on the prototype by Osamu Moriguchi, who is active as a cat sculptor, every detail including facial expressions, fur, and paws has been sculpted.",
-			"• \"Buso\" was designed by freelance modeler Kazuya Fukuda, pursuing precise mechanical modeling and a unique combination form.",
+			"• Have fun wearing a \"jacket\" on your \"cat\" figure and equipping it with \"buso\" parts.",
+			"• \"Cat\" has a total length of about 5cm. Based on the prototype by Osamu Moriguchi, who is active as a cat sculptor, every detail including facial expressions, fur, and paws has been sculpted.",
+			"• \"Buso\" was designed by freelance modeler Kazuya Fukuda, pursuing detailed mechanical modeling and a unique combination form.",
 			"• \"Buso\" can be rearranged into a mini-mecha state by itself! You can freely combine them with the 3mm joints installed on the jacket and each bush.",
-			"• 〈Normal size〉 comes in 4 types: A, B, C, and D. A is a set of the Egyptian sitting cat \"Gray \" and the launcher mechanism. B is a set of the Egyptian sitting cat \" Shiro \" and a helicopter mechanism. C is a set of Kobako sitting cat \" Tea Tora \" and a tank mechanism. D is a set of Kobako sitting cat \" Kuro\" and a jet mechanism."
+			"• There are 4 types of ``Norimori'': A, B, C, and D. A is a set of the Egyptian sitting cat \"Gray\" and the launcher mechanism. B is a set of the Egyptian sitting cat \"Shiro\" and a helicopter mechanism. C is a set of Kobako sitting cat \"Tea Tora\" and a tank mechanism. D is a set of Kobako sitting cat \"Kuro\" and a jet mechanism."
 		]
 	},
-	"contents": {
-		"ja": [
-			"（全4種）",
-			"彩色済ねこフィギュア×1",
-			"ジャケット×1",
-			"ぶそう×1式"
+	"contents": [
+		{
+			"name": {
+				"ja": "（全4種）"
+			}
+		},
+		{
+			"name": {
+				"ja": "彩色済ねこフィギュア"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジャケット"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ぶそう"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128177_1.jpg",
+				"path": "/images/items/01_1421/1000128177_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128177_2.jpg",
+				"path": "/images/items/01_1421/1000128177_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128177_3.jpg",
+				"path": "/images/items/01_1421/1000128177_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128177_4.jpg",
+				"path": "/images/items/01_1421/1000128177_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128177_5.jpg",
+				"path": "/images/items/01_1421/1000128177_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128177_6.jpg",
+				"path": "/images/items/01_1421/1000128177_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128177_7.jpg",
+				"path": "/images/items/01_1421/1000128177_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128177_8.jpg",
+				"path": "/images/items/01_1421/1000128177_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128177_9.jpg",
+				"path": "/images/items/01_1421/1000128177_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128177_10.jpg",
+				"path": "/images/items/01_1421/1000128177_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128177_11.jpg",
+				"path": "/images/items/01_1421/1000128177_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128177_12.jpg",
+				"path": "/images/items/01_1421/1000128177_12.jpg"
+			}
 		],
-		"en": [
-			"(4 types in total)",
-			"Painted cat figure x 1",
-			"Jacket x 1",
-			"Busou x 1 set"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1421/1000128177_1.jpg",
-		"/images/items/01_1421/1000128177_10.jpg",
-		"/images/items/01_1421/1000128177_11.jpg",
-		"/images/items/01_1421/1000128177_12.jpg",
-		"/images/items/01_1421/1000128177_2.jpg",
-		"/images/items/01_1421/1000128177_3.jpg",
-		"/images/items/01_1421/1000128177_4.jpg",
-		"/images/items/01_1421/1000128177_5.jpg",
-		"/images/items/01_1421/1000128177_6.jpg",
-		"/images/items/01_1421/1000128177_7.jpg",
-		"/images/items/01_1421/1000128177_8.jpg",
-		"/images/items/01_1421/1000128177_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1421/",
-	"brandIds": [
-		"nekobusou"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2100",
-		"01_2101",
-		"01_1979",
-		"01_1981"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1421/"
 }

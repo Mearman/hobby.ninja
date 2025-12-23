@@ -5,6 +5,35 @@
 		"ja": "RE/100 1/100 イフリート改 [クリアカラー]",
 		"en": "RE/100 1/100 Ifrit Kai [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "re100",
+			"url": "https://bandai-hobby.net/brand/re100/",
+			"ja": "RE/100[リボーンワンハンドレッド]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_540",
+			"url": "https://bandai-hobby.net/item/01_540/",
+			"ja": "RE/100 1/100 イフリート改"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -17,7 +46,6 @@
 		"month": 8
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
@@ -28,24 +56,14 @@
 			"RE/100 Ifrit Kai now available in event-limited clear color!"
 		]
 	},
-	"images": [
-		"/images/items/01_1922/153_2855.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1922/",
-	"brandIds": [
-		"re100"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_540"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2855_s_kgt3ziq5ifnk5js5ut09ztgdgh0q.jpg",
+				"path": "/images/items/01_1922/153_2855.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1922/"
 }

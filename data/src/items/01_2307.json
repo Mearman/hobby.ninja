@@ -5,6 +5,45 @@
 		"ja": "MG 1/100 高機動型ザク”サイコ・ザク”Ver.Ka(GUNDAM THUNDERBOLT版) [ハーフメカニカルクリア]",
 		"en": "MG 1/100 High Mobility Type Zaku \"Psycho Zaku\" Ver.Ka (GUNDAM THUNDERBOLT version) [Half Mechanical Clear]"
 	},
+	"brands": [
+		{
+			"id": "mgka",
+			"url": "https://bandai-hobby.net/brand/mgka/",
+			"ja": "MG Ver.Ka［マスターグレード バージョンカトキ］"
+		}
+	],
+	"series": [
+		{
+			"id": "thunderbolt",
+			"url": "https://bandai-hobby.net/series/thunderbolt/",
+			"ja": "機動戦士ガンダム サンダーボルト"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_767",
+			"url": "https://bandai-hobby.net/item/01_767/",
+			"ja": "MG 1/100 高機動型ザク“サイコ・ザク” Ver.Ka(GUNDAM THUNDERBOLT版)"
+		},
+		{
+			"id": "item-1000110056",
+			"url": "https://p-bandai.jp/item/item-1000110056",
+			"ja": "ＭＧ 1/100 ウエポン＆アーマーハンガー FOR フルアーマー・ガンダム Ｖｅｒ．Ｋａ （GUNDAM THUNDERBOLT版）"
+		},
+		{
+			"id": "01_608",
+			"url": "https://bandai-hobby.net/item/01_608/",
+			"ja": "MG 1/100 フルアーマー・ガンダム Ver.Ka（GUNDAM THUNDERBOLT版）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 10560,
 		"currency": "JPY",
@@ -17,7 +56,6 @@
 		"month": 4
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"カトキハジメ氏徹底監修、「Ver.Ka」シリーズの「高機動型ザク“サイコ・ザク”」がクリアカラーになって、登場。",
@@ -26,33 +64,24 @@
 			"• 動力パイプのシーリングをはじめ、全身高密度なディテールで質感が表現されている。"
 		],
 		"en": [
-			"Under the thorough supervision of Hajime Katoki, the \"High Mobility Type Zaku 'Psycho Zaku'\" from the \" Ver.Ka\" series is now available in clear color.",
-			"• In addition to a huge thruster with an overwhelming volume, a variety of weapons are included, and some weapons come with multiple attachments, reproducing the non-standard heavy equipment to the fullest!",
+			"Under the thorough supervision of Hajime Katoki, the \"High Mobility Type Zaku 'Psycho Zaku'\" from the \"Ver.Ka\" series is now available in clear color.",
+			"• In addition to a huge thruster with an overwhelming volume, it comes with a variety of weapons, and some weapons come with multiple attachments, fully reproducing the non-standard heavy equipment!",
 			"• Equipped with many gimmicks in each part, such as sub-arms, cockpit hatches, sole claws, etc.!",
 			"• The texture is expressed with high-density detail throughout the body, including the sealing of the power pipe."
 		]
 	},
-	"images": [
-		"/images/items/01_2307/153_3246.jpg",
-		"/images/items/01_2307/155_3246.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2307/",
-	"brandIds": [
-		"mgka"
-	],
-	"seriesIds": [
-		"thunderbolt"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_767",
-		"item-1000110056",
-		"01_608"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3246_s_bjp5wnmjpjp1p1enrytr9rr4vaim.jpg",
+				"path": "/images/items/01_2307/153_3246.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3246_s_ys1cu0q6mc71djz8opxv7x7zdku1.jpg",
+				"path": "/images/items/01_2307/155_3246.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2307/"
 }

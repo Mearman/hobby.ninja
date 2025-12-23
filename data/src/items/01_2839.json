@@ -5,6 +5,60 @@
 		"ja": "ＨＧ 1/144 リック・ディアス（クワトロ・バジーナ機）",
 		"en": "HG 1/144 Rick Diaz (Quattro Bajina machine)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -16,7 +70,6 @@
 		"year": 2020,
 		"month": 8
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"チ ュ ー ン ア ッ プ 完 了 ―",
@@ -62,7 +115,7 @@
 		"en": [
 			"Tune-up completed -",
 			"Rick Diaz, out!",
-			"From \"Mobile Suit Z Gundam\", the red Rick Diaz piloted by Captain Quattro Bagina has been updated and commercialized based on the HGUC Rick Diaz.",
+			"From \"Mobile Suit ZGundam\", the red Rick Diaz piloted by Captain Quattro Bagina has been updated and commercialized based on the HGUC Rick Diaz.",
 			"Most of the exterior parts such as red armor parts are reproduced with new parts. In addition, multi-joint parts are used for the arms, legs, and hip joints to achieve a wide range of motion.",
 			"● New parts have been adopted to improve the details of Rick Diaz's exterior!",
 			"Based on HGUC Rick Diaz, the red exterior parts such as the head, shoulders, arms, waist, and legs have been redesigned to better match the setting image.",
@@ -101,51 +154,67 @@
 			"- Product specifications are scheduled as of 20204. Please note that there may be changes."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"クレイ・バズーカ",
-			"ビーム・ピストル",
-			"ビーム・サーベル"
+	"accessories": [
+		{
+			"name": {
+				"ja": "クレイ・バズーカ"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・ピストル"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3822_s_zj3zgd41htv4e8cf82gq1m87w6lf.jpg",
+				"path": "/images/items/01_2839/153_3822.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3822_s_c0ny57exwsiwlbhwpdgi4r2o4ifb.jpg",
+				"path": "/images/items/01_2839/155_3822.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3822_s_t8tsbyaduvtp4eykwlu1c41ji4ol.jpg",
+				"path": "/images/items/01_2839/156_3822.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3822_s_8cf8s1p9h7s8xozzjiwjlj958blc.jpg",
+				"path": "/images/items/01_2839/157_3822.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3822_s_x9dk3ixnslnkw304qrxoa5yacz9i.jpg",
+				"path": "/images/items/01_2839/158_3822.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3822_s_h7cibor7mr3p9x8v07ekrz8f4k38.jpg",
+				"path": "/images/items/01_2839/159_3822.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3822_s_toozj0ftllyw9cf2r4xpow47nbxh.jpg",
+				"path": "/images/items/01_2839/189_3822.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3822_s_vshwa3z3wj0kyuh7nynvax5fvgyw.jpg",
+				"path": "/images/items/01_2839/190_3822.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3822_s_1yu0ljwfvy03rhz5tybbws94yrog.jpg",
+				"path": "/images/items/01_2839/191_3822.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3822_s_21zx8g8ogpz4fv4as7gzgqyqw3h3.jpg",
+				"path": "/images/items/01_2839/192_3822.jpg"
+			}
 		],
-		"en": [
-			"clay bazooka",
-			"beam pistol",
-			"beam saber"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2839/153_3822.jpg",
-		"/images/items/01_2839/155_3822.jpg",
-		"/images/items/01_2839/156_3822.jpg",
-		"/images/items/01_2839/157_3822.jpg",
-		"/images/items/01_2839/158_3822.jpg",
-		"/images/items/01_2839/159_3822.jpg",
-		"/images/items/01_2839/189_3822.jpg",
-		"/images/items/01_2839/190_3822.jpg",
-		"/images/items/01_2839/191_3822.jpg",
-		"/images/items/01_2839/192_3822.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2839/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
-	"manualId": "2596",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_2839/"
 }

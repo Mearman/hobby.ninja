@@ -5,6 +5,28 @@
 		"ja": "Figure-rise Mechanics ドラえもん",
 		"en": "Figure-rise Mechanics Doraemon"
 	},
+	"brands": [
+		{
+			"id": "figurerise-mechanics",
+			"url": "https://bandai-hobby.net/brand/figurerise-mechanics/",
+			"ja": "Figure-rise Mechanics[フィギュアライズメカニクス]"
+		}
+	],
+	"series": [
+		{
+			"id": "doraemon",
+			"url": "https://bandai-hobby.net/series/doraemon/",
+			"ja": "ドラえもん"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 3080,
 		"currency": "JPY",
@@ -20,56 +42,96 @@
 	"targetAge": 15,
 	"description": {
 		"ja": [
-			"Figure-riseMechanics ドラえもん登場！Figure-riseMechanicsはロボットの内部メカニックを組み立てる新境地へ！• ドラえもんの特徴的な「ペタリハンド」や「ウルトラ・スーパー・デラックス・コンピュータ」などの内部メカのディテールを精密に再現！• 組み立てていくことで、ドラえもんの内部メカが理解でき、よりドラえもんを知ることができます！• 外装パーツは、通常のブルーの他に、内部メカが透けて見えるクリア外装も付属！組み立てた後も内部メカが見えるディスプレイが楽しめます。• タイムマシン座り用パーツが付属し、同時発売「Figure-riseMechanics ドラえもんのひみつ道具 タイムマシン」に乗せることも可能です。• 口を別パーツにすることでシールレスを実現。さらに作りやすくなった！"
+			"Figure-riseMechanics ドラえもん登場！Figure-riseMechanicsはロボットの内部メカニックを組み立てる新境地へ！■ドラえもんの特徴的な「ペタリハンド」や「ウルトラ・スーパー・デラックス・コンピュータ」などの内部メカのディテールを精密に再現！■組み立てていくことで、ドラえもんの内部メカが理解でき、よりドラえもんを知ることができます！■外装パーツは、通常のブルーの他に、内部メカが透けて見えるクリア外装も付属！組み立てた後も内部メカが見えるディスプレイが楽しめます。■タイムマシン座り用パーツが付属し、同時発売「Figure-riseMechanics ドラえもんのひみつ道具 タイムマシン」に乗せることも可能です。■口を別パーツにすることでシールレスを実現。さらに作りやすくなった！"
 		],
 		"en": [
-			"Figure-riseMechanics Doraemon appears! Figure-riseMechanics takes you to a new frontier in assembling the internal mechanics of robots! • Details of Doraemon's characteristic \"petari hand \" and internal mechanisms such as \" Ultra Super Deluxe Computer \" are precisely reproduced! • By going through Assembly, you can understand Doraemon's internal mechanism and get to know Doraemon even more! • In addition to the usual blue exterior parts, a clear exterior that allows you to see the internal mechanism is also included! Enjoy the display that allows you to see the internal mechanism even after assembly. • Parts for sitting the time machine are included, and it can also be placed on the \" Figure-riseMechanics Doraemon's Secret Tool Time Machine\" released at the same time. • Seal-less is achieved by making the mouth a separate part. It's even easier to make!"
+			"Figure-riseMechanics Doraemon appears! Figure-riseMechanics takes you to a new frontier in assembling the internal mechanics of robots! ■Details of Doraemon's characteristic \"petari hand\" and internal mechanisms such as \"Ultra Super Deluxe Computer\" are precisely reproduced! ■By going through Assembly, you can understand Doraemon's internal mechanism and get to know Doraemon even more! ■In addition to the usual blue exterior parts, a clear exterior that allows you to see the internal mechanism is also included! Enjoy the display that allows you to see the internal mechanism even after assembly. ■Parts for sitting the time machine are included, and it can also be placed on the \"Figure-riseMechanics Doraemon's Secret Tool Time Machine\" released at the same time. ■ Seal-less is achieved by making the mouth a separate part. It's even easier to make!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"クリア外装×1式",
-			"タイムマシン座り用パーツ×１式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "クリア外装"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "タイムマシン座り用パーツ×１式"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2138_o_1cmn87efv1pul1lrn1rqql4ocu823.jpg",
+				"path": "/images/items/01_1208/153_2138.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2138_o_1cmnb1tn71fs912ga1tr61jq91r8728.jpg",
+				"path": "/images/items/01_1208/155_2138.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2138_o_1cmn882a410vr1a6c1m71fla10df2i.jpg",
+				"path": "/images/items/01_1208/156_2138.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2138_o_1cmn887ku47lls1gdg29e1teh2n.jpg",
+				"path": "/images/items/01_1208/157_2138.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2138_o_1cmn88d2hv7j135svk8h2c2kh2s.jpg",
+				"path": "/images/items/01_1208/158_2138.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2138_o_1cmn88iqs1ttqsqs7q21v3b1uvr31.jpg",
+				"path": "/images/items/01_1208/159_2138.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2138_o_1cmn88oag11a810hu1h0n1s3qtps36.jpg",
+				"path": "/images/items/01_1208/189_2138.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2138_o_1cmn88u2f16vjlojrmc1umk16h03b.jpg",
+				"path": "/images/items/01_1208/190_2138.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2138_o_1cmn8930214f5o321228qnkudi3g.jpg",
+				"path": "/images/items/01_1208/191_2138.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2138_o_1cmn8996gd01pgaheh1l1073r3l.jpg",
+				"path": "/images/items/01_1208/192_2138.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_2138_o_1cmn89etrpdh1b301csi5jokkg3q.jpg",
+				"path": "/images/items/01_1208/193_2138.jpg"
+			}
 		],
-		"en": [
-			"Clear exterior x 1 set",
-			"Time machine sitting parts x 1 set"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 4",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1208/153_2138.jpg",
-		"/images/items/01_1208/155_2138.jpg",
-		"/images/items/01_1208/156_2138.jpg",
-		"/images/items/01_1208/157_2138.jpg",
-		"/images/items/01_1208/158_2138.jpg",
-		"/images/items/01_1208/159_2138.jpg",
-		"/images/items/01_1208/189_2138.jpg",
-		"/images/items/01_1208/190_2138.jpg",
-		"/images/items/01_1208/191_2138.jpg",
-		"/images/items/01_1208/192_2138.jpg",
-		"/images/items/01_1208/193_2138.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1208/",
-	"brandIds": [
-		"figurerise-mechanics"
-	],
-	"seriesIds": [
-		"doraemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_1208/"
 }

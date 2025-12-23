@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 スクランブルガンダム[プラフスキーパーティクルクリア]",
 		"en": "HG 1/144 Scramble Gundam [Plavsky Particle Clear]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
@@ -28,28 +71,14 @@
 			"HG Scramble Gundam now available in event-limited Plavsky Particle Clear!"
 		]
 	},
-	"images": [
-		"/images/items/01_1924/153_2857.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1924/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2857_s_vusq95j8ixl71pbywfozufavgxc9.jpg",
+				"path": "/images/items/01_1924/153_2857.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "0742"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1924/"
 }

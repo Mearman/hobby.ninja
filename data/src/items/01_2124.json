@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard 仮面ライダーファイズ",
 		"en": "Figure-rise Standard Kamen Rider Faiz"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "rider",
+			"url": "https://bandai-hobby.net/series/rider/",
+			"ja": "仮面ライダーシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5451",
+			"url": "https://bandai-hobby.net/item/01_5451/",
+			"ja": "Figure-rise Standard 仮面ライダーゼロワン ライジングホッパー"
+		},
+		{
+			"id": "item-1000215369",
+			"url": "https://p-bandai.jp/item/item-1000215369/",
+			"ja": "Figure-rise Standard 仮面ライダーファイズ ブラスターフォーム"
+		},
+		{
+			"id": "01_5276",
+			"url": "https://bandai-hobby.net/item/01_5276/",
+			"ja": "Figure-rise Standard 仮面ライダークウガ アルティメットフォーム"
+		},
+		{
+			"id": "01_5175",
+			"url": "https://bandai-hobby.net/item/01_5175/",
+			"ja": "Figure-rise Standard 仮面ライダーキバ キバフォーム"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -27,68 +70,128 @@
 		"en": [
 			"\"Kamen Rider Faiz\", which was aired in 2003, has added new parts and has a new figure-rise Standard lineup!",
 			"• The color is closer to the actual suit by reproducing the silver part with extra finish processing and color-coding the shoulders with new modeling.",
-			"• Improved color-coded reproduction of the shoulder armor and improved range of motion of the hip joints, making it more natural to recreate the pose right before releasing the Crimson Smash!"
+			"• By improving the color-coded reproduction of the shoulder armor and improving the range of motion of the hip joints, the pose right before the Crimson Smash can be recreated more naturally!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ファイズフォン×2(ミッションメモリ有・無)",
-			"フォンブラスター×1",
-			"ファイズショット×2(大・小)",
-			"ファイズポインター×2(長・短）",
-			"ファイズエッジ×1",
-			"手首パーツ×6種",
-			"クリムゾンスマッシュ用エフェクトパーツ×1",
-			"ディスプレイベース ×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ファイズフォン"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "フォンブラスター"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ファイズショット"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "(大・小)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ファイズポインター"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "(長・短）"
+			}
+		},
+		{
+			"name": {
+				"ja": "ファイズエッジ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "手首パーツ"
+			},
+			"count": 6,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "クリムゾンスマッシュ用エフェクトパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 8
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3078_s_phe9thw6btpx5ukgcydw037u9s5f.jpg",
+				"path": "/images/items/01_2124/153_3078.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3078_s_ktb84m6udsemx9jxjag1loxtg8uf.jpg",
+				"path": "/images/items/01_2124/155_3078.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3078_s_u3k5vtgpy6i29yam9t39vnkncfgd.jpg",
+				"path": "/images/items/01_2124/156_3078.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3078_s_vth9rsgt15ptlvb63ps2uar5vylx.jpg",
+				"path": "/images/items/01_2124/157_3078.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3078_s_lz7nw72m7ofxmvqfjlywbac932xu.jpg",
+				"path": "/images/items/01_2124/158_3078.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3078_s_p9uare9gcroftqoep1zs7ylfzqt3.jpg",
+				"path": "/images/items/01_2124/159_3078.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3078_s_b0rg4z2sxunaw6r9njsbl5ydmuou.jpg",
+				"path": "/images/items/01_2124/189_3078.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3078_s_oy15nqrrihd6gluy4h2kiukl3lqp.jpg",
+				"path": "/images/items/01_2124/190_3078.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3078_s_xwirmo4ks7oknzfzs7iwtkpahe0g.jpg",
+				"path": "/images/items/01_2124/191_3078.jpg"
+			}
 		],
-		"en": [
-			"Faiz phone x 2 (with/without mission memory)",
-			"Phone blaster x 1",
-			"Faiz shot x 2 (large/small)",
-			"Faiz pointer x 2 (long/short)",
-			"Faiz Edge x 1",
-			"Wrist parts x 6 types",
-			"Effect parts for Crimson Smash x 1",
-			"Display base x1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×8",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 8",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2124/153_3078.jpg",
-		"/images/items/01_2124/155_3078.jpg",
-		"/images/items/01_2124/156_3078.jpg",
-		"/images/items/01_2124/157_3078.jpg",
-		"/images/items/01_2124/158_3078.jpg",
-		"/images/items/01_2124/159_3078.jpg",
-		"/images/items/01_2124/189_3078.jpg",
-		"/images/items/01_2124/190_3078.jpg",
-		"/images/items/01_2124/191_3078.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2124/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"rider"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5451",
-		"item-1000215369",
-		"01_5276",
-		"01_5175"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2124/"
 }

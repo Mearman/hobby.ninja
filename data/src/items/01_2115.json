@@ -5,6 +5,55 @@
 		"ja": "HG 1/144 ガルバルディβ[クリアカラー]",
 		"en": "HG 1/144 Galbaldi β [Clear color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"待望の初HGUC化を果たしたガルバルディβがクリアカラーとなってイベント限定品として登場。",
@@ -29,35 +77,24 @@
 		],
 		"en": [
 			"The long-awaited first HGUC version of Galbaldi β is now available in clear color as an event limited item.",
-			"• Details of each part have been increased in density to match the latest format, and details reminiscent of the internal frame have been added to the shoulders of the torso!",
-			"• The mold on the bottom of the chest reproduces the details with separate parts!",
+			"• The details of each part have been increased in density to match the latest format, and details reminiscent of the internal frame have been added to the shoulders of the torso!",
+			"• The mold on the bottom of the chest is a separate part to reproduce the details!",
 			"• A rotation axis has been added to the upper arm for improved action!",
-			"• In addition to coming with the same type of rifle as Gelgoog, Sealdo can be replaced to recreate the telescopic gimmick!"
+			"• In addition to the same type of rifle as Gelgoog, Sealdo can be replaced to reproduce the telescopic gimmick!"
 		]
 	},
-	"images": [
-		"/images/items/01_2115/153_3063.jpg",
-		"/images/items/01_2115/155_3063.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2115/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3063_o_1crjkp0nbc16kv4dn450166123.jpg",
+				"path": "/images/items/01_2115/153_3063.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3063_o_1crjkpb6r9q715cg195o1avm45p2d.jpg",
+				"path": "/images/items/01_2115/155_3063.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2115/"
 }

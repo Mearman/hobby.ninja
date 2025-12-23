@@ -5,6 +5,37 @@
 		"ja": "ガンダム情景模型 ジャブローに散る",
 		"en": "Gundam scene model scattered in Jaburo"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5987",
+			"url": "https://bandai-hobby.net/item/01_5987/",
+			"ja": "ガンダムデカールNo.139 機動戦士Gundam GQuuuuuuX汎用1"
+		},
+		{
+			"id": "01_5988",
+			"url": "https://bandai-hobby.net/item/01_5988/",
+			"ja": "ガンダムデカールNo.140 機動戦士Gundam GQuuuuuuX汎用2"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -25,20 +56,18 @@
 			"From ``Mobile Suit Gundam'', the scene model Jaburo is scattered."
 		]
 	},
-	"images": [
-		"/images/items/01_3122/153_4087.jpg",
-		"/images/items/01_3122/155_4087.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3122/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5986",
-		"01_5987",
-		"01_5988"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4087_s_7f7b8i9mku937zxrl1ivb1swl1sk.jpg",
+				"path": "/images/items/01_3122/153_4087.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4087_s_jds28qel2j32uxwniw3fn0dmz78m.jpg",
+				"path": "/images/items/01_3122/155_4087.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3122/"
 }

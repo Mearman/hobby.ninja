@@ -2,9 +2,58 @@
 	"id": "01_1641",
 	"type": "item",
 	"name": {
-		"ja": "HGUC 1/144 ジムクゥエル",
+		"ja": "HGUC  1/144 ジムクゥエル",
 		"en": "HGUC 1/144 Gym Quell"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "g-0083",
+			"url": "https://bandai-hobby.net/series/g-0083/",
+			"ja": "機動戦士ガンダム0083 STARDUST MEMORY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000102912",
+			"url": "https://p-bandai.jp/item/item-1000102912",
+			"ja": "HGUC 1/144 ガーベラ・テトラ（ロールアウトＶｅｒ．）"
+		},
+		{
+			"id": "item-1000102910",
+			"url": "https://p-bandai.jp/item/item-1000102910",
+			"ja": "HGUC 1/144 ドラッツェ改"
+		},
+		{
+			"id": "item-1000115500",
+			"url": "https://p-bandai.jp/item/item-1000115500",
+			"ja": "HGUC 1/144 MS-09RS アナベル・ガトー専用リック・ドム"
+		},
+		{
+			"id": "01_5843",
+			"url": "https://bandai-hobby.net/item/01_5843/",
+			"ja": "HGUC 1/144 ガーベラ・テトラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -17,45 +66,66 @@
 		"month": 1
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム 0083スターダストメモリー」や「アドバンスオブゼータ」に登場するティターンズ専用MS“ジムクゥエル”がHGUCに待望のラインナップ。プロポーションは好評のAOZラインで再現。HGUCにラインナップしている他のAOZシリーズと連動、武器やパーツの付け替えが可能。ライフルを左手で構えられる握り手が付属。武器はジムライフル、シールド、ビームサーベルが付属。"
+			"「機動戦士ガンダム0083スターダストメモリー」や「アドバンスオブゼータ」に登場するティターンズ専用MS“ジムクゥエル”がHGUCに待望のラインナップ。プロポーションは好評のAOZラインで再現。HGUCにラインナップしている他のAOZシリーズと連動、武器やパーツの付け替えが可能。ライフルを左手で構えられる握り手が付属。武器はジムライフル、シールド、ビームサーベルが付属。"
 		],
 		"en": [
-			"HGUC's long-awaited lineup includes the Titans' exclusive MS \"Gimquel \" that appears in \" Mobile Suit Gundam 0083 Stardust Memory \" and \" Advance of Zeta\". The proportions are reproduced with the popular AOZ line. It can be linked with other AOZ series in HGUC's lineup, and weapons and parts can be replaced. Includes a grip that allows you to hold the rifle with your left hand. Weapons include a gym rifle, a seal, and a beam saber."
+			"HGUC's long-awaited lineup includes the Titans' exclusive MS \"Gimquel\" that appears in \"Mobile Suit Gundam 0083 Stardust Memory\" and \"Advance of Zeta\". The proportions are reproduced with the popular AOZ line. It can be linked with other AOZ series in HGUC's lineup, and weapons and parts can be replaced. Includes a grip that allows you to hold the rifle with your left hand. Weapons include a gym rifle, a seal, and a beam saber."
 		]
 	},
-	"images": [
-		"/images/items/01_1641/1000092254_1.jpg",
-		"/images/items/01_1641/1000092254_10.jpg",
-		"/images/items/01_1641/1000092254_11.jpg",
-		"/images/items/01_1641/1000092254_12.jpg",
-		"/images/items/01_1641/1000092254_2.jpg",
-		"/images/items/01_1641/1000092254_3.jpg",
-		"/images/items/01_1641/1000092254_4.jpg",
-		"/images/items/01_1641/1000092254_5.jpg",
-		"/images/items/01_1641/1000092254_6.jpg",
-		"/images/items/01_1641/1000092254_7.jpg",
-		"/images/items/01_1641/1000092254_8.jpg",
-		"/images/items/01_1641/1000092254_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1641/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"g-0083"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000102912",
-		"item-1000102910",
-		"item-1000115500",
-		"01_5843"
-	],
-	"manualId": "0261"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092254_1.jpg",
+				"path": "/images/items/01_1641/1000092254_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092254_2.jpg",
+				"path": "/images/items/01_1641/1000092254_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092254_3.jpg",
+				"path": "/images/items/01_1641/1000092254_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092254_4.jpg",
+				"path": "/images/items/01_1641/1000092254_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092254_5.jpg",
+				"path": "/images/items/01_1641/1000092254_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092254_6.jpg",
+				"path": "/images/items/01_1641/1000092254_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092254_7.jpg",
+				"path": "/images/items/01_1641/1000092254_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092254_8.jpg",
+				"path": "/images/items/01_1641/1000092254_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092254_9.jpg",
+				"path": "/images/items/01_1641/1000092254_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092254_10.jpg",
+				"path": "/images/items/01_1641/1000092254_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092254_11.jpg",
+				"path": "/images/items/01_1641/1000092254_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092254_12.jpg",
+				"path": "/images/items/01_1641/1000092254_12.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1641/"
 }

@@ -5,6 +5,50 @@
 		"ja": "ＲＧ 1/144 MS-06R-1A シン・マツナガ専用ザクII",
 		"en": "RG 1/144 MS-06R-1A Shin Matsunaga Zaku II"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "msv",
+			"url": "https://bandai-hobby.net/series/msv/",
+			"ja": "ガンダムＭＳＶ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1158",
+			"url": "https://bandai-hobby.net/item/01_1158/",
+			"ja": "RG 1/144 MS-06R-2 ジョニー・ライデン専用ザクII"
+		},
+		{
+			"id": "item-1000095901",
+			"url": "https://p-bandai.jp/item/item-1000095901",
+			"ja": "ＲＧ 1/144 RX-78-3 Ｇ-３ガンダム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,29 +61,14 @@
 		"month": 1
 	},
 	"targetAge": 15,
-	"scale": "1/144",
-	"images": [
-		"/images/items/01_1258/153_2190.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1258/",
-	"brandIds": [
-		"rg",
-		"pb_rg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"msv"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1158",
-		"item-1000095901"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2190_o_1bvm2cpf41kbc5oa14tacvt1f6h23.jpg",
+				"path": "/images/items/01_1258/153_2190.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "2620"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1258/"
 }

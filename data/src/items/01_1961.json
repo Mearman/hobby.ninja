@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガンダムベース限定 ガンダムバルバトス [メタリック グロスインジェクション]",
-		"en": "HG 1/144 Gundam Base Limited Gundam Barbatos [Metallic Gloss Injection]"
+		"en": "HG 1/144 THE GUNDAM BASE LIMITED GUNDAM BARBATOS ［METALLIC GLOSS INJECTION］"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ",
+			"en": "MOBILE SUIT GUNDAM IRON-BLOODED ORPHANS"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6773",
+			"url": "https://bandai-hobby.net/item/01_6773/",
+			"ja": "HG 1/144 ガンダムザガン"
+		},
+		{
+			"id": "01_6763",
+			"url": "https://bandai-hobby.net/item/01_6763/",
+			"ja": "HG 1/144 モンキーロディ(598機)/モンキークラブロディ"
+		},
+		{
+			"id": "01_4103",
+			"url": "https://bandai-hobby.net/item/01_4103/",
+			"ja": "HG 1/144 ジークルーネ"
+		},
+		{
+			"id": "01_4240",
+			"url": "https://bandai-hobby.net/item/01_4240/",
+			"ja": "HG 1/144 ガンダム端白星[クリアカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -17,42 +63,26 @@
 		"month": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
 			"ハイグレードガンダムバルバトスが艶感のあるメタリックグロスインジェクションで登場。ガンダムベースのロゴがデザインされた、ディスプレイ台座が付属。"
 		],
 		"en": [
-			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"High-grade Gundam Barbatos is now available in metallic gloss injection. A display pedestal with the Gundam base logo designed is included."
+			"For GUNPLA fans around the world, this is a limited edition GUNPLA at the official GUNPLA complex \"GUNDAM Base\". High-grade GUNDAM Barbatos is now available with a glossy metallic gloss injection. Comes with a display pedestal with a logo design on the GUNDAM base. \""
 		]
 	},
-	"images": [
-		"/images/items/01_1961/01_1961_0.jpg",
-		"/images/items/01_1961/01_1961_1.jpg",
-		"/images/items/01_1961/01_1961_2.jpg",
-		"/images/items/01_1961/01_1961_3.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1961/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"tekketsu"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6773",
-		"01_6763",
-		"01_4103",
-		"01_4240"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"images": {
+		"product": [
+			{},
+			{},
+			{},
+			{}
+		],
+		"instructions": []
 	},
-	"manualId": "0774"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1961/",
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1961/"
+	}
 }

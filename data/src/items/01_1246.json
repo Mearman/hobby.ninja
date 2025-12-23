@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 アクト・ザク(キシリア部隊機)",
 		"en": "HG 1/144 Act Zaku (Kycilia unit machine)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "origin",
+			"url": "https://bandai-hobby.net/series/origin/",
+			"ja": "機動戦士ガンダム THE ORIGIN"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3711",
+			"url": "https://bandai-hobby.net/item/01_3711/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)[クリアカラー]"
+		},
+		{
+			"id": "01_2828",
+			"url": "https://bandai-hobby.net/item/01_2828/",
+			"ja": "HG 1/144 ガンダムベース限定 ザクII TYPE C-6/R6 [ペインティングモデル]"
+		},
+		{
+			"id": "01_2707",
+			"url": "https://bandai-hobby.net/item/01_2707/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)"
+		},
+		{
+			"id": "item-1000135687",
+			"url": "https://p-bandai.jp/item/item-1000135687",
+			"ja": "ＨＧ 1/144 MS-05S シャア専用ザクＩ（ＬＩＭＩＴＥＤ ＭＯＤＥＬ）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,66 +62,87 @@
 		"day": 20
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 『機動戦士ガンダム THE ORIGIN』の世界観が舞台のメカニカル考証企画「MSD（Mobile Suit Discovery）」より、一年戦争末期にザクIIをベースに開発された高性能MS「アクト・ザク」が、「ペズン計画」を主導したキシリア部隊仕様でHG化！",
 			"• キシリア部隊所属機の特徴である頭部の「クレスト」が新規造形で再現され、新規造形となる4連装マシンガンと専用ヒート・ホーク2本が付属する！"
 		],
 		"en": [
-			"• From the mechanical investigation project \"MSD (Mobile Suit Discovery)\" set in the world of \" Mobile Suit Gundam THE ORIGIN \", the high-performance MS \" Acto Zaku \", which was developed based on the Zaku II at the end of the First War, has been made into HG with the Kycilia unit specifications that led the \" Pezun Project\"!",
-			"• Characteristics of machines belonging to the Kycilia unit The \"crest\" on the head is reproduced with a new model, and a new 4-barreled machine gun and 2 dedicated heat hawks are included!"
+			"• From the mechanical research project \"MSD (Mobile Suit Discovery)\" set in the world of \"Mobile Suit Gundam THE ORIGIN\", the high-performance MS \"Acto Zaku\", which was developed based on the Zaku II at the end of the First World War, has been made into HG with the Kycilia unit specifications that led the \"Pezun Project\"!",
+			"• The characteristic \"crest\" on the head of the machine belonging to the Kycilia unit has been reproduced with a new model, and a new 4-barreled machine gun and 2 dedicated heat hawks are included!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"4連装マシンガン×1",
-			"専用ヒート・ホーク×2",
-			"ヒート・ホーク（展開・収納）×各1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "4連装マシンガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "専用ヒート・ホーク"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ヒート・ホーク（展開・収納）×各1"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 10
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/189_2179_s_4y84y6vb7tfvfeqlakmuejjejq17.jpg",
+				"path": "/images/items/01_1246/189_2179.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_2179_s_nm2cyfx3x22luhnxr7t4dt2agvp7.jpg",
+				"path": "/images/items/01_1246/153_2179.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2179_s_udxck0utg082h8mleunbdbrly8uq.jpg",
+				"path": "/images/items/01_1246/155_2179.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2179_s_rc0t1v7anijnebj1ypmyoiv6znob.jpg",
+				"path": "/images/items/01_1246/156_2179.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2179_s_bznwi93slp4111or6lqs00vf4nv1.jpg",
+				"path": "/images/items/01_1246/157_2179.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2179_s_gtsj1pqwlfi6lgz59l1671ttwl9r.jpg",
+				"path": "/images/items/01_1246/158_2179.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2179_s_jyok2u5hptd2x3sbcv68strwcccj.jpg",
+				"path": "/images/items/01_1246/159_2179.jpg"
+			}
 		],
-		"en": [
-			"4-barreled machine gun x 1",
-			"Dedicated heat hawk x2",
-			"Heat Hawk (deployment/storage) x 1 each"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×10",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 10",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1246/153_2179.jpg",
-		"/images/items/01_1246/155_2179.jpg",
-		"/images/items/01_1246/156_2179.jpg",
-		"/images/items/01_1246/157_2179.jpg",
-		"/images/items/01_1246/158_2179.jpg",
-		"/images/items/01_1246/159_2179.jpg",
-		"/images/items/01_1246/189_2179.jpg",
-		"/images/items/01_1246/01_1246_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1246/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"origin"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3711",
-		"01_2828",
-		"01_2707",
-		"item-1000135687"
-	],
-	"manualId": "0050"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1246/"
 }

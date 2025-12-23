@@ -2,9 +2,43 @@
 	"id": "01_2883",
 	"type": "item",
 	"name": {
-		"ja": "RG 1/144 Z ガンダム",
-		"en": "RG 1/144 Z Gundam"
+		"ja": "RG 1/144 Zガンダム",
+		"en": "RG 1/144 ZGundam"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2882",
+			"url": "https://bandai-hobby.net/item/01_2882/",
+			"ja": "RG 1/144 RX-178 ガンダムMk-II（エゥーゴ仕様）"
+		},
+		{
+			"id": "01_2881",
+			"url": "https://bandai-hobby.net/item/01_2881/",
+			"ja": "RG 1/144 RX-178 ガンダムMk-II（ティターンズ仕様）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3630,
 		"currency": "JPY",
@@ -18,35 +52,38 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• ガンプラ30周年を記念して登場したRGシリーズの記念すべき第10弾として、ゼータガンダムが登場。 • RG独自の実機考証によりゼータガンダムの機構をリアルに再現。 • 1/144スケールで完全変形を実現。 • 新規アドヴァンスドMSジョイント採用。 • リアリスティックデカール付属。 成型品×13、リアリスティックデカール×1、組立説明書×1"
+			"• ガンプラ30周年を記念して登場したRGシリーズの記念すべき第10弾として、ゼータガンダムが登場。 ■RG独自の実機考証によりゼータガンダムの機構をリアルに再現。 ■1/144スケールで完全変形を実現。 ■新規アドヴァンスドMSジョイント採用。 ■リアリスティックデカール付属。 成型品×13、リアリスティックデカール×1、組立説明書×1"
 		],
 		"en": [
-			"• Zeta Gundam appears as the memorable 10th installment of the RG series, which was released to commemorate Gunpla's 30th anniversary. • Realistic reproduction of Zeta Gundam's mechanism through RG's own actual machine research. • Achieves complete transformation with 1/144 Scale. • New advanced MS joint adopted. • Includes realistic decals. Molded products x 13, realistic decal x 1, assembly manual x 1"
+			"• Zeta Gundam appears as the memorable 10th installment of the RG series, which was released to commemorate Gunpla's 30th anniversary. ■Realistic reproduction of Zeta Gundam's mechanism through RG's own actual machine research. ■Perfect transformation realized at 1/144 Scale. ■New advanced MS joint adopted. ■Realistic decal included. Molded products x 13, realistic decal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_2883/153_3863.jpg",
-		"/images/items/01_2883/155_3863.jpg",
-		"/images/items/01_2883/156_3863.jpg",
-		"/images/items/01_2883/157_3863.jpg",
-		"/images/items/01_2883/158_3863.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2883/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2882",
-		"01_2881"
-	],
-	"manualId": "0846"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3863_s_oq8hxvzu88c7xawsqcno2fe14nl5.jpg",
+				"path": "/images/items/01_2883/153_3863.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3863_s_b7ugk3ppjv8q1rlef3anmy1tgcw0.jpg",
+				"path": "/images/items/01_2883/155_3863.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3863_s_mc0k9u4kiq6w1ia8uatmytn3f2sd.jpg",
+				"path": "/images/items/01_2883/156_3863.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3863_s_dktvfm6k1zj3canbqb3rmenynrk3.jpg",
+				"path": "/images/items/01_2883/157_3863.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3863_s_x3z4u7i8elehoyatdu9odnfxmvdp.jpg",
+				"path": "/images/items/01_2883/158_3863.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2883/"
 }

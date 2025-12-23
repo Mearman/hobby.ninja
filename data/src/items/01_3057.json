@@ -5,6 +5,54 @@
 		"ja": "ＭＧ 1/100 ガンダムサンドロックＥＷ（アーマディロ装備）",
 		"en": "MG 1/100 Gundam Sandrock EW (equipped with Armadillo)"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "item-1000220190",
+			"url": "https://p-bandai.jp/item/item-1000220190/",
+			"ja": "ＨＧ 1/144 ザク・デザートタイプ ピンクパンサー隊機"
+		},
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "item-1000216105",
+			"url": "https://p-bandai.jp/item/item-1000216105/",
+			"ja": "RG 1/144 ソードインパルスガンダムＳｐｅｃＩＩ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 6380,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 10
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『新機動戦記ガンダムＷ Ｅｎｄｌｅｓｓ Ｗａｌｔｚ 敗者たちの栄光』に登場する",
@@ -56,9 +103,9 @@
 			"・ 商品仕様は2020年7月現在の予定です。変更の場合もございますがご了承ください。"
 		],
 		"en": [
-			"Appearing in \"Mobile Suit Gundam W Endless Waltz: Glory of the Losers\"",
+			"Appearing in \"Mobile Suit GundamW Endless Waltz: Glory of the Losers\"",
 			"Gundam Sandrock EW, which comes with the original weapon \"Armadillo\", is commercialized in the Master Grade Series.",
-			"● The original weapon \"Armadillo \" that appears in \" The Glory of the Losers\" is reproduced with a new model!",
+			"● The original weapon \"Armadillo\" that appears in \"The Glory of the Losers\" is reproduced with a new model!",
 			"Equipped with additional armor deployment and attachment/detachment gimmick. The details and color coding of various parts are reproduced with molded parts.",
 			"increased armor",
 			"Reproduce the additional armor that covers both shoulders and the frontal armor.",
@@ -92,37 +139,50 @@
 			"- Product specifications are scheduled as of 20207. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_3057/153_4026.jpg",
-		"/images/items/01_3057/155_4026.jpg",
-		"/images/items/01_3057/156_4026.jpg",
-		"/images/items/01_3057/157_4026.jpg",
-		"/images/items/01_3057/158_4026.jpg",
-		"/images/items/01_3057/159_4026.jpg",
-		"/images/items/01_3057/189_4026.jpg",
-		"/images/items/01_3057/190_4026.jpg",
-		"/images/items/01_3057/191_4026.jpg",
-		"/images/items/01_3057/192_4026.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3057/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"item-1000220190",
-		"item-1000220189",
-		"item-1000216105"
-	],
-	"manualId": "2591",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4026_s_91yo1ovjbxozexmyadru4ztqfgyk.jpg",
+				"path": "/images/items/01_3057/153_4026.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4026_s_q45zlhcsjn82kykuwuvhspmm44wo.jpg",
+				"path": "/images/items/01_3057/155_4026.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4026_s_05rx5wqprfykl3n8kxklv369wztp.jpg",
+				"path": "/images/items/01_3057/156_4026.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4026_s_su4rjh22ohd4hf2pntgj2fkhbblf.jpg",
+				"path": "/images/items/01_3057/157_4026.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4026_s_sv3n18zga202u7kb8bnse46cdzl6.jpg",
+				"path": "/images/items/01_3057/158_4026.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4026_s_291myphw1i47sf5i1wu4805ha073.jpg",
+				"path": "/images/items/01_3057/159_4026.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4026_s_1erxjnph0wzu3y9lf9kro4wb1trm.jpg",
+				"path": "/images/items/01_3057/189_4026.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4026_s_lm9ro5t1uz10rmcvamehmu8nyfkt.jpg",
+				"path": "/images/items/01_3057/190_4026.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4026_s_d9gvpbdto18fvhnrupkpfy4pjhjg.jpg",
+				"path": "/images/items/01_3057/191_4026.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4026_s_g8505agvir6xx2351qvfla0dyfjs.jpg",
+				"path": "/images/items/01_3057/192_4026.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3057/"
 }

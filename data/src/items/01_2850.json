@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 テルティウムアームズ",
 		"en": "HGBD:R 1/144 Tertium Arms"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 825,
 		"currency": "JPY",
@@ -18,13 +62,12 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダムチャンネルにて2nd Seasonが好評配信中の『ガンダムビルドダイバーズRe:RISE』より、ガンダムテルティウムの新武装がHGで立体化！",
-			"■大ボリュームのバックパックとライフルの新武装。",
-			"■ライフルは収納状態への変形機構を搭載。未組み立て状態の「HGBD:R 1/144 ゼルトザームアームズ」（別売り）との組み合わせも可能。",
-			"■２つのシールドは組み合わせることが可能。"
+			"• 大ボリュームのバックパックとライフルの新武装。",
+			"• ライフルは収納状態への変形機構を搭載。未組み立て状態の「HGBD:R 1/144 ゼルトザームアームズ」（別売り）との組み合わせも可能。",
+			"• ２つのシールドは組み合わせることが可能。"
 		],
 		"en": [
 			"From \"Gundam Build Divers Re:RISE\", whose 2nd season is currently being distributed on the Gundam channel, Gundam Tertium's new weapon is now three-dimensional in HG!",
@@ -33,43 +76,60 @@
 			"• Two seals can be combined."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"バックパック×1",
-			"シールド×2",
-			"ライフル×1",
-			"HG用汎用ジョイントパーツ×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "バックパック"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "HG用汎用ジョイントパーツ"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3833_s_g3p1sojdslc8y1sekkwaj5uvudim.jpg",
+				"path": "/images/items/01_2850/153_3833.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3833_s_nf4d81luwpt1yajmmfeduilap0zv.jpg",
+				"path": "/images/items/01_2850/155_3833.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3833_s_h1mo8vzsspmzkcej3f4ogz7itbvf.jpg",
+				"path": "/images/items/01_2850/156_3833.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3833_s_uoxqwb6avlpqrn6yuwja0tbm2khc.jpg",
+				"path": "/images/items/01_2850/157_3833.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3833_s_etq3zwdf7nv0mpzvxvwrijaq2lsm.jpg",
+				"path": "/images/items/01_2850/158_3833.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3833_s_y1zzj70s1gvprl9lltnru1zsjayf.jpg",
+				"path": "/images/items/01_2850/159_3833.jpg"
+			}
 		],
-		"en": [
-			"Backpack x 1",
-			"Seal × 2",
-			"Rifle x 1",
-			"General purpose joint parts for HG x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2850/153_3833.jpg",
-		"/images/items/01_2850/155_3833.jpg",
-		"/images/items/01_2850/156_3833.jpg",
-		"/images/items/01_2850/157_3833.jpg",
-		"/images/items/01_2850/158_3833.jpg",
-		"/images/items/01_2850/159_3833.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2850/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0104"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2850/"
 }

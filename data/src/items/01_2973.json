@@ -3,8 +3,61 @@
 	"type": "item",
 	"name": {
 		"ja": "カスタマイズシーンベース (水上Ver.)",
-		"en": "Customized scene base (water version)"
+		"en": "CUSTOMIZE SCENE BASE (WATER FIELD Ver.)"
 	},
+	"brands": [
+		{
+			"id": "customize_scenebase",
+			"url": "https://bandai-hobby.net/brand/customize_scenebase/",
+			"ja": "カスタマイズシーンベース/エフェクト/マテリアル/ウェポンズ",
+			"en": "CUSTOMIZE SCENE BASE/EFFECT/MATERIAL/WEAPONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "customize_scenebase",
+			"url": "https://bandai-hobby.net/brand/customize_scenebase/",
+			"ja": "カスタマイズシーンベース/エフェクト/マテリアル/ウェポンズ"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7019",
+			"url": "https://bandai-hobby.net/item/01_7019/",
+			"ja": "30MM 1/144 bEXM-40 ノヴァルヴ[グリーン]"
+		},
+		{
+			"id": "01_7020",
+			"url": "https://bandai-hobby.net/item/01_7020/",
+			"ja": "30MM 1/144 オプションパーツセット23(フルアーマーユニット2)"
+		},
+		{
+			"id": "01_7021",
+			"url": "https://bandai-hobby.net/item/01_7021/",
+			"ja": "30MM 1/144 オプションパーツセット24(マルチオブジェクト1)"
+		},
+		{
+			"id": "01_7022",
+			"url": "https://bandai-hobby.net/item/01_7022/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON ARQUEBUS CORPORATION VP-40S"
+		}
+	],
 	"price": {
 		"amount": 990,
 		"currency": "JPY",
@@ -21,57 +74,107 @@
 	"description": {
 		"ja": [
 			"1/144スケールプラモデルの展示に最適！",
-			"さまざまなシーンを再現できるカスタマイズシーンベースに水上Ver.が登場！シーンベースとカスタマイズエフェクトを駆使して「30MM CUSTOMIZE MISSIONS」に参加しよう！",
+			"さまざまなシーンを再現できるカスタマイズシーンベースに水上Ver.が登場！",
+			"シーンベースとカスタマイズエフェクトを駆使して「30MM CUSTOMIZE MISSIONS」に参加しよう！",
 			"• リアルな水面エフェクトパーツで臨場感あふれる水中シーンを再現。",
 			"• シーンベースを盛り上げる情景シートが付属。"
 		],
 		"en": [
-			"Perfect for displaying 1/144 Scale plastic models!",
-			"A water version is now available on the customized scene base that allows you to reproduce various scenes! Participate in \"30MM CUSTOMIZE MISSIONS\" by making full use of scene base and customization effects!",
-			"• Recreate realistic underwater scenes with realistic water surface effect parts.",
-			"• A scene sheet is included to enliven the scene base."
+			"Ideal for exhibiting 1/144 scale plastic models!",
+			"A CUSTOMIZE SCENE BASE that can reproduce various scenes is now available on the water!",
+			"Make full use of scene-based and customizable effects to participate in \"30MM CUSTOMIZE MISSIONS\"!",
+			"• Reproduce realistic underwater scenes with realistic water surface effect parts.",
+			"• Comes with a scene sheet to liven up the scene base."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"シーンベース×1式",
-			"水しぶきエフェクト×1式",
-			"支柱パーツ×1式",
-			"ジョイントパーツ×1式",
-			"情景シート×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "シーンベース",
+				"en": "• Scene Base"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "水しぶきエフェクト",
+				"en": "• Water Splash Effect"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "支柱パーツ",
+				"en": "• Support Parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "• Joint Parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "情景シート",
+				"en": "• Scenery Sheets"
+			},
+			"count": 2
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151944_1.jpg",
+				"path": "/images/items/01_2973/1000151944_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151944_2.jpg",
+				"path": "/images/items/01_2973/1000151944_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151944_3.jpg",
+				"path": "/images/items/01_2973/1000151944_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151944_4.jpg",
+				"path": "/images/items/01_2973/1000151944_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151944_5.jpg",
+				"path": "/images/items/01_2973/1000151944_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151944_6.jpg",
+				"path": "/images/items/01_2973/1000151944_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151944_7.jpg",
+				"path": "/images/items/01_2973/1000151944_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151944_8.jpg",
+				"path": "/images/items/01_2973/1000151944_8.jpg"
+			}
 		],
-		"en": [
-			"Scene base x 1",
-			"Water splash effect x 1",
-			"Strut parts x 1 set",
-			"Joint parts x 1 set",
-			"Scene sheet x 2"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2973/1000151944_1.jpg",
-		"/images/items/01_2973/1000151944_2.jpg",
-		"/images/items/01_2973/1000151944_3.jpg",
-		"/images/items/01_2973/1000151944_4.jpg",
-		"/images/items/01_2973/1000151944_5.jpg",
-		"/images/items/01_2973/1000151944_6.jpg",
-		"/images/items/01_2973/1000151944_7.jpg",
-		"/images/items/01_2973/1000151944_8.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2973/",
-	"brandIds": [
-		"customize_scenebase",
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3839"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2973/"
+	}
 }

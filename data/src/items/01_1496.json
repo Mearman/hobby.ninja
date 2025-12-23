@@ -2,9 +2,41 @@
 	"id": "01_1496",
 	"type": "item",
 	"name": {
-		"ja": "1/100 ガンダム RXF-91改",
-		"en": "1/100 Gundam RXF-91 modified"
+		"ja": "1/100 ガンダムRXF-91改",
+		"en": "1/100 GundamRXF-91 modified"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5987",
+			"url": "https://bandai-hobby.net/item/01_5987/",
+			"ja": "ガンダムデカールNo.139 機動戦士Gundam GQuuuuuuX汎用1"
+		},
+		{
+			"id": "01_5988",
+			"url": "https://bandai-hobby.net/item/01_5988/",
+			"ja": "ガンダムデカールNo.140 機動戦士Gundam GQuuuuuuX汎用2"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -17,7 +49,6 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム シルエットフォーミュラF91」に登場し、対ダーク・タイガー戦で大破したRX-F91を全面改修した機体を立体化しました。バックパック装着のヴェスパーは可動します。指は可動式です。ビーム・ライフル、ビーム・サーベル2本、ビーム・シールドがついています。"
@@ -26,19 +57,14 @@
 			"A three-dimensional version of the fully refurbished RX-F91 that appeared in \"Mobile Suit Gundam Silhouette Formula F91\" and was destroyed in the battle against Dark Tiger. Vesper attached to a backpack is movable. The fingers are movable. Comes with a beam rifle, two beam sabers, and a beam seal."
 		]
 	},
-	"images": [
-		"/images/items/01_1496/153_2416.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1496/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5986",
-		"01_5987",
-		"01_5988"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2416_s_y03g99lcicpjs0if0106nzx9posg.jpg",
+				"path": "/images/items/01_1496/153_2416.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1496/"
 }

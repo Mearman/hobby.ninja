@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ジムII",
 		"en": "HGUC 1/144 Jim II"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -18,38 +67,38 @@
 		"day": 22
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 『機動戦士Ｚガンダム』より、RGM-79ジムをベースに開発された連邦軍の主力MSが、リファインフォルムでHGUC化。 • フォアグリップを構えた姿でのポージングも決まる。 • シールド、ライフル、サーベル、ハンドパーツなどオプションパーツも豊富。 成形品×8、テトロンシール×1、組立説明書×1"
+			"• 『機動戦士Ｚガンダム』より、RGM-79ジムをベースに開発された連邦軍の主力MSが、リファインフォルムでHGUC化。 ■フォアグリップを構えた姿でのポージングも決まる。 ■シールド、ライフル、サーベル、ハンドパーツなどオプションパーツも豊富。 成形品×8、テトロンシール×1、組立説明書×1"
 		],
 		"en": [
-			"• From \"Mobile Suit Z Gundam\", the main MS of the Federation Forces, developed based on the RGM-79 gym, has been transformed into an HGUC in refined form. • Posing with the foregrip held is also decided. • A wide variety of optional parts such as seals, rifles, sabers, and hand parts are also available. Molded product x 8, Tetron Seal x 1, Assembly Manual x 1"
+			"• From \"Mobile Suit Z Gundam\", the main MS of the Federation Forces, developed based on the RGM-79 gym, has been transformed into an HGUC in refined form. ■Posing with the foregrip held is also decided. ■A wide variety of optional parts such as seals, rifles, sabers, and hand parts are also available. Molded product x 8, Tetron Seal x 1, Assembly Manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_1785/153_2724.jpg",
-		"/images/items/01_1785/155_2724.jpg",
-		"/images/items/01_1785/156_2724.jpg",
-		"/images/items/01_1785/157_2724.jpg",
-		"/images/items/01_1785/158_2724.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1785/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
-	"manualId": "0362"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2724_s_cay9ts0e1kao3h1y74aav0rjsaot.jpg",
+				"path": "/images/items/01_1785/153_2724.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2724_s_caq46stg4b52ow188a5z4i46tnaq.jpg",
+				"path": "/images/items/01_1785/155_2724.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2724_s_722vjom4ffqi957aml53lfku5a91.jpg",
+				"path": "/images/items/01_1785/156_2724.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2724_s_ofm79j639kv2bzcn8pnr4ora6cn8.jpg",
+				"path": "/images/items/01_1785/157_2724.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2724_s_v1id8k2lm7rnvh3lbvv3fihmqj12.jpg",
+				"path": "/images/items/01_1785/158_2724.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1785/"
 }

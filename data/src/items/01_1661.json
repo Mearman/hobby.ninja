@@ -2,9 +2,52 @@
 	"id": "01_1661",
 	"type": "item",
 	"name": {
-		"ja": "BB戦士 SD ガンダム Ｖ作戦セット",
-		"en": "BB Senshi SD Gundam V Strategy Set"
+		"ja": "BB戦士 SDガンダム Ｖ作戦セット",
+		"en": "BB Senshi SDGundam V Strategy Set"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_4789",
+			"url": "https://bandai-hobby.net/item/01_4789/",
+			"ja": "SD ゴッグ&アッガイ&ゾック Ver.GFT トリコロールペイント"
+		},
+		{
+			"id": "01_4783",
+			"url": "https://bandai-hobby.net/item/01_4783/",
+			"ja": "SD RX-78-2 ガンダム Ver.GFT"
+		},
+		{
+			"id": "01_2038",
+			"url": "https://bandai-hobby.net/item/01_2038/",
+			"ja": "BB戦士240 神武兜頑駄無（カブトガンダム）"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -22,30 +65,33 @@
 			"BB戦士シリーズの「ガンダム」「ガンキャノン」「ガンタンク」の３体セット。特性パッケージ、ドレスアップシール、特性ブックレット型説明書が付属します。"
 		],
 		"en": [
-			"A set of three from the BB Senshi series: \"Gundam \", \" Guncannon \", and \" Guntank\". Comes with a characteristic package, dress-up seal, and characteristic booklet type manual."
+			"A set of three from the BB Senshi series: \"Gundam\", \"Guncannon\", and \"Guntank\". Comes with a characteristic package, dress-up seal, and characteristic booklet type manual."
 		]
 	},
-	"images": [
-		"/images/items/01_1661/153_256.jpg",
-		"/images/items/01_1661/155_256.jpg",
-		"/images/items/01_1661/156_256.jpg",
-		"/images/items/01_1661/157_256.jpg",
-		"/images/items/01_1661/158_256.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1661/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_4789",
-		"01_4783",
-		"01_2038"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_256_s_ahi4e0q26ibdd4od4qjmhz9feozy.jpg",
+				"path": "/images/items/01_1661/153_256.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_256_s_v7kan8oj5o4nij8ogvg88ckrlji6.jpg",
+				"path": "/images/items/01_1661/155_256.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_256_s_z8l11c0wihbn528rre2q0hbl586x.jpg",
+				"path": "/images/items/01_1661/156_256.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_256_s_qrg31pl8hl8q7qrim4ce5bc3adij.jpg",
+				"path": "/images/items/01_1661/157_256.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_256_s_rglznj97nct16kmo7f97wu1dufb9.jpg",
+				"path": "/images/items/01_1661/158_256.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1661/"
 }

@@ -5,6 +5,45 @@
 		"ja": "RE/100 1/100 ガンイージ",
 		"en": "RE/100 1/100 Gunigi"
 	},
+	"brands": [
+		{
+			"id": "re100",
+			"url": "https://bandai-hobby.net/brand/re100/",
+			"ja": "RE/100[リボーンワンハンドレッド]"
+		}
+	],
+	"series": [
+		{
+			"id": "v-gundam",
+			"url": "https://bandai-hobby.net/series/v-gundam/",
+			"ja": "機動戦士Vガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000142101",
+			"url": "https://p-bandai.jp/item/item-1000142101/",
+			"ja": "ＲＥ/100 1/100 シャッコー"
+		},
+		{
+			"id": "item-1000139842",
+			"url": "https://p-bandai.jp/item/item-1000139842/",
+			"ja": "ＲＥ/100 1/100 ガンイージ・プロトタイプ（ロールアウトカラー）"
+		},
+		{
+			"id": "item-1000131778",
+			"url": "https://p-bandai.jp/item/item-1000131778",
+			"ja": "RE/100 1/100 ガンブラスター"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -18,10 +57,9 @@
 		"day": 29
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"『機動戦士V ガンダム』シリーズより、ガンイージがREで登場！",
+			"『機動戦士Vガンダム』シリーズより、ガンイージがREで登場！",
 			"• 肩部のビーム・サーベルの収納をはじめ、ビーム・バズーカのリアアーマーへのマウントが可能。",
 			"• 肩部に装備された２連マルチランチャーは、ハッチの開閉を再現。",
 			"• ホログラム加工が施されたPET素材によるビーム・シールドが付属。",
@@ -29,66 +67,112 @@
 		],
 		"en": [
 			"From the \"Mobile Suit V Gundam\" series, Gunigi appears in RE!",
-			"• In addition to storing the beam saber on the shoulder, the beam bazooka can be mounted on the rear armor.",
-			"• The double multi-launcher equipped on the shoulder reproduces the opening and closing of the hatch.",
+			"• In addition to storing the beam saber on the shoulder, it is possible to mount the beam bazooka on the rear armor.",
+			"• The double multi-launcher mounted on the shoulder reproduces the opening and closing of the hatch.",
 			"• Comes with a beam seal made of PET material with hologram processing.",
 			"• Easy to assemble structure that takes advantage of the simple configuration unique to RE."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"ビーム・サーベル×1",
-			"ビーム・シールド×1",
-			"ビーム・バズーカ×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・バズーカ"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 12
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2971_s_iqmql61h75umdoh097jowndri3rk.jpg",
+				"path": "/images/items/01_2029/153_2971.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2971_s_wv6uhfv4z62nxk8oljyt5eb9lmfy.jpg",
+				"path": "/images/items/01_2029/155_2971.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2971_s_gmlk1xf69t35p86azm1vk6zcsnmj.jpg",
+				"path": "/images/items/01_2029/156_2971.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2971_s_ylhj7zypsrnl0evazvlcpfh7k78c.jpg",
+				"path": "/images/items/01_2029/157_2971.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2971_s_4lce4sk95d8pjhxczv6ucbkr3smx.jpg",
+				"path": "/images/items/01_2029/158_2971.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2971_s_8fcmfzw2wybc8tjh594yjxz1x70s.jpg",
+				"path": "/images/items/01_2029/159_2971.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2971_s_avsyovm2u7xhlqk0ieo8zxg84k6z.jpg",
+				"path": "/images/items/01_2029/189_2971.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2971_s_owghai3ayesnb8qn65koszm658bv.jpg",
+				"path": "/images/items/01_2029/190_2971.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2971_s_cbsxyvs05rmhwb19tcbkfb9brxxe.jpg",
+				"path": "/images/items/01_2029/191_2971.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2971_s_mr3tbjf5489gowyq7empdlco5zvp.jpg",
+				"path": "/images/items/01_2029/192_2971.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_2971_s_uxfcizh21fuwcti3k1hcsu7wchlp.jpg",
+				"path": "/images/items/01_2029/193_2971.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x1",
-			"Beam saber x 1",
-			"Beam Seal×1",
-			"Beam bazooka x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×12",
-			"ホイルシール×1",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 12",
-			"Foil Seal×1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2029/153_2971.jpg",
-		"/images/items/01_2029/155_2971.jpg",
-		"/images/items/01_2029/156_2971.jpg",
-		"/images/items/01_2029/157_2971.jpg",
-		"/images/items/01_2029/158_2971.jpg",
-		"/images/items/01_2029/159_2971.jpg",
-		"/images/items/01_2029/189_2971.jpg",
-		"/images/items/01_2029/190_2971.jpg",
-		"/images/items/01_2029/191_2971.jpg",
-		"/images/items/01_2029/192_2971.jpg",
-		"/images/items/01_2029/193_2971.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2029/",
-	"brandIds": [
-		"re100"
-	],
-	"seriesIds": [
-		"v-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000142101",
-		"item-1000139842",
-		"item-1000131778"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2029/"
 }

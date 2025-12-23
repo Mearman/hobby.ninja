@@ -5,6 +5,44 @@
 		"ja": "1/60 アーバレストＶｅｒ．ＩＶ（ＥＣＳイメージクリアカラー）",
 		"en": "1/60 Arbalest Ver. IV (ECS image clear color)"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "fullmetal_panic",
+			"url": "https://bandai-hobby.net/series/fullmetal_panic/",
+			"ja": "フルメタル・パニック!"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2186",
+			"url": "https://bandai-hobby.net/item/01_2186/",
+			"ja": "HG 1/60 M9Dファルケ Ver.IV"
+		},
+		{
+			"id": "01_2128",
+			"url": "https://bandai-hobby.net/item/01_2128/",
+			"ja": "HG 1/60 ガーンズバックVer.IV(アグレッサー部隊機)"
+		},
+		{
+			"id": "01_2119",
+			"url": "https://bandai-hobby.net/item/01_2119/",
+			"ja": "HG 1/60 アーバレストVer.IV(緊急展開ブースター装備仕様)"
+		},
+		{
+			"id": "01_1889",
+			"url": "https://bandai-hobby.net/item/01_1889/",
+			"ja": "HG 1/60 レーバテイン Ver.IV"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,26 +55,14 @@
 		"month": 11
 	},
 	"targetAge": 15,
-	"scale": "1/60",
-	"images": [
-		"/images/items/01_2007/153_2934.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2007/",
-	"brandIds": [],
-	"seriesIds": [
-		"fullmetal_panic"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2186",
-		"01_2128",
-		"01_2119",
-		"01_1889"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2934_o_1cjvn9f8dkijkel19h6b9bjaa23.jpg",
+				"path": "/images/items/01_2007/153_2934.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2007/"
 }

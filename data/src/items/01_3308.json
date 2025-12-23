@@ -5,6 +5,60 @@
 		"ja": "ＨＧ 1/144 ヴァイエイト ＆ メリクリウス",
 		"en": "HG 1/144 Vayate & Merricrius"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5590",
+			"url": "https://bandai-hobby.net/item/01_5590/",
+			"ja": "HG 1/144 ウイングガンダムゼロ [クリアカラー]"
+		},
+		{
+			"id": "item-1000213249",
+			"url": "https://p-bandai.jp/item/item-1000213249/",
+			"ja": "ＨＧ 1/144 アルトロンガンダム"
+		},
+		{
+			"id": "01_5340",
+			"url": "https://bandai-hobby.net/item/01_5340/",
+			"ja": "HG 1/144 シェンロンガンダム [クリアカラー]"
+		},
+		{
+			"id": "item-1000194972",
+			"url": "https://p-bandai.jp/item/item-1000194972/",
+			"ja": "ＭＧ 1/100 ガンダムエピオン EW (シュトゥルム・ウント・ドラング装備)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 1
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－",
@@ -83,7 +136,7 @@
 			"OZ-13MSX2 Meriklius",
 			"Introducing a set of 2!",
 			"－－－－－－－－－－－－－－－－－－－－",
-			"From \"Mobile Suit Gundam W \", the MS \" Vyate\" specialized in artillery battle ability piloted by Trowa,",
+			"From \"New Mobile Report GundamW\", the MS \"Vyate\" specialized in artillery battle ability piloted by Trowa,",
 			"The defense-specialized MS \"Merikrius\" piloted by Heero is now three-dimensional with a completely new model.",
 			"Each aircraft shape is reproduced in the latest HG format, and the distinctive aircraft color is reproduced with molding color.",
 			"The impressive armaments have been newly designed to enable flexible and dynamic posing and display.",
@@ -134,53 +187,72 @@
 			"- Product specifications are scheduled as of 20209. Please note that there may be changes."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームキャノン",
-			"プラネイトディフェンサー",
-			"クラッシュシールド",
-			"ビームガン"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームキャノン"
+			}
+		},
+		{
+			"name": {
+				"ja": "プラネイトディフェンサー"
+			}
+		},
+		{
+			"name": {
+				"ja": "クラッシュシールド"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームガン"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4263_s_3a3z1e4gab2ovwgvddvnrxkvco94.jpg",
+				"path": "/images/items/01_3308/153_4263.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4263_s_0pcq1nyso0eadc4iqb10w2ez7nek.jpg",
+				"path": "/images/items/01_3308/155_4263.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4263_s_bplee16cshd9z6m16x8sxd6uu0cg.jpg",
+				"path": "/images/items/01_3308/156_4263.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4263_s_wh0xtz2necbj69te9jk7g93yktg3.jpg",
+				"path": "/images/items/01_3308/157_4263.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4263_s_g2da75r8imz3g6dn4ck5c5sjn05a.jpg",
+				"path": "/images/items/01_3308/158_4263.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4263_s_7vdce9a3zknjsx2c5qnief0fat5z.jpg",
+				"path": "/images/items/01_3308/159_4263.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4263_s_mf1uh24yk7rq2fc5lr7j8dh0biik.jpg",
+				"path": "/images/items/01_3308/189_4263.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4263_s_dcpbghqs80ax299evzicw934ygbc.jpg",
+				"path": "/images/items/01_3308/190_4263.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4263_s_br7pdphhl05kmkcsbbmrg27rvxvm.jpg",
+				"path": "/images/items/01_3308/191_4263.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4263_s_zd88wasv60kzj8gl8l8sqw535hux.jpg",
+				"path": "/images/items/01_3308/192_4263.jpg"
+			}
 		],
-		"en": [
-			"beam cannon",
-			"planet defender",
-			"Crash Seal Do",
-			"beam gun"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3308/153_4263.jpg",
-		"/images/items/01_3308/155_4263.jpg",
-		"/images/items/01_3308/156_4263.jpg",
-		"/images/items/01_3308/157_4263.jpg",
-		"/images/items/01_3308/158_4263.jpg",
-		"/images/items/01_3308/159_4263.jpg",
-		"/images/items/01_3308/189_4263.jpg",
-		"/images/items/01_3308/190_4263.jpg",
-		"/images/items/01_3308/191_4263.jpg",
-		"/images/items/01_3308/192_4263.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3308/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5590",
-		"item-1000213249",
-		"01_5340",
-		"item-1000194972"
-	],
-	"manualId": "2323",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3308/"
 }

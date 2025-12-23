@@ -3,8 +3,61 @@
 	"type": "item",
 	"name": {
 		"ja": "カスタマイズシーンベース(砂漠Ver.)",
-		"en": "Customized scene base (desert ver.)"
+		"en": "CUSTOMIZE SCENE BASE (DESERT Ver.)"
 	},
+	"brands": [
+		{
+			"id": "customize_scenebase",
+			"url": "https://bandai-hobby.net/brand/customize_scenebase/",
+			"ja": "カスタマイズシーンベース/エフェクト/マテリアル/ウェポンズ",
+			"en": "CUSTOMIZE SCENE BASE/EFFECT/MATERIAL/WEAPONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "customize_scenebase",
+			"url": "https://bandai-hobby.net/brand/customize_scenebase/",
+			"ja": "カスタマイズシーンベース/エフェクト/マテリアル/ウェポンズ"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -25,47 +78,76 @@
 			"• 砂漠をイメージしたパーツセット。組み合わせによりアレンジが可能な砂塵パーツ付き。"
 		],
 		"en": [
-			"Perfect for displaying 1/144 Scale plastic models!",
-			"Introducing a customized scene base that allows you to reproduce various scenes! Expand your own worldview!",
-			"• Parts set inspired by the desert. Comes with dust parts that can be arranged by combining."
+			"Ideal for exhibiting 1/144 scale plastic models! Introducing CUSTOMIZE SCENE BASE that can recreate various scenes! Expand your own view of the world!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"シーンベース×１",
-			"岩×１式",
-			"着弾エフェクト×１式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "シーンベース×１",
+				"en": "• Scene-based"
+			}
+		},
+		{
+			"name": {
+				"ja": "岩×１式",
+				"en": "• Rock"
+			},
+			"unit": {
+				"ja": "set",
+				"en": "set"
+			}
+		},
+		{
+			"name": {
+				"ja": "着弾エフェクト×１式",
+				"en": "• Impact effect"
+			},
+			"unit": {
+				"ja": "set",
+				"en": "set"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145740_1.jpg",
+				"path": "/images/items/01_2719/1000145740_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145740_2.jpg",
+				"path": "/images/items/01_2719/1000145740_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145740_3.jpg",
+				"path": "/images/items/01_2719/1000145740_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145740_4.jpg",
+				"path": "/images/items/01_2719/1000145740_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145740_5.jpg",
+				"path": "/images/items/01_2719/1000145740_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145740_6.jpg",
+				"path": "/images/items/01_2719/1000145740_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145740_7.jpg",
+				"path": "/images/items/01_2719/1000145740_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145740_8.jpg",
+				"path": "/images/items/01_2719/1000145740_8.jpg"
+			}
 		],
-		"en": [
-			"Scene base x 1",
-			"Rock x 1 set",
-			"Impact effect x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2719/1000145740_1.jpg",
-		"/images/items/01_2719/1000145740_2.jpg",
-		"/images/items/01_2719/1000145740_3.jpg",
-		"/images/items/01_2719/1000145740_4.jpg",
-		"/images/items/01_2719/1000145740_5.jpg",
-		"/images/items/01_2719/1000145740_6.jpg",
-		"/images/items/01_2719/1000145740_7.jpg",
-		"/images/items/01_2719/1000145740_8.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2719/",
-	"brandIds": [
-		"customize_scenebase",
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3831"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2719/"
+	}
 }

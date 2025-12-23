@@ -5,6 +5,39 @@
 		"ja": "1/144 Ex-S ガンダム",
 		"en": "1/144 Ex-S Gundam"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "sentinel",
+			"url": "https://bandai-hobby.net/series/sentinel/",
+			"ja": "ガンダム・センチネル"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5593",
+			"url": "https://bandai-hobby.net/item/01_5593/",
+			"ja": "MG 1/100 ガンダムMk-V [クリアカラー]"
+		},
+		{
+			"id": "01_3408",
+			"url": "https://bandai-hobby.net/item/01_3408/",
+			"ja": "ＭＧ 1/100 ガンダムＭｋ-Ｖ"
+		},
+		{
+			"id": "01_3062",
+			"url": "https://bandai-hobby.net/item/01_3062/",
+			"ja": "MG 1/100 ガンダムベース限定 FAZZ Ver.Ka[チタニウムフィニッシュ]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -17,33 +50,32 @@
 		"month": 11
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『ガンダム・センチネル』より、1/144スケールで、EX-S ガンダムが登場。",
+			"『ガンダム・センチネル』より、1/144スケールで、EX-Sガンダムが登場。",
 			"膝アーマー部はビーム・サーベルラックの開閉が再現できます。ビーム・スマートガンの保持はビーム・キャノンを外さずに行なうことができます。ビーム・サーベル２本付です。"
 		],
 		"en": [
-			"From \"Gundam Sentinel\", EX-S Gundam appears in 1/144 scale.",
+			"From \"Gundam Sentinel\", EX-SGundam appears in 1/144 scale.",
 			"The opening and closing of the beam saber rack can be reproduced in the knee armor part. The beam smart gun can be held without removing the beam cannon. Comes with 2 beam sabers."
 		]
 	},
-	"images": [
-		"/images/items/01_2960/153_3935.jpg",
-		"/images/items/01_2960/155_3935.jpg",
-		"/images/items/01_2960/156_3935.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2960/",
-	"brandIds": [],
-	"seriesIds": [
-		"sentinel"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5593",
-		"01_3408",
-		"01_3062"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3935_s_974t402mzunv1b4o1pgyxissf3fl.jpg",
+				"path": "/images/items/01_2960/153_3935.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3935_s_iupf7qxeku7capt55440p59sqcmz.jpg",
+				"path": "/images/items/01_2960/155_3935.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3935_s_3gt4860w257y1i654oy3pexbp03c.jpg",
+				"path": "/images/items/01_2960/156_3935.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2960/"
 }

@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 フェイクニューウェポンズ",
 		"en": "HGBD:R 1/144 Fake New Weapons"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 27
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"2020年7月9日より配信再開予定の『ガンダムビルドダイバーズRe:RISE』2nd Seasonよりアルスコアガンダムの新しい外装ウェポンが登場！",
@@ -33,38 +76,44 @@
 			"• In addition to Aruskoa Gundam, it can also be equipped to existing 1/144 Scale Gunpla. You can enjoy strengthening existing HG and wide range of customization."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"バックパックユニット×1",
-			"ライフルユニット×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "バックパックユニット"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ライフルユニット"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3740_s_10yq8b5nmtilnlehvllphlmweitk.jpg",
+				"path": "/images/items/01_2751/153_3740.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3740_s_zei0zd90grjpl318mxnx8j0dmy5t.jpg",
+				"path": "/images/items/01_2751/155_3740.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3740_s_pd0as57vv288aabh6e1qubbqc4fe.jpg",
+				"path": "/images/items/01_2751/156_3740.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3740_s_duddq0chnp7lozy6wbc5e01w7xo9.jpg",
+				"path": "/images/items/01_2751/157_3740.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3740_s_dknlvi7k7wczodatrpg8njab9qi6.jpg",
+				"path": "/images/items/01_2751/158_3740.jpg"
+			}
 		],
-		"en": [
-			"Backpack unit x 1",
-			"Rifle unit x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2751/153_3740.jpg",
-		"/images/items/01_2751/155_3740.jpg",
-		"/images/items/01_2751/156_3740.jpg",
-		"/images/items/01_2751/157_3740.jpg",
-		"/images/items/01_2751/158_3740.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2751/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0105"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2751/"
 }

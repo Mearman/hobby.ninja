@@ -5,6 +5,60 @@
 		"ja": "ＲＧ 1/144 ガンダムアストレイ ゴールドフレーム天（アマツ）ハナ",
 		"en": "RG 1/144 Gundam Astray Gold Frame Amatsu Hana"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "astrays",
+			"url": "https://bandai-hobby.net/series/astrays/",
+			"ja": "機動戦士ガンダムSEED ASTRAY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4768",
+			"url": "https://bandai-hobby.net/item/01_4768/",
+			"ja": "RG 1/144 ガンダムアストレイ ゴールドフレーム天［スペシャルコーティング］"
+		},
+		{
+			"id": "01_2190",
+			"url": "https://bandai-hobby.net/item/01_2190/",
+			"ja": "RG 1/144 ガンダムアストレイ ゴールドフレーム天ミナ [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000116090",
+			"url": "http://p-bandai.jp/item/item-1000116090/",
+			"ja": "ＲＧ 1/144 ガンダムアストレイ ゴールドフレーム天（アマツ）"
+		},
+		{
+			"id": "01_833",
+			"url": "https://bandai-hobby.net/item/01_833/",
+			"ja": "RG 1/144 ガンダムアストレイ ゴールドフレーム天ミナ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -16,7 +70,6 @@
 		"year": 2019,
 		"month": 6
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"真 白 き 天 （ ア マ ツ ） リ ア ル グ レ ー ド で 登 場  －",
@@ -54,7 +107,7 @@
 		"en": [
 			"Pure White Heaven (Amatu) Appears in Real Gray -",
 			"MBF-P01-Re3 Gundam Astray Gold Frame Tenhana",
-			"From the comic “Mobile Suit Gundam SEED ASTRAY Princess of the Sky” published by Gundam Ace,",
+			"From the comic “Mobile Suit GundamSEED ASTRAY: Princess of the Sky” published by Gundam Ace,",
 			"Gundam Astray Gold Frame Amatsu \"Tenhana\" colored in pure white is commercialized in a real grade arrangement!",
 			"● Reproduce the body color of Gold Frame Tenhana with molded colors with different tones!",
 			"Based on RG's own research, the molding color has been changed based on the three-dimensional gold frame Tenmina to reproduce a glittering pure white aircraft.",
@@ -85,38 +138,50 @@
 			"- Product specifications are scheduled as of 20193. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2309/153_3248.jpg",
-		"/images/items/01_2309/155_3248.jpg",
-		"/images/items/01_2309/156_3248.jpg",
-		"/images/items/01_2309/157_3248.jpg",
-		"/images/items/01_2309/158_3248.jpg",
-		"/images/items/01_2309/159_3248.jpg",
-		"/images/items/01_2309/189_3248.jpg",
-		"/images/items/01_2309/190_3248.jpg",
-		"/images/items/01_2309/191_3248.jpg",
-		"/images/items/01_2309/192_3248.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2309/",
-	"brandIds": [
-		"rg",
-		"pb_rg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"astrays"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4768",
-		"01_2190",
-		"item-1000116090",
-		"01_833"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3248_s_cl474mv5nkxwzx9cre4tnghftvi3.jpg",
+				"path": "/images/items/01_2309/153_3248.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3248_s_v2r8hp37bk2ksld5wlzhd9kmjcyp.jpg",
+				"path": "/images/items/01_2309/155_3248.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3248_s_2ye1hhoe481mx8g9cgk1x2b66f58.jpg",
+				"path": "/images/items/01_2309/156_3248.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3248_s_percpzek9mcch8yovbrxkn190l90.jpg",
+				"path": "/images/items/01_2309/157_3248.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3248_s_goyovy97t79dsrb8zcp7t23e3kp7.jpg",
+				"path": "/images/items/01_2309/158_3248.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3248_s_go9exjyweuvxmq4c2455uhxu92s7.jpg",
+				"path": "/images/items/01_2309/159_3248.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3248_s_spmvkqtqjxense9kl0dpinfd4uin.jpg",
+				"path": "/images/items/01_2309/189_3248.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3248_s_ut4n9itfus2n6pxdxk6ccugl3zdd.jpg",
+				"path": "/images/items/01_2309/190_3248.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3248_s_hlmck2313e5v3fdhb1fe9sbhei5g.jpg",
+				"path": "/images/items/01_2309/191_3248.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3248_s_sx3s444j8dgkvmy2uattzw2ozlap.jpg",
+				"path": "/images/items/01_2309/192_3248.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2309/"
 }

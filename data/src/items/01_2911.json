@@ -5,6 +5,60 @@
 		"ja": "ＭＧ 1/100 ギラ・ドーガ（フル・フロンタル専用機）",
 		"en": "MG 1/100 Gira Doga (Full Frontal exclusive machine)"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216106",
+			"url": "https://p-bandai.jp/item/item-1000216106/",
+			"ja": "RG 1/144 ユニコーンガンダム２号機 バンシィ・ノルン (最終決戦仕様) [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000183366",
+			"url": "https://p-bandai.jp/item/item-1000183366/",
+			"ja": "ＭＧ 1/100 スタークジェガン"
+		},
+		{
+			"id": "01_4271",
+			"url": "https://bandai-hobby.net/item/01_4271/",
+			"ja": "MG 1/100 ガンダムベース限定 ユニコーンガンダム(光の結晶体)"
+		},
+		{
+			"id": "item-1000164780",
+			"url": "https://p-bandai.jp/item/item-1000164780/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム ペルフェクティビリティ用 ディバイン拡張セット"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 6050,
 		"currency": "JPY",
@@ -16,7 +70,6 @@
 		"year": 2015,
 		"month": 7
 	},
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"ゲームソフト『機動戦士ガンダムＵＣ』（発売元：バンダイナムコエンターテインメント）より、",
@@ -109,39 +162,50 @@
 			"- Product specifications are scheduled as of 20154. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2911/153_3889.jpg",
-		"/images/items/01_2911/155_3889.jpg",
-		"/images/items/01_2911/156_3889.jpg",
-		"/images/items/01_2911/157_3889.jpg",
-		"/images/items/01_2911/158_3889.jpg",
-		"/images/items/01_2911/159_3889.jpg",
-		"/images/items/01_2911/189_3889.jpg",
-		"/images/items/01_2911/190_3889.jpg",
-		"/images/items/01_2911/191_3889.jpg",
-		"/images/items/01_2911/192_3889.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2911/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216106",
-		"item-1000183366",
-		"01_4271",
-		"item-1000164780"
-	],
-	"manualId": "2254",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3889_s_41nyr51zyktidmtc0st85h8otc1j.jpg",
+				"path": "/images/items/01_2911/153_3889.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3889_s_9xaizqye48g3tc2hzjcvs7fdmu7w.jpg",
+				"path": "/images/items/01_2911/155_3889.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3889_s_8kcwh81g957yc0nkxw7c0vxu5ma4.jpg",
+				"path": "/images/items/01_2911/156_3889.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3889_s_rq9f20a3egiwt53uwdbq0yc0ypro.jpg",
+				"path": "/images/items/01_2911/157_3889.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3889_s_d7k04r9tdh9uv3x3jprlq5vzoytc.jpg",
+				"path": "/images/items/01_2911/158_3889.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3889_s_f8oihghnpdbhyj01quiei20gbqt1.jpg",
+				"path": "/images/items/01_2911/159_3889.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3889_s_07uxi0fkuw9o7kcjm98ns3sod7zp.jpg",
+				"path": "/images/items/01_2911/189_3889.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3889_s_ewdh4olvssjmglfuo4w1iwakh4jf.jpg",
+				"path": "/images/items/01_2911/190_3889.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3889_s_ln2rs53v743mgws5keks5d0h3i7h.jpg",
+				"path": "/images/items/01_2911/191_3889.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3889_s_96tbo2xzseifdcfigu5y64oxrwpm.jpg",
+				"path": "/images/items/01_2911/192_3889.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2911/"
 }

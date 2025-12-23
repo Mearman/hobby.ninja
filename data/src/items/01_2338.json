@@ -3,8 +3,31 @@
 	"type": "item",
 	"name": {
 		"ja": "トイ・ストーリー4 ウッディ",
-		"en": "toy story 4 woody"
+		"en": "TOY STORY 4 WOODY"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "toystory4",
+			"url": "https://bandai-hobby.net/series/toystory4/",
+			"ja": "トイ・ストーリー4",
+			"en": "トイ・ストーリー4"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2337",
+			"url": "https://bandai-hobby.net/item/01_2337/",
+			"ja": "トイ・ストーリー4 バズ・ライトイヤー"
+		}
+	],
 	"price": {
 		"amount": 3740,
 		"currency": "JPY",
@@ -29,59 +52,99 @@
 			"• 靴底に貼れるシールが２種類付属。"
 		],
 		"en": [
-			"From the movie \"Toy Story 4 \" comes the \" cowboy doll\" Woody!",
-			"• The face is recreated with detailed divisions, including the eyes and mouth. There are 3 types of expression changing parts! The color coding is reproduced with molded colors, and you can change the perspective by touching it from the back side.",
-			"• The vest has a multi-layer structure. By color-coding the parts, you can reproduce the cow pattern without seals!",
-			"• The buttons and sheriff badge are also made into separate parts to make it more realistic!",
-			"• The pattern of the shirt has natural shading due to the deep molding, creating a checkered pattern. By matching the parting lines of the parts to the pattern of the shirt, the parting lines are less noticeable and create a natural finish.",
-			"• Four types of hand parts are included for each side, allowing you to create a variety of poses.",
-			"• Two types of seals that can be attached to the soles of the shoes are included."
+			"From the movie \"TOY STORY 4\", \"Cowboy Doll\" Woody appears!",
+			"• The face is finely divided into eyes and mouth. There are 3 types of facial expression change parts! The color coding is reproduced by molding color, and the line of sight can be changed by touching it from the back side.",
+			"• The vest has a multi-layered structure. By color-coding the parts, the cow pattern is reproduced without a sticker!",
+			"• Buttons and sheriff badges are also made into separate parts to make them more realistic!",
+			"• The pattern of the shirt is naturally shaded by a deep mold, expressing a plaid pattern. By matching the dividing line of the parts to the pattern of the shirt, the dividing line is not noticeable and the finish is natural.",
+			"• Four types of hand parts are included on the left and right, creating various poses."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"表情パーツ×3",
-			"ハンドパーツ×右2種左3種",
-			"ディスプレイベース×1"
-		],
-		"en": [
-			"Facial expression parts x 3",
-			"Hand parts x 2 types on the right, 3 types on the left",
-			"Display base x 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×5",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 5",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2338/1000137578_1.jpg",
-		"/images/items/01_2338/1000137578_2.jpg",
-		"/images/items/01_2338/1000137578_3.jpg",
-		"/images/items/01_2338/1000137578_4.jpg",
-		"/images/items/01_2338/1000137578_5.jpg",
-		"/images/items/01_2338/1000137578_6.jpg",
-		"/images/items/01_2338/1000137578_7.jpg",
-		"/images/items/01_2338/1000137578_8.jpg",
-		"/images/items/01_2338/1000137578_9.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情パーツ",
+				"en": "• Facial expression parts"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×右2種左3種",
+				"en": "• Hand parts"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース",
+				"en": "• Display Base"
+			},
+			"count": 1
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 5
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137578_1.jpg",
+				"path": "/images/items/01_2338/1000137578_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137578_2.jpg",
+				"path": "/images/items/01_2338/1000137578_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137578_3.jpg",
+				"path": "/images/items/01_2338/1000137578_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137578_4.jpg",
+				"path": "/images/items/01_2338/1000137578_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137578_5.jpg",
+				"path": "/images/items/01_2338/1000137578_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137578_6.jpg",
+				"path": "/images/items/01_2338/1000137578_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137578_7.jpg",
+				"path": "/images/items/01_2338/1000137578_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137578_8.jpg",
+				"path": "/images/items/01_2338/1000137578_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137578_9.jpg",
+				"path": "/images/items/01_2338/1000137578_9.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2338/",
-	"brandIds": [],
-	"seriesIds": [
-		"toystory4"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2337"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2338/"
+	}
 }

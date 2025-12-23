@@ -2,9 +2,37 @@
 	"id": "01_3242",
 	"type": "item",
 	"name": {
-		"ja": "ＢＢ戦士 19 フルアーマーZZ ガンダム",
-		"en": "BB Senshi 19 Full Armor ZZ Gundam"
+		"ja": "ＢＢ戦士 19 フルアーマーZZガンダム",
+		"en": "BB Senshi 19 Full Armor ZZGundam"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-zz",
+			"url": "https://bandai-hobby.net/series/gundam-zz/",
+			"ja": "機動戦士ガンダムＺＺ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3237",
+			"url": "https://bandai-hobby.net/item/01_3237/",
+			"ja": "ＢＢ戦士 14 ザク3"
+		}
+	],
 	"price": {
 		"amount": 330,
 		"currency": "JPY",
@@ -18,20 +46,14 @@
 		"day": 25
 	},
 	"targetAge": 15,
-	"images": [
-		"/images/items/01_3242/153_4196.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3242/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"gundam-zz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3237"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4196_s_m4beys3wprkyqbmd5gqoq135hmd6.jpg",
+				"path": "/images/items/01_3242/153_4196.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3242/"
 }

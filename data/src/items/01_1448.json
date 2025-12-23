@@ -2,9 +2,53 @@
 	"id": "01_1448",
 	"type": "item",
 	"name": {
-		"ja": "MG 1/100 ガンダム RX-78GP01",
-		"en": "MG 1/100 Gundam RX-78GP01"
+		"ja": "MG 1/100 ガンダムRX-78GP01",
+		"en": "MG 1/100 GundamRX-78GP01"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "g-0083",
+			"url": "https://bandai-hobby.net/series/g-0083/",
+			"ja": "機動戦士ガンダム0083 STARDUST MEMORY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000127907",
+			"url": "http://p-bandai.jp/item/item-1000127907",
+			"ja": "ＭＧ 1/100 MS-06F-2 ザクＩＩ Ｆ２型（ノイエン・ビッター機）"
+		},
+		{
+			"id": "item-1000127908",
+			"url": "http://p-bandai.jp/item/item-1000127908",
+			"ja": "ＭＧ 1/100 MS-06F-2 ザクＩＩ Ｆ２型（キンバライト基地仕様）"
+		},
+		{
+			"id": "item-1000124942",
+			"url": "http://p-bandai.jp/item/item-1000124942",
+			"ja": "ＭＧ 1/100 アナベル・ガトー専用ゲルググ Ver.2.0"
+		},
+		{
+			"id": "item-1000105596",
+			"url": "https://p-bandai.jp/item/item-1000105596",
+			"ja": "ＭＧ 1/100 パワード・ジム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -18,35 +62,30 @@
 		"day": 1
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム 0083 STARDUST MEMORY』より、宇宙世紀0083年に、ガンダム開発計画によって試作されたガンダム 1号機をMGならではのプロポーションとギミックで再現しました。コアファイターIIは差し替え無しで、コアブロックへ完全変形。設定通り、胴体内部への水平格納が可能です。足部は内部のメカを再現。ヒザの関節は2重構造で広範囲の可動が可能です。専用のビームライフル、ビームサーベル２本、伸縮機構を再現したシールドが付いています。"
+			"『機動戦士ガンダム0083 STARDUST MEMORY』より、宇宙世紀0083年に、ガンダム開発計画によって試作されたガンダム1号機をMGならではのプロポーションとギミックで再現しました。コアファイターIIは差し替え無しで、コアブロックへ完全変形。設定通り、胴体内部への水平格納が可能です。足部は内部のメカを再現。ヒザの関節は2重構造で広範囲の可動が可能です。専用のビームライフル、ビームサーベル２本、伸縮機構を再現したシールドが付いています。"
 		],
 		"en": [
 			"From \"Mobile Suit Gundam 0083 STARDUST MEMORY\", Gundam Unit 1, which was prototyped by the Gundam development plan in Universal Century 0083, is reproduced with proportions and gimmicks unique to MG. Core Fighter II can be completely transformed into a core block without any replacement. As configured, it can be stored horizontally inside the fuselage. The legs reproduce the internal mechanism. The knee joint has a double structure and allows for a wide range of movement. Comes with a special beam rifle, two beam sabers, and a seal that reproduces the expansion and contraction mechanism."
 		]
 	},
-	"images": [
-		"/images/items/01_1448/153_2371.jpg",
-		"/images/items/01_1448/155_2371.jpg",
-		"/images/items/01_1448/156_2371.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1448/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"g-0083"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000127907",
-		"item-1000127908",
-		"item-1000124942",
-		"item-1000105596"
-	],
-	"manualId": "0984"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/156_2371_s_px9dbo0cj8g5via1cgfsih5b5sa3.jpg",
+				"path": "/images/items/01_1448/156_2371.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_2371_s_iuu5tiz95lriq0k2euxz4a5vj3ba.jpg",
+				"path": "/images/items/01_1448/153_2371.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2371_s_d1o5v9ry25zredmccmeodiq2bi0b.jpg",
+				"path": "/images/items/01_1448/155_2371.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1448/"
 }

@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 フォビドゥンガンダム",
 		"en": "HG 1/144 Forbidden Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181726",
+			"url": "https://p-bandai.jp/item/item-1000181726/",
+			"ja": "ＨＧ 1/144 ストライクダガー"
+		},
+		{
+			"id": "01_1930",
+			"url": "https://bandai-hobby.net/item/01_1930/",
+			"ja": "HG 1/144 ガンダムベース限定 フリーダムガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_384",
+			"url": "https://bandai-hobby.net/item/01_384/",
+			"ja": "HGCE 1/144 フリーダムガンダム"
+		},
+		{
+			"id": "01_83",
+			"url": "https://bandai-hobby.net/item/01_83/",
+			"ja": "HGCE 1/144 ストライクルージュ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -17,36 +61,34 @@
 		"month": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム SEED」に登場する新ライバル機「フォビドゥンガンダム」の1/144スケールHG仕様のプラモデル。特徴的なバックパックは胸部と接続アームの可動により本体上部に装着可能です。また、強襲形態も再現出来ます。バックパックの両脇のレールガン「エクツァーン」は可動式です。武器は大型カマ「ニーズヘグ」が付属します。"
+			"「機動戦士ガンダムSEED」に登場する新ライバル機「フォビドゥンガンダム」の1/144スケールHG仕様のプラモデル。特徴的なバックパックは胸部と接続アームの可動により本体上部に装着可能です。また、強襲形態も再現出来ます。バックパックの両脇のレールガン「エクツァーン」は可動式です。武器は大型カマ「ニーズヘグ」が付属します。"
 		],
 		"en": [
-			"A 1/144 Scale HG plastic model of the new rival machine \"Forbidden Gundam \" that appears in \" Mobile Suit Gundam SEED \". The distinctive backpack can be attached to the top of the main body due to the movable chest and connecting arms. Also, the assault form can be reproduced. The rail guns \" Exzan \" on both sides of the backpack are movable. The weapon comes with a large kama \" Nizhog\"."
+			"A 1/144 Scale HG plastic model of the new rival machine \"Forbidden Gundam\" that appears in \"Mobile Suit Gundam SEED\". The distinctive backpack can be attached to the top of the main body due to the movable chest and connecting arms. Also, the assault form can be reproduced. The rail guns \"Exzan\" on both sides of the backpack are movable. The weapon comes with a large kama \"Nizhog\"."
 		]
 	},
-	"images": [
-		"/images/items/01_2761/153_374.jpg",
-		"/images/items/01_2761/155_374.jpg",
-		"/images/items/01_2761/156_374.jpg",
-		"/images/items/01_2761/157_374.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2761/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181726",
-		"01_1930",
-		"01_384",
-		"01_83"
-	],
-	"manualId": "0882"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_374_s_owjiy4wehjhsb84u4sa9us138730.jpg",
+				"path": "/images/items/01_2761/153_374.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_374_s_82e8wb5a9ih1wzymfq0i7u0848n8.jpg",
+				"path": "/images/items/01_2761/155_374.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_374_s_xay7iybmn4yrrpo5yd1qm4sff4b3.jpg",
+				"path": "/images/items/01_2761/156_374.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_374_s_3s8y64fsct3vku7ipubnrjxddcu5.jpg",
+				"path": "/images/items/01_2761/157_374.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2761/"
 }

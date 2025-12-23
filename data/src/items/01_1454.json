@@ -5,6 +5,43 @@
 		"ja": "BB戦士312 呂蒙ディジェ・甘寧ケンプファー 轟強襲水軍",
 		"en": "BB Senshi 312 Ryomong Dije Ganning Kaempfer Roaring Assault Navy"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -26,23 +63,22 @@
 			"The roaring assault navy led by “Ryomong Dije” and “Ganning Kämpfer” appears in BB Senshi as a set. Ryo Mong Dije’s “Hekizanfu” can be linked together. Ganning Kampfer’s weapons and armor are combined into the small mecha “Souretsukou”. The battle boat can be recombined into 6 forms (battleship form, tower ship form, assault form, Ganning-only assault form, Ryomong-only assault form, and frontline base form). 3 sailors are also included."
 		]
 	},
-	"images": [
-		"/images/items/01_1454/153_2377.jpg",
-		"/images/items/01_1454/155_2377.jpg",
-		"/images/items/01_1454/156_2377.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1454/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2377_s_24scc46abmu9k3owy0higi4vzuu0.jpg",
+				"path": "/images/items/01_1454/153_2377.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2377_s_rcf1dsacckzf8s95nif22m6hxb80.jpg",
+				"path": "/images/items/01_1454/155_2377.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2377_s_x8hm1y4jrt0v3kkxyw0fjckjt22s.jpg",
+				"path": "/images/items/01_1454/156_2377.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1454/"
 }

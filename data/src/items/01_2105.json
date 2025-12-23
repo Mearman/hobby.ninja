@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "ケロロ軍曹プラモコレクション ケロロロボMk-II",
-		"en": "Keroro Sergeant Plastic Model Collection Keroro Robo Mk-II"
+		"en": "SERGENT KERORO PLAMO COLLECTION　KERORO ROBO MK2"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "keroro",
+			"url": "https://bandai-hobby.net/series/keroro/",
+			"ja": "ケロロ軍曹",
+			"en": "Sgt. Frog"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7034",
+			"url": "https://bandai-hobby.net/item/01_7034/",
+			"ja": "HG Newケロロロボ"
+		},
+		{
+			"id": "01_2120",
+			"url": "https://bandai-hobby.net/item/01_2120/",
+			"ja": "ケロロ軍曹プラモコレクション ケロロ軍曹 アニバーサリーパッケージ エディション"
+		},
+		{
+			"id": "01_2122",
+			"url": "https://bandai-hobby.net/item/01_2122/",
+			"ja": "ケロロ軍曹プラモコレクション ケロロ軍曹&ケロロロボMk-II アニバーサリースペシャルVer."
+		},
+		{
+			"id": "01_2104",
+			"url": "https://bandai-hobby.net/item/01_2104/",
+			"ja": "ケロロ軍曹プラモコレクション ガルル中尉"
+		}
+	],
 	"price": {
 		"amount": 1210,
 		"currency": "JPY",
@@ -26,32 +64,40 @@
 			"武器はライフルとシールドが付属。"
 		],
 		"en": [
-			"New version of Keroro Robo! “Keroro Robo Mk-II” is here!",
-			"Can be transformed into flight form \"Keroro Jet\".",
-			"Each joint is movable and various poses are possible.",
-			"The included Sergeant Keroro rides on a saucer, and the saucer can be combined with the robot body as a cockpit.",
-			"Weapons include a rifle and a seal."
+			"A new version in Kerorororobo! \"Kerororobo Mk-II\" is here!",
+			"It can be transformed into a flight form \"Kero Jet\".",
+			"Each joint is movable for a variety of poses.",
+			"The attached Keroro Sergeant rides the Saucer, and the Saucer can be combined with the Robo body as a cockpit.",
+			"Weapons come with a rifle and shield."
 		]
 	},
-	"images": [
-		"/images/items/01_2105/153_3053.jpg",
-		"/images/items/01_2105/155_3053.jpg",
-		"/images/items/01_2105/156_3053.jpg",
-		"/images/items/01_2105/157_3053.jpg",
-		"/images/items/01_2105/158_3053.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3053_o_1cqnbnkblc3v1a7e1ibth26f8e2d.jpg",
+				"path": "/images/items/01_2105/153_3053.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3053_o_1cqnbnqia1a7q16m3i6d1im41qn62i.jpg",
+				"path": "/images/items/01_2105/155_3053.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3053_o_1cqnbo17mn8gvst110rrb148p2n.jpg",
+				"path": "/images/items/01_2105/156_3053.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3053_o_1cqnbo6nm182617o61quu14gq1nms2s.jpg",
+				"path": "/images/items/01_2105/157_3053.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3053_o_1cqnbobk0c381rqn1ean9041men31.jpg",
+				"path": "/images/items/01_2105/158_3053.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2105/",
-	"brandIds": [],
-	"seriesIds": [
-		"keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7034",
-		"01_2120",
-		"01_2122",
-		"01_2104"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2105/"
+	}
 }

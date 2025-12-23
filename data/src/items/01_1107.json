@@ -5,6 +5,49 @@
 		"ja": "メカコレクション　ドラゴンボール　7巻 亀仙人のワゴン車",
 		"en": "Mecha Collection Dragon Ball Volume 7 Master Roshi's Wagon Car"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1093",
+			"url": "https://bandai-hobby.net/item/01_1093/",
+			"ja": "メカコレクション　ドラゴンボール　6巻　ウーロンのロードバギー"
+		},
+		{
+			"id": "01_1060",
+			"url": "https://bandai-hobby.net/item/01_1060/",
+			"ja": "メカコレクション　ドラゴンボール　5巻　ヤムチャのマイティマウス号"
+		},
+		{
+			"id": "01_1016",
+			"url": "https://bandai-hobby.net/item/01_1016/",
+			"ja": "メカコレクション　ドラゴンボール　3巻　ランチの一輪バイク"
+		},
+		{
+			"id": "01_1017",
+			"url": "https://bandai-hobby.net/item/01_1017/",
+			"ja": "メカコレクション　ドラゴンボール　4巻　孫悟空のジェットバギー"
+		}
+	],
 	"price": {
 		"amount": 715,
 		"currency": "JPY",
@@ -38,56 +81,82 @@
 			"Bulma's romantic fighter is assembled in all 7 volumes! Volume 7 comes with two propellers as romantic parts!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"亀仙人×１",
-			"孫悟空×１",
-			"ヤムチャ×1",
-			"クリリン×１",
-			"ロマンティックパーツ×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "亀仙人×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "孫悟空×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヤムチャ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "クリリン×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ロマンティックパーツ"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2038_s_l63of6zsp3fokxjjqfiaszrvyomz.jpg",
+				"path": "/images/items/01_1107/153_2038.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2038_s_e0kiyh9lhbnvni6uewpusjydn807.jpg",
+				"path": "/images/items/01_1107/155_2038.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2038_s_1l70tqqmdskdd9ylqdt24skgqaqm.jpg",
+				"path": "/images/items/01_1107/156_2038.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2038_s_jm40trbdcoofvot6iso7av3gbs61.jpg",
+				"path": "/images/items/01_1107/157_2038.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2038_s_9zzm61eg0mhpuiu796co5sbe13md.jpg",
+				"path": "/images/items/01_1107/158_2038.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2038_s_4gv80qtrpt3cg6kbs5zo18eyg2vk.jpg",
+				"path": "/images/items/01_1107/159_2038.jpg"
+			}
 		],
-		"en": [
-			"Master Roshi x1",
-			"Son Goku x1",
-			"Yamcha×1",
-			"Krillin x1",
-			"Romantic parts x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×2",
-			"シール×１",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 2",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1107/153_2038.jpg",
-		"/images/items/01_1107/155_2038.jpg",
-		"/images/items/01_1107/156_2038.jpg",
-		"/images/items/01_1107/157_2038.jpg",
-		"/images/items/01_1107/158_2038.jpg",
-		"/images/items/01_1107/159_2038.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1107/",
-	"brandIds": [
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"dragonball"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1093",
-		"01_1060",
-		"01_1016",
-		"01_1017"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1107/"
 }

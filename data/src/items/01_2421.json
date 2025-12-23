@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 デスティニーガンダム [クリアカラー]",
 		"en": "HG 1/144 Destiny Gundam [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000203308",
+			"url": "https://p-bandai.jp/item/item-1000203308/",
+			"ja": "ＨＧ 1/144 ダークダガーＬ"
+		},
+		{
+			"id": "01_5097",
+			"url": "https://bandai-hobby.net/item/01_5097/",
+			"ja": "HG 1/144 デストロイガンダム"
+		},
+		{
+			"id": "01_3739",
+			"url": "https://bandai-hobby.net/item/01_3739/",
+			"ja": "HG 1/144 デスティニーガンダム(ハイネ専用機)[クリアカラー]"
+		},
+		{
+			"id": "item-1000157417",
+			"url": "https://p-bandai.jp/item/item-1000157417/",
+			"ja": "ＨＧ 1/144 ウィンダム（ネオ・ロアノーク専用機）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -18,46 +62,38 @@
 		"day": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED DESTINY』より主役機デスティニーガンダムをHG最新フォーマット・クリアカラーにて立体化！",
+			"『機動戦士ガンダムSEED DESTINY』より主役機デスティニーガンダムをHG最新フォーマット・クリアカラーにて立体化！",
 			"• 完全新規造形。胴体に内蔵された二重関節によりデスティニーガンダムに特徴的な前屈するアクションを再現できる。",
 			"• サイドアーマーは後方にスライドすることで脚部との干渉を避け、可動範囲を制限しない構造となっている。",
 			"• ハンドパーツは武器を保持できる握り手や「パルマフィオキーナ」用の開き手が付属。",
 			"• アロンダイト、高エネルギー長射程ビーム砲、ビームブーメラン他、豊富な武装が付属。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam SEED DESTINY\", the main character Destiny Gundam is now three-dimensional in the latest HG format and clear color!",
+			"From \"Mobile Suit Gundam SEED DESTINY\", the main character Destiny Gundam is made into a three-dimensional model in the latest HG format and clear color!",
 			"• Completely new model. The double joints built into the torso allow you to reproduce the forward bending action characteristic of Destiny Gundam.",
-			"• The side armor avoids interference with the legs by sliding backwards, and has a structure that does not limit the range of movement.",
+			"• The side armor is structured so that it slides backwards to avoid interference with the legs and does not limit the range of movement.",
 			"• Hand parts include a grip that can hold weapons and an open hand for \"Palma Fiochina\".",
-			"• A wealth of armament is included, including arondites, high-energy long-range beam cannons, beam boomerangs, and more."
+			"• Comes with a wealth of armament including Arondite, high-energy long-range beam cannon, beam boomerang, and more."
 		]
 	},
-	"images": [
-		"/images/items/01_2421/153_3352.jpg",
-		"/images/items/01_2421/155_3352.jpg",
-		"/images/items/01_2421/156_3352.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2421/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3352_s_3wmo929u6bj2r70pk0qtl3v6wuqo.jpg",
+				"path": "/images/items/01_2421/153_3352.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3352_s_468lg6riuput171hcva3z4js37ot.jpg",
+				"path": "/images/items/01_2421/155_3352.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3352_s_1hj88us7r7f4jsy9x7nfgj3uu6zc.jpg",
+				"path": "/images/items/01_2421/156_3352.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2421/"
 }

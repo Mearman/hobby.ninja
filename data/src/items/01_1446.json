@@ -5,6 +5,49 @@
 		"ja": "MG RX-77-2 ガンキャノン",
 		"en": "MG RX-77-2 Guncannon"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -22,30 +65,29 @@
 			"「機動戦士ガンダム」に登場するサポートMSである「ガンキャノン」がマスターグレードモデルで登場。精密なモールドと精巧な形状再現により、ガンキャノンの魅力を最大再現。コクピットブロックのコアファイターを再現し、脚部や頭部の内部メカも再現しています。武器には、ビームライフルのほかに、ミサイルポッド、手榴弾なども付属。"
 		],
 		"en": [
-			"The support MS \"Guncannon \" that appears in \" Mobile Suit Gundam\" is now available as a master grade model. Precise molding and elaborate shape reproduction maximize the appeal of Guncannon. The core fighter of the cockpit block is reproduced, and the internal mechanisms of the legs and head are also reproduced. In addition to the beam rifle, missile pods and grenades are also included as weapons."
+			"The support MS \"Guncannon\" that appears in \"Mobile Suit Gundam\" is now available as a master grade model. Precise molding and elaborate shape reproduction maximize the appeal of Guncannon. The core fighter of the cockpit block is reproduced, and the internal mechanisms of the legs and head are also reproduced. In addition to the beam rifle, missile pods and grenades are also included as weapons."
 		]
 	},
-	"images": [
-		"/images/items/01_1446/153_236.jpg",
-		"/images/items/01_1446/155_236.jpg",
-		"/images/items/01_1446/156_236.jpg",
-		"/images/items/01_1446/157_236.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1446/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
-	"manualId": "0512"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_236_s_uyrn0a5jq1amgdccdxuo3gmyl26l.jpg",
+				"path": "/images/items/01_1446/153_236.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_236_s_ffuckg89x7pkd94yn1pd6grd28gb.jpg",
+				"path": "/images/items/01_1446/155_236.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_236_s_bbznrrnq233j1exa3cndt01irw81.jpg",
+				"path": "/images/items/01_1446/156_236.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_236_s_dvtu0xqafw0gpiagvvplko6bd5x2.jpg",
+				"path": "/images/items/01_1446/157_236.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1446/"
 }

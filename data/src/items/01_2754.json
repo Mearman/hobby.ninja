@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 bEXM-14T シエルノヴァ[ダークグレー]",
 		"en": "30MM 1/144 bEXM-14T Cielnova [Dark Gray]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1518,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 13
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMシリーズバイロン軍より新機体「シエルノヴァ」が登場！ポルタノヴァとの連動でカスタマイズの幅がより広がる！",
@@ -33,40 +75,55 @@
 			"• Chest parts for commander aircraft, special forces, and close combat are linked with Portanova."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ハンドガン×１",
-			"バックパック×１式",
-			"マーキングシール×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハンドガン×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "バックパック×１式"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール×１"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3743_s_vrvr6ebilzd6lbcp07yzcrjsp1u5.jpg",
+				"path": "/images/items/01_2754/153_3743.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3743_s_jmefgy2ukakngh1n1l01ulujxhg1.jpg",
+				"path": "/images/items/01_2754/155_3743.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3743_s_clw55z39i4u6nxxb6ixns2raouud.jpg",
+				"path": "/images/items/01_2754/156_3743.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3743_s_7329w4n32u0q90nnhx8a2cxrq5ga.jpg",
+				"path": "/images/items/01_2754/157_3743.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3743_s_mk1ukpo71k233d9n3h0zntlzhnje.jpg",
+				"path": "/images/items/01_2754/158_3743.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3743_s_pf8qto61u1f21x2tlmnuxrlb7fp4.jpg",
+				"path": "/images/items/01_2754/159_3743.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3743_s_gqra6n6fnc463ndkac1rf5p4jbap.jpg",
+				"path": "/images/items/01_2754/189_3743.jpg"
+			}
 		],
-		"en": [
-			"Hand gun x 1",
-			"Backpack x 1 set",
-			"MarkingSeal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2754/153_3743.jpg",
-		"/images/items/01_2754/155_3743.jpg",
-		"/images/items/01_2754/156_3743.jpg",
-		"/images/items/01_2754/157_3743.jpg",
-		"/images/items/01_2754/158_3743.jpg",
-		"/images/items/01_2754/159_3743.jpg",
-		"/images/items/01_2754/189_3743.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2754/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3686"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2754/"
 }

@@ -3,8 +3,40 @@
 	"type": "item",
 	"name": {
 		"ja": "HGAC 1/144 リーオー",
-		"en": "HGAC 1/144 Rio"
+		"en": "HGAC 1/144 LEO"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "item_all",
+			"url": "https://bandai-hobby.net/item_all",
+			"ja": "商品一覧"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -18,7 +50,6 @@
 		"day": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"獅子座の名を冠する量産型MSリーオーが「GUNPLA EVOLUTION PROJECT 第4弾」として初HG化！",
@@ -28,55 +59,84 @@
 			"• ドラムガン、ビームサーベル、シールドが付属！"
 		],
 		"en": [
-			"The mass-produced MS Rio bearing the name of Leo is the first HG version of the \"GUNPLA EVOLUTION PROJECT 4th edition\"!",
-			"• EVOLUTION POINT \"Fine Build (easy assembly)\" realizes a range of motion with a new joint structure and reduces joint assembly time, making it easy for users who prefer painting!",
-			"• Supports easy assembly with the Runner configuration organized by part and the instruction manual that uses icons! Of course, the design and precise details are reproduced in the latest format!",
-			"• Clear parts are used for the main camera on the head, and it can be divided into 6 colors without seals and only with molding colors!",
-			"• Drum gun, beam saber, and Seal are included!"
+			"The mass-produced MS Leo, which bears the name of Leo, is the first HG as the \"GUNPLA EVOLUTION PROJECT 4th\"!",
+			"• EVOLUTION POINT \"Fine Build\" realizes a range of motion with a new joint structure and shortens the assembly time of the joints, making it friendly to painting users!",
+			"• Easy assembly support with runner configuration aggregated for each part and instruction manual with icons! Of course, the design and precise details incorporated into the latest format are reproduced!",
+			"• Clear parts are used for the head main camera, and 6 colors can be color-coded without seals and only molding colors!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ドラムガン×1",
-			"ビームサーベル×2",
-			"シールド×1"
-		],
-		"en": [
-			"Drum gun x 1",
-			"Beam saber x2",
-			"Seal × 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×5",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 5",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1308/1000125699_1.jpg",
-		"/images/items/01_1308/1000125699_2.jpg",
-		"/images/items/01_1308/1000125699_3.jpg",
-		"/images/items/01_1308/1000125699_4.jpg",
-		"/images/items/01_1308/1000125699_5.jpg",
-		"/images/items/01_1308/1000125699_6.jpg",
-		"/images/items/01_1308/1000125699_7.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ドラムガン",
+				"en": "• Drum Gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "• Molded product"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "• Instruction manual"
+			},
+			"count": 1
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 5
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125699_1.jpg",
+				"path": "/images/items/01_1308/1000125699_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125699_2.jpg",
+				"path": "/images/items/01_1308/1000125699_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125699_3.jpg",
+				"path": "/images/items/01_1308/1000125699_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125699_4.jpg",
+				"path": "/images/items/01_1308/1000125699_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125699_5.jpg",
+				"path": "/images/items/01_1308/1000125699_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125699_6.jpg",
+				"path": "/images/items/01_1308/1000125699_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125699_7.jpg",
+				"path": "/images/items/01_1308/1000125699_7.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1308/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	],
-	"manualId": "0478"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1308/"
+	}
 }

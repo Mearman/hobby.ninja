@@ -2,9 +2,54 @@
 	"id": "01_2042",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット ガンダムベース限定 RX-78-2 ガンダム[クリアカラー]",
-		"en": "SD Gundam Cross Silhouette Gundam Base Limited RX-78-2 Gundam [Clear Color]"
+		"ja": "SDガンダム クロスシルエット ガンダムベース限定 RX-78-2 ガンダム[クリアカラー]",
+		"en": "SD GUNDAM CROSS SILHOUETTE THE GUNDAM BASE LIMITED RX-78-2 GUNDAM [CLEAR COLOR]"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット",
+			"en": "SD GUNDAM CROSS SILHOUETTE"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4132",
+			"url": "https://bandai-hobby.net/item/01_4132/",
+			"ja": "SDガンダム クロスシルエット ガンダムベース限定 RX-78-2 ガンダム(クロスシルエットフレームVer.)[ガンダムベースカラー]"
+		},
+		{
+			"id": "01_3495",
+			"url": "https://bandai-hobby.net/item/01_3495/",
+			"ja": "ハローキティ/ザクII[SDガンダムクロスシルエット][クリアカラー]"
+		},
+		{
+			"id": "01_3321",
+			"url": "https://bandai-hobby.net/item/01_3321/",
+			"ja": "SDガンダムクロスシルエット RX-78F00 ガンダム"
+		},
+		{
+			"id": "01_2806",
+			"url": "https://bandai-hobby.net/item/01_2806/",
+			"ja": "SDガンダムクロスシルエット RX-78-2 ガンダム＆シャア専用ザクII"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -20,40 +65,33 @@
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"SD ガンダム　クロスシルエット シリーズに限定アイテムとしてRX-78-2 ガンダムがクリアカラーになって登場。",
+			"SDガンダム　クロスシルエット シリーズに限定アイテムとしてRX-78-2 ガンダムがクリアカラーになって登場。",
 			"メカニカルな内部フレームが見えるのが特徴。",
 			"別売りのクロスシルエットフレームを使えば、自分の好みのプロポーションへの変更も可能。"
 		],
 		"en": [
-			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"RX-78-2 Gundam is now available in clear color as a limited item in the SD Gundam Cross Silhouette series.",
-			"It is characterized by a visible mechanical internal frame.",
-			"If you use the cross silhouette frame (sold separately), you can change the proportions to your liking."
+			"For GUNPLA fans around the world, this is a limited edition GUNPLA at the official GUNPLA complex \"GUNDAM Base\". The RX-78-2 GUNDAM is now available in clear color as a limited item in the SD GUNDAM Cross Silhouette series. It is characterized by the fact that the mechanical internal frame can be seen. If you use the cross silhouette frame (sold separately), you can change the proportions to your liking."
 		]
 	},
-	"images": [
-		"/images/items/01_2042/1000153665_1.jpg",
-		"/images/items/01_2042/1000153665_2.jpg",
-		"/images/items/01_2042/1000153665_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153665_1.jpg",
+				"path": "/images/items/01_2042/1000153665_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153665_2.jpg",
+				"path": "/images/items/01_2042/1000153665_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153665_3.jpg",
+				"path": "/images/items/01_2042/1000153665_3.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2042/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4132",
-		"01_3495",
-		"01_3321",
-		"01_2806"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2042/"
 	}
 }

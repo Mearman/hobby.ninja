@@ -5,6 +5,35 @@
 		"ja": "MG 1/100 ガンダムベース限定 FAZZ Ver.Ka[チタニウムフィニッシュ]",
 		"en": "MG 1/100 Gundam Base Limited FAZZ Ver.Ka [Titanium Finish]"
 	},
+	"brands": [
+		{
+			"id": "mgka",
+			"url": "https://bandai-hobby.net/brand/mgka/",
+			"ja": "MG Ver.Ka［マスターグレード バージョンカトキ］"
+		}
+	],
+	"series": [
+		{
+			"id": "sentinel",
+			"url": "https://bandai-hobby.net/series/sentinel/",
+			"ja": "ガンダム・センチネル"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2584",
+			"url": "https://bandai-hobby.net/item/01_2584/",
+			"ja": "MG 1/100 FAZZ Ver.Ka"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 24640,
 		"currency": "JPY",
@@ -18,7 +47,6 @@
 		"day": 8
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
@@ -43,29 +71,34 @@
 			"• Comes with Ver.Ka unique decals including different chest numbering. It is possible to reproduce the FAZZ platoon in the work."
 		]
 	},
-	"images": [
-		"/images/items/01_3062/153_4030.jpg",
-		"/images/items/01_3062/155_4030.jpg",
-		"/images/items/01_3062/156_4030.jpg",
-		"/images/items/01_3062/157_4030.jpg",
-		"/images/items/01_3062/158_4030.jpg",
-		"/images/items/01_3062/159_4030.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3062/",
-	"brandIds": [
-		"mgka"
-	],
-	"seriesIds": [
-		"sentinel"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2584"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4030_s_peranmt1geary8vgyemtazmr0q82.jpg",
+				"path": "/images/items/01_3062/153_4030.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4030_s_1ync49jnu92bsphw5qimimabx743.jpg",
+				"path": "/images/items/01_3062/155_4030.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4030_s_jcrt0smx6re5tfvo1k9tl3rjzzmd.jpg",
+				"path": "/images/items/01_3062/156_4030.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4030_s_c0boyc6jv3zqgyf0y7lg9bfap01g.jpg",
+				"path": "/images/items/01_3062/157_4030.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4030_s_uxg4bo4zmsy19w4ywt16lwo57una.jpg",
+				"path": "/images/items/01_3062/158_4030.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4030_s_5t58dffszs7ntft60qurb4scup8o.jpg",
+				"path": "/images/items/01_3062/159_4030.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3062/"
 }

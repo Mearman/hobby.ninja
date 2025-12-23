@@ -5,6 +5,54 @@
 		"ja": "ＭＧ 1/100 ガンダムアストレイレッドフレーム用 フライトユニット拡張セット",
 		"en": "Flight unit expansion set for MG 1/100 Gundam Astray Red Frame"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "item-1000220190",
+			"url": "https://p-bandai.jp/item/item-1000220190/",
+			"ja": "ＨＧ 1/144 ザク・デザートタイプ ピンクパンサー隊機"
+		},
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "item-1000216105",
+			"url": "https://p-bandai.jp/item/item-1000216105/",
+			"ja": "RG 1/144 ソードインパルスガンダムＳｐｅｃＩＩ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -16,7 +64,6 @@
 		"year": 2020,
 		"month": 7
 	},
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"---",
@@ -87,31 +134,26 @@
 			"- Product specifications are scheduled as of 20204. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2863/153_3845.jpg",
-		"/images/items/01_2863/155_3845.jpg",
-		"/images/items/01_2863/156_3845.jpg",
-		"/images/items/01_2863/157_3845.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2863/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"item-1000220190",
-		"item-1000220189",
-		"item-1000216105"
-	],
-	"manualId": "2755",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3845_s_3sei80l9541z8pmztbowhf1q6ag7.jpg",
+				"path": "/images/items/01_2863/153_3845.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3845_s_rd8i7q5h59rfci0u9izkap0gqyat.jpg",
+				"path": "/images/items/01_2863/155_3845.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3845_s_wxht35lxarxbnn8nmlwrbx2ncbii.jpg",
+				"path": "/images/items/01_2863/156_3845.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3845_s_uwgfw0o9402luadmy75z3hmzc6ok.jpg",
+				"path": "/images/items/01_2863/157_3845.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2863/"
 }

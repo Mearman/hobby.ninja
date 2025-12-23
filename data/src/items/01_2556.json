@@ -5,6 +5,43 @@
 		"ja": "SD 三国創傑伝 司馬懿デスティニーガンダム",
 		"en": "SD Three Kingdoms Legend Sima Yi Destiny Gundam"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "soketsuden",
+			"url": "https://bandai-hobby.net/series/soketsuden/",
+			"ja": "三国創傑伝"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2642",
+			"url": "https://bandai-hobby.net/item/01_2642/",
+			"ja": "SD 三国創傑伝 天覇曹操ウイングガンダム"
+		},
+		{
+			"id": "01_2614",
+			"url": "https://bandai-hobby.net/item/01_2614/",
+			"ja": "SD 三国創傑伝 典韋マスターガンダム"
+		},
+		{
+			"id": "01_2615",
+			"url": "https://bandai-hobby.net/item/01_2615/",
+			"ja": "SD 三国創傑伝 徐晃ガンダムデスサイズ"
+		},
+		{
+			"id": "01_2643",
+			"url": "https://bandai-hobby.net/item/01_2643/",
+			"ja": "SD 三国創傑伝 甘寧クロスボーンガンダム"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -20,7 +57,7 @@
 	"description": {
 		"ja": [
 			"【2021年春、日本展開開始！！】",
-			"• 『三国志』をベースにしたSD ガンダムが装いも新たに登場！",
+			"• 『三国志』をベースにしたSDガンダムが装いも新たに登場！",
 			"• 進化したプロポーションとパーツ分割へのこだわりにより、組み立てただけでSD史上最高峰の色分けを実現。",
 			"• 一新された頭身バランスと各所の関節構造により、躍動感あふれるポージングを再現！",
 			"• ウイングは左右各2パーツの構成で、上下方向の展開と奥行き方向の可動が可能！",
@@ -29,46 +66,60 @@
 		],
 		"en": [
 			"[Spring 2021, main rollout begins! ! ]",
-			"• SD Gundam based on \"Romance of the Three Kingdoms\" now has a new look!",
-			"• With advanced proportions and attention to parts division, we have achieved the highest color separation in SD history using just the assembly.",
-			"• The all-new head and body balance and joint structure in various parts allow for dynamic poses!",
-			"• The wing is composed of 2 parts each on the left and right, and can be expanded vertically and moved in the depth direction!",
-			"• Two types of distinctive eyes can be reproduced by reversing the parts!",
+			"• SDGundam based on “Romance of the Three Kingdoms” has a new look!",
+			"• Thanks to the advanced proportions and attention to part division, we have achieved the highest color separation in SD history using just the assembly.",
+			"• Reproduce dynamic poses with a completely new head and body balance and joint structure in various places!",
+			"• The wing consists of two parts each on the left and right, and can be expanded vertically and moved in the depth direction!",
+			"• The characteristic eyes can be reproduced in two types by reversing the parts!",
 			"• Huge arm, Fuchigoku Demon Palm can be mounted on the back!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"淵獄魔掌（巨腕）×１",
-			"メモリ×１",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "淵獄魔掌（巨腕）×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "メモリ×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3481_s_1wi3dtt9mqgnuyovxl68btmx1tma.jpg",
+				"path": "/images/items/01_2556/153_3481.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3481_s_ms8ww7yalvi5428mtubemaf0nabu.jpg",
+				"path": "/images/items/01_2556/155_3481.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3481_s_ymyqdji32n6hvrvthgz5dudnx1vm.jpg",
+				"path": "/images/items/01_2556/156_3481.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3481_s_fuiwetsqqs81a4b5bzqiu3qroelm.jpg",
+				"path": "/images/items/01_2556/157_3481.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3481_s_floooect69irul148zntyow4sv9m.jpg",
+				"path": "/images/items/01_2556/158_3481.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3481_s_9jjbf9wd83w430za8n4ug4dvk1ez.jpg",
+				"path": "/images/items/01_2556/159_3481.jpg"
+			}
 		],
-		"en": [
-			"Abyssal Demon Palm (Giant Arm) x 1",
-			"Memory x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2556/153_3481.jpg",
-		"/images/items/01_2556/155_3481.jpg",
-		"/images/items/01_2556/156_3481.jpg",
-		"/images/items/01_2556/157_3481.jpg",
-		"/images/items/01_2556/158_3481.jpg",
-		"/images/items/01_2556/159_3481.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2556/",
-	"brandIds": [],
-	"seriesIds": [
-		"soketsuden"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2642",
-		"01_2614",
-		"01_2615",
-		"01_2643"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2556/"
 }

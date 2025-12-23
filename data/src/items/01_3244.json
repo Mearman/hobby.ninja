@@ -5,6 +5,34 @@
 		"ja": "ＢＢ戦士 21 ゼータプラス",
 		"en": "BB Senshi 21 Zeta Plus"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "sentinel",
+			"url": "https://bandai-hobby.net/series/sentinel/",
+			"ja": "ガンダム・センチネル"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3247",
+			"url": "https://bandai-hobby.net/item/01_3247/",
+			"ja": "ＢＢ戦士 22 Sガンダム"
+		}
+	],
 	"price": {
 		"amount": 330,
 		"currency": "JPY",
@@ -18,20 +46,14 @@
 		"day": 20
 	},
 	"targetAge": 15,
-	"images": [
-		"/images/items/01_3244/153_4198.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3244/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"sentinel"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3247"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4198_s_1868a0tco9odzpdjbipqed2j9550.jpg",
+				"path": "/images/items/01_3244/153_4198.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3244/"
 }

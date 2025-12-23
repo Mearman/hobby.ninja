@@ -5,6 +5,44 @@
 		"ja": "PERFECT GRADE 1/72 ミレニアム・ファルコン (スタンダードVer.)",
 		"en": "PERFECT GRADE 1/72 Millennium Falcon (Standard Ver.)"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3513",
+			"url": "https://bandai-hobby.net/item/01_3513/",
+			"ja": "ビークルモデル レイザー・クレスト"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 38500,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 24
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"『スター・ウォーズ／エピソード４ 新たなる希望』時に使用された1.7mの撮影用モデルを徹底的に再現した、PERFECT GRADEの名を冠する究極のプラモデル。",
@@ -35,55 +72,94 @@
 			"If you line it up with 1/72 Scale X-wings, you can enjoy the high quality Star Wars world."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"パイロットパーツ×6",
-			"専用ディスプレイベース×1",
-			"キャノピー×2種（フレームパーツ×1、クリアパーツ×1）"
+	"accessories": [
+		{
+			"name": {
+				"ja": "パイロットパーツ"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "キャノピー"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 37
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2225_s_q74e2gvffij8yzc2gml0rqdbntl8.jpg",
+				"path": "/images/items/01_1295/153_2225.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2225_s_l3ofspq2bj1imcavos812wbcmsop.jpg",
+				"path": "/images/items/01_1295/155_2225.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2225_s_3p7mje2henla4awdl1n6bfn7g56p.jpg",
+				"path": "/images/items/01_1295/156_2225.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2225_s_u4hok6t6ko62522iwse1m6plqlct.jpg",
+				"path": "/images/items/01_1295/157_2225.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2225_s_e8u88a116unm8o437ss1i4xqa5my.jpg",
+				"path": "/images/items/01_1295/158_2225.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2225_s_93t1z3lbkccu4iv2aldftsf8tdtb.jpg",
+				"path": "/images/items/01_1295/159_2225.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2225_s_wkgc8zl615uies23fy6fxht3bhlx.jpg",
+				"path": "/images/items/01_1295/189_2225.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2225_s_s4106slpubb0hsbfnvv12d1p5bo1.jpg",
+				"path": "/images/items/01_1295/190_2225.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2225_s_g1o2fof2syf4742tba8dqcld57hn.jpg",
+				"path": "/images/items/01_1295/191_2225.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2225_s_fdo0r4ztqqv86ywpuuahh2tf4g40.jpg",
+				"path": "/images/items/01_1295/192_2225.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_2225_s_ue3bo0qy6uxi4jfv8xveq9n7p7wk.jpg",
+				"path": "/images/items/01_1295/193_2225.jpg"
+			}
 		],
-		"en": [
-			"Pilot parts x 6",
-			"Dedicated display base x 1",
-			"Canopy x 2 types (frame parts x 1, clear parts x 1)"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×37",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 37",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1295/153_2225.jpg",
-		"/images/items/01_1295/155_2225.jpg",
-		"/images/items/01_1295/156_2225.jpg",
-		"/images/items/01_1295/157_2225.jpg",
-		"/images/items/01_1295/158_2225.jpg",
-		"/images/items/01_1295/159_2225.jpg",
-		"/images/items/01_1295/189_2225.jpg",
-		"/images/items/01_1295/190_2225.jpg",
-		"/images/items/01_1295/191_2225.jpg",
-		"/images/items/01_1295/192_2225.jpg",
-		"/images/items/01_1295/193_2225.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1295/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3513"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1295/"
 }

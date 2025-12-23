@@ -5,6 +5,44 @@
 		"ja": "1/1000 地球連邦アンドロメダ級DX",
 		"en": "1/1000 Earth Federation Andromeda class DX"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "yamato",
+			"url": "https://bandai-hobby.net/series/yamato/",
+			"ja": "宇宙戦艦ヤマトシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5971",
+			"url": "https://bandai-hobby.net/item/01_5971/",
+			"ja": "1/1000 地球防衛軍 ヒュウガ級 戦闘航宙母艦 DCV-01ヒュウガ"
+		},
+		{
+			"id": "01_5498",
+			"url": "https://bandai-hobby.net/item/01_5498/",
+			"ja": "メカコレクションDX 1式空間戦闘攻撃機 コスモタイガーII(単座型/銃座型) [2機セット]"
+		},
+		{
+			"id": "01_5500",
+			"url": "https://bandai-hobby.net/item/01_5500/",
+			"ja": "メカコレクションDX 試製空間戦闘攻撃機 コスモパイソン [2機セット]"
+		},
+		{
+			"id": "01_5388",
+			"url": "https://bandai-hobby.net/item/01_5388/",
+			"ja": "1/1000 宇宙戦艦ヤマト3199（第3次改装型：参戦章叙勲式典記念塗装）"
+		}
+	],
+	"scale": "1/1000",
 	"price": {
 		"amount": 8250,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 29
 	},
 	"targetAge": 15,
-	"scale": "1/1000",
 	"description": {
 		"ja": [
 			"『宇宙戦艦ヤマト2202 愛の戦士たち』に登場するアンドロメダ級戦艦が1/1000スケールのデラックスバージョンで立体化！",
@@ -28,65 +65,116 @@
 		],
 		"en": [
 			"The Andromeda-class battleship that appears in \"Space Battleship Yamato 2202: Warriors of Love\" is now a 1/1000 Scale deluxe version!",
-			"• \"First ship Andromeda \" and \" Fifth ship Antares\" can be reproduced by selection.",
+			"• \"First ship Andromeda\" and \"Fifth ship Antares\" can be reproduced by selecting.",
 			"• In addition to the first to fifth ships, decals for the variation battleships that appear from Chapter 6 onwards are also included!",
 			"• The handling manual is also deluxe."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"5番艦アンタレス用パーツ×1式",
-			"四連装波動砲パーツ×1",
-			"コスモファルコン×2",
-			"コスモタイガーII×4",
-			"ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "5番艦アンタレス用パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "四連装波動砲パーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "コスモファルコン"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "コスモタイガーII"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 17
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3007_s_dm5yyvesrcpx9qj7fveyezbzzgds.jpg",
+				"path": "/images/items/01_2058/153_3007.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3007_s_w0j0qo88my5zonylqpdos2vkeel0.jpg",
+				"path": "/images/items/01_2058/155_3007.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3007_s_m3yhwug1915k1sgxnxc6n1wp2plr.jpg",
+				"path": "/images/items/01_2058/156_3007.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3007_s_p0kte5cbcebcjfih5zpy0d2kl5c7.jpg",
+				"path": "/images/items/01_2058/157_3007.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3007_s_oc19qx8bc68peivc86orakx96c2a.jpg",
+				"path": "/images/items/01_2058/158_3007.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3007_s_sedxjlxu4tuuz6rfqq82wrvbrh1e.jpg",
+				"path": "/images/items/01_2058/159_3007.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3007_s_jz3g7wmks3idigqsvuuhiv9ziti4.jpg",
+				"path": "/images/items/01_2058/189_3007.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3007_s_kpaff9dl9k4t1l75exge2svgyxd7.jpg",
+				"path": "/images/items/01_2058/190_3007.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3007_s_8cg01d9ma2c66994162zccuc506g.jpg",
+				"path": "/images/items/01_2058/191_3007.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3007_s_7ud5qqln1g5pnmpnuxzxh4gl4zf3.jpg",
+				"path": "/images/items/01_2058/192_3007.jpg"
+			}
 		],
-		"en": [
-			"Parts for 5th ship Antares x 1 set",
-			"Quadruple wave motion gun parts x 1",
-			"Cosmo Falcon x2",
-			"Cosmo Tiger II×4",
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×17",
-			"ホイルシール×1",
-			"水転写式デカール×2",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 17",
-			"Foil Seal×1",
-			"Water transfer decal x 2",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2058/153_3007.jpg",
-		"/images/items/01_2058/155_3007.jpg",
-		"/images/items/01_2058/156_3007.jpg",
-		"/images/items/01_2058/157_3007.jpg",
-		"/images/items/01_2058/158_3007.jpg",
-		"/images/items/01_2058/159_3007.jpg",
-		"/images/items/01_2058/189_3007.jpg",
-		"/images/items/01_2058/190_3007.jpg",
-		"/images/items/01_2058/191_3007.jpg",
-		"/images/items/01_2058/192_3007.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2058/",
-	"brandIds": [],
-	"seriesIds": [
-		"yamato"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5971",
-		"01_5498",
-		"01_5500",
-		"01_5388"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2058/"
 }

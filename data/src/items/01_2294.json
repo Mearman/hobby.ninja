@@ -5,6 +5,43 @@
 		"ja": "SD ガンダムベース限定 RX-零丸(獅子吼)",
 		"en": "SD Gundam Base Limited RX-Zeromaru (Lion's Roar)"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5189",
+			"url": "https://bandai-hobby.net/item/01_5189/",
+			"ja": "オプションパーツセット ガンプラ 04 (ビルドハンズ 丸型)"
+		},
+		{
+			"id": "01_5190",
+			"url": "https://bandai-hobby.net/item/01_5190/",
+			"ja": "オプションパーツセット ガンプラ 03 (ビルドハンズ 角型)"
+		},
+		{
+			"id": "01_3063",
+			"url": "https://bandai-hobby.net/item/01_3063/",
+			"ja": "ハロプラ ガンダムベース限定 モビルハロ[ガンダムベースカラー]"
+		},
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		}
+	],
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -28,33 +65,34 @@
 		"en": [
 			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
 			"From \"Gundam Build Divers\", RX-Reimaru (Shishikou) is now available as a Gundam base limited item.",
-			"• Various action poses are determined by a wide variety of weapons and transformation gimmicks!",
+			"• A variety of action poses are possible with a wide variety of weapons and transformation gimmicks!",
 			"• Reproduce the transformation to each form by replacing parts."
 		]
 	},
-	"images": [
-		"/images/items/01_2294/153_3234.jpg",
-		"/images/items/01_2294/155_3234.jpg",
-		"/images/items/01_2294/156_3234.jpg",
-		"/images/items/01_2294/157_3234.jpg",
-		"/images/items/01_2294/158_3234.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2294/",
-	"brandIds": [],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5189",
-		"01_5190",
-		"01_3063",
-		"01_2623"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3234_s_kn78o38xxz3rj2lr3j6hh4imr252.jpg",
+				"path": "/images/items/01_2294/153_3234.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3234_s_rnilfqjpygc7o5rpl02ks3ukvn26.jpg",
+				"path": "/images/items/01_2294/155_3234.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3234_s_m10m2aie8aaew9t13y8379ug6nlf.jpg",
+				"path": "/images/items/01_2294/156_3234.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3234_s_8lpf6nd36q2di9qgvb9wh54a4o8x.jpg",
+				"path": "/images/items/01_2294/157_3234.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3234_s_8r6o7t99rfiw8t89p7uh2tu0lpmc.jpg",
+				"path": "/images/items/01_2294/158_3234.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2294/"
 }

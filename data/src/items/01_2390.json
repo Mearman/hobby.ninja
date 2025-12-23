@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 マルチブースターユニット",
 		"en": "30MM 1/144 Multi Booster Unit"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MM 1/144用マルチブースターユニットが登場！",
@@ -27,49 +69,60 @@
 		],
 		"en": [
 			"30MM 1/144 multi-booster unit is now available!",
-			"• Set of one leg unit each for left and right.",
-			"• Can be installed on Alto and Portanova."
+			"• Set of one each for left and right leg units.",
+			"• Can be installed on both Alto and Portanova."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"レッグユニット（左右）×１種"
+	"accessories": [
+		{
+			"name": {
+				"ja": "レッグユニット（左右）×１種"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品×２"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3323_s_abme7d2tr7lu0zbutnzospm4erbz.jpg",
+				"path": "/images/items/01_2390/153_3323.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3323_s_benv6xjoof1f23c04a58xjqfx1rw.jpg",
+				"path": "/images/items/01_2390/155_3323.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3323_s_ry2g2mupgayema44nymtmestxosv.jpg",
+				"path": "/images/items/01_2390/156_3323.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3323_s_oumyiqxketsc0dy31i6yguss5miq.jpg",
+				"path": "/images/items/01_2390/157_3323.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3323_s_ucyj938pp0x24n575vuj49i5faxa.jpg",
+				"path": "/images/items/01_2390/158_3323.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3323_s_sgdn5uel85o8tcdpfhajv97bk9m9.jpg",
+				"path": "/images/items/01_2390/159_3323.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3323_s_7j0x0443m8ewzu2hjulj8ioof0ge.jpg",
+				"path": "/images/items/01_2390/189_3323.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3323_s_a19gvz3gtwzyol9shdatmwruvpsh.jpg",
+				"path": "/images/items/01_2390/190_3323.jpg"
+			}
 		],
-		"en": [
-			"Leg unit (left and right) x 1 type"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×２"
-		],
-		"en": [
-			"Molded product x 2"
-		]
-	},
-	"images": [
-		"/images/items/01_2390/153_3323.jpg",
-		"/images/items/01_2390/155_3323.jpg",
-		"/images/items/01_2390/156_3323.jpg",
-		"/images/items/01_2390/157_3323.jpg",
-		"/images/items/01_2390/158_3323.jpg",
-		"/images/items/01_2390/159_3323.jpg",
-		"/images/items/01_2390/189_3323.jpg",
-		"/images/items/01_2390/190_3323.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2390/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3636"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2390/"
 }

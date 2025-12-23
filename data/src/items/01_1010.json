@@ -5,6 +5,39 @@
 		"ja": "Figure-riseBust ホシノ・フミナ エンディングVer.",
 		"en": "Figure-riseBust Fumina Hoshino Ending Ver."
 	},
+	"brands": [
+		{
+			"id": "figurerise-bust",
+			"url": "https://bandai-hobby.net/brand/figurerise-bust/",
+			"ja": "Figure-riseBust[フィギュアライズバスト]"
+		},
+		{
+			"id": "figurerise-bust",
+			"url": "https://bandai-hobby.net/brand/figurerise-bust/",
+			"ja": "Figure-riseBust[フィギュアライズバスト]"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_764",
+			"url": "https://bandai-hobby.net/item/01_764/",
+			"ja": "Figure-riseBust ホシノ・フミナ"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -20,9 +53,9 @@
 	"targetAge": 15,
 	"description": {
 		"ja": [
-			"■精巧なキャラクター胸像が手軽に手に入る組み立て式フィギュアシリーズ「Figure-rise Bust」に、ホシノ・フミナの第2弾が登場！",
-			"■『ガンダムビルドファイターズトライ』エンディングのコスチュームをモチーフにしたボディを新規にキット化！",
-			"■瞳はレイヤードインジェクションで再現され、組み立てるだけで魅惑の瞳をもつ笑顔が完成する！",
+			"• 精巧なキャラクター胸像が手軽に手に入る組み立て式フィギュアシリーズ「Figure-rise Bust」に、ホシノ・フミナの第2弾が登場！",
+			"• 『ガンダムビルドファイターズトライ』エンディングのコスチュームをモチーフにしたボディを新規にキット化！",
+			"• 瞳はレイヤードインジェクションで再現され、組み立てるだけで魅惑の瞳をもつ笑顔が完成する！",
 			"※「Figure-rise Bust ホシノ・フミナ エンディングVer．」以外は全て別売りです。",
 			"※瞳、顔は塗装しておりません。"
 		],
@@ -34,46 +67,64 @@
 			"*The eyes and face are not painted."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"本体（腰から上）×1",
-			"台座×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "本体（腰から上）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "台座"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 5
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1946_s_731pbo1zojqpzab7h58nd4sfsytj.jpg",
+				"path": "/images/items/01_1010/153_1946.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1946_s_y7z6nt41by6p5a1mg1mjsp6518su.jpg",
+				"path": "/images/items/01_1010/155_1946.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_1946_s_64cx0th25f00y6lq54qcq13bmadw.jpg",
+				"path": "/images/items/01_1010/156_1946.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_1946_s_vhunajeur72qnetj2vrpn7uycdpc.jpg",
+				"path": "/images/items/01_1010/157_1946.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_1946_s_4so4m0zgimayk4ucvq5danz4b78k.jpg",
+				"path": "/images/items/01_1010/158_1946.jpg"
+			}
 		],
-		"en": [
-			"Main body (from the waist up) x 1",
-			"Pedestal x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×5",
-			"シール×2",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 5",
-			"Seal×2",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1010/153_1946.jpg",
-		"/images/items/01_1010/155_1946.jpg",
-		"/images/items/01_1010/156_1946.jpg",
-		"/images/items/01_1010/157_1946.jpg",
-		"/images/items/01_1010/158_1946.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1010/",
-	"brandIds": [
-		"figurerise-bust"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_764"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1010/"
 }

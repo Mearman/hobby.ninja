@@ -2,9 +2,31 @@
 	"id": "01_2092",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット フリーダムガンダム",
-		"en": "SD Gundam Cross Silhouette Freedom Gundam"
+		"ja": "SDガンダム クロスシルエット フリーダムガンダム",
+		"en": "SDGundam Cross Silhouette Freedom Gundam"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -20,58 +42,88 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"SD ガンダム クロスシルエットに『機動戦士ガンダム SEED』の主役機、フリーダムガンダムが参戦！",
+			"SDガンダム クロスシルエットに『機動戦士ガンダムSEED』の主役機、フリーダムガンダムが参戦！",
 			"• CSフレーム（別売り）と連動し、高頭身SDと低頭身SDなど自分好みのプロポーションを再現できる。",
 			"• 各武装の可動ギミックにより「ハイマットフルバースト」も再現可能。"
 		],
 		"en": [
-			"Freedom Gundam, the main character of \"Mobile Suit Gundam SEED\", joins SD Gundam Cross Silhouette!",
-			"• In conjunction with the CS frame (sold separately), you can reproduce your favorite proportions such as high and low SD.",
-			"• \"Himat Full Burst\" can also be reproduced by the movable gimmick of each weapon."
+			"Freedom Gundam, the main character of \"Mobile Suit GundamSEED\", joins SDGundam Cross Silhouette!",
+			"• In conjunction with the CS frame (sold separately), you can recreate your favorite proportions such as high and low SD.",
+			"• \"High Mat Full Burst\" can also be reproduced by the movable gimmick of each weapon."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ルプスビームライフル×1",
-			"対ビームシールド×1",
-			"ラケルタビームサーベル×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ルプスビームライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "対ビームシールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ラケルタビームサーベル"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 7
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3040_s_a7ppdvzf3u3y2piwofz7j1lu4opa.jpg",
+				"path": "/images/items/01_2092/153_3040.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3040_s_rkxedaoz072wk9gngs7hzj702exv.jpg",
+				"path": "/images/items/01_2092/155_3040.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3040_s_ps9xi1jzfmc999obe9d66fzml19y.jpg",
+				"path": "/images/items/01_2092/156_3040.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3040_s_dist29t66laxrvsifr37eqvucjzu.jpg",
+				"path": "/images/items/01_2092/157_3040.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3040_s_zsiox2z61eielf1wgykduc5u0w42.jpg",
+				"path": "/images/items/01_2092/158_3040.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3040_s_hwsrj37n5b1zgd8874w5vwz4ahwh.jpg",
+				"path": "/images/items/01_2092/159_3040.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3040_s_a1zahq0s7imlko2grmpjjpd21i4k.jpg",
+				"path": "/images/items/01_2092/189_3040.jpg"
+			}
 		],
-		"en": [
-			"Lupus beam rifle x 1",
-			"Anti-beam Seal x 1",
-			"Lacelta beam saber x2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×7",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 7",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2092/153_3040.jpg",
-		"/images/items/01_2092/155_3040.jpg",
-		"/images/items/01_2092/156_3040.jpg",
-		"/images/items/01_2092/157_3040.jpg",
-		"/images/items/01_2092/158_3040.jpg",
-		"/images/items/01_2092/159_3040.jpg",
-		"/images/items/01_2092/189_3040.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2092/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_2092/"
 }

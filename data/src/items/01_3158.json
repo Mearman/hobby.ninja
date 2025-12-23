@@ -3,8 +3,53 @@
 	"type": "item",
 	"name": {
 		"ja": "MG ウイングガンダム（Ver.Ka）",
-		"en": "MG Wing Gundam (Ver.Ka)"
+		"en": "MG 1/100 WING GUNDAM Ver. Ka"
 	},
+	"brands": [
+		{
+			"id": "mgka",
+			"url": "https://bandai-hobby.net/brand/mgka/",
+			"ja": "MG Ver.Ka［マスターグレード バージョンカトキ］",
+			"en": "MG Ver.Ka [MASTER GRADE Ver.Katoki]"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ",
+			"en": "MOBILE SUIT GUNDAM WING series"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5993",
+			"url": "https://bandai-hobby.net/item/01_5993/",
+			"ja": "MG 1/100 ガンダムベース限定 ウイングガンダムゼロ EW Ver.Ka [リサーキュレーションカラー/ネオンピンク]"
+		},
+		{
+			"id": "01_4369",
+			"url": "https://bandai-hobby.net/item/01_4369/",
+			"ja": "MG 1/100 ガンダムベース限定 ウイングガンダムゼロEW Ver.Ka [チタニウムフィニッシュ]"
+		},
+		{
+			"id": "01_4005",
+			"url": "https://bandai-hobby.net/item/01_4005/",
+			"ja": "MG 1/100 ガンダムベース限定 ウイングガンダムゼロEW Ver.Ka [クリアカラー]"
+		},
+		{
+			"id": "01_2981",
+			"url": "https://bandai-hobby.net/item/01_2981/",
+			"ja": "MG 1/100 ウイングガンダムゼロEW Ver.Ka"
+		}
+	],
 	"price": {
 		"amount": 4290,
 		"currency": "JPY",
@@ -22,30 +67,36 @@
 			"メカニックデザイナー、カトキハジメ氏が造形からパッケージまですべて監修した待望の第2弾が登場です。機体のカラーリングをパーツの分割により再現しています。肩関節は前後にスイングし、より広範囲な可動を実現しています。飛行形態にも変形可能で脚部変形は最新設定を仕様しています。コクピットは開閉式で、1/100スケールのヒイロ・ユイフィギュアが付属します。"
 		],
 		"en": [
-			"The long-awaited second edition, supervised by mechanical designer Hajime Katoki from modeling to packaging, is now available. The coloring of the aircraft is reproduced by dividing the parts. The shoulder joint swings back and forth, allowing for a wider range of movement. It can also be transformed into a flight mode, and the leg deformation uses the latest settings. The cockpit can be opened and closed, and 1/100 scale Heero and Yui figures are included."
+			"The long-awaited second installment, supervised by mechanic designer Hajime Katoki from modeling to packaging, is now available. The coloring of the aircraft is reproduced by dividing the parts. The shoulder joint swings back and forth for a wider range of motion. It can also be transformed into a flight form, and the leg deformation is specified with the latest settings. The cockpit is retractable and comes with a 1/100 scale Hiiro Yui figure."
 		]
 	},
-	"images": [
-		"/images/items/01_3158/1000072944_1.jpg",
-		"/images/items/01_3158/1000072944_2.jpg",
-		"/images/items/01_3158/1000072944_3.jpg",
-		"/images/items/01_3158/1000072944_4.jpg",
-		"/images/items/01_3158/1000072944_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000072944_1.jpg",
+				"path": "/images/items/01_3158/1000072944_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000072944_2.jpg",
+				"path": "/images/items/01_3158/1000072944_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000072944_3.jpg",
+				"path": "/images/items/01_3158/1000072944_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000072944_4.jpg",
+				"path": "/images/items/01_3158/1000072944_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000072944_5.jpg",
+				"path": "/images/items/01_3158/1000072944_5.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3158/",
-	"brandIds": [
-		"mgka"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5993",
-		"01_4369",
-		"01_4005",
-		"01_2981"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_3158/"
+	}
 }

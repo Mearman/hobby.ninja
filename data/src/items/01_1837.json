@@ -2,9 +2,58 @@
 	"id": "01_1837",
 	"type": "item",
 	"name": {
-		"ja": "ガンダムデカールNo.24 MG 1/100 機動戦士ガンダム 0083シリーズ用",
-		"en": "Gundam Decal No.24 MG 1/100 for Mobile Suit Gundam 0083 series"
+		"ja": "ガンダムデカールNo.24 MG 1/100 機動戦士ガンダム0083シリーズ用",
+		"en": "Gundam Decal No.24 MG 1/100 for Mobile Suit Gundam0083 series"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		},
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "g-0083",
+			"url": "https://bandai-hobby.net/series/g-0083/",
+			"ja": "機動戦士ガンダム0083 STARDUST MEMORY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000127907",
+			"url": "http://p-bandai.jp/item/item-1000127907",
+			"ja": "ＭＧ 1/100 MS-06F-2 ザクＩＩ Ｆ２型（ノイエン・ビッター機）"
+		},
+		{
+			"id": "item-1000127908",
+			"url": "http://p-bandai.jp/item/item-1000127908",
+			"ja": "ＭＧ 1/100 MS-06F-2 ザクＩＩ Ｆ２型（キンバライト基地仕様）"
+		},
+		{
+			"id": "item-1000124942",
+			"url": "http://p-bandai.jp/item/item-1000124942",
+			"ja": "ＭＧ 1/100 アナベル・ガトー専用ゲルググ Ver.2.0"
+		},
+		{
+			"id": "item-1000105596",
+			"url": "https://p-bandai.jp/item/item-1000105596",
+			"ja": "ＭＧ 1/100 パワード・ジム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,37 +67,26 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"100点以上のラインナップを誇る、大人気ガンダムデカールのシリーズ商品が登場。",
-			"MG 1/100 機動戦士ガンダム 0083シリーズ用のデカールです。",
+			"MG 1/100 機動戦士ガンダム0083シリーズ用のデカールです。",
 			"水転写式デカール"
 		],
 		"en": [
 			"Introducing the popular Gundam decal series, which boasts a lineup of over 100 items.",
-			"Decal for MG 1/100 Mobile Suit Gundam 0083 series.",
+			"Decal for MG 1/100 Mobile Suit Gundam0083 series.",
 			"water transfer decal"
 		]
 	},
-	"images": [
-		"/images/items/01_1837/153_2774.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1837/",
-	"brandIds": [
-		"mg",
-		"gundam_decal"
-	],
-	"seriesIds": [
-		"g-0083"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000127907",
-		"item-1000127908",
-		"item-1000124942",
-		"item-1000105596"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2774_s_v68po4ezsq0uuqtvmvl5dy1dirii.jpg",
+				"path": "/images/items/01_1837/153_2774.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1837/"
 }

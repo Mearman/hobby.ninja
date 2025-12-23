@@ -5,6 +5,50 @@
 		"ja": "HGBD 1/144 ガンダムダブルオーダイバー[ダイブイントゥディメンションクリア]",
 		"en": "HGBD 1/144 Gundam 00 Diver [Dive into Dimension Clear]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1430,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
@@ -30,28 +73,18 @@
 			"The clear blue and white color scheme of the base color of the aircraft gives it a cool finish!"
 		]
 	},
-	"images": [
-		"/images/items/01_2004/153_2931.jpg",
-		"/images/items/01_2004/155_2931.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2004/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2931_o_1ck1p006u17alnl317s51qo1aos23.jpg",
+				"path": "/images/items/01_2004/153_2931.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2931_o_1ck1p0afe2o3165u4rj18fa46a2d.jpg",
+				"path": "/images/items/01_2004/155_2931.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2004/"
 }

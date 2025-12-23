@@ -2,9 +2,57 @@
 	"id": "01_3008",
 	"type": "item",
 	"name": {
-		"ja": "ＨＧ 1/144 ガンダムシャイニングブレイク（ＢＥＦＯＲＥ）",
+		"ja": "ＨＧ 1/144  ガンダムシャイニングブレイク（ＢＥＦＯＲＥ）",
 		"en": "HG 1/144 Gundam Shining Break (BEFORE)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -16,7 +64,6 @@
 		"year": 2020,
 		"month": 10
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"禁 断 を 纏 う",
@@ -51,7 +98,7 @@
 		"en": [
 			"Wear the forbidden",
 			"Shining Break -",
-			"The main character Ark's aircraft \"Gundam Shining Break \" that appears in the official \" Gundam Build Divers \" side story \" Gundam Build Divers Break \" has been commercialized in its \" BEFORE \" state when it was in combination with Zen who drives \" G-Els\".",
+			"The main character Ark's aircraft \"Gundam Shining Break\" that appears in the official \"Gundam Build Divers\" side story \"Gundam Build Divers Break\" has been commercialized in its \"BEFORE\" state when it was in combination with Zen who drives \"G-Els\".",
 			"The characteristic dark color pattern is reproduced with molded colors.",
 			"● Reproduces the characteristic dark coloring",
 			"The dark tone image color of the whole body when he was active as a mass diver is reproduced with molded color in every detail.",
@@ -79,49 +126,67 @@
 			"- Product specifications are scheduled as of 20206. Please note that there may be changes."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームライフル",
-			"シールド",
-			"ビームサーベル"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3980_s_od2gpk2nbnlto66fkx9nd9n2p7va.jpg",
+				"path": "/images/items/01_3008/153_3980.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3980_s_pb0ovwyjeg02bpfxrer9omh82awu.jpg",
+				"path": "/images/items/01_3008/155_3980.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3980_s_2tg6jne7oza3chdrf2is18sjpo7d.jpg",
+				"path": "/images/items/01_3008/156_3980.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3980_s_on5yne9bfgkysikyl43ni23spkej.jpg",
+				"path": "/images/items/01_3008/157_3980.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3980_s_nva7wj8zxbtq15ti9un8c4hx1tyc.jpg",
+				"path": "/images/items/01_3008/158_3980.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3980_s_g9quseuzkvvs9gtgr7tfla1lpena.jpg",
+				"path": "/images/items/01_3008/159_3980.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3980_s_pmgksv1qtmhz8qy0wlsvhy72uh79.jpg",
+				"path": "/images/items/01_3008/189_3980.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3980_s_fpxn3ik072bfuvtq56zplo0audva.jpg",
+				"path": "/images/items/01_3008/190_3980.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3980_s_tdogxxo679mvqqqor5htmx3zwx99.jpg",
+				"path": "/images/items/01_3008/191_3980.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3980_s_ap6enhqqhwv93epybtstttkhgw8n.jpg",
+				"path": "/images/items/01_3008/192_3980.jpg"
+			}
 		],
-		"en": [
-			"beam rifle",
-			"Seal de",
-			"beam saber"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3008/153_3980.jpg",
-		"/images/items/01_3008/155_3980.jpg",
-		"/images/items/01_3008/156_3980.jpg",
-		"/images/items/01_3008/157_3980.jpg",
-		"/images/items/01_3008/158_3980.jpg",
-		"/images/items/01_3008/159_3980.jpg",
-		"/images/items/01_3008/189_3980.jpg",
-		"/images/items/01_3008/190_3980.jpg",
-		"/images/items/01_3008/191_3980.jpg",
-		"/images/items/01_3008/192_3980.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3008/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	],
-	"manualId": "2751",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3008/"
 }

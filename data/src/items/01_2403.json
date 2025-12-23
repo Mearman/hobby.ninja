@@ -5,6 +5,55 @@
 		"ja": "HG 1/144 プチッガイ きゃらっがい サラ",
 		"en": "HG 1/144 Petitgguy Charaggai Sara"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "petitgguy",
+			"url": "https://bandai-hobby.net/brand/petitgguy/",
+			"ja": "プチッガイ/ベアッガイ"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2519",
+			"url": "https://bandai-hobby.net/item/01_2519/",
+			"ja": "Figure-rise Standard BD ガンダムベース限定 ダイバーアヤメ[ガンダムベースカラー]&プチッガイセット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 990,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズ』よりヒロインのサラがきゃらっがいになって登場！",
@@ -29,66 +77,104 @@
 		],
 		"en": [
 			"From \"Gundam Build Divers\", the heroine Sarah appears as a character!",
-			"• Face parts include a selection of gentle expressions and smiles.",
-			"• The head parts are replaceable, allowing you to recreate Petitgguy!",
-			"• The back hair is a separate part and is cutely movable!",
-			"• Comes with a pedestal that can be connected to other Charagguys!"
+			"• Face parts are selectable between a gentle expression and a smile.",
+			"• The head parts are replaceable so you can recreate Petitgguy!",
+			"• The back hair is a separate part and can be cutely moved!",
+			"• Comes with a pedestal that can be connected to other Charaggi!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"サラヘッド×1",
-			"差し替えフェイスパーツ×1",
-			"プチッガイヘッド×1",
-			"ジョイントパーツ×1",
-			"ディスプレイ台座×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "サラヘッド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "差し替えフェイスパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "プチッガイヘッド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 5
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/191_3336_s_f0jfwg4fll13ytz3vcekgxrsen8d.jpg",
+				"path": "/images/items/01_2403/191_3336.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_3336_s_8c23b7t4x1s71ksahv2vhd48et2s.jpg",
+				"path": "/images/items/01_2403/153_3336.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3336_s_z15rpailk93lwpjum6ntegbhx0z2.jpg",
+				"path": "/images/items/01_2403/155_3336.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3336_s_gungjt4mmw47dasmr9q1hvhh952c.jpg",
+				"path": "/images/items/01_2403/156_3336.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3336_s_vanhtxhsvvntizytz0pcj1go0wn2.jpg",
+				"path": "/images/items/01_2403/157_3336.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3336_s_vr6i7dpu23jwe6e57le5thnvkjtl.jpg",
+				"path": "/images/items/01_2403/158_3336.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3336_s_r7ky9oau9gqetbbcv2q6y7jopqhd.jpg",
+				"path": "/images/items/01_2403/159_3336.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3336_s_67w4je6kvdmup5nmqiw1mt1zcwyu.jpg",
+				"path": "/images/items/01_2403/189_3336.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3336_s_7i67jnxnclei5sru5sjchmgd7f3z.jpg",
+				"path": "/images/items/01_2403/190_3336.jpg"
+			}
 		],
-		"en": [
-			"Sarah head x 1",
-			"Replacement face parts x 1",
-			"Petit Guy Head x 1",
-			"Joint parts x 1",
-			"Display pedestal x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×5",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 5",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2403/153_3336.jpg",
-		"/images/items/01_2403/155_3336.jpg",
-		"/images/items/01_2403/156_3336.jpg",
-		"/images/items/01_2403/157_3336.jpg",
-		"/images/items/01_2403/158_3336.jpg",
-		"/images/items/01_2403/159_3336.jpg",
-		"/images/items/01_2403/189_3336.jpg",
-		"/images/items/01_2403/190_3336.jpg",
-		"/images/items/01_2403/191_3336.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2403/",
-	"brandIds": [
-		"hg",
-		"petitgguy"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2519"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2403/"
 }

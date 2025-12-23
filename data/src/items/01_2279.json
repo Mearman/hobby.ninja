@@ -5,6 +5,16 @@
 		"ja": "THE GUNDAM BASE プラモデルツールセット",
 		"en": "THE GUNDAM BASE Plastic Model Tool Set"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "item_all",
+			"url": "https://bandai-hobby.net/item_all",
+			"ja": "商品一覧"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -27,22 +37,21 @@
 			"A limited edition item from the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
 			"The set includes a tool case, nippers, file, and tweezers, and is recommended for those who are just starting to make Gunpla.",
 			"Furthermore, a \"parts separator\" used when removing parts is also included.",
-			"THE GUNDAM BASE logo is designed on the \"nipper \" and \" tool case\"."
+			"THE GUNDAM BASE logo is designed on the \"nipper\" and \"tool case\"."
 		]
 	},
-	"images": [
-		"/images/items/01_2279/153_3220.jpg",
-		"/images/items/01_2279/155_3220.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2279/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
-	"relatedItemIds": [],
-	"tag": {
-		"ja": "ガンダムベースグッズ",
-		"en": "Gundam Base Goods"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3220_o_1d573229dfep10vj7ho1oqdjgj23.jpg",
+				"path": "/images/items/01_2279/153_3220.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3220_o_1d5732c2ovhccsa1lapi0f1aqm2d.jpg",
+				"path": "/images/items/01_2279/155_3220.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2279/"
 }

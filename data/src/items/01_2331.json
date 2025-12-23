@@ -5,6 +5,43 @@
 		"ja": "ピカちんバッジVol.2 ～走れ！ロケットホイールシューター編～",
 		"en": "Pikachin Badge Vol.2 ~Run! Rocket Wheel Shooter Edition"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 308,
 		"currency": "JPY",
@@ -35,25 +72,21 @@
 			"[Set contents]",
 			"• Pikachin badge x 2 (random)",
 			"[battery]",
-			"• Unnecessary"
+			"• Not required"
 		]
 	},
-	"images": [
-		"/images/items/01_2331/153_3268.jpg",
-		"/images/items/01_2331/155_3268.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2331/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3268_s_ijnhg20ot7o79tcicr9y3iw4khdo.jpg",
+				"path": "/images/items/01_2331/153_3268.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3268_s_rtn3muyglkl1zlq6uzi4oiy4u9jo.jpg",
+				"path": "/images/items/01_2331/155_3268.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2331/"
 }

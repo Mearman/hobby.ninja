@@ -5,6 +5,43 @@
 		"ja": "Figure-rise Effect ジェットエフェクト(クリアイエロー)",
 		"en": "Figure-rise Effect Jet Effect (Clear Yellow)"
 	},
+	"brands": [
+		{
+			"id": "figurerise-effect",
+			"url": "https://bandai-hobby.net/brand/figurerise-effect/",
+			"ja": "Figure-rise Effect[フィギュアライズエフェクト]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2347",
+			"url": "https://bandai-hobby.net/item/01_2347/",
+			"ja": "Figure-rise Effect ジェットエフェクト(クリアブルー)"
+		},
+		{
+			"id": "01_2183",
+			"url": "https://bandai-hobby.net/item/01_2183/",
+			"ja": "Figure-rise Effect バーストエフェクト(スペースピンク)"
+		},
+		{
+			"id": "01_1418",
+			"url": "https://bandai-hobby.net/item/01_1418/",
+			"ja": "Figure-rise Effect 衝撃波 イエロー"
+		},
+		{
+			"id": "01_1419",
+			"url": "https://bandai-hobby.net/item/01_1419/",
+			"ja": "Figure-rise Effect 衝撃波 ホワイト"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -28,52 +65,75 @@
 		],
 		"en": [
 			"Introducing general-purpose effect parts that can be linked with various plastic models such as figures and robots! Reproduce the jetting from verniers and nozzles!",
-			"• Set of jet effect parts x 3, arm parts x 3, joint parts x 3.",
+			"• A set of 3 injection effect parts, 3 arm parts, and 3 joint parts.",
 			"• Can be linked with RG 1/144 νGundam's Fin Funnel, RG 1/144 Sazabi's Funnel, etc.",
 			"• Jet effects can be linked together. Reproduce the trajectory that moves at an acute angle. It also supports the floating state.",
 			"• It also works with \"Kei Truck Buso\" to create a jet effect!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"噴射エフェクトパーツ×1式",
-			"アームパーツ×1式",
-			"ジョイントパーツ×1式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "噴射エフェクトパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "アームパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3283_s_a3nekb53ahyo6dr4numhhczppvsr.jpg",
+				"path": "/images/items/01_2346/153_3283.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3283_s_65zrnpi4bg5thptqw7hfa7l03bzd.jpg",
+				"path": "/images/items/01_2346/155_3283.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3283_s_1g7ab8sp2oosltcnp8m4adwgkg1t.jpg",
+				"path": "/images/items/01_2346/156_3283.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3283_s_y6lh105o4w0p0uxqngo1y82jwang.jpg",
+				"path": "/images/items/01_2346/157_3283.jpg"
+			}
 		],
-		"en": [
-			"Injection effect parts x 1 set",
-			"Arm parts x 1 set",
-			"Joint parts x 1 set"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×3",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 3",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2346/153_3283.jpg",
-		"/images/items/01_2346/155_3283.jpg",
-		"/images/items/01_2346/156_3283.jpg",
-		"/images/items/01_2346/157_3283.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2346/",
-	"brandIds": [
-		"figurerise-effect"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2347",
-		"01_2183",
-		"01_1418",
-		"01_1419"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2346/"
 }

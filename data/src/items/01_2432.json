@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 モビルシグー(ジスト・エルウェス専用機)",
 		"en": "HG 1/144 Mobile Sigou (Jist Elwes exclusive machine)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181726",
+			"url": "https://p-bandai.jp/item/item-1000181726/",
+			"ja": "ＨＧ 1/144 ストライクダガー"
+		},
+		{
+			"id": "01_1930",
+			"url": "https://bandai-hobby.net/item/01_1930/",
+			"ja": "HG 1/144 ガンダムベース限定 フリーダムガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_384",
+			"url": "https://bandai-hobby.net/item/01_384/",
+			"ja": "HGCE 1/144 フリーダムガンダム"
+		},
+		{
+			"id": "01_83",
+			"url": "https://bandai-hobby.net/item/01_83/",
+			"ja": "HGCE 1/144 ストライクルージュ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -18,38 +62,42 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム SEED FRAME ASTRAYS」に登場する連合のエースパイロット「ジスト・エルウェル」専用の赤い“モビルシグー”が登場 パーソナルマークのシールが付属 バックパックの大型ウィングスラスターは可動式 76mm重突撃銃、重斬刀、28mmバルカン内装シールドが付属"
+			"「機動戦士ガンダムSEED FRAME ASTRAYS」に登場する連合のエースパイロット「ジスト・エルウェル」専用の赤い“モビルシグー”が登場 パーソナルマークのシールが付属 バックパックの大型ウィングスラスターは可動式 76mm重突撃銃、重斬刀、28mmバルカン内装シールドが付属"
 		],
 		"en": [
-			"Introducing the red \"Mobile Sigou \" exclusively for Jist Elwell, the Alliance's ace pilot who appears in \" Mobile Suit Gundam SEED FRAME ASTRAYS\". Comes with a personal mark Seal. The backpack's large wing thruster is movable. Comes with a 76mm heavy assault rifle, a heavy slashing sword, and a 28mm Vulcan interior seal."
+			"Introducing the red \"Mobile Sigou\" exclusively for Jist Elwell, the Alliance's ace pilot who appears in \"Mobile Suit GundamSEED FRAME ASTRAYS.\" Comes with a personal mark Seal. The backpack's large wing thruster is movable. Comes with a 76mm heavy assault rifle, a heavy slasher, and a 28mm Vulcan interior seal."
 		]
 	},
-	"images": [
-		"/images/items/01_2432/153_3362.jpg",
-		"/images/items/01_2432/155_3362.jpg",
-		"/images/items/01_2432/156_3362.jpg",
-		"/images/items/01_2432/157_3362.jpg",
-		"/images/items/01_2432/158_3362.jpg",
-		"/images/items/01_2432/159_3362.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2432/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181726",
-		"01_1930",
-		"01_384",
-		"01_83"
-	],
-	"manualId": "0276"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3362_s_4gai0jiuekh5tpcb5zqtqtn6h8f0.jpg",
+				"path": "/images/items/01_2432/153_3362.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3362_s_3c0e53z7902js05cpxdqepnrrym4.jpg",
+				"path": "/images/items/01_2432/155_3362.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3362_s_zxdylfdpizjw8yjlg38p9h6cyixq.jpg",
+				"path": "/images/items/01_2432/156_3362.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3362_s_ie4mtib1ritpyptgf0h465dr9hzd.jpg",
+				"path": "/images/items/01_2432/157_3362.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3362_s_7f792vs3b302k62k7tj9tv9hyawv.jpg",
+				"path": "/images/items/01_2432/158_3362.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3362_s_gls9qcpu3ykcz061f1hnmb2rasm4.jpg",
+				"path": "/images/items/01_2432/159_3362.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2432/"
 }

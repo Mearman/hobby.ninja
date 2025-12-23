@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 コアガンダム(リアルタイプカラー)&マーズフォーユニット [ダイブイントゥディメンションクリア]",
 		"en": "HG 1/144 Core Gundam (Real Type Color) & Mars Four Unit [Dive into Dimension Clear]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズRe:RISE』 より、リアルタイプガンダム風カラーリングのコアガンダムと、マーズフォーガンダム用装甲パーツのセットが、ラメ入りのクリアカラーになって登場！",
@@ -31,28 +74,18 @@
 			"• Comes with a clear red pedestal for easy posing!"
 		]
 	},
-	"images": [
-		"/images/items/01_2989/153_3961.jpg",
-		"/images/items/01_2989/155_3961.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2989/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3961_o_1ea498iejfc1kgb193a1v2a1a2f23.jpg",
+				"path": "/images/items/01_2989/153_3961.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3961_o_1ea498rvgieubt8nft1l5eka22d.jpg",
+				"path": "/images/items/01_2989/155_3961.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2989/"
 }

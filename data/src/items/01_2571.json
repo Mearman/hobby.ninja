@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 ゼルトザームアームズ",
 		"en": "HGBD:R 1/144 Zeltsam Arms"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 25
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズRe:RISE』より、異形の腕を持つゼルトザームの装備の別カラー版が登場。",
@@ -28,42 +71,49 @@
 		"en": [
 			"From ``Gundam Build Divers Re:RISE'' comes a different color version of Zeltsam's equipment, which has a strange arm.",
 			"• Can be enjoyed in combination with existing Gunpla.",
-			"• Lance and Seal included."
+			"• Lance and seal included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ランス×1",
-			"シールド×1",
-			"異形腕×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ランス"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "異形腕"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3496_s_d4bgpaop7b3034vi7fsbyklmlohn.jpg",
+				"path": "/images/items/01_2571/153_3496.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3496_s_jen2mhf95z9kc984ggioa2v2exrx.jpg",
+				"path": "/images/items/01_2571/155_3496.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3496_s_n9fj9s4i930xcehfaitt9h2dnji3.jpg",
+				"path": "/images/items/01_2571/156_3496.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3496_s_sc26duvvie45rc7hcwwur083uk9a.jpg",
+				"path": "/images/items/01_2571/157_3496.jpg"
+			}
 		],
-		"en": [
-			"Lance x1",
-			"Seal × 1",
-			"Deformed arm x1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2571/153_3496.jpg",
-		"/images/items/01_2571/155_3496.jpg",
-		"/images/items/01_2571/156_3496.jpg",
-		"/images/items/01_2571/157_3496.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2571/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0081"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2571/"
 }

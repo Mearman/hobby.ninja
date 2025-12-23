@@ -5,6 +5,43 @@
 		"ja": "ピカちんキット０３ ケシカスイーパー１０",
 		"en": "Pikachin Kit03 Keshika Sweeper 10"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -27,50 +64,78 @@
 			"• ピカちん大百科に綴じられるピカちんシートも付いてくるぞ！"
 		],
 		"en": [
-			"• A great machine that automatically cleans your desk!",
-			"• Keshika Sweeper 10 (Ten) that appeared on the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!",
+			"• A cool machine that automatically cleans your desk!",
+			"• Keshika Sweeper 10 (Ten) that appears in the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!",
 			"• Keshika Sweeper 10 is an invention that automatically cleans your messy desk!",
-			"• If you find it troublesome to clean it yourself, leave it to this guy!",
+			"• If you don't want to clean it yourself, leave it to this guy!",
 			"• It also comes with a Pikachin sheet that can be bound into the Pikachin Encyclopedia!"
 		]
 	},
-	"contents": {
-		"ja": [
-			"ケシカスイーパー10×1",
-			"（成形品×4）",
-			"ピカちんQRコード×1",
-			"輪ゴム×1",
-			"シャフト×1",
-			"ピカちんｊシート×1"
+	"contents": [
+		{
+			"name": {
+				"ja": "ケシカスイーパー10"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "（成形品"
+			},
+			"count": 4,
+			"unit": {
+				"ja": "）"
+			}
+		},
+		{
+			"name": {
+				"ja": "ピカちんQRコード"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "輪ゴム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シャフト"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ピカちんｊシート"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2150_s_ix33057bsgd0fvk8mmtua8upto1k.jpg",
+				"path": "/images/items/01_1216/153_2150.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2150_s_djocs3qdm594j9vsxgfjceojqshm.jpg",
+				"path": "/images/items/01_1216/155_2150.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2150_s_j664ws7bvkmeta313vty7ffd5glc.jpg",
+				"path": "/images/items/01_1216/156_2150.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2150_s_1nwokcxnftjz5gd0wll1dra3zumu.jpg",
+				"path": "/images/items/01_1216/157_2150.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2150_s_l43odczhgn12ncxhwluq3fz5b2kp.jpg",
+				"path": "/images/items/01_1216/158_2150.jpg"
+			}
 		],
-		"en": [
-			"Keishika Sweeper 10×1",
-			"(molded product x 4)",
-			"Pikachin QR code x 1",
-			"Rubber band x 1",
-			"Shaft x 1",
-			"Pikachin J sheet x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1216/153_2150.jpg",
-		"/images/items/01_1216/155_2150.jpg",
-		"/images/items/01_1216/156_2150.jpg",
-		"/images/items/01_1216/157_2150.jpg",
-		"/images/items/01_1216/158_2150.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1216/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1216/"
 }

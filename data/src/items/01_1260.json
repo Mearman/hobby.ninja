@@ -2,9 +2,53 @@
 	"id": "01_1260",
 	"type": "item",
 	"name": {
-		"ja": "RG 1/144 ユニコーンガンダム 2号機 バンシィ・ノルン［プレミアム”ユニコーンモード”ボックス］",
+		"ja": "RG 1/144 ユニコーンガンダム2号機 バンシィ・ノルン［プレミアム”ユニコーンモード”ボックス］",
 		"en": "RG 1/144 Unicorn Gundam Unit 2 Banshee Norn [Premium “Unicorn Mode” Box]"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1899",
+			"url": "https://bandai-hobby.net/item/01_1899/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-0 ユニコーンガンダム(デストロイモード) Ver.TWC(LIGHTING MODEL)"
+		},
+		{
+			"id": "01_1259",
+			"url": "https://bandai-hobby.net/item/01_1259/",
+			"ja": "RG 1/144 ユニコーンガンダム2号機 バンシィ・ノルン"
+		},
+		{
+			"id": "01_1950",
+			"url": "https://bandai-hobby.net/item/01_1950/",
+			"ja": "RG 1/144 シナンジュ[クリアカラー]"
+		},
+		{
+			"id": "01_1926",
+			"url": "https://bandai-hobby.net/item/01_1926/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-0 ユニコーンガンダム Ver.TWC"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -18,79 +62,126 @@
 		"day": 17
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 1/144で変身ギミックを搭載した黒き獅子「RG ユニコーンガンダム 2号機 バンシィ・ノルン」がついに登場！",
+			"• 1/144で変身ギミックを搭載した黒き獅子「RG ユニコーンガンダム2号機 バンシィ・ノルン」がついに登場！",
 			"• 紺色のカラーリングは3色の成形色で再現され、特徴的な頭部アンテナは選択式で可動1種と固定2種が付属！",
 			"• アームド・アーマーXCは新規造形となっており、デストロイモード時に露出するサイコ・フレームに一部クリアパーツが採用されているほか、アームド・アーマーDEも新規追加パーツで再現されている！",
 			"• ビーム・マグナムにはパーツ差替えでビーム・ジュッテを装着することができるほか、弾倉はリア・アーマーに装着することも可能！",
 			"• 通常パッケージのほか、初回限定パッケージ［プレミアム“ユニコーンモード”ボックス］も登場！"
 		],
 		"en": [
-			"• 1/144 black lion \"RG Unicorn Gundam Unit 2 Banshee Norn\" equipped with a transformation gimmick is finally here!",
-			"• The dark blue coloring is reproduced in 3 molded colors, and the characteristic head antenna is selectable and comes with 1 movable type and 2 fixed types!",
+			"• The 1/144 black lion \"RG Unicorn Gundam 02 Banshee Norn\" equipped with a transformation gimmick is finally here!",
+			"• The navy blue coloring is reproduced with three molded colors, and the characteristic head antenna is selectable, with one movable type and two fixed types included!",
 			"• Armed Armor",
 			"• Beam Jutte can be attached to the Beam Magnum by replacing parts, and the magazine can also be attached to the rear armor!",
 			"• In addition to the regular package, a first-time limited package [Premium “Unicorn Mode” Box] is also available!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・マグナム×1",
-			"リボルビング・ランチャー×1",
-			"アームド・アーマーＤＥ×1",
-			"アームド・アーマーＸＣ×1",
-			"ビーム・サーベルｘ2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・マグナム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リボルビング・ランチャー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アームド・アーマーＤＥ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アームド・アーマーＸＣ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 20
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123796_1.jpg",
+				"path": "/images/items/01_1260/1000123796_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123796_2.jpg",
+				"path": "/images/items/01_1260/1000123796_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123796_3.jpg",
+				"path": "/images/items/01_1260/1000123796_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123796_4.jpg",
+				"path": "/images/items/01_1260/1000123796_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123796_5.jpg",
+				"path": "/images/items/01_1260/1000123796_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123796_6.jpg",
+				"path": "/images/items/01_1260/1000123796_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123796_7.jpg",
+				"path": "/images/items/01_1260/1000123796_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123796_8.jpg",
+				"path": "/images/items/01_1260/1000123796_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123796_9.jpg",
+				"path": "/images/items/01_1260/1000123796_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123796_10.jpg",
+				"path": "/images/items/01_1260/1000123796_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123796_11.jpg",
+				"path": "/images/items/01_1260/1000123796_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123796_12.jpg",
+				"path": "/images/items/01_1260/1000123796_12.jpg"
+			}
 		],
-		"en": [
-			"Beam Magnum x 1",
-			"Revolving launcher x 1",
-			"Armed Armor DE×1",
-			"Armed Armor XC×1",
-			"Beam saber x2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×20",
-			"リアリスティックデカール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 20",
-			"Realistic decal x 1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1260/1000123796_1.jpg",
-		"/images/items/01_1260/1000123796_10.jpg",
-		"/images/items/01_1260/1000123796_11.jpg",
-		"/images/items/01_1260/1000123796_12.jpg",
-		"/images/items/01_1260/1000123796_2.jpg",
-		"/images/items/01_1260/1000123796_3.jpg",
-		"/images/items/01_1260/1000123796_4.jpg",
-		"/images/items/01_1260/1000123796_5.jpg",
-		"/images/items/01_1260/1000123796_6.jpg",
-		"/images/items/01_1260/1000123796_7.jpg",
-		"/images/items/01_1260/1000123796_8.jpg",
-		"/images/items/01_1260/1000123796_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1260/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1899",
-		"01_1259",
-		"01_1950",
-		"01_1926"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1260/"
 }

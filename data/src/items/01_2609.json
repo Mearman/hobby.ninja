@@ -5,6 +5,50 @@
 		"ja": "HGBD 1/144 ビルドガンマガンダム",
 		"en": "HGBD 1/144 Build Gamma Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -17,29 +61,14 @@
 		"month": 1
 	},
 	"targetAge": 8,
-	"scale": "1/144",
-	"images": [
-		"/images/items/01_2609/153_3530.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2609/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3530_o_1dmpvu7691rpo1hjgeav1tm8uen23.jpg",
+				"path": "/images/items/01_2609/153_3530.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "2573"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2609/"
 }

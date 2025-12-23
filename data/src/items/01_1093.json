@@ -5,6 +5,49 @@
 		"ja": "メカコレクション　ドラゴンボール　6巻　ウーロンのロードバギー",
 		"en": "Mecha Collection Dragon Ball Volume 6 Oolong's Road Buggy"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1107",
+			"url": "https://bandai-hobby.net/item/01_1107/",
+			"ja": "メカコレクション　ドラゴンボール　7巻 亀仙人のワゴン車"
+		},
+		{
+			"id": "01_1060",
+			"url": "https://bandai-hobby.net/item/01_1060/",
+			"ja": "メカコレクション　ドラゴンボール　5巻　ヤムチャのマイティマウス号"
+		},
+		{
+			"id": "01_1016",
+			"url": "https://bandai-hobby.net/item/01_1016/",
+			"ja": "メカコレクション　ドラゴンボール　3巻　ランチの一輪バイク"
+		},
+		{
+			"id": "01_1017",
+			"url": "https://bandai-hobby.net/item/01_1017/",
+			"ja": "メカコレクション　ドラゴンボール　4巻　孫悟空のジェットバギー"
+		}
+	],
 	"price": {
 		"amount": 715,
 		"currency": "JPY",
@@ -40,51 +83,66 @@
 			"Volume 6 includes romantic parts for the left tail!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ウーロン×１",
-			"孫悟空×１",
-			"ロマンティックパーツ×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ウーロン×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "孫悟空×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ロマンティックパーツ×１"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2024_s_4dzjw11pm1gy4vez980bzbxw6yeh.jpg",
+				"path": "/images/items/01_1093/153_2024.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2024_s_ylassbyxgo04k1mjwwbs4b7kju0y.jpg",
+				"path": "/images/items/01_1093/155_2024.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2024_s_zqi07rrg8ndl69bd24ognzblcyn3.jpg",
+				"path": "/images/items/01_1093/156_2024.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2024_s_sx4v2qci71ev1207mzujhsa4xl1o.jpg",
+				"path": "/images/items/01_1093/157_2024.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2024_s_lkhwck39jipyv4l7pgia5jqhofty.jpg",
+				"path": "/images/items/01_1093/158_2024.jpg"
+			}
 		],
-		"en": [
-			"Oolong x1",
-			"Son Goku x1",
-			"Romantic parts x1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×2",
-			"シール×１",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 2",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1093/153_2024.jpg",
-		"/images/items/01_1093/155_2024.jpg",
-		"/images/items/01_1093/156_2024.jpg",
-		"/images/items/01_1093/157_2024.jpg",
-		"/images/items/01_1093/158_2024.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1093/",
-	"brandIds": [
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"dragonball"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1107",
-		"01_1060",
-		"01_1016",
-		"01_1017"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1093/"
 }

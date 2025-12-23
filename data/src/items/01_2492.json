@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ガンダムバルバトス",
 		"en": "MG 1/100 Gundam Barbatos"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5469",
+			"url": "https://bandai-hobby.net/item/01_5469/",
+			"ja": "MG 1/100 ガンダムヴィダール"
+		},
+		{
+			"id": "01_4255",
+			"url": "https://bandai-hobby.net/item/01_4255/",
+			"ja": "MG 1/100 ガンダムバルバトス [リサーキュレーションカラー/ネオンブルー]"
+		},
+		{
+			"id": "01_4214",
+			"url": "https://bandai-hobby.net/item/01_4214/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムバルバトス用 拡張パーツセット[クリアカラー］"
+		},
+		{
+			"id": "01_3842",
+			"url": "https://bandai-hobby.net/item/01_3842/",
+			"ja": "MG 1/100 ガンダムバルバトス[アイアンブラッドコーティング]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 21
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム 鉄血のオルフェンズ』主役機であるガンダムバルバトス第４形態がMGとして登場！内部機構のガンダム・フレーム、エイハブ・リアクターを徹底的に再現！パーツ単位で施した成形色による色再現、よりダイナミックに動かすための拡大ギミック、豊富なオプションパーツ。その情報量は、マスターグレードとしてふさわしいものとなっている。",
@@ -35,60 +78,89 @@
 		],
 		"en": [
 			"\"Mobile Suit Gundam Iron-Blooded Orphans\" main character Gundam Barbatos' fourth form is now available as MG! Thoroughly reproduce the internal mechanism Gundam frame and Ahab reactor! Color reproduction by molding color applied to each part, enlargement gimmick for more dynamic movement, and abundant optional parts. The amount of information is suitable for master grade.",
-			"• The setting color of the 4th form exterior is faithfully reproduced with molding color. The density and amount of information unique to MG is overwhelming.",
-			"• Internal structure The Gundam frame has been carefully researched based on the settings in the play, and has been recreated down to the last detail. The cylinder is silver plated.",
+			"• Faithfully reproduces the setting color of the 4th form exterior with molding color. The density and amount of information unique to MG is overwhelming.",
+			"• The internal structure of the Gundam frame has been carefully researched based on the settings in the play, and has been recreated down to the last detail. The cylinder is silver plated.",
 			"• The Ahab reactor on the chest is equipped with a rotating gimmick for the first time as an MG.",
 			"• The internal frame, cylinder, and armor are linked by a movable axis built into the upper body. This allows you to create dynamic poses.",
-			"• The cylinder on the shoulder reproduces the mechanical structure that follows the movement of pulling out. You can express Barbatos' aggressive pose.",
-			"• The frame and cylinder of the knees move in conjunction with each other. By pulling out the parts on the back of the knee, the range of motion is expanded, allowing for a natural standing knee position.",
-			"• In the standby position, swings to the left and right and movement of the hip joint axis are reproduced. You can enjoy the characteristic looking down waiting pose.",
-			"• 3 types of interchangeable hand parts are included. The weapon is attached to the palm of the hand along with the fingers of the weapon holder.",
+			"• The cylinder on the shoulder reproduces the mechanical structure that follows the pulling movement. You can express Barbatos' aggressive pose.",
+			"• The knees are movable by linking the frame and cylinder. By pulling out the parts on the back of the knee, the range of motion is expanded, allowing for a natural standing knee position.",
+			"• In the standby position, swings from side to side and movement of the hip joint axis are reproduced. You can enjoy the characteristic looking down waiting pose.",
+			"• Three types of interchangeable hand parts are included. The weapon is attached to the palm of the hand along with the fingers of the weapon holder.",
 			"• The grip and tip of the mace can be slid.",
 			"• The barrel of the smoothbore gun is equipped with a sliding/folding gimmick. Pursuing ease of play with the lock mechanism."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"メイス×1",
-			"太刀×1",
-			"300mm滑腔砲×1",
-			"ホイルシール×1",
-			"マーキングシール×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "メイス"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "太刀"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "300mm滑腔砲"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール×１"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3419_s_5exms0t5hydhyzgo8m28q66cbemq.jpg",
+				"path": "/images/items/01_2492/153_3419.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3419_s_16ix1l3cenkrkb0ztaij7lqy92vm.jpg",
+				"path": "/images/items/01_2492/155_3419.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3419_s_vy6lf2msrocpzkhuyn5gzk03hi12.jpg",
+				"path": "/images/items/01_2492/156_3419.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3419_s_hvrdcw3kylrw1a0yhv1p6t3i4nee.jpg",
+				"path": "/images/items/01_2492/157_3419.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3419_s_rdrdiaz5eli4iqcb2wol5iwbstwu.jpg",
+				"path": "/images/items/01_2492/158_3419.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3419_s_33okkie3m306bfzf7wqhbjz95tkb.jpg",
+				"path": "/images/items/01_2492/159_3419.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3419_s_ry6okz4yteoz6p92gx9xictt4tif.jpg",
+				"path": "/images/items/01_2492/189_3419.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3419_s_vgi5dwuo7ppsfb3uplq0n47zv72c.jpg",
+				"path": "/images/items/01_2492/190_3419.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3419_s_iu1n4cxrkpa5ogwkxymquieujtxh.jpg",
+				"path": "/images/items/01_2492/191_3419.jpg"
+			}
 		],
-		"en": [
-			"Mace x 1",
-			"Long sword x1",
-			"300mm smoothbore gun x 1",
-			"Foil Seal×1",
-			"MarkingSeal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2492/153_3419.jpg",
-		"/images/items/01_2492/155_3419.jpg",
-		"/images/items/01_2492/156_3419.jpg",
-		"/images/items/01_2492/157_3419.jpg",
-		"/images/items/01_2492/158_3419.jpg",
-		"/images/items/01_2492/159_3419.jpg",
-		"/images/items/01_2492/189_3419.jpg",
-		"/images/items/01_2492/190_3419.jpg",
-		"/images/items/01_2492/191_3419.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2492/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"tekketsu"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5469",
-		"01_4255",
-		"01_4214",
-		"01_3842"
-	],
-	"manualId": "0637"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2492/"
 }

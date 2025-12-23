@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard 仮面ライダーエグゼイド アクションゲーマー レベル2",
 		"en": "Figure-rise Standard Kamen Rider Ex-Aid Action Gamer Level 2"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "rider",
+			"url": "https://bandai-hobby.net/series/rider/",
+			"ja": "仮面ライダーシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5451",
+			"url": "https://bandai-hobby.net/item/01_5451/",
+			"ja": "Figure-rise Standard 仮面ライダーゼロワン ライジングホッパー"
+		},
+		{
+			"id": "item-1000215369",
+			"url": "https://p-bandai.jp/item/item-1000215369/",
+			"ja": "Figure-rise Standard 仮面ライダーファイズ ブラスターフォーム"
+		},
+		{
+			"id": "01_5276",
+			"url": "https://bandai-hobby.net/item/01_5276/",
+			"ja": "Figure-rise Standard 仮面ライダークウガ アルティメットフォーム"
+		},
+		{
+			"id": "01_5175",
+			"url": "https://bandai-hobby.net/item/01_5175/",
+			"ja": "Figure-rise Standard 仮面ライダーキバ キバフォーム"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -30,70 +73,112 @@
 		],
 		"en": [
 			"\"Kamen Rider Ex-Aid Action Gamer Level 2\" is now available in the Figure-rise Standard lineup!",
-			"• Thorough reproduction of Ex-Aid's characteristic proportions.",
+			"• Thoroughly reproduces Ex-Aid's characteristic proportions.",
 			"• The colorful body is reproduced with color-coded parts and seals. Pursuing ease of applying the seal through thorough part division and modeling.",
 			"• The chest modeled after a controller uses clear parts.",
-			"• The gamer driver has carefully selected details. The opening and closing of the lever and the loading gimmick of Rider Gashat are also reproduced.",
-			"• Gashacon Breaker can be replaced and transformed into blade mode and hammer mode.",
+			"• The Gamer Driver has great attention to detail. The opening and closing of the lever and the loading gimmick of Rider Gashat are also reproduced.",
+			"• Gashakon Breaker can be replaced and transformed into blade mode and hammer mode.",
 			"• A wide variety of peripheral parts are included, including hand parts with facial expressions."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ガシャコンブレイカー×1",
-			"握り手×左右各1",
-			"平手×左右各1",
-			"表情手(右)×1",
-			"武器持ち手(右)×1",
-			"ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ガシャコンブレイカー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "握り手×左右各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "平手×左右各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "表情手(右)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "武器持ち手(右)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 8
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "カイナスシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3239_s_swagh8wclcjtp5wo55w4b1dkwh8i.jpg",
+				"path": "/images/items/01_2299/153_3239.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3239_s_13s3ngjeum9tksozzjjhptm3c5fh.jpg",
+				"path": "/images/items/01_2299/155_3239.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3239_s_tnq91jl06b0uxw9c5w79d1g9eki3.jpg",
+				"path": "/images/items/01_2299/156_3239.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3239_s_xf6jky0ycj0pbxswmn9ila517560.jpg",
+				"path": "/images/items/01_2299/157_3239.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3239_s_gs4e4zqoh7m2bpm7m55m7sfgnqi8.jpg",
+				"path": "/images/items/01_2299/158_3239.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3239_s_4feo5j10fpqt2bdkrkxujl15mtup.jpg",
+				"path": "/images/items/01_2299/159_3239.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3239_s_6p1mlhpmktmhaeopxbhjx42e5io3.jpg",
+				"path": "/images/items/01_2299/189_3239.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3239_s_rlz944edffn5qa3i029yhpmsex24.jpg",
+				"path": "/images/items/01_2299/190_3239.jpg"
+			}
 		],
-		"en": [
-			"Gashakon Breaker x 1",
-			"Hand grip x 1 each on left and right",
-			"Open hand x left and right 1 each",
-			"Expression hand (right) x 1",
-			"Weapon holder (right) x 1",
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×8",
-			"ホイルシール×1",
-			"カイナスシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 8",
-			"Foil Seal×1",
-			"Cainus Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2299/153_3239.jpg",
-		"/images/items/01_2299/155_3239.jpg",
-		"/images/items/01_2299/156_3239.jpg",
-		"/images/items/01_2299/157_3239.jpg",
-		"/images/items/01_2299/158_3239.jpg",
-		"/images/items/01_2299/159_3239.jpg",
-		"/images/items/01_2299/189_3239.jpg",
-		"/images/items/01_2299/190_3239.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2299/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"rider"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5451",
-		"item-1000215369",
-		"01_5276",
-		"01_5175"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2299/"
 }

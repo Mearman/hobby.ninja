@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 トールギスII[スペシャルコーティング]",
 		"en": "MG 1/100 Tallgeese II [Special Coating]"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000194972",
+			"url": "https://p-bandai.jp/item/item-1000194972/",
+			"ja": "ＭＧ 1/100 ガンダムエピオン EW (シュトゥルム・ウント・ドラング装備)"
+		},
+		{
+			"id": "01_3410",
+			"url": "https://bandai-hobby.net/item/01_3410/",
+			"ja": "MG 1/100 ガンダムデスサイズヘル EW[スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000171722",
+			"url": "https://p-bandai.jp/item/item-1000171722/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムエピオン EW[スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000142325",
+			"url": "https://p-bandai.jp/item/item-1000142325/",
+			"ja": "ＭＧ 1/100 ガンダムデスサイズ EW（ルーセット装備）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 8800,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 6
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
@@ -28,27 +71,14 @@
 			"From Master Grade, Tallgeese II is now available with special coating specifications!"
 		]
 	},
-	"images": [
-		"/images/items/01_2000/153_2928.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2000/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000194972",
-		"01_3410",
-		"item-1000171722",
-		"item-1000142325"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2928_o_1ck1op6vqa2s10if1fkla9c2n423.jpg",
+				"path": "/images/items/01_2000/153_2928.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2000/"
 }

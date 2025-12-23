@@ -5,6 +5,50 @@
 		"ja": "HGBD 1/144 ガンダムラヴファントム",
 		"en": "HGBD 1/144 Gundam Love Phantom"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 13
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズ』のダイバー「マギー」が使用するガンダムラヴファントムがHGBDで立体化！",
@@ -27,64 +70,90 @@
 			"• 機全体が醸し出す悪魔のようなシルエットをシャープな造形と色分けで表現。"
 		],
 		"en": [
-			"The Gundam Love Phantom used by the diver \"Maggie \" from \" Gundam Build Divers\" is now three-dimensional with HGBD!",
+			"The Gundam Love Phantom used by the diver \"Maggie\" from \"Gundam Build Divers\" is now three-dimensional with HGBD!",
 			"• The Noir Striker on the back is a completely new mold that pursues range of motion and action!",
 			"• Reproduce the characteristic heart shape of the forehead, cannon on the wing, scythe, etc.",
 			"• The devilish silhouette of the entire machine is expressed with sharp shapes and color coding."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームカマ×1",
-			"ストライカーサイズ×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームカマ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ストライカーサイズ"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 15
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/192_2917_s_2hxg3t4pfk4yat7xt4qwllv8nl4x.jpg",
+				"path": "/images/items/01_1988/192_2917.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_2917_s_22yaldzfkc2nnf8xtpc0sivdmh3p.jpg",
+				"path": "/images/items/01_1988/153_2917.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2917_s_22g6ld71lycqajgh7m6wvz5s3mqz.jpg",
+				"path": "/images/items/01_1988/155_2917.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2917_s_9u7ik7iyvtrg5sxj5cgwiyzs7w06.jpg",
+				"path": "/images/items/01_1988/156_2917.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2917_s_3ywq5t2exskmbuzibrwuuwy3hs87.jpg",
+				"path": "/images/items/01_1988/157_2917.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2917_s_rcy21vexp5c950qexrmaauleol5w.jpg",
+				"path": "/images/items/01_1988/158_2917.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2917_s_1f8qasi7s2y6a5xddn8j33rmcaux.jpg",
+				"path": "/images/items/01_1988/159_2917.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2917_s_9kl6ss8gkj2kotnr2rltw4pg0vdm.jpg",
+				"path": "/images/items/01_1988/189_2917.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2917_s_dbnq51o2ws63m8p2gi5pfyh2j1ol.jpg",
+				"path": "/images/items/01_1988/190_2917.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2917_s_ce461w2mjywhm04o02yv6unog1ys.jpg",
+				"path": "/images/items/01_1988/191_2917.jpg"
+			}
 		],
-		"en": [
-			"Beam kama x 1",
-			"Striker size x 2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×15",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 15",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1988/153_2917.jpg",
-		"/images/items/01_1988/155_2917.jpg",
-		"/images/items/01_1988/156_2917.jpg",
-		"/images/items/01_1988/157_2917.jpg",
-		"/images/items/01_1988/158_2917.jpg",
-		"/images/items/01_1988/159_2917.jpg",
-		"/images/items/01_1988/189_2917.jpg",
-		"/images/items/01_1988/190_2917.jpg",
-		"/images/items/01_1988/191_2917.jpg",
-		"/images/items/01_1988/192_2917.jpg",
-		"/images/items/01_1988/01_1988_inst_0.jpg",
-		"/images/items/01_1988/01_1988_inst_1.jpg",
-		"/images/items/01_1988/01_1988_inst_2.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1988/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "1037"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1988/"
 }

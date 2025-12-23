@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ザクI（キシリア部隊機）",
 		"en": "HG 1/144 Zaku I (Kycilia unit machine)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "origin",
+			"url": "https://bandai-hobby.net/series/origin/",
+			"ja": "機動戦士ガンダム THE ORIGIN"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3711",
+			"url": "https://bandai-hobby.net/item/01_3711/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)[クリアカラー]"
+		},
+		{
+			"id": "01_2828",
+			"url": "https://bandai-hobby.net/item/01_2828/",
+			"ja": "HG 1/144 ガンダムベース限定 ザクII TYPE C-6/R6 [ペインティングモデル]"
+		},
+		{
+			"id": "01_2707",
+			"url": "https://bandai-hobby.net/item/01_2707/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)"
+		},
+		{
+			"id": "item-1000135687",
+			"url": "https://p-bandai.jp/item/item-1000135687",
+			"ja": "ＨＧ 1/144 MS-05S シャア専用ザクＩ（ＬＩＭＩＴＥＤ ＭＯＤＥＬ）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1870,
 		"currency": "JPY",
@@ -18,67 +62,87 @@
 		"day": 3
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 『機動戦士ガンダム THE ORIGIN 激突ルウム会戦』に登場するキシリア部隊所属のザクIがHGで立体化！",
 			"• 特徴的な頭部のクレストは新規パーツで再現されており、劇中で使用する多彩な装備が付属！"
 		],
 		"en": [
-			"• The Zaku I belonging to the Kycilia unit that appears in \"Mobile Suit Gundam THE ORIGIN: Battle of Loum\" is now three-dimensional in HG!",
-			"• The characteristic head crest has been recreated with new parts, and comes with a variety of equipment used in the play!"
+			"• Zaku I, a member of the Kycilia unit that appears in \"Mobile Suit Gundam THE ORIGIN: Battle of Loum,\" is now a three-dimensional HG figure!",
+			"• The characteristic head crest has been reproduced with new parts, and a variety of equipment used in the play is included!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"MS用マシンガン×1",
-			"ヒート・ホーク×1",
-			"ヒート・ホーク（収納）×1",
-			"MS用バズーカ×1",
-			"シールド×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "MS用マシンガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ヒート・ホーク"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ヒート・ホーク（収納）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "MS用バズーカ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 10
+		},
+		{
+			"name": {
+				"ja": "マーキングシール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2085_s_iwewn716zxnc4rvpqk6fgp54975x.jpg",
+				"path": "/images/items/01_1154/153_2085.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2085_s_agf7muniexe2iumqw1awoy24vdxq.jpg",
+				"path": "/images/items/01_1154/155_2085.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2085_s_ypsie5vdf67zunzn069ciwodpnze.jpg",
+				"path": "/images/items/01_1154/156_2085.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2085_s_jrm3vwe29ssyzo8c8r920969pz9w.jpg",
+				"path": "/images/items/01_1154/157_2085.jpg"
+			}
 		],
-		"en": [
-			"MS machine gun x 1",
-			"Heat Hawk x1",
-			"Heat Hawk (storage) x 1",
-			"Bazooka for MS x 1",
-			"Seal × 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×10",
-			"マーキングシール×１",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 10",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1154/153_2085.jpg",
-		"/images/items/01_1154/155_2085.jpg",
-		"/images/items/01_1154/156_2085.jpg",
-		"/images/items/01_1154/157_2085.jpg",
-		"/images/items/01_1154/01_1154_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1154/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"origin"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3711",
-		"01_2828",
-		"01_2707",
-		"item-1000135687"
-	],
-	"manualId": "0051"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1154/"
 }

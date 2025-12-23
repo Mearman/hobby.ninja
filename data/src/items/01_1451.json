@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 サザビー メタリックコーティングバージョン",
 		"en": "MG 1/100 Sozabi metallic coating version"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000219110",
+			"url": "https://p-bandai.jp/item/item-1000219110/",
+			"ja": "MG 1/100 リ・ガズィ (逆襲のシャアVer.)"
+		},
+		{
+			"id": "01_1394",
+			"url": "https://bandai-hobby.net/item/01_1394/",
+			"ja": "MG 1/100 ジェガン"
+		},
+		{
+			"id": "item-1000097986",
+			"url": "https://p-bandai.jp/item/item-1000097986",
+			"ja": "ＭＧ 1/100 サザビー Ver.Ka & ＲＥ/100 1/100 ナイチンゲール用 拡張ファンネルエフェクトセット"
+		},
+		{
+			"id": "item-1000128400",
+			"url": "https://p-bandai.jp/item/item-1000128400",
+			"ja": "ＭＧ 1/100 ギラ・ドーガ（レズン・シュナイダー専用機）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 15400,
 		"currency": "JPY",
@@ -18,33 +62,26 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム 逆襲のシャア」に登場する人気MS“サザビー”のMGモデルにメタリックコーティングバージョンが登場 メタリックボディに馴染む専用ウォータースライドマーク付属 ファンネルコンテナのハッチは開閉、ファンネルを着脱可能、ファンネ ル自体も全て設定通り変形 足部、バックパック内部機構は精密なメカディティールで表現 上腕部、脛部のダンパーは伸縮スライドアクション再現 第2関節まで可動する指は付属のビーム・ショットライフル、ビーム・サーベ ル、ビーム・トマホークをしっかりと保持"
 		],
 		"en": [
-			"A metallic coated version of the popular MS \"Sazabi \" from \" Mobile Suit Gundam: Char's Counterattack\" is now available in the MG Model. A special water slide mark that blends in with the metallic body is included. The hatch of the funnel container can be opened and closed, and the funnel can be attached and removed. The funnel itself can also be transformed as per the settings. The legs and internal mechanisms of the backpack are expressed with precise mechanical details. The dampers on the upper arms and shins reproduce the telescopic slide action. Fingers that can move up to the second joint firmly hold the included beam shot rifle, beam saber, and beam tomahawk."
+			"A metallic coated version of the popular MS \"Sazabi\" from \"Mobile Suit Gundam: Char's Counterattack\" is now available in the MG Model. A special water slide mark that blends in with the metallic body is included. The hatch of the funnel container can be opened and closed, and the funnel can be attached and removed. The funnel itself can also be transformed as per the settings. The legs and internal mechanisms of the backpack are expressed with precise mechanical details. The dampers on the upper arms and shins reproduce the telescopic slide action. Fingers that can move up to the second joint firmly hold the included beam shot rifle, beam saber, and beam tomahawk."
 		]
 	},
-	"images": [
-		"/images/items/01_1451/153_2374.jpg",
-		"/images/items/01_1451/155_2374.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1451/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000219110",
-		"01_1394",
-		"item-1000097986",
-		"item-1000128400"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2374_s_ibd0vo8yat5up0q4wylmgn63x02p.jpg",
+				"path": "/images/items/01_1451/153_2374.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2374_s_118356ta2i62m3enhh7cpx7ndlhg.jpg",
+				"path": "/images/items/01_1451/155_2374.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1451/"
 }

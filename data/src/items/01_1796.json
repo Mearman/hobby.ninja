@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 イージスガンダム",
-		"en": "MG 1/100 Aegis Gundam"
+		"en": "MG 1/100 AEGIS GUNDAM"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]",
+			"en": "MG [MASTER GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED",
+			"en": "MOBILE SUIT GUNDAM SEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "01_5221",
+			"url": "https://bandai-hobby.net/item/01_5221/",
+			"ja": "MG 1/100 イージスガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_4272",
+			"url": "https://bandai-hobby.net/item/01_4272/",
+			"ja": "MG 1/100 ガンダムベース限定 パーフェクトストライクガンダム グランドスラム装備型"
+		},
+		{
+			"id": "01_4195",
+			"url": "https://bandai-hobby.net/item/01_4195/",
+			"ja": "MG 1/100 ガンダムベース限定 エクリプスガンダム[クリアカラー]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5280,
 		"currency": "JPY",
@@ -18,35 +64,36 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"• 『機動戦士ガンダム SEED』に登場するアスランの愛機イージスガンダムがMGになって登場。 • X300系独自の可変フレームを再現。 • MG用新規開発画稿により、ディテールを再現。 • 砲撃形態と巡航形態の２種類のMA形態へ完全変形。 成形品×15、ホイルシール×1、ドライデカール×１、マーキングシール×１、組立説明書×１"
+			"• 『機動戦士ガンダムSEED』に登場するアスランの愛機イージスガンダムがMGになって登場。 ■X300系独自の可変フレームを再現。 ■MG用新規開発画稿により、ディテールを再現。 ■砲撃形態と巡航形態の２種類のMA形態へ完全変形。 成形品×15、ホイルシール×1、ドライデカール×１、マーキングシール×１、組立説明書×１"
 		],
 		"en": [
-			"• Athrun's beloved machine Aegis Gundam that appears in \"Mobile Suit Gundam SEED\" is now available as MG. • Reproduces the unique variable frame of the X300 series. • Details are reproduced using newly developed drawings for MG. • Completely transforms into two types of MA forms: bombardment form and cruise form. Molded product x 15, foil seal x 1, dry decal x 1, marking seal x 1, assembly manual x 1"
+			"• Aslan's beloved Aegis GUNDAM, which appears in \"MOBILE SUIT GUNDAM SEED\", is now available as an MG.",
+			"• Reproduce the X300 series' unique variable frame.",
+			"• Newly developed drawings for MG reproduce details.",
+			"• Completely transformed into two types of MA forms: bombardment and cruising. Molded ×15, Foil Seal ×1, Dry Decal×1, Marking Seal ×1, Assembly Instructions ×1"
 		]
 	},
-	"images": [
-		"/images/items/01_1796/1000092386_1.jpg",
-		"/images/items/01_1796/1000092386_2.jpg",
-		"/images/items/01_1796/1000092386_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092386_1.jpg",
+				"path": "/images/items/01_1796/1000092386_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092386_2.jpg",
+				"path": "/images/items/01_1796/1000092386_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092386_3.jpg",
+				"path": "/images/items/01_1796/1000092386_3.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1796/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5221",
-		"01_4272",
-		"01_4195"
-	],
-	"manualId": "0948"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1796/"
+	}
 }

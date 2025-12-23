@@ -5,6 +5,60 @@
 		"ja": "ＭＧ 1/100 RMS-179 ジムII（エゥーゴカラーＶｅｒ．）",
 		"en": "MG 1/100 RMS-179 Jim II (AEGO Color Ver.)"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000159026",
+			"url": "https://p-bandai.jp/item/item-1000159026/",
+			"ja": "ＨＧ 1/144 バウンド・ドック（ゲーツ・キャパ専用機）"
+		},
+		{
+			"id": "item-1000155118",
+			"url": "https://p-bandai.jp/item/item-1000155118/",
+			"ja": "ＨＧ 1/144 リック・ディアス"
+		},
+		{
+			"id": "item-1000145001",
+			"url": "https://p-bandai.jp/item/item-1000145001/",
+			"ja": "ＨＧ 1/144 リック・ディアス（クワトロ・バジーナ機）"
+		},
+		{
+			"id": "item-1000135679",
+			"url": "https://p-bandai.jp/item/item-1000135679/",
+			"ja": "ＨＧ 1/144 ド・ダイ改"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -16,7 +70,6 @@
 		"year": 2020,
 		"month": 9
 	},
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－",
@@ -53,7 +106,7 @@
 			"－－－－－－－－－－－－－－－－－－－－",
 			"A mass-produced MS that plays a part in the European military force.",
 			"－－－－－－－－－－－－－－－－－－－－",
-			"From \"Mobile Suit Z Gundam \", Jim II, which is used as the main force of the anti-Earth Federation organization \" AEGO\", is commercialized in master grade!",
+			"From \"Mobile Suit ZGundam\", Jim II, which is used as the main force in the anti-Earth Federation organization \"Eugo\", is commercialized in master grade!",
 			"The coloring different from the Earth Federation army (Titans) side aircraft is reproduced with molded colors.",
 			"● Reproduce the characteristic color pattern of the AEGO specification machine with molded colors",
 			"The traditional pattern, mainly green/white, is reproduced with molded colors.",
@@ -81,38 +134,46 @@
 			"- Product specifications are scheduled as of 20205. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2929/153_3905.jpg",
-		"/images/items/01_2929/155_3905.jpg",
-		"/images/items/01_2929/156_3905.jpg",
-		"/images/items/01_2929/157_3905.jpg",
-		"/images/items/01_2929/158_3905.jpg",
-		"/images/items/01_2929/159_3905.jpg",
-		"/images/items/01_2929/189_3905.jpg",
-		"/images/items/01_2929/190_3905.jpg",
-		"/images/items/01_2929/191_3905.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2929/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000159026",
-		"item-1000155118",
-		"item-1000145001",
-		"item-1000135679"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3905_s_zk3hfmrwy5u71dqezlaluankd40u.jpg",
+				"path": "/images/items/01_2929/153_3905.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3905_s_rc3t1mfzvercgbbhd8byjlwlgjav.jpg",
+				"path": "/images/items/01_2929/155_3905.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3905_s_6jmoco0965q4ukmtcetvg8yunbue.jpg",
+				"path": "/images/items/01_2929/156_3905.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3905_s_y7i1zczw2w9q676xxlbf9rvcvopd.jpg",
+				"path": "/images/items/01_2929/157_3905.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3905_s_czpojl883ye19wfppfq06msd89f9.jpg",
+				"path": "/images/items/01_2929/158_3905.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3905_s_apfr7vszsxmdu3lktkh7ywcqi3ay.jpg",
+				"path": "/images/items/01_2929/159_3905.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3905_s_9fm3i9vmwc8medlrlkverq2x4ge1.jpg",
+				"path": "/images/items/01_2929/189_3905.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3905_s_f87opv7c05sxijiaklghgi2qxj7r.jpg",
+				"path": "/images/items/01_2929/190_3905.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3905_s_a1tp5h2e3si5h96iagok6pd0t72i.jpg",
+				"path": "/images/items/01_2929/191_3905.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "2776"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2929/"
 }

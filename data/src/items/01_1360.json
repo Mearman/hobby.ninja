@@ -2,9 +2,46 @@
 	"id": "01_1360",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット クロスシルエットフレーム［ホワイト］",
-		"en": "SD Gundam Cross Silhouette Cross Silhouette Frame [White]"
+		"ja": "SDガンダム クロスシルエット クロスシルエットフレーム［ホワイト］",
+		"en": "SDGundam Cross Silhouette Cross Silhouette Frame [White]"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5275",
+			"url": "https://bandai-hobby.net/item/01_5275/",
+			"ja": "SDガンダム クロスシルエット マイティーストライクフリーダムガンダム"
+		},
+		{
+			"id": "01_5191",
+			"url": "https://bandai-hobby.net/item/01_5191/",
+			"ja": "SDガンダム クロスシルエット ガンダムキャリバーン"
+		},
+		{
+			"id": "01_5014",
+			"url": "https://bandai-hobby.net/item/01_5014/",
+			"ja": "SDガンダム クロスシルエット F9ノ1改"
+		},
+		{
+			"id": "01_4893",
+			"url": "https://bandai-hobby.net/item/01_4893/",
+			"ja": "SDガンダムクロスシルエット ユニコーンガンダム2号機バンシィ（デストロイモード）＆バンシィ・ノルン パーツセット"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -20,50 +57,56 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"頭身自在の新世代SD ガンダム「SD ガンダム クロスシルエット」より、白いクロスシルエットフレームが単品で登場！",
+			"頭身自在の新世代SDガンダム「SDガンダム クロスシルエット」より、白いクロスシルエットフレームが単品で登場！",
 			"• シリーズアイテムと組み合わせて、自分好みのプロポーションにすることができるほか、ジムヘッドが付属する！"
 		],
 		"en": [
-			"A white cross silhouette frame is now available as a single item from the new generation SD Gundam \"SD Gundam Cross Silhouette\" that allows you to freely move your head and body!",
+			"A white cross silhouette frame is now available as a single item from the new generation SDGundam \"SDGundam Cross Silhouette\" that allows you to freely move your head and body!",
 			"• In addition to being able to create your own proportions by combining with series items, a gym head is also included!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"クロスシルエットフレーム［ホワイト］×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "クロスシルエットフレーム［ホワイト］"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2287_s_mnywtnvxrxysmgezxb185la53yuq.jpg",
+				"path": "/images/items/01_1360/153_2287.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2287_s_rvy4d6kubxshs81s4sgqx55wvlgj.jpg",
+				"path": "/images/items/01_1360/155_2287.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2287_s_9gys6khy4328b1bffizztdgblrtg.jpg",
+				"path": "/images/items/01_1360/156_2287.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2287_s_gqyfqu5dltc1ge3z5yi3miff81sn.jpg",
+				"path": "/images/items/01_1360/157_2287.jpg"
+			}
 		],
-		"en": [
-			"Cross silhouette frame [white] x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1360/153_2287.jpg",
-		"/images/items/01_1360/155_2287.jpg",
-		"/images/items/01_1360/156_2287.jpg",
-		"/images/items/01_1360/157_2287.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1360/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5275",
-		"01_5191",
-		"01_5014",
-		"01_4893"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1360/"
 }

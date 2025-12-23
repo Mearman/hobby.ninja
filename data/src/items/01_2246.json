@@ -3,8 +3,40 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 特殊部隊用オプションアーマー[ポルタノヴァ用/ライトグレー]",
-		"en": "30MM 1/144 Optional Armor for Special Forces [For Portanova/Light Gray]"
+		"en": "30MM 1/144 OPTION ARMOR FOR SPECIAL SQUD [PORTANOVA EXCLUSIVE/LIGHT GRAY]"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "item_all",
+			"url": "https://bandai-hobby.net/item_all",
+			"ja": "商品一覧"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,7 +50,6 @@
 		"day": 27
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"豊富なオプションでさらに拡がるカスタマイズ！",
@@ -28,49 +59,64 @@
 			"• オプションアーマーの形状に合わせたシールドが付属。"
 		],
 		"en": [
-			"Customization expands further with abundant options!",
-			"Introducing an optional armor for special forces [for Portanova/light gray] that can be installed on common joints located in various parts of the aircraft.",
-			"• Two colors of armor with a shape that matches the \"bEXM-15 Portanova\" are available.",
-			"• By combining multiple pieces, you can enjoy your favorite coloring without painting.",
-			"• Optional Comes with a seal that matches the shape of the armor."
+			"Customization expands further with a wide variety of options! Optional armor for special forces [for Portanova / Light Gray] that can be equipped on common joints provided in various parts of the aircraft is now available.",
+			"• Two colors of armor are available in the shape of the \"bEXM-15 Portanova\".",
+			"• By combining multiple colors, you can enjoy your favorite coloring without painting."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"アーマー×1式",
-			"シールド×1"
-		],
-		"en": [
-			"Armor x 1 set",
-			"Seal × 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2246/1000137650_1.jpg",
-		"/images/items/01_2246/1000137650_2.jpg",
-		"/images/items/01_2246/1000137650_3.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "アーマー",
+				"en": "• Armor"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "set"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "• Molded product"
+			},
+			"count": 1
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137650_1.jpg",
+				"path": "/images/items/01_2246/1000137650_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137650_2.jpg",
+				"path": "/images/items/01_2246/1000137650_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137650_3.jpg",
+				"path": "/images/items/01_2246/1000137650_3.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2246/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3628"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2246/"
+	}
 }

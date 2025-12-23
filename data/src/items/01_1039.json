@@ -5,6 +5,45 @@
 		"ja": "ガンダムデカールNo.105 HG 1/144 機動戦士ガンダム THE ORIGIN汎用1",
 		"en": "Gundam Decal No.105 HG 1/144 Mobile Suit Gundam THE ORIGIN General Purpose 1"
 	},
+	"brands": [
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "origin",
+			"url": "https://bandai-hobby.net/series/origin/",
+			"ja": "機動戦士ガンダム THE ORIGIN"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3502",
+			"url": "https://bandai-hobby.net/item/01_3502/",
+			"ja": "ガンダムデカールNo.123 機動戦士ガンダム THE ORIGIN汎用4"
+		},
+		{
+			"id": "01_1267",
+			"url": "https://bandai-hobby.net/item/01_1267/",
+			"ja": "ガンダムデカールNo.119 HG 1/144 機動戦士ガンダム THE ORIGIN汎用3"
+		},
+		{
+			"id": "01_1140",
+			"url": "https://bandai-hobby.net/item/01_1140/",
+			"ja": "ガンダムデカールNo.113 HG 1/144 機動戦士ガンダム THE ORIGIN汎用2"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,7 +57,6 @@
 		"day": 24
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"100点以上のラインナップを誇る、大人気ガンダムデカールのシリーズ商品が登場。",
@@ -31,22 +69,14 @@
 			"water transfer decal"
 		]
 	},
-	"images": [
-		"/images/items/01_1039/153_1973.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1039/",
-	"brandIds": [
-		"gundam_decal"
-	],
-	"seriesIds": [
-		"origin"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3502",
-		"01_1267",
-		"01_1140"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1973_s_sw0sgpbqfins6f938rtu501fewcc.jpg",
+				"path": "/images/items/01_1039/153_1973.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1039/"
 }

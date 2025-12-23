@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 MS-06R-2 ジョニー・ライデン専用ザク Ver.2.0",
 		"en": "MG 1/100 MS-06R-2 Johnny Ridden Zaku Ver.2.0"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 13
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム」より、ジオン驚異のメカニズムをその手に！ ザクVer.2.0のフレームを用いたジョニー・ライデン少佐専用ザクがMGにラインナップ MS-06R-2の特徴である脚部スラスターカバー、スパイクアーマーに加え、前腕部など細かい部分まで再現 脚部スタスターカバーは着脱可能 動力パイプはスライド成形により、ランナーから切り離す過程で組み上がるよう配慮 股関節にアクションベースに対応したジョイントが取り付け可能 ザク・マシンガン、ザク・バズーカ、ヒート・ホークに加え、大口径のジャイアント・バズーカが付属"
@@ -27,27 +70,26 @@
 			"Get Zeon's amazing mechanism from \"Mobile Suit Gundam\"! Major Johnny Ridden's Zaku using the frame of Zaku Ver. 2.0 is now available in MG. Features of MS-06R-2 In addition to the leg thruster cover and spike armor, even the small details such as the forearm are reproduced. The leg thruster cover is removable. The power pipe is slide molded so that it can be assembled during the process of separating it from the Runner. A joint compatible with the action base can be attached to the hip joint. In addition to the Zaku Machine Gun, Zaku Bazooka, and Heat Hawk, a large-caliber Giant Bazooka is included."
 		]
 	},
-	"images": [
-		"/images/items/01_1455/153_2378.jpg",
-		"/images/items/01_1455/155_2378.jpg",
-		"/images/items/01_1455/156_2378.jpg",
-		"/images/items/01_1455/157_2378.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1455/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
-	"manualId": "0837"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2378_s_zorh55k4r2mwxlq2mv08pcywwx6e.jpg",
+				"path": "/images/items/01_1455/153_2378.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2378_s_k0ej8seiggkyq3c9c0je17fv0hp9.jpg",
+				"path": "/images/items/01_1455/155_2378.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2378_s_6jjblitk23tbzv90qhd7esh5pwn5.jpg",
+				"path": "/images/items/01_1455/156_2378.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2378_s_jpflyqt39ugs3dsn6912156kqsmb.jpg",
+				"path": "/images/items/01_1455/157_2378.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1455/"
 }

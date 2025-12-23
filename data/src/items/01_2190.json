@@ -5,6 +5,50 @@
 		"ja": "RG 1/144 ガンダムアストレイ ゴールドフレーム天ミナ [スペシャルコーティング]",
 		"en": "RG 1/144 Gundam Astray Gold Frame Amina [Special Coating]"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "astrays",
+			"url": "https://bandai-hobby.net/series/astrays/",
+			"ja": "機動戦士ガンダムSEED ASTRAY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000116090",
+			"url": "http://p-bandai.jp/item/item-1000116090/",
+			"ja": "ＲＧ 1/144 ガンダムアストレイ ゴールドフレーム天（アマツ）"
+		},
+		{
+			"id": "01_833",
+			"url": "https://bandai-hobby.net/item/01_833/",
+			"ja": "RG 1/144 ガンダムアストレイ ゴールドフレーム天ミナ"
+		},
+		{
+			"id": "01_1908",
+			"url": "https://bandai-hobby.net/item/01_1908/",
+			"ja": "RG 1/144 ガンダムアストレイ ブルーフレーム メッキVer."
+		},
+		{
+			"id": "01_1903",
+			"url": "https://bandai-hobby.net/item/01_1903/",
+			"ja": "RG 1/144 ガンダムアストレイ レッドフレーム メッキVer."
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 6930,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
@@ -28,28 +71,14 @@
 			"RG Gundam Astray Gold Frame Amina is now available with special event-limited coating!"
 		]
 	},
-	"images": [
-		"/images/items/01_2190/153_3137.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2190/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"astrays"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000116090",
-		"01_833",
-		"01_1908",
-		"01_1903"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3137_s_a5aoj6ieyflf21g7dl69a4hnb988.jpg",
+				"path": "/images/items/01_2190/153_3137.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "0673"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2190/"
 }

@@ -2,9 +2,52 @@
 	"id": "01_1357",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット RX-78-2 ガンダム",
-		"en": "SD Gundam Cross Silhouette RX-78-2 Gundam"
+		"ja": "SDガンダム クロスシルエット RX-78-2 ガンダム",
+		"en": "SDGundam Cross Silhouette RX-78-2 Gundam"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4132",
+			"url": "https://bandai-hobby.net/item/01_4132/",
+			"ja": "SDガンダム クロスシルエット ガンダムベース限定 RX-78-2 ガンダム(クロスシルエットフレームVer.)[ガンダムベースカラー]"
+		},
+		{
+			"id": "01_3495",
+			"url": "https://bandai-hobby.net/item/01_3495/",
+			"ja": "ハローキティ/ザクII[SDガンダムクロスシルエット][クリアカラー]"
+		},
+		{
+			"id": "01_3321",
+			"url": "https://bandai-hobby.net/item/01_3321/",
+			"ja": "SDガンダムクロスシルエット RX-78F00 ガンダム"
+		},
+		{
+			"id": "01_2806",
+			"url": "https://bandai-hobby.net/item/01_2806/",
+			"ja": "SDガンダムクロスシルエット RX-78-2 ガンダム＆シャア専用ザクII"
+		}
+	],
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -20,60 +63,76 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"「SD ガンダム クロスシルエット」より、「RX-78-2 ガンダム」がラインナップ！",
+			"「SDガンダム クロスシルエット」より、「RX-78-2 ガンダム」がラインナップ！",
 			"• SDならではのパーツ分割によりトリコロールカラーが成形色で再現され、ハイディテールかつ組みやすいパーツ構成を実現！",
 			"• 瞳は差替えで有無を再現可能！"
 		],
 		"en": [
-			"\"RX-78-2 Gundam \" is available from \" SD Gundam Cross Silhouette\"!",
-			"• By dividing the parts unique to SD, the tricolor color is reproduced with molded colors, achieving a high-detail and easy-to-assemble parts configuration!",
-			"• The presence or absence of the eyes can be reproduced by replacing them!"
+			"\"RX-78-2 Gundam\" is available from \"SD Gundam Cross Silhouette\"!",
+			"• The tricolor color is reproduced in the molding color by dividing the parts unique to SD, achieving a high-detail and easy-to-assemble parts configuration!",
+			"• The presence or absence of the eyes can be recreated by replacing them!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"シールド×1",
-			"ビーム・サーベル×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2284_s_sbzk6lq66h0su9dtctcmoqav5oyt.jpg",
+				"path": "/images/items/01_1357/153_2284.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2284_s_8d3i3srxy2r3mz1j78zji67nppf6.jpg",
+				"path": "/images/items/01_1357/155_2284.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2284_s_tfsa6gaeq49jduipgv3irz0uwq7j.jpg",
+				"path": "/images/items/01_1357/156_2284.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2284_s_ylfa6x0q6qtipfjp8y2i59xy7n5d.jpg",
+				"path": "/images/items/01_1357/157_2284.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x1",
-			"Seal × 1",
-			"Beam saber x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 4",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1357/153_2284.jpg",
-		"/images/items/01_1357/155_2284.jpg",
-		"/images/items/01_1357/156_2284.jpg",
-		"/images/items/01_1357/157_2284.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1357/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4132",
-		"01_3495",
-		"01_3321",
-		"01_2806"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1357/"
 }

@@ -5,6 +5,43 @@
 		"ja": "LBXパンドラ",
 		"en": "LBX Pandora"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "lbx",
+			"url": "https://bandai-hobby.net/series/lbx/",
+			"ja": "ダンボール戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000215196",
+			"url": "https://p-bandai.jp/item/item-1000215196/",
+			"ja": "ＬＢＸイカロス・フォース"
+		},
+		{
+			"id": "item-1000215197",
+			"url": "https://p-bandai.jp/item/item-1000215197/",
+			"ja": "ＬＢＸイカロス・ゼロ"
+		},
+		{
+			"id": "item-1000210042",
+			"url": "https://p-bandai.jp/item/item-1000210042/",
+			"ja": "ＬＢＸエルシオン"
+		},
+		{
+			"id": "item-1000210041",
+			"url": "https://p-bandai.jp/item/item-1000210041/",
+			"ja": "ＬＢＸペルセウス"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -27,55 +64,79 @@
 		],
 		"en": [
 			"From “Danball Senki” comes a red LBX exclusively for Ami Kawamura!",
-			"• Can be made to take various poses.",
+			"• Possible to take various poses.",
 			"• Basic equipment \"Hope Edge\" is included.",
 			"• A special pedestal is included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ホープ・エッジ×2",
-			"専用ディスプレイベース×1",
-			"手首差し替えジョイント×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ホープ・エッジ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "手首差し替えジョイント"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3378_s_x112abbsquqa5ffsiot77ry0wgh9.jpg",
+				"path": "/images/items/01_2449/153_3378.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3378_s_b2ar6twwkdyqzy3uofiyfs9q3zhp.jpg",
+				"path": "/images/items/01_2449/155_3378.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3378_s_k55gu99xalggjg6bmdanijcf97as.jpg",
+				"path": "/images/items/01_2449/156_3378.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3378_s_7k9hcrxxpcsrfi19yudfyf8xqdk0.jpg",
+				"path": "/images/items/01_2449/157_3378.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3378_s_pj48yaqz0e9lrwqvw8fmh9efb6ug.jpg",
+				"path": "/images/items/01_2449/158_3378.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3378_s_0p9zgfsjmf9fxpxw2r5pdaf3j7id.jpg",
+				"path": "/images/items/01_2449/159_3378.jpg"
+			}
 		],
-		"en": [
-			"Hope Edge x2",
-			"Dedicated display base x 1",
-			"Wrist replacement joint x 2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 4",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2449/153_3378.jpg",
-		"/images/items/01_2449/155_3378.jpg",
-		"/images/items/01_2449/156_3378.jpg",
-		"/images/items/01_2449/157_3378.jpg",
-		"/images/items/01_2449/158_3378.jpg",
-		"/images/items/01_2449/159_3378.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2449/",
-	"brandIds": [],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2449/"
 }

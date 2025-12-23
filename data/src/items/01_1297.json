@@ -2,9 +2,53 @@
 	"id": "01_1297",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 ガンダム FSD",
-		"en": "HG 1/144 Gundam FSD"
+		"ja": "HG 1/144 ガンダムFSD",
+		"en": "HG 1/144 GundamFSD"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "origin",
+			"url": "https://bandai-hobby.net/series/origin/",
+			"ja": "機動戦士ガンダム THE ORIGIN"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3711",
+			"url": "https://bandai-hobby.net/item/01_3711/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)[クリアカラー]"
+		},
+		{
+			"id": "01_2828",
+			"url": "https://bandai-hobby.net/item/01_2828/",
+			"ja": "HG 1/144 ガンダムベース限定 ザクII TYPE C-6/R6 [ペインティングモデル]"
+		},
+		{
+			"id": "01_2707",
+			"url": "https://bandai-hobby.net/item/01_2707/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)"
+		},
+		{
+			"id": "item-1000135687",
+			"url": "https://p-bandai.jp/item/item-1000135687",
+			"ja": "ＨＧ 1/144 MS-05S シャア専用ザクＩ（ＬＩＭＩＴＥＤ ＭＯＤＥＬ）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -18,70 +62,98 @@
 		"day": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 『THE ORIGIN』外伝漫画「ククルス・ドアンの島」に登場する局地型ガンダム（北米戦仕様）の改良型MSが豊富な新規武装でキット化！",
 			"• FSDとは「Full Scale Development」の略語で「先行量産」を意味し、特徴的な腕部ガトリング、特殊な形状の胸部や印象的なシールドは新規で再現されている！"
 		],
 		"en": [
-			"• The improved MS of the local Gundam (North American war spec) that appears in the side story comic \"The Island of Cucurrus Doan \" from \" THE ORIGIN\" has been made into a kit with a wealth of new weapons!",
-			"• FSD is an abbreviation of \"Full Scale Development \" and means \" advance mass production\", and the characteristic arm gatling, special shaped chest and impressive seal have been newly reproduced!"
+			"• An improved MS of the local Gundam (North American war spec) that appears in the side story \"THE ORIGIN\" comic \"The Island of Cucurrus Doan\" has been made into a kit with a wealth of new weapons!",
+			"• FSD is an abbreviation for \"Full Scale Development\" and means \"advance mass production\", and the characteristic arm gatling, special shaped chest and impressive Seal do are all newly reproduced!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"腕部ガトリングガン×1",
-			"シールド×2（※1点は新規造形パーツ）",
-			"ビーム・サーベル×2",
-			"MS用マシンガン×1",
-			"ショルダー・キャノン×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "腕部ガトリングガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "MS用マシンガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ショルダー・キャノン"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 13
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2227_s_q11acw94cao28uwe45b4rv9zqvpo.jpg",
+				"path": "/images/items/01_1297/153_2227.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2227_s_t52klbjbmvryqdoclfzpdpkyxb9s.jpg",
+				"path": "/images/items/01_1297/155_2227.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2227_s_58fizm3gbofim1nkv1m87ihrji9l.jpg",
+				"path": "/images/items/01_1297/156_2227.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2227_s_fl7x2meh5h9x9qegb3n4pjsyynqs.jpg",
+				"path": "/images/items/01_1297/157_2227.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2227_s_bx5xdqp9bxlq1pw4qypth2o7rwap.jpg",
+				"path": "/images/items/01_1297/158_2227.jpg"
+			}
 		],
-		"en": [
-			"Arm gatling gun x 1",
-			"Seal × 2 (*1 piece is a new molded part)",
-			"Beam saber x2",
-			"MS machine gun x 1",
-			"Shoulder cannon x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×13",
-			"ホイルシール×1",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded products x 13",
-			"Foil Seal×1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1297/153_2227.jpg",
-		"/images/items/01_1297/155_2227.jpg",
-		"/images/items/01_1297/156_2227.jpg",
-		"/images/items/01_1297/157_2227.jpg",
-		"/images/items/01_1297/158_2227.jpg",
-		"/images/items/01_1297/01_1297_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1297/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"origin"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3711",
-		"01_2828",
-		"01_2707",
-		"item-1000135687"
-	],
-	"manualId": "0064"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1297/"
 }

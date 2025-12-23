@@ -2,9 +2,55 @@
 	"id": "01_2649",
 	"type": "item",
 	"name": {
-		"ja": "MG 1/100 ガンダムベース限定 RX-78-2 ガンダム Ver.3.0 [ガンダムベースカラー]",
-		"en": "MG 1/100 Gundam Base Limited RX-78-2 Gundam Ver.3.0 [Gundam Base Color]"
+		"ja": "MG 1/100 ガンダムベース限定 RX-78-2 ガンダムVer.3.0 [ガンダムベースカラー]",
+		"en": "MG 1/100 THE GUNDAM BASE LIMITED RX-78-2 GUNDAM Ver.3.0 [THE GUNDAM BASE COLOR]"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]",
+			"en": "MG [MASTER GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -18,59 +64,70 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
 			"マスターグレードVer.3.0のRX-78-2 ガンダムが、爽やかなブルーのガンダムベースカラーで登場。",
-			"■新たな可動解釈を採用した「ムーバブルアーマーシステム」を搭載。装甲パーツ内部と連動した可動性を付加。",
-			"■肩アーマーやバックパックカバーも可動することで、腕部可動の自由度が向上。",
-			"■脛裏アーマーの開閉機構により、足首の可動域も向上。",
-			"■コア・ファイターは変型させることで、ボディ内部に収納可能。",
-			"■内部構造には塗装可能な素材を使用。",
-			"■肩アーマーやシールド等、ガンダムベースオリジナルのスペシャルマーキングシールが付属。"
+			"• 新たな可動解釈を採用した「ムーバブルアーマーシステム」を搭載。装甲パーツ内部と連動した可動性を付加。",
+			"• 肩アーマーやバックパックカバーも可動することで、腕部可動の自由度が向上。",
+			"• 脛裏アーマーの開閉機構により、足首の可動域も向上。",
+			"• コア・ファイターは変型させることで、ボディ内部に収納可能。",
+			"• 内部構造には塗装可能な素材を使用。",
+			"• 肩アーマーやシールド等、ガンダムベースオリジナルのスペシャルマーキングシールが付属。"
 		],
 		"en": [
-			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"Master Grade Ver. 3.0 RX-78-2 Gundam is now available in a refreshing blue Gundam base color.",
-			"■Equipped with a \"movable armor system\" that adopts a new movable interpretation. Added mobility linked to the inside of the armored parts.",
-			"■The shoulder armor and backpack cover are also movable, increasing the freedom of arm movement.",
-			"■The opening and closing mechanism of the shin armor also improves the range of motion of the ankle.",
-			"■The Core Fighter can be stored inside the body by transforming it.",
-			"■The internal structure uses paintable materials.",
-			"■Comes with Gundam base original special marking seals such as shoulder armor and seals."
+			"For GUNPLA fans around the world, this is a limited edition GUNPLA at the official GUNPLA complex \"GUNDAM Base\". The RX-78-2 GUNDAM with Master Grade Ver. 3.0 is now available in a refreshing blue GUNDAM base color.",
+			"• Equipped with a \"movable armor system\" that adopts a new movable interpretation. Mobility linked to the inside of the armor parts is added.",
+			"• Shoulder armor and backpack covers can also be moved, improving the freedom of arm movement.",
+			"• The opening and closing mechanism of the shin back armor also improves the range of motion of the ankle.",
+			"• The core fighter can be transformed and stored inside the body.",
+			"• Paintable material is used for the internal structure.",
+			"• Shoulder armor, shields, etc., GUNDAM Base original special marking stickers are included."
 		]
 	},
-	"images": [
-		"/images/items/01_2649/1000147379_1.jpg",
-		"/images/items/01_2649/1000147379_2.jpg",
-		"/images/items/01_2649/1000147379_3.jpg",
-		"/images/items/01_2649/1000147379_4.jpg",
-		"/images/items/01_2649/1000147379_5.jpg",
-		"/images/items/01_2649/1000147379_6.jpg",
-		"/images/items/01_2649/1000147379_7.jpg",
-		"/images/items/01_2649/1000147379_8.jpg",
-		"/images/items/01_2649/1000147379_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2649/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147379_1.jpg",
+				"path": "/images/items/01_2649/1000147379_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147379_2.jpg",
+				"path": "/images/items/01_2649/1000147379_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147379_3.jpg",
+				"path": "/images/items/01_2649/1000147379_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147379_4.jpg",
+				"path": "/images/items/01_2649/1000147379_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147379_5.jpg",
+				"path": "/images/items/01_2649/1000147379_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147379_6.jpg",
+				"path": "/images/items/01_2649/1000147379_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147379_7.jpg",
+				"path": "/images/items/01_2649/1000147379_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147379_8.jpg",
+				"path": "/images/items/01_2649/1000147379_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147379_9.jpg",
+				"path": "/images/items/01_2649/1000147379_9.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "2553"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2649/",
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2649/"
+	}
 }

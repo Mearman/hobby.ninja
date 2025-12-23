@@ -2,9 +2,37 @@
 	"id": "01_2494",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット ウイングガンダムゼロEW",
-		"en": "SD Gundam Cross Silhouette Wing Gundam Zero EW"
+		"ja": "SDガンダム クロスシルエット ウイングガンダムゼロEW",
+		"en": "SDGundam Cross Silhouette Wing Gundam Zero EW"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3371",
+			"url": "https://bandai-hobby.net/item/01_3371/",
+			"ja": "SDガンダム クロスシルエット ウイングガンダムゼロEW(クロスシルエットフレームVer.)[クリアカラー]"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -29,44 +57,60 @@
 			"• CSフレーム（別売）と連動させることで、さらに細かい表現が可能となっており、好みのプロポーションで楽しむことができる。"
 		],
 		"en": [
-			"\"Wing Gundam Zero EW \" is now available from the SDCS series, which focuses on \" color reproduction, detailed modeling, and movement\"!",
-			"• Highly movable specifications allow you to recreate characteristic poses from the play!",
-			"• You can recreate the twin buster rifle shooting pose with the SD frame.",
-			"• By moving the arm and closing the wings, you can recreate the pose of entering the atmosphere.",
-			"• By rearranging the head, you can choose with or without eyes.",
-			"• A twin buster rifle that can be combined and separated is included. It can be held in both hands when separated.",
+			"\"Wing Gundam Zero EW\" is now available from the SDCS series, which focuses on \"color reproduction, detailed modeling, and movement\"!",
+			"• Highly movable, allowing you to recreate characteristic poses from the movie!",
+			"• Twin buster rifle shooting pose can be recreated with SD frame.",
+			"• By moving the arms and closing the wings, you can recreate the atmosphere entry pose.",
+			"• The head can be rearranged with or without pupils.",
+			"• Comes with a twin buster rifle that can be combined and separated. It can be held in both hands when separated.",
 			"• By linking with the CS frame (sold separately), even more detailed expressions are possible, allowing you to enjoy the proportions of your choice."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ツインバスターライフル×1式",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ツインバスターライフル"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3420_s_pl8mbk5h9hmfg5qmg2gy4dyq44cn.jpg",
+				"path": "/images/items/01_2494/153_3420.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3420_s_1ayyo563bogpy3khzuxuy0ms1icz.jpg",
+				"path": "/images/items/01_2494/155_3420.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3420_s_lwv8tl1friw5hgwu390niryr0319.jpg",
+				"path": "/images/items/01_2494/156_3420.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3420_s_yqbm3w7870f0t7gnageqjh1vbfot.jpg",
+				"path": "/images/items/01_2494/157_3420.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3420_s_3tfkfnnpo3y6dawy86xicyy625xv.jpg",
+				"path": "/images/items/01_2494/158_3420.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3420_s_2t49yvjcq0qy3kkpn66hhljl63x2.jpg",
+				"path": "/images/items/01_2494/159_3420.jpg"
+			}
 		],
-		"en": [
-			"Twin buster rifle x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2494/153_3420.jpg",
-		"/images/items/01_2494/155_3420.jpg",
-		"/images/items/01_2494/156_3420.jpg",
-		"/images/items/01_2494/157_3420.jpg",
-		"/images/items/01_2494/158_3420.jpg",
-		"/images/items/01_2494/159_3420.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2494/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3371"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2494/"
 }

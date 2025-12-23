@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "1/144 Ｇガンダム",
-		"en": "1/144 G Gundam"
+		"en": "1/144 GGundam"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "ggundam",
+			"url": "https://bandai-hobby.net/series/ggundam/",
+			"ja": "機動武闘伝Ｇガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5544",
+			"url": "https://bandai-hobby.net/item/01_5544/",
+			"ja": "RG 1/144 シャイニングガンダム"
+		},
+		{
+			"id": "01_5995",
+			"url": "https://bandai-hobby.net/item/01_5995/",
+			"ja": "RG 1/144 ガンダムベース限定 ゴッドガンダム ハイパーモード"
+		},
+		{
+			"id": "item-1000213247",
+			"url": "https://p-bandai.jp/item/item-1000213247/",
+			"ja": "ＨＧ 1/144 ドラゴンガンダム"
+		},
+		{
+			"id": "item-1000194970",
+			"url": "https://p-bandai.jp/item/item-1000194970/",
+			"ja": "ＨＧ 1/144 ガンダムマックスター"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -17,33 +55,28 @@
 		"month": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動武闘伝G ガンダム』より、1/144スケールで、G ガンダムが登場。",
+			"『機動武闘伝Gガンダム』より、1/144スケールで、Gガンダムが登場。",
 			"ネオ・ホンコン決勝大会に向けた、ネオ・ジャパン究極のモビルファイターを1/144スケールでキット化しました。爆裂ゴッドフィンガー時の各カバースライド機構はパーツ差替えにより再現可能です。手首は専用の差替え平手が付いています。腰部アーマーはフロントとサイドが可動します。ヒザは二重関節でポージングの幅を広げます。背面フィールド発生装置の展開機構が再現可能です。コアランダーの変形・合体が可能です。"
 		],
 		"en": [
-			"From \"Mobile Fighter G Gundam\", G Gundam appears in 1/144 scale.",
+			"From \"Mobile Fighter GGundam\", GGundam appears in 1/144 scale.",
 			"A 1/144 scale kit of Neo Japan's ultimate mobile fighter for the Neo Hong Kong final tournament. Each cover slide mechanism during Explosive God Finger can be reproduced by replacing parts. The wrist comes with a special replacement palm. The front and sides of the waist armor are movable. The knees are double jointed to expand the range of poses. The deployment mechanism of the rear field generator can be reproduced. Corelander can be transformed and combined."
 		]
 	},
-	"images": [
-		"/images/items/01_1539/153_2455.jpg",
-		"/images/items/01_1539/155_2455.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1539/",
-	"brandIds": [],
-	"seriesIds": [
-		"ggundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5544",
-		"01_5995",
-		"item-1000213247",
-		"item-1000194970"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2455_s_lffsdppzedv3jsqk8orhlwhou87j.jpg",
+				"path": "/images/items/01_1539/153_2455.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2455_s_koqd6898syeztk55v2akeo7ler7s.jpg",
+				"path": "/images/items/01_1539/155_2455.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1539/"
 }

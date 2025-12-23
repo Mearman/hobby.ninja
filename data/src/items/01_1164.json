@@ -5,6 +5,44 @@
 		"ja": "HGUC 1/144 ブルーディスティニー２号機“EXAM”",
 		"en": "HGUC 1/144 Blue Destiny Unit 2 “EXAM”"
 	},
+	"brands": [
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216112",
+			"url": "https://p-bandai.jp/item/item-1000216112/",
+			"ja": "HG 1/144 デルタザイン"
+		},
+		{
+			"id": "item-1000219227",
+			"url": "https://p-bandai.jp/item/item-1000219227/",
+			"ja": "ＨＧ 1/144 Ｄガンダムファースト"
+		},
+		{
+			"id": "item-1000214919",
+			"url": "https://p-bandai.jp/item/item-1000214919/",
+			"ja": "ＨＧ 1/144 ハイザック・カスタム (A.O.Z RE-BOOT版)"
+		},
+		{
+			"id": "item-1000209096",
+			"url": "https://p-bandai.jp/item/item-1000209096/",
+			"ja": "ＨＧ 1/144 ガンダムTR-6[バーザムII]レジオン鹵獲仕様(A.O.Z RE-BOOT版)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 「ブルーディスティニー2号機」がHG最新フォーマットで登場！",
@@ -29,62 +66,96 @@
 		"en": [
 			"• \"Blue Destiny Unit 2\" is now available in the latest HG format!",
 			"• In addition to the Gundam type head, the space backpack, beam rifle, and Seal have been newly sculpted, and the space backpack can be attached to the same type of backpack as Blue Destiny Unit 1, as set!",
-			"• Two types of shoulder armor are included: red and blue, and you can choose to recreate the Nimbus aircraft with red shoulders or the Federation military aircraft “before it was stolen” with blue shoulders!",
-			"• Twin cameras are selectable and can reproduce the normal state and the EXAM system activation state!"
+			"• Two types of shoulder armor are included, red and blue, and you can choose to recreate the Nimbus aircraft with the red shoulders or the Federation military aircraft “before it was stolen” with the blue shoulders!",
+			"• The twin cameras are selectable and can reproduce the normal state and the EXAM system activation state!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"シールド×1",
-			"ビーム・サーベルｘ2",
-			"ビーム・ライフル×1",
-			"宇宙用バックパック×1",
-			"ニムバス機用肩一式",
-			"100ｍｍマシンガン×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビーム・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "宇宙用バックパック"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ニムバス機用肩一式"
+			}
+		},
+		{
+			"name": {
+				"ja": "100ｍｍマシンガン"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 9
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2094_s_5nbnov64n60moxg17bzvxvq74p0l.jpg",
+				"path": "/images/items/01_1164/153_2094.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2094_s_a1q1hajlbifx9bt97aayg86okg1o.jpg",
+				"path": "/images/items/01_1164/155_2094.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2094_s_k5tl2u01l0g4u48jhcndy3dl961m.jpg",
+				"path": "/images/items/01_1164/156_2094.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2094_s_jfw20pdiu0dyv410q5xazho0zqsu.jpg",
+				"path": "/images/items/01_1164/157_2094.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2094_s_96zizgtvq87c4mjfn4fvzp2ai316.jpg",
+				"path": "/images/items/01_1164/158_2094.jpg"
+			}
 		],
-		"en": [
-			"Seal × 1",
-			"Beam saber x2",
-			"Beam rifle x1",
-			"Space backpack x 1",
-			"Shoulder set for Nimbus machine",
-			"100mm machine gun x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×9",
-			"シール×1",
-			"マーキングシール×１",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 9",
-			"Seal×1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1164/153_2094.jpg",
-		"/images/items/01_1164/155_2094.jpg",
-		"/images/items/01_1164/156_2094.jpg",
-		"/images/items/01_1164/157_2094.jpg",
-		"/images/items/01_1164/158_2094.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1164/",
-	"brandIds": [
-		"hguc"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216112",
-		"item-1000219227",
-		"item-1000214919",
-		"item-1000209096"
-	],
-	"manualId": "0475"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1164/"
 }

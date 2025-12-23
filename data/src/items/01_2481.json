@@ -5,6 +5,43 @@
 		"ja": "SDBD:R ヴァルキランダー",
 		"en": "SDBD:R Valkylander"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3503",
+			"url": "https://bandai-hobby.net/item/01_3503/",
+			"ja": "ガンダムデカールNo.124 ガンダムビルドダイバーズシリーズ汎用1"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		}
+	],
 	"price": {
 		"amount": 1430,
 		"currency": "JPY",
@@ -26,42 +63,58 @@
 		],
 		"en": [
 			"From \"Gundam Build Divers Re:RISE\" comes the dragon type Gunpla!",
-			"• Poses can be created by opening and closing the mouth and moving various joints. There are also hidden gimmicks...",
-			"• You can also display it in a flying pose using an action base (sold separately)."
+			"• Can be posed by opening and closing the mouth and moving various joints. There are also hidden gimmicks...",
+			"• Can also be displayed in a flying pose using an action base (sold separately)."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/191_3409_s_ppjdqfhms0bl7expjicdoki8cmza.jpg",
+				"path": "/images/items/01_2481/191_3409.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_3409_s_4yq16kjb71h7i0c98vpzqzq7a90s.jpg",
+				"path": "/images/items/01_2481/153_3409.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3409_s_5813jbuiemjhgf30qsldnxu2qfan.jpg",
+				"path": "/images/items/01_2481/155_3409.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3409_s_keau8qymm4t0rpm2cjr5dh8yfce6.jpg",
+				"path": "/images/items/01_2481/156_3409.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3409_s_n2b692g9jk4m7p80vyrgr6beikio.jpg",
+				"path": "/images/items/01_2481/157_3409.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3409_s_r5nwqxu1gyxtirvtzbxth4x0f54l.jpg",
+				"path": "/images/items/01_2481/158_3409.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3409_s_bke2q6ton8pf1deqnovmmq7hs3ns.jpg",
+				"path": "/images/items/01_2481/159_3409.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3409_s_180qdqvsqb2ang59i0k6e5a3yc4q.jpg",
+				"path": "/images/items/01_2481/189_3409.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3409_s_ntdzgtw9oc4n3ux1c6ohw1otzybo.jpg",
+				"path": "/images/items/01_2481/190_3409.jpg"
+			}
 		],
-		"en": [
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2481/153_3409.jpg",
-		"/images/items/01_2481/155_3409.jpg",
-		"/images/items/01_2481/156_3409.jpg",
-		"/images/items/01_2481/157_3409.jpg",
-		"/images/items/01_2481/158_3409.jpg",
-		"/images/items/01_2481/159_3409.jpg",
-		"/images/items/01_2481/189_3409.jpg",
-		"/images/items/01_2481/190_3409.jpg",
-		"/images/items/01_2481/191_3409.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2481/",
-	"brandIds": [],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3503",
-		"01_3562",
-		"01_3565"
-	],
-	"manualId": "0071"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2481/"
 }

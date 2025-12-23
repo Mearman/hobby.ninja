@@ -5,6 +5,43 @@
 		"ja": "Figure-riseBust 初音ミク",
 		"en": "Figure-riseBust Hatsune Miku"
 	},
+	"brands": [
+		{
+			"id": "figurerise-bust",
+			"url": "https://bandai-hobby.net/brand/figurerise-bust/",
+			"ja": "Figure-riseBust[フィギュアライズバスト]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000133317",
+			"url": "https://p-bandai.jp/item/item-1000133317",
+			"ja": "Figure-riseBust 桜ミク"
+		},
+		{
+			"id": "item-1000127507",
+			"url": "http://p-bandai.jp/item/item-1000127507",
+			"ja": "Figure-riseBust 初音ミク［リミテッドスタイル］"
+		},
+		{
+			"id": "item-1000123647",
+			"url": "http://p-bandai.jp/item/item-1000123647/",
+			"ja": "Figure-riseBust 初音ミク［リミテッドカラー］"
+		},
+		{
+			"id": "01_1010",
+			"url": "https://bandai-hobby.net/item/01_1010/",
+			"ja": "Figure-riseBust ホシノ・フミナ エンディングVer."
+		}
+	],
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -44,47 +81,66 @@
 			"Glossy and matte molded parts are used for each part to perfectly reproduce the texture of the hair and costume!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2027_o_1bmtqlg2b15rb1vt81vjo3apvqv23.jpg",
+				"path": "/images/items/01_1096/153_2027.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2027_o_1bmtqlte0gdkqr7u8m1vu0mfi2d.jpg",
+				"path": "/images/items/01_1096/155_2027.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2027_o_1bmtqm1dussp1346c0r8ggo612i.jpg",
+				"path": "/images/items/01_1096/156_2027.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2027_o_1bmtqm5f5voa15o535v1ga31mhp2n.jpg",
+				"path": "/images/items/01_1096/157_2027.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2027_o_1bmtqm9ig1f76dutcjqc151neo2s.jpg",
+				"path": "/images/items/01_1096/158_2027.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2027_o_1bmtqmdqd4f9hak1r551old118h31.jpg",
+				"path": "/images/items/01_1096/159_2027.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2027_o_1bmtqmj8v19du1rm81tbg19v82f636.jpg",
+				"path": "/images/items/01_1096/189_2027.jpg"
+			}
 		],
-		"en": [
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×6",
-			"シール×2",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 6",
-			"Seal×2",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1096/153_2027.jpg",
-		"/images/items/01_1096/155_2027.jpg",
-		"/images/items/01_1096/156_2027.jpg",
-		"/images/items/01_1096/157_2027.jpg",
-		"/images/items/01_1096/158_2027.jpg",
-		"/images/items/01_1096/159_2027.jpg",
-		"/images/items/01_1096/189_2027.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1096/",
-	"brandIds": [
-		"figurerise-bust"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000133317",
-		"item-1000127507",
-		"item-1000123647",
-		"01_1010"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1096/"
 }

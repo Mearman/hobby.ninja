@@ -5,6 +5,43 @@
 		"ja": "LBXハカイオー",
 		"en": "LBX Hakaio"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "lbx",
+			"url": "https://bandai-hobby.net/series/lbx/",
+			"ja": "ダンボール戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000215196",
+			"url": "https://p-bandai.jp/item/item-1000215196/",
+			"ja": "ＬＢＸイカロス・フォース"
+		},
+		{
+			"id": "item-1000215197",
+			"url": "https://p-bandai.jp/item/item-1000215197/",
+			"ja": "ＬＢＸイカロス・ゼロ"
+		},
+		{
+			"id": "item-1000210042",
+			"url": "https://p-bandai.jp/item/item-1000210042/",
+			"ja": "ＬＢＸエルシオン"
+		},
+		{
+			"id": "item-1000210041",
+			"url": "https://p-bandai.jp/item/item-1000210041/",
+			"ja": "ＬＢＸペルセウス"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -29,51 +66,73 @@
 			"Introducing the heavy-duty LBX that has been active since the beginning of the anime!",
 			"• Let's recreate the powerful battle scene with large weapons even more coolly!",
 			"• Large brawler frame LBX!",
-			"• \"Rock-breaking blade\" is included."
+			"• \"Rock Breaking Blade\" is included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"破岩刃×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "破岩刃"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成型品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3164_s_646wbtmr5co08y8ydqveufs5bmto.jpg",
+				"path": "/images/items/01_2220/153_3164.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3164_s_4lhzqh5osg8lip476oqy61g0g9lm.jpg",
+				"path": "/images/items/01_2220/155_3164.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3164_s_d9dswoz6u2zbsif57ln9dr0l7g18.jpg",
+				"path": "/images/items/01_2220/156_3164.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3164_s_v2r5v88gln2d9px025ltzu1j9sn2.jpg",
+				"path": "/images/items/01_2220/157_3164.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3164_s_gny4rm09xouylgdig5hdc99cyvwl.jpg",
+				"path": "/images/items/01_2220/158_3164.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3164_s_q8qlvtzju3l4dtul02lu7dicd4aq.jpg",
+				"path": "/images/items/01_2220/159_3164.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3164_s_wdpc9vxg4lcnirjfvlrzncxpgw2i.jpg",
+				"path": "/images/items/01_2220/189_3164.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3164_s_h9b5tpgfezobuscvod384w1f8pbk.jpg",
+				"path": "/images/items/01_2220/190_3164.jpg"
+			}
 		],
-		"en": [
-			"Rock breaking blade x1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成型品×4",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 4",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2220/153_3164.jpg",
-		"/images/items/01_2220/155_3164.jpg",
-		"/images/items/01_2220/156_3164.jpg",
-		"/images/items/01_2220/157_3164.jpg",
-		"/images/items/01_2220/158_3164.jpg",
-		"/images/items/01_2220/159_3164.jpg",
-		"/images/items/01_2220/189_3164.jpg",
-		"/images/items/01_2220/190_3164.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2220/",
-	"brandIds": [],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2220/"
 }

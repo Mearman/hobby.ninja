@@ -5,6 +5,55 @@
 		"ja": "RE/100 1/100 ガンブラスター",
 		"en": "RE/100 1/100 Gun Blaster"
 	},
+	"brands": [
+		{
+			"id": "re100",
+			"url": "https://bandai-hobby.net/brand/re100/",
+			"ja": "RE/100[リボーンワンハンドレッド]"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "v-gundam",
+			"url": "https://bandai-hobby.net/series/v-gundam/",
+			"ja": "機動戦士Vガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000142101",
+			"url": "https://p-bandai.jp/item/item-1000142101/",
+			"ja": "ＲＥ/100 1/100 シャッコー"
+		},
+		{
+			"id": "item-1000139842",
+			"url": "https://p-bandai.jp/item/item-1000139842/",
+			"ja": "ＲＥ/100 1/100 ガンイージ・プロトタイプ（ロールアウトカラー）"
+		},
+		{
+			"id": "item-1000137105",
+			"url": "https://p-bandai.jp/item/item-1000137105",
+			"ja": "ＨＧ 1/144 セカンドＶ"
+		},
+		{
+			"id": "01_2029",
+			"url": "https://bandai-hobby.net/item/01_2029/",
+			"ja": "RE/100 1/100 ガンイージ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -17,30 +66,14 @@
 		"month": 3
 	},
 	"targetAge": 15,
-	"scale": "1/100",
-	"images": [
-		"/images/items/01_2158/153_3108.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2158/",
-	"brandIds": [
-		"re100",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"v-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000142101",
-		"item-1000139842",
-		"item-1000137105",
-		"01_2029"
-	],
-	"manualId": "2531",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3108_o_1cvi12b8615sufj7163a6m5foe23.jpg",
+				"path": "/images/items/01_2158/153_3108.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2158/"
 }

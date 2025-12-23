@@ -2,9 +2,46 @@
 	"id": "01_2676",
 	"type": "item",
 	"name": {
-		"ja": "ＢＢ戦士 81アーマーナイトガンダム F90",
-		"en": "BB Senshi 81 Armor Knight Gundam F90"
+		"ja": "ＢＢ戦士 81アーマーナイトガンダムF90",
+		"en": "BB Senshi 81 Armor Knight GundamF90"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,21 +55,14 @@
 		"day": 25
 	},
 	"targetAge": 8,
-	"images": [
-		"/images/items/01_2676/153_35.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2676/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_35_s_a0rn40z24mt4ssf7wnsou3kur2aw.jpg",
+				"path": "/images/items/01_2676/153_35.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2676/"
 }

@@ -5,6 +5,49 @@
 		"ja": "メカコレクション　仮面ライダーシリーズ バトルホッパー",
 		"en": "Mecha Collection Kamen Rider Series Battle Hopper"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "rider",
+			"url": "https://bandai-hobby.net/series/rider/",
+			"ja": "仮面ライダーシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1355",
+			"url": "https://bandai-hobby.net/item/01_1355/",
+			"ja": "メカコレクション 仮面ライダーシリーズ アクロバッター"
+		},
+		{
+			"id": "01_1293",
+			"url": "https://bandai-hobby.net/item/01_1293/",
+			"ja": "メカコレクション 仮面ライダーシリーズ 新サイクロン号&仮面ライダー新2号"
+		},
+		{
+			"id": "01_1169",
+			"url": "https://bandai-hobby.net/item/01_1169/",
+			"ja": "メカコレクション 仮面ライダーシリーズ バトルホッパー&シャドームーン"
+		},
+		{
+			"id": "01_1089",
+			"url": "https://bandai-hobby.net/item/01_1089/",
+			"ja": "メカコレクション　仮面ライダーシリーズ ハリケーン"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -29,52 +72,54 @@
 		],
 		"en": [
 			"Mecha Collection Kamen Rider Series 3rd Battle Hopper is here!",
-			"• Kamen Rider series Battle Hopper is now available from the palm-sized and precisely detailed mechanical collection!",
-			"• Faithfully reproduces the hurricane with precision details unique to mechanical collection!",
-			"• Reproduce the markings of the machine with water transfer decals!",
+			"• Kamen Rider Series Battle Hopper is now available from the palm-sized and precisely detailed mechanical collection!",
+			"• Faithfully reproduces the hurricane with precise details unique to mechanical collection!",
+			"• Reproduce machine markings with water transfer decals!",
 			"• Kamen Rider BLACK astride the Battle Hopper is also included in single color molding! The rider belt and mask are also faithfully reproduced.",
 			"• Easily transform the package into a display pedestal by flipping it over!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"仮面ライダーBLACK×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "仮面ライダーBLACK×１"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書（箱裏側に記載）"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2037_s_8voqaubg03vqpulpowruev97pr1h.jpg",
+				"path": "/images/items/01_1106/153_2037.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2037_s_h0ukyct1ldi3zxz6ih5853yj92mw.jpg",
+				"path": "/images/items/01_1106/155_2037.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2037_s_msutr016myccskpf7jkwry8b0u2q.jpg",
+				"path": "/images/items/01_1106/156_2037.jpg"
+			}
 		],
-		"en": [
-			"Kamen Rider BLACK×1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"水転写式デカール×１",
-			"取扱説明書（箱裏側に記載）"
-		],
-		"en": [
-			"Molded product x 4",
-			"Water transfer decal x 1",
-			"Instruction manual (written on the back of the box)"
-		]
-	},
-	"images": [
-		"/images/items/01_1106/153_2037.jpg",
-		"/images/items/01_1106/155_2037.jpg",
-		"/images/items/01_1106/156_2037.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1106/",
-	"brandIds": [
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"rider"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1355",
-		"01_1293",
-		"01_1169",
-		"01_1089"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1106/"
 }

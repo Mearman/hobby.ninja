@@ -5,6 +5,50 @@
 		"ja": "HGBC 1/144 スカイハイウイングス",
 		"en": "HGBC 1/144 Sky High Wings"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 31
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"白に輝く大小2種類の翼パーツがビルドカスタムシリーズに登場！",
@@ -26,51 +69,59 @@
 		],
 		"en": [
 			"Two types of shining white wing parts, large and small, are now available in the Build Custom Series!",
-			"• Various joint parts are included to connect to the backpack!"
+			"• Comes with various joint parts to connect to your backpack!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ウイング（大小）×各1",
-			"バックパックジョイント×1式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ウイング（大小）×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "バックパックジョイント"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2336_o_1ckhvh4f81rt915bb1hcncm71eof23.jpg",
+				"path": "/images/items/01_1413/153_2336.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2336_o_1ckhvheg21iok6d113fg13sq1gba2d.jpg",
+				"path": "/images/items/01_1413/155_2336.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2336_o_1ckhvhjiigge17sr1etfh0m1le22i.jpg",
+				"path": "/images/items/01_1413/156_2336.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2336_o_1cm5dh6gg11j47mp1qvj1q8f1snh23.jpg",
+				"path": "/images/items/01_1413/157_2336.jpg"
+			}
 		],
-		"en": [
-			"Wings (large and small) x 1 each",
-			"Backpack joint x 1 set"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 4",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1413/153_2336.jpg",
-		"/images/items/01_1413/155_2336.jpg",
-		"/images/items/01_1413/156_2336.jpg",
-		"/images/items/01_1413/157_2336.jpg",
-		"/images/items/01_1413/01_1413_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1413/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "0699"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1413/"
 }

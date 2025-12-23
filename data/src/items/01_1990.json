@@ -5,6 +5,43 @@
 		"ja": "ハロプラ ボールハロ",
 		"en": "Haropura Ball Haro"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5189",
+			"url": "https://bandai-hobby.net/item/01_5189/",
+			"ja": "オプションパーツセット ガンプラ 04 (ビルドハンズ 丸型)"
+		},
+		{
+			"id": "01_5190",
+			"url": "https://bandai-hobby.net/item/01_5190/",
+			"ja": "オプションパーツセット ガンプラ 03 (ビルドハンズ 角型)"
+		},
+		{
+			"id": "01_3063",
+			"url": "https://bandai-hobby.net/item/01_3063/",
+			"ja": "ハロプラ ガンダムベース限定 モビルハロ[ガンダムベースカラー]"
+		},
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -27,51 +64,69 @@
 		],
 		"en": [
 			"Direct hit of the first generation! ? An unexpected ball arrangement is now available at Haropla!",
-			"• Mechanically expresses internal details.",
+			"• Mechanical representation of internal details.",
 			"• The cannon and manipulator mounted on the ball are also shaped to match the size of the halo.",
-			"• Can also be connected with other Haropla."
+			"• Can also be connected to other Haropla."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 5
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2919_s_1nd3wvtb5uvvqssotvkl1s43d4wy.jpg",
+				"path": "/images/items/01_1990/153_2919.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2919_s_yj3gaqy8hirryfaxwq11e36tuitx.jpg",
+				"path": "/images/items/01_1990/155_2919.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2919_s_12o2yhfeiv27ucxlvjy1uevhu0ra.jpg",
+				"path": "/images/items/01_1990/156_2919.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2919_s_uzt8z3ml3jwd14lnic0nj1rmafx9.jpg",
+				"path": "/images/items/01_1990/157_2919.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2919_s_ah1mxt9oio3frm9laqipiix6drvq.jpg",
+				"path": "/images/items/01_1990/158_2919.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2919_s_tvg5g3zjg1f79r4nqea7r6imgvr4.jpg",
+				"path": "/images/items/01_1990/159_2919.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2919_s_78s4mime5j9com9mp5gj6iq69e7l.jpg",
+				"path": "/images/items/01_1990/189_2919.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2919_s_daefjhynsbdo0usf0afuyqnohc8d.jpg",
+				"path": "/images/items/01_1990/190_2919.jpg"
+			}
 		],
-		"en": [
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×5",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 5",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1990/153_2919.jpg",
-		"/images/items/01_1990/155_2919.jpg",
-		"/images/items/01_1990/156_2919.jpg",
-		"/images/items/01_1990/157_2919.jpg",
-		"/images/items/01_1990/158_2919.jpg",
-		"/images/items/01_1990/159_2919.jpg",
-		"/images/items/01_1990/189_2919.jpg",
-		"/images/items/01_1990/190_2919.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1990/",
-	"brandIds": [],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5189",
-		"01_5190",
-		"01_3063",
-		"01_2623"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1990/"
 }

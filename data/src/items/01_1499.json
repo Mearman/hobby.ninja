@@ -2,9 +2,47 @@
 	"id": "01_1499",
 	"type": "item",
 	"name": {
-		"ja": "1/144 V ガンダム",
-		"en": "1/144 V Gundam"
+		"ja": "1/144 Vガンダム",
+		"en": "1/144 VGundam"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "v-gundam",
+			"url": "https://bandai-hobby.net/series/v-gundam/",
+			"ja": "機動戦士Vガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4978",
+			"url": "https://bandai-hobby.net/item/01_4978/",
+			"ja": "HG 1/144 V2アサルトバスターガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_3311",
+			"url": "https://bandai-hobby.net/item/01_3311/",
+			"ja": "HG 1/144 ガンダムベース限定 セカンドV[クリアカラー]"
+		},
+		{
+			"id": "01_2835",
+			"url": "https://bandai-hobby.net/item/01_2835/",
+			"ja": "MG 1/100 ガンダムベース限定 V2アサルトバスターガンダムVer.Ka [チタニウムフィニッシュ]"
+		},
+		{
+			"id": "item-1000142101",
+			"url": "https://p-bandai.jp/item/item-1000142101/",
+			"ja": "ＲＥ/100 1/100 シャッコー"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -17,31 +55,26 @@
 		"month": 5
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"ＴＶ「機動戦士Ｖガンダム」リガ・ミリティアがザンスカール帝国に反旗を翻すため、RX-78 ガンダムをモデルに開発した機体を1/144スケールでキット化しました。コア・ファイターは別ユニットでついています。ビーム・シールドはクリアパーツ製で、ひじの可動式マウントラッチへの脱着が可能です。ディスプレイ用スタンドとパネルがついています。ビーム・ライフル、ビーム・サーベル2種がついています。"
+			"ＴＶ「機動戦士Ｖガンダム」リガ・ミリティアがザンスカール帝国に反旗を翻すため、RX-78ガンダムをモデルに開発した機体を1/144スケールでキット化しました。コア・ファイターは別ユニットでついています。ビーム・シールドはクリアパーツ製で、ひじの可動式マウントラッチへの脱着が可能です。ディスプレイ用スタンドとパネルがついています。ビーム・ライフル、ビーム・サーベル2種がついています。"
 		],
 		"en": [
 			"TV \"Mobile Suit V Gundam\" Riga Militia has developed an aircraft based on the RX-78 Gundam as a 1/144 scale kit in order to rebel against the Zanskar Empire. The core fighter is a separate unit. The beam and seal are made of clear parts and can be attached to and detached from the movable elbow mount latch. Comes with display stand and panel. Comes with a beam rifle and two types of beam sabers."
 		]
 	},
-	"images": [
-		"/images/items/01_1499/153_2419.jpg",
-		"/images/items/01_1499/155_2419.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1499/",
-	"brandIds": [],
-	"seriesIds": [
-		"v-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4978",
-		"01_3311",
-		"01_2835",
-		"item-1000142101"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2419_s_519k7eumrfyvkqhvm4i8cohupu38.jpg",
+				"path": "/images/items/01_1499/153_2419.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2419_s_p5cem0zh3n5brmuqx0frmtq8jvbc.jpg",
+				"path": "/images/items/01_1499/155_2419.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1499/"
 }

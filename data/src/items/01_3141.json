@@ -5,6 +5,44 @@
 		"ja": "1/144 量産型ゲルググ",
 		"en": "1/144 mass-produced Gelgoog"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 5
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、1/144スケールで、量産型ゲルググが登場。",
@@ -28,22 +65,18 @@
 			"The arms below the elbows can be twisted, and the waist can also be moved. The wrist can be replaced with a beam sword handle and a beam rifle that are integrally molded. The hip joint moves from side to side. It has a corner of the company commander's mark."
 		]
 	},
-	"images": [
-		"/images/items/01_3141/153_4104.jpg",
-		"/images/items/01_3141/155_4104.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3141/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4104_s_fsyi7d1c74oho015695v4036l9l1.jpg",
+				"path": "/images/items/01_3141/153_4104.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4104_s_13nybiz6f88r99z97etk3d6vjier.jpg",
+				"path": "/images/items/01_3141/155_4104.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3141/"
 }

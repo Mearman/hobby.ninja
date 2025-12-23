@@ -2,9 +2,37 @@
 	"id": "01_1544",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム Gジェネレーション63 クロスボーンX2",
-		"en": "SD Gundam G Generation 63 Crossbone X2"
+		"ja": "SDガンダムGジェネレーション63 クロスボーンX2",
+		"en": "SDGundamG Generation 63 Crossbone X2"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "crossbone",
+			"url": "https://bandai-hobby.net/series/crossbone/",
+			"ja": "機動戦士クロスボーン・ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1045",
+			"url": "https://bandai-hobby.net/item/01_1045/",
+			"ja": "SDガンダムGジェネレーション59 クロスボーンガンダムX1"
+		}
+	],
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -19,27 +47,24 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"ゲーム「Gジェネレーション」に登場するユニット「クロスボーンガンダム X2」がプラモデルで登場。背中のスラスター可動を再現の他、ショットランサー、バスターガンを装備。同シリーズの「クロスボーンガンダム X1」と合わせて遊んでください。"
+			"ゲーム「Gジェネレーション」に登場するユニット「クロスボーンガンダムX2」がプラモデルで登場。背中のスラスター可動を再現の他、ショットランサー、バスターガンを装備。同シリーズの「クロスボーンガンダムX1」と合わせて遊んでください。"
 		],
 		"en": [
-			"The unit \"Crossbone Gundam X2 \" that appears in the game \" G Generation \" is now available as a plastic model. In addition to reproducing the movable thruster on the back, it is equipped with a shot lancer and a buster gun. Please play with \" Crossbone Gundam X1\" from the same series."
+			"The unit \"Crossbone GundamX2\" that appears in the game \"G Generation\" is now available as a plastic model. In addition to reproducing the movable thruster on the back, it is equipped with a shot lancer and a buster gun. Please play with \"Crossbone GundamX1\" from the same series."
 		]
 	},
-	"images": [
-		"/images/items/01_1544/153_245.jpg",
-		"/images/items/01_1544/155_245.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1544/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"crossbone"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1045"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_245_s_wpo1197oapt0brng70scdla2l866.jpg",
+				"path": "/images/items/01_1544/153_245.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_245_s_c4drs1f66npufajymhsf0neow2yo.jpg",
+				"path": "/images/items/01_1544/155_245.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1544/"
 }

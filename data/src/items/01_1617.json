@@ -3,8 +3,57 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC 1/144 キュベレイ",
-		"en": "HGUC 1/144 Qubeley"
+		"en": "1/144 HGUC QUBELEY"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -17,7 +66,6 @@
 		"month": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士Ｚガンダム』に登場。芸術性さえ感じさせる美しい装甲色とフォルムを持つ機体で圧倒的な存在感を見せつけたキュベレイの立体化です。首関節の可動性と指を大きく開いた状態の手首の差し替えにより、飛行ポーズが再現可能です。コクピットハッチは開閉可能、ショルダーバインダー及びファンネルコンテナの展開も可能です。ビーム・サーベルは基部がビームガンとしても使用可能になっています。ファンネルが１０枚付いています（脱着可能）。"
@@ -26,28 +74,26 @@
 			"Appears in \"Mobile Suit Z Gundam\". A three-dimensional version of the Qubeley, which has an overwhelming presence with its beautiful armor color and form that give it an artistic feel. Flight poses can be recreated by moving the neck joints and replacing the wrists with the fingers wide open. The cockpit hatch can be opened and closed, and the shoulder binder and funnel container can also be deployed. The base of the beam saber can also be used as a beam gun. Comes with 10 funnels (removable)."
 		]
 	},
-	"images": [
-		"/images/items/01_1617/153_2529.jpg",
-		"/images/items/01_1617/155_2529.jpg",
-		"/images/items/01_1617/156_2529.jpg",
-		"/images/items/01_1617/157_2529.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1617/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
-	"manualId": "0462"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2529_s_1eg8dfk75w5viwz5fqxdz4fvxfrc.jpg",
+				"path": "/images/items/01_1617/153_2529.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2529_s_o6974nmr3m6qq3h5k49jw18mgbkz.jpg",
+				"path": "/images/items/01_1617/155_2529.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2529_s_d04td4n6t4hdh6wott77zxg1bz0w.jpg",
+				"path": "/images/items/01_1617/156_2529.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2529_s_0augsntsy1uoa20y4ho5effmbmb0.jpg",
+				"path": "/images/items/01_1617/157_2529.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1617/"
 }

@@ -2,9 +2,48 @@
 	"id": "01_1941",
 	"type": "item",
 	"name": {
-		"ja": "MG 1/100 ガンダムベース限定 クロスボーンガンダム X-1 フルクロス [エクストラフィニッシュ]",
-		"en": "MG 1/100 Gundam Base Limited Crossbone Gundam X-1 Full Cross [Extra Finish]"
+		"ja": "MG 1/100 ガンダムベース限定 クロスボーンガンダムX-1 フルクロス [エクストラフィニッシュ]",
+		"en": "MG 1/100 Gundam Base Limited Crossbone GundamX-1 Full Cross [Extra Finish]"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "crossbone",
+			"url": "https://bandai-hobby.net/series/crossbone/",
+			"ja": "機動戦士クロスボーン・ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000136952",
+			"url": "https://p-bandai.jp/item/item-1000136952",
+			"ja": "ＭＧ 1/100 ガンダムＦ９１ Ｖｅｒ．２．０（ハリソン・マディン専用機）"
+		},
+		{
+			"id": "01_5649",
+			"url": "https://bandai-hobby.net/item/01_5649/",
+			"ja": "MG 1/100 クロスボーンガンダムX-1フルクロス"
+		},
+		{
+			"id": "01_5629",
+			"url": "https://bandai-hobby.net/item/01_5629/",
+			"ja": "MG ガンダムＦ９１（ハリソン・マディン専用機）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 8250,
 		"currency": "JPY",
@@ -17,42 +56,44 @@
 		"month": 4
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"マント状の装甲を纏った、マスターグレード クロスボーンガンダム X-1フルクロスがエクストラフィニッシュで登場。"
+			"マント状の装甲を纏った、マスターグレード クロスボーンガンダムX-1フルクロスがエクストラフィニッシュで登場。"
 		],
 		"en": [
 			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
 			"The Master Grade Crossbone Gundam"
 		]
 	},
-	"images": [
-		"/images/items/01_1941/153_2874.jpg",
-		"/images/items/01_1941/155_2874.jpg",
-		"/images/items/01_1941/156_2874.jpg",
-		"/images/items/01_1941/157_2874.jpg",
-		"/images/items/01_1941/158_2874.jpg",
-		"/images/items/01_1941/159_2874.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1941/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"crossbone"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000136952",
-		"01_5649",
-		"01_5629"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2874_s_lj22u1vj7pu1g7n5rj0ftbx3zd7y.jpg",
+				"path": "/images/items/01_1941/153_2874.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2874_s_xffgbkrv091eeqwdiek03tasdbfz.jpg",
+				"path": "/images/items/01_1941/155_2874.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2874_s_rfpa4uqsw0iidiz4nrq5q31b87qz.jpg",
+				"path": "/images/items/01_1941/156_2874.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2874_s_mnq16vg795o5wlmu75oyzf2mz78n.jpg",
+				"path": "/images/items/01_1941/157_2874.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2874_s_srq74sz6mo5ufnqav41ewg4ysvwc.jpg",
+				"path": "/images/items/01_1941/158_2874.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2874_s_rjss4el23eybex5p3buldd0pkpaa.jpg",
+				"path": "/images/items/01_1941/159_2874.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1941/"
 }

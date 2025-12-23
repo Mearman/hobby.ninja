@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 RX-78/C.A. キャスバル専用ガンダム",
 		"en": "MG 1/100 RX-78/C.A. Casval exclusive Gundam"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,37 +61,38 @@
 		"month": 8
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"PSソフト「ギレンの野望」に登場する「キャスバル・レム・ダイクン専用ガンダム」のプラモデル。「MG Ver1.5」RX-78 ガンダムをベースに完全再現しています。手首パーツは可動式のもののほか、握り手、ライフルなどの専用パーツが付属します。"
+			"PSソフト「ギレンの野望」に登場する「キャスバル・レム・ダイクン専用ガンダム」のプラモデル。「MG Ver1.5」RX-78ガンダムをベースに完全再現しています。手首パーツは可動式のもののほか、握り手、ライフルなどの専用パーツが付属します。"
 		],
 		"en": [
-			"A plastic model of the \"Casval Rem Deikun Gundam \" that appears in the PS software \" Gillen's Ambition \". Completely reproduced based on \" MG Ver1.5\" RX-78 Gundam. In addition to movable wrist parts, special parts such as grips and rifles are included."
+			"A plastic model of the \"Casval Rem Deikun Gundam\" that appears in the PS software \"Gillen's Ambition\". Completely reproduced based on \"MG Ver1.5\" RX-78Gundam. In addition to movable wrist parts, special parts such as grips and rifles are included."
 		]
 	},
-	"images": [
-		"/images/items/01_1968/153_289.jpg",
-		"/images/items/01_1968/155_289.jpg",
-		"/images/items/01_1968/156_289.jpg",
-		"/images/items/01_1968/157_289.jpg",
-		"/images/items/01_1968/158_289.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1968/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
-	"manualId": "0871"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_289_s_8096jayhy6bls9j9fxibffm4t9kz.jpg",
+				"path": "/images/items/01_1968/153_289.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_289_s_8k7lwzfitbuisa5k3kdw49isd4iq.jpg",
+				"path": "/images/items/01_1968/155_289.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_289_s_8dpexfwsp6bqebsudtv60a1lhb7r.jpg",
+				"path": "/images/items/01_1968/156_289.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_289_s_yz4qai3r7etsmpkns5pr4y9u10ga.jpg",
+				"path": "/images/items/01_1968/157_289.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_289_s_7pqk9lnjr39vq2nr812sgu7744nq.jpg",
+				"path": "/images/items/01_1968/158_289.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1968/"
 }

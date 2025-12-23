@@ -5,6 +5,49 @@
 		"ja": "メカコレクション　ドラゴンボール　5巻　ヤムチャのマイティマウス号",
 		"en": "Mecha Collection Dragon Ball Volume 5 Yamcha's Mighty Mouse Issue"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1107",
+			"url": "https://bandai-hobby.net/item/01_1107/",
+			"ja": "メカコレクション　ドラゴンボール　7巻 亀仙人のワゴン車"
+		},
+		{
+			"id": "01_1093",
+			"url": "https://bandai-hobby.net/item/01_1093/",
+			"ja": "メカコレクション　ドラゴンボール　6巻　ウーロンのロードバギー"
+		},
+		{
+			"id": "01_1016",
+			"url": "https://bandai-hobby.net/item/01_1016/",
+			"ja": "メカコレクション　ドラゴンボール　3巻　ランチの一輪バイク"
+		},
+		{
+			"id": "01_1017",
+			"url": "https://bandai-hobby.net/item/01_1017/",
+			"ja": "メカコレクション　ドラゴンボール　4巻　孫悟空のジェットバギー"
+		}
+	],
 	"price": {
 		"amount": 715,
 		"currency": "JPY",
@@ -32,55 +75,70 @@
 			"• Mecha Collection Dragon Ball Series!",
 			"• Toriyama Mecha is now available in a palm-sized size that is easy to collect!",
 			"• Volume 5 is Yamcha's Mighty Mouse running through the wilderness!",
-			"• Assembly Easy and mini size, yet detailed and thorough modeling of the mechanical structure!",
+			"• Easy assembly and mini size, yet detailed and thorough modeling of the mechanical structure!",
 			"• The package design is reminiscent of comics! Furthermore, the sides have a connected picture style design, so collect 7 types and display them!",
 			"• Bulma's romantic fighter is assembled in all 7 volumes!",
 			"• Volume 5 includes romantic parts for the right tail!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ヤムチャ×1",
-			"プーアル×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヤムチャ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "プーアル"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1994_s_yk2t9seav7h6jpfqcsohhucc6uqy.jpg",
+				"path": "/images/items/01_1060/153_1994.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1994_s_tu142a0qsg99cmexmxdqmzregeoz.jpg",
+				"path": "/images/items/01_1060/155_1994.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_1994_s_vc9pp1i4fg7tqr9u0olr3erj1brw.jpg",
+				"path": "/images/items/01_1060/156_1994.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_1994_s_6sledww0t297s39g8l55531f0q5g.jpg",
+				"path": "/images/items/01_1060/157_1994.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_1994_s_ngdobunwbn8taf71keykoolugu1h.jpg",
+				"path": "/images/items/01_1060/158_1994.jpg"
+			}
 		],
-		"en": [
-			"Yamcha×1",
-			"Puerh x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×2",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 2",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1060/153_1994.jpg",
-		"/images/items/01_1060/155_1994.jpg",
-		"/images/items/01_1060/156_1994.jpg",
-		"/images/items/01_1060/157_1994.jpg",
-		"/images/items/01_1060/158_1994.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1060/",
-	"brandIds": [
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"dragonball"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1107",
-		"01_1093",
-		"01_1016",
-		"01_1017"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1060/"
 }

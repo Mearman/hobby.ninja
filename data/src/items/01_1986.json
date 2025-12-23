@@ -2,9 +2,58 @@
 	"id": "01_1986",
 	"type": "item",
 	"name": {
-		"ja": "HGUC 1/144 ユニコーンガンダム 3号機 フェネクス (デストロイモード) (ナラティブVer.) [ゴールドコーティング]",
+		"ja": "HGUC 1/144 ユニコーンガンダム3号機 フェネクス (デストロイモード) (ナラティブVer.) [ゴールドコーティング]",
 		"en": "HGUC 1/144 Unicorn Gundam Unit 3 Phenex (Destroy Mode) (Narrative Ver.) [Gold Coating]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "narrative",
+			"url": "https://bandai-hobby.net/series/narrative/",
+			"ja": "機動戦士ガンダムNT[ナラティブ]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5039",
+			"url": "https://bandai-hobby.net/item/01_5039/",
+			"ja": "HG 1/144 ナラティブガンダム C装備 [覚醒イメージカラー]"
+		},
+		{
+			"id": "01_5038",
+			"url": "https://bandai-hobby.net/item/01_5038/",
+			"ja": "HG 1/144 ナラティブガンダム A装備 [クリアカラー]"
+		},
+		{
+			"id": "01_3460",
+			"url": "https://bandai-hobby.net/item/01_3460/",
+			"ja": "HG 1/144 シルヴァ・バレト・サプレッサー[クリアカラー]"
+		},
+		{
+			"id": "01_2666",
+			"url": "https://bandai-hobby.net/item/01_2666/",
+			"ja": "HG 1/144 ガンダムベース限定 ナラティブガンダム B装備"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -18,70 +67,92 @@
 		"day": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム NT』より、NT版フェネクスがゴールドコーティングを施した姿で登場！",
+			"『機動戦士ガンダムNT』より、NT版フェネクスがゴールドコーティングを施した姿で登場！",
 			"• 外装パーツのゴールドコーティングにより、フェネクスの荘厳さが一層際立つ！",
 			"• アームド・アーマーDEに接続する「不死鳥」の「尾」を連想させるパーツは、ブロックごとに可動。",
 			"• ビーム・マグナム、アームド・アーマーDEに加え、通常のシールドが付属。"
 		],
 		"en": [
 			"From \"Mobile Suit Gundam NT\", the NT version of Phenex appears in a gold-coated form!",
-			"• The gold coating of the exterior parts makes the Phenex even more majestic!",
-			"• The parts that are connected to Armed Armor DE and resemble the \"tail \" of a \" phoenix\" are movable for each block.",
+			"• The gold coating on the exterior parts makes the Phenex even more majestic!",
+			"• Parts reminiscent of the \"tail\" of a \"phoenix\" connected to Armed Armor DE can be moved block by block.",
 			"• In addition to Beam Magnum and Armed Armor DE, regular Seal is included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・マグナム×1",
-			"シールド×1",
-			"新アームド・アーマーDE×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・マグナム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "新アームド・アーマーDE"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 11
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2915_s_3p9ysl90b6wk06dru2h6pu722ji6.jpg",
+				"path": "/images/items/01_1986/153_2915.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2915_s_8zygr4c2sidrcn5lypozvjr1p8xo.jpg",
+				"path": "/images/items/01_1986/155_2915.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2915_s_i5h0csohplz397ue8qqy0b9meom7.jpg",
+				"path": "/images/items/01_1986/156_2915.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2915_s_ex5q94fbp7b4e1b3gd5ti90acnpr.jpg",
+				"path": "/images/items/01_1986/157_2915.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2915_s_u0c4fk2o06bhymwlhlsm5qkc9e04.jpg",
+				"path": "/images/items/01_1986/158_2915.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2915_s_fce6jcooczhfdltakqdzxeece3w6.jpg",
+				"path": "/images/items/01_1986/159_2915.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2915_s_r2izhfa1fkrlrqtd10ctzstwlm92.jpg",
+				"path": "/images/items/01_1986/189_2915.jpg"
+			}
 		],
-		"en": [
-			"Beam Magnum x 1",
-			"Seal × 1",
-			"New Armed Armor DE×2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×11",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded products x 11",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1986/153_2915.jpg",
-		"/images/items/01_1986/155_2915.jpg",
-		"/images/items/01_1986/156_2915.jpg",
-		"/images/items/01_1986/157_2915.jpg",
-		"/images/items/01_1986/158_2915.jpg",
-		"/images/items/01_1986/159_2915.jpg",
-		"/images/items/01_1986/189_2915.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1986/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"narrative"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5039",
-		"01_5038",
-		"01_3460",
-		"01_2666"
-	],
-	"manualId": "1064"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1986/"
 }

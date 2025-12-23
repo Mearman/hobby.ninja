@@ -2,9 +2,32 @@
 	"id": "01_2251",
 	"type": "item",
 	"name": {
-		"ja": "RG 1/144 クロスボーン・ガンダム X1",
-		"en": "RG 1/144 Crossbone Gundam X1"
+		"ja": "RG 1/144 クロスボーン・ガンダムX1",
+		"en": "RG 1/144 Crossbone GundamX1"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "crossbone",
+			"url": "https://bandai-hobby.net/series/crossbone/",
+			"ja": "機動戦士クロスボーン・ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/144",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -18,12 +41,11 @@
 		"day": 25
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"圧倒的な密度感と色分け再現！シリーズ最小ながら極限の精密再現を追及した",
-			"「GUNPLA EVOLUTION PROJECT」第5弾！",
-			"コミックス『機動戦士クロスボーン・ガンダム』に登場するクロスボーン・ガンダム X1をRGで立体化！",
+			"「GUNPLA EVOLUTION  PROJECT」第5弾！",
+			"コミックス『機動戦士クロスボーン・ガンダム』に登場するクロスボーン・ガンダムX1をRGで立体化！",
 			"EVOLUTION POINTに“Extreme detail” [極限精密再現］を掲げ、シリーズ最小ながら、ディテール、ギミックを1/144スケールの中で極限まで再現！最高峰の“凝縮”を体感せよ！",
 			"• 新規アドヴァンスドMSジョイントにより小型MSながらコア・ファイターの変形、ドッキングを再現。",
 			"• 頭部は細かなパーツ構成で再現され、バルカンやドクロの形状、アイパッチ（選択式）なども再現。",
@@ -35,78 +57,149 @@
 		"en": [
 			"Overwhelming sense of density and color-coded reproduction! Although it is the smallest in the series, we have pursued the ultimate precision reproduction.",
 			"\"GUNPLA EVOLUTION PROJECT\" 5th edition!",
-			"The Crossbone Gundam X1 that appears in the comic \"Mobile Suit Crossbone Gundam\" is made into a three-dimensional model with RG!",
+			"Crossbone GundamX1 that appears in the comic \"Mobile Suit Crossbone Gundam\" is made into RG!",
 			"The EVOLUTION POINT is \"Extreme detail\" [extreme precision reproduction], and although it is the smallest in the series, details and gimmicks are reproduced to the utmost in 1/144 Scale! Experience the highest level of “condensation”!",
 			"• The new advanced MS joint reproduces the deformation and docking of the Core Fighter even though it is a small MS.",
 			"• The head is recreated with detailed parts, including the vulcan and skull shapes, as well as the eye patch (selectable).",
-			"• Precisely reproduced down to the gimmick that expands the heat dissipation fins on the chin.",
+			"• Precisely reproduced down to the gimmick of the heat dissipating fins on the jaw.",
 			"• Beam Zanbar and Buster Gun are combined to form Zan Buster. Color coding is also reproduced to the utmost.",
-			"• Also equipped with a small-sized interlocking gimmick for knee armor.",
+			"• Equipped with a small but interlocking gimmick for knee armor.",
 			"• The characteristic cloak and effect parts are reproduced with dynamic modeling."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ザンバスター(ビーム・ザンバー/バスター・ガン)×各1",
-			"ブランド・マーカー×2",
-			"ヒート・ダガー×2",
-			"ビーム・サーベル×2",
-			"ビーム・シールド×1",
-			"コア・ファイター×1",
-			"ABCマント×1",
-			"シザー・アンカー×2",
-			"ヒート・ダガー(足裏)×2",
-			"パイロットフィギュア×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ザンバスター(ビーム・ザンバー/バスター・ガン)×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ブランド・マーカー"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ヒート・ダガー"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビーム・シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "コア・ファイター"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ABCマント"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シザー・アンカー"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ヒート・ダガー(足裏)"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "パイロットフィギュア"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 10
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000135523_1.jpg",
+				"path": "/images/items/01_2251/1000135523_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000135523_2.jpg",
+				"path": "/images/items/01_2251/1000135523_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000135523_3.jpg",
+				"path": "/images/items/01_2251/1000135523_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000135523_4.jpg",
+				"path": "/images/items/01_2251/1000135523_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000135523_5.jpg",
+				"path": "/images/items/01_2251/1000135523_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000135523_6.jpg",
+				"path": "/images/items/01_2251/1000135523_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000135523_7.jpg",
+				"path": "/images/items/01_2251/1000135523_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000135523_8.jpg",
+				"path": "/images/items/01_2251/1000135523_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000135523_9.jpg",
+				"path": "/images/items/01_2251/1000135523_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000135523_10.jpg",
+				"path": "/images/items/01_2251/1000135523_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000135523_11.jpg",
+				"path": "/images/items/01_2251/1000135523_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000135523_12.jpg",
+				"path": "/images/items/01_2251/1000135523_12.jpg"
+			}
 		],
-		"en": [
-			"Zanbuster (Beam Zanbar/Buster Gun) x 1 each",
-			"Brand marker x 2",
-			"Heat dagger x2",
-			"Beam saber x2",
-			"Beam Seal×1",
-			"Core fighter x 1",
-			"ABC cloak x 1",
-			"Scissor anchor x2",
-			"Heat dagger (sole) x 2",
-			"Pilot figure x1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×10",
-			"リアリスティックデカール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 10",
-			"Realistic decal x 1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2251/1000135523_1.jpg",
-		"/images/items/01_2251/1000135523_10.jpg",
-		"/images/items/01_2251/1000135523_11.jpg",
-		"/images/items/01_2251/1000135523_12.jpg",
-		"/images/items/01_2251/1000135523_2.jpg",
-		"/images/items/01_2251/1000135523_3.jpg",
-		"/images/items/01_2251/1000135523_4.jpg",
-		"/images/items/01_2251/1000135523_5.jpg",
-		"/images/items/01_2251/1000135523_6.jpg",
-		"/images/items/01_2251/1000135523_7.jpg",
-		"/images/items/01_2251/1000135523_8.jpg",
-		"/images/items/01_2251/1000135523_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2251/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"crossbone"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [],
-	"manualId": "0678"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2251/"
 }

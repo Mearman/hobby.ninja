@@ -2,9 +2,41 @@
 	"id": "01_1470",
 	"type": "item",
 	"name": {
-		"ja": "1/100 ガンダム F-90",
-		"en": "1/100 Gundam F-90"
+		"ja": "1/100 ガンダムF-90",
+		"en": "1/100 GundamF-90"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5987",
+			"url": "https://bandai-hobby.net/item/01_5987/",
+			"ja": "ガンダムデカールNo.139 機動戦士Gundam GQuuuuuuX汎用1"
+		},
+		{
+			"id": "01_5988",
+			"url": "https://bandai-hobby.net/item/01_5988/",
+			"ja": "ガンダムデカールNo.140 機動戦士Gundam GQuuuuuuX汎用2"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -17,28 +49,22 @@
 		"month": 10
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"コミック「機動戦士ガンダム F90」登場の主役機を立体化しました。ノーマルタイプの他、オプションパーツの換装によりA（アサルト・長距離進攻）、D （デストロイド・接近戦）、S（サポート・長距離支援）の3タイプの再現が可能です。武器はビーム・ライフル、ビーム・バズーカ、ビーム・サーベル2本、シールドがついています。ビーム・バズーカ、シールドは背面へのマウントが可能です。"
+			"コミック「機動戦士ガンダムF90」登場の主役機を立体化しました。ノーマルタイプの他、オプションパーツの換装によりA（アサルト・長距離進攻）、D （デストロイド・接近戦）、S（サポート・長距離支援）の3タイプの再現が可能です。武器はビーム・ライフル、ビーム・バズーカ、ビーム・サーベル2本、シールドがついています。ビーム・バズーカ、シールドは背面へのマウントが可能です。"
 		],
 		"en": [
 			"A three-dimensional version of the main character from the comic \"Mobile Suit Gundam F90\". In addition to the normal type, three types can be reproduced by replacing optional parts: A (Assault/Long Range Attack), D (Destroid/Close Combat), and S (Support/Long Range Support). Weapons include a beam rifle, beam bazooka, two beam sabers, and a seal. Beam bazooka and Seal can be mounted on the back."
 		]
 	},
-	"images": [
-		"/images/items/01_1470/153_2392.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1470/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5986",
-		"01_5987",
-		"01_5988"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2392_s_psme9a05aq64a98w3wb9fl4nwhfz.jpg",
+				"path": "/images/items/01_1470/153_2392.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1470/"
 }

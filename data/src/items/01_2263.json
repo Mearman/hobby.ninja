@@ -5,6 +5,55 @@
 		"ja": "HG 1/144 ガンダムベース限定 シナンジュ・スタイン (ナラティブVer.) [エクストラフィニッシュ]",
 		"en": "HG 1/144 Gundam Base Limited Sinanju Stein (Narrative Ver.) [Extra Finish]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "narrative",
+			"url": "https://bandai-hobby.net/series/narrative/",
+			"ja": "機動戦士ガンダムNT[ナラティブ]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5039",
+			"url": "https://bandai-hobby.net/item/01_5039/",
+			"ja": "HG 1/144 ナラティブガンダム C装備 [覚醒イメージカラー]"
+		},
+		{
+			"id": "01_5038",
+			"url": "https://bandai-hobby.net/item/01_5038/",
+			"ja": "HG 1/144 ナラティブガンダム A装備 [クリアカラー]"
+		},
+		{
+			"id": "01_3460",
+			"url": "https://bandai-hobby.net/item/01_3460/",
+			"ja": "HG 1/144 シルヴァ・バレト・サプレッサー[クリアカラー]"
+		},
+		{
+			"id": "01_2666",
+			"url": "https://bandai-hobby.net/item/01_2666/",
+			"ja": "HG 1/144 ガンダムベース限定 ナラティブガンダム B装備"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 5720,
 		"currency": "JPY",
@@ -18,11 +67,10 @@
 		"day": 29
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"『機動戦士ガンダム NT』より、NT版シナンジュ・スタインがエクストラフィニッシュ仕様となって登場！",
+			"『機動戦士ガンダムNT』より、NT版シナンジュ・スタインがエクストラフィニッシュ仕様となって登場！",
 			"• 「袖付き」の特徴である胸部、前腕部のエングレービングをモールド表現とホイルシールで再現。",
 			"• HG史上最高峰の可動表現を実現。大きなアクションも自然に再現できる。",
 			"• ビーム・ライフルは、シナンジュ・バズーカとの接続が可能。豊富な武装が付属。"
@@ -30,35 +78,27 @@
 		"en": [
 			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
 			"From \"Mobile Suit Gundam NT\", the NT version of Sinanju Stein is now available with an extra finish!",
-			"• Features of \"sleeves\" The engravings on the chest and forearms are reproduced with mold expressions and foil seals.",
-			"• Realizes the highest level of articulation in HG history. Large actions can be reproduced naturally.",
+			"• The engravings on the chest and forearms, which feature \"sleeves\", are reproduced with mold expressions and foil seals.",
+			"• Achieves the highest level of articulation in HG history. Large actions can be reproduced naturally.",
 			"• Beam rifle can be connected to Sinanju Bazooka. Comes with a variety of weapons."
 		]
 	},
-	"images": [
-		"/images/items/01_2263/153_3206.jpg",
-		"/images/items/01_2263/155_3206.jpg",
-		"/images/items/01_2263/156_3206.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2263/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"narrative"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5039",
-		"01_5038",
-		"01_3460",
-		"01_2666"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3206_s_uciuvuyvckkfmjptjiu0br9q4iok.jpg",
+				"path": "/images/items/01_2263/153_3206.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3206_s_9w61a890ns3au66962tj1o4bs0v4.jpg",
+				"path": "/images/items/01_2263/155_3206.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3206_s_yrjlj213n4aq8zynmcme4dxqbjqn.jpg",
+				"path": "/images/items/01_2263/156_3206.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2263/"
 }

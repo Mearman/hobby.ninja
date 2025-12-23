@@ -3,8 +3,39 @@
 	"type": "item",
 	"name": {
 		"ja": "SD三国創傑伝 董卓プロヴィデンスガンダム",
-		"en": "SD Three Kingdoms Legend: Dong Zhuo Providence Gundam"
+		"en": "SD SANGOKU SOKETSUDEN Dong Zhuo PROVIDENCE GUNDAM"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2642",
+			"url": "https://bandai-hobby.net/item/01_2642/",
+			"ja": "SD 三国創傑伝 天覇曹操ウイングガンダム"
+		},
+		{
+			"id": "01_2614",
+			"url": "https://bandai-hobby.net/item/01_2614/",
+			"ja": "SD 三国創傑伝 典韋マスターガンダム"
+		},
+		{
+			"id": "01_2615",
+			"url": "https://bandai-hobby.net/item/01_2615/",
+			"ja": "SD 三国創傑伝 徐晃ガンダムデスサイズ"
+		},
+		{
+			"id": "01_2643",
+			"url": "https://bandai-hobby.net/item/01_2643/",
+			"ja": "SD 三国創傑伝 甘寧クロスボーンガンダム"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -20,48 +51,63 @@
 	"description": {
 		"ja": [
 			"【2021年春、日本展開開始！！】",
-			"• 『三国志』をベースにしたSD ガンダムが装いも新たに登場！",
+			"• 『三国志』をベースにしたSDガンダムが装いも新たに登場！",
 			"• 進化したプロポーションとパーツ分割へのこだわりにより、組み立てただけでSD史上最高峰の色分けを実現。",
 			"• 一新された頭身バランスと各所の関節構造により、躍動感あふれるポージングを再現！",
 			"• 特徴的な大太刀「焦熱刀」はパーツ分割でカラーリングを再現。バックパックにマウントすることも可能。",
 			"• 各パーツの差し替えで凶竜形態への変形を再現。"
 		],
 		"en": [
-			"[Spring 2021, main rollout begins! ! ]",
-			"• SD Gundam based on \"Romance of the Three Kingdoms\" now has a new look!",
-			"• With advanced proportions and attention to parts division, we have achieved the highest color separation in SD history using just the assembly.",
-			"• The all-new head and body balance and joint structure in various parts allow for dynamic poses!",
-			"• The characteristic Otachi \"Kinetsuto\" is reproduced in color by dividing into parts. It can also be mounted on a backpack.",
-			"• Reproduce the transformation into a ferocious dragon form by replacing each part."
+			"[Spring 2021, Japan expansion starts! !! 】",
+			"• SD GUNDAM based on \"Three Kingdoms\" has a new look!",
+			"• With advanced proportions and a commitment to dividing parts, the highest color coding in SD history has been achieved just by assembling.",
+			"• The new head and body balance and joint structure in various places reproduce a lively pose!",
+			"• The characteristic odachi sword \"Scorching Sword\" reproduces the coloring by dividing it into parts. It can also be mounted on a backpack."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"焦熱刀×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "焦熱刀",
+				"en": "• Scorching sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "• Foil seal"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153057_1.jpg",
+				"path": "/images/items/01_2206/1000153057_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153057_2.jpg",
+				"path": "/images/items/01_2206/1000153057_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153057_3.jpg",
+				"path": "/images/items/01_2206/1000153057_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153057_4.jpg",
+				"path": "/images/items/01_2206/1000153057_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153057_5.jpg",
+				"path": "/images/items/01_2206/1000153057_5.jpg"
+			}
 		],
-		"en": [
-			"Fiery sword x1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2206/1000153057_1.jpg",
-		"/images/items/01_2206/1000153057_2.jpg",
-		"/images/items/01_2206/1000153057_3.jpg",
-		"/images/items/01_2206/1000153057_4.jpg",
-		"/images/items/01_2206/1000153057_5.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2206/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2642",
-		"01_2614",
-		"01_2615",
-		"01_2643"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2206/"
+	}
 }

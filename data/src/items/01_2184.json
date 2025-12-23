@@ -5,6 +5,43 @@
 		"ja": "ハロプラ ハロ エターナルピンク",
 		"en": "Haropura Haro Eternal Pink"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5189",
+			"url": "https://bandai-hobby.net/item/01_5189/",
+			"ja": "オプションパーツセット ガンプラ 04 (ビルドハンズ 丸型)"
+		},
+		{
+			"id": "01_5190",
+			"url": "https://bandai-hobby.net/item/01_5190/",
+			"ja": "オプションパーツセット ガンプラ 03 (ビルドハンズ 角型)"
+		},
+		{
+			"id": "01_3063",
+			"url": "https://bandai-hobby.net/item/01_3063/",
+			"ja": "ハロプラ ガンダムベース限定 モビルハロ[ガンダムベースカラー]"
+		},
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -21,53 +58,65 @@
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズ』より、ハロ型のダイバーに新色が登場！",
-			"• 『機動戦士ガンダム SEED』のラクス・クラインのハロをイメージした「エターナルピンク」仕様。",
+			"• 『機動戦士ガンダムSEED』のラクス・クラインのハロをイメージした「エターナルピンク」仕様。",
 			"• 他のハロプラとの連結も可能。"
 		],
 		"en": [
 			"From \"Gundam Build Divers\", a new color is now available for halo-shaped divers!",
-			"• \"Eternal pink \" design inspired by Lacus Clyne's halo from \" Mobile Suit Gundam SEED\".",
-			"• Can also be connected with other Haropla."
+			"• \"Eternal Pink\" design inspired by Lacus Clyne's halo from \"Mobile Suit GundamSEED\".",
+			"• Can also be connected to other Haropla."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3131_s_oghsoxnsbkfjbu9gkkewd87iepbn.jpg",
+				"path": "/images/items/01_2184/153_3131.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3131_s_qdd4gzsnas6qxlfz7pub4wbyao4e.jpg",
+				"path": "/images/items/01_2184/155_3131.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3131_s_6vb99t0176rxuj78n7td7xccxrny.jpg",
+				"path": "/images/items/01_2184/156_3131.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3131_s_lmb0ibr10meain8lfr6flypkgc88.jpg",
+				"path": "/images/items/01_2184/157_3131.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3131_s_vm8m0y9to9gx5ty7y1p7e1vy61oe.jpg",
+				"path": "/images/items/01_2184/158_3131.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3131_s_z10ngcixq7c5elpvqai14h9e4amj.jpg",
+				"path": "/images/items/01_2184/159_3131.jpg"
+			}
 		],
-		"en": [
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×3",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 3",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2184/153_3131.jpg",
-		"/images/items/01_2184/155_3131.jpg",
-		"/images/items/01_2184/156_3131.jpg",
-		"/images/items/01_2184/157_3131.jpg",
-		"/images/items/01_2184/158_3131.jpg",
-		"/images/items/01_2184/159_3131.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2184/",
-	"brandIds": [],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5189",
-		"01_5190",
-		"01_3063",
-		"01_2623"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2184/"
 }

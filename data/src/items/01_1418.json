@@ -5,6 +5,37 @@
 		"ja": "Figure-rise Effect 衝撃波 イエロー",
 		"en": "Figure-rise Effect Shock Wave Yellow"
 	},
+	"brands": [
+		{
+			"id": "figurerise-effect",
+			"url": "https://bandai-hobby.net/brand/figurerise-effect/",
+			"ja": "Figure-rise Effect[フィギュアライズエフェクト]"
+		}
+	],
+	"series": [],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_2346",
+			"url": "https://bandai-hobby.net/item/01_2346/",
+			"ja": "Figure-rise Effect ジェットエフェクト(クリアイエロー)"
+		},
+		{
+			"id": "01_2347",
+			"url": "https://bandai-hobby.net/item/01_2347/",
+			"ja": "Figure-rise Effect ジェットエフェクト(クリアブルー)"
+		},
+		{
+			"id": "01_2183",
+			"url": "https://bandai-hobby.net/item/01_2183/",
+			"ja": "Figure-rise Effect バーストエフェクト(スペースピンク)"
+		},
+		{
+			"id": "01_1419",
+			"url": "https://bandai-hobby.net/item/01_1419/",
+			"ja": "Figure-rise Effect 衝撃波 ホワイト"
+		}
+	],
 	"price": {
 		"amount": 825,
 		"currency": "JPY",
@@ -26,46 +57,65 @@
 		],
 		"en": [
 			"kill! run! An extremely easy-to-use effect is now available in Figure-rise Effect!",
-			"• Effects that make it look like you are moving at high speed or the trajectory of a slashing attack. The purpose of use is up to the user!",
+			"• Effects that make it look like you're moving at high speed or the trajectory of a slashing attack. The purpose of use is up to the user!",
 			"• You can create even bigger effects by combining display bases (sold separately)."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"衝撃波エフェクト ×1式",
-			"岩×1式",
-			"アーム×1式"
-		],
-		"en": [
-			"Shock wave effect x1",
-			"Rock x 1 set",
-			"Arm x 1 set"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×3",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 3",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1418/153_2341.jpg",
-		"/images/items/01_1418/155_2341.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "衝撃波エフェクト"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "岩"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "アーム"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
 	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1418/",
-	"brandIds": [
-		"figurerise-effect"
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
 	],
-	"seriesIds": [],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"01_2346",
-		"01_2347",
-		"01_2183",
-		"01_1419"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2341_o_1ckc0ao241opo1e1fkngnu1lb62d.jpg",
+				"path": "/images/items/01_1418/153_2341.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2341_o_1ckc0b36uan3ml47f6uopp0i2n.jpg",
+				"path": "/images/items/01_1418/155_2341.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1418/"
 }

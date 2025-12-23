@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 オプションパーツセット1",
 		"en": "30MM 1/144 Option parts set 1"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 22
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"オプションパーツセットで30MMシリーズにさらなるカスタマイズを！",
@@ -28,55 +70,92 @@
 		],
 		"en": [
 			"Further customize the 30MM series with optional parts sets!",
-			"• A wealth of equipment that expands the range of customization, including new weapons, optional equipment, and explosive reactive armor.",
+			"• Full of equipment that expands the range of customization, such as new weapons, optional equipment, and explosive reactive armor.",
 			"• A variety of weapons can be further rearranged and customized.",
-			"• Filling parts are also included."
+			"• Fill-in parts are also included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"各種ジョイント一式",
-			"サイドアーマー×2",
-			"追加スラスター×2",
-			"爆発反応装甲×4",
-			"キャノン砲×2",
-			"レールガン×2",
-			"ミニガン×2",
-			"サーチライト×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "各種ジョイント一式"
+			}
+		},
+		{
+			"name": {
+				"ja": "サイドアーマー"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "追加スラスター"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "爆発反応装甲"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "キャノン砲"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "レールガン"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ミニガン"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "サーチライト"
+			},
+			"count": 2
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3515_s_j21zcmco06i4bros6w6b6xs9cngn.jpg",
+				"path": "/images/items/01_2592/153_3515.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3515_s_s74ruv77v4ku08w50xjqf1gqnblk.jpg",
+				"path": "/images/items/01_2592/155_3515.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3515_s_e949zwid5zy6a3bwvam8pclry73d.jpg",
+				"path": "/images/items/01_2592/156_3515.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3515_s_snjzzxzfcr566u8g95ugv1q7zvbr.jpg",
+				"path": "/images/items/01_2592/157_3515.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3515_s_or9qumpi9cqlhixsqpqjpgnvpscb.jpg",
+				"path": "/images/items/01_2592/158_3515.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3515_s_2c2fdc5jzmwlplezu0j5q4uma651.jpg",
+				"path": "/images/items/01_2592/159_3515.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3515_s_y8wm827pmsn7rg6pa3rog9gyjp93.jpg",
+				"path": "/images/items/01_2592/189_3515.jpg"
+			}
 		],
-		"en": [
-			"A set of various joints",
-			"Side armor x2",
-			"Additional thruster x 2",
-			"Explosive reactive armor x4",
-			"Cannon x2",
-			"Railgun x2",
-			"Minigun x2",
-			"Searchlight x2"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2592/153_3515.jpg",
-		"/images/items/01_2592/155_3515.jpg",
-		"/images/items/01_2592/156_3515.jpg",
-		"/images/items/01_2592/157_3515.jpg",
-		"/images/items/01_2592/158_3515.jpg",
-		"/images/items/01_2592/159_3515.jpg",
-		"/images/items/01_2592/189_3515.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2592/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3672"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2592/"
 }

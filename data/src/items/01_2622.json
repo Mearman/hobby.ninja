@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 メルクワンウェポンズ",
 		"en": "HGBD:R 1/144 Merc One Weapons"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズRe:RISE』より主人公機の水中戦特化型ウェポンが登場！",
@@ -33,27 +76,26 @@
 			"• Can also be linked with HG items."
 		]
 	},
-	"images": [
-		"/images/items/01_2622/153_3543.jpg",
-		"/images/items/01_2622/155_3543.jpg",
-		"/images/items/01_2622/156_3543.jpg",
-		"/images/items/01_2622/157_3543.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2622/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0088"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3543_s_09rej5sjs28ra3kf76nf0ml8olx9.jpg",
+				"path": "/images/items/01_2622/153_3543.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3543_s_n9g04tcbkndn4h9vbydo6m65jf7y.jpg",
+				"path": "/images/items/01_2622/155_3543.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3543_s_7miv2xaui4evmkozx8ttsnid7q83.jpg",
+				"path": "/images/items/01_2622/156_3543.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3543_s_uzwpzwqloqk1q0sx5djy3s4h5s35.jpg",
+				"path": "/images/items/01_2622/157_3543.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2622/"
 }

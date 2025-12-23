@@ -5,6 +5,29 @@
 		"ja": "HGBD 1/144 ジェガンブラストマスター",
 		"en": "HGBD 1/144 Jegan Blast Master"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,7 +41,6 @@
 		"day": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズ』に登場する新機体「ジェガンブラストマスター」がキット化！",
@@ -26,55 +48,85 @@
 			"• さらにバックパックはパーツ差し替えで、一部HGシリーズにも装備可能！"
 		],
 		"en": [
-			"The new aircraft \"Jegan Blast Master \" appearing in \" Gundam Build Divers\" is now a kit!",
-			"• In addition to the beam cannons on the shoulders and legs that can be deployed, the distinctive back armament is equipped with various gimmicks such as panel deployment, gun barrel extension and contraction, and grip deployment!",
+			"The new aircraft \"Jegan Blast Master\" appearing in \"Gundam Build Divers\" is now a kit!",
+			"• In addition to the beam cannons on the shoulders and legs that can be deployed, the distinctive armament on the back is equipped with various gimmicks such as panel deployment, gun barrel extension and contraction, and grip deployment!",
 			"• In addition, the backpack can be equipped on some HG series by replacing parts!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"サテライトキャノン×2",
-			"ライフル（仮）×2",
-			"ビームサーベル×2",
-			"バックパック用ジョイントパーツ×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "サテライトキャノン"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ライフル（仮）"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "バックパック用ジョイントパーツ"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 12
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/159_2823_s_3hiwr5814he90jycf968uqoegsnx.jpg",
+				"path": "/images/items/01_1891/159_2823.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_2823_s_z2uvsxvqtzhcu8wm9clwwzfv1o2c.jpg",
+				"path": "/images/items/01_1891/153_2823.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2823_s_qdskxzighau092b4b5pefr8m95ha.jpg",
+				"path": "/images/items/01_1891/155_2823.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2823_s_32d6qa2ax24h89dnbzwzmm9d2oyn.jpg",
+				"path": "/images/items/01_1891/156_2823.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2823_s_dwc9sbfyswox4bsy36tcnswxh674.jpg",
+				"path": "/images/items/01_1891/157_2823.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2823_s_6li06s7n9jbp3zsc8g10m8r2ickj.jpg",
+				"path": "/images/items/01_1891/158_2823.jpg"
+			}
 		],
-		"en": [
-			"Satellite cannon x2",
-			"Rifle (temporary) x 2",
-			"Beam saber x2",
-			"Backpack joint parts x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×12",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 12",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1891/153_2823.jpg",
-		"/images/items/01_1891/155_2823.jpg",
-		"/images/items/01_1891/156_2823.jpg",
-		"/images/items/01_1891/157_2823.jpg",
-		"/images/items/01_1891/158_2823.jpg",
-		"/images/items/01_1891/159_2823.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1891/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [],
-	"manualId": "1031"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1891/"
 }

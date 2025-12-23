@@ -5,6 +5,45 @@
 		"ja": "ＲＥ/100 1/100 ガンイージ・プロトタイプ（ロールアウトカラー）",
 		"en": "RE/100 1/100 Gunigi Prototype (rollout color)"
 	},
+	"brands": [
+		{
+			"id": "re100",
+			"url": "https://bandai-hobby.net/brand/re100/",
+			"ja": "RE/100[リボーンワンハンドレッド]"
+		}
+	],
+	"series": [
+		{
+			"id": "v-gundam",
+			"url": "https://bandai-hobby.net/series/v-gundam/",
+			"ja": "機動戦士Vガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000142101",
+			"url": "https://p-bandai.jp/item/item-1000142101/",
+			"ja": "ＲＥ/100 1/100 シャッコー"
+		},
+		{
+			"id": "item-1000131778",
+			"url": "https://p-bandai.jp/item/item-1000131778",
+			"ja": "RE/100 1/100 ガンブラスター"
+		},
+		{
+			"id": "01_2029",
+			"url": "https://bandai-hobby.net/item/01_2029/",
+			"ja": "RE/100 1/100 ガンイージ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -17,27 +56,14 @@
 		"month": 1
 	},
 	"targetAge": 15,
-	"scale": "1/100",
-	"images": [
-		"/images/items/01_2611/153_3532.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2611/",
-	"brandIds": [
-		"re100"
-	],
-	"seriesIds": [
-		"v-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000142101",
-		"item-1000131778",
-		"01_2029"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3532_o_1dmsib9tk12n31hkl1m8tknv1dqh23.jpg",
+				"path": "/images/items/01_2611/153_3532.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2611/"
 }

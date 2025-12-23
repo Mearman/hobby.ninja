@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガンダムサンドロック[クリアカラー]",
-		"en": "HG 1/144 Gundam Sandrock [Clear Color]"
+		"en": "HG 1/144 GUNDAM SANDROCK[CLEAR COLOR]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ",
+			"en": "MOBILE SUIT GUNDAM WING series"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5590",
+			"url": "https://bandai-hobby.net/item/01_5590/",
+			"ja": "HG 1/144 ウイングガンダムゼロ [クリアカラー]"
+		},
+		{
+			"id": "item-1000213249",
+			"url": "https://p-bandai.jp/item/item-1000213249/",
+			"ja": "ＨＧ 1/144 アルトロンガンダム"
+		},
+		{
+			"id": "01_5340",
+			"url": "https://bandai-hobby.net/item/01_5340/",
+			"ja": "HG 1/144 シェンロンガンダム [クリアカラー]"
+		},
+		{
+			"id": "item-1000183318",
+			"url": "https://p-bandai.jp/item/item-1000183318/",
+			"ja": "ＨＧ 1/144 ガンダムデスサイズヘル"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -18,7 +64,6 @@
 		"day": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『新機動戦記ガンダムＷ』より「カトル・ラバーバ・ウィナー」の搭乗機、ガンダムサンドロックがクリアカラーになって登場！",
@@ -28,38 +73,40 @@
 			"• ヒートショーテルは納刀時、抜刀時の状態をパーツの差し替えにより再現可能！"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam W\", Gundam Sandrock, the aircraft piloted by Quatre LaBarba Winner, is now available in clear color!",
-			"• Achieves both best proportions and reproduction of poses from the movie!",
-			"• Both arms reach up to his back, allowing him to pull out the Heat Shotel from his back.",
-			"• Includes wrist parts that allow you to hold the Heat Shotel diagonally.",
-			"• Heat Shotel's state when sheathing and unsheathing can be reproduced by replacing parts!"
+			"From \"Mobile Suit GUNDAM W\", the boarding aircraft of \"Cuttle Lababa Winner\", GUNDAM Sandrock, is now available in clear color!",
+			"• Both the best proportions and the reproduction of the pose in the play!",
+			"• Both arms reach the back, and the action of pulling the heat shortel from the back is possible.",
+			"• Comes with a wrist part that allows you to hold the heat shortel at an angle.",
+			"• Heat Shortel can reproduce the state at the time of delivery and extraction by replacing parts!"
 		]
 	},
-	"images": [
-		"/images/items/01_3083/1000148867_1.jpg",
-		"/images/items/01_3083/1000148867_2.jpg",
-		"/images/items/01_3083/1000148867_3.jpg",
-		"/images/items/01_3083/1000148867_4.jpg",
-		"/images/items/01_3083/1000148867_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148867_1.jpg",
+				"path": "/images/items/01_3083/1000148867_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148867_2.jpg",
+				"path": "/images/items/01_3083/1000148867_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148867_3.jpg",
+				"path": "/images/items/01_3083/1000148867_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148867_4.jpg",
+				"path": "/images/items/01_3083/1000148867_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148867_5.jpg",
+				"path": "/images/items/01_3083/1000148867_5.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3083/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5590",
-		"item-1000213249",
-		"01_5340",
-		"item-1000183318"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_3083/"
 	}
 }

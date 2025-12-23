@@ -5,6 +5,50 @@
 		"ja": "HGFC 1/144 シャイニングガンダム",
 		"en": "HGFC 1/144 Shining Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "ggundam",
+			"url": "https://bandai-hobby.net/series/ggundam/",
+			"ja": "機動武闘伝Ｇガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000213247",
+			"url": "https://p-bandai.jp/item/item-1000213247/",
+			"ja": "ＨＧ 1/144 ドラゴンガンダム"
+		},
+		{
+			"id": "item-1000194970",
+			"url": "https://p-bandai.jp/item/item-1000194970/",
+			"ja": "ＨＧ 1/144 ガンダムマックスター"
+		},
+		{
+			"id": "item-1000182906",
+			"url": "https://p-bandai.jp/item/item-1000182906/",
+			"ja": "ＨＧ 1/144 ガンダムローズ"
+		},
+		{
+			"id": "item-1000144970",
+			"url": "https://p-bandai.jp/item/item-1000144970/",
+			"ja": "ＨＧ 1/144 デスビースト"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,38 +62,42 @@
 		"day": 27
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 「機動武闘伝G ガンダム」よりシャイニングガンダムがHGFCに登場。 • 頭部差し替えと各部の展開でスーパーモードが再現できる。 • コアランダーは取り外し可能。 • 巨大なシャイニングフィンガーのエフェクトパーツが付属。 成形品×7、ホイルシール×1、組立説明書"
+			"• 「機動武闘伝Gガンダム」よりシャイニングガンダムがHGFCに登場。 ■頭部差し替えと各部の展開でスーパーモードが再現できる。 ■コアランダーは取り外し可能。 ■巨大なシャイニングフィンガーのエフェクトパーツが付属。 成形品×7、ホイルシール×1、組立説明書"
 		],
 		"en": [
-			"• Shining Gundam from \"Mobile Fighter G Gundam\" appears in HGFC. • Super mode can be recreated by replacing the head and expanding each part. • Coallander is removable. • Giant Shining Finger effect parts included. Molded product x 7, foil seal x 1, assembly manual"
+			"• Shining Gundam from \"Mobile Fighter GGundam\" appears in HGFC. ■Super mode can be recreated by replacing the head and expanding each part. ■Coallander is removable. ■Giant Shining Finger effect parts included. Molded product x 7, foil seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_1782/153_2721.jpg",
-		"/images/items/01_1782/155_2721.jpg",
-		"/images/items/01_1782/156_2721.jpg",
-		"/images/items/01_1782/157_2721.jpg",
-		"/images/items/01_1782/158_2721.jpg",
-		"/images/items/01_1782/159_2721.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1782/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"ggundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000213247",
-		"item-1000194970",
-		"item-1000182906",
-		"item-1000144970"
-	],
-	"manualId": "0435"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/159_2721_s_xwhne4mjvb2io6dbhphqglcj95rc.jpg",
+				"path": "/images/items/01_1782/159_2721.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_2721_s_cz3l1gs5ewc67bxyr5gixbjg2yay.jpg",
+				"path": "/images/items/01_1782/153_2721.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2721_s_39m5vd9nkpuvz21mmxdiw12abbyc.jpg",
+				"path": "/images/items/01_1782/155_2721.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2721_s_9h6m451dsqrrcuodmjtm2na12xxm.jpg",
+				"path": "/images/items/01_1782/156_2721.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2721_s_hpm9fuc3exon0vgs31ari8tadu62.jpg",
+				"path": "/images/items/01_1782/157_2721.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2721_s_l0fvuk9k845h1are7676bmmzpnxp.jpg",
+				"path": "/images/items/01_1782/158_2721.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1782/"
 }

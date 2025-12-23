@@ -5,6 +5,50 @@
 		"ja": "HGBD 1/144 ガンダムダブルオーダイバーエース",
 		"en": "HGBD 1/144 Gundam 00 Diver Ace"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,69 +62,90 @@
 		"day": 21
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズ』より、主人公・リクのガンプラで、カスタムユニットをフル装備した「ガンダムダブルオーダイバーエース」が登場！",
 			"• 頭部の色分け用にボーナスパーツとして2色のクリアランナーが付属し、側頭部のグリーン、額の赤が再現できる！"
 		],
 		"en": [
-			"From \"Gundam Build Divers \", the main character Riku's Gunpla, \" Gundam 00 Diver Ace\" fully equipped with custom units, is now available!",
-			"• Two-colored clear Runner is included as a bonus part for color-coding the head, allowing you to reproduce the green side of the head and the red of the forehead!"
+			"From \"Gundam Build Divers\", the main character Riku's Gunpla, \"Gundam 00 Diver Ace\" fully equipped with custom units, is now available!",
+			"• A two-color clear Runner is included as a bonus part for color-coding the head, allowing you to reproduce the green side of the head and the red forehead!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"GNダイバーソード×2",
-			"スーパーGNソードII×2",
-			"バックパック×1",
-			"ジョイントパーツ×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "GNダイバーソード"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "スーパーGNソードII"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "バックパック"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 12
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2317_s_8xx2722cw3cgulyi8o2lurj28r0b.jpg",
+				"path": "/images/items/01_1393/153_2317.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2317_s_1me15tzapurumxe9oq7h3k5hes88.jpg",
+				"path": "/images/items/01_1393/155_2317.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2317_s_lxtfnaffblchilzn2v3onk12swnf.jpg",
+				"path": "/images/items/01_1393/156_2317.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2317_s_getp6s8jmuyabrh1vx651bxk5ocn.jpg",
+				"path": "/images/items/01_1393/157_2317.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2317_s_1s656e4rmlzdacsjb34qixuwahoo.jpg",
+				"path": "/images/items/01_1393/158_2317.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2317_s_12v401xg3n4apynnrz1yqmmbcwhs.jpg",
+				"path": "/images/items/01_1393/159_2317.jpg"
+			}
 		],
-		"en": [
-			"GN Diver Sword x2",
-			"Super GN Sword II x 2",
-			"Backpack x 1",
-			"Joint parts x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×12",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 12",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1393/153_2317.jpg",
-		"/images/items/01_1393/155_2317.jpg",
-		"/images/items/01_1393/156_2317.jpg",
-		"/images/items/01_1393/157_2317.jpg",
-		"/images/items/01_1393/158_2317.jpg",
-		"/images/items/01_1393/159_2317.jpg",
-		"/images/items/01_1393/01_1393_inst_0.jpg",
-		"/images/items/01_1393/01_1393_inst_1.jpg",
-		"/images/items/01_1393/01_1393_inst_2.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1393/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "1021"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1393/"
 }

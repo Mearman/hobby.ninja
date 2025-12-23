@@ -5,6 +5,50 @@
 		"ja": "HGBF 1/144 ういにんぐふみな",
 		"en": "HGBF 1/144 Uiningufumina"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 30
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 「すーぱーふみな」が“ういにんぐ”へ超進化！",
@@ -29,68 +72,98 @@
 			"• クリアパーツを使用した武器は多彩な形態への変形機構が搭載されている！"
 		],
 		"en": [
-			"• \"Super Fumina \" has evolved into \" Uiningu\"!",
-			"• There are no shared parts with \"HGBF Super Fumina\", and the figure has been sculpted with attention to realistic wrinkles in the clothes and texture of the skin!",
+			"• \"Super Fumina\" has evolved into \"Uining\"!",
+			"• There are no shared parts with \"HGBF Super Fumina\", and the figure has been sculpted with attention to realistic wrinkles in clothes and skin texture!",
 			"• The head design is completely new, and a seal that allows you to change your line of sight is also included!",
 			"• The armor is designed not to hinder movement, allowing you to recreate various action poses!",
 			"• The armor parts that cover the whole body are removable and can be rearranged into \"Super Deluxe Winning Gundam (tentative)\"!",
 			"• Weapons using clear parts are equipped with a mechanism to transform into various forms!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームライフル×1",
-			"エフェクトパーツ(大)×4",
-			"エフェクトパーツ(小)×4",
-			"握り手(左右)×各1",
-			"平手（左右）×各１",
-			"ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "エフェクトパーツ(大)"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "エフェクトパーツ(小)"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "握り手(左右)×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "平手（左右）×各１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 12
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2053_s_3itxi76hcohn8zbv58qm4u82gf0k.jpg",
+				"path": "/images/items/01_1121/153_2053.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2053_s_rnvwtxj1ked7ikc59oznn5of6l2y.jpg",
+				"path": "/images/items/01_1121/155_2053.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2053_s_5bh3652bd9jmsfj5hy0ccnyf8rys.jpg",
+				"path": "/images/items/01_1121/156_2053.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2053_s_21zfbpd2rofu4mnjmi2jnb6w2h3g.jpg",
+				"path": "/images/items/01_1121/157_2053.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2053_s_uarlp8v3w2jnpq4dc3uot2a59lpl.jpg",
+				"path": "/images/items/01_1121/158_2053.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2053_s_vi8grogin684ivk5psa0uh8ojtvt.jpg",
+				"path": "/images/items/01_1121/159_2053.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x 1",
-			"Effect parts (large) x 4",
-			"Effect parts (small) x 4",
-			"Gripping hands (left and right) x 1 each",
-			"Hirate (left and right) x 1 each",
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×12",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 12",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1121/153_2053.jpg",
-		"/images/items/01_1121/155_2053.jpg",
-		"/images/items/01_1121/156_2053.jpg",
-		"/images/items/01_1121/157_2053.jpg",
-		"/images/items/01_1121/158_2053.jpg",
-		"/images/items/01_1121/159_2053.jpg",
-		"/images/items/01_1121/01_1121_inst_1.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1121/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
-	"manualId": "0057"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1121/"
 }

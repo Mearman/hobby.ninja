@@ -5,6 +5,44 @@
 		"ja": "1/144 旧型ザク",
 		"en": "1/144 Old Zaku"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 330,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 10
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"左肩アーマーと足首を別パーツ化しています。 股関節の左右開閉が可能、腕も前後のスイングが可能になり、バリエーションに富んだポージングを可能にしました。 手首パーツは左右ともに握り手と平手の２種が付いています。武器はヒート・ホークを装備しています。"
@@ -26,23 +63,18 @@
 			"The left shoulder armor and ankle are separate parts. The hip joints can be opened and closed to the left and right, and the arms can swing back and forth, allowing for a wide variety of poses. There are two types of wrist parts for both left and right: a grip hand and an open hand. Equipped with a heat hawk as a weapon."
 		]
 	},
-	"images": [
-		"/images/items/01_3090/153_4058.jpg",
-		"/images/items/01_3090/155_4058.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3090/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	],
-	"manualId": "1959"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4058_s_nxdroyzb2encqvvohdg8e90fay90.jpg",
+				"path": "/images/items/01_3090/153_4058.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4058_s_92958bw4msnn97r3lvzxz3ica04q.jpg",
+				"path": "/images/items/01_3090/155_4058.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3090/"
 }

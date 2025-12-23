@@ -2,9 +2,53 @@
 	"id": "01_2009",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 ガンダムベース限定 νガンダム vsサザビー(宿命の対決セット)[スペシャルコーティング]",
+		"ja": "HG 1/144 ガンダムベース限定 νガンダムvsサザビー(宿命の対決セット)[スペシャルコーティング]",
 		"en": "HG 1/144 Gundam Base Limited νGundam vs Sazabi (Fateful Showdown Set) [Special Coating]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5346",
+			"url": "https://bandai-hobby.net/item/01_5346/",
+			"ja": "HG 1/144 ジムIII(アクシズ・ショックイメージカラー)"
+		},
+		{
+			"id": "01_5210",
+			"url": "https://bandai-hobby.net/item/01_5210/",
+			"ja": "HG 1/144 ギラ・ドーガ(アクシズ・ショックイメージカラー)"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4408",
+			"url": "https://bandai-hobby.net/item/01_4408/",
+			"ja": "HG 1/144 サイコ・ドーガ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 11000,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。"
@@ -26,31 +69,30 @@
 			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world."
 		]
 	},
-	"images": [
-		"/images/items/01_2009/153_2936.jpg",
-		"/images/items/01_2009/155_2936.jpg",
-		"/images/items/01_2009/156_2936.jpg",
-		"/images/items/01_2009/157_2936.jpg",
-		"/images/items/01_2009/158_2936.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2009/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5346",
-		"01_5210",
-		"01_4971",
-		"01_4408"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2936_s_7ld15d4rc14s6d4sxe3ow4ngfyol.jpg",
+				"path": "/images/items/01_2009/153_2936.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2936_s_j5n16on2g2nv2d0gqib2c6qhm1bn.jpg",
+				"path": "/images/items/01_2009/155_2936.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2936_s_h1ewnbbd2ave9vqcyfktiev5m7fd.jpg",
+				"path": "/images/items/01_2009/156_2936.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2936_s_e1h663fhohzyf95nrj4fakah7a4p.jpg",
+				"path": "/images/items/01_2009/157_2936.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2936_s_payzhcg5mb5s014nc437uwgmx4os.jpg",
+				"path": "/images/items/01_2009/158_2936.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2009/"
 }

@@ -5,6 +5,40 @@
 		"ja": "MGEX 1/100 ユニコーンガンダム Ver.Ka",
 		"en": "MGEX 1/100 Unicorn Gundam Ver.Ka"
 	},
+	"brands": [
+		{
+			"id": "mgex",
+			"url": "https://bandai-hobby.net/brand/mgex/",
+			"ja": "MGEX [マスターグレードエクストリーム]"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3364",
+			"url": "https://bandai-hobby.net/item/01_3364/",
+			"ja": "MGEX 1/100 ガンダムベース限定 ユニコーンガンダム Ver.TWC"
+		},
+		{
+			"id": "item-1000147393",
+			"url": "https://p-bandai.jp/item/item-1000147393/",
+			"ja": "MGEX 1/100 ユニコーンガンダム Ver．Ka ［プレミアム “ユニコーンモード” ボックス］"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 25300,
 		"currency": "JPY",
@@ -18,24 +52,23 @@
 		"day": 12
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"ガンプラ４０周年記念！ＭＧにハイエンドブランド誕生！",
 			"「ＭＧＥＸ」とは、ＢＡＮＤＡＩ ＳＰＩＲＩＴＳが積み重ねた技術と、異素材を組み合わせて機体ごとに設定した『テーマ』をもとに、ＭＳの“極限表現”に挑む新ブランドである。",
-			"■第一弾のテーマは「極限の“発光機構”」。計算しつくされた「構造」と新たなＬＥＤユニットによる「発光」表現。",
-			"■ボタン操作で瞳、頭部メインカメラの点灯から、本体サイコフレームは赤、緑に発光しその後、強弱を伴う発光演出が可能。",
-			"■新たに採用した「フレキシブルＬＥＤシート」により、組み立てやすさと、省スペースを実現。この技術を起点にユニコーンガンダム史上初の変身、発光、色調変化、可動の共立を実現。",
-			"■全身のプロポーションをカトキハジメ氏完全監修により、新規造型で制作。",
-			"■リード線を使用し、本体から離れた場所に配置したシールドのクリアパーツを発光させることが可能。",
-			"■プラモデルオリジナルの新規デザインを含む水転写式デカールが付属。",
-			"■専用ＭＳケージは電飾ユニットの電池ＢＯＸを収納、支柱の位置調整、武器の保持機能も有している。",
-			"■発光再現には単３アルカリ乾電池３本（別売り）が必要です。"
+			"• 第一弾のテーマは「極限の“発光機構”」。計算しつくされた「構造」と新たなＬＥＤユニットによる「発光」表現。",
+			"• ボタン操作で瞳、頭部メインカメラの点灯から、本体サイコフレームは赤、緑に発光しその後、強弱を伴う発光演出が可能。",
+			"• 新たに採用した「フレキシブルＬＥＤシート」により、組み立てやすさと、省スペースを実現。この技術を起点にユニコーンガンダム史上初の変身、発光、色調変化、可動の共立を実現。",
+			"• 全身のプロポーションをカトキハジメ氏完全監修により、新規造型で制作。",
+			"• リード線を使用し、本体から離れた場所に配置したシールドのクリアパーツを発光させることが可能。",
+			"• プラモデルオリジナルの新規デザインを含む水転写式デカールが付属。",
+			"• 専用ＭＳケージは電飾ユニットの電池ＢＯＸを収納、支柱の位置調整、武器の保持機能も有している。",
+			"• 発光再現には単３アルカリ乾電池３本（別売り）が必要です。"
 		],
 		"en": [
 			"Gunpla 40th anniversary! A high-end brand is born in MG!",
-			"\"MGEX \" is a new brand that challenges the \" extreme expression \" of MS based on the technology accumulated by BANDAI SPIRITS and the \" theme\" set for each aircraft by combining different materials.",
-			"• The theme of the first installment is \"The ultimate 'light-emitting mechanism'\". A well-calculated \" structure \" and a \" light-emitting\" expression using a new LED unit.",
+			"\"MGEX\" is a new brand that challenges the \"extreme expression\" of MS based on the technology accumulated by BANDAI SPIRITS and the \"theme\" set for each aircraft by combining different materials.",
+			"• The theme of the first installment is \"The ultimate 'light-emitting mechanism'\". A well-calculated \"structure\" and a \"light-emitting\" expression using a new LED unit.",
 			"• By pressing a button, the eyes and head main camera light up, and the psychoframe on the main body emits red and green light, and then it is possible to create a light emission effect with varying intensity.",
 			"• The newly adopted \"flexible LED sheet\" makes assembly easier and saves space. Using this technology as a starting point, Unicorn Gundam achieved transformation, light emission, color tone change, and movement for the first time in history.",
 			"• The proportions of the whole body were completely supervised by Hajime Katoki, and were created using new modeling.",
@@ -45,56 +78,116 @@
 			"• Three AA alkaline batteries (sold separately) are required to reproduce the light emission."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・マグナム×1",
-			"ハイパー・バズーカ×1",
-			"シールド×3",
-			"ビーム・ガトリングガン×6",
-			"ビーム・サーベル×4",
-			"電飾ユニット×1式",
-			"専用ＭＳケージ×１",
-			"水転写式デカール×1",
-			"メタリックシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・マグナム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハイパー・バズーカ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "ビーム・ガトリングガン"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "電飾ユニット"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "専用ＭＳケージ×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "メタリックシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150001_1.jpg",
+				"path": "/images/items/01_3010/1000150001_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150001_2.jpg",
+				"path": "/images/items/01_3010/1000150001_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150001_3.jpg",
+				"path": "/images/items/01_3010/1000150001_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150001_4.jpg",
+				"path": "/images/items/01_3010/1000150001_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150001_5.jpg",
+				"path": "/images/items/01_3010/1000150001_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150001_6.jpg",
+				"path": "/images/items/01_3010/1000150001_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150001_7.jpg",
+				"path": "/images/items/01_3010/1000150001_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150001_8.jpg",
+				"path": "/images/items/01_3010/1000150001_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150001_9.jpg",
+				"path": "/images/items/01_3010/1000150001_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150001_10.jpg",
+				"path": "/images/items/01_3010/1000150001_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150001_11.jpg",
+				"path": "/images/items/01_3010/1000150001_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150001_12.jpg",
+				"path": "/images/items/01_3010/1000150001_12.jpg"
+			}
 		],
-		"en": [
-			"Beam Magnum x 1",
-			"Hyper bazooka x1",
-			"Seal ×3",
-			"Beam Gatling gun x 6",
-			"Beam saber x 4",
-			"Illumination unit x 1 set",
-			"Dedicated MS cage x 1",
-			"Water transfer decal x 1",
-			"Metallic Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3010/1000150001_1.jpg",
-		"/images/items/01_3010/1000150001_10.jpg",
-		"/images/items/01_3010/1000150001_11.jpg",
-		"/images/items/01_3010/1000150001_12.jpg",
-		"/images/items/01_3010/1000150001_2.jpg",
-		"/images/items/01_3010/1000150001_3.jpg",
-		"/images/items/01_3010/1000150001_4.jpg",
-		"/images/items/01_3010/1000150001_5.jpg",
-		"/images/items/01_3010/1000150001_6.jpg",
-		"/images/items/01_3010/1000150001_7.jpg",
-		"/images/items/01_3010/1000150001_8.jpg",
-		"/images/items/01_3010/1000150001_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3010/",
-	"brandIds": [
-		"mgex"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3364",
-		"item-1000147393"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3010/"
 }

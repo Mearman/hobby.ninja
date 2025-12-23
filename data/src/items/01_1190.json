@@ -5,6 +5,44 @@
 		"ja": "1/144 & 1/350 レジスタンスビークルセット",
 		"en": "1/144 & 1/350 Resistance Vehicle Set"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3515",
+			"url": "https://bandai-hobby.net/item/01_3515/",
+			"ja": "1/12 ザ・マンダロリアン(ベスカーアーマー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 24
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『スター・ウォーズ／最後のジェダイ』で活躍する「ミレニアム・ファルコン」「ブーステッド・Xウイング・ファイター ポー専用機」「Xウイング・ファイター レジスタンス ブルー中隊仕様」の3機が新作仕様のビークルセットになって登場！",
@@ -28,59 +65,93 @@
 			"全長：ミレニアム・ファルコン：約99mm／Xウイング・ファイター ポー専用機：約87mm／Xウイング・ファイター（レジスタンス仕様）：約87mm"
 		],
 		"en": [
-			"Three aircraft from \"Star Wars: The Last Jedi \" - \" Millennium Falcon \", \" Boosted X-Wing Fighter Poe's Special Machine \", and \" X-Wing Fighter Resistance Blue Squadron Specification\" - are now available as a new vehicle set!",
+			"Three aircraft from \"Star Wars: The Last Jedi\" - \"Millennium Falcon\", \"Boosted X-Wing Fighter Poe's Special Machine\", and \"X-Wing Fighter Resistance Blue Squadron Specification\" - are now available as a new vehicle set!",
 			"The Millennium Falcon's antenna and various parts of the aircraft have details that match the new Star Wars: The Last Jedi version.",
-			"Boosted X-Wing Fighter Poe's special machine also reproduces the \"Boosted Accelerator Pod \" engine part of \" Star Wars: The Last Jedi\" version!",
+			"Boosted X-Wing Fighter Poe's special machine also reproduces the \"Boosted Accelerator Pod\" engine part of \"Star Wars: The Last Jedi\" version!",
 			"The X-Wing Fighter Resistance Blue Squadron version comes with a droid that has been changed to the ``Star Wars: The Last Jedi'' version, and the line of the aircraft has also been changed.",
 			"Overall length: Millennium Falcon: Approx. 99mm/X-Wing Fighter Poe exclusive machine: Approx. 87mm/X-Wing Fighter (Resistance specification): Approx. 87mm"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用ディスプレイベース ×3"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 3
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119962_1.jpg",
+				"path": "/images/items/01_1190/1000119962_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119962_2.jpg",
+				"path": "/images/items/01_1190/1000119962_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119962_3.jpg",
+				"path": "/images/items/01_1190/1000119962_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119962_4.jpg",
+				"path": "/images/items/01_1190/1000119962_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119962_5.jpg",
+				"path": "/images/items/01_1190/1000119962_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119962_6.jpg",
+				"path": "/images/items/01_1190/1000119962_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119962_7.jpg",
+				"path": "/images/items/01_1190/1000119962_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119962_8.jpg",
+				"path": "/images/items/01_1190/1000119962_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119962_9.jpg",
+				"path": "/images/items/01_1190/1000119962_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119962_10.jpg",
+				"path": "/images/items/01_1190/1000119962_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119962_11.jpg",
+				"path": "/images/items/01_1190/1000119962_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119962_12.jpg",
+				"path": "/images/items/01_1190/1000119962_12.jpg"
+			}
 		],
-		"en": [
-			"Dedicated display base x3"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×6",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 6",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1190/1000119962_1.jpg",
-		"/images/items/01_1190/1000119962_10.jpg",
-		"/images/items/01_1190/1000119962_11.jpg",
-		"/images/items/01_1190/1000119962_12.jpg",
-		"/images/items/01_1190/1000119962_2.jpg",
-		"/images/items/01_1190/1000119962_3.jpg",
-		"/images/items/01_1190/1000119962_4.jpg",
-		"/images/items/01_1190/1000119962_5.jpg",
-		"/images/items/01_1190/1000119962_6.jpg",
-		"/images/items/01_1190/1000119962_7.jpg",
-		"/images/items/01_1190/1000119962_8.jpg",
-		"/images/items/01_1190/1000119962_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1190/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3515"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1190/"
 }

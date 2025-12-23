@@ -3,8 +3,47 @@
 	"type": "item",
 	"name": {
 		"ja": "ＲＧ 1/144 νガンダムＨＷＳ拡張セット",
-		"en": "RG 1/144 νGundam HWS expansion set"
+		"en": "RG 1/144 νGundamHWS expansion set"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "cca-msv",
+			"url": "https://bandai-hobby.net/series/cca-msv/",
+			"ja": "CCA-MSV"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000146277",
+			"url": "https://p-bandai.jp/item/item-1000146277/",
+			"ja": "ＲＧ 1/144 νガンダムＨＷＳ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -16,7 +55,6 @@
 		"year": 2020,
 		"month": 9
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－　「ＲＧ 1/144 νガンダム」（別売り）連動アイテムが登場！　－－－",
@@ -59,11 +97,11 @@
 			"*This product does not include the MS body.",
 			"Jointed with the separately sold \"RG 1/144 νGundam\" (in-store sales item),",
 			"Introducing an expansion set that allows you to reproduce νGundam's HWS (Heavy Weapon System).",
-			"● Includes heavy armor and weapons for each part of the aircraft that reproduces \"RG νGundam HWS\"!",
+			"● Includes heavy armor and weapons for each part of the aircraft that reproduces \"RG νGundamHWS\"!",
 			"*High Mega Seal is a standard Seal with extended parts attached. For normal Seal, use the one that comes with the main product.",
 			"● Reproduced with molding colors that conform to the MS body sold in stores!",
 			"● Comes with a newly designed realistic decal.",
-			"*Decal design is the same as \"RG 1/144 νGundam HWS\".",
+			"*Decal design is the same as \"RG 1/144 νGundamHWS\".",
 			"Set contents: Chest armor unit / Front armor unit / Leg thruster unit / Hyper Mega Rifle / High Mega Seal expansion parts / Realistic decal",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"This product is jointed with \"RG 1/144 νGundam\" (separately sold in-store item),",
@@ -91,31 +129,30 @@
 			"- Product specifications are scheduled as of 20206. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2986/153_3959.jpg",
-		"/images/items/01_2986/155_3959.jpg",
-		"/images/items/01_2986/156_3959.jpg",
-		"/images/items/01_2986/157_3959.jpg",
-		"/images/items/01_2986/158_3959.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2986/",
-	"brandIds": [
-		"rg",
-		"pb_rg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"cca-msv"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000146277"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/158_3959_s_csk7bgr8iyt6rw008yyu4go52ucb.jpg",
+				"path": "/images/items/01_2986/158_3959.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_3959_s_puvwjq4c9zb5fgbz2fvv03f65prr.jpg",
+				"path": "/images/items/01_2986/153_3959.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3959_s_3ta7h595zv9noo7pic7gw3j4jasj.jpg",
+				"path": "/images/items/01_2986/155_3959.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3959_s_wm7s6czs14gz71i538l8lkkrr5tg.jpg",
+				"path": "/images/items/01_2986/156_3959.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3959_s_km57q2zjdwr4wn75m2svyk1no0zi.jpg",
+				"path": "/images/items/01_2986/157_3959.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "2778"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2986/"
 }

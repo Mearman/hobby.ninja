@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard 伝説の超サイヤ人 ブロリー",
 		"en": "Figure-rise Standard Legendary Super Saiyan Broly"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4901",
+			"url": "https://bandai-hobby.net/item/01_4901/",
+			"ja": "Figure-rise Standard ベジータ (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_4219",
+			"url": "https://bandai-hobby.net/item/01_4219/",
+			"ja": "Figure-rise Standard 孫悟空 (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_2974",
+			"url": "https://bandai-hobby.net/item/01_2974/",
+			"ja": "Figure-rise Standard アルティメット孫悟飯"
+		},
+		{
+			"id": "01_2769",
+			"url": "https://bandai-hobby.net/item/01_2769/",
+			"ja": "Figure-rise Standard ジレン"
+		}
+	],
 	"price": {
 		"amount": 5280,
 		"currency": "JPY",
@@ -29,64 +72,103 @@
 		"en": [
 			"Figure-rise Standard The legendary Super Saiyan Broly is now available with a new package! !",
 			"• Muscle build system is powered up! Broly's strong muscles are thoroughly sculpted! The volume of the muscles is amazing!",
-			"• In addition to the muscles, the parts around the joints have been carefully selected to allow for more natural poses!",
-			"• New parts \"Dramatic Parts\" are included to expand the range of play by combining with other characters! You can now recreate the battle scenes from the movie with the damaged faces of Goku and Vegeta suffering from overwhelming power!",
-			"• Two types of facial expression parts are included: \"normal \" and \" screaming\"! Reproduce Broly's unique creepy and brutal expression!"
+			"• In addition to the muscles, we paid special attention to the parts around the joints, allowing for more natural poses!",
+			"• Includes new parts \"Dramatic Parts\" that can be combined with other characters to expand the range of play! You can now recreate the battle scenes from the movie with the damaged faces of Goku and Vegeta suffering from overwhelming power!",
+			"• Two types of facial expression parts are included: \"normal\" and \"screaming\"! Reproduce Broly's unique creepy and brutal expression!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"表情パーツ2種（平常、叫び）×各1",
-			"手首パーツ2種（左右握り手、左右平手）×各1",
-			"超サイヤ人 孫悟空用 ダメージ顔×1",
-			"超サイヤ人 ベジータ用 ダメージ顔×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情パーツ2種（平常、叫び）×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "手首パーツ2種（左右握り手、左右平手）×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "超サイヤ人 孫悟空用 ダメージ顔"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "超サイヤ人 ベジータ用 ダメージ顔"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 7
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3306_s_umueddbvnhi4qaoarsku0nkwt8nk.jpg",
+				"path": "/images/items/01_2371/153_3306.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3306_s_hikkuxlkl0txajf7z1snk5pijz65.jpg",
+				"path": "/images/items/01_2371/155_3306.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3306_s_jgajaavvhlajl97lre49pdkt5h1w.jpg",
+				"path": "/images/items/01_2371/156_3306.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3306_s_pnbu38vxy2hajvfbp66jtslx2cee.jpg",
+				"path": "/images/items/01_2371/157_3306.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3306_s_g6q7avm3kc1v082s7oidvpsqaivv.jpg",
+				"path": "/images/items/01_2371/158_3306.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3306_s_oqep7m97fphre54giq5rsb86nfwp.jpg",
+				"path": "/images/items/01_2371/159_3306.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3306_s_nfayhyz037shpqlepq5fvuqxsn8v.jpg",
+				"path": "/images/items/01_2371/189_3306.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3306_s_9jl6iyztaw29lh98knzrqd6fpc7x.jpg",
+				"path": "/images/items/01_2371/190_3306.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3306_s_3hf7v95jedssl0ndre3g3a6e19gl.jpg",
+				"path": "/images/items/01_2371/191_3306.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3306_s_l82o1swy75ly5fjgfer8nl42gsek.jpg",
+				"path": "/images/items/01_2371/192_3306.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_3306_s_es8vauiblqcahcjpk44tuj09jt21.jpg",
+				"path": "/images/items/01_2371/193_3306.jpg"
+			}
 		],
-		"en": [
-			"2 types of facial expression parts (normal, screaming) x 1 each",
-			"2 types of wrist parts (left and right grip hands, left and right palm) x 1 each",
-			"Damaged face for Super Saiyan Son Goku x1",
-			"Damaged face for Super Saiyan Vegeta x1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×7",
-			"ホイルシール×1",
-			"説明書×1"
-		],
-		"en": [
-			"Molded product x 7",
-			"Foil Seal×1",
-			"Manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2371/153_3306.jpg",
-		"/images/items/01_2371/155_3306.jpg",
-		"/images/items/01_2371/156_3306.jpg",
-		"/images/items/01_2371/157_3306.jpg",
-		"/images/items/01_2371/158_3306.jpg",
-		"/images/items/01_2371/159_3306.jpg",
-		"/images/items/01_2371/189_3306.jpg",
-		"/images/items/01_2371/190_3306.jpg",
-		"/images/items/01_2371/191_3306.jpg",
-		"/images/items/01_2371/192_3306.jpg",
-		"/images/items/01_2371/193_3306.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2371/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"dragonball"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4901",
-		"01_4219",
-		"01_2974",
-		"01_2769"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2371/"
 }

@@ -5,6 +5,43 @@
 		"ja": "ピカちんキット06 ティッシュ箱カメラ",
 		"en": "Pikachin Kit06 Tissue box camera"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -27,51 +64,70 @@
 			"• ピカちん大百科に綴じられるピカちんシートも付いてくるぞ！"
 		],
 		"en": [
-			"• For you who want to take photos without using batteries and just waiting!",
+			"• For those of you who want to take photos without using batteries just by waiting!",
 			"• No batteries required! A spy camera that can take pictures using only sunlight!",
-			"• The tissue box camera that appears on the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!",
-			"• Photography with the power of nature! A camera invention that makes it easy to aim at the subject and wait for several minutes without moving!",
+			"• The tissue box camera that appears in the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!",
+			"• Take great photos with the power of nature! A camera invention that makes it easy to aim at the subject and wait for several minutes without moving!",
 			"• It also comes with a Pikachin sheet that can be bound into the Pikachin Encyclopedia!"
 		]
 	},
-	"contents": {
-		"ja": [
-			"ティッシュ箱カメラ…1（成形品…7）",
-			"感光紙…1セット（6枚）",
-			"レンズ…1",
-			"トレーシングペーパー…1",
-			"ピカちんQRコードステッカー…1",
-			"取扱説明書…1",
-			"ピカちんシート…1"
+	"contents": [
+		{
+			"name": {
+				"ja": "ティッシュ箱カメラ…1（成形品…7）"
+			}
+		},
+		{
+			"name": {
+				"ja": "感光紙…1セット（6枚）"
+			}
+		},
+		{
+			"name": {
+				"ja": "レンズ…1"
+			}
+		},
+		{
+			"name": {
+				"ja": "トレーシングペーパー…1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ピカちんQRコードステッカー…1"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書…1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ピカちんシート…1"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2263_s_735nzzndttyvlvvmi3qofr9iqiy6.jpg",
+				"path": "/images/items/01_1335/153_2263.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2263_s_dkuxlky9efe4vruxpcl0i4hn8yjt.jpg",
+				"path": "/images/items/01_1335/155_2263.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2263_s_4lqwa82ms75s5mp1nqv7utee601v.jpg",
+				"path": "/images/items/01_1335/156_2263.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2263_s_pi8gxh5rg6824kmxw4qk5otm301d.jpg",
+				"path": "/images/items/01_1335/157_2263.jpg"
+			}
 		],
-		"en": [
-			"Tissue box camera...1 (molded product...7)",
-			"Photosensitive paper...1 set (6 sheets)",
-			"Lens...1",
-			"Tracing paper...1",
-			"Pikachin QR code Sticker...1",
-			"Handling Manual...1",
-			"Pikachin sheet...1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1335/153_2263.jpg",
-		"/images/items/01_1335/155_2263.jpg",
-		"/images/items/01_1335/156_2263.jpg",
-		"/images/items/01_1335/157_2263.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1335/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1335/"
 }

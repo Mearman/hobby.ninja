@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 リックディアス",
-		"en": "MG 1/100 Rick Diaz"
+		"en": "MG 1/100 RICK DIAS"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム",
+			"en": "MOBILE SUIT Z GUNDAM"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "item-1000145352",
+			"url": "https://p-bandai.jp/item/item-1000145352/",
+			"ja": "ＭＧ 1/100 RMS-179 ジムII（エゥーゴカラーＶｅｒ．）"
+		},
+		{
+			"id": "item-1000131596",
+			"url": "https://p-bandai.jp/item/item-1000131596",
+			"ja": "ＭＧ 1/100 ジム・キャノン ［レッド・ヘッド］（ジャブロー防衛隊仕様）"
+		},
+		{
+			"id": "01_4270",
+			"url": "https://bandai-hobby.net/item/01_4270/",
+			"ja": "MG 1/100 百式 Ver.2.0 [メカニカルクリア]"
+		},
+		{
+			"id": "item-1000112091",
+			"url": "http://p-bandai.jp/item/item-1000112091/",
+			"ja": "ＭＧ 1/100 RMS-179 ジムＩＩ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4290,
 		"currency": "JPY",
@@ -17,32 +50,37 @@
 		"month": 5
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"「機動戦士Z ガンダム」シリーズほぼ全編に登場する「リック・ディアス」のMG仕様のプラモデル。頭部ボール型コクピットを内部のフィギュアを含めて忠実に再現しています。脚部や腰部、胸部などの内部ディテール、肩及び背部のスラスターバインダーの内部ディテールも再現しています。武器のクレイバズーカはMG百式と交換可能、ビームピストルマガジンはMG百式のものを取り付け可能です。1/100エゥーゴパイロットフィギュアが付属します。"
+			"「機動戦士Zガンダム」シリーズほぼ全編に登場する「リック・ディアス」のMG仕様のプラモデル。頭部ボール型コクピットを内部のフィギュアを含めて忠実に再現しています。脚部や腰部、胸部などの内部ディテール、肩及び背部のスラスターバインダーの内部ディテールも再現しています。武器のクレイバズーカはMG百式と交換可能、ビームピストルマガジンはMG百式のものを取り付け可能です。1/100エゥーゴパイロットフィギュアが付属します。"
 		],
 		"en": [
-			"An MG plastic model of \"Rick Diaz \" who appears in almost all of the \" Mobile Suit Z Gundam\" series. The head ball-shaped cockpit is faithfully reproduced, including the figures inside. The internal details of the legs, waist, chest, etc., as well as the internal details of the thruster binder on the shoulders and back are also reproduced. The clay bazooka weapon can be replaced with the MG Hyaku-shiki, and the beam pistol magazine can be attached to the MG Hyaku-shiki. A 1/100 AEUGO pilot figure is included."
+			"A plastic model of the MG specification of \"Rick Diaz\" that appears in almost the entire \"Mobile Suit Z GUNDAM\" series. The head ball-shaped cockpit is faithfully reproduced, including the figure inside. Internal details such as legs, waist, and chest, as well as internal details of thruster binders on the shoulders and back, are also reproduced. The clay bazooka of the weapon can be replaced with the MG 100 type, and the beam pistol magazine can be attached to the MG 100 type. Comes with a 1/100 Ego pilot figure."
 		]
 	},
-	"images": [
-		"/images/items/01_3279/1000072679_1.jpg",
-		"/images/items/01_3279/1000072679_2.jpg",
-		"/images/items/01_3279/1000072679_3.jpg",
-		"/images/items/01_3279/1000072679_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000072679_1.jpg",
+				"path": "/images/items/01_3279/1000072679_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000072679_2.jpg",
+				"path": "/images/items/01_3279/1000072679_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000072679_3.jpg",
+				"path": "/images/items/01_3279/1000072679_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000072679_4.jpg",
+				"path": "/images/items/01_3279/1000072679_4.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3279/",
-	"brandIds": [],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"item-1000145352",
-		"item-1000131596",
-		"01_4270",
-		"item-1000112091"
-	],
-	"manualId": "0820"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_3279/"
+	}
 }

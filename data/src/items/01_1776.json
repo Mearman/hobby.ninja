@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 XXXG-01S シェンロンガンダム EW",
-		"en": "MG 1/100 XXXG-01S Shenron Gundam EW"
+		"en": "MG 1/100 XXXG-01S SHENLONG GUNDAM EW VER."
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ",
+			"en": "MOBILE SUIT GUNDAM WING series"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "item-1000194972",
+			"url": "https://p-bandai.jp/item/item-1000194972/",
+			"ja": "ＭＧ 1/100 ガンダムエピオン EW (シュトゥルム・ウント・ドラング装備)"
+		},
+		{
+			"id": "01_3410",
+			"url": "https://bandai-hobby.net/item/01_3410/",
+			"ja": "MG 1/100 ガンダムデスサイズヘル EW[スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000171722",
+			"url": "https://p-bandai.jp/item/item-1000171722/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムエピオン EW[スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000142325",
+			"url": "https://p-bandai.jp/item/item-1000142325/",
+			"ja": "ＭＧ 1/100 ガンダムデスサイズ EW（ルーセット装備）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4620,
 		"currency": "JPY",
@@ -18,32 +51,40 @@
 		"day": 26
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"• 「新機動戦記ガンダム W EndlessWaltz」に登場するEW版シェンロンガンダムの初立体化。 • 可動性の高いXXX-Gフレームを採用。足首の二重可動により、大胆なポージングが可能。 • 新デザインのドラゴンハングを再現。５ヶ所の可動により「牙」部分の展開ギミックを再現できる。 • マーキングはカトキハジメ氏によるデザイン。 成形品×14、ホイルシール×1、マーキングシール×1、ガンダムデカール×1、組立説明書"
+			"• 「新機動戦記ガンダムW EndlessWaltz」に登場するEW版シェンロンガンダムの初立体化。 ■可動性の高いXXX-Gフレームを採用。足首の二重可動により、大胆なポージングが可能。 ■新デザインのドラゴンハングを再現。５ヶ所の可動により「牙」部分の展開ギミックを再現できる。 ■マーキングはカトキハジメ氏によるデザイン。 成形品×14、ホイルシール×1、マーキングシール×1、ガンダムデカール×1、組立説明書"
 		],
 		"en": [
-			"• The first three-dimensional version of the EW version of Shenron Gundam that appears in \"Mobile Suit Gundam W Endless Waltz \". • Uses XXX-G frame with high mobility. Double-movable ankles allow for bold poses. • Reproduce the newly designed dragon hang. The deployment gimmick of the \" fang\" part can be reproduced by moving in 5 places. • Marking is designed by Hajime Katoki. Molded product x 14, Foil Seal x 1, Marking Seal x 1, Gundam decal x 1, Assembly Manual"
+			"• The first three-dimensional version of the EW version of Shenron GUNDAM that appears in \"MOBILE SUIT GUNDAM WING EndlessWaltz\".",
+			"• Highly movable XXX-G frame is adopted. The double movement of the ankle allows for bold poses.",
+			"• Reproduce the newly designed dragon hang. By moving in five places, the deployment gimmick of the \"fang\" part can be reproduced.",
+			"• The marking was designed by Hajime Katoki. Molded product ×14, foil seal ×1, marking seal ×1, GUNDAM DECAL ×1, assembly instructions"
 		]
 	},
-	"images": [
-		"/images/items/01_1776/1000092379_1.jpg",
-		"/images/items/01_1776/1000092379_2.jpg",
-		"/images/items/01_1776/1000092379_3.jpg",
-		"/images/items/01_1776/1000092379_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092379_1.jpg",
+				"path": "/images/items/01_1776/1000092379_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092379_2.jpg",
+				"path": "/images/items/01_1776/1000092379_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092379_3.jpg",
+				"path": "/images/items/01_1776/1000092379_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092379_4.jpg",
+				"path": "/images/items/01_1776/1000092379_4.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1776/",
-	"brandIds": [],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"item-1000194972",
-		"01_3410",
-		"item-1000171722",
-		"item-1000142325"
-	],
-	"manualId": "0586"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1776/"
+	}
 }

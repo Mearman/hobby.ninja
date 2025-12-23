@@ -5,6 +5,54 @@
 		"ja": "ＨＧ 1/144 ガンダム４号機",
 		"en": "HG 1/144 Gundam Unit 4"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2475,
 		"currency": "JPY",
@@ -16,7 +64,6 @@
 		"year": 2020,
 		"month": 5
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－",
@@ -72,7 +119,7 @@
 			"Blue Gundam running through “space”",
 			"---",
 			"Gundam Unit 4, the aircraft that appeared in \"Mobile Suit Gundam Gaiden: At the End of the Flash...\", is now available in the HG series.",
-			"The characteristic aircraft form is reproduced with new modeling. Can be recombined to reproduce \"normal mode \" and \"[Bst] form\" equipped with increased armor!",
+			"The characteristic aircraft form is reproduced with new modeling. Can be recombined to reproduce \"normal mode\" and \"[Bst] form\" equipped with increased armor!",
 			"● Reproduce the characteristic aircraft form with new modeling!",
 			"The characteristic aircraft form of space specifications is thoroughly reproduced with new modeling.",
 			"Characteristic colors such as blue and dark gray are also reproduced by molding colors by dividing the parts.",
@@ -117,37 +164,50 @@
 			"- Product specifications are scheduled as of 20201. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2735/153_3726.jpg",
-		"/images/items/01_2735/155_3726.jpg",
-		"/images/items/01_2735/156_3726.jpg",
-		"/images/items/01_2735/157_3726.jpg",
-		"/images/items/01_2735/158_3726.jpg",
-		"/images/items/01_2735/159_3726.jpg",
-		"/images/items/01_2735/189_3726.jpg",
-		"/images/items/01_2735/190_3726.jpg",
-		"/images/items/01_2735/191_3726.jpg",
-		"/images/items/01_2735/192_3726.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2735/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	],
-	"manualId": "2587",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3726_s_v7ad6r1yelytmh8lu1m0apj5okzb.jpg",
+				"path": "/images/items/01_2735/153_3726.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3726_s_y0eblsb73ovrynxp1bcgksayxlzg.jpg",
+				"path": "/images/items/01_2735/155_3726.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3726_s_2ozrakdqmj7d20vyyuwr9ei3o2hb.jpg",
+				"path": "/images/items/01_2735/156_3726.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3726_s_d9vojxlhgx7wfazawduzgien6u6l.jpg",
+				"path": "/images/items/01_2735/157_3726.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3726_s_1zanxrpidushoaezq3g56nj56nx5.jpg",
+				"path": "/images/items/01_2735/158_3726.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3726_s_x5e5rw82kcdcqogmxsw6vccj4by5.jpg",
+				"path": "/images/items/01_2735/159_3726.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3726_s_yqh0y5xz2un6e11nrd7tqgi649kw.jpg",
+				"path": "/images/items/01_2735/189_3726.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3726_s_6616vhunf3xr1w96fffgtb65v9om.jpg",
+				"path": "/images/items/01_2735/190_3726.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3726_s_ipx9lxi196xsbiom8msu18pz1izb.jpg",
+				"path": "/images/items/01_2735/191_3726.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3726_s_7cuqwp4clpnyg6wmfrza1suqycfi.jpg",
+				"path": "/images/items/01_2735/192_3726.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2735/"
 }

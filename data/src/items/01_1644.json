@@ -3,8 +3,59 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC 1/144 量産型ゲルググ/ゲルググキャノン",
-		"en": "HGUC 1/144 Mass-produced Gelgoog/Gelgoog Cannon"
+		"en": "1/144 HGUC GELGOOG/ GELGOOG CANNON"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -17,37 +68,37 @@
 		"month": 3
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、一年戦争末期に投入された高性能MS“ゲルググキャノン”がHGUCシリーズに登場。頭部やバックパックなど、一部パーツの差し替えにより「量産型ゲルググ」も再現可能。武器はビーム・ライフル、ビーム・ナギナタ、3連ミサイルランチャー、バックラー・シールド、大型シールドが付属。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam \", the high-performance MS \" Gelgoog Cannon \" introduced at the end of the First World War is now available in the HGUC series. \" Mass-produced Gelgoog\" can also be reproduced by replacing some parts such as the head and backpack. Weapons include a beam rifle, beam naginata, triple missile launcher, buckler seal, and large seal."
+			"From \"MOBILE SUIT GUNDAM\", the high-performance MS \"Gelgugu Cannon\" introduced at the end of the One Year War is now available in the HGUC series. By replacing some parts such as the head and backpack, it is possible to reproduce the \"mass-produced gelgugu\". Weapons include a beam rifle, a beam naginata, a triple missile launcher, a buckler shield, and a large shield."
 		]
 	},
-	"images": [
-		"/images/items/01_1644/1000092293_1.jpg",
-		"/images/items/01_1644/1000092293_2.jpg",
-		"/images/items/01_1644/1000092293_3.jpg",
-		"/images/items/01_1644/1000092293_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092293_4.jpg",
+				"path": "/images/items/01_1644/1000092293_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092293_1.jpg",
+				"path": "/images/items/01_1644/1000092293_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092293_2.jpg",
+				"path": "/images/items/01_1644/1000092293_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092293_3.jpg",
+				"path": "/images/items/01_1644/1000092293_3.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1644/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
-	"manualId": "0904"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1644/"
+	}
 }

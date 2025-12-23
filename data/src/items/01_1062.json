@@ -2,9 +2,46 @@
 	"id": "01_1062",
 	"type": "item",
 	"name": {
-		"ja": "ポケモンプラモコレクション No.41 セレクトシリーズ ピカチュウ",
+		"ja": "ポケモンプラモコレクション No.41 セレクトシリーズ   ピカチュウ",
 		"en": "Pokemon Plastic Model Collection No.41 Select Series Pikachu"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5984",
+			"url": "https://bandai-hobby.net/item/01_5984/",
+			"ja": "ポケモンプラモコレクション 60 セレクトシリーズ コライドン"
+		},
+		{
+			"id": "01_5958",
+			"url": "https://bandai-hobby.net/item/01_5958/",
+			"ja": "ポケモンプラモコレクション 59 セレクトシリーズ ミライドン"
+		},
+		{
+			"id": "01_5947",
+			"url": "https://bandai-hobby.net/item/01_5947/",
+			"ja": "ポケモンプラモコレクション クイック!! 23 ジラーチ"
+		},
+		{
+			"id": "01_5568",
+			"url": "https://bandai-hobby.net/item/01_5568/",
+			"ja": "ポケモンプラモコレクション 58 セレクトシリーズ グレンアルマ"
+		}
+	],
 	"price": {
 		"amount": 836,
 		"currency": "JPY",
@@ -26,51 +63,64 @@
 			"• 表情パーツもやる気満々に表情とかわいいにっこり表情の2種付属。"
 		],
 		"en": [
-			"• Pokémon plastic model collection Select series now includes fully movable Pikachu!",
-			"• The movement of ears, neck, hands, tail, and feet has been greatly improved!",
-			"• A variety of poses can be recreated, including the cute sitting pose and the impressive Z-move pose from the movie!",
+			"• Fully movable Pikachu is now available in the Pokemon Plastic Model Collection Select Series!",
+			"• The movement of ears, neck, hands, tail, and feet has been greatly increased!",
+			"• Various poses can be recreated, including the cute sitting pose and the impressive Z-move pose from the movie!",
 			"• Two types of expression parts are included: a motivated expression and a cute smiling expression."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"表情パーツ×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情パーツ"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1996_s_xvr1bfmf2w2ch9c8nf7lf37sirsh.jpg",
+				"path": "/images/items/01_1062/153_1996.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1996_s_cvq7p3ng143x79gurff2a4x14k6o.jpg",
+				"path": "/images/items/01_1062/155_1996.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_1996_s_nzn9f9p7ipt1blbe81zqoyrsrg80.jpg",
+				"path": "/images/items/01_1062/156_1996.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_1996_s_pu5bkim1361l980xrnexiv5khhmp.jpg",
+				"path": "/images/items/01_1062/157_1996.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_1996_s_zwfu32rly6bhxxbr58nghkh8j0o6.jpg",
+				"path": "/images/items/01_1062/158_1996.jpg"
+			}
 		],
-		"en": [
-			"Facial expression parts x 2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×3",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 3",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1062/153_1996.jpg",
-		"/images/items/01_1062/155_1996.jpg",
-		"/images/items/01_1062/156_1996.jpg",
-		"/images/items/01_1062/157_1996.jpg",
-		"/images/items/01_1062/158_1996.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1062/",
-	"brandIds": [],
-	"seriesIds": [
-		"pokemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1062/"
 }

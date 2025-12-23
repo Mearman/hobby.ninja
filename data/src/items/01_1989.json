@@ -2,9 +2,31 @@
 	"id": "01_1989",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット ガンダムダブルオーダイバーエース",
-		"en": "SD Gundam Cross Silhouette Gundam 00 Diver Ace"
+		"ja": "SDガンダム クロスシルエット ガンダムダブルオーダイバーエース",
+		"en": "SDGundam Cross Silhouette Gundam 00 Diver Ace"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -20,61 +42,97 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"『ガンダムビルドダイバーズ』の主人公機、ガンダムダブルオーダイバーエースがSD ガンダムクロスシルエットシリーズで登場！",
+			"『ガンダムビルドダイバーズ』の主人公機、ガンダムダブルオーダイバーエースがSDガンダムクロスシルエットシリーズで登場！",
 			"• 瞳があるカメラアイはシールで再現。",
 			"• 別売りのクロスシルエットフレームと組み合わせることで、スタイルの変化と高い可動性を楽しめる。",
 			"• ダイバーエースユニットの着脱により、ダブルオーダイバーも再現！"
 		],
 		"en": [
-			"Gundam 00 Diver Ace, the main character of \"Gundam Build Divers\", is now available in the SD Gundam Cross Silhouette series!",
-			"• The camera eye with eyes is reproduced with Seal.",
+			"Gundam 00 Diver Ace, the main character of \"Gundam Build Divers\", is now available in the SDGundam Cross Silhouette series!",
+			"• The camera eye with pupils is reproduced with Seal.",
 			"• By combining it with the cross silhouette frame (sold separately), you can enjoy changing styles and high mobility.",
 			"• Double O Diver can also be recreated by attaching and detaching the Diver Ace unit!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"GNソードII×2",
-			"ダイバーエースユニット×1式",
-			"(GNダイバーソード×2スーパーGNソードII用パーツ×2バックパック×1)"
+	"accessories": [
+		{
+			"name": {
+				"ja": "GNソードII"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ダイバーエースユニット"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "(GNダイバーソード"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2918_s_xgc9o744q0ycjq5y8shub586ylrd.jpg",
+				"path": "/images/items/01_1989/153_2918.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2918_s_kmekk9fn883yq7tdqzq7ff80dgyd.jpg",
+				"path": "/images/items/01_1989/155_2918.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2918_s_lvumu64szjmi8doxvbtpubq1xifn.jpg",
+				"path": "/images/items/01_1989/156_2918.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2918_s_iad6j2e56pqnzx9h8pw0syjnin3f.jpg",
+				"path": "/images/items/01_1989/157_2918.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2918_s_oyvhowlm8vi8mmdagfq4osekiya7.jpg",
+				"path": "/images/items/01_1989/158_2918.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2918_s_jx4v1vxzez6q2ejabloqcenqtou7.jpg",
+				"path": "/images/items/01_1989/159_2918.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2918_s_2nzf1r69dx0ttpimw8nqu59y24jp.jpg",
+				"path": "/images/items/01_1989/189_2918.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2918_s_1ubphlxxjfzd16shr9k96mprxkwt.jpg",
+				"path": "/images/items/01_1989/190_2918.jpg"
+			}
 		],
-		"en": [
-			"GN Sword II×2",
-			"Diver Ace unit x 1 set",
-			"(GN Diver Sword x 2 Super GN Sword II parts x 2 Backpack x 1)"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 4",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1989/153_2918.jpg",
-		"/images/items/01_1989/155_2918.jpg",
-		"/images/items/01_1989/156_2918.jpg",
-		"/images/items/01_1989/157_2918.jpg",
-		"/images/items/01_1989/158_2918.jpg",
-		"/images/items/01_1989/159_2918.jpg",
-		"/images/items/01_1989/189_2918.jpg",
-		"/images/items/01_1989/190_2918.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1989/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_1989/"
 }

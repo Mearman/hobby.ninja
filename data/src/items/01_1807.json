@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ヤクト・ドーガ(クェス・エア専用機)",
 		"en": "HGUC 1/144 Jagd Doga (Ques Air dedicated machine)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5346",
+			"url": "https://bandai-hobby.net/item/01_5346/",
+			"ja": "HG 1/144 ジムIII(アクシズ・ショックイメージカラー)"
+		},
+		{
+			"id": "01_5210",
+			"url": "https://bandai-hobby.net/item/01_5210/",
+			"ja": "HG 1/144 ギラ・ドーガ(アクシズ・ショックイメージカラー)"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4408",
+			"url": "https://bandai-hobby.net/item/01_4408/",
+			"ja": "HG 1/144 サイコ・ドーガ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -18,35 +67,26 @@
 		"day": 20
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム 逆襲のシャア」よりニュータイプ「クェス・エア」が搭乗した赤い“ヤクト・ドーガ”がHGUCシリーズにラインナップ。肩部関節にスイング機構を採用。バインダーの「ファンネル」は着脱可能、待機・展開状態をパーツの差し替えで再現。付属のエフェクトパーツを用いて、ファンネルの射出シーンを再現可能。メガ・ガトリングガン、シールド、ビーム・サーベルが付属。"
 		],
 		"en": [
-			"The red \"Yakut Doga \" piloted by the new type \" Quest Air \" from \" Mobile Suit Gundam: Char's Counterattack \" is now available in the HGUC series. A swing mechanism is used in the shoulder joint. The binder's \" funnel\" is removable, and the standby and deployed states can be recreated by replacing parts. You can reproduce the funnel injection scene using the included effect parts. Includes Mega Gatling Gun, Seal, and Beam Saber."
+			"The red \"Yakut Doga\" piloted by the new type \"Quest Air\" from \"Mobile Suit Gundam: Char's Counterattack\" is now available in the HGUC series. A swing mechanism is used in the shoulder joint. The binder's \"funnel\" is removable, and the standby and deployed states can be recreated by replacing parts. You can reproduce the funnel injection scene using the included effect parts. Includes Mega Gatling Gun, Seal, and Beam Saber."
 		]
 	},
-	"images": [
-		"/images/items/01_1807/153_2745.jpg",
-		"/images/items/01_1807/155_2745.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1807/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5346",
-		"01_5210",
-		"01_4971",
-		"01_4408"
-	],
-	"manualId": "0906"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2745_s_ph26kud3auc8pmtv5t49iwxe1ega.jpg",
+				"path": "/images/items/01_1807/153_2745.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2745_s_6pkrexfjmy7ychktcq6ftwkvt2vc.jpg",
+				"path": "/images/items/01_1807/155_2745.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1807/"
 }

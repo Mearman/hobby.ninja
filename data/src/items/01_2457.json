@@ -5,6 +5,49 @@
 		"ja": "メカコレクション 1式空間戦闘攻撃機コスモタイガーII(複座型/単座型)",
 		"en": "Mecha Collection Type 1 space combat attack aircraft Cosmo Tiger II (two-seat type/single-seat type)"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "yamato",
+			"url": "https://bandai-hobby.net/series/yamato/",
+			"ja": "宇宙戦艦ヤマトシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5498",
+			"url": "https://bandai-hobby.net/item/01_5498/",
+			"ja": "メカコレクションDX 1式空間戦闘攻撃機 コスモタイガーII(単座型/銃座型) [2機セット]"
+		},
+		{
+			"id": "01_5500",
+			"url": "https://bandai-hobby.net/item/01_5500/",
+			"ja": "メカコレクションDX 試製空間戦闘攻撃機 コスモパイソン [2機セット]"
+		},
+		{
+			"id": "01_3667",
+			"url": "https://bandai-hobby.net/item/01_3667/",
+			"ja": "メカコレクション ガイペロン級多層式航宙母艦 バルメス(外洋機動艦隊仕様)"
+		},
+		{
+			"id": "01_3650",
+			"url": "https://bandai-hobby.net/item/01_3650/",
+			"ja": "メカコレクション デウスーラIII世"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -27,45 +70,45 @@
 		"en": [
 			"From \"Space Battleship Yamato 2202 Warriors of Love\", Type 1 space combat attack aircraft Cosmo Tiger II (two-seat type/single-seat type) is added to the mecha collection!",
 			"• The parts are divided with priority given to details, and the form is recreated with a sense of perspective that is reminiscent of the movie.",
-			"• A two-seat type and a single-seat type can be selectively assembled."
+			"• Can be selectively assembled into two-seat and single-seat types."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 5
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3385_s_1yjsik47c6i28q4dbutyjc5xzxrq.jpg",
+				"path": "/images/items/01_2457/153_3385.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3385_s_arh78vtd6lfm7dy4o7343jtle87b.jpg",
+				"path": "/images/items/01_2457/155_3385.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3385_s_obyr0gakmc5a4p4kvylc8sajf9nj.jpg",
+				"path": "/images/items/01_2457/156_3385.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3385_s_wu55ipqg2z4z25uhzkny1y285vi7.jpg",
+				"path": "/images/items/01_2457/157_3385.jpg"
+			}
 		],
-		"en": [
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×5"
-		],
-		"en": [
-			"Molded product x 5"
-		]
-	},
-	"images": [
-		"/images/items/01_2457/153_3385.jpg",
-		"/images/items/01_2457/155_3385.jpg",
-		"/images/items/01_2457/156_3385.jpg",
-		"/images/items/01_2457/157_3385.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2457/",
-	"brandIds": [
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"yamato"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5498",
-		"01_5500",
-		"01_3667",
-		"01_3650"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2457/"
 }

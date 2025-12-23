@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ガンダム GP03S(ステイメン)",
 		"en": "MG 1/100 Gundam GP03S (Staymen)"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "g-0083",
+			"url": "https://bandai-hobby.net/series/g-0083/",
+			"ja": "機動戦士ガンダム0083 STARDUST MEMORY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000127907",
+			"url": "http://p-bandai.jp/item/item-1000127907",
+			"ja": "ＭＧ 1/100 MS-06F-2 ザクＩＩ Ｆ２型（ノイエン・ビッター機）"
+		},
+		{
+			"id": "item-1000127908",
+			"url": "http://p-bandai.jp/item/item-1000127908",
+			"ja": "ＭＧ 1/100 MS-06F-2 ザクＩＩ Ｆ２型（キンバライト基地仕様）"
+		},
+		{
+			"id": "item-1000124942",
+			"url": "http://p-bandai.jp/item/item-1000124942",
+			"ja": "ＭＧ 1/100 アナベル・ガトー専用ゲルググ Ver.2.0"
+		},
+		{
+			"id": "item-1000105596",
+			"url": "https://p-bandai.jp/item/item-1000105596",
+			"ja": "ＭＧ 1/100 パワード・ジム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -17,36 +61,34 @@
 		"month": 4
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム 0083」に登場した試作ガンダムの3号機をキット化しました。マスターグレードのみのギミックで、コアファイターは差し替え無しに変形、胴体内部へ収納が可能です。コアファイター以外にオリジナル設定のコアブロックも付いています。前腕部のフォールディングアーム展開ギミックも差し替え無しに完全再現。折り畳みギミックを再現したフォールディングバズーカ、フォールディングシールド、2本のビームサーベルとビームライフルが付いています。"
+			"「機動戦士ガンダム0083」に登場した試作ガンダムの3号機をキット化しました。マスターグレードのみのギミックで、コアファイターは差し替え無しに変形、胴体内部へ収納が可能です。コアファイター以外にオリジナル設定のコアブロックも付いています。前腕部のフォールディングアーム展開ギミックも差し替え無しに完全再現。折り畳みギミックを再現したフォールディングバズーカ、フォールディングシールド、2本のビームサーベルとビームライフルが付いています。"
 		],
 		"en": [
 			"The 3rd model of the prototype Gundam that appeared in \"Mobile Suit Gundam 0083\" has been made into a kit. This is a master grade gimmick, and the core fighter can be transformed and stored inside the fuselage without replacement. In addition to the core fighter, it also comes with an original core block. The folding arm deployment gimmick on the forearm is also completely reproduced without replacement. Comes with a folding bazooka that reproduces the folding gimmick, a folding seal, two beam sabers and a beam rifle."
 		]
 	},
-	"images": [
-		"/images/items/01_1025/153_195.jpg",
-		"/images/items/01_1025/155_195.jpg",
-		"/images/items/01_1025/156_195.jpg",
-		"/images/items/01_1025/157_195.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1025/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"g-0083"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000127907",
-		"item-1000127908",
-		"item-1000124942",
-		"item-1000105596"
-	],
-	"manualId": "0811"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_195_s_rkbjfegomgpiowqtwmw07d7g6h34.jpg",
+				"path": "/images/items/01_1025/153_195.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_195_s_lp9pjjd6q0laliuqzgvchn3bkk5n.jpg",
+				"path": "/images/items/01_1025/155_195.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_195_s_j463peawguz8uk0rf4cuc7b4upgr.jpg",
+				"path": "/images/items/01_1025/156_195.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_195_s_hzruql11l4wubgkxe3e64qp3nexc.jpg",
+				"path": "/images/items/01_1025/157_195.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1025/"
 }

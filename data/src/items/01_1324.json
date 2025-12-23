@@ -5,6 +5,50 @@
 		"ja": "HGBD 1/144 モモカプル",
 		"en": "HGBD 1/144 Momokapur"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 19
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"モモが使用する、カプルをベースとしたペンギンモチーフのカスタム機が登場！",
@@ -26,51 +69,61 @@
 		],
 		"en": [
 			"A custom machine with a penguin motif based on Kaple, used by Momo, is now available!",
-			"• A small couple is included, allowing you to expand the main body and board it!"
+			"• Comes with a small couple, allowing you to expand the main body and board it!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"プチカプル×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "プチカプル"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 9
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2252_s_ycteduyh9jr24vu8rhostzfhg49n.jpg",
+				"path": "/images/items/01_1324/153_2252.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2252_s_2nol63g9f1kcugc96csvjelt7v1y.jpg",
+				"path": "/images/items/01_1324/155_2252.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2252_s_v1zdn7k6wbeun9pxb36ge0wwu0nd.jpg",
+				"path": "/images/items/01_1324/156_2252.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2252_s_w0p9hdctnt2rb8tgk7x7pxolv63q.jpg",
+				"path": "/images/items/01_1324/157_2252.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2252_s_gfu5wasepm9zd8ujlxs1q412wu21.jpg",
+				"path": "/images/items/01_1324/158_2252.jpg"
+			}
 		],
-		"en": [
-			"Petit couple x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×9",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 9",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1324/153_2252.jpg",
-		"/images/items/01_1324/155_2252.jpg",
-		"/images/items/01_1324/156_2252.jpg",
-		"/images/items/01_1324/157_2252.jpg",
-		"/images/items/01_1324/158_2252.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1324/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "1018"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1324/"
 }

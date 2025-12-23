@@ -5,6 +5,37 @@
 		"ja": "Bトレインショーティー 485系 ボンネット RED EXPRESS",
 		"en": "B Train Shorty 485 Series Bonnet RED EXPRESS"
 	},
+	"brands": [
+		{
+			"id": "train",
+			"url": "https://bandai-hobby.net/brand/train/",
+			"ja": "Bトレインショーティー"
+		}
+	],
+	"series": [],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_1276",
+			"url": "https://bandai-hobby.net/item/01_1276/",
+			"ja": "Bトレインショーティー 伊豆箱根鉄道3000系　ラブライブ！サンシャイン!!　ラッピング電車　HAPPY PARTY TRAIN　3種アソート"
+		},
+		{
+			"id": "01_1277",
+			"url": "https://bandai-hobby.net/item/01_1277/",
+			"ja": "Bトレインショーティー 伊豆箱根鉄道3000系　ラブライブ！サンシャイン!!  ラッピング電車　HAPPY PARTY TRAIN 1"
+		},
+		{
+			"id": "01_1278",
+			"url": "https://bandai-hobby.net/item/01_1278/",
+			"ja": "Bトレインショーティー 伊豆箱根鉄道3000系　ラブライブ！サンシャイン!!  ラッピング電車　HAPPY PARTY TRAIN 2"
+		},
+		{
+			"id": "01_1280",
+			"url": "https://bandai-hobby.net/item/01_1280/",
+			"ja": "Bトレインショーティー 伊豆箱根鉄道3000系　ラブライブ！サンシャイン!!  ラッピング電車　HAPPY PARTY TRAIN 3"
+		}
+	],
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -36,35 +67,48 @@
 			"・Compatible with traveling trolley T"
 		]
 	},
-	"contents": {
-		"ja": [
-			"2両入り（先頭車×1、中間車×1）",
-			"バリエーションパーツ付属　（初期車・後期車用中間車屋根〈パンタ付き、パンタなし〉計4枚入り）",
-			"NewSGフレーム",
-			"ステッカー"
+	"contents": [
+		{
+			"name": {
+				"ja": "2両入り（先頭車"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "、中間車×1）"
+			}
+		},
+		{
+			"name": {
+				"ja": "バリエーションパーツ付属　（初期車・後期車用中間車屋根〈パンタ付き、パンタなし〉計4枚入り）"
+			}
+		},
+		{
+			"name": {
+				"ja": "NewSGフレーム"
+			}
+		},
+		{
+			"name": {
+				"ja": "ステッカー"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1999_s_915nvhmeraqrjb52lhjjbimcdwf0.jpg",
+				"path": "/images/items/01_1065/153_1999.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1999_s_kpuux4geamat8rjd16nhbezvghp2.jpg",
+				"path": "/images/items/01_1065/155_1999.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_1999_s_w81zexw6hzynzlm9wa7s2cisifzu.jpg",
+				"path": "/images/items/01_1065/156_1999.jpg"
+			}
 		],
-		"en": [
-			"2 cars (first car x 1, middle car x 1)",
-			"Variation parts included (intermediate car roof for early and late cars (with and without pantographs), 4 pieces in total)",
-			"NewSG frame",
-			"Sticker"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1065/153_1999.jpg",
-		"/images/items/01_1065/155_1999.jpg",
-		"/images/items/01_1065/156_1999.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1065/",
-	"brandIds": [
-		"train"
-	],
-	"seriesIds": [],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1065/"
 }

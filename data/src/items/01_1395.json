@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 バイアラン",
 		"en": "HGUC 1/144 Byarran"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士Ζガンダム』に登場するバイアランが、新規造形によりHG最新のプロポーションで立体化！",
@@ -29,52 +77,66 @@
 			"• Details have been pursued down to the color reproduction of the lining parts, and the head is a completely new model of the \"Z\" version of Byarran!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・サーベル×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 15
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2319_s_yq953hayelhbjrnebrkf1kzcuxzt.jpg",
+				"path": "/images/items/01_1395/153_2319.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2319_s_0uo8pdkjfwyva8mnx8div90oh17v.jpg",
+				"path": "/images/items/01_1395/155_2319.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2319_s_775848gyqzeu5a1es3vqh4ehmkeb.jpg",
+				"path": "/images/items/01_1395/156_2319.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2319_s_wxm5j9jn2xusw2adyqycpnlhd76e.jpg",
+				"path": "/images/items/01_1395/157_2319.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2319_s_lmqpv0lr9w3xs9mi4eb3m91fk6lm.jpg",
+				"path": "/images/items/01_1395/158_2319.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2319_s_2xl4ikxex19wsfer2qt8ctt3sy13.jpg",
+				"path": "/images/items/01_1395/159_2319.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2319_s_wudsk8xcbficyf7gqwsydexoy8zd.jpg",
+				"path": "/images/items/01_1395/189_2319.jpg"
+			}
 		],
-		"en": [
-			"Beam saber x2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×15",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 15",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1395/153_2319.jpg",
-		"/images/items/01_1395/155_2319.jpg",
-		"/images/items/01_1395/156_2319.jpg",
-		"/images/items/01_1395/157_2319.jpg",
-		"/images/items/01_1395/158_2319.jpg",
-		"/images/items/01_1395/159_2319.jpg",
-		"/images/items/01_1395/189_2319.jpg",
-		"/images/items/01_1395/01_1395_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1395/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
-	"manualId": "0482"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1395/"
 }

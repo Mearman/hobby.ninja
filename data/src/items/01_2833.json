@@ -5,6 +5,49 @@
 		"ja": "BB戦士374 ガンダムレギルス",
 		"en": "BB Senshi 374 Gundam Regillus"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "age",
+			"url": "https://bandai-hobby.net/series/age/",
+			"ja": "機動戦士ガンダムAGE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2834",
+			"url": "https://bandai-hobby.net/item/01_2834/",
+			"ja": "BB戦士376 ガンダムAGE-FX"
+		},
+		{
+			"id": "01_5759",
+			"url": "https://bandai-hobby.net/item/01_5759/",
+			"ja": "リアルSDガンダム BB戦士372 ガンダムAGE-3(ノーマル フォートレス オービタル)"
+		},
+		{
+			"id": "01_5753",
+			"url": "https://bandai-hobby.net/item/01_5753/",
+			"ja": "BB戦士371 ガンダムAGE-2（ノーマル・ダブルバレット）"
+		},
+		{
+			"id": "01_4605",
+			"url": "https://bandai-hobby.net/item/01_4605/",
+			"ja": "BB戦士369 ガンダムAGE-1"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -20,32 +63,32 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"• ヴェイガン新型MSがSDとなって登場。 • ビームサーベルを装備できる。 • レギルスコアと胴体は分離可能。 • 瞳切り替えギミックにより、ヴェイガンタイプとガンダムタイプを選べる。 成形品×8、ホイルシール×1、組立説明書×1"
+			"• ヴェイガン新型MSがSDとなって登場。 ■ビームサーベルを装備できる。 ■レギルスコアと胴体は分離可能。 ■瞳切り替えギミックにより、ヴェイガンタイプとガンダムタイプを選べる。 成形品×8、ホイルシール×1、組立説明書×1"
 		],
 		"en": [
-			"• Vagan's new MS is now available as SD. • Beam saber can be equipped. • Regill core and body can be separated. • With the pupil switching gimmick, you can choose between Vagan type and Gundam type. Molded product x 8, foil seal x 1, assembly manual x 1"
+			"• Vagan's new MS is now available as SD. ■Can be equipped with a beam saber. ■Regil core and body can be separated. ■With the pupil switching gimmick, you can choose between Vagan type and Gundam type. Molded product x 8, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_2833/153_3817.jpg",
-		"/images/items/01_2833/155_3817.jpg",
-		"/images/items/01_2833/156_3817.jpg",
-		"/images/items/01_2833/157_3817.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2833/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2834",
-		"01_5759",
-		"01_5753",
-		"01_4605"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3817_s_7v0mof73zwayxd4u36zh6162rzkk.jpg",
+				"path": "/images/items/01_2833/153_3817.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3817_s_lpjq51izluhnid5e7wurtepsyqb8.jpg",
+				"path": "/images/items/01_2833/155_3817.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3817_s_91ptm60om52rj17oftsyo6fzpsty.jpg",
+				"path": "/images/items/01_2833/156_3817.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3817_s_82we63sa6dcpuxftpz4u9angycg9.jpg",
+				"path": "/images/items/01_2833/157_3817.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2833/"
 }

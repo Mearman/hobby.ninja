@@ -5,6 +5,65 @@
 		"ja": "ＨＧ 1/144 ＩＩネオ・ジオング（ナラティブVer.）",
 		"en": "HG 1/144 II Neo Zeon (Narrative Ver.)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "narrative",
+			"url": "https://bandai-hobby.net/series/narrative/",
+			"ja": "機動戦士ガンダムNT[ナラティブ]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000213253",
+			"url": "https://p-bandai.jp/item/item-1000213253/",
+			"ja": "ＭＧ 1/100 ナラティブガンダム Ｃ装備 Ｖｅｒ．Ｋａ用 Ｂ装備拡張セット"
+		},
+		{
+			"id": "item-1000213251",
+			"url": "https://p-bandai.jp/item/item-1000213251/",
+			"ja": "ＭＧ 1/100 ナラティブガンダム Ｂ装備 Ｖｅｒ．Ｋａ"
+		},
+		{
+			"id": "01_5039",
+			"url": "https://bandai-hobby.net/item/01_5039/",
+			"ja": "HG 1/144 ナラティブガンダム C装備 [覚醒イメージカラー]"
+		},
+		{
+			"id": "01_5038",
+			"url": "https://bandai-hobby.net/item/01_5038/",
+			"ja": "HG 1/144 ナラティブガンダム A装備 [クリアカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 28600,
 		"currency": "JPY",
@@ -17,32 +76,14 @@
 		"month": 2
 	},
 	"targetAge": 8,
-	"scale": "1/144",
-	"images": [
-		"/images/items/01_2141/153_3093.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2141/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla",
-		"hguc"
-	],
-	"seriesIds": [
-		"narrative"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000213253",
-		"item-1000213251",
-		"01_5039",
-		"01_5038"
-	],
-	"manualId": "2537",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3093_o_1ctd50o111tk51osd1mje1hno1ctt23.jpg",
+				"path": "/images/items/01_2141/153_3093.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2141/"
 }

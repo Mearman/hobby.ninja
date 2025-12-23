@@ -5,6 +5,34 @@
 		"ja": "ＨＧ 1/300 ダークゴウザウラー",
 		"en": "HG 1/300 Dark Gowsaurer"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		},
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gosaurar",
+			"url": "https://bandai-hobby.net/series/gosaurar/",
+			"ja": "熱血最強ゴウザウラー"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/300",
 	"price": {
 		"amount": 5720,
 		"currency": "JPY",
@@ -17,24 +45,14 @@
 		"month": 5
 	},
 	"targetAge": 15,
-	"scale": "1/300",
-	"images": [
-		"/images/items/01_2187/153_3134.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2187/",
-	"brandIds": [
-		"pb_charapla",
-		"hg"
-	],
-	"seriesIds": [
-		"gosaurar"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3134_o_1d29gv0p8o1v1lvr1frg17iqs0f23.jpg",
+				"path": "/images/items/01_2187/153_3134.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2187/"
 }

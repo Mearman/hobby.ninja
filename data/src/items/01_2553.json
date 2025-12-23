@@ -5,6 +5,43 @@
 		"ja": "HG 蒼流丸",
 		"en": "HG Soryumaru"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5944",
+			"url": "https://bandai-hobby.net/item/01_5944/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機)"
+		},
+		{
+			"id": "01_5946",
+			"url": "https://bandai-hobby.net/item/01_5946/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) デラックスセット"
+		},
+		{
+			"id": "01_5578",
+			"url": "https://bandai-hobby.net/item/01_5578/",
+			"ja": "HG アシュセイヴァー"
+		},
+		{
+			"id": "item-1000223114",
+			"url": "https://p-bandai.jp/item/item-1000223114/",
+			"ja": "ＨＧ 1/144 ブラッカリィ・タイプ"
+		}
+	],
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -30,55 +67,98 @@
 		"en": [
 			"Shocking collaboration! Plastic Model Standard Series HG x Completed Figure Brand S.H.Figuarts!",
 			"• Shocking collaboration between HG and S.H.Figuarts!",
-			"• You can transform Soryuumaru and combine it with the separately sold \"S.H.Figuarts TAMASHII GIRL AOI\"! Get into stylish bike mode!",
-			"• Two patterns of bike mode are possible by swapping the front and rear.",
+			"• Soryuumaru can be transformed and combined with the separately sold \"S.H.Figuarts TAMASHII GIRL AOI\"! Get into stylish bike mode!",
+			"• Two bike modes are possible by swapping the front and rear.",
 			"• The included sword can be loaded into a matchlock gun!",
-			"• A special color action base 5 is included."
+			"• Special color action base 5 is included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"火縄銃×1",
-			"仕込み刀×1",
-			"軍配型シールド×1",
-			"アクションベース5×1",
-			"バイク台座×1",
-			"リアリスティックデカール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "火縄銃"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "仕込み刀"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "軍配型シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アクションベース5"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バイク台座"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3479_s_cop053as9zliac5r8r8e6d9a41gr.jpg",
+				"path": "/images/items/01_2553/153_3479.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3479_s_bdveslounezltilhttroxe02w7wm.jpg",
+				"path": "/images/items/01_2553/155_3479.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3479_s_xeajqe04lgr4f5slcee7ndlv11u5.jpg",
+				"path": "/images/items/01_2553/156_3479.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3479_s_wr46jluur5pi8gbxwmxs3bpckfa9.jpg",
+				"path": "/images/items/01_2553/157_3479.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3479_s_f2zv0rsvyq9oj3cx5rlgdzkr571g.jpg",
+				"path": "/images/items/01_2553/158_3479.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3479_s_d1fa2ps7vhc1tr68wpzpjnitz2bd.jpg",
+				"path": "/images/items/01_2553/159_3479.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3479_s_8wbmgd0bj26qs28or4efk4iiksbo.jpg",
+				"path": "/images/items/01_2553/189_3479.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3479_s_l639zef7807q9dsld0dcsorgu9t9.jpg",
+				"path": "/images/items/01_2553/190_3479.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3479_s_0gqlhjr6k4uysvdf0kkz3vwuvqhz.jpg",
+				"path": "/images/items/01_2553/191_3479.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3479_s_akr5la97foa98n18uw6ppgjj142m.jpg",
+				"path": "/images/items/01_2553/192_3479.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_3479_s_x2lgjc6izj5kwu4nbs3281vy75a8.jpg",
+				"path": "/images/items/01_2553/193_3479.jpg"
+			}
 		],
-		"en": [
-			"Matchlock gun x1",
-			"Preparation sword x 1",
-			"Military type Seal × 1",
-			"action base 5×1",
-			"Bike pedestal x 1",
-			"Realistic decal x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2553/153_3479.jpg",
-		"/images/items/01_2553/155_3479.jpg",
-		"/images/items/01_2553/156_3479.jpg",
-		"/images/items/01_2553/157_3479.jpg",
-		"/images/items/01_2553/158_3479.jpg",
-		"/images/items/01_2553/159_3479.jpg",
-		"/images/items/01_2553/189_3479.jpg",
-		"/images/items/01_2553/190_3479.jpg",
-		"/images/items/01_2553/191_3479.jpg",
-		"/images/items/01_2553/192_3479.jpg",
-		"/images/items/01_2553/193_3479.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2553/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5944",
-		"01_5946",
-		"01_5578",
-		"item-1000223114"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2553/"
 }

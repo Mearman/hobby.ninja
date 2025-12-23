@@ -2,9 +2,46 @@
 	"id": "01_2515",
 	"type": "item",
 	"name": {
-		"ja": "BB戦士345 姜維ガンダム F91",
-		"en": "BB Senshi 345 Jiang Wei Gundam F91"
+		"ja": "BB戦士345 姜維ガンダムF91",
+		"en": "BB Senshi 345 Jiang Wei GundamF91"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -26,23 +63,22 @@
 			"-He was a military commander from the Western region, but he had doubts about Sima Yi's methods and headed to Xiang. -Transforms from military commander mode to mysterious tactician form. Various weapons are included. -Effect parts on the armor and back can be displayed on the pedestal. Molded product x 3, Seal x 1, Assembly manual (with manga)"
 		]
 	},
-	"images": [
-		"/images/items/01_2515/153_3440.jpg",
-		"/images/items/01_2515/155_3440.jpg",
-		"/images/items/01_2515/156_3440.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2515/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3440_s_5qg4c3352ltp62dq3rh7hdj0v7kl.jpg",
+				"path": "/images/items/01_2515/153_3440.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3440_s_sygzpd2clontu0gly7hnmtjud02h.jpg",
+				"path": "/images/items/01_2515/155_3440.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3440_s_ravtj4g0f6m36vqi0cmkzxopqizx.jpg",
+				"path": "/images/items/01_2515/156_3440.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2515/"
 }

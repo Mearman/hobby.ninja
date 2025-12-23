@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 局地型ガンダム(北米戦仕様)",
 		"en": "HG 1/144 Local Gundam (North American War Specification)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "origin",
+			"url": "https://bandai-hobby.net/series/origin/",
+			"ja": "機動戦士ガンダム THE ORIGIN"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3711",
+			"url": "https://bandai-hobby.net/item/01_3711/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)[クリアカラー]"
+		},
+		{
+			"id": "01_2828",
+			"url": "https://bandai-hobby.net/item/01_2828/",
+			"ja": "HG 1/144 ガンダムベース限定 ザクII TYPE C-6/R6 [ペインティングモデル]"
+		},
+		{
+			"id": "01_2707",
+			"url": "https://bandai-hobby.net/item/01_2707/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)"
+		},
+		{
+			"id": "item-1000135687",
+			"url": "https://p-bandai.jp/item/item-1000135687",
+			"ja": "ＨＧ 1/144 MS-05S シャア専用ザクＩ（ＬＩＭＩＴＥＤ ＭＯＤＥＬ）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• ガンダムエースで連載中の「機動戦士ガンダム THE ORIGIN MSD ククルス・ドアンの島」に登場する黒い局地型ガンダムがHG化！",
@@ -31,61 +74,98 @@
 			"• The characteristic red line mark all over the body is reproduced with a newly designed decal!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"MS用マシンガン×1",
-			"シールド×1",
-			"ビーム・サーベル×3",
-			"ショルダー・キャノン×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "MS用マシンガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "ショルダー・キャノン"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 11
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "テトロンシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2062_s_0361gsbpdq6h15qzvyg6zvlb5hb0.jpg",
+				"path": "/images/items/01_1130/153_2062.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2062_s_pguhi5lfr7bgsm1l1cv8c90lc6g0.jpg",
+				"path": "/images/items/01_1130/155_2062.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2062_s_kbcwgd0wvvkqgj38whmfj63hx70p.jpg",
+				"path": "/images/items/01_1130/156_2062.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2062_s_nxf7zup46w3v1s3o4t8f1an49t5s.jpg",
+				"path": "/images/items/01_1130/157_2062.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2062_s_ns6l55syx3p86q21zqbiwmbp42yd.jpg",
+				"path": "/images/items/01_1130/158_2062.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2062_s_4wlw1vs1ziw8ly5so82jun47jq2p.jpg",
+				"path": "/images/items/01_1130/159_2062.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2062_s_ebk3z9cmk0711cd4qjlxj64eaxps.jpg",
+				"path": "/images/items/01_1130/189_2062.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2062_s_npr67wp4rkwwcmgzkowqadunsl7z.jpg",
+				"path": "/images/items/01_1130/190_2062.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2062_s_ne1djc9zy3xgjy5lkooyje1w4xbx.jpg",
+				"path": "/images/items/01_1130/191_2062.jpg"
+			}
 		],
-		"en": [
-			"MS machine gun x 1",
-			"Seal × 1",
-			"Beam saber x3",
-			"Shoulder cannon x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×11",
-			"ホイルシール×1",
-			"テトロンシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded products x 11",
-			"Foil Seal×1",
-			"Tetron Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1130/153_2062.jpg",
-		"/images/items/01_1130/155_2062.jpg",
-		"/images/items/01_1130/156_2062.jpg",
-		"/images/items/01_1130/157_2062.jpg",
-		"/images/items/01_1130/158_2062.jpg",
-		"/images/items/01_1130/159_2062.jpg",
-		"/images/items/01_1130/189_2062.jpg",
-		"/images/items/01_1130/190_2062.jpg",
-		"/images/items/01_1130/191_2062.jpg",
-		"/images/items/01_1130/01_1130_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1130/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"origin"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3711",
-		"01_2828",
-		"01_2707",
-		"item-1000135687"
-	],
-	"manualId": "0052"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1130/"
 }

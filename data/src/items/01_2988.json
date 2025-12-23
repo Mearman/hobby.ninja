@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "ハロプラ 黒い三連ハロ[クリアカラー]",
-		"en": "Haropura black triple halo [clear color]"
+		"en": "HAROPLA BLACK TRI-HARO [CLEAR]"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -27,33 +65,28 @@
 			"• ３機分のナンバーを再現できるホイルシールが付属！"
 		],
 		"en": [
-			"From Haropura, which reproduces the internal structure and can be easily assembled, the black triple star halo is now available in clear color!",
-			"• The ears can be opened and closed, and the limbs can be recreated by replacing them!",
-			"• Can be connected with other Haropla and Petitgguy!",
+			"From halopla, which can be easily combined while reproducing the internal structure, a halo with a black triple star specification is now available in clear color!",
+			"• The ears are opened and closed, and the limbs are reproduced by replacement!",
+			"• Can be connected with other haloplas and petit guys!",
 			"• Surplus parts can be stored on the pedestal!",
-			"• Comes with foil seals that can reproduce the numbers of 3 aircraft!"
+			"• Comes with a foil seal that can reproduce the numbers of 3 aircraft!"
 		]
 	},
-	"images": [
-		"/images/items/01_2988/1000160171_1.jpg",
-		"/images/items/01_2988/1000160171_2.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160171_1.jpg",
+				"path": "/images/items/01_2988/1000160171_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160171_2.jpg",
+				"path": "/images/items/01_2988/1000160171_2.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2988/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2988/"
 	}
 }

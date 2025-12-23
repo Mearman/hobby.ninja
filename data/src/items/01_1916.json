@@ -5,6 +5,49 @@
 		"ja": "BB戦士238 ゴッグ&アッガイ&ゾック",
 		"en": "BB Senshi 238 Gog & Acguy & Zock"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_4789",
+			"url": "https://bandai-hobby.net/item/01_4789/",
+			"ja": "SD ゴッグ&アッガイ&ゾック Ver.GFT トリコロールペイント"
+		},
+		{
+			"id": "01_4783",
+			"url": "https://bandai-hobby.net/item/01_4783/",
+			"ja": "SD RX-78-2 ガンダム Ver.GFT"
+		},
+		{
+			"id": "01_2038",
+			"url": "https://bandai-hobby.net/item/01_2038/",
+			"ja": "BB戦士240 神武兜頑駄無（カブトガンダム）"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -25,27 +68,30 @@
 			"Plastic models of Gog, Acguy, and Zock that appear in \"Mobile Suit Gundam\". First appearance as a BB Senshi. The characteristics of each aircraft are well reproduced, such as Gogg whose claws can move freely, Acguy whose claws can expand and contract with replacement parts, and Zock which reproduces the design of the front and back sides."
 		]
 	},
-	"images": [
-		"/images/items/01_1916/153_284.jpg",
-		"/images/items/01_1916/155_284.jpg",
-		"/images/items/01_1916/156_284.jpg",
-		"/images/items/01_1916/157_284.jpg",
-		"/images/items/01_1916/158_284.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1916/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_4789",
-		"01_4783",
-		"01_2038"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_284_s_4ru7a0onf7nuctgybym4or7yv66h.jpg",
+				"path": "/images/items/01_1916/153_284.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_284_s_z8gv06ji650tuxfnga2qvuzwgu0t.jpg",
+				"path": "/images/items/01_1916/155_284.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_284_s_3od3ar3k6hf7huxpnm2d7h315y9j.jpg",
+				"path": "/images/items/01_1916/156_284.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_284_s_8nl7hpjoxowvvqvdm8uf7le6wu1f.jpg",
+				"path": "/images/items/01_1916/157_284.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_284_s_rgql3nllcyrg7o2qky9hylssgjxy.jpg",
+				"path": "/images/items/01_1916/158_284.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1916/"
 }

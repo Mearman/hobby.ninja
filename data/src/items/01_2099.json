@@ -5,6 +5,44 @@
 		"ja": "1/12 R5-J2",
 		"en": "1/12 R5-J2"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3513",
+			"url": "https://bandai-hobby.net/item/01_3513/",
+			"ja": "ビークルモデル レイザー・クレスト"
+		}
+	],
+	"scale": "1/12",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 22
 	},
 	"targetAge": 15,
-	"scale": "1/12",
 	"description": {
 		"ja": [
 			"デス・スターIIに配備された帝国のアストロメク・ドロイドがドロイド・コレクションにラインアップ！",
@@ -26,55 +63,87 @@
 		],
 		"en": [
 			"The Imperial astromech droid deployed on Death Star II is now available in the droid collection!",
-			"• Droid Accessory that can reproduce R2-D2 from each episode is included. R5-J2 comes with a computer interface arm storage box for R2-D2."
+			"• Comes with a droid Accessory that can recreate R2-D2 from each episode. R5-J2 comes with a computer interface arm storage box for R2-D2."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"R2-D2用コンピューター・インターフェース・アーム収納ボックス×2",
-			"デイスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "R2-D2用コンピューター・インターフェース・アーム収納ボックス"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "デイスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 5
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3047_s_bmej9vn8ndjty8fdc7v8ell9dw2h.jpg",
+				"path": "/images/items/01_2099/153_3047.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3047_s_ajtrhe09nbnmhr98qgpu3tasbss9.jpg",
+				"path": "/images/items/01_2099/155_3047.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3047_s_eymcp30ot86dbkp1g50pv4780zuj.jpg",
+				"path": "/images/items/01_2099/156_3047.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3047_s_tmaockvlq3kzdhxwm9uj7aos4l9a.jpg",
+				"path": "/images/items/01_2099/157_3047.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3047_s_k949g1j2n7wevtl1vnj5g94as1r0.jpg",
+				"path": "/images/items/01_2099/158_3047.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3047_s_ka6sb90wrrixhlybe2dsym1d28te.jpg",
+				"path": "/images/items/01_2099/159_3047.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3047_s_mn7km7d05uprj08pcqqkzs2eo0wk.jpg",
+				"path": "/images/items/01_2099/189_3047.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3047_s_6vf5hog3rxq2fe42txwk4ix9lpje.jpg",
+				"path": "/images/items/01_2099/190_3047.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3047_s_u7tocvsbgk0co55tvizahv04sljn.jpg",
+				"path": "/images/items/01_2099/191_3047.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3047_s_h599x0xkxfssk2nm1o4400njkb0d.jpg",
+				"path": "/images/items/01_2099/192_3047.jpg"
+			}
 		],
-		"en": [
-			"Computer interface arm storage box for R2-D2 x 2",
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×5",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 5",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2099/153_3047.jpg",
-		"/images/items/01_2099/155_3047.jpg",
-		"/images/items/01_2099/156_3047.jpg",
-		"/images/items/01_2099/157_3047.jpg",
-		"/images/items/01_2099/158_3047.jpg",
-		"/images/items/01_2099/159_3047.jpg",
-		"/images/items/01_2099/189_3047.jpg",
-		"/images/items/01_2099/190_3047.jpg",
-		"/images/items/01_2099/191_3047.jpg",
-		"/images/items/01_2099/192_3047.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2099/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3513"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2099/"
 }

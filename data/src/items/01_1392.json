@@ -2,9 +2,58 @@
 	"id": "01_1392",
 	"type": "item",
 	"name": {
-		"ja": "HGUC 1/144 ユニコーンガンダム 3号機 フェネクス (デストロイモード) (ナラティブVer.)",
+		"ja": "HGUC 1/144 ユニコーンガンダム3号機 フェネクス (デストロイモード) (ナラティブVer.)",
 		"en": "HGUC 1/144 Unicorn Gundam Unit 3 Phenex (Destroy Mode) (Narrative Ver.)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "narrative",
+			"url": "https://bandai-hobby.net/series/narrative/",
+			"ja": "機動戦士ガンダムNT[ナラティブ]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5039",
+			"url": "https://bandai-hobby.net/item/01_5039/",
+			"ja": "HG 1/144 ナラティブガンダム C装備 [覚醒イメージカラー]"
+		},
+		{
+			"id": "01_5038",
+			"url": "https://bandai-hobby.net/item/01_5038/",
+			"ja": "HG 1/144 ナラティブガンダム A装備 [クリアカラー]"
+		},
+		{
+			"id": "01_3460",
+			"url": "https://bandai-hobby.net/item/01_3460/",
+			"ja": "HG 1/144 シルヴァ・バレト・サプレッサー[クリアカラー]"
+		},
+		{
+			"id": "01_2666",
+			"url": "https://bandai-hobby.net/item/01_2666/",
+			"ja": "HG 1/144 ガンダムベース限定 ナラティブガンダム B装備"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3080,
 		"currency": "JPY",
@@ -18,63 +67,72 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"11月に劇場公開予定の『機動戦士ガンダム NT』より、新型のアームド・アーマーDEを備えたフェネクスが登場！",
+			"11月に劇場公開予定の『機動戦士ガンダムNT』より、新型のアームド・アーマーDEを備えたフェネクスが登場！",
 			"• 金色の機体カラーはメタリック成形色で再現され、組み立てるだけでゴールドの輝く質感を実現！",
 			"• 尾のように伸びた新型パーツはアームド・アーマーDEに接続可能で、ブロックごとに可動し、根元もボールジョイントで自由に可動！"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam NT\" scheduled to be released in theaters on November 11th, a Phenex equipped with a new type of armed armor DE appears!",
-			"• The golden aircraft color is reproduced with metallic molding color, and you can achieve the shiny gold texture just by assembling!",
+			"From \"Mobile Suit GundamNT\" scheduled to be released in theaters on November 11th, a Phenex equipped with a new type of armed armor DE appears!",
+			"• The golden aircraft color is reproduced with metallic molding color, and the shiny gold texture can be achieved just by assembling!",
 			"• The new part that extends like a tail can be connected to Armed Armor DE, and can be moved block by block, and the base can also be moved freely with a ball joint!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"アームド・アーマーDE×2",
-			"ビーム・マグナム×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "アームド・アーマーDE"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビーム・マグナム"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 10
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2316_s_f4dj1voc7sha5uojp8zc30mgy7rz.jpg",
+				"path": "/images/items/01_1392/153_2316.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2316_s_697vunazt6l4u1z3v1j356nfasom.jpg",
+				"path": "/images/items/01_1392/155_2316.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2316_s_t1rvh102uld0plwa8ac7pqoywtmp.jpg",
+				"path": "/images/items/01_1392/156_2316.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2316_s_h5ffwvbqhpdv7f3xk2zvvrpltgz0.jpg",
+				"path": "/images/items/01_1392/157_2316.jpg"
+			}
 		],
-		"en": [
-			"Armed Armor DE×2",
-			"Beam Magnum x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×10",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 10",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1392/153_2316.jpg",
-		"/images/items/01_1392/155_2316.jpg",
-		"/images/items/01_1392/156_2316.jpg",
-		"/images/items/01_1392/157_2316.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1392/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"narrative"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5039",
-		"01_5038",
-		"01_3460",
-		"01_2666"
-	],
-	"manualId": "1034"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1392/"
 }

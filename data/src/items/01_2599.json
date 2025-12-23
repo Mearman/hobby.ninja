@@ -5,6 +5,49 @@
 		"ja": "ぷちりっつ マスター/女主人公",
 		"en": "Petitrits Master/Female Protagonist"
 	},
+	"brands": [
+		{
+			"id": "petit_rits",
+			"url": "https://bandai-hobby.net/brand/petit_rits/",
+			"ja": "ぷちりっつ"
+		}
+	],
+	"series": [
+		{
+			"id": "fate",
+			"url": "https://bandai-hobby.net/series/fate/",
+			"ja": "Fate/Grand Order"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2844",
+			"url": "https://bandai-hobby.net/item/01_2844/",
+			"ja": "ぷちりっつ セイバー/アルトリア・ペンドラゴン"
+		},
+		{
+			"id": "01_2767",
+			"url": "https://bandai-hobby.net/item/01_2767/",
+			"ja": "ぷちりっつ アーチャー/ギルガメッシュ"
+		},
+		{
+			"id": "01_2634",
+			"url": "https://bandai-hobby.net/item/01_2634/",
+			"ja": "ぷちりっつ セイバー/沖田総司"
+		},
+		{
+			"id": "01_2600",
+			"url": "https://bandai-hobby.net/item/01_2600/",
+			"ja": "ぷちりっつ セイバー/宮本武蔵"
+		}
+	],
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -30,57 +73,90 @@
 		],
 		"en": [
 			"From \"Fate/Grand Order\", the female protagonist who becomes the player's alter ego is added to the Petitrits series!",
-			"• Colorful and easy-to-assemble kit that utilizes Iropla. The simple parts structure makes it easy to assemble, even for beginners.",
-			"• Although she has three heads, she maintains the character's distinctive silhouette line and is cutely deformed without losing its impression.",
+			"• A colorful and easy-to-assemble kit that utilizes Iropla. The simple parts structure makes it easy to assemble, even for beginners.",
+			"• Although he has three heads, he maintains the character's distinctive silhouette line and is cutely deformed without losing his impression.",
 			"• The upper body can be moved to create expressive poses without changing the proportions.",
 			"• The command spell on the right hand is reproduced with Seal. You can also display it in a distinctive pose by changing the wrists.",
-			"• Comes with a smiling expression part for Mash that can be attached to the separately sold \"Puchitrit Seal Dar/Mash Kyrielight\".",
-			"• A special pedestal based on the character is included."
+			"• Comes with a smiling expression part for Mash that can be attached to the separately sold \"Petitrits Seal Dar/Mash Kyrielight\".",
+			"• A special pedestal inspired by the character is included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"握り手（右）×1",
-			"平手（右）×1",
-			"平手（左）×1",
-			"マシュ用笑顔表情パーツ×1",
-			"台座×1",
-			"カイナスシール×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "握り手（右）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "平手（右）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "平手（左）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マシュ用笑顔表情パーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "台座"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "カイナスシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3521_s_5ech8sa6lqqy67no6wbq0p6roj7e.jpg",
+				"path": "/images/items/01_2599/153_3521.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3521_s_kc49koiu547hn35a9hf03e7076zh.jpg",
+				"path": "/images/items/01_2599/155_3521.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3521_s_svlebqkxcm5mtx92n7qnki21li7w.jpg",
+				"path": "/images/items/01_2599/156_3521.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3521_s_1a7ngrnvh5v3418t9e2x5ozie6fi.jpg",
+				"path": "/images/items/01_2599/157_3521.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3521_s_sji43blmzvufka6uyp4t02ofc8xz.jpg",
+				"path": "/images/items/01_2599/158_3521.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3521_s_7da6oq6xrmmxha0yajuxdi03yzki.jpg",
+				"path": "/images/items/01_2599/159_3521.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3521_s_hcpk0v34wijdo9tr3fspd6ubm1iu.jpg",
+				"path": "/images/items/01_2599/189_3521.jpg"
+			}
 		],
-		"en": [
-			"Hand grip (right) x 1",
-			"Hirate (right) x 1",
-			"Hirate (left) x 1",
-			"Smile expression parts for Mash x 1",
-			"Pedestal x 1",
-			"Cainus Seal×1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2599/153_3521.jpg",
-		"/images/items/01_2599/155_3521.jpg",
-		"/images/items/01_2599/156_3521.jpg",
-		"/images/items/01_2599/157_3521.jpg",
-		"/images/items/01_2599/158_3521.jpg",
-		"/images/items/01_2599/159_3521.jpg",
-		"/images/items/01_2599/189_3521.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2599/",
-	"brandIds": [
-		"petit_rits"
-	],
-	"seriesIds": [
-		"fate"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2844",
-		"01_2767",
-		"01_2634",
-		"01_2600"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2599/"
 }

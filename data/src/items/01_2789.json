@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 サタニクス ユニット",
 		"en": "HGBD:R 1/144 Satanics Unit"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 935,
 		"currency": "JPY",
@@ -18,12 +62,11 @@
 		"day": 30
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"2020年4月9日より配信予定の『ガンダムビルドダイバーズRe:RISE』2nd Seasonより主人公機の新しい外装アイテムが登場！",
 			"• 今度の武装は「ドリル」。",
-			"• コアドッキングカスタム対応で、別売りのコアガンダム IIに装着可能。"
+			"• コアドッキングカスタム対応で、別売りのコアガンダムIIに装着可能。"
 		],
 		"en": [
 			"New exterior items for the main character's machine will be available from the 2nd Season of \"Gundam Build Divers Re:RISE\" scheduled to be distributed from 202049!",
@@ -31,44 +74,70 @@
 			"• Supports core docking customization and can be attached to Core Gundam II (sold separately)."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"外装パーツ×1式",
-			"フレームパーツ×1式",
-			"台座×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "外装パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "フレームパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "台座"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/189_3776_s_chdjf5uvdy7ookp0x3x0hqc0qewm.jpg",
+				"path": "/images/items/01_2789/189_3776.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_3776_s_d0pqoap2kkx7ouvd0fn6v2c8n8w5.jpg",
+				"path": "/images/items/01_2789/153_3776.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3776_s_r9u26pjih7cl6w8fopby74jqri6v.jpg",
+				"path": "/images/items/01_2789/155_3776.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3776_s_uztskxhyktg4rr0oj068od9so7ua.jpg",
+				"path": "/images/items/01_2789/156_3776.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3776_s_ahcn2ll8wilw5gmwotk2yp81snzd.jpg",
+				"path": "/images/items/01_2789/157_3776.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3776_s_v0u3nb2v1fovb3kzi7scycr0x30v.jpg",
+				"path": "/images/items/01_2789/158_3776.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3776_s_urh2wq5zoxgxpnxwn8a7lxq6z3bm.jpg",
+				"path": "/images/items/01_2789/159_3776.jpg"
+			}
 		],
-		"en": [
-			"Exterior parts x 1 set",
-			"Frame parts x 1 set",
-			"Pedestal x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2789/153_3776.jpg",
-		"/images/items/01_2789/155_3776.jpg",
-		"/images/items/01_2789/156_3776.jpg",
-		"/images/items/01_2789/157_3776.jpg",
-		"/images/items/01_2789/158_3776.jpg",
-		"/images/items/01_2789/159_3776.jpg",
-		"/images/items/01_2789/189_3776.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2789/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0092"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2789/"
 }

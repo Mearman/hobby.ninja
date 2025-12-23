@@ -3,8 +3,62 @@
 	"type": "item",
 	"name": {
 		"ja": "ＭＧ 1/100 ガンダムＦ９１ Ｖｅｒ．２．０（残像イメージカラー）",
-		"en": "MG 1/100 Gundam F91 Ver. 2.0 (afterimage image color)"
+		"en": "MG 1/100 GundamF91 Ver. 2.0 (afterimage image color)"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundamf91",
+			"url": "https://bandai-hobby.net/series/gundamf91/",
+			"ja": "機動戦士ガンダムF91"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3484",
+			"url": "https://bandai-hobby.net/item/01_3484/",
+			"ja": "ＲＥ/100 1/100 ビギナ・ギナ ［エクストラフィニッシュ］"
+		},
+		{
+			"id": "item-1000155996",
+			"url": "https://p-bandai.jp/item/item-1000155996/",
+			"ja": "ＭＧ 1/100 ガンダムＦ９１ Ｖｅｒ．２．０［チタニウムフィニッシュ］"
+		},
+		{
+			"id": "item-1000160843",
+			"url": "https://p-bandai.jp/item/item-1000160843",
+			"ja": "HGUC 1/144 RGM-89R ジェガンＡタイプ（Ｆ９１Ｖｅｒ.）"
+		},
+		{
+			"id": "item-1000160842",
+			"url": "https://p-bandai.jp/item/item-1000160842",
+			"ja": "HGUC 1/144 RGM-89M ジェガンＢタイプ（Ｆ９１Ｖｅｒ.）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -17,30 +71,14 @@
 		"month": 2
 	},
 	"targetAge": 15,
-	"scale": "1/100",
-	"images": [
-		"/images/items/01_2116/153_3070.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2116/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"gundamf91"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3484",
-		"item-1000155996",
-		"item-1000160843",
-		"item-1000160842"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3070_o_1cs8g7ad5pjk19n1gi31f67121623.jpg",
+				"path": "/images/items/01_2116/153_3070.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2116/"
 }

@@ -2,9 +2,46 @@
 	"id": "01_1289",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム Gジェネレーション61 ブルーディスティニー1号機",
-		"en": "SD Gundam G Generation 61 Blue Destiny Unit 1"
+		"ja": "SDガンダムGジェネレーション61 ブルーディスティニー1号機",
+		"en": "SDGundamG Generation 61 Blue Destiny Unit 1"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4975",
+			"url": "https://bandai-hobby.net/item/01_4975/",
+			"ja": "BB戦士 MSN-04FF サザビー"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		}
+	],
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -23,26 +60,22 @@
 			"また、別売りの「ガンダムブルーディスティニー３号機」の武器を装備させることも可能です。"
 		],
 		"en": [
-			"The unit \"Gundam Blue Desty Unit 1 \" that appears in the game \" G Generation\" is commercialized as a plastic model. A gym head for Unit 1 and a Gundam head for Unit 2 are included, so you can play by rearranging them.",
+			"The unit \"Gundam Blue Desty Unit 1\" that appears in the game \"G Generation\" is commercialized as a plastic model. A gym head for Unit 1 and a Gundam head for Unit 2 are included, so you can play by rearranging them.",
 			"It is also possible to equip it with the separately sold \"Gundam Blue Destiny Unit 3\" weapon."
 		]
 	},
-	"images": [
-		"/images/items/01_1289/153_221.jpg",
-		"/images/items/01_1289/155_221.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1289/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_221_s_pxc7i8avzayzmam385jfidh6u348.jpg",
+				"path": "/images/items/01_1289/153_221.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_221_s_pvqfy7q7jtk44j68f76f2gr3jshf.jpg",
+				"path": "/images/items/01_1289/155_221.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1289/"
 }

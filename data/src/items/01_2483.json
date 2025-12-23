@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HGBD:R 1/144 ν-ジオンガンダム",
-		"en": "HGBD:R 1/144 ν-Zeon Gundam"
+		"en": "HGBD:R 1/144 ν-ZeonGundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3410,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 16
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズRe:RISE』 より、ジオン軍のエンブレムを模した大剣を携えた赤きνガンダムが登場！",
@@ -29,50 +72,74 @@
 		"en": [
 			"From \"Gundam Build Divers Re:RISE\" comes a red νGundam carrying a great sword modeled after the Zeon army emblem!",
 			"• Equipped with 4 cape thrusters on the back.",
-			"• Zeonic sword transforms from normal mode to bowgun mode and beam sword mode.",
-			"• A floating display is possible with the stand sold separately."
+			"• Geonic Sword transforms from normal mode to bowgun mode and beam sword mode.",
+			"• Floating display possible with stand sold separately."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ジオニックソード×1",
-			"ビーム刃×1",
-			"スラスター×4",
-			"ホイルシール×1",
-			"専用台座（ジオニックソード用）×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ジオニックソード"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム刃"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "スラスター"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "専用台座（ジオニックソード用）"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3410_s_csktsx6qj0zoipf9lc8ey6ujoqkl.jpg",
+				"path": "/images/items/01_2483/153_3410.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3410_s_igyf6ve1niui2sa0uld1tgck3oxa.jpg",
+				"path": "/images/items/01_2483/155_3410.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3410_s_6qmntpu8q79a4ul3buqir1dsx24c.jpg",
+				"path": "/images/items/01_2483/156_3410.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3410_s_r5z3nozmgi5agzrczjoch51h8p8k.jpg",
+				"path": "/images/items/01_2483/157_3410.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3410_s_pjnzsxzb98rb8ajvd2076hbilffy.jpg",
+				"path": "/images/items/01_2483/158_3410.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3410_s_dvipy3lbd1gzlr9tx51gzq2uzlpv.jpg",
+				"path": "/images/items/01_2483/159_3410.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3410_s_3293ryp2rqokwym39unuxvi3qx8h.jpg",
+				"path": "/images/items/01_2483/189_3410.jpg"
+			}
 		],
-		"en": [
-			"Geonic sword x1",
-			"Beam blade x 1",
-			"Thruster x 4",
-			"Foil Seal×1",
-			"Dedicated pedestal (for Zionic sword) x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2483/153_3410.jpg",
-		"/images/items/01_2483/155_3410.jpg",
-		"/images/items/01_2483/156_3410.jpg",
-		"/images/items/01_2483/157_3410.jpg",
-		"/images/items/01_2483/158_3410.jpg",
-		"/images/items/01_2483/159_3410.jpg",
-		"/images/items/01_2483/189_3410.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2483/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0072"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2483/"
 }

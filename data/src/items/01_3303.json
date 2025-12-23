@@ -5,6 +5,60 @@
 		"ja": "ガンダリウム合金モデル 1/144 RX-78-2 ガンダム",
 		"en": "Gundarium Alloy Model 1/144 RX-78-2 Gundam"
 	},
+	"brands": [
+		{
+			"id": "pb_others",
+			"url": "https://bandai-hobby.net/brand/pb_others/",
+			"ja": "その他シリーズ／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "gundarium_gundam",
+			"url": "https://bandai-hobby.net/brand/gundarium_gundam/",
+			"ja": "ガンダリウム合金モデル"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000209098",
+			"url": "https://p-bandai.jp/item/item-1000209098/",
+			"ja": "ＲＧ 1/144 RX-78-2 ガンダム Ver.2.0用武器セット"
+		},
+		{
+			"id": "item-1000161796",
+			"url": "https://p-bandai.jp/item/item-1000161796/",
+			"ja": "ＨＧ 1/144 RX-78-2 ガンダム［2020年ドバイ国際博覧会 日本館PRアンバサダー］"
+		},
+		{
+			"id": "01_3373",
+			"url": "https://bandai-hobby.net/item/01_3373/",
+			"ja": "ＰＧ ＵＮＬＥＡＳＨＥＤ 1/60 RX-78-2 ガンダム クリアカラーボディ"
+		},
+		{
+			"id": "item-1000126528",
+			"url": "http://p-bandai.jp/item/item-1000126528/",
+			"ja": "ＭＧ 1/100 ジム （ホワイト・ディンゴ隊仕様）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 220000,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－ １ ／ １ ４ ４ ス ケ ー ル に し て 本 物 －",
@@ -76,7 +129,7 @@
 		"en": [
 			"- Real on 1/144 scale -",
 			"BANDAI SPIRITS, who have taken on challenges using various materials in their plastic models, will deliver the Assembly-style <Supreme Gunpla> at the milestone of 40 laps.",
-			"The weight of \"Gundam \" is felt by the earth's gravity, a \" culmination of materials\" arrived at after numerous studies. Finally completed after much trial and error.",
+			"The weight of \"Gundam\" is felt by the earth's gravity, a \"culmination of materials\" arrived at after numerous studies. Finally completed after much trial and error.",
 			"-----------------------------------------------",
 			"What is Gundarium alloy?",
 			"<Titanium (Ti) + Aluminum (Al) + Yttria (Yo)>",
@@ -128,38 +181,50 @@
 			"- Product specifications are scheduled as of 20207. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_3303/153_4258.jpg",
-		"/images/items/01_3303/155_4258.jpg",
-		"/images/items/01_3303/156_4258.jpg",
-		"/images/items/01_3303/157_4258.jpg",
-		"/images/items/01_3303/158_4258.jpg",
-		"/images/items/01_3303/159_4258.jpg",
-		"/images/items/01_3303/189_4258.jpg",
-		"/images/items/01_3303/190_4258.jpg",
-		"/images/items/01_3303/191_4258.jpg",
-		"/images/items/01_3303/192_4258.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3303/",
-	"brandIds": [
-		"pb_others",
-		"pb_gunpla",
-		"gundarium_gundam"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000209098",
-		"item-1000161796",
-		"01_3373",
-		"item-1000126528"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4258_s_uuc70zsft7b9p5ehtzgonrsplh4c.jpg",
+				"path": "/images/items/01_3303/153_4258.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4258_s_u0sw1koe8hzs83n8orkz47gvcnih.jpg",
+				"path": "/images/items/01_3303/155_4258.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4258_s_weno3ul97rs0c25zg59jpgd49z2r.jpg",
+				"path": "/images/items/01_3303/156_4258.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4258_s_6qs8e68i5qpyiws4a44oak0y34h8.jpg",
+				"path": "/images/items/01_3303/157_4258.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4258_s_78pqfl2tk4s1xm1hv07rnalso6os.jpg",
+				"path": "/images/items/01_3303/158_4258.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4258_s_nfx8wjmuxsitc3l47e0zswdoyjvi.jpg",
+				"path": "/images/items/01_3303/159_4258.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4258_s_xiqa5yu29jbv44pum12btqsk1w9l.jpg",
+				"path": "/images/items/01_3303/189_4258.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4258_s_swphkwxbq9pk3k17xu0u5nxpy8yd.jpg",
+				"path": "/images/items/01_3303/190_4258.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4258_s_a1z0kw9f0pf41952ve4q6hbbpdrq.jpg",
+				"path": "/images/items/01_3303/191_4258.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4258_s_2uo5nc5muksd6yt1vhi731mlz0xh.jpg",
+				"path": "/images/items/01_3303/192_4258.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3303/"
 }

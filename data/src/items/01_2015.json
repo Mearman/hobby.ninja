@@ -3,8 +3,64 @@
 	"type": "item",
 	"name": {
 		"ja": "ＭＧ 1/100 ユニコーンガンダム３号機 フェネクス （ナラティブVer.）",
-		"en": "MG 1/100 Unicorn Gundam Unit 3 Phenex (Narrative Ver.)"
+		"en": "MG 1/100 UNICORN GUNDAM 03 PHENEX(NARRATIVE Ver.)"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ",
+			"en": "MG [MASTER GRADE]"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "narrative",
+			"url": "https://bandai-hobby.net/series/narrative/",
+			"ja": "機動戦士ガンダムNT[ナラティブ]",
+			"en": "MOBILE SUIT GUNDAM NT (NARRATIVE)"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000213253",
+			"url": "https://p-bandai.jp/item/item-1000213253/",
+			"ja": "ＭＧ 1/100 ナラティブガンダム Ｃ装備 Ｖｅｒ．Ｋａ用 Ｂ装備拡張セット"
+		},
+		{
+			"id": "item-1000213251",
+			"url": "https://p-bandai.jp/item/item-1000213251/",
+			"ja": "ＭＧ 1/100 ナラティブガンダム Ｂ装備 Ｖｅｒ．Ｋａ"
+		},
+		{
+			"id": "item-1000150097",
+			"url": "https://p-bandai.jp/item/item-1000150097/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム３号機 フェネクス用 ナラティブＶｅｒ． 拡張セット"
+		},
+		{
+			"id": "01_3316",
+			"url": "https://bandai-hobby.net/item/01_3316/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム３号機 フェネクス（ナラティブＶｅｒ．）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 15070,
 		"currency": "JPY",
@@ -17,7 +73,6 @@
 		"month": 11
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"不 死 鳥 飛 来 ―",
@@ -53,63 +108,17 @@
 			"・ 商品仕様は2018年8月現在の予定です。変更の場合もございますがご了承ください。"
 		],
 		"en": [
-			"The phoenix flies -",
-			"Unicorn Gundam Unit 3",
-			"From \"Mobile Suit Gundam NT (Narrative)\", Unicorn Gundam Unit 3 Phenex appears in master grade.",
-			"Gold coating is applied to match the impression in the play, reproducing the majestic coloring.",
-			"New parts for Armed Armor DE are included with new modeling.",
-			"● Reproduce the golden exterior with gold coating",
-			"The majestic coloring of the \"Mobile Suit Gundam NT (Narrative)\" version is reproduced with a deep gold coating.",
-			"● Reproduce the new parts of Armed Armor DE with new modeling",
-			"The stabilizer that extends like a tail is reproduced with new parts using new modeling. Adopts lead wire, allowing for flexible expressions.",
-			"● Newly designed water transfer decal included.",
-			"Includes water transfer decals and foil seals including new designs.",
-			"● Poses from the movie can be reproduced with the MG-compliant range of motion.",
-			"● Reproduces two forms of deformation.",
-			"Reproduce the two transformations of unicorn mode and destroy mode!",
-			"Attached weapons: Beam Magnum / Beam Saber / Armed Armor DE / Hyper Bazooka",
-			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
-			"1/100 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
-			"Product material: PS/ABS/PVC",
-			"・No adhesive is used for assembly",
-			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
-			"*The finished product in the photo is painted. Also, a prototype that is still under development. There may be slight differences from the actual product.",
-			"(remarks)",
-			"・This product cannot be purchased at stores that carry plastic models.",
-			"・This product may be sold at events sponsored by our company, other projects, or overseas.",
-			"・ There is a limited number of this product available for sale at 'Premium Bandai'. Please note that the item may be out of stock.",
-			"・Due to production availability, we are limiting the quantity of this product that can be purchased per person.",
-			"note that.",
-			"- Shipping of this product may change depending on the application status and production circumstances. Thank you for your understanding.",
-			"・Product images are under development and may differ from the actual product.",
-			"- Product specifications are scheduled as of 20188. Please note that there may be changes."
+			"〈Remarks〉"
 		]
 	},
-	"images": [
-		"/images/items/01_2015/01_2015_0.jpg"
-	],
+	"images": {
+		"product": [
+			{}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2015/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"narrative"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000213253",
-		"item-1000213251",
-		"item-1000150097",
-		"01_3316"
-	],
-	"manualId": "2660",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2015/"
 	}
 }

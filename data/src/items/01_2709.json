@@ -2,9 +2,53 @@
 	"id": "01_2709",
 	"type": "item",
 	"name": {
-		"ja": "HGBD:R 1/144 ガンダム GP-羅刹天",
-		"en": "HGBD:R 1/144 Gundam GP-Rakshasaten"
+		"ja": "HGBD:R 1/144 ガンダムGP-羅刹天",
+		"en": "HGBD:R 1/144 GundamGP-Rakshasaten"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3080,
 		"currency": "JPY",
@@ -18,58 +62,79 @@
 		"day": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"新たな機体「ガンダム GP-羅刹天」が登場！",
+			"新たな機体「ガンダムGP-羅刹天」が登場！",
 			"• 選択式で『ガンダムビルドダイバーズ』に登場した「GP-羅刹」も組み立てられる。"
 		],
 		"en": [
-			"A new aircraft \"Gundam GP-Rakshaten\" is now available!",
-			"• \"GP-Rakshasa \" that appeared in \" Gundam Build Divers\" can also be assembled in the selection system."
+			"A new aircraft \"GundamGP-Rakshaten\" is now available!",
+			"• \"GP-Rakshasa\" that appeared in \"Gundam Build Divers\" can also be assembled in the selection system."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"金棒型ビームバズーカ×１",
-			"GNオーガソード×２",
-			"GP-羅刹用パーツ×１式",
-			"バズーカ×２",
-			"ホイルシール×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "金棒型ビームバズーカ×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "GNオーガソード×２"
+			}
+		},
+		{
+			"name": {
+				"ja": "GP-羅刹用パーツ×１式"
+			}
+		},
+		{
+			"name": {
+				"ja": "バズーカ×２"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール×１"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3702_s_fkvj8wrrzabkm0elk3976xr3e5qo.jpg",
+				"path": "/images/items/01_2709/153_3702.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3702_s_e2okwlutb5uaxvyj6dc844sinuo4.jpg",
+				"path": "/images/items/01_2709/155_3702.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3702_s_1zu07xcqsggaoxa91sox0msx09pm.jpg",
+				"path": "/images/items/01_2709/156_3702.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3702_s_fdvejyqnj2lfgw2anph897cl5u84.jpg",
+				"path": "/images/items/01_2709/157_3702.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3702_s_smxedb0lit9qsp7odq98r76flkag.jpg",
+				"path": "/images/items/01_2709/158_3702.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3702_s_d3x6d1t9l79meij67kapuo3vqrlz.jpg",
+				"path": "/images/items/01_2709/159_3702.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3702_s_yasr5gt5kblcukfgrffsjazz7tjq.jpg",
+				"path": "/images/items/01_2709/189_3702.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3702_s_fcsouu50asy7fv3gxrtmc8i9pgzq.jpg",
+				"path": "/images/items/01_2709/190_3702.jpg"
+			}
 		],
-		"en": [
-			"Metal rod type beam bazooka x 1",
-			"GN Ogre Sword x2",
-			"GP-Rakshasa parts x 1 set",
-			"Bazooka x2",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2709/153_3702.jpg",
-		"/images/items/01_2709/155_3702.jpg",
-		"/images/items/01_2709/156_3702.jpg",
-		"/images/items/01_2709/157_3702.jpg",
-		"/images/items/01_2709/158_3702.jpg",
-		"/images/items/01_2709/159_3702.jpg",
-		"/images/items/01_2709/189_3702.jpg",
-		"/images/items/01_2709/190_3702.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2709/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0091"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2709/"
 }

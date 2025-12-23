@@ -2,9 +2,53 @@
 	"id": "01_1907",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 ユニコーンガンダム 3号機 フェネクス(ユニコーンモード) ゴールドコーティングVer.",
+		"ja": "HG 1/144 ユニコーンガンダム3号機 フェネクス(ユニコーンモード) ゴールドコーティングVer.",
 		"en": "HG 1/144 Unicorn Gundam Unit 3 Phenex (Unicorn Mode) Gold Coating Ver."
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -17,39 +61,24 @@
 		"month": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
-			"HG ユニコーンガンダム 3号機 フェネクス(ユニコーンモード)のイベント限定ゴールドコーティングVer.です。"
+			"HG ユニコーンガンダム3号機 フェネクス(ユニコーンモード)のイベント限定ゴールドコーティングVer.です。"
 		],
 		"en": [
 			"Event-limited Gunpla sold at various event venues.",
 			"HG Unicorn Gundam Unit 3 Phenex (Unicorn Mode) event limited gold coating Ver."
 		]
 	},
-	"images": [
-		"/images/items/01_1907/153_2841.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1907/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2841_s_tfzofssaaxeifcnzt0rglr8bl3mq.jpg",
+				"path": "/images/items/01_1907/153_2841.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "0469"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1907/"
 }

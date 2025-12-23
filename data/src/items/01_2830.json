@@ -3,8 +3,39 @@
 	"type": "item",
 	"name": {
 		"ja": "ガンダムベース限定 MS汎用ハンガー",
-		"en": "Gundam base limited MS general purpose hanger"
+		"en": "THE GUNDAM BASE LIMITED MS GENERAL PURPOSE HANGAR"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_5987",
+			"url": "https://bandai-hobby.net/item/01_5987/",
+			"ja": "ガンダムデカールNo.139 機動戦士Gundam GQuuuuuuX汎用1"
+		},
+		{
+			"id": "01_5988",
+			"url": "https://bandai-hobby.net/item/01_5988/",
+			"ja": "ガンダムデカールNo.140 機動戦士Gundam GQuuuuuuX汎用2"
+		},
+		{
+			"id": "01_5969",
+			"url": "https://bandai-hobby.net/item/01_5969/",
+			"ja": "ガンダムデカールNo.141 機動戦士ガンダムSEED FREEDOM汎用①"
+		}
+	],
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -31,44 +62,61 @@
 			"• <例4>1/144スケール(大型)用1個、1/144スケール(小・中型)用2個"
 		],
 		"en": [
-			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"Mobile suit hangers compatible with 1/144Scale, 1/100Scale, and 1/60Scale are now available!",
-			"Fine size adjustment is also possible to suit large MS and small MS!",
-			"You can customize your own hanger to suit various scales!",
-			"Recombination example",
-			"• <Example 1> 1 piece for 1/60 Scale (large size)",
-			"• <Example 2> 1 piece for 1/60 Scale, 2 pieces for 1/144 Scale (small/medium size)",
-			"• <Example 3> 1 piece for 1/100 Scale, 1 piece for 1/144 Scale (small/medium size)",
-			"• <Example 4> 1 piece for 1/144Scale (large size), 2 pieces for 1/144Scale (small/medium size)"
+			"For GUNPLA fans around the world, this is a limited edition GUNPLA at the official GUNPLA complex \"GUNDAM Base\". Mobile suit hangers that can be used in 1/144 scale, 1/100 scale, and 1/60 scale are now available! It is also possible to adjust the size finely according to the large MS and small MS! It can be reassembled into your own customized hanger according to various scales! Recombination example",
+			"• &lt; Example 1&gt; 1/60 scale (large) 1 piece Example &lt; 2&gt; 1/60 scale, 2 for 1/144 scale (small and medium-sized) Example &lt; 3&gt; 1/1/100 scale, 1/144 scale (small/medium-sized) Example &lt; 4&gt; 1/144 scale (large), 2 1/144 scale (small and medium)"
 		]
 	},
-	"images": [
-		"/images/items/01_2830/1000145251_1.jpg",
-		"/images/items/01_2830/1000145251_10.jpg",
-		"/images/items/01_2830/1000145251_11.jpg",
-		"/images/items/01_2830/1000145251_2.jpg",
-		"/images/items/01_2830/1000145251_3.jpg",
-		"/images/items/01_2830/1000145251_4.jpg",
-		"/images/items/01_2830/1000145251_5.jpg",
-		"/images/items/01_2830/1000145251_6.jpg",
-		"/images/items/01_2830/1000145251_7.jpg",
-		"/images/items/01_2830/1000145251_8.jpg",
-		"/images/items/01_2830/1000145251_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145251_1.jpg",
+				"path": "/images/items/01_2830/1000145251_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145251_2.jpg",
+				"path": "/images/items/01_2830/1000145251_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145251_3.jpg",
+				"path": "/images/items/01_2830/1000145251_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145251_4.jpg",
+				"path": "/images/items/01_2830/1000145251_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145251_5.jpg",
+				"path": "/images/items/01_2830/1000145251_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145251_6.jpg",
+				"path": "/images/items/01_2830/1000145251_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145251_7.jpg",
+				"path": "/images/items/01_2830/1000145251_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145251_8.jpg",
+				"path": "/images/items/01_2830/1000145251_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145251_9.jpg",
+				"path": "/images/items/01_2830/1000145251_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145251_10.jpg",
+				"path": "/images/items/01_2830/1000145251_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145251_11.jpg",
+				"path": "/images/items/01_2830/1000145251_11.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2830/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5987",
-		"01_5988",
-		"01_5969"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2830/"
 	}
 }

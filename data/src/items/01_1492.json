@@ -5,6 +5,44 @@
 		"ja": "1/144 ガーベラテトラ",
 		"en": "1/144 Gerbera Tetra"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "g-0083",
+			"url": "https://bandai-hobby.net/series/g-0083/",
+			"ja": "機動戦士ガンダム0083 STARDUST MEMORY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "item-1000127907",
+			"url": "http://p-bandai.jp/item/item-1000127907",
+			"ja": "ＭＧ 1/100 MS-06F-2 ザクＩＩ Ｆ２型（ノイエン・ビッター機）"
+		},
+		{
+			"id": "item-1000127908",
+			"url": "http://p-bandai.jp/item/item-1000127908",
+			"ja": "ＭＧ 1/100 MS-06F-2 ザクＩＩ Ｆ２型（キンバライト基地仕様）"
+		},
+		{
+			"id": "item-1000124942",
+			"url": "http://p-bandai.jp/item/item-1000124942",
+			"ja": "ＭＧ 1/100 アナベル・ガトー専用ゲルググ Ver.2.0"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -17,10 +55,9 @@
 		"month": 6
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム 0083』より、1/144スケールで、ガーベラテトラが登場。",
+			"『機動戦士ガンダム0083』より、1/144スケールで、ガーベラテトラが登場。",
 			"ショルダースラスターポッドはスラスターブロックが独立して可動、胴に接続して腕とも別可動します。背部ツュツルム・ブースターユニットは脱着が可能です。モノアイブロックは別パーツで成形、シールで再現しています。武器は他にビーム・マシンガン、ビーム・サーベルが装備可能です。"
 		],
 		"en": [
@@ -28,22 +65,18 @@
 			"The shoulder thruster pod's thruster blocks can move independently, and can be connected to the torso and move separately from the arms. The back Tuturum booster unit is removable. The mono eye block is molded as a separate part and reproduced with Seal. Other weapons include a beam machine gun and beam saber."
 		]
 	},
-	"images": [
-		"/images/items/01_1492/153_2412.jpg",
-		"/images/items/01_1492/155_2412.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1492/",
-	"brandIds": [],
-	"seriesIds": [
-		"g-0083"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5442",
-		"item-1000127907",
-		"item-1000127908",
-		"item-1000124942"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2412_s_9nyfe85rzki2444cos2vawgeyj5b.jpg",
+				"path": "/images/items/01_1492/153_2412.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2412_s_ovrvjnjfgsohx8b60aeiezlapi8p.jpg",
+				"path": "/images/items/01_1492/155_2412.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1492/"
 }

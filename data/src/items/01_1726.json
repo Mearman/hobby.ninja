@@ -5,6 +5,43 @@
 		"ja": "BB戦士348 馬謖ガンダム",
 		"en": "BB Senshi 348 Mayo Gundam"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -20,29 +57,28 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"• 三国伝外伝第７弾、鮮烈なる俊英「馬謖ガンダム」登場。 • 巨大な剣「巨斬半月刀」付き、背中に装着も可能。 成型品×3、シール×1、組立説明書（マンガ有）×1"
+			"• 三国伝外伝第７弾、鮮烈なる俊英「馬謖ガンダム」登場。 ■巨大な剣「巨斬半月刀」付き、背中に装着も可能。 成型品×3、シール×1、組立説明書（マンガ有）×1"
 		],
 		"en": [
-			"• In the 7th installment of Sangokuden Gaiden, the brilliant and talented \"Bayo Gundam \" appears. • Comes with a giant sword \" Kyozan Hanto\", which can also be attached to the back. Molded product x 3, Seal x 1, Assembly manual (manga included) x 1"
+			"• In the 7th installment of Sangokuden Gaiden, the brilliant and talented \"Bayo Gundam\" appears. ■Comes with a giant sword \"Kyozan Hanto\", which can also be attached to the back. Molded product x 3, Seal x 1, Assembly manual (manga included) x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_1726/153_2634.jpg",
-		"/images/items/01_1726/155_2634.jpg",
-		"/images/items/01_1726/156_2634.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1726/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/156_2634_s_aj05cyi8uacjkae8pi97uuk8czox.jpg",
+				"path": "/images/items/01_1726/156_2634.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_2634_s_j4jrxog18oitou30n1jq3tgxgoh0.jpg",
+				"path": "/images/items/01_1726/153_2634.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2634_s_q77roaghr6sngtjeqzhcphi8bpxo.jpg",
+				"path": "/images/items/01_1726/155_2634.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1726/"
 }

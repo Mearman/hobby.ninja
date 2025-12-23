@@ -5,6 +5,43 @@
 		"ja": "LMHG 人造人間エヴァンゲリオン 試験初号機(ヱヴァンゲリヲン新劇場版) 劇場公開記念パッケージVer.",
 		"en": "LMHG Android Evangelion Test Unit 01 (Evangelion New Theatrical Version) Theatrical Release Commemoration Package Ver."
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "evangelion",
+			"url": "https://bandai-hobby.net/series/evangelion/",
+			"ja": "エヴァンゲリオン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181665",
+			"url": "https://p-bandai.jp/item/item-1000181665/",
+			"ja": "ＲＧ エヴァンゲリオン用武器セット"
+		},
+		{
+			"id": "item-1000171750",
+			"url": "https://p-bandai.jp/item/item-1000171750/",
+			"ja": "ＲＧ 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン４号機"
+		},
+		{
+			"id": "item-1000163344",
+			"url": "https://p-bandai.jp/item/item-1000163344/",
+			"ja": "ＲＧ エヴァンゲリオン専用拘束兼移動式射出台セット"
+		},
+		{
+			"id": "item-1000163343",
+			"url": "https://p-bandai.jp/item/item-1000163343/",
+			"ja": "ＲＧ 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン 初号機（シン・エヴァンゲリオン劇場版）"
+		}
+	],
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -22,7 +59,7 @@
 		"ja": [
 			"※商品詳細情報の記載に一部間違いがございましたので変更させていただきました。",
 			"パッケージを刷新し、新たにエヴァンゲリオン初号機がLMHGで登場！",
-			"■プログレッシブナイフ２種、パレットライフル１種、アンビリカルケーブル１種が付属。"
+			"• プログレッシブナイフ２種、パレットライフル１種、アンビリカルケーブル１種が付属。"
 		],
 		"en": [
 			"*There were some errors in the product details, so we have changed them.",
@@ -30,49 +67,95 @@
 			"• Includes 2 types of progressive knives, 1 type of pallet rifle, and 1 type of umbilical cable."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"プログレッシブナイフ×2種（通常時・格納時）",
-			"パレットライフル×1",
-			"アンビリカルケーブル×1",
-			"ATフィールド×1",
-			"ホイルシール×1",
-			"ドライデカール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "プログレッシブナイフ"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種（通常時・格納時）"
+			}
+		},
+		{
+			"name": {
+				"ja": "パレットライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アンビリカルケーブル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ATフィールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ドライデカール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3751_s_ebr6kxloldz1swxx3bui8jnnb4zr.jpg",
+				"path": "/images/items/01_2763/153_3751.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3751_s_bm0nrhh8ib7xkiut7rosnvv7mlfq.jpg",
+				"path": "/images/items/01_2763/155_3751.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3751_s_6297as88h6admu57698tt4m2a62m.jpg",
+				"path": "/images/items/01_2763/156_3751.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3751_s_d88om6zc8eh8m74tcddueldqf39k.jpg",
+				"path": "/images/items/01_2763/157_3751.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3751_s_rhzv9rqmu25ftvkfpbb4u97gowj5.jpg",
+				"path": "/images/items/01_2763/158_3751.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3751_s_kxog8kp35o3h4s27i2qu9km6yee7.jpg",
+				"path": "/images/items/01_2763/159_3751.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3751_s_k3nl4sarbp8463ons6x036v9dt6a.jpg",
+				"path": "/images/items/01_2763/189_3751.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3751_s_th5c9uikt8afrt3nq6929qkrnj5v.jpg",
+				"path": "/images/items/01_2763/190_3751.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3751_s_7a0024mvcvd7x08dp8ei9kb4irgw.jpg",
+				"path": "/images/items/01_2763/191_3751.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3751_s_vkw1hq2irxuifr6ewd2cn64nldj3.jpg",
+				"path": "/images/items/01_2763/192_3751.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_3751_s_dld2twjc1cpj5y0rajkrgvks5s1y.jpg",
+				"path": "/images/items/01_2763/193_3751.jpg"
+			}
 		],
-		"en": [
-			"Progressive knife x 2 types (normal/stored)",
-			"Pallet rifle x 1",
-			"Umbilical cable x 1",
-			"AT field x 1",
-			"Foil Seal×1",
-			"Dry decal x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2763/153_3751.jpg",
-		"/images/items/01_2763/155_3751.jpg",
-		"/images/items/01_2763/156_3751.jpg",
-		"/images/items/01_2763/157_3751.jpg",
-		"/images/items/01_2763/158_3751.jpg",
-		"/images/items/01_2763/159_3751.jpg",
-		"/images/items/01_2763/189_3751.jpg",
-		"/images/items/01_2763/190_3751.jpg",
-		"/images/items/01_2763/191_3751.jpg",
-		"/images/items/01_2763/192_3751.jpg",
-		"/images/items/01_2763/193_3751.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2763/",
-	"brandIds": [],
-	"seriesIds": [
-		"evangelion"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000181665",
-		"item-1000171750",
-		"item-1000163344",
-		"item-1000163343"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2763/"
 }

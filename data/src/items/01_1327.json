@@ -5,6 +5,50 @@
 		"ja": "HGBC 1/144 ティルトローターパック",
 		"en": "HGBC 1/144 tilt rotor pack"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"強襲用バックパックにも変形可能なカスタムパーツが登場！",
@@ -27,50 +70,54 @@
 		],
 		"en": [
 			"Custom parts that can be transformed into assault backpacks are now available!",
-			"• Military-style backpack with propeller, chainsaw and missile pod included!",
-			"• In addition to being able to strengthen Grimoire Red Beret's rifle, the joint has a 3mm diameter and can be attached to many Gunpla!"
+			"• A military-style backpack with a propeller, chainsaw and missile pod included!",
+			"• Grimoire Red Beret's rifle can also be strengthened, and the joint has a 3mm diameter, allowing it to be attached to many Gunpla!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"チェーンソー×2",
-			"ミサイルポッド×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "チェーンソー"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ミサイルポッド"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2255_s_dz96whwu6h7d0a36goc7xubo7u22.jpg",
+				"path": "/images/items/01_1327/153_2255.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2255_s_p819cbcz90urjr6ctc9k2iwmngti.jpg",
+				"path": "/images/items/01_1327/155_2255.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2255_s_69e0iwtfv4mvkz3l4efymkox43nq.jpg",
+				"path": "/images/items/01_1327/156_2255.jpg"
+			}
 		],
-		"en": [
-			"Chainsaw x 2",
-			"Missile pod x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×3",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 3",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1327/153_2255.jpg",
-		"/images/items/01_1327/155_2255.jpg",
-		"/images/items/01_1327/156_2255.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1327/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "0693"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1327/"
 }

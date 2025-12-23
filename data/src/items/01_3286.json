@@ -5,6 +5,60 @@
 		"ja": "ＨＧ 1/144 トーリスリッター",
 		"en": "HG 1/144 Toris Ritter"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "missinglink",
+			"url": "https://bandai-hobby.net/series/missinglink/",
+			"ja": "機動戦士ガンダム外伝 ミッシングリンク"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000152855",
+			"url": "https://p-bandai.jp/item/item-1000152855/",
+			"ja": "ＨＧ 1/144 ペイルライダー・キャバルリー"
+		},
+		{
+			"id": "item-1000140759",
+			"url": "https://p-bandai.jp/item/item-1000140759/",
+			"ja": "ＨＧ 1/144 イフリート（ダグ・シュナイド機）"
+		},
+		{
+			"id": "item-1000140492",
+			"url": "https://p-bandai.jp/item/item-1000140492/",
+			"ja": "ＨＧ 1/144 陸戦型ジム（スレイヴ・レイス隊仕様）（パラシュート・パック仕様）"
+		},
+		{
+			"id": "item-1000140220",
+			"url": "https://p-bandai.jp/item/item-1000140220/",
+			"ja": "ＨＧ 1/144 スレイヴ・レイス（パラシュート・パック仕様）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"黙 示 録 の 騎 士 、 終 焉 の 姿 ―",
@@ -67,7 +120,7 @@
 		],
 		"en": [
 			"The Knight of Apocalypse, the End of the World -",
-			"From the episode \"Mobile Suit Gundam Gaiden Missing Link \" included in the game software \" Mobile Suit Gundam Side Stories\",",
+			"From the episode \"Mobile Suit Gundam Gaiden Missing Link\" included in the game software \"Mobile Suit Gundam Side Stories\",",
 			"The Pale Rider was captured by the Zeon army and has been extensively renovated, \"Toris Ritter\", now in the HG series with a completely new model.",
 			"● Toris Ritter has been made into a three-dimensional model with a completely new model, and is equipped with a variety of gimmicks!",
 			"In addition to reproducing the characteristic aircraft shape, it is equipped with gimmicks such as sub-arm deployment on the shoulder and Incom injection mounted on the backpack.",
@@ -112,55 +165,77 @@
 			"- Product specifications are scheduled as of 20208. Please note that there may be changes."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ハイパー・ナックル・バスター",
-			"ハイパー・ビーム・サーベル",
-			"ビーム・サーベル",
-			"インコム",
-			"シールド"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハイパー・ナックル・バスター"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハイパー・ビーム・サーベル"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			}
+		},
+		{
+			"name": {
+				"ja": "インコム"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4241_s_s3tj08niuuwqiyxn33gojjuoqj8w.jpg",
+				"path": "/images/items/01_3286/153_4241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4241_s_r7vms6wfpmsayttz9mgoevjkklib.jpg",
+				"path": "/images/items/01_3286/155_4241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4241_s_qhg8rqhvrshmgtdt1ezb6o1cwgfh.jpg",
+				"path": "/images/items/01_3286/156_4241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4241_s_6ffqdp0la3yhvjq07ic6b489mp2k.jpg",
+				"path": "/images/items/01_3286/157_4241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4241_s_uvletaytug1rxf5xqp3nojh3emcz.jpg",
+				"path": "/images/items/01_3286/158_4241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4241_s_ata91zuihqjzas5uefi3nbx52g8v.jpg",
+				"path": "/images/items/01_3286/159_4241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4241_s_m0a38g7vqxeg9ix6kn75f7t4nyf8.jpg",
+				"path": "/images/items/01_3286/189_4241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4241_s_o6qjcpmrld1jec9bdm3aejhrh1ey.jpg",
+				"path": "/images/items/01_3286/190_4241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4241_s_7cblguseorfr3ksv84df6ptxz4f0.jpg",
+				"path": "/images/items/01_3286/191_4241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4241_s_03w4zwcopiv8e3k83e9n1l98xfsx.jpg",
+				"path": "/images/items/01_3286/192_4241.jpg"
+			}
 		],
-		"en": [
-			"hyper knuckle buster",
-			"hyper beam saber",
-			"beam saber",
-			"Incom",
-			"Seal de"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3286/153_4241.jpg",
-		"/images/items/01_3286/155_4241.jpg",
-		"/images/items/01_3286/156_4241.jpg",
-		"/images/items/01_3286/157_4241.jpg",
-		"/images/items/01_3286/158_4241.jpg",
-		"/images/items/01_3286/159_4241.jpg",
-		"/images/items/01_3286/189_4241.jpg",
-		"/images/items/01_3286/190_4241.jpg",
-		"/images/items/01_3286/191_4241.jpg",
-		"/images/items/01_3286/192_4241.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3286/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"missinglink"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000152855",
-		"item-1000140759",
-		"item-1000140492",
-		"item-1000140220"
-	],
-	"manualId": "2598",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3286/"
 }

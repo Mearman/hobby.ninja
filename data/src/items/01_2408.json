@@ -5,6 +5,49 @@
 		"ja": "ぷちりっつ キャスター/ネロ・クラウディウス",
 		"en": "Petitrits Caster/Nero Claudius"
 	},
+	"brands": [
+		{
+			"id": "petit_rits",
+			"url": "https://bandai-hobby.net/brand/petit_rits/",
+			"ja": "ぷちりっつ"
+		}
+	],
+	"series": [
+		{
+			"id": "fate",
+			"url": "https://bandai-hobby.net/series/fate/",
+			"ja": "Fate/Grand Order"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2844",
+			"url": "https://bandai-hobby.net/item/01_2844/",
+			"ja": "ぷちりっつ セイバー/アルトリア・ペンドラゴン"
+		},
+		{
+			"id": "01_2767",
+			"url": "https://bandai-hobby.net/item/01_2767/",
+			"ja": "ぷちりっつ アーチャー/ギルガメッシュ"
+		},
+		{
+			"id": "01_2634",
+			"url": "https://bandai-hobby.net/item/01_2634/",
+			"ja": "ぷちりっつ セイバー/沖田総司"
+		},
+		{
+			"id": "01_2599",
+			"url": "https://bandai-hobby.net/item/01_2599/",
+			"ja": "ぷちりっつ マスター/女主人公"
+		}
+	],
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -34,7 +77,7 @@
 			"Spirits packed into a petite size! New brand \"Puchiritsu\" is born! !",
 			"Nero Claudius is now available from the smartphone-only RPG \"Fate/Grand Order\"! !",
 			"• Keeping the characteristics of the characters as they are, the three heads are deformed without changing the impression.",
-			"• Move the upper body to create dynamic poses!",
+			"• Create dynamic poses by moving the upper body!",
 			"• Despite its petite size, the \"Noble Phantasm\" is reproduced in every detail!",
 			"• Includes character-inspired effect pedestal, pipe organ, and sword.",
 			"• Simple parts configuration makes it easy for even beginners to enjoy!",
@@ -42,54 +85,80 @@
 			"• The molded products are color-coded, so the finished product will be colorful even without painting! Adding a special seal will further improve the quality!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"パイプオルガン×1",
-			"剣×1",
-			"台座×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "パイプオルガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "剣"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "台座"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "カイナスシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3340_s_ke89ty1v0lsoyangwz7uvp45yw6h.jpg",
+				"path": "/images/items/01_2408/153_3340.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3340_s_g9lw77uq54omqe3bv0zej8q4vx5r.jpg",
+				"path": "/images/items/01_2408/155_3340.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3340_s_h4vtnafjgag50pb2izrgn1nvqij1.jpg",
+				"path": "/images/items/01_2408/156_3340.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3340_s_ma0etv3yzmyx83fa6pg5w4q03u6n.jpg",
+				"path": "/images/items/01_2408/157_3340.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3340_s_5tx5h80hw8zzhgshpvfi8man44zy.jpg",
+				"path": "/images/items/01_2408/158_3340.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3340_s_bl6ekrwp0uuzxqvrob2yucq3remb.jpg",
+				"path": "/images/items/01_2408/159_3340.jpg"
+			}
 		],
-		"en": [
-			"Pipe organ x 1",
-			"Sword x1",
-			"Pedestal x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"カイナスシール×1",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 4",
-			"Cainus Seal×1",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2408/153_3340.jpg",
-		"/images/items/01_2408/155_3340.jpg",
-		"/images/items/01_2408/156_3340.jpg",
-		"/images/items/01_2408/157_3340.jpg",
-		"/images/items/01_2408/158_3340.jpg",
-		"/images/items/01_2408/159_3340.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2408/",
-	"brandIds": [
-		"petit_rits"
-	],
-	"seriesIds": [
-		"fate"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2844",
-		"01_2767",
-		"01_2634",
-		"01_2599"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2408/"
 }

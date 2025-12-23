@@ -3,8 +3,53 @@
 	"type": "item",
 	"name": {
 		"ja": "BB戦士 ガンダムベース限定 ユニコーンガンダムペルフェクティビリティ",
-		"en": "BB Senshi Gundam Base Limited Unicorn Gundam Perfectibility"
+		"en": "BB THE GUNDAM BASE LIMITED UNICORN GUNDAM PERFECTIBILITY"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士",
+			"en": "BB SENSHI"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]",
+			"en": "MOBILE SUIT GUNDAM UC (Unicorn)"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3490",
+			"url": "https://bandai-hobby.net/item/01_3490/",
+			"ja": "BB戦士 ガンダムベース福岡限定 ユニコーンガンダム ペルフェクティビリティ(最終決戦仕様)Ver.GSF"
+		},
+		{
+			"id": "01_1932",
+			"url": "https://bandai-hobby.net/item/01_1932/",
+			"ja": "BB戦士 ガンダムベース限定 フルアーマー・ユニコーンガンダム&ネオ・ジオング [クリアカラー]"
+		},
+		{
+			"id": "item-1000095978",
+			"url": "https://p-bandai.jp/item/item-1000095978",
+			"ja": "ＢＢ戦士 ネオ・ジオング メタリックＶｅｒ．"
+		},
+		{
+			"id": "01_185",
+			"url": "https://bandai-hobby.net/item/01_185/",
+			"ja": "BB戦士394 ユニコーンガンダム3号機 フェネクス"
+		}
+	],
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -22,46 +67,32 @@
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
 			"新規造形パーツを追加したBB戦士ユニコーンガンダムが、ペルフェクティビリティとなって、ガンダムベース限定品として登場。",
-			"■ハイパー・ビーム・ジャベリンを新規造形で付属、ビーム刃はクリアパーツを採用。",
-			"■アームド・アーマーDE2機を懸架するアームとスタビライザーを新規パーツで再現。",
-			"■各サイコフレームにはクリアブルーを採用。",
-			"■ユニコーンモードとデストロイモード双方の形態をパーツ差し替えで再現可能。"
+			"• ハイパー・ビーム・ジャベリンを新規造形で付属、ビーム刃はクリアパーツを採用。",
+			"• アームド・アーマーDE2機を懸架するアームとスタビライザーを新規パーツで再現。",
+			"• 各サイコフレームにはクリアブルーを採用。",
+			"• ユニコーンモードとデストロイモード双方の形態をパーツ差し替えで再現可能。"
 		],
 		"en": [
-			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"BB Senshi Unicorn Gundam, which has added new modeling parts, has become Perfectibility and is now available as a Gundam base limited item.",
-			"■Hyper Beam Javelin is included with a new model, and the beam blade uses clear parts.",
-			"■The arm and stabilizer that suspends the Armed Armor DE2 machine are reproduced with new parts.",
-			"■Clear blue is used for each psycho frame.",
-			"■Both unicorn mode and destroy mode can be reproduced by replacing parts."
+			"For GUNPLA fans around the world, this is a limited edition GUNPLA at the official GUNPLA complex \"GUNDAM Base\". The BB Warrior Unicorn GUNDAM, which has added new modeling parts, is now available as a limited edition item based on the GUNDAM as Perfectibility.",
+			"• Hyper Beam Javelin is newly modeled, and the beam blade uses clear parts.",
+			"• The arm and stabilizer that suspend the two Armed Armor DEs are reproduced with new parts.",
+			"• Each psycho frame is made of clear blue.",
+			"• Both unicorn mode and destroy mode forms can be reproduced by replacing parts."
 		]
 	},
-	"images": [
-		"/images/items/01_2646/01_2646_0.jpg",
-		"/images/items/01_2646/01_2646_1.jpg",
-		"/images/items/01_2646/01_2646_2.jpg",
-		"/images/items/01_2646/01_2646_3.jpg",
-		"/images/items/01_2646/01_2646_4.jpg",
-		"/images/items/01_2646/01_2646_5.jpg"
-	],
+	"images": {
+		"product": [
+			{},
+			{},
+			{},
+			{},
+			{},
+			{}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2646/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3490",
-		"01_1932",
-		"item-1000095978",
-		"01_185"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2646/"
 	}
 }

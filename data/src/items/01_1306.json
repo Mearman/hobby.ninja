@@ -5,6 +5,50 @@
 		"ja": "1/60 ガーンズバック Ver.IV",
 		"en": "1/60 Gernsback Ver.IV"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "fullmetal_panic",
+			"url": "https://bandai-hobby.net/series/fullmetal_panic/",
+			"ja": "フルメタル・パニック!"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2186",
+			"url": "https://bandai-hobby.net/item/01_2186/",
+			"ja": "HG 1/60 M9Dファルケ Ver.IV"
+		},
+		{
+			"id": "01_2128",
+			"url": "https://bandai-hobby.net/item/01_2128/",
+			"ja": "HG 1/60 ガーンズバックVer.IV(アグレッサー部隊機)"
+		},
+		{
+			"id": "01_2119",
+			"url": "https://bandai-hobby.net/item/01_2119/",
+			"ja": "HG 1/60 アーバレストVer.IV(緊急展開ブースター装備仕様)"
+		},
+		{
+			"id": "01_1889",
+			"url": "https://bandai-hobby.net/item/01_1889/",
+			"ja": "HG 1/60 レーバテイン Ver.IV"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 3080,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 14
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
 			"• クルツや宗介など多くのキャラクターが搭乗したガーンズバックが1/60スケールでついにキット化！",
@@ -27,65 +70,104 @@
 			"• メカデザイナー海老川兼武氏がデザインを手がけたプラモデルオリジナルウェポン「グラーツ・マンリッヒャー AWS2000 アサルト・カービンタイプ」が付属する。"
 		],
 		"en": [
-			"• Gernsback with many characters such as Kurtz and Sousuke on board is finally available as a kit in 1/60 scale!",
-			"• Reproduce Gernsback's characteristic E series head.",
-			"• A variety of armed parts are included, such as the \"sniper cannon \" used by Kurtz and the \" anti-tank dagger\" that can also be equipped on Arbalest.",
-			"• Includes plastic model original weapon \"Graz Mannlicher AWS2000 Assault Carbine Type\" designed by mechanical designer Kanetake Ebikawa."
+			"• Gernsback, piloted by many characters such as Kurtz and Sousuke, is finally available as a kit in 1/60 scale!",
+			"• Reproduces Gernsback's characteristic E series head.",
+			"• Comes with a variety of armament parts such as the \"sniper cannon\" used by Kurtz and the \"anti-tank dagger\" that can also be equipped on Arbalest.",
+			"• Comes with original plastic model weapon \"Graz Mannlicher AWS2000 Assault Carbine Type\" designed by mechanical designer Kanetake Ebikawa."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"76mm 狙撃砲×1",
-			"GEC-B 40mm ライフル×1",
-			"GRAW-2 単分子カッター×1",
-			"M1108 対戦車ダガー×1",
-			"グラーツ・マンリッヒャー AWS2000(アサルト・カービンタイプ)×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "76mm 狙撃砲"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GEC-B 40mm ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GRAW-2 単分子カッター"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "M1108 対戦車ダガー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "グラーツ・マンリッヒャー AWS2000(アサルト・カービンタイプ)"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 13
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2236_s_gmvlll09e09g4wh061v35nm2ddys.jpg",
+				"path": "/images/items/01_1306/153_2236.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2236_s_0oanw41g4da9o3mss8kuunqkxvvn.jpg",
+				"path": "/images/items/01_1306/155_2236.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2236_s_0k3xf7ibz3adv7qm8xbaohv1f5e6.jpg",
+				"path": "/images/items/01_1306/156_2236.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2236_s_6t6y4443zkyao7brfygdzn2e40nw.jpg",
+				"path": "/images/items/01_1306/157_2236.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2236_s_nprhpk787pu3z1z98zz6ep0qgv8i.jpg",
+				"path": "/images/items/01_1306/158_2236.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2236_s_th6128okhj8wkk2as52v8j8ke81g.jpg",
+				"path": "/images/items/01_1306/159_2236.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2236_s_4f7r0eja7zni4ntlcow4e14c73q9.jpg",
+				"path": "/images/items/01_1306/189_2236.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2236_s_xawc70ygxyb1ii5pccl2oj7mqcno.jpg",
+				"path": "/images/items/01_1306/190_2236.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2236_s_g3wwj2a1ueusypoxk3i07fr7p7qd.jpg",
+				"path": "/images/items/01_1306/191_2236.jpg"
+			}
 		],
-		"en": [
-			"76mm sniper gun x 1",
-			"GEC-B 40mm rifle x 1",
-			"GRAW-2 Single molecule cutter x 1",
-			"M1108 Anti-tank dagger x 1",
-			"Graz Mannlicher AWS2000 (assault carbine type) x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×13",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded products x 13",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1306/153_2236.jpg",
-		"/images/items/01_1306/155_2236.jpg",
-		"/images/items/01_1306/156_2236.jpg",
-		"/images/items/01_1306/157_2236.jpg",
-		"/images/items/01_1306/158_2236.jpg",
-		"/images/items/01_1306/159_2236.jpg",
-		"/images/items/01_1306/189_2236.jpg",
-		"/images/items/01_1306/190_2236.jpg",
-		"/images/items/01_1306/191_2236.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1306/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"fullmetal_panic"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2186",
-		"01_2128",
-		"01_2119",
-		"01_1889"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1306/"
 }

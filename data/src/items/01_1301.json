@@ -5,6 +5,34 @@
 		"ja": "Figure-rise Mechanics Dr.スランプ アラレちゃん",
 		"en": "Figure-rise Mechanics Dr. Slump Arale-chan"
 	},
+	"brands": [
+		{
+			"id": "figurerise-mechanics",
+			"url": "https://bandai-hobby.net/brand/figurerise-mechanics/",
+			"ja": "Figure-rise Mechanics[フィギュアライズメカニクス]"
+		}
+	],
+	"series": [
+		{
+			"id": "arale",
+			"url": "https://bandai-hobby.net/series/arale/",
+			"ja": "Dr.スランプアラレちゃん"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2452",
+			"url": "https://bandai-hobby.net/item/01_2452/",
+			"ja": "Figure-rise Mechanics オボッチャマン"
+		}
+	],
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -28,61 +56,108 @@
 		],
 		"en": [
 			"\"Arale Norimaki\" from Dr. Slump Arale-chan appears in Figure-rise Mechanics, which can assemble robots from internal mechanisms!",
-			"• Arale-chan's internal mechanism is faithfully reproduced based on the \"X-ray photograph that shows all of Arale-chan's structure\" that appears in the work! By assembling, you can understand Arale-chan's internal mechanism and get to know Arale-chan better!",
+			"• Faithfully reproduces Arale-chan's internal mechanism based on the \"X-ray photograph that shows all of Arale-chan's structure\" that appears in the work! By assembling, you can understand Arale-chan's internal mechanism and get to know Arale-chan better!",
 			"• The internal mechanism is equipped with a movable gimmick. You can see inside Arale-chan's stomach by reproducing the activation of the \"Ncha Cannon\" and moving the internal mechanism of her stomach!",
-			"• In addition to the standard color exterior parts, a selectable skeleton body is included! Enjoy the display that allows you to see the internal mechanism even after assembly.",
+			"• In addition to the standard color exterior parts, a selectable skeleton body is included! Enjoy the display that allows you to see the internal mechanisms even after assembly.",
 			"• Accessories include Arale-chan's signature \"ncha!\" greeting hand, a distinctive hat, and a poop-kun."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"帽子×1",
-			"差し替手×2（あいさつ手、うんちくん用にぎり手）",
-			"うんちくん×1（棒付属）",
-			"クリア外装×1式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "帽子"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "差し替手"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "うんちくん"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "（棒付属）"
+			}
+		},
+		{
+			"name": {
+				"ja": "クリア外装"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 7
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140253_1.jpg",
+				"path": "/images/items/01_1301/1000140253_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140253_2.jpg",
+				"path": "/images/items/01_1301/1000140253_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140253_3.jpg",
+				"path": "/images/items/01_1301/1000140253_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140253_4.jpg",
+				"path": "/images/items/01_1301/1000140253_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140253_5.jpg",
+				"path": "/images/items/01_1301/1000140253_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140253_6.jpg",
+				"path": "/images/items/01_1301/1000140253_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140253_7.jpg",
+				"path": "/images/items/01_1301/1000140253_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140253_8.jpg",
+				"path": "/images/items/01_1301/1000140253_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140253_9.jpg",
+				"path": "/images/items/01_1301/1000140253_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140253_10.jpg",
+				"path": "/images/items/01_1301/1000140253_10.jpg"
+			}
 		],
-		"en": [
-			"Hat x 1",
-			"Replacement hands x 2 (greeting hands, poop-kun nigiri hands)",
-			"Poo-kun x 1 (stick included)",
-			"Clear exterior x 1 set"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×7",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 7",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1301/1000140253_1.jpg",
-		"/images/items/01_1301/1000140253_10.jpg",
-		"/images/items/01_1301/1000140253_2.jpg",
-		"/images/items/01_1301/1000140253_3.jpg",
-		"/images/items/01_1301/1000140253_4.jpg",
-		"/images/items/01_1301/1000140253_5.jpg",
-		"/images/items/01_1301/1000140253_6.jpg",
-		"/images/items/01_1301/1000140253_7.jpg",
-		"/images/items/01_1301/1000140253_8.jpg",
-		"/images/items/01_1301/1000140253_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1301/",
-	"brandIds": [
-		"figurerise-mechanics"
-	],
-	"seriesIds": [
-		"arale"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2452"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1301/"
 }

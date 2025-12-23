@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムザラキエル",
 		"en": "HG 1/144 Gundam Zaraquiel"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -18,70 +62,96 @@
 		"day": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"外伝『ガンダムビルドダイバーズブレイク』よりアインソフの使用機「ガンダムザラキエル」がキット化！",
 			"• 驚愕の3つの形態への変形を忠実に再現！GNブル形態やGNスカイ形態など、劇中の設定を再現可能！"
 		],
 		"en": [
-			"From the side story \"Gundam Build Divers Break \", Ain Sof's machine \" Gundam Zarachiel\" is now a kit!",
-			"• Faithfully reproduces the transformation into three surprising forms! Settings from the movie can be reproduced, such as GN Bull form and GN Sky form!"
+			"From the side story \"Gundam Build Divers Break\", Ain Sof's machine \"Gundam Zarachiel\" is now a kit!",
+			"• Faithfully reproduces the transformation into three astonishing forms! Settings from the movie can be reproduced, such as GN Bull form and GN Sky form!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"GNソードライフル×2",
-			"ハンドバズーカ(仮)×2",
-			"ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "GNソードライフル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ハンドバズーカ(仮)"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成型品"
+			},
+			"count": 14
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3072_s_n377eixy2pjzw67vqedit1mz7zxg.jpg",
+				"path": "/images/items/01_2118/153_3072.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3072_s_q1trkb1wfzc8g0v648c4hgcayc3q.jpg",
+				"path": "/images/items/01_2118/155_3072.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3072_s_hzqxk2zvlkx9epmetlc55q0fs8tt.jpg",
+				"path": "/images/items/01_2118/156_3072.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3072_s_r3yfwqymkgrnq1fm63ov5tomao1u.jpg",
+				"path": "/images/items/01_2118/157_3072.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3072_s_wcscz64qup1uvig2afwv5ppz5oqc.jpg",
+				"path": "/images/items/01_2118/158_3072.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3072_s_s67gwol7za0sg4uvm1lrkpex8tk8.jpg",
+				"path": "/images/items/01_2118/159_3072.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3072_s_z8jtizmkvxz1hk19kvvz6v1vk6ni.jpg",
+				"path": "/images/items/01_2118/189_3072.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3072_s_vunt7xco8eaj4zs5wq3cj9ksu9l7.jpg",
+				"path": "/images/items/01_2118/190_3072.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3072_s_9j4clcwescmope0ik4e9pg6enilo.jpg",
+				"path": "/images/items/01_2118/191_3072.jpg"
+			}
 		],
-		"en": [
-			"GN sword rifle x2",
-			"Hand bazooka (tentative) x 2",
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成型品×14",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 14",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2118/153_3072.jpg",
-		"/images/items/01_2118/155_3072.jpg",
-		"/images/items/01_2118/156_3072.jpg",
-		"/images/items/01_2118/157_3072.jpg",
-		"/images/items/01_2118/158_3072.jpg",
-		"/images/items/01_2118/159_3072.jpg",
-		"/images/items/01_2118/189_3072.jpg",
-		"/images/items/01_2118/190_3072.jpg",
-		"/images/items/01_2118/191_3072.jpg",
-		"/images/items/01_2118/01_2118_inst_0.jpg",
-		"/images/items/01_2118/01_2118_inst_1.jpg",
-		"/images/items/01_2118/01_2118_inst_2.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2118/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "1047"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2118/"
 }

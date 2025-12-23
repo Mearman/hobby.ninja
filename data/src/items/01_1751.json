@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 ウイングガンダム",
-		"en": "MG 1/100 Wing Gundam"
+		"en": "MG 1/100 WING GUNDAM"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ",
+			"en": "MOBILE SUIT GUNDAM WING series"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "item-1000194972",
+			"url": "https://p-bandai.jp/item/item-1000194972/",
+			"ja": "ＭＧ 1/100 ガンダムエピオン EW (シュトゥルム・ウント・ドラング装備)"
+		},
+		{
+			"id": "01_3410",
+			"url": "https://bandai-hobby.net/item/01_3410/",
+			"ja": "MG 1/100 ガンダムデスサイズヘル EW[スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000171722",
+			"url": "https://p-bandai.jp/item/item-1000171722/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムエピオン EW[スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000142325",
+			"url": "https://p-bandai.jp/item/item-1000142325/",
+			"ja": "ＭＧ 1/100 ガンダムデスサイズ EW（ルーセット装備）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -18,30 +51,33 @@
 		"day": 28
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"• 新機動戦記ガンダム Wより、主役機「ウイングガンダム」がMG化！ • MG化にあたり、カトキハジメ氏によって再構築されたスタイリッシュなフォルムを再現。 • 翼面積が変化する可変機構搭載！ • バード形態に変形可能！変形時ロック機構も搭載。 • 武器にもアクションギミックを再現！銃身がテイクダウン、さらに、シールドからサーベルが迫り出します！ 成形品×13、ホイルシール×1、マーキングシール×1、ガンダムデカール×1、組立説明書×1"
+			"• 新機動戦記ガンダムWより、主役機「ウイングガンダム」がMG化！ ■MG化にあたり、カトキハジメ氏によって再構築されたスタイリッシュなフォルムを再現。 ■翼面積が変化する可変機構搭載！ ■バード形態に変形可能！変形時ロック機構も搭載。 ■武器にもアクションギミックを再現！銃身がテイクダウン、さらに、シールドからサーベルが迫り出します！ 成形品×13、ホイルシール×1、マーキングシール×1、ガンダムデカール×1、組立説明書×1"
 		],
 		"en": [
-			"• From New Mobile Report Gundam W, the main character \"Wing Gundam\" has been made into an MG! • When converting to MG, the stylish form reconstructed by Hajime Katoki is reproduced. • Equipped with a variable mechanism that changes the wing area! • Can be transformed into bird form! Also equipped with a locking mechanism during deformation. • The action gimmick is also reproduced on the weapon! The gun barrel is taken down, and the saber approaches from Seal! Molded product x 13, Foil Seal x 1, Marking Seal x 1, Gundam decal x 1, Assembly Manual x 1"
+			"• From MOBILE SUIT GUNDAM WING, the main machine \"Wing GUNDAM\" has been converted to MG!",
+			"• For MG, the stylish form rebuilt by Hajime Katoki is reproduced.",
+			"• Equipped with a variable mechanism that changes the wing area!",
+			"• Can be transformed into a bird form! It is also equipped with a deformation locking mechanism.",
+			"• Reproduce the action gimmick on the weapon! The barrel of the gun is a takedown, and the saber is closing in from the shield! Molded ×13, Foil Seal ×1, Marking Seal ×1, GUNDAM DECAL ×1, Assembly Instructions ×1"
 		]
 	},
-	"images": [
-		"/images/items/01_1751/1000092389_1.jpg",
-		"/images/items/01_1751/1000092389_2.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092389_1.jpg",
+				"path": "/images/items/01_1751/1000092389_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092389_2.jpg",
+				"path": "/images/items/01_1751/1000092389_2.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1751/",
-	"brandIds": [],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"item-1000194972",
-		"01_3410",
-		"item-1000171722",
-		"item-1000142325"
-	],
-	"manualId": "0578"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1751/"
+	}
 }

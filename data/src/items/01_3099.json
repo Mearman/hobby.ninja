@@ -5,6 +5,44 @@
 		"ja": "1/1200 ガウ攻撃空母",
 		"en": "1/1200 Gau attack aircraft carrier"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/1200",
 	"price": {
 		"amount": 330,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 4
 	},
 	"targetAge": 15,
-	"scale": "1/1200",
 	"description": {
 		"ja": [
 			"同スケールのドップ、ザク、ズゴック各２機ずつが付いています。ドップは本体へ収納できます。専用ディスプレイスタンドには、ザクとズゴックの固定スペースもあります。"
@@ -26,23 +63,18 @@
 			"Comes with 2 each of Dopp, Zaku, and Z'Gok of the same scale. The dop can be stored in the main body. The dedicated display stand also has a fixed space for Zaku and Z'Gok."
 		]
 	},
-	"images": [
-		"/images/items/01_3099/153_4066.jpg",
-		"/images/items/01_3099/155_4066.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3099/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	],
-	"manualId": "1969"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/155_4066_s_0gyo9zrsi6pklwokpez3pi07nc0j.jpg",
+				"path": "/images/items/01_3099/155_4066.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_4066_s_zy5fc9udr6hhkliads4aq11y3czo.jpg",
+				"path": "/images/items/01_3099/153_4066.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3099/"
 }

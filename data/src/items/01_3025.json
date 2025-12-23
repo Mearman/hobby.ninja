@@ -5,6 +5,60 @@
 		"ja": "ＨＧ 1/144 ガンダムエアマスターバースト",
 		"en": "HG 1/144 Gundam Air Master Burst"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "x",
+			"url": "https://bandai-hobby.net/series/x/",
+			"ja": "機動新世紀ガンダムＸ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000147185",
+			"url": "https://p-bandai.jp/item/item-1000147185/",
+			"ja": "ＨＧ 1/144 ドートレス"
+		},
+		{
+			"id": "item-1000124674",
+			"url": "http://p-bandai.jp/item/item-1000124674",
+			"ja": "ＭＧ 1/100 ガンダムＸ３号機"
+		},
+		{
+			"id": "01_160",
+			"url": "https://bandai-hobby.net/item/01_160/",
+			"ja": "HGAW 1/144 ガンダムエアマスター"
+		},
+		{
+			"id": "01_5876",
+			"url": "https://bandai-hobby.net/item/01_5876/",
+			"ja": "HGAW 1/144 ガンダムダブルエックス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"蒼 穹 の 覇 者",
@@ -55,7 +108,7 @@
 		"en": [
 			"Conqueror of the Blue Sky",
 			"Air Master Burst rushes in!",
-			"From \"Mobile New Century Gundam X \", \" Gundam Air Master Burst\" appears in the HG series.",
+			"From \"Mobile New Century GundamX\", \"Gundam Air Master Burst\" appears in the HG series.",
 			"The backpack, which has been greatly improved from Gundam Air Master, and the main body armor are reproduced with new modeling. The impressive blue aircraft color is reproduced with molding color.",
 			"● Reproduce the strengthened parts of various parts of the aircraft with new modeling",
 			"The backpack with the distinctive booster beam cannon added, chest armor, shoulder armor, front armor, and knee armor are reproduced with new modeling parts.",
@@ -86,47 +139,57 @@
 			"- Product specifications are scheduled as of 20206. Please note that there may be changes."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"バスターライフル"
+	"accessories": [
+		{
+			"name": {
+				"ja": "バスターライフル"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/192_3998_s_8rpj0wcqp5gem2g2dqcmfm2mv4ra.jpg",
+				"path": "/images/items/01_3025/192_3998.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_3998_s_55ji1mvzwhou4cr245vktokyzubc.jpg",
+				"path": "/images/items/01_3025/153_3998.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3998_s_96fgn0bwy8ttvhlzpkkyynky09wm.jpg",
+				"path": "/images/items/01_3025/155_3998.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3998_s_1id9aa9zunkt6ehs8zxtvnh8vbzn.jpg",
+				"path": "/images/items/01_3025/156_3998.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3998_s_82282cdzesiq8sf8zpfs75dmf6b5.jpg",
+				"path": "/images/items/01_3025/157_3998.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3998_s_arp2p02i9kebizsvsjtkf816u94f.jpg",
+				"path": "/images/items/01_3025/158_3998.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3998_s_xbygl1lwfo5w3bio3vnmt7bs0t17.jpg",
+				"path": "/images/items/01_3025/159_3998.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3998_s_wir0f1kqykrct690n98ponszgr15.jpg",
+				"path": "/images/items/01_3025/189_3998.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3998_s_ybrcy61xmpwl7onqf4bjzxo01en6.jpg",
+				"path": "/images/items/01_3025/190_3998.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3998_s_ztajjvlf19jmphp4cdum1skix5yc.jpg",
+				"path": "/images/items/01_3025/191_3998.jpg"
+			}
 		],
-		"en": [
-			"buster rifle"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3025/153_3998.jpg",
-		"/images/items/01_3025/155_3998.jpg",
-		"/images/items/01_3025/156_3998.jpg",
-		"/images/items/01_3025/157_3998.jpg",
-		"/images/items/01_3025/158_3998.jpg",
-		"/images/items/01_3025/159_3998.jpg",
-		"/images/items/01_3025/189_3998.jpg",
-		"/images/items/01_3025/190_3998.jpg",
-		"/images/items/01_3025/191_3998.jpg",
-		"/images/items/01_3025/192_3998.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3025/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"x"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000147185",
-		"item-1000124674",
-		"01_160",
-		"01_5876"
-	],
-	"manualId": "2584",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3025/"
 }

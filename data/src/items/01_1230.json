@@ -5,6 +5,60 @@
 		"ja": "ＲＧ 1/144 ダブルオークアンタ（トランザムモード） [メタリックグロスインジェクション]",
 		"en": "RG 1/144 Double O Quanta (Trans-Am Mode) [Metallic Gloss Injection]"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000224328",
+			"url": "https://p-bandai.jp/item/item-1000224328/",
+			"ja": "ＨＧ 1/144 ガンダムプルトーネブラック"
+		},
+		{
+			"id": "item-1000216602",
+			"url": "https://p-bandai.jp/item/item-1000216602/",
+			"ja": "ＭＧ 1/100 ガンダムアストレア＋プロトＧＮツインブロードブレイド"
+		},
+		{
+			"id": "item-1000161849",
+			"url": "https://p-bandai.jp/item/item-1000161849/",
+			"ja": "ＲＧ 1/144 ダブルオーザンライザー"
+		},
+		{
+			"id": "01_2648",
+			"url": "https://bandai-hobby.net/item/01_2648/",
+			"ja": "RG 1/144 ガンダムベース限定 ダブルオークアンタフルセイバー[トランザムクリア]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -17,31 +71,14 @@
 		"month": 12
 	},
 	"targetAge": 115,
-	"scale": "1/144",
-	"images": [
-		"/images/items/01_1230/153_2163.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1230/",
-	"brandIds": [
-		"rg",
-		"pb_rg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000224328",
-		"item-1000216602",
-		"item-1000161849",
-		"01_2648"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2163_o_1bshq5nif1gccbjl9op10t11ha823.jpg",
+				"path": "/images/items/01_1230/153_2163.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "0669"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1230/"
 }

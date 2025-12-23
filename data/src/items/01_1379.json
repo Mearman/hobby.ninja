@@ -5,6 +5,43 @@
 		"ja": "ハロプラ ハロ コントロールブルー",
 		"en": "Haropura Haro Control Blue"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5189",
+			"url": "https://bandai-hobby.net/item/01_5189/",
+			"ja": "オプションパーツセット ガンプラ 04 (ビルドハンズ 丸型)"
+		},
+		{
+			"id": "01_5190",
+			"url": "https://bandai-hobby.net/item/01_5190/",
+			"ja": "オプションパーツセット ガンプラ 03 (ビルドハンズ 角型)"
+		},
+		{
+			"id": "01_3063",
+			"url": "https://bandai-hobby.net/item/01_3063/",
+			"ja": "ハロプラ ガンダムベース限定 モビルハロ[ガンダムベースカラー]"
+		},
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -27,45 +64,51 @@
 		"en": [
 			"Haropla new variation color \"Control Blue\" is now available!",
 			"• The state where the ears open and close and the limbs are exposed can be reproduced by replacing them!",
-			"• In addition to connecting halo to each other, the display base can also be connected to Petit'gguy!"
+			"• In addition to connecting halos, the display base can also be connected to Petit'gguy!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2304_s_ivkayjpibygzu07cttbb9u5swsxg.jpg",
+				"path": "/images/items/01_1379/153_2304.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2304_s_knkdhqooetlhqgbjtcou34owwvsn.jpg",
+				"path": "/images/items/01_1379/155_2304.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2304_s_zp0m7gjddl6k1lok1uukkffty6ht.jpg",
+				"path": "/images/items/01_1379/156_2304.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2304_s_bblp3saq0bbmx6txjbpktqxpmyhh.jpg",
+				"path": "/images/items/01_1379/157_2304.jpg"
+			}
 		],
-		"en": [
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×3",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 3",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1379/153_2304.jpg",
-		"/images/items/01_1379/155_2304.jpg",
-		"/images/items/01_1379/156_2304.jpg",
-		"/images/items/01_1379/157_2304.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1379/",
-	"brandIds": [],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5189",
-		"01_5190",
-		"01_3063",
-		"01_2623"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1379/"
 }

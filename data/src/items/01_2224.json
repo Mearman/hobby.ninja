@@ -3,8 +3,44 @@
 	"type": "item",
 	"name": {
 		"ja": "RG 1/144 MS-06F 量産型ザク",
-		"en": "RG 1/144 MS-06F mass-produced Zaku"
+		"en": "RG 1/144 MS-06F ZAKUⅡ"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］",
+			"en": "RG [REAL GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2230",
+			"url": "https://bandai-hobby.net/item/01_2230/",
+			"ja": "RG 1/144 MS-06S シャア専用ザク"
+		},
+		{
+			"id": "01_2228",
+			"url": "https://bandai-hobby.net/item/01_2228/",
+			"ja": "RG 1/144 RX-78-2 ガンダム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3080,
 		"currency": "JPY",
@@ -18,35 +54,46 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• ジオンの圧倒的な戦力を支える量産型ザクがRGシリーズに登場。リアルシステム搭載。 • 頭部パーツは隊長機用アンテナ２種と一般兵用頭部が付属。 • F型の装甲を忠実に再現。 • ライフルの保持力が向上した右手、ポージングに表情を与える平手が新たに追加。 • アドヴァンスドMSジョイント採用。 • リアリスティックデカールで本物の質感を表現できる。 成形品×9、リアリスティックデカール×1、組立説明書"
+			"• ジオンの圧倒的な戦力を支える量産型ザクがRGシリーズに登場。リアルシステム搭載。 ■頭部パーツは隊長機用アンテナ２種と一般兵用頭部が付属。 ■F型の装甲を忠実に再現。 ■ライフルの保持力が向上した右手、ポージングに表情を与える平手が新たに追加。 ■アドヴァンスドMSジョイント採用。 ■リアリスティックデカールで本物の質感を表現できる。 成形品×9、リアリスティックデカール×1、組立説明書"
 		],
 		"en": [
-			"• The mass-produced Zaku that supports Zeon's overwhelming strength has arrived in the RG series. Equipped with real system. • Head parts include two types of antennas for the captain's aircraft and a head for general soldiers. • Faithfully reproduces the F-type armor. • A new right hand with improved rifle holding power and a palm hand that adds expression to the pose are added. • Advanced MS joint adopted. • You can express the real texture with realistic decals. Molded product x 9, realistic decal x 1, assembly manual"
+			"• The mass-produced Zaku, which supports Zeon's overwhelming power, appears in the RG series. Equipped with a real system.",
+			"• The head parts include two types of antennas for the captain's aircraft and a head for general soldiers.",
+			"• Faithful reproduction of F-type armor.",
+			"• The right hand has been added with improved rifle grip and a slap hand that gives expression to poses.",
+			"• Advanced MS joint adopted.",
+			"• Realistic decals can express the real texture. Molded ×9, Realistic Decal×1, Assembly Instructions"
 		]
 	},
-	"images": [
-		"/images/items/01_2224/1000092473_1.jpg",
-		"/images/items/01_2224/1000092473_2.jpg",
-		"/images/items/01_2224/1000092473_3.jpg",
-		"/images/items/01_2224/1000092473_4.jpg",
-		"/images/items/01_2224/1000092473_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092473_1.jpg",
+				"path": "/images/items/01_2224/1000092473_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092473_2.jpg",
+				"path": "/images/items/01_2224/1000092473_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092473_3.jpg",
+				"path": "/images/items/01_2224/1000092473_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092473_4.jpg",
+				"path": "/images/items/01_2224/1000092473_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092473_5.jpg",
+				"path": "/images/items/01_2224/1000092473_5.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2224/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2230",
-		"01_2228"
-	],
-	"manualId": "0659"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2224/"
+	}
 }

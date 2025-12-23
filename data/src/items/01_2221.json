@@ -5,6 +5,43 @@
 		"ja": "LBXジ・エンペラー",
 		"en": "LBX The Emperor"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "lbx",
+			"url": "https://bandai-hobby.net/series/lbx/",
+			"ja": "ダンボール戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000215196",
+			"url": "https://p-bandai.jp/item/item-1000215196/",
+			"ja": "ＬＢＸイカロス・フォース"
+		},
+		{
+			"id": "item-1000215197",
+			"url": "https://p-bandai.jp/item/item-1000215197/",
+			"ja": "ＬＢＸイカロス・ゼロ"
+		},
+		{
+			"id": "item-1000210042",
+			"url": "https://p-bandai.jp/item/item-1000210042/",
+			"ja": "ＬＢＸエルシオン"
+		},
+		{
+			"id": "item-1000210041",
+			"url": "https://p-bandai.jp/item/item-1000210041/",
+			"ja": "ＬＢＸペルセウス"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -28,46 +65,62 @@
 			"• Large hammer \"Titania\" is included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ティターニア×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ティターニア"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成型品"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3165_s_u47feh02852z6qxh42npabvsqhh5.jpg",
+				"path": "/images/items/01_2221/153_3165.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3165_s_ri1qj9w40g9cxswm5lunhh5m0w6u.jpg",
+				"path": "/images/items/01_2221/155_3165.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3165_s_nxvv1pngef5gvz1qgpbjpd75vz3t.jpg",
+				"path": "/images/items/01_2221/156_3165.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3165_s_lo6ns2bh50zuzqgg1ba977vexkzy.jpg",
+				"path": "/images/items/01_2221/157_3165.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3165_s_tn7v5desm557o6l4senniexac2t1.jpg",
+				"path": "/images/items/01_2221/158_3165.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3165_s_x4az67hkfczcpmdwg1r9mwpw7ks1.jpg",
+				"path": "/images/items/01_2221/159_3165.jpg"
+			}
 		],
-		"en": [
-			"Titania×1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成型品×6",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 6",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2221/153_3165.jpg",
-		"/images/items/01_2221/155_3165.jpg",
-		"/images/items/01_2221/156_3165.jpg",
-		"/images/items/01_2221/157_3165.jpg",
-		"/images/items/01_2221/158_3165.jpg",
-		"/images/items/01_2221/159_3165.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2221/",
-	"brandIds": [],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2221/"
 }

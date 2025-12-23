@@ -5,6 +5,38 @@
 		"ja": "EXモデル 07 1/144 ジェットコアブースター",
 		"en": "EXModel 07 1/144 Jet Core Booster"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5987",
+			"url": "https://bandai-hobby.net/item/01_5987/",
+			"ja": "ガンダムデカールNo.139 機動戦士Gundam GQuuuuuuX汎用1"
+		},
+		{
+			"id": "01_5988",
+			"url": "https://bandai-hobby.net/item/01_5988/",
+			"ja": "ガンダムデカールNo.140 機動戦士Gundam GQuuuuuuX汎用2"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,7 +49,6 @@
 		"month": 3
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"OVA『機動戦士ガンダム第08MS小隊』に登場の機体を1/144スケールで立体化。同スケールの第08MS小隊シリーズに、よりリアルなミリタリー世界を再現しました。姿勢保持の専用スタンドが付属。"
@@ -26,21 +57,22 @@
 			"The aircraft that appears in the OVA \"Mobile Suit Gundam 08th MS Platoon\" is three-dimensionalized in 1/144 scale. A more realistic military world is reproduced in the 08th MS Platoon series of the same scale. A special stand for maintaining posture is included."
 		]
 	},
-	"images": [
-		"/images/items/01_1672/153_257.jpg",
-		"/images/items/01_1672/155_257.jpg",
-		"/images/items/01_1672/156_257.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1672/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5986",
-		"01_5987",
-		"01_5988"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_257_s_0oidcukafeut7vbwyu2gtzclero4.jpg",
+				"path": "/images/items/01_1672/153_257.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_257_s_1x4fetn30las0qo7psxcpiq22kvd.jpg",
+				"path": "/images/items/01_1672/155_257.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_257_s_nf18meeta2h4hw2gdizzsfcrxeyq.jpg",
+				"path": "/images/items/01_1672/156_257.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1672/"
 }

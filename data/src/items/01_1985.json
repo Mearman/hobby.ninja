@@ -5,6 +5,44 @@
 		"ja": "1/1000 ブロッケード・ランナー & 1/350 ミレニアム・ファルコン",
 		"en": "1/1000 Blockade Runner & 1/350 Millennium Falcon"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3513",
+			"url": "https://bandai-hobby.net/item/01_3513/",
+			"ja": "ビークルモデル レイザー・クレスト"
+		}
+	],
+	"scale": "1/1000",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 30
 	},
 	"targetAge": 15,
-	"scale": "1/1000",
 	"description": {
 		"ja": [
 			"『スター・ウォーズ エピソード４／新たなる希望』に登場する反乱軍の戦艦である「ブロッケード・ランナー」と「ミレニアム・ファルコン」がセットで登場！",
@@ -26,57 +63,91 @@
 			"• 正面部分に貼れる新規マーキングシールが２枚付属。"
 		],
 		"en": [
-			"The rebel battleships \"Blockade Runner \" and \" Millennium Falcon \" that appear in \" Star Wars Episode IV: A New Hope\" are now available as a set!",
-			"• Two special clear dedicated pedestals are included.",
+			"The rebel battleships \"Blockade Runner\" and \"Millennium Falcon\" that appear in \"Star Wars Episode IV: A New Hope\" are now available as a set!",
+			"• Two special clear pedestals are included.",
 			"• Two new MarkingSeals that can be pasted on the front part are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用ディスプレイベース×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 7
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130837_1.jpg",
+				"path": "/images/items/01_1985/1000130837_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130837_2.jpg",
+				"path": "/images/items/01_1985/1000130837_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130837_3.jpg",
+				"path": "/images/items/01_1985/1000130837_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130837_4.jpg",
+				"path": "/images/items/01_1985/1000130837_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130837_5.jpg",
+				"path": "/images/items/01_1985/1000130837_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130837_6.jpg",
+				"path": "/images/items/01_1985/1000130837_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130837_7.jpg",
+				"path": "/images/items/01_1985/1000130837_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130837_8.jpg",
+				"path": "/images/items/01_1985/1000130837_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130837_9.jpg",
+				"path": "/images/items/01_1985/1000130837_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130837_10.jpg",
+				"path": "/images/items/01_1985/1000130837_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130837_11.jpg",
+				"path": "/images/items/01_1985/1000130837_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130837_12.jpg",
+				"path": "/images/items/01_1985/1000130837_12.jpg"
+			}
 		],
-		"en": [
-			"Dedicated display base x 2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×7",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 7",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1985/1000130837_1.jpg",
-		"/images/items/01_1985/1000130837_10.jpg",
-		"/images/items/01_1985/1000130837_11.jpg",
-		"/images/items/01_1985/1000130837_12.jpg",
-		"/images/items/01_1985/1000130837_2.jpg",
-		"/images/items/01_1985/1000130837_3.jpg",
-		"/images/items/01_1985/1000130837_4.jpg",
-		"/images/items/01_1985/1000130837_5.jpg",
-		"/images/items/01_1985/1000130837_6.jpg",
-		"/images/items/01_1985/1000130837_7.jpg",
-		"/images/items/01_1985/1000130837_8.jpg",
-		"/images/items/01_1985/1000130837_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1985/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3513"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1985/"
 }

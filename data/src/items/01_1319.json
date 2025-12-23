@@ -5,6 +5,43 @@
 		"ja": "ハロプラ ハロ ベーシックグリーン",
 		"en": "Haropura Haro Basic Green"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5189",
+			"url": "https://bandai-hobby.net/item/01_5189/",
+			"ja": "オプションパーツセット ガンプラ 04 (ビルドハンズ 丸型)"
+		},
+		{
+			"id": "01_5190",
+			"url": "https://bandai-hobby.net/item/01_5190/",
+			"ja": "オプションパーツセット ガンプラ 03 (ビルドハンズ 角型)"
+		},
+		{
+			"id": "01_3063",
+			"url": "https://bandai-hobby.net/item/01_3063/",
+			"ja": "ハロプラ ガンダムベース限定 モビルハロ[ガンダムベースカラー]"
+		},
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -25,47 +62,53 @@
 			"• 内部メカもこだわりの造形となっている！"
 		],
 		"en": [
-			"• The “Haro” that also appears as the initial diver avatar in “Gundam Build Divers” is now available as a plastic model!",
-			"• It is a collection item that can be easily enjoyed due to its reasonable size and ease of assembly.The ears can be opened and closed, and the state where the limbs are exposed can be recreated by replacing them!",
+			"• “Haro”, who also appears as the initial diver avatar in “Gundam Build Divers”, is now available as a plastic model!",
+			"• It is a collection item that can be easily enjoyed due to its reasonable size and ease of assembly.The ears can be opened and closed, and the limbs can be recreated by replacing them!",
 			"• The internal mechanism is also carefully designed!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用台座×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用台座"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2248_s_p5wb385sbr9btrbm1ar61zvlvcws.jpg",
+				"path": "/images/items/01_1319/153_2248.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2248_s_k80thjh3z4896qa1sb54ndnqasz1.jpg",
+				"path": "/images/items/01_1319/155_2248.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2248_s_m8c151i9fvnk4vu3kq3lh768gr94.jpg",
+				"path": "/images/items/01_1319/156_2248.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2248_s_5o8uzdg3utv333e5sy02pygvu5gp.jpg",
+				"path": "/images/items/01_1319/157_2248.jpg"
+			}
 		],
-		"en": [
-			"Dedicated pedestal x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×3",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 3",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1319/153_2248.jpg",
-		"/images/items/01_1319/155_2248.jpg",
-		"/images/items/01_1319/156_2248.jpg",
-		"/images/items/01_1319/157_2248.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1319/",
-	"brandIds": [],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5189",
-		"01_5190",
-		"01_3063",
-		"01_2623"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1319/"
 }

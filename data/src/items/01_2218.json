@@ -5,6 +5,43 @@
 		"ja": "LBX AX-00",
 		"en": "LBX AX-00"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "lbx",
+			"url": "https://bandai-hobby.net/series/lbx/",
+			"ja": "ダンボール戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000215196",
+			"url": "https://p-bandai.jp/item/item-1000215196/",
+			"ja": "ＬＢＸイカロス・フォース"
+		},
+		{
+			"id": "item-1000215197",
+			"url": "https://p-bandai.jp/item/item-1000215197/",
+			"ja": "ＬＢＸイカロス・ゼロ"
+		},
+		{
+			"id": "item-1000210042",
+			"url": "https://p-bandai.jp/item/item-1000210042/",
+			"ja": "ＬＢＸエルシオン"
+		},
+		{
+			"id": "item-1000210041",
+			"url": "https://p-bandai.jp/item/item-1000210041/",
+			"ja": "ＬＢＸペルセウス"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -25,47 +62,57 @@
 		],
 		"en": [
 			"The mysterious LBX that appeared in the first episode and was obtained by Ban has appeared!",
-			"• Weapon \"steel club\" is included."
+			"• Includes weapon \"steel club\"."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"鋼鉄棍×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "鋼鉄棍"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成型品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3162_s_z7ln64iax2z46bs7vmfhtxo5d94b.jpg",
+				"path": "/images/items/01_2218/153_3162.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3162_s_msc8kz8ntjproifhxjzxlm46323j.jpg",
+				"path": "/images/items/01_2218/155_3162.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3162_s_8it2o835jqqcaue7waaj9x471aqo.jpg",
+				"path": "/images/items/01_2218/156_3162.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3162_s_db388e3a1zzvfouocidn3qfiq4ac.jpg",
+				"path": "/images/items/01_2218/157_3162.jpg"
+			}
 		],
-		"en": [
-			"Steel club×1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成型品×4",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 4",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2218/153_3162.jpg",
-		"/images/items/01_2218/155_3162.jpg",
-		"/images/items/01_2218/156_3162.jpg",
-		"/images/items/01_2218/157_3162.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2218/",
-	"brandIds": [],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2218/"
 }

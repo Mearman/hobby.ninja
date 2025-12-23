@@ -5,6 +5,44 @@
 		"ja": "1/100 シャア専用ズゴック",
 		"en": "1/100 Char's Z'Gok"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、1/100スケールで、シャア専用ズコックが登場。",
@@ -28,22 +65,18 @@
 			"The claw opening and closing mechanism of both arms is reproduced, allowing posing with each arm. Since the torso and chest are expressed as separate parts, the torso can swing forward, backward, left and right. The knees and ankles swing back and forth and side to side."
 		]
 	},
-	"images": [
-		"/images/items/01_3131/153_4096.jpg",
-		"/images/items/01_3131/155_4096.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3131/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4096_s_664xmjovah32d265cqsi7xit0lnx.jpg",
+				"path": "/images/items/01_3131/153_4096.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4096_s_5qcqegsrn9mmd158vbuj8xffch41.jpg",
+				"path": "/images/items/01_3131/155_4096.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3131/"
 }

@@ -5,6 +5,43 @@
 		"ja": "BB戦士317 周倉ドーベンウルフ",
 		"en": "BB Senshi 317 Suikura Doben Wolf"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -23,26 +60,25 @@
 			"●三国伝に新たな武将“周倉ドーベンウルフ”が出陣 ●武器は専用の大斧、背中に装備した刀×2が付属 ●大斧と2本刀は大型武器「三爪戟」に合体可能 ●鎧は着脱可能"
 		],
 		"en": [
-			"-A new military commander in the Sangokuden, \"Shukura Dobenwolf \" has entered the battle. -Weapons include a special large ax and 2 swords equipped on the back. -The large ax and two swords can be combined into a large weapon, the \" three-clawed sword.\" -The armor is removable."
+			"-A new military commander in the Sangokuden, \"Shukura Dobenwolf\" has entered the battle. -Weapons include a special large ax and 2 swords equipped on the back. -The large ax and two swords can be combined into a large weapon, the \"three-clawed sword.\" -The armor is removable."
 		]
 	},
-	"images": [
-		"/images/items/01_2527/153_3452.jpg",
-		"/images/items/01_2527/155_3452.jpg",
-		"/images/items/01_2527/156_3452.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2527/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3452_s_91nxm3plzlby8zg2kyuxavgzbs0u.jpg",
+				"path": "/images/items/01_2527/153_3452.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3452_s_9ur3fotjv3fydoo9yavy3me7wqys.jpg",
+				"path": "/images/items/01_2527/155_3452.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3452_s_y1uy7yrtffubi0hx0ycbtewy26wk.jpg",
+				"path": "/images/items/01_2527/156_3452.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2527/"
 }

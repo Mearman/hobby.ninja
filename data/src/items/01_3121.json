@@ -5,6 +5,43 @@
 		"ja": "ガンダム情景模型 ア・バオア・クー",
 		"en": "Gundam scene model A Baoa Ku"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -25,22 +62,18 @@
 			"From \"Mobile Suit Gundam\" comes the scenic model A Baoa Ku."
 		]
 	},
-	"images": [
-		"/images/items/01_3121/153_4086.jpg",
-		"/images/items/01_3121/155_4086.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3121/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4086_s_n07wqohr1jl7787befnf0jxe1w6t.jpg",
+				"path": "/images/items/01_3121/153_4086.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4086_s_14uhu3dmczldzqpdkqk62a1w5vp1.jpg",
+				"path": "/images/items/01_3121/155_4086.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3121/"
 }

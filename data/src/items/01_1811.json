@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 νガンダム(ヘビー・ウエポン・システム装備型)",
 		"en": "HGUC 1/144 νGundam (heavy weapon system equipped type)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5346",
+			"url": "https://bandai-hobby.net/item/01_5346/",
+			"ja": "HG 1/144 ジムIII(アクシズ・ショックイメージカラー)"
+		},
+		{
+			"id": "01_5210",
+			"url": "https://bandai-hobby.net/item/01_5210/",
+			"ja": "HG 1/144 ギラ・ドーガ(アクシズ・ショックイメージカラー)"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4408",
+			"url": "https://bandai-hobby.net/item/01_4408/",
+			"ja": "HG 1/144 サイコ・ドーガ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3080,
 		"currency": "JPY",
@@ -18,35 +67,26 @@
 		"day": 25
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム 逆襲のシャア」のMSバリエーション「CCA-MSV」より“ニューガンダム（ヘビー・ウエポン・システム装備型）”がHGUCにラインナップ。ニューガンダムに追加装甲（胸部、フロント・リアアーマー、脚部大型スラスター）とハイパー・メガ・ライフル、ロケット砲を備えた大型シールドを装備したヘビー・ウエポン・システム装備を再現。胸部増加装甲上部のミサイルポッドは上下に可動。フィン・ファンネルは一枚ごとに分離、各関節部が可動。パーツの組み替えで、通常のニューガンダムも再現可能。ハイパー・メガ・ライフル、大型シールド、ビーム・ライフル、ハイパー・バズーカ、シールド、ビーム・サーベル（2種類）、フィン・ファンネル×6が付属。"
 		],
 		"en": [
-			"\"New Gundam (heavy weapon system equipped type)\" from \" Mobile Suit Gundam: Char's Counterattack \" MS variation \" CCA-MSV\" is now available in HGUC. Reproduces the heavy weapon system equipment of the new Gundam, which is equipped with additional armor (chest, front and rear armor, large thrusters on the legs), a hyper mega rifle, and a large Seal with a rocket cannon. The missile pod at the top of the chest armor can move up and down. The fins and funnels can be separated one by one, and each joint can be moved. By rearranging the parts, you can also reproduce the regular new Gundam. Includes Hyper Mega Rifle, Large Seal, Beam Rifle, Hyper Bazooka, Seal, Beam Saber (2 types), and Fin Funnel x6."
+			"\"New Gundam (heavy weapon system equipped type)\" from \"Mobile Suit Gundam: Char's Counterattack\" MS variation \"CCA-MSV\" is now available in HGUC. Reproduces the heavy weapon system equipment of the new Gundam, which is equipped with additional armor (chest, front and rear armor, large thrusters on the legs), a hyper mega rifle, and a large Seal with a rocket cannon. The missile pod at the top of the chest armor can move up and down. The fins and funnels can be separated one by one, and each joint can be moved. By rearranging the parts, you can also reproduce the regular new Gundam. Includes Hyper Mega Rifle, Large Seal, Beam Rifle, Hyper Bazooka, Seal, Beam Saber (2 types), and Fin Funnel x6."
 		]
 	},
-	"images": [
-		"/images/items/01_1811/153_2749.jpg",
-		"/images/items/01_1811/155_2749.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1811/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5346",
-		"01_5210",
-		"01_4971",
-		"01_4408"
-	],
-	"manualId": "0404"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2749_s_gkddkib22qm8v3t52ugx84yzmggk.jpg",
+				"path": "/images/items/01_1811/153_2749.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2749_s_k0m7i956l70ioj6lzksund9241e3.jpg",
+				"path": "/images/items/01_1811/155_2749.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1811/"
 }

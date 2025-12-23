@@ -5,6 +5,43 @@
 		"ja": "ピカちんキットS01　おたから探知機",
 		"en": "Pikachin KitS01 Otakara Detector"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -34,9 +71,9 @@
 			"コイル…1"
 		],
 		"en": [
-			"• Pikachin KitS that when you get close to metal, a buzzer will sound and you can find nearby objects!",
-			"• Pirameki coil is 1%! Assemble electronic parts yourself!",
-			"• Can be combined with parts of \"Pikachin Robo S01 Treasure Buu\" (sold separately) to power up!",
+			"• Pikachin KitS lets you find nearby objects by sounding a buzzer when you bring it close to metal!",
+			"• 1% coil coil! Assemble electronic parts yourself!",
+			"• Can be combined with parts from \"Pikachin Robo S01 Treasure Buu\" (sold separately) to power up!",
 			"• Uses 2 AA batteries (sold separately).",
 			"[Set contents]",
 			"Otakara detector...1 (molded product...2)",
@@ -48,26 +85,34 @@
 			"Coil...1"
 		]
 	},
-	"images": [
-		"/images/items/01_1880/153_2812.jpg",
-		"/images/items/01_1880/155_2812.jpg",
-		"/images/items/01_1880/156_2812.jpg",
-		"/images/items/01_1880/157_2812.jpg",
-		"/images/items/01_1880/158_2812.jpg",
-		"/images/items/01_1880/159_2812.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1880/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2812_s_lm09rngdd4wuoii44roev9hcyog2.jpg",
+				"path": "/images/items/01_1880/153_2812.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2812_s_jchlvvcf36lx9owb70yojhm5uqlu.jpg",
+				"path": "/images/items/01_1880/155_2812.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2812_s_7zh3fefgxnwzr1c530v7zj9jpc80.jpg",
+				"path": "/images/items/01_1880/156_2812.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2812_s_16v5pmdkfnrrawcsyv1e46thzwyl.jpg",
+				"path": "/images/items/01_1880/157_2812.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2812_s_u5xlvzwar89win8obdciqasgocjd.jpg",
+				"path": "/images/items/01_1880/158_2812.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2812_s_ug7bliwg4m2ykogvr7zxlgthsdrf.jpg",
+				"path": "/images/items/01_1880/159_2812.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1880/"
 }

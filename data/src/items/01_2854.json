@@ -5,6 +5,49 @@
 		"ja": "メカコレクション 自律無人戦闘艦BBB アンドロメダブラック",
 		"en": "Mecha Collection Autonomous Unmanned Combat Ship BBB Andromeda Black"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "yamato",
+			"url": "https://bandai-hobby.net/series/yamato/",
+			"ja": "宇宙戦艦ヤマトシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5498",
+			"url": "https://bandai-hobby.net/item/01_5498/",
+			"ja": "メカコレクションDX 1式空間戦闘攻撃機 コスモタイガーII(単座型/銃座型) [2機セット]"
+		},
+		{
+			"id": "01_5500",
+			"url": "https://bandai-hobby.net/item/01_5500/",
+			"ja": "メカコレクションDX 試製空間戦闘攻撃機 コスモパイソン [2機セット]"
+		},
+		{
+			"id": "01_3667",
+			"url": "https://bandai-hobby.net/item/01_3667/",
+			"ja": "メカコレクション ガイペロン級多層式航宙母艦 バルメス(外洋機動艦隊仕様)"
+		},
+		{
+			"id": "01_3650",
+			"url": "https://bandai-hobby.net/item/01_3650/",
+			"ja": "メカコレクション デウスーラIII世"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -21,45 +64,49 @@
 	"description": {
 		"ja": [
 			"『宇宙戦艦ヤマト2202 愛の戦士たち』第五章から登場した漆黒の自律無人戦闘艦「アンドロメダブラック」がメカコレクションにラインアップ！",
-			"■ドクロのマークや艦体側面に刻まれたフレーズは、水転写式デカールで再現。",
-			"■複数揃えれば、劇中のアンドロメダ艦隊が再現できる。"
+			"• ドクロのマークや艦体側面に刻まれたフレーズは、水転写式デカールで再現。",
+			"• 複数揃えれば、劇中のアンドロメダ艦隊が再現できる。"
 		],
 		"en": [
-			"The jet-black autonomous unmanned battleship \"Andromeda Black \" that appeared in Chapter 5 of \" Space Battleship Yamato 2202 Warriors of Love\" is now available in the mecha collection!",
+			"The jet-black autonomous unmanned battleship \"Andromeda Black\" that appeared in Chapter 5 of \"Space Battleship Yamato 2202 Warriors of Love\" is now available in the mecha collection!",
 			"• The skull mark and the phrase engraved on the side of the ship are reproduced with water slide decals.",
 			"• If you collect multiple pieces, you can recreate the Andromeda fleet from the movie."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ディスプレイベース×1",
-			"水転写式デカール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3837_s_3aqwc3jt5cmiq4d4te2sk1qjdbs5.jpg",
+				"path": "/images/items/01_2854/153_3837.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3837_s_974ewbh1uyhtv3fzwkqo36strzsi.jpg",
+				"path": "/images/items/01_2854/155_3837.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3837_s_gnj4mgzm48ohrfavxgarlshelm1w.jpg",
+				"path": "/images/items/01_2854/156_3837.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3837_s_rvlwcnzk3lzezwfl9fopljb7uzxu.jpg",
+				"path": "/images/items/01_2854/157_3837.jpg"
+			}
 		],
-		"en": [
-			"Display base x 1",
-			"Water transfer decal x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2854/153_3837.jpg",
-		"/images/items/01_2854/155_3837.jpg",
-		"/images/items/01_2854/156_3837.jpg",
-		"/images/items/01_2854/157_3837.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2854/",
-	"brandIds": [
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"yamato"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5498",
-		"01_5500",
-		"01_3667",
-		"01_3650"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2854/"
 }

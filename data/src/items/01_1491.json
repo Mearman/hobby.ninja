@@ -2,9 +2,47 @@
 	"id": "01_1491",
 	"type": "item",
 	"name": {
-		"ja": "1/144 ガンダム GP-03S",
-		"en": "1/144 Gundam GP-03S"
+		"ja": "1/144 ガンダムGP-03S",
+		"en": "1/144 GundamGP-03S"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "g-0083",
+			"url": "https://bandai-hobby.net/series/g-0083/",
+			"ja": "機動戦士ガンダム0083 STARDUST MEMORY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "item-1000127907",
+			"url": "http://p-bandai.jp/item/item-1000127907",
+			"ja": "ＭＧ 1/100 MS-06F-2 ザクＩＩ Ｆ２型（ノイエン・ビッター機）"
+		},
+		{
+			"id": "item-1000127908",
+			"url": "http://p-bandai.jp/item/item-1000127908",
+			"ja": "ＭＧ 1/100 MS-06F-2 ザクＩＩ Ｆ２型（キンバライト基地仕様）"
+		},
+		{
+			"id": "item-1000124942",
+			"url": "http://p-bandai.jp/item/item-1000124942",
+			"ja": "ＭＧ 1/100 アナベル・ガトー専用ゲルググ Ver.2.0"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -17,33 +55,28 @@
 		"month": 5
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム 0083』より、1/144スケールで、ガンダム GP-03が登場。",
+			"『機動戦士ガンダム0083』より、1/144スケールで、ガンダムGP-03が登場。",
 			"武器はビーム・ライフル、ビームサーベル、設定どおりのおりたたみが可能なフォールディングバズーカとフォールディング・シールドが付いています。フォールディングサポートアームの展開が再現できます。股関節、足首、手首にボールジョイントを採用しています。足首アーマー、テールバインダーが可動します。バックパックのサーベルラックは開閉が可能です。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam 0083\", Gundam GP-03 appears in 1/144 scale.",
+			"From \"Mobile Suit Gundam0083\", GundamGP-03 appears in 1/144 scale.",
 			"Weapons include a beam rifle, beam saber, folding bazooka and folding seal that can be folded as configured. The unfolding of the folding support arm can be reproduced. Ball joints are used in the hips, ankles, and wrists. Ankle armor and tail binder are movable. The backpack's saber rack can be opened and closed."
 		]
 	},
-	"images": [
-		"/images/items/01_1491/153_2411.jpg",
-		"/images/items/01_1491/155_2411.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1491/",
-	"brandIds": [],
-	"seriesIds": [
-		"g-0083"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5442",
-		"item-1000127907",
-		"item-1000127908",
-		"item-1000124942"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2411_s_hkk8t7kghukvnqqva9zjhy8l5r6d.jpg",
+				"path": "/images/items/01_1491/153_2411.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2411_s_kvfp0v4zjcheem8mgh7qylkllau8.jpg",
+				"path": "/images/items/01_1491/155_2411.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1491/"
 }

@@ -3,8 +3,36 @@
 	"type": "item",
 	"name": {
 		"ja": "ガンダムベース限定 アクションベース5 [ユニコーンカラー]",
-		"en": "Gundam Base Limited Action Base 5 [Unicorn Color]"
+		"en": "THE GUNDAM BASE LIMITED ACTION BASE 5 [UNICORN COLOR]"
 	},
+	"brands": [
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		},
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]",
+			"en": "MOBILE SUIT GUNDAM UC (Unicorn)"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -23,28 +51,28 @@
 			"アクションベース５が、ガンダムベース限定のユニコーンガンダムをイメージさせる、白とクリアピンクのカラーリングで登場。"
 		],
 		"en": [
-			"A limited edition item from the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"Action Base 5 is now available in white and clear pink coloring reminiscent of the Gundam Base limited unicorn Gundam."
+			"For GUNPLA fans around the world, this item is limited to the official GUNPLA complex \"GUNDAM Base\". The ACTION BASE 5 is now available in a white and clear pink livery reminiscent of the GUNDAM-based unicorn GUNDAM."
 		]
 	},
-	"images": [
-		"/images/items/01_1940/1000126804_1.jpg",
-		"/images/items/01_1940/1000126804_2.jpg",
-		"/images/items/01_1940/1000126804_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126804_1.jpg",
+				"path": "/images/items/01_1940/1000126804_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126804_2.jpg",
+				"path": "/images/items/01_1940/1000126804_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126804_3.jpg",
+				"path": "/images/items/01_1940/1000126804_3.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1940/",
-	"brandIds": [
-		"actionbase"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1940/"
 	}
 }

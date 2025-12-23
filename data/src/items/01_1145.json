@@ -5,6 +5,60 @@
 		"ja": "ＲＧ 1/144 ガンダムアストレイ ゴールドフレーム天（アマツ）",
 		"en": "RG 1/144 Gundam Astray Gold Frame Heaven (Amatsu)"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "astrays",
+			"url": "https://bandai-hobby.net/series/astrays/",
+			"ja": "機動戦士ガンダムSEED ASTRAY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_833",
+			"url": "https://bandai-hobby.net/item/01_833/",
+			"ja": "RG 1/144 ガンダムアストレイ ゴールドフレーム天ミナ"
+		},
+		{
+			"id": "01_1908",
+			"url": "https://bandai-hobby.net/item/01_1908/",
+			"ja": "RG 1/144 ガンダムアストレイ ブルーフレーム メッキVer."
+		},
+		{
+			"id": "01_1903",
+			"url": "https://bandai-hobby.net/item/01_1903/",
+			"ja": "RG 1/144 ガンダムアストレイ レッドフレーム メッキVer."
+		},
+		{
+			"id": "item-1000145557",
+			"url": "https://p-bandai.jp/item/item-1000145557",
+			"ja": "ＲＧ 1/144 ガンダムアストレイゴールドフレーム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -17,31 +71,14 @@
 		"month": 9
 	},
 	"targetAge": 15,
-	"scale": "1/144",
-	"images": [
-		"/images/items/01_1145/153_2077.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1145/",
-	"brandIds": [
-		"rg",
-		"pb_rg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"astrays"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_833",
-		"01_1908",
-		"01_1903",
-		"item-1000145557"
-	],
-	"manualId": "2670",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2077_o_1bm4kinu9133a1kse1jla1jdd1ka223.jpg",
+				"path": "/images/items/01_1145/153_2077.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1145/"
 }

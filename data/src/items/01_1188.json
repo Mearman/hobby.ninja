@@ -5,6 +5,44 @@
 		"ja": "1/12　ファースト・オーダー　ストームトルーパー・エクセキューショナー",
 		"en": "1/12 First Order Stormtrooper Executioner"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3515",
+			"url": "https://bandai-hobby.net/item/01_3515/",
+			"ja": "1/12 ザ・マンダロリアン(ベスカーアーマー)"
+		}
+	],
+	"scale": "1/12",
 	"price": {
 		"amount": 2970,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 9
 	},
 	"targetAge": 15,
-	"scale": "1/12",
 	"description": {
 		"ja": [
 			"『スター・ウォーズ／最後のジェダイ』に登場する頭部の黒いラインが特徴的なストームトルーパーのプラモデルです。",
@@ -35,71 +72,142 @@
 			"Total height: approx. 142mm"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"肩パッド×2種",
-			"専用ディスプレイベース×1",
-			"F-11D ブラスター・ライフル×1",
-			"EP8新武装×１",
-			"エフェクトパーツ×１",
-			"ハンドパーツ ×8種",
-			"武器持ち手（左右）×各1",
-			"銃持ち手（左右）×各1",
-			"平手（左右）×各1",
-			"こぶし（左右）×各1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "肩パッド"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "F-11D ブラスター・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "EP8新武装×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "エフェクトパーツ×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ"
+			},
+			"count": 8,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "武器持ち手（左右）×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "銃持ち手（左右）×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "平手（左右）×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "こぶし（左右）×各1"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 7
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2115_s_ctuhvineajaobfwkqcf5gyme93uj.jpg",
+				"path": "/images/items/01_1188/153_2115.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2115_s_298v1bw9rcxi1gyvntu41lwlehi3.jpg",
+				"path": "/images/items/01_1188/155_2115.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2115_s_tcorv0f1jky5nx7q4sgau82vs8hr.jpg",
+				"path": "/images/items/01_1188/156_2115.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2115_s_z7cqsnooktw1wrkso244dptcq44r.jpg",
+				"path": "/images/items/01_1188/157_2115.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2115_s_u4riunijwm63z8phqmivnr9l0vkm.jpg",
+				"path": "/images/items/01_1188/158_2115.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2115_s_mx008i1br9m1og9yx81mwij69efl.jpg",
+				"path": "/images/items/01_1188/159_2115.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2115_s_u7uiibrkf5agzr8g87y3ov80bdsi.jpg",
+				"path": "/images/items/01_1188/189_2115.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2115_s_5nu85wz0ex0487w1o4kwm5isxcdb.jpg",
+				"path": "/images/items/01_1188/190_2115.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2115_s_earzkowt19lzlgnummixf6kpemyy.jpg",
+				"path": "/images/items/01_1188/191_2115.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2115_s_kvi8bvo0486fe80nmumw3otunynq.jpg",
+				"path": "/images/items/01_1188/192_2115.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_2115_s_y3i8qzt9a2jp4wwv54buj42x340i.jpg",
+				"path": "/images/items/01_1188/193_2115.jpg"
+			}
 		],
-		"en": [
-			"Shoulder pad x 2 types",
-			"Dedicated display base x 1",
-			"F-11D blaster rifle x 1",
-			"EP8 new weapon x1",
-			"Effect parts x 1",
-			"Hand parts x 8 types",
-			"Weapon handle (left and right) x 1 each",
-			"Gun handle (left and right) x 1 each",
-			"Hirate (left and right) x 1 each",
-			"Fist (left and right) x 1 each"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×7",
-			"水転写式デカール×1",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 7",
-			"Water transfer decal x 1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1188/153_2115.jpg",
-		"/images/items/01_1188/155_2115.jpg",
-		"/images/items/01_1188/156_2115.jpg",
-		"/images/items/01_1188/157_2115.jpg",
-		"/images/items/01_1188/158_2115.jpg",
-		"/images/items/01_1188/159_2115.jpg",
-		"/images/items/01_1188/189_2115.jpg",
-		"/images/items/01_1188/190_2115.jpg",
-		"/images/items/01_1188/191_2115.jpg",
-		"/images/items/01_1188/192_2115.jpg",
-		"/images/items/01_1188/193_2115.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1188/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3515"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1188/"
 }

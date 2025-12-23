@@ -5,6 +5,44 @@
 		"ja": "EXモデル 01 1/144 連邦軍用ガンダムトレーラー",
 		"en": "EXModel 01 1/144 Federation Forces Gundam Trailer"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 7
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"地球連邦軍のモビルスーツ運搬用トレーラーを1/144スケールで立体化しました。HGUC RX-78-2 ガンダムを載せれば『機動戦士ガンダム』第1話の名シーンが再現可能です。劇中の既存ディテールを追求するだけでなく、新解釈の専用ハンガーが付属。"
@@ -26,27 +63,38 @@
 			"A 1/144 scale three-dimensional version of the Earth Federation army's mobile suit transport trailer. If you install HGUC RX-78-2 Gundam, you can recreate the famous scene from the first episode of \"Mobile Suit Gundam\". In addition to pursuing the existing details from the play, a special hanger with a new interpretation is included."
 		]
 	},
-	"images": [
-		"/images/items/01_1148/153_207.jpg",
-		"/images/items/01_1148/155_207.jpg",
-		"/images/items/01_1148/156_207.jpg",
-		"/images/items/01_1148/157_207.jpg",
-		"/images/items/01_1148/158_207.jpg",
-		"/images/items/01_1148/159_207.jpg",
-		"/images/items/01_1148/189_207.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1148/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_207_s_7zryqbg9lvevnmd9sfnlbg9m3wg8.jpg",
+				"path": "/images/items/01_1148/153_207.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_207_s_s8vwmrs6d8oqdc6q31soapt5020p.jpg",
+				"path": "/images/items/01_1148/155_207.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_207_s_nywv1wiz0sbw6nug4dglup901vi4.jpg",
+				"path": "/images/items/01_1148/156_207.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_207_s_t6o6ome0stm489v6mdc67v1siivy.jpg",
+				"path": "/images/items/01_1148/157_207.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_207_s_8avfhqoyzdp3s30fr1aed5u70cat.jpg",
+				"path": "/images/items/01_1148/158_207.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_207_s_y4pde0v2hoyv6ayajor480yolgqm.jpg",
+				"path": "/images/items/01_1148/159_207.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_207_s_8dn2oetqw74m8l2vvhwr7buy2qi9.jpg",
+				"path": "/images/items/01_1148/189_207.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1148/"
 }

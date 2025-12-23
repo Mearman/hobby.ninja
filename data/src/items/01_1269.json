@@ -5,6 +5,49 @@
 		"ja": "ガンダムデカールNo.120 機動戦士ガンダム外伝 THE BLUE DESTINY汎用1",
 		"en": "Gundam Decal No.120 Mobile Suit Gundam Gaiden THE BLUE DESTINY General Purpose 1"
 	},
+	"brands": [
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_3674",
+			"url": "https://bandai-hobby.net/item/01_3674/",
+			"ja": "ガンダムデカールNo.131 RG 1/144 ジオング用"
+		},
+		{
+			"id": "01_1264",
+			"url": "https://bandai-hobby.net/item/01_1264/",
+			"ja": "ガンダムデカールNo.116 RG 1/144 MS-06R汎用1"
+		},
+		{
+			"id": "01_1137",
+			"url": "https://bandai-hobby.net/item/01_1137/",
+			"ja": "ガンダムデカールNo.110 HG 1/144 機動戦士ガンダムMSV汎用1"
+		}
+	],
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -30,23 +73,14 @@
 			"water transfer decal"
 		]
 	},
-	"images": [
-		"/images/items/01_1269/153_2200.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1269/",
-	"brandIds": [
-		"gundam_decal"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4971",
-		"01_3674",
-		"01_1264",
-		"01_1137"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2200_s_x7jua5gpx5zjv7bonsjjzacvdx25.jpg",
+				"path": "/images/items/01_1269/153_2200.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1269/"
 }

@@ -5,6 +5,54 @@
 		"ja": "ＭＧ 1/100 緊急脱出ポッド［プリムローズ］拡張セット",
 		"en": "MG 1/100 Emergency Escape Pod [Primrose] Expansion Set"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "item-1000220190",
+			"url": "https://p-bandai.jp/item/item-1000220190/",
+			"ja": "ＨＧ 1/144 ザク・デザートタイプ ピンクパンサー隊機"
+		},
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "item-1000216105",
+			"url": "https://p-bandai.jp/item/item-1000216105/",
+			"ja": "RG 1/144 ソードインパルスガンダムＳｐｅｃＩＩ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"---",
@@ -68,7 +115,7 @@
 			"● Water transfer decal",
 			"*Display base and water transfer decals are the same as \"MG 1/100 Gundam TR-1 [Hazel Ausura]\".",
 			"◆◆ The characteristic cockpit block shape is reproduced with new modeling.",
-			"◆◆ In combination with the recommended kit sold separately, various forms of the \"Emergency Escape Pod [Primrose]\" and \" Gundam TR-1 [Hazle Ausura]\" can be reproduced.",
+			"◆◆ In combination with the recommended kit sold separately, various forms of the \"Emergency Escape Pod [Primrose]\" and \"Gundam TR-1 [Hazle Ausura]\" can be reproduced.",
 			"＊＊＊ Check out the special feature page for details and variation explanations of recommended kits! ＊＊＊",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"This product can be used in combination with recommended items sold separately.",
@@ -94,36 +141,46 @@
 			"- Product specifications are scheduled as of 20208. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_3289/153_4244.jpg",
-		"/images/items/01_3289/155_4244.jpg",
-		"/images/items/01_3289/156_4244.jpg",
-		"/images/items/01_3289/157_4244.jpg",
-		"/images/items/01_3289/158_4244.jpg",
-		"/images/items/01_3289/159_4244.jpg",
-		"/images/items/01_3289/189_4244.jpg",
-		"/images/items/01_3289/190_4244.jpg",
-		"/images/items/01_3289/191_4244.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3289/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"item-1000220190",
-		"item-1000220189",
-		"item-1000216105"
-	],
-	"manualId": "2603",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4244_s_axyaidh503xd54u6x10v2014dd26.jpg",
+				"path": "/images/items/01_3289/153_4244.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4244_s_gahowajowxqr1ot2ltxgxfrfdklj.jpg",
+				"path": "/images/items/01_3289/155_4244.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4244_s_zvd31oe0pedb9f46059td4nrcko8.jpg",
+				"path": "/images/items/01_3289/156_4244.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4244_s_rbgj888bhkogb4646tao15mk330g.jpg",
+				"path": "/images/items/01_3289/157_4244.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4244_s_go91oxjtrtldlb6bybn0ovict0qb.jpg",
+				"path": "/images/items/01_3289/158_4244.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4244_s_gwgdwlo3kh3s1uho6epwtnfi99et.jpg",
+				"path": "/images/items/01_3289/159_4244.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4244_s_atmdquhrb5fq2x4wifaw2d0v89et.jpg",
+				"path": "/images/items/01_3289/189_4244.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4244_s_buzv52h5hzpvnyvj160o6l5phmgw.jpg",
+				"path": "/images/items/01_3289/190_4244.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4244_s_wmzokppi49q3h3mal3b2p79di68c.jpg",
+				"path": "/images/items/01_3289/191_4244.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3289/"
 }

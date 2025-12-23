@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムマルコシアス",
 		"en": "HG 1/144 Gundam Marcosias"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4103",
+			"url": "https://bandai-hobby.net/item/01_4103/",
+			"ja": "HG 1/144 ジークルーネ"
+		},
+		{
+			"id": "01_4240",
+			"url": "https://bandai-hobby.net/item/01_4240/",
+			"ja": "HG 1/144 ガンダム端白星[クリアカラー]"
+		},
+		{
+			"id": "01_4188",
+			"url": "https://bandai-hobby.net/item/01_4188/",
+			"ja": "HG 1/144 ガンダムマルコシアス[アイアンブラッドコーティング]"
+		},
+		{
+			"id": "01_4094",
+			"url": "https://bandai-hobby.net/item/01_4094/",
+			"ja": "HG 1/144 シュヴァルベカスタム(シクラーゼ機)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム 鉄血のオルフェンズ』シリーズより、「HG 1/144 ガンダムマルコシアス」が商品化！",
@@ -28,53 +71,72 @@
 			"• 腕部装甲は、打撃武装としても有用であり、反転させることでクローとしても使用可能。"
 		],
 		"en": [
-			"From the \"Mobile Suit Gundam Iron-Blooded Orphans \" series, \" HG 1/144 Gundam Marcosias\" is commercialized!",
+			"From the \"Mobile Suit Gundam Iron-Blooded Orphans\" series, \"HG 1/144 Gundam Marcosias\" is commercialized!",
 			"A phantom machine that is thought to have been lost during the Battle of Calamity. Marcosias' biggest feature is a total of four binders attached to his back and waist. All of these function as sub-arms, and are said to be designed to deal with any type of battle against MA, which does not have a humanoid shape.",
 			"• The Bastard Mace is Marcosias' main weapon, which has a weight in its scabbard and can be used as a mace.",
 			"• The four binders on the back and waist store the sub-arm and dagger.",
 			"• The arm armor is also useful as a striking weapon, and can be reversed to be used as a claw."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"バスタードメイス×１",
-			"短剣×４",
-			"シールド×１",
-			"ナックルガード×２",
-			"ホイルシール×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "バスタードメイス×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "短剣×４"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ナックルガード×２"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール×１"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3604_s_gmae6kiodgonqitudcylfgpznh4i.jpg",
+				"path": "/images/items/01_2681/153_3604.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3604_s_ya0m6x1204tu8fgfavf92q1ya6it.jpg",
+				"path": "/images/items/01_2681/155_3604.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3604_s_c7pu8bv5t5e65i0yriv2i149il6j.jpg",
+				"path": "/images/items/01_2681/156_3604.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3604_s_qybssg3om6en0779awws2ffjgscu.jpg",
+				"path": "/images/items/01_2681/157_3604.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3604_s_b5i0k00k31jad1z4yg4gkvsuwssv.jpg",
+				"path": "/images/items/01_2681/158_3604.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3604_s_oksovfchhrz6r3uihomz56ynmb0b.jpg",
+				"path": "/images/items/01_2681/159_3604.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3604_s_ros9w9ev4oge408d5q8fy1fijqlb.jpg",
+				"path": "/images/items/01_2681/189_3604.jpg"
+			}
 		],
-		"en": [
-			"Bastard Mace x1",
-			"Dagger x 4",
-			"Seal de x1",
-			"Knuckle guard x 2",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2681/153_3604.jpg",
-		"/images/items/01_2681/155_3604.jpg",
-		"/images/items/01_2681/156_3604.jpg",
-		"/images/items/01_2681/157_3604.jpg",
-		"/images/items/01_2681/158_3604.jpg",
-		"/images/items/01_2681/159_3604.jpg",
-		"/images/items/01_2681/189_3604.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2681/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"tekketsu"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4103",
-		"01_4240",
-		"01_4188",
-		"01_4094"
-	],
-	"manualId": "0805"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2681/"
 }

@@ -5,6 +5,43 @@
 		"ja": "ケロロ軍曹プラモコレクション ガルル中尉",
 		"en": "Keroro Sergeant Plastic Model Collection Lieutenant Garuru"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "keroro",
+			"url": "https://bandai-hobby.net/series/keroro/",
+			"ja": "ケロロ軍曹"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7034",
+			"url": "https://bandai-hobby.net/item/01_7034/",
+			"ja": "HG Newケロロロボ"
+		},
+		{
+			"id": "01_2120",
+			"url": "https://bandai-hobby.net/item/01_2120/",
+			"ja": "ケロロ軍曹プラモコレクション ケロロ軍曹 アニバーサリーパッケージ エディション"
+		},
+		{
+			"id": "01_2122",
+			"url": "https://bandai-hobby.net/item/01_2122/",
+			"ja": "ケロロ軍曹プラモコレクション ケロロ軍曹&ケロロロボMk-II アニバーサリースペシャルVer."
+		},
+		{
+			"id": "01_2140",
+			"url": "https://bandai-hobby.net/item/01_2140/",
+			"ja": "ケロロ軍曹プラモコレクション 頭領ドロロロボ"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -32,25 +69,30 @@
 			"Lulu's gun, sniper rifle, and special stand are included."
 		]
 	},
-	"images": [
-		"/images/items/01_2104/153_3052.jpg",
-		"/images/items/01_2104/155_3052.jpg",
-		"/images/items/01_2104/156_3052.jpg",
-		"/images/items/01_2104/157_3052.jpg",
-		"/images/items/01_2104/158_3052.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2104/",
-	"brandIds": [],
-	"seriesIds": [
-		"keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7034",
-		"01_2120",
-		"01_2122",
-		"01_2140"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3052_s_mez8g303e85x0er779gm001zteou.jpg",
+				"path": "/images/items/01_2104/153_3052.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3052_s_0mfs2zgmkwjf77bqxrb40e6yfpl9.jpg",
+				"path": "/images/items/01_2104/155_3052.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3052_s_5jbfiscp0p64gdijhsu4chiuuyp5.jpg",
+				"path": "/images/items/01_2104/156_3052.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3052_s_fuwdct8wh6ky2pgwg7mhcrjd3vbv.jpg",
+				"path": "/images/items/01_2104/157_3052.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3052_s_mmjlorfciml5vl8si4el4wu8f2w1.jpg",
+				"path": "/images/items/01_2104/158_3052.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2104/"
 }

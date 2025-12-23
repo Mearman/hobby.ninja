@@ -5,6 +5,54 @@
 		"ja": "ＭＧ 1/100 テスタメントガンダム",
 		"en": "MG 1/100 Testament Gundam"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "item-1000220190",
+			"url": "https://p-bandai.jp/item/item-1000220190/",
+			"ja": "ＨＧ 1/144 ザク・デザートタイプ ピンクパンサー隊機"
+		},
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "item-1000216105",
+			"url": "https://p-bandai.jp/item/item-1000216105/",
+			"ja": "RG 1/144 ソードインパルスガンダムＳｐｅｃＩＩ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 6270,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 11
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－",
@@ -67,7 +114,7 @@
 			"First Gunpla commercialized!",
 			"The \"covenant between God and man\" is coming. ―",
 			"－－－－－－－－－－－－－",
-			"From \"Mobile Suit Gundam SEED DESTINY ASTRAY\", Testament Gundam is the first Gunpla commercialized in the Master Grade series.",
+			"From \"Mobile Suit GundamSEED DESTINY ASTRAY\", Testament Gundam is the first Gunpla commercialized in the Master Grade series.",
 			"The characteristic whole body shape including the head antenna is thoroughly reproduced. Various weapons including \"Divine Striker\" are included.",
 			"● Thoroughly reproduces the characteristic whole body shape with new modeling!",
 			"The entire body of Testament Gundam, including the head blade antenna, has been thoroughly reproduced based on the latest drawings by original designer Junichi Akutsu.",
@@ -106,37 +153,50 @@
 			"- Product specifications are scheduled as of 20206. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_3004/153_3976.jpg",
-		"/images/items/01_3004/155_3976.jpg",
-		"/images/items/01_3004/156_3976.jpg",
-		"/images/items/01_3004/157_3976.jpg",
-		"/images/items/01_3004/158_3976.jpg",
-		"/images/items/01_3004/159_3976.jpg",
-		"/images/items/01_3004/189_3976.jpg",
-		"/images/items/01_3004/190_3976.jpg",
-		"/images/items/01_3004/191_3976.jpg",
-		"/images/items/01_3004/192_3976.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3004/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"item-1000220190",
-		"item-1000220189",
-		"item-1000216105"
-	],
-	"manualId": "2586",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3976_s_m6cihj8sh2vi12t78lqnlxym25ya.jpg",
+				"path": "/images/items/01_3004/153_3976.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3976_s_bl7x6zwnxpcg0vrddas747fs4too.jpg",
+				"path": "/images/items/01_3004/155_3976.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3976_s_1o3e0d30xq8u8mdirac2ndgxpzxa.jpg",
+				"path": "/images/items/01_3004/156_3976.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3976_s_x6syqsk41lvfutsz0bfbbf3dnw28.jpg",
+				"path": "/images/items/01_3004/157_3976.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3976_s_ce9j5wouwn59kn9qbytrs3cbu99d.jpg",
+				"path": "/images/items/01_3004/158_3976.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3976_s_snx6ejzxytswgh2kb1ea7fmvjt08.jpg",
+				"path": "/images/items/01_3004/159_3976.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3976_s_20f6trflsczwjtj5f1n37gucfb4e.jpg",
+				"path": "/images/items/01_3004/189_3976.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3976_s_0htbne6rjtyqkp9gzzencwlp9nwh.jpg",
+				"path": "/images/items/01_3004/190_3976.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3976_s_lhua2nup00cx7qmyi03ysl8j9isd.jpg",
+				"path": "/images/items/01_3004/191_3976.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3976_s_ed5ynydhimqks0gp3z5uerij18a4.jpg",
+				"path": "/images/items/01_3004/192_3976.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3004/"
 }

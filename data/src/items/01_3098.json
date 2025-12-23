@@ -5,6 +5,44 @@
 		"ja": "1/1200 巡洋艦ムサイ",
 		"en": "1/1200 Cruiser Musai"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/1200",
 	"price": {
 		"amount": 330,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 8
 	},
 	"targetAge": 15,
-	"scale": "1/1200",
 	"description": {
 		"ja": [
 			"大気圏突入用カプセル・コムサイが脱着できます。専用ディスプレイスタンド付です。"
@@ -26,23 +63,18 @@
 			"Atmospheric entry capsule Komsai can be attached and detached. Comes with a dedicated display stand."
 		]
 	},
-	"images": [
-		"/images/items/01_3098/153_4065.jpg",
-		"/images/items/01_3098/155_4065.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3098/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	],
-	"manualId": "1968"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/155_4065_s_synj0p1x9454eqlistlm3cc2kdx2.jpg",
+				"path": "/images/items/01_3098/155_4065.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_4065_s_jja5qmh8ffk4rxuk2koj33mn7goa.jpg",
+				"path": "/images/items/01_3098/153_4065.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3098/"
 }

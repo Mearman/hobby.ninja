@@ -5,6 +5,43 @@
 		"ja": "ピカちんロボS03 空耳パロさん",
 		"en": "Pikachin Robo S03 Sorami Paro-san"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -31,8 +68,8 @@
 			"ピカちんシート…1（表：設計図ページ　裏：豆知識ページ）"
 		],
 		"en": [
-			"• Pikachin KitS, which has hidden electronic power, is here!",
-			"• Function is expanded by combining with Sorami Voice Changer (sold separately)! The voice becomes a robot voice!",
+			"• Introducing Pikachin KitS, which has the power of electronics!",
+			"• Combine with Sorami Voice Changer (sold separately) to expand functionality! The voice becomes a robot voice!",
 			"• Microphone and small signboard parts are included!",
 			"[Set contents]",
 			"Sorami Paro-san...1 (molded product...4)",
@@ -42,26 +79,34 @@
 			"Pikachin sheet...1 (front: blueprint page, back: trivia page)"
 		]
 	},
-	"images": [
-		"/images/items/01_1975/153_2905.jpg",
-		"/images/items/01_1975/155_2905.jpg",
-		"/images/items/01_1975/156_2905.jpg",
-		"/images/items/01_1975/157_2905.jpg",
-		"/images/items/01_1975/158_2905.jpg",
-		"/images/items/01_1975/159_2905.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1975/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2905_s_sd2ebmkljiznqekzpskbcxgd88gz.jpg",
+				"path": "/images/items/01_1975/153_2905.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2905_s_axbmxiv3uk50j749qn51cwq9g93x.jpg",
+				"path": "/images/items/01_1975/155_2905.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2905_s_srkbln5783aic705brstwnloekju.jpg",
+				"path": "/images/items/01_1975/156_2905.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2905_s_dq2f348f2b2tvsu5tpvwe774rgdr.jpg",
+				"path": "/images/items/01_1975/157_2905.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2905_s_3qufqb9vmthy9kaqcxsg3yuej6nh.jpg",
+				"path": "/images/items/01_1975/158_2905.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2905_s_zpbgxhvtirgij2ypotggeskmfgd1.jpg",
+				"path": "/images/items/01_1975/159_2905.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1975/"
 }

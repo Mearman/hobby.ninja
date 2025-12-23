@@ -5,6 +5,60 @@
 		"ja": "ＭＧ 1/100 Ｖ２アサルトバスターガンダム Ver．Ka",
 		"en": "MG 1/100 V2 Assault Buster Gundam Ver. Ka"
 	},
+	"brands": [
+		{
+			"id": "mgka",
+			"url": "https://bandai-hobby.net/brand/mgka/",
+			"ja": "MG Ver.Ka［マスターグレード バージョンカトキ］"
+		},
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "v-gundam",
+			"url": "https://bandai-hobby.net/series/v-gundam/",
+			"ja": "機動戦士Vガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000142101",
+			"url": "https://p-bandai.jp/item/item-1000142101/",
+			"ja": "ＲＥ/100 1/100 シャッコー"
+		},
+		{
+			"id": "item-1000137105",
+			"url": "https://p-bandai.jp/item/item-1000137105",
+			"ja": "ＨＧ 1/144 セカンドＶ"
+		},
+		{
+			"id": "item-1000131778",
+			"url": "https://p-bandai.jp/item/item-1000131778",
+			"ja": "RE/100 1/100 ガンブラスター"
+		},
+		{
+			"id": "item-1000130021",
+			"url": "https://p-bandai.jp/item/item-1000130021/",
+			"ja": "ＭＧ 1/100 Ｖ２ガンダム Ver．Ka用 アサルトバスター拡張パーツ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 7700,
 		"currency": "JPY",
@@ -16,7 +70,6 @@
 		"year": 2018,
 		"month": 12
 	},
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－",
@@ -123,40 +176,50 @@
 			"- Product specifications are scheduled as of 201810. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2102/153_3050.jpg",
-		"/images/items/01_2102/155_3050.jpg",
-		"/images/items/01_2102/156_3050.jpg",
-		"/images/items/01_2102/157_3050.jpg",
-		"/images/items/01_2102/158_3050.jpg",
-		"/images/items/01_2102/159_3050.jpg",
-		"/images/items/01_2102/189_3050.jpg",
-		"/images/items/01_2102/190_3050.jpg",
-		"/images/items/01_2102/191_3050.jpg",
-		"/images/items/01_2102/192_3050.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2102/",
-	"brandIds": [
-		"mgka",
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"v-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000142101",
-		"item-1000137105",
-		"item-1000131778",
-		"item-1000130021"
-	],
-	"manualId": "2656",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3050_s_vljw2ryhejqip66t3jj0e7cbcoqf.jpg",
+				"path": "/images/items/01_2102/153_3050.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3050_s_fht5czuwdxzhh5pltg1n8wqh0mqp.jpg",
+				"path": "/images/items/01_2102/155_3050.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3050_s_3ro567dulwjjhz5vlf327biebqcb.jpg",
+				"path": "/images/items/01_2102/156_3050.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3050_s_4az752q9j1rna1dy28nrsvqla1de.jpg",
+				"path": "/images/items/01_2102/157_3050.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3050_s_2tg0e86veca3a3dnu5xidv77ww8k.jpg",
+				"path": "/images/items/01_2102/158_3050.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3050_s_l51asi451l7oegbjusc20nerke4t.jpg",
+				"path": "/images/items/01_2102/159_3050.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3050_s_g05ew718f6u2t7d4u2u8uuxv3kj7.jpg",
+				"path": "/images/items/01_2102/189_3050.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3050_s_y1h0gvear37qzfntyqpmdflf7876.jpg",
+				"path": "/images/items/01_2102/190_3050.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3050_s_wl86grxp560ytsk5nbrmjg9wpz7s.jpg",
+				"path": "/images/items/01_2102/191_3050.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3050_s_xa1asx15lxqxjim8twzttvfb9vg3.jpg",
+				"path": "/images/items/01_2102/192_3050.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2102/"
 }

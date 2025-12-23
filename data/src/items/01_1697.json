@@ -5,6 +5,43 @@
 		"ja": "BB戦士323 黄忠ガンダム",
 		"en": "BB Senshi 323 Huang Chung Gundam"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -25,23 +62,22 @@
 			"The second military commander in the new chapter “War God Duel Edition”, the archery expert “Hwang Zhong Gundam”, goes to battle! A support mecha is combined with Huang Chung Gundam, and it can be further recombined into Renryu Keitai form and Dragon Scale form. Armor is removable, and light armor form is also reproduced. Sword, shield, bow, and 3 arrows are included."
 		]
 	},
-	"images": [
-		"/images/items/01_1697/153_2607.jpg",
-		"/images/items/01_1697/155_2607.jpg",
-		"/images/items/01_1697/156_2607.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1697/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2607_s_9uc9si4rj6ro08616vjhg5k51k1w.jpg",
+				"path": "/images/items/01_1697/153_2607.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2607_s_2v078fc7t42bpnafwf3da3qmveyi.jpg",
+				"path": "/images/items/01_1697/155_2607.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2607_s_qocfty2vxc04bh75p0mpviyk0193.jpg",
+				"path": "/images/items/01_1697/156_2607.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1697/"
 }

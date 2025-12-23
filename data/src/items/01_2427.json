@@ -5,6 +5,43 @@
 		"ja": "ピカちんバッジVol.3 ~水びたし!ウォーターカスタムシューター編~",
 		"en": "Pikachin Badge Vol.3 ~Mizutashi!Water Custom Shooter Edition~"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 308,
 		"currency": "JPY",
@@ -30,30 +67,26 @@
 		],
 		"en": [
 			"Set it on the Pikachin trigger (sold separately) and move the trigger with electric power!",
-			"• By replacing the badge, you can change the power of the trigger to 3 levels!",
+			"• By replacing the badge, you can change the trigger power to 3 levels!",
 			"• You can also attach it to your clothes!",
 			"[Set contents]",
 			"• Pikachin badge x 2 (2 types randomly included)",
 			"[battery]",
-			"• Unnecessary"
+			"• Not required"
 		]
 	},
-	"images": [
-		"/images/items/01_2427/153_3358.jpg",
-		"/images/items/01_2427/155_3358.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2427/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3358_s_8w63jszh5qpz34ec4gqxe5xhlfdn.jpg",
+				"path": "/images/items/01_2427/153_3358.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3358_s_9e2ysx6smsavay5yjv7dtxfy3mze.jpg",
+				"path": "/images/items/01_2427/155_3358.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2427/"
 }

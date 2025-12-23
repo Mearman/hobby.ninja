@@ -5,6 +5,49 @@
 		"ja": "メカコレクション 波動実験艦 銀河",
 		"en": "Mecha Collection Wave Experimental Ship Ginga"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "yamato",
+			"url": "https://bandai-hobby.net/series/yamato/",
+			"ja": "宇宙戦艦ヤマトシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5498",
+			"url": "https://bandai-hobby.net/item/01_5498/",
+			"ja": "メカコレクションDX 1式空間戦闘攻撃機 コスモタイガーII(単座型/銃座型) [2機セット]"
+		},
+		{
+			"id": "01_5500",
+			"url": "https://bandai-hobby.net/item/01_5500/",
+			"ja": "メカコレクションDX 試製空間戦闘攻撃機 コスモパイソン [2機セット]"
+		},
+		{
+			"id": "01_3667",
+			"url": "https://bandai-hobby.net/item/01_3667/",
+			"ja": "メカコレクション ガイペロン級多層式航宙母艦 バルメス(外洋機動艦隊仕様)"
+		},
+		{
+			"id": "01_3650",
+			"url": "https://bandai-hobby.net/item/01_3650/",
+			"ja": "メカコレクション デウスーラIII世"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -24,49 +67,53 @@
 			"• 人工知能の自律操作を見据えた次世代艦の先駆け的存在をメカコレクションサイズに凝縮。"
 		],
 		"en": [
-			"Kit version of Yamato's sister ship \"Galaxy \" that appears in \" Space Battleship Yamato 2202\"!",
-			"• The pioneering presence of next-generation ships that focus on autonomous operation of artificial intelligence is condensed into a mecha collection size."
+			"Kit version of Yamato's sister ship \"Galaxy\" that appears in \"Space Battleship Yamato 2202\"!",
+			"• The pioneering presence of next-generation ships that focus on autonomous operation of artificial intelligence has been condensed into a mecha collection size."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 5
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書(箱裏側に記載)"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2964_s_2ws5oac1aqgs0wgbs9zmgv4vb2a7.jpg",
+				"path": "/images/items/01_2021/153_2964.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2964_s_u5zv8c81uphuffv9zwknbrw48gjr.jpg",
+				"path": "/images/items/01_2021/155_2964.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2964_s_0csiel00127igcwfd8txzkf4w48l.jpg",
+				"path": "/images/items/01_2021/156_2964.jpg"
+			}
 		],
-		"en": [
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×5",
-			"水転写式デカール×1",
-			"取扱説明書(箱裏側に記載)"
-		],
-		"en": [
-			"Molded product x 5",
-			"Water transfer decal x 1",
-			"Instruction manual (written on the back of the box)"
-		]
-	},
-	"images": [
-		"/images/items/01_2021/153_2964.jpg",
-		"/images/items/01_2021/155_2964.jpg",
-		"/images/items/01_2021/156_2964.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2021/",
-	"brandIds": [
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"yamato"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5498",
-		"01_5500",
-		"01_3667",
-		"01_3650"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2021/"
 }

@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 ガンダムヘビーアームズ EW",
-		"en": "MG 1/100 Gundam Heavy Arms EW"
+		"en": "MG 1/100 GUNDAM HEAVYARMS EW VER."
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]",
+			"en": "MG [MASTER GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ",
+			"en": "MOBILE SUIT GUNDAM WING series"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000194972",
+			"url": "https://p-bandai.jp/item/item-1000194972/",
+			"ja": "ＭＧ 1/100 ガンダムエピオン EW (シュトゥルム・ウント・ドラング装備)"
+		},
+		{
+			"id": "01_3410",
+			"url": "https://bandai-hobby.net/item/01_3410/",
+			"ja": "MG 1/100 ガンダムデスサイズヘル EW[スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000171722",
+			"url": "https://p-bandai.jp/item/item-1000171722/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムエピオン EW[スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000142325",
+			"url": "https://p-bandai.jp/item/item-1000142325/",
+			"ja": "ＭＧ 1/100 ガンダムデスサイズ EW（ルーセット装備）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4620,
 		"currency": "JPY",
@@ -18,35 +64,36 @@
 		"day": 28
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"• 『新機動戦記ガンダム W Endless Waltz』より、ヘビーアームズ EWが登場。TV版ヘビーアームズをカトキハジメ氏がEndless Walts版としてリファインした機体。 • 全弾発射のフルハッチオープンが再現可能。 • 右腕のアーミーナイフには展開ギミックおよび脱着機能を搭載。 • カトキ氏描き起こしのマーキングデザインやディテール設定も見どころ。 成形品×13、ホイルシール×1、テトロンシール×1、ガンダムデカール×1、ワイヤー×1、組立説明書"
+			"• 『新機動戦記ガンダムW Endless Waltz』より、ヘビーアームズ EWが登場。TV版ヘビーアームズをカトキハジメ氏がEndless Walts版としてリファインした機体。 ■全弾発射のフルハッチオープンが再現可能。 ■右腕のアーミーナイフには展開ギミックおよび脱着機能を搭載。 ■カトキ氏描き起こしのマーキングデザインやディテール設定も見どころ。 成形品×13、ホイルシール×1、テトロンシール×1、ガンダムデカール×1、ワイヤー×1、組立説明書"
 		],
 		"en": [
-			"• Heavy Arms EW appears from \"Mobile Suit Gundam W Endless Waltz\". This aircraft is a refinement of the TV version of Heavy Arms by Hajime Katoki as an Endless Walts version. • Full hatch opening with all bullets fired can be reproduced. • The army knife on the right arm is equipped with a deployment gimmick and a detachable function. • The marking design and detailed settings drawn by Mr. Katoki are also highlights. Molded products x 13, foil seal x 1, Tetron seal x 1, Gundam decal x 1, wire x 1, assembly manual"
+			"• From \"MOBILE SUIT GUNDAM WING Endless Waltz\", Heavy Arms EW is introduced. The TV version of Heavy Arms was refined by Hajime Katoki as the Endless Walts version.",
+			"• Full hatch opening of all bullets can be reproduced.",
+			"• The army knife on the right arm is equipped with a deployment gimmick and a detachable function.",
+			"• The marking design and detail settings drawn by Mr. Katoki are also highlights. Molded ×13, Foil Seal ×1, Tetoron Seal ×1, GUNDAM DECAL ×1, Wire ×1, Assembly Instructions"
 		]
 	},
-	"images": [
-		"/images/items/01_1788/1000092413_1.jpg",
-		"/images/items/01_1788/1000092413_2.jpg",
-		"/images/items/01_1788/1000092413_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092413_1.jpg",
+				"path": "/images/items/01_1788/1000092413_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092413_2.jpg",
+				"path": "/images/items/01_1788/1000092413_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092413_3.jpg",
+				"path": "/images/items/01_1788/1000092413_3.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1788/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000194972",
-		"01_3410",
-		"item-1000171722",
-		"item-1000142325"
-	],
-	"manualId": "0594"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1788/"
+	}
 }

@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard 超サイヤ人4 ベジータ",
 		"en": "Figure-rise Standard Super Saiyan 4 Vegeta"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4901",
+			"url": "https://bandai-hobby.net/item/01_4901/",
+			"ja": "Figure-rise Standard ベジータ (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_4219",
+			"url": "https://bandai-hobby.net/item/01_4219/",
+			"ja": "Figure-rise Standard 孫悟空 (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_2974",
+			"url": "https://bandai-hobby.net/item/01_2974/",
+			"ja": "Figure-rise Standard アルティメット孫悟飯"
+		},
+		{
+			"id": "01_2769",
+			"url": "https://bandai-hobby.net/item/01_2769/",
+			"ja": "Figure-rise Standard ジレン"
+		}
+	],
 	"price": {
 		"amount": 3080,
 		"currency": "JPY",
@@ -32,67 +75,108 @@
 			"The strongest warrior, Super Saiyan 4 Vegeta, is now available with a new package! !",
 			"• Build the ultimate body with the power of a great ape using the muscle build system!",
 			"• The characteristic red body hair and edges around the eyes are also faithfully reproduced with parts molding colors!",
-			"• Normal and angry expression parts are included!",
+			"• \"Normal\" and \"angry\" expression parts are included!",
 			"• Special move effect parts for Final Shine Attack are also included!",
-			"• The elbow joint has a drawer structure, and the waist part has a structure that allows it to swing left and right, achieving an amazing range of motion! Achieve fusion poses without replacing waist parts. Create a fusion by combining it with \"Figure-rise Standard Super Saiyan 4 Goku\" (sold separately)!",
+			"• The elbow joint has a drawer structure and the waist part has a structure that allows it to swing left and right, allowing for an amazing range of motion! Achieve fusion poses without replacing waist parts. Create a fusion by combining it with \"Figure-rise Standard Super Saiyan 4 Goku\" (sold separately)!",
 			"• Overall height approximately 160mm."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ファイナルシャインアタック（溜め）エフェクトパーツ×1",
-			"ファイナルシャインアタック（放出）エフェクトパーツ×1",
-			"エフェクトスタンド×1",
-			"差し替え表情パーツ（怒り）×1",
-			"差し替え手首パーツ（平手）×左右各1",
-			"差し替え手首パーツ（フュージョン）×左右各1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ファイナルシャインアタック（溜め）エフェクトパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ファイナルシャインアタック（放出）エフェクトパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "エフェクトスタンド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "差し替え表情パーツ（怒り）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "差し替え手首パーツ（平手）×左右各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "差し替え手首パーツ（フュージョン）×左右各1"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 7
+		},
+		{
+			"name": {
+				"ja": "組立説明書"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3313_s_glfxfwuq4onxuqwbwu9x0g4f1kkj.jpg",
+				"path": "/images/items/01_2379/153_3313.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3313_s_a6qxi94qxsbzwm600c365eb3jv0i.jpg",
+				"path": "/images/items/01_2379/155_3313.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3313_s_lhknhck5gzu44qriiiyg54kfow2o.jpg",
+				"path": "/images/items/01_2379/156_3313.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3313_s_c6rps1au4dr72zoaiatqhibzq15f.jpg",
+				"path": "/images/items/01_2379/157_3313.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3313_s_26i0lhvx2kk6zedow4x5n2bj6kso.jpg",
+				"path": "/images/items/01_2379/158_3313.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3313_s_90sb31n7no82zu1c6v01azggsgxl.jpg",
+				"path": "/images/items/01_2379/159_3313.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3313_s_3a56rqlspid895ga2wsyj3rzptyo.jpg",
+				"path": "/images/items/01_2379/189_3313.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3313_s_wyfv7w3dfau7hl6f9qe38qu52p1f.jpg",
+				"path": "/images/items/01_2379/190_3313.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3313_s_p30h2ie5v7cmdam8n35wgka4cypf.jpg",
+				"path": "/images/items/01_2379/191_3313.jpg"
+			}
 		],
-		"en": [
-			"Final shine attack (reservoir) effect parts x 1",
-			"Final shine attack (release) effect parts x 1",
-			"Effect stand x 1",
-			"Replacement expression parts (anger) x 1",
-			"Replacement wrist parts (open hand) x 1 each for left and right",
-			"Replacement wrist parts (fusion) x 1 each for left and right"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×7",
-			"組立説明書×1",
-			"シール×1"
-		],
-		"en": [
-			"Molded product x 7",
-			"Assembly Manual×1",
-			"Seal×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2379/153_3313.jpg",
-		"/images/items/01_2379/155_3313.jpg",
-		"/images/items/01_2379/156_3313.jpg",
-		"/images/items/01_2379/157_3313.jpg",
-		"/images/items/01_2379/158_3313.jpg",
-		"/images/items/01_2379/159_3313.jpg",
-		"/images/items/01_2379/189_3313.jpg",
-		"/images/items/01_2379/190_3313.jpg",
-		"/images/items/01_2379/191_3313.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2379/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"dragonball"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4901",
-		"01_4219",
-		"01_2974",
-		"01_2769"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2379/"
 }

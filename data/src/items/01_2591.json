@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 eEXM-17 アルト(陸戦仕様)[ブラウン]",
 		"en": "30MM 1/144 eEXM-17 Alto (Land Battle Specification) [Brown]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 22
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMシリーズに局地戦用改装タイプ、アルト（陸戦仕様）が登場！",
@@ -29,49 +71,79 @@
 		],
 		"en": [
 			"Alto (land battle specification), a modified type for local battles, is now available in the 30MM series!",
-			"• You can rearrange the tank form to your liking.",
-			"• Comes with new equipment such as a backpack with a cover for land battles and massive legs.",
-			"• A recombinable bazooka is also included.",
+			"• The tank form can be rearranged to your liking.",
+			"• Comes with new equipment such as a backpack with a ground cover and massive legs.",
+			"• A reconfigurable bazooka is also included.",
 			"• Additional parts can also be equipped on Portanova."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"陸戦用バックパック/装甲×1式",
-			"バズーカ×1",
-			"マーキングシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "陸戦用バックパック/装甲"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "バズーカ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3514_s_fscpeb4fo9sgz3r5cog7qtm2xy6g.jpg",
+				"path": "/images/items/01_2591/153_3514.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3514_s_1kvc4rn6auk4ifcc62pp38bix3vn.jpg",
+				"path": "/images/items/01_2591/155_3514.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3514_s_gl7zh4vmgjnh3ovhgwchn5ve8g7d.jpg",
+				"path": "/images/items/01_2591/156_3514.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3514_s_frbii00fru2myk6neyr9yc8fx613.jpg",
+				"path": "/images/items/01_2591/157_3514.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3514_s_1jsbk2r04qlq3z2ntlqg8e1fr45k.jpg",
+				"path": "/images/items/01_2591/158_3514.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3514_s_voeew9ka2j9fi7g3t2qarfug77o4.jpg",
+				"path": "/images/items/01_2591/159_3514.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3514_s_n2wh0k4uhqvjbeapq8m9fbubn1sc.jpg",
+				"path": "/images/items/01_2591/189_3514.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3514_s_aeabycmho171uyv4px1s7hyx51ou.jpg",
+				"path": "/images/items/01_2591/190_3514.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3514_s_vfwxmz5gxwsmwn7rei18xob7p1p8.jpg",
+				"path": "/images/items/01_2591/191_3514.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3514_s_6xhy4ykuc8p213zetkj20vfh2nyg.jpg",
+				"path": "/images/items/01_2591/192_3514.jpg"
+			}
 		],
-		"en": [
-			"Land battle backpack/armor x 1 set",
-			"Bazooka×1",
-			"MarkingSeal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2591/153_3514.jpg",
-		"/images/items/01_2591/155_3514.jpg",
-		"/images/items/01_2591/156_3514.jpg",
-		"/images/items/01_2591/157_3514.jpg",
-		"/images/items/01_2591/158_3514.jpg",
-		"/images/items/01_2591/159_3514.jpg",
-		"/images/items/01_2591/189_3514.jpg",
-		"/images/items/01_2591/190_3514.jpg",
-		"/images/items/01_2591/191_3514.jpg",
-		"/images/items/01_2591/192_3514.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2591/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3671"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2591/"
 }

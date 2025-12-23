@@ -5,6 +5,50 @@
 		"ja": "HGBD 1/144 リーオーNPD",
 		"en": "HGBD 1/144 Leo NPD"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「ガンプラバトル・ネクサスオンライン」でNPD（Non Player Diver）として、様々なバトルに登場する「リーオーNPD」が、多種多様なバリエーションパーツとともに立体化！",
@@ -26,65 +69,96 @@
 			"• バックパックはパーツを外すことでジョイント穴が出現し、他のガンプラのバックパックも装備できる！"
 		],
 		"en": [
-			"\"Leo NPD \", who appears in various battles as an NPD (Non Player Diver) in \" Gunpla Battle Nexus Online\", is now three-dimensional with a wide variety of variation parts!",
-			"• Comes with 4 types of replacement heads and 3 types of shoulder armor, allowing for customization with various combinations!",
-			"• By removing parts of the backpack, a joint hole will appear, allowing you to equip it with other Gunpla backpacks!"
+			"\"Leo NPD\", who appears in various battles as an NPD (Non Player Diver) in \"Gunpla Battle Nexus Online\", is now three-dimensional with a wide variety of variation parts!",
+			"• Comes with 4 types of replaceable heads and 3 types of shoulder armor, allowing you to customize it with various combinations!",
+			"• By removing parts of the backpack, a joint hole will appear, allowing you to equip other Gunpla backpacks as well!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"頭部パーツ×4種",
-			"肩アーマー×3種",
-			"銃×1",
-			"盾×1",
-			"ビームサーベル×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "頭部パーツ"
+			},
+			"count": 4,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "肩アーマー"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "銃"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "盾"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品×８"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2301_s_jvgajlg9l4l54jtfcd3vx29p4wme.jpg",
+				"path": "/images/items/01_1376/153_2301.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2301_s_cer8n0ooz64sjlqiuoddc9ykam35.jpg",
+				"path": "/images/items/01_1376/155_2301.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2301_s_7mgjia7ut9nu6jtzfne4spa4boe0.jpg",
+				"path": "/images/items/01_1376/156_2301.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2301_s_nl6d1uwfmk765bl60d9x238y8buz.jpg",
+				"path": "/images/items/01_1376/157_2301.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2301_s_a69ia86glyda9pfvhs9fwfkhafab.jpg",
+				"path": "/images/items/01_1376/158_2301.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2301_s_e3dwoj47y1xaiv6xdkn28casi895.jpg",
+				"path": "/images/items/01_1376/159_2301.jpg"
+			}
 		],
-		"en": [
-			"Head parts x 4 types",
-			"Shoulder armor x 3 types",
-			"Gun x 1",
-			"Shield x1",
-			"Beam saber x2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×８",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 8",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1376/153_2301.jpg",
-		"/images/items/01_1376/155_2301.jpg",
-		"/images/items/01_1376/156_2301.jpg",
-		"/images/items/01_1376/157_2301.jpg",
-		"/images/items/01_1376/158_2301.jpg",
-		"/images/items/01_1376/159_2301.jpg",
-		"/images/items/01_1376/01_1376_inst_0.jpg",
-		"/images/items/01_1376/01_1376_inst_1.jpg",
-		"/images/items/01_1376/01_1376_inst_2.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1376/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "1023"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1376/"
 }

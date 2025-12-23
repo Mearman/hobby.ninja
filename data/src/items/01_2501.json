@@ -5,6 +5,43 @@
 		"ja": "ハイパーファンクション LBXジ・エンペラー",
 		"en": "Hyperfunction LBX The Emperor"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "lbx",
+			"url": "https://bandai-hobby.net/series/lbx/",
+			"ja": "ダンボール戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000215196",
+			"url": "https://p-bandai.jp/item/item-1000215196/",
+			"ja": "ＬＢＸイカロス・フォース"
+		},
+		{
+			"id": "item-1000215197",
+			"url": "https://p-bandai.jp/item/item-1000215197/",
+			"ja": "ＬＢＸイカロス・ゼロ"
+		},
+		{
+			"id": "item-1000210042",
+			"url": "https://p-bandai.jp/item/item-1000210042/",
+			"ja": "ＬＢＸエルシオン"
+		},
+		{
+			"id": "item-1000210041",
+			"url": "https://p-bandai.jp/item/item-1000210041/",
+			"ja": "ＬＢＸペルセウス"
+		}
+	],
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -28,47 +65,70 @@
 		],
 		"en": [
 			"From \"Danball Senki\", Kaido Jin's exclusive knight type LBX is now available in hyper function!",
-			"• Hyper function with built-in core skeleton that ensures color reproduction through parts division and an amazing range of motion.",
-			"• The core skeleton reproduces precise mechanical details. Each piece of armor is reproduced using multicolored molding and can be smoothly attached and detached.",
-			"• The cloth cloak can express fluttering motion by moving the attachment part. Powerful action is decided!",
+			"• Hyperfunction with a built-in core skeleton that ensures color reproduction by dividing parts and an amazing range of motion.",
+			"• Core skeleton reproduces precise mechanical details. Each piece of armor is reproduced using multicolored molding and can be smoothly attached and detached.",
+			"• The cloth cloak can be used to create fluttering movements by moving the attachment part. Powerful action is decided!",
 			"• Basic equipment \"Titania\" included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ティターニア×1",
-			"マント×1",
-			"マーキングシール×1",
-			"ホイルシール×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ティターニア"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マント"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 2
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3427_s_s0ap30h136860g156lmtergmoq5l.jpg",
+				"path": "/images/items/01_2501/153_3427.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3427_s_cixvk95nusuwfflx70j53ioqfle1.jpg",
+				"path": "/images/items/01_2501/155_3427.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3427_s_37ujtukbodhcuvwjknjrexrqgxcr.jpg",
+				"path": "/images/items/01_2501/156_3427.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3427_s_x89fyc44tjtq3b4e1dxwtcy7q7kb.jpg",
+				"path": "/images/items/01_2501/157_3427.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3427_s_m7h3t5kf07bfempyu1jq6lcnns5k.jpg",
+				"path": "/images/items/01_2501/158_3427.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3427_s_dqeh8mzy1ruo3r8xzi0c8s8kqro7.jpg",
+				"path": "/images/items/01_2501/159_3427.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3427_s_quaxhe9tbfcq9ckyff6oh4tdfnn3.jpg",
+				"path": "/images/items/01_2501/189_3427.jpg"
+			}
 		],
-		"en": [
-			"Titania×1",
-			"Cloak x 1",
-			"MarkingSeal×1",
-			"Foil Seal×2"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2501/153_3427.jpg",
-		"/images/items/01_2501/155_3427.jpg",
-		"/images/items/01_2501/156_3427.jpg",
-		"/images/items/01_2501/157_3427.jpg",
-		"/images/items/01_2501/158_3427.jpg",
-		"/images/items/01_2501/159_3427.jpg",
-		"/images/items/01_2501/189_3427.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2501/",
-	"brandIds": [],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2501/"
 }

@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ジェスタ・キャノン[クリアカラー]",
 		"en": "MG 1/100 Jesta Cannon [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000183366",
+			"url": "https://p-bandai.jp/item/item-1000183366/",
+			"ja": "ＭＧ 1/100 スタークジェガン"
+		},
+		{
+			"id": "01_4271",
+			"url": "https://bandai-hobby.net/item/01_4271/",
+			"ja": "MG 1/100 ガンダムベース限定 ユニコーンガンダム(光の結晶体)"
+		},
+		{
+			"id": "item-1000138934",
+			"url": "https://p-bandai.jp/item/item-1000138934/",
+			"ja": "ＭＧ 1/100 リ・ガズィ（ユニコーンＶｅｒ．）"
+		},
+		{
+			"id": "01_2437",
+			"url": "https://bandai-hobby.net/item/01_2437/",
+			"ja": "MG 1/100 ガンダムベース限定 ユニコーンガンダム ペルフェクティビリティ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -18,10 +62,9 @@
 		"day": 20
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム UC 』から、大型火器を備えた重装備ＭＳ ジェスタ・キャノンがクリアカラーになって登場！",
+			"『機動戦士ガンダムUC 』から、大型火器を備えた重装備ＭＳ ジェスタ・キャノンがクリアカラーになって登場！",
 			"• ビーム・キャノンなどの追加武装を徹底再現！",
 			"中距離支援用のビーム・キャノン、４連マルチ・ランチャーは角度調整ができ、",
 			"躍動感あるシーンを再現可能。",
@@ -35,7 +78,7 @@
 			"• パーツに差し替えにより、一部増加装甲の取り外しや、シールドの取り付けが可能。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam UC\", the heavily armed MS Jesta Cannon equipped with a large firearm is now available in clear color!",
+			"From \"Mobile Suit GundamUC\", the heavily armed MS Jesta Cannon equipped with a large firearm is now available in clear color!",
 			"• Thoroughly reproduce additional weapons such as beam cannon!",
 			"The beam cannon for medium-range support and the 4-bar multi-launcher can be adjusted in angle.",
 			"It is possible to reproduce dynamic scenes.",
@@ -49,29 +92,22 @@
 			"• By replacing parts, it is possible to remove some additional armor and install Seals."
 		]
 	},
-	"images": [
-		"/images/items/01_2670/153_3592.jpg",
-		"/images/items/01_2670/155_3592.jpg",
-		"/images/items/01_2670/156_3592.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2670/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000183366",
-		"01_4271",
-		"item-1000138934",
-		"01_2437"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3592_o_1dq9nguu1c6u11lm1uanecq1k9r23.jpg",
+				"path": "/images/items/01_2670/153_3592.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3592_o_1dq9nhddp1q7b1qf8vfr1f1d1d9u2d.jpg",
+				"path": "/images/items/01_2670/155_3592.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3592_o_1dq9nhiom144uclh6861nm11u742i.jpg",
+				"path": "/images/items/01_2670/156_3592.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2670/"
 }

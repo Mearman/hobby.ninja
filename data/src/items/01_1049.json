@@ -5,6 +5,50 @@
 		"ja": "HGBF 1/144 忍パルスガンダム",
 		"en": "HGBF 1/144 Shinobi Pulse Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 『ガンダムビルドファイターズ』新プロジェクトに登場するガンプラが最速HG化！",
@@ -30,57 +73,75 @@
 			"• Gunpla appearing in the new “Gundam Build Fighters” project is the fastest HG version!",
 			"• The backpack can be transformed into a cloak that covers the entire body, and can also be equipped as a large shuriken!",
 			"• Furthermore, by transforming the rear skirt, it can be equipped as a sword!",
-			"• The blade equipped on the arm can be moved flexibly, allowing you to recreate ninja-like poses!"
+			"• The blades attached to the arms can be flexibly moved, allowing you to recreate ninja-like poses!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"大型マント×１",
-			"ソード×１、ビーム×２",
-			"ディスプレイ台座×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "大型マント×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ソード×１、ビーム×２"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 11
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1984_s_llqnomx36huv7h6irbjkndsas2dc.jpg",
+				"path": "/images/items/01_1049/153_1984.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1984_s_8gmrrz8r2u2hz3oc7y4ufmlgxry5.jpg",
+				"path": "/images/items/01_1049/155_1984.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_1984_s_uesgihbjsfsk92jpg19idnetif6o.jpg",
+				"path": "/images/items/01_1049/156_1984.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_1984_s_3vz5jknixy45yb9e6hn4blkwlb4v.jpg",
+				"path": "/images/items/01_1049/157_1984.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_1984_s_txukeeelg0tb06faf8szk9fe7jdh.jpg",
+				"path": "/images/items/01_1049/158_1984.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_1984_s_ipb1c708hkz2594erljb6k9tzum9.jpg",
+				"path": "/images/items/01_1049/159_1984.jpg"
+			}
 		],
-		"en": [
-			"Large cloak x 1",
-			"Sword x1, beam x2",
-			"Display pedestal x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×11",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded products x 11",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1049/153_1984.jpg",
-		"/images/items/01_1049/155_1984.jpg",
-		"/images/items/01_1049/156_1984.jpg",
-		"/images/items/01_1049/157_1984.jpg",
-		"/images/items/01_1049/158_1984.jpg",
-		"/images/items/01_1049/159_1984.jpg",
-		"/images/items/01_1049/01_1049_inst_1.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1049/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
-	"manualId": "0754"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1049/"
 }

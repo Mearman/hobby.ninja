@@ -5,6 +5,55 @@
 		"ja": "HG 1/144 ブルーディスティニー2号機“EXAM”[メタリックグロスインジェクション]",
 		"en": "HG 1/144 Blue Destiny Unit 2 “EXAM” [Metallic Gloss Injection]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -17,7 +66,6 @@
 		"month": 2
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「ブルーディスティニー2号機」がメタリックグロスインジェクション仕様となってイベント限定品として登場！",
@@ -28,33 +76,22 @@
 		"en": [
 			"\"Blue Destiny Unit 2\" is now available as an event limited item with metallic gloss injection specifications!",
 			"• The space backpack is designed to be worn on top of the same type of backpack as Blue Destiny Unit 1!",
-			"• Two types of shoulder armor are included: red and blue, and you can choose to recreate the Nimbus aircraft with red shoulders or the Federation military aircraft “before it was stolen” with blue shoulders!",
-			"• Twin cameras are selectable and can reproduce the normal state and the EXAM system activation state!"
+			"• Two types of shoulder armor are included, red and blue, and you can choose to recreate the Nimbus aircraft with the red shoulders or the Federation military aircraft “before it was stolen” with the blue shoulders!",
+			"• The twin cameras are selectable and can reproduce the normal state and the EXAM system activation state!"
 		]
 	},
-	"images": [
-		"/images/items/01_2162/153_3111.jpg",
-		"/images/items/01_2162/155_3111.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2162/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3111_o_1cvia6on61q7p1r1soel4n3rs23.jpg",
+				"path": "/images/items/01_2162/153_3111.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3111_o_1cvia74g91ive1fq411dpc021msh2d.jpg",
+				"path": "/images/items/01_2162/155_3111.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2162/"
 }

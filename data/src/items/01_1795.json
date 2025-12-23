@@ -5,6 +5,43 @@
 		"ja": "BB戦士375 LEGEND BB コマンドガンダム",
 		"en": "BB Senshi 375 LEGEND BB Command Gundam"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -19,30 +56,32 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"• レジェンドBBにコマンドガンダムが登場。 • 重機関砲、ミサイルランチャー、パイナップルボール、コマンドナイフなど、豊富な各種装備を再現。 • 表情は４種類から選択可能。 • 武器を合体してメガランチャーモードを再現できる。 成形品×7、ホイルシール×1、組立説明書×1"
+			"• レジェンドBBにコマンドガンダムが登場。 ■重機関砲、ミサイルランチャー、パイナップルボール、コマンドナイフなど、豊富な各種装備を再現。 ■表情は４種類から選択可能。 ■武器を合体してメガランチャーモードを再現できる。 成形品×7、ホイルシール×1、組立説明書×1"
 		],
 		"en": [
-			"• Command Gundam appears in Legend BB. • Reproduce a wide variety of equipment such as heavy machine guns, missile launchers, pineapple balls, and command knives. • You can choose from 4 different facial expressions. • Mega launcher mode can be recreated by combining weapons. Molded product x 7, foil seal x 1, assembly manual x 1"
+			"• Command Gundam appears in Legend BB. ■Reproduce a wide variety of equipment such as heavy machine guns, missile launchers, pineapple balls, and command knives. ■You can choose from 4 different facial expressions. ■Mega launcher mode can be recreated by combining weapons. Molded product x 7, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_1795/153_2734.jpg",
-		"/images/items/01_1795/155_2734.jpg",
-		"/images/items/01_1795/156_2734.jpg",
-		"/images/items/01_1795/157_2734.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1795/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2734_s_u3tmdubm58ys8v9h1nwge94u7jbu.jpg",
+				"path": "/images/items/01_1795/153_2734.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2734_s_ycijhv6ewjutlx48ubr2d839ml9s.jpg",
+				"path": "/images/items/01_1795/155_2734.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2734_s_gvwob4eoejri7jfwc9olgpeapdkw.jpg",
+				"path": "/images/items/01_1795/156_2734.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2734_s_yopaarglsfyecld6am5tntg9t4j7.jpg",
+				"path": "/images/items/01_1795/157_2734.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1795/"
 }

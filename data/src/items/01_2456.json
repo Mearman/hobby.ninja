@@ -5,6 +5,48 @@
 		"ja": "BANDAI SPIRITS ビルドアップニッパー",
 		"en": "BANDAI SPIRITS build up nippers"
 	},
+	"brands": [
+		{
+			"id": "tool",
+			"url": "https://bandai-hobby.net/brand/tool/",
+			"ja": "BANDAI SPIRITS ツール"
+		},
+		{
+			"id": "tool",
+			"url": "https://bandai-hobby.net/brand/tool/",
+			"ja": "BANDAI SPIRITS ツール"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4930",
+			"url": "https://bandai-hobby.net/item/01_4930/",
+			"ja": "マルチビルダーズケース"
+		},
+		{
+			"id": "01_4931",
+			"url": "https://bandai-hobby.net/item/01_4931/",
+			"ja": "マルチビルダーズランナースタンド"
+		},
+		{
+			"id": "01_4305",
+			"url": "https://bandai-hobby.net/item/01_4305/",
+			"ja": "BANDAI SPIRITS エントリーツールセット"
+		},
+		{
+			"id": "01_4101",
+			"url": "https://bandai-hobby.net/item/01_4101/",
+			"ja": "BANDAI SPIRITS パーツセパレーター"
+		}
+	],
 	"price": {
 		"amount": 2112,
 		"currency": "JPY",
@@ -24,12 +66,12 @@
 			"※商品の価格を変更させていただきました。",
 			"※店舗様によって価格改定前後の商品が混在する可能性がございます。",
 			"BANDAI SPIRITSのプラモデルをストレスなく組み立てることができるよう細部までこだわった使い心地の良いニッパーが登場！",
-			"■ブレードは硬度、材質、角度のバランスを追求し、プラモデル用に設計。",
-			"■接点には棒状のバネを採用し、外れにくさに加え柔らかな使用感を実現。",
-			"■ハイカーボンスチール（高炭素鋼）を採用し、切れ味と耐久性をバランスよく設計。",
-			"■グリップの素材は柔らかいものを採用。多面体の形状で「疲れにくく、持ちやすい」を実現。",
-			"■親指の引っかかりになる凹凸や滑り止めの溝、グリップ末端のカーブなど、手のひらにしっかり収まるデザイン。",
-			"■ニッパーの開きすぎによる使いづらさを解消するため、ブレード同士の重なり部分をあえて接触させて開き防止構造としている。"
+			"• ブレードは硬度、材質、角度のバランスを追求し、プラモデル用に設計。",
+			"• 接点には棒状のバネを採用し、外れにくさに加え柔らかな使用感を実現。",
+			"• ハイカーボンスチール（高炭素鋼）を採用し、切れ味と耐久性をバランスよく設計。",
+			"• グリップの素材は柔らかいものを採用。多面体の形状で「疲れにくく、持ちやすい」を実現。",
+			"• 親指の引っかかりになる凹凸や滑り止めの溝、グリップ末端のカーブなど、手のひらにしっかり収まるデザイン。",
+			"• ニッパーの開きすぎによる使いづらさを解消するため、ブレード同士の重なり部分をあえて接触させて開き防止構造としている。"
 		],
 		"en": [
 			"(Added on 8/2/2022)",
@@ -44,30 +86,50 @@
 			"• In order to eliminate the difficulty of using the nippers due to them opening too much, the overlapping parts of the blades are deliberately brought into contact with each other to prevent them from opening."
 		]
 	},
-	"images": [
-		"/images/items/01_2456/153_3384.jpg",
-		"/images/items/01_2456/155_3384.jpg",
-		"/images/items/01_2456/156_3384.jpg",
-		"/images/items/01_2456/157_3384.jpg",
-		"/images/items/01_2456/158_3384.jpg",
-		"/images/items/01_2456/159_3384.jpg",
-		"/images/items/01_2456/189_3384.jpg",
-		"/images/items/01_2456/190_3384.jpg",
-		"/images/items/01_2456/191_3384.jpg",
-		"/images/items/01_2456/192_3384.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2456/",
-	"brandIds": [
-		"tool"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4930",
-		"01_4931",
-		"01_4305",
-		"01_4101"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3384_s_7mn0aq6tjkofc56xf5ql4qnt0whg.jpg",
+				"path": "/images/items/01_2456/153_3384.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3384_s_suxbjes8gt40pnvpy4ra7mqddvvk.jpg",
+				"path": "/images/items/01_2456/155_3384.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3384_s_7398syxornghbnbwkrbppieqh094.jpg",
+				"path": "/images/items/01_2456/156_3384.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3384_s_qkhz1za26yd6ssfif8v3u012o4of.jpg",
+				"path": "/images/items/01_2456/157_3384.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3384_s_1mj0es79z0lo50avtnvztjxyxfpj.jpg",
+				"path": "/images/items/01_2456/158_3384.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3384_s_821403a60e79bjendikhuk7vagp1.jpg",
+				"path": "/images/items/01_2456/159_3384.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3384_s_1qu1yzby9txv1vk31rbkq7r932lt.jpg",
+				"path": "/images/items/01_2456/189_3384.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3384_s_uhdjdenqpo82luqdxcb8mnpytyu6.jpg",
+				"path": "/images/items/01_2456/190_3384.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3384_s_gezzffdzofid1toiyrubkpntazlj.jpg",
+				"path": "/images/items/01_2456/191_3384.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3384_s_vvnnaljawo1591bk34ltqqp44jrg.jpg",
+				"path": "/images/items/01_2456/192_3384.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2456/"
 }

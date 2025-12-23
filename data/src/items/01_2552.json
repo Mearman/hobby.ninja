@@ -2,9 +2,58 @@
 	"id": "01_2552",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 ガンダム G40 (Industrial Design Ver.)",
-		"en": "HG 1/144 Gundam G40 (Industrial Design Ver.)"
+		"ja": "HG 1/144 ガンダムG40 (Industrial Design Ver.)",
+		"en": "HG 1/144 GundamG40 (Industrial Design Ver.)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "gundam_g40",
+			"url": "https://bandai-hobby.net/brand/gundam_g40/",
+			"ja": "ガンダムG40"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -18,11 +67,10 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"世界的工業デザイナー奥山清行氏×演出家・映画監督松尾衡氏が再現する「記憶の原点」",
-			"2019年の「ガンダム 40周年」および2020年の「ガンプラ40周年」を彩る特別なガンダムが登場！",
+			"2019年の「ガンダム40周年」および2020年の「ガンプラ40周年」を彩る特別なガンダムが登場！",
 			"• 人間らしいフォルムや動きにこだわりつつ、リアリティの伴う構造を追求。18mのMSを通常の工業製品と同様のデザイン製作工程を踏み、3Dで設計しながら検証。",
 			"• 四肢の可動範囲や関節構造などは現実的な工業デザインを踏まえつつ構成。",
 			"• 頭部のメインカメラはライン状に可動することをイメージし、ホイルシールで表現。",
@@ -33,59 +81,90 @@
 		],
 		"en": [
 			"The \"origin of memory\" recreated by world-famous industrial designer Kiyoyuki Okuyama and director/film director Hiroshi Matsuo",
-			"A special Gundam that will decorate the 2019 \"Gundam 40 laps \" and the 2020 \" Gunpla 40 laps\" is now available!",
-			"• Pursuing a realistic structure while focusing on human-like forms and movements. The 18m MS underwent the same design and manufacturing process as regular industrial products, and was designed and verified in 3D.",
+			"A special Gundam that will decorate the 2019 \"Gundam 40 laps\" and the 2020 \"Gunpla 40 laps\" has arrived!",
+			"• Pursue a realistic structure while focusing on human-like forms and movements. The 18m MS underwent the same design and manufacturing process as regular industrial products, and was designed and verified in 3D.",
 			"• The range of motion of the limbs and joint structure are designed based on realistic industrial design.",
 			"• The main camera on the head is designed to move in a line, and is expressed using a foil seal.",
-			"• In addition to being movable, the legs are designed with an emphasis on the silhouette. It reminds me of a supple leap.",
-			"• The joints of the arms are designed to resemble the human skeleton. Joints have been added to the forearm in anticipation of close combat, creating lines that give it a more human-like feel.",
-			"• It exhibits a wider range of motion than the human body when it comes to twisting and stretching its abdomen. Expressing movement that combines human movement and Gundam design.",
+			"• In addition to being movable, the legs are designed with an emphasis on silhouette. It reminds me of a supple leap.",
+			"• The arm joints are modeled after the human skeleton. Joints have been added to the forearm in anticipation of close combat, creating lines that give it a more human-like feel.",
+			"• Demonstrates a wider range of motion than the human body when it comes to twisting and stretching the abdomen. Expressing movement that combines human movement and Gundam design.",
 			"• The outline of the whole body is three-dimensional and gentle. Expressing a distinctive body line that gives a sense of the future."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームサーベル×2",
-			"ビームライフル×1",
-			"シールド×1",
-			"スペシャルブックレット×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームサーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビームライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "スペシャルブックレット"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3478_s_bvs0bkxz4lvv980s13tkk1bg0asg.jpg",
+				"path": "/images/items/01_2552/153_3478.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3478_s_dztgcofpcui7kit90fl3nq765ao5.jpg",
+				"path": "/images/items/01_2552/155_3478.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3478_s_2ulq48vemez000w0cf3jnlmtxhjv.jpg",
+				"path": "/images/items/01_2552/156_3478.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3478_s_jjt86hztutc5lsmb8dnfilai9dpy.jpg",
+				"path": "/images/items/01_2552/157_3478.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3478_s_8d2p2njr3dqjfziafpjemgk69mo3.jpg",
+				"path": "/images/items/01_2552/158_3478.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3478_s_o5wi5cu3kzmljwyec9v5b9ssf9za.jpg",
+				"path": "/images/items/01_2552/159_3478.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3478_s_r8ckr12q13gc72pq7g865q4nk2xm.jpg",
+				"path": "/images/items/01_2552/189_3478.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3478_s_2bmzu1v5f6z0qp1nfogmqpvya7pg.jpg",
+				"path": "/images/items/01_2552/190_3478.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3478_s_05vc2pskwqyus7jcvj2cg2gjzfsu.jpg",
+				"path": "/images/items/01_2552/191_3478.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3478_s_tr4bz3jwpzemymqbuxfrqq0abyfd.jpg",
+				"path": "/images/items/01_2552/192_3478.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_3478_s_jwvtf6zgozy638jt3fem7it64134.jpg",
+				"path": "/images/items/01_2552/193_3478.jpg"
+			}
 		],
-		"en": [
-			"Beam saber x2",
-			"Beam rifle x 1",
-			"Seal × 1",
-			"Special booklet x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2552/153_3478.jpg",
-		"/images/items/01_2552/155_3478.jpg",
-		"/images/items/01_2552/156_3478.jpg",
-		"/images/items/01_2552/157_3478.jpg",
-		"/images/items/01_2552/158_3478.jpg",
-		"/images/items/01_2552/159_3478.jpg",
-		"/images/items/01_2552/189_3478.jpg",
-		"/images/items/01_2552/190_3478.jpg",
-		"/images/items/01_2552/191_3478.jpg",
-		"/images/items/01_2552/192_3478.jpg",
-		"/images/items/01_2552/193_3478.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2552/",
-	"brandIds": [
-		"hg",
-		"gundam_g40"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
-	"manualId": "0680"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2552/"
 }

@@ -5,6 +5,44 @@
 		"ja": "HG 1/144 エクストリームガンダム",
 		"en": "HG 1/144 Extreme Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,33 +56,30 @@
 		"day": 19
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 「機動戦士ガンダム EXTREME VS.」のオリジナルMS。 • 楽器をモチーフとした武装。ギター型ライフルはシールドに収納可能。 • ４種の手首パーツで表現力アップ。 • 青い発光はクリアパーツで再現。 成形品×7、ホイルシール×1、組立説明書"
+			"• 「機動戦士ガンダム EXTREME VS.」のオリジナルMS。 ■楽器をモチーフとした武装。ギター型ライフルはシールドに収納可能。 ■４種の手首パーツで表現力アップ。 ■青い発光はクリアパーツで再現。 成形品×7、ホイルシール×1、組立説明書"
 		],
 		"en": [
-			"• \"Mobile Suit Gundam EXTREME VS.\" original MS. • Armed with musical instrument motifs. Guitar-shaped rifle can be stored in Seal. • Improve your expressiveness with 4 types of wrist parts. • Blue light emission is reproduced with clear parts. Molded product x 7, foil seal x 1, assembly manual"
+			"• Original MS of \"Mobile Suit Gundam EXTREME VS.\" ■Armed with musical instrument motifs. Guitar-shaped rifle can be stored in Seal. ■Improve your expressiveness with 4 types of wrist parts. ■Blue light emission is reproduced with clear parts. Molded product x 7, foil seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_1774/153_2714.jpg",
-		"/images/items/01_1774/155_2714.jpg",
-		"/images/items/01_1774/156_2714.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1774/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5951"
-	],
-	"manualId": "0423"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2714_s_mnyv2f6uj6adl4az2gqphygegbta.jpg",
+				"path": "/images/items/01_1774/153_2714.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2714_s_miu2ghlwy27hr6f6r5spl9ijhtgo.jpg",
+				"path": "/images/items/01_1774/155_2714.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2714_s_x18mmf7tygp6edx5q50po1i4dj8q.jpg",
+				"path": "/images/items/01_1774/156_2714.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1774/"
 }

@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムバルバトスルプス[アイアンブラッドコーティング]",
 		"en": "HG 1/144 Gundam Barbatos Lupus [Iron Blood Coating]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6773",
+			"url": "https://bandai-hobby.net/item/01_6773/",
+			"ja": "HG 1/144 ガンダムザガン"
+		},
+		{
+			"id": "01_6763",
+			"url": "https://bandai-hobby.net/item/01_6763/",
+			"ja": "HG 1/144 モンキーロディ(598機)/モンキークラブロディ"
+		},
+		{
+			"id": "01_4103",
+			"url": "https://bandai-hobby.net/item/01_4103/",
+			"ja": "HG 1/144 ジークルーネ"
+		},
+		{
+			"id": "01_4240",
+			"url": "https://bandai-hobby.net/item/01_4240/",
+			"ja": "HG 1/144 ガンダム端白星[クリアカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3190,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
@@ -28,28 +71,14 @@
 			"HG Gundam Barbatos Lupus is now available in Iron Blood coating version!"
 		]
 	},
-	"images": [
-		"/images/items/01_2001/153_2929.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2001/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"tekketsu"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4103",
-		"01_4240",
-		"01_4188",
-		"01_4094"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2929_o_1ck1oq4jv1ilm1m2rm5hcc91cjn23.jpg",
+				"path": "/images/items/01_2001/153_2929.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "0781"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2001/"
 }

@@ -3,8 +3,53 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard 超サイヤ人4ゴジータ",
-		"en": "Figure-rise Standard Super Saiyan 4 Gogeta"
+		"en": "Figure-rise Standard SUPER SAIYAN 4 GOGETA"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]",
+			"en": "Figure-rise Standard"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ",
+			"en": "DRAGON BALL"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4901",
+			"url": "https://bandai-hobby.net/item/01_4901/",
+			"ja": "Figure-rise Standard ベジータ (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_4219",
+			"url": "https://bandai-hobby.net/item/01_4219/",
+			"ja": "Figure-rise Standard 孫悟空 (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_2974",
+			"url": "https://bandai-hobby.net/item/01_2974/",
+			"ja": "Figure-rise Standard アルティメット孫悟飯"
+		},
+		{
+			"id": "01_2769",
+			"url": "https://bandai-hobby.net/item/01_2769/",
+			"ja": "Figure-rise Standard ジレン"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -26,60 +71,93 @@
 			"• ポーズを演出するハンドパーツは、ビッグバンかめはめ波用ハンドパーツと握り手が付属。"
 		],
 		"en": [
-			"From \"Dragon Ball GT\", the super warrior Gogeta, a fusion of Goku and Vegeta, is now available in the Figure-rise Standard lineup!",
-			"• Reproduce the unevenness of muscles and wrinkles of clothes with natural shapes and assemblies.",
-			"• Big Bang Kamehameha effect parts are included.",
-			"• Hand parts for creating poses include Big Bang Kamehameha hand parts and a hand grip."
+			"From \"DRAGON BALL GT\", the super warrior Gogeta, which is a fusion of Goku and Vegeta, is in the lineup of Figure-rise Standard!",
+			"• Reproduce muscle unevenness and wrinkles on clothes with natural modeling and assembly.",
+			"• Big Bang Kamehameha effect parts are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"表情×2",
-			"握り手（両手）×1",
-			"ビッグバンかめはめ波用ハンドパーツ（両手）×1"
-		],
-		"en": [
-			"Facial expression x2",
-			"Gripping hands (both hands) x 1",
-			"Big Bang Kamehameha hand parts (both hands) x 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×9",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 9",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2453/1000140255_1.jpg",
-		"/images/items/01_2453/1000140255_2.jpg",
-		"/images/items/01_2453/1000140255_3.jpg",
-		"/images/items/01_2453/1000140255_4.jpg",
-		"/images/items/01_2453/1000140255_5.jpg",
-		"/images/items/01_2453/1000140255_6.jpg",
-		"/images/items/01_2453/1000140255_7.jpg",
-		"/images/items/01_2453/1000140255_8.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情",
+				"en": "• Facial expression"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "握り手（両手）",
+				"en": "• Handshake (both hands)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビッグバンかめはめ波用ハンドパーツ（両手）",
+				"en": "• Hand parts for Big Bang Kamehameha (both hands)"
+			},
+			"count": 1
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 9
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140255_1.jpg",
+				"path": "/images/items/01_2453/1000140255_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140255_2.jpg",
+				"path": "/images/items/01_2453/1000140255_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140255_3.jpg",
+				"path": "/images/items/01_2453/1000140255_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140255_4.jpg",
+				"path": "/images/items/01_2453/1000140255_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140255_5.jpg",
+				"path": "/images/items/01_2453/1000140255_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140255_6.jpg",
+				"path": "/images/items/01_2453/1000140255_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140255_7.jpg",
+				"path": "/images/items/01_2453/1000140255_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140255_8.jpg",
+				"path": "/images/items/01_2453/1000140255_8.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2453/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"dragonball"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4901",
-		"01_4219",
-		"01_2974",
-		"01_2769"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2453/"
+	}
 }

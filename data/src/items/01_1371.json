@@ -5,6 +5,60 @@
 		"ja": "ＲＧ 1/144 MS-06F ザク・マインレイヤー",
 		"en": "RG 1/144 MS-06F Zaku Minelayer"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "msv",
+			"url": "https://bandai-hobby.net/series/msv/",
+			"ja": "ガンダムＭＳＶ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000123735",
+			"url": "http://p-bandai.jp/item/item-1000123735/",
+			"ja": "ＲＧ 1/144 MS-06R-1A 黒い三連星専用ザクII"
+		},
+		{
+			"id": "item-1000119390",
+			"url": "http://p-bandai.jp/item/item-1000119390/",
+			"ja": "ＲＧ 1/144 MS-06R-1A シン・マツナガ専用ザクII"
+		},
+		{
+			"id": "01_1158",
+			"url": "https://bandai-hobby.net/item/01_1158/",
+			"ja": "RG 1/144 MS-06R-2 ジョニー・ライデン専用ザクII"
+		},
+		{
+			"id": "item-1000095901",
+			"url": "https://p-bandai.jp/item/item-1000095901",
+			"ja": "ＲＧ 1/144 RX-78-3 Ｇ-３ガンダム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,31 +71,14 @@
 		"month": 5
 	},
 	"targetAge": 15,
-	"scale": "1/144",
-	"images": [
-		"/images/items/01_1371/153_2298.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1371/",
-	"brandIds": [
-		"rg",
-		"pb_rg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"msv"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000123735",
-		"item-1000119390",
-		"01_1158",
-		"item-1000095901"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2298_o_1c8n7qocndmtu5a19vqe3p1je523.jpg",
+				"path": "/images/items/01_1371/153_2298.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "2640"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1371/"
 }

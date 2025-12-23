@@ -5,6 +5,43 @@
 		"ja": "ワンピース偉大なる船(グランドシップ)コレクション サウザンド・サニー号 フライングモデル",
 		"en": "One Piece Grand Ship Collection Thousand Sunny Flying Model"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "onepiece",
+			"url": "https://bandai-hobby.net/series/onepiece/",
+			"ja": "ワンピース"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5409",
+			"url": "https://bandai-hobby.net/item/01_5409/",
+			"ja": "チョッパーロボ1号&2号(チョッパータンク&チョッパーウイング)"
+		},
+		{
+			"id": "01_5410",
+			"url": "https://bandai-hobby.net/item/01_5410/",
+			"ja": "チョッパーロボ3号&5号(チョッパーサブマリン&チョッパークレーン)"
+		},
+		{
+			"id": "01_4236",
+			"url": "https://bandai-hobby.net/item/01_4236/",
+			"ja": "ワンピース偉大なる船(グランドシップ)コレクション オーロ・ジャクソン号"
+		},
+		{
+			"id": "01_4170",
+			"url": "https://bandai-hobby.net/item/01_4170/",
+			"ja": "ワンピース偉大なる船コレクション サウザンド・サニー号「FILM RED」公開記念カラーVer."
+		}
+	],
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -30,71 +67,135 @@
 		],
 		"en": [
 			"Sunny, dressed as the Emperor Penguin from the movie ONE PIECE STAMPEDE, soars into the sky!",
-			"• An original design realized by the collaboration of BANDAI SPIRITS Hobby Division and Toei Animation!",
-			"• Emperor penguin mask parts are divided and reproduced with eye seals and colorful color coding!",
-			"• The pirate group's mark is reproduced with Cainus Seal!",
+			"• Original design realized by the collaboration of BANDAI SPIRITS Hobby Division and Toei Animation!",
+			"• The emperor penguin mask parts are reproduced separately with eye seals and colorful color coding!",
+			"• The Pirates' mark is reproduced with Cainus Seal!",
 			"• The penguin's wings are movable! A cute tail part reminiscent of a penguin is included.",
-			"• The emperor penguin's leg parts are also reproduced in cute shapes!",
+			"• The emperor penguin's foot parts are also cutely reproduced!",
 			"• Two types of display bases are included: one for displaying while standing and one for displaying in flight. Also included is a wavefront effect."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ペンギンの翼×1式",
-			"ガオン砲強化パーツ×1",
-			"皇帝ペンギン仮面パーツ×1",
-			"足パーツ×1式",
-			"波面エフェクト×1式",
-			"ディスプレイベース×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ペンギンの翼"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ガオン砲強化パーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "皇帝ペンギン仮面パーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "足パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "波面エフェクト"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 9
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "カイナスシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3277_s_2ppoqc6iar09av72d3gi2ms4dqn1.jpg",
+				"path": "/images/items/01_2339/153_3277.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3277_s_k9htc8w84fxh4dljt96s6p02nvoz.jpg",
+				"path": "/images/items/01_2339/155_3277.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3277_s_kxe2voh5rl7trmtveo6bq9e6qo5g.jpg",
+				"path": "/images/items/01_2339/156_3277.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3277_s_4su70z2t4ryu76doobntr08cdp8y.jpg",
+				"path": "/images/items/01_2339/157_3277.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3277_s_3rsz6hphgqmvq5d87lwnx3sl0w2z.jpg",
+				"path": "/images/items/01_2339/158_3277.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3277_s_8dbugy6dwmuahcvr50beonl6uuk2.jpg",
+				"path": "/images/items/01_2339/159_3277.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3277_s_pzlw43o5ty37b3uqp55b67ulfn98.jpg",
+				"path": "/images/items/01_2339/189_3277.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3277_s_tvghro5j8tbm5pqjbekp4nvhlo9n.jpg",
+				"path": "/images/items/01_2339/190_3277.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3277_s_6b76sn422bmjixudptmpit6jxwd8.jpg",
+				"path": "/images/items/01_2339/191_3277.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3277_s_dapya29gi3futt0pwfgwj4m3to3r.jpg",
+				"path": "/images/items/01_2339/192_3277.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_3277_s_8qzhqjs92somop473cagte9rykxo.jpg",
+				"path": "/images/items/01_2339/193_3277.jpg"
+			}
 		],
-		"en": [
-			"Penguin wings x 1 set",
-			"Gaon cannon reinforcement parts x 1",
-			"Emperor penguin mask parts x 1",
-			"Foot parts x 1 set",
-			"Wavefront effect x 1",
-			"Display base x 2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×9",
-			"ホイルシール×1",
-			"カイナスシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 9",
-			"Foil Seal×1",
-			"Cainus Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2339/153_3277.jpg",
-		"/images/items/01_2339/155_3277.jpg",
-		"/images/items/01_2339/156_3277.jpg",
-		"/images/items/01_2339/157_3277.jpg",
-		"/images/items/01_2339/158_3277.jpg",
-		"/images/items/01_2339/159_3277.jpg",
-		"/images/items/01_2339/189_3277.jpg",
-		"/images/items/01_2339/190_3277.jpg",
-		"/images/items/01_2339/191_3277.jpg",
-		"/images/items/01_2339/192_3277.jpg",
-		"/images/items/01_2339/193_3277.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2339/",
-	"brandIds": [],
-	"seriesIds": [
-		"onepiece"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5409",
-		"01_5410",
-		"01_4236",
-		"01_4170"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2339/"
 }

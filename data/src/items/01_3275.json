@@ -5,6 +5,34 @@
 		"ja": "ＢＢ戦士 40 ケンプファー",
 		"en": "BB Senshi 40 Kaempfer"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "g-0080",
+			"url": "https://bandai-hobby.net/series/g-0080/",
+			"ja": "機動戦士ガンダム0080 ポケットの中の戦争"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3272",
+			"url": "https://bandai-hobby.net/item/01_3272/",
+			"ja": "ＢＢ戦士 37 ガンダムNT-1"
+		}
+	],
 	"price": {
 		"amount": 330,
 		"currency": "JPY",
@@ -18,20 +46,14 @@
 		"day": 20
 	},
 	"targetAge": 15,
-	"images": [
-		"/images/items/01_3275/153_4226.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3275/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"g-0080"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3272"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4226_s_inuoapbsgtvjsyl1wk05ncgtnmap.jpg",
+				"path": "/images/items/01_3275/153_4226.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3275/"
 }

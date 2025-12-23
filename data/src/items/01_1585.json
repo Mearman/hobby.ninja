@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 MSZ-006C1 ゼータプラス C1",
 		"en": "MG 1/100 MSZ-006C1 Zeta Plus C1"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "sentinel",
+			"url": "https://bandai-hobby.net/series/sentinel/",
+			"ja": "ガンダム・センチネル"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5593",
+			"url": "https://bandai-hobby.net/item/01_5593/",
+			"ja": "MG 1/100 ガンダムMk-V [クリアカラー]"
+		},
+		{
+			"id": "01_3408",
+			"url": "https://bandai-hobby.net/item/01_3408/",
+			"ja": "ＭＧ 1/100 ガンダムＭｋ-Ｖ"
+		},
+		{
+			"id": "01_2176",
+			"url": "https://bandai-hobby.net/item/01_2176/",
+			"ja": "MG 1/100 Ex-Sガンダム/Sガンダム"
+		},
+		{
+			"id": "01_1291",
+			"url": "https://bandai-hobby.net/item/01_1291/",
+			"ja": "MG 1/100 PLAN303E ディープストライカー"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 2
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「ガンダムセンチネル」に登場するMS「ゼータプラスC1」がMGモデルで登場。",
@@ -25,32 +68,31 @@
 			"また、背面にはバックパック、プロペラントタンクが装備されます。"
 		],
 		"en": [
-			"MS \"Zeta Plus C1 \" that appears in \" Gundam Sentinel\" is now available in MGModel.",
+			"MS \"Zeta Plus C1\" that appears in \"Gundam Sentinel\" is now available in MGModel.",
 			"The biggest feature is that it comes with a beam smart gun and can also transform into wave rider form.",
 			"Also, the back is equipped with a backpack and a propellant tank."
 		]
 	},
-	"images": [
-		"/images/items/01_1585/153_249.jpg",
-		"/images/items/01_1585/155_249.jpg",
-		"/images/items/01_1585/156_249.jpg",
-		"/images/items/01_1585/157_249.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1585/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"sentinel"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5593",
-		"01_3408",
-		"01_2176",
-		"01_1291"
-	],
-	"manualId": "0513"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_249_s_r7jg67943l2br7njkt4tl1bpn9d7.jpg",
+				"path": "/images/items/01_1585/153_249.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_249_s_it3ity2jfcnodrx45wekl62f48jc.jpg",
+				"path": "/images/items/01_1585/155_249.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_249_s_3hvr0p8z22dggju04f9p8jnya6zw.jpg",
+				"path": "/images/items/01_1585/156_249.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_249_s_vtxj27334bpr55weq9c1n1u3tjz0.jpg",
+				"path": "/images/items/01_1585/157_249.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1585/"
 }

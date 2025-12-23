@@ -3,8 +3,39 @@
 	"type": "item",
 	"name": {
 		"ja": "RG 1/144 サザビー",
-		"en": "RG 1/144 Sazabi"
+		"en": "RG 1/144 SAZABI"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］",
+			"en": "RG [REAL GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア",
+			"en": "MOBILE SUIT GUNDAM Char’s Counterattack"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4121",
+			"url": "https://bandai-hobby.net/item/01_4121/",
+			"ja": "RG 1/144 ガンダムベース限定 Hi-νガンダム[チタニウムフィニッシュ]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 5280,
 		"currency": "JPY",
@@ -18,7 +49,6 @@
 		"day": 11
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"1/144スケール史上最大級のギミックを搭載した「RG サザビー」が登場！",
@@ -26,62 +56,108 @@
 			"• 豊富なハンドパーツ、サザビーを象徴する武装が付属し、各種ハンドパーツと高い可動域によって、両手持ちポーズなど劇中のポージングが再現できる！"
 		],
 		"en": [
-			"\"RG Sazabi\" equipped with the largest gimmick in 1/144 Scale history is now available!",
-			"• Weapons such as arm cylinders and funnels have been faithfully reproduced, and deployment mechanisms have been installed in propulsion parts such as verniers and backpacks based on actual machine research!",
-			"• A wealth of hand parts and armaments that symbolize Sazabi are included, and various hand parts and a high range of motion allow you to recreate poses from the play, such as a two-handed pose!"
+			"Equipped with one of the largest gimmicks in 1/144 scale history, \"RG Sotheby\" is now available!",
+			"• Armament such as cylinders and funnels on the arms are faithfully reproduced, and deployment mechanisms are installed in the propulsion parts such as verniers and backpacks according to actual machine examination!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ショット・ライフル×1",
-			"ビーム・トマホーク×1",
-			"ビーム・サーベル×2",
-			"シールド×1",
-			"ファンネルｘ6",
-			"ミサイル×1"
-		],
-		"en": [
-			"Beam shot rifle x1",
-			"Beam tomahawk x1",
-			"Beam saber x2",
-			"Seal × 1",
-			"Funnel x6",
-			"Missile x 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×17",
-			"リアリスティックデカール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 17",
-			"Realistic decal x 1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1408/1000128159_1.jpg",
-		"/images/items/01_1408/1000128159_2.jpg",
-		"/images/items/01_1408/1000128159_3.jpg",
-		"/images/items/01_1408/1000128159_4.jpg",
-		"/images/items/01_1408/1000128159_5.jpg",
-		"/images/items/01_1408/1000128159_6.jpg",
-		"/images/items/01_1408/1000128159_7.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ショット・ライフル",
+				"en": "Beam Shot Rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・トマホーク",
+				"en": "• Funnel"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "• Molded products"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "• Realistic Decal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ファンネル",
+				"en": "• Instruction manual"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "ミサイル"
+			},
+			"count": 1
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 17
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128159_1.jpg",
+				"path": "/images/items/01_1408/1000128159_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128159_2.jpg",
+				"path": "/images/items/01_1408/1000128159_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128159_3.jpg",
+				"path": "/images/items/01_1408/1000128159_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128159_4.jpg",
+				"path": "/images/items/01_1408/1000128159_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128159_5.jpg",
+				"path": "/images/items/01_1408/1000128159_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128159_6.jpg",
+				"path": "/images/items/01_1408/1000128159_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128159_7.jpg",
+				"path": "/images/items/01_1408/1000128159_7.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1408/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4121"
-	],
-	"manualId": "0677"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1408/"
+	}
 }

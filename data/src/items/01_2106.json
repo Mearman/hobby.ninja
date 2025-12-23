@@ -5,6 +5,43 @@
 		"ja": "ケロロ軍曹プラモコレクション タママロボMk-II",
 		"en": "Keroro Sergeant Plastic Model Collection Tamama Robo Mk-II"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "keroro",
+			"url": "https://bandai-hobby.net/series/keroro/",
+			"ja": "ケロロ軍曹"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7034",
+			"url": "https://bandai-hobby.net/item/01_7034/",
+			"ja": "HG Newケロロロボ"
+		},
+		{
+			"id": "01_2120",
+			"url": "https://bandai-hobby.net/item/01_2120/",
+			"ja": "ケロロ軍曹プラモコレクション ケロロ軍曹 アニバーサリーパッケージ エディション"
+		},
+		{
+			"id": "01_2122",
+			"url": "https://bandai-hobby.net/item/01_2122/",
+			"ja": "ケロロ軍曹プラモコレクション ケロロ軍曹&ケロロロボMk-II アニバーサリースペシャルVer."
+		},
+		{
+			"id": "01_2104",
+			"url": "https://bandai-hobby.net/item/01_2104/",
+			"ja": "ケロロ軍曹プラモコレクション ガルル中尉"
+		}
+	],
 	"price": {
 		"amount": 1210,
 		"currency": "JPY",
@@ -31,25 +68,30 @@
 			"Tamama can be placed on a saucer that also serves as the robot's cockpit."
 		]
 	},
-	"images": [
-		"/images/items/01_2106/153_3054.jpg",
-		"/images/items/01_2106/155_3054.jpg",
-		"/images/items/01_2106/156_3054.jpg",
-		"/images/items/01_2106/157_3054.jpg",
-		"/images/items/01_2106/158_3054.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2106/",
-	"brandIds": [],
-	"seriesIds": [
-		"keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7034",
-		"01_2120",
-		"01_2122",
-		"01_2104"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/158_3054_o_1cqnbu0ft1lmh1289c74lr51k7l2n.jpg",
+				"path": "/images/items/01_2106/158_3054.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_3054_o_1cqnbt7l2194r1t3m13e54n11r6b23.jpg",
+				"path": "/images/items/01_2106/153_3054.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3054_o_1cqnbtee1u9d081olkp2l1k2f28.jpg",
+				"path": "/images/items/01_2106/155_3054.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3054_o_1cqnbtjblpes1unt16b51r791kpo2d.jpg",
+				"path": "/images/items/01_2106/156_3054.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3054_o_1cqnbtntl1k1l116615c7192s50t2i.jpg",
+				"path": "/images/items/01_2106/157_3054.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2106/"
 }

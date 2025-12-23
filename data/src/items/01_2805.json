@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC 1/144 シャア専用ザクII",
-		"en": "HGUC 1/144 Char's Zaku II"
+		"en": "HG 1/144 MS-06S ZAKU Ⅱ"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,7 +64,6 @@
 		"day": 31
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンプラ40周年記念！『機動戦士ガンダム』より、シャア専用ザクIIが新規造形にてHGシリーズに登場！",
@@ -29,57 +74,100 @@
 			"• 付属する３種の武器は、腰部に懸架できる。"
 		],
 		"en": [
-			"Gunpla 40th anniversary! From \"Mobile Suit Gundam\", Char's Zaku II is now available in the HG series with a new model!",
-			"• The proportions from \"Mobile Suit Gundam\" have been revived using the latest technology.",
-			"• The mono-eye can be moved by moving the operating rib on the back of the head.",
-			"• In addition to the upper arm, the forearm also rotates, ensuring a wide range of motion.",
-			"• Includes soft material parts that further expand the range of motion of the lower back. You can choose between plastic parts and soft material parts.",
-			"• Three types of attached weapons can be hung on the waist."
+			"GUNDAM 40th ANNIVERSARY！ From \"MOBILE SUIT GUNDAM\", Char's exclusive Zaku II is now available in the HG series in a new form!",
+			"• Revive the proportions of \"MOBILE SUIT GUNDAM\" with the latest technology.",
+			"• The mono eye can be moved by moving the control rib on the back of the head.",
+			"• In addition to the upper arm, the forearm also rotates to ensure a large range of motion.",
+			"• Includes soft material parts that further expand the range of motion of the lumbar region. It is a selectable type of plastic parts and soft material parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"軟質素材スカートパーツ×1式",
-			"PS成形スカートパーツ×1式",
-			"ザク・マシンガン×1",
-			"ザク・バズーカ×1",
-			"ヒート・ホーク×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "軟質素材スカートパーツ",
+				"en": "• 1 set of soft material skirt parts ×"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "PS成形スカートパーツ",
+				"en": "• PS molded skirt parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ザク・マシンガン",
+				"en": "• Foil seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ザク・バズーカ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ヒート・ホーク"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147817_1.jpg",
+				"path": "/images/items/01_2805/1000147817_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147817_2.jpg",
+				"path": "/images/items/01_2805/1000147817_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147817_3.jpg",
+				"path": "/images/items/01_2805/1000147817_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147817_4.jpg",
+				"path": "/images/items/01_2805/1000147817_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147817_5.jpg",
+				"path": "/images/items/01_2805/1000147817_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147817_6.jpg",
+				"path": "/images/items/01_2805/1000147817_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147817_7.jpg",
+				"path": "/images/items/01_2805/1000147817_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147817_8.jpg",
+				"path": "/images/items/01_2805/1000147817_8.jpg"
+			}
 		],
-		"en": [
-			"Soft material skirt parts x 1 set",
-			"PS molded skirt parts x 1 set",
-			"Zaku machine gun x1",
-			"Zaku Bazooka×1",
-			"Heat Hawk x1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2805/1000147817_1.jpg",
-		"/images/items/01_2805/1000147817_2.jpg",
-		"/images/items/01_2805/1000147817_3.jpg",
-		"/images/items/01_2805/1000147817_4.jpg",
-		"/images/items/01_2805/1000147817_5.jpg",
-		"/images/items/01_2805/1000147817_6.jpg",
-		"/images/items/01_2805/1000147817_7.jpg",
-		"/images/items/01_2805/1000147817_8.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2805/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
-	"manualId": "0501"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2805/"
+	}
 }

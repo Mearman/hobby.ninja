@@ -3,8 +3,53 @@
 	"type": "item",
 	"name": {
 		"ja": "メガサイズモデル 1/48 ガンダムベース限定 RX-78-2 ガンダム [メタリックグロスインジェクション]",
-		"en": "Mega Size Model 1/48 Gundam Base Limited RX-78-2 Gundam [Metallic Gloss Injection]"
+		"en": "MEGA SIZE MODEL 1/48 THE GUNDAM BASE LIMITED RX-78-2 GUNDAM ［METALLIC GLOSS INJECTION］"
 	},
+	"brands": [
+		{
+			"id": "megasize",
+			"url": "https://bandai-hobby.net/brand/megasize/",
+			"ja": "メガサイズモデル"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4961",
+			"url": "https://bandai-hobby.net/item/01_4961/",
+			"ja": "メガサイズモデル 1/48 ガンダム カラークリアー"
+		},
+		{
+			"id": "01_4784",
+			"url": "https://bandai-hobby.net/item/01_4784/",
+			"ja": "1/48 メガサイズモデル シャア専用ザク Ver.GFT"
+		},
+		{
+			"id": "01_4782",
+			"url": "https://bandai-hobby.net/item/01_4782/",
+			"ja": "1/48 メガサイズモデル ガンダム Ver.GFT"
+		},
+		{
+			"id": "01_4569",
+			"url": "https://bandai-hobby.net/item/01_4569/",
+			"ja": "1/48 メガサイズモデル 量産型ザク"
+		}
+	],
+	"scale": "1/48",
 	"price": {
 		"amount": 11550,
 		"currency": "JPY",
@@ -17,42 +62,42 @@
 		"month": 9
 	},
 	"targetAge": 8,
-	"scale": "1/48",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
 			"迫力のビッグサイズ！メガサイズモデルのRX-78-2 ガンダムがガンダムベース限定メタリックグロスインジェクションで登場。"
 		],
 		"en": [
-			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"Impressive big size! Mega size model RX-78-2 Gundam is now available with Gundam base limited metallic gloss injection."
+			"For GUNPLA fans around the world, this is a limited edition GUNPLA at the official GUNPLA complex \"GUNDAM Base\". Powerful big size! The mega-size model RX-78-2 GUNDAM is now available with a GUNDAM base limited metallic gloss injection."
 		]
 	},
-	"images": [
-		"/images/items/01_1925/1000126794_1.jpg",
-		"/images/items/01_1925/1000126794_2.jpg",
-		"/images/items/01_1925/1000126794_3.jpg",
-		"/images/items/01_1925/1000126794_4.jpg",
-		"/images/items/01_1925/1000126794_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126794_1.jpg",
+				"path": "/images/items/01_1925/1000126794_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126794_2.jpg",
+				"path": "/images/items/01_1925/1000126794_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126794_3.jpg",
+				"path": "/images/items/01_1925/1000126794_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126794_4.jpg",
+				"path": "/images/items/01_1925/1000126794_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126794_5.jpg",
+				"path": "/images/items/01_1925/1000126794_5.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1925/",
-	"brandIds": [
-		"megasize"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4961",
-		"01_4784",
-		"01_4782",
-		"01_4569"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1925/"
 	}
 }

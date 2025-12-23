@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "BB戦士228 トウ王頑駄無",
-		"en": "BB Senshi 228 Touoh Gundam u"
+		"en": "BB Senshi 228 Touoh Gundamu"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -25,31 +62,42 @@
 		],
 		"en": [
 			"A new warrior appears from \"Musha○den\", which is currently being serialized in Comic Bonbon.",
-			"Its name is \"Touou Gundam \". \" Musha Kureitomaru\" is a powered-up version with a karaoke pack on his back.",
+			"Its name is \"Touou Gundam\". \"Musha Kureitomaru\" is a powered-up version with a karaoke pack on his back.",
 			"Helmet and armor are removable."
 		]
 	},
-	"images": [
-		"/images/items/01_1500/153_241.jpg",
-		"/images/items/01_1500/155_241.jpg",
-		"/images/items/01_1500/156_241.jpg",
-		"/images/items/01_1500/157_241.jpg",
-		"/images/items/01_1500/158_241.jpg",
-		"/images/items/01_1500/159_241.jpg",
-		"/images/items/01_1500/189_241.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1500/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_241_s_l3apkblrsoxmkdeu12zjp0u28pi2.jpg",
+				"path": "/images/items/01_1500/153_241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_241_s_zey21lbrntfpi07c5ixmv8bqk70f.jpg",
+				"path": "/images/items/01_1500/155_241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_241_s_4b4etzs7mc538txejatxlu4u9u4j.jpg",
+				"path": "/images/items/01_1500/156_241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_241_s_2sju3agxogajuix3zfrew8snzize.jpg",
+				"path": "/images/items/01_1500/157_241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_241_s_tk6x65mkuvzbhqsm18jnbtbil6o7.jpg",
+				"path": "/images/items/01_1500/158_241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_241_s_bfuo6lqbu94gc6q45dx2yyu4tg1c.jpg",
+				"path": "/images/items/01_1500/159_241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_241_s_bmjm184wdwxlxrssdgz6qgqp0beu.jpg",
+				"path": "/images/items/01_1500/189_241.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1500/"
 }

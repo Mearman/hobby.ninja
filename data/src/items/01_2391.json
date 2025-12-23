@@ -5,6 +5,50 @@
 		"ja": "HGAC 1/144 ガンダムサンドロック",
 		"en": "HGAC 1/144 Gundam Sandrock"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5590",
+			"url": "https://bandai-hobby.net/item/01_5590/",
+			"ja": "HG 1/144 ウイングガンダムゼロ [クリアカラー]"
+		},
+		{
+			"id": "item-1000213249",
+			"url": "https://p-bandai.jp/item/item-1000213249/",
+			"ja": "ＨＧ 1/144 アルトロンガンダム"
+		},
+		{
+			"id": "01_5340",
+			"url": "https://bandai-hobby.net/item/01_5340/",
+			"ja": "HG 1/144 シェンロンガンダム [クリアカラー]"
+		},
+		{
+			"id": "item-1000183318",
+			"url": "https://p-bandai.jp/item/item-1000183318/",
+			"ja": "ＨＧ 1/144 ガンダムデスサイズヘル"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『新機動戦記ガンダムＷ』より「カトル・ラバーバ・ウィナー」の搭乗機、ガンダムサンドロックがHGで登場！",
@@ -29,58 +72,72 @@
 		],
 		"en": [
 			"From \"Mobile Suit Gundam W\", Gundam Sandrock, the aircraft piloted by Quatre LaBarba Winner, is now available in HG!",
-			"• Best proportions and reproduction of poses from the movie!",
+			"• Achieves both best proportions and reproduction of poses from the movie!",
 			"• Both arms reach up to his back, allowing him to pull out the Heat Shotel from his back.",
 			"• The wrist has a structure that allows you to hold the Heat Shotel diagonally.",
 			"• Pursuing ease of assembly. The calculated joint structure and parts are divided into parts that allow you to recreate the main body color just by assembling them."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ヒートショーテル×2",
-			"シールド×1",
-			"バックパック×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヒートショーテル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バックパック"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 8
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3325_s_onn6w1ok1wymaoyb6f9fe4mfel4i.jpg",
+				"path": "/images/items/01_2391/153_3325.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3325_s_ymz99wv0crdc903m74usi71x4wiq.jpg",
+				"path": "/images/items/01_2391/155_3325.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3325_s_y1lqlotwunl24o8u8z6w7ck0d7ac.jpg",
+				"path": "/images/items/01_2391/156_3325.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3325_s_qha9pbdb4umkaog7vq26t3wuccs2.jpg",
+				"path": "/images/items/01_2391/157_3325.jpg"
+			}
 		],
-		"en": [
-			"Heat shotel x2",
-			"Seal × 1",
-			"Backpack x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×8",
-			"ホイルシール×1",
-			"説明書×1"
-		],
-		"en": [
-			"Molded product x 8",
-			"Foil Seal×1",
-			"Manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2391/153_3325.jpg",
-		"/images/items/01_2391/155_3325.jpg",
-		"/images/items/01_2391/156_3325.jpg",
-		"/images/items/01_2391/157_3325.jpg",
-		"/images/items/01_2391/01_2391_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2391/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5590",
-		"item-1000213249",
-		"01_5340",
-		"item-1000183318"
-	],
-	"manualId": "0492"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2391/"
 }

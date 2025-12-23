@@ -5,6 +5,49 @@
 		"ja": "BB戦士261 イージスガンダム",
 		"en": "BB Senshi 261 Aegis Gundam"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5365",
+			"url": "https://bandai-hobby.net/item/01_5365/",
+			"ja": "BB戦士 C.E.運命の対決セット"
+		},
+		{
+			"id": "01_1450",
+			"url": "https://bandai-hobby.net/item/01_1450/",
+			"ja": "ＢＢ戦士 298ブレイズザクファントム(ハイネ機)"
+		},
+		{
+			"id": "01_3843",
+			"url": "https://bandai-hobby.net/item/01_3843/",
+			"ja": "BB戦士268 ジャスティスガンダム"
+		},
+		{
+			"id": "01_4274",
+			"url": "https://bandai-hobby.net/item/01_4274/",
+			"ja": "BB戦士276 デュエルガンダム"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -19,31 +62,28 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム SEED」に登場する主役ライバル機「イージスガンダム」のBB戦士のプラモデル。イージスガンダムの特徴であるモビルアーマー形態への変形が可能です。肘、肩、足、足首、腰が可動し、劇中の様々なポーズを再現出来ます。武器はビームライフル、シールドが付属します。"
+			"「機動戦士ガンダムSEED」に登場する主役ライバル機「イージスガンダム」のBB戦士のプラモデル。イージスガンダムの特徴であるモビルアーマー形態への変形が可能です。肘、肩、足、足首、腰が可動し、劇中の様々なポーズを再現出来ます。武器はビームライフル、シールドが付属します。"
 		],
 		"en": [
-			"A BB Senshi plastic model of the main rival machine \"Aegis Gundam \" that appears in \" Mobile Suit Gundam SEED\". Characteristics of Aegis Gundam: Can be transformed into mobile armor form. Elbows, shoulders, feet, ankles, and hips are movable, allowing you to recreate various poses from the movie. Weapons include a beam rifle and a seal."
+			"A BB Senshi plastic model of the main rival machine \"Aegis Gundam\" that appears in \"Mobile Suit Gundam SEED\". Characteristics of Aegis Gundam: Can be transformed into mobile armor form. Elbows, shoulders, feet, ankles, and hips are movable, allowing you to recreate various poses from the movie. Weapons include beam rifle and Seal."
 		]
 	},
-	"images": [
-		"/images/items/01_3103/153_406.jpg",
-		"/images/items/01_3103/155_406.jpg",
-		"/images/items/01_3103/156_406.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3103/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5365",
-		"01_1450",
-		"01_3843",
-		"01_4274"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/156_406_s_8pallerwwus285s51a129zse3p0r.jpg",
+				"path": "/images/items/01_3103/156_406.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_406_s_qa8geqwm41f84cdrw779ssm7u39e.jpg",
+				"path": "/images/items/01_3103/153_406.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_406_s_7hqpntfiq9uai1ikilt2gu2ujapp.jpg",
+				"path": "/images/items/01_3103/155_406.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3103/"
 }

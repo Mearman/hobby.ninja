@@ -3,8 +3,64 @@
 	"type": "item",
 	"name": {
 		"ja": "ＭＧ 1/100 エールストライクガンダム Ver.ＲＭ用 ランチャーストライカー/ソードストライカーパック",
-		"en": "Launcher Striker/Sword Striker Pack for MG 1/100 Ale Strike Gundam Ver.RM"
+		"en": "LAUNCHER STRIKER / SWORD STRIKER PACK for MG 1/100 AILE STRIKE GUNDAM Ver. RM"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ",
+			"en": "MG [MASTER GRADE]"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED",
+			"en": "MOBILE SUIT GUNDAM SEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "01_5221",
+			"url": "https://bandai-hobby.net/item/01_5221/",
+			"ja": "MG 1/100 イージスガンダム [クリアカラー]"
+		},
+		{
+			"id": "item-1000181726",
+			"url": "https://p-bandai.jp/item/item-1000181726/",
+			"ja": "ＨＧ 1/144 ストライクダガー"
+		},
+		{
+			"id": "01_4272",
+			"url": "https://bandai-hobby.net/item/01_4272/",
+			"ja": "MG 1/100 ガンダムベース限定 パーフェクトストライクガンダム グランドスラム装備型"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -17,53 +73,92 @@
 		"month": 11
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"プレミアムバンダイはこちら",
-			"※プレミアムバンダイのトップページに遷移します。",
-			"※一部のエリアでは販売していません。",
-			"※エリアにより申込開始の日時は異なります。"
+			"マスターグレードで‘パーフェクトストライクガンダム’を再現しよう！！",
+			"拡張用ランチャー／ソードストライカーパックが単品で登場！",
+			"「ＭＧ 1/100 エールストライクガンダム Ver.ＲＭ」（２０１３年５月店頭発売予定 ※別売）に装着することで、",
+			"リマスター版に登場する‘パーフェクトストライクガンダム’が再現できるランチャーストライカー及びソードストライカーパック！！",
+			"新作ＭＧ本体（別売）に合わせた、新規デザインの専用マーキングが水転写式デカールで付属。",
+			"※ 当商品に「ＭＧ 1/100 エールストライクガンダム Ver.ＲＭ」は含まれません。",
+			"-------",
+			"当商品は、２０１３年５月店頭発売 「ＭＧ 1/100 エールストライクガンダム Ver.ＲＭ」（別売）に装着して、",
+			"‘パーフェクトストライクガンダム’‘ランチャーストライクガンダム’‘ソードストライクガンダム’を再現する拡張パックです。",
+			"-------",
+			"※ 掲載写真を再現するには、 「ＭＧ 1/100 エールストライクガンダム Ver.ＲＭ」（別売）が必要です。",
+			"また 「ＭＧ 1/100 エールストライクガンダム Ver.ＲＭ」（別売）のプレミアムバンダイでの販売お取扱の予定はございません。",
+			"※‘パーフェクトストライクガンダム’を再現するための接続パーツは、本体商品側に付属します。",
+			"※‘ランチャーストライクガンダム’（単体）、‘ソードストライクガンダム’（単体）を再現するためのバックパックは",
+			"当商品に含まれます。",
+			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
+			"１／１００スケール組み立て式プラモデル",
+			"対象年齢　　：１５才以上",
+			"主な製品素材：ＰＳ／ＰＥ／ＡＢＳ／ＰＶＣ",
+			"・組み立てに接着剤は使用しません。",
+			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
+			"《この商品に「ＭＧ 1/100 エールストライクガンダム Ver.ＲＭ」は含まれていません》",
+			"※掲載写真は一部塗装をしてあります。",
+			"※写真のキットは開発途中の試作品です。実際の商品とは多少異なる場合がございます。",
+			"（備考）",
+			"・ この商品は、限定アイテムです。",
+			"※弊社主催イベントや他の企画などで販売をさせていただく場合がございます。",
+			"※プラモデルお取り扱い店舗店頭ではお買い求めいただけません。",
+			"・ この商品は‘プレミアムバンダイ’での販売準備数に限りがございます。",
+			"品切れの際はご了承ください。",
+			"・ 商品画像は開発途中のものであり、実際の商品とは異なる場合がございます。",
+			"・ 商品仕様は2013年4月現在の予定です。変更の場合もございますがご了承ください。"
 		],
 		"en": [
-			"Click here for Premium Bandai",
-			"*Transition to the Premium Bandai top page.",
-			"*Not available in some areas.",
-			"*Application start times vary depending on the area."
+			"〈Remarks〉"
 		]
 	},
-	"images": [
-		"/images/items/01_3003/1000081094_1.jpg",
-		"/images/items/01_3003/1000081094_10.jpg",
-		"/images/items/01_3003/1000081094_2.jpg",
-		"/images/items/01_3003/1000081094_3.jpg",
-		"/images/items/01_3003/1000081094_4.jpg",
-		"/images/items/01_3003/1000081094_5.jpg",
-		"/images/items/01_3003/1000081094_6.jpg",
-		"/images/items/01_3003/1000081094_7.jpg",
-		"/images/items/01_3003/1000081094_8.jpg",
-		"/images/items/01_3003/1000081094_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000081094_1.jpg",
+				"path": "/images/items/01_3003/1000081094_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000081094_2.jpg",
+				"path": "/images/items/01_3003/1000081094_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000081094_3.jpg",
+				"path": "/images/items/01_3003/1000081094_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000081094_4.jpg",
+				"path": "/images/items/01_3003/1000081094_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000081094_5.jpg",
+				"path": "/images/items/01_3003/1000081094_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000081094_6.jpg",
+				"path": "/images/items/01_3003/1000081094_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000081094_7.jpg",
+				"path": "/images/items/01_3003/1000081094_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000081094_8.jpg",
+				"path": "/images/items/01_3003/1000081094_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000081094_9.jpg",
+				"path": "/images/items/01_3003/1000081094_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000081094_10.jpg",
+				"path": "/images/items/01_3003/1000081094_10.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3003/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5221",
-		"item-1000181726",
-		"01_4272"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_3003/"
 	}
 }

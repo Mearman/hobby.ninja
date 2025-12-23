@@ -5,6 +5,60 @@
 		"ja": "ＭＧ 1/100 ガンダムＦ９０II Ｉタイプ",
 		"en": "MG 1/100 Gundam F90II I type"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "f90",
+			"url": "https://bandai-hobby.net/series/f90/",
+			"ja": "機動戦士ガンダムF90"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7056",
+			"url": "https://bandai-hobby.net/item/01_7056/",
+			"ja": "MG 1/100 F90IIIY クラスターガンダム用 ミッションパック Xタイプ"
+		},
+		{
+			"id": "item-1000224327",
+			"url": "https://p-bandai.jp/item/item-1000224327/",
+			"ja": "ＭＧ 1/100 Ｆ８０ ガンレイド"
+		},
+		{
+			"id": "item-1000223368",
+			"url": "https://p-bandai.jp/item/item-1000223368/",
+			"ja": "ＭＧ 1/100 ガンダムＦ９０用 ミッションパック Ａタイプ&Ｌタイプ"
+		},
+		{
+			"id": "item-1000223367",
+			"url": "https://p-bandai.jp/item/item-1000223367/",
+			"ja": "ＭＧ 1/100 ガンダムＦ９０用 ミッションパック Ｊタイプ&Ｑタイプ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 7040,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 7
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"－－－－－",
@@ -71,7 +124,7 @@
 			"－－－－－",
 			"Interception/pursuit warfare specification I type conversion completed -",
 			"－－－－－",
-			"Gundam F90II, a modified and enhanced version of Gundam F90 Unit 2, is now available in Master Grade as a set with Mission Pack I type!",
+			"GundamF90II, a modified and enhanced version of GundamF90 Unit 2, is now available in Master Grade as a set with Mission Pack I type!",
 			"The refurbished exterior of the head and chest, as well as the complete set of I-type equipment, are reproduced with new modeling.",
 			"● F90II is now available in the latest MG format",
 			"The revised head, chest, shoulders, and leg parts are newly sculpted. Furthermore, the coloring is reproduced with molded colors.",
@@ -116,53 +169,72 @@
 			"- Product specifications are scheduled as of 20203. Please note that there may be changes."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル",
-			"シールド",
-			"ビーム・サーベル",
-			"Iタイプ装備一式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			}
+		},
+		{
+			"name": {
+				"ja": "Iタイプ装備一式"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000144596_1.jpg",
+				"path": "/images/items/01_2824/1000144596_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000144596_2.jpg",
+				"path": "/images/items/01_2824/1000144596_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000144596_3.jpg",
+				"path": "/images/items/01_2824/1000144596_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000144596_4.jpg",
+				"path": "/images/items/01_2824/1000144596_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000144596_5.jpg",
+				"path": "/images/items/01_2824/1000144596_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000144596_6.jpg",
+				"path": "/images/items/01_2824/1000144596_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000144596_7.jpg",
+				"path": "/images/items/01_2824/1000144596_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000144596_8.jpg",
+				"path": "/images/items/01_2824/1000144596_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000144596_9.jpg",
+				"path": "/images/items/01_2824/1000144596_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000144596_10.jpg",
+				"path": "/images/items/01_2824/1000144596_10.jpg"
+			}
 		],
-		"en": [
-			"beam rifle",
-			"Seal de",
-			"beam saber",
-			"I type equipment set"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2824/1000144596_1.jpg",
-		"/images/items/01_2824/1000144596_10.jpg",
-		"/images/items/01_2824/1000144596_2.jpg",
-		"/images/items/01_2824/1000144596_3.jpg",
-		"/images/items/01_2824/1000144596_4.jpg",
-		"/images/items/01_2824/1000144596_5.jpg",
-		"/images/items/01_2824/1000144596_6.jpg",
-		"/images/items/01_2824/1000144596_7.jpg",
-		"/images/items/01_2824/1000144596_8.jpg",
-		"/images/items/01_2824/1000144596_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2824/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"f90"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_7056",
-		"item-1000224327",
-		"item-1000223368",
-		"item-1000223367"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
-	"manualId": "2592"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2824/"
 }

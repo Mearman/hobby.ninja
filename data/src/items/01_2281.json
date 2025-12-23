@@ -5,6 +5,43 @@
 		"ja": "ピカちんキット ふりかけメーカー チョコビカラーVer.",
 		"en": "Pikachin Kit Furikake Maker Chocobi Color Ver."
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -32,9 +69,9 @@
 		],
 		"en": [
 			"A collaboration between the popular anime \"Crayon Shin-chan\" and the invented Pikachin Kit!",
-			"• A pink, light green, and brown furikake maker inspired by Chocobi from \"Crayon Shin-chan\"!",
+			"• A furikake maker in pink, light green, and brown colors, inspired by Chocobi from \"Crayon Shin-chan\"!",
 			"• An invention that allows you to crush sweets into furikake!",
-			"• Of course, you can also crush chocobi!",
+			"• Of course you can also crush chocobi!",
 			"[Set contents]",
 			"Furikake maker...1",
 			"Seal...1",
@@ -42,24 +79,26 @@
 			"Pikachin sheet...1"
 		]
 	},
-	"images": [
-		"/images/items/01_2281/153_3222.jpg",
-		"/images/items/01_2281/155_3222.jpg",
-		"/images/items/01_2281/156_3222.jpg",
-		"/images/items/01_2281/157_3222.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2281/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3222_s_cuth1cvxb7dka5c0gw0g9ckh56fs.jpg",
+				"path": "/images/items/01_2281/153_3222.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3222_s_wsiu863gawqfpv6t11ypyjez5dkz.jpg",
+				"path": "/images/items/01_2281/155_3222.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3222_s_h5itbfpadmbpt8wflky6k6gdw1wf.jpg",
+				"path": "/images/items/01_2281/156_3222.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3222_s_sqahsx180fpmb1vljwi1mym2es8a.jpg",
+				"path": "/images/items/01_2281/157_3222.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2281/"
 }

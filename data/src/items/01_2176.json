@@ -2,9 +2,53 @@
 	"id": "01_2176",
 	"type": "item",
 	"name": {
-		"ja": "MG 1/100 Ex-S ガンダム/S ガンダム",
-		"en": "MG 1/100 Ex-S Gundam/S Gundam"
+		"ja": "MG 1/100 Ex-Sガンダム/Sガンダム",
+		"en": "MG 1/100 Ex-SGundam/SGundam"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "sentinel",
+			"url": "https://bandai-hobby.net/series/sentinel/",
+			"ja": "ガンダム・センチネル"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5593",
+			"url": "https://bandai-hobby.net/item/01_5593/",
+			"ja": "MG 1/100 ガンダムMk-V [クリアカラー]"
+		},
+		{
+			"id": "01_3408",
+			"url": "https://bandai-hobby.net/item/01_3408/",
+			"ja": "ＭＧ 1/100 ガンダムＭｋ-Ｖ"
+		},
+		{
+			"id": "01_1291",
+			"url": "https://bandai-hobby.net/item/01_1291/",
+			"ja": "MG 1/100 PLAN303E ディープストライカー"
+		},
+		{
+			"id": "item-1000089611",
+			"url": "https://p-bandai.jp/item/item-1000089611",
+			"ja": "ＭＧ 1/100 Ｓガンダム ブースター・ユニット装着型"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 14080,
 		"currency": "JPY",
@@ -18,11 +62,10 @@
 		"day": 20
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"『ガンダム・センチネル』よりEx-S ガンダムがバージョンアップして登場！",
-			"• 「よりセンチネルらしく、よりS ガンダムらしく」をコンセプトに形状を刷新。S ガンダムとEx-S ガンダムは選択式で組み立てが可能。",
+			"『ガンダム・センチネル』よりEx-Sガンダムがバージョンアップして登場！",
+			"• 「よりセンチネルらしく、よりSガンダムらしく」をコンセプトに形状を刷新。SガンダムとEx-Sガンダムは選択式で組み立てが可能。",
 			"• 「Gコア」「Gアタッカー」「Gボマー」の分離合体を再現できる。",
 			"• 頭部・肩部・胸部・バックパックはMG 1/100 PLAN303E ディープストライカーで新造したパーツを使用。腹部の形状変更パーツも新たに造形。",
 			"• ビーム・スマートガンをはじめ、主要武装が付属。",
@@ -31,68 +74,98 @@
 			"• MGならではの多重構造による立体再現。全身に高密度なフレームを内蔵。"
 		],
 		"en": [
-			"Ex-S Gundam has been updated from \"Gundam Sentinel\"!",
-			"• The shape has been redesigned based on the concept of \"more Sentinel-like, more S Gundam-like\". S Gundam and Ex-S Gundam can be assembled selectively.",
-			"• You can reproduce the separation and combination of \"G Core \", \" G Attacker \", and \" G Bomber\".",
+			"Ex-SGundam is now available as an upgraded version from “Gundam Sentinel”!",
+			"• The shape has been redesigned based on the concept of \"more Sentinel-like, more SGundam-like.\" SGundam and Ex-SGundam can be assembled selectively.",
+			"• You can reproduce the separation and combination of \"G Core\", \"G Attacker\", and \"G Bomber\".",
 			"• The head, shoulders, chest, and backpack use newly manufactured parts from the MG 1/100 PLAN303E Deep Striker. The abdominal shape changing parts are also newly modeled.",
-			"• Main weapons including beam smart gun are included.",
-			"• Hand parts include newly created open hands (left and right) that are perfect for posing with a beam smart gun.",
-			"• Incom has also been updated, and it has been renovated so that it can not only be color-coded but also reproduce the scene where it is ejected.",
+			"• Includes main weapons including beam smart gun.",
+			"• The hand parts include newly created open hands (left and right) that are perfect for posing with a beam smart gun.",
+			"• The Incom has also been renovated, and it has been renovated so that it can reproduce not only the color coding but also the ejection scene.",
 			"• Three-dimensional reproduction with multiple structures unique to MG. Built-in high-density frame throughout the body."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・スマートガン×1",
-			"ビームサーベル（ビームカノン）×2",
-			"インコム×3"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・スマートガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル（ビームカノン）"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "インコム"
+			},
+			"count": 3
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 49
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リード線"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "ビス"
+			},
+			"count": 29
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3124_s_ilfij4itk25jbl4b1gsmgmng2ax9.jpg",
+				"path": "/images/items/01_2176/153_3124.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3124_s_1qvsj1ryhdo4rktpt206ynzwiean.jpg",
+				"path": "/images/items/01_2176/155_3124.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3124_s_9zf5rjyc9eyjcxf00i5lm025x474.jpg",
+				"path": "/images/items/01_2176/156_3124.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3124_s_6mnefeuq2qben2ampw8dzzm35sjp.jpg",
+				"path": "/images/items/01_2176/157_3124.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3124_s_j2kjqrp4g0r4h6rh8musw9yxtf23.jpg",
+				"path": "/images/items/01_2176/158_3124.jpg"
+			}
 		],
-		"en": [
-			"Beam smart gun x1",
-			"Beam saber (beam canon) x 2",
-			"Incom×3"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×49",
-			"ホイルシール×1",
-			"マーキングシール×1",
-			"リード線×3",
-			"ビス×29",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 49",
-			"Foil Seal×1",
-			"MarkingSeal×1",
-			"Lead wire x 3",
-			"Screws x 29",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2176/153_3124.jpg",
-		"/images/items/01_2176/155_3124.jpg",
-		"/images/items/01_2176/156_3124.jpg",
-		"/images/items/01_2176/157_3124.jpg",
-		"/images/items/01_2176/158_3124.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2176/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"sentinel"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5593",
-		"01_3408",
-		"01_1291",
-		"item-1000089611"
-	],
-	"manualId": "0633"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2176/"
 }

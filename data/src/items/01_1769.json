@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 バウ量産型",
 		"en": "HGUC 1/144 Bow mass production type"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-zz",
+			"url": "https://bandai-hobby.net/series/gundam-zz/",
+			"ja": "機動戦士ガンダムＺＺ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_2079",
+			"url": "https://bandai-hobby.net/item/01_2079/",
+			"ja": "HGUC 1/144 R・ジャジャ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -17,37 +66,34 @@
 		"month": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム ZZ」に登場する「バウ量産型」のプラモデル。最大の特徴である変形・合体をMS形態を崩すことなく再現できます。バウアタッカーも、変形後のフォルムそのままで再現できます。武器はビームライフル、シールドが付属します。"
+			"「機動戦士ガンダムZZ」に登場する「バウ量産型」のプラモデル。最大の特徴である変形・合体をMS形態を崩すことなく再現できます。バウアタッカーも、変形後のフォルムそのままで再現できます。武器はビームライフル、シールドが付属します。"
 		],
 		"en": [
-			"A plastic model of the \"Bow mass-produced type \" that appears in \" Mobile Suit Gundam ZZ\". The biggest characteristic transformation/combination can be reproduced without destroying the MS form. Bow Attacker can also be reproduced in its transformed form. Weapons include a beam rifle and a seal."
+			"A plastic model of the \"Bow mass-produced type\" that appears in \"Mobile Suit GundamZZ\". The biggest characteristic transformation/combination can be reproduced without destroying the MS form. Bow Attacker can also be reproduced in its transformed form. Weapons include a beam rifle and a seal."
 		]
 	},
-	"images": [
-		"/images/items/01_1769/153_270.jpg",
-		"/images/items/01_1769/155_270.jpg",
-		"/images/items/01_1769/156_270.jpg",
-		"/images/items/01_1769/157_270.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1769/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam-zz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5963",
-		"01_4985",
-		"01_4971",
-		"01_2079"
-	],
-	"manualId": "0230"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_270_s_ex631l9usgg203spsuzvgv7wk6ql.jpg",
+				"path": "/images/items/01_1769/153_270.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_270_s_6ml75355t3tsbmsy8lln2m26lk0u.jpg",
+				"path": "/images/items/01_1769/155_270.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_270_s_nmfy72cvcbr2yswwtf4kt9e4u3iu.jpg",
+				"path": "/images/items/01_1769/156_270.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_270_s_ffbln9lm5g15b9d2m1zaikg6wgxe.jpg",
+				"path": "/images/items/01_1769/157_270.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1769/"
 }

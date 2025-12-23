@@ -2,9 +2,46 @@
 	"id": "01_1280",
 	"type": "item",
 	"name": {
-		"ja": "Bトレインショーティー 伊豆箱根鉄道3000系　ラブライブ！サンシャイン!! ラッピング電車　HAPPY PARTY TRAIN 3",
+		"ja": "Bトレインショーティー 伊豆箱根鉄道3000系　ラブライブ！サンシャイン!!  ラッピング電車　HAPPY PARTY TRAIN 3",
 		"en": "B Train Shorty Izu Hakone Railway 3000 Series Love Live! Sunshine!! Wrapping train HAPPY PARTY TRAIN 3"
 	},
+	"brands": [
+		{
+			"id": "train",
+			"url": "https://bandai-hobby.net/brand/train/",
+			"ja": "Bトレインショーティー"
+		}
+	],
+	"series": [
+		{
+			"id": "lovelive",
+			"url": "https://bandai-hobby.net/series/lovelive/",
+			"ja": "ラブライブ！サンシャイン!!"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_1276",
+			"url": "https://bandai-hobby.net/item/01_1276/",
+			"ja": "Bトレインショーティー 伊豆箱根鉄道3000系　ラブライブ！サンシャイン!!　ラッピング電車　HAPPY PARTY TRAIN　3種アソート"
+		},
+		{
+			"id": "01_1277",
+			"url": "https://bandai-hobby.net/item/01_1277/",
+			"ja": "Bトレインショーティー 伊豆箱根鉄道3000系　ラブライブ！サンシャイン!!  ラッピング電車　HAPPY PARTY TRAIN 1"
+		},
+		{
+			"id": "01_1278",
+			"url": "https://bandai-hobby.net/item/01_1278/",
+			"ja": "Bトレインショーティー 伊豆箱根鉄道3000系　ラブライブ！サンシャイン!!  ラッピング電車　HAPPY PARTY TRAIN 2"
+		},
+		{
+			"id": "01_810",
+			"url": "https://bandai-hobby.net/item/01_810/",
+			"ja": "Bトレインショーティー 伊豆箱根鉄道3000系「ラブライブ！サンシャイン!!」ラッピング電車2"
+		}
+	],
 	"price": {
 		"amount": 1870,
 		"currency": "JPY",
@@ -30,33 +67,39 @@
 			"3rd car Kumoha 3011 with beautiful illustrations of 2nd graders!"
 		]
 	},
-	"contents": {
-		"ja": [
-			"１両入り（3号車×1）",
-			"NewSGフレーム×1"
+	"contents": [
+		{
+			"name": {
+				"ja": "１両入り（3号車"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "）"
+			}
+		},
+		{
+			"name": {
+				"ja": "NewSGフレーム"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2210_s_x70k4wg0tp3q9whgbwo8zu9y59dm.jpg",
+				"path": "/images/items/01_1280/153_2210.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2210_s_i4h93c6f49xonuyhcs98c634sl5l.jpg",
+				"path": "/images/items/01_1280/155_2210.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2210_s_xb8ron7hzde6czgw4r7ozkoqru4q.jpg",
+				"path": "/images/items/01_1280/156_2210.jpg"
+			}
 		],
-		"en": [
-			"Contains 1 car (car No. 3 x 1)",
-			"NewSG frame x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1280/153_2210.jpg",
-		"/images/items/01_1280/155_2210.jpg",
-		"/images/items/01_1280/156_2210.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1280/",
-	"brandIds": [
-		"train"
-	],
-	"seriesIds": [
-		"lovelive"
-	],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_810"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1280/"
 }

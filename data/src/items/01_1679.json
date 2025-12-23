@@ -5,6 +5,43 @@
 		"ja": "BB戦士309 夏侯淵ダラス",
 		"en": "BB Senshi 309 Natsuhou Yuan Dallas"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -25,23 +62,22 @@
 			"-From BB Senshi Sangokuden, the fierce commander of the machine \"Natsuhouen Dallas\" appears -Weapons that can be changed into various forms by recombining parts are included -Lightly armored form can be reproduced by attaching and removing armor, and armor can be replaced with other Sangokuden characters"
 		]
 	},
-	"images": [
-		"/images/items/01_1679/153_2586.jpg",
-		"/images/items/01_1679/155_2586.jpg",
-		"/images/items/01_1679/156_2586.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1679/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2586_s_prs1utw997c3fxdzye3bcoauh66l.jpg",
+				"path": "/images/items/01_1679/153_2586.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2586_s_a22oaoecfrovaxqilzuw4nez4u7t.jpg",
+				"path": "/images/items/01_1679/155_2586.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2586_s_9c4quabg2pgddj6spp54gcwkoqe4.jpg",
+				"path": "/images/items/01_1679/156_2586.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1679/"
 }

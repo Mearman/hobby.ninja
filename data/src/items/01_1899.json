@@ -5,6 +5,50 @@
 		"ja": "RG 1/144 ガンダムベース限定 RX-0 ユニコーンガンダム(デストロイモード) Ver.TWC(LIGHTING MODEL)",
 		"en": "RG 1/144 Gundam Base Limited RX-0 Unicorn Gundam (Destroy Mode) Ver.TWC (LIGHTING MODEL)"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1259",
+			"url": "https://bandai-hobby.net/item/01_1259/",
+			"ja": "RG 1/144 ユニコーンガンダム2号機 バンシィ・ノルン"
+		},
+		{
+			"id": "01_1950",
+			"url": "https://bandai-hobby.net/item/01_1950/",
+			"ja": "RG 1/144 シナンジュ[クリアカラー]"
+		},
+		{
+			"id": "01_1085",
+			"url": "https://bandai-hobby.net/item/01_1085/",
+			"ja": "RG 1/144 ユニコーンガンダム"
+		},
+		{
+			"id": "01_1919",
+			"url": "https://bandai-hobby.net/item/01_1919/",
+			"ja": "RG 1/144 ガンダムベース限定 シナンジュ [メタリックグロスインジェクション]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 11000,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 6
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
@@ -32,34 +75,42 @@
 			"*Uses 3 AAA batteries (sold separately)"
 		]
 	},
-	"images": [
-		"/images/items/01_1899/153_2834.jpg",
-		"/images/items/01_1899/155_2834.jpg",
-		"/images/items/01_1899/156_2834.jpg",
-		"/images/items/01_1899/157_2834.jpg",
-		"/images/items/01_1899/158_2834.jpg",
-		"/images/items/01_1899/159_2834.jpg",
-		"/images/items/01_1899/189_2834.jpg",
-		"/images/items/01_1899/190_2834.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1899/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1259",
-		"01_1950",
-		"01_1085",
-		"01_1919"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2834_s_be53i7ko7tefr0r2hbgc2bj8mt19.jpg",
+				"path": "/images/items/01_1899/153_2834.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2834_s_yzs5f516uafxv61mvb7eu9fm93u4.jpg",
+				"path": "/images/items/01_1899/155_2834.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2834_s_li1hpnzuhajhu2hbv1s3wfo1r79h.jpg",
+				"path": "/images/items/01_1899/156_2834.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2834_s_pq3qapp1sca2tezzpsiaeogn51ux.jpg",
+				"path": "/images/items/01_1899/157_2834.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2834_s_yh8g1ok4dzujwmdthfgmv5959utk.jpg",
+				"path": "/images/items/01_1899/158_2834.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2834_s_y5vkreeiii5cxa8a7t0u9986is2m.jpg",
+				"path": "/images/items/01_1899/159_2834.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2834_s_84gqnlx36y1fldw5324uagnnm7re.jpg",
+				"path": "/images/items/01_1899/189_2834.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2834_s_uc7fgibkh7wbgou4hy3rwt8oy7cb.jpg",
+				"path": "/images/items/01_1899/190_2834.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1899/"
 }

@@ -5,6 +5,38 @@
 		"ja": "1/144 グフ飛行試験型",
 		"en": "1/144 Gouf flight test type"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5987",
+			"url": "https://bandai-hobby.net/item/01_5987/",
+			"ja": "ガンダムデカールNo.139 機動戦士Gundam GQuuuuuuX汎用1"
+		},
+		{
+			"id": "01_5988",
+			"url": "https://bandai-hobby.net/item/01_5988/",
+			"ja": "ガンダムデカールNo.140 機動戦士Gundam GQuuuuuuX汎用2"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -17,7 +49,6 @@
 		"month": 7
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、1/144スケールで、MSVシリーズグフ飛行試験型が登場。",
@@ -28,20 +59,18 @@
 			"A kit of Zeon military mobile suit Gouf's flight experiment aircraft. The head and arms can swing back and forth. The hip joint opens and closes to the left and right. Comes with a special decal."
 		]
 	},
-	"images": [
-		"/images/items/01_3165/153_4126.jpg",
-		"/images/items/01_3165/155_4126.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3165/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5986",
-		"01_5987",
-		"01_5988"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4126_s_eeuoz9jirjte5piu5u0y9uhfsfnz.jpg",
+				"path": "/images/items/01_3165/153_4126.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4126_s_ijj4edop0p2hssya9gb1jk08ktfe.jpg",
+				"path": "/images/items/01_3165/155_4126.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3165/"
 }

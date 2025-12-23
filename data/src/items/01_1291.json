@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 PLAN303E ディープストライカー",
 		"en": "MG 1/100 PLAN303E Deep Striker"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "sentinel",
+			"url": "https://bandai-hobby.net/series/sentinel/",
+			"ja": "ガンダム・センチネル"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5593",
+			"url": "https://bandai-hobby.net/item/01_5593/",
+			"ja": "MG 1/100 ガンダムMk-V [クリアカラー]"
+		},
+		{
+			"id": "01_3408",
+			"url": "https://bandai-hobby.net/item/01_3408/",
+			"ja": "ＭＧ 1/100 ガンダムＭｋ-Ｖ"
+		},
+		{
+			"id": "01_2176",
+			"url": "https://bandai-hobby.net/item/01_2176/",
+			"ja": "MG 1/100 Ex-Sガンダム/Sガンダム"
+		},
+		{
+			"id": "item-1000089611",
+			"url": "https://p-bandai.jp/item/item-1000089611",
+			"ja": "ＭＧ 1/100 Ｓガンダム ブースター・ユニット装着型"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 22000,
 		"currency": "JPY",
@@ -18,73 +62,105 @@
 		"day": 17
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"• MGシリーズ200体達成を記念して、「ガンダムセンチネル」から大型アイテム「PLAN303E ディープ・ストライカー」が登場！",
 			"• メガ粒子砲は約540mmの圧巻サイズとなっているほか、大型ディスク・レドームやマルチ・センサーなどの細かい造形も精密に再現！",
 			"• 機体各所のシリンダー部分にはメッキ加工が施され「重厚感」が付加されている！",
-			"• S ガンダム本体も一部新規造形で立体化！"
+			"• Sガンダム本体も一部新規造形で立体化！"
 		],
 		"en": [
-			"• To commemorate the achievement of 200 MG series, a large item \"PLAN303E Deep Striker \" is now available from \" Gundam Sentinel\"!",
+			"• To commemorate the achievement of 200 MG series, a large item \"PLAN303E Deep Striker\" is now available from \"Gundam Sentinel\"!",
 			"• The mega particle cannon has an impressive size of approximately 540mm, and the detailed shapes such as the large disk radome and multi-sensor are also precisely reproduced!",
 			"• The cylinder parts of various parts of the aircraft are plated to give it a \"heavy feel\"!",
-			"• S Gundam body is also three-dimensional with some new modeling!"
+			"• The SGundam body is also three-dimensional with some new modeling!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・スマートガン×1",
-			"ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・スマートガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 39
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "メッシュパイプ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リード線"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビス"
+			},
+			"count": 14,
+			"unit": {
+				"ja": "（長×5、短×9）"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2221_o_1e8985lan11oe13nltm66h1d1e23.jpg",
+				"path": "/images/items/01_1291/153_2221.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2221_o_1e8985vmfre81fmo1tr01cie16602d.jpg",
+				"path": "/images/items/01_1291/155_2221.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2221_o_1e89868s01gai1s93ceu1nk819ao2i.jpg",
+				"path": "/images/items/01_1291/156_2221.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2221_o_1e8986doi1jofcpcbmveqe3sg2n.jpg",
+				"path": "/images/items/01_1291/157_2221.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2221_o_1e8987sc4sne1muq1cpt1bml14i731.jpg",
+				"path": "/images/items/01_1291/158_2221.jpg"
+			}
 		],
-		"en": [
-			"Beam smart gun x1",
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×39",
-			"ホイルシール×1",
-			"マーキングシール×1",
-			"メッシュパイプ×1",
-			"リード線×1",
-			"ビス×14（長×5、短×9）",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 39",
-			"Foil Seal×1",
-			"MarkingSeal×1",
-			"Mesh pipe x 1",
-			"Lead wire x 1",
-			"Screws x 14 (long x 5, short x 9)",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1291/153_2221.jpg",
-		"/images/items/01_1291/155_2221.jpg",
-		"/images/items/01_1291/156_2221.jpg",
-		"/images/items/01_1291/157_2221.jpg",
-		"/images/items/01_1291/158_2221.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1291/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"sentinel"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5593",
-		"01_3408",
-		"01_2176",
-		"item-1000089611"
-	],
-	"manualId": "0628"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1291/"
 }

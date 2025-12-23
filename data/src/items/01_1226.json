@@ -2,9 +2,46 @@
 	"id": "01_1226",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム Gジェネレーション キュベレイ トリプルコレクション",
-		"en": "SD Gundam G Generation Qubeley Triple Collection"
+		"ja": "SDガンダムGジェネレーション キュベレイ トリプルコレクション",
+		"en": "SDGundamG Generation Qubeley Triple Collection"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -24,29 +61,31 @@
 			"ぜひこの機会にあなたのコレクションに加えてください。"
 		],
 		"en": [
-			"All three units of the unit \"Qubeley \" that appear in the game software \" G Generation F\" have been made into plastic models.",
+			"All three units of the unit \"Qubeley\" that appear in the game software \"G Generation F\" have been made into plastic models.",
 			"Three types of Qubeley, white, blue, and red, have been given a special treatment called \"extra finish\" to become a dazzling model.",
 			"Please take this opportunity to add it to your collection."
 		]
 	},
-	"images": [
-		"/images/items/01_1226/153_215.jpg",
-		"/images/items/01_1226/155_215.jpg",
-		"/images/items/01_1226/156_215.jpg",
-		"/images/items/01_1226/157_215.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1226/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_215_s_at6tyqqdzsf62i47d67yh1sa1vjq.jpg",
+				"path": "/images/items/01_1226/153_215.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_215_s_3vt2ap9i7vwlc953gachvliyszru.jpg",
+				"path": "/images/items/01_1226/155_215.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_215_s_4a8a6847c30nvz8ktnhhs8ngk2aa.jpg",
+				"path": "/images/items/01_1226/156_215.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_215_s_4edjkt099hj5k6w8nvtjxsvzizxf.jpg",
+				"path": "/images/items/01_1226/157_215.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1226/"
 }

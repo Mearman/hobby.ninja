@@ -5,6 +5,43 @@
 		"ja": "SD 三国創傑伝 荀イクストライクノワール",
 		"en": "SD Three Kingdoms Soketsuden Xun Iku Strike Noir"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "soketsuden",
+			"url": "https://bandai-hobby.net/series/soketsuden/",
+			"ja": "三国創傑伝"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2642",
+			"url": "https://bandai-hobby.net/item/01_2642/",
+			"ja": "SD 三国創傑伝 天覇曹操ウイングガンダム"
+		},
+		{
+			"id": "01_2614",
+			"url": "https://bandai-hobby.net/item/01_2614/",
+			"ja": "SD 三国創傑伝 典韋マスターガンダム"
+		},
+		{
+			"id": "01_2615",
+			"url": "https://bandai-hobby.net/item/01_2615/",
+			"ja": "SD 三国創傑伝 徐晃ガンダムデスサイズ"
+		},
+		{
+			"id": "01_2643",
+			"url": "https://bandai-hobby.net/item/01_2643/",
+			"ja": "SD 三国創傑伝 甘寧クロスボーンガンダム"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -20,7 +57,7 @@
 	"description": {
 		"ja": [
 			"【2021年春、日本展開開始！！】",
-			"• 『三国志』をベースにしたSD ガンダムが装いも新たに登場！",
+			"• 『三国志』をベースにしたSDガンダムが装いも新たに登場！",
 			"• 進化したプロポーションとパーツ分割へのこだわりにより、組み立てただけでSD史上最高峰の色分けを実現。",
 			"• 一新された頭身バランスと各所の関節構造により、躍動感あふれるポージングを再現！",
 			"• 左右のウイングから伸びるバイザーは前面に展開することが可能！",
@@ -28,45 +65,60 @@
 		],
 		"en": [
 			"[Spring 2021, main rollout begins! ! ]",
-			"• SD Gundam based on \"Romance of the Three Kingdoms\" now has a new look!",
-			"• With advanced proportions and attention to parts division, we have achieved the highest color separation in SD history using just the assembly.",
-			"• The all-new head and body balance and joint structure in various parts allow for dynamic poses!",
-			"• The visor extending from the left and right wings can be deployed to the front!",
+			"• SDGundam based on “Romance of the Three Kingdoms” has a new look!",
+			"• Thanks to the advanced proportions and attention to part division, we have achieved the highest color separation in SD history using just the assembly.",
+			"• Reproduce dynamic poses with a completely new head and body balance and joint structure in various places!",
+			"• The visors extending from the left and right wings can be deployed to the front!",
 			"• The weapon equipped in the backpack, Soyaen, can be switched between gun mode and sword mode!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"双夜燕（銃剣）×2",
-			"メモリ×１",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "双夜燕（銃剣）"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "メモリ×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/159_3482_s_pabhdnrsh8oh5s1sp1airb65oqdh.jpg",
+				"path": "/images/items/01_2557/159_3482.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_3482_s_7bry4h982rqnirtanq62jsb1t6t9.jpg",
+				"path": "/images/items/01_2557/153_3482.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3482_s_pkbdzkybr9q7j0p35acny4oay73j.jpg",
+				"path": "/images/items/01_2557/155_3482.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3482_s_xwk4jqojeok8v9y8hziha4yli3hw.jpg",
+				"path": "/images/items/01_2557/156_3482.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3482_s_hmqf96ash787zizouszslfrhogjx.jpg",
+				"path": "/images/items/01_2557/157_3482.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3482_s_394d1raxifnukb3udrfufm3gtyq9.jpg",
+				"path": "/images/items/01_2557/158_3482.jpg"
+			}
 		],
-		"en": [
-			"Soya Swallow (bayonet) x 2",
-			"Memory x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2557/153_3482.jpg",
-		"/images/items/01_2557/155_3482.jpg",
-		"/images/items/01_2557/156_3482.jpg",
-		"/images/items/01_2557/157_3482.jpg",
-		"/images/items/01_2557/158_3482.jpg",
-		"/images/items/01_2557/159_3482.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2557/",
-	"brandIds": [],
-	"seriesIds": [
-		"soketsuden"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2642",
-		"01_2614",
-		"01_2615",
-		"01_2643"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2557/"
 }

@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ガルバルディβ",
 		"en": "HGUC 1/144 Garibaldi β"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 16
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30年の時を経て、『機動戦士Ζガンダム』に登場するガルバルディβが、完全新規造形で待望の初HGUC化！",
@@ -29,58 +77,72 @@
 		],
 		"en": [
 			"After 30 years, the Galbaldy β that appears in \"Mobile Suit Zeta Gundam\" has been made into the long-awaited first HGUC with a completely new model!",
-			"• Details of each part have been increased in density to match the latest format, and details reminiscent of the internal frame have been added to the shoulders of the torso!",
-			"• The mold on the bottom of the chest reproduces the details with separate parts!",
+			"• The details of each part have been increased in density to match the latest format, and details reminiscent of the internal frame have been added to the shoulders of the torso!",
+			"• The mold on the bottom of the chest is a separate part to reproduce the details!",
 			"• A rotation axis has been added to the upper arm for improved action!",
-			"• In addition to a new model of the same type of rifle as Gelgoog, Seal can be replaced to recreate the telescopic gimmick!"
+			"• In addition to a new model of the same type of rifle as Gelgoog, Sealdo can also be replaced to recreate the telescopic gimmick!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"ビーム・サーベル×2",
-			"シールド×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 8
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2280_s_vrj81gwm1lbxv20oq9tquggvnzxj.jpg",
+				"path": "/images/items/01_1353/153_2280.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2280_s_luo35p9qgbuscno246thwj8grn19.jpg",
+				"path": "/images/items/01_1353/155_2280.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2280_s_xwb20tsxrykgyn8sm2bk5na0e60s.jpg",
+				"path": "/images/items/01_1353/156_2280.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2280_s_d9qay46dww2lownavgshxbp1q4g5.jpg",
+				"path": "/images/items/01_1353/157_2280.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x1",
-			"Beam saber x2",
-			"Seal × 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×8",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 8",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1353/153_2280.jpg",
-		"/images/items/01_1353/155_2280.jpg",
-		"/images/items/01_1353/156_2280.jpg",
-		"/images/items/01_1353/157_2280.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1353/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
-	"manualId": "0479"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1353/"
 }

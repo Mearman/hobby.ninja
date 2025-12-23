@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 ユーラヴェンガンダム",
 		"en": "HGBD:R 1/144 Euraven Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,70 +62,117 @@
 		"day": 13
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"2020年4月9日より配信予定の『ガンダムビルドダイバーズRe:RISE』2nd Seasonより「ユーラヴェンガンダム」が登場！",
-			"• コアガンダム IIは単独でコアフライヤーに変形可能。",
+			"• コアガンダムIIは単独でコアフライヤーに変形可能。",
 			"• コアドッキングカスタム対応で既存のアーマーとのカスタムも楽しめる！"
 		],
 		"en": [
-			"\"Euraven Gundam \" appears from the 2nd Season of \" Gundam Build Divers Re:RISE\" scheduled to be distributed from 202049!",
+			"\"Euraven Gundam\" appears from the 2nd Season of \"Gundam Build Divers Re:RISE\" scheduled to be distributed from 202049!",
 			"• Core Gundam II can be transformed into Core Flyer by itself.",
 			"• Supports core docking customization, so you can enjoy customization with existing armor!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"シールド×1",
-			"ビームサーベル×2",
-			"スナイパーライフル×1",
-			"ビット×3",
-			"武器持ち手(左右)×各1",
-			"平手(左)×1",
-			"台座×1",
-			"ディスプレイベース×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "スナイパーライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビット"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "武器持ち手(左右)×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "平手(左)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "台座"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3775_s_d3332r7jk6ll18nmlrmi3cz18k3b.jpg",
+				"path": "/images/items/01_2788/153_3775.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3775_s_iwu8t7iladcfcm2jp5yps4470r0y.jpg",
+				"path": "/images/items/01_2788/155_3775.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3775_s_q0f5ii4ddn7k3bd4oli9hqsoamx2.jpg",
+				"path": "/images/items/01_2788/156_3775.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3775_s_4fqf0r3r39uhy5fpqhwgxur1r37r.jpg",
+				"path": "/images/items/01_2788/157_3775.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3775_s_yvrj7a40fewskvz7zvd9klpuugq9.jpg",
+				"path": "/images/items/01_2788/158_3775.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3775_s_adxy4xube3ozzdtofa9eib1faf32.jpg",
+				"path": "/images/items/01_2788/159_3775.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3775_s_xa8qhxavbhil54wq592r8mzuh5v6.jpg",
+				"path": "/images/items/01_2788/189_3775.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3775_s_33838kpm74i1bcu3a76i5haldkwv.jpg",
+				"path": "/images/items/01_2788/190_3775.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3775_s_vuuwvahbsvyjji1joa0vg5c6yw5x.jpg",
+				"path": "/images/items/01_2788/191_3775.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3775_s_om7m2we81ige07vdn6f0jwpl4kdn.jpg",
+				"path": "/images/items/01_2788/192_3775.jpg"
+			}
 		],
-		"en": [
-			"Seal × 1",
-			"Beam saber x2",
-			"Sniper rifle x1",
-			"Bit x 3",
-			"Weapon handle (left and right) x 1 each",
-			"Open hand (left) x 1",
-			"Pedestal x 1",
-			"Display base x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2788/153_3775.jpg",
-		"/images/items/01_2788/155_3775.jpg",
-		"/images/items/01_2788/156_3775.jpg",
-		"/images/items/01_2788/157_3775.jpg",
-		"/images/items/01_2788/158_3775.jpg",
-		"/images/items/01_2788/159_3775.jpg",
-		"/images/items/01_2788/189_3775.jpg",
-		"/images/items/01_2788/190_3775.jpg",
-		"/images/items/01_2788/191_3775.jpg",
-		"/images/items/01_2788/192_3775.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2788/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0090"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2788/"
 }

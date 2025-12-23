@@ -2,9 +2,46 @@
 	"id": "01_2849",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット シルエットブースター2 [ホワイト]",
-		"en": "SD Gundam Cross Silhouette Silhouette Booster 2 [White]"
+		"ja": "SDガンダム クロスシルエット シルエットブースター2 [ホワイト]",
+		"en": "SDGundam Cross Silhouette Silhouette Booster 2 [White]"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5275",
+			"url": "https://bandai-hobby.net/item/01_5275/",
+			"ja": "SDガンダム クロスシルエット マイティーストライクフリーダムガンダム"
+		},
+		{
+			"id": "01_5191",
+			"url": "https://bandai-hobby.net/item/01_5191/",
+			"ja": "SDガンダム クロスシルエット ガンダムキャリバーン"
+		},
+		{
+			"id": "01_5014",
+			"url": "https://bandai-hobby.net/item/01_5014/",
+			"ja": "SDガンダム クロスシルエット F9ノ1改"
+		},
+		{
+			"id": "01_4893",
+			"url": "https://bandai-hobby.net/item/01_4893/",
+			"ja": "SDガンダムクロスシルエット ユニコーンガンダム2号機バンシィ（デストロイモード）＆バンシィ・ノルン パーツセット"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -21,12 +58,12 @@
 	"description": {
 		"ja": [
 			"クロスシルエットシリーズの拡張パーツセット第二弾！",
-			"■既存ラインアップ商品の遊びの幅をさらに広げる豪華セット。",
-			"■別売りの「SDCSゼータガンダム」を組み付けることでウェイブライダーを再現。",
-			"■ザクI再現用外装は単品でもザクIヘッドを簡易再現可能。さらにモノアイのダミーパーツも付属。",
-			"■股関節にスイング機構を追加できる「関節ブラッシュアップパーツ」が2種同梱。",
-			"■「CSフレーム用バージョンアップ太腿パーツ」はパーツの継ぎ目を覆うデザイン。",
-			"■汎用表情手とビーム・サーベルが付属。"
+			"• 既存ラインアップ商品の遊びの幅をさらに広げる豪華セット。",
+			"• 別売りの「SDCSゼータガンダム」を組み付けることでウェイブライダーを再現。",
+			"• ザクI再現用外装は単品でもザクIヘッドを簡易再現可能。さらにモノアイのダミーパーツも付属。",
+			"• 股関節にスイング機構を追加できる「関節ブラッシュアップパーツ」が2種同梱。",
+			"• 「CSフレーム用バージョンアップ太腿パーツ」はパーツの継ぎ目を覆うデザイン。",
+			"• 汎用表情手とビーム・サーベルが付属。"
 		],
 		"en": [
 			"The second expansion parts set of the Cross Silhouette series!",
@@ -38,44 +75,77 @@
 			"• Includes general expression hands and beam saber."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ＣＳ／ＳＤフレーム用スイング股関節パーツ×各1",
-			"ＣＳフレーム用角形太腿パーツ×2",
-			"汎用表情手×2",
-			"ザクI再現用パーツ×1式",
-			"ゼータガンダム ウェイブライダー再現用パーツ×1式",
-			"ビーム・サーベル×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ＣＳ／ＳＤフレーム用スイング股関節パーツ×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ＣＳフレーム用角形太腿パーツ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "汎用表情手"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ザクI再現用パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ゼータガンダム ウェイブライダー再現用パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3832_s_8us5815g2uefufmswy28lx8fcpt8.jpg",
+				"path": "/images/items/01_2849/153_3832.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3832_s_bw3ahw5ugepcalipim4y4d7y6wcz.jpg",
+				"path": "/images/items/01_2849/155_3832.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3832_s_xmj5r04a4wzpzktk5zxx3gqs2mq0.jpg",
+				"path": "/images/items/01_2849/156_3832.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3832_s_8vrpp9smgcnfws0nhxpddch9fg4t.jpg",
+				"path": "/images/items/01_2849/157_3832.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3832_s_h606d6ozx00wfbec82ikq24xhryp.jpg",
+				"path": "/images/items/01_2849/158_3832.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3832_s_7ip2ffvggkhx6xvegppki4uyru1s.jpg",
+				"path": "/images/items/01_2849/159_3832.jpg"
+			}
 		],
-		"en": [
-			"Swing hip joint parts for CS/SD frame x 1 each",
-			"Square thigh parts for CS frame x 2",
-			"General purpose facial expression hand x 2",
-			"Zaku I reproduction parts x 1 set",
-			"Zeta Gundam Wave Rider reproduction parts x 1 set",
-			"Beam saber x2"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2849/153_3832.jpg",
-		"/images/items/01_2849/155_3832.jpg",
-		"/images/items/01_2849/156_3832.jpg",
-		"/images/items/01_2849/157_3832.jpg",
-		"/images/items/01_2849/158_3832.jpg",
-		"/images/items/01_2849/159_3832.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2849/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5275",
-		"01_5191",
-		"01_5014",
-		"01_4893"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2849/"
 }

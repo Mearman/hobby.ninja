@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 ジェガン",
-		"en": "MG 1/100 Jegan"
+		"en": "MG 1/100 JEGAN"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]",
+			"en": "MG [MASTER GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア",
+			"en": "MOBILE SUIT GUNDAM Char’s Counterattack"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000219110",
+			"url": "https://p-bandai.jp/item/item-1000219110/",
+			"ja": "MG 1/100 リ・ガズィ (逆襲のシャアVer.)"
+		},
+		{
+			"id": "item-1000097986",
+			"url": "https://p-bandai.jp/item/item-1000097986",
+			"ja": "ＭＧ 1/100 サザビー Ver.Ka & ＲＥ/100 1/100 ナイチンゲール用 拡張ファンネルエフェクトセット"
+		},
+		{
+			"id": "item-1000128400",
+			"url": "https://p-bandai.jp/item/item-1000128400",
+			"ja": "ＭＧ 1/100 ギラ・ドーガ（レズン・シュナイダー専用機）"
+		},
+		{
+			"id": "01_5837",
+			"url": "https://bandai-hobby.net/item/01_5837/",
+			"ja": "MG 1/100 ギラ・ドーガ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4840,
 		"currency": "JPY",
@@ -18,7 +64,6 @@
 		"day": 14
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム 逆襲のシャア』に登場する量産型MSジェガンがMG化！",
@@ -27,66 +72,111 @@
 			"• 左右4種類ずつのハンドパーツが付属し、ライフルを構えるポーズからアクシズに取りつく名シーンまで再現可能！"
 		],
 		"en": [
-			"The mass-produced MS Jegan that appears in \"Mobile Suit Gundam: Char's Counterattack\" is now an MG!",
-			"• Following the silhouette balance that appeared in \"Char's Counterattack\", we reproduce the heavy and stable Jegan!",
-			"• A completely newly shaped MS internal frame is adopted, allowing you to reproduce the internal skeleton that symbolizes mass-produced machines just by using Assembly!",
-			"• Four types of hand parts on the left and right sides are included, allowing you to recreate everything from the pose of holding a rifle to the famous scene of him clinging to Axis!"
+			"The mass-produced MS Jegan that appears in \"MOBILE SUIT GUNDAM Char’s Counterattack\" has been converted to MG!",
+			"• Following the silhouette balance that appeared in \"Char’s Counterattack\", the Jegan with a solid and stable feeling is reproduced!",
+			"• A completely new MS internal frame is adopted, and it can be reproduced simply by assembling the internal skeleton that symbolizes the mass-produced machine!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"ビーム・サーベル×1",
-			"シールド×1"
-		],
-		"en": [
-			"Beam rifle x1",
-			"Beam saber x 1",
-			"Seal × 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×17",
-			"ホイルシール×1",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 17",
-			"Foil Seal×1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1394/1000127537_1.jpg",
-		"/images/items/01_1394/1000127537_10.jpg",
-		"/images/items/01_1394/1000127537_11.jpg",
-		"/images/items/01_1394/1000127537_2.jpg",
-		"/images/items/01_1394/1000127537_3.jpg",
-		"/images/items/01_1394/1000127537_4.jpg",
-		"/images/items/01_1394/1000127537_5.jpg",
-		"/images/items/01_1394/1000127537_6.jpg",
-		"/images/items/01_1394/1000127537_7.jpg",
-		"/images/items/01_1394/1000127537_8.jpg",
-		"/images/items/01_1394/1000127537_9.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル",
+				"en": "Beam Rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "• Molded products"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "• Foil seal"
+			},
+			"count": 1
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 17
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127537_1.jpg",
+				"path": "/images/items/01_1394/1000127537_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127537_2.jpg",
+				"path": "/images/items/01_1394/1000127537_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127537_3.jpg",
+				"path": "/images/items/01_1394/1000127537_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127537_4.jpg",
+				"path": "/images/items/01_1394/1000127537_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127537_5.jpg",
+				"path": "/images/items/01_1394/1000127537_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127537_6.jpg",
+				"path": "/images/items/01_1394/1000127537_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127537_7.jpg",
+				"path": "/images/items/01_1394/1000127537_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127537_8.jpg",
+				"path": "/images/items/01_1394/1000127537_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127537_9.jpg",
+				"path": "/images/items/01_1394/1000127537_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127537_10.jpg",
+				"path": "/images/items/01_1394/1000127537_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127537_11.jpg",
+				"path": "/images/items/01_1394/1000127537_11.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1394/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000219110",
-		"item-1000097986",
-		"item-1000128400",
-		"01_5837"
-	],
-	"manualId": "0860"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1394/"
+	}
 }

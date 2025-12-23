@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard 超サイヤ人2孫悟飯",
 		"en": "Figure-rise Standard Super Saiyan 2 Son Gohan"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4901",
+			"url": "https://bandai-hobby.net/item/01_4901/",
+			"ja": "Figure-rise Standard ベジータ (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_4219",
+			"url": "https://bandai-hobby.net/item/01_4219/",
+			"ja": "Figure-rise Standard 孫悟空 (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_2974",
+			"url": "https://bandai-hobby.net/item/01_2974/",
+			"ja": "Figure-rise Standard アルティメット孫悟飯"
+		},
+		{
+			"id": "01_2769",
+			"url": "https://bandai-hobby.net/item/01_2769/",
+			"ja": "Figure-rise Standard ジレン"
+		}
+	],
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -29,52 +72,83 @@
 		"en": [
 			"Figure-riseStandard Super Saiyan 2 Son Gohan is now available with a renewed package! !",
 			"• Joint mechanism that allows various poses.",
-			"• Effect parts for Kamehameha (storage and release) are also included.",
+			"• Kamehameha (storage/release) effect parts are also included.",
 			"• Two types of face parts are included!",
 			"• A new plastic model construction system that allows you to create the well-trained body of a Dragon Ball character with your own hands by combining strong muscle parts!!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"表情パーツ×2",
-			"ハンドパーツ×4（左右こぶし、左右開き手）",
-			"必殺技エフェクト×2（かめはめ波溜め、放出）",
-			"必殺技エフェクト用台座×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情パーツ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "必殺技エフェクト"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "必殺技エフェクト用台座"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/191_3505_s_pv7c5bwzi9u2iroop8sos2bg0j7e.jpg",
+				"path": "/images/items/01_2581/191_3505.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_3505_s_fuz3gxnxerv5vs729q4k1f66uiph.jpg",
+				"path": "/images/items/01_2581/153_3505.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3505_s_kobpg6en70wrfndpfyrc84uit8tr.jpg",
+				"path": "/images/items/01_2581/155_3505.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3505_s_2pwenbrcqdjtfz5boi3ya1vjk9nx.jpg",
+				"path": "/images/items/01_2581/156_3505.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3505_s_u8ag61p69qedzjaqwxnh74wzb6dj.jpg",
+				"path": "/images/items/01_2581/157_3505.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3505_s_g1prfr8fjelh082mfzdayaoek8lq.jpg",
+				"path": "/images/items/01_2581/158_3505.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3505_s_v4eb9kawopsc2t3tc0thsp1up0a5.jpg",
+				"path": "/images/items/01_2581/159_3505.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3505_s_lm7n2kan6sicubfy1jz0368xm6bj.jpg",
+				"path": "/images/items/01_2581/189_3505.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3505_s_i2win6hjts08fzosro709sm8kmho.jpg",
+				"path": "/images/items/01_2581/190_3505.jpg"
+			}
 		],
-		"en": [
-			"Facial expression parts x 2",
-			"Hand parts x 4 (left and right fists, left and right open hands)",
-			"Special move effect x 2 (Kamehame wave storage, release)",
-			"Special move effect pedestal x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2581/153_3505.jpg",
-		"/images/items/01_2581/155_3505.jpg",
-		"/images/items/01_2581/156_3505.jpg",
-		"/images/items/01_2581/157_3505.jpg",
-		"/images/items/01_2581/158_3505.jpg",
-		"/images/items/01_2581/159_3505.jpg",
-		"/images/items/01_2581/189_3505.jpg",
-		"/images/items/01_2581/190_3505.jpg",
-		"/images/items/01_2581/191_3505.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2581/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"dragonball"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4901",
-		"01_4219",
-		"01_2974",
-		"01_2769"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2581/"
 }

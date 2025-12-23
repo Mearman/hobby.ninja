@@ -5,6 +5,44 @@
 		"ja": "1/144 ゾロアット",
 		"en": "1/144 Zoroat"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "v-gundam",
+			"url": "https://bandai-hobby.net/series/v-gundam/",
+			"ja": "機動戦士Vガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4978",
+			"url": "https://bandai-hobby.net/item/01_4978/",
+			"ja": "HG 1/144 V2アサルトバスターガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_3311",
+			"url": "https://bandai-hobby.net/item/01_3311/",
+			"ja": "HG 1/144 ガンダムベース限定 セカンドV[クリアカラー]"
+		},
+		{
+			"id": "01_2835",
+			"url": "https://bandai-hobby.net/item/01_2835/",
+			"ja": "MG 1/100 ガンダムベース限定 V2アサルトバスターガンダムVer.Ka [チタニウムフィニッシュ]"
+		},
+		{
+			"id": "item-1000142101",
+			"url": "https://p-bandai.jp/item/item-1000142101/",
+			"ja": "ＲＥ/100 1/100 シャッコー"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ＴＶ「機動戦士Ｖガンダム」ザンスカール帝国が初めて開発した宇宙戦仕様モビルスーツを立体化しました。右肩アーマーからのビーム・ストリングの展開ギミックを再現できます。左肩アーマーのシールドはクリアパーツ製で、着脱は選択式です。ビーム・ライフル、ビーム・サーベル２種がついています。ディスプレイ用スタンドとカードがついています。"
@@ -26,22 +63,18 @@
 			"TV \"Mobile Suit V Gundam\" A three-dimensional version of the space battle specification mobile suit first developed by the Zanskar Empire. You can reproduce the deployment gimmick of the beam string from the right shoulder armor. The left shoulder armor seal is made of clear parts and can be attached or removed selectively. Comes with a beam rifle and two types of beam sabers. Includes display stand and card."
 		]
 	},
-	"images": [
-		"/images/items/01_1505/153_2424.jpg",
-		"/images/items/01_1505/155_2424.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1505/",
-	"brandIds": [],
-	"seriesIds": [
-		"v-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4978",
-		"01_3311",
-		"01_2835",
-		"item-1000142101"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2424_s_cl5et2szrs76snmvcbenz7mf1jie.jpg",
+				"path": "/images/items/01_1505/153_2424.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2424_s_6ndd0ygoqmb6smslfoaj2ajfqb7j.jpg",
+				"path": "/images/items/01_1505/155_2424.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1505/"
 }

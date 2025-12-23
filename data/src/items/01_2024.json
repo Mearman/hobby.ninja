@@ -5,6 +5,50 @@
 		"ja": "HGBD 1/144 ガンダムシャイニングブレイク",
 		"en": "HGBD 1/144 Gundam Shining Break"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 15
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"外伝『ガンダムビルドダイバーズブレイク』に登場する主人公のガンプラを1／144スケールでキット化！",
@@ -28,63 +71,86 @@
 		],
 		"en": [
 			"The main character Gunpla that appears in the side story \"Gundam Build Divers Break\" is made into a kit in 1/144 scale!",
-			"• Appeared in the official side story \"Gundam Build Divers Break\" currently being serialized in Gundam Ace!",
-			"• A modified Gunpla of the main character arc based on Shining Gundam.",
+			"• Appears in the official side story \"Gundam Build Divers Break\" currently being serialized in Gundam Ace!",
+			"• Modified Gunpla of the main character arc based on Shining Gundam.",
 			"• Can transform from MS form to flight form."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ライフル(仮)×1",
-			"シールド（仮）×１",
-			"ビームサーベル×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ライフル(仮)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド（仮）×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 10
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2967_s_ila4ql3llwr18cz9yfrh2ev1l3qs.jpg",
+				"path": "/images/items/01_2024/153_2967.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2967_s_qsexhj0v509kqx6xl9c3embz326h.jpg",
+				"path": "/images/items/01_2024/155_2967.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2967_s_bab99iot1jpo4sbxvejtmr3nqw5t.jpg",
+				"path": "/images/items/01_2024/156_2967.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2967_s_0whb5rl61a4fhlwshrtee1cu0dlo.jpg",
+				"path": "/images/items/01_2024/157_2967.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2967_s_2achmrq403l6tn5jg7xyrtxok4dw.jpg",
+				"path": "/images/items/01_2024/158_2967.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2967_s_0uixqjyutbff33b4w908asb4nd0x.jpg",
+				"path": "/images/items/01_2024/159_2967.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2967_s_6n7u04dbdxqj0oedf5nmaxlewdwg.jpg",
+				"path": "/images/items/01_2024/189_2967.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2967_s_pzwn5aic0fg79b8bhihdici1rbsu.jpg",
+				"path": "/images/items/01_2024/190_2967.jpg"
+			}
 		],
-		"en": [
-			"Rifle (temporary) x 1",
-			"Seal de (temporary) x 1",
-			"Beam saber x2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×10",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 10",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2024/153_2967.jpg",
-		"/images/items/01_2024/155_2967.jpg",
-		"/images/items/01_2024/156_2967.jpg",
-		"/images/items/01_2024/157_2967.jpg",
-		"/images/items/01_2024/158_2967.jpg",
-		"/images/items/01_2024/159_2967.jpg",
-		"/images/items/01_2024/189_2967.jpg",
-		"/images/items/01_2024/190_2967.jpg",
-		"/images/items/01_2024/01_2024_inst_0.jpg",
-		"/images/items/01_2024/01_2024_inst_1.jpg",
-		"/images/items/01_2024/01_2024_inst_2.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2024/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "1042"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2024/"
 }

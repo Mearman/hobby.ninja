@@ -5,6 +5,55 @@
 		"ja": "HGCE 1/144 デスティニーガンダム(ハイネ専用機)",
 		"en": "HGCE 1/144 Destiny Gundam (Heine exclusive machine)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hgce",
+			"url": "https://bandai-hobby.net/brand/hgce/",
+			"ja": "HG COSMIC ERA"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000203308",
+			"url": "https://p-bandai.jp/item/item-1000203308/",
+			"ja": "ＨＧ 1/144 ダークダガーＬ"
+		},
+		{
+			"id": "01_5097",
+			"url": "https://bandai-hobby.net/item/01_5097/",
+			"ja": "HG 1/144 デストロイガンダム"
+		},
+		{
+			"id": "01_3739",
+			"url": "https://bandai-hobby.net/item/01_3739/",
+			"ja": "HG 1/144 デスティニーガンダム(ハイネ専用機)[クリアカラー]"
+		},
+		{
+			"id": "item-1000157417",
+			"url": "https://p-bandai.jp/item/item-1000157417/",
+			"ja": "ＨＧ 1/144 ウィンダム（ネオ・ロアノーク専用機）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -18,11 +67,10 @@
 		"day": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"[数量限定生産]",
-			"『機動戦士ガンダム SEED DESTINY』に登場したデスティニーガンダムのハイネ専用機がHGCEで立体化！",
+			"『機動戦士ガンダムSEED DESTINY』に登場したデスティニーガンダムのハイネ専用機がHGCEで立体化！",
 			"• ハイネ・ヴェステンフルスのパーソナルカラーをイメージ。",
 			"• 胴体に内蔵された二重関節により、特徴的な前屈アクションを再現できる。",
 			"• サイドアーマーは後方にスライドすることで脚部との干渉を避け、可動範囲を制限しない構造となっている。",
@@ -33,77 +81,128 @@
 		],
 		"en": [
 			"[Limited quantity production]",
-			"Destiny Gundam's Heine special machine that appeared in \"Mobile Suit Gundam SEED DESTINY\" is now three-dimensional with HGCE!",
-			"• Image of Heine Westenhuls's personal color.",
-			"• Double joints built into the torso allow you to reproduce the characteristic forward bending action.",
-			"• The side armor avoids interference with the legs by sliding backwards, and has a structure that does not limit the range of movement.",
-			"• The \"Wings of Light\", which is a symbol of Destiny Gundam, is included as a clear part.",
-			"• Hand parts include a gripping hand that can hold weapons and an open hand for \"Palma Fiocina\".",
+			"Destiny Gundam Heine's special machine that appeared in \"Mobile Suit Gundam SEED DESTINY\" is now three-dimensional with HGCE!",
+			"• Inspired by Heine Westenhuls's personal color.",
+			"• The double joints built into the torso allow you to reproduce the characteristic forward bending action.",
+			"• The side armor is structured so that it slides backwards to avoid interference with the legs and does not limit the range of movement.",
+			"• \"Wings of Light\", a symbol of Destiny Gundam, are included as clear parts.",
+			"• Hand parts include a grip that can hold weapons and an open hand for \"Palma Fiocina\".",
 			"• The beam effect of \"Palma Fiochina\" is reproduced with clear parts.",
-			"• A wealth of armaments are included, including the Aron Dite, high-energy long-range beam cannon, beam boomerang, and more!"
+			"• Comes with a wealth of armaments including Arondite, high-energy long-range beam cannon, beam boomerang, and more!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"アロンダイト ビームソード×1",
-			"高エネルギー長射程ビーム砲×1",
-			"ビームシールド×1",
-			"高エネルギービームライフル×1",
-			"ビームブーメラン×2",
-			"光の翼×1式",
-			"パルマフィオキーナエフェクトパーツ×1",
-			"パルマフィオキーナ用手×左右各1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "アロンダイト ビームソード"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "高エネルギー長射程ビーム砲"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームシールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "高エネルギービームライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームブーメラン"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "光の翼"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "パルマフィオキーナエフェクトパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "パルマフィオキーナ用手×左右各1"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成型品"
+			},
+			"count": 11
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3241_s_z0jd4h0948ax1chwv15782mrgnt0.jpg",
+				"path": "/images/items/01_2302/153_3241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3241_s_yeho5hakvxcdl9vz1zepcgcl4phz.jpg",
+				"path": "/images/items/01_2302/155_3241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3241_s_7rh9if7u9g4gfyotp4prmbpqzkl1.jpg",
+				"path": "/images/items/01_2302/156_3241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3241_s_avyuik7bmelwx8eb668fmi3u9nhk.jpg",
+				"path": "/images/items/01_2302/157_3241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3241_s_j6ya9pkvp5f9puq0zulo60yfgqh4.jpg",
+				"path": "/images/items/01_2302/158_3241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3241_s_5b5urscy8viby7e57g9htmcjwfpx.jpg",
+				"path": "/images/items/01_2302/159_3241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3241_s_yx4lrdz2meqftqbbixbiyg205eme.jpg",
+				"path": "/images/items/01_2302/189_3241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3241_s_c74cf8wdindvfuck3wo6j6xzufrt.jpg",
+				"path": "/images/items/01_2302/190_3241.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3241_s_fw9m61k6cwrikg5h77u0vtyqebp9.jpg",
+				"path": "/images/items/01_2302/191_3241.jpg"
+			}
 		],
-		"en": [
-			"Arondite beam sword x1",
-			"High energy long range beam cannon x 1",
-			"Beam Seal × 1",
-			"High energy beam rifle x1",
-			"Beam boomerang x2",
-			"Wings of light x 1 set",
-			"Palma fiocina effect parts x 1",
-			"Palma Fiochina hand x 1 each for left and right"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成型品×11",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded products x 11",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2302/153_3241.jpg",
-		"/images/items/01_2302/155_3241.jpg",
-		"/images/items/01_2302/156_3241.jpg",
-		"/images/items/01_2302/157_3241.jpg",
-		"/images/items/01_2302/158_3241.jpg",
-		"/images/items/01_2302/159_3241.jpg",
-		"/images/items/01_2302/189_3241.jpg",
-		"/images/items/01_2302/190_3241.jpg",
-		"/images/items/01_2302/191_3241.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2302/",
-	"brandIds": [
-		"hg",
-		"hgce"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
-	"manualId": "0495"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2302/"
 }

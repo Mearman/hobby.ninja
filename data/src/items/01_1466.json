@@ -2,9 +2,53 @@
 	"id": "01_1466",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 ガンダム RX－78",
-		"en": "HG 1/144 Gundam RX-78"
+		"ja": "HG 1/144 ガンダムRX－78",
+		"en": "HG 1/144 GundamRX-78"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -17,10 +61,9 @@
 		"month": 3
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム』より、1/144スケールで、HGシリーズガンダム RX-78が登場。",
+			"『機動戦士ガンダム』より、1/144スケールで、HGシリーズガンダムRX-78が登場。",
 			"コアファイターの変形・合体を再現しています。手首、足首、股関節にボールジョイントを採用しています。多色成形により、塗り分けなしで設定どおりの色が再現できます。武器はビーム・ライフル、ハイパー・バズーカ、シールドが付属しています。手首パーツは武器ごとに専用の握り手が付いています。"
 		],
 		"en": [
@@ -28,24 +71,18 @@
 			"Reproduces the transformation and combination of core fighters. Ball joints are used in the wrists, ankles, and hips. Multicolor molding allows you to reproduce the colors you set without having to paint separately. Weapons include a beam rifle, hyper bazooka, and a seal. The wrist parts have their own grips for each weapon."
 		]
 	},
-	"images": [
-		"/images/items/01_1466/153_2389.jpg",
-		"/images/items/01_1466/155_2389.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1466/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2389_s_mf2rqls11i5sxgmlkfwb2dvqxms3.jpg",
+				"path": "/images/items/01_1466/153_2389.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2389_s_xnwcmne3rtauvwc8kh6eaazpkgqz.jpg",
+				"path": "/images/items/01_1466/155_2389.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1466/"
 }

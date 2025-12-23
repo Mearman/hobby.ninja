@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "BB戦士 332上杉謙信頑駄無",
-		"en": "BB Senshi 332 Uesugi Kenshin Gundam u"
+		"en": "BB Senshi 332 Uesugi Kenshin Gundamu"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -23,25 +60,21 @@
 			"「SD戦国伝 武神降臨編」より越後の龍“上杉謙信頑駄無”が登場 謙信をイメージした銀の鎧と兜飾りを再現 付属の騎馬と人馬形態に合体可能 剣、弓矢のほか、足軽兵が付属"
 		],
 		"en": [
-			"Echigo's dragon \"Uesugi Kenshin Gundam u \" appears from \" SD Sengokuden: Advent of the God of War\" Reproduces the silver armor and helmet decoration inspired by Kenshin Can be combined with the included horse and horse form In addition to the sword, bow and arrow, foot soldiers are included"
+			"Echigo's dragon \"Uesugi Kenshin Gundamu\" appears from \"SD Sengokuden: Advent of the God of War\" Reproduces the silver armor and helmet decoration inspired by Kenshin Can be combined with the included horse and horse form In addition to the sword, bow and arrow, foot soldiers are included"
 		]
 	},
-	"images": [
-		"/images/items/01_1460/153_2383.jpg",
-		"/images/items/01_1460/155_2383.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1460/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2383_s_1nff1fgwihgfoikwixoqq86suakl.jpg",
+				"path": "/images/items/01_1460/153_2383.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2383_s_r8dnadekqp22bpvvgl827k0l5e3b.jpg",
+				"path": "/images/items/01_1460/155_2383.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1460/"
 }

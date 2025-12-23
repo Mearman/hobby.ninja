@@ -5,6 +5,40 @@
 		"ja": "RE/100 1/100 ビギナ・ギナII",
 		"en": "RE/100 1/100 Begina Gina II"
 	},
+	"brands": [
+		{
+			"id": "re100",
+			"url": "https://bandai-hobby.net/brand/re100/",
+			"ja": "RE/100[リボーンワンハンドレッド]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundamf91",
+			"url": "https://bandai-hobby.net/series/gundamf91/",
+			"ja": "機動戦士ガンダムF91"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3484",
+			"url": "https://bandai-hobby.net/item/01_3484/",
+			"ja": "ＲＥ/100 1/100 ビギナ・ギナ ［エクストラフィニッシュ］"
+		},
+		{
+			"id": "01_1354",
+			"url": "https://bandai-hobby.net/item/01_1354/",
+			"ja": "RE/100 1/100 ビギナ・ギナ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4070,
 		"currency": "JPY",
@@ -18,7 +52,6 @@
 		"day": 31
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム F91』のモビルスーツバリエーション「F91-MSV」よりビギナ・ギナIIが立体化！",
@@ -26,65 +59,112 @@
 			"• ショット・ランサーやビーム・シールドなどの武装が付属。"
 		],
 		"en": [
-			"Begina Gina II from the mobile suit variation \"F91-MSV \" of \" Mobile Suit Gundam F91\" is now three-dimensional!",
+			"Begina Gina II from the mobile suit variation \"F91-MSV\" of \"Mobile Suit Gundam F91\" is now three-dimensional!",
 			"• The shapes of the Gundam type head and flexible wing nozzle are newly designed based on the setting.",
-			"• Weapons such as shot lancer and beam seal are included."
+			"• Comes with weapons such as shot lancer and beam seal."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・サーベル×2",
-			"ショット・ランサー×1",
-			"ビーム・シールド×1",
-			"銃持ち手(右)×1",
-			"平手(左右)×各1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ショット・ランサー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "銃持ち手(右)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "平手(左右)×各1"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 15
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3197_s_c1mdrna0i7qm9aollxexy89aei9n.jpg",
+				"path": "/images/items/01_2252/153_3197.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3197_s_84imb8jfs0b2mgvlebzahqf5fapj.jpg",
+				"path": "/images/items/01_2252/155_3197.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3197_s_9ogoiqymlgk9bq5huyompfekjn7x.jpg",
+				"path": "/images/items/01_2252/156_3197.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3197_s_g2fw0cc74opt900y15vceg7fook6.jpg",
+				"path": "/images/items/01_2252/157_3197.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3197_s_gbn1cuz9yx4ffm3kgfdor68co7hy.jpg",
+				"path": "/images/items/01_2252/158_3197.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3197_s_5gx7ky7t3jsimtef1em2hegl99hy.jpg",
+				"path": "/images/items/01_2252/159_3197.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3197_s_c7numvwrlll7pk9refniov5luo2z.jpg",
+				"path": "/images/items/01_2252/189_3197.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3197_s_4t0mq6iisqikbwfytl7g95ubbqtb.jpg",
+				"path": "/images/items/01_2252/190_3197.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3197_s_lfexxbb42fwxd61u6yriohwr2azd.jpg",
+				"path": "/images/items/01_2252/191_3197.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3197_s_iejeuarwf9lpyao1th38cix2orwg.jpg",
+				"path": "/images/items/01_2252/192_3197.jpg"
+			}
 		],
-		"en": [
-			"Beam saber x2",
-			"Shot Lancer x1",
-			"Beam Seal×1",
-			"Gun handle (right) x 1",
-			"Hirate (left and right) x 1 each"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×15",
-			"シール×1",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 15",
-			"Seal×1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2252/153_3197.jpg",
-		"/images/items/01_2252/155_3197.jpg",
-		"/images/items/01_2252/156_3197.jpg",
-		"/images/items/01_2252/157_3197.jpg",
-		"/images/items/01_2252/158_3197.jpg",
-		"/images/items/01_2252/159_3197.jpg",
-		"/images/items/01_2252/189_3197.jpg",
-		"/images/items/01_2252/190_3197.jpg",
-		"/images/items/01_2252/191_3197.jpg",
-		"/images/items/01_2252/192_3197.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2252/",
-	"brandIds": [
-		"re100"
-	],
-	"seriesIds": [
-		"gundamf91"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3484",
-		"01_1354"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2252/"
 }

@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 指揮官機用オプションアーマー[シエルノヴァ用/ホワイト]",
-		"en": "30MM 1/144 Optional armor for commander aircraft [for Cielnova/White]"
+		"en": "30MM 1/144 OPTION ARMOR FOR COMMANDER [CIELNOVA EXCLUSIVE/ WHITE]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS",
+			"en": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMのオプションアーマーシリーズに新規金型のシエルノヴァ用アーマーが登場！",
@@ -27,40 +70,52 @@
 			"• 脚部延長パーツが付属。シエルノヴァのスタイルチェンジが可能！"
 		],
 		"en": [
-			"A new molded armor for Ciel Nova is now available in the 30MM optional armor series!",
-			"• Color is white.",
+			"A new mold of Ciel Nova armor is now available in the 30MM optional armor series!",
+			"• The color is white.",
 			"• Chest armor can also be customized to Portanova.",
-			"• Includes leg extension parts. Cielnova's style can be changed!"
+			"• Leg extension parts are included. Ciernova's style can be changed!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"アーマー×1式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "アーマー",
+				"en": "• Armor"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "set"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153941_1.jpg",
+				"path": "/images/items/01_3297/1000153941_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153941_2.jpg",
+				"path": "/images/items/01_3297/1000153941_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153941_3.jpg",
+				"path": "/images/items/01_3297/1000153941_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153941_4.jpg",
+				"path": "/images/items/01_3297/1000153941_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153941_5.jpg",
+				"path": "/images/items/01_3297/1000153941_5.jpg"
+			}
 		],
-		"en": [
-			"Armor x 1 set"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3297/1000153941_1.jpg",
-		"/images/items/01_3297/1000153941_2.jpg",
-		"/images/items/01_3297/1000153941_3.jpg",
-		"/images/items/01_3297/1000153941_4.jpg",
-		"/images/items/01_3297/1000153941_5.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3297/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3709"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_3297/"
+	}
 }

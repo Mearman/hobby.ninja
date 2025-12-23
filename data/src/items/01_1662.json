@@ -5,6 +5,49 @@
 		"ja": "BB戦士296 ブレイズザクウォーリア",
 		"en": "BB Senshi 296 Blaze Zaku Warrior"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		},
+		{
+			"id": "01_5365",
+			"url": "https://bandai-hobby.net/item/01_5365/",
+			"ja": "BB戦士 C.E.運命の対決セット"
+		},
+		{
+			"id": "01_4648",
+			"url": "https://bandai-hobby.net/item/01_4648/",
+			"ja": "BB戦士 ストライクフリーダムガンダムVSデスティニーガンダム"
+		},
+		{
+			"id": "01_5402",
+			"url": "https://bandai-hobby.net/item/01_5402/",
+			"ja": "BB戦士288 ストライクフリーダムガンダム"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -25,26 +68,26 @@
 			"“Blaze Zaku Warrior”, which Athrun piloted during the Junius Seven destruction work, has been transformed into a BB Senshi! The axis added to the shoulder allows you to reproduce the Zaku's unique shoulder protrusion.The Blaze Wizard is removable, and the missile hatch can be opened and closed."
 		]
 	},
-	"images": [
-		"/images/items/01_1662/153_2570.jpg",
-		"/images/items/01_1662/155_2570.jpg",
-		"/images/items/01_1662/156_2570.jpg",
-		"/images/items/01_1662/157_2570.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1662/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5378",
-		"01_5365",
-		"01_4648",
-		"01_5402"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2570_s_wggctieflsz0adcl9d8pbnuctwcs.jpg",
+				"path": "/images/items/01_1662/153_2570.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2570_s_rkq4sdedq5pebym1gxwbvg09icf1.jpg",
+				"path": "/images/items/01_1662/155_2570.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2570_s_cy43952137lw9br3ar9utk7jidrq.jpg",
+				"path": "/images/items/01_1662/156_2570.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2570_s_im2rdcqenjiolidmd5f2vczl14yz.jpg",
+				"path": "/images/items/01_1662/157_2570.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1662/"
 }

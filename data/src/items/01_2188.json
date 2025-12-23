@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ゼータガンダム[クリアカラー]",
-		"en": "HG 1/144 Zeta Gundam [Clear color]"
+		"en": "HG 1/144 ZETA GUNDAM [CLEAR COLOR]"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム",
+			"en": "MOBILE SUIT Z GUNDAM"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -17,34 +50,26 @@
 		"month": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
 			"HG ゼータガンダムがイベント限定のクリアカラーで登場！"
 		],
 		"en": [
-			"Event-limited Gunpla sold at various event venues.",
-			"HG Zeta Gundam is now available in event-limited clear color!"
+			"It is an event-limited GUNPLA that will be sold at various event venues. HG Zeta GUNDAM is now available in event-only clear colors!"
 		]
 	},
-	"images": [
-		"/images/items/01_2188/153_3135.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3135_o_1d2a0mbde15mo1j4b5ukev0bno23.jpg",
+				"path": "/images/items/01_2188/153_3135.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2188/",
-	"brandIds": [],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2188/"
 	}
 }

@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 バルバトス 第6形態 クリアカラーVer.",
 		"en": "HG 1/144 Barbatos 6th Form Clear Color Ver."
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6773",
+			"url": "https://bandai-hobby.net/item/01_6773/",
+			"ja": "HG 1/144 ガンダムザガン"
+		},
+		{
+			"id": "01_6763",
+			"url": "https://bandai-hobby.net/item/01_6763/",
+			"ja": "HG 1/144 モンキーロディ(598機)/モンキークラブロディ"
+		},
+		{
+			"id": "01_4103",
+			"url": "https://bandai-hobby.net/item/01_4103/",
+			"ja": "HG 1/144 ジークルーネ"
+		},
+		{
+			"id": "01_4240",
+			"url": "https://bandai-hobby.net/item/01_4240/",
+			"ja": "HG 1/144 ガンダム端白星[クリアカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -17,39 +61,22 @@
 		"month": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
-			"HG バルバトス 第6形態のイベント限定、クリアカラーVer.です。"
+			"各種イベント会場等で販売を行う、イベント限定ガンプラです。HG バルバトス 第6形態のイベント限定、クリアカラーVer.です。"
 		],
 		"en": [
-			"Event-limited Gunpla sold at various event venues.",
-			"HG Barbatos 6th form event limited, clear color Ver."
+			"Event-limited Gunpla sold at various event venues. HG Barbatos 6th form event limited, clear color Ver."
 		]
 	},
-	"images": [
-		"/images/items/01_1904/153_2839.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1904/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"tekketsu"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4103",
-		"01_4240",
-		"01_4188",
-		"01_4094"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2839_s_p0qolqpkdotfiei46of1jpgyf60s.jpg",
+				"path": "/images/items/01_1904/153_2839.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "0758"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1904/"
 }

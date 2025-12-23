@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "ガンダムデカールNo.51 MG 1/100 真武者頑駄無用",
-		"en": "Gundam Decal No.51 MG 1/100 Shinmusha Gundam uyo"
+		"en": "Gundam Decal No.51 MG 1/100 Shinmusha Gundamuyo"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		},
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5987",
+			"url": "https://bandai-hobby.net/item/01_5987/",
+			"ja": "ガンダムデカールNo.139 機動戦士Gundam GQuuuuuuX汎用1"
+		},
+		{
+			"id": "01_5988",
+			"url": "https://bandai-hobby.net/item/01_5988/",
+			"ja": "ガンダムデカールNo.140 機動戦士Gundam GQuuuuuuX汎用2"
+		},
+		{
+			"id": "01_5969",
+			"url": "https://bandai-hobby.net/item/01_5969/",
+			"ja": "ガンダムデカールNo.141 機動戦士ガンダムSEED FREEDOM汎用①"
+		},
+		{
+			"id": "01_5970",
+			"url": "https://bandai-hobby.net/item/01_5970/",
+			"ja": "ガンダムデカールNo.142 機動戦士ガンダムSEED FREEDOM汎用②"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"100点以上のラインナップを誇る、大人気ガンダムデカールのシリーズ商品が登場。",
@@ -27,26 +69,18 @@
 		],
 		"en": [
 			"Introducing the popular Gundam decal series, which boasts a lineup of over 100 items.",
-			"MG 1/100 Shinmusha Gundam uyo decal.",
+			"MG 1/100 Shinmusha Gundamuyo decal.",
 			"water transfer decal"
 		]
 	},
-	"images": [
-		"/images/items/01_1860/153_2795.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1860/",
-	"brandIds": [
-		"mg",
-		"gundam_decal"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5987",
-		"01_5988",
-		"01_5969",
-		"01_5970"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2795_s_b2cbsty3v5ji753xp2ta8pr3y7j0.jpg",
+				"path": "/images/items/01_1860/153_2795.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1860/"
 }

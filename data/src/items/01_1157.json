@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ジム・スナイパー カスタム",
 		"en": "MG 1/100 Jim Sniper Custom"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 11
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"• 「機動戦士ガンダム MSV」より、ジム・スナイパーカスタムが1/100スケールとして初の立体化！",
@@ -29,73 +72,116 @@
 		],
 		"en": [
 			"• From \"Mobile Suit Gundam MSV\", Jim Sniper Custom is made into 1/100 Scale for the first time!",
-			"• While following the image of the setting, it has the sharp style of the latest MG format, and the distinctive head of the new model is equipped with a visor opening/closing gimmick for use during melee battles!",
-			"• Impressive sniping poses can be recreated with a wide range of movable mechanisms such as the arms and chest!",
+			"• While following the image of the setting, it has the sharp style of the latest MG format, and the distinctive head of the new model is equipped with a visor opening and closing gimmick for use during melee battles!",
+			"• Impressive sniper poses can be recreated with a wide range of movable mechanisms such as the arms and chest!",
 			"• The main weapon \"R4 type beam rifle\" has a new design to match the MG version, and the folding mechanism allows it to be carried while being carried!",
-			"• Various weapons such as the \"folding handgun\" on the right arm are also included!"
+			"• Various weapons are also included, including a \"folding handgun\" for the right arm!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"R4型ビーム・ライフル×１",
-			"二連ビームガン×１",
-			"ハイパー・バズーカ×１",
-			"ビーム・スプレーガン×1",
-			"ビーム・サーベル×１",
-			"折り畳み式ハンドガン×１",
-			"シールド×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "R4型ビーム・ライフル×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "二連ビームガン×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハイパー・バズーカ×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・スプレーガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "折り畳み式ハンドガン×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド×１"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 16
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ドライデカール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2088_s_bj35utu5sts8lh54x6rc82oo77ng.jpg",
+				"path": "/images/items/01_1157/153_2088.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2088_s_fas779mlx1i5k8h2idewe1h1acyw.jpg",
+				"path": "/images/items/01_1157/155_2088.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2088_s_lndnc7sze7g329rzhhlkgrc8q1j1.jpg",
+				"path": "/images/items/01_1157/156_2088.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2088_s_kdwt4oihiqfvrl808k8u780xt8wv.jpg",
+				"path": "/images/items/01_1157/157_2088.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2088_s_dltu9adqfn7phixyangnv6k9bxsb.jpg",
+				"path": "/images/items/01_1157/158_2088.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2088_s_0vq9ctyk8jsnzt9l9skidrvpxjto.jpg",
+				"path": "/images/items/01_1157/159_2088.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2088_s_8oonvqsgya0gascer9pi94tc5fsc.jpg",
+				"path": "/images/items/01_1157/189_2088.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2088_s_xxkjhj63sz30b7vzvze6fofrfn49.jpg",
+				"path": "/images/items/01_1157/190_2088.jpg"
+			}
 		],
-		"en": [
-			"R4 type beam rifle x 1",
-			"Double beam gun x 1",
-			"Hyper bazooka x1",
-			"Beam spray gun x 1",
-			"Beam saber x1",
-			"Foldable hand gun x 1",
-			"Seal de x1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×16",
-			"シール×1",
-			"ドライデカール×１",
-			"マーキングシール×１",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 16",
-			"Seal×1",
-			"Dry decal x 1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1157/153_2088.jpg",
-		"/images/items/01_1157/155_2088.jpg",
-		"/images/items/01_1157/156_2088.jpg",
-		"/images/items/01_1157/157_2088.jpg",
-		"/images/items/01_1157/158_2088.jpg",
-		"/images/items/01_1157/159_2088.jpg",
-		"/images/items/01_1157/189_2088.jpg",
-		"/images/items/01_1157/190_2088.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1157/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
-	"manualId": "0858"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1157/"
 }

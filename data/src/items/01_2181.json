@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 グレンダイザー(INFINITISM)",
 		"en": "HG 1/144 Grendizer (INFINITISM)"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dynamic_characters",
+			"url": "https://bandai-hobby.net/series/dynamic_characters/",
+			"ja": "ダイナミックキャラクターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4234",
+			"url": "https://bandai-hobby.net/item/01_4234/",
+			"ja": "HG 1/144 マジンガーZERO(INFINITISM)"
+		},
+		{
+			"id": "01_3528",
+			"url": "https://bandai-hobby.net/item/01_3528/",
+			"ja": "HG ゲッターアーク"
+		},
+		{
+			"id": "01_3332",
+			"url": "https://bandai-hobby.net/item/01_3332/",
+			"ja": "HG 1/144 鋼鉄ジーグ(INFINITISM)"
+		},
+		{
+			"id": "01_2853",
+			"url": "https://bandai-hobby.net/item/01_2853/",
+			"ja": "HG 1/144 ゲッタードラゴン(INFINITISM）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 5280,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"HGマジンガーZ（INFINITY Ver.）とHGグレートマジンガー(INFINITY Ver.）の制作ノウハウを注ぎ込んだ「HG グレンダイザー（INFINITISM）」が登場！",
@@ -30,73 +73,109 @@
 			"• クリアパーツの裏側にも加工を施し、精密感を演出。",
 			"• 主要武装の他に、ハンドパーツ左右×２種、ダブルスペイザーが付属。",
 			"• 付属のダブルスペイザーと合体、更に台座と組み合わせて飛行状態を再現できる。首周りの広い可動域により自然な飛行ポーズが可能。"
-		],
-		"en": [
-			"\"HG Grendizer (INFINITISM)\", which incorporates the production know-how of HG Mazinger Z (INFINITY Ver.) and HG Great Mazinger (INFINITY Ver.), is now available!",
-			"• The design drawn by mechanical designer Noriyuki Yanase of ``Mazinger Z/INFINITY the Movie'' is now three-dimensional with a completely new model.",
-			"• The head is divided into detailed parts to reproduce the color coding.",
-			"• Equipped with joint parts made of KPS material to realize powerful action scenes.",
-			"• The arm can be bent naturally by moving the armored parts.",
-			"• It is also possible to reproduce the single Harken form by removing the included Double Harken.",
-			"• The back side of the clear parts is also processed to create a sense of precision.",
-			"• In addition to the main weapons, 2 types of hand parts, left and right, and a double spacer are included.",
-			"• It can be combined with the included double spacer and further combined with the pedestal to recreate the flight state. The wide range of motion around the neck allows for natural flying poses."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ダブルハーケン×1式",
-			"両腕クラッシャー×1",
-			"ダブルスペイザー×1",
-			"ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ダブルハーケン"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "両腕クラッシャー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ダブルスペイザー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成型品"
+			},
+			"count": 21
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134947_1.jpg",
+				"path": "/images/items/01_2181/1000134947_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134947_2.jpg",
+				"path": "/images/items/01_2181/1000134947_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134947_3.jpg",
+				"path": "/images/items/01_2181/1000134947_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134947_4.jpg",
+				"path": "/images/items/01_2181/1000134947_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134947_5.jpg",
+				"path": "/images/items/01_2181/1000134947_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134947_6.jpg",
+				"path": "/images/items/01_2181/1000134947_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134947_7.jpg",
+				"path": "/images/items/01_2181/1000134947_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134947_8.jpg",
+				"path": "/images/items/01_2181/1000134947_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134947_9.jpg",
+				"path": "/images/items/01_2181/1000134947_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134947_10.jpg",
+				"path": "/images/items/01_2181/1000134947_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134947_11.jpg",
+				"path": "/images/items/01_2181/1000134947_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134947_12.jpg",
+				"path": "/images/items/01_2181/1000134947_12.jpg"
+			}
 		],
-		"en": [
-			"Double Harken x 1 type",
-			"Both arm crusher x 1",
-			"Double spacer x 1",
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成型品×21",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 21",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2181/1000134947_1.jpg",
-		"/images/items/01_2181/1000134947_10.jpg",
-		"/images/items/01_2181/1000134947_11.jpg",
-		"/images/items/01_2181/1000134947_12.jpg",
-		"/images/items/01_2181/1000134947_2.jpg",
-		"/images/items/01_2181/1000134947_3.jpg",
-		"/images/items/01_2181/1000134947_4.jpg",
-		"/images/items/01_2181/1000134947_5.jpg",
-		"/images/items/01_2181/1000134947_6.jpg",
-		"/images/items/01_2181/1000134947_7.jpg",
-		"/images/items/01_2181/1000134947_8.jpg",
-		"/images/items/01_2181/1000134947_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2181/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"dynamic_characters"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4234",
-		"01_3528",
-		"01_3332",
-		"01_2853"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2181/"
 }

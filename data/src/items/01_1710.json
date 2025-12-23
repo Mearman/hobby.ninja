@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 MS-06F-2 ザクII F2型",
 		"en": "MG 1/100 MS-06F-2 Zaku II F2 type"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "g-0083",
+			"url": "https://bandai-hobby.net/series/g-0083/",
+			"ja": "機動戦士ガンダム0083 STARDUST MEMORY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000127907",
+			"url": "http://p-bandai.jp/item/item-1000127907",
+			"ja": "ＭＧ 1/100 MS-06F-2 ザクＩＩ Ｆ２型（ノイエン・ビッター機）"
+		},
+		{
+			"id": "item-1000127908",
+			"url": "http://p-bandai.jp/item/item-1000127908",
+			"ja": "ＭＧ 1/100 MS-06F-2 ザクＩＩ Ｆ２型（キンバライト基地仕様）"
+		},
+		{
+			"id": "item-1000124942",
+			"url": "http://p-bandai.jp/item/item-1000124942",
+			"ja": "ＭＧ 1/100 アナベル・ガトー専用ゲルググ Ver.2.0"
+		},
+		{
+			"id": "item-1000105596",
+			"url": "https://p-bandai.jp/item/item-1000105596",
+			"ja": "ＭＧ 1/100 パワード・ジム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,36 +61,34 @@
 		"month": 4
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"ＯＶＡ「機動戦士ガンダム００８３」に登場する「ザクＦ２　ジオン型」がマスターグレードで登場。各部関節の可動により、様々なポーズが可能です。また、コクピットハッチも開閉できます。マシンガン・バズーカ・シュツルムファウスト・ロケットブースター等の武器が付属します。"
 		],
 		"en": [
-			"The \"Zaku F2 Zeon type \" that appears in the OVA \" Mobile Suit Gundam 0083\" is now available in master grade. Various poses are possible by moving each joint. The cockpit hatch can also be opened and closed. Weapons such as a machine gun, bazooka, Sturmfaust, and rocket booster are included."
+			"The \"Zaku F2 Zeon type\" that appears in the OVA \"Mobile Suit Gundam 0083\" is now available in master grade. Various poses are possible by moving each joint. The cockpit hatch can also be opened and closed. Weapons such as a machine gun, bazooka, Sturmfaust, and rocket booster are included."
 		]
 	},
-	"images": [
-		"/images/items/01_1710/153_261.jpg",
-		"/images/items/01_1710/155_261.jpg",
-		"/images/items/01_1710/156_261.jpg",
-		"/images/items/01_1710/157_261.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1710/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"g-0083"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000127907",
-		"item-1000127908",
-		"item-1000124942",
-		"item-1000105596"
-	],
-	"manualId": "0515"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_261_s_7xsk5h3rr539e6z4vq8utvzc2c3z.jpg",
+				"path": "/images/items/01_1710/153_261.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_261_s_3s8gfilrq7awjni1kxn58c35y710.jpg",
+				"path": "/images/items/01_1710/155_261.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_261_s_djco4eewp17b1eetfkygj992zcfy.jpg",
+				"path": "/images/items/01_1710/156_261.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_261_s_3bre7kfbm1bhizlqs3jhou4pmjo4.jpg",
+				"path": "/images/items/01_1710/157_261.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1710/"
 }

@@ -5,6 +5,49 @@
 		"ja": "メカコレクション 地球連邦アンドロメダ級セット",
 		"en": "Mecha Collection Earth Federation Andromeda Class Set"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "yamato",
+			"url": "https://bandai-hobby.net/series/yamato/",
+			"ja": "宇宙戦艦ヤマトシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5498",
+			"url": "https://bandai-hobby.net/item/01_5498/",
+			"ja": "メカコレクションDX 1式空間戦闘攻撃機 コスモタイガーII(単座型/銃座型) [2機セット]"
+		},
+		{
+			"id": "01_5500",
+			"url": "https://bandai-hobby.net/item/01_5500/",
+			"ja": "メカコレクションDX 試製空間戦闘攻撃機 コスモパイソン [2機セット]"
+		},
+		{
+			"id": "01_3667",
+			"url": "https://bandai-hobby.net/item/01_3667/",
+			"ja": "メカコレクション ガイペロン級多層式航宙母艦 バルメス(外洋機動艦隊仕様)"
+		},
+		{
+			"id": "01_3650",
+			"url": "https://bandai-hobby.net/item/01_3650/",
+			"ja": "メカコレクション デウスーラIII世"
+		}
+	],
 	"price": {
 		"amount": 4070,
 		"currency": "JPY",
@@ -26,55 +69,76 @@
 		],
 		"en": [
 			"A set of five Andromeda-class ships from \"Space Battleship Yamato 2202\"!",
-			"• Includes water slide decals that allow you to reproduce various variations of battleships!",
+			"• Includes water slide decals that allow you to recreate various variations of battleships!",
 			"• A collection stage inspired by outer space is also included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"コレクションステージ×1",
-			"ディスプレイベース×5"
+	"accessories": [
+		{
+			"name": {
+				"ja": "コレクションステージ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 5
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 12
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2963_s_g1q17kt6mbw2pbm0ke77r3orwc0d.jpg",
+				"path": "/images/items/01_2020/153_2963.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2963_s_xmhyjihszsiyp48a1ew45r1d5gtr.jpg",
+				"path": "/images/items/01_2020/155_2963.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2963_s_4p7dd3j8bcnqsaaquweomrn7ouc6.jpg",
+				"path": "/images/items/01_2020/156_2963.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2963_s_35nle7kbdcygpkl30h8q9smw4fgs.jpg",
+				"path": "/images/items/01_2020/157_2963.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2963_s_5o5rghr1oxrax7azr9jrgoonq7ei.jpg",
+				"path": "/images/items/01_2020/158_2963.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2963_s_dneefv3jct5810ael09u8m0xes9q.jpg",
+				"path": "/images/items/01_2020/159_2963.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2963_s_q42c5gcl1t0ydc54lt0my0ossm92.jpg",
+				"path": "/images/items/01_2020/189_2963.jpg"
+			}
 		],
-		"en": [
-			"Collection stage x1",
-			"Display base x 5"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×12",
-			"水転写式デカール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 12",
-			"Water transfer decal x 1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2020/153_2963.jpg",
-		"/images/items/01_2020/155_2963.jpg",
-		"/images/items/01_2020/156_2963.jpg",
-		"/images/items/01_2020/157_2963.jpg",
-		"/images/items/01_2020/158_2963.jpg",
-		"/images/items/01_2020/159_2963.jpg",
-		"/images/items/01_2020/189_2963.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2020/",
-	"brandIds": [
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"yamato"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5498",
-		"01_5500",
-		"01_3667",
-		"01_3650"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2020/"
 }

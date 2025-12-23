@@ -3,8 +3,59 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC 1/144 ギラ・ドーガ",
-		"en": "HGUC 1/144 Gira Doga"
+		"en": "1/144 HGUC GEARA DOGA"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア",
+			"en": "MOBILE SUIT GUNDAM Char’s Counterattack"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5346",
+			"url": "https://bandai-hobby.net/item/01_5346/",
+			"ja": "HG 1/144 ジムIII(アクシズ・ショックイメージカラー)"
+		},
+		{
+			"id": "01_5210",
+			"url": "https://bandai-hobby.net/item/01_5210/",
+			"ja": "HG 1/144 ギラ・ドーガ(アクシズ・ショックイメージカラー)"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4408",
+			"url": "https://bandai-hobby.net/item/01_4408/",
+			"ja": "HG 1/144 サイコ・ドーガ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -18,39 +69,45 @@
 		"day": 15
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"映画「機動戦士ガンダム 逆襲のシャア」よりザクの系譜を受け継ぐ量産型MS“ギラ・ドーガ”がHGUCに待望のラインナップ 大型MSの巨躯を支えつつ、あらゆるポージングを可能にする新型ポリキャップを採用 ビーム・マシンガン、2種類のビーム形状クリアパーツが付属するビーム・アックス、ピック、シュツルムファウスト×4、中折れ機構を再現したシールドなど、特徴である豊富な武器が付属 頭部は一般機、指揮官機の選択式"
 		],
 		"en": [
-			"HGUC's long-awaited lineup of the mass-produced MS \"Gira Doga \", which inherits the lineage of the Zaku from the movie \" Mobile Suit Gundam: Char's Counterattack\" Adopts a new polycap that supports the bulk of the large MS and allows various poses Comes with a variety of distinctive weapons such as a beam machine gun, a beam ax with two types of beam-shaped clear parts, a pick, Sturmfaust x 4, and a Seal that reproduces the center-folding mechanism The head can be selected from a general aircraft or a commander aircraft."
+			"The long-awaited lineup of the mass-produced MS \"Gila Doga\", which inherits the lineage of Zaku from the movie \"MOBILE SUIT GUNDAM Char’s Counterattack\", is the long-awaited lineup for HGUC Adopts a new poly cap that supports the huge body of a large MS and enables all kinds of poses. Beam Machine Gun, Beam Axe with 2 types of beam-shaped clear parts, Pick, Sturmfaust ×4, Comes with a wide variety of weapons, such as a shield that reproduces the middle folding mechanism The head is a choice of general machine and commander machine"
 		]
 	},
-	"images": [
-		"/images/items/01_1809/1000125976_1.jpg",
-		"/images/items/01_1809/1000125976_2.jpg",
-		"/images/items/01_1809/1000125976_3.jpg",
-		"/images/items/01_1809/1000125976_4.jpg",
-		"/images/items/01_1809/1000125976_5.jpg",
-		"/images/items/01_1809/1000125976_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125976_1.jpg",
+				"path": "/images/items/01_1809/1000125976_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125976_2.jpg",
+				"path": "/images/items/01_1809/1000125976_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125976_3.jpg",
+				"path": "/images/items/01_1809/1000125976_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125976_4.jpg",
+				"path": "/images/items/01_1809/1000125976_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125976_5.jpg",
+				"path": "/images/items/01_1809/1000125976_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125976_6.jpg",
+				"path": "/images/items/01_1809/1000125976_6.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1809/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5346",
-		"01_5210",
-		"01_4971",
-		"01_4408"
-	],
-	"manualId": "0909"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1809/"
+	}
 }

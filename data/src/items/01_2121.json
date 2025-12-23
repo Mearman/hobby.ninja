@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard 仮面ライダージオウ",
 		"en": "Figure-rise Standard Kamen Rider Zi-O"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "rider",
+			"url": "https://bandai-hobby.net/series/rider/",
+			"ja": "仮面ライダーシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5451",
+			"url": "https://bandai-hobby.net/item/01_5451/",
+			"ja": "Figure-rise Standard 仮面ライダーゼロワン ライジングホッパー"
+		},
+		{
+			"id": "item-1000215369",
+			"url": "https://p-bandai.jp/item/item-1000215369/",
+			"ja": "Figure-rise Standard 仮面ライダーファイズ ブラスターフォーム"
+		},
+		{
+			"id": "01_5276",
+			"url": "https://bandai-hobby.net/item/01_5276/",
+			"ja": "Figure-rise Standard 仮面ライダークウガ アルティメットフォーム"
+		},
+		{
+			"id": "01_5175",
+			"url": "https://bandai-hobby.net/item/01_5175/",
+			"ja": "Figure-rise Standard 仮面ライダーキバ キバフォーム"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -31,71 +74,113 @@
 		],
 		"en": [
 			"\"Kamen Rider Zi-O\", the 20th work in the Heisei Kamen Rider series, is now available in the Figure-rise Standard lineup!",
-			"• Thorough part division reproduces complex color coding. Each part has a different texture, such as silver-plated parts and clear parts.",
+			"• Reproduce complex color coding through thorough part division. Each part has a different texture, such as silver-plated parts and clear parts.",
 			"• The distinctive head uses silver plated parts to reproduce the texture of the mask.",
 			"• Plated parts are also used for the silver parts of the fuselage. Zi-O's unique proportions, including his characteristic protruding chest, have been thoroughly recreated.",
-			"• Joint structure ensures a range of motion that allows rider kicks.",
-			"• The Jiku driver can be rotated.",
-			"• Jikangirade can reproduce Zyu mode and Ken mode by replacing parts.",
+			"• Joint structure that ensures a range of motion that allows for rider kicks.",
+			"• Jiku driver can be rotated.",
+			"• Jikangilade can reproduce Zyu mode and Ken mode by replacing parts.",
 			"• Comes with a right-hand handle."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ジカンギレード×1",
-			"握り手×左右各1",
-			"平手×左右各1",
-			"武器持ち手(右)×1",
-			"決めポーズ用手(左)×1",
-			"ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ジカンギレード"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "握り手×左右各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "平手×左右各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "武器持ち手(右)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "決めポーズ用手(左)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成型品"
+			},
+			"count": 11
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ネーマーシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3075_s_jrcysqg2ojplsrnq2vm86nz77gq2.jpg",
+				"path": "/images/items/01_2121/153_3075.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3075_s_e0knc3fjw33vqqdghxooehs8k7ky.jpg",
+				"path": "/images/items/01_2121/155_3075.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3075_s_mdsoksohmfvrqxhv7wehae5hpc0d.jpg",
+				"path": "/images/items/01_2121/156_3075.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3075_s_g7uc7ruxbd9sen1mnq0hbx04yqmj.jpg",
+				"path": "/images/items/01_2121/157_3075.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3075_s_caa5a572jpblw2ty1tjukyxq38e8.jpg",
+				"path": "/images/items/01_2121/158_3075.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3075_s_ddb8cfnqltn08asqcwdde9s3jgun.jpg",
+				"path": "/images/items/01_2121/159_3075.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3075_o_1d8o5452d9431f54ov811iaifn23.jpg",
+				"path": "/images/items/01_2121/189_3075.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3075_o_1d8o54bdcpo2102v1buj1bv0b6628.jpg",
+				"path": "/images/items/01_2121/190_3075.jpg"
+			}
 		],
-		"en": [
-			"Jikangilade ×1",
-			"Hand grip x 1 each on left and right",
-			"Open hand x left and right 1 each",
-			"Weapon holder (right) x 1",
-			"Decisive pose hand (left) x 1",
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成型品×11",
-			"ホイルシール×1",
-			"ネーマーシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded products x 11",
-			"Foil Seal×1",
-			"Namer Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2121/153_3075.jpg",
-		"/images/items/01_2121/155_3075.jpg",
-		"/images/items/01_2121/156_3075.jpg",
-		"/images/items/01_2121/157_3075.jpg",
-		"/images/items/01_2121/158_3075.jpg",
-		"/images/items/01_2121/159_3075.jpg",
-		"/images/items/01_2121/189_3075.jpg",
-		"/images/items/01_2121/190_3075.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2121/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"rider"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5451",
-		"item-1000215369",
-		"01_5276",
-		"01_5175"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2121/"
 }

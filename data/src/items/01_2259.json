@@ -5,6 +5,34 @@
 		"ja": "Figure-riseLABO ホシノ・フミナ[The Second Scene]",
 		"en": "Figure-riseLABO Fumina Hoshino [The Second Scene]"
 	},
+	"brands": [
+		{
+			"id": "figurerise-labo",
+			"url": "https://bandai-hobby.net/brand/figurerise-labo/",
+			"ja": "Figure-riseLABO[フィギュアライズラボ]"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1386",
+			"url": "https://bandai-hobby.net/item/01_1386/",
+			"ja": "Figure-riseLABO ホシノ・フミナ"
+		}
+	],
 	"price": {
 		"amount": 6050,
 		"currency": "JPY",
@@ -29,54 +57,77 @@
 		],
 		"en": [
 			"Figure-riseLABO's first model, \"Hoshino Fumina\", has been improved with further improvements in molding technology and is now available!",
-			"• Research and evolution of layering has reproduced the beautiful gradation of skin redness and shading through the transparency of the molded color.",
-			"• The contact points of the gate are finely processed throughout so that the cut gate marks are not noticeable.",
-			"• The side gate has been moved to a position where no trace can be seen after assembly.",
+			"• Through the evolution of layered research, the beautiful gradation of skin redness and shading is reproduced by the sheerness of the molded color.",
+			"• The gate contacts are finely machined throughout so that the cut gate marks are not noticeable.",
+			"• The flank gate has been moved to a position where no trace can be seen after assembly.",
 			"• The molding color of the swimsuit has been changed to a sporty dark blue. Pursuing a more realistic texture with a glossy enamel-like molding expression.",
 			"• Comes with a special clear pedestal that realistically reproduces the swaying water surface and splashing water, and a mount that resembles a sandy beach."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用台座×1",
-			"テクスチャー台紙×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用台座"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "テクスチャー台紙"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 7
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3202_s_hpdhkto6e96sw7nadg2enn0wvh9g.jpg",
+				"path": "/images/items/01_2259/153_3202.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3202_s_5rqv3so3klfwyjy9m0h072uqpyw6.jpg",
+				"path": "/images/items/01_2259/155_3202.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3202_s_e473rbw0594cm4ys9evutoupt4qc.jpg",
+				"path": "/images/items/01_2259/156_3202.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3202_s_alrxlfxjmlc7fc9gd9mxbfwhi1ga.jpg",
+				"path": "/images/items/01_2259/157_3202.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3202_s_zt1fir2qdnb6nu7z8ckie8zwlk0p.jpg",
+				"path": "/images/items/01_2259/158_3202.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3202_s_9sps446dpc6ag3jetx6gemxuctk4.jpg",
+				"path": "/images/items/01_2259/159_3202.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3202_s_2gtc116xz8avvyw7ooinnhoo4su1.jpg",
+				"path": "/images/items/01_2259/189_3202.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3202_s_9asal57wsbcc2hixdk7jt8dyt21v.jpg",
+				"path": "/images/items/01_2259/190_3202.jpg"
+			}
 		],
-		"en": [
-			"Dedicated pedestal x 1",
-			"Texture mount x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×7",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 7",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2259/153_3202.jpg",
-		"/images/items/01_2259/155_3202.jpg",
-		"/images/items/01_2259/156_3202.jpg",
-		"/images/items/01_2259/157_3202.jpg",
-		"/images/items/01_2259/158_3202.jpg",
-		"/images/items/01_2259/159_3202.jpg",
-		"/images/items/01_2259/189_3202.jpg",
-		"/images/items/01_2259/190_3202.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2259/",
-	"brandIds": [
-		"figurerise-labo"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1386"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2259/"
 }

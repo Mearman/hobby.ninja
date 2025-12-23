@@ -5,6 +5,50 @@
 		"ja": "RG 1/144 ユニコーンガンダム (バンデシネVer.)",
 		"en": "RG 1/144 Unicorn Gundam (Bandecine Ver.)"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216106",
+			"url": "https://p-bandai.jp/item/item-1000216106/",
+			"ja": "RG 1/144 ユニコーンガンダム２号機 バンシィ・ノルン (最終決戦仕様) [スペシャルコーティング]"
+		},
+		{
+			"id": "01_5037",
+			"url": "https://bandai-hobby.net/item/01_5037/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-0 ユニコーンガンダム (最終決戦仕様) [スペシャルコーティング]"
+		},
+		{
+			"id": "01_3060",
+			"url": "https://bandai-hobby.net/item/01_3060/",
+			"ja": "RG 1/144 ガンダムベース限定 ユニコーンガンダム ペルフェクティビリティ"
+		},
+		{
+			"id": "01_2821",
+			"url": "https://bandai-hobby.net/item/01_2821/",
+			"ja": "ＲＧ 1/144 シナンジュ［スペシャルコーティング］"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -18,70 +62,97 @@
 		"day": 17
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 月刊ガンダムエースにて「機動戦士ガンダム UC バンデシネ Episode：0」の連載がスタートしたことにあわせて、「UC バンデシネ」版ユニコーンガンダムがRGシリーズに数量限定生産で登場！",
+			"• 月刊ガンダムエースにて「機動戦士ガンダムUC バンデシネ Episode：0」の連載がスタートしたことにあわせて、「UC バンデシネ」版ユニコーンガンダムがRGシリーズに数量限定生産で登場！",
 			"• 1号機用のアームド・アーマーDEに加え、追加デカールが付属！パッケージはレッドの背景が印象的なスペシャル仕様となっている！",
 			"• もちろん、「ADVANCED MS FRAME WORK（アドヴァンスドMSフレームワーク）」により、1/144スケールながらユニコーンガンダムの「変身」も実現されている！"
 		],
 		"en": [
-			"• In conjunction with the start of the serialization of \"Mobile Suit Gundam UC Bandescinet Episode: 0 \" in Gundam Ace, the \" UC Bandescinet\" version of Unicorn Gundam is now available in the RG series in limited quantities!",
+			"• Coinciding with the start of serialization of \"Mobile Suit Gundam UC Bandescinet Episode: 0\" in Gundam Ace, the \"UC Bandescinet\" version of Unicorn Gundam is now available in the RG series in limited quantities!",
 			"• In addition to Armed Armor DE for Unit 1, additional decals are included! The package has a special specification with an impressive red background!",
-			"• Of course, with \"ADVANCED MS FRAME WORK \", Unicorn Gundam's \" transformation\" has been realized even though it is 1/144 scale!"
+			"• Of course, with \"ADVANCED MS FRAME WORK\", Unicorn Gundam's \"transformation\" has been realized even though it is 1/144 scale!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・マグナム×1",
-			"ビーム・サーベル×2",
-			"シールド×1",
-			"ハイパー・バズーカ×１",
-			"アームド・アーマーDE×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・マグナム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハイパー・バズーカ×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "アームド・アーマーDE"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 14
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "デカール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 2
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2220_s_w6tebakmvc02dmjfeuiophgf4s6h.jpg",
+				"path": "/images/items/01_1290/153_2220.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2220_s_l1mcx0om71k1nmmxenv5cshgggsw.jpg",
+				"path": "/images/items/01_1290/155_2220.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2220_s_h5mq2zv360hqylz9hlmjr9vgcrw2.jpg",
+				"path": "/images/items/01_1290/156_2220.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2220_s_6q3l259xbsghynmqcifbdho36x8g.jpg",
+				"path": "/images/items/01_1290/157_2220.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2220_s_b4uqgjsed0q8nnkfybpc3a868sib.jpg",
+				"path": "/images/items/01_1290/158_2220.jpg"
+			}
 		],
-		"en": [
-			"Beam Magnum x 1",
-			"Beam saber x2",
-			"Seal × 1",
-			"Hyper bazooka x1",
-			"Armed Armor DE×1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×14",
-			"リアリスティックデカール×１",
-			"デカール×１",
-			"取扱説明書×2"
-		],
-		"en": [
-			"Molded product x 14",
-			"Realistic decal x 1",
-			"Decal x 1",
-			"Handling manual×2"
-		]
-	},
-	"images": [
-		"/images/items/01_1290/153_2220.jpg",
-		"/images/items/01_1290/155_2220.jpg",
-		"/images/items/01_1290/156_2220.jpg",
-		"/images/items/01_1290/157_2220.jpg",
-		"/images/items/01_1290/158_2220.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1290/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216106",
-		"01_5037",
-		"01_3060",
-		"01_2821"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1290/"
 }

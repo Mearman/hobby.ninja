@@ -5,6 +5,49 @@
 		"ja": "ハロプラ ザクレロハロ",
 		"en": "Haropura Zakuro Haro"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
 	"price": {
 		"amount": 825,
 		"currency": "JPY",
@@ -24,41 +67,48 @@
 			"• ジオン軍の大型MAザクレロをイメージした鎌とブースターを装備。"
 		],
 		"en": [
-			"\"Zakurero Haro \" is now available as a halo custom variation following \" Ball Haro\"!",
+			"\"Zakurero Haro\" is now available as a halo custom variation following \"Ball Haro\"!",
 			"• Equipped with a scythe and booster inspired by Zeon's large MA Zakurero."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"鎌×2",
-			"ブースター×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "鎌"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ブースター"
+			},
+			"count": 2
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3417_s_d9qtn9qe15qwqlgoclxz94sdo0r6.jpg",
+				"path": "/images/items/01_2490/153_3417.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3417_s_kipxenmta1iy4rn2pnbt1845nodz.jpg",
+				"path": "/images/items/01_2490/155_3417.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3417_s_th63ls1kh7cfafvua8nq10c0n5z6.jpg",
+				"path": "/images/items/01_2490/156_3417.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3417_s_f207tnamie0m33f3llaczbm2xj6s.jpg",
+				"path": "/images/items/01_2490/157_3417.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3417_s_mqroxvyxbz2l2v9x7ozl5cg7nrt8.jpg",
+				"path": "/images/items/01_2490/158_3417.jpg"
+			}
 		],
-		"en": [
-			"Sickle x2",
-			"Booster x 2"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2490/153_3417.jpg",
-		"/images/items/01_2490/155_3417.jpg",
-		"/images/items/01_2490/156_3417.jpg",
-		"/images/items/01_2490/157_3417.jpg",
-		"/images/items/01_2490/158_3417.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2490/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2490/"
 }

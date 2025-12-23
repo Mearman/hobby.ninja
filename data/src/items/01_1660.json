@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ガンダム〔Ver.ONE YEAR WAR 0079〕アニメーションカラー",
 		"en": "MG 1/100 Gundam [Ver.ONE YEAR WAR 0079] Animation color"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 7
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"高い完成度で支持を得ている“RX-78-2 ガンダム Ver.O.Y.W.0079”に、アニメ劇中での設定色を意識したバージョンが登場！ 腹部、腰、足底の可動により多彩なポーズジングを実現 股関節フレームが前後にスライド、自然な立て膝もポージング可能 ビーム・ライフル、ハイパー・バズーカ、ビーム・サーベル×2、ガンダムハンマー、シールドが付属"
@@ -26,27 +69,30 @@
 			"“RX-78-2 Gundam Ver.O.Y.W.0079”, which has gained support for its high level of perfection, now has a version that takes into account the colors used in the anime! The abdomen, hips, and soles can be moved to create a variety of poses.The hip joint frame slides back and forth, allowing you to pose with your knees up naturally.Comes with a beam rifle, hyper bazooka, beam saber x 2, Gundam hammer, and Seal."
 		]
 	},
-	"images": [
-		"/images/items/01_1660/153_2569.jpg",
-		"/images/items/01_1660/155_2569.jpg",
-		"/images/items/01_1660/156_2569.jpg",
-		"/images/items/01_1660/157_2569.jpg",
-		"/images/items/01_1660/158_2569.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1660/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2569_s_ej2b58n8hmrg46xigk946c33m1l8.jpg",
+				"path": "/images/items/01_1660/153_2569.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2569_s_yc5xouwnm1hyn08tq984j4p6cjpz.jpg",
+				"path": "/images/items/01_1660/155_2569.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2569_s_9s84fsrpl1sk07be9w4toxm5kchs.jpg",
+				"path": "/images/items/01_1660/156_2569.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2569_s_ejfyxby6muc9t8yumvweqa8dtix7.jpg",
+				"path": "/images/items/01_1660/157_2569.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2569_s_puu04cw9ygzffy6acb5mxj9q65t8.jpg",
+				"path": "/images/items/01_1660/158_2569.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1660/"
 }

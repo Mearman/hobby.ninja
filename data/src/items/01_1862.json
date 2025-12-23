@@ -2,9 +2,39 @@
 	"id": "01_1862",
 	"type": "item",
 	"name": {
-		"ja": "ガンダムデカールNo.53 機動戦士ガンダム 0080シリーズ汎用1",
-		"en": "Gundam Decal No.53 Mobile Suit Gundam 0080 Series General Purpose 1"
+		"ja": "ガンダムデカールNo.53 機動戦士ガンダム0080シリーズ汎用1",
+		"en": "GUNDAM DECAL 53 HGUC 0800 SERIES FEDERATION"
 	},
+	"brands": [
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール",
+			"en": "GUNDAM DECAL"
+		}
+	],
+	"series": [
+		{
+			"id": "g-0080",
+			"url": "https://bandai-hobby.net/series/g-0080/",
+			"ja": "機動戦士ガンダム0080 ポケットの中の戦争",
+			"en": "MOBILE SUIT GUNDAM 0080 War in the Pocket"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1266",
+			"url": "https://bandai-hobby.net/item/01_1266/",
+			"ja": "ガンダムデカールNo.118 MG 1/100 ジム・スナイパーII/ジム・コマンド用"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -21,29 +51,24 @@
 	"description": {
 		"ja": [
 			"100点以上のラインナップを誇る、大人気ガンダムデカールのシリーズ商品が登場。",
-			"機動戦士ガンダム 0080シリーズ汎用1のデカールです。",
+			"機動戦士ガンダム0080シリーズ汎用1のデカールです。",
 			"水転写式デカール"
 		],
 		"en": [
-			"Introducing the popular Gundam decal series, which boasts a lineup of over 100 items.",
-			"Mobile Suit Gundam 0080 series general purpose 1 decal.",
-			"water transfer decal"
+			"Boasting a lineup of more than 100 items, the popular GUNDAM DECAL series products are now available. MOBILE SUIT GUNDAM 0080 series general-purpose 1 decal. Waterslide decals"
 		]
 	},
-	"images": [
-		"/images/items/01_1862/1000126482_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126482_1.jpg",
+				"path": "/images/items/01_1862/1000126482_1.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1862/",
-	"brandIds": [
-		"gundam_decal"
-	],
-	"seriesIds": [
-		"g-0080"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1266"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1862/"
+	}
 }

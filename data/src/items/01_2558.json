@@ -5,6 +5,50 @@
 		"ja": "ＨＧ 1/144 マジンガーＺ ブラックＶｅｒ．（マジンガーＺ ＩＮＦＩＮＩＴＹ Ｖｅｒ．）",
 		"en": "HG 1/144 Mazinger Z Black Ver. (Mazinger Z INFINITY Ver.)"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "mazingerz-infinity",
+			"url": "https://bandai-hobby.net/series/mazingerz-infinity/",
+			"ja": "マジンガーZ／INFINITY"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4234",
+			"url": "https://bandai-hobby.net/item/01_4234/",
+			"ja": "HG 1/144 マジンガーZERO(INFINITISM)"
+		},
+		{
+			"id": "01_3528",
+			"url": "https://bandai-hobby.net/item/01_3528/",
+			"ja": "HG ゲッターアーク"
+		},
+		{
+			"id": "01_3332",
+			"url": "https://bandai-hobby.net/item/01_3332/",
+			"ja": "HG 1/144 鋼鉄ジーグ(INFINITISM)"
+		},
+		{
+			"id": "01_2853",
+			"url": "https://bandai-hobby.net/item/01_2853/",
+			"ja": "HG 1/144 ゲッタードラゴン(INFINITISM）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -17,28 +61,14 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/144",
-	"images": [
-		"/images/items/01_2558/153_3484.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2558/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"mazingerz-infinity"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4234",
-		"01_3528",
-		"01_3332",
-		"01_2853"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3484_o_1dlos6pq81be616j41u6m14mg1v9r23.jpg",
+				"path": "/images/items/01_2558/153_3484.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2558/"
 }

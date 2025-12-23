@@ -5,6 +5,50 @@
 		"ja": "1/144 HG デュエルガンダム アサルトシュラウド",
 		"en": "1/144 HG Duel Gundam Assault Shroud"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181726",
+			"url": "https://p-bandai.jp/item/item-1000181726/",
+			"ja": "ＨＧ 1/144 ストライクダガー"
+		},
+		{
+			"id": "01_1930",
+			"url": "https://bandai-hobby.net/item/01_1930/",
+			"ja": "HG 1/144 ガンダムベース限定 フリーダムガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_384",
+			"url": "https://bandai-hobby.net/item/01_384/",
+			"ja": "HGCE 1/144 フリーダムガンダム"
+		},
+		{
+			"id": "01_83",
+			"url": "https://bandai-hobby.net/item/01_83/",
+			"ja": "HGCE 1/144 ストライクルージュ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -18,34 +62,26 @@
 		"day": 16
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"TVアニメ「機動戦士ガンダム SEED」に登場する敵指揮官機「デュエルガンダム」の1/144HG仕様のプラモデル。各関節が広範囲に可動し、様々なポーズ付けが可能です。武器はビームライフル、ビームサーベル、シールドが付属します。また、細部カラーリング再現用のホイルシール付きです。"
+			"TVアニメ「機動戦士ガンダムSEED」に登場する敵指揮官機「デュエルガンダム」の1/144HG仕様のプラモデル。各関節が広範囲に可動し、様々なポーズ付けが可能です。武器はビームライフル、ビームサーベル、シールドが付属します。また、細部カラーリング再現用のホイルシール付きです。"
 		],
 		"en": [
-			"A 1/144HG plastic model of the enemy commander aircraft \"Duel Gundam \" that appears in the TV anime \" Mobile Suit Gundam SEED\". Each joint can move over a wide range, allowing for various poses. Weapons include beam rifle, beam saber, and seal. Also includes a foil seal for reproducing detailed coloring."
+			"A 1/144HG plastic model of the enemy commander aircraft \"Duel Gundam\" that appears in the TV anime \"Mobile Suit Gundam SEED\". Each joint can move over a wide range, allowing for various poses. Weapons include beam rifle, beam saber, and seal. Also includes a foil seal for reproducing detailed coloring."
 		]
 	},
-	"images": [
-		"/images/items/01_2080/153_302.jpg",
-		"/images/items/01_2080/155_302.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2080/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181726",
-		"01_1930",
-		"01_384",
-		"01_83"
-	],
-	"manualId": "0873"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_302_s_r0z5rjkk2zj40vp16yy4bmidr0y5.jpg",
+				"path": "/images/items/01_2080/153_302.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_302_o_1h38ruj0e1t941k71igrtgbmj123.jpg",
+				"path": "/images/items/01_2080/155_302.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2080/"
 }

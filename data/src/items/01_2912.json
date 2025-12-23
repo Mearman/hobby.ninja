@@ -2,9 +2,31 @@
 	"id": "01_2912",
 	"type": "item",
 	"name": {
-		"ja": "PG RX-78 ガンダム GP01/FB",
-		"en": "PG RX-78 Gundam GP01/FB"
+		"ja": "PG RX-78ガンダムGP01/FB",
+		"en": "PG RX-78GundamGP01/FB"
 	},
+	"brands": [
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-0083",
+			"url": "https://bandai-hobby.net/series/g-0083/",
+			"ja": "機動戦士ガンダム0083 STARDUST MEMORY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 22000,
 		"currency": "JPY",
@@ -19,37 +41,44 @@
 	"targetAge": 15,
 	"description": {
 		"ja": [
-			"OVA「機動戦士ガンダム 0083」に登場する主人公機「ガンダム GP01/FB」のコンパチブル仕様・PGのプラモデル。",
+			"OVA「機動戦士ガンダム0083」に登場する主人公機「ガンダムGP01/FB」のコンパチブル仕様・PGのプラモデル。",
 			"地上戦、宇宙戦の換装ギミックとコアファイターの完全変形・合体ギミックを完全に再現しています。",
 			"大型メンテナンスハンガーも付属し、各部の換装パーツを取り付けてディスプレイが可能です。",
 			"頭部カメラアイはLEDにより発光し、各部のメンテナンスハッチは開閉式です。",
 			"武器はビームライフル、マシンガン、ビームサーベル、シールドが付属します。"
 		],
 		"en": [
-			"A compatible and PG plastic model of the protagonist machine \"Gundam GP01/FB \" that appears in the OVA \" Mobile Suit Gundam 0083\".",
+			"A compatible and PG plastic model of the main character's machine \"GundamGP01/FB\" that appears in the OVA \"Mobile Suit Gundam0083\".",
 			"Completely reproduces the replacement gimmicks for ground battles and space battles, as well as the complete transformation and combination gimmicks of the core fighter.",
 			"A large maintenance hanger is also included, allowing you to attach and display replacement parts for each part.",
 			"The head camera eye is illuminated by LED, and the maintenance hatches for each part can be opened and closed.",
 			"Weapons include a beam rifle, machine gun, beam saber, and seal."
 		]
 	},
-	"images": [
-		"/images/items/01_2912/153_388.jpg",
-		"/images/items/01_2912/155_388.jpg",
-		"/images/items/01_2912/156_388.jpg",
-		"/images/items/01_2912/157_388.jpg",
-		"/images/items/01_2912/158_388.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2912/",
-	"brandIds": [
-		"pg"
-	],
-	"seriesIds": [
-		"g-0083"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [],
-	"manualId": "1055"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_388_s_b3mtvsbckkntorwats1kftr1q8aj.jpg",
+				"path": "/images/items/01_2912/153_388.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_388_s_wxpwhyi2v64l4hwyr67lqz2rll0y.jpg",
+				"path": "/images/items/01_2912/155_388.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_388_s_pjmhtym8f6kwtjc46384oktdq3yo.jpg",
+				"path": "/images/items/01_2912/156_388.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_388_s_mt2nfwz5mhef8yopp41feuq8c9k8.jpg",
+				"path": "/images/items/01_2912/157_388.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_388_s_ari496riqn82n8a30v7vb6hx2tbi.jpg",
+				"path": "/images/items/01_2912/158_388.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2912/"
 }

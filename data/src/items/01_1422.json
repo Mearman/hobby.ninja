@@ -5,6 +5,43 @@
 		"ja": "ねこぶそう てんこ盛り",
 		"en": "Nekobusou Tenkomori"
 	},
+	"brands": [
+		{
+			"id": "nekobusou",
+			"url": "https://bandai-hobby.net/brand/nekobusou/",
+			"ja": "ねこぶそう"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2100",
+			"url": "https://bandai-hobby.net/item/01_2100/",
+			"ja": "ねこぶそう3 中盛り"
+		},
+		{
+			"id": "01_2101",
+			"url": "https://bandai-hobby.net/item/01_2101/",
+			"ja": "ねこぶそう3 舟盛り"
+		},
+		{
+			"id": "01_1979",
+			"url": "https://bandai-hobby.net/item/01_1979/",
+			"ja": "ねこぶそう2 並盛り"
+		},
+		{
+			"id": "01_1981",
+			"url": "https://bandai-hobby.net/item/01_1981/",
+			"ja": "ねこぶそう2 てんこ盛り"
+		}
+	],
 	"price": {
 		"amount": 1527,
 		"currency": "JPY",
@@ -26,54 +63,85 @@
 			"• 「ねこ」は全長約5cm。ねこ造形作家として活躍中の森口修氏の原型により、表情や毛並み、肉球など、細部に至るまで造形。",
 			"• 「ぶそう」はフリーモデラーのフクダカズヤ氏のデザインで、緻密なメカ造形とユニークな合体形態を追求。",
 			"• 「ぶそう」は単独でミニメカ状態にも組み替え可能！ジャケットや各ぶそうに搭載された3mmジョイントにより組み合わせは自由自在。",
-			"• 〈てんこ盛り〉は一箱で全ての「ぶそう」がそろうまさに“てんこ盛り”なセット！• このセットでしか手に入らない立ちねこポーズの「くつした」と特別カラーの「ぶそう+α」入り。"
+			"• 〈てんこ盛り〉は一箱で全ての「ぶそう」がそろうまさに“てんこ盛り”なセット！■このセットでしか手に入らない立ちねこポーズの「くつした」と特別カラーの「ぶそう+α」入り。"
 		],
 		"en": [
-			"Let's let the cute cat \"buso \". A new sensation \" cat\" Hobby appears.",
+			"Let's let the cute cat \"buso\". A new sensation \"cat\" Hobby appears.",
 			"• Collaboration between cat sculptor and cat-loving modeler!",
-			"• Let's enjoy wearing the \"jacket \" on the \" cat \" figure and equipping it with \" buso\" parts.",
-			"• The total length of the \"cat\" is approximately 5cm. Based on the prototype by Osamu Moriguchi, who is active as a cat sculptor, every detail including facial expressions, fur, and paws has been sculpted.",
-			"• \"Buso\" was designed by freelance modeler Kazuya Fukuda, pursuing precise mechanical modeling and a unique combination form.",
+			"• Have fun wearing a \"jacket\" on your \"cat\" figure and equipping it with \"buso\" parts.",
+			"• \"Cat\" has a total length of about 5cm. Based on the prototype by Osamu Moriguchi, who is active as a cat sculptor, every detail including facial expressions, fur, and paws has been sculpted.",
+			"• \"Buso\" was designed by freelance modeler Kazuya Fukuda, pursuing detailed mechanical modeling and a unique combination form.",
 			"• \"Buso\" can be rearranged into a mini-mecha state by itself! You can freely combine them with the 3mm joints installed on the jacket and each bush.",
-			"• 〈Tenkomori〉 is a truly “Tenkomori” set that has all the “Buso” items in one box! • Includes a standing cat pose \"Skutsuta \" and a special color \" Buso+α\" that can only be obtained with this set."
+			"• ``Tenkomori'' is a truly ``Tenkomori'' set that has all the ``Buso'' items in one box! ■Includes a standing cat pose \"Skutsuta\" and a special color \"Buso+α\" that can only be obtained with this set."
 		]
 	},
-	"contents": {
-		"ja": [
-			"彩色済ねこフィギュア×1",
-			"ジャケット×1",
-			"ぶそう×1式"
+	"contents": [
+		{
+			"name": {
+				"ja": "彩色済ねこフィギュア"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジャケット"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ぶそう"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2345_o_1cl3cqte2k06trt1k0v4cjppr23.jpg",
+				"path": "/images/items/01_1422/153_2345.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2345_o_1cl3cret41gr77613uo7b611t62d.jpg",
+				"path": "/images/items/01_1422/155_2345.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2345_o_1cl3crj1h1tbf2cn15tj1rjukl02i.jpg",
+				"path": "/images/items/01_1422/156_2345.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2345_o_1cl3crn3thkv1u6s103hpq21682n.jpg",
+				"path": "/images/items/01_1422/157_2345.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2345_o_1cl3crrmq1mcu1dc4e6b1nvd1dm22s.jpg",
+				"path": "/images/items/01_1422/158_2345.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2345_o_1cl3cs0dt1jje7t112mp15ck1agq31.jpg",
+				"path": "/images/items/01_1422/159_2345.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2345_o_1cl3cs670186h13lf19ts1qqc3ln36.jpg",
+				"path": "/images/items/01_1422/189_2345.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2345_o_1cl3csrah1fp617cp3abbdg19tv3b.jpg",
+				"path": "/images/items/01_1422/190_2345.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2345_o_1cl3ct19f10c712pft2ecfi1sen3g.jpg",
+				"path": "/images/items/01_1422/191_2345.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2345_o_1cl3ct7pajumt611lujmt880q3l.jpg",
+				"path": "/images/items/01_1422/192_2345.jpg"
+			}
 		],
-		"en": [
-			"Painted cat figure x 1",
-			"Jacket x 1",
-			"Busou x 1 set"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1422/153_2345.jpg",
-		"/images/items/01_1422/155_2345.jpg",
-		"/images/items/01_1422/156_2345.jpg",
-		"/images/items/01_1422/157_2345.jpg",
-		"/images/items/01_1422/158_2345.jpg",
-		"/images/items/01_1422/159_2345.jpg",
-		"/images/items/01_1422/189_2345.jpg",
-		"/images/items/01_1422/190_2345.jpg",
-		"/images/items/01_1422/191_2345.jpg",
-		"/images/items/01_1422/192_2345.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1422/",
-	"brandIds": [
-		"nekobusou"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2100",
-		"01_2101",
-		"01_1979",
-		"01_1981"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1422/"
 }

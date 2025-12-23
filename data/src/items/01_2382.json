@@ -5,6 +5,43 @@
 		"ja": "LBXジェネラル",
 		"en": "LBX General"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "lbx",
+			"url": "https://bandai-hobby.net/series/lbx/",
+			"ja": "ダンボール戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000215196",
+			"url": "https://p-bandai.jp/item/item-1000215196/",
+			"ja": "ＬＢＸイカロス・フォース"
+		},
+		{
+			"id": "item-1000215197",
+			"url": "https://p-bandai.jp/item/item-1000215197/",
+			"ja": "ＬＢＸイカロス・ゼロ"
+		},
+		{
+			"id": "item-1000210042",
+			"url": "https://p-bandai.jp/item/item-1000210042/",
+			"ja": "ＬＢＸエルシオン"
+		},
+		{
+			"id": "item-1000210041",
+			"url": "https://p-bandai.jp/item/item-1000210041/",
+			"ja": "ＬＢＸペルセウス"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -30,48 +67,69 @@
 			"• Eiji Yagami's special machine that appears in the anime"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"アーチャーライフル"
+	"accessories": [
+		{
+			"name": {
+				"ja": "アーチャーライフル"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3316_s_jwtis2ijlhcwh5uovhpe5fvk82eo.jpg",
+				"path": "/images/items/01_2382/153_3316.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3316_s_ynh1oa2tge1y4d9riw5dkgynmvsh.jpg",
+				"path": "/images/items/01_2382/155_3316.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3316_s_m1laqx4t0vg040962ivu0dqrd97g.jpg",
+				"path": "/images/items/01_2382/156_3316.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3316_s_ku9zrv0x5psydrar5bzai6zu5zfw.jpg",
+				"path": "/images/items/01_2382/157_3316.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3316_s_kf0ax5cepxvh023hbolqqgcpk80d.jpg",
+				"path": "/images/items/01_2382/158_3316.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3316_s_0gtbrgxvx547wz4l7grzam4j0875.jpg",
+				"path": "/images/items/01_2382/159_3316.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3316_s_qthder4se5rqab3jutiq1h4nl6ch.jpg",
+				"path": "/images/items/01_2382/189_3316.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3316_s_uoj80zaq6ta4p13yzryxlipsah4u.jpg",
+				"path": "/images/items/01_2382/190_3316.jpg"
+			}
 		],
-		"en": [
-			"archer rifle"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 4",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2382/153_3316.jpg",
-		"/images/items/01_2382/155_3316.jpg",
-		"/images/items/01_2382/156_3316.jpg",
-		"/images/items/01_2382/157_3316.jpg",
-		"/images/items/01_2382/158_3316.jpg",
-		"/images/items/01_2382/159_3316.jpg",
-		"/images/items/01_2382/189_3316.jpg",
-		"/images/items/01_2382/190_3316.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2382/",
-	"brandIds": [],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2382/"
 }

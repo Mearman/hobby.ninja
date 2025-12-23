@@ -5,6 +5,44 @@
 		"ja": "1/550 アッザム",
 		"en": "1/550 Azzam"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/550",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 6
 	},
 	"targetAge": 15,
-	"scale": "1/550",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、1/550スケールで、 アッザムが登場。",
@@ -28,23 +65,18 @@
 			"The four arms can be adjusted for expansion and contraction. The upper gun barrel is movable. The Azzam Leader, Gundam, Magella Attack, and Megumi of the same scale come with particle cannonballs."
 		]
 	},
-	"images": [
-		"/images/items/01_3142/153_4105.jpg",
-		"/images/items/01_3142/155_4105.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3142/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	],
-	"manualId": "1977"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/155_4105_s_frt1cmhbu84pqaw6jmy2i5hfjfda.jpg",
+				"path": "/images/items/01_3142/155_4105.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_4105_s_bqyt6shz4qzk7w76spou8jaijtp0.jpg",
+				"path": "/images/items/01_3142/153_4105.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3142/"
 }

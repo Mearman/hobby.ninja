@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ダブルオーガンダム セブンソード/G [クリアカラー]",
 		"en": "MG 1/100 00 Gundam Seven Sword/G [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216602",
+			"url": "https://p-bandai.jp/item/item-1000216602/",
+			"ja": "ＭＧ 1/100 ガンダムアストレア＋プロトＧＮツインブロードブレイド"
+		},
+		{
+			"id": "01_5526",
+			"url": "https://bandai-hobby.net/item/01_5526/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムエクシア [クリアカラー]"
+		},
+		{
+			"id": "01_5102",
+			"url": "https://bandai-hobby.net/item/01_5102/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムナドレ"
+		},
+		{
+			"id": "01_4422",
+			"url": "https://bandai-hobby.net/item/01_4422/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムキュリオス[クリアカラー］"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 6710,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 11
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
@@ -28,28 +71,14 @@
 			"MG 00 Gundam Seven Sword/G is now available in event-limited clear color!"
 		]
 	},
-	"images": [
-		"/images/items/01_1952/153_2885.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1952/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216602",
-		"01_5526",
-		"01_5102",
-		"01_4422"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2885_s_im7wsje7467ie0igrlelztyukt7z.jpg",
+				"path": "/images/items/01_1952/153_2885.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "0587"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1952/"
 }

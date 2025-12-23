@@ -5,6 +5,54 @@
 		"ja": "BB戦士 193GP-01Fb",
 		"en": "BB Senshi 193GP-01Fb"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		},
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "g-0083",
+			"url": "https://bandai-hobby.net/series/g-0083/",
+			"ja": "機動戦士ガンダム0083 STARDUST MEMORY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_4547",
+			"url": "https://bandai-hobby.net/item/01_4547/",
+			"ja": "BB戦士 ガンダムRX-78NT-1＆ガンダムGP01Fb"
+		},
+		{
+			"id": "01_1396",
+			"url": "https://bandai-hobby.net/item/01_1396/",
+			"ja": "BB戦士224 ノイエ・ジール"
+		},
+		{
+			"id": "01_4487",
+			"url": "https://bandai-hobby.net/item/01_4487/",
+			"ja": "SDガンダムGジェネレーション51 ガンダムGP04"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -25,24 +73,14 @@
 			"BB Senshi 193GP-01Fb is now available! !"
 		]
 	},
-	"images": [
-		"/images/items/01_1604/153_2516.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1604/",
-	"brandIds": [
-		"sdgundamseries",
-		"bb"
-	],
-	"seriesIds": [
-		"g-0083"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5442",
-		"01_4547",
-		"01_1396",
-		"01_4487"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2516_s_b84pxu1qbuohbdwtni0cg534jeqt.jpg",
+				"path": "/images/items/01_1604/153_2516.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1604/"
 }

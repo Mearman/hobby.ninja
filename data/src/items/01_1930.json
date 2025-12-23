@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガンダムベース限定 フリーダムガンダム [クリアカラー]",
-		"en": "HG 1/144 Gundam Base Limited Freedom Gundam [Clear Color]"
+		"en": "HG 1/144 THE GUNDAM BASE LIMITED FREEDOM GUNDAM ［CLEAR COLOR］"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED",
+			"en": "MOBILE SUIT GUNDAM SEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181726",
+			"url": "https://p-bandai.jp/item/item-1000181726/",
+			"ja": "ＨＧ 1/144 ストライクダガー"
+		},
+		{
+			"id": "01_384",
+			"url": "https://bandai-hobby.net/item/01_384/",
+			"ja": "HGCE 1/144 フリーダムガンダム"
+		},
+		{
+			"id": "01_83",
+			"url": "https://bandai-hobby.net/item/01_83/",
+			"ja": "HGCE 1/144 ストライクルージュ"
+		},
+		{
+			"id": "01_48",
+			"url": "https://bandai-hobby.net/item/01_48/",
+			"ja": "HGCE 1/144 エールストライクガンダム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -17,41 +63,34 @@
 		"month": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
 			"ハイグレード フリーダムガンダムが、ガンダムベース限定クリアカラーで登場。ガンダムベースのロゴがデザインされた、オリジナルのディスプレイ台座が付属。"
 		],
 		"en": [
-			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"High grade Freedom Gundam now available in clear color limited to Gundam base. Comes with an original display pedestal designed with the Gundam base logo."
+			"For GUNPLA fans around the world, this is a limited edition GUNPLA at the official GUNPLA complex \"GUNDAM Base\". The high-grade Freedom GUNDAM is now available in a GUNDAM base limited clear color. Comes with an original display pedestal with a GUNDAM-based logo design."
 		]
 	},
-	"images": [
-		"/images/items/01_1930/1000126791_1.jpg",
-		"/images/items/01_1930/1000126791_2.jpg",
-		"/images/items/01_1930/1000126791_3.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1930/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181726",
-		"01_384",
-		"01_83",
-		"01_48"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126791_1.jpg",
+				"path": "/images/items/01_1930/1000126791_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126791_2.jpg",
+				"path": "/images/items/01_1930/1000126791_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126791_3.jpg",
+				"path": "/images/items/01_1930/1000126791_3.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "2868"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1930/",
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1930/"
+	}
 }

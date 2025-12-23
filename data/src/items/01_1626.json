@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 RGM-79Q ジムクゥエル",
 		"en": "MG 1/100 RGM-79Q Jimquel"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "g-0083",
+			"url": "https://bandai-hobby.net/series/g-0083/",
+			"ja": "機動戦士ガンダム0083 STARDUST MEMORY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000127907",
+			"url": "http://p-bandai.jp/item/item-1000127907",
+			"ja": "ＭＧ 1/100 MS-06F-2 ザクＩＩ Ｆ２型（ノイエン・ビッター機）"
+		},
+		{
+			"id": "item-1000127908",
+			"url": "http://p-bandai.jp/item/item-1000127908",
+			"ja": "ＭＧ 1/100 MS-06F-2 ザクＩＩ Ｆ２型（キンバライト基地仕様）"
+		},
+		{
+			"id": "item-1000124942",
+			"url": "http://p-bandai.jp/item/item-1000124942",
+			"ja": "ＭＧ 1/100 アナベル・ガトー専用ゲルググ Ver.2.0"
+		},
+		{
+			"id": "item-1000105596",
+			"url": "https://p-bandai.jp/item/item-1000105596",
+			"ja": "ＭＧ 1/100 パワード・ジム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,36 +61,34 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム 0083』より、ティターンズが設立当初に採用した青いモビルスーツのキット化です。足部とバックパックの外装は取り外しができ、内部再現された細密なメカディティールを見る事ができます。また、頭部カメラには、クリアパーツを使用し、内部メカディテールを再現しています。後の連邦軍モビルスーツが装備する物と同じビームライフルが付く他、ジムライフル、ビームサーベル、シールドが付いています。1/20スケールのニナ・パープルトンのフィギュアが付いています。"
+			"『機動戦士ガンダム0083』より、ティターンズが設立当初に採用した青いモビルスーツのキット化です。足部とバックパックの外装は取り外しができ、内部再現された細密なメカディティールを見る事ができます。また、頭部カメラには、クリアパーツを使用し、内部メカディテールを再現しています。後の連邦軍モビルスーツが装備する物と同じビームライフルが付く他、ジムライフル、ビームサーベル、シールドが付いています。1/20スケールのニナ・パープルトンのフィギュアが付いています。"
 		],
 		"en": [
 			"From \"Mobile Suit Gundam 0083\", a kit version of the blue mobile suit adopted by the Titans when it was first established. The legs and the exterior of the backpack can be removed, allowing you to see the detailed mechanical details reproduced inside. In addition, clear parts are used for the head camera to reproduce internal mechanical details. It comes with the same beam rifle that later Federation Army mobile suits are equipped with, as well as a gym rifle, beam saber, and Seal. Comes with a 1/20 Scale Nina Purpleton figure."
 		]
 	},
-	"images": [
-		"/images/items/01_1626/153_2537.jpg",
-		"/images/items/01_1626/155_2537.jpg",
-		"/images/items/01_1626/156_2537.jpg",
-		"/images/items/01_1626/157_2537.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1626/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"g-0083"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000127907",
-		"item-1000127908",
-		"item-1000124942",
-		"item-1000105596"
-	],
-	"manualId": "0433"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2537_s_b5fivir8v603pr7i4ctvcnfntav9.jpg",
+				"path": "/images/items/01_1626/153_2537.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2537_s_c7upqvxcltalouu7128vkkcxaa5s.jpg",
+				"path": "/images/items/01_1626/155_2537.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2537_s_rpbbgm5g8ori2cnoltxo4n9ed3gu.jpg",
+				"path": "/images/items/01_1626/156_2537.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2537_s_hwu7prkhs91dl5wkqk8q27m25c0k.jpg",
+				"path": "/images/items/01_1626/157_2537.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1626/"
 }

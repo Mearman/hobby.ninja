@@ -5,6 +5,38 @@
 		"ja": "1/144 ガンダムベース限定 システムウェポンキット006",
 		"en": "1/144 Gundam Base Limited System WeaponKit006"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5987",
+			"url": "https://bandai-hobby.net/item/01_5987/",
+			"ja": "ガンダムデカールNo.139 機動戦士Gundam GQuuuuuuX汎用1"
+		},
+		{
+			"id": "01_5988",
+			"url": "https://bandai-hobby.net/item/01_5988/",
+			"ja": "ガンダムデカールNo.140 機動戦士Gundam GQuuuuuuX汎用2"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -18,7 +50,6 @@
 		"day": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダムベース限定のシステムウェポンキットが登場！",
@@ -39,25 +70,22 @@
 			"Various hand parts"
 		]
 	},
-	"images": [
-		"/images/items/01_2726/153_3718.jpg",
-		"/images/items/01_2726/155_3718.jpg",
-		"/images/items/01_2726/156_3718.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2726/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5986",
-		"01_5987",
-		"01_5988"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3718_s_nosxg4pidoxhzxl8e2yd3gh9svih.jpg",
+				"path": "/images/items/01_2726/153_3718.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3718_s_8kvw86e3a66q47tqr70nj1ezk8e5.jpg",
+				"path": "/images/items/01_2726/155_3718.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3718_s_7lknks5qugdh84dmzlkyosl7b9pk.jpg",
+				"path": "/images/items/01_2726/156_3718.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2726/"
 }

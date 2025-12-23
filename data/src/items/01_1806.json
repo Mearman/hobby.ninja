@@ -3,8 +3,59 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC 1/144 ヤクト・ドーガ(ギュネイ・ガス専用機)",
-		"en": "HGUC 1/144 Jagd Doga (Gyunei Gas dedicated machine)"
+		"en": "1/144 HGUC JAGD DOGA (GYUNEI)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア",
+			"en": "MOBILE SUIT GUNDAM Char’s Counterattack"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5346",
+			"url": "https://bandai-hobby.net/item/01_5346/",
+			"ja": "HG 1/144 ジムIII(アクシズ・ショックイメージカラー)"
+		},
+		{
+			"id": "01_5210",
+			"url": "https://bandai-hobby.net/item/01_5210/",
+			"ja": "HG 1/144 ギラ・ドーガ(アクシズ・ショックイメージカラー)"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4408",
+			"url": "https://bandai-hobby.net/item/01_4408/",
+			"ja": "HG 1/144 サイコ・ドーガ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -18,35 +69,29 @@
 		"day": 20
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム 逆襲のシャア」よりギュネイ専用の“ヤクト・ドーガ”がHGUCに登場。肩部関節にスイング機構を採用。バインダーの「ファンネル」は着脱可能、待機・展開状態をパーツの差し替えで再現。付属のエフェクトパーツを用いて、ファンネルの射出シーンを再現可能 ビーム・ライフル、シールド、ビーム・サーベルが付属。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam: Char's Counterattack \", Gyunei's \" Yakut Doga \" appears in HGUC. A swing mechanism is used in the shoulder joint. The binder's \" funnel\" is removable, and the standby and deployed states can be recreated by replacing parts. You can reproduce the funnel ejection scene using the included effect parts.Comes with a beam rifle, a seal, and a beam saber."
+			"From \"MOBILE SUIT GUNDAM Char’s Counterattack\", Günei's exclusive \"Jagd Doga\" is now available at HGUC, and a swing mechanism is used in the shoulder joint. The \"funnel\" of the binder is detachable, and the standby / unfolding state is reproduced by replacing parts. Using the included effect parts, you can recreate the scene of the injection of the funnel Beam rifle, shield, and beam saber are included."
 		]
 	},
-	"images": [
-		"/images/items/01_1806/1000125971_1.jpg",
-		"/images/items/01_1806/1000125971_2.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125971_1.jpg",
+				"path": "/images/items/01_1806/1000125971_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125971_2.jpg",
+				"path": "/images/items/01_1806/1000125971_2.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1806/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5346",
-		"01_5210",
-		"01_4971",
-		"01_4408"
-	],
-	"manualId": "0905"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1806/"
+	}
 }

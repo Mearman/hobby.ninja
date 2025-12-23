@@ -5,6 +5,50 @@
 		"ja": "HGBF 1/144 チナッガイ",
 		"en": "HGBF 1/144 Chinagguy"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 29
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 『ガンダムビルドファイターズ』のエンディングにも登場するチナッガイがついにHGで登場！",
@@ -33,62 +76,85 @@
 			"• KPS material is used in the chest and leg joints to achieve a wide range of motion!",
 			"• The shoulder frills and apron are made of soft material, allowing for various poses!",
 			"• Clear parts type and lens type are used for the eyes, and you can choose between glasses with or without lenses!",
-			"• By removing the head parts, you can recreate China's original head, and by replacing the forearms, you can change to bare hands, and it's full of gimmicks!",
+			"• The head part can be removed to recreate China's original head, and the forearm can be replaced to change it to a bare hand, so it's packed with gimmicks!",
 			"• In addition, the headband comes with a bear ear version and a regular version!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"メガネパーツ２種（クリア、フレームのみ）×各1",
-			"ディスプレイ台座×1",
-			"カチューシャ×２種",
-			"差し替え用前腕パーツ（左右）×各１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "メガネパーツ２種（クリア、フレームのみ）×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "カチューシャ×２種"
+			}
+		},
+		{
+			"name": {
+				"ja": "差し替え用前腕パーツ（左右）×各１"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 7
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1986_s_3ctyw0aqod43id1qw5yeext67o2e.jpg",
+				"path": "/images/items/01_1051/153_1986.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1986_s_vhb4xda49zojvzqmzyy3cbnyiwn4.jpg",
+				"path": "/images/items/01_1051/155_1986.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_1986_s_9339ap33edbp1d84kqi58vczaylx.jpg",
+				"path": "/images/items/01_1051/156_1986.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_1986_s_fiyglg170kcrtf8l00vd42dr17nf.jpg",
+				"path": "/images/items/01_1051/157_1986.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_1986_s_20gpe4e94a5xypz1wkt2gi5g7jpg.jpg",
+				"path": "/images/items/01_1051/158_1986.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_1986_s_m0qsgrpf4r06gubf9wuedev1e5bi.jpg",
+				"path": "/images/items/01_1051/159_1986.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_1986_s_cqcw4nj24j06h8xczexzpjoz60j7.jpg",
+				"path": "/images/items/01_1051/189_1986.jpg"
+			}
 		],
-		"en": [
-			"2 types of glasses parts (clear, frame only) x 1 each",
-			"Display pedestal x 1",
-			"Headband x 2 types",
-			"Replacement forearm parts (left and right) x 1 each"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×7",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 7",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1051/153_1986.jpg",
-		"/images/items/01_1051/155_1986.jpg",
-		"/images/items/01_1051/156_1986.jpg",
-		"/images/items/01_1051/157_1986.jpg",
-		"/images/items/01_1051/158_1986.jpg",
-		"/images/items/01_1051/159_1986.jpg",
-		"/images/items/01_1051/189_1986.jpg",
-		"/images/items/01_1051/01_1051_inst_1.jpg",
-		"/images/items/01_1051/01_1051_inst_2.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1051/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
-	"manualId": "0755"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1051/"
 }

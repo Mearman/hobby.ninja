@@ -5,6 +5,37 @@
 		"ja": "LEDユニット デュアルタイプ(ホワイト_ブルー/レッド)",
 		"en": "LED unit dual type (white_blue/red)"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "ultraman",
+			"url": "https://bandai-hobby.net/series/ultraman/",
+			"ja": "ウルトラマン"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_5371",
+			"url": "https://bandai-hobby.net/item/01_5371/",
+			"ja": "Figure-rise Standard ウルトラマンティガ マルチタイプ"
+		},
+		{
+			"id": "01_5244",
+			"url": "https://bandai-hobby.net/item/01_5244/",
+			"ja": "ENTRY GRADE ULTRAMAN(ULTRAMAN: RISING)"
+		},
+		{
+			"id": "01_5198",
+			"url": "https://bandai-hobby.net/item/01_5198/",
+			"ja": "Figure-rise Standard ウルトラマンジード プリミティブ"
+		},
+		{
+			"id": "01_5096",
+			"url": "https://bandai-hobby.net/item/01_5096/",
+			"ja": "Figure-rise Standard ULTRAMAN SUIT JACK -ACTION-"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -34,21 +65,22 @@
 			"• Can also be used with Figure-rise Standard ULTRAMAN SUIT ZERO -ACTION- (sold separately)."
 		]
 	},
-	"images": [
-		"/images/items/01_2771/153_3759.jpg",
-		"/images/items/01_2771/155_3759.jpg",
-		"/images/items/01_2771/156_3759.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2771/",
-	"brandIds": [],
-	"seriesIds": [
-		"ultraman"
-	],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5371",
-		"01_5244",
-		"01_5198",
-		"01_5096"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3759_s_9idv20b3381rucubg98pxv1vd99k.jpg",
+				"path": "/images/items/01_2771/153_3759.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3759_s_ta5kqg64tt33i68f3ra08ziv4g92.jpg",
+				"path": "/images/items/01_2771/155_3759.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3759_s_q9wajgcunmjb395h8fgiafec6qqi.jpg",
+				"path": "/images/items/01_2771/156_3759.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2771/"
 }

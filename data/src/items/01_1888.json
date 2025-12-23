@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 リックディアス（クワトロ・バジーナカラー）",
 		"en": "HGUC 1/144 Rick Diaz (Quattro Vasina color)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -17,40 +66,46 @@
 		"month": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"「機動戦士Z ガンダム」に登場する「リック・ディアス」のプラモデル。足首関節が別パーツになっており、広範囲の可動を実現出来ます。カメラアイ・ビームサーベルにはクリアーパーツを使用しています。"
+			"「機動戦士Zガンダム」に登場する「リック・ディアス」のプラモデル。足首関節が別パーツになっており、広範囲の可動を実現出来ます。カメラアイ・ビームサーベルにはクリアーパーツを使用しています。"
 		],
 		"en": [
-			"Plastic model of \"Rick Diaz \" appearing in \" Mobile Suit Z Gundam\". The ankle joint is a separate part, allowing for a wide range of movement. Clear parts are used for the camera eye and beam saber."
+			"Plastic model of \"Rick Diaz\" appearing in \"Mobile Suit ZGundam\". The ankle joint is a separate part, allowing for a wide range of movement. Clear parts are used for the camera eye and beam saber."
 		]
 	},
-	"images": [
-		"/images/items/01_1888/153_281.jpg",
-		"/images/items/01_1888/155_281.jpg",
-		"/images/items/01_1888/156_281.jpg",
-		"/images/items/01_1888/157_281.jpg",
-		"/images/items/01_1888/158_281.jpg",
-		"/images/items/01_1888/159_281.jpg",
-		"/images/items/01_1888/189_281.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1888/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
-	"manualId": "0231"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_281_s_cztqmikybjz2hoequ3ijps96aqob.jpg",
+				"path": "/images/items/01_1888/153_281.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_281_s_uvb48mdhktytabx9y5rt0azs30kf.jpg",
+				"path": "/images/items/01_1888/155_281.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_281_s_aqrwqsuin8hmgmmt4dpdh6n6sr44.jpg",
+				"path": "/images/items/01_1888/156_281.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_281_s_eoj06wqs6g27tzhg3cx6sd0f8a1d.jpg",
+				"path": "/images/items/01_1888/157_281.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_281_s_a62kxli9zhogjx563zjfltuysix4.jpg",
+				"path": "/images/items/01_1888/158_281.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_281_s_obodis25r7vnptview2vy42teilg.jpg",
+				"path": "/images/items/01_1888/159_281.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_281_s_opbimehrwhyi3nk02hvagh6bu8ey.jpg",
+				"path": "/images/items/01_1888/189_281.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1888/"
 }

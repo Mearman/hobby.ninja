@@ -2,9 +2,52 @@
 	"id": "01_2831",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット シャア専用ザクII(クロスシルエットフレームVer.) [クリアカラー]",
-		"en": "SD Gundam Cross Silhouette Char's Zaku II (Cross Silhouette Frame Ver.) [Clear Color]"
+		"ja": "SDガンダム クロスシルエット シャア専用ザクII(クロスシルエットフレームVer.) [クリアカラー]",
+		"en": "SDGundam Cross Silhouette Char's Zaku II (Cross Silhouette Frame Ver.) [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4132",
+			"url": "https://bandai-hobby.net/item/01_4132/",
+			"ja": "SDガンダム クロスシルエット ガンダムベース限定 RX-78-2 ガンダム(クロスシルエットフレームVer.)[ガンダムベースカラー]"
+		},
+		{
+			"id": "01_3495",
+			"url": "https://bandai-hobby.net/item/01_3495/",
+			"ja": "ハローキティ/ザクII[SDガンダムクロスシルエット][クリアカラー]"
+		},
+		{
+			"id": "01_3321",
+			"url": "https://bandai-hobby.net/item/01_3321/",
+			"ja": "SDガンダムクロスシルエット RX-78F00 ガンダム"
+		},
+		{
+			"id": "01_2806",
+			"url": "https://bandai-hobby.net/item/01_2806/",
+			"ja": "SDガンダムクロスシルエット RX-78-2 ガンダム＆シャア専用ザクII"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -20,10 +63,10 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"2つのシルエットが楽しめる「SD ガンダム クロスシルエット」シリーズから、シャア専用ザクIIがクリアカラーになって登場！",
+			"2つのシルエットが楽しめる「SDガンダム クロスシルエット」シリーズから、シャア専用ザクIIがクリアカラーになって登場！",
 			"• モノアイはレールにより可動！",
 			"• おなじみのザク・マシンガンに加え、ザク・バズーカ、ミサイルポッド、ヒート・ホークが付属！",
-			"• 同梱の「SD ガンダム クロスシルエットフレーム」により高頭身化を実現！",
+			"• 同梱の「SDガンダム クロスシルエットフレーム」により高頭身化を実現！",
 			"広い可動範囲を生かして、キックポーズもクールに決まる！"
 		],
 		"en": [
@@ -34,29 +77,22 @@
 			"Taking advantage of the wide range of motion, you can also do cool kick poses!"
 		]
 	},
-	"images": [
-		"/images/items/01_2831/153_3815.jpg",
-		"/images/items/01_2831/155_3815.jpg",
-		"/images/items/01_2831/156_3815.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2831/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4132",
-		"01_3495",
-		"01_3321",
-		"01_2806"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3815_o_1e4l4cfqh7bu11dh19nhsvksvf28.jpg",
+				"path": "/images/items/01_2831/153_3815.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3815_o_1e4l4cnh63okrvkp2vpdl1q062d.jpg",
+				"path": "/images/items/01_2831/155_3815.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3815_o_1e4l4cs9ie68ritpmgp461u6v2i.jpg",
+				"path": "/images/items/01_2831/156_3815.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2831/"
 }

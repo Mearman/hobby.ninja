@@ -2,9 +2,46 @@
 	"id": "01_1361",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット RX-78-2 ガンダム & クロスシルエットフレーム セット",
-		"en": "SD Gundam Cross Silhouette RX-78-2 Gundam & Cross Silhouette Frame Set"
+		"ja": "SDガンダム クロスシルエット RX-78-2 ガンダム & クロスシルエットフレーム セット",
+		"en": "SDGundam Cross Silhouette RX-78-2 Gundam & Cross Silhouette Frame Set"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5275",
+			"url": "https://bandai-hobby.net/item/01_5275/",
+			"ja": "SDガンダム クロスシルエット マイティーストライクフリーダムガンダム"
+		},
+		{
+			"id": "01_5191",
+			"url": "https://bandai-hobby.net/item/01_5191/",
+			"ja": "SDガンダム クロスシルエット ガンダムキャリバーン"
+		},
+		{
+			"id": "01_5014",
+			"url": "https://bandai-hobby.net/item/01_5014/",
+			"ja": "SDガンダム クロスシルエット F9ノ1改"
+		},
+		{
+			"id": "01_4893",
+			"url": "https://bandai-hobby.net/item/01_4893/",
+			"ja": "SDガンダムクロスシルエット ユニコーンガンダム2号機バンシィ（デストロイモード）＆バンシィ・ノルン パーツセット"
+		}
+	],
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -20,67 +57,110 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"頭身自在の新世代SD ガンダム、ついに始動！",
+			"頭身自在の新世代SDガンダム、ついに始動！",
 			"• 「SDCS RX-78-2 ガンダム」とクロスシルエットフレーム［ホワイト］のセットとなっており、付属のSDフレームとCSフレームを選択して2種類のスタイリングを組み立てることが可能！",
 			"• 2種類のフレームは基本構造が共通となっており、フレームを組み合わせることで自分が思い描くプロポーションを作り出せる！"
 		],
 		"en": [
-			"The new generation SD Gundam, which has a flexible head and body, has finally started!",
-			"• It is a set of \"SDCS RX-78-2 Gundam\" and cross silhouette frame [white], and you can assemble two types of styling by selecting the included SD frame and CS frame!",
+			"The new generation SDGundam, which has a flexible head and body, has finally started!",
+			"• This is a set of \"SDCS RX-78-2 Gundam\" and cross silhouette frame [white], and you can assemble two types of styling by selecting the included SD frame and CS frame!",
 			"• The two types of frames have the same basic structure, so you can create the proportions you envision by combining the frames!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"シールド×1",
-			"ビーム・サーベル×1",
-			"クロスシルエットフレーム［ホワイト］×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "クロスシルエットフレーム［ホワイト］"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2288_s_z2a2p1f0qohzqlr5sznjkghf0m5c.jpg",
+				"path": "/images/items/01_1361/153_2288.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2288_s_h7xza2hvib8yymtt2qp91is8tgr4.jpg",
+				"path": "/images/items/01_1361/155_2288.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2288_s_t1vvr1wgn2xqltqfik1cq5o6j2e0.jpg",
+				"path": "/images/items/01_1361/156_2288.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2288_s_w6wy61it4mreu94j1dx07p17dsqr.jpg",
+				"path": "/images/items/01_1361/157_2288.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2288_s_c01q94qoolvrfwctqmr4jt7gnrq0.jpg",
+				"path": "/images/items/01_1361/158_2288.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2288_s_at42ws36zptl50haivlcwr3d1m01.jpg",
+				"path": "/images/items/01_1361/159_2288.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2288_s_w3p1xjwt6ruy3k83ihq0zxs4gei8.jpg",
+				"path": "/images/items/01_1361/189_2288.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2288_s_rmo9wtozl1wzvd3aq4r730t2stu0.jpg",
+				"path": "/images/items/01_1361/190_2288.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2288_s_z5azl2vcu0hkwzp25069zz4u0fii.jpg",
+				"path": "/images/items/01_1361/191_2288.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2288_s_m7fr3c69gjob79kh7qk0jy3fhvcl.jpg",
+				"path": "/images/items/01_1361/192_2288.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_2288_s_a20n0ulphvtt4ehpr9pupjyu1o02.jpg",
+				"path": "/images/items/01_1361/193_2288.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x1",
-			"Seal × 1",
-			"Beam saber x 1",
-			"Cross silhouette frame [white] x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×3",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 3",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1361/153_2288.jpg",
-		"/images/items/01_1361/155_2288.jpg",
-		"/images/items/01_1361/156_2288.jpg",
-		"/images/items/01_1361/157_2288.jpg",
-		"/images/items/01_1361/158_2288.jpg",
-		"/images/items/01_1361/159_2288.jpg",
-		"/images/items/01_1361/189_2288.jpg",
-		"/images/items/01_1361/190_2288.jpg",
-		"/images/items/01_1361/191_2288.jpg",
-		"/images/items/01_1361/192_2288.jpg",
-		"/images/items/01_1361/193_2288.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1361/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5275",
-		"01_5191",
-		"01_5014",
-		"01_4893"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1361/"
 }

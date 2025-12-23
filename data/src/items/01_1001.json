@@ -5,6 +5,50 @@
 		"ja": "HGBF 1/144 ガンダムシュバルツリッター",
 		"en": "HGBF 1/144 Gundam Schwarzritter"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 20
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 公式外伝「ビルドファイターズA-R」に登場するガンダムシュバルツリッターがHGBFでキット化！",
@@ -26,59 +69,79 @@
 			"• 特徴的なバックパックは、左右のウイングと腰にマウントしているグリップパーツを組み合わせることで片刃剣に変形！また、左右のウイングをあわせると巨大な剣にも変形ができる！"
 		],
 		"en": [
-			"• Gundam Schwarzritter that appears in the official side story \"Build Fighters A-R\" is now available as a kit in HGBF!",
+			"• Gundam Schwarzritter that appears in the official Gaiden \"Build Fighters A-R\" is now available as a kit in HGBF!",
 			"• The missing link from Cathedral Gundam to Denial Gundam has been revealed!",
 			"• The distinctive backpack transforms into a single-edged sword by combining the left and right wings and the grip parts mounted on the waist! Also, by combining the left and right wings, you can transform it into a huge sword!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"巨大サーベル×2",
-			"サーベルグリップ×3",
-			"短剣刃パーツ×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "巨大サーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "サーベルグリップ"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "短剣刃パーツ"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 10
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1938_s_fiov9083rbmhg5qk6efb1x7g5e3l.jpg",
+				"path": "/images/items/01_1001/153_1938.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1938_s_fh0yx89iv548s9zcnlv1u17jq034.jpg",
+				"path": "/images/items/01_1001/155_1938.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_1938_s_fy59is6imm15vdub77graqhgx9c8.jpg",
+				"path": "/images/items/01_1001/156_1938.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_1938_s_e4it4gft4d8msx25svjrzzupgush.jpg",
+				"path": "/images/items/01_1001/157_1938.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_1938_s_z6ujew7ylgkjqrzw397rr70ssjxs.jpg",
+				"path": "/images/items/01_1001/158_1938.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_1938_s_uqo0ujx26vdre901lwixhmyssumn.jpg",
+				"path": "/images/items/01_1001/159_1938.jpg"
+			}
 		],
-		"en": [
-			"Giant saber x2",
-			"Saber grip x3",
-			"Dagger blade parts x 2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×10",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 10",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1001/153_1938.jpg",
-		"/images/items/01_1001/155_1938.jpg",
-		"/images/items/01_1001/156_1938.jpg",
-		"/images/items/01_1001/157_1938.jpg",
-		"/images/items/01_1001/158_1938.jpg",
-		"/images/items/01_1001/159_1938.jpg",
-		"/images/items/01_1001/01_1001_inst_1.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1001/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
-	"manualId": "0753"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1001/"
 }

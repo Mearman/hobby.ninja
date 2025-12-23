@@ -2,9 +2,31 @@
 	"id": "01_2889",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム Gジェネレーション33 ジェミナス01",
-		"en": "SD Gundam G Generation 33 Geminus 01"
+		"ja": "SDガンダムGジェネレーション33 ジェミナス01",
+		"en": "SDGundamG Generation 33 Geminus 01"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "g-unit",
+			"url": "https://bandai-hobby.net/series/g-unit/",
+			"ja": "新機動戦記ガンダムW デュアルストーリー G-UNIT"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -19,25 +41,24 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"「SD ガンダム Gジェネレーション33 ジェミナス０１」が登場！"
+			"「SDガンダムGジェネレーション33 ジェミナス０１」が登場！"
 		],
 		"en": [
-			"\"SD Gundam G Generation 33 Geminus 01\" is now available!"
+			"\"SD GundamG Generation 33 Geminus 01\" is now available!"
 		]
 	},
-	"images": [
-		"/images/items/01_2889/153_3869.jpg",
-		"/images/items/01_2889/155_3869.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2889/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"g-unit"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": []
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3869_s_1mf1bioa4xg55f4b2o19ya7ei14a.jpg",
+				"path": "/images/items/01_2889/153_3869.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3869_s_pb11h91g3k5j1nm5rqlgicfjvwwv.jpg",
+				"path": "/images/items/01_2889/155_3869.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2889/"
 }

@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 プロヴィデンスガンダム",
 		"en": "HG 1/144 Providence Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181726",
+			"url": "https://p-bandai.jp/item/item-1000181726/",
+			"ja": "ＨＧ 1/144 ストライクダガー"
+		},
+		{
+			"id": "01_1930",
+			"url": "https://bandai-hobby.net/item/01_1930/",
+			"ja": "HG 1/144 ガンダムベース限定 フリーダムガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_384",
+			"url": "https://bandai-hobby.net/item/01_384/",
+			"ja": "HGCE 1/144 フリーダムガンダム"
+		},
+		{
+			"id": "01_83",
+			"url": "https://bandai-hobby.net/item/01_83/",
+			"ja": "HGCE 1/144 ストライクルージュ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -17,36 +61,34 @@
 		"month": 3
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム SEED」に登場する最後のガンダム「プロヴィデンスガンダム」の1/144スケールHG仕様のプラモデル。バックパックと腰部のドラグーンシステムは可動・分離を再現可能です。複合兵装防盾システムを左腕に装備し、ビームサーベル部分はクリアパーツで再現しています。武器はユーディキウム、ビームライフルを装備可能です。"
+			"「機動戦士ガンダムSEED」に登場する最後のガンダム「プロヴィデンスガンダム」の1/144スケールHG仕様のプラモデル。バックパックと腰部のドラグーンシステムは可動・分離を再現可能です。複合兵装防盾システムを左腕に装備し、ビームサーベル部分はクリアパーツで再現しています。武器はユーディキウム、ビームライフルを装備可能です。"
 		],
 		"en": [
-			"A 1/144 Scale HG plastic model of the last Gundam \"Providence Gundam \" that appears in \" Mobile Suit Gundam SEED\". The backpack and waist dragoon system can be moved and separated. A composite weapon mantlet system is equipped on the left arm, and the beam saber part is reproduced with clear parts. Weapons can be equipped with eudychium and beam rifle."
+			"A 1/144 Scale HG plastic model of the last Gundam \"Providence Gundam\" that appears in \"Mobile Suit Gundam SEED\". The backpack and waist dragoon system can be moved and separated. A composite weapon mantlet system is equipped on the left arm, and the beam saber part is reproduced with clear parts. Weapons can be equipped with eudychium and beam rifle."
 		]
 	},
-	"images": [
-		"/images/items/01_3169/153_412.jpg",
-		"/images/items/01_3169/155_412.jpg",
-		"/images/items/01_3169/156_412.jpg",
-		"/images/items/01_3169/157_412.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3169/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181726",
-		"01_1930",
-		"01_384",
-		"01_83"
-	],
-	"manualId": "0885"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/157_412_s_ih21ti2uw0j6xzbmr2d16u5b9euc.jpg",
+				"path": "/images/items/01_3169/157_412.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_412_s_b74v2y09w5yb10sujb8o3cechfng.jpg",
+				"path": "/images/items/01_3169/153_412.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_412_s_t0x0jduksmdaaqv3brb2qe8mk16f.jpg",
+				"path": "/images/items/01_3169/155_412.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_412_s_rmub8zdzg6wztbpdhxi8xyf3mkjw.jpg",
+				"path": "/images/items/01_3169/156_412.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3169/"
 }

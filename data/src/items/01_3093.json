@@ -5,6 +5,44 @@
 		"ja": "1/144 ボール",
 		"en": "1/144 ball"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 330,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 9
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"1/144と1/250の２種が同梱されています。・ 1/144スケールには専用のディスプレイスタンドが付属しています。主砲は両スケールとも可動します。 ハンド部は1/144が可動式、1/250が固定式です。"
@@ -26,23 +63,18 @@
 			"Two types, 1/144 and 1/250, are included. - 1/144Scale comes with a dedicated display stand. Both scales of the main gun are movable. The hand part is 1/144 movable and 1/250 fixed."
 		]
 	},
-	"images": [
-		"/images/items/01_3093/153_4060.jpg",
-		"/images/items/01_3093/155_4060.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3093/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	],
-	"manualId": "1961"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4060_s_12go4fulh03cv40le3lg2chcoetf.jpg",
+				"path": "/images/items/01_3093/153_4060.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4060_s_idtkqehqmx7oeifrund6hrorrkgr.jpg",
+				"path": "/images/items/01_3093/155_4060.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3093/"
 }

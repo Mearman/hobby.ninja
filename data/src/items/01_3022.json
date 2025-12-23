@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガンダムベース限定 デスティニーガンダム [スペシャルコーティング]",
-		"en": "HG 1/144 Gundam Base Limited Destiny Gundam [Special Coating]"
+		"en": "HG 1/144 THE GUNDAM BASE LIMITED DESTINY GUNDAM [SPECIAL COATING]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY",
+			"en": "MOBILE SUIT GUNDAM SEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000203308",
+			"url": "https://p-bandai.jp/item/item-1000203308/",
+			"ja": "ＨＧ 1/144 ダークダガーＬ"
+		},
+		{
+			"id": "01_5097",
+			"url": "https://bandai-hobby.net/item/01_5097/",
+			"ja": "HG 1/144 デストロイガンダム"
+		},
+		{
+			"id": "01_3739",
+			"url": "https://bandai-hobby.net/item/01_3739/",
+			"ja": "HG 1/144 デスティニーガンダム(ハイネ専用機)[クリアカラー]"
+		},
+		{
+			"id": "item-1000157417",
+			"url": "https://p-bandai.jp/item/item-1000157417/",
+			"ja": "ＨＧ 1/144 ウィンダム（ネオ・ロアノーク専用機）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4840,
 		"currency": "JPY",
@@ -18,11 +64,10 @@
 		"day": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"『機動戦士ガンダム SEED DESTINY』より、主役機デスティニーガンダムがスペシャルコーティング仕様で登場！",
+			"『機動戦士ガンダムSEED DESTINY』より、主役機デスティニーガンダムがスペシャルコーティング仕様で登場！",
 			"• 外装には銀メッキを施し、重厚感あふれる仕上がりに！",
 			"• 胴体に内蔵された二重関節によりデスティニーガンダムに特徴的な前屈するアクションを再現可能！",
 			"• ハンドパーツは武器を保持できる握り手や「パルマフィオキーナ」用の開き手が付属！",
@@ -30,41 +75,45 @@
 			"• 迫力のポージングを彩る豊富なエフェクトパーツが付属！"
 		],
 		"en": [
-			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"From \"Mobile Suit Gundam SEED DESTINY\", the main character Destiny Gundam is now available with special coating specifications!",
-			"• The exterior is silver-plated, giving it a solid finish!",
-			"• The double joints built into the torso allow you to reproduce Destiny Gundam's characteristic forward bending action!",
-			"• Hand parts include a grip that can hold weapons and an open hand for \"Palma Fiochina\"!",
-			"• Comes with a wealth of armaments including Arondite, high-energy long-range beam cannon, beam boomerang, and more!",
-			"• Comes with a variety of effect parts that will add color to your impressive poses!"
+			"For GUNPLA fans around the world, this is a limited edition GUNPLA at the official GUNPLA complex \"GUNDAM Base\". From \"MOBILE SUIT GUNDAM SEED DESTINY\", the main machine Destiny GUNDAM is now available with a special coating!",
+			"• The exterior is silver-plated for a profound finish!",
+			"• The double joints built into the torso allow you to recreate the forward-bending action characteristic of Destiny GUNDAM!",
+			"• Hand parts include a grip that can hold weapons and an opening hand for \"Palma Fiokina\"!",
+			"• Arondite, high-energy long-range beam cannon, beam boomerang, and a wide variety of other weapons are included!",
+			"• Comes with a wealth of effect parts to color your powerful poses!"
 		]
 	},
-	"images": [
-		"/images/items/01_3022/1000147616_1.jpg",
-		"/images/items/01_3022/1000147616_2.jpg",
-		"/images/items/01_3022/1000147616_3.jpg",
-		"/images/items/01_3022/1000147616_4.jpg",
-		"/images/items/01_3022/1000147616_5.jpg",
-		"/images/items/01_3022/1000147616_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147616_6.jpg",
+				"path": "/images/items/01_3022/1000147616_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147616_1.jpg",
+				"path": "/images/items/01_3022/1000147616_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147616_2.jpg",
+				"path": "/images/items/01_3022/1000147616_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147616_3.jpg",
+				"path": "/images/items/01_3022/1000147616_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147616_4.jpg",
+				"path": "/images/items/01_3022/1000147616_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147616_5.jpg",
+				"path": "/images/items/01_3022/1000147616_5.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3022/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_3022/"
 	}
 }

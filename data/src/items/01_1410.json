@@ -5,6 +5,50 @@
 		"ja": "HGBD 1/144　ガンダムダブルオースカイ（ハイヤーザンスカイフェイズ）",
 		"en": "HGBD 1/144 Gundam Double O Sky (Higher Than Sky Phase)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 31
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ダブルオースカイが一時的にさらなる性能強化を果たした「ハイヤーザンスカイフェイズ」が立体化！",
@@ -29,67 +72,123 @@
 			"• The characteristic coloring has been reproduced, and effect parts from the movie are included!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームライフル×1",
-			"ビームサーベル×2",
-			"バスターソード×1",
-			"ロングライフル×1",
-			"バックパック用ジョイントパーツ×1",
-			"手首パーツ（左平手）×1",
-			"エフェクトパーツ×1式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "バスターソード"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ロングライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バックパック用ジョイントパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "手首パーツ（左平手）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "エフェクトパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 9
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アクションベース"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2332_o_1ckhv8brs402tj51oc75jm1l3523.jpg",
+				"path": "/images/items/01_1410/153_2332.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2332_o_1ckhv8mtuavpm3o1cn36p0ig82d.jpg",
+				"path": "/images/items/01_1410/155_2332.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2332_o_1ckhv8rgjsacisqvgveh81nm32i.jpg",
+				"path": "/images/items/01_1410/156_2332.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2332_o_1ckhv90dr1vclcgd19bd168k1r632n.jpg",
+				"path": "/images/items/01_1410/157_2332.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2332_o_1ckhv952oi4c1q6tmjq1ksp14bn2s.jpg",
+				"path": "/images/items/01_1410/158_2332.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2332_o_1ckhv99rrn0ioke104a8qr5pa31.jpg",
+				"path": "/images/items/01_1410/159_2332.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2332_o_1ckhv9fsa191r1dh6cn91nt81m9c36.jpg",
+				"path": "/images/items/01_1410/189_2332.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2332_o_1ckhv9l12u6b1cpf1segsiecdk3b.jpg",
+				"path": "/images/items/01_1410/190_2332.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2332_o_1ckhv9pe31gh31dgm1hgi14dq1j5q3g.jpg",
+				"path": "/images/items/01_1410/191_2332.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2332_o_1ckhvij4m1k901a8u1n6gqjgkk523.jpg",
+				"path": "/images/items/01_1410/192_2332.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x 1",
-			"Beam saber x2",
-			"Buster sword x1",
-			"Long rifle x 1",
-			"Backpack joint parts x 1",
-			"Wrist parts (left palm) x 1",
-			"Effect parts x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×9",
-			"ホイルシール×1",
-			"取扱説明書×1",
-			"アクションベース×1"
-		],
-		"en": [
-			"Molded product x 9",
-			"Foil Seal×1",
-			"Handling manual×1",
-			"Action base x 1"
-		]
-	},
-	"images": [
-		"/images/items/01_1410/153_2332.jpg",
-		"/images/items/01_1410/155_2332.jpg",
-		"/images/items/01_1410/156_2332.jpg",
-		"/images/items/01_1410/157_2332.jpg",
-		"/images/items/01_1410/158_2332.jpg",
-		"/images/items/01_1410/159_2332.jpg",
-		"/images/items/01_1410/189_2332.jpg",
-		"/images/items/01_1410/190_2332.jpg",
-		"/images/items/01_1410/191_2332.jpg",
-		"/images/items/01_1410/192_2332.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1410/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "1041"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1410/"
 }

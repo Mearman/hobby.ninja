@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "SD 三国創傑伝 孫堅ガンダムアストレイ",
-		"en": "SD Sangoku Soketsuden Sunken Gundam Astray"
+		"en": "SD SANGOKU SOKETSUDEN Sun Jian GUNDAM ASTRAY"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "soketsuden",
+			"url": "https://bandai-hobby.net/series/soketsuden/",
+			"ja": "三国創傑伝",
+			"en": "SD SANGOKU SOKETSUDEN"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2642",
+			"url": "https://bandai-hobby.net/item/01_2642/",
+			"ja": "SD 三国創傑伝 天覇曹操ウイングガンダム"
+		},
+		{
+			"id": "01_2614",
+			"url": "https://bandai-hobby.net/item/01_2614/",
+			"ja": "SD 三国創傑伝 典韋マスターガンダム"
+		},
+		{
+			"id": "01_2615",
+			"url": "https://bandai-hobby.net/item/01_2615/",
+			"ja": "SD 三国創傑伝 徐晃ガンダムデスサイズ"
+		},
+		{
+			"id": "01_2643",
+			"url": "https://bandai-hobby.net/item/01_2643/",
+			"ja": "SD 三国創傑伝 甘寧クロスボーンガンダム"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -20,55 +58,81 @@
 	"description": {
 		"ja": [
 			"【2021年春、日本展開開始！！】",
-			"• 『三国志』をベースにしたSD ガンダムが装いも新たに登場！",
+			"• 『三国志』をベースにしたSDガンダムが装いも新たに登場！",
 			"• 進化したプロポーションとパーツ分割へのこだわりにより、組み立てただけでSD史上最高峰の色分けを実現。",
 			"• 一新された頭身バランスと各所の関節構造により、躍動感あふれるポージングを再現！",
 			"• 大型バックパック「骸ノ神器」が付属。荒々しい武装のシルエットを表現。",
 			"• タイガーメモリが付属し、刀「立神」に装着が可能。"
 		],
 		"en": [
-			"[Spring 2021, main rollout begins! ! ]",
-			"• SD Gundam based on \"Romance of the Three Kingdoms\" now has a new look!",
-			"• With advanced proportions and attention to parts division, we have achieved the highest color separation in SD history using just the assembly.",
-			"• The all-new head and body balance and joint structure in various parts allow for dynamic poses!",
-			"• A large backpack \"Mukuro no Sacred Treasure\" is included. Expressing the silhouette of a fiercely armed weapon.",
-			"• Tiger memory is included and can be attached to the sword \"Tategami\"."
+			"[Spring 2021, Japan expansion starts! !! 】",
+			"• SD GUNDAM based on \"Three Kingdoms\" has a new look!",
+			"• With advanced proportions and a commitment to dividing parts, the highest color coding in SD history has been achieved just by assembling.",
+			"• The new head and body balance and joint structure in various places reproduce a lively pose!",
+			"• Comes with a large backpack \"Skeleton Sacred Weapon\". It expresses the silhouette of a rough weapon."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"骸ノ神器×1",
-			"立神×1",
-			"メモリ×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "骸ノ神器",
+				"en": "• Sacred Artifact"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "立神",
+				"en": "• Ritsujin"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "メモリ",
+				"en": "• Memory"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "• Foil seal"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153056_1.jpg",
+				"path": "/images/items/01_2205/1000153056_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153056_2.jpg",
+				"path": "/images/items/01_2205/1000153056_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153056_3.jpg",
+				"path": "/images/items/01_2205/1000153056_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153056_4.jpg",
+				"path": "/images/items/01_2205/1000153056_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153056_5.jpg",
+				"path": "/images/items/01_2205/1000153056_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153056_6.jpg",
+				"path": "/images/items/01_2205/1000153056_6.jpg"
+			}
 		],
-		"en": [
-			"Mukuro Sacred Treasure x1",
-			"Tategami×1",
-			"Memory x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2205/1000153056_1.jpg",
-		"/images/items/01_2205/1000153056_2.jpg",
-		"/images/items/01_2205/1000153056_3.jpg",
-		"/images/items/01_2205/1000153056_4.jpg",
-		"/images/items/01_2205/1000153056_5.jpg",
-		"/images/items/01_2205/1000153056_6.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2205/",
-	"brandIds": [],
-	"seriesIds": [
-		"soketsuden"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2642",
-		"01_2614",
-		"01_2615",
-		"01_2643"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2205/"
+	}
 }

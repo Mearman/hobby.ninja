@@ -2,9 +2,37 @@
 	"id": "01_3247",
 	"type": "item",
 	"name": {
-		"ja": "ＢＢ戦士 22 S ガンダム",
-		"en": "BB Senshi 22 S Gundam"
+		"ja": "ＢＢ戦士 22 Sガンダム",
+		"en": "BB Senshi 22 SGundam"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "sentinel",
+			"url": "https://bandai-hobby.net/series/sentinel/",
+			"ja": "ガンダム・センチネル"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3244",
+			"url": "https://bandai-hobby.net/item/01_3244/",
+			"ja": "ＢＢ戦士 21 ゼータプラス"
+		}
+	],
 	"price": {
 		"amount": 330,
 		"currency": "JPY",
@@ -18,20 +46,14 @@
 		"day": 10
 	},
 	"targetAge": 15,
-	"images": [
-		"/images/items/01_3247/153_4200.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3247/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"sentinel"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3244"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4200_s_v0w5yfbj3jcxuxw8ldqulqm8abt3.jpg",
+				"path": "/images/items/01_3247/153_4200.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3247/"
 }

@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "バンダイプラモデル アクションベース4 ブラック",
-		"en": "Bandai Plastic Model Action Base 4 Black"
+		"en": "ACTION BASE 4 BLACK"
 	},
+	"brands": [
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース",
+			"en": "ACTION BASE"
+		},
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5934",
+			"url": "https://bandai-hobby.net/item/01_5934/",
+			"ja": "アクションベース7 [クリアカラー] 機動戦士Gundam GQuuuuuuXシールセット"
+		},
+		{
+			"id": "01_5256",
+			"url": "https://bandai-hobby.net/item/01_5256/",
+			"ja": "アクションベース6 [クリアカラー] ミラーシールセット"
+		},
+		{
+			"id": "01_5258",
+			"url": "https://bandai-hobby.net/item/01_5258/",
+			"ja": "アクションベース7 [クリアカラー] ミラーシールセット"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -25,51 +63,71 @@
 			"• 豊富なジョイントパーツとサポートパーツが付属。"
 		],
 		"en": [
-			"• An action base with a new concept and excellent expandability is now available!",
-			"• 3 pillars (long) and pedestals are included.",
-			"• A variety of joint parts and support parts are included."
+			"• A new concept of an action-based game with outstanding expandability is now available!",
+			"• Comes with 3 pillars (long) and pedestal."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ベースパーツ×3",
-			"支柱パーツ（長）×1",
-			"ジョイントパーツ各種",
-			"その他サポートパーツ各種"
-		],
-		"en": [
-			"Base parts x 3",
-			"Support part (long) x 1",
-			"Various joint parts",
-			"Various other support parts"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 4",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1173/1000121222_1.jpg",
-		"/images/items/01_1173/1000121222_2.jpg",
-		"/images/items/01_1173/1000121222_3.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ベースパーツ",
+				"en": "• Base Parts"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "支柱パーツ（長）",
+				"en": "• Pillar parts (long)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ各種",
+				"en": "• Various joint parts"
+			}
+		},
+		{
+			"name": {
+				"ja": "その他サポートパーツ各種",
+				"en": "• Other support parts 【Product details】"
+			}
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121222_1.jpg",
+				"path": "/images/items/01_1173/1000121222_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121222_2.jpg",
+				"path": "/images/items/01_1173/1000121222_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121222_3.jpg",
+				"path": "/images/items/01_1173/1000121222_3.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1173/",
-	"brandIds": [
-		"actionbase"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5934",
-		"01_5256",
-		"01_5258"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1173/"
+	}
 }

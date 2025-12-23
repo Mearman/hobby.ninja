@@ -5,6 +5,43 @@
 		"ja": "ハロプラ モモハロ",
 		"en": "Haropura Momoharo"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5189",
+			"url": "https://bandai-hobby.net/item/01_5189/",
+			"ja": "オプションパーツセット ガンプラ 04 (ビルドハンズ 丸型)"
+		},
+		{
+			"id": "01_5190",
+			"url": "https://bandai-hobby.net/item/01_5190/",
+			"ja": "オプションパーツセット ガンプラ 03 (ビルドハンズ 角型)"
+		},
+		{
+			"id": "01_3063",
+			"url": "https://bandai-hobby.net/item/01_3063/",
+			"ja": "ハロプラ ガンダムベース限定 モビルハロ[ガンダムベースカラー]"
+		},
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -26,48 +63,60 @@
 		],
 		"en": [
 			"The pink-colored halo that appears in \"Gundam Build Divers\" is now available!",
-			"• Adorable ear parts are included, making it an even cuter silhouette, and the ear parts can be moved to create different expressions!",
-			"• In addition to being interchangeable, you can also recreate the state with the arms and legs out, and a pedestal for Haropura is also included!"
+			"• Comes with adorable ear parts, making it an even cuter silhouette, and the ear parts can be moved to create different expressions!",
+			"• In addition to being interchangeable, you can recreate the state with the arms and legs out, and a pedestal for Haropura is also included!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用台座×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用台座"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2256_s_ktto114p8vjc10nz4p7h7ucw8lc3.jpg",
+				"path": "/images/items/01_1328/153_2256.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2256_s_p7flbgkm4i6yg0zr09j6o5fd0cc6.jpg",
+				"path": "/images/items/01_1328/155_2256.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2256_s_pks5u539etvbwh6fsq9fsfk8mq1w.jpg",
+				"path": "/images/items/01_1328/156_2256.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2256_s_11zrnc9gs5h717qbfnasfd6nemko.jpg",
+				"path": "/images/items/01_1328/157_2256.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2256_s_rb50hvhyu9e2mzikfqa4vi6sppf2.jpg",
+				"path": "/images/items/01_1328/158_2256.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2256_s_0v17muzsa58secyagwd15sl789bg.jpg",
+				"path": "/images/items/01_1328/159_2256.jpg"
+			}
 		],
-		"en": [
-			"Dedicated pedestal x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×3",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 3",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1328/153_2256.jpg",
-		"/images/items/01_1328/155_2256.jpg",
-		"/images/items/01_1328/156_2256.jpg",
-		"/images/items/01_1328/157_2256.jpg",
-		"/images/items/01_1328/158_2256.jpg",
-		"/images/items/01_1328/159_2256.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1328/",
-	"brandIds": [],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5189",
-		"01_5190",
-		"01_3063",
-		"01_2623"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1328/"
 }

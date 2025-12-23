@@ -5,6 +5,50 @@
 		"ja": "RG 1/144 ユニコーンガンダム［プレミアム”ユニコーンモード”ボックス］",
 		"en": "RG 1/144 Unicorn Gundam [Premium “Unicorn Mode” Box]"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1899",
+			"url": "https://bandai-hobby.net/item/01_1899/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-0 ユニコーンガンダム(デストロイモード) Ver.TWC(LIGHTING MODEL)"
+		},
+		{
+			"id": "01_1259",
+			"url": "https://bandai-hobby.net/item/01_1259/",
+			"ja": "RG 1/144 ユニコーンガンダム2号機 バンシィ・ノルン"
+		},
+		{
+			"id": "01_1950",
+			"url": "https://bandai-hobby.net/item/01_1950/",
+			"ja": "RG 1/144 シナンジュ[クリアカラー]"
+		},
+		{
+			"id": "01_1085",
+			"url": "https://bandai-hobby.net/item/01_1085/",
+			"ja": "RG 1/144 ユニコーンガンダム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 5
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• GUNPLA EVOLUTION PROJECT第2弾として、リアリティを追求したフォルムと変身ギミックが再現された「RG ユニコーンガンダム」がついに登場！",
@@ -28,63 +71,99 @@
 		],
 		"en": [
 			"• As the second installment of GUNPLA EVOLUTION PROJECT, \"RG Unicorn Gundam\", which reproduces the realistic form and transformation gimmick, is finally here!",
-			"• \"EVOLUTION POINT \" is \" TRANSFORMATION\", achieving transformation that exceeds the limits within the constraints of 1/144 Scale!",
+			"• \"EVOLUTION POINT\" is \"TRANSFORMATION\", achieving transformation beyond the limits within the constraints of 1/144 Scale!",
 			"• The new mechanism \"Advanced MS Framework\" equipped with three gimmicks achieves both high stability after assembly and movability of each part!",
 			"• In addition to the regular package, a first-time limited package [Premium “Unicorn Mode” Box] is also available!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・マグナム×1",
-			"ビーム・サーベル×2",
-			"シールド×1",
-			"ハイパー・バズーカ×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・マグナム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハイパー・バズーカ×１"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 10
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2018_s_nwb9jvbgbmtc02piwp872l0nzro2.jpg",
+				"path": "/images/items/01_1086/153_2018.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2018_s_gz6tg6ck46hlscwa7o8m4g3tfpzq.jpg",
+				"path": "/images/items/01_1086/155_2018.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2018_s_lsb8hvaohjhidvwsganr4ojife3x.jpg",
+				"path": "/images/items/01_1086/156_2018.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2018_s_8fvs4omfrkq8lacsk4t2cjriehly.jpg",
+				"path": "/images/items/01_1086/157_2018.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2018_s_8ff0bm4hnehpctl5ln9z94y313xo.jpg",
+				"path": "/images/items/01_1086/158_2018.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2018_s_j9ytwbsbbqog0v0ygsp4ec5l9ecj.jpg",
+				"path": "/images/items/01_1086/159_2018.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2018_s_sts616ill0431c9ocaklvt3laeyo.jpg",
+				"path": "/images/items/01_1086/189_2018.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2018_s_wmiil9f4qo2qx3u976a3ve18t0hi.jpg",
+				"path": "/images/items/01_1086/190_2018.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2018_s_12v194eebehw6shu255h62y340mc.jpg",
+				"path": "/images/items/01_1086/191_2018.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2018_s_an368gg8vsrtesz333biwjqg4r0s.jpg",
+				"path": "/images/items/01_1086/192_2018.jpg"
+			}
 		],
-		"en": [
-			"Beam Magnum x 1",
-			"Beam saber x2",
-			"Seal × 1",
-			"Hyper bazooka x1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×10",
-			"リアリスティックデカール×１",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 10",
-			"Realistic decal x 1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1086/153_2018.jpg",
-		"/images/items/01_1086/155_2018.jpg",
-		"/images/items/01_1086/156_2018.jpg",
-		"/images/items/01_1086/157_2018.jpg",
-		"/images/items/01_1086/158_2018.jpg",
-		"/images/items/01_1086/159_2018.jpg",
-		"/images/items/01_1086/189_2018.jpg",
-		"/images/items/01_1086/190_2018.jpg",
-		"/images/items/01_1086/191_2018.jpg",
-		"/images/items/01_1086/192_2018.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1086/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1899",
-		"01_1259",
-		"01_1950",
-		"01_1085"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1086/"
 }

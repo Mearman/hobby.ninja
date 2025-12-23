@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "ハロプラ　モモハロ[クリアカラー]",
-		"en": "Haropura Momoharo [Clear color]"
+		"en": "HAROPLA MOMOHARO [CLEAR COLOR]"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ",
+			"en": "GUNDAM BUILD DIVERS"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5189",
+			"url": "https://bandai-hobby.net/item/01_5189/",
+			"ja": "オプションパーツセット ガンプラ 04 (ビルドハンズ 丸型)"
+		},
+		{
+			"id": "01_5190",
+			"url": "https://bandai-hobby.net/item/01_5190/",
+			"ja": "オプションパーツセット ガンプラ 03 (ビルドハンズ 角型)"
+		},
+		{
+			"id": "01_3063",
+			"url": "https://bandai-hobby.net/item/01_3063/",
+			"ja": "ハロプラ ガンダムベース限定 モビルハロ[ガンダムベースカラー]"
+		},
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -23,30 +61,18 @@
 			"かわいらしいハロのメカニカルな構造も見える仕様になっております。"
 		],
 		"en": [
-			"Haropura Momoharo is now available in clear color.",
-			"The mechanical structure of the cute halo is also visible."
+			"HAROPLA PINK VARIATION is now available in clear color. The mechanical structure of the cute halo is also visible."
 		]
 	},
-	"images": [
-		"/images/items/01_2113/01_2113_0.jpg",
-		"/images/items/01_2113/01_2113_1.jpg"
-	],
+	"images": {
+		"product": [
+			{},
+			{}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2113/",
-	"brandIds": [],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5189",
-		"01_5190",
-		"01_3063",
-		"01_2623"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2113/"
 	}
 }

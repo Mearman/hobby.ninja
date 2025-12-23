@@ -2,9 +2,53 @@
 	"id": "01_3000",
 	"type": "item",
 	"name": {
-		"ja": "HGBF 1/144 A-Z ガンダム",
-		"en": "HGBF 1/144 A-Z Gundam"
+		"ja": "HGBF 1/144 A-Zガンダム",
+		"en": "HGBF 1/144 A-ZGundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -18,18 +62,17 @@
 		"day": 27
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドファイターズ バトローグ』第5話に登場する、最新ガンプラ『A-Zガンダム』がHGBFシリーズで早くもキット化！",
-			"■パーツ差し替えで、2本の砲身が特徴的なウェーブライダー形態に変形が可能。",
-			"■全身に新規造形パーツを採用し、大型の背面バインダーや各種武装、特徴的な機体デザインを再現。",
-			"■EVOLUTION PROJECT 第一弾アイテムNo.203 HGUC ゼータガンダムの可動機構を踏襲。肩部と腰部には広い可動域を確保。",
-			"■A-Zメガランチャーは分裂して、小型ライフルに変形。左右に装備することも可能。シールドから発生するビーム刃も付属。",
+			"• パーツ差し替えで、2本の砲身が特徴的なウェーブライダー形態に変形が可能。",
+			"• 全身に新規造形パーツを採用し、大型の背面バインダーや各種武装、特徴的な機体デザインを再現。",
+			"• EVOLUTION PROJECT 第一弾アイテムNo.203 HGUC ゼータガンダムの可動機構を踏襲。肩部と腰部には広い可動域を確保。",
+			"• A-Zメガランチャーは分裂して、小型ライフルに変形。左右に装備することも可能。シールドから発生するビーム刃も付属。",
 			"※Amazon.co.jp限定販売商品"
 		],
 		"en": [
-			"The latest Gunpla “A-Z Gundam” that appears in episode 5 of “Gundam Build Fighters Battlogue” is already available as a kit in the HGBF series!",
+			"The latest Gunpla “A-ZGundam” that appears in episode 5 of “Gundam Build Fighters Battlogue” is already available as a kit in the HGBF series!",
 			"• By replacing parts, it can be transformed into a Waverider form featuring two gun barrels.",
 			"• Adopts new modeling parts throughout the body, reproducing the large back binder, various weapons, and distinctive aircraft design.",
 			"• EVOLUTION PROJECT first item No.203 Follows the movable mechanism of HGUC Zeta Gundam. A wide range of motion is ensured in the shoulders and waist.",
@@ -37,53 +80,74 @@
 			"*Amazon.co.jp exclusive product"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"A-Zメガランチャー×1",
-			"ダッシュシールド×1",
-			"ビームサーベルｘ2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "A-Zメガランチャー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ダッシュシールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 12
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3971_s_zhh1l0e793ljzpd3rnmov7r7h9f1.jpg",
+				"path": "/images/items/01_3000/153_3971.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3971_s_ezd6lcntdnf38t4g4zlrgvjkywti.jpg",
+				"path": "/images/items/01_3000/155_3971.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3971_s_z7m31zv2ns2fv6rprpptbbkuvdeb.jpg",
+				"path": "/images/items/01_3000/156_3971.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3971_s_flf0g7mm0zk5zxt1r1dtnzodpv4c.jpg",
+				"path": "/images/items/01_3000/157_3971.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3971_s_fnibyp7z489klbi1eyqi2xuo7ppw.jpg",
+				"path": "/images/items/01_3000/158_3971.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3971_s_inr9abaqfb35lru895n1clqp86nd.jpg",
+				"path": "/images/items/01_3000/159_3971.jpg"
+			}
 		],
-		"en": [
-			"A-Z Mega Launcher x 1",
-			"Dash Seal×1",
-			"Beam saber x2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×12",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 12",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_3000/153_3971.jpg",
-		"/images/items/01_3000/155_3971.jpg",
-		"/images/items/01_3000/156_3971.jpg",
-		"/images/items/01_3000/157_3971.jpg",
-		"/images/items/01_3000/158_3971.jpg",
-		"/images/items/01_3000/159_3971.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3000/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
-	"manualId": "2628"
+	"sourceUrl": "https://bandai-hobby.net/item/01_3000/"
 }

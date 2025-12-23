@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard 仮面ライダーカブト",
 		"en": "Figure-rise Standard Kamen Rider Kabuto"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "rider",
+			"url": "https://bandai-hobby.net/series/rider/",
+			"ja": "仮面ライダーシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5451",
+			"url": "https://bandai-hobby.net/item/01_5451/",
+			"ja": "Figure-rise Standard 仮面ライダーゼロワン ライジングホッパー"
+		},
+		{
+			"id": "item-1000215369",
+			"url": "https://p-bandai.jp/item/item-1000215369/",
+			"ja": "Figure-rise Standard 仮面ライダーファイズ ブラスターフォーム"
+		},
+		{
+			"id": "01_5276",
+			"url": "https://bandai-hobby.net/item/01_5276/",
+			"ja": "Figure-rise Standard 仮面ライダークウガ アルティメットフォーム"
+		},
+		{
+			"id": "01_5175",
+			"url": "https://bandai-hobby.net/item/01_5175/",
+			"ja": "Figure-rise Standard 仮面ライダーキバ キバフォーム"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -26,66 +69,119 @@
 		],
 		"en": [
 			"\"Kamen Rider Kabuto\", which was aired in 2006, has added new parts and a new look to the Figure-rise Standard lineup!",
-			"• New chest armor and shoulder armor. The range of motion of the chest has been expanded, and the color coding of the shoulders has been recreated to be similar to the actual suit.",
-			"• Improved range of motion of the hip joints, etc. makes it possible to reproduce poses such as rider kick and clock up."
+			"• Newly sculpted chest armor and shoulder armor. The range of motion of the chest has been expanded, and the color coding of the shoulders has been recreated to be similar to the actual suit.",
+			"• Improved range of motion in the hip joints, etc. makes it possible to reproduce poses such as rider kick and clock up."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"マスクドフォーム用アーマー×1式",
-			"カブトクナイガン×1",
-			"カブトゼクター×3種",
-			"ゼクトマイザー×1",
-			"手首パーツ×9種",
-			"ライダーキック用エフェクトパーツ×1",
-			"ディスプレイベース ×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "マスクドフォーム用アーマー"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "カブトクナイガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "カブトゼクター"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "ゼクトマイザー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "手首パーツ"
+			},
+			"count": 9,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "ライダーキック用エフェクトパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 9
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3077_s_qhn4e4u2xvkbpr545jbrja51fdju.jpg",
+				"path": "/images/items/01_2123/153_3077.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3077_s_pzmuat1saq6c8whn42f076a8h3z3.jpg",
+				"path": "/images/items/01_2123/155_3077.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3077_s_mvlcu1vlvstei5tiwgk21fgxcjrk.jpg",
+				"path": "/images/items/01_2123/156_3077.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3077_s_228a4yjtctm0w7qutvn6xbsyu6z6.jpg",
+				"path": "/images/items/01_2123/157_3077.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3077_s_kzicko1vnpc4acad0vxyqroszw31.jpg",
+				"path": "/images/items/01_2123/158_3077.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3077_s_9y7qaoznkwzpf9aa6odysf6wg09m.jpg",
+				"path": "/images/items/01_2123/159_3077.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3077_s_dctovk7956ooszfi1a4vwjddipfa.jpg",
+				"path": "/images/items/01_2123/189_3077.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3077_s_tl2frbi7rs26dknjtn2726bvwmrr.jpg",
+				"path": "/images/items/01_2123/190_3077.jpg"
+			}
 		],
-		"en": [
-			"Masked form armor x 1 set",
-			"Kabutokunaigan×1",
-			"Kabutozector x 3 types",
-			"Zectomizer x 1",
-			"Wrist parts x 9 types",
-			"Effect parts for rider kick x 1",
-			"Display base x1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×9",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 9",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2123/153_3077.jpg",
-		"/images/items/01_2123/155_3077.jpg",
-		"/images/items/01_2123/156_3077.jpg",
-		"/images/items/01_2123/157_3077.jpg",
-		"/images/items/01_2123/158_3077.jpg",
-		"/images/items/01_2123/159_3077.jpg",
-		"/images/items/01_2123/189_3077.jpg",
-		"/images/items/01_2123/190_3077.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2123/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"rider"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5451",
-		"item-1000215369",
-		"01_5276",
-		"01_5175"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2123/"
 }

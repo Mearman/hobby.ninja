@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 シエルノヴァ用オプションウェポン１",
-		"en": "30MM 1/144 Option Weapon 1 for Cielnova"
+		"en": "30MM 1/144 OPTION WEAPON 1 FOR CIELNOVA"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS",
+			"en": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7019",
+			"url": "https://bandai-hobby.net/item/01_7019/",
+			"ja": "30MM 1/144 bEXM-40 ノヴァルヴ[グリーン]"
+		},
+		{
+			"id": "01_7020",
+			"url": "https://bandai-hobby.net/item/01_7020/",
+			"ja": "30MM 1/144 オプションパーツセット23(フルアーマーユニット2)"
+		},
+		{
+			"id": "01_7021",
+			"url": "https://bandai-hobby.net/item/01_7021/",
+			"ja": "30MM 1/144 オプションパーツセット24(マルチオブジェクト1)"
+		},
+		{
+			"id": "01_7022",
+			"url": "https://bandai-hobby.net/item/01_7022/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON ARQUEBUS CORPORATION VP-40S"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMのオプションウェポンシリーズにシエルノヴァ用アイテムが登場！",
@@ -26,56 +69,117 @@
 			"• 各種ジョイントが付属。"
 		],
 		"en": [
-			"Items for Ciel Nova are now available in the 30MM optional Weapon series!",
-			"• A set of 8 items including a sniper rifle, gatling, large axe, sword mace, and kunai.",
+			"THE 30MM OPTIONAL WEAPON SERIES NOW INCLUDES ITEMS FOR CIEL NOVA!",
+			"• Set of 8 types including sniper rifle, gatling, large axe, sword mace, kunai, etc.",
 			"• Various joints are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ハンドガンパーツ×1",
-			"スナイパーライフルパーツ×1",
-			"ガトリングパーツ×1",
-			"ソードメイス×1",
-			"大型アックス×1",
-			"クナイ×1",
-			"シールド×1",
-			"バックパック×1式",
-			"各種ジョイント×1式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハンドガンパーツ",
+				"en": "• Handgun Parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "スナイパーライフルパーツ",
+				"en": "• Sniper Rifle Parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ガトリングパーツ",
+				"en": "• Gatling Parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ソードメイス",
+				"en": "• Sword Mace"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "大型アックス",
+				"en": "• Large Axe"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "クナイ",
+				"en": "• Kunai"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "• Backpack"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "set",
+				"en": "set"
+			}
+		},
+		{
+			"name": {
+				"ja": "バックパック",
+				"en": "• Various joints"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "set"
+			}
+		},
+		{
+			"name": {
+				"ja": "各種ジョイント"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150007_1.jpg",
+				"path": "/images/items/01_2860/1000150007_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150007_2.jpg",
+				"path": "/images/items/01_2860/1000150007_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150007_3.jpg",
+				"path": "/images/items/01_2860/1000150007_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150007_4.jpg",
+				"path": "/images/items/01_2860/1000150007_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150007_5.jpg",
+				"path": "/images/items/01_2860/1000150007_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150007_6.jpg",
+				"path": "/images/items/01_2860/1000150007_6.jpg"
+			}
 		],
-		"en": [
-			"Hand gun parts x 1",
-			"Sniper rifle parts x 1",
-			"Gatling parts x 1",
-			"Sword mace x1",
-			"Large ax x1",
-			"Kunai x 1",
-			"Seal × 1",
-			"Backpack x 1 set",
-			"Various joints x 1 set"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2860/1000150007_1.jpg",
-		"/images/items/01_2860/1000150007_2.jpg",
-		"/images/items/01_2860/1000150007_3.jpg",
-		"/images/items/01_2860/1000150007_4.jpg",
-		"/images/items/01_2860/1000150007_5.jpg",
-		"/images/items/01_2860/1000150007_6.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2860/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3699"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2860/"
+	}
 }

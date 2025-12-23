@@ -5,6 +5,43 @@
 		"ja": "SD 三国創傑伝 BUG & 部隊兵 セット",
 		"en": "SD Sangoku Soketsuden BUG & Troop Soldier Set"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "soketsuden",
+			"url": "https://bandai-hobby.net/series/soketsuden/",
+			"ja": "三国創傑伝"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2642",
+			"url": "https://bandai-hobby.net/item/01_2642/",
+			"ja": "SD 三国創傑伝 天覇曹操ウイングガンダム"
+		},
+		{
+			"id": "01_2614",
+			"url": "https://bandai-hobby.net/item/01_2614/",
+			"ja": "SD 三国創傑伝 典韋マスターガンダム"
+		},
+		{
+			"id": "01_2615",
+			"url": "https://bandai-hobby.net/item/01_2615/",
+			"ja": "SD 三国創傑伝 徐晃ガンダムデスサイズ"
+		},
+		{
+			"id": "01_2643",
+			"url": "https://bandai-hobby.net/item/01_2643/",
+			"ja": "SD 三国創傑伝 甘寧クロスボーンガンダム"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -20,7 +57,7 @@
 	"description": {
 		"ja": [
 			"【2021年春、日本展開開始！！】",
-			"• 『三国志』をベースにしたSD ガンダムが装いも新たに登場！",
+			"• 『三国志』をベースにしたSDガンダムが装いも新たに登場！",
 			"• 一新された頭身バランスと各所の関節構造により、躍動感あふれるポージングを再現！",
 			"• リバーシブル構造の頭部は、4種類の部隊兵とBUGの計5種から2体を選択再現可能！",
 			"• 3エリアのビームフラッグを取扱説明書で再現！",
@@ -28,46 +65,65 @@
 		],
 		"en": [
 			"[Spring 2021, main rollout begins! ! ]",
-			"• SD Gundam based on \"Romance of the Three Kingdoms\" now has a new look!",
-			"• The all-new head and body balance and joint structure in various parts allow for dynamic poses!",
+			"• SDGundam based on “Romance of the Three Kingdoms” has a new look!",
+			"• Reproduce dynamic poses with a completely new head and body balance and joint structure in various places!",
 			"• The reversible structure of the head allows you to select and reproduce two out of a total of five types: four types of troops and BUG!",
 			"• Beam flags in 3 areas are reproduced in the handling manual!",
-			"• Assembly Simple structure. In addition to being compatible with the action base (sold separately), it also has common backpack mounting holes, allowing for customization!"
+			"• Simple structure with easy assembly. In addition to being compatible with the action base (sold separately), it also has common backpack mounting holes, allowing for customization!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"カービンランス×1",
-			"剣×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "カービンランス"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "剣"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/189_3537_s_68qid7wmmaltbms0thkp9dfbp8y7.jpg",
+				"path": "/images/items/01_2616/189_3537.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_3537_s_oldrl818ka0hvfsa21lhu6utk8fd.jpg",
+				"path": "/images/items/01_2616/153_3537.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3537_s_24w5i8hoqm8ru25z6z9yddpy963z.jpg",
+				"path": "/images/items/01_2616/155_3537.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3537_s_yh2d5ysaqez8vwkiopso70jfsn3k.jpg",
+				"path": "/images/items/01_2616/156_3537.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3537_s_kbsjj6r9rl8crgpp5erpz34c4ps1.jpg",
+				"path": "/images/items/01_2616/157_3537.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3537_s_9h58c4k38jwhw9m4xc14k9zm2bba.jpg",
+				"path": "/images/items/01_2616/158_3537.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3537_s_b9vr9p7fjokowp75asyqwgc0jxwe.jpg",
+				"path": "/images/items/01_2616/159_3537.jpg"
+			}
 		],
-		"en": [
-			"Carbine lance x 1",
-			"Sword x1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2616/153_3537.jpg",
-		"/images/items/01_2616/155_3537.jpg",
-		"/images/items/01_2616/156_3537.jpg",
-		"/images/items/01_2616/157_3537.jpg",
-		"/images/items/01_2616/158_3537.jpg",
-		"/images/items/01_2616/159_3537.jpg",
-		"/images/items/01_2616/189_3537.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2616/",
-	"brandIds": [],
-	"seriesIds": [
-		"soketsuden"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2642",
-		"01_2614",
-		"01_2615",
-		"01_2643"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2616/"
 }

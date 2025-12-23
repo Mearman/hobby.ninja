@@ -5,6 +5,44 @@
 		"ja": "1/144 ミレニアム・ファルコン（ランド・カルリジアンVer.）",
 		"en": "1/144 Millennium Falcon (Lando Calrissian Ver.)"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3513",
+			"url": "https://bandai-hobby.net/item/01_3513/",
+			"ja": "ビークルモデル レイザー・クレスト"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 6600,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ミレニアム・ファルコン、始まりの姿をその手に",
@@ -30,81 +67,161 @@
 		"en": [
 			"The Millennium Falcon has its beginnings in your hands.",
 			"Commercialize the Millennium Falcon that appears in the latest movie \"Solo: A Star Wars Story\" released in 629!",
-			"• The shape when \"Han Solo \" obtained it from \" Lando Calrissian \" is precisely reproduced with a completely new molding of the main body. The external armor that does not expose the internal mechanism and the markings that are different from the red paint when it appears in \" Star Wars Episode 4: A New Hope\" are also reproduced.",
-			"• The shuttle at the tip is reproduced by replacing the separation gimmick. Two dedicated display bases are included, and by connecting them, you can display the shuttle even when it is separated.",
+			"• The shape when \"Han Solo\" obtained it from \"Lando Calrissian\" is precisely reproduced with a completely new molding of the main body. The external armor that does not expose the internal mechanism and the markings that are different from the red paint when it appears in \"Star Wars Episode 4: A New Hope\" are also reproduced.",
+			"• The shuttle at the tip reproduces the separation gimmick by replacing it. Two dedicated display bases are included, and by connecting them, you can display the shuttle even when it is separated.",
 			"• Removing the armor on the top of the fuselage reveals the living space inside the fuselage. Characters from the movie are also accurately reproduced, so you can enjoy the inside of the Millennium Falcon."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"パイロットキャラパーツ×3",
-			"専用ディスプレイベース×2",
-			"レーザーエフェクトパーツ×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "パイロットキャラパーツ"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "レーザーエフェクトパーツ"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 9
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "【付属品】"
+			}
+		},
+		{
+			"name": {
+				"ja": "パイロットキャラパーツ"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "レーザーエフェクトパーツ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "【商品内容】"
+			}
+		},
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 9
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125710_1.jpg",
+				"path": "/images/items/01_1389/1000125710_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125710_2.jpg",
+				"path": "/images/items/01_1389/1000125710_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125710_3.jpg",
+				"path": "/images/items/01_1389/1000125710_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125710_4.jpg",
+				"path": "/images/items/01_1389/1000125710_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125710_5.jpg",
+				"path": "/images/items/01_1389/1000125710_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125710_6.jpg",
+				"path": "/images/items/01_1389/1000125710_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125710_7.jpg",
+				"path": "/images/items/01_1389/1000125710_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125710_8.jpg",
+				"path": "/images/items/01_1389/1000125710_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125710_9.jpg",
+				"path": "/images/items/01_1389/1000125710_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125710_10.jpg",
+				"path": "/images/items/01_1389/1000125710_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125710_11.jpg",
+				"path": "/images/items/01_1389/1000125710_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000125710_12.jpg",
+				"path": "/images/items/01_1389/1000125710_12.jpg"
+			}
 		],
-		"en": [
-			"Pilot character parts x3",
-			"Dedicated display base x 2",
-			"Laser effect parts x 2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×9",
-			"水転写式デカールｘ1",
-			"マーキングシール×1",
-			"取扱説明書×1",
-			"【付属品】",
-			"パイロットキャラパーツ×3",
-			"専用ディスプレイベース×2",
-			"レーザーエフェクトパーツ×2",
-			"【商品内容】",
-			"成形品×9",
-			"水転写式デカールｘ1",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 9",
-			"Water transfer decal x1",
-			"MarkingSeal×1",
-			"Handling manual×1",
-			"[accessories]",
-			"Pilot character parts x3",
-			"Dedicated display base x 2",
-			"Laser effect parts x 2",
-			"[Product contents]",
-			"Molded product x 9",
-			"Water transfer decal x1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1389/1000125710_1.jpg",
-		"/images/items/01_1389/1000125710_10.jpg",
-		"/images/items/01_1389/1000125710_11.jpg",
-		"/images/items/01_1389/1000125710_12.jpg",
-		"/images/items/01_1389/1000125710_2.jpg",
-		"/images/items/01_1389/1000125710_3.jpg",
-		"/images/items/01_1389/1000125710_4.jpg",
-		"/images/items/01_1389/1000125710_5.jpg",
-		"/images/items/01_1389/1000125710_6.jpg",
-		"/images/items/01_1389/1000125710_7.jpg",
-		"/images/items/01_1389/1000125710_8.jpg",
-		"/images/items/01_1389/1000125710_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1389/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3513"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1389/"
 }

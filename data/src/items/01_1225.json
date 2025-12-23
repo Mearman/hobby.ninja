@@ -5,6 +5,43 @@
 		"ja": "ピカちんキット０１ カンニングラス",
 		"en": "Pikachin Kit01 Cheat Glass"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -27,49 +64,76 @@
 			"• ピカちん大百科に綴じられるピカちんシートも付いてくるぞ！"
 		],
 		"en": [
-			"• Awesome glasses that let you see everything secretly!",
-			"• The cheating glass that appears on the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!",
-			"• A cheating glass is an invention that allows you to secretly peek at the side while facing forward!",
-			"• Watch the letter that the girl sitting next to you is writing without knowing it!",
+			"• Cool glasses that allow you to see everything secretly!",
+			"• The cheat glass that appears on the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!",
+			"• A cheating glass is an invention that allows you to secretly look to the side while facing forward!",
+			"• Watch the letter written by the girl sitting next to you without knowing it!",
 			"• It also comes with a Pikachin sheet that can be bound into the Pikachin Encyclopedia!"
 		]
 	},
-	"contents": {
-		"ja": [
-			"カンニングラス×1",
-			"（成形品×4）",
-			"ピカちんQRコード×1",
-			"ミラーシール×2",
-			"ピカちんシート×1"
+	"contents": [
+		{
+			"name": {
+				"ja": "カンニングラス"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "（成形品"
+			},
+			"count": 4,
+			"unit": {
+				"ja": "）"
+			}
+		},
+		{
+			"name": {
+				"ja": "ピカちんQRコード"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ミラーシール"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ピカちんシート"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2159_s_6jsk5geoiqtklnvhdqq6tqjn142u.jpg",
+				"path": "/images/items/01_1225/153_2159.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2159_s_dbx75ps7rxskjby3qfg1bis5y06v.jpg",
+				"path": "/images/items/01_1225/155_2159.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2159_s_mn2ocrowhhs8u1toxbggfh5ny6yo.jpg",
+				"path": "/images/items/01_1225/156_2159.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2159_s_id0y1onqj2nv24znv2pyxvu9f8pc.jpg",
+				"path": "/images/items/01_1225/157_2159.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2159_s_0clw6eodwqupj8tolb5y82vugl8u.jpg",
+				"path": "/images/items/01_1225/158_2159.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2159_s_ut5nfzmgqevgwm2jd3evojpi73b5.jpg",
+				"path": "/images/items/01_1225/159_2159.jpg"
+			}
 		],
-		"en": [
-			"Cheat glass x 1",
-			"(molded product x 4)",
-			"Pikachin QR code x 1",
-			"Mirror Seal×2",
-			"Pikachin sheet x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1225/153_2159.jpg",
-		"/images/items/01_1225/155_2159.jpg",
-		"/images/items/01_1225/156_2159.jpg",
-		"/images/items/01_1225/157_2159.jpg",
-		"/images/items/01_1225/158_2159.jpg",
-		"/images/items/01_1225/159_2159.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1225/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1225/"
 }

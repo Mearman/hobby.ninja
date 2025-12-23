@@ -5,6 +5,43 @@
 		"ja": "ピカちんロボS01　トレジャーブウ",
 		"en": "Pikachin Robo S01 Treasure Buu"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -42,28 +79,42 @@
 			"Pikachin sheet...1 (front: blueprint page, back: trivia page)"
 		]
 	},
-	"images": [
-		"/images/items/01_1959/153_2891.jpg",
-		"/images/items/01_1959/155_2891.jpg",
-		"/images/items/01_1959/156_2891.jpg",
-		"/images/items/01_1959/157_2891.jpg",
-		"/images/items/01_1959/158_2891.jpg",
-		"/images/items/01_1959/159_2891.jpg",
-		"/images/items/01_1959/189_2891.jpg",
-		"/images/items/01_1959/190_2891.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1959/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/190_2891_s_dzhmcpkg9f7zbpdxgk9o5zk6t61t.jpg",
+				"path": "/images/items/01_1959/190_2891.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_2891_s_r90c3dyk86easorcr2ze79ewdbr8.jpg",
+				"path": "/images/items/01_1959/153_2891.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2891_s_l4z5omcquh4x7bn2v12s0hgtx9ur.jpg",
+				"path": "/images/items/01_1959/155_2891.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2891_s_lna7ivuwf722244lelg7q68k1w6n.jpg",
+				"path": "/images/items/01_1959/156_2891.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2891_s_ai1xq6u911u4ug2p6gf9ivvafqmj.jpg",
+				"path": "/images/items/01_1959/157_2891.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2891_s_v315ev87dwyj02e87081htcgr0i5.jpg",
+				"path": "/images/items/01_1959/158_2891.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2891_s_pdb9ulb2020b9wvqlzzenjpx84cn.jpg",
+				"path": "/images/items/01_1959/159_2891.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2891_s_hu7y8ty8klguhlhnzgx4budvh564.jpg",
+				"path": "/images/items/01_1959/189_2891.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1959/"
 }

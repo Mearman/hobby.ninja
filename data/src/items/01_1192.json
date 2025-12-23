@@ -5,6 +5,44 @@
 		"ja": "1/72 Ｘウイング・ファイター レジスタンス ブルー中隊仕様",
 		"en": "1/72 X-Wing Fighter Resistance Blue Squadron Specification"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3515",
+			"url": "https://bandai-hobby.net/item/01_3515/",
+			"ja": "1/12 ザ・マンダロリアン(ベスカーアーマー)"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 24
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"1/72スケールのXウイング・ファイターシリーズに、待望のブルー中隊仕様が登場！",
@@ -31,70 +68,137 @@
 		"en": [
 			"The long-awaited Blue Squadron specification is now available in the 1/72 Scale X-Wing Fighter series!",
 			"The blue line that stands out on the aircraft is so cool!",
-			"Two types of droids are included: the new \"Star Wars: The Last Jedi \" version and the \" Star Wars: The Force Awakens\" version!",
-			"Additionally, a black display pedestal inspired by outer space and a clear blue pedestal inspired by the \"Battle of Takodana \" from \" Star Wars: The Force Awakens\" are included.",
+			"Two types of droids are included: the new \"Star Wars: The Last Jedi\" version and the \"Star Wars: The Force Awakens\" version!",
+			"Additionally, a black display pedestal inspired by outer space and a clear blue pedestal inspired by the \"Battle of Takodana\" from \"Star Wars: The Force Awakens\" are included.",
 			"It is designed to be used as a set with the previously released ``1/72 Boosted X-Wing Fighter Poe's Special Machine'' to enjoy the action scene.",
 			"Total length: approx. 173mm"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用ディスプレイベース×2種",
-			"1/72 パイロット（着座）×1",
-			"1/72 ドロイドパーツ×2種",
-			"レーザーエフェクトパーツ×2",
-			"着床脚×1式",
-			"キャノピー×2種（クリアパーツ×1・フレームパーツ×1)"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "1/72 パイロット（着座）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "1/72 ドロイドパーツ"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "レーザーエフェクトパーツ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "着床脚"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "キャノピー"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 5
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119480_1.jpg",
+				"path": "/images/items/01_1192/1000119480_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119480_2.jpg",
+				"path": "/images/items/01_1192/1000119480_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119480_3.jpg",
+				"path": "/images/items/01_1192/1000119480_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119480_4.jpg",
+				"path": "/images/items/01_1192/1000119480_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119480_5.jpg",
+				"path": "/images/items/01_1192/1000119480_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119480_6.jpg",
+				"path": "/images/items/01_1192/1000119480_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119480_7.jpg",
+				"path": "/images/items/01_1192/1000119480_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119480_8.jpg",
+				"path": "/images/items/01_1192/1000119480_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119480_9.jpg",
+				"path": "/images/items/01_1192/1000119480_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119480_10.jpg",
+				"path": "/images/items/01_1192/1000119480_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119480_11.jpg",
+				"path": "/images/items/01_1192/1000119480_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119480_12.jpg",
+				"path": "/images/items/01_1192/1000119480_12.jpg"
+			}
 		],
-		"en": [
-			"Dedicated display base x 2 types",
-			"1/72 Pilot (seated) x 1",
-			"1/72 droid parts x 2 types",
-			"Laser effect parts x 2",
-			"Implantation leg x 1 set",
-			"Canopy x 2 types (clear parts x 1, frame parts x 1)"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×5",
-			"水転写式デカール×1",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 5",
-			"Water transfer decal x 1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1192/1000119480_1.jpg",
-		"/images/items/01_1192/1000119480_10.jpg",
-		"/images/items/01_1192/1000119480_11.jpg",
-		"/images/items/01_1192/1000119480_12.jpg",
-		"/images/items/01_1192/1000119480_2.jpg",
-		"/images/items/01_1192/1000119480_3.jpg",
-		"/images/items/01_1192/1000119480_4.jpg",
-		"/images/items/01_1192/1000119480_5.jpg",
-		"/images/items/01_1192/1000119480_6.jpg",
-		"/images/items/01_1192/1000119480_7.jpg",
-		"/images/items/01_1192/1000119480_8.jpg",
-		"/images/items/01_1192/1000119480_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1192/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3515"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1192/"
 }

@@ -5,6 +5,48 @@
 		"ja": "BB戦士 186蒼雷頑駄無",
 		"en": "BB Senshi 186 Azure Gundam"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		},
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -25,23 +67,18 @@
 			"BB Senshi 186 Sorai Gundam is here! !"
 		]
 	},
-	"images": [
-		"/images/items/01_1587/153_2500.jpg",
-		"/images/items/01_1587/155_2500.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1587/",
-	"brandIds": [
-		"sdgundamseries",
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2500_s_g1w832dj4coothl6mh2bqshnvpaw.jpg",
+				"path": "/images/items/01_1587/153_2500.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2500_s_fmn61xwfckxwyzzts5u22jw11d1t.jpg",
+				"path": "/images/items/01_1587/155_2500.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1587/"
 }

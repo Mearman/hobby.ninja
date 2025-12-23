@@ -5,6 +5,60 @@
 		"ja": "ＨＧ 1/144 ガンダムジェミナス０１用アサルトブースター＆高機動型ユニット 拡張セット",
 		"en": "HG 1/144 Gundam Geminus 01 Assault Booster & High Mobility Unit Expansion Set"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "g-unit",
+			"url": "https://bandai-hobby.net/series/g-unit/",
+			"ja": "新機動戦記ガンダムW デュアルストーリー G-UNIT"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000217501",
+			"url": "https://p-bandai.jp/item/item-1000217501/",
+			"ja": "ＨＧ 1/144 レオール"
+		},
+		{
+			"id": "item-1000209099",
+			"url": "https://p-bandai.jp/item/item-1000209099/",
+			"ja": "ＨＧ 1/144 ガンダムバーンレプオス"
+		},
+		{
+			"id": "01_4393",
+			"url": "https://bandai-hobby.net/item/01_4393/",
+			"ja": "ＨＧ 1/144 ヴァイエイト・シュイヴァン & メリクリウス・シュイヴァン"
+		},
+		{
+			"id": "item-1000176706",
+			"url": "https://p-bandai.jp/item/item-1000176706/",
+			"ja": "ＨＧ 1/144 ガンダムエルオーブースター"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -16,7 +70,6 @@
 		"year": 2020,
 		"month": 9
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－　「ＲＧ 1/144 νガンダム」（別売り）連動アイテムが登場！　－－－",
@@ -59,11 +112,11 @@
 			"*This product does not include the MS body.",
 			"Jointed with the separately sold \"RG 1/144 νGundam\" (in-store sales item),",
 			"Introducing an expansion set that allows you to reproduce νGundam's HWS (Heavy Weapon System).",
-			"● Includes heavy armor and weapons for each part of the aircraft that reproduces \"RG νGundam HWS\"!",
+			"● Includes heavy armor and weapons for each part of the aircraft that reproduces \"RG νGundamHWS\"!",
 			"*High Mega Seal is a standard Seal with extended parts attached. For normal Seal, use the one that comes with the main product.",
 			"● Reproduced with molding colors that conform to the MS body sold in stores!",
 			"● Comes with a newly designed realistic decal.",
-			"*Decal design is the same as \"RG 1/144 νGundam HWS\".",
+			"*Decal design is the same as \"RG 1/144 νGundamHWS\".",
 			"Set contents: Chest armor unit / Front armor unit / Leg thruster unit / Hyper Mega Rifle / High Mega Seal expansion parts / Realistic decal",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"This product is jointed with \"RG 1/144 νGundam\" (separately sold in-store item),",
@@ -91,30 +144,11 @@
 			"- Product specifications are scheduled as of 20206. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2983/01_2983_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2983/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"g-unit"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000217501",
-		"item-1000209099",
-		"01_4393",
-		"item-1000176706"
-	],
-	"manualId": "2590",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2983/"
 }

@@ -5,6 +5,37 @@
 		"ja": "Bトレインショーティー 小田急電鉄3000形SE",
 		"en": "B Train Shorty Odakyu Electric Railway Type 3000 SE"
 	},
+	"brands": [
+		{
+			"id": "train",
+			"url": "https://bandai-hobby.net/brand/train/",
+			"ja": "Bトレインショーティー"
+		}
+	],
+	"series": [],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_1276",
+			"url": "https://bandai-hobby.net/item/01_1276/",
+			"ja": "Bトレインショーティー 伊豆箱根鉄道3000系　ラブライブ！サンシャイン!!　ラッピング電車　HAPPY PARTY TRAIN　3種アソート"
+		},
+		{
+			"id": "01_1277",
+			"url": "https://bandai-hobby.net/item/01_1277/",
+			"ja": "Bトレインショーティー 伊豆箱根鉄道3000系　ラブライブ！サンシャイン!!  ラッピング電車　HAPPY PARTY TRAIN 1"
+		},
+		{
+			"id": "01_1278",
+			"url": "https://bandai-hobby.net/item/01_1278/",
+			"ja": "Bトレインショーティー 伊豆箱根鉄道3000系　ラブライブ！サンシャイン!!  ラッピング電車　HAPPY PARTY TRAIN 2"
+		},
+		{
+			"id": "01_1280",
+			"url": "https://bandai-hobby.net/item/01_1280/",
+			"ja": "Bトレインショーティー 伊豆箱根鉄道3000系　ラブライブ！サンシャイン!!  ラッピング電車　HAPPY PARTY TRAIN 3"
+		}
+	],
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -46,40 +77,65 @@
 			"Compatible with N scale by attaching power unit 3 and traveling trolley T (sold separately)."
 		]
 	},
-	"contents": {
-		"ja": [
-			"・3両入り（先頭車×1、中間車×2）",
-			"・HGフレーム",
-			"・ステッカー",
-			"※3セットで8両フル編成を再現できます。",
-			"（「中間車用パンタグラフなし屋根パーツ」が１セットあたり２枚封入されています。）"
+	"contents": [
+		{
+			"name": {
+				"ja": "・3両入り（先頭車"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "、中間車×2）"
+			}
+		},
+		{
+			"name": {
+				"ja": "・HGフレーム"
+			}
+		},
+		{
+			"name": {
+				"ja": "・ステッカー"
+			}
+		},
+		{
+			"name": {
+				"ja": "※3セットで8両フル編成を再現できます。"
+			}
+		},
+		{
+			"name": {
+				"ja": "（「中間車用パンタグラフなし屋根パーツ」が１セットあたり２枚封入されています。）"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2080_s_hnnux62co5rwvkssd4t2iwg6mzs8.jpg",
+				"path": "/images/items/01_1149/153_2080.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2080_s_hh54qmbaxky41ku0ssc5rcduefmo.jpg",
+				"path": "/images/items/01_1149/155_2080.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2080_s_tcjkc0ozqzgnujgy8naht2km6vqf.jpg",
+				"path": "/images/items/01_1149/156_2080.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2080_s_kbhddp8dgfg6mhboexgtshbjtt8n.jpg",
+				"path": "/images/items/01_1149/157_2080.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2080_s_hxo24qsxy3bezitej3sgpm5da73j.jpg",
+				"path": "/images/items/01_1149/158_2080.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2080_s_4h1uutt2cv2bqmqlnhpmd0zgxn0o.jpg",
+				"path": "/images/items/01_1149/159_2080.jpg"
+			}
 		],
-		"en": [
-			"・3 cars (first car x 1, middle car x 2)",
-			"・HG frame",
-			"・Sticker",
-			"*You can reproduce a full 8-car formation with 3 sets.",
-			"(Two pieces of \"roof parts without pantograph for intermediate cars\" are included in each set.)"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1149/153_2080.jpg",
-		"/images/items/01_1149/155_2080.jpg",
-		"/images/items/01_1149/156_2080.jpg",
-		"/images/items/01_1149/157_2080.jpg",
-		"/images/items/01_1149/158_2080.jpg",
-		"/images/items/01_1149/159_2080.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1149/",
-	"brandIds": [
-		"train"
-	],
-	"seriesIds": [],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1149/"
 }

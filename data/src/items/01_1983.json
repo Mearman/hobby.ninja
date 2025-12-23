@@ -5,6 +5,44 @@
 		"ja": "ハイレゾリューションモデル 1/100 ガンダムアストレイ レッドフレーム",
 		"en": "High Resolution Model 1/100 Gundam Astray Red Frame"
 	},
+	"brands": [
+		{
+			"id": "hirm",
+			"url": "https://bandai-hobby.net/brand/hirm/",
+			"ja": "Hi-Resolution Model[ハイレゾリューションモデル]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3771",
+			"url": "https://bandai-hobby.net/item/01_3771/",
+			"ja": "ハイレゾリューションモデル 1/100 ガンダムアストレイ レッドフレーム パワードレッド"
+		},
+		{
+			"id": "01_2444",
+			"url": "https://bandai-hobby.net/item/01_2444/",
+			"ja": "ハイレゾリューションモデル 1/100 ゴッドガンダム"
+		},
+		{
+			"id": "01_2297",
+			"url": "https://bandai-hobby.net/item/01_2297/",
+			"ja": "ハイレゾリューションモデル 1/100 ガンダムアストレイ ノワール"
+		},
+		{
+			"id": "item-1000129323",
+			"url": "http://p-bandai.jp/item/item-1000129323",
+			"ja": "1/100 ハイレゾリューションモデル ウイングガンダム ＥＷ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 14300,
 		"currency": "JPY",
@@ -18,10 +56,9 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED ASTRAY』より、研ぎ澄まされた「ガンダムアストレイレッドフレーム」がハイレゾリューションモデルに登場！",
+			"『機動戦士ガンダムSEED ASTRAY』より、研ぎ澄まされた「ガンダムアストレイレッドフレーム」がハイレゾリューションモデルに登場！",
 			"• ダイキャストを使用した塗装済み完成品フレームは高精細な質感と重厚感を表現。",
 			"• ハンドパーツは指の色分けを再現し、完成品部材として握り手が同梱。",
 			"• フレームと外装の多重構造により高密度な動きを表現。細部に筋肉のような造形も再現。",
@@ -29,68 +66,118 @@
 			"• ガーベラ・ストレートの刃にはシボとメッキ加工で刃紋を表現。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam SEED ASTRAY \", the refined \" Gundam Astray Red Frame\" is now available as a high resolution model!",
-			"• Painted finished product frame using die-casting expresses high-definition texture and solid feeling.",
-			"• The hand parts reproduce the color coding of the fingers, and the grip hand is included as a finished product component.",
-			"• High-density movement is expressed by the multiple structure of the frame and exterior. Muscle-like shapes are also reproduced in details.",
+			"From \"Mobile Suit GundamSEED ASTRAY\", the refined \"Gundam Astray Red Frame\" is now available as a high resolution model!",
+			"• The finished painted die-cast frame expresses a high-definition texture and solid feel.",
+			"• The hand parts reproduce the color coding of the fingers, and a grip hand is included as a finished product component.",
+			"• High-density movement is expressed through the multiplexed structure of the frame and exterior. Muscle-like shapes are also reproduced in detail.",
 			"• Some of the armor has a textured surface that gives it a sense of density.",
-			"• The Gerbera Straight blade has a grain and plating process to express the blade pattern."
+			"• The Gerbera Straight blade has a grain pattern and plating process to express the blade pattern."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ガーベラ・ストレート×1",
-			"ビームサーベル×2",
-			"ビームライフル×1",
-			"シールド×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ガーベラ・ストレート"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビームライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 14
+		},
+		{
+			"name": {
+				"ja": "完成品フレーム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130922_1.jpg",
+				"path": "/images/items/01_1983/1000130922_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130922_2.jpg",
+				"path": "/images/items/01_1983/1000130922_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130922_3.jpg",
+				"path": "/images/items/01_1983/1000130922_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130922_4.jpg",
+				"path": "/images/items/01_1983/1000130922_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130922_5.jpg",
+				"path": "/images/items/01_1983/1000130922_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130922_6.jpg",
+				"path": "/images/items/01_1983/1000130922_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130922_7.jpg",
+				"path": "/images/items/01_1983/1000130922_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130922_8.jpg",
+				"path": "/images/items/01_1983/1000130922_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130922_9.jpg",
+				"path": "/images/items/01_1983/1000130922_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130922_10.jpg",
+				"path": "/images/items/01_1983/1000130922_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130922_11.jpg",
+				"path": "/images/items/01_1983/1000130922_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130922_12.jpg",
+				"path": "/images/items/01_1983/1000130922_12.jpg"
+			}
 		],
-		"en": [
-			"Gerbera Straight×1",
-			"Beam saber x2",
-			"Beam rifle x 1",
-			"Seal × 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×14",
-			"完成品フレーム×1",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 14",
-			"Finished product frame x 1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1983/1000130922_1.jpg",
-		"/images/items/01_1983/1000130922_10.jpg",
-		"/images/items/01_1983/1000130922_11.jpg",
-		"/images/items/01_1983/1000130922_12.jpg",
-		"/images/items/01_1983/1000130922_2.jpg",
-		"/images/items/01_1983/1000130922_3.jpg",
-		"/images/items/01_1983/1000130922_4.jpg",
-		"/images/items/01_1983/1000130922_5.jpg",
-		"/images/items/01_1983/1000130922_6.jpg",
-		"/images/items/01_1983/1000130922_7.jpg",
-		"/images/items/01_1983/1000130922_8.jpg",
-		"/images/items/01_1983/1000130922_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1983/",
-	"brandIds": [
-		"hirm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3771",
-		"01_2444",
-		"01_2297",
-		"item-1000129323"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1983/"
 }

@@ -5,6 +5,44 @@
 		"ja": "アクションベース1 機動戦士ガンダム連邦軍Ver.",
 		"en": "Action Base 1 Mobile Suit Gundam Federation Forces Ver."
 	},
+	"brands": [
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		},
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3570",
+			"url": "https://bandai-hobby.net/item/01_3570/",
+			"ja": "アクションベース5 [GUNDAM FACTORY YOKOHAMA Ver.]"
+		},
+		{
+			"id": "01_2438",
+			"url": "https://bandai-hobby.net/item/01_2438/",
+			"ja": "ガンダムベース限定 アクションベース4［シャア専用カラー］"
+		}
+	],
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -26,22 +64,18 @@
 			"Introducing a new style of “Action Base 1” suitable for displaying 1/100 Scale Models such as MG! A new style action base with the emblem of the Federal Army on the base of the pedestal. The height and angle of the post to which the kit is attached are adjustable."
 		]
 	},
-	"images": [
-		"/images/items/01_1965/153_2897.jpg",
-		"/images/items/01_1965/155_2897.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1965/",
-	"brandIds": [
-		"actionbase"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_3570",
-		"01_2438"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2897_s_xf56qfy6fg4j6z25gpoqhsxwz9lc.jpg",
+				"path": "/images/items/01_1965/153_2897.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2897_s_2r3iybkcpigqu5ndawwi13jhubjl.jpg",
+				"path": "/images/items/01_1965/155_2897.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1965/"
 }

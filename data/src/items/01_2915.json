@@ -5,6 +5,65 @@
 		"ja": "HGUC 1/144 ゼータプラスＣ１",
 		"en": "HGUC 1/144 Zeta Plus C1"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "sentinel",
+			"url": "https://bandai-hobby.net/series/sentinel/",
+			"ja": "ガンダム・センチネル"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3408",
+			"url": "https://bandai-hobby.net/item/01_3408/",
+			"ja": "ＭＧ 1/100 ガンダムＭｋ-Ｖ"
+		},
+		{
+			"id": "01_4064",
+			"url": "https://bandai-hobby.net/item/01_4064/",
+			"ja": "ＨＧ 1/144 ゼータプラス（テスト機イメージカラー）"
+		},
+		{
+			"id": "item-1000089611",
+			"url": "https://p-bandai.jp/item/item-1000089611",
+			"ja": "ＭＧ 1/100 Ｓガンダム ブースター・ユニット装着型"
+		},
+		{
+			"id": "01_1247",
+			"url": "https://bandai-hobby.net/item/01_1247/",
+			"ja": "HGUC 1/144 MSA-0011 Sガンダム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -16,7 +75,6 @@
 		"year": 2016,
 		"month": 11
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"可変ＭＳ MSZ-006C1 ゼータプラスＣ１が 遂にＨＧＵＣにラインアップ！！",
@@ -87,40 +145,50 @@
 			"- Product specifications are scheduled as of 20168. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2915/153_3892.jpg",
-		"/images/items/01_2915/155_3892.jpg",
-		"/images/items/01_2915/156_3892.jpg",
-		"/images/items/01_2915/157_3892.jpg",
-		"/images/items/01_2915/158_3892.jpg",
-		"/images/items/01_2915/159_3892.jpg",
-		"/images/items/01_2915/189_3892.jpg",
-		"/images/items/01_2915/190_3892.jpg",
-		"/images/items/01_2915/191_3892.jpg",
-		"/images/items/01_2915/192_3892.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2915/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla",
-		"hguc"
-	],
-	"seriesIds": [
-		"sentinel"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3408",
-		"01_4064",
-		"item-1000089611",
-		"01_1247"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3892_s_3c5igoz09lr96mx848ql171rcuff.jpg",
+				"path": "/images/items/01_2915/153_3892.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3892_s_6xpg4r2y73e7ibxhh9emg7l5apuu.jpg",
+				"path": "/images/items/01_2915/155_3892.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3892_s_68ewsiaghttl8o1tpvctf6w9mi6d.jpg",
+				"path": "/images/items/01_2915/156_3892.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3892_s_shp58vy3qo8veobxcsm7jxhnxmub.jpg",
+				"path": "/images/items/01_2915/157_3892.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3892_s_7e0euwsoqgve4xfecg3tl758tn6r.jpg",
+				"path": "/images/items/01_2915/158_3892.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3892_s_em7jmfzgb9y2a54h46gw49z8njrn.jpg",
+				"path": "/images/items/01_2915/159_3892.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3892_s_w8vk7lcpiawz0aujeutmj6duwtla.jpg",
+				"path": "/images/items/01_2915/189_3892.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3892_s_5m98jzqa2bdktkl4erfjyg1gu6nl.jpg",
+				"path": "/images/items/01_2915/190_3892.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3892_s_v5ftlhic8lkn4i76ea8qvnjymnre.jpg",
+				"path": "/images/items/01_2915/191_3892.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3892_s_wzfmicic2s41zcu46waf8ws6cq9d.jpg",
+				"path": "/images/items/01_2915/192_3892.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "2279"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2915/"
 }

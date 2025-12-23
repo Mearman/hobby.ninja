@@ -5,6 +5,55 @@
 		"ja": "HG 1/144 メッサーF01型",
 		"en": "HG 1/144 Messer F01 type"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "hathaway",
+			"url": "https://bandai-hobby.net/series/hathaway/",
+			"ja": "機動戦士ガンダム 閃光のハサウェイ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5594",
+			"url": "https://bandai-hobby.net/item/01_5594/",
+			"ja": "HG 1/144 メッサーF01型 [クリアカラー]"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4269",
+			"url": "https://bandai-hobby.net/item/01_4269/",
+			"ja": "HG 1/144 ペーネロペー[クリアカラー]"
+		},
+		{
+			"id": "item-1000157737",
+			"url": "https://p-bandai.jp/item/item-1000157737/",
+			"ja": "ＨＧ 1/144 メッサーＦ０２型"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 4
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム 閃光のハサウェイ』に登場するメッサーF01型が胴体内部に可動ギミックを搭載し、HGシリーズに登場！",
@@ -33,46 +81,68 @@
 			"• Beam rifle, beam saber, and seal included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"シールド×1",
-			"ビーム・サーベル×2",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3742_s_ai7zl1hrvykxjf4ffbiap6a6py4t.jpg",
+				"path": "/images/items/01_2753/153_3742.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3742_s_lbrjcicpg71380chaxw2tqdug9e9.jpg",
+				"path": "/images/items/01_2753/155_3742.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3742_s_0sbqncnu2tr319wtwuc8lwi31lpt.jpg",
+				"path": "/images/items/01_2753/156_3742.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3742_s_tvlqyv5un4qb2ce64jml9htm619d.jpg",
+				"path": "/images/items/01_2753/157_3742.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3742_s_54m92dax2o0kka2t5r98k7hhzl5y.jpg",
+				"path": "/images/items/01_2753/158_3742.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3742_s_sarn7vg594mkywbkk7qj0whuf55c.jpg",
+				"path": "/images/items/01_2753/159_3742.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3742_s_kvzxaswoeo3pkeofc5nydod3fptp.jpg",
+				"path": "/images/items/01_2753/189_3742.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3742_s_hnu2sciymjji8umxfgwxicxtxa6w.jpg",
+				"path": "/images/items/01_2753/190_3742.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x1",
-			"Seal × 1",
-			"Beam saber x2",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2753/153_3742.jpg",
-		"/images/items/01_2753/155_3742.jpg",
-		"/images/items/01_2753/156_3742.jpg",
-		"/images/items/01_2753/157_3742.jpg",
-		"/images/items/01_2753/158_3742.jpg",
-		"/images/items/01_2753/159_3742.jpg",
-		"/images/items/01_2753/189_3742.jpg",
-		"/images/items/01_2753/190_3742.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2753/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"hathaway"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5594",
-		"01_4971",
-		"01_4269",
-		"item-1000157737"
-	],
-	"manualId": "0500"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2753/"
 }

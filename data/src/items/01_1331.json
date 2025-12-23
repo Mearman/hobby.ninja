@@ -5,6 +5,43 @@
 		"ja": "ピカちんキット08 エア臭ター",
 		"en": "Pikachin Kit08 Air Smell Tar"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -25,55 +62,70 @@
 			"• テレビ番組「ポチっと発明 ピカちんキット」に登場するエア臭ターが商品化！",
 			"• どんな香りも自在にふりまけ！！手元の引き金を引いて複数の香りを発射し、遠くへ香りを飛ばせる発明品！",
 			"• ピカちん大百科に綴じられるピカちんシートも付いてくるぞ！"
-		],
-		"en": [
-			"• For you who want to create a scene with scent!",
-			"• A magical electric fan that can blend and emit your favorite scent!",
-			"• The air odor that appears on the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!",
-			"• Sprinkle any scent freely! ! An invention that allows you to fire multiple scents by pulling the trigger at hand, and send the scents far away!",
-			"• It also comes with a Pikachin sheet that can be bound into the Pikachin Encyclopedia!"
 		]
 	},
-	"contents": {
-		"ja": [
-			"エア臭ター…1（成形品…3）",
-			"香り玉…2",
-			"輪ゴム…1",
-			"シャフト…4",
-			"プロペラ…1",
-			"ピカちんQRコードステッカー…1",
-			"取扱説明書…1",
-			"ピカちんシート…1"
+	"contents": [
+		{
+			"name": {
+				"ja": "エア臭ター…1（成形品…3）"
+			}
+		},
+		{
+			"name": {
+				"ja": "香り玉…2"
+			}
+		},
+		{
+			"name": {
+				"ja": "輪ゴム…1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シャフト…4"
+			}
+		},
+		{
+			"name": {
+				"ja": "プロペラ…1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ピカちんQRコードステッカー…1"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書…1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ピカちんシート…1"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2259_s_a5i7izi691ayqo2y1sbfizhr6cvv.jpg",
+				"path": "/images/items/01_1331/153_2259.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2259_s_5pmi3ggikvtj9dw37p9sretnuzfn.jpg",
+				"path": "/images/items/01_1331/155_2259.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2259_s_htbz11sg1vtw0mfnnlm7p2df33eg.jpg",
+				"path": "/images/items/01_1331/156_2259.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2259_s_xn4id4izgz23ux800g5cas6pl98c.jpg",
+				"path": "/images/items/01_1331/157_2259.jpg"
+			}
 		],
-		"en": [
-			"Air odor...1 (molded product...3)",
-			"Scent ball...2",
-			"Rubber band...1",
-			"Shaft...4",
-			"Propeller...1",
-			"Pikachin QR code Sticker...1",
-			"Handling Manual...1",
-			"Pikachin sheet...1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1331/153_2259.jpg",
-		"/images/items/01_1331/155_2259.jpg",
-		"/images/items/01_1331/156_2259.jpg",
-		"/images/items/01_1331/157_2259.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1331/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1331/"
 }

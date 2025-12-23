@@ -5,6 +5,60 @@
 		"ja": "ＭＧ 1/100 ガンダムバルバトス用 拡張パーツセット",
 		"en": "Expansion parts set for MG 1/100 Gundam Barbatos"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5469",
+			"url": "https://bandai-hobby.net/item/01_5469/",
+			"ja": "MG 1/100 ガンダムヴィダール"
+		},
+		{
+			"id": "item-1000172977",
+			"url": "https://p-bandai.jp/item/item-1000172977/",
+			"ja": "ガンダムデカールＤＸ 07 機動戦士ガンダム 鉄血のオルフェンズシリーズ用"
+		},
+		{
+			"id": "01_4255",
+			"url": "https://bandai-hobby.net/item/01_4255/",
+			"ja": "MG 1/100 ガンダムバルバトス [リサーキュレーションカラー/ネオンブルー]"
+		},
+		{
+			"id": "01_4214",
+			"url": "https://bandai-hobby.net/item/01_4214/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムバルバトス用 拡張パーツセット[クリアカラー］"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3410,
 		"currency": "JPY",
@@ -16,7 +70,6 @@
 		"year": 2020,
 		"month": 10
 	},
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"---",
@@ -83,7 +136,7 @@
 			"---",
 			"In-store sales item Introducing an expansion parts set that can be combined with the MS body (sold separately) to reproduce various forms of Gundam Barbatos!",
 			"---",
-			"From \"Mobile Suit Gundam Iron-Blooded Orphans \", you can reproduce each armed form equipped by \" Gundam Barbatos\".",
+			"From \"Mobile Suit Gundam Iron-Blooded Orphans\", you can reproduce each armed form equipped by \"Gundam Barbatos\".",
 			"Weapons and optional parts are commercialized as an expansion set.",
 			"The first mobile worker for 1/100 Scale is newly included! Olga Itsuka figure (standing) and new decals are also included!",
 			"*The MS body is not included with this product.",
@@ -141,39 +194,50 @@
 			"- Product specifications are scheduled as of 20206. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_3002/153_3974.jpg",
-		"/images/items/01_3002/155_3974.jpg",
-		"/images/items/01_3002/156_3974.jpg",
-		"/images/items/01_3002/157_3974.jpg",
-		"/images/items/01_3002/158_3974.jpg",
-		"/images/items/01_3002/159_3974.jpg",
-		"/images/items/01_3002/189_3974.jpg",
-		"/images/items/01_3002/190_3974.jpg",
-		"/images/items/01_3002/191_3974.jpg",
-		"/images/items/01_3002/192_3974.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3002/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"tekketsu"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5469",
-		"item-1000172977",
-		"01_4255",
-		"01_4214"
-	],
-	"manualId": "2593",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3974_s_l26lng8xsprskpllqbf7g9j2nc7c.jpg",
+				"path": "/images/items/01_3002/153_3974.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3974_s_2ig22p4lcsn2ivkisa6s9k6okex4.jpg",
+				"path": "/images/items/01_3002/155_3974.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3974_s_xue7pbbrfd31kv2igsge1stfhp1n.jpg",
+				"path": "/images/items/01_3002/156_3974.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3974_s_ohrdwb7n7o1vgvv77ehn5tt3ii29.jpg",
+				"path": "/images/items/01_3002/157_3974.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3974_s_vkzfev16h4ocqigksn5uso4myyrm.jpg",
+				"path": "/images/items/01_3002/158_3974.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3974_s_pqrlvggdtoyogijizxaz4xqgd8jc.jpg",
+				"path": "/images/items/01_3002/159_3974.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3974_s_5de89941qhwkhp4rit3i23i74ci9.jpg",
+				"path": "/images/items/01_3002/189_3974.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3974_s_cfrt9z2n6vxaf0t35njr057hxwxk.jpg",
+				"path": "/images/items/01_3002/190_3974.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3974_s_6jy4ngqlckoemaclgx334m2uakf9.jpg",
+				"path": "/images/items/01_3002/191_3974.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3974_s_43lraf5lvdxu67uehx1ciy7a7lfq.jpg",
+				"path": "/images/items/01_3002/192_3974.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3002/"
 }

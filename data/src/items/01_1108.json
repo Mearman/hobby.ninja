@@ -2,9 +2,57 @@
 	"id": "01_1108",
 	"type": "item",
 	"name": {
-		"ja": "BB戦士217 ガンダム Mk-II",
-		"en": "BB Senshi 217 Gundam Mk-II"
+		"ja": "BB戦士217 ガンダムMk-II",
+		"en": "BB Senshi 217 GundamMk-II"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		},
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3241",
+			"url": "https://bandai-hobby.net/item/01_3241/",
+			"ja": "ＢＢ戦士 18 バウンドドック"
+		},
+		{
+			"id": "01_3236",
+			"url": "https://bandai-hobby.net/item/01_3236/",
+			"ja": "ＢＢ戦士 13 ガンダムMK-2"
+		},
+		{
+			"id": "01_645",
+			"url": "https://bandai-hobby.net/item/01_645/",
+			"ja": "SDガンダムGジェネレーション49 百式"
+		},
+		{
+			"id": "01_1066",
+			"url": "https://bandai-hobby.net/item/01_1066/",
+			"ja": "SDガンダムGジェネレーション60 キュベレイ"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -23,28 +71,18 @@
 			"武器に、ビームライフル，サーベル、シールド、バズーカ、マガジンポッドが付属します。"
 		],
 		"en": [
-			"The unit \"Gundam MK2 \" that appears in the popular game \" G Generation F \" is now available as a plastic model. The coloring is reproduced in Titans color, also known as \" Black Gundam\". It is possible to reproduce Units 1 to 3 by replacing the seal.",
+			"The unit \"Gundam MK2\" that appears in the popular game \"G Generation F\" is now available as a plastic model. The coloring is reproduced in Titans color, also known as \"Black Gundam\". It is possible to reproduce Units 1 to 3 by replacing the seal.",
 			"Weapons include beam rifle, saber, seal, bazooka, and magazine pod."
 		]
 	},
-	"images": [
-		"/images/items/01_1108/153_203.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1108/",
-	"brandIds": [
-		"sdgundamseries",
-		"bb"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3241",
-		"01_3236",
-		"01_645",
-		"01_1066"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_203_s_20f7c0130infkt5kthv79cytxzaf.jpg",
+				"path": "/images/items/01_1108/153_203.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1108/"
 }

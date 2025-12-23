@@ -5,6 +5,44 @@
 		"ja": "1/60 ガンダム",
 		"en": "1/60 Gundam"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、1/60スケールで、ガンダムが登場。",
@@ -28,22 +65,18 @@
 			"Core fighters can be transformed and combined. The legs can be opened to the left and right, and the ankles can be swung back and forth. The wrist parts can be replaced with a normal gripping hand and a gripping hand for holding weapons on either the left or the right. The beam saber is made of translucent material and the blade part can be removed and attached to the school bag. Comes with a figure of Amuro Ray from the same scale."
 		]
 	},
-	"images": [
-		"/images/items/01_3109/153_4075.jpg",
-		"/images/items/01_3109/155_4075.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3109/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4075_s_3at7892ipvcgwfztwyyhvd1e3tzn.jpg",
+				"path": "/images/items/01_3109/153_4075.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4075_s_hg7g5qqv1l8cxoq4d39z67s634xh.jpg",
+				"path": "/images/items/01_3109/155_4075.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3109/"
 }

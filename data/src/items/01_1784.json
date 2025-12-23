@@ -5,6 +5,50 @@
 		"ja": "HGFC 1/144 ノーベルガンダム バーサーカーモード",
 		"en": "HGFC 1/144 Nobel Gundam Berserker Mode"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "ggundam",
+			"url": "https://bandai-hobby.net/series/ggundam/",
+			"ja": "機動武闘伝Ｇガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000213247",
+			"url": "https://p-bandai.jp/item/item-1000213247/",
+			"ja": "ＨＧ 1/144 ドラゴンガンダム"
+		},
+		{
+			"id": "item-1000194970",
+			"url": "https://p-bandai.jp/item/item-1000194970/",
+			"ja": "ＨＧ 1/144 ガンダムマックスター"
+		},
+		{
+			"id": "item-1000182906",
+			"url": "https://p-bandai.jp/item/item-1000182906/",
+			"ja": "ＨＧ 1/144 ガンダムローズ"
+		},
+		{
+			"id": "item-1000144970",
+			"url": "https://p-bandai.jp/item/item-1000144970/",
+			"ja": "ＨＧ 1/144 デスビースト"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,37 +62,38 @@
 		"day": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 「機動武闘伝G ガンダム」よりノーベルガンダムがバーサーカーモードで登場。 • 特徴である逆立った冷却フィン（髪）と赤いオーラを再現。 • 女性らしいS字立ちができるよう、腰にスイング機構を搭載。 • 豊富なハンドパーツと専用ベース付属。 成形品×7、ホイルシール×1、組立説明書×1"
+			"• 「機動武闘伝Gガンダム」よりノーベルガンダムがバーサーカーモードで登場。 ■特徴である逆立った冷却フィン（髪）と赤いオーラを再現。 ■女性らしいS字立ちができるよう、腰にスイング機構を搭載。 ■豊富なハンドパーツと専用ベース付属。 成形品×7、ホイルシール×1、組立説明書×1"
 		],
 		"en": [
-			"• Nobel Gundam from \"Mobile Fighter G Gundam\" appears in Berserker mode. • Characteristics Reproduces the standing cooling fins (hair) and red aura. • Equipped with a swing mechanism at the waist to allow you to stand in a feminine S-shape. • A wealth of hand parts and special base included. Molded product x 7, foil seal x 1, assembly manual x 1"
+			"• Nobel Gundam from \"Mobile Fighter GGundam\" appears in Berserker mode. ■Characteristics Reproduces the standing cooling fins (hair) and red aura. ■Equipped with a swing mechanism at the waist to allow you to stand in a feminine S-shape. ■A wealth of hand parts and special base included. Molded product x 7, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_1784/153_2723.jpg",
-		"/images/items/01_1784/155_2723.jpg",
-		"/images/items/01_1784/156_2723.jpg",
-		"/images/items/01_1784/157_2723.jpg",
-		"/images/items/01_1784/158_2723.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1784/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"ggundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000213247",
-		"item-1000194970",
-		"item-1000182906",
-		"item-1000144970"
-	],
-	"manualId": "0434"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2723_s_fg6wg1fudtnjhdrhswzcvh8boshl.jpg",
+				"path": "/images/items/01_1784/153_2723.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2723_s_se8hvstnsgt0yrtn3que2mw046nl.jpg",
+				"path": "/images/items/01_1784/155_2723.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2723_s_bf03emwov0w8eahavf4hx3z1wkcs.jpg",
+				"path": "/images/items/01_1784/156_2723.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2723_s_aczy3vqfa3t7vq14em2j9fhfvu9b.jpg",
+				"path": "/images/items/01_1784/157_2723.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2723_s_2qi7vsntmz4eu058khrpphhogsit.jpg",
+				"path": "/images/items/01_1784/158_2723.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1784/"
 }

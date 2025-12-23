@@ -5,6 +5,43 @@
 		"ja": "BB戦士308 孔明リ・ガズィ",
 		"en": "BB Senshi 308 Komei Ri Gazi"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -30,23 +67,22 @@
 			"-Armor is removable"
 		]
 	},
-	"images": [
-		"/images/items/01_2525/153_3450.jpg",
-		"/images/items/01_2525/155_3450.jpg",
-		"/images/items/01_2525/156_3450.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2525/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3450_s_3ind4gmu338e1o1lb2fkfxcdlk5d.jpg",
+				"path": "/images/items/01_2525/153_3450.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3450_s_oc1x351yae04uqn9v6pnrrbz1y46.jpg",
+				"path": "/images/items/01_2525/155_3450.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3450_s_sdpnqwjuj4y2106un047xwimdo9m.jpg",
+				"path": "/images/items/01_2525/156_3450.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2525/"
 }

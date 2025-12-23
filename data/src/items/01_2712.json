@@ -5,6 +5,50 @@
 		"ja": "RG 1/144 フォースインパルスガンダム",
 		"en": "RG 1/144 Force Impulse Gundam"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000132012",
+			"url": "https://p-bandai.jp/item/item-1000132012",
+			"ja": "ＲＧ 1/144 ストライクフリーダムガンダム ディアクティブモード"
+		},
+		{
+			"id": "01_5895",
+			"url": "https://bandai-hobby.net/item/01_5895/",
+			"ja": "RG 1/144 ストライクフリーダムガンダム"
+		},
+		{
+			"id": "01_3893",
+			"url": "https://bandai-hobby.net/item/01_3893/",
+			"ja": "ＲＧ 1/144 ストライクフリーダムガンダム用 拡張エフェクトユニット“天空の翼”"
+		},
+		{
+			"id": "item-1000128696",
+			"url": "https://p-bandai.jp/item/item-1000128696",
+			"ja": "RG 1/144 デスティニーガンダム ディアクティブモード"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -18,10 +62,9 @@
 		"day": 25
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED DESTINY』より主人公「シン・アスカ」が物語の前半に搭乗したMSが登場！",
+			"『機動戦士ガンダムSEED DESTINY』より主人公「シン・アスカ」が物語の前半に搭乗したMSが登場！",
 			"• コアスプレンダー、チェストフライヤー、レッグフライヤー、フォースシルエットの合体でMS形態となる機構を再現。",
 			"• コアスプレンダー及び胴体にインサート成形が施されたアドバンスドMSジョイントを採用。内部フレーム、ボディフレームは組み上がった状態でランナーから切り離すことができ、精密なディテールと変形・可動ギミックを実現。",
 			"• パーツ分割により色再現も向上し、隣接したアーマーの微細な色分けまで精密に表現。",
@@ -32,7 +75,7 @@
 			"• ビームライフル、シールド、ナイフ、ビームサーベルに加えて、握り手、平手、武器持ちてなど左右各４種のハンドパーツがオプションとして付属。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam SEED DESTINY \" comes the MS that the main character \" Shin Asuka\" pilots in the first half of the story!",
+			"From \"Mobile Suit GundamSEED DESTINY\" comes the MS that the main character \"Shin Asuka\" pilots in the first half of the story!",
 			"• Reproduces the mechanism that becomes MS form by combining Core Splendor, Chest Flyer, Leg Flyer, and Force Silhouette.",
 			"• Adopts advanced MS joint with insert molding on core splendor and fuselage. The internal frame and body frame can be separated from the Runner in the assembled state, allowing for precise details and deformation/movable gimmicks.",
 			"• Color reproduction is also improved by dividing the parts, and even the minute color coding of adjacent armor is precisely expressed.",
@@ -43,55 +86,95 @@
 			"• In addition to the beam rifle, seal, knife, and beam saber, 4 types of hand parts for each side are included as options, including a gripping hand, an open hand, and a weapon holding hand."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"高エネルギービームライフル×１",
-			"機動防盾×１",
-			"ヴァジュラビームサーベル×２",
-			"フォールディングレイザー対装甲ナイフ×２",
-			"シルエットフライヤー×１",
-			"ハンドパーツ（左右）×各４種",
-			"リアリスティックデカール×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "高エネルギービームライフル×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "機動防盾×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヴァジュラビームサーベル×２"
+			}
+		},
+		{
+			"name": {
+				"ja": "フォールディングレイザー対装甲ナイフ×２"
+			}
+		},
+		{
+			"name": {
+				"ja": "シルエットフライヤー×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ（左右）×各４種"
+			}
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール×１"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145216_1.jpg",
+				"path": "/images/items/01_2712/1000145216_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145216_2.jpg",
+				"path": "/images/items/01_2712/1000145216_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145216_3.jpg",
+				"path": "/images/items/01_2712/1000145216_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145216_4.jpg",
+				"path": "/images/items/01_2712/1000145216_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145216_5.jpg",
+				"path": "/images/items/01_2712/1000145216_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145216_6.jpg",
+				"path": "/images/items/01_2712/1000145216_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145216_7.jpg",
+				"path": "/images/items/01_2712/1000145216_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145216_8.jpg",
+				"path": "/images/items/01_2712/1000145216_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145216_9.jpg",
+				"path": "/images/items/01_2712/1000145216_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145216_10.jpg",
+				"path": "/images/items/01_2712/1000145216_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145216_11.jpg",
+				"path": "/images/items/01_2712/1000145216_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145216_12.jpg",
+				"path": "/images/items/01_2712/1000145216_12.jpg"
+			}
 		],
-		"en": [
-			"High energy beam rifle x1",
-			"Mobile mantlet x1",
-			"Vajra beam saber x2",
-			"Folding Razor Anti-Armor Knife x2",
-			"Silhouette flyer x 1",
-			"Hand parts (left and right) x 4 types each",
-			"Realistic decal x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2712/1000145216_1.jpg",
-		"/images/items/01_2712/1000145216_10.jpg",
-		"/images/items/01_2712/1000145216_11.jpg",
-		"/images/items/01_2712/1000145216_12.jpg",
-		"/images/items/01_2712/1000145216_2.jpg",
-		"/images/items/01_2712/1000145216_3.jpg",
-		"/images/items/01_2712/1000145216_4.jpg",
-		"/images/items/01_2712/1000145216_5.jpg",
-		"/images/items/01_2712/1000145216_6.jpg",
-		"/images/items/01_2712/1000145216_7.jpg",
-		"/images/items/01_2712/1000145216_8.jpg",
-		"/images/items/01_2712/1000145216_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2712/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000132012",
-		"01_5895",
-		"01_3893",
-		"item-1000128696"
-	],
-	"manualId": "0681"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2712/"
 }

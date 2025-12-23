@@ -5,6 +5,43 @@
 		"ja": "ねこぶそう3 中盛り",
 		"en": "Nekobusou 3 medium size"
 	},
+	"brands": [
+		{
+			"id": "nekobusou",
+			"url": "https://bandai-hobby.net/brand/nekobusou/",
+			"ja": "ねこぶそう"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2101",
+			"url": "https://bandai-hobby.net/item/01_2101/",
+			"ja": "ねこぶそう3 舟盛り"
+		},
+		{
+			"id": "01_1979",
+			"url": "https://bandai-hobby.net/item/01_1979/",
+			"ja": "ねこぶそう2 並盛り"
+		},
+		{
+			"id": "01_1981",
+			"url": "https://bandai-hobby.net/item/01_1981/",
+			"ja": "ねこぶそう2 てんこ盛り"
+		},
+		{
+			"id": "01_1421",
+			"url": "https://bandai-hobby.net/item/01_1421/",
+			"ja": "ねこぶそう 並盛り"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -29,55 +66,99 @@
 		],
 		"en": [
 			"The third installment of the popular Nekobusou is here! It is now possible to create a cat-like form that imitates ancient giant creatures!",
-			"• Continuing from 1st and 2nd editions, the cat prototype was created by cat sculptor Osamu Moriguchi.",
-			"• Buso is in charge of Tadanori Nijo, who is active as an illustrator and manga artist.",
-			"• You can freely combine them with the 3mm joints installed on the jacket and each busho. Combination with the 1st and 2nd editions is also possible. By combining multiple pieces, it looks like an even bigger cat!",
-			"• Includes a separator that allows you to easily remove parts.",
-			"• 〈Medium portion〉 is available in 4 types: A, B, C, and D. A is the \"American short hair \" and submarine mecha set. B is \" White \" and Train Mecha Nobuso set. C is \" White Tea \" and Trill Mecha Nobuso set. D is \" Scottish Fold (gray)\" and propeller mechanism set."
+			"• Continuing from the first and second editions, the cat prototype was created by cat sculptor Osamu Moriguchi.",
+			"• Busou is in charge of Tadanori Nijo, who is active as an illustrator and manga artist.",
+			"• 3mm joints installed on the jacket and each busho allow for flexible combinations. Combination with the 1st and 2nd editions is also possible. By combining multiple pieces, it looks like an even bigger cat!",
+			"• Includes a separator for easy removal of parts.",
+			"• There are 4 types of <medium size>: A, B, C, and D. A is the \"American short hair\" and submarine mecha set. B is \"White\" and Train Mecha Nobuso set. C is \"White Tea\" and Trill Mecha Nobuso set. D is \"Scottish Fold (gray)\" and propeller mechanism set."
 		]
 	},
-	"contents": {
-		"ja": [
-			"（全4種）",
-			"彩色済ねこフィギュア×1",
-			"ジャケット×1",
-			"ぶそう×1式",
-			"パーツセパレーター×1"
+	"contents": [
+		{
+			"name": {
+				"ja": "（全4種）"
+			}
+		},
+		{
+			"name": {
+				"ja": "彩色済ねこフィギュア"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジャケット"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ぶそう"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "パーツセパレーター"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134158_1.jpg",
+				"path": "/images/items/01_2100/1000134158_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134158_2.jpg",
+				"path": "/images/items/01_2100/1000134158_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134158_3.jpg",
+				"path": "/images/items/01_2100/1000134158_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134158_4.jpg",
+				"path": "/images/items/01_2100/1000134158_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134158_5.jpg",
+				"path": "/images/items/01_2100/1000134158_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134158_6.jpg",
+				"path": "/images/items/01_2100/1000134158_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134158_7.jpg",
+				"path": "/images/items/01_2100/1000134158_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134158_8.jpg",
+				"path": "/images/items/01_2100/1000134158_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134158_9.jpg",
+				"path": "/images/items/01_2100/1000134158_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134158_10.jpg",
+				"path": "/images/items/01_2100/1000134158_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134158_11.jpg",
+				"path": "/images/items/01_2100/1000134158_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134158_12.jpg",
+				"path": "/images/items/01_2100/1000134158_12.jpg"
+			}
 		],
-		"en": [
-			"(4 types in total)",
-			"Painted cat figure x 1",
-			"Jacket x 1",
-			"Busou x 1 set",
-			"Parts separator x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2100/1000134158_1.jpg",
-		"/images/items/01_2100/1000134158_10.jpg",
-		"/images/items/01_2100/1000134158_11.jpg",
-		"/images/items/01_2100/1000134158_12.jpg",
-		"/images/items/01_2100/1000134158_2.jpg",
-		"/images/items/01_2100/1000134158_3.jpg",
-		"/images/items/01_2100/1000134158_4.jpg",
-		"/images/items/01_2100/1000134158_5.jpg",
-		"/images/items/01_2100/1000134158_6.jpg",
-		"/images/items/01_2100/1000134158_7.jpg",
-		"/images/items/01_2100/1000134158_8.jpg",
-		"/images/items/01_2100/1000134158_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2100/",
-	"brandIds": [
-		"nekobusou"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2101",
-		"01_1979",
-		"01_1981",
-		"01_1421"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2100/"
 }

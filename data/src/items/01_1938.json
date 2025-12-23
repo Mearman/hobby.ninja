@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII [メタリック]",
 		"en": "HG 1/144 Gundam Base Limited Char's Zaku II [Metallic]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "origin",
+			"url": "https://bandai-hobby.net/series/origin/",
+			"ja": "機動戦士ガンダム THE ORIGIN"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3711",
+			"url": "https://bandai-hobby.net/item/01_3711/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)[クリアカラー]"
+		},
+		{
+			"id": "01_2828",
+			"url": "https://bandai-hobby.net/item/01_2828/",
+			"ja": "HG 1/144 ガンダムベース限定 ザクII TYPE C-6/R6 [ペインティングモデル]"
+		},
+		{
+			"id": "01_2707",
+			"url": "https://bandai-hobby.net/item/01_2707/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)"
+		},
+		{
+			"id": "item-1000135687",
+			"url": "https://p-bandai.jp/item/item-1000135687",
+			"ja": "ＨＧ 1/144 MS-05S シャア専用ザクＩ（ＬＩＭＩＴＥＤ ＭＯＤＥＬ）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2310,
 		"currency": "JPY",
@@ -17,48 +61,60 @@
 		"month": 3
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"『機動戦士ガンダム THE ORIGIN』より、シャア専用ザクIIがメタリックカラーで登場。ガンダムベースのロゴがデザインされた、ディスプレイ台座が付属。"
+			"『機動戦士ガンダムTHE ORIGIN』より、シャア専用ザクIIがメタリックカラーで登場。ガンダムベースのロゴがデザインされた、ディスプレイ台座が付属。"
 		],
 		"en": [
 			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
 			"From \"Mobile Suit Gundam THE ORIGIN\", Char's Zaku II appears in metallic color. A display pedestal with the Gundam base logo designed is included."
 		]
 	},
-	"images": [
-		"/images/items/01_1938/153_2871.jpg",
-		"/images/items/01_1938/155_2871.jpg",
-		"/images/items/01_1938/156_2871.jpg",
-		"/images/items/01_1938/157_2871.jpg",
-		"/images/items/01_1938/158_2871.jpg",
-		"/images/items/01_1938/159_2871.jpg",
-		"/images/items/01_1938/189_2871.jpg",
-		"/images/items/01_1938/190_2871.jpg",
-		"/images/items/01_1938/191_2871.jpg",
-		"/images/items/01_1938/192_2871.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1938/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"origin"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3711",
-		"01_2828",
-		"01_2707",
-		"item-1000135687"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2871_s_0few9g5neoq6o0bmqu7608x2ruoc.jpg",
+				"path": "/images/items/01_1938/153_2871.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2871_s_vnbvbvzs1rmt09ecv6dn8zbqutqu.jpg",
+				"path": "/images/items/01_1938/155_2871.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2871_s_6z60za0t83gc800rpcm4xgyi7aja.jpg",
+				"path": "/images/items/01_1938/156_2871.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2871_s_dbzc0rhdbsg8ui2bvlk739r2kgvc.jpg",
+				"path": "/images/items/01_1938/157_2871.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2871_s_u5umyorlhb2ss8znzod5jkbc2csn.jpg",
+				"path": "/images/items/01_1938/158_2871.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2871_s_nvt98hldqrgwgtrq5dth20h7ukv6.jpg",
+				"path": "/images/items/01_1938/159_2871.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2871_s_yogw9zusq1no9dlyqqt4a1vdgyix.jpg",
+				"path": "/images/items/01_1938/189_2871.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2871_s_b3wgn4uzw25mayoth5l8r9hvfh73.jpg",
+				"path": "/images/items/01_1938/190_2871.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2871_s_2hw43hfvsjec1l7qpchm75yml3t2.jpg",
+				"path": "/images/items/01_1938/191_2871.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2871_s_vpu9ga7e4jeu0zhpkiamt21kpvfa.jpg",
+				"path": "/images/items/01_1938/192_2871.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "0039"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1938/"
 }

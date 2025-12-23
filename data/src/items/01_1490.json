@@ -2,9 +2,41 @@
 	"id": "01_1490",
 	"type": "item",
 	"name": {
-		"ja": "1/100 ガンダム RXF91",
-		"en": "1/100 Gundam RXF91"
+		"ja": "1/100 ガンダムRXF91",
+		"en": "1/100 GundamRXF91"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5987",
+			"url": "https://bandai-hobby.net/item/01_5987/",
+			"ja": "ガンダムデカールNo.139 機動戦士Gundam GQuuuuuuX汎用1"
+		},
+		{
+			"id": "01_5988",
+			"url": "https://bandai-hobby.net/item/01_5988/",
+			"ja": "ガンダムデカールNo.140 機動戦士Gundam GQuuuuuuX汎用2"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -17,7 +49,6 @@
 		"month": 5
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム シルエットフォーミュラF91」に登場、トキオ・D・ランドールが搭乗した主役メカをキット化しました。バックパックのメインスラスターが可動し、ヴェスパーの展開ギミックを再現します。指が可動します。ビーム・シールドはクリアパーツ成形で、展開・収納状態をそれぞれ再現できます。ビーム・ライフル、ビーム・スプレーガン、ビーム・サーベル2本がついています。"
@@ -26,19 +57,14 @@
 			"A kit version of the main mecha piloted by Tokio D. Randall that appeared in \"Mobile Suit Gundam Silhouette Formula F91\". The main thruster of the backpack is movable, reproducing Vesper's deployment gimmick. The fingers are movable. The beam and seal are molded with clear parts, allowing you to reproduce the unfolded and stored states. Includes a beam rifle, beam spray gun, and two beam sabers."
 		]
 	},
-	"images": [
-		"/images/items/01_1490/153_2410.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1490/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5986",
-		"01_5987",
-		"01_5988"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2410_s_q3sqrnezxpcb0naa6rey3rbxvw68.jpg",
+				"path": "/images/items/01_1490/153_2410.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1490/"
 }

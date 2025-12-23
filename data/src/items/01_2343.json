@@ -5,6 +5,40 @@
 		"ja": "RG 1/144 νガンダム",
 		"en": "RG 1/144 νGundam"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4121",
+			"url": "https://bandai-hobby.net/item/01_4121/",
+			"ja": "RG 1/144 ガンダムベース限定 Hi-νガンダム[チタニウムフィニッシュ]"
+		},
+		{
+			"id": "01_1408",
+			"url": "https://bandai-hobby.net/item/01_1408/",
+			"ja": "RG 1/144 サザビー"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -18,7 +52,6 @@
 		"day": 10
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム 逆襲のシャア』に登場する、アムロ・レイ搭乗機をRGにラインナップ！",
@@ -32,66 +65,122 @@
 		],
 		"en": [
 			"Amuro Ray's aircraft that appears in \"Mobile Suit Gundam: Char's Counterattack\" is now available in RG!",
-			"• Various gimmicks to reproduce the setting's mechanisms and poses in the play, as well as original gimmicks based on actual machine research, condensed into 1/144 Scale.",
-			"• The precise parts configuration allows for both the fun of creating and decorating with the image of 1/1 Scale.",
+			"• Various gimmicks to reproduce the setting's mechanisms and poses in the play, as well as original gimmicks based on actual machine research, are condensed into 1/144 Scale.",
+			"• Precise parts configuration allows for both the fun of creating and decorating with a 1/1 Scale image.",
 			"• νGundam's characteristic coloring is reproduced with molded colors. The white body uses three light gray molding colors to increase the density of information.",
 			"• The shoulders and abdomen have built-in joints that allow them to move flexibly. It is now possible to twist and push out the shoulders, allowing for more dynamic poses.",
 			"• The shoulder armor has a built-in mechanism that expands in conjunction with the internal joints. By expanding the range of motion of the shoulders, interference between parts that occurs when posing with weapons etc. is reduced.",
-			"• The waist joint moves finely in each block, expanding the range of movement of the legs. It is now possible to move the knees forward significantly, allowing you to create powerful poses with a wide stance even though it is 1/144 scale.",
+			"• The waist joint can be moved finely in blocks, expanding the range of movement of the legs. It is now possible to move the knees forward significantly, allowing you to create powerful poses with a wide stance even though it is 1/144 scale.",
 			"• The legs are equipped with a \"multi-link gimmick\" that allows the armor to slide in conjunction with the movement of each joint. The pose with the knees bent greatly is also reproduced naturally."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"フィン・ファンネル×6",
-			"ニュー・ハイパー・バズーカ×1",
-			"シールド（ビーム・キャノン）×1",
-			"ビーム・サーベル（バックパック部・腕部）×各1",
-			"ミサイル×1式",
-			"【付属品】",
-			"成形品×13",
-			"リアリスティックデカール×1",
-			"取扱説明書×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "フィン・ファンネル"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "ニュー・ハイパー・バズーカ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド（ビーム・キャノン）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル（バックパック部・腕部）×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ミサイル"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "【付属品】"
+			}
+		},
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 13
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000138247_1.jpg",
+				"path": "/images/items/01_2343/1000138247_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000138247_2.jpg",
+				"path": "/images/items/01_2343/1000138247_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000138247_3.jpg",
+				"path": "/images/items/01_2343/1000138247_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000138247_4.jpg",
+				"path": "/images/items/01_2343/1000138247_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000138247_5.jpg",
+				"path": "/images/items/01_2343/1000138247_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000138247_6.jpg",
+				"path": "/images/items/01_2343/1000138247_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000138247_7.jpg",
+				"path": "/images/items/01_2343/1000138247_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000138247_8.jpg",
+				"path": "/images/items/01_2343/1000138247_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000138247_9.jpg",
+				"path": "/images/items/01_2343/1000138247_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000138247_10.jpg",
+				"path": "/images/items/01_2343/1000138247_10.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x1",
-			"Fin Funnel x 6",
-			"New hyper bazooka x1",
-			"Seal (beam cannon) x 1",
-			"Beam saber (backpack part/arm part) x 1 each",
-			"Missile x 1 type",
-			"[accessories]",
-			"Molded products x 13",
-			"Realistic decal x 1",
-			"Handling manual×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2343/1000138247_1.jpg",
-		"/images/items/01_2343/1000138247_10.jpg",
-		"/images/items/01_2343/1000138247_2.jpg",
-		"/images/items/01_2343/1000138247_3.jpg",
-		"/images/items/01_2343/1000138247_4.jpg",
-		"/images/items/01_2343/1000138247_5.jpg",
-		"/images/items/01_2343/1000138247_6.jpg",
-		"/images/items/01_2343/1000138247_7.jpg",
-		"/images/items/01_2343/1000138247_8.jpg",
-		"/images/items/01_2343/1000138247_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2343/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4121",
-		"01_1408"
-	],
-	"manualId": "0679"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2343/"
 }

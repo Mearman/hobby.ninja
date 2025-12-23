@@ -5,6 +5,37 @@
 		"ja": "コレクションステージ　クリア",
 		"en": "Collection stage clear"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
 	"price": {
 		"amount": 605,
 		"currency": "JPY",
@@ -32,49 +63,62 @@
 			"If you step it up a notch, it will shine!",
 			"Easily upgrade your display!",
 			"A collection stage compatible with a wide range of plastic model series is now available!!",
-			"• Highly versatile clear color.",
+			"• Versatile clear color.",
 			"• Can be connected vertically and horizontally using the included joint parts.",
 			"• Compact size of approximately 255mm x 171mm, suitable for display. It is also possible to turn a corner of your desktop into a collection booth.",
 			"• You can enjoy creating a display that matches the image of your work by cutting out the logo from the product package and pasting it on."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"縦ジョイントパーツ×２",
-			"横ジョイントパーツ×１"
-		],
-		"en": [
-			"Vertical joint parts x 2",
-			"Horizontal joint parts x 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×2",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 2",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1133/153_2065.jpg",
-		"/images/items/01_1133/155_2065.jpg",
-		"/images/items/01_1133/156_2065.jpg",
-		"/images/items/01_1133/157_2065.jpg",
-		"/images/items/01_1133/158_2065.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "縦ジョイントパーツ×２"
+			}
+		},
+		{
+			"name": {
+				"ja": "横ジョイントパーツ×１"
+			}
+		}
 	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1133/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
 	],
-	"relatedItemIds": [
-		"01_5990",
-		"01_5989",
-		"01_5972",
-		"01_5973"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2065_s_32lb26w1avd6f2k2aesz4y522bx3.jpg",
+				"path": "/images/items/01_1133/153_2065.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2065_s_itkdn88n79tvp56dt91muov6m0zg.jpg",
+				"path": "/images/items/01_1133/155_2065.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2065_s_3aavcb7x6c11zkqqzsvl42zo2szb.jpg",
+				"path": "/images/items/01_1133/156_2065.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2065_s_uk81n7oze2yflx9m5dn0xisbtak0.jpg",
+				"path": "/images/items/01_1133/157_2065.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2065_s_p409uffpijsxax4ksrczzsaellh0.jpg",
+				"path": "/images/items/01_1133/158_2065.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1133/"
 }

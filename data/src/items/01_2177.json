@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "HGAC 1/144 マグアナック",
-		"en": "HGAC 1/144 Maguanac"
+		"en": "HGAC 1/144 MAGANAC"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ",
+			"en": "MOBILE SUIT GUNDAM WING series"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5590",
+			"url": "https://bandai-hobby.net/item/01_5590/",
+			"ja": "HG 1/144 ウイングガンダムゼロ [クリアカラー]"
+		},
+		{
+			"id": "item-1000213249",
+			"url": "https://p-bandai.jp/item/item-1000213249/",
+			"ja": "ＨＧ 1/144 アルトロンガンダム"
+		},
+		{
+			"id": "01_5340",
+			"url": "https://bandai-hobby.net/item/01_5340/",
+			"ja": "HG 1/144 シェンロンガンダム [クリアカラー]"
+		},
+		{
+			"id": "item-1000183318",
+			"url": "https://p-bandai.jp/item/item-1000183318/",
+			"ja": "ＨＧ 1/144 ガンダムデスサイズヘル"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -18,75 +64,106 @@
 		"day": 20
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"TVアニメ『新機動戦記ガンダム W』より、総勢40機からなるMS部隊マグアナック隊の一般機をHGACで立体化！",
+			"TVアニメ『新機動戦記ガンダムW』より、総勢40機からなるMS部隊マグアナック隊の一般機をHGACで立体化！",
 			"• 「Fine Build」のコンセプトをもとに、組み立てやすさを追求した構造を採用。",
 			"• シールドはバックパックに、ヒートトマホークは腰部にマウントが可能。",
 			"• ショルダーアーマーの跳ね上げギミックを搭載。"
 		],
 		"en": [
-			"From the TV anime \"Mobile Suit Gundam W\", the general aircraft of the MS unit Maguanak Corps, which consists of 40 aircraft, are made into three-dimensional by HGAC!",
-			"• Based on the concept of \"Fine Build\", we have adopted a structure that pursues ease of assembly.",
-			"• Seal can be mounted on a backpack, and Heat Tomahawk can be mounted on the waist.",
-			"• Equipped with a flip-up gimmick for shoulder armor."
+			"From the TV anime \"MOBILE SUIT GUNDAM WING\", the general aircraft of the MS unit Maganac Squadron, which consists of a total of 40 aircraft, is three-dimensional with HGAC!",
+			"• Based on the concept of \"Fine Build\", a structure that pursues ease of assembly is adopted. The shield can be mounted on a backpack and the heat tomahawk can be mounted on the waist."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームライフル×1",
-			"ヒートトマホーク×1",
-			"シールド×1"
-		],
-		"en": [
-			"Beam rifle x 1",
-			"Heat tomahawk x1",
-			"Seal × 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成型品×6",
-			"ホイルシール×1",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 6",
-			"Foil Seal×1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2177/1000134850_1.jpg",
-		"/images/items/01_2177/1000134850_2.jpg",
-		"/images/items/01_2177/1000134850_3.jpg",
-		"/images/items/01_2177/1000134850_4.jpg",
-		"/images/items/01_2177/1000134850_5.jpg",
-		"/images/items/01_2177/1000134850_6.jpg",
-		"/images/items/01_2177/1000134850_7.jpg",
-		"/images/items/01_2177/1000134850_8.jpg",
-		"/images/items/01_2177/01_2177_inst_0.jpg",
-		"/images/items/01_2177/01_2177_inst_1.jpg",
-		"/images/items/01_2177/01_2177_inst_2.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "Beam Rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ヒートトマホーク",
+				"en": "• Heat Tomahawk"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "• Molded products"
+			},
+			"count": 1
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成型品"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134850_8.jpg",
+				"path": "/images/items/01_2177/1000134850_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134850_1.jpg",
+				"path": "/images/items/01_2177/1000134850_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134850_2.jpg",
+				"path": "/images/items/01_2177/1000134850_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134850_3.jpg",
+				"path": "/images/items/01_2177/1000134850_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134850_4.jpg",
+				"path": "/images/items/01_2177/1000134850_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134850_5.jpg",
+				"path": "/images/items/01_2177/1000134850_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134850_6.jpg",
+				"path": "/images/items/01_2177/1000134850_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134850_7.jpg",
+				"path": "/images/items/01_2177/1000134850_7.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2177/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5590",
-		"item-1000213249",
-		"01_5340",
-		"item-1000183318"
-	],
-	"manualId": "0490"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2177/"
+	}
 }

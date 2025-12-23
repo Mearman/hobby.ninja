@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ディジェ",
 		"en": "HGUC 1/144 Dije"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -18,10 +67,9 @@
 		"day": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士Z ガンダム』でアムロ・レイが正式搭乗したMSが完全新規造形で登場！",
+			"『機動戦士Zガンダム』でアムロ・レイが正式搭乗したMSが完全新規造形で登場！",
 			"• ジオン系フォルムの美しさをそのままに、シルエットからイメージする可動範囲を大きく上回るアクションポーズが可能。",
 			"• 各種武装としてビーム・長刀、クレイ・バズーカ、ビーム・ライフルが付属。",
 			"• ハンドパーツは長刀保持用の両手に加え、表情付き平手（左手）、ビーム・ライフル用右手が付属。",
@@ -31,67 +79,92 @@
 			"• アムロ乗機として、ガンダムのようなツインアイモールドが入ったボーナスパーツを付属。"
 		],
 		"en": [
-			"The MS officially piloted by Amuro Ray in \"Mobile Suit Z Gundam\" is now available in a completely new model!",
-			"• While retaining the beauty of the Zeon form, it is possible to perform action poses that far exceed the range of motion that you can imagine from the silhouette.",
+			"The MS officially piloted by Amuro Ray in \"Mobile Suit ZGundam\" is now available in a completely new model!",
+			"• While maintaining the beauty of the Zeon form, it is possible to perform action poses that far exceed the range of motion that you can imagine from the silhouette.",
 			"• Beam long sword, clay bazooka, and beam rifle are included as various weapons.",
 			"• Hand parts include both hands for holding the long sword, a palm with an expression (left hand), and a right hand for the beam rifle.",
-			"• The beam rifle has the same armament as the MSN-00100 Hyakushiki, just like the setting in the play.",
+			"• The beam rifle has the same armament as the MSN-00100 Hyakushiki, similar to the setting in the play.",
 			"• Reproduce the back binder. The beam and long sword grips can be attached to the waist, and the clay bazooka and beam rifle can be attached to the left and right sides of the binder.",
-			"• Clay Bazooka can also be equipped on the left shoulder weapon rack.",
+			"• Clay Bazooka can also be equipped on the Weapon Rack on the left shoulder.",
 			"• As Amuro's aircraft, a bonus part containing a Gundam-like twin eye mold is included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"グレイバズーカ×1",
-			"ビーム・長刀×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "グレイバズーカ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・長刀"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 13
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2968_s_b5fs8e4z5iwv8l9e7x6c8c1pmuen.jpg",
+				"path": "/images/items/01_2025/153_2968.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2968_s_tgiy2ejvvsm8w2mzoa6zwiv78p0p.jpg",
+				"path": "/images/items/01_2025/155_2968.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2968_s_iku4wh78h51fuznmru7yq1rvme8p.jpg",
+				"path": "/images/items/01_2025/156_2968.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2968_s_6s2ihv7liofdcjspnudlgfaoh2vv.jpg",
+				"path": "/images/items/01_2025/157_2968.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2968_s_84ykudeem2ntigr80ddbzqi2u1ll.jpg",
+				"path": "/images/items/01_2025/158_2968.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2968_s_m74aut3jrr0vrpl1kpf5bl8d6jov.jpg",
+				"path": "/images/items/01_2025/159_2968.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2968_s_n1k0v110714h9xglw29hfcqoqppt.jpg",
+				"path": "/images/items/01_2025/189_2968.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2968_s_je28s1huh81lzikjyano6v74a7kc.jpg",
+				"path": "/images/items/01_2025/190_2968.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x1",
-			"Gray bazooka×1",
-			"Beam long sword x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×13",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded products x 13",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2025/153_2968.jpg",
-		"/images/items/01_2025/155_2968.jpg",
-		"/images/items/01_2025/156_2968.jpg",
-		"/images/items/01_2025/157_2968.jpg",
-		"/images/items/01_2025/158_2968.jpg",
-		"/images/items/01_2025/159_2968.jpg",
-		"/images/items/01_2025/189_2968.jpg",
-		"/images/items/01_2025/190_2968.jpg",
-		"/images/items/01_2025/01_2025_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2025/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
-	"manualId": "0485"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2025/"
 }

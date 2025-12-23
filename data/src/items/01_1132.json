@@ -5,6 +5,37 @@
 		"ja": "コレクションステージ　ブラック",
 		"en": "collection stage black"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
 	"price": {
 		"amount": 605,
 		"currency": "JPY",
@@ -38,43 +69,56 @@
 			"• You can enjoy creating a display that matches the image of your work by cutting out the logo from the product package and pasting it on."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"縦ジョイントパーツ×２",
-			"横ジョイントパーツ×１"
-		],
-		"en": [
-			"Vertical joint parts x 2",
-			"Horizontal joint parts x 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×2",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 2",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1132/153_2064.jpg",
-		"/images/items/01_1132/155_2064.jpg",
-		"/images/items/01_1132/156_2064.jpg",
-		"/images/items/01_1132/157_2064.jpg",
-		"/images/items/01_1132/158_2064.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "縦ジョイントパーツ×２"
+			}
+		},
+		{
+			"name": {
+				"ja": "横ジョイントパーツ×１"
+			}
+		}
 	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1132/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
 	],
-	"relatedItemIds": [
-		"01_5990",
-		"01_5989",
-		"01_5972",
-		"01_5973"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2064_s_u6qjkzyf0h3lecy5hsexs00bh5eq.jpg",
+				"path": "/images/items/01_1132/153_2064.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2064_s_sroj7sduk99zkll1ylxqepox1ssy.jpg",
+				"path": "/images/items/01_1132/155_2064.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2064_s_wz8moux8ovg3fw155tm1hd9s7el8.jpg",
+				"path": "/images/items/01_1132/156_2064.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2064_s_1s48ethtme7q4ase4j6s1oo20r0h.jpg",
+				"path": "/images/items/01_1132/157_2064.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2064_s_552o7rom5i6r12um3pm9lhhri7ld.jpg",
+				"path": "/images/items/01_1132/158_2064.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1132/"
 }

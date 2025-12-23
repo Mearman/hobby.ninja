@@ -2,9 +2,36 @@
 	"id": "01_3295",
 	"type": "item",
 	"name": {
-		"ja": "ハローキティ/ザクII[SD ガンダムクロスシルエット]",
-		"en": "Hello Kitty/Zaku II [SD Gundam Cross Silhouette]"
+		"ja": "ハローキティ/ザクII[SDガンダムクロスシルエット]",
+		"en": "Hello Kitty/Zaku II [SD Gundam cross silhouette]"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		},
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [
+		{
+			"id": "hellokitty",
+			"url": "https://bandai-hobby.net/series/hellokitty/",
+			"ja": "ハローキティ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -22,12 +49,12 @@
 		"ja": [
 			"ハローキティとガンダム、夢のコラボ企画第２弾！",
 			"ザクIIとハローキティのセットがSDCSシリーズから登場！",
-			"■接着剤不要の簡単組立。",
-			"■ザクIIとハローキティの合体形態が再現可能。",
-			"■ザク用の豊富なアイテムが付属。",
-			"■キティの手に付属の小さなリンゴパーツを持たせることが可能。",
-			"■キティはお座りポーズも可能。",
-			"■りんごパーツとりんご形の台座付き。"
+			"• 接着剤不要の簡単組立。",
+			"• ザクIIとハローキティの合体形態が再現可能。",
+			"• ザク用の豊富なアイテムが付属。",
+			"• キティの手に付属の小さなリンゴパーツを持たせることが可能。",
+			"• キティはお座りポーズも可能。",
+			"• りんごパーツとりんご形の台座付き。"
 		],
 		"en": [
 			"Hello Kitty and Gundam, the second dream collaboration project!",
@@ -40,44 +67,85 @@
 			"• Comes with apple parts and apple-shaped pedestal."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"装備品一式",
-			"りんご×1",
-			"りんご型台座×1",
-			"ホイルシール×1",
-			"テトロンシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "装備品一式"
+			}
+		},
+		{
+			"name": {
+				"ja": "りんご"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "りんご型台座"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "テトロンシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4250_s_ndndsrt8ouumnxahl86e5dppwawz.jpg",
+				"path": "/images/items/01_3295/153_4250.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4250_s_kg6n8a89uemnfgci6d93urtc1c8j.jpg",
+				"path": "/images/items/01_3295/155_4250.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4250_s_2ajav1znt3i12zwxg29tmg17onf8.jpg",
+				"path": "/images/items/01_3295/156_4250.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4250_s_1k7s976aovs9aztk7sun4hkbz0e3.jpg",
+				"path": "/images/items/01_3295/157_4250.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4250_s_looi70mmilc4ksi4uso0prqsq0u3.jpg",
+				"path": "/images/items/01_3295/158_4250.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4250_s_i2jw968ajrphftk7cyz6qb5oqjlc.jpg",
+				"path": "/images/items/01_3295/159_4250.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4250_s_6y7ttzs4cp6jgv1recb3bq8zxqrk.jpg",
+				"path": "/images/items/01_3295/189_4250.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4250_s_27fnwj3g0asuj3em9hekcjki08km.jpg",
+				"path": "/images/items/01_3295/190_4250.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4250_s_p4ks6bqfepbp8sigj7trk1gt2l87.jpg",
+				"path": "/images/items/01_3295/191_4250.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4250_s_s8cv6dfzl0hiqrqpiffvfabsuxsj.jpg",
+				"path": "/images/items/01_3295/192_4250.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_4250_s_hwk5dx4axc42r38ahfyu6qfhvrz2.jpg",
+				"path": "/images/items/01_3295/193_4250.jpg"
+			}
 		],
-		"en": [
-			"Complete set of equipment",
-			"Apple x1",
-			"Apple-shaped pedestal x 1",
-			"Foil Seal×1",
-			"Tetron Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3295/153_4250.jpg",
-		"/images/items/01_3295/155_4250.jpg",
-		"/images/items/01_3295/156_4250.jpg",
-		"/images/items/01_3295/157_4250.jpg",
-		"/images/items/01_3295/158_4250.jpg",
-		"/images/items/01_3295/159_4250.jpg",
-		"/images/items/01_3295/189_4250.jpg",
-		"/images/items/01_3295/190_4250.jpg",
-		"/images/items/01_3295/191_4250.jpg",
-		"/images/items/01_3295/192_4250.jpg",
-		"/images/items/01_3295/193_4250.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3295/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"hellokitty"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_3295/"
 }

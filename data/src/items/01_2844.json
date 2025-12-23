@@ -5,6 +5,49 @@
 		"ja": "ぷちりっつ セイバー/アルトリア・ペンドラゴン",
 		"en": "Petitrits Saber/Artoria Pendragon"
 	},
+	"brands": [
+		{
+			"id": "petit_rits",
+			"url": "https://bandai-hobby.net/brand/petit_rits/",
+			"ja": "ぷちりっつ"
+		}
+	],
+	"series": [
+		{
+			"id": "fate",
+			"url": "https://bandai-hobby.net/series/fate/",
+			"ja": "Fate/Grand Order"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2767",
+			"url": "https://bandai-hobby.net/item/01_2767/",
+			"ja": "ぷちりっつ アーチャー/ギルガメッシュ"
+		},
+		{
+			"id": "01_2634",
+			"url": "https://bandai-hobby.net/item/01_2634/",
+			"ja": "ぷちりっつ セイバー/沖田総司"
+		},
+		{
+			"id": "01_2599",
+			"url": "https://bandai-hobby.net/item/01_2599/",
+			"ja": "ぷちりっつ マスター/女主人公"
+		},
+		{
+			"id": "01_2600",
+			"url": "https://bandai-hobby.net/item/01_2600/",
+			"ja": "ぷちりっつ セイバー/宮本武蔵"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -21,65 +64,103 @@
 	"description": {
 		"ja": [
 			"『Fate/Grand Order』より騎士王アルトリア・ペンドラゴンがぷちりっつシリーズに登場！",
-			"■シンプルなパーツ構成で初心者でも手軽に楽しめる組み立てやすさを実現。ディテールも細部までしっかり再現。",
-			"■三頭身ながら、キャラクターの特徴あるシルエットラインそのままに、印象を崩すことなくかわいくディフォルメ。",
-			"■上半身の可動によりプロポーションを崩さずに表情あるポージングが可能。",
-			"■「エクスカリバー」と霊基再臨で追加される「王冠」と「マント」は着脱可能。",
-			"■「宝具演出」をイメージした専用台座が付属。"
+			"• シンプルなパーツ構成で初心者でも手軽に楽しめる組み立てやすさを実現。ディテールも細部までしっかり再現。",
+			"• 三頭身ながら、キャラクターの特徴あるシルエットラインそのままに、印象を崩すことなくかわいくディフォルメ。",
+			"• 上半身の可動によりプロポーションを崩さずに表情あるポージングが可能。",
+			"• 「エクスカリバー」と霊基再臨で追加される「王冠」と「マント」は着脱可能。",
+			"• 「宝具演出」をイメージした専用台座が付属。"
 		],
 		"en": [
 			"From \"Fate/Grand Order\", the King of Knights Artoria Pendragon appears in the Petitrits series!",
 			"• The simple parts structure makes it easy to assemble, even for beginners. The details are well reproduced.",
 			"• Although it has three heads, it maintains the character's distinctive silhouette line and is cutely deformed without losing its impression.",
 			"• The upper body can be moved to create expressive poses without changing the proportions.",
-			"• The \"crown \" and \" cloak \" added in \" Excalibur\" and Ascension are removable.",
+			"• The \"crown\" and \"cloak\" added in \"Excalibur\" and Ascension are removable.",
 			"• A special pedestal inspired by \"Noble Phantasm production\" is included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"エクスカリバー×1",
-			"王冠×1",
-			"マント×1",
-			"台座×1",
-			"ホイルシール×1",
-			"カイナスシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "エクスカリバー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "王冠"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マント"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "台座"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "カイナスシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3827_s_qnobtcj0jfy5rcsqj3fq8twx285e.jpg",
+				"path": "/images/items/01_2844/153_3827.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3827_s_5z5c31zms4bi1wiyjtipkrg2jn23.jpg",
+				"path": "/images/items/01_2844/155_3827.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3827_s_zrwgtrbawy0v1jcmvqommycln571.jpg",
+				"path": "/images/items/01_2844/156_3827.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3827_s_6s9xt77tvwyx5p7jugpfmq8yypzj.jpg",
+				"path": "/images/items/01_2844/157_3827.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3827_s_i638x8fz8kdexxoe3f9pyhya0otu.jpg",
+				"path": "/images/items/01_2844/158_3827.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3827_s_oqxd1zzbpaz7ojgmkfwyfh7xv6kb.jpg",
+				"path": "/images/items/01_2844/159_3827.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3827_s_v9f3l3yhpz0obu0cy5bwjmbq1i8b.jpg",
+				"path": "/images/items/01_2844/189_3827.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3827_s_2wkspj41s4x68xgkjk09yswumq5y.jpg",
+				"path": "/images/items/01_2844/190_3827.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3827_s_06a0fpbbfnlpzcw1yn1mb2od0vak.jpg",
+				"path": "/images/items/01_2844/191_3827.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3827_s_y4nc9p3nu83p7ernfwn01vbejokq.jpg",
+				"path": "/images/items/01_2844/192_3827.jpg"
+			}
 		],
-		"en": [
-			"Excalibur x1",
-			"Crown x 1",
-			"Cloak x 1",
-			"Pedestal x 1",
-			"Foil Seal×1",
-			"Cainus Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2844/153_3827.jpg",
-		"/images/items/01_2844/155_3827.jpg",
-		"/images/items/01_2844/156_3827.jpg",
-		"/images/items/01_2844/157_3827.jpg",
-		"/images/items/01_2844/158_3827.jpg",
-		"/images/items/01_2844/159_3827.jpg",
-		"/images/items/01_2844/189_3827.jpg",
-		"/images/items/01_2844/190_3827.jpg",
-		"/images/items/01_2844/191_3827.jpg",
-		"/images/items/01_2844/192_3827.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2844/",
-	"brandIds": [
-		"petit_rits"
-	],
-	"seriesIds": [
-		"fate"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2767",
-		"01_2634",
-		"01_2599",
-		"01_2600"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2844/"
 }

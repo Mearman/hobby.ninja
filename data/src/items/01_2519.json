@@ -5,6 +5,54 @@
 		"ja": "Figure-rise Standard BD ガンダムベース限定 ダイバーアヤメ[ガンダムベースカラー]&プチッガイセット",
 		"en": "Figure-rise Standard BD Gundam Base Limited Diver Iris [Gundam Base Color] & Petit'gguy Set"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		},
+		{
+			"id": "petitgguy",
+			"url": "https://bandai-hobby.net/brand/petitgguy/",
+			"ja": "プチッガイ/ベアッガイ"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		},
+		{
+			"id": "01_2098",
+			"url": "https://bandai-hobby.net/item/01_2098/",
+			"ja": "Figure-rise Standard BUILD DIVERS ダイバーアヤメ"
+		},
+		{
+			"id": "01_2060",
+			"url": "https://bandai-hobby.net/item/01_2060/",
+			"ja": "HGPG 1/144 プチッガイ きゃらっがい アヤメ"
+		},
+		{
+			"id": "01_1894",
+			"url": "https://bandai-hobby.net/item/01_1894/",
+			"ja": "Figure-rise Standard BUILD DIVERS ダイバーナミ"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -32,36 +80,46 @@
 			"• In addition to the display base, bust-up display parts are also included."
 		]
 	},
-	"images": [
-		"/images/items/01_2519/153_3444.jpg",
-		"/images/items/01_2519/155_3444.jpg",
-		"/images/items/01_2519/156_3444.jpg",
-		"/images/items/01_2519/157_3444.jpg",
-		"/images/items/01_2519/158_3444.jpg",
-		"/images/items/01_2519/159_3444.jpg",
-		"/images/items/01_2519/189_3444.jpg",
-		"/images/items/01_2519/190_3444.jpg",
-		"/images/items/01_2519/191_3444.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2519/",
-	"brandIds": [
-		"figurerise-standard",
-		"petitgguy"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2403",
-		"01_2098",
-		"01_2060",
-		"01_1894"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3444_s_5qe27qw2fo6ctru4v3qj7trtxyxc.jpg",
+				"path": "/images/items/01_2519/153_3444.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3444_s_6llk4lhr66iw8lwha0ddatemlnyq.jpg",
+				"path": "/images/items/01_2519/155_3444.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3444_s_6ocnn2pqz8vkgdkbs73xq4v6sup4.jpg",
+				"path": "/images/items/01_2519/156_3444.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3444_s_yh55paetoel9hqneged0mstnzx6n.jpg",
+				"path": "/images/items/01_2519/157_3444.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3444_s_sy8i371pwp7m4gwux23bfpi241sy.jpg",
+				"path": "/images/items/01_2519/158_3444.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3444_s_qaj3liwql4njzs94f09f2x19royq.jpg",
+				"path": "/images/items/01_2519/159_3444.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3444_s_h0b5ta66igtml3ja2dz01mqfsljt.jpg",
+				"path": "/images/items/01_2519/189_3444.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3444_s_3oyjl91l0ul5agkxpgltptzw2d4q.jpg",
+				"path": "/images/items/01_2519/190_3444.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3444_s_e2rfzxc2eipl549vaehmf8u59x7g.jpg",
+				"path": "/images/items/01_2519/191_3444.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2519/"
 }

@@ -2,9 +2,58 @@
 	"id": "01_2293",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 ガンダムベース限定 ユニコーンガンダム 3号機 フェネクス (デストロイモード) (ナラティブVer.)(最終決戦仕様)",
+		"ja": "HG 1/144 ガンダムベース限定 ユニコーンガンダム3号機 フェネクス (デストロイモード) (ナラティブVer.)(最終決戦仕様)",
 		"en": "HG 1/144 Gundam Base Limited Unicorn Gundam Unit 3 Phenex (Destroy Mode) (Narrative Ver.) (Final Battle Specification)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "narrative",
+			"url": "https://bandai-hobby.net/series/narrative/",
+			"ja": "機動戦士ガンダムNT[ナラティブ]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5039",
+			"url": "https://bandai-hobby.net/item/01_5039/",
+			"ja": "HG 1/144 ナラティブガンダム C装備 [覚醒イメージカラー]"
+		},
+		{
+			"id": "01_5038",
+			"url": "https://bandai-hobby.net/item/01_5038/",
+			"ja": "HG 1/144 ナラティブガンダム A装備 [クリアカラー]"
+		},
+		{
+			"id": "01_3460",
+			"url": "https://bandai-hobby.net/item/01_3460/",
+			"ja": "HG 1/144 シルヴァ・バレト・サプレッサー[クリアカラー]"
+		},
+		{
+			"id": "01_2666",
+			"url": "https://bandai-hobby.net/item/01_2666/",
+			"ja": "HG 1/144 ガンダムベース限定 ナラティブガンダム B装備"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -18,11 +67,10 @@
 		"day": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"ユニコーンガンダム 3号機 フェネクス（デストロイモード）（ナラティブVer.）が劇中の最終決戦をイメージしたカラーでガンダムベース限定品として登場！",
+			"ユニコーンガンダム3号機 フェネクス（デストロイモード）（ナラティブVer.）が劇中の最終決戦をイメージしたカラーでガンダムベース限定品として登場！",
 			"• 全身のサイコフレームはラメ入りのクリアパーツで再現。",
 			"• 特徴的なシルエットを再現するアームド・アーマーDEの取り付け基部。",
 			"• 鳥の飾り羽の様な形状のスタビライザーは可動式。",
@@ -30,39 +78,37 @@
 		],
 		"en": [
 			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"Unicorn Gundam Unit 3 Phenex (Destroy Mode) (Narrative Ver.) is now available as a Gundam base limited item in a color inspired by the final battle in the movie!",
+			"Unicorn Gundam Unit 3 Phenex (Destroy Mode) (Narrative Ver.) is now available as a Gundam base limited item in a color inspired by the final battle in the play!",
 			"• The whole body psycho frame is reproduced with clear glitter parts.",
-			"• Attachment base for Armed Armor DE that reproduces the distinctive silhouette.",
-			"• The stabilizer shaped like a bird's decorative feathers is movable.",
+			"• Armed Armor DE mounting base that reproduces the distinctive silhouette.",
+			"• The stabilizer shaped like a bird's feathers is movable.",
 			"• Reproduce powerful actions with a wide range of motion and various gimmicks."
 		]
 	},
-	"images": [
-		"/images/items/01_2293/153_3233.jpg",
-		"/images/items/01_2293/155_3233.jpg",
-		"/images/items/01_2293/156_3233.jpg",
-		"/images/items/01_2293/157_3233.jpg",
-		"/images/items/01_2293/158_3233.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2293/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"narrative"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5039",
-		"01_5038",
-		"01_3460",
-		"01_2666"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3233_s_p8pxzsghnlm46ih2gj2gnve1zshv.jpg",
+				"path": "/images/items/01_2293/153_3233.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3233_s_5f2185ajseqm5swlfccxpsq4yn5y.jpg",
+				"path": "/images/items/01_2293/155_3233.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3233_s_0mm30jane25h5pk3bixty7k7q1us.jpg",
+				"path": "/images/items/01_2293/156_3233.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3233_s_dpuada6bjopcj1dp896au852zosp.jpg",
+				"path": "/images/items/01_2293/157_3233.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3233_s_izhlycx1ghhmcapz52ifqxjfhm82.jpg",
+				"path": "/images/items/01_2293/158_3233.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2293/"
 }

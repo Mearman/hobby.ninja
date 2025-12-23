@@ -5,6 +5,43 @@
 		"ja": "ピカちんメカ メテオトラック(レオ機)",
 		"en": "Pikachin Mecha Meteor Truck (Leo model)"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 935,
 		"currency": "JPY",
@@ -32,38 +69,46 @@
 			"• 不要"
 		],
 		"en": [
-			"• A power-up item for the rocket wheel shooter used by Leo Naruto is now available!",
-			"• When you attach the Meteor Truck, the ejected cap will bounce!",
-			"• Track badge LV.2 is included.",
+			"• Power-up items for Leo Naruto's rocket wheel shooter are now available!",
+			"• When the Meteor Truck is attached, the injected cap will bounce!",
+			"• Truck badge LV.2 is included.",
 			"[Set contents]",
 			"• Meteor truck (assembled product) x 1",
 			"• Pikachin badge (assembled product) x 1",
 			"• Cap wheel x 1",
 			"• Rubber parts x 1",
 			"[battery]",
-			"• Unnecessary"
+			"• Not required"
 		]
 	},
-	"images": [
-		"/images/items/01_2332/153_3269.jpg",
-		"/images/items/01_2332/155_3269.jpg",
-		"/images/items/01_2332/156_3269.jpg",
-		"/images/items/01_2332/157_3269.jpg",
-		"/images/items/01_2332/158_3269.jpg",
-		"/images/items/01_2332/159_3269.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2332/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3269_s_0d66snyufev8cub4vapeozogtbbr.jpg",
+				"path": "/images/items/01_2332/153_3269.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3269_s_rlyait6b2096m8jdp1864yxh38ob.jpg",
+				"path": "/images/items/01_2332/155_3269.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3269_s_hhlqmk87fq8tenaqx6xhg2t9s9pw.jpg",
+				"path": "/images/items/01_2332/156_3269.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3269_s_wxmu7to785mc8l7w6jgv252jtl19.jpg",
+				"path": "/images/items/01_2332/157_3269.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3269_s_zdhb1xpehdb9hhqakatp55m13m3h.jpg",
+				"path": "/images/items/01_2332/158_3269.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3269_s_02csn2h2n6qwdf15jmno756jjfgo.jpg",
+				"path": "/images/items/01_2332/159_3269.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2332/"
 }

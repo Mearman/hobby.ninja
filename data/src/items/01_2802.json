@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 ネプテイトウェポンズ",
 		"en": "HGBD:R 1/144 Neptate Weapons"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -18,12 +62,11 @@
 		"day": 18
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"2020年4月9日よりガンダムチャンネルにて配信予定の『ガンダムビルドダイバーズRe:RISE』2nd Seasonより、主人公機の新しい外装ウェポンズが登場！",
 			"• 今度の武装は「バックパックユニット」。",
-			"• コアドッキングカスタム対応で、別売りのコアガンダム IIに装着可能。"
+			"• コアドッキングカスタム対応で、別売りのコアガンダムIIに装着可能。"
 		],
 		"en": [
 			"From the 2nd Season of \"Gundam Build Divers Re:RISE\" scheduled to be distributed on the Gundam channel from 202049, new exterior weapons for the main character's machine will appear!",
@@ -31,39 +74,46 @@
 			"• Supports core docking customization and can be attached to Core Gundam II (sold separately)."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"バックパックユニット×1",
-			"腕部ユニット×2",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "バックパックユニット"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "腕部ユニット"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3789_s_qgtesn6m844oaa94tr021222hz3v.jpg",
+				"path": "/images/items/01_2802/153_3789.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3789_s_mxmd87pzqj4wt7n7vz704tq7o213.jpg",
+				"path": "/images/items/01_2802/155_3789.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3789_s_tzdsodr0m06jqf1a91qoue7kexfm.jpg",
+				"path": "/images/items/01_2802/156_3789.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3789_s_qiksspm7e9oqjsu46tx1o4gpyg6o.jpg",
+				"path": "/images/items/01_2802/157_3789.jpg"
+			}
 		],
-		"en": [
-			"Backpack unit x 1",
-			"Arm unit x 2",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2802/153_3789.jpg",
-		"/images/items/01_2802/155_3789.jpg",
-		"/images/items/01_2802/156_3789.jpg",
-		"/images/items/01_2802/157_3789.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2802/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0111"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2802/"
 }

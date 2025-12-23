@@ -5,6 +5,34 @@
 		"ja": "RG 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン試作零号機DX 陽電子砲セット",
 		"en": "RG General Purpose Humanoid Battle Weapon Android Evangelion Prototype Unit 0 DX Positron Cannon Set"
 	},
+	"brands": [
+		{
+			"id": "rg-c",
+			"url": "https://bandai-hobby.net/brand/rg-c/",
+			"ja": "RG［ リアルグレード ］"
+		}
+	],
+	"series": [
+		{
+			"id": "evangelion",
+			"url": "https://bandai-hobby.net/series/evangelion/",
+			"ja": "エヴァンゲリオン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000163344",
+			"url": "https://p-bandai.jp/item/item-1000163344/",
+			"ja": "ＲＧ エヴァンゲリオン専用拘束兼移動式射出台セット"
+		}
+	],
 	"price": {
 		"amount": 7150,
 		"currency": "JPY",
@@ -34,57 +62,117 @@
 			"• You can assemble before and after modification by selecting parts.",
 			"• The head is divided into fine parts to reproduce color coding.",
 			"• Equipment that appeared in ``Evangelion: New Theatrical Version: Introduction'' can also be assembled by selection.",
-			"• Strongly linked with RG Evangelion Unit 01! Operation Yashima reproduction parts \"G type equipment \" and \" positron rifle\" are included.",
+			"• Strongly linked with RG Evangelion Unit 01! Operation Yashima reproduction parts \"G type equipment\" and \"positron rifle\" are included.",
 			"• Also included are 7 types of left and right hand parts, 1 type of umbilical cable, 2 types of progressive knives, and 1 type of pallet rifle."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ポジトロンライフル×1",
-			"初号機用G型装備×1",
-			"改修後パーツ×1式",
-			"プログレッシブナイフ×2種（通常時・格納時）",
-			"パレットライフル×1",
-			"ハンドパーツ（左右）×各７種",
-			"アンビリカルケーブル×1",
-			"リアリスティックデカール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ポジトロンライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "初号機用G型装備"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "改修後パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "プログレッシブナイフ"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種（通常時・格納時）"
+			}
+		},
+		{
+			"name": {
+				"ja": "パレットライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ（左右）×各７種"
+			}
+		},
+		{
+			"name": {
+				"ja": "アンビリカルケーブル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146902_1.jpg",
+				"path": "/images/items/01_2765/1000146902_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146902_2.jpg",
+				"path": "/images/items/01_2765/1000146902_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146902_3.jpg",
+				"path": "/images/items/01_2765/1000146902_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146902_4.jpg",
+				"path": "/images/items/01_2765/1000146902_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146902_5.jpg",
+				"path": "/images/items/01_2765/1000146902_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146902_6.jpg",
+				"path": "/images/items/01_2765/1000146902_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146902_7.jpg",
+				"path": "/images/items/01_2765/1000146902_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146902_8.jpg",
+				"path": "/images/items/01_2765/1000146902_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146902_9.jpg",
+				"path": "/images/items/01_2765/1000146902_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146902_10.jpg",
+				"path": "/images/items/01_2765/1000146902_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146902_11.jpg",
+				"path": "/images/items/01_2765/1000146902_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146902_12.jpg",
+				"path": "/images/items/01_2765/1000146902_12.jpg"
+			}
 		],
-		"en": [
-			"Positron rifle x 1",
-			"G-type equipment for the first machine x 1",
-			"After repair parts x 1 set",
-			"Progressive knife x 2 types (normal/stored)",
-			"Pallet rifle x 1",
-			"Hand parts (left and right) x 7 types each",
-			"Umbilical cable x 1",
-			"Realistic decal x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2765/1000146902_1.jpg",
-		"/images/items/01_2765/1000146902_10.jpg",
-		"/images/items/01_2765/1000146902_11.jpg",
-		"/images/items/01_2765/1000146902_12.jpg",
-		"/images/items/01_2765/1000146902_2.jpg",
-		"/images/items/01_2765/1000146902_3.jpg",
-		"/images/items/01_2765/1000146902_4.jpg",
-		"/images/items/01_2765/1000146902_5.jpg",
-		"/images/items/01_2765/1000146902_6.jpg",
-		"/images/items/01_2765/1000146902_7.jpg",
-		"/images/items/01_2765/1000146902_8.jpg",
-		"/images/items/01_2765/1000146902_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2765/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"evangelion"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000163344"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2765/"
 }

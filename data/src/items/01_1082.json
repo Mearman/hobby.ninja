@@ -5,6 +5,50 @@
 		"ja": "HGBC 1/144 ジムジムウエポンズ",
 		"en": "HGBC 1/144 Jim Jim Weapons"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 様々な組み合わせができるカスタマイズ性抜群のウエポンパーツがHGBCに登場！",
@@ -31,54 +74,64 @@
 			"• In addition to the four basic forms, various combinations are possible, and you can enjoy combining it with various Gunpla!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"本体パーツ×２",
-			"バレルパーツ（3種）×各１",
-			"フォアエンドパーツ（3種）×各1",
-			"ストックパーツ（3種）×各1",
-			"マガジンパーツ×１",
-			"スコープパーツ×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "本体パーツ×２"
+			}
+		},
+		{
+			"name": {
+				"ja": "バレルパーツ（3種）×各１"
+			}
+		},
+		{
+			"name": {
+				"ja": "フォアエンドパーツ（3種）×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ストックパーツ（3種）×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "マガジンパーツ×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "スコープパーツ×１"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2014_s_bcyn3bt2qn5qe1gnf6osax71mwo9.jpg",
+				"path": "/images/items/01_1082/153_2014.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2014_s_gcotjixhn1vil5n8ukzi43ny40yz.jpg",
+				"path": "/images/items/01_1082/155_2014.jpg"
+			}
 		],
-		"en": [
-			"Body parts x 2",
-			"Barrel parts (3 types) x 1 each",
-			"Forend parts (3 types) x 1 each",
-			"Stock parts (3 types) x 1 each",
-			"Magazine parts x 1",
-			"Scope parts x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×2",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 2",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1082/153_2014.jpg",
-		"/images/items/01_1082/155_2014.jpg",
-		"/images/items/01_1082/01_1082_inst_1.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1082/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
-	"manualId": "0056"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1082/"
 }

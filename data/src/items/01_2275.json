@@ -5,6 +5,16 @@
 		"ja": "THE GUNDAM BASE 行ってきましたクッキー",
 		"en": "THE GUNDAM BASE Go Cookie"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "item_all",
+			"url": "https://bandai-hobby.net/item_all",
+			"ja": "商品一覧"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 1000,
 		"currency": "JPY",
@@ -26,18 +36,14 @@
 			"Contains 14 sweet and delicious cookies, also recommended as a souvenir."
 		]
 	},
-	"images": [
-		"/images/items/01_2275/153_3217.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2275/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
-	"relatedItemIds": [],
-	"tag": {
-		"ja": "ガンダムベースグッズ",
-		"en": "Gundam Base Goods"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3217_o_1d572mrdk1l6m2c31eo5j25q4723.jpg",
+				"path": "/images/items/01_2275/153_3217.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2275/"
 }

@@ -3,8 +3,31 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 近接格闘用オプションアーマー[ポルタノヴァ用/サンドイエロー]",
-		"en": "30MM 1/144 Close combat optional armor [for Portanova/Sand Yellow]"
+		"en": "30MM 1/144 OPTION ARMOR FOR CLOSE FIGHTING [PORTANOVA EXCLUSIVE/SAND YELLOW]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS",
+			"en": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/144",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,7 +41,6 @@
 		"day": 27
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"豊富なオプションでさらに拡がるカスタマイズ！",
@@ -28,46 +50,64 @@
 			"• オプションアーマーの形状に合わせたシールドが付属。"
 		],
 		"en": [
-			"Customization expands further with abundant options!",
-			"Introducing an optional armor for close combat [for Portanova/Sand Yellow] that can be installed on common joints located in various parts of the aircraft.",
-			"• Two colors of armor with a shape that matches the \"bEXM-15 Portanova\" are available.",
-			"• By combining multiple pieces, you can enjoy your favorite coloring without painting.",
-			"• Optional Comes with a seal that matches the shape of the armor."
+			"Customization expands further with a wide variety of options! Optional armor for melee melee [for Portanova / Sand Yellow] that can be equipped on common joints provided in various parts of the aircraft is now available.",
+			"• Two colors of armor are available in the shape of the \"bEXM-15 Portanova\".",
+			"• By combining multiple colors, you can enjoy your favorite coloring without painting."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"アーマー×1式",
-			"シールド×1"
-		],
-		"en": [
-			"Armor x 1 set",
-			"Seal × 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2245/1000137649_1.jpg",
-		"/images/items/01_2245/1000137649_2.jpg",
-		"/images/items/01_2245/1000137649_3.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "アーマー",
+				"en": "• Armor"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "set"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "• Molded product"
+			},
+			"count": 1
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137649_1.jpg",
+				"path": "/images/items/01_2245/1000137649_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137649_2.jpg",
+				"path": "/images/items/01_2245/1000137649_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137649_3.jpg",
+				"path": "/images/items/01_2245/1000137649_3.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2245/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [],
-	"manualId": "3627"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2245/"
+	}
 }

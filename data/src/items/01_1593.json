@@ -2,9 +2,53 @@
 	"id": "01_1593",
 	"type": "item",
 	"name": {
-		"ja": "MG 1/100 Z ガンダム コーティングバージョン",
-		"en": "MG 1/100 Z Gundam coated version"
+		"ja": "MG 1/100 Zガンダム コーティングバージョン",
+		"en": "MG 1/100 ZGundam coated version"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000145352",
+			"url": "https://p-bandai.jp/item/item-1000145352/",
+			"ja": "ＭＧ 1/100 RMS-179 ジムII（エゥーゴカラーＶｅｒ．）"
+		},
+		{
+			"id": "item-1000131596",
+			"url": "https://p-bandai.jp/item/item-1000131596",
+			"ja": "ＭＧ 1/100 ジム・キャノン ［レッド・ヘッド］（ジャブロー防衛隊仕様）"
+		},
+		{
+			"id": "01_4270",
+			"url": "https://bandai-hobby.net/item/01_4270/",
+			"ja": "MG 1/100 百式 Ver.2.0 [メカニカルクリア]"
+		},
+		{
+			"id": "item-1000112091",
+			"url": "http://p-bandai.jp/item/item-1000112091/",
+			"ja": "ＭＧ 1/100 RMS-179 ジムＩＩ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -17,33 +61,26 @@
 		"month": 8
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士Ｚガンダム』より、全身にクロムメッキコーティングを施した、スペシャルバージョンのキットです。最大の特徴であるモビルスーツからウェイブライダーへの変形を、差し替え無しで完全に再現可能です。テールスタビライザーの認識灯はLEDを内蔵し、発光します。ビームライフルは伸縮機能まで再現されています。その他にも、腰に収納されたビームサーベルが２本、変形には欠かす事のできないシールド、腕部に装着されるグレネード・パック、そしてゼータガンダム最大の武器であるハイパー・メガ・ランチャーが付いています。1/20スケールで再現された「カミーユ・ビダン」の精悍なフィギュアが付いています。"
 		],
 		"en": [
-			"From \"Mobile Suit Z Gundam \", a special version of the kit with chrome plating applied to the entire body. The biggest feature is that the transformation from a mobile suit to a wave rider can be completely reproduced without replacement. The tail stabilizer recognition light has a built-in LED and emits light. The beam rifle's telescopic function has even been reproduced. In addition, it comes with two beam sabers stored on its waist, a seal that is indispensable for transformation, a grenade pack attached to the arm, and Zeta Gundam's biggest weapon, the Hyper Mega Launcher. Comes with a fearless figure of \" Camille Bidan\" reproduced in 1/20 scale."
+			"From \"Mobile Suit Z Gundam\", a special version of the kit with chrome plating applied to the entire body. The biggest feature is that the transformation from a mobile suit to a wave rider can be completely reproduced without replacement. The tail stabilizer recognition light has a built-in LED and emits light. The beam rifle's telescopic function has even been reproduced. In addition, it comes with two beam sabers stored on its waist, a seal that is indispensable for transformation, a grenade pack attached to the arm, and Zeta Gundam's biggest weapon, the Hyper Mega Launcher. Comes with a fearless figure of \"Camille Bidan\" reproduced in 1/20 scale."
 		]
 	},
-	"images": [
-		"/images/items/01_1593/153_2506.jpg",
-		"/images/items/01_1593/155_2506.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1593/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000145352",
-		"item-1000131596",
-		"01_4270",
-		"item-1000112091"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2506_s_bxge88r5qnid4ywejht9jxzyosrf.jpg",
+				"path": "/images/items/01_1593/153_2506.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2506_s_646hcz9a51id5ou6v5igqlso4q7v.jpg",
+				"path": "/images/items/01_1593/155_2506.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1593/"
 }

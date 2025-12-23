@@ -5,6 +5,55 @@
 		"ja": "HGPG 1/144 プチッガイ きゃらっがい モモ",
 		"en": "HGPG 1/144 Petitgguy Charaggai Momo"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "petitgguy",
+			"url": "https://bandai-hobby.net/brand/petitgguy/",
+			"ja": "プチッガイ/ベアッガイ"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 990,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 19
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズ』よりモモが可愛いきゃらっがいになって登場！",
@@ -26,57 +74,78 @@
 		],
 		"en": [
 			"From \"Gundam Build Divers\", Momo is now available as a cute character!",
-			"• In addition to the characteristic ponytail, the head parts can also be replaced to recreate Petit'gguy!"
+			"• In addition to the characteristic ponytail, the head parts are replaceable so you can also recreate Petit'gguy!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"モモヘッド×１",
-			"ディスプレイ台座×１",
-			"ジョイントパーツ×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "モモヘッド×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ×１"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2258_s_wh18c5tcl2mif2h8pyg7fcpe2gdo.jpg",
+				"path": "/images/items/01_1330/153_2258.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2258_s_1tz3e38ehbyx4lw80rvqdih686tg.jpg",
+				"path": "/images/items/01_1330/155_2258.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2258_s_d3rhc0f6xznqa23ouy99xsoh2u13.jpg",
+				"path": "/images/items/01_1330/156_2258.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2258_s_5myftahs7mo0ldgw8ehs6tltcynl.jpg",
+				"path": "/images/items/01_1330/157_2258.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2258_s_jl3xvlvd45ssgvgi4fjruq9ynn99.jpg",
+				"path": "/images/items/01_1330/158_2258.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2258_s_hc2ayoilivqo5iqvdt475hzu32kz.jpg",
+				"path": "/images/items/01_1330/159_2258.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2258_s_3ub6ph5jrq5v8gh3pnx7wvt5od8n.jpg",
+				"path": "/images/items/01_1330/189_2258.jpg"
+			}
 		],
-		"en": [
-			"Momo head x 1",
-			"Display pedestal x 1",
-			"Joint parts x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 4",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1330/153_2258.jpg",
-		"/images/items/01_1330/155_2258.jpg",
-		"/images/items/01_1330/156_2258.jpg",
-		"/images/items/01_1330/157_2258.jpg",
-		"/images/items/01_1330/158_2258.jpg",
-		"/images/items/01_1330/159_2258.jpg",
-		"/images/items/01_1330/189_2258.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1330/",
-	"brandIds": [
-		"hg",
-		"petitgguy"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1330/"
 }

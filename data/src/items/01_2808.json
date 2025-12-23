@@ -3,8 +3,38 @@
 	"type": "item",
 	"name": {
 		"ja": "ENTRY GRADE ウルトラマンゼロ",
-		"en": "ENTRY GRADE Ultraman Zero"
+		"en": "ENTRY GRADE ULTRAMAN ZERO"
 	},
+	"brands": [
+		{
+			"id": "entry_grade",
+			"url": "https://bandai-hobby.net/brand/entry_grade/",
+			"ja": "ENTRY GRADE",
+			"en": "ENTRY GRADE"
+		}
+	],
+	"series": [
+		{
+			"id": "ultraman",
+			"url": "https://bandai-hobby.net/series/ultraman/",
+			"ja": "ウルトラマン",
+			"en": "ULTRAMAN"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5244",
+			"url": "https://bandai-hobby.net/item/01_5244/",
+			"ja": "ENTRY GRADE ULTRAMAN(ULTRAMAN: RISING)"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -28,45 +58,67 @@
 			"• 接着剤や工具は不要。説明書は見やすい色付き。"
 		],
 		"en": [
-			"Create your favorite hero with your own hands! Ultraman Zero appears in the introductory series \"ENTRY GRADE\" given to all plastic model inexperienced people!",
-			"• Because it is a touch gate, parts can be removed by hand!",
-			"• With a small number of parts (28 parts), even those who are making plastic models for the first time can easily assemble it!",
-			"• Color coding of each part is reproduced by parts!",
-			"• Adopts a gimmick in which the color of the color timer changes when the color timer parts are rotated.",
-			"• No glue or tools required. The manual is colored for easy viewing."
+			"Create your favorite heroes with your own hands! Ultraman Zero is now available in the introductory series \"ENTRY GRADE\" for all inexperienced plastic models!",
+			"• Because it is a touch gate, the parts are \"petit! \"You can take it!",
+			"• With a small number of parts (28 parts), even those who make plastic models for the first time can assemble them crisply!",
+			"• The color coding of each part is reproduced depending on the part!",
+			"• Adopts a gimmick that changes the color of the color timer when the color timer parts are rotated."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ランナー×3",
-			"取扱説明書×1",
-			"シール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ランナー",
+				"en": "• Runner"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "取扱説明書",
+				"en": "• Instruction manual"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "• Seal"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148824_1.jpg",
+				"path": "/images/items/01_2808/1000148824_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148824_2.jpg",
+				"path": "/images/items/01_2808/1000148824_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148824_3.jpg",
+				"path": "/images/items/01_2808/1000148824_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148824_4.jpg",
+				"path": "/images/items/01_2808/1000148824_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148824_5.jpg",
+				"path": "/images/items/01_2808/1000148824_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148824_6.jpg",
+				"path": "/images/items/01_2808/1000148824_6.jpg"
+			}
 		],
-		"en": [
-			"Runner×3",
-			"Handling manual×1",
-			"Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2808/1000148824_1.jpg",
-		"/images/items/01_2808/1000148824_2.jpg",
-		"/images/items/01_2808/1000148824_3.jpg",
-		"/images/items/01_2808/1000148824_4.jpg",
-		"/images/items/01_2808/1000148824_5.jpg",
-		"/images/items/01_2808/1000148824_6.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2808/",
-	"brandIds": [
-		"entry_grade"
-	],
-	"seriesIds": [
-		"ultraman"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5244"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2808/"
+	}
 }

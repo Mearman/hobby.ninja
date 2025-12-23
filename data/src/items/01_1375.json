@@ -5,6 +5,50 @@
 		"ja": "HGBD 1/144 煌・ギラーガ",
 		"en": "HGBD 1/144 Kira Giraga"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズ』に登場する、長い尻尾の真っ青なカラーが印象的なライバルガンプラが立体化！",
@@ -31,55 +74,70 @@
 			"• Each joint is independent, so there are no restrictions on action poses and you can move freely! The clear parts added to the whole body have changed the silhouette greatly!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ギラーガギラスピア×1",
-			"ギラーガギラテイル×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ギラーガギラスピア"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ギラーガギラテイル"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 13
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リード線"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2300_s_418mzil72wcyesuyxnt5hdn0sgv5.jpg",
+				"path": "/images/items/01_1375/153_2300.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2300_s_1q2wec2nld0ftslbz0bfo3x214gw.jpg",
+				"path": "/images/items/01_1375/155_2300.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2300_s_bvn5hpyjv6fu6tvsbddslyrl6nmr.jpg",
+				"path": "/images/items/01_1375/156_2300.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2300_s_53wo3mkbfb6jhiilhp5j5i76821a.jpg",
+				"path": "/images/items/01_1375/157_2300.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2300_s_1w6znk2icao46269u8lgc28ctaxi.jpg",
+				"path": "/images/items/01_1375/158_2300.jpg"
+			}
 		],
-		"en": [
-			"Giraga Gira Spear x 1",
-			"Giraga Giratail x1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×13",
-			"ホイルシール×1",
-			"リード線×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded products x 13",
-			"Foil Seal×1",
-			"Lead wire x 1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1375/153_2300.jpg",
-		"/images/items/01_1375/155_2300.jpg",
-		"/images/items/01_1375/156_2300.jpg",
-		"/images/items/01_1375/157_2300.jpg",
-		"/images/items/01_1375/158_2300.jpg",
-		"/images/items/01_1375/01_1375_inst_0.jpg",
-		"/images/items/01_1375/01_1375_inst_1.jpg",
-		"/images/items/01_1375/01_1375_inst_2.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1375/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "1022"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1375/"
 }

@@ -5,6 +5,60 @@
 		"ja": "HGBD:R 1/144 エルドラウィンダム",
 		"en": "HGBD:R 1/144 Eldra Windham"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -16,7 +70,6 @@
 		"year": 2020,
 		"month": 9
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"新 た な る ヒ ト ツ メ 、",
@@ -57,10 +110,10 @@
 			"The Eldra Windham that appears in \"Gundam Build Divers Re:RISE\" has been made into a three-dimensional model with new modeling parts.",
 			"The backpack is equipped with a flight unit. A distinctive rifle, Seal, is newly included.",
 			"● Reproduce the distinctive aircraft design with new modeling",
-			"The Eldora Windom, which is based on the mass-produced MS Windom that appears in \"Mobile Suit Gundam SEED DESTINY\", has been made into a three-dimensional model with new modeling parts.",
+			"Eldra Windom, which is based on the mass-produced MS Windom that appears in \"Mobile Suit Gundam SEED DESTINY\", has been made into a three-dimensional model with new modeling parts.",
 			"The head, chest, shoulders, and legs are reproduced with new parts. The color coding of various parts of the aircraft based on dark blue and gray is reproduced with molded colors.",
 			"● Thorough reproduction of various characteristic weapons",
-			"Weapons that can be used as three types of armament, \"rifle \", \" axe \" and \" saber\", are reproduced with new modeling.",
+			"Weapons that can be used as three types of armament, \"rifle\", \"axe\" and \"saber\", are reproduced with new modeling.",
 			"A clear purple effect is included for the saber. A special seal is also included with a new model. Seal can be attached to the arms and shoulders via joint parts.",
 			"● Original plastic model parts for the backpack are included!",
 			"Comes with joint parts for connecting the flight unit and parts that allow you to customize Gunpla's backpack (sold separately) that supports core docking customization.",
@@ -85,51 +138,67 @@
 			"- Product specifications are scheduled as of 20205. Please note that there may be changes."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ライフル",
-			"シールド",
-			"ビームサーベル"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ライフル"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3955_s_ukjh7t89xpy42aza2fjrm2he86hy.jpg",
+				"path": "/images/items/01_2982/153_3955.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3955_s_0j5u2dgm9q3422b4psbaguip89v7.jpg",
+				"path": "/images/items/01_2982/155_3955.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3955_s_zg9wsfueyd6aau13s9f92isfoja7.jpg",
+				"path": "/images/items/01_2982/156_3955.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3955_s_ltg846gs08ippy313qbkx9ntvgg0.jpg",
+				"path": "/images/items/01_2982/157_3955.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3955_s_xhvbhepx90fgw886gzxa04q688ew.jpg",
+				"path": "/images/items/01_2982/158_3955.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3955_s_t3nm2vk5ar0lzp8tza0tllgv4pae.jpg",
+				"path": "/images/items/01_2982/159_3955.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3955_s_iz8783ufwcuxfpekreentybwwvn2.jpg",
+				"path": "/images/items/01_2982/189_3955.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3955_s_f06mnxsglyodbb8arflggbbypguh.jpg",
+				"path": "/images/items/01_2982/190_3955.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3955_s_6wl8z5yto8cjc8urnh4a26s3cuc9.jpg",
+				"path": "/images/items/01_2982/191_3955.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3955_s_2hq4ncus0tuuq4aw00mhbj79dl1o.jpg",
+				"path": "/images/items/01_2982/192_3955.jpg"
+			}
 		],
-		"en": [
-			"rifle",
-			"Seal de",
-			"beam saber"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2982/153_3955.jpg",
-		"/images/items/01_2982/155_3955.jpg",
-		"/images/items/01_2982/156_3955.jpg",
-		"/images/items/01_2982/157_3955.jpg",
-		"/images/items/01_2982/158_3955.jpg",
-		"/images/items/01_2982/159_3955.jpg",
-		"/images/items/01_2982/189_3955.jpg",
-		"/images/items/01_2982/190_3955.jpg",
-		"/images/items/01_2982/191_3955.jpg",
-		"/images/items/01_2982/192_3955.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2982/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
-	"manualId": "2588"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2982/"
 }

@@ -5,6 +5,50 @@
 		"ja": "HGBC 1/144 HWS&SVカスタムウエポンセット",
 		"en": "HGBC 1/144 HWS&SV custom weapon set"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズ』より、ダブルオースカイとAGEIIマグナムの決戦仕様の追加武装がビルドカスタムシリーズにラインナップ！",
@@ -31,61 +74,104 @@
 			"• Enjoy customization by combining with various Gunpla."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"機首パーツ×1",
-			"HWSパーツ×1式",
-			"SVパーツ×1式",
-			"バックパック用ジョイントパーツ×2",
-			"ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "機首パーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "HWSパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "SVパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "バックパック用ジョイントパーツ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 11
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3010_s_7xn15j75lg2uraxh1zx8fk5pnk8z.jpg",
+				"path": "/images/items/01_2062/153_3010.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3010_s_kzts3uvuxpw13t7l8yujh7214omp.jpg",
+				"path": "/images/items/01_2062/155_3010.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3010_s_1a61yamq5jqzhktpp8y50lv7exm2.jpg",
+				"path": "/images/items/01_2062/156_3010.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3010_s_3rhabxpyrjil7kxaomk5wjat1bxq.jpg",
+				"path": "/images/items/01_2062/157_3010.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3010_s_tydn6idutk90uycq2b52xskiwb6t.jpg",
+				"path": "/images/items/01_2062/158_3010.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3010_s_q3csjtysunjm72ls39u53s07we3w.jpg",
+				"path": "/images/items/01_2062/159_3010.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3010_s_gnarnv78xu2p29vl5774y33fh1of.jpg",
+				"path": "/images/items/01_2062/189_3010.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3010_s_m9v7b14yv1u7uc4je0eftitxbm72.jpg",
+				"path": "/images/items/01_2062/190_3010.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3010_s_s8cfzoju5nzraomnhaauqlulzp6t.jpg",
+				"path": "/images/items/01_2062/191_3010.jpg"
+			}
 		],
-		"en": [
-			"Nose parts x 1",
-			"HWS parts x 1 set",
-			"SV parts x 1 set",
-			"Backpack joint parts x 2",
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×11",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded products x 11",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2062/153_3010.jpg",
-		"/images/items/01_2062/155_3010.jpg",
-		"/images/items/01_2062/156_3010.jpg",
-		"/images/items/01_2062/157_3010.jpg",
-		"/images/items/01_2062/158_3010.jpg",
-		"/images/items/01_2062/159_3010.jpg",
-		"/images/items/01_2062/189_3010.jpg",
-		"/images/items/01_2062/190_3010.jpg",
-		"/images/items/01_2062/191_3010.jpg",
-		"/images/items/01_2062/01_2062_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2062/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "1044"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2062/"
 }

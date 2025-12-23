@@ -5,6 +5,50 @@
 		"ja": "HGBD 1/144 ジムIIIビームマスター",
 		"en": "HGBD 1/144 Jim III Beam Master"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 『ガンダムビルドダイバーズ』に登場する、リクの親友ユッキーの愛機がキット化！",
@@ -27,54 +70,68 @@
 		],
 		"en": [
 			"• Riku's best friend Yukki's favorite machine that appears in \"Gundam Build Divers\" is now a kit!",
-			"• The Universal Century's famous mass-produced machine is equipped with beam weapons and is a sniper type Gunpla specializing in rear support, and the attached changeling rifle is equipped with a gimmick that connects with a waist binder!",
+			"• Universal Century's famous mass-produced machine is a sniper type Gunpla specializing in rear support, equipped with beam weapons, and the included changeling rifle is equipped with a gimmick that connects with a waist binder!",
 			"• In addition, it comes with a variety of weapons unique to a sniper MS, such as a missile pod and a large missile launcher on the shank!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"チェンジリングライフル×1",
-			"ビームソード×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "チェンジリングライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームソード"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 13
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2244_s_2v9kk0hd0r6qb0qukl3401o0yrh3.jpg",
+				"path": "/images/items/01_1315/153_2244.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2244_s_fwe8z9iiz2xlpj60z3ipi6r8rge9.jpg",
+				"path": "/images/items/01_1315/155_2244.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2244_s_893cuc2ie6s2dijx7nkjxhls05d4.jpg",
+				"path": "/images/items/01_1315/156_2244.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2244_s_0ih8s3oyxemx9dikhptxym1b1cts.jpg",
+				"path": "/images/items/01_1315/157_2244.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2244_s_mepfn7sdatis09mnasvcjrh10ptl.jpg",
+				"path": "/images/items/01_1315/158_2244.jpg"
+			}
 		],
-		"en": [
-			"Changeling rifle x 1",
-			"Beam sword x2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×13",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded products x 13",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1315/153_2244.jpg",
-		"/images/items/01_1315/155_2244.jpg",
-		"/images/items/01_1315/156_2244.jpg",
-		"/images/items/01_1315/157_2244.jpg",
-		"/images/items/01_1315/158_2244.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1315/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "1017"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1315/"
 }

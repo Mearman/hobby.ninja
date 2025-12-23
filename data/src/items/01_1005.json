@@ -5,6 +5,49 @@
 		"ja": "Figure-riseBust　ラブライブ！サンシャイン!!　国木田花丸",
 		"en": "Figure-riseBust Love Live! Sunshine!! Hanamaru Kunikida"
 	},
+	"brands": [
+		{
+			"id": "figurerise-bust",
+			"url": "https://bandai-hobby.net/brand/figurerise-bust/",
+			"ja": "Figure-riseBust[フィギュアライズバスト]"
+		}
+	],
+	"series": [
+		{
+			"id": "lovelive",
+			"url": "https://bandai-hobby.net/series/lovelive/",
+			"ja": "ラブライブ！サンシャイン!!"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1002",
+			"url": "https://bandai-hobby.net/item/01_1002/",
+			"ja": "Figure-riseBust　ラブライブ！サンシャイン!!　黒澤ダイヤ"
+		},
+		{
+			"id": "01_1004",
+			"url": "https://bandai-hobby.net/item/01_1004/",
+			"ja": "Figure-riseBust　ラブライブ！サンシャイン!!　松浦果南"
+		},
+		{
+			"id": "01_862",
+			"url": "https://bandai-hobby.net/item/01_862/",
+			"ja": "Figure-riseBust ラブライブ！サンシャイン!! 津島善子"
+		},
+		{
+			"id": "01_863",
+			"url": "https://bandai-hobby.net/item/01_863/",
+			"ja": "Figure-riseBust ラブライブ！サンシャイン!! 小原鞠莉"
+		}
+	],
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -31,44 +74,55 @@
 			"• Aqours Next Step! Project started! Exciting love live! Sunshine!!",
 			"• Aqours members shine in the Figure-rise series! Hanamaru Kunikida appears from \"Figure-riseBust Love Live! Sunshine!!\"!",
 			"• Beautifully reproduces eye coloring using layered injection technology! Anyone can easily create cute faces for their loved ones!",
-			"• Comes with a background plate that will make you want to line up 9 people!! With the special pedestal and background plate (made of PET), you can display the worldview of the live performance as it is!",
+			"• Comes with a background plate that will make you want to line up 9 people!! With the special pedestal and background plate (made of PET), you can display it just like the world view of the live performance!",
 			"• The design of the background plate is an original specification for each member!",
 			"• Recreate the spectacular live scene! Let's connect 9 people and recreate the live scene of the 1st single \"Kimi no Kokoro wa Shineiteru ka?\"!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"本体（腰から上）×1",
-			"台座×1",
-			"背景プレート×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "本体（腰から上）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "台座"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "背景プレート"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1941_s_4te3laz60tauxd019dpr3so8obsi.jpg",
+				"path": "/images/items/01_1005/153_1941.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1941_s_0znhnk67g0ratrah7e8c3kem766o.jpg",
+				"path": "/images/items/01_1005/155_1941.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_1941_s_kc6usinu95cxekvnrezho69w7gz4.jpg",
+				"path": "/images/items/01_1005/156_1941.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_1941_s_fhzh35u7evdp1ev97qhua09mgpv8.jpg",
+				"path": "/images/items/01_1005/157_1941.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_1941_s_56g7citxsijwhzz03sh2msf6u5lt.jpg",
+				"path": "/images/items/01_1005/158_1941.jpg"
+			}
 		],
-		"en": [
-			"Main body (from the waist up) x 1",
-			"Pedestal x 1",
-			"Background plate x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1005/153_1941.jpg",
-		"/images/items/01_1005/155_1941.jpg",
-		"/images/items/01_1005/156_1941.jpg",
-		"/images/items/01_1005/157_1941.jpg",
-		"/images/items/01_1005/158_1941.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1005/",
-	"brandIds": [
-		"figurerise-bust"
-	],
-	"seriesIds": [
-		"lovelive"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1002",
-		"01_1004",
-		"01_862",
-		"01_863"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1005/"
 }

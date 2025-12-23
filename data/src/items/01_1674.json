@@ -5,6 +5,44 @@
 		"ja": "MG 1/100 ザクマインレイヤー",
 		"en": "MG 1/100 Zaku Mine Layer"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "01_5469",
+			"url": "https://bandai-hobby.net/item/01_5469/",
+			"ja": "MG 1/100 ガンダムヴィダール"
+		},
+		{
+			"id": "01_5593",
+			"url": "https://bandai-hobby.net/item/01_5593/",
+			"ja": "MG 1/100 ガンダムMk-V [クリアカラー]"
+		},
+		{
+			"id": "item-1000216602",
+			"url": "https://p-bandai.jp/item/item-1000216602/",
+			"ja": "ＭＧ 1/100 ガンダムアストレア＋プロトＧＮツインブロードブレイド"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 3
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム」より、爆雷散布に特化したザクのバリエーション機“ザクマインレイヤー”がMGにラインアップ ザクVer.2.0を基本構造にフレキシブルなポージングが可能 爆雷散布用バックパックは爆雷ラックの脱着可能、爆雷は連結されており展開することで爆雷散布状態を再現可能 武器はザク・マシンガン、ヒートホーク、ザク・バズーカが付属"
@@ -26,23 +63,18 @@
 			"From \"Mobile Suit Gundam\", the Zaku Minelayer, a variation of the Zaku specializing in depth charge dispersal, is now available in the MG lineup based on Zaku Ver. 2.0, allowing for flexible posing.The depth charge dispersion backpack has a detachable depth charge rack, and the depth charges are connected and can be deployed to recreate the depth charge dispersion state.Weapons include a Zaku machine gun, heat hawk, and Zaku bazooka."
 		]
 	},
-	"images": [
-		"/images/items/01_1674/153_2581.jpg",
-		"/images/items/01_1674/155_2581.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1674/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5469",
-		"01_5593",
-		"item-1000216602"
-	],
-	"manualId": "0832"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2581_s_454ncj8axf6n4g06w3sjd8dq2mww.jpg",
+				"path": "/images/items/01_1674/153_2581.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2581_s_1z04jzlm5cp8293lrs5lk0dcaab4.jpg",
+				"path": "/images/items/01_1674/155_2581.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1674/"
 }

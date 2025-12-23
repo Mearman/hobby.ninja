@@ -5,6 +5,60 @@
 		"ja": "MGEX 1/100 ユニコーンガンダム Ver．Ka ［プレミアム “ユニコーンモード” ボックス］",
 		"en": "MGEX 1/100 Unicorn Gundam Ver. Ka [Premium “Unicorn Mode” Box]"
 	},
+	"brands": [
+		{
+			"id": "mgex",
+			"url": "https://bandai-hobby.net/brand/mgex/",
+			"ja": "MGEX [マスターグレードエクストリーム]"
+		},
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216106",
+			"url": "https://p-bandai.jp/item/item-1000216106/",
+			"ja": "RG 1/144 ユニコーンガンダム２号機 バンシィ・ノルン (最終決戦仕様) [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000183366",
+			"url": "https://p-bandai.jp/item/item-1000183366/",
+			"ja": "ＭＧ 1/100 スタークジェガン"
+		},
+		{
+			"id": "item-1000164780",
+			"url": "https://p-bandai.jp/item/item-1000164780/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム ペルフェクティビリティ用 ディバイン拡張セット"
+		},
+		{
+			"id": "item-1000164779",
+			"url": "https://p-bandai.jp/item/item-1000164779/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム ペルフェクティビリティ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 25300,
 		"currency": "JPY",
@@ -17,13 +71,12 @@
 		"month": 9
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"-特別パッケージ仕様版-",
 			"ＭＧＥＸ 1/100 ユニコーンガンダム Ver．Ka ［プレミアム “ユニコーンモード\" ボックス］が登場！",
 			"通常版と異なる“ユニコーンモード”を主体としたボックスアートでお届け！",
-			"■　アイテム情報",
+			"• アイテム情報",
 			"●　極限の“発光機構”",
 			"新規開発の”フレキシブルLEDシート”により、変身、発光、色調変化、可動すべての共立を実現。",
 			"・ユニコーンモード、デストロイモードの変身を再現可能。",
@@ -110,39 +163,50 @@
 			"- Product specifications are scheduled as of 20207. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_3026/153_3999.jpg",
-		"/images/items/01_3026/155_3999.jpg",
-		"/images/items/01_3026/156_3999.jpg",
-		"/images/items/01_3026/157_3999.jpg",
-		"/images/items/01_3026/158_3999.jpg",
-		"/images/items/01_3026/159_3999.jpg",
-		"/images/items/01_3026/189_3999.jpg",
-		"/images/items/01_3026/190_3999.jpg",
-		"/images/items/01_3026/191_3999.jpg",
-		"/images/items/01_3026/192_3999.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3026/",
-	"brandIds": [
-		"mgex",
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216106",
-		"item-1000183366",
-		"item-1000164780",
-		"item-1000164779"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3999_s_msdzo0c95bokpl9toxlcdr1az7fz.jpg",
+				"path": "/images/items/01_3026/153_3999.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3999_s_d2jbmh5y7o4wa7huy98lrb0eyfb4.jpg",
+				"path": "/images/items/01_3026/155_3999.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3999_s_3now9beu1d7xy83i2mhr709hvxaj.jpg",
+				"path": "/images/items/01_3026/156_3999.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3999_s_k4kzvgemylp62o3aqrxe16e817rq.jpg",
+				"path": "/images/items/01_3026/157_3999.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3999_s_ehw1a024wo5ierj6f8i8rech9hti.jpg",
+				"path": "/images/items/01_3026/158_3999.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3999_s_s13vcezdkp7jwi4l2629rrfh2qc4.jpg",
+				"path": "/images/items/01_3026/159_3999.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3999_s_lut6ancw3fj3ztkf636d44nqbqdy.jpg",
+				"path": "/images/items/01_3026/189_3999.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3999_s_4pmxozjxet0lcfrzjilpflpm1zxl.jpg",
+				"path": "/images/items/01_3026/190_3999.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3999_s_pi7g3bgyypq25t9ckblm37t51fi5.jpg",
+				"path": "/images/items/01_3026/191_3999.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3999_s_xz5xrvc6tneydchuh7l69np8ghc6.jpg",
+				"path": "/images/items/01_3026/192_3999.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3026/"
 }

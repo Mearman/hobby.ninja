@@ -2,9 +2,53 @@
 	"id": "01_1625",
 	"type": "item",
 	"name": {
-		"ja": "MG 1/100 MSZ-010 ZZ ガンダム",
-		"en": "MG 1/100 MSZ-010 ZZ Gundam"
+		"ja": "MG 1/100 MSZ-010 ZZガンダム",
+		"en": "MG 1/100 MSZ-010 ZZGundam"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-zz",
+			"url": "https://bandai-hobby.net/series/gundam-zz/",
+			"ja": "機動戦士ガンダムＺＺ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000137712",
+			"url": "https://p-bandai.jp/item/item-1000137712/",
+			"ja": "ＭＧ 1/100 ドワッジ改"
+		},
+		{
+			"id": "01_2231",
+			"url": "https://bandai-hobby.net/item/01_2231/",
+			"ja": "MG 1/100 ドワッジ"
+		},
+		{
+			"id": "01_338",
+			"url": "https://bandai-hobby.net/item/01_338/",
+			"ja": "MG 1/100 百式 Ver.2.0"
+		},
+		{
+			"id": "01_1723",
+			"url": "https://bandai-hobby.net/item/01_1723/",
+			"ja": "MG 1/100 キュベレイMk-II （エルピー・プル専用機）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -17,37 +61,38 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"宇宙世紀0087年に最強の機体を目指し開発された可変攻撃型モビルスーツをビックサイズでキット化しました。機体最大の特徴である「Gフォートレス」への変形、合体、分離を完全に再現しています。完全変形の可能なコアファイターの他に、非変形のコアブロックも付いており、ダブルゼータガンダムとコアファイターを同時にディスプレイできます。「Gフォートレス」の機首部が変形したダブルビームライフルとハイパービームサーベルが２つ付いています。"
 		],
 		"en": [
-			"The variable attack mobile suit developed in Universal Century 0087 with the aim of becoming the strongest aircraft has been made into a big size kit. The aircraft's biggest feature, the transformation, merging, and separation into \"G Fortress \", is completely reproduced. In addition to the completely transformable Core Fighter, a non-transformable Core Block is also included, allowing you to display Double Zeta Gundam and Core Fighter at the same time. The nose of the \" G Fortress\" has been modified to include a double beam rifle and two hyper beam sabers."
+			"The variable attack mobile suit developed in Universal Century 0087 with the aim of becoming the strongest aircraft has been made into a big size kit. The aircraft's biggest feature, the transformation, merging, and separation into \"G Fortress\", is completely reproduced. In addition to the completely transformable Core Fighter, a non-transformable Core Block is also included, allowing you to display Double Zeta Gundam and Core Fighter at the same time. The nose of the \"G Fortress\" has been modified to include a double beam rifle and two hyper beam sabers."
 		]
 	},
-	"images": [
-		"/images/items/01_1625/153_2536.jpg",
-		"/images/items/01_1625/155_2536.jpg",
-		"/images/items/01_1625/156_2536.jpg",
-		"/images/items/01_1625/157_2536.jpg",
-		"/images/items/01_1625/158_2536.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1625/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam-zz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000137712",
-		"01_2231",
-		"01_338",
-		"01_1723"
-	],
-	"manualId": "0431"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2536_s_h9isbiy3t230l78aulg0bercdoby.jpg",
+				"path": "/images/items/01_1625/153_2536.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2536_s_1ad1ixlysah7cbqehyzg8kdzie2q.jpg",
+				"path": "/images/items/01_1625/155_2536.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2536_s_xfjp6m0qga1g8ef6i622n36ntfo0.jpg",
+				"path": "/images/items/01_1625/156_2536.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2536_s_ifzlbty0x6wzdeh5bzzutk4l8khs.jpg",
+				"path": "/images/items/01_1625/157_2536.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2536_s_ewa5fsrznxilvz5k671tix331sj7.jpg",
+				"path": "/images/items/01_1625/158_2536.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1625/"
 }

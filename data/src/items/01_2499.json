@@ -5,6 +5,43 @@
 		"ja": "LBXフェンリル",
 		"en": "LBX Fenrir"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "lbx",
+			"url": "https://bandai-hobby.net/series/lbx/",
+			"ja": "ダンボール戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000215196",
+			"url": "https://p-bandai.jp/item/item-1000215196/",
+			"ja": "ＬＢＸイカロス・フォース"
+		},
+		{
+			"id": "item-1000215197",
+			"url": "https://p-bandai.jp/item/item-1000215197/",
+			"ja": "ＬＢＸイカロス・ゼロ"
+		},
+		{
+			"id": "item-1000210042",
+			"url": "https://p-bandai.jp/item/item-1000210042/",
+			"ja": "ＬＢＸエルシオン"
+		},
+		{
+			"id": "item-1000210041",
+			"url": "https://p-bandai.jp/item/item-1000210041/",
+			"ja": "ＬＢＸペルセウス"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -26,42 +63,60 @@
 		],
 		"en": [
 			"From \"Danball Senki\" comes Kazuya's sniper-type LBX that looks like a wolf!",
-			"• It is possible to make a sniping pose with a rifle held!",
-			"• The basic equipment sniper rifle \"Dominion Rifle\" is included."
+			"• It is possible to make him do a sniping pose with a rifle!",
+			"• The basic sniper rifle \"Dominion Rifle\" is included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ドミニオンライフル×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ドミニオンライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3425_s_5pyjfb4o6cj65uy9s8otso1o6y37.jpg",
+				"path": "/images/items/01_2499/153_3425.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3425_s_p4y5k7x1l4ptmn361ffztrhimx5x.jpg",
+				"path": "/images/items/01_2499/155_3425.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3425_s_xkmqqpb0koso399z407pna2h9x0y.jpg",
+				"path": "/images/items/01_2499/156_3425.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3425_s_9k6c92o4ics4c8dutgodmo9huyof.jpg",
+				"path": "/images/items/01_2499/157_3425.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3425_s_bmuhpl4laxd5ofx2py0v4flres9s.jpg",
+				"path": "/images/items/01_2499/158_3425.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3425_s_gnxn7tvjrf8ipzxxtnrhw3vaxka7.jpg",
+				"path": "/images/items/01_2499/159_3425.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3425_s_0yxrokc7si93dplvs7v4mnv4yblk.jpg",
+				"path": "/images/items/01_2499/189_3425.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3425_s_jah6hcgy5ohli3037eprnrbbq7y1.jpg",
+				"path": "/images/items/01_2499/190_3425.jpg"
+			}
 		],
-		"en": [
-			"Dominion rifle x1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2499/153_3425.jpg",
-		"/images/items/01_2499/155_3425.jpg",
-		"/images/items/01_2499/156_3425.jpg",
-		"/images/items/01_2499/157_3425.jpg",
-		"/images/items/01_2499/158_3425.jpg",
-		"/images/items/01_2499/159_3425.jpg",
-		"/images/items/01_2499/189_3425.jpg",
-		"/images/items/01_2499/190_3425.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2499/",
-	"brandIds": [],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2499/"
 }

@@ -5,6 +5,43 @@
 		"ja": "ピカちんキット15 ヒミツロックドライバー＆ヒミツネジボックス",
 		"en": "Pikachin Kit15 Secret Lock Driver & Secret Screw Box"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -39,48 +76,65 @@
 			"• 不要"
 		],
 		"en": [
-			"• Let's store the secret in the secret screw box!",
-			"• Secret screw special screws are used in the box. Only a special screwdriver bit that matches the shape of the screw can open and close the box!",
-			"• 4 types of bits and screws each. It's not easy to open!",
+			"• Store your secrets in the secret screw box!",
+			"• Secret screw box uses special screws. Only a special screwdriver bit that matches the shape of the screw can open and close the box!",
+			"• 4 types each of bits and screws. It's not easy to open!",
 			"• The Secret Lock Driver can be combined with the Pikachin Trigger (sold separately) to become an electric screwdriver!",
-			"• Secret Rock Driver LV.3 badge included.",
+			"• Comes with Secret Rock Driver LV.3 badge.",
 			"[Set contents]",
 			"• Secret lock driver body x 1",
-			"• Handle for hand cranking",
+			"• Hand wheel",
 			"• Driver bit x 4 types",
 			"• Secret screw box body x 1",
 			"• 4 types of screws x 2 each",
 			"• Seal×1",
 			"• Runner×1 (badge)",
-			"• Handling Manual×1",
+			"• Handling manual×1",
 			"• Pikachin sheet x 1",
 			"[battery]",
-			"• Unnecessary"
+			"• Not required"
 		]
 	},
-	"images": [
-		"/images/items/01_2428/153_3359.jpg",
-		"/images/items/01_2428/155_3359.jpg",
-		"/images/items/01_2428/156_3359.jpg",
-		"/images/items/01_2428/157_3359.jpg",
-		"/images/items/01_2428/158_3359.jpg",
-		"/images/items/01_2428/159_3359.jpg",
-		"/images/items/01_2428/189_3359.jpg",
-		"/images/items/01_2428/190_3359.jpg",
-		"/images/items/01_2428/191_3359.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2428/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3359_s_45c7gxlc6t49nxbz03ztteav78pw.jpg",
+				"path": "/images/items/01_2428/153_3359.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3359_s_104sw5f6ej2gc5b4hstqs7lfeqin.jpg",
+				"path": "/images/items/01_2428/155_3359.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3359_s_b3gvk66iijvtnaux2en9vzws35td.jpg",
+				"path": "/images/items/01_2428/156_3359.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3359_s_h1vv9666opkgz2dmbsbgouplx6gm.jpg",
+				"path": "/images/items/01_2428/157_3359.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3359_s_k17fljla8dpws4fwmaw1p45j99xq.jpg",
+				"path": "/images/items/01_2428/158_3359.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3359_s_n1qw1g3bpzxf8xo22hi6gifq8hjt.jpg",
+				"path": "/images/items/01_2428/159_3359.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3359_s_g8c5hsy5qumy9edprczkbkpt5q2j.jpg",
+				"path": "/images/items/01_2428/189_3359.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3359_s_krn6m4b3tla7kvht2c03v0mt1772.jpg",
+				"path": "/images/items/01_2428/190_3359.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3359_s_8kc8hbwms1xwo5ertr9spvyw34a3.jpg",
+				"path": "/images/items/01_2428/191_3359.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2428/"
 }

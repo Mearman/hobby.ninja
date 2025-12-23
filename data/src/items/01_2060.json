@@ -5,6 +5,55 @@
 		"ja": "HGPG 1/144 プチッガイ きゃらっがい アヤメ",
 		"en": "HGPG 1/144 Petitgguy Charaggai Ayame"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "petitgguy",
+			"url": "https://bandai-hobby.net/brand/petitgguy/",
+			"ja": "プチッガイ/ベアッガイ"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 990,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズ』よりアヤメが可愛いきゃらっがいになって登場！",
@@ -28,64 +76,101 @@
 		],
 		"en": [
 			"Ayame from \"Gundam Build Divers\" appears as a cute character!",
-			"• Ayame's face parts can be selected between \"with mask \" and \" without mask.\"",
-			"• Petitgguy can also be reproduced by replacing the head parts!",
-			"• Comes with a pedestal that can be connected to other Charagguys!"
+			"• Ayame's face parts can be selected between \"with mask\" and \"without mask\".",
+			"• Petitgguy can also be recreated by replacing the head parts!",
+			"• Comes with a pedestal that can be connected to other Charaggi!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"アヤメヘッド×1",
-			"差し替えフェイスパーツ×1",
-			"ジョイントパーツ×1",
-			"ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "アヤメヘッド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "差し替えフェイスパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 5
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/192_3028_s_fs8pvi9m7v7mkiqc4z2ef44239bm.jpg",
+				"path": "/images/items/01_2060/192_3028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_3028_s_rmffoj24yrme4kdjftx1nv9dvec8.jpg",
+				"path": "/images/items/01_2060/153_3028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3028_s_6h5f1h1511o1p0f7849qeicuhail.jpg",
+				"path": "/images/items/01_2060/155_3028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3028_s_cgbnzyhud1fw04h9hqox5qwespgn.jpg",
+				"path": "/images/items/01_2060/156_3028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3028_s_2261nlhf2s8bllm74restv05oe58.jpg",
+				"path": "/images/items/01_2060/157_3028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3028_s_xr7jpbxt2r3n8vcjquku7jdfwrqt.jpg",
+				"path": "/images/items/01_2060/158_3028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3028_s_uuusdc7wye2uwzef42z2905vgjsl.jpg",
+				"path": "/images/items/01_2060/159_3028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3028_s_r29s7hp246upy9snkxsum8xugsqp.jpg",
+				"path": "/images/items/01_2060/189_3028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3028_s_t490ca3lcv7isc2ttb4v1gadjk0c.jpg",
+				"path": "/images/items/01_2060/190_3028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3028_s_n7lfs734ibvd8nprryue1srvmoyd.jpg",
+				"path": "/images/items/01_2060/191_3028.jpg"
+			}
 		],
-		"en": [
-			"Iris head x 1",
-			"Replacement face parts x 1",
-			"Joint parts x 1",
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×5",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 5",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2060/153_3028.jpg",
-		"/images/items/01_2060/155_3028.jpg",
-		"/images/items/01_2060/156_3028.jpg",
-		"/images/items/01_2060/157_3028.jpg",
-		"/images/items/01_2060/158_3028.jpg",
-		"/images/items/01_2060/159_3028.jpg",
-		"/images/items/01_2060/189_3028.jpg",
-		"/images/items/01_2060/190_3028.jpg",
-		"/images/items/01_2060/191_3028.jpg",
-		"/images/items/01_2060/192_3028.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2060/",
-	"brandIds": [
-		"hg",
-		"petitgguy"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2060/"
 }

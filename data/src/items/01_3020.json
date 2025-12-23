@@ -2,9 +2,44 @@
 	"id": "01_3020",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム EXスタンダード016 νガンダム",
-		"en": "SD Gundam EX Standard 016 νGundam"
+		"ja": "SDガンダム EXスタンダード016 νガンダム",
+		"en": "SD GUNDAM EX-STANDARD νGUNDAM"
 	},
+	"brands": [
+		{
+			"id": "SDEX",
+			"url": "https://bandai-hobby.net/brand/SDEX/",
+			"ja": "SDEXスタンダード",
+			"en": "SDEX STANDARD"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア",
+			"en": "MOBILE SUIT GUNDAM Char’s Counterattack"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3494",
+			"url": "https://bandai-hobby.net/item/01_3494/",
+			"ja": "SDガンダム EXスタンダード νガンダム vs サザビー セット[クリアカラー]"
+		},
+		{
+			"id": "01_3021",
+			"url": "https://bandai-hobby.net/item/01_3021/",
+			"ja": "SDガンダム EXスタンダード017 サザビー"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -20,54 +55,87 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"「SD ガンダム EXスタンダード」からνガンダムが登場！",
+			"「SDガンダム EXスタンダード」からνガンダムが登場！",
 			"• ビーム・ライフル、ビーム・サーベル、シールドが付属。",
 			"• 各所に3mmジョイントを搭載。装備を組み合わせてプラモデルオリジナル形態を楽しめる。",
-			"• 別売りの「SD ガンダム EXスタンダード サザビー」も揃えてシャアとアムロの死闘を再現しよう！"
+			"• 別売りの「SDガンダム EXスタンダード サザビー」も揃えてシャアとアムロの死闘を再現しよう！"
 		],
 		"en": [
-			"νGundam appears from \"SD Gundam EX Standard\"!",
-			"• Beam rifle, beam saber, and seal included.",
+			"ν GUNDAM from \"SD GUNDAM EX Standard\" is now available!",
+			"• Includes beam rifle, beam saber, and shield.",
 			"• Equipped with 3mm joints in various places. You can enjoy the original form of the plastic model by combining equipment.",
-			"• Also include the separately sold \"SD Gundam EX Standard Sazabi\" to recreate Char and Amuro's deadly battle!"
+			"• Let's recreate the battle to the death between Char and Amuro with the \"SD GUNDAM EX Standard Sotheby\" sold separately!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"ビーム・サーベル×1",
-			"シールド×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル",
+				"en": "• Beam Rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "• Beam Saber"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "• Shield"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "• Foil seal"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153101_1.jpg",
+				"path": "/images/items/01_3020/1000153101_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153101_2.jpg",
+				"path": "/images/items/01_3020/1000153101_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153101_3.jpg",
+				"path": "/images/items/01_3020/1000153101_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153101_4.jpg",
+				"path": "/images/items/01_3020/1000153101_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153101_5.jpg",
+				"path": "/images/items/01_3020/1000153101_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153101_6.jpg",
+				"path": "/images/items/01_3020/1000153101_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153101_7.jpg",
+				"path": "/images/items/01_3020/1000153101_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153101_8.jpg",
+				"path": "/images/items/01_3020/1000153101_8.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x1",
-			"Beam saber x 1",
-			"Seal × 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3020/1000153101_1.jpg",
-		"/images/items/01_3020/1000153101_2.jpg",
-		"/images/items/01_3020/1000153101_3.jpg",
-		"/images/items/01_3020/1000153101_4.jpg",
-		"/images/items/01_3020/1000153101_5.jpg",
-		"/images/items/01_3020/1000153101_6.jpg",
-		"/images/items/01_3020/1000153101_7.jpg",
-		"/images/items/01_3020/1000153101_8.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3020/",
-	"brandIds": [
-		"SDEX"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3494",
-		"01_3021"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_3020/"
+	}
 }

@@ -5,6 +5,43 @@
 		"ja": "BB戦士 192ムシャウイングゼロ",
 		"en": "BB Senshi 192 Mushawing Zero"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -25,22 +62,18 @@
 			"BB Senshi 192 Mushawing Zero is here! !"
 		]
 	},
-	"images": [
-		"/images/items/01_1602/153_2514.jpg",
-		"/images/items/01_1602/155_2514.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1602/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2514_s_4d947zb4pf8kv8uk7d6q5e16ox89.jpg",
+				"path": "/images/items/01_1602/153_2514.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2514_s_79iusgnlw5fg0o0vqto8mzkahg9o.jpg",
+				"path": "/images/items/01_1602/155_2514.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1602/"
 }

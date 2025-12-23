@@ -5,6 +5,50 @@
 		"ja": "HGBC 1/144 スピニングブラスター",
 		"en": "HGBC 1/144 Spinning Blaster"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ギア回転で武装が変形する、新感覚ビルドカスタムパーツが登場！",
@@ -30,54 +73,67 @@
 			"Introducing new build custom parts that transform your weapons by rotating the gears!",
 			"• Reproduce two types of large weapons by attaching weapon parts to the base parts with gears!",
 			"• From there, the armament transforms as the gear rotates, creating a new type of custom armament!",
-			"• Sword parts can be equipped individually!"
+			"• Sword parts etc. can be equipped individually!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ブラスター基部×1",
-			"キャノンパーツ×1",
-			"ソードパーツ×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ブラスター基部"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "キャノンパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ソードパーツ"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2303_s_k4eeb03cp7ywf7k5udylxw4ukt2w.jpg",
+				"path": "/images/items/01_1378/153_2303.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2303_s_mch2mli4uc6enmascmbn6h4qdq3u.jpg",
+				"path": "/images/items/01_1378/155_2303.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2303_s_00vkcais65f7qj6855pa3wmv1z10.jpg",
+				"path": "/images/items/01_1378/156_2303.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2303_s_brlmy5c3o5exu2d5qk9q2i00jm85.jpg",
+				"path": "/images/items/01_1378/157_2303.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2303_s_k417w8kj0ig21umzafd23w3hedlq.jpg",
+				"path": "/images/items/01_1378/158_2303.jpg"
+			}
 		],
-		"en": [
-			"Blaster base x 1",
-			"Cannon parts x 1",
-			"Sword parts x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×3",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 3",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1378/153_2303.jpg",
-		"/images/items/01_1378/155_2303.jpg",
-		"/images/items/01_1378/156_2303.jpg",
-		"/images/items/01_1378/157_2303.jpg",
-		"/images/items/01_1378/158_2303.jpg",
-		"/images/items/01_1378/01_1378_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1378/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "0695"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1378/"
 }

@@ -5,6 +5,60 @@
 		"ja": "ＲＧ 1/144 デスティニーガンダム［チタニウムフィニッシュ］",
 		"en": "RG 1/144 Destiny Gundam [Titanium Finish]"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6800",
+			"url": "https://bandai-hobby.net/item/01_6800/",
+			"ja": "MG 1/100 ブレイズザクファントム (ディアッカ・エルスマン専用機)"
+		},
+		{
+			"id": "item-1000214960",
+			"url": "https://p-bandai.jp/item/item-1000214960/",
+			"ja": "ＲＧ 1/144 アカツキガンダム用シラヌイパック & ＨＧゼウスシルエット用接続パーツ"
+		},
+		{
+			"id": "item-1000203308",
+			"url": "https://p-bandai.jp/item/item-1000203308/",
+			"ja": "ＨＧ 1/144 ダークダガーＬ"
+		},
+		{
+			"id": "item-1000183862",
+			"url": "https://p-bandai.jp/item/item-1000183862/",
+			"ja": "ＭＧ 1/100 ガナーウィザード／スラッシュウィザード／ブレイズウィザードセット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 7920,
 		"currency": "JPY",
@@ -16,7 +70,6 @@
 		"year": 2020,
 		"month": 6
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－",
@@ -59,7 +112,7 @@
 			"－－－－－－－－－－－－－－－－－－－－",
 			"- Sparkling Destiny -",
 			"－－－－－－－－－－－－－－－－－－－－",
-			"From \"Mobile Suit Gundam SEED DESTINY\", Destiny Gundam appears in a special real grade version with a titanium finish.",
+			"From \"Mobile Suit Gundam SEED DESTINY\", Destiny Gundam is now available in a special real grade version with a titanium finish.",
 			"● Luxury metallic arrangement",
 			"A gorgeous special specification that uses titanium finish and metallic molding color in various parts of the main body!",
 			"titanium finish",
@@ -93,38 +146,50 @@
 			"- Product specifications are scheduled as of 20202. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2797/153_3784.jpg",
-		"/images/items/01_2797/155_3784.jpg",
-		"/images/items/01_2797/156_3784.jpg",
-		"/images/items/01_2797/157_3784.jpg",
-		"/images/items/01_2797/158_3784.jpg",
-		"/images/items/01_2797/159_3784.jpg",
-		"/images/items/01_2797/189_3784.jpg",
-		"/images/items/01_2797/190_3784.jpg",
-		"/images/items/01_2797/191_3784.jpg",
-		"/images/items/01_2797/192_3784.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2797/",
-	"brandIds": [
-		"rg",
-		"pb_rg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6800",
-		"item-1000214960",
-		"item-1000203308",
-		"item-1000183862"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3784_s_08ztmajs1jfbwqu5vj2mesh6jxd8.jpg",
+				"path": "/images/items/01_2797/153_3784.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3784_s_dljtv8vn0bgo3qenr3fizlkjdx70.jpg",
+				"path": "/images/items/01_2797/155_3784.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3784_s_hzz2x3rqo14gvocjhptjfu0ue95n.jpg",
+				"path": "/images/items/01_2797/156_3784.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3784_s_7qy9j0ooep4qtz6dpmx6rnl0xygs.jpg",
+				"path": "/images/items/01_2797/157_3784.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3784_s_ghnhgfpb3wgb70hpfxzqbuor9wni.jpg",
+				"path": "/images/items/01_2797/158_3784.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3784_s_qyp2lh59j8ie5p85x1vgijflatzi.jpg",
+				"path": "/images/items/01_2797/159_3784.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3784_s_kzw8byeqlnbcxorqoqcfgidiwmdi.jpg",
+				"path": "/images/items/01_2797/189_3784.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3784_s_1izbyu3xpkp3pfoxwqtsbca3b9ne.jpg",
+				"path": "/images/items/01_2797/190_3784.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3784_s_5w7lynf1ito9cjkniuviet9bkdoc.jpg",
+				"path": "/images/items/01_2797/191_3784.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3784_s_o3derq459nyt0uvy2s9awbtq189j.jpg",
+				"path": "/images/items/01_2797/192_3784.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2797/"
 }

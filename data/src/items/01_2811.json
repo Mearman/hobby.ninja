@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 ラビオット用オプションウェポン1",
-		"en": "30MM 1/144 Option Weapon1 for Rabiot"
+		"en": "30MM 1/144 OPTION WEAPON 1 FOR RABIOT"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS",
+			"en": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,62 +62,110 @@
 		"day": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMのオプションウェポンシリーズにラビオット用アイテムが登場！",
 			"• バズーカ、スプレーガン、チェーンソーなど９種のウェポンパーツのセット。"
 		],
 		"en": [
-			"Items for Rabiot are now available in the 30MM optional Weapon series!",
-			"• A set of 9 types of weapon parts including bazooka, spray gun, chainsaw, etc."
+			"THE 30MM OPTIONAL WEAPON SERIES NOW INCLUDES ITEMS FOR RABIOT!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"バズーカパーツ×1",
-			"スプレーガンパーツ×1",
-			"チェーンソーパーツ×1",
-			"ガンソードパーツ×1",
-			"ショットガンパーツ×1",
-			"バスターソード×1",
-			"ジャマダハル×1",
-			"小型シールド×1",
-			"スリムボディパーツ×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "バズーカパーツ",
+				"en": "• Bazooka Parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "スプレーガンパーツ",
+				"en": "• Chainsaw Parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "チェーンソーパーツ",
+				"en": "• Gun Sword Parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ガンソードパーツ",
+				"en": "• Shotgun Parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ショットガンパーツ",
+				"en": "• Buster Sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バスターソード",
+				"en": "• Jamadahar"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジャマダハル",
+				"en": "• Small shield"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "小型シールド",
+				"en": "• Slim Body Parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "スリムボディパーツ"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147813_1.jpg",
+				"path": "/images/items/01_2811/1000147813_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147813_2.jpg",
+				"path": "/images/items/01_2811/1000147813_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147813_3.jpg",
+				"path": "/images/items/01_2811/1000147813_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147813_4.jpg",
+				"path": "/images/items/01_2811/1000147813_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147813_5.jpg",
+				"path": "/images/items/01_2811/1000147813_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147813_6.jpg",
+				"path": "/images/items/01_2811/1000147813_6.jpg"
+			}
 		],
-		"en": [
-			"Bazooka parts x 1",
-			"Spray gun parts x 1",
-			"Chainsaw parts x 1",
-			"Gun sword parts x 1",
-			"Shotgun parts x 1",
-			"Buster sword x1",
-			"Jamadahar x1",
-			"Small Seal × 1",
-			"Slim body parts x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2811/1000147813_1.jpg",
-		"/images/items/01_2811/1000147813_2.jpg",
-		"/images/items/01_2811/1000147813_3.jpg",
-		"/images/items/01_2811/1000147813_4.jpg",
-		"/images/items/01_2811/1000147813_5.jpg",
-		"/images/items/01_2811/1000147813_6.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2811/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3691"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2811/"
+	}
 }

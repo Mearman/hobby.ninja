@@ -5,6 +5,43 @@
 		"ja": "BB戦士338 周泰ガンダム",
 		"en": "BB Senshi 338 Zhou Tai Gundam"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -29,23 +66,22 @@
 			"●Armor is removable<"
 		]
 	},
-	"images": [
-		"/images/items/01_1715/153_2624.jpg",
-		"/images/items/01_1715/155_2624.jpg",
-		"/images/items/01_1715/156_2624.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1715/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/156_2624_s_jfen9nx5gqtbb2pwzkdwt353n18t.jpg",
+				"path": "/images/items/01_1715/156_2624.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_2624_s_w2rlaau6ja1x0wnjt3jca15l5f7e.jpg",
+				"path": "/images/items/01_1715/153_2624.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2624_s_0xa5d8xqynwfigcu65aik4rlmha4.jpg",
+				"path": "/images/items/01_1715/155_2624.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1715/"
 }

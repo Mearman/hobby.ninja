@@ -5,6 +5,60 @@
 		"ja": "ＲＧ 1/144 νガンダム用ダブル・フィン・ファンネル拡張ユニット",
 		"en": "Double fin funnel expansion unit for RG 1/144 νGundam"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4121",
+			"url": "https://bandai-hobby.net/item/01_4121/",
+			"ja": "RG 1/144 ガンダムベース限定 Hi-νガンダム[チタニウムフィニッシュ]"
+		},
+		{
+			"id": "01_2343",
+			"url": "https://bandai-hobby.net/item/01_2343/",
+			"ja": "RG 1/144 νガンダム"
+		},
+		{
+			"id": "01_2336",
+			"url": "https://bandai-hobby.net/item/01_2336/",
+			"ja": "ＲＧ 1/144 サザビー［スペシャルコーティング］"
+		},
+		{
+			"id": "item-1000129742",
+			"url": "http://p-bandai.jp/item/item-1000129742",
+			"ja": "ＲＥ/100 1/100 ヤクト・ドーガ（クェス・エア機）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1870,
 		"currency": "JPY",
@@ -17,30 +71,14 @@
 		"month": 9
 	},
 	"targetAge": 15,
-	"scale": "1/144",
-	"images": [
-		"/images/items/01_2458/153_3386.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2458/",
-	"brandIds": [
-		"rg",
-		"pb_rg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4121",
-		"01_2343",
-		"01_2336",
-		"item-1000129742"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3386_o_1detkodi41vib1ndiu34g516o023.jpg",
+				"path": "/images/items/01_2458/153_3386.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2458/"
 }

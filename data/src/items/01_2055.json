@@ -2,9 +2,53 @@
 	"id": "01_2055",
 	"type": "item",
 	"name": {
-		"ja": "HGBD 1/144 ガンダム AGEIIマグナムSVver.",
-		"en": "HGBD 1/144 Gundam AGEII Magnum SVver."
+		"ja": "HGBD 1/144 ガンダムAGEIIマグナムSVver.",
+		"en": "HGBD 1/144 GundamAGEII Magnum SVver."
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 22
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズ』より、「クジョウ・キョウヤ」が制作した機体の決戦仕様を再現！",
@@ -26,68 +69,101 @@
 			"• 「フェニックスモード（飛行形態）」への変形も再現！"
 		],
 		"en": [
-			"From \"Gundam Build Divers \", we reproduce the decisive battle specifications of the aircraft produced by \" Kyoya Kujo\"!",
+			"From \"Gundam Build Divers\", we reproduce the decisive battle specifications of the aircraft produced by \"Kyoya Kujo\"!",
 			"• In addition to F Funnel and Large Funnel, weapons such as Hyper Dods Rifle Magnum are included.",
-			"• Deformation to \"Phoenix mode (flight mode)\" is also reproduced!"
+			"• The transformation to \"Phoenix mode (flight mode)\" is also reproduced!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ハイパードッズライフルマグナム×1",
-			"ビームサーベル×2",
-			"シグルシールド×1",
-			"Fファンネル×4",
-			"大型ファンネル×2",
-			"ディスプレイ台座×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハイパードッズライフルマグナム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シグルシールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "Fファンネル"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "大型ファンネル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 15
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3004_s_52kc3625gd611faveho4s5s33a47.jpg",
+				"path": "/images/items/01_2055/153_3004.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3004_s_o259dn0785izynz2i7zb2bh9eqze.jpg",
+				"path": "/images/items/01_2055/155_3004.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3004_s_psljc432pssh48elwyyikhs25y3c.jpg",
+				"path": "/images/items/01_2055/156_3004.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3004_s_z8y5ggvm0rbkgm1tboapfpuk7x7k.jpg",
+				"path": "/images/items/01_2055/157_3004.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3004_s_fojpi5xtmaua4i3fwodk5rj7y8xl.jpg",
+				"path": "/images/items/01_2055/158_3004.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3004_s_saftzstw8ifdsv593lzvk67v1alu.jpg",
+				"path": "/images/items/01_2055/159_3004.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3004_s_ko640hjrritiipuufo9e91laaj0f.jpg",
+				"path": "/images/items/01_2055/189_3004.jpg"
+			}
 		],
-		"en": [
-			"Hyper Dods Rifle Magnum x 1",
-			"Beam saber x2",
-			"Sigur Seal × 1",
-			"F funnel x 4",
-			"Large funnel x 2",
-			"Display pedestal x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×15",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 15",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2055/153_3004.jpg",
-		"/images/items/01_2055/155_3004.jpg",
-		"/images/items/01_2055/156_3004.jpg",
-		"/images/items/01_2055/157_3004.jpg",
-		"/images/items/01_2055/158_3004.jpg",
-		"/images/items/01_2055/159_3004.jpg",
-		"/images/items/01_2055/189_3004.jpg",
-		"/images/items/01_2055/01_2055_inst_0.jpg",
-		"/images/items/01_2055/01_2055_inst_1.jpg",
-		"/images/items/01_2055/01_2055_inst_2.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2055/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "1043"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2055/"
 }

@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "ＲＧ 1/144 νガンダムＨＷＳ",
-		"en": "RG 1/144 νGundam HWS"
+		"en": "RG 1/144 νGundamHWS"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "cca-msv",
+			"url": "https://bandai-hobby.net/series/cca-msv/",
+			"ja": "CCA-MSV"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/144",
 	"price": {
 		"amount": 6600,
 		"currency": "JPY",
@@ -16,7 +49,6 @@
 		"year": 2020,
 		"month": 9
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"― ν ガ ン ダ ム 重 武 装 形 態 を Ｒ Ｇ で 再 現 ―",
@@ -101,34 +133,50 @@
 			"- Product specifications are scheduled as of 20206. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2985/153_3958.jpg",
-		"/images/items/01_2985/155_3958.jpg",
-		"/images/items/01_2985/156_3958.jpg",
-		"/images/items/01_2985/157_3958.jpg",
-		"/images/items/01_2985/158_3958.jpg",
-		"/images/items/01_2985/159_3958.jpg",
-		"/images/items/01_2985/189_3958.jpg",
-		"/images/items/01_2985/190_3958.jpg",
-		"/images/items/01_2985/191_3958.jpg",
-		"/images/items/01_2985/192_3958.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2985/",
-	"brandIds": [
-		"rg",
-		"pb_rg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"cca-msv"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [],
-	"manualId": "2777",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3958_s_rd9nejtgy8weruclaet8shqck8hv.jpg",
+				"path": "/images/items/01_2985/153_3958.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3958_s_d46u7kexjklps1negxkxxkowgq55.jpg",
+				"path": "/images/items/01_2985/155_3958.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3958_s_4tszpnd3mwj32g344tgiktfvogvr.jpg",
+				"path": "/images/items/01_2985/156_3958.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3958_s_37fmqqnzn64g3tt7gyl0zwg43xyk.jpg",
+				"path": "/images/items/01_2985/157_3958.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3958_s_ko9kequsr3he14u560bsrslmeaii.jpg",
+				"path": "/images/items/01_2985/158_3958.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3958_s_3t7e2w3bazvwr1xuh16zorgare05.jpg",
+				"path": "/images/items/01_2985/159_3958.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3958_s_eixit7pjgin7wxw2fev3hi9e517b.jpg",
+				"path": "/images/items/01_2985/189_3958.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3958_s_cu58xtr66hmaqzyf30ax2rrastds.jpg",
+				"path": "/images/items/01_2985/190_3958.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3958_s_8np25tcb93engn47boixh5l8d88w.jpg",
+				"path": "/images/items/01_2985/191_3958.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3958_s_zmcxwqi98ggls0gjt3m8vpg253od.jpg",
+				"path": "/images/items/01_2985/192_3958.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2985/"
 }

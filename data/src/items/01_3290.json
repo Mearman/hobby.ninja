@@ -5,6 +5,50 @@
 		"ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム (ライトパッケージVer.)",
 		"en": "ENTRY GRADE 1/144 RX-78-2 Gundam (Light Package Ver.)"
 	},
+	"brands": [
+		{
+			"id": "entry_grade_g",
+			"url": "https://bandai-hobby.net/brand/entry_grade_g/",
+			"ja": "ENTRY GRADE"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5218",
+			"url": "https://bandai-hobby.net/item/01_5218/",
+			"ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム[ヴィンテージカラー]"
+		},
+		{
+			"id": "01_5045",
+			"url": "https://bandai-hobby.net/item/01_5045/",
+			"ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム [リサーキュレーションカラー/ネオンブルー]"
+		},
+		{
+			"id": "01_4249",
+			"url": "https://bandai-hobby.net/item/01_4249/",
+			"ja": "GUNDAM NEXT FUTURE限定 ENTRY GRADE 1/144 RX-78-2 ガンダム [クラシックカラー]"
+		},
+		{
+			"id": "01_3632",
+			"url": "https://bandai-hobby.net/item/01_3632/",
+			"ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム(フルウェポンセット)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,18 +62,17 @@
 		"day": 19
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"【全国一般店頭販売決定！】ENTRY GRADEからRX-78-2 ガンダムが登場！\"次世代のファーストガンプラ\"ここに誕生！",
-			"■お求めやすい価格で多くの人に楽しんでもらえる仕様で登場！パッケージはPP袋を採用！",
-			"■全67パーツで構成。（武装は付属しておりません。）",
-			"■パーツを組み立てるだけで完成。塗装はもちろん、シール貼りも不要。",
-			"■ニッパーを使わずに手でパチパチと簡単に外せるタッチゲート仕様。",
-			"■ランナーにはパーツが部位ごとにまとまって配置されているので、分かりやすい。",
-			"■よく動き、よく曲がる可動箇所。",
-			"■大胆かつ秀逸なパーツ分割。",
-			"■カメラアイの黒い輪郭を、パーツ同士のクリアランスにできる影で表現。"
+			"• お求めやすい価格で多くの人に楽しんでもらえる仕様で登場！パッケージはPP袋を採用！",
+			"• 全67パーツで構成。（武装は付属しておりません。）",
+			"• パーツを組み立てるだけで完成。塗装はもちろん、シール貼りも不要。",
+			"• ニッパーを使わずに手でパチパチと簡単に外せるタッチゲート仕様。",
+			"• ランナーにはパーツが部位ごとにまとまって配置されているので、分かりやすい。",
+			"• よく動き、よく曲がる可動箇所。",
+			"• 大胆かつ秀逸なパーツ分割。",
+			"• カメラアイの黒い輪郭を、パーツ同士のクリアランスにできる影で表現。"
 		],
 		"en": [
 			"[Nationwide general store sales decided! ]RX-78-2 Gundam is now available from ENTRY GRADE! \"The next generation's first Gunpla\" is born here!",
@@ -43,44 +86,68 @@
 			"• Express the black outline of the camera eye with shadows that create clearance between parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ランナー×2",
-			"取扱説明書×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ランナー"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4245_s_9a7cl8zh25mcez1e54pk8w6o7535.jpg",
+				"path": "/images/items/01_3290/153_4245.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4245_s_di0zxhheiswmcre91a7sari3q49i.jpg",
+				"path": "/images/items/01_3290/155_4245.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4245_s_dbj7i2w44tvlwehck5k7ako6mk1c.jpg",
+				"path": "/images/items/01_3290/156_4245.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4245_s_9vai24r9xfthp9uxh47aim4geau1.jpg",
+				"path": "/images/items/01_3290/157_4245.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4245_s_hj17tdptrfhdcpmq0ye2fz1boqg6.jpg",
+				"path": "/images/items/01_3290/158_4245.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4245_s_qlldbhiimhg70n5ow9rpksj2ha5l.jpg",
+				"path": "/images/items/01_3290/159_4245.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4245_s_egowgzsapd5qzq5navth6n04r5sa.jpg",
+				"path": "/images/items/01_3290/189_4245.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4245_s_xpy4bpxoeeyk0trvk7jkb16la8j5.jpg",
+				"path": "/images/items/01_3290/190_4245.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4245_s_lsym6ckza3s7z9d3bu6yspimvfrl.jpg",
+				"path": "/images/items/01_3290/191_4245.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4245_s_02ymc260cpozbkpesiv9ugyb5gc4.jpg",
+				"path": "/images/items/01_3290/192_4245.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_4245_s_7dccdbf1g2mmqx45mk9g0kghdngy.jpg",
+				"path": "/images/items/01_3290/193_4245.jpg"
+			}
 		],
-		"en": [
-			"Runner×2",
-			"Handling manual×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3290/153_4245.jpg",
-		"/images/items/01_3290/155_4245.jpg",
-		"/images/items/01_3290/156_4245.jpg",
-		"/images/items/01_3290/157_4245.jpg",
-		"/images/items/01_3290/158_4245.jpg",
-		"/images/items/01_3290/159_4245.jpg",
-		"/images/items/01_3290/189_4245.jpg",
-		"/images/items/01_3290/190_4245.jpg",
-		"/images/items/01_3290/191_4245.jpg",
-		"/images/items/01_3290/192_4245.jpg",
-		"/images/items/01_3290/193_4245.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3290/",
-	"brandIds": [
-		"entry_grade"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5218",
-		"01_5045",
-		"01_4249",
-		"01_3632"
-	],
-	"manualId": "0978"
+	"sourceUrl": "https://bandai-hobby.net/item/01_3290/"
 }

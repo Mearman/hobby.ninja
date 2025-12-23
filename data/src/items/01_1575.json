@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "BB戦士 183頑駄無流星王",
-		"en": "BB Senshi 183 Gundam uryuuseioh"
+		"en": "BB Senshi 183 Gundamuryuuseioh"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		},
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -22,26 +64,21 @@
 			"BB戦士 183頑駄無流星王登場！！"
 		],
 		"en": [
-			"BB Senshi 183 Gundam uryuuseiou is here! !"
+			"BB Senshi 183 Gundamuryuuseiou is here! !"
 		]
 	},
-	"images": [
-		"/images/items/01_1575/153_2490.jpg",
-		"/images/items/01_1575/155_2490.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1575/",
-	"brandIds": [
-		"sdgundamseries",
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2490_s_wx0yrw36xkz43ig4xc441uo4qf9r.jpg",
+				"path": "/images/items/01_1575/153_2490.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2490_s_fhvar9wnpoaksg49y75h3n0iwtq2.jpg",
+				"path": "/images/items/01_1575/155_2490.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1575/"
 }

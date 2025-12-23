@@ -5,6 +5,44 @@
 		"ja": "1/144 ガンダムローズ",
 		"en": "1/144 Gundam Rose"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "ggundam",
+			"url": "https://bandai-hobby.net/series/ggundam/",
+			"ja": "機動武闘伝Ｇガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5544",
+			"url": "https://bandai-hobby.net/item/01_5544/",
+			"ja": "RG 1/144 シャイニングガンダム"
+		},
+		{
+			"id": "01_5995",
+			"url": "https://bandai-hobby.net/item/01_5995/",
+			"ja": "RG 1/144 ガンダムベース限定 ゴッドガンダム ハイパーモード"
+		},
+		{
+			"id": "item-1000213247",
+			"url": "https://p-bandai.jp/item/item-1000213247/",
+			"ja": "ＨＧ 1/144 ドラゴンガンダム"
+		},
+		{
+			"id": "item-1000194970",
+			"url": "https://p-bandai.jp/item/item-1000194970/",
+			"ja": "ＨＧ 1/144 ガンダムマックスター"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -17,33 +55,28 @@
 		"month": 5
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動武闘伝G ガンダム』より、1/144スケールで、ガンダムローズが登場。",
+			"『機動武闘伝Gガンダム』より、1/144スケールで、ガンダムローズが登場。",
 			"ネオ・フランスの華麗なるガンダムファイター、ジョルジュ・ド・ンド搭乗のモビルファイターを立体化しました。マント型シールドは展開が可能です。股関節と足首にボールジョイントを採用しています。シュバリエサーベルは、鞘に収納した状態で腰にホールドが可能です。コアランダーの変形・脱着が再現できます。"
 		],
 		"en": [
-			"From \"Mobile Fighter G Gundam\", Gundam Rose appears in 1/144 scale.",
+			"From \"Mobile Fighter GGundam\", Gundam Rose appears in 1/144 scale.",
 			"A three-dimensional version of Neo-French's brilliant Gundam fighter, the mobile fighter piloted by Georges de Ndo. The cloak-type Seal can be expanded. Ball joints are used at the hip joints and ankles. The Chevalier saber can be held on the waist while stored in the sheath. The transformation and detachment of Corelander can be reproduced."
 		]
 	},
-	"images": [
-		"/images/items/01_1527/153_2444.jpg",
-		"/images/items/01_1527/155_2444.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1527/",
-	"brandIds": [],
-	"seriesIds": [
-		"ggundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5544",
-		"01_5995",
-		"item-1000213247",
-		"item-1000194970"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2444_s_h1gvo0ba9d9c7m9t5q21at077kra.jpg",
+				"path": "/images/items/01_1527/153_2444.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2444_s_h6uxdiiyd0eue0mnxdzelnfsdhhw.jpg",
+				"path": "/images/items/01_1527/155_2444.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1527/"
 }

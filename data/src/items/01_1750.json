@@ -2,9 +2,55 @@
 	"id": "01_1750",
 	"type": "item",
 	"name": {
-		"ja": "HGAW 1/144 ガンダム X(エックス)",
-		"en": "HGAW 1/144 Gundam X"
+		"ja": "HGAW 1/144 ガンダムX(エックス)",
+		"en": "1/144 HGAW GUNDAM X"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "x",
+			"url": "https://bandai-hobby.net/series/x/",
+			"ja": "機動新世紀ガンダムＸ",
+			"en": "AFTER WAR GUNDAM X"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000147185",
+			"url": "https://p-bandai.jp/item/item-1000147185/",
+			"ja": "ＨＧ 1/144 ドートレス"
+		},
+		{
+			"id": "item-1000147187",
+			"url": "https://p-bandai.jp/item/item-1000147187/",
+			"ja": "ＨＧ 1/144 ガンダムエアマスターバースト"
+		},
+		{
+			"id": "01_160",
+			"url": "https://bandai-hobby.net/item/01_160/",
+			"ja": "HGAW 1/144 ガンダムエアマスター"
+		},
+		{
+			"id": "01_5876",
+			"url": "https://bandai-hobby.net/item/01_5876/",
+			"ja": "HGAW 1/144 ガンダムダブルエックス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,36 +64,41 @@
 		"day": 15
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• HG新展開！宇宙世紀を超えたラインナップ開始！第１弾は機動新世紀ガンダム X（AfterWar）！ • HGUCと同様、カトキハジメ氏によるプロポーションバランスを再現！ • サテライト・キャノンの展開を再現！前方へと可動し、受光部も展開可能！また、受光部には、太陽電池を思わせるモールドと、ホログラムシールにより、角度によって異なる光彩を表現！ • シールド、バスター・ライフルは、開閉の2種が付属！ • 可動範囲が広く、多彩なポージングが可能！ 成形品×8、ホイルシール×1、ホログラムシール×1、組立説明書×1"
+			"• HG新展開！宇宙世紀を超えたラインナップ開始！第１弾は機動新世紀ガンダムX（AfterWar）！ ■HGUCと同様、カトキハジメ氏によるプロポーションバランスを再現！ ■サテライト・キャノンの展開を再現！前方へと可動し、受光部も展開可能！また、受光部には、太陽電池を思わせるモールドと、ホログラムシールにより、角度によって異なる光彩を表現！ ■シールド、バスター・ライフルは、開閉の2種が付属！ ■可動範囲が広く、多彩なポージングが可能！ 成形品×8、ホイルシール×1、ホログラムシール×1、組立説明書×1"
 		],
 		"en": [
-			"• HG new development! The lineup that goes beyond the Universal Century has begun! The first one is Mobile New Century Gundam X (AfterWar)! • Like HGUC, the proportion balance by Hajime Katoki is reproduced! • Reproduce the development of Satellite Cannon! It can move forward and the light receiving part can also be expanded! In addition, the light receiving part has a mold that resembles a solar cell and a hologram seal that creates a different glow depending on the angle! • Seal and Buster Rifle come in two types: open and closed! • Wide range of motion allows for a variety of poses! Molded product x 8, foil seal x 1, hologram seal x 1, assembly manual x 1"
+			"• HG New Development! The lineup beyond the Universal Century has begun! The first is Mobile New Genesis GUNDAM X (AfterWar)!",
+			"• Like HGUC, the proportion balance by Hajime Katoki is reproduced!",
+			"• Recreate the development of the Satellite Cannon! It can be moved forward, and the light receiving part can be deployed! In addition, the light receiving part has a mold reminiscent of a solar cell and a hologram sticker to express different glows depending on the angle!",
+			"• The shield and buster rifle come with two types of opening and closing!",
+			"• A wide range of motion allows for a variety of poses! Molded ×8, Foil Seal ×1, Hologram Seal ×1, Assembly Instructions ×1"
 		]
 	},
-	"images": [
-		"/images/items/01_1750/1000092182_1.jpg",
-		"/images/items/01_1750/1000092182_2.jpg",
-		"/images/items/01_1750/1000092182_3.jpg",
-		"/images/items/01_1750/1000092182_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092182_1.jpg",
+				"path": "/images/items/01_1750/1000092182_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092182_2.jpg",
+				"path": "/images/items/01_1750/1000092182_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092182_3.jpg",
+				"path": "/images/items/01_1750/1000092182_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092182_4.jpg",
+				"path": "/images/items/01_1750/1000092182_4.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1750/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"x"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000147185",
-		"item-1000147187",
-		"01_160",
-		"01_5876"
-	],
-	"manualId": "0924"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1750/"
+	}
 }

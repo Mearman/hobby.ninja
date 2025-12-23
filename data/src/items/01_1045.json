@@ -2,9 +2,37 @@
 	"id": "01_1045",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム Gジェネレーション59 クロスボーンガンダム X1",
-		"en": "SD Gundam G Generation 59 Crossbone Gundam X1"
+		"ja": "SDガンダムGジェネレーション59 クロスボーンガンダムX1",
+		"en": "SDGundamG Generation 59 Crossbone GundamX1"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "crossbone",
+			"url": "https://bandai-hobby.net/series/crossbone/",
+			"ja": "機動戦士クロスボーン・ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1544",
+			"url": "https://bandai-hobby.net/item/01_1544/",
+			"ja": "SDガンダムGジェネレーション63 クロスボーンX2"
+		}
+	],
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -22,24 +50,21 @@
 			"ゲーム「ＧジェネレーションＦ」に登場するユニット「クロスボーンガンダムＸ１」をプラモデルで発売。額のドクロマークなど、ユニットの魅力を完全再現。背面のバーニアは独立して可動します。"
 		],
 		"en": [
-			"The unit \"Crossbone Gundam X1 \" that appears in the game \" G Generation F\" is released as a plastic model. The charm of the unit, such as the skull mark on the forehead, is completely reproduced. The vernier on the back can be moved independently."
+			"The unit \"Crossbone Gundam X1\" that appears in the game \"G Generation F\" is released as a plastic model. The charm of the unit, such as the skull mark on the forehead, is completely reproduced. The vernier on the back can be moved independently."
 		]
 	},
-	"images": [
-		"/images/items/01_1045/153_197.jpg",
-		"/images/items/01_1045/155_197.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1045/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"crossbone"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1544"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_197_s_dfdmdvzysnx7fo7hmwc4y9gd3bpx.jpg",
+				"path": "/images/items/01_1045/153_197.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_197_s_6kbyxqn7ig2u0ero40ve9gk9dos2.jpg",
+				"path": "/images/items/01_1045/155_197.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1045/"
 }

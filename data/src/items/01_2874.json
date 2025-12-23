@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 R12 モビルバクゥ",
 		"en": "HG 1/144 R12 Mobile Baku"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181726",
+			"url": "https://p-bandai.jp/item/item-1000181726/",
+			"ja": "ＨＧ 1/144 ストライクダガー"
+		},
+		{
+			"id": "01_1930",
+			"url": "https://bandai-hobby.net/item/01_1930/",
+			"ja": "HG 1/144 ガンダムベース限定 フリーダムガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_384",
+			"url": "https://bandai-hobby.net/item/01_384/",
+			"ja": "HGCE 1/144 フリーダムガンダム"
+		},
+		{
+			"id": "01_83",
+			"url": "https://bandai-hobby.net/item/01_83/",
+			"ja": "HGCE 1/144 ストライクルージュ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -18,36 +62,34 @@
 		"day": 25
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 新たにドレスアップ用マーキングシールを付属。 • パッケージデザインを一新。 • 成形色をリニューアルし、よりアニメに忠実な色を再現。"
+			"• 新たにドレスアップ用マーキングシールを付属。 ■パッケージデザインを一新。 ■成形色をリニューアルし、よりアニメに忠実な色を再現。"
 		],
 		"en": [
-			"• Newly included MarkingSeal for dress-up. • New packaging design. • The molding colors have been renewed to reproduce colors that are more faithful to the anime."
+			"• Newly included MarkingSeal for dress-up. ■New package design. ■The molding colors have been renewed to reproduce colors that are more faithful to the anime."
 		]
 	},
-	"images": [
-		"/images/items/01_2874/153_3855.jpg",
-		"/images/items/01_2874/155_3855.jpg",
-		"/images/items/01_2874/156_3855.jpg",
-		"/images/items/01_2874/157_3855.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2874/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181726",
-		"01_1930",
-		"01_384",
-		"01_83"
-	],
-	"manualId": "0343"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3855_s_upgszkla24tzqk9ke8okn2hb8e36.jpg",
+				"path": "/images/items/01_2874/153_3855.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3855_s_hx6dzhrzfvsooqj27ey086d4loso.jpg",
+				"path": "/images/items/01_2874/155_3855.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3855_s_dnxfb6fgi03cjhw2f0kwfgm5cul6.jpg",
+				"path": "/images/items/01_2874/156_3855.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3855_s_zztqpzkv8wc2u0dxuxf90xq6hbgj.jpg",
+				"path": "/images/items/01_2874/157_3855.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2874/"
 }

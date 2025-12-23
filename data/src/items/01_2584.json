@@ -5,6 +5,35 @@
 		"ja": "MG 1/100 FAZZ Ver.Ka",
 		"en": "MG 1/100 FAZZ Ver.Ka"
 	},
+	"brands": [
+		{
+			"id": "mgka",
+			"url": "https://bandai-hobby.net/brand/mgka/",
+			"ja": "MG Ver.Ka［マスターグレード バージョンカトキ］"
+		}
+	],
+	"series": [
+		{
+			"id": "sentinel",
+			"url": "https://bandai-hobby.net/series/sentinel/",
+			"ja": "ガンダム・センチネル"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3062",
+			"url": "https://bandai-hobby.net/item/01_3062/",
+			"ja": "MG 1/100 ガンダムベース限定 FAZZ Ver.Ka[チタニウムフィニッシュ]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 12540,
 		"currency": "JPY",
@@ -18,7 +47,6 @@
 		"day": 15
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『ガンダムセンチネル』より、FAZZがMG Ver.Kaで立体化！",
@@ -31,44 +59,58 @@
 		"en": [
 			"From \"Gundam Sentinel\", FAZZ is now three-dimensional with MG Ver.Ka!",
 			"• Under the supervision of Hajime Katoki, weapons and additional armor are constructed with new interpretations. Pursuing proportions that maintain a solid feel while not becoming sluggish.",
-			"• The forearm has roll movement to achieve a wide range of movement. When the arm is raised horizontally, the structure allows it to move in conjunction with the additional armor so that it does not interfere.",
-			"• When raising the legs, the additional armor on the front armor can be deployed upwards to ensure range of motion.",
+			"• Adopts roll movement on the forearm to achieve a wide range of movement. When the arm is raised horizontally, the structure allows it to move in conjunction with the additional armor so that it does not interfere.",
+			"• When raising the legs, the additional armor on the front armor is deployed upwards to ensure range of motion.",
 			"• Missile pods installed in various places are reproduced with interpretations unique to Ver.Ka. You can open and close the hatch manually and enjoy the display of the built-in missile in its firing state.",
-			"• Decals unique to Ver.Ka including different chest numbering are included. It is possible to reproduce the FAZZ platoon in the work."
+			"• Comes with Ver.Ka unique decals including different chest numbering. It is possible to reproduce the FAZZ platoon in the work."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ダブル・ビーム・ライフル×1",
-			"ハイパー・メガ・カノン×1",
-			"水転写式デカール×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ダブル・ビーム・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハイパー・メガ・カノン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3508_s_mpucam0fdubaoal5z9irwwytpmzp.jpg",
+				"path": "/images/items/01_2584/153_3508.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3508_s_av8j0yhipzp8mrp1k4nlivtlux2r.jpg",
+				"path": "/images/items/01_2584/155_3508.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3508_s_ixick4ijajblvsx46vwdw4iprhwf.jpg",
+				"path": "/images/items/01_2584/156_3508.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3508_s_w2zp3m357bk2a3qe1jtlo6hx3som.jpg",
+				"path": "/images/items/01_2584/157_3508.jpg"
+			}
 		],
-		"en": [
-			"Double beam rifle x 1",
-			"Hyper Mega Canon x1",
-			"Water transfer decal x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2584/153_3508.jpg",
-		"/images/items/01_2584/155_3508.jpg",
-		"/images/items/01_2584/156_3508.jpg",
-		"/images/items/01_2584/157_3508.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2584/",
-	"brandIds": [
-		"mgka"
-	],
-	"seriesIds": [
-		"sentinel"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3062"
-	],
-	"manualId": "0636"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2584/"
 }

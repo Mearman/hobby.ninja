@@ -2,9 +2,47 @@
 	"id": "01_1509",
 	"type": "item",
 	"name": {
-		"ja": "1/144 V2 ガンダム",
-		"en": "1/144 V2 Gundam"
+		"ja": "1/144 V2ガンダム",
+		"en": "1/144 V2Gundam"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "v-gundam",
+			"url": "https://bandai-hobby.net/series/v-gundam/",
+			"ja": "機動戦士Vガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4978",
+			"url": "https://bandai-hobby.net/item/01_4978/",
+			"ja": "HG 1/144 V2アサルトバスターガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_3311",
+			"url": "https://bandai-hobby.net/item/01_3311/",
+			"ja": "HG 1/144 ガンダムベース限定 セカンドV[クリアカラー]"
+		},
+		{
+			"id": "01_2835",
+			"url": "https://bandai-hobby.net/item/01_2835/",
+			"ja": "MG 1/100 ガンダムベース限定 V2アサルトバスターガンダムVer.Ka [チタニウムフィニッシュ]"
+		},
+		{
+			"id": "item-1000142101",
+			"url": "https://p-bandai.jp/item/item-1000142101/",
+			"ja": "ＲＥ/100 1/100 シャッコー"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -17,31 +55,26 @@
 		"month": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"ＴＶ「機動戦士Ｖガンダム」V ガンダムの新型機として、史上初のミノフスキードライブユニットを搭載した機体をキット化しました。ミノフスキードライブユニットは開閉機構を再現、「光の翼」はクリアパーツ成形で、脱着が可能です。ビーム・ライフルはサイドアーマーまたはスネ部分へのマウントが可能です。ディスプレイスタンドとカードがついています。"
+			"ＴＶ「機動戦士Ｖガンダム」Vガンダムの新型機として、史上初のミノフスキードライブユニットを搭載した機体をキット化しました。ミノフスキードライブユニットは開閉機構を再現、「光の翼」はクリアパーツ成形で、脱着が可能です。ビーム・ライフルはサイドアーマーまたはスネ部分へのマウントが可能です。ディスプレイスタンドとカードがついています。"
 		],
 		"en": [
-			"TV \"Mobile Suit V Gundam \" As a new model of V Gundam, we have made a kit version of the aircraft equipped with the first ever Minovsky drive unit. The Minovsky drive unit reproduces the opening/closing mechanism, and the \" wings of light\" are made of clear parts that can be attached and detached. Beam rifle can be mounted on side armor or shin part. Comes with display stand and cards."
+			"TV \"Mobile Suit V Gundam\" As a new model of V Gundam, we have made a kit version of the aircraft equipped with the first ever Minovsky drive unit. The Minovsky drive unit reproduces the opening/closing mechanism, and the \"wings of light\" are made of clear parts that can be attached and detached. Beam rifle can be mounted on side armor or shin part. Comes with display stand and cards."
 		]
 	},
-	"images": [
-		"/images/items/01_1509/153_2428.jpg",
-		"/images/items/01_1509/155_2428.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1509/",
-	"brandIds": [],
-	"seriesIds": [
-		"v-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4978",
-		"01_3311",
-		"01_2835",
-		"item-1000142101"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2428_s_p7xckcif1o1a0ftj3otp7vyxus6l.jpg",
+				"path": "/images/items/01_1509/153_2428.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2428_s_tbrk8ess60an3yopc3z8xs3qwb8s.jpg",
+				"path": "/images/items/01_1509/155_2428.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1509/"
 }

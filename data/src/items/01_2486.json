@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 ガンダムゼルトザーム",
 		"en": "HGBD:R 1/144 Gundam Seltsam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -18,52 +62,64 @@
 		"day": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"2019年10月10日（木）より「ガンダムチャンネル」で配信スタートする『ガンダムビルドダイバーズRe:RISE』 から、「ガンダム Mk-III」をベースとした機体が登場！",
+			"2019年10月10日（木）より「ガンダムチャンネル」で配信スタートする『ガンダムビルドダイバーズRe:RISE』 から、「ガンダムMk-III」をベースとした機体が登場！",
 			"• 伸縮可能な巨大な右腕、大型ランス、砲身が展開するシールドランチャーといった特殊な武装を備えた異形の機体。"
 		],
 		"en": [
-			"From \"Gundam Build Divers Re:RISE \", which will start distribution on \" Gundam Channel \" from 20191010 (Thursday), an aircraft based on \" Gundam Mk-III\" will appear!",
+			"From \"Gundam Build Divers Re:RISE\", which will start distribution on \"Gundam Channel\" from 20191010 (Thursday), an aircraft based on \"Gundam Mk-III\" will appear!",
 			"• A strange-looking aircraft equipped with special weapons such as a huge extendable right arm, a large lance, and a Seal launcher with an expanding gun barrel."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"大型ランス×1",
-			"シールドランチャー×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "大型ランス"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールドランチャー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3413_s_6u2xory9eu809sh5rk7lbb9jrbut.jpg",
+				"path": "/images/items/01_2486/153_3413.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3413_s_b7r5kdmbz1ubgx3ep4tlk87gm22o.jpg",
+				"path": "/images/items/01_2486/155_3413.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3413_s_i2yv2u5uwx8zcxtuqyfhd42exxus.jpg",
+				"path": "/images/items/01_2486/156_3413.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3413_s_xt83nfjix7g146gem9ty05b2umq9.jpg",
+				"path": "/images/items/01_2486/157_3413.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3413_s_v9jsdfd88oltyt3xsw49tcyqd7zu.jpg",
+				"path": "/images/items/01_2486/158_3413.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3413_s_m1kr6obkc1kxewhkxvjjdgwdagq7.jpg",
+				"path": "/images/items/01_2486/159_3413.jpg"
+			}
 		],
-		"en": [
-			"Large lance x 1",
-			"Seal launcher x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2486/153_3413.jpg",
-		"/images/items/01_2486/155_3413.jpg",
-		"/images/items/01_2486/156_3413.jpg",
-		"/images/items/01_2486/157_3413.jpg",
-		"/images/items/01_2486/158_3413.jpg",
-		"/images/items/01_2486/159_3413.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2486/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0073"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2486/"
 }

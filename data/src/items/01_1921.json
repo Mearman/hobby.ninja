@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ガンダムベース限定 RX-78-2 ガンダム Ver.3.0 [クリアカラー]",
 		"en": "MG 1/100 Gundam Base Limited RX-78-2 Gundam Ver.3.0 [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5610,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 8
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
@@ -28,31 +71,30 @@
 			"Master grade Ver.3.0 RX-78-2 Gundam is now available in Gundam base limited clear color."
 		]
 	},
-	"images": [
-		"/images/items/01_1921/153_2854.jpg",
-		"/images/items/01_1921/155_2854.jpg",
-		"/images/items/01_1921/156_2854.jpg",
-		"/images/items/01_1921/157_2854.jpg",
-		"/images/items/01_1921/158_2854.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1921/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2854_s_bdqs8di9ravrtfauhngguffflc1g.jpg",
+				"path": "/images/items/01_1921/153_2854.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2854_s_9w2vdap4w9ry3az1z1oaesom02ao.jpg",
+				"path": "/images/items/01_1921/155_2854.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2854_s_2oqwks8i8sfx1l6yzhn7d4na7vvv.jpg",
+				"path": "/images/items/01_1921/156_2854.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2854_s_2ig5lnkeb81c8fbsdummsrjznju3.jpg",
+				"path": "/images/items/01_1921/157_2854.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2854_s_of8z8lguk9m86na8w2otsd37x31n.jpg",
+				"path": "/images/items/01_1921/158_2854.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1921/"
 }

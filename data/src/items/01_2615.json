@@ -5,6 +5,43 @@
 		"ja": "SD 三国創傑伝 徐晃ガンダムデスサイズ",
 		"en": "SD Sangoku Soketsuden Xu Huang Gundam Death Scythe"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "soketsuden",
+			"url": "https://bandai-hobby.net/series/soketsuden/",
+			"ja": "三国創傑伝"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2642",
+			"url": "https://bandai-hobby.net/item/01_2642/",
+			"ja": "SD 三国創傑伝 天覇曹操ウイングガンダム"
+		},
+		{
+			"id": "01_2614",
+			"url": "https://bandai-hobby.net/item/01_2614/",
+			"ja": "SD 三国創傑伝 典韋マスターガンダム"
+		},
+		{
+			"id": "01_2643",
+			"url": "https://bandai-hobby.net/item/01_2643/",
+			"ja": "SD 三国創傑伝 甘寧クロスボーンガンダム"
+		},
+		{
+			"id": "01_2644",
+			"url": "https://bandai-hobby.net/item/01_2644/",
+			"ja": "SD 三国創傑伝 大喬ガンダムアルテミー/小喬GNアーチャー"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -20,7 +57,7 @@
 	"description": {
 		"ja": [
 			"【2021年春、日本展開開始！！】",
-			"• 『三国志』をベースにしたSD ガンダムが装いも新たに登場！",
+			"• 『三国志』をベースにしたSDガンダムが装いも新たに登場！",
 			"• 進化したプロポーションとパーツ分割へのこだわりにより、組み立てただけでSD史上最高峰の色分けを実現。",
 			"• 一新された頭身バランスと各所の関節構造により、躍動感あふれるポージングを再現！",
 			"• 斧は柄と2つの刃の3パーツ構成。刃を可動させることで斧と鎌の2形態を再現可能！",
@@ -28,44 +65,57 @@
 		],
 		"en": [
 			"[Spring 2021, main rollout begins! ! ]",
-			"• SD Gundam based on \"Romance of the Three Kingdoms\" now has a new look!",
-			"• With advanced proportions and attention to parts division, we have achieved the highest color separation in SD history using just the assembly.",
-			"• The all-new head and body balance and joint structure in various parts allow for dynamic poses!",
-			"• The ax consists of 3 parts: a handle and two blades. By moving the blade, you can reproduce the two forms of an ax and a sickle!",
+			"• SDGundam based on “Romance of the Three Kingdoms” has a new look!",
+			"• Thanks to the advanced proportions and attention to part division, we have achieved the highest color separation in SD history using just the assembly.",
+			"• Reproduce dynamic poses with a completely new head and body balance and joint structure in various places!",
+			"• The ax consists of three parts: a handle and two blades. By moving the blade, you can reproduce the two forms of an ax and a sickle!",
 			"• By combining the left and right wings and backpack, you can recreate the large Seal form for Cao Cao (sold separately)!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"連死双鎌×1",
-			"メモリ×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "連死双鎌"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "メモリ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/158_3536_s_0clx6f4n3cpdgkjg9r9rvibxdyuy.jpg",
+				"path": "/images/items/01_2615/158_3536.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_3536_s_f4vb6g4ss0hoa0a76nr4i7004lxb.jpg",
+				"path": "/images/items/01_2615/153_3536.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3536_s_y0p8csqxmtsdh063a7hzcfn236dd.jpg",
+				"path": "/images/items/01_2615/155_3536.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3536_s_oht56l5xz2r7b13e21iw3xuyxi17.jpg",
+				"path": "/images/items/01_2615/156_3536.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3536_s_tr6xc1shhfvvh6qfgucrh0e3d7pg.jpg",
+				"path": "/images/items/01_2615/157_3536.jpg"
+			}
 		],
-		"en": [
-			"Double Death Scythe×1",
-			"Memory x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2615/153_3536.jpg",
-		"/images/items/01_2615/155_3536.jpg",
-		"/images/items/01_2615/156_3536.jpg",
-		"/images/items/01_2615/157_3536.jpg",
-		"/images/items/01_2615/158_3536.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2615/",
-	"brandIds": [],
-	"seriesIds": [
-		"soketsuden"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2642",
-		"01_2614",
-		"01_2643",
-		"01_2644"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2615/"
 }

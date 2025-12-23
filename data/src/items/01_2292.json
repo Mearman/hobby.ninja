@@ -2,9 +2,48 @@
 	"id": "01_2292",
 	"type": "item",
 	"name": {
-		"ja": "RG 1/144 ガンダムベース限定 ユニコーンガンダム 2号機 バンシィ・ノルン (デストロイモード) (LIGHTING MODEL)",
+		"ja": "RG 1/144 ガンダムベース限定 ユニコーンガンダム2号機 バンシィ・ノルン (デストロイモード) (LIGHTING MODEL)",
 		"en": "RG 1/144 Gundam Base Limited Unicorn Gundam Unit 2 Banshee Norn (Destroy Mode) (LIGHTING MODEL)"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000133044",
+			"url": "https://p-bandai.jp/item/item-1000133044",
+			"ja": "ＲＧ 1/144 拡張ユニット アームド・アーマーＶＮ／ＢＳ"
+		},
+		{
+			"id": "item-1000130551",
+			"url": "https://p-bandai.jp/item/item-1000130551",
+			"ja": "ＲＧ 1/144 ユニコーンガンダム２号機 バンシィ・ノルン （最終決戦仕様）"
+		},
+		{
+			"id": "01_2028",
+			"url": "https://bandai-hobby.net/item/01_2028/",
+			"ja": "RG 1/144 フルアーマー・ユニコーンガンダム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 12870,
 		"currency": "JPY",
@@ -18,7 +57,6 @@
 		"day": 20
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
@@ -35,28 +73,22 @@
 			"*The Armed Armor XC part on the back does not emit light."
 		]
 	},
-	"images": [
-		"/images/items/01_2292/153_3232.jpg",
-		"/images/items/01_2292/155_3232.jpg",
-		"/images/items/01_2292/156_3232.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2292/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000133044",
-		"item-1000130551",
-		"01_2028"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/156_3232_s_4pfbkc6w4jecy1c4k56hb2ad4npi.jpg",
+				"path": "/images/items/01_2292/156_3232.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_3232_s_11gdk2b9ap45zj29ul0ehfayrben.jpg",
+				"path": "/images/items/01_2292/153_3232.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3232_s_dbk69z123hpaqk869o253nbhwrcr.jpg",
+				"path": "/images/items/01_2292/155_3232.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2292/"
 }

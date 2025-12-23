@@ -5,6 +5,44 @@
 		"ja": "1/250 パーフェクトジオング",
 		"en": "1/250 Perfect Zeon"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/250",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 7
 	},
 	"targetAge": 15,
-	"scale": "1/250",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム」終盤を飾ったジオングの脚つきパーフェクトバージョンのキット化です。腕は前後にスイングします。股関節は左右開閉が可能です。足首は前後左右のスイングが可能です。専用デカールがついてます。"
@@ -26,21 +63,14 @@
 			"A kit of the perfect version with legs of Zeon, who graced the final stage of \"Mobile Suit Gundam.\" Swing your arms back and forth. The hip joint can be opened and closed on the left and right. The ankle can swing forward, backward, left and right. Comes with a special decal."
 		]
 	},
-	"images": [
-		"/images/items/01_3104/153_4070.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3104/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4070_s_b5usv0o9zrs9wx3qaoydojcsbyd9.jpg",
+				"path": "/images/items/01_3104/153_4070.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3104/"
 }

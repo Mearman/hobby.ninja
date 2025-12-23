@@ -5,6 +5,43 @@
 		"ja": "BB戦士410 典韋アッシマー カクアシュタロン 攻城兵器セット&合体武装6種(甲)",
 		"en": "BB Senshi 410 Dianwei Assimar Kakuashtalon Siege Weapon Set & 6 Types of Combined Weapons (A)"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 3190,
 		"currency": "JPY",
@@ -26,80 +63,158 @@
 			"• パッケージイラストは新規描き起こし！"
 		],
 		"en": [
-			"• \"Immovable superpower \" Dianwei Assimer and \" cold assassin\" Jia Xu Ashtalon are re-kitted with new outfits!",
-			"• Both warlords have a more subdued body color to match their worldview, and Jia Xu Ashtalon's eyes have been changed to match the BB Senshi format!",
-			"• In addition to the included \"siege weapons/troop soldiers\", which have a more subdued color tone to match the world view, the 6 types of metallic molded combined weapons (Part 1) can be combined with the ``Kogata Gouf & 6 types of combined weapons (Part 2)'' (Part 2) to reproduce 12 combined huge weapons!",
+			"• \"Immovable superpower\" Dianwei Assimer and \"cold assassin\" Jia Xu Ashtalon are re-kitted with new outfits!",
+			"• The body color of both warlords has been changed to a more subdued color to match the world view, and Jia Xu Ashtalon's eyes have been changed to match the BB Senshi format!",
+			"• The included \"siege weapons/troop soldiers\" have a more subdued color tone to match the world view, and the metallic molded 6 types of combined weapons (Part 1) can be combined with the ``Kogata Gouf & 6 types of combined weapons (Part 2)'' (Part 2) to reproduce 12 combined huge weapons!",
 			"• The package illustration is newly drawn!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"豪大斧×1",
-			"大斧形態用スタンド×1",
-			"震星杖×1",
-			"部隊兵（曹操軍）×2",
-			"攻城兵器×1",
-			"一ノ槍　一番槍×1",
-			"二ノ矛　二喬矛×1",
-			"三ノ剣　三国剣×1",
-			"四ノ刀　四天刀×1",
-			"九ノ叉　九王叉×1",
-			"十ノ爪　十常爪×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "豪大斧"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "大斧形態用スタンド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "震星杖"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "部隊兵（曹操軍）"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "攻城兵器"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "一ノ槍　一番槍"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "二ノ矛　二喬矛"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "三ノ剣　三国剣"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "四ノ刀　四天刀"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "九ノ叉　九王叉"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "十ノ爪　十常爪"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 15
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "輪ゴム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123789_1.jpg",
+				"path": "/images/items/01_1242/1000123789_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123789_2.jpg",
+				"path": "/images/items/01_1242/1000123789_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123789_3.jpg",
+				"path": "/images/items/01_1242/1000123789_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123789_4.jpg",
+				"path": "/images/items/01_1242/1000123789_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123789_5.jpg",
+				"path": "/images/items/01_1242/1000123789_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123789_6.jpg",
+				"path": "/images/items/01_1242/1000123789_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123789_7.jpg",
+				"path": "/images/items/01_1242/1000123789_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123789_8.jpg",
+				"path": "/images/items/01_1242/1000123789_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123789_9.jpg",
+				"path": "/images/items/01_1242/1000123789_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123789_10.jpg",
+				"path": "/images/items/01_1242/1000123789_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123789_11.jpg",
+				"path": "/images/items/01_1242/1000123789_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000123789_12.jpg",
+				"path": "/images/items/01_1242/1000123789_12.jpg"
+			}
 		],
-		"en": [
-			"Great ax x1",
-			"Stand for large ax form x 1",
-			"Earthquake Cane x1",
-			"Troop soldiers (Cao Cao army) x 2",
-			"Siege weapon x1",
-			"Ichino-yari Ichiban-yari x1",
-			"Ni no spear Ni no spear × 1",
-			"Three Swords Three Kingdoms Sword x1",
-			"Four Swords Four Heavenly Swords x 1",
-			"Nine prongs Nine prongs ×1",
-			"Ten claws Ten claws ×1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×15",
-			"シール×1",
-			"輪ゴム×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 15",
-			"Seal×1",
-			"Rubber band x 1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1242/1000123789_1.jpg",
-		"/images/items/01_1242/1000123789_10.jpg",
-		"/images/items/01_1242/1000123789_11.jpg",
-		"/images/items/01_1242/1000123789_12.jpg",
-		"/images/items/01_1242/1000123789_2.jpg",
-		"/images/items/01_1242/1000123789_3.jpg",
-		"/images/items/01_1242/1000123789_4.jpg",
-		"/images/items/01_1242/1000123789_5.jpg",
-		"/images/items/01_1242/1000123789_6.jpg",
-		"/images/items/01_1242/1000123789_7.jpg",
-		"/images/items/01_1242/1000123789_8.jpg",
-		"/images/items/01_1242/1000123789_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1242/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1242/"
 }

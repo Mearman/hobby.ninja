@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "RG 1/144 ガンダムベース限定 シナンジュ [メタリックグロスインジェクション]",
-		"en": "RG 1/144 Gundam Base Limited Sinanju [Metallic Gloss Injection]"
+		"en": "RG 1/144 GUNDAM Base Limited Sinanju [Metallic Gloss Injection]"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］",
+			"en": "RG [REAL GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]",
+			"en": "MOBILE SUIT GUNDAM UC (Unicorn)"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1259",
+			"url": "https://bandai-hobby.net/item/01_1259/",
+			"ja": "RG 1/144 ユニコーンガンダム2号機 バンシィ・ノルン"
+		},
+		{
+			"id": "01_1085",
+			"url": "https://bandai-hobby.net/item/01_1085/",
+			"ja": "RG 1/144 ユニコーンガンダム"
+		},
+		{
+			"id": "item-1000225937",
+			"url": "https://p-bandai.jp/item/item-1000225937/",
+			"ja": "ＲＧ 1/144 シナンジュ用 拡張セット"
+		},
+		{
+			"id": "01_660",
+			"url": "https://bandai-hobby.net/item/01_660/",
+			"ja": "RG 1/144 MSN-06S シナンジュ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -17,42 +63,27 @@
 		"month": 8
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。リアルグレード シナンジュが、ガンダムベース限定メタリックグロスインジェクションで登場。特徴的な赤の機体色を艶感のあるグロスインジェクションで再現。"
 		],
 		"en": [
-			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world. Real grade Sinanju is now available as Gundam base limited metallic gloss injection. The characteristic red aircraft color is reproduced with glossy gloss injection."
+			"For GUNPLA fans around the world, this is a limited edition GUNPLA at the official GUNPLA complex \"GUNDAM Base\". Real Grade Sinanju is now available in a GUNDAM base limited metallic gloss injection. The characteristic red fuselage color is reproduced with glossy gloss injection."
 		]
 	},
-	"images": [
-		"/images/items/01_1919/01_1919_0.jpg",
-		"/images/items/01_1919/01_1919_1.jpg",
-		"/images/items/01_1919/01_1919_2.jpg",
-		"/images/items/01_1919/01_1919_3.jpg",
-		"/images/items/01_1919/01_1919_4.jpg",
-		"/images/items/01_1919/01_1919_5.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1919/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1259",
-		"01_1085",
-		"item-1000225937",
-		"01_660"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"images": {
+		"product": [
+			{},
+			{},
+			{},
+			{},
+			{},
+			{}
+		],
+		"instructions": []
 	},
-	"manualId": "0670"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1919/",
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1919/"
+	}
 }

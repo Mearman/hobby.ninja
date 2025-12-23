@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ランチャー/ソードストライクガンダム",
 		"en": "MG 1/100 Launcher/Sword Strike Gundam"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "01_5221",
+			"url": "https://bandai-hobby.net/item/01_5221/",
+			"ja": "MG 1/100 イージスガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_4272",
+			"url": "https://bandai-hobby.net/item/01_4272/",
+			"ja": "MG 1/100 ガンダムベース限定 パーフェクトストライクガンダム グランドスラム装備型"
+		},
+		{
+			"id": "01_4195",
+			"url": "https://bandai-hobby.net/item/01_4195/",
+			"ja": "MG 1/100 ガンダムベース限定 エクリプスガンダム[クリアカラー]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -17,34 +61,26 @@
 		"month": 4
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"待望の“ランチャーストライカー”“ソードストライカー”を装備した人気MS“ストライクガンダム”が遂にMGシリーズラインナップ ストライクガンダム本体へ各ストライカーを装着することで、ランチャーストライクガンダム、ソードストライクガンダムがそれぞれ再現可能 ソードストライクガンダムの左肩はマイダスメッサーが着脱可能、パンツァーアイゼン先端のピアサーロックは射出状態をリード線を用いて再現可能 ランチャーストライクガンダムはフレキシブルに可動するアグニのサポートアームにより劇中同様のポージングが可能 アーマーシュナイダー×2、シールドが付属"
 		],
 		"en": [
-			"The popular MS \"Strike Gundam \" equipped with the long-awaited \" Launcher Striker \" and \" Sword Striker\" is finally in the MG series lineup. By attaching each striker to the Strike Gundam body, Launcher Strike Gundam and Sword Strike Gundam can be reproduced respectively. Midas Messer can be attached and removed from the left shoulder of Sword Strike Gundam, and the piercer lock at the tip of Panzer crampons can reproduce the injection state using a lead wire. Launcher Strike Gundam can be posed in the same way as in the movie with Agni's flexible support arm. Armor Schneider x 2 and Seal are included."
+			"The popular MS \"Strike Gundam\" equipped with the long-awaited \"Launcher Striker\" and \"Sword Striker\" is finally in the MG series lineup. By attaching each striker to the Strike Gundam body, Launcher Strike Gundam and Sword Strike Gundam can be reproduced respectively. Midas Messer can be attached and removed from the left shoulder of Sword Strike Gundam, and the piercer lock at the tip of Panzer crampons can reproduce the injection state using a lead wire. Launcher Strike Gundam can be posed in the same way as in the movie with Agni's flexible support arm. Armor Schneider x 2 and Seal are included."
 		]
 	},
-	"images": [
-		"/images/items/01_1678/153_2585.jpg",
-		"/images/items/01_1678/155_2585.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1678/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5221",
-		"01_4272",
-		"01_4195"
-	],
-	"manualId": "0555"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2585_s_x03c6y6obsm8acivojdjjz7fv329.jpg",
+				"path": "/images/items/01_1678/153_2585.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2585_s_4riof7t2optm8yhzr6v8v8eomzda.jpg",
+				"path": "/images/items/01_1678/155_2585.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1678/"
 }

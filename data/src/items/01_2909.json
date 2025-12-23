@@ -5,6 +5,60 @@
 		"ja": "ＰＧ 1/60 拡張ユニット アームド・アーマーＶＮ／ＢＳ",
 		"en": "PG 1/60 expansion unit Armed Armor VN/BS"
 	},
+	"brands": [
+		{
+			"id": "pb_pg",
+			"url": "https://bandai-hobby.net/brand/pb_pg/",
+			"ja": "PG［パーフェクトグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216106",
+			"url": "https://p-bandai.jp/item/item-1000216106/",
+			"ja": "RG 1/144 ユニコーンガンダム２号機 バンシィ・ノルン (最終決戦仕様) [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000183366",
+			"url": "https://p-bandai.jp/item/item-1000183366/",
+			"ja": "ＭＧ 1/100 スタークジェガン"
+		},
+		{
+			"id": "item-1000164780",
+			"url": "https://p-bandai.jp/item/item-1000164780/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム ペルフェクティビリティ用 ディバイン拡張セット"
+		},
+		{
+			"id": "item-1000164779",
+			"url": "https://p-bandai.jp/item/item-1000164779/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム ペルフェクティビリティ"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 10
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
 			"パーフェクトグレードで特徴的な腕部武装のユニコーンガンダム２号機バンシィが再現できる拡張ユニットが登場！",
@@ -112,39 +165,50 @@
 			"- Product specifications are scheduled as of 20159. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2909/153_3887.jpg",
-		"/images/items/01_2909/155_3887.jpg",
-		"/images/items/01_2909/156_3887.jpg",
-		"/images/items/01_2909/157_3887.jpg",
-		"/images/items/01_2909/158_3887.jpg",
-		"/images/items/01_2909/159_3887.jpg",
-		"/images/items/01_2909/189_3887.jpg",
-		"/images/items/01_2909/190_3887.jpg",
-		"/images/items/01_2909/191_3887.jpg",
-		"/images/items/01_2909/192_3887.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2909/",
-	"brandIds": [
-		"pg",
-		"pb_pg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216106",
-		"item-1000183366",
-		"item-1000164780",
-		"item-1000164779"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3887_s_6kccahtthnessb6rxtivz4lxs35o.jpg",
+				"path": "/images/items/01_2909/153_3887.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3887_s_3tk1tt4a0yrhla11zq82vrglszs3.jpg",
+				"path": "/images/items/01_2909/155_3887.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3887_s_p122meykok0hbd1yds5vkl95nugw.jpg",
+				"path": "/images/items/01_2909/156_3887.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3887_s_0wgytg3o9elbpbqrm98avl4rtawq.jpg",
+				"path": "/images/items/01_2909/157_3887.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3887_s_q8quxypduz40px2pofvefie9dz4m.jpg",
+				"path": "/images/items/01_2909/158_3887.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3887_s_56n2d3xqlo1vl4zihtb0r443qihq.jpg",
+				"path": "/images/items/01_2909/159_3887.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3887_s_vxf2ngkri3o3w85b70dzdzf9xj2t.jpg",
+				"path": "/images/items/01_2909/189_3887.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3887_s_vttp982lc1i1xji7cud340h3arfa.jpg",
+				"path": "/images/items/01_2909/190_3887.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3887_s_zjwcr1melwy72w3en8nfu4j7sbwp.jpg",
+				"path": "/images/items/01_2909/191_3887.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3887_s_f2w6us5iqz1k9wkftx498cf7fvhx.jpg",
+				"path": "/images/items/01_2909/192_3887.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "0666"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2909/"
 }

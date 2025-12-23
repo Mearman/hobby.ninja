@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ナラティブガンダム C装備",
 		"en": "HGUC 1/144 Narrative Gundam C equipment"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "narrative",
+			"url": "https://bandai-hobby.net/series/narrative/",
+			"ja": "機動戦士ガンダムNT[ナラティブ]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5039",
+			"url": "https://bandai-hobby.net/item/01_5039/",
+			"ja": "HG 1/144 ナラティブガンダム C装備 [覚醒イメージカラー]"
+		},
+		{
+			"id": "01_5038",
+			"url": "https://bandai-hobby.net/item/01_5038/",
+			"ja": "HG 1/144 ナラティブガンダム A装備 [クリアカラー]"
+		},
+		{
+			"id": "01_3460",
+			"url": "https://bandai-hobby.net/item/01_3460/",
+			"ja": "HG 1/144 シルヴァ・バレト・サプレッサー[クリアカラー]"
+		},
+		{
+			"id": "01_2666",
+			"url": "https://bandai-hobby.net/item/01_2666/",
+			"ja": "HG 1/144 ガンダムベース限定 ナラティブガンダム B装備"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -18,11 +67,10 @@
 		"day": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム NT』に登場するナラティブガンダム第３の装備を再現！",
-			"• 初回生産分のみ、『機動戦士ガンダム NT』を振り返る特別冊子を封入！",
+			"『機動戦士ガンダムNT』に登場するナラティブガンダム第３の装備を再現！",
+			"• 初回生産分のみ、『機動戦士ガンダムNT』を振り返る特別冊子を封入！",
 			"• ナラティブガンダムのC装備を新規造形パーツにより再現。",
 			"• パーツ分けにより腹部のコア・ファイターや脚部の色分けを再現。ユニコーンガンダムを想起させる意匠を全身に纏っている。",
 			"• C装備で初めて装備するビーム・ライフル、サイコフレーム付属のシールドをセット。左右の握り手に加え、武器持ち用の右手パーツも付属。",
@@ -30,63 +78,85 @@
 		],
 		"en": [
 			"Reproduce the third narrative Gundam equipment that appears in \"Mobile Suit Gundam NT\"!",
-			"• Only for the first production, a special booklet looking back on \"Mobile Suit Gundam NT\" is included!",
+			"• Only the first production will include a special booklet looking back on \"Mobile Suit GundamNT\"!",
 			"• Narrative Gundam's C equipment is reproduced with new molded parts.",
-			"• The core fighter of the abdomen and the color coding of the legs are reproduced by dividing the parts. The entire body is decorated with a design reminiscent of the unicorn Gundam.",
-			"• Beam rifle to be equipped for the first time with C equipment, set with Seal that comes with psycho frame. In addition to the left and right hand grips, a right hand part for holding a weapon is also included.",
+			"• By dividing the parts, the core fighter of the abdomen and the color coding of the legs are reproduced. The entire body is decorated with a design reminiscent of the unicorn Gundam.",
+			"• Beam rifle equipped for the first time with C equipment, Seal with psycho frame included. In addition to the left and right hand grips, a right hand part for holding a weapon is also included.",
 			"• Comes with a Seal that reproduces the red dual eyes when NT-D is activated during battles within the colony."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"シールド×1",
-			"ビーム・サーベル×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成型品"
+			},
+			"count": 11
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3107_s_kjxq01xn6bnczb2ujvwuo7p53a9j.jpg",
+				"path": "/images/items/01_2157/153_3107.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3107_s_wo3da1tp64t3iz7rk95zuyi7rcus.jpg",
+				"path": "/images/items/01_2157/155_3107.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3107_s_50scx5wds8qdxezlxz56paepllmy.jpg",
+				"path": "/images/items/01_2157/156_3107.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3107_s_f1kwzgq6mcrot14lwhp8zka9yld8.jpg",
+				"path": "/images/items/01_2157/157_3107.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3107_s_v3v9ghz9lzg3krk5nbdhu6xvdeh4.jpg",
+				"path": "/images/items/01_2157/158_3107.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3107_s_ay0rwoggpcguk6fx4dxnp7l83u2e.jpg",
+				"path": "/images/items/01_2157/159_3107.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3107_s_zvpn7swimhxngv7735zq3il8jxto.jpg",
+				"path": "/images/items/01_2157/189_3107.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x1",
-			"Seal × 1",
-			"Beam saber x2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成型品×11",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded products x 11",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2157/153_3107.jpg",
-		"/images/items/01_2157/155_3107.jpg",
-		"/images/items/01_2157/156_3107.jpg",
-		"/images/items/01_2157/157_3107.jpg",
-		"/images/items/01_2157/158_3107.jpg",
-		"/images/items/01_2157/159_3107.jpg",
-		"/images/items/01_2157/189_3107.jpg",
-		"/images/items/01_2157/01_2157_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2157/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"narrative"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5039",
-		"01_5038",
-		"01_3460",
-		"01_2666"
-	],
-	"manualId": "0487"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2157/"
 }

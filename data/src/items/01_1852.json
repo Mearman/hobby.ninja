@@ -5,6 +5,55 @@
 		"ja": "ガンダムデカールNo.43 MG 1/100 デスティニーガンダム用",
 		"en": "Gundam Decal No.43 MG 1/100 Destiny Gundam"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		},
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5421",
+			"url": "https://bandai-hobby.net/item/01_5421/",
+			"ja": "MG 1/100 ガンダムベース限定 デスティニーガンダム (ハイネ専用機)"
+		},
+		{
+			"id": "item-1000183862",
+			"url": "https://p-bandai.jp/item/item-1000183862/",
+			"ja": "ＭＧ 1/100 ガナーウィザード／スラッシュウィザード／ブレイズウィザードセット"
+		},
+		{
+			"id": "01_4197",
+			"url": "https://bandai-hobby.net/item/01_4197/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 アザーセンチュリーズエンブレムセット1"
+		},
+		{
+			"id": "01_3673",
+			"url": "https://bandai-hobby.net/item/01_3673/",
+			"ja": "ガンダムデカールNo.130 RG 1/144 フォースインパルスガンダム用"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"100点以上のラインナップを誇る、大人気ガンダムデカールのシリーズ商品が登場。",
@@ -31,24 +79,14 @@
 			"water transfer decal"
 		]
 	},
-	"images": [
-		"/images/items/01_1852/153_2788.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1852/",
-	"brandIds": [
-		"mg",
-		"gundam_decal"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5421",
-		"item-1000183862",
-		"01_4197",
-		"01_3673"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2788_s_p5jgfsys7vtfff6nqro6m9jc5uys.jpg",
+				"path": "/images/items/01_1852/153_2788.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1852/"
 }

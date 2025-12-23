@@ -2,9 +2,42 @@
 	"id": "01_1511",
 	"type": "item",
 	"name": {
-		"ja": "EXモデル 05 1/144 S ガンダムアタッカー",
-		"en": "EXModel 05 1/144 S Gundam Attacker"
+		"ja": "EXモデル 05 1/144 Sガンダムアタッカー",
+		"en": "EXModel 05 1/144 SGundam Attacker"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "sentinel",
+			"url": "https://bandai-hobby.net/series/sentinel/",
+			"ja": "ガンダム・センチネル"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5593",
+			"url": "https://bandai-hobby.net/item/01_5593/",
+			"ja": "MG 1/100 ガンダムMk-V [クリアカラー]"
+		},
+		{
+			"id": "01_3408",
+			"url": "https://bandai-hobby.net/item/01_3408/",
+			"ja": "ＭＧ 1/100 ガンダムＭｋ-Ｖ"
+		},
+		{
+			"id": "01_3062",
+			"url": "https://bandai-hobby.net/item/01_3062/",
+			"ja": "MG 1/100 ガンダムベース限定 FAZZ Ver.Ka[チタニウムフィニッシュ]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,33 +50,38 @@
 		"month": 1
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムセンチネル』に登場のＳガンダムのＡパーツ飛行形態を独自に再現したこだわりのモデルです。HGUCシリーズＳガンダムと同スケール（1/144）です。"
 		],
 		"en": [
-			"A special model that uniquely reproduces the A part flight form of S Gundam that appeared in \"Gundam Sentinel\". Same scale as HGUC series S Gundam (1/144)."
+			"A special model that uniquely reproduces the A part flight form of SGundam that appeared in \"Gundam Sentinel\". Same scale as HGUC series SGundam (1/144)."
 		]
 	},
-	"images": [
-		"/images/items/01_1511/153_242.jpg",
-		"/images/items/01_1511/155_242.jpg",
-		"/images/items/01_1511/156_242.jpg",
-		"/images/items/01_1511/157_242.jpg",
-		"/images/items/01_1511/158_242.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1511/",
-	"brandIds": [],
-	"seriesIds": [
-		"sentinel"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5593",
-		"01_3408",
-		"01_3062"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_242_s_xkhhn0cjddwenoh75rzkivjfwftw.jpg",
+				"path": "/images/items/01_1511/153_242.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_242_s_pqri4qfh5salh8n6pd5n8223t7dd.jpg",
+				"path": "/images/items/01_1511/155_242.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_242_s_44hw9dy5pscbgqyx25yf7l6dfn8m.jpg",
+				"path": "/images/items/01_1511/156_242.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_242_s_6sezwy5b44xibjfpu85lipu0jx78.jpg",
+				"path": "/images/items/01_1511/157_242.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_242_s_72iuw52i6wnnl5sm2s76x0sab26a.jpg",
+				"path": "/images/items/01_1511/158_242.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1511/"
 }

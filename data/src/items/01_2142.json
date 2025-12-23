@@ -3,8 +3,40 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard 超サイヤ人ゴッド超サイヤ人ゴジータ",
-		"en": "Figure-rise Standard Super Saiyan God Super Saiyan Gogeta"
+		"en": "Figure-rise Standard SUPER SAIYAN GOD SUPER SAIYAN GOGETA"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ",
+			"en": "DRAGON BALL"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_4901",
+			"url": "https://bandai-hobby.net/item/01_4901/",
+			"ja": "Figure-rise Standard ベジータ (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_4219",
+			"url": "https://bandai-hobby.net/item/01_4219/",
+			"ja": "Figure-rise Standard 孫悟空 (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_2974",
+			"url": "https://bandai-hobby.net/item/01_2974/",
+			"ja": "Figure-rise Standard アルティメット孫悟飯"
+		},
+		{
+			"id": "01_2769",
+			"url": "https://bandai-hobby.net/item/01_2769/",
+			"ja": "Figure-rise Standard ジレン"
+		}
+	],
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -28,67 +60,139 @@
 			"• 黒髪状態も再現できる頭部パーツが付属！"
 		],
 		"en": [
-			"\"Super Saiyan God Super Saiyan Gogeta \" who fights a fierce battle with Broly in the movie \" Dragon Ball Super: Broly\" is now available in Figure-rise Standard!",
-			"Assemble the fused super warrior of Goku and Vegeta!",
-			"• Reproduce the strong body of Super Saiyan God Super Saiyan Gogeta using the Muscle Build System!",
-			"• Characteristic costumes are reproduced with new modeling.",
-			"• Comes with 4 types of special move effects, the most in the Figure-rise Standard series.",
-			"• Head parts are included to recreate black hair!"
+			"In the movie \"DRAGON BALL Super Broly\", \"Super Saiyan God Super Saiyan Gogeta\", which fights a fierce battle with Broly, is now available in Figure-rise Standard! Goku and Vegeta assemble a fusion of super warriors!",
+			"• Muscle build system reproduces Super Saiyan God Super Saiyan Gogeta 's strong body!",
+			"• The characteristic costume is reproduced in a new model.",
+			"• Figure-rise Standard Comes with 4 types of special move effects, the most in the series."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"必殺技エフェクト4種（かめはめ波〈溜め〉、かめはめ波〈放出〉、ビッグ・バン・アタック、ファイナルフラッシュ）×各1",
-			"黒髪頭部パーツ×1",
-			"青髪表情パーツ2種（平常、叫び）×各1",
-			"黒髪表情パーツ2種（平常、叫び）×各1",
-			"手首パーツ4種（左右握り手、左右かめはめ波手）×各1",
-			"エフェクト台座×1"
-		],
-		"en": [
-			"4 types of special move effects (Kamehameha (charge), Kamehameha (release), Big Bang Attack, Final Flash) x 1 each",
-			"Black hair head parts x 1",
-			"2 types of blue hair expression parts (normal, screaming) x 1 each",
-			"2 types of black hair expression parts (normal, screaming) x 1 each",
-			"4 types of wrist parts (left and right grip hands, left and right kamehame wave hands) x 1 each",
-			"Effect pedestal x 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×15",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 15",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2142/1000131500_1.jpg",
-		"/images/items/01_2142/1000131500_10.jpg",
-		"/images/items/01_2142/1000131500_11.jpg",
-		"/images/items/01_2142/1000131500_2.jpg",
-		"/images/items/01_2142/1000131500_3.jpg",
-		"/images/items/01_2142/1000131500_4.jpg",
-		"/images/items/01_2142/1000131500_5.jpg",
-		"/images/items/01_2142/1000131500_6.jpg",
-		"/images/items/01_2142/1000131500_7.jpg",
-		"/images/items/01_2142/1000131500_8.jpg",
-		"/images/items/01_2142/1000131500_9.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "必殺技エフェクト4種（かめはめ波〈溜め〉、かめはめ波〈放出〉、ビッグ・バン・アタック、ファイナルフラッシュ）×各1",
+				"en": "• 4 special move effects (Kamehameha [Reservoir], Kamehameha [Release], Big Bang Attack, Final Flash)"
+			},
+			"unit": {
+				"ja": "each",
+				"en": "each"
+			}
+		},
+		{
+			"name": {
+				"ja": "黒髪頭部パーツ",
+				"en": "• Black hair head parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "青髪表情パーツ2種（平常、叫び）×各1",
+				"en": "• 2 types of blue-haired facial expression parts (normal, screaming)"
+			},
+			"unit": {
+				"ja": "each",
+				"en": "each"
+			}
+		},
+		{
+			"name": {
+				"ja": "黒髪表情パーツ2種（平常、叫び）×各1",
+				"en": "• 2 types of black hair facial expression parts (normal, screaming)"
+			},
+			"unit": {
+				"ja": "each",
+				"en": "each"
+			}
+		},
+		{
+			"name": {
+				"ja": "手首パーツ4種（左右握り手、左右かめはめ波手）×各1",
+				"en": "• 4 types of wrist parts (left and right grip hands, left and right Kamehameha hands)"
+			},
+			"unit": {
+				"ja": "each",
+				"en": "each"
+			}
+		},
+		{
+			"name": {
+				"ja": "エフェクト台座",
+				"en": "• Effect pedestal"
+			},
+			"count": 1
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 15
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131500_1.jpg",
+				"path": "/images/items/01_2142/1000131500_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131500_2.jpg",
+				"path": "/images/items/01_2142/1000131500_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131500_3.jpg",
+				"path": "/images/items/01_2142/1000131500_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131500_4.jpg",
+				"path": "/images/items/01_2142/1000131500_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131500_5.jpg",
+				"path": "/images/items/01_2142/1000131500_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131500_6.jpg",
+				"path": "/images/items/01_2142/1000131500_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131500_7.jpg",
+				"path": "/images/items/01_2142/1000131500_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131500_8.jpg",
+				"path": "/images/items/01_2142/1000131500_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131500_9.jpg",
+				"path": "/images/items/01_2142/1000131500_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131500_10.jpg",
+				"path": "/images/items/01_2142/1000131500_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131500_11.jpg",
+				"path": "/images/items/01_2142/1000131500_11.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2142/",
-	"brandIds": [],
-	"seriesIds": [
-		"dragonball"
-	],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"01_4901",
-		"01_4219",
-		"01_2974",
-		"01_2769"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2142/"
+	}
 }

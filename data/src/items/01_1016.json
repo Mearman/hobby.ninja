@@ -5,6 +5,49 @@
 		"ja": "メカコレクション　ドラゴンボール　3巻　ランチの一輪バイク",
 		"en": "Mecha Collection Dragon Ball Volume 3 Lunch Single Bike"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1107",
+			"url": "https://bandai-hobby.net/item/01_1107/",
+			"ja": "メカコレクション　ドラゴンボール　7巻 亀仙人のワゴン車"
+		},
+		{
+			"id": "01_1093",
+			"url": "https://bandai-hobby.net/item/01_1093/",
+			"ja": "メカコレクション　ドラゴンボール　6巻　ウーロンのロードバギー"
+		},
+		{
+			"id": "01_1060",
+			"url": "https://bandai-hobby.net/item/01_1060/",
+			"ja": "メカコレクション　ドラゴンボール　5巻　ヤムチャのマイティマウス号"
+		},
+		{
+			"id": "01_1017",
+			"url": "https://bandai-hobby.net/item/01_1017/",
+			"ja": "メカコレクション　ドラゴンボール　4巻　孫悟空のジェットバギー"
+		}
+	],
 	"price": {
 		"amount": 715,
 		"currency": "JPY",
@@ -34,7 +77,7 @@
 		],
 		"en": [
 			"• DB mechanism is now available in a palm-sized size that is easy to collect!",
-			"• Volume 3 is a monocycle lunch! !",
+			"• Volume 3 is a one-wheel bike for lunch! !",
 			"• HANDY SIZE",
 			"A cute palm-sized plastic model of the Dragon Ball mecha!",
 			"• EASY TO BUILD",
@@ -46,51 +89,70 @@
 			"If you collect the romantic parts that come with each volume, you can complete \"Bulma's Romantic Fighter\"!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"スクーター×1",
-			"ランチ×1",
-			"ロマンティックパーツ×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "スクーター"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ランチ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ロマンティックパーツ"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1951_s_fxhj3b9gig6swfpvqzlvvt152nmn.jpg",
+				"path": "/images/items/01_1016/153_1951.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1951_s_grg1lhlkgqhye7ogwijdik82qe5p.jpg",
+				"path": "/images/items/01_1016/155_1951.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_1951_s_1arxbdlndlwedhdyxfjkkjt7j0n9.jpg",
+				"path": "/images/items/01_1016/156_1951.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_1951_s_sofndouzha5vnrl1u91ldtl2fozm.jpg",
+				"path": "/images/items/01_1016/157_1951.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_1951_s_pffba7759q8v4xr33m74lhqok05j.jpg",
+				"path": "/images/items/01_1016/158_1951.jpg"
+			}
 		],
-		"en": [
-			"Scooter x 1",
-			"Lunch x1",
-			"Romantic parts x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×2",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 2",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1016/153_1951.jpg",
-		"/images/items/01_1016/155_1951.jpg",
-		"/images/items/01_1016/156_1951.jpg",
-		"/images/items/01_1016/157_1951.jpg",
-		"/images/items/01_1016/158_1951.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1016/",
-	"brandIds": [
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"dragonball"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1107",
-		"01_1093",
-		"01_1060",
-		"01_1017"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1016/"
 }

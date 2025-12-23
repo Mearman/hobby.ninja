@@ -5,6 +5,54 @@
 		"ja": "ＨＧ 1/144 ジム・ナイトシーカー",
 		"en": "HG 1/144 Jim Nightseeker"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -16,7 +64,6 @@
 		"year": 2020,
 		"month": 8
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"“ 夜 の 狩 人 ” の 名 を 持 つ ジ ム ―",
@@ -107,49 +154,67 @@
 			"- Product specifications are scheduled as of 20205. Please note that there may be changes."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ジム・ナイトシーカー専用ビーム・ガン",
-			"ビーム・スプレーガン",
-			"ビーム・サーベル"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ジム・ナイトシーカー専用ビーム・ガン"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・スプレーガン"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3903_s_nijd76fw6j6nfp50nm05jlebdez5.jpg",
+				"path": "/images/items/01_2927/153_3903.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3903_s_dmohwlhudwjvg3e17qutqtnc83vt.jpg",
+				"path": "/images/items/01_2927/155_3903.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3903_s_6uzxmx1677bc3cxfw8oq89hpp8o8.jpg",
+				"path": "/images/items/01_2927/156_3903.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3903_s_c4kykpf6fdjg8rog1cwlkpzag9qr.jpg",
+				"path": "/images/items/01_2927/157_3903.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3903_s_z5gqjblxugm5oqags9najhq9wd2v.jpg",
+				"path": "/images/items/01_2927/158_3903.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3903_s_fhcpgs8ixiyryvorgy40h16sidlp.jpg",
+				"path": "/images/items/01_2927/159_3903.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3903_s_3jqulbnbha12f3d5enfo1mfinids.jpg",
+				"path": "/images/items/01_2927/189_3903.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3903_s_mhrr61fjhmsz7c02qva90oxj9dle.jpg",
+				"path": "/images/items/01_2927/190_3903.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3903_s_z7mggzeck9qywxzhykqaujegz4ei.jpg",
+				"path": "/images/items/01_2927/191_3903.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3903_s_ksxqf08vnd3234o3z6sb7x70hm0j.jpg",
+				"path": "/images/items/01_2927/192_3903.jpg"
+			}
 		],
-		"en": [
-			"Beam gun for Jim Nightseeker",
-			"beam spray gun",
-			"beam saber"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2927/153_3903.jpg",
-		"/images/items/01_2927/155_3903.jpg",
-		"/images/items/01_2927/156_3903.jpg",
-		"/images/items/01_2927/157_3903.jpg",
-		"/images/items/01_2927/158_3903.jpg",
-		"/images/items/01_2927/159_3903.jpg",
-		"/images/items/01_2927/189_3903.jpg",
-		"/images/items/01_2927/190_3903.jpg",
-		"/images/items/01_2927/191_3903.jpg",
-		"/images/items/01_2927/192_3903.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2927/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	],
-	"manualId": "2589",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_2927/"
 }

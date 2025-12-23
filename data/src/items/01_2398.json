@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 指揮官機用オプションアーマー[ポルタノヴァ用/ネイビー]",
 		"en": "30MM 1/144 Optional armor for commander aircraft [for Portanova/Navy]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 330,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"豊富なオプションでさらに拡がるカスタマイズ！",
@@ -32,47 +74,58 @@
 			"Introducing optional commander armor [for Portanova/Navy] that can be installed on common joints located in various parts of the 30MM 1/144 aircraft.",
 			"• Armor shaped to match \"bEXM-15 Portanova\".",
 			"• By combining multiple pieces, you can enjoy your favorite coloring without painting.",
-			"• Optional Comes with a seal that matches the shape of the armor."
+			"• Comes with a seal that matches the shape of the optional armor."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"アーマー×1式",
-			"シールド×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "アーマー"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 2
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3331_s_l0rplkmsd3oothgcsdenq66u1lyw.jpg",
+				"path": "/images/items/01_2398/153_3331.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3331_s_xhwk27t5zislizdgpde488skxc6a.jpg",
+				"path": "/images/items/01_2398/155_3331.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3331_s_cdhbahlmf2zf7ksokvxj0kv1fii3.jpg",
+				"path": "/images/items/01_2398/156_3331.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3331_s_ax2864js6l2p5vu87gqc9ppgl0wf.jpg",
+				"path": "/images/items/01_2398/157_3331.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3331_s_j7lnrt8sfu7mp0lp2cbu3c3moazr.jpg",
+				"path": "/images/items/01_2398/158_3331.jpg"
+			}
 		],
-		"en": [
-			"Armor x 1 set",
-			"Seal × 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×2"
-		],
-		"en": [
-			"Molded product x 2"
-		]
-	},
-	"images": [
-		"/images/items/01_2398/153_3331.jpg",
-		"/images/items/01_2398/155_3331.jpg",
-		"/images/items/01_2398/156_3331.jpg",
-		"/images/items/01_2398/157_3331.jpg",
-		"/images/items/01_2398/158_3331.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2398/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3640"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2398/"
 }

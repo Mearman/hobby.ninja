@@ -5,6 +5,60 @@
 		"ja": "ＲＧ 1/144 MS-06R-1A エリック・マンスフィールド専用ザクＩＩ",
 		"en": "RG 1/144 MS-06R-1A Eric Mansfield's Zaku II"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "msv",
+			"url": "https://bandai-hobby.net/series/msv/",
+			"ja": "ガンダムＭＳＶ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000127155",
+			"url": "http://p-bandai.jp/item/item-1000127155",
+			"ja": "ＲＧ 1/144 ギャビー・ハザード専用ザクＩＩ"
+		},
+		{
+			"id": "item-1000123858",
+			"url": "http://p-bandai.jp/item/item-1000123858/",
+			"ja": "ＲＧ 1/144 MS-06F ザク・マインレイヤー"
+		},
+		{
+			"id": "item-1000123735",
+			"url": "http://p-bandai.jp/item/item-1000123735/",
+			"ja": "ＲＧ 1/144 MS-06R-1A 黒い三連星専用ザクII"
+		},
+		{
+			"id": "item-1000119390",
+			"url": "http://p-bandai.jp/item/item-1000119390/",
+			"ja": "ＲＧ 1/144 MS-06R-1A シン・マツナガ専用ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,30 +71,14 @@
 		"month": 5
 	},
 	"targetAge": 15,
-	"scale": "1/144",
-	"images": [
-		"/images/items/01_2170/153_3119.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2170/",
-	"brandIds": [
-		"rg",
-		"pb_rg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"msv"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000127155",
-		"item-1000123858",
-		"item-1000123735",
-		"item-1000119390"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3119_o_1d1poofghjp9158nhrs1nmf1rgm23.jpg",
+				"path": "/images/items/01_2170/153_3119.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2170/"
 }

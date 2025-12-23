@@ -5,6 +5,54 @@
 		"ja": "メカコレクション ウルトラマンシリーズ 科学特捜隊セット [エクストラフィニッシュ]",
 		"en": "Mecha Collection Ultraman Series Science Special Investigation Team Set [Extra Finish]"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		},
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "ultraman",
+			"url": "https://bandai-hobby.net/series/ultraman/",
+			"ja": "ウルトラマン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000118308",
+			"url": "http://p-bandai.jp/item/item-1000118308/",
+			"ja": "メカコレクション ウルトラマンシリーズ ウルトラ警備隊セット [エクストラフィニッシュ]"
+		},
+		{
+			"id": "01_1090",
+			"url": "https://bandai-hobby.net/item/01_1090/",
+			"ja": "メカコレクション ウルトラマンシリーズ No.13 ウルトラホーク１号 α号"
+		},
+		{
+			"id": "01_1091",
+			"url": "https://bandai-hobby.net/item/01_1091/",
+			"ja": "メカコレクション ウルトラマンシリーズ No.14 ウルトラホーク１号 β号"
+		},
+		{
+			"id": "01_1092",
+			"url": "https://bandai-hobby.net/item/01_1092/",
+			"ja": "メカコレクション ウルトラマンシリーズ No.15 ウルトラホーク１号 γ号"
+		}
+	],
 	"price": {
 		"amount": 7150,
 		"currency": "JPY",
@@ -17,28 +65,14 @@
 		"month": 9
 	},
 	"targetAge": 15,
-	"images": [
-		"/images/items/01_1125/153_2058.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1125/",
-	"brandIds": [
-		"pb_charapla",
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"ultraman"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000118308",
-		"01_1090",
-		"01_1091",
-		"01_1092"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2058_o_1bkdpv5sr1ulg1s44d4une21lbj2d.jpg",
+				"path": "/images/items/01_1125/153_2058.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1125/"
 }

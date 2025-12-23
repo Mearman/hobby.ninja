@@ -5,6 +5,43 @@
 		"ja": "BB戦士320 張コウザクIII",
 		"en": "BB Senshi 320 Zhang Kouzaku III"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -23,26 +60,25 @@
 			"●「三国伝」より曹操軍の新鋭“ザクIII”が登場 ●右肩の鎧と背中の剣は格闘用武器に合体 ●鎧は着脱可能 ●武器は戟、トンファー型剣×2が付属"
 		],
 		"en": [
-			"-From \"Sangokuden \", Cao Cao's new leader \" Zaku III\" appears -The armor on the right shoulder and the sword on the back are combined into a fighting weapon -The armor is removable -Weapons include a halberd and 2 tonfa-type swords"
+			"-From \"Sangokuden\", Cao Cao's new leader \"Zaku III\" appears -The armor on the right shoulder and the sword on the back are combined into a fighting weapon -The armor is removable -Weapons include a halberd and 2 tonfa-type swords"
 		]
 	},
-	"images": [
-		"/images/items/01_2528/153_3453.jpg",
-		"/images/items/01_2528/155_3453.jpg",
-		"/images/items/01_2528/156_3453.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2528/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3453_s_ptosgv0f4nbhbn1kyaou2aghw0kw.jpg",
+				"path": "/images/items/01_2528/153_3453.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3453_s_hd3hpc8ev9wqwnndhiovqhvpkgji.jpg",
+				"path": "/images/items/01_2528/155_3453.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3453_s_0f3gfp4mepcwxh95vw6d2wk7qr82.jpg",
+				"path": "/images/items/01_2528/156_3453.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2528/"
 }

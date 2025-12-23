@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ペーネロペー",
 		"en": "HGUC 1/144 Penelope"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "hathaway",
+			"url": "https://bandai-hobby.net/series/hathaway/",
+			"ja": "機動戦士ガンダム 閃光のハサウェイ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5594",
+			"url": "https://bandai-hobby.net/item/01_5594/",
+			"ja": "HG 1/144 メッサーF01型 [クリアカラー]"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4269",
+			"url": "https://bandai-hobby.net/item/01_4269/",
+			"ja": "HG 1/144 ペーネロペー[クリアカラー]"
+		},
+		{
+			"id": "item-1000157737",
+			"url": "https://p-bandai.jp/item/item-1000157737/",
+			"ja": "ＨＧ 1/144 メッサーＦ０２型"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 7700,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム 閃光のハサウェイ』より、レーン・エイム中尉が搭乗するMSペーネロペーが遂にHG化！",
@@ -34,61 +82,77 @@
 			"• Under the supervision of Hajime Katoki, Penelope's complex mechanism has been translated into the latest HG format and its characteristics have been reproduced.",
 			"• In addition to reproducing the molding colors of each part of the armor, clear parts are used for the canopy.",
 			"• The volume from the back is overwhelming, such as the shape of the shoulder armor, tail stabilizer, and leg vernier.",
-			"• Shoulder armor can be recreated in open/closed state by changing the insertion position.",
-			"• Each part is armed, and a beam saber can be attached to the armor.",
+			"• The shoulder armor can be opened and closed by changing the insertion position.",
+			"• Beam sabers can be attached to each part of the weapon and armor.",
 			"• Display pedestal included. It is possible to display the flight unit and Odysseus Gundam separately."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"ビーム・サーベル×2",
-			"シールド×2",
-			"ディスプレイ台座×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 20
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3372_s_b5v8q5fdj96xz2wcoc4de12lsfm4.jpg",
+				"path": "/images/items/01_2443/153_3372.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3372_s_61wkfsv4whkgrpor4p0n8necs15k.jpg",
+				"path": "/images/items/01_2443/155_3372.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3372_s_c2o0wbnq3sup8ttb7seapxvamzym.jpg",
+				"path": "/images/items/01_2443/156_3372.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3372_s_7o00b69big1uoeno9o9teipwzdav.jpg",
+				"path": "/images/items/01_2443/157_3372.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x1",
-			"Beam saber x2",
-			"Seal × 2",
-			"Display pedestal x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×20",
-			"取扱説明書×1",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Molded product x 20",
-			"Handling manual×1",
-			"Foil Seal×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2443/153_3372.jpg",
-		"/images/items/01_2443/155_3372.jpg",
-		"/images/items/01_2443/156_3372.jpg",
-		"/images/items/01_2443/157_3372.jpg",
-		"/images/items/01_2443/01_2443_inst_0.jpg",
-		"/images/items/01_2443/01_2443_inst_1.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2443/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"hathaway"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5594",
-		"01_4971",
-		"01_4269",
-		"item-1000157737"
-	],
-	"manualId": "0491"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2443/"
 }

@@ -5,6 +5,50 @@
 		"ja": "HGBF 1/144 ミセス.ローエングリン子",
 		"en": "HGBF 1/144 Mrs. Lohengrinko"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		},
+		{
+			"id": "01_1262",
+			"url": "https://bandai-hobby.net/item/01_1262/",
+			"ja": "HGBC 1/144 ギャラクシーブースター"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 「ガンプラコスヒロインズ」よりイオリ・セイの母親、リン子をモチーフにしたガンプラ「ミセス.ローエングリン子」が登場！",
@@ -27,64 +70,94 @@
 			"• 足は差し替えでローエングリン砲が展開可能！"
 		],
 		"en": [
-			"• From \"Gunpla Costume Heroines \" comes Gunpla \" Mrs. Lohengrinko\" based on Sei Iori's mother, Rinko!",
+			"• From \"Gunpla Costume Heroines\" comes Gunpla \"Mrs. Lohengrinko\" based on Sei Iori's mother, Rinko!",
 			"• Reproduce proportions at a high level while maintaining a wide range of motion!",
-			"• The skirt is made of soft material and can be posed in a variety of ways, as well as being packed with gimmicks such as forming an Archangel silhouette when sitting!",
-			"• Lohengrin cannon can be deployed by replacing the legs!"
+			"• The skirt is made of soft material, allowing for various poses, and is also full of gimmicks, such as forming an Archangel silhouette when sitting!",
+			"• The Lohengrin cannon can be deployed by replacing the legs!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ローエングリン×2",
-			"ゴットフリートMk.71×2",
-			"ビーム・ライフル×2",
-			"ディスプレイスタンド×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ローエングリン"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ゴットフリートMk.71"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビーム・ライフル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ディスプレイスタンド"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 10
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2219_s_2y4o5aumuoopvvx0xqn5gl4tgx7x.jpg",
+				"path": "/images/items/01_1288/153_2219.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2219_s_rs9bd17ia4m4fhqgiec5ub2zdnnz.jpg",
+				"path": "/images/items/01_1288/155_2219.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2219_s_3o2zbopqxi5fk1t54p78mzgnbe2o.jpg",
+				"path": "/images/items/01_1288/156_2219.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2219_s_ywnk9m3jq0ekc4c7wfe0fvj253t5.jpg",
+				"path": "/images/items/01_1288/157_2219.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2219_s_py37y6ohtoczxbmlag0tx8afisbd.jpg",
+				"path": "/images/items/01_1288/158_2219.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2219_s_ulfo53pz8l9754tgdhnv99d9h1e0.jpg",
+				"path": "/images/items/01_1288/159_2219.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2219_s_8nuo8jt67kkbjdhibv2tlbphwxxw.jpg",
+				"path": "/images/items/01_1288/189_2219.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2219_s_w7249ewzwfpmwplzd8m2l2wzgddi.jpg",
+				"path": "/images/items/01_1288/190_2219.jpg"
+			}
 		],
-		"en": [
-			"Lohengrin x2",
-			"Gottfried Mk.71×2",
-			"Beam rifle x2",
-			"Display stand x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×10",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 10",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1288/153_2219.jpg",
-		"/images/items/01_1288/155_2219.jpg",
-		"/images/items/01_1288/156_2219.jpg",
-		"/images/items/01_1288/157_2219.jpg",
-		"/images/items/01_1288/158_2219.jpg",
-		"/images/items/01_1288/159_2219.jpg",
-		"/images/items/01_1288/189_2219.jpg",
-		"/images/items/01_1288/190_2219.jpg",
-		"/images/items/01_1288/01_1288_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1288/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1261",
-		"01_1262"
-	],
-	"manualId": "1070"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1288/"
 }

@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ゼータプラステストカラー",
 		"en": "MG 1/100 Zeta Plus Test Color"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "sentinel",
+			"url": "https://bandai-hobby.net/series/sentinel/",
+			"ja": "ガンダム・センチネル"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5593",
+			"url": "https://bandai-hobby.net/item/01_5593/",
+			"ja": "MG 1/100 ガンダムMk-V [クリアカラー]"
+		},
+		{
+			"id": "01_3408",
+			"url": "https://bandai-hobby.net/item/01_3408/",
+			"ja": "ＭＧ 1/100 ガンダムＭｋ-Ｖ"
+		},
+		{
+			"id": "01_2176",
+			"url": "https://bandai-hobby.net/item/01_2176/",
+			"ja": "MG 1/100 Ex-Sガンダム/Sガンダム"
+		},
+		{
+			"id": "01_1291",
+			"url": "https://bandai-hobby.net/item/01_1291/",
+			"ja": "MG 1/100 PLAN303E ディープストライカー"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,38 +61,36 @@
 		"month": 10
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「ガンダムセンチネル」に登場するMS「ゼータプラス」がMGシリーズで登場。",
 			"機体カラーはデモンストレーション用に塗装されたテスト機カラーのオレンジと白のツートンカラーで再現。最大の特徴である「ウェイブライダー」への変形も完全再現。各種武器も付属し、充実の内容です。"
 		],
 		"en": [
-			"The MS \"Zeta Plus \" that appears in \" Gundam Sentinel\" is now available in the MG series.",
+			"The MS \"Zeta Plus\" that appears in \"Gundam Sentinel\" is now available in the MG series.",
 			"The aircraft color is reproduced in the two-tone orange and white color of the test aircraft painted for demonstration purposes. The biggest feature, the transformation into \"Wave Rider\", is also completely reproduced. Various weapons are also included, and the contents are fulfilling."
 		]
 	},
-	"images": [
-		"/images/items/01_1352/153_227.jpg",
-		"/images/items/01_1352/155_227.jpg",
-		"/images/items/01_1352/156_227.jpg",
-		"/images/items/01_1352/157_227.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1352/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"sentinel"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5593",
-		"01_3408",
-		"01_2176",
-		"01_1291"
-	],
-	"manualId": "0511"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_227_s_kv8bup7v6nmu6x8k015r0j7nl4j4.jpg",
+				"path": "/images/items/01_1352/153_227.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_227_s_n5wrjb5qt00h8772ypjgs63aq3k3.jpg",
+				"path": "/images/items/01_1352/155_227.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_227_s_tjbbu0poxxrkb48z2xa530m9hzwl.jpg",
+				"path": "/images/items/01_1352/156_227.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_227_s_rypcxr585g56v31xorhpxnjzu99y.jpg",
+				"path": "/images/items/01_1352/157_227.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1352/"
 }

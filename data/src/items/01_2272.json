@@ -5,6 +5,16 @@
 		"ja": "THE GUNDAM BASE クリアファイル ユニコーンガンダム・シナンジュ",
 		"en": "THE GUNDAM BASE Clear File Unicorn Gundam Sinanju"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "item_all",
+			"url": "https://bandai-hobby.net/item_all",
+			"ja": "商品一覧"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -28,19 +38,18 @@
 			"THE GUNDAM BASE also has many other original clear files on sale."
 		]
 	},
-	"images": [
-		"/images/items/01_2272/153_3214.jpg",
-		"/images/items/01_2272/155_3214.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2272/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
-	"relatedItemIds": [],
-	"tag": {
-		"ja": "ガンダムベースグッズ",
-		"en": "Gundam Base Goods"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3214_o_1d5727jcgo5e183qfc0cn71puj23.jpg",
+				"path": "/images/items/01_2272/153_3214.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3214_o_1d5727tdorcgp9t141hce31tro2d.jpg",
+				"path": "/images/items/01_2272/155_3214.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2272/"
 }

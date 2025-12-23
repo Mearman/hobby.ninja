@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 指揮官機用オプションアーマー[シエルノヴァ用/ブルーグレー]",
 		"en": "30MM 1/144 Optional armor for commander aircraft [for Cielnova/Blue Gray]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,13 +61,12 @@
 		"day": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMのオプションアーマーシリーズに新規金型のシエルノヴァ用アーマーが登場！",
-			"■カラーはブルーグレー。",
-			"■胸アーマーはポルタノヴァへもカスタマイズ可能。",
-			"■脚部延長パーツが付属。シエルノヴァのスタイルチェンジが可能！"
+			"• カラーはブルーグレー。",
+			"• 胸アーマーはポルタノヴァへもカスタマイズ可能。",
+			"• 脚部延長パーツが付属。シエルノヴァのスタイルチェンジが可能！"
 		],
 		"en": [
 			"A new molded armor for Ciel Nova is now available in the 30MM optional armor series!",
@@ -33,34 +75,41 @@
 			"• Includes leg extension parts. Cielnova's style can be changed!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"アーマー×1式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "アーマー"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4253_s_11wm2929g7uljmz291unepp7bdfo.jpg",
+				"path": "/images/items/01_3298/153_4253.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4253_s_jgk1q6lmeuc9dn410h59qt5ur6ak.jpg",
+				"path": "/images/items/01_3298/155_4253.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4253_s_7v3gueojecavhqmz0s0u2semhncb.jpg",
+				"path": "/images/items/01_3298/156_4253.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4253_s_srvp8ursrvp2uhze44obsqzkzeo7.jpg",
+				"path": "/images/items/01_3298/157_4253.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4253_s_w5w8jxbhy1oiyoq5kl7ditkgxmj6.jpg",
+				"path": "/images/items/01_3298/158_4253.jpg"
+			}
 		],
-		"en": [
-			"Armor x 1 set"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3298/153_4253.jpg",
-		"/images/items/01_3298/155_4253.jpg",
-		"/images/items/01_3298/156_4253.jpg",
-		"/images/items/01_3298/157_4253.jpg",
-		"/images/items/01_3298/158_4253.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3298/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3710"
+	"sourceUrl": "https://bandai-hobby.net/item/01_3298/"
 }

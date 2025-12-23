@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ジムIII （ユニコーンデザートカラーVer.）",
 		"en": "HGUC 1/144 Jim III (Unicorn Desert Color Ver.)"
 	},
+	"brands": [
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216106",
+			"url": "https://p-bandai.jp/item/item-1000216106/",
+			"ja": "RG 1/144 ユニコーンガンダム２号機 バンシィ・ノルン (最終決戦仕様) [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000183366",
+			"url": "https://p-bandai.jp/item/item-1000183366/",
+			"ja": "ＭＧ 1/100 スタークジェガン"
+		},
+		{
+			"id": "item-1000164780",
+			"url": "https://p-bandai.jp/item/item-1000164780/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム ペルフェクティビリティ用 ディバイン拡張セット"
+		},
+		{
+			"id": "item-1000164779",
+			"url": "https://p-bandai.jp/item/item-1000164779/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム ペルフェクティビリティ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -17,7 +66,6 @@
 		"month": 5
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダムユニコーン』劇場公開を記念して、",
@@ -68,34 +116,30 @@
 			"- Product specifications are scheduled as of 20125. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2232/153_3177.jpg",
-		"/images/items/01_2232/155_3177.jpg",
-		"/images/items/01_2232/156_3177.jpg",
-		"/images/items/01_2232/157_3177.jpg",
-		"/images/items/01_2232/158_3177.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2232/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216106",
-		"item-1000183366",
-		"item-1000164780",
-		"item-1000164779"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/158_3177_s_uf3ffinhl8i0arcl6v95puiiu2le.jpg",
+				"path": "/images/items/01_2232/158_3177.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_3177_s_4ru9392d7wlt71sijdx8vn1dgxdp.jpg",
+				"path": "/images/items/01_2232/153_3177.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3177_s_xna70j1hgns3qhmvm77mtm3n5zep.jpg",
+				"path": "/images/items/01_2232/155_3177.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3177_s_4opfiaeiyhhxsfg85s0narxzwfhk.jpg",
+				"path": "/images/items/01_2232/156_3177.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3177_s_6faqgx8y2nxiod5jpqvrry7rin1x.jpg",
+				"path": "/images/items/01_2232/157_3177.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "2119"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2232/"
 }

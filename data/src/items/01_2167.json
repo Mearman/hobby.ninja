@@ -5,6 +5,55 @@
 		"ja": "HGCE 1/144 デスティニーガンダム",
 		"en": "HGCE 1/144 Destiny Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hgce",
+			"url": "https://bandai-hobby.net/brand/hgce/",
+			"ja": "HG COSMIC ERA"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000203308",
+			"url": "https://p-bandai.jp/item/item-1000203308/",
+			"ja": "ＨＧ 1/144 ダークダガーＬ"
+		},
+		{
+			"id": "01_5097",
+			"url": "https://bandai-hobby.net/item/01_5097/",
+			"ja": "HG 1/144 デストロイガンダム"
+		},
+		{
+			"id": "01_3739",
+			"url": "https://bandai-hobby.net/item/01_3739/",
+			"ja": "HG 1/144 デスティニーガンダム(ハイネ専用機)[クリアカラー]"
+		},
+		{
+			"id": "item-1000157417",
+			"url": "https://p-bandai.jp/item/item-1000157417/",
+			"ja": "ＨＧ 1/144 ウィンダム（ネオ・ロアノーク専用機）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -18,79 +67,132 @@
 		"day": 31
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED DESTINY』より主役機デスティニーガンダムをHG最新フォーマットにて立体化！• 完全新規造形。胴体に内蔵された二重関節によりデスティニーガンダムに特徴的な前屈するアクションを再現できる。• サイドアーマーは後方にスライドすることで脚部との干渉を避け、可動範囲を制限しない構造となっている。• デスティニーガンダムの象徴でもある「光の翼」や掌中ビーム砲「パルマフィオキーナ」 のビームエフェクトはクリアパーツで付属。• ハンドパーツは武器を保持できる握り手や「パルマフィオキーナ」用の開き手が付属。• アロンダイト、高エネルギー長射程ビーム砲、ビームブーメラン他、豊富な武装が付属。"
+			"『機動戦士ガンダムSEED DESTINY』より主役機デスティニーガンダムをHG最新フォーマットにて立体化！■完全新規造形。胴体に内蔵された二重関節によりデスティニーガンダムに特徴的な前屈するアクションを再現できる。■サイドアーマーは後方にスライドすることで脚部との干渉を避け、可動範囲を制限しない構造となっている。■デスティニーガンダムの象徴でもある「光の翼」や掌中ビーム砲「パルマフィオキーナ」 のビームエフェクトはクリアパーツで付属。■ハンドパーツは武器を保持できる握り手や「パルマフィオキーナ」用の開き手が付属。■アロンダイト、高エネルギー長射程ビーム砲、ビームブーメラン他、豊富な武装が付属。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam SEED DESTINY \", the main character Destiny Gundam is made into three-dimensional in the latest HG format! • Completely new model. The double joints built into the torso allow you to reproduce the forward bending action characteristic of Destiny Gundam. • The side armor avoids interference with the legs by sliding backwards, and has a structure that does not limit the range of movement. • The beam effects of Destiny Gundam's symbolic \" wings of light \" and palm beam cannon \" Palma Fiocina \" are included as clear parts. • Hand parts include a grip that can hold weapons and an open hand for \" Palma Fiochina\". • A wealth of armament is included, including arondites, high-energy long-range beam cannons, beam boomerangs, and more."
+			"From \"Mobile Suit Gundam SEED DESTINY\", the main character Destiny Gundam is made into three-dimensional in the latest HG format! ■Completely new model. The double joints built into the torso allow you to reproduce the forward bending action characteristic of Destiny Gundam. ■The side armor avoids interference with the legs by sliding backwards, and has a structure that does not limit the range of movement. ■The beam effects of Destiny Gundam's symbolic \"wings of light\" and palm beam cannon \"Palma Fiocina\" are included as clear parts. ■Hand parts include a grip that can hold weapons and an open hand for \"Palma Fiochina\". ■A wealth of armament is included, including arondites, high-energy long-range beam cannons, beam boomerangs, and more."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"アロンダイト ビームソード×1",
-			"高エネルギー長射程ビーム砲×1",
-			"シールド×1",
-			"ビームシールド×1",
-			"高エネルギービームライフル×1",
-			"ビームブーメラン×2",
-			"光の翼×1式",
-			"パルマフィオキーナエフェクトパーツ×1",
-			"パルマフィオキーナ用手×左右各1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "アロンダイト ビームソード"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "高エネルギー長射程ビーム砲"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームシールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "高エネルギービームライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームブーメラン"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "光の翼"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "パルマフィオキーナエフェクトパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "パルマフィオキーナ用手×左右各1"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成型品"
+			},
+			"count": 11
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3116_s_6iqpilj61jsa1zoz3sdca7sq2y6y.jpg",
+				"path": "/images/items/01_2167/153_3116.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3116_s_zsclw6cqus0jnuv09pxqcb96l09y.jpg",
+				"path": "/images/items/01_2167/155_3116.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3116_s_i99yy5vkem5ub7y5h8al9egmfx4z.jpg",
+				"path": "/images/items/01_2167/156_3116.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3116_s_ko6cdpv5bbyhy32tgi1j14713l3c.jpg",
+				"path": "/images/items/01_2167/157_3116.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3116_s_c99otop2983ug80hs0qsy4plbgje.jpg",
+				"path": "/images/items/01_2167/158_3116.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3116_s_zq9997ap40rtajgb6ks4kc8aqj5h.jpg",
+				"path": "/images/items/01_2167/159_3116.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3116_s_atykykz9izmxetik93zi3yh4x05q.jpg",
+				"path": "/images/items/01_2167/189_3116.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3116_s_i8du8itpe91d0hy856ec66n3e442.jpg",
+				"path": "/images/items/01_2167/190_3116.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3116_s_31s458eoraiy03ra5s32hqktq83v.jpg",
+				"path": "/images/items/01_2167/191_3116.jpg"
+			}
 		],
-		"en": [
-			"Arondite beam sword x1",
-			"High energy long range beam cannon x 1",
-			"Seal × 1",
-			"Beam Seal × 1",
-			"High energy beam rifle x1",
-			"Beam boomerang x2",
-			"Wings of light x 1 set",
-			"Palma fiocina effect parts x 1",
-			"Palma Fiochina hand x 1 each for left and right"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成型品×11",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded products x 11",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2167/153_3116.jpg",
-		"/images/items/01_2167/155_3116.jpg",
-		"/images/items/01_2167/156_3116.jpg",
-		"/images/items/01_2167/157_3116.jpg",
-		"/images/items/01_2167/158_3116.jpg",
-		"/images/items/01_2167/159_3116.jpg",
-		"/images/items/01_2167/189_3116.jpg",
-		"/images/items/01_2167/190_3116.jpg",
-		"/images/items/01_2167/191_3116.jpg",
-		"/images/items/01_2167/01_2167_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2167/",
-	"brandIds": [
-		"hg",
-		"hgce"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
-	"manualId": "0489"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2167/"
 }

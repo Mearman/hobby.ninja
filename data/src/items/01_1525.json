@@ -5,6 +5,44 @@
 		"ja": "1/100 シャイニングガンダム",
 		"en": "1/100 Shining Gundam"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "ggundam",
+			"url": "https://bandai-hobby.net/series/ggundam/",
+			"ja": "機動武闘伝Ｇガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5544",
+			"url": "https://bandai-hobby.net/item/01_5544/",
+			"ja": "RG 1/144 シャイニングガンダム"
+		},
+		{
+			"id": "01_5995",
+			"url": "https://bandai-hobby.net/item/01_5995/",
+			"ja": "RG 1/144 ガンダムベース限定 ゴッドガンダム ハイパーモード"
+		},
+		{
+			"id": "item-1000213247",
+			"url": "https://p-bandai.jp/item/item-1000213247/",
+			"ja": "ＨＧ 1/144 ドラゴンガンダム"
+		},
+		{
+			"id": "item-1000194970",
+			"url": "https://p-bandai.jp/item/item-1000194970/",
+			"ja": "ＨＧ 1/144 ガンダムマックスター"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -17,33 +55,28 @@
 		"month": 4
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"『機動武闘伝G ガンダム』より、1/100スケールで、シャイニングガンダムが登場。",
+			"『機動武闘伝Gガンダム』より、1/100スケールで、シャイニングガンダムが登場。",
 			"ネオ・ジャパンの最新鋭モビルファイター、シャイニングガンダムを1/100スケールでキット化しました。スーパーモードへの変形は、フェイスカバー差替えにより再現可能です。頭部放熱部、肩、腕、脚部各カバーが可動し、展開・スライドを再現できます。コアランダーの脱着が再現可能です。ビームソードは長短２本を装備、左サイドアーマーへのマウントが可能です。"
 		],
 		"en": [
-			"From \"Mobile Fighter G Gundam\", Shining Gundam appears in 1/100 scale.",
+			"From \"Mobile Fighter GGundam\", Shining Gundam appears in 1/100 scale.",
 			"Neo Japan's latest mobile fighter, Shining Gundam, is made into a 1/100 scale kit. Transformation to super mode can be reproduced by replacing the face cover. The head heat dissipation part, shoulders, arms, and leg covers are movable, allowing you to unfold and slide. Corelander's attachment and detachment can be reproduced. Equipped with two beam swords, long and short, it can be mounted on the left side armor."
 		]
 	},
-	"images": [
-		"/images/items/01_1525/153_2442.jpg",
-		"/images/items/01_1525/155_2442.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1525/",
-	"brandIds": [],
-	"seriesIds": [
-		"ggundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5544",
-		"01_5995",
-		"item-1000213247",
-		"item-1000194970"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2442_s_k61mynch6grp4i2b3g6nor39qdhl.jpg",
+				"path": "/images/items/01_1525/153_2442.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2442_s_j5hew8ax5xw5evqs6eqd6ue003fi.jpg",
+				"path": "/images/items/01_1525/155_2442.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1525/"
 }

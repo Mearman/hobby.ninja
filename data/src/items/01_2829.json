@@ -5,6 +5,50 @@
 		"ja": "PG 1/60 ガンダムベース限定 RX-78-2 ガンダム [チタニウムフィニッシュ]",
 		"en": "PG 1/60 Gundam Base Limited RX-78-2 Gundam [Titanium Finish]"
 	},
+	"brands": [
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3373",
+			"url": "https://bandai-hobby.net/item/01_3373/",
+			"ja": "ＰＧ ＵＮＬＥＡＳＨＥＤ 1/60 RX-78-2 ガンダム クリアカラーボディ"
+		},
+		{
+			"id": "01_3328",
+			"url": "https://bandai-hobby.net/item/01_3328/",
+			"ja": "PG UNLEASHED 1/60 RX-78-2 ガンダム"
+		},
+		{
+			"id": "01_1902",
+			"url": "https://bandai-hobby.net/item/01_1902/",
+			"ja": "PG 1/60 ガンダムベース限定 RX-78-3 G-3ガンダム [エクストラフィニッシュ]"
+		},
+		{
+			"id": "01_4875",
+			"url": "https://bandai-hobby.net/item/01_4875/",
+			"ja": "PG 1/60 MS-06F「ザクII」+ウエポンズ アニメーションカラーバージョン"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 27500,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 30
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
@@ -33,29 +76,22 @@
 			"●Metallic molding color is also used for the internal frame! More mechanical impression!"
 		]
 	},
-	"images": [
-		"/images/items/01_2829/153_3813.jpg",
-		"/images/items/01_2829/155_3813.jpg",
-		"/images/items/01_2829/156_3813.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2829/",
-	"brandIds": [
-		"pg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3373",
-		"01_3328",
-		"01_1902",
-		"01_4875"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3813_s_n0mzlk39x2e0pxtax7e11yi6uuhg.jpg",
+				"path": "/images/items/01_2829/153_3813.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3813_s_5bmfj549217i87ulyicpzvf2jzcs.jpg",
+				"path": "/images/items/01_2829/155_3813.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3813_s_c7ce8dq8rczac2pcbcps2shlskcp.jpg",
+				"path": "/images/items/01_2829/156_3813.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2829/"
 }

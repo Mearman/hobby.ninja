@@ -5,6 +5,44 @@
 		"ja": "1/144 ゲルググキャノン",
 		"en": "1/144 Gelgoog Cannon"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6920",
+			"url": "https://bandai-hobby.net/item/01_6920/",
+			"ja": "ハロプラ ガンダムベース限定 ハロ [スペシャルコーティング] ゴールド&シルバー"
+		},
+		{
+			"id": "01_6854",
+			"url": "https://bandai-hobby.net/item/01_6854/",
+			"ja": "RG 1/144 G-3ガンダム Ver.2.0"
+		},
+		{
+			"id": "01_6688",
+			"url": "https://bandai-hobby.net/item/01_6688/",
+			"ja": "RG 1/144 MS-06S ザクII [初音ミクVer.]"
+		},
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、1/144スケールで、MSVシリーズグフゲルググキャノンが登場。",
@@ -28,22 +65,18 @@
 			"The Zeon military mobile suit Gelgoog's support heavy equipment is made into a kit. The shoulder armor and arms can move independently. The shoulder joint has a bellows-like block that increases the left and right movement of the arm. Buckler gild and rocket launcher are removable. The backpack's beam cannon and vernier nozzle are movable. The weapon beam naginata can be selected from two types: one-handed and two-handed. Comes with a special decal."
 		]
 	},
-	"images": [
-		"/images/items/01_3162/153_4123.jpg",
-		"/images/items/01_3162/155_4123.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3162/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6920",
-		"01_6854",
-		"01_6688",
-		"01_5992"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4123_s_ba3oofh93nm9j8nzrnu8dp8xde4b.jpg",
+				"path": "/images/items/01_3162/153_4123.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4123_s_pr0j3itbo18vj5w1rk0bascs9d42.jpg",
+				"path": "/images/items/01_3162/155_4123.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3162/"
 }

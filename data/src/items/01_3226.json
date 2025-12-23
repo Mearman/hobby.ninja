@@ -5,6 +5,44 @@
 		"ja": "1/144 ヤクト・ドーガ",
 		"en": "1/144 Jagd Doga"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5478",
+			"url": "https://bandai-hobby.net/item/01_5478/",
+			"ja": "νガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5532",
+			"url": "https://bandai-hobby.net/item/01_5532/",
+			"ja": "RG 1/144 νガンダム(ダブル・フィン・ファンネル装備型)"
+		},
+		{
+			"id": "01_5531",
+			"url": "https://bandai-hobby.net/item/01_5531/",
+			"ja": "RG 1/144 ガンダムベース限定 サザビー [メカニカルコアメッキ]"
+		},
+		{
+			"id": "01_5423",
+			"url": "https://bandai-hobby.net/item/01_5423/",
+			"ja": "RG 1/144 RX-93ff νガンダム [クリアカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 5
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム逆襲のシャア」に登場したネオ・ジオンのニュータイプ専用モビルスーツのうち、ギュネイ・ガスの専用機とされたモデルをキット化しました。ビーム・アサルトライフル、ビーム・サーベル、シールドを装備しています。指が可動します。前腕、腿、胴の固定にビス止め機構を使用しています。特徴的な頭部フェイスガードは別パーツによる成形です。腰部アーマーはすべて独立して可動します。両肩のシールドは可動式で、６基のファンネルを着脱することが可能です。"
@@ -27,21 +64,14 @@
 			"Among the neo-Zeon new type mobile suits that appeared in \"Mobile Suit Gundam: Char's Counterattack\", the model that was dedicated to Gyunei Gas is made into a kit. Equipped with a beam assault rifle, beam saber, and Seal. The fingers are movable. A screw mechanism is used to secure the forearms, thighs, and torso. The characteristic head face guard is molded as a separate part. All waist armor can be moved independently. The seals on both shoulders are movable, and 6 funnels can be attached and detached."
 		]
 	},
-	"images": [
-		"/images/items/01_3226/153_4181.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3226/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5478",
-		"01_5532",
-		"01_5531",
-		"01_5423"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4181_s_pr38l8io6i5rszvls9mksk7fopew.jpg",
+				"path": "/images/items/01_3226/153_4181.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3226/"
 }

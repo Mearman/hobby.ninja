@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ジム・スナイパーII[クリアカラー]",
 		"en": "MG 1/100 Jim Sniper II [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "g-0080",
+			"url": "https://bandai-hobby.net/series/g-0080/",
+			"ja": "機動戦士ガンダム0080 ポケットの中の戦争"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2461",
+			"url": "https://bandai-hobby.net/item/01_2461/",
+			"ja": "MG 1/100 ガンダムNT-1 ver.2.0[クリアカラー]"
+		},
+		{
+			"id": "01_2254",
+			"url": "https://bandai-hobby.net/item/01_2254/",
+			"ja": "MG 1/100 ガンダムNT-1 Ver.2.0"
+		},
+		{
+			"id": "item-1000134463",
+			"url": "https://p-bandai.jp/item/item-1000134463",
+			"ja": "MG 1/100 ジム(寒冷地仕様)"
+		},
+		{
+			"id": "01_1266",
+			"url": "https://bandai-hobby.net/item/01_1266/",
+			"ja": "ガンダムデカールNo.118 MG 1/100 ジム・スナイパーII/ジム・コマンド用"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4840,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 5
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
@@ -28,28 +71,18 @@
 			"MG Jim Sniper II is now available in event-limited clear color!"
 		]
 	},
-	"images": [
-		"/images/items/01_1955/153_2888.jpg",
-		"/images/items/01_1955/155_2888.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1955/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"g-0080"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2461",
-		"01_2254",
-		"item-1000134463",
-		"01_1266"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2888_s_681d9jpexwzk2s6s2m1cyaeuwsiq.jpg",
+				"path": "/images/items/01_1955/153_2888.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2888_s_ymi4so3a0bzwdh6gwbpyiip4uo9u.jpg",
+				"path": "/images/items/01_1955/155_2888.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1955/"
 }

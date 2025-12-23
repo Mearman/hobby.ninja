@@ -2,9 +2,31 @@
 	"id": "01_2887",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム Gジェネレーション15 S ガンダム & コアブースター",
-		"en": "SD Gundam G Generation 15 S Gundam & Core Booster"
+		"ja": "SDガンダムGジェネレーション15 Sガンダム & コアブースター",
+		"en": "SDGundamG Generation 15 SGundam & Core Booster"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "sentinel",
+			"url": "https://bandai-hobby.net/series/sentinel/",
+			"ja": "ガンダム・センチネル"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -22,25 +44,33 @@
 			"「ＳＤガンダムＧジェネレーション１５ Ｓガンダム ＆ コアブースター」が登場！"
 		],
 		"en": [
-			"\"SD Gundam G Generation 15 S Gundam & Core Booster\" is now available!"
+			"\"SDGundamG Generation 15 SGundam & Core Booster\" is now available!"
 		]
 	},
-	"images": [
-		"/images/items/01_2887/153_3867.jpg",
-		"/images/items/01_2887/155_3867.jpg",
-		"/images/items/01_2887/156_3867.jpg",
-		"/images/items/01_2887/157_3867.jpg",
-		"/images/items/01_2887/158_3867.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2887/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"sentinel"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": []
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3867_s_asgzdya827jqmvifmz1hoex3ccui.jpg",
+				"path": "/images/items/01_2887/153_3867.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3867_s_wsyzlwphzuda92442buihfbr5pzx.jpg",
+				"path": "/images/items/01_2887/155_3867.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3867_s_9306s6cwev30k6ycmcn9wp7fbp3d.jpg",
+				"path": "/images/items/01_2887/156_3867.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3867_s_joj1pp0wbyypteo075fs3dt0dglg.jpg",
+				"path": "/images/items/01_2887/157_3867.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3867_s_d4ftupfa0cx0j6k2za14aj6oi687.jpg",
+				"path": "/images/items/01_2887/158_3867.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2887/"
 }

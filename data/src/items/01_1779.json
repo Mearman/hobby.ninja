@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 ガンダムエピオン EW",
-		"en": "MG 1/100 Gundam Epyon EW"
+		"en": "MG 1/100 GUNDAM EPYON EW VER."
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]",
+			"en": "MG [MASTER GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ",
+			"en": "MOBILE SUIT GUNDAM WING series"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000194972",
+			"url": "https://p-bandai.jp/item/item-1000194972/",
+			"ja": "ＭＧ 1/100 ガンダムエピオン EW (シュトゥルム・ウント・ドラング装備)"
+		},
+		{
+			"id": "01_3410",
+			"url": "https://bandai-hobby.net/item/01_3410/",
+			"ja": "MG 1/100 ガンダムデスサイズヘル EW[スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000171722",
+			"url": "https://p-bandai.jp/item/item-1000171722/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムエピオン EW[スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000142325",
+			"url": "https://p-bandai.jp/item/item-1000142325/",
+			"ja": "ＭＧ 1/100 ガンダムデスサイズ EW（ルーセット装備）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5720,
 		"currency": "JPY",
@@ -18,36 +64,41 @@
 		"day": 25
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"• 『新機動戦記ガンダム W Endless Waltz』より、ガンダムエピオンがエンドレスワルツ版として新デザインで登場。 • MS形態から飛行形態へ、完全変形。 • パーツの結合部を引き出す「引き出し機構」でヒートロッドのしなりを再現。 • 「双竜」に表情を与える多様なギミックを搭載。頸部、口、爪が可動。 • カトキハジメ氏によるマーキングシールが付属。 成形品×16、ホイルシール×1、テトロンシール×1、ガンダムデカール×1、軟質ケーブル×1、組立説明書"
+			"• 『新機動戦記ガンダムW Endless Waltz』より、ガンダムエピオンがエンドレスワルツ版として新デザインで登場。 ■MS形態から飛行形態へ、完全変形。 ■パーツの結合部を引き出す「引き出し機構」でヒートロッドのしなりを再現。 ■「双竜」に表情を与える多様なギミックを搭載。頸部、口、爪が可動。 ■カトキハジメ氏によるマーキングシールが付属。 成形品×16、ホイルシール×1、テトロンシール×1、ガンダムデカール×1、軟質ケーブル×1、組立説明書"
 		],
 		"en": [
-			"• From \"Mobile Suit Gundam W Endless Waltz \", Gundam Epyon appears in a new design as the Endless Waltz version. • Complete transformation from MS form to flight form. • The bending of the heat rod is reproduced with the \" drawer mechanism \" that pulls out the joints of the parts. • Equipped with various gimmicks that give expression to \" Ssangyong\". The neck, mouth, and claws are movable. • MarkingSeal by Hajime Katoki is included. Molded product x 16, foil seal x 1, Tetron seal x 1, Gundam decal x 1, soft cable x 1, assembly manual"
+			"• From \"MOBILE SUIT GUNDAM WING Endless Waltz\", GUNDAM Epion is now available as a new design as an Endless Waltz version.",
+			"• Complete transformation from MS form to flight form.",
+			"• The flex of the heat rod is reproduced by the \"pull-out mechanism\" that pulls out the joints of the parts.",
+			"• Equipped with various gimmicks that give \"SsangYong\" an expression. The neck, mouth and nails are movable.",
+			"• Marking sticker by Hajime Katoki is included. Molded ×16, Foil Seal ×1, Tetoron Seal ×1, GUNDAM DECAL ×1, Soft Cable×1, Assembly Instructions"
 		]
 	},
-	"images": [
-		"/images/items/01_1779/1000092410_1.jpg",
-		"/images/items/01_1779/1000092410_2.jpg",
-		"/images/items/01_1779/1000092410_3.jpg",
-		"/images/items/01_1779/1000092410_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092410_1.jpg",
+				"path": "/images/items/01_1779/1000092410_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092410_2.jpg",
+				"path": "/images/items/01_1779/1000092410_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092410_3.jpg",
+				"path": "/images/items/01_1779/1000092410_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092410_4.jpg",
+				"path": "/images/items/01_1779/1000092410_4.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1779/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000194972",
-		"01_3410",
-		"item-1000171722",
-		"item-1000142325"
-	],
-	"manualId": "0590"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1779/"
+	}
 }

@@ -5,6 +5,44 @@
 		"ja": "1/144 モビルスモー／シルバータイプ",
 		"en": "1/144 Mobile Sumo/Silver type"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "turn-a",
+			"url": "https://bandai-hobby.net/series/turn-a/",
+			"ja": "∀ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000135920",
+			"url": "https://p-bandai.jp/item/item-1000135920",
+			"ja": "ＭＧ 1/100 ∀ガンダム／ターンＸ［ナノスキンイメージ］"
+		},
+		{
+			"id": "item-1000099631",
+			"url": "https://p-bandai.jp/item/item-1000099631",
+			"ja": "ＭＧ 1/100 ターンエーガンダム（月光蝶Ver.）"
+		},
+		{
+			"id": "item-1000165581",
+			"url": "https://p-bandai.jp/item/item-1000165581",
+			"ja": "ＭＧ 1/100 ターンエーガンダム用拡張エフェクトユニット “月光蝶”"
+		},
+		{
+			"id": "01_120",
+			"url": "https://bandai-hobby.net/item/01_120/",
+			"ja": "MG 1/100 Concept-X 6-1-2 ターンX"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"TV「∀ガンダム」に登場したモビルスモーのシルバータイプのキット化です。ひざは二重関節成形です。軍配型ヒート・ファン、ハンドビーム・ガン、IFジェネレータがついています。"
@@ -26,26 +63,34 @@
 			"A kit version of the silver type Mobile Smo that appeared on TV \"∀Gundam\". The knees are double jointed. Comes with a military heat fan, hand beam gun, and IF generator."
 		]
 	},
-	"images": [
-		"/images/items/01_2415/153_3347.jpg",
-		"/images/items/01_2415/155_3347.jpg",
-		"/images/items/01_2415/156_3347.jpg",
-		"/images/items/01_2415/157_3347.jpg",
-		"/images/items/01_2415/158_3347.jpg",
-		"/images/items/01_2415/159_3347.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2415/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000135920",
-		"item-1000099631",
-		"item-1000165581",
-		"01_120"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3347_o_1dc1ra63dp1cfv9m3k6e4tp323.jpg",
+				"path": "/images/items/01_2415/153_3347.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3347_o_1dc1rag21vvo12ei1tdf6721ghk2d.jpg",
+				"path": "/images/items/01_2415/155_3347.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3347_o_1dc1ral8keqtime1psnq6fk8n2i.jpg",
+				"path": "/images/items/01_2415/156_3347.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3347_o_1dc1raq7h1jf5j2m17tv1gcvvhq2n.jpg",
+				"path": "/images/items/01_2415/157_3347.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3347_o_1dc1rav8f52kufp9a1ff916j82s.jpg",
+				"path": "/images/items/01_2415/158_3347.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3347_o_1dc1rb43rekge45mki1rgdj1s31.jpg",
+				"path": "/images/items/01_2415/159_3347.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2415/"
 }

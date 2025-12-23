@@ -5,6 +5,43 @@
 		"ja": "SD 三国創傑伝 甘寧クロスボーンガンダム",
 		"en": "SD Sangoku Soketsuden Ganning Crossbone Gundam"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "soketsuden",
+			"url": "https://bandai-hobby.net/series/soketsuden/",
+			"ja": "三国創傑伝"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2642",
+			"url": "https://bandai-hobby.net/item/01_2642/",
+			"ja": "SD 三国創傑伝 天覇曹操ウイングガンダム"
+		},
+		{
+			"id": "01_2614",
+			"url": "https://bandai-hobby.net/item/01_2614/",
+			"ja": "SD 三国創傑伝 典韋マスターガンダム"
+		},
+		{
+			"id": "01_2615",
+			"url": "https://bandai-hobby.net/item/01_2615/",
+			"ja": "SD 三国創傑伝 徐晃ガンダムデスサイズ"
+		},
+		{
+			"id": "01_2644",
+			"url": "https://bandai-hobby.net/item/01_2644/",
+			"ja": "SD 三国創傑伝 大喬ガンダムアルテミー/小喬GNアーチャー"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -20,57 +57,77 @@
 	"description": {
 		"ja": [
 			"【2021年春、日本展開開始！！】",
-			"■『三国志』をベースにしたSD ガンダムが装いも新たに登場！",
-			"■進化したプロポーションとパーツ分割へのこだわりにより、組み立てただけでSD史上最高峰の色分けを実現。",
-			"■一新された頭身バランスと各所の関節構造により、躍動感あふれるポージングを再現！",
-			"■背中のスラスターとフロントスカートを組み合わせることで、紅炎の射出ギミックを再現可能！",
-			"■クロスボーンガンダムのスラスターは、炎と鎖を組み合わせたデザイン。",
-			"■付属武器”斬派明星”の先端にも、スラスターを取り付け可能！"
+			"• 『三国志』をベースにしたSDガンダムが装いも新たに登場！",
+			"• 進化したプロポーションとパーツ分割へのこだわりにより、組み立てただけでSD史上最高峰の色分けを実現。",
+			"• 一新された頭身バランスと各所の関節構造により、躍動感あふれるポージングを再現！",
+			"• 背中のスラスターとフロントスカートを組み合わせることで、紅炎の射出ギミックを再現可能！",
+			"• クロスボーンガンダムのスラスターは、炎と鎖を組み合わせたデザイン。",
+			"• 付属武器”斬派明星”の先端にも、スラスターを取り付け可能！"
 		],
 		"en": [
 			"[Spring 2021, main rollout begins! ! ]",
-			"■SD Gundam based on \"Romance of the Three Kingdoms\" now has a new look!",
-			"■With advanced proportions and attention to parts division, we have achieved the highest color separation in SD history using just the assembly.",
-			"■The all-new head and body balance and joint structure in various parts allow for dynamic poses!",
-			"■By combining the thruster on the back and the front skirt, you can reproduce the crimson flame injection gimmick!",
-			"■Crossbone Gundam's thruster has a design that combines flame and chains.",
-			"■You can also attach a thruster to the tip of the included weapon “Zanpa Myojo”!"
+			"• SDGundam based on “Romance of the Three Kingdoms” has a new look!",
+			"• Thanks to the advanced proportions and attention to part division, we have achieved the highest color separation in SD history using just the assembly.",
+			"• Reproduce dynamic poses with a completely new head and body balance and joint structure in various places!",
+			"• By combining the thruster on the back and the front skirt, you can recreate the crimson flame injection gimmick!",
+			"• Crossbone Gundam's thruster has a design that combines flame and chains.",
+			"• A thruster can also be attached to the tip of the included weapon “Zanpa Myojo”!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"斬派明星（銃）×1",
-			"紅炎（短剣）×2",
-			"メモリ×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "斬派明星（銃）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "紅炎（短剣）"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "メモリ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3566_s_r6o4cvs061gctthfchjpg96gux75.jpg",
+				"path": "/images/items/01_2643/153_3566.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3566_s_hhkkj6lkatnbksukoxmgaa8irj7q.jpg",
+				"path": "/images/items/01_2643/155_3566.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3566_s_vpd0xncc7t8ujimg5x995sz8clhn.jpg",
+				"path": "/images/items/01_2643/156_3566.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3566_s_kzyni39up9ppvw967uxt3u8lo5dn.jpg",
+				"path": "/images/items/01_2643/157_3566.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3566_s_twkrhakzwu7h99hujdydvmevo8ng.jpg",
+				"path": "/images/items/01_2643/158_3566.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3566_s_22nrtaevq1tmu57xoht1wafwaynl.jpg",
+				"path": "/images/items/01_2643/159_3566.jpg"
+			}
 		],
-		"en": [
-			"Zanpa Myojo (gun) x1",
-			"Crimson flame (dagger) x2",
-			"Memory x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2643/153_3566.jpg",
-		"/images/items/01_2643/155_3566.jpg",
-		"/images/items/01_2643/156_3566.jpg",
-		"/images/items/01_2643/157_3566.jpg",
-		"/images/items/01_2643/158_3566.jpg",
-		"/images/items/01_2643/159_3566.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2643/",
-	"brandIds": [],
-	"seriesIds": [
-		"soketsuden"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2642",
-		"01_2614",
-		"01_2615",
-		"01_2644"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2643/"
 }

@@ -5,6 +5,50 @@
 		"ja": "HGBC 1/144 ギャラクシーブースター",
 		"en": "HGBC 1/144 Galaxy Booster"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 24
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 『ビルドファイターズ バトローグ』第5話に登場する「ビルドストライクギャラクシーコスモス」のバックパックがHGBCに登場！",
@@ -27,54 +70,60 @@
 			"• ジョイントパーツも付属するため、カスタマイズの幅が広がる！"
 		],
 		"en": [
-			"• The \"Build Strike Galaxy Cosmos \" backpack that appears in episode 5 of \" Build Fighters Battlogue\" is now available on HGBC!",
-			"• With the Striker Pack system, it can be equipped on various Gunpla!",
+			"• The \"Build Strike Galaxy Cosmos\" backpack that appears in episode 5 of \"Build Fighters Batlogue\" is now available on HGBC!",
+			"• The Striker Pack system allows you to equip various Gunpla!",
 			"• The biggest feature is that each of the 12 wings can move independently, creating a wide variety of silhouettes!",
 			"• Joint parts are also included, expanding the range of customization!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2194_s_dqjjb2av9igi5jcrxxkpgbwbf0ki.jpg",
+				"path": "/images/items/01_1262/153_2194.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2194_o_1eb2vqr4i1nl19ab1dmf1edv126923.jpg",
+				"path": "/images/items/01_1262/155_2194.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2194_o_1eb2vr03b1ap7fd6381t0v1fhh28.jpg",
+				"path": "/images/items/01_1262/156_2194.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2194_o_1eb2vsotff8t1jueo0f8ij1gb02d.jpg",
+				"path": "/images/items/01_1262/157_2194.jpg"
+			}
 		],
-		"en": [
-			"Dedicated display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 4",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1262/153_2194.jpg",
-		"/images/items/01_1262/155_2194.jpg",
-		"/images/items/01_1262/156_2194.jpg",
-		"/images/items/01_1262/157_2194.jpg",
-		"/images/items/01_1262/01_1262_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1262/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
-	"manualId": "0063"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1262/"
 }

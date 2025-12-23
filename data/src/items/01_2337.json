@@ -5,6 +5,22 @@
 		"ja": "トイ・ストーリー4 バズ・ライトイヤー",
 		"en": "toy story 4 buzz lightyear"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "toystory4",
+			"url": "https://bandai-hobby.net/series/toystory4/",
+			"ja": "トイ・ストーリー4"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_2338",
+			"url": "https://bandai-hobby.net/item/01_2338/",
+			"ja": "トイ・ストーリー4 ウッディ"
+		}
+	],
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -29,60 +45,110 @@
 			"• 足の裏に貼れるシールが２種類付属。"
 		],
 		"en": [
-			"From the movie \"Toy Story 4 \", \" Space Ranger\" Buzz Lightyear appears!",
-			"• The face is recreated with detailed divisions, including the eyes and mouth. There are 3 types of expression changing parts! The color coding is reproduced with molded colors, and you can change the perspective by touching it from the back side.",
+			"From the movie \"Toy Story 4\", \"Space Ranger\" Buzz Lightyear appears!",
+			"• The face is reproduced with detailed divisions, including the eyes and mouth. There are 3 types of expression changing parts! The color coding is reproduced with molded colors, and you can change the perspective by touching it from the back side.",
 			"• The clear parts around the face are reproduced in two parts and can be attached and detached.",
 			"• The mechanical design of the left arm is reproduced with Seal. It also comes with a gimmick that allows the arm parts to open and close!",
-			"• Press the switch on the chest to automatically deploy the wing parts on the back!",
+			"• When you press the switch on the chest, the wing parts on the back will automatically deploy!",
 			"• Two types of hand parts are included to create various poses.",
-			"• Two types of seals that can be attached to the soles of the feet are included."
+			"• Comes with two types of seals that can be attached to the soles of the feet."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"表情パーツ×3",
-			"ハンドパーツ×2種",
-			"ディスプレイベース×1"
-		],
-		"en": [
-			"Facial expression parts x 3",
-			"Hand parts x 2 types",
-			"Display base x 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×8",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 8",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2337/1000137577_1.jpg",
-		"/images/items/01_2337/1000137577_10.jpg",
-		"/images/items/01_2337/1000137577_11.jpg",
-		"/images/items/01_2337/1000137577_12.jpg",
-		"/images/items/01_2337/1000137577_2.jpg",
-		"/images/items/01_2337/1000137577_3.jpg",
-		"/images/items/01_2337/1000137577_4.jpg",
-		"/images/items/01_2337/1000137577_5.jpg",
-		"/images/items/01_2337/1000137577_6.jpg",
-		"/images/items/01_2337/1000137577_7.jpg",
-		"/images/items/01_2337/1000137577_8.jpg",
-		"/images/items/01_2337/1000137577_9.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情パーツ"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
 	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2337/",
-	"brandIds": [],
-	"seriesIds": [
-		"toystory4"
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 8
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
 	],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"01_2338"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137577_1.jpg",
+				"path": "/images/items/01_2337/1000137577_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137577_2.jpg",
+				"path": "/images/items/01_2337/1000137577_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137577_3.jpg",
+				"path": "/images/items/01_2337/1000137577_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137577_4.jpg",
+				"path": "/images/items/01_2337/1000137577_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137577_5.jpg",
+				"path": "/images/items/01_2337/1000137577_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137577_6.jpg",
+				"path": "/images/items/01_2337/1000137577_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137577_7.jpg",
+				"path": "/images/items/01_2337/1000137577_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137577_8.jpg",
+				"path": "/images/items/01_2337/1000137577_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137577_9.jpg",
+				"path": "/images/items/01_2337/1000137577_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137577_10.jpg",
+				"path": "/images/items/01_2337/1000137577_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137577_11.jpg",
+				"path": "/images/items/01_2337/1000137577_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137577_12.jpg",
+				"path": "/images/items/01_2337/1000137577_12.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2337/"
 }

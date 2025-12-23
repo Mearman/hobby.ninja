@@ -5,6 +5,44 @@
 		"ja": "1/144 ミレニアム・ファルコン",
 		"en": "1/144 Millennium Falcon"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3515",
+			"url": "https://bandai-hobby.net/item/01_3515/",
+			"ja": "1/12 ザ・マンダロリアン(ベスカーアーマー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 24
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「銀河系最速のガラクタ」と称されるその魅力的なゴチャメカ感をそのままに、『スター・ウォーズ／最後のジェダイ』版のディテールを、1/144スケールに凝縮したプラモデルです。何度も繰り返された改造の軌跡を、組み立てることでその手で体感できます。",
@@ -26,67 +63,130 @@
 			"全長：約240mm"
 		],
 		"en": [
-			"This is a plastic model that condenses the details of the \"Star Wars: The Last Jedi \" version into a 1/144 scale, while maintaining the attractive mecha feel of the \" fastest junk in the galaxy\". By assembling, you can experience for yourself the history of repeated modifications.",
+			"This is a plastic model that condenses the details of the \"Star Wars: The Last Jedi\" version into a 1/144 scale, while maintaining the attractive mecha feel of the \"fastest junk in the galaxy\". By assembling, you can experience for yourself the history of repeated modifications.",
 			"Comes with a special display base that resembles the island that appeared in the final scene of \"Star Wars: The Force Awakens\"!",
 			"Total length: approx. 240mm"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用ディスプレイベース×1",
-			"1/144パイロット（着座）×2種",
-			"キャノピー×2種（クリアパーツ×1・フレームパーツ×1）",
-			"昇降口開閉再現パーツ×1式",
-			"着床脚×1式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "1/144パイロット（着座）"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "キャノピー"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "昇降口開閉再現パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "着床脚"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 9
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119961_1.jpg",
+				"path": "/images/items/01_1191/1000119961_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119961_2.jpg",
+				"path": "/images/items/01_1191/1000119961_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119961_3.jpg",
+				"path": "/images/items/01_1191/1000119961_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119961_4.jpg",
+				"path": "/images/items/01_1191/1000119961_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119961_5.jpg",
+				"path": "/images/items/01_1191/1000119961_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119961_6.jpg",
+				"path": "/images/items/01_1191/1000119961_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119961_7.jpg",
+				"path": "/images/items/01_1191/1000119961_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119961_8.jpg",
+				"path": "/images/items/01_1191/1000119961_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119961_9.jpg",
+				"path": "/images/items/01_1191/1000119961_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119961_10.jpg",
+				"path": "/images/items/01_1191/1000119961_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119961_11.jpg",
+				"path": "/images/items/01_1191/1000119961_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000119961_12.jpg",
+				"path": "/images/items/01_1191/1000119961_12.jpg"
+			}
 		],
-		"en": [
-			"Dedicated display base x 1",
-			"1/144 pilot (seated) x 2 types",
-			"Canopy x 2 types (clear parts x 1, frame parts x 1)",
-			"Door opening/closing reproduction parts x 1 set",
-			"Implantation leg x 1 set"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×9",
-			"水転写式デカール×1",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 9",
-			"Water transfer decal x 1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1191/1000119961_1.jpg",
-		"/images/items/01_1191/1000119961_10.jpg",
-		"/images/items/01_1191/1000119961_11.jpg",
-		"/images/items/01_1191/1000119961_12.jpg",
-		"/images/items/01_1191/1000119961_2.jpg",
-		"/images/items/01_1191/1000119961_3.jpg",
-		"/images/items/01_1191/1000119961_4.jpg",
-		"/images/items/01_1191/1000119961_5.jpg",
-		"/images/items/01_1191/1000119961_6.jpg",
-		"/images/items/01_1191/1000119961_7.jpg",
-		"/images/items/01_1191/1000119961_8.jpg",
-		"/images/items/01_1191/1000119961_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1191/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3515"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1191/"
 }

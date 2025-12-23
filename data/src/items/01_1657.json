@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ブルーディスティニー1号機",
 		"en": "HGUC 1/144 Blue Destiny Unit 1"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -17,37 +66,34 @@
 		"month": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"●セガサターン用ソフト「機動戦士ガンダム外伝」シリーズに登場した主役MS“ブルーディスティニー1号機”がHGUCシリーズにラインナップ ●100mmマシンガン、ビーム・サーベル×2、ショートシールドが付属 ●マシンガンはマガジンが着脱可能 ●マシンガンを構える際に添える専用の左手首が付属、それを用いてマガジンの交換シーンも再現可能 ●ショートシールドはバイポッドアームによりスタンディングが可能 ●スネ外側のビーム・サーベルホルダーはカバーの差し替えで、展開可能"
 		],
 		"en": [
-			"-The main character MS \"Blue Destiny Unit 1 \" that appeared in the Sega Saturn software \" Mobile Suit Gundam Gaiden\" series is now available in the HGUC series. -A 100mm machine gun, beam saber x 2, and short seal are included. -The machine gun has a removable magazine. -A special left wrist is included to attach when holding the machine gun, and you can use it to recreate the magazine exchange scene. -Short seal can be standing with a bipod arm -The beam saber holder on the outside of the shank can be expanded by replacing the cover."
+			"-The main character MS \"Blue Destiny Unit 1\" that appeared in the Sega Saturn software \"Mobile Suit Gundam Gaiden\" series is now available in the HGUC series. -A 100mm machine gun, beam saber x 2, and short seal are included. -The machine gun has a removable magazine. -A special left wrist is included to attach when holding the machine gun, and you can use it to recreate the magazine exchange scene. -Short seal can be standing with a bipod arm -The beam saber holder on the outside of the shank can be expanded by replacing the cover."
 		]
 	},
-	"images": [
-		"/images/items/01_1657/153_2566.jpg",
-		"/images/items/01_1657/155_2566.jpg",
-		"/images/items/01_1657/156_2566.jpg",
-		"/images/items/01_1657/157_2566.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1657/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
-	"manualId": "0262"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2566_s_2oodgk25qpv2qovi366p6t9jlcrn.jpg",
+				"path": "/images/items/01_1657/153_2566.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2566_s_imvqkxxg7hf5qqso331smmhfr5sj.jpg",
+				"path": "/images/items/01_1657/155_2566.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2566_s_4vbmuzau9as7h9jgoc5mfyry6zlg.jpg",
+				"path": "/images/items/01_1657/156_2566.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2566_s_8gytfbivdb2ku7vzeyzwfuaalg03.jpg",
+				"path": "/images/items/01_1657/157_2566.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1657/"
 }

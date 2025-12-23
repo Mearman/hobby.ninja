@@ -5,6 +5,49 @@
 		"ja": "メカコレクション　ドラゴンボール　2巻　牛魔王の車",
 		"en": "Mecha Collection Dragon Ball Volume 2 Ushimaou's Car"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1107",
+			"url": "https://bandai-hobby.net/item/01_1107/",
+			"ja": "メカコレクション　ドラゴンボール　7巻 亀仙人のワゴン車"
+		},
+		{
+			"id": "01_1093",
+			"url": "https://bandai-hobby.net/item/01_1093/",
+			"ja": "メカコレクション　ドラゴンボール　6巻　ウーロンのロードバギー"
+		},
+		{
+			"id": "01_1060",
+			"url": "https://bandai-hobby.net/item/01_1060/",
+			"ja": "メカコレクション　ドラゴンボール　5巻　ヤムチャのマイティマウス号"
+		},
+		{
+			"id": "01_1016",
+			"url": "https://bandai-hobby.net/item/01_1016/",
+			"ja": "メカコレクション　ドラゴンボール　3巻　ランチの一輪バイク"
+		}
+	],
 	"price": {
 		"amount": 715,
 		"currency": "JPY",
@@ -32,7 +75,7 @@
 			"• パッケージはコミックスを髣髴とさせるデザイン！さらに側面は繋ぎ絵風のデザインなので、7種集めて飾ろう！"
 		],
 		"en": [
-			"• Mecha Collection Dragon Ball series starts! Toriyama Mecha is now available in a palm-sized size that is easy to collect!",
+			"• Mecha Collection Dragon Ball series started! Toriyama Mecha is now available in a palm-sized size that is easy to collect!",
 			"• Volume 2 is Ushimaou's car! !",
 			"• HANDY SIZE",
 			"A cute palm-sized plastic model of the Dragon Ball mecha!",
@@ -44,53 +87,76 @@
 			"• The package design is reminiscent of comics! Furthermore, the sides have a connected picture style design, so collect 7 types and display them!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"車×1",
-			"ブルマ×1",
-			"悟空×1",
-			"ウーロン×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "車"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ブルマ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "悟空"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ウーロン"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1943_s_uim4jmvv2qq20zpi676vnhp0quuh.jpg",
+				"path": "/images/items/01_1007/153_1943.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1943_s_ghqhir3bedqalaosdudw9v0bq0p0.jpg",
+				"path": "/images/items/01_1007/155_1943.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_1943_s_d5h5rkihpjvlstp7x5qqqrbs9x0v.jpg",
+				"path": "/images/items/01_1007/156_1943.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_1943_s_i8mn0aau12g5yb53xpenvmgtjvsx.jpg",
+				"path": "/images/items/01_1007/157_1943.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_1943_s_aksi0vhxp2nhf7eh5u33pwcbk93q.jpg",
+				"path": "/images/items/01_1007/158_1943.jpg"
+			}
 		],
-		"en": [
-			"Car x 1",
-			"Bloomers x 1",
-			"Goku×1",
-			"Oolong×1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×2",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 2",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1007/153_1943.jpg",
-		"/images/items/01_1007/155_1943.jpg",
-		"/images/items/01_1007/156_1943.jpg",
-		"/images/items/01_1007/157_1943.jpg",
-		"/images/items/01_1007/158_1943.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1007/",
-	"brandIds": [
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"dragonball"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1107",
-		"01_1093",
-		"01_1060",
-		"01_1016"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1007/"
 }

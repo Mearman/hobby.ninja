@@ -5,6 +5,29 @@
 		"ja": "ガンダムデカールNo.114 HG 1/144 機動戦士ガンダム サンダーボルト汎用1",
 		"en": "Gundam Decal No.114 HG 1/144 Mobile Suit Gundam Thunderbolt General Purpose 1"
 	},
+	"brands": [
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "thunderbolt",
+			"url": "https://bandai-hobby.net/series/thunderbolt/",
+			"ja": "機動戦士ガンダム サンダーボルト"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/144",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,7 +41,6 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"100点以上のラインナップを誇る、大人気ガンダムデカールのシリーズ商品が登場。",
@@ -31,19 +53,18 @@
 			"water transfer decal"
 		]
 	},
-	"images": [
-		"/images/items/01_1141/153_2073.jpg",
-		"/images/items/01_1141/155_2073.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1141/",
-	"brandIds": [
-		"gundam_decal"
-	],
-	"seriesIds": [
-		"thunderbolt"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": []
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2073_s_0uodl73pwzopc8thb9pgqeehvvqw.jpg",
+				"path": "/images/items/01_1141/153_2073.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2073_s_ekl3avkedhw8hr2mk3m5o7fz555g.jpg",
+				"path": "/images/items/01_1141/155_2073.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1141/"
 }

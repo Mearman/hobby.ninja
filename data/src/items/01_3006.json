@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 R09 フォビドゥンガンダム",
 		"en": "HG 1/144 R09 Forbidden Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181726",
+			"url": "https://p-bandai.jp/item/item-1000181726/",
+			"ja": "ＨＧ 1/144 ストライクダガー"
+		},
+		{
+			"id": "01_1930",
+			"url": "https://bandai-hobby.net/item/01_1930/",
+			"ja": "HG 1/144 ガンダムベース限定 フリーダムガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_384",
+			"url": "https://bandai-hobby.net/item/01_384/",
+			"ja": "HGCE 1/144 フリーダムガンダム"
+		},
+		{
+			"id": "01_83",
+			"url": "https://bandai-hobby.net/item/01_83/",
+			"ja": "HGCE 1/144 ストライクルージュ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -17,27 +61,22 @@
 		"month": 1
 	},
 	"targetAge": 8,
-	"scale": "1/144",
-	"images": [
-		"/images/items/01_3006/153_3979.jpg",
-		"/images/items/01_3006/155_3979.jpg",
-		"/images/items/01_3006/156_3979.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3006/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181726",
-		"01_1930",
-		"01_384",
-		"01_83"
-	],
-	"manualId": "0338"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3979_o_1gnopujr41lna1dor1hqnjegs5m2i.jpg",
+				"path": "/images/items/01_3006/153_3979.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3979_o_1gnopu4plasfu2pb4bf1915oa23.jpg",
+				"path": "/images/items/01_3006/155_3979.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3979_o_1gnopu89p1e8ilq61863pov1jaj28.jpg",
+				"path": "/images/items/01_3006/156_3979.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3006/"
 }

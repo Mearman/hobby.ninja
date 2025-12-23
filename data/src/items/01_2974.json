@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard アルティメット孫悟飯",
 		"en": "Figure-rise Standard Ultimate Son Gohan"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4901",
+			"url": "https://bandai-hobby.net/item/01_4901/",
+			"ja": "Figure-rise Standard ベジータ (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_4219",
+			"url": "https://bandai-hobby.net/item/01_4219/",
+			"ja": "Figure-rise Standard 孫悟空 (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_2769",
+			"url": "https://bandai-hobby.net/item/01_2769/",
+			"ja": "Figure-rise Standard ジレン"
+		},
+		{
+			"id": "01_2595",
+			"url": "https://bandai-hobby.net/item/01_2595/",
+			"ja": "Figure-rise Standard バーダック"
+		}
+	],
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -21,71 +64,128 @@
 	"description": {
 		"ja": [
 			"『ドラゴンボールZ』より、アルティメット孫悟飯がFigure-rise Standardにラインアップ！",
-			"■マッスルビルドシステム搭載。アルティメットな孫悟飯を組み立てろ！",
-			"■「アルティメット孫悟飯」と「超サイヤ人孫悟飯（未来）」をパーツによる選択式で再現できる。",
-			"■超サイヤ人孫悟飯（未来）再現用に髪、袖、腰の帯、靴が新規パーツで付属。シールで顔の傷や背中の文字も再現。",
-			"■表情パーツは「通常」と「叫び」の２種付属。",
-			"■エフェクトパーツ２種付属。"
+			"• マッスルビルドシステム搭載。アルティメットな孫悟飯を組み立てろ！",
+			"• 「アルティメット孫悟飯」と「超サイヤ人孫悟飯（未来）」をパーツによる選択式で再現できる。",
+			"• 超サイヤ人孫悟飯（未来）再現用に髪、袖、腰の帯、靴が新規パーツで付属。シールで顔の傷や背中の文字も再現。",
+			"• 表情パーツは「通常」と「叫び」の２種付属。",
+			"• エフェクトパーツ２種付属。"
 		],
 		"en": [
 			"From \"Dragon Ball Z\", Ultimate Son Gohan is now available in the Figure-rise Standard lineup!",
 			"• Equipped with muscle build system. Assemble the Ultimate Son Gohan!",
-			"• \"Ultimate Son Gohan \" and \" Super Saiyan Son Gohan (future)\" can be recreated by selecting parts.",
+			"• \"Ultimate Son Gohan\" and \"Super Saiyan Son Gohan (future)\" can be recreated by selecting parts.",
 			"• Hair, sleeves, waist belt, and shoes are included as new parts to recreate Super Saiyan Son Gohan (future). Seal also reproduces the scars on the face and the letters on the back.",
-			"• Two types of facial expression parts are included: \"normal \" and \" screaming\".",
+			"• Two types of facial expression parts are included: \"normal\" and \"screaming\".",
 			"• Two types of effect parts are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"表情パーツ×2",
-			"超サイヤ人孫悟飯（未来）再現パーツ×1式",
-			"ハンドパーツ（左右）×各2種",
-			"エネルギー波×2（溜め、放出）",
-			"エネルギー波用台座×1",
-			"アクションベース取付用ジョイントパーツ×1",
-			"ホイルシール×1",
-			"マーキングシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情パーツ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "超サイヤ人孫悟飯（未来）再現パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ（左右）×各2種"
+			}
+		},
+		{
+			"name": {
+				"ja": "エネルギー波"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "（溜め、放出）"
+			}
+		},
+		{
+			"name": {
+				"ja": "エネルギー波用台座"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アクションベース取付用ジョイントパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152014_1.jpg",
+				"path": "/images/items/01_2974/1000152014_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152014_2.jpg",
+				"path": "/images/items/01_2974/1000152014_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152014_3.jpg",
+				"path": "/images/items/01_2974/1000152014_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152014_4.jpg",
+				"path": "/images/items/01_2974/1000152014_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152014_5.jpg",
+				"path": "/images/items/01_2974/1000152014_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152014_6.jpg",
+				"path": "/images/items/01_2974/1000152014_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152014_7.jpg",
+				"path": "/images/items/01_2974/1000152014_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152014_8.jpg",
+				"path": "/images/items/01_2974/1000152014_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152014_9.jpg",
+				"path": "/images/items/01_2974/1000152014_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152014_10.jpg",
+				"path": "/images/items/01_2974/1000152014_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152014_11.jpg",
+				"path": "/images/items/01_2974/1000152014_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152014_12.jpg",
+				"path": "/images/items/01_2974/1000152014_12.jpg"
+			}
 		],
-		"en": [
-			"Facial expression parts x 2",
-			"Super Saiyan Son Gohan (future) reproduction parts x 1 set",
-			"Hand parts (left and right) x 2 types each",
-			"Energy wave x 2 (storage, release)",
-			"Energy wave pedestal x 1",
-			"Joint parts for action base installation x 1",
-			"Foil Seal×1",
-			"MarkingSeal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2974/1000152014_1.jpg",
-		"/images/items/01_2974/1000152014_10.jpg",
-		"/images/items/01_2974/1000152014_11.jpg",
-		"/images/items/01_2974/1000152014_12.jpg",
-		"/images/items/01_2974/1000152014_2.jpg",
-		"/images/items/01_2974/1000152014_3.jpg",
-		"/images/items/01_2974/1000152014_4.jpg",
-		"/images/items/01_2974/1000152014_5.jpg",
-		"/images/items/01_2974/1000152014_6.jpg",
-		"/images/items/01_2974/1000152014_7.jpg",
-		"/images/items/01_2974/1000152014_8.jpg",
-		"/images/items/01_2974/1000152014_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2974/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"dragonball"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4901",
-		"01_4219",
-		"01_2769",
-		"01_2595"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2974/"
 }

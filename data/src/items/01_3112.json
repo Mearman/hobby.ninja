@@ -5,6 +5,44 @@
 		"ja": "1/100 シャア専用ゲルググ",
 		"en": "1/100 Char's Gelgoog"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 3
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、1/100スケールで、シャア専用ゲルググが登場。",
@@ -28,22 +65,18 @@
 			"Rotation of the waist is possible.・The hip joint can be opened and closed to the left and right. The right hand is interchangeable between when equipped with a beam rifle and a regular fist. Beam Naginata comes with two forms: expanded and stored. Beam Naginata and Seal in storage form can be attached to the back."
 		]
 	},
-	"images": [
-		"/images/items/01_3112/153_4078.jpg",
-		"/images/items/01_3112/155_4078.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3112/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/155_4078_s_ddfvi9xsbvps81xqccuvw0z88uc0.jpg",
+				"path": "/images/items/01_3112/155_4078.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_4078_s_hhss65ndc8vxzwyxhltsch70zwba.jpg",
+				"path": "/images/items/01_3112/153_4078.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3112/"
 }

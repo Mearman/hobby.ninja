@@ -3,8 +3,57 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC 1/144 ゼータガンダム",
-		"en": "HGUC 1/144 Zeta Gundam"
+		"en": "HG 1/144 ZETA GUNDAM"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -17,37 +66,34 @@
 		"month": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"「機動戦士Z ガンダム」に登場する主人公機「Z ガンダム」のHGUC仕様のプラモデル。最大の特徴である「ウェイブ・ライダー」への変形は、プロポーションを重視した各部の差し替えにより再現しています。武器はビームサーベル、ビームライフル、ファン待望のハイパーメガランチャーが付属します。ウェイブ・ライダー形態にもハイパーメガランチャーを取り付け可能です。"
+			"「機動戦士Zガンダム」に登場する主人公機「Zガンダム」のHGUC仕様のプラモデル。最大の特徴である「ウェイブ・ライダー」への変形は、プロポーションを重視した各部の差し替えにより再現しています。武器はビームサーベル、ビームライフル、ファン待望のハイパーメガランチャーが付属します。ウェイブ・ライダー形態にもハイパーメガランチャーを取り付け可能です。"
 		],
 		"en": [
-			"An HGUC plastic model of the main character \"Z Gundam \" that appears in \" Mobile Suit Z Gundam \". The biggest feature, the transformation into \" Wave Rider\", is recreated by replacing each part with an emphasis on proportions. Weapons include a beam saber, beam rifle, and the long-awaited hyper mega launcher. The Hyper Mega Launcher can also be attached to the Wave Rider form."
+			"An HGUC plastic model of the protagonist machine \"ZGundam\" that appears in \"Mobile Suit ZGundam\". The biggest feature, the transformation into \"Wave Rider\", is recreated by replacing each part with an emphasis on proportions. Weapons include a beam saber, beam rifle, and the long-awaited hyper mega launcher. The Hyper Mega Launcher can also be attached to the Wave Rider form."
 		]
 	},
-	"images": [
-		"/images/items/01_2825/153_380.jpg",
-		"/images/items/01_2825/155_380.jpg",
-		"/images/items/01_2825/156_380.jpg",
-		"/images/items/01_2825/157_380.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2825/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
-	"manualId": "0880"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/157_380_s_hh3spn8mr6cpvhq84xwev5ysqw62.jpg",
+				"path": "/images/items/01_2825/157_380.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_380_s_6b7cbiup4e934wwmqg7nlaakv6wy.jpg",
+				"path": "/images/items/01_2825/153_380.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_380_s_sfs1vzqas6g5dbqoag643ptzm3wu.jpg",
+				"path": "/images/items/01_2825/155_380.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_380_s_l4smdhu52669cpql9zv9eyovmdpg.jpg",
+				"path": "/images/items/01_2825/156_380.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2825/"
 }

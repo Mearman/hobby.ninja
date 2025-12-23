@@ -5,6 +5,44 @@
 		"ja": "1/144 ゾック",
 		"en": "1/144 Zock"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 8
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、1/144スケールで、ゾックが登場。",
@@ -28,22 +65,18 @@
 			"The shoulder armor on the torso side can be stored. The legs can be opened and closed on the left and right. The mono eye is a separate part, so you can create your own expressions."
 		]
 	},
-	"images": [
-		"/images/items/01_2933/153_3909.jpg",
-		"/images/items/01_2933/155_3909.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2933/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3909_s_5rini1a4norzq5u2xvyy0gt2lfra.jpg",
+				"path": "/images/items/01_2933/153_3909.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3909_s_9hfdb0rsjngnrcngevm8nw8o32tb.jpg",
+				"path": "/images/items/01_2933/155_3909.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2933/"
 }

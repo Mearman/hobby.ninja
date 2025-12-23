@@ -5,6 +5,43 @@
 		"ja": "SD 三国創傑伝 孫策ガンダムアストレイ",
 		"en": "SD Sangoku Soketsuden Sonsaku Gundam Astray"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "soketsuden",
+			"url": "https://bandai-hobby.net/series/soketsuden/",
+			"ja": "三国創傑伝"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2642",
+			"url": "https://bandai-hobby.net/item/01_2642/",
+			"ja": "SD 三国創傑伝 天覇曹操ウイングガンダム"
+		},
+		{
+			"id": "01_2614",
+			"url": "https://bandai-hobby.net/item/01_2614/",
+			"ja": "SD 三国創傑伝 典韋マスターガンダム"
+		},
+		{
+			"id": "01_2615",
+			"url": "https://bandai-hobby.net/item/01_2615/",
+			"ja": "SD 三国創傑伝 徐晃ガンダムデスサイズ"
+		},
+		{
+			"id": "01_2643",
+			"url": "https://bandai-hobby.net/item/01_2643/",
+			"ja": "SD 三国創傑伝 甘寧クロスボーンガンダム"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -20,7 +57,7 @@
 	"description": {
 		"ja": [
 			"【2021年春、日本展開開始！！】",
-			"• 『三国志』をベースにしたSD ガンダムが装いも新たに登場！",
+			"• 『三国志』をベースにしたSDガンダムが装いも新たに登場！",
 			"• 進化したプロポーションとパーツ分割へのこだわりにより、組み立てただけでSD史上最高峰の色分けを実現。",
 			"• 一新された頭身バランスと各所の関節構造により、躍動感あふれるポージングを再現！",
 			"• 太史慈（別売り）の武器と組み合わせることで強力なガトリングガン形態を再現！",
@@ -29,48 +66,70 @@
 		],
 		"en": [
 			"[Spring 2021, main rollout begins! ! ]",
-			"• SD Gundam based on \"Romance of the Three Kingdoms\" now has a new look!",
-			"• With advanced proportions and attention to parts division, we have achieved the highest color separation in SD history using just the assembly.",
-			"• The all-new head and body balance and joint structure in various parts allow for dynamic poses!",
+			"• SDGundam based on “Romance of the Three Kingdoms” has a new look!",
+			"• Thanks to the advanced proportions and attention to part division, we have achieved the highest color separation in SD history using just the assembly.",
+			"• Reproduce dynamic poses with a completely new head and body balance and joint structure in various places!",
 			"• Reproduce the powerful Gatling gun form by combining it with the weapon of Taishi Ci (sold separately)!",
-			"• Reproduce the super large sword form by combining it with the weapon of Sun Jian (sold separately)!",
-			"• Blue Tiger Shadow can be transformed into 3 forms: backpack form, tonfa form, and great sword form!"
+			"• Reproduce the super large sword form by combining it with Sun Jian's (sold separately) weapon!",
+			"• Blue Tiger Shadow can transform into 3 forms: backpack form, tonfa form, and great sword form!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"蒼虎影×1",
-			"メモリ×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "蒼虎影"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "メモリ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3431_s_tzv86d6dqkvt8wpa3jycsfofdko9.jpg",
+				"path": "/images/items/01_2506/153_3431.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3431_s_v8iwyjoqrb3qyvawtdub705oih2f.jpg",
+				"path": "/images/items/01_2506/155_3431.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3431_s_ndbhrl3hbdw5hmfm06drq8klbkto.jpg",
+				"path": "/images/items/01_2506/156_3431.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3431_s_a8esbe3ht999id4jl7dmnu54jtlf.jpg",
+				"path": "/images/items/01_2506/157_3431.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3431_s_8pecvwzx3obwbh8sstjfjv4r3ame.jpg",
+				"path": "/images/items/01_2506/158_3431.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3431_s_t8m5eply5d4txzcddeg1kv29u1w5.jpg",
+				"path": "/images/items/01_2506/159_3431.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3431_s_qdc2q1gx8kyylouqyrr14s267zpo.jpg",
+				"path": "/images/items/01_2506/189_3431.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3431_s_996ww2pubpf5sl4xke2qltrs4wm7.jpg",
+				"path": "/images/items/01_2506/190_3431.jpg"
+			}
 		],
-		"en": [
-			"Blue Tiger Shadow x1",
-			"Memory x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2506/153_3431.jpg",
-		"/images/items/01_2506/155_3431.jpg",
-		"/images/items/01_2506/156_3431.jpg",
-		"/images/items/01_2506/157_3431.jpg",
-		"/images/items/01_2506/158_3431.jpg",
-		"/images/items/01_2506/159_3431.jpg",
-		"/images/items/01_2506/189_3431.jpg",
-		"/images/items/01_2506/190_3431.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2506/",
-	"brandIds": [],
-	"seriesIds": [
-		"soketsuden"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2642",
-		"01_2614",
-		"01_2615",
-		"01_2643"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2506/"
 }

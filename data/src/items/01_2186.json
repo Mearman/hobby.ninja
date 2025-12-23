@@ -5,6 +5,50 @@
 		"ja": "HG 1/60 M9Dファルケ Ver.IV",
 		"en": "HG 1/60 M9D Falke Ver.IV"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "fullmetal_panic",
+			"url": "https://bandai-hobby.net/series/fullmetal_panic/",
+			"ja": "フルメタル・パニック!"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2128",
+			"url": "https://bandai-hobby.net/item/01_2128/",
+			"ja": "HG 1/60 ガーンズバックVer.IV(アグレッサー部隊機)"
+		},
+		{
+			"id": "01_2119",
+			"url": "https://bandai-hobby.net/item/01_2119/",
+			"ja": "HG 1/60 アーバレストVer.IV(緊急展開ブースター装備仕様)"
+		},
+		{
+			"id": "01_1889",
+			"url": "https://bandai-hobby.net/item/01_1889/",
+			"ja": "HG 1/60 レーバテイン Ver.IV"
+		},
+		{
+			"id": "01_1304",
+			"url": "https://bandai-hobby.net/item/01_1304/",
+			"ja": "1/60 アーバレスト Ver.IV"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 3740,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 18
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
 			"『フルメタル・パニック！ Invisible Victory』11話12話で大活躍した、ウルズチームの漆黒の隊長機「M9Dファルケ」を一部新規金型で立体化！",
@@ -27,67 +70,112 @@
 			"• 別売りのHG1/60 アーバレストVer.IV（緊急展開ブースター装備仕様）の緊急展開ブースターを装備できる。"
 		],
 		"en": [
-			"\"Full Metal Panic! Invisible Victory's jet-black captain machine \" M9D Falke \", which played a big role in episodes 11 and 12 of \" Invisible Victory\", is now three-dimensional with some new molds!",
-			"• The head, shoulders, and leg parts are sculpted using new molds. New original weapons are also included.",
+			"\"Full Metal Panic! Invisible Victory's jet-black captain machine \"M9D Falke\", which played a big role in episodes 11 and 12 of \"Invisible Victory\", is now three-dimensional with some new molds!",
+			"• Head, shoulders, and leg parts are molded using new molds. New original weapons are also included.",
 			"• M9D Falke's characteristic single molecule cutter \"Crimson Edge\" is included as an additional weapon.",
-			"• Can be equipped with the emergency deployment booster of the separately sold HG1/60 Arbalest Ver.IV (Equipped with emergency deployment booster)."
+			"• Can be equipped with the emergency deployment booster of HG1/60 Arbalest Ver.IV (Equipped with emergency deployment booster), which is sold separately."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"クリムゾンエッジ×2",
-			"オリジナル武器×2",
-			"グラーツ・マンリッヒャーAWS2000×1",
-			"GRAW-2 単分子カッター×1",
-			"GEC-B 40mm ライフル×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "クリムゾンエッジ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "オリジナル武器"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "グラーツ・マンリッヒャーAWS2000"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GRAW-2 単分子カッター"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GEC-B 40mm ライフル"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成型品"
+			},
+			"count": 16
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3133_s_km1e818pg03tl7czjhg4r9snkwnq.jpg",
+				"path": "/images/items/01_2186/153_3133.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3133_s_m6wmkt3gw5a8l1xp48qswi8s7knf.jpg",
+				"path": "/images/items/01_2186/155_3133.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3133_s_7rhaogieqjjxaxg3rt9mbdoy8fii.jpg",
+				"path": "/images/items/01_2186/156_3133.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3133_s_zxktcflzxi3073tvoftlugti64ve.jpg",
+				"path": "/images/items/01_2186/157_3133.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3133_s_fxarprwwsn1jyo5uyfunlpdm6j68.jpg",
+				"path": "/images/items/01_2186/158_3133.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3133_s_rwq0f0qpnfh1e6316cs2vokz331r.jpg",
+				"path": "/images/items/01_2186/159_3133.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3133_s_mwf8uxe5ih4aq3ksx3hy3i813zdi.jpg",
+				"path": "/images/items/01_2186/189_3133.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3133_s_wabjoacanz2139d5buz20h39hpho.jpg",
+				"path": "/images/items/01_2186/190_3133.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3133_s_xdkm6la4yk5h95p7uvynqmteydk1.jpg",
+				"path": "/images/items/01_2186/191_3133.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3133_s_slxwtr8xepubwm7pdbag3a92zlmz.jpg",
+				"path": "/images/items/01_2186/192_3133.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_3133_s_f0l96pymwvwnqczb714w7ec20fy7.jpg",
+				"path": "/images/items/01_2186/193_3133.jpg"
+			}
 		],
-		"en": [
-			"Crimson Edge x2",
-			"Original weapon x2",
-			"Graz Mannlicher AWS2000×1",
-			"GRAW-2 Single molecule cutter x 1",
-			"GEC-B 40mm rifle x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成型品×16",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded products x 16",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2186/153_3133.jpg",
-		"/images/items/01_2186/155_3133.jpg",
-		"/images/items/01_2186/156_3133.jpg",
-		"/images/items/01_2186/157_3133.jpg",
-		"/images/items/01_2186/158_3133.jpg",
-		"/images/items/01_2186/159_3133.jpg",
-		"/images/items/01_2186/189_3133.jpg",
-		"/images/items/01_2186/190_3133.jpg",
-		"/images/items/01_2186/191_3133.jpg",
-		"/images/items/01_2186/192_3133.jpg",
-		"/images/items/01_2186/193_3133.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2186/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"fullmetal_panic"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2128",
-		"01_2119",
-		"01_1889",
-		"01_1304"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2186/"
 }

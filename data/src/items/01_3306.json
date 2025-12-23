@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "RG 1/144 ジオング",
-		"en": "RG 1/144 Zeon"
+		"en": "RG 1/144 ZEONG"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］",
+			"en": "RG [REAL GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6854",
+			"url": "https://bandai-hobby.net/item/01_6854/",
+			"ja": "RG 1/144 G-3ガンダム Ver.2.0"
+		},
+		{
+			"id": "01_6688",
+			"url": "https://bandai-hobby.net/item/01_6688/",
+			"ja": "RG 1/144 MS-06S ザクII [初音ミクVer.]"
+		},
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5428",
+			"url": "https://bandai-hobby.net/item/01_5428/",
+			"ja": "RG 1/144 ガンダムベース限定 ジオング [スペシャルコーティング]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 6050,
 		"currency": "JPY",
@@ -18,7 +64,6 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンプラ40周年記念に合わせ、『機動戦士ガンダム』より「ジオング」を最新の技術とデザインでRG化！",
@@ -32,59 +77,98 @@
 			"• 前腕を取り外し、リード線を取り付けることで腕部有線式メガ粒子砲を再現。"
 		],
 		"en": [
-			"To celebrate Gunpla's 40th anniversary, \"Zeongu \" from \" Mobile Suit Gundam\" has been made into an RG with the latest technology and design!",
-			"• In order to reproduce the setting mechanism and poses in the play, the original gimmick based on actual machine research has been condensed to 1/144.",
-			"• Built-in \"Advanced MS Joint\". Balances smooth and powerful expression with precise details.",
-			"• The mono-eye can be moved left and right according to the movement of the neck. It can also be moved up and down manually.",
-			"• Built-in frame with a wide range of motion in the lower back. More dynamic poses are possible.",
-			"• Four verniers on the chest and back expand in conjunction with the forward and backward movement of the chest.",
-			"• The large and small verniers can be individually movable by expanding the skirt part.",
-			"• Hand parts are insert molded to reproduce precise details and movable joints.",
-			"• Reproduce the arm wired mega particle cannon by removing the forearm and attaching the lead wire."
+			"In line with GUNDAM 40th ANNIVERSARY, \"Zeong\" from \"MOBILE SUIT GUNDAM\" has been converted into an RG with the latest technology and design!",
+			"• In order to reproduce the mechanism on the setting and the poses in the play, the original gimmick based on the actual machine examination is condensed to 1/144.",
+			"• Built-in \"Advanced MS Joint\". It combines smooth and powerful expressions with meticulous details.",
+			"• The mono eye can be moved in conjunction with the movement of the neck to the left and right. In addition, it can be manually moved up and down.",
+			"• Built-in frame with a wide range of motion in the waist. More dynamic poses are possible.",
+			"• Four verniers on the chest and back are deployed in conjunction with the front and back movement of the chest.",
+			"• Each vernier of size can be individually moved by expanding the skirt part.",
+			"• Hand parts are insert molded to reproduce intricate details and movable joints.",
+			"• By removing the forearm and attaching the lead wire, the arm wired mega particle cannon is reproduced."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ディスプレイベース×1",
-			"リード線（赤）×1",
-			"リード線（黒）×2",
-			"リアリスティックデカール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイベース",
+				"en": "• Display Base"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リード線（赤）",
+				"en": "• Lead wire (red)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リード線（黒）",
+				"en": "• Lead wire (black)"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール",
+				"en": "• Realistic Decal"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154140_1.jpg",
+				"path": "/images/items/01_3306/1000154140_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154140_2.jpg",
+				"path": "/images/items/01_3306/1000154140_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154140_3.jpg",
+				"path": "/images/items/01_3306/1000154140_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154140_4.jpg",
+				"path": "/images/items/01_3306/1000154140_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154140_5.jpg",
+				"path": "/images/items/01_3306/1000154140_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154140_6.jpg",
+				"path": "/images/items/01_3306/1000154140_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154140_7.jpg",
+				"path": "/images/items/01_3306/1000154140_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154140_8.jpg",
+				"path": "/images/items/01_3306/1000154140_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154140_9.jpg",
+				"path": "/images/items/01_3306/1000154140_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154140_10.jpg",
+				"path": "/images/items/01_3306/1000154140_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154140_11.jpg",
+				"path": "/images/items/01_3306/1000154140_11.jpg"
+			}
 		],
-		"en": [
-			"Display base x 1",
-			"Lead wire (red) x 1",
-			"Lead wire (black) x 2",
-			"Realistic decal x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3306/1000154140_1.jpg",
-		"/images/items/01_3306/1000154140_10.jpg",
-		"/images/items/01_3306/1000154140_11.jpg",
-		"/images/items/01_3306/1000154140_2.jpg",
-		"/images/items/01_3306/1000154140_3.jpg",
-		"/images/items/01_3306/1000154140_4.jpg",
-		"/images/items/01_3306/1000154140_5.jpg",
-		"/images/items/01_3306/1000154140_6.jpg",
-		"/images/items/01_3306/1000154140_7.jpg",
-		"/images/items/01_3306/1000154140_8.jpg",
-		"/images/items/01_3306/1000154140_9.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3306/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000162572",
-		"01_4967",
-		"01_151",
-		"01_4775"
-	],
-	"manualId": "0682"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_3306/"
+	}
 }

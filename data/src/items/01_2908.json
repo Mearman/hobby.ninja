@@ -5,6 +5,60 @@
 		"ja": "ＰＧ 1/60 RX-0 ユニコーンガンダム用 ＦＡ拡張ユニット",
 		"en": "FA expansion unit for PG 1/60 RX-0 Unicorn Gundam"
 	},
+	"brands": [
+		{
+			"id": "pb_pg",
+			"url": "https://bandai-hobby.net/brand/pb_pg/",
+			"ja": "PG［パーフェクトグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216106",
+			"url": "https://p-bandai.jp/item/item-1000216106/",
+			"ja": "RG 1/144 ユニコーンガンダム２号機 バンシィ・ノルン (最終決戦仕様) [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000183366",
+			"url": "https://p-bandai.jp/item/item-1000183366/",
+			"ja": "ＭＧ 1/100 スタークジェガン"
+		},
+		{
+			"id": "item-1000164780",
+			"url": "https://p-bandai.jp/item/item-1000164780/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム ペルフェクティビリティ用 ディバイン拡張セット"
+		},
+		{
+			"id": "item-1000164779",
+			"url": "https://p-bandai.jp/item/item-1000164779/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム ペルフェクティビリティ"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 8250,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 1
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
 			"『その時代の最高を求める。ガンプラの終わりなき探究。パーフェクトグレード。』",
@@ -30,13 +83,13 @@
 			"「ＰＧ 1/60 RX-0 ユニコーンガンダム用ＬＥＤユニット」（2014年12月店頭発売商品 ※別売）を",
 			"組み込んだ状態での、フルアーマー装備が可能です。",
 			"【 セット内容 】",
-			"■ ビーム・ガトリング・ガン　　×４",
-			"■ ハイパー・バズーカ　　×１",
-			"■ ハンド・グレネード・ユニット　　×８",
-			"■ グレネード・ランチャー　　×２",
-			"■ ３連装ミサイル・ランチャー　　×２",
-			"■ シールド　　×２",
-			"■ 大型スラスター　　×２",
+			"• ビーム・ガトリング・ガン　　×４",
+			"• ハイパー・バズーカ　　×１",
+			"• ハンド・グレネード・ユニット　　×８",
+			"• グレネード・ランチャー　　×２",
+			"• ３連装ミサイル・ランチャー　　×２",
+			"• シールド　　×２",
+			"• 大型スラスター　　×２",
 			"● 大型スラスター装着用フレーム　　×１",
 			"・・・　大型スラスターを、ユニコーンガンダムの背面に装着する専用フレーム。",
 			"● 大型スラスター用ステー　　×２",
@@ -144,39 +197,50 @@
 			"- Product specifications are scheduled as of 201411. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2908/153_3886.jpg",
-		"/images/items/01_2908/155_3886.jpg",
-		"/images/items/01_2908/156_3886.jpg",
-		"/images/items/01_2908/157_3886.jpg",
-		"/images/items/01_2908/158_3886.jpg",
-		"/images/items/01_2908/159_3886.jpg",
-		"/images/items/01_2908/189_3886.jpg",
-		"/images/items/01_2908/190_3886.jpg",
-		"/images/items/01_2908/191_3886.jpg",
-		"/images/items/01_2908/192_3886.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2908/",
-	"brandIds": [
-		"pg",
-		"pb_pg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216106",
-		"item-1000183366",
-		"item-1000164780",
-		"item-1000164779"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3886_s_oggk4hk0j09ju5vy2exwdx0tu3bi.jpg",
+				"path": "/images/items/01_2908/153_3886.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3886_s_fw09iybjkofdvbodq22ffalbjqz1.jpg",
+				"path": "/images/items/01_2908/155_3886.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3886_s_n7imk40iygpgjimu9e73lipavbkn.jpg",
+				"path": "/images/items/01_2908/156_3886.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3886_s_csr8u23fy1295whlxcpygah62bqy.jpg",
+				"path": "/images/items/01_2908/157_3886.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3886_s_qamrskcw2knr9qwqlbmqauwl3wls.jpg",
+				"path": "/images/items/01_2908/158_3886.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3886_s_sstykrevfcd9xq76q5usqxkea7be.jpg",
+				"path": "/images/items/01_2908/159_3886.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3886_s_fqxg8xqzn2rqflypt6wxb4x6ag97.jpg",
+				"path": "/images/items/01_2908/189_3886.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3886_s_qha1wvng6jldslq4d3om9redm8ip.jpg",
+				"path": "/images/items/01_2908/190_3886.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3886_s_01pbd9f51qjjbk5kpufvaikbrw6l.jpg",
+				"path": "/images/items/01_2908/191_3886.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3886_s_k7wtac5c30t7hwd041et7fgq9ni2.jpg",
+				"path": "/images/items/01_2908/192_3886.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "2266"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2908/"
 }

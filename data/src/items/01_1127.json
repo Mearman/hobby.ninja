@@ -5,6 +5,43 @@
 		"ja": "BB戦士218 ザクII F型",
 		"en": "BB Senshi 218 Zaku II F type"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -25,24 +62,26 @@
 			"\"BB Senshi 218 Zaku II F Type\" is now available!"
 		]
 	},
-	"images": [
-		"/images/items/01_1127/153_205.jpg",
-		"/images/items/01_1127/155_205.jpg",
-		"/images/items/01_1127/156_205.jpg",
-		"/images/items/01_1127/157_205.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1127/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_205_s_4njlvfb5j8vyc026zcn2pl3yeh7e.jpg",
+				"path": "/images/items/01_1127/153_205.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_205_s_2puto07e89zl5lcv8dihfqm7li2v.jpg",
+				"path": "/images/items/01_1127/155_205.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_205_s_3igyrdkeuj5exgzbjj7e8xf63xzw.jpg",
+				"path": "/images/items/01_1127/156_205.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_205_s_c9kilppu1j6sp2ow5cwh8owjvc97.jpg",
+				"path": "/images/items/01_1127/157_205.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1127/"
 }

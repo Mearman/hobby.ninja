@@ -5,6 +5,50 @@
 		"ja": "HG 1/60 レーバテイン Ver.IV",
 		"en": "HG 1/60 Laevatein Ver.IV"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "fullmetal_panic",
+			"url": "https://bandai-hobby.net/series/fullmetal_panic/",
+			"ja": "フルメタル・パニック!"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2186",
+			"url": "https://bandai-hobby.net/item/01_2186/",
+			"ja": "HG 1/60 M9Dファルケ Ver.IV"
+		},
+		{
+			"id": "01_2128",
+			"url": "https://bandai-hobby.net/item/01_2128/",
+			"ja": "HG 1/60 ガーンズバックVer.IV(アグレッサー部隊機)"
+		},
+		{
+			"id": "01_2119",
+			"url": "https://bandai-hobby.net/item/01_2119/",
+			"ja": "HG 1/60 アーバレストVer.IV(緊急展開ブースター装備仕様)"
+		},
+		{
+			"id": "01_1304",
+			"url": "https://bandai-hobby.net/item/01_1304/",
+			"ja": "1/60 アーバレスト Ver.IV"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 3960,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
 			"テレビアニメ『フルメタル・パニック！I n v i s i b l e V i c t o r y』より、AS「ARX-8 レーバテイン」が1/60スケールで登場！"
@@ -27,33 +70,54 @@
 			"TV anime “Full Metal Panic! AS \"ARX-8 Laevatein\" is now available in 1/60 Scale!"
 		]
 	},
-	"images": [
-		"/images/items/01_1889/153_2820.jpg",
-		"/images/items/01_1889/155_2820.jpg",
-		"/images/items/01_1889/156_2820.jpg",
-		"/images/items/01_1889/157_2820.jpg",
-		"/images/items/01_1889/158_2820.jpg",
-		"/images/items/01_1889/159_2820.jpg",
-		"/images/items/01_1889/189_2820.jpg",
-		"/images/items/01_1889/190_2820.jpg",
-		"/images/items/01_1889/191_2820.jpg",
-		"/images/items/01_1889/192_2820.jpg",
-		"/images/items/01_1889/193_2820.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1889/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"fullmetal_panic"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2186",
-		"01_2128",
-		"01_2119",
-		"01_1304"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/193_2820_s_ojdarm3231juh4wxze3yta1fph1o.jpg",
+				"path": "/images/items/01_1889/193_2820.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_2820_s_jezx1vnx49yngpt0cmott05zeajt.jpg",
+				"path": "/images/items/01_1889/153_2820.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2820_s_exm6fbf7i25dqa75i9p375yyv5dx.jpg",
+				"path": "/images/items/01_1889/155_2820.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2820_s_bct1sunt12imkqazfzdonia20ldi.jpg",
+				"path": "/images/items/01_1889/156_2820.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2820_s_vvmq9km9gfigbp8w0pthk4y2zbsa.jpg",
+				"path": "/images/items/01_1889/157_2820.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2820_s_dbefxufgkg6wgoufnaaijju6bzyf.jpg",
+				"path": "/images/items/01_1889/158_2820.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2820_s_gc63ssee7z1ie0r3wmglvsu82u7w.jpg",
+				"path": "/images/items/01_1889/159_2820.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2820_s_quizelj1a635smsz517a1nqpyw1w.jpg",
+				"path": "/images/items/01_1889/189_2820.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2820_s_yagv6ihl9ddlfn6hv01gngdrl34g.jpg",
+				"path": "/images/items/01_1889/190_2820.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2820_s_cicrw6lliqdsdua8xzi1tt4bgf00.jpg",
+				"path": "/images/items/01_1889/191_2820.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2820_s_0pnpjszzjwanwy0dw8dk4x123mol.jpg",
+				"path": "/images/items/01_1889/192_2820.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1889/"
 }

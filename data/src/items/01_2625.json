@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 bEXM-15 ポルタノヴァ(水中仕様)[パープル]",
-		"en": "30MM 1/144 bEXM-15 Portanova (underwater specification) [Purple]"
+		"en": "30MM 1/144 bEXM-15 PORTANOVA(MARINE TYPE)[PURPLE]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS",
+			"en": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMシリーズに水中を自由に駆け巡るポルタノヴァ（水中仕様）が登場！",
@@ -27,45 +70,61 @@
 			"• アンカークローが付属。"
 		],
 		"en": [
-			"Portanova (underwater specification), which freely runs underwater, is now available in the 30MM series!",
-			"• The underwater tank can be attached to the arms or legs by rearranging it.",
-			"• Can also be linked with existing items.",
-			"• Anchor claw included."
+			"THE 30MM SERIES HAS A PORTANOVA (UNDERWATER SPECIFICATION) THAT RUNS FREELY UNDERWATER! The submersible tank can be reassembled and attached to the arm or leg.",
+			"• It is also possible to link with existing items."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"水中用バックパック/装甲×１式",
-			"アンカークロー×１",
-			"マーキングシール×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "水中用バックパック/装甲×１式",
+				"en": "1 set of underwater backpack / armored ×"
+			}
+		},
+		{
+			"name": {
+				"ja": "アンカークロー×１",
+				"en": "• Anchor Claw"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール×１",
+				"en": "• Marking sticker"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000144349_1.jpg",
+				"path": "/images/items/01_2625/1000144349_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000144349_2.jpg",
+				"path": "/images/items/01_2625/1000144349_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000144349_3.jpg",
+				"path": "/images/items/01_2625/1000144349_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000144349_4.jpg",
+				"path": "/images/items/01_2625/1000144349_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000144349_5.jpg",
+				"path": "/images/items/01_2625/1000144349_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000144349_6.jpg",
+				"path": "/images/items/01_2625/1000144349_6.jpg"
+			}
 		],
-		"en": [
-			"Underwater backpack/armor x 1 set",
-			"Anchor claw x 1",
-			"MarkingSeal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2625/1000144349_1.jpg",
-		"/images/items/01_2625/1000144349_2.jpg",
-		"/images/items/01_2625/1000144349_3.jpg",
-		"/images/items/01_2625/1000144349_4.jpg",
-		"/images/items/01_2625/1000144349_5.jpg",
-		"/images/items/01_2625/1000144349_6.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2625/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3675"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2625/"
+	}
 }

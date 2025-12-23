@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ディジェ[クリアカラー]",
 		"en": "HG 1/144 Dije [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -18,10 +62,9 @@
 		"day": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士Z ガンダム』でアムロ・レイが正式搭乗したディジェが、クリアカラーになって登場！",
+			"『機動戦士Zガンダム』でアムロ・レイが正式搭乗したディジェが、クリアカラーになって登場！",
 			"• ジオン系フォルムの美しさをそのままに、シルエットからイメージする可動範囲を大きく上回るアクションポーズが可能。",
 			"• 各種武装としてビーム・長刀、クレイ・バズーカ、ビーム・ライフルが付属。",
 			"• ハンドパーツは長刀保持用の両手に加え、表情付き平手（左手）、ビーム・ライフル用右手が付属。",
@@ -32,7 +75,7 @@
 			"• クリアカラー版限定の水転写デカールが付属！"
 		],
 		"en": [
-			"Dije, officially piloted by Amuro Ray in \"Mobile Suit Z Gundam,\" is now available in clear color!",
+			"Dije, officially piloted by Amuro Ray in \"Mobile Suit ZGundam\", is now available in clear color!",
 			"• While maintaining the beauty of the Zeon form, it is possible to perform action poses that far exceed the range of motion that you can imagine from the silhouette.",
 			"• Beam long sword, clay bazooka, and beam rifle are included as various weapons.",
 			"• Hand parts include both hands for holding the long sword, a palm with an expression (left hand), and a right hand for the beam rifle.",
@@ -43,28 +86,12 @@
 			"• Includes water transfer decals exclusive to the clear color version!"
 		]
 	},
-	"images": [
-		"/images/items/01_2701/01_2701_0.jpg",
-		"/images/items/01_2701/01_2701_1.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2701/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"images": {
+		"product": [
+			{},
+			{}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2701/"
 }

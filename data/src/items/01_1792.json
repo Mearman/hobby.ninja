@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ブリッツガンダム",
 		"en": "MG 1/100 Blitz Gundam"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "01_5221",
+			"url": "https://bandai-hobby.net/item/01_5221/",
+			"ja": "MG 1/100 イージスガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_4272",
+			"url": "https://bandai-hobby.net/item/01_4272/",
+			"ja": "MG 1/100 ガンダムベース限定 パーフェクトストライクガンダム グランドスラム装備型"
+		},
+		{
+			"id": "01_4195",
+			"url": "https://bandai-hobby.net/item/01_4195/",
+			"ja": "MG 1/100 ガンダムベース限定 エクリプスガンダム[クリアカラー]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -18,36 +62,34 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"• 「機動戦士ガンダム SEED」より、漆黒のブリッツガンダムがMG化。 • Xフレームの採用により、迫力あるポージングが可能。 • MGオリジナルのギミックが満載。 • 別売りのアクションベース１に対応。 成形品×15、ホイルシール×1、マーキングシール×1、リード線×1、組立説明書"
+			"• 「機動戦士ガンダムSEED」より、漆黒のブリッツガンダムがMG化。 ■Xフレームの採用により、迫力あるポージングが可能。 ■MGオリジナルのギミックが満載。 ■別売りのアクションベース１に対応。 成形品×15、ホイルシール×1、マーキングシール×1、リード線×1、組立説明書"
 		],
 		"en": [
-			"• From \"Mobile Suit Gundam SEED\", the jet-black Blitz Gundam has been transformed into an MG. • Using an X-frame, powerful poses are possible. • Full of MG original gimmicks. • Compatible with Action Base 1 (sold separately). Molded product x 15, foil seal x 1, marking seal x 1, lead wire x 1, assembly manual"
+			"• From \"Mobile Suit GundamSEED\", the jet-black Blitz Gundam has been transformed into an MG. ■Using an X-frame, powerful poses are possible. ■Full of MG original gimmicks. ■Compatible with Action Base 1 (sold separately). Molded product x 15, foil seal x 1, marking seal x 1, lead wire x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_1792/153_2731.jpg",
-		"/images/items/01_1792/155_2731.jpg",
-		"/images/items/01_1792/156_2731.jpg",
-		"/images/items/01_1792/157_2731.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1792/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5221",
-		"01_4272",
-		"01_4195"
-	],
-	"manualId": "0602"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/157_2731_s_3sfxr60uh0cpv9p8b31ovfkx5da2.jpg",
+				"path": "/images/items/01_1792/157_2731.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_2731_s_lsmqcfqs4k21ic2zswilzxfvct77.jpg",
+				"path": "/images/items/01_1792/153_2731.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2731_s_vkcbosoqg6aob97nwy9pdyhqyqcu.jpg",
+				"path": "/images/items/01_1792/155_2731.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2731_s_dwd7w188c7cgax8uu672cto631hy.jpg",
+				"path": "/images/items/01_1792/156_2731.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1792/"
 }

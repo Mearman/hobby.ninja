@@ -5,6 +5,59 @@
 		"ja": "ＨＧ 1/144 陸戦型ガンダム（パラシュート・パック仕様）",
 		"en": "HG 1/144 Ground type Gundam (parachute pack specification)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -16,7 +69,6 @@
 		"year": 2018,
 		"month": 8
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム 第08MS小隊』より、オープニング映像で印象的な",
@@ -83,54 +135,77 @@
 			"- Product specifications are scheduled as of 20185. Please note that there may be changes."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"１００ｍｍマシンガン",
-			"ビーム・サーベル",
-			"シールド",
-			"１８０ｍｍキャノン",
-			"コンテナ"
+	"accessories": [
+		{
+			"name": {
+				"ja": "１００ｍｍマシンガン"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			}
+		},
+		{
+			"name": {
+				"ja": "１８０ｍｍキャノン"
+			}
+		},
+		{
+			"name": {
+				"ja": "コンテナ"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2362_s_betu2nu7ihotij9c9dzbaoocbioz.jpg",
+				"path": "/images/items/01_1439/153_2362.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2362_s_ag21umj3pvnyt86iujkkvxib2m32.jpg",
+				"path": "/images/items/01_1439/155_2362.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2362_s_lu85idzg969q0rvmtrsog2rjk7s5.jpg",
+				"path": "/images/items/01_1439/156_2362.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2362_s_xw7305eaqoh9zbc01bsqgkm5j4uh.jpg",
+				"path": "/images/items/01_1439/157_2362.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2362_s_bn1936pideki5k7rt29m86vb54da.jpg",
+				"path": "/images/items/01_1439/158_2362.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2362_s_hoyoqu33ou4yi03b2m1dd9vep1oh.jpg",
+				"path": "/images/items/01_1439/159_2362.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2362_s_lzyeo5s2m6b4f4tjuzytt64nyktv.jpg",
+				"path": "/images/items/01_1439/189_2362.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2362_s_ssj9ov435qddf3m52xxuqca6zp07.jpg",
+				"path": "/images/items/01_1439/190_2362.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2362_s_qod299ngoi3ny0eg5vnrkmv7cqxc.jpg",
+				"path": "/images/items/01_1439/191_2362.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2362_s_bjktpmspxddy4c34hrmj06oj06rc.jpg",
+				"path": "/images/items/01_1439/192_2362.jpg"
+			}
 		],
-		"en": [
-			"100mm machine gun",
-			"beam saber",
-			"Seal de",
-			"180mm cannon",
-			"container"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1439/153_2362.jpg",
-		"/images/items/01_1439/155_2362.jpg",
-		"/images/items/01_1439/156_2362.jpg",
-		"/images/items/01_1439/157_2362.jpg",
-		"/images/items/01_1439/158_2362.jpg",
-		"/images/items/01_1439/159_2362.jpg",
-		"/images/items/01_1439/189_2362.jpg",
-		"/images/items/01_1439/190_2362.jpg",
-		"/images/items/01_1439/191_2362.jpg",
-		"/images/items/01_1439/192_2362.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1439/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla",
-		"hguc"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	],
-	"manualId": "2645",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_1439/"
 }

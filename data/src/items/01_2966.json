@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムヘビーアームズ",
 		"en": "HG 1/144 Gundam Heavy Arms"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5590",
+			"url": "https://bandai-hobby.net/item/01_5590/",
+			"ja": "HG 1/144 ウイングガンダムゼロ [クリアカラー]"
+		},
+		{
+			"id": "item-1000213249",
+			"url": "https://p-bandai.jp/item/item-1000213249/",
+			"ja": "ＨＧ 1/144 アルトロンガンダム"
+		},
+		{
+			"id": "01_5340",
+			"url": "https://bandai-hobby.net/item/01_5340/",
+			"ja": "HG 1/144 シェンロンガンダム [クリアカラー]"
+		},
+		{
+			"id": "item-1000183318",
+			"url": "https://p-bandai.jp/item/item-1000183318/",
+			"ja": "ＨＧ 1/144 ガンダムデスサイズヘル"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,59 +62,74 @@
 		"day": 24
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『新機動戦記ガンダムW』より、圧倒的な火力を誇るガンダムヘビーアームズがHG最新フォーマットで登場！",
-			"■胸部ガトリング砲、肩部ホーミングミサイル、脚部のマイクロミサイルなど、多彩な武装を搭載。",
-			"■ビームガトリングは、設定通り機体の左腕とバックパックの２箇所に装着可能。",
-			"■右腕には付属のアーミーナイフを固定するギミックを搭載。",
-			"■迫力のフルオープンギミックを再現可能。"
+			"• 胸部ガトリング砲、肩部ホーミングミサイル、脚部のマイクロミサイルなど、多彩な武装を搭載。",
+			"• ビームガトリングは、設定通り機体の左腕とバックパックの２箇所に装着可能。",
+			"• 右腕には付属のアーミーナイフを固定するギミックを搭載。",
+			"• 迫力のフルオープンギミックを再現可能。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam W\", Gundam Heavy Arms, which boasts overwhelming firepower, is now available in the latest HG format!",
+			"From \"Mobile Suit GundamW\", Gundam Heavy Arms, which boasts overwhelming firepower, is now available in the latest HG format!",
 			"• Equipped with a variety of weapons, including a chest gatling gun, shoulder homing missiles, and leg micro missiles.",
 			"• Beam Gatling can be attached to two places: the left arm of the aircraft and the backpack.",
 			"• Equipped with a gimmick on the right arm to secure the included army knife.",
 			"• A powerful full-open gimmick can be reproduced."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームガトリング×1",
-			"アーミーナイフ×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームガトリング"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アーミーナイフ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3940_s_av4s2tq1jmeqoyll4uklicju2n28.jpg",
+				"path": "/images/items/01_2966/153_3940.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3940_s_2d14bbxkwac99to67w84757o3xww.jpg",
+				"path": "/images/items/01_2966/155_3940.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3940_s_bu0pqnuy137ujtgne26jxhenixiw.jpg",
+				"path": "/images/items/01_2966/156_3940.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3940_s_hi9cbn7ke3r18kapptb4tb4k1xt3.jpg",
+				"path": "/images/items/01_2966/157_3940.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3940_s_fahr06pk9jup0ghijuze6fxz1a3t.jpg",
+				"path": "/images/items/01_2966/158_3940.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3940_s_wk04tx55lhx6t9c4je22kxx8rptt.jpg",
+				"path": "/images/items/01_2966/159_3940.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3940_s_kvfts4uw2g54m70vzu9j7vaszm44.jpg",
+				"path": "/images/items/01_2966/189_3940.jpg"
+			}
 		],
-		"en": [
-			"Beam Gatling x1",
-			"Army knife x1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2966/153_3940.jpg",
-		"/images/items/01_2966/155_3940.jpg",
-		"/images/items/01_2966/156_3940.jpg",
-		"/images/items/01_2966/157_3940.jpg",
-		"/images/items/01_2966/158_3940.jpg",
-		"/images/items/01_2966/159_3940.jpg",
-		"/images/items/01_2966/189_3940.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2966/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5590",
-		"item-1000213249",
-		"01_5340",
-		"item-1000183318"
-	],
-	"manualId": "0498"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2966/"
 }

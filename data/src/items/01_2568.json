@@ -2,9 +2,46 @@
 	"id": "01_2568",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット クロスシルエットフレーム[レッド]",
-		"en": "SD Gundam Cross Silhouette Cross Silhouette Frame [Red]"
+		"ja": "SDガンダム クロスシルエット クロスシルエットフレーム[レッド]",
+		"en": "SDGundam Cross Silhouette Cross Silhouette Frame [Red]"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5275",
+			"url": "https://bandai-hobby.net/item/01_5275/",
+			"ja": "SDガンダム クロスシルエット マイティーストライクフリーダムガンダム"
+		},
+		{
+			"id": "01_5191",
+			"url": "https://bandai-hobby.net/item/01_5191/",
+			"ja": "SDガンダム クロスシルエット ガンダムキャリバーン"
+		},
+		{
+			"id": "01_5014",
+			"url": "https://bandai-hobby.net/item/01_5014/",
+			"ja": "SDガンダム クロスシルエット F9ノ1改"
+		},
+		{
+			"id": "01_4893",
+			"url": "https://bandai-hobby.net/item/01_4893/",
+			"ja": "SDガンダムクロスシルエット ユニコーンガンダム2号機バンシィ（デストロイモード）＆バンシィ・ノルン パーツセット"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -28,35 +65,46 @@
 			"• You can make the SD cross silhouette look taller!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"クロスシルエットフレーム[レッド]×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "クロスシルエットフレーム[レッド]"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3493_s_253m1xk6okobojgt7634h5hy5h57.jpg",
+				"path": "/images/items/01_2568/153_3493.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3493_s_qwgjd5d9eony3gfftgyoo52ctzp3.jpg",
+				"path": "/images/items/01_2568/155_3493.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3493_s_i0wizv372ftd2l3xkawm0kg97x8q.jpg",
+				"path": "/images/items/01_2568/156_3493.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3493_s_biq0lgi17077dclquhk1f8x4pzax.jpg",
+				"path": "/images/items/01_2568/157_3493.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3493_s_aq35k0f5kf81rgo2cspkvxpshg0n.jpg",
+				"path": "/images/items/01_2568/158_3493.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3493_s_esp10z34r3wpzlppjtxx0vbw802o.jpg",
+				"path": "/images/items/01_2568/159_3493.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3493_s_8td1b4t7pgn6hkpo4flvuxjf6q7h.jpg",
+				"path": "/images/items/01_2568/189_3493.jpg"
+			}
 		],
-		"en": [
-			"Cross silhouette frame [red] x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2568/153_3493.jpg",
-		"/images/items/01_2568/155_3493.jpg",
-		"/images/items/01_2568/156_3493.jpg",
-		"/images/items/01_2568/157_3493.jpg",
-		"/images/items/01_2568/158_3493.jpg",
-		"/images/items/01_2568/159_3493.jpg",
-		"/images/items/01_2568/189_3493.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2568/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5275",
-		"01_5191",
-		"01_5014",
-		"01_4893"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2568/"
 }

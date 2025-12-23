@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "RG 1/144 ガンダムベース限定 ユニコーンガンダム ペルフェクティビリティ",
-		"en": "RG 1/144 Gundam Base Limited Unicorn Gundam Perfectibility"
+		"en": "RG 1/144 THE GUNDAM BASE LIMITED UNICORN GUNDAM PERFECTIBILITY"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］",
+			"en": "RG [REAL GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]",
+			"en": "MOBILE SUIT GUNDAM UC (Unicorn)"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2292",
+			"url": "https://bandai-hobby.net/item/01_2292/",
+			"ja": "RG 1/144 ガンダムベース限定 ユニコーンガンダム2号機 バンシィ・ノルン (デストロイモード) (LIGHTING MODEL)"
+		},
+		{
+			"id": "item-1000133044",
+			"url": "https://p-bandai.jp/item/item-1000133044",
+			"ja": "ＲＧ 1/144 拡張ユニット アームド・アーマーＶＮ／ＢＳ"
+		},
+		{
+			"id": "item-1000130551",
+			"url": "https://p-bandai.jp/item/item-1000130551",
+			"ja": "ＲＧ 1/144 ユニコーンガンダム２号機 バンシィ・ノルン （最終決戦仕様）"
+		},
+		{
+			"id": "01_2028",
+			"url": "https://bandai-hobby.net/item/01_2028/",
+			"ja": "RG 1/144 フルアーマー・ユニコーンガンダム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 8030,
 		"currency": "JPY",
@@ -18,47 +64,44 @@
 		"day": 7
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"『機動戦士ガンダム UC』より、ペルフェクティビリティが登場！",
+			"『機動戦士ガンダムUC』より、ペルフェクティビリティが登場！",
 			"• RGならではの圧倒的なディテール表現、そしてパーツ分割によるカラー表現により、精巧なペルフェクティビリティが誕生！",
 			"• 各アームド・アーマーは展開と格納状態が再現可能！",
 			"• ハイパー・ビーム・ジャベリンをはじめとした豊富な武装に加え、抜群の可動域を確保し、大胆な―ポージングが可能！"
 		],
 		"en": [
-			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"Perfectibility appears from \"Mobile Suit Gundam UC\"!",
-			"• Exquisite perfection is born with overwhelming detail expression unique to RG and color expression by dividing parts!",
-			"• Each armed armor can be deployed and retracted!",
-			"• In addition to a wealth of armaments including the Hyper Beam Javelin, it also has an outstanding range of motion, allowing for bold poses!"
+			"For GUNPLA fans around the world, this is a limited edition GUNPLA at the official GUNPLA complex \"GUNDAM Base\". From \"MOBILE SUIT GUNDAM UC\", Perfectibility is here!",
+			"• RG's unique overwhelming detail expression and color expression by dividing parts create exquisite perfection!",
+			"• Each Armed Armor can be deployed and retracted!",
+			"• In addition to a wide variety of weapons such as Hyper Beam Javelin, it has an outstanding range of motion and can pose boldly!"
 		]
 	},
-	"images": [
-		"/images/items/01_3060/1000148195_1.jpg",
-		"/images/items/01_3060/1000148195_2.jpg",
-		"/images/items/01_3060/1000148195_3.jpg",
-		"/images/items/01_3060/1000148195_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148195_1.jpg",
+				"path": "/images/items/01_3060/1000148195_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148195_2.jpg",
+				"path": "/images/items/01_3060/1000148195_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148195_3.jpg",
+				"path": "/images/items/01_3060/1000148195_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148195_4.jpg",
+				"path": "/images/items/01_3060/1000148195_4.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3060/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2292",
-		"item-1000133044",
-		"item-1000130551",
-		"01_2028"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_3060/"
 	}
 }

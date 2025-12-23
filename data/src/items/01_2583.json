@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "PG 1/60 パーフェクトストライクガンダム",
-		"en": "PG 1/60 Perfect Strike Gundam"
+		"en": "PG 1/60 PERFECT STRIKE GUNDAM"
 	},
+	"brands": [
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］",
+			"en": "PG [PERFECT GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED",
+			"en": "MOBILE SUIT GUNDAM SEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000140845",
+			"url": "https://p-bandai.jp/item/item-1000140845/",
+			"ja": "ＰＧ 1/60 ストライクガンダム用 パーフェクトストライクガンダム拡張パーツ"
+		},
+		{
+			"id": "01_1913",
+			"url": "https://bandai-hobby.net/item/01_1913/",
+			"ja": "PG 1/60 ガンダムベース限定 ガンダムアストレイ レッドフレーム[メタリック]"
+		},
+		{
+			"id": "01_4873",
+			"url": "https://bandai-hobby.net/item/01_4873/",
+			"ja": "PG 1/60 エールストライクガンダム+スカイグラスパー(クリアパールシフトバージョン)"
+		},
+		{
+			"id": "01_4669",
+			"url": "https://bandai-hobby.net/item/01_4669/",
+			"ja": "PG 1/60 スカイグラスパー+エールストライカー"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 27500,
 		"currency": "JPY",
@@ -18,67 +64,126 @@
 		"day": 22
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED』より、最新のフォーマットにリニューアルされたPGストライクガンダムが登場！",
+			"『機動戦士ガンダムSEED』より、最新のフォーマットにリニューアルされたPGストライクガンダムが登場！",
 			"• 頭部をはじめ、装甲各所に新規造形を追加。より洗練されたストライクガンダムに。",
 			"• 内部フレームにガンメタル、メッキ部にはクロム表現を採用。成形色の青はより濃い色に変更することで、存在感をさらに強めた。",
 			"• 新規装甲の各所にエクストラフィニッシュパーツが導入され、より洗練されたデザインとなっている。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam SEED\" comes the PG Strike Gundam, which has been renewed to the latest format!",
-			"• New modeling added to various parts of the armor, including the head. A more sophisticated Strike Gundam.",
-			"• Gunmetal is used for the internal frame, and chrome is used for the plating part. The blue molding color was changed to a darker color to further strengthen its presence.",
-			"• Extra finish parts have been introduced in various parts of the new armor, resulting in a more sophisticated design."
+			"From \"MOBILE SUIT GUNDAM SEED\", PG Strike GUNDAM is now available in the latest format!",
+			"• New modeling has been added to the head and various parts of the armor. For a more sophisticated strike GUNDAM.",
+			"• Gunmetal is used for the internal frame and chrome expression is used for the plating part. The molding color blue was changed to a darker color to further strengthen its presence."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"LEDパーツ（黄）×1",
-			"ストライク新規装甲パーツ×1式",
-			"エールストライカーパック×1式",
-			"ソードストライカーパック×1式",
-			"ランチャーストライカーパック×1式",
-			"テトロンシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "LEDパーツ（黄）",
+				"en": "• LED parts (yellow)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ストライク新規装甲パーツ",
+				"en": "• 1 set × new Strike armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "エールストライカーパック",
+				"en": "• 1 set × Yale Striker Pack"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ソードストライカーパック",
+				"en": "• 1 set × Sword Striker Pack"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ランチャーストライカーパック",
+				"en": "• 1 set × Launcher Striker Pack"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "テトロンシール",
+				"en": "• Tetoron Seal"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143222_1.jpg",
+				"path": "/images/items/01_2583/1000143222_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143222_2.jpg",
+				"path": "/images/items/01_2583/1000143222_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143222_3.jpg",
+				"path": "/images/items/01_2583/1000143222_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143222_4.jpg",
+				"path": "/images/items/01_2583/1000143222_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143222_5.jpg",
+				"path": "/images/items/01_2583/1000143222_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143222_6.jpg",
+				"path": "/images/items/01_2583/1000143222_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143222_7.jpg",
+				"path": "/images/items/01_2583/1000143222_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143222_8.jpg",
+				"path": "/images/items/01_2583/1000143222_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143222_9.jpg",
+				"path": "/images/items/01_2583/1000143222_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143222_10.jpg",
+				"path": "/images/items/01_2583/1000143222_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143222_11.jpg",
+				"path": "/images/items/01_2583/1000143222_11.jpg"
+			}
 		],
-		"en": [
-			"LED parts (yellow) x 1",
-			"Strike new armor parts x 1 set",
-			"Ale Striker Pack x 1",
-			"Sword striker pack x 1 set",
-			"Launcher Striker Pack x 1 set",
-			"Tetron Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2583/1000143222_1.jpg",
-		"/images/items/01_2583/1000143222_10.jpg",
-		"/images/items/01_2583/1000143222_11.jpg",
-		"/images/items/01_2583/1000143222_2.jpg",
-		"/images/items/01_2583/1000143222_3.jpg",
-		"/images/items/01_2583/1000143222_4.jpg",
-		"/images/items/01_2583/1000143222_5.jpg",
-		"/images/items/01_2583/1000143222_6.jpg",
-		"/images/items/01_2583/1000143222_7.jpg",
-		"/images/items/01_2583/1000143222_8.jpg",
-		"/images/items/01_2583/1000143222_9.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2583/",
-	"brandIds": [
-		"pg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000140845",
-		"01_1913",
-		"01_4873",
-		"01_4669"
-	],
-	"manualId": "1061"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2583/"
+	}
 }

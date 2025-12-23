@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 MS-06J 量産型ザク Ver.2.0",
 		"en": "MG 1/100 MS-06J Mass Production Zaku Ver.2.0"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -17,36 +61,34 @@
 		"month": 4
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム」より、MGシリーズにモビルスーツの開発系譜を意識した“ザク”のVer.2.0が登場！ ねじれや各部のリンク可動により、前屈みポーズなどこれまで取る事のできなかった、新たな可動領域を再現 ショルダーアーマーのインナーフレームを再現、外郭は一体成型でスパイクを再現 コクピットハッチは両側とも開閉し、背面側レバー操作により、コクピットシートが左右に可動 カメラアイは首の可動にリンクした視線移動ギミックを搭載 ザク・マシンガン、ザク・バズーカ、ヒート・ホーク、脚部3連装ミサイルポッドなど代表的な地上装備が付属"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam \" comes Ver.2.0 of \" Zaku\", which is based on the development lineage of mobile suits in the MG series! By twisting and linking the various parts, you can recreate new ranges of movement that were previously impossible, such as bending forward poses.The inner frame of the shoulder armor is reproduced, and the outer shell is integrally molded to reproduce the spikes.The cockpit hatch can be opened and closed on both sides, and the cockpit seat can be moved left and right by operating the lever on the back side.The camera eye is equipped with a line-of-sight movement gimmick that is linked to the movement of the neck. Includes typical ground equipment such as Zaku machine gun, Zaku bazooka, Heat Hawk, and triple leg missile pods."
+			"From \"Mobile Suit Gundam\" comes Ver.2.0 of \"Zaku\", which is based on the development lineage of mobile suits in the MG series! By twisting and linking the various parts, you can recreate new ranges of movement that were previously impossible, such as bending forward poses.The inner frame of the shoulder armor is reproduced, and the outer shell is integrally molded to reproduce the spikes.The cockpit hatch can be opened and closed on both sides, and the cockpit seat can be moved left and right by operating the lever on the back side.The camera eye is equipped with a line-of-sight movement gimmick that is linked to the movement of the neck. Includes typical ground equipment such as Zaku machine gun, Zaku bazooka, Heat Hawk, and triple leg missile pods."
 		]
 	},
-	"images": [
-		"/images/items/01_1646/153_2556.jpg",
-		"/images/items/01_1646/155_2556.jpg",
-		"/images/items/01_1646/156_2556.jpg",
-		"/images/items/01_1646/157_2556.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1646/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
-	"manualId": "0830"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2556_s_okpmwr1yh8uxc04lst4oz3uku85v.jpg",
+				"path": "/images/items/01_1646/153_2556.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2556_s_d8n471gfn5yalxff85uqn3mjipza.jpg",
+				"path": "/images/items/01_1646/155_2556.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2556_s_f1ffouthbu3xy94etfaavz7pgiml.jpg",
+				"path": "/images/items/01_1646/156_2556.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2556_s_bz6bi9gxdbpxk8qcskqfwkki4ebl.jpg",
+				"path": "/images/items/01_1646/157_2556.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1646/"
 }

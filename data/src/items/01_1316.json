@@ -5,6 +5,50 @@
 		"ja": "HGBD 1/144 グリモアレッドベレー",
 		"en": "HGBD 1/144 Grimoire Red Beret"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 28
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 『ガンダムビルドダイバーズ』第7機甲師団を率いるロンメルが操る、ミリタリー仕様のグリモアカスタム機が登場！",
@@ -28,65 +71,99 @@
 			"• ライフルは分裂し、個別の武装パーツとしても装備可能！"
 		],
 		"en": [
-			"• ``Gundam Build Divers'' A military-spec grimoire custom machine operated by Rommel, leader of the 7th Armored Division, is now available!",
+			"• \"Gundam Build Divers\" A military-spec grimoire custom machine operated by Rommel, leader of the 7th Armored Division, is now available!",
 			"• Practical improvements have been made to various parts based on the concept of expanding Grimoire's functionality!",
-			"• The scissor claws on the legs can be expanded to recreate flashy action poses such as cutting at enemies!",
-			"• Two mini-mores that function as independent machines are included and can be stored inside the school bag!",
-			"• The rifle can be split and equipped as individual armed parts!"
+			"• The scissor claws on the legs can be expanded to create flashy action poses such as slashing at enemies!",
+			"• Comes with 2 mini mowers that function as independent machines and can be stored inside your school bag!",
+			"• The rifle can be split and equipped as separate armed parts!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"プラズマナイフ×3",
-			"ライフル×1",
-			"ミニモア×2",
-			"シールド×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "プラズマナイフ"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ミニモア"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 12
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2245_s_1t2qqxv3tms2s88qm7pnp8e5sj4p.jpg",
+				"path": "/images/items/01_1316/153_2245.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2245_s_tfoxegeag04xyciutljngp36pzzz.jpg",
+				"path": "/images/items/01_1316/155_2245.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2245_s_gwu8mnr8zag9deahm93wbn6letap.jpg",
+				"path": "/images/items/01_1316/156_2245.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2245_s_z3vg02vrvchpgaodlib4cop82woj.jpg",
+				"path": "/images/items/01_1316/157_2245.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2245_s_ctvedhan53os1um0uj7c34w0osed.jpg",
+				"path": "/images/items/01_1316/158_2245.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2245_s_pprs69z16rk0khl0milxxopabo0y.jpg",
+				"path": "/images/items/01_1316/159_2245.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2245_s_yuyy30po7qsnhsrt4hs7duwvnb2t.jpg",
+				"path": "/images/items/01_1316/189_2245.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2245_s_ngcqszwrbw3fckos4mkeuqfpyc4f.jpg",
+				"path": "/images/items/01_1316/190_2245.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2245_s_1r5n627dnkdk5jrau4f5rpet8j8i.jpg",
+				"path": "/images/items/01_1316/191_2245.jpg"
+			}
 		],
-		"en": [
-			"Plasma knife x3",
-			"Rifle x 1",
-			"Minimore x2",
-			"Seal × 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×12",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 12",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1316/153_2245.jpg",
-		"/images/items/01_1316/155_2245.jpg",
-		"/images/items/01_1316/156_2245.jpg",
-		"/images/items/01_1316/157_2245.jpg",
-		"/images/items/01_1316/158_2245.jpg",
-		"/images/items/01_1316/159_2245.jpg",
-		"/images/items/01_1316/189_2245.jpg",
-		"/images/items/01_1316/190_2245.jpg",
-		"/images/items/01_1316/191_2245.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1316/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "1016"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1316/"
 }

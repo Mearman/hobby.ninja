@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ジオング",
 		"en": "HGUC 1/144 Zeon"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -17,7 +66,6 @@
 		"month": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"好評のHGUCシリーズに，遂にガンダムの最後のライバル機「ジオング」が登場。",
@@ -32,29 +80,30 @@
 			"Please enjoy it together with Gundam."
 		]
 	},
-	"images": [
-		"/images/items/01_1088/153_201.jpg",
-		"/images/items/01_1088/155_201.jpg",
-		"/images/items/01_1088/156_201.jpg",
-		"/images/items/01_1088/157_201.jpg",
-		"/images/items/01_1088/158_201.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1088/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
-	"manualId": "0222"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_201_s_h3li8jt1dbflsalxwugwqhb32p1w.jpg",
+				"path": "/images/items/01_1088/153_201.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_201_s_vl0th0v87g2hyxwxnrwl66kbk4mx.jpg",
+				"path": "/images/items/01_1088/155_201.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_201_s_mw839ctkv5glzhslrn6kismp9moi.jpg",
+				"path": "/images/items/01_1088/156_201.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_201_s_t453l48jr3cl2bnxbvpi8j96hulo.jpg",
+				"path": "/images/items/01_1088/157_201.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_201_s_cvq0u5wthg5p7vyxm3537z11nan8.jpg",
+				"path": "/images/items/01_1088/158_201.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1088/"
 }

@@ -5,6 +5,43 @@
 		"ja": "LBXイフリート",
 		"en": "LBX Ifrit"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "lbx",
+			"url": "https://bandai-hobby.net/series/lbx/",
+			"ja": "ダンボール戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000215196",
+			"url": "https://p-bandai.jp/item/item-1000215196/",
+			"ja": "ＬＢＸイカロス・フォース"
+		},
+		{
+			"id": "item-1000215197",
+			"url": "https://p-bandai.jp/item/item-1000215197/",
+			"ja": "ＬＢＸイカロス・ゼロ"
+		},
+		{
+			"id": "item-1000210042",
+			"url": "https://p-bandai.jp/item/item-1000210042/",
+			"ja": "ＬＢＸエルシオン"
+		},
+		{
+			"id": "item-1000210041",
+			"url": "https://p-bandai.jp/item/item-1000210041/",
+			"ja": "ＬＢＸペルセウス"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -28,35 +65,44 @@
 			"• Effect parts included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"エフェクトパーツ×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "エフェクトパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3517_s_k3a23no701we7ykszotp7k5fdm4h.jpg",
+				"path": "/images/items/01_2594/153_3517.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3517_s_vr59cqq00tq00989rb6822v43nyp.jpg",
+				"path": "/images/items/01_2594/155_3517.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3517_s_ecbbffckjmz9c89u3ekp1zlu4qx7.jpg",
+				"path": "/images/items/01_2594/156_3517.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3517_s_6ug65pe16gzced24txzwg3wpgxav.jpg",
+				"path": "/images/items/01_2594/157_3517.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3517_s_kl3jc5zsc3qurzswn34p1ti81zx4.jpg",
+				"path": "/images/items/01_2594/158_3517.jpg"
+			}
 		],
-		"en": [
-			"Effect parts x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2594/153_3517.jpg",
-		"/images/items/01_2594/155_3517.jpg",
-		"/images/items/01_2594/156_3517.jpg",
-		"/images/items/01_2594/157_3517.jpg",
-		"/images/items/01_2594/158_3517.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2594/",
-	"brandIds": [],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2594/"
 }

@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "HGFC 1/144 ノーベルガンダム",
-		"en": "HGFC 1/144 Nobel Gundam"
+		"en": "1/144 HGUC NOBELL GUNDAM"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "ggundam",
+			"url": "https://bandai-hobby.net/series/ggundam/",
+			"ja": "機動武闘伝Ｇガンダム",
+			"en": "MOBILE FIGHTER G GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000213247",
+			"url": "https://p-bandai.jp/item/item-1000213247/",
+			"ja": "ＨＧ 1/144 ドラゴンガンダム"
+		},
+		{
+			"id": "item-1000194970",
+			"url": "https://p-bandai.jp/item/item-1000194970/",
+			"ja": "ＨＧ 1/144 ガンダムマックスター"
+		},
+		{
+			"id": "item-1000182906",
+			"url": "https://p-bandai.jp/item/item-1000182906/",
+			"ja": "ＨＧ 1/144 ガンダムローズ"
+		},
+		{
+			"id": "item-1000144970",
+			"url": "https://p-bandai.jp/item/item-1000144970/",
+			"ja": "ＨＧ 1/144 デスビースト"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,38 +64,48 @@
 		"day": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• HGFC第２弾は、「機動武闘伝G ガンダム」よりノーベルガンダム！ • PET素材の５本のリボンが付属。付属の台座を用いて飾れば、躍動感ある演出が可能。 • 腰にスイング機能を搭載。女性らしいポーズを再現できる。 • 印象的な「お姫様だっこ」シーンを再現するため、HGFCゴッドガンダム専用の平手を追加。 成形品×5、PET資材×1、ホイルシール×1、組立説明書"
+			"• HGFC第２弾は、「機動武闘伝Gガンダム」よりノーベルガンダム！ ■PET素材の５本のリボンが付属。付属の台座を用いて飾れば、躍動感ある演出が可能。 ■腰にスイング機能を搭載。女性らしいポーズを再現できる。 ■印象的な「お姫様だっこ」シーンを再現するため、HGFCゴッドガンダム専用の平手を追加。 成形品×5、PET資材×1、ホイルシール×1、組立説明書"
 		],
 		"en": [
-			"• The second HGFC is Nobel Gundam from \"Mobile Fighter G Gundam \"! • Five ribbons made of PET material are included. If you display it using the included pedestal, you can create a dynamic performance. • Equipped with a swing function on the waist. You can recreate feminine poses. • In order to recreate the impressive \" Princess's Cuddling\" scene, HGFC God Gundam's exclusive palm has been added. Molded product x 5, PET material x 1, foil seal x 1, assembly manual"
+			"• HGFC Vol. 2 is Nobel GUNDAM from \"Mobile Fighter G GUNDAM\"!",
+			"• Comes with 5 ribbons made of PET material. If you decorate it using the attached pedestal, you can create a lively production.",
+			"• Equipped with a swing function at the waist. You can reproduce feminine poses.",
+			"• To recreate the impressive \"princess dakko\" scene, a special slap hand for HGFC God GUNDAM has been added. Molded product ×5, PET material ×1, foil seal ×1, assembly instructions"
 		]
 	},
-	"images": [
-		"/images/items/01_1773/1000092186_1.jpg",
-		"/images/items/01_1773/1000092186_2.jpg",
-		"/images/items/01_1773/1000092186_3.jpg",
-		"/images/items/01_1773/1000092186_4.jpg",
-		"/images/items/01_1773/1000092186_5.jpg",
-		"/images/items/01_1773/1000092186_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092186_1.jpg",
+				"path": "/images/items/01_1773/1000092186_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092186_2.jpg",
+				"path": "/images/items/01_1773/1000092186_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092186_3.jpg",
+				"path": "/images/items/01_1773/1000092186_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092186_4.jpg",
+				"path": "/images/items/01_1773/1000092186_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092186_5.jpg",
+				"path": "/images/items/01_1773/1000092186_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092186_6.jpg",
+				"path": "/images/items/01_1773/1000092186_6.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1773/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"ggundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000213247",
-		"item-1000194970",
-		"item-1000182906",
-		"item-1000144970"
-	],
-	"manualId": "0428"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1773/"
+	}
 }

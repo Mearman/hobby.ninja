@@ -5,6 +5,49 @@
 		"ja": "HG ガンダムベース限定 モビルドールメイ[ガンダムベースカラー]",
 		"en": "HG Gundam Base Limited Mobile Doll May [Gundam Base Color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -29,41 +72,49 @@
 		],
 		"en": [
 			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"From \"Gundam Build Divers Re:RISE \", \" Mobile Doll May\" is now available in a refreshing blue Gundam base color!",
+			"From \"Gundam Build Divers Re:RISE\", \"Mobile Doll May\" is now available in a refreshing blue Gundam base color!",
 			"• Gundam base original special marking seal included!",
 			"• It is possible to rearrange the MS state that Mei is piloting in GBN and her appearance in real life!",
 			"• Three types of face parts are included. Seals and water transfer decals are included for the eyes!",
 			"• Comes with a clear blue pedestal for easy posing!"
 		]
 	},
-	"images": [
-		"/images/items/01_3079/153_4048.jpg",
-		"/images/items/01_3079/155_4048.jpg",
-		"/images/items/01_3079/156_4048.jpg",
-		"/images/items/01_3079/157_4048.jpg",
-		"/images/items/01_3079/158_4048.jpg",
-		"/images/items/01_3079/159_4048.jpg",
-		"/images/items/01_3079/189_4048.jpg",
-		"/images/items/01_3079/190_4048.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3079/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4048_s_diw28u67r72i1nv3c16kcbc2lobd.jpg",
+				"path": "/images/items/01_3079/153_4048.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4048_s_np9swe4phn5kbf84fildp0jtss5d.jpg",
+				"path": "/images/items/01_3079/155_4048.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4048_s_u8d5nvblbdzafyd3qo6l2ln2sixz.jpg",
+				"path": "/images/items/01_3079/156_4048.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4048_s_ovjz5cxsyhmx2wjvmupdjwcjetlx.jpg",
+				"path": "/images/items/01_3079/157_4048.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4048_s_ph9y4vpw0nmrpd7jczrsncscf2qe.jpg",
+				"path": "/images/items/01_3079/158_4048.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4048_s_pk3z8e3oaoo1fjn7ib5sfqsglhge.jpg",
+				"path": "/images/items/01_3079/159_4048.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4048_s_oyt2mojggq1jn7jx2e0eklg6q6g6.jpg",
+				"path": "/images/items/01_3079/189_4048.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4048_s_hjcvgepy7l5h54aqjritv2j5hgwn.jpg",
+				"path": "/images/items/01_3079/190_4048.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3079/"
 }

@@ -2,9 +2,58 @@
 	"id": "01_1838",
 	"type": "item",
 	"name": {
-		"ja": "ガンダムデカールNo.25 MG 1/100 ガンダム F91用",
-		"en": "Gundam Decal No.25 MG 1/100 for Gundam F91"
+		"ja": "ガンダムデカールNo.25 MG 1/100 ガンダムF91用",
+		"en": "Gundam Decal No.25 MG 1/100 for GundamF91"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		},
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "gundamf91",
+			"url": "https://bandai-hobby.net/series/gundamf91/",
+			"ja": "機動戦士ガンダムF91"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000155996",
+			"url": "https://p-bandai.jp/item/item-1000155996/",
+			"ja": "ＭＧ 1/100 ガンダムＦ９１ Ｖｅｒ．２．０［チタニウムフィニッシュ］"
+		},
+		{
+			"id": "item-1000130517",
+			"url": "https://p-bandai.jp/item/item-1000130517",
+			"ja": "ＭＧ 1/100 ガンダムＦ９１ Ｖｅｒ．２．０（残像イメージカラー）"
+		},
+		{
+			"id": "01_1349",
+			"url": "https://bandai-hobby.net/item/01_1349/",
+			"ja": "MG 1/100 ガンダムF91 Ver.2.0"
+		},
+		{
+			"id": "01_5608",
+			"url": "https://bandai-hobby.net/item/01_5608/",
+			"ja": "MG ガンダムＦ９１"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,38 +67,26 @@
 		"day": 5
 	},
 	"targetAge": 8,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"100点以上のラインナップを誇る、大人気ガンダムデカールのシリーズ商品が登場。",
-			"MG 1/100 ガンダム F91用のデカールです。",
+			"MG 1/100 ガンダムF91用のデカールです。",
 			"水転写式デカール"
 		],
 		"en": [
 			"Introducing the popular Gundam decal series, which boasts a lineup of over 100 items.",
-			"Decal for MG 1/100 Gundam F91.",
+			"Decal for MG 1/100 GundamF91.",
 			"water transfer decal"
 		]
 	},
-	"images": [
-		"/images/items/01_1838/153_2775.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1838/",
-	"brandIds": [
-		"mg",
-		"gundam_decal"
-	],
-	"seriesIds": [
-		"gundamf91"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000155996",
-		"item-1000130517",
-		"01_1349",
-		"01_5608"
-	],
-	"manualId": "0825"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2775_s_exs7smf8fff5q238i3n2ixkueixq.jpg",
+				"path": "/images/items/01_1838/153_2775.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1838/"
 }

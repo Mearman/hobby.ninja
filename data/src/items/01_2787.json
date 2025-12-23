@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ウィンダム",
 		"en": "HG 1/144 Windham"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000203308",
+			"url": "https://p-bandai.jp/item/item-1000203308/",
+			"ja": "ＨＧ 1/144 ダークダガーＬ"
+		},
+		{
+			"id": "01_5097",
+			"url": "https://bandai-hobby.net/item/01_5097/",
+			"ja": "HG 1/144 デストロイガンダム"
+		},
+		{
+			"id": "01_3739",
+			"url": "https://bandai-hobby.net/item/01_3739/",
+			"ja": "HG 1/144 デスティニーガンダム(ハイネ専用機)[クリアカラー]"
+		},
+		{
+			"id": "item-1000157417",
+			"url": "https://p-bandai.jp/item/item-1000157417/",
+			"ja": "ＨＧ 1/144 ウィンダム（ネオ・ロアノーク専用機）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -18,63 +62,92 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED DESTINY』より、地球連合軍の主力量産型MS「ウィンダム」がHGシリーズにラインアップ！",
+			"『機動戦士ガンダムSEED DESTINY』より、地球連合軍の主力量産型MS「ウィンダム」がHGシリーズにラインアップ！",
 			"• 関節構造にはFINE BUILDを採用。",
 			"• ジェットストライカーの各部が可動。",
 			"• 同一規格の装備換装システム「ストライカーパックシステム」を再現したさまざまなストライカーパックとの連動が可能。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam SEED DESTINY \", the Earth Alliance's main mass-produced MS \" Wyndham\" is added to the HG series!",
+			"From \"Mobile Suit GundamSEED DESTINY\", the Earth Alliance's main mass-produced MS \"Windham\" is now available in the HG series!",
 			"• FINE BUILD is used for the joint structure.",
 			"• Each part of the jet striker is movable.",
 			"• Can be linked with various Striker Packs that reproduce the same standard equipment replacement system \"Striker Pack System\"."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームライフル×1",
-			"ビームサーベル×2",
-			"攻盾タイプE×1",
-			"ジェットストライカーパック×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "攻盾タイプE"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジェットストライカーパック"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/191_3774_s_05w4rkc9l2mmopwx2waa75g4rmyv.jpg",
+				"path": "/images/items/01_2787/191_3774.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_3774_s_b7pwoobdrozkv90onrh5u0aubas5.jpg",
+				"path": "/images/items/01_2787/153_3774.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3774_s_j7ozf5hlnzmhi9xyus58rchkiwwg.jpg",
+				"path": "/images/items/01_2787/155_3774.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3774_s_5igdcdzz16nor5dwvrni0sgqkyxa.jpg",
+				"path": "/images/items/01_2787/156_3774.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3774_s_x2gih16a4wa2xx5xqj5ftbnk6ymt.jpg",
+				"path": "/images/items/01_2787/157_3774.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3774_s_kkdx4avbd9jqttj2oiilw8oqnr2f.jpg",
+				"path": "/images/items/01_2787/158_3774.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3774_s_ds2h84kfmtb5qn9mfcpz140ka4zl.jpg",
+				"path": "/images/items/01_2787/159_3774.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3774_s_hjsu7pm3j3awi7v4w5pz31qtl3ki.jpg",
+				"path": "/images/items/01_2787/189_3774.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3774_s_z90xw4arc0pg97rtpd62hhgo2ok0.jpg",
+				"path": "/images/items/01_2787/190_3774.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x 1",
-			"Beam saber x2",
-			"Attack/shield type E×1",
-			"Jet Striker Pack x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2787/153_3774.jpg",
-		"/images/items/01_2787/155_3774.jpg",
-		"/images/items/01_2787/156_3774.jpg",
-		"/images/items/01_2787/157_3774.jpg",
-		"/images/items/01_2787/158_3774.jpg",
-		"/images/items/01_2787/159_3774.jpg",
-		"/images/items/01_2787/189_3774.jpg",
-		"/images/items/01_2787/190_3774.jpg",
-		"/images/items/01_2787/191_3774.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2787/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
-	"manualId": "0499"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2787/"
 }

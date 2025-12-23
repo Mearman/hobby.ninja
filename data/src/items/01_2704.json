@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 ガンダムテルティウム",
 		"en": "HGBD:R 1/144 Gundam Tertium"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -18,52 +62,61 @@
 		"day": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『ガンダムビルドダイバーズRe:RISE』 から、「ガンダム Mk-III」をベースにした機体が新たに登場！",
+			"『ガンダムビルドダイバーズRe:RISE』 から、「ガンダムMk-III」をベースにした機体が新たに登場！",
 			"• 別売りの「HGBD:R 1/144 ゼルトザームアームズ」と組み合わせて劇中の姿を再現できる！"
 		],
 		"en": [
-			"From \"Gundam Build Divers Re:RISE \", a new aircraft based on \" Gundam Mk-III\" is now available!",
+			"From \"Gundam Build Divers Re:RISE\", a new aircraft based on \"Gundam Mk-III\" is now available!",
 			"• You can recreate the appearance in the play by combining it with the separately sold \"HGBD:R 1/144 Zeltsam Arms\"!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ライフル×２",
-			"ビームサーベル×２",
-			"ホイルシール×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ライフル×２"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル×２"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール×１"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3699_s_ucnrm0regct0mgr329zm2cfgdux5.jpg",
+				"path": "/images/items/01_2704/153_3699.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3699_s_w145v6fjqn7uyyl000x8dw0wjiga.jpg",
+				"path": "/images/items/01_2704/155_3699.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3699_s_wpzr8tktsgdkpjghwp9lhc6o9xx0.jpg",
+				"path": "/images/items/01_2704/156_3699.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3699_s_nbfa9kc79fpt0guslr7wdmxf0mlb.jpg",
+				"path": "/images/items/01_2704/157_3699.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3699_s_pxmkgtlx55de6fl1n6pqvn0fcgh9.jpg",
+				"path": "/images/items/01_2704/158_3699.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3699_s_bhydy0tfgnxlsk4aul166abubli3.jpg",
+				"path": "/images/items/01_2704/159_3699.jpg"
+			}
 		],
-		"en": [
-			"Rifle x 2",
-			"Beam saber x2",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2704/153_3699.jpg",
-		"/images/items/01_2704/155_3699.jpg",
-		"/images/items/01_2704/156_3699.jpg",
-		"/images/items/01_2704/157_3699.jpg",
-		"/images/items/01_2704/158_3699.jpg",
-		"/images/items/01_2704/159_3699.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2704/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0085"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2704/"
 }

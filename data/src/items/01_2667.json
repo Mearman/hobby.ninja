@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 ゴッグ",
-		"en": "MG 1/100 Gog"
+		"en": "MG 1/100 GOGG"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]",
+			"en": "MG [MASTER GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4290,
 		"currency": "JPY",
@@ -17,36 +63,37 @@
 		"month": 6
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム」に登場するジオン軍水陸両用MS「ゴッグ」のMG仕様のプラモデル。腕部はボールジョイントによる可動と引き伸ばし構造を採用することにより、可動範囲を大きく拡大しています。胴体内部に腕を収納することで、巡航形態を完全に再現しています。コックピットは開閉可能、コックピット内のパイロットも再現しています。"
 		],
 		"en": [
-			"An MG plastic model of the Zeon military amphibious MS \"Gog \" that appears in \" Mobile Suit Gundam\". The arms are movable using ball joints and have a stretching structure, greatly expanding the range of motion. By storing the arms inside the fuselage, the cruising mode is perfectly reproduced. The cockpit can be opened and closed, and the pilot inside the cockpit is also reproduced."
+			"A plastic model of the Zeon Army amphibious MS \"GOG\" that appears in \"MOBILE SUIT GUNDAM\" with MG specifications. The range of motion of the arms is greatly expanded by adopting a movable ball joint and an enlarged structure. By storing the arms inside the fuselage, the cruising form is completely reproduced. The cockpit can be opened and closed, and the pilot in the cockpit is also reproduced."
 		]
 	},
-	"images": [
-		"/images/items/01_2667/1000073854_1.jpg",
-		"/images/items/01_2667/1000073854_2.jpg",
-		"/images/items/01_2667/1000073854_3.jpg",
-		"/images/items/01_2667/1000073854_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000073854_1.jpg",
+				"path": "/images/items/01_2667/1000073854_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000073854_2.jpg",
+				"path": "/images/items/01_2667/1000073854_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000073854_3.jpg",
+				"path": "/images/items/01_2667/1000073854_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000073854_4.jpg",
+				"path": "/images/items/01_2667/1000073854_4.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2667/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
-	"manualId": "0819"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2667/"
+	}
 }

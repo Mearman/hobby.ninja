@@ -5,6 +5,49 @@
 		"ja": "メカコレクション 仮面ライダーシリーズ 新サイクロン号",
 		"en": "Mecha Collection Kamen Rider Series New Cyclone"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "rider",
+			"url": "https://bandai-hobby.net/series/rider/",
+			"ja": "仮面ライダーシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1355",
+			"url": "https://bandai-hobby.net/item/01_1355/",
+			"ja": "メカコレクション 仮面ライダーシリーズ アクロバッター"
+		},
+		{
+			"id": "01_1293",
+			"url": "https://bandai-hobby.net/item/01_1293/",
+			"ja": "メカコレクション 仮面ライダーシリーズ 新サイクロン号&仮面ライダー新2号"
+		},
+		{
+			"id": "01_1169",
+			"url": "https://bandai-hobby.net/item/01_1169/",
+			"ja": "メカコレクション 仮面ライダーシリーズ バトルホッパー&シャドームーン"
+		},
+		{
+			"id": "01_1106",
+			"url": "https://bandai-hobby.net/item/01_1106/",
+			"ja": "メカコレクション　仮面ライダーシリーズ バトルホッパー"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -26,51 +69,55 @@
 			"• パッケージは裏返すことで簡単にディスプレイ台座に変身！"
 		],
 		"en": [
-			"• The new Kamen Rider series Cyclone issue is now available from the palm-sized mechanical collection with precise details!",
-			"• Faithfully reproduces the new Cyclone issue with precision details unique to mechanical collection!",
-			"• Kamen Rider New No. 1 riding the new Cyclone is also included in monochrome molding! The rider mask and belt are also precisely reproduced!",
+			"• The new Kamen Rider series Cyclone issue is now available from the palm-sized and precisely detailed mechanical collection!",
+			"• Faithfully reproduces the new Cyclone with precision details unique to mechanical collection!",
+			"• Kamen Rider New No. 1 riding on the new Cyclone is also included in monochrome molding! The rider mask and belt are also precisely reproduced!",
 			"• Easily transform the package into a display pedestal by flipping it over!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"仮面ライダー新１号×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "仮面ライダー新１号"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書（箱裏に印刷）"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1993_s_5xrb6g3x4wwzgg1i9wgfuhrl8wfr.jpg",
+				"path": "/images/items/01_1059/153_1993.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1993_s_53rwkz9crcsgvy2tt1x2idrdop2f.jpg",
+				"path": "/images/items/01_1059/155_1993.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_1993_s_frtppssvpyv908mt3b657pggjxyz.jpg",
+				"path": "/images/items/01_1059/156_1993.jpg"
+			}
 		],
-		"en": [
-			"Kamen Rider New No. 1 x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×3",
-			"マーキングシール×1",
-			"取扱説明書（箱裏に印刷）"
-		],
-		"en": [
-			"Molded product x 3",
-			"MarkingSeal×1",
-			"Instruction manual (printed on the back of the box)"
-		]
-	},
-	"images": [
-		"/images/items/01_1059/153_1993.jpg",
-		"/images/items/01_1059/155_1993.jpg",
-		"/images/items/01_1059/156_1993.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1059/",
-	"brandIds": [
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"rider"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1355",
-		"01_1293",
-		"01_1169",
-		"01_1106"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1059/"
 }

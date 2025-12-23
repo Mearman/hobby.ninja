@@ -5,6 +5,38 @@
 		"ja": "ビークルモデル 012 AT-M6",
 		"en": "Vehicle Model 012 AT-M6"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS",
+			"en": "STAR WARS"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3513",
+			"url": "https://bandai-hobby.net/item/01_3513/",
+			"ja": "ビークルモデル レイザー・クレスト"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -24,50 +56,61 @@
 			"特徴的な前足部分や、腹部ディテール",
 			"まで徹底的に再現！小さいながらも圧巻の存在感！",
 			"複数体飾りたくなるコレクション性の高い手のひらサイズ。複数揃えれば、劇中の迫力ある行軍シーンをイメージして楽しめます！"
-		],
-		"en": [
-			"The AT-M6, the giant four-legged walker type that first appeared in Star Wars: The Last Jedi, is now available in a palm-sized vehicle model series for the first time.",
-			"Distinctive forefoot and abdominal details",
-			"Thoroughly reproduced! Although small, it has an overwhelming presence!",
-			"A highly collectible palm-sized item that you'll want to display multiple pieces. If you collect more than one, you can enjoy imagining the powerful marching scene in the play!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"本体×1"
-		],
-		"en": [
-			"Body x 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"取扱説明書（箱裏側に記載）"
-		],
-		"en": [
-			"Molded product x 4",
-			"Instruction manual (written on the back of the box)"
-		]
-	},
-	"images": [
-		"/images/items/01_1245/1000122244_1.jpg",
-		"/images/items/01_1245/1000122244_2.jpg",
-		"/images/items/01_1245/1000122244_3.jpg",
-		"/images/items/01_1245/1000122244_4.jpg",
-		"/images/items/01_1245/1000122244_5.jpg",
-		"/images/items/01_1245/1000122244_6.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "本体",
+				"en": "• Main unit"
+			},
+			"count": 1
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "取扱説明書（箱裏側に記載）"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000122244_1.jpg",
+				"path": "/images/items/01_1245/1000122244_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000122244_2.jpg",
+				"path": "/images/items/01_1245/1000122244_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000122244_3.jpg",
+				"path": "/images/items/01_1245/1000122244_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000122244_4.jpg",
+				"path": "/images/items/01_1245/1000122244_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000122244_5.jpg",
+				"path": "/images/items/01_1245/1000122244_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000122244_6.jpg",
+				"path": "/images/items/01_1245/1000122244_6.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1245/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3513",
-		"01_3514"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1245/"
+	}
 }

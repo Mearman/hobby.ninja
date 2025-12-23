@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 ダブルリベイクライフル",
 		"en": "HGBD:R 1/144 Double Rebake Rifle"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -18,13 +62,12 @@
 		"day": 19
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダムビルドダイバーズRe:RISE』 2nd Seasonより、ガンダムアストレイの流れを汲む新機体用の武装が登場！",
-			"■バックパックはダブルライフルに変形可能。",
-			"■リード線付属。リード線を利用した武器の演出を楽しめる。",
-			"■さまざまなHGに使用可能なジョイントパーツが付属。"
+			"• バックパックはダブルライフルに変形可能。",
+			"• リード線付属。リード線を利用した武器の演出を楽しめる。",
+			"• さまざまなHGに使用可能なジョイントパーツが付属。"
 		],
 		"en": [
 			"From Gundam Build Divers Re:RISE's 2nd Season, weapons for new aircraft that follow the flow of Gundam Astray are now available!",
@@ -33,40 +76,50 @@
 			"• Comes with joint parts that can be used with various HGs."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"バックパックユニット×1",
-			"リード線×2",
-			"HG対応ジョイントパーツ×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "バックパックユニット"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リード線"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "HG対応ジョイントパーツ"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3984_s_b8m008nliw4h70uj35mkh8uygciz.jpg",
+				"path": "/images/items/01_3012/153_3984.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3984_s_6qlczvb1kkuxsguokdhfmnsirveh.jpg",
+				"path": "/images/items/01_3012/155_3984.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3984_s_qptednyc7l5ykn8u7yvkzdkmmgf7.jpg",
+				"path": "/images/items/01_3012/156_3984.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3984_s_snl9n6nxidbyifl2ellp321mvnlx.jpg",
+				"path": "/images/items/01_3012/157_3984.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3984_s_tb8btdyzhwjhe2ipy21yek1dhvnc.jpg",
+				"path": "/images/items/01_3012/158_3984.jpg"
+			}
 		],
-		"en": [
-			"Backpack unit x 1",
-			"Lead wire x 2",
-			"HG compatible joint parts x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3012/153_3984.jpg",
-		"/images/items/01_3012/155_3984.jpg",
-		"/images/items/01_3012/156_3984.jpg",
-		"/images/items/01_3012/157_3984.jpg",
-		"/images/items/01_3012/158_3984.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3012/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0100"
+	"sourceUrl": "https://bandai-hobby.net/item/01_3012/"
 }

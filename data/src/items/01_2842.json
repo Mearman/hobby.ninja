@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 アウンリゼアーマー",
 		"en": "HGBD:R 1/144 Aunrise Armor"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 935,
 		"currency": "JPY",
@@ -18,12 +62,11 @@
 		"day": 29
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"新機能オプションアーマーが登場！装備の仕方で能力を使い分けろ！",
-			"■コアドッキングカスタム対応。別売りのコアガンダムと合体させてスピードブースタータイプやパワーアームタイプに組み換え可能。",
-			"■ディスプレイ用台座付き。"
+			"• コアドッキングカスタム対応。別売りのコアガンダムと合体させてスピードブースタータイプやパワーアームタイプに組み換え可能。",
+			"• ディスプレイ用台座付き。"
 		],
 		"en": [
 			"New optional armor is now available! Use your abilities depending on how you equip it!",
@@ -31,42 +74,61 @@
 			"• Includes display pedestal."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"アーマー×1式",
-			"台座×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "アーマー"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "台座"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3825_s_p0qigxqianpjcgfyk6v0vajp1pt1.jpg",
+				"path": "/images/items/01_2842/153_3825.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3825_s_b1uovvj1n5gnqyk13gzz939t9x1y.jpg",
+				"path": "/images/items/01_2842/155_3825.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3825_s_q24k4evskz87gcezqyz6igwhxzo4.jpg",
+				"path": "/images/items/01_2842/156_3825.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3825_s_1hvhhkryk18sn5dokvle6g3cmcs6.jpg",
+				"path": "/images/items/01_2842/157_3825.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3825_s_o38rxn1odffm8nv7ao1w1xwlfcue.jpg",
+				"path": "/images/items/01_2842/158_3825.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3825_s_v52m2nkgld2ol678hrht4i0781j3.jpg",
+				"path": "/images/items/01_2842/159_3825.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3825_s_n4ae0b3nk5at5xp1ffmrgws6j3eb.jpg",
+				"path": "/images/items/01_2842/189_3825.jpg"
+			}
 		],
-		"en": [
-			"Armor x 1 set",
-			"Pedestal x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2842/153_3825.jpg",
-		"/images/items/01_2842/155_3825.jpg",
-		"/images/items/01_2842/156_3825.jpg",
-		"/images/items/01_2842/157_3825.jpg",
-		"/images/items/01_2842/158_3825.jpg",
-		"/images/items/01_2842/159_3825.jpg",
-		"/images/items/01_2842/189_3825.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2842/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0107"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2842/"
 }

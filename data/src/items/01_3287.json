@@ -5,6 +5,60 @@
 		"ja": "ＭＧ 1/100 ブレイズザクファントム／ブレイズザクウォーリア",
 		"en": "MG 1/100 Blaze Zaku Phantom/Blaze Zaku Warrior"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000214960",
+			"url": "https://p-bandai.jp/item/item-1000214960/",
+			"ja": "ＲＧ 1/144 アカツキガンダム用シラヌイパック & ＨＧゼウスシルエット用接続パーツ"
+		},
+		{
+			"id": "01_5421",
+			"url": "https://bandai-hobby.net/item/01_5421/",
+			"ja": "MG 1/100 ガンダムベース限定 デスティニーガンダム (ハイネ専用機)"
+		},
+		{
+			"id": "item-1000203308",
+			"url": "https://p-bandai.jp/item/item-1000203308/",
+			"ja": "ＨＧ 1/144 ダークダガーＬ"
+		},
+		{
+			"id": "item-1000183862",
+			"url": "https://p-bandai.jp/item/item-1000183862/",
+			"ja": "ＭＧ 1/100 ガナーウィザード／スラッシュウィザード／ブレイズウィザードセット"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"-------",
@@ -66,7 +119,7 @@
 			"Z A K U P H A N T O M",
 			"Actual combat deployment begins!",
 			"-------",
-			"From \"Mobile Suit Gundam SEED DESTINY \", the new MS \" Blaze Zaku Phantom\" deployed by ZAFT is now available in master grade.",
+			"From \"Mobile Suit GundamSEED DESTINY\", the new MS \"Blaze Zaku Phantom\" deployed by ZAFT is now available in master grade.",
 			"Thoroughly reproduce Blaze Wizard with new modeling. The green aircraft color is reproduced with molding color, and Zaku Warrior can also be reproduced by selecting parts.",
 			"● Reproduce Blaze Wizard with new modeling!",
 			"The \"Blaze Wizard\", which aims to improve mobility and firepower, has been made into a three-dimensional model with the latest MG-compliant gimmicks and details.",
@@ -102,39 +155,50 @@
 			"- Product specifications are scheduled as of 20208. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_3287/153_4242.jpg",
-		"/images/items/01_3287/155_4242.jpg",
-		"/images/items/01_3287/156_4242.jpg",
-		"/images/items/01_3287/157_4242.jpg",
-		"/images/items/01_3287/158_4242.jpg",
-		"/images/items/01_3287/159_4242.jpg",
-		"/images/items/01_3287/189_4242.jpg",
-		"/images/items/01_3287/190_4242.jpg",
-		"/images/items/01_3287/191_4242.jpg",
-		"/images/items/01_3287/192_4242.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3287/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000214960",
-		"01_5421",
-		"item-1000203308",
-		"item-1000183862"
-	],
-	"manualId": "2599",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4242_s_9qcz0slis48qcyu7kmu6w880jnpq.jpg",
+				"path": "/images/items/01_3287/153_4242.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4242_s_vm3z5ageu7phbd95gub52fq01ive.jpg",
+				"path": "/images/items/01_3287/155_4242.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4242_s_pn18iphx4lu578yi18t7sw5bc5ie.jpg",
+				"path": "/images/items/01_3287/156_4242.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4242_s_lla36jjrb488i5anbjgw467aaf8d.jpg",
+				"path": "/images/items/01_3287/157_4242.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4242_s_3q898i89yu8i3sboife284z9n1fz.jpg",
+				"path": "/images/items/01_3287/158_4242.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4242_s_rtgdl007v88wnwqs28bgwv86nbgm.jpg",
+				"path": "/images/items/01_3287/159_4242.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4242_s_ff0c9ouk0ijbl2hjhcrpviio5tpf.jpg",
+				"path": "/images/items/01_3287/189_4242.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4242_s_8xavhlxu3i455gfv91sr4qsuhcsz.jpg",
+				"path": "/images/items/01_3287/190_4242.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4242_s_3lmip66k2i31kxmgl4og9sonauab.jpg",
+				"path": "/images/items/01_3287/191_4242.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4242_s_ve8zl2vwuxc5omtkh7de8hpl1qhq.jpg",
+				"path": "/images/items/01_3287/192_4242.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3287/"
 }

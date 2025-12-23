@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムベース限定 ユニコーンガンダム デストロイモード[メタリックグロスインジェクション]",
 		"en": "HG 1/144 Gundam Base Limited Unicorn Gundam Destroy Mode [Metallic Gloss Injection]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
@@ -28,30 +71,22 @@
 			"The high-grade Unicorn Gundam Destroy Mode is now available in a pearl white body with metallic gloss injection that makes the psycho frame pink stand out. A Gundam base color display pedestal is included."
 		]
 	},
-	"images": [
-		"/images/items/01_1929/153_2862.jpg",
-		"/images/items/01_1929/155_2862.jpg",
-		"/images/items/01_1929/156_2862.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1929/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2862_s_dd5waup0wo9x8xdtzml0tmhc614i.jpg",
+				"path": "/images/items/01_1929/153_2862.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2862_s_fnjscvgvolb9aqboed6m3mm6mspr.jpg",
+				"path": "/images/items/01_1929/155_2862.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2862_s_vm1z8co5f96nlflpg9sbwi67sqlf.jpg",
+				"path": "/images/items/01_1929/156_2862.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "2858"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1929/"
 }

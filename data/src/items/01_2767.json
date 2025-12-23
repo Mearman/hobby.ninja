@@ -5,6 +5,49 @@
 		"ja": "ぷちりっつ アーチャー/ギルガメッシュ",
 		"en": "Petitrits Archer/Gilgamesh"
 	},
+	"brands": [
+		{
+			"id": "petit_rits",
+			"url": "https://bandai-hobby.net/brand/petit_rits/",
+			"ja": "ぷちりっつ"
+		}
+	],
+	"series": [
+		{
+			"id": "fate",
+			"url": "https://bandai-hobby.net/series/fate/",
+			"ja": "Fate/Grand Order"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2844",
+			"url": "https://bandai-hobby.net/item/01_2844/",
+			"ja": "ぷちりっつ セイバー/アルトリア・ペンドラゴン"
+		},
+		{
+			"id": "01_2634",
+			"url": "https://bandai-hobby.net/item/01_2634/",
+			"ja": "ぷちりっつ セイバー/沖田総司"
+		},
+		{
+			"id": "01_2599",
+			"url": "https://bandai-hobby.net/item/01_2599/",
+			"ja": "ぷちりっつ マスター/女主人公"
+		},
+		{
+			"id": "01_2600",
+			"url": "https://bandai-hobby.net/item/01_2600/",
+			"ja": "ぷちりっつ セイバー/宮本武蔵"
+		}
+	],
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -23,56 +66,79 @@
 			"ぷちなパーツ数で高い再現性！ぷちりっつシリーズに『Fate/Grand Order』に登場する英雄王を召喚！",
 			"• シンプルなパーツ構成で、初心者も手軽に楽しめる組み立てやすさ。ディテールもしっかり再現。",
 			"• ３頭身ながら、キャラクターの特徴あるシルエットラインそのままに印象を崩すことなくかわいくデフォルメ。",
-			"• 上半身の可動によりプロポーションを崩さずに表情あるポージングが可能。• 「乖離剣エア」が付属。",
+			"• 上半身の可動によりプロポーションを崩さずに表情あるポージングが可能。■「乖離剣エア」が付属。",
 			"• キャラクターをイメージした専用台座が付属。"
 		],
 		"en": [
 			"High reproducibility with small number of parts! Summon the hero king who appears in \"Fate/Grand Order\" to the Petitrits series!",
 			"• Easy to assemble, even beginners can easily enjoy the simple parts structure. Details are also well reproduced.",
 			"• Despite having three heads, the character's distinctive silhouette lines remain cute and deformed without compromising the impression.",
-			"• The upper body can be moved to create expressive poses without changing the proportions. • \"Kariken Air\" is included.",
+			"• The upper body can be moved to create expressive poses without changing the proportions. ■\"Difference Sword Air\" is included.",
 			"• A special pedestal inspired by the character is included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"乖離剣エア×１",
-			"台座×１",
-			"ホイルシール×１",
-			"カイナスシール×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "乖離剣エア×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "台座×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "カイナスシール×１"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3755_s_vxkvf5fvk3orm40xqnrfw01ck1ir.jpg",
+				"path": "/images/items/01_2767/153_3755.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3755_s_zzu7ics42r95e8u85rlvkc41c902.jpg",
+				"path": "/images/items/01_2767/155_3755.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3755_s_tjtt4vzmakkwnkmpt0h6k1qm57bh.jpg",
+				"path": "/images/items/01_2767/156_3755.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3755_s_pdm80h1rt4uwn78sewfytfm1511b.jpg",
+				"path": "/images/items/01_2767/157_3755.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3755_s_6zc4iehyibi5192n1fqbg7gr5g59.jpg",
+				"path": "/images/items/01_2767/158_3755.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3755_s_efp4fzzm23ctm4g7i3514j78ztqz.jpg",
+				"path": "/images/items/01_2767/159_3755.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3755_s_z81a2pjgna8c5tj1dnpmw4ru5fsb.jpg",
+				"path": "/images/items/01_2767/189_3755.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3755_s_zkxi4ryjcn8tbt4f79ybt8y9lko7.jpg",
+				"path": "/images/items/01_2767/190_3755.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3755_s_9fugxetke886rif2vhesvtj3vfz2.jpg",
+				"path": "/images/items/01_2767/191_3755.jpg"
+			}
 		],
-		"en": [
-			"Separate sword air x1",
-			"Pedestal x 1",
-			"Foil Seal×1",
-			"Cainus Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2767/153_3755.jpg",
-		"/images/items/01_2767/155_3755.jpg",
-		"/images/items/01_2767/156_3755.jpg",
-		"/images/items/01_2767/157_3755.jpg",
-		"/images/items/01_2767/158_3755.jpg",
-		"/images/items/01_2767/159_3755.jpg",
-		"/images/items/01_2767/189_3755.jpg",
-		"/images/items/01_2767/190_3755.jpg",
-		"/images/items/01_2767/191_3755.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2767/",
-	"brandIds": [
-		"petit_rits"
-	],
-	"seriesIds": [
-		"fate"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2844",
-		"01_2634",
-		"01_2599",
-		"01_2600"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2767/"
 }

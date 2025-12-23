@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 リ・ガズィ",
 		"en": "HGUC 1/144 Re Gazi"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5346",
+			"url": "https://bandai-hobby.net/item/01_5346/",
+			"ja": "HG 1/144 ジムIII(アクシズ・ショックイメージカラー)"
+		},
+		{
+			"id": "01_5210",
+			"url": "https://bandai-hobby.net/item/01_5210/",
+			"ja": "HG 1/144 ギラ・ドーガ(アクシズ・ショックイメージカラー)"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4408",
+			"url": "https://bandai-hobby.net/item/01_4408/",
+			"ja": "HG 1/144 サイコ・ドーガ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3080,
 		"currency": "JPY",
@@ -18,35 +67,26 @@
 		"day": 19
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム 逆襲のシャア」より“リ・ガズィ”がHGUCに登場 B.W.S.（バック・ウェポン・システム）によるスペース・ファイター形態への変形機構を再現 背部のビーム・サーベルラックはハッチ開閉を差し替え式で再現 武器はビーム・ライフル、ビーム・サーベル、シールドが付属 B.W.S.やスペースファイター形態でもディスプレイ可能にするアクションベース接続パーツが付属"
 		],
 		"en": [
-			"\"Re-GAZI \" from \" Mobile Suit Gundam: Char's Counterattack\" appears in HGUC. Reproduces the transformation mechanism to space fighter form using B.W.S. (Back Weapon System). The beam saber rack on the back reproduces the opening and closing of the hatch by replacing it. Weapons include beam rifle, beam saber, and seal. Action base connection parts that can be displayed in B.W.S. and space fighter form are also included."
+			"\"Re-GAZI\" from \"Mobile Suit Gundam: Char's Counterattack\" appears in HGUC. Reproduces the transformation mechanism to space fighter form using B.W.S. (Back Weapon System). The beam saber rack on the back reproduces the opening and closing of the hatch by replacing it. Weapons include beam rifle, beam saber, and seal. Action base connection parts that can be displayed in B.W.S. and space fighter form are also included."
 		]
 	},
-	"images": [
-		"/images/items/01_1808/153_2746.jpg",
-		"/images/items/01_1808/155_2746.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1808/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5346",
-		"01_5210",
-		"01_4971",
-		"01_4408"
-	],
-	"manualId": "0401"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2746_s_vohtg7wri6r0yh5dicxct2eluww1.jpg",
+				"path": "/images/items/01_1808/153_2746.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2746_s_h7r0eeqn3l7nik6q91bsew0wjteg.jpg",
+				"path": "/images/items/01_1808/155_2746.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1808/"
 }

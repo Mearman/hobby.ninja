@@ -5,6 +5,44 @@
 		"ja": "Figure-rise Mechanics ドラミ",
 		"en": "Figure-rise Mechanics Dorami"
 	},
+	"brands": [
+		{
+			"id": "figurerise-mechanics",
+			"url": "https://bandai-hobby.net/brand/figurerise-mechanics/",
+			"ja": "Figure-rise Mechanics[フィギュアライズメカニクス]"
+		}
+	],
+	"series": [
+		{
+			"id": "doraemon",
+			"url": "https://bandai-hobby.net/series/doraemon/",
+			"ja": "ドラえもん"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1885",
+			"url": "https://bandai-hobby.net/item/01_1885/",
+			"ja": "Figure-rise Mechanics 元祖ドラえもん"
+		},
+		{
+			"id": "01_1206",
+			"url": "https://bandai-hobby.net/item/01_1206/",
+			"ja": "Figure-rise Mechanics ドラえもんのひみつ道具 タイムマシン"
+		},
+		{
+			"id": "01_1208",
+			"url": "https://bandai-hobby.net/item/01_1208/",
+			"ja": "Figure-rise Mechanics ドラえもん"
+		}
+	],
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -30,57 +68,87 @@
 		"en": [
 			"Figure-riseMechanics Following Doraemon, Dorami also appears!",
 			"Figure-riseMechanics takes you to a new frontier in assembling the internal mechanics of robots!",
-			"• Precisely reproduce the details of Dorami's internal mechanism! Furthermore, those \"ribbon-shaped ears\" are now mechanical! Enjoy the differences with Doraemon's internal mechanism!",
+			"• Accurately reproduce the details of Dorami's internal mechanism! Furthermore, those \"ribbon-shaped ears\" are now mechanical! Enjoy the differences with Doraemon's internal mechanism!",
 			"• The internal mechanism has cute coloring typical of Dorami!",
-			"• In addition to the usual yellow exterior parts, a clear exterior that allows you to see the internal mechanism is also included!",
-			"• Simultaneous release: Together with \"Figure-riseMechanics Doraemon\", you can create a cute display as a brother and sister!"
+			"• In addition to the usual yellow exterior parts, a clear exterior that allows you to see through the internal mechanism is also included!",
+			"• Simultaneously released \"Figure-riseMechanics Doraemon\" together with brother and sister for a cute display!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"クリア外装×1式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "クリア外装"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 5
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2137_s_jffkbtrjngzm31u1nwpvhz7lu12y.jpg",
+				"path": "/images/items/01_1207/153_2137.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2137_s_ixvdlqy1mxvh8qb1gckdtm5bsxnb.jpg",
+				"path": "/images/items/01_1207/155_2137.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2137_s_7ci3jxdbetj3c149d278ijt9j74y.jpg",
+				"path": "/images/items/01_1207/156_2137.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2137_s_vi3uxne8s4bopi7apj4iyv3emulp.jpg",
+				"path": "/images/items/01_1207/157_2137.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2137_s_9ghd5217g4ovjf6w5z20e2qm6pa9.jpg",
+				"path": "/images/items/01_1207/158_2137.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2137_s_24z408kgbp3yt4ku3kb7sph598wj.jpg",
+				"path": "/images/items/01_1207/159_2137.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2137_s_d2lzlia9l55r8t64nep65h3bhpid.jpg",
+				"path": "/images/items/01_1207/189_2137.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2137_s_nv6h6hjeutid0y567x0db4kc6mls.jpg",
+				"path": "/images/items/01_1207/190_2137.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2137_s_uljq2xsofiov4m8yn1hjauko77l3.jpg",
+				"path": "/images/items/01_1207/191_2137.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2137_s_mklgtf58g31ojxpnm8ntofzwarwd.jpg",
+				"path": "/images/items/01_1207/192_2137.jpg"
+			}
 		],
-		"en": [
-			"Clear exterior x 1 set"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×5",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 5",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1207/153_2137.jpg",
-		"/images/items/01_1207/155_2137.jpg",
-		"/images/items/01_1207/156_2137.jpg",
-		"/images/items/01_1207/157_2137.jpg",
-		"/images/items/01_1207/158_2137.jpg",
-		"/images/items/01_1207/159_2137.jpg",
-		"/images/items/01_1207/189_2137.jpg",
-		"/images/items/01_1207/190_2137.jpg",
-		"/images/items/01_1207/191_2137.jpg",
-		"/images/items/01_1207/192_2137.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1207/",
-	"brandIds": [
-		"figurerise-mechanics"
-	],
-	"seriesIds": [
-		"doraemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1885",
-		"01_1206",
-		"01_1208"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1207/"
 }

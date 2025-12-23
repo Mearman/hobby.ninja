@@ -5,6 +5,43 @@
 		"ja": "SD 三国創傑伝 天覇曹操ウイングガンダム",
 		"en": "SD Sangoku Soketsuden Tenha Cao Cao Wing Gundam"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "soketsuden",
+			"url": "https://bandai-hobby.net/series/soketsuden/",
+			"ja": "三国創傑伝"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2614",
+			"url": "https://bandai-hobby.net/item/01_2614/",
+			"ja": "SD 三国創傑伝 典韋マスターガンダム"
+		},
+		{
+			"id": "01_2615",
+			"url": "https://bandai-hobby.net/item/01_2615/",
+			"ja": "SD 三国創傑伝 徐晃ガンダムデスサイズ"
+		},
+		{
+			"id": "01_2643",
+			"url": "https://bandai-hobby.net/item/01_2643/",
+			"ja": "SD 三国創傑伝 甘寧クロスボーンガンダム"
+		},
+		{
+			"id": "01_2644",
+			"url": "https://bandai-hobby.net/item/01_2644/",
+			"ja": "SD 三国創傑伝 大喬ガンダムアルテミー/小喬GNアーチャー"
+		}
+	],
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -21,7 +58,7 @@
 	"description": {
 		"ja": [
 			"【2021年春、日本展開開始！！】",
-			"• 『三国志』をベースにしたSD ガンダムが装いも新たに登場！",
+			"• 『三国志』をベースにしたSDガンダムが装いも新たに登場！",
 			"• 進化したプロポーションとパーツ分割へのこだわりにより、組み立てただけでSD史上最高峰の色分けを実現。",
 			"• 一新された頭身バランスと各所の関節構造により、躍動感あふれるポージングを再現！",
 			"• 本体に加えて武装もパワーアップ！超大型剣\"天覇双翔剣\"が付属！",
@@ -30,44 +67,54 @@
 		],
 		"en": [
 			"[Spring 2021, main rollout begins! ! ]",
-			"• SD Gundam based on \"Romance of the Three Kingdoms\" now has a new look!",
-			"• With advanced proportions and attention to parts division, we have achieved the highest color separation in SD history using just the assembly.",
-			"• The all-new head and body balance and joint structure in various parts allow for dynamic poses!",
+			"• SDGundam based on “Romance of the Three Kingdoms” has a new look!",
+			"• Thanks to the advanced proportions and attention to part division, we have achieved the highest color separation in SD history using just the assembly.",
+			"• Reproduce dynamic poses with a completely new head and body balance and joint structure in various places!",
 			"• In addition to the main body, the weapons are also powered up! Super large sword \"Tenha Soshoken\" is included!",
-			"• Can be combined with Gi Area's Xiahou Dun, Xiahou Yuan, Xun Iku, Zhang Liao, Zhang He, Dian Wei, and Xu Huang (sold separately)!",
+			"• Can be combined with Gi Area's Xiahou Dun, Xiahou Yuan, Xun Yiku, Zhang Liao, Zhang He, Dian Wei, and Xu Huang (sold separately)!",
 			"• You can install 8 pieces of memory in the slot on the back!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"天覇双翔剣×1",
-			"メモリ×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "天覇双翔剣"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "メモリ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3565_s_ijn0wzevws1uqtvdnqja75k5f0d7.jpg",
+				"path": "/images/items/01_2642/153_3565.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3565_s_dx5bi7943qdsik0v1ilqrl71237f.jpg",
+				"path": "/images/items/01_2642/155_3565.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3565_s_j1bxm4icctsbe45kev9gydl9oqqb.jpg",
+				"path": "/images/items/01_2642/156_3565.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3565_s_dfoez2tblj9ulk46nnab7vrs867r.jpg",
+				"path": "/images/items/01_2642/157_3565.jpg"
+			}
 		],
-		"en": [
-			"Tenha Sosho Sword x1",
-			"Memory x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2642/153_3565.jpg",
-		"/images/items/01_2642/155_3565.jpg",
-		"/images/items/01_2642/156_3565.jpg",
-		"/images/items/01_2642/157_3565.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2642/",
-	"brandIds": [],
-	"seriesIds": [
-		"soketsuden"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2614",
-		"01_2615",
-		"01_2643",
-		"01_2644"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2642/"
 }

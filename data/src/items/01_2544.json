@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ムーンガンダム[クリアカラー]",
-		"en": "HG 1/144 Moon Gundam [Clear color]"
+		"en": "HG 1/144 MOON GUNDAM [CLEAR COLOR]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3740,
 		"currency": "JPY",
@@ -18,45 +62,41 @@
 		"day": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士MOON ガンダム』より、ムーンガンダムがクリアカラーになって新登場！",
+			"『機動戦士MOONガンダム』より、ムーンガンダムがクリアカラーになって新登場！",
 			"• サザビーに通じる肩形状をはじめ、全身ディテール再現に加え、腕、脚の各所は高い可動域を実現！",
 			"• 「サイコプレート」はバックパックのアームを展開して懸架可能なほか、分離、組み替え機構を搭載！",
 			"• ビーム・トマホーク、ビーム・ライフル、展開ギミックを再現したバタフライ・エッジが付属し、各ビームパーツはクリアパーツで表現！",
 			"• 通常版とは異なり、白を基調としたカラーリングのディスプレイベースが付属！"
 		],
 		"en": [
-			"From \"Mobile Suit MOON Gundam\", Moon Gundam is now available in clear color!",
-			"• In addition to the shoulder shape similar to Sazabi, the whole body details are reproduced, and various parts of the arms and legs have a high range of motion!",
-			"• \"Psycho Plate\" can be suspended by expanding the arm of the backpack, and also has a separation and recombination mechanism!",
-			"• Beam tomahawk, beam rifle, and butterfly edge that reproduces the deployment gimmick are included, and each beam part is expressed with clear parts!",
-			"• Unlike the regular version, a display base with white coloring is included!"
+			"From \"Mobile Suit MOON GUNDAM\", Moon GUNDAM is now available in clear color!",
+			"• In addition to reproducing the details of the whole body, including the shoulder shape that leads to Sotheby's, various parts of the arms and legs have a high range of motion!",
+			"• The \"Psycho Plate\" can be suspended by expanding the arm of the backpack, and is equipped with a separation and recombination mechanism!",
+			"• Beam Tomahawk, Beam Rifle, and Butterfly Edge that reproduces the deployment gimmick are included, and each beam part is represented by a clear part!",
+			"• Unlike the regular version, it comes with a display base with a white-based coloring!"
 		]
 	},
-	"images": [
-		"/images/items/01_2544/1000160170_1.jpg",
-		"/images/items/01_2544/1000160170_2.jpg",
-		"/images/items/01_2544/1000160170_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160170_1.jpg",
+				"path": "/images/items/01_2544/1000160170_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160170_2.jpg",
+				"path": "/images/items/01_2544/1000160170_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160170_3.jpg",
+				"path": "/images/items/01_2544/1000160170_3.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2544/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2544/"
 	}
 }

@@ -3,8 +3,53 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard 仮面ライダーW ルナトリガー",
-		"en": "Figure-rise Standard Kamen Rider W Luna Trigger"
+		"en": "Figure-rise Standard KAMEN RIDER DOUBLE LUNATRIGGER"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]",
+			"en": "Figure-rise Standard"
+		}
+	],
+	"series": [
+		{
+			"id": "rider",
+			"url": "https://bandai-hobby.net/series/rider/",
+			"ja": "仮面ライダーシリーズ",
+			"en": "KAMEN RIDER SERIES"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5451",
+			"url": "https://bandai-hobby.net/item/01_5451/",
+			"ja": "Figure-rise Standard 仮面ライダーゼロワン ライジングホッパー"
+		},
+		{
+			"id": "item-1000215369",
+			"url": "https://p-bandai.jp/item/item-1000215369/",
+			"ja": "Figure-rise Standard 仮面ライダーファイズ ブラスターフォーム"
+		},
+		{
+			"id": "01_5276",
+			"url": "https://bandai-hobby.net/item/01_5276/",
+			"ja": "Figure-rise Standard 仮面ライダークウガ アルティメットフォーム"
+		},
+		{
+			"id": "01_5175",
+			"url": "https://bandai-hobby.net/item/01_5175/",
+			"ja": "Figure-rise Standard 仮面ライダーキバ キバフォーム"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -25,70 +70,129 @@
 			"• 専用武器「トリガーマグナム」を始め、豊富なパーツが付属。"
 		],
 		"en": [
-			"From \"Kamen Rider W \", \" Luna Trigger\" is available in Figure-rise standard!",
-			"• The biggest feature: In order to reproduce the halved structure, each part has a block structure. Achieves various poses and variations without compromising range of motion.",
-			"• A wide variety of parts are included, including the special weapon \"Trigger Magnum\"."
+			"From \"KAMEN RIDER DOUBLE\", \"Luna Trigger\" is a lineup of Figure-rise standard!",
+			"• In order to reproduce the halvity, which is the biggest feature, the block structure of each part is adopted. Without impairing the range of motion, various poses and variations are realized."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"トリガーマグナム×1",
-			"ルナメモリ×1",
-			"トリガーメモリ×1",
-			"握り手（左右）各１種",
-			"平手（左右）×各１種",
-			"決め手1（左）×1",
-			"武器持ち手（右）×1",
-			"ディスプレイべース×1"
-		],
-		"en": [
-			"Trigger magnum x 1",
-			"Luna memory x 1",
-			"Trigger memory x 1",
-			"Hand grip (left and right) 1 type each",
-			"Hirate (left and right) x 1 type each",
-			"Decisive factor 1 (left) x 1",
-			"Weapon holder (right) x 1",
-			"Display base x 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×6",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 6",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2404/1000139469_1.jpg",
-		"/images/items/01_2404/1000139469_2.jpg",
-		"/images/items/01_2404/1000139469_3.jpg",
-		"/images/items/01_2404/1000139469_4.jpg",
-		"/images/items/01_2404/1000139469_5.jpg",
-		"/images/items/01_2404/1000139469_6.jpg",
-		"/images/items/01_2404/1000139469_7.jpg",
-		"/images/items/01_2404/1000139469_8.jpg",
-		"/images/items/01_2404/1000139469_9.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "トリガーマグナム",
+				"en": "• Trigger Magnum"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ルナメモリ",
+				"en": "• Luna Memory"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "トリガーメモリ",
+				"en": "• Trigger memory"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "握り手（左右）各１種",
+				"en": "• Grip hand (left and right) 1 type each"
+			}
+		},
+		{
+			"name": {
+				"ja": "平手（左右）×各１種",
+				"en": "• Flat hand (left and right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "決め手1（左）",
+				"en": "• Decisive factor 1 (left)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "武器持ち手（右）",
+				"en": "• Display base"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイべース",
+				"en": "• Molded products"
+			},
+			"count": 1
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000139469_1.jpg",
+				"path": "/images/items/01_2404/1000139469_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000139469_2.jpg",
+				"path": "/images/items/01_2404/1000139469_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000139469_3.jpg",
+				"path": "/images/items/01_2404/1000139469_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000139469_4.jpg",
+				"path": "/images/items/01_2404/1000139469_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000139469_5.jpg",
+				"path": "/images/items/01_2404/1000139469_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000139469_6.jpg",
+				"path": "/images/items/01_2404/1000139469_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000139469_7.jpg",
+				"path": "/images/items/01_2404/1000139469_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000139469_8.jpg",
+				"path": "/images/items/01_2404/1000139469_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000139469_9.jpg",
+				"path": "/images/items/01_2404/1000139469_9.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2404/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"rider"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5451",
-		"item-1000215369",
-		"01_5276",
-		"01_5175"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2404/"
+	}
 }

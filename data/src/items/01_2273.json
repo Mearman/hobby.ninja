@@ -5,6 +5,16 @@
 		"ja": "ハロニッパー",
 		"en": "Haronipper"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "item_all",
+			"url": "https://bandai-hobby.net/item_all",
+			"ja": "商品一覧"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -28,19 +38,18 @@
 			"The grip is soft to the touch and comes with a cover that makes it easy to grip, with a ``halo'' design on it."
 		]
 	},
-	"images": [
-		"/images/items/01_2273/153_3215.jpg",
-		"/images/items/01_2273/155_3215.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2273/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
-	"relatedItemIds": [],
-	"tag": {
-		"ja": "ガンダムベースグッズ",
-		"en": "Gundam Base Goods"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3215_o_1d572fd6s1efn1k4t192j1em7c9o23.jpg",
+				"path": "/images/items/01_2273/153_3215.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3215_o_1d572fnujjfdaqh1sfg1f1g1e8k2d.jpg",
+				"path": "/images/items/01_2273/155_3215.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2273/"
 }

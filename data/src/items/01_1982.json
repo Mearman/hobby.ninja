@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ジム・インターセプトカスタム",
 		"en": "HG 1/144 Jim Intercept Custom"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "origin",
+			"url": "https://bandai-hobby.net/series/origin/",
+			"ja": "機動戦士ガンダム THE ORIGIN"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3711",
+			"url": "https://bandai-hobby.net/item/01_3711/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)[クリアカラー]"
+		},
+		{
+			"id": "01_2828",
+			"url": "https://bandai-hobby.net/item/01_2828/",
+			"ja": "HG 1/144 ガンダムベース限定 ザクII TYPE C-6/R6 [ペインティングモデル]"
+		},
+		{
+			"id": "01_2707",
+			"url": "https://bandai-hobby.net/item/01_2707/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)"
+		},
+		{
+			"id": "item-1000135687",
+			"url": "https://p-bandai.jp/item/item-1000135687",
+			"ja": "ＨＧ 1/144 MS-05S シャア専用ザクＩ（ＬＩＭＩＴＥＤ ＭＯＤＥＬ）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 3
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『MSV-R』に登場したジム・インターセプトカスタムを『機動戦士ガンダム THE ORIGIN MSD』で立体化！",
@@ -26,61 +69,89 @@
 			"• 頭部、フロントアーマー、脚部は新規で造形。"
 		],
 		"en": [
-			"The GM Intercept Custom that appeared in \"MSV-R \" is now three-dimensional in \" Mobile Suit Gundam THE ORIGIN MSD\"!",
+			"The GM Intercept Custom that appeared in \"MSV-R\" is now three-dimensional in \"Mobile Suit Gundam THE ORIGIN MSD\"!",
 			"• Although it is a late production version of the GM Sniper Custom, it is specialized for space battles, and is expressed in a shape that takes into account the GM variations.",
 			"• The head, front armor, and legs are newly sculpted."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・スプレーガン×1",
-			"ビーム・サーベル×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・スプレーガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 12
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2911_s_uzx3dej13f9m1ofd4l4piictf3rf.jpg",
+				"path": "/images/items/01_1982/153_2911.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2911_s_0n3fjz5gjb04bfsdk2emk7moc7vg.jpg",
+				"path": "/images/items/01_1982/155_2911.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2911_s_d63bh7r636hds6zt3bjrn7jfdax0.jpg",
+				"path": "/images/items/01_1982/156_2911.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2911_s_bj6fj51gxlmt4cnz5tjy9r79kpse.jpg",
+				"path": "/images/items/01_1982/157_2911.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2911_s_uvdv8b0xx0q6i94to22npq24ocy2.jpg",
+				"path": "/images/items/01_1982/158_2911.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2911_s_69z32xvhc9ik0ocn91haozpgggjl.jpg",
+				"path": "/images/items/01_1982/159_2911.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2911_s_grbs9oibgs7q5kgqs9pq0mjq4fsb.jpg",
+				"path": "/images/items/01_1982/189_2911.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2911_s_etci97ctpcljk964eqd0jlvqma63.jpg",
+				"path": "/images/items/01_1982/190_2911.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2911_s_nz79rasrvwlbqyg9387dd16aizu2.jpg",
+				"path": "/images/items/01_1982/191_2911.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2911_s_r86bc0y5l7w8osc9p81y1otz5q0u.jpg",
+				"path": "/images/items/01_1982/192_2911.jpg"
+			}
 		],
-		"en": [
-			"Beam spray gun x 1",
-			"Beam saber x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×12",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 12",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1982/153_2911.jpg",
-		"/images/items/01_1982/155_2911.jpg",
-		"/images/items/01_1982/156_2911.jpg",
-		"/images/items/01_1982/157_2911.jpg",
-		"/images/items/01_1982/158_2911.jpg",
-		"/images/items/01_1982/159_2911.jpg",
-		"/images/items/01_1982/189_2911.jpg",
-		"/images/items/01_1982/190_2911.jpg",
-		"/images/items/01_1982/191_2911.jpg",
-		"/images/items/01_1982/192_2911.jpg",
-		"/images/items/01_1982/01_1982_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1982/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"origin"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3711",
-		"01_2828",
-		"01_2707",
-		"item-1000135687"
-	],
-	"manualId": "0066"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1982/"
 }

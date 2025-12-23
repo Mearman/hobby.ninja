@@ -5,6 +5,60 @@
 		"ja": "ＨＧ 1/144 ゼータガンダム［Ｕ.Ｃ.００８８］",
 		"en": "HG 1/144 Zeta Gundam [U.C.0088]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -16,7 +70,6 @@
 		"year": 2018,
 		"month": 9
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－",
@@ -66,7 +119,7 @@
 			"Updated on the battlefield",
 			"zeta gundam",
 			"－－－－－－－－－－－－－",
-			"The product concept is based on minor changes that have taken place on numerous battlefields from the \"Gryps War \" to the \" First Neo-Zeon Conflict.\"",
+			"The product concept is based on minor changes that have taken place on numerous battlefields from the \"Gryps War\" to the \"First Neo-Zeon Conflict.\"",
 			"Commercialize Zeta Gundam with new styling!",
 			"- Zeta Gundam as a late specification image with some armor etc. renovated",
 			"Reproduced with new modeling!",
@@ -105,39 +158,50 @@
 			"- Product specifications are scheduled as of 20186. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_1821/153_2759.jpg",
-		"/images/items/01_1821/155_2759.jpg",
-		"/images/items/01_1821/156_2759.jpg",
-		"/images/items/01_1821/157_2759.jpg",
-		"/images/items/01_1821/158_2759.jpg",
-		"/images/items/01_1821/159_2759.jpg",
-		"/images/items/01_1821/189_2759.jpg",
-		"/images/items/01_1821/190_2759.jpg",
-		"/images/items/01_1821/191_2759.jpg",
-		"/images/items/01_1821/192_2759.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1821/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
-	"manualId": "2646",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2759_s_8hn4zmky42f6wc4eapp8szp9x5jb.jpg",
+				"path": "/images/items/01_1821/153_2759.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2759_s_gzje4o7ek2ei9yewth4oczp24f94.jpg",
+				"path": "/images/items/01_1821/155_2759.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2759_s_zcqax8trtgk1ecnaxl3nwko7x9q8.jpg",
+				"path": "/images/items/01_1821/156_2759.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2759_s_fuucpfbda79jvhwp82dtrgzgrq0j.jpg",
+				"path": "/images/items/01_1821/157_2759.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2759_s_jua7yktmishjrdu1fjwb2fzuxual.jpg",
+				"path": "/images/items/01_1821/158_2759.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2759_s_5h15pgzvw3j9ua2nbboepu64fxio.jpg",
+				"path": "/images/items/01_1821/159_2759.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2759_s_znitg7tdl0zdk4k2225n1zrt1gpe.jpg",
+				"path": "/images/items/01_1821/189_2759.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2759_s_fw7l0zw6wwn5h3hvhxp7wydw3jkl.jpg",
+				"path": "/images/items/01_1821/190_2759.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2759_s_9jsag62qzjpyyqo4fve2ury0nrkp.jpg",
+				"path": "/images/items/01_1821/191_2759.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2759_s_dn2lj73zmal2mrfo2fpq6huepe9p.jpg",
+				"path": "/images/items/01_1821/192_2759.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1821/"
 }

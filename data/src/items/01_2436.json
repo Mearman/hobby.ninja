@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 リック・ドムII ライトグリーンバージョン",
 		"en": "HGUC 1/144 Rick Dom II Light Green Version"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "g-0080",
+			"url": "https://bandai-hobby.net/series/g-0080/",
+			"ja": "機動戦士ガンダム0080 ポケットの中の戦争"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5429",
+			"url": "https://bandai-hobby.net/item/01_5429/",
+			"ja": "HG ガンダムベース限定 ドラケンE"
+		},
+		{
+			"id": "01_5768",
+			"url": "https://bandai-hobby.net/item/01_5768/",
+			"ja": "HGUC 1/144 ジム・スナイパーII"
+		},
+		{
+			"id": "01_1686",
+			"url": "https://bandai-hobby.net/item/01_1686/",
+			"ja": "HGUC 1/144 ケンプファー"
+		},
+		{
+			"id": "01_1680",
+			"url": "https://bandai-hobby.net/item/01_1680/",
+			"ja": "HGUC 1/144 MS-06Fz ザクII改"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,42 +67,54 @@
 		"day": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム 0080 ポケットの中の戦争」よりコロニー内に進攻するジオン軍が使用した“リックドムIIコロニーカラー”がHGUCに登場。濃淡の緑色をした機体色は成形色で再現。武器はシュツルム・ファウストｘ2、ジャイアントバズーカ、90ｍｍマシンガン、ヒートサーベルが付属。"
+			"「機動戦士ガンダム0080 ポケットの中の戦争」よりコロニー内に進攻するジオン軍が使用した“リックドムIIコロニーカラー”がHGUCに登場。濃淡の緑色をした機体色は成形色で再現。武器はシュツルム・ファウストｘ2、ジャイアントバズーカ、90ｍｍマシンガン、ヒートサーベルが付属。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam 0080: War in the Pocket \", the \" Ricdom II Colony Color\" used by the Zeon army advancing into the colony is now available at HGUC. The dark and light green body color is reproduced with molding color. Weapons include Sturm Faust x2, giant bazooka, 90mm machine gun, and heat saber."
+			"From \"Mobile Suit Gundam 0080: War in the Pocket\", the \"Ricdom II Colony Color\" used by the Zeon army advancing into the colony is now available at HGUC. The dark and light green body color is reproduced with molding color. Weapons include Sturm Faust x2, giant bazooka, 90mm machine gun, and heat saber."
 		]
 	},
-	"images": [
-		"/images/items/01_2436/153_3366.jpg",
-		"/images/items/01_2436/155_3366.jpg",
-		"/images/items/01_2436/156_3366.jpg",
-		"/images/items/01_2436/157_3366.jpg",
-		"/images/items/01_2436/158_3366.jpg",
-		"/images/items/01_2436/159_3366.jpg",
-		"/images/items/01_2436/189_3366.jpg",
-		"/images/items/01_2436/190_3366.jpg",
-		"/images/items/01_2436/191_3366.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2436/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"g-0080"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5429",
-		"01_5768",
-		"01_1686",
-		"01_1680"
-	],
-	"manualId": "0408"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3366_s_oahodsqkz7czw7ij6rjezmkditdw.jpg",
+				"path": "/images/items/01_2436/153_3366.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3366_s_7ppemgf98w6pt7grimijyjy4cyf9.jpg",
+				"path": "/images/items/01_2436/155_3366.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3366_s_8kda2a5p4x52y5998yglh5nrxgxx.jpg",
+				"path": "/images/items/01_2436/156_3366.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3366_s_1k8qonfmyyx17qut3orv32dee5wn.jpg",
+				"path": "/images/items/01_2436/157_3366.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3366_s_7wb0v3u7ie5g1dzqy4xjbwd05jzc.jpg",
+				"path": "/images/items/01_2436/158_3366.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3366_s_d3vr2vn4npbvezr5tvtx7feiaz7u.jpg",
+				"path": "/images/items/01_2436/159_3366.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3366_s_pdwaolby6199has0h5k2b3t69od9.jpg",
+				"path": "/images/items/01_2436/189_3366.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3366_s_ua2bxbnx6z7ss5m05eqt23ce4goz.jpg",
+				"path": "/images/items/01_2436/190_3366.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3366_s_ijyk5okbp4i8qaajr5o7d0fvb7p4.jpg",
+				"path": "/images/items/01_2436/191_3366.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2436/"
 }

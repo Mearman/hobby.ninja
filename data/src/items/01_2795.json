@@ -5,6 +5,60 @@
 		"ja": "ＨＧ 1/144 ガンダムジェミナス０１",
 		"en": "HG 1/144 Gundam Geminass 01"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "g-unit",
+			"url": "https://bandai-hobby.net/series/g-unit/",
+			"ja": "新機動戦記ガンダムW デュアルストーリー G-UNIT"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000217501",
+			"url": "https://p-bandai.jp/item/item-1000217501/",
+			"ja": "ＨＧ 1/144 レオール"
+		},
+		{
+			"id": "item-1000209099",
+			"url": "https://p-bandai.jp/item/item-1000209099/",
+			"ja": "ＨＧ 1/144 ガンダムバーンレプオス"
+		},
+		{
+			"id": "01_4393",
+			"url": "https://bandai-hobby.net/item/01_4393/",
+			"ja": "ＨＧ 1/144 ヴァイエイト・シュイヴァン & メリクリウス・シュイヴァン"
+		},
+		{
+			"id": "item-1000176706",
+			"url": "https://p-bandai.jp/item/item-1000176706/",
+			"ja": "ＨＧ 1/144 ガンダムエルオーブースター"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -16,7 +70,6 @@
 		"year": 2020,
 		"month": 5
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－",
@@ -70,7 +123,7 @@
 			"Hidden with infinite development potential",
 			"G-UNIT “Gemini” takes off!",
 			"－－－－－－－－－－－－－－－－－－－－",
-			"From \"Mobile Suit Gundam W DUAL STORY G-UNIT\", Gundam Geminass 01 is now available in the latest HG format.",
+			"From \"Mobile Suit GundamW DUAL STORY G-UNIT\", Gundam Geminus 01 is now available in the latest HG format.",
 			"The design has been refined by the original mechanical designer Mr. Akutsu. Three-dimensional with completely new modeling under the complete supervision of Mr.",
 			"Reproduces the characteristic replacement mechanism (linear lock bolt).",
 			"● Completely new model and the latest HG format.",
@@ -113,39 +166,50 @@
 			"- Product specifications are scheduled as of 20202. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2795/153_3782.jpg",
-		"/images/items/01_2795/155_3782.jpg",
-		"/images/items/01_2795/156_3782.jpg",
-		"/images/items/01_2795/157_3782.jpg",
-		"/images/items/01_2795/158_3782.jpg",
-		"/images/items/01_2795/159_3782.jpg",
-		"/images/items/01_2795/189_3782.jpg",
-		"/images/items/01_2795/190_3782.jpg",
-		"/images/items/01_2795/191_3782.jpg",
-		"/images/items/01_2795/192_3782.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2795/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"g-unit"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000217501",
-		"item-1000209099",
-		"01_4393",
-		"item-1000176706"
-	],
-	"manualId": "2579",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3782_s_chlhgf2rnxkzrtnexg11qvjecwyo.jpg",
+				"path": "/images/items/01_2795/153_3782.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3782_s_i3n5le1bj8l440th03d3aq9syty6.jpg",
+				"path": "/images/items/01_2795/155_3782.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3782_s_jq41rmy3ws7xzyzg7i750p8a5yx7.jpg",
+				"path": "/images/items/01_2795/156_3782.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3782_s_w2wax51gjxj5cgz7xu2i2m1byqxn.jpg",
+				"path": "/images/items/01_2795/157_3782.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3782_s_n2vds1s0d58oal3ykuxycglj353e.jpg",
+				"path": "/images/items/01_2795/158_3782.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3782_s_48bwgoksftl6u9j91qgzuoxopdvy.jpg",
+				"path": "/images/items/01_2795/159_3782.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3782_s_yg54aw57o10sbdwxnaoqusy14ahg.jpg",
+				"path": "/images/items/01_2795/189_3782.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3782_s_0iu5nf0ldkpdoxdykn8pujmu188j.jpg",
+				"path": "/images/items/01_2795/190_3782.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3782_s_d8fxt7dbxsq9u1l8bva5u8lz6673.jpg",
+				"path": "/images/items/01_2795/191_3782.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3782_s_rdrgi84nokkiyi3awcc1wxvva41k.jpg",
+				"path": "/images/items/01_2795/192_3782.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2795/"
 }

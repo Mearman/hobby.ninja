@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "PG 1/60 ガンダムエクシア",
-		"en": "PG 1/60 Gundam Exia"
+		"en": "PG 1/60 GUNDAM EXIA"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]",
+			"en": "MOBILE SUIT GUNDAM OO"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_2057",
+			"url": "https://bandai-hobby.net/item/01_2057/",
+			"ja": "PG 1/60 ガンダムエクシア用LEDユニット"
+		},
+		{
+			"id": "01_2067",
+			"url": "https://bandai-hobby.net/item/01_2067/",
+			"ja": "PG 1/60 ダブルオーガンダムセブンソード/G"
+		},
+		{
+			"id": "item-1000129011",
+			"url": "http://p-bandai.jp/item/item-1000129011",
+			"ja": "ＰＧ 1/60 ガンダムエクシア クリアカラーボディ"
+		},
+		{
+			"id": "item-1000120750",
+			"url": "http://p-bandai.jp/item/item-1000120750/",
+			"ja": "ＰＧ 1/60 ガンダムエクシア用リペアパーツセット"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 19800,
 		"currency": "JPY",
@@ -18,72 +51,109 @@
 		"day": 2
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
-			"■「PG ガンダムエクシア」通常版も登場！",
-			"■メカデザイナー海老川兼武氏監修のもと、最大の特徴である太陽炉「GNドライヴ」に着目し、「GN粒子」が全身に伝達していく機構を徹底考証！そこから導きだされたデザインアレンジと内部フレーム構造が具現化されている！",
-			"■メタリックシールが採用され、光の反射によって発光箇所を表現！",
+			"• 「PG ガンダムエクシア」通常版も登場！",
+			"• メカデザイナー海老川兼武氏監修のもと、最大の特徴である太陽炉「GNドライヴ」に着目し、「GN粒子」が全身に伝達していく機構を徹底考証！そこから導きだされたデザインアレンジと内部フレーム構造が具現化されている！",
+			"• メタリックシールが採用され、光の反射によって発光箇所を表現！",
 			"※本アイテムにはLEDユニットは付属しません。"
 		],
 		"en": [
-			"The \"PG GUNDAM Exia\" standard version is also available!",
-			"Under the supervision of mechanical designer Kanetake Ebikawa, we focused on the solar reactor \"GN Drive\", which is the biggest feature, and thoroughly examined the mechanism by which \"GN particles\" are transmitted throughout the body! The design arrangement and internal frame structure derived from it are embodied!",
-			"Metallic seals are adopted, and the light emitting part is expressed by reflecting light! * This item does not come with an LED unit.[Accessories]",
-			"GN Sword × 1"
+			"• The \"PG GUNDAM Exia\" standard version is also available!■ Under the supervision of mechanical designer Kanetake Ebikawa, we focused on the solar reactor \"GN Drive\", which is the biggest feature, and thoroughly examined the mechanism by which \"GN particles\" are transmitted throughout the body! The design arrangement and internal frame structure derived from it are embodied!■ Metallic seals are adopted, and the light emitting part is expressed by reflecting light! * This item does not come with an LED unit."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"GNソード×1",
-			"GNシールド×1",
-			"GNロングブレイド×1",
-			"GNショートブレイド",
-			"GNビームサーベル×2",
-			"GNビームダガー×2",
-			"専用ディスプレイベース×1"
-		],
-		"en": [
-			"GN sword x1",
-			"GNSeal × 1",
-			"GN long blade x1",
-			"GN short braid",
-			"GN beam saber x2",
-			"GN beam dagger x2",
-			"Dedicated display base x 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×40",
-			"マーキングシール×1",
-			"メタリックシール×1",
-			"シリコンシート×2",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 40",
-			"MarkingSeal×1",
-			"Metallic Seal×1",
-			"Silicone sheet x 2",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1203/1000120770_1.jpg",
-		"/images/items/01_1203/1000120770_2.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "GNソード",
+				"en": "• GN Sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GNシールド",
+				"en": "【Product details】■ Molded products"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GNロングブレイド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GNショートブレイド"
+			}
+		},
+		{
+			"name": {
+				"ja": "GNビームサーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "GNビームダガー"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 1
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 40
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "メタリックシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シリコンシート"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000120770_1.jpg",
+				"path": "/images/items/01_1203/1000120770_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000120770_2.jpg",
+				"path": "/images/items/01_1203/1000120770_2.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1203/",
-	"brandIds": [],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"01_2057",
-		"01_2067",
-		"item-1000129011",
-		"item-1000120750"
-	],
-	"manualId": "1059"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1203/"
+	}
 }

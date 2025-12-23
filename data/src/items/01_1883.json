@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 ダブルオークアンタフルセイバー",
-		"en": "MG 1/100 Double Orc Antaffle Saber"
+		"en": "MG 1/100 00 QAN[T] FULL SABER"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]",
+			"en": "MG [MASTER GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]",
+			"en": "MOBILE SUIT GUNDAM OO"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216602",
+			"url": "https://p-bandai.jp/item/item-1000216602/",
+			"ja": "ＭＧ 1/100 ガンダムアストレア＋プロトＧＮツインブロードブレイド"
+		},
+		{
+			"id": "01_5526",
+			"url": "https://bandai-hobby.net/item/01_5526/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムエクシア [クリアカラー]"
+		},
+		{
+			"id": "01_5102",
+			"url": "https://bandai-hobby.net/item/01_5102/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムナドレ"
+		},
+		{
+			"id": "01_4422",
+			"url": "https://bandai-hobby.net/item/01_4422/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムキュリオス[クリアカラー］"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 6050,
 		"currency": "JPY",
@@ -18,83 +64,145 @@
 		"day": 15
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム 00V戦記」に登場するダブルオークアンタのバリエーション機体がMGに登場！",
+			"「機動戦士ガンダム00V戦記」に登場するダブルオークアンタのバリエーション機体がMGに登場！",
 			"• 本体形状が忠実に再現され、多彩な機構を備えた武装「GNソードIVフルセイバー」は新規パーツで再現！",
 			"• GNコンデンサを搭載し、GNソードIVとの接続部分を備えた背面部と、海老川兼武氏の描いたビジュアルをイメージした頭部アンテナは新規造形！",
 			"• GNソードIVフルセイバー用のマーキングを含むマーキングシール、GNソードIV用台座が付属！"
 		],
 		"en": [
-			"A variation of the 000 Qanta that appears in \"Mobile Suit Gundam 00V Senki\" is now available in MG!",
-			"• The body shape is faithfully reproduced, and the armed \"GN Sword IV Full Saber\" equipped with a variety of mechanisms is reproduced with new parts!",
-			"• The back part, which is equipped with a GN capacitor and has a connection part with the GN Sword IV, and the head antenna, which is based on the visual drawn by Kanetake Ebikawa, are newly designed!",
-			"• MarkingSeal including marking for GN Sword IV Full Saber and pedestal for GN Sword IV are included!"
+			"The variant of the Double Oak Anta that appears in \"MOBILE SUIT GUNDAM 00V Senki\" is now available in MG!",
+			"• The shape of the main body is faithfully reproduced, and the armed \"GN Sword IV Full Saber\" with a variety of mechanisms is reproduced with new parts!",
+			"• The back part equipped with a GN capacitor and a connection part with the GN Sword IV, and the head antenna inspired by the visuals drawn by Mr. Kanetake Ebikawa are newly modeled!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ＧＮソードIV×1",
-			"ＧＮガンブレイド×3",
-			"ＧＮソードV×1",
-			"ＧＮソードビット",
-			"ＧＮシールド×1",
-			"武装用ディスプレイベース×1"
-		],
-		"en": [
-			"GN Sword IV×1",
-			"GN Gunblade x3",
-			"GN sword V×1",
-			"GN sword bit",
-			"GNSeal do×1",
-			"Weapon display base x 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×23",
-			"マーキングシール×1",
-			"ホイルシール×1",
-			"ドライデカール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 23",
-			"MarkingSeal×1",
-			"Foil Seal×1",
-			"Dry decal x 1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1883/1000128701_1.jpg",
-		"/images/items/01_1883/1000128701_10.jpg",
-		"/images/items/01_1883/1000128701_11.jpg",
-		"/images/items/01_1883/1000128701_2.jpg",
-		"/images/items/01_1883/1000128701_3.jpg",
-		"/images/items/01_1883/1000128701_4.jpg",
-		"/images/items/01_1883/1000128701_5.jpg",
-		"/images/items/01_1883/1000128701_6.jpg",
-		"/images/items/01_1883/1000128701_7.jpg",
-		"/images/items/01_1883/1000128701_8.jpg",
-		"/images/items/01_1883/1000128701_9.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ＧＮソードIV",
+				"en": "• GN Sword IV"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ＧＮガンブレイド",
+				"en": "• GN Gunblade"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "ＧＮソードV",
+				"en": "• GN Sword V"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ＧＮソードビット",
+				"en": "• GN Sword Bit"
+			}
+		},
+		{
+			"name": {
+				"ja": "ＧＮシールド",
+				"en": "• GN Shield"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "武装用ディスプレイベース",
+				"en": "• Molded product"
+			},
+			"count": 1
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 23
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ドライデカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128701_1.jpg",
+				"path": "/images/items/01_1883/1000128701_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128701_2.jpg",
+				"path": "/images/items/01_1883/1000128701_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128701_3.jpg",
+				"path": "/images/items/01_1883/1000128701_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128701_4.jpg",
+				"path": "/images/items/01_1883/1000128701_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128701_5.jpg",
+				"path": "/images/items/01_1883/1000128701_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128701_6.jpg",
+				"path": "/images/items/01_1883/1000128701_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128701_7.jpg",
+				"path": "/images/items/01_1883/1000128701_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128701_8.jpg",
+				"path": "/images/items/01_1883/1000128701_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128701_9.jpg",
+				"path": "/images/items/01_1883/1000128701_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128701_10.jpg",
+				"path": "/images/items/01_1883/1000128701_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000128701_11.jpg",
+				"path": "/images/items/01_1883/1000128701_11.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1883/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216602",
-		"01_5526",
-		"01_5102",
-		"01_4422"
-	],
-	"manualId": "0630"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1883/"
+	}
 }

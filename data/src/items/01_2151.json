@@ -5,6 +5,43 @@
 		"ja": "SD三国伝 024 真 袁術ズサ",
 		"en": "SD Sangokuden 024 Shin Yuan Shuzusa"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -20,7 +57,7 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"• 「SD ガンダム三国伝　Brave Battle Warriors」に登場する新武将をキット化。",
+			"• 「SDガンダム三国伝　Brave Battle Warriors」に登場する新武将をキット化。",
 			"• 専用の両刃の鎌（分解すると双剣になる）を装備。",
 			"• 背中に「暗黒ブースター（仮称）」と両肩に武器「暗黒瘴気ポッド（仮称）」を装備。",
 			"• ブースターとポッド合体して台座になる。",
@@ -28,32 +65,34 @@
 			"成形品×4、シール×1、取説マンガ有り"
 		],
 		"en": [
-			"• New warlords appearing in \"SD Gundam Sangokuden Brave Battle Warriors\" are now available as kits.",
+			"• New military commanders appearing in \"SD Gundam Sangokuden Brave Battle Warriors\" are made into kits.",
 			"• Equipped with a special double-edged sickle (which becomes a twin sword when disassembled).",
-			"• Equipped with a \"dark booster (tentative name)\" on its back and a weapon \" dark miasma pod (tentative name)\" on both shoulders.",
-			"• The booster and pod combine to form a pedestal.",
+			"• Equipped with a \"dark booster (tentative name)\" on its back and a weapon \"dark miasma pod (tentative name)\" on both shoulders.",
+			"• Booster and pod combine to form a pedestal.",
 			"• The seal mold on the sole of the foot is \"Yuan Shu\".",
 			"Molded product x 4, Seal x 1, instruction manual manga included"
 		]
 	},
-	"images": [
-		"/images/items/01_2151/153_3101.jpg",
-		"/images/items/01_2151/155_3101.jpg",
-		"/images/items/01_2151/156_3101.jpg",
-		"/images/items/01_2151/157_3101.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2151/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3101_s_nl8asl0t24mtfmr5rtuzt82b034w.jpg",
+				"path": "/images/items/01_2151/153_3101.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3101_s_rl8xkztr3rgs2b9l93njho3oqyb1.jpg",
+				"path": "/images/items/01_2151/155_3101.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3101_s_552i24g4tr4xobvsfspt4gv5xnzu.jpg",
+				"path": "/images/items/01_2151/156_3101.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3101_s_6ong8l3sougo8p0xbvkoo8e5fpdp.jpg",
+				"path": "/images/items/01_2151/157_3101.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2151/"
 }

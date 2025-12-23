@@ -5,6 +5,50 @@
 		"ja": "PG 1/60 RX-78-2 ガンダム",
 		"en": "PG 1/60 RX-78-2 Gundam"
 	},
+	"brands": [
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3373",
+			"url": "https://bandai-hobby.net/item/01_3373/",
+			"ja": "ＰＧ ＵＮＬＥＡＳＨＥＤ 1/60 RX-78-2 ガンダム クリアカラーボディ"
+		},
+		{
+			"id": "01_3328",
+			"url": "https://bandai-hobby.net/item/01_3328/",
+			"ja": "PG UNLEASHED 1/60 RX-78-2 ガンダム"
+		},
+		{
+			"id": "01_2829",
+			"url": "https://bandai-hobby.net/item/01_2829/",
+			"ja": "PG 1/60 ガンダムベース限定 RX-78-2 ガンダム [チタニウムフィニッシュ]"
+		},
+		{
+			"id": "01_1902",
+			"url": "https://bandai-hobby.net/item/01_1902/",
+			"ja": "PG 1/60 ガンダムベース限定 RX-78-3 G-3ガンダム [エクストラフィニッシュ]"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 13200,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 11
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
 			"すべてはここから始まり、ここへ到達する、まさに究極のガンダム・パーフェクトグレードモデルです。シリンダー等の関節内部機構は動きへの連動までをも完全再現、足部サスペンションもスプリングで可動します。外部装甲は各部脱着とフルハッチオープンでのディスプレイが可能です。コアファイターは内部構造に加え、変形～格納の合体プロセスも再現しました。指の可動部分はシステムシンジェクションにより完成済です。アムロのフィギュア２体付属。"
@@ -26,28 +69,30 @@
 			"Everything starts here and ends here, the ultimate Gundam perfect grade model. The internal mechanisms of the joints such as cylinders are completely reproduced, even the linkage to movement, and the foot suspension is also movable with springs. Each part of the external armor can be removed and displayed with the hatch fully open. In addition to the core fighter's internal structure, the combination process from transformation to storage is also reproduced. The movable parts of the fingers have been completed using system synjection. Includes 2 Amuro figures."
 		]
 	},
-	"images": [
-		"/images/items/01_2875/153_3856.jpg",
-		"/images/items/01_2875/155_3856.jpg",
-		"/images/items/01_2875/156_3856.jpg",
-		"/images/items/01_2875/157_3856.jpg",
-		"/images/items/01_2875/158_3856.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2875/",
-	"brandIds": [
-		"pg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3373",
-		"01_3328",
-		"01_2829",
-		"01_1902"
-	],
-	"manualId": "0985"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3856_s_rasv2tj4xxdffh4w217cocno0jqb.jpg",
+				"path": "/images/items/01_2875/153_3856.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3856_s_7u0tkjv1gbg1fwmqsonyoktaqqgx.jpg",
+				"path": "/images/items/01_2875/155_3856.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3856_s_w5mox5fndjwd0sb5z81xwgkojms9.jpg",
+				"path": "/images/items/01_2875/156_3856.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3856_s_s03i6qd2rkaafbizd1rrwao42gfv.jpg",
+				"path": "/images/items/01_2875/157_3856.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3856_s_ra3mn9farm0re7b9yft7f27ui0fd.jpg",
+				"path": "/images/items/01_2875/158_3856.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2875/"
 }

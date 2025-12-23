@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "1/2,700,000 デス・スターII & 1/14,500 スター・デストロイヤー",
-		"en": "1/2,700,000 Death Star II & 1/14,500 Star Destroyer"
+		"en": "1/2,700,00 DEATH STAR II & 1/14,500 STAR DESTROYER"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS",
+			"en": "STAR WARS"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3513",
+			"url": "https://bandai-hobby.net/item/01_3513/",
+			"ja": "ビークルモデル レイザー・クレスト"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		}
+	],
+	"scale": "1/2",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -18,7 +51,6 @@
 		"day": 28
 	},
 	"targetAge": 15,
-	"scale": "1/2",
 	"description": {
 		"ja": [
 			"エンドアの戦いを再現できる、デス・スターIIとスター・デストロイヤーのセット！",
@@ -27,56 +59,93 @@
 			"• 専用台座を浮遊感を演出するクリアに変更。台座に貼る専用マーキングが追加されている。"
 		],
 		"en": [
-			"A set of Death Star II and Star Destroyer that lets you recreate the Battle of Endor!",
-			"• You can reenact the Battle of Endor, which depicts the intense battle from ``Star Wars Episode VI: Return of the Jedi.''",
-			"• If you line it up with the 1/72 B-wing Starfighter (sold separately), you can create a combination reminiscent of the illustrations of the late concept artist Ralph McQuarrie!",
-			"• The special pedestal has been changed to a clear one that creates a floating feeling. Special markings to be pasted on the pedestal have been added."
+			"Recreate the Battle of Endor with a set of Death Star II and Star Destroyer! Recreate the Battle of Endor, which depicted the fierce battle of Star Wars: Episode VI - Return of the Jedi.",
+			"• 1/72 B-WING STARFIGHTER (sold separately) can be combined to evoke illustrations by the late concept artist Ralph McQuarrie!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ディスプレイベース×2"
-		],
-		"en": [
-			"Display base x 2"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"マーキングシール×1",
-			"取扱説明書（箱裏側に記載）"
-		],
-		"en": [
-			"Molded product x 4",
-			"MarkingSeal×1",
-			"Instruction manual (written on the back of the box)"
-		]
-	},
-	"images": [
-		"/images/items/01_1406/1000127548_1.jpg",
-		"/images/items/01_1406/1000127548_10.jpg",
-		"/images/items/01_1406/1000127548_11.jpg",
-		"/images/items/01_1406/1000127548_12.jpg",
-		"/images/items/01_1406/1000127548_2.jpg",
-		"/images/items/01_1406/1000127548_3.jpg",
-		"/images/items/01_1406/1000127548_4.jpg",
-		"/images/items/01_1406/1000127548_5.jpg",
-		"/images/items/01_1406/1000127548_6.jpg",
-		"/images/items/01_1406/1000127548_7.jpg",
-		"/images/items/01_1406/1000127548_8.jpg",
-		"/images/items/01_1406/1000127548_9.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイベース",
+				"en": "Display Base"
+			},
+			"count": 2
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書（箱裏側に記載）"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127548_1.jpg",
+				"path": "/images/items/01_1406/1000127548_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127548_2.jpg",
+				"path": "/images/items/01_1406/1000127548_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127548_3.jpg",
+				"path": "/images/items/01_1406/1000127548_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127548_4.jpg",
+				"path": "/images/items/01_1406/1000127548_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127548_5.jpg",
+				"path": "/images/items/01_1406/1000127548_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127548_6.jpg",
+				"path": "/images/items/01_1406/1000127548_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127548_7.jpg",
+				"path": "/images/items/01_1406/1000127548_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127548_8.jpg",
+				"path": "/images/items/01_1406/1000127548_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127548_9.jpg",
+				"path": "/images/items/01_1406/1000127548_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127548_10.jpg",
+				"path": "/images/items/01_1406/1000127548_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127548_11.jpg",
+				"path": "/images/items/01_1406/1000127548_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127548_12.jpg",
+				"path": "/images/items/01_1406/1000127548_12.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1406/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3513",
-		"01_3514"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1406/"
+	}
 }

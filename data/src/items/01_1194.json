@@ -5,6 +5,44 @@
 		"ja": "1/12 C-3PO & R2-D2",
 		"en": "1/12 C-3PO & R2-D2"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3515",
+			"url": "https://bandai-hobby.net/item/01_3515/",
+			"ja": "1/12 ザ・マンダロリアン(ベスカーアーマー)"
+		}
+	],
+	"scale": "1/12",
 	"price": {
 		"amount": 6820,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 16
 	},
 	"targetAge": 15,
-	"scale": "1/12",
 	"description": {
 		"ja": [
 			"『スター・ウォーズ』を代表する大人気ドロイド「C-3PO」と「R2-D2」を『スター・ウォーズ／最後のジェダイ』版のカラーリングで決定版として商品化！",
@@ -28,71 +65,135 @@
 			"全高：C-3PO：約142mm／R2-D2：約91mm"
 		],
 		"en": [
-			"The popular droids \"C-3PO \" and \" R2-D2 \" representing \" Star Wars \" are commercialized as the definitive version in the coloring of the \" Star Wars: The Last Jedi\" version!",
+			"The popular droids \"C-3PO\" and \"R2-D2\" representing \"Star Wars\" are commercialized as the definitive version in the coloring of the \"Star Wars: The Last Jedi\" version!",
 			"C-3PO's right leg has been changed to gold plating to recreate C-3PO from Star Wars: The Last Jedi, whose entire body is gold!",
 			"R2-D2 uses \"extra finish\" on the silver part to reproduce a more metallic silver! You can enjoy high quality R2-D2 just by assembling!",
 			"Get your hands on the \"definitive edition\" specifications!",
 			"Overall height: C-3PO: approx. 142mm/R2-D2: approx. 91mm"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用ディスプレイベース×2種",
-			"C-3PO 握り手（左右）×各１",
-			"C-3PO 平手（左右）×各1",
-			"C-3PO ディスプレイ用メッキアーム（左右）×各１",
-			"R2-D2 各種アーム×7種",
-			"R2-D2 収納ボックス開/閉再現用パーツ×1式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "C-3PO 握り手（左右）×各１"
+			}
+		},
+		{
+			"name": {
+				"ja": "C-3PO 平手（左右）×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "C-3PO ディスプレイ用メッキアーム（左右）×各１"
+			}
+		},
+		{
+			"name": {
+				"ja": "R2-D2 各種アーム"
+			},
+			"count": 7,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "R2-D2 収納ボックス開/閉再現用パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 10
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121019_12.jpg",
+				"path": "/images/items/01_1194/1000121019_12.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121019_1.jpg",
+				"path": "/images/items/01_1194/1000121019_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121019_2.jpg",
+				"path": "/images/items/01_1194/1000121019_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121019_3.jpg",
+				"path": "/images/items/01_1194/1000121019_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121019_4.jpg",
+				"path": "/images/items/01_1194/1000121019_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121019_5.jpg",
+				"path": "/images/items/01_1194/1000121019_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121019_6.jpg",
+				"path": "/images/items/01_1194/1000121019_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121019_7.jpg",
+				"path": "/images/items/01_1194/1000121019_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121019_8.jpg",
+				"path": "/images/items/01_1194/1000121019_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121019_9.jpg",
+				"path": "/images/items/01_1194/1000121019_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121019_10.jpg",
+				"path": "/images/items/01_1194/1000121019_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121019_11.jpg",
+				"path": "/images/items/01_1194/1000121019_11.jpg"
+			}
 		],
-		"en": [
-			"Dedicated display base x 2 types",
-			"C-3PO hand grip (left and right) x 1 each",
-			"C-3PO open hand (left and right) x 1 each",
-			"C-3PO display plating arm (left and right) x 1 each",
-			"R2-D2 Various arms x 7 types",
-			"R2-D2 storage box opening/closing reproduction parts x 1 set"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×10",
-			"水転写式デカール×1",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 10",
-			"Water transfer decal x 1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1194/1000121019_1.jpg",
-		"/images/items/01_1194/1000121019_10.jpg",
-		"/images/items/01_1194/1000121019_11.jpg",
-		"/images/items/01_1194/1000121019_12.jpg",
-		"/images/items/01_1194/1000121019_2.jpg",
-		"/images/items/01_1194/1000121019_3.jpg",
-		"/images/items/01_1194/1000121019_4.jpg",
-		"/images/items/01_1194/1000121019_5.jpg",
-		"/images/items/01_1194/1000121019_6.jpg",
-		"/images/items/01_1194/1000121019_7.jpg",
-		"/images/items/01_1194/1000121019_8.jpg",
-		"/images/items/01_1194/1000121019_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1194/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3515"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1194/"
 }

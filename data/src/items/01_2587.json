@@ -5,6 +5,44 @@
 		"ja": "ハローキティ / RX-78-2 ガンダム [SD EX-STANDARD]",
 		"en": "Hello Kitty / RX-78-2 Gundam [SD EX-STANDARD]"
 	},
+	"brands": [
+		{
+			"id": "SDEX",
+			"url": "https://bandai-hobby.net/brand/SDEX/",
+			"ja": "SDEXスタンダード"
+		},
+		{
+			"id": "SDEX",
+			"url": "https://bandai-hobby.net/brand/SDEX/",
+			"ja": "SDEXスタンダード"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2034",
+			"url": "https://bandai-hobby.net/item/01_2034/",
+			"ja": "Baby Milo & RX-78-2 GUNDAM [SD EX-STANDARD]"
+		},
+		{
+			"id": "01_599",
+			"url": "https://bandai-hobby.net/item/01_599/",
+			"ja": "SDEXスタンダード001 RX-78-2 ガンダム"
+		}
+	],
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -33,49 +71,87 @@
 			"The combined form of Gundam and Hello Kitty can also be reproduced!",
 			"• Runner is Hello Kitty face type",
 			"• Comes with apple parts and apple-shaped pedestal.",
-			"• Kitty can also pose in a sitting position."
+			"• Kitty can also be in a sitting pose."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"リンゴ×１",
-			"台座×１",
-			"装備品×1式",
-			"ホイルシール×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "リンゴ×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "台座×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "装備品"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール×１"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143227_1.jpg",
+				"path": "/images/items/01_2587/1000143227_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143227_2.jpg",
+				"path": "/images/items/01_2587/1000143227_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143227_3.jpg",
+				"path": "/images/items/01_2587/1000143227_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143227_4.jpg",
+				"path": "/images/items/01_2587/1000143227_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143227_5.jpg",
+				"path": "/images/items/01_2587/1000143227_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143227_6.jpg",
+				"path": "/images/items/01_2587/1000143227_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143227_7.jpg",
+				"path": "/images/items/01_2587/1000143227_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143227_8.jpg",
+				"path": "/images/items/01_2587/1000143227_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143227_9.jpg",
+				"path": "/images/items/01_2587/1000143227_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143227_10.jpg",
+				"path": "/images/items/01_2587/1000143227_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143227_11.jpg",
+				"path": "/images/items/01_2587/1000143227_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000143227_12.jpg",
+				"path": "/images/items/01_2587/1000143227_12.jpg"
+			}
 		],
-		"en": [
-			"Apple x1",
-			"Pedestal x 1",
-			"Equipment x 1 set",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2587/1000143227_1.jpg",
-		"/images/items/01_2587/1000143227_10.jpg",
-		"/images/items/01_2587/1000143227_11.jpg",
-		"/images/items/01_2587/1000143227_12.jpg",
-		"/images/items/01_2587/1000143227_2.jpg",
-		"/images/items/01_2587/1000143227_3.jpg",
-		"/images/items/01_2587/1000143227_4.jpg",
-		"/images/items/01_2587/1000143227_5.jpg",
-		"/images/items/01_2587/1000143227_6.jpg",
-		"/images/items/01_2587/1000143227_7.jpg",
-		"/images/items/01_2587/1000143227_8.jpg",
-		"/images/items/01_2587/1000143227_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2587/",
-	"brandIds": [
-		"SDEX"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2034",
-		"01_599"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2587/"
 }

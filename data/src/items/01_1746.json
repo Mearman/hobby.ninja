@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 シャイニングガンダム",
-		"en": "MG 1/100 Shining Gundam"
+		"en": "MG 1/100 SHINING GUNDAM"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]",
+			"en": "MG [MASTER GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "ggundam",
+			"url": "https://bandai-hobby.net/series/ggundam/",
+			"ja": "機動武闘伝Ｇガンダム",
+			"en": "MOBILE FIGHTER G GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2482",
+			"url": "https://bandai-hobby.net/item/01_2482/",
+			"ja": "MG 1/100 ハイパーモード Gガンダム"
+		},
+		{
+			"id": "01_2493",
+			"url": "https://bandai-hobby.net/item/01_2493/",
+			"ja": "MG 1/100 ハイパーモード マスターガンダム"
+		},
+		{
+			"id": "01_1385",
+			"url": "https://bandai-hobby.net/item/01_1385/",
+			"ja": "MG 1/100 Gガンダム"
+		},
+		{
+			"id": "01_1629",
+			"url": "https://bandai-hobby.net/item/01_1629/",
+			"ja": "MG 1/100 マスターガンダム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -17,37 +63,41 @@
 		"month": 5
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「機動武闘伝Ｇガンダム」に登場する主役モビルファイターのシャイニングガンダムのプラモデル。手刀などの格闘ポーズ用の手首が多数付属し、背部のコアランダーも分離、変形出来ます。体の各パーツを展開させることにより、スーパーモードも再現可能です。1/20スケールのドモン・カッシュのフィギュアが付属。"
 		],
 		"en": [
-			"A plastic model of Shining Gundam, the main mobile fighter that appears in \"Mobile Fighter G Gundam\". A number of wrists are included for fighting poses such as hand swords, and the Corelander on the back can be separated and transformed. Super mode can also be reproduced by expanding each part of the body. A 1/20 Scale Domon Kash figure is included."
+			"A plastic model of the Shining GUNDAM, the main mobile fighter that appears in \"MOBILE FIGHTER G GUNDAM\". It comes with a large number of wrists for fighting poses such as hand swords, and the core lander on the back can also be separated and transformed. By expanding each part of the body, Super Mode can also be reproduced. Comes with a 1/20 scale Domon Kash figure."
 		]
 	},
-	"images": [
-		"/images/items/01_1746/1000074942_1.jpg",
-		"/images/items/01_1746/1000074942_2.jpg",
-		"/images/items/01_1746/1000074942_3.jpg",
-		"/images/items/01_1746/1000074942_4.jpg",
-		"/images/items/01_1746/1000074942_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074942_1.jpg",
+				"path": "/images/items/01_1746/1000074942_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074942_2.jpg",
+				"path": "/images/items/01_1746/1000074942_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074942_3.jpg",
+				"path": "/images/items/01_1746/1000074942_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074942_4.jpg",
+				"path": "/images/items/01_1746/1000074942_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074942_5.jpg",
+				"path": "/images/items/01_1746/1000074942_5.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1746/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"ggundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2482",
-		"01_2493",
-		"01_1385",
-		"01_1629"
-	],
-	"manualId": "0814"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1746/"
+	}
 }

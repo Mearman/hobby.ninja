@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard ジレン",
 		"en": "Figure-rise Standard Jiren"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4901",
+			"url": "https://bandai-hobby.net/item/01_4901/",
+			"ja": "Figure-rise Standard ベジータ (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_4219",
+			"url": "https://bandai-hobby.net/item/01_4219/",
+			"ja": "Figure-rise Standard 孫悟空 (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_2974",
+			"url": "https://bandai-hobby.net/item/01_2974/",
+			"ja": "Figure-rise Standard アルティメット孫悟飯"
+		},
+		{
+			"id": "01_2595",
+			"url": "https://bandai-hobby.net/item/01_2595/",
+			"ja": "Figure-rise Standard バーダック"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -26,54 +69,90 @@
 			"• バトル演出を盛り上げるエフェクトパーツと各種ハンドパーツが付属。"
 		],
 		"en": [
-			"\"Jiren \" from \" Dragon Ball Super\" is now available in the Figure-rise Standard lineup! Assemble the strongest warrior!",
+			"\"Jiren\" from \"Dragon Ball Super\" is now available in the Figure-rise Standard lineup! Assemble the strongest warrior!",
 			"• With the muscle build system, you can experience the super full power of Universe 11's strongest warrior!",
 			"• Two types of facial expression parts are included.",
 			"• Comes with effect parts and various hand parts to enliven the battle performance."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"エネルギー波×1",
-			"エネルギー波(溜め)×1",
-			"表情パーツ×2種",
-			"ハンドパーツ（左右）×各3種",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "エネルギー波"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "エネルギー波(溜め)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "表情パーツ"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ（左右）×各3種"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3757_s_awgjiredrcc3zklqe0j1s3mndrwl.jpg",
+				"path": "/images/items/01_2769/153_3757.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3757_s_y58woao7lb1fx3kmpn5xb217cbmk.jpg",
+				"path": "/images/items/01_2769/155_3757.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3757_s_vgka4plw2flaamn2pdvtduih4oua.jpg",
+				"path": "/images/items/01_2769/156_3757.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3757_s_n5kq3f7jpqx4xo15twd8tim9afe8.jpg",
+				"path": "/images/items/01_2769/157_3757.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3757_s_qb7wo0ucfwt0iqwmcixu8gcqe85l.jpg",
+				"path": "/images/items/01_2769/158_3757.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3757_s_b5dgc99aywtjmjh931jajeuuf3ra.jpg",
+				"path": "/images/items/01_2769/159_3757.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3757_s_ldcglvj16xf5o39w9fi0dkfrywcr.jpg",
+				"path": "/images/items/01_2769/189_3757.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3757_s_5hvwjk16tsbruho4k4nm0tsgacg8.jpg",
+				"path": "/images/items/01_2769/190_3757.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3757_s_cf970i1myrx4xiv31lklyhyxm86w.jpg",
+				"path": "/images/items/01_2769/191_3757.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3757_s_nyc8qf1tx7fa37krwfk15hhqcdp9.jpg",
+				"path": "/images/items/01_2769/192_3757.jpg"
+			}
 		],
-		"en": [
-			"Energy wave x1",
-			"Energy wave (reservoir) x 1",
-			"Facial expression parts x 2 types",
-			"Hand parts (left and right) x 3 types each",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2769/153_3757.jpg",
-		"/images/items/01_2769/155_3757.jpg",
-		"/images/items/01_2769/156_3757.jpg",
-		"/images/items/01_2769/157_3757.jpg",
-		"/images/items/01_2769/158_3757.jpg",
-		"/images/items/01_2769/159_3757.jpg",
-		"/images/items/01_2769/189_3757.jpg",
-		"/images/items/01_2769/190_3757.jpg",
-		"/images/items/01_2769/191_3757.jpg",
-		"/images/items/01_2769/192_3757.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2769/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"dragonball"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4901",
-		"01_4219",
-		"01_2974",
-		"01_2595"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2769/"
 }

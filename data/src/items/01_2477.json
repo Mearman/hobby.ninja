@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 アースリィガンダム",
 		"en": "HGBD:R 1/144 Earthly Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"2019年10月からガンダムチャンネルで配信スタートの『ガンダムビルドダイバーズRe:RISE』 より、主役機が登場！",
@@ -29,50 +72,74 @@
 		"en": [
 			"The main character from \"Gundam Build Divers Re:RISE\", which will be distributed on the Gundam channel from 201910, has appeared!",
 			"• Adopts a new mechanism \"core docking custom\" that goes beyond build custom! Create your own original Gundam by combining colors and weapons!",
-			"• Earth Three Gundam's core unit \"Core Gundam \" and support mecha \" Earth Armor\" are combined and can be converted into Earth Three Gundam.",
-			"• Core spray gun and core seal can also be rearranged into large weapons with reinforced parts."
+			"• Earth Three Gundam's core unit \"Core Gundam\" and support mecha \"Earth Armor\" can be combined and converted into Earth Three Gundam.",
+			"• Core Spray Gun and Core Seal can also be rearranged into large weapons with reinforced parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ライフル×1",
-			"シールド×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3405_s_hgs5aj4fju9stceqdh0qum5o7x6u.jpg",
+				"path": "/images/items/01_2477/153_3405.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3405_s_v4lawicpk71no8oltfwnd3h0yd72.jpg",
+				"path": "/images/items/01_2477/155_3405.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3405_s_i4h7jy10k6du6qs5ujibs3tcp9hs.jpg",
+				"path": "/images/items/01_2477/156_3405.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3405_s_a8799bhev5n2c11houvmsya1bq7j.jpg",
+				"path": "/images/items/01_2477/157_3405.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3405_s_709jxwlms02ahudjkoe6c9p6ffwk.jpg",
+				"path": "/images/items/01_2477/158_3405.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3405_s_ijt4gxtgy5f0gtk1u5t2xwd8s603.jpg",
+				"path": "/images/items/01_2477/159_3405.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3405_s_zoirpmbzoocsc6m8p1eap6vnsk62.jpg",
+				"path": "/images/items/01_2477/189_3405.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3405_s_2ptxyeedi3ojhg6y752sbw59w14d.jpg",
+				"path": "/images/items/01_2477/190_3405.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3405_s_zm9r1inwbfubvs4uxts9i1hzeoji.jpg",
+				"path": "/images/items/01_2477/191_3405.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3405_s_wovvzy8upzi2tdkr5ndietyfrsnm.jpg",
+				"path": "/images/items/01_2477/192_3405.jpg"
+			}
 		],
-		"en": [
-			"Rifle x 1",
-			"Seal × 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2477/153_3405.jpg",
-		"/images/items/01_2477/155_3405.jpg",
-		"/images/items/01_2477/156_3405.jpg",
-		"/images/items/01_2477/157_3405.jpg",
-		"/images/items/01_2477/158_3405.jpg",
-		"/images/items/01_2477/159_3405.jpg",
-		"/images/items/01_2477/189_3405.jpg",
-		"/images/items/01_2477/190_3405.jpg",
-		"/images/items/01_2477/191_3405.jpg",
-		"/images/items/01_2477/192_3405.jpg",
-		"/images/items/01_2477/01_2477_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2477/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0069"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2477/"
 }

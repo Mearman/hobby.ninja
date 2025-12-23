@@ -5,6 +5,43 @@
 		"ja": "LBXゼノン",
 		"en": "LBX Zenon"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "lbx",
+			"url": "https://bandai-hobby.net/series/lbx/",
+			"ja": "ダンボール戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000215196",
+			"url": "https://p-bandai.jp/item/item-1000215196/",
+			"ja": "ＬＢＸイカロス・フォース"
+		},
+		{
+			"id": "item-1000215197",
+			"url": "https://p-bandai.jp/item/item-1000215197/",
+			"ja": "ＬＢＸイカロス・ゼロ"
+		},
+		{
+			"id": "item-1000210042",
+			"url": "https://p-bandai.jp/item/item-1000210042/",
+			"ja": "ＬＢＸエルシオン"
+		},
+		{
+			"id": "item-1000210041",
+			"url": "https://p-bandai.jp/item/item-1000210041/",
+			"ja": "ＬＢＸペルセウス"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -28,36 +65,48 @@
 			"• Zenon Halberd included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ゼノンハルバード×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ゼノンハルバード"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3503_s_yx6oc32vc9g44bf5ez405fnhi722.jpg",
+				"path": "/images/items/01_2579/153_3503.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3503_s_xpjcrvvmldfvutt7i2y2sxsoty9k.jpg",
+				"path": "/images/items/01_2579/155_3503.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3503_s_1fsr0ubfooh163bjyw0c5xjqmku3.jpg",
+				"path": "/images/items/01_2579/156_3503.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3503_s_43hkpxyltp18c05mmlz4pme6s7pl.jpg",
+				"path": "/images/items/01_2579/157_3503.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3503_s_pgwmomfi3y88g3pdzpo34bghg4bc.jpg",
+				"path": "/images/items/01_2579/158_3503.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3503_s_l0zscocq68am9obdewaslscadxjc.jpg",
+				"path": "/images/items/01_2579/159_3503.jpg"
+			}
 		],
-		"en": [
-			"Zenon Halberd x1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2579/153_3503.jpg",
-		"/images/items/01_2579/155_3503.jpg",
-		"/images/items/01_2579/156_3503.jpg",
-		"/images/items/01_2579/157_3503.jpg",
-		"/images/items/01_2579/158_3503.jpg",
-		"/images/items/01_2579/159_3503.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2579/",
-	"brandIds": [],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2579/"
 }

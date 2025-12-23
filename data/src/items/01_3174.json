@@ -5,6 +5,44 @@
 		"ja": "1/100 プロトタイプドム",
 		"en": "1/100 Prototype Dom"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 11
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、ジオン軍モビルスーツのザクおよびグフの後継機体をモデル化しました。バックパックのロケットエンジンは可動します。ロケットバズーカ、ヒートソードは機体にマウント可能です。差替えの平手がついています。専用デカール付です。"
@@ -26,22 +63,18 @@
 			"From \"Mobile Suit Gundam\", the successors of Zeon's mobile suits Zaku and Gouf are modeled. The rocket engine in the backpack is movable. Rocket bazooka and heat sword can be mounted on the aircraft. Comes with a replacement palm. Comes with a special decal."
 		]
 	},
-	"images": [
-		"/images/items/01_3174/153_4134.jpg",
-		"/images/items/01_3174/155_4134.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3174/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4134_s_xxtuxwzmel0vhynlsz2tnlq3ocr8.jpg",
+				"path": "/images/items/01_3174/153_4134.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4134_s_ngeruueu34ist0n38yxpj0no6uul.jpg",
+				"path": "/images/items/01_3174/155_4134.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3174/"
 }

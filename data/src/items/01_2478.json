@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 ガンダムジャスティスナイト",
 		"en": "HGBD:R 1/144 Gundam Justice Knight"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 19
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"2019年10月からガンダムチャンネルで配信スタートの『ガンダムビルドダイバーズRe:RISE』 より、インフィニットジャスティスガンダムをベースとした機体が登場！",
@@ -27,50 +70,74 @@
 		],
 		"en": [
 			"From \"Gundam Build Divers Re:RISE\", which will be distributed on Gundam channel from 201910, an aircraft based on Infinite Justice Gundam has appeared!",
-			"• Customized to look like a knight, equipped with a shot lancer, circular seal, and cloak-like wings.",
-			"• The HG's new hip joint mechanism allows for dynamic posing with the legs spread wide."
+			"• Customized to resemble a knight, with a shot lancer, circular seal, and cloak-like wings.",
+			"• HG's new hip joint mechanism allows for dynamic poses with legs spread wide."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"片手剣×1",
-			"ランス×1",
-			"背部ウイング×1",
-			"シールド×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "片手剣"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ランス"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "背部ウイング"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3406_s_jqztuyfyuljnt5rqhi4d88q8bslf.jpg",
+				"path": "/images/items/01_2478/153_3406.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3406_s_lalm8g0e8260atc24h38vpnbsn0q.jpg",
+				"path": "/images/items/01_2478/155_3406.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3406_s_5vzkwdygln6td6fldc63kzbkdz4r.jpg",
+				"path": "/images/items/01_2478/156_3406.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3406_s_4fmhg951fdmt8xzpgwu7ky1zqyzw.jpg",
+				"path": "/images/items/01_2478/157_3406.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3406_s_ztagguud8pc3mqlucctgad22ejgj.jpg",
+				"path": "/images/items/01_2478/158_3406.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3406_s_iu8pln1emfpbtlbt2wjz5gb4531h.jpg",
+				"path": "/images/items/01_2478/159_3406.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3406_s_zd2d6jksjjaq8oewkg30evtnny93.jpg",
+				"path": "/images/items/01_2478/189_3406.jpg"
+			}
 		],
-		"en": [
-			"One-handed sword x1",
-			"Lance x1",
-			"Back wing x 1",
-			"Seal × 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2478/153_3406.jpg",
-		"/images/items/01_2478/155_3406.jpg",
-		"/images/items/01_2478/156_3406.jpg",
-		"/images/items/01_2478/157_3406.jpg",
-		"/images/items/01_2478/158_3406.jpg",
-		"/images/items/01_2478/159_3406.jpg",
-		"/images/items/01_2478/189_3406.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2478/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0070"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2478/"
 }

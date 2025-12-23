@@ -2,9 +2,47 @@
 	"id": "01_2888",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム Gジェネレーション29 ガンダムエックス",
-		"en": "SD Gundam G Generation 29 Gundam X"
+		"ja": "SDガンダムGジェネレーション29 ガンダムエックス",
+		"en": "SDGundamG Generation 29 Gundam X"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "x",
+			"url": "https://bandai-hobby.net/series/x/",
+			"ja": "機動新世紀ガンダムＸ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_473",
+			"url": "https://bandai-hobby.net/item/01_473/",
+			"ja": "SDガンダムGジェネレーション44 ガンダムダブルエックス"
+		},
+		{
+			"id": "01_484",
+			"url": "https://bandai-hobby.net/item/01_484/",
+			"ja": "SDガンダムGジェネレーション45 ガンダムレオパルド"
+		},
+		{
+			"id": "01_495",
+			"url": "https://bandai-hobby.net/item/01_495/",
+			"ja": "SDガンダムGジェネレーション46 ガンダムエアマスター"
+		}
+	],
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -22,25 +60,17 @@
 			"「ＳＤガンダムＧジェネレーション２９ ガンダムエックス」が登場！"
 		],
 		"en": [
-			"\"SD Gundam G Generation 29 Gundam X\" is now available!"
+			"\"SDGundamG Generation 29 Gundam X\" is now available!"
 		]
 	},
-	"images": [
-		"/images/items/01_2888/153_3868.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2888/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"x"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_473",
-		"01_484",
-		"01_495"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3868_s_hdn7ejt3xryx9r2lm1v2vsns6lus.jpg",
+				"path": "/images/items/01_2888/153_3868.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2888/"
 }

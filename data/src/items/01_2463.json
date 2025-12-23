@@ -3,8 +3,62 @@
 	"type": "item",
 	"name": {
 		"ja": "ＭＧ 1/100 ガンダムＦ９１ Ｖｅｒ．２．０（ハリソン・マディン専用機）",
-		"en": "MG 1/100 Gundam F91 Ver. 2.0 (Harrison Maddin special machine)"
+		"en": "MG 1/100 GundamF91 Ver. 2.0 (Harrison Maddin special machine)"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "crossbone",
+			"url": "https://bandai-hobby.net/series/crossbone/",
+			"ja": "機動戦士クロスボーン・ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000154150",
+			"url": "https://p-bandai.jp/item/item-1000154150/",
+			"ja": "ＲＥ/100 1/100 ビギナ・ギナＩＩ（木星決戦仕様）"
+		},
+		{
+			"id": "item-1000142961",
+			"url": "https://p-bandai.jp/item/item-1000142961/",
+			"ja": "ＲＧ 1/144 クロスボーン・ガンダムＸ２"
+		},
+		{
+			"id": "01_1941",
+			"url": "https://bandai-hobby.net/item/01_1941/",
+			"ja": "MG 1/100 ガンダムベース限定 クロスボーンガンダムX-1 フルクロス [エクストラフィニッシュ]"
+		},
+		{
+			"id": "item-1000113952",
+			"url": "http://p-bandai.jp/item/item-1000113952/",
+			"ja": "ＭＧ 1/100 クロスボーン・ガンダムＸ２改 Ｖｅｒ．Ｋａ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4620,
 		"currency": "JPY",
@@ -17,31 +71,14 @@
 		"month": 10
 	},
 	"targetAge": 15,
-	"scale": "1/100",
-	"images": [
-		"/images/items/01_2463/153_3391.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2463/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"crossbone"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000154150",
-		"item-1000142961",
-		"01_1941",
-		"item-1000113952"
-	],
-	"manualId": "2742",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3391_o_1dfb0b4jq1ivr1cqpr2n1ln39vt23.jpg",
+				"path": "/images/items/01_2463/153_3391.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2463/"
 }

@@ -5,6 +5,54 @@
 		"ja": "ＭＧ 1/100 ガンダムアストレイレッドフレーム フライトユニット",
 		"en": "MG 1/100 Gundam Astray Red Frame Flight Unit"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "item-1000220190",
+			"url": "https://p-bandai.jp/item/item-1000220190/",
+			"ja": "ＨＧ 1/144 ザク・デザートタイプ ピンクパンサー隊機"
+		},
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "item-1000216105",
+			"url": "https://p-bandai.jp/item/item-1000216105/",
+			"ja": "RG 1/144 ソードインパルスガンダムＳｐｅｃＩＩ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 7150,
 		"currency": "JPY",
@@ -16,7 +64,6 @@
 		"year": 2020,
 		"month": 7
 	},
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－",
@@ -58,7 +105,7 @@
 			"－－－－－－－－－－－－－",
 			"Red Flame's Crimson Wings -",
 			"－－－－－－－－－－－－－",
-			"From \"Mobile Suit Gundam SEED DESTINY ASTRAY R\", the Gundam Astray Red Frame Flight Unit is commercialized in the Master Grade Series.",
+			"From \"Mobile Suit GundamSEED DESTINY ASTRAY R\", the Gundam Astray Red Frame Flight Unit is commercialized in the Master Grade Series.",
 			"The characteristic side wings of the flight unit and the impressive Baku reconnaissance type head unit are thoroughly reproduced with new modeling.",
 			"● Thoroughly reproduce the flight unit with new modeling!",
 			"Based on the MG Gundam Astray Red Dragon's flight unit, new parts such as side wings are added to reproduce the red frame specification flight unit.",
@@ -91,37 +138,50 @@
 			"- Product specifications are scheduled as of 20204. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2862/153_3844.jpg",
-		"/images/items/01_2862/155_3844.jpg",
-		"/images/items/01_2862/156_3844.jpg",
-		"/images/items/01_2862/157_3844.jpg",
-		"/images/items/01_2862/158_3844.jpg",
-		"/images/items/01_2862/159_3844.jpg",
-		"/images/items/01_2862/189_3844.jpg",
-		"/images/items/01_2862/190_3844.jpg",
-		"/images/items/01_2862/191_3844.jpg",
-		"/images/items/01_2862/192_3844.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2862/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"item-1000220190",
-		"item-1000220189",
-		"item-1000216105"
-	],
-	"manualId": "2594",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3844_s_tjf9owk8cdloqy43pejjyiukfed2.jpg",
+				"path": "/images/items/01_2862/153_3844.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3844_s_078zhdpcouulx3p6841fk1s5zb68.jpg",
+				"path": "/images/items/01_2862/155_3844.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3844_s_l6656odknr6lix8k2l1jr8r7jj41.jpg",
+				"path": "/images/items/01_2862/156_3844.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3844_s_tx7czv80vhisi3wk3wvrqznw8rri.jpg",
+				"path": "/images/items/01_2862/157_3844.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3844_s_hl2pmcmlc8nxnhy4uwfygjz7d3ro.jpg",
+				"path": "/images/items/01_2862/158_3844.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3844_s_11f4e2n2qmt6a7u4z2h908ot6a3b.jpg",
+				"path": "/images/items/01_2862/159_3844.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3844_s_9cna1b9wxik3ixw02jzl44ljwj2f.jpg",
+				"path": "/images/items/01_2862/189_3844.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3844_s_uzzwqm86r3h7y4axdq4sb7l1xmdd.jpg",
+				"path": "/images/items/01_2862/190_3844.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3844_s_00nsz6vsoi1v5t7keehkwsu3gh6u.jpg",
+				"path": "/images/items/01_2862/191_3844.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3844_s_jiprvyvoyuqyhytzj3ceg4wehej0.jpg",
+				"path": "/images/items/01_2862/192_3844.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2862/"
 }

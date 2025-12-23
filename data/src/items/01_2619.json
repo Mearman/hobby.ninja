@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard 人造人間17号",
 		"en": "Figure-rise Standard Android 17"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4901",
+			"url": "https://bandai-hobby.net/item/01_4901/",
+			"ja": "Figure-rise Standard ベジータ (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_4219",
+			"url": "https://bandai-hobby.net/item/01_4219/",
+			"ja": "Figure-rise Standard 孫悟空 (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_2974",
+			"url": "https://bandai-hobby.net/item/01_2974/",
+			"ja": "Figure-rise Standard アルティメット孫悟飯"
+		},
+		{
+			"id": "01_2769",
+			"url": "https://bandai-hobby.net/item/01_2769/",
+			"ja": "Figure-rise Standard ジレン"
+		}
+	],
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -30,54 +73,92 @@
 		"en": [
 			"Android 17 is now available with a renewed package! !",
 			"Comes with a wide variety of optional parts, allowing you to recreate a variety of scenes from the movie!",
-			"• Two types of facial expression parts are included: \"normal \" and \" angry\"!",
-			"• Pistol parts and handle included! No. 17, who goes on a ruthless rampage in the future, can also be recreated!",
+			"• Two types of facial expression parts are included: \"normal\" and \"angry\"!",
+			"• Handgun parts and handle included! No. 17, who goes on a ruthless rampage in the future, can also be recreated!",
 			"• Two types of effect parts! Comes with Qigong wave and barrier effects, allowing you to express battle scenes!",
 			"The product has special specifications, including a bomb planted by Dr. Gero inside its body! Recreate impressive scenes from the movie by placing it side by side with Android 18, which will be released at the same time!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"エフェクトパーツ×2（バリヤー、気功波）",
-			"表情×2（通常、怒り）",
-			"握り手（左右）×各1",
-			"平手（左右）×各1",
-			"拳銃持ち手（右）×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "エフェクトパーツ"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "（バリヤー、気功波）"
+			}
+		},
+		{
+			"name": {
+				"ja": "表情"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "（通常、怒り）"
+			}
+		},
+		{
+			"name": {
+				"ja": "握り手（左右）×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "平手（左右）×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "拳銃持ち手（右）"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000113358_1.jpg",
+				"path": "/images/items/01_2619/1000113358_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000113358_2.jpg",
+				"path": "/images/items/01_2619/1000113358_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000113358_3.jpg",
+				"path": "/images/items/01_2619/1000113358_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000113358_4.jpg",
+				"path": "/images/items/01_2619/1000113358_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000113358_5.jpg",
+				"path": "/images/items/01_2619/1000113358_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000113358_6.jpg",
+				"path": "/images/items/01_2619/1000113358_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000113358_7.jpg",
+				"path": "/images/items/01_2619/1000113358_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000113358_8.jpg",
+				"path": "/images/items/01_2619/1000113358_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000113358_9.jpg",
+				"path": "/images/items/01_2619/1000113358_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000113358_10.jpg",
+				"path": "/images/items/01_2619/1000113358_10.jpg"
+			}
 		],
-		"en": [
-			"Effect parts x 2 (barrier, Qigong wave)",
-			"Facial expression x2 (normal, angry)",
-			"Gripping hands (left and right) x 1 each",
-			"Hirate (left and right) x 1 each",
-			"Handgun handle (right) x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2619/1000113358_1.jpg",
-		"/images/items/01_2619/1000113358_10.jpg",
-		"/images/items/01_2619/1000113358_2.jpg",
-		"/images/items/01_2619/1000113358_3.jpg",
-		"/images/items/01_2619/1000113358_4.jpg",
-		"/images/items/01_2619/1000113358_5.jpg",
-		"/images/items/01_2619/1000113358_6.jpg",
-		"/images/items/01_2619/1000113358_7.jpg",
-		"/images/items/01_2619/1000113358_8.jpg",
-		"/images/items/01_2619/1000113358_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2619/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"dragonball"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4901",
-		"01_4219",
-		"01_2974",
-		"01_2769"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2619/"
 }

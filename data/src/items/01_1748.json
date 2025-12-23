@@ -5,6 +5,49 @@
 		"ja": "BB戦士234 ジオング（パーフェクト仕様）",
 		"en": "BB Senshi 234 Zeong (Perfect Specification)"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_4789",
+			"url": "https://bandai-hobby.net/item/01_4789/",
+			"ja": "SD ゴッグ&アッガイ&ゾック Ver.GFT トリコロールペイント"
+		},
+		{
+			"id": "01_4783",
+			"url": "https://bandai-hobby.net/item/01_4783/",
+			"ja": "SD RX-78-2 ガンダム Ver.GFT"
+		},
+		{
+			"id": "01_2038",
+			"url": "https://bandai-hobby.net/item/01_2038/",
+			"ja": "BB戦士240 神武兜頑駄無（カブトガンダム）"
+		}
+	],
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -25,25 +68,22 @@
 			"SD plastic model of Zeon that appears in \"Mobile Suit Gundam\". The head and body can be separated, and both leg parts can be attached to recreate the perfect Zeon. Wired psycommu is also reproduced by the lead wire."
 		]
 	},
-	"images": [
-		"/images/items/01_1748/153_268.jpg",
-		"/images/items/01_1748/155_268.jpg",
-		"/images/items/01_1748/156_268.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1748/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_4789",
-		"01_4783",
-		"01_2038"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_268_s_fs6ucznj51gl5mn7rbuw6wzd3xz3.jpg",
+				"path": "/images/items/01_1748/153_268.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_268_s_qczkxrojxw4j7t8428zhhg8irm2x.jpg",
+				"path": "/images/items/01_1748/155_268.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_268_s_voidr3lr96pqvgyz4kabddaio1wo.jpg",
+				"path": "/images/items/01_1748/156_268.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1748/"
 }

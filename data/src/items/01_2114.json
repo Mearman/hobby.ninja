@@ -5,6 +5,50 @@
 		"ja": "RG 1/144 ガンダムベース限定 ダブルオークアンタフルセイバー [クリアカラー]",
 		"en": "RG 1/144 Gundam Base Limited 00 Qantaffle Saber [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2648",
+			"url": "https://bandai-hobby.net/item/01_2648/",
+			"ja": "RG 1/144 ガンダムベース限定 ダブルオークアンタフルセイバー[トランザムクリア]"
+		},
+		{
+			"id": "01_2189",
+			"url": "https://bandai-hobby.net/item/01_2189/",
+			"ja": "RG 1/144 ダブルオーライザー[クリアカラー]"
+		},
+		{
+			"id": "item-1000118869",
+			"url": "http://p-bandai.jp/item/item-1000118869/",
+			"ja": "ＲＧ 1/144 ダブルオークアンタ（トランザムモード） [メタリックグロスインジェクション]"
+		},
+		{
+			"id": "item-1000111587",
+			"url": "http://p-bandai.jp/item/item-1000111587/",
+			"ja": "ＲＧ 1/144 ガンダムエクシア リペアII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
@@ -38,30 +81,26 @@
 			"● Comes with realistic decals including markings for GN Sword IV Full Saber!"
 		]
 	},
-	"images": [
-		"/images/items/01_2114/153_3062.jpg",
-		"/images/items/01_2114/155_3062.jpg",
-		"/images/items/01_2114/156_3062.jpg",
-		"/images/items/01_2114/157_3062.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2114/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2648",
-		"01_2189",
-		"item-1000118869",
-		"item-1000111587"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3062_s_o1by96fenhz76qo1advajp82ec0w.jpg",
+				"path": "/images/items/01_2114/153_3062.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3062_s_iekb90d4lpc5vf96vnevn1hdi40d.jpg",
+				"path": "/images/items/01_2114/155_3062.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3062_s_r04m8l1bilz8uskn7dlpdijxejib.jpg",
+				"path": "/images/items/01_2114/156_3062.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3062_s_pi2rljfwdcsoooslrcy5gbgdsa6z.jpg",
+				"path": "/images/items/01_2114/157_3062.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2114/"
 }

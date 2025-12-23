@@ -5,6 +5,44 @@
 		"ja": "1/220 メッサーラ",
 		"en": "1/220 Messara"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/220",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -17,33 +55,28 @@
 		"month": 9
 	},
 	"targetAge": 15,
-	"scale": "1/220",
 	"description": {
 		"ja": [
-			"『機動戦士Z ガンダム』より、1/220スケールでメッサーラが登場。",
+			"『機動戦士Zガンダム』より、1/220スケールでメッサーラが登場。",
 			"モビルアーマーへの変形を差替えなしで再現可能です。ふくらはぎのスラスターカバーは開閉します。背面装甲のトランスフレームシールドは背面スラスターごと可動します。武器はビーム・サーベルが付いています。"
 		],
 		"en": [
-			"From \"Mobile Suit Z Gundam\", Messala appears in 1/220 scale.",
+			"From \"Mobile Suit ZGundam\", Messala appears in 1/220 scale.",
 			"Transformation into mobile armor can be reproduced without replacement. The calf thruster cover opens and closes. The transframe Seal on the back armor is movable along with the rear thrusters. The weapon comes with a beam saber."
 		]
 	},
-	"images": [
-		"/images/items/01_3199/153_4157.jpg",
-		"/images/items/01_3199/155_4157.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3199/",
-	"brandIds": [],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/155_4157_s_kkvsutqr8lezate2lhi58wqz65x3.jpg",
+				"path": "/images/items/01_3199/155_4157.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_4157_s_ko98lumh2lw4palq772kprrvecdc.jpg",
+				"path": "/images/items/01_3199/153_4157.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3199/"
 }

@@ -5,6 +5,43 @@
 		"ja": "マルチボックス なんでもハロ(グリーン)",
 		"en": "Multibox Anything Hello (Green)"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
 	"price": {
 		"amount": 3278,
 		"currency": "JPY",
@@ -20,28 +57,24 @@
 	"targetAge": 15,
 	"description": {
 		"ja": [
-			"• 直径約25センチ。ほぼ実物大。 • ボタンを押すと耳が開く。 • お部屋のマスコット、キャンディーボックスなど、何でも使える。"
+			"• 直径約25センチ。ほぼ実物大。 ■ボタンを押すと耳が開く。 ■お部屋のマスコット、キャンディーボックスなど、何でも使える。"
 		],
 		"en": [
-			"• Diameter approximately 25 cm. Almost life size. • Press the button to open the ears. • Can be used as a room mascot, candy box, or anything else."
+			"• Approximately 25 cm in diameter. Almost life size. ■Press the button to open the ears. ■Can be used as a room mascot, candy box, or anything else."
 		]
 	},
-	"images": [
-		"/images/items/01_2069/153_3019.jpg",
-		"/images/items/01_2069/155_3019.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2069/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3019_s_kvy4wlr12s9m2uy4mfi8gp7d13d6.jpg",
+				"path": "/images/items/01_2069/153_3019.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3019_s_fpy7blfx46tisej3tlj07jl9j59w.jpg",
+				"path": "/images/items/01_2069/155_3019.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2069/"
 }

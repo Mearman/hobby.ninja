@@ -5,6 +5,43 @@
 		"ja": "バトルピカちんキット01 DXエアライドシューター＆パワージャンボセット",
 		"en": "Battle Pikachin Kit01 DX Air Ride Shooter & Power Jumbo Set"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 3080,
 		"currency": "JPY",
@@ -35,10 +72,10 @@
 			"取扱説明書…1"
 		],
 		"en": [
-			"• Shoot paper airplanes with the electric power of Pikachin trigger!",
-			"• A starter kit that includes the key items \"Pikachin Trigger \", \" Air Ride Shooter Attachment \", and the Pikachin Mecha \" Power Jumbo\" which is the key to battle.",
-			"• If you combine the attachment with the trigger, the \"Air Ride Shooter\" is completed! Launch paper airplanes with electric power!",
-			"• Power jumbo can be easily assembled with touch gate runner. By installing the power jumbo, you can fire three consecutive paper airplanes!",
+			"• Shoot paper airplanes with the electric power of the Pikachin trigger!",
+			"• A starter kit that includes the key items \"Pikachin Trigger\", \"Air Ride Shooter Attachment\", and the Pikachin mechanism \"Power Jumbo\" which is the key to battle.",
+			"• Combine the attachment with the trigger to complete the \"Air Ride Shooter\"! Launch paper airplanes with electric power!",
+			"• Power Jumbo is easy to assemble with Touch Gate Runner. By installing the power jumbo, you can fire three consecutive paper airplanes!",
 			"• Jumbo Badge LV.1 and Jumbo Badge LV.2 are included.",
 			"[Set contents]",
 			"Pikachin Trigger (finished product)...1",
@@ -50,30 +87,50 @@
 			"Handling Manual...1"
 		]
 	},
-	"images": [
-		"/images/items/01_2284/153_3225.jpg",
-		"/images/items/01_2284/155_3225.jpg",
-		"/images/items/01_2284/156_3225.jpg",
-		"/images/items/01_2284/157_3225.jpg",
-		"/images/items/01_2284/158_3225.jpg",
-		"/images/items/01_2284/159_3225.jpg",
-		"/images/items/01_2284/189_3225.jpg",
-		"/images/items/01_2284/190_3225.jpg",
-		"/images/items/01_2284/191_3225.jpg",
-		"/images/items/01_2284/192_3225.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2284/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3225_s_n9cc8zsqn45vflocfqmyquguh7dc.jpg",
+				"path": "/images/items/01_2284/153_3225.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3225_s_8kvy2dbiqgn5y6o3erpd634xm2t0.jpg",
+				"path": "/images/items/01_2284/155_3225.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3225_s_dl01v2me1nentrwuhsbc30b9ksds.jpg",
+				"path": "/images/items/01_2284/156_3225.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3225_s_alapn79hajlpnaugi9u15d8esud4.jpg",
+				"path": "/images/items/01_2284/157_3225.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3225_s_2b0boc5j4wb821tssfs1qmnlasi9.jpg",
+				"path": "/images/items/01_2284/158_3225.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3225_s_uw8o14wocjiuxkvxgkvvm8zflh8g.jpg",
+				"path": "/images/items/01_2284/159_3225.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3225_s_azat9vi6q1lmfxipm8b9n42vzyj3.jpg",
+				"path": "/images/items/01_2284/189_3225.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3225_s_wqat0i14qhbbuwwysafpze17cn6q.jpg",
+				"path": "/images/items/01_2284/190_3225.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3225_s_sdv9ute8qejba5atsdy9gkavajs6.jpg",
+				"path": "/images/items/01_2284/191_3225.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3225_s_n38f3679hklfz58mc8x6tr2fi1hk.jpg",
+				"path": "/images/items/01_2284/192_3225.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2284/"
 }

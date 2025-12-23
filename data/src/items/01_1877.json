@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 ジオング",
-		"en": "MG 1/100 Zeon"
+		"en": "MG 1/100 MSN-02 ZEONG"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 7040,
 		"currency": "JPY",
@@ -17,32 +50,37 @@
 		"month": 7
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム」に登場の最終ライバル「ジオング」のプラモデル。多数の関節が可動し、腰と肩を引き出すことでダイナミックなポーズ取りが実現します。頭部が着脱するのはもちろん、頭部モノアイや耳ノズルも可動します。本体、左右の前腕用スタンドが付属。両手の有線式サイコミュ兵器を展開したまま飾ることができます。"
 		],
 		"en": [
-			"A plastic model of the final rival \"Zeongu \" that appears in \" Mobile Suit Gundam\". Many joints are movable, and dynamic poses are achieved by pulling out the hips and shoulders. Not only the head can be attached and detached, but the head mono-eye and ear nozzles can also be moved. The main body and stands for left and right forearms are included. You can display the wired psycommu weapon in both hands while it is unfolded."
+			"A plastic model of the final rival \"Zeong\" that appeared in \"MOBILE SUIT GUNDAM\". A large number of joints are movable, and the hips and shoulders are pulled out for dynamic poses. Not only can the head be attached and detached, but the head mono-eye and ear nozzles can also be moved. Comes with a stand for the main body and left and right forearms. It can be displayed with a two-handed wired psycho-weapon deployed."
 		]
 	},
-	"images": [
-		"/images/items/01_1877/1000074781_1.jpg",
-		"/images/items/01_1877/1000074781_2.jpg",
-		"/images/items/01_1877/1000074781_3.jpg",
-		"/images/items/01_1877/1000074781_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074781_1.jpg",
+				"path": "/images/items/01_1877/1000074781_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074781_2.jpg",
+				"path": "/images/items/01_1877/1000074781_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074781_3.jpg",
+				"path": "/images/items/01_1877/1000074781_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074781_4.jpg",
+				"path": "/images/items/01_1877/1000074781_4.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1877/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
-	"manualId": "0517"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1877/"
+	}
 }

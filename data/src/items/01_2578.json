@@ -5,6 +5,43 @@
 		"ja": "ハイパーファンクション LBXオーディーン",
 		"en": "Hyper Function LBX Odin"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "lbx",
+			"url": "https://bandai-hobby.net/series/lbx/",
+			"ja": "ダンボール戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000215196",
+			"url": "https://p-bandai.jp/item/item-1000215196/",
+			"ja": "ＬＢＸイカロス・フォース"
+		},
+		{
+			"id": "item-1000215197",
+			"url": "https://p-bandai.jp/item/item-1000215197/",
+			"ja": "ＬＢＸイカロス・ゼロ"
+		},
+		{
+			"id": "item-1000210042",
+			"url": "https://p-bandai.jp/item/item-1000210042/",
+			"ja": "ＬＢＸエルシオン"
+		},
+		{
+			"id": "item-1000210041",
+			"url": "https://p-bandai.jp/item/item-1000210041/",
+			"ja": "ＬＢＸペルセウス"
+		}
+	],
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -31,52 +68,94 @@
 			"From \"Danball Senki\", LBX Odin is equipped with a new transformation gimmick and becomes three-dimensional as a hyper function!",
 			"• Precise mechanical details are reproduced on the core skeleton.",
 			"• Each armor reproduced with multicolored molding can be smoothly attached and detached.",
-			"• Transformation into flight form is achieved by replacing only the wrists, with careful attention to the parts composition of each part.",
-			"• By deploying the vernier behind the knees, the range of motion of the legs is greatly ensured.",
-			"• Special weapon Retaliator and 4 types of wrists are included."
+			"• Transformation into flight form is achieved by replacing only the wrists with careful attention to the parts composition of each part.",
+			"• By deploying the vernier behind the knees, the range of motion of the legs is greatly increased.",
+			"• Includes special weapon Retaliator and 4 types of wrists."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"リタリエイター×1",
-			"専用台座×1",
-			"ハンドパーツ×1式",
-			"ホイルシール×1",
-			"マーキングシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "リタリエイター"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "専用台座"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3502_s_3a88cwlk6vd5zppjxry4fnjsd9qs.jpg",
+				"path": "/images/items/01_2578/153_3502.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3502_s_lfik1az5ubnxzlk86uonwrj3wi4p.jpg",
+				"path": "/images/items/01_2578/155_3502.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3502_s_16qvrmf60wt39e6cb5f0l1dref1c.jpg",
+				"path": "/images/items/01_2578/156_3502.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3502_s_kvni14c6ovw30plooo92xh5c5o88.jpg",
+				"path": "/images/items/01_2578/157_3502.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3502_s_w8p7isjxo7bmfois7enj6np9ligh.jpg",
+				"path": "/images/items/01_2578/158_3502.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3502_s_gy4teino5i2mifgelp8my4omchy2.jpg",
+				"path": "/images/items/01_2578/159_3502.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3502_s_ywajz4z9xzginjppk9dt9uukj258.jpg",
+				"path": "/images/items/01_2578/189_3502.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3502_s_qc6ipmgmvcgjxyzq7gdkt9rmntzv.jpg",
+				"path": "/images/items/01_2578/190_3502.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3502_s_3nzkim44v3siwep9xf5rhcr8ttja.jpg",
+				"path": "/images/items/01_2578/191_3502.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3502_s_5t2cfe6mr98rx2c0gndkqnehxb5e.jpg",
+				"path": "/images/items/01_2578/192_3502.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_3502_s_fg5uwz2sumy07jhf2m7z9rmmeni2.jpg",
+				"path": "/images/items/01_2578/193_3502.jpg"
+			}
 		],
-		"en": [
-			"Retaliator x 1",
-			"Dedicated pedestal x 1",
-			"Hand parts x 1 set",
-			"Foil Seal×1",
-			"MarkingSeal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2578/153_3502.jpg",
-		"/images/items/01_2578/155_3502.jpg",
-		"/images/items/01_2578/156_3502.jpg",
-		"/images/items/01_2578/157_3502.jpg",
-		"/images/items/01_2578/158_3502.jpg",
-		"/images/items/01_2578/159_3502.jpg",
-		"/images/items/01_2578/189_3502.jpg",
-		"/images/items/01_2578/190_3502.jpg",
-		"/images/items/01_2578/191_3502.jpg",
-		"/images/items/01_2578/192_3502.jpg",
-		"/images/items/01_2578/193_3502.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2578/",
-	"brandIds": [],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2578/"
 }

@@ -3,8 +3,48 @@
 	"type": "item",
 	"name": {
 		"ja": "ガンダムベース限定 アクションベース5［ジオンイメージカラー］",
-		"en": "Gundam Base Limited Action Base 5 [Zeon Image Color]"
+		"en": "THE GUNDAM BASE LIMITED ACTION BASE 5 (ZEON IMAGE COLORS)"
 	},
+	"brands": [
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース",
+			"en": "ACTION BASE"
+		},
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2438",
+			"url": "https://bandai-hobby.net/item/01_2438/",
+			"ja": "ガンダムベース限定 アクションベース4［シャア専用カラー］"
+		},
+		{
+			"id": "01_2357",
+			"url": "https://bandai-hobby.net/item/01_2357/",
+			"ja": "ガンダムベース限定 アクションベース5［連邦イメージカラー］"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -24,32 +64,32 @@
 			"アクションベース５が、ジオン軍MSを展示するのにピッタリなデザインで登場。"
 		],
 		"en": [
-			"A limited edition item from the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"Action Base 5 is now available with a design perfect for displaying Zeon military MS."
+			"For GUNPLA fans around the world, this item is limited to the official GUNPLA complex \"GUNDAM Base\". The ACTION BASE 5 is now available in the perfect design to display the Zeon Army MS."
 		]
 	},
-	"images": [
-		"/images/items/01_2358/1000153767_1.jpg",
-		"/images/items/01_2358/1000153767_2.jpg",
-		"/images/items/01_2358/1000153767_3.jpg",
-		"/images/items/01_2358/1000153767_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153767_1.jpg",
+				"path": "/images/items/01_2358/1000153767_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153767_2.jpg",
+				"path": "/images/items/01_2358/1000153767_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153767_3.jpg",
+				"path": "/images/items/01_2358/1000153767_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153767_4.jpg",
+				"path": "/images/items/01_2358/1000153767_4.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2358/",
-	"brandIds": [
-		"actionbase"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2438",
-		"01_2357"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2358/"
 	}
 }

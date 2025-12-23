@@ -5,6 +5,45 @@
 		"ja": "ガンダムデカールNo.112 RG 1/144 ユニコーンガンダム用",
 		"en": "Gundam Decal No.112 RG 1/144 Unicorn Gundam"
 	},
+	"brands": [
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_1263",
+			"url": "https://bandai-hobby.net/item/01_1263/",
+			"ja": "ガンダムデカールNo.115 RG 1/144 シナンジュ用"
+		},
+		{
+			"id": "01_1041",
+			"url": "https://bandai-hobby.net/item/01_1041/",
+			"ja": "ガンダムデカールNo.107 機動戦士ガンダムUC汎用1"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,7 +57,6 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"100点以上のラインナップを誇る、大人気ガンダムデカールのシリーズ商品が登場。",
@@ -31,22 +69,14 @@
 			"water transfer decal"
 		]
 	},
-	"images": [
-		"/images/items/01_1139/153_2071.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1139/",
-	"brandIds": [
-		"gundam_decal"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4971",
-		"01_1263",
-		"01_1041"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2071_s_zy3oa8xbma7sd8dudqfre00xfghk.jpg",
+				"path": "/images/items/01_1139/153_2071.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1139/"
 }

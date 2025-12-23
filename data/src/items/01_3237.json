@@ -5,6 +5,34 @@
 		"ja": "ＢＢ戦士 14 ザク3",
 		"en": "BB Senshi 14 Zaku 3"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-zz",
+			"url": "https://bandai-hobby.net/series/gundam-zz/",
+			"ja": "機動戦士ガンダムＺＺ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3242",
+			"url": "https://bandai-hobby.net/item/01_3242/",
+			"ja": "ＢＢ戦士 19 フルアーマーZZガンダム"
+		}
+	],
 	"price": {
 		"amount": 330,
 		"currency": "JPY",
@@ -18,20 +46,14 @@
 		"day": 25
 	},
 	"targetAge": 15,
-	"images": [
-		"/images/items/01_3237/153_4191.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3237/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"gundam-zz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3242"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4191_s_i3tp2w7p08vh64zjv1e2005mwast.jpg",
+				"path": "/images/items/01_3237/153_4191.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3237/"
 }

@@ -2,9 +2,48 @@
 	"id": "01_1832",
 	"type": "item",
 	"name": {
-		"ja": "PG 1/60 ガンダム Mk-II(ティターンズカラー)",
-		"en": "PG 1/60 Gundam Mk-II (Titans color)"
+		"ja": "PG 1/60 ガンダムMk-II(ティターンズカラー)",
+		"en": "PG 1/60 GundamMk-II (Titans color)"
 	},
+	"brands": [
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4870",
+			"url": "https://bandai-hobby.net/item/01_4870/",
+			"ja": "PG 1/60 RX-178 ガンダム Mk-II マルチコーティングバージョン"
+		},
+		{
+			"id": "01_4475",
+			"url": "https://bandai-hobby.net/item/01_4475/",
+			"ja": "PG 1/60 MSZ-006 ゼータガンダム"
+		},
+		{
+			"id": "01_1417",
+			"url": "https://bandai-hobby.net/item/01_1417/",
+			"ja": "PG 1/60 ガンダムMk-II"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 16500,
 		"currency": "JPY",
@@ -17,36 +56,38 @@
 		"month": 7
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
 			"「機動戦士Ｚガンダム」に登場の「ガンダムＭｋ－II（ティターンズカラー）」のプラモデル。大腿フレームなどは２重構造で、すき間から内部ディテールが見えるなどギミックも豊富です。頭部、コクピット内部はＬＥＤにより発光します。各シリーズを通じて最大のスケールを誇る仕様です。"
 		],
 		"en": [
-			"A plastic model of \"Gundam Mk-II (Titans color)\" that appears in \" Mobile Suit Z Gundam\". The thigh frame has a double structure, and there are plenty of gimmicks, such as the internal details being visible through the gaps. The head and cockpit interior are illuminated by LEDs. Specifications boasting the largest scale throughout each series."
+			"A plastic model of \"Gundam Mk-II (Titans color)\" that appears in \"Mobile Suit Z Gundam\". The thigh frame has a double structure, and there are plenty of gimmicks, such as the internal details being visible through the gaps. The head and cockpit interior are illuminated by LEDs. Specifications boasting the largest scale throughout each series."
 		]
 	},
-	"images": [
-		"/images/items/01_1832/153_276.jpg",
-		"/images/items/01_1832/155_276.jpg",
-		"/images/items/01_1832/156_276.jpg",
-		"/images/items/01_1832/157_276.jpg",
-		"/images/items/01_1832/158_276.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1832/",
-	"brandIds": [
-		"pg"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4870",
-		"01_4475",
-		"01_1417"
-	],
-	"manualId": "1054"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_276_s_7butquj3ky7aoxoki76qvytjymbc.jpg",
+				"path": "/images/items/01_1832/153_276.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_276_s_u2x1ke91gkfnr70nb3egrj8lsuhc.jpg",
+				"path": "/images/items/01_1832/155_276.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_276_s_kh3neoe9f3zjz2xtdqsesq7tfehr.jpg",
+				"path": "/images/items/01_1832/156_276.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_276_s_1oju5rhr15n4nw2cyl9vcvyp47kp.jpg",
+				"path": "/images/items/01_1832/157_276.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_276_s_qzlpny2y9jy2bm9zovccr0zytfzd.jpg",
+				"path": "/images/items/01_1832/158_276.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1832/"
 }

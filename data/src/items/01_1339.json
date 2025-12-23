@@ -5,6 +5,60 @@
 		"ja": "【トリプルアクションベース付き】ＲＧ 1/144 黒い三連星専用ザクII ３機セット",
 		"en": "[With triple action base] RG 1/144 Black Tri-Star Zaku II 3 machine set"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "msv",
+			"url": "https://bandai-hobby.net/series/msv/",
+			"ja": "ガンダムＭＳＶ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000169387",
+			"url": "https://p-bandai.jp/item/item-1000169387/",
+			"ja": "ＲＧ 1/144 MS-06R-2 ロバート・ギリアム専用ザクＩＩ"
+		},
+		{
+			"id": "item-1000132743",
+			"url": "https://p-bandai.jp/item/item-1000132743",
+			"ja": "ＲＧ 1/144 MS-06R-1A エリック・マンスフィールド専用ザクＩＩ"
+		},
+		{
+			"id": "item-1000127155",
+			"url": "http://p-bandai.jp/item/item-1000127155",
+			"ja": "ＲＧ 1/144 ギャビー・ハザード専用ザクＩＩ"
+		},
+		{
+			"id": "item-1000123858",
+			"url": "http://p-bandai.jp/item/item-1000123858/",
+			"ja": "ＲＧ 1/144 MS-06F ザク・マインレイヤー"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 9900,
 		"currency": "JPY",
@@ -17,30 +71,14 @@
 		"month": 3
 	},
 	"targetAge": 15,
-	"scale": "1/144",
-	"images": [
-		"/images/items/01_1339/153_2267.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1339/",
-	"brandIds": [
-		"rg",
-		"pb_rg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"msv"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000169387",
-		"item-1000132743",
-		"item-1000127155",
-		"item-1000123858"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2267_o_1c5im57h4vfk1rf79d91d3v1m1828.jpg",
+				"path": "/images/items/01_1339/153_2267.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1339/"
 }

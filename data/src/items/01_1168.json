@@ -5,6 +5,49 @@
 		"ja": "メカコレクション 地球連邦アンドロメダ級 一番艦 アンドロメダ",
 		"en": "Mecha Collection Earth Federation Andromeda Class First Ship Andromeda"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "yamato",
+			"url": "https://bandai-hobby.net/series/yamato/",
+			"ja": "宇宙戦艦ヤマトシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5498",
+			"url": "https://bandai-hobby.net/item/01_5498/",
+			"ja": "メカコレクションDX 1式空間戦闘攻撃機 コスモタイガーII(単座型/銃座型) [2機セット]"
+		},
+		{
+			"id": "01_5500",
+			"url": "https://bandai-hobby.net/item/01_5500/",
+			"ja": "メカコレクションDX 試製空間戦闘攻撃機 コスモパイソン [2機セット]"
+		},
+		{
+			"id": "01_3667",
+			"url": "https://bandai-hobby.net/item/01_3667/",
+			"ja": "メカコレクション ガイペロン級多層式航宙母艦 バルメス(外洋機動艦隊仕様)"
+		},
+		{
+			"id": "01_3650",
+			"url": "https://bandai-hobby.net/item/01_3650/",
+			"ja": "メカコレクション デウスーラIII世"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -26,50 +69,49 @@
 			"• ポールジョイントで角度調整が可能な台座が付属。飛行シーンの再現も可能。"
 		],
 		"en": [
-			"\"Andromeda-class first ship Andromeda \" from \" Space Battleship Yamato 2202\" is now available in the mecha collection!",
-			"• \"Space Battleship Yamato 2202\" is now available in Mecha Collection!",
-			"• Details of Andromeda are precisely reproduced in a palm-sized model!",
-			"• A pedestal whose angle can be adjusted with a pole joint is included. It is also possible to reproduce flight scenes."
+			"\"Andromeda-class first ship Andromeda\" from \"Space Battleship Yamato 2202\" is now available in the mecha collection!",
+			"• “Space Battleship Yamato 2202” is now available in Mecha Collection!",
+			"• Accurately reproduces Andromeda's details in a palm-sized device!",
+			"• Comes with a pedestal whose angle can be adjusted with a pole joint. It is also possible to reproduce flight scenes."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ディスプレイベース×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイベース×１"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "マーキングシール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書（箱裏側に記載）"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/155_2133_s_egermf09ismb0h7y60fwr5muika7.jpg",
+				"path": "/images/items/01_1168/155_2133.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_2133_s_fo45l7eo6d1kpbeu8sxijzah7sk3.jpg",
+				"path": "/images/items/01_1168/153_2133.jpg"
+			}
 		],
-		"en": [
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"マーキングシール×１",
-			"取扱説明書（箱裏側に記載）"
-		],
-		"en": [
-			"Molded product x 4",
-			"MarkingSeal×1",
-			"Instruction manual (written on the back of the box)"
-		]
-	},
-	"images": [
-		"/images/items/01_1168/153_2133.jpg",
-		"/images/items/01_1168/155_2133.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1168/",
-	"brandIds": [
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"yamato"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5498",
-		"01_5500",
-		"01_3667",
-		"01_3650"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1168/"
 }

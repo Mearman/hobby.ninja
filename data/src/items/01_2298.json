@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 シルヴァ・バレト・サプレッサー",
 		"en": "HGUC 1/144 Silva Bullet Suppressor"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "narrative",
+			"url": "https://bandai-hobby.net/series/narrative/",
+			"ja": "機動戦士ガンダムNT[ナラティブ]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5039",
+			"url": "https://bandai-hobby.net/item/01_5039/",
+			"ja": "HG 1/144 ナラティブガンダム C装備 [覚醒イメージカラー]"
+		},
+		{
+			"id": "01_5038",
+			"url": "https://bandai-hobby.net/item/01_5038/",
+			"ja": "HG 1/144 ナラティブガンダム A装備 [クリアカラー]"
+		},
+		{
+			"id": "01_3460",
+			"url": "https://bandai-hobby.net/item/01_3460/",
+			"ja": "HG 1/144 シルヴァ・バレト・サプレッサー[クリアカラー]"
+		},
+		{
+			"id": "01_2666",
+			"url": "https://bandai-hobby.net/item/01_2666/",
+			"ja": "HG 1/144 ガンダムベース限定 ナラティブガンダム B装備"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2970,
 		"currency": "JPY",
@@ -18,70 +67,90 @@
 		"day": 22
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム NT』に登場する、シルヴァ・バレト・サプレッサーをHGUCで立体化！",
+			"『機動戦士ガンダムNT』に登場する、シルヴァ・バレト・サプレッサーをHGUCで立体化！",
 			"• ビーム・マグナム発射後の破損した右腕部を交換するギミックを再現。バックパックに収納された右腕パーツを腰部のクレーンを使い交換できる。",
 			"• ガンダムタイプの頭部形状も設定イメージに合わせ造形。",
 			"• ハンドパーツの他に、交換用の右腕部パーツとビーム・マグナムが付属。"
 		],
 		"en": [
 			"The Silva Bullet Suppressor that appears in \"Mobile Suit Gundam NT\" is made into a three-dimensional HGUC!",
-			"• Reproduces the gimmick of replacing the damaged right arm after firing Beam Magnum. The right arm parts stored in the backpack can be replaced using the crane on the waist.",
-			"• The head shape of the Gundam type is also shaped according to the setting image.",
+			"• Reproduces the gimmick of replacing the damaged right arm after firing the Beam Magnum. The right arm parts stored in the backpack can be replaced using the crane on the waist.",
+			"• Gundam type head shape is also molded according to the setting image.",
 			"• In addition to hand parts, replacement right arm parts and beam magnum are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームマグナム×1",
-			"右腕交換用サブアーム×4"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームマグナム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "右腕交換用サブアーム"
+			},
+			"count": 4
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 14
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3238_s_o2nhzhf413zfjs30ut1lrg4t4yhi.jpg",
+				"path": "/images/items/01_2298/153_3238.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3238_s_x0gl9tsmwnz9ze5e4wvgk7rayqsk.jpg",
+				"path": "/images/items/01_2298/155_3238.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3238_s_ox5rvqr98oaorobqhbk01ne3gkle.jpg",
+				"path": "/images/items/01_2298/156_3238.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3238_s_ywnw1vphx4mvzc4bs0z2p6pjgkld.jpg",
+				"path": "/images/items/01_2298/157_3238.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3238_s_m35oqcjmuj9b7ciywievocn8u4ha.jpg",
+				"path": "/images/items/01_2298/158_3238.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3238_s_2b8bukna7t4twt3kdxpuc0gf1a5o.jpg",
+				"path": "/images/items/01_2298/159_3238.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3238_s_pkjlriu9wzuclzw1fonsbpfmoqzw.jpg",
+				"path": "/images/items/01_2298/189_3238.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3238_s_i5e6bt1du1u8m5hpocdn3zsn6k2v.jpg",
+				"path": "/images/items/01_2298/190_3238.jpg"
+			}
 		],
-		"en": [
-			"Beam magnum x 1",
-			"Right arm replacement sub arm x 4"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×14",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 14",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2298/153_3238.jpg",
-		"/images/items/01_2298/155_3238.jpg",
-		"/images/items/01_2298/156_3238.jpg",
-		"/images/items/01_2298/157_3238.jpg",
-		"/images/items/01_2298/158_3238.jpg",
-		"/images/items/01_2298/159_3238.jpg",
-		"/images/items/01_2298/189_3238.jpg",
-		"/images/items/01_2298/190_3238.jpg",
-		"/images/items/01_2298/01_2298_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2298/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"narrative"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5039",
-		"01_5038",
-		"01_3460",
-		"01_2666"
-	],
-	"manualId": "0494"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2298/"
 }

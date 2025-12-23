@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 真武者頑駄無 戦国ノ陣",
-		"en": "MG 1/100 Shinmusha Gundam Sengoku no Jin"
+		"en": "MG 1/100 SHINMUSHA GUNDAM \"SENGOKU NO JIN\""
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]",
+			"en": "MG [MASTER GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 8800,
 		"currency": "JPY",
@@ -17,35 +63,33 @@
 		"month": 3
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"5月人形を彷彿とする煌びやかなMG真武者頑駄無が登場 各部に施されたゴールドメッキとグロス成形により日本伝統の蒔絵を思わせる仕上がりを実現 刀、火砲、槍、薙刀を装備 絢爛豪華な飾り台には、各武器専用のスタンドと屏風、専用プレートが付属"
 		],
 		"en": [
-			"Introducing a gorgeous MG Shinmusha Gundam u reminiscent of the 5 dolls.Gold plating and gloss molding on each part create a finish reminiscent of traditional maki-e.Equipped with a sword, cannon, spear, and naginata.The gorgeous display stand comes with a stand, folding screen, and special plate for each weapon."
+			"The glittering MG Mamusha Gandanashi, reminiscent of May dolls, appears Gold plating and gloss molding on each part to achieve a finish reminiscent of traditional Japan maki-e Equipped with swords, artillery, spears, and naginato The gorgeous display stand comes with a stand for each weapon, a folding screen, and a special plate"
 		]
 	},
-	"images": [
-		"/images/items/01_1695/1000092449_1.jpg",
-		"/images/items/01_1695/1000092449_2.jpg",
-		"/images/items/01_1695/1000092449_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092449_1.jpg",
+				"path": "/images/items/01_1695/1000092449_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092449_2.jpg",
+				"path": "/images/items/01_1695/1000092449_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092449_3.jpg",
+				"path": "/images/items/01_1695/1000092449_3.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1695/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
-	"manualId": "0567"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1695/"
+	}
 }

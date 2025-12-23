@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 デュエルガンダム アサルトシュラウド",
-		"en": "MG 1/100 Duel Gundam Assault Shroud"
+		"en": "MG 1/100 DUEL GUNDAM ASSAULTSHROUD"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]",
+			"en": "MG [MASTER GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED",
+			"en": "MOBILE SUIT GUNDAM SEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "01_5221",
+			"url": "https://bandai-hobby.net/item/01_5221/",
+			"ja": "MG 1/100 イージスガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_4272",
+			"url": "https://bandai-hobby.net/item/01_4272/",
+			"ja": "MG 1/100 ガンダムベース限定 パーフェクトストライクガンダム グランドスラム装備型"
+		},
+		{
+			"id": "01_4195",
+			"url": "https://bandai-hobby.net/item/01_4195/",
+			"ja": "MG 1/100 ガンダムベース限定 エクリプスガンダム[クリアカラー]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4620,
 		"currency": "JPY",
@@ -18,36 +64,41 @@
 		"day": 18
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"• デュエルガンダムがアサルトシュラウド装備も付いてMG化。 • X-100系フレームを新開発。アサルトシュラウド装着時でも最大の可動域を実現。 • MG用として新規メカデザインを描き起こし。 • 胸部コクピットハッチが開閉し、内部にコクピットを再現。 • 武器などの装備の脱着を再現できる。 成形品×15、ホイルシール×1、ガンダムデカール×1、組立説明書×1"
+			"• デュエルガンダムがアサルトシュラウド装備も付いてMG化。 ■X-100系フレームを新開発。アサルトシュラウド装着時でも最大の可動域を実現。 ■MG用として新規メカデザインを描き起こし。 ■胸部コクピットハッチが開閉し、内部にコクピットを再現。 ■武器などの装備の脱着を再現できる。 成形品×15、ホイルシール×1、ガンダムデカール×1、組立説明書×1"
 		],
 		"en": [
-			"• Duel Gundam is now MG with assault shroud equipment. • Newly developed X-100 series frame. Maximum range of motion is achieved even when the assault shroud is attached. • Drawing up a new mechanical design for MG. • The chest cockpit hatch opens and closes to recreate the cockpit inside. • You can reproduce the attachment and detachment of equipment such as weapons. Molded product x 15, foil seal x 1, Gundam decal x 1, assembly manual x 1"
+			"• Duel GUNDAM is now MG with Assault Shroud equipment.",
+			"• Newly developed X-100 series frame. Maximum range of motion even when wearing the assault shroud.",
+			"• Drew a new mecha design for MG.",
+			"• The chest cockpit hatch opens and closes, reproducing the cockpit inside.",
+			"• You can reproduce the attachment and detachment of equipment such as weapons. Molded ×15, Foil Seal ×1, GUNDAM DECAL ×1, Assembly Instructions×1"
 		]
 	},
-	"images": [
-		"/images/items/01_1789/1000092436_1.jpg",
-		"/images/items/01_1789/1000092436_2.jpg",
-		"/images/items/01_1789/1000092436_3.jpg",
-		"/images/items/01_1789/1000092436_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092436_1.jpg",
+				"path": "/images/items/01_1789/1000092436_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092436_2.jpg",
+				"path": "/images/items/01_1789/1000092436_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092436_3.jpg",
+				"path": "/images/items/01_1789/1000092436_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092436_4.jpg",
+				"path": "/images/items/01_1789/1000092436_4.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1789/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5221",
-		"01_4272",
-		"01_4195"
-	],
-	"manualId": "0600"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1789/"
+	}
 }

@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 R・ジャジャ",
 		"en": "HGUC 1/144 R Jaja"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-zz",
+			"url": "https://bandai-hobby.net/series/gundam-zz/",
+			"ja": "機動戦士ガンダムＺＺ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_2077",
+			"url": "https://bandai-hobby.net/item/01_2077/",
+			"ja": "ＨＧ 1/144 ガズ Ｒ／Ｌ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -18,74 +67,98 @@
 		"day": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム ZZ』に登場する指揮官用試作型MSがHGUCで登場！",
+			"『機動戦士ガンダムZZ』に登場する指揮官用試作型MSがHGUCで登場！",
 			"• プロポーション、可動域、色再現に至るまで徹底考証。",
 			"• R・ジャジャの特徴的なヒート剣付きのビーム・ライフルと大型ビーム・サーベルが付属。",
 			"• バリアブルシールドはフレキシブルに可動。",
 			"• シールド裏面にもこだわりの造形が施されている。"
 		],
 		"en": [
-			"The commander's prototype MS that appears in \"Mobile Suit Gundam ZZ\" is now available in HGUC!",
-			"• Thorough examination of proportions, range of motion, and color reproduction.",
-			"• R. Jaja's characteristic beam rifle with heat sword and large beam saber are included.",
-			"• Variable Seal can be moved flexibly.",
-			"• The back side of the seal is also carefully sculpted."
+			"The commander's prototype MS that appears in \"Mobile Suit GundamZZ\" is now available in HGUC!",
+			"• Thorough investigation of proportions, range of motion, and color reproduction.",
+			"• R. Jaja's signature beam rifle with heat sword and large beam saber are included.",
+			"• Variable seal can be moved flexibly.",
+			"• The back of the seal is also carefully sculpted."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ヒート剣付きビーム・ライフル×1",
-			"表情手(左)×1",
-			"ビーム・サーベル×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヒート剣付きビーム・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "表情手(左)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 12
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3029_s_s3vxp1a0gql3gvtwe9jcv6esaokn.jpg",
+				"path": "/images/items/01_2079/153_3029.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3029_s_ldnq3sup1hi5ia8g57ixq3xkre1q.jpg",
+				"path": "/images/items/01_2079/155_3029.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3029_s_z12k02jvtne7056nk0rpfhn9tvea.jpg",
+				"path": "/images/items/01_2079/156_3029.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3029_s_0j7tia4iebbmyfkfh9runcivmkq8.jpg",
+				"path": "/images/items/01_2079/157_3029.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3029_s_w9qoivcsqhotwpe4tjhu4ocapmyo.jpg",
+				"path": "/images/items/01_2079/158_3029.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3029_s_k9vm7cm1jq1ak57x8jx1ne7xc6ll.jpg",
+				"path": "/images/items/01_2079/159_3029.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3029_s_s30kgb347wvhp7qg59zzxctodidt.jpg",
+				"path": "/images/items/01_2079/189_3029.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3029_s_01q01fnjm0wjheuiufrah0drtfjz.jpg",
+				"path": "/images/items/01_2079/190_3029.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle with heat sword x1",
-			"Expression hand (left) x 1",
-			"Beam saber x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×12",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 12",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2079/153_3029.jpg",
-		"/images/items/01_2079/155_3029.jpg",
-		"/images/items/01_2079/156_3029.jpg",
-		"/images/items/01_2079/157_3029.jpg",
-		"/images/items/01_2079/158_3029.jpg",
-		"/images/items/01_2079/159_3029.jpg",
-		"/images/items/01_2079/189_3029.jpg",
-		"/images/items/01_2079/190_3029.jpg",
-		"/images/items/01_2079/01_2079_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2079/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam-zz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5963",
-		"01_4985",
-		"01_4971",
-		"01_2077"
-	],
-	"manualId": "0483"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2079/"
 }

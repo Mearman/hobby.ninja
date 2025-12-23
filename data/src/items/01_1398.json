@@ -5,6 +5,50 @@
 		"ja": "HGBD 1/144 ガルバルディリベイク",
 		"en": "HGBD 1/144 Galbaldi Rebake"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -18,68 +62,98 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズ』より、ガルバルディβをカスタマイズしたガンプラ「ガルバルディリベイク」が登場！",
 			"• 大型の格闘武器と、バックパックに射撃武器を装備しているほか、シールドが付属する！"
 		],
 		"en": [
-			"From \"Gundam Build Divers \" comes Gunpla \" Galbaldy Rebake\", a customized version of Galbaldy β!",
-			"• In addition to being equipped with a large fighting weapon and a shooting weapon in its backpack, it also comes with a Seal!"
+			"From \"Gundam Build Divers\" comes Gunpla \"Galbaldy Rebake\", a customized version of Galbaldy β!",
+			"• In addition to being equipped with a large melee weapon and a shooting weapon in the backpack, it also comes with a Seal!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ハンマープライヤー（仮）×1",
-			"シールドライフル（仮）×1",
-			"ナックルガード（仮）×1",
-			"榴弾砲（仮）×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハンマープライヤー（仮）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールドライフル（仮）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ナックルガード（仮）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "榴弾砲（仮）"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 11
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2321_s_ykz5oqkyqociwd2rkixdi02kofiu.jpg",
+				"path": "/images/items/01_1398/153_2321.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2321_s_5qhver8z9kd33yo7wlklwbkjobs7.jpg",
+				"path": "/images/items/01_1398/155_2321.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2321_s_pvll4j949ptu3v2b8wzfhx71bbk0.jpg",
+				"path": "/images/items/01_1398/156_2321.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2321_s_cw05b92a7abjrw2cq4zbrxj72vmu.jpg",
+				"path": "/images/items/01_1398/157_2321.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2321_s_07ipyv9o72omf0uerilt8tt9ci7h.jpg",
+				"path": "/images/items/01_1398/158_2321.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2321_s_ux7j562aao5571m26iiucyzt90ls.jpg",
+				"path": "/images/items/01_1398/159_2321.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2321_s_o0lplqds1b7ixllq4ht6lorw8ldo.jpg",
+				"path": "/images/items/01_1398/189_2321.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2321_s_m8valcahkwjzy68bkptuf217jjge.jpg",
+				"path": "/images/items/01_1398/190_2321.jpg"
+			}
 		],
-		"en": [
-			"Hammer pliers (temporary) x 1",
-			"Seal dry rifle (tentative) x 1",
-			"Knuckle guard (temporary) x 1",
-			"Howitzer (temporary) x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×11",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded products x 11",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1398/153_2321.jpg",
-		"/images/items/01_1398/155_2321.jpg",
-		"/images/items/01_1398/156_2321.jpg",
-		"/images/items/01_1398/157_2321.jpg",
-		"/images/items/01_1398/158_2321.jpg",
-		"/images/items/01_1398/159_2321.jpg",
-		"/images/items/01_1398/189_2321.jpg",
-		"/images/items/01_1398/190_2321.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1398/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "1026"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1398/"
 }

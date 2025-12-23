@@ -5,6 +5,54 @@
 		"ja": "ＰＧ 1/60 ガンダムアストレイ レッドフレーム改",
 		"en": "PG 1/60 Gundam Astray Red Frame Kai"
 	},
+	"brands": [
+		{
+			"id": "pb_pg",
+			"url": "https://bandai-hobby.net/brand/pb_pg/",
+			"ja": "PG［パーフェクトグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000220190",
+			"url": "https://p-bandai.jp/item/item-1000220190/",
+			"ja": "ＨＧ 1/144 ザク・デザートタイプ ピンクパンサー隊機"
+		},
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "item-1000216105",
+			"url": "https://p-bandai.jp/item/item-1000216105/",
+			"ja": "RG 1/144 ソードインパルスガンダムＳｐｅｃＩＩ"
+		},
+		{
+			"id": "item-1000216112",
+			"url": "https://p-bandai.jp/item/item-1000216112/",
+			"ja": "HG 1/144 デルタザイン"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 25300,
 		"currency": "JPY",
@@ -17,29 +65,14 @@
 		"month": 6
 	},
 	"targetAge": 15,
-	"scale": "1/60",
-	"images": [
-		"/images/items/01_1364/153_2291.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1364/",
-	"brandIds": [
-		"pg",
-		"pb_pg",
-		"pb_gunpla"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000220190",
-		"item-1000220189",
-		"item-1000216105",
-		"item-1000216112"
-	],
-	"manualId": "2704",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2291_o_1c7vru7lr132m1tnb18fd1tq312u223.jpg",
+				"path": "/images/items/01_1364/153_2291.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1364/"
 }

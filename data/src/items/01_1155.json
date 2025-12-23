@@ -5,6 +5,37 @@
 		"ja": "LEGENDBB 武者頑駄無真悪参",
 		"en": "LEGENDBB Musha Gundam Shinkusan"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 1430,
 		"currency": "JPY",
@@ -25,54 +56,80 @@
 			"• 「三叉の槍」も付属し、幅広い可動範囲で特徴的なポージングが可能！"
 		],
 		"en": [
-			"• Ancestors of Shinkokusan Taishogun are now LEGENDBB!",
-			"• The secret treasures of the Gundam Corps that Shinakusan brought out, the \"Silver Shield \" and the \" Ginro Sword \", are new models, and the \" Ginro Sword \" can be stored in the \" Silver Shield\"!",
-			"• A \"three-pronged spear\" is also included, allowing for distinctive poses with a wide range of motion!"
+			"• The ancestors of Shinkokusan Taishogun have become LEGENDBB!",
+			"• The secret treasures of the Gundam Corps that Shinakusan brought out, the \"Silver Shield\" and the \"Ginro Sword\", are new models, and the \"Ginro Sword\" can be stored in the \"Silver Shield\"!",
+			"• A \"three-pronged spear\" is also included, allowing for a wide range of movement and unique poses!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"銀狼剣×１",
-			"銀の楯×１",
-			"三叉の槍×１"
-		],
-		"en": [
-			"Silver wolf sword x1",
-			"Silver shield x1",
-			"Trident spear x1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×9",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 9",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1155/153_2086.jpg",
-		"/images/items/01_1155/155_2086.jpg",
-		"/images/items/01_1155/156_2086.jpg",
-		"/images/items/01_1155/157_2086.jpg",
-		"/images/items/01_1155/158_2086.jpg",
-		"/images/items/01_1155/159_2086.jpg",
-		"/images/items/01_1155/189_2086.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "銀狼剣×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "銀の楯×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "三叉の槍×１"
+			}
+		}
 	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1155/",
-	"brandIds": [
-		"bb"
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 9
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
 	],
-	"seriesIds": [],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2086_s_f6iugf234zcxn3qntwvqxquojzar.jpg",
+				"path": "/images/items/01_1155/153_2086.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2086_s_er4qo567o2fi6pa6u6z53jggvu34.jpg",
+				"path": "/images/items/01_1155/155_2086.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2086_s_wo8vj2zho3fi90e1lndyzn81k1oq.jpg",
+				"path": "/images/items/01_1155/156_2086.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2086_s_m81kjqs49muqflch70y177g8wgup.jpg",
+				"path": "/images/items/01_1155/157_2086.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2086_s_47vkut2obqhec196lolp3gczcjg9.jpg",
+				"path": "/images/items/01_1155/158_2086.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2086_s_hrk49rn23g0ijk77b64v9oojb57c.jpg",
+				"path": "/images/items/01_1155/159_2086.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2086_s_vwld09z15ls6hcd971e03kn3a3y6.jpg",
+				"path": "/images/items/01_1155/189_2086.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1155/"
 }

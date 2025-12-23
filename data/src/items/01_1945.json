@@ -5,6 +5,50 @@
 		"ja": "HGBD 1/144 ガンダムアストレイノーネイム",
 		"en": "HGBD 1/144 Gundam Astray No Name"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 4
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダムアストレイをベースにビルドしたシバのガンプラが登場！",
@@ -28,72 +71,113 @@
 		],
 		"en": [
 			"Shiba's Gunpla, built based on Gundam Astray, is now available!",
-			"• Composite equipment \"No Name Rifle \" can be reproduced in various forms such as \" D Extension \" for defense, \" B Smart Gun\" for long-range attack shooting mode, and backpack mode!",
+			"• The composite equipment \"No Name Rifle\" can be reproduced in various forms such as the defensive mode \"D Extension\", the long-range attack shooting mode \"B Smart Gun\", and the backpack mode!",
 			"• In addition, the remotely controlled weapon Blade Dragoon, the deployment gimmick of the twin antennae protruding from the head, and the details on the back of the head are also reproduced!",
-			"• The right arm comes with a gauntlet saber that can be equipped!"
+			"• A gauntlet saber that can be equipped on the right arm is included!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ノーネイムライフル×１",
-			"射撃モード用ジョイントパーツ×1",
-			"バックパックモード用ジョイントパーツ×1",
-			"防御形態用ジョイントパーツ×1",
-			"ガントレットセイバー×1",
-			"手首（左平手）×1",
-			"ビーム刃×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ノーネイムライフル×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "射撃モード用ジョイントパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バックパックモード用ジョイントパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "防御形態用ジョイントパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ガントレットセイバー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "手首（左平手）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム刃×１"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 9
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2944_s_b1d6vueq9d5yxwtucaxnqu2yi7wg.jpg",
+				"path": "/images/items/01_1945/153_2944.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2944_s_kbclnid5wgmm3f718xov99cncr2j.jpg",
+				"path": "/images/items/01_1945/155_2944.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2944_s_pnxpssugyt8fmu87l3r5w7co38vr.jpg",
+				"path": "/images/items/01_1945/156_2944.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2944_s_9rem7nc3038ght904bdcz9eltrna.jpg",
+				"path": "/images/items/01_1945/157_2944.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2944_s_n6ttjh1awg8fic5g9nfmeagf9dkp.jpg",
+				"path": "/images/items/01_1945/158_2944.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2944_s_iefz6b3q1hfdg0vdepgcoaido559.jpg",
+				"path": "/images/items/01_1945/159_2944.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2944_s_ekdm55d69g64wlshd7pqrujxpd2w.jpg",
+				"path": "/images/items/01_1945/189_2944.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2944_s_pe41plmy0e975wvirbxrubffx9ph.jpg",
+				"path": "/images/items/01_1945/190_2944.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2944_s_9qt7uc1aeiidh6pnuzsptewmt0kf.jpg",
+				"path": "/images/items/01_1945/191_2944.jpg"
+			}
 		],
-		"en": [
-			"No name rifle x1",
-			"Joint parts for shooting mode x 1",
-			"Joint parts for backpack mode x 1",
-			"Joint parts for defense form x 1",
-			"Gauntlet Saber x1",
-			"Wrist (left palm) x 1",
-			"Beam blade x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×9",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 9",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1945/153_2944.jpg",
-		"/images/items/01_1945/155_2944.jpg",
-		"/images/items/01_1945/156_2944.jpg",
-		"/images/items/01_1945/157_2944.jpg",
-		"/images/items/01_1945/158_2944.jpg",
-		"/images/items/01_1945/159_2944.jpg",
-		"/images/items/01_1945/189_2944.jpg",
-		"/images/items/01_1945/190_2944.jpg",
-		"/images/items/01_1945/191_2944.jpg",
-		"/images/items/01_1945/01_1945_inst_0.jpg",
-		"/images/items/01_1945/01_1945_inst_1.jpg",
-		"/images/items/01_1945/01_1945_inst_2.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1945/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "1030"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1945/"
 }

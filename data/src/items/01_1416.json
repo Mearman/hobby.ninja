@@ -2,9 +2,37 @@
 	"id": "01_1416",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット ゼータガンダム",
-		"en": "SD Gundam Cross Silhouette Zeta Gundam"
+		"ja": "SDガンダム クロスシルエット ゼータガンダム",
+		"en": "SDGundam Cross Silhouette Zeta Gundam"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2324",
+			"url": "https://bandai-hobby.net/item/01_2324/",
+			"ja": "ＳＤガンダム クロスシルエット ゼータガンダム(クロスシルエットフレームVer.) [クリアカラー]"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -20,60 +48,88 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"2つのシルエットが楽しめる「SD ガンダム クロスシルエット」シリーズに、『機動戦士Ζガンダム』からゼータガンダムが登場！",
-			"• 特徴的なカラーリングが再現され、別売りの「SD ガンダム クロスシルエットフレーム」と組み合わせることにより、高頭身化と可動性向上が可能！",
-			"• 「SD ガンダム クロスシルエット ザクII」と組み合わせて『機動戦士ガンダムΖΖ』に登場する「Ζザク」も再現できる！"
+			"2つのシルエットが楽しめる「SDガンダム クロスシルエット」シリーズに、『機動戦士Ζガンダム』からゼータガンダムが登場！",
+			"• 特徴的なカラーリングが再現され、別売りの「SDガンダム クロスシルエットフレーム」と組み合わせることにより、高頭身化と可動性向上が可能！",
+			"• 「SDガンダム クロスシルエット ザクII」と組み合わせて『機動戦士ガンダムΖΖ』に登場する「Ζザク」も再現できる！"
 		],
 		"en": [
-			"Zeta Gundam from \"Mobile Suit Zeta Gundam \" appears in the \" SD Gundam Cross Silhouette\" series where you can enjoy two silhouettes!",
+			"Zeta Gundam from \"Mobile Suit Zeta Gundam\" appears in the \"SD Gundam Cross Silhouette\" series where you can enjoy two silhouettes!",
 			"• The characteristic coloring has been reproduced, and by combining it with the separately sold \"SD Gundam Cross Silhouette Frame\", it is possible to create a taller head and improve mobility!",
-			"• In combination with \"SD Gundam Cross Silhouette Zaku II \", you can also recreate the \" Z Zaku \" that appears in \" Mobile Suit Gundam ZZ\"!"
+			"• You can also recreate the \"Z Zaku\" that appears in \"Mobile Suit Gundam ZZ\" by combining it with \"SD Gundam Cross Silhouette Zaku II\"!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームライフル×1",
-			"シールド（グレネードランチャー）×1",
-			"ビーム・サーベル×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド（グレネードランチャー）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2953_s_jv07dqbas5xlbgid172d3894yqjn.jpg",
+				"path": "/images/items/01_1416/153_2953.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2953_s_yfvd29wet07ca45m0ul5kotmws1q.jpg",
+				"path": "/images/items/01_1416/155_2953.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2953_s_2nm89moyulhah5x9oli9r14004iv.jpg",
+				"path": "/images/items/01_1416/156_2953.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2953_s_yrgpcxxrr5ix03fa3fxa4472bkua.jpg",
+				"path": "/images/items/01_1416/157_2953.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2953_s_gnqghrwu6aepgejxhch9k0ycp3fi.jpg",
+				"path": "/images/items/01_1416/158_2953.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2953_s_qqp1q1b2i2q1vjfiq7m1hv5uq6ij.jpg",
+				"path": "/images/items/01_1416/159_2953.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2953_s_rpdo015qxyfr5qhjha6422h2hbay.jpg",
+				"path": "/images/items/01_1416/189_2953.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x 1",
-			"Seal (grenade launcher) x 1",
-			"Beam saber x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×3",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 3",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1416/153_2953.jpg",
-		"/images/items/01_1416/155_2953.jpg",
-		"/images/items/01_1416/156_2953.jpg",
-		"/images/items/01_1416/157_2953.jpg",
-		"/images/items/01_1416/158_2953.jpg",
-		"/images/items/01_1416/159_2953.jpg",
-		"/images/items/01_1416/189_2953.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1416/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2324"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1416/"
 }

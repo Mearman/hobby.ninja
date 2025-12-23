@@ -5,6 +5,29 @@
 		"ja": "ハイレゾリューションモデル 1/100 ウイングガンダムゼロ EW",
 		"en": "High Resolution Model 1/100 Wing Gundam Zero EW"
 	},
+	"brands": [
+		{
+			"id": "hirm",
+			"url": "https://bandai-hobby.net/brand/hirm/",
+			"ja": "Hi-Resolution Model[ハイレゾリューションモデル]"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/100",
 	"price": {
 		"amount": 13200,
 		"currency": "JPY",
@@ -18,7 +41,6 @@
 		"day": 30
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"• 異素材によるリアリティと重量感、しなやかな翼の動き、驚異の可動が実現された「ウイングガンダムゼロ」が高解像度（ハイレゾリュ―ション）化！",
@@ -28,60 +50,103 @@
 			"• アーマーにメッキやグロスインジェクションが採用され、パーツ単位でリアルな質感を表現している！"
 		],
 		"en": [
-			"• The \"Wing Gundam Zero\", which achieves reality and weight due to different materials, supple wing movement, and amazing movement, is now in high resolution!",
-			"• In addition to having a variety of movable gimmicks in each part, the design arrangement has been adopted to emphasize the image from the play, such as expanding to 6 wings!",
-			"• The characteristic buster rifle can be transformed into 4 stages, and can also be transformed into flight form by combining with Seal!",
+			"• \"Wing Gundam Zero\", which has realized reality and weight due to different materials, supple wing movement, and amazing movement, is now in high resolution!",
+			"• In addition to being equipped with a variety of movable gimmicks in each part, the design arrangement has been adopted to emphasize the image from the play, such as expanding to 6 wings!",
+			"• The characteristic buster rifle can be transformed into 4 stages, and can also be transformed into a flying form by combining it with Seal!",
 			"• The internal skeleton frame made of resin material and metal parts is included as a painted finished product!",
 			"• Plating and gloss injection are used for the armor, giving each part a realistic texture!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ツインバスターライフル×1",
-			"ビームサーベル×2",
-			"シールド×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ツインバスターライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "完成品フレーム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 15
+		},
+		{
+			"name": {
+				"ja": "リード線"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2034_s_6k02fhpy86ppiq6tviu5csbzp9a2.jpg",
+				"path": "/images/items/01_1103/153_2034.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2034_s_as14km9nbbm7toqopu2pa8kopo3z.jpg",
+				"path": "/images/items/01_1103/155_2034.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2034_s_qvl6r5xyannve2kdyybsf96uq31o.jpg",
+				"path": "/images/items/01_1103/156_2034.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2034_s_o6plruufcf61axjysva1fuzqtwp0.jpg",
+				"path": "/images/items/01_1103/157_2034.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2034_s_x2m373tnzw5mormx7l1ya38t5snb.jpg",
+				"path": "/images/items/01_1103/158_2034.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2034_s_56e2cq8wdw7zjuv830srdlqamwxm.jpg",
+				"path": "/images/items/01_1103/159_2034.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2034_s_g6ur3drnwhwq2nn7imjwd0vo16b1.jpg",
+				"path": "/images/items/01_1103/189_2034.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2034_s_qfcxy14zi9aldmo1gv3x79v67i92.jpg",
+				"path": "/images/items/01_1103/190_2034.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2034_s_ap2w6u6da5w759phvfqvrl90mupw.jpg",
+				"path": "/images/items/01_1103/191_2034.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2034_s_jgdcsbpmru7s94goyxyqxc5c2uxv.jpg",
+				"path": "/images/items/01_1103/192_2034.jpg"
+			}
 		],
-		"en": [
-			"Twin buster rifle x1",
-			"Beam saber x2",
-			"Seal × 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"完成品フレーム×1",
-			"成形品×15",
-			"リード線×2",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Finished product frame x 1",
-			"Molded product x 15",
-			"Lead wire x 2",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1103/153_2034.jpg",
-		"/images/items/01_1103/155_2034.jpg",
-		"/images/items/01_1103/156_2034.jpg",
-		"/images/items/01_1103/157_2034.jpg",
-		"/images/items/01_1103/158_2034.jpg",
-		"/images/items/01_1103/159_2034.jpg",
-		"/images/items/01_1103/189_2034.jpg",
-		"/images/items/01_1103/190_2034.jpg",
-		"/images/items/01_1103/191_2034.jpg",
-		"/images/items/01_1103/192_2034.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1103/",
-	"brandIds": [
-		"hirm"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_1103/"
 }

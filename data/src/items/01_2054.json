@@ -5,6 +5,49 @@
 		"ja": "HGBD モビルドールサラ",
 		"en": "HGBD Mobile Doll Sara"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -26,59 +69,92 @@
 			"From \"Gundam Build Divers\", Gunpla, which holds the key to the story, appears!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"差し替え用頭部パーツ×1式",
-			"差し替え用肩関節パーツ×1式",
-			"ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "差し替え用頭部パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "差し替え用肩関節パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 10
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3003_s_6uey28ztyw1lrmlnr5lktq7gghsw.jpg",
+				"path": "/images/items/01_2054/153_3003.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3003_s_bg2w7jb0bbivjfl4ef0gwg6exauz.jpg",
+				"path": "/images/items/01_2054/155_3003.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3003_s_nw5c4cjzyv1imv6bzl1go2nx9rhw.jpg",
+				"path": "/images/items/01_2054/156_3003.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3003_s_3ztw2yav95h045st7zpxk0tzhbu5.jpg",
+				"path": "/images/items/01_2054/157_3003.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3003_s_tq3lp57bmiwnj7hpejz51f8t5nn0.jpg",
+				"path": "/images/items/01_2054/158_3003.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3003_s_7pvmwkp67afiz1jx0nevywwb0b4c.jpg",
+				"path": "/images/items/01_2054/159_3003.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3003_s_3hfvbva9zfq5g8idkbm80t5wadrd.jpg",
+				"path": "/images/items/01_2054/189_3003.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3003_s_tobx2e27cnrcxm24b3h7enxc01tj.jpg",
+				"path": "/images/items/01_2054/190_3003.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3003_s_csq9yqmpirequnfwp7u6ekqj69ez.jpg",
+				"path": "/images/items/01_2054/191_3003.jpg"
+			}
 		],
-		"en": [
-			"Replacement head parts x 1 set",
-			"Replacement shoulder joint parts x 1 set",
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×10",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 10",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2054/153_3003.jpg",
-		"/images/items/01_2054/155_3003.jpg",
-		"/images/items/01_2054/156_3003.jpg",
-		"/images/items/01_2054/157_3003.jpg",
-		"/images/items/01_2054/158_3003.jpg",
-		"/images/items/01_2054/159_3003.jpg",
-		"/images/items/01_2054/189_3003.jpg",
-		"/images/items/01_2054/190_3003.jpg",
-		"/images/items/01_2054/191_3003.jpg",
-		"/images/items/01_2054/01_2054_inst_0.jpg",
-		"/images/items/01_2054/01_2054_inst_1.jpg",
-		"/images/items/01_2054/01_2054_inst_2.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2054/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "1046"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2054/"
 }

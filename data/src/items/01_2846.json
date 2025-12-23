@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 エグザビークル(タンクVer.)[ブラウン]",
-		"en": "30MM 1/144 Exer Vehicle (Tank Ver.) [Brown]"
+		"en": "30MM 1/144 Extended Armament Vehicle (TANK Ver.)[BROWN]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS",
+			"en": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 858,
 		"currency": "JPY",
@@ -18,52 +62,81 @@
 		"day": 22
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"単体で遊ぶも良し、組み合わせて遊ぶも良しの30MM「エグザビークルシリーズ」のタンクにブラウン登場！",
 			"• タンク形態のほか、各機体と組み合わせてビークル形態としても楽しめる。"
 		],
 		"en": [
-			"Brown is now available as a 30MM \"Exa Vehicle Series\" tank that can be played alone or in combination!",
-			"• In addition to tank form, it can also be enjoyed as vehicle form by combining with each aircraft."
+			"BROWN APPEARS IN THE 30MM \"EXA VEHICLE SERIES\" TANK, WHICH CAN BE PLAYED ALONE OR IN COMBINATION!",
+			"• In addition to the tank form, it can also be enjoyed as a vehicle form in combination with each aircraft."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビークル×1体",
-			"ビークル用グリップ×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビークル",
+				"en": "• Vehicle"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "体"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビークル用グリップ"
+			},
+			"count": 2
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148832_1.jpg",
+				"path": "/images/items/01_2846/1000148832_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148832_2.jpg",
+				"path": "/images/items/01_2846/1000148832_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148832_3.jpg",
+				"path": "/images/items/01_2846/1000148832_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148832_4.jpg",
+				"path": "/images/items/01_2846/1000148832_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148832_5.jpg",
+				"path": "/images/items/01_2846/1000148832_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148832_6.jpg",
+				"path": "/images/items/01_2846/1000148832_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148832_7.jpg",
+				"path": "/images/items/01_2846/1000148832_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148832_8.jpg",
+				"path": "/images/items/01_2846/1000148832_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148832_9.jpg",
+				"path": "/images/items/01_2846/1000148832_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148832_10.jpg",
+				"path": "/images/items/01_2846/1000148832_10.jpg"
+			}
 		],
-		"en": [
-			"Vehicle x 1",
-			"Vehicle grip x 2"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2846/1000148832_1.jpg",
-		"/images/items/01_2846/1000148832_10.jpg",
-		"/images/items/01_2846/1000148832_2.jpg",
-		"/images/items/01_2846/1000148832_3.jpg",
-		"/images/items/01_2846/1000148832_4.jpg",
-		"/images/items/01_2846/1000148832_5.jpg",
-		"/images/items/01_2846/1000148832_6.jpg",
-		"/images/items/01_2846/1000148832_7.jpg",
-		"/images/items/01_2846/1000148832_8.jpg",
-		"/images/items/01_2846/1000148832_9.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2846/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3696"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2846/"
+	}
 }

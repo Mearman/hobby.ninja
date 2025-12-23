@@ -5,6 +5,55 @@
 		"ja": "ＲＥ/100 1/100 シャッコー",
 		"en": "RE/100 1/100 Shakko"
 	},
+	"brands": [
+		{
+			"id": "re100",
+			"url": "https://bandai-hobby.net/brand/re100/",
+			"ja": "RE/100[リボーンワンハンドレッド]"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "v-gundam",
+			"url": "https://bandai-hobby.net/series/v-gundam/",
+			"ja": "機動戦士Vガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000139842",
+			"url": "https://p-bandai.jp/item/item-1000139842/",
+			"ja": "ＲＥ/100 1/100 ガンイージ・プロトタイプ（ロールアウトカラー）"
+		},
+		{
+			"id": "item-1000137105",
+			"url": "https://p-bandai.jp/item/item-1000137105",
+			"ja": "ＨＧ 1/144 セカンドＶ"
+		},
+		{
+			"id": "item-1000131778",
+			"url": "https://p-bandai.jp/item/item-1000131778",
+			"ja": "RE/100 1/100 ガンブラスター"
+		},
+		{
+			"id": "01_2029",
+			"url": "https://bandai-hobby.net/item/01_2029/",
+			"ja": "RE/100 1/100 ガンイージ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -16,7 +65,6 @@
 		"year": 2020,
 		"month": 5
 	},
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"イ エ ロ ー ジ ャ ケ ッ ト の 尖 兵 ―",
@@ -65,7 +113,7 @@
 		"en": [
 			"A soldier in a yellow jacket -",
 			"First gunpla kit",
-			"From \"Mobile Suit V Gundam \", the prototype MS \" Shakko\"",
+			"From \"Mobile Suit V Gundam\", the prototype MS \"Shakko\"",
 			"Gunpla's first kit in the RE/100 series. Characteristic proportions and details are three-dimensionalized using new modeling parts.",
 			"Reproduce the color patterns of various armed gimmicks and molding colors.",
 			"● Shakko's body shape is now three-dimensional with completely new modeling.",
@@ -73,7 +121,7 @@
 			"Unique proportions and details are thoroughly reproduced in RE/100 format.",
 			"● Reproduce various characteristic details and gimmicks",
 			"We pursue distinctive details and gimmicks such as the change in the shape of the camera eye on the head and the deployment of the double shoulder beam gun built into the right shoulder.",
-			"Furthermore, the wrist parts are the same standard size as \"MG V Gundam Ver.Ka\", so it can also be used for weapons.",
+			"Furthermore, the wrist parts are the same standard size as \"MG VGundam Ver.Ka\", so it can also be used for weapons.",
 			"camera eye",
 			"The opening and closing state of the head camera eye in the play can be reproduced by replacing parts.",
 			"Double shoulder beam gun",
@@ -107,50 +155,67 @@
 			"- Product specifications are scheduled as of 20201. Please note that there may be changes."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル",
-			"ビーム・サーベル",
-			"ビーム・ローター"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・ローター"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3720_s_s17myy86n3uhoi99nfu6k6sm51r7.jpg",
+				"path": "/images/items/01_2729/153_3720.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3720_s_owyzcdsiuzaim04te6txdhkhlmu1.jpg",
+				"path": "/images/items/01_2729/155_3720.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3720_s_1w2t25u84lsm6c6l3fqj35u4gyz1.jpg",
+				"path": "/images/items/01_2729/156_3720.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3720_s_tanodrz7wxe6baajpakophqmxwtu.jpg",
+				"path": "/images/items/01_2729/157_3720.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3720_s_eix87n8ma52z1fdeluxmhfo1e48s.jpg",
+				"path": "/images/items/01_2729/158_3720.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3720_s_3lmjkocnxfmgkfmka0ika5ryumkh.jpg",
+				"path": "/images/items/01_2729/159_3720.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3720_s_13cd7uoc8qr7ofxh6ykfl48wl2h7.jpg",
+				"path": "/images/items/01_2729/189_3720.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3720_s_233j271o55z30nxtnpwtkok8pis3.jpg",
+				"path": "/images/items/01_2729/190_3720.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3720_s_hpu3lqx8nf8dopap6zg0vrc8nnsm.jpg",
+				"path": "/images/items/01_2729/191_3720.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3720_s_zo1yqybijzm7ovh5v8irwaiyszp1.jpg",
+				"path": "/images/items/01_2729/192_3720.jpg"
+			}
 		],
-		"en": [
-			"beam rifle",
-			"beam saber",
-			"beam rotor"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2729/153_3720.jpg",
-		"/images/items/01_2729/155_3720.jpg",
-		"/images/items/01_2729/156_3720.jpg",
-		"/images/items/01_2729/157_3720.jpg",
-		"/images/items/01_2729/158_3720.jpg",
-		"/images/items/01_2729/159_3720.jpg",
-		"/images/items/01_2729/189_3720.jpg",
-		"/images/items/01_2729/190_3720.jpg",
-		"/images/items/01_2729/191_3720.jpg",
-		"/images/items/01_2729/192_3720.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2729/",
-	"brandIds": [
-		"re100",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"v-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000139842",
-		"item-1000137105",
-		"item-1000131778",
-		"01_2029"
-	],
-	"manualId": "2580",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_2729/"
 }

@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 エルドラブルート",
 		"en": "HGBD:R 1/144 Eldora Brute"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,50 +62,58 @@
 		"day": 21
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"2019年10月10日（木）より「ガンダムチャンネル」で配信スタートする『ガンダムビルドダイバーズRe:RISE』 から、『機動武闘伝Ｇガンダム』に登場した敵機体「デスビースト」をベースとした機体が登場！",
 			"• 手には大型の四又槍、背部にビーム発射装置を備える。"
 		],
 		"en": [
-			"From \"Gundam Build Divers Re:RISE \", which will start distribution on \" Gundam Channel \" from 20191010 (Thursday), an aircraft based on the enemy aircraft \" Death Beast \" that appeared in \" Mobile Fighter G Gundam\" has appeared!",
+			"From \"Gundam Build Divers Re:RISE\", which will start distribution on \"Gundam Channel\" from 20191010 (Thursday), an aircraft based on the enemy aircraft \"Death Beast\" that appeared in \"Mobile Fighter GGundam\" has appeared!",
 			"• It has a large four-pronged spear in its hand and a beam firing device on its back."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"四又槍×1",
-			"ビーム発射装置×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "四又槍"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム発射装置"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3414_s_a1wmfhngt8ll9g16n3i693d2qu74.jpg",
+				"path": "/images/items/01_2487/153_3414.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3414_s_xct5gd81sir1yldl9g3frv8uxp1o.jpg",
+				"path": "/images/items/01_2487/155_3414.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3414_s_kips1e5asry9gl4tj5cq0ljzt4uq.jpg",
+				"path": "/images/items/01_2487/156_3414.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3414_s_2ff67wwqy83eyn7oevb2xpiv0cui.jpg",
+				"path": "/images/items/01_2487/157_3414.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3414_s_ihppun2x7urv19irtoprrm5fby4t.jpg",
+				"path": "/images/items/01_2487/158_3414.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3414_s_bihx14zqnu4s6ttbve94kkfrt919.jpg",
+				"path": "/images/items/01_2487/159_3414.jpg"
+			}
 		],
-		"en": [
-			"Four-pronged spear x1",
-			"Beam launcher x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2487/153_3414.jpg",
-		"/images/items/01_2487/155_3414.jpg",
-		"/images/items/01_2487/156_3414.jpg",
-		"/images/items/01_2487/157_3414.jpg",
-		"/images/items/01_2487/158_3414.jpg",
-		"/images/items/01_2487/159_3414.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2487/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0074"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2487/"
 }

@@ -5,6 +5,49 @@
 		"ja": "HGBC マシンライダー",
 		"en": "HGBC Machine Rider"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -26,58 +69,79 @@
 		],
 		"en": [
 			"A highly versatile vehicle is now available in the Build Custom series!",
-			"• It transforms into a motorcycle form and a ride mecha form, and you can ride various Gunpla depending on your ideas!",
-			"• 3 patterns are included for the front cowl part!"
+			"• Transforms into bike form and ride mecha form, allowing you to ride various Gunpla depending on your ideas!",
+			"• Three patterns are included for the front cowl part!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"バイク本体×1",
-			"フロントカウルパーツ×３",
-			"ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "バイク本体"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "フロントカウルパーツ×３"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 7
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2335_o_1ckhve0ci1erbu1mf5a5971rdu23.jpg",
+				"path": "/images/items/01_1412/153_2335.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2335_o_1ckhvea60qrihc8vn1gr31puc2d.jpg",
+				"path": "/images/items/01_1412/155_2335.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2335_o_1ckhvejkm1odu1qfi1of0nfr9jh2i.jpg",
+				"path": "/images/items/01_1412/156_2335.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2335_o_1ckhveoda1fjp1fgd1cnbdaq6ml2n.jpg",
+				"path": "/images/items/01_1412/157_2335.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2335_o_1ckhvesnr7m11vl2ua21qhh3ga2s.jpg",
+				"path": "/images/items/01_1412/158_2335.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2335_o_1ckhvf18t1h2uo316eoa3lspk31.jpg",
+				"path": "/images/items/01_1412/159_2335.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2335_o_1ckhvg3dl1v11eod16tk1r0j1bo036.jpg",
+				"path": "/images/items/01_1412/189_2335.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2335_o_1ckhvggk0qm51qhnrvj1298sr33b.jpg",
+				"path": "/images/items/01_1412/190_2335.jpg"
+			}
 		],
-		"en": [
-			"Bike body x 1",
-			"Front cowl parts x 3",
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×7",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 7",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1412/153_2335.jpg",
-		"/images/items/01_1412/155_2335.jpg",
-		"/images/items/01_1412/156_2335.jpg",
-		"/images/items/01_1412/157_2335.jpg",
-		"/images/items/01_1412/158_2335.jpg",
-		"/images/items/01_1412/159_2335.jpg",
-		"/images/items/01_1412/189_2335.jpg",
-		"/images/items/01_1412/190_2335.jpg",
-		"/images/items/01_1412/01_1412_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1412/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "0697"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1412/"
 }

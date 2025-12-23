@@ -5,6 +5,43 @@
 		"ja": "SD 三国創傑伝 夏侯惇トールギス III",
 		"en": "SD Three Kingdoms Legend Xiahou Dun Tallgeese III"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "soketsuden",
+			"url": "https://bandai-hobby.net/series/soketsuden/",
+			"ja": "三国創傑伝"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2642",
+			"url": "https://bandai-hobby.net/item/01_2642/",
+			"ja": "SD 三国創傑伝 天覇曹操ウイングガンダム"
+		},
+		{
+			"id": "01_2614",
+			"url": "https://bandai-hobby.net/item/01_2614/",
+			"ja": "SD 三国創傑伝 典韋マスターガンダム"
+		},
+		{
+			"id": "01_2615",
+			"url": "https://bandai-hobby.net/item/01_2615/",
+			"ja": "SD 三国創傑伝 徐晃ガンダムデスサイズ"
+		},
+		{
+			"id": "01_2643",
+			"url": "https://bandai-hobby.net/item/01_2643/",
+			"ja": "SD 三国創傑伝 甘寧クロスボーンガンダム"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -20,7 +57,7 @@
 	"description": {
 		"ja": [
 			"【2021年春、日本展開開始！！】",
-			"• 『三国志』をベースにしたSD ガンダムが装いも新たに登場！",
+			"• 『三国志』をベースにしたSDガンダムが装いも新たに登場！",
 			"• 進化したプロポーションとパーツ分割へのこだわりにより、組み立てただけでSD史上最高峰の色分けを実現。",
 			"• 一新された頭身バランスと各所の関節構造により、躍動感あふれるポージングを再現！",
 			"• 左右の肩の武装を組み合わせることで近接戦闘形態に！",
@@ -28,46 +65,63 @@
 		],
 		"en": [
 			"[Spring 2021, main rollout begins! ! ]",
-			"• SD Gundam based on \"Romance of the Three Kingdoms\" now has a new look!",
-			"• With advanced proportions and attention to parts division, we have achieved the highest color separation in SD history using just the assembly.",
-			"• The all-new head and body balance and joint structure in various parts allow for dynamic poses!",
-			"• By combining the left and right shoulder weapons, you can create a close combat mode!",
-			"• The clear parts mask is removable."
+			"• SDGundam based on “Romance of the Three Kingdoms” has a new look!",
+			"• Thanks to the advanced proportions and attention to part division, we have achieved the highest color separation in SD history using just the assembly.",
+			"• Reproduce dynamic poses with a completely new head and body balance and joint structure in various places!",
+			"• Combine the left and right shoulder weapons for close combat mode!",
+			"• Clear parts mask is removable."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"導覇砲-豪-（ドーバーガン）×1",
-			"菱刃壁（盾）×1",
-			"メモリ×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "導覇砲-豪-（ドーバーガン）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "菱刃壁（盾）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "メモリ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3290_s_0d7q58uu0mbf2pfi9zw7gaiwvxfa.jpg",
+				"path": "/images/items/01_2354/153_3290.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3290_s_h7pqkuhtvt2p8ij7rcj71oj78u2e.jpg",
+				"path": "/images/items/01_2354/155_3290.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3290_s_68twarl7e9bt26ciiwxqeo1i602h.jpg",
+				"path": "/images/items/01_2354/156_3290.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3290_s_hxppu436x7ui4mq4z2ku84s406o0.jpg",
+				"path": "/images/items/01_2354/157_3290.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3290_s_51i13tg1rgs7z3y2e4fs623xcqrk.jpg",
+				"path": "/images/items/01_2354/158_3290.jpg"
+			}
 		],
-		"en": [
-			"Guidance gun - Australia - (Dover gun) x 1",
-			"Diamond wall (shield) x 1",
-			"Memory x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2354/153_3290.jpg",
-		"/images/items/01_2354/155_3290.jpg",
-		"/images/items/01_2354/156_3290.jpg",
-		"/images/items/01_2354/157_3290.jpg",
-		"/images/items/01_2354/158_3290.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2354/",
-	"brandIds": [],
-	"seriesIds": [
-		"soketsuden"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2642",
-		"01_2614",
-		"01_2615",
-		"01_2643"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2354/"
 }

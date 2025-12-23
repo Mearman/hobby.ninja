@@ -5,6 +5,49 @@
 		"ja": "HGBC ダイバーギア",
 		"en": "HGBC diver gear"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -26,60 +69,82 @@
 			"• クリアパーツで劇中のイメージが再現されており、ドライバー不要で組み立て可能！"
 		],
 		"en": [
-			"• The diver gear that appears in \"Gundam Build Divers\" is now available as a display base!",
-			"• It is compatible with 1/144 Gunpla, and with a variety of joint parts and support parts, you can recreate funnel firing and other things from the movie by rearranging it!",
+			"• Diver gear that appears in \"Gundam Build Divers\" is now available as a display base!",
+			"• Compatible with 1/144 Gunpla, and with a variety of joint parts and support parts, you can recreate funnel firing and other effects from the movie by rearranging it!",
 			"• You can also display two HG Gunpla at the same time!",
-			"• The image in the play is reproduced with clear parts, and it can be assembled without a driver!"
+			"• Clear parts recreate the image from the movie, and can be assembled without a driver!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ベースパーツ×1",
-			"支柱パーツ×1",
-			"ジョイントパーツ各種",
-			"その他サポートパーツ"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ベースパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "支柱パーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ各種"
+			}
+		},
+		{
+			"name": {
+				"ja": "その他サポートパーツ"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2246_s_cz17nrxxm8jz7z38vrlhnr1r56hk.jpg",
+				"path": "/images/items/01_1317/153_2246.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2246_s_ckz1tc278k2hgauqn5oqglt2f7w7.jpg",
+				"path": "/images/items/01_1317/155_2246.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2246_s_0hsl0c3la6pmqf9ll022ay69mnb5.jpg",
+				"path": "/images/items/01_1317/156_2246.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2246_s_9rrdkz1e8i93wnbjxhp2hr783zl2.jpg",
+				"path": "/images/items/01_1317/157_2246.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2246_s_kthh6o1twiki5l4ma0hlco1dowp1.jpg",
+				"path": "/images/items/01_1317/158_2246.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2246_s_m3o1ifodvnn73qnhqlaidf26t02p.jpg",
+				"path": "/images/items/01_1317/159_2246.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2246_s_zahhn1dh7fmgx6mm712i1rq6g1xe.jpg",
+				"path": "/images/items/01_1317/189_2246.jpg"
+			}
 		],
-		"en": [
-			"Base parts x 1",
-			"Strut parts x 1",
-			"Various joint parts",
-			"Other support parts"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×3",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 3",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1317/153_2246.jpg",
-		"/images/items/01_1317/155_2246.jpg",
-		"/images/items/01_1317/156_2246.jpg",
-		"/images/items/01_1317/157_2246.jpg",
-		"/images/items/01_1317/158_2246.jpg",
-		"/images/items/01_1317/159_2246.jpg",
-		"/images/items/01_1317/189_2246.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1317/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "1065"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1317/"
 }

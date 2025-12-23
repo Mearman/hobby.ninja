@@ -2,9 +2,58 @@
 	"id": "01_1823",
 	"type": "item",
 	"name": {
-		"ja": "ガンダムデカールNo.7 MG 1/100 スーパーガンダム用/ガンダム Mk-II（ティターンズ）用",
-		"en": "Gundam Decal No.7 MG 1/100 for Super Gundam/Gundam Mk-II (Titans)"
+		"ja": "ガンダムデカールNo.7 MG 1/100 スーパーガンダム用/ガンダムMk-II（ティターンズ）用",
+		"en": "Gundam Decal No.7 MG 1/100 for Super Gundam/GundamMk-II (Titans)"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		},
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000145352",
+			"url": "https://p-bandai.jp/item/item-1000145352/",
+			"ja": "ＭＧ 1/100 RMS-179 ジムII（エゥーゴカラーＶｅｒ．）"
+		},
+		{
+			"id": "item-1000131596",
+			"url": "https://p-bandai.jp/item/item-1000131596",
+			"ja": "ＭＧ 1/100 ジム・キャノン ［レッド・ヘッド］（ジャブロー防衛隊仕様）"
+		},
+		{
+			"id": "01_4270",
+			"url": "https://bandai-hobby.net/item/01_4270/",
+			"ja": "MG 1/100 百式 Ver.2.0 [メカニカルクリア]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,37 +67,26 @@
 		"day": 28
 	},
 	"targetAge": 8,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"100点以上のラインナップを誇る、大人気ガンダムデカールのシリーズ商品が登場。",
-			"MG 1/100 スーパーガンダム用/ガンダム Mk-II（ティターンズ）用のデカールです。",
+			"MG 1/100 スーパーガンダム用/ガンダムMk-II（ティターンズ）用のデカールです。",
 			"水転写式デカール"
 		],
 		"en": [
 			"Introducing the popular Gundam decal series, which boasts a lineup of over 100 items.",
-			"Decal for MG 1/100 Super Gundam/Gundam Mk-II (Titans).",
+			"Decal for MG 1/100 Super Gundam/GundamMk-II (Titans).",
 			"water transfer decal"
 		]
 	},
-	"images": [
-		"/images/items/01_1823/153_2761.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1823/",
-	"brandIds": [
-		"mg",
-		"gundam_decal"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4971",
-		"item-1000145352",
-		"item-1000131596",
-		"01_4270"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2761_s_m21kymfl38k4bcdeesdm396c3s1b.jpg",
+				"path": "/images/items/01_1823/153_2761.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1823/"
 }

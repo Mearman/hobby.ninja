@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ザク・ハーフキャノン",
 		"en": "HG 1/144 Zaku Half Cannon"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "origin",
+			"url": "https://bandai-hobby.net/series/origin/",
+			"ja": "機動戦士ガンダム THE ORIGIN"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3711",
+			"url": "https://bandai-hobby.net/item/01_3711/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)[クリアカラー]"
+		},
+		{
+			"id": "01_2828",
+			"url": "https://bandai-hobby.net/item/01_2828/",
+			"ja": "HG 1/144 ガンダムベース限定 ザクII TYPE C-6/R6 [ペインティングモデル]"
+		},
+		{
+			"id": "01_2707",
+			"url": "https://bandai-hobby.net/item/01_2707/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)"
+		},
+		{
+			"id": "item-1000135687",
+			"url": "https://p-bandai.jp/item/item-1000135687",
+			"ja": "ＨＧ 1/144 MS-05S シャア専用ザクＩ（ＬＩＭＩＴＥＤ ＭＯＤＥＬ）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 「機動戦士ガンダム THE ORIGIN MSD」より、ザク・ハーフキャノンが初HG化！",
@@ -31,60 +74,92 @@
 			"• In addition to a variety of heavy weapons such as 2 big guns that can be connected to the backpack and equipped, the close-in weapon Heat Hawk comes in both hand-held and portable versions!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"180mmキャノン砲×１",
-			"120mmバルカン砲×１",
-			"ビッグガン×2",
-			"ヒート・ホーク×1",
-			"ヒート・ホーク（収納）×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "180mmキャノン砲×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "120mmバルカン砲×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビッグガン"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ヒート・ホーク"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ヒート・ホーク（収納）"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 10
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2087_s_9y1js1d9xg4d6kg7b7w3guf4s2i9.jpg",
+				"path": "/images/items/01_1156/153_2087.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2087_s_ma3wgmjukcesue7xdqz04f4el6ze.jpg",
+				"path": "/images/items/01_1156/155_2087.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2087_s_m5xuflkz7v3n7j5odiqpr8ggegib.jpg",
+				"path": "/images/items/01_1156/156_2087.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2087_s_1331av3lmfaddvve3r50fhsbvynz.jpg",
+				"path": "/images/items/01_1156/157_2087.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2087_s_eoh8zrutxms7w83uqj3p16f2dwmy.jpg",
+				"path": "/images/items/01_1156/158_2087.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2087_s_pt49bs6pd02p993gayjk5zmooexr.jpg",
+				"path": "/images/items/01_1156/159_2087.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2087_s_2gbxkmu1rlf0cq0siv2ys8r4iclt.jpg",
+				"path": "/images/items/01_1156/189_2087.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2087_s_55e50jvtfzzoi2nms7agznc4vnji.jpg",
+				"path": "/images/items/01_1156/190_2087.jpg"
+			}
 		],
-		"en": [
-			"180mm cannon x 1",
-			"120mm Vulcan gun x 1",
-			"Big gun x2",
-			"Heat Hawk x1",
-			"Heat Hawk (storage) x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×10",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 10",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1156/153_2087.jpg",
-		"/images/items/01_1156/155_2087.jpg",
-		"/images/items/01_1156/156_2087.jpg",
-		"/images/items/01_1156/157_2087.jpg",
-		"/images/items/01_1156/158_2087.jpg",
-		"/images/items/01_1156/159_2087.jpg",
-		"/images/items/01_1156/189_2087.jpg",
-		"/images/items/01_1156/190_2087.jpg",
-		"/images/items/01_1156/01_1156_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1156/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"origin"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3711",
-		"01_2828",
-		"01_2707",
-		"item-1000135687"
-	],
-	"manualId": "0049"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1156/"
 }

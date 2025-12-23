@@ -5,6 +5,44 @@
 		"ja": "1/72 可変バルキリー VF-1A",
 		"en": "1/72 Variable Valkyrie VF-1A"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "macross",
+			"url": "https://bandai-hobby.net/series/macross/",
+			"ja": "マクロスシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5944",
+			"url": "https://bandai-hobby.net/item/01_5944/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機)"
+		},
+		{
+			"id": "01_5945",
+			"url": "https://bandai-hobby.net/item/01_5945/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) 専用水転写式デカール"
+		},
+		{
+			"id": "01_5946",
+			"url": "https://bandai-hobby.net/item/01_5946/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) デラックスセット"
+		},
+		{
+			"id": "01_5465",
+			"url": "https://bandai-hobby.net/item/01_5465/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(マクシミリアン・ジーナス機)"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 20
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"「1/72 可変バルキリー ＶＦ－１Ａ」が登場！"
@@ -27,22 +64,18 @@
 			"\"1/72 Variable Valkyrie VF-1A\" is now available!"
 		]
 	},
-	"images": [
-		"/images/items/01_3042/153_4011.jpg",
-		"/images/items/01_3042/155_4011.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3042/",
-	"brandIds": [],
-	"seriesIds": [
-		"macross"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5944",
-		"01_5945",
-		"01_5946",
-		"01_5465"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4011_s_f9ze2um3873lw1pnlvv6gnz6pip3.jpg",
+				"path": "/images/items/01_3042/153_4011.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4011_s_zdcv7wragmncr73ny5gen6j3rixp.jpg",
+				"path": "/images/items/01_3042/155_4011.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3042/"
 }

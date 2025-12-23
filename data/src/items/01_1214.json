@@ -5,6 +5,43 @@
 		"ja": "ピカちんロボ スパイフクロウのジェームズ&グルメタヌキのパティセット",
 		"en": "Pikachin Robo Spy Owl James & Gourmet Anuki Patty Set"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -27,63 +64,122 @@
 			"• ピカちん大百科に綴じられるピカちんシートも付いてくるぞ！"
 		],
 		"en": [
-			"• James and Patty who appear in the TV program \"Pochitto Invention Pikachin Kit\" have been commercialized!",
-			"• James the spy owl is a Pikachin robot born from the cheating glass Pyrameki!",
+			"• James and Patty from the TV show \"Pochitto Invention Pikachin Kit\" have been commercialized!",
+			"• James the Spy Owl is a Pikachin robot born from a cheating glass!",
 			"• Gourmet Anuki's patty is a Pikachin robot created by furikake maker Pirameki!",
-			"• Parts that allow you to customize the cheat glass and furikake maker are also included!",
+			"• Also includes parts to customize the cheat glass and furikake maker!",
 			"• It also comes with a Pikachin sheet that can be bound into the Pikachin Encyclopedia!"
 		]
 	},
-	"contents": {
-		"ja": [
-			"スパイフクロウのジェームズ×1",
-			"カンニングラスカスタムパーツ×1",
-			"グルメタヌキのパティ×1",
-			"ふりかけメーカーカスタムパーツ×1",
-			"（成形品×9）",
-			"ピカちんQRコード×1",
-			"ホイルシール×1",
-			"ミラーシール…2",
-			"ピカちんシート…2"
+	"contents": [
+		{
+			"name": {
+				"ja": "スパイフクロウのジェームズ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "カンニングラスカスタムパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "グルメタヌキのパティ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ふりかけメーカーカスタムパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "（成形品"
+			},
+			"count": 9,
+			"unit": {
+				"ja": "）"
+			}
+		},
+		{
+			"name": {
+				"ja": "ピカちんQRコード"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ミラーシール…2"
+			}
+		},
+		{
+			"name": {
+				"ja": "ピカちんシート…2"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000118919_1.jpg",
+				"path": "/images/items/01_1214/1000118919_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000118919_2.jpg",
+				"path": "/images/items/01_1214/1000118919_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000118919_3.jpg",
+				"path": "/images/items/01_1214/1000118919_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000118919_4.jpg",
+				"path": "/images/items/01_1214/1000118919_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000118919_5.jpg",
+				"path": "/images/items/01_1214/1000118919_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000118919_6.jpg",
+				"path": "/images/items/01_1214/1000118919_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000118919_7.jpg",
+				"path": "/images/items/01_1214/1000118919_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000118919_8.jpg",
+				"path": "/images/items/01_1214/1000118919_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000118919_9.jpg",
+				"path": "/images/items/01_1214/1000118919_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000118919_10.jpg",
+				"path": "/images/items/01_1214/1000118919_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000118919_11.jpg",
+				"path": "/images/items/01_1214/1000118919_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000118919_12.jpg",
+				"path": "/images/items/01_1214/1000118919_12.jpg"
+			}
 		],
-		"en": [
-			"James the Spy Owl x1",
-			"Cheat glass custom parts x 1",
-			"Gourmet Anuki patty x 1",
-			"Furikake maker custom parts x 1",
-			"(molded product x 9)",
-			"Pikachin QR code x 1",
-			"Foil Seal×1",
-			"Mirror Seal...2",
-			"Pikachin sheet...2"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1214/1000118919_1.jpg",
-		"/images/items/01_1214/1000118919_10.jpg",
-		"/images/items/01_1214/1000118919_11.jpg",
-		"/images/items/01_1214/1000118919_12.jpg",
-		"/images/items/01_1214/1000118919_2.jpg",
-		"/images/items/01_1214/1000118919_3.jpg",
-		"/images/items/01_1214/1000118919_4.jpg",
-		"/images/items/01_1214/1000118919_5.jpg",
-		"/images/items/01_1214/1000118919_6.jpg",
-		"/images/items/01_1214/1000118919_7.jpg",
-		"/images/items/01_1214/1000118919_8.jpg",
-		"/images/items/01_1214/1000118919_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1214/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1214/"
 }

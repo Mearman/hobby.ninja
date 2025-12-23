@@ -5,6 +5,44 @@
 		"ja": "1/1200 サラミス",
 		"en": "1/1200 Salamis"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/1200",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 1
 	},
 	"targetAge": 15,
-	"scale": "1/1200",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、1/1200スケールで、サラミスが登場。",
@@ -28,23 +65,18 @@
 			"It comes with 1 capsule for atmospheric entry of the same Scale, 3 gyms, and 3 balls each. The capsule can be attached and detached from the bottom of the main body. Comes with a dedicated display stand."
 		]
 	},
-	"images": [
-		"/images/items/01_3152/153_4114.jpg",
-		"/images/items/01_3152/155_4114.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3152/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	],
-	"manualId": "1980"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4114_s_k1n9o9569sai2mtoaxz8i5e39wid.jpg",
+				"path": "/images/items/01_3152/153_4114.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4114_s_a6gsaunktxqbwi6firiqwy1a9wk8.jpg",
+				"path": "/images/items/01_3152/155_4114.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3152/"
 }

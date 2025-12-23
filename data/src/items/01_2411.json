@@ -5,6 +5,44 @@
 		"ja": "1/144 ターンエーガンダム",
 		"en": "1/144 Turn A Gundam"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "turn-a",
+			"url": "https://bandai-hobby.net/series/turn-a/",
+			"ja": "∀ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000135920",
+			"url": "https://p-bandai.jp/item/item-1000135920",
+			"ja": "ＭＧ 1/100 ∀ガンダム／ターンＸ［ナノスキンイメージ］"
+		},
+		{
+			"id": "item-1000099631",
+			"url": "https://p-bandai.jp/item/item-1000099631",
+			"ja": "ＭＧ 1/100 ターンエーガンダム（月光蝶Ver.）"
+		},
+		{
+			"id": "item-1000165581",
+			"url": "https://p-bandai.jp/item/item-1000165581",
+			"ja": "ＭＧ 1/100 ターンエーガンダム用拡張エフェクトユニット “月光蝶”"
+		},
+		{
+			"id": "01_120",
+			"url": "https://bandai-hobby.net/item/01_120/",
+			"ja": "MG 1/100 Concept-X 6-1-2 ターンX"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 4
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"TV「∀ガンダム」の主役メカをキット化しました。胸部マルチパーパスサイロは、差替えによりハッチの開閉を再現します。ビーム・サーベルラックは可動します。首、手首、足首と股関節の各部にボージョイントを採用しています。ひざは二重関節成形です。"
@@ -26,26 +63,34 @@
 			"The main mechanism of TV \"∀Gundam\" is made into a kit. The chest multi-purpose silo can be replaced to reproduce the opening and closing of the hatch. The beam saber rack is movable. Bow joints are used in the neck, wrists, ankles, and hip joints. The knees are double jointed."
 		]
 	},
-	"images": [
-		"/images/items/01_2411/153_3343.jpg",
-		"/images/items/01_2411/155_3343.jpg",
-		"/images/items/01_2411/156_3343.jpg",
-		"/images/items/01_2411/157_3343.jpg",
-		"/images/items/01_2411/158_3343.jpg",
-		"/images/items/01_2411/159_3343.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2411/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000135920",
-		"item-1000099631",
-		"item-1000165581",
-		"01_120"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/159_3343_o_1dc1qfltgk7v1kmtjumqes1urc31.jpg",
+				"path": "/images/items/01_2411/159_3343.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_3343_o_1dc1pun8k6e21fefupjikn72123.jpg",
+				"path": "/images/items/01_2411/153_3343.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3343_o_1dc1pv1cjgra8vvckr1dn3shv2d.jpg",
+				"path": "/images/items/01_2411/155_3343.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3343_o_1dc1pv6r61romab1bm31ev41c372i.jpg",
+				"path": "/images/items/01_2411/156_3343.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3343_o_1dc1pvbsej2c17jn1qajv581r452n.jpg",
+				"path": "/images/items/01_2411/157_3343.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3343_o_1dc1pvguh163hhb31cupd7r7nt2s.jpg",
+				"path": "/images/items/01_2411/158_3343.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2411/"
 }

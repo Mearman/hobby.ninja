@@ -3,8 +3,53 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard 仮面ライダーディケイド",
-		"en": "Figure-rise Standard Kamen Rider Decade"
+		"en": "Figure-rise Standard MASKED RIDER DECADE"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]",
+			"en": "Figure-rise Standard"
+		}
+	],
+	"series": [
+		{
+			"id": "rider",
+			"url": "https://bandai-hobby.net/series/rider/",
+			"ja": "仮面ライダーシリーズ",
+			"en": "KAMEN RIDER SERIES"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5451",
+			"url": "https://bandai-hobby.net/item/01_5451/",
+			"ja": "Figure-rise Standard 仮面ライダーゼロワン ライジングホッパー"
+		},
+		{
+			"id": "item-1000215369",
+			"url": "https://p-bandai.jp/item/item-1000215369/",
+			"ja": "Figure-rise Standard 仮面ライダーファイズ ブラスターフォーム"
+		},
+		{
+			"id": "01_5276",
+			"url": "https://bandai-hobby.net/item/01_5276/",
+			"ja": "Figure-rise Standard 仮面ライダークウガ アルティメットフォーム"
+		},
+		{
+			"id": "01_5175",
+			"url": "https://bandai-hobby.net/item/01_5175/",
+			"ja": "Figure-rise Standard 仮面ライダーキバ キバフォーム"
+		}
+	],
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -28,62 +73,127 @@
 			"• ネオディケイドライバーも付属。"
 		],
 		"en": [
-			"\"Kamen Rider Decade\", which is particular about color-coded reproduction and comes with a wealth of optional parts including 26 types of rider cards, is now available in Figure-rise Standard!",
-			"• By dividing the parts unique to plastic models, it is possible to assemble the head based on the image of the transformation scene.",
-			"• Ride Booker can be assembled into three types: sword form, gun form, and carrying form.",
-			"• Includes 26 types of PET material rider cards that can be loaded onto the belt.",
-			"• Comes with an adapter that allows you to attach the belt to other Figure-rise Standard Kamen Rider series.",
-			"• Neo Decay Driver is also included."
+			"Sticking to color-coded reproduction, the \"MASKED RIDER DECADE\" that comes with a wide variety of optional parts, including 26 types of rider cards, is now available in Figure-rise Standard!",
+			"• By dividing the parts unique to plastic models, it is possible to assemble a head that resembles a transformation scene.",
+			"• Ridebookers can be assembled in three forms: sword form, gun form, and carrying form.",
+			"• Comes with 26 types of rider cards made of PET material that can be loaded on the belt.",
+			"• Adapter included to attach the belt to other Figure-rise Standard MASKED RIDER series.",
+			"• Neo decay driver is also included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ライダーカード×26種",
-			"ライドブッカー（携行形態/銃形態/剣形態）×各1",
-			"ネオディケイドライバー×1",
-			"ベルトアダプター×7種",
-			"手首パーツ 握り手(左右)、平手(左右)、武器持ち手(右手)、カード保持用持ち手(右手)",
-			"フィギュアライズエフェクト台座×1",
-			"ホイルシール×1",
-			"テトロンシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ライダーカード",
+				"en": "• Rider Cards"
+			},
+			"count": 26,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "ライドブッカー（携行形態/銃形態/剣形態）×各1",
+				"en": "• Ride Booker (Carrying Mode/Gun Mode/Sword Mode)"
+			},
+			"unit": {
+				"ja": "each",
+				"en": "each"
+			}
+		},
+		{
+			"name": {
+				"ja": "ネオディケイドライバー",
+				"en": "• Neo Decade Driver"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ベルトアダプター",
+				"en": "• Belt Adapters"
+			},
+			"count": 7,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "手首パーツ 握り手(左右)、平手(左右)、武器持ち手(右手)、カード保持用持ち手(右手)",
+				"en": "• Wrist Parts: Gripping Hands (Left and Right), Flat Hands (Left and Right), Weapon-Holding Hand (Right), Card-Holding Hand (Right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "フィギュアライズエフェクト台座",
+				"en": "• Figure-rise Effect Base"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "• Foil Sticker"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "テトロンシール",
+				"en": "• Tetron Sticker"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153104_1.jpg",
+				"path": "/images/items/01_3302/1000153104_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153104_2.jpg",
+				"path": "/images/items/01_3302/1000153104_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153104_3.jpg",
+				"path": "/images/items/01_3302/1000153104_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153104_4.jpg",
+				"path": "/images/items/01_3302/1000153104_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153104_5.jpg",
+				"path": "/images/items/01_3302/1000153104_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153104_6.jpg",
+				"path": "/images/items/01_3302/1000153104_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153104_7.jpg",
+				"path": "/images/items/01_3302/1000153104_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153104_8.jpg",
+				"path": "/images/items/01_3302/1000153104_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153104_9.jpg",
+				"path": "/images/items/01_3302/1000153104_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153104_10.jpg",
+				"path": "/images/items/01_3302/1000153104_10.jpg"
+			}
 		],
-		"en": [
-			"Rider card x 26 types",
-			"Ride Booker (portable form/gun form/sword form) x 1 each",
-			"Neo Decay Driver x 1",
-			"Belt adapter x 7 types",
-			"Wrist parts: gripping hand (left and right), open hand (left and right), weapon holder (right hand), card holding hand (right hand)",
-			"Figure rise effect pedestal x 1",
-			"Foil Seal×1",
-			"Tetron Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3302/1000153104_1.jpg",
-		"/images/items/01_3302/1000153104_10.jpg",
-		"/images/items/01_3302/1000153104_2.jpg",
-		"/images/items/01_3302/1000153104_3.jpg",
-		"/images/items/01_3302/1000153104_4.jpg",
-		"/images/items/01_3302/1000153104_5.jpg",
-		"/images/items/01_3302/1000153104_6.jpg",
-		"/images/items/01_3302/1000153104_7.jpg",
-		"/images/items/01_3302/1000153104_8.jpg",
-		"/images/items/01_3302/1000153104_9.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3302/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"rider"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5451",
-		"item-1000215369",
-		"01_5276",
-		"01_5175"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_3302/"
+	}
 }

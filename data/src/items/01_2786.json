@@ -5,6 +5,55 @@
 		"ja": "HGCE 1/144 インフィニットジャスティスガンダム",
 		"en": "HGCE 1/144 Infinite Justice Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hgce",
+			"url": "https://bandai-hobby.net/brand/hgce/",
+			"ja": "HG COSMIC ERA"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000203308",
+			"url": "https://p-bandai.jp/item/item-1000203308/",
+			"ja": "ＨＧ 1/144 ダークダガーＬ"
+		},
+		{
+			"id": "01_5097",
+			"url": "https://bandai-hobby.net/item/01_5097/",
+			"ja": "HG 1/144 デストロイガンダム"
+		},
+		{
+			"id": "01_3739",
+			"url": "https://bandai-hobby.net/item/01_3739/",
+			"ja": "HG 1/144 デスティニーガンダム(ハイネ専用機)[クリアカラー]"
+		},
+		{
+			"id": "item-1000157417",
+			"url": "https://p-bandai.jp/item/item-1000157417/",
+			"ja": "ＨＧ 1/144 ウィンダム（ネオ・ロアノーク専用機）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -18,10 +67,9 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED DESTINY』より「∞ジャスティスガンダム」がHG最新フォーマットで登場！",
+			"『機動戦士ガンダムSEED DESTINY』より「∞ジャスティスガンダム」がHG最新フォーマットで登場！",
 			"• 腰部には可動域の拡大及びポージング保持を可能にする内部構造を採用。",
 			"• ファトゥム-01の両翼は反り上がるよう可動ギミックを搭載し、空中戦時のシルエットを再現可能。",
 			"• SEEDシリーズ特有のポージング再現用に股関節の可動域拡大ギミックを導入。",
@@ -29,7 +77,7 @@
 			"• ビームキャリーシールドの各形態を再現。ビームエフェクト、ビームシールドはクリアパーツで再現。リード線付属。"
 		],
 		"en": [
-			"\"∞Justice Gundam \" from \" Mobile Suit Gundam SEED DESTINY\" is now available in the latest HG format!",
+			"\"∞Justice Gundam\" from \"Mobile Suit Gundam SEED DESTINY\" is now available in the latest HG format!",
 			"• The waist has an internal structure that expands the range of motion and allows for holding poses.",
 			"• Both wings of Fatum-01 are equipped with a movable gimmick that allows them to curve up, allowing you to recreate the silhouette during an aerial battle.",
 			"• Introducing a gimmick that expands the range of motion of the hip joint to reproduce poses unique to the SEED series.",
@@ -37,53 +85,84 @@
 			"• Reproduce each form of beam carry Sealdo. Beam effects and beam seals are reproduced with clear parts. Comes with lead wire."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"高エネルギービームライフル×1",
-			"ビームサーベル(単独状態)×2",
-			"ビームサーベル(連結状態)×1",
-			"ビームキャリーシールド×1",
-			"ビームシールドエフェクト×1",
-			"ビームブーメランエフェクト×1",
-			"グリフォンビームブレイドエフェクト×2",
-			"グリフォンビーム２ブレイドエフェクト×2",
-			"ホイルシール×1",
-			"リード線×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "高エネルギービームライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル(単独状態)"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル(連結状態)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームキャリーシールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームシールドエフェクト"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームブーメランエフェクト"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "グリフォンビームブレイドエフェクト"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "グリフォンビーム２ブレイドエフェクト"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リード線"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3773_s_26i3ni0nlwiy656rbep60ts99n8t.jpg",
+				"path": "/images/items/01_2786/153_3773.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3773_s_b8g34o6fryteic104frorrmg642d.jpg",
+				"path": "/images/items/01_2786/155_3773.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3773_s_e3azjib651bdm02tt8dcgr2ulyp7.jpg",
+				"path": "/images/items/01_2786/156_3773.jpg"
+			}
 		],
-		"en": [
-			"High energy beam rifle x1",
-			"Beam saber (single state) x 2",
-			"Beam saber (connected) x 1",
-			"Beam carry Seal × 1",
-			"Beam Seal effect x1",
-			"Beam boomerang effect x1",
-			"Gryphon beam blade effect x2",
-			"Gryphon beam 2 blade effect x2",
-			"Foil Seal×1",
-			"Lead wire x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2786/153_3773.jpg",
-		"/images/items/01_2786/155_3773.jpg",
-		"/images/items/01_2786/156_3773.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2786/",
-	"brandIds": [
-		"hg",
-		"hgce"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
-	"manualId": "0497"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2786/"
 }

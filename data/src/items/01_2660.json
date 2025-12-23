@@ -5,6 +5,43 @@
 		"ja": "ディスプレイプラモデル ミライトワ",
 		"en": "Display Plastic Model Miraitowa"
 	},
+	"brands": [
+		{
+			"id": "tokyo2020_official",
+			"url": "https://bandai-hobby.net/brand/tokyo2020_official/",
+			"ja": "東京2020 公式ライセンス商品"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2867",
+			"url": "https://bandai-hobby.net/item/01_2867/",
+			"ja": "ハロプラ ハロ(東京2020パラリンピックエンブレム)"
+		},
+		{
+			"id": "01_2869",
+			"url": "https://bandai-hobby.net/item/01_2869/",
+			"ja": "ハロプラ ハロ(東京2020オリンピックエンブレム)"
+		},
+		{
+			"id": "01_2870",
+			"url": "https://bandai-hobby.net/item/01_2870/",
+			"ja": "HG 1/144 RX-78-2 ガンダム(東京2020パラリンピックエンブレム)"
+		},
+		{
+			"id": "01_2871",
+			"url": "https://bandai-hobby.net/item/01_2871/",
+			"ja": "HG 1/144 RX-78-2 ガンダム(東京2020オリンピックエンブレム)"
+		}
+	],
 	"price": {
 		"amount": 715,
 		"currency": "JPY",
@@ -34,39 +71,55 @@
 			"Tokyo 2020 officially licensed product"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ディスプレイ台座×１",
-			"カイナスシール×１",
-			"取扱説明書×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイ台座×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "カイナスシール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書×１"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3583_o_1e1ehk569198fv6vllj1oqn98923.jpg",
+				"path": "/images/items/01_2660/153_3583.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3583_o_1e1ehkg377jd19vc1f8n1kpuaf72d.jpg",
+				"path": "/images/items/01_2660/155_3583.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3583_o_1e1ehkkvqe7h1vqs1c7l1lna14dm2i.jpg",
+				"path": "/images/items/01_2660/156_3583.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3583_o_1e1ehkr5r16v215fq48s4neg4v2n.jpg",
+				"path": "/images/items/01_2660/157_3583.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3583_o_1e1ehkvvmh091mm0omrvs2p522s.jpg",
+				"path": "/images/items/01_2660/158_3583.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3583_o_1e1ehl51f1b57152n2sdqhvkda31.jpg",
+				"path": "/images/items/01_2660/159_3583.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3583_o_1e1ehl9tt1ik03jpj2kqhbols36.jpg",
+				"path": "/images/items/01_2660/189_3583.jpg"
+			}
 		],
-		"en": [
-			"Display pedestal x 1",
-			"Cainus Seal×1",
-			"Handling manual×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2660/153_3583.jpg",
-		"/images/items/01_2660/155_3583.jpg",
-		"/images/items/01_2660/156_3583.jpg",
-		"/images/items/01_2660/157_3583.jpg",
-		"/images/items/01_2660/158_3583.jpg",
-		"/images/items/01_2660/159_3583.jpg",
-		"/images/items/01_2660/189_3583.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2660/",
-	"brandIds": [
-		"tokyo2020_official"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2867",
-		"01_2869",
-		"01_2870",
-		"01_2871"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2660/"
 }

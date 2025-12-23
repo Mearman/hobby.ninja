@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 ガンダムベース限定 フリーダムガンダム Ver.2.0 [クリアカラー]",
-		"en": "MG 1/100 Gundam Base Limited Freedom Gundam Ver.2.0 [Clear Color]"
+		"en": "MG 1/100 THE GUNDAM BASE LIMITED FREEDOM GUNDAM Ver.2.0 ［CLEAR COLOR］"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]",
+			"en": "MG [MASTER GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED",
+			"en": "MOBILE SUIT GUNDAM SEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "01_5221",
+			"url": "https://bandai-hobby.net/item/01_5221/",
+			"ja": "MG 1/100 イージスガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_4272",
+			"url": "https://bandai-hobby.net/item/01_4272/",
+			"ja": "MG 1/100 ガンダムベース限定 パーフェクトストライクガンダム グランドスラム装備型"
+		},
+		{
+			"id": "01_4195",
+			"url": "https://bandai-hobby.net/item/01_4195/",
+			"ja": "MG 1/100 ガンダムベース限定 エクリプスガンダム[クリアカラー]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5610,
 		"currency": "JPY",
@@ -17,45 +63,50 @@
 		"month": 8
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
 			"マスターグレード フリーダムガンダムがクリアカラーで登場。乳白色のディスプレイベースが付属。"
 		],
 		"en": [
-			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"Master Grade Freedom Gundam now available in clear color. Comes with a milky white display base."
+			"For GUNPLA fans around the world, this is a limited edition GUNPLA at the official GUNPLA complex \"GUNDAM Base\". Master Grade Freedom GUNDAM is now available in clear colors. Comes with a milky white display base."
 		]
 	},
-	"images": [
-		"/images/items/01_1911/1000126805_1.jpg",
-		"/images/items/01_1911/1000126805_2.jpg",
-		"/images/items/01_1911/1000126805_3.jpg",
-		"/images/items/01_1911/1000126805_4.jpg",
-		"/images/items/01_1911/1000126805_5.jpg",
-		"/images/items/01_1911/1000126805_6.jpg",
-		"/images/items/01_1911/1000126805_7.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1911/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5221",
-		"01_4272",
-		"01_4195"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126805_1.jpg",
+				"path": "/images/items/01_1911/1000126805_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126805_2.jpg",
+				"path": "/images/items/01_1911/1000126805_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126805_3.jpg",
+				"path": "/images/items/01_1911/1000126805_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126805_4.jpg",
+				"path": "/images/items/01_1911/1000126805_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126805_5.jpg",
+				"path": "/images/items/01_1911/1000126805_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126805_6.jpg",
+				"path": "/images/items/01_1911/1000126805_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126805_7.jpg",
+				"path": "/images/items/01_1911/1000126805_7.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "0624"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1911/",
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1911/"
+	}
 }

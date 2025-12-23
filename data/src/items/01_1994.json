@@ -5,6 +5,35 @@
 		"ja": "HG 1/300 ゴウザウラー",
 		"en": "HG 1/300 Goosaurer"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gosaurar",
+			"url": "https://bandai-hobby.net/series/gosaurar/",
+			"ja": "熱血最強ゴウザウラー"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000132814",
+			"url": "https://p-bandai.jp/item/item-1000132814",
+			"ja": "ＨＧ 1/300 ダークゴウザウラー"
+		}
+	],
+	"scale": "1/300",
 	"price": {
 		"amount": 5720,
 		"currency": "JPY",
@@ -18,7 +47,6 @@
 		"day": 22
 	},
 	"targetAge": 15,
-	"scale": "1/300",
 	"description": {
 		"ja": [
 			"『熱血最強ゴウザウラー』より、プラモデルエルドランシリーズ第一弾としてゴウザウラーが登場！",
@@ -26,56 +54,91 @@
 		],
 		"en": [
 			"From ``Nekketsu Strongest Gowsaurer'', Gowsaurer appears as the first model of the Plastic Model Eldran series!",
-			"• Reproduce the combined transformation of 3 types of dinosaur robots, \"Machptera \", \" Land Stego \", and \" Thunder Brachio\", and Saurer Jet with a snap-fit ​​model that does not require adhesive!"
+			"• Reproduce the combined transformation of 3 types of dinosaur robots, \"Machptera\", \"Land Stego\", and \"Thunderbrachio\", and Saurer Jet with a snap-fit ​​model that does not require adhesive!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ザウラーブレード×1",
-			"ザウラーシールド×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ザウラーブレード"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ザウラーシールド"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 20
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2922_s_0vv4k1tc5lxab086ly7511difvd8.jpg",
+				"path": "/images/items/01_1994/153_2922.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2922_s_u33zjf1ppx3lo9ywwe6hi86amgu2.jpg",
+				"path": "/images/items/01_1994/155_2922.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2922_s_jgaj4qdx5h43pi4e0abbcceinll5.jpg",
+				"path": "/images/items/01_1994/156_2922.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2922_s_4fywvi8uxib10ns2lbu6cx42k9rz.jpg",
+				"path": "/images/items/01_1994/157_2922.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2922_s_o4xk3b9x12es45ahxlphtt9krl2i.jpg",
+				"path": "/images/items/01_1994/158_2922.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2922_s_opl0d7u9ngl30732z4wl8l5p4xdf.jpg",
+				"path": "/images/items/01_1994/159_2922.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2922_s_qt510lpehcodil4mucxi19lo3z2w.jpg",
+				"path": "/images/items/01_1994/189_2922.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2922_s_fwyx6pcxo50h7fyi7ppqx6l2le0v.jpg",
+				"path": "/images/items/01_1994/190_2922.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2922_s_kqdojyi77ow2ula3qxk1vpjgfgrt.jpg",
+				"path": "/images/items/01_1994/191_2922.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2922_s_xfiq9xzhzdgjhlq44cwlje4rnfkt.jpg",
+				"path": "/images/items/01_1994/192_2922.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_2922_s_uhvh6wlizid3sym9m0t0dl39oxi4.jpg",
+				"path": "/images/items/01_1994/193_2922.jpg"
+			}
 		],
-		"en": [
-			"Saurer blade x1",
-			"Saurer Seal ×1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×20",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 20",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1994/153_2922.jpg",
-		"/images/items/01_1994/155_2922.jpg",
-		"/images/items/01_1994/156_2922.jpg",
-		"/images/items/01_1994/157_2922.jpg",
-		"/images/items/01_1994/158_2922.jpg",
-		"/images/items/01_1994/159_2922.jpg",
-		"/images/items/01_1994/189_2922.jpg",
-		"/images/items/01_1994/190_2922.jpg",
-		"/images/items/01_1994/191_2922.jpg",
-		"/images/items/01_1994/192_2922.jpg",
-		"/images/items/01_1994/193_2922.jpg",
-		"/images/items/01_1994/01_1994_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1994/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gosaurar"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000132814"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1994/"
 }

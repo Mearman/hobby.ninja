@@ -2,9 +2,52 @@
 	"id": "01_2566",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット シャア専用ザクII",
-		"en": "SD Gundam Cross Silhouette Char's Zaku II"
+		"ja": "SDガンダム クロスシルエット シャア専用ザクII",
+		"en": "SDGundam Cross Silhouette Char's Zaku II"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4132",
+			"url": "https://bandai-hobby.net/item/01_4132/",
+			"ja": "SDガンダム クロスシルエット ガンダムベース限定 RX-78-2 ガンダム(クロスシルエットフレームVer.)[ガンダムベースカラー]"
+		},
+		{
+			"id": "01_3495",
+			"url": "https://bandai-hobby.net/item/01_3495/",
+			"ja": "ハローキティ/ザクII[SDガンダムクロスシルエット][クリアカラー]"
+		},
+		{
+			"id": "01_3321",
+			"url": "https://bandai-hobby.net/item/01_3321/",
+			"ja": "SDガンダムクロスシルエット RX-78F00 ガンダム"
+		},
+		{
+			"id": "01_2806",
+			"url": "https://bandai-hobby.net/item/01_2806/",
+			"ja": "SDガンダムクロスシルエット RX-78-2 ガンダム＆シャア専用ザクII"
+		}
+	],
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -29,51 +72,81 @@
 		"en": [
 			"\"Char's Zaku II\" is now available in the SDCS series, where the fun can be expanded through combinations!",
 			"• Coloring is reproduced with molded colors.",
-			"• Mono eye is movable!",
+			"• Monoeye is movable!",
 			"• A low-life frame (gray) is included.",
-			"• A wealth of weapons are included to color the poses."
+			"• Comes with a variety of weapons to decorate your poses."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ザク・マシンガン×1",
-			"ザク・バズーカ×1",
-			"ヒート・ホーク×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ザク・マシンガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ザク・バズーカ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ヒート・ホーク"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3491_s_9tkgf8at374xm8j7p5wrfsozbd65.jpg",
+				"path": "/images/items/01_2566/153_3491.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3491_s_9hxa67d0omqwm3fkars48goqgv9b.jpg",
+				"path": "/images/items/01_2566/155_3491.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3491_s_yjeennd9uclosohyb8hew0o8f6h3.jpg",
+				"path": "/images/items/01_2566/156_3491.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3491_s_cbcrqz4b06i4n2lauxsec5sx9yxl.jpg",
+				"path": "/images/items/01_2566/157_3491.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3491_s_k4qq5urpqwjjwtiscd175dr3x808.jpg",
+				"path": "/images/items/01_2566/158_3491.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3491_s_cbu0qwb6ybqmrst87n6ntedjxxou.jpg",
+				"path": "/images/items/01_2566/159_3491.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3491_s_4y08tg2ggf80vxmax87ickk9wt8r.jpg",
+				"path": "/images/items/01_2566/189_3491.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3491_s_2n0lzx8o5jgpq6z5ue8qj3jguryh.jpg",
+				"path": "/images/items/01_2566/190_3491.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3491_s_wa4sonntep2dnfnd7urqxc2t3z37.jpg",
+				"path": "/images/items/01_2566/191_3491.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3491_s_rbsojn297e91fgb28qclzk5mpx82.jpg",
+				"path": "/images/items/01_2566/192_3491.jpg"
+			}
 		],
-		"en": [
-			"Zaku machine gun x1",
-			"Zaku Bazooka×1",
-			"Heat Hawk x1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2566/153_3491.jpg",
-		"/images/items/01_2566/155_3491.jpg",
-		"/images/items/01_2566/156_3491.jpg",
-		"/images/items/01_2566/157_3491.jpg",
-		"/images/items/01_2566/158_3491.jpg",
-		"/images/items/01_2566/159_3491.jpg",
-		"/images/items/01_2566/189_3491.jpg",
-		"/images/items/01_2566/190_3491.jpg",
-		"/images/items/01_2566/191_3491.jpg",
-		"/images/items/01_2566/192_3491.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2566/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4132",
-		"01_3495",
-		"01_3321",
-		"01_2806"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2566/"
 }

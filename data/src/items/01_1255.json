@@ -5,6 +5,54 @@
 		"ja": "HGUC 1/144 ギャン・クリーガー",
 		"en": "HGUC 1/144 Gann Krieger"
 	},
+	"brands": [
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000220190",
+			"url": "https://p-bandai.jp/item/item-1000220190/",
+			"ja": "ＨＧ 1/144 ザク・デザートタイプ ピンクパンサー隊機"
+		},
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "item-1000216105",
+			"url": "https://p-bandai.jp/item/item-1000216105/",
+			"ja": "RG 1/144 ソードインパルスガンダムＳｐｅｃＩＩ"
+		},
+		{
+			"id": "item-1000216112",
+			"url": "https://p-bandai.jp/item/item-1000216112/",
+			"ja": "HG 1/144 デルタザイン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -16,7 +64,6 @@
 		"year": 2018,
 		"month": 1
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－",
@@ -115,37 +162,50 @@
 			"- Product specifications are scheduled as of 201711. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_1255/153_2187.jpg",
-		"/images/items/01_1255/155_2187.jpg",
-		"/images/items/01_1255/156_2187.jpg",
-		"/images/items/01_1255/157_2187.jpg",
-		"/images/items/01_1255/158_2187.jpg",
-		"/images/items/01_1255/159_2187.jpg",
-		"/images/items/01_1255/189_2187.jpg",
-		"/images/items/01_1255/190_2187.jpg",
-		"/images/items/01_1255/191_2187.jpg",
-		"/images/items/01_1255/192_2187.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1255/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla",
-		"hguc"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000220190",
-		"item-1000220189",
-		"item-1000216105",
-		"item-1000216112"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2187_s_m0rttgiouthzguie1mownt8717em.jpg",
+				"path": "/images/items/01_1255/153_2187.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2187_s_sxrledmy2mmuh65hu1wr1btujwjr.jpg",
+				"path": "/images/items/01_1255/155_2187.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2187_s_i4vnygv4hi6wkk5zmfkmtdbwr4p4.jpg",
+				"path": "/images/items/01_1255/156_2187.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2187_s_r8sau6bbyaitf5mmj26dhpmnjzsw.jpg",
+				"path": "/images/items/01_1255/157_2187.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2187_s_1o79xqifpy67ty79lvq8abvdrquc.jpg",
+				"path": "/images/items/01_1255/158_2187.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2187_s_j7vfun7ykpncqnhuexmuplf5fnhr.jpg",
+				"path": "/images/items/01_1255/159_2187.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2187_s_0m6pnw7biya0xc13tzbbpnexyzqr.jpg",
+				"path": "/images/items/01_1255/189_2187.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2187_s_bixduurmzscv242lwn4tkd0letvg.jpg",
+				"path": "/images/items/01_1255/190_2187.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2187_s_4zppvmfxmxe0h8tqpbpt1z002iq1.jpg",
+				"path": "/images/items/01_1255/191_2187.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2187_s_gjdnmrcgne2ro3wkp0ta2z71d1e3.jpg",
+				"path": "/images/items/01_1255/192_2187.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1255/"
 }

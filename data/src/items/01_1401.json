@@ -2,9 +2,52 @@
 	"id": "01_1401",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット ザクII",
-		"en": "SD Gundam Cross Silhouette Zaku II"
+		"ja": "SDガンダム クロスシルエット ザクII",
+		"en": "SDGundam Cross Silhouette Zaku II"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4132",
+			"url": "https://bandai-hobby.net/item/01_4132/",
+			"ja": "SDガンダム クロスシルエット ガンダムベース限定 RX-78-2 ガンダム(クロスシルエットフレームVer.)[ガンダムベースカラー]"
+		},
+		{
+			"id": "01_3495",
+			"url": "https://bandai-hobby.net/item/01_3495/",
+			"ja": "ハローキティ/ザクII[SDガンダムクロスシルエット][クリアカラー]"
+		},
+		{
+			"id": "01_3321",
+			"url": "https://bandai-hobby.net/item/01_3321/",
+			"ja": "SDガンダムクロスシルエット RX-78F00 ガンダム"
+		},
+		{
+			"id": "01_2806",
+			"url": "https://bandai-hobby.net/item/01_2806/",
+			"ja": "SDガンダムクロスシルエット RX-78-2 ガンダム＆シャア専用ザクII"
+		}
+	],
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -20,68 +63,100 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"2つのシルエットが楽しめる「SD ガンダム クロスシルエット」シリーズにザクIIが登場！",
+			"2つのシルエットが楽しめる「SDガンダム クロスシルエット」シリーズにザクIIが登場！",
 			"• モノアイはクリアで造形されレールにより可動！",
 			"• おなじみのザク・マシンガンに加え、ザク・バズーカ、ミサイルポッドが付属し、ヒート・ホークの刀身はクリアパーツで造形！",
-			"• グレーカラーのフレームを搭載し、別売りの「SD ガンダム クロスシルエットフレーム［グレー］」と組み合わせることで高頭身化が可能！"
+			"• グレーカラーのフレームを搭載し、別売りの「SDガンダム クロスシルエットフレーム［グレー］」と組み合わせることで高頭身化が可能！"
 		],
 		"en": [
 			"Zaku II is now available in the \"SD Gundam Cross Silhouette\" series where you can enjoy two silhouettes!",
-			"• The mono-eye is molded in clear and can be moved by rails!",
+			"• Monoeye is molded in clear and can be moved by rails!",
 			"• In addition to the familiar Zaku machine gun, a Zaku bazooka and missile pod are included, and the Heat Hawk blade is made of clear parts!",
-			"• Equipped with a gray-colored frame, you can create a taller head by combining it with the separately sold \"SD Gundam Cross Silhouette Frame [Gray]\"!"
+			"• Equipped with a gray-colored frame, you can make your head taller by combining it with the separately sold \"SD Gundam Cross Silhouette Frame [Gray]\"!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ザク・マシンガン×1",
-			"ザク・バズーカ×1",
-			"ミサイルポッド×2",
-			"ヒート・ホーク×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ザク・マシンガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ザク・バズーカ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ミサイルポッド"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ヒート・ホーク"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2324_s_2bkt8rahhst1vto0f1dw0i02cisc.jpg",
+				"path": "/images/items/01_1401/153_2324.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2324_s_vpgn67kwe3suofvmz1jel252ze1t.jpg",
+				"path": "/images/items/01_1401/155_2324.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2324_s_f7wj8j82rl5cs7jq8bfl9zpigg1g.jpg",
+				"path": "/images/items/01_1401/156_2324.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2324_s_3erqga5vx6a0yj8p9eoafkcbx8m5.jpg",
+				"path": "/images/items/01_1401/157_2324.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2324_s_d7wrkmk5a0r16vzqchod59f3pf3w.jpg",
+				"path": "/images/items/01_1401/158_2324.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2324_s_jfrpoxpigwxwnszhdw9am0z3frb9.jpg",
+				"path": "/images/items/01_1401/159_2324.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2324_s_c66b0b9f71dbnncq69ptkzxc3ada.jpg",
+				"path": "/images/items/01_1401/189_2324.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2324_s_wyz8919qir3bbje83g4lx7m9z38s.jpg",
+				"path": "/images/items/01_1401/190_2324.jpg"
+			}
 		],
-		"en": [
-			"Zaku machine gun x1",
-			"Zaku Bazooka×1",
-			"Missile pod x2",
-			"Heat Hawk x1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×3",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 3",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1401/153_2324.jpg",
-		"/images/items/01_1401/155_2324.jpg",
-		"/images/items/01_1401/156_2324.jpg",
-		"/images/items/01_1401/157_2324.jpg",
-		"/images/items/01_1401/158_2324.jpg",
-		"/images/items/01_1401/159_2324.jpg",
-		"/images/items/01_1401/189_2324.jpg",
-		"/images/items/01_1401/190_2324.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1401/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4132",
-		"01_3495",
-		"01_3321",
-		"01_2806"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1401/"
 }

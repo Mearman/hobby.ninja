@@ -5,6 +5,49 @@
 		"ja": "メカコレクション ガイゼンガン兵器群・カラクルム級戦闘艦",
 		"en": "Mecha Collection Gaizengan Weapon Group/Karakurum Class Battleship"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "yamato",
+			"url": "https://bandai-hobby.net/series/yamato/",
+			"ja": "宇宙戦艦ヤマトシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5498",
+			"url": "https://bandai-hobby.net/item/01_5498/",
+			"ja": "メカコレクションDX 1式空間戦闘攻撃機 コスモタイガーII(単座型/銃座型) [2機セット]"
+		},
+		{
+			"id": "01_5500",
+			"url": "https://bandai-hobby.net/item/01_5500/",
+			"ja": "メカコレクションDX 試製空間戦闘攻撃機 コスモパイソン [2機セット]"
+		},
+		{
+			"id": "01_3667",
+			"url": "https://bandai-hobby.net/item/01_3667/",
+			"ja": "メカコレクション ガイペロン級多層式航宙母艦 バルメス(外洋機動艦隊仕様)"
+		},
+		{
+			"id": "01_3650",
+			"url": "https://bandai-hobby.net/item/01_3650/",
+			"ja": "メカコレクション デウスーラIII世"
+		}
+	],
 	"price": {
 		"amount": 990,
 		"currency": "JPY",
@@ -27,50 +70,54 @@
 			"• メカコレならではのコレクション性で、複数集めると劇中の登場する「レギオネル・カノーネ」が再現可能に！"
 		],
 		"en": [
-			"The \"Gaisengan Weapon Group Karakrum Class Battleship \" from \" Space Battleship Yamato 2202\" is now available in the Mecha Collection!",
-			"• Although it is palm-sized, it accurately reproduces the details of the Gaizengan weapons group and Karakrum class battleship!",
-			"• Mecha collection being released Earth Federation Andromeda class Large fleet of the same scale as the first ship Andromeda!",
+			"The \"Gaisengan Weapon Group Karakrum Class Battleship\" from \"Space Battleship Yamato 2202\" is now available in the Mecha Collection!",
+			"• Although it is palm-sized, it accurately reproduces the details of the Gaizengan weapons group and Karakulum class battleship!",
+			"• Mecha collection being released Earth Federation Andromeda class First ship A large fleet of the same scale as Andromeda!",
 			"Although it is a mecha collection, it has an overwhelming presence!",
-			"• With the collectability unique to mechanical collection, if you collect multiple pieces, you can recreate the \"Legionel Canone\" that appears in the play!"
+			"• With the collectibility unique to mecha collection, if you collect multiple pieces, you can recreate the \"Legionel Canone\" that appears in the play!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "（箱裏に記載）"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2232_s_2lyyj195lirtun9f0juh6k7vple3.jpg",
+				"path": "/images/items/01_1302/153_2232.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2232_s_kjm9q1vc7g78cph825a1ribizo2d.jpg",
+				"path": "/images/items/01_1302/155_2232.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2232_s_ztadbo5i8w0oxrtdp4y64fy24kok.jpg",
+				"path": "/images/items/01_1302/156_2232.jpg"
+			}
 		],
-		"en": [
-			"Dedicated display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"取扱説明書×1（箱裏に記載）"
-		],
-		"en": [
-			"Molded product x 4",
-			"Handling manual x 1 (written on the back of the box)"
-		]
-	},
-	"images": [
-		"/images/items/01_1302/153_2232.jpg",
-		"/images/items/01_1302/155_2232.jpg",
-		"/images/items/01_1302/156_2232.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1302/",
-	"brandIds": [
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"yamato"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5498",
-		"01_5500",
-		"01_3667",
-		"01_3650"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1302/"
 }

@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "ＢＢ戦士 44 頑駄無大将軍",
-		"en": "BB Senshi 44 Gundam udaishōgun"
+		"en": "BB Senshi 44 Gundamudaishōgun"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,22 +55,18 @@
 		"day": 20
 	},
 	"targetAge": 15,
-	"images": [
-		"/images/items/01_3280/153_4230.jpg",
-		"/images/items/01_3280/155_4230.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3280/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4230_s_q1ppdjhy3k1hbdl7ath9s8rs0b0s.jpg",
+				"path": "/images/items/01_3280/153_4230.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4230_s_72mn3m2w4hfh77exm043toh0y4l7.jpg",
+				"path": "/images/items/01_3280/155_4230.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3280/"
 }

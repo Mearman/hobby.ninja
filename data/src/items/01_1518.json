@@ -5,6 +5,44 @@
 		"ja": "1/144 ゾリディア",
 		"en": "1/144 Zolidia"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "v-gundam",
+			"url": "https://bandai-hobby.net/series/v-gundam/",
+			"ja": "機動戦士Vガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4978",
+			"url": "https://bandai-hobby.net/item/01_4978/",
+			"ja": "HG 1/144 V2アサルトバスターガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_3311",
+			"url": "https://bandai-hobby.net/item/01_3311/",
+			"ja": "HG 1/144 ガンダムベース限定 セカンドV[クリアカラー]"
+		},
+		{
+			"id": "01_2835",
+			"url": "https://bandai-hobby.net/item/01_2835/",
+			"ja": "MG 1/100 ガンダムベース限定 V2アサルトバスターガンダムVer.Ka [チタニウムフィニッシュ]"
+		},
+		{
+			"id": "item-1000142101",
+			"url": "https://p-bandai.jp/item/item-1000142101/",
+			"ja": "ＲＥ/100 1/100 シャッコー"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -17,12 +55,11 @@
 		"month": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ＴＶ「機動戦士Ｖガンダム」に登場したゾロアットの陸戦仕様機体をキット化しました。",
-			"■バックパックの形状はノーマル型と強化型の2種選択式で、強化型は可動式のビーム・ストリングスとガトリングガンが装備可能です。",
-			"■ビーム・ライフル、ビーム・サーベルがついています。"
+			"• バックパックの形状はノーマル型と強化型の2種選択式で、強化型は可動式のビーム・ストリングスとガトリングガンが装備可能です。",
+			"• ビーム・ライフル、ビーム・サーベルがついています。"
 		],
 		"en": [
 			"A kit version of Zoroat's ground combat version that appeared on the TV show \"Mobile Suit V Gundam.\"",
@@ -30,22 +67,18 @@
 			"• Comes with a beam rifle and beam saber."
 		]
 	},
-	"images": [
-		"/images/items/01_1518/153_2436.jpg",
-		"/images/items/01_1518/155_2436.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1518/",
-	"brandIds": [],
-	"seriesIds": [
-		"v-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4978",
-		"01_3311",
-		"01_2835",
-		"item-1000142101"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2436_s_q5nf1w51xoaloayq8dhmbopise24.jpg",
+				"path": "/images/items/01_1518/153_2436.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2436_s_59wak0261k3v9r6mhd419401p6ym.jpg",
+				"path": "/images/items/01_1518/155_2436.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1518/"
 }

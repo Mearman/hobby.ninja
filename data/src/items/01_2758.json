@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 eEXM-17 アルト(空中戦仕様)[オレンジ]",
 		"en": "30MM 1/144 eEXM-17 Alto (air combat specification) [Orange]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 13
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMシリーズ「eEXM-17 アルト(空中戦仕様）」にオレンジが登場！",
@@ -33,47 +75,87 @@
 			"• Comes with a white molded flight unit and multi-booster unit. Various customizations are possible by linking with the multi-booster unit."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"キャノン砲×2",
-			"マルチブースターユニット×1式",
-			"フライトパック×1",
-			"マーキングシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "キャノン砲"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "マルチブースターユニット"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "フライトパック"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146728_12.jpg",
+				"path": "/images/items/01_2758/1000146728_12.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146728_1.jpg",
+				"path": "/images/items/01_2758/1000146728_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146728_2.jpg",
+				"path": "/images/items/01_2758/1000146728_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146728_3.jpg",
+				"path": "/images/items/01_2758/1000146728_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146728_4.jpg",
+				"path": "/images/items/01_2758/1000146728_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146728_5.jpg",
+				"path": "/images/items/01_2758/1000146728_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146728_6.jpg",
+				"path": "/images/items/01_2758/1000146728_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146728_7.jpg",
+				"path": "/images/items/01_2758/1000146728_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146728_8.jpg",
+				"path": "/images/items/01_2758/1000146728_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146728_9.jpg",
+				"path": "/images/items/01_2758/1000146728_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146728_10.jpg",
+				"path": "/images/items/01_2758/1000146728_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146728_11.jpg",
+				"path": "/images/items/01_2758/1000146728_11.jpg"
+			}
 		],
-		"en": [
-			"Cannon x2",
-			"Multi booster unit x 1 set",
-			"Flight pack x1",
-			"MarkingSeal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2758/1000146728_1.jpg",
-		"/images/items/01_2758/1000146728_10.jpg",
-		"/images/items/01_2758/1000146728_11.jpg",
-		"/images/items/01_2758/1000146728_12.jpg",
-		"/images/items/01_2758/1000146728_2.jpg",
-		"/images/items/01_2758/1000146728_3.jpg",
-		"/images/items/01_2758/1000146728_4.jpg",
-		"/images/items/01_2758/1000146728_5.jpg",
-		"/images/items/01_2758/1000146728_6.jpg",
-		"/images/items/01_2758/1000146728_7.jpg",
-		"/images/items/01_2758/1000146728_8.jpg",
-		"/images/items/01_2758/1000146728_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2758/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3690"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2758/"
 }

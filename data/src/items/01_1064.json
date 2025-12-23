@@ -5,6 +5,44 @@
 		"ja": "1/12 グリーヴァス将軍",
 		"en": "1/12 General Grievous"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3513",
+			"url": "https://bandai-hobby.net/item/01_3513/",
+			"ja": "ビークルモデル レイザー・クレスト"
+		}
+	],
+	"scale": "1/12",
 	"price": {
 		"amount": 5610,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 29
 	},
 	"targetAge": 15,
-	"scale": "1/12",
 	"description": {
 		"ja": [
 			"• 「スター・ウォーズ　エピソード３／シスの復讐」に登場するグリーヴァス将軍を1/12スケールで商品化！",
@@ -31,62 +68,108 @@
 		"en": [
 			"• General Grievous who appears in \"Star Wars Episode III: Revenge of the Sith\" is commercialized in 1/12 Scale!",
 			"• You can choose between a normal two-armed state and a four-armed state during battle.",
-			"• Recreate the impressive fighting style using 4 lightsabers!",
-			"• By insert molding, complex joints are constructed with a minimum number of parts, and the color coding of the eyes is also reproduced with molded colors.",
-			"• A removable non-woven cloak is also included.",
-			"• Overall height approximately 180mm"
+			"• Recreate an impressive fighting style using 4 lightsabers!",
+			"• Complex joints are constructed with a minimum number of parts thanks to insert molding, and the color coding of the eyes is also reproduced using molded colors.",
+			"• A detachable non-woven cloak is also included.",
+			"• Total height approx. 180mm"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ライトセーバー×4（青×2、緑×2）",
-			"不織布（マント）×1",
-			"4本腕再現用パーツ×1式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ライトセーバー"
+			},
+			"count": 4,
+			"unit": {
+				"ja": "（青×2、緑×2）"
+			}
+		},
+		{
+			"name": {
+				"ja": "不織布（マント）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "4本腕再現用パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 9
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/192_1998_s_eiwsngyix35yx9ya3tsy01pdcdse.jpg",
+				"path": "/images/items/01_1064/192_1998.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_1998_s_v700r65obmj53zsuu97k047d5mxj.jpg",
+				"path": "/images/items/01_1064/153_1998.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1998_s_s8cjarm3z83k9nlzg4xkxqbe6wpa.jpg",
+				"path": "/images/items/01_1064/155_1998.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_1998_s_4274ebyfmiln5bl78znjvfwe9t1k.jpg",
+				"path": "/images/items/01_1064/156_1998.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_1998_s_mvh4b7bol0ncmvqfzmbnz6a6ftev.jpg",
+				"path": "/images/items/01_1064/157_1998.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_1998_s_qbt4l8k3jsj0soqws6ltqh36aofm.jpg",
+				"path": "/images/items/01_1064/158_1998.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_1998_s_bddsgrb3dme1ywdctg4hrhu6xgn4.jpg",
+				"path": "/images/items/01_1064/159_1998.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_1998_s_ouzmh273lh2jvn9q66j33km0mzs2.jpg",
+				"path": "/images/items/01_1064/189_1998.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_1998_s_9vewol620cqskuvvvzyr9ci4bshy.jpg",
+				"path": "/images/items/01_1064/190_1998.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_1998_s_izlre9u9zk4uchhvnqc4epj0t6go.jpg",
+				"path": "/images/items/01_1064/191_1998.jpg"
+			}
 		],
-		"en": [
-			"Lightsaber x 4 (blue x 2, green x 2)",
-			"Non-woven fabric (cloak) x 1",
-			"4 arms reproduction parts x 1 set"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×9",
-			"マーキングシール×1",
-			"水転写式デカール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 9",
-			"MarkingSeal×1",
-			"Water transfer decal x 1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1064/153_1998.jpg",
-		"/images/items/01_1064/155_1998.jpg",
-		"/images/items/01_1064/156_1998.jpg",
-		"/images/items/01_1064/157_1998.jpg",
-		"/images/items/01_1064/158_1998.jpg",
-		"/images/items/01_1064/159_1998.jpg",
-		"/images/items/01_1064/189_1998.jpg",
-		"/images/items/01_1064/190_1998.jpg",
-		"/images/items/01_1064/191_1998.jpg",
-		"/images/items/01_1064/192_1998.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1064/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3513"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1064/"
 }

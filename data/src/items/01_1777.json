@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 XXXG-01W ウイングガンダム EW",
-		"en": "MG 1/100 XXXG-01W Wing Gundam EW"
+		"en": "MG 1/100 XXXG-01W wing GUNDAM EW"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ",
+			"en": "MOBILE SUIT GUNDAM WING series"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "item-1000194972",
+			"url": "https://p-bandai.jp/item/item-1000194972/",
+			"ja": "ＭＧ 1/100 ガンダムエピオン EW (シュトゥルム・ウント・ドラング装備)"
+		},
+		{
+			"id": "01_3410",
+			"url": "https://bandai-hobby.net/item/01_3410/",
+			"ja": "MG 1/100 ガンダムデスサイズヘル EW[スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000171722",
+			"url": "https://p-bandai.jp/item/item-1000171722/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムエピオン EW[スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000142325",
+			"url": "https://p-bandai.jp/item/item-1000142325/",
+			"ja": "ＭＧ 1/100 ガンダムデスサイズ EW（ルーセット装備）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4290,
 		"currency": "JPY",
@@ -18,33 +51,43 @@
 		"day": 26
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"• MGウイングガンダムが「新機動戦記ガンダム W EndlessWaltz」に登場するEW版として登場。 • アクションベース対応パーツが追加され、ポージング性能が向上。 • マーキングはカトキハジメ氏による新デザイン。 成形品×14、ホイルシール×1、マーキングシール×1、ガンダムデカール×1、組立説明書"
+			"• MGウイングガンダムが「新機動戦記ガンダムW EndlessWaltz」に登場するEW版として登場。 ■アクションベース対応パーツが追加され、ポージング性能が向上。 ■マーキングはカトキハジメ氏による新デザイン。 成形品×14、ホイルシール×1、マーキングシール×1、ガンダムデカール×1、組立説明書"
 		],
 		"en": [
-			"• MG Wing Gundam appears as the EW version that appears in \"New Mobile Report Gundam W Endless Waltz\". • Action base compatible parts have been added to improve posing performance. • Marking is a new design by Hajime Katoki. Molded product x 14, Foil Seal x 1, Marking Seal x 1, Gundam decal x 1, Assembly Manual"
+			"• MG Wing GUNDAM is now available as an EW version of \"MOBILE SUIT GUNDAM WING EndlessWaltz\".",
+			"• ACTION BASE Compatible parts have been added to improve posing performance.",
+			"• The marking is a new design by Hajime Katoki. Molded product ×14, foil seal ×1, marking seal ×1, GUNDAM DECAL ×1, assembly instructions"
 		]
 	},
-	"images": [
-		"/images/items/01_1777/1000092380_1.jpg",
-		"/images/items/01_1777/1000092380_2.jpg",
-		"/images/items/01_1777/1000092380_3.jpg",
-		"/images/items/01_1777/1000092380_4.jpg",
-		"/images/items/01_1777/1000092380_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092380_1.jpg",
+				"path": "/images/items/01_1777/1000092380_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092380_2.jpg",
+				"path": "/images/items/01_1777/1000092380_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092380_3.jpg",
+				"path": "/images/items/01_1777/1000092380_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092380_4.jpg",
+				"path": "/images/items/01_1777/1000092380_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092380_5.jpg",
+				"path": "/images/items/01_1777/1000092380_5.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1777/",
-	"brandIds": [],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"item-1000194972",
-		"01_3410",
-		"item-1000171722",
-		"item-1000142325"
-	],
-	"manualId": "0589"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1777/"
+	}
 }

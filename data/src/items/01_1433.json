@@ -5,6 +5,44 @@
 		"ja": "1/20 ファッティー地上用",
 		"en": "1/20 Fatty ground use"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "votoms",
+			"url": "https://bandai-hobby.net/series/votoms/",
+			"ja": "装甲騎兵ボトムズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000223037",
+			"url": "https://p-bandai.jp/item/item-1000223037/",
+			"ja": "ＨＧ スコープドッグ用拡張パーツセット6"
+		},
+		{
+			"id": "01_5553",
+			"url": "https://bandai-hobby.net/item/01_5553/",
+			"ja": "HG スコープドッグターボカスタム"
+		},
+		{
+			"id": "item-1000209959",
+			"url": "https://p-bandai.jp/item/item-1000209959/",
+			"ja": "ＨＧ スコープドッグ用拡張パーツセット3"
+		},
+		{
+			"id": "item-1000209960",
+			"url": "https://p-bandai.jp/item/item-1000209960/",
+			"ja": "ＨＧ スコープドッグ用拡張パーツセット4"
+		}
+	],
+	"scale": "1/20",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 7
 	},
 	"targetAge": 15,
-	"scale": "1/20",
 	"description": {
 		"ja": [
 			"• バララント軍の主力AT“ファッティー”が陸戦仕様でキット化。",
@@ -30,41 +67,64 @@
 			"• ファッティーと同スケールの対ATライフルが付属。"
 		],
 		"en": [
-			"• The main AT of the Balarant army “Fatty” has been made into a kit with land battle specifications.",
+			"• The main AT of the Balarant army, “Fatty”, has been made into a kit with land battle specifications.",
 			"• The shoulder swing mechanism allows you to hold the Gatling gun with both hands.",
-			"• Accretion poses can be reproduced with the quadruple joint mechanism centered on the knees.",
-			"• Balarant soldiers are seated inside the cockpit, and the internal details are precisely reproduced.",
-			"• Large gliding wheels slide to express running conditions.",
-			"• The internal mechanics of the Gatling gun are reproduced, and the spare magazine can be attached to the mission pack on the back.",
+			"• The accretion pose can be reproduced by the quadruple joint mechanism centered on the knees.",
+			"• Ballant soldiers are seated inside the cockpit, and internal details are precisely reproduced.",
+			"• The large gliding wheel slides to express the running condition.",
+			"• The internal mechanics of the Gatling gun have been recreated, and the spare magazine can be attached to the mission pack on the back.",
 			"• In addition to the Gatling gun, it is also equipped with the machine gun that appeared in Pailsen Files.",
-			"• An anti-AT rifle of the same scale as Fatty is included."
+			"• Comes with an anti-AT rifle of the same scale as Fatty."
 		]
 	},
-	"images": [
-		"/images/items/01_1433/153_2355.jpg",
-		"/images/items/01_1433/155_2355.jpg",
-		"/images/items/01_1433/156_2355.jpg",
-		"/images/items/01_1433/157_2355.jpg",
-		"/images/items/01_1433/158_2355.jpg",
-		"/images/items/01_1433/159_2355.jpg",
-		"/images/items/01_1433/189_2355.jpg",
-		"/images/items/01_1433/190_2355.jpg",
-		"/images/items/01_1433/191_2355.jpg",
-		"/images/items/01_1433/192_2355.jpg",
-		"/images/items/01_1433/193_2355.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1433/",
-	"brandIds": [],
-	"seriesIds": [
-		"votoms"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000223037",
-		"01_5553",
-		"item-1000209959",
-		"item-1000209960"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2355_o_1ccdsa562sbl1mpj1p41gmo1r3e23.jpg",
+				"path": "/images/items/01_1433/153_2355.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2355_o_1ccdsaigm14vr17ru9fj1fop4u62d.jpg",
+				"path": "/images/items/01_1433/155_2355.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2355_o_1ccdsamlsvl71pff1pemm8ch4b2i.jpg",
+				"path": "/images/items/01_1433/156_2355.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2355_o_1ccdsarfqbqunii1utu159q1nda2n.jpg",
+				"path": "/images/items/01_1433/157_2355.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2355_o_1ccdsb0q81c8ogsd1uh6vd48q92s.jpg",
+				"path": "/images/items/01_1433/158_2355.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2355_o_1ccdsb56c6s71ffg1m75g4h1rue31.jpg",
+				"path": "/images/items/01_1433/159_2355.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2355_o_1ccdsb9t4uu3if1dbd1td7jru36.jpg",
+				"path": "/images/items/01_1433/189_2355.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2355_o_1ccdsbebgml68m71t9p8ld13k03b.jpg",
+				"path": "/images/items/01_1433/190_2355.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2355_o_1ccdsbilejnv1r2npblo4q1djd3g.jpg",
+				"path": "/images/items/01_1433/191_2355.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2355_o_1ccdsbngi15161ajd1c6q8qbds3l.jpg",
+				"path": "/images/items/01_1433/192_2355.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_2355_o_1ccdsbrqa1703181iuu013om1hi63q.jpg",
+				"path": "/images/items/01_1433/193_2355.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1433/"
 }

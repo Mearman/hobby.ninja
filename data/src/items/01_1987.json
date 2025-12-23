@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 シナンジュ・スタイン (ナラティブVer.)",
 		"en": "HGUC 1/144 Sinanju Stein (Narrative Ver.)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "narrative",
+			"url": "https://bandai-hobby.net/series/narrative/",
+			"ja": "機動戦士ガンダムNT[ナラティブ]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5039",
+			"url": "https://bandai-hobby.net/item/01_5039/",
+			"ja": "HG 1/144 ナラティブガンダム C装備 [覚醒イメージカラー]"
+		},
+		{
+			"id": "01_5038",
+			"url": "https://bandai-hobby.net/item/01_5038/",
+			"ja": "HG 1/144 ナラティブガンダム A装備 [クリアカラー]"
+		},
+		{
+			"id": "01_3460",
+			"url": "https://bandai-hobby.net/item/01_3460/",
+			"ja": "HG 1/144 シルヴァ・バレト・サプレッサー[クリアカラー]"
+		},
+		{
+			"id": "01_2666",
+			"url": "https://bandai-hobby.net/item/01_2666/",
+			"ja": "HG 1/144 ガンダムベース限定 ナラティブガンダム B装備"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3080,
 		"currency": "JPY",
@@ -18,74 +67,105 @@
 		"day": 27
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム NT』より、NT版シナンジュ・スタインが登場！",
+			"『機動戦士ガンダムNT』より、NT版シナンジュ・スタインが登場！",
 			"• 「袖付き」の特徴である胸部、前腕部のエングレービングをモールド表現とホイルシールで再現。",
 			"• 新関節構造によりHG史上最高峰の可動表現を実現。大きなアクションも自然に再現できる。",
 			"• 新ビーム・ライフルは、シナンジュ・バズーカとの接続が可能。豊富な武装が付属。"
 		],
 		"en": [
 			"From \"Mobile Suit Gundam NT\", the NT version of Sinanju Stein appears!",
-			"• Features of \"sleeves\" The engravings on the chest and forearms are reproduced with mold expressions and foil seals.",
+			"• The engravings on the chest and forearms, which feature \"sleeves\", are reproduced with mold expressions and foil seals.",
 			"• The new joint structure realizes the highest level of movement in HG history. Large actions can be reproduced naturally.",
 			"• The new beam rifle can be connected to the Sinanju Bazooka. Comes with a variety of weapons."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"シナンジュ専用バズーカ×1",
-			"ビーム・サーベル×２",
-			"シールド×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シナンジュ専用バズーカ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル×２"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 12
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2916_s_zg6v2goyix9e08z7nu8dnu7p1ycf.jpg",
+				"path": "/images/items/01_1987/153_2916.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2916_s_paq5nowsdhwnivjunak1jxxg1uhq.jpg",
+				"path": "/images/items/01_1987/155_2916.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2916_s_tbdsux0svgyac12ztervqed8s0m9.jpg",
+				"path": "/images/items/01_1987/156_2916.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2916_s_9iis0lukd8wfysq3zkkhytxni9tw.jpg",
+				"path": "/images/items/01_1987/157_2916.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2916_s_llecjpa3f1kltjkfoioc3zz8gqix.jpg",
+				"path": "/images/items/01_1987/158_2916.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2916_s_a25aqk9lb6ybro6c0s6sfj4zx5ln.jpg",
+				"path": "/images/items/01_1987/159_2916.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2916_s_9vt23mrfc96xbiv0iph1bqlpqvbf.jpg",
+				"path": "/images/items/01_1987/189_2916.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2916_s_ax9tbdmu1yr43dx0j0tb9rvovvmw.jpg",
+				"path": "/images/items/01_1987/190_2916.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2916_s_dz8bq3hgcgf3oy8070sndkv0vu0k.jpg",
+				"path": "/images/items/01_1987/191_2916.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x1",
-			"Bazooka for Sinanju x 1",
-			"Beam saber x2",
-			"Seal × 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×12",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 12",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1987/153_2916.jpg",
-		"/images/items/01_1987/155_2916.jpg",
-		"/images/items/01_1987/156_2916.jpg",
-		"/images/items/01_1987/157_2916.jpg",
-		"/images/items/01_1987/158_2916.jpg",
-		"/images/items/01_1987/159_2916.jpg",
-		"/images/items/01_1987/189_2916.jpg",
-		"/images/items/01_1987/190_2916.jpg",
-		"/images/items/01_1987/191_2916.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1987/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"narrative"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5039",
-		"01_5038",
-		"01_3460",
-		"01_2666"
-	],
-	"manualId": "0488"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1987/"
 }

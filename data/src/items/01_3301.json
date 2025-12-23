@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "ポケモンプラモコレクション クイック!! 02 ミュウ",
-		"en": "Pokemon Plastic Model Collection Quick!! 02 Mew"
+		"en": "Pokémon Model Kit QUICK!! 02 MEW"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター",
+			"en": "Pokémon"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5984",
+			"url": "https://bandai-hobby.net/item/01_5984/",
+			"ja": "ポケモンプラモコレクション 60 セレクトシリーズ コライドン"
+		},
+		{
+			"id": "01_5958",
+			"url": "https://bandai-hobby.net/item/01_5958/",
+			"ja": "ポケモンプラモコレクション 59 セレクトシリーズ ミライドン"
+		},
+		{
+			"id": "01_5947",
+			"url": "https://bandai-hobby.net/item/01_5947/",
+			"ja": "ポケモンプラモコレクション クイック!! 23 ジラーチ"
+		},
+		{
+			"id": "01_5568",
+			"url": "https://bandai-hobby.net/item/01_5568/",
+			"ja": "ポケモンプラモコレクション 58 セレクトシリーズ グレンアルマ"
+		}
+	],
 	"price": {
 		"amount": 715,
 		"currency": "JPY",
@@ -29,45 +67,63 @@
 			"• シールの使用箇所も最小限に。"
 		],
 		"en": [
-			"Easy and simple assembly! Introducing the new brand \"PokePla Quick!!\", perfect for your first plastic model experience!",
-			"• Mew is made of 18 parts and has a total length of approximately 80mm.",
-			"• Pursuing the quality of modeling that can be achieved through fixed poses.",
-			"• Easy assembly and colorful finish achieved by carefully dividing parts.",
-			"• Simple specifications that make you imagine the finished product the moment you see the Runner.",
-			"• Touch gate method without tools.",
-			"• Minimize the number of seals used."
+			"Easy and simple assembly! A new brand that is perfect for your first plastic model experience \"Pokémon Quick!!\" Appeared!",
+			"• Mew with a total length of about 80 mm that can be made up of 18 parts.",
+			"• Pursue the goodness of modeling that can be done because it is a fixed pose.",
+			"• Easy assembly and colorful finish by dividing the parts with special parts.",
+			"• A simple specification that comes to mind the moment you see the runner.",
+			"• Touch gate method without using tools.",
+			"• Minimize the use of seals."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "• Foil seal"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153016_1.jpg",
+				"path": "/images/items/01_3301/1000153016_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153016_2.jpg",
+				"path": "/images/items/01_3301/1000153016_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153016_3.jpg",
+				"path": "/images/items/01_3301/1000153016_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153016_4.jpg",
+				"path": "/images/items/01_3301/1000153016_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153016_5.jpg",
+				"path": "/images/items/01_3301/1000153016_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153016_6.jpg",
+				"path": "/images/items/01_3301/1000153016_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153016_7.jpg",
+				"path": "/images/items/01_3301/1000153016_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153016_8.jpg",
+				"path": "/images/items/01_3301/1000153016_8.jpg"
+			}
 		],
-		"en": [
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3301/1000153016_1.jpg",
-		"/images/items/01_3301/1000153016_2.jpg",
-		"/images/items/01_3301/1000153016_3.jpg",
-		"/images/items/01_3301/1000153016_4.jpg",
-		"/images/items/01_3301/1000153016_5.jpg",
-		"/images/items/01_3301/1000153016_6.jpg",
-		"/images/items/01_3301/1000153016_7.jpg",
-		"/images/items/01_3301/1000153016_8.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3301/",
-	"brandIds": [],
-	"seriesIds": [
-		"pokemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_3301/"
+	}
 }

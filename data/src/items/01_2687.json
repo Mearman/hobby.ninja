@@ -5,6 +5,44 @@
 		"ja": "1/100 ガンダムエクシア",
 		"en": "1/100 Gundam Exia"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216602",
+			"url": "https://p-bandai.jp/item/item-1000216602/",
+			"ja": "ＭＧ 1/100 ガンダムアストレア＋プロトＧＮツインブロードブレイド"
+		},
+		{
+			"id": "01_5526",
+			"url": "https://bandai-hobby.net/item/01_5526/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムエクシア [クリアカラー]"
+		},
+		{
+			"id": "item-1000161849",
+			"url": "https://p-bandai.jp/item/item-1000161849/",
+			"ja": "ＲＧ 1/144 ダブルオーザンライザー"
+		},
+		{
+			"id": "01_5102",
+			"url": "https://bandai-hobby.net/item/01_5102/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムナドレ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 11
 	},
 	"targetAge": 8,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"配色やギミックの再現を追求した1/100スケール“ガンダムエクシア”が登場 エクシアのメカデザイナー海老川兼武氏本人の手によってディテールが追加されたハイディテールモデル 肩関節に引き出し機構など新たな関節構造を取り入れ、劇中で印象的なポージングが再現可能 腰部には体の重心のズレを再現する軸カバーパーツを採用 GNロングブレード、GNショートブレード、GNビームサーベル、GNビームダガー、GNシールドが付属"
@@ -26,25 +63,30 @@
 			"Introducing the 1/100 Scale \"Gundam Exia\" that pursues the reproduction of color schemes and gimmicks.A high-detail model with details added by Exia's mechanical designer Mr. Kanetake Ebikawa himself.The shoulder joint incorporates a new joint structure such as a pull-out mechanism, allowing you to reproduce impressive poses from the movie.A shaft cover part is used on the waist to reproduce the shift in the body's center of gravity. Includes GN long blade, GN short blade, GN beam saber, GN beam dagger, and GNSeal."
 		]
 	},
-	"images": [
-		"/images/items/01_2687/153_3610.jpg",
-		"/images/items/01_2687/155_3610.jpg",
-		"/images/items/01_2687/156_3610.jpg",
-		"/images/items/01_2687/157_3610.jpg",
-		"/images/items/01_2687/158_3610.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2687/",
-	"brandIds": [],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216602",
-		"01_5526",
-		"item-1000161849",
-		"01_5102"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3610_s_0uf58v6uqz8gwg639obqhdgx5hfd.jpg",
+				"path": "/images/items/01_2687/153_3610.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3610_s_9jcgumf7wzxm36nfm4dpatm2bxk0.jpg",
+				"path": "/images/items/01_2687/155_3610.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3610_s_a6ic8eflg271sc0qj3y61asepe1a.jpg",
+				"path": "/images/items/01_2687/156_3610.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3610_s_kz62sjawd2sketlbfbgl6uqb8q1v.jpg",
+				"path": "/images/items/01_2687/157_3610.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3610_s_zc5seock00osu8d50eyqsbx5wzo0.jpg",
+				"path": "/images/items/01_2687/158_3610.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2687/"
 }

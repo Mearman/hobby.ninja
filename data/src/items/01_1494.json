@@ -3,8 +3,40 @@
 	"type": "item",
 	"name": {
 		"ja": "1/100 Gキャノンマグナ",
-		"en": "1/100 G Cannon Magna"
+		"en": "1/100 G CANNON MAGNA"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_5987",
+			"url": "https://bandai-hobby.net/item/01_5987/",
+			"ja": "ガンダムデカールNo.139 機動戦士Gundam GQuuuuuuX汎用1"
+		},
+		{
+			"id": "01_5988",
+			"url": "https://bandai-hobby.net/item/01_5988/",
+			"ja": "ガンダムデカールNo.140 機動戦士Gundam GQuuuuuuX汎用2"
+		},
+		{
+			"id": "01_5969",
+			"url": "https://bandai-hobby.net/item/01_5969/",
+			"ja": "ガンダムデカールNo.141 機動戦士ガンダムSEED FREEDOM汎用①"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -17,28 +49,25 @@
 		"month": 7
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム シルエットフォーミュラF91」で、アナハイム社が連邦軍のサナリィのデータをもとに完成させたモビルスーツをキット化しました。「F91」のG‐キャノン用パーツとの組換えによりマシンキャノン仕様にすることもできます。指は可動します。"
 		],
 		"en": [
-			"\"Mobile Suit Gundam Silhouette Formula F91 \" is a kit of the mobile suit completed by Anaheim based on data from the Federation Forces' Sanary. It can also be made into a machine cannon specification by recombining with \" F91\" G-Cannon parts. The fingers are movable."
+			"The MOBILE SUIT GUNDAM Silhouette Formula F91 is a kit of mobile suits completed by Anaheim based on data from the Federal Army's Sanary. It can also be made into a machine cannon specification by recombining it with the G-Cannon parts of the F91. The fingers are movable."
 		]
 	},
-	"images": [
-		"/images/items/01_1494/1000091339_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000091339_1.jpg",
+				"path": "/images/items/01_1494/1000091339_1.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1494/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5987",
-		"01_5988",
-		"01_5969"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1494/"
+	}
 }

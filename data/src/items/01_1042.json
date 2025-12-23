@@ -2,9 +2,52 @@
 	"id": "01_1042",
 	"type": "item",
 	"name": {
-		"ja": "ガンダムデカールNo.108 機動戦士Z ガンダム/機動戦士ガンダム ZZ汎用1",
-		"en": "Gundam Decal No.108 Mobile Suit Z Gundam/Mobile Suit Gundam ZZ General Purpose 1"
+		"ja": "ガンダムデカールNo.108 機動戦士Zガンダム/機動戦士ガンダムZZ汎用1",
+		"en": "Gundam Decal No.108 Mobile Suit ZGundam/Mobile Suit GundamZZ General Purpose 1"
 	},
+	"brands": [
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_1846",
+			"url": "https://bandai-hobby.net/item/01_1846/",
+			"ja": "ガンダムデカールNo.35 HGUC 1/144 アドバンス オブ ゼータ シリーズ用"
+		},
+		{
+			"id": "01_1833",
+			"url": "https://bandai-hobby.net/item/01_1833/",
+			"ja": "ガンダムデカールNo.19 MG 1/100 ガンダムMk-II （Ver.2.0）用"
+		},
+		{
+			"id": "01_1834",
+			"url": "https://bandai-hobby.net/item/01_1834/",
+			"ja": "ガンダムデカールNo.20 MG 1/100 ゼータガンダム（Ver.2.0）用"
+		}
+	],
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -21,32 +64,23 @@
 	"description": {
 		"ja": [
 			"100点以上のラインナップを誇る、大人気ガンダムデカールのシリーズ商品が登場。",
-			"機動戦士Z ガンダム/機動戦士ガンダム ZZ汎用1のデカールです。",
+			"機動戦士Zガンダム/機動戦士ガンダムZZ汎用1のデカールです。",
 			"水転写式デカール"
 		],
 		"en": [
 			"Introducing the popular Gundam decal series, which boasts a lineup of over 100 items.",
-			"Mobile Suit Z Gundam/Mobile Suit Gundam ZZ General Purpose 1 decal.",
+			"Mobile Suit ZGundam/Mobile Suit GundamZZ General Purpose 1 decal.",
 			"water transfer decal"
 		]
 	},
-	"images": [
-		"/images/items/01_1042/153_1976.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1042/",
-	"brandIds": [
-		"gundam_decal"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4971",
-		"01_1846",
-		"01_1833",
-		"01_1834"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1976_s_9osxga6dd498z4su6gi5oyfvq78y.jpg",
+				"path": "/images/items/01_1042/153_1976.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1042/"
 }

@@ -5,6 +5,60 @@
 		"ja": "ＭＧ 1/100 ダブルゼータガンダム Ver.Ka用 強化型拡張パーツ",
 		"en": "MG 1/100 Double Zeta Gundam Ver.Ka reinforced expansion parts"
 	},
+	"brands": [
+		{
+			"id": "mgka",
+			"url": "https://bandai-hobby.net/brand/mgka/",
+			"ja": "MG Ver.Ka［マスターグレード バージョンカトキ］"
+		},
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-zz",
+			"url": "https://bandai-hobby.net/series/gundam-zz/",
+			"ja": "機動戦士ガンダムＺＺ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000137712",
+			"url": "https://p-bandai.jp/item/item-1000137712/",
+			"ja": "ＭＧ 1/100 ドワッジ改"
+		},
+		{
+			"id": "01_2231",
+			"url": "https://bandai-hobby.net/item/01_2231/",
+			"ja": "MG 1/100 ドワッジ"
+		},
+		{
+			"id": "01_2077",
+			"url": "https://bandai-hobby.net/item/01_2077/",
+			"ja": "ＨＧ 1/144 ガズ Ｒ／Ｌ"
+		},
+		{
+			"id": "01_2133",
+			"url": "https://bandai-hobby.net/item/01_2133/",
+			"ja": "MG 1/100 ダブルゼータガンダム Ver.Ka [クリアカラー]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -16,7 +70,6 @@
 		"year": 2017,
 		"month": 12
 	},
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"---",
@@ -68,11 +121,11 @@
 			"Product material: PS",
 			"・No adhesive is used in the assembly.",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
-			"This product is a set of parts to expand on the \"MG 1/100 Enhanced Gundam Ver.Ka \" (sold separately), which is currently being released at stores nationwide, and reproduce the \" enhanced type\".",
+			"This product is a set of parts to expand on the \"MG 1/100 Enhanced Gundam Ver.Ka\" (sold separately), which is currently being released at stores nationwide, and reproduce the \"enhanced type\".",
 			"*The MS body is not included with this product.",
 			"* To reproduce the posted photo, you will need this product and the pre-assembly \"MG 1/100 Double Zeta Gundam Ver.Ka\" (sold separately).",
 			"(After assembly, it cannot be converted to enhanced Double Zeta Gundam.)",
-			"* Also, \"MG 1/100 Double Zeta Gundam Ver.Ka\" (sold separately) is available for sale at Premium Bandai at Scheduled.",
+			"* Also, \"MG 1/100 Double Zeta GundamVer.Ka\" (sold separately) is available for sale at Premium Bandai.",
 			"None.",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"*The finished product in the photo is a prototype that is still under development. It is also painted. There may be slight differences from the actual product.",
@@ -87,35 +140,30 @@
 			"- Product specifications are scheduled as of 20179. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_1212/153_2141.jpg",
-		"/images/items/01_1212/155_2141.jpg",
-		"/images/items/01_1212/156_2141.jpg",
-		"/images/items/01_1212/157_2141.jpg",
-		"/images/items/01_1212/158_2141.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1212/",
-	"brandIds": [
-		"mgka",
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"gundam-zz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000137712",
-		"01_2231",
-		"01_2077",
-		"01_2133"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2141_s_z0r0kj2sakmwy96ygyaai53sy475.jpg",
+				"path": "/images/items/01_1212/153_2141.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2141_s_3r7qam7gqtvs5twzf4zmhwosi4rc.jpg",
+				"path": "/images/items/01_1212/155_2141.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2141_s_4wq73vzzuneb78erlwk2gj5xlwqr.jpg",
+				"path": "/images/items/01_1212/156_2141.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2141_s_8i28mpssxpjyjfjzwxjvzexf04cv.jpg",
+				"path": "/images/items/01_1212/157_2141.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2141_s_h09b0u1pm97bgcyaf9apnzuxtlfw.jpg",
+				"path": "/images/items/01_1212/158_2141.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "2859"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1212/"
 }

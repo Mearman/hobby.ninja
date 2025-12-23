@@ -5,6 +5,60 @@
 		"ja": "ＰＧ 1/60 トランザムライザー",
 		"en": "PG 1/60 Trans Am Riser"
 	},
+	"brands": [
+		{
+			"id": "pb_pg",
+			"url": "https://bandai-hobby.net/brand/pb_pg/",
+			"ja": "PG［パーフェクトグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216602",
+			"url": "https://p-bandai.jp/item/item-1000216602/",
+			"ja": "ＭＧ 1/100 ガンダムアストレア＋プロトＧＮツインブロードブレイド"
+		},
+		{
+			"id": "item-1000161849",
+			"url": "https://p-bandai.jp/item/item-1000161849/",
+			"ja": "ＲＧ 1/144 ダブルオーザンライザー"
+		},
+		{
+			"id": "item-1000137643",
+			"url": "https://p-bandai.jp/item/item-1000137643/",
+			"ja": "ＭＧ 1/100 ガンダムデュナメス（トランザムモード）［メタリックグロスインジェクション］"
+		},
+		{
+			"id": "01_2057",
+			"url": "https://bandai-hobby.net/item/01_2057/",
+			"ja": "PG 1/60 ガンダムエクシア用LEDユニット"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 30250,
 		"currency": "JPY",
@@ -17,31 +71,14 @@
 		"month": 6
 	},
 	"targetAge": 15,
-	"scale": "1/60",
-	"images": [
-		"/images/items/01_1026/153_1960.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1026/",
-	"brandIds": [
-		"pg",
-		"pb_pg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216602",
-		"item-1000161849",
-		"item-1000137643",
-		"01_2057"
-	],
-	"manualId": "2672",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1960_o_1bc6lrfeb135pr4m1de018671l2623.jpg",
+				"path": "/images/items/01_1026/153_1960.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1026/"
 }

@@ -5,6 +5,44 @@
 		"ja": "1/250 G・アーマー",
 		"en": "1/250 G Armor"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/250",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 8
 	},
 	"targetAge": 15,
-	"scale": "1/250",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、1/250スケールでＧ・アーマーが登場。",
@@ -28,22 +65,18 @@
 			"Five forms can be reproduced: G Armor, G Fighter, G Sky, G Sky Easy, and G Bull. The caterpillar part uses rubber parts. In addition to separating and combining A and B parts, Gundam also reproduces the core fighter's transformation and separation gimmick."
 		]
 	},
-	"images": [
-		"/images/items/01_3184/153_4143.jpg",
-		"/images/items/01_3184/155_4143.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3184/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/155_4143_s_o2xzzlqq7ib2em628h22fuq46p3q.jpg",
+				"path": "/images/items/01_3184/155_4143.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_4143_s_8lw8gwuferfsh4t60ikzhm2c51q9.jpg",
+				"path": "/images/items/01_3184/153_4143.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3184/"
 }

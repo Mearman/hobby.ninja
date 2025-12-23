@@ -5,6 +5,50 @@
 		"ja": "HG 1/24 霊子戦闘機・無限(アナスタシア・パルマ機)",
 		"en": "HG 1/24 Spirit fighter infinite (Anastasia Palma machine)"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "shinsakura_wars",
+			"url": "https://bandai-hobby.net/series/shinsakura_wars/",
+			"ja": "新サクラ大戦"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3399",
+			"url": "https://bandai-hobby.net/item/01_3399/",
+			"ja": "HG 1/24 霊子戦闘機・無限(東雲初穂機)"
+		},
+		{
+			"id": "01_3344",
+			"url": "https://bandai-hobby.net/item/01_3344/",
+			"ja": "HG 1/24 霊子戦闘機・試製桜武(天宮さくら機)"
+		},
+		{
+			"id": "01_3331",
+			"url": "https://bandai-hobby.net/item/01_3331/",
+			"ja": "HG 1/24 霊子戦闘機・無限(クラリス機)"
+		},
+		{
+			"id": "01_2773",
+			"url": "https://bandai-hobby.net/item/01_2773/",
+			"ja": "HG 1/24 霊子戦闘機・無限(望月あざみ機)"
+		}
+	],
+	"scale": "1/24",
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -18,13 +62,12 @@
 		"day": 14
 	},
 	"targetAge": 15,
-	"scale": "1/24",
 	"description": {
 		"ja": [
 			"『新サクラ大戦』より、霊子戦闘機･無限（アナスタシア・パルマ機）がHGにラインアップ！",
-			"■手足の関節部分の伸縮を可能にする「延長ギミック」を採用。必殺攻撃アクションシーンを再現できる。",
-			"■コックピットハッチオープンギミックを搭載。",
-			"■搭乗姿のキャラクターフィギュアが付属。"
+			"• 手足の関節部分の伸縮を可能にする「延長ギミック」を採用。必殺攻撃アクションシーンを再現できる。",
+			"• コックピットハッチオープンギミックを搭載。",
+			"• 搭乗姿のキャラクターフィギュアが付属。"
 		],
 		"en": [
 			"From \"New Sakura Wars\", the Reiko fighter Mugen (Anastasia Palma machine) is added to the HG lineup!",
@@ -33,48 +76,82 @@
 			"• A character figure in boarding form is included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"番傘型ライフル×1",
-			"ハンドガン×2",
-			"ホイルシール×1",
-			"ジュエルシール×1",
-			"水転写式デカール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "番傘型ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドガン"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジュエルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3949_s_2gi7q2ub2rdiz3ezyvxlncffninq.jpg",
+				"path": "/images/items/01_2975/153_3949.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3949_s_b6b8bh5wecm5gxncl0jtqxdzbz04.jpg",
+				"path": "/images/items/01_2975/155_3949.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3949_s_39o4c9h1dyluctpo65wlg17jj9l4.jpg",
+				"path": "/images/items/01_2975/156_3949.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3949_s_ty1gzk6u8ruo59bp4zt2irjhb5uq.jpg",
+				"path": "/images/items/01_2975/157_3949.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3949_s_n4bqnp34k9bswaim5a5hfi4270cg.jpg",
+				"path": "/images/items/01_2975/158_3949.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3949_s_3vbiogr5kdiwlxxxxlr61qt60o7r.jpg",
+				"path": "/images/items/01_2975/159_3949.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3949_s_92z6hzeaal4hd0gu2fhiifyq30gm.jpg",
+				"path": "/images/items/01_2975/189_3949.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3949_s_weh4vunbu1u5xp6z2xyk22ln7kjo.jpg",
+				"path": "/images/items/01_2975/190_3949.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3949_s_betknfc0t8ui63r9ud1yeos2mnjx.jpg",
+				"path": "/images/items/01_2975/191_3949.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3949_s_lery4e9teol50ui0nlx6utnfpmef.jpg",
+				"path": "/images/items/01_2975/192_3949.jpg"
+			}
 		],
-		"en": [
-			"Umbrella type rifle x 1",
-			"Hand gun x 2",
-			"Foil Seal×1",
-			"Jewel Seal×1",
-			"Water transfer decal x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2975/153_3949.jpg",
-		"/images/items/01_2975/155_3949.jpg",
-		"/images/items/01_2975/156_3949.jpg",
-		"/images/items/01_2975/157_3949.jpg",
-		"/images/items/01_2975/158_3949.jpg",
-		"/images/items/01_2975/159_3949.jpg",
-		"/images/items/01_2975/189_3949.jpg",
-		"/images/items/01_2975/190_3949.jpg",
-		"/images/items/01_2975/191_3949.jpg",
-		"/images/items/01_2975/192_3949.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2975/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"shinsakura_wars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_3399",
-		"01_3344",
-		"01_3331",
-		"01_2773"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2975/"
 }

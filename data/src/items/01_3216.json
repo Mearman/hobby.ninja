@@ -2,9 +2,47 @@
 	"id": "01_3216",
 	"type": "item",
 	"name": {
-		"ja": "1/144 ZZ ガンダム",
-		"en": "1/144 ZZ Gundam"
+		"ja": "1/144 ZZガンダム",
+		"en": "1/144 ZZGundam"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam-zz",
+			"url": "https://bandai-hobby.net/series/gundam-zz/",
+			"ja": "機動戦士ガンダムＺＺ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5454",
+			"url": "https://bandai-hobby.net/item/01_5454/",
+			"ja": "Figure-rise Standard プルツー"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -17,31 +55,26 @@
 		"month": 6
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム ZZ」の主役機を1/144スケールでキット化したモデルです。頭部はポリキャップで接続します。サイドアーマーは可動します。ハイパー・ビーム・サーベルはバックパックに着脱可能な柄タイプ２本と、手持ちタイプの１本が付いています。ビーム・サーベル専用の持ち手が付いています。"
+			"「機動戦士ガンダムZZ」の主役機を1/144スケールでキット化したモデルです。頭部はポリキャップで接続します。サイドアーマーは可動します。ハイパー・ビーム・サーベルはバックパックに着脱可能な柄タイプ２本と、手持ちタイプの１本が付いています。ビーム・サーベル専用の持ち手が付いています。"
 		],
 		"en": [
-			"A 1/144 scale kit model of the main character of \"Mobile Suit Gundam ZZ\". The head is connected with a polycap. Side armor is movable. Hyper Beam Saber comes with two handle types that can be attached to and removed from a backpack, and one hand-held type. Comes with a special handle for the beam saber."
+			"A 1/144 scale kit model of the main character of \"Mobile Suit GundamZZ\". The head is connected with a polycap. Side armor is movable. Hyper Beam Saber comes with two handle types that can be attached to and removed from a backpack, and one hand-held type. Comes with a special handle for the beam saber."
 		]
 	},
-	"images": [
-		"/images/items/01_3216/153_4172.jpg",
-		"/images/items/01_3216/155_4172.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3216/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam-zz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5963",
-		"01_5454",
-		"01_4985",
-		"01_4971"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4172_s_xllsd3u0dqcui70tea7i3jxhvwzf.jpg",
+				"path": "/images/items/01_3216/153_4172.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4172_s_ow7rhzzh6egkqdjyehhff523hzjc.jpg",
+				"path": "/images/items/01_3216/155_4172.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3216/"
 }

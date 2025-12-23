@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガンダムベース限定 ザクII TYPE C-6/R6 [ペインティングモデル]",
-		"en": "HG 1/144 Gundam Base Limited Zaku II TYPE C-6/R6 [Painting Model]"
+		"en": "HG 1/144 THE GUNDAM BASE LIMITED MS-06C-6/R6 ZAKUⅡ TYPE C-6/R6[PAINTING MODEL]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "origin",
+			"url": "https://bandai-hobby.net/series/origin/",
+			"ja": "機動戦士ガンダム THE ORIGIN",
+			"en": "MOBILE SUIT GUNDAM THE ORIGIN"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3711",
+			"url": "https://bandai-hobby.net/item/01_3711/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)[クリアカラー]"
+		},
+		{
+			"id": "01_2707",
+			"url": "https://bandai-hobby.net/item/01_2707/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)"
+		},
+		{
+			"id": "item-1000135687",
+			"url": "https://p-bandai.jp/item/item-1000135687",
+			"ja": "ＨＧ 1/144 MS-05S シャア専用ザクＩ（ＬＩＭＩＴＥＤ ＭＯＤＥＬ）"
+		},
+		{
+			"id": "01_2174",
+			"url": "https://bandai-hobby.net/item/01_2174/",
+			"ja": "HG 1/144 シャア専用ザクII 赤い彗星Ver."
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -18,7 +64,6 @@
 		"day": 30
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
@@ -27,67 +72,102 @@
 			"●肩のスパイクアーマー接続箇所や胸部装甲のバルカン砲も精密に再現！",
 			"●ベルト給弾式マシンガンをはじめ、豊富な武装が付属！",
 			"●川口名人による、制作ワンポイントテクニックの解説が付属！"
-		],
-		"en": [
-			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"Fully supervised by Master Kawaguchi! Zaku II TYPE C-6/R6 painting model is now available!",
-			"●Comes with a simple color Runner that is perfect for painting!",
-			"-The spike armor connection point on the shoulder and the Vulcan cannon on the chest armor are also precisely reproduced!",
-			"- Comes with a wide variety of armaments, including a belt-fed machine gun!",
-			"●Comes with an explanation of one-point production techniques by Master Kawaguchi!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ベルト給弾式マシンガン×1",
-			"バズーカ×1",
-			"バズーカ用予備マガジン×2",
-			"対艦ライフル×1",
-			"ヒート・ホーク×各1（展開・収納）",
-			"ライフル/バズーカ用右手首×1",
-			"拳(左右)×一式",
-			"左平手×1"
-		],
-		"en": [
-			"Belt-fed machine gun x 1",
-			"Bazooka×1",
-			"Spare magazine for bazooka x 2",
-			"Anti-ship rifle x1",
-			"Heat Hawk x 1 each (deployed/stored)",
-			"Right wrist for rifle/bazooka x 1",
-			"Fists (left and right) x set",
-			"Left palm x1"
-		]
-	},
-	"images": [
-		"/images/items/01_2828/1000145249_1.jpg",
-		"/images/items/01_2828/1000145249_2.jpg",
-		"/images/items/01_2828/1000145249_3.jpg",
-		"/images/items/01_2828/1000145249_4.jpg",
-		"/images/items/01_2828/1000145249_5.jpg",
-		"/images/items/01_2828/1000145249_6.jpg",
-		"/images/items/01_2828/1000145249_7.jpg",
-		"/images/items/01_2828/1000145249_8.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ベルト給弾式マシンガン",
+				"en": "Belt-fed machine gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バズーカ",
+				"en": "• Bazooka"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バズーカ用予備マガジン",
+				"en": "• Spare magazine for bazooka"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "対艦ライフル",
+				"en": "• Heat Hawk"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ヒート・ホーク×各1（展開・収納）",
+				"en": "• Right wrist for rifle/bazooka"
+			}
+		},
+		{
+			"name": {
+				"ja": "ライフル/バズーカ用右手首",
+				"en": "• A set of fists (left and right) ×"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "拳(左右)×一式",
+				"en": "• Left flat"
+			}
+		},
+		{
+			"name": {
+				"ja": "左平手"
+			},
+			"count": 1
+		}
 	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145249_1.jpg",
+				"path": "/images/items/01_2828/1000145249_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145249_2.jpg",
+				"path": "/images/items/01_2828/1000145249_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145249_3.jpg",
+				"path": "/images/items/01_2828/1000145249_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145249_4.jpg",
+				"path": "/images/items/01_2828/1000145249_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145249_5.jpg",
+				"path": "/images/items/01_2828/1000145249_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145249_6.jpg",
+				"path": "/images/items/01_2828/1000145249_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145249_7.jpg",
+				"path": "/images/items/01_2828/1000145249_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145249_8.jpg",
+				"path": "/images/items/01_2828/1000145249_8.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2828/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"origin"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3711",
-		"01_2707",
-		"item-1000135687",
-		"01_2174"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	},
-	"manualId": "0039"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2828/"
+	}
 }

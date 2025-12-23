@@ -5,6 +5,34 @@
 		"ja": "Figure-rise Mechanics オボッチャマン",
 		"en": "Figure-rise Mechanics Obocchaman"
 	},
+	"brands": [
+		{
+			"id": "figurerise-mechanics",
+			"url": "https://bandai-hobby.net/brand/figurerise-mechanics/",
+			"ja": "Figure-rise Mechanics[フィギュアライズメカニクス]"
+		}
+	],
+	"series": [
+		{
+			"id": "arale",
+			"url": "https://bandai-hobby.net/series/arale/",
+			"ja": "Dr.スランプアラレちゃん"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1301",
+			"url": "https://bandai-hobby.net/item/01_1301/",
+			"ja": "Figure-rise Mechanics Dr.スランプ アラレちゃん"
+		}
+	],
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -27,62 +55,109 @@
 		],
 		"en": [
 			"From \"Dr. Slump Arale-chan\", Obocchaman appears in Figure-rise Mechanics!",
-			"• You can make a ``real'' Obocchaman through a carefully assembled process that begins with the internal structure.",
-			"• In addition to hand parts that can be used to express various expressions, Robovitan A, the energy source, and a \"cheerful face\" part for changing Arale's expressions are also included.",
+			"• You can make a ``real'' Obocchaman using a meticulous process that starts with the internal structure.",
+			"• In addition to hand parts that can be used to express various expressions, Robobitan A, the energy source, and a \"smiling face\" part for changing Arale's expressions are included.",
 			"• The head can be replaced with \"Figure-rise Mechanics Arale-chan\" (sold separately)."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ロボビタンA×1",
-			"あいさつ用の手（左手）×1",
-			"ロボビタンAを握る手（右手）×1",
-			"アラレちゃんほよよ顔×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ロボビタンA"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "あいさつ用の手（左手）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ロボビタンAを握る手（右手）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アラレちゃんほよよ顔"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 9
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140254_12.jpg",
+				"path": "/images/items/01_2452/1000140254_12.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140254_1.jpg",
+				"path": "/images/items/01_2452/1000140254_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140254_2.jpg",
+				"path": "/images/items/01_2452/1000140254_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140254_3.jpg",
+				"path": "/images/items/01_2452/1000140254_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140254_4.jpg",
+				"path": "/images/items/01_2452/1000140254_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140254_5.jpg",
+				"path": "/images/items/01_2452/1000140254_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140254_6.jpg",
+				"path": "/images/items/01_2452/1000140254_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140254_7.jpg",
+				"path": "/images/items/01_2452/1000140254_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140254_8.jpg",
+				"path": "/images/items/01_2452/1000140254_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140254_9.jpg",
+				"path": "/images/items/01_2452/1000140254_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140254_10.jpg",
+				"path": "/images/items/01_2452/1000140254_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140254_11.jpg",
+				"path": "/images/items/01_2452/1000140254_11.jpg"
+			}
 		],
-		"en": [
-			"Robovitan A×1",
-			"Greeting hand (left hand) x 1",
-			"Hand holding Robovitan A (right hand) x 1",
-			"Arale-chan's warm face x1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×9",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 9",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2452/1000140254_1.jpg",
-		"/images/items/01_2452/1000140254_10.jpg",
-		"/images/items/01_2452/1000140254_11.jpg",
-		"/images/items/01_2452/1000140254_12.jpg",
-		"/images/items/01_2452/1000140254_2.jpg",
-		"/images/items/01_2452/1000140254_3.jpg",
-		"/images/items/01_2452/1000140254_4.jpg",
-		"/images/items/01_2452/1000140254_5.jpg",
-		"/images/items/01_2452/1000140254_6.jpg",
-		"/images/items/01_2452/1000140254_7.jpg",
-		"/images/items/01_2452/1000140254_8.jpg",
-		"/images/items/01_2452/1000140254_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2452/",
-	"brandIds": [
-		"figurerise-mechanics"
-	],
-	"seriesIds": [
-		"arale"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1301"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2452/"
 }

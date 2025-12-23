@@ -5,6 +5,49 @@
 		"ja": "メカコレクション 99式空間戦闘攻撃機 コスモファルコン（空母搭載機）",
 		"en": "Mecha Collection Type 99 space combat attack aircraft Cosmo Falcon (aircraft carrier-based aircraft)"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "yamato",
+			"url": "https://bandai-hobby.net/series/yamato/",
+			"ja": "宇宙戦艦ヤマトシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5498",
+			"url": "https://bandai-hobby.net/item/01_5498/",
+			"ja": "メカコレクションDX 1式空間戦闘攻撃機 コスモタイガーII(単座型/銃座型) [2機セット]"
+		},
+		{
+			"id": "01_5500",
+			"url": "https://bandai-hobby.net/item/01_5500/",
+			"ja": "メカコレクションDX 試製空間戦闘攻撃機 コスモパイソン [2機セット]"
+		},
+		{
+			"id": "01_3667",
+			"url": "https://bandai-hobby.net/item/01_3667/",
+			"ja": "メカコレクション ガイペロン級多層式航宙母艦 バルメス(外洋機動艦隊仕様)"
+		},
+		{
+			"id": "01_3650",
+			"url": "https://bandai-hobby.net/item/01_3650/",
+			"ja": "メカコレクション デウスーラIII世"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -26,51 +69,55 @@
 			"• ポールジョイントで角度調整が可能な台座が付属。飛行シーンの再現も可能。"
 		],
 		"en": [
-			"The \"Type 99 space combat attack aircraft Cosmo Falcon (carrier-based aircraft)\" that appeared in \" Space Battleship Yamato 2202\" is now available in the mecha collection!",
-			"• The Cosmo Falcon deployed on the third Andromeda class ship Apollo Nome is accurately reproduced in a palm-sized size!",
-			"• Apolnome-specific MarkingSeal is included, allowing you to reproduce the distinctive logo!",
-			"• A pedestal whose angle can be adjusted with a pole joint is included. It is also possible to reproduce flight scenes."
+			"The \"Type 99 space combat attack aircraft Cosmo Falcon (carrier-based aircraft)\" that appeared in \"Space Battleship Yamato 2202\" is now available in the mecha collection!",
+			"• Accurately reproduces the Cosmo Falcon deployed on the Andromeda class third ship Apollo Nome, while being palm-sized!",
+			"• Comes with Apollo Nome-specific MarkingSeal, allowing you to reproduce the distinctive logo!",
+			"• Comes with a pedestal whose angle can be adjusted with a pole joint. It is also possible to reproduce flight scenes."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 5
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書（箱裏側に記載）"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2283_s_dmo22sd7z6bdr7x596z4p0cos67r.jpg",
+				"path": "/images/items/01_1356/153_2283.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2283_s_28gn18b17h311ccq96mrlmpwyfwf.jpg",
+				"path": "/images/items/01_1356/155_2283.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2283_s_ouve0fxsg9v2y4xr415wafi91zya.jpg",
+				"path": "/images/items/01_1356/156_2283.jpg"
+			}
 		],
-		"en": [
-			"Dedicated display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×5",
-			"マーキングシール×1",
-			"取扱説明書（箱裏側に記載）"
-		],
-		"en": [
-			"Molded product x 5",
-			"MarkingSeal×1",
-			"Instruction manual (written on the back of the box)"
-		]
-	},
-	"images": [
-		"/images/items/01_1356/153_2283.jpg",
-		"/images/items/01_1356/155_2283.jpg",
-		"/images/items/01_1356/156_2283.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1356/",
-	"brandIds": [
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"yamato"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5498",
-		"01_5500",
-		"01_3667",
-		"01_3650"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1356/"
 }

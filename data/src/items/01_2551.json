@@ -5,6 +5,43 @@
 		"ja": "Figure-riseLABO 南 ことり",
 		"en": "Figure-riseLABO Kotori Minami"
 	},
+	"brands": [
+		{
+			"id": "figurerise-labo",
+			"url": "https://bandai-hobby.net/brand/figurerise-labo/",
+			"ja": "Figure-riseLABO[フィギュアライズラボ]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000151306",
+			"url": "https://p-bandai.jp/item/item-1000151306/",
+			"ja": "Figure-riseLABO 式波・アスカ・ラングレー［スペシャルコーティング］"
+		},
+		{
+			"id": "01_3357",
+			"url": "https://bandai-hobby.net/item/01_3357/",
+			"ja": "Figure-riseLABO 式波・アスカ・ラングレー"
+		},
+		{
+			"id": "01_2536",
+			"url": "https://bandai-hobby.net/item/01_2536/",
+			"ja": "Figure-riseLABO 初音ミクV4X"
+		},
+		{
+			"id": "01_2259",
+			"url": "https://bandai-hobby.net/item/01_2259/",
+			"ja": "Figure-riseLABO ホシノ・フミナ[The Second Scene]"
+		}
+	],
 	"price": {
 		"amount": 7150,
 		"currency": "JPY",
@@ -29,41 +66,53 @@
 		"en": [
 			"The Figure-rise LABO series challenges new expressions of plastic models. The theme of the third installment is \"costumes\"!",
 			"“Love Live! '', Kotori Minami, a member of μ's who is in charge of costumes, has been made into a plastic model!",
-			"• The balloons and shoes have a glossy texture, and the costume cloth has a matte texture.Precise mold processing is applied to the details to create a texture that suits each part.",
+			"• The balloons and shoes have a glossy texture, and the costume cloth has a matte texture.Precise mold processing is applied to the details to create a texture that suits each area.",
 			"• A variety of techniques are used for the costumes. The back is made of polarized pearl material to create the delicate luster of organdy, and the skirt is made up of three layers to create a beautiful gradation with a sense of volume. The lace part is textured to reproduce the change in sheerness depending on the density of the embroidery. Add glitter to the clear material of the sleeves and skirt to add glamor!",
-			"• For the face, we pursue the character's expression using advanced layered injection technology. By rounding the edges of the glowing eyes, the blur that appears in the work is recreated."
+			"• For the face, we pursue the character's facial expressions using advanced layered injection technology. By rounding the edges of the glowing eyes, the blur that appears in the work is recreated."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"台座×1",
-			"テトロンシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "台座"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "テトロンシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3477_s_a1ywhm80b0kdk7z8kir1tmgdvjxb.jpg",
+				"path": "/images/items/01_2551/153_3477.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3477_s_7ew5ubh3mko4v4b6opw12yvl46qx.jpg",
+				"path": "/images/items/01_2551/155_3477.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3477_s_xc8dlj126cplhtln33odrzvj94q9.jpg",
+				"path": "/images/items/01_2551/156_3477.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3477_s_oo30tie9syse5tf6t1qokngx35fc.jpg",
+				"path": "/images/items/01_2551/157_3477.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3477_s_nvjlqy6p702t198tad3ux3swctjj.jpg",
+				"path": "/images/items/01_2551/158_3477.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3477_s_101m3lf1ildefkorhcrdwasokugj.jpg",
+				"path": "/images/items/01_2551/159_3477.jpg"
+			}
 		],
-		"en": [
-			"Pedestal x 1",
-			"Tetron Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2551/153_3477.jpg",
-		"/images/items/01_2551/155_3477.jpg",
-		"/images/items/01_2551/156_3477.jpg",
-		"/images/items/01_2551/157_3477.jpg",
-		"/images/items/01_2551/158_3477.jpg",
-		"/images/items/01_2551/159_3477.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2551/",
-	"brandIds": [
-		"figurerise-labo"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000151306",
-		"01_3357",
-		"01_2536",
-		"01_2259"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2551/"
 }

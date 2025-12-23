@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 特殊作業用オプションアーマー[ラビオット用/イエロー]",
-		"en": "30MM 1/144 Optional armor for special work [for Rabiot/Yellow]"
+		"en": "30MM 1/144 OPTION ARMOR FOR SPECIAL OPERATION [RABIOT EXCLUSIVE / YELLOW]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS",
+			"en": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 25
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMのオプションアーマーシリーズにラビオット用アイテムが登場！",
@@ -27,44 +70,59 @@
 			"• ロイロイ用カスタマイズパーツとしても使える。"
 		],
 		"en": [
-			"Items for Rabiot are now available in the 30MM optional armor series!",
-			"• Complete armor and arm unit set. Seal included.",
-			"• Can also be customized for alto.",
-			"• Can also be used as customized parts for Loi Loi."
+			"THE 30MM OPTIONAL ARMOR SERIES NOW INCLUDES ITEMS FOR RABIOT!",
+			"• A set of armor and an arm unit. Seals included.",
+			"• Customizable for alto."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"アーマー×１式",
-			"アームユニット×１",
-			"シール×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "アーマー×１式",
+				"en": "• Armor"
+			},
+			"unit": {
+				"ja": "set",
+				"en": "set"
+			}
+		},
+		{
+			"name": {
+				"ja": "アームユニット×１",
+				"en": "• Arm unit"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "• Seal"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145219_1.jpg",
+				"path": "/images/items/01_2715/1000145219_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145219_2.jpg",
+				"path": "/images/items/01_2715/1000145219_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145219_3.jpg",
+				"path": "/images/items/01_2715/1000145219_3.jpg"
+			},
+			{},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000145219_5.jpg",
+				"path": "/images/items/01_2715/1000145219_5.jpg"
+			}
 		],
-		"en": [
-			"Armor x 1 set",
-			"Arm unit x 1",
-			"Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2715/01_2715_3.jpg",
-		"/images/items/01_2715/1000145219_1.jpg",
-		"/images/items/01_2715/1000145219_2.jpg",
-		"/images/items/01_2715/1000145219_3.jpg",
-		"/images/items/01_2715/1000145219_5.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2715/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3679"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2715/"
+	}
 }

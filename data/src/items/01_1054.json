@@ -5,6 +5,40 @@
 		"ja": "RE/100 1/100 ハンマ・ハンマ",
 		"en": "RE/100 1/100 Hammer Hammer"
 	},
+	"brands": [
+		{
+			"id": "re100",
+			"url": "https://bandai-hobby.net/brand/re100/",
+			"ja": "RE/100[リボーンワンハンドレッド]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-zz",
+			"url": "https://bandai-hobby.net/series/gundam-zz/",
+			"ja": "機動戦士ガンダムＺＺ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000115723",
+			"url": "http://p-bandai.jp/item/item-1000115723/",
+			"ja": "RE/100 1/100 バウ量産型"
+		},
+		{
+			"id": "01_746",
+			"url": "https://bandai-hobby.net/item/01_746/",
+			"ja": "RE/100 1/100 AMX-107 バウ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -18,7 +52,6 @@
 		"day": 22
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"• サイコミュ搭載試作型MS「ハンマ・ハンマ」がRE/100で登場！",
@@ -29,62 +62,98 @@
 		],
 		"en": [
 			"• Prototype MS \"Hammer Hammer\" equipped with Psycommu is now available in RE/100!",
-			"• Based on the image from \"Mobile Suit Gundam ZZ\", the details and proportions have been updated to match RE/100!",
-			"• The flexible arm uses soft material and lead wire, and by holding the extended arm on a special pedestal, you can reproduce all-range attacks!",
-			"• Four pedestals are included, allowing you to recreate all-range attacks with both hands!",
-			"• The Seal with Mega Particle Cannon has the Neo Zeon mark reproduced in different colors, and the beam saber can be stored on the back side!"
+			"• Based on the image from \"Mobile Suit GundamZZ\", the details and proportions have been updated to match the RE/100!",
+			"• The flexible arm uses a soft material and lead wire, and by holding the extended arm on a special pedestal, you can reproduce all-range attacks!",
+			"• 4 pedestals are included, allowing you to recreate all-range attacks with both hands!",
+			"• Seal with mega particle cannon has the Neo Zeon mark reproduced in different colors, and the beam saber can be stored on the back side!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"メガ粒子砲付シールド×1",
-			"ビーム・サーベル×2",
-			"スペースマイン×1",
-			"アーム用ディスプレイ台座×4"
+	"accessories": [
+		{
+			"name": {
+				"ja": "メガ粒子砲付シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "スペースマイン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アーム用ディスプレイ台座"
+			},
+			"count": 4
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 19
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リード線"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1989_s_y73v1q3ien1b9yjwgd89po6cmmhm.jpg",
+				"path": "/images/items/01_1054/153_1989.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1989_s_e3x7t06wx3mrpi1svvyifuhuqfp4.jpg",
+				"path": "/images/items/01_1054/155_1989.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_1989_s_1q7i01hw9wqgq4s0mygt7y9xpdi3.jpg",
+				"path": "/images/items/01_1054/156_1989.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_1989_s_3pl4jrrtlng1gt7hmg5cs6cbwgh7.jpg",
+				"path": "/images/items/01_1054/157_1989.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_1989_s_c1tcev6efvn4pj2tpfjy1wnrp0eg.jpg",
+				"path": "/images/items/01_1054/158_1989.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_1989_s_vuyb5gcfdw2g7v2ifkgcuo52qioi.jpg",
+				"path": "/images/items/01_1054/159_1989.jpg"
+			}
 		],
-		"en": [
-			"Seal with mega particle cannon x 1",
-			"Beam saber x2",
-			"Space mine x1",
-			"Display pedestal for arm x 4"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×19",
-			"シール×1",
-			"マーキングシール×1",
-			"リード線×6",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 19",
-			"Seal×1",
-			"MarkingSeal×1",
-			"Lead wire x 6",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1054/153_1989.jpg",
-		"/images/items/01_1054/155_1989.jpg",
-		"/images/items/01_1054/156_1989.jpg",
-		"/images/items/01_1054/157_1989.jpg",
-		"/images/items/01_1054/158_1989.jpg",
-		"/images/items/01_1054/159_1989.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1054/",
-	"brandIds": [
-		"re100"
-	],
-	"seriesIds": [
-		"gundam-zz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000115723",
-		"01_746"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1054/"
 }

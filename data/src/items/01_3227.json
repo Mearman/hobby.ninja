@@ -5,6 +5,44 @@
 		"ja": "1/144 ギラ・ドーガ",
 		"en": "1/144 Gira Doga"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5478",
+			"url": "https://bandai-hobby.net/item/01_5478/",
+			"ja": "νガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5532",
+			"url": "https://bandai-hobby.net/item/01_5532/",
+			"ja": "RG 1/144 νガンダム(ダブル・フィン・ファンネル装備型)"
+		},
+		{
+			"id": "01_5531",
+			"url": "https://bandai-hobby.net/item/01_5531/",
+			"ja": "RG 1/144 ガンダムベース限定 サザビー [メカニカルコアメッキ]"
+		},
+		{
+			"id": "01_5423",
+			"url": "https://bandai-hobby.net/item/01_5423/",
+			"ja": "RG 1/144 RX-93ff νガンダム [クリアカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 20
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム逆襲のシャア」登場のネオ・ジオン軍汎用量産型モビルスーツのキット化です。すね、胴部にビスを使用しています。右肩部シールドは可動します。シールドは左前腕部へ装着可能、中折れ機構を再現しており、付属のシュツルムファウスト４本を内面へ収納できます。ビーム・ソードは柄部分がリアアーマーヘマウントできます。ビーム・マシンガンは一般兵士用と指揮官用の２種が付いています。他武器としてビーム・アックス、ビーム・ピックなども付いています。"
@@ -27,22 +64,18 @@
 			"A kit version of the general-purpose mass-produced mobile suit of the Neo Zeon army that appears in \"Mobile Suit Gundam: Char's Counterattack.\" I use screws for the shank and torso. The right shoulder seal is movable. Seal can be attached to the left forearm, reproduces the folding mechanism, and can store the four included Sturmfausts inside. The handle of the beam sword can be mounted on the rear armor. There are two types of beam machine guns: one for ordinary soldiers and one for commanders. Other weapons include a beam ax and a beam pick."
 		]
 	},
-	"images": [
-		"/images/items/01_3227/153_4182.jpg",
-		"/images/items/01_3227/155_4182.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3227/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5478",
-		"01_5532",
-		"01_5531",
-		"01_5423"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4182_s_u7lp3iosrv7yyv8n2fo9phf1jo93.jpg",
+				"path": "/images/items/01_3227/153_4182.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4182_s_exqfryg085eza0naokkuc6fu4102.jpg",
+				"path": "/images/items/01_3227/155_4182.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3227/"
 }

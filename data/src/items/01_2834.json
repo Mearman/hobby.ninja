@@ -2,9 +2,52 @@
 	"id": "01_2834",
 	"type": "item",
 	"name": {
-		"ja": "BB戦士376 ガンダム AGE-FX",
-		"en": "BB Senshi 376 Gundam AGE-FX"
+		"ja": "BB戦士376 ガンダムAGE-FX",
+		"en": "BB Senshi 376 GundamAGE-FX"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "age",
+			"url": "https://bandai-hobby.net/series/age/",
+			"ja": "機動戦士ガンダムAGE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2833",
+			"url": "https://bandai-hobby.net/item/01_2833/",
+			"ja": "BB戦士374 ガンダムレギルス"
+		},
+		{
+			"id": "01_5759",
+			"url": "https://bandai-hobby.net/item/01_5759/",
+			"ja": "リアルSDガンダム BB戦士372 ガンダムAGE-3(ノーマル フォートレス オービタル)"
+		},
+		{
+			"id": "01_5753",
+			"url": "https://bandai-hobby.net/item/01_5753/",
+			"ja": "BB戦士371 ガンダムAGE-2（ノーマル・ダブルバレット）"
+		},
+		{
+			"id": "01_4605",
+			"url": "https://bandai-hobby.net/item/01_4605/",
+			"ja": "BB戦士369 ガンダムAGE-1"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -20,31 +63,28 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"• ガンダム究極の進化形態、FXがSDとなって登場。 • Cファンネルは取り外し可能。 • スタングルライフルの両手構えが可能 • コアファイターのコックピットは可動式で、背面にドッキングが可能。 成形品×6、ホイルシール×1、組立説明書×1"
+			"• ガンダム究極の進化形態、FXがSDとなって登場。 ■Cファンネルは取り外し可能。 ■スタングルライフルの両手構えが可能 ■コアファイターのコックピットは可動式で、背面にドッキングが可能。 成形品×6、ホイルシール×1、組立説明書×1"
 		],
 		"en": [
-			"• Gundam's ultimate evolution form, FX, is now available as SD. • C funnel is removable. • The Stangle Rifle can be held with both hands. • The Core Fighter's cockpit is movable and can be docked on the back. Molded product x 6, foil seal x 1, assembly manual x 1"
+			"• Gundam's ultimate evolution form, FX, is now available as SD. ■C funnel is removable. ■Stangle rifle can be held with both hands. ■Core Fighter's cockpit is movable and can be docked on the back. Molded product x 6, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_2834/153_3818.jpg",
-		"/images/items/01_2834/155_3818.jpg",
-		"/images/items/01_2834/156_3818.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2834/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2833",
-		"01_5759",
-		"01_5753",
-		"01_4605"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3818_s_tc8pdoszsg7rzkag67qyp6ifs2b7.jpg",
+				"path": "/images/items/01_2834/153_3818.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3818_s_xkbzbb2prhctay12dexm2kkcua74.jpg",
+				"path": "/images/items/01_2834/155_3818.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3818_s_xxgtx059dftaseqmmg9ubzyfliy1.jpg",
+				"path": "/images/items/01_2834/156_3818.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2834/"
 }

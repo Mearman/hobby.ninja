@@ -5,6 +5,49 @@
 		"ja": "HGUC 1/144 陸戦型ガンダム",
 		"en": "HGUC 1/144 Ground Type Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5952",
+			"url": "https://bandai-hobby.net/item/01_5952/",
+			"ja": "HG 1/144 エグザベ専用ギャン(ハクジ装備)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 21
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 『機動戦士ガンダム 第08MS小隊』に登場する陸戦型ガンダムが最新フォーマットでキット化！",
@@ -29,70 +71,116 @@
 		],
 		"en": [
 			"• The ground battle type Gundam that appears in \"Mobile Suit Gundam 08th MS Platoon\" is now a kit in the latest format!",
-			"• The exterior parts have been newly modeled, and the characteristic asymmetrical chest has been reproduced!",
-			"• The movability of the knees and the pull-out gimmick of the shoulders allow for smooth kneeling and holding the gun with both hands, improving the reproducibility of shooting poses!",
-			"• It is also possible to recreate the impressive pose from the OP of the movie with the Seal raised!",
+			"• The exterior parts have been newly modeled, and the characteristic asymmetrical chest has been recreated!",
+			"• The movability of the knees and the pull-out gimmick of the shoulders make it possible to smoothly kneel and hold the gun with both hands, improving the reproducibility of shooting poses!",
+			"• You can also recreate the impressive pose from the OP of the movie with the Seal raised!",
 			"• The 180mm cannon can be replaced and stored in the Weapon container, and comes with a variety of weapons!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"180ｍｍキャノン×1",
-			"ビーム・ライフル×1",
-			"100ｍｍマシンガン×1",
-			"ビーム・サーベル×2",
-			"ウェポンコンテナラック×1",
-			"シールド×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "180ｍｍキャノン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "100ｍｍマシンガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ウェポンコンテナラック"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 9
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2228_s_snnhr5zhbh3mfwbi54fhghcvrwnn.jpg",
+				"path": "/images/items/01_1298/153_2228.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2228_s_mcwltg11i2frsl4emc3u80uitiy6.jpg",
+				"path": "/images/items/01_1298/155_2228.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2228_s_83qrrhji9615kzf6kvgaccyeg6gb.jpg",
+				"path": "/images/items/01_1298/156_2228.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2228_s_ymhr8bndoqebxk1h7dtvvolsf84w.jpg",
+				"path": "/images/items/01_1298/157_2228.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2228_s_mtdrf4fqb0zisnfd2bi0vnwrfoui.jpg",
+				"path": "/images/items/01_1298/158_2228.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2228_s_1bmxbtfwjgqb3m3643agib04urk9.jpg",
+				"path": "/images/items/01_1298/159_2228.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2228_s_12f300vg6gqk7ieicuaigir4d04r.jpg",
+				"path": "/images/items/01_1298/189_2228.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2228_s_5601y1h1fx9gsvc6i3ikfa24a9nq.jpg",
+				"path": "/images/items/01_1298/190_2228.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2228_s_lrxv3wae1sl3fpyezdb6e2lcoiap.jpg",
+				"path": "/images/items/01_1298/191_2228.jpg"
+			}
 		],
-		"en": [
-			"180mm cannon x 1",
-			"Beam rifle x1",
-			"100mm machine gun x 1",
-			"Beam saber x2",
-			"Weapon container rack x 1",
-			"Seal × 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×9",
-			"ホイルシール×1",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 9",
-			"Foil Seal×1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1298/153_2228.jpg",
-		"/images/items/01_1298/155_2228.jpg",
-		"/images/items/01_1298/156_2228.jpg",
-		"/images/items/01_1298/157_2228.jpg",
-		"/images/items/01_1298/158_2228.jpg",
-		"/images/items/01_1298/159_2228.jpg",
-		"/images/items/01_1298/189_2228.jpg",
-		"/images/items/01_1298/190_2228.jpg",
-		"/images/items/01_1298/191_2228.jpg",
-		"/images/items/01_1298/01_1298_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1298/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5952"
-	],
-	"manualId": "0480"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1298/"
 }

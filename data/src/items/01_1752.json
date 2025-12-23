@@ -2,9 +2,53 @@
 	"id": "01_1752",
 	"type": "item",
 	"name": {
-		"ja": "HGFC 1/144 G ガンダム",
-		"en": "HGFC 1/144 G Gundam"
+		"ja": "HGFC 1/144 Gガンダム",
+		"en": "HGFC 1/144 GGundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "ggundam",
+			"url": "https://bandai-hobby.net/series/ggundam/",
+			"ja": "機動武闘伝Ｇガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000213247",
+			"url": "https://p-bandai.jp/item/item-1000213247/",
+			"ja": "ＨＧ 1/144 ドラゴンガンダム"
+		},
+		{
+			"id": "item-1000194970",
+			"url": "https://p-bandai.jp/item/item-1000194970/",
+			"ja": "ＨＧ 1/144 ガンダムマックスター"
+		},
+		{
+			"id": "item-1000182906",
+			"url": "https://p-bandai.jp/item/item-1000182906/",
+			"ja": "ＨＧ 1/144 ガンダムローズ"
+		},
+		{
+			"id": "item-1000144970",
+			"url": "https://p-bandai.jp/item/item-1000144970/",
+			"ja": "ＨＧ 1/144 デスビースト"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,38 +62,42 @@
 		"day": 19
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 「機動武闘伝G ガンダム」よりゴッドガンダムがHG化！ • HGフォーマットでゴッドガンダムをキット化。そのポージング性能の高さから、様々なアクションポーズが再現可能！ポーズ再現用にリアスカートの可動まで実現！ • ゴッドフィンガーを再現した手首など数種が付属！ • コアランダーの分離・合体、変形も再現。 • 胸部ハッチには開閉ギミックを搭載し、内部モールドでエネルギーマルチプライヤーも再現！ 成形品×7、ホイルシール×1、組立説明書×1"
+			"• 「機動武闘伝Gガンダム」よりゴッドガンダムがHG化！ ■HGフォーマットでゴッドガンダムをキット化。そのポージング性能の高さから、様々なアクションポーズが再現可能！ポーズ再現用にリアスカートの可動まで実現！ ■ゴッドフィンガーを再現した手首など数種が付属！ ■コアランダーの分離・合体、変形も再現。 ■胸部ハッチには開閉ギミックを搭載し、内部モールドでエネルギーマルチプライヤーも再現！ 成形品×7、ホイルシール×1、組立説明書×1"
 		],
 		"en": [
-			"• God Gundam from \"Mobile Fighter G Gundam\" is now HG! • God Gundam is made into a kit in HG format. Due to its high posing performance, various action poses can be reproduced! The rear skirt is even movable for pose reproduction! • Several types of wrists that reproduce Godfinger are included! • Coallander's separation, combination, and transformation are also reproduced. • The chest hatch is equipped with an opening/closing gimmick, and the internal mold also reproduces the energy multiplier! Molded product x 7, foil seal x 1, assembly manual x 1"
+			"• God Gundam from \"Mobile Fighter GGundam\" is now HG! ■God Gundam is made into a kit in HG format. Due to its high posing performance, various action poses can be reproduced! The rear skirt is even movable for pose reproduction! ■Several types of wrists that reproduce Godfinger are included! ■Coallander's separation, combination, and transformation are also reproduced. ■The chest hatch is equipped with an opening/closing gimmick, and the internal mold also reproduces the energy multiplier! Molded product x 7, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_1752/153_2694.jpg",
-		"/images/items/01_1752/155_2694.jpg",
-		"/images/items/01_1752/156_2694.jpg",
-		"/images/items/01_1752/157_2694.jpg",
-		"/images/items/01_1752/158_2694.jpg",
-		"/images/items/01_1752/159_2694.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1752/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"ggundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000213247",
-		"item-1000194970",
-		"item-1000182906",
-		"item-1000144970"
-	],
-	"manualId": "0930"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2694_s_qetdkqa0kxe1o99q13l47wcig295.jpg",
+				"path": "/images/items/01_1752/153_2694.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2694_s_ivfjw3wpae4vg8ff9pa3quxz3km3.jpg",
+				"path": "/images/items/01_1752/155_2694.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2694_s_28uajjnotik8fmc5d1x7mmez48pb.jpg",
+				"path": "/images/items/01_1752/156_2694.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2694_s_7rxv0rvmbh1er3liek48z21c9nzo.jpg",
+				"path": "/images/items/01_1752/157_2694.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2694_s_2239xjispnlein3t82quhmho4etz.jpg",
+				"path": "/images/items/01_1752/158_2694.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2694_s_xgougnxg0z0x4vpqvnvzu5mlsmnw.jpg",
+				"path": "/images/items/01_1752/159_2694.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1752/"
 }

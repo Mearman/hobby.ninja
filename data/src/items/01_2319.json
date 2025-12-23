@@ -5,6 +5,16 @@
 		"ja": "THE GUNDAM BASE トートバック",
 		"en": "THE GUNDAM BASE tote bag"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "item_all",
+			"url": "https://bandai-hobby.net/item_all",
+			"ja": "商品一覧"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -28,19 +38,18 @@
 			"The design is \"RX-78-2 Gundam\"."
 		]
 	},
-	"images": [
-		"/images/items/01_2319/153_3257.jpg",
-		"/images/items/01_2319/155_3257.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2319/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
-	"relatedItemIds": [],
-	"tag": {
-		"ja": "ガンダムベースグッズ",
-		"en": "Gundam Base Goods"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3257_o_1d7uaiajm1e2l1qa01puck3m1dhs28.jpg",
+				"path": "/images/items/01_2319/153_3257.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3257_o_1d7uaim27km6333rjm1iduu5a2i.jpg",
+				"path": "/images/items/01_2319/155_3257.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2319/"
 }

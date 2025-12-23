@@ -5,6 +5,43 @@
 		"ja": "BB戦士373 LEGEND BB 武者頑駄無",
 		"en": "BB Senshi 373 LEGEND BB Musha Gundam"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -19,31 +56,36 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"• レジェンドBB第２弾として、武者頑駄無が登場。 • 随所に金メッキパーツを使用。 • 各種武装、オプションパーツ付属。 • ４種類の表情パーツから２種類を選択可能。 成形品×5、ホイルシール×1、組立説明書×1"
+			"• レジェンドBB第２弾として、武者頑駄無が登場。 ■随所に金メッキパーツを使用。 ■各種武装、オプションパーツ付属。 ■４種類の表情パーツから２種類を選択可能。 成形品×5、ホイルシール×1、組立説明書×1"
 		],
 		"en": [
-			"• Musha Gundam is now available as the second Legend BB. • Gold-plated parts are used everywhere. • Various weapons and optional parts included. • Two types can be selected from four types of facial expression parts. Molded product x 5, foil seal x 1, assembly manual x 1"
+			"• Musha Gundam is now available as the second Legend BB. ■Gold-plated parts are used everywhere. ■Various weapons and optional parts included. ■Two types can be selected from four types of facial expression parts. Molded product x 5, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_1793/153_2732.jpg",
-		"/images/items/01_1793/155_2732.jpg",
-		"/images/items/01_1793/156_2732.jpg",
-		"/images/items/01_1793/157_2732.jpg",
-		"/images/items/01_1793/158_2732.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1793/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2732_s_gmf56xe66cdn75mh12iuf5hy6b75.jpg",
+				"path": "/images/items/01_1793/153_2732.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2732_s_7k1u4cskhnk91pyi2xo25i88scrr.jpg",
+				"path": "/images/items/01_1793/155_2732.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2732_s_bgq7p3pgdzlwb8wsgos5c1bmh36k.jpg",
+				"path": "/images/items/01_1793/156_2732.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2732_s_mxv0v8b3zrpsio3vwf9hhhufq5i0.jpg",
+				"path": "/images/items/01_1793/157_2732.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2732_s_7oi7lnnmaad5jq917p232082yjia.jpg",
+				"path": "/images/items/01_1793/158_2732.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1793/"
 }

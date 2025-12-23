@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 bEXM-15 ポルタノヴァ[グリーン]",
-		"en": "30MM 1/144 bEXM-15 Portanova [Green]"
+		"en": "30MM 1/144 bEXM-15 PORTANOVA [GREEN]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS",
+			"en": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1518,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 27
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"量産機ファンよ、立ち上がれ!!!!",
@@ -33,67 +76,105 @@
 			"• 本体と合体可能な小型支援メカ「ロイロイ」が１体付属。"
 		],
 		"en": [
-			"Mass production machine fans, stand up!!!",
-			"From the \"30 MINUTES MISSIONS \" BANDAI SPIRITS original robot plastic model series with a simple structure and easy assembly, \" bEXM-15 Portanova [Green]\" is now available in 1/144 Scale.",
-			"• Intuitive and easy-to-understand runner arrangement and simple parts configuration. Easy with about 80 parts!!",
-			"• Assembly is easy, so you can make a lot! Makes you want to collect a lot!",
-			"• Multiple color variations available with the same aircraft. You can enjoy your favorite coloring without painting.",
-			"• Adopts joint structure common to the series. It is possible to recombine units and replace parts even between different aircraft.",
-			"• Further customization is possible with the 3mm axis hard points installed in various places!",
-			"• Armed with a short rifle and knuckle guard.",
-			"• Equipped with a backpack equipped with hard points.",
-			"• One small support mecha \"Roi-Roi\" that can be combined with the main body is included."
+			"Mass-produced machine fans, stand up!!! The \"bEXM-15 Portanova [Green]\" is now available in 1/144 scale from the BANDAI SPIRITS original robot plastic model series \"30 MINUTES MISSIONS\", which has a simple structure and is easy to assemble.",
+			"• Intuitive and easy-to-understand runner placement and simple parts configuration. Easy with about 80 parts!!",
+			"• It's easy to assemble, so you can make a lot! You'll want to collect a lot!",
+			"• Multiple color variations are available on the same aircraft. You can enjoy your favorite coloring without painting.",
+			"• Adopts a common joint structure for the series. Even with different aircraft, units can be recombined and parts can be replaced.",
+			"• Further customization is possible with 3mm axis hardpoints installed in various places!",
+			"• Armament comes with a short rifle and a knuckle guard.",
+			"• Equipped with a backpack with hardpoints."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ライフル×1",
-			"アイコンメカ×1",
-			"バックパック×1",
-			"ナックル×1"
-		],
-		"en": [
-			"Rifle x 1",
-			"Icon mecha x 1",
-			"Backpack x 1",
-			"Knuckle x 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 4",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2241/1000137645_1.jpg",
-		"/images/items/01_2241/1000137645_2.jpg",
-		"/images/items/01_2241/1000137645_3.jpg",
-		"/images/items/01_2241/1000137645_4.jpg",
-		"/images/items/01_2241/1000137645_5.jpg",
-		"/images/items/01_2241/1000137645_6.jpg",
-		"/images/items/01_2241/1000137645_7.jpg",
-		"/images/items/01_2241/1000137645_8.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ライフル",
+				"en": "Rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アイコンメカ",
+				"en": "• Icon Mecha"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バックパック",
+				"en": "• Backpack"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ナックル",
+				"en": "• Knuckle"
+			},
+			"count": 1
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137645_1.jpg",
+				"path": "/images/items/01_2241/1000137645_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137645_2.jpg",
+				"path": "/images/items/01_2241/1000137645_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137645_3.jpg",
+				"path": "/images/items/01_2241/1000137645_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137645_4.jpg",
+				"path": "/images/items/01_2241/1000137645_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137645_5.jpg",
+				"path": "/images/items/01_2241/1000137645_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137645_6.jpg",
+				"path": "/images/items/01_2241/1000137645_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137645_7.jpg",
+				"path": "/images/items/01_2241/1000137645_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000137645_8.jpg",
+				"path": "/images/items/01_2241/1000137645_8.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2241/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3623"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2241/"
+	}
 }

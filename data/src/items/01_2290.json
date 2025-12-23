@@ -5,6 +5,60 @@
 		"ja": "ＲＧ 1/144 ガンダムエクシア リペアＩＩＩ",
 		"en": "RG 1/144 Gundam Exia Repair III"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "00-v",
+			"url": "https://bandai-hobby.net/series/00-v/",
+			"ja": "機動戦士ガンダム00Ｖ戦記"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000223115",
+			"url": "https://p-bandai.jp/item/item-1000223115/",
+			"ja": "ＲＧ 1/144 ガンダムアヴァランチエクシアダッシュ"
+		},
+		{
+			"id": "item-1000118644",
+			"url": "http://p-bandai.jp/item/item-1000118644/",
+			"ja": "ＲＧ 1/144 ダブルオーガンダム セブンソード/G インスペクション"
+		},
+		{
+			"id": "item-1000113021",
+			"url": "http://p-bandai.jp/item/item-1000113021/",
+			"ja": "ＲＧ 1/144 ダブルオークアンタフルセイバー"
+		},
+		{
+			"id": "item-1000118462",
+			"url": "https://p-bandai.jp/item/item-1000118462",
+			"ja": "ＲＧ 1/144 ダブルオーガンダム セブンソード"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3080,
 		"currency": "JPY",
@@ -17,31 +71,14 @@
 		"month": 6
 	},
 	"targetAge": 15,
-	"scale": "1/144",
-	"images": [
-		"/images/items/01_2290/153_3230.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2290/",
-	"brandIds": [
-		"rg",
-		"pb_rg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"00-v"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000223115",
-		"item-1000118644",
-		"item-1000113021",
-		"item-1000118462"
-	],
-	"manualId": "2548",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3230_o_1d6a8ljce17gthfcfo1100u11e823.jpg",
+				"path": "/images/items/01_2290/153_3230.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2290/"
 }

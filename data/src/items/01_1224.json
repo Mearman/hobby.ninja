@@ -5,6 +5,43 @@
 		"ja": "ピカちんキット０２ ふりかけメーカー",
 		"en": "Pikachin Kit02 Furikake Maker"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -27,46 +64,66 @@
 			"• ピカちん大百科に綴じられるピカちんシートも付いてくるぞ！"
 		],
 		"en": [
-			"• A great product that can be used as furikake for anything!",
+			"• A great product that can be used to make anything into furikake!",
 			"• The furikake maker that appears on the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!",
-			"• The furikake maker is an invention that allows you to make your own original furikake by breaking up sweets!",
-			"• Let's develop a new recipe that no one has found yet!",
+			"• The furikake maker is an invention that allows you to make your own original furikake by crushing sweets!",
+			"• Develop new recipes that no one has found yet!",
 			"• It also comes with a Pikachin sheet that can be bound into the Pikachin Encyclopedia!"
 		]
 	},
-	"contents": {
-		"ja": [
-			"ふりかけメーカー×1",
-			"（成形品×5）",
-			"ピカちんQRコード×1",
-			"ピカちんｊシート×1"
+	"contents": [
+		{
+			"name": {
+				"ja": "ふりかけメーカー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "（成形品"
+			},
+			"count": 5,
+			"unit": {
+				"ja": "）"
+			}
+		},
+		{
+			"name": {
+				"ja": "ピカちんQRコード"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ピカちんｊシート"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2158_s_z1157u99wa8zs9phhcdoen6kf0nr.jpg",
+				"path": "/images/items/01_1224/153_2158.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2158_s_cpww8lo76ohsalj5x026bg28g5v5.jpg",
+				"path": "/images/items/01_1224/155_2158.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2158_s_wcitze2qizij4lzk9l2x56nl7qri.jpg",
+				"path": "/images/items/01_1224/156_2158.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2158_s_cwhsn2omt1i7ur15e0g6b5424x0k.jpg",
+				"path": "/images/items/01_1224/157_2158.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2158_s_8c0oabzrllpyat5wlwcl8r0n4s27.jpg",
+				"path": "/images/items/01_1224/158_2158.jpg"
+			}
 		],
-		"en": [
-			"Furikake maker x 1",
-			"(molded product x 5)",
-			"Pikachin QR code x 1",
-			"Pikachin J sheet x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1224/153_2158.jpg",
-		"/images/items/01_1224/155_2158.jpg",
-		"/images/items/01_1224/156_2158.jpg",
-		"/images/items/01_1224/157_2158.jpg",
-		"/images/items/01_1224/158_2158.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1224/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1224/"
 }

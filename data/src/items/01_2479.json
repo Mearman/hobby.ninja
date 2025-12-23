@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 ヴィートルーウェポンズ",
 		"en": "HGBD:R 1/144 Veetloo Weapons"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"2019年10月からガンダムチャンネルで配信スタートの『ガンダムビルドダイバーズRe:RISE』 より、ヴィートルーガンダム用武器セットが登場！",
@@ -30,44 +73,53 @@
 		"en": [
 			"From \"Gundam Build Divers Re:RISE\" which started distribution on Gundam channel from 201910, a weapon set for Veetloo Gundam is now available!",
 			"• You can complete the Veetle Gundam by combining it with the separately sold Core Gundam and armored parts for the Veetle Gundam.",
-			"• If you combine it with the short rifle for Core Gundam (sold separately), you can create a large beam bazooka.",
+			"• If you combine it with the separately sold short rifle for Core Gundam, you can create a large beam bazooka.",
 			"• In addition to the core Gundam, it can also be equipped to existing 1/144 Scale Gunpla. You can enjoy strengthening existing HG and wide range of customization.",
 			"• Original joint parts included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ジョイントパーツ×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ジョイントパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3407_s_2ii5cfpz20zsip2r8ocdpe7vx9te.jpg",
+				"path": "/images/items/01_2479/153_3407.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3407_s_6d3pxpx0yaotv94om87gsfz8kx6s.jpg",
+				"path": "/images/items/01_2479/155_3407.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3407_s_4qyfg7wlmmsyfjgg4syevjnej1a6.jpg",
+				"path": "/images/items/01_2479/156_3407.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3407_s_zlhr07dbgzgibnblru75uve1j02l.jpg",
+				"path": "/images/items/01_2479/157_3407.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3407_s_bpsfwns2g8i5y3zrykmfmw9201bz.jpg",
+				"path": "/images/items/01_2479/158_3407.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3407_s_c0trbwi5ajy0mt4iunq3kyhwf6dc.jpg",
+				"path": "/images/items/01_2479/159_3407.jpg"
+			}
 		],
-		"en": [
-			"Joint parts x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2479/153_3407.jpg",
-		"/images/items/01_2479/155_3407.jpg",
-		"/images/items/01_2479/156_3407.jpg",
-		"/images/items/01_2479/157_3407.jpg",
-		"/images/items/01_2479/158_3407.jpg",
-		"/images/items/01_2479/159_3407.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2479/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0076"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2479/"
 }

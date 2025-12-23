@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 フルアーマーガンダム",
 		"en": "MG 1/100 Full Armor Gundam"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -18,42 +62,40 @@
 		"day": 24
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"• ガンダム Ver.2.0をベースにフルアーマーガンダムついに登場！！",
+			"• ガンダムVer.2.0をベースにフルアーマーガンダムついに登場！！",
 			"• 全身の追加装甲を着脱式で再現。",
 			"• 銃身の格納モードなど、各部武装の可動ギミックを再現。",
 			"成形品×17、ホイルシール×1、マーキングシール×1、ガンダムデカール×1、ゲルシート×1、組立説明書"
 		],
 		"en": [
-			"• Full armor Gundam based on Gundam Ver.2.0 is finally here! !",
+			"• Full armor Gundam based on GundamVer.2.0 is finally here! !",
 			"• Additional armor for the entire body is removable.",
 			"• Reproduce the movable gimmicks of each part of the weapon, such as the storage mode of the gun barrel.",
 			"Molded product x 17, Foil Seal x 1, Marking Seal x 1, Gundam decal x 1, Gel sheet x 1, Assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_1761/153_2702.jpg",
-		"/images/items/01_1761/155_2702.jpg",
-		"/images/items/01_1761/156_2702.jpg",
-		"/images/items/01_1761/157_2702.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1761/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
-	"manualId": "0581"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2702_s_6hr23t5fldfcfbxtzdzsdqc6naoi.jpg",
+				"path": "/images/items/01_1761/153_2702.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2702_s_irfnzh5602ryipe068dunjryfqg0.jpg",
+				"path": "/images/items/01_1761/155_2702.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2702_s_kdo5t0jgkynsk5er4ry97kggag7h.jpg",
+				"path": "/images/items/01_1761/156_2702.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2702_s_hsyccmt8km2hompppocxvi8cnl9b.jpg",
+				"path": "/images/items/01_1761/157_2702.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1761/"
 }

@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ジムIII",
 		"en": "HGUC 1/144 Jim III"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-zz",
+			"url": "https://bandai-hobby.net/series/gundam-zz/",
+			"ja": "機動戦士ガンダムＺＺ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_2079",
+			"url": "https://bandai-hobby.net/item/01_2079/",
+			"ja": "HGUC 1/144 R・ジャジャ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,46 +67,52 @@
 		"day": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 「機動戦士ガンダム ZZ」より、ジムIIIが登場。",
-			"• パーツ交換で「機動戦士ガンダム UC」第２話に登場するジムIIIのカスタム機も再現可能。",
+			"• 「機動戦士ガンダムZZ」より、ジムIIIが登場。",
+			"• パーツ交換で「機動戦士ガンダムUC」第２話に登場するジムIIIのカスタム機も再現可能。",
 			"• 多彩な手首パーツを付属。",
 			"成形品×8、ホイルシール×1、組立説明書"
 		],
 		"en": [
-			"• From \"Mobile Suit Gundam ZZ\", Jim III appears.",
+			"• From \"Mobile Suit GundamZZ\", Jim III appears.",
 			"• By exchanging parts, you can also recreate the custom Jim III machine that appears in the second episode of \"Mobile Suit Gundam UC.\"",
-			"• A variety of wrist parts are included.",
+			"• Includes various wrist parts.",
 			"Molded product x 8, foil seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_1781/153_2720.jpg",
-		"/images/items/01_1781/155_2720.jpg",
-		"/images/items/01_1781/156_2720.jpg",
-		"/images/items/01_1781/157_2720.jpg",
-		"/images/items/01_1781/158_2720.jpg",
-		"/images/items/01_1781/159_2720.jpg",
-		"/images/items/01_1781/189_2720.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1781/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam-zz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5963",
-		"01_4985",
-		"01_4971",
-		"01_2079"
-	],
-	"manualId": "0937"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2720_s_c8n7g35iwx8a2zus6nwt6rinsfsq.jpg",
+				"path": "/images/items/01_1781/153_2720.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2720_s_bzkbn2812hzruledb79kxqlvsflj.jpg",
+				"path": "/images/items/01_1781/155_2720.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2720_s_mlz0n7q1bwl99q26fnb31nh0qq8n.jpg",
+				"path": "/images/items/01_1781/156_2720.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2720_s_eupz2bngdxyczf0tb7ckld0q2bmp.jpg",
+				"path": "/images/items/01_1781/157_2720.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2720_s_22k6t9tqqf2xlg4jm01tskc3brbn.jpg",
+				"path": "/images/items/01_1781/158_2720.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2720_s_p55cjx3wa0teoey57sxnt8yeoyop.jpg",
+				"path": "/images/items/01_1781/159_2720.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2720_s_m4tvzciudmpfaf4ifqqq5ye8msb7.jpg",
+				"path": "/images/items/01_1781/189_2720.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1781/"
 }

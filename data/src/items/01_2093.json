@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 グスタフ・カール(ユニコーンVer.)",
 		"en": "HGUC 1/144 Gustav Karl (Unicorn Ver.)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -18,10 +67,9 @@
 		"day": 16
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム UC』に登場する量産型汎用MSを初立体化！",
+			"『機動戦士ガンダムUC』に登場する量産型汎用MSを初立体化！",
 			"• プロポーション、可動域、色再現に至るまで徹底考証。",
 			"• 胸部に内蔵されたロケットランチャーの展開ギミックを差し替えなしで再現。",
 			"• シールドアームはフレキシブルに可動。",
@@ -30,62 +78,81 @@
 		],
 		"en": [
 			"The mass-produced general-purpose MS that appears in \"Mobile Suit Gundam UC\" is made into three-dimensional for the first time!",
-			"• Thorough examination of proportions, range of motion, and color reproduction.",
+			"• Thorough investigation of proportions, range of motion, and color reproduction.",
 			"• The deployment gimmick of the rocket launcher built into the chest is reproduced without replacement.",
-			"• Seal arm can be moved flexibly.",
+			"• Seal arm is movable flexibly.",
 			"• Beam saber can be stored in the side armor.",
 			"• The sliding mechanism of the knee joint expands the range of motion of the legs."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"シールド×1",
-			"ビーム・サーベル×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 10
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3041_s_jnos4sr8yljnhrxsp9q0k49y6cg3.jpg",
+				"path": "/images/items/01_2093/153_3041.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3041_s_usim5jvvkdlnjitmozehaxbm07qq.jpg",
+				"path": "/images/items/01_2093/155_3041.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3041_s_urmexsxrmz6qos11l6mna43ef3st.jpg",
+				"path": "/images/items/01_2093/156_3041.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3041_s_8s4lr1pqghbdum3qy2mt4podl4d0.jpg",
+				"path": "/images/items/01_2093/157_3041.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3041_s_p1m2s72fav8we4b54nt9ujmek0uf.jpg",
+				"path": "/images/items/01_2093/158_3041.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3041_s_fpzp8v9jxj8l4wc2n95zjgdnixmw.jpg",
+				"path": "/images/items/01_2093/159_3041.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x1",
-			"Seal × 1",
-			"Beam saber x2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×10",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 10",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2093/153_3041.jpg",
-		"/images/items/01_2093/155_3041.jpg",
-		"/images/items/01_2093/156_3041.jpg",
-		"/images/items/01_2093/157_3041.jpg",
-		"/images/items/01_2093/158_3041.jpg",
-		"/images/items/01_2093/159_3041.jpg",
-		"/images/items/01_2093/01_2093_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2093/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
-	"manualId": "0486"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2093/"
 }

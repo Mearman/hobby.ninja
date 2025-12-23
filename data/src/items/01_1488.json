@@ -3,8 +3,47 @@
 	"type": "item",
 	"name": {
 		"ja": "1/100 ハーディガン",
-		"en": "1/100 Hardigan"
+		"en": "1/100 HARDIGUN"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundamf91",
+			"url": "https://bandai-hobby.net/series/gundamf91/",
+			"ja": "機動戦士ガンダムF91",
+			"en": "MOBILE SUIT GUNDAM F91"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3484",
+			"url": "https://bandai-hobby.net/item/01_3484/",
+			"ja": "ＲＥ/100 1/100 ビギナ・ギナ ［エクストラフィニッシュ］"
+		},
+		{
+			"id": "item-1000155996",
+			"url": "https://p-bandai.jp/item/item-1000155996/",
+			"ja": "ＭＧ 1/100 ガンダムＦ９１ Ｖｅｒ．２．０［チタニウムフィニッシュ］"
+		},
+		{
+			"id": "01_2252",
+			"url": "https://bandai-hobby.net/item/01_2252/",
+			"ja": "RE/100 1/100 ビギナ・ギナII"
+		},
+		{
+			"id": "item-1000130517",
+			"url": "https://p-bandai.jp/item/item-1000130517",
+			"ja": "ＭＧ 1/100 ガンダムＦ９１ Ｖｅｒ．２．０（残像イメージカラー）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -17,30 +56,25 @@
 		"month": 4
 	},
 	"targetAge": 8,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム シルエットフォーミュラF91」に登場したモビルスーツを立体化しました。バックパック接続のビーム・ランチャーは展開機構を再現できます。大口径ビームランチャー、ビーム・ライフル、ビームサーベル（手持ち用1本）、シールドがついています。指は可動します。"
 		],
 		"en": [
-			"A three-dimensional version of the mobile suit that appeared in \"Mobile Suit Gundam Silhouette Formula F91.\" The backpack-connected beam launcher can reproduce the deployment mechanism. Comes with a large-caliber beam launcher, beam rifle, beam saber (one hand-held), and Seal. The fingers are movable."
+			"The mobile suit that appeared in \"MOBILE SUIT GUNDAM Silhouette Formula F91\" has been made three-dimensional. The backpack-connected beam launcher can replicate the deployment mechanism. It comes with a large-caliber beam launcher, a beam rifle, one hand-held beam saber, and a shield. The fingers are movable."
 		]
 	},
-	"images": [
-		"/images/items/01_1488/1000091433_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000091433_1.jpg",
+				"path": "/images/items/01_1488/1000091433_1.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1488/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundamf91"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3484",
-		"item-1000155996",
-		"01_2252",
-		"item-1000130517"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1488/"
+	}
 }

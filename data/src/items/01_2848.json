@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC 1/144 バウンド・ドック",
-		"en": "HGUC 1/144 Bound Dock"
+		"en": "HGUC 1/144 BAUND-DOC"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム",
+			"en": "MOBILE SUIT Z GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6744",
+			"url": "https://bandai-hobby.net/item/01_6744/",
+			"ja": "HG 1/144 ガンダムMk-Ⅲ [クリアカラー]"
+		},
+		{
+			"id": "01_6693",
+			"url": "https://bandai-hobby.net/item/01_6693/",
+			"ja": "HG 1/144 ガンダムベース限定 ゼータガンダム[U.C.0088] (バイオセンサーイメージカラー)"
+		},
+		{
+			"id": "01_6694",
+			"url": "https://bandai-hobby.net/item/01_6694/",
+			"ja": "HG 1/144 サイコ･ガンダム [メタリックグロスインジェクション]"
+		},
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -18,10 +64,9 @@
 		"day": 24
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士Ｚガンダム』より、バウンド・ドックが全高約190mmからなるHG最新フォーマットにて立体化！化！",
+			"『機動戦士Ｚガンダム』より、バウンド・ドックが全高約190mmからなるHG最新フォーマットにて立体化！",
 			"• 特徴的なカラーリングを成形色で表現。",
 			"• しなやかで強弱のある独特のプロポーションを損なうことなく、MSとMAの可変ギミックを徹底再現。",
 			"• 計算されたパーツ構成と色分けにより、特徴的なスカート構造を再現。",
@@ -31,54 +76,92 @@
 			"• 専用台座が付属。"
 		],
 		"en": [
-			"From \"Mobile Suit Z Gundam\", Bound Dock is now three-dimensional in the latest HG format with a total height of approximately 190mm! Transformation!",
-			"• Expressing the characteristic coloring with molded colors.",
-			"• The variable gimmicks of MS and MA have been thoroughly reproduced without compromising the unique, supple and strong proportions.",
-			"• The characteristic skirt structure is reproduced through calculated parts composition and color coding.",
-			"• Reproduces a unique transformation in which the upper body is folded into the waist skirt armor. You can enjoy displaying it in a format that suits your preferences.",
-			"• The power pipes in each part are made of elastomer material and can be moved flexibly.",
-			"• Attached weapons are \"beam rifle \", \" diffusion mega particle cannon \", and \" beam saber\".",
-			"• A special pedestal is included."
+			"From \"MOBILE SUIT Z GUNDAM\", the bound dock is three-dimensional in HG's latest format, which is about 190mm high!",
+			"• Characteristic coloring is expressed in molding colors.",
+			"• Without compromising the unique proportions of supple and dynamic, the variable gimmick of MS and MA is thoroughly reproduced.",
+			"• Calculated part composition and color coding reproduce the characteristic skirt structure.",
+			"• Reproduce a unique deformation that folds the upper body into the waist skirt armor. You can enjoy the display in a form that suits your preference.",
+			"• The power pipes of each part are made of elastomer material and can be flexibly moved.",
+			"• Included armament is \"Beam Rifle\", \"Diffusion Mega Particle Cannon\", and \"Beam Saber\".",
+			"• Comes with a dedicated pedestal."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"ビーム・サーベル×1",
-			"拡散メガ粒子砲×1",
-			"専用台座×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル",
+				"en": "• Beam Rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "拡散メガ粒子砲"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "専用台座"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151036_1.jpg",
+				"path": "/images/items/01_2848/1000151036_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151036_2.jpg",
+				"path": "/images/items/01_2848/1000151036_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151036_3.jpg",
+				"path": "/images/items/01_2848/1000151036_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151036_4.jpg",
+				"path": "/images/items/01_2848/1000151036_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151036_5.jpg",
+				"path": "/images/items/01_2848/1000151036_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151036_6.jpg",
+				"path": "/images/items/01_2848/1000151036_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151036_7.jpg",
+				"path": "/images/items/01_2848/1000151036_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151036_8.jpg",
+				"path": "/images/items/01_2848/1000151036_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151036_9.jpg",
+				"path": "/images/items/01_2848/1000151036_9.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x1",
-			"Beam saber x 1",
-			"Diffusion mega particle cannon x1",
-			"Dedicated pedestal x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2848/1000151036_1.jpg",
-		"/images/items/01_2848/1000151036_2.jpg",
-		"/images/items/01_2848/1000151036_3.jpg",
-		"/images/items/01_2848/1000151036_4.jpg",
-		"/images/items/01_2848/1000151036_5.jpg",
-		"/images/items/01_2848/1000151036_6.jpg",
-		"/images/items/01_2848/1000151036_7.jpg",
-		"/images/items/01_2848/1000151036_8.jpg",
-		"/images/items/01_2848/1000151036_9.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2848/",
-	"brandIds": [],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
-	"manualId": "0493"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2848/"
+	}
 }

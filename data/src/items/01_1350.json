@@ -5,6 +5,49 @@
 		"ja": "メカコレクション 地球連邦アンドロメダ級三番艦アポロノーム",
 		"en": "Mecha Collection Earth Federation Andromeda Class Third Ship Apollo Nome"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "yamato",
+			"url": "https://bandai-hobby.net/series/yamato/",
+			"ja": "宇宙戦艦ヤマトシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5498",
+			"url": "https://bandai-hobby.net/item/01_5498/",
+			"ja": "メカコレクションDX 1式空間戦闘攻撃機 コスモタイガーII(単座型/銃座型) [2機セット]"
+		},
+		{
+			"id": "01_5500",
+			"url": "https://bandai-hobby.net/item/01_5500/",
+			"ja": "メカコレクションDX 試製空間戦闘攻撃機 コスモパイソン [2機セット]"
+		},
+		{
+			"id": "01_3667",
+			"url": "https://bandai-hobby.net/item/01_3667/",
+			"ja": "メカコレクション ガイペロン級多層式航宙母艦 バルメス(外洋機動艦隊仕様)"
+		},
+		{
+			"id": "01_3650",
+			"url": "https://bandai-hobby.net/item/01_3650/",
+			"ja": "メカコレクション デウスーラIII世"
+		}
+	],
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -27,52 +70,56 @@
 			"• 五番艦アンタレスのマーキングシールも付属！"
 		],
 		"en": [
-			"\"Earth Federation Andromeda class third ship Apollo Nome \" from \" Space Battleship Yamato 2202\" is now available in the mecha collection!",
-			"• Although it is palm-sized, the details of the Earth Federation Andromeda class third ship Apollo Nome are precisely reproduced!",
+			"\"Earth Federation Andromeda class third ship Apollo Nome\" from \"Space Battleship Yamato 2202\" is now available in the mecha collection!",
+			"• Accurately reproduces the details of the Earth Federation Andromeda class third ship Apollo Nome, despite being palm-sized!",
 			"• The characteristic take-off and landing section of the aircraft carrier type is a new model!",
-			"• Mecha collection being released Earth Federation Andromeda class Same scale as the first ship Andromeda. You can line them up and recreate them from the movie!",
+			"• Mecha collection being released Earth Federation Andromeda class First ship Same scale as Andromeda. You can line them up and recreate them from the movie!",
 			"• Marking Seal of the fifth ship Antares is also included!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 7
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書（箱裏側に記載）"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2278_s_78y7vp5vozaubrec0zhmvz9zo3hc.jpg",
+				"path": "/images/items/01_1350/153_2278.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2278_s_y8skrl62kebsxe56zod9xppb81a1.jpg",
+				"path": "/images/items/01_1350/155_2278.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2278_s_5ivvsdz15tkb4a852nnq1xrgtqg6.jpg",
+				"path": "/images/items/01_1350/156_2278.jpg"
+			}
 		],
-		"en": [
-			"Dedicated display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×7",
-			"マーキングシール×1",
-			"取扱説明書（箱裏側に記載）"
-		],
-		"en": [
-			"Molded product x 7",
-			"MarkingSeal×1",
-			"Instruction manual (written on the back of the box)"
-		]
-	},
-	"images": [
-		"/images/items/01_1350/153_2278.jpg",
-		"/images/items/01_1350/155_2278.jpg",
-		"/images/items/01_1350/156_2278.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1350/",
-	"brandIds": [
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"yamato"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5498",
-		"01_5500",
-		"01_3667",
-		"01_3650"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1350/"
 }

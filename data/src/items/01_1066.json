@@ -2,9 +2,47 @@
 	"id": "01_1066",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム Gジェネレーション60 キュベレイ",
-		"en": "SD Gundam G Generation 60 Qubeley"
+		"ja": "SDガンダムGジェネレーション60 キュベレイ",
+		"en": "SDGundamG Generation 60 Qubeley"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1108",
+			"url": "https://bandai-hobby.net/item/01_1108/",
+			"ja": "BB戦士217 ガンダムMk-II"
+		},
+		{
+			"id": "01_645",
+			"url": "https://bandai-hobby.net/item/01_645/",
+			"ja": "SDガンダムGジェネレーション49 百式"
+		},
+		{
+			"id": "01_1321",
+			"url": "https://bandai-hobby.net/item/01_1321/",
+			"ja": "SDガンダムGジェネレーション62 百式＆メガバズーカランチャー"
+		}
+	],
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -22,26 +60,21 @@
 			"ゲームソフト「ジージェネレーションＦ」に登場するユニット「キュベレイ」をプラモデルで商品化。シールを使うことで、カラフルに組立が可能です。武器に、ビームサーベル，ファンネルが付属します。"
 		],
 		"en": [
-			"The unit \"Qubeley \" that appears in the game software \" G Generation F\" is commercialized as a plastic model. By using Seal, you can assemble it colorfully. Beam saber and funnel are included as weapons."
+			"The unit \"Qubeley\" that appears in the game software \"G Generation F\" is commercialized as a plastic model. By using Seal, you can assemble it colorfully. Beam saber and funnel are included as weapons."
 		]
 	},
-	"images": [
-		"/images/items/01_1066/153_199.jpg",
-		"/images/items/01_1066/155_199.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1066/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1108",
-		"01_645",
-		"01_1321"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_199_s_32txf0chnfohmvgjmes0l4kl0xsq.jpg",
+				"path": "/images/items/01_1066/153_199.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_199_s_y5j7cf7qivmoa8bwu3ut53n6zx8v.jpg",
+				"path": "/images/items/01_1066/155_199.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1066/"
 }

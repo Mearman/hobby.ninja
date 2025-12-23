@@ -5,6 +5,44 @@
 		"ja": "1/100 グフ",
 		"en": "1/100 Gouf"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、1/100スケールで、グフが登場。",
@@ -28,22 +65,18 @@
 			"The right wrist parts include one for the heat saber and one for the heat rod. The legs can be opened and closed in the front, back, left and right directions. There are two types of heat rods, long and short. The mono eye is Seal, allowing you to create your own unique expression."
 		]
 	},
-	"images": [
-		"/images/items/01_3130/153_4095.jpg",
-		"/images/items/01_3130/155_4095.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3130/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4095_s_g3eemcw2g0mk7lpu9iv1c9a5zpd3.jpg",
+				"path": "/images/items/01_3130/153_4095.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4095_s_1n87v12b5nhy86u7vminc7wccdhr.jpg",
+				"path": "/images/items/01_3130/155_4095.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3130/"
 }

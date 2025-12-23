@@ -5,6 +5,60 @@
 		"ja": "ＰＧ 1/60 ユニコーンガンダム３号機 フェネクス用 ナラティブＶｅｒ． 拡張セット",
 		"en": "PG 1/60 Unicorn Gundam Unit 3 Narrative Ver. for Phenex. expansion set"
 	},
+	"brands": [
+		{
+			"id": "pb_pg",
+			"url": "https://bandai-hobby.net/brand/pb_pg/",
+			"ja": "PG［パーフェクトグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "narrative",
+			"url": "https://bandai-hobby.net/series/narrative/",
+			"ja": "機動戦士ガンダムNT[ナラティブ]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000213253",
+			"url": "https://p-bandai.jp/item/item-1000213253/",
+			"ja": "ＭＧ 1/100 ナラティブガンダム Ｃ装備 Ｖｅｒ．Ｋａ用 Ｂ装備拡張セット"
+		},
+		{
+			"id": "item-1000213251",
+			"url": "https://p-bandai.jp/item/item-1000213251/",
+			"ja": "ＭＧ 1/100 ナラティブガンダム Ｂ装備 Ｖｅｒ．Ｋａ"
+		},
+		{
+			"id": "01_3316",
+			"url": "https://bandai-hobby.net/item/01_3316/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム３号機 フェネクス（ナラティブＶｅｒ．）"
+		},
+		{
+			"id": "item-1000139902",
+			"url": "https://p-bandai.jp/item/item-1000139902/",
+			"ja": "ＲＧ 1/144 ユニコーンガンダム3号機 フェネクス（ナラティブVer.）"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 8800,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 1
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
 			"本商品は、パーフェクトグレードで 『機動戦士ガンダムＮＴ』版のフェネクスを再現するための拡張セットです。",
@@ -98,36 +151,38 @@
 			"- Product specifications are scheduled as of 20209. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_3315/153_4270.jpg",
-		"/images/items/01_3315/155_4270.jpg",
-		"/images/items/01_3315/156_4270.jpg",
-		"/images/items/01_3315/157_4270.jpg",
-		"/images/items/01_3315/158_4270.jpg",
-		"/images/items/01_3315/159_4270.jpg",
-		"/images/items/01_3315/189_4270.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3315/",
-	"brandIds": [
-		"pg",
-		"pb_pg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"narrative"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000213253",
-		"item-1000213251",
-		"01_3316",
-		"item-1000139902"
-	],
-	"manualId": "2391",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4270_s_e7fgnpo5sroqbjere0qovu4z5zw4.jpg",
+				"path": "/images/items/01_3315/153_4270.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4270_s_zmvfu0z3h8jqtzajo2beucnntoh9.jpg",
+				"path": "/images/items/01_3315/155_4270.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4270_s_gw8b4u01fpb210j622s4h46a8ehr.jpg",
+				"path": "/images/items/01_3315/156_4270.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4270_s_gnahiqzg43q30by404ay35c7s5wj.jpg",
+				"path": "/images/items/01_3315/157_4270.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4270_s_pkt65k6dn3878tkxpcvu9t6d36af.jpg",
+				"path": "/images/items/01_3315/158_4270.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4270_s_rm9lq7m4uc3mttlnh8o046660moi.jpg",
+				"path": "/images/items/01_3315/159_4270.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4270_s_1jhv6a2uoydt4cyfpqlf2ndxerc2.jpg",
+				"path": "/images/items/01_3315/189_4270.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3315/"
 }

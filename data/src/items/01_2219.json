@@ -5,6 +5,43 @@
 		"ja": "LBXクノイチ",
 		"en": "LBX Kunoichi"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "lbx",
+			"url": "https://bandai-hobby.net/series/lbx/",
+			"ja": "ダンボール戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000215196",
+			"url": "https://p-bandai.jp/item/item-1000215196/",
+			"ja": "ＬＢＸイカロス・フォース"
+		},
+		{
+			"id": "item-1000215197",
+			"url": "https://p-bandai.jp/item/item-1000215197/",
+			"ja": "ＬＢＸイカロス・ゼロ"
+		},
+		{
+			"id": "item-1000210042",
+			"url": "https://p-bandai.jp/item/item-1000210042/",
+			"ja": "ＬＢＸエルシオン"
+		},
+		{
+			"id": "item-1000210041",
+			"url": "https://p-bandai.jp/item/item-1000210041/",
+			"ja": "ＬＢＸペルセウス"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -30,49 +67,72 @@
 			"• A special pedestal is included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"コダチ×2",
-			"専用ディスプレイ台座×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "コダチ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "専用ディスプレイ台座"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成型品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3163_s_m5yen5kql8gtdjve72kpp2ldnzv5.jpg",
+				"path": "/images/items/01_2219/153_3163.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3163_s_rdgvaef7c6znqovoon50hme2n0ma.jpg",
+				"path": "/images/items/01_2219/155_3163.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3163_s_nl613rotuemjpbkn738r2fv9ihoy.jpg",
+				"path": "/images/items/01_2219/156_3163.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3163_s_o97h3lp8i0dqdlcme6q78uj54kw2.jpg",
+				"path": "/images/items/01_2219/157_3163.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3163_s_my5gl489q4yl2kuw0ywvi5gplxw6.jpg",
+				"path": "/images/items/01_2219/158_3163.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3163_s_ouj4eyg7s294edmuh11hsw0jg9mx.jpg",
+				"path": "/images/items/01_2219/159_3163.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3163_s_iuisv9ms9lh1yapwgw425cnucnma.jpg",
+				"path": "/images/items/01_2219/189_3163.jpg"
+			}
 		],
-		"en": [
-			"Kodachi×2",
-			"Dedicated display pedestal x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成型品×4",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 4",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2219/153_3163.jpg",
-		"/images/items/01_2219/155_3163.jpg",
-		"/images/items/01_2219/156_3163.jpg",
-		"/images/items/01_2219/157_3163.jpg",
-		"/images/items/01_2219/158_3163.jpg",
-		"/images/items/01_2219/159_3163.jpg",
-		"/images/items/01_2219/189_3163.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2219/",
-	"brandIds": [],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2219/"
 }

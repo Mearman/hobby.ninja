@@ -5,6 +5,50 @@
 		"ja": "1/144 HG モビルジン",
 		"en": "1/144 HG Mobile Jin"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181726",
+			"url": "https://p-bandai.jp/item/item-1000181726/",
+			"ja": "ＨＧ 1/144 ストライクダガー"
+		},
+		{
+			"id": "01_1930",
+			"url": "https://bandai-hobby.net/item/01_1930/",
+			"ja": "HG 1/144 ガンダムベース限定 フリーダムガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_384",
+			"url": "https://bandai-hobby.net/item/01_384/",
+			"ja": "HGCE 1/144 フリーダムガンダム"
+		},
+		{
+			"id": "01_83",
+			"url": "https://bandai-hobby.net/item/01_83/",
+			"ja": "HGCE 1/144 ストライクルージュ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -17,34 +61,26 @@
 		"month": 4
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム SEED」に登場するライバル機「モビルジン」の1/144スケールHG仕様のプラモデル。肘、膝など各関節は可動します。武器は専用ライフル、ソード、脚部ミサイルポッドが付属します。"
+			"「機動戦士ガンダムSEED」に登場するライバル機「モビルジン」の1/144スケールHG仕様のプラモデル。肘、膝など各関節は可動します。武器は専用ライフル、ソード、脚部ミサイルポッドが付属します。"
 		],
 		"en": [
-			"A 1/144 Scale HG plastic model of the rival machine \"Mobile Jin \" that appears in \" Mobile Suit Gundam SEED\". All joints such as elbows and knees are movable. Weapons include a special rifle, sword, and leg missile pod."
+			"A 1/144 Scale HG plastic model of the rival machine \"Mobile Jin\" that appears in \"Mobile Suit Gundam SEED\". All joints such as elbows and knees are movable. Weapons include a special rifle, sword, and leg missile pod."
 		]
 	},
-	"images": [
-		"/images/items/01_2554/153_347.jpg",
-		"/images/items/01_2554/155_347.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2554/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181726",
-		"01_1930",
-		"01_384",
-		"01_83"
-	],
-	"manualId": "0877"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_347_s_zqnw7tu5iwb78pewrsdrv2ymbfwg.jpg",
+				"path": "/images/items/01_2554/153_347.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_347_o_1h38s0n1r17bl69v14m31cq51h9q23.jpg",
+				"path": "/images/items/01_2554/155_347.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2554/"
 }

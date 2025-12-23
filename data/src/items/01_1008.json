@@ -5,6 +5,55 @@
 		"ja": "HGPG　1/144　プチッガイ　ラスティオレンジ＆プラカード",
 		"en": "HGPG 1/144 Petitgguy Rusty Orange & Placard"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "petitgguy",
+			"url": "https://bandai-hobby.net/brand/petitgguy/",
+			"ja": "プチッガイ/ベアッガイ"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 27
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• HGPGシリーズに新色「ラスティオレンジ」が登場！",
@@ -27,59 +75,78 @@
 		],
 		"en": [
 			"• New color \"Rusty Orange\" is now available in the HGPG series!",
-			"• Comes with a placard that can be used to convey a message or for customization, and can have either a long or short pattern!",
+			"• Comes with a placard that can be used to convey a message or for customization, and can be held with either a long or short pattern!",
 			"• A new pedestal and Deco Seal are also included for holding placards!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"プラカード×1",
-			"プラカードジョイント×1",
-			"ディスプレイ台座×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "プラカード"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "プラカードジョイント"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1944_s_0mwwwbj9ie7mfgzjieywz644b16s.jpg",
+				"path": "/images/items/01_1008/153_1944.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1944_s_rju52nvfusxng7rawwje46z2kbwo.jpg",
+				"path": "/images/items/01_1008/155_1944.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_1944_s_fk8j8eijb17cssihpcooe7y3jm51.jpg",
+				"path": "/images/items/01_1008/156_1944.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_1944_s_3klfsnnnwwkdcsk5mz5n4lq2z6d1.jpg",
+				"path": "/images/items/01_1008/157_1944.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_1944_s_ltvv66uf8iznw8figtrgr0rzhg7y.jpg",
+				"path": "/images/items/01_1008/158_1944.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_1944_s_labyw2u5mrl4t9l55rrovrg5xd6a.jpg",
+				"path": "/images/items/01_1008/159_1944.jpg"
+			}
 		],
-		"en": [
-			"Placard x 1",
-			"Placard joint x 1",
-			"Display pedestal x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 4",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1008/153_1944.jpg",
-		"/images/items/01_1008/155_1944.jpg",
-		"/images/items/01_1008/156_1944.jpg",
-		"/images/items/01_1008/157_1944.jpg",
-		"/images/items/01_1008/158_1944.jpg",
-		"/images/items/01_1008/159_1944.jpg",
-		"/images/items/01_1008/01_1008_inst_1.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1008/",
-	"brandIds": [
-		"hg",
-		"petitgguy"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
-	"manualId": "0751"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1008/"
 }

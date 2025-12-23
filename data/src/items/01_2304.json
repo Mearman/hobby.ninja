@@ -5,6 +5,44 @@
 		"ja": "1/12 R2-Q2",
 		"en": "1/12 R2-Q2"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3513",
+			"url": "https://bandai-hobby.net/item/01_3513/",
+			"ja": "ビークルモデル レイザー・クレスト"
+		}
+	],
+	"scale": "1/12",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"scale": "1/12",
 	"description": {
 		"ja": [
 			"『スター・ウォーズ エピソード4／新たなる希望』に登場するアストロメク・ドロイド「R2-Q2」がドロイドシリーズに登場！",
@@ -26,56 +63,87 @@
 			"• 専用のディスプレイベースが付属。"
 		],
 		"en": [
-			"The astromech droid \"R2-Q2 \" that appears in \" Star Wars Episode IV: A New Hope\" is now available in the droid series!",
+			"The astromech droid \"R2-Q2\" that appears in \"Star Wars Episode IV: A New Hope\" is now available in the droid series!",
 			"• The characteristic body color and details are faithfully reproduced by dividing the parts and marking seals on each part.",
-			"• A dedicated display base is included."
+			"• Comes with a dedicated display base."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成型品"
+			},
+			"count": 5
+		},
+		{
+			"name": {
+				"ja": "カイナスシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3243_s_yqq0i0v9dsht7n6x4aqojfdn9acw.jpg",
+				"path": "/images/items/01_2304/153_3243.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3243_s_b1xba51lj8uunvgokygxn85xocgx.jpg",
+				"path": "/images/items/01_2304/155_3243.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3243_s_4yhl9uka2sl2q9rnwbmw0ue30k64.jpg",
+				"path": "/images/items/01_2304/156_3243.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3243_s_r69gphrk8wm3f9ucb9p92omtf82k.jpg",
+				"path": "/images/items/01_2304/157_3243.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3243_s_ysk0fqsuxbrnfys2pqd1w0cvhf0t.jpg",
+				"path": "/images/items/01_2304/158_3243.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3243_s_5k7yov17dmsg3d4g6twcovsglorv.jpg",
+				"path": "/images/items/01_2304/159_3243.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3243_s_ulgn157xysk86br2d2z8mgghpfh7.jpg",
+				"path": "/images/items/01_2304/189_3243.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3243_s_36exrtk855mtn3q1ji1fox03llhe.jpg",
+				"path": "/images/items/01_2304/190_3243.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3243_s_o59jbj96i6ijhv18kdradvu6rus9.jpg",
+				"path": "/images/items/01_2304/191_3243.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3243_s_qmotb6dyl6hyldqvp7s8fapdh4jw.jpg",
+				"path": "/images/items/01_2304/192_3243.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_3243_s_0mm95uketjmce83i06vetunbvicn.jpg",
+				"path": "/images/items/01_2304/193_3243.jpg"
+			}
 		],
-		"en": [
-			"Dedicated display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成型品×5",
-			"カイナスシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 5",
-			"Cainus Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2304/153_3243.jpg",
-		"/images/items/01_2304/155_3243.jpg",
-		"/images/items/01_2304/156_3243.jpg",
-		"/images/items/01_2304/157_3243.jpg",
-		"/images/items/01_2304/158_3243.jpg",
-		"/images/items/01_2304/159_3243.jpg",
-		"/images/items/01_2304/189_3243.jpg",
-		"/images/items/01_2304/190_3243.jpg",
-		"/images/items/01_2304/191_3243.jpg",
-		"/images/items/01_2304/192_3243.jpg",
-		"/images/items/01_2304/193_3243.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2304/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3513"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2304/"
 }

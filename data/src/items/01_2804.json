@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 ガンダムイージスナイト",
 		"en": "HGBD:R 1/144 Gundam Aegis Knight"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 22
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダム公式 YouTube チャンネル「ガンダムチャンネル」にて毎週木曜20時より配信中の『ガンダムビルドダイバーズRe:RISE』2nd Seasonより、ジャスティスナイトの後継機、「ガンダムイージスナイト」が登場！",
@@ -27,59 +70,100 @@
 			"• 付属のジョイントパーツでヒロト達「ビルドダイバーズ」のガンプラが合体！劇中のリライジングガンダムを再現可能！"
 		],
 		"en": [
-			"From the 2nd Season of \"Gundam Build Divers Re:RISE \", which is being streamed every Thursday from 8pm on Gundam's official YouTube channel \" Gundam Channel \", the successor to the Justice Knight, \" Gundam Aegis Knight\" has appeared!",
+			"From the 2nd Season of \"Gundam Build Divers Re:RISE\", which is being streamed every Thursday from 8pm on Gundam's official YouTube channel \"Gundam Channel\", the successor to the Justice Knight, \"Gundam Aegis Knight\" has appeared!",
 			"• In addition to mobile suit form, it can transform into flight form, assault form, and combined weapons.",
 			"• In assault form, a beam effect can be connected to the tip of the arm.",
 			"• Hiroto's \"Build Divers\" Gunpla can be combined using the included joint parts! You can reproduce the Rerising Gundam from the movie!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ランス×1",
-			"シールド×1",
-			"ビームサーベル×1",
-			"ビームエフェクト×一式",
-			"ホイルシール×1",
-			"リライジングガンダム再現用ジョイントパーツ"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ランス"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームエフェクト×一式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リライジングガンダム再現用ジョイントパーツ"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149531_1.jpg",
+				"path": "/images/items/01_2804/1000149531_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149531_2.jpg",
+				"path": "/images/items/01_2804/1000149531_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149531_3.jpg",
+				"path": "/images/items/01_2804/1000149531_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149531_4.jpg",
+				"path": "/images/items/01_2804/1000149531_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149531_5.jpg",
+				"path": "/images/items/01_2804/1000149531_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149531_6.jpg",
+				"path": "/images/items/01_2804/1000149531_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149531_7.jpg",
+				"path": "/images/items/01_2804/1000149531_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149531_8.jpg",
+				"path": "/images/items/01_2804/1000149531_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149531_9.jpg",
+				"path": "/images/items/01_2804/1000149531_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149531_10.jpg",
+				"path": "/images/items/01_2804/1000149531_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149531_11.jpg",
+				"path": "/images/items/01_2804/1000149531_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149531_12.jpg",
+				"path": "/images/items/01_2804/1000149531_12.jpg"
+			}
 		],
-		"en": [
-			"Lance x1",
-			"Seal × 1",
-			"Beam saber x 1",
-			"Beam effect x set",
-			"Foil Seal×1",
-			"Joint parts for Rerising Gundam reproduction"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2804/1000149531_1.jpg",
-		"/images/items/01_2804/1000149531_10.jpg",
-		"/images/items/01_2804/1000149531_11.jpg",
-		"/images/items/01_2804/1000149531_12.jpg",
-		"/images/items/01_2804/1000149531_2.jpg",
-		"/images/items/01_2804/1000149531_3.jpg",
-		"/images/items/01_2804/1000149531_4.jpg",
-		"/images/items/01_2804/1000149531_5.jpg",
-		"/images/items/01_2804/1000149531_6.jpg",
-		"/images/items/01_2804/1000149531_7.jpg",
-		"/images/items/01_2804/1000149531_8.jpg",
-		"/images/items/01_2804/1000149531_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2804/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0094"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2804/"
 }

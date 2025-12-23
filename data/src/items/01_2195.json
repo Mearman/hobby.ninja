@@ -5,6 +5,48 @@
 		"ja": "BANDAI SPIRITS エントリーニッパー（ブルー）",
 		"en": "BANDAI SPIRITS Entry Nippers (Blue)"
 	},
+	"brands": [
+		{
+			"id": "tool",
+			"url": "https://bandai-hobby.net/brand/tool/",
+			"ja": "BANDAI SPIRITS ツール"
+		},
+		{
+			"id": "tool",
+			"url": "https://bandai-hobby.net/brand/tool/",
+			"ja": "BANDAI SPIRITS ツール"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4930",
+			"url": "https://bandai-hobby.net/item/01_4930/",
+			"ja": "マルチビルダーズケース"
+		},
+		{
+			"id": "01_4931",
+			"url": "https://bandai-hobby.net/item/01_4931/",
+			"ja": "マルチビルダーズランナースタンド"
+		},
+		{
+			"id": "01_4305",
+			"url": "https://bandai-hobby.net/item/01_4305/",
+			"ja": "BANDAI SPIRITS エントリーツールセット"
+		},
+		{
+			"id": "01_4101",
+			"url": "https://bandai-hobby.net/item/01_4101/",
+			"ja": "BANDAI SPIRITS パーツセパレーター"
+		}
+	],
 	"price": {
 		"amount": 803,
 		"currency": "JPY",
@@ -36,22 +78,18 @@
 			"A lineup of 3 grip colors with basic specifications recommended for beginners to plastic models!"
 		]
 	},
-	"images": [
-		"/images/items/01_2195/153_3141.jpg",
-		"/images/items/01_2195/155_3141.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2195/",
-	"brandIds": [
-		"tool"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4930",
-		"01_4931",
-		"01_4305",
-		"01_4101"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3141_s_w1d08047vi1jfq4b4stluwzu9wp5.jpg",
+				"path": "/images/items/01_2195/153_3141.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3141_s_ft3e1unqh60jju15mv2o995op65a.jpg",
+				"path": "/images/items/01_2195/155_3141.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2195/"
 }

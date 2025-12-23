@@ -5,6 +5,43 @@
 		"ja": "ピカちんロボS04 ゴミバッコマン",
 		"en": "Pikachin Robo S04 Gomi Bakkoman"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -31,9 +68,9 @@
 			"ピカちんシート…1（表：設計図ページ　裏：豆知識ページ）"
 		],
 		"en": [
-			"• Pikachin KitS, which has hidden electronic power, is here!",
+			"• Introducing Pikachin KitS, which has the power of electronics!",
 			"• Expands functionality by combining with trash can sensor (sold separately)! When the sensor reacts, the sound of Gomi Bakkoman appearing will be played!",
-			"• Action and gimmick that allows you to roll it around with the wheels on the back!",
+			"• An action and gimmick that lets you roll with the wheels on the back!",
 			"[Set contents]",
 			"Gomi Bakkoman...1 (molded product...5)",
 			"Pikachin QR code Sticker...1",
@@ -42,28 +79,42 @@
 			"Pikachin sheet...1 (front: blueprint page, back: trivia page)"
 		]
 	},
-	"images": [
-		"/images/items/01_1977/153_2907.jpg",
-		"/images/items/01_1977/155_2907.jpg",
-		"/images/items/01_1977/156_2907.jpg",
-		"/images/items/01_1977/157_2907.jpg",
-		"/images/items/01_1977/158_2907.jpg",
-		"/images/items/01_1977/159_2907.jpg",
-		"/images/items/01_1977/189_2907.jpg",
-		"/images/items/01_1977/190_2907.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1977/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2907_s_q967bfo0sza8yt2nlcr3zf99vrcm.jpg",
+				"path": "/images/items/01_1977/153_2907.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2907_s_iluqnbgs4xzwgusrq8ut2h4zoeqw.jpg",
+				"path": "/images/items/01_1977/155_2907.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2907_s_39nmxumnfiqjpc8eyxq64dhwce0r.jpg",
+				"path": "/images/items/01_1977/156_2907.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2907_s_bw9qty5qg7t1y65bf90uklzp6ovv.jpg",
+				"path": "/images/items/01_1977/157_2907.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2907_s_ktzvv5uby9cw53zp2rwn6li2jtib.jpg",
+				"path": "/images/items/01_1977/158_2907.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2907_s_tzz1foelyu3b7fzsaov1btsquzoa.jpg",
+				"path": "/images/items/01_1977/159_2907.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2907_s_q1960e7hq2uf89mpciaxtcf0hyrr.jpg",
+				"path": "/images/items/01_1977/189_2907.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2907_s_cxz7qc0ytvside1is6r7bh5dpit6.jpg",
+				"path": "/images/items/01_1977/190_2907.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1977/"
 }

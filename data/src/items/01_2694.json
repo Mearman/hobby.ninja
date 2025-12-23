@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムハルート",
 		"en": "HG 1/144 Gundam Harut"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000224328",
+			"url": "https://p-bandai.jp/item/item-1000224328/",
+			"ja": "ＨＧ 1/144 ガンダムプルトーネブラック"
+		},
+		{
+			"id": "01_1954",
+			"url": "https://bandai-hobby.net/item/01_1954/",
+			"ja": "HG 1/144 「機動戦士ガンダム00」 2nd Season MSセット[クリアカラー]"
+		},
+		{
+			"id": "01_1953",
+			"url": "https://bandai-hobby.net/item/01_1953/",
+			"ja": "HG 1/144 「機動戦士ガンダム00」 1st Season MSセット[クリアカラー]"
+		},
+		{
+			"id": "item-1000114085",
+			"url": "https://p-bandai.jp/item/item-1000114085",
+			"ja": "ＨＧ 1/144 ＧＮアームズ ＴＹＰＥ-Ｅ（リアルカラーＶｅｒ．）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 18
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 劇場版「ガンダムＯＯ」に登場するガンダムハルートをキット化。",
@@ -27,34 +70,36 @@
 			"• MS形態時、背中のバインダーの可動"
 		],
 		"en": [
-			"• Kit version of Gundam Harut that appears in the movie \"Gundam OO\".",
+			"• Kit version of Gundam Harut that appears in the movie \"GundamOO\".",
 			"• Reproduces Harut's transformation into its characteristic flight form.",
 			"• The rifle can be attached and detached to reproduce the gimmick of shape transformation.",
 			"• When in MS form, the binder on the back is movable."
 		]
 	},
-	"images": [
-		"/images/items/01_2694/153_3686.jpg",
-		"/images/items/01_2694/155_3686.jpg",
-		"/images/items/01_2694/156_3686.jpg",
-		"/images/items/01_2694/157_3686.jpg",
-		"/images/items/01_2694/158_3686.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2694/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000224328",
-		"01_1954",
-		"01_1953",
-		"item-1000114085"
-	],
-	"manualId": "0313"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3686_o_1dt5bks323681r9p1h1eul7cj023.jpg",
+				"path": "/images/items/01_2694/153_3686.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3686_o_1dt5bl8dpuluqcs115ved61ujm2d.jpg",
+				"path": "/images/items/01_2694/155_3686.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3686_o_1dt5ble9j1qghmmbuhc1s8v1v632i.jpg",
+				"path": "/images/items/01_2694/156_3686.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3686_o_1dt5bll4ar60u9k1c1qqo7dh2n.jpg",
+				"path": "/images/items/01_2694/157_3686.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3686_s_jkszsbd81klwli5emh1s2bdm3lh5.jpg",
+				"path": "/images/items/01_2694/158_3686.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2694/"
 }

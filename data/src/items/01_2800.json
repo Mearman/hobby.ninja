@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "ＨＧ 1/144 ガンダムＴＲ-６ ［キハールII］（ADVANCE OF Z ティターンズの旗のもとに）",
-		"en": "HG 1/144 Gundam TR-6 [Kihar II] (ADVANCE OF Z Under the flag of Titans)"
+		"en": "HG 1/144 GundamTR-6 [Kihar II] (ADVANCE OF Z Under the flag of Titans)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -16,7 +64,6 @@
 		"year": 2020,
 		"month": 6
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"強 化 オ プ シ ョ ン を 纏 っ た 、",
@@ -64,7 +111,7 @@
 		"en": [
 			"Equipped with enhanced options,",
 			"TR-6 Variation -",
-			"From \"ADVANCE OF Z ~Under the Flag of the Titans~\", an equipment variation machine [Kihar II] based on Gundam TR-6 [Woundwort] has been commercialized.",
+			"From \"ADVANCE OF Z ~Under the Flag of the Titans~\", an equipment variation machine [Kihar II] based on GundamTR-6 [Woundwort] has been commercialized.",
 			"The exterior parts that form the distinctive styling have been three-dimensionalized with new modeling parts. Reproduces the transformation to MA form. The Titans color scheme based on dark blue and white is reproduced with molded colors.",
 			"● Reproduce the aircraft shape of TR-6 [Kihar II] with new molded parts",
 			"Parts that form the unique styling of [Kiharu II], such as the head, torso, and arms, are prepared with new modeling, and the form and details are thoroughly reproduced.",
@@ -105,37 +152,50 @@
 			"- Product specifications are scheduled as of 20202. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2800/153_3787.jpg",
-		"/images/items/01_2800/155_3787.jpg",
-		"/images/items/01_2800/156_3787.jpg",
-		"/images/items/01_2800/157_3787.jpg",
-		"/images/items/01_2800/158_3787.jpg",
-		"/images/items/01_2800/159_3787.jpg",
-		"/images/items/01_2800/189_3787.jpg",
-		"/images/items/01_2800/190_3787.jpg",
-		"/images/items/01_2800/191_3787.jpg",
-		"/images/items/01_2800/192_3787.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2800/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	],
-	"manualId": "2582",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3787_s_4jpswnnhrnpzng2csq2bf2oaynrv.jpg",
+				"path": "/images/items/01_2800/153_3787.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3787_s_0uuom4mppwgkxu4co0jun08z2a6w.jpg",
+				"path": "/images/items/01_2800/155_3787.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3787_s_6i7gem9xir0pdnxe3bobabg2gga4.jpg",
+				"path": "/images/items/01_2800/156_3787.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3787_s_0gqv8uxesnhic8qas1o6x75fqduk.jpg",
+				"path": "/images/items/01_2800/157_3787.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3787_s_ita6j0kfjpyzyjqulktbooz7aanc.jpg",
+				"path": "/images/items/01_2800/158_3787.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3787_s_uzx4z7c9p4qg9xlgchfhgo2uctw1.jpg",
+				"path": "/images/items/01_2800/159_3787.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3787_s_1p6n3b7l6370rb5fdhsmr025gfb0.jpg",
+				"path": "/images/items/01_2800/189_3787.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3787_s_0ymaa9cink6vtldckqsy0sa3vk9f.jpg",
+				"path": "/images/items/01_2800/190_3787.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3787_s_w4anmpvgix697z8gooiyj8y9jxyv.jpg",
+				"path": "/images/items/01_2800/191_3787.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3787_s_mh9m25kdi32astayyrqbdjuxgn16.jpg",
+				"path": "/images/items/01_2800/192_3787.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2800/"
 }

@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 ジム・コマンド(コロニー戦仕様)",
-		"en": "MG 1/100 Jim Command (Colony Battle Specification)"
+		"en": "MG 1/100 GM Command (Colony Battle)"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]",
+			"en": "MG [MASTER GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "g-0080",
+			"url": "https://bandai-hobby.net/series/g-0080/",
+			"ja": "機動戦士ガンダム0080 ポケットの中の戦争",
+			"en": "MOBILE SUIT GUNDAM 0080 War in the Pocket"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2461",
+			"url": "https://bandai-hobby.net/item/01_2461/",
+			"ja": "MG 1/100 ガンダムNT-1 ver.2.0[クリアカラー]"
+		},
+		{
+			"id": "01_2254",
+			"url": "https://bandai-hobby.net/item/01_2254/",
+			"ja": "MG 1/100 ガンダムNT-1 Ver.2.0"
+		},
+		{
+			"id": "item-1000134463",
+			"url": "https://p-bandai.jp/item/item-1000134463",
+			"ja": "MG 1/100 ジム(寒冷地仕様)"
+		},
+		{
+			"id": "01_1955",
+			"url": "https://bandai-hobby.net/item/01_1955/",
+			"ja": "MG 1/100 ジム・スナイパーII[クリアカラー]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4290,
 		"currency": "JPY",
@@ -18,76 +64,114 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"• 『機動戦士ガンダム 0080 ポケットの中の戦争』に登場したジム・コマンドのコロニー戦仕様をMG化。",
+			"• 『機動戦士ガンダム0080 ポケットの中の戦争』に登場したジム・コマンドのコロニー戦仕様をMG化。",
 			"• 特徴的なコロニー仕様のランドセルを新規造形で再現。",
 			"• MG準拠の新規造形でジム・コマンドの特徴的な機体形状を再現。",
 			"• 腰部のスムーズな可動や、 腕や脚など人体に近い可動域を実現し、幅広い可動領域で様々なポージングが可能。",
 			"• ブルパップ・マシンガンなどの武器が付属。"
 		],
 		"en": [
-			"• The colony battle version of the Jim Commando that appeared in \"Mobile Suit Gundam 0080: War in the Pocket\" has been made into an MG.",
-			"• Reproduce the characteristic colony specification school bag with new modeling.",
-			"• Reproduce Jim Command's characteristic aircraft shape with a new MG-compliant model.",
-			"• Smooth movement of the waist and a range of motion of the arms and legs similar to that of the human body is achieved, allowing for a wide range of motion and various poses.",
-			"• Weapons such as bullpup and machine gun are included."
+			"• The Gym Commando colony battle specification that appeared in \"MOBILE SUIT GUNDAM 0080 War in the Pocket\" has been made into MG.",
+			"• The characteristic colony specification school bag is reproduced with a new model.",
+			"• Reproduce the characteristic fuselage shape of Jim Command with a new MG-compliant model.",
+			"• Smooth movement of the waist and a range of motion close to the human body, such as arms and legs, are realized, and various poses can be performed in a wide range of motion."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ブルパップ・マシンガン×1",
-			"ビーム・サーベル×２",
-			"シールド×１",
-			"マガジン×2"
-		],
-		"en": [
-			"Bullpup machine gun x 1",
-			"Beam saber x2",
-			"Seal de x1",
-			"Magazine x 2"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×18",
-			"シール×1",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 18",
-			"Seal×1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1248/1000122231_1.jpg",
-		"/images/items/01_1248/1000122231_2.jpg",
-		"/images/items/01_1248/1000122231_3.jpg",
-		"/images/items/01_1248/1000122231_4.jpg",
-		"/images/items/01_1248/1000122231_5.jpg",
-		"/images/items/01_1248/1000122231_6.jpg",
-		"/images/items/01_1248/1000122231_7.jpg",
-		"/images/items/01_1248/1000122231_8.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ブルパップ・マシンガン",
+				"en": "Bullpup Machine Gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル×２",
+				"en": "• Magazine"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド×１",
+				"en": "• Molded products"
+			}
+		},
+		{
+			"name": {
+				"ja": "マガジン",
+				"en": "• Seal"
+			},
+			"count": 2
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 18
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000122231_1.jpg",
+				"path": "/images/items/01_1248/1000122231_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000122231_2.jpg",
+				"path": "/images/items/01_1248/1000122231_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000122231_3.jpg",
+				"path": "/images/items/01_1248/1000122231_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000122231_4.jpg",
+				"path": "/images/items/01_1248/1000122231_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000122231_5.jpg",
+				"path": "/images/items/01_1248/1000122231_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000122231_6.jpg",
+				"path": "/images/items/01_1248/1000122231_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000122231_7.jpg",
+				"path": "/images/items/01_1248/1000122231_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000122231_8.jpg",
+				"path": "/images/items/01_1248/1000122231_8.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1248/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"g-0080"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2461",
-		"01_2254",
-		"item-1000134463",
-		"01_1955"
-	],
-	"manualId": "0859"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1248/"
+	}
 }

@@ -5,6 +5,60 @@
 		"ja": "ＭＧ 1/100 ドワッジ改",
 		"en": "MG 1/100 Dowadge Kai"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-zz",
+			"url": "https://bandai-hobby.net/series/gundam-zz/",
+			"ja": "機動戦士ガンダムＺＺ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2231",
+			"url": "https://bandai-hobby.net/item/01_2231/",
+			"ja": "MG 1/100 ドワッジ"
+		},
+		{
+			"id": "01_2077",
+			"url": "https://bandai-hobby.net/item/01_2077/",
+			"ja": "ＨＧ 1/144 ガズ Ｒ／Ｌ"
+		},
+		{
+			"id": "01_1390",
+			"url": "https://bandai-hobby.net/item/01_1390/",
+			"ja": "HGUC 1/144 リゲルグ"
+		},
+		{
+			"id": "01_1211",
+			"url": "https://bandai-hobby.net/item/01_1211/",
+			"ja": "ＭＧ 1/100 強化型ダブルゼータガンダム Ver.Ka"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 6050,
 		"currency": "JPY",
@@ -17,31 +71,14 @@
 		"month": 11
 	},
 	"targetAge": 15,
-	"scale": "1/100",
-	"images": [
-		"/images/items/01_2503/153_3429.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2503/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"gundam-zz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2231",
-		"01_2077",
-		"01_1390",
-		"01_1211"
-	],
-	"manualId": "2544",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3429_o_1dh3i57nnl91pm163vpvn7hi23.jpg",
+				"path": "/images/items/01_2503/153_3429.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2503/"
 }

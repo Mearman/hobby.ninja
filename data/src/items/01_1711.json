@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ジェガン",
 		"en": "HGUC 1/144 Jegan"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5346",
+			"url": "https://bandai-hobby.net/item/01_5346/",
+			"ja": "HG 1/144 ジムIII(アクシズ・ショックイメージカラー)"
+		},
+		{
+			"id": "01_5210",
+			"url": "https://bandai-hobby.net/item/01_5210/",
+			"ja": "HG 1/144 ギラ・ドーガ(アクシズ・ショックイメージカラー)"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4408",
+			"url": "https://bandai-hobby.net/item/01_4408/",
+			"ja": "HG 1/144 サイコ・ドーガ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -17,35 +66,26 @@
 		"month": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム 逆襲のシャア」よりHGUCに待望の“ジェガン”がラインナップ ヒジ部の関節はABS素材により強度を確保 肩部には前後へのスイング機構を盛り込み、様々なポージングが可能 頭部センサーゴーグルはクリアパーツで再現 右腰部のラックからビームサーベル着脱可能、左腰部のグレネードラックは開閉可能 連邦軍やロンドベル隊、機体ナンバリングなど再現したマーキングリール付属"
 		],
 		"en": [
-			"HGUC's long-awaited \"Jegan \" from \" Mobile Suit Gundam: Char's Counterattack\" is now available. The joints at the elbows are made of ABS material to ensure strength. The shoulders include a back and forth swing mechanism, allowing for various poses. The head sensor goggles are reproduced with clear parts. The beam saber can be attached and removed from the rack on the right waist, and the grenade rack on the left waist can be opened and closed. Includes marking reel that reproduces the Federation Forces, the Rondobell Corps, and the aircraft numbering."
+			"HGUC's long-awaited \"Jegan\" from \"Mobile Suit Gundam: Char's Counterattack\" is now available. The joints at the elbows are made of ABS material to ensure strength. The shoulders include a back and forth swing mechanism, allowing for various poses. The head sensor goggles are reproduced with clear parts. The beam saber can be attached and removed from the rack on the right waist, and the grenade rack on the left waist can be opened and closed. Includes marking reel that reproduces the Federation Forces, the Rondobell Corps, and the aircraft numbering."
 		]
 	},
-	"images": [
-		"/images/items/01_1711/153_2620.jpg",
-		"/images/items/01_1711/155_2620.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1711/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5346",
-		"01_5210",
-		"01_4971",
-		"01_4408"
-	],
-	"manualId": "0411"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2620_s_bqpr0qq3iv1kj1gfcq6i3lfjovfi.jpg",
+				"path": "/images/items/01_1711/153_2620.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2620_s_3lrvx9mqdlscouq8ss81r4fakd1q.jpg",
+				"path": "/images/items/01_1711/155_2620.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1711/"
 }

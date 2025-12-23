@@ -5,6 +5,44 @@
 		"ja": "1/100 ガンダムフルアーマータイプ",
 		"en": "1/100 Gundam full armor type"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -17,33 +55,28 @@
 		"month": 4
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、1/100スケールで、MSVシリーズ　ガンダムフルアーマータイプが登場。",
-			"RX-78 ガンダムの超高性能換装タイプを1/100スケールで立体化しました。股関節部は左右開閉が可能、脚をハの字に開くことができます。足首は前後左右にスイング可能です。肩のロケット砲は可動式です。専用デカールがついています。"
+			"RX-78ガンダムの超高性能換装タイプを1/100スケールで立体化しました。股関節部は左右開閉が可能、脚をハの字に開くことができます。足首は前後左右にスイング可能です。肩のロケット砲は可動式です。専用デカールがついています。"
 		],
 		"en": [
 			"From \"Mobile Suit Gundam\", the MSV series Gundam full armor type appears in 1/100 scale.",
-			"The ultra-high performance replacement type of RX-78 Gundam is made into a 1/100 scale three-dimensional model. The hip joint can be opened and closed to the left and right, and the legs can be opened in a V-shape. The ankle can swing forward, backward, left and right. The rocket gun on the shoulder is movable. Comes with a special decal."
+			"The ultra-high performance replacement type of RX-78Gundam is made into a 1/100 scale three-dimensional model. The hip joint can be opened and closed to the left and right, and the legs can be opened in a V-shape. The ankle can swing forward, backward, left and right. The rocket gun on the shoulder is movable. Comes with a special decal."
 		]
 	},
-	"images": [
-		"/images/items/01_3178/153_4138.jpg",
-		"/images/items/01_3178/155_4138.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3178/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/155_4138_s_nlx4llb5bged5cpmroeabe6txio4.jpg",
+				"path": "/images/items/01_3178/155_4138.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_4138_s_aylg661lbi6sf9lqokb8gqiymyq2.jpg",
+				"path": "/images/items/01_3178/153_4138.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3178/"
 }

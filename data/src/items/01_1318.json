@@ -5,6 +5,50 @@
 		"ja": "HGBC 1/144 チェンジリングライフル",
 		"en": "HGBC 1/144 Changeling Rifle"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• GMIIIビームマスターに付属するチェンジリングライフルがカスタムパーツとなって登場！",
@@ -29,51 +72,67 @@
 			"• Multiple gun tip parts such as cannons, beams, and swords are included, allowing you to change into several forms!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"チェンジリングライフル×1",
-			"銃先パーツ各種"
+	"accessories": [
+		{
+			"name": {
+				"ja": "チェンジリングライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "銃先パーツ各種"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2247_s_z8jga0cq2l0tecq4hcapurni9vco.jpg",
+				"path": "/images/items/01_1318/153_2247.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2247_s_3vneyjbd3zkbrat9k7xmmpll8i6e.jpg",
+				"path": "/images/items/01_1318/155_2247.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2247_s_ckq323spa9pc4jq2la3nfrympgfs.jpg",
+				"path": "/images/items/01_1318/156_2247.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2247_s_tr484frmeb3q699hjeozkaukjy0a.jpg",
+				"path": "/images/items/01_1318/157_2247.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2247_s_klgs7s453ehjn0aft2b4xink9dq5.jpg",
+				"path": "/images/items/01_1318/158_2247.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2247_s_e29767vkaq0maxc4lt6j12dyag05.jpg",
+				"path": "/images/items/01_1318/159_2247.jpg"
+			}
 		],
-		"en": [
-			"Changeling rifle x 1",
-			"Various gun tip parts"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×2",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 2",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1318/153_2247.jpg",
-		"/images/items/01_1318/155_2247.jpg",
-		"/images/items/01_1318/156_2247.jpg",
-		"/images/items/01_1318/157_2247.jpg",
-		"/images/items/01_1318/158_2247.jpg",
-		"/images/items/01_1318/159_2247.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1318/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "0691"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1318/"
 }

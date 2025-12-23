@@ -5,6 +5,44 @@
 		"ja": "1/100 フルメカニクス ガンダムバルバトスルプス[クリアカラー]",
 		"en": "1/100 Full Mechanics Gundam Barbatos Lupus [Clear Color]"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5469",
+			"url": "https://bandai-hobby.net/item/01_5469/",
+			"ja": "MG 1/100 ガンダムヴィダール"
+		},
+		{
+			"id": "01_4994",
+			"url": "https://bandai-hobby.net/item/01_4994/",
+			"ja": "MGSD ガンダムバルバトス"
+		},
+		{
+			"id": "item-1000172977",
+			"url": "https://p-bandai.jp/item/item-1000172977/",
+			"ja": "ガンダムデカールＤＸ 07 機動戦士ガンダム 鉄血のオルフェンズシリーズ用"
+		},
+		{
+			"id": "01_4255",
+			"url": "https://bandai-hobby.net/item/01_4255/",
+			"ja": "MG 1/100 ガンダムバルバトス [リサーキュレーションカラー/ネオンブルー]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 8
 	},
 	"targetAge": 8,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
@@ -28,25 +65,14 @@
 			"1/100 Full Mechanics Gundam Barbatos Lupus now available in event-limited clear color!"
 		]
 	},
-	"images": [
-		"/images/items/01_1947/153_2880.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1947/",
-	"brandIds": [],
-	"seriesIds": [
-		"tekketsu"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5469",
-		"01_4994",
-		"item-1000172977",
-		"01_4255"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2880_s_mm4l6kdoqbpq966l8namxfij5ery.jpg",
+				"path": "/images/items/01_1947/153_2880.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1947/"
 }

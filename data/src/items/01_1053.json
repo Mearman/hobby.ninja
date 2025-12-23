@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC 1/144 イフリート・シュナイド",
-		"en": "HGUC 1/144 Ifrit Schneid"
+		"en": "HG 1/144 EFREET Schneid"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]",
+			"en": "MOBILE SUIT GUNDAM UC (Unicorn)"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,64 +51,94 @@
 		"day": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 『機動戦士ガンダム UC episode 4「重力の井戸の底で」』に登場するジオン残党軍のMS「イフリート・シュナイド」がついに初HGキット化！",
+			"• 『機動戦士ガンダムUC episode 4「重力の井戸の底で」』に登場するジオン残党軍のMS「イフリート・シュナイド」がついに初HGキット化！",
 			"• 機体各所に装備された14本のヒート・ダートは全て取り外しが可能となっており、成形色で赤熱状態も再現可能！",
 			"• イフリート系MSの特徴的な頭部や胸部などの造形が精密に再現され、モノアイは独立可動、動力パイプには軟質素材が採用されている。"
 		],
 		"en": [
-			"• The Zeon remnant army's MS \"Ifrit Schneid \" that appears in \" Mobile Suit Gundam UC episode 4 \" At the Bottom of the Gravity Well\" is finally available as the first HGKit!",
-			"• All 14 heat darts installed in various parts of the aircraft can be removed, and the red hot state can be reproduced by changing the molding color!",
-			"• The characteristic head and chest shapes of Ifrit-based MS are precisely reproduced, the mono-eye is movable independently, and the power pipe is made of soft material."
+			"• The MS \"Ifrit Schneid\" of the Zeon Remnant Army, who appears in \"MOBILE SUIT GUNDAM UC Episode 4 \"At the Bottom of the Well of Gravity\", is finally available as the first HG kit!",
+			"• All 14 heat dirt installed in various parts of the fuselage are removable, and the red-hot state can be reproduced with the molding color!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ヒート・ダートｘ14",
-			"手持ち用ヒート・ダート×2",
-			"ジャイアント・バズｘ1"
-		],
-		"en": [
-			"Heat dart x14",
-			"Hand-held heat dart x 2",
-			"Giant Buzz x1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×９",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 9",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1053/1000116115_1.jpg",
-		"/images/items/01_1053/1000116115_2.jpg",
-		"/images/items/01_1053/1000116115_3.jpg",
-		"/images/items/01_1053/1000116115_4.jpg",
-		"/images/items/01_1053/1000116115_5.jpg",
-		"/images/items/01_1053/1000116115_6.jpg",
-		"/images/items/01_1053/1000116115_7.jpg",
-		"/images/items/01_1053/01_1053_inst_0.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヒート・ダート",
+				"en": "• Heat Dirt"
+			},
+			"count": 14
+		},
+		{
+			"name": {
+				"ja": "手持ち用ヒート・ダート",
+				"en": "• Handheld Heat Dirt"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ジャイアント・バズ",
+				"en": "• Giant Buzz"
+			},
+			"count": 1
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品×９"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000116115_7.jpg",
+				"path": "/images/items/01_1053/1000116115_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000116115_1.jpg",
+				"path": "/images/items/01_1053/1000116115_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000116115_2.jpg",
+				"path": "/images/items/01_1053/1000116115_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000116115_3.jpg",
+				"path": "/images/items/01_1053/1000116115_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000116115_4.jpg",
+				"path": "/images/items/01_1053/1000116115_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000116115_5.jpg",
+				"path": "/images/items/01_1053/1000116115_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000116115_6.jpg",
+				"path": "/images/items/01_1053/1000116115_6.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1053/",
-	"brandIds": [],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
-	"manualId": "0473"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1053/"
+	}
 }

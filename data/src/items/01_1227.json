@@ -5,6 +5,43 @@
 		"ja": "ピカちんキット００ ポチロー",
 		"en": "Pikachin Kit00 Pochiro"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -28,50 +65,83 @@
 		],
 		"en": [
 			"• A reliable companion robot!",
-			"• Pochiro that appears on the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!",
-			"• Pochiro is a companion robot who is always with you!",
-			"• It's a reliable companion who also plays an active role as an invention navigator!",
+			"• Pochiro from the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!",
+			"• Pochiro is a robot friend who is always with you!",
+			"• A reliable companion who also plays an active role as an invention navigator!",
 			"• It also comes with a Pikachin sheet that can be bound into the Pikachin Encyclopedia!"
 		]
 	},
-	"contents": {
-		"ja": [
-			"ポチロー×1",
-			"（成形品×5）",
-			"ピカちんQRコード×1",
-			"ホイルシール×1",
-			"ピカちんシート×1"
+	"contents": [
+		{
+			"name": {
+				"ja": "ポチロー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "（成形品"
+			},
+			"count": 5,
+			"unit": {
+				"ja": "）"
+			}
+		},
+		{
+			"name": {
+				"ja": "ピカちんQRコード"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ピカちんシート"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2160_s_90valuhoqv0et1rabwer6kst6hio.jpg",
+				"path": "/images/items/01_1227/153_2160.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2160_s_91bce6300fko58d9q8im46ho43vc.jpg",
+				"path": "/images/items/01_1227/155_2160.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2160_s_iovqrpfrrviroze7aruh3ytsggc9.jpg",
+				"path": "/images/items/01_1227/156_2160.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2160_s_ke0vxrvhbam31840zq0vnil3gslg.jpg",
+				"path": "/images/items/01_1227/157_2160.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2160_s_i9uq1t832fyqszqyg7n91a8bph24.jpg",
+				"path": "/images/items/01_1227/158_2160.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2160_s_ugl0gd7fxb4xobpgofcoq45po51m.jpg",
+				"path": "/images/items/01_1227/159_2160.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2160_s_7tkcqx2osiv91wr6ve23hyhggslg.jpg",
+				"path": "/images/items/01_1227/189_2160.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2160_s_bmr07scqt02pi8v8bkdruejjzyxy.jpg",
+				"path": "/images/items/01_1227/190_2160.jpg"
+			}
 		],
-		"en": [
-			"Pochiro×1",
-			"(molded product x 5)",
-			"Pikachin QR code x 1",
-			"Foil Seal×1",
-			"Pikachin sheet x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1227/153_2160.jpg",
-		"/images/items/01_1227/155_2160.jpg",
-		"/images/items/01_1227/156_2160.jpg",
-		"/images/items/01_1227/157_2160.jpg",
-		"/images/items/01_1227/158_2160.jpg",
-		"/images/items/01_1227/159_2160.jpg",
-		"/images/items/01_1227/189_2160.jpg",
-		"/images/items/01_1227/190_2160.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1227/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1227/"
 }

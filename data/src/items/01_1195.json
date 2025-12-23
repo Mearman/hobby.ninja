@@ -5,6 +5,44 @@
 		"ja": "1/12 キャプテン・ファズマ",
 		"en": "1/12 Captain Phasma"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3515",
+			"url": "https://bandai-hobby.net/item/01_3515/",
+			"ja": "1/12 ザ・マンダロリアン(ベスカーアーマー)"
+		}
+	],
+	"scale": "1/12",
 	"price": {
 		"amount": 4620,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 16
 	},
 	"targetAge": 15,
-	"scale": "1/12",
 	"description": {
 		"ja": [
 			"武装を新たに銀色の戦士が再び！",
@@ -35,70 +72,137 @@
 			"Total height: approx. 167mm"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用ディスプレイベース×1",
-			"ファズマ専用ブラスター×1",
-			"新規バトン×2種（伸び×1・収縮×1）",
-			"新規バトン持ち手（右）×1",
-			"武器持ち手（右）×1",
-			"平手（左右）×各1",
-			"こぶし（左右）×各1",
-			"クローク×2種（成形品×1・布×1）"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ファズマ専用ブラスター"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "新規バトン"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "新規バトン持ち手（右）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "武器持ち手（右）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "平手（左右）×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "こぶし（左右）×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "クローク"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 8
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "クローク用ラインシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書×１"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121018_1.jpg",
+				"path": "/images/items/01_1195/1000121018_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121018_2.jpg",
+				"path": "/images/items/01_1195/1000121018_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121018_3.jpg",
+				"path": "/images/items/01_1195/1000121018_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121018_4.jpg",
+				"path": "/images/items/01_1195/1000121018_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121018_5.jpg",
+				"path": "/images/items/01_1195/1000121018_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121018_6.jpg",
+				"path": "/images/items/01_1195/1000121018_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121018_7.jpg",
+				"path": "/images/items/01_1195/1000121018_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121018_8.jpg",
+				"path": "/images/items/01_1195/1000121018_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121018_9.jpg",
+				"path": "/images/items/01_1195/1000121018_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121018_10.jpg",
+				"path": "/images/items/01_1195/1000121018_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121018_11.jpg",
+				"path": "/images/items/01_1195/1000121018_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000121018_12.jpg",
+				"path": "/images/items/01_1195/1000121018_12.jpg"
+			}
 		],
-		"en": [
-			"Dedicated display base x 1",
-			"Phasma exclusive blaster x 1",
-			"New baton x 2 types (extension x 1, contraction x 1)",
-			"New baton holder (right) x 1",
-			"Weapon holder (right) x 1",
-			"Hirate (left and right) x 1 each",
-			"Fist (left and right) x 1 each",
-			"Cloak x 2 types (molded product x 1, cloth x 1)"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×8",
-			"水転写式デカール×1",
-			"マーキングシール×1",
-			"クローク用ラインシール×1",
-			"取扱説明書×１"
-		],
-		"en": [
-			"Molded product x 8",
-			"Water transfer decal x 1",
-			"MarkingSeal×1",
-			"Cloak line Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1195/1000121018_1.jpg",
-		"/images/items/01_1195/1000121018_10.jpg",
-		"/images/items/01_1195/1000121018_11.jpg",
-		"/images/items/01_1195/1000121018_12.jpg",
-		"/images/items/01_1195/1000121018_2.jpg",
-		"/images/items/01_1195/1000121018_3.jpg",
-		"/images/items/01_1195/1000121018_4.jpg",
-		"/images/items/01_1195/1000121018_5.jpg",
-		"/images/items/01_1195/1000121018_6.jpg",
-		"/images/items/01_1195/1000121018_7.jpg",
-		"/images/items/01_1195/1000121018_8.jpg",
-		"/images/items/01_1195/1000121018_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1195/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3515"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1195/"
 }

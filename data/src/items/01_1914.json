@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "ガンダムベース限定 アクションベース1 [ブルー]",
-		"en": "Gundam Base Limited Action Base 1 [Blue]"
+		"en": "THE GUNDAM BASE LIMITED ACTION BASE 1 ［BLUE］"
 	},
+	"brands": [
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース",
+			"en": "ACTION BASE"
+		},
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5934",
+			"url": "https://bandai-hobby.net/item/01_5934/",
+			"ja": "アクションベース7 [クリアカラー] 機動戦士Gundam GQuuuuuuXシールセット"
+		},
+		{
+			"id": "01_5256",
+			"url": "https://bandai-hobby.net/item/01_5256/",
+			"ja": "アクションベース6 [クリアカラー] ミラーシールセット"
+		},
+		{
+			"id": "01_5258",
+			"url": "https://bandai-hobby.net/item/01_5258/",
+			"ja": "アクションベース7 [クリアカラー] ミラーシールセット"
+		}
+	],
 	"price": {
 		"amount": 605,
 		"currency": "JPY",
@@ -23,29 +61,24 @@
 			"アクションベース１が鮮やかなブルーのガンダムベース限定カラーで登場。"
 		],
 		"en": [
-			"A limited edition product from the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"Action Base 1 is now available in a bright blue Gundam Base limited color."
+			"For GUNPLA fans around the world, this is a limited edition product of the official GUNPLA complex \"GUNDAM Base\". ACTION BASE 1 is now available in a bright blue GUNDAM base exclusive color."
 		]
 	},
-	"images": [
-		"/images/items/01_1914/1000126808_1.jpg",
-		"/images/items/01_1914/1000126808_2.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126808_1.jpg",
+				"path": "/images/items/01_1914/1000126808_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126808_2.jpg",
+				"path": "/images/items/01_1914/1000126808_2.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1914/",
-	"brandIds": [
-		"actionbase"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5934",
-		"01_5256",
-		"01_5258"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1914/"
 	}
 }

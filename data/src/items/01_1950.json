@@ -5,6 +5,50 @@
 		"ja": "RG 1/144 シナンジュ[クリアカラー]",
 		"en": "RG 1/144 Sinanju [Clear color]"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1259",
+			"url": "https://bandai-hobby.net/item/01_1259/",
+			"ja": "RG 1/144 ユニコーンガンダム2号機 バンシィ・ノルン"
+		},
+		{
+			"id": "01_1085",
+			"url": "https://bandai-hobby.net/item/01_1085/",
+			"ja": "RG 1/144 ユニコーンガンダム"
+		},
+		{
+			"id": "01_1919",
+			"url": "https://bandai-hobby.net/item/01_1919/",
+			"ja": "RG 1/144 ガンダムベース限定 シナンジュ [メタリックグロスインジェクション]"
+		},
+		{
+			"id": "item-1000225937",
+			"url": "https://p-bandai.jp/item/item-1000225937/",
+			"ja": "ＲＧ 1/144 シナンジュ用 拡張セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 11
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
@@ -28,28 +71,14 @@
 			"RG Sinanju is now available in event-limited clear color!"
 		]
 	},
-	"images": [
-		"/images/items/01_1950/153_2883.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1950/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1259",
-		"01_1085",
-		"01_1919",
-		"item-1000225937"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2883_s_m4tp3e0yc1n7yzakc2er6lep6dqj.jpg",
+				"path": "/images/items/01_1950/153_2883.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "0670"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1950/"
 }

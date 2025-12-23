@@ -5,6 +5,43 @@
 		"ja": "BB戦士361 于禁ガンダム",
 		"en": "BB Senshi 361 Yukin Gundam"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -20,29 +57,28 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"• 三国伝外伝第11弾、曹操軍武将「于禁（うきん）」登場。 • 先端をあらゆる装備に変え3種の武器を再現 成形品×4、ホイルシール×1、組立説明書×1"
+			"• 三国伝外伝第11弾、曹操軍武将「于禁（うきん）」登場。 ■先端をあらゆる装備に変え3種の武器を再現 成形品×4、ホイルシール×1、組立説明書×1"
 		],
 		"en": [
-			"• The 11th installment of the Sangokuden Gaiden introduces Cao Cao's military commander \"Ukin\". • Reproduce 3 types of weapons by changing the tip to any equipment Molded product x 4, foil seal x 1, assembly manual x 1"
+			"• In the 11th installment of the Three Kingdoms Gaiden, Cao Cao's military commander \"Yu Jin\" appears. ■Reproduce 3 types of weapons by changing the tip to any equipment Molded product x 4, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_1743/153_2670.jpg",
-		"/images/items/01_1743/155_2670.jpg",
-		"/images/items/01_1743/156_2670.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1743/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2670_s_mjxh8qpsenx6pzxd643nztge1zbu.jpg",
+				"path": "/images/items/01_1743/153_2670.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2670_s_rc05icuytz3va94rsa7panoadzcp.jpg",
+				"path": "/images/items/01_1743/155_2670.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2670_s_qa6d0cr2mrdujcej6ioxpjr1ihlf.jpg",
+				"path": "/images/items/01_1743/156_2670.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1743/"
 }

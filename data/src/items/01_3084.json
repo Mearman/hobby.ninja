@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "1/144 ガンダム",
-		"en": "1/144 Gundam"
+		"en": "1/144 GUNDAM"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"manual": {
+		"id": "1849",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1849"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 330,
 		"currency": "JPY",
@@ -17,32 +60,29 @@
 		"month": 7
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"シールド、ビーム・ライフルを装備しています。・ビーム・サーベルは使用時と背面装着時の2種計４本が付いています。"
 		],
 		"en": [
-			"Seal and equipped with a beam rifle. -Comes with 4 beam sabers in 2 types: when in use and when attached to the back."
+			"It is equipped with a shield and a beam rifle. ・ There are a total of 4 beam sabers in 2 types, one when used and one when attached to the back."
 		]
 	},
-	"images": [
-		"/images/items/01_3084/1000091520_1.jpg",
-		"/images/items/01_3084/1000091520_2.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000091520_1.jpg",
+				"path": "/images/items/01_3084/1000091520_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000091520_2.jpg",
+				"path": "/images/items/01_3084/1000091520_2.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3084/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	],
-	"manualId": "1849"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_3084/"
+	}
 }

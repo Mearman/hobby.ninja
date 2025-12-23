@@ -2,9 +2,54 @@
 	"id": "01_2460",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット ガンダムベース限定 RX-78-3 G-3 ガンダム(クロスシルエットフレームVer.)",
-		"en": "SD Gundam Cross Silhouette Gundam Base Limited RX-78-3 G-3 Gundam (Cross Silhouette Frame Ver.)"
+		"ja": "SDガンダム クロスシルエット ガンダムベース限定 RX-78-3 G-3ガンダム(クロスシルエットフレームVer.)",
+		"en": "SD GUNDAM CROSS SILHOUETTE THE GUNDAM BASE LIMITED RX-78-3 G-3GUNDAM(CROSS SILHOUETTE FRAME Ver.)"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット",
+			"en": "SD GUNDAM CROSS SILHOUETTE"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4132",
+			"url": "https://bandai-hobby.net/item/01_4132/",
+			"ja": "SDガンダム クロスシルエット ガンダムベース限定 RX-78-2 ガンダム(クロスシルエットフレームVer.)[ガンダムベースカラー]"
+		},
+		{
+			"id": "01_3495",
+			"url": "https://bandai-hobby.net/item/01_3495/",
+			"ja": "ハローキティ/ザクII[SDガンダムクロスシルエット][クリアカラー]"
+		},
+		{
+			"id": "01_3321",
+			"url": "https://bandai-hobby.net/item/01_3321/",
+			"ja": "SDガンダムクロスシルエット RX-78F00 ガンダム"
+		},
+		{
+			"id": "01_2806",
+			"url": "https://bandai-hobby.net/item/01_2806/",
+			"ja": "SDガンダムクロスシルエット RX-78-2 ガンダム＆シャア専用ザクII"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -20,38 +65,37 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"2つのシルエットが楽しめる「SD ガンダム クロスシルエット」シリーズから、G-3カラーの成形色を使用したスペシャル仕様のガンダムが登場！",
-			"• 特徴的なカラーリングが再現され、同梱されている「SD ガンダム クロスシルエットフレーム」により、高頭身化と広範囲の可動域が実現！"
+			"2つのシルエットが楽しめる「SDガンダム クロスシルエット」シリーズから、G-3カラーの成形色を使用したスペシャル仕様のガンダムが登場！",
+			"• 特徴的なカラーリングが再現され、同梱されている「SDガンダム クロスシルエットフレーム」により、高頭身化と広範囲の可動域が実現！"
 		],
 		"en": [
-			"From the \"SD Gundam Cross Silhouette\" series, where you can enjoy two silhouettes, a special version of Gundam using G-3 color molding is now available!",
-			"• The characteristic coloring has been reproduced, and the included \"SD Gundam Cross Silhouette Frame\" allows for a tall head and wide range of motion!"
+			"From the \"SD GUNDAM CROSS SILHOUETTE\" series, where you can enjoy two silhouettes, a special specification GUNDAM using the G-3 color molding color is now available!",
+			"• The characteristic coloring is reproduced, and the included \"SD GUNDAM CROSS SILHOUETTE frame\" realizes a high head and body and a wide range of motion!"
 		]
 	},
-	"images": [
-		"/images/items/01_2460/1000147371_1.jpg",
-		"/images/items/01_2460/1000147371_2.jpg",
-		"/images/items/01_2460/1000147371_3.jpg",
-		"/images/items/01_2460/1000147371_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147371_1.jpg",
+				"path": "/images/items/01_2460/1000147371_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147371_2.jpg",
+				"path": "/images/items/01_2460/1000147371_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147371_3.jpg",
+				"path": "/images/items/01_2460/1000147371_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000147371_4.jpg",
+				"path": "/images/items/01_2460/1000147371_4.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2460/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4132",
-		"01_3495",
-		"01_3321",
-		"01_2806"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2460/"
 	}
 }

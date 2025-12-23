@@ -5,6 +5,60 @@
 		"ja": "ＨＧ 1/144 アトラスガンダム（GUNDAM THUNDERBOLT BANDIT FLOWER Ver.）",
 		"en": "HG 1/144 Atlas Gundam (GUNDAM THUNDERBOLT BANDIT FLOWER Ver.)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "thunderbolt",
+			"url": "https://bandai-hobby.net/series/thunderbolt/",
+			"ja": "機動戦士ガンダム サンダーボルト"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4287",
+			"url": "https://bandai-hobby.net/item/01_4287/",
+			"ja": "HG 1/144 ガンダムベース限定 フルアーマー・ガンダム VS サイコ・ザク セット(機動戦士ガンダム サンダーボルト10周年記念Ver.)"
+		},
+		{
+			"id": "01_1111",
+			"url": "https://bandai-hobby.net/item/01_1111/",
+			"ja": "ＭＧ 1/100 高機動型ザク “サイコ・ザク” （GUNDAM THUNDERBOLT Ver.） ラストセッションVer."
+		},
+		{
+			"id": "01_1112",
+			"url": "https://bandai-hobby.net/item/01_1112/",
+			"ja": "ＭＧ 1/100 フルアーマー・ガンダム（GUNDAM THUNDERBOLT版） ラストセッションVer．"
+		},
+		{
+			"id": "01_998",
+			"url": "https://bandai-hobby.net/item/01_998/",
+			"ja": "HG 1/144 陸戦型ガンダムS型（GUNDAM THUNDERBOLT Ver.）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -17,31 +71,14 @@
 		"month": 1
 	},
 	"targetAge": 15,
-	"scale": "1/144",
-	"images": [
-		"/images/items/01_1252/153_2184.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1252/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"thunderbolt"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4287",
-		"item-1000115181",
-		"item-1000115178",
-		"01_998"
-	],
-	"manualId": "2631",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2184_o_1bu7ruege5e174qn92isrquh23.jpg",
+				"path": "/images/items/01_1252/153_2184.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1252/"
 }

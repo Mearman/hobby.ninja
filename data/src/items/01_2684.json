@@ -5,6 +5,44 @@
 		"ja": "ＨＧ 1/144 バルギル",
 		"en": "HG 1/144 Bargil"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6915",
+			"url": "https://bandai-hobby.net/item/01_6915/",
+			"ja": "HG 1/144 量産型ルカ専用ザク"
+		},
+		{
+			"id": "01_6872",
+			"url": "https://bandai-hobby.net/item/01_6872/",
+			"ja": "HG 1/144 シャリア専用リック・ドム(GQ)"
+		},
+		{
+			"id": "01_6873",
+			"url": "https://bandai-hobby.net/item/01_6873/",
+			"ja": "HG 1/144 グスタフ･カール００型"
+		},
+		{
+			"id": "01_6865",
+			"url": "https://bandai-hobby.net/item/01_6865/",
+			"ja": "HG 1/144 GQuuuuuuX(エンディミオン・ユニット覚醒時)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -17,27 +55,14 @@
 		"month": 4
 	},
 	"targetAge": 8,
-	"scale": "1/144",
-	"images": [
-		"/images/items/01_2684/153_3607.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2684/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6915",
-		"01_6872",
-		"01_6873",
-		"01_6865"
-	],
-	"manualId": "2585",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3607_o_1dsc1hbb2vtcpso1ded63h14es23.jpg",
+				"path": "/images/items/01_2684/153_3607.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2684/"
 }

@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ブルーディスティニー3号機",
 		"en": "HGUC 1/144 Blue Destiny Unit 3"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -17,7 +66,6 @@
 		"month": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"SS用ソフト「機動戦士ガンダム外伝III 裁かれし者」の主人公機“ブルーディスティニー3号機”がHGUCでキット化。股関軸の可動により自然な膝立ちポーズが可能。肩の可動軸は前後上下に可動、リアルな射撃シーンを再現。スネの外側にあるサーベル・ラックは、パーツの付け替えで展開、内部メカディテールも再現。ビーム・ライフル、ビーム・サーベル×2、シールドが付属。"
@@ -26,28 +74,26 @@
 			"The main character machine “Blue Destiny Unit 3” from the SS software “Mobile Suit Gundam Gaiden III: The Judged” has been made into a kit by HGUC. The movable crotch axis allows for a natural kneeling pose. The movable axis of the shoulder can be moved forward and backward, up and down, reproducing realistic shooting scenes. The saber rack on the outside of the shank can be expanded by replacing parts, and the internal mechanical details are also reproduced. Beam rifle, beam saber x 2, and Seal are included."
 		]
 	},
-	"images": [
-		"/images/items/01_1666/153_2574.jpg",
-		"/images/items/01_1666/155_2574.jpg",
-		"/images/items/01_1666/156_2574.jpg",
-		"/images/items/01_1666/157_2574.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1666/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
-	"manualId": "0264"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2574_s_20ry2ov4kc6otvd557h36g8fr08e.jpg",
+				"path": "/images/items/01_1666/153_2574.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2574_s_gvtep5ikjxpsrce31vunaxno91d3.jpg",
+				"path": "/images/items/01_1666/155_2574.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2574_s_1md95w26dfxfoo439j47ueo176bo.jpg",
+				"path": "/images/items/01_1666/156_2574.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2574_s_l4iykjvuiw5lcxjegpqjsoott8yp.jpg",
+				"path": "/images/items/01_1666/157_2574.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1666/"
 }

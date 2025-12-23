@@ -5,6 +5,43 @@
 		"ja": "SD 三国創傑伝 黄忠ガンダムデュナメス",
 		"en": "SD Sangoku Soketsuden Hwang Chung Gundam Dynames"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "soketsuden",
+			"url": "https://bandai-hobby.net/series/soketsuden/",
+			"ja": "三国創傑伝"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2642",
+			"url": "https://bandai-hobby.net/item/01_2642/",
+			"ja": "SD 三国創傑伝 天覇曹操ウイングガンダム"
+		},
+		{
+			"id": "01_2614",
+			"url": "https://bandai-hobby.net/item/01_2614/",
+			"ja": "SD 三国創傑伝 典韋マスターガンダム"
+		},
+		{
+			"id": "01_2615",
+			"url": "https://bandai-hobby.net/item/01_2615/",
+			"ja": "SD 三国創傑伝 徐晃ガンダムデスサイズ"
+		},
+		{
+			"id": "01_2643",
+			"url": "https://bandai-hobby.net/item/01_2643/",
+			"ja": "SD 三国創傑伝 甘寧クロスボーンガンダム"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -20,7 +57,7 @@
 	"description": {
 		"ja": [
 			"【2021年春、日本展開開始！！】",
-			"• 『三国志』をベースにしたSD ガンダムが装いも新たに登場！",
+			"• 『三国志』をベースにしたSDガンダムが装いも新たに登場！",
 			"• 進化したプロポーションとパーツ分割へのこだわりにより、組み立てただけでSD史上最高峰の色分けを実現。",
 			"• 一新された頭身バランスと各所の関節構造により、躍動感あふれるポージングを再現！",
 			"• ガンダムデュナメスを彷彿とさせる、頭部ガンカメラの展開ギミックも再現。",
@@ -28,48 +65,69 @@
 		],
 		"en": [
 			"[Spring 2021, main rollout begins! ! ]",
-			"• SD Gundam based on \"Romance of the Three Kingdoms\" now has a new look!",
-			"• With advanced proportions and attention to parts division, we have achieved the highest color separation in SD history using just the assembly.",
-			"• The all-new head and body balance and joint structure in various parts allow for dynamic poses!",
+			"• SDGundam based on “Romance of the Three Kingdoms” has a new look!",
+			"• Thanks to the advanced proportions and attention to part division, we have achieved the highest color separation in SD history using just the assembly.",
+			"• Reproduce dynamic poses with a completely new head and body balance and joint structure in various places!",
 			"• The deployment gimmick of the head gun camera, reminiscent of Gundam Dynames, is also reproduced.",
-			"• By combining the sniper rifle and short gun, you can hold them with both hands!"
+			"• By combining sniper rifles and short guns, you can carry them with both hands!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"龍眼（狙撃銃）×1",
-			"ＤW02（短銃）×2",
-			"翠雲（盾）×1",
-			"メモリ×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "龍眼（狙撃銃）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ＤW02（短銃）"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "翠雲（盾）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "メモリ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3288_s_ubcnb6qx7qjtho5spwi6n75tr1hv.jpg",
+				"path": "/images/items/01_2351/153_3288.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3288_s_6jqisbdxjjd7n4qqni7djgd9mddb.jpg",
+				"path": "/images/items/01_2351/155_3288.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3288_s_4a46xr3zugwxy0ka5w1i3wgwxc10.jpg",
+				"path": "/images/items/01_2351/156_3288.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3288_s_89b6p1iuln19l8kh2tihpdg7cgau.jpg",
+				"path": "/images/items/01_2351/157_3288.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3288_s_8df10erd9oehjuehbjdws3bbyej2.jpg",
+				"path": "/images/items/01_2351/158_3288.jpg"
+			}
 		],
-		"en": [
-			"Longan (sniper rifle) x 1",
-			"DW02 (short gun) x 2",
-			"Green cloud (shield) x1",
-			"Memory x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2351/153_3288.jpg",
-		"/images/items/01_2351/155_3288.jpg",
-		"/images/items/01_2351/156_3288.jpg",
-		"/images/items/01_2351/157_3288.jpg",
-		"/images/items/01_2351/158_3288.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2351/",
-	"brandIds": [],
-	"seriesIds": [
-		"soketsuden"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2642",
-		"01_2614",
-		"01_2615",
-		"01_2643"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2351/"
 }

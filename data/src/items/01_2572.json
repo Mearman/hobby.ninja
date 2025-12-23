@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 eEXM-17 アルト[パープル]",
 		"en": "30MM 1/144 eEXM-17 Alto [Purple]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1408,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 25
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ますます拡がる30MMシリーズのカラーバリエーション！アルトにパープルが登場！",
@@ -26,46 +68,69 @@
 		],
 		"en": [
 			"Expanding color variations of the 30MM series! Purple is now available on Alto!",
-			"• Submachine gun, icon mechanism, backpack, knuckles, and MarkingSeal are included."
+			"• Includes submachine gun, icon mecha, backpack, knuckles, and MarkingSeal."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"サブマシンガン×1",
-			"アイコンメカ×1",
-			"バックパック×1",
-			"ナックル×1",
-			"マーキングシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "サブマシンガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アイコンメカ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バックパック"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ナックル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3497_s_wbbc82b1ca2cuiej25ft2t38zvgd.jpg",
+				"path": "/images/items/01_2572/153_3497.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3497_s_584036p878c92tnt0staqnvz3r3a.jpg",
+				"path": "/images/items/01_2572/155_3497.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3497_s_q21yr6sxbd69dxsczzq0hfkebghq.jpg",
+				"path": "/images/items/01_2572/156_3497.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3497_s_yzuf263w37ka01lr5w5czygbx7wn.jpg",
+				"path": "/images/items/01_2572/157_3497.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3497_s_5vib0adm7zf4dh55w053oixybvzo.jpg",
+				"path": "/images/items/01_2572/158_3497.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3497_s_on0xb8815hid6i49vmdlcrxj3yfa.jpg",
+				"path": "/images/items/01_2572/159_3497.jpg"
+			}
 		],
-		"en": [
-			"Submachine gun x 1",
-			"Icon mecha x 1",
-			"Backpack x 1",
-			"Knuckle x 1",
-			"MarkingSeal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2572/153_3497.jpg",
-		"/images/items/01_2572/155_3497.jpg",
-		"/images/items/01_2572/156_3497.jpg",
-		"/images/items/01_2572/157_3497.jpg",
-		"/images/items/01_2572/158_3497.jpg",
-		"/images/items/01_2572/159_3497.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2572/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3669"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2572/"
 }

@@ -5,6 +5,49 @@
 		"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)",
 		"en": "HGBD Gundam Base Limited Mobile Doll Sara (Mirror Mission Ver.)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		},
+		{
+			"id": "01_2430",
+			"url": "https://bandai-hobby.net/item/01_2430/",
+			"ja": "HGBD 1/144 ガンダムベース限定 ガンダムダブルオーダイバー［トランザムクリア］"
+		}
+	],
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -30,35 +73,34 @@
 			"From \"Gundam Build Divers\", the mobile doll Sara is now available as a mirror mission version with black coloring and is available as a Gundam base limited item!",
 			"• Various hand parts are included.",
 			"• The skirt is two-layered and can be moved flexibly!",
-			"• Can be reproduced by replacing it with two states: \"MS state \" and \" real\"!",
+			"• Can be reproduced by replacing it with two states: \"MS state\" and \"real\"!",
 			"• A special pedestal is also included, allowing you to create cute poses!"
 		]
 	},
-	"images": [
-		"/images/items/01_2518/153_3994.jpg",
-		"/images/items/01_2518/155_3994.jpg",
-		"/images/items/01_2518/156_3994.jpg",
-		"/images/items/01_2518/157_3994.jpg",
-		"/images/items/01_2518/158_3994.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2518/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2403",
-		"01_2430"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3994_s_2r54rbmybs6ytxaqa78aspp48qbx.jpg",
+				"path": "/images/items/01_2518/153_3994.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3994_s_skb3gvsqcttppsynf6168p25dud7.jpg",
+				"path": "/images/items/01_2518/155_3994.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3994_s_7q036ubbj0nhnvno36cojfo8i2ps.jpg",
+				"path": "/images/items/01_2518/156_3994.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3994_s_jd7daixnlzxntmp2lwryk3s17xt8.jpg",
+				"path": "/images/items/01_2518/157_3994.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3994_s_tfh47ahl1xgapyh2u2lj8q3t8d8l.jpg",
+				"path": "/images/items/01_2518/158_3994.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2518/"
 }

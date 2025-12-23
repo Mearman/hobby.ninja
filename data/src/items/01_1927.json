@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 ガンダムベース限定 トランザムライザー [クリアカラー]",
-		"en": "MG 1/100 Gundam Base Limited Trans Am Riser [Clear Color]"
+		"en": "MG 1/100 THE GUNDAM BASE LIMITED TRANS-AM RAISER ［CLEAR COLOR]"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]",
+			"en": "MOBILE SUIT GUNDAM OO"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "item-1000216602",
+			"url": "https://p-bandai.jp/item/item-1000216602/",
+			"ja": "ＭＧ 1/100 ガンダムアストレア＋プロトＧＮツインブロードブレイド"
+		},
+		{
+			"id": "01_5526",
+			"url": "https://bandai-hobby.net/item/01_5526/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムエクシア [クリアカラー]"
+		},
+		{
+			"id": "01_5102",
+			"url": "https://bandai-hobby.net/item/01_5102/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムナドレ"
+		},
+		{
+			"id": "01_4422",
+			"url": "https://bandai-hobby.net/item/01_4422/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムキュリオス[クリアカラー］"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 7810,
 		"currency": "JPY",
@@ -17,39 +50,46 @@
 		"month": 9
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
 			"マスターグレードのトランザムライザーが、トランザムを発動したイメージのクリアカラーで登場。"
 		],
 		"en": [
-			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"The master grade Trans-Am riser is now available in a clear color with the image of a Trans-Am activated."
+			"For GUNPLA fans around the world, this is a limited edition GUNPLA at the official GUNPLA complex \"GUNDAM Base\". The master grade Trans Am Riser is now available in a clear color with the image of activating the Trans Am."
 		]
 	},
-	"images": [
-		"/images/items/01_1927/1000126795_1.jpg",
-		"/images/items/01_1927/1000126795_2.jpg",
-		"/images/items/01_1927/1000126795_3.jpg",
-		"/images/items/01_1927/1000126795_4.jpg",
-		"/images/items/01_1927/1000126795_5.jpg",
-		"/images/items/01_1927/1000126795_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126795_1.jpg",
+				"path": "/images/items/01_1927/1000126795_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126795_2.jpg",
+				"path": "/images/items/01_1927/1000126795_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126795_3.jpg",
+				"path": "/images/items/01_1927/1000126795_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126795_4.jpg",
+				"path": "/images/items/01_1927/1000126795_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126795_5.jpg",
+				"path": "/images/items/01_1927/1000126795_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126795_6.jpg",
+				"path": "/images/items/01_1927/1000126795_6.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1927/",
-	"brandIds": [],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"item-1000216602",
-		"01_5526",
-		"01_5102",
-		"01_4422"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1927/"
 	}
 }

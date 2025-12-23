@@ -5,6 +5,43 @@
 		"ja": "ピカちんキットS02　ウソ発見器",
 		"en": "Pikachin KitS02 lie detector"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -34,7 +71,7 @@
 			"金属プレート…2"
 		],
 		"en": [
-			"• Pikachin KitS, which has a sensor that senses subtle changes in your fingertips, may be able to detect lies!",
+			"• Pikachin KitS has a sensor that senses subtle changes in your fingertips, and may be able to spot lies!",
 			"• Pirameki with 1% coin! Assemble electronic parts yourself!",
 			"• Can be combined with parts of \"Pikachin Robo S02 Michael J\" (sold separately) to power up!",
 			"• Uses 2 AA batteries (sold separately).",
@@ -48,24 +85,26 @@
 			"Metal plate...2"
 		]
 	},
-	"images": [
-		"/images/items/01_1958/153_2890.jpg",
-		"/images/items/01_1958/155_2890.jpg",
-		"/images/items/01_1958/156_2890.jpg",
-		"/images/items/01_1958/157_2890.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1958/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2890_s_tufiy0n4gdxgomrisil166uarnd0.jpg",
+				"path": "/images/items/01_1958/153_2890.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2890_s_up1rl28yb23dapou55nxbcqjkvef.jpg",
+				"path": "/images/items/01_1958/155_2890.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2890_s_ivk23ytljbjv1ocqvatkih00nxso.jpg",
+				"path": "/images/items/01_1958/156_2890.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2890_s_glw72qsncsg8sl2f6e3ur232ptwe.jpg",
+				"path": "/images/items/01_1958/157_2890.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1958/"
 }

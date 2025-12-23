@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard　超サイヤ人ブロリーフルパワー",
 		"en": "Figure-rise Standard Super Saiyan Broly Full Power"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4901",
+			"url": "https://bandai-hobby.net/item/01_4901/",
+			"ja": "Figure-rise Standard ベジータ (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_4219",
+			"url": "https://bandai-hobby.net/item/01_4219/",
+			"ja": "Figure-rise Standard 孫悟空 (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_2974",
+			"url": "https://bandai-hobby.net/item/01_2974/",
+			"ja": "Figure-rise Standard アルティメット孫悟飯"
+		},
+		{
+			"id": "01_2769",
+			"url": "https://bandai-hobby.net/item/01_2769/",
+			"ja": "Figure-rise Standard ジレン"
+		}
+	],
 	"price": {
 		"amount": 5280,
 		"currency": "JPY",
@@ -30,67 +73,105 @@
 		],
 		"en": [
 			"From the movie \"Dragon Ball Super: Broly\", the strongest Saiyan Broly is now in 3D!",
-			"• The characteristic loincloth and costume are reproduced with new modeling.",
-			"• Expresses a strong body with dynamic muscle modeling.",
-			"• Powerful poses can be recreated with interchangeable expression parts and wrist parts.",
-			"• Characteristic scars are reproduced with MarkingSeal, which has high followability to curved surfaces!",
-			"• Two types of facial expression parts are included: \"screaming \" and \" angry\".",
-			"• Damaged faces for Goku and Vegeta are included."
+			"• Reproduce the characteristic loincloth and costume with new modeling.",
+			"• Expressing a strong body with dynamic muscle modeling.",
+			"• Reproduce powerful poses with interchangeable expression parts and wrist parts.",
+			"• Characteristic scars are reproduced with MarkingSeal, which has high followability on curved surfaces!",
+			"• Two types of facial expression parts are included: \"screaming\" and \"angry\".",
+			"• Includes damaged faces for Goku and Vegeta."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"表情パーツ2種（怒り、叫び）×各1",
-			"手首パーツ2種（左右握り手、左右平手）×各1",
-			"超サイヤ人ゴッド超サイヤ人孫悟空、ベジータ用ダメージ顔×各1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情パーツ2種（怒り、叫び）×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "手首パーツ2種（左右握り手、左右平手）×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "超サイヤ人ゴッド超サイヤ人孫悟空、ベジータ用ダメージ顔×各1"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 10
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3011_s_yg7fkjom7tzskijyrjqv30q9bfgw.jpg",
+				"path": "/images/items/01_2063/153_3011.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3011_s_x7z2754ej0ej9bp5og3hjni8wzek.jpg",
+				"path": "/images/items/01_2063/155_3011.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3011_s_ksunp92sr4hz6vo4s3v4nmhrhd0g.jpg",
+				"path": "/images/items/01_2063/156_3011.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3011_s_yhrz4982e27fq0bjw1gqt6pmff8l.jpg",
+				"path": "/images/items/01_2063/157_3011.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3011_s_xvtw5f3qo9s0y59p9s2slkxnm2mr.jpg",
+				"path": "/images/items/01_2063/158_3011.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3011_s_zn0bf72wflcmt6ayl083jd5q08q0.jpg",
+				"path": "/images/items/01_2063/159_3011.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3011_s_2n8ru42exky483jsagze0v561u6v.jpg",
+				"path": "/images/items/01_2063/189_3011.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3011_s_3orfgf6qc7en8w7mr80hfnipl04g.jpg",
+				"path": "/images/items/01_2063/190_3011.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3011_s_rta9fou94bhqbggkg0d83jxfe3bh.jpg",
+				"path": "/images/items/01_2063/191_3011.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3011_s_7y5pey517jsavhxqejpyeyhky26k.jpg",
+				"path": "/images/items/01_2063/192_3011.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_3011_s_xm6k788tj5iwkfhyil4eo49z98e9.jpg",
+				"path": "/images/items/01_2063/193_3011.jpg"
+			}
 		],
-		"en": [
-			"2 types of facial expression parts (anger, scream) x 1 each",
-			"2 types of wrist parts (left and right grip hands, left and right palm) x 1 each",
-			"Super Saiyan God Super Saiyan Son Goku, damage face for Vegeta x 1 each"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×10",
-			"ホイルシール×1",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 10",
-			"Foil Seal×1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2063/153_3011.jpg",
-		"/images/items/01_2063/155_3011.jpg",
-		"/images/items/01_2063/156_3011.jpg",
-		"/images/items/01_2063/157_3011.jpg",
-		"/images/items/01_2063/158_3011.jpg",
-		"/images/items/01_2063/159_3011.jpg",
-		"/images/items/01_2063/189_3011.jpg",
-		"/images/items/01_2063/190_3011.jpg",
-		"/images/items/01_2063/191_3011.jpg",
-		"/images/items/01_2063/192_3011.jpg",
-		"/images/items/01_2063/193_3011.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2063/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"dragonball"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4901",
-		"01_4219",
-		"01_2974",
-		"01_2769"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2063/"
 }

@@ -5,6 +5,38 @@
 		"ja": "1/144 ジョニー・ライデンザクII",
 		"en": "1/144 Johnny Leidenzak II"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5987",
+			"url": "https://bandai-hobby.net/item/01_5987/",
+			"ja": "ガンダムデカールNo.139 機動戦士Gundam GQuuuuuuX汎用1"
+		},
+		{
+			"id": "01_5988",
+			"url": "https://bandai-hobby.net/item/01_5988/",
+			"ja": "ガンダムデカールNo.140 機動戦士Gundam GQuuuuuuX汎用2"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -17,7 +49,6 @@
 		"month": 2
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ジオン軍エース・パイロットのジョニー・ライデン少佐機をキット化しました。ザクバズーカをシールドにマウントさせるラッチがついています。股関節部が左右に開閉できます。武器はザクマシンガン、ザクバズーカ、ヒートホークがついています。専用デカールが付です。"
@@ -26,20 +57,18 @@
 			"Zeon military ace pilot Major Johnny Ridden's aircraft is turned into a kit. It has a latch that allows you to mount the Zaku Bazooka on the Seal. The hip joint can be opened and closed to the left and right. Weapons include Zaku Machine Gun, Zaku Bazooka, and Heat Hawk. Comes with a special decal."
 		]
 	},
-	"images": [
-		"/images/items/01_3176/153_4136.jpg",
-		"/images/items/01_3176/155_4136.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3176/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5986",
-		"01_5987",
-		"01_5988"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4136_s_6ds5ajdsl7ecrh0axjtk1wffqsmb.jpg",
+				"path": "/images/items/01_3176/153_4136.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4136_s_tmh3apj3mv85qssd7f9re7ubnz2c.jpg",
+				"path": "/images/items/01_3176/155_4136.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3176/"
 }

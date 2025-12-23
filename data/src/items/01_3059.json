@@ -3,8 +3,55 @@
 	"type": "item",
 	"name": {
 		"ja": "BB戦士 LEGENDBB 烈光頑駄無",
-		"en": "BB Senshi LEGENDBB Rekko Gundam u"
+		"en": "BB Senshi LEGENDBB Rekko Gundamu"
 	},
+	"brands": [
+		{
+			"id": "pb_bb",
+			"url": "https://bandai-hobby.net/brand/pb_bb/",
+			"ja": "SDガンダムBB戦士／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000220190",
+			"url": "https://p-bandai.jp/item/item-1000220190/",
+			"ja": "ＨＧ 1/144 ザク・デザートタイプ ピンクパンサー隊機"
+		},
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "item-1000216105",
+			"url": "https://p-bandai.jp/item/item-1000216105/",
+			"ja": "RG 1/144 ソードインパルスガンダムＳｐｅｃＩＩ"
+		},
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		}
+	],
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -61,7 +108,7 @@
 		],
 		"en": [
 			"Heavenly transformation!",
-			"Rekko Gundam u, the main character of the \"Legendary Great Shogun Edition\" who later rose through the ranks to become a new generation of great generals, is now available in the long-awaited LEGENDBB.",
+			"Rekko Gundamu, the main character of the \"Legendary Great Shogun Edition\" who later rose through the ranks to become a new generation of great generals, is now available in the long-awaited LEGENDBB.",
 			"Two types of luxurious armor and various weapons are included in large quantities.",
 			"● Comes with 2 types of luxurious armor",
 			"The \"Armor of Battle\" worn by Efu Yujuichi, who has trained as a martial artist.",
@@ -101,37 +148,50 @@
 			"- Product specifications are scheduled as of 20207. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_3059/153_4028.jpg",
-		"/images/items/01_3059/155_4028.jpg",
-		"/images/items/01_3059/156_4028.jpg",
-		"/images/items/01_3059/157_4028.jpg",
-		"/images/items/01_3059/158_4028.jpg",
-		"/images/items/01_3059/159_4028.jpg",
-		"/images/items/01_3059/189_4028.jpg",
-		"/images/items/01_3059/190_4028.jpg",
-		"/images/items/01_3059/191_4028.jpg",
-		"/images/items/01_3059/192_4028.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3059/",
-	"brandIds": [
-		"bb",
-		"pb_bb",
-		"pb_gunpla"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000220190",
-		"item-1000220189",
-		"item-1000216105",
-		"01_5456"
-	],
-	"manualId": "2606",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4028_s_8unla1jwpe5kkja4mdii1k3p13of.jpg",
+				"path": "/images/items/01_3059/153_4028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4028_s_oqugcia5y3pu1uibm8k74728j8cn.jpg",
+				"path": "/images/items/01_3059/155_4028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4028_s_somghm00twr5hbzvjlhxckfm4pdh.jpg",
+				"path": "/images/items/01_3059/156_4028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4028_s_iv6sr55bput2xhd8a4vl186nnjgv.jpg",
+				"path": "/images/items/01_3059/157_4028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4028_s_ytv0cpfnaabrw9cxtcfvkkhbgbct.jpg",
+				"path": "/images/items/01_3059/158_4028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4028_s_maf0s89ymyd5ki4pa1mswvjnt8nm.jpg",
+				"path": "/images/items/01_3059/159_4028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4028_s_u91deqsdeb5ycssjgh1ch89yos3k.jpg",
+				"path": "/images/items/01_3059/189_4028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4028_s_rtjyhuoiid3frftgwleer1xkay6l.jpg",
+				"path": "/images/items/01_3059/190_4028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4028_s_t3t61ad90ndl9zu26d8qhtaylfoj.jpg",
+				"path": "/images/items/01_3059/191_4028.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4028_s_o18g0d30czte8j65090xkq9wpjer.jpg",
+				"path": "/images/items/01_3059/192_4028.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3059/"
 }

@@ -2,9 +2,46 @@
 	"id": "01_2376",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット シルエットブースター[グレー]",
-		"en": "SD Gundam Cross Silhouette Silhouette Booster [Gray]"
+		"ja": "SDガンダム クロスシルエット シルエットブースター[グレー]",
+		"en": "SDGundam Cross Silhouette Silhouette Booster [Gray]"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5275",
+			"url": "https://bandai-hobby.net/item/01_5275/",
+			"ja": "SDガンダム クロスシルエット マイティーストライクフリーダムガンダム"
+		},
+		{
+			"id": "01_5191",
+			"url": "https://bandai-hobby.net/item/01_5191/",
+			"ja": "SDガンダム クロスシルエット ガンダムキャリバーン"
+		},
+		{
+			"id": "01_5014",
+			"url": "https://bandai-hobby.net/item/01_5014/",
+			"ja": "SDガンダム クロスシルエット F9ノ1改"
+		},
+		{
+			"id": "01_4893",
+			"url": "https://bandai-hobby.net/item/01_4893/",
+			"ja": "SDガンダムクロスシルエット ユニコーンガンダム2号機バンシィ（デストロイモード）＆バンシィ・ノルン パーツセット"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -23,66 +60,114 @@
 			"遊びの幅を広げるSDCSの「拡張パーツセット」にグレーがラインナップ！",
 			"• 既存のフレームに組み付けることで高頭身と低頭身にカスタマイズ可能！",
 			"• 平手（左右）、握り手（左）、サーベル持ち手（右）が付属。",
-			"• 別売りのSDCSフレームに付属するジムヘッドとSDCS ガンダムに本商品を組み合わせることで「ジム」が作れる！",
+			"• 別売りのSDCSフレームに付属するジムヘッドとSDCSガンダムに本商品を組み合わせることで「ジム」が作れる！",
 			"• SDCSザクIIに使えるふとももパーツが付属！！"
 		],
 		"en": [
 			"Gray is now available in SDCS's \"extended parts set\" that expands the range of play!",
 			"• Can be customized to have a high or low head by assembling it to an existing frame!",
 			"• Open hands (left and right), grasping hands (left), and saber handles (right) are included.",
-			"• You can create a \"gym\" by combining this product with the gym head that comes with the SDCS frame (sold separately) and SDCS Gundam!",
-			"• Thigh parts that can be used for SDCS Zaku II are included! !"
+			"• You can create a \"gym\" by combining this product with the gym head and SDCS Gundam that come with the SDCS frame (sold separately)!",
+			"• Thigh parts that can be used with SDCS Zaku II are included! !"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ハンドパーツ×1式",
-			"フレームカスタムパーツ×1式",
-			"ジム用パーツ×1式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハンドパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "フレームカスタムパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジム用パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3310_s_i6gint818s9w1i6n2abcilyl7xdh.jpg",
+				"path": "/images/items/01_2376/153_3310.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3310_s_hp5ychcu465255q3jojjpx8xd91p.jpg",
+				"path": "/images/items/01_2376/155_3310.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3310_s_k28h1o40o7z7kltkxlq85rmvnz8i.jpg",
+				"path": "/images/items/01_2376/156_3310.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3310_s_ogys1z7q4r1r0coffzfmua3ajgmd.jpg",
+				"path": "/images/items/01_2376/157_3310.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3310_s_tlt9pobkuq5q9a9p8q92a7tbte8p.jpg",
+				"path": "/images/items/01_2376/158_3310.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3310_s_r5yg394gfj6flvauhvq77n8n0o81.jpg",
+				"path": "/images/items/01_2376/159_3310.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3310_s_idhxvy2otsks0tbzctr7qn4onw4f.jpg",
+				"path": "/images/items/01_2376/189_3310.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3310_s_lxes4msy3kjhf07i34ou6cg9u650.jpg",
+				"path": "/images/items/01_2376/190_3310.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3310_s_sxconwxzqke681023i4f8xnu1lyj.jpg",
+				"path": "/images/items/01_2376/191_3310.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3310_s_4xylmt8q2g7fr3su5reot0wbmmb7.jpg",
+				"path": "/images/items/01_2376/192_3310.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_3310_s_odqc59fariyt35ge3enpmawr8f43.jpg",
+				"path": "/images/items/01_2376/193_3310.jpg"
+			}
 		],
-		"en": [
-			"Hand parts x 1 set",
-			"Frame custom parts x 1 set",
-			"Gym parts x 1 set"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×1",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 1",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2376/153_3310.jpg",
-		"/images/items/01_2376/155_3310.jpg",
-		"/images/items/01_2376/156_3310.jpg",
-		"/images/items/01_2376/157_3310.jpg",
-		"/images/items/01_2376/158_3310.jpg",
-		"/images/items/01_2376/159_3310.jpg",
-		"/images/items/01_2376/189_3310.jpg",
-		"/images/items/01_2376/190_3310.jpg",
-		"/images/items/01_2376/191_3310.jpg",
-		"/images/items/01_2376/192_3310.jpg",
-		"/images/items/01_2376/193_3310.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2376/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5275",
-		"01_5191",
-		"01_5014",
-		"01_4893"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2376/"
 }

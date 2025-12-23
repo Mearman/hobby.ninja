@@ -3,8 +3,53 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard 仮面ライダーW ヒートメタル",
-		"en": "Figure-rise Standard Kamen Rider W Heat Metal"
+		"en": "Figure-rise Standard KAMEN RIDER DOUBLE HEATMETAL"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]",
+			"en": "Figure-rise Standard"
+		}
+	],
+	"series": [
+		{
+			"id": "rider",
+			"url": "https://bandai-hobby.net/series/rider/",
+			"ja": "仮面ライダーシリーズ",
+			"en": "KAMEN RIDER SERIES"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5451",
+			"url": "https://bandai-hobby.net/item/01_5451/",
+			"ja": "Figure-rise Standard 仮面ライダーゼロワン ライジングホッパー"
+		},
+		{
+			"id": "item-1000215369",
+			"url": "https://p-bandai.jp/item/item-1000215369/",
+			"ja": "Figure-rise Standard 仮面ライダーファイズ ブラスターフォーム"
+		},
+		{
+			"id": "01_5276",
+			"url": "https://bandai-hobby.net/item/01_5276/",
+			"ja": "Figure-rise Standard 仮面ライダークウガ アルティメットフォーム"
+		},
+		{
+			"id": "01_5175",
+			"url": "https://bandai-hobby.net/item/01_5175/",
+			"ja": "Figure-rise Standard 仮面ライダーキバ キバフォーム"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -25,72 +70,136 @@
 			"• 専用武器である「メタルシャフト」やハンドパーツが付属。"
 		],
 		"en": [
-			"From \"Kamen Rider W \", \" Heat Metal\" is available in Figure-rise standard!",
-			"• The biggest feature: In order to reproduce the halved structure, each part has a block structure. Achieves various poses and variations without compromising range of motion.",
-			"• Special weapon \"metal shaft\" and hand parts are included."
+			"From \"KAMEN RIDER DOUBLE\", \"Heat Metal\" is a lineup of Figure-rise standard!",
+			"• In order to reproduce the halvity, which is the biggest feature, the block structure of each part is adopted. Without impairing the range of motion, various poses and variations are realized."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"メタルシャフト×1",
-			"メタルシャフト（収納時）×1",
-			"ヒートメモリ×1",
-			"メタルメモリ×1",
-			"握り手左右 各1種",
-			"平手左右 各1種",
-			"武器持ち手 右×1",
-			"決め手1 左×1",
-			"ディスプレイベース×1"
-		],
-		"en": [
-			"Metal shaft x 1",
-			"Metal shaft (when stored) x 1",
-			"Heat memory x 1",
-			"Metal memory x 1",
-			"1 type each for left and right hand grips",
-			"Hirate left and right 1 type each",
-			"Weapon holder right x 1",
-			"Decisive factor 1 left x 1",
-			"Display base x 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×6",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 6",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2372/1000138159_1.jpg",
-		"/images/items/01_2372/1000138159_2.jpg",
-		"/images/items/01_2372/1000138159_3.jpg",
-		"/images/items/01_2372/1000138159_4.jpg",
-		"/images/items/01_2372/1000138159_5.jpg",
-		"/images/items/01_2372/1000138159_6.jpg",
-		"/images/items/01_2372/1000138159_7.jpg",
-		"/images/items/01_2372/1000138159_8.jpg",
-		"/images/items/01_2372/1000138159_9.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "メタルシャフト",
+				"en": "• Metal shaft"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "メタルシャフト（収納時）",
+				"en": "• Metal shaft (when stowed)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ヒートメモリ",
+				"en": "• Heat memory"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "メタルメモリ",
+				"en": "• Metal memory"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "握り手左右 各1種",
+				"en": "• Grip left and right, 1 type each"
+			}
+		},
+		{
+			"name": {
+				"ja": "平手左右 各1種",
+				"en": "• Flat left and right: 1 type each"
+			}
+		},
+		{
+			"name": {
+				"ja": "武器持ち手 右",
+				"en": "• Weapon handle right"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "決め手1 左",
+				"en": "• Decisive factor 1 Left"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース",
+				"en": "• Display Base"
+			},
+			"count": 1
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000138159_1.jpg",
+				"path": "/images/items/01_2372/1000138159_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000138159_2.jpg",
+				"path": "/images/items/01_2372/1000138159_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000138159_3.jpg",
+				"path": "/images/items/01_2372/1000138159_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000138159_4.jpg",
+				"path": "/images/items/01_2372/1000138159_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000138159_5.jpg",
+				"path": "/images/items/01_2372/1000138159_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000138159_6.jpg",
+				"path": "/images/items/01_2372/1000138159_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000138159_7.jpg",
+				"path": "/images/items/01_2372/1000138159_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000138159_8.jpg",
+				"path": "/images/items/01_2372/1000138159_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000138159_9.jpg",
+				"path": "/images/items/01_2372/1000138159_9.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2372/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"rider"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5451",
-		"item-1000215369",
-		"01_5276",
-		"01_5175"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2372/"
+	}
 }

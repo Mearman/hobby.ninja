@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 シャア専用ズゴック",
-		"en": "MG 1/100 Char's Z'Gok"
+		"en": "MG 1/100 MSM-07 Z'GOK (CHAR'S CUSTOM)"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3960,
 		"currency": "JPY",
@@ -17,32 +50,37 @@
 		"month": 11
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム」に登場する人気キャラ「シャア」の搭乗する「シャア専用ズゴック」がマスターグレードにラインナップ しました。可動のモノアイはクリアパーツを使用。頭部ミサイルのディテールなどリアルに再現しています。腹、股関節、足首などに防水処理をイメージしたラバー状パーツを使用しています。腕、ももには新機構の伸縮ギミックを内臓し、より表現豊かなポージングが再現可能 となりました。幻の4本ヅメパーツが付属。"
 		],
 		"en": [
-			"\"Char's Z'Gok \", piloted by the popular character \" Char \" who appears in \" Mobile Suit Gundam\", is now available in the Master Grade lineup. The movable mono-eye uses clear parts. Details such as the head missile are realistically reproduced. Rubber-like parts designed to be waterproof are used on the abdomen, hips, ankles, etc. The arms and thighs have built-in new extension and contraction gimmicks, allowing for more expressive poses. Comes with 4 phantom parts."
+			"The popular character \"Char\" who appears in \"MOBILE SUIT GUNDAM\" rides the \"Char exclusive Zugok\" lineup in the master grade. The movable mono-eye uses clear parts. The details of the head missile are realistically reproduced. Rubber-like parts are used for the abdomen, hip joints, ankles, etc., with the image of waterproof treatment. The arms and thighs are equipped with a new telescopic gimmick, making it possible to reproduce more expressive poses. Comes with a phantom 4 zume parts."
 		]
 	},
-	"images": [
-		"/images/items/01_2901/1000073287_1.jpg",
-		"/images/items/01_2901/1000073287_2.jpg",
-		"/images/items/01_2901/1000073287_3.jpg",
-		"/images/items/01_2901/1000073287_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000073287_1.jpg",
+				"path": "/images/items/01_2901/1000073287_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000073287_2.jpg",
+				"path": "/images/items/01_2901/1000073287_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000073287_3.jpg",
+				"path": "/images/items/01_2901/1000073287_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000073287_4.jpg",
+				"path": "/images/items/01_2901/1000073287_4.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2901/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
-	"manualId": "0524"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2901/"
+	}
 }

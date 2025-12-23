@@ -2,9 +2,58 @@
 	"id": "01_2305",
 	"type": "item",
 	"name": {
-		"ja": "HGUC 1/144 ユニコーンガンダム 3号機 フェネクス(ユニコーンモード)(ナラティブVer.)[ゴールドコーティング]",
+		"ja": "HGUC 1/144 ユニコーンガンダム3号機 フェネクス(ユニコーンモード)(ナラティブVer.)[ゴールドコーティング]",
 		"en": "HGUC 1/144 Unicorn Gundam Unit 3 Phenex (Unicorn Mode) (Narrative Ver.) [Gold Coating]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "narrative",
+			"url": "https://bandai-hobby.net/series/narrative/",
+			"ja": "機動戦士ガンダムNT[ナラティブ]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5039",
+			"url": "https://bandai-hobby.net/item/01_5039/",
+			"ja": "HG 1/144 ナラティブガンダム C装備 [覚醒イメージカラー]"
+		},
+		{
+			"id": "01_5038",
+			"url": "https://bandai-hobby.net/item/01_5038/",
+			"ja": "HG 1/144 ナラティブガンダム A装備 [クリアカラー]"
+		},
+		{
+			"id": "01_3460",
+			"url": "https://bandai-hobby.net/item/01_3460/",
+			"ja": "HG 1/144 シルヴァ・バレト・サプレッサー[クリアカラー]"
+		},
+		{
+			"id": "01_2666",
+			"url": "https://bandai-hobby.net/item/01_2666/",
+			"ja": "HG 1/144 ガンダムベース限定 ナラティブガンダム B装備"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -18,10 +67,9 @@
 		"day": 3
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム NT』より、NT版フェネクス（ユニコーンモード）がゴールドコーティングを施し、外装を超豪華なメッキ仕様で登場！",
+			"『機動戦士ガンダムNT』より、NT版フェネクス（ユニコーンモード）がゴールドコーティングを施し、外装を超豪華なメッキ仕様で登場！",
 			"• アームド・アーマーDEに接続するスタビライザーはブロックごとに可動。",
 			"• ユニコーンガンダムの特徴的な武装が付属。"
 		],
@@ -31,58 +79,88 @@
 			"• Unicorn Gundam's distinctive weapons are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"シールド×1",
-			"アームド・アーマーDE×2",
-			"ハイパー・バズーカ×1",
-			"ビーム・サーベル刃×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アームド・アーマーDE"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ハイパー・バズーカ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル刃"
+			},
+			"count": 2
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成型品"
+			},
+			"count": 10
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3244_s_uk4mu9bbjs6iw6bkradrp68iew9d.jpg",
+				"path": "/images/items/01_2305/153_3244.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3244_s_xj4pmn7m991v37769qve8nwvzb8u.jpg",
+				"path": "/images/items/01_2305/155_3244.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3244_s_6rmprz83rmy9ce4jccl316ei54du.jpg",
+				"path": "/images/items/01_2305/156_3244.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3244_s_8q4cszcjhw0mp52zunasyskjmnui.jpg",
+				"path": "/images/items/01_2305/157_3244.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3244_s_2twdm6gz5ojv1hzouee5mgas3vqk.jpg",
+				"path": "/images/items/01_2305/158_3244.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3244_s_rbg48iid70jjsznofov39js5whgo.jpg",
+				"path": "/images/items/01_2305/159_3244.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3244_s_gbp4y7yyy7oh8jspz6b4g55m93kz.jpg",
+				"path": "/images/items/01_2305/189_3244.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3244_s_wtbdxwratimtl88g0y440128qr7x.jpg",
+				"path": "/images/items/01_2305/190_3244.jpg"
+			}
 		],
-		"en": [
-			"Seal × 1",
-			"Armed Armor DE×2",
-			"Hyper bazooka x1",
-			"Beam saber blade x2"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成型品×10",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 10",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2305/153_3244.jpg",
-		"/images/items/01_2305/155_3244.jpg",
-		"/images/items/01_2305/156_3244.jpg",
-		"/images/items/01_2305/157_3244.jpg",
-		"/images/items/01_2305/158_3244.jpg",
-		"/images/items/01_2305/159_3244.jpg",
-		"/images/items/01_2305/189_3244.jpg",
-		"/images/items/01_2305/190_3244.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2305/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"narrative"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5039",
-		"01_5038",
-		"01_3460",
-		"01_2666"
-	],
-	"manualId": "1049"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2305/"
 }

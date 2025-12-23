@@ -5,6 +5,43 @@
 		"ja": "SD三国伝 041 真 張コウザクIII",
 		"en": "SD Sangokuden 041 Shin Kouzaku Zhang III"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -28,23 +65,22 @@
 			"Molded product x 4, Seal x 1, instruction manual manga included"
 		]
 	},
-	"images": [
-		"/images/items/01_2155/153_3105.jpg",
-		"/images/items/01_2155/155_3105.jpg",
-		"/images/items/01_2155/156_3105.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2155/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3105_s_onkia9cgh83nxd4al8iz6sxkhv3i.jpg",
+				"path": "/images/items/01_2155/153_3105.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3105_s_0ho2kotu5511pr2352rq35e8zzhv.jpg",
+				"path": "/images/items/01_2155/155_3105.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3105_s_q3b9pr3v9xs3bhd82gq7j3ijo3pi.jpg",
+				"path": "/images/items/01_2155/156_3105.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2155/"
 }

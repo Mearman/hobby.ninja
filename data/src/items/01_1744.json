@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 ガンダムアストレイレッドフレーム改",
-		"en": "MG 1/100 Gundam Astray Red Frame Mod"
+		"en": "MG 1/100 ASTRAY RED FRAME REVISE"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]",
+			"en": "MG [MASTER GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY",
+			"en": "MOBILE SUIT GUNDAM SEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5421",
+			"url": "https://bandai-hobby.net/item/01_5421/",
+			"ja": "MG 1/100 ガンダムベース限定 デスティニーガンダム (ハイネ専用機)"
+		},
+		{
+			"id": "item-1000183862",
+			"url": "https://p-bandai.jp/item/item-1000183862/",
+			"ja": "ＭＧ 1/100 ガナーウィザード／スラッシュウィザード／ブレイズウィザードセット"
+		},
+		{
+			"id": "01_3712",
+			"url": "https://bandai-hobby.net/item/01_3712/",
+			"ja": "MG 1/100 ガナーザクウォーリア(ルナマリア・ホーク専用機)[クリアカラー]"
+		},
+		{
+			"id": "item-1000155441",
+			"url": "https://p-bandai.jp/item/item-1000155441/",
+			"ja": "ＭＧ 1/100 ブレイズザクファントム（レイ・ザ・バレル専用機）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -18,36 +64,42 @@
 		"day": 20
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"• 「機動戦士ガンダム SEEDヴァーサスアストレイ」に登場するガンダムアストレイレッドフレーム改をMGで商品化。 • 2振のメインウエポン、ガーベラストレート／タイガーピアスを装備。 • ガーベラストレートの各刀身部分はメッキパーツを使用し、鞘を手で持つことも出来る。 • タクティカルアームズIIがレッドフレーム用としてカスタムされ新たな姿に。 • タクティカルアームズは変形してフライトモードに。 • タクティカルアームズは巨大な弓矢アローモードに変形。 成形品×28、ホイルシール×1、テトロンシール×1、ドライデカール×1、ビス大×1、ビス小×1、ナット×1"
+			"• 「機動戦士ガンダムSEEDヴァーサスアストレイ」に登場するガンダムアストレイレッドフレーム改をMGで商品化。 ■2振のメインウエポン、ガーベラストレート／タイガーピアスを装備。 ■ガーベラストレートの各刀身部分はメッキパーツを使用し、鞘を手で持つことも出来る。 ■タクティカルアームズIIがレッドフレーム用としてカスタムされ新たな姿に。 ■タクティカルアームズは変形してフライトモードに。 ■タクティカルアームズは巨大な弓矢アローモードに変形。 成形品×28、ホイルシール×1、テトロンシール×1、ドライデカール×1、ビス大×1、ビス小×1、ナット×1"
 		],
 		"en": [
-			"• The Gundam Astray Red Frame Kai that appears in \"Mobile Suit Gundam SEED Versus Astray\" is commercialized in MG. • Equipped with two main weapons, Gerbera Straight/Tiger Earrings. • Each blade part of Gerbera Straight uses plated parts, and the sheath can also be held by hand. • Tactical Arms II has been customized for Red Frame and has a new appearance. • Tactical Arms transforms into flight mode. • Tactical Arms transforms into a giant bow and arrow mode. Molded product x 28, foil seal x 1, Tetron seal x 1, dry decal x 1, screw large x 1, small screw x 1, nut x 1"
+			"• The GUNDAM Astray Red Frame Kai that appears in \"MOBILE SUIT GUNDAM SEED Versus Astray\" is commercialized by MG.",
+			"• Equipped with a two-swing main weapon, Gerbera Straight/Tiger Piercing.",
+			"• Each blade part of the gerbera straight uses plated parts, and the scabbard can be held by hand.",
+			"• Tactical Arms II has been customized for the Red Flame and has a new appearance.",
+			"• Tactical Arms transforms into flight mode.",
+			"• Tactical Arms transforms into a giant bow and arrow arrow mode. Molded ×28, Foil Seal ×1, Tetoron Seal ×1, Dry Decal×1, Screw Large ×1, Screw Small ×1, Nut ×1"
 		]
 	},
-	"images": [
-		"/images/items/01_1744/1000092407_1.jpg",
-		"/images/items/01_1744/1000092407_2.jpg",
-		"/images/items/01_1744/1000092407_3.jpg",
-		"/images/items/01_1744/1000092407_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092407_1.jpg",
+				"path": "/images/items/01_1744/1000092407_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092407_2.jpg",
+				"path": "/images/items/01_1744/1000092407_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092407_3.jpg",
+				"path": "/images/items/01_1744/1000092407_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092407_4.jpg",
+				"path": "/images/items/01_1744/1000092407_4.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1744/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5421",
-		"item-1000183862",
-		"01_3712",
-		"item-1000155441"
-	],
-	"manualId": "0570"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1744/"
+	}
 }

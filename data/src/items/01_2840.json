@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダム端白星",
 		"en": "HG 1/144 Gundam End White Star"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6773",
+			"url": "https://bandai-hobby.net/item/01_6773/",
+			"ja": "HG 1/144 ガンダムザガン"
+		},
+		{
+			"id": "01_6763",
+			"url": "https://bandai-hobby.net/item/01_6763/",
+			"ja": "HG 1/144 モンキーロディ(598機)/モンキークラブロディ"
+		},
+		{
+			"id": "01_4103",
+			"url": "https://bandai-hobby.net/item/01_4103/",
+			"ja": "HG 1/144 ジークルーネ"
+		},
+		{
+			"id": "01_4240",
+			"url": "https://bandai-hobby.net/item/01_4240/",
+			"ja": "HG 1/144 ガンダム端白星[クリアカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,13 +62,12 @@
 		"day": 22
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『鉄血のオルフェンズ ウルズハント』に登場する主役モビルスーツがHGから登場！",
-			"■シールドは、左右に展開する可変式クローとニードルを発射するギミックを内蔵。",
-			"■スラスターは巨大なアーマー２基が左右それぞれスイングする構造となっている。",
-			"■専用ライフルが付属。"
+			"• シールドは、左右に展開する可変式クローとニードルを発射するギミックを内蔵。",
+			"• スラスターは巨大なアーマー２基が左右それぞれスイングする構造となっている。",
+			"• 専用ライフルが付属。"
 		],
 		"en": [
 			"The main mobile suit that appears in \"Iron-Blooded Orphans Uruz Hunt\" is now available from HG!",
@@ -33,43 +76,60 @@
 			"• Comes with a special rifle."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"メイス×1",
-			"ライフル×1",
-			"シールド×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "メイス"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3823_s_oolg4qjjr55w1rmhg971okl9y2a9.jpg",
+				"path": "/images/items/01_2840/153_3823.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3823_s_5chr5mhtpxeqqnxpvziyhbw9bmf0.jpg",
+				"path": "/images/items/01_2840/155_3823.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3823_s_mv3jk702qe99oi2rupug0woqcd9w.jpg",
+				"path": "/images/items/01_2840/156_3823.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3823_s_e8uv6fp4hwny4cqteyabyy8iikpo.jpg",
+				"path": "/images/items/01_2840/157_3823.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3823_s_xwupqzwia14kdg7fiy1dii7d661c.jpg",
+				"path": "/images/items/01_2840/158_3823.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3823_s_7u569d7i4ecw12pj6xo2c4zvmhsk.jpg",
+				"path": "/images/items/01_2840/159_3823.jpg"
+			}
 		],
-		"en": [
-			"Mace x 1",
-			"Rifle x 1",
-			"Seal × 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2840/153_3823.jpg",
-		"/images/items/01_2840/155_3823.jpg",
-		"/images/items/01_2840/156_3823.jpg",
-		"/images/items/01_2840/157_3823.jpg",
-		"/images/items/01_2840/158_3823.jpg",
-		"/images/items/01_2840/159_3823.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2840/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"tekketsu"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4103",
-		"01_4240",
-		"01_4188",
-		"01_4094"
-	],
-	"manualId": "0806"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2840/"
 }

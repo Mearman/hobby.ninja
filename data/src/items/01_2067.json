@@ -5,6 +5,50 @@
 		"ja": "PG 1/60 ダブルオーガンダムセブンソード/G",
 		"en": "PG 1/60 Double O Gundam Seven Sword/G"
 	},
+	"brands": [
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2057",
+			"url": "https://bandai-hobby.net/item/01_2057/",
+			"ja": "PG 1/60 ガンダムエクシア用LEDユニット"
+		},
+		{
+			"id": "item-1000129011",
+			"url": "http://p-bandai.jp/item/item-1000129011",
+			"ja": "ＰＧ 1/60 ガンダムエクシア クリアカラーボディ"
+		},
+		{
+			"id": "item-1000120750",
+			"url": "http://p-bandai.jp/item/item-1000120750/",
+			"ja": "ＰＧ 1/60 ガンダムエクシア用リペアパーツセット"
+		},
+		{
+			"id": "01_1202",
+			"url": "https://bandai-hobby.net/item/01_1202/",
+			"ja": "PG 1/60 ガンダムエクシア (LIGHTING MODEL)"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 25300,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 15
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
 			"７本の剣と銃を備えた機体としてイノベイターに覚醒した刹那・F・セイエイと共に戦場に舞い降りる。武装に加え、機体本体にも新規造形パーツを追加。『機動戦士ガンダム００V戦記』に活躍した機体がPGでキット化！",
@@ -36,146 +79,347 @@
 			"As a machine equipped with seven swords and a gun, it descends onto the battlefield with Setsuna F. Seiei, who has awakened as an innovator. In addition to the weapons, new modeling parts have been added to the aircraft body. The aircraft that played an active role in \"Mobile Suit Gundam 00V Senki\" is now a PG kit!",
 			"Refined proportions, new coloring and texture expression.",
 			"• Adjust the proportions of each part such as legs, head, shoulders, etc. Newly molded parts give it a more sophisticated impression.",
-			"• Uses molded material with an emphasis on texture. Under the supervision of Mr. Kanetake Ebikawa, the molding color has also been renewed.",
+			"• Adopts molded material with emphasis on texture. Under the supervision of Mr. Kanetake Ebikawa, the molding color has also been renewed.",
 			"Armed parts cover variable and light emitting gimmicks",
 			"• GN Buster Sword II reproduces the LED light emitting gimmick.",
 			"Newly developed light guide parts with new mechanisms by understanding the set shape and performing detailed light guide analysis and design (patent pending)",
 			"• The large armed GN Sword II Blaster is also reproduced in a large size with a total length of approximately 340mm.",
 			"• GN Qatar can reproduce various variations such as being mounted on the leg as a single unit, or connected.",
-			"• GN Sword II Long/Short forms can be reproduced by replacing them. The long version can be used with the grip deployed in rifle mode, and the short version can be used with the ejection form using the lead wire."
+			"• GN Sword II Long/Short form can be reproduced by replacing. Long can be reproduced with grip deployment in rifle state, and Short can be reproduced with ejection form using lead wire."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"GNバスターソードII×1",
-			"GNソードIIショート×1",
-			"GNソードIIロング×1",
-			"GNカタール×2",
-			"GNビームサーベル×2",
-			"GNソードIIブラスター×1",
-			"アクションベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "GNバスターソードII"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GNソードIIショート"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GNソードIIロング"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GNカタール"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "GNビームサーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "GNソードIIブラスター"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アクションベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 44
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ドライデカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GNドライブ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "LEDユニット"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "六角ボルト"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ネジ(長)"
+			},
+			"count": 4,
+			"unit": {
+				"ja": "（短）×2"
+			}
+		},
+		{
+			"name": {
+				"ja": "六角ナット(大)"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "(小)×6"
+			}
+		},
+		{
+			"name": {
+				"ja": "コイルバネ"
+			},
+			"count": 8
+		},
+		{
+			"name": {
+				"ja": "ラバーシール"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "PEシート2種×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビス"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リード線"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "【付属品】"
+			}
+		},
+		{
+			"name": {
+				"ja": "GNバスターソードII"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GNソードIIショート"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GNソードIIロング"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GNカタール"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "GNビームサーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "GNソードIIブラスター"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アクションベース"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "【商品内容】"
+			}
+		},
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 44
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ドライデカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GNドライブ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "LEDユニット"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "六角ボルト"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ネジ(長)"
+			},
+			"count": 4,
+			"unit": {
+				"ja": "（短）×2"
+			}
+		},
+		{
+			"name": {
+				"ja": "六角ナット(大)"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "(小)×6"
+			}
+		},
+		{
+			"name": {
+				"ja": "コイルバネ"
+			},
+			"count": 8
+		},
+		{
+			"name": {
+				"ja": "ラバーシール"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "PEシート2種×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビス"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リード線"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3015_s_3yruroftgkawkhmbe674taga8b1h.jpg",
+				"path": "/images/items/01_2067/153_3015.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3015_s_6rtjg30am6lddai6ly8mt5ksuvuv.jpg",
+				"path": "/images/items/01_2067/155_3015.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3015_s_lonbpaeq6n87zmddssl4oj3ytwix.jpg",
+				"path": "/images/items/01_2067/156_3015.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3015_s_v9rza2u0vjratoxfhjqlfxhiiime.jpg",
+				"path": "/images/items/01_2067/157_3015.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3015_s_elkfa7iwu8myih2o8gu0ls7zyh7t.jpg",
+				"path": "/images/items/01_2067/158_3015.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3015_s_hhieqs3ul1nzg1cht5d7lmrp1u45.jpg",
+				"path": "/images/items/01_2067/159_3015.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3015_s_rcup718yuxxfpvgt3ky9qaot51nj.jpg",
+				"path": "/images/items/01_2067/189_3015.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3015_s_psubc72vzg7hq2zvr0zcrzegi8cn.jpg",
+				"path": "/images/items/01_2067/190_3015.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3015_s_nx6mgdr37j1rf993vr3ozqxragyt.jpg",
+				"path": "/images/items/01_2067/191_3015.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3015_s_y87d86w9b460xef9mu00kldqrc73.jpg",
+				"path": "/images/items/01_2067/192_3015.jpg"
+			}
 		],
-		"en": [
-			"GN Buster Sword II×1",
-			"GN Sword II Short x 1",
-			"GN Sword II Long x 1",
-			"GN Qatar×2",
-			"GN beam saber x2",
-			"GN Sword II Blaster x 1",
-			"Action base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×44",
-			"ホイルシール×1",
-			"マーキングシール×1",
-			"ドライデカール×1",
-			"GNドライブ×2",
-			"LEDユニット×2",
-			"六角ボルト×2",
-			"ネジ(長)×4（短）×2",
-			"六角ナット(大)×2(小)×6",
-			"コイルバネ×8",
-			"ラバーシール×2",
-			"PEシート2種×各1",
-			"ビス×1",
-			"リード線×1",
-			"取扱説明書×1",
-			"【付属品】",
-			"GNバスターソードII×1",
-			"GNソードIIショート×1",
-			"GNソードIIロング×1",
-			"GNカタール×2",
-			"GNビームサーベル×2",
-			"GNソードIIブラスター×1",
-			"アクションベース×1",
-			"【商品内容】",
-			"成形品×44",
-			"ホイルシール×1",
-			"マーキングシール×1",
-			"ドライデカール×1",
-			"GNドライブ×2",
-			"LEDユニット×2",
-			"六角ボルト×2",
-			"ネジ(長)×4（短）×2",
-			"六角ナット(大)×2(小)×6",
-			"コイルバネ×8",
-			"ラバーシール×2",
-			"PEシート2種×各1",
-			"ビス×1",
-			"リード線×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 44",
-			"Foil Seal×1",
-			"MarkingSeal×1",
-			"Dry decal x 1",
-			"GN drive x 2",
-			"LED unit x 2",
-			"Hex bolt x 2",
-			"Screw (long) x 4 (short) x 2",
-			"Hexagon nut (large) x 2 (small) x 6",
-			"Coil spring x 8",
-			"Rubber Seal×2",
-			"2 types of PE sheets x 1 each",
-			"Screw x 1",
-			"Lead wire x 1",
-			"Handling manual×1",
-			"[accessories]",
-			"GN Buster Sword II×1",
-			"GN Sword II Short x 1",
-			"GN Sword II Long x 1",
-			"GN Qatar×2",
-			"GN beam saber x2",
-			"GN Sword II Blaster x 1",
-			"Action base x 1",
-			"[Product contents]",
-			"Molded product x 44",
-			"Foil Seal×1",
-			"MarkingSeal×1",
-			"Dry decal x 1",
-			"GN drive x 2",
-			"LED unit x 2",
-			"Hex bolt x 2",
-			"Screw (long) x 4 (short) x 2",
-			"Hexagon nut (large) x 2 (small) x 6",
-			"Coil spring x 8",
-			"Rubber Seal×2",
-			"2 types of PE sheets x 1 each",
-			"Screw x 1",
-			"Lead wire x 1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2067/153_3015.jpg",
-		"/images/items/01_2067/155_3015.jpg",
-		"/images/items/01_2067/156_3015.jpg",
-		"/images/items/01_2067/157_3015.jpg",
-		"/images/items/01_2067/158_3015.jpg",
-		"/images/items/01_2067/159_3015.jpg",
-		"/images/items/01_2067/189_3015.jpg",
-		"/images/items/01_2067/190_3015.jpg",
-		"/images/items/01_2067/191_3015.jpg",
-		"/images/items/01_2067/192_3015.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2067/",
-	"brandIds": [
-		"pg"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2057",
-		"item-1000129011",
-		"item-1000120750",
-		"01_1202"
-	],
-	"manualId": "1060"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2067/"
 }

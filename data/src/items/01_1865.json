@@ -3,8 +3,59 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC 1/144 MS-06S シャア専用ザクII",
-		"en": "HGUC 1/144 MS-06S Char's Zaku II"
+		"en": "HGUC 1/144 MS-06S ZAKUⅡ"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -17,37 +68,37 @@
 		"month": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム」に登場するライバルキャラ「シャア専用ザクII」のプラモデル。ザクマシンガン・ザクバズーカを両手で構えられ、頭部カメラアイは左右に可動します。足首の可動範囲が広く、地面への接地性は抜群です。武器はザクマシンガン・ザクバズーカ・ヒートホークが付属します。"
 		],
 		"en": [
-			"A plastic model of the rival character \"Char's Zaku II \" that appears in \" Mobile Suit Gundam\". You can hold the Zaku Machine Gun and Zaku Bazooka with both hands, and the head camera eye can move left and right. The ankle has a wide range of motion and has excellent contact with the ground. Weapons include Zaku Machine Gun, Zaku Bazooka, and Heat Hawk."
+			"A plastic model of the rival character \"Char's Zaku II\" that appears in \"MOBILE SUIT GUNDAM\". You can hold the Zaku Machine Gun and Zaku Bazooka with both hands, and the head camera eye can be moved from side to side. The ankle has a wide range of motion and excellent contact with the ground. Weapons include a Zaku Machine Gun, Zaku Bazooka, and Heat Hawk."
 		]
 	},
-	"images": [
-		"/images/items/01_1865/1000074782_1.jpg",
-		"/images/items/01_1865/1000074782_2.jpg",
-		"/images/items/01_1865/1000074782_3.jpg",
-		"/images/items/01_1865/1000074782_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074782_1.jpg",
+				"path": "/images/items/01_1865/1000074782_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074782_2.jpg",
+				"path": "/images/items/01_1865/1000074782_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074782_3.jpg",
+				"path": "/images/items/01_1865/1000074782_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074782_4.jpg",
+				"path": "/images/items/01_1865/1000074782_4.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1865/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
-	"manualId": "0815"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1865/"
+	}
 }

@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 シャア専用ザクII 赤い彗星Ver.",
 		"en": "HG 1/144 Char's Zaku II Red Comet Ver."
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "origin",
+			"url": "https://bandai-hobby.net/series/origin/",
+			"ja": "機動戦士ガンダム THE ORIGIN"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3711",
+			"url": "https://bandai-hobby.net/item/01_3711/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)[クリアカラー]"
+		},
+		{
+			"id": "01_2828",
+			"url": "https://bandai-hobby.net/item/01_2828/",
+			"ja": "HG 1/144 ガンダムベース限定 ザクII TYPE C-6/R6 [ペインティングモデル]"
+		},
+		{
+			"id": "01_2707",
+			"url": "https://bandai-hobby.net/item/01_2707/",
+			"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)"
+		},
+		{
+			"id": "item-1000135687",
+			"url": "https://p-bandai.jp/item/item-1000135687",
+			"ja": "ＨＧ 1/144 MS-05S シャア専用ザクＩ（ＬＩＭＩＴＥＤ ＭＯＤＥＬ）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 27
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム THE ORIGIN』に登場するシャア専用ザクIIを新規パッケージと新たな武装でリニューアル！",
@@ -29,73 +72,122 @@
 		"en": [
 			"Char's Zaku II from \"Mobile Suit Gundam THE ORIGIN\" has been renewed with a new package and new weapons!",
 			"• Two new Zaku machine guns are included: the familiar drum magazine type and belt feed type.",
-			"• Falmer squad specification MarkingSeal is included. The armor design in the work can be reproduced.",
-			"• A wealth of armed parts allows for a wide variety of decorations."
+			"• Includes Falmer squad specification MarkingSeal. The armor design in the work can be reproduced.",
+			"• A rich variety of armed parts allows for a wide variety of decorations."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"マシンガン×1",
-			"ベルト給弾式マシンガン×1",
-			"バズーカ×1",
-			"バズーカ用予備マガジン×2",
-			"対艦ライフル×1",
-			"ヒート・ホーク×各1（展開・収納）",
-			"ライフル/バズーカ用右手首×1",
-			"拳(左右)×一式",
-			"左平手×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "マシンガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ベルト給弾式マシンガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バズーカ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バズーカ用予備マガジン"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "対艦ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ヒート・ホーク×各1（展開・収納）"
+			}
+		},
+		{
+			"name": {
+				"ja": "ライフル/バズーカ用右手首"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "拳(左右)×一式"
+			}
+		},
+		{
+			"name": {
+				"ja": "左平手"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成型品"
+			},
+			"count": 12
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3122_s_0hkpy8mvdv2t3k40jlajcsgcvxdj.jpg",
+				"path": "/images/items/01_2174/153_3122.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3122_s_dukfqjxglgs074uw07yl30osfssd.jpg",
+				"path": "/images/items/01_2174/155_3122.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3122_s_oz1wamcfanb400ta4via15iijodn.jpg",
+				"path": "/images/items/01_2174/156_3122.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3122_s_z2fub1u8nophdqcnwd9247lqrhdd.jpg",
+				"path": "/images/items/01_2174/157_3122.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3122_s_111v67e9tq6zlhbof0yqu2uv075f.jpg",
+				"path": "/images/items/01_2174/158_3122.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3122_s_p64v17e2uckblbustz044lsick9w.jpg",
+				"path": "/images/items/01_2174/159_3122.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3122_s_k20i2jetcf3preptrnme34nlhddw.jpg",
+				"path": "/images/items/01_2174/189_3122.jpg"
+			}
 		],
-		"en": [
-			"Machine gun x 1",
-			"Belt-fed machine gun x 1",
-			"Bazooka×1",
-			"Spare magazine for bazooka x 2",
-			"Anti-ship rifle x1",
-			"Heat Hawk x 1 each (deployed/stored)",
-			"Right wrist for rifle/bazooka x 1",
-			"Fists (left and right) x set",
-			"Left palm x1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成型品×12",
-			"ホイルシール×1",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 12",
-			"Foil Seal×1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2174/153_3122.jpg",
-		"/images/items/01_2174/155_3122.jpg",
-		"/images/items/01_2174/156_3122.jpg",
-		"/images/items/01_2174/157_3122.jpg",
-		"/images/items/01_2174/158_3122.jpg",
-		"/images/items/01_2174/159_3122.jpg",
-		"/images/items/01_2174/189_3122.jpg",
-		"/images/items/01_2174/01_2174_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2174/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"origin"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3711",
-		"01_2828",
-		"01_2707",
-		"item-1000135687"
-	],
-	"manualId": "0068"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2174/"
 }

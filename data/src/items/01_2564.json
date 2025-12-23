@@ -5,6 +5,50 @@
 		"ja": "1/144 HG ブリッツガンダム",
 		"en": "1/144 HG Blitz Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181726",
+			"url": "https://p-bandai.jp/item/item-1000181726/",
+			"ja": "ＨＧ 1/144 ストライクダガー"
+		},
+		{
+			"id": "01_1930",
+			"url": "https://bandai-hobby.net/item/01_1930/",
+			"ja": "HG 1/144 ガンダムベース限定 フリーダムガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_384",
+			"url": "https://bandai-hobby.net/item/01_384/",
+			"ja": "HGCE 1/144 フリーダムガンダム"
+		},
+		{
+			"id": "01_83",
+			"url": "https://bandai-hobby.net/item/01_83/",
+			"ja": "HGCE 1/144 ストライクルージュ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -17,34 +61,26 @@
 		"month": 4
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム SEED」に登場するライバル機「ブリッツガンダム」の1/144スケールHG仕様のプラモデル。シリーズ中最もボリュームのある大型武器「トリケロス」を右腕に装備し、左腕にはトリプルクロー兵器「グレイプニール」を装備しています。ツメは2パターンを装備可能です。"
+			"「機動戦士ガンダムSEED」に登場するライバル機「ブリッツガンダム」の1/144スケールHG仕様のプラモデル。シリーズ中最もボリュームのある大型武器「トリケロス」を右腕に装備し、左腕にはトリプルクロー兵器「グレイプニール」を装備しています。ツメは2パターンを装備可能です。"
 		],
 		"en": [
-			"A 1/144 Scale HG plastic model of the rival machine \"Blitz Gundam \" that appears in \" Mobile Suit Gundam SEED \". He is equipped with the most voluminous large weapon in the series, \" Triceros \", on his right arm, and the triple claw weapon \" Glepenir\" on his left arm. Two patterns of claws can be equipped."
+			"A 1/144 Scale HG plastic model of the rival machine \"Blitz Gundam\" that appears in \"Mobile Suit Gundam SEED\". He is equipped with the most voluminous large weapon in the series, \"Triceros\", on his right arm, and the triple claw weapon \"Glepenir\" on his left arm. Two patterns of claws can be equipped."
 		]
 	},
-	"images": [
-		"/images/items/01_2564/153_348.jpg",
-		"/images/items/01_2564/155_348.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2564/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181726",
-		"01_1930",
-		"01_384",
-		"01_83"
-	],
-	"manualId": "0150"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_348_s_twf467kb8mjm74fbyi0dmyh43dak.jpg",
+				"path": "/images/items/01_2564/153_348.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_348_o_1h0q1u461otl1pab739d7f1cuv23.jpg",
+				"path": "/images/items/01_2564/155_348.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2564/"
 }

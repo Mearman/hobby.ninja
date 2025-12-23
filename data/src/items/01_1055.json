@@ -3,8 +3,57 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC 1/144 RX-78-2 ガンダム",
-		"en": "HGUC 1/144 RX-78-2 Gundam"
+		"en": "HGUC 1/144 RX-78-2 GUNDAM"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ファーストガンダムと呼ばれ、まさに伝説の始まりを体現する「機動戦士ガンダム」主役機を、ＨＧＵＣシリーズでキット化しました。コアファイターはディスプレイにおけるベストスタイリングを追求したタイプです。武器はビーム・ライフル、ビームサーベル（×2）、シールド、ハイパー・バズーカが装備されています。"
@@ -27,28 +75,26 @@
 			"The main character of \"Mobile Suit Gundam\", which is called the First Gundam and truly embodies the beginning of the legend, has been made into a kit in the HGUC series. Core Fighter is a type that pursues the best styling in display. Weapons include a beam rifle, beam saber (x2), Seal, and hyper bazooka."
 		]
 	},
-	"images": [
-		"/images/items/01_1055/153_198.jpg",
-		"/images/items/01_1055/155_198.jpg",
-		"/images/items/01_1055/156_198.jpg",
-		"/images/items/01_1055/157_198.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1055/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
-	"manualId": "1004"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_198_s_87cvjco3niz5j94ksv7dj6gf0fin.jpg",
+				"path": "/images/items/01_1055/153_198.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_198_s_rm7pp0bi5dtlo2fkxj56ks40o1yr.jpg",
+				"path": "/images/items/01_1055/155_198.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_198_s_s2g6f3f8ssyjsyl8vohoi226r2tf.jpg",
+				"path": "/images/items/01_1055/156_198.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_198_s_iknn22ahumw5t92kvfaaoty9cebw.jpg",
+				"path": "/images/items/01_1055/157_198.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1055/"
 }

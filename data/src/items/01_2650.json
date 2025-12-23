@@ -5,6 +5,44 @@
 		"ja": "HG 1/144 アームズアストレイPMCカスタム(レオンズ・グレイブス専用機)",
 		"en": "HG 1/144 Arms Astray PMC Custom (Leon's Graves exclusive machine)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,35 +56,38 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム SEED FRAME ASTRAYS」に登場するレオンズ・グレイブス専用の“シビリアンアストレイ”がHGにラインナップ レオンズ機の特徴的な頭部を再現 専用マーキングを再現したシールが付属"
+			"「機動戦士ガンダムSEED FRAME ASTRAYS」に登場するレオンズ・グレイブス専用の“シビリアンアストレイ”がHGにラインナップ レオンズ機の特徴的な頭部を再現 専用マーキングを再現したシールが付属"
 		],
 		"en": [
-			"\"Civilian Astray \" exclusive to Leon's Graves that appears in \" Mobile Suit Gundam SEED FRAME ASTRAYS\" is now available in HG.Reproduces the characteristic head of Leon's machine.Comes with a seal that reproduces the special marking."
+			"\"Civilian Astray\" exclusively for Leon's Graves that appears in \"Mobile Suit GundamSEED FRAME ASTRAYS\" is now available in HG.Reproduces the characteristic head of Leon's machine.Comes with a seal that reproduces the special marking."
 		]
 	},
-	"images": [
-		"/images/items/01_2650/153_3572.jpg",
-		"/images/items/01_2650/155_3572.jpg",
-		"/images/items/01_2650/156_3572.jpg",
-		"/images/items/01_2650/157_3572.jpg",
-		"/images/items/01_2650/158_3572.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2650/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5951"
-	],
-	"manualId": "0278"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3572_s_zmk20ncqplc9lifg0ljar6dsa72z.jpg",
+				"path": "/images/items/01_2650/153_3572.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3572_s_jydjy8x9lwm2lwwbdddqcz883qby.jpg",
+				"path": "/images/items/01_2650/155_3572.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3572_s_64hok7x1xzcornelz2xbtn4beesm.jpg",
+				"path": "/images/items/01_2650/156_3572.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3572_s_e8uyzpi2xfoammnjl695g2lyysjs.jpg",
+				"path": "/images/items/01_2650/157_3572.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3572_s_e9vo6f3zz7snu86o3iyrtwqb4598.jpg",
+				"path": "/images/items/01_2650/158_3572.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2650/"
 }

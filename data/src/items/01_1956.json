@@ -5,6 +5,43 @@
 		"ja": "ピカちんキットS00　ピカボ",
 		"en": "Pikachin KitS00 Pikabo"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -32,9 +69,9 @@
 		],
 		"en": [
 			"• New series Pikachin KitS is now available! The new protagonist robot following Pochiro and Jet Wolf!",
-			"• The pacifier-shaped handle is 1% cheaper!",
+			"• The pacifier-shaped handle is 1% pyramidal!",
 			"• Equipped with a gasha gimmick that releases a capsule from your stomach when you turn the pacifier!",
-			"• 4 capsules and 4 robot combination gummies included!",
+			"• Comes with 4 capsules and 4 robot combination gummies!",
 			"[Set contents]",
 			"Pikabo...1 (molded product...6)",
 			"Pikachin QR code Sticker...1",
@@ -42,26 +79,34 @@
 			"Pikachin sheet...1 (front: blueprint page, back: trivia page)"
 		]
 	},
-	"images": [
-		"/images/items/01_1956/153_2889.jpg",
-		"/images/items/01_1956/155_2889.jpg",
-		"/images/items/01_1956/156_2889.jpg",
-		"/images/items/01_1956/157_2889.jpg",
-		"/images/items/01_1956/158_2889.jpg",
-		"/images/items/01_1956/159_2889.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1956/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2889_s_xk5mf0xakeu4xowr3eneuob2bdzr.jpg",
+				"path": "/images/items/01_1956/153_2889.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2889_s_78514ud7vfbineso4ngz6tikgbvd.jpg",
+				"path": "/images/items/01_1956/155_2889.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2889_s_tlnmavdq1q61cbeme6ttkpzr0k97.jpg",
+				"path": "/images/items/01_1956/156_2889.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2889_s_6vbsyo8l21zpvejqnzgj1yt4cg8g.jpg",
+				"path": "/images/items/01_1956/157_2889.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2889_s_7iboxmg1rq9zmi5dh63w189wwasd.jpg",
+				"path": "/images/items/01_1956/158_2889.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2889_s_dq1cc9tpwnnaxdgrlpivyjdp2jz1.jpg",
+				"path": "/images/items/01_1956/159_2889.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1956/"
 }

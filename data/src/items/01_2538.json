@@ -5,6 +5,43 @@
 		"ja": "LBXルシファー",
 		"en": "LBX Lucifer"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "lbx",
+			"url": "https://bandai-hobby.net/series/lbx/",
+			"ja": "ダンボール戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000215196",
+			"url": "https://p-bandai.jp/item/item-1000215196/",
+			"ja": "ＬＢＸイカロス・フォース"
+		},
+		{
+			"id": "item-1000215197",
+			"url": "https://p-bandai.jp/item/item-1000215197/",
+			"ja": "ＬＢＸイカロス・ゼロ"
+		},
+		{
+			"id": "item-1000210042",
+			"url": "https://p-bandai.jp/item/item-1000210042/",
+			"ja": "ＬＢＸエルシオン"
+		},
+		{
+			"id": "item-1000210041",
+			"url": "https://p-bandai.jp/item/item-1000210041/",
+			"ja": "ＬＢＸペルセウス"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -27,41 +64,57 @@
 		"en": [
 			"From \"Danball Senki\" comes an LBX dedicated to Kosuke Kamiya, who has two faces, an angel and a devil!",
 			"• Built-in night frame.",
-			"• Basic equipment sword \"Heaven's Edge \" and shield \" Tentei Nemesis Sealdo\" are included."
+			"• Basic equipment sword \"Heaven's Edge\" and shield \"Tentei Nemesis Sealdo\" are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ヘブンズエッジ×1",
-			"天帝ネメシスシールド×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヘブンズエッジ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "天帝ネメシスシールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3463_s_b4zpxxwqlhwun21wmghz7w7o9ldb.jpg",
+				"path": "/images/items/01_2538/153_3463.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3463_s_ohlmja61dj6f0g6w82njo3o1p6ly.jpg",
+				"path": "/images/items/01_2538/155_3463.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3463_s_hptcnovz239mv8ymswk11t6zmtha.jpg",
+				"path": "/images/items/01_2538/156_3463.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3463_s_4ososjob1124jxtaa2ldlayn61iz.jpg",
+				"path": "/images/items/01_2538/157_3463.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3463_s_048ljv5fei9bgg0q303e90ifq6jn.jpg",
+				"path": "/images/items/01_2538/158_3463.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3463_s_jbc2qh8yspucubdjqnminp5osuch.jpg",
+				"path": "/images/items/01_2538/159_3463.jpg"
+			}
 		],
-		"en": [
-			"Heaven's Edge×1",
-			"Tentei Nemesis Seal×1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2538/153_3463.jpg",
-		"/images/items/01_2538/155_3463.jpg",
-		"/images/items/01_2538/156_3463.jpg",
-		"/images/items/01_2538/157_3463.jpg",
-		"/images/items/01_2538/158_3463.jpg",
-		"/images/items/01_2538/159_3463.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2538/",
-	"brandIds": [],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2538/"
 }

@@ -5,6 +5,44 @@
 		"ja": "1/144 モビルスモー／ゴールドタイプ",
 		"en": "1/144 Mobile Smo/Gold type"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "turn-a",
+			"url": "https://bandai-hobby.net/series/turn-a/",
+			"ja": "∀ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000135920",
+			"url": "https://p-bandai.jp/item/item-1000135920",
+			"ja": "ＭＧ 1/100 ∀ガンダム／ターンＸ［ナノスキンイメージ］"
+		},
+		{
+			"id": "item-1000099631",
+			"url": "https://p-bandai.jp/item/item-1000099631",
+			"ja": "ＭＧ 1/100 ターンエーガンダム（月光蝶Ver.）"
+		},
+		{
+			"id": "item-1000165581",
+			"url": "https://p-bandai.jp/item/item-1000165581",
+			"ja": "ＭＧ 1/100 ターンエーガンダム用拡張エフェクトユニット “月光蝶”"
+		},
+		{
+			"id": "01_120",
+			"url": "https://bandai-hobby.net/item/01_120/",
+			"ja": "MG 1/100 Concept-X 6-1-2 ターンX"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"TV「∀ガンダム」に登場したモビルスモーのゴールドタイプをキット化しました。フェイスパーツは通常形態の他に、オープン形態のものがついています。ひざは二重関節を使用しています。軍配型ヒート・ファン、ハンドビーム・ガン、IFジェネレータがついています。"
@@ -26,25 +63,30 @@
 			"The gold type of Mobile Smo that appeared on TV \"∀Gundam\" has been made into a kit. In addition to the normal face parts, there are also open face parts. The knees use double joints. Comes with a military heat fan, hand beam gun, and IF generator."
 		]
 	},
-	"images": [
-		"/images/items/01_2414/153_3346.jpg",
-		"/images/items/01_2414/155_3346.jpg",
-		"/images/items/01_2414/156_3346.jpg",
-		"/images/items/01_2414/157_3346.jpg",
-		"/images/items/01_2414/158_3346.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2414/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000135920",
-		"item-1000099631",
-		"item-1000165581",
-		"01_120"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3346_o_1dc1r5amm183k10rlh1i18bu13mn23.jpg",
+				"path": "/images/items/01_2414/153_3346.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3346_o_1dc1r5m2gl2d1g2u8rb1vpq19l42d.jpg",
+				"path": "/images/items/01_2414/155_3346.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3346_o_1dc1r5qs55jq1id0u6o1b8t3hi2i.jpg",
+				"path": "/images/items/01_2414/156_3346.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3346_o_1dc1r61ut19opbi7bn212itbkc2n.jpg",
+				"path": "/images/items/01_2414/157_3346.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3346_o_1dc1r67nl1g8o18ob1c7u19fe1rma2s.jpg",
+				"path": "/images/items/01_2414/158_3346.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2414/"
 }

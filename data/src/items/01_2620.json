@@ -3,8 +3,53 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-riseStandard 人造人間１８号",
-		"en": "Figure-riseStandard Android 18"
+		"en": "Figure-rise Standard Android 18"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]",
+			"en": "Figure-rise Standard"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ",
+			"en": "DRAGON BALL"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4901",
+			"url": "https://bandai-hobby.net/item/01_4901/",
+			"ja": "Figure-rise Standard ベジータ (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_4219",
+			"url": "https://bandai-hobby.net/item/01_4219/",
+			"ja": "Figure-rise Standard 孫悟空 (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_2974",
+			"url": "https://bandai-hobby.net/item/01_2974/",
+			"ja": "Figure-rise Standard アルティメット孫悟飯"
+		},
+		{
+			"id": "01_2769",
+			"url": "https://bandai-hobby.net/item/01_2769/",
+			"ja": "Figure-rise Standard ジレン"
+		}
+	],
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -30,41 +75,54 @@
 			"• 全高約15.5cm"
 		],
 		"en": [
-			"• Figure-riseStandard Android version starts!",
-			"• Android 18, which is extremely popular as a female Dragon Ball character, is now three-dimensional with attractive proportions!",
-			"• Outstanding movable performance! The feminine gestures shown in the original work, such as combing her hair, can also be recreated.",
-			"• Three types of facial expression parts are included. If you use expressionless parts, you can even recreate the scene where she kisses Krillin!",
-			"• The skirt is made of soft material, and the jacket can be removed. Kit packed with the charm of No. 18!",
-			"• Special product specifications that include a bomb planted by Dr. Gero in its body!",
-			"• Let's recreate impressive scenes from the play by placing it side by side with Android No. 17, which was released at the same time!",
-			"• Total height approximately 15.5cm"
+			"Android 18 has been redesigned and is now available!",
+			"• It is possible to reproduce feminine gestures such as raking the hair shown in the original work with excellent mobility.",
+			"• Three types of facial expression parts are also included, and if you use expressionless parts, you can recreate the scene where you kissed Krillin!"
 		]
 	},
-	"images": [
-		"/images/items/01_2620/1000113364_1.jpg",
-		"/images/items/01_2620/1000113364_2.jpg",
-		"/images/items/01_2620/1000113364_3.jpg",
-		"/images/items/01_2620/1000113364_4.jpg",
-		"/images/items/01_2620/1000113364_5.jpg",
-		"/images/items/01_2620/1000113364_6.jpg",
-		"/images/items/01_2620/1000113364_7.jpg",
-		"/images/items/01_2620/1000113364_8.jpg",
-		"/images/items/01_2620/1000113364_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000113364_1.jpg",
+				"path": "/images/items/01_2620/1000113364_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000113364_2.jpg",
+				"path": "/images/items/01_2620/1000113364_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000113364_3.jpg",
+				"path": "/images/items/01_2620/1000113364_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000113364_4.jpg",
+				"path": "/images/items/01_2620/1000113364_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000113364_5.jpg",
+				"path": "/images/items/01_2620/1000113364_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000113364_6.jpg",
+				"path": "/images/items/01_2620/1000113364_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000113364_7.jpg",
+				"path": "/images/items/01_2620/1000113364_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000113364_8.jpg",
+				"path": "/images/items/01_2620/1000113364_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000113364_9.jpg",
+				"path": "/images/items/01_2620/1000113364_9.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2620/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"dragonball"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4901",
-		"01_4219",
-		"01_2974",
-		"01_2769"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2620/"
+	}
 }

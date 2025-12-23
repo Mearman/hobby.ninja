@@ -5,6 +5,50 @@
 		"ja": "RG 1/144 ガンダムアストレイ レッドフレーム メッキVer.",
 		"en": "RG 1/144 Gundam Astray Red Frame Plated Ver."
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "astrays",
+			"url": "https://bandai-hobby.net/series/astrays/",
+			"ja": "機動戦士ガンダムSEED ASTRAY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000134497",
+			"url": "https://p-bandai.jp/item/item-1000134497",
+			"ja": "ＲＧ 1/144 ガンダムアストレイ ゴールドフレーム天（アマツ）ハナ"
+		},
+		{
+			"id": "01_4768",
+			"url": "https://bandai-hobby.net/item/01_4768/",
+			"ja": "RG 1/144 ガンダムアストレイ ゴールドフレーム天［スペシャルコーティング］"
+		},
+		{
+			"id": "01_2190",
+			"url": "https://bandai-hobby.net/item/01_2190/",
+			"ja": "RG 1/144 ガンダムアストレイ ゴールドフレーム天ミナ [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000116090",
+			"url": "http://p-bandai.jp/item/item-1000116090/",
+			"ja": "ＲＧ 1/144 ガンダムアストレイ ゴールドフレーム天（アマツ）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4840,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 8
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
@@ -28,27 +71,14 @@
 			"RG Gundam Astray Red Frame Vent Limited Plating Ver."
 		]
 	},
-	"images": [
-		"/images/items/01_1903/153_2838.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1903/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"astrays"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000134497",
-		"01_4768",
-		"01_2190",
-		"item-1000116090"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2838_s_0p2i865dqjmm4631yl8g5lo4foqt.jpg",
+				"path": "/images/items/01_1903/153_2838.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1903/"
 }

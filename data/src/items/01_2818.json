@@ -5,6 +5,58 @@
 		"ja": "カスタマイズエフェクト (爆発イメージVer.) [グレー]",
 		"en": "Customization effect (explosion image Ver.) [Gray]"
 	},
+	"brands": [
+		{
+			"id": "customize_scenebase",
+			"url": "https://bandai-hobby.net/brand/customize_scenebase/",
+			"ja": "カスタマイズシーンベース/エフェクト/マテリアル/ウェポンズ"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "customize_scenebase",
+			"url": "https://bandai-hobby.net/brand/customize_scenebase/",
+			"ja": "カスタマイズシーンベース/エフェクト/マテリアル/ウェポンズ"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -28,40 +80,54 @@
 			"• A set of effect parts and joint parts to express an explosion."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"エフェクトパーツ×一式",
-			"ジョイントパーツ×一式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "エフェクトパーツ×一式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ×一式"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3803_s_ve1v4aqrbyycuq6i3g7rbv5pdwci.jpg",
+				"path": "/images/items/01_2818/153_3803.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3803_s_splmyj5di8cy6ll1kpoocd2zui3c.jpg",
+				"path": "/images/items/01_2818/155_3803.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3803_s_i772swgfo0coeb84cine9ibg3x5e.jpg",
+				"path": "/images/items/01_2818/156_3803.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3803_s_348aaww9ik9y5e7g3aselbolhotq.jpg",
+				"path": "/images/items/01_2818/157_3803.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3803_s_zlln3h3o01s0z5kqdlg7xvpoztgc.jpg",
+				"path": "/images/items/01_2818/158_3803.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3803_s_o94fdjkjqoagsnmfmooqd94jt7iv.jpg",
+				"path": "/images/items/01_2818/159_3803.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3803_s_ub0dyp1mvdninthohr26atp84cnv.jpg",
+				"path": "/images/items/01_2818/189_3803.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3803_s_l40sbmm15by1ye23qcsz69rcu7ec.jpg",
+				"path": "/images/items/01_2818/190_3803.jpg"
+			}
 		],
-		"en": [
-			"Effect parts x set",
-			"Joint parts x set"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2818/153_3803.jpg",
-		"/images/items/01_2818/155_3803.jpg",
-		"/images/items/01_2818/156_3803.jpg",
-		"/images/items/01_2818/157_3803.jpg",
-		"/images/items/01_2818/158_3803.jpg",
-		"/images/items/01_2818/159_3803.jpg",
-		"/images/items/01_2818/189_3803.jpg",
-		"/images/items/01_2818/190_3803.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2818/",
-	"brandIds": [
-		"customize_scenebase",
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3836"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2818/"
 }

@@ -2,9 +2,37 @@
 	"id": "01_2374",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット ユニコーンガンダム（デストロイモード）",
-		"en": "SD Gundam Cross Silhouette Unicorn Gundam (Destroy Mode)"
+		"ja": "SDガンダム クロスシルエット ユニコーンガンダム（デストロイモード）",
+		"en": "SDGundam Cross Silhouette Unicorn Gundam (Destroy Mode)"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4893",
+			"url": "https://bandai-hobby.net/item/01_4893/",
+			"ja": "SDガンダムクロスシルエット ユニコーンガンダム2号機バンシィ（デストロイモード）＆バンシィ・ノルン パーツセット"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -29,57 +57,91 @@
 		"en": [
 			"Unicorn Gundam, which focuses on \"density, ease of assembly, and movement\", is now available from SDCS!",
 			"• The characteristic psycho frame is reproduced with clear parts. A highly satisfying model that condenses the charm of Unicorn Gundam!",
-			"• By rearranging the figures, you can choose whether or not they have eyes.",
+			"• You can choose whether or not to have pupils by rearranging them.",
 			"• Beam Magnum, Beam Saber, and Seal are included.",
 			"• By linking with the CS frame (sold separately), it is possible to reproduce a tall head and body with high mobility. You can enjoy it with your favorite proportions!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・マグナム×1",
-			"ビーム・サーベル×2",
-			"シールド×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・マグナム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 5
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3309_s_q9vp4n64wnzxqygfbk56kphd71gj.jpg",
+				"path": "/images/items/01_2374/153_3309.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3309_s_zevlbvtksblth2trf3zx4yh534th.jpg",
+				"path": "/images/items/01_2374/155_3309.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3309_s_mwngvl9rovps2crzjrzymn3n7lgy.jpg",
+				"path": "/images/items/01_2374/156_3309.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3309_s_osqpgcq9o52vlhna903dexu3eq1u.jpg",
+				"path": "/images/items/01_2374/157_3309.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3309_s_dtk21pv2c9l09jsjzy4r5jbnl8ph.jpg",
+				"path": "/images/items/01_2374/158_3309.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3309_s_mna2n993nqdgmxwqks9v91w8ddq5.jpg",
+				"path": "/images/items/01_2374/159_3309.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3309_s_pq6wraqnddc5g1dkhyncehbsjmja.jpg",
+				"path": "/images/items/01_2374/189_3309.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3309_s_3v93oc5xi07gkj05jc1tnz4p8ve9.jpg",
+				"path": "/images/items/01_2374/190_3309.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3309_s_1zqpr8x7jtv9sa70pg19egov2txu.jpg",
+				"path": "/images/items/01_2374/191_3309.jpg"
+			}
 		],
-		"en": [
-			"Beam Magnum x 1",
-			"Beam saber x2",
-			"Seal × 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×5",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 5",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2374/153_3309.jpg",
-		"/images/items/01_2374/155_3309.jpg",
-		"/images/items/01_2374/156_3309.jpg",
-		"/images/items/01_2374/157_3309.jpg",
-		"/images/items/01_2374/158_3309.jpg",
-		"/images/items/01_2374/159_3309.jpg",
-		"/images/items/01_2374/189_3309.jpg",
-		"/images/items/01_2374/190_3309.jpg",
-		"/images/items/01_2374/191_3309.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2374/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4893"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2374/"
 }

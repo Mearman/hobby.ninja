@@ -3,8 +3,40 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard 仮面ライダービルド ラビットタンクフォーム",
-		"en": "Figure-rise Standard Kamen Rider Build Rabbit Tank Form"
+		"en": "Figure-rise Standard MASKED RIDER BUILD RABBITTANK FORM"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "rider",
+			"url": "https://bandai-hobby.net/series/rider/",
+			"ja": "仮面ライダーシリーズ",
+			"en": "KAMEN RIDER SERIES"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_5451",
+			"url": "https://bandai-hobby.net/item/01_5451/",
+			"ja": "Figure-rise Standard 仮面ライダーゼロワン ライジングホッパー"
+		},
+		{
+			"id": "item-1000215369",
+			"url": "https://p-bandai.jp/item/item-1000215369/",
+			"ja": "Figure-rise Standard 仮面ライダーファイズ ブラスターフォーム"
+		},
+		{
+			"id": "01_5276",
+			"url": "https://bandai-hobby.net/item/01_5276/",
+			"ja": "Figure-rise Standard 仮面ライダークウガ アルティメットフォーム"
+		},
+		{
+			"id": "01_5175",
+			"url": "https://bandai-hobby.net/item/01_5175/",
+			"ja": "Figure-rise Standard 仮面ライダーキバ キバフォーム"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -27,62 +59,115 @@
 			"• 開き手や握り手など豊富な種類の手が付属。"
 		],
 		"en": [
-			"Kamen Rider Build Rabbit tank form from \"Kamen Rider Build\" is now available in Figure-rise Standard!",
-			"• Figure-rise Standard's wide range of joint mechanisms makes it possible to recreate characteristic poses immediately after transformation and the special move \"Voltech Finish\".",
+			"From \"KAMEN RIDER BUILD \"KAMEN RIDER BUILD Rabbit Tank Form is in the lineup of Figure-rise Standard!",
+			"• The wide joint mechanism of the Figure-rise Standard makes it possible to reproduce the characteristic pose immediately after transformation and the special move \"Vortech Finish\".",
 			"• Clear parts are used for the eyes and full bottle, and the lever can be rotated.",
-			"• Drill crusher can be transformed into blade mode and gun mode by replacement.",
-			"• A wide variety of hands are included, including open hands and grip hands."
+			"• The drill crusher can be transformed into blade mode and gun mode by interchangeability."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ドリルクラッシャー×1",
-			"手首パーツ6種×各1",
-			"ディスプレイベース×1"
-		],
-		"en": [
-			"Drill crusher x 1",
-			"6 types of wrist parts x 1 each",
-			"Display base x 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×5",
-			"ホイルシール×1",
-			"ネーマーシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 5",
-			"Foil Seal×1",
-			"Namer Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1403/1000127545_1.jpg",
-		"/images/items/01_1403/1000127545_10.jpg",
-		"/images/items/01_1403/1000127545_11.jpg",
-		"/images/items/01_1403/1000127545_2.jpg",
-		"/images/items/01_1403/1000127545_3.jpg",
-		"/images/items/01_1403/1000127545_4.jpg",
-		"/images/items/01_1403/1000127545_5.jpg",
-		"/images/items/01_1403/1000127545_6.jpg",
-		"/images/items/01_1403/1000127545_7.jpg",
-		"/images/items/01_1403/1000127545_8.jpg",
-		"/images/items/01_1403/1000127545_9.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ドリルクラッシャー",
+				"en": "• Drill Crusher"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "手首パーツ6種×各1",
+				"en": "• 6 types of wrist parts"
+			},
+			"unit": {
+				"ja": "each",
+				"en": "each"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース",
+				"en": "• Display Base"
+			},
+			"count": 1
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 5
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ネーマーシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127545_1.jpg",
+				"path": "/images/items/01_1403/1000127545_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127545_2.jpg",
+				"path": "/images/items/01_1403/1000127545_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127545_3.jpg",
+				"path": "/images/items/01_1403/1000127545_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127545_4.jpg",
+				"path": "/images/items/01_1403/1000127545_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127545_5.jpg",
+				"path": "/images/items/01_1403/1000127545_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127545_6.jpg",
+				"path": "/images/items/01_1403/1000127545_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127545_7.jpg",
+				"path": "/images/items/01_1403/1000127545_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127545_8.jpg",
+				"path": "/images/items/01_1403/1000127545_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127545_9.jpg",
+				"path": "/images/items/01_1403/1000127545_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127545_10.jpg",
+				"path": "/images/items/01_1403/1000127545_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127545_11.jpg",
+				"path": "/images/items/01_1403/1000127545_11.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1403/",
-	"brandIds": [],
-	"seriesIds": [
-		"rider"
-	],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5451",
-		"item-1000215369",
-		"01_5276",
-		"01_5175"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1403/"
+	}
 }

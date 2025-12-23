@@ -5,6 +5,43 @@
 		"ja": "ピカちんキットS06EX　ピカちんドローン ブラックVer.",
 		"en": "Pikachin KitS06EX Pikachin Drone Black Ver."
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 9350,
 		"currency": "JPY",
@@ -45,16 +82,16 @@
 			"ピカちんシート…1(表：設計図ページ)(裏：スキルアップページ)"
 		],
 		"en": [
-			"• New color available for Pikachin drone!",
+			"• New colors available for Pikachin drone!",
 			"• What's amazing about the Pikachin drone! Part 1: Packed with features that are easy even for beginners!",
 			"• What's amazing about the Pikachin drone! Part 2: Customize with \"Pikachin Attachment\"!",
-			"• RC (radio control) drone that even first-timers can fly!",
+			"• An RC (radio control) drone that even beginners can fly!",
 			"• Equipped with a barometric pressure sensor to automatically adjust altitude. Easy takeoff with one push of a button, can be operated with one hand!",
-			"• You can choose the speed according to your skill from 3 levels: low, medium, and high!",
+			"• You can choose the speed according to your skill level from 3 levels: low, medium, and high!",
 			"• 5 types of new color attachments! Let's make your own Pikachin drone!",
-			"• Captain★Two types of Propon's glass sun style expression seals are included.",
-			"• The main body has been assembled! Attach the exterior and start playing right away!",
-			"• A newly designed skill-up paper craft is included!",
+			"• Two types of Captain★Propon's glass sun style expression seals are included.",
+			"• The main body is already assembled! Attach the exterior and start playing right away!",
+			"• Newly designed skill-up paper craft included!",
 			"[Set contents]",
 			"Pikachin drone body...1 (core unit)",
 			"Controller...1",
@@ -70,32 +107,58 @@
 			"Pikachin sheet...1 (Front: Blueprint page) (Back: Skill up page)"
 		]
 	},
-	"images": [
-		"/images/items/01_2166/1000134180_1.jpg",
-		"/images/items/01_2166/1000134180_10.jpg",
-		"/images/items/01_2166/1000134180_11.jpg",
-		"/images/items/01_2166/1000134180_12.jpg",
-		"/images/items/01_2166/1000134180_2.jpg",
-		"/images/items/01_2166/1000134180_3.jpg",
-		"/images/items/01_2166/1000134180_4.jpg",
-		"/images/items/01_2166/1000134180_5.jpg",
-		"/images/items/01_2166/1000134180_6.jpg",
-		"/images/items/01_2166/1000134180_7.jpg",
-		"/images/items/01_2166/1000134180_8.jpg",
-		"/images/items/01_2166/1000134180_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2166/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134180_1.jpg",
+				"path": "/images/items/01_2166/1000134180_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134180_2.jpg",
+				"path": "/images/items/01_2166/1000134180_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134180_3.jpg",
+				"path": "/images/items/01_2166/1000134180_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134180_4.jpg",
+				"path": "/images/items/01_2166/1000134180_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134180_5.jpg",
+				"path": "/images/items/01_2166/1000134180_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134180_6.jpg",
+				"path": "/images/items/01_2166/1000134180_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134180_7.jpg",
+				"path": "/images/items/01_2166/1000134180_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134180_8.jpg",
+				"path": "/images/items/01_2166/1000134180_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134180_9.jpg",
+				"path": "/images/items/01_2166/1000134180_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134180_10.jpg",
+				"path": "/images/items/01_2166/1000134180_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134180_11.jpg",
+				"path": "/images/items/01_2166/1000134180_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134180_12.jpg",
+				"path": "/images/items/01_2166/1000134180_12.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2166/"
 }

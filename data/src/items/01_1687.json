@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ストライクフリーダムガンダム エクストラフィニッシュVer.",
 		"en": "MG 1/100 Strike Freedom Gundam Extra Finish Ver."
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5421",
+			"url": "https://bandai-hobby.net/item/01_5421/",
+			"ja": "MG 1/100 ガンダムベース限定 デスティニーガンダム (ハイネ専用機)"
+		},
+		{
+			"id": "item-1000183862",
+			"url": "https://p-bandai.jp/item/item-1000183862/",
+			"ja": "ＭＧ 1/100 ガナーウィザード／スラッシュウィザード／ブレイズウィザードセット"
+		},
+		{
+			"id": "01_3712",
+			"url": "https://bandai-hobby.net/item/01_3712/",
+			"ja": "MG 1/100 ガナーザクウォーリア(ルナマリア・ホーク専用機)[クリアカラー]"
+		},
+		{
+			"id": "item-1000155441",
+			"url": "https://p-bandai.jp/item/item-1000155441/",
+			"ja": "ＭＧ 1/100 ブレイズザクファントム（レイ・ザ・バレル専用機）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 11000,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 9
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"ストライクフリーダムガンダム、燦然と輝くスペシャル仕様で新登場！ 全身にスペシャルコーティングを施したエクストラフィニッシュバージョン 背中の翼は連動ギミックにより劇中シーンを再現、各翼はスライドギミックにより伸縮可能 ロングライフルへ合体可能なビームライフル×2、ビームサーベル×2、ビームシールドなどの武器が付属 ストライクフリーダムガンダムの翼をモチーフにした専用ディスプレイスタンド、1/100スケールのキラ・ヤマトとラクス・クラインフィギュアもが付属"
@@ -26,24 +69,18 @@
 			"Strike Freedom Gundam is now available with a special specification that shines brightly! Extra finish version with special coating applied to the whole body. The wings on the back reproduce scenes from the movie with an interlocking gimmick, and each wing can be expanded and contracted with a sliding gimmick. Comes with weapons such as 2 beam rifles that can be combined into a long rifle, 2 beam sabers, and a beam seal. Also includes a special display stand with the wings of Strike Freedom Gundam as a motif, and 1/100 scale Kira Yamato and Lacus Clyne figures."
 		]
 	},
-	"images": [
-		"/images/items/01_1687/153_2594.jpg",
-		"/images/items/01_1687/155_2594.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1687/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5421",
-		"item-1000183862",
-		"01_3712",
-		"item-1000155441"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2594_s_x5iwqm0rbd5d86tviu1p7bsjcvjl.jpg",
+				"path": "/images/items/01_1687/153_2594.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2594_s_6ezwn6ol70k8xeup3b8ijz35586v.jpg",
+				"path": "/images/items/01_1687/155_2594.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1687/"
 }

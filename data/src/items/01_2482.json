@@ -2,9 +2,53 @@
 	"id": "01_2482",
 	"type": "item",
 	"name": {
-		"ja": "MG 1/100 ハイパーモード G ガンダム",
-		"en": "MG 1/100 Hyper Mode G Gundam"
+		"ja": "MG 1/100 ハイパーモード Gガンダム",
+		"en": "MG 1/100 Hyper Mode GGundam"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "ggundam",
+			"url": "https://bandai-hobby.net/series/ggundam/",
+			"ja": "機動武闘伝Ｇガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1746",
+			"url": "https://bandai-hobby.net/item/01_1746/",
+			"ja": "MG 1/100 シャイニングガンダム"
+		},
+		{
+			"id": "01_1629",
+			"url": "https://bandai-hobby.net/item/01_1629/",
+			"ja": "MG 1/100 マスターガンダム"
+		},
+		{
+			"id": "01_1896",
+			"url": "https://bandai-hobby.net/item/01_1896/",
+			"ja": "MG 1/100 ガンダムシュピーゲル"
+		},
+		{
+			"id": "01_2493",
+			"url": "https://bandai-hobby.net/item/01_2493/",
+			"ja": "MG 1/100 ハイパーモード マスターガンダム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -17,36 +61,38 @@
 		"month": 4
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"「機動武闘伝G ガンダム」に登場する「ゴットガンダム」のハイパーモードのMG仕様のプラモデル。メッキと成型色によりゴールドに輝く状態を表現しています。G ガンダムのシリーズ最大の特徴であるダイナミックなポーズ付け(爆熱ゴッドフィンガーなど)が可能です。ゴッドスラッシュ、コアランダー、ドモン・カッシュのフィギュアが付属します。"
+			"「機動武闘伝Gガンダム」に登場する「ゴットガンダム」のハイパーモードのMG仕様のプラモデル。メッキと成型色によりゴールドに輝く状態を表現しています。Gガンダムのシリーズ最大の特徴であるダイナミックなポーズ付け(爆熱ゴッドフィンガーなど)が可能です。ゴッドスラッシュ、コアランダー、ドモン・カッシュのフィギュアが付属します。"
 		],
 		"en": [
-			"Hyper mode MG specification plastic model of \"Gotto Gundam \" that appears in \" Mobile Fighter G Gundam\". The plating and molding color create a golden shine. The biggest feature of the G Gundam series is the ability to create dynamic poses (such as the explosive god finger). Includes figures of Godslash, Corelander, and Domon Kash."
+			"A hyper mode MG specification plastic model of \"Gotto Gundam\" that appears in \"Mobile Fighter GGundam\". The plating and molding color give it a golden shine. The biggest feature of the GGundam series is the ability to create dynamic poses (such as explosive god fingers). Includes figures of Godslash, Corelander, and Domon Kash."
 		]
 	},
-	"images": [
-		"/images/items/01_2482/153_340.jpg",
-		"/images/items/01_2482/155_340.jpg",
-		"/images/items/01_2482/156_340.jpg",
-		"/images/items/01_2482/157_340.jpg",
-		"/images/items/01_2482/158_340.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2482/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"ggundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1746",
-		"01_1629",
-		"01_1896",
-		"01_2493"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_340_s_i5jxxv7y52t4y89hfcuaudsop84u.jpg",
+				"path": "/images/items/01_2482/153_340.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_340_s_575fiz3mvnc82wg0bv0nthh4v7fz.jpg",
+				"path": "/images/items/01_2482/155_340.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_340_s_svlpi9xcb7bpc2x7kfxu5smy3v7g.jpg",
+				"path": "/images/items/01_2482/156_340.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_340_s_q52jyoj46t9cu99kj2sueq8woyed.jpg",
+				"path": "/images/items/01_2482/157_340.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_340_s_4ipcccrxvuuf245yy7w1vcjkt8u0.jpg",
+				"path": "/images/items/01_2482/158_340.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2482/"
 }

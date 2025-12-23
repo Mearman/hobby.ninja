@@ -5,6 +5,22 @@
 		"ja": "Bトレインショーティー 鹿島臨海鉄道6000形 ガールズ&パンツァー ラッピング列車 2号車+3号車",
 		"en": "B Train Shorty Kashima Rinkai Railway Type 6000 Girls & Panzer Wrapping Train Car 2 + Car 3"
 	},
+	"brands": [
+		{
+			"id": "train",
+			"url": "https://bandai-hobby.net/brand/train/",
+			"ja": "Bトレインショーティー"
+		}
+	],
+	"series": [
+		{
+			"id": "garupan",
+			"url": "https://bandai-hobby.net/series/garupan/",
+			"ja": "ガールズ＆パンツァー"
+		}
+	],
+	"categories": [],
+	"relatedItems": [],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -35,7 +51,7 @@
 			"The third installment of the extremely popular Garupan wrapping train!",
 			"Part of the design of Car 2 has been changed from the 2014 Release Ver.!",
 			"• Point 1: The world's smallest \"Nishizumiho\" colored figure is included!",
-			"• Point 2: Includes the \"Platform IV tank H type (D type modified)\" which was very popular among Garupan fans!",
+			"• Point 2: Includes the Panzer IV Tank H Type (D Type Modified), which was very popular among Garupan fans!",
 			"B Train Shorty is a painted railway plastic model.",
 			"We have tried to faithfully reproduce the image of the actual car as much as possible, except for shortening the length of the car by about half.",
 			"That's why it's \"short, but very real.\"",
@@ -44,38 +60,65 @@
 			"Compatible with N scale by attaching power unit 3 and traveling trolley T (sold separately)."
 		]
 	},
-	"contents": {
-		"ja": [
-			"2両入り（2号車×1、3号車×1）",
-			"戦車×1",
-			"戦車用貨車×１",
-			"フィギュア×2（西住みほ上半身×１全身×１）",
-			"NewSGフレーム",
-			"ステッカー",
-			"取扱説明書"
+	"contents": [
+		{
+			"name": {
+				"ja": "2両入り（2号車"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "、3号車×1）"
+			}
+		},
+		{
+			"name": {
+				"ja": "戦車"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "戦車用貨車×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "フィギュア"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "NewSGフレーム"
+			}
+		},
+		{
+			"name": {
+				"ja": "ステッカー"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2032_o_1bhop63vhoc1kth1oe12j3176023.jpg",
+				"path": "/images/items/01_1102/153_2032.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2032_o_1bhop6ek81vfcm4u1vap1nq31vt2d.jpg",
+				"path": "/images/items/01_1102/155_2032.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2032_o_1bhop6j6t31a3hcve1134q4il2i.jpg",
+				"path": "/images/items/01_1102/156_2032.jpg"
+			}
 		],
-		"en": [
-			"Contains 2 cars (No. 2 car x 1, No. 3 car x 1)",
-			"Tank x 1",
-			"Tank wagon x1",
-			"Figure x 2 (Nishizumiho upper body x 1 whole body x 1)",
-			"NewSG frame",
-			"Sticker",
-			"Handling manual"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1102/153_2032.jpg",
-		"/images/items/01_1102/155_2032.jpg",
-		"/images/items/01_1102/156_2032.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1102/",
-	"brandIds": [
-		"train"
-	],
-	"seriesIds": [
-		"garupan"
-	],
-	"categoryIds": [],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_1102/"
 }

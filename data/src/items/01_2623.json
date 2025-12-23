@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 ガンダム G-エルス",
 		"en": "HGBD:R 1/144 Gundam G-Els"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 21
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"外伝「ガンダムビルドダイバーズブレイク」の主人公機が登場！",
@@ -28,45 +71,58 @@
 		"en": [
 			"The main character of the side story \"Gundam Build Divers Break\" is here!",
 			"• In addition to the claw parts on the arms, beam effect parts can be attached to the soles of the feet.",
-			"• Pink clear parts that create a power-up with break decals make the jet-black aircraft stand out in a suspicious manner."
+			"• The pink clear parts that create a power-up effect with break decals make the jet-black aircraft stand out in a suspicious manner."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ライフル×１",
-			"ビームサーベルエフェクト×２",
-			"ホイルシール×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ライフル×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベルエフェクト×２"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール×１"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3544_s_mlhqqzq03bsybbzmjf1bnlcc9x7u.jpg",
+				"path": "/images/items/01_2623/153_3544.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3544_s_gv1ekrbtpb8h8d3kim4gbvj0urxz.jpg",
+				"path": "/images/items/01_2623/155_3544.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3544_s_sa59taeoul3345jwnu3v5bsw6vj5.jpg",
+				"path": "/images/items/01_2623/156_3544.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3544_s_g36rs5zd88diyilbzufg4ly8f2pj.jpg",
+				"path": "/images/items/01_2623/157_3544.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3544_s_edi3k3rz204fn06brp1ticbv7gw3.jpg",
+				"path": "/images/items/01_2623/158_3544.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3544_s_gj1moyafn1yus19pthqq2e7wix0p.jpg",
+				"path": "/images/items/01_2623/159_3544.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3544_s_c4gomg9g6hi3w2ekjaiyv72bb5he.jpg",
+				"path": "/images/items/01_2623/189_3544.jpg"
+			}
 		],
-		"en": [
-			"Rifle x 1",
-			"Beam saber effect x2",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2623/153_3544.jpg",
-		"/images/items/01_2623/155_3544.jpg",
-		"/images/items/01_2623/156_3544.jpg",
-		"/images/items/01_2623/157_3544.jpg",
-		"/images/items/01_2623/158_3544.jpg",
-		"/images/items/01_2623/159_3544.jpg",
-		"/images/items/01_2623/189_3544.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2623/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0086"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2623/"
 }

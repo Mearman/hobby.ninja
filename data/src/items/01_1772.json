@@ -2,9 +2,53 @@
 	"id": "01_1772",
 	"type": "item",
 	"name": {
-		"ja": "HGAW 1/144 ガンダム Xディバイダー",
-		"en": "HGAW 1/144 Gundam X Divider"
+		"ja": "HGAW 1/144 ガンダムXディバイダー",
+		"en": "HGAW 1/144 GundamX Divider"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "x",
+			"url": "https://bandai-hobby.net/series/x/",
+			"ja": "機動新世紀ガンダムＸ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000147185",
+			"url": "https://p-bandai.jp/item/item-1000147185/",
+			"ja": "ＨＧ 1/144 ドートレス"
+		},
+		{
+			"id": "item-1000147187",
+			"url": "https://p-bandai.jp/item/item-1000147187/",
+			"ja": "ＨＧ 1/144 ガンダムエアマスターバースト"
+		},
+		{
+			"id": "01_160",
+			"url": "https://bandai-hobby.net/item/01_160/",
+			"ja": "HGAW 1/144 ガンダムエアマスター"
+		},
+		{
+			"id": "01_5876",
+			"url": "https://bandai-hobby.net/item/01_5876/",
+			"ja": "HGAW 1/144 ガンダムダブルエックス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,35 +62,30 @@
 		"day": 18
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 『機動新世紀ガンダム X』よりガンダムＸの拡張機体、ガンダムＸディバイダーがＨＧシリーズで登場。 • シールドからハモニカ砲への変形ギミック搭載。 • ビームマシンガン、ハイパーバズーカなど、ＭＳの魅力を引き出すアクセサリーパーツを追加。 成形品×9、ホイルシール×1、組立説明書"
+			"• 『機動新世紀ガンダムX』よりガンダムＸの拡張機体、ガンダムＸディバイダーがＨＧシリーズで登場。 ■シールドからハモニカ砲への変形ギミック搭載。 ■ビームマシンガン、ハイパーバズーカなど、ＭＳの魅力を引き出すアクセサリーパーツを追加。 成形品×9、ホイルシール×1、組立説明書"
 		],
 		"en": [
-			"• From \"Mobile New Century Gundam X\", the Gundam X expansion machine, Gundam X Divider, is now available in the HG series. • Equipped with a gimmick that transforms from Seal to harmonica cannon. • Added accessory parts such as beam machine gun and hyper bazooka that bring out the charm of MS. Molded product x 9, foil seal x 1, assembly manual"
+			"• From \"Mobile New Century GundamX\", GundamX's expansion machine, GundamX Divider, is now available in the HG series. ■ Equipped with a gimmick that transforms from Seal to harmonica cannon. ■Added accessory parts such as beam machine gun and hyper bazooka that bring out the charm of MS. Molded product x 9, foil seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_1772/153_2712.jpg",
-		"/images/items/01_1772/155_2712.jpg",
-		"/images/items/01_1772/156_2712.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1772/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"x"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000147185",
-		"item-1000147187",
-		"01_160",
-		"01_5876"
-	],
-	"manualId": "0844"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2712_s_3d63tib14c4nsb3wh58mg37yv4qc.jpg",
+				"path": "/images/items/01_1772/153_2712.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2712_s_fupxlrzfbzdi7eb0106632j3k7g4.jpg",
+				"path": "/images/items/01_1772/155_2712.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2712_s_z8yncn95q42um93bg8i9fr9bkkje.jpg",
+				"path": "/images/items/01_1772/156_2712.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1772/"
 }

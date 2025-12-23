@@ -5,6 +5,43 @@
 		"ja": "LBXナイトメア",
 		"en": "LBX Nightmare"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "lbx",
+			"url": "https://bandai-hobby.net/series/lbx/",
+			"ja": "ダンボール戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000215196",
+			"url": "https://p-bandai.jp/item/item-1000215196/",
+			"ja": "ＬＢＸイカロス・フォース"
+		},
+		{
+			"id": "item-1000215197",
+			"url": "https://p-bandai.jp/item/item-1000215197/",
+			"ja": "ＬＢＸイカロス・ゼロ"
+		},
+		{
+			"id": "item-1000210042",
+			"url": "https://p-bandai.jp/item/item-1000210042/",
+			"ja": "ＬＢＸエルシオン"
+		},
+		{
+			"id": "item-1000210041",
+			"url": "https://p-bandai.jp/item/item-1000210041/",
+			"ja": "ＬＢＸペルセウス"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -28,44 +65,66 @@
 		"en": [
 			"From \"Danball Senki\" comes the LBX exclusively for Sendo Daiki, who overwhelms the opponent with nightmarish illusion attacks!",
 			"• Built-in strider frame.",
-			"• Basic Equipment Includes a large staff \"Nightmare's Soul\".",
-			"• A special pedestal for display is included."
+			"• Basic equipment: A large staff \"Nightmare's Soul\" is included.",
+			"• Comes with a special pedestal for display."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ナイトメアズソウル×1",
-			"ホイルシール×1",
-			"専用台座×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ナイトメアズソウル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "専用台座"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3464_s_sdfypkt00t55h9fpdxqogh7nu24b.jpg",
+				"path": "/images/items/01_2539/153_3464.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3464_s_hnc5csgumvfp45l1srd64uqk8vje.jpg",
+				"path": "/images/items/01_2539/155_3464.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3464_s_1eb02bfwkinzeuxple1kwah6hpwh.jpg",
+				"path": "/images/items/01_2539/156_3464.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3464_s_yw7knaa3ga0ylf3pqnsa5s740soy.jpg",
+				"path": "/images/items/01_2539/157_3464.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3464_s_mg5pnd2ol1u8amv8gf5voltnsxap.jpg",
+				"path": "/images/items/01_2539/158_3464.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3464_s_0g9am7ckekse3mowoygu910khzbt.jpg",
+				"path": "/images/items/01_2539/159_3464.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3464_s_4c5ojgjhznw49h7xmkyc1fjg1a0p.jpg",
+				"path": "/images/items/01_2539/189_3464.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3464_s_kz43ds1fm4bzpm4vcazz4r97c266.jpg",
+				"path": "/images/items/01_2539/190_3464.jpg"
+			}
 		],
-		"en": [
-			"Nightmares Soul×1",
-			"Foil Seal×1",
-			"Dedicated pedestal x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2539/153_3464.jpg",
-		"/images/items/01_2539/155_3464.jpg",
-		"/images/items/01_2539/156_3464.jpg",
-		"/images/items/01_2539/157_3464.jpg",
-		"/images/items/01_2539/158_3464.jpg",
-		"/images/items/01_2539/159_3464.jpg",
-		"/images/items/01_2539/189_3464.jpg",
-		"/images/items/01_2539/190_3464.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2539/",
-	"brandIds": [],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2539/"
 }

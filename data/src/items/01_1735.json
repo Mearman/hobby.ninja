@@ -2,9 +2,53 @@
 	"id": "01_1735",
 	"type": "item",
 	"name": {
-		"ja": "MG 1/100 RX-78-3 G-3 ガンダム Ver.2.0",
-		"en": "MG 1/100 RX-78-3 G-3 Gundam Ver.2.0"
+		"ja": "MG 1/100 RX-78-3 G-3ガンダム Ver.2.0",
+		"en": "MG 1/100 RX-78-3 G-3Gundam Ver.2.0"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4620,
 		"currency": "JPY",
@@ -18,10 +62,9 @@
 		"day": 25
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"• 『機動戦士ガンダム』よりG-3 ガンダムがVer.2.0で登場！",
+			"• 『機動戦士ガンダム』よりG-3ガンダムがVer.2.0で登場！",
 			"• 設定通りの配色を色分けで再現！ 成型品×14、ホイルシール×1、テトロンシール×1、ドライデカール×1、プラチェーン×1、チェーンつなぎ×2"
 		],
 		"en": [
@@ -29,27 +72,26 @@
 			"• Reproduce the color scheme according to the settings! Molded product x 14, foil seal x 1, Tetron seal x 1, dry decal x 1, plastic chain x 1, chain link x 2"
 		]
 	},
-	"images": [
-		"/images/items/01_1735/153_2663.jpg",
-		"/images/items/01_1735/155_2663.jpg",
-		"/images/items/01_1735/156_2663.jpg",
-		"/images/items/01_1735/157_2663.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1735/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
-	"manualId": "0575"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2663_s_rh4d24e2xcbgf0ayrilb5h29dv2r.jpg",
+				"path": "/images/items/01_1735/153_2663.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2663_s_g9iyoshatdapxqbget9ap2bvdlxn.jpg",
+				"path": "/images/items/01_1735/155_2663.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2663_s_tk94u7n159gxaqi34ybaj2ifxu4l.jpg",
+				"path": "/images/items/01_1735/156_2663.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2663_s_yar0xp8esj3avkw9oxf5pu1yxtsx.jpg",
+				"path": "/images/items/01_1735/157_2663.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1735/"
 }

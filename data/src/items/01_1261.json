@@ -5,6 +5,50 @@
 		"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス",
 		"en": "HGBF 1/144 Build Strike Galaxy Cosmos"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1262",
+			"url": "https://bandai-hobby.net/item/01_1262/",
+			"ja": "HGBC 1/144 ギャラクシーブースター"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 24
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 『ガンダムビルドファイターズ バトローグ』第5話に登場する、ビルドストライクの最終進化「ビルドストライクギャラクシーコスモス」がHGBFで登場！",
@@ -26,61 +69,85 @@
 			"• 頭部、胸部、肩部、脚部など多数の新規パーツでパワーアップ！"
 		],
 		"en": [
-			"• The final evolution of Build Strike, \"Build Strike Galaxy Cosmos \", which appears in episode 5 of \" Gundam Build Fighters Battlogue\", is now available in HGBF!",
+			"• Build Strike's final evolution, \"Build Strike Galaxy Cosmos\", which appears in episode 5 of \"Gundam Build Fighters Battlogue\", is now available in HGBF!",
 			"• The completely new backpack has 12 wings that can be changed into various shapes, allowing you to recreate styles reminiscent of stars and cosmos!",
 			"• Power up with many new parts such as head, chest, shoulders, legs, etc.!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームライフル×1",
-			"コスモシールド×1",
-			"ビームサーベル×2",
-			"専用ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "コスモシールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 13
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2193_s_efulvw57uzx0aas2qshi90w2xn6u.jpg",
+				"path": "/images/items/01_1261/153_2193.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2193_s_klk49hybdzjnjrv1nj7mvic3pa4h.jpg",
+				"path": "/images/items/01_1261/155_2193.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2193_s_6yz44q6wjcpbtm49pjslhz4yvz1s.jpg",
+				"path": "/images/items/01_1261/156_2193.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2193_s_wl5od5wdj7c4g91nnpm7wuoxbdhx.jpg",
+				"path": "/images/items/01_1261/157_2193.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2193_s_7y7oyaauk3u0p19vzfvg6aqxgumb.jpg",
+				"path": "/images/items/01_1261/158_2193.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2193_s_1lz83r18oasghf88zhqrd059sb27.jpg",
+				"path": "/images/items/01_1261/159_2193.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x 1",
-			"Cosmo Seal×1",
-			"Beam saber x2",
-			"Dedicated display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×13",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded products x 13",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1261/153_2193.jpg",
-		"/images/items/01_1261/155_2193.jpg",
-		"/images/items/01_1261/156_2193.jpg",
-		"/images/items/01_1261/157_2193.jpg",
-		"/images/items/01_1261/158_2193.jpg",
-		"/images/items/01_1261/159_2193.jpg",
-		"/images/items/01_1261/01_1261_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1261/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1262"
-	],
-	"manualId": "1069"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1261/"
 }

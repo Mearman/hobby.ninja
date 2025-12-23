@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 XXXG-01SR ガンダムサンドロック EW",
-		"en": "MG 1/100 XXXG-01SR Gundam Sandrock EW"
+		"en": "MG 1/100 GUNDAM SANDROCK EW VER."
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]",
+			"en": "MG [MASTER GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ",
+			"en": "MOBILE SUIT GUNDAM WING series"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000194972",
+			"url": "https://p-bandai.jp/item/item-1000194972/",
+			"ja": "ＭＧ 1/100 ガンダムエピオン EW (シュトゥルム・ウント・ドラング装備)"
+		},
+		{
+			"id": "01_3410",
+			"url": "https://bandai-hobby.net/item/01_3410/",
+			"ja": "MG 1/100 ガンダムデスサイズヘル EW[スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000171722",
+			"url": "https://p-bandai.jp/item/item-1000171722/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムエピオン EW[スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000142325",
+			"url": "https://p-bandai.jp/item/item-1000142325/",
+			"ja": "ＭＧ 1/100 ガンダムデスサイズ EW（ルーセット装備）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4620,
 		"currency": "JPY",
@@ -18,36 +64,41 @@
 		"day": 29
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"• 『新機動戦記ガンダム W Endless Waltz』より、ガンダムサンドロックEWがMGシリーズに登場。 • MG ガンダム Wシリーズで採用したXXXGフレームを採用。 • カトキハジメ氏描き起こしの新デザイン。 • サンドロック最大の武器「クロスラッシャー」を再現できる。 • ビームマシンガン付属。 成形品×17、テトロンシール×1、ガンダムデカール×1、組立説明書×1"
+			"• 『新機動戦記ガンダムW Endless Waltz』より、ガンダムサンドロックEWがMGシリーズに登場。 ■MGガンダムWシリーズで採用したXXXGフレームを採用。 ■カトキハジメ氏描き起こしの新デザイン。 ■サンドロック最大の武器「クロスラッシャー」を再現できる。 ■ビームマシンガン付属。 成形品×17、テトロンシール×1、ガンダムデカール×1、組立説明書×1"
 		],
 		"en": [
-			"• From \"Mobile Suit Gundam W Endless Waltz \", Gundam Sandrock EW appears in the MG series. • Adopts the XXXG frame used in the MM Gundam W series. • New design drawn by Hajime Katoki. • You can reproduce Sandrock's greatest weapon \" Cross Rusher\". • Beam machine gun included. Molded product x 17, Tetron Seal x 1, Gundam decal x 1, Assembly Manual x 1"
+			"From MOBILE SUIT GUNDAM WING Endless Waltz, GUNDAM Sandrock EW appears in the MG series.",
+			"• Uses the XXXG frame used in the M G GUNDAM W series.",
+			"• New design drawn by Hajime Katoki.",
+			"• You can recreate Sandrock's biggest weapon, the Cross Rusher.",
+			"• Beam machine gun included. Molded ×17, Tetoron Seal ×1, GUNDAM DECAL ×1, Assembly Instructions×1"
 		]
 	},
-	"images": [
-		"/images/items/01_1786/1000092411_1.jpg",
-		"/images/items/01_1786/1000092411_2.jpg",
-		"/images/items/01_1786/1000092411_3.jpg",
-		"/images/items/01_1786/1000092411_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092411_1.jpg",
+				"path": "/images/items/01_1786/1000092411_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092411_2.jpg",
+				"path": "/images/items/01_1786/1000092411_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092411_3.jpg",
+				"path": "/images/items/01_1786/1000092411_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092411_4.jpg",
+				"path": "/images/items/01_1786/1000092411_4.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1786/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000194972",
-		"01_3410",
-		"item-1000171722",
-		"item-1000142325"
-	],
-	"manualId": "0593"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1786/"
+	}
 }

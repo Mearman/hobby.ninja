@@ -2,9 +2,55 @@
 	"id": "01_1797",
 	"type": "item",
 	"name": {
-		"ja": "MG 1/100 ガンダム AGE-2 ダークハウンド",
-		"en": "MG 1/100 Gundam AGE-2 Dark Hound"
+		"ja": "MG 1/100 ガンダムAGE-2 ダークハウンド",
+		"en": "MG 1/100 GUNDAM AGE-2 DARK HOUND"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]",
+			"en": "MG [MASTER GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "age",
+			"url": "https://bandai-hobby.net/series/age/",
+			"ja": "機動戦士ガンダムAGE",
+			"en": "MOBILE SUIT GUNDAM AGE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181355",
+			"url": "https://p-bandai.jp/item/item-1000181355/",
+			"ja": "ＭＧ 1/100 ガンダムＡＧＥ－１ フルグランサ用 拡張パーツ"
+		},
+		{
+			"id": "item-1000181354",
+			"url": "https://p-bandai.jp/item/item-1000181354/",
+			"ja": "ＭＧ 1/100 ガンダムＡＧＥ－１ フルグランサ [デザイナーズカラーＶｅｒ．]"
+		},
+		{
+			"id": "01_4196",
+			"url": "https://bandai-hobby.net/item/01_4196/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムAGE-1 ウェアシステムセット[クリアカラー]"
+		},
+		{
+			"id": "item-1000128729",
+			"url": "https://p-bandai.jp/item/item-1000128729",
+			"ja": "ＭＧ 1/100 ガンダムＡＧＥ-２ノーマル 特務隊仕様"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5060,
 		"currency": "JPY",
@@ -18,36 +64,42 @@
 		"day": 17
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"• 『機動戦士ガンダム AGE』より宇宙海賊ビシディアンのキャプテン・アッシュが駆るAGE-2のもう一つの姿がMGで登場。 • ストライダー形態への完全変形を実現。 • MGオリジナルギミックとして、右目のアイパッチをスライドで収納することが可能。 • 肩のマント部に開閉スイング、回転軸機構を取り入れアンカー射出時の羽開閉演出をＭＧギミック表現 • 各種武器のほか、多彩なハンドパーツが付属。 • アクションベースを使えば、空中でのポージングも自在。 成形品×18、ホイルシール×1、ドライデカール×1、シルバーシール×1、リード線×2、組立説明書×1"
+			"• 『機動戦士ガンダムAGE』より宇宙海賊ビシディアンのキャプテン・アッシュが駆るAGE-2のもう一つの姿がMGで登場。 ■ストライダー形態への完全変形を実現。 ■MGオリジナルギミックとして、右目のアイパッチをスライドで収納することが可能。 ■肩のマント部に開閉スイング、回転軸機構を取り入れアンカー射出時の羽開閉演出をＭＧギミック表現 ■各種武器のほか、多彩なハンドパーツが付属。 ■アクションベースを使えば、空中でのポージングも自在。 成形品×18、ホイルシール×1、ドライデカール×1、シルバーシール×1、リード線×2、組立説明書×1"
 		],
 		"en": [
-			"• From ``Mobile Suit Gundam AGE'', another version of AGE-2, driven by Captain Ash of the space pirate Visidian, appears in MG form. • Completely transforms into strider form. • As an MG original gimmick, the eye patch for the right eye can be stored by sliding it. • Incorporates an opening/closing swing and rotating shaft mechanism on the shoulder cloak to create an MG gimmick that allows the wing to open and close when ejecting the anchor. • In addition to various weapons, a variety of hand parts are included. • If you use the action base, you can freely pose it in the air. Molded product x 18, foil seal x 1, dry decal x 1, silver seal x 1, lead wire x 2, assembly manual x 1"
+			"• From \"MOBILE SUIT GUNDAM AGE\", another form of AGE-2 driven by Space Pirate Captain Ash appears in MG.",
+			"• Fully transforms into Strider form.",
+			"• As an MG original gimmick, it is possible to store the eye patch of the right eye with a slide.",
+			"• The opening and closing swing of the shoulder cloak and the introduction of a rotating shaft mechanism are incorporated to create an MG gimmick expression of the opening and closing of the wings when the anchor is ejected.",
+			"• In addition to various weapons, a variety of hand parts are included.",
+			"• With ACTION BASE, you can pose freely in the air. Molded ×18, Foil Seal ×1, Dry Decal×1, Silver Seal ×1, Lead Wire ×2, Assembly Instructions ×1"
 		]
 	},
-	"images": [
-		"/images/items/01_1797/1000092395_1.jpg",
-		"/images/items/01_1797/1000092395_2.jpg",
-		"/images/items/01_1797/1000092395_3.jpg",
-		"/images/items/01_1797/1000092395_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092395_4.jpg",
+				"path": "/images/items/01_1797/1000092395_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092395_1.jpg",
+				"path": "/images/items/01_1797/1000092395_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092395_2.jpg",
+				"path": "/images/items/01_1797/1000092395_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092395_3.jpg",
+				"path": "/images/items/01_1797/1000092395_3.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1797/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181355",
-		"item-1000181354",
-		"01_4196",
-		"item-1000128729"
-	],
-	"manualId": "0605"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1797/"
+	}
 }

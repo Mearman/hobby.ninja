@@ -5,6 +5,55 @@
 		"ja": "HG 1/144 ブルーディスティニー3号機“EXAM”[メタリックグロスインジェクション]",
 		"en": "HG 1/144 Blue Destiny Unit 3 “EXAM” [Metallic Gloss Injection]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -17,7 +66,6 @@
 		"month": 2
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「ブルーディスティニー3号機」がメタリックグロスインジェクション仕様となってイベント限定品として登場！",
@@ -26,33 +74,22 @@
 		],
 		"en": [
 			"\"Blue Destiny Unit 3\" is now available as an event limited item with metallic gloss injection specifications!",
-			"• The \"EXAM system activation state\" can be selectively recreated, and the wide range of motion allows for posing exactly as it appears in the play!",
-			"• In addition to the ground battle type Seal that is unique to Unit 3, it is reproduced with a new model, and the \"double beam rifle \" used by Jim Dominance in \" Mobile Suit Gundam Gaiden THE BLUE DESTINY\" is included!"
+			"• \"EXAM system activation state\" can be selectively recreated, and the wide range of motion allows for posing exactly as it appears in the play!",
+			"• In addition to the ground battle type Seal that is unique to Unit 3, it is reproduced with a new model, and the \"double beam rifle\" used by Jim Dominance in \"Mobile Suit Gundam Gaiden THE BLUE DESTINY\" is included!"
 		]
 	},
-	"images": [
-		"/images/items/01_2163/153_3112.jpg",
-		"/images/items/01_2163/155_3112.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2163/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3112_o_1cviae9tf1p4s2tl7j11cmm72623.jpg",
+				"path": "/images/items/01_2163/153_3112.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3112_o_1cviaelf3ff59l61pnd16041if42d.jpg",
+				"path": "/images/items/01_2163/155_3112.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2163/"
 }

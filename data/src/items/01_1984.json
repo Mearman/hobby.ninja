@@ -5,6 +5,44 @@
 		"ja": "ビークルモデル 014 ブロッケード・ランナー",
 		"en": "Vehicle Model 014 Blockade Runner"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS",
+			"en": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3513",
+			"url": "https://bandai-hobby.net/item/01_3513/",
+			"ja": "ビークルモデル レイザー・クレスト"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -25,48 +63,57 @@
 			"• 小サイズながら船体の外装にはこだわりの精密ディテールが施されている。"
 		],
 		"en": [
-			"The diplomatic ship \"Blockade Runner \", which \" Princess Leia \" is on board in the opening scene of \" Star Wars Episode IV: A New Hope\", is now available in the vehicle model series!",
-			"• Approximately 127mm in total length, which is slightly larger than the fighter vehicle model.",
-			"• Although it is small in size, the exterior of the hull has carefully detailed details."
+			"In the opening scene of \"Star Wars Episode IV: A New Hope\", the diplomatic ship \"Blockade Runner\" with \"Princess Leia\" on board appears in the vehicle model series!",
+			"• The overall length is about 127 mm, which is one size larger than the fighter vehicle model."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用ディスプレイベース×1"
-		],
-		"en": [
-			"Dedicated display base x 1"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×3",
-			"マーキングシール×1",
-			"取扱説明書（箱裏側に記載）"
-		],
-		"en": [
-			"Molded product x 3",
-			"MarkingSeal×1",
-			"Instruction manual (written on the back of the box)"
-		]
-	},
-	"images": [
-		"/images/items/01_1984/1000130836_1.jpg",
-		"/images/items/01_1984/1000130836_2.jpg",
-		"/images/items/01_1984/1000130836_3.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ディスプレイベース",
+				"en": "• Dedicated display base"
+			},
+			"count": 1
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書（箱裏側に記載）"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130836_1.jpg",
+				"path": "/images/items/01_1984/1000130836_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130836_2.jpg",
+				"path": "/images/items/01_1984/1000130836_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000130836_3.jpg",
+				"path": "/images/items/01_1984/1000130836_3.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1984/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3513",
-		"01_3514"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1984/"
+	}
 }

@@ -5,6 +5,50 @@
 		"ja": "PG 1/60 MS-06F 量産型ザク2",
 		"en": "PG 1/60 MS-06F Mass Production Zaku 2"
 	},
+	"brands": [
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3373",
+			"url": "https://bandai-hobby.net/item/01_3373/",
+			"ja": "ＰＧ ＵＮＬＥＡＳＨＥＤ 1/60 RX-78-2 ガンダム クリアカラーボディ"
+		},
+		{
+			"id": "01_3328",
+			"url": "https://bandai-hobby.net/item/01_3328/",
+			"ja": "PG UNLEASHED 1/60 RX-78-2 ガンダム"
+		},
+		{
+			"id": "01_2829",
+			"url": "https://bandai-hobby.net/item/01_2829/",
+			"ja": "PG 1/60 ガンダムベース限定 RX-78-2 ガンダム [チタニウムフィニッシュ]"
+		},
+		{
+			"id": "01_1902",
+			"url": "https://bandai-hobby.net/item/01_1902/",
+			"ja": "PG 1/60 ガンダムベース限定 RX-78-3 G-3ガンダム [エクストラフィニッシュ]"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 13200,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 3
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
 			"根強い人気を誇るザクの全身外装、内部構造を徹底的に再現し、腰部可動による印象的なポージングを展開します。関節部には、可動にシンクロするダンパー等の伸縮機構が再現されています。外部装甲の脱着と、コクピットハッチの展開、内部シートの可動によるフルハッチオープンディスプレイが可能です。各部動力パイプに密巻きスプリングを内臓し、可動性を高めました。武器はザクマシンガン、ヒートホークが付いています。"
@@ -26,28 +69,30 @@
 			"The entire body exterior and internal structure of the ever-popular Zaku have been thoroughly reproduced, and the waist can be moved to create impressive poses. The joints have been recreated with expansion and contraction mechanisms such as dampers that synchronize with movement. Full hatch open display is possible by detaching the external armor, deploying the cockpit hatch, and moving the internal seat. Each power pipe has a built-in tightly wound spring to increase mobility. Weapons include a Zaku machine gun and a heat hawk."
 		]
 	},
-	"images": [
-		"/images/items/01_2876/153_3857.jpg",
-		"/images/items/01_2876/155_3857.jpg",
-		"/images/items/01_2876/156_3857.jpg",
-		"/images/items/01_2876/157_3857.jpg",
-		"/images/items/01_2876/158_3857.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2876/",
-	"brandIds": [
-		"pg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3373",
-		"01_3328",
-		"01_2829",
-		"01_1902"
-	],
-	"manualId": "0988"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3857_s_izij830736o0s34k1nskkvy9iyng.jpg",
+				"path": "/images/items/01_2876/153_3857.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3857_s_zarro2dq8jgq7pebp0d8nvle5fkb.jpg",
+				"path": "/images/items/01_2876/155_3857.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3857_s_xsazaiq6rg5f4akmvb99y0m1hdsn.jpg",
+				"path": "/images/items/01_2876/156_3857.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3857_s_mzb4jrmkz8yibm2bjw5kh4jxd5x7.jpg",
+				"path": "/images/items/01_2876/157_3857.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3857_s_vksyyllz6gmsz7nd51k9d1sgfg5a.jpg",
+				"path": "/images/items/01_2876/158_3857.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2876/"
 }

@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "ポケモンプラモコレクション 45 セレクトシリーズ ゲンガー",
-		"en": "Pokemon Plastic Model Collection 45 Select Series Gengar"
+		"en": "Pokémon Model Kit GENGAR"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター",
+			"en": "Pokémon"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7038",
+			"url": "https://bandai-hobby.net/item/01_7038/",
+			"ja": "ポケモンプラモコレクション 62 セレクトシリーズ カイオーガ"
+		},
+		{
+			"id": "01_7015",
+			"url": "https://bandai-hobby.net/item/01_7015/",
+			"ja": "ポケモンプラモコレクション クイック!! 27 シャワーズ"
+		},
+		{
+			"id": "01_7010",
+			"url": "https://bandai-hobby.net/item/01_7010/",
+			"ja": "ポケモンプラモコレクション クイック!! 26 サンダース"
+		},
+		{
+			"id": "01_6895",
+			"url": "https://bandai-hobby.net/item/01_6895/",
+			"ja": "ポケモンプラモコレクション クイック!! Lite ピカチュウ"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -27,50 +65,85 @@
 			"• 選択式の組み立てにより３種類の表情が選べる。"
 		],
 		"en": [
-			"Ghost type Pokemon \"Gengar\" is now available from the Select Series!",
-			"• In addition to touch gate and snap-fit ​​technology, seals are also greatly reduced for easy assembly!",
-			"• Even with simple parts configuration, color reproduction is perfect!",
-			"• Joints are movable even in small limbs.",
-			"• Three types of facial expressions can be selected using the selectable assembly."
+			"The ghost-type Pokemon \"Gengar\" is now available from the Select Series!",
+			"• In addition to touch gate and snap-fit technology, seals are greatly reduced, making it easy to assemble!",
+			"• Color reproduction is perfect even with a simple part configuration!",
+			"• Joints can be moved even with small limbs.",
+			"• Three types of facial expressions can be selected by selectable assembly."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"表情パーツ×2",
-			"舌パーツ×2",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情パーツ",
+				"en": "• Facial expression parts"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "舌パーツ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150005_1.jpg",
+				"path": "/images/items/01_2858/1000150005_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150005_2.jpg",
+				"path": "/images/items/01_2858/1000150005_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150005_3.jpg",
+				"path": "/images/items/01_2858/1000150005_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150005_4.jpg",
+				"path": "/images/items/01_2858/1000150005_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150005_5.jpg",
+				"path": "/images/items/01_2858/1000150005_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150005_6.jpg",
+				"path": "/images/items/01_2858/1000150005_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150005_7.jpg",
+				"path": "/images/items/01_2858/1000150005_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150005_8.jpg",
+				"path": "/images/items/01_2858/1000150005_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150005_9.jpg",
+				"path": "/images/items/01_2858/1000150005_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150005_10.jpg",
+				"path": "/images/items/01_2858/1000150005_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150005_11.jpg",
+				"path": "/images/items/01_2858/1000150005_11.jpg"
+			}
 		],
-		"en": [
-			"Facial expression parts x 2",
-			"Tongue parts x 2",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2858/1000150005_1.jpg",
-		"/images/items/01_2858/1000150005_10.jpg",
-		"/images/items/01_2858/1000150005_11.jpg",
-		"/images/items/01_2858/1000150005_2.jpg",
-		"/images/items/01_2858/1000150005_3.jpg",
-		"/images/items/01_2858/1000150005_4.jpg",
-		"/images/items/01_2858/1000150005_5.jpg",
-		"/images/items/01_2858/1000150005_6.jpg",
-		"/images/items/01_2858/1000150005_7.jpg",
-		"/images/items/01_2858/1000150005_8.jpg",
-		"/images/items/01_2858/1000150005_9.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2858/",
-	"brandIds": [],
-	"seriesIds": [
-		"pokemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2858/"
+	}
 }

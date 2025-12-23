@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 オプションバックパック ２",
 		"en": "30MM 1/144 Option Backpack 2"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"飛翔せよ！！",
@@ -31,44 +73,50 @@
 			"• Hand parts are included to enrich the poses."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"オプションバックパック",
-			"表情手（左右）×各１種"
+	"accessories": [
+		{
+			"name": {
+				"ja": "オプションバックパック"
+			}
+		},
+		{
+			"name": {
+				"ja": "表情手（左右）×各１種"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3332_s_5o7ec4bxk43d691xn14oxgttkhhy.jpg",
+				"path": "/images/items/01_2399/153_3332.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3332_s_78tj0648le0vd118bvphcrszhvo9.jpg",
+				"path": "/images/items/01_2399/155_3332.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3332_s_6zmfkmzmfdkmiskkl4zy8ts0224h.jpg",
+				"path": "/images/items/01_2399/156_3332.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3332_s_codvoc5tbzyspdmtv2zuv3e5vbzw.jpg",
+				"path": "/images/items/01_2399/157_3332.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3332_s_2q3ljm2gxfpsf19gnh6c40g0qei8.jpg",
+				"path": "/images/items/01_2399/158_3332.jpg"
+			}
 		],
-		"en": [
-			"optional backpack",
-			"Expression hands (left and right) x 1 type each"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×1"
-		],
-		"en": [
-			"Molded product x 1"
-		]
-	},
-	"images": [
-		"/images/items/01_2399/153_3332.jpg",
-		"/images/items/01_2399/155_3332.jpg",
-		"/images/items/01_2399/156_3332.jpg",
-		"/images/items/01_2399/157_3332.jpg",
-		"/images/items/01_2399/158_3332.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2399/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3641"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2399/"
 }

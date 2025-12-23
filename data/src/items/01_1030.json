@@ -5,6 +5,43 @@
 		"ja": "ポケモンプラモコレクション No.29 進化シリーズ リザードン進化セット",
 		"en": "Pokemon Plastic Model Collection No.29 Evolution Series Charizard Evolution Set"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5984",
+			"url": "https://bandai-hobby.net/item/01_5984/",
+			"ja": "ポケモンプラモコレクション 60 セレクトシリーズ コライドン"
+		},
+		{
+			"id": "01_5958",
+			"url": "https://bandai-hobby.net/item/01_5958/",
+			"ja": "ポケモンプラモコレクション 59 セレクトシリーズ ミライドン"
+		},
+		{
+			"id": "01_5947",
+			"url": "https://bandai-hobby.net/item/01_5947/",
+			"ja": "ポケモンプラモコレクション クイック!! 23 ジラーチ"
+		},
+		{
+			"id": "01_5568",
+			"url": "https://bandai-hobby.net/item/01_5568/",
+			"ja": "ポケモンプラモコレクション 58 セレクトシリーズ グレンアルマ"
+		}
+	],
 	"price": {
 		"amount": 836,
 		"currency": "JPY",
@@ -27,27 +64,23 @@
 		],
 		"en": [
 			"• Charizard appears in an evolution set that includes Charmander and Lizard.",
-			"• Both wings, neck, mouth, arms, legs, and tail are movable.",
-			"• Possible to pose in powerful poses such as roaring poses and threatening poses.",
+			"• Wings, neck, mouth, arms, legs, and tail are movable.",
+			"• Powerful poses such as a roaring pose and a threatening pose are possible.",
 			"• Pokepla action allows the left and right wings to move at the same time."
 		]
 	},
-	"images": [
-		"/images/items/01_1030/153_1964.jpg",
-		"/images/items/01_1030/155_1964.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1030/",
-	"brandIds": [],
-	"seriesIds": [
-		"pokemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1964_o_1bcpvplo415vvson1kddcih1s8023.jpg",
+				"path": "/images/items/01_1030/153_1964.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1964_o_1bcpvq1b2p5j1qb51at71u4c1dbp2d.jpg",
+				"path": "/images/items/01_1030/155_1964.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1030/"
 }

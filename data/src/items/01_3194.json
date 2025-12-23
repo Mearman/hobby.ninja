@@ -2,9 +2,47 @@
 	"id": "01_3194",
 	"type": "item",
 	"name": {
-		"ja": "1/144 Z ガンダム",
-		"en": "1/144 Z Gundam"
+		"ja": "1/144 Zガンダム",
+		"en": "1/144 ZGundam"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -17,33 +55,28 @@
 		"month": 8
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"「機動戦士Ｚガンダム」より、1/144スケールでZ ガンダムが登場。",
+			"「機動戦士Ｚガンダム」より、1/144スケールでZガンダムが登場。",
 			"手首を前腕と別パーツで成形し、広範囲の可動を実現しました。フロントとサイドの両アーマーを別パーツ化し、股関節・足首に前後左右の大きな可動性を持たせています。背面のスタビライザーは可動式です。シールドは左前腕へ脱着が可能です。武器はビーム・ライフル、ビーム・サーベルが２本付いています。"
 		],
 		"en": [
-			"From \"Mobile Suit Z Gundam\", Z Gundam appears in 1/144 scale.",
+			"From \"Mobile Suit ZGundam\", ZGundam appears in 1/144 scale.",
 			"The wrist is molded as a separate part from the forearm, allowing for a wide range of movement. Both the front and side armor are made into separate parts, giving the hip joints and ankles great movement in the front, back, left and right directions. The stabilizer on the back is movable. Seal can be attached and detached to the left forearm. Weapons include a beam rifle and two beam sabers."
 		]
 	},
-	"images": [
-		"/images/items/01_3194/153_4152.jpg",
-		"/images/items/01_3194/155_4152.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3194/",
-	"brandIds": [],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4152_s_xnok0ip6cyidva4w9hq4ii2oqmpt.jpg",
+				"path": "/images/items/01_3194/153_4152.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4152_s_art198fy6if0wp2sdanpv12558i2.jpg",
+				"path": "/images/items/01_3194/155_4152.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3194/"
 }

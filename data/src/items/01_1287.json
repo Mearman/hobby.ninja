@@ -5,6 +5,50 @@
 		"ja": "1/1000 地球連邦アンドロメダ級四番艦 アキレス",
 		"en": "1/1000 Earth Federation Andromeda class fourth ship Achilles"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "yamato",
+			"url": "https://bandai-hobby.net/series/yamato/",
+			"ja": "宇宙戦艦ヤマトシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5311",
+			"url": "https://bandai-hobby.net/item/01_5311/",
+			"ja": "1/500 宇宙戦艦ヤマト２１９９用エッチングパーツ"
+		},
+		{
+			"id": "01_5312",
+			"url": "https://bandai-hobby.net/item/01_5312/",
+			"ja": "1/1000 ポルメリア級強襲航宙母艦 親衛隊カラー"
+		},
+		{
+			"id": "01_5307",
+			"url": "https://bandai-hobby.net/item/01_5307/",
+			"ja": "【プレミアムバンダイ限定】1/1000 国連宇宙海軍 連合宇宙艦隊 メ号作戦セット"
+		},
+		{
+			"id": "01_5304",
+			"url": "https://bandai-hobby.net/item/01_5304/",
+			"ja": "宇宙戦艦ヤマト2199 【プレミアムバンダイ限定】 1/1000 ガミラス艦 親衛隊カラーセット"
+		}
+	],
+	"scale": "1/1000",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -17,28 +61,14 @@
 		"month": 1
 	},
 	"targetAge": 15,
-	"scale": "1/1000",
-	"images": [
-		"/images/items/01_1287/153_2218.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1287/",
-	"brandIds": [
-		"pb_charapla"
-	],
-	"seriesIds": [
-		"yamato"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5311",
-		"01_5312",
-		"01_5307",
-		"01_5304"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2218_o_1c1pgqqmn14401f4p1r9t1pvt1chl23.jpg",
+				"path": "/images/items/01_1287/153_2218.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1287/"
 }

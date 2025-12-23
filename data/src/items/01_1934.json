@@ -5,6 +5,55 @@
 		"ja": "HG 1/144 ガンダムベース限定 ベアッガイIII [トリコロールペイント]",
 		"en": "HG 1/144 Gundam Base Limited Beargguy III [Tricolor Paint]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "petitgguy",
+			"url": "https://bandai-hobby.net/brand/petitgguy/",
+			"ja": "プチッガイ/ベアッガイ"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -17,7 +66,6 @@
 		"month": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
@@ -28,31 +76,22 @@
 			"Beargguy III is available in Gundam base limited tricolor color. An original display pedestal with the Gundam base logo designed is included."
 		]
 	},
-	"images": [
-		"/images/items/01_1934/153_2867.jpg",
-		"/images/items/01_1934/155_2867.jpg",
-		"/images/items/01_1934/156_2867.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1934/",
-	"brandIds": [
-		"hg",
-		"petitgguy"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2867_s_dn23biv3l5ngx57bmfcr70in5aly.jpg",
+				"path": "/images/items/01_1934/153_2867.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2867_s_1bowzbbkorkg4iafxa2r3echfb74.jpg",
+				"path": "/images/items/01_1934/155_2867.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2867_s_7h6j6ydxuycr0so6hnupghsaqbwo.jpg",
+				"path": "/images/items/01_1934/156_2867.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "0747"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1934/"
 }

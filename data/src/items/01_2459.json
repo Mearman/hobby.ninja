@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムベース限定 グフ・フライトタイプ(21stCENTURY REAL TYPE Ver.)",
 		"en": "HG 1/144 Gundam Base Limited Gouf Flight Type (21stCENTURY REAL TYPE Ver.)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2970,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"川口名人完全監修のオリジナルカラーのガンプラが登場！",
@@ -30,34 +73,27 @@
 		"en": [
 			"Introducing the original color Gunpla completely supervised by Master Kawaguchi!",
 			"• Comes with original water transfer decals and a clear pedestal to recreate mid-air poses.",
-			"• In addition to the leg units, the head, shoulders, chest, backpack, etc. thoroughly reproduce the characteristic shape of the aircraft that has been modified for flight.",
+			"• In addition to the leg units, the head, shoulders, chest, backpack, and other features have been thoroughly reproduced to recreate the distinctive shape of the aircraft that has been modified for flight.",
 			"• Original illustration style package reminiscent of real type color.",
 			"▶\"THE GUNDAM BASE TOKYO POP-UP in Ishikawa\" (holding period: 201989-826) / Now on sale at THE GUNDAM BASE TOKYO!"
 		]
 	},
-	"images": [
-		"/images/items/01_2459/153_3387.jpg",
-		"/images/items/01_2459/155_3387.jpg",
-		"/images/items/01_2459/156_3387.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2459/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3387_s_a8lhrjpx8xao2loqgoa72gkl8ih6.jpg",
+				"path": "/images/items/01_2459/153_3387.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3387_s_nm3wdxh09xgqebpjvy03xqrce2s5.jpg",
+				"path": "/images/items/01_2459/155_3387.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3387_s_kepxq1hk64q3qsoeqybv5opp5lou.jpg",
+				"path": "/images/items/01_2459/156_3387.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2459/"
 }

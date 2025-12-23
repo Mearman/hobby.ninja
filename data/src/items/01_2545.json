@@ -5,6 +5,43 @@
 		"ja": "バトルピカちんキット04ピカちんノットリガー",
 		"en": "Battle Pikachin Kit04 Pikachin Notrigger"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2546",
+			"url": "https://bandai-hobby.net/item/01_2546/",
+			"ja": "ピカちんバッジVol.4 ～襲来! ピカちんノットリガー編～"
+		}
+	],
 	"price": {
 		"amount": 3080,
 		"currency": "JPY",
@@ -41,9 +78,9 @@
 			"Pikachin Nottrigger, the scary guy who can do anything, attacks!",
 			"• The knot gimmick works strongly with the existing Pikachin Kit! I'll hijack various Pikachin Kits and play pranks on them!",
 			"• Overall height approximately 200mm. In addition to being able to operate the gimmick by hand, you can also get electric power by combining it with the separately sold Pikachin trigger!",
-			"• Four types of face parts are included, including \"face parts linked to the game piggy bank \", \" face parts linked to the poppy sweeper \", and \" face parts linked to the air odor\".",
+			"• Comes with 4 types of face parts including \"face parts linked to game piggy bank\", \"face parts linked to Keishika Sweeper\", and \"face parts linked to air odor\".",
 			"[Set contents]",
-			"• Main body set x 1",
+			"• Main unit set x 1",
 			"• Badge parts x 1",
 			"• Hand-cranked tail handle x 1",
 			"• Back gearbox x 1",
@@ -51,34 +88,51 @@
 			"• Keshika sweeper adapter parts set x 1",
 			"• Game piggy bank adapter parts set x 1",
 			"• Seal×1",
-			"• Handling Manual×1",
+			"• Handling manual×1",
 			"[battery]",
-			"• Unnecessary"
+			"• Not required"
 		]
 	},
-	"images": [
-		"/images/items/01_2545/153_3471.jpg",
-		"/images/items/01_2545/155_3471.jpg",
-		"/images/items/01_2545/156_3471.jpg",
-		"/images/items/01_2545/157_3471.jpg",
-		"/images/items/01_2545/158_3471.jpg",
-		"/images/items/01_2545/159_3471.jpg",
-		"/images/items/01_2545/189_3471.jpg",
-		"/images/items/01_2545/190_3471.jpg",
-		"/images/items/01_2545/191_3471.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2545/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2546"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3471_s_en58ne068n9nww3vrgb1lxkg0hdq.jpg",
+				"path": "/images/items/01_2545/153_3471.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3471_s_23ns9j452oixpepvuk8m93ld7i25.jpg",
+				"path": "/images/items/01_2545/155_3471.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3471_s_jc45vjuhtkxy9mrbqgyaof329sdw.jpg",
+				"path": "/images/items/01_2545/156_3471.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3471_s_0l0q3lqqab21wdfwevcgsngpsyl1.jpg",
+				"path": "/images/items/01_2545/157_3471.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3471_s_7tv4ul7ee89lrai1waj8bnuo7zve.jpg",
+				"path": "/images/items/01_2545/158_3471.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3471_s_e2ysrenl4z3qarkpu86dcx9b2u69.jpg",
+				"path": "/images/items/01_2545/159_3471.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3471_s_frocacszn3j0qxp3wzaa8w3zc849.jpg",
+				"path": "/images/items/01_2545/189_3471.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3471_s_7ofhy7ellt5lgn5fbpc4hjiq393o.jpg",
+				"path": "/images/items/01_2545/190_3471.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3471_s_o0njb6b2kgu1qr57siamyowz66b5.jpg",
+				"path": "/images/items/01_2545/191_3471.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2545/"
 }

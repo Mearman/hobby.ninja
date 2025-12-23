@@ -5,6 +5,45 @@
 		"ja": "MG 1/100 ダブルゼータガンダム Ver.Ka [クリアカラー]",
 		"en": "MG 1/100 Double Zeta Gundam Ver.Ka [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "mgka",
+			"url": "https://bandai-hobby.net/brand/mgka/",
+			"ja": "MG Ver.Ka［マスターグレード バージョンカトキ］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-zz",
+			"url": "https://bandai-hobby.net/series/gundam-zz/",
+			"ja": "機動戦士ガンダムＺＺ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1211",
+			"url": "https://bandai-hobby.net/item/01_1211/",
+			"ja": "ＭＧ 1/100 強化型ダブルゼータガンダム Ver.Ka"
+		},
+		{
+			"id": "item-1000118343",
+			"url": "http://p-bandai.jp/item/item-1000118343/",
+			"ja": "ＭＧ 1/100 ダブルゼータガンダム Ver.Ka用 強化型拡張パーツ"
+		},
+		{
+			"id": "01_3704",
+			"url": "https://bandai-hobby.net/item/01_3704/",
+			"ja": "MG 1/100 ダブルゼータガンダム Ver.Ka"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 7370,
 		"currency": "JPY",
@@ -17,7 +56,6 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"MG ダブルゼータガンダム Ver.Ka がクリアカラーとなってイベント限定品として登場。",
@@ -27,33 +65,27 @@
 		],
 		"en": [
 			"MG Double Zeta Gundam Ver.Ka is available in clear color as an event limited item.",
-			"• The shoulder joints have multiple axes of motion to ensure a wide range of motion, and the knee joints are capable of deep \"bending\" in addition to complex deformations!",
-			"• The lumbar region uses an unprecedented 3-axis structure, allowing for ``twisting'' and ``forward bending'' while retaining deformation functions!",
+			"• The shoulder joint has multiple axes of motion to ensure a wide range of motion, and the knee joint can perform complex deformations and even deep bends!",
+			"• An unprecedented 3-axis structure has been adopted for the lower back, allowing for \"twisting\" and \"forward bending\" while retaining the deformation function!",
 			"• Not only can it be transformed into various forms such as G Fortress, but it also pursues an aircraft-like form!"
 		]
 	},
-	"images": [
-		"/images/items/01_2133/153_3086.jpg",
-		"/images/items/01_2133/155_3086.jpg",
-		"/images/items/01_2133/156_3086.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2133/",
-	"brandIds": [
-		"mgka"
-	],
-	"seriesIds": [
-		"gundam-zz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1211",
-		"item-1000118343",
-		"01_3704"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3086_o_1ct9t9eeenkj1k6alac1ge6sn023.jpg",
+				"path": "/images/items/01_2133/153_3086.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3086_o_1ct9t9q0316g215ig1env18aa168u2d.jpg",
+				"path": "/images/items/01_2133/155_3086.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3086_o_1ct9ta08516611t4j4emn13vs02i.jpg",
+				"path": "/images/items/01_2133/156_3086.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2133/"
 }

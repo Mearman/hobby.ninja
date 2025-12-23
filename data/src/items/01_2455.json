@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard Amplifiedオメガモン",
 		"en": "Figure-rise Standard Amplified Omegamon"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard-amp",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard-amp/",
+			"ja": "Figure-rise Standard Amplified[フィギュアライズ スタンダード アンプリファイド]"
+		}
+	],
+	"series": [
+		{
+			"id": "digimon",
+			"url": "https://bandai-hobby.net/series/digimon/",
+			"ja": "デジモンシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5983",
+			"url": "https://bandai-hobby.net/item/01_5983/",
+			"ja": "Figure-rise Standard Amplified カイゼルグレイモン"
+		},
+		{
+			"id": "item-1000216437",
+			"url": "https://p-bandai.jp/item/item-1000216437/",
+			"ja": "Figure-rise Standard Amplified オメガモン(Ｘ抗体) [リミテッドカラー]"
+		},
+		{
+			"id": "01_5277",
+			"url": "https://bandai-hobby.net/item/01_5277/",
+			"ja": "Figure-rise Standard Amplified パイルドラモン"
+		},
+		{
+			"id": "item-1000198198",
+			"url": "https://p-bandai.jp/item/item-1000198198/",
+			"ja": "Figure-rise Standard Amplified デュークモン[スペシャルコーティング]"
+		}
+	],
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -28,61 +71,92 @@
 		],
 		"en": [
 			"From \"Digimon Adventure\", Omegamon appears in Figure-rise Standard Amplified!",
-			"• The first installment of the AMPLIFIED series, which respects the original work and amplifies the charm of the characters!",
+			"• The first in the AMPLIFIED series, which respects the original work and amplifies the charm of the characters!",
 			"• The color scheme of each part is reproduced with molded colors. Gloss injection is used for white parts.",
-			"• In order to further highlight Omegamon's charm, each part has been sharpened.",
-			"• The 3mm expansion hole in the waist area further amplifies its potential as a plastic model (AMPLIFIED)."
+			"• Each part has been sharpened to further highlight Omegamon's charm.",
+			"• The 3mm expansion hole in the waist further amplifies its potential as a plastic model (AMPLIFIED)."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ガルルキャノン×1",
-			"グレイソード×1",
-			"アクションベース用接合パーツ×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ガルルキャノン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "グレイソード"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アクションベース用接合パーツ"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 11
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3383_s_mhp129wwvv7ocecwa0on6iy50mlh.jpg",
+				"path": "/images/items/01_2455/153_3383.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3383_s_tnpjsp7x7b7rlpuc3hhff2kzfzc5.jpg",
+				"path": "/images/items/01_2455/155_3383.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3383_s_jxi1fblo5zqarxrbc333fo199uqf.jpg",
+				"path": "/images/items/01_2455/156_3383.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3383_s_7vaoblgya2jisl05v1kd421ijvyw.jpg",
+				"path": "/images/items/01_2455/157_3383.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3383_s_1zugoqeyn2fe27yxrglm45qw44cq.jpg",
+				"path": "/images/items/01_2455/158_3383.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3383_s_va999z0f9357c3wg0ins8li9h8g5.jpg",
+				"path": "/images/items/01_2455/159_3383.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3383_s_fat14vl6up75ibl47qt2ee6pjncj.jpg",
+				"path": "/images/items/01_2455/189_3383.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3383_s_ybn0ex07lmc567mbk0dkz9ihybyc.jpg",
+				"path": "/images/items/01_2455/190_3383.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3383_s_hkvgjz9ll2igel414mhn8nt790dy.jpg",
+				"path": "/images/items/01_2455/191_3383.jpg"
+			}
 		],
-		"en": [
-			"Garuru Cannon x1",
-			"Gray sword x1",
-			"Joint parts for action base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×11",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded products x 11",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2455/153_3383.jpg",
-		"/images/items/01_2455/155_3383.jpg",
-		"/images/items/01_2455/156_3383.jpg",
-		"/images/items/01_2455/157_3383.jpg",
-		"/images/items/01_2455/158_3383.jpg",
-		"/images/items/01_2455/159_3383.jpg",
-		"/images/items/01_2455/189_3383.jpg",
-		"/images/items/01_2455/190_3383.jpg",
-		"/images/items/01_2455/191_3383.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2455/",
-	"brandIds": [
-		"figurerise-standard-amp"
-	],
-	"seriesIds": [
-		"digimon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5983",
-		"item-1000216437",
-		"01_5277",
-		"item-1000198198"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2455/"
 }

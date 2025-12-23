@@ -5,6 +5,43 @@
 		"ja": "SD 三国創傑伝 張遼サザビー",
 		"en": "SD Three Kingdoms Legend Zhang Liao Sazabi"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "soketsuden",
+			"url": "https://bandai-hobby.net/series/soketsuden/",
+			"ja": "三国創傑伝"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2642",
+			"url": "https://bandai-hobby.net/item/01_2642/",
+			"ja": "SD 三国創傑伝 天覇曹操ウイングガンダム"
+		},
+		{
+			"id": "01_2614",
+			"url": "https://bandai-hobby.net/item/01_2614/",
+			"ja": "SD 三国創傑伝 典韋マスターガンダム"
+		},
+		{
+			"id": "01_2615",
+			"url": "https://bandai-hobby.net/item/01_2615/",
+			"ja": "SD 三国創傑伝 徐晃ガンダムデスサイズ"
+		},
+		{
+			"id": "01_2643",
+			"url": "https://bandai-hobby.net/item/01_2643/",
+			"ja": "SD 三国創傑伝 甘寧クロスボーンガンダム"
+		}
+	],
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -20,7 +57,7 @@
 	"description": {
 		"ja": [
 			"【2021年春、日本展開開始！！】",
-			"• 『三国志』をベースにしたSD ガンダムが装いも新たに登場！",
+			"• 『三国志』をベースにしたSDガンダムが装いも新たに登場！",
 			"• 進化したプロポーションとパーツ分割へのこだわりにより、組み立てただけでSD史上最高峰の色分けを実現。",
 			"• 一新された頭身バランスと各所の関節構造により、躍動感あふれるポージングを再現！",
 			"• モノアイフェイスを外すと中からガンダムフェイスが露出！",
@@ -28,44 +65,57 @@
 		],
 		"en": [
 			"[Spring 2021, main rollout begins! ! ]",
-			"• SD Gundam based on \"Romance of the Three Kingdoms\" now has a new look!",
-			"• With advanced proportions and attention to parts division, we have achieved the highest color separation in SD history using just the assembly.",
-			"• The all-new head and body balance and joint structure in various parts allow for dynamic poses!",
+			"• SDGundam based on “Romance of the Three Kingdoms” has a new look!",
+			"• Thanks to the advanced proportions and attention to part division, we have achieved the highest color separation in SD history using just the assembly.",
+			"• Reproduce dynamic poses with a completely new head and body balance and joint structure in various places!",
 			"• When you remove the mono-eye face, the Gundam face is exposed from inside!",
 			"• Comes with joint parts that allow you to carry weapons on your back!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"機略双鉞（鉞）×2",
-			"メモリ×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "機略双鉞（鉞）"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "メモリ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3447_s_jpr5thfcwxsa2kouypapcovshr05.jpg",
+				"path": "/images/items/01_2522/153_3447.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3447_s_0org7ten2wvp3jnm12r1kyez0mlp.jpg",
+				"path": "/images/items/01_2522/155_3447.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3447_s_3tbjc6vicesr0sltku22npclv1f5.jpg",
+				"path": "/images/items/01_2522/156_3447.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3447_s_763goh8vnfusmd5a50hnsqn0m8wg.jpg",
+				"path": "/images/items/01_2522/157_3447.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3447_s_29q59so4mazhei8jcv810zf6osj7.jpg",
+				"path": "/images/items/01_2522/158_3447.jpg"
+			}
 		],
-		"en": [
-			"Clever double ax (axe) x 2",
-			"Memory x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2522/153_3447.jpg",
-		"/images/items/01_2522/155_3447.jpg",
-		"/images/items/01_2522/156_3447.jpg",
-		"/images/items/01_2522/157_3447.jpg",
-		"/images/items/01_2522/158_3447.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2522/",
-	"brandIds": [],
-	"seriesIds": [
-		"soketsuden"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2642",
-		"01_2614",
-		"01_2615",
-		"01_2643"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2522/"
 }

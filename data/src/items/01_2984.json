@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム",
-		"en": "ENTRY GRADE 1/144 RX-78-2 Gundam"
+		"en": "ENTRY GRADE 1/144 RX-78-2 GUNDAM"
 	},
+	"brands": [
+		{
+			"id": "entry_grade_g",
+			"url": "https://bandai-hobby.net/brand/entry_grade_g/",
+			"ja": "ENTRY GRADE",
+			"en": "ENTRY GRADE"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5218",
+			"url": "https://bandai-hobby.net/item/01_5218/",
+			"ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム[ヴィンテージカラー]"
+		},
+		{
+			"id": "01_5045",
+			"url": "https://bandai-hobby.net/item/01_5045/",
+			"ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム [リサーキュレーションカラー/ネオンブルー]"
+		},
+		{
+			"id": "01_4249",
+			"url": "https://bandai-hobby.net/item/01_4249/",
+			"ja": "GUNDAM NEXT FUTURE限定 ENTRY GRADE 1/144 RX-78-2 ガンダム [クラシックカラー]"
+		},
+		{
+			"id": "01_4202",
+			"url": "https://bandai-hobby.net/item/01_4202/",
+			"ja": "ENTRY GRADE 1/144 ガンダムベース限定 RX-78-2 ガンダム [ガンダムベースカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -18,7 +64,6 @@
 		"day": 29
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"※ガンダムベース東京・福岡にて先行販売中です。最新の在庫状況に関しては各店舗にお問い合わせください。",
@@ -27,61 +72,77 @@
 			"ENTRY GRADEシリーズに『RX-78-2 ガンダム』が登場!!",
 			"初めてガンプラに触れる人、久しぶりにガンプラを組む人、ガンプラをこよなく愛する人、全ユーザーにお届けする新感覚の組み立てが体験できるプラモデルキットです。",
 			"簡単に組み立てが可能ながら精巧なガンプラを完成できる、新感覚をぜひその手に。",
-			"■積み重ねた技術により少数パーツでありながら抜群の可動！",
-			"■パーツを組み立てるだけで完成！塗装はもちろん、シール貼りも不要！",
-			"■ニッパーを使わず手でパチパチと簡単に折れるタッチゲート仕様！",
-			"■部位ごとにまとまったランナー配置！"
+			"• 積み重ねた技術により少数パーツでありながら抜群の可動！",
+			"• パーツを組み立てるだけで完成！塗装はもちろん、シール貼りも不要！",
+			"• ニッパーを使わず手でパチパチと簡単に折れるタッチゲート仕様！",
+			"• 部位ごとにまとまったランナー配置！"
 		],
 		"en": [
-			"*Pre-sale at Gundam Base Tokyo and Fukuoka. Please contact each store for the latest stock status.",
-			"*This product has different specifications and price from \"ENTRY GRADE 1/144 RX-78-2 Gundam (Light Package Ver.)\".",
-			"“Next generation first Gunpla”. “Easy assembly and high quality coexist, made possible by 40 technologies!”",
-			"“RX-78-2 Gundam” is now available in the ENTRY GRADE series!!",
-			"ModelKit is a plastic model that allows all users to experience a new type of assembly, including those who are touching Gunpla for the first time, those who are assembling Gunpla for the first time in a while, and those who love Gunpla.",
-			"Get your hands on a new sensation of easily assembling and completing elaborate Gunpla.",
-			"• Thanks to accumulated technology, it is extremely movable despite having a small number of parts!",
-			"• Complete by simply assembling the parts! No painting or sealing required!",
-			"• Touch gate design that allows you to easily fold by hand without using nippers!",
-			"• Runner arrangement organized by body part!"
+			"• Outstanding mobility despite the small number of parts due to accumulated technology!",
+			"• Just assemble the parts and you're done! No need to paint or even apply stickers!",
+			"• Touch gate specification that can be easily folded by hand without using nippers!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"シールド×１",
-			"ライフル×１"
-		],
-		"en": [
-			"Seal de x1",
-			"Rifle x 1"
-		]
-	},
-	"images": [
-		"/images/items/01_2984/1000158848_1.jpg",
-		"/images/items/01_2984/1000158848_10.jpg",
-		"/images/items/01_2984/1000158848_2.jpg",
-		"/images/items/01_2984/1000158848_3.jpg",
-		"/images/items/01_2984/1000158848_4.jpg",
-		"/images/items/01_2984/1000158848_5.jpg",
-		"/images/items/01_2984/1000158848_6.jpg",
-		"/images/items/01_2984/1000158848_7.jpg",
-		"/images/items/01_2984/1000158848_8.jpg",
-		"/images/items/01_2984/1000158848_9.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "シールド×１",
+				"en": "Shield"
+			}
+		},
+		{
+			"name": {
+				"ja": "ライフル×１"
+			}
+		}
 	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158848_1.jpg",
+				"path": "/images/items/01_2984/1000158848_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158848_2.jpg",
+				"path": "/images/items/01_2984/1000158848_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158848_3.jpg",
+				"path": "/images/items/01_2984/1000158848_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158848_4.jpg",
+				"path": "/images/items/01_2984/1000158848_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158848_5.jpg",
+				"path": "/images/items/01_2984/1000158848_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158848_6.jpg",
+				"path": "/images/items/01_2984/1000158848_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158848_7.jpg",
+				"path": "/images/items/01_2984/1000158848_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158848_8.jpg",
+				"path": "/images/items/01_2984/1000158848_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158848_9.jpg",
+				"path": "/images/items/01_2984/1000158848_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158848_10.jpg",
+				"path": "/images/items/01_2984/1000158848_10.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2984/",
-	"brandIds": [
-		"entry_grade"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5218",
-		"01_5045",
-		"01_4249",
-		"01_4202"
-	],
-	"manualId": "0977"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2984/"
+	}
 }

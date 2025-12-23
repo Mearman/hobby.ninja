@@ -5,6 +5,43 @@
 		"ja": "SDBD RX-零丸",
 		"en": "SDBD RX-Zeromaru"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5189",
+			"url": "https://bandai-hobby.net/item/01_5189/",
+			"ja": "オプションパーツセット ガンプラ 04 (ビルドハンズ 丸型)"
+		},
+		{
+			"id": "01_5190",
+			"url": "https://bandai-hobby.net/item/01_5190/",
+			"ja": "オプションパーツセット ガンプラ 03 (ビルドハンズ 角型)"
+		},
+		{
+			"id": "01_3063",
+			"url": "https://bandai-hobby.net/item/01_3063/",
+			"ja": "ハロプラ ガンダムベース限定 モビルハロ[ガンダムベースカラー]"
+		},
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		}
+	],
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -26,63 +63,103 @@
 		],
 		"en": [
 			"Ayame's SD type ninja type Gunpla that appears in \"Gundam Build Divers\" is now a kit!",
-			"• The internal frame uses the SD cross silhouette series CS frame!",
-			"• Flying support mecha \"Armed Armored Yatori\" is included, allowing you to recreate the change from SD to real body type!"
+			"• The internal frame uses the CS frame from the SD Cross Silhouette series!",
+			"• A flying support mecha \"Armed Armored Yatori\" is included, allowing you to recreate the change from SD body type to real body type!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"クナイ×2",
-			"刀×1",
-			"シールド×1",
-			"ライフル×1",
-			"エフェクト×1",
-			"手首2種（左右）×各１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "クナイ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "刀"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "エフェクト"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "手首2種（左右）×各１"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2333_o_1ckhvabh7sat1n3d9sk16h0b9i23.jpg",
+				"path": "/images/items/01_1411/153_2333.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2333_o_1ckhval9b1vk2c6tav31qso1k132d.jpg",
+				"path": "/images/items/01_1411/155_2333.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2333_o_1ckhvapme1rgk1ga31eadm0213j42i.jpg",
+				"path": "/images/items/01_1411/156_2333.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2333_o_1ckhvauf4q2316551507gi41kc32n.jpg",
+				"path": "/images/items/01_1411/157_2333.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2333_o_1ckhvb3a61su3pj7i6l3hj9kv2s.jpg",
+				"path": "/images/items/01_1411/158_2333.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2333_o_1ckhvbaa9le117fjjqu1kuk1fjc31.jpg",
+				"path": "/images/items/01_1411/159_2333.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2333_o_1ckhvd0efmqgi9918smj99ngo36.jpg",
+				"path": "/images/items/01_1411/189_2333.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2333_o_1ckhvdals1fbo10bs1ugb1olp8r23b.jpg",
+				"path": "/images/items/01_1411/190_2333.jpg"
+			}
 		],
-		"en": [
-			"Kunai x 2",
-			"Sword x1",
-			"Seal × 1",
-			"Rifle x 1",
-			"Effect x 1",
-			"2 types of wrists (left and right) x 1 each"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×6",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 6",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1411/153_2333.jpg",
-		"/images/items/01_1411/155_2333.jpg",
-		"/images/items/01_1411/156_2333.jpg",
-		"/images/items/01_1411/157_2333.jpg",
-		"/images/items/01_1411/158_2333.jpg",
-		"/images/items/01_1411/159_2333.jpg",
-		"/images/items/01_1411/189_2333.jpg",
-		"/images/items/01_1411/190_2333.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1411/",
-	"brandIds": [],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5189",
-		"01_5190",
-		"01_3063",
-		"01_2623"
-	],
-	"manualId": "1029"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1411/"
 }

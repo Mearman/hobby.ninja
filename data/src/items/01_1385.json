@@ -2,9 +2,55 @@
 	"id": "01_1385",
 	"type": "item",
 	"name": {
-		"ja": "MG 1/100 G ガンダム",
-		"en": "MG 1/100 G Gundam"
+		"ja": "MG 1/100 Gガンダム",
+		"en": "MG 1/100 GF13-017NJⅡ G GUNDAM"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]",
+			"en": "MG [MASTER GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "ggundam",
+			"url": "https://bandai-hobby.net/series/ggundam/",
+			"ja": "機動武闘伝Ｇガンダム",
+			"en": "MOBILE FIGHTER G GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1746",
+			"url": "https://bandai-hobby.net/item/01_1746/",
+			"ja": "MG 1/100 シャイニングガンダム"
+		},
+		{
+			"id": "01_2482",
+			"url": "https://bandai-hobby.net/item/01_2482/",
+			"ja": "MG 1/100 ハイパーモード Gガンダム"
+		},
+		{
+			"id": "01_2493",
+			"url": "https://bandai-hobby.net/item/01_2493/",
+			"ja": "MG 1/100 ハイパーモード マスターガンダム"
+		},
+		{
+			"id": "01_1629",
+			"url": "https://bandai-hobby.net/item/01_1629/",
+			"ja": "MG 1/100 マスターガンダム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3190,
 		"currency": "JPY",
@@ -17,40 +63,39 @@
 		"month": 11
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"TVアニメーション「機動武闘伝G ガンダム」に登場する主役モビルファイター「G ガンダム」が、遂にマスターグレードで登場。リアルなアクションの再現をコンセプトに、PGウイングガンダムゼロカスタムで培った内部フレームをダウンサイジングして導入。劇中同様のアクションポーズが可能です。",
+			"TVアニメーション「機動武闘伝Gガンダム」に登場する主役モビルファイター「Gガンダム」が、遂にマスターグレードで登場。リアルなアクションの再現をコンセプトに、PGウイングガンダムゼロカスタムで培った内部フレームをダウンサイジングして導入。劇中同様のアクションポーズが可能です。",
 			"コアランダーも可動し、さらにハイパーモードへの変形も可能です。",
 			"パイロットのドモン・カッシュのフィギュアも付属します。"
 		],
 		"en": [
-			"The main mobile fighter \"G Gundam \" that appears in the TV animation \" Mobile Fighter G Gundam\" is finally available in master grade. With the concept of reproducing realistic action, we have downsized and introduced the internal frame cultivated from the PG Wing Gundam Zero Custom. Action poses similar to those in the movie are possible.",
-			"Corelander is also movable and can also transform into hyper mode.",
-			"A figure of pilot Domon Kash is also included."
+			"The main mobile fighter \"G GUNDAM\" who appears in the TV anime \"Mobile Fighter G GUNDAM\" is finally available in Master Grade. Based on the concept of reproducing realistic action, the internal frame cultivated by PG Wing GUNDAM Zero Custom has been downsized and introduced. The same action poses as in the play are possible. The core lander is also movable and can even be transformed into hyper mode. A figure of the pilot, Domon Kash, is also included."
 		]
 	},
-	"images": [
-		"/images/items/01_1385/1000075324_1.jpg",
-		"/images/items/01_1385/1000075324_2.jpg",
-		"/images/items/01_1385/1000075324_3.jpg",
-		"/images/items/01_1385/1000075324_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000075324_1.jpg",
+				"path": "/images/items/01_1385/1000075324_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000075324_2.jpg",
+				"path": "/images/items/01_1385/1000075324_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000075324_3.jpg",
+				"path": "/images/items/01_1385/1000075324_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000075324_4.jpg",
+				"path": "/images/items/01_1385/1000075324_4.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1385/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"ggundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1746",
-		"01_2482",
-		"01_2493",
-		"01_1629"
-	],
-	"manualId": "0813"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1385/"
+	}
 }

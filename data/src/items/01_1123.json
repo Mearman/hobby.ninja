@@ -5,6 +5,55 @@
 		"ja": "RE/100 1/100 バウ量産型",
 		"en": "RE/100 1/100 bow mass production type"
 	},
+	"brands": [
+		{
+			"id": "re100",
+			"url": "https://bandai-hobby.net/brand/re100/",
+			"ja": "RE/100[リボーンワンハンドレッド]"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-zz",
+			"url": "https://bandai-hobby.net/series/gundam-zz/",
+			"ja": "機動戦士ガンダムＺＺ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000137712",
+			"url": "https://p-bandai.jp/item/item-1000137712/",
+			"ja": "ＭＧ 1/100 ドワッジ改"
+		},
+		{
+			"id": "01_2231",
+			"url": "https://bandai-hobby.net/item/01_2231/",
+			"ja": "MG 1/100 ドワッジ"
+		},
+		{
+			"id": "01_2077",
+			"url": "https://bandai-hobby.net/item/01_2077/",
+			"ja": "ＨＧ 1/144 ガズ Ｒ／Ｌ"
+		},
+		{
+			"id": "01_1390",
+			"url": "https://bandai-hobby.net/item/01_1390/",
+			"ja": "HGUC 1/144 リゲルグ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -17,29 +66,14 @@
 		"month": 9
 	},
 	"targetAge": 15,
-	"scale": "1/100",
-	"images": [
-		"/images/items/01_1123/153_2055.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1123/",
-	"brandIds": [
-		"re100",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"gundam-zz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000137712",
-		"01_2231",
-		"01_2077",
-		"01_1390"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2055_o_1bk5uhhkn16ap11671o8131bett23.jpg",
+				"path": "/images/items/01_1123/153_2055.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1123/"
 }

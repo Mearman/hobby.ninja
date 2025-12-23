@@ -5,6 +5,44 @@
 		"ja": "1/144 アッグガイ",
 		"en": "1/144 Aggguy"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 7
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、1/144スケールで、アッグガイが登場。",
@@ -28,23 +65,18 @@
 			"The neck rotation mechanism has been reproduced. The base of the heat rod rotates."
 		]
 	},
-	"images": [
-		"/images/items/01_3145/153_4108.jpg",
-		"/images/items/01_3145/155_4108.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3145/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	],
-	"manualId": "1974"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4108_s_h2hg51yus1pu0pdffd3ae4golt8e.jpg",
+				"path": "/images/items/01_3145/153_4108.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4108_s_ssb32b9dddujwswr0bb3ynqeec5n.jpg",
+				"path": "/images/items/01_3145/155_4108.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3145/"
 }

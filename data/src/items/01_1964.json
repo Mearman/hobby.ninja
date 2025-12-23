@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "アクションベース1 機動戦士ガンダムジオン軍Ver.",
-		"en": "Action Base 1 Mobile Suit Gundam Zeon Army Ver."
+		"en": "Action Base 1 Mobile Suit GundamZeon Army Ver."
 	},
+	"brands": [
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		},
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3570",
+			"url": "https://bandai-hobby.net/item/01_3570/",
+			"ja": "アクションベース5 [GUNDAM FACTORY YOKOHAMA Ver.]"
+		},
+		{
+			"id": "01_2438",
+			"url": "https://bandai-hobby.net/item/01_2438/",
+			"ja": "ガンダムベース限定 アクションベース4［シャア専用カラー］"
+		}
+	],
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -26,22 +64,18 @@
 			"A new action base that embodies Zeon's spirit is now available! Adopts a new style with the Zeon military emblem design on the base of the pedestal. The height and angle of the post to which the kit is attached are adjustable."
 		]
 	},
-	"images": [
-		"/images/items/01_1964/153_2896.jpg",
-		"/images/items/01_1964/155_2896.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1964/",
-	"brandIds": [
-		"actionbase"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_3570",
-		"01_2438"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2896_s_ls6zzbijuc3cxrzc4ugepsxv2bcb.jpg",
+				"path": "/images/items/01_1964/153_2896.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2896_s_apsy0a5cd1e93esu8lmz3tguzs34.jpg",
+				"path": "/images/items/01_1964/155_2896.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1964/"
 }

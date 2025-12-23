@@ -5,6 +5,43 @@
 		"ja": "ピカちんキット12 ゲーム貯金箱&ふりかけルーレットカスタムセット",
 		"en": "Pikachin Kit12 Game Piggy Bank & Furikake Roulette Custom Set"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -42,12 +79,12 @@
 			"(裏：豆知識ページ)"
 		],
 		"en": [
-			"• Golden Piccademy Award-winning items are now available!",
-			"• A dream piggy bank that allows you to save money while playing games, and a set of custom parts that allow you to decide the ingredients for furikake using a roulette wheel!",
+			"• Introducing Golden Piccademy Award-winning items!",
+			"• A dream piggy bank that allows you to save money while playing games, and a custom parts set that allows you to decide the ingredients for furikake using a roulette wheel!",
 			"• You can't take out money from the piggy bank unless you clear it! But it's fun and I'll play it over and over again!",
-			"• Use the power of the rubber band to repel the flies and guide the 10 yen coin to the goal! When you reach the goal, the piggy bank will open!",
+			"• Guide the 10 yen coin to the goal by repelling the splash with the power of the rubber band! When you reach the goal, the piggy bank will open!",
 			"• Furikake Roulette Custom is a custom part exclusively for \"Pikachin Kit02 Furikake Maker\" sold separately.",
-			"• Write the name of the candy in your favorite square and start roulette! Let's make various furikake!",
+			"• Start roulette by writing the name of the candy in your favorite square! Let's make various furikake!",
 			"[Set contents]",
 			"Game piggy bank...1",
 			"Furikake roulette custom parts...1",
@@ -64,32 +101,58 @@
 			"(Back: Trivia page)"
 		]
 	},
-	"images": [
-		"/images/items/01_2078/1000131738_1.jpg",
-		"/images/items/01_2078/1000131738_10.jpg",
-		"/images/items/01_2078/1000131738_11.jpg",
-		"/images/items/01_2078/1000131738_12.jpg",
-		"/images/items/01_2078/1000131738_2.jpg",
-		"/images/items/01_2078/1000131738_3.jpg",
-		"/images/items/01_2078/1000131738_4.jpg",
-		"/images/items/01_2078/1000131738_5.jpg",
-		"/images/items/01_2078/1000131738_6.jpg",
-		"/images/items/01_2078/1000131738_7.jpg",
-		"/images/items/01_2078/1000131738_8.jpg",
-		"/images/items/01_2078/1000131738_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2078/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131738_1.jpg",
+				"path": "/images/items/01_2078/1000131738_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131738_2.jpg",
+				"path": "/images/items/01_2078/1000131738_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131738_3.jpg",
+				"path": "/images/items/01_2078/1000131738_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131738_4.jpg",
+				"path": "/images/items/01_2078/1000131738_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131738_5.jpg",
+				"path": "/images/items/01_2078/1000131738_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131738_6.jpg",
+				"path": "/images/items/01_2078/1000131738_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131738_7.jpg",
+				"path": "/images/items/01_2078/1000131738_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131738_8.jpg",
+				"path": "/images/items/01_2078/1000131738_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131738_9.jpg",
+				"path": "/images/items/01_2078/1000131738_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131738_10.jpg",
+				"path": "/images/items/01_2078/1000131738_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131738_11.jpg",
+				"path": "/images/items/01_2078/1000131738_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131738_12.jpg",
+				"path": "/images/items/01_2078/1000131738_12.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2078/"
 }

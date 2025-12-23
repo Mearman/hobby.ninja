@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "ガンダムベース限定 アクションベース4 [トリコロールカラー]",
-		"en": "Gundam Base Limited Action Base 4 [Tricolor Color]"
+		"en": "THE GUNDAM BASE LIMITED ACTION BASE 4 [TRICOLOR COLOR]"
 	},
+	"brands": [
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		},
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5934",
+			"url": "https://bandai-hobby.net/item/01_5934/",
+			"ja": "アクションベース7 [クリアカラー] 機動戦士Gundam GQuuuuuuXシールセット"
+		},
+		{
+			"id": "01_5256",
+			"url": "https://bandai-hobby.net/item/01_5256/",
+			"ja": "アクションベース6 [クリアカラー] ミラーシールセット"
+		},
+		{
+			"id": "01_5258",
+			"url": "https://bandai-hobby.net/item/01_5258/",
+			"ja": "アクションベース7 [クリアカラー] ミラーシールセット"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -23,30 +60,28 @@
 			"アクションベース４が、ガンダムベース限定トリコロールカラーで登場。"
 		],
 		"en": [
-			"A limited edition item from the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"Action Base 4 is available in Gundam Base limited tricolor color."
+			"For GUNPLA fans around the world, this item is limited to the official GUNPLA complex \"GUNDAM Base\". The ACTION BASE 4 is now available in a limited edition tricolor color for the GUNDAM base."
 		]
 	},
-	"images": [
-		"/images/items/01_1939/1000126803_1.jpg",
-		"/images/items/01_1939/1000126803_2.jpg",
-		"/images/items/01_1939/1000126803_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126803_1.jpg",
+				"path": "/images/items/01_1939/1000126803_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126803_2.jpg",
+				"path": "/images/items/01_1939/1000126803_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126803_3.jpg",
+				"path": "/images/items/01_1939/1000126803_3.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1939/",
-	"brandIds": [
-		"actionbase"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5934",
-		"01_5256",
-		"01_5258"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1939/"
 	}
 }

@@ -5,6 +5,50 @@
 		"ja": "RG 1/144 νガンダム フィン・ファンネルエフェクトセット",
 		"en": "RG 1/144 νGundam Fin Funnel Effect Set"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4121",
+			"url": "https://bandai-hobby.net/item/01_4121/",
+			"ja": "RG 1/144 ガンダムベース限定 Hi-νガンダム[チタニウムフィニッシュ]"
+		},
+		{
+			"id": "01_2734",
+			"url": "https://bandai-hobby.net/item/01_2734/",
+			"ja": "RG 1/144 ガンダムベース限定 νガンダム[チタニウムフィニッシュ]"
+		},
+		{
+			"id": "item-1000136789",
+			"url": "https://p-bandai.jp/item/item-1000136789",
+			"ja": "ＲＧ 1/144 νガンダム用ダブル・フィン・ファンネル拡張ユニット"
+		},
+		{
+			"id": "01_2343",
+			"url": "https://bandai-hobby.net/item/01_2343/",
+			"ja": "RG 1/144 νガンダム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 6600,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 7
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"[数量限定生産]",
@@ -29,55 +72,88 @@
 		],
 		"en": [
 			"[Limited quantity production]",
-			"From \"Mobile Suit Gundam: Char's Counterattack \" comes a set item that includes \" RG 1/144 νGundam\" with effect parts and a pedestal!",
-			"• \"RG 1/144 νGundam\", Action Base 4 Clear x 1, Figure-rise Effect Jet Effect (Clear Yellow) x 2 set.",
-			"• You can display all 6 included fins and funnels with effects!",
+			"From \"Mobile Suit Gundam: Char's Counterattack\" comes a set item that includes \"RG 1/144 νGundam\" with effect parts and a pedestal!",
+			"• Set of \"RG 1/144 νGundam\", Action Base 4 Clear x 1, Figure-rise Effect Jet Effect (Clear Yellow) x 2.",
+			"• You can display all 6 included fin funnels with effects!",
 			"• Can also be used for \"RG 1/144 Sazabi\" (sold separately)."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"フィン・ファンネル×6",
-			"ニュー・ハイパー・バズーカ×1",
-			"シールド（ビーム・キャノン）×1",
-			"ビーム・サーベル（バックパック部・腕部）×各1",
-			"ミサイル×1式",
-			"フィン・ファンネルエフェクトセット×1",
-			"リアリスティックデカール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "フィン・ファンネル"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "ニュー・ハイパー・バズーカ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド（ビーム・キャノン）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル（バックパック部・腕部）×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ミサイル"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "フィン・ファンネルエフェクトセット"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3456_s_8ohfjfeaxwdwyo2qcpyg2nacf69q.jpg",
+				"path": "/images/items/01_2531/153_3456.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3456_s_8la39aajsqp6kr0ikuxauun5hoo3.jpg",
+				"path": "/images/items/01_2531/155_3456.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3456_s_sliekorc86o41r0l0smmumxk5vg3.jpg",
+				"path": "/images/items/01_2531/156_3456.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3456_s_d0p8i9mptd0ncl4jw05ur4vd9rqb.jpg",
+				"path": "/images/items/01_2531/157_3456.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3456_s_b69kriwzkl3w4q4hapufn1hcno3p.jpg",
+				"path": "/images/items/01_2531/158_3456.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x1",
-			"Fin Funnel x 6",
-			"New hyper bazooka x1",
-			"Seal (beam cannon) x 1",
-			"Beam saber (backpack part/arm part) x 1 each",
-			"Missile x 1 type",
-			"Fin funnel effect set x 1",
-			"Realistic decal x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2531/153_3456.jpg",
-		"/images/items/01_2531/155_3456.jpg",
-		"/images/items/01_2531/156_3456.jpg",
-		"/images/items/01_2531/157_3456.jpg",
-		"/images/items/01_2531/158_3456.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2531/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4121",
-		"01_2734",
-		"item-1000136789",
-		"01_2343"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2531/"
 }

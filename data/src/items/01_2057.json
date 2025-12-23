@@ -5,6 +5,50 @@
 		"ja": "PG 1/60 ガンダムエクシア用LEDユニット",
 		"en": "PG 1/60 Gundam Exia LED unit"
 	},
+	"brands": [
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2067",
+			"url": "https://bandai-hobby.net/item/01_2067/",
+			"ja": "PG 1/60 ダブルオーガンダムセブンソード/G"
+		},
+		{
+			"id": "item-1000129011",
+			"url": "http://p-bandai.jp/item/item-1000129011",
+			"ja": "ＰＧ 1/60 ガンダムエクシア クリアカラーボディ"
+		},
+		{
+			"id": "item-1000120750",
+			"url": "http://p-bandai.jp/item/item-1000120750/",
+			"ja": "ＰＧ 1/60 ガンダムエクシア用リペアパーツセット"
+		},
+		{
+			"id": "01_1202",
+			"url": "https://bandai-hobby.net/item/01_1202/",
+			"ja": "PG 1/60 ガンダムエクシア (LIGHTING MODEL)"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 15400,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 29
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
 			"GNドライヴから全身へ広がる粒子の挙動を感じることができるLEDユニット！",
@@ -29,58 +72,85 @@
 		],
 		"en": [
 			"An LED unit that allows you to feel the behavior of particles spreading from the GN Drive to your entire body!",
-			"• The color change caused by the accumulation and compression of GN particles is expressed by a newly designed LED unit.",
-			"• The GN cables throughout the body are made of light guide material that enables light transmission.",
-			"• Changes from \"green \" in the activated state to \" green/blue \" in the operating state, and then to \" red\" in the critical state of GN particles.",
-			"• By incorporating it into the body of the separately sold \"PG 1/60 Gundam Exia\", you can express the color change due to the accumulation and compression of GN particles."
+			"• Color tone changes due to accumulation and compression of GN particles are expressed by a newly designed LED unit.",
+			"• The GN cable throughout the body uses a light guide material that allows light transmission.",
+			"• The color changes from \"green\" in the starting state to \"green/blue\" in the operating state, and then to \"red\" in the critical state of GN particles.",
+			"• By incorporating it into the body of the separately sold \"PG 1/60 Gundam Exia\", you can express the color tone change due to the accumulation and compression of GN particles."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"LEDユニット×1式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "LEDユニット"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3006_s_cct84dd0a30vaoaq5h8uovpobrzn.jpg",
+				"path": "/images/items/01_2057/153_3006.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3006_s_zoc64i34mkr8yyy0rdlkt4ndt9ao.jpg",
+				"path": "/images/items/01_2057/155_3006.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3006_s_qiuvgsea1jesuse6ecwr72keet87.jpg",
+				"path": "/images/items/01_2057/156_3006.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3006_s_5a3lmq8iogpb22notnms2w8wmeno.jpg",
+				"path": "/images/items/01_2057/157_3006.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3006_s_6ijcibf402f8o0fo23k38scc8hu2.jpg",
+				"path": "/images/items/01_2057/158_3006.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3006_s_ptxrtsragg9o5njxngkwx5z90cn4.jpg",
+				"path": "/images/items/01_2057/159_3006.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3006_s_fcj70gz00xxgz54z25wtkg8myw61.jpg",
+				"path": "/images/items/01_2057/189_3006.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3006_s_7gumtywki02z7i3uri3tzcgi2uzj.jpg",
+				"path": "/images/items/01_2057/190_3006.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3006_s_kbwll0lsu3ncqz61lbavwcgsang4.jpg",
+				"path": "/images/items/01_2057/191_3006.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3006_s_f3js66v9om4ane0206qc6hrrdp0p.jpg",
+				"path": "/images/items/01_2057/192_3006.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_3006_s_5pbwwacx3ieg4f1u46jjt5c6ikz1.jpg",
+				"path": "/images/items/01_2057/193_3006.jpg"
+			}
 		],
-		"en": [
-			"LED unit x 1 set"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2057/153_3006.jpg",
-		"/images/items/01_2057/155_3006.jpg",
-		"/images/items/01_2057/156_3006.jpg",
-		"/images/items/01_2057/157_3006.jpg",
-		"/images/items/01_2057/158_3006.jpg",
-		"/images/items/01_2057/159_3006.jpg",
-		"/images/items/01_2057/189_3006.jpg",
-		"/images/items/01_2057/190_3006.jpg",
-		"/images/items/01_2057/191_3006.jpg",
-		"/images/items/01_2057/192_3006.jpg",
-		"/images/items/01_2057/193_3006.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2057/",
-	"brandIds": [
-		"pg"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2067",
-		"item-1000129011",
-		"item-1000120750",
-		"01_1202"
-	],
-	"manualId": "1040"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2057/"
 }

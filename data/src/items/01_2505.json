@@ -5,6 +5,43 @@
 		"ja": "SD 三国創傑伝 夏侯淵トールギス",
 		"en": "SD Sangoku Soketsuden Xiahouyuan Tallgeese"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "soketsuden",
+			"url": "https://bandai-hobby.net/series/soketsuden/",
+			"ja": "三国創傑伝"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2642",
+			"url": "https://bandai-hobby.net/item/01_2642/",
+			"ja": "SD 三国創傑伝 天覇曹操ウイングガンダム"
+		},
+		{
+			"id": "01_2614",
+			"url": "https://bandai-hobby.net/item/01_2614/",
+			"ja": "SD 三国創傑伝 典韋マスターガンダム"
+		},
+		{
+			"id": "01_2615",
+			"url": "https://bandai-hobby.net/item/01_2615/",
+			"ja": "SD 三国創傑伝 徐晃ガンダムデスサイズ"
+		},
+		{
+			"id": "01_2643",
+			"url": "https://bandai-hobby.net/item/01_2643/",
+			"ja": "SD 三国創傑伝 甘寧クロスボーンガンダム"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -20,7 +57,7 @@
 	"description": {
 		"ja": [
 			"【2021年春、日本展開開始！！】",
-			"• 『三国志』をベースにしたSD ガンダムが装いも新たに登場！",
+			"• 『三国志』をベースにしたSDガンダムが装いも新たに登場！",
 			"• 進化したプロポーションとパーツ分割へのこだわりにより、組み立てただけでSD史上最高峰の色分けを実現。",
 			"• 一新された頭身バランスと各所の関節構造により、躍動感あふれるポージングを再現！",
 			"• 特徴的なマスクは取り外しも可能！",
@@ -28,48 +65,68 @@
 		],
 		"en": [
 			"[Spring 2021, main rollout begins! ! ]",
-			"• SD Gundam based on \"Romance of the Three Kingdoms\" now has a new look!",
-			"• With advanced proportions and attention to parts division, we have achieved the highest color separation in SD history using just the assembly.",
-			"• The all-new head and body balance and joint structure in various parts allow for dynamic poses!",
-			"• The distinctive mask can be removed!",
-			"• Cao Cao (sold separately) can be strengthened by combining it with the armament of Xiahou Dun (sold separately)!"
+			"• SDGundam based on “Romance of the Three Kingdoms” has a new look!",
+			"• Thanks to the advanced proportions and attention to part division, we have achieved the highest color separation in SD history using just the assembly.",
+			"• Reproduce dynamic poses with a completely new head and body balance and joint structure in various places!",
+			"• The distinctive mask is also removable!",
+			"• Cao Cao (sold separately) can be strengthened by combining it with the weapons of Xia Kuo Dun (sold separately)!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"導覇砲-凄-（ドーバーガン）×１",
-			"盤状壁(盾)×１",
-			"メモリ×１",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "導覇砲-凄-（ドーバーガン）×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "盤状壁(盾)×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "メモリ×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3430_s_zgzilqkse6i2tsu1xaermoef848z.jpg",
+				"path": "/images/items/01_2505/153_3430.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3430_s_8gy9pq5j2kiitxpkmtytlg7906mv.jpg",
+				"path": "/images/items/01_2505/155_3430.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3430_s_t4w6lj6y3f83jy7c51cai21kduww.jpg",
+				"path": "/images/items/01_2505/156_3430.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3430_s_rr7w0vfqn7mpnrzvlb1nbamqemtt.jpg",
+				"path": "/images/items/01_2505/157_3430.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3430_s_54yrvlxwq86mlb37tbgh994hb05e.jpg",
+				"path": "/images/items/01_2505/158_3430.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3430_s_cw7kp2oqc7o0did2unwjli3xeypl.jpg",
+				"path": "/images/items/01_2505/159_3430.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3430_s_jcn1n8btd1ol8aorxizsxnxgy433.jpg",
+				"path": "/images/items/01_2505/189_3430.jpg"
+			}
 		],
-		"en": [
-			"Guidance gun - awesome - (Dover gun) x 1",
-			"Board-shaped wall (shield) x 1",
-			"Memory x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2505/153_3430.jpg",
-		"/images/items/01_2505/155_3430.jpg",
-		"/images/items/01_2505/156_3430.jpg",
-		"/images/items/01_2505/157_3430.jpg",
-		"/images/items/01_2505/158_3430.jpg",
-		"/images/items/01_2505/159_3430.jpg",
-		"/images/items/01_2505/189_3430.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2505/",
-	"brandIds": [],
-	"seriesIds": [
-		"soketsuden"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2642",
-		"01_2614",
-		"01_2615",
-		"01_2643"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2505/"
 }

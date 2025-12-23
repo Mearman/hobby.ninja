@@ -5,6 +5,50 @@
 		"ja": "HGBC 1/144 ノーネイムライフル",
 		"en": "HGBC 1/144 No Name Rifle"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズ』に登場する、ガンダムアストレイノーネイムの装備「ノーネイムライフル」が、HGBCにラインアップ！",
@@ -26,57 +69,71 @@
 			"• HGシリーズとカスタマイズが可能となっているので、様々な形態で装備させて君のガンプラをパワーアップさせよう！"
 		],
 		"en": [
-			"Gundam Astray No Name's equipment \"No Name Rifle \" that appears in \" Gundam Build Divers\" is now available at HGBC!",
+			"Gundam Astray No Name's equipment \"No Name Rifle\" that appears in \"Gundam Build Divers\" is now available at HGBC!",
 			"• Each form can be reproduced: defense mode, long-range attack shooting mode, and backpack mode, and joint parts for each form and joint parts for expansion are included! (Single axis/double axis/ball joint [large/medium/small])",
 			"• Customization is possible with the HG series, so power up your Gunpla by equipping it in various forms!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ノーネイムライフル×１",
-			"射撃モード用ジョイントパーツ×1",
-			"バックパックモード用ジョイントパーツ×1",
-			"防御形態用ジョイントパーツ×1",
-			"拡張用ジョイントパーツ×1式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ノーネイムライフル×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "射撃モード用ジョイントパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バックパックモード用ジョイントパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "防御形態用ジョイントパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "拡張用ジョイントパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2983_s_dfez9t5gwhdbc87ufg2h7emg6a4t.jpg",
+				"path": "/images/items/01_1946/153_2983.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2983_s_4bz2vn8e3vf2nht2uwdu0pb5zimr.jpg",
+				"path": "/images/items/01_1946/155_2983.jpg"
+			}
 		],
-		"en": [
-			"No name rifle x1",
-			"Joint parts for shooting mode x 1",
-			"Joint parts for backpack mode x 1",
-			"Joint parts for defense form x 1",
-			"Expansion joint parts x 1 set"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×3",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 3",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1946/153_2983.jpg",
-		"/images/items/01_1946/155_2983.jpg",
-		"/images/items/01_1946/01_1946_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1946/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "0698"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1946/"
 }

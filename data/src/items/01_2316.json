@@ -5,6 +5,28 @@
 		"ja": "SD 三国創傑伝 トリニティバイク",
 		"en": "SD Sangoku Soketsuden Trinity Bike"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "soketsuden",
+			"url": "https://bandai-hobby.net/series/soketsuden/",
+			"ja": "三国創傑伝"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -27,35 +49,43 @@
 		],
 		"en": [
 			"[From late 20212, the anime will be broadcast and distributed in books! ! ]",
-			"• Using the included joint parts, you can customize the weapon and armor from the SD Sangoku Soketsuden series!",
+			"• You can customize the SD Sangoku Soketsuden series weapons and armor using the included joint parts!",
 			"• Reproduce the colors of each faction with the included wheel seal (4 colors)!",
-			"• Memory (sold separately) can be installed on the console."
+			"• Memory (sold separately) can be installed in the console."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3254_o_1de4bjrk613nt47khm51mmp19bs23.jpg",
+				"path": "/images/items/01_2316/153_3254.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3254_o_1de4bk1mb1q5m101l1bsfflf8tt28.jpg",
+				"path": "/images/items/01_2316/155_3254.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3254_o_1de4bk7kv1hk18d21ldt1bm71bum2d.jpg",
+				"path": "/images/items/01_2316/156_3254.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3254_o_1de4bkchp1dq29v41hb8br518a52i.jpg",
+				"path": "/images/items/01_2316/157_3254.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3254_o_1de4bkjvc226h30jl515e4pt92n.jpg",
+				"path": "/images/items/01_2316/158_3254.jpg"
+			}
 		],
-		"en": [
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2316/153_3254.jpg",
-		"/images/items/01_2316/155_3254.jpg",
-		"/images/items/01_2316/156_3254.jpg",
-		"/images/items/01_2316/157_3254.jpg",
-		"/images/items/01_2316/158_3254.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2316/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"soketsuden"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_2316/"
 }

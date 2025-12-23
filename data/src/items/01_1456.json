@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 MS-06R-1A シン・マツナガ専用ザク Ver.2.0",
 		"en": "MG 1/100 MS-06R-1A Shin Matsunaga Zaku Ver.2.0"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -18,42 +62,58 @@
 		"day": 16
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム」より、MSVでジオンの白狼“シン・マツナガ専用ザク”がVer.2.0仕様でニューリリース ザクVer.2.0の基礎構造を利用し、絶妙のプロポーションと充実のアクション性を両立 脚部内構造にはMSの進化を垣間見る精密なメカディテールを再現 ザク・マシンガン、ヒート・ホークに加え、弾倉＋試作バズーカ再現用パーツが付属"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam \", MSV Zeon's white wolf \" Shin Matsunaga's Zaku\" is newly released with Ver. 2.0 specifications.Using the basic structure of Zaku Ver. 2.0, it has both exquisite proportions and fulfilling actionability.The internal structure of the legs reproduces precise mechanical details that give a glimpse of the evolution of MS.In addition to the Zaku machine gun and Heat Hawk, a magazine and prototype bazooka reproduction parts are included."
+			"From \"Mobile Suit Gundam\", MSV Zeon's white wolf \"Shin Matsunaga's Zaku\" is newly released with Ver. 2.0 specifications.Using the basic structure of Zaku Ver. 2.0, it has both exquisite proportions and fulfilling actionability.The internal structure of the legs reproduces precise mechanical details that give a glimpse of the evolution of MS.In addition to the Zaku machine gun and Heat Hawk, a magazine and prototype bazooka reproduction parts are included."
 		]
 	},
-	"images": [
-		"/images/items/01_1456/153_2379.jpg",
-		"/images/items/01_1456/155_2379.jpg",
-		"/images/items/01_1456/156_2379.jpg",
-		"/images/items/01_1456/157_2379.jpg",
-		"/images/items/01_1456/158_2379.jpg",
-		"/images/items/01_1456/159_2379.jpg",
-		"/images/items/01_1456/189_2379.jpg",
-		"/images/items/01_1456/190_2379.jpg",
-		"/images/items/01_1456/191_2379.jpg",
-		"/images/items/01_1456/192_2379.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1456/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
-	"manualId": "0836"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2379_s_pxqyre0cgxxloo5acewd9xg4pvmh.jpg",
+				"path": "/images/items/01_1456/153_2379.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2379_s_7h3acqw420layt719e2tybb6bshr.jpg",
+				"path": "/images/items/01_1456/155_2379.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2379_s_vl54odo6n84o23wfuysowlpujskk.jpg",
+				"path": "/images/items/01_1456/156_2379.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2379_s_ba370rdqqfmibwhtzu14utt9pykj.jpg",
+				"path": "/images/items/01_1456/157_2379.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2379_s_y58syus01n6dtxck4h8rt0b8362w.jpg",
+				"path": "/images/items/01_1456/158_2379.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2379_s_mql6g4ivfr7jlh53n37bd0bssa45.jpg",
+				"path": "/images/items/01_1456/159_2379.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2379_s_6avr05zmsb8og5sdpn319qow00bs.jpg",
+				"path": "/images/items/01_1456/189_2379.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2379_s_78fn36w5ledwyu6qqu6m1ltqoc8v.jpg",
+				"path": "/images/items/01_1456/190_2379.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2379_s_51ft0pdqq41aeqnkgvym92rhmty4.jpg",
+				"path": "/images/items/01_1456/191_2379.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2379_s_zqhwlx5kpc0fcetl7oy5njoyzshr.jpg",
+				"path": "/images/items/01_1456/192_2379.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1456/"
 }

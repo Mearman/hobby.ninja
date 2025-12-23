@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 MS-06S ザクII",
 		"en": "MG 1/100 MS-06S Zaku II"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3190,
 		"currency": "JPY",
@@ -17,35 +61,30 @@
 		"month": 11
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム」より、ジオン公国軍のエースパイロット「赤い彗星」こと、「シャア・アズナブル」少佐の専用機のキット化です。rバックパックや足部の大型バーニアは、細密なディティールで再現しました。頭部は、メンテナンスハッチの内部に至るまで再現されており、モノアイも左右へ可動します。ザクの象徴的な武器である120mmマシンガン、ヒートホークの他に、オプション武器として175mmマゼラトップ砲とジオン系モビルスーツには欠かせないシュツルムファウストが2本付いています。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam \", this is a kit version of the Zeon Principality's ace pilot \" Red Comet \", Major \" Char Aznable\". The backpack and large vernier on the feet are reproduced with fine details. The head has been recreated right down to the inside of the maintenance hatch, and the mono-eye can also move left and right. In addition to Zaku's iconic 120mm machine gun, Heat Hawk, it also comes with two optional weapons: a 175mm Magella top cannon, and two Sturmfausts, which are indispensable for Zeon mobile suits."
+			"From \"Mobile Suit Gundam\", this is a kit version of the Zeon Principality's ace pilot \"Red Comet\", Major \"Char Aznable\". The backpack and large vernier on the feet are reproduced with fine details. The head has been recreated right down to the inside of the maintenance hatch, and the mono-eye can also move left and right. In addition to Zaku's iconic 120mm machine gun, Heat Hawk, it also comes with two optional weapons: a 175mm Magella top cannon, and two Sturmfausts, which are indispensable for Zeon mobile suits."
 		]
 	},
-	"images": [
-		"/images/items/01_1548/153_2463.jpg",
-		"/images/items/01_1548/155_2463.jpg",
-		"/images/items/01_1548/156_2463.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1548/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
-	"manualId": "0406"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2463_s_r3ab6ac2sh6xrvaxw86rwmvmfqxs.jpg",
+				"path": "/images/items/01_1548/153_2463.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2463_s_v6xe3s8866bqhxoa50ca68esg6yn.jpg",
+				"path": "/images/items/01_1548/155_2463.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2463_s_lxogeju2uhetrlj2vpnujy2d5btf.jpg",
+				"path": "/images/items/01_1548/156_2463.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1548/"
 }

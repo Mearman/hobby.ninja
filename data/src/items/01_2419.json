@@ -5,6 +5,60 @@
 		"ja": "ＭＧ 1/100 ∀ガンダム／ターンＸ［ナノスキンイメージ］",
 		"en": "MG 1/100 ∀Gundam/Turn X [Nano skin image]"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "turn-a",
+			"url": "https://bandai-hobby.net/series/turn-a/",
+			"ja": "∀ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000099631",
+			"url": "https://p-bandai.jp/item/item-1000099631",
+			"ja": "ＭＧ 1/100 ターンエーガンダム（月光蝶Ver.）"
+		},
+		{
+			"id": "item-1000165581",
+			"url": "https://p-bandai.jp/item/item-1000165581",
+			"ja": "ＭＧ 1/100 ターンエーガンダム用拡張エフェクトユニット “月光蝶”"
+		},
+		{
+			"id": "01_120",
+			"url": "https://bandai-hobby.net/item/01_120/",
+			"ja": "MG 1/100 Concept-X 6-1-2 ターンX"
+		},
+		{
+			"id": "item-1000089610",
+			"url": "https://p-bandai.jp/item/item-1000089610",
+			"ja": "1/144 モビルスモー ゴールドメッキタイプ&シルバーメッキタイプ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 12650,
 		"currency": "JPY",
@@ -17,31 +71,14 @@
 		"month": 8
 	},
 	"targetAge": 15,
-	"scale": "1/100",
-	"images": [
-		"/images/items/01_2419/153_3350.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2419/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000099631",
-		"item-1000165581",
-		"01_120",
-		"item-1000089610"
-	],
-	"manualId": "2744",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3350_o_1dc620vg916eivln150c1pdf15qi23.jpg",
+				"path": "/images/items/01_2419/153_3350.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2419/"
 }

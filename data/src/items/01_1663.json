@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 WD-M01 ターンエーガンダム",
-		"en": "MG 1/100 WD-M01 Turn A Gundam"
+		"en": "MG 1/100 ∀GUNDAM"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "turn-a",
+			"url": "https://bandai-hobby.net/series/turn-a/",
+			"ja": "∀ガンダム",
+			"en": "TURN A GUNDAM"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "item-1000135920",
+			"url": "https://p-bandai.jp/item/item-1000135920",
+			"ja": "ＭＧ 1/100 ∀ガンダム／ターンＸ［ナノスキンイメージ］"
+		},
+		{
+			"id": "item-1000099631",
+			"url": "https://p-bandai.jp/item/item-1000099631",
+			"ja": "ＭＧ 1/100 ターンエーガンダム（月光蝶Ver.）"
+		},
+		{
+			"id": "item-1000165581",
+			"url": "https://p-bandai.jp/item/item-1000165581",
+			"ja": "ＭＧ 1/100 ターンエーガンダム用拡張エフェクトユニット “月光蝶”"
+		},
+		{
+			"id": "01_120",
+			"url": "https://bandai-hobby.net/item/01_120/",
+			"ja": "MG 1/100 Concept-X 6-1-2 ターンX"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4840,
 		"currency": "JPY",
@@ -17,34 +50,45 @@
 		"month": 8
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「∀ガンダム」より、MGシリーズNo.100として“∀ガンダム”登場！ オリジナルデザインを徹底解析し、ターンエーガンダムの立体版解体新書を目指しモデル化 脚部スラスターベーンの構造を再現 胸部ハッチ開閉、胸の十字部パーツは白と青の2種が付属 武器は専用ビーム・ライフル、シールド、ハンマーが付属 1/100スケール「ロラン・セアック」と「牛」のフィギュアも付属 初回出荷分には冊子「ガンプラ∀（ターンエース）」が同梱"
 		],
 		"en": [
-			"From “∀Gundam”, “∀Gundam” appears as MG series No.100! Thoroughly analyzed the original design and created a model aiming to create a three-dimensional version of Turn A Gundam's dismantling book.Reproduces the structure of the leg thruster vane.Two types of chest hatch opening/closing and chest cross parts are included, white and blue.Weapons include a special beam rifle, seal, and hammer.1/100 Scale \"Roland Ceac \" and \" Cow \" figures are also included.The booklet \" Gunpla∀ (Turn Ace)\" is included in the first shipment."
+			"From \"TURN A GUNDAM\", \"TURN A GUNDAM\" appeared as the No.100 of the MG series! Thorough analysis of the original design and modeling with the aim of creating a three-dimensional version of the GUNDAM of the turn-a- Reconstruction of the structure of the leg thruster vane Chest hatch opening and closing, chest cross parts come in two types, white and blue Weapons include a dedicated beam rifle, shield, and hammer 1/100 scaleFigures of \"Roland Seac\" and \"Cow\" are also included, and the booklet \"GUNPLA ∀ (Turn Ace)\" is included in the first shipment."
 		]
 	},
-	"images": [
-		"/images/items/01_1663/1000092325_1.jpg",
-		"/images/items/01_1663/1000092325_2.jpg",
-		"/images/items/01_1663/1000092325_3.jpg",
-		"/images/items/01_1663/1000092325_4.jpg",
-		"/images/items/01_1663/1000092325_5.jpg",
-		"/images/items/01_1663/1000092325_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092325_1.jpg",
+				"path": "/images/items/01_1663/1000092325_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092325_2.jpg",
+				"path": "/images/items/01_1663/1000092325_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092325_3.jpg",
+				"path": "/images/items/01_1663/1000092325_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092325_4.jpg",
+				"path": "/images/items/01_1663/1000092325_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092325_5.jpg",
+				"path": "/images/items/01_1663/1000092325_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092325_6.jpg",
+				"path": "/images/items/01_1663/1000092325_6.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1663/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [],
-	"relatedItemIds": [
-		"item-1000135920",
-		"item-1000099631",
-		"item-1000165581",
-		"01_120"
-	],
-	"manualId": "0550"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1663/"
+	}
 }

@@ -5,6 +5,44 @@
 		"ja": "1/6 シャドウ・ストームトルーパー",
 		"en": "1/6 Shadow Stormtrooper"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3513",
+			"url": "https://bandai-hobby.net/item/01_3513/",
+			"ja": "ビークルモデル レイザー・クレスト"
+		}
+	],
+	"scale": "1/6",
 	"price": {
 		"amount": 7150,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 8
 	},
 	"targetAge": 15,
-	"scale": "1/6",
 	"description": {
 		"ja": [
 			"「スター・ウォーズ」のComic・小説に登場する、漆黒のトルーパーを1/6スケールで立体化！",
@@ -27,66 +64,120 @@
 		],
 		"en": [
 			"The jet-black trooper that appears in \"Star Wars\" comics and novels is made into a 1/6 scale three-dimensional figure!",
-			"• A variety of seals such as a dedicated display, water transfer decal, and marking seal are included.",
-			"• A wide variety of trooper hand parts and weapons are included."
+			"• Comes with various seals such as a dedicated display, water transfer decals, and marking seals.",
+			"• Includes a variety of trooper hand parts and weapons."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ディスプレイベース×1",
-			"E-11ブラスター×1",
-			"DTL-19 ヘビー・ブラスター・ライフル×1",
-			"SE-14r ショートレンジ・コンバット・ピストル×1",
-			"ハンドパーツ×6種（武器持ち手×2・平手×2・右こぶし×1・左指さし×1）"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "E-11ブラスター"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "DTL-19 ヘビー・ブラスター・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "SE-14r ショートレンジ・コンバット・ピストル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ"
+			},
+			"count": 6
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 11
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131700_1.jpg",
+				"path": "/images/items/01_2059/1000131700_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131700_2.jpg",
+				"path": "/images/items/01_2059/1000131700_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131700_3.jpg",
+				"path": "/images/items/01_2059/1000131700_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131700_4.jpg",
+				"path": "/images/items/01_2059/1000131700_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131700_5.jpg",
+				"path": "/images/items/01_2059/1000131700_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131700_6.jpg",
+				"path": "/images/items/01_2059/1000131700_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131700_7.jpg",
+				"path": "/images/items/01_2059/1000131700_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131700_8.jpg",
+				"path": "/images/items/01_2059/1000131700_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131700_9.jpg",
+				"path": "/images/items/01_2059/1000131700_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131700_10.jpg",
+				"path": "/images/items/01_2059/1000131700_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131700_11.jpg",
+				"path": "/images/items/01_2059/1000131700_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131700_12.jpg",
+				"path": "/images/items/01_2059/1000131700_12.jpg"
+			}
 		],
-		"en": [
-			"Display base x 1",
-			"E-11 blaster x 1",
-			"DTL-19 Heavy Blaster Rifle x 1",
-			"SE-14r short range combat pistol x1",
-			"Hand parts x 6 types (weapon holder x 2, open hand x 2, right fist x 1, left pointing x 1)"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×11",
-			"マーキングシール×1",
-			"水転写式デカール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded products x 11",
-			"MarkingSeal×1",
-			"Water transfer decal x 1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2059/1000131700_1.jpg",
-		"/images/items/01_2059/1000131700_10.jpg",
-		"/images/items/01_2059/1000131700_11.jpg",
-		"/images/items/01_2059/1000131700_12.jpg",
-		"/images/items/01_2059/1000131700_2.jpg",
-		"/images/items/01_2059/1000131700_3.jpg",
-		"/images/items/01_2059/1000131700_4.jpg",
-		"/images/items/01_2059/1000131700_5.jpg",
-		"/images/items/01_2059/1000131700_6.jpg",
-		"/images/items/01_2059/1000131700_7.jpg",
-		"/images/items/01_2059/1000131700_8.jpg",
-		"/images/items/01_2059/1000131700_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2059/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3513"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2059/"
 }

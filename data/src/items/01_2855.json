@@ -5,6 +5,49 @@
 		"ja": "RG 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン 正規実用型 2号機（先行量産機）",
 		"en": "RG General Purpose Humanoid Battle Weapon Android Evangelion Regular Practical Type Unit 2 (Advance Mass Production Unit)"
 	},
+	"brands": [
+		{
+			"id": "rg-c",
+			"url": "https://bandai-hobby.net/brand/rg-c/",
+			"ja": "RG［ リアルグレード ］"
+		}
+	],
+	"series": [
+		{
+			"id": "evangelion",
+			"url": "https://bandai-hobby.net/series/evangelion/",
+			"ja": "エヴァンゲリオン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181665",
+			"url": "https://p-bandai.jp/item/item-1000181665/",
+			"ja": "ＲＧ エヴァンゲリオン用武器セット"
+		},
+		{
+			"id": "item-1000171750",
+			"url": "https://p-bandai.jp/item/item-1000171750/",
+			"ja": "ＲＧ 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン４号機"
+		},
+		{
+			"id": "item-1000163344",
+			"url": "https://p-bandai.jp/item/item-1000163344/",
+			"ja": "ＲＧ エヴァンゲリオン専用拘束兼移動式射出台セット"
+		},
+		{
+			"id": "item-1000163343",
+			"url": "https://p-bandai.jp/item/item-1000163343/",
+			"ja": "ＲＧ 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン 初号機（シン・エヴァンゲリオン劇場版）"
+		}
+	],
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -21,13 +64,13 @@
 	"description": {
 		"ja": [
 			"人造人間としてのリアルを追求した「RG エヴァンゲリオンシリーズ」第３弾として、エヴァ２号機が登場！",
-			"■連動する装甲やパーツの干渉なしで実現した広い可動域により、劇中の激しいアクションシーンを再現。",
-			"■膝裏の沈み込む構造が脚部可動時の装甲パーツ同士の干渉を軽減。",
-			"■開脚時には筋肉をイメージした内部パーツが連動し、自然な立ち姿に。",
-			"■頭部も細かいパーツ分割を行い、組み立てるだけでカラー再現が可能。",
-			"■眼パーツは成型色で再現。",
-			"■プログレッシブナイフ（２号機用）は新規造形。サンダースピアは折りたたみギミックを搭載。",
-			"■武装専用のハンドパーツが付属。"
+			"• 連動する装甲やパーツの干渉なしで実現した広い可動域により、劇中の激しいアクションシーンを再現。",
+			"• 膝裏の沈み込む構造が脚部可動時の装甲パーツ同士の干渉を軽減。",
+			"• 開脚時には筋肉をイメージした内部パーツが連動し、自然な立ち姿に。",
+			"• 頭部も細かいパーツ分割を行い、組み立てるだけでカラー再現が可能。",
+			"• 眼パーツは成型色で再現。",
+			"• プログレッシブナイフ（２号機用）は新規造形。サンダースピアは折りたたみギミックを搭載。",
+			"• 武装専用のハンドパーツが付属。"
 		],
 		"en": [
 			"Eva Unit 02 is now available as the third installment of the \"RG Evangelion series\" that pursues the reality of an android!",
@@ -40,66 +83,143 @@
 			"• Hand parts for exclusive use of weapons are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"パレットライフル×1",
-			"サンダースピア×1",
-			"プログレッシブナイフ（2号機用）×2",
-			"アンビリカルケーブル×1",
-			"リアリスティックデカール×1",
-			"ハンドパーツ（左右）×各7種、サンダースピア持ち手（右）×1種",
-			"【付属品】",
-			"パレットライフル×1",
-			"サンダースピア×1",
-			"プログレッシブナイフ（2号機用）×2",
-			"アンビリカルケーブル×1",
-			"リアリスティックデカール×1",
-			"ハンドパーツ（左右）×各7種、サンダースピア持ち手（右）×1種"
+	"accessories": [
+		{
+			"name": {
+				"ja": "パレットライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "サンダースピア"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "プログレッシブナイフ（2号機用）"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "アンビリカルケーブル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ（左右）×各7種、サンダースピア持ち手（右）"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "【付属品】"
+			}
+		},
+		{
+			"name": {
+				"ja": "パレットライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "サンダースピア"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "プログレッシブナイフ（2号機用）"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "アンビリカルケーブル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ（左右）×各7種、サンダースピア持ち手（右）"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "種"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150003_1.jpg",
+				"path": "/images/items/01_2855/1000150003_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150003_2.jpg",
+				"path": "/images/items/01_2855/1000150003_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150003_3.jpg",
+				"path": "/images/items/01_2855/1000150003_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150003_4.jpg",
+				"path": "/images/items/01_2855/1000150003_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150003_5.jpg",
+				"path": "/images/items/01_2855/1000150003_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150003_6.jpg",
+				"path": "/images/items/01_2855/1000150003_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150003_7.jpg",
+				"path": "/images/items/01_2855/1000150003_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150003_8.jpg",
+				"path": "/images/items/01_2855/1000150003_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150003_9.jpg",
+				"path": "/images/items/01_2855/1000150003_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150003_10.jpg",
+				"path": "/images/items/01_2855/1000150003_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150003_11.jpg",
+				"path": "/images/items/01_2855/1000150003_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150003_12.jpg",
+				"path": "/images/items/01_2855/1000150003_12.jpg"
+			}
 		],
-		"en": [
-			"Pallet rifle x 1",
-			"Thunder Spear x1",
-			"Progressive knife (for Unit 2) x 2",
-			"Umbilical cable x 1",
-			"Realistic decal x 1",
-			"Hand parts (left and right) x 7 types each, Thunder Spear handle (right) x 1 type",
-			"[accessories]",
-			"Pallet rifle x 1",
-			"Thunder Spear x1",
-			"Progressive knife (for Unit 2) x 2",
-			"Umbilical cable x 1",
-			"Realistic decal x 1",
-			"Hand parts (left and right) x 7 types each, Thunder Spear handle (right) x 1 type"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2855/1000150003_1.jpg",
-		"/images/items/01_2855/1000150003_10.jpg",
-		"/images/items/01_2855/1000150003_11.jpg",
-		"/images/items/01_2855/1000150003_12.jpg",
-		"/images/items/01_2855/1000150003_2.jpg",
-		"/images/items/01_2855/1000150003_3.jpg",
-		"/images/items/01_2855/1000150003_4.jpg",
-		"/images/items/01_2855/1000150003_5.jpg",
-		"/images/items/01_2855/1000150003_6.jpg",
-		"/images/items/01_2855/1000150003_7.jpg",
-		"/images/items/01_2855/1000150003_8.jpg",
-		"/images/items/01_2855/1000150003_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2855/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"evangelion"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000181665",
-		"item-1000171750",
-		"item-1000163344",
-		"item-1000163343"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2855/"
 }

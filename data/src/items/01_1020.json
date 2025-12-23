@@ -5,6 +5,44 @@
 		"ja": "1/1000 地球連邦主力戦艦ドレッドノート級 ドレッドノート",
 		"en": "1/1000 Earth Federation main battleship Dreadnought class Dreadnought"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "yamato",
+			"url": "https://bandai-hobby.net/series/yamato/",
+			"ja": "宇宙戦艦ヤマトシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5971",
+			"url": "https://bandai-hobby.net/item/01_5971/",
+			"ja": "1/1000 地球防衛軍 ヒュウガ級 戦闘航宙母艦 DCV-01ヒュウガ"
+		},
+		{
+			"id": "01_5498",
+			"url": "https://bandai-hobby.net/item/01_5498/",
+			"ja": "メカコレクションDX 1式空間戦闘攻撃機 コスモタイガーII(単座型/銃座型) [2機セット]"
+		},
+		{
+			"id": "01_5500",
+			"url": "https://bandai-hobby.net/item/01_5500/",
+			"ja": "メカコレクションDX 試製空間戦闘攻撃機 コスモパイソン [2機セット]"
+		},
+		{
+			"id": "01_5388",
+			"url": "https://bandai-hobby.net/item/01_5388/",
+			"ja": "1/1000 宇宙戦艦ヤマト3199（第3次改装型：参戦章叙勲式典記念塗装）"
+		}
+	],
+	"scale": "1/1000",
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 24
 	},
 	"targetAge": 15,
-	"scale": "1/1000",
 	"description": {
 		"ja": [
 			"• 『宇宙戦艦ヤマト2202』の地球艦隊の主力を成す地球連邦主力戦艦ドレッドノートがLEDユニットで輝く仕様で登場!",
@@ -29,68 +66,116 @@
 			"• 別売LED発光ユニット（白）でエンジンとサブエンジンの発光を再現可能。"
 		],
 		"en": [
-			"• The Earth Federation main battleship Dreadnought, which forms the main force of the Earth fleet in \"Space Battleship Yamato 2202\", is now available with a glowing LED unit!",
+			"• The Earth Federation main battleship Dreadnought, which forms the main force of the Earth fleet in \"Space Battleship Yamato 2202,\" is now available with a glowing LED unit!",
 			"• Reproduce precise details.",
 			"• Reproduce the wave motion gun firing with the included LED unit (blue).",
-			"• Can reproduce the bridge light emission with the included LED unit (green).",
-			"• Four newly designed Cosmo Tiger IIs are included.",
-			"• It is possible to reproduce the light emission of the engine and sub-engine with the separately sold LED light emitting unit (white)."
+			"• Bridge lighting can be reproduced with the included LED unit (green).",
+			"• Includes 4 newly designed Cosmo Tiger IIs.",
+			"• Light emission from the engine and sub-engine can be reproduced using the separately sold LED light emitting unit (white)."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用ディスプレイベース×1",
-			"艦載機 コスモタイガーII（三座）×4"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "艦載機 コスモタイガーII（三座）"
+			},
+			"count": 4
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 10
+		},
+		{
+			"name": {
+				"ja": "シール×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "LEDユニット（緑）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "LEDユニット（青）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115586_1.jpg",
+				"path": "/images/items/01_1020/1000115586_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115586_2.jpg",
+				"path": "/images/items/01_1020/1000115586_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115586_3.jpg",
+				"path": "/images/items/01_1020/1000115586_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115586_4.jpg",
+				"path": "/images/items/01_1020/1000115586_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115586_5.jpg",
+				"path": "/images/items/01_1020/1000115586_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115586_6.jpg",
+				"path": "/images/items/01_1020/1000115586_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115586_7.jpg",
+				"path": "/images/items/01_1020/1000115586_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115586_8.jpg",
+				"path": "/images/items/01_1020/1000115586_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115586_9.jpg",
+				"path": "/images/items/01_1020/1000115586_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115586_10.jpg",
+				"path": "/images/items/01_1020/1000115586_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115586_11.jpg",
+				"path": "/images/items/01_1020/1000115586_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000115586_12.jpg",
+				"path": "/images/items/01_1020/1000115586_12.jpg"
+			}
 		],
-		"en": [
-			"Dedicated display base x 1",
-			"Carrier-based aircraft Cosmo Tiger II (three seats) x 4"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×10",
-			"シール×１",
-			"水転写式デカール×1",
-			"LEDユニット（緑）×1",
-			"LEDユニット（青）×1",
-			"取扱説明書"
-		],
-		"en": [
-			"Molded product x 10",
-			"Seal×1",
-			"Water transfer decal x 1",
-			"LED unit (green) x 1",
-			"LED unit (blue) x 1",
-			"Handling manual"
-		]
-	},
-	"images": [
-		"/images/items/01_1020/1000115586_1.jpg",
-		"/images/items/01_1020/1000115586_10.jpg",
-		"/images/items/01_1020/1000115586_11.jpg",
-		"/images/items/01_1020/1000115586_12.jpg",
-		"/images/items/01_1020/1000115586_2.jpg",
-		"/images/items/01_1020/1000115586_3.jpg",
-		"/images/items/01_1020/1000115586_4.jpg",
-		"/images/items/01_1020/1000115586_5.jpg",
-		"/images/items/01_1020/1000115586_6.jpg",
-		"/images/items/01_1020/1000115586_7.jpg",
-		"/images/items/01_1020/1000115586_8.jpg",
-		"/images/items/01_1020/1000115586_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1020/",
-	"brandIds": [],
-	"seriesIds": [
-		"yamato"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5971",
-		"01_5498",
-		"01_5500",
-		"01_5388"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1020/"
 }

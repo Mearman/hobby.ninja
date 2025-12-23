@@ -5,6 +5,49 @@
 		"ja": "HG ジプシー・アベンジャー",
 		"en": "HG Gypsy Avenger"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "pacificrim",
+			"url": "https://bandai-hobby.net/series/pacificrim/",
+			"ja": "パシフィック・リム"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2083",
+			"url": "https://bandai-hobby.net/item/01_2083/",
+			"ja": "HG ジプシー・アベンジャー（最終決戦仕様）"
+		},
+		{
+			"id": "01_1271",
+			"url": "https://bandai-hobby.net/item/01_1271/",
+			"ja": "HG ブレーサー・フェニックス"
+		},
+		{
+			"id": "01_1272",
+			"url": "https://bandai-hobby.net/item/01_1272/",
+			"ja": "HG ジプシー・アベンジャー DXセット"
+		},
+		{
+			"id": "01_1273",
+			"url": "https://bandai-hobby.net/item/01_1273/",
+			"ja": "HG オブシディアン・フューリー"
+		}
+	],
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -30,58 +73,96 @@
 			"Clear pearls are used for the chest, and by using an LED unit (sold separately), it can be made to emit light just like in the movie!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"グラビティスリング発射形態再現用パーツ×1",
-			"プラズマキャスター発射形態再現用パーツ×1",
-			"チェーンソード2.0装備状態再現用パーツ×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "グラビティスリング発射形態再現用パーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "プラズマキャスター発射形態再現用パーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "チェーンソード2.0装備状態再現用パーツ"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2201_s_ujmwjhfbqynw0hnqoij906t4n8f8.jpg",
+				"path": "/images/items/01_1270/153_2201.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2201_s_yzj88c1figdow569bh9fwrwtw09r.jpg",
+				"path": "/images/items/01_1270/155_2201.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2201_s_gw8iglff9ftqdq0tjtjypnzevu57.jpg",
+				"path": "/images/items/01_1270/156_2201.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2201_s_pdfhxm5mq7a9x3x6uqeg0yc4k9qn.jpg",
+				"path": "/images/items/01_1270/157_2201.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2201_s_j4ioj1i5chbwxan0gb3nhc3eq49f.jpg",
+				"path": "/images/items/01_1270/158_2201.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2201_s_2c9blyd4ktc13of8azysvwunfbx3.jpg",
+				"path": "/images/items/01_1270/159_2201.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2201_s_mo9rwzgluw84tx9qjwuuwprvzmwb.jpg",
+				"path": "/images/items/01_1270/189_2201.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2201_s_fcm1raqyecvq4wb5zrt0g1iz3f9x.jpg",
+				"path": "/images/items/01_1270/190_2201.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2201_s_5ik5r3ptk67chn801zg14wjd6uqx.jpg",
+				"path": "/images/items/01_1270/191_2201.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_2201_s_tewzgkfrd123gjwac1cj3go2ufgj.jpg",
+				"path": "/images/items/01_1270/192_2201.jpg"
+			}
 		],
-		"en": [
-			"Gravity sling firing form reproduction parts x 1",
-			"Plasma caster firing form reproduction parts x 1",
-			"Chainsword 2.0 equipment state reproduction parts x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"マーキングシール×1",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 4",
-			"MarkingSeal×1",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1270/153_2201.jpg",
-		"/images/items/01_1270/155_2201.jpg",
-		"/images/items/01_1270/156_2201.jpg",
-		"/images/items/01_1270/157_2201.jpg",
-		"/images/items/01_1270/158_2201.jpg",
-		"/images/items/01_1270/159_2201.jpg",
-		"/images/items/01_1270/189_2201.jpg",
-		"/images/items/01_1270/190_2201.jpg",
-		"/images/items/01_1270/191_2201.jpg",
-		"/images/items/01_1270/192_2201.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1270/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"pacificrim"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2083",
-		"01_1271",
-		"01_1272",
-		"01_1273"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1270/"
 }

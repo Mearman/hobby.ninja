@@ -5,6 +5,44 @@
 		"ja": "SDクロスシルエット 真ゲッター",
 		"en": "SD Cross Silhouette Shin Getter"
 	},
+	"brands": [
+		{
+			"id": "sdcs-c",
+			"url": "https://bandai-hobby.net/brand/sdcs-c/",
+			"ja": "SDクロスシルエット"
+		}
+	],
+	"series": [
+		{
+			"id": "dynamic_characters",
+			"url": "https://bandai-hobby.net/series/dynamic_characters/",
+			"ja": "ダイナミックキャラクターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2257",
+			"url": "https://bandai-hobby.net/item/01_2257/",
+			"ja": "SDクロスシルエット マジンカイザー"
+		},
+		{
+			"id": "01_2051",
+			"url": "https://bandai-hobby.net/item/01_2051/",
+			"ja": "SDクロスシルエット マジンガーZ"
+		},
+		{
+			"id": "01_2052",
+			"url": "https://bandai-hobby.net/item/01_2052/",
+			"ja": "SDクロスシルエット グレートマジンガー"
+		}
+	],
 	"price": {
 		"amount": 1870,
 		"currency": "JPY",
@@ -26,63 +64,111 @@
 		],
 		"en": [
 			"From the High Target Robo SDCS series, \"Shin Getter\" is now three-dimensional!",
-			"• High Target Robo The largest weapon size in SDCS history allows for impressive displays.",
-			"• Getter Tomahawk and Getter Battle Wing are included."
+			"• The largest weapon size in High Target Robo SDCS history allows for an impressive display.",
+			"• Getter Tomahawk and Getter Battle Wings are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ゲッター・トマホーク×1",
-			"ゲッターバトルウイング×1",
-			"表情手×1セット"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ゲッター・トマホーク"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ゲッターバトルウイング"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "表情手"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "セット"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 8
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000136475_1.jpg",
+				"path": "/images/items/01_2258/1000136475_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000136475_2.jpg",
+				"path": "/images/items/01_2258/1000136475_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000136475_3.jpg",
+				"path": "/images/items/01_2258/1000136475_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000136475_4.jpg",
+				"path": "/images/items/01_2258/1000136475_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000136475_5.jpg",
+				"path": "/images/items/01_2258/1000136475_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000136475_6.jpg",
+				"path": "/images/items/01_2258/1000136475_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000136475_7.jpg",
+				"path": "/images/items/01_2258/1000136475_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000136475_8.jpg",
+				"path": "/images/items/01_2258/1000136475_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000136475_9.jpg",
+				"path": "/images/items/01_2258/1000136475_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000136475_10.jpg",
+				"path": "/images/items/01_2258/1000136475_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000136475_11.jpg",
+				"path": "/images/items/01_2258/1000136475_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000136475_12.jpg",
+				"path": "/images/items/01_2258/1000136475_12.jpg"
+			}
 		],
-		"en": [
-			"Getter Tomahawk x1",
-			"Getter Battle Wing x1",
-			"Expression hands x 1 set"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×8",
-			"シール×1",
-			"マーキングシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 8",
-			"Seal×1",
-			"MarkingSeal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2258/1000136475_1.jpg",
-		"/images/items/01_2258/1000136475_10.jpg",
-		"/images/items/01_2258/1000136475_11.jpg",
-		"/images/items/01_2258/1000136475_12.jpg",
-		"/images/items/01_2258/1000136475_2.jpg",
-		"/images/items/01_2258/1000136475_3.jpg",
-		"/images/items/01_2258/1000136475_4.jpg",
-		"/images/items/01_2258/1000136475_5.jpg",
-		"/images/items/01_2258/1000136475_6.jpg",
-		"/images/items/01_2258/1000136475_7.jpg",
-		"/images/items/01_2258/1000136475_8.jpg",
-		"/images/items/01_2258/1000136475_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2258/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"dynamic_characters"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2257",
-		"01_2051",
-		"01_2052"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2258/"
 }

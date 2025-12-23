@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 指揮官機用オプションアーマー[ラビオット用/ホワイト]",
 		"en": "30MM 1/144 Optional armor for commander aircraft [for Rabiot/White]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,12 +61,11 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMのラビオット用オプションアーマーシリーズに人気のホワイトカラーが登場！",
-			"■アーマー一式とシールドのセット。",
-			"■新ロイロイが付属。"
+			"• アーマー一式とシールドのセット。",
+			"• 新ロイロイが付属。"
 		],
 		"en": [
 			"The popular white color is now available in the 30MM optional armor series for Rabiot!",
@@ -31,38 +73,53 @@
 			"• New Loi Loi included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"アーマー×1式",
-			"シールド×1",
-			"ロイロイ×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "アーマー"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ロイロイ"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3942_s_sbpw2uqn5l0at0l8ak0bz1sfko8w.jpg",
+				"path": "/images/items/01_2968/153_3942.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3942_s_x647wye2iuhl6eyipdsj95fvzdem.jpg",
+				"path": "/images/items/01_2968/155_3942.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3942_s_xzm0t0cewbl3q96aya4xisxn6cjf.jpg",
+				"path": "/images/items/01_2968/156_3942.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3942_s_lxqmewvia2he06jshk8t88tzxb56.jpg",
+				"path": "/images/items/01_2968/157_3942.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3942_s_otnr1utrklnh79877htoti8irhg0.jpg",
+				"path": "/images/items/01_2968/158_3942.jpg"
+			}
 		],
-		"en": [
-			"Armor x 1 set",
-			"Seal × 1",
-			"Loi Loi x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2968/153_3942.jpg",
-		"/images/items/01_2968/155_3942.jpg",
-		"/images/items/01_2968/156_3942.jpg",
-		"/images/items/01_2968/157_3942.jpg",
-		"/images/items/01_2968/158_3942.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2968/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
-	"manualId": "3701"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2968/"
 }

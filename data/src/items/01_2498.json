@@ -5,6 +5,16 @@
 		"ja": "LEDユニット (白) 12灯式",
 		"en": "LED unit (white) 12 lights type"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "item_all",
+			"url": "https://bandai-hobby.net/item_all",
+			"ja": "商品一覧"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 6050,
 		"currency": "JPY",
@@ -32,16 +42,22 @@
 			"• Uses 3 AAA batteries."
 		]
 	},
-	"images": [
-		"/images/items/01_2498/153_3424.jpg",
-		"/images/items/01_2498/155_3424.jpg",
-		"/images/items/01_2498/156_3424.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2498/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
-	"relatedItemIds": []
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3424_s_lahhvjc0b77yscjjea5n8a6l1xbs.jpg",
+				"path": "/images/items/01_2498/153_3424.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3424_s_cb08jjzdo629sikvqw66l5zj7oxe.jpg",
+				"path": "/images/items/01_2498/155_3424.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3424_s_688v6a4bzyyl834017sn89a9ng7k.jpg",
+				"path": "/images/items/01_2498/156_3424.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2498/"
 }

@@ -5,6 +5,50 @@
 		"ja": "HGUC 1/144 ブルーディスティニー3号機“EXAM”",
 		"en": "HGUC 1/144 Blue Destiny Unit 3 “EXAM”"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 17
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 1号機、2号機に引き続き「ブルーディスティニー3号機」がHG最新フォーマットで登場！",
@@ -26,70 +69,115 @@
 			"• 3号機特有の陸戦型シールドが新規造形で再現されているほか、月刊ガンダムエースにて連載中の「機動戦士ガンダム外伝 ザ・ブルーディスティニー」でジム・ドミナンスが使用する「二連ビーム・ライフル」が付属！"
 		],
 		"en": [
-			"• Following Units 1 and 2, \"Blue Destiny Unit 3\" is now available in the latest HG format!",
-			"• The \"EXAM system activation state\" can be selectively recreated, and the wide range of motion allows for posing exactly as it appears in the play!",
-			"• In addition to the ground battle type Seal that is unique to Unit 3, it is reproduced with a new model, and the \"double beam rifle \" used by Jim Dominance in \" Mobile Suit Gundam Gaiden: The Blue Destiny\" currently being serialized in Gundam Ace is also included!"
+			"• Following on from Units 1 and 2, \"Blue Destiny Unit 3\" is now available in the latest HG format!",
+			"• \"EXAM system activation state\" can be selectively recreated, and the wide range of motion allows for posing exactly as it appears in the play!",
+			"• In addition to the ground battle type Seal that is unique to Unit 3, it is reproduced with a new model, and the \"Double Beam Rifle\" used by Jim Dominance in \"Mobile Suit Gundam Gaiden: The Blue Destiny\" currently being serialized in Gundam Ace is also included!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"シールド×1",
-			"ビーム・サーベルｘ2",
-			"ビーム・ライフル×1",
-			"二連ビーム・ライフル×1",
-			"宇宙用バックパック×1",
-			"100ｍｍマシンガン×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビーム・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "二連ビーム・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "宇宙用バックパック"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "100ｍｍマシンガン"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 9
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2205_s_f16784f84vql11dyte58q02wh78l.jpg",
+				"path": "/images/items/01_1274/153_2205.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2205_s_spqlhpt6rll8ysj9dbc4jpptq67k.jpg",
+				"path": "/images/items/01_1274/155_2205.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2205_s_clbzwkbeqt7bgmnpcy5019czkxtt.jpg",
+				"path": "/images/items/01_1274/156_2205.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2205_s_9ixm65y95aaiyzktt850plxb1w5t.jpg",
+				"path": "/images/items/01_1274/157_2205.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2205_s_5wmpk2pvq3hdxey04tkh1hes429o.jpg",
+				"path": "/images/items/01_1274/158_2205.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2205_s_00j15rln0uw97nfxfhmqlntn5a3t.jpg",
+				"path": "/images/items/01_1274/159_2205.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2205_s_ogmuekohrncdli6mx24y99exew9c.jpg",
+				"path": "/images/items/01_1274/189_2205.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2205_s_5thhapus5wyu99sv4ae052hrsiv9.jpg",
+				"path": "/images/items/01_1274/190_2205.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2205_s_vu0wg8nnrkf12fy32lc6pdwlpzt2.jpg",
+				"path": "/images/items/01_1274/191_2205.jpg"
+			}
 		],
-		"en": [
-			"Seal × 1",
-			"Beam saber x2",
-			"Beam rifle x1",
-			"Double beam rifle x 1",
-			"Space backpack x 1",
-			"100mm machine gun x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×9",
-			"マーキングシール×1",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 9",
-			"MarkingSeal×1",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1274/153_2205.jpg",
-		"/images/items/01_1274/155_2205.jpg",
-		"/images/items/01_1274/156_2205.jpg",
-		"/images/items/01_1274/157_2205.jpg",
-		"/images/items/01_1274/158_2205.jpg",
-		"/images/items/01_1274/159_2205.jpg",
-		"/images/items/01_1274/189_2205.jpg",
-		"/images/items/01_1274/190_2205.jpg",
-		"/images/items/01_1274/191_2205.jpg",
-		"/images/items/01_1274/01_1274_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1274/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
-	"manualId": "0476"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1274/"
 }

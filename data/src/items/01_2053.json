@@ -5,6 +5,44 @@
 		"ja": "Figure-rise Mechanics ブルマの可変式No.19バイク",
 		"en": "Figure-rise Mechanics Bulma's Variable No.19 Bike"
 	},
+	"brands": [
+		{
+			"id": "figurerise-mechanics",
+			"url": "https://bandai-hobby.net/brand/figurerise-mechanics/",
+			"ja": "Figure-rise Mechanics[フィギュアライズメカニクス]"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1044",
+			"url": "https://bandai-hobby.net/item/01_1044/",
+			"ja": "Figure-rise Mechanics トランクスのタイムマシン"
+		},
+		{
+			"id": "01_775",
+			"url": "https://bandai-hobby.net/item/01_775/",
+			"ja": "Figure-rise Mechanics フリーザの小型ポッド"
+		},
+		{
+			"id": "01_720",
+			"url": "https://bandai-hobby.net/item/01_720/",
+			"ja": "Figure-rise Mechanics サイヤ人の宇宙船ポッド"
+		}
+	],
 	"price": {
 		"amount": 5280,
 		"currency": "JPY",
@@ -26,69 +64,125 @@
 		],
 		"en": [
 			"Bulma's bike that appeared in the cover art of the manga \"Dragon Ball\" is now three-dimensional!",
-			"• Variable from the basic \"bike mode \" that runs at high speed, to the \" bipedal mode \" that walks on two legs, and the three-wheeled \" trike mode\" that allows you to run powerfully through unstable wilderness!",
-			"• In addition to reproducing the precise details of the mechanism, it is also equipped with 7 “mecha mysterious” gimmicks!"
+			"• Changeable from the basic \"bike mode\" that runs at high speed, to the \"bipedal mode\" that walks on two legs, and the three-wheeled \"trike mode\" that allows you to run powerfully through unstable wilderness!",
+			"• In addition to reproducing the precise details of the mechanism, it is also equipped with 7 “mysterious mechanical” gimmicks!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"バイク×1",
-			"ブルマ×1",
-			"ブルマ腕部、脚部差替えパーツ一式(バイク用、バイペダル用、トライク用)",
-			"バイペダル・トライク用アームパーツ×2",
-			"ディスプレイ台座×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "バイク"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ブルマ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ブルマ腕部、脚部差替えパーツ一式(バイク用、バイペダル用、トライク用)"
+			}
+		},
+		{
+			"name": {
+				"ja": "バイペダル・トライク用アームパーツ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 16
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "スプリング"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131688_1.jpg",
+				"path": "/images/items/01_2053/1000131688_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131688_2.jpg",
+				"path": "/images/items/01_2053/1000131688_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131688_3.jpg",
+				"path": "/images/items/01_2053/1000131688_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131688_4.jpg",
+				"path": "/images/items/01_2053/1000131688_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131688_5.jpg",
+				"path": "/images/items/01_2053/1000131688_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131688_6.jpg",
+				"path": "/images/items/01_2053/1000131688_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131688_7.jpg",
+				"path": "/images/items/01_2053/1000131688_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131688_8.jpg",
+				"path": "/images/items/01_2053/1000131688_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131688_9.jpg",
+				"path": "/images/items/01_2053/1000131688_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131688_10.jpg",
+				"path": "/images/items/01_2053/1000131688_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131688_11.jpg",
+				"path": "/images/items/01_2053/1000131688_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131688_12.jpg",
+				"path": "/images/items/01_2053/1000131688_12.jpg"
+			}
 		],
-		"en": [
-			"Bike x 1",
-			"Bloomers x 1",
-			"Bloomer arm and leg replacement parts set (for motorcycles, bipedal, trike)",
-			"Arm parts for bipedal trike x 2",
-			"Display pedestal x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×16",
-			"ホイルシール×1",
-			"水転写式デカール×1",
-			"スプリング×2",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 16",
-			"Foil Seal×1",
-			"Water transfer decal x 1",
-			"Spring x 2",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2053/1000131688_1.jpg",
-		"/images/items/01_2053/1000131688_10.jpg",
-		"/images/items/01_2053/1000131688_11.jpg",
-		"/images/items/01_2053/1000131688_12.jpg",
-		"/images/items/01_2053/1000131688_2.jpg",
-		"/images/items/01_2053/1000131688_3.jpg",
-		"/images/items/01_2053/1000131688_4.jpg",
-		"/images/items/01_2053/1000131688_5.jpg",
-		"/images/items/01_2053/1000131688_6.jpg",
-		"/images/items/01_2053/1000131688_7.jpg",
-		"/images/items/01_2053/1000131688_8.jpg",
-		"/images/items/01_2053/1000131688_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2053/",
-	"brandIds": [
-		"figurerise-mechanics"
-	],
-	"seriesIds": [
-		"dragonball"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1044",
-		"01_775",
-		"01_720"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2053/"
 }

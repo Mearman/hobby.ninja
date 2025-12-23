@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 サタニクス ウェポンズ",
 		"en": "HGBD:R 1/144 Satanics Weapons"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -18,12 +62,11 @@
 		"day": 30
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"2020年4月9日より配信予定の『ガンダムビルドダイバーズRe:RISE』2nd Seasonより主人公機の新しい外装ウェポンが登場！",
 			"• 今度の武装は「ドリル」。",
-			"• コアドッキングカスタム対応で、別売りのコアガンダム IIに装着可能。"
+			"• コアドッキングカスタム対応で、別売りのコアガンダムIIに装着可能。"
 		],
 		"en": [
 			"A new exterior weapon for the main character's machine will be released from the 2nd Season of \"Gundam Build Divers Re:RISE\" scheduled to be distributed from 202049!",
@@ -31,40 +74,50 @@
 			"• Supports core docking customization and can be attached to Core Gundam II (sold separately)."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"クローユニット×1",
-			"ドリルユニット×1",
-			"連結用ジョイント×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "クローユニット"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ドリルユニット"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "連結用ジョイント"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3777_s_whn8zw929pyeyqlvsci0po0nwlc9.jpg",
+				"path": "/images/items/01_2790/153_3777.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3777_s_zd66rexinhx1ez3zyouhf26b8wtu.jpg",
+				"path": "/images/items/01_2790/155_3777.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3777_s_t5fei6iqnegxofk25x9hifqwho8n.jpg",
+				"path": "/images/items/01_2790/156_3777.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3777_s_864mcg3khkfzfk4lafa7vampvst7.jpg",
+				"path": "/images/items/01_2790/157_3777.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3777_s_ns27qo9yc30ktk4isx2prop85hu5.jpg",
+				"path": "/images/items/01_2790/158_3777.jpg"
+			}
 		],
-		"en": [
-			"Claw unit x 1",
-			"Drill unit x 1",
-			"Connection joint x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2790/153_3777.jpg",
-		"/images/items/01_2790/155_3777.jpg",
-		"/images/items/01_2790/156_3777.jpg",
-		"/images/items/01_2790/157_3777.jpg",
-		"/images/items/01_2790/158_3777.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2790/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0110"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2790/"
 }

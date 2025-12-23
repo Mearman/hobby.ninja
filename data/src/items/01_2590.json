@@ -2,9 +2,31 @@
 	"id": "01_2590",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット アースリィガンダム",
-		"en": "SD Gundam Cross Silhouette Earthly Gundam"
+		"ja": "SDガンダム クロスシルエット アースリィガンダム",
+		"en": "SDGundam Cross Silhouette Earthly Gundam"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -26,42 +48,70 @@
 		],
 		"en": [
 			"The main character Earthly Gundam from \"Build Divers Re:RISE\" is now available in the SDCS series, where the fun can be expanded through combinations!",
-			"• Reproduce the coloring by dividing the parts.",
+			"• Reproduce coloring by separating parts.",
 			"• The core Gundam form and frame replacement are also reproduced by rearranging."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ライフル×1",
-			"シールド×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3513_s_2040qw0337daoe2b1tp61l0hfd3u.jpg",
+				"path": "/images/items/01_2590/153_3513.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3513_s_yyup47lfijvmofnl1kk1u7v33jzz.jpg",
+				"path": "/images/items/01_2590/155_3513.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3513_s_bzt5vl62o7viqbjg38gjxsi11u37.jpg",
+				"path": "/images/items/01_2590/156_3513.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3513_s_arxvrry0tkdjkv97yz970e7ndlsn.jpg",
+				"path": "/images/items/01_2590/157_3513.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3513_s_vjf4504kb04458etqjaf608tnxo1.jpg",
+				"path": "/images/items/01_2590/158_3513.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3513_s_dbvrf22szq5tdulkck57x05b2ddx.jpg",
+				"path": "/images/items/01_2590/159_3513.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3513_s_42mczim8kojtvtraa2jxvywp63vw.jpg",
+				"path": "/images/items/01_2590/189_3513.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3513_s_d2tj74roz056bkcpkayu5fqy7wci.jpg",
+				"path": "/images/items/01_2590/190_3513.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3513_s_mx46764qbqw90ltuj9bqz3u60525.jpg",
+				"path": "/images/items/01_2590/191_3513.jpg"
+			}
 		],
-		"en": [
-			"Rifle x 1",
-			"Seal × 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2590/153_3513.jpg",
-		"/images/items/01_2590/155_3513.jpg",
-		"/images/items/01_2590/156_3513.jpg",
-		"/images/items/01_2590/157_3513.jpg",
-		"/images/items/01_2590/158_3513.jpg",
-		"/images/items/01_2590/159_3513.jpg",
-		"/images/items/01_2590/189_3513.jpg",
-		"/images/items/01_2590/190_3513.jpg",
-		"/images/items/01_2590/191_3513.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2590/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_2590/"
 }

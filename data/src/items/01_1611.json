@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 YMS-15 ギャン",
 		"en": "HGUC 1/144 YMS-15 Gyan"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -17,7 +66,6 @@
 		"month": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、1/144スケールでHGUC ギャンが登場。",
@@ -28,28 +76,26 @@
 			"A three-dimensional version of Gyan, with its unique missile seal and slender body that stands out among the Zeon military mobile suits. The holding posture of the beam saber seen in the battle scenes in the movie has been faithfully recreated with action parts for the gripping hand and movable joints. Missile Seal comes with a gimmick that can be attached to the arm. Comes with 4 beam sabers and hide pumps made of clear parts."
 		]
 	},
-	"images": [
-		"/images/items/01_1611/153_2523.jpg",
-		"/images/items/01_1611/155_2523.jpg",
-		"/images/items/01_1611/156_2523.jpg",
-		"/images/items/01_1611/157_2523.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1611/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
-	"manualId": "0202"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/157_2523_s_r5218h7naoyaiv1ppksde3dhm44g.jpg",
+				"path": "/images/items/01_1611/157_2523.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_2523_s_nh5mal3umzg95ztn4jic5jsbm7ez.jpg",
+				"path": "/images/items/01_1611/153_2523.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2523_s_ityvnhlnfyq5tk2xkmwp8jz0jtxa.jpg",
+				"path": "/images/items/01_1611/155_2523.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2523_s_pkqlhmsmippw4lra4i6opxj457ew.jpg",
+				"path": "/images/items/01_1611/156_2523.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1611/"
 }

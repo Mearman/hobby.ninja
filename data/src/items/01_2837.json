@@ -5,6 +5,60 @@
 		"ja": "ＨＧ 1/144 デスビースト",
 		"en": "HG 1/144 Death Beast"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "ggundam",
+			"url": "https://bandai-hobby.net/series/ggundam/",
+			"ja": "機動武闘伝Ｇガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000213247",
+			"url": "https://p-bandai.jp/item/item-1000213247/",
+			"ja": "ＨＧ 1/144 ドラゴンガンダム"
+		},
+		{
+			"id": "item-1000194970",
+			"url": "https://p-bandai.jp/item/item-1000194970/",
+			"ja": "ＨＧ 1/144 ガンダムマックスター"
+		},
+		{
+			"id": "item-1000182906",
+			"url": "https://p-bandai.jp/item/item-1000182906/",
+			"ja": "ＨＧ 1/144 ガンダムローズ"
+		},
+		{
+			"id": "item-1000177309",
+			"url": "https://p-bandai.jp/item/item-1000177309/",
+			"ja": "ＲＧ 1/144 ゴッドガンダム用 拡張セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2475,
 		"currency": "JPY",
@@ -16,7 +70,6 @@
 		"year": 2020,
 		"month": 7
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－",
@@ -58,7 +111,7 @@
 			"An army of limbs approaches -",
 			"Death beast appears",
 			"－－－－－－－－－－－－－－－－－－－－",
-			"From \"Mobile Fighter G Gundam \", Death Army's variation machine \" Death Beast\" is now available in the HG series!",
+			"From \"Mobile Fighter GGundam\", Death Army's variation machine \"Death Beast\" is now available in the HG series!",
 			"The characteristic quadrupeds are reproduced with new parts. A connection joint that mounts the legs of the folded Death Army on the back.",
 			"Optional parts are available to reproduce the flight form, and the unique styling is completely reproduced. Also included is a death rifle and a new left hand part with facial expressions.",
 			"● Reproduce the Death Beast's distinctive silhouette with new parts",
@@ -89,38 +142,50 @@
 			"- Product specifications are scheduled as of 20204. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2837/153_3820.jpg",
-		"/images/items/01_2837/155_3820.jpg",
-		"/images/items/01_2837/156_3820.jpg",
-		"/images/items/01_2837/157_3820.jpg",
-		"/images/items/01_2837/158_3820.jpg",
-		"/images/items/01_2837/159_3820.jpg",
-		"/images/items/01_2837/189_3820.jpg",
-		"/images/items/01_2837/190_3820.jpg",
-		"/images/items/01_2837/191_3820.jpg",
-		"/images/items/01_2837/192_3820.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2837/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"ggundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000213247",
-		"item-1000194970",
-		"item-1000182906",
-		"item-1000177309"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3820_s_o42rtyzqthpcbimioevubibt6ijr.jpg",
+				"path": "/images/items/01_2837/153_3820.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3820_s_sptm3wido0cekrsjza9myj6f5a4e.jpg",
+				"path": "/images/items/01_2837/155_3820.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3820_s_t2qmzu0fo7121olonsvtiktvrb9a.jpg",
+				"path": "/images/items/01_2837/156_3820.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3820_s_6a0k5fta9kubfwej9ofljlxdwano.jpg",
+				"path": "/images/items/01_2837/157_3820.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3820_s_3c6elnc3erq3u28kf2469af2tzop.jpg",
+				"path": "/images/items/01_2837/158_3820.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3820_s_rlw09w03d34l9vbyq8kpy9r7sb14.jpg",
+				"path": "/images/items/01_2837/159_3820.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3820_s_ccd5qohwvysbogdup4ndvam26t67.jpg",
+				"path": "/images/items/01_2837/189_3820.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3820_s_j100guo715ormo54jv2ho0y6ztzk.jpg",
+				"path": "/images/items/01_2837/190_3820.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3820_s_mrwz633ys18ysu2u7wguekzqjuac.jpg",
+				"path": "/images/items/01_2837/191_3820.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3820_s_zcfwcfijx68xdc2l8f7iru1owdki.jpg",
+				"path": "/images/items/01_2837/192_3820.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2837/"
 }

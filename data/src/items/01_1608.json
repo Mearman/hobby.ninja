@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 MS-05B ザクI",
 		"en": "MG 1/100 MS-05B Zaku I"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 5
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム」より、ショルダータックルのダイナミックな印象のザクIを、MSVでキット化しました。頭部のモノアイは、左右に可動。メンテナンスハッチも開閉し、内部のメカディディールまで細密に再現されています。身を守る事はもちろん、格闘戦にも使用できるスパイクシールドを装備しています。ザクマシンガン、105mm マシンガン、ヒートホーク、ザクバズーカと豊富な武器が付いています。"
@@ -26,27 +69,26 @@
 			"From \"Mobile Suit Gundam\", the Zaku I, which has a dynamic impression of a shoulder tackle, has been made into a kit with MSV. The mono-eye on the head can move left and right. The maintenance hatch can also be opened and closed, and even the internal mechanism has been reproduced in detail. Equipped with a spiked seal that can be used not only for self-defense, but also for melee combat. Comes with a variety of weapons including a Zaku machine gun, 105mm machine gun, Heat Hawk, and Zaku bazooka."
 		]
 	},
-	"images": [
-		"/images/items/01_1608/153_2520.jpg",
-		"/images/items/01_1608/155_2520.jpg",
-		"/images/items/01_1608/156_2520.jpg",
-		"/images/items/01_1608/157_2520.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1608/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
-	"manualId": "0864"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2520_s_bjxfotv7e3ppi3cn4xdzokuaweqg.jpg",
+				"path": "/images/items/01_1608/153_2520.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2520_s_9eljgi86zz9s8myhf6szpbe3ggf5.jpg",
+				"path": "/images/items/01_1608/155_2520.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2520_s_pey965sji9mokja4cyn3llaf5w3w.jpg",
+				"path": "/images/items/01_1608/156_2520.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2520_s_9n12k9s2i9qhdmxrdwaswf9qpbps.jpg",
+				"path": "/images/items/01_1608/157_2520.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1608/"
 }

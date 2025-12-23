@@ -5,6 +5,29 @@
 		"ja": "ハイレゾリューションモデル 1/100 ガンダムアストレイ ノワール",
 		"en": "High resolution Model 1/100 Gundam Astray Noir"
 	},
+	"brands": [
+		{
+			"id": "hirm",
+			"url": "https://bandai-hobby.net/brand/hirm/",
+			"ja": "Hi-Resolution Model[ハイレゾリューションモデル]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/100",
 	"price": {
 		"amount": 17600,
 		"currency": "JPY",
@@ -18,67 +41,108 @@
 		"day": 29
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"電撃ホビーマガジンに連載された『機動戦士ガンダム SEED DESTINY ASTRAY B』より、ガンダムアストレイ ノワールがハイレゾリューションモデルで登場！",
+			"電撃ホビーマガジンに連載された『機動戦士ガンダムSEED DESTINY ASTRAY B』より、ガンダムアストレイ ノワールがハイレゾリューションモデルで登場！",
 			"• ノワールストライカーは尾翼の取り付け基部が回転し、飛行状態を再現。",
 			"• ノワールストライカーの主翼に装備されたリニアキャノンは展開が可能。ビームブレイドは着脱が可能。",
 			"• 新規造形のソードピストルの刀はシボ＋メッキ加工で刃紋を再現。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam SEED DESTINY ASTRAY B\" serialized in Dengeki Hobby Magazine, Gundam Astray Noir is now available as a high resolution model!",
-			"• Noir Striker's tail attachment base rotates, reproducing the flight condition.",
-			"• The linear cannon installed on the main wing of Noir Striker can be deployed. Beam blade is removable.",
-			"• The newly shaped sword pistol sword reproduces the blade pattern with grain + plating."
+			"From \"Mobile Suit GundamSEED DESTINY ASTRAY B\" serialized in Dengeki Hobby Magazine, Gundam Astray Noir is now available as a high resolution model!",
+			"• Noir Striker's tail attachment base rotates, reproducing flight conditions.",
+			"• The linear cannon installed on Noir Striker's main wing can be deployed. Beam blade is removable.",
+			"• The newly shaped sword pistol sword reproduces the blade pattern with grain and plating."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ソードピストル×2",
-			"ノワールストライカー×1(ビームブレイド×2含む）"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ソードピストル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ノワールストライカー"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 20
+		},
+		{
+			"name": {
+				"ja": "完成品フレーム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "テトロンシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3237_s_io5lyf6tci7bbuu97ynh02vp583c.jpg",
+				"path": "/images/items/01_2297/153_3237.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3237_s_0pl6ufpwjdqnauc10cto3bh3ej4v.jpg",
+				"path": "/images/items/01_2297/155_3237.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3237_s_a3ouhsavdwdq60ajtdlu2vycyrnn.jpg",
+				"path": "/images/items/01_2297/156_3237.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3237_s_2vqaolmyhizxu3q8kiy7tc0jcjon.jpg",
+				"path": "/images/items/01_2297/157_3237.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3237_s_s7j40t62gqnzeqvjg6v5rtznc4zn.jpg",
+				"path": "/images/items/01_2297/158_3237.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3237_s_8eopspmqc32ru6hd3le2d8l9txc9.jpg",
+				"path": "/images/items/01_2297/159_3237.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3237_s_9s84drs3ay2t1iqtr0wm7bdy4i1f.jpg",
+				"path": "/images/items/01_2297/189_3237.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3237_s_rh6jao31sot3h7qwgel8vlzz78z9.jpg",
+				"path": "/images/items/01_2297/190_3237.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3237_s_x16v5u5fz427n58zg1lz2cpe0abu.jpg",
+				"path": "/images/items/01_2297/191_3237.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3237_s_n5ra5w37664fzutocirl44du1nus.jpg",
+				"path": "/images/items/01_2297/192_3237.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_3237_s_gwz4hu6qc6qz1q2myzy5jmelu358.jpg",
+				"path": "/images/items/01_2297/193_3237.jpg"
+			}
 		],
-		"en": [
-			"Sword pistol x2",
-			"Noir Striker x 1 (including Beam Blade x 2)"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×20",
-			"完成品フレーム×1",
-			"テトロンシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 20",
-			"Finished product frame x 1",
-			"Tetron Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2297/153_3237.jpg",
-		"/images/items/01_2297/155_3237.jpg",
-		"/images/items/01_2297/156_3237.jpg",
-		"/images/items/01_2297/157_3237.jpg",
-		"/images/items/01_2297/158_3237.jpg",
-		"/images/items/01_2297/159_3237.jpg",
-		"/images/items/01_2297/189_3237.jpg",
-		"/images/items/01_2297/190_3237.jpg",
-		"/images/items/01_2297/191_3237.jpg",
-		"/images/items/01_2297/192_3237.jpg",
-		"/images/items/01_2297/193_3237.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2297/",
-	"brandIds": [
-		"hirm"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_2297/"
 }

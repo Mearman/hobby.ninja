@@ -5,6 +5,50 @@
 		"ja": "PG 1/60 ガンダムエクシア (LIGHTING MODEL)",
 		"en": "PG 1/60 Gundam Exia (LIGHTING MODEL)"
 	},
+	"brands": [
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2057",
+			"url": "https://bandai-hobby.net/item/01_2057/",
+			"ja": "PG 1/60 ガンダムエクシア用LEDユニット"
+		},
+		{
+			"id": "01_2067",
+			"url": "https://bandai-hobby.net/item/01_2067/",
+			"ja": "PG 1/60 ダブルオーガンダムセブンソード/G"
+		},
+		{
+			"id": "item-1000129011",
+			"url": "http://p-bandai.jp/item/item-1000129011",
+			"ja": "ＰＧ 1/60 ガンダムエクシア クリアカラーボディ"
+		},
+		{
+			"id": "item-1000120750",
+			"url": "http://p-bandai.jp/item/item-1000120750/",
+			"ja": "ＰＧ 1/60 ガンダムエクシア用リペアパーツセット"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 35200,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 2
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
 			"PERFECT GRADE 20年目の『進化（EVOLUTION）』",
@@ -45,16 +88,16 @@
 		"en": [
 			"PERFECT GRADE 20th “EVOLUTION”",
 			"\"PG 1/60 Gundam Exia\", the ultimate form achieved with the latest technology, is here.",
-			"Under the supervision of mechanical designer Kanetake Ebikawa, we focused on the most distinctive solar furnace \"GN Drive \". Thorough investigation of the mechanism by which \" GN particles \" are transmitted from the driving force \" GN Drive \" to the whole body. In addition to embodying the design arrangement and internal frame structure derived from this, even the light emission effect when \" GN particles\" are accumulated and compressed is reproduced with a new approach, such as a newly designed LED unit, newly adopted light guide material, and gimmick.",
+			"Under the supervision of mechanical designer Kanetake Ebikawa, we focused on the most distinctive solar furnace \"GN Drive\". Thorough investigation of the mechanism by which \"GN particles\" are transmitted from the driving force \"GN Drive\" to the whole body. In addition to embodying the design arrangement and internal frame structure derived from this, even the light emission effect when \"GN particles\" are accumulated and compressed is reproduced with a new approach, such as a newly designed LED unit, newly adopted light guide material, and gimmick.",
 			"3rd item of \"GUNPLA EVOLUTION PROJECT\", the first in the PG series",
-			"\"EVOLUTION POINT is \" LIGHT EMITTING\"",
-			"The color tone change of light due to the behavior of \"GN particles \" is expressed by three new elements \" LUMINOUS ELEMENTS\".",
+			"\"EVOLUTION POINT is \"LIGHT EMITTING\"",
+			"The color tone change of light due to the behavior of \"GN particles\" is expressed by three new elements \"LUMINOUS ELEMENTS\".",
 			"○“Armor/frame structure” that gives you a sense of energy transfer",
 			"An internal frame with cables exposed from various parts of the aircraft, considering the particle transmission structure from the \"GN Drive\".",
 			"Its presence is further emphasized by the deployment gimmick of the external armor.",
 			"○Completely new “LED unit” that changes its color over time",
 			"A newly designed LED unit expresses color tone changes due to the accumulation and compression of \"GN particles\".",
-			"It changes from \"green \" in the startup state to \" green/blue \" in the operating state, and then to \" red\" in the critical state.",
+			"It changes from \"green\" in the startup state to \"green/blue\" in the operating state, and then to \"red\" in the critical state.",
 			"○ “Light guiding material” used for the first time in Gunpla history",
 			"In addition to overcoming the conventional restrictions on movement, we have also adopted a soft silicone material that enables light production using LEDs, and a resin with high light guiding properties to diffuse the light throughout.",
 			"Precise details and gimmicks derived from thorough research.",
@@ -65,64 +108,107 @@
 			"-A wide variety of accessories are also available, including a wide variety of wrist parts and a wide variety of weapons equipped with gimmicks."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"GNソード×1",
-			"GNシールド×1",
-			"GNロングブレイド×1",
-			"GNショートブレイド",
-			"GNビームサーベル×2",
-			"GNビームダガー×2",
-			"専用ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "GNソード"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GNシールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GNロングブレイド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "GNショートブレイド"
+			}
+		},
+		{
+			"name": {
+				"ja": "GNビームサーベル"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "GNビームダガー"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "専用ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 40
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "メタリックシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シリコンシート"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "LEDユニット"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "※別売りの単三電池を4本使用します。"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000120767_1.jpg",
+				"path": "/images/items/01_1202/1000120767_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000120767_2.jpg",
+				"path": "/images/items/01_1202/1000120767_2.jpg"
+			}
 		],
-		"en": [
-			"GN sword x1",
-			"GNSeal × 1",
-			"GN long blade x1",
-			"GN short braid",
-			"GN beam saber x2",
-			"GN beam dagger x2",
-			"Dedicated display base x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×40",
-			"マーキングシール×1",
-			"メタリックシール×1",
-			"シリコンシート×2",
-			"LEDユニット×1式",
-			"取扱説明書×1",
-			"※別売りの単三電池を4本使用します。"
-		],
-		"en": [
-			"Molded product x 40",
-			"MarkingSeal×1",
-			"Metallic Seal×1",
-			"Silicone sheet x 2",
-			"LED unit x 1 set",
-			"Handling manual×1",
-			"*Uses 4 AA batteries (sold separately)."
-		]
-	},
-	"images": [
-		"/images/items/01_1202/1000120767_1.jpg",
-		"/images/items/01_1202/1000120767_2.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1202/",
-	"brandIds": [
-		"pg"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2057",
-		"01_2067",
-		"item-1000129011",
-		"item-1000120750"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1202/"
 }

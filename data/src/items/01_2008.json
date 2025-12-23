@@ -3,8 +3,59 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガンダムベース限定 ユニコーンガンダム ペルフェクティビリティ(デストロイモード)",
-		"en": "HG 1/144 Gundam Base Limited Unicorn Gundam Perfectibility (Destroy Mode)"
+		"en": "HG 1/144 THE GUNDAM BASE LIMITED UNICORN GUNDAM PERFECTIBILITY(DESTROY MODE)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]",
+			"en": "MOBILE SUIT GUNDAM UC (Unicorn)"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -17,50 +68,42 @@
 		"month": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"『機動戦士ガンダム UC』より、ペルフェクティビリティが登場。",
+			"『機動戦士ガンダムUC』より、ペルフェクティビリティが登場。",
 			"ハイパー・ビーム・ジャベリンに加え、アームド・アーマーBS、VN、XC、DEが付属。",
 			"全身の可動構造を活かして迫力のポージングを演出。",
 			"アームド・アーマーＢＳは展開形態と収納形態を選択可能。",
 			"鳥の飾り羽の様な形状の可動式スタビライザーが付属。"
 		],
 		"en": [
-			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"Perfectibility appears from \"Mobile Suit Gundam UC\".",
-			"In addition to Hyper Beam Javelin, Armed Armor BS, VN, XC, and DE are included.",
-			"Utilizing the movable structure of the whole body, you can create impressive poses.",
-			"Armed Armor BS can be deployed or stored.",
-			"A movable stabilizer shaped like a bird's decorative feathers is included."
+			"For GUNPLA fans around the world, this is a limited edition GUNPLA at the official GUNPLA complex \"GUNDAM Base\". From MOBILE SUIT GUNDAM UC, Perfectibility is introduced. In addition to the Hyper Beam Javelin, it comes with Armed Armor BS, VN, XC, and DE. Taking advantage of the movable structure of the whole body, it produces a powerful pose. Armed Armor BS can be expanded and stored. Comes with a movable stabilizer shaped like a bird's feathers."
 		]
 	},
-	"images": [
-		"/images/items/01_2008/1000134691_1.jpg",
-		"/images/items/01_2008/1000134691_2.jpg",
-		"/images/items/01_2008/1000134691_3.jpg",
-		"/images/items/01_2008/1000134691_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134691_1.jpg",
+				"path": "/images/items/01_2008/1000134691_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134691_2.jpg",
+				"path": "/images/items/01_2008/1000134691_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134691_3.jpg",
+				"path": "/images/items/01_2008/1000134691_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000134691_4.jpg",
+				"path": "/images/items/01_2008/1000134691_4.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2008/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2008/"
 	}
 }

@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムアスタロトリナシメント",
 		"en": "HG 1/144 Gundam Astaroth Trinascimento"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6773",
+			"url": "https://bandai-hobby.net/item/01_6773/",
+			"ja": "HG 1/144 ガンダムザガン"
+		},
+		{
+			"id": "01_6763",
+			"url": "https://bandai-hobby.net/item/01_6763/",
+			"ja": "HG 1/144 モンキーロディ(598機)/モンキークラブロディ"
+		},
+		{
+			"id": "01_4103",
+			"url": "https://bandai-hobby.net/item/01_4103/",
+			"ja": "HG 1/144 ジークルーネ"
+		},
+		{
+			"id": "01_4240",
+			"url": "https://bandai-hobby.net/item/01_4240/",
+			"ja": "HG 1/144 ガンダム端白星[クリアカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,74 +62,102 @@
 		"day": 15
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 公式外伝『機動戦士ガンダム 鉄血のオルフェンズ 月鋼』第2期の新たな主人公機がHG化！",
-			"• 特徴的な左右非対称のデザインを新規パーツで再現！",
-			"• 「デモリッション・ナイフ」と合体し、大型武器への変形も可能な「バスタードチョッパー」や、大型手甲は新規造形！",
-			"• サブアームは展開式でライフルを装備させることもできる！"
+			"公式外伝『機動戦士ガンダム 鉄血のオルフェンズ 月鋼』第2期の新たな主人公機がHG化！",
+			"• 特徴的な左右非対称のデザインを新規パーツで再現！■「デモリッション・ナイフ」と合体し、大型武器への変形も可能な「バスタードチョッパー」や、大型手甲は新規造形！■サブアームは展開式でライフルを装備させることもできる！"
 		],
 		"en": [
-			"• The new main character machine of the second season of the official side story \"Mobile Suit Gundam: Iron-Blooded Orphans Steel\" has been made into HG!",
-			"• Reproduce the characteristic asymmetrical design with new parts!",
-			"• The \"Bastard Chopper \", which can be combined with the \" Demolition Knife\" and transformed into a large weapon, and the large gauntlet are newly sculpted!",
-			"• The sub-arm is expandable and can be equipped with a rifle!"
+			"The new main character machine of the second season of the official side story \"Mobile Suit Gundam: Iron-Blooded Orphans Steel\" has been made into HG!",
+			"• Reproduce the characteristic asymmetrical design with new parts! ■The \"Bastard Chopper\", which can be combined with the \"Demolition Knife\" and transformed into a large weapon, and the large gauntlet are newly sculpted! ■The sub-arm is expandable and can be equipped with a rifle!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"デモリッション・ナイフ×1",
-			"ライフル×1",
-			"ナイフ×2",
-			"バスタードチョッパー×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "デモリッション・ナイフ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ナイフ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "バスタードチョッパー"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 8
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_1987_s_hkgp8qufzddxcbvhwxlovj35boq8.jpg",
+				"path": "/images/items/01_1052/153_1987.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_1987_s_g43dep0diuayif0lgd6c7ww3d49u.jpg",
+				"path": "/images/items/01_1052/155_1987.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_1987_s_2wpgwvymzq6tdcp4sc47wp7p4bbb.jpg",
+				"path": "/images/items/01_1052/156_1987.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_1987_s_cxqq5bb1nbokwynt41gj55c7yp2p.jpg",
+				"path": "/images/items/01_1052/157_1987.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_1987_s_en074lhc2kyokrnjhrl64rp4k4xa.jpg",
+				"path": "/images/items/01_1052/158_1987.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_1987_s_d74316yyccntcbkcovj5b2blmhh3.jpg",
+				"path": "/images/items/01_1052/159_1987.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_1987_s_n7egnop3hyiblu25mix2uffciies.jpg",
+				"path": "/images/items/01_1052/189_1987.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_1987_s_5d5a0eehz4pwjel4qqrsn9om4moy.jpg",
+				"path": "/images/items/01_1052/190_1987.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_1987_s_hdzrsbn7sbf7imzp66fv804h2s9w.jpg",
+				"path": "/images/items/01_1052/191_1987.jpg"
+			}
 		],
-		"en": [
-			"Demolition knife x1",
-			"Rifle x 1",
-			"Knife x 2",
-			"Bastard chopper x1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×8",
-			"シール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 8",
-			"Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1052/153_1987.jpg",
-		"/images/items/01_1052/155_1987.jpg",
-		"/images/items/01_1052/156_1987.jpg",
-		"/images/items/01_1052/157_1987.jpg",
-		"/images/items/01_1052/158_1987.jpg",
-		"/images/items/01_1052/159_1987.jpg",
-		"/images/items/01_1052/189_1987.jpg",
-		"/images/items/01_1052/190_1987.jpg",
-		"/images/items/01_1052/191_1987.jpg",
-		"/images/items/01_1052/01_1052_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1052/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"tekketsu"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4103",
-		"01_4240",
-		"01_4094",
-		"01_4188"
-	],
-	"manualId": "0804"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1052/"
 }

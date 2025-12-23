@@ -5,6 +5,44 @@
 		"ja": "EXモデル 09 1/144 ガンペリー",
 		"en": "EXModel 09 1/144 Gunperry"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 7150,
 		"currency": "JPY",
@@ -17,35 +55,42 @@
 		"month": 6
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"全長315mmの機体は、下部カーゴ内にHGUC RX-78-2 ガンダム 1体を格納可能にしました。航空機としてのディテールを追求することで、モビルスーツとは異なる存在感を打ち出しています。大型ミサイル6基は、カタパルトを使用してコンテナ内に装備可能です。"
+			"全長315mmの機体は、下部カーゴ内にHGUC RX-78-2 ガンダム1体を格納可能にしました。航空機としてのディテールを追求することで、モビルスーツとは異なる存在感を打ち出しています。大型ミサイル6基は、カタパルトを使用してコンテナ内に装備可能です。"
 		],
 		"en": [
 			"The aircraft has a total length of 315mm and can store one HGUC RX-78-2 Gundam in the lower cargo. By pursuing the details of an aircraft, it has a presence different from that of a mobile suit. Six large missiles can be equipped inside the container using a catapult."
 		]
 	},
-	"images": [
-		"/images/items/01_1801/153_273.jpg",
-		"/images/items/01_1801/155_273.jpg",
-		"/images/items/01_1801/156_273.jpg",
-		"/images/items/01_1801/157_273.jpg",
-		"/images/items/01_1801/158_273.jpg",
-		"/images/items/01_1801/159_273.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1801/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_273_s_6k3ih36zr0k5osd5fhh1kozwf7dl.jpg",
+				"path": "/images/items/01_1801/153_273.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_273_s_7aucuo7bp00mm4n57lao52bfhi91.jpg",
+				"path": "/images/items/01_1801/155_273.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_273_s_g37wfrwlwr2mj9pwhoik45vwmjuf.jpg",
+				"path": "/images/items/01_1801/156_273.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_273_s_sgklsomi0a7zhoc6hd0zdu44sijp.jpg",
+				"path": "/images/items/01_1801/157_273.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_273_s_64hy3sacmunwsxe1rdwariuev2zg.jpg",
+				"path": "/images/items/01_1801/158_273.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_273_s_l16ejhb3cqcpep2acjvbeyq8p1dx.jpg",
+				"path": "/images/items/01_1801/159_273.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1801/"
 }

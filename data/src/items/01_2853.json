@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ゲッタードラゴン(INFINITISM）",
 		"en": "HG 1/144 Getter Dragon (INFINITISM)"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dynamic_characters",
+			"url": "https://bandai-hobby.net/series/dynamic_characters/",
+			"ja": "ダイナミックキャラクターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4234",
+			"url": "https://bandai-hobby.net/item/01_4234/",
+			"ja": "HG 1/144 マジンガーZERO(INFINITISM)"
+		},
+		{
+			"id": "01_3528",
+			"url": "https://bandai-hobby.net/item/01_3528/",
+			"ja": "HG ゲッターアーク"
+		},
+		{
+			"id": "01_3332",
+			"url": "https://bandai-hobby.net/item/01_3332/",
+			"ja": "HG 1/144 鋼鉄ジーグ(INFINITISM)"
+		},
+		{
+			"id": "item-1000139230",
+			"url": "https://p-bandai.jp/item/item-1000139230/",
+			"ja": "ＨＧ 1/144 マジンガーＺ ブラックＶｅｒ．（マジンガーＺ ＩＮＦＩＮＩＴＹ Ｖｅｒ．）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -18,67 +62,109 @@
 		"day": 5
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ゲッターロボG』より、メカデザイナー柳瀬敬之氏リデザインによるゲッタードラゴンが「INFINITISM」第３弾として登場！",
-			"■成形色にこだわり、組み立てるだけで満足できる仕様を提案。",
-			"■本体だけでなく、マッハウイングにも多数の可動軸を採用したことにより多彩なポージングを演出できる。",
-			"■マッハウイングの一部がロングトマホークと合体できるプラモデルオリジナルギミックを搭載。",
-			"■ディスプレイベースが付属。専用のジョイントパーツを使用し、飛行状態での展示が可能。"
+			"• 成形色にこだわり、組み立てるだけで満足できる仕様を提案。",
+			"• 本体だけでなく、マッハウイングにも多数の可動軸を採用したことにより多彩なポージングを演出できる。",
+			"• マッハウイングの一部がロングトマホークと合体できるプラモデルオリジナルギミックを搭載。",
+			"• ディスプレイベースが付属。専用のジョイントパーツを使用し、飛行状態での展示が可能。"
 		],
 		"en": [
-			"From \"Getter Robo G \", Getter Dragon redesigned by mechanical designer Noriyuki Yanase is now available as the third \" INFINITISM\"!",
+			"From \"Getter Robo G\", Getter Dragon redesigned by mechanical designer Noriyuki Yanase is now available as the third \"INFINITISM\"!",
 			"• We are particular about molding colors and propose specifications that can be satisfied with assembly alone.",
 			"• Not only the main body but also the Mach wing has many movable axes, allowing you to create a variety of poses.",
 			"• Equipped with a plastic model original gimmick that allows part of the Mach Wing to be combined with the Long Tomahawk.",
 			"• Display base included. Using special joint parts, it can be displayed in flight."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ゲッタートマホーク×2",
-			"ロングトマホーク再現パーツ×1式",
-			"ハンドパーツ×6（武器持ち手・左右/握り手・左右/手刀手・右/開き手・右）",
-			"ホイルシール×1",
-			"ディスプレイベース×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ゲッタートマホーク"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ロングトマホーク再現パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150000_1.jpg",
+				"path": "/images/items/01_2853/1000150000_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150000_2.jpg",
+				"path": "/images/items/01_2853/1000150000_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150000_3.jpg",
+				"path": "/images/items/01_2853/1000150000_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150000_4.jpg",
+				"path": "/images/items/01_2853/1000150000_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150000_5.jpg",
+				"path": "/images/items/01_2853/1000150000_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150000_6.jpg",
+				"path": "/images/items/01_2853/1000150000_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150000_7.jpg",
+				"path": "/images/items/01_2853/1000150000_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150000_8.jpg",
+				"path": "/images/items/01_2853/1000150000_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150000_9.jpg",
+				"path": "/images/items/01_2853/1000150000_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150000_10.jpg",
+				"path": "/images/items/01_2853/1000150000_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150000_11.jpg",
+				"path": "/images/items/01_2853/1000150000_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150000_12.jpg",
+				"path": "/images/items/01_2853/1000150000_12.jpg"
+			}
 		],
-		"en": [
-			"Getter Tomahawk x2",
-			"Long tomahawk reproduction parts x 1 set",
-			"Hand parts x 6 (weapon holder, left and right / grasping hand, left and right / hand, sword hand, right / open hand, right)",
-			"Foil Seal×1",
-			"Display base x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2853/1000150000_1.jpg",
-		"/images/items/01_2853/1000150000_10.jpg",
-		"/images/items/01_2853/1000150000_11.jpg",
-		"/images/items/01_2853/1000150000_12.jpg",
-		"/images/items/01_2853/1000150000_2.jpg",
-		"/images/items/01_2853/1000150000_3.jpg",
-		"/images/items/01_2853/1000150000_4.jpg",
-		"/images/items/01_2853/1000150000_5.jpg",
-		"/images/items/01_2853/1000150000_6.jpg",
-		"/images/items/01_2853/1000150000_7.jpg",
-		"/images/items/01_2853/1000150000_8.jpg",
-		"/images/items/01_2853/1000150000_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2853/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"dynamic_characters"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4234",
-		"01_3528",
-		"01_3332",
-		"item-1000139230"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2853/"
 }

@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "ガンダムベース限定 デブリパーツセット",
-		"en": "Gundam base limited debris parts set"
+		"en": "THE GUNDAM BASE LIMITED DEBRIS PARTS SET"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -23,32 +61,32 @@
 			"宇宙での戦闘シーンを再現できる、戦場をイメージしたデブリパーツ3種と台座のセットが登場。さらにダメージ表現を収録した、水転写式デカールが付属。"
 		],
 		"en": [
-			"A limited edition item from the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"Introducing a set of three types of debris parts and a pedestal inspired by a battlefield, allowing you to recreate battle scenes in space. In addition, a water transfer decal with damage expression is included."
+			"For GUNPLA fans around the world, this item is limited to the official GUNPLA complex \"GUNDAM Base\". A set of three types of debris parts and a pedestal inspired by the battlefield that can reproduce the battle scene in space is now available. In addition, a waterslide decal containing damage expression is included."
 		]
 	},
-	"images": [
-		"/images/items/01_1901/1000126982_1.jpg",
-		"/images/items/01_1901/1000126982_2.jpg",
-		"/images/items/01_1901/1000126982_3.jpg",
-		"/images/items/01_1901/1000126982_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126982_1.jpg",
+				"path": "/images/items/01_1901/1000126982_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126982_2.jpg",
+				"path": "/images/items/01_1901/1000126982_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126982_3.jpg",
+				"path": "/images/items/01_1901/1000126982_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126982_4.jpg",
+				"path": "/images/items/01_1901/1000126982_4.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1901/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1901/"
 	}
 }

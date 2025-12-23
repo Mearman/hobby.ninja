@@ -5,6 +5,50 @@
 		"ja": "1/20 スコープドッグターボカスタム サンサ戦 キリコ機/ムーザ機",
 		"en": "1/20 Scope Dog Turbo Custom Sansa Battle Kiriko Machine/Musa Machine"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "votoms",
+			"url": "https://bandai-hobby.net/series/votoms/",
+			"ja": "装甲騎兵ボトムズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000223037",
+			"url": "https://p-bandai.jp/item/item-1000223037/",
+			"ja": "ＨＧ スコープドッグ用拡張パーツセット6"
+		},
+		{
+			"id": "item-1000209959",
+			"url": "https://p-bandai.jp/item/item-1000209959/",
+			"ja": "ＨＧ スコープドッグ用拡張パーツセット3"
+		},
+		{
+			"id": "item-1000209960",
+			"url": "https://p-bandai.jp/item/item-1000209960/",
+			"ja": "ＨＧ スコープドッグ用拡張パーツセット4"
+		},
+		{
+			"id": "item-1000209961",
+			"url": "https://p-bandai.jp/item/item-1000209961/",
+			"ja": "ＨＧ スコープドッグ用拡張パーツセット5"
+		}
+	],
+	"scale": "1/20",
 	"price": {
 		"amount": 9900,
 		"currency": "JPY",
@@ -17,28 +61,14 @@
 		"month": 8
 	},
 	"targetAge": 15,
-	"scale": "1/20",
-	"images": [
-		"/images/items/01_1437/153_2359.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1437/",
-	"brandIds": [
-		"pb_charapla"
-	],
-	"seriesIds": [
-		"votoms"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000223037",
-		"item-1000209959",
-		"item-1000209960",
-		"item-1000209961"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2359_o_1ccsftbk0gtltre1f3s182klmk23.jpg",
+				"path": "/images/items/01_1437/153_2359.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1437/"
 }

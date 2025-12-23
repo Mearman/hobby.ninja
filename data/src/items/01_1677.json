@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 量産型ゲルググ Ver.2.0",
 		"en": "MG 1/100 mass-produced Gelgoog Ver.2.0"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 4
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"ジオン軍最後の量産型MS“量産型ゲルググ Ver.2.0”がMGに登場 脚部フレアスカートの裾を別パーツ化、インナーフレームへ装着を介して着脱可能 腰部スカートは前面、側面、背面で独立可動 頭部モノアイは、首振りに連動した視線移動を再現 専用ビーム・ライフルにはグレネードランチャーとバイポッドが付属"
@@ -26,26 +69,22 @@
 			"The Zeon army's last mass-produced MS \"mass-produced Gelgoog Ver.2.0\" is now available in MG.The hem of the flared leg skirt is made into a separate part and can be attached and removed by attaching it to the inner frame.The waist skirt can be moved independently on the front, sides, and back.The head mono-eye reproduces the movement of the line of sight in conjunction with the swing of the head.The special beam rifle comes with a grenade launcher and bipod."
 		]
 	},
-	"images": [
-		"/images/items/01_1677/153_2584.jpg",
-		"/images/items/01_1677/155_2584.jpg",
-		"/images/items/01_1677/156_2584.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1677/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
-	"manualId": "0831"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2584_s_hcbddi1x71j8ccd9vqsvnmfp59x4.jpg",
+				"path": "/images/items/01_1677/153_2584.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2584_s_aub5donvhmevauhgyrjrb1gzqle1.jpg",
+				"path": "/images/items/01_1677/155_2584.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2584_s_yvc4sb1v0ocxomgcrkp6tr1na5mi.jpg",
+				"path": "/images/items/01_1677/156_2584.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1677/"
 }

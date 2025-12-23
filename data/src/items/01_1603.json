@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 RGM-79 ジム",
 		"en": "MG 1/100 RGM-79 Jim"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 2
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム」より、1年戦争時、RX-78のデータを元に地球連邦軍で開発された量産型モビルスーツをMG独自のベストプロポーションでキット化しました。胴体内部には、新たな設定に基づき、精巧なメカディティールで再現されたコクピットブロックを内蔵しています。シールドは左腕に設けられたコネクターへマウントすることが可能です。バズーカラックをバックパックへ装着し、ハイパーバズーカをマウントできます。ジムの専用武器であるビームスプレーガンは腰のホルダーへマウントする事ができます。ビームライフル、ビームサーベルなどの武器も付いています。"
@@ -26,26 +69,22 @@
 			"From \"Mobile Suit Gundam\", the mass-produced mobile suit developed by the Earth Federation army during the first war based on RX-78 data is turned into a kit with MG's unique best proportions. Inside the fuselage, there is a built-in cockpit block that has been reproduced with elaborate mechanical details based on the new settings. Seal can be mounted to the connector provided on the left arm. Attach the bazooka rack to your backpack and mount the hyper bazooka. Jim's special weapon, the beam spray gun, can be mounted on the holder on his waist. Also includes weapons such as a beam rifle and beam saber."
 		]
 	},
-	"images": [
-		"/images/items/01_1603/153_2515.jpg",
-		"/images/items/01_1603/155_2515.jpg",
-		"/images/items/01_1603/156_2515.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1603/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
-	"manualId": "0437"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2515_s_2fet4dorcl48vm7il23dcpnc5vt7.jpg",
+				"path": "/images/items/01_1603/153_2515.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2515_s_knpu5zh5vbag82e702320nng1lj6.jpg",
+				"path": "/images/items/01_1603/155_2515.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2515_s_0uf10drr1fdxqzyorgn2exy8eag7.jpg",
+				"path": "/images/items/01_1603/156_2515.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1603/"
 }

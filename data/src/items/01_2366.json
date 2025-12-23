@@ -5,6 +5,65 @@
 		"ja": "ＨＧ 1/144 ド・ダイ改",
 		"en": "HG 1/144 Do Dai Kai"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -16,7 +75,6 @@
 		"year": 2019,
 		"month": 8
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－",
@@ -67,14 +125,14 @@
 			"Operation begins, all aircraft enter!",
 			"Tactical Air Support Aircraft - Do Dai Kai",
 			"－－－－－－－－－－－－－",
-			"From \"Mobile Suit Z Gundam\", the sub-flight system operated by the anti-Earth Federation organization AEG, etc.",
+			"From \"Mobile Suit ZGundam\", the sub-flight system operated by the anti-Earth Federation organization AEG, etc.",
 			"Do Dai Kai is commercialized in the 1/144 Scale HG series, which is perfect for collection.",
 			"Can be equipped with the 1/144 Scale MS (sold separately) that appeared in the play.",
 			"Recommended kit)",
 			"・HG 1/144 Hyakushiki (general store sales item)",
 			"・HG 1/144 Digier (general store sales item)",
 			"・HG 1/144 Rick Diaz (Quattro Vagina color) (General over-the-counter sales item)",
-			"・HG 1/144 Gundam Mk-II (AEGO specification) (general store sales item)",
+			"・HG 1/144 GundamMk-II (AEGO specification) (General over-the-counter sales item)",
 			"・HG 1/144 MSA-003 Nemo (general store sales item)",
 			"・HG 1/144 Zeta Gundam (general over-the-counter sales item)",
 			"・HG 1/144 RGM-86R Jim III (general over-the-counter sales item)",
@@ -107,40 +165,50 @@
 			"- Product specifications are scheduled as of 20195. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2366/153_3300.jpg",
-		"/images/items/01_2366/155_3300.jpg",
-		"/images/items/01_2366/156_3300.jpg",
-		"/images/items/01_2366/157_3300.jpg",
-		"/images/items/01_2366/158_3300.jpg",
-		"/images/items/01_2366/159_3300.jpg",
-		"/images/items/01_2366/189_3300.jpg",
-		"/images/items/01_2366/190_3300.jpg",
-		"/images/items/01_2366/191_3300.jpg",
-		"/images/items/01_2366/192_3300.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2366/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla",
-		"hguc"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
-	"manualId": "2560",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3300_s_4ksub3usg3p0utxncpyrxkjxlwnd.jpg",
+				"path": "/images/items/01_2366/153_3300.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3300_s_zsldzpefvssids0mwub1o0iafi0f.jpg",
+				"path": "/images/items/01_2366/155_3300.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3300_s_g4eieh6j8wqsukbc8afd7g5n5diw.jpg",
+				"path": "/images/items/01_2366/156_3300.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3300_s_ct58vs239q8mtoay6a7r9651ek5o.jpg",
+				"path": "/images/items/01_2366/157_3300.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3300_s_gq2p6wqz8dr9ko4ehb5gwv00andn.jpg",
+				"path": "/images/items/01_2366/158_3300.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3300_s_bk3yv3v1oiqchxqwxng8040xlx4e.jpg",
+				"path": "/images/items/01_2366/159_3300.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3300_s_v9dp57xwqu0jkdo8va5495dbt9oq.jpg",
+				"path": "/images/items/01_2366/189_3300.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3300_s_gcssaaxckti4ka2blhi0dq7ralr8.jpg",
+				"path": "/images/items/01_2366/190_3300.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3300_s_46dygvgeevtons8xsz5el1pm6o43.jpg",
+				"path": "/images/items/01_2366/191_3300.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3300_s_9qk2qp6e0p2nkz5rjh2wqeg8s495.jpg",
+				"path": "/images/items/01_2366/192_3300.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2366/"
 }

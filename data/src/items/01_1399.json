@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "HGBD 1/144 ガンダムジーエンアルトロン",
-		"en": "HGBD 1/144 Gundam Gien Altron"
+		"en": "HG 1/144 GUNDAM JIYAN ALTRON"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ",
+			"en": "GUNDAM BUILD DIVERS"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,7 +64,6 @@
 		"day": 28
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズ』よりガンダムジーエンアルトロンが登場！",
@@ -26,56 +71,77 @@
 			"• 付属のジョイントパーツにより、肩のパーツを手に持たせて武器とすることも可能！"
 		],
 		"en": [
-			"Gundam Gien Altron appears from “Gundam Build Divers”!",
-			"• A custom Gunpla with tiger and wolf design parts added to both shoulders, allowing you to extend the twin gee-enhangs on both shoulders!",
-			"• With the included joint parts, you can also hold the shoulder parts in your hand and use it as a weapon!"
+			"From \"BUILD DIVERS \"GUNDAM Geen Altron is now available!",
+			"• Custom GUNPLA with tiger and wolf design parts added to both shoulders, the twin gee hang on both shoulders can be extended!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ジーエンシールド×1",
-			"ツインジーエンハング×2"
-		],
-		"en": [
-			"Jien Seal×1",
-			"Twin G-enhung x2"
-		]
-	},
-	"contents": {
-		"ja": [
-			"成形品×13",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded products x 13",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1399/1000127541_1.jpg",
-		"/images/items/01_1399/1000127541_2.jpg",
-		"/images/items/01_1399/1000127541_3.jpg",
-		"/images/items/01_1399/1000127541_4.jpg",
-		"/images/items/01_1399/1000127541_5.jpg",
-		"/images/items/01_1399/1000127541_6.jpg"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ジーエンシールド",
+				"en": "• G-enshield"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ツインジーエンハング",
+				"en": "• Twin Jiang Hang"
+			},
+			"count": 2
+		}
 	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 13
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127541_1.jpg",
+				"path": "/images/items/01_1399/1000127541_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127541_2.jpg",
+				"path": "/images/items/01_1399/1000127541_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127541_3.jpg",
+				"path": "/images/items/01_1399/1000127541_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127541_4.jpg",
+				"path": "/images/items/01_1399/1000127541_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127541_5.jpg",
+				"path": "/images/items/01_1399/1000127541_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000127541_6.jpg",
+				"path": "/images/items/01_1399/1000127541_6.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1399/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "1024"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1399/"
+	}
 }

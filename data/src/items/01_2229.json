@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ガンプラスターターセット",
 		"en": "HGUC 1/144 Gunpla Starter Set"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 15
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• HGUCのガンダムと量産型ザクⅠⅠのアニメカラーセット。",
@@ -27,34 +75,38 @@
 		],
 		"en": [
 			"• Anime color set of HGUC's Gundam and mass-produced Zaku ⅠⅠ.",
-			"• Easy assembly even for first-timers",
+			"• Easy assembly even for first timers",
 			"• HOW TO guide manual included"
 		]
 	},
-	"images": [
-		"/images/items/01_2229/153_3174.jpg",
-		"/images/items/01_2229/155_3174.jpg",
-		"/images/items/01_2229/156_3174.jpg",
-		"/images/items/01_2229/157_3174.jpg",
-		"/images/items/01_2229/158_3174.jpg",
-		"/images/items/01_2229/159_3174.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2229/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
-	"manualId": "0426"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3174_o_1d3oq74rk1jqc19fq21i1niot623.jpg",
+				"path": "/images/items/01_2229/153_3174.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3174_o_1d3oq7huq9tu1dg3nm22sbge42d.jpg",
+				"path": "/images/items/01_2229/155_3174.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3174_o_1d3oq7ncm7e6123r1dmjr611s5d2i.jpg",
+				"path": "/images/items/01_2229/156_3174.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3174_o_1d3oq7slo12je5p816ii9vcben2n.jpg",
+				"path": "/images/items/01_2229/157_3174.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3174_o_1d3oq81r01l9417f7boi18mm11jk2s.jpg",
+				"path": "/images/items/01_2229/158_3174.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3174_o_1d3oq87l6npk1bo017ih1vg8n4f31.jpg",
+				"path": "/images/items/01_2229/159_3174.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2229/"
 }

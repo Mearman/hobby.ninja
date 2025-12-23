@@ -5,6 +5,43 @@
 		"ja": "ピカちんキット０５ ゼロゼロマーカー",
 		"en": "Pikachin Kit05 Zero Zero Marker"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -28,51 +65,91 @@
 		"en": [
 			"• The zero-zero marker that appears on the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!",
 			"• An invention that allows friends to exchange secret messages!",
-			"• You can write important words in broad daylight that you don't want others to see!",
+			"• Write down important words you don't want others to see in broad daylight!",
 			"• It also comes with a Pikachin sheet that can be bound into the Pikachin Encyclopedia!"
 		]
 	},
-	"contents": {
-		"ja": [
-			"ゼロゼロマーカー×1",
-			"（成形品×2）",
-			"ピカちんQRコード×1",
-			"LEDユニット×1",
-			"ペン×1",
-			"ピカちんシート×1"
+	"contents": [
+		{
+			"name": {
+				"ja": "ゼロゼロマーカー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "（成形品"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "）"
+			}
+		},
+		{
+			"name": {
+				"ja": "ピカちんQRコード"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "LEDユニット"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ペン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ピカちんシート"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2153_s_gue2cblj4p2zwl3pp7dw76j7o3wj.jpg",
+				"path": "/images/items/01_1219/153_2153.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2153_s_3l65j95pcfimnhlolb6mhpvjetgx.jpg",
+				"path": "/images/items/01_1219/155_2153.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2153_s_00pvw7vl74j3wecve1ksfh919a20.jpg",
+				"path": "/images/items/01_1219/156_2153.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2153_s_cxj2u3jydc0azpjwyuzbmefbmr7p.jpg",
+				"path": "/images/items/01_1219/157_2153.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2153_s_2ed4ouwfd8bhgxo6c53vb9u2esr6.jpg",
+				"path": "/images/items/01_1219/158_2153.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2153_s_rclvhlyuu0te6njdr55fhegzu0r8.jpg",
+				"path": "/images/items/01_1219/159_2153.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2153_s_yweiptlz83197jrz8qpx45ff5lz3.jpg",
+				"path": "/images/items/01_1219/189_2153.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_2153_s_ypr87b6wgv96p52jszk56cpc2u6i.jpg",
+				"path": "/images/items/01_1219/190_2153.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_2153_s_2sj0738uevt3oult5tg8n6orhayh.jpg",
+				"path": "/images/items/01_1219/191_2153.jpg"
+			}
 		],
-		"en": [
-			"Zero zero marker x 1",
-			"(molded product x 2)",
-			"Pikachin QR code x 1",
-			"LED unit x 1",
-			"Pen x 1",
-			"Pikachin sheet x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1219/153_2153.jpg",
-		"/images/items/01_1219/155_2153.jpg",
-		"/images/items/01_1219/156_2153.jpg",
-		"/images/items/01_1219/157_2153.jpg",
-		"/images/items/01_1219/158_2153.jpg",
-		"/images/items/01_1219/159_2153.jpg",
-		"/images/items/01_1219/189_2153.jpg",
-		"/images/items/01_1219/190_2153.jpg",
-		"/images/items/01_1219/191_2153.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1219/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1219/"
 }

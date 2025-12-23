@@ -5,6 +5,43 @@
 		"ja": "LBX-CCM（山野バン）",
 		"en": "LBX-CCM (Yamano Van)"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "lbx",
+			"url": "https://bandai-hobby.net/series/lbx/",
+			"ja": "ダンボール戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000215196",
+			"url": "https://p-bandai.jp/item/item-1000215196/",
+			"ja": "ＬＢＸイカロス・フォース"
+		},
+		{
+			"id": "item-1000215197",
+			"url": "https://p-bandai.jp/item/item-1000215197/",
+			"ja": "ＬＢＸイカロス・ゼロ"
+		},
+		{
+			"id": "item-1000210042",
+			"url": "https://p-bandai.jp/item/item-1000210042/",
+			"ja": "ＬＢＸエルシオン"
+		},
+		{
+			"id": "item-1000210041",
+			"url": "https://p-bandai.jp/item/item-1000210041/",
+			"ja": "ＬＢＸペルセウス"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -28,46 +65,60 @@
 			"• The screen design is a new design compatible with Achilles."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用ディスプレイ台座×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ディスプレイ台座"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "カイナスシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "コート紙"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書（台紙裏に記載）"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3161_s_aujvhscd6ie5onh21ermizrb3yag.jpg",
+				"path": "/images/items/01_2217/153_3161.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3161_s_jta4xvmeigktgcih27v7if4suqbl.jpg",
+				"path": "/images/items/01_2217/155_3161.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3161_s_smpk5alqf11ymruy6aqz10kgwhf9.jpg",
+				"path": "/images/items/01_2217/156_3161.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3161_s_13p1i8v8mvmu34ca76p3k0ch8ra8.jpg",
+				"path": "/images/items/01_2217/157_3161.jpg"
+			}
 		],
-		"en": [
-			"Dedicated display pedestal x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×2",
-			"カイナスシール×1",
-			"コート紙×1",
-			"取扱説明書（台紙裏に記載）×1"
-		],
-		"en": [
-			"Molded product x 2",
-			"Cainus Seal×1",
-			"Coated paper x 1",
-			"Handling manual (written on the back of the mount) x 1"
-		]
-	},
-	"images": [
-		"/images/items/01_2217/153_3161.jpg",
-		"/images/items/01_2217/155_3161.jpg",
-		"/images/items/01_2217/156_3161.jpg",
-		"/images/items/01_2217/157_3161.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2217/",
-	"brandIds": [],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2217/"
 }

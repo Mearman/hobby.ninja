@@ -5,6 +5,60 @@
 		"ja": "ＰＧ 1/60 ストライクガンダム用 パーフェクトストライクガンダム拡張パーツ",
 		"en": "Perfect Strike Gundam expansion parts for PG 1/60 Strike Gundam"
 	},
+	"brands": [
+		{
+			"id": "pb_pg",
+			"url": "https://bandai-hobby.net/brand/pb_pg/",
+			"ja": "PG［パーフェクトグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181726",
+			"url": "https://p-bandai.jp/item/item-1000181726/",
+			"ja": "ＨＧ 1/144 ストライクダガー"
+		},
+		{
+			"id": "item-1000146930",
+			"url": "https://p-bandai.jp/item/item-1000146930/",
+			"ja": "ＭＧ 1/100 エールストライクガンダム Ver.ＲＭ用 ランチャーストライカー/ソードストライカーパック"
+		},
+		{
+			"id": "01_2583",
+			"url": "https://bandai-hobby.net/item/01_2583/",
+			"ja": "PG 1/60 パーフェクトストライクガンダム"
+		},
+		{
+			"id": "item-1000136194",
+			"url": "https://p-bandai.jp/item/item-1000136194",
+			"ja": "ＲＧ 1/144 パーフェクトストライクガンダム"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 8800,
 		"currency": "JPY",
@@ -16,7 +70,6 @@
 		"year": 2020,
 		"month": 2
 	},
-	"scale": "1/60",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－",
@@ -63,7 +116,7 @@
 		],
 		"en": [
 			"－－－－－－－－－－－－－－－－－－－－",
-			"\"Expansion parts \" for those who have \" PG 1/60 Strike Gundam\" (sold separately 200411 general over-the-counter item).",
+			"\"Expansion parts\" for those who have \"PG 1/60 Strike Gundam\" (sold separately 200411 general over-the-counter item).",
 			"－－－－－－－－－－－－－－－－－－－－",
 			"To the ultimate perfect strike",
 			"PERFECT GRADE Multi Assault Striker Replacement Completed.",
@@ -105,39 +158,50 @@
 			"- Product specifications are scheduled as of 201911. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2665/153_3588.jpg",
-		"/images/items/01_2665/155_3588.jpg",
-		"/images/items/01_2665/156_3588.jpg",
-		"/images/items/01_2665/157_3588.jpg",
-		"/images/items/01_2665/158_3588.jpg",
-		"/images/items/01_2665/159_3588.jpg",
-		"/images/items/01_2665/189_3588.jpg",
-		"/images/items/01_2665/190_3588.jpg",
-		"/images/items/01_2665/191_3588.jpg",
-		"/images/items/01_2665/192_3588.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2665/",
-	"brandIds": [
-		"pg",
-		"pb_pg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181726",
-		"item-1000146930",
-		"01_2583",
-		"item-1000136194"
-	],
-	"manualId": "2315",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3588_s_ivln9asufdxnrlx676616clvoogy.jpg",
+				"path": "/images/items/01_2665/153_3588.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3588_s_nko9dwox7x5b1pq3w51igbzrbffo.jpg",
+				"path": "/images/items/01_2665/155_3588.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3588_s_n8g62za8h007q0xtd9ikbbkj1cj8.jpg",
+				"path": "/images/items/01_2665/156_3588.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3588_s_dve7b3ivrlxmcd5z63i472ocexj6.jpg",
+				"path": "/images/items/01_2665/157_3588.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3588_s_7fx3op8incnlkwithijaqc4hzwye.jpg",
+				"path": "/images/items/01_2665/158_3588.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3588_s_tccsj7buk4k78oh06se52xkaetvv.jpg",
+				"path": "/images/items/01_2665/159_3588.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3588_s_u5kuza0hl86w0l6tg9lexz31t5e0.jpg",
+				"path": "/images/items/01_2665/189_3588.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3588_s_3gh1wovyfl8fo7gysipb72hybqae.jpg",
+				"path": "/images/items/01_2665/190_3588.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3588_s_7zcute6awupo4imcssp28bnfl1az.jpg",
+				"path": "/images/items/01_2665/191_3588.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3588_s_gqvbguteunpl2vs5b5f020eno2nb.jpg",
+				"path": "/images/items/01_2665/192_3588.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2665/"
 }

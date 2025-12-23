@@ -5,6 +5,50 @@
 		"ja": "HGBD:R 1/144 リライジングガンダム",
 		"en": "HGBD:R 1/144 Rerising Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 8250,
 		"currency": "JPY",
@@ -18,73 +62,117 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダム公式 YouTube チャンネル「ガンダムチャンネル」にて毎週木曜20時より配信中の『ガンダムビルドダイバーズRe:RISE 』 2nd Seasonより、必殺技使用時のグランドクロスカラーのリライジングガンダムが登場！",
-			"■ヒロト達「ビルドダイバーズ」のグランドクロスカラーのガンプラ4体セット",
-			"■必殺技使用時のグランドクロスカラーを成形色で再現。",
-			"■必殺技使用時のリライジングガンダムが再現可能！",
-			"■専用台座付き"
+			"• ヒロト達「ビルドダイバーズ」のグランドクロスカラーのガンプラ4体セット",
+			"• 必殺技使用時のグランドクロスカラーを成形色で再現。",
+			"• 必殺技使用時のリライジングガンダムが再現可能！",
+			"• 専用台座付き"
 		],
 		"en": [
-			"From the 2nd Season of \"Gundam Build Divers Re:RISE \", which is being streamed every Thursday from 8pm on Gundam's official YouTube channel \" Gundam Channel\", a re-rising Gundam with Grand Cross color when using special moves is now available!",
+			"From the 2nd Season of \"Gundam Build Divers Re:RISE\", which is being streamed every Thursday from 8pm on Gundam's official YouTube channel \"Gundam Channel\", a re-rising Gundam with Grand Cross color when using special moves is now available!",
 			"• Hiroto's \"Build Divers\" Grand Cross color Gunpla 4 body set",
 			"• The Grand Cross color when using special moves is reproduced with molded color.",
 			"• Re-rising Gundam when using special moves can be reproduced!",
 			"• Comes with a special pedestal"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"HGBD:R ユーラヴェンガンダム×1",
-			"HGBD:R ガンダムイージスナイト×1",
-			"SDBD:R エクスヴァルキランダー×1",
-			"HGBD:R ウォドムポッド×1",
-			"専用台座×3",
-			"ホイルシール×1",
-			"※上記HGBD:R及びSDBD:Rのガンプラ4機は、グランドクロスカラーをイメージした特別成形色となります。"
+	"accessories": [
+		{
+			"name": {
+				"ja": "HGBD:R ユーラヴェンガンダム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "HGBD:R ガンダムイージスナイト"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "SDBD:R エクスヴァルキランダー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "HGBD:R ウォドムポッド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "専用台座"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "※上記HGBD:R及びSDBD:Rのガンプラ4機は、グランドクロスカラーをイメージした特別成形色となります。"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_1.jpg",
+				"path": "/images/items/01_2851/1000150009_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_2.jpg",
+				"path": "/images/items/01_2851/1000150009_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_3.jpg",
+				"path": "/images/items/01_2851/1000150009_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_4.jpg",
+				"path": "/images/items/01_2851/1000150009_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_5.jpg",
+				"path": "/images/items/01_2851/1000150009_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_6.jpg",
+				"path": "/images/items/01_2851/1000150009_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_7.jpg",
+				"path": "/images/items/01_2851/1000150009_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_8.jpg",
+				"path": "/images/items/01_2851/1000150009_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_9.jpg",
+				"path": "/images/items/01_2851/1000150009_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_10.jpg",
+				"path": "/images/items/01_2851/1000150009_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_11.jpg",
+				"path": "/images/items/01_2851/1000150009_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_12.jpg",
+				"path": "/images/items/01_2851/1000150009_12.jpg"
+			}
 		],
-		"en": [
-			"HGBD:R Euraven Gundam×1",
-			"HGBD:R Gundam Aegis Knight×1",
-			"SDBD:R Exvalkylander x 1",
-			"HGBD:R Wodom Pod x 1",
-			"Dedicated pedestal x 3",
-			"Foil Seal×1",
-			"*The above HGBD:R and SDBD:R Gunpla 4 machines have a special molding color inspired by the Grand Cross color."
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2851/1000150009_1.jpg",
-		"/images/items/01_2851/1000150009_10.jpg",
-		"/images/items/01_2851/1000150009_11.jpg",
-		"/images/items/01_2851/1000150009_12.jpg",
-		"/images/items/01_2851/1000150009_2.jpg",
-		"/images/items/01_2851/1000150009_3.jpg",
-		"/images/items/01_2851/1000150009_4.jpg",
-		"/images/items/01_2851/1000150009_5.jpg",
-		"/images/items/01_2851/1000150009_6.jpg",
-		"/images/items/01_2851/1000150009_7.jpg",
-		"/images/items/01_2851/1000150009_8.jpg",
-		"/images/items/01_2851/1000150009_9.jpg",
-		"/images/items/01_2851/01_2851_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2851/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0098"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2851/"
 }

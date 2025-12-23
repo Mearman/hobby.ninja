@@ -5,6 +5,43 @@
 		"ja": "ピカちんキット10 紙飛行機ランチャー",
 		"en": "Pikachin Kit10 Paper Airplane Launcher"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pikachin-kit",
+			"url": "https://bandai-hobby.net/series/pikachin-kit/",
+			"ja": "ポチっと発明ピカちんキット"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2605",
+			"url": "https://bandai-hobby.net/item/01_2605/",
+			"ja": "バトルピカちんキット05バッジDJリミックスシューター"
+		},
+		{
+			"id": "01_2606",
+			"url": "https://bandai-hobby.net/item/01_2606/",
+			"ja": "ピカちんバッジDJリミックス～ガンガンピラめけ!新たな発明編～"
+		},
+		{
+			"id": "01_2607",
+			"url": "https://bandai-hobby.net/item/01_2607/",
+			"ja": "ＤＸピカちんパーフェクトバトルセット"
+		},
+		{
+			"id": "01_2545",
+			"url": "https://bandai-hobby.net/item/01_2545/",
+			"ja": "バトルピカちんキット04ピカちんノットリガー"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -27,50 +64,69 @@
 			"• ピカちん大百科に綴じられるピカちんシートも付いてくるぞ！"
 		],
 		"en": [
-			"• For you who want to fly paper airplanes quickly and coolly!",
-			"• Super launcher that lets you fly paper airplanes over long distances and super speed!",
+			"• For those of you who want to fly paper airplanes quickly and coolly!",
+			"• A super launcher that lets you fly paper airplanes over long distances and at super speed!",
 			"• The paper airplane launcher that appears on the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!",
 			"• An invention that allows you to fly a paper airplane at super speed just by aiming and pulling the bar!",
 			"• It also comes with a Pikachin sheet that can be bound into the Pikachin Encyclopedia!"
 		]
 	},
-	"contents": {
-		"ja": [
-			"紙飛行機ランチャー…1（成形品…5）",
-			"紙飛行機ペーパー…1",
-			"輪ゴム…3",
-			"ピカちんQRコードステッカー…1",
-			"取扱説明書…1",
-			"ピカちんシート…1"
+	"contents": [
+		{
+			"name": {
+				"ja": "紙飛行機ランチャー…1（成形品…5）"
+			}
+		},
+		{
+			"name": {
+				"ja": "紙飛行機ペーパー…1"
+			}
+		},
+		{
+			"name": {
+				"ja": "輪ゴム…3"
+			}
+		},
+		{
+			"name": {
+				"ja": "ピカちんQRコードステッカー…1"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書…1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ピカちんシート…1"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2261_s_pzts9058a539gnek8g2gg0naa66s.jpg",
+				"path": "/images/items/01_1333/153_2261.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2261_s_33spcmt45m4tt59oo80ucevg1o61.jpg",
+				"path": "/images/items/01_1333/155_2261.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2261_s_5sf2nv3xthy6bmcf1gbotv6seih3.jpg",
+				"path": "/images/items/01_1333/156_2261.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2261_s_pnlr44mhb4961fv8jp0jhh9luh1g.jpg",
+				"path": "/images/items/01_1333/157_2261.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2261_s_k7bze657cd935wv0t11b02063s9t.jpg",
+				"path": "/images/items/01_1333/158_2261.jpg"
+			}
 		],
-		"en": [
-			"Paper airplane launcher...1 (molded product...5)",
-			"Paper airplane paper...1",
-			"rubber band...3",
-			"Pikachin QR code Sticker...1",
-			"Handling Manual...1",
-			"Pikachin sheet...1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1333/153_2261.jpg",
-		"/images/items/01_1333/155_2261.jpg",
-		"/images/items/01_1333/156_2261.jpg",
-		"/images/items/01_1333/157_2261.jpg",
-		"/images/items/01_1333/158_2261.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1333/",
-	"brandIds": [],
-	"seriesIds": [
-		"pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1333/"
 }

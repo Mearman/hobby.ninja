@@ -3,8 +3,37 @@
 	"type": "item",
 	"name": {
 		"ja": "BEST HIT CHRONICLE 1/1 カップヌードル",
-		"en": "BEST HIT CHRONICLE 1/1 Cup Noodle"
+		"en": "BEST HIT CHRONICLE 1/1 CUP NOODLE"
 	},
+	"brands": [
+		{
+			"id": "besthit_chronicle",
+			"url": "https://bandai-hobby.net/brand/besthit_chronicle/",
+			"ja": "BEST HIT CHRONICLE",
+			"en": "BEST HIT CHRONICLE"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2628",
+			"url": "https://bandai-hobby.net/item/01_2628/",
+			"ja": "BEST HIT CHRONICLE 2/5 “PlayStation”(SCPH-1000)"
+		},
+		{
+			"id": "01_2630",
+			"url": "https://bandai-hobby.net/item/01_2630/",
+			"ja": "BEST HIT CHRONICLE 2/5 セガサターン(HST-3200)"
+		}
+	],
+	"scale": "1/1",
 	"price": {
 		"amount": 2970,
 		"currency": "JPY",
@@ -18,10 +47,8 @@
 		"day": 18
 	},
 	"targetAge": 15,
-	"scale": "1/1",
 	"description": {
 		"ja": [
-			"（12/5記載）フタ止めシールについては、セット内容を変更しております。",
 			"3分では作れない新感覚 カップヌードルプラモデル誕生！",
 			"• 実物の麺から３Dスキャンを取り、精密な造形でプラパーツ化。",
 			"• “麺塊”パーツは、「カップヌードル」さながらの「疎密麺塊構造」を組み立てる事ができる。",
@@ -34,59 +61,96 @@
 			"• 貼ってはがせるタイプのフタ再現用シール付属。"
 		],
 		"en": [
-			"(Posted on 12/5) The contents of the set have been changed for the lid seal.",
-			"A new cup noodle plastic model that can't be made in 3 minutes is born!",
-			"• 3D scans of actual noodles are made into plastic parts using precise modeling.",
-			"• The \"noodle mass \" parts can be assembled into a \" dense noodle mass structure \" similar to \" cup noodles.\"",
-			"• The \"intermediate holding structure\" allows the noodles to float above the bottom of the cup, protecting them from vibrations during transportation and making them less likely to break. You can remove the parts on the side of the container to see the noodles.",
-			"• Like the noodle blocks, the ingredients are also realistically reproduced using 3D scanning. The \"egg,\" \" shrimp,\" and \" mystery meat\" that are included in the actual product are precisely designed as individual parts.",
-			"• Green onions can be cut out of vinyl material and added as desired.",
-			"• The \"CUPNOODLE\" logo, divided by color, has a multi-layered structure that tickles the desire to assemble alphabet parts! !",
-			"• The cup's characteristic golden dashed line pattern is reproduced by assembling circular parts with high clearance accuracy.",
-			"• Using precise mold processing technology, we can reproduce the text molds printed on the package, including warnings, ingredients, allergens, and even customer service information! !",
-			"• Comes with a peel-off type seal for reproducing the lid."
+			"(described on 12/5) The contents of the set have been changed for the lid seal."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ランナー×14",
-			"取扱説明書×1",
-			"フタシール×1",
-			"カイナスシール×1",
-			"ネギ再現用ビニル資材×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ランナー"
+			},
+			"count": 14
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "フタシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "カイナスシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ネギ再現用ビニル資材"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146108_1.jpg",
+				"path": "/images/items/01_2962/1000146108_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146108_2.jpg",
+				"path": "/images/items/01_2962/1000146108_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146108_3.jpg",
+				"path": "/images/items/01_2962/1000146108_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146108_4.jpg",
+				"path": "/images/items/01_2962/1000146108_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146108_5.jpg",
+				"path": "/images/items/01_2962/1000146108_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146108_6.jpg",
+				"path": "/images/items/01_2962/1000146108_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146108_7.jpg",
+				"path": "/images/items/01_2962/1000146108_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146108_8.jpg",
+				"path": "/images/items/01_2962/1000146108_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146108_9.jpg",
+				"path": "/images/items/01_2962/1000146108_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146108_10.jpg",
+				"path": "/images/items/01_2962/1000146108_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146108_11.jpg",
+				"path": "/images/items/01_2962/1000146108_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000146108_12.jpg",
+				"path": "/images/items/01_2962/1000146108_12.jpg"
+			}
 		],
-		"en": [
-			"Runner×14",
-			"Handling manual×1",
-			"Lid Seal×1",
-			"Cainus Seal×1",
-			"Vinyl material for green onion reproduction x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2962/1000146108_1.jpg",
-		"/images/items/01_2962/1000146108_10.jpg",
-		"/images/items/01_2962/1000146108_11.jpg",
-		"/images/items/01_2962/1000146108_12.jpg",
-		"/images/items/01_2962/1000146108_2.jpg",
-		"/images/items/01_2962/1000146108_3.jpg",
-		"/images/items/01_2962/1000146108_4.jpg",
-		"/images/items/01_2962/1000146108_5.jpg",
-		"/images/items/01_2962/1000146108_6.jpg",
-		"/images/items/01_2962/1000146108_7.jpg",
-		"/images/items/01_2962/1000146108_8.jpg",
-		"/images/items/01_2962/1000146108_9.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2962/",
-	"brandIds": [
-		"besthit_chronicle"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2628",
-		"01_2630"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2962/"
+	}
 }

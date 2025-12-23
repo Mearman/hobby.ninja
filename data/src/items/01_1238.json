@@ -5,6 +5,43 @@
 		"ja": "BB戦士406 公孫サンイージーエイト&四神鬼甲戦車",
 		"en": "BB Senshi 406 Gongsun Sun Easy Eight & Four God Demon Tank"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -26,56 +63,84 @@
 		],
 		"en": [
 			"• \"White Horse General\" Gongsun Zan Easy Eight has been re-kitted with a new look!",
-			"• The molding color of the armor can be changed to match the character image, and a Four God Demon Tank tank that can be rearranged into various forms is included!",
+			"• The molding color of the armor can be changed to match the character image, and a Four God Demon Tank that can be rearranged into various forms is included!",
 			"• The molding color of the Four Gods' horse armor has been changed to silver! The package illustration is newly drawn!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"白鱗剣×1",
-			"麝香尾×1",
-			"四神鬼甲戦車×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "白鱗剣"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "麝香尾"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "四神鬼甲戦車"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "リード線"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2170_s_7oaqydzwawv76b7c78l1zk3he3bg.jpg",
+				"path": "/images/items/01_1238/153_2170.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2170_s_2q3wv45lfh46jgkjhh71u00whda3.jpg",
+				"path": "/images/items/01_1238/155_2170.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2170_s_bstaq3js3qbsoo1xo5t2302k3iog.jpg",
+				"path": "/images/items/01_1238/156_2170.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2170_s_hc8vi9kc0bjtffndaj8xrfu9n38u.jpg",
+				"path": "/images/items/01_1238/157_2170.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2170_s_iw8eww5yhvazvwhrmsygimxc3zon.jpg",
+				"path": "/images/items/01_1238/158_2170.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2170_s_gi3qmk00t0en5dzw36c9l1u1wv57.jpg",
+				"path": "/images/items/01_1238/159_2170.jpg"
+			}
 		],
-		"en": [
-			"White scale sword x1",
-			"Musk tail×1",
-			"Four God Demon Tank x1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×6",
-			"シール×3",
-			"リード線×2",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 6",
-			"Seal×3",
-			"Lead wire x 2",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1238/153_2170.jpg",
-		"/images/items/01_1238/155_2170.jpg",
-		"/images/items/01_1238/156_2170.jpg",
-		"/images/items/01_1238/157_2170.jpg",
-		"/images/items/01_1238/158_2170.jpg",
-		"/images/items/01_1238/159_2170.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1238/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1238/"
 }

@@ -2,9 +2,53 @@
 	"id": "01_3292",
 	"type": "item",
 	"name": {
-		"ja": "HGBD:R 1/144 コアガンダム II(ティターンズカラー)",
+		"ja": "HGBD:R 1/144 コアガンダムII(ティターンズカラー)",
 		"en": "HGBD:R 1/144 Core Gundam II (Titans color)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1210,
 		"currency": "JPY",
@@ -18,14 +62,13 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズRe:RISE』 より、コアガンダムIIが単独で登場！",
-			"■ビルドカスタムを超えた新機構「コアドッキングカスタム」を採用！カラーやウェポンを組み合わせて、自分だけのオリジナルガンダムを作ろう！",
-			"■カラーリングはティターンズ仕様。",
-			"■シールドとライフルが付属。",
-			"■コアフライヤーへの変形が可能。"
+			"• ビルドカスタムを超えた新機構「コアドッキングカスタム」を採用！カラーやウェポンを組み合わせて、自分だけのオリジナルガンダムを作ろう！",
+			"• カラーリングはティターンズ仕様。",
+			"• シールドとライフルが付属。",
+			"• コアフライヤーへの変形が可能。"
 		],
 		"en": [
 			"From \"Gundam Build Divers Re:RISE\", Core Gundam II appears alone!",
@@ -35,42 +78,58 @@
 			"• Can be transformed into a core flyer."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"シールド×1",
-			"ライフル×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4247_s_83d7c4ukfljur7foqbagelqn1sp1.jpg",
+				"path": "/images/items/01_3292/153_4247.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4247_s_e5bf5o3l7emj1v2tiqx1ozqkt0hn.jpg",
+				"path": "/images/items/01_3292/155_4247.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4247_s_21wy4w6xllfmwnjzfkk6jjug9thf.jpg",
+				"path": "/images/items/01_3292/156_4247.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4247_s_fjaivyos7q10axb4dbbn8xkmdlf4.jpg",
+				"path": "/images/items/01_3292/157_4247.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4247_s_a9lcrhis3kc1rk6uosrkcwj7ahck.jpg",
+				"path": "/images/items/01_3292/158_4247.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4247_s_i147t0dg33t1g4fcm9sbhwr4rush.jpg",
+				"path": "/images/items/01_3292/159_4247.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4247_s_cnm8sydear489hpwu313tgrwnpgy.jpg",
+				"path": "/images/items/01_3292/189_4247.jpg"
+			}
 		],
-		"en": [
-			"Seal × 1",
-			"Rifle x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3292/153_4247.jpg",
-		"/images/items/01_3292/155_4247.jpg",
-		"/images/items/01_3292/156_4247.jpg",
-		"/images/items/01_3292/157_4247.jpg",
-		"/images/items/01_3292/158_4247.jpg",
-		"/images/items/01_3292/159_4247.jpg",
-		"/images/items/01_3292/189_4247.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3292/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
-	"manualId": "0113"
+	"sourceUrl": "https://bandai-hobby.net/item/01_3292/"
 }

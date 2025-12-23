@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "HGBD 1/144 ガンダムベース限定 ガンダムダブルオーダイバー［トランザムクリア］",
-		"en": "HGBD 1/144 Gundam Base Limited Gundam Double O Diver [Trans-Am Clear]"
+		"en": "HG 1/144 THE GUNDAM BASE LIMITED GUNDAM 00 DIVER[TRANS-AM CLEAR]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ",
+			"en": "GUNDAM BUILD DIVERS"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,7 +64,6 @@
 		"day": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 『ガンダムビルドダイバーズ』主人公リクの操るガンプラがトランザムクリアカラーで登場！",
@@ -28,38 +73,40 @@
 			"• 広い可動域で、自由自在なポージングが可能！"
 		],
 		"en": [
-			"• Gunpla operated by Riku, the main character of \"Gundam Build Divers\", is now available in Trans-Am clear color!",
-			"• Based on the 00 Gundam, it has a specification that allows you to enjoy a wide range of customization.",
-			"• It comes with three types of weapon holders on each side to accommodate a variety of weapons, allowing you to equip it with a wide range of weapons, including those from the HGBC series and other Gunpla!",
-			"• 3mm joints installed in each part expand the range of mixing!",
-			"• Wide range of motion allows for flexible posing!"
+			"• \"BUILD DIVERS\" The GUNPLA controlled by the main character Riku is now available in Trans Am Clear Color!",
+			"• It is based on the Double-O GUNDAM and has specifications that allow you to enjoy a wide range of customizations.",
+			"• Three types of weapon handles are included on each side that can be used for a variety of weapons, and you can have a wide range of weapons, such as the HGBC series and other GUNPLA weapons!",
+			"• The range of mixing is expanded with 3mm joints provided in each part!",
+			"• With a wide range of motion, you can pose freely!"
 		]
 	},
-	"images": [
-		"/images/items/01_2430/1000153770_1.jpg",
-		"/images/items/01_2430/1000153770_2.jpg",
-		"/images/items/01_2430/1000153770_3.jpg",
-		"/images/items/01_2430/1000153770_4.jpg",
-		"/images/items/01_2430/1000153770_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153770_1.jpg",
+				"path": "/images/items/01_2430/1000153770_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153770_2.jpg",
+				"path": "/images/items/01_2430/1000153770_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153770_3.jpg",
+				"path": "/images/items/01_2430/1000153770_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153770_4.jpg",
+				"path": "/images/items/01_2430/1000153770_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153770_5.jpg",
+				"path": "/images/items/01_2430/1000153770_5.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2430/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2430/"
 	}
 }

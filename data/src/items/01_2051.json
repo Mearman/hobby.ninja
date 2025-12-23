@@ -5,6 +5,44 @@
 		"ja": "SDクロスシルエット マジンガーZ",
 		"en": "SD Cross Silhouette Mazinger Z"
 	},
+	"brands": [
+		{
+			"id": "sdcs-c",
+			"url": "https://bandai-hobby.net/brand/sdcs-c/",
+			"ja": "SDクロスシルエット"
+		}
+	],
+	"series": [
+		{
+			"id": "dynamic_characters",
+			"url": "https://bandai-hobby.net/series/dynamic_characters/",
+			"ja": "ダイナミックキャラクターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2257",
+			"url": "https://bandai-hobby.net/item/01_2257/",
+			"ja": "SDクロスシルエット マジンカイザー"
+		},
+		{
+			"id": "01_2258",
+			"url": "https://bandai-hobby.net/item/01_2258/",
+			"ja": "SDクロスシルエット 真ゲッター"
+		},
+		{
+			"id": "01_2052",
+			"url": "https://bandai-hobby.net/item/01_2052/",
+			"ja": "SDクロスシルエット グレートマジンガー"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -27,66 +65,125 @@
 		"en": [
 			"High target robot SDCS series starts! As the first step, the world-renowned IP \"Mazinger Z\" is made into three-dimensional!",
 			"• Various hand parts and effect parts are included.",
-			"• You can enjoy two types of heads, one with a low head and one with a high head."
+			"• By recombining, you can enjoy two types of heads, one with a low head and one with a high head."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ハンドパーツ×4(両平手・両握り手)",
-			"ロケットパンチエフェクトパーツ×1",
-			"ジェットスクランダー×1",
-			"ジェットスクランダー取付用腹部パーツ×1",
-			"低頭身用顔パーツ×1式",
-			"台座接続パーツ×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハンドパーツ"
+			},
+			"count": 4,
+			"unit": {
+				"ja": "(両平手・両握り手)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ロケットパンチエフェクトパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジェットスクランダー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジェットスクランダー取付用腹部パーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "低頭身用顔パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "台座接続パーツ"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 8
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131696_1.jpg",
+				"path": "/images/items/01_2051/1000131696_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131696_2.jpg",
+				"path": "/images/items/01_2051/1000131696_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131696_3.jpg",
+				"path": "/images/items/01_2051/1000131696_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131696_4.jpg",
+				"path": "/images/items/01_2051/1000131696_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131696_5.jpg",
+				"path": "/images/items/01_2051/1000131696_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131696_6.jpg",
+				"path": "/images/items/01_2051/1000131696_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131696_7.jpg",
+				"path": "/images/items/01_2051/1000131696_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131696_8.jpg",
+				"path": "/images/items/01_2051/1000131696_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131696_9.jpg",
+				"path": "/images/items/01_2051/1000131696_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131696_10.jpg",
+				"path": "/images/items/01_2051/1000131696_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131696_11.jpg",
+				"path": "/images/items/01_2051/1000131696_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000131696_12.jpg",
+				"path": "/images/items/01_2051/1000131696_12.jpg"
+			}
 		],
-		"en": [
-			"Hand parts x 4 (both open hands, both clenched hands)",
-			"Rocket punch effect parts x 1",
-			"Jet Scrander x1",
-			"Abdominal parts for jet sclander installation x 1",
-			"Face parts for low head size x 1 set",
-			"Pedestal connection parts x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×8",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 8",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2051/1000131696_1.jpg",
-		"/images/items/01_2051/1000131696_10.jpg",
-		"/images/items/01_2051/1000131696_11.jpg",
-		"/images/items/01_2051/1000131696_12.jpg",
-		"/images/items/01_2051/1000131696_2.jpg",
-		"/images/items/01_2051/1000131696_3.jpg",
-		"/images/items/01_2051/1000131696_4.jpg",
-		"/images/items/01_2051/1000131696_5.jpg",
-		"/images/items/01_2051/1000131696_6.jpg",
-		"/images/items/01_2051/1000131696_7.jpg",
-		"/images/items/01_2051/1000131696_8.jpg",
-		"/images/items/01_2051/1000131696_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2051/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"dynamic_characters"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2257",
-		"01_2258",
-		"01_2052"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2051/"
 }

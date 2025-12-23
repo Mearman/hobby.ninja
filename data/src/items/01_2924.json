@@ -5,6 +5,54 @@
 		"ja": "ハローキティ/RX-78-2 ガンダム[SD EX-STANDARD][クリアカラー]",
 		"en": "Hello Kitty/RX-78-2 Gundam[SD EX-STANDARD][Clear color]"
 	},
+	"brands": [
+		{
+			"id": "SDEX",
+			"url": "https://bandai-hobby.net/brand/SDEX/",
+			"ja": "SDEXスタンダード"
+		},
+		{
+			"id": "SDEX",
+			"url": "https://bandai-hobby.net/brand/SDEX/",
+			"ja": "SDEXスタンダード"
+		}
+	],
+	"series": [
+		{
+			"id": "hellokitty",
+			"url": "https://bandai-hobby.net/series/hellokitty/",
+			"ja": "ハローキティ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5074",
+			"url": "https://bandai-hobby.net/item/01_5074/",
+			"ja": "SDガンダム EXスタンダード ライジングフリーダムガンダム"
+		},
+		{
+			"id": "01_4260",
+			"url": "https://bandai-hobby.net/item/01_4260/",
+			"ja": "SDガンダム EXスタンダード ガンダムエアリアル"
+		},
+		{
+			"id": "01_3509",
+			"url": "https://bandai-hobby.net/item/01_3509/",
+			"ja": "SDガンダム EXスタンダード ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_3574",
+			"url": "https://bandai-hobby.net/item/01_3574/",
+			"ja": "SDガンダムEXスタンダード ガンダムベース限定 ZGMF-X10A フリーダムガンダム Ver.GCP"
+		}
+	],
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -36,29 +84,22 @@
 			"• Kitty can even do a sitting pose!"
 		]
 	},
-	"images": [
-		"/images/items/01_2924/153_3900.jpg",
-		"/images/items/01_2924/155_3900.jpg",
-		"/images/items/01_2924/156_3900.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2924/",
-	"brandIds": [
-		"SDEX"
-	],
-	"seriesIds": [
-		"hellokitty"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5074",
-		"01_4260",
-		"01_3509",
-		"01_3574"
-	],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3900_o_1e813h06hc6bok816oo3buk2h23.jpg",
+				"path": "/images/items/01_2924/153_3900.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3900_o_1e813hbi7dljb6i1b0uc2p1d532d.jpg",
+				"path": "/images/items/01_2924/155_3900.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3900_o_1e813hht61lcleldoacjo31q152i.jpg",
+				"path": "/images/items/01_2924/156_3900.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2924/"
 }

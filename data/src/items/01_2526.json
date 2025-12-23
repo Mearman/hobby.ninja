@@ -5,6 +5,43 @@
 		"ja": "BB戦士314 張遼ゲルググ",
 		"en": "BB Senshi 314 Zhang Liao Gelgoog"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -30,23 +67,22 @@
 			"-Armor is removable"
 		]
 	},
-	"images": [
-		"/images/items/01_2526/153_3451.jpg",
-		"/images/items/01_2526/155_3451.jpg",
-		"/images/items/01_2526/156_3451.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2526/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3451_s_6f03sp9jbrvc8cnaw4llsi1ze21h.jpg",
+				"path": "/images/items/01_2526/153_3451.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3451_s_uq4e3sfiwk8b736j7e1uwygvvdh1.jpg",
+				"path": "/images/items/01_2526/155_3451.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3451_s_1pui3oz16wp6sgh5vml5jvvewbro.jpg",
+				"path": "/images/items/01_2526/156_3451.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2526/"
 }

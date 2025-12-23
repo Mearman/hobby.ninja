@@ -5,6 +5,65 @@
 		"ja": "HGUC 1/144 クロスボーン・ガンダム Ｘ３",
 		"en": "HGUC 1/144 Crossbone Gundam X3"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "crossbone",
+			"url": "https://bandai-hobby.net/series/crossbone/",
+			"ja": "機動戦士クロスボーン・ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000154150",
+			"url": "https://p-bandai.jp/item/item-1000154150/",
+			"ja": "ＲＥ/100 1/100 ビギナ・ギナＩＩ（木星決戦仕様）"
+		},
+		{
+			"id": "item-1000142961",
+			"url": "https://p-bandai.jp/item/item-1000142961/",
+			"ja": "ＲＧ 1/144 クロスボーン・ガンダムＸ２"
+		},
+		{
+			"id": "item-1000136952",
+			"url": "https://p-bandai.jp/item/item-1000136952",
+			"ja": "ＭＧ 1/100 ガンダムＦ９１ Ｖｅｒ．２．０（ハリソン・マディン専用機）"
+		},
+		{
+			"id": "item-1000113952",
+			"url": "http://p-bandai.jp/item/item-1000113952/",
+			"ja": "ＭＧ 1/100 クロスボーン・ガンダムＸ２改 Ｖｅｒ．Ｋａ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -16,7 +75,6 @@
 		"year": 2017,
 		"month": 2
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"碧き第３の宇宙海賊―",
@@ -67,7 +125,7 @@
 		],
 		"en": [
 			"The third blue space pirate",
-			"From \"Mobile Suit Crossbone Gundam\", Crossbone Gundam X3 driven by Tobia Aronnax is now available in HGKit!",
+			"From \"Mobile Suit Crossbone Gundam\", Crossbone GundamX3 driven by Tobia Aronnax is now available in HGKit!",
 			"The impressive head shape, chest armor, and forearm with built-in I-field generator are reproduced with new modeling!",
 			"Includes a wide variety of weapons, including Muramasa Blaster!",
 			"● Reproduce the body shape of X3 with new modeling!",
@@ -82,7 +140,7 @@
 			"The shape of the I-field generator placed inside the forearm armor, which has an opening and closing gimmick, is also reproduced.",
 			"● Comes with a variety of weapons including Muramasa Blaster!",
 			"Muramasa Blaster",
-			"Crossbone Gundam X3's unique equipment, Muramasa Blaster, is included.",
+			"Crossbone GundamX3's unique equipment, Muramasa Blaster, is included.",
 			"The 14 beam emitters on the side of Muramasa Blaster and the beam blade emitted from the tip are",
 			"Can be reproduced with clear effect parts.",
 			"Muramasa Blaster can be posed in either sword or gun form.",
@@ -113,40 +171,50 @@
 			"- Product specifications are scheduled as of 201612. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_2906/153_3884.jpg",
-		"/images/items/01_2906/155_3884.jpg",
-		"/images/items/01_2906/156_3884.jpg",
-		"/images/items/01_2906/157_3884.jpg",
-		"/images/items/01_2906/158_3884.jpg",
-		"/images/items/01_2906/159_3884.jpg",
-		"/images/items/01_2906/189_3884.jpg",
-		"/images/items/01_2906/190_3884.jpg",
-		"/images/items/01_2906/191_3884.jpg",
-		"/images/items/01_2906/192_3884.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2906/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla",
-		"hguc"
-	],
-	"seriesIds": [
-		"crossbone"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000154150",
-		"item-1000142961",
-		"item-1000136952",
-		"item-1000113952"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3884_s_b7y61y3k67ikxf9o7f2mw6t6wif3.jpg",
+				"path": "/images/items/01_2906/153_3884.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3884_s_ebt2wgij03cg9bsqw41nkko8nmqq.jpg",
+				"path": "/images/items/01_2906/155_3884.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3884_s_v8zh03f182ootz0ce14a661j08hr.jpg",
+				"path": "/images/items/01_2906/156_3884.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3884_s_pimmqp042q1pen7hvp6ufp5frnza.jpg",
+				"path": "/images/items/01_2906/157_3884.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3884_s_u113s0zvbcbiflqhs5qk8o5x40td.jpg",
+				"path": "/images/items/01_2906/158_3884.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3884_s_tho02zm8l2m1ti2kmwsl3sw4f437.jpg",
+				"path": "/images/items/01_2906/159_3884.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3884_s_9umwllyegk4x2e0gu52e55xtmyv9.jpg",
+				"path": "/images/items/01_2906/189_3884.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3884_s_msqvc7nsr9svg5xuyyjey7jvmqvh.jpg",
+				"path": "/images/items/01_2906/190_3884.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3884_s_ijmiw650u9s8ai02zzom6mnzd4h0.jpg",
+				"path": "/images/items/01_2906/191_3884.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3884_s_dj40v9xzajepsm86mzex6gdu400q.jpg",
+				"path": "/images/items/01_2906/192_3884.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "2609"
+	"sourceUrl": "https://bandai-hobby.net/item/01_2906/"
 }

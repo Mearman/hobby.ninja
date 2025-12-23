@@ -5,6 +5,50 @@
 		"ja": "HGBC 1/144 プトレマイオスアームズ",
 		"en": "HGBC 1/144 Ptolemy Arms"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 990,
 		"currency": "JPY",
@@ -18,67 +62,83 @@
 		"day": 30
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム 00』に登場する母艦・プトレマイオス、通称「トレミー」によく似たカスタムパーツが登場！",
+			"『機動戦士ガンダム00』に登場する母艦・プトレマイオス、通称「トレミー」によく似たカスタムパーツが登場！",
 			"• GNビームコンテナに相応するパーツは、差替えでクローに変形し、手に持たせることが可能！",
 			"• 本体も前後に分割が可能で、それぞれがジョイントパーツを介することで2つ穴のジョイントと接続、様々なガンプラをパワーアップすることが出来る！"
 		],
 		"en": [
-			"Introducing custom parts that closely resemble the mothership Ptolemy, commonly known as \"Tolemy \", that appears in \" Mobile Suit Gundam 00\"!",
-			"• The parts corresponding to the GN beam container can be replaced to transform into a claw and held in your hand!",
+			"Introducing custom parts that closely resemble the mothership Ptolemy, commonly known as \"Tolemy\", that appears in \"Mobile Suit Gundam00\"!",
+			"• The parts corresponding to the GN Beam container can be replaced to transform into a claw and held in your hand!",
 			"• The main body can also be divided into front and back parts, and each can be connected to a two-hole joint through joint parts, allowing you to power up various Gunpla!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ジョイントA（コンテナ接続用）×4",
-			"ジョイントB（バックパック取付用）×1",
-			"ジョイントC（汎用）×2",
-			"ジョイントD（クロー展開用）×4"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ジョイントA（コンテナ接続用）"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "ジョイントB（バックパック取付用）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントC（汎用）"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ジョイントD（クロー展開用）"
+			},
+			"count": 4
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品×８"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2302_s_2k98bme8949t3h9gon9fg89uwu7n.jpg",
+				"path": "/images/items/01_1377/153_2302.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2302_s_pdsho7ljo0uywzyd43vwol7yecya.jpg",
+				"path": "/images/items/01_1377/155_2302.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2302_s_opr2in372l9oprkkh52fh5l8f8qx.jpg",
+				"path": "/images/items/01_1377/156_2302.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2302_s_b77haqx76r8dngyx3smjrx6bfr6i.jpg",
+				"path": "/images/items/01_1377/157_2302.jpg"
+			}
 		],
-		"en": [
-			"Joint A (for container connection) x 4",
-			"Joint B (for backpack attachment) x 1",
-			"Joint C (general purpose) x 2",
-			"Joint D (for claw deployment) x 4"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×８",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 8",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1377/153_2302.jpg",
-		"/images/items/01_1377/155_2302.jpg",
-		"/images/items/01_1377/156_2302.jpg",
-		"/images/items/01_1377/157_2302.jpg",
-		"/images/items/01_1377/01_1377_inst_0.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1377/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "0694"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1377/"
 }

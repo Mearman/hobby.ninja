@@ -5,6 +5,52 @@
 		"ja": "HG 1/144 デスアーミー",
 		"en": "HG 1/144 Death Army"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "ggundam",
+			"url": "https://bandai-hobby.net/series/ggundam/",
+			"ja": "機動武闘伝Ｇガンダム",
+			"en": "MOBILE FIGHTER G GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000213247",
+			"url": "https://p-bandai.jp/item/item-1000213247/",
+			"ja": "ＨＧ 1/144 ドラゴンガンダム"
+		},
+		{
+			"id": "item-1000194970",
+			"url": "https://p-bandai.jp/item/item-1000194970/",
+			"ja": "ＨＧ 1/144 ガンダムマックスター"
+		},
+		{
+			"id": "item-1000182906",
+			"url": "https://p-bandai.jp/item/item-1000182906/",
+			"ja": "ＨＧ 1/144 ガンダムローズ"
+		},
+		{
+			"id": "item-1000144970",
+			"url": "https://p-bandai.jp/item/item-1000144970/",
+			"ja": "ＨＧ 1/144 デスビースト"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -18,55 +64,58 @@
 		"day": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動武闘伝G ガンダム』に登場する、DG細胞によって無尽蔵に産み落とされる機体がHGで登場！",
+			"『機動武闘伝Gガンダム』に登場する、DG細胞によって無尽蔵に産み落とされる機体がHGで登場！",
 			"• デスアーミーの特徴的なカラーリングを成形色で再現。",
 			"• 足のパーツの差し替えにより脚部の折りたたみギミックを再現。",
 			"• ２種類の目は選択式。",
 			"• カスタムしやすい２つ穴ジョイントを搭載。",
-			"• HGFCシリーズの『機動武闘伝G ガンダム』ラインアップと合わせて迫力の乱戦シーンをディスプレイしよう！"
+			"• HGFCシリーズの『機動武闘伝Gガンダム』ラインアップと合わせて迫力の乱戦シーンをディスプレイしよう！"
 		],
 		"en": [
-			"The aircraft that appears in \"Mobile Fighter G Gundam\" and is produced inexhaustibly by DG cells is now available in HG!",
-			"• Death Army's characteristic coloring is reproduced with molded colors.",
-			"• Reproduce the folding gimmick of the legs by replacing the leg parts.",
+			"The aircraft that appears in \"Mobile Fighter G GUNDAM\", which is inexhaustibly spawned by DG cells, is now available in HG!",
+			"• The characteristic coloring of the Death Army is reproduced in molding colors.",
+			"• Reproduce the folding gimmick of the legs by replacing the parts of the legs.",
 			"• Two types of eyes are selectable.",
-			"• Equipped with a two-hole joint that is easy to customize.",
-			"• Display powerful melee scenes with the HGFC series \"Mobile Fighter G Gundam\" lineup!"
+			"• Equipped with a two-hole joint that is easy to customize."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"金棒型ライフル×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "金棒型ライフル",
+				"en": "• Metal rod rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "• Foil seal"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140851_1.jpg",
+				"path": "/images/items/01_2491/1000140851_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140851_2.jpg",
+				"path": "/images/items/01_2491/1000140851_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000140851_3.jpg",
+				"path": "/images/items/01_2491/1000140851_3.jpg"
+			}
 		],
-		"en": [
-			"Metal rod type rifle x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2491/1000140851_1.jpg",
-		"/images/items/01_2491/1000140851_2.jpg",
-		"/images/items/01_2491/1000140851_3.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2491/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"ggundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000213247",
-		"item-1000194970",
-		"item-1000182906",
-		"item-1000144970"
-	],
-	"manualId": "0496"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_2491/"
+	}
 }

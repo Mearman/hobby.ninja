@@ -5,6 +5,43 @@
 		"ja": "ハイパーファンクション LBXアキレス",
 		"en": "Hyperfunction LBX Achilles"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "lbx",
+			"url": "https://bandai-hobby.net/series/lbx/",
+			"ja": "ダンボール戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000215196",
+			"url": "https://p-bandai.jp/item/item-1000215196/",
+			"ja": "ＬＢＸイカロス・フォース"
+		},
+		{
+			"id": "item-1000215197",
+			"url": "https://p-bandai.jp/item/item-1000215197/",
+			"ja": "ＬＢＸイカロス・ゼロ"
+		},
+		{
+			"id": "item-1000210042",
+			"url": "https://p-bandai.jp/item/item-1000210042/",
+			"ja": "ＬＢＸエルシオン"
+		},
+		{
+			"id": "item-1000210041",
+			"url": "https://p-bandai.jp/item/item-1000210041/",
+			"ja": "ＬＢＸペルセウス"
+		}
+	],
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -32,54 +69,88 @@
 			"• The cloak is made of cloth. The mounting part is movable and the movement of the cloak can be reproduced."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"アキレスランス×1",
-			"アキレスシールド×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "アキレスランス"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アキレスシールド"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "テトロンシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マント"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3334_s_ag0iehfmbwu657rc5m28ouj7lo8r.jpg",
+				"path": "/images/items/01_2401/153_3334.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3334_s_0dszstiycfr77fmyvgzyihjlhvlt.jpg",
+				"path": "/images/items/01_2401/155_3334.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3334_s_lyls2t4i8gcqf3obymwckmem4r8i.jpg",
+				"path": "/images/items/01_2401/156_3334.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3334_s_zh8pv1buwuba7e2q0llt7t0060yw.jpg",
+				"path": "/images/items/01_2401/157_3334.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3334_s_71r9i3zqam8ndqjkgu4ygjr6efqv.jpg",
+				"path": "/images/items/01_2401/158_3334.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3334_s_r5h0zmby9d8gjvn9wh4a4awm9nhp.jpg",
+				"path": "/images/items/01_2401/159_3334.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3334_s_kwl0wktacy8fiwtnkjhrzkf8j0yc.jpg",
+				"path": "/images/items/01_2401/189_3334.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3334_s_ezsdg70j1axaz5wqnzhzr5lwsq9o.jpg",
+				"path": "/images/items/01_2401/190_3334.jpg"
+			}
 		],
-		"en": [
-			"Achilles Lance x1",
-			"Achilles Seal × 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×4",
-			"ホイルシール×1",
-			"テトロンシール×1",
-			"取扱説明書×1",
-			"マント×1"
-		],
-		"en": [
-			"Molded product x 4",
-			"Foil Seal×1",
-			"Tetron Seal×1",
-			"Handling manual×1",
-			"Cloak x 1"
-		]
-	},
-	"images": [
-		"/images/items/01_2401/153_3334.jpg",
-		"/images/items/01_2401/155_3334.jpg",
-		"/images/items/01_2401/156_3334.jpg",
-		"/images/items/01_2401/157_3334.jpg",
-		"/images/items/01_2401/158_3334.jpg",
-		"/images/items/01_2401/159_3334.jpg",
-		"/images/items/01_2401/189_3334.jpg",
-		"/images/items/01_2401/190_3334.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2401/",
-	"brandIds": [],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2401/"
 }

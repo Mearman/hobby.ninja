@@ -5,6 +5,43 @@
 		"ja": "BB戦士359 凌統ガンダム",
 		"en": "BB Senshi 359 Lingtou Gundam"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5395",
+			"url": "https://bandai-hobby.net/item/01_5395/",
+			"ja": "BB戦士 C.E.73 -STARGAZER- セット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -20,29 +57,28 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"• 孫権軍武将「凌統（りょうとう）ガンダム」登場。 • 専用の槍を装備。 成型品×3、ホイルシール×1、組立説明書×1"
+			"• 孫権軍武将「凌統（りょうとう）ガンダム」登場。 ■専用の槍を装備。 成型品×3、ホイルシール×1、組立説明書×1"
 		],
 		"en": [
-			"• The Sun Quan army general \"Ling Tong Gundam\" appears. • Equipped with a special spear. Molded product x 3, foil seal x 1, assembly manual x 1"
+			"• Sun Quan army general \"Ling Tong Gundam\" appears. ■Equipped with a special spear. Molded product x 3, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_1737/153_2665.jpg",
-		"/images/items/01_1737/155_2665.jpg",
-		"/images/items/01_1737/156_2665.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1737/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2665_s_h5vncf7x0z6dr33os514zavmgzx0.jpg",
+				"path": "/images/items/01_1737/153_2665.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2665_s_fo0nzldq7x3fpqagxqjsrywa7lq3.jpg",
+				"path": "/images/items/01_1737/155_2665.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2665_s_g9azi4wqqt2dzavbekkhh8qjkzid.jpg",
+				"path": "/images/items/01_1737/156_2665.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1737/"
 }

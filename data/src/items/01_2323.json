@@ -5,6 +5,49 @@
 		"ja": "BB戦士 ガンダムベース限定 Hi-νガンダム[スペシャルコーティング]",
 		"en": "BB Senshi Gundam Base Limited Hi-νGundam [Special Coating]"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4975",
+			"url": "https://bandai-hobby.net/item/01_4975/",
+			"ja": "BB戦士 MSN-04FF サザビー"
+		},
+		{
+			"id": "01_4190",
+			"url": "https://bandai-hobby.net/item/01_4190/",
+			"ja": "BB戦士 RX-93ff νガンダム"
+		},
+		{
+			"id": "01_46",
+			"url": "https://bandai-hobby.net/item/01_46/",
+			"ja": "BB戦士387 νガンダム"
+		},
+		{
+			"id": "01_5834",
+			"url": "https://bandai-hobby.net/item/01_5834/",
+			"ja": "BB戦士 384　Ｈｉ-νガンダム"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -30,35 +73,34 @@
 			"BB Senshi Hi-νGundam is now available with Gundam base limited special coating!",
 			"• The presence or absence of eyes can be selected by replacing parts.",
 			"• Funnel injection can be reproduced.",
-			"• Beam rifle and many other weapons are included.",
+			"• Comes with a beam rifle and many other weapons.",
 			"• Display pedestal included."
 		]
 	},
-	"images": [
-		"/images/items/01_2323/153_3260.jpg",
-		"/images/items/01_2323/155_3260.jpg",
-		"/images/items/01_2323/156_3260.jpg",
-		"/images/items/01_2323/157_3260.jpg",
-		"/images/items/01_2323/158_3260.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2323/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4975",
-		"01_4190",
-		"01_46",
-		"01_5834"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3260_s_l2gjdp9tp8m61ow8a95x5pacx1zy.jpg",
+				"path": "/images/items/01_2323/153_3260.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3260_s_qajolyzree9adnccaqaj1bm30bzm.jpg",
+				"path": "/images/items/01_2323/155_3260.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3260_s_xiq89yge44dz3d5uzbcqie86h62i.jpg",
+				"path": "/images/items/01_2323/156_3260.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3260_s_joewsy4rpobrj3e0aeyg6khnhpcd.jpg",
+				"path": "/images/items/01_2323/157_3260.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3260_s_d50ljyraou1p7eb2gzwvh5o14o8a.jpg",
+				"path": "/images/items/01_2323/158_3260.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2323/"
 }

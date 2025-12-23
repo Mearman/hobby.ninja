@@ -2,9 +2,46 @@
 	"id": "01_2885",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム Gジェネレーション9 ジョニー･ライデン ゲルググ",
-		"en": "SD Gundam G Generation 9 Johnny Riden Gelgoog"
+		"ja": "SDガンダムGジェネレーション9 ジョニー･ライデン ゲルググ",
+		"en": "SDGundamG Generation 9 Johnny Ridden Gelgoog"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4975",
+			"url": "https://bandai-hobby.net/item/01_4975/",
+			"ja": "BB戦士 MSN-04FF サザビー"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		}
+	],
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -22,26 +59,25 @@
 			"「ＳＤガンダムＧジェネレーション９ ジョニー・ライデン ゲルググ」が登場！"
 		],
 		"en": [
-			"\"SD Gundam G Generation 9 Johnny Riden Gelgoog\" is now available!"
+			"\"SD GundamG Generation 9 Johnny Riden Gelgoog\" is now available!"
 		]
 	},
-	"images": [
-		"/images/items/01_2885/153_3865.jpg",
-		"/images/items/01_2885/155_3865.jpg",
-		"/images/items/01_2885/156_3865.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2885/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3865_s_2p7ty1hd25ggvrtlg83zvylbn9wu.jpg",
+				"path": "/images/items/01_2885/153_3865.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3865_s_9kgrctp2sopv7ehxmj3qdrdm6dnq.jpg",
+				"path": "/images/items/01_2885/155_3865.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3865_s_2d4yg0a5mpu5kf1846b84at3u2an.jpg",
+				"path": "/images/items/01_2885/156_3865.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_2885/"
 }

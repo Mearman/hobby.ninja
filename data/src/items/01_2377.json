@@ -5,6 +5,43 @@
 		"ja": "ハロプラ 黒い三連ハロ",
 		"en": "Haropura black triple halo"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5189",
+			"url": "https://bandai-hobby.net/item/01_5189/",
+			"ja": "オプションパーツセット ガンプラ 04 (ビルドハンズ 丸型)"
+		},
+		{
+			"id": "01_5190",
+			"url": "https://bandai-hobby.net/item/01_5190/",
+			"ja": "オプションパーツセット ガンプラ 03 (ビルドハンズ 角型)"
+		},
+		{
+			"id": "01_3063",
+			"url": "https://bandai-hobby.net/item/01_3063/",
+			"ja": "ハロプラ ガンダムベース限定 モビルハロ[ガンダムベースカラー]"
+		},
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -30,50 +67,65 @@
 			"From Haropura, which reproduces the internal mechanism and is easy to assemble, a black triple-star Haro is now available!",
 			"• The ears can be opened and closed, and the limbs can be recreated by replacing them!",
 			"• Can be connected with other Haropla and Petitgguy!",
-			"• Excess parts can be stored on the pedestal.",
-			"• Comes with a foil seal that can reproduce the numbers of 3 aircraft."
+			"• Surplus parts can be stored on the pedestal.",
+			"• Comes with foil seals that can reproduce the numbers of 3 aircraft."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"台座×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "台座×１"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3311_s_d0tufhjuqh6ww1gpq9k32pm0zpon.jpg",
+				"path": "/images/items/01_2377/153_3311.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3311_s_ix6q1ns7cjgykpsb8jnfu9gu7evg.jpg",
+				"path": "/images/items/01_2377/155_3311.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3311_s_d0u24ryn15wrihwi3e8fxge3m9x1.jpg",
+				"path": "/images/items/01_2377/156_3311.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3311_s_odc7653cdd23v0epx5xjriegm3kv.jpg",
+				"path": "/images/items/01_2377/157_3311.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3311_s_4hu5w02mlsd5wiskpt744n4f4rkl.jpg",
+				"path": "/images/items/01_2377/158_3311.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3311_s_barhyy9pabpuf0on5d9wicvfavjv.jpg",
+				"path": "/images/items/01_2377/159_3311.jpg"
+			}
 		],
-		"en": [
-			"Pedestal x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×3",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 3",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2377/153_3311.jpg",
-		"/images/items/01_2377/155_3311.jpg",
-		"/images/items/01_2377/156_3311.jpg",
-		"/images/items/01_2377/157_3311.jpg",
-		"/images/items/01_2377/158_3311.jpg",
-		"/images/items/01_2377/159_3311.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2377/",
-	"brandIds": [],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5189",
-		"01_5190",
-		"01_3063",
-		"01_2623"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2377/"
 }

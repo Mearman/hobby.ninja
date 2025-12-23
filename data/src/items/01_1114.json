@@ -5,6 +5,60 @@
 		"ja": "ＲＧ 1/144 ゼータガンダム ＲＧリミテッドカラーＶｅｒ．",
 		"en": "RG 1/144 Zeta Gundam RG Limited Color Ver."
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000159026",
+			"url": "https://p-bandai.jp/item/item-1000159026/",
+			"ja": "ＨＧ 1/144 バウンド・ドック（ゲーツ・キャパ専用機）"
+		},
+		{
+			"id": "item-1000155118",
+			"url": "https://p-bandai.jp/item/item-1000155118/",
+			"ja": "ＨＧ 1/144 リック・ディアス"
+		},
+		{
+			"id": "item-1000145352",
+			"url": "https://p-bandai.jp/item/item-1000145352/",
+			"ja": "ＭＧ 1/100 RMS-179 ジムII（エゥーゴカラーＶｅｒ．）"
+		},
+		{
+			"id": "item-1000145001",
+			"url": "https://p-bandai.jp/item/item-1000145001/",
+			"ja": "ＨＧ 1/144 リック・ディアス（クワトロ・バジーナ機）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -17,30 +71,14 @@
 		"month": 8
 	},
 	"targetAge": 15,
-	"scale": "1/144",
-	"images": [
-		"/images/items/01_1114/153_2046.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1114/",
-	"brandIds": [
-		"rg",
-		"pb_rg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000159026",
-		"item-1000155118",
-		"item-1000145352",
-		"item-1000145001"
-	],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2046_o_1bi5oead61f911qll1ijp18lp4a723.jpg",
+				"path": "/images/items/01_1114/153_2046.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1114/"
 }

@@ -5,6 +5,44 @@
 		"ja": "1/100 ガルバルディβ",
 		"en": "1/100 Garibaldi β"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 6
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士Ｚガンダム』より、1/100スケールでガルバルディβが登場。",
@@ -28,22 +65,18 @@
 			"Cockpit hatch can be opened and closed. The fingers other than the thumb can move independently. The expansion and contraction mechanism of Seal can be reproduced without replacement. Comes with figures of Laila, Mila, and Laila."
 		]
 	},
-	"images": [
-		"/images/items/01_3192/153_4150.jpg",
-		"/images/items/01_3192/155_4150.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3192/",
-	"brandIds": [],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4150_s_hkjfc6u9hsqraxi9jhbk6wtgjmyp.jpg",
+				"path": "/images/items/01_3192/153_4150.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4150_s_wkb3kigyxg6yoi0kf0n49o9zgtth.jpg",
+				"path": "/images/items/01_3192/155_4150.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3192/"
 }

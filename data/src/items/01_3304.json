@@ -5,6 +5,60 @@
 		"ja": "ＭＧ 1/100 ガンダムＦ９０用 ミッションパック Ｄタイプ＆Ｇタイプ",
 		"en": "Mission pack for MG 1/100 Gundam F90 D type & G type"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "f90",
+			"url": "https://bandai-hobby.net/series/f90/",
+			"ja": "機動戦士ガンダムF90"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7056",
+			"url": "https://bandai-hobby.net/item/01_7056/",
+			"ja": "MG 1/100 F90IIIY クラスターガンダム用 ミッションパック Xタイプ"
+		},
+		{
+			"id": "item-1000224327",
+			"url": "https://p-bandai.jp/item/item-1000224327/",
+			"ja": "ＭＧ 1/100 Ｆ８０ ガンレイド"
+		},
+		{
+			"id": "item-1000224952",
+			"url": "https://p-bandai.jp/item/item-1000224952/",
+			"ja": "ＭＧ 1/100 ガンダムＦ９０用 ミッションパック Ｏタイプ＆Ｕタイプ"
+		},
+		{
+			"id": "item-1000223362",
+			"url": "https://p-bandai.jp/item/item-1000223362/",
+			"ja": "ＭＧ 1/100 ガンダムＦ９０用 ミッションパック Ｂタイプ＆Ｋタイプ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"接 近 ・ 制 圧 戦 仕 様 の Ｄ タ イ プ、",
@@ -80,7 +133,7 @@
 			"Introducing a mission pack that can be jointed with \"MG 1/100 Gundam F90\" (sold separately) to reproduce the D type for close-in/suppression battles and the G type for security/escort specifications!",
 			"---",
 			"*The MS body is not included with this product.",
-			"* To reproduce the posted photo, this product and \"MG 1/100 Gundam F90\" (sold separately/Premium Bandai sales item) are required.",
+			"* To reproduce the posted photo, this product and \"MG 1/100 GundamF90\" (sold separately/Premium Bandai sales item) are required.",
 			"A mission pack developed for the prototype MS Gundam F90 of the \"Formula Plan\" by Sanary (S・N・R・I).",
 			"The D type and the newly drawn G type are now available in master grade with completely new modeling!",
 			"<Two types of mission packs can be reproduced! ＞",
@@ -99,7 +152,7 @@
 			"A mission pack newly drawn by Kunio Okawara.",
 			"Large multiple beam weapons and large seals are now three-dimensional with new modeling!",
 			"Multiple Beam Weapon",
-			"The handle part rotates, allowing you to switch between \"sword form \" and \" rifle form\".",
+			"The handle part rotates, allowing you to switch between \"sword form\" and \"rifle form\".",
 			"Includes a large beam blade effect for sword form.",
 			"Large Seal",
 			"Reproduce the large seal that covers the left shoulder. The side parts can be flipped up to create various poses.",
@@ -128,39 +181,50 @@
 			"- Product specifications are scheduled as of 20209. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_3304/1000149236_1.jpg",
-		"/images/items/01_3304/1000149236_10.jpg",
-		"/images/items/01_3304/1000149236_2.jpg",
-		"/images/items/01_3304/1000149236_3.jpg",
-		"/images/items/01_3304/1000149236_4.jpg",
-		"/images/items/01_3304/1000149236_5.jpg",
-		"/images/items/01_3304/1000149236_6.jpg",
-		"/images/items/01_3304/1000149236_7.jpg",
-		"/images/items/01_3304/1000149236_8.jpg",
-		"/images/items/01_3304/1000149236_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3304/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"f90"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_7056",
-		"item-1000224327",
-		"item-1000224952",
-		"item-1000223362"
-	],
-	"manualId": "2754",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149236_1.jpg",
+				"path": "/images/items/01_3304/1000149236_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149236_2.jpg",
+				"path": "/images/items/01_3304/1000149236_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149236_3.jpg",
+				"path": "/images/items/01_3304/1000149236_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149236_4.jpg",
+				"path": "/images/items/01_3304/1000149236_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149236_5.jpg",
+				"path": "/images/items/01_3304/1000149236_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149236_6.jpg",
+				"path": "/images/items/01_3304/1000149236_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149236_7.jpg",
+				"path": "/images/items/01_3304/1000149236_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149236_8.jpg",
+				"path": "/images/items/01_3304/1000149236_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149236_9.jpg",
+				"path": "/images/items/01_3304/1000149236_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000149236_10.jpg",
+				"path": "/images/items/01_3304/1000149236_10.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3304/"
 }

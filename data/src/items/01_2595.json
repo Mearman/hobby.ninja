@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard バーダック",
 		"en": "Figure-rise Standard Bardock"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4901",
+			"url": "https://bandai-hobby.net/item/01_4901/",
+			"ja": "Figure-rise Standard ベジータ (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_4219",
+			"url": "https://bandai-hobby.net/item/01_4219/",
+			"ja": "Figure-rise Standard 孫悟空 (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_2974",
+			"url": "https://bandai-hobby.net/item/01_2974/",
+			"ja": "Figure-rise Standard アルティメット孫悟飯"
+		},
+		{
+			"id": "01_2769",
+			"url": "https://bandai-hobby.net/item/01_2769/",
+			"ja": "Figure-rise Standard ジレン"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -30,57 +73,100 @@
 		],
 		"en": [
 			"Goku's father Bardock from \"Dragon Ball Z\" is now a plastic model!",
-			"• The charm of Bardock is recreated in every detail, including the cross scar on his cheek and his rugged expression.",
+			"• Bardock's charm is recreated in detail, including the cross scar on his cheek and his rugged expression.",
 			"• Equipped with a muscle build system that reproduces muscle parts by modeling and dividing!",
-			"• High range of motion and included effect parts allow you to recreate famous scenes and special move poses.",
+			"• With a high range of motion and included effect parts, you can recreate famous scenes and special move poses.",
 			"• Effects using clear parts reproduce the release and storage states.",
-			"• Two types of facial expression parts are included: \"normal \" and \" screaming\".",
-			"• Two types of hand parts are included: grip and open hand for both left and right hands!"
+			"• Two types of facial expression parts are included: \"normal\" and \"screaming\".",
+			"• Two types of hand parts are included, one for the left and one for the left and the right!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"表情パーツ×2種",
-			"ハンドパーツ 左手×2種 右手×2種",
-			"必殺技エフェクト×2（気弾溜め、放出）",
-			"必殺技エフェクト用台座×1",
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情パーツ"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ 左手"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "必殺技エフェクト"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "（気弾溜め、放出）"
+			}
+		},
+		{
+			"name": {
+				"ja": "必殺技エフェクト用台座"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3518_s_jn3zaq0rf9r486jpndqjuh387cg3.jpg",
+				"path": "/images/items/01_2595/153_3518.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3518_s_mxcjyawlm3mzmwemcrkq2gozylmi.jpg",
+				"path": "/images/items/01_2595/155_3518.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3518_s_js4gjetvmxygzuso0idp07g1258m.jpg",
+				"path": "/images/items/01_2595/156_3518.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3518_s_b0a91yf1c2nkcmejg639jxyk48l6.jpg",
+				"path": "/images/items/01_2595/157_3518.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3518_s_038s5bpu36rh10lepfyllgw48dc2.jpg",
+				"path": "/images/items/01_2595/158_3518.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3518_s_vpmdhvzd0r33oej4easmbv678tx4.jpg",
+				"path": "/images/items/01_2595/159_3518.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3518_s_7g7deluxehooq6zk9fusr95w71ex.jpg",
+				"path": "/images/items/01_2595/189_3518.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3518_s_fyts4mykqpxqro25ph4jceg31d4n.jpg",
+				"path": "/images/items/01_2595/190_3518.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3518_s_j9xnu842z197dg5m3mq182yxynr0.jpg",
+				"path": "/images/items/01_2595/191_3518.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_3518_s_qk38vewcamkgrpzgqx5d4gl3v8di.jpg",
+				"path": "/images/items/01_2595/192_3518.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_3518_s_1vx9u6bm6ev2l53wgxrcyjdj55oc.jpg",
+				"path": "/images/items/01_2595/193_3518.jpg"
+			}
 		],
-		"en": [
-			"Facial expression parts x 2 types",
-			"Hand parts Left hand x 2 types Right hand x 2 types",
-			"Special move effect x 2 (Ki bullet storage, release)",
-			"Special move effect pedestal x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2595/153_3518.jpg",
-		"/images/items/01_2595/155_3518.jpg",
-		"/images/items/01_2595/156_3518.jpg",
-		"/images/items/01_2595/157_3518.jpg",
-		"/images/items/01_2595/158_3518.jpg",
-		"/images/items/01_2595/159_3518.jpg",
-		"/images/items/01_2595/189_3518.jpg",
-		"/images/items/01_2595/190_3518.jpg",
-		"/images/items/01_2595/191_3518.jpg",
-		"/images/items/01_2595/192_3518.jpg",
-		"/images/items/01_2595/193_3518.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2595/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"dragonball"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4901",
-		"01_4219",
-		"01_2974",
-		"01_2769"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2595/"
 }

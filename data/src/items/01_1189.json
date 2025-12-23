@@ -5,6 +5,43 @@
 		"ja": "ビークルモデル 011 Ｘウイング・ファイター レジスタンス ブルー中隊仕様",
 		"en": "Vehicle Model 011 X-Wing Fighter Resistance Blue Company Specification"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3515",
+			"url": "https://bandai-hobby.net/item/01_3515/",
+			"ja": "1/12 ザ・マンダロリアン(ベスカーアーマー)"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -30,44 +67,56 @@
 			"Total length: approx. 87mm"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用ディスプレイベース ×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ディスプレイベース ×１"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 5
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "（箱裏に印刷）"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2116_s_0lg97jxo2mdirouoxntfpsta7qrg.jpg",
+				"path": "/images/items/01_1189/153_2116.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2116_s_7osirzm7rx9oxf6ovlpif445i5vz.jpg",
+				"path": "/images/items/01_1189/155_2116.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2116_s_m4h9gcnp7s9dp764i0vm96tvnrk1.jpg",
+				"path": "/images/items/01_1189/156_2116.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2116_s_j05yla2mqna8q7kmaqc2e4uha4e4.jpg",
+				"path": "/images/items/01_1189/157_2116.jpg"
+			}
 		],
-		"en": [
-			"Dedicated display base x1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×5",
-			"マーキングシール×1",
-			"取扱説明書×1（箱裏に印刷）"
-		],
-		"en": [
-			"Molded product x 5",
-			"MarkingSeal×1",
-			"Handling manual x 1 (printed on the back of the box)"
-		]
-	},
-	"images": [
-		"/images/items/01_1189/153_2116.jpg",
-		"/images/items/01_1189/155_2116.jpg",
-		"/images/items/01_1189/156_2116.jpg",
-		"/images/items/01_1189/157_2116.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1189/",
-	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3515"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_1189/"
 }

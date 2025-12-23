@@ -3,8 +3,59 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC 1/144 MSM-07 ズゴック",
-		"en": "HGUC 1/144 MSM-07 Z'Gok"
+		"en": "1/144 HGUC Z'GOCK"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］",
+			"en": "HG [HIGH GRADE]"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -17,40 +68,42 @@
 		"month": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、1/144スケールでHGUC ズゴックが登場。",
 			"形状・武器ともに圧倒的な存在感を放った機体を忠実に再現しました。曲線を描く腕部及び脚部、そして胴部にもABS樹脂製ボールジョイントを採用し、いろいろなアクションポーズをとることが可能です。クロー（爪）部分は可動します。足底は新たに設定されたパターンを精密に再現しました。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam\", HGUC Z'Gok appears in 1/144 scale.",
-			"The aircraft, which has an overwhelming presence in terms of shape and weapons, has been faithfully reproduced. ABS resin ball joints are used for the curved arms, legs, and torso, allowing for various action poses. The claw part is movable. The sole of the foot precisely reproduces the newly set pattern."
+			"From \"MOBILE SUIT GUNDAM\", HGUC Zugok appeared on 1/144 scale. We have faithfully reproduced the aircraft that had an overwhelming presence in both shape and weapons. ABS resin ball joints are also used for the curved arms and legs, as well as the torso, making it possible to take various action poses. The claw part is movable. The sole of the foot precisely reproduces the newly set pattern."
 		]
 	},
-	"images": [
-		"/images/items/01_1623/1000092200_1.jpg",
-		"/images/items/01_1623/1000092200_2.jpg",
-		"/images/items/01_1623/1000092200_3.jpg",
-		"/images/items/01_1623/1000092200_4.jpg",
-		"/images/items/01_1623/1000092200_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092200_1.jpg",
+				"path": "/images/items/01_1623/1000092200_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092200_2.jpg",
+				"path": "/images/items/01_1623/1000092200_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092200_3.jpg",
+				"path": "/images/items/01_1623/1000092200_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092200_4.jpg",
+				"path": "/images/items/01_1623/1000092200_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092200_5.jpg",
+				"path": "/images/items/01_1623/1000092200_5.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1623/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
-	"manualId": "0203"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1623/"
+	}
 }

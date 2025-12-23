@@ -5,6 +5,44 @@
 		"ja": "1/60 シャア専用ゲルググ",
 		"en": "1/60 Char's Gelgoog"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、1/60スケールで、シャア専用ゲルググが登場。",
@@ -28,21 +65,14 @@
 			"The mono eye can move independently and can be lit using a wheat bulb and two AA batteries (sold separately). The shoulder armor can be moved independently. The legs can be moved from side to side, in a V-shaped direction, and the ankles can be swung back and forth. The wrist parts include left and right hand grips and a right hand for the beam rifle. Beam Naginata can be expanded, stored, and mounted on the back. Comes with Char and Zeon soldier figures of the same scale."
 		]
 	},
-	"images": [
-		"/images/items/01_3132/153_4097.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3132/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4097_s_6uf1mosraxk1co5mh0mut5r5spbo.jpg",
+				"path": "/images/items/01_3132/153_4097.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3132/"
 }

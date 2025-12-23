@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ジョニー・ライデン専用ザクII",
 		"en": "MG 1/100 Johnny Riden Zaku II"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3080,
 		"currency": "JPY",
@@ -17,35 +61,30 @@
 		"month": 7
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム」より、１年戦争で「紅い稲妻」の異名をとったジオン公国軍のエースパイロットである「ジョニー・ライデン少佐」の専用機のキット化です。足部はフレアアーマーの内部まで細密にディティールが施されています。独特のスパイクアーマーは、細かなモールドまで再現されています。また、動力パイプは、密巻きスプリングとパイプパーツによりリアルに再現しています。武器はザクマシンガン、ヒートホーク、ザクバズーカが付いています。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam \", a kit version of the special aircraft of Major Johnny Ridden, the ace pilot of the Zeon Principality Army who earned the nickname \" Crimson Lightning\" in the first war. The legs have fine details even inside the flared armor. The unique spike armor has been reproduced down to the minute mold. In addition, the power pipe is realistically reproduced with tightly wound springs and pipe parts. Weapons include Zaku Machine Gun, Heat Hawk, and Zaku Bazooka."
+			"From \"Mobile Suit Gundam\", a kit version of the special aircraft of Major Johnny Ridden, the ace pilot of the Zeon Principality Army who earned the nickname \"Crimson Lightning\" in the first war. The legs have fine details even inside the flared armor. The unique spike armor has been reproduced down to the minute mold. In addition, the power pipe is realistically reproduced with tightly wound springs and pipe parts. Weapons include Zaku Machine Gun, Heat Hawk, and Zaku Bazooka."
 		]
 	},
-	"images": [
-		"/images/items/01_1558/153_2473.jpg",
-		"/images/items/01_1558/155_2473.jpg",
-		"/images/items/01_1558/156_2473.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1558/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
-	"manualId": "0808"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/156_2473_s_boe6w0hdjrosc7m4hwzzb9djxals.jpg",
+				"path": "/images/items/01_1558/156_2473.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_2473_s_hp1qkyu13mf9y4rhv3tqhnrilu60.jpg",
+				"path": "/images/items/01_1558/153_2473.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2473_s_9bcpuhd9krpmng1niofkxzq147mt.jpg",
+				"path": "/images/items/01_1558/155_2473.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1558/"
 }

@@ -5,6 +5,55 @@
 		"ja": "HGPG 1/144 プチッガイ ジャスティッガイ",
 		"en": "HGPG 1/144 Petitgguy Justygguy"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "petitgguy",
+			"url": "https://bandai-hobby.net/brand/petitgguy/",
+			"ja": "プチッガイ/ベアッガイ"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 990,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『ガンダムビルドダイバーズRe:RISE』よりガンダムジャスティスナイトをベースとしたプチッガイが登場。",
@@ -30,46 +78,56 @@
 			"From \"Gundam Build Divers Re:RISE\" comes Petit'g Guy based on Gundam Justice Knight.",
 			"• Lance, seal, and cloak included.",
 			"• The antenna is reproduced with Seal.",
-			"• Special pedestal included."
+			"• Comes with a special pedestal."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ランス×１",
-			"シールド×１",
-			"マント×１",
-			"専用台座×１",
-			"ホイルシール×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ランス×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "マント×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "専用台座×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール×１"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3542_s_d7pvv0lzuyk9uml9ccc9rwa90f2j.jpg",
+				"path": "/images/items/01_2621/153_3542.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3542_s_prg466f2cd25uq1gtxh2f8piws0z.jpg",
+				"path": "/images/items/01_2621/155_3542.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3542_s_ei2i5mkzsgciherbcwz029e8vft6.jpg",
+				"path": "/images/items/01_2621/156_3542.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3542_s_b26b2ofsb2a1bw0x1tqrodfvkw6g.jpg",
+				"path": "/images/items/01_2621/157_3542.jpg"
+			}
 		],
-		"en": [
-			"Lance x1",
-			"Seal de x1",
-			"Cloak x 1",
-			"Dedicated pedestal x 1",
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_2621/153_3542.jpg",
-		"/images/items/01_2621/155_3542.jpg",
-		"/images/items/01_2621/156_3542.jpg",
-		"/images/items/01_2621/157_3542.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2621/",
-	"brandIds": [
-		"hg",
-		"petitgguy"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2621/"
 }

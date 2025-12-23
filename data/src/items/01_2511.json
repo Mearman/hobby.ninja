@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard ピッコロ",
 		"en": "Figure-rise Standard Piccolo"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4901",
+			"url": "https://bandai-hobby.net/item/01_4901/",
+			"ja": "Figure-rise Standard ベジータ (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_4219",
+			"url": "https://bandai-hobby.net/item/01_4219/",
+			"ja": "Figure-rise Standard 孫悟空 (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_2974",
+			"url": "https://bandai-hobby.net/item/01_2974/",
+			"ja": "Figure-rise Standard アルティメット孫悟飯"
+		},
+		{
+			"id": "01_2769",
+			"url": "https://bandai-hobby.net/item/01_2769/",
+			"ja": "Figure-rise Standard ジレン"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -30,66 +73,105 @@
 		"en": [
 			"Figure-rise Standard Piccolo is now available with a renewed package! !",
 			"• With the powered-up muscle build system, Piccolo's characteristic arm muscles are reproduced using only molded colors!",
-			"• In addition, the movement is powered up! The arms can be posed with folded arms thanks to the pull-out joints in the shoulders and arms!",
-			"• Piccolo's signature cloak and turban are included, so you can enjoy Piccolo in various scenes!",
-			"• New parts \"Dramatic Parts \" that can be combined with other characters to further expand the range of play include \" Super Saiyan Son Gohan\" hair parts! Scenes from the play of the teacher-pupil duo can now be recreated!",
+			"• Furthermore, the movement is powered up! The arms can be posed with folded arms thanks to the pull-out joints in the shoulders and arms!",
+			"• Comes with Piccolo's signature cloak and turban, so you can enjoy Piccolo in various scenes!",
+			"• New parts \"Dramatic Parts\" that can be combined with other characters to further expand the range of play include \"Super Saiyan Son Gohan\" hair parts! Scenes from the play between teacher and student can now be recreated!",
 			"• Effect parts include Piccolo's special move \"Makan Kosatsuhou\"!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"必殺技エフェクト（魔貫光殺砲）×1",
-			"表情パーツ3種（平常、怒り、ターバン着用（平常））×各1",
-			"手首パーツ2種（左右握り手、魔貫光殺砲用右手）×各1",
-			"ターバン、マント×各1",
-			"超サイヤ人孫悟飯用　頭髪パーツ×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "必殺技エフェクト（魔貫光殺砲）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "表情パーツ3種（平常、怒り、ターバン着用（平常））×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "手首パーツ2種（左右握り手、魔貫光殺砲用右手）×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ターバン、マント×各1"
+			}
+		},
+		{
+			"name": {
+				"ja": "超サイヤ人孫悟飯用　頭髪パーツ"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 10
+		},
+		{
+			"name": {
+				"ja": "ホイルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/192_3437_o_1dht9ois41t2r1l291ej61g7s1s3a3l.jpg",
+				"path": "/images/items/01_2511/192_3437.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_3437_o_1dht9n1dn1fnrnvn1ei81lq7h5m23.jpg",
+				"path": "/images/items/01_2511/153_3437.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3437_o_1dht9ncduafv1hps15vcre8d9s2d.jpg",
+				"path": "/images/items/01_2511/155_3437.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3437_o_1dht9ngsb1p2j1md9a1bg6i1gti2i.jpg",
+				"path": "/images/items/01_2511/156_3437.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3437_o_1dht9nldvok01ku91ctr1lk1id72n.jpg",
+				"path": "/images/items/01_2511/157_3437.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3437_o_1dht9npuu1fkniqk116rp8t9qa2s.jpg",
+				"path": "/images/items/01_2511/158_3437.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_3437_o_1dht9nueu14fiqsi11laj471lsl31.jpg",
+				"path": "/images/items/01_2511/159_3437.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_3437_o_1dht9o3mh1h0o172dvaivdg1h7m36.jpg",
+				"path": "/images/items/01_2511/189_3437.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_3437_o_1dht9o90f5njks1o7iuos1ln33b.jpg",
+				"path": "/images/items/01_2511/190_3437.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_3437_o_1dht9odj78m0odqc962mlp0f3g.jpg",
+				"path": "/images/items/01_2511/191_3437.jpg"
+			}
 		],
-		"en": [
-			"Special move effect (Magical light killing gun) x 1",
-			"3 types of facial expression parts (normal, angry, wearing turban (normal)) x 1 each",
-			"2 types of wrist parts (left and right gripping hands, right hand for Makankosatsu gun) x 1 each",
-			"Turban, cloak x 1 each",
-			"Hair parts for Super Saiyan Son Gohan x 1"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×10",
-			"ホイルシール×1",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 10",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_2511/153_3437.jpg",
-		"/images/items/01_2511/155_3437.jpg",
-		"/images/items/01_2511/156_3437.jpg",
-		"/images/items/01_2511/157_3437.jpg",
-		"/images/items/01_2511/158_3437.jpg",
-		"/images/items/01_2511/159_3437.jpg",
-		"/images/items/01_2511/189_3437.jpg",
-		"/images/items/01_2511/190_3437.jpg",
-		"/images/items/01_2511/191_3437.jpg",
-		"/images/items/01_2511/192_3437.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_2511/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"dragonball"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4901",
-		"01_4219",
-		"01_2974",
-		"01_2769"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_2511/"
 }

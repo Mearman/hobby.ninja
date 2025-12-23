@@ -5,6 +5,44 @@
 		"ja": "1/100 リアルタイプ ジム",
 		"en": "1/100 real type gym"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5474",
+			"url": "https://bandai-hobby.net/item/01_5474/",
+			"ja": "ザクプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5475",
+			"url": "https://bandai-hobby.net/item/01_5475/",
+			"ja": "シャアザクくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -17,7 +55,6 @@
 		"month": 4
 	},
 	"targetAge": 8,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、1/100スケールで、MSVシリーズリアルタイプジムが登場。",
@@ -28,22 +65,18 @@
 			"This model maintains the basic white color, but molds the other colors in military-style dark tones. Comes with a special decal. The arms can swing back and forth, the legs can be left and right, and the legs can be opened in a V-shape. The wrist has a grip that can hold the beam spray gun, left and right palms, and a grip that can hold the beam saber. The beam saber comes in two types, long and short."
 		]
 	},
-	"images": [
-		"/images/items/01_3157/153_4119.jpg",
-		"/images/items/01_3157/155_4119.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3157/",
-	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4119_s_lawj1eu14z2prpstmayky5civ5g7.jpg",
+				"path": "/images/items/01_3157/153_4119.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4119_s_fyy96iyv4l1hsbecxumqeism61qs.jpg",
+				"path": "/images/items/01_3157/155_4119.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3157/"
 }

@@ -3,8 +3,18 @@
 	"type": "item",
 	"name": {
 		"ja": "LEDユニット(イエロー)",
-		"en": "LED unit (yellow)"
+		"en": "LED UNIT(YELLOW)"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "item_all",
+			"url": "https://bandai-hobby.net/item_all",
+			"ja": "商品一覧"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 990,
 		"currency": "JPY",
@@ -23,30 +33,47 @@
 			"様々なガンプラに使用できる黄色のLEDユニットが単品で登場！"
 		],
 		"en": [
-			"A yellow LED unit that can be used for various Gunpla is now available as a single item!"
+			"A yellow LED unit that can be used for various GUNPLA is now available as a single item! 【Product details】",
+			"• LED Unit ×1",
+			"• Lid×1",
+			"• Screw × 1"
 		]
 	},
-	"contents": {
-		"ja": [
-			"ＬＥＤユニット×1",
-			"蓋×1",
-			"ビス×1"
+	"contents": [
+		{
+			"name": {
+				"ja": "ＬＥＤユニット"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "蓋"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビス"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000124144_1.jpg",
+				"path": "/images/items/01_1275/1000124144_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000124144_2.jpg",
+				"path": "/images/items/01_1275/1000124144_2.jpg"
+			}
 		],
-		"en": [
-			"LED unit x 1",
-			"Lid x 1",
-			"Screw x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_1275/1000124144_1.jpg",
-		"/images/items/01_1275/1000124144_2.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1275/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
-	"relatedItemIds": []
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1275/"
+	}
 }

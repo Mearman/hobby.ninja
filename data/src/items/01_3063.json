@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "ハロプラ ガンダムベース限定 モビルハロ[ガンダムベースカラー]",
-		"en": "Haropura Gundam Base Limited Mobile Haro [Gundam Base Color]"
+		"en": "HAROPLA MOBILEHARO [THE GUNDAM BASE COLOR]"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ",
+			"en": "GUNDAM BUILD DIVERS"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5189",
+			"url": "https://bandai-hobby.net/item/01_5189/",
+			"ja": "オプションパーツセット ガンプラ 04 (ビルドハンズ 丸型)"
+		},
+		{
+			"id": "01_5190",
+			"url": "https://bandai-hobby.net/item/01_5190/",
+			"ja": "オプションパーツセット ガンプラ 03 (ビルドハンズ 角型)"
+		},
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000139824",
+			"url": "https://p-bandai.jp/item/item-1000139824/",
+			"ja": "HGBD 1/144 ビルドガンマガンダム"
+		}
+	],
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -27,37 +65,43 @@
 			"• 搭乗しているハロは着脱が可能。"
 		],
 		"en": [
-			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"Haro, wearing a body unit that allows you to enjoy action poses, is now available in Gundam base color!",
-			"• The mechanism that allows Haro to be customized as a robot is made into a kit.",
-			"• Gundam base original special marking seal included.",
-			"• The halo on board is removable."
+			"For GUNPLA fans around the world, this is a limited edition GUNPLA at the official GUNPLA complex \"GUNDAM Base\". The halo wearing a body unit that allows you to enjoy action poses is now available in the GUNDAM base color!",
+			"• A kit of mechanisms that make halos customizable as robots.",
+			"• GUNDAM Comes with a special marking sticker that is the original base of the base.",
+			"• The halo on board can be attached and detached."
 		]
 	},
-	"images": [
-		"/images/items/01_3063/1000148197_1.jpg",
-		"/images/items/01_3063/1000148197_2.jpg",
-		"/images/items/01_3063/1000148197_3.jpg",
-		"/images/items/01_3063/1000148197_4.jpg",
-		"/images/items/01_3063/1000148197_5.jpg",
-		"/images/items/01_3063/1000148197_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148197_1.jpg",
+				"path": "/images/items/01_3063/1000148197_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148197_2.jpg",
+				"path": "/images/items/01_3063/1000148197_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148197_3.jpg",
+				"path": "/images/items/01_3063/1000148197_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148197_4.jpg",
+				"path": "/images/items/01_3063/1000148197_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148197_5.jpg",
+				"path": "/images/items/01_3063/1000148197_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148197_6.jpg",
+				"path": "/images/items/01_3063/1000148197_6.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3063/",
-	"brandIds": [],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5189",
-		"01_5190",
-		"01_2623",
-		"item-1000139824"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_3063/"
 	}
 }

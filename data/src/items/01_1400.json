@@ -5,6 +5,50 @@
 		"ja": "HGBC 1/144 バインダーガン",
 		"en": "HGBC 1/144 Binder Gun"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2623",
+			"url": "https://bandai-hobby.net/item/01_2623/",
+			"ja": "HGBD:R 1/144 ガンダム G-エルス"
+		},
+		{
+			"id": "item-1000138336",
+			"url": "https://p-bandai.jp/item/item-1000138336/",
+			"ja": "ＨＧ 1/144 ガンダムAGEIIマグナムSVver.（ＦＸプロージョン）"
+		},
+		{
+			"id": "01_2518",
+			"url": "https://bandai-hobby.net/item/01_2518/",
+			"ja": "HGBD ガンダムベース限定 モビルドールサラ(ミラーミッションVer.)"
+		},
+		{
+			"id": "01_2403",
+			"url": "https://bandai-hobby.net/item/01_2403/",
+			"ja": "HG 1/144 プチッガイ きゃらっがい サラ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"組み合わせ次第で様々なオプションパーツになる、汎用性バツグンの武装がビルドカスタムシリーズに登場！",
@@ -28,55 +71,76 @@
 		"en": [
 			"A highly versatile weapon that can be combined with various optional parts is now available in the Build Custom Series!",
 			"• By attaching a handle to the binder part, you can switch it to blade mode and gun mode!",
-			"• A large number of joint parts are included, and you can combine them all to create a large rifle!"
+			"• Many joint parts are included, and you can combine them all to create a large rifle!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"バインダーパーツ（大小）×各２",
-			"ガンパーツ×１",
-			"ジョイントパーツ×1式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "バインダーパーツ（大小）×各２"
+			}
+		},
+		{
+			"name": {
+				"ja": "ガンパーツ×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "取扱説明書"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2323_s_oysy1ye3mqn001gh5fchawe3tcho.jpg",
+				"path": "/images/items/01_1400/153_2323.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2323_s_p14gpwagshc7k0gsun100pzimvqw.jpg",
+				"path": "/images/items/01_1400/155_2323.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2323_s_h1ek98p69drrjc8gj51zalp8j0w9.jpg",
+				"path": "/images/items/01_1400/156_2323.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_2323_s_6ajfrkwzzlkh5ijvajlfwg3v92fm.jpg",
+				"path": "/images/items/01_1400/157_2323.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_2323_s_eqogrbrmncs8ov77bvypk1h2at1x.jpg",
+				"path": "/images/items/01_1400/158_2323.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_2323_s_donbw3xc0uuttwfequ1s41qzbcmv.jpg",
+				"path": "/images/items/01_1400/159_2323.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_2323_s_rir59yunp8wdbcrhz45ehuwfteon.jpg",
+				"path": "/images/items/01_1400/189_2323.jpg"
+			}
 		],
-		"en": [
-			"Binder parts (large and small) x 2 each",
-			"Gun parts x 1",
-			"Joint parts x 1 set"
-		]
+		"instructions": []
 	},
-	"contents": {
-		"ja": [
-			"成形品×3",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Molded product x 3",
-			"Handling manual×1"
-		]
-	},
-	"images": [
-		"/images/items/01_1400/153_2323.jpg",
-		"/images/items/01_1400/155_2323.jpg",
-		"/images/items/01_1400/156_2323.jpg",
-		"/images/items/01_1400/157_2323.jpg",
-		"/images/items/01_1400/158_2323.jpg",
-		"/images/items/01_1400/159_2323.jpg",
-		"/images/items/01_1400/189_2323.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1400/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
-	"manualId": "0696"
+	"sourceUrl": "https://bandai-hobby.net/item/01_1400/"
 }

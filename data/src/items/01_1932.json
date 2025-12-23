@@ -5,6 +5,49 @@
 		"ja": "BB戦士 ガンダムベース限定 フルアーマー・ユニコーンガンダム&ネオ・ジオング [クリアカラー]",
 		"en": "BB Senshi Gundam Base Limited Full Armor Unicorn Gundam & Neo Zeon [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3490",
+			"url": "https://bandai-hobby.net/item/01_3490/",
+			"ja": "BB戦士 ガンダムベース福岡限定 ユニコーンガンダム ペルフェクティビリティ(最終決戦仕様)Ver.GSF"
+		},
+		{
+			"id": "01_2646",
+			"url": "https://bandai-hobby.net/item/01_2646/",
+			"ja": "BB戦士 ガンダムベース限定 ユニコーンガンダムペルフェクティビリティ"
+		},
+		{
+			"id": "item-1000095978",
+			"url": "https://p-bandai.jp/item/item-1000095978",
+			"ja": "ＢＢ戦士 ネオ・ジオング メタリックＶｅｒ．"
+		},
+		{
+			"id": "01_185",
+			"url": "https://bandai-hobby.net/item/01_185/",
+			"ja": "BB戦士394 ユニコーンガンダム3号機 フェネクス"
+		}
+	],
 	"price": {
 		"amount": 4070,
 		"currency": "JPY",
@@ -27,29 +70,22 @@
 			"Clear color Full Armor Unicorn Gundam and Neo Zeon Gundam are now available as a set. A display pedestal is included, allowing you to enjoy a showdown display depicting the final battle."
 		]
 	},
-	"images": [
-		"/images/items/01_1932/153_2865.jpg",
-		"/images/items/01_1932/155_2865.jpg",
-		"/images/items/01_1932/156_2865.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_1932/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3490",
-		"01_2646",
-		"item-1000095978",
-		"01_185"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_2865_s_p50x03fxh23d9gkb0js43hlkz9qh.jpg",
+				"path": "/images/items/01_1932/153_2865.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_2865_s_4d48ztvzetm7fe7r5thdgm8ypuf8.jpg",
+				"path": "/images/items/01_1932/155_2865.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_2865_s_xfj9iiik6621g2hw1l5mh0shg6g5.jpg",
+				"path": "/images/items/01_1932/156_2865.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_1932/"
 }
