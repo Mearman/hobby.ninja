@@ -396,5 +396,3 @@ export class Logger {
 		return this.options.level;
 	}
 }
-
-export { Logger };
