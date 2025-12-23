@@ -380,7 +380,7 @@ export class ExcelExporter extends BaseExporter {
    * Get unique categories from data
    */
 	private getCategories(data: TransformedData[]): string[] {
-		return [...new Set(data.map(item => item.category).filter((cat: string | undefined): cat is string => Boolean(cat)))];
+		return [...new Set(data.map(item => item.category).filter((cat): cat is string => typeof cat === "string"))];
 	}
 
 	/**
