@@ -1115,9 +1115,6 @@ async function downloadCatalogAssets(
 					// Write back to file
 					await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf8");
 
-					// Record that this item's images have been successfully downloaded
-					ItemsIndexUpdater.recordDownloadVerified(item.id);
-
 					if (options.verbose) {
 						console.log(`  ✓ Updated JSON with ${sortedImages.length} local image paths (${productImages.length} product, ${instructionImages.length} instruction)`);
 						console.log(`  ✓ Recorded array verification for ${item.id} (${sortedImages.length} images)`);
@@ -1260,10 +1257,6 @@ async function downloadCatalogAssets(
 						await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf8");
 
 
-
-						// Record that this item's images have been successfully downloaded
-						ItemsIndexUpdater.recordDownloadVerified(item.id);
-
 						if (options.verbose) {
 							console.log(`  ✓ Updated JSON with ${sortedImages.length} local image paths (${productImages.length} product, ${instructionImages.length} instruction)`);
 						}
@@ -1365,9 +1358,6 @@ async function downloadCatalogAssets(
 
 			stats.skipped = item.images.length;
 
-			// Record that this item's images have been verified as downloaded
-			ItemsIndexUpdater.recordDownloadVerified(item.id);
-
 			// Recheck mode: scrape page again to check for new images
 			if (options.recheck && item.sourceUrl) {
 				// Check if page was recently scraped for content (within 7 days)
@@ -1444,9 +1434,6 @@ async function downloadCatalogAssets(
 							console.log(`  ✓ Image array complete (${Math.max(newCount, existingCount)} images: ${productImages.length} product, ${instructionImages.length} instruction)`);
 						}
 					}
-
-					// Record that this item's images have been successfully downloaded
-					ItemsIndexUpdater.recordDownloadVerified(item.id);
 				}
 			}
 		}

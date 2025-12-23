@@ -754,8 +754,8 @@ export class ScrapeCommand {
 
 	/**
 	 * Save item data to JSON file
-	 * Note: Timing fields (extractedAt, pageScrapedAt, downloadVerifiedAt) are stored
-	 * in the centralized index.json, not in individual item files
+	 * Note: Timing fields (extractedAt, pageScrapedAt) are stored in the
+	 * centralized index.json, not in individual item files
 	 */
 	private async saveItemJson(filePath: string, data: Item): Promise<void> {
 		// Strip ephemeral URLs before saving (CloudFront signed URLs expire)

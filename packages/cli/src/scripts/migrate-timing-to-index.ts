@@ -1,5 +1,5 @@
 /**
- * Migration script to move timing fields (extractedAt, pageScrapedAt, downloadVerifiedAt)
+ * Migration script to move timing fields (extractedAt, pageScrapedAt)
  * from individual item JSON files to the centralized index.json
  *
  * Run with: npx tsx packages/cli/src/scripts/migrate-timing-to-index.ts
@@ -29,7 +29,6 @@ interface ItemIndexEntry {
 	};
 	extractedAt?: string;
 	pageScrapedAt?: string;
-	downloadVerifiedAt?: string;
 	hasFile?: boolean; // Legacy field to be removed
 }
 
@@ -48,11 +47,10 @@ interface ItemFile {
 	id: string;
 	extractedAt?: string;
 	pageScrapedAt?: string;
-	downloadVerifiedAt?: string;
 	[key: string]: unknown;
 }
 
-const TIMING_FIELDS = ["extractedAt", "pageScrapedAt", "downloadVerifiedAt"] as const;
+const TIMING_FIELDS = ["extractedAt", "pageScrapedAt"] as const;
 
 function loadIndex(): ItemsIndex {
 	if (!existsSync(INDEX_PATH)) {
@@ -93,15 +91,21 @@ function migrateTimingToIndex(): void {
 	let filesModified = 0;
 	let hasFileRemoved = 0;
 
-	// First pass: Remove hasFile from all index entries
-	console.log("Removing hasFile from index entries...");
+	// First pass: Remove legacy fields from all index entries
+	let downloadVerifiedRemoved = 0;
+	console.log("Removing legacy fields from index entries...");
 	for (const [itemId, entry] of Object.entries(index.items)) {
 		if ("hasFile" in entry) {
 			delete (entry as ItemIndexEntry & { hasFile?: boolean }).hasFile;
 			hasFileRemoved++;
 		}
+		if ("downloadVerifiedAt" in entry) {
+			delete (entry as ItemIndexEntry & { downloadVerifiedAt?: string }).downloadVerifiedAt;
+			downloadVerifiedRemoved++;
+		}
 	}
-	console.log(`  Removed hasFile from ${hasFileRemoved} index entries\n`);
+	console.log(`  Removed hasFile from ${hasFileRemoved} index entries`);
+	console.log(`  Removed downloadVerifiedAt from ${downloadVerifiedRemoved} index entries\n`);
 
 	// Get all item JSON files (excluding index.json)
 	const files = readdirSync(ITEMS_DIR)
@@ -147,7 +151,7 @@ function migrateTimingToIndex(): void {
 				timingMigrated++;
 			}
 
-			// Remove timing fields from item file
+			// Remove timing fields from item file (including legacy downloadVerifiedAt)
 			const modifiedItem = { ...item };
 			let modified = false;
 			for (const field of TIMING_FIELDS) {
@@ -155,6 +159,11 @@ function migrateTimingToIndex(): void {
 					delete modifiedItem[field];
 					modified = true;
 				}
+			}
+			// Also remove legacy downloadVerifiedAt if present
+			if ("downloadVerifiedAt" in modifiedItem) {
+				delete modifiedItem["downloadVerifiedAt"];
+				modified = true;
 			}
 
 			if (modified) {

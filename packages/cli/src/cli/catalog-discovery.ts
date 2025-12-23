@@ -96,7 +96,7 @@ async function upsertEntities(entities: EntityData[], dataDir: string, verbose?:
 
 /**
  * Merge scraped item data with existing curated data
- * Preserves: English translations, downloadVerifiedAt, image paths, and other curated fields
+ * Preserves: English translations, image paths, and other curated fields
  * Updates: Japanese data from fresh scrape, adds new fields
  */
 function mergeItemData(scraped: Item, existing: Record<string, unknown>): Item {
@@ -231,12 +231,6 @@ function mergeItemData(scraped: Item, existing: Record<string, unknown>): Item {
 	} else if (!scraped.manual && existingManual && typeof existingManual === "object") {
 		// Preserve existing manual ref if scrape didn't find one
 		merged.manual = existingManual as typeof merged.manual;
-	}
-
-	// Preserve download verification timestamp
-	const existingDownloadVerifiedAt = existing["downloadVerifiedAt"];
-	if (existingDownloadVerifiedAt) {
-		(merged as Record<string, unknown>)["downloadVerifiedAt"] = existingDownloadVerifiedAt;
 	}
 
 	// Preserve existing globalSiteUrls if scrape didn't find any (or merge them)
