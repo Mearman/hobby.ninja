@@ -30,7 +30,8 @@ import { chromium, type Browser, type BrowserContext, type Route } from "playwri
 import { stripEphemeralImageUrls } from "../utils/image-utils.js";
 import { BandaiRateLimiter } from "../utils/rate-limiter.js";
 
-import { BandaiCatalogParser, type EntityData, type Item, type ItemImage } from "./bandai-catalog-parser.js";
+import { BandaiCatalogParser, type EntityData, type Item, type ItemImage, type ParsedAccessoryItem } from "./bandai-catalog-parser.js";
+import { parseCountedItems } from "./count-parser.js";
 import { GlobalSiteLookup, type GlobalSiteData } from "./global-site-lookup.js";
 import { ItemsIndexUpdater } from "./items-index-updater.js";
 import { ManualParser, type ManualData } from "./manual-parser.js";
@@ -561,8 +562,9 @@ export class ScrapeCommand {
 			}
 		}
 
-		// Record in index that this item has a valid page and file
+		// Record in index that this item has a valid page and timing info
 		ItemsIndexUpdater.recordFileCreated(itemId, itemData.name.ja);
+		ItemsIndexUpdater.recordExtracted(itemId);
 		ItemsIndexUpdater.recordPageScraped(itemId);
 
 		// Step 4: Process linked manual if exists
@@ -751,35 +753,15 @@ export class ScrapeCommand {
 	}
 
 	/**
-	 * Save item data to JSON file, preserving existing timing fields
+	 * Save item data to JSON file
+	 * Note: Timing fields (extractedAt, pageScrapedAt, downloadVerifiedAt) are stored
+	 * in the centralized index.json, not in individual item files
 	 */
 	private async saveItemJson(filePath: string, data: Item): Promise<void> {
-		let existingData: Record<string, unknown> = {};
-
-		// Try to read existing file to preserve timing fields
-		try {
-			const content = await fs.readFile(filePath, "utf8");
-			existingData = JSON.parse(content) as Record<string, unknown>;
-		} catch {
-			// File doesn't exist, will create new
-		}
-
-		// Merge new data with preserved timing fields
-		const mergedData: Item = {
-			...data,
-			extractedAt: data.extractedAt ?? new Date().toISOString(),
-			pageScrapedAt: (existingData["pageScrapedAt"] as string | undefined) ?? new Date().toISOString(),
-		};
-
-		// Preserve downloadVerifiedAt if it exists
-		const outputData: Record<string, unknown> = { ...mergedData };
-		if (existingData["downloadVerifiedAt"]) {
-			outputData["downloadVerifiedAt"] = existingData["downloadVerifiedAt"];
-		}
-
 		// Strip ephemeral URLs before saving (CloudFront signed URLs expire)
-		if (mergedData.images && "product" in mergedData.images) {
-			outputData["images"] = stripEphemeralImageUrls(mergedData.images);
+		const outputData: Record<string, unknown> = { ...data };
+		if (data.images && "product" in data.images) {
+			outputData["images"] = stripEphemeralImageUrls(data.images);
 		}
 
 		await fs.writeFile(filePath, JSON.stringify(outputData, null, "\t"), "utf8");
@@ -983,7 +965,7 @@ export class ScrapeCommand {
 
 	/**
 	 * Merge English translation data into Item
-	 * Updates name.en, description.en, brands[].en, series[].en, and globalSiteUrls
+	 * Updates name.en, description.en, brands[].en, series[].en, accessories[].name.en, and globalSiteUrls
 	 */
 	private mergeEnglishTranslation(item: Item, globalData: GlobalSiteData): Item {
 		// Set English name
@@ -1014,6 +996,11 @@ export class ScrapeCommand {
 			}
 		}
 
+		// Merge English accessories if found
+		if (globalData.accessories && globalData.accessories.length > 0 && item.accessories) {
+			item.accessories = this.mergeEnglishAccessories(item.accessories, globalData.accessories);
+		}
+
 		// Set globalSiteUrls
 		if (globalData.url) {
 			item.globalSiteUrls = {
@@ -1022,6 +1009,41 @@ export class ScrapeCommand {
 		}
 
 		return item;
+	}
+
+	/**
+	 * Merge English accessory strings into existing Japanese accessories
+	 * Matches by position (index) since accessories are listed in the same order
+	 */
+	private mergeEnglishAccessories(
+		jaAccessories: ParsedAccessoryItem[],
+		enStrings: string[],
+	): ParsedAccessoryItem[] {
+		// Parse English strings to extract names and counts
+		const enParsed = parseCountedItems(enStrings);
+
+		// Merge by position
+		return jaAccessories.map((jaItem, index) => {
+			const enItem = enParsed[index];
+			if (enItem) {
+				const merged: ParsedAccessoryItem = {
+					...jaItem,
+					name: {
+						ja: jaItem.name.ja,
+						en: enItem.name,
+					},
+				};
+				// Merge EN unit if present
+				if (enItem.unit) {
+					merged.unit = {
+						ja: jaItem.unit?.ja ?? enItem.unit,
+						en: enItem.unit,
+					};
+				}
+				return merged;
+			}
+			return jaItem;
+		});
 	}
 
 	/**
