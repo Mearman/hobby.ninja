@@ -4,7 +4,6 @@
 
  
 import { DEFAULT_VALUES, LANGUAGE_CODES } from "../constants/cli-constants.js";
-import { EXPORT_CONSTANTS } from "../constants/export-constants.js";
 import type { GundamData } from "../types/product-data.js";
 
  
@@ -69,16 +68,6 @@ function transformImages(images: GundamData["images"]): TransformedData["images"
 	});
 }
 
-/**
- * Generate ID from item data if not provided
- */
-function generateId(item: GundamData): string {
-	const name = typeof item.name === "string" ? item.name : DEFAULT_VALUES.UNKNOWN_BRAND;
-	const brand = item.brand ?? DEFAULT_VALUES.UNKNOWN_BRAND;
-	const idSource = `${brand}-${name}-${item.source}`;
-	const hash = Buffer.from(idSource).toString("base64");
-	return hash.replaceAll(/[^a-zA-Z0-9]/g, "").slice(0, Math.max(0, EXPORT_CONSTANTS.HASH_SUBSTRING_LENGTH));
-}
 
 /**
  * Validate URL format
