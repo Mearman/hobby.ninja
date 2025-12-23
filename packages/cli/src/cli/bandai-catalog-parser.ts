@@ -128,8 +128,7 @@ export interface Item {
 	images?: ItemImages;
 	globalSiteUrls?: GlobalSiteUrls;
 	sourceUrl?: string;
-	extractedAt?: string;
-	pageScrapedAt?: string;
+	// Note: extractedAt and pageScrapedAt are stored in index.json, not individual item files
 }
 
 /** Entity data for upserting to data/src/{type}s/ */
@@ -216,8 +215,7 @@ export class BandaiCatalogParser {
 				contents: this.extractContentsNormalized($),
 				images: this.extractImages($),
 				sourceUrl,
-				extractedAt: new Date().toISOString(),
-				pageScrapedAt: new Date().toISOString(),
+				// Note: timing fields (extractedAt, pageScrapedAt) are stored in index.json
 			};
 
 			// Build entities for upsert
