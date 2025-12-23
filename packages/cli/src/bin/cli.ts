@@ -116,6 +116,7 @@ program
 	.option("--start <id>", "Start ID for range (e.g., 01_1000)")
 	.option("--end <id>", "End ID for range (e.g., 01_2000)")
 	.option("--count <n>", "Number of items to process from start")
+	.option("--profile", "Enable step timing profiling", false)
 	.action(async (options: unknown) => {
 		try {
 			const { ScrapeCommand } = await import("../cli/scrape.js");
@@ -158,6 +159,7 @@ program
 				start: startFilter,
 				end: endFilter,
 				count: countFilter ? Number.parseInt(countFilter, 10) : undefined,
+				profile: rawOptions["profile"] === true,
 			});
 
 			console.log("\n=== Scrape Results ===");

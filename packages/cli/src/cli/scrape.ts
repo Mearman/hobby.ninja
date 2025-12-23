@@ -57,6 +57,14 @@ export interface ScrapeOptions {
 	end?: string;
 	/** Number of items to process from start */
 	count?: number;
+	/** Profile timing for each step */
+	profile?: boolean;
+}
+
+/** Timing data for profiling */
+interface StepTiming {
+	name: string;
+	durationMs: number;
 }
 
 export interface ScrapeResult {
@@ -506,12 +514,37 @@ export class ScrapeCommand {
 	private static readonly HOURS_PER_DAY = 24;
 
 	/**
+	 * Print timing summary for profiling
+	 */
+	private printTimings(options: ScrapeOptions, timings: StepTiming[]): void {
+		if (!options.profile || timings.length === 0) return;
+
+		const total = timings.reduce((sum, t) => sum + t.durationMs, 0);
+		console.log(`  ⏱ Timings: ${timings.map((t) => `${t.name}=${t.durationMs.toFixed(0)}ms`).join(", ")} (total=${total.toFixed(0)}ms)`);
+	}
+
+	/**
 	 * Process a single item completely: scrape data, scrape manual if linked, download all assets
 	 */
 	private async processItemComplete(
 		itemId: string,
 		options: ScrapeOptions,
 	): Promise<{ success: boolean; cached: boolean; manualId?: string; error?: string }> {
+		const timings: StepTiming[] = [];
+		const time = <T>(name: string, fn: () => T): T => {
+			const start = performance.now();
+			const result = fn();
+			if (result instanceof Promise) {
+				const timedPromise = result.then((r: Awaited<T>) => {
+					timings.push({ name, durationMs: performance.now() - start });
+					return r;
+				});
+				return timedPromise as T;
+			}
+			timings.push({ name, durationMs: performance.now() - start });
+			return result;
+		};
+
 		// Convert itemId (e.g., "01_0001") to URL format (e.g., "01_1")
 		const [category = "", numStr] = itemId.split("_");
 		const urlId = `${category}_${Number.parseInt(numStr ?? "0", 10)}`;
@@ -529,14 +562,14 @@ export class ScrapeCommand {
 		// Check for existing HTML file (use as cache)
 		if (options.cache) {
 			try {
-				const htmlStat = await fs.stat(htmlPath);
+				const htmlStat = await time("cache-stat", () => fs.stat(htmlPath));
 				const ageMs = Date.now() - htmlStat.mtimeMs;
 				const maxAgeMs = options.maxAgeDays * ScrapeCommand.HOURS_PER_DAY * ScrapeCommand.MINUTES_PER_HOUR * ScrapeCommand.SECONDS_PER_MINUTE * ScrapeCommand.MS_PER_SECOND;
 				const ageMinutes = Math.round(ageMs / ScrapeCommand.MS_PER_SECOND / ScrapeCommand.SECONDS_PER_MINUTE);
 				const ageHours = Math.round(ageMs / ScrapeCommand.MS_PER_SECOND / ScrapeCommand.SECONDS_PER_MINUTE / ScrapeCommand.MINUTES_PER_HOUR);
 
 				if (maxAgeMs === 0 || ageMs < maxAgeMs) {
-					html = await fs.readFile(htmlPath, "utf8");
+					html = await time("cache-read", () => fs.readFile(htmlPath, "utf8"));
 					cached = true;
 					console.log(`  Using cached HTML (${ageMinutes} min old)`);
 				} else {
@@ -551,21 +584,25 @@ export class ScrapeCommand {
 		if (!html) {
 			console.log(`  Fetching fresh...`);
 			try {
-				html = await this.rateLimiter.executeWithLimit(async () => {
-					return this.fetchPage(url);
-				});
+				html = await time("fetch-html", () =>
+					this.rateLimiter.executeWithLimit(async () => {
+						return this.fetchPage(url);
+					}),
+				);
 
 				// Save HTML file
-				await fs.writeFile(htmlPath, html, "utf8");
+				await time("save-html", () => fs.writeFile(htmlPath, html, "utf8"));
 			} catch (fetchError) {
 				const errorMsg = fetchError instanceof Error ? fetchError.message : "Unknown fetch error";
+				this.printTimings(options, timings);
 				return { success: false, cached: false, error: `Fetch failed: ${errorMsg}` };
 			}
 		}
 
 		// Step 2: Extract data from HTML using catalog parser
-		const parseResult = this.parser.parse(html, itemId, url);
+		const parseResult = time("parse", () => this.parser.parse(html, itemId, url));
 		if (!parseResult.success || !parseResult.data) {
+			this.printTimings(options, timings);
 			return { success: false, cached, error: parseResult.error ?? "Parse failed" };
 		}
 
@@ -577,7 +614,7 @@ export class ScrapeCommand {
 		// Step 2b: Look up English translations from global site
 		let hasGlobalTranslation = false;
 		try {
-			const globalData = await this.globalLookup.lookup(itemId);
+			const globalData = await time("global-lookup", () => this.globalLookup.lookup(itemId));
 			if (globalData.hasPage) {
 				itemData = this.mergeEnglishTranslation(itemData, globalData);
 				hasGlobalTranslation = true;
@@ -608,7 +645,7 @@ export class ScrapeCommand {
 		// Step 2c: Fallback translation for items without global page
 		if (!hasGlobalTranslation && !itemData.name.en) {
 			try {
-				itemData = await this.translateItemFallback(itemData);
+				itemData = await time("fallback-translate", () => this.translateItemFallback(itemData));
 				if (options.verbose && itemData.name.en) {
 					console.log(`  ✓ Fallback translation: ${itemData.name.en}`);
 				}
@@ -621,14 +658,15 @@ export class ScrapeCommand {
 		}
 
 		// Step 3: Save item JSON
-		const itemWritten = await this.saveItemJson(jsonPath, itemData);
+		const itemWritten = await time("save-json", () => this.saveItemJson(jsonPath, itemData));
 		if (itemWritten) {
 			console.log(`  ✓ Item JSON saved`);
 		}
 
 		// Step 3b: Upsert discovered entities (brands, series, categories)
-		if (parseResult.entities && parseResult.entities.length > 0) {
-			const newEntities = await this.upsertEntities(parseResult.entities);
+		const entities = parseResult.entities;
+		if (entities && entities.length > 0) {
+			const newEntities = await time("upsert-entities", () => this.upsertEntities(entities));
 			if (newEntities > 0 && options.verbose) {
 				console.log(`  ✓ ${newEntities} new entities added`);
 			}
@@ -650,7 +688,7 @@ export class ScrapeCommand {
 		if (manualId) {
 			console.log(`  Found manual link: ${manualId}`);
 			try {
-				await this.processManualComplete(manualId, options);
+				await time("process-manual", () => this.processManualComplete(manualId, options));
 				ManualsIndexUpdater.recordValid(manualId, itemData.name.ja);
 			} catch (error) {
 				const errorMsg = error instanceof Error ? error.message : UNKNOWN_ERROR;
@@ -662,7 +700,9 @@ export class ScrapeCommand {
 		// Step 5: Download images for this item
 		if (itemData.images && !options.dryRun) {
 			try {
-				const downloadResult = await this.downloadItemImages(itemId, itemData, jsonPath, options.verbose);
+				const downloadResult = await time("download-images", () =>
+					this.downloadItemImages(itemId, itemData, jsonPath, options.verbose),
+				);
 				if (downloadResult.downloaded > 0 || options.verbose) {
 					console.log(`  ✓ Images: ${downloadResult.downloaded} downloaded, ${downloadResult.skipped} skipped`);
 				}
@@ -672,6 +712,7 @@ export class ScrapeCommand {
 			}
 		}
 
+		this.printTimings(options, timings);
 		return { success: true, cached, manualId };
 	}
 
