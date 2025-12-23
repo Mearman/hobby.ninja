@@ -55,6 +55,10 @@ program
 	.option("--verbose", "Enable verbose logging", false)
 	.option("--dry-run", "Perform dry run without actual scraping", false)
 	.option("--max-age <days>", "Skip items checked within this many days (0 = no filtering)", "7")
+	.option("--id <id>", "Scrape a single specific item ID (e.g., 01_1234)")
+	.option("--start <id>", "Start ID for range (e.g., 01_1000)")
+	.option("--end <id>", "End ID for range (e.g., 01_2000)")
+	.option("--count <n>", "Number of items to process from start")
 	.action(async (options: CommanderOptions) => {
 		const scrapeCommand = new ScrapeCommand();
 		const scrapeOptions: ScrapeOptions = {
@@ -65,6 +69,10 @@ program
 			verbose: options.verbose as boolean,
 			dryRun: options.dryRun as boolean,
 			maxAgeDays: Number.parseInt(options.maxAge as string, DECIMAL_RADIX),
+			id: options.id as string | undefined,
+			start: options.start as string | undefined,
+			end: options.end as string | undefined,
+			count: options.count ? Number.parseInt(options.count as string, DECIMAL_RADIX) : undefined,
 		};
 
 		try {
@@ -73,6 +81,17 @@ program
 			console.log(`Output: ${scrapeOptions.output}`);
 			console.log(`Cache: ${scrapeOptions.cache ? "enabled" : "disabled"}`);
 			console.log(`Max age: ${scrapeOptions.maxAgeDays === 0 ? "disabled (scrape all)" : `${scrapeOptions.maxAgeDays} days`}`);
+			if (scrapeOptions.id) {
+				console.log(`ID filter: single item ${scrapeOptions.id}`);
+			} else if (scrapeOptions.start) {
+				if (scrapeOptions.end) {
+					console.log(`ID filter: range ${scrapeOptions.start} to ${scrapeOptions.end}`);
+				} else if (scrapeOptions.count) {
+					console.log(`ID filter: ${scrapeOptions.count} items starting from ${scrapeOptions.start}`);
+				} else {
+					console.log(`ID filter: single item ${scrapeOptions.start}`);
+				}
+			}
 			console.log("");
 
 			const result = await scrapeCommand.execute(scrapeOptions);

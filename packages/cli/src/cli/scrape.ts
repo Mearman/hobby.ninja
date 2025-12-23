@@ -47,6 +47,14 @@ export interface ScrapeOptions {
 	verbose: boolean;
 	dryRun: boolean;
 	maxAgeDays: number;
+	/** Single specific ID to process (e.g., "01_1234") */
+	id?: string;
+	/** Start ID for range (e.g., "01_1000") */
+	start?: string;
+	/** End ID for range (e.g., "01_2000") */
+	end?: string;
+	/** Number of items to process from start */
+	count?: number;
 }
 
 export interface ScrapeResult {
@@ -177,8 +185,8 @@ export class ScrapeCommand {
 
 			// Get all items and determine what needs processing
 			const maxAgeHours = options.maxAgeDays * 24;
-			const allItemIds = this.getAllItemIds();
-			const itemsNeedingScrape = new Set(this.getItemsToProcess(maxAgeHours));
+			const allItemIds = this.getAllItemIds(options);
+			const itemsNeedingScrape = new Set(this.getItemsToProcess(options, maxAgeHours));
 
 			console.log(`\n=== Phase 1: Processing Items ===`);
 			console.log(`Total items: ${allItemIds.length}, needing scrape: ${itemsNeedingScrape.size}`);
@@ -348,8 +356,8 @@ export class ScrapeCommand {
 	/**
 	 * Get items to process based on max age filtering
 	 */
-	private getItemsToProcess(maxAgeHours: number): string[] {
-		const allItemIds = this.getAllItemIds();
+	private getItemsToProcess(options: ScrapeOptions, maxAgeHours: number): string[] {
+		const allItemIds = this.getAllItemIds(options);
 
 		if (maxAgeHours === 0) {
 			return allItemIds;
@@ -359,12 +367,70 @@ export class ScrapeCommand {
 	}
 
 	/**
-	 * Get all item IDs that have pages in the index
+	 * Parse an item ID and return the numeric suffix
+	 * Accepts: "01_1234", "1234", "01_0001", "0001", "1"
+	 * All resolve to the numeric value (e.g., 1234 or 1)
 	 */
-	private getAllItemIds(): string[] {
+	private parseItemIdSuffix(id: string): number {
+		// If contains underscore, extract suffix
+		if (id.includes("_")) {
+			const parts = id.split("_");
+			if (parts.length !== 2 || !parts[1]) return 0;
+			return Number.parseInt(parts[1], 10);
+		}
+		// Otherwise treat entire string as the numeric ID
+		return Number.parseInt(id, 10);
+	}
+
+	/**
+	 * Format a numeric suffix into a padded item ID
+	 * e.g., 1234 -> "01_1234", 1 -> "01_0001"
+	 */
+	private formatItemId(suffix: number): string {
+		return `01_${suffix.toString().padStart(4, "0")}`;
+	}
+
+	/**
+	 * Get item IDs to process based on options
+	 * Supports: single ID, start+count, start+end, or all items
+	 */
+	private getAllItemIds(options: ScrapeOptions): string[] {
+		// Single specific ID
+		if (options.id) {
+			const id = this.formatItemId(this.parseItemIdSuffix(options.id));
+			return [id];
+		}
+
+		// Range specified by start (and optionally end or count)
+		if (options.start) {
+			const startSuffix = this.parseItemIdSuffix(options.start);
+			let endSuffix: number;
+
+			if (options.end) {
+				endSuffix = this.parseItemIdSuffix(options.end);
+			} else if (options.count) {
+				endSuffix = startSuffix + options.count - 1;
+			} else {
+				// Just start specified - process that single item
+				return [this.formatItemId(startSuffix)];
+			}
+
+			// Generate range
+			const itemIds: string[] = [];
+			for (let i = startSuffix; i <= endSuffix && i <= MAX_ITEM_ID; i++) {
+				const id = this.formatItemId(i);
+				const status = ItemsIndexUpdater.isIndexed(id);
+				if (status.indexed && status.hasPage) {
+					itemIds.push(id);
+				}
+			}
+			return itemIds;
+		}
+
+		// Default: all items with pages
 		const itemIds: string[] = [];
 		for (let i = 1; i <= MAX_ITEM_ID; i++) {
-			const id = `01_${i.toString().padStart(4, "0")}`;
+			const id = this.formatItemId(i);
 			const status = ItemsIndexUpdater.isIndexed(id);
 			if (status.indexed && status.hasPage) {
 				itemIds.push(id);
