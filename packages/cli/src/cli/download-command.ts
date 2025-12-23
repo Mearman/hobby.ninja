@@ -75,7 +75,7 @@ const HOURS_PER_DAY = 24; // Hours in a day
  * - bandai-hobby.net ecms: strips ecms_ prefix and hash (e.g., ecms_154_3389_o_<hash>.jpg → 154_3389.jpg)
  * - Other URLs: uses basename as-is (e.g., 1000171644_1.jpg → 1000171644_1.jpg)
  */
-function extractFilenameFromUrl(url: string): string {
+export function extractFilenameFromUrl(url: string): string {
 	const basename = url.split("/").pop()?.split("?")[0] ?? "";   
 
 	// For bandai-hobby.net URLs, strip patterns
