@@ -637,10 +637,12 @@ export class ScrapeCommand {
 		// Record in index that this item has a valid page
 		ItemsIndexUpdater.recordFileCreated(itemId, itemData.name.ja);
 
-		// Only update timing fields when item was actually written
+		// Record that we scraped this page (for freshness tracking)
+		ItemsIndexUpdater.recordPageScraped(itemId);
+
+		// Only update extractedAt when item data was actually written/changed
 		if (itemWritten) {
 			ItemsIndexUpdater.recordExtracted(itemId);
-			ItemsIndexUpdater.recordPageScraped(itemId);
 		}
 
 		// Step 4: Process linked manual if exists
