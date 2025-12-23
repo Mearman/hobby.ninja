@@ -66,34 +66,7 @@ export class GlobalSiteLookup {
 				return { hasPage: false, error: fetchError };
 			}
 
-			const $ = load(html);
-
-			// Check if page has actual content (not error page)
-			const hasContent = $("main h1").length > 0;
-			if (!hasContent) {
-				return { hasPage: false };
-			}
-
-			// Check for generic error title
-			const title = $("title").text().trim();
-			if (title.includes("404") || title.includes("Not Found") || title.includes("ERROR")) {
-				return { hasPage: false };
-			}
-
-			// Extract description and accessories (split by [Accessories] marker)
-			const { description, accessories } = this.extractDescriptionBullets($);
-
-			return {
-				name: this.extractName($),
-				description: description.length > 0 ? description : undefined,
-				accessories: accessories.length > 0 ? accessories : undefined,
-				releaseDate: this.extractReleaseDate($),
-				brand: this.extractBrand($),
-				series: this.extractSeries($),
-				hasPage: true,
-				url,
-				html,
-			};
+			return this.parseFromHtml(html, url);
 		} catch (error) {
 			const errorMsg = error instanceof Error ? error.message : "Unknown error";
 			// Connection errors, timeouts, etc.
@@ -102,6 +75,44 @@ export class GlobalSiteLookup {
 				error: errorMsg,
 			};
 		}
+	}
+
+	/**
+	 * Parse English translation data from already-fetched HTML
+	 * Used for cached HTML to avoid network requests
+	 * @param html The HTML content to parse
+	 * @param url Optional URL for the result (for reference)
+	 * @returns GlobalSiteData with translation info or hasPage: false
+	 */
+	parseFromHtml(html: string, url?: string): GlobalSiteData {
+		const $ = load(html);
+
+		// Check if page has actual content (not error page)
+		const hasContent = $("main h1").length > 0;
+		if (!hasContent) {
+			return { hasPage: false };
+		}
+
+		// Check for generic error title
+		const title = $("title").text().trim();
+		if (title.includes("404") || title.includes("Not Found") || title.includes("ERROR")) {
+			return { hasPage: false };
+		}
+
+		// Extract description and accessories (split by [Accessories] marker)
+		const { description, accessories } = this.extractDescriptionBullets($);
+
+		return {
+			name: this.extractName($),
+			description: description.length > 0 ? description : undefined,
+			accessories: accessories.length > 0 ? accessories : undefined,
+			releaseDate: this.extractReleaseDate($),
+			brand: this.extractBrand($),
+			series: this.extractSeries($),
+			hasPage: true,
+			url,
+			html,
+		};
 	}
 
 	/**

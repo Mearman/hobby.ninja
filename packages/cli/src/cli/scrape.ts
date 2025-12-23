@@ -613,8 +613,38 @@ export class ScrapeCommand {
 
 		// Step 2b: Look up English translations from global site
 		let hasGlobalTranslation = false;
+		const enHtmlPath = path.join(ITEMS_DATA_DIR, `${itemId}.en.html`);
 		try {
-			const globalData = await time("global-lookup", () => this.globalLookup.lookup(itemId));
+			let globalData: GlobalSiteData | null = null;
+			let usedCache = false;
+
+			// Check for cached English HTML first
+			if (options.cache) {
+				try {
+					const enHtmlStat = await time("en-cache-stat", () => fs.stat(enHtmlPath));
+					const ageMs = Date.now() - enHtmlStat.mtimeMs;
+					const maxAgeMs = options.maxAgeDays * ScrapeCommand.HOURS_PER_DAY * ScrapeCommand.MINUTES_PER_HOUR * ScrapeCommand.SECONDS_PER_MINUTE * ScrapeCommand.MS_PER_SECOND;
+
+					if (maxAgeMs === 0 || ageMs < maxAgeMs) {
+						const enHtml = await time("en-cache-read", () => fs.readFile(enHtmlPath, "utf8"));
+						globalData = time("en-parse", () => this.globalLookup.parseFromHtml(enHtml));
+						usedCache = true;
+					}
+				} catch {
+					// Cache doesn't exist, will fetch
+				}
+			}
+
+			// Fetch from network if no cache hit
+			if (!globalData) {
+				globalData = await time("global-lookup", () => this.globalLookup.lookup(itemId));
+
+				// Save English HTML for future cache use
+				if (globalData.hasPage && globalData.html) {
+					await fs.writeFile(enHtmlPath, globalData.html, "utf8");
+				}
+			}
+
 			if (globalData.hasPage) {
 				itemData = this.mergeEnglishTranslation(itemData, globalData);
 				hasGlobalTranslation = true;
@@ -623,12 +653,8 @@ export class ScrapeCommand {
 				this.storeCanonicalTranslations(itemData, globalData);
 
 				if (options.verbose) {
-					console.log(`  ✓ English translation found: ${globalData.name ?? "(name)"}`);
-				}
-				// Save English HTML for debugging/analysis
-				if (globalData.html) {
-					const enHtmlPath = path.join(ITEMS_DATA_DIR, `${itemId}.en.html`);
-					await fs.writeFile(enHtmlPath, globalData.html, "utf8");
+					const source = usedCache ? "cached" : "fetched";
+					console.log(`  ✓ English translation found (${source}): ${globalData.name ?? "(name)"}`);
 				}
 			} else if (options.verbose) {
 				const reason = globalData.error ? `: ${globalData.error}` : "";
