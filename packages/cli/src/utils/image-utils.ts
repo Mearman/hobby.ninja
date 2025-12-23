@@ -1,4 +1,10 @@
+import path from "node:path";
+
+import { glob } from "glob";
+
 import type { Item, ItemImage, ItemImages } from "../cli/bandai-catalog-parser.js";
+
+const ITEMS_IMAGES_DIR = path.join(process.cwd(), "assets/images/items");
 
 /**
  * Check if a URL is ephemeral (will expire and shouldn't be persisted)
@@ -40,4 +46,22 @@ export function stripEphemeralFromItem(item: Item): Item {
 		...item,
 		images: stripEphemeralImageUrls(item.images),
 	};
+}
+
+/**
+ * Search for an existing image by filename prefix in item assets
+ * @param filenamePrefix e.g., "159_1303" to match "159_1303.jpg"
+ * @returns Relative path like "/images/items/01_0324/159_1303.jpg" or null
+ */
+export async function findExistingItemImage(filenamePrefix: string): Promise<string | null> {
+	const pattern = `${ITEMS_IMAGES_DIR}/*/${filenamePrefix}*`;
+	const matches = await glob(pattern);
+
+	const match = matches[0];
+	if (match) {
+		// Return path relative to assets root
+		const relativePath = match.replace(/.*\/assets/, "");
+		return relativePath;
+	}
+	return null;
 }
