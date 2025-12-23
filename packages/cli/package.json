@@ -63,6 +63,16 @@
 	],
 	"license": "MIT",
 	"main": "dist/cli/main.js",
+	"exports": {
+		".": {
+			"types": "./dist/cli/main.d.ts",
+			"import": "./dist/cli/main.js"
+		},
+		"./*": {
+			"types": "./dist/*.d.ts",
+			"import": "./dist/*.js"
+		}
+	},
 	"nx": {
 		"targets": {
 			"build": {
