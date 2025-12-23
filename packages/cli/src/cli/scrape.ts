@@ -46,7 +46,6 @@ export interface ScrapeOptions {
 	output: string;
 	cache: boolean;
 	resume: boolean;
-	verbose: boolean;
 	dryRun: boolean;
 	maxAgeDays: number;
 	/** Single specific ID to process (e.g., "01_1234") */
@@ -206,7 +205,7 @@ export class ScrapeCommand {
 
 			if (options.dryRun) {
 				console.log("DRY RUN MODE - No actual scraping will be performed");
-				if (options.verbose && allItemIds.length > 0) {
+				if (allItemIds.length > 0) {
 					console.log("Items:", allItemIds.slice(0, 10).join(", "), allItemIds.length > 10 ? `... and ${allItemIds.length - 10} more` : "");
 				}
 				result.totalProcessed = allItemIds.length;
@@ -272,7 +271,7 @@ export class ScrapeCommand {
 				} else {
 					// Item already scraped - check if it needs translation updates
 					try {
-						const updated = await this.updateItemTranslations(itemId, options.verbose);
+						const updated = await this.updateItemTranslations(itemId);
 						if (updated) {
 							result.translationsUpdated++;
 							console.log(`\n--- [${i + 1}/${allItemIds.length}] Updated translations for ${itemId} ---`);
@@ -721,7 +720,7 @@ export class ScrapeCommand {
 		if (itemData.images && !options.dryRun) {
 			try {
 				const downloadResult = await time("download-images", () =>
-					this.downloadItemImages(itemId, itemData, jsonPath, options.verbose),
+					this.downloadItemImages(itemId, itemData, jsonPath),
 				);
 				if (downloadResult.downloaded > 0) {
 					console.log(`  ✓ Images: ${downloadResult.downloaded} downloaded, ${downloadResult.skipped} skipped`);
@@ -797,22 +796,20 @@ export class ScrapeCommand {
 		}
 
 		const manualData = parseResult.data;
-		if (options.verbose) {
-			console.log(`  ✓ Manual data extracted: ${manualData.name.ja}`);
-			console.log(`  ✓ Found ${manualData.pdfs.length} PDF(s)`);
-		}
+		console.log(`  ✓ Manual data extracted: ${manualData.name.ja}`);
+		console.log(`  ✓ Found ${manualData.pdfs.length} PDF(s)`);
 
 		// Step 3: Download PDFs
 		if (manualData.pdfs.length > 0 && !options.dryRun) {
-			const downloadResult = await this.downloadManualPdfs(manualId, manualData, options.verbose);
-			if (downloadResult.downloaded > 0 || options.verbose) {
+			const downloadResult = await this.downloadManualPdfs(manualId, manualData);
+			if (downloadResult.downloaded > 0) {
 				console.log(`  ✓ PDFs: ${downloadResult.downloaded} downloaded, ${downloadResult.skipped} skipped`);
 			}
 		}
 
 		// Step 3b: Download/locate image
 		if (manualData.image?.src && !options.dryRun) {
-			await this.downloadManualImage(manualId, manualData, options.verbose);
+			await this.downloadManualImage(manualId, manualData);
 		}
 
 		// Step 4: Save manual JSON
@@ -850,7 +847,6 @@ export class ScrapeCommand {
 	private async downloadManualPdfs(
 		manualId: string,
 		manualData: ManualData,
-		verbose: boolean,
 	): Promise<{ downloaded: number; skipped: number }> {
 		const stats = { downloaded: 0, skipped: 0 };
 
@@ -883,15 +879,10 @@ export class ScrapeCommand {
 				await fs.writeFile(localPath, pdfBuffer);
 				pdf.path = relativePath;
 				stats.downloaded++;
-
-				if (verbose) {
-					console.log(`    Downloaded: ${filename}`);
-				}
+				console.log(`    Downloaded: ${filename}`);
 			} catch (error) {
 				const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
-				if (verbose) {
-					console.log(`    Failed: ${filename} - ${msg}`);
-				}
+				console.log(`    Failed: ${filename} - ${msg}`);
 			}
 		}
 
@@ -924,7 +915,6 @@ export class ScrapeCommand {
 	private async downloadManualImage(
 		manualId: string,
 		manualData: ManualData,
-		verbose: boolean,
 	): Promise<void> {
 		if (!manualData.image?.src) return;
 
@@ -936,9 +926,7 @@ export class ScrapeCommand {
 		const existingPath = await findExistingItemImage(filenamePrefix);
 		if (existingPath) {
 			manualData.image.path = existingPath;
-			if (verbose) {
-				console.log(`    Found existing image: ${existingPath}`);
-			}
+			console.log(`    Found existing image: ${existingPath}`);
 			return;
 		}
 
@@ -953,9 +941,6 @@ export class ScrapeCommand {
 		try {
 			await fs.access(localPath);
 			manualData.image.path = relativePath;
-			if (verbose) {
-				console.log(`    Image already downloaded: ${relativePath}`);
-			}
 			return;
 		} catch {
 			// File doesn't exist, download it
@@ -975,15 +960,10 @@ export class ScrapeCommand {
 			const buffer = Buffer.from(await response.arrayBuffer());
 			await fs.writeFile(localPath, buffer);
 			manualData.image.path = relativePath;
-
-			if (verbose) {
-				console.log(`    Downloaded image: ${filename}`);
-			}
+			console.log(`    Downloaded image: ${filename}`);
 		} catch (error) {
 			const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
-			if (verbose) {
-				console.log(`    Failed to download image: ${msg}`);
-			}
+			console.log(`    Failed to download image: ${msg}`);
 		}
 	}
 
@@ -1137,7 +1117,6 @@ export class ScrapeCommand {
 		itemId: string,
 		itemData: Item,
 		jsonPath: string,
-		verbose: boolean,
 	): Promise<{ downloaded: number; skipped: number }> {
 		const stats = { downloaded: 0, skipped: 0 };
 
@@ -1189,15 +1168,10 @@ export class ScrapeCommand {
 				await fs.writeFile(localPath, imageBuffer);
 				image.path = relativePath;
 				stats.downloaded++;
-
-				if (verbose) {
-					console.log(`    Downloaded: ${filename}`);
-				}
+				console.log(`    Downloaded: ${filename}`);
 			} catch (error) {
 				const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
-				if (verbose) {
-					console.log(`    Failed: ${filename} - ${msg}`);
-				}
+				console.log(`    Failed: ${filename} - ${msg}`);
 			}
 		}
 
@@ -1479,7 +1453,7 @@ export class ScrapeCommand {
 	 * Checks if translations are missing and adds them via global site or fallback
 	 * @returns true if the item was updated, false if no updates needed
 	 */
-	private async updateItemTranslations(itemId: string, verbose: boolean): Promise<boolean> {
+	private async updateItemTranslations(itemId: string): Promise<boolean> {
 		const jsonPath = path.join(ITEMS_DATA_DIR, `${itemId}.json`);
 
 		// Read existing JSON
@@ -1500,9 +1474,7 @@ export class ScrapeCommand {
 			return false; // Nothing to update
 		}
 
-		if (verbose) {
-			console.log(`  Checking translations for ${itemId}...`);
-		}
+		console.log(`  Checking translations for ${itemId}...`);
 
 		let updated = false;
 
@@ -1529,7 +1501,7 @@ export class ScrapeCommand {
 					updated = true;
 				}
 
-				if (verbose && updated) {
+				if (updated) {
 					console.log(`  ✓ Found translations on global site`);
 				}
 			}
@@ -1545,9 +1517,7 @@ export class ScrapeCommand {
 			try {
 				itemData = await this.translateItemFallback(itemData);
 				updated = true;
-				if (verbose) {
-					console.log(`  ✓ Used fallback translation`);
-				}
+				console.log(`  ✓ Used fallback translation`);
 			} catch {
 				// Fallback translation failed
 			}

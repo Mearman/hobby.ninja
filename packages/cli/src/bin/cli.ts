@@ -111,7 +111,6 @@ program
 	.option("-o, --output <dir>", "Output directory", FILES.OUTPUT_DIR)
 	.option("-c, --cache", "Enable caching", true)
 	.option(DRY_RUN_OPTION, "Show what would be processed without actual scraping", false)
-	.option(VERBOSE_OPTION, MESSAGES.VERBOSE_OUTPUT, false)
 	.option("--id <id>", "Scrape a single specific item ID (e.g., 01_1234, 1234, or 1)")
 	.option("--start <id>", "Start ID for range (e.g., 01_1000)")
 	.option("--end <id>", "End ID for range (e.g., 01_2000)")
@@ -152,7 +151,6 @@ program
 				output: rawOptions["output"] as string,
 				cache: rawOptions["cache"] === true,
 				resume: false,
-				verbose: rawOptions["verbose"] === true,
 				dryRun: rawOptions["dryRun"] === true,
 				maxAgeDays: Number.parseInt(rawOptions["maxAge"] as string, 10),
 				id: idFilter,
@@ -198,10 +196,8 @@ program
 		} catch (error: unknown) {
 			const errorMessage = error instanceof Error ? error.message : String(error);
 			console.error(GENERIC_ERROR_PREFIX.replace("%s", "Scrape"), errorMessage);
-			if ((options as Record<string, unknown>)[VERBOSE_STRING]) {
-				const errorStack = error instanceof Error ? error.stack : String(error);
-				console.error(errorStack);
-			}
+			const errorStack = error instanceof Error ? error.stack : String(error);
+			console.error(errorStack);
 			process.exit(1);
 		}
 	});

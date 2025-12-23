@@ -52,7 +52,6 @@ program
 	.option(DEFAULT_OUTPUT_OPTION, OUTPUT_DIR_DESC, DEFAULT_OUTPUT_DIR)
 	.option("--cache", "Enable caching", true)
 	.option("--resume", "Resume from last checkpoint", false)
-	.option("--verbose", "Enable verbose logging", false)
 	.option("--dry-run", "Perform dry run without actual scraping", false)
 	.option("--max-age <days>", "Skip items checked within this many days (0 = no filtering)", "7")
 	.option("--id <id>", "Scrape a single specific item ID (e.g., 01_1234)")
@@ -67,7 +66,6 @@ program
 			output: options.output as string,
 			cache: options.cache as boolean,
 			resume: options.resume as boolean,
-			verbose: options.verbose as boolean,
 			dryRun: options.dryRun as boolean,
 			maxAgeDays: Number.parseInt(options.maxAge as string, DECIMAL_RADIX),
 			id: options.id as string | undefined,
