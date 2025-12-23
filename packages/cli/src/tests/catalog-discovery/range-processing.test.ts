@@ -99,8 +99,6 @@ describe("Catalog Discovery - Range Processing", () => {
 		});
 
 		test("should build correct catalog URLs for processing", async () => {
-			const ranges = ["00_0000", "00_0001"];
-
 			expect(buildCatalogUrl("00_0000")).toBe("https://bandai-hobby.net/item/00_0000/");
 			expect(buildCatalogUrl("00_0001")).toBe("https://bandai-hobby.net/item/00_0001/");
 		});
