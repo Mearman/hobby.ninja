@@ -18,8 +18,10 @@ const GLOBAL_BASE_URL = "https://global.bandai-hobby.net/en-us";
 export interface GlobalSiteData {
 	/** English product name */
 	name?: string;
-	/** Description bullet points (from PRODUCTS INFO section) */
+	/** Description bullet points (from PRODUCTS INFO section, excluding accessories) */
 	description?: string[];
+	/** Accessory items extracted from [Accessories] section */
+	accessories?: string[];
 	/** English release date text */
 	releaseDate?: string;
 	/** Brand name in English (e.g., "REAL GRADE") */
@@ -78,9 +80,13 @@ export class GlobalSiteLookup {
 				return { hasPage: false };
 			}
 
+			// Extract description and accessories (split by [Accessories] marker)
+			const { description, accessories } = this.extractDescriptionBullets($);
+
 			return {
 				name: this.extractName($),
-				description: this.extractDescriptionBullets($),
+				description: description.length > 0 ? description : undefined,
+				accessories: accessories.length > 0 ? accessories : undefined,
 				releaseDate: this.extractReleaseDate($),
 				brand: this.extractBrand($),
 				series: this.extractSeries($),
@@ -147,32 +153,43 @@ export class GlobalSiteLookup {
 	 * The global site typically has bullets in a <p> tag separated by <br> tags:
 	 * <p>■ First bullet <br>■ Second bullet <br>...</p>
 	 */
-	private extractDescriptionBullets($: CheerioAPI): string[] {
-		const bullets: string[] = [];
+	private extractDescriptionBullets($: CheerioAPI): { description: string[]; accessories: string[] } {
+		const allBullets: string[] = [];
 
-		// Try to find the instruction text div directly (most reliable)
+		// Try legacy format: instruction text div with <br> separated bullets
 		const instructionDiv = $(".pg-products__instructionTxt");
 		if (instructionDiv.length > 0) {
-			// Get HTML and replace <br> tags with newlines for proper splitting
 			const html = instructionDiv.html() ?? "";
 			const textWithNewlines = html
 				.replaceAll(/<br\s*\/?>/gi, "\n")
 				.replaceAll(/<[^>]+>/g, ""); // Strip remaining HTML tags
 
-			// Split by newlines, normalize bullets, filter remarks
 			const lines = textWithNewlines.split("\n");
 			for (const line of lines) {
 				const trimmed = line.trim();
 				if (trimmed && !this.isRemarkText(trimmed)) {
-					// Normalize ■ to • if present
 					const normalized = trimmed.replace(/^■\s*/, "• ");
-					bullets.push(normalized);
+					allBullets.push(normalized);
 				}
 			}
 		}
 
+		// Try new format: article div with PlaygroundEditorTheme paragraphs
+		if (allBullets.length === 0) {
+			const articleDiv = $(".pg-products__article");
+			if (articleDiv.length > 0) {
+				articleDiv.find("p").each((_, el) => {
+					const text = $(el).text().trim();
+					if (text && !this.isRemarkText(text)) {
+						const normalized = text.replace(/^■\s*/, "• ");
+						allBullets.push(normalized);
+					}
+				});
+			}
+		}
+
 		// Fallback: Find PRODUCTS INFO heading and get content after it
-		if (bullets.length === 0) {
+		if (allBullets.length === 0) {
 			$("main").find("h2, h3").each((_, heading) => {
 				const headingText = $(heading).text();
 				if (headingText.includes("PRODUCTS INFO") || headingText.includes("PRODUCT INFO")) {
@@ -188,7 +205,7 @@ export class GlobalSiteLookup {
 							const trimmed = line.trim();
 							if (trimmed && !this.isRemarkText(trimmed)) {
 								const normalized = trimmed.replace(/^■\s*/, "• ");
-								bullets.push(normalized);
+								allBullets.push(normalized);
 							}
 						}
 						node = node.next();
@@ -197,7 +214,42 @@ export class GlobalSiteLookup {
 			});
 		}
 
-		return bullets;
+		// Split into description and accessories based on [Accessories] marker
+		return this.splitDescriptionAndAccessories(allBullets);
+	}
+
+	/**
+	 * Split bullets into description and accessories sections
+	 * Looks for [Accessories] marker to separate them
+	 */
+	private splitDescriptionAndAccessories(bullets: string[]): { description: string[]; accessories: string[] } {
+		const description: string[] = [];
+		const accessories: string[] = [];
+		let inAccessoriesSection = false;
+
+		for (const bullet of bullets) {
+			const bulletLower = bullet.toLowerCase();
+
+			// Check for accessories marker
+			if (bulletLower.includes("[accessories]")) {
+				inAccessoriesSection = true;
+				// If there's text after the marker on the same line, add it to accessories
+				const markerIndex = bulletLower.indexOf("[accessories]");
+				const afterMarker = bullet.slice(markerIndex + "[accessories]".length).trim();
+				if (afterMarker) {
+					accessories.push(afterMarker.replace(/^■\s*/, "• "));
+				}
+				continue;
+			}
+
+			if (inAccessoriesSection) {
+				accessories.push(bullet);
+			} else {
+				description.push(bullet);
+			}
+		}
+
+		return { description, accessories };
 	}
 
 	/**
