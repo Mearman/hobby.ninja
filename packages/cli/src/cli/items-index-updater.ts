@@ -2,8 +2,8 @@
  * Helper to update the items index (data/src/items/index.json)
  * when the scraper discovers valid/invalid IDs on the Japanese site.
  *
- * Note: Timing fields (pageScrapedAt, arrayVerifiedAt, downloadVerifiedAt, etc.)
- * are now stored in individual item JSON files instead of the centralized index.
+ * Timing fields (extractedAt, pageScrapedAt) are stored in the centralized
+ * index to keep individual item JSON files clean.
  */
 
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
@@ -12,12 +12,12 @@ import path from "node:path";
 import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
 
 const ITEMS_INDEX_PATH = resolveWorkspacePath("data/src/items/index.json");
+const ITEMS_DATA_DIR = resolveWorkspacePath("data/src/items");
 const SECONDS_PER_MINUTE = 60;
 const MINUTES_PER_HOUR = 60;
 const MILLISECONDS_PER_SECOND = 1000;
 const MILLISECONDS_PER_HOUR = SECONDS_PER_MINUTE * MINUTES_PER_HOUR * MILLISECONDS_PER_SECOND;
 const DEFAULT_PAGE_SCRAPE_MAX_AGE_HOURS = 168; // 7 days
-const DEFAULT_DOWNLOAD_VERIFICATION_MAX_AGE_HOURS = 24;
 
 /**
  * Pad the numeric suffix of an item ID to 4 digits for consistent indexing
@@ -33,14 +33,6 @@ function padItemId(id: string): string {
 	if (!prefix || !suffix || !/^\d+$/.test(prefix) || !/^\d+$/.test(suffix)) return id;
 	return `${prefix}_${suffix.padStart(ZERO_PADDING_LENGTH, ZERO_CHAR)}`;
 }
-const ITEMS_DATA_DIR = resolveWorkspacePath("data/src/items");
-
-// Timing fields now stored in individual item files
-interface ItemTimingFields {
-	pageScrapedAt?: string;     // When we last scraped the page for image content
-	downloadVerifiedAt?: string; // When we verified all images were downloaded
-}
-
 // Minimal index interface - only essential tracking data
 interface SiteStatus {
 	hasPage: boolean;
@@ -60,8 +52,10 @@ interface SiteStats {
 interface ItemIndexEntry {
 	japaneseSite?: SiteStatus;
 	globalSite?: SiteStatus;
-	/** Whether the item JSON file exists in data/src/items/ */
-	hasFile?: boolean;
+	/** When the item data was extracted from the page HTML */
+	extractedAt?: string;
+	/** When we last scraped the page for content (images, descriptions, etc.) */
+	pageScrapedAt?: string;
 }
 
 interface ItemsIndex {
@@ -110,50 +104,13 @@ function calculateStats(items: Record<string, ItemIndexEntry>): ItemsIndex["stat
 	};
 }
 
-// Helper functions for individual item timing fields
-function getItemTimingFields(itemId: string): ItemTimingFields | null {
-	try {
-		const paddedId = padItemId(itemId);
-		const itemPath = path.resolve(ITEMS_DATA_DIR, `${paddedId}.json`);
-		if (!existsSync(itemPath)) return null;
-
-		const itemData = JSON.parse(readFileSync(itemPath, "utf8")) as {
-			pageScrapedAt?: string;
-			downloadVerifiedAt?: string;
-		};
-		return {
-			pageScrapedAt: itemData.pageScrapedAt,
-			downloadVerifiedAt: itemData.downloadVerifiedAt,
-		};
-	} catch {
-		return null;
-	}
-}
-
-function setItemTimingFields(itemId: string, fields: Partial<ItemTimingFields>): boolean {
-	try {
-		const paddedId = padItemId(itemId);
-		const itemPath = path.resolve(ITEMS_DATA_DIR, `${paddedId}.json`);
-		if (!existsSync(itemPath)) return false;
-
-		const itemData = JSON.parse(readFileSync(itemPath, "utf8")) as {
-			pageScrapedAt?: string;
-			downloadVerifiedAt?: string;
-		};
-
-		// Update timing fields
-		if (fields.pageScrapedAt !== undefined) {
-			itemData.pageScrapedAt = fields.pageScrapedAt;
-		}
-		if (fields.downloadVerifiedAt !== undefined) {
-			itemData.downloadVerifiedAt = fields.downloadVerifiedAt;
-		}
-
-		writeFileSync(itemPath, JSON.stringify(itemData, null, "\t"));
-		return true;
-	} catch {
-		return false;
-	}
+/**
+ * Check if an item JSON file exists on disk
+ */
+function itemFileExists(itemId: string): boolean {
+	const paddedId = padItemId(itemId);
+	const filePath = path.join(ITEMS_DATA_DIR, `${paddedId}.json`);
+	return existsSync(filePath);
 }
 
 /**
@@ -300,13 +257,14 @@ export const ItemsIndexUpdater = {
 		return {
 			indexed: true,
 			hasPage: entry.japaneseSite.hasPage,
-			hasFile: entry.hasFile,
+			hasFile: itemFileExists(itemId),
 			productName: entry.japaneseSite.productName,
 		};
 	},
 
 	/**
-	 * Mark that a file has been created for an item
+	 * Record that an item has a valid page (updates Japanese site status)
+	 * Note: File existence is now checked on disk, not stored in index
 	 */
 	recordFileCreated(itemId: string, productName?: string): void {
 		if (!itemsIndex) this.load();
@@ -322,16 +280,15 @@ export const ItemsIndexUpdater = {
 				pageCheckedAt: new Date().toISOString(),
 				productName,
 			};
+			isDirty = true;
 		} else if (productName && !itemsIndex.items[paddedId].japaneseSite.productName) {
 			itemsIndex.items[paddedId].japaneseSite.productName = productName;
+			isDirty = true;
 		}
-
-		itemsIndex.items[paddedId].hasFile = true;
-		isDirty = true;
 	},
 
 	/**
-	 * Get IDs that need content download (has page but no file)
+	 * Get IDs that need content download (has page but no file on disk)
 	 */
 	getIdsNeedingDownload(ranges: string[]): string[] {
 		if (!itemsIndex) this.load();
@@ -340,9 +297,9 @@ export const ItemsIndexUpdater = {
 		return ranges.filter((id) => {
 			const paddedId = padItemId(id);
 			const entry = itemsIndex?.items[paddedId];
-			// Need download if: not indexed, or indexed with page but no file
+			// Need download if: not indexed, or indexed with page but no file on disk
 			if (!entry?.japaneseSite) return true;
-			return entry.japaneseSite.hasPage && !entry.hasFile;
+			return entry.japaneseSite.hasPage && !itemFileExists(id);
 		});
 	},
 
@@ -366,13 +323,22 @@ export const ItemsIndexUpdater = {
 		if (!itemsIndex) this.load();
 		if (!itemsIndex) return { valid: 0, invalid: 0, withFile: 0, totalChecked: 0 };
 
+		const itemIds = Object.keys(itemsIndex.items);
 		const entries = Object.values(itemsIndex.items);
 		const jpEntries = entries.filter((e) => e.japaneseSite);
+
+		// Count files by checking disk
+		let withFile = 0;
+		for (const itemId of itemIds) {
+			if (itemFileExists(itemId)) {
+				withFile++;
+			}
+		}
 
 		return {
 			valid: jpEntries.filter((e) => e.japaneseSite?.hasPage).length,
 			invalid: jpEntries.filter((e) => e.japaneseSite && !e.japaneseSite.hasPage).length,
-			withFile: entries.filter((e) => e.hasFile).length,
+			withFile,
 			totalChecked: jpEntries.length,
 		};
 	},
@@ -396,23 +362,43 @@ export const ItemsIndexUpdater = {
 	},
 
 	/**
-	 * Record that the page was scraped for image content
+	 * Record that item data was extracted from HTML
+	 */
+	recordExtracted(itemId: string): void {
+		if (!itemsIndex) this.load();
+		if (!itemsIndex) return;
+
+		const paddedId = padItemId(itemId);
+		itemsIndex.items[paddedId] ??= {};
+		itemsIndex.items[paddedId].extractedAt = new Date().toISOString();
+		isDirty = true;
+	},
+
+	/**
+	 * Record that the page was scraped for content (images, descriptions, etc.)
 	 */
 	recordPageScraped(itemId: string): void {
-		setItemTimingFields(itemId, {
-			pageScrapedAt: new Date().toISOString(),
-		});
+		if (!itemsIndex) this.load();
+		if (!itemsIndex) return;
+
+		const paddedId = padItemId(itemId);
+		itemsIndex.items[paddedId] ??= {};
+		itemsIndex.items[paddedId].pageScrapedAt = new Date().toISOString();
+		isDirty = true;
 	},
 
 	/**
 	 * Check if page content was recently scraped (within specified hours)
 	 */
 	wasPageRecentlyScraped(itemId: string, maxAgeHours = DEFAULT_PAGE_SCRAPE_MAX_AGE_HOURS): boolean {
-		const timingFields = getItemTimingFields(itemId);
-		if (!timingFields?.pageScrapedAt) return false;
+		if (!itemsIndex) this.load();
+		if (!itemsIndex) return false;
 
-		// Check if page scraping is recent enough
-		const scrapeTime = new Date(timingFields.pageScrapedAt).getTime();
+		const paddedId = padItemId(itemId);
+		const pageScrapedAt = itemsIndex.items[paddedId]?.pageScrapedAt;
+		if (!pageScrapedAt) return false;
+
+		const scrapeTime = new Date(pageScrapedAt).getTime();
 		const maxAge = maxAgeHours * MILLISECONDS_PER_HOUR;
 		const now = Date.now();
 
@@ -420,39 +406,19 @@ export const ItemsIndexUpdater = {
 	},
 
 	/**
-	 * Record that all images were verified as downloaded
+	 * Get timing information for an item
 	 */
-	recordDownloadVerified(itemId: string): void {
-		setItemTimingFields(itemId, {
-			downloadVerifiedAt: new Date().toISOString(),
-		});
-	},
+	getTimingInfo(itemId: string): { extractedAt?: string; pageScrapedAt?: string } {
+		if (!itemsIndex) this.load();
+		if (!itemsIndex) return {};
 
-	/**
-	 * Check if an item needs download verification (all images downloaded recently)
-	 */
-	needsDownloadVerification(itemId: string, maxAgeHours = DEFAULT_DOWNLOAD_VERIFICATION_MAX_AGE_HOURS): boolean {
-		const timingFields = getItemTimingFields(itemId);
-		if (!timingFields?.downloadVerifiedAt) return true;
-
-		// Check if verification is too old
-		const verificationTime = new Date(timingFields.downloadVerifiedAt).getTime();
-		const maxAge = maxAgeHours * MILLISECONDS_PER_HOUR;
-		const now = Date.now();
-
-		return (now - verificationTime) > maxAge;
-	},
-
-	/**
-	 * Get download verification status for an item
-	 */
-	getDownloadStatus(itemId: string): { verified: boolean; at?: string } {
-		const timingFields = getItemTimingFields(itemId);
-		if (!timingFields?.downloadVerifiedAt) return { verified: false };
+		const paddedId = padItemId(itemId);
+		const entry = itemsIndex.items[paddedId];
+		if (!entry) return {};
 
 		return {
-			verified: true,
-			at: timingFields.downloadVerifiedAt,
+			extractedAt: entry.extractedAt,
+			pageScrapedAt: entry.pageScrapedAt,
 		};
 	},
 };
