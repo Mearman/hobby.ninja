@@ -2,12 +2,19 @@ import { describe, test, expect, vi } from "vitest";
 
 import { discoverCatalogItems } from "../../cli/catalog-discovery";
 
+// Test constants
+const MOCK_SCRAPPERS_PATH = "../scrappers";
+
 // Mock the BandaiHobbyScraper for error scenarios
-vi.mock("../scrappers", () => ({
+vi.mock(MOCK_SCRAPPERS_PATH, () => ({
 	BandaiHobbyScraper: vi.fn(),
 }));
 
 describe("Catalog Discovery - Error Handling", () => {
+	// Test constants
+	const TEST_OUTPUT_DIR = "./data/bandai/items/";
+	const DELAY_MS = 1000;
+
 	describe("discoverCatalogItems", () => {
 		test("should handle network timeout errors during catalog processing", async () => {
 			// Mock scraper to throw network error
@@ -15,17 +22,17 @@ describe("Catalog Discovery - Error Handling", () => {
 				scrapeItem: vi.fn().mockRejectedValue(new Error("Network timeout")),
 			};
 
-			vi.doMock("../scrappers", () => ({
+			vi.doMock(MOCK_SCRAPPERS_PATH, () => ({
 				BandaiHobbyScraper: vi.fn(() => mockScraper),
 			}));
 
 			const options = {
 				ranges: ["00_0000"],
-				outputDir: "./data/bandai/items/",
+				outputDir: TEST_OUTPUT_DIR,
 				cache: true,
 				resume: false,
 				verbose: false,
-				delayMs: 1000,
+				delayMs: DELAY_MS,
 			};
 
 			const result = await discoverCatalogItems(options);
@@ -40,17 +47,17 @@ describe("Catalog Discovery - Error Handling", () => {
 				scrapeItem: vi.fn().mockRejectedValue(new Error("HTTP 404: Page not found")),
 			};
 
-			vi.doMock("../scrappers", () => ({
+			vi.doMock(MOCK_SCRAPPERS_PATH, () => ({
 				BandaiHobbyScraper: vi.fn(() => mockScraper),
 			}));
 
 			const options = {
 				ranges: ["00_0000"],
-				outputDir: "./data/bandai/items/",
+				outputDir: TEST_OUTPUT_DIR,
 				cache: true,
 				resume: false,
 				verbose: false,
-				delayMs: 1000,
+				delayMs: DELAY_MS,
 			};
 
 			const result = await discoverCatalogItems(options);
@@ -64,17 +71,17 @@ describe("Catalog Discovery - Error Handling", () => {
 				scrapeItem: vi.fn().mockRejectedValue(new Error("Client-side rendering timeout")),
 			};
 
-			vi.doMock("../scrappers", () => ({
+			vi.doMock(MOCK_SCRAPPERS_PATH, () => ({
 				BandaiHobbyScraper: vi.fn(() => mockScraper),
 			}));
 
 			const options = {
 				ranges: ["00_0000"],
-				outputDir: "./data/bandai/items/",
+				outputDir: TEST_OUTPUT_DIR,
 				cache: true,
 				resume: false,
 				verbose: false,
-				delayMs: 1000,
+				delayMs: DELAY_MS,
 			};
 
 			const result = await discoverCatalogItems(options);
@@ -92,17 +99,17 @@ describe("Catalog Discovery - Error Handling", () => {
 					.mockResolvedValueOnce({ success: true, items: [] }),
 			};
 
-			vi.doMock("../scrappers", () => ({
+			vi.doMock(MOCK_SCRAPPERS_PATH, () => ({
 				BandaiHobbyScraper: vi.fn(() => mockScraper),
 			}));
 
 			const options = {
 				ranges: ["00_0000", "00_0001", "00_0002"],
-				outputDir: "./data/bandai/items/",
+				outputDir: TEST_OUTPUT_DIR,
 				cache: true,
 				resume: false,
 				verbose: false,
-				delayMs: 1000,
+				delayMs: DELAY_MS,
 			};
 
 			const result = await discoverCatalogItems(options);
@@ -119,17 +126,17 @@ describe("Catalog Discovery - Error Handling", () => {
 				scrapeItem: vi.fn().mockResolvedValue({ success: true, items: [] }),
 			};
 
-			vi.doMock("../scrappers", () => ({
+			vi.doMock(MOCK_SCRAPPERS_PATH, () => ({
 				BandaiHobbyScraper: vi.fn(() => mockScraper),
 			}));
 
 			const options = {
 				ranges: ["00_0000"],
-				outputDir: "./data/bandai/items/",
+				outputDir: TEST_OUTPUT_DIR,
 				cache: true,
 				resume: false,
 				verbose: false,
-				delayMs: 1000,
+				delayMs: DELAY_MS,
 			};
 
 			const result = await discoverCatalogItems(options);
@@ -145,7 +152,7 @@ describe("Catalog Discovery - Error Handling", () => {
 				scrapeItem: vi.fn().mockRejectedValue(new Error("Test error")),
 			};
 
-			vi.doMock("../scrappers", () => ({
+			vi.doMock(MOCK_SCRAPPERS_PATH, () => ({
 				BandaiHobbyScraper: vi.fn(() => mockScraper),
 			}));
 
@@ -172,7 +179,7 @@ describe("Catalog Discovery - Error Handling", () => {
 				scrapeItem: vi.fn().mockResolvedValue({ success: true, items: [] }),
 			};
 
-			vi.doMock("../scrappers", () => ({
+			vi.doMock(MOCK_SCRAPPERS_PATH, () => ({
 				BandaiHobbyScraper: vi.fn(() => mockScraper),
 			}));
 
@@ -180,11 +187,11 @@ describe("Catalog Discovery - Error Handling", () => {
 
 			const options = {
 				ranges: ["00_0000", "00_0001"],
-				outputDir: "./data/bandai/items/",
+				outputDir: TEST_OUTPUT_DIR,
 				cache: true,
 				resume: false,
 				verbose: false,
-				delayMs: 1000,
+				delayMs: DELAY_MS,
 			};
 
 			await discoverCatalogItems(options);
@@ -199,11 +206,11 @@ describe("Catalog Discovery - Error Handling", () => {
 		test("should handle invalid range identifiers", async () => {
 			const options = {
 				ranges: ["invalid_range"],
-				outputDir: "./data/bandai/items/",
+				outputDir: TEST_OUTPUT_DIR,
 				cache: true,
 				resume: false,
 				verbose: false,
-				delayMs: 1000,
+				delayMs: DELAY_MS,
 			};
 
 			const result = await discoverCatalogItems(options);

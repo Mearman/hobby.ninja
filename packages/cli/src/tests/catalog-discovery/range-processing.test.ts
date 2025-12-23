@@ -15,6 +15,10 @@ vi.mock("../scrappers", () => ({
 }));
 
 describe("Catalog Discovery - Range Processing", () => {
+	// Test constants
+	const MOCK_SCRAPER_PATH = "../scrappers";
+	const BANDAI_HOBBY_SCRAPER = "BandaiHobbyScraper";
+
 	describe("processCatalogRanges", () => {
 		test("should process multiple catalog ranges and pass to scraper", async () => {
 			// Mock successful scraper processing
@@ -24,8 +28,8 @@ describe("Catalog Discovery - Range Processing", () => {
 					.mockResolvedValueOnce({ success: true, itemId: "catalog-00_0001" }),
 			};
 
-			vi.doMock("../scrappers", () => ({
-				BandaiHobbyScraper: vi.fn(() => mockScraper),
+			vi.doMock(MOCK_SCRAPER_PATH, () => ({
+				[BANDAI_HOBBY_SCRAPER]: vi.fn(() => mockScraper),
 			}));
 
 			const ranges = ["00_0000", "00_0001"];
@@ -55,8 +59,8 @@ describe("Catalog Discovery - Range Processing", () => {
 					.mockRejectedValueOnce(new Error("Network timeout")),
 			};
 
-			vi.doMock("../scrappers", () => ({
-				BandaiHobbyScraper: vi.fn(() => mockScraper),
+			vi.doMock(MOCK_SCRAPER_PATH, () => ({
+				[BANDAI_HOBBY_SCRAPER]: vi.fn(() => mockScraper),
 			}));
 
 			const ranges = ["00_0000", "00_0001"];
@@ -76,8 +80,8 @@ describe("Catalog Discovery - Range Processing", () => {
 					.mockResolvedValueOnce({ success: true, items: ["item3"] }),
 			};
 
-			vi.doMock("../scrappers", () => ({
-				BandaiHobbyScraper: vi.fn(() => mockScraper),
+			vi.doMock(MOCK_SCRAPER_PATH, () => ({
+				[BANDAI_HOBBY_SCRAPER]: vi.fn(() => mockScraper),
 			}));
 
 			const ranges = ["00_0000", "00_0001"];
@@ -106,8 +110,8 @@ describe("Catalog Discovery - Range Processing", () => {
 				scrapeItem: vi.fn().mockRejectedValue(new Error("HTTP 404: Page not found")),
 			};
 
-			vi.doMock("../scrappers", () => ({
-				BandaiHobbyScraper: vi.fn(() => mockScraper),
+			vi.doMock(MOCK_SCRAPER_PATH, () => ({
+				[BANDAI_HOBBY_SCRAPER]: vi.fn(() => mockScraper),
 			}));
 
 			const ranges = ["99_9999"]; // Assume this doesn't exist

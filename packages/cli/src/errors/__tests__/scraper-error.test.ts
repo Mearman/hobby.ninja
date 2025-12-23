@@ -7,9 +7,11 @@ import { describe, it, expect } from "vitest";
 import { ScraperError, ErrorCode, ErrorCategory } from "../scraper-error.js";
 
 describe("ScraperError", () => {
+	// Test constants
+	const TEST_URL = "https://example.com";
 	it("should create a ScraperError with all required properties", () => {
 		const error = new ScraperError(ErrorCode.NETWORK_TIMEOUT, {
-			url: "https://example.com",
+			url: TEST_URL,
 			retryCount: 1,
 		});
 
@@ -17,14 +19,14 @@ describe("ScraperError", () => {
 		expect(error.code).toBe(ErrorCode.NETWORK_TIMEOUT);
 		expect(error.category).toBe(ErrorCategory.NETWORK);
 		expect(error.retryable).toBe(true);
-		expect(error.context.url).toBe("https://example.com");
+		expect(error.context.url).toBe(TEST_URL);
 		expect(error.context.retryCount).toBe(1);
 		expect(error.metadata.timestamp).toBeDefined();
 	});
 
 	it("should create error from generic Error with auto-detection", () => {
 		const genericError = new Error("ENOTFOUND: getaddrinfo");
-		const scraperError = ScraperError.fromError(genericError, { url: "https://example.com" });
+		const scraperError = ScraperError.fromError(genericError, { url: TEST_URL });
 
 		expect(scraperError).toBeInstanceOf(ScraperError);
 		expect(scraperError.code).toBe(ErrorCode.NETWORK_DNS_RESOLUTION);
@@ -35,12 +37,12 @@ describe("ScraperError", () => {
 	it("should create network-specific errors", () => {
 		const error = ScraperError.network(
 			ErrorCode.NETWORK_CONNECTION_FAILED,
-			"https://example.com",
+			TEST_URL,
 			500,
 		);
 
 		expect(error.code).toBe(ErrorCode.NETWORK_CONNECTION_FAILED);
-		expect(error.context.url).toBe("https://example.com");
+		expect(error.context.url).toBe(TEST_URL);
 		expect(error.context.statusCode).toBe(500);
 		expect(error.context.operation).toBe("http_request");
 	});
@@ -71,7 +73,7 @@ describe("ScraperError", () => {
 	it("should generate detailed string representation", () => {
 		const error = ScraperError.scraping(
 			ErrorCode.SCRAPE_PAGE_NOT_FOUND,
-			"https://example.com",
+			TEST_URL,
 			".product-list",
 		);
 
@@ -79,7 +81,7 @@ describe("ScraperError", () => {
 
 		expect(detailed).toContain("Error: SCRAPE_001");
 		expect(detailed).toContain("Category: SCRAPING");
-		expect(detailed).toContain("URL: https://example.com");
+		expect(detailed).toContain(`URL: ${TEST_URL}`);
 		expect(detailed).toContain("Selector: .product-list");
 		expect(detailed).toContain("Timestamp:");
 	});
@@ -87,14 +89,14 @@ describe("ScraperError", () => {
 	it("should generate user-friendly message with suggestions", () => {
 		const error = ScraperError.network(
 			ErrorCode.NETWORK_TIMEOUT,
-			"https://example.com",
+			TEST_URL,
 		);
 
 		const userMessage = error.toUserMessage();
 
 		expect(userMessage).toContain("took too long to complete");
 		expect(userMessage).toContain("Suggestions:");
-		expect(userMessage).toContain("https://example.com");
+		expect(userMessage).toContain(TEST_URL);
 		expect(userMessage).toContain("Error Code: NETWORK_002");
 	});
 
@@ -121,12 +123,12 @@ describe("ScraperError", () => {
 	it("should determine retry logic correctly", () => {
 		const retryableError = ScraperError.network(
 			ErrorCode.NETWORK_TIMEOUT,
-			"https://example.com",
+			TEST_URL,
 		);
 
 		const nonRetryableError = ScraperError.scraping(
 			ErrorCode.SCRAPE_ACCESS_DENIED,
-			"https://example.com",
+			TEST_URL,
 		);
 
 		expect(retryableError.shouldRetry()).toBe(true);
@@ -136,7 +138,7 @@ describe("ScraperError", () => {
 	it("should calculate retry delay with exponential backoff", () => {
 		const error = ScraperError.network(
 			ErrorCode.NETWORK_TIMEOUT,
-			"https://example.com",
+			TEST_URL,
 		);
 
 		// Test without retry count
@@ -154,7 +156,7 @@ describe("ScraperError", () => {
 	it("should create copy with updated context", () => {
 		const error = ScraperError.network(
 			ErrorCode.NETWORK_TIMEOUT,
-			"https://example.com",
+			TEST_URL,
 		);
 
 		const updatedError = error.withContext({
@@ -163,7 +165,7 @@ describe("ScraperError", () => {
 		});
 
 		expect(updatedError.code).toBe(error.code);
-		expect(updatedError.context.url).toBe("https://example.com");
+		expect(updatedError.context.url).toBe(TEST_URL);
 		expect(updatedError.context.retryCount).toBe(2);
 		expect(updatedError.context.statusCode).toBe(504);
 	});

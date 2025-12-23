@@ -8,11 +8,16 @@ import type {
 } from "../../cli/types/catalog-discovery";
 
 describe("CatalogDiscovery Types", () => {
+	// Test constants
+	const TEST_OUTPUT_DIR = "./data/bandai/items/";
+	const TEST_URL_TEMPLATE = "https://bandai-hobby.net/item/";
+	const TEST_SOURCE = "TEST_SOURCE";
+
 	describe("CatalogDiscoveryOptions", () => {
 		test("should create valid options with required fields", () => {
 			const options: CatalogDiscoveryOptions = {
 				ranges: ["01_1000", "02_1000"],
-				outputDir: "./data/bandai/items/",
+				outputDir: TEST_OUTPUT_DIR,
 				cache: true,
 				resume: false,
 				verbose: false,
@@ -20,7 +25,7 @@ describe("CatalogDiscovery Types", () => {
 			};
 
 			expect(options.ranges).toEqual(["01_1000", "02_1000"]);
-			expect(options.outputDir).toBe("./data/bandai/items/");
+			expect(options.outputDir).toBe(TEST_OUTPUT_DIR);
 			expect(options.cache).toBe(true);
 			expect(options.resume).toBe(false);
 			expect(options.verbose).toBe(false);
@@ -30,7 +35,7 @@ describe("CatalogDiscovery Types", () => {
 		test("should accept empty ranges array", () => {
 			const options: CatalogDiscoveryOptions = {
 				ranges: [],
-				outputDir: "./data/bandai/items/",
+				outputDir: TEST_OUTPUT_DIR,
 				cache: true,
 				resume: false,
 				verbose: false,
@@ -83,14 +88,14 @@ describe("CatalogDiscovery Types", () => {
 		test("should create catalog range with all fields", () => {
 			const range: CatalogRange = {
 				id: "01_1000",
-				url: "https://bandai-hobby.net/item/01_1000/",
+				url: `${TEST_URL_TEMPLATE}01_1000/`,
 				status: "completed",
 				itemCount: 50,
 				error: undefined,
 			};
 
 			expect(range.id).toBe("01_1000");
-			expect(range.url).toBe("https://bandai-hobby.net/item/01_1000/");
+			expect(range.url).toBe(`${TEST_URL_TEMPLATE}01_1000/`);
 			expect(range.status).toBe("completed");
 			expect(range.itemCount).toBe(50);
 			expect(range.error).toBeUndefined();
@@ -99,7 +104,7 @@ describe("CatalogDiscovery Types", () => {
 		test("should handle failed range with error", () => {
 			const range: CatalogRange = {
 				id: "02_1000",
-				url: "https://bandai-hobby.net/item/02_1000/",
+				url: `${TEST_URL_TEMPLATE}02_1000/`,
 				status: "failed",
 				itemCount: 0,
 				error: "Page not found",
@@ -127,7 +132,7 @@ describe("CatalogDiscovery Types", () => {
 	describe("CatalogDiscoveryInput", () => {
 		test("should create input with all options", () => {
 			const input: CatalogDiscoveryInput = {
-				source: "bandai-items-catalog",
+				source: TEST_SOURCE,
 				ranges: ["01_1000"],
 				output: "./custom-output/",
 				cache: false,
@@ -137,7 +142,7 @@ describe("CatalogDiscovery Types", () => {
 				delayMs: 5000,
 			};
 
-			expect(input.source).toBe("bandai-items-catalog");
+			expect(input.source).toBe(TEST_SOURCE);
 			expect(input.ranges).toEqual(["01_1000"]);
 			expect(input.output).toBe("./custom-output/");
 			expect(input.cache).toBe(false);
@@ -149,10 +154,10 @@ describe("CatalogDiscovery Types", () => {
 
 		test("should create minimal input", () => {
 			const input: CatalogDiscoveryInput = {
-				source: "bandai-items-catalog",
+				source: TEST_SOURCE,
 			};
 
-			expect(input.source).toBe("bandai-items-catalog");
+			expect(input.source).toBe(TEST_SOURCE);
 			expect(input.ranges).toBeUndefined();
 			expect(input.output).toBeUndefined();
 		});
