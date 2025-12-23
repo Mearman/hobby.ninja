@@ -5,6 +5,8 @@
 
 import { load, type CheerioAPI } from "cheerio";
 
+import type { ItemImage } from "./bandai-catalog-parser.js";
+
 /** Localized text */
 interface LocalizedText {
 	ja: string;
@@ -27,6 +29,26 @@ interface ManualReleaseDate {
 	day?: number;
 }
 
+/** Brand reference */
+export interface ManualBrand {
+	/** Brand ID (optional, can be mapped later) */
+	id?: string;
+	/** Japanese brand name */
+	ja: string;
+	/** English brand name */
+	en?: string;
+}
+
+/** Series reference */
+export interface ManualSeries {
+	/** Series ID (optional, can be mapped later) */
+	id?: string;
+	/** Japanese series name */
+	ja: string;
+	/** English series name */
+	en?: string;
+}
+
 /** Parsed manual data */
 export interface ManualData {
 	id: string;
@@ -34,14 +56,15 @@ export interface ManualData {
 	name: LocalizedText;
 	productNumber?: string;
 	releaseDate?: ManualReleaseDate;
-	productImage?: string;
-	thumbnailImage?: string;
+	/** Product image (same structure as item images) */
+	image?: ItemImage;
 	scale?: string;
-	brandIds: string[];
-	seriesIds: string[];
+	/** Brand extracted from page (ja text, ID can be mapped later) */
+	brand?: ManualBrand;
+	/** Series extracted from page (ja text, ID can be mapped later) */
+	series?: ManualSeries;
 	pdfs: ManualPdf[];
 	sourceUrl: string;
-	extractedAt: string;
 }
 
 /** Parse result */
@@ -75,14 +98,12 @@ export class ManualParser {
 				name: { ja: name },
 				productNumber: this.extractProductNumber($),
 				releaseDate: this.extractReleaseDate($),
-				productImage: this.extractProductImage($),
-				thumbnailImage: this.extractThumbnailImage($),
+				image: this.extractImage($),
 				scale: this.extractScale(name),
-				brandIds: this.extractBrandIds($, name),
-				seriesIds: this.extractSeriesIds($),
+				brand: this.extractBrand($, name),
+				series: this.extractSeries($),
 				pdfs,
 				sourceUrl,
-				extractedAt: new Date().toISOString(),
 			};
 
 			return { success: true, data: manual };
@@ -96,17 +117,26 @@ export class ManualParser {
 
 	/**
 	 * Extract manual/product name from page title
+	 * The manual site uses h2 for the product name (not h1)
 	 */
 	private extractName($: CheerioAPI): string | undefined {
-		// Try h1 first
+		// Try h2 first (manual site uses h2 for product name)
+		const h2 = $("h2").first().text().trim();
+		if (h2) return h2;
+
+		// Try h1 as fallback
 		const h1 = $("h1").first().text().trim();
 		if (h1) return h1;
 
 		// Try page title, strip common suffixes
 		const title = $("title").text().trim();
 		if (title) {
-			// Remove "| BANDAI HOBBY SITE" suffix
-			return title.replace(/\s*\|\s*BANDAI HOBBY SITE.*$/i, "").trim();
+			// Remove Japanese suffix: " - バンダイプラモデルWEB取説 | バンダイ ホビーサイト"
+			// Also handle English suffix: "| BANDAI HOBBY SITE"
+			return title
+				.replace(/\s*-\s*バンダイプラモデルWEB取説.*$/i, "")
+				.replace(/\s*\|\s*BANDAI HOBBY SITE.*$/i, "")
+				.trim();
 		}
 
 		return undefined;
@@ -114,15 +144,19 @@ export class ManualParser {
 
 	/**
 	 * Extract product number (JAN code or product ID)
+	 * The manual site shows "品番" followed by number (no colon separator)
 	 */
 	private extractProductNumber($: CheerioAPI): string | undefined {
 		// Look for product number in structured data or metadata
 		const productNum = $('meta[name="product-number"]').attr("content");
 		if (productNum) return productNum;
 
-		// Try to find in page content - pattern like "商品番号: 1114204"
+		// Try to find in page content
+		// Pattern: "品番" or "商品番号" followed by optional colon and digits
+		// Manual site has no colon, just whitespace between label and number
 		const bodyText = $("body").text();
-		const match = /(?:商品番号|品番)[：:]\s*(\d+)/i.exec(bodyText);
+		const pattern = /(?:商品番号|品番)[：:]?\s*(\d+)/i;
+		const match = pattern.exec(bodyText);
 		return match?.[1];
 	}
 
@@ -157,28 +191,31 @@ export class ManualParser {
 	}
 
 	/**
-	 * Extract product image URL
+	 * Extract product image
+	 * The manual site has the product image right after the h2 heading
 	 */
-	private extractProductImage($: CheerioAPI): string | undefined {
-		// Look for main product image
+	private extractImage($: CheerioAPI): ItemImage | undefined {
+		// Try to find img immediately after the h2 heading (manual site structure)
+		const h2 = $("h2").first();
+		if (h2.length > 0) {
+			const nextImg = h2.next("img");
+			const src = nextImg.attr("src") ?? nextImg.attr("data-src");
+			if (src && !src.includes("/common/") && !src.includes("ogp.jpg")) {
+				const fullSrc = src.startsWith("http") ? src : `https://manual.bandai-hobby.net${src}`;
+				return { src: fullSrc };
+			}
+		}
+
+		// Look for main product image with class selectors
 		const img = $(".product-image img, .main-image img, .p-mainimg img").first();
 		const src = img.attr("src") ?? img.attr("data-src");
 
 		if (src) {
-			return src.startsWith("http") ? src : `https://manual.bandai-hobby.net${src}`;
+			const fullSrc = src.startsWith("http") ? src : `https://manual.bandai-hobby.net${src}`;
+			return { src: fullSrc };
 		}
 
-		// Try OG image
-		const ogImage = $('meta[property="og:image"]').attr("content");
-		return ogImage;
-	}
-
-	/**
-	 * Extract thumbnail image URL
-	 */
-	private extractThumbnailImage($: CheerioAPI): string | undefined {
-		// Usually same as product image or a smaller version
-		return this.extractProductImage($);
+		return undefined;
 	}
 
 	/**
@@ -190,67 +227,35 @@ export class ManualParser {
 	}
 
 	/**
-	 * Extract brand IDs from name or page content
+	 * Extract brand from page content
+	 * The manual site shows brand as plain text after "ブランド" label
 	 */
-	private extractBrandIds($: CheerioAPI, name: string): string[] {
-		const brands: string[] = [];
-		const nameUpper = name.toUpperCase();
-
-		// Check for common brand patterns in name
-		const brandPatterns: Array<{ pattern: RegExp; id: string }> = [
-			{ pattern: /\bHG\b|HIGH GRADE/i, id: "hg" },
-			{ pattern: /\bMG\b|MASTER GRADE/i, id: "mg" },
-			{ pattern: /\bPG\b|PERFECT GRADE/i, id: "pg" },
-			{ pattern: /\bRG\b|REAL GRADE/i, id: "rg" },
-			{ pattern: /\bSD\b|SUPER DEFORMED/i, id: "sd" },
-			{ pattern: /\bRE\/100\b/i, id: "re100" },
-			{ pattern: /\bHGUC\b/i, id: "hguc" },
-			{ pattern: /\bHGCE\b/i, id: "hgce" },
-			{ pattern: /\bHGAC\b/i, id: "hgac" },
-			{ pattern: /\bHGFC\b/i, id: "hgfc" },
-			{ pattern: /\bHGAW\b/i, id: "hgaw" },
-			{ pattern: /\bHGIBO\b/i, id: "hgibo" },
-			{ pattern: /\bHGBF\b/i, id: "hgbf" },
-			{ pattern: /\bHGBD\b/i, id: "hgbd" },
-			{ pattern: /\bFG\b|FIRST GRADE/i, id: "fg" },
-			{ pattern: /\bEG\b|ENTRY GRADE/i, id: "eg" },
-			{ pattern: /\bBB戦士\b/i, id: "bb" },
-		];
-
-		for (const { pattern, id } of brandPatterns) {
-			if (pattern.test(nameUpper) || pattern.test(name)) {
-				brands.push(id);
+	private extractBrand($: CheerioAPI, _name: string): ManualBrand | undefined {
+		const bodyText = $("body").text();
+		const textMatch = /ブランド\s*([^\n作品発売]+)/i.exec(bodyText);
+		if (textMatch?.[1]) {
+			const brandText = textMatch[1].trim();
+			if (brandText) {
+				return { ja: brandText };
 			}
 		}
-
-		// Also check breadcrumbs for brand links
-		$('a[href*="/brand/"]').each((_, el) => {
-			const href = $(el).attr("href") ?? "";
-			const match = /\/brand\/([^/]+)\/?/.exec(href);
-			if (match?.[1] && !brands.includes(match[1])) {
-				brands.push(match[1]);
-			}
-		});
-
-		return brands;
+		return undefined;
 	}
 
 	/**
-	 * Extract series IDs from page content
+	 * Extract series from page content
+	 * The manual site shows series as plain text after "作品" label
 	 */
-	private extractSeriesIds($: CheerioAPI): string[] {
-		const series: string[] = [];
-
-		// Check breadcrumbs for series links
-		$('a[href*="/series/"]').each((_, el) => {
-			const href = $(el).attr("href") ?? "";
-			const match = /\/series\/([^/]+)\/?/.exec(href);
-			if (match?.[1] && !series.includes(match[1])) {
-				series.push(match[1]);
+	private extractSeries($: CheerioAPI): ManualSeries | undefined {
+		const bodyText = $("body").text();
+		const textMatch = /作品\s*([^\n発売品]+)/i.exec(bodyText);
+		if (textMatch?.[1]) {
+			const seriesText = textMatch[1].trim();
+			if (seriesText) {
+				return { ja: seriesText };
 			}
-		});
-
-		return series;
+		}
+		return undefined;
 	}
 
 	/**
