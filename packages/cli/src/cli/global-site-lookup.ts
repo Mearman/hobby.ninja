@@ -61,9 +61,9 @@ export class GlobalSiteLookup {
 		const url = `${GLOBAL_BASE_URL}/item/${urlId}/`;
 
 		try {
-			const html = await this.fetchPage(url);
+			const { html, error: fetchError } = await this.fetchPage(url);
 			if (!html) {
-				return { hasPage: false };
+				return { hasPage: false, error: fetchError };
 			}
 
 			const $ = load(html);
@@ -106,8 +106,9 @@ export class GlobalSiteLookup {
 
 	/**
 	 * Fetch page HTML using Playwright (required for CloudFront)
+	 * Returns { html, error } to preserve error information
 	 */
-	private async fetchPage(url: string): Promise<string | null> {
+	private async fetchPage(url: string): Promise<{ html: string | null; error?: string }> {
 		if (!this.browserContext) {
 			throw new Error("Browser context not set. Call setBrowserContext() first.");
 		}
@@ -118,10 +119,11 @@ export class GlobalSiteLookup {
 
 			// Check for error responses
 			if (!response?.ok()) {
-				return null;
+				const status = response?.status() ?? "unknown";
+				return { html: null, error: `HTTP ${status}` };
 			}
 
-			return await page.content();
+			return { html: await page.content() };
 		} finally {
 			await page.close();
 		}
