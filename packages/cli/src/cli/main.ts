@@ -59,6 +59,7 @@ program
 	.option("--start <id>", "Start ID for range (e.g., 01_1000)")
 	.option("--end <id>", "End ID for range (e.g., 01_2000)")
 	.option("--count <n>", "Number of items to process from start")
+	.option("--profile", "Enable step timing profiling", false)
 	.action(async (options: CommanderOptions) => {
 		const scrapeCommand = new ScrapeCommand();
 		const scrapeOptions: ScrapeOptions = {
@@ -73,6 +74,7 @@ program
 			start: options.start as string | undefined,
 			end: options.end as string | undefined,
 			count: options.count ? Number.parseInt(options.count as string, DECIMAL_RADIX) : undefined,
+			profile: options.profile as boolean,
 		};
 
 		try {
