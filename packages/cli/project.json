@@ -53,7 +53,7 @@
 		"scrape": {
 			"executor": "nx:run-commands",
 			"options": {
-				"command": "npx tsx packages/cli/src/bin/cli.ts scrape",
+				"command": "npx tsx packages/cli/src/bin/cli.ts scrape {args}",
 				"cwd": "{workspaceRoot}"
 			}
 		},

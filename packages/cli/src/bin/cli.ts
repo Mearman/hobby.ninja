@@ -112,6 +112,10 @@ program
 	.option("-c, --cache", "Enable caching", true)
 	.option(DRY_RUN_OPTION, "Show what would be processed without actual scraping", false)
 	.option(VERBOSE_OPTION, MESSAGES.VERBOSE_OUTPUT, false)
+	.option("--id <id>", "Scrape a single specific item ID (e.g., 01_1234, 1234, or 1)")
+	.option("--start <id>", "Start ID for range (e.g., 01_1000)")
+	.option("--end <id>", "End ID for range (e.g., 01_2000)")
+	.option("--count <n>", "Number of items to process from start")
 	.action(async (options: unknown) => {
 		try {
 			const { ScrapeCommand } = await import("../cli/scrape.js");
@@ -119,10 +123,26 @@ program
 
 			const maxAgeValue = rawOptions["maxAge"];
 			const maxAgeStr = typeof maxAgeValue === "string" ? maxAgeValue : "7";
+			const idFilter = rawOptions["id"] as string | undefined;
+			const startFilter = rawOptions["start"] as string | undefined;
+			const endFilter = rawOptions["end"] as string | undefined;
+			const countFilter = rawOptions["count"] as string | undefined;
+
 			console.log("Starting Unified Scraper...");
 			console.log(`Max age: ${maxAgeStr === "0" ? "disabled (process all)" : `${maxAgeStr} days`}`);
 			console.log(`Cache: ${rawOptions["cache"] ? "enabled" : "disabled"}`);
 			console.log(`Dry run: ${String(rawOptions["dryRun"])}`);
+			if (idFilter) {
+				console.log(`ID filter: single item ${idFilter}`);
+			} else if (startFilter) {
+				if (endFilter) {
+					console.log(`ID filter: range ${startFilter} to ${endFilter}`);
+				} else if (countFilter) {
+					console.log(`ID filter: ${countFilter} items starting from ${startFilter}`);
+				} else {
+					console.log(`ID filter: single item ${startFilter}`);
+				}
+			}
 			console.log("");
 
 			const scrapeCommand = new ScrapeCommand();
@@ -134,6 +154,10 @@ program
 				verbose: rawOptions["verbose"] === true,
 				dryRun: rawOptions["dryRun"] === true,
 				maxAgeDays: Number.parseInt(rawOptions["maxAge"] as string, 10),
+				id: idFilter,
+				start: startFilter,
+				end: endFilter,
+				count: countFilter ? Number.parseInt(countFilter, 10) : undefined,
 			});
 
 			console.log("\n=== Scrape Results ===");
