@@ -47,7 +47,7 @@ program
 program
 	.command("scrape")
 	.description("Scrape data from configured sources")
-	.option("SOURCE_OPTION", `Source to scrape (${SOURCE_LIST})`, DEFAULT_SOURCE)
+	.option(SOURCE_OPTION, `Source to scrape (${SOURCE_LIST})`, DEFAULT_SOURCE)
 	.option("--language <lang>", "Language filter (en, ja, all)", "all")
 	.option(DEFAULT_OUTPUT_OPTION, OUTPUT_DIR_DESC, DEFAULT_OUTPUT_DIR)
 	.option("--cache", "Enable caching", true)
@@ -117,7 +117,7 @@ program
 program
 	.command("validate")
 	.description("Validate scraped data")
-	.option("SOURCE_OPTION", `Source to validate (${SOURCE_LIST}, all)`)
+	.option(SOURCE_OPTION, `Source to validate (${SOURCE_LIST}, all)`)
 	.option("--fix", "Attempt to fix validation errors")
 	.option("--file <file>", "Specific file to validate")
 	.option(DEFAULT_OUTPUT_OPTION, "Output directory for fixed files", DEFAULT_OUTPUT_DIR)
@@ -168,7 +168,7 @@ program
 program
 	.command("wayback")
 	.description("Submit URLs to Internet Archive Wayback Machine")
-	.option("SOURCE_OPTION", "Data source (all, manuals, catalog)", "all")
+	.option(SOURCE_OPTION, "Data source (all, manuals, catalog)", "all")
 	.option("--manuals-dir <dir>", "Manual data directory", "./data/bandai/manuals")
 	.option("--catalog-dir <dir>", "Catalog data directory", "./data/bandai/items")
 	.option("--dry-run", "Show URLs without submitting", false)
