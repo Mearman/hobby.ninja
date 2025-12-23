@@ -75,7 +75,7 @@ export class ProfileManager {
 			if (typeof cacheData === "object" && cacheData !== null && "profiles" in cacheData) {
 				const profilesData = (cacheData as { profiles?: Record<string, PageTypeProfile> }).profiles ?? {};
 				this.profileCache = {
-					...(cacheData as Omit<ProfileCache, "profiles">),
+					...(cacheData as unknown as Omit<ProfileCache, "profiles">),
 					profiles: new Map(Object.entries(profilesData)),
 				};
 			} else {
