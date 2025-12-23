@@ -27,6 +27,7 @@ import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
 import { chromium, type Browser, type BrowserContext, type Route } from "playwright";
 
 
+import { writeJsonIfChanged } from "../utils/file-utils.js";
 import { stripEphemeralImageUrls } from "../utils/image-utils.js";
 import { BandaiRateLimiter } from "../utils/rate-limiter.js";
 
@@ -551,8 +552,10 @@ export class ScrapeCommand {
 		}
 
 		// Step 3: Save item JSON
-		await this.saveItemJson(jsonPath, itemData);
-		console.log(`  ✓ Item JSON saved`);
+		const itemWritten = await this.saveItemJson(jsonPath, itemData);
+		if (itemWritten) {
+			console.log(`  ✓ Item JSON saved`);
+		}
 
 		// Step 3b: Upsert discovered entities (brands, series, categories)
 		if (parseResult.entities && parseResult.entities.length > 0) {
@@ -562,10 +565,14 @@ export class ScrapeCommand {
 			}
 		}
 
-		// Record in index that this item has a valid page and timing info
+		// Record in index that this item has a valid page
 		ItemsIndexUpdater.recordFileCreated(itemId, itemData.name.ja);
-		ItemsIndexUpdater.recordExtracted(itemId);
-		ItemsIndexUpdater.recordPageScraped(itemId);
+
+		// Only update timing fields when item was actually written
+		if (itemWritten) {
+			ItemsIndexUpdater.recordExtracted(itemId);
+			ItemsIndexUpdater.recordPageScraped(itemId);
+		}
 
 		// Step 4: Process linked manual if exists
 		const manualId = itemData.manual?.id;
@@ -757,14 +764,14 @@ export class ScrapeCommand {
 	 * Note: Timing fields (extractedAt, pageScrapedAt) are stored in the
 	 * centralized index.json, not in individual item files
 	 */
-	private async saveItemJson(filePath: string, data: Item): Promise<void> {
+	private async saveItemJson(filePath: string, data: Item): Promise<boolean> {
 		// Strip ephemeral URLs before saving (CloudFront signed URLs expire)
 		const outputData: Record<string, unknown> = { ...data };
 		if (data.images && "product" in data.images) {
 			outputData["images"] = stripEphemeralImageUrls(data.images);
 		}
 
-		await fs.writeFile(filePath, JSON.stringify(outputData, null, "\t"), "utf8");
+		return writeJsonIfChanged(filePath, outputData);
 	}
 
 	/**
