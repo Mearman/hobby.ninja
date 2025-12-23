@@ -42,7 +42,9 @@
       "@hobby-ninja/scrapers": ["packages/scrapers/src/registry.ts"],
       "@hobby-ninja/scrapers/*": ["packages/scrapers/src/*"],
       "@hobby-ninja/translation": ["packages/translation/src/mod.ts"],
-      "@hobby-ninja/translation/*": ["packages/translation/src/*"]
+      "@hobby-ninja/translation/*": ["packages/translation/src/*"],
+      "@hobby-ninja/cli": ["packages/cli/src/cli/main.ts"],
+      "@hobby-ninja/cli/*": ["packages/cli/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
