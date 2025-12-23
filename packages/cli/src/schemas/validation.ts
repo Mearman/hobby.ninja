@@ -80,7 +80,7 @@ export function validateProductData(data: unknown): {
 		if (error instanceof z.ZodError) {
 			return {
 				isValid: false,
-				errors: error.issues.map(err => `${err.path?.join(".") || "field"}: ${err.message}`),
+				errors: error.issues.map(err => `${err.path.join(".") || "field"}: ${err.message}`),
 			};
 		}
 		return {
