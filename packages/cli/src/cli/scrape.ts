@@ -765,13 +765,75 @@ export class ScrapeCommand {
 	 * centralized index.json, not in individual item files
 	 */
 	private async saveItemJson(filePath: string, data: Item): Promise<boolean> {
+		// Merge with existing data to preserve local image paths
+		const mergedData = await this.mergeWithExistingItem(filePath, data);
+
 		// Strip ephemeral URLs before saving (CloudFront signed URLs expire)
-		const outputData: Record<string, unknown> = { ...data };
-		if (data.images && "product" in data.images) {
-			outputData["images"] = stripEphemeralImageUrls(data.images);
+		const outputData: Record<string, unknown> = { ...mergedData };
+		if (mergedData.images && "product" in mergedData.images) {
+			outputData["images"] = stripEphemeralImageUrls(mergedData.images);
 		}
 
 		return writeJsonIfChanged(filePath, outputData);
+	}
+
+	/**
+	 * Merge new item data with existing file to preserve local image paths
+	 */
+	private async mergeWithExistingItem(filePath: string, newData: Item): Promise<Item> {
+		try {
+			const existingContent = await fs.readFile(filePath, "utf8");
+			const existingItem = JSON.parse(existingContent) as Item;
+
+			// Merge image paths from existing data
+			if (existingItem.images && newData.images) {
+				newData.images = this.mergeImagePaths(newData.images, existingItem.images);
+			}
+
+			return newData;
+		} catch {
+			// File doesn't exist or can't be read, use new data as-is
+			return newData;
+		}
+	}
+
+	/**
+	 * Merge local paths from existing images into new images
+	 * Matches images by src URL to preserve downloaded paths
+	 */
+	private mergeImagePaths(newImages: Item["images"], existingImages: Item["images"]): Item["images"] {
+		if (!newImages || !existingImages) return newImages;
+
+		// Build a map of src -> path from existing images
+		const pathMap = new Map<string, string>();
+		for (const img of existingImages.product) {
+			if (img.src && img.path) {
+				pathMap.set(img.src, img.path);
+			}
+		}
+		for (const img of existingImages.instructions) {
+			if (img.src && img.path) {
+				pathMap.set(img.src, img.path);
+			}
+		}
+
+		// Apply existing paths to new images
+		const mergeArray = (images: ItemImage[]): ItemImage[] => {
+			return images.map((img) => {
+				if (img.src && !img.path) {
+					const existingPath = pathMap.get(img.src);
+					if (existingPath) {
+						return { ...img, path: existingPath };
+					}
+				}
+				return img;
+			});
+		};
+
+		return {
+			product: mergeArray(newImages.product),
+			instructions: mergeArray(newImages.instructions),
+		};
 	}
 
 	/**
