@@ -1,9 +1,9 @@
-import * as crypto from "node:crypto";
+import { createHash } from "node:crypto";
 import { promises as fs } from "node:fs";
-import * as path from "node:path";
+import path from "node:path";
 
 import { CACHE_CONFIG, PROGRESS_PERCENTAGES } from "../constants/cli-constants.js";
-import { PageCache, CacheStats } from "../types/cache-types.js";
+import type { PageCache, CacheStats } from "../types/cache-types.js";
 
 interface CacheEntry {
   url: string;
@@ -24,20 +24,21 @@ export class CacheManager {
     cacheDir?: string;
     defaultTtl?: number;
   } = {}) {
-		this.cacheDir = options.cacheDir || path.join(process.cwd(), CACHE_CONFIG.DEFAULT_CACHE_DIR);
-		this.defaultTtl = options.defaultTtl || CACHE_CONFIG.DEFAULT_TTL_MILLISECONDS;
+		this.cacheDir = options.cacheDir ?? path.join(process.cwd(), CACHE_CONFIG.DEFAULT_CACHE_DIR);
+		this.defaultTtl = options.defaultTtl ?? CACHE_CONFIG.DEFAULT_TTL_MILLISECONDS;
 	}
 
 	async initialize(): Promise<void> {
 		try {
 			await fs.mkdir(this.cacheDir, { recursive: true });
 		} catch (error) {
-			throw new Error(`Failed to initialize cache directory: ${error}`);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			throw new Error(`Failed to initialize cache directory: ${errorMessage}`);
 		}
 	}
 
 	private getCacheKey(url: string): string {
-		return crypto.createHash("sha256").update(url).digest("hex");
+		return createHash("sha256").update(url).digest("hex");
 	}
 
 	private getCachePath(key: string): string {
@@ -48,7 +49,7 @@ export class CacheManager {
 		try {
 			const cachePath = this.getCachePath(key);
 			const data = await fs.readFile(cachePath, "utf8");
-			const entry: PageCache = JSON.parse(data);
+			const entry = JSON.parse(data) as PageCache;
 
 			// Check if entry is expired
 			if (Date.now() > entry.expiresAt) {
@@ -56,7 +57,7 @@ export class CacheManager {
 				return null;
 			}
 
-			entry.hits = (entry.hits || 0) + 1;
+			entry.hits = (entry.hits) + 1;
 			entry.lastAccessed = Date.now();
 
 			// Update access metadata asynchronously
@@ -87,14 +88,14 @@ export class CacheManager {
 			},
 			cachedAt: now,
 			lastAccessed: now,
-			expiresAt: now + (ttl || this.defaultTtl),
+			expiresAt: now + (ttl ?? this.defaultTtl),
 			size: html.length,
 			hits: 0,
 			contentType: "text/html",
-			encoding: "utf-8",
+			encoding: "utf8",
 			language: "unknown",
 			integrity: {
-				checksum: crypto.createHash("md5").update(html).digest("hex"),
+				checksum: createHash("md5").update(html).digest("hex"),
 				validationStatus: "valid",
 				lastValidated: now,
 			},
@@ -104,7 +105,8 @@ export class CacheManager {
 			const cachePath = this.getCachePath(key);
 			await fs.writeFile(cachePath, JSON.stringify(entry, null, PROGRESS_PERCENTAGES.COMPLETE));
 		} catch (error) {
-			throw new Error(`Failed to cache data: ${error}`);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			throw new Error(`Failed to cache data: ${errorMessage}`);
 		}
 	}
 
@@ -124,7 +126,8 @@ export class CacheManager {
 				files.map(file => fs.unlink(path.join(this.cacheDir, file))),
 			);
 		} catch (error) {
-			throw new Error(`Failed to clear cache: ${error}`);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			throw new Error(`Failed to clear cache: ${errorMessage}`);
 		}
 	}
 
@@ -133,7 +136,6 @@ export class CacheManager {
 			const files = await fs.readdir(this.cacheDir);
 			let totalSize = 0;
 			let compressedSize = 0;
-			let totalHits = 0;
 			let oldestEntry = Date.now();
 			let newestEntry = 0;
 			const totalAccessTime = 0;
@@ -143,11 +145,10 @@ export class CacheManager {
 					const filePath = path.join(this.cacheDir, file);
 					const stats = await fs.stat(filePath);
 					const data = await fs.readFile(filePath, "utf8");
-					const entry: PageCache = JSON.parse(data);
+					const entry = JSON.parse(data) as PageCache;
 
 					totalSize += stats.size;
-					compressedSize += entry.size || 0;
-					totalHits += entry.hits || 0;
+					compressedSize += entry.size;
 
 					oldestEntry = Math.min(oldestEntry, entry.cachedAt);
 					newestEntry = Math.max(newestEntry, entry.cachedAt);
@@ -188,7 +189,7 @@ export class CacheManager {
 				try {
 					const filePath = path.join(this.cacheDir, file);
 					const data = await fs.readFile(filePath, "utf8");
-					const entry: CacheEntry = JSON.parse(data);
+					const entry = JSON.parse(data) as CacheEntry;
 
 					if (now > entry.expiresAt) {
 						await fs.unlink(filePath);
@@ -197,14 +198,17 @@ export class CacheManager {
 				} catch {
 					// Delete corrupted files
 					const filePath = path.join(this.cacheDir, file);
-					await fs.unlink(filePath).catch(() => {});
+					await fs.unlink(filePath).catch(() => {
+						// Ignore errors when deleting corrupted files
+					});
 					deletedCount++;
 				}
 			}
 
 			console.log(`Cache cleanup completed: ${deletedCount} entries removed`);
 		} catch (error) {
-			throw new Error(`Failed to cleanup cache: ${error}`);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			throw new Error(`Failed to cleanup cache: ${errorMessage}`);
 		}
 	}
 

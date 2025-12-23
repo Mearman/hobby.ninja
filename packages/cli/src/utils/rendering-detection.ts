@@ -268,5 +268,6 @@ export class RenderingDetector {
 }
 
 // Export the type for use in other modules
+ 
 export type { RenderingDetection } from "../types/rendering-detection.js";
 

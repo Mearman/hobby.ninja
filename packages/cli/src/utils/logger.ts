@@ -1,6 +1,6 @@
 import { promises as fs } from "node:fs";
 import { homedir } from "node:os";
-import * as path from "node:path";
+import path from "node:path";
 
 import { LOG_LEVELS, LOGGING, DIRECTORIES, FILE_PATTERNS, PROGRESS_PERCENTAGES } from "../constants/cli-constants.js";
 import type { Context } from "../types/common.js";
@@ -28,7 +28,7 @@ export interface LoggerOptions {
 }
 
 export class Logger {
-	private static instance: Logger;
+	private static instance: Logger | undefined;
 	private options: LoggerOptions;
 	private logFile: string | null = null;
 	private logQueue: LogEntry[] = [];
@@ -63,7 +63,9 @@ export class Logger {
 		this.options = { ...this.options, ...options };
 
 		if (options.logFilePath || (options.logToFile && !this.logFile)) {
-			this.setupLogFile(options.logFilePath);
+			this.setupLogFile(options.logFilePath).catch((error: unknown) => {
+				console.error("Failed to setup log file:", error);
+			});
 		}
 	}
 
@@ -144,7 +146,9 @@ export class Logger {
 		this.logQueue.push(logEntry);
 
 		// Process queue
-		this.processLogQueue();
+		this.processLogQueue().catch((error: unknown) => {
+			console.error("Failed to process log queue:", error);
+		});
 	}
 
 	/**
@@ -179,7 +183,11 @@ export class Logger {
 
 			// Process any remaining entries
 			if (this.logQueue.length > 0) {
-				setImmediate(() => this.processLogQueue());
+				setImmediate(() => {
+					this.processLogQueue().catch((error: unknown) => {
+						console.error("Failed to process log queue:", error);
+					});
+				});
 			}
 		}
 	}
@@ -262,7 +270,7 @@ export class Logger {
 		// Check file size and rotate if necessary
 		await this.rotateLogFileIfNeeded();
 
-		await fs.appendFile(this.logFile, logContent, "utf-8");
+		await fs.appendFile(this.logFile, logContent, "utf8");
 	}
 
 	/**
@@ -293,7 +301,8 @@ export class Logger {
 
 		try {
 			const stats = await fs.stat(this.logFile);
-			if (stats.size < this.options.maxFileSize!) {
+			const maxFileSize = this.options.maxFileSize ?? LOGGING.DEFAULT_MAX_FILE_SIZE;
+			if (stats.size < maxFileSize) {
 				return;
 			}
 
@@ -388,4 +397,4 @@ export class Logger {
 	}
 }
 
-export default Logger;
+export { Logger };
