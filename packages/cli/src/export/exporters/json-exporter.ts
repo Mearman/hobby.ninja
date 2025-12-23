@@ -5,7 +5,7 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 
-import type { TransformedData, ExporterConfig, ExportOptions } from "../types.js";
+import type { TransformedData } from "../types.js";
 
 import { BaseExporter } from "./base-exporter.js";
 
