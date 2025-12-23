@@ -19,14 +19,15 @@ import path from "node:path";
 import {
 	TranslationService,
 	loadDictionary,
-	addPhrase,
+	addPhraseSync,
 	lookupPhrase,
 	rebuildAndReloadDictionary,
 } from "@hobby-ninja/translation";
 import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
 import { chromium, type Browser, type BrowserContext, type Route } from "playwright";
 
- 
+
+import { stripEphemeralImageUrls } from "../utils/image-utils.js";
 import { BandaiRateLimiter } from "../utils/rate-limiter.js";
 
 import { BandaiCatalogParser, type EntityData, type Item, type ItemImage } from "./bandai-catalog-parser.js";
@@ -776,6 +777,11 @@ export class ScrapeCommand {
 			outputData["downloadVerifiedAt"] = existingData["downloadVerifiedAt"];
 		}
 
+		// Strip ephemeral URLs before saving (CloudFront signed URLs expire)
+		if (mergedData.images && "product" in mergedData.images) {
+			outputData["images"] = stripEphemeralImageUrls(mergedData.images);
+		}
+
 		await fs.writeFile(filePath, JSON.stringify(outputData, null, "\t"), "utf8");
 	}
 
@@ -1026,19 +1032,19 @@ export class ScrapeCommand {
 	private storeCanonicalTranslations(item: Item, globalData: GlobalSiteData): void {
 		// Store product name translation
 		if (globalData.name && item.name.ja) {
-			addPhrase(item.name.ja, globalData.name, "product-name");
+			addPhraseSync(item.name.ja, globalData.name, "product-name");
 			this.translationsAdded = true;
 		}
 
 		// Store brand translation
 		if (globalData.brand && item.brands[0]?.ja) {
-			addPhrase(item.brands[0].ja, globalData.brand, "brand");
+			addPhraseSync(item.brands[0].ja, globalData.brand, "brand");
 			this.translationsAdded = true;
 		}
 
 		// Store series translation
 		if (globalData.series && item.series[0]?.ja) {
-			addPhrase(item.series[0].ja, globalData.series, "series");
+			addPhraseSync(item.series[0].ja, globalData.series, "series");
 			this.translationsAdded = true;
 		}
 	}
