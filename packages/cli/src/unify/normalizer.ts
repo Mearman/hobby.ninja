@@ -124,7 +124,7 @@ export function extractGrade(name: string): string | undefined {
  */
 export function extractScale(name: string): string | undefined {
 	const match = /1\/(\d+)/.exec(name);
-	return match ? `1/${match[1]}` : undefined;
+	return match ? `1/${String(match[1])}` : undefined;
 }
 
 /**

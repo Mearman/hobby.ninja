@@ -10,8 +10,8 @@
  * - Statistics
  */
 
-import * as fs from "node:fs";
-import * as path from "node:path";
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
+import path from "node:path";
 
 import type { CatalogItem } from "@hobby-ninja/types/catalog";
 import type { LocalizedText } from "@hobby-ninja/types/manual";
@@ -52,21 +52,21 @@ interface ManualData {
 /**
  * Load all catalog items from the data directory.
  */
-export async function loadCatalogItems(
+export function loadCatalogItems(
 	itemsDir: string,
-): Promise<Map<string, CatalogItem>> {
+): Map<string, CatalogItem> {
 	const items = new Map<string, CatalogItem>();
 
-	const dirs = fs.readdirSync(itemsDir, { withFileTypes: true });
+	const dirs = readdirSync(itemsDir, { withFileTypes: true });
 
 	for (const dir of dirs) {
 		if (!dir.isDirectory()) continue;
 
 		const jsonPath = path.join(itemsDir, dir.name, `${dir.name}.json`);
-		if (!fs.existsSync(jsonPath)) continue;
+		if (!existsSync(jsonPath)) continue;
 
 		try {
-			const content = fs.readFileSync(jsonPath, "utf8");
+			const content = readFileSync(jsonPath, "utf8");
 			const item = JSON.parse(content) as CatalogItem;
 			items.set(item.id, item);
 		} catch {
@@ -80,21 +80,21 @@ export async function loadCatalogItems(
 /**
  * Load all manuals from the data directory.
  */
-export async function loadManuals(
+export function loadManuals(
 	manualsDir: string,
-): Promise<Map<string, ManualData>> {
+): Map<string, ManualData> {
 	const manuals = new Map<string, ManualData>();
 
-	const dirs = fs.readdirSync(manualsDir, { withFileTypes: true });
+	const dirs = readdirSync(manualsDir, { withFileTypes: true });
 
 	for (const dir of dirs) {
 		if (!dir.isDirectory()) continue;
 
 		const jsonPath = path.join(manualsDir, dir.name, `${dir.name}.json`);
-		if (!fs.existsSync(jsonPath)) continue;
+		if (!existsSync(jsonPath)) continue;
 
 		try {
-			const content = fs.readFileSync(jsonPath, "utf8");
+			const content = readFileSync(jsonPath, "utf8");
 			const manual = JSON.parse(content) as ManualData;
 			manuals.set(manual.id, manual);
 		} catch {
@@ -111,7 +111,7 @@ export async function loadManuals(
 function catalogToMatchItem(item: CatalogItem): CatalogMatchItem {
 	// Extract grade from brands
 	let grade: string | undefined;
-	if (item.brands && item.brands.length > 0) {
+	if (item.brands.length > 0) {
 		// Look for grade in brand names
 		for (const brand of item.brands) {
 			const extracted = extractGrade(brand.ja);
@@ -127,9 +127,7 @@ function catalogToMatchItem(item: CatalogItem): CatalogMatchItem {
 	}
 
 	// Also try to extract grade from product name
-	if (!grade) {
-		grade = extractGrade(item.name.ja);
-	}
+	grade ??= extractGrade(item.name.ja);
 
 	return {
 		id: item.id,
@@ -190,19 +188,19 @@ function createUnifiedProduct(
 		id,
 		name: {
 			ja: catalog.name.ja,
-			en: catalog.name.en || manual.name.en,
+			en: catalog.name.en ?? manual.name.en,
 		},
 		series: catalog.series
 			? { ja: catalog.series.ja, en: catalog.series.en }
 			: manual.series
 				? { ja: manual.series.ja, en: manual.series.en }
 				: undefined,
-		grade: manual.grade?.code || extractGrade(catalog.name.ja),
-		scale: catalog.scale || manual.scale,
+		grade: manual.grade?.code ?? extractGrade(catalog.name.ja),
+		scale: catalog.scale ?? manual.scale,
 		releaseDate: catalog.releaseDate
 			? {
 				year: catalog.releaseDate.year,
-				month: catalog.releaseDate.month || undefined,
+				month: catalog.releaseDate.month,
 				day: catalog.releaseDate.day,
 			}
 			: manual.releaseDate?.year
@@ -253,7 +251,7 @@ function createCatalogOnlyProduct(
 		releaseDate: catalog.releaseDate
 			? {
 				year: catalog.releaseDate.year,
-				month: catalog.releaseDate.month || undefined,
+				month: catalog.releaseDate.month,
 				day: catalog.releaseDate.day,
 			}
 			: undefined,
@@ -317,10 +315,10 @@ function createManualOnlyProduct(
  * 1:1 constraint: Each item can have at most one manual, each manual can be
  * linked to at most one item.
  */
-export async function runUnification(
+export function runUnification(
 	dataDir: string,
 	options: UnifyOptions,
-): Promise<UnifyStats> {
+): UnifyStats {
 	const startTime = Date.now();
 	const itemsDir = path.join(dataDir, "items");
 	const manualsDir = path.join(dataDir, "manuals");
@@ -329,8 +327,8 @@ export async function runUnification(
 	console.log("Loading data...");
 
 	// Load all data
-	const catalogItems = await loadCatalogItems(itemsDir);
-	const manuals = await loadManuals(manualsDir);
+	const catalogItems = loadCatalogItems(itemsDir);
+	const manuals = loadManuals(manualsDir);
 
 	console.log(`Loaded ${catalogItems.size} catalog items`);
 	console.log(`Loaded ${manuals.size} manuals`);
@@ -367,10 +365,10 @@ export async function runUnification(
 	// Filter out items and manuals that already have direct links
 	const remainingCatalogItems = [...catalogItems.values()]
 		.filter(item => !usedCatalogIds.has(item.id))
-		.map(catalogToMatchItem);
+		.map(item => catalogToMatchItem(item));
 	const remainingManuals = [...manuals.values()]
 		.filter(manual => !usedManualIds.has(manual.id))
-		.map(manualToMatchItem);
+		.map(manual => manualToMatchItem(manual));
 
 	console.log(`Running fuzzy matching on ${remainingCatalogItems.length} remaining items...`);
 
@@ -403,7 +401,7 @@ export async function runUnification(
 	// Create output directory if not dry run
 	if (!options.dryRun) {
 		const productsDir = path.join(outputDir, "products");
-		fs.mkdirSync(productsDir, { recursive: true });
+		mkdirSync(productsDir, { recursive: true });
 	}
 
 	// Generate unified products
@@ -517,7 +515,7 @@ export async function runUnification(
 
 	// Count by stage
 	for (const match of matches) {
-		stats.byStage[match.stage] = (stats.byStage[match.stage] || 0) + 1;
+		stats.byStage[match.stage] = (stats.byStage[match.stage] ?? 0) + 1;
 	}
 
 	// Write output if not dry run
@@ -535,29 +533,29 @@ export async function runUnification(
 		const productsDir = path.join(outputDir, "products");
 		for (const product of unifiedProducts) {
 			const filePath = path.join(productsDir, `${product.id}.json`);
-			fs.writeFileSync(filePath, JSON.stringify(product, null, 2));
+			writeFileSync(filePath, JSON.stringify(product, null, 2));
 		}
 
 		// Write index
-		fs.writeFileSync(
+		writeFileSync(
 			path.join(outputDir, "index.json"),
 			JSON.stringify(index, null, 2),
 		);
 
 		// Write review queue
-		fs.writeFileSync(
+		writeFileSync(
 			path.join(outputDir, "review-queue.json"),
 			JSON.stringify(reviewQueue, null, 2),
 		);
 
 		// Write orphans
-		fs.writeFileSync(
+		writeFileSync(
 			path.join(outputDir, "orphans.json"),
 			JSON.stringify(orphans, null, 2),
 		);
 
 		// Write stats
-		fs.writeFileSync(
+		writeFileSync(
 			path.join(outputDir, "stats.json"),
 			JSON.stringify(stats, null, 2),
 		);
@@ -589,7 +587,7 @@ export function printStats(stats: UnifyStats): void {
 			"4": "Series + scale + grade + date",
 			"5": "Fuzzy name only",
 		};
-		console.log(`  Stage ${stage} (${stageNames[stage] || "unknown"}): ${count}`);
+		console.log(`  Stage ${stage} (${stageNames[stage] ?? "unknown"}): ${count}`);
 	}
 
 	console.log(`\nConfidence distribution:`);

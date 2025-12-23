@@ -15,7 +15,7 @@ import type {
 	ReviewQueueItem,
 } from "@hobby-ninja/types/unified";
 
-import { datesWithinDays, dateDifferenceInDays } from "../utils/date-proximity";
+import { datesWithinDays, dateDifferenceInDays } from "../utils/date-proximity.js";
 
 import {
 	normalizeProductName,
