@@ -7,7 +7,7 @@
 set -e  # Exit on any error
 
 # Default values
-DEFAULT_START_ID=1000
+DEFAULT_START_ID=1
 DEFAULT_END_ID=10000
 DEFAULT_BATCH_SIZE=100
 
@@ -144,15 +144,21 @@ process_batch() {
             continue
         fi
 
-        # Check if JSON file has unstaged changes
-        if ! git diff --quiet "$json_file" 2>/dev/null; then
-            print_status "  - Processing ID $id: Found modified JSON file"
-        elif git diff --cached --quiet "$json_file" 2>/dev/null; then
-            # JSON file exists but has no changes (neither staged nor unstaged)
-            print_status "  - Skipping ID $id: JSON file not modified"
-            continue
+        # Check if JSON file is untracked (new file)
+        if git ls-files --error-unmatch "$json_file" 2>/dev/null; then
+            # File is tracked - check for modifications
+            if ! git diff --quiet "$json_file" 2>/dev/null; then
+                print_status "  - Processing ID $id: Found modified JSON file"
+            elif ! git diff --cached --quiet "$json_file" 2>/dev/null; then
+                print_status "  - Processing ID $id: Found staged JSON file changes"
+            else
+                # JSON file exists but has no changes (neither staged nor unstaged)
+                print_status "  - Skipping ID $id: JSON file not modified"
+                continue
+            fi
         else
-            print_status "  - Processing ID $id: Found staged JSON file changes"
+            # File is untracked (new file)
+            print_status "  - Processing ID $id: Found new untracked JSON file"
         fi
 
         # Add JSON file first
@@ -170,14 +176,21 @@ process_batch() {
             print_status "  - ID $id: Deleted $deleted_count old image files"
         fi
 
-        # Add new directory if it exists
-        local dir_path="apps/next/public/images/items/${item_dir}/"
+        # Add new directory if it exists (check both possible locations)
+        local dir_path="assets/images/items/${item_dir}/"
+        local alt_dir_path="apps/next/public/images/items/${item_dir}/"
         if [[ -d "$dir_path" ]]; then
             git add "$dir_path" 2>/dev/null || true
             # Count files in this directory for reporting
             local file_count=$(find "$dir_path" -type f 2>/dev/null | wc -l)
             added_files=$((added_files + file_count))
-            print_status "  - ID $id: Added $file_count new image files"
+            print_status "  - ID $id: Added $file_count new image files from assets/"
+        elif [[ -d "$alt_dir_path" ]]; then
+            git add "$alt_dir_path" 2>/dev/null || true
+            # Count files in this directory for reporting
+            local file_count=$(find "$alt_dir_path" -type f 2>/dev/null | wc -l)
+            added_files=$((added_files + file_count))
+            print_status "  - ID $id: Added $file_count new image files from apps/next/"
         fi
     done
 
@@ -212,9 +225,12 @@ check_for_changes() {
         local padded_id=$(printf "%04d" $id)
         local json_file="data/src/items/01_${padded_id}.json"
 
-        if [[ -f "$json_file" ]] && (! git diff --quiet "$json_file" 2>/dev/null || ! git diff --cached --quiet "$json_file" 2>/dev/null); then
-            has_changes=true
-            break
+        if [[ -f "$json_file" ]]; then
+            # Check if file is untracked OR has modifications
+            if ! git ls-files --error-unmatch "$json_file" 2>/dev/null || ! git diff --quiet "$json_file" 2>/dev/null || ! git diff --cached --quiet "$json_file" 2>/dev/null; then
+                has_changes=true
+                break
+            fi
         fi
     done
 
@@ -246,9 +262,12 @@ find_earliest_change() {
         local padded_id=$(printf "%04d" $id)
         local json_file="data/src/items/01_${padded_id}.json"
 
-        if [[ -f "$json_file" ]] && (! git diff --quiet "$json_file" 2>/dev/null || ! git diff --cached --quiet "$json_file" 2>/dev/null); then
-            echo $id
-            return 0
+        if [[ -f "$json_file" ]]; then
+            # Check if file is untracked OR has modifications
+            if ! git ls-files --error-unmatch "$json_file" 2>/dev/null || ! git diff --quiet "$json_file" 2>/dev/null || ! git diff --cached --quiet "$json_file" 2>/dev/null; then
+                echo $id
+                return 0
+            fi
         fi
     done
 
@@ -273,8 +292,12 @@ wait_for_batch_changes() {
             local json_file="data/src/items/01_${padded_id}.json"
 
             if [[ -f "$json_file" ]]; then
+                # Check for untracked files first
+                if ! git ls-files --error-unmatch "$json_file" 2>/dev/null; then
+                    changed_ids+=("$id(untracked)")
+                    has_changes=true
                 # Check for unstaged changes
-                if ! git diff --quiet "$json_file" 2>/dev/null; then
+                elif ! git diff --quiet "$json_file" 2>/dev/null; then
                     changed_ids+=("$id(unstaged)")
                     has_changes=true
                 # Check for staged changes
@@ -317,7 +340,8 @@ wait_for_batch_completion() {
             local json_file="data/src/items/01_${padded_id}.json"
 
             if [[ -f "$json_file" ]]; then
-                if ! git diff --quiet "$json_file" 2>/dev/null || ! git diff --cached --quiet "$json_file" 2>/dev/null; then
+                # Check if file is untracked OR has modifications
+                if ! git ls-files --error-unmatch "$json_file" 2>/dev/null || ! git diff --quiet "$json_file" 2>/dev/null || ! git diff --cached --quiet "$json_file" 2>/dev/null; then
                     changed_ids+=("$id")
                     current_change_count=$((current_change_count + 1))
                 fi
@@ -355,11 +379,14 @@ find_change_boundaries() {
         local padded_id=$(printf "%04d" $id)
         local json_file="data/src/items/01_${padded_id}.json"
 
-        if [[ -f "$json_file" ]] && (! git diff --quiet "$json_file" 2>/dev/null || ! git diff --cached --quiet "$json_file" 2>/dev/null); then
-            if ((lowest_id == -1)); then
-                lowest_id=$id
+        if [[ -f "$json_file" ]]; then
+            # Check if file is untracked OR has modifications
+            if ! git ls-files --error-unmatch "$json_file" 2>/dev/null || ! git diff --quiet "$json_file" 2>/dev/null || ! git diff --cached --quiet "$json_file" 2>/dev/null; then
+                if ((lowest_id == -1)); then
+                    lowest_id=$id
+                fi
+                highest_id=$id
             fi
-            highest_id=$id
         fi
     done
 
