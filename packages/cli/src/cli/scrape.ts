@@ -28,11 +28,13 @@ import { chromium, type Browser, type BrowserContext, type Route } from "playwri
 
 
 import { writeJsonIfChanged } from "../utils/file-utils.js";
-import { stripEphemeralImageUrls } from "../utils/image-utils.js";
+import { findExistingItemImage, stripEphemeralImageUrls } from "../utils/image-utils.js";
 import { BandaiRateLimiter } from "../utils/rate-limiter.js";
+
 
 import { BandaiCatalogParser, type EntityData, type Item, type ItemImage, type ParsedAccessoryItem } from "./bandai-catalog-parser.js";
 import { parseCountedItems } from "./count-parser.js";
+import { extractFilenameFromUrl } from "./download-command.js";
 import { GlobalSiteLookup, type GlobalSiteData } from "./global-site-lookup.js";
 import { ItemsIndexUpdater } from "./items-index-updater.js";
 import { ManualParser, type ManualData } from "./manual-parser.js";
@@ -716,6 +718,11 @@ export class ScrapeCommand {
 			}
 		}
 
+		// Step 3b: Download/locate image
+		if (manualData.image?.src && !options.dryRun) {
+			await this.downloadManualImage(manualId, manualData, options.verbose);
+		}
+
 		// Step 4: Save manual JSON
 		await this.saveManualJson(jsonPath, manualData);
 		console.log(`  ✓ Manual JSON saved`);
@@ -816,6 +823,76 @@ export class ScrapeCommand {
 		}
 
 		return Buffer.from(await response.arrayBuffer());
+	}
+
+	/**
+	 * Download or locate manual image
+	 * First checks if image exists in item assets, otherwise downloads to manuals folder
+	 */
+	private async downloadManualImage(
+		manualId: string,
+		manualData: ManualData,
+		verbose: boolean,
+	): Promise<void> {
+		if (!manualData.image?.src) return;
+
+		const imageUrl = manualData.image.src;
+		const filename = extractFilenameFromUrl(imageUrl);
+		const filenamePrefix = filename.replace(/\.[^.]+$/, ""); // "159_1303"
+
+		// Check for existing image in items
+		const existingPath = await findExistingItemImage(filenamePrefix);
+		if (existingPath) {
+			manualData.image.path = existingPath;
+			if (verbose) {
+				console.log(`    Found existing image: ${existingPath}`);
+			}
+			return;
+		}
+
+		// Download to manuals directory
+		const manualImageDir = path.join(MANUALS_ASSETS_DIR, manualId);
+		await fs.mkdir(manualImageDir, { recursive: true });
+
+		const localPath = path.join(manualImageDir, filename);
+		const relativePath = `/manuals/${manualId}/${filename}`;
+
+		// Check if already downloaded
+		try {
+			await fs.access(localPath);
+			manualData.image.path = relativePath;
+			if (verbose) {
+				console.log(`    Image already downloaded: ${relativePath}`);
+			}
+			return;
+		} catch {
+			// File doesn't exist, download it
+		}
+
+		try {
+			const response = await fetch(imageUrl, {
+				headers: {
+					"User-Agent": DEFAULT_USER_AGENT,
+					"Accept": "image/*",
+					"Referer": "https://manual.bandai-hobby.net/",
+				},
+			});
+
+			if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+			const buffer = Buffer.from(await response.arrayBuffer());
+			await fs.writeFile(localPath, buffer);
+			manualData.image.path = relativePath;
+
+			if (verbose) {
+				console.log(`    Downloaded image: ${filename}`);
+			}
+		} catch (error) {
+			const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
+			if (verbose) {
+				console.log(`    Failed to download image: ${msg}`);
+			}
+		}
 	}
 
 	/**
