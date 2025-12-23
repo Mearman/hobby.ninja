@@ -7,12 +7,14 @@
  * Uses Playwright for browser-based requests to bypass bot protection.
  */
 
-import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 
 import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
 import { load as cheerioLoad } from "cheerio";
 import { chromium, type Page } from "playwright";
+
+import { writeJsonIfChangedSync } from "../utils/file-utils.js";
 
 const ITEMS_PATH = resolveWorkspacePath("data/src/items");
 const ITEMS_INDEX_PATH = path.join(ITEMS_PATH, "index.json");
@@ -57,7 +59,6 @@ interface ItemIndexEntry {
 
 interface ItemsIndex {
 	version: string;
-	updatedAt: string;
 	stats: {
 		totalItems: number;
 		japaneseSite: SiteStats;
@@ -211,7 +212,7 @@ function updateItemFile(itemId: string, globalData: {
 		}
 
 		if (updated && !dryRun) {
-			writeFileSync(filePath, JSON.stringify(item, null, "\t"));
+			writeJsonIfChangedSync(filePath, item);
 		}
 
 		return updated;
@@ -243,15 +244,14 @@ function calculateStats(items: Record<string, ItemIndexEntry>): ItemsIndex["stat
 }
 
 /**
- * Save index to disk
+ * Save index to disk only if changed
  */
 function saveIndex(index: ItemsIndex, dryRun: boolean): void {
 	if (dryRun) {
 		return;
 	}
 	index.stats = calculateStats(index.items);
-	index.updatedAt = new Date().toISOString();
-	writeFileSync(ITEMS_INDEX_PATH, JSON.stringify(index, null, "\t"));
+	writeJsonIfChangedSync(ITEMS_INDEX_PATH, index);
 }
 
 /**

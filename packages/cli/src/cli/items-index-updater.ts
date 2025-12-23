@@ -6,10 +6,12 @@
  * index to keep individual item JSON files clean.
  */
 
-import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 
 import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
+
+import { writeJsonIfChangedSync } from "../utils/file-utils.js";
 
 const ITEMS_INDEX_PATH = resolveWorkspacePath("data/src/items/index.json");
 const ITEMS_DATA_DIR = resolveWorkspacePath("data/src/items");
@@ -60,7 +62,6 @@ interface ItemIndexEntry {
 
 interface ItemsIndex {
 	version: string;
-	updatedAt: string;
 	stats: {
 		totalItems: number;
 		japaneseSite: SiteStats;
@@ -75,7 +76,6 @@ let isDirty = false;
 function createEmptyIndex(): ItemsIndex {
 	return {
 		version: "1.0.0",
-		updatedAt: new Date().toISOString(),
 		stats: {
 			totalItems: 0,
 			japaneseSite: { checked: 0, withPage: 0, withoutPage: 0, errors: 0 },
@@ -224,8 +224,7 @@ export const ItemsIndexUpdater = {
 
 		try {
 			itemsIndex.stats = calculateStats(itemsIndex.items);
-			itemsIndex.updatedAt = new Date().toISOString();
-			writeFileSync(ITEMS_INDEX_PATH, JSON.stringify(itemsIndex, null, "\t"));
+			writeJsonIfChangedSync(ITEMS_INDEX_PATH, itemsIndex);
 			isDirty = false;
 		} catch (error) {
 			const errorMessage = error instanceof Error ? error.message : String(error);

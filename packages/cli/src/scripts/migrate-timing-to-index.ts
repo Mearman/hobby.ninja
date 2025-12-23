@@ -34,7 +34,6 @@ interface ItemIndexEntry {
 
 interface ItemsIndex {
 	version: string;
-	updatedAt: string;
 	stats: {
 		totalItems: number;
 		japaneseSite: { checked: number; withPage: number; withoutPage: number; errors: number };
@@ -56,7 +55,6 @@ function loadIndex(): ItemsIndex {
 	if (!existsSync(INDEX_PATH)) {
 		return {
 			version: "1.0.0",
-			updatedAt: new Date().toISOString(),
 			stats: {
 				totalItems: 0,
 				japaneseSite: { checked: 0, withPage: 0, withoutPage: 0, errors: 0 },
@@ -69,7 +67,6 @@ function loadIndex(): ItemsIndex {
 }
 
 function saveIndex(index: ItemsIndex): void {
-	index.updatedAt = new Date().toISOString();
 	writeFileSync(INDEX_PATH, JSON.stringify(index, null, "\t"));
 }
 
@@ -94,7 +91,7 @@ function migrateTimingToIndex(): void {
 	// First pass: Remove legacy fields from all index entries
 	let downloadVerifiedRemoved = 0;
 	console.log("Removing legacy fields from index entries...");
-	for (const [itemId, entry] of Object.entries(index.items)) {
+	for (const [, entry] of Object.entries(index.items)) {
 		if ("hasFile" in entry) {
 			delete (entry as ItemIndexEntry & { hasFile?: boolean }).hasFile;
 			hasFileRemoved++;
@@ -110,7 +107,7 @@ function migrateTimingToIndex(): void {
 	// Get all item JSON files (excluding index.json)
 	const files = readdirSync(ITEMS_DIR)
 		.filter((f) => f.endsWith(".json") && f !== "index.json")
-		.sort();
+		.toSorted();
 
 	console.log(`Found ${files.length} item files to process\n`);
 
@@ -138,7 +135,7 @@ function migrateTimingToIndex(): void {
 				if (field in item && item[field]) {
 					// Only update if index doesn't have this field or item's is newer
 					const indexValue = index.items[paddedId][field];
-					const itemValue = item[field] as string;
+					const itemValue = item[field];
 
 					if (!indexValue || new Date(itemValue) > new Date(indexValue)) {
 						index.items[paddedId][field] = itemValue;
@@ -156,6 +153,7 @@ function migrateTimingToIndex(): void {
 			let modified = false;
 			for (const field of TIMING_FIELDS) {
 				if (field in modifiedItem) {
+					// eslint-disable-next-line @typescript-eslint/no-dynamic-delete -- Migration script
 					delete modifiedItem[field];
 					modified = true;
 				}
