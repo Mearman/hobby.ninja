@@ -14,7 +14,8 @@ import path from "node:path";
 
 import type { Browser, BrowserContext, Page } from "playwright";
 
- 
+import { writeJsonIfChanged } from "../utils/file-utils.js";
+
 import { ItemsIndexUpdater } from "./items-index-updater.js";
 
 // Retry configuration
@@ -1112,12 +1113,11 @@ async function downloadCatalogAssets(
 					// Update only the images array
 					originalItem.images = sortedImages;
 
-					// Write back to file
-					await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf8");
+					// Write back to file only if changed
+					const written = await writeJsonIfChanged(jsonPath, originalItem);
 
-					if (options.verbose) {
+					if (options.verbose && written) {
 						console.log(`  ✓ Updated JSON with ${sortedImages.length} local image paths (${productImages.length} product, ${instructionImages.length} instruction)`);
-						console.log(`  ✓ Recorded array verification for ${item.id} (${sortedImages.length} images)`);
 					}
 				} catch (error) {
 					const msg = error instanceof Error ? error.message : String(error);
@@ -1253,11 +1253,10 @@ async function downloadCatalogAssets(
 						// Update only the images array
 						originalItem.images = sortedImages;
 
-						// Write back to file
-						await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf8");
+						// Write back to file only if changed
+						const written = await writeJsonIfChanged(jsonPath, originalItem);
 
-
-						if (options.verbose) {
+						if (options.verbose && written) {
 							console.log(`  ✓ Updated JSON with ${sortedImages.length} local image paths (${productImages.length} product, ${instructionImages.length} instruction)`);
 						}
 					} catch (error) {
@@ -1340,10 +1339,10 @@ async function downloadCatalogAssets(
 						// Update only the images array
 						originalItem.images = sortedImages;
 
-						// Write back to file
-						await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf8");
+						// Write back to file only if changed
+						const written = await writeJsonIfChanged(jsonPath, originalItem);
 
-						if (options.verbose) {
+						if (options.verbose && written) {
 							const removedCount = (originalItem.images.length) - sortedImages.length;
 							console.log(`  ✓ Cleaned JSON array: removed ${removedCount} invalid image paths, ${sortedImages.length} remain`);
 						}
@@ -1411,10 +1410,10 @@ async function downloadCatalogAssets(
 								// Update the images array with the complete set
 								originalItem.images = sortedImagePaths;
 
-								// Write back to file
-								await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf8");
+								// Write back to file only if changed
+								const written = await writeJsonIfChanged(jsonPath, originalItem);
 
-								if (options.verbose) {
+								if (options.verbose && written) {
 									console.log(`  ✓ Updated JSON with complete image array (${sortedImagePaths.length} images)`);
 								}
 							} catch (error) {

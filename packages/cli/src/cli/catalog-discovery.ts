@@ -4,6 +4,7 @@ import path from "node:path";
 
 import { normalizeText } from "@hobby-ninja/translation";
 
+import { writeJsonIfChanged } from "../utils/file-utils.js";
 import { stripEphemeralFromItem } from "../utils/image-utils.js";
 
 import { BandaiCatalogParser, type EntityData, type GlobalSiteUrls, type Item, type ParsedAccessoryItem } from "./bandai-catalog-parser";
@@ -69,13 +70,13 @@ async function upsertEntity(entity: EntityData, dataDir: string, verbose?: boole
 	const dir = path.dirname(filePath);
 	await mkdir(dir, { recursive: true });
 
-	await writeFile(filePath, JSON.stringify(entityData, null, "\t"), "utf8");
+	const written = await writeJsonIfChanged(filePath, entityData);
 
-	if (verbose) {
+	if (verbose && written) {
 		console.log(`    📁 Created ${entity.type}: ${entity.id}`);
 	}
 
-	return true;
+	return written;
 }
 
 /**
@@ -911,7 +912,7 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 					// Save files asynchronously (flat structure: outputDir/{paddedId}.json)
 					// Write HTML and JSON in parallel
 					const paddedRange = padItemId(range);
-					const writePromises: Array<Promise<void>> = [
+					const writePromises: Array<Promise<unknown>> = [
 						writeFile(path.join(options.outputDir, `${paddedRange}.html`), processResult.data.html, "utf8"),
 					];
 
@@ -1011,7 +1012,7 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 						const finalItem = stripEphemeralFromItem(mergedItem);
 
 						writePromises.push(
-							writeFile(itemPath, JSON.stringify(finalItem, null, "\t"), "utf8"),
+							writeJsonIfChanged(itemPath, finalItem),
 						);
 					}
 
