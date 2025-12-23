@@ -162,10 +162,17 @@ export class CsvExporter extends BaseExporter {
 			// Handle specification keys
 			if (key.startsWith("spec_")) {
 				const specKey = key.slice(Math.max(0, DATA_PROCESSING_CONSTANTS.SPECIFICATION_KEY_PREFIX_LENGTH));
-				if (item.specifications?.[specKey]) {
-					return String(item.specifications[specKey]);
+				const specValue = item.specifications?.[specKey];
+				if (specValue === undefined || specValue === null) {
+					return "";
 				}
-				return "";
+				if (typeof specValue === "string") {
+					return specValue;
+				}
+				if (typeof specValue === "number" || typeof specValue === "boolean") {
+					return String(specValue);
+				}
+				return JSON.stringify(specValue);
 			}
 
 			// Handle language object
@@ -221,11 +228,8 @@ export class CsvExporter extends BaseExporter {
 			return value.join("; ");
 		}
 
-		if (typeof value === "object") {
-			return JSON.stringify(value);
-		}
-
-		return String(value);
+		// For any remaining types (symbols, functions, objects), use JSON.stringify
+		return JSON.stringify(value);
 	}
 
 	/**
