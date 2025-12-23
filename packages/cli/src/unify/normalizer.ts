@@ -169,6 +169,14 @@ export function normalizeGrade(grade: string): string {
 }
 
 /**
+ * Helper to convert string to array of grapheme clusters for proper Unicode handling
+ */
+function toGraphemes(str: string): string[] {
+	const segmenter = new Intl.Segmenter(undefined, { granularity: "grapheme" });
+	return [...segmenter.segment(str)].map(s => s.segment);
+}
+
+/**
  * Calculate Jaro-Winkler similarity between two strings.
  * Returns a value between 0 (no similarity) and 1 (identical).
  */
@@ -176,20 +184,24 @@ export function jaroWinklerSimilarity(s1: string, s2: string): number {
 	if (s1 === s2) return 1;
 	if (s1.length === 0 || s2.length === 0) return 0;
 
-	const matchDistance = Math.floor(Math.max(s1.length, s2.length) / 2) - 1;
-	const s1Matches = Array.from({length: s1.length}).fill(false);
-	const s2Matches = Array.from({length: s2.length}).fill(false);
+	// Convert to grapheme arrays for proper Unicode handling
+	const chars1 = toGraphemes(s1);
+	const chars2 = toGraphemes(s2);
+
+	const matchDistance = Math.floor(Math.max(chars1.length, chars2.length) / 2) - 1;
+	const s1Matches = Array.from<boolean>({length: chars1.length}).fill(false);
+	const s2Matches = Array.from<boolean>({length: chars2.length}).fill(false);
 
 	let matches = 0;
 	let transpositions = 0;
 
 	// Find matches
-	for (const [i, element] of [...s1].entries()) {
+	for (const [i, element] of chars1.entries()) {
 		const start = Math.max(0, i - matchDistance);
-		const end = Math.min(i + matchDistance + 1, s2.length);
+		const end = Math.min(i + matchDistance + 1, chars2.length);
 
 		for (let j = start; j < end; j++) {
-			if (s2Matches[j] || element !== s2[j]) continue;
+			if (s2Matches[j] || element !== chars2[j]) continue;
 			s1Matches[i] = true;
 			s2Matches[j] = true;
 			matches++;
@@ -201,23 +213,23 @@ export function jaroWinklerSimilarity(s1: string, s2: string): number {
 
 	// Count transpositions
 	let k = 0;
-	for (const [i, element] of [...s1].entries()) {
+	for (const [i, element] of chars1.entries()) {
 		if (!s1Matches[i]) continue;
 		while (!s2Matches[k]) k++;
-		if (element !== s2[k]) transpositions++;
+		if (element !== chars2[k]) transpositions++;
 		k++;
 	}
 
 	const jaro =
-		(matches / s1.length +
-			matches / s2.length +
+		(matches / chars1.length +
+			matches / chars2.length +
 			(matches - transpositions / 2) / matches) /
 		3;
 
 	// Calculate common prefix (up to 4 characters)
 	let prefix = 0;
-	for (let i = 0; i < Math.min(s1.length, s2.length, 4); i++) {
-		if (s1[i] === s2[i]) prefix++;
+	for (let i = 0; i < Math.min(chars1.length, chars2.length, 4); i++) {
+		if (chars1[i] === chars2[i]) prefix++;
 		else break;
 	}
 
