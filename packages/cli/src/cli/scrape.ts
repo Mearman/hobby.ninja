@@ -1246,6 +1246,62 @@ export class ScrapeCommand {
 			item.description.en = translatedBullets;
 		}
 
+		// Translate accessories (name and unit)
+		if (item.accessories) {
+			for (const accessory of item.accessories) {
+				if (accessory.name.ja && !accessory.name.en) {
+					const cached = lookupPhrase(accessory.name.ja);
+					if (cached) {
+						accessory.name.en = cached.en;
+					} else {
+						const result = await this.translator.translateText(accessory.name.ja, "en", "ja");
+						if (result.translated && result.translated !== accessory.name.ja) {
+							accessory.name.en = result.translated;
+						}
+					}
+				}
+				if (accessory.unit?.ja && !accessory.unit.en) {
+					const cached = lookupPhrase(accessory.unit.ja);
+					if (cached) {
+						accessory.unit.en = cached.en;
+					} else {
+						const result = await this.translator.translateText(accessory.unit.ja, "en", "ja");
+						if (result.translated && result.translated !== accessory.unit.ja) {
+							accessory.unit.en = result.translated;
+						}
+					}
+				}
+			}
+		}
+
+		// Translate contents (name and unit)
+		if (item.contents) {
+			for (const content of item.contents) {
+				if (content.name.ja && !content.name.en) {
+					const cached = lookupPhrase(content.name.ja);
+					if (cached) {
+						content.name.en = cached.en;
+					} else {
+						const result = await this.translator.translateText(content.name.ja, "en", "ja");
+						if (result.translated && result.translated !== content.name.ja) {
+							content.name.en = result.translated;
+						}
+					}
+				}
+				if (content.unit?.ja && !content.unit.en) {
+					const cached = lookupPhrase(content.unit.ja);
+					if (cached) {
+						content.unit.en = cached.en;
+					} else {
+						const result = await this.translator.translateText(content.unit.ja, "en", "ja");
+						if (result.translated && result.translated !== content.unit.ja) {
+							content.unit.en = result.translated;
+						}
+					}
+				}
+			}
+		}
+
 		return item;
 	}
 
