@@ -175,14 +175,24 @@ export class GlobalSiteLookup {
 		}
 
 		// Try new format: article div with PlaygroundEditorTheme paragraphs
+		// Handle both separate <p> tags and <br>-separated bullets within a <p>
 		if (allBullets.length === 0) {
 			const articleDiv = $(".pg-products__article");
 			if (articleDiv.length > 0) {
 				articleDiv.find("p").each((_, el) => {
-					const text = $(el).text().trim();
-					if (text && !this.isRemarkText(text)) {
-						const normalized = text.replace(/^■\s*/, "• ");
-						allBullets.push(normalized);
+					// Get HTML and convert <br> to newlines to preserve bullet separation
+					const html = $(el).html() ?? "";
+					const textWithNewlines = html
+						.replaceAll(/<br\s*\/?>/gi, "\n")
+						.replaceAll(/<[^>]+>/g, ""); // Strip remaining HTML tags
+
+					const lines = textWithNewlines.split("\n");
+					for (const line of lines) {
+						const trimmed = line.trim();
+						if (trimmed && !this.isRemarkText(trimmed)) {
+							const normalized = trimmed.replace(/^■\s*/, "• ");
+							allBullets.push(normalized);
+						}
 					}
 				});
 			}
