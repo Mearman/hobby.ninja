@@ -4,6 +4,8 @@ import path from "node:path";
 
 import { normalizeText } from "@hobby-ninja/translation";
 
+import { stripEphemeralFromItem } from "../utils/image-utils.js";
+
 import { BandaiCatalogParser, type EntityData, type GlobalSiteUrls, type Item, type ParsedAccessoryItem } from "./bandai-catalog-parser";
 import { CatalogTranslator } from "./catalog-translator";
 import { parseCountedItems } from "./count-parser";
@@ -298,38 +300,6 @@ function mergeItemData(scraped: Item, existing: Record<string, unknown>): Item {
 	}
 
 	return merged;
-}
-
-/**
- * Check if a URL is ephemeral (will expire and shouldn't be persisted)
- */
-function isEphemeralUrl(url: string): boolean {
-	return url.includes("cloudfront.net") || url.includes("akamaized.net");
-}
-
-/**
- * Strip ephemeral src from an image object
- */
-function stripEphemeralSrc(img: { src?: string; path?: string }): { src?: string; path?: string } {
-	if (img.src && isEphemeralUrl(img.src)) {
-		return img.path ? { path: img.path } : {};
-	}
-	return img;
-}
-
-/**
- * Strip ephemeral URLs from images before persisting
- * Keeps only the local path, removes src for CDN URLs that will expire
- */
-function stripEphemeralImageUrls(item: Item): Item {
-	if (!item.images) return item;
-
-	const cleanImages = {
-		product: item.images.product.map((img) => stripEphemeralSrc(img)),
-		instructions: item.images.instructions.map((img) => stripEphemeralSrc(img)),
-	};
-
-	return { ...item, images: cleanImages };
 }
 
 /**
@@ -1044,7 +1014,7 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 							: catalogResult.data;
 
 						// Strip ephemeral CDN URLs before persisting
-						const finalItem = stripEphemeralImageUrls(mergedItem);
+						const finalItem = stripEphemeralFromItem(mergedItem);
 
 						writePromises.push(
 							writeFile(itemPath, JSON.stringify(finalItem, null, "\t"), "utf8"),
