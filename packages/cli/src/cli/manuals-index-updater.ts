@@ -19,6 +19,8 @@ interface ManualIndexEntry {
 	checkedAt: string;
 	name?: string;
 	error?: string;
+	/** ISO timestamp when the manual data was extracted/scraped */
+	extractedAt?: string;
 }
 
 interface ManualsIndex {
@@ -151,6 +153,20 @@ export const ManualsIndexUpdater = {
 				checkedAt: getCurrentTimestamp(),
 				name,
 			};
+			isDirty = true;
+		}
+	},
+
+	/**
+	 * Record extractedAt timestamp for a manual (when data was scraped)
+	 */
+	recordExtracted(manualId: string): void {
+		if (!manualsIndex) this.load();
+		if (!manualsIndex) return;
+
+		const entry = manualsIndex.manuals[manualId];
+		if (entry) {
+			entry.extractedAt = getCurrentTimestamp();
 			isDirty = true;
 		}
 	},
