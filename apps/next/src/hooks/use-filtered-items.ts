@@ -124,8 +124,8 @@ export function useFilteredItems(
 
 		for (const item of validItems) {
 			// Use array-based IDs from the data package
-			for (const brandId of item.brandIds) {
-				brands.add(brandId);
+			for (const brand of item.brands) {
+				brands.add(brand.id);
 			}
 			// Collect grades from object: both root keys and specific values
 			for (const rootGrade of Object.keys(item.grades)) {
@@ -137,11 +137,11 @@ export function useFilteredItems(
 				}
 			}
 			if (item.scale) scales.add(item.scale);
-			for (const seriesId of item.seriesIds) {
-				series.add(seriesId);
+			for (const s of item.series) {
+				series.add(s.id);
 			}
-			for (const categoryId of item.categoryIds) {
-				categories.add(categoryId);
+			for (const c of item.categories) {
+				categories.add(c.id);
 			}
 			// Collect tag (distribution channel) - use normalized ID (lowercase, hyphenated)
 			const itemTag = (item as Record<string, unknown>).tag as { ja: string; en?: string } | undefined;
@@ -151,8 +151,8 @@ export function useFilteredItems(
 			}
 
 			// Check for items with no data
-			if (item.brandIds.length === 0) hasItemsWithNoBrand = true;
-			if (item.seriesIds.length === 0) hasItemsWithNoSeries = true;
+			if ((item.brands).length === 0) hasItemsWithNoBrand = true;
+			if ((item.series).length === 0) hasItemsWithNoSeries = true;
 			if (Object.keys(item.grades).length === 0) hasItemsWithNoGrade = true;
 			if (!item.scale) hasItemsWithNoScale = true;
 		}
@@ -222,8 +222,8 @@ export function useFilteredItems(
 				const query = filterState.search.toLowerCase();
 				result = result.filter(item => {
 					const name = getNodeDisplayName(item).toLowerCase();
-					const brandIds = item.brandIds.join(" ").toLowerCase();
-					const seriesIds = item.seriesIds.join(" ").toLowerCase();
+					const brandIds = (item.brands).map(b => b.id).join(" ").toLowerCase();
+					const seriesIds = (item.series).map(s => s.id).join(" ").toLowerCase();
 					const gradesMatch =
 						Object.keys(item.grades).some(g => g.toLowerCase().includes(query)) ||
 						Object.values(item.grades).flat().some(g => g.toLowerCase().includes(query));
@@ -285,8 +285,8 @@ export function useFilteredItems(
 					case "brands":
 					{
 						const hasOtherBrand = selectedValues.includes("Other");
-						const hasNoBrands = item.brandIds.length === 0;
-						const hasMatchingBrand = item.brandIds.some(brandId => selectedValues.includes(brandId));
+						const hasNoBrands = (item.brands).length === 0;
+						const hasMatchingBrand = (item.brands).some(b => selectedValues.includes(b.id));
 						return hasOtherBrand ? (hasNoBrands || hasMatchingBrand) : hasMatchingBrand;
 					}
 					case "grades":
@@ -310,12 +310,12 @@ export function useFilteredItems(
 					case "series":
 					{
 						const hasOtherSeries = selectedValues.includes("Other");
-						const hasNoSeries = item.seriesIds.length === 0;
-						const hasMatchingSeries = item.seriesIds.some(seriesId => selectedValues.includes(seriesId));
+						const hasNoSeries = (item.series).length === 0;
+						const hasMatchingSeries = (item.series).some(s => selectedValues.includes(s.id));
 						return hasOtherSeries ? (hasNoSeries || hasMatchingSeries) : hasMatchingSeries;
 					}
 					case "categories": {
-						return item.categoryIds.some(categoryId => selectedValues.includes(categoryId));
+						return (item.categories).some(c => selectedValues.includes(c.id));
 					}
 					case "tags": {
 						const itemTag = (item as Record<string, unknown>).tag as { ja: string; en?: string } | undefined;
@@ -367,8 +367,8 @@ export function useFilteredItems(
 		for (const brand of availableOptions.brands) {
 			const itemsWithBrand = validItems.filter(item =>
 				brand === "Other"
-					? item.brandIds.length === 0
-					: item.brandIds.includes(brand),
+					? (item.brands).length === 0
+					: (item.brands).some(b => b.id === brand),
 			);
 			// Apply filters from different types only (brands don't affect other brand counts)
 			const visibleItemsWithBrand = applyFiltersFromDifferentTypes(itemsWithBrand, "brands");
@@ -397,20 +397,20 @@ export function useFilteredItems(
 			scaleCounts[scale] = visibleItemsWithScale.length;
 		}
 
-		for (const series of availableOptions.series) {
+		for (const seriesOpt of availableOptions.series) {
 			const itemsWithSeries = validItems.filter(item =>
-				series === "Other"
-					? item.seriesIds.length === 0
-					: item.seriesIds.includes(series),
+				seriesOpt === "Other"
+					? (item.series).length === 0
+					: (item.series).some(s => s.id === seriesOpt),
 			);
 			// Apply filters from different types only (series don't affect other series counts)
 			const visibleItemsWithSeries = applyFiltersFromDifferentTypes(itemsWithSeries, "series");
-			seriesCounts[series] = visibleItemsWithSeries.length;
+			seriesCounts[seriesOpt] = visibleItemsWithSeries.length;
 		}
 
 		for (const category of availableOptions.categories) {
 			const itemsWithCategory = validItems.filter(item =>
-				item.categoryIds.includes(category),
+				(item.categories).some(c => c.id === category),
 			);
 			// Apply filters from different types only (categories don't affect other category counts)
 			const visibleItemsWithCategory = applyFiltersFromDifferentTypes(itemsWithCategory, "categories");
@@ -449,8 +449,8 @@ export function useFilteredItems(
 			const query = filterState.search.toLowerCase();
 			result = result.filter(item => {
 				const name = getNodeDisplayName(item).toLowerCase();
-				const brandIds = item.brandIds.join(" ").toLowerCase();
-				const seriesIds = item.seriesIds.join(" ").toLowerCase();
+				const brandIds = (item.brands).map(b => b.id).join(" ").toLowerCase();
+				const seriesIds = (item.series).map(s => s.id).join(" ").toLowerCase();
 				// Search in grades object (root keys + specific values)
 				const gradesMatch =
 					Object.keys(item.grades).some(g => g.toLowerCase().includes(query)) ||
@@ -470,8 +470,8 @@ export function useFilteredItems(
 		if (filterState.brands.length > 0) {
 			result = result.filter(item => {
 				const hasOtherBrand = filterState.brands.includes("Other");
-				const hasNoBrands = item.brandIds.length === 0;
-				const hasMatchingBrand = item.brandIds.some(brandId => filterState.brands.includes(brandId));
+				const hasNoBrands = (item.brands).length === 0;
+				const hasMatchingBrand = (item.brands).some(b => filterState.brands.includes(b.id));
 
 				return hasOtherBrand ? (hasNoBrands || hasMatchingBrand) : hasMatchingBrand;
 			});
@@ -540,15 +540,15 @@ export function useFilteredItems(
 		if (filterState.series.length > 0) {
 			result = result.filter(item => {
 				const hasOtherSeries = filterState.series.includes("Other");
-				const hasNoSeries = item.seriesIds.length === 0;
-				const hasMatchingSeries = item.seriesIds.some(seriesId => filterState.series.includes(seriesId));
+				const hasNoSeries = (item.series).length === 0;
+				const hasMatchingSeries = (item.series).some(s => filterState.series.includes(s.id));
 
 				return hasOtherSeries ? (hasNoSeries || hasMatchingSeries) : hasMatchingSeries;
 			});
 		}
 		if (filterState.categories.length > 0) {
 			result = result.filter(item =>
-				item.categoryIds.some(categoryId => filterState.categories.includes(categoryId)),
+				(item.categories).some(c => filterState.categories.includes(c.id)),
 			);
 		}
 
@@ -587,8 +587,8 @@ export function useFilteredItems(
 			}
 			case "brand": {
 				result = sortDirection === "asc"
-					? result.toSorted((a, b) => (a.brandIds[0] ?? "").localeCompare(b.brandIds[0] ?? ""))
-					: result.toSorted((a, b) => (b.brandIds[0] ?? "").localeCompare(a.brandIds[0] ?? ""));
+					? result.toSorted((a, b) => (a.brands[0]?.id ?? "").localeCompare(b.brands[0]?.id ?? ""))
+					: result.toSorted((a, b) => (b.brands[0]?.id ?? "").localeCompare(a.brands[0]?.id ?? ""));
 				break;
 			}
 			case "grade": {
@@ -612,8 +612,8 @@ export function useFilteredItems(
 			}
 			case "series": {
 				result = sortDirection === "asc"
-					? result.toSorted((a, b) => (a.seriesIds[0] ?? "").localeCompare(b.seriesIds[0] ?? ""))
-					: result.toSorted((a, b) => (b.seriesIds[0] ?? "").localeCompare(a.seriesIds[0] ?? ""));
+					? result.toSorted((a, b) => (a.series[0]?.id ?? "").localeCompare(b.series[0]?.id ?? ""))
+					: result.toSorted((a, b) => (b.series[0]?.id ?? "").localeCompare(a.series[0]?.id ?? ""));
 				break;
 			}
 			default: {

@@ -68,9 +68,9 @@ export function useDatabaseFilter(items: Item[], manuals: Manual[]) {
 				if (name.includes(query)) return true;
 
 				if (entry.type === "item") {
-					const brand = entry.brandIds.length > 0 ? entry.brandIds[0] : "";
+					const brand = entry.brands.length > 0 ? entry.brands[0].id : "";
 					const category =
-						entry.categoryIds.length > 0 ? entry.categoryIds[0] : "";
+						entry.categories.length > 0 ? entry.categories[0].id : "";
 					// Search in grades object (root keys + specific values)
 					const gradesMatch =
 						Object.keys(entry.grades).some(g => g.toLowerCase().includes(query)) ||
@@ -91,7 +91,7 @@ export function useDatabaseFilter(items: Item[], manuals: Manual[]) {
 			filtered = filtered.filter(
 				(entry) =>
 					entry.type === "item" &&
-					entry.brandIds.some((brand) => filterState.brands.includes(brand)),
+					entry.brands.some((b) => filterState.brands.includes(b.id)),
 			);
 		}
 
@@ -100,8 +100,8 @@ export function useDatabaseFilter(items: Item[], manuals: Manual[]) {
 			filtered = filtered.filter(
 				(entry) =>
 					entry.type === "item" &&
-					entry.categoryIds.some((category) =>
-						filterState.categories.includes(category),
+					entry.categories.some((c) =>
+						filterState.categories.includes(c.id),
 					),
 			);
 		}
@@ -134,8 +134,8 @@ export function useDatabaseFilter(items: Item[], manuals: Manual[]) {
 			filtered = filtered.filter(
 				(entry) =>
 					entry.type === "item" &&
-					entry.seriesIds.some((series) =>
-						filterState.series.includes(series),
+					entry.series.some((s) =>
+						filterState.series.includes(s.id),
 					),
 			);
 		}
@@ -183,8 +183,8 @@ export function useDatabaseFilter(items: Item[], manuals: Manual[]) {
 					break;
 				}
 				case "brand": {
-					aValue = a.type === "item" ? a.brandIds[0] ?? "" : "";
-					bValue = b.type === "item" ? b.brandIds[0] ?? "" : "";
+					aValue = a.type === "item" ? a.brands[0]?.id ?? "" : "";
+					bValue = b.type === "item" ? b.brands[0]?.id ?? "" : "";
 					break;
 				}
 				case "date": {
@@ -265,8 +265,8 @@ export function useDatabaseFilter(items: Item[], manuals: Manual[]) {
 		const languages = new Set<string>();
 
 		for (const item of items) {
-			if (item.brandIds.length > 0) brands.add(item.brandIds[0]);
-			if (item.categoryIds.length > 0) categories.add(item.categoryIds[0]);
+			if ((item.brands).length > 0) brands.add(item.brands[0].id);
+			if ((item.categories).length > 0) categories.add(item.categories[0].id);
 			// Collect grades from object: both root keys and specific values
 			for (const rootGrade of Object.keys(item.grades)) {
 				grades.add(rootGrade);
@@ -277,7 +277,7 @@ export function useDatabaseFilter(items: Item[], manuals: Manual[]) {
 				}
 			}
 			if (item.scale) scales.add(item.scale);
-			if (item.seriesIds.length > 0) series.add(item.seriesIds[0]);
+			if ((item.series).length > 0) series.add(item.series[0].id);
 		}
 
 		for (const manual of manuals) {
