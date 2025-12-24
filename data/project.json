@@ -10,7 +10,10 @@
 			"options": {
 				"cwd": "data",
 				"commands": ["pnpm tsx scripts/build.ts", "tsup"],
-				"parallel": false
+				"parallel": false,
+				"env": {
+					"NODE_OPTIONS": "--max-old-space-size=8192"
+				}
 			},
 			"outputs": ["{projectRoot}/dist"],
 			"inputs": [
@@ -42,7 +45,10 @@
 			"options": {
 				"cwd": "data",
 				"commands": ["pnpm tsx scripts/build.ts", "tsup"],
-				"parallel": false
+				"parallel": false,
+				"env": {
+					"NODE_OPTIONS": "--max-old-space-size=8192"
+				}
 			},
 			"outputs": ["{projectRoot}/dist"],
 			"inputs": [
