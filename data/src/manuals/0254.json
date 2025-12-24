@@ -1,5 +1,5 @@
 {
-	"id": "0254",
+	"id": "254",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ヅダ",
@@ -12,20 +12,28 @@
 		"month": 6,
 		"day": 10
 	},
-	"productImage": "https://bandai-hobby.net/images/157_646_s_x6dixjp7des1fohia6b4lhtsjtz2.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_646_s_x6dixjp7des1fohia6b4lhtsjtz2.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/254/",
-	"extractedAt": "2025-12-05T23:09:46.737Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_646_s_x6dixjp7des1fohia6b4lhtsjtz2.jpg",
+		"path": "/manuals/0254/157_646.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["msigloo"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム MS IGLOO",
+		"en": "Mobile Suit Gundam MS IGLOO"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/254.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0254/0254.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/254/"
 }

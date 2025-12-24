@@ -1,5 +1,5 @@
 {
-	"id": "0276",
+	"id": "276",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 モビルシグー(ジスト・エルウェス専用機)",
@@ -12,20 +12,29 @@
 		"month": 2,
 		"day": 23
 	},
-	"productImage": "https://bandai-hobby.net/images/159_3362_s_gls9qcpu3ykcz061f1hnmb2rasm4.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_3362_s_gls9qcpu3ykcz061f1hnmb2rasm4.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/276/",
-	"extractedAt": "2025-12-05T23:09:46.770Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_3362_s_gls9qcpu3ykcz061f1hnmb2rasm4.jpg",
+		"path": "/images/items/01_2432/159_3362.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/276.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0276/0276.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/276/",
+	"itemId": "01_2432"
 }

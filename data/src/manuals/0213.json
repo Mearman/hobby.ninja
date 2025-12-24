@@ -1,8 +1,8 @@
 {
-	"id": "0213",
+	"id": "213",
 	"type": "manual",
 	"name": {
-		"ja": "HGUC 1/144 ガンダム GP01 ゼフィランサス",
+		"ja": "HGUC 1/144 ガンダムGP01 ゼフィランサス",
 		"en": "HGUC 1/144 GundamGP01 Zephyranthes"
 	},
 	"productNumber": "1077165",
@@ -11,20 +11,29 @@
 		"year": 2000,
 		"month": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/157_162_s_binxcdggfdxgudtpis30do91erpc.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_162_s_binxcdggfdxgudtpis30do91erpc.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/213/",
-	"extractedAt": "2025-12-05T23:09:46.650Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_162_s_binxcdggfdxgudtpis30do91erpc.jpg",
+		"path": "/images/items/01_0678/157_162.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-0083"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 0083 STARDUST MEMORY",
+		"en": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/213.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0213/0213.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/213/",
+	"itemId": "01_0678"
 }

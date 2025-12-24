@@ -1,5 +1,5 @@
 {
-	"id": "0204",
+	"id": "204",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 RX-77 ガンキャノン",
@@ -12,20 +12,29 @@
 		"month": 5,
 		"day": 1
 	},
-	"productImage": "https://bandai-hobby.net/images/157_4742_s_hqtwgahtpw23b3b1i0q74fpvkaw0.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_4742_s_hqtwgahtpw23b3b1i0q74fpvkaw0.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/204/",
-	"extractedAt": "2025-12-05T23:09:46.633Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_4742_s_hqtwgahtpw23b3b1i0q74fpvkaw0.jpg",
+		"path": "/images/items/01_3793/157_4742.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/204.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0204/0204.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/204/",
+	"itemId": "01_3793"
 }

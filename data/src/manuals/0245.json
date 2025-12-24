@@ -1,5 +1,5 @@
 {
-	"id": "0245",
+	"id": "245",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ジム・コマンド(宇宙仕様)",
@@ -11,20 +11,29 @@
 		"year": 2004,
 		"month": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/189_498_s_pty5d8u1gr977x5rgjdkjjjgexdk.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_498_s_pty5d8u1gr977x5rgjdkjjjgexdk.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/245/",
-	"extractedAt": "2025-12-05T23:09:46.721Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_498_s_pty5d8u1gr977x5rgjdkjjjgexdk.jpg",
+		"path": "/images/items/01_4059/189_4988.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-0080"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム0080 ポケットの中の戦争",
+		"en": "Mobile Suit Gundam0080 War in the Pocket"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/245.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0245/0245.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/245/",
+	"itemId": "01_4059"
 }

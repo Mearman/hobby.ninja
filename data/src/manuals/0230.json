@@ -1,5 +1,5 @@
 {
-	"id": "0230",
+	"id": "230",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 バウ量産型",
@@ -11,20 +11,29 @@
 		"year": 2002,
 		"month": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/157_270_s_ffbln9lm5g15b9d2m1zaikg6wgxe.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_270_s_ffbln9lm5g15b9d2m1zaikg6wgxe.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/230/",
-	"extractedAt": "2025-12-05T23:09:46.694Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_270_s_ffbln9lm5g15b9d2m1zaikg6wgxe.jpg",
+		"path": "/images/items/01_1769/157_270.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam-zz"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムZZ",
+		"en": "Mobile Suit GundamZZ"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/230.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0230/0230.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/230/",
+	"itemId": "01_1769"
 }

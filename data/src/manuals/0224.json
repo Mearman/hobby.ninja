@@ -1,5 +1,5 @@
 {
-	"id": "0224",
+	"id": "224",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ゼクアイン",
@@ -11,20 +11,29 @@
 		"year": 2001,
 		"month": 10
 	},
-	"productImage": "https://bandai-hobby.net/images/159_223_s_plxcauretui84sxfifxo1xvwl64d.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_223_s_plxcauretui84sxfifxo1xvwl64d.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/224/",
-	"extractedAt": "2025-12-05T23:09:46.683Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_223_s_plxcauretui84sxfifxo1xvwl64d.jpg",
+		"path": "/images/items/01_1310/159_223.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["sentinel"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "ガンダム・センチネル",
+		"en": "Gundam Sentinel"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/224.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0224/0224.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/224/",
+	"itemId": "01_1310"
 }

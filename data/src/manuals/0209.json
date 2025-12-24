@@ -1,5 +1,5 @@
 {
-	"id": "0209",
+	"id": "209",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 MS-07 グフ",
@@ -11,20 +11,29 @@
 		"year": 2000,
 		"month": 4
 	},
-	"productImage": "https://bandai-hobby.net/images/157_137_s_ip2or3elg1ruhqcpx1m02zpnpp4o.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_137_s_ip2or3elg1ruhqcpx1m02zpnpp4o.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/209/",
-	"extractedAt": "2025-12-05T23:09:46.645Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_137_s_ip2or3elg1ruhqcpx1m02zpnpp4o.jpg",
+		"path": "/images/items/01_0408/157_137.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/209.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0209/0209.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/209/",
+	"itemId": "01_0408"
 }

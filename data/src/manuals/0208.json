@@ -1,5 +1,5 @@
 {
-	"id": "0208",
+	"id": "208",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 RX-75 ガンタンク",
@@ -11,20 +11,29 @@
 		"year": 2000,
 		"month": 1
 	},
-	"productImage": "https://bandai-hobby.net/images/158_2539_s_04unyg7i29ydwulcso10g62117pc.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_2539_s_04unyg7i29ydwulcso10g62117pc.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/208/",
-	"extractedAt": "2025-12-05T23:09:46.641Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_2539_s_04unyg7i29ydwulcso10g62117pc.jpg",
+		"path": "/images/items/01_1628/158_2539.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/208.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0208/0208.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/208/",
+	"itemId": "01_1628"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0206",
+	"id": "206",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 AMX-001ザクIII改",
@@ -11,20 +11,28 @@
 		"year": 1999,
 		"month": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/156_2528_s_3y74t5qa6ajc3r1a1q6ixgk9vodb.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_2528_s_3y74t5qa6ajc3r1a1q6ixgk9vodb.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/206/",
-	"extractedAt": "2025-12-05T23:09:46.636Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_2528_s_3y74t5qa6ajc3r1a1q6ixgk9vodb.jpg",
+		"path": "/manuals/0206/156_2528.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam-zz"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムZZ",
+		"en": "Mobile Suit GundamZZ"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/206.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0206/0206.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/206/"
 }

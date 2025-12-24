@@ -1,5 +1,5 @@
 {
-	"id": "0228",
+	"id": "228",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 Ex-S ガンダム",
@@ -11,20 +11,29 @@
 		"year": 2002,
 		"month": 4
 	},
-	"productImage": "https://bandai-hobby.net/images/158_260_s_t6j1h62kpdzx8p031vhep1p399vh.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_260_s_t6j1h62kpdzx8p031vhep1p399vh.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/228/",
-	"extractedAt": "2025-12-05T23:09:46.691Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_260_s_t6j1h62kpdzx8p031vhep1p399vh.jpg",
+		"path": "/images/items/01_1700/158_260.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["sentinel"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "ガンダム・センチネル",
+		"en": "Gundam Sentinel"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/228.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0228/0228.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/228/",
+	"itemId": "01_1700"
 }

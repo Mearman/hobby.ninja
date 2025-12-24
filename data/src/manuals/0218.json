@@ -1,5 +1,5 @@
 {
-	"id": "0218",
+	"id": "218",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ガンダム GP-01Fb",
@@ -11,20 +11,29 @@
 		"year": 2000,
 		"month": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/157_181_s_y4oatklzchsf7wnrlwe8v0s3936y.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_181_s_y4oatklzchsf7wnrlwe8v0s3936y.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/218/",
-	"extractedAt": "2025-12-05T23:09:46.672Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_181_s_y4oatklzchsf7wnrlwe8v0s3936y.jpg",
+		"path": "/images/items/01_0874/157_1817.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-0083"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 0083 STARDUST MEMORY",
+		"en": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/218.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0218/0218.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/218/",
+	"itemId": "01_0874"
 }

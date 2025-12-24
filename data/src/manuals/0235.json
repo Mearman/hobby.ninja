@@ -1,5 +1,5 @@
 {
-	"id": "0235",
+	"id": "235",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ハイゴッグ",
@@ -11,20 +11,29 @@
 		"year": 2003,
 		"month": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/189_355_s_vu349xnhw1dqdh1e3l9otvyoiqsy.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_355_s_vu349xnhw1dqdh1e3l9otvyoiqsy.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/235/",
-	"extractedAt": "2025-12-05T23:09:46.703Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_355_s_vu349xnhw1dqdh1e3l9otvyoiqsy.jpg",
+		"path": "/images/items/01_2639/189_3559.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-0080"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム0080 ポケットの中の戦争",
+		"en": "Mobile Suit Gundam0080 War in the Pocket"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/235.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0235/0235.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/235/",
+	"itemId": "01_2639"
 }

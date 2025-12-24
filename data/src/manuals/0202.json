@@ -1,5 +1,5 @@
 {
-	"id": "0202",
+	"id": "202",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 YMS-15 ギャン",
@@ -11,20 +11,28 @@
 		"year": 1999,
 		"month": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/157_2523_s_r5218h7naoyaiv1ppksde3dhm44g.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_2523_s_r5218h7naoyaiv1ppksde3dhm44g.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/202/",
-	"extractedAt": "2025-12-05T23:09:46.630Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_2523_s_r5218h7naoyaiv1ppksde3dhm44g.jpg",
+		"path": "/images/items/01_1611/157_2523.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/202.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0202/0202.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/202/",
+	"itemId": "01_1611"
 }

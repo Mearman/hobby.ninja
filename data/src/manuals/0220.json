@@ -1,5 +1,5 @@
 {
-	"id": "0220",
+	"id": "220",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 RGM-79 ジム",
@@ -11,20 +11,29 @@
 		"year": 2001,
 		"month": 4
 	},
-	"productImage": "https://bandai-hobby.net/images/158_194_s_rptku6gie9w75djfgv6ozx85klr8.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_194_s_rptku6gie9w75djfgv6ozx85klr8.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/220/",
-	"extractedAt": "2025-12-05T23:09:46.677Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_194_s_rptku6gie9w75djfgv6ozx85klr8.jpg",
+		"path": "/images/items/01_1014/158_194.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/220.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0220/0220.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/220/",
+	"itemId": "01_1014"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0256",
+	"id": "256",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ザクI 黒い三連星仕様",
@@ -12,20 +12,29 @@
 		"month": 8,
 		"day": 26
 	},
-	"productImage": "https://bandai-hobby.net/images/157_668_s_u4aoq841jume1z4jcgpbfmk3mlcm.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_668_s_u4aoq841jume1z4jcgpbfmk3mlcm.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/256/",
-	"extractedAt": "2025-12-05T23:09:46.741Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_668_s_u4aoq841jume1z4jcgpbfmk3mlcm.jpg",
+		"path": "/images/items/01_5615/157_668.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["msv"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "ガンダムMSV",
+		"en": "GundamMSV"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/256.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0256/0256.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/256/",
+	"itemId": "01_5615"
 }

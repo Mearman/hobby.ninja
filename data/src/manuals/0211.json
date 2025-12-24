@@ -1,5 +1,5 @@
 {
-	"id": "0211",
+	"id": "211",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 キュベレイMk-II",
@@ -11,20 +11,29 @@
 		"year": 2000,
 		"month": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/157_151_s_4db2tiqh9e3lhn628j48uywwp94u.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_151_s_4db2tiqh9e3lhn628j48uywwp94u.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/211/",
-	"extractedAt": "2025-12-05T23:09:46.647Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_151_s_4db2tiqh9e3lhn628j48uywwp94u.jpg",
+		"path": "/images/items/01_0559/157_1518.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam-zz"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムZZ",
+		"en": "Mobile Suit GundamZZ"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/211.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0211/0211.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/211/",
+	"itemId": "01_0559"
 }

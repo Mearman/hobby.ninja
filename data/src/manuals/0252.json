@@ -1,5 +1,5 @@
 {
-	"id": "0252",
+	"id": "252",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 トリプルドムセット",
@@ -12,20 +12,29 @@
 		"month": 1,
 		"day": 21
 	},
-	"productImage": "https://bandai-hobby.net/images/155_612_o_1h0q07vl5186ohmg1ljd1811koa23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_612_o_1h0q07vl5186ohmg1ljd1811koa23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/252/",
-	"extractedAt": "2025-12-05T23:09:46.733Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_612_o_1h0q07vl5186ohmg1ljd1811koa23.jpg",
+		"path": "/images/items/01_5279/155_612.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/252.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0252/0252.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/252/",
+	"itemId": "01_5279"
 }

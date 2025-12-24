@@ -1,5 +1,5 @@
 {
-	"id": "0247",
+	"id": "247",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 マラサイ",
@@ -11,20 +11,29 @@
 		"year": 2005,
 		"month": 1
 	},
-	"productImage": "https://bandai-hobby.net/images/156_516_s_aecwfei7w36as69qzgg06wtbi818.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_516_s_aecwfei7w36as69qzgg06wtbi818.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/247/",
-	"extractedAt": "2025-12-05T23:09:46.725Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_516_s_aecwfei7w36as69qzgg06wtbi818.jpg",
+		"path": "/images/items/01_4249/156_5167.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["z-gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士Zガンダム",
+		"en": "Mobile Suit ZGundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/247.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0247/0247.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/247/",
+	"itemId": "01_4249"
 }

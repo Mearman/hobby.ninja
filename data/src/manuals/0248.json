@@ -1,5 +1,5 @@
 {
-	"id": "0248",
+	"id": "248",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ヘイズル改",
@@ -12,24 +12,29 @@
 		"month": 9,
 		"day": 17
 	},
-	"productImage": "https://bandai-hobby.net/images/158_584_s_myjfbrvd94bvbvfkqv1p0uee55j0.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_584_s_myjfbrvd94bvbvfkqv1p0uee55j0.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/248/",
-	"extractedAt": "2025-12-05T23:09:46.726Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_584_s_myjfbrvd94bvbvfkqv1p0uee55j0.jpg",
+		"path": "/images/items/01_4979/158_584.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"advance-of-z"
-	],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "ADVANCE OF Z",
+		"en": "ADVANCE OF Z"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/248.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0248/0248.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/248/",
+	"itemId": "01_4979"
 }

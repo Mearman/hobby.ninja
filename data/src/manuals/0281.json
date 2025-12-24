@@ -1,5 +1,5 @@
 {
-	"id": "0281",
+	"id": "281",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 GNアームズ TYPE-D＋ガンダムデュナメス",
@@ -11,20 +11,29 @@
 		"year": 2008,
 		"month": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1845_o_1bblt3v3eelr1fo41eqm1rfnocd2i.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1845_o_1bblt3v3eelr1fo41eqm1rfnocd2i.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/281/",
-	"extractedAt": "2025-12-05T23:09:46.775Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1845_o_1bblt3v3eelr1fo41eqm1rfnocd2i.jpg",
+		"path": "/images/items/01_0903/156_1845.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-00"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム00",
+		"en": "Mobile Suit Gundam00"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/281.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0281/0281.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/281/",
+	"itemId": "01_0903"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0232",
+	"id": "232",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ザク2(ガルマ専用機)",
@@ -11,20 +11,29 @@
 		"year": 2002,
 		"month": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/158_291_s_h4105v3v4vvmb2tyfcd2ge7m9yo5.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_291_s_h4105v3v4vvmb2tyfcd2ge7m9yo5.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/232/",
-	"extractedAt": "2025-12-05T23:09:46.697Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_291_s_h4105v3v4vvmb2tyfcd2ge7m9yo5.jpg",
+		"path": "/images/items/01_1990/158_2919.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/232.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0232/0232.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/232/",
+	"itemId": "01_1990"
 }

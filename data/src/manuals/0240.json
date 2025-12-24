@@ -1,5 +1,5 @@
 {
-	"id": "0240",
+	"id": "240",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ガンキャノン量産型",
@@ -11,20 +11,29 @@
 		"year": 2004,
 		"month": 2
 	},
-	"productImage": "https://bandai-hobby.net/images/190_404_s_954r7oylnmsg2xkjkc98cu2sevkp.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/190_404_s_954r7oylnmsg2xkjkc98cu2sevkp.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/240/",
-	"extractedAt": "2025-12-05T23:09:46.709Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/190_404_s_954r7oylnmsg2xkjkc98cu2sevkp.jpg",
+		"path": "/images/items/01_3079/190_4048.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-0080"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム0080 ポケットの中の戦争",
+		"en": "Mobile Suit Gundam0080 War in the Pocket"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/240.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0240/0240.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/240/",
+	"itemId": "01_3079"
 }

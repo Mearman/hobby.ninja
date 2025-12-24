@@ -1,5 +1,5 @@
 {
-	"id": "0299",
+	"id": "299",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガンダムエクシア リペアII",
@@ -11,20 +11,29 @@
 		"year": 2009,
 		"month": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1868_o_1bblvfsorsn181n1qdhdi08u52i.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1868_o_1bblvfsorsn181n1qdhdi08u52i.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/299/",
-	"extractedAt": "2025-12-05T23:09:46.805Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1868_o_1bblvfsorsn181n1qdhdi08u52i.jpg",
+		"path": "/images/items/01_0927/156_1868.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-00"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム00",
+		"en": "Mobile Suit Gundam00"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/299.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0299/0299.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/299/",
+	"itemId": "01_0927"
 }

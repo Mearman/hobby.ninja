@@ -1,5 +1,5 @@
 {
-	"id": "0249",
+	"id": "249",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 グリプス戦役セット",
@@ -12,20 +12,29 @@
 		"month": 3,
 		"day": 18
 	},
-	"productImage": "https://bandai-hobby.net/images/155_625_o_1h0q0b82gunjl4ocv1eh038923.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_625_o_1h0q0b82gunjl4ocv1eh038923.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/249/",
-	"extractedAt": "2025-12-05T23:09:46.728Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_625_o_1h0q0b82gunjl4ocv1eh038923.jpg",
+		"path": "/images/items/01_5413/155_625.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["z-gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士Zガンダム",
+		"en": "Mobile Suit ZGundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/249.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0249/0249.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/249/",
+	"itemId": "01_5413"
 }

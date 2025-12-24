@@ -1,5 +1,5 @@
 {
-	"id": "0267",
+	"id": "267",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ジンクス",
@@ -11,20 +11,29 @@
 		"year": 2008,
 		"month": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1842_o_1bblsq1j8mpiu56j8a1s3v50p2i.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1842_o_1bblsq1j8mpiu56j8a1s3v50p2i.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/267/",
-	"extractedAt": "2025-12-05T23:09:46.760Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1842_o_1bblsq1j8mpiu56j8a1s3v50p2i.jpg",
+		"path": "/images/items/01_0900/156_1842.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-00"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム00",
+		"en": "Mobile Suit Gundam00"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/267.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0267/0267.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/267/",
+	"itemId": "01_0900"
 }

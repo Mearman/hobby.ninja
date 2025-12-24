@@ -1,8 +1,8 @@
 {
-	"id": "0255",
+	"id": "255",
 	"type": "manual",
 	"name": {
-		"ja": "HGUC 1/144 ガンダム TR-1 ヘイズル2号機",
+		"ja": "HGUC 1/144 ガンダムTR-1 ヘイズル2号機",
 		"en": "HGUC 1/144 GundamTR-1 Hazel Unit 2"
 	},
 	"productNumber": "1145935",
@@ -12,24 +12,29 @@
 		"month": 9,
 		"day": 23
 	},
-	"productImage": "https://bandai-hobby.net/images/158_677_s_cmxvcqi5drqigqmudulyukja39uj.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_677_s_cmxvcqi5drqigqmudulyukja39uj.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/255/",
-	"extractedAt": "2025-12-05T23:09:46.739Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_677_s_cmxvcqi5drqigqmudulyukja39uj.jpg",
+		"path": "/images/items/01_5619/158_677.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"advance-of-z"
-	],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "ADVANCE OF Z",
+		"en": "ADVANCE OF Z"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/255.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0255/0255.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/255/",
+	"itemId": "01_5619"
 }

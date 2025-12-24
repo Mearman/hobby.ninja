@@ -1,5 +1,5 @@
 {
-	"id": "0257",
+	"id": "257",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ザクＩスナイパー",
@@ -12,20 +12,29 @@
 		"month": 11,
 		"day": 29
 	},
-	"productImage": "https://bandai-hobby.net/images/158_698_s_u1ijuz8w8hlzq6glgckxko4rowhn.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_698_s_u1ijuz8w8hlzq6glgckxko4rowhn.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/257/",
-	"extractedAt": "2025-12-05T23:09:46.743Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_698_s_u1ijuz8w8hlzq6glgckxko4rowhn.jpg",
+		"path": "/images/items/01_5634/158_698.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/257.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0257/0257.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/257/",
+	"itemId": "01_5634"
 }

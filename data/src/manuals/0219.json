@@ -1,5 +1,5 @@
 {
-	"id": "0219",
+	"id": "219",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 MSM-07S ズゴック（シャア専用）",
@@ -11,20 +11,28 @@
 		"year": 2001,
 		"month": 2
 	},
-	"productImage": "https://bandai-hobby.net/images/158_188_s_zs3tp9nanhjo9y4r209mboga6wx8.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_188_s_zs3tp9nanhjo9y4r209mboga6wx8.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/219/",
-	"extractedAt": "2025-12-05T23:09:46.674Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_188_s_zs3tp9nanhjo9y4r209mboga6wx8.jpg",
+		"path": "/manuals/0219/158_188.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/219.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0219/0219.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/219/"
 }

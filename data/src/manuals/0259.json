@@ -1,5 +1,5 @@
 {
-	"id": "0259",
+	"id": "259",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ギャプラン TR-5［フライルー］",
@@ -12,24 +12,29 @@
 		"month": 12,
 		"day": 23
 	},
-	"productImage": "https://bandai-hobby.net/images/192_706_s_737e1ptjxlh61ii5ah3qvl8ucp9p.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/192_706_s_737e1ptjxlh61ii5ah3qvl8ucp9p.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/259/",
-	"extractedAt": "2025-12-05T23:09:46.746Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/192_706_s_737e1ptjxlh61ii5ah3qvl8ucp9p.jpg",
+		"path": "/images/items/01_5644/192_706.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"advance-of-z"
-	],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "ADVANCE OF Z",
+		"en": "ADVANCE OF Z"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/259.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0259/0259.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/259/",
+	"itemId": "01_5644"
 }
