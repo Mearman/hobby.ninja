@@ -1035,11 +1035,67 @@ export class ScrapeCommand {
 	}
 
 	/**
-	 * Save manual data to JSON file
+	 * Save manual data to JSON file, merging with existing data to preserve translations
 	 */
 	private async saveManualJson(filePath: string, data: ManualData): Promise<void> {
 		await fs.mkdir(path.dirname(filePath), { recursive: true });
-		await fs.writeFile(filePath, JSON.stringify(data, null, "\t"), "utf8");
+
+		// Merge with existing data to preserve English translations and metadata
+		const mergedData = await this.mergeWithExistingManual(filePath, data);
+
+		await fs.writeFile(filePath, JSON.stringify(mergedData, null, "\t"), "utf8");
+	}
+
+	/**
+	 * Merge new manual data with existing file to preserve translations and metadata
+	 */
+	private async mergeWithExistingManual(filePath: string, newData: ManualData): Promise<ManualData> {
+		try {
+			const existingContent = await fs.readFile(filePath, "utf8");
+			const existing = JSON.parse(existingContent) as Record<string, unknown>;
+
+			// Preserve English name if not in new data
+			if (existing["name"] && typeof existing["name"] === "object") {
+				const existingName = existing["name"] as Record<string, string>;
+				if (existingName["en"] && !newData.name.en) {
+					newData.name.en = existingName["en"];
+				}
+			}
+
+			// Preserve English PDF names
+			if (existing["pdfs"] && Array.isArray(existing["pdfs"])) {
+				for (let i = 0; i < newData.pdfs.length; i++) {
+					const existingPdf = existing["pdfs"][i] as Record<string, unknown> | undefined;
+					if (existingPdf?.["name"] && typeof existingPdf["name"] === "object") {
+						const existingPdfName = existingPdf["name"] as Record<string, string>;
+						if (existingPdfName["en"] && !newData.pdfs[i]?.name.en) {
+							newData.pdfs[i].name.en = existingPdfName["en"];
+						}
+					}
+				}
+			}
+
+			// Preserve metadata fields that parser doesn't provide
+			const preserveFields = ["productImage", "thumbnailImage", "extractedAt", "brandIds", "seriesIds"];
+			for (const field of preserveFields) {
+				if (existing[field] !== undefined && !(field in newData)) {
+					(newData as Record<string, unknown>)[field] = existing[field];
+				}
+			}
+
+			// Preserve image.path if exists
+			if (existing["image"] && typeof existing["image"] === "object") {
+				const existingImage = existing["image"] as Record<string, unknown>;
+				if (existingImage["path"] && newData.image && !newData.image.path) {
+					newData.image.path = existingImage["path"] as string;
+				}
+			}
+
+			return newData;
+		} catch {
+			// File doesn't exist or can't be read, use new data as-is
+			return newData;
+		}
 	}
 
 	/**
