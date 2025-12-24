@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 クランシェカスタム",
 		"en": "HG 1/144 Clanche Custom"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "age",
+			"url": "https://bandai-hobby.net/series/age/",
+			"ja": "機動戦士ガンダムAGE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000170540",
+			"url": "https://p-bandai.jp/item/item-1000170540/",
+			"ja": "ＨＧ 1/144 フォーンファルシア"
+		},
+		{
+			"id": "item-1000169836",
+			"url": "https://p-bandai.jp/item/item-1000169836/",
+			"ja": "ＨＧ 1/144 ガンダムＡＧＥ-１ レイザー＆ガンダムＡＧＥ-２ アルティメス セット"
+		},
+		{
+			"id": "01_3738",
+			"url": "https://bandai-hobby.net/item/01_3738/",
+			"ja": "HG 1/144 「機動戦士ガンダムAGE」 MSセット[クリアカラー]"
+		},
+		{
+			"id": "item-1000082540",
+			"url": "https://p-bandai.jp/item/item-1000082540",
+			"ja": "ＨＧ 1/144 ガンダムレギルス〔MEMORY OF EDEN〕"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1430,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 指揮官セリック・アビス仕様のクランシェをHG化。",
@@ -31,27 +74,30 @@
 			"Molded product x 14, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5771/153_833.jpg",
-		"/images/items/01_5771/155_833.jpg",
-		"/images/items/01_5771/156_833.jpg",
-		"/images/items/01_5771/157_833.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_833_s_v2nzpeg3sgz6ent4p4me2dm3sucr.jpg",
+				"path": "/images/items/01_5771/153_833.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_833_s_b2i958ep87r3feqw678kvm5rzgsi.jpg",
+				"path": "/images/items/01_5771/155_833.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_833_s_5n4pwwvk14nwpfpvqgckqag5x4kp.jpg",
+				"path": "/images/items/01_5771/156_833.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_833_s_br04bieqbbr4dx0ye3k5ppyspdo3.jpg",
+				"path": "/images/items/01_5771/157_833.jpg"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5771/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
-	"manualId": "0002"
+	"manual": {
+		"id": "2",
+		"url": "https://manual.bandai-hobby.net/menus/detail/2/"
+	}
 }
