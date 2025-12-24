@@ -1,5 +1,5 @@
 {
-	"id": "0882",
+	"id": "882",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 フォビドゥンガンダム",
@@ -11,20 +11,29 @@
 		"year": 2003,
 		"month": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/157_374_s_3s8y64fsct3vku7ipubnrjxddcu5.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_374_s_3s8y64fsct3vku7ipubnrjxddcu5.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/882/",
-	"extractedAt": "2025-12-05T23:09:47.718Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_374_s_3s8y64fsct3vku7ipubnrjxddcu5.jpg",
+		"path": "/images/items/01_2761/157_374.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/882.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0882/0882.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/882/",
+	"itemId": "01_2761"
 }

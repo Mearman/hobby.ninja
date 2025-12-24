@@ -1,5 +1,5 @@
 {
-	"id": "0808",
+	"id": "808",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ジョニー・ライデン専用ザクII",
@@ -11,20 +11,29 @@
 		"year": 1996,
 		"month": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/156_2473_s_boe6w0hdjrosc7m4hwzzb9djxals.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_2473_s_boe6w0hdjrosc7m4hwzzb9djxals.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/808/",
-	"extractedAt": "2025-12-05T23:09:47.596Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_2473_s_boe6w0hdjrosc7m4hwzzb9djxals.jpg",
+		"path": "/images/items/01_1558/156_2473.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/808.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0808/0808.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/808/",
+	"itemId": "01_1558"
 }

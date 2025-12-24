@@ -1,5 +1,5 @@
 {
-	"id": "0834",
+	"id": "834",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 MS-06S シャア専用ザク Ver.2.0",
@@ -11,20 +11,28 @@
 		"year": 2007,
 		"month": 5
 	},
-	"productImage": "https://bandai-hobby.net/images/158_2560_s_gtl8i5wrnhjpa9tebzoi1jedrcm5.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_2560_s_gtl8i5wrnhjpa9tebzoi1jedrcm5.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/834/",
-	"extractedAt": "2025-12-05T23:09:47.634Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_2560_s_gtl8i5wrnhjpa9tebzoi1jedrcm5.jpg",
+		"path": "/manuals/0834/158_2560.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/834.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0834/0834.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/834/"
 }

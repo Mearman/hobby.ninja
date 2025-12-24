@@ -1,5 +1,5 @@
 {
-	"id": "0828",
+	"id": "828",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 シャア専用ゲルググ",
@@ -12,20 +12,29 @@
 		"month": 10,
 		"day": 14
 	},
-	"productImage": "https://bandai-hobby.net/images/157_681_s_xkzjdzjjb1qtrsu1xp3ebtx6u5zi.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_681_s_xkzjdzjjb1qtrsu1xp3ebtx6u5zi.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/828/",
-	"extractedAt": "2025-12-05T23:09:47.627Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_681_s_xkzjdzjjb1qtrsu1xp3ebtx6u5zi.jpg",
+		"path": "/images/items/01_5623/157_681.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/828.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0828/0828.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/828/",
+	"itemId": "01_5623"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0859",
+	"id": "859",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ジム・コマンド(コロニー戦仕様)",
@@ -12,20 +12,28 @@
 		"month": 12,
 		"day": 27
 	},
-	"productImage": "https://bandai-hobby.net/images/190_2180_s_n3bpc2w3xwmtsd9nfd76apjka4yq.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/190_2180_s_n3bpc2w3xwmtsd9nfd76apjka4yq.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/859/",
-	"extractedAt": "2025-12-05T23:09:47.672Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/190_2180_s_n3bpc2w3xwmtsd9nfd76apjka4yq.jpg",
+		"path": "/manuals/0859/190_2180.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["g-0080"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム0080 ポケットの中の戦争",
+		"en": "Mobile Suit Gundam0080 War in the Pocket"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/859.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0859/0859.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/859/"
 }

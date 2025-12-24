@@ -1,5 +1,5 @@
 {
-	"id": "0845",
+	"id": "845",
 	"type": "manual",
 	"name": {
 		"ja": "RG 1/144 スカイグラスパー[ランチャー・ソードパック]",
@@ -12,20 +12,29 @@
 		"month": 2,
 		"day": 29
 	},
-	"productImage": "https://bandai-hobby.net/images/156_805_s_bgxafzzlbjp7mgth731myh46gjct.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_805_s_bgxafzzlbjp7mgth731myh46gjct.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/845/",
-	"extractedAt": "2025-12-05T23:09:47.649Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_805_s_bgxafzzlbjp7mgth731myh46gjct.jpg",
+		"path": "/images/items/01_5740/156_805.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["rg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "RG",
+		"en": "R.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/845.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0845/0845.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/845/",
+	"itemId": "01_5740"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0900",
+	"id": "900",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 シビリアンアストレイ DSSDカスタム",
@@ -11,20 +11,29 @@
 		"year": 2007,
 		"month": 2
 	},
-	"productImage": "https://bandai-hobby.net/images/158_3733_s_b4x3d2srimt69g930k4xfmeeqnpp.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_3733_s_b4x3d2srimt69g930k4xfmeeqnpp.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/900/",
-	"extractedAt": "2025-12-05T23:09:47.740Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_3733_s_b4x3d2srimt69g930k4xfmeeqnpp.jpg",
+		"path": "/images/items/01_2743/158_3733.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/900.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0900/0900.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/900/",
+	"itemId": "01_2743"
 }

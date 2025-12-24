@@ -1,5 +1,5 @@
 {
-	"id": "0840",
+	"id": "840",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 MS-07B グフ Ver.2.0",
@@ -11,20 +11,28 @@
 		"year": 2009,
 		"month": 5
 	},
-	"productImage": "https://bandai-hobby.net/images/158_2610_s_2kxjynx1rp783sokie4gzqu3nets.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_2610_s_2kxjynx1rp783sokie4gzqu3nets.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/840/",
-	"extractedAt": "2025-12-05T23:09:47.642Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_2610_s_2kxjynx1rp783sokie4gzqu3nets.jpg",
+		"path": "/manuals/0840/158_2610.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/840.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0840/0840.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/840/"
 }

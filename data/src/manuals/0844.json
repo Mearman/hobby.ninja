@@ -1,8 +1,8 @@
 {
-	"id": "0844",
+	"id": "844",
 	"type": "manual",
 	"name": {
-		"ja": "HGAW 1/144 ガンダム Xディバイダー",
+		"ja": "HGAW 1/144 ガンダムXディバイダー",
 		"en": "HGAW 1/144 GundamX Divider"
 	},
 	"productNumber": "2117229",
@@ -12,20 +12,29 @@
 		"month": 12,
 		"day": 18
 	},
-	"productImage": "https://bandai-hobby.net/images/156_2712_s_z8yncn95q42um93bg8i9fr9bkkje.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_2712_s_z8yncn95q42um93bg8i9fr9bkkje.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/844/",
-	"extractedAt": "2025-12-05T23:09:47.648Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_2712_s_z8yncn95q42um93bg8i9fr9bkkje.jpg",
+		"path": "/images/items/01_1772/156_2712.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["x"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動新世紀ガンダムＸ",
+		"en": "Mobile New Century GundamX"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/844.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0844/0844.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/844/",
+	"itemId": "01_1772"
 }

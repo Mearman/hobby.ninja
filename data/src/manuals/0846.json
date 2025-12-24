@@ -1,8 +1,8 @@
 {
-	"id": "0846",
+	"id": "846",
 	"type": "manual",
 	"name": {
-		"ja": "RG 1/144 Z ガンダム",
+		"ja": "RG 1/144 Zガンダム",
 		"en": "RG 1/144 ZGundam"
 	},
 	"productNumber": "2182847",
@@ -12,20 +12,29 @@
 		"month": 11,
 		"day": 23
 	},
-	"productImage": "https://bandai-hobby.net/images/158_3863_s_x3z4u7i8elehoyatdu9odnfxmvdp.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_3863_s_x3z4u7i8elehoyatdu9odnfxmvdp.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/846/",
-	"extractedAt": "2025-12-05T23:09:47.650Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_3863_s_x3z4u7i8elehoyatdu9odnfxmvdp.jpg",
+		"path": "/images/items/01_2883/158_3863.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["rg"],
-	"seriesIds": ["z-gundam"],
+	"brand": {
+		"ja": "RG",
+		"en": "R.G."
+	},
+	"series": {
+		"ja": "機動戦士Zガンダム",
+		"en": "Mobile Suit ZGundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/846.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0846/0846.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/846/",
+	"itemId": "01_2883"
 }

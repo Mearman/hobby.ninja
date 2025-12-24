@@ -1,5 +1,5 @@
 {
-	"id": "0802",
+	"id": "802",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガンダムダンタリオン",
@@ -12,20 +12,29 @@
 		"month": 6,
 		"day": 24
 	},
-	"productImage": "https://bandai-hobby.net/images/192_1953_s_j6ki9nafofgcu848d69afny8t5nq.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/192_1953_s_j6ki9nafofgcu848d69afny8t5nq.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/802/",
-	"extractedAt": "2025-12-05T23:09:47.587Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/192_1953_s_j6ki9nafofgcu848d69afny8t5nq.jpg",
+		"path": "/images/items/01_1018/192_1953.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 鉄血のオルフェンズ",
+		"en": "Mobile Suit Gundam Iron-Blooded Orphans"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/802.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0802/0802.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/802/",
+	"itemId": "01_1018"
 }

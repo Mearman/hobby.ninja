@@ -1,8 +1,8 @@
 {
-	"id": "0854",
+	"id": "854",
 	"type": "manual",
 	"name": {
-		"ja": "MG 1/100 V2 ガンダム Ver.Ka",
+		"ja": "MG 1/100 V2ガンダム Ver.Ka",
 		"en": "MG 1/100 V2Gundam Ver.Ka"
 	},
 	"productNumber": "2316361",
@@ -12,20 +12,28 @@
 		"month": 12,
 		"day": 26
 	},
-	"productImage": "https://bandai-hobby.net/images/196_1430_s_wmaiyi0caokybujf2iv91lafuxm7.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_1430_s_wmaiyi0caokybujf2iv91lafuxm7.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/854/",
-	"extractedAt": "2025-12-05T23:09:47.666Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_1430_s_wmaiyi0caokybujf2iv91lafuxm7.jpg",
+		"path": "/manuals/0854/196_1430.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["v-gundam"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士Vガンダム",
+		"en": "Mobile Suit V Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/854.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0854/0854.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/854/"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0809",
+	"id": "809",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ゲルググキャノン",
@@ -11,20 +11,29 @@
 		"year": 1997,
 		"month": 3
 	},
-	"productImage": "https://bandai-hobby.net/images/155_2480_s_lkv419bzpf6cxqna1pv091rbqdhd.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_2480_s_lkv419bzpf6cxqna1pv091rbqdhd.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/809/",
-	"extractedAt": "2025-12-05T23:09:47.597Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_2480_s_lkv419bzpf6cxqna1pv091rbqdhd.jpg",
+		"path": "/images/items/01_1564/155_2480.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["msv"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "ガンダムMSV",
+		"en": "GundamMSV"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/809.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0809/0809.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/809/",
+	"itemId": "01_1564"
 }

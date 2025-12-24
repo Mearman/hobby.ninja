@@ -1,8 +1,8 @@
 {
-	"id": "0857",
+	"id": "857",
 	"type": "manual",
 	"name": {
-		"ja": "MG 1/100 ガンダム F91 Ver.2.0",
+		"ja": "MG 1/100 ガンダムF91 Ver.2.0",
 		"en": "MG 1/100 GundamF91 Ver.2.0"
 	},
 	"productNumber": "2381810",
@@ -12,20 +12,28 @@
 		"month": 5,
 		"day": 19
 	},
-	"productImage": "https://bandai-hobby.net/images/193_2277_s_89ae4j9ibal8ztt8irqehdclrjvi.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/193_2277_s_89ae4j9ibal8ztt8irqehdclrjvi.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/857/",
-	"extractedAt": "2025-12-05T23:09:47.670Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/193_2277_s_89ae4j9ibal8ztt8irqehdclrjvi.jpg",
+		"path": "/manuals/0857/193_2277.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundamf91"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムF91",
+		"en": "Mobile Suit GundamF91"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/857.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0857/0857.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/857/"
 }

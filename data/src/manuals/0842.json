@@ -1,5 +1,5 @@
 {
-	"id": "0842",
+	"id": "842",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ジンクス",
@@ -12,20 +12,29 @@
 		"month": 1,
 		"day": 28
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1920_s_x1yuikcwj7m5qt0eztpmxlusaaiy.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1920_s_x1yuikcwj7m5qt0eztpmxlusaaiy.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/842/",
-	"extractedAt": "2025-12-05T23:09:47.645Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_1920_s_x1yuikcwj7m5qt0eztpmxlusaaiy.jpg",
+		"path": "/images/items/01_0983/158_1920.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["g-00"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム00",
+		"en": "Mobile Suit Gundam00"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/842.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0842/0842.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/842/",
+	"itemId": "01_0983"
 }

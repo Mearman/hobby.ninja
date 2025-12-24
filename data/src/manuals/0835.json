@@ -1,5 +1,5 @@
 {
-	"id": "0835",
+	"id": "835",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ザクキャノン",
@@ -11,20 +11,29 @@
 		"year": 2008,
 		"month": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/156_2592_s_jfbg8hd2f32g3ymqc9t05cbcagas.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_2592_s_jfbg8hd2f32g3ymqc9t05cbcagas.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/835/",
-	"extractedAt": "2025-12-05T23:09:47.635Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_2592_s_jfbg8hd2f32g3ymqc9t05cbcagas.jpg",
+		"path": "/images/items/01_1685/156_2592.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["msv"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "ガンダムMSV",
+		"en": "GundamMSV"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/835.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0835/0835.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/835/",
+	"itemId": "01_1685"
 }

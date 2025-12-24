@@ -1,5 +1,5 @@
 {
-	"id": "0879",
+	"id": "879",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 カラミティガンダム",
@@ -11,20 +11,29 @@
 		"year": 2003,
 		"month": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/157_367_s_a2p0s4h9f5bfgka5pb7g5ocet0mk.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_367_s_a2p0s4h9f5bfgka5pb7g5ocet0mk.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/879/",
-	"extractedAt": "2025-12-05T23:09:47.714Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_367_s_a2p0s4h9f5bfgka5pb7g5ocet0mk.jpg",
+		"path": "/images/items/01_2693/157_367.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/879.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0879/0879.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/879/",
+	"itemId": "01_2693"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0812",
+	"id": "812",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 RGM-79(G) ジム（陸戦型）",
@@ -11,20 +11,29 @@
 		"year": 2001,
 		"month": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/158_208_s_8fzw4f8docpgveov4oux4ilfu9lw.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_208_s_8fzw4f8docpgveov4oux4ilfu9lw.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/812/",
-	"extractedAt": "2025-12-05T23:09:47.602Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_208_s_8fzw4f8docpgveov4oux4ilfu9lw.jpg",
+		"path": "/images/items/01_1157/158_2088.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": [],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 第08MS小隊",
+		"en": "Mobile Suit Gundam 08th MS Platoon"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/812.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0812/0812.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/812/",
+	"itemId": "01_1157"
 }

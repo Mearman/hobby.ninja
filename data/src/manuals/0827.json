@@ -1,8 +1,8 @@
 {
-	"id": "0827",
+	"id": "827",
 	"type": "manual",
 	"name": {
-		"ja": "MG 1/100 クロスボーンガンダム X-1 Ver.Ka",
+		"ja": "MG 1/100 クロスボーンガンダムX-1 Ver.Ka",
 		"en": "MG 1/100 Crossbone GundamX-1 Ver.Ka"
 	},
 	"productNumber": "1145936",
@@ -12,20 +12,29 @@
 		"month": 9,
 		"day": 29
 	},
-	"productImage": "https://bandai-hobby.net/images/157_680_s_id72270bn9jspec3tnfqfe4dw21j.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_680_s_id72270bn9jspec3tnfqfe4dw21j.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/827/",
-	"extractedAt": "2025-12-05T23:09:47.625Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_680_s_id72270bn9jspec3tnfqfe4dw21j.jpg",
+		"path": "/images/items/01_5622/157_680.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["crossbone"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士クロスボーン・ガンダム",
+		"en": "Mobile Suit Crossbone Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/827.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0827/0827.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/827/",
+	"itemId": "01_5622"
 }

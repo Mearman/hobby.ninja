@@ -1,5 +1,5 @@
 {
-	"id": "0823",
+	"id": "823",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ハイザック 連邦軍カラー",
@@ -12,20 +12,28 @@
 		"month": 7,
 		"day": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/159_564_s_l6ok9fb0iogsf06owidzdnkvc92w.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_564_s_l6ok9fb0iogsf06owidzdnkvc92w.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/823/",
-	"extractedAt": "2025-12-05T23:09:47.620Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_564_s_l6ok9fb0iogsf06owidzdnkvc92w.jpg",
+		"path": "/manuals/0823/159_564.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["z-gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士Zガンダム",
+		"en": "Mobile Suit ZGundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/823.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0823/0823.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/823/"
 }

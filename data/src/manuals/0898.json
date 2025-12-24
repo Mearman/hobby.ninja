@@ -1,8 +1,8 @@
 {
-	"id": "0898",
+	"id": "898",
 	"type": "manual",
 	"name": {
-		"ja": "HGUC 1/144 ガンダム GP02A サイサリス",
+		"ja": "HGUC 1/144 ガンダムGP02A サイサリス",
 		"en": "HGUC 1/144 GundamGP02A Physalis"
 	},
 	"productNumber": "1145069",
@@ -12,20 +12,29 @@
 		"month": 7,
 		"day": 23
 	},
-	"productImage": "https://bandai-hobby.net/images/157_656_s_gsfvs5uownydt31xwnb0tr1dbyu8.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_656_s_gsfvs5uownydt31xwnb0tr1dbyu8.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/898/",
-	"extractedAt": "2025-12-05T23:09:47.738Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_656_s_gsfvs5uownydt31xwnb0tr1dbyu8.jpg",
+		"path": "/images/items/01_5607/157_656.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-0083"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 0083 STARDUST MEMORY",
+		"en": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/898.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0898/0898.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/898/",
+	"itemId": "01_5607"
 }

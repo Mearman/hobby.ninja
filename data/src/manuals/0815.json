@@ -1,5 +1,5 @@
 {
-	"id": "0815",
+	"id": "815",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 MS-06S シャア専用ザクII",
@@ -11,20 +11,28 @@
 		"year": 2002,
 		"month": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/157_279_s_9z1jsefobrifsmrum3f1ubmvu0ia.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_279_s_9z1jsefobrifsmrum3f1ubmvu0ia.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/815/",
-	"extractedAt": "2025-12-05T23:09:47.608Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_279_s_9z1jsefobrifsmrum3f1ubmvu0ia.jpg",
+		"path": "/manuals/0815/157_279.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/815.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0815/0815.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/815/"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0848",
+	"id": "848",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 トールギス EW",
@@ -12,20 +12,28 @@
 		"month": 1,
 		"day": 26
 	},
-	"productImage": "https://bandai-hobby.net/images/158_836_s_dv1c1jjp1t8618jb6apfqfnn9jzo.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_836_s_dv1c1jjp1t8618jb6apfqfnn9jzo.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/848/",
-	"extractedAt": "2025-12-05T23:09:47.652Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_836_s_dv1c1jjp1t8618jb6apfqfnn9jzo.jpg",
+		"path": "/manuals/0848/158_836.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["endlesswaltz"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "新機動戦記ガンダムW",
+		"en": "New Mobile Report GundamW"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/848.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0848/0848.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/848/"
 }

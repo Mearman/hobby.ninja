@@ -1,5 +1,5 @@
 {
-	"id": "0807",
+	"id": "807",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 シン・マツナガ専用ザクII",
@@ -11,20 +11,29 @@
 		"year": 1996,
 		"month": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/157_2472_s_vj4ttpyr5yze5hslkg4br36dws88.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_2472_s_vj4ttpyr5yze5hslkg4br36dws88.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/807/",
-	"extractedAt": "2025-12-05T23:09:47.594Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_2472_s_vj4ttpyr5yze5hslkg4br36dws88.jpg",
+		"path": "/images/items/01_1557/157_2472.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/807.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0807/0807.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/807/",
+	"itemId": "01_1557"
 }

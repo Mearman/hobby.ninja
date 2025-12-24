@@ -1,5 +1,5 @@
 {
-	"id": "0832",
+	"id": "832",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ザクマインレイヤー",
@@ -11,20 +11,29 @@
 		"year": 2008,
 		"month": 3
 	},
-	"productImage": "https://bandai-hobby.net/images/155_2581_s_1z04jzlm5cp8293lrs5lk0dcaab4.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_2581_s_1z04jzlm5cp8293lrs5lk0dcaab4.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/832/",
-	"extractedAt": "2025-12-05T23:09:47.631Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_2581_s_1z04jzlm5cp8293lrs5lk0dcaab4.jpg",
+		"path": "/images/items/01_1674/155_2581.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["msv"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "ガンダムMSV",
+		"en": "GundamMSV"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/832.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0832/0832.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/832/",
+	"itemId": "01_1674"
 }

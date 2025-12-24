@@ -1,5 +1,5 @@
 {
-	"id": "0875",
+	"id": "875",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 RGM-79C ジム改（スタンダードカラー）",
@@ -11,20 +11,29 @@
 		"year": 2002,
 		"month": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/157_308_s_mt6geciy7ua2mhyb0f5wklpejx6t.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_308_s_mt6geciy7ua2mhyb0f5wklpejx6t.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/875/",
-	"extractedAt": "2025-12-05T23:09:47.709Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_308_s_mt6geciy7ua2mhyb0f5wklpejx6t.jpg",
+		"path": "/images/items/01_2136/157_3089.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["g-0083"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 0083 STARDUST MEMORY",
+		"en": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/875.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0875/0875.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/875/",
+	"itemId": "01_2136"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0821",
+	"id": "821",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 百式＋メガバズーカランチャー",
@@ -11,20 +11,29 @@
 		"year": 2004,
 		"month": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/157_464_s_bp8s5dcrzloycam31ezlp1du22bs.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_464_s_bp8s5dcrzloycam31ezlp1du22bs.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/821/",
-	"extractedAt": "2025-12-05T23:09:47.617Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_464_s_bp8s5dcrzloycam31ezlp1du22bs.jpg",
+		"path": "/images/items/01_3696/157_464.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["z-gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士Zガンダム",
+		"en": "Mobile Suit ZGundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/821.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0821/0821.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/821/",
+	"itemId": "01_3696"
 }

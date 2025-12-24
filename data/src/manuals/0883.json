@@ -1,5 +1,5 @@
 {
-	"id": "0883",
+	"id": "883",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 レイダーガンダム",
@@ -11,20 +11,29 @@
 		"year": 2003,
 		"month": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/157_384_s_ru6r4g356r5n5i1f3xalql9314d2.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_384_s_ru6r4g356r5n5i1f3xalql9314d2.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/883/",
-	"extractedAt": "2025-12-05T23:09:47.719Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_384_s_ru6r4g356r5n5i1f3xalql9314d2.jpg",
+		"path": "/images/items/01_2868/157_384.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/883.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0883/0883.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/883/",
+	"itemId": "01_2868"
 }

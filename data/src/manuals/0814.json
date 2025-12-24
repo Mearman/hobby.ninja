@@ -1,5 +1,5 @@
 {
-	"id": "0814",
+	"id": "814",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 シャイニングガンダム",
@@ -11,20 +11,28 @@
 		"year": 2002,
 		"month": 5
 	},
-	"productImage": "https://bandai-hobby.net/images/158_267_s_u7ydt0w42yl4j802kgj9r63mq5sr.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_267_s_u7ydt0w42yl4j802kgj9r63mq5sr.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/814/",
-	"extractedAt": "2025-12-05T23:09:47.606Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_267_s_u7ydt0w42yl4j802kgj9r63mq5sr.jpg",
+		"path": "/manuals/0814/158_267.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["ggundam"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動武闘伝Gガンダム",
+		"en": "Mobile Fighter GGundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/814.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0814/0814.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/814/"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0852",
+	"id": "852",
 	"type": "manual",
 	"name": {
 		"ja": "RG 1/144 MBF-P02 ガンダムアストレイレッドフレーム",
@@ -12,20 +12,28 @@
 		"month": 8,
 		"day": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1360_s_vfp1le69re088c0k6sa9htppdnpi.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1360_s_vfp1le69re088c0k6sa9htppdnpi.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/852/",
-	"extractedAt": "2025-12-05T23:09:47.661Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1360_s_vfp1le69re088c0k6sa9htppdnpi.jpg",
+		"path": "/manuals/0852/156_1360.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["rg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "RG",
+		"en": "R.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/852.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0852/0852.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/852/"
 }

@@ -1,8 +1,8 @@
 {
-	"id": "0870",
+	"id": "870",
 	"type": "manual",
 	"name": {
-		"ja": "HGUC 1/144 ガンダム GP03 デンドロビウム",
+		"ja": "HGUC 1/144 ガンダムGP03 デンドロビウム",
 		"en": "HGUC 1/144 GundamGP03 Dendrobium"
 	},
 	"productNumber": "1107985",
@@ -11,20 +11,29 @@
 		"year": 2002,
 		"month": 3
 	},
-	"productImage": "https://bandai-hobby.net/images/158_252_s_7lmcx6i39tbm4e0d18bzjij9frgh.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_252_s_7lmcx6i39tbm4e0d18bzjij9frgh.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/870/",
-	"extractedAt": "2025-12-05T23:09:47.700Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_252_s_7lmcx6i39tbm4e0d18bzjij9frgh.jpg",
+		"path": "/images/items/01_1618/158_252.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-0083"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 0083 STARDUST MEMORY",
+		"en": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/870.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0870/0870.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/870/",
+	"itemId": "01_1618"
 }

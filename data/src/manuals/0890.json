@@ -1,5 +1,5 @@
 {
-	"id": "0890",
+	"id": "890",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガナーザクウォーリア",
@@ -11,20 +11,29 @@
 		"year": 2005,
 		"month": 3
 	},
-	"productImage": "https://bandai-hobby.net/images/157_528_s_kzoxwibb7v6s0aug9p671pqb30s8.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_528_s_kzoxwibb7v6s0aug9p671pqb30s8.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/890/",
-	"extractedAt": "2025-12-05T23:09:47.728Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_528_s_kzoxwibb7v6s0aug9p671pqb30s8.jpg",
+		"path": "/images/items/01_4384/157_528.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed-d"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムSEED DESTINY",
+		"en": "Mobile Suit GundamSEED DESTINY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/890.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0890/0890.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/890/",
+	"itemId": "01_4384"
 }
