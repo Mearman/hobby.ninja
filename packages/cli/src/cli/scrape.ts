@@ -13,7 +13,7 @@
  *    - Process orphan manuals sequentially
  */
 
-import { promises as fs } from "node:fs";
+import { promises as fs, readFileSync } from "node:fs";
 import path from "node:path";
 
 import {
@@ -569,6 +569,7 @@ export class ScrapeCommand {
 
 	/**
 	 * Get manual IDs that weren't discovered via items (orphans)
+	 * Also includes manuals with old/invalid format that need re-scraping
 	 */
 	private getOrphanManualIds(maxAgeHours: number): string[] {
 		const allManualIds = ManualsIndexUpdater.getIdsWithPages();
@@ -580,8 +581,62 @@ export class ScrapeCommand {
 			return orphanIds;
 		}
 
-		// Filter by age
-		return ManualsIndexUpdater.getStaleIds(orphanIds, maxAgeHours);
+		// Get stale IDs by age
+		const staleByAge = ManualsIndexUpdater.getStaleIds(orphanIds, maxAgeHours);
+		const staleIds = new Set(staleByAge);
+
+		// Also include manuals with old format that need migration
+		const needsMigration = this.getManualsNeedingFormatMigration(orphanIds);
+		const migrationNotStale = needsMigration.filter((id) => !staleIds.has(id));
+		for (const id of migrationNotStale) {
+			staleIds.add(id);
+		}
+
+		if (migrationNotStale.length > 0) {
+			console.log(`  (${migrationNotStale.length} manuals need format migration)`);
+		}
+
+		return [...staleIds];
+	}
+
+	/**
+	 * Check which manuals have old/invalid format and need re-scraping
+	 * Old format indicators:
+	 * - Has productImage/thumbnailImage instead of image.src
+	 * - Has brandIds/seriesIds arrays instead of brand/series objects
+	 * - Has extractedAt in the file (should be in index only)
+	 * - PDFs without path (not downloaded)
+	 */
+	private getManualsNeedingFormatMigration(manualIds: string[]): string[] {
+		const needsMigration: string[] = [];
+
+		for (const id of manualIds) {
+			const paddedId = padManualId(id);
+			const jsonPath = path.join(MANUALS_DATA_DIR, `${paddedId}.json`);
+
+			try {
+				const content = readFileSync(jsonPath, "utf8");
+				const data = JSON.parse(content) as Record<string, unknown>;
+
+				// Check for old format indicators
+				const hasOldImageFormat = "productImage" in data || "thumbnailImage" in data;
+				const hasOldBrandFormat = Array.isArray(data["brandIds"]);
+				const hasOldSeriesFormat = Array.isArray(data["seriesIds"]);
+				const hasExtractedAt = "extractedAt" in data;
+				const hasPdfWithoutPath = Array.isArray(data["pdfs"]) &&
+					(data["pdfs"] as Array<Record<string, unknown>>).some(
+						(pdf) => pdf["url"] && !pdf["path"],
+					);
+
+				if (hasOldImageFormat || hasOldBrandFormat || hasOldSeriesFormat || hasExtractedAt || hasPdfWithoutPath) {
+					needsMigration.push(id);
+				}
+			} catch {
+				// File doesn't exist or can't be read - will be handled by normal scrape
+			}
+		}
+
+		return needsMigration;
 	}
 
 	// Time conversion constants
