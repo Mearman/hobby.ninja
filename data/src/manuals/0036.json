@@ -1,5 +1,5 @@
 {
-	"id": "0036",
+	"id": "36",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 ガンダムポータント",
@@ -12,20 +12,28 @@
 		"month": 3,
 		"day": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/159_1270_s_xgqdn41t5tmwl7my35bi1zsk4t7u.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_1270_s_xgqdn41t5tmwl7my35bi1zsk4t7u.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/36/",
-	"extractedAt": "2025-12-05T23:09:46.381Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_1270_s_xgqdn41t5tmwl7my35bi1zsk4t7u.jpg",
+		"path": "/images/items/01_0287/159_1270.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/36.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0036/0036.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/36/"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0006",
+	"id": "6",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 Gサイフォス",
@@ -12,20 +12,29 @@
 		"month": 3,
 		"day": 16
 	},
-	"productImage": "https://bandai-hobby.net/images/156_846_s_x3yb3gfwsaj30o7ic4yhqvb4gs39.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_846_s_x3yb3gfwsaj30o7ic4yhqvb4gs39.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/6/",
-	"extractedAt": "2025-12-05T23:09:46.334Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_846_s_x3yb3gfwsaj30o7ic4yhqvb4gs39.jpg",
+		"path": "/images/items/01_5783/156_846.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムAGE",
+		"en": "Mobile Suit GundamAGE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/6.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0006/0006.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/6/",
+	"itemId": "01_5783"
 }

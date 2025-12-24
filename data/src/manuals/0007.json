@@ -1,5 +1,5 @@
 {
-	"id": "0007",
+	"id": "7",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガンダムアストレイゴールドフレーム天（アマツ）ミナ",
@@ -12,20 +12,29 @@
 		"month": 9,
 		"day": 21
 	},
-	"productImage": "https://bandai-hobby.net/images/156_945_s_f0j18bh2upgcaihxtkddfjv76dju.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_945_s_f0j18bh2upgcaihxtkddfjv76dju.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/7/",
-	"extractedAt": "2025-12-05T23:09:46.337Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_945_s_f0j18bh2upgcaihxtkddfjv76dju.jpg",
+		"path": "/images/items/01_5866/156_945.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/7.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0007/0007.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/7/",
+	"itemId": "01_5866"
 }

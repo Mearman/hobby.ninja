@@ -1,5 +1,5 @@
 {
-	"id": "0015",
+	"id": "15",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC 1/144 ヴァリュアブルポッド",
@@ -12,20 +12,28 @@
 		"month": 7,
 		"day": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1131_s_a7ho7p926wiclg8y3ngvysjrfrku.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1131_s_a7ho7p926wiclg8y3ngvysjrfrku.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/15/",
-	"extractedAt": "2025-12-05T23:09:46.351Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1131_s_a7ho7p926wiclg8y3ngvysjrfrku.jpg",
+		"path": "/images/items/01_0140/156_1131.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/15.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0015/0015.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/15/"
 }

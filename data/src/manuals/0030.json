@@ -1,5 +1,5 @@
 {
-	"id": "0030",
+	"id": "30",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 ガンダムアメイジングレッドウォーリア",
@@ -12,20 +12,29 @@
 		"month": 1,
 		"day": 10
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1239_s_7xr4h7kfg2oycm3z8k6z958po3b8.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1239_s_7xr4h7kfg2oycm3z8k6z958po3b8.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/30/",
-	"extractedAt": "2025-12-05T23:09:46.373Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1239_s_7xr4h7kfg2oycm3z8k6z958po3b8.jpg",
+		"path": "/images/items/01_0253/156_1239.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/30.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0030/0030.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/30/",
+	"itemId": "01_4757"
 }

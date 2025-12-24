@@ -1,5 +1,5 @@
 {
-	"id": "0055",
+	"id": "55",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 GM／GM",
@@ -12,20 +12,28 @@
 		"month": 8,
 		"day": 26
 	},
-	"productImage": "https://bandai-hobby.net/images/159_2013_s_72o7435eusahvwc24edmz6gfo2l5.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_2013_s_72o7435eusahvwc24edmz6gfo2l5.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/55/",
-	"extractedAt": "2025-12-05T23:09:46.404Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_2013_s_72o7435eusahvwc24edmz6gfo2l5.jpg",
+		"path": "/images/items/01_1081/159_2013.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/55.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0055/0055.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/55/"
 }

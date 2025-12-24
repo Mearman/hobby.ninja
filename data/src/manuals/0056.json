@@ -1,5 +1,5 @@
 {
-	"id": "0056",
+	"id": "56",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC 1/144 ジムジムウエポンズ",
@@ -12,20 +12,28 @@
 		"month": 8,
 		"day": 26
 	},
-	"productImage": "https://bandai-hobby.net/images/155_2014_s_gcotjixhn1vil5n8ukzi43ny40yz.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_2014_s_gcotjixhn1vil5n8ukzi43ny40yz.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/56/",
-	"extractedAt": "2025-12-05T23:09:46.405Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_2014_s_gcotjixhn1vil5n8ukzi43ny40yz.jpg",
+		"path": "/images/items/01_1082/155_2014.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/56.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0056/0056.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/56/"
 }

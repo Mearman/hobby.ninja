@@ -1,5 +1,5 @@
 {
-	"id": "0044",
+	"id": "44",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 ZZ II（ダブルゼッツー）",
@@ -12,20 +12,29 @@
 		"month": 8,
 		"day": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1616_s_h22c153h111y0lmyt4voifb9czrc.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1616_s_h22c153h111y0lmyt4voifb9czrc.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/44/",
-	"extractedAt": "2025-12-05T23:09:46.391Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1616_s_h22c153h111y0lmyt4voifb9czrc.jpg",
+		"path": "/images/items/01_0664/156_1616.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/44.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0044/0044.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/44/",
+	"itemId": "01_4758"
 }

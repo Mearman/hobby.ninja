@@ -1,5 +1,5 @@
 {
-	"id": "0065",
+	"id": "65",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ジム・ガードカスタム",
@@ -12,20 +12,28 @@
 		"month": 7,
 		"day": 28
 	},
-	"productImage": "https://bandai-hobby.net/images/191_2320_s_s4l0zl8w5yws0v3g9t8kxe2wdmm1.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/191_2320_s_s4l0zl8w5yws0v3g9t8kxe2wdmm1.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/65/",
-	"extractedAt": "2025-12-05T23:09:46.415Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/191_2320_s_s4l0zl8w5yws0v3g9t8kxe2wdmm1.jpg",
+		"path": "/images/items/01_1397/191_2320.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["origin"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム THE ORIGIN",
+		"en": "Mobile Suit Gundam THE ORIGIN"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/65.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0065/0065.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/65/"
 }

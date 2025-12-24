@@ -1,5 +1,5 @@
 {
-	"id": "0004",
+	"id": "4",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 R17 パーフェクトストライクガンダム",
@@ -12,20 +12,29 @@
 		"month": 2,
 		"day": 23
 	},
-	"productImage": "https://bandai-hobby.net/images/156_5534_o_1gois5a1u1migp7k1b351sclhlt23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_5534_o_1gois5a1u1migp7k1b351sclhlt23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/4/",
-	"extractedAt": "2025-12-05T23:09:46.330Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_5534_o_1gois5a1u1migp7k1b351sclhlt23.jpg",
+		"path": "/manuals/0004/156_5534.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/4.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0004/0004.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/4/",
+	"itemId": "01_4641"
 }

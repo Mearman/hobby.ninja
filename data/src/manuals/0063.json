@@ -1,5 +1,5 @@
 {
-	"id": "0063",
+	"id": "63",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC 1/144 ギャラクシーブースター",
@@ -12,20 +12,28 @@
 		"month": 2,
 		"day": 24
 	},
-	"productImage": "https://bandai-hobby.net/images/157_2194_o_1eb2vsotff8t1jueo0f8ij1gb02d.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_2194_o_1eb2vsotff8t1jueo0f8ij1gb02d.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/63/",
-	"extractedAt": "2025-12-05T23:09:46.413Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_2194_o_1eb2vsotff8t1jueo0f8ij1gb02d.jpg",
+		"path": "/images/items/01_1262/157_2194.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/63.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0063/0063.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/63/"
 }

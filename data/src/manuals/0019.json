@@ -1,5 +1,5 @@
 {
-	"id": "0019",
+	"id": "19",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC 1/144 パワードアームズパワーダー",
@@ -12,20 +12,28 @@
 		"month": 10,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/159_1185_s_1se2gmri8rlk45wl5f51n7kd4q0b.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_1185_s_1se2gmri8rlk45wl5f51n7kd4q0b.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/19/",
-	"extractedAt": "2025-12-05T23:09:46.358Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_1185_s_1se2gmri8rlk45wl5f51n7kd4q0b.jpg",
+		"path": "/images/items/01_0196/159_1185.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/19.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0019/0019.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/19/"
 }

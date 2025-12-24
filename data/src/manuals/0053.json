@@ -1,5 +1,5 @@
 {
-	"id": "0053",
+	"id": "53",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC 1/144 忍パルスビームズ",
@@ -12,20 +12,28 @@
 		"month": 8,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/159_1985_s_csvieh1xj683i1akczp5dutravpa.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_1985_s_csvieh1xj683i1akczp5dutravpa.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/53/",
-	"extractedAt": "2025-12-05T23:09:46.402Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_1985_s_csvieh1xj683i1akczp5dutravpa.jpg",
+		"path": "/images/items/01_1050/159_1985.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/53.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0053/0053.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/53/"
 }

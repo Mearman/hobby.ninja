@@ -1,5 +1,5 @@
 {
-	"id": "0017",
+	"id": "17",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 ガンダムアメイジングエクシア",
@@ -12,20 +12,28 @@
 		"month": 8,
 		"day": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1163_s_7djkkyw6z0ieok5hcd1bddyu46j1.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1163_s_7djkkyw6z0ieok5hcd1bddyu46j1.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/17/",
-	"extractedAt": "2025-12-05T23:09:46.355Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1163_s_7djkkyw6z0ieok5hcd1bddyu46j1.jpg",
+		"path": "/manuals/0017/156_1163.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/17.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0017/0017.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/17/"
 }

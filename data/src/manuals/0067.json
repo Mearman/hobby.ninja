@@ -1,5 +1,5 @@
 {
-	"id": "0067",
+	"id": "67",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ザクII C-6/R6型",
@@ -12,20 +12,28 @@
 		"month": 4,
 		"day": 27
 	},
-	"productImage": "https://bandai-hobby.net/images/190_3123_s_8ae02gt5rhj95xra180yfik3osgi.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/190_3123_s_8ae02gt5rhj95xra180yfik3osgi.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/67/",
-	"extractedAt": "2025-12-05T23:09:46.418Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/190_3123_s_8ae02gt5rhj95xra180yfik3osgi.jpg",
+		"path": "/images/items/01_2175/190_3123.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["origin"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム THE ORIGIN",
+		"en": "Mobile Suit Gundam THE ORIGIN"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/67.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0067/0067.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/67/"
 }

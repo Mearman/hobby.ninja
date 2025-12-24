@@ -1,5 +1,5 @@
 {
-	"id": "0078",
+	"id": "78",
 	"type": "manual",
 	"name": {
 		"ja": "HGBD:R 1/144 コアガンダム(G-3カラー)&ヴィートルーユニット",
@@ -12,20 +12,28 @@
 		"month": 11,
 		"day": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/189_3411_s_zudyagolpl2vkxqd84n0z3c47cbi.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_3411_s_zudyagolpl2vkxqd84n0z3c47cbi.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/78/",
-	"extractedAt": "2025-12-05T23:09:46.431Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_3411_s_zudyagolpl2vkxqd84n0z3c47cbi.jpg",
+		"path": "/images/items/01_2484/189_3411.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers-rerise"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズRe:RISE",
+		"en": "Gundam Build Divers Re:RISE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/78.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0078/0078.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/78/"
 }

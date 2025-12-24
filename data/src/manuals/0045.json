@@ -1,5 +1,5 @@
 {
-	"id": "0045",
+	"id": "45",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガンキャノン機動試験型/火力試験型",
@@ -12,20 +12,28 @@
 		"month": 1,
 		"day": 14
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1724_s_qjhnwamo9lrzg0i7n4pnvri0pzto.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1724_s_qjhnwamo9lrzg0i7n4pnvri0pzto.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/45/",
-	"extractedAt": "2025-12-05T23:09:46.392Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_1724_s_qjhnwamo9lrzg0i7n4pnvri0pzto.jpg",
+		"path": "/images/items/01_0778/158_1724.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["origin"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム THE ORIGIN",
+		"en": "Mobile Suit Gundam THE ORIGIN"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/45.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0045/0045.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/45/"
 }

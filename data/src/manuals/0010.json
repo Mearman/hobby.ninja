@@ -1,5 +1,5 @@
 {
-	"id": "0010",
+	"id": "10",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144　ベアッガイIII",
@@ -12,20 +12,29 @@
 		"month": 12,
 		"day": 1
 	},
-	"productImage": "https://bandai-hobby.net/images/155_992_s_0wsgmkmurj1oqazesis5d0vkff6j.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_992_s_0wsgmkmurj1oqazesis5d0vkff6j.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/10/",
-	"extractedAt": "2025-12-05T23:09:46.343Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_992_s_0wsgmkmurj1oqazesis5d0vkff6j.jpg",
+		"path": "/manuals/0010/155_992.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/10.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0010/0010.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/10/",
+	"itemId": "01_5914"
 }

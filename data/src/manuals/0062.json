@@ -1,5 +1,5 @@
 {
-	"id": "0062",
+	"id": "62",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 ストライカージンクス",
@@ -12,20 +12,28 @@
 		"month": 1,
 		"day": 20
 	},
-	"productImage": "https://bandai-hobby.net/images/189_2167_s_zfpke65dbi0urpqs2udlo946zbi4.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_2167_s_zfpke65dbi0urpqs2udlo946zbi4.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/62/",
-	"extractedAt": "2025-12-05T23:09:46.412Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_2167_s_zfpke65dbi0urpqs2udlo946zbi4.jpg",
+		"path": "/images/items/01_1234/189_2167.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/62.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0062/0062.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/62/"
 }

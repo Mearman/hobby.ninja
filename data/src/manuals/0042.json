@@ -1,5 +1,5 @@
 {
-	"id": "0042",
+	"id": "42",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 YMS-03 ヴァッフ",
@@ -12,20 +12,28 @@
 		"month": 4,
 		"day": 16
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1494_s_4cwcozmpistk4y5wcukfd1zwgtel.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1494_s_4cwcozmpistk4y5wcukfd1zwgtel.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/42/",
-	"extractedAt": "2025-12-05T23:09:46.388Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_1494_s_4cwcozmpistk4y5wcukfd1zwgtel.jpg",
+		"path": "/images/items/01_0532/158_1494.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["origin"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム THE ORIGIN",
+		"en": "Mobile Suit Gundam THE ORIGIN"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/42.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0042/0042.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/42/"
 }

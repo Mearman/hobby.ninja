@@ -1,5 +1,5 @@
 {
-	"id": "0027",
+	"id": "27",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC 1/144 メガライドランチャー",
@@ -12,20 +12,28 @@
 		"month": 12,
 		"day": 20
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1233_s_bapue0tw8sj91zzjkz6rljchwse2.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1233_s_bapue0tw8sj91zzjkz6rljchwse2.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/27/",
-	"extractedAt": "2025-12-05T23:09:46.369Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1233_s_bapue0tw8sj91zzjkz6rljchwse2.jpg",
+		"path": "/images/items/01_0247/156_1233.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/27.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0027/0027.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/27/"
 }

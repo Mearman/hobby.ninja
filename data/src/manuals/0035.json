@@ -1,5 +1,5 @@
 {
-	"id": "0035",
+	"id": "35",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC 1/144 ライトニングバックウェポンシステムMk-II",
@@ -12,20 +12,28 @@
 		"month": 2,
 		"day": 14
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1257_s_cr4u5k12f24v7dip4yfqjyql8hzv.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1257_s_cr4u5k12f24v7dip4yfqjyql8hzv.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/35/",
-	"extractedAt": "2025-12-05T23:09:46.380Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1257_s_cr4u5k12f24v7dip4yfqjyql8hzv.jpg",
+		"path": "/images/items/01_0272/156_1257.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/35.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0035/0035.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/35/"
 }

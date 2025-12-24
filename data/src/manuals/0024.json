@@ -1,5 +1,5 @@
 {
-	"id": "0024",
+	"id": "24",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC 1/144 Ez-ARMS",
@@ -12,20 +12,28 @@
 		"month": 11,
 		"day": 15
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1200_s_10men4kxrmekrm3oge13qys8xuny.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1200_s_10men4kxrmekrm3oge13qys8xuny.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/24/",
-	"extractedAt": "2025-12-05T23:09:46.365Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1200_s_10men4kxrmekrm3oge13qys8xuny.jpg",
+		"path": "/images/items/01_0213/156_1200.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/24.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0024/0024.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/24/"
 }

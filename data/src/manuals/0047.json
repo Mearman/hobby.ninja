@@ -1,5 +1,5 @@
 {
-	"id": "0047",
+	"id": "47",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 アトラスガンダム（GUNDAM THUNDERBOLT Ver.）",
@@ -12,20 +12,28 @@
 		"month": 3,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/196_1774_s_vr5t5k8b6vanmyh5dgun96p4w700.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_1774_s_vr5t5k8b6vanmyh5dgun96p4w700.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/47/",
-	"extractedAt": "2025-12-05T23:09:46.394Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_1774_s_vr5t5k8b6vanmyh5dgun96p4w700.jpg",
+		"path": "/manuals/0047/196_1774.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["thunderbolt"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム サンダーボルト",
+		"en": "Mobile Suit Gundam Thunderbolt"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/47.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0047/0047.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/47/"
 }

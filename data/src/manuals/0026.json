@@ -1,5 +1,5 @@
 {
-	"id": "0026",
+	"id": "26",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 百万式（メガシキ）",
@@ -12,20 +12,28 @@
 		"month": 12,
 		"day": 20
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1232_s_imsjwjkhu2z7sxy7cffsl0agpxkn.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1232_s_imsjwjkhu2z7sxy7cffsl0agpxkn.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/26/",
-	"extractedAt": "2025-12-05T23:09:46.367Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1232_s_imsjwjkhu2z7sxy7cffsl0agpxkn.jpg",
+		"path": "/images/items/01_0246/156_1232.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/26.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0026/0026.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/26/"
 }

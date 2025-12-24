@@ -1,5 +1,5 @@
 {
-	"id": "0087",
+	"id": "87",
 	"type": "manual",
 	"name": {
 		"ja": "HGBD:R 1/144 メルクワンユニット",
@@ -12,20 +12,29 @@
 		"month": 2,
 		"day": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/159_3525_s_au2a9hjup3jc97bh3h797qsqovuv.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_3525_s_au2a9hjup3jc97bh3h797qsqovuv.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/87/",
-	"extractedAt": "2025-12-05T23:09:46.442Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_3525_s_au2a9hjup3jc97bh3h797qsqovuv.jpg",
+		"path": "/images/items/01_2603/159_3525.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers-rerise"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズRe:RISE",
+		"en": "Gundam Build Divers Re:RISE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/87.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0087/0087.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/87/",
+	"itemId": "01_2603"
 }

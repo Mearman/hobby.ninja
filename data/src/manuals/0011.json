@@ -1,5 +1,5 @@
 {
-	"id": "0011",
+	"id": "11",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 クロスボーンガンダム魔王",
@@ -12,20 +12,29 @@
 		"month": 4,
 		"day": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1087_s_qkhr6feo5smyxbh3665ffn0qh2r5.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1087_s_qkhr6feo5smyxbh3665ffn0qh2r5.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/11/",
-	"extractedAt": "2025-12-05T23:09:46.345Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1087_s_qkhr6feo5smyxbh3665ffn0qh2r5.jpg",
+		"path": "/manuals/0011/156_1087.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/11.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0011/0011.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/11/",
+	"itemId": "01_4963"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0048",
+	"id": "48",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ザクII C型/C-5型",
@@ -12,20 +12,28 @@
 		"month": 9,
 		"day": 2
 	},
-	"productImage": "https://bandai-hobby.net/images/191_2035_s_0z0sadk6vjfhauz3uyj7bvp26a1x.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/191_2035_s_0z0sadk6vjfhauz3uyj7bvp26a1x.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/48/",
-	"extractedAt": "2025-12-05T23:09:46.395Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/191_2035_s_0z0sadk6vjfhauz3uyj7bvp26a1x.jpg",
+		"path": "/images/items/01_1104/191_2035.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["origin"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム THE ORIGIN",
+		"en": "Mobile Suit Gundam THE ORIGIN"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/48.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0048/0048.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/48/"
 }

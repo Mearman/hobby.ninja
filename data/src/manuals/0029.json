@@ -1,5 +1,5 @@
 {
-	"id": "0029",
+	"id": "29",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 ウイングガンダムゼロ炎",
@@ -12,20 +12,29 @@
 		"month": 3,
 		"day": 21
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1279_s_vzncnvx8g15f6dgjxarogxz7ru9w.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1279_s_vzncnvx8g15f6dgjxarogxz7ru9w.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/29/",
-	"extractedAt": "2025-12-05T23:09:46.372Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_1279_s_vzncnvx8g15f6dgjxarogxz7ru9w.jpg",
+		"path": "/images/items/01_0296/158_1279.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/29.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0029/0029.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/29/",
+	"itemId": "01_3989"
 }

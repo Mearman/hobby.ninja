@@ -1,5 +1,5 @@
 {
-	"id": "0054",
+	"id": "54",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 スターバーニングガンダム",
@@ -12,20 +12,28 @@
 		"month": 8,
 		"day": 26
 	},
-	"productImage": "https://bandai-hobby.net/images/158_2012_s_slhqme12xr1vuqk44q20vczlx6h0.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_2012_s_slhqme12xr1vuqk44q20vczlx6h0.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/54/",
-	"extractedAt": "2025-12-05T23:09:46.403Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_2012_s_slhqme12xr1vuqk44q20vczlx6h0.jpg",
+		"path": "/images/items/01_1080/158_2012.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/54.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0054/0054.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/54/"
 }

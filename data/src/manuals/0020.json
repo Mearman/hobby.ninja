@@ -1,5 +1,5 @@
 {
-	"id": "0020",
+	"id": "20",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 パワードジムカーディガン",
@@ -12,20 +12,28 @@
 		"month": 10,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1186_s_6gg2ef52cysqrbf8sr2qkakyfsg6.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1186_s_6gg2ef52cysqrbf8sr2qkakyfsg6.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/20/",
-	"extractedAt": "2025-12-05T23:09:46.359Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1186_s_6gg2ef52cysqrbf8sr2qkakyfsg6.jpg",
+		"path": "/images/items/01_0197/156_1186.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/20.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0020/0020.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/20/"
 }

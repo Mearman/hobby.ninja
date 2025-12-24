@@ -1,5 +1,5 @@
 {
-	"id": "0033",
+	"id": "33",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC 1/144 紅ウェポン",
@@ -12,20 +12,28 @@
 		"month": 1,
 		"day": 10
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1238_s_cgbn19zd6kgb8yl512g9860ku239.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1238_s_cgbn19zd6kgb8yl512g9860ku239.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/33/",
-	"extractedAt": "2025-12-05T23:09:46.377Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1238_s_cgbn19zd6kgb8yl512g9860ku239.jpg",
+		"path": "/images/items/01_0252/156_1238.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/33.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0033/0033.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/33/"
 }

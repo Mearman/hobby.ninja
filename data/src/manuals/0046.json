@@ -1,5 +1,5 @@
 {
-	"id": "0046",
+	"id": "46",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 MS-05S シャア専用ザクI",
@@ -12,20 +12,28 @@
 		"month": 12,
 		"day": 10
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1712_s_so2ajmf3l73xc80z0bhhbayqdclv.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1712_s_so2ajmf3l73xc80z0bhhbayqdclv.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/46/",
-	"extractedAt": "2025-12-05T23:09:46.393Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_1712_s_so2ajmf3l73xc80z0bhhbayqdclv.jpg",
+		"path": "/images/items/01_0765/158_1712.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["origin"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム THE ORIGIN",
+		"en": "Mobile Suit Gundam THE ORIGIN"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/46.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0046/0046.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/46/"
 }

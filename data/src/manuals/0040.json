@@ -1,5 +1,5 @@
 {
-	"id": "0040",
+	"id": "40",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 高機動型ザクII オルテガ専用機",
@@ -12,20 +12,28 @@
 		"month": 9,
 		"day": 19
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1373_s_llrfo40dw5zxuo0e9ovzrfdekfth.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1373_s_llrfo40dw5zxuo0e9ovzrfdekfth.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/40/",
-	"extractedAt": "2025-12-05T23:09:46.386Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_1373_s_llrfo40dw5zxuo0e9ovzrfdekfth.jpg",
+		"path": "/images/items/01_0401/158_1373.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["origin"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム THE ORIGIN",
+		"en": "Mobile Suit Gundam THE ORIGIN"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/40.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0040/0040.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/40/"
 }

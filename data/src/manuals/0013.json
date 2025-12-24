@@ -1,5 +1,5 @@
 {
-	"id": "0013",
+	"id": "13",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 ガンダムフェニーチェリナーシタ",
@@ -12,20 +12,28 @@
 		"month": 9,
 		"day": 20
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1180_s_aj0tjc6h6ed2qhp53juxu9icirbh.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1180_s_aj0tjc6h6ed2qhp53juxu9icirbh.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/13/",
-	"extractedAt": "2025-12-05T23:09:46.348Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1180_s_aj0tjc6h6ed2qhp53juxu9icirbh.jpg",
+		"path": "/manuals/0013/156_1180.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/13.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0013/0013.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/13/"
 }
