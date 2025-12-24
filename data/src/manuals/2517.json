@@ -11,20 +11,28 @@
 		"year": 2024,
 		"month": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/153_6275_s_lwmsb9p6lapj558j3905oqg6cr3a.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_6275_s_lwmsb9p6lapj558j3905oqg6cr3a.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2517/",
-	"extractedAt": "2025-12-05T23:09:48.713Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_6275_s_lwmsb9p6lapj558j3905oqg6cr3a.jpg",
+		"path": "/manuals/2517/153_6275.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["rg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "RG",
+		"en": "R.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2517.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2517/2517.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2517/"
 }

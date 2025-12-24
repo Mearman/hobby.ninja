@@ -2,7 +2,7 @@
 	"id": "2553",
 	"type": "manual",
 	"name": {
-		"ja": "ＭＧ 1/100 ガンダム TR-1[ヘイズル2号機](アーリータイプ)/ヘイズル予備機/ジム・クゥエル",
+		"ja": "ＭＧ 1/100 ガンダムTR-1[ヘイズル2号機](アーリータイプ)/ヘイズル予備機/ジム・クゥエル",
 		"en": "MG 1/100 GundamTR-1 [Hazel No. 2] (early type)/Hazel spare machine/Jim Quell"
 	},
 	"productNumber": "2469604",
@@ -11,24 +11,29 @@
 		"year": 2019,
 		"month": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/153_3365_o_1ddppbpmtcus1f171rno44g1h5r23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_3365_o_1ddppbpmtcus1f171rno44g1h5r23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2553/",
-	"extractedAt": "2025-12-05T23:09:48.772Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_3365_o_1ddppbpmtcus1f171rno44g1h5r23.jpg",
+		"path": "/images/items/01_2435/153_3365.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"advance-of-z"
-	],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "ADVANCE OF Z",
+		"en": "ADVANCE OF Z"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2553.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2553/2553.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2553/",
+	"itemId": "01_2435"
 }

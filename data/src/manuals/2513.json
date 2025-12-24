@@ -5,26 +5,34 @@
 		"ja": "ＨＧ 1/144 ガンダムルブリス量産試作モデル",
 		"en": "HG 1/144 Gundam Rubris mass production prototype model"
 	},
-	"productNumber": "2024",
 	"releaseDate": {
 		"ja": "2024年5月",
 		"year": 2024,
 		"month": 5
 	},
-	"productImage": "https://bandai-hobby.net/images/153_6071_s_g1l3e7d28rob15dwp81y4mbwjx64.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_6071_s_g1l3e7d28rob15dwp81y4mbwjx64.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2513/",
-	"extractedAt": "2025-12-05T23:09:48.700Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_6071_s_g1l3e7d28rob15dwp81y4mbwjx64.jpg",
+		"path": "/images/items/01_5216/153_6071.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 水星の魔女",
+		"en": "Mobile Suit Gundam Witch of Mercury"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2513.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2513/2513.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2513/",
+	"itemId": "01_5216"
 }

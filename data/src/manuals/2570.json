@@ -11,20 +11,29 @@
 		"year": 2020,
 		"month": 3
 	},
-	"productImage": "https://bandai-hobby.net/images/153_3585_s_jps6re5fs0nj1902ydyfud2lt1hr.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_3585_s_jps6re5fs0nj1902ydyfud2lt1hr.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2570/",
-	"extractedAt": "2025-12-05T23:09:48.793Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_3585_s_jps6re5fs0nj1902ydyfud2lt1hr.jpg",
+		"path": "/images/items/01_2662/153_3585.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": [],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "その他",
+		"en": "others"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2570.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2570/2570.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2570/",
+	"itemId": "01_2662"
 }

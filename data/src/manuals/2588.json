@@ -11,20 +11,29 @@
 		"year": 2020,
 		"month": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/153_3955_s_ukjh7t89xpy42aza2fjrm2he86hy.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_3955_s_ukjh7t89xpy42aza2fjrm2he86hy.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2588/",
-	"extractedAt": "2025-12-05T23:09:48.820Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_3955_s_ukjh7t89xpy42aza2fjrm2he86hy.jpg",
+		"path": "/images/items/01_2982/153_3955.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers-rerise"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズRe:RISE",
+		"en": "Gundam Build Divers Re:RISE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2588.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2588/2588.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2588/",
+	"itemId": "01_2982"
 }

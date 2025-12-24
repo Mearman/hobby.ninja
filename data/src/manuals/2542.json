@@ -2,7 +2,7 @@
 	"id": "2542",
 	"type": "manual",
 	"name": {
-		"ja": "ＨＧ 1/144 ガンダム TR-6 [ハイゼンスレイⅡ]（ADVANCE OF Z ティターンズの旗のもとに）",
+		"ja": "ＨＧ 1/144 ガンダムTR-6 [ハイゼンスレイⅡ]（ADVANCE OF Z ティターンズの旗のもとに）",
 		"en": "HG 1/144 GundamTR-6 [Heizensley II] (ADVANCE OF Z Under the Flag of Titans)"
 	},
 	"productNumber": "2464721",
@@ -11,24 +11,29 @@
 		"year": 2019,
 		"month": 10
 	},
-	"productImage": "https://bandai-hobby.net/images/153_3434_o_1dhl3upb0fju822r1e99p17oj23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_3434_o_1dhl3upb0fju822r1e99p17oj23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2542/",
-	"extractedAt": "2025-12-05T23:09:48.759Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_3434_o_1dhl3upb0fju822r1e99p17oj23.jpg",
+		"path": "/images/items/01_2509/153_3434.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"advance-of-z"
-	],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ADVANCE OF Z",
+		"en": "ADVANCE OF Z"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2542.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2542/2542.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2542/",
+	"itemId": "01_2509"
 }

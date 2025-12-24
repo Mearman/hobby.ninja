@@ -2,7 +2,7 @@
 	"id": "2541",
 	"type": "manual",
 	"name": {
-		"ja": "ＭＧ 1/100 ガンダム F90",
+		"ja": "ＭＧ 1/100 ガンダムF90",
 		"en": "MG 1/100 GundamF90"
 	},
 	"productNumber": "2464719",
@@ -11,20 +11,28 @@
 		"year": 2019,
 		"month": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/153_3273_s_buqh975znyjnzp4vsx2hs749slo7.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_3273_s_buqh975znyjnzp4vsx2hs749slo7.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2541/",
-	"extractedAt": "2025-12-05T23:09:48.758Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_3273_s_buqh975znyjnzp4vsx2hs749slo7.jpg",
+		"path": "/manuals/2541/153_3273.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": [],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "その他",
+		"en": "others"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2541.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2541/2541.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2541/"
 }

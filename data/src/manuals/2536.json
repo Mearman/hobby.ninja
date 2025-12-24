@@ -11,20 +11,29 @@
 		"year": 2019,
 		"month": 1
 	},
-	"productImage": "https://bandai-hobby.net/images/153_3022_o_1cpjdn8gkrgi15ge7dr1h9p1q4t23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_3022_o_1cpjdn8gkrgi15ge7dr1h9p1q4t23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2536/",
-	"extractedAt": "2025-12-05T23:09:48.749Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_3022_o_1cpjdn8gkrgi15ge7dr1h9p1q4t23.jpg",
+		"path": "/images/items/01_2073/153_3022.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["builddivers"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズ",
+		"en": "Gundam Build Divers"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2536.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2536/2536.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2536/",
+	"itemId": "01_2073"
 }

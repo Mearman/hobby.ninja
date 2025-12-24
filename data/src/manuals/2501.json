@@ -11,20 +11,28 @@
 		"year": 2023,
 		"month": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/153_5974_s_35g5pnrt3sube3eexve2rr4g7mw5.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_5974_s_35g5pnrt3sube3eexve2rr4g7mw5.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2501/",
-	"extractedAt": "2025-12-05T23:09:48.687Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_5974_s_35g5pnrt3sube3eexve2rr4g7mw5.jpg",
+		"path": "/manuals/2501/153_5974.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 水星の魔女",
+		"en": "Mobile Suit Gundam Witch of Mercury"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2501.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2501/2501.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2501/"
 }

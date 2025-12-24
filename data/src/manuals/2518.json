@@ -2,7 +2,7 @@
 	"id": "2518",
 	"type": "manual",
 	"name": {
-		"ja": "ＨＧ 1/144 ガンダム TR-6[バーザムII]レジオン鹵獲仕様(A.O.Z RE-BOOT版)",
+		"ja": "ＨＧ 1/144 ガンダムTR-6[バーザムII]レジオン鹵獲仕様(A.O.Z RE-BOOT版)",
 		"en": "HG 1/144 GundamTR-6 [Barzam II] Re-Zeon capture specification (A.O.Z RE-BOOT version)"
 	},
 	"productNumber": "2715390",
@@ -11,24 +11,29 @@
 		"year": 2024,
 		"month": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/153_6259_s_5mkki2jlh8chj8i0xkikso3sn6ug.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_6259_s_5mkki2jlh8chj8i0xkikso3sn6ug.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2518/",
-	"extractedAt": "2025-12-05T23:09:48.714Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_6259_s_5mkki2jlh8chj8i0xkikso3sn6ug.jpg",
+		"path": "/images/items/01_5412/153_6259.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"advance-of-z"
-	],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ADVANCE OF Z",
+		"en": "ADVANCE OF Z"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2518.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2518/2518.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2518/",
+	"itemId": "01_5412"
 }

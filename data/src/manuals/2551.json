@@ -2,7 +2,7 @@
 	"id": "2551",
 	"type": "manual",
 	"name": {
-		"ja": "ＨＧ 1/144 ガンダム 6号機(マドロック）",
+		"ja": "ＨＧ 1/144 ガンダム6号機(マドロック）",
 		"en": "HG 1/144 Gundam Unit 6 (Madrock)"
 	},
 	"productNumber": "2469599",
@@ -11,20 +11,29 @@
 		"year": 2019,
 		"month": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/153_3454_o_1djb6lfgc1btn1cpq7tk1qvv199b23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_3454_o_1djb6lfgc1btn1cpq7tk1qvv199b23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2551/",
-	"extractedAt": "2025-12-05T23:09:48.770Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_3454_o_1djb6lfgc1btn1cpq7tk1qvv199b23.jpg",
+		"path": "/images/items/01_2529/153_3454.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": [],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "その他",
+		"en": "others"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2551.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2551/2551.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2551/",
+	"itemId": "01_2529"
 }
