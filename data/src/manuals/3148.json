@@ -11,20 +11,29 @@
 		"year": 2019,
 		"month": 5
 	},
-	"productImage": "https://bandai-hobby.net/images/192_3197_s_iejeuarwf9lpyao1th38cix2orwg.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/192_3197_s_iejeuarwf9lpyao1th38cix2orwg.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3148/",
-	"extractedAt": "2025-12-05T23:09:49.165Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/192_3197_s_iejeuarwf9lpyao1th38cix2orwg.jpg",
+		"path": "/images/items/01_2252/192_3197.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": [],
-	"seriesIds": ["gundamf91"],
+	"brand": {
+		"ja": "RE/100",
+		"en": "RE/100"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムF91",
+		"en": "Mobile Suit GundamF91"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/3148.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/3148/3148.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3148/",
+	"itemId": "01_2252"
 }

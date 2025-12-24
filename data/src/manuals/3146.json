@@ -11,20 +11,29 @@
 		"year": 2018,
 		"month": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/189_2982_s_vwzlo2ldd5s40xglcx9rj93oqin1.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_2982_s_vwzlo2ldd5s40xglcx9rj93oqin1.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3146/",
-	"extractedAt": "2025-12-05T23:09:49.163Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_2982_s_vwzlo2ldd5s40xglcx9rj93oqin1.jpg",
+		"path": "/images/items/01_1882/189_2982.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": [],
-	"seriesIds": ["gundam-cca"],
+	"brand": {
+		"ja": "RE/100",
+		"en": "RE/100"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 逆襲のシャア",
+		"en": "Mobile Suit Gundam Char's Counterattack"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/3146.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/3146/3146.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3146/",
+	"itemId": "01_1882"
 }

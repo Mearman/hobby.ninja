@@ -11,20 +11,29 @@
 		"year": 2018,
 		"month": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/193_2971_s_uxfcizh21fuwcti3k1hcsu7wchlp.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/193_2971_s_uxfcizh21fuwcti3k1hcsu7wchlp.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3147/",
-	"extractedAt": "2025-12-05T23:09:49.164Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/193_2971_s_uxfcizh21fuwcti3k1hcsu7wchlp.jpg",
+		"path": "/images/items/01_2029/193_2971.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": [],
-	"seriesIds": ["v-gundam"],
+	"brand": {
+		"ja": "RE/100",
+		"en": "RE/100"
+	},
+	"series": {
+		"ja": "機動戦士Vガンダム",
+		"en": "Mobile Suit V Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/3147.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/3147/3147.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3147/",
+	"itemId": "01_2029"
 }

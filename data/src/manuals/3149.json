@@ -11,20 +11,29 @@
 		"year": 2019,
 		"month": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/191_3203_s_65rd2up2o8uei9c0lit18opzsmfh.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/191_3203_s_65rd2up2o8uei9c0lit18opzsmfh.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3149/",
-	"extractedAt": "2025-12-05T23:09:49.166Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/191_3203_s_65rd2up2o8uei9c0lit18opzsmfh.jpg",
+		"path": "/images/items/01_2260/191_3203.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": [],
-	"seriesIds": ["g-0080"],
+	"brand": {
+		"ja": "RE/100",
+		"en": "RE/100"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム0080 ポケットの中の戦争",
+		"en": "Mobile Suit Gundam0080 War in the Pocket"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/3149.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/3149/3149.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3149/",
+	"itemId": "01_2260"
 }

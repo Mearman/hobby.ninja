@@ -11,20 +11,29 @@
 		"year": 2015,
 		"month": 4
 	},
-	"productImage": "https://bandai-hobby.net/images/159_1297_s_0rpt23tknbzznixyot347x3bsth6.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_1297_s_0rpt23tknbzznixyot347x3bsth6.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3138/",
-	"extractedAt": "2025-12-05T23:09:49.154Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_1297_s_0rpt23tknbzznixyot347x3bsth6.jpg",
+		"path": "/images/items/01_0316/159_1297.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": [],
-	"seriesIds": ["g-0083"],
+	"brand": {
+		"ja": "RE/100",
+		"en": "RE/100"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 0083 STARDUST MEMORY",
+		"en": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/3138.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/3138/3138.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3138/",
+	"itemId": "01_0316"
 }

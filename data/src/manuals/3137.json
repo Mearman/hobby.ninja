@@ -2,7 +2,7 @@
 	"id": "3137",
 	"type": "manual",
 	"name": {
-		"ja": "RE/100 1/100 MSF-007 ガンダム MkーⅢ",
+		"ja": "RE/100 1/100 MSF-007 ガンダムMkーⅢ",
 		"en": "RE/100 1/100 MSF-007 GundamMk-Ⅲ"
 	},
 	"productNumber": "2279783",
@@ -11,20 +11,29 @@
 		"year": 2015,
 		"month": 1
 	},
-	"productImage": "https://bandai-hobby.net/images/157_1250_s_lceq8ywk94bhcdazpy9moqnb5a7u.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_1250_s_lceq8ywk94bhcdazpy9moqnb5a7u.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3137/",
-	"extractedAt": "2025-12-05T23:09:49.153Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_1250_s_lceq8ywk94bhcdazpy9moqnb5a7u.jpg",
+		"path": "/images/items/01_0265/157_1250.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": [],
-	"seriesIds": ["z-gundam"],
+	"brand": {
+		"ja": "RE/100",
+		"en": "RE/100"
+	},
+	"series": {
+		"ja": "機動戦士Zガンダム",
+		"en": "Mobile Suit ZGundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/3137.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/3137/3137.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3137/",
+	"itemId": "01_0265"
 }

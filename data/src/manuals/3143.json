@@ -11,20 +11,29 @@
 		"year": 2017,
 		"month": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/159_1989_s_vuyb5gcfdw2g7v2ifkgcuo52qioi.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_1989_s_vuyb5gcfdw2g7v2ifkgcuo52qioi.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3143/",
-	"extractedAt": "2025-12-05T23:09:49.160Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_1989_s_vuyb5gcfdw2g7v2ifkgcuo52qioi.jpg",
+		"path": "/images/items/01_1054/159_1989.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": [],
-	"seriesIds": ["gundam-zz"],
+	"brand": {
+		"ja": "RE/100",
+		"en": "RE/100"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムZZ",
+		"en": "Mobile Suit GundamZZ"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/3143.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/3143/3143.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3143/",
+	"itemId": "01_1054"
 }

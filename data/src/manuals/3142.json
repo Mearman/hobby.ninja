@@ -2,7 +2,7 @@
 	"id": "3142",
 	"type": "manual",
 	"name": {
-		"ja": "RE/100 1/100 AMX-107R リバウ",
+		"ja": "RE/100 1/100 AMX-107R  リバウ",
 		"en": "RE/100 1/100 AMX-107R Ribau"
 	},
 	"productNumber": "2346795",
@@ -11,20 +11,24 @@
 		"year": 2017,
 		"month": 2
 	},
-	"productImage": "https://bandai-hobby.net/images/1000111478_1.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/1000111478_1.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3142/",
-	"extractedAt": "2025-12-05T23:09:49.159Z",
 	"scale": "1/100",
-	"brandIds": [],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "RE/100",
+		"en": "RE/100"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/3142.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/3142/3142.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3142/"
 }
