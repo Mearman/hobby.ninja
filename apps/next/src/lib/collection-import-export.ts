@@ -282,7 +282,7 @@ export const importFromDatabase = (
 				id: `item-${Date.now()}-${Math.floor(Math.random() * RANDOM_ID_RANGE)}`,
 				collectionId: "default",
 				itemId: dbItem.id,
-				categories: dbItem.categoryIds,
+				categories: dbItem.categories.map(c => c.id),
 				status: defaultStatus as CollectionItem["status"],
 				condition: "new",
 				photos: [],

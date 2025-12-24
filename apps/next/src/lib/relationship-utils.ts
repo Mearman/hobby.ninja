@@ -7,7 +7,7 @@ import { IconFileText, IconPackage } from "@tabler/icons-react";
  * @returns true if the item has a manualId, false otherwise
  */
 export function itemHasManual(item: Item): boolean {
-	return Boolean(item.manualId);
+	return Boolean(item.manual?.id);
 }
 
 /**
