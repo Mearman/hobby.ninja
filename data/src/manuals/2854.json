@@ -11,27 +11,37 @@
 		"year": 2017,
 		"month": 3
 	},
-	"productImage": "https://bandai-hobby.net/images/153_1788_o_1b7idrnelap4107p65d18885q023.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_1788_o_1b7idrnelap4107p65d18885q023.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2854/",
-	"extractedAt": "2025-12-05T23:09:49.075Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_1788_o_1b7idrnelap4107p65d18885q023.jpg",
+		"path": "/images/items/01_0845/153_1788.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 鉄血のオルフェンズ",
+		"en": "Mobile Suit Gundam Iron-Blooded Orphans"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2854.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2854/2854.pdf"
 		},
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2854_2.pdf",
 			"name": {
 				"ja": "補足説明書",
 				"en": "Supplementary Manual"
-			}
+			},
+			"path": "/manuals/2854/2854_2.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2854/",
+	"itemId": "01_0845"
 }
