@@ -2,7 +2,7 @@
 	"id": "2939",
 	"type": "manual",
 	"name": {
-		"ja": "HG 1/144 サイコ・ガンダム Mk-II",
+		"ja": "HG 1/144 サイコ・ガンダムMk-II",
 		"en": "HG 1/144 Psycho GundamMk-II"
 	},
 	"productNumber": "2745406",
@@ -12,20 +12,28 @@
 		"month": 3,
 		"day": 22
 	},
-	"productImage": "https://bandai-hobby.net/images/159_6311_s_upjpd1mwot1z5g24xj7n8f0aqs56.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_6311_s_upjpd1mwot1z5g24xj7n8f0aqs56.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2939/",
-	"extractedAt": "2025-12-05T23:09:49.133Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_6311_s_upjpd1mwot1z5g24xj7n8f0aqs56.jpg",
+		"path": "/manuals/2939/159_6311.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["z-gundam"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士Zガンダム",
+		"en": "Mobile Suit ZGundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2939.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2939/2939.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2939/"
 }
