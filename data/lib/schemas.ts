@@ -336,7 +336,8 @@ export const ManualSchema = z.object({
 	productImage: z.string().url().optional(),
 	thumbnailImage: z.string().url().optional(),
 	releaseDate: ReleaseDateSchema.optional(),
-	itemId: z.string().optional(),
+	/** Computed from items that reference this manual (1:N relationship) */
+	itemIds: z.array(z.string()).default([]),
 	itemName: z.union([z.string(), LocalizedStringSchema]).optional(),
 
 	// Source tracking
