@@ -12,20 +12,29 @@
 		"month": 12,
 		"day": 2
 	},
-	"productImage": "https://bandai-hobby.net/images/193_5891_s_015vvbaw52l47rwj56ib5roj55n7.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/193_5891_s_015vvbaw52l47rwj56ib5roj55n7.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1223/",
-	"extractedAt": "2025-12-05T23:09:48.169Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/193_5891_s_015vvbaw52l47rwj56ib5roj55n7.jpg",
+		"path": "/images/items/01_5024/193_5891.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundambuildmetaverse"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドメタバース",
+		"en": "Gundam Build Metaverse"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1223.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1223/1223.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1223/",
+	"itemId": "01_5024"
 }
