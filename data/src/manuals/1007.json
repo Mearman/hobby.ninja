@@ -2,8 +2,7 @@
 	"id": "1007",
 	"type": "manual",
 	"name": {
-		"ja": "HGUC 1/144 ガンダム Mk-II（エゥーゴ仕様）",
-		"en": "HGUC 1/144GundamMk-II (AEGO specification)"
+		"ja": "HGUC 1/144ガンダムMk-II（エゥーゴ仕様）"
 	},
 	"productNumber": "2310611",
 	"releaseDate": {
@@ -12,20 +11,21 @@
 		"month": 11,
 		"day": 28
 	},
-	"productImage": "https://bandai-hobby.net/images/190_1406_s_52tw7n95qnrq2o0ihrvyu48jcn1o.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/190_1406_s_52tw7n95qnrq2o0ihrvyu48jcn1o.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1007/",
-	"extractedAt": "2025-12-05T23:09:47.889Z",
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["z-gundam"],
+	"brand": {
+		"ja": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士Zガンダム"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1007.pdf",
 			"name": {
-				"ja": "取扱説明書",
-				"en": "Handling manual"
-			}
+				"ja": "取扱説明書"
+			},
+			"path": "/manuals/1007/1007.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1007/"
 }

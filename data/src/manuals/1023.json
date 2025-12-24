@@ -2,8 +2,7 @@
 	"id": "1023",
 	"type": "manual",
 	"name": {
-		"ja": "HGBD 1/144 リーオーNPD",
-		"en": "HGBD 1/144 Leo NPD"
+		"ja": "HGBD 1/144 リーオーNPD"
 	},
 	"productNumber": "2426169",
 	"releaseDate": {
@@ -12,20 +11,21 @@
 		"month": 6,
 		"day": 23
 	},
-	"productImage": "https://bandai-hobby.net/images/159_2301_s_e3dwoj47y1xaiv6xdkn28casi895.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_2301_s_e3dwoj47y1xaiv6xdkn28casi895.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1023/",
-	"extractedAt": "2025-12-05T23:09:47.937Z",
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers"],
+	"brand": {
+		"ja": "HG"
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズ"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1023.pdf",
 			"name": {
-				"ja": "取扱説明書",
-				"en": "Handling manual"
-			}
+				"ja": "取扱説明書"
+			},
+			"path": "/manuals/1023/1023.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1023/"
 }

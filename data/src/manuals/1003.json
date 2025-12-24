@@ -2,8 +2,7 @@
 	"id": "1003",
 	"type": "manual",
 	"name": {
-		"ja": "HGUC 1/144 ガンキャノン",
-		"en": "HGUC 1/144 Guncannon"
+		"ja": "HGUC 1/144 ガンキャノン"
 	},
 	"productNumber": "2301233",
 	"releaseDate": {
@@ -12,20 +11,21 @@
 		"month": 6,
 		"day": 20
 	},
-	"productImage": "https://bandai-hobby.net/images/159_1330_s_dgblvortux9lubn9l6ooa9w07bqz.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_1330_s_dgblvortux9lubn9l6ooa9w07bqz.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1003/",
-	"extractedAt": "2025-12-05T23:09:47.883Z",
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1003.pdf",
 			"name": {
-				"ja": "取扱説明書",
-				"en": "Handling manual"
-			}
+				"ja": "取扱説明書"
+			},
+			"path": "/manuals/1003/1003.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1003/"
 }

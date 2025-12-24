@@ -2,8 +2,7 @@
 	"id": "1020",
 	"type": "manual",
 	"name": {
-		"ja": "HGBD 1/144 セラヴィーガンダムシェヘラザード",
-		"en": "HGBD 1/144 Seravee Gundam Scheherazade"
+		"ja": "HGBD 1/144 セラヴィーガンダムシェヘラザード"
 	},
 	"productNumber": "2426162",
 	"releaseDate": {
@@ -12,20 +11,21 @@
 		"month": 5,
 		"day": 19
 	},
-	"productImage": "https://bandai-hobby.net/images/190_2257_s_tkkgvgm3n59o89ord3sjxfo8b81a.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/190_2257_s_tkkgvgm3n59o89ord3sjxfo8b81a.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1020/",
-	"extractedAt": "2025-12-05T23:09:47.926Z",
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers"],
+	"brand": {
+		"ja": "HG"
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズ"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1020.pdf",
 			"name": {
-				"ja": "取扱説明書",
-				"en": "Handling manual"
-			}
+				"ja": "取扱説明書"
+			},
+			"path": "/manuals/1020/1020.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1020/"
 }

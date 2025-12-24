@@ -2,8 +2,7 @@
 	"id": "1013",
 	"type": "manual",
 	"name": {
-		"ja": "HG 1/144 MS-04 ブグ（ランバ・ラル機）",
-		"en": "HG 1/144 MS-04 Bug (Ramba Ral machine)"
+		"ja": "HG 1/144 MS-04 ブグ（ランバ・ラル機）"
 	},
 	"productNumber": "2333623",
 	"releaseDate": {
@@ -12,20 +11,21 @@
 		"month": 12,
 		"day": 3
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1700_s_uiw0fvqxur7cf8hc185kpzeq2z2d.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1700_s_uiw0fvqxur7cf8hc185kpzeq2z2d.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1013/",
-	"extractedAt": "2025-12-05T23:09:47.902Z",
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["origin"],
+	"brand": {
+		"ja": "HG"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム THE ORIGIN"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1013.pdf",
 			"name": {
-				"ja": "取扱説明書",
-				"en": "Handling manual"
-			}
+				"ja": "取扱説明書"
+			},
+			"path": "/manuals/1013/1013.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1013/"
 }

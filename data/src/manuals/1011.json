@@ -2,8 +2,7 @@
 	"id": "1011",
 	"type": "manual",
 	"name": {
-		"ja": "HG 1/144 ザクI（デニム／スレンダー機）",
-		"en": "HG 1/144 Zaku I (denim/slender model)"
+		"ja": "HG 1/144 ザクI（デニム／スレンダー機）"
 	},
 	"productNumber": "2333620",
 	"releaseDate": {
@@ -12,20 +11,21 @@
 		"month": 5,
 		"day": 21
 	},
-	"productImage": "https://bandai-hobby.net/images/159_1513_s_f3joiqndt6i7fc8t91rqmi4k5t3g.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_1513_s_f3joiqndt6i7fc8t91rqmi4k5t3g.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1011/",
-	"extractedAt": "2025-12-05T23:09:47.896Z",
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["origin"],
+	"brand": {
+		"ja": "HG"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム THE ORIGIN"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1011.pdf",
 			"name": {
-				"ja": "取扱説明書",
-				"en": "Handling manual"
-			}
+				"ja": "取扱説明書"
+			},
+			"path": "/manuals/1011/1011.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1011/"
 }

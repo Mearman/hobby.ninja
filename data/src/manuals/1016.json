@@ -2,8 +2,7 @@
 	"id": "1016",
 	"type": "manual",
 	"name": {
-		"ja": "HGBD 1/144 グリモアレッドベレー",
-		"en": "HGBD 1/144 Grimoire Red Beret"
+		"ja": "HGBD 1/144 グリモアレッドベレー"
 	},
 	"productNumber": "2426154",
 	"releaseDate": {
@@ -12,20 +11,21 @@
 		"month": 4,
 		"day": 28
 	},
-	"productImage": "https://bandai-hobby.net/images/191_2245_s_1r5n627dnkdk5jrau4f5rpet8j8i.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/191_2245_s_1r5n627dnkdk5jrau4f5rpet8j8i.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1016/",
-	"extractedAt": "2025-12-05T23:09:47.909Z",
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers"],
+	"brand": {
+		"ja": "HG"
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズ"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1016.pdf",
 			"name": {
-				"ja": "取扱説明書",
-				"en": "Handling manual"
-			}
+				"ja": "取扱説明書"
+			},
+			"path": "/manuals/1016/1016.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1016/"
 }

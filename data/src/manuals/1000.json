@@ -2,8 +2,7 @@
 	"id": "1000",
 	"type": "manual",
 	"name": {
-		"ja": "HG 1/144　ガンタンク初期型",
-		"en": "HG 1/144 Guntank early type"
+		"ja": "HG 1/144　ガンタンク初期型"
 	},
 	"productNumber": "2291801",
 	"releaseDate": {
@@ -12,20 +11,21 @@
 		"month": 5,
 		"day": 15
 	},
-	"productImage": "https://bandai-hobby.net/images/159_1303_s_8eyk7v9yx5qe1fcr74irfs19agok.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_1303_s_8eyk7v9yx5qe1fcr74irfs19agok.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1000/",
-	"extractedAt": "2025-12-05T23:09:47.880Z",
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["origin"],
+	"brand": {
+		"ja": "HG"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム THE ORIGIN"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1000.pdf",
 			"name": {
-				"ja": "取扱説明書",
-				"en": "Handling manual"
-			}
+				"ja": "取扱説明書"
+			},
+			"path": "/manuals/1000/1000.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1000/"
 }

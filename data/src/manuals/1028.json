@@ -2,8 +2,7 @@
 	"id": "1028",
 	"type": "manual",
 	"name": {
-		"ja": "HGBD 1/144　ガンダムダブルオースカイ",
-		"en": "HGBD 1/144 Gundam Double O Sky"
+		"ja": "HGBD 1/144　ガンダムダブルオースカイ"
 	},
 	"productNumber": "2435132",
 	"releaseDate": {
@@ -12,20 +11,21 @@
 		"month": 8,
 		"day": 31
 	},
-	"productImage": "https://bandai-hobby.net/images/158_2331_o_1ckhv7i7c1hlc1e581qb3kjm1apq2s.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_2331_o_1ckhv7i7c1hlc1e581qb3kjm1apq2s.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1028/",
-	"extractedAt": "2025-12-05T23:09:47.955Z",
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers"],
+	"brand": {
+		"ja": "HG"
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズ"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1028.pdf",
 			"name": {
-				"ja": "取扱説明書",
-				"en": "Handling manual"
-			}
+				"ja": "取扱説明書"
+			},
+			"path": "/manuals/1028/1028.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1028/"
 }
