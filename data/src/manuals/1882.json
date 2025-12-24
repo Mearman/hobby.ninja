@@ -12,20 +12,28 @@
 		"month": 10,
 		"day": 19
 	},
-	"productImage": "https://bandai-hobby.net/images/159_6210_s_qf6u4non8e06wxvcur5iigusxad0.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_6210_s_qf6u4non8e06wxvcur5iigusxad0.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1882/",
-	"extractedAt": "2025-12-05T23:09:48.247Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_6210_s_qf6u4non8e06wxvcur5iigusxad0.jpg",
+		"path": "/manuals/1882/159_6210.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["requiem"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 復讐のレクイエム",
+		"en": "Mobile Suit Gundam Requiem of Vengeance"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1882.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1882/1882.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1882/"
 }

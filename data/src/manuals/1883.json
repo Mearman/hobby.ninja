@@ -2,7 +2,7 @@
 	"id": "1883",
 	"type": "manual",
 	"name": {
-		"ja": "HG 1/144 ガンダム EX (復讐のレクイエム)",
+		"ja": "HG 1/144 ガンダムEX (復讐のレクイエム)",
 		"en": "HG 1/144 GundamEX (Requiem of Vengeance)"
 	},
 	"productNumber": "2725232",
@@ -12,20 +12,28 @@
 		"month": 10,
 		"day": 19
 	},
-	"productImage": "https://bandai-hobby.net/images/190_6211_s_y2crxuoovbe8igmvoktsy29weru4.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/190_6211_s_y2crxuoovbe8igmvoktsy29weru4.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1883/",
-	"extractedAt": "2025-12-05T23:09:48.249Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/190_6211_s_y2crxuoovbe8igmvoktsy29weru4.jpg",
+		"path": "/manuals/1883/190_6211.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["requiem"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 復讐のレクイエム",
+		"en": "Mobile Suit Gundam Requiem of Vengeance"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1883.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1883/1883.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1883/"
 }
