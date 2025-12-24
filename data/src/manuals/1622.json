@@ -2,7 +2,7 @@
 	"id": "1622",
 	"type": "manual",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット ガンダムキャリバーン",
+		"ja": "SDガンダム クロスシルエット ガンダムキャリバーン",
 		"en": "SDGundam Cross Silhouette Gundam Caliburn"
 	},
 	"productNumber": "2704786",
@@ -12,19 +12,27 @@
 		"month": 6,
 		"day": 29
 	},
-	"productImage": "https://bandai-hobby.net/images/196_6048_s_vlqttzwbas837owlnd8fb1avd5i5.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_6048_s_vlqttzwbas837owlnd8fb1avd5i5.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1622/",
-	"extractedAt": "2025-12-05T23:09:48.210Z",
-	"brandIds": [],
-	"seriesIds": ["g-witch"],
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_6048_s_vlqttzwbas837owlnd8fb1avd5i5.jpg",
+		"path": "/manuals/1622/196_6048.jpg"
+	},
+	"brand": {
+		"ja": "SDガンダム クロスシルエット",
+		"en": "SDGundam cross silhouette"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 水星の魔女",
+		"en": "Mobile Suit Gundam Witch of Mercury"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1622.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1622/1622.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1622/"
 }

@@ -12,19 +12,27 @@
 		"month": 6,
 		"day": 29
 	},
-	"productImage": "https://bandai-hobby.net/images/190_6047_s_k6s4pn0y2abyn5q0sd6ijlfarn8k.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/190_6047_s_k6s4pn0y2abyn5q0sd6ijlfarn8k.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1620/",
-	"extractedAt": "2025-12-05T23:09:48.207Z",
-	"brandIds": [],
-	"seriesIds": ["builddivers"],
+	"image": {
+		"src": "https://bandai-hobby.net/images/190_6047_s_k6s4pn0y2abyn5q0sd6ijlfarn8k.jpg",
+		"path": "/manuals/1620/190_6047.jpg"
+	},
+	"brand": {
+		"ja": "オプションパーツセット",
+		"en": "Optional parts set"
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズ",
+		"en": "Gundam Build Divers"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1620.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1620/1620.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1620/"
 }

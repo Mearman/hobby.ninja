@@ -12,19 +12,27 @@
 		"month": 7,
 		"day": 13
 	},
-	"productImage": "https://bandai-hobby.net/images/192_6093_s_ihxdn7tgmzpqg614fw0zpludrm58.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/192_6093_s_ihxdn7tgmzpqg614fw0zpludrm58.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1656/",
-	"extractedAt": "2025-12-05T23:09:48.219Z",
-	"brandIds": [],
-	"seriesIds": ["buildfighters"],
+	"image": {
+		"src": "https://bandai-hobby.net/images/192_6093_s_ihxdn7tgmzpqg614fw0zpludrm58.jpg",
+		"path": "/manuals/1656/192_6093.jpg"
+	},
+	"brand": {
+		"ja": "オプションパーツセット",
+		"en": "Optional parts set"
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1656.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1656/1656.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1656/"
 }

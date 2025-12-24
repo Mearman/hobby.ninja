@@ -12,27 +12,36 @@
 		"month": 10,
 		"day": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/196_6223_s_2uebqixundpzbok8m3hxwoi4c6h8.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_6223_s_2uebqixundpzbok8m3hxwoi4c6h8.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1684/",
-	"extractedAt": "2025-12-05T23:09:48.227Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_6223_s_2uebqixundpzbok8m3hxwoi4c6h8.jpg",
+		"path": "/manuals/1684/196_6223.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": [],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "その他",
+		"en": "others"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1684.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1684/1684.pdf"
 		},
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1684_2.pdf",
 			"name": {
 				"ja": "初代ガンプラ",
 				"en": "First generation Gunpla"
-			}
+			},
+			"path": "/manuals/1684/1684_2.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1684/"
 }

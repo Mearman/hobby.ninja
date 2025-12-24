@@ -12,19 +12,27 @@
 		"month": 7,
 		"day": 20
 	},
-	"productImage": "https://bandai-hobby.net/images/196_6089_s_634e8wvwydc1v3ihiyyqj3v63sbc.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_6089_s_634e8wvwydc1v3ihiyyqj3v63sbc.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1652/",
-	"extractedAt": "2025-12-05T23:09:48.214Z",
-	"brandIds": [],
-	"seriesIds": ["seed-d"],
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_6089_s_634e8wvwydc1v3ihiyyqj3v63sbc.jpg",
+		"path": "/manuals/1652/196_6089.jpg"
+	},
+	"brand": {
+		"ja": "Figure-rise Standard",
+		"en": "Figure-rise Standard"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムSEED DESTINY",
+		"en": "Mobile Suit GundamSEED DESTINY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1652.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1652/1652.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1652/"
 }
