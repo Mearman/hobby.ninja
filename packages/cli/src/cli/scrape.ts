@@ -990,7 +990,8 @@ export class ScrapeCommand {
 
 	/**
 	 * Download or locate manual image
-	 * First checks if image exists in item assets, otherwise downloads to manuals folder
+	 * Prefers existing item assets over manual assets to avoid duplication.
+	 * If image exists in both, removes the manual copy.
 	 */
 	private async downloadManualImage(
 		manualId: string,
@@ -1002,24 +1003,36 @@ export class ScrapeCommand {
 		const filename = extractFilenameFromUrl(imageUrl);
 		const filenamePrefix = filename.replace(/\.[^.]+$/, ""); // "159_1303"
 
-		// Check for existing image in items
-		const existingPath = await findExistingItemImage(filenamePrefix);
-		if (existingPath) {
-			manualData.image.path = existingPath;
-			console.log(`    Found existing image: ${existingPath}`);
+		// Manual asset paths
+		const manualImageDir = path.join(MANUALS_ASSETS_DIR, manualId);
+		const manualLocalPath = path.join(manualImageDir, filename);
+
+		// Check for existing image in items (preferred location)
+		const existingItemPath = await findExistingItemImage(filenamePrefix);
+		if (existingItemPath) {
+			manualData.image.path = existingItemPath;
+			console.log(`    Found existing image: ${existingItemPath}`);
+
+			// Remove duplicate from manual assets if it exists
+			try {
+				await fs.access(manualLocalPath);
+				await fs.unlink(manualLocalPath);
+				console.log(`    Removed duplicate: /manuals/${manualId}/${filename}`);
+				// Clean up empty directory
+				await this.removeEmptyDir(manualImageDir);
+			} catch {
+				// Manual copy doesn't exist, nothing to remove
+			}
 			return;
 		}
 
-		// Download to manuals directory
-		const manualImageDir = path.join(MANUALS_ASSETS_DIR, manualId);
+		// No item image found - check/download to manuals directory
 		await fs.mkdir(manualImageDir, { recursive: true });
-
-		const localPath = path.join(manualImageDir, filename);
 		const relativePath = `/manuals/${manualId}/${filename}`;
 
-		// Check if already downloaded
+		// Check if already downloaded to manuals
 		try {
-			await fs.access(localPath);
+			await fs.access(manualLocalPath);
 			manualData.image.path = relativePath;
 			console.log(`    Image already exists: ${filename}`);
 			return;
@@ -1039,12 +1052,26 @@ export class ScrapeCommand {
 			if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
 			const buffer = Buffer.from(await response.arrayBuffer());
-			await fs.writeFile(localPath, buffer);
+			await fs.writeFile(manualLocalPath, buffer);
 			manualData.image.path = relativePath;
 			console.log(`    Downloaded image: ${filename}`);
 		} catch (error) {
 			const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
 			console.log(`    Failed to download image: ${msg}`);
+		}
+	}
+
+	/**
+	 * Remove directory if empty
+	 */
+	private async removeEmptyDir(dirPath: string): Promise<void> {
+		try {
+			const files = await fs.readdir(dirPath);
+			if (files.length === 0) {
+				await fs.rmdir(dirPath);
+			}
+		} catch {
+			// Directory doesn't exist or can't be read
 		}
 	}
 
