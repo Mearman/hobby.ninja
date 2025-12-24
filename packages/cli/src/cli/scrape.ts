@@ -122,7 +122,8 @@ async function fetchWithRetry(
 				const delay = RETRY_DELAY_MS * Math.pow(2, attempt - 1); // Exponential backoff
 				console.log(`    Retry ${attempt}/${maxRetries} after ${delay}ms (${lastError.message})`);
 				await new Promise(resolve => setTimeout(resolve, delay));
-			} else if (attempt === maxRetries) {
+			} else {
+				// Throw on final attempt OR non-retryable errors
 				throw lastError;
 			}
 		}
