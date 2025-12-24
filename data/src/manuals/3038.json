@@ -12,20 +12,24 @@
 		"month": 4,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/EXPO2025_eg_rx78f00_e_gundam_pac.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/EXPO2025_eg_rx78f00_e_gundam_pac.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3038/",
-	"extractedAt": "2025-12-05T23:09:49.145Z",
 	"scale": "1/144",
-	"brandIds": ["entry_grade"],
-	"seriesIds": ["gunpla"],
+	"brand": {
+		"ja": "ENTRY GRADE",
+		"en": "ENTRY GRADE"
+	},
+	"series": {
+		"ja": "ガンプラ",
+		"en": "Gunpla"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/3038.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/3038/3038.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3038/"
 }

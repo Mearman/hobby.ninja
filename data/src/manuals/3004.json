@@ -12,26 +12,31 @@
 		"month": 8,
 		"day": 23
 	},
-	"productImage": "https://bandai-hobby.net/images/3004.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/3004.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3004/",
-	"extractedAt": "2025-12-05T23:09:49.143Z",
-	"brandIds": ["mg"],
-	"seriesIds": ["g-witch"],
+	"brand": {
+		"ja": "MGSD",
+		"en": "MGSD"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 水星の魔女",
+		"en": "Mobile Suit Gundam Witch of Mercury"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/3004.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/3004/3004.pdf"
 		},
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/3004_2.pdf",
 			"name": {
 				"ja": "シール貼り指示",
 				"en": "Seal application instructions"
-			}
+			},
+			"path": "/manuals/3004/3004_2.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3004/"
 }
