@@ -1001,7 +1001,10 @@ export class ScrapeCommand {
 
 		const imageUrl = manualData.image.src;
 		const filename = extractFilenameFromUrl(imageUrl);
-		const filenamePrefix = filename.replace(/\.[^.]+$/, ""); // "159_1303"
+		// Extract base filename without extension or Bandai hash suffix (_s_xxxxx)
+		// e.g., "155_303_s_kwjuc0ri80ktzu3ahk5r92ecrdr4.jpg" -> "155_303"
+		const filenameWithoutExt = filename.replace(/\.[^.]+$/, "");
+		const filenamePrefix = filenameWithoutExt.replace(/_s_[a-z0-9]+$/i, "");
 
 		// Manual asset paths
 		const manualImageDir = path.join(MANUALS_ASSETS_DIR, manualId);
