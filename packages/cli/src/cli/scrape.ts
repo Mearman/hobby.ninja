@@ -830,8 +830,20 @@ export class ScrapeCommand {
 		}
 
 		// Step 3b: Download/locate image
-		if (manualData.image?.src && !options.dryRun) {
-			await time("download-image", () => this.downloadManualImage(manualId, manualData));
+		// Image can come from: HTML parsing (manualData.image?.src) OR cached HTML file
+		if (!options.dryRun) {
+			if (manualData.image?.src) {
+				// Parser found image in HTML - download or find existing
+				await time("download-image", () => this.downloadManualImage(manualId, manualData));
+			} else {
+				// Parser didn't find image - try to get src from cached HTML
+				const srcUrl = await time("find-src", () => this.findImageSrcFromHtml(htmlPath, ""));
+				if (srcUrl) {
+					// Found src in HTML - use the standard download flow
+					manualData.image = { src: srcUrl };
+					await time("download-image", () => this.downloadManualImage(manualId, manualData));
+				}
+			}
 		}
 
 		// Step 3c: Translate manual if missing English
@@ -991,7 +1003,7 @@ export class ScrapeCommand {
 	/**
 	 * Download or locate manual image
 	 * Prefers existing item assets over manual assets to avoid duplication.
-	 * If image exists in both, removes the manual copy.
+	 * If image exists in items, removes any manual copies (even incorrectly named ones).
 	 */
 	private async downloadManualImage(
 		manualId: string,
@@ -1005,10 +1017,12 @@ export class ScrapeCommand {
 		// e.g., "155_303_s_kwjuc0ri80ktzu3ahk5r92ecrdr4.jpg" -> "155_303"
 		const filenameWithoutExt = filename.replace(/\.[^.]+$/, "");
 		const filenamePrefix = filenameWithoutExt.replace(/_s_[a-z0-9]+$/i, "");
+		// Clean filename for local storage (without hash suffix)
+		const ext = path.extname(filename);
+		const cleanFilename = `${filenamePrefix}${ext}`;
 
 		// Manual asset paths
 		const manualImageDir = path.join(MANUALS_ASSETS_DIR, manualId);
-		const manualLocalPath = path.join(manualImageDir, filename);
 
 		// Check for existing image in items (preferred location)
 		const existingItemPath = await findExistingItemImage(filenamePrefix);
@@ -1016,32 +1030,30 @@ export class ScrapeCommand {
 			manualData.image.path = existingItemPath;
 			console.log(`    Found existing image: ${existingItemPath}`);
 
-			// Remove duplicate from manual assets if it exists
-			try {
-				await fs.access(manualLocalPath);
-				await fs.unlink(manualLocalPath);
-				console.log(`    Removed duplicate: /manuals/${manualId}/${filename}`);
-				// Clean up empty directory
-				await this.removeEmptyDir(manualImageDir);
-			} catch {
-				// Manual copy doesn't exist, nothing to remove
-			}
+			// Remove ALL image files from manual assets (they're duplicates)
+			await this.cleanupManualImages(manualImageDir);
 			return;
 		}
 
 		// No item image found - check/download to manuals directory
 		await fs.mkdir(manualImageDir, { recursive: true });
-		const relativePath = `/manuals/${manualId}/${filename}`;
+		const manualLocalPath = path.join(manualImageDir, cleanFilename);
+		const relativePath = `/manuals/${manualId}/${cleanFilename}`;
 
-		// Check if already downloaded to manuals
+		// Check if already downloaded to manuals (with correct filename)
 		try {
 			await fs.access(manualLocalPath);
 			manualData.image.path = relativePath;
-			console.log(`    Image already exists: ${filename}`);
+			console.log(`    Image already exists: ${cleanFilename}`);
+			// Clean up any incorrectly named duplicates
+			await this.cleanupManualImages(manualImageDir, cleanFilename);
 			return;
 		} catch {
 			// File doesn't exist, download it
 		}
+
+		// Clean up any incorrectly named files before downloading
+		await this.cleanupManualImages(manualImageDir);
 
 		try {
 			const response = await fetch(imageUrl, {
@@ -1057,10 +1069,32 @@ export class ScrapeCommand {
 			const buffer = Buffer.from(await response.arrayBuffer());
 			await fs.writeFile(manualLocalPath, buffer);
 			manualData.image.path = relativePath;
-			console.log(`    Downloaded image: ${filename}`);
+			console.log(`    Downloaded image: ${cleanFilename}`);
 		} catch (error) {
 			const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
 			console.log(`    Failed to download image: ${msg}`);
+		}
+	}
+
+	/**
+	 * Remove image files from manual directory
+	 * @param keepFilename If specified, keep this file and remove others
+	 */
+	private async cleanupManualImages(manualImageDir: string, keepFilename?: string): Promise<void> {
+		try {
+			const files = await fs.readdir(manualImageDir);
+			for (const file of files) {
+				if (/\.(jpg|jpeg|png|gif|webp)$/i.test(file)) {
+					if (keepFilename && file === keepFilename) continue;
+					const filePath = path.join(manualImageDir, file);
+					await fs.unlink(filePath);
+					console.log(`    Removed duplicate: ${file}`);
+				}
+			}
+			// Clean up empty directory
+			await this.removeEmptyDir(manualImageDir);
+		} catch {
+			// Directory doesn't exist or can't be read
 		}
 	}
 
@@ -1076,6 +1110,42 @@ export class ScrapeCommand {
 		} catch {
 			// Directory doesn't exist or can't be read
 		}
+	}
+
+	/**
+	 * Search HTML file for a product image URL
+	 * Used when we found an image on disk but parser didn't extract the src
+	 * Looks for the main product image (from bandai-hobby.net, not common assets)
+	 */
+	private async findImageSrcFromHtml(htmlPath: string, _imagePath: string): Promise<string | null> {
+		try {
+			const html = await fs.readFile(htmlPath, "utf8");
+
+			// Look for product images from bandai-hobby.net (the main catalog images)
+			// Pattern: src="https://bandai-hobby.net/images/{product_id}_{variant}.jpg"
+			const productImgPattern = /src="(https:\/\/bandai-hobby\.net\/images\/\d+_\d+[^"]+\.(?:jpg|png|webp))"/gi;
+			const matches = [...html.matchAll(productImgPattern)];
+
+			// Filter out common/logo images, prefer product images
+			for (const match of matches) {
+				const url = match[1];
+				if (url && !url.includes("/common/") && !url.includes("logo")) {
+					return url;
+				}
+			}
+
+			// Fallback: look for any non-common image from manual.bandai-hobby.net
+			const manualImgPattern = /src="(https:\/\/manual\.bandai-hobby\.net\/images\/(?!common\/)[^"]+\.(?:jpg|png|webp))"/gi;
+			const manualMatches = [...html.matchAll(manualImgPattern)];
+			for (const match of manualMatches) {
+				if (match[1]) {
+					return match[1];
+				}
+			}
+		} catch {
+			// HTML file doesn't exist or can't be read
+		}
+		return null;
 	}
 
 	/**
@@ -1133,13 +1203,9 @@ export class ScrapeCommand {
 				}
 			}
 
-			// Preserve image.path if exists (image structure matches items: { src, path })
-			if (existing["image"] && typeof existing["image"] === "object") {
-				const existingImage = existing["image"] as Record<string, unknown>;
-				if (existingImage["path"] && newData.image && !newData.image.path) {
-					newData.image.path = existingImage["path"] as string;
-				}
-			}
+			// NOTE: We intentionally do NOT preserve image from existing JSON.
+			// Image should come from HTML parsing OR from files on disk.
+			// The downloadManualImage() function handles finding images on disk.
 
 			return newData;
 		} catch {
