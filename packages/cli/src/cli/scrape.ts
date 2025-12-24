@@ -742,6 +742,21 @@ export class ScrapeCommand {
 		manualId: string,
 		options: ScrapeOptions,
 	): Promise<{ success: boolean; error?: string }> {
+		const timings: StepTiming[] = [];
+		const time = <T>(name: string, fn: () => T): T => {
+			const start = performance.now();
+			const result = fn();
+			if (result instanceof Promise) {
+				const timedPromise = result.then((r: Awaited<T>) => {
+					timings.push({ name, durationMs: performance.now() - start });
+					return r;
+				});
+				return timedPromise as T;
+			}
+			timings.push({ name, durationMs: performance.now() - start });
+			return result;
+		};
+
 		const url = `https://manual.bandai-hobby.net/menus/detail/${manualId}/`;
 		const htmlPath = path.join(MANUALS_DATA_DIR, `${manualId}.html`);
 		const jsonPath = path.join(MANUALS_DATA_DIR, `${manualId}.json`);
@@ -754,14 +769,14 @@ export class ScrapeCommand {
 		// Check for existing HTML file (use as cache)
 		if (options.cache) {
 			try {
-				const htmlStat = await fs.stat(htmlPath);
+				const htmlStat = await time("cache-stat", () => fs.stat(htmlPath));
 				const ageMs = Date.now() - htmlStat.mtimeMs;
 				const maxAgeMs = options.maxAgeDays * ScrapeCommand.HOURS_PER_DAY * ScrapeCommand.MINUTES_PER_HOUR * ScrapeCommand.SECONDS_PER_MINUTE * ScrapeCommand.MS_PER_SECOND;
 				const ageMinutes = Math.round(ageMs / ScrapeCommand.MS_PER_SECOND / ScrapeCommand.SECONDS_PER_MINUTE);
 				const ageHours = Math.round(ageMs / ScrapeCommand.MS_PER_SECOND / ScrapeCommand.SECONDS_PER_MINUTE / ScrapeCommand.MINUTES_PER_HOUR);
 
 				if (maxAgeMs === 0 || ageMs < maxAgeMs) {
-					html = await fs.readFile(htmlPath, "utf8");
+					html = await time("cache-read", () => fs.readFile(htmlPath, "utf8"));
 					console.log(`  Using cached HTML (${ageMinutes} min old)`);
 				} else {
 					console.log(`  HTML too old (${ageHours} hours), re-fetching`);
@@ -774,24 +789,28 @@ export class ScrapeCommand {
 		// Fetch fresh HTML if needed
 		if (!html) {
 			try {
-				html = await this.rateLimiter.executeWithLimit(async () => {
-					return this.fetchManualPage(url);
-				});
+				html = await time("fetch-html", () =>
+					this.rateLimiter.executeWithLimit(async () => {
+						return this.fetchManualPage(url);
+					}),
+				);
 
 				// Save HTML file
 				await fs.mkdir(path.dirname(htmlPath), { recursive: true });
-				await fs.writeFile(htmlPath, html, "utf8");
+				await time("save-html", () => fs.writeFile(htmlPath, html, "utf8"));
 			} catch (error) {
 				const errorMsg = error instanceof Error ? error.message : UNKNOWN_ERROR;
 				ManualsIndexUpdater.recordChecked(manualId);
+				this.printTimings(options, timings);
 				return { success: false, error: `Fetch failed: ${errorMsg}` };
 			}
 		}
 
 		// Step 2: Parse with ManualParser
-		const parseResult = this.manualParser.parse(html, manualId, url);
+		const parseResult = time("parse", () => this.manualParser.parse(html, manualId, url));
 		if (!parseResult.success || !parseResult.data) {
 			ManualsIndexUpdater.recordChecked(manualId);
+			this.printTimings(options, timings);
 			return { success: false, error: parseResult.error ?? "Parse failed" };
 		}
 
@@ -801,7 +820,9 @@ export class ScrapeCommand {
 
 		// Step 3: Download PDFs
 		if (manualData.pdfs.length > 0 && !options.dryRun) {
-			const downloadResult = await this.downloadManualPdfs(manualId, manualData);
+			const downloadResult = await time("download-pdfs", () =>
+				this.downloadManualPdfs(manualId, manualData),
+			);
 			if (downloadResult.downloaded > 0) {
 				console.log(`  ✓ PDFs: ${downloadResult.downloaded} downloaded, ${downloadResult.skipped} skipped`);
 			}
@@ -809,16 +830,17 @@ export class ScrapeCommand {
 
 		// Step 3b: Download/locate image
 		if (manualData.image?.src && !options.dryRun) {
-			await this.downloadManualImage(manualId, manualData);
+			await time("download-image", () => this.downloadManualImage(manualId, manualData));
 		}
 
 		// Step 4: Save manual JSON
-		await this.saveManualJson(jsonPath, manualData);
+		await time("save-json", () => this.saveManualJson(jsonPath, manualData));
 		console.log(`  ✓ Manual JSON saved`);
 
 		// Record checked with valid status
 		ManualsIndexUpdater.recordValid(manualId, manualData.name.ja);
 
+		this.printTimings(options, timings);
 		return { success: true };
 	}
 
