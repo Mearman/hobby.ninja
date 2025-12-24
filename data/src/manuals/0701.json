@@ -1,5 +1,5 @@
 {
-	"id": "0701",
+	"id": "701",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC 1/144 ビルドハンズ丸型(S,M,L)",
@@ -12,20 +12,29 @@
 		"month": 8,
 		"day": 4
 	},
-	"productImage": "https://bandai-hobby.net/images/155_2338_o_1cjv62jc952g4ajd9516651i62d.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_2338_o_1cjv62jc952g4ajd9516651i62d.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/701/",
-	"extractedAt": "2025-12-05T23:09:47.428Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_2338_o_1cjv62jc952g4ajd9516651i62d.jpg",
+		"path": "/images/items/01_1415/155_2338.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズ",
+		"en": "Gundam Build Divers"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/701.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0701/0701.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/701/",
+	"itemId": "01_1415"
 }

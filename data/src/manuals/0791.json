@@ -1,5 +1,5 @@
 {
-	"id": "0791",
+	"id": "791",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガンダムヴィダール",
@@ -12,20 +12,28 @@
 		"month": 12,
 		"day": 3
 	},
-	"productImage": "https://bandai-hobby.net/images/189_1701_s_k1vnauomhp1yf9wegnuos8yikeuq.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_1701_s_k1vnauomhp1yf9wegnuos8yikeuq.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/791/",
-	"extractedAt": "2025-12-05T23:09:47.564Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_1701_s_k1vnauomhp1yf9wegnuos8yikeuq.jpg",
+		"path": "/manuals/0791/189_1701.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 鉄血のオルフェンズ",
+		"en": "Mobile Suit Gundam Iron-Blooded Orphans"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/791.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0791/0791.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/791/"
 }

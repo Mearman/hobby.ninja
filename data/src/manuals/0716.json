@@ -1,5 +1,5 @@
 {
-	"id": "0716",
+	"id": "716",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC 1/144 祭ウェポン",
@@ -12,20 +12,29 @@
 		"month": 12,
 		"day": 14
 	},
-	"productImage": "https://bandai-hobby.net/images/155_1014_s_jecm17rw7kzzbnbfqv3f2885yus3.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_1014_s_jecm17rw7kzzbnbfqv3f2885yus3.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/716/",
-	"extractedAt": "2025-12-05T23:09:47.453Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_1014_s_jecm17rw7kzzbnbfqv3f2885yus3.jpg",
+		"path": "/images/items/01_0017/155_1014.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/716.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0716/0716.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/716/",
+	"itemId": "01_0017"
 }

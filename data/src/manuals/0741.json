@@ -1,5 +1,5 @@
 {
-	"id": "0741",
+	"id": "741",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 すーぱーふみな",
@@ -12,20 +12,29 @@
 		"month": 11,
 		"day": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/191_1398_s_ynuwp8cnztmqjgo915z10bs4xgta.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/191_1398_s_ynuwp8cnztmqjgo915z10bs4xgta.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/741/",
-	"extractedAt": "2025-12-05T23:09:47.487Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/191_1398_s_ynuwp8cnztmqjgo915z10bs4xgta.jpg",
+		"path": "/images/items/01_0427/191_1398.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/741.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0741/0741.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/741/",
+	"itemId": "01_0427"
 }

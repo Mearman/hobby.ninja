@@ -1,5 +1,5 @@
 {
-	"id": "0796",
+	"id": "796",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ヘルムヴィーゲ・リンカー",
@@ -12,20 +12,28 @@
 		"month": 1,
 		"day": 28
 	},
-	"productImage": "https://bandai-hobby.net/images/157_1733_s_loj58j3ey05o7bm4anjuqh78hegj.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_1733_s_loj58j3ey05o7bm4anjuqh78hegj.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/796/",
-	"extractedAt": "2025-12-05T23:09:47.570Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_1733_s_loj58j3ey05o7bm4anjuqh78hegj.jpg",
+		"path": "/manuals/0796/157_1733.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 鉄血のオルフェンズ",
+		"en": "Mobile Suit Gundam Iron-Blooded Orphans"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/796.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0796/0796.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/796/"
 }

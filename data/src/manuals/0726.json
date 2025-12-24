@@ -1,5 +1,5 @@
 {
-	"id": "0726",
+	"id": "726",
 	"type": "manual",
 	"name": {
 		"ja": "SDBF ウイニングガンダム",
@@ -12,19 +12,27 @@
 		"month": 12,
 		"day": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1219_s_gjbapbt5703kunuhqssjepjm6odt.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1219_s_gjbapbt5703kunuhqssjepjm6odt.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/726/",
-	"extractedAt": "2025-12-05T23:09:47.465Z",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["buildfighters"],
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1219_s_gjbapbt5703kunuhqssjepjm6odt.jpg",
+		"path": "/images/items/01_0232/156_1219.jpg"
+	},
+	"brand": {
+		"ja": "SDBF"
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/726.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0726/0726.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/726/",
+	"itemId": "01_0232"
 }

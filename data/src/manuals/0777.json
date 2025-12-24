@@ -1,5 +1,5 @@
 {
-	"id": "0777",
+	"id": "777",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 グレイズリッター（カルタ機）",
@@ -12,20 +12,29 @@
 		"month": 3,
 		"day": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1473_s_e79lhqqhgvcuw0t1e96piqx1qhi9.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1473_s_e79lhqqhgvcuw0t1e96piqx1qhi9.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/777/",
-	"extractedAt": "2025-12-05T23:09:47.542Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1473_s_e79lhqqhgvcuw0t1e96piqx1qhi9.jpg",
+		"path": "/images/items/01_0510/156_1473.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 鉄血のオルフェンズ",
+		"en": "Mobile Suit Gundam Iron-Blooded Orphans"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/777.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0777/0777.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/777/",
+	"itemId": "01_0510"
 }

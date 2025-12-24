@@ -1,5 +1,5 @@
 {
-	"id": "0750",
+	"id": "750",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 アメイジングストライクフリーダムガンダム",
@@ -12,20 +12,29 @@
 		"month": 3,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/190_1778_s_h2mxh305ivuy373qc8b2cr225s2q.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/190_1778_s_h2mxh305ivuy373qc8b2cr225s2q.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/750/",
-	"extractedAt": "2025-12-05T23:09:47.502Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/190_1778_s_h2mxh305ivuy373qc8b2cr225s2q.jpg",
+		"path": "/images/items/01_0834/190_1778.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/750.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0750/0750.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/750/",
+	"itemId": "01_0834"
 }

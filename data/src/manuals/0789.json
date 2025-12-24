@@ -1,5 +1,5 @@
 {
-	"id": "0789",
+	"id": "789",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 モビルアーマーハシュマル",
@@ -12,20 +12,28 @@
 		"month": 12,
 		"day": 16
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1718_s_b3ogk0hnas45eb4ymqe3uyl7uumy.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1718_s_b3ogk0hnas45eb4ymqe3uyl7uumy.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/789/",
-	"extractedAt": "2025-12-05T23:09:47.562Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_1718_s_b3ogk0hnas45eb4ymqe3uyl7uumy.jpg",
+		"path": "/manuals/0789/158_1718.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 鉄血のオルフェンズ",
+		"en": "Mobile Suit Gundam Iron-Blooded Orphans"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/789.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0789/0789.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/789/"
 }

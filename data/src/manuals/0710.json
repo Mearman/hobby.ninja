@@ -1,5 +1,5 @@
 {
-	"id": "0710",
+	"id": "710",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 キュベレイパピヨン",
@@ -12,20 +12,29 @@
 		"month": 2,
 		"day": 15
 	},
-	"productImage": "https://bandai-hobby.net/images/155_1046_s_x2z6pa86u1zwewrkadydmfq8w75y.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_1046_s_x2z6pa86u1zwewrkadydmfq8w75y.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/710/",
-	"extractedAt": "2025-12-05T23:09:47.445Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_1046_s_x2z6pa86u1zwewrkadydmfq8w75y.jpg",
+		"path": "/images/items/01_0049/155_1046.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/710.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0710/0710.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/710/",
+	"itemId": "01_0049"
 }

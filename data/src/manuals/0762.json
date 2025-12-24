@@ -1,5 +1,5 @@
 {
-	"id": "0762",
+	"id": "762",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガンダムグシオン",
@@ -12,20 +12,29 @@
 		"month": 12,
 		"day": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1418_s_84jirtj97iq678r1zdqym59q87fq.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1418_s_84jirtj97iq678r1zdqym59q87fq.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/762/",
-	"extractedAt": "2025-12-05T23:09:47.519Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1418_s_84jirtj97iq678r1zdqym59q87fq.jpg",
+		"path": "/images/items/01_0450/156_1418.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 鉄血のオルフェンズ",
+		"en": "Mobile Suit Gundam Iron-Blooded Orphans"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/762.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0762/0762.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/762/",
+	"itemId": "01_0450"
 }

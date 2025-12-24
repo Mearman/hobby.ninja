@@ -1,5 +1,5 @@
 {
-	"id": "0729",
+	"id": "729",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC 1/144 ボールデンアームアームズ",
@@ -12,20 +12,29 @@
 		"month": 5,
 		"day": 15
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1305_s_zwjg7rp8t4nmjpb162kgogjdf2qn.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1305_s_zwjg7rp8t4nmjpb162kgogjdf2qn.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/729/",
-	"extractedAt": "2025-12-05T23:09:47.469Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1305_s_zwjg7rp8t4nmjpb162kgogjdf2qn.jpg",
+		"path": "/images/items/01_0326/156_1305.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/729.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0729/0729.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/729/",
+	"itemId": "01_0326"
 }

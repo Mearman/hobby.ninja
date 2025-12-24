@@ -1,5 +1,5 @@
 {
-	"id": "0783",
+	"id": "783",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガンダムグシオン リベイクフルシティ",
@@ -12,20 +12,28 @@
 		"month": 10,
 		"day": 22
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1667_s_w1jl4v0kf4fycgl6layap2t68asi.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1667_s_w1jl4v0kf4fycgl6layap2t68asi.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/783/",
-	"extractedAt": "2025-12-05T23:09:47.554Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1667_s_w1jl4v0kf4fycgl6layap2t68asi.jpg",
+		"path": "/manuals/0783/156_1667.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 鉄血のオルフェンズ",
+		"en": "Mobile Suit Gundam Iron-Blooded Orphans"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/783.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0783/0783.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/783/"
 }

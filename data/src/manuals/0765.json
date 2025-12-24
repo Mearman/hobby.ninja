@@ -1,5 +1,5 @@
 {
-	"id": "0765",
+	"id": "765",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 MSオプションセット2＆CGS モビルワーカー（宇宙用）",
@@ -12,20 +12,29 @@
 		"month": 11,
 		"day": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1400_s_n0aa8xo0kwpzdo7f0uoteyfnme6m.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1400_s_n0aa8xo0kwpzdo7f0uoteyfnme6m.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/765/",
-	"extractedAt": "2025-12-05T23:09:47.524Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1400_s_n0aa8xo0kwpzdo7f0uoteyfnme6m.jpg",
+		"path": "/images/items/01_0431/156_1400.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 鉄血のオルフェンズ",
+		"en": "Mobile Suit Gundam Iron-Blooded Orphans"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/765.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0765/0765.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/765/",
+	"itemId": "01_0431"
 }

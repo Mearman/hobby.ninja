@@ -1,5 +1,5 @@
 {
-	"id": "0771",
+	"id": "771",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 流星号(グレイズ改弐)",
@@ -12,20 +12,29 @@
 		"month": 1,
 		"day": 30
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1451_s_rhy1p5c5eu4w2shkxt7r568vyvwh.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1451_s_rhy1p5c5eu4w2shkxt7r568vyvwh.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/771/",
-	"extractedAt": "2025-12-05T23:09:47.534Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1451_s_rhy1p5c5eu4w2shkxt7r568vyvwh.jpg",
+		"path": "/images/items/01_0486/156_1451.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 鉄血のオルフェンズ",
+		"en": "Mobile Suit Gundam Iron-Blooded Orphans"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/771.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0771/0771.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/771/",
+	"itemId": "01_0486"
 }

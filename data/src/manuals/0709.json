@@ -1,5 +1,5 @@
 {
-	"id": "0709",
+	"id": "709",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 ケンプファーアメイジング",
@@ -12,20 +12,28 @@
 		"month": 1,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/155_1027_s_dfsktqxhw4c31t3duyegkw7wl25r.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_1027_s_dfsktqxhw4c31t3duyegkw7wl25r.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/709/",
-	"extractedAt": "2025-12-05T23:09:47.443Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_1027_s_dfsktqxhw4c31t3duyegkw7wl25r.jpg",
+		"path": "/manuals/0709/155_1027.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/709.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0709/0709.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/709/"
 }

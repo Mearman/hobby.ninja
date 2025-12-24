@@ -1,5 +1,5 @@
 {
-	"id": "0743",
+	"id": "743",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 ガンダムダブルオーシアクアンタ",
@@ -12,20 +12,29 @@
 		"month": 9,
 		"day": 17
 	},
-	"productImage": "https://bandai-hobby.net/images/157_1645_s_usk2ynu8ntm1s6fyzh39qj1mcelt.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_1645_s_usk2ynu8ntm1s6fyzh39qj1mcelt.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/743/",
-	"extractedAt": "2025-12-05T23:09:47.490Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_1645_s_usk2ynu8ntm1s6fyzh39qj1mcelt.jpg",
+		"path": "/images/items/01_0693/157_1645.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/743.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0743/0743.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/743/",
+	"itemId": "01_0693"
 }

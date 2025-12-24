@@ -1,5 +1,5 @@
 {
-	"id": "0720",
+	"id": "720",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC 1/144 ハイパーガンプラバトルウェポンズ",
@@ -12,20 +12,29 @@
 		"month": 1,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/157_1029_s_by9042gx9zdnzrkkjatu3qmufhlr.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_1029_s_by9042gx9zdnzrkkjatu3qmufhlr.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/720/",
-	"extractedAt": "2025-12-05T23:09:47.457Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_1029_s_by9042gx9zdnzrkkjatu3qmufhlr.jpg",
+		"path": "/images/items/01_0031/157_1029.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/720.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0720/0720.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/720/",
+	"itemId": "01_0031"
 }

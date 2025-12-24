@@ -1,5 +1,5 @@
 {
-	"id": "0717",
+	"id": "717",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC 1/144 メテオホッパー",
@@ -12,20 +12,29 @@
 		"month": 12,
 		"day": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/155_998_s_6jc2tuwpc7m270ykp0jdphcla6vh.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_998_s_6jc2tuwpc7m270ykp0jdphcla6vh.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/717/",
-	"extractedAt": "2025-12-05T23:09:47.454Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_998_s_6jc2tuwpc7m270ykp0jdphcla6vh.jpg",
+		"path": "/images/items/01_5920/155_998.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/717.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0717/0717.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/717/",
+	"itemId": "01_5920"
 }

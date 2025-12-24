@@ -1,5 +1,5 @@
 {
-	"id": "0774",
+	"id": "774",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガンダムバルバトス第6形態",
@@ -12,20 +12,29 @@
 		"month": 2,
 		"day": 27
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1466_s_f6mck2jlo6gt5oym3upmuwrm9z72.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1466_s_f6mck2jlo6gt5oym3upmuwrm9z72.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/774/",
-	"extractedAt": "2025-12-05T23:09:47.537Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1466_s_f6mck2jlo6gt5oym3upmuwrm9z72.jpg",
+		"path": "/images/items/01_0502/156_1466.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 鉄血のオルフェンズ",
+		"en": "Mobile Suit Gundam Iron-Blooded Orphans"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/774.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0774/0774.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/774/",
+	"itemId": "01_0502"
 }

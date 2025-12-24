@@ -1,5 +1,5 @@
 {
-	"id": "0733",
+	"id": "733",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 ガンダムトライオン３",
@@ -12,20 +12,29 @@
 		"month": 6,
 		"day": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1322_s_mufx908ki5rnzqkssvugt728o59r.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1322_s_mufx908ki5rnzqkssvugt728o59r.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/733/",
-	"extractedAt": "2025-12-05T23:09:47.477Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1322_s_mufx908ki5rnzqkssvugt728o59r.jpg",
+		"path": "/images/items/01_0345/156_1322.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/733.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0733/0733.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/733/",
+	"itemId": "01_0345"
 }

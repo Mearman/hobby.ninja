@@ -1,5 +1,5 @@
 {
-	"id": "0753",
+	"id": "753",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 ガンダムシュバルツリッター",
@@ -12,20 +12,29 @@
 		"month": 5,
 		"day": 20
 	},
-	"productImage": "https://bandai-hobby.net/images/159_1938_s_uqo0ujx26vdre901lwixhmyssumn.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_1938_s_uqo0ujx26vdre901lwixhmyssumn.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/753/",
-	"extractedAt": "2025-12-05T23:09:47.506Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_1938_s_uqo0ujx26vdre901lwixhmyssumn.jpg",
+		"path": "/images/items/01_1001/159_1938.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/753.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0753/0753.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/753/",
+	"itemId": "01_1001"
 }

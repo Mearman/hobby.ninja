@@ -1,5 +1,5 @@
 {
-	"id": "0755",
+	"id": "755",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 チナッガイ",
@@ -12,20 +12,29 @@
 		"month": 7,
 		"day": 29
 	},
-	"productImage": "https://bandai-hobby.net/images/189_1986_s_cqcw4nj24j06h8xczexzpjoz60j7.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_1986_s_cqcw4nj24j06h8xczexzpjoz60j7.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/755/",
-	"extractedAt": "2025-12-05T23:09:47.509Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_1986_s_cqcw4nj24j06h8xczexzpjoz60j7.jpg",
+		"path": "/images/items/01_1051/189_1986.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/755.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0755/0755.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/755/",
+	"itemId": "01_1051"
 }

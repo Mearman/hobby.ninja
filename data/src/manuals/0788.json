@@ -1,5 +1,5 @@
 {
-	"id": "0788",
+	"id": "788",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 MSオプションセット6 ＆ HDモビルワーカー",
@@ -12,20 +12,29 @@
 		"month": 11,
 		"day": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1685_s_b6x6xpxlsddgzkuligjqaqxnj9th.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1685_s_b6x6xpxlsddgzkuligjqaqxnj9th.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/788/",
-	"extractedAt": "2025-12-05T23:09:47.561Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1685_s_b6x6xpxlsddgzkuligjqaqxnj9th.jpg",
+		"path": "/images/items/01_0734/156_1685.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 鉄血のオルフェンズ",
+		"en": "Mobile Suit Gundam Iron-Blooded Orphans"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/788.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0788/0788.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/788/",
+	"itemId": "01_0734"
 }

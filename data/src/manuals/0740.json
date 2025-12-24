@@ -1,5 +1,5 @@
 {
-	"id": "0740",
+	"id": "740",
 	"type": "manual",
 	"name": {
 		"ja": "SDBF 紅武者アメイジング",
@@ -12,19 +12,28 @@
 		"month": 8,
 		"day": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1359_s_327zcyviqecjghuwza8cenjkhhvv.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1359_s_327zcyviqecjghuwza8cenjkhhvv.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/740/",
-	"extractedAt": "2025-12-05T23:09:47.486Z",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["buildfighters"],
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1359_s_327zcyviqecjghuwza8cenjkhhvv.jpg",
+		"path": "/images/items/01_0385/156_1359.jpg"
+	},
+	"brand": {
+		"ja": "SDBF",
+		"en": "SDBF"
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/740.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0740/0740.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/740/",
+	"itemId": "01_0385"
 }

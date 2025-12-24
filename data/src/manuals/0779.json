@@ -1,5 +1,5 @@
 {
-	"id": "0779",
+	"id": "779",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガンダムアスタロト",
@@ -12,20 +12,29 @@
 		"month": 5,
 		"day": 13
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1510_s_oy90etaz4yg94698gm0iida463sf.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1510_s_oy90etaz4yg94698gm0iida463sf.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/779/",
-	"extractedAt": "2025-12-05T23:09:47.546Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1510_s_oy90etaz4yg94698gm0iida463sf.jpg",
+		"path": "/images/items/01_0551/156_1510.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 鉄血のオルフェンズ",
+		"en": "Mobile Suit Gundam Iron-Blooded Orphans"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/779.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0779/0779.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/779/",
+	"itemId": "01_0551"
 }

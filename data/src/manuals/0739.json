@@ -1,5 +1,5 @@
 {
-	"id": "0739",
+	"id": "739",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC 1/144 次元ビルドナックルズ「角」",
@@ -12,20 +12,29 @@
 		"month": 7,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/157_1338_s_nv1d36zdayznj464rwnehsc9whmj.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_1338_s_nv1d36zdayznj464rwnehsc9whmj.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/739/",
-	"extractedAt": "2025-12-05T23:09:47.484Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_1338_s_nv1d36zdayznj464rwnehsc9whmj.jpg",
+		"path": "/images/items/01_0362/157_1338.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/739.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0739/0739.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/739/",
+	"itemId": "01_0362"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0734",
+	"id": "734",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 ディナイアルガンダム",
@@ -12,20 +12,28 @@
 		"month": 5,
 		"day": 23
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1313_s_ubk7aoyqxo4qxsgz52maflh06drw.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1313_s_ubk7aoyqxo4qxsgz52maflh06drw.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/734/",
-	"extractedAt": "2025-12-05T23:09:47.478Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1313_s_ubk7aoyqxo4qxsgz52maflh06drw.jpg",
+		"path": "/manuals/0734/156_1313.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/734.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0734/0734.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/734/"
 }

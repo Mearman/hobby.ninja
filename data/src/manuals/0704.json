@@ -1,5 +1,5 @@
 {
-	"id": "0704",
+	"id": "704",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 ガンダムＸ魔王",
@@ -12,20 +12,28 @@
 		"month": 11,
 		"day": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/155_965_s_2nd8e2fbtq82ivxjogo15dk683me.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_965_s_2nd8e2fbtq82ivxjogo15dk683me.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/704/",
-	"extractedAt": "2025-12-05T23:09:47.432Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_965_s_2nd8e2fbtq82ivxjogo15dk683me.jpg",
+		"path": "/manuals/0704/155_965.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/704.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0704/0704.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/704/"
 }

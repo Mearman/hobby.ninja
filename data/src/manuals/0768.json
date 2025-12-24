@@ -1,5 +1,5 @@
 {
-	"id": "0768",
+	"id": "768",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 百錬",
@@ -12,20 +12,29 @@
 		"month": 11,
 		"day": 14
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1402_s_mc0q97dmys2guph3sff32bqlt70l.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1402_s_mc0q97dmys2guph3sff32bqlt70l.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/768/",
-	"extractedAt": "2025-12-05T23:09:47.530Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1402_s_mc0q97dmys2guph3sff32bqlt70l.jpg",
+		"path": "/images/items/01_0433/156_1402.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 鉄血のオルフェンズ",
+		"en": "Mobile Suit Gundam Iron-Blooded Orphans"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/768.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0768/0768.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/768/",
+	"itemId": "01_0433"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0724",
+	"id": "724",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC GPベース",
@@ -12,19 +12,28 @@
 		"month": 11,
 		"day": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/155_966_s_6gt55gjwej8cb9v7gk3oef3fh14t.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_966_s_6gt55gjwej8cb9v7gk3oef3fh14t.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/724/",
-	"extractedAt": "2025-12-05T23:09:47.463Z",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_966_s_6gt55gjwej8cb9v7gk3oef3fh14t.jpg",
+		"path": "/images/items/01_5888/155_966.jpg"
+	},
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/724.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0724/0724.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/724/",
+	"itemId": "01_5888"
 }

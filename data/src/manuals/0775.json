@@ -1,5 +1,5 @@
 {
-	"id": "0775",
+	"id": "775",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガンダムキマリストルーパー",
@@ -12,20 +12,29 @@
 		"month": 3,
 		"day": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1472_s_y4lhwa6cn4mmy94o6ab4fcrqhixo.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1472_s_y4lhwa6cn4mmy94o6ab4fcrqhixo.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/775/",
-	"extractedAt": "2025-12-05T23:09:47.539Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1472_s_y4lhwa6cn4mmy94o6ab4fcrqhixo.jpg",
+		"path": "/images/items/01_0509/156_1472.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 鉄血のオルフェンズ",
+		"en": "Mobile Suit Gundam Iron-Blooded Orphans"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/775.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0775/0775.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/775/",
+	"itemId": "01_0509"
 }

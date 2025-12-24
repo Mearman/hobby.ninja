@@ -1,5 +1,5 @@
 {
-	"id": "0708",
+	"id": "708",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 スタービルドストライクガンダム プラフスキーウイング",
@@ -12,20 +12,28 @@
 		"month": 1,
 		"day": 18
 	},
-	"productImage": "https://bandai-hobby.net/images/155_1036_s_us4kkoifxctf3coxpt22x5cop1t3.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_1036_s_us4kkoifxctf3coxpt22x5cop1t3.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/708/",
-	"extractedAt": "2025-12-05T23:09:47.440Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_1036_s_us4kkoifxctf3coxpt22x5cop1t3.jpg",
+		"path": "/manuals/0708/155_1036.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/708.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0708/0708.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/708/"
 }

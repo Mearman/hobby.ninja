@@ -1,5 +1,5 @@
 {
-	"id": "0767",
+	"id": "767",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガンダムバルバトス ＆ 長距離輸送ブースター クタン参型",
@@ -12,20 +12,29 @@
 		"month": 12,
 		"day": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1419_s_apw2y7qvmmjym3n8eeg3els1yryz.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1419_s_apw2y7qvmmjym3n8eeg3els1yryz.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/767/",
-	"extractedAt": "2025-12-05T23:09:47.529Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1419_s_apw2y7qvmmjym3n8eeg3els1yryz.jpg",
+		"path": "/images/items/01_0451/156_1419.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 鉄血のオルフェンズ",
+		"en": "Mobile Suit Gundam Iron-Blooded Orphans"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/767.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0767/0767.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/767/",
+	"itemId": "01_0451"
 }

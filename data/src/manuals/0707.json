@@ -1,5 +1,5 @@
 {
-	"id": "0707",
+	"id": "707",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 ウイングガンダムフェニーチェ",
@@ -12,20 +12,28 @@
 		"month": 12,
 		"day": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/155_997_s_dy41n3o8kqlfoeu8ttvln4rkvzwc.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_997_s_dy41n3o8kqlfoeu8ttvln4rkvzwc.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/707/",
-	"extractedAt": "2025-12-05T23:09:47.438Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_997_s_dy41n3o8kqlfoeu8ttvln4rkvzwc.jpg",
+		"path": "/manuals/0707/155_997.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/707.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0707/0707.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/707/"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0747",
+	"id": "747",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 ベアッガイP(プリティ）",
@@ -12,20 +12,29 @@
 		"month": 9,
 		"day": 10
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1639_s_gwml9hwf8930c7pc5mh6l06fjyew.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1639_s_gwml9hwf8930c7pc5mh6l06fjyew.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/747/",
-	"extractedAt": "2025-12-05T23:09:47.498Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1639_s_gwml9hwf8930c7pc5mh6l06fjyew.jpg",
+		"path": "/images/items/01_0688/156_1639.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/747.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0747/0747.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/747/",
+	"itemId": "01_0688"
 }

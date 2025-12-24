@@ -1,5 +1,5 @@
 {
-	"id": "0751",
+	"id": "751",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 パパッガイ",
@@ -12,20 +12,29 @@
 		"month": 2,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/189_1758_s_lllhyidv2816e6r8w63h8ng0kuzx.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_1758_s_lllhyidv2816e6r8w63h8ng0kuzx.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/751/",
-	"extractedAt": "2025-12-05T23:09:47.503Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_1758_s_lllhyidv2816e6r8w63h8ng0kuzx.jpg",
+		"path": "/images/items/01_0812/189_1758.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/751.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0751/0751.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/751/",
+	"itemId": "01_0812"
 }

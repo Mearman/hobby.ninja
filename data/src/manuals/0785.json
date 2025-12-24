@@ -1,5 +1,5 @@
 {
-	"id": "0785",
+	"id": "785",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ユーゴー",
@@ -12,20 +12,29 @@
 		"month": 10,
 		"day": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1660_s_iyxe56kbdqwayqnedt5qzqe6y5yb.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1660_s_iyxe56kbdqwayqnedt5qzqe6y5yb.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/785/",
-	"extractedAt": "2025-12-05T23:09:47.557Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1660_s_iyxe56kbdqwayqnedt5qzqe6y5yb.jpg",
+		"path": "/images/items/01_0710/156_1660.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 鉄血のオルフェンズ",
+		"en": "Mobile Suit Gundam Iron-Blooded Orphans"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/785.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0785/0785.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/785/",
+	"itemId": "01_0710"
 }

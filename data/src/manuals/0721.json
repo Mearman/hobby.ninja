@@ -1,5 +1,5 @@
 {
-	"id": "0721",
+	"id": "721",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC 1/144 K9ドッグパック",
@@ -12,20 +12,29 @@
 		"month": 2,
 		"day": 22
 	},
-	"productImage": "https://bandai-hobby.net/images/155_1051_s_w9jzrdcm0me294r17e7lhf9hw6gv.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_1051_s_w9jzrdcm0me294r17e7lhf9hw6gv.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/721/",
-	"extractedAt": "2025-12-05T23:09:47.458Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_1051_s_w9jzrdcm0me294r17e7lhf9hw6gv.jpg",
+		"path": "/images/items/01_0054/155_1051.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/721.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0721/0721.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/721/",
+	"itemId": "01_0054"
 }

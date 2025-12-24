@@ -1,5 +1,5 @@
 {
-	"id": "0736",
+	"id": "736",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 ガンダムレオパルド・ダ・ヴィンチ",
@@ -12,20 +12,29 @@
 		"month": 8,
 		"day": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1357_s_05uucbufbkwj7arbb3kdhye9x9yt.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1357_s_05uucbufbkwj7arbb3kdhye9x9yt.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/736/",
-	"extractedAt": "2025-12-05T23:09:47.480Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1357_s_05uucbufbkwj7arbb3kdhye9x9yt.jpg",
+		"path": "/images/items/01_0383/156_1357.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/736.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0736/0736.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/736/",
+	"itemId": "01_0383"
 }

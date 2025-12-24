@@ -1,5 +1,5 @@
 {
-	"id": "0728",
+	"id": "728",
 	"type": "manual",
 	"name": {
 		"ja": "HGBF 1/144 トランジェントガンダム",
@@ -12,20 +12,28 @@
 		"month": 4,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1289_s_p2s0mcw7opirgqvhky1o5ml6fyo8.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1289_s_p2s0mcw7opirgqvhky1o5ml6fyo8.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/728/",
-	"extractedAt": "2025-12-05T23:09:47.468Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_1289_s_p2s0mcw7opirgqvhky1o5ml6fyo8.jpg",
+		"path": "/manuals/0728/158_1289.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/728.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0728/0728.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/728/"
 }

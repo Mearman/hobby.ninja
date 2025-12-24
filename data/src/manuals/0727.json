@@ -1,5 +1,5 @@
 {
-	"id": "0727",
+	"id": "727",
 	"type": "manual",
 	"name": {
 		"ja": "SDBF スターウイニングガンダム",
@@ -12,19 +12,27 @@
 		"month": 2,
 		"day": 28
 	},
-	"productImage": "https://bandai-hobby.net/images/191_1261_s_hkl6o6bzivbdmb2sb3ov8jo4lxta.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/191_1261_s_hkl6o6bzivbdmb2sb3ov8jo4lxta.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/727/",
-	"extractedAt": "2025-12-05T23:09:47.467Z",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["buildfighters"],
+	"image": {
+		"src": "https://bandai-hobby.net/images/191_1261_s_hkl6o6bzivbdmb2sb3ov8jo4lxta.jpg",
+		"path": "/manuals/0727/191_1261.jpg"
+	},
+	"brand": {
+		"ja": "SDBF",
+		"en": "SDBF"
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/727.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0727/0727.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/727/"
 }
