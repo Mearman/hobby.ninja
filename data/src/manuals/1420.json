@@ -12,19 +12,27 @@
 		"month": 3,
 		"day": 23
 	},
-	"productImage": "https://bandai-hobby.net/images/196_5961_s_z9ncc7jo27vcha8aztmbfjeylbbs.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_5961_s_z9ncc7jo27vcha8aztmbfjeylbbs.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1420/",
-	"extractedAt": "2025-12-05T23:09:48.194Z",
-	"brandIds": [],
-	"seriesIds": ["gundambuildmetaverse"],
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_5961_s_z9ncc7jo27vcha8aztmbfjeylbbs.jpg",
+		"path": "/manuals/1420/196_5961.jpg"
+	},
+	"brand": {
+		"ja": "Figure-rise Standard",
+		"en": "Figure-rise Standard"
+	},
+	"series": {
+		"ja": "ガンダムビルドメタバース",
+		"en": "Gundam Build Metaverse"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1420.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1420/1420.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1420/"
 }
