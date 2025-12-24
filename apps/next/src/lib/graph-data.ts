@@ -67,15 +67,16 @@ let _allSeriesCache: Series[] | null = null;
 let _allManualsCache: Manual[] | null = null;
 
 // Type for enriched item with resolved relationship names
+// Note: Property names like seriesName/brandName/categoryName avoid conflict with Item's array properties
 export type EnrichedItem = Item & {
-	series?: string;
-	seriesId?: string;
-	grade?: string;
-	scale?: string;
-	brand?: string;
-	brandId?: string;
-	categoryId?: string;
-	category?: string;
+	seriesName?: string;
+	firstSeriesId?: string;
+	gradeName?: string;
+	scaleName?: string;
+	brandName?: string;
+	firstBrandId?: string;
+	firstCategoryId?: string;
+	categoryName?: string;
 };
 
 // Helper function to get node name by ID
@@ -120,8 +121,8 @@ function extractGradeFromItem(item: Item): string {
 	}
 
 	// Check brand for grade information
-	for (const brandId of item.brandIds) {
-		const brandName = getBrandNameById(brandId).toLowerCase();
+	for (const brand of item.brands) {
+		const brandName = getBrandNameById(brand.id).toLowerCase();
 		if (brandName.includes("pg") || brandName.includes("perfect grade")) return "PG";
 		if (brandName.includes("mg") || brandName.includes("master grade")) return "MG";
 		if (brandName.includes("rg") || brandName.includes("real grade")) return "RG";
@@ -138,32 +139,32 @@ function enrichItemWithRelationships(item: Item): EnrichedItem {
 	const enrichedItem: EnrichedItem = { ...item };
 
 	// Resolve series (use first one)
-	if (item.seriesIds.length > 0) {
-		enrichedItem.seriesId = item.seriesIds[0];
-		enrichedItem.series = getSeriesNameById(item.seriesIds[0]);
+	if (item.series.length > 0) {
+		enrichedItem.firstSeriesId = item.series[0].id;
+		enrichedItem.seriesName = getSeriesNameById(item.series[0].id);
 	}
 
 	// Resolve brand (use first one)
-	if (item.brandIds.length > 0) {
-		enrichedItem.brandId = item.brandIds[0];
-		enrichedItem.brand = getBrandNameById(item.brandIds[0]);
+	if (item.brands.length > 0) {
+		enrichedItem.firstBrandId = item.brands[0].id;
+		enrichedItem.brandName = getBrandNameById(item.brands[0].id);
 	}
 
 	// Resolve category (use first one)
-	if (item.categoryIds.length > 0) {
-		enrichedItem.categoryId = item.categoryIds[0];
-		enrichedItem.category = getCategoryNameById(item.categoryIds[0]);
+	if (item.categories.length > 0) {
+		enrichedItem.firstCategoryId = item.categories[0].id;
+		enrichedItem.categoryName = getCategoryNameById(item.categories[0].id);
 	}
 
 	// Use scale from item data
 	if (item.scale) {
-		enrichedItem.scale = item.scale;
+		enrichedItem.scaleName = item.scale;
 	}
 
 	// Extract grade
 	const grade = extractGradeFromItem(item);
 	if (grade) {
-		enrichedItem.grade = grade;
+		enrichedItem.gradeName = grade;
 	}
 
 	return enrichedItem;
