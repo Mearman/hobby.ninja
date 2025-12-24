@@ -117,7 +117,7 @@ export default async function ScaleDetailPage({ params }: ScalePageProps) {
 			gradeDistribution.set(grade, (gradeDistribution.get(grade) ?? 0) + 1);
 		}
 		// Use first series ID from array
-		const seriesId = item.seriesIds[0];
+		const seriesId = item.series[0]?.id;
 		if (seriesId) {
 			seriesDistribution.set(seriesId, (seriesDistribution.get(seriesId) ?? 0) + 1);
 		}

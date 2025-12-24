@@ -21,7 +21,7 @@ import Link from "next/link";
 
 import { BrandsClient } from "./brands-client";
 
-import { getAllBrands, getAllItems } from "@/lib/graph-data";
+import { getAllBrands, getAllItems, type EnrichedItem } from "@/lib/graph-data";
 import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 import { categoryCard } from "@/styles/components.css";
 
@@ -38,26 +38,6 @@ interface Brand {
 	description?: string;
 	url?: string;
 	metadata?: Record<string, unknown>;
-}
-
-interface Item {
-	id: string;
-	type: string;
-	name: string | { ja: string; en?: string };
-	brand?: string;
-	price?: {
-		amount: number;
-		currency: string;
-	};
-	releaseDate?: {
-		ja: string;
-		year?: number;
-	};
-	grade?: string;
-	scale?: string;
-	category?: string;
-	series?: string;
-	tags?: string[];
 }
 
 interface BrandWithStats extends Brand {
@@ -95,7 +75,7 @@ const getCountryFlag = (country?: string): string => {
 };
 
 // Process brands with statistics from items
-function processBrandsWithStats(brandsData: Brand[], itemsData: Item[]): BrandWithStats[] {
+function processBrandsWithStats(brandsData: Brand[], itemsData: EnrichedItem[]): BrandWithStats[] {
 	// Process brands with statistics
 	const brandStats = new Map<string, {
 		count: number;
@@ -120,17 +100,17 @@ function processBrandsWithStats(brandsData: Brand[], itemsData: Item[]): BrandWi
 
 	// Collect statistics from items
 	for (const item of itemsData) {
-		if (item.type === "item" && item.brand) {
-			const stats = brandStats.get(item.brand);
+		if (item.firstBrandId) {
+			const stats = brandStats.get(item.firstBrandId);
 			if (stats) {
 				stats.count++;
 				if (item.price?.amount) {
 					stats.prices.push(item.price.amount);
 				}
-				if (item.grade) stats.grades.add(item.grade);
+				if (item.gradeName) stats.grades.add(item.gradeName);
 				if (item.scale) stats.scales.add(item.scale);
-				if (item.category) stats.categories.add(item.category);
-				if (item.series) stats.series.add(item.series);
+				if (item.categoryName) stats.categories.add(item.categoryName);
+				if (item.seriesName) stats.series.add(item.seriesName);
 			}
 		}
 	}
@@ -329,7 +309,7 @@ function BrandStatistics({ brands }: { brands: BrandWithStats[] }) {
 export default function BrandsPage() {
 	// Load data synchronously
 	const brandsData = getAllBrands() as Brand[];
-	const itemsData = getAllItems() as Item[];
+	const itemsData = getAllItems();
 
 	// Process brands with statistics
 	const brands = processBrandsWithStats(brandsData, itemsData);

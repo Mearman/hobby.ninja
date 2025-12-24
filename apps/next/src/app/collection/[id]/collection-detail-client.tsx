@@ -124,9 +124,9 @@ function CollectionItemCard({
 						<Text className={itemCardTitle} lineClamp={2}>
 							{dbItem ? getNodeDisplayName(dbItem) : item.itemId}
 						</Text>
-						{dbItem?.seriesIds && dbItem.seriesIds.length > 0 && (
+						{(dbItem?.series ?? []).length > 0 && (
 							<Text className={itemCardSubtitle} lineClamp={1}>
-								<EntityList ids={dbItem.seriesIds} entityType="series" mode="text" size="xs" emptyText="" />
+								<EntityList ids={(dbItem?.series ?? []).map(s => s.id)} entityType="series" mode="text" size="xs" emptyText="" />
 							</Text>
 						)}
 						<Box className={itemCardMetadata}>
@@ -178,9 +178,9 @@ function CollectionItemCard({
 						/>
 						<Box>
 							<Text fw={500}>{dbItem ? getNodeDisplayName(dbItem) : item.itemId}</Text>
-							{dbItem?.seriesIds && dbItem.seriesIds.length > 0 && (
+							{(dbItem?.series ?? []).length > 0 && (
 								<Text size="sm" c="dimmed">
-									<EntityList ids={dbItem.seriesIds} entityType="series" mode="text" size="sm" emptyText="" />
+									<EntityList ids={(dbItem?.series ?? []).map(s => s.id)} entityType="series" mode="text" size="sm" emptyText="" />
 								</Text>
 							)}
 						</Box>
@@ -300,8 +300,8 @@ function ItemFormModal({
 							/>
 							<Box>
 								<Text fw={500}>{dbItem ? getNodeDisplayName(dbItem) : item.itemId}</Text>
-								{dbItem?.seriesIds && dbItem.seriesIds.length > 0
-									? <EntityList ids={dbItem.seriesIds} entityType="series" mode="text" size="sm" emptyText="" />
+								{(dbItem?.series ?? []).length > 0
+									? <EntityList ids={(dbItem?.series ?? []).map(s => s.id)} entityType="series" mode="text" size="sm" emptyText="" />
 									: <Text size="sm" c="dimmed">{item.itemId}</Text>
 								}
 							</Box>

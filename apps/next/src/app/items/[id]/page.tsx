@@ -89,10 +89,10 @@ export default async function ItemPage({ params }: ItemPageProps) {
 	const descriptionItems = getDescriptionItems(item);
 
 	// Resolve relationship names from IDs
-	const categories = item.categoryIds.map(id => getCategoryById(id)).filter((c): c is NonNullable<typeof c> => c != null);
-	const brands = item.brandIds.map(id => getBrandById(id)).filter((b): b is NonNullable<typeof b> => b != null);
-	const seriesList = item.seriesIds.map(id => getSeriesById(id)).filter((s): s is NonNullable<typeof s> => s != null);
-	const manual = item.manualId ? getManualById(item.manualId) : undefined;
+	const categories = item.categories.map(c => getCategoryById(c.id)).filter((c): c is NonNullable<typeof c> => c != null);
+	const brands = item.brands.map(b => getBrandById(b.id)).filter((b): b is NonNullable<typeof b> => b != null);
+	const seriesList = item.series.map(s => getSeriesById(s.id)).filter((s): s is NonNullable<typeof s> => s != null);
+	const manual = item.manual?.id ? getManualById(item.manual.id) : undefined;
 
 	// Get item images, falling back to displayImage (which may come from manual)
 	// Resolve all image URLs to CDN URLs

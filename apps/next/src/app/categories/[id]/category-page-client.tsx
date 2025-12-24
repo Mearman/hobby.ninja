@@ -79,14 +79,14 @@ export function CategoryPageClient({
 			}
 
 			// Collect filter options
-			for (const brandId of item.brandIds) {
-				brands.add(brandId);
+			for (const brand of item.brands) {
+				brands.add(brand.id);
 			}
 			const grade = getNodePrimaryGrade(item);
 			if (grade) grades.add(grade);
 			if (item.scale) scales.add(item.scale);
-			for (const seriesId of item.seriesIds) {
-				series.add(seriesId);
+			for (const s of item.series) {
+				series.add(s.id);
 			}
 		}
 

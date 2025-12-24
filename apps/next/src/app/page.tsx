@@ -168,7 +168,7 @@ function SeriesCard({ seriesItem }: SeriesCardProps): React.ReactElement {
 }
 
 // Convert release date to comparable number (YYYYMMDD)
-function releaseDateToNumber(releaseDate?: { year?: number; month?: number; day?: number }): number {
+function releaseDateToNumber(releaseDate?: { year?: number | null; month?: number | null; day?: number | null }): number {
 	if (!releaseDate?.year) return 0;
 	const year = releaseDate.year;
 	const month = releaseDate.month ?? 1;
