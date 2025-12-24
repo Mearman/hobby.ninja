@@ -54,6 +54,8 @@ export interface ItemImage {
 	src?: string;
 	/** Local path after download (e.g., /images/items/01_1000/153_1937.jpg) */
 	path?: string;
+	/** MD5 hash of image file contents for deduplication */
+	hash?: string;
 }
 
 /** Images grouped by type */

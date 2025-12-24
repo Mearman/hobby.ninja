@@ -27,7 +27,7 @@ import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
 import { chromium, type Browser, type BrowserContext, type Route } from "playwright";
 
 
-import { writeJsonIfChanged } from "../utils/file-utils.js";
+import { computeBufferHash, computeFileHash, writeJsonIfChanged } from "../utils/file-utils.js";
 import { findExistingItemImage, stripEphemeralImageUrls } from "../utils/image-utils.js";
 
 
@@ -1174,6 +1174,9 @@ export class ScrapeCommand {
 		const existingItemPath = await findExistingItemImage(filenamePrefix);
 		if (existingItemPath) {
 			manualData.image.path = existingItemPath;
+			// Compute hash from the existing item image file
+			const absoluteItemPath = resolveWorkspacePath(`assets${existingItemPath}`);
+			manualData.image.hash = await computeFileHash(absoluteItemPath);
 			console.log(`    Found existing image: ${existingItemPath}`);
 
 			// Remove ALL image files from manual assets (they're duplicates)
@@ -1193,6 +1196,7 @@ export class ScrapeCommand {
 		try {
 			await fs.access(manualLocalPath);
 			manualData.image.path = relativePath;
+			manualData.image.hash = await computeFileHash(manualLocalPath);
 			console.log(`    Image already exists: ${cleanFilename}`);
 			// Clean up any incorrectly named duplicates
 			await this.cleanupManualImages(manualImageDir, cleanFilename);
@@ -1224,6 +1228,7 @@ export class ScrapeCommand {
 			const buffer = Buffer.from(arrayBuffer);
 			await fs.writeFile(manualLocalPath, buffer);
 			manualData.image.path = relativePath;
+			manualData.image.hash = computeBufferHash(buffer);
 			console.log(`    Downloaded image: ${cleanFilename}`);
 		} catch (error) {
 			const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
@@ -1576,8 +1581,9 @@ export class ScrapeCommand {
 			// Check if already downloaded
 			try {
 				await fs.access(localPath);
-				// File exists, update path in image object
+				// File exists, update path and compute hash
 				image.path = relativePath;
+				image.hash = await computeFileHash(localPath);
 				stats.skipped++;
 				continue;
 			} catch {
@@ -1589,6 +1595,7 @@ export class ScrapeCommand {
 				const imageBuffer = await this.downloadImage(image.src);
 				await fs.writeFile(localPath, imageBuffer);
 				image.path = relativePath;
+				image.hash = computeBufferHash(imageBuffer);
 				stats.downloaded++;
 				console.log(`    Downloaded: ${filename}`);
 			} catch (error) {

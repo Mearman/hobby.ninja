@@ -2,6 +2,7 @@
  * File utilities for efficient file operations
  */
 
+import { createHash } from "node:crypto";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 
@@ -53,4 +54,33 @@ export function writeJsonIfChangedSync(
 
 	writeFileSync(filePath, newContent);
 	return true;
+}
+
+/**
+ * Compute MD5 hash of a buffer
+ * @param buffer - The buffer to hash
+ * @returns MD5 hash as lowercase hex string
+ */
+export function computeBufferHash(buffer: Buffer): string {
+	return createHash("md5").update(buffer).digest("hex");
+}
+
+/**
+ * Compute MD5 hash of a file
+ * @param filePath - Path to the file
+ * @returns MD5 hash as lowercase hex string
+ */
+export async function computeFileHash(filePath: string): Promise<string> {
+	const buffer = await readFile(filePath);
+	return computeBufferHash(buffer);
+}
+
+/**
+ * Synchronous version: Compute MD5 hash of a file
+ * @param filePath - Path to the file
+ * @returns MD5 hash as lowercase hex string
+ */
+export function computeFileHashSync(filePath: string): string {
+	const buffer = readFileSync(filePath);
+	return computeBufferHash(buffer);
 }
