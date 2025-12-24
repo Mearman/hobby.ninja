@@ -11,20 +11,29 @@
 		"year": 2021,
 		"month": 1
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4270_s_e7fgnpo5sroqbjere0qovu4z5zw4.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4270_s_e7fgnpo5sroqbjere0qovu4z5zw4.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2391/",
-	"extractedAt": "2025-12-05T23:09:48.590Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4270_s_e7fgnpo5sroqbjere0qovu4z5zw4.jpg",
+		"path": "/images/items/01_3315/153_4270.jpg"
+	},
 	"scale": "1/60",
-	"brandIds": ["pg"],
-	"seriesIds": ["narrative"],
+	"brand": {
+		"ja": "PG",
+		"en": "P.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムNT（ナラティブ）",
+		"en": "Mobile Suit GundamNT (Narrative)"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2391.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2391/2391.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2391/",
+	"itemId": "01_3315"
 }

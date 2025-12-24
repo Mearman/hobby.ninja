@@ -11,20 +11,29 @@
 		"year": 2022,
 		"month": 4
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4957_s_d00n9bcoz22emonyp16er404wdzy.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4957_s_d00n9bcoz22emonyp16er404wdzy.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2357/",
-	"extractedAt": "2025-12-05T23:09:48.549Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4957_s_d00n9bcoz22emonyp16er404wdzy.jpg",
+		"path": "/images/items/01_4026/153_4957.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["fullmechanics"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "FULL MECHANICS",
+		"en": "FULL MECHANICS"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2357.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2357/2357.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2357/",
+	"itemId": "01_4026"
 }

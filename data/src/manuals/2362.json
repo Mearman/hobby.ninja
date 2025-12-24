@@ -5,26 +5,34 @@
 		"ja": "ＨＧ 1/144 ストライクダガー",
 		"en": "HG 1/144 Strike Dagger"
 	},
-	"productNumber": "2022",
 	"releaseDate": {
 		"ja": "2022年12月",
 		"year": 2022,
 		"month": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/153_5271_s_jdggw9dw1pa653853qe5g7o1mcm4.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_5271_s_jdggw9dw1pa653853qe5g7o1mcm4.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2362/",
-	"extractedAt": "2025-12-05T23:09:48.555Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_5271_s_jdggw9dw1pa653853qe5g7o1mcm4.jpg",
+		"path": "/images/items/01_4364/153_5271.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2362.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2362/2362.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2362/",
+	"itemId": "01_4364"
 }

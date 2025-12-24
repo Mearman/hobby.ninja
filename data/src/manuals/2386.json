@@ -11,27 +11,37 @@
 		"year": 2016,
 		"month": 5
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4943_s_ihgxigwbx0xu7q86l00x2t9bjz1o.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4943_s_ihgxigwbx0xu7q86l00x2t9bjz1o.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2386/",
-	"extractedAt": "2025-12-05T23:09:48.584Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4943_s_ihgxigwbx0xu7q86l00x2t9bjz1o.jpg",
+		"path": "/images/items/01_4012/153_4943.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-0083"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 0083 STARDUST MEMORY",
+		"en": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2386.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2386/2386.pdf"
 		},
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2386_2.pdf",
 			"name": {
 				"ja": "補足説明書",
 				"en": "Supplementary Manual"
-			}
+			},
+			"path": "/manuals/2386/2386_2.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2386/",
+	"itemId": "01_4012"
 }

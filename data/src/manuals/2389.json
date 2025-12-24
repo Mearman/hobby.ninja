@@ -11,20 +11,29 @@
 		"year": 2016,
 		"month": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4976_s_dzv6xx1g4r7ypa6jaqwvs0blpbs1.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4976_s_dzv6xx1g4r7ypa6jaqwvs0blpbs1.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2389/",
-	"extractedAt": "2025-12-05T23:09:48.587Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4976_s_dzv6xx1g4r7ypa6jaqwvs0blpbs1.jpg",
+		"path": "/images/items/01_4047/153_4976.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam-cca"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 逆襲のシャア",
+		"en": "Mobile Suit Gundam Char's Counterattack"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2389.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2389/2389.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2389/",
+	"itemId": "01_4047"
 }

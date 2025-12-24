@@ -2,7 +2,7 @@
 	"id": "2398",
 	"type": "manual",
 	"name": {
-		"ja": "ＨＧ 1/144 ガンダム TR-1 次世代量産機（実戦配備カラー）（ADVANCE OF Z ティターンズの旗のもとに）",
+		"ja": "ＨＧ 1/144 ガンダムTR-1 次世代量産機（実戦配備カラー）（ADVANCE OF Z ティターンズの旗のもとに）",
 		"en": "HG 1/144 GundamTR-1 next generation mass production machine (actual deployment color) (under the flag of ADVANCE OF Z Titans)"
 	},
 	"productNumber": "2558668",
@@ -11,31 +11,37 @@
 		"year": 2021,
 		"month": 2
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4280_s_ivlamjhhf3ow7lgdoox57buvvfgp.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4280_s_ivlamjhhf3ow7lgdoox57buvvfgp.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2398/",
-	"extractedAt": "2025-12-05T23:09:48.597Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4280_s_ivlamjhhf3ow7lgdoox57buvvfgp.jpg",
+		"path": "/images/items/01_3326/153_4280.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"advance-of-z"
-	],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ADVANCE OF Z",
+		"en": "ADVANCE OF Z"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2398.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2398/2398.pdf"
 		},
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2398_2.pdf",
 			"name": {
 				"ja": "補足説明書",
 				"en": "Supplementary Manual"
-			}
+			},
+			"path": "/manuals/2398/2398_2.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2398/",
+	"itemId": "01_3326"
 }
