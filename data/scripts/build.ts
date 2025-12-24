@@ -33,25 +33,69 @@ interface LocalizedString {
 	en?: string;
 }
 
+interface BrandRef {
+	id: string;
+	url?: string;
+	ja?: string;
+	en?: string;
+}
+
+interface SeriesRef {
+	id: string;
+	url?: string;
+	ja?: string;
+	en?: string;
+}
+
+interface CategoryRef {
+	id: string;
+	url?: string;
+	ja?: string;
+	en?: string;
+}
+
+interface RelatedItemRef {
+	id: string;
+	url?: string;
+	ja?: string;
+	en?: string;
+}
+
+interface ManualRef {
+	id: string;
+	url?: string;
+}
+
+interface SourceImage {
+	src: string;
+	path?: string;
+}
+
+interface ImagesObject {
+	product: SourceImage[];
+	instructions: SourceImage[];
+}
+
+// Images can be new format (object) or old format (array of strings)
+type Images = ImagesObject | string[];
+
 interface Item {
 	id: string;
 	type: string;
 	name: LocalizedString;
-	brandIds: string[];
-	seriesIds: string[];
-	categoryIds: string[];
-	relatedItemIds: string[];
-	/** Manual reference from source data */
-	manual?: { id: string; url: string };
-	/** Computed manualId for output */
-	manualId?: string;
+	brands: BrandRef[];
+	series: SeriesRef[];
+	categories: CategoryRef[];
+	relatedItems: RelatedItemRef[];
+	/** 1:1 manual relationship */
+	manual?: ManualRef;
 	scale?: string;
 	// Grades - keyed by root grade, value is array of specific grades
 	// e.g., { "hg": ["hg-uc"], "mg": [] }
 	grades?: Record<string, string[]>;
 	price?: { amount: number; currency: string };
 	releaseDate?: { year?: number; month?: number; day?: number };
-	images?: unknown[];
+	images?: Images;
 	displayImage?: string;
 	// Tag (localized) - e.g., "Hobby Online", "Event", "Gundam Base"
 	tag?: LocalizedString;
@@ -204,13 +248,23 @@ function writeJson(filePath: string, data: unknown): void {
 // Compute displayImage for each item (first image or manual.productImage fallback)
 function computeDisplayImages(items: Map<string, Item>, manuals: Map<string, Manual>): void {
 	for (const [, item] of items) {
-		// Get first item image if available
-		if (item.images && item.images.length > 0) {
-			const firstImage = item.images[0];
-			item.displayImage = typeof firstImage === "string" ? firstImage : (firstImage as { url: string }).url;
-		} else if (item.manualId) {
-			// Fall back to manual's productImage
-			const manual = manuals.get(item.manualId);
+		// Handle images - check both new format (object) and old format (array of strings)
+		if (item.images) {
+			if (Array.isArray(item.images)) {
+				// Old format: array of strings
+				if (item.images.length > 0) {
+					item.displayImage = item.images[0];
+				}
+			} else if (item.images.product && item.images.product.length > 0) {
+				// New format: object with product/instructions
+				const firstImage = item.images.product[0];
+				item.displayImage = firstImage.path ?? firstImage.src;
+			}
+		}
+
+		// Fall back to manual's productImage if no displayImage yet
+		if (!item.displayImage && item.manual?.id) {
+			const manual = manuals.get(item.manual.id);
 			if (manual?.productImage) {
 				item.displayImage = manual.productImage;
 			}
@@ -258,8 +312,8 @@ function extractGrades(item: Item, brands: Map<string, Brand>): Record<string, s
 	}
 
 	// Check brand names
-	for (const brandId of item.brandIds) {
-		const brand = brands.get(brandId);
+	for (const brandRef of item.brands ?? []) {
+		const brand = brands.get(brandRef.id);
 		if (brand) {
 			const brandName = (brand.name.en ?? brand.name.ja).toLowerCase();
 			for (const { pattern, grade } of GRADE_PATTERNS) {
@@ -430,11 +484,11 @@ function buildSearchData(items: Map<string, Item>, brands: Map<string, Brand>, s
 	const searchRecords: SearchRecord[] = [];
 
 	for (const [id, item] of items) {
-		const brandNames = item.brandIds
-			.map((bid) => brands.get(bid)?.name.en ?? bid)
+		const brandNames = (item.brands ?? [])
+			.map((ref) => brands.get(ref.id)?.name.en ?? ref.id)
 			.join(", ");
-		const seriesNames = item.seriesIds
-			.map((sid) => series.get(sid)?.name.en ?? sid)
+		const seriesNames = (item.series ?? [])
+			.map((ref) => series.get(ref.id)?.name.en ?? ref.id)
 			.join(", ");
 
 		searchRecords.push({
@@ -480,10 +534,17 @@ function buildHomepageData(
 	// Criteria: has image, gunpla category, released after 2010
 	const FEATURED_MAX_CANDIDATES = 200;
 
+	// Helper to check if item has images (handles both formats)
+	const hasImages = (item: Item): boolean => {
+		if (!item.images) return false;
+		if (Array.isArray(item.images)) return item.images.length > 0;
+		return item.images.product?.length > 0;
+	};
+
 	const featuredItems = [...items.values()]
 		.filter(item =>
-			item.images && item.images.length > 0 &&
-			item.categoryIds?.includes("gunpla") &&
+			hasImages(item) &&
+			item.categories?.some(c => c.id === "gunpla") &&
 			item.releaseDate?.year && item.releaseDate.year > 2010
 		)
 		.slice(0, FEATURED_MAX_CANDIDATES);
@@ -631,20 +692,20 @@ function main() {
 	const categoryItemIds = new Map<string, string[]>();
 
 	for (const [itemId, item] of items) {
-		for (const brandId of item.brandIds) {
-			const list = brandItemIds.get(brandId) ?? [];
+		for (const brandRef of item.brands ?? []) {
+			const list = brandItemIds.get(brandRef.id) ?? [];
 			list.push(itemId);
-			brandItemIds.set(brandId, list);
+			brandItemIds.set(brandRef.id, list);
 		}
-		for (const seriesId of item.seriesIds) {
-			const list = seriesItemIds.get(seriesId) ?? [];
+		for (const seriesRef of item.series ?? []) {
+			const list = seriesItemIds.get(seriesRef.id) ?? [];
 			list.push(itemId);
-			seriesItemIds.set(seriesId, list);
+			seriesItemIds.set(seriesRef.id, list);
 		}
-		for (const categoryId of item.categoryIds) {
-			const list = categoryItemIds.get(categoryId) ?? [];
+		for (const categoryRef of item.categories ?? []) {
+			const list = categoryItemIds.get(categoryRef.id) ?? [];
 			list.push(itemId);
-			categoryItemIds.set(categoryId, list);
+			categoryItemIds.set(categoryRef.id, list);
 		}
 	}
 
