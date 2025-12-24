@@ -49,12 +49,13 @@ export function stripEphemeralFromItem(item: Item): Item {
 }
 
 /**
- * Search for an existing image by filename prefix in item assets
- * @param filenamePrefix e.g., "159_1303" to match "159_1303.jpg"
+ * Search for an existing image by exact filename in item assets
+ * @param filenamePrefix e.g., "159_1303" to match "159_1303.jpg" (not "159_13030.jpg")
  * @returns Relative path like "/images/items/01_0324/159_1303.jpg" or null
  */
 export async function findExistingItemImage(filenamePrefix: string): Promise<string | null> {
-	const pattern = `${ITEMS_IMAGES_DIR}/*/${filenamePrefix}*`;
+	// Use exact match with extension to avoid prefix collisions (e.g., 157_150 matching 157_1509)
+	const pattern = `${ITEMS_IMAGES_DIR}/*/${filenamePrefix}.{jpg,jpeg,png,webp,gif}`;
 	const matches = await glob(pattern);
 
 	const match = matches[0];
