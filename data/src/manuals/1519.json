@@ -12,19 +12,27 @@
 		"month": 2,
 		"day": 17
 	},
-	"productImage": "https://bandai-hobby.net/images/196_5946_s_fjm50utbjy4694megsp5dyn7msmm.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_5946_s_fjm50utbjy4694megsp5dyn7msmm.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1519/",
-	"extractedAt": "2025-12-05T23:09:48.200Z",
-	"brandIds": [],
-	"seriesIds": ["g-witch"],
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_5946_s_fjm50utbjy4694megsp5dyn7msmm.jpg",
+		"path": "/manuals/1519/196_5946.jpg"
+	},
+	"brand": {
+		"ja": "Figure-rise Standard",
+		"en": "Figure-rise Standard"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 水星の魔女",
+		"en": "Mobile Suit Gundam Witch of Mercury"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1519.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1519/1519.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1519/"
 }
