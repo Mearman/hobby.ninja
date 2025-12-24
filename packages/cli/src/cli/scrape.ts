@@ -834,6 +834,19 @@ export class ScrapeCommand {
 			await time("download-image", () => this.downloadManualImage(manualId, manualData));
 		}
 
+		// Step 3c: Translate manual if missing English
+		if (!manualData.name.en) {
+			try {
+				await time("translate", () => this.translateManualFallback(manualData));
+				if (manualData.name.en) {
+					console.log(`  ✓ Translated: ${manualData.name.en}`);
+				}
+			} catch (error) {
+				const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
+				console.log(`  ⚠ Translation failed: ${msg}`);
+			}
+		}
+
 		// Step 4: Save manual JSON
 		await time("save-json", () => this.saveManualJson(jsonPath, manualData));
 		console.log(`  ✓ Manual JSON saved`);
@@ -1569,6 +1582,66 @@ export class ScrapeCommand {
 		}
 
 		return item;
+	}
+
+	/**
+	 * Fallback translation for manuals without English
+	 * Checks dictionary first, then uses translation service
+	 */
+	private async translateManualFallback(manual: ManualData): Promise<void> {
+		// Translate name - check dictionary first
+		if (manual.name.ja && !manual.name.en) {
+			const cached = lookupPhrase(manual.name.ja);
+			if (cached) {
+				manual.name.en = cached.en;
+			} else {
+				const result = await this.translator.translateText(manual.name.ja, "en", "ja");
+				if (result.translated && result.translated !== manual.name.ja) {
+					manual.name.en = result.translated;
+				}
+			}
+		}
+
+		// Translate PDF names
+		for (const pdf of manual.pdfs) {
+			if (pdf.name.ja && !pdf.name.en) {
+				const cached = lookupPhrase(pdf.name.ja);
+				if (cached) {
+					pdf.name.en = cached.en;
+				} else {
+					const result = await this.translator.translateText(pdf.name.ja, "en", "ja");
+					if (result.translated && result.translated !== pdf.name.ja) {
+						pdf.name.en = result.translated;
+					}
+				}
+			}
+		}
+
+		// Translate brand if present
+		if (manual.brand?.ja && !manual.brand.en) {
+			const cached = lookupPhrase(manual.brand.ja);
+			if (cached) {
+				manual.brand.en = cached.en;
+			} else {
+				const result = await this.translator.translateText(manual.brand.ja, "en", "ja");
+				if (result.translated && result.translated !== manual.brand.ja) {
+					manual.brand.en = result.translated;
+				}
+			}
+		}
+
+		// Translate series if present
+		if (manual.series?.ja && !manual.series.en) {
+			const cached = lookupPhrase(manual.series.ja);
+			if (cached) {
+				manual.series.en = cached.en;
+			} else {
+				const result = await this.translator.translateText(manual.series.ja, "en", "ja");
+				if (result.translated && result.translated !== manual.series.ja) {
+					manual.series.en = result.translated;
+				}
+			}
+		}
 	}
 
 	/**
