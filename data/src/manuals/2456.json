@@ -11,27 +11,36 @@
 		"year": 2024,
 		"month": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/153_6359_s_a7jibobf1cnijgxh7hab0jg3esq9.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_6359_s_a7jibobf1cnijgxh7hab0jg3esq9.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2456/",
-	"extractedAt": "2025-12-05T23:09:48.628Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_6359_s_a7jibobf1cnijgxh7hab0jg3esq9.jpg",
+		"path": "/manuals/2456/153_6359.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["narrative"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムNT（ナラティブ）",
+		"en": "Mobile Suit GundamNT (Narrative)"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2456.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2456/2456.pdf"
 		},
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2456_2.pdf",
 			"name": {
 				"ja": "補足説明書",
 				"en": "Supplementary Manual"
-			}
+			},
+			"path": "/manuals/2456/2456_2.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2456/"
 }

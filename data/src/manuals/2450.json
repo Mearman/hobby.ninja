@@ -11,20 +11,29 @@
 		"year": 2023,
 		"month": 1
 	},
-	"productImage": "https://bandai-hobby.net/images/153_5269_s_g4crqhcjp0uaafj7h64js0s49qcz.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_5269_s_g4crqhcjp0uaafj7h64js0s49qcz.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2450/",
-	"extractedAt": "2025-12-05T23:09:48.620Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_5269_s_g4crqhcjp0uaafj7h64js0s49qcz.jpg",
+		"path": "/images/items/01_4361/153_5269.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["age"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムAGE",
+		"en": "Mobile Suit GundamAGE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2450.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2450/2450.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2450/",
+	"itemId": "01_4361"
 }

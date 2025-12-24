@@ -11,20 +11,29 @@
 		"year": 2023,
 		"month": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/153_5851_s_vx67pui68j0w7p3xkwb0359dynfg.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_5851_s_vx67pui68j0w7p3xkwb0359dynfg.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2491/",
-	"extractedAt": "2025-12-05T23:09:48.672Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_5851_s_vx67pui68j0w7p3xkwb0359dynfg.jpg",
+		"path": "/images/items/01_4981/153_5851.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-doan"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム ククルス・ドアンの島",
+		"en": "Mobile Suit Gundam Cucurrus Doan Island"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2491.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2491/2491.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2491/",
+	"itemId": "01_4981"
 }

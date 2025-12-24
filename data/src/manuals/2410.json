@@ -11,27 +11,37 @@
 		"year": 2021,
 		"month": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4743_s_xu3qm66divtetqxhndqpioik8mra.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4743_s_xu3qm66divtetqxhndqpioik8mra.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2410/",
-	"extractedAt": "2025-12-05T23:09:48.611Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4743_s_xu3qm66divtetqxhndqpioik8mra.jpg",
+		"path": "/images/items/01_3794/153_4743.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2410.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2410/2410.pdf"
 		},
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2410_2.pdf",
 			"name": {
 				"ja": "補足説明書",
 				"en": "Supplementary Manual"
-			}
+			},
+			"path": "/manuals/2410/2410_2.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2410/",
+	"itemId": "01_3794"
 }

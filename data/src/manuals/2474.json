@@ -11,20 +11,28 @@
 		"year": 2023,
 		"month": 2
 	},
-	"productImage": "https://bandai-hobby.net/images/153_5274_s_bp8oghdshrufb1vlcb1lk4xkvgdc.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_5274_s_bp8oghdshrufb1vlcb1lk4xkvgdc.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2474/",
-	"extractedAt": "2025-12-05T23:09:48.649Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_5274_s_bp8oghdshrufb1vlcb1lk4xkvgdc.jpg",
+		"path": "/manuals/2474/153_5274.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": [],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "その他",
+		"en": "others"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2474.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2474/2474.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2474/"
 }

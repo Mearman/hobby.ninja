@@ -2,7 +2,7 @@
 	"id": "2461",
 	"type": "manual",
 	"name": {
-		"ja": "ＲＧ 1/144 ユニコーンガンダム 2号機 バンシィ・ノルン (最終決戦仕様)",
+		"ja": "ＲＧ 1/144 ユニコーンガンダム2号機 バンシィ・ノルン (最終決戦仕様)",
 		"en": "RG 1/144 Unicorn Gundam Unit 2 Banshee Norn (Final Battle Specification)"
 	},
 	"productNumber": "2459527",
@@ -11,27 +11,37 @@
 		"year": 2019,
 		"month": 2
 	},
-	"productImage": "https://bandai-hobby.net/images/153_3071_s_ivkd3orbtdnmobq1ne1uq7qfdhlm.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_3071_s_ivkd3orbtdnmobq1ne1uq7qfdhlm.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2461/",
-	"extractedAt": "2025-12-05T23:09:48.635Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_3071_s_ivkd3orbtdnmobq1ne1uq7qfdhlm.jpg",
+		"path": "/images/items/01_2117/153_3071.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["rg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "RG",
+		"en": "R.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2461.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2461/2461.pdf"
 		},
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2461_2.pdf",
 			"name": {
 				"ja": "補足説明書",
 				"en": "Supplementary Manual"
-			}
+			},
+			"path": "/manuals/2461/2461_2.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2461/",
+	"itemId": "01_2117"
 }

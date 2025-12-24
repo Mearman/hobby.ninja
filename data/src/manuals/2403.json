@@ -2,7 +2,7 @@
 	"id": "2403",
 	"type": "manual",
 	"name": {
-		"ja": "ＭＧ 1/100 ガンダム F90用 ミッションパック Hタイプ",
+		"ja": "ＭＧ 1/100 ガンダムF90用 ミッションパック Hタイプ",
 		"en": "Mission pack H type for MG 1/100 GundamF90"
 	},
 	"productNumber": "2563791",
@@ -11,20 +11,28 @@
 		"year": 2022,
 		"month": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/153_5134_s_07j5ffmbswmolpr5zjrzwf0bf6g8.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_5134_s_07j5ffmbswmolpr5zjrzwf0bf6g8.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2403/",
-	"extractedAt": "2025-12-05T23:09:48.603Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_5134_s_07j5ffmbswmolpr5zjrzwf0bf6g8.jpg",
+		"path": "/manuals/2403/153_5134.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": [],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "その他",
+		"en": "others"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2403.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2403/2403.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2403/"
 }

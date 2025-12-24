@@ -11,24 +11,29 @@
 		"year": 2024,
 		"month": 2
 	},
-	"productImage": "https://bandai-hobby.net/images/153_6006_s_ud61nxcnxhc01ssqzz6ixm3iad4m.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_6006_s_ud61nxcnxhc01ssqzz6ixm3iad4m.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2499/",
-	"extractedAt": "2025-12-05T23:09:48.685Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_6006_s_ud61nxcnxhc01ssqzz6ixm3iad4m.jpg",
+		"path": "/images/items/01_5147/153_6006.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"advance-of-z"
-	],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ADVANCE OF Z",
+		"en": "ADVANCE OF Z"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2499.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2499/2499.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2499/",
+	"itemId": "01_5147"
 }
