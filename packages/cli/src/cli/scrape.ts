@@ -851,8 +851,9 @@ export class ScrapeCommand {
 		await time("save-json", () => this.saveManualJson(jsonPath, manualData));
 		console.log(`  ✓ Manual JSON saved`);
 
-		// Record checked with valid status
+		// Record in index (valid status + extraction timestamp)
 		ManualsIndexUpdater.recordValid(manualId, manualData.name.ja);
+		ManualsIndexUpdater.recordExtracted(manualId);
 
 		this.printTimings(options, timings);
 		return { success: true };
@@ -1088,15 +1089,21 @@ export class ScrapeCommand {
 				}
 			}
 
-			// Preserve metadata fields that parser doesn't provide
-			const preserveFields = ["productImage", "thumbnailImage", "extractedAt", "brandIds", "seriesIds"];
-			for (const field of preserveFields) {
-				if (existing[field] !== undefined && !(field in newData)) {
-					(newData as Record<string, unknown>)[field] = existing[field];
+			// Preserve English brand/series translations
+			if (existing["brand"] && typeof existing["brand"] === "object") {
+				const existingBrand = existing["brand"] as Record<string, unknown>;
+				if (existingBrand["en"] && newData.brand && !newData.brand.en) {
+					newData.brand.en = existingBrand["en"] as string;
+				}
+			}
+			if (existing["series"] && typeof existing["series"] === "object") {
+				const existingSeries = existing["series"] as Record<string, unknown>;
+				if (existingSeries["en"] && newData.series && !newData.series.en) {
+					newData.series.en = existingSeries["en"] as string;
 				}
 			}
 
-			// Preserve image.path if exists
+			// Preserve image.path if exists (image structure matches items: { src, path })
 			if (existing["image"] && typeof existing["image"] === "object") {
 				const existingImage = existing["image"] as Record<string, unknown>;
 				if (existingImage["path"] && newData.image && !newData.image.path) {
