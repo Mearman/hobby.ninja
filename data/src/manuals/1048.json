@@ -12,19 +12,28 @@
 		"month": 3,
 		"day": 22
 	},
-	"productImage": "https://bandai-hobby.net/images/193_3046_s_gfu6zcl9muh01t5sr0t5dq0llqjo.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/193_3046_s_gfu6zcl9muh01t5sr0t5dq0llqjo.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1048/",
-	"extractedAt": "2025-12-05T23:09:48.007Z",
-	"brandIds": [],
-	"seriesIds": ["builddivers"],
+	"image": {
+		"src": "https://bandai-hobby.net/images/193_3046_s_gfu6zcl9muh01t5sr0t5dq0llqjo.jpg",
+		"path": "/images/items/01_2098/193_3046.jpg"
+	},
+	"brand": {
+		"ja": "Figure-rise Standard",
+		"en": "Figure-rise Standard"
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズ",
+		"en": "Gundam Build Divers"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1048.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1048/1048.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1048/",
+	"itemId": "01_2098"
 }

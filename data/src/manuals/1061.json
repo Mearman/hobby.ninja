@@ -12,20 +12,28 @@
 		"month": 2,
 		"day": 22
 	},
-	"productImage": "https://bandai-hobby.net/images/193_3507_s_slgeopthboad67k40cpzx366yfb1.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/193_3507_s_slgeopthboad67k40cpzx366yfb1.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1061/",
-	"extractedAt": "2025-12-05T23:09:48.024Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/193_3507_s_slgeopthboad67k40cpzx366yfb1.jpg",
+		"path": "/manuals/1061/193_3507.jpg"
+	},
 	"scale": "1/60",
-	"brandIds": ["pg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "PG",
+		"en": "P.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1061.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1061/1061.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1061/"
 }

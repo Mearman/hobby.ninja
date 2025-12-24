@@ -12,20 +12,24 @@
 		"month": 12,
 		"day": 29
 	},
-	"productImage": "https://bandai-hobby.net/images/ecms_154_3006_o_1cut46dpt17u5gf71mefri91op823.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/ecms_154_3006_o_1cut46dpt17u5gf71mefri91op823.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1040/",
-	"extractedAt": "2025-12-05T23:09:47.985Z",
 	"scale": "1/60",
-	"brandIds": ["pg"],
-	"seriesIds": ["g-00"],
+	"brand": {
+		"ja": "PG",
+		"en": "P.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム00",
+		"en": "Mobile Suit Gundam00"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1040.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1040/1040.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1040/"
 }

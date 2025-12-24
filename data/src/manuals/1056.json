@@ -12,20 +12,29 @@
 		"month": 12,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/158_3859_s_w9xr5ecave6vpjbdfgfpnel6zb9o.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_3859_s_w9xr5ecave6vpjbdfgfpnel6zb9o.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1056/",
-	"extractedAt": "2025-12-05T23:09:48.017Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_3859_s_w9xr5ecave6vpjbdfgfpnel6zb9o.jpg",
+		"path": "/images/items/01_2878/158_3859.jpg"
+	},
 	"scale": "1/60",
-	"brandIds": ["pg"],
-	"seriesIds": ["seed-d"],
+	"brand": {
+		"ja": "PG",
+		"en": "P.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムSEED DESTINY",
+		"en": "Mobile Suit GundamSEED DESTINY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1056.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1056/1056.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1056/",
+	"itemId": "01_2878"
 }

@@ -2,7 +2,7 @@
 	"id": "1052",
 	"type": "manual",
 	"name": {
-		"ja": "SD ガンダム EXスタンダード ガンダムエアリアル",
+		"ja": "SDガンダム EXスタンダード ガンダムエアリアル",
 		"en": "SDGundam EX Standard Gundam Aerial"
 	},
 	"productNumber": "2637836",
@@ -12,19 +12,26 @@
 		"month": 10,
 		"day": 15
 	},
-	"productImage": "https://bandai-hobby.net/images/189_5177_s_nv4f2h8lxn059n91p4u9pr844vev.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_5177_s_nv4f2h8lxn059n91p4u9pr844vev.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1052/",
-	"extractedAt": "2025-12-05T23:09:48.012Z",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["g-witch"],
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_5177_s_nv4f2h8lxn059n91p4u9pr844vev.jpg",
+		"path": "/manuals/1052/189_5177.jpg"
+	},
+	"brand": {
+		"ja": "SDEX"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 水星の魔女",
+		"en": "Mobile Suit Gundam Witch of Mercury"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1052.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1052/1052.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1052/"
 }

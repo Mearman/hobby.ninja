@@ -2,7 +2,7 @@
 	"id": "1043",
 	"type": "manual",
 	"name": {
-		"ja": "HGBD 1/144 ガンダム AGEIIマグナムSVver.",
+		"ja": "HGBD 1/144 ガンダムAGEIIマグナムSVver.",
 		"en": "HGBD 1/144 GundamAGEII Magnum SVver."
 	},
 	"productNumber": "2457259",
@@ -12,20 +12,29 @@
 		"month": 12,
 		"day": 22
 	},
-	"productImage": "https://bandai-hobby.net/images/189_3004_s_ko640hjrritiipuufo9e91laaj0f.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_3004_s_ko640hjrritiipuufo9e91laaj0f.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1043/",
-	"extractedAt": "2025-12-05T23:09:47.992Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_3004_s_ko640hjrritiipuufo9e91laaj0f.jpg",
+		"path": "/images/items/01_2055/189_3004.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズ",
+		"en": "Gundam Build Divers"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1043.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1043/1043.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1043/",
+	"itemId": "01_2055"
 }

@@ -12,26 +12,35 @@
 		"month": 10,
 		"day": 21
 	},
-	"productImage": "https://bandai-hobby.net/images/196_5863_s_x19ej9rkl7rdhqikv1uxltvrxoyg.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_5863_s_x19ej9rkl7rdhqikv1uxltvrxoyg.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1100/",
-	"extractedAt": "2025-12-05T23:09:48.060Z",
-	"brandIds": ["mg"],
-	"seriesIds": ["tekketsu"],
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_5863_s_x19ej9rkl7rdhqikv1uxltvrxoyg.jpg",
+		"path": "/manuals/1100/196_5863.jpg"
+	},
+	"brand": {
+		"ja": "MGSD",
+		"en": "MGSD"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 鉄血のオルフェンズ",
+		"en": "Mobile Suit Gundam Iron-Blooded Orphans"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1100.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1100/1100.pdf"
 		},
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1100_2.pdf",
 			"name": {
 				"ja": "シール貼り指示",
 				"en": "Seal application instructions"
-			}
+			},
+			"path": "/manuals/1100/1100_2.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1100/"
 }

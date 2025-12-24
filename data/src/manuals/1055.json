@@ -2,7 +2,7 @@
 	"id": "1055",
 	"type": "manual",
 	"name": {
-		"ja": "PG 1/60 RX-78 ガンダム GP01/FB",
+		"ja": "PG 1/60 RX-78ガンダムGP01/FB",
 		"en": "PG 1/60 RX-78GundamGP01/FB"
 	},
 	"productNumber": "1116409",
@@ -11,20 +11,29 @@
 		"year": 2003,
 		"month": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/158_388_s_ari496riqn82n8a30v7vb6hx2tbi.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_388_s_ari496riqn82n8a30v7vb6hx2tbi.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1055/",
-	"extractedAt": "2025-12-05T23:09:48.016Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_388_s_ari496riqn82n8a30v7vb6hx2tbi.jpg",
+		"path": "/images/items/01_2912/158_388.jpg"
+	},
 	"scale": "1/60",
-	"brandIds": ["pg"],
-	"seriesIds": ["g-0083"],
+	"brand": {
+		"ja": "PG",
+		"en": "P.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 0083 STARDUST MEMORY",
+		"en": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1055.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1055/1055.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1055/",
+	"itemId": "01_2912"
 }
