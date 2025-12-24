@@ -2,7 +2,7 @@
 	"id": "1784",
 	"type": "manual",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット マイティーストライクフリーダムガンダム",
+		"ja": "SDガンダム クロスシルエット マイティーストライクフリーダムガンダム",
 		"en": "SDGundam Cross Silhouette Mighty Strike Freedom Gundam"
 	},
 	"productNumber": "2723582",
@@ -12,19 +12,28 @@
 		"month": 9,
 		"day": 21
 	},
-	"productImage": "https://bandai-hobby.net/images/191_6126_s_dbkqrcepzq2tnsrbfbwekq58o6jl.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/191_6126_s_dbkqrcepzq2tnsrbfbwekq58o6jl.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1784/",
-	"extractedAt": "2025-12-05T23:09:48.240Z",
-	"brandIds": [],
-	"seriesIds": ["seed-freedom"],
+	"image": {
+		"src": "https://bandai-hobby.net/images/191_6126_s_dbkqrcepzq2tnsrbfbwekq58o6jl.jpg",
+		"path": "/images/items/01_5275/191_6126.jpg"
+	},
+	"brand": {
+		"ja": "SDガンダム クロスシルエット",
+		"en": "SDGundam cross silhouette"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムSEED FREEDOM",
+		"en": "Mobile Suit GundamSEED FREEDOM"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1784.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1784/1784.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1784/",
+	"itemId": "01_5275"
 }

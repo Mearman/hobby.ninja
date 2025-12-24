@@ -12,19 +12,27 @@
 		"month": 8,
 		"day": 10
 	},
-	"productImage": "https://bandai-hobby.net/images/189_6109_s_xxku16kbpjkgp2rojbmp57bttn4b.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_6109_s_xxku16kbpjkgp2rojbmp57bttn4b.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1750/",
-	"extractedAt": "2025-12-05T23:09:48.235Z",
-	"brandIds": [],
-	"seriesIds": [],
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_6109_s_xxku16kbpjkgp2rojbmp57bttn4b.jpg",
+		"path": "/manuals/1750/189_6109.jpg"
+	},
+	"brand": {
+		"ja": "アクションベース",
+		"en": "action base"
+	},
+	"series": {
+		"ja": "その他",
+		"en": "others"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1750.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1750/1750.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1750/"
 }
