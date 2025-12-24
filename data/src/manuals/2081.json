@@ -12,20 +12,29 @@
 		"month": 1,
 		"day": 17
 	},
-	"productImage": "https://bandai-hobby.net/images/192_6417_s_kmbh2zxmn6ni9793hi157tdyecxi.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/192_6417_s_kmbh2zxmn6ni9793hi157tdyecxi.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2081/",
-	"extractedAt": "2025-12-05T23:09:48.298Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/192_6417_s_kmbh2zxmn6ni9793hi157tdyecxi.jpg",
+		"path": "/images/items/01_5582/192_6417.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gquuuuuux"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士Gundam GQuuuuuuX",
+		"en": "Mobile Suit Gundam GQuuuuuuX"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2081.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2081/2081.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2081/",
+	"itemId": "01_5582"
 }
