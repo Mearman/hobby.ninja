@@ -1,5 +1,5 @@
 {
-	"id": "0491",
+	"id": "491",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ペーネロペー",
@@ -12,20 +12,29 @@
 		"month": 10,
 		"day": 26
 	},
-	"productImage": "https://bandai-hobby.net/images/157_3372_s_7o00b69big1uoeno9o9teipwzdav.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_3372_s_7o00b69big1uoeno9o9teipwzdav.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/491/",
-	"extractedAt": "2025-12-05T23:09:47.118Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_3372_s_7o00b69big1uoeno9o9teipwzdav.jpg",
+		"path": "/images/items/01_2443/157_3372.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["hathaway"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 閃光のハサウェイ",
+		"en": "Mobile Suit Gundam Flash Hathaway"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/491.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0491/0491.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/491/",
+	"itemId": "01_2443"
 }

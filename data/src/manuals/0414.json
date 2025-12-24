@@ -1,5 +1,5 @@
 {
-	"id": "0414",
+	"id": "414",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 リゼル",
@@ -12,20 +12,28 @@
 		"month": 1,
 		"day": 22
 	},
-	"productImage": "https://bandai-hobby.net/images/158_732_s_5r147zd6t0jwt178gjv4wtk14qdz.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_732_s_5r147zd6t0jwt178gjv4wtk14qdz.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/414/",
-	"extractedAt": "2025-12-05T23:09:46.995Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_732_s_5r147zd6t0jwt178gjv4wtk14qdz.jpg",
+		"path": "/manuals/0414/158_732.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/414.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0414/0414.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/414/"
 }

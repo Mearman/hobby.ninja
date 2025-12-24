@@ -1,5 +1,5 @@
 {
-	"id": "0451",
+	"id": "451",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 クシャトリヤ・リペアード",
@@ -12,20 +12,29 @@
 		"month": 5,
 		"day": 17
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1102_s_hjkv675ejayneyegubqomrevixu1.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1102_s_hjkv675ejayneyegubqomrevixu1.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/451/",
-	"extractedAt": "2025-12-05T23:09:47.044Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1102_s_hjkv675ejayneyegubqomrevixu1.jpg",
+		"path": "/images/items/01_0108/156_1102.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/451.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0451/0451.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/451/",
+	"itemId": "01_0108"
 }

@@ -1,8 +1,8 @@
 {
-	"id": "0446",
+	"id": "446",
 	"type": "manual",
 	"name": {
-		"ja": "MG 1/100 FA-010S フルアーマーZZ ガンダム",
+		"ja": "MG 1/100 FA-010S フルアーマーZZガンダム",
 		"en": "MG 1/100 FA-010S Full Armor ZZGundam"
 	},
 	"productNumber": "1077167",
@@ -11,20 +11,29 @@
 		"year": 2000,
 		"month": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/157_156_s_ndaeto5lserkjzxalacdhgomwu64.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_156_s_ndaeto5lserkjzxalacdhgomwu64.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/446/",
-	"extractedAt": "2025-12-05T23:09:47.035Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_156_s_ndaeto5lserkjzxalacdhgomwu64.jpg",
+		"path": "/images/items/01_0613/157_156.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam-zz"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムZZ",
+		"en": "Mobile Suit GundamZZ"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/446.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0446/0446.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/446/",
+	"itemId": "01_0613"
 }

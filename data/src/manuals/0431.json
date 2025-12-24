@@ -1,8 +1,8 @@
 {
-	"id": "0431",
+	"id": "431",
 	"type": "manual",
 	"name": {
-		"ja": "MG 1/100 MSZ-010 ZZ ガンダム",
+		"ja": "MG 1/100 MSZ-010 ZZガンダム",
 		"en": "MG 1/100 MSZ-010 ZZGundam"
 	},
 	"productNumber": "1071690",
@@ -11,20 +11,29 @@
 		"year": 1999,
 		"month": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/158_2536_s_ewa5fsrznxilvz5k671tix331sj7.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_2536_s_ewa5fsrznxilvz5k671tix331sj7.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/431/",
-	"extractedAt": "2025-12-05T23:09:47.015Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_2536_s_ewa5fsrznxilvz5k671tix331sj7.jpg",
+		"path": "/images/items/01_1625/158_2536.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam-zz"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムZZ",
+		"en": "Mobile Suit GundamZZ"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/431.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0431/0431.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/431/",
+	"itemId": "01_1625"
 }

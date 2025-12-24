@@ -1,5 +1,5 @@
 {
-	"id": "0428",
+	"id": "428",
 	"type": "manual",
 	"name": {
 		"ja": "HGFC 1/144 ノーベルガンダム",
@@ -12,20 +12,28 @@
 		"month": 1,
 		"day": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/159_2713_s_ti41lwlau0gzlwq0f48mynbo49xe.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_2713_s_ti41lwlau0gzlwq0f48mynbo49xe.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/428/",
-	"extractedAt": "2025-12-05T23:09:47.011Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_2713_s_ti41lwlau0gzlwq0f48mynbo49xe.jpg",
+		"path": "/manuals/0428/159_2713.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["ggundam"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動武闘伝Gガンダム",
+		"en": "Mobile Fighter GGundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/428.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0428/0428.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/428/"
 }

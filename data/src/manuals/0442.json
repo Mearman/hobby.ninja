@@ -1,5 +1,5 @@
 {
-	"id": "0442",
+	"id": "442",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 MS-09 ドム",
@@ -11,20 +11,29 @@
 		"year": 1999,
 		"month": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/155_2522_s_k9g349whf0znfnice2v9zmkqukb8.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_2522_s_k9g349whf0znfnice2v9zmkqukb8.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/442/",
-	"extractedAt": "2025-12-05T23:09:47.029Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_2522_s_k9g349whf0znfnice2v9zmkqukb8.jpg",
+		"path": "/images/items/01_1610/155_2522.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/442.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0442/0442.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/442/",
+	"itemId": "01_1610"
 }

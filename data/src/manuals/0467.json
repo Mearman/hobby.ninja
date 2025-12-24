@@ -1,5 +1,5 @@
 {
-	"id": "0467",
+	"id": "467",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 百式",
@@ -12,20 +12,28 @@
 		"month": 8,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1620_s_dpb4ihnrfeov1djgwlzkyfjl1sag.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1620_s_dpb4ihnrfeov1djgwlzkyfjl1sag.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/467/",
-	"extractedAt": "2025-12-05T23:09:47.078Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_1620_s_dpb4ihnrfeov1djgwlzkyfjl1sag.jpg",
+		"path": "/manuals/0467/158_1620.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["z-gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士Zガンダム",
+		"en": "Mobile Suit ZGundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/467.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0467/0467.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/467/"
 }

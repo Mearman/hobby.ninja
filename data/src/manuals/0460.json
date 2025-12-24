@@ -1,5 +1,5 @@
 {
-	"id": "0460",
+	"id": "460",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 V2アサルトバスターガンダム",
@@ -12,20 +12,28 @@
 		"month": 5,
 		"day": 23
 	},
-	"productImage": "https://bandai-hobby.net/images/159_1311_s_8k4nqffu6jx10b09eciwwnq0wpua.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_1311_s_8k4nqffu6jx10b09eciwwnq0wpua.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/460/",
-	"extractedAt": "2025-12-05T23:09:47.062Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_1311_s_8k4nqffu6jx10b09eciwwnq0wpua.jpg",
+		"path": "/manuals/0460/159_1311.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["v-gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士Vガンダム",
+		"en": "Mobile Suit V Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/460.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0460/0460.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/460/"
 }

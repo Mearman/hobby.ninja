@@ -1,5 +1,5 @@
 {
-	"id": "0481",
+	"id": "481",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ムーンガンダム",
@@ -12,20 +12,29 @@
 		"month": 9,
 		"day": 22
 	},
-	"productImage": "https://bandai-hobby.net/images/192_2984_s_8t3nfjtvj1gu4397ssy8u9n73r05.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/192_2984_s_8t3nfjtvj1gu4397ssy8u9n73r05.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/481/",
-	"extractedAt": "2025-12-05T23:09:47.101Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/192_2984_s_8t3nfjtvj1gu4397ssy8u9n73r05.jpg",
+		"path": "/images/items/01_1881/192_2984.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["moon-gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士MOONガンダム",
+		"en": "Mobile Suit MOONGundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/481.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0481/0481.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/481/",
+	"itemId": "01_1881"
 }

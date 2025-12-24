@@ -1,5 +1,5 @@
 {
-	"id": "0423",
+	"id": "423",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 エクストリームガンダム",
@@ -12,24 +12,29 @@
 		"month": 2,
 		"day": 19
 	},
-	"productImage": "https://bandai-hobby.net/images/156_2714_s_x18mmf7tygp6edx5q50po1i4dj8q.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_2714_s_x18mmf7tygp6edx5q50po1i4dj8q.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/423/",
-	"extractedAt": "2025-12-05T23:09:47.005Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_2714_s_x18mmf7tygp6edx5q50po1i4dj8q.jpg",
+		"path": "/images/items/01_1774/156_2714.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gunpla"
-	],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンプラ",
+		"en": "Gunpla"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/423.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0423/0423.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/423/",
+	"itemId": "01_1774"
 }

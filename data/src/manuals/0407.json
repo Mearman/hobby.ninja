@@ -1,8 +1,8 @@
 {
-	"id": "0407",
+	"id": "407",
 	"type": "manual",
 	"name": {
-		"ja": "HGUC 1/144 G3 ガンダム＋シャア専用リックドムセット",
+		"ja": "HGUC 1/144 G3ガンダム＋シャア専用リックドムセット",
 		"en": "HGUC 1/144 G3 Gundam + Char's Rick Dom Set"
 	},
 	"productNumber": "2035480",
@@ -11,20 +11,29 @@
 		"year": 2008,
 		"month": 2
 	},
-	"productImage": "https://bandai-hobby.net/images/156_5414_s_lknohwp3ry8cu9v0052t0ykro1i4.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_5414_s_lknohwp3ry8cu9v0052t0ykro1i4.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/407/",
-	"extractedAt": "2025-12-05T23:09:46.987Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_5414_s_lknohwp3ry8cu9v0052t0ykro1i4.jpg",
+		"path": "/images/items/01_4512/156_5414.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/407.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0407/0407.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/407/",
+	"itemId": "01_4512"
 }

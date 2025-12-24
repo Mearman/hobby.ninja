@@ -1,5 +1,5 @@
 {
-	"id": "0454",
+	"id": "454",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 シュツルム・ガルス",
@@ -12,20 +12,28 @@
 		"month": 7,
 		"day": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/157_1137_s_5mlnrdjqbn5pwyj3fzl1vivn32j9.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_1137_s_5mlnrdjqbn5pwyj3fzl1vivn32j9.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/454/",
-	"extractedAt": "2025-12-05T23:09:47.048Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_1137_s_5mlnrdjqbn5pwyj3fzl1vivn32j9.jpg",
+		"path": "/manuals/0454/157_1137.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/454.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0454/0454.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/454/"
 }

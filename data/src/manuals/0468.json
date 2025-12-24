@@ -1,5 +1,5 @@
 {
-	"id": "0468",
+	"id": "468",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 陸戦型ジム",
@@ -12,20 +12,29 @@
 		"month": 1,
 		"day": 21
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1728_s_ofukgcbu5l0lm1kul8uiypxgnq2r.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1728_s_ofukgcbu5l0lm1kul8uiypxgnq2r.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/468/",
-	"extractedAt": "2025-12-05T23:09:47.080Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_1728_s_ofukgcbu5l0lm1kul8uiypxgnq2r.jpg",
+		"path": "/images/items/01_0782/158_1728.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": [],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 第08MS小隊",
+		"en": "Mobile Suit Gundam 08th MS Platoon"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/468.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0468/0468.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/468/",
+	"itemId": "01_0782"
 }

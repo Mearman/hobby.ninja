@@ -1,5 +1,5 @@
 {
-	"id": "0453",
+	"id": "453",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ズサ（ユニコーンVer.）",
@@ -12,20 +12,29 @@
 		"month": 6,
 		"day": 21
 	},
-	"productImage": "https://bandai-hobby.net/images/157_1116_s_w43vvzbk0x7gmksee7j9pcxo4fb6.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_1116_s_w43vvzbk0x7gmksee7j9pcxo4fb6.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/453/",
-	"extractedAt": "2025-12-05T23:09:47.047Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_1116_s_w43vvzbk0x7gmksee7j9pcxo4fb6.jpg",
+		"path": "/images/items/01_0123/157_1116.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/453.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0453/0453.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/453/",
+	"itemId": "01_0123"
 }

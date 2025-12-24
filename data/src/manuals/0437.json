@@ -1,5 +1,5 @@
 {
-	"id": "0437",
+	"id": "437",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 RGM-79 ジム",
@@ -11,20 +11,29 @@
 		"year": 1999,
 		"month": 2
 	},
-	"productImage": "https://bandai-hobby.net/images/156_2515_s_0uf10drr1fdxqzyorgn2exy8eag7.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_2515_s_0uf10drr1fdxqzyorgn2exy8eag7.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/437/",
-	"extractedAt": "2025-12-05T23:09:47.023Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_2515_s_0uf10drr1fdxqzyorgn2exy8eag7.jpg",
+		"path": "/images/items/01_1603/156_2515.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/437.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0437/0437.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/437/",
+	"itemId": "01_1603"
 }

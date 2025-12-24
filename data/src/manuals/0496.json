@@ -1,5 +1,5 @@
 {
-	"id": "0496",
+	"id": "496",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 デスアーミー",
@@ -12,20 +12,28 @@
 		"month": 11,
 		"day": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/156_3418_s_31jfjq6erh3f91xuyy4o280d2bsz.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_3418_s_31jfjq6erh3f91xuyy4o280d2bsz.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/496/",
-	"extractedAt": "2025-12-05T23:09:47.124Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_3418_s_31jfjq6erh3f91xuyy4o280d2bsz.jpg",
+		"path": "/manuals/0496/156_3418.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["ggundam"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動武闘伝Gガンダム",
+		"en": "Mobile Fighter GGundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/496.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0496/0496.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/496/"
 }

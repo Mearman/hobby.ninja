@@ -1,5 +1,5 @@
 {
-	"id": "0475",
+	"id": "475",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ブルーディスティニー２号機“EXAM”",
@@ -12,20 +12,29 @@
 		"month": 12,
 		"day": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/158_2094_s_96zizgtvq87c4mjfn4fvzp2ai316.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_2094_s_96zizgtvq87c4mjfn4fvzp2ai316.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/475/",
-	"extractedAt": "2025-12-05T23:09:47.091Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_2094_s_96zizgtvq87c4mjfn4fvzp2ai316.jpg",
+		"path": "/images/items/01_1164/158_2094.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム外伝 THE BLUE DESTINY",
+		"en": "Mobile Suit Gundam Gaiden THE BLUE DESTINY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/475.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0475/0475.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/475/",
+	"itemId": "01_1164"
 }

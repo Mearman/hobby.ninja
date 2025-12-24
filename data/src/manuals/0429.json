@@ -1,5 +1,5 @@
 {
-	"id": "0429",
+	"id": "429",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ジェガン（エコーズ仕様）",
@@ -12,20 +12,29 @@
 		"month": 4,
 		"day": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/156_764_s_xbl33shh0nbyyvnfkgo228digk25.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_764_s_xbl33shh0nbyyvnfkgo228digk25.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/429/",
-	"extractedAt": "2025-12-05T23:09:47.012Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_764_s_xbl33shh0nbyyvnfkgo228digk25.jpg",
+		"path": "/images/items/01_5699/156_764.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/429.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0429/0429.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/429/",
+	"itemId": "01_5699"
 }

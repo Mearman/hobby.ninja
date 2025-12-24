@@ -1,5 +1,5 @@
 {
-	"id": "0434",
+	"id": "434",
 	"type": "manual",
 	"name": {
 		"ja": "HGFC 1/144 ノーベルガンダム バーサーカーモード",
@@ -12,20 +12,29 @@
 		"month": 9,
 		"day": 10
 	},
-	"productImage": "https://bandai-hobby.net/images/158_2723_s_2qi7vsntmz4eu058khrpphhogsit.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_2723_s_2qi7vsntmz4eu058khrpphhogsit.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/434/",
-	"extractedAt": "2025-12-05T23:09:47.019Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_2723_s_2qi7vsntmz4eu058khrpphhogsit.jpg",
+		"path": "/images/items/01_1784/158_2723.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["ggundam"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動武闘伝Gガンダム",
+		"en": "Mobile Fighter GGundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/434.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0434/0434.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/434/",
+	"itemId": "01_1784"
 }

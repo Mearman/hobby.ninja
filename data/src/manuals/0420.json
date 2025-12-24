@@ -1,5 +1,5 @@
 {
-	"id": "0420",
+	"id": "420",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 シナンジュ",
@@ -12,20 +12,28 @@
 		"month": 10,
 		"day": 23
 	},
-	"productImage": "https://bandai-hobby.net/images/156_742_s_jz6wzvuigqv7sue8gkjworng8j1v.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_742_s_jz6wzvuigqv7sue8gkjworng8j1v.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/420/",
-	"extractedAt": "2025-12-05T23:09:47.002Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_742_s_jz6wzvuigqv7sue8gkjworng8j1v.jpg",
+		"path": "/manuals/0420/156_742.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/420.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0420/0420.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/420/"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0492",
+	"id": "492",
 	"type": "manual",
 	"name": {
 		"ja": "HGAC 1/144 ガンダムサンドロック",
@@ -12,20 +12,29 @@
 		"month": 9,
 		"day": 14
 	},
-	"productImage": "https://bandai-hobby.net/images/157_3325_s_qha9pbdb4umkaog7vq26t3wuccs2.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_3325_s_qha9pbdb4umkaog7vq26t3wuccs2.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/492/",
-	"extractedAt": "2025-12-05T23:09:47.119Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_3325_s_qha9pbdb4umkaog7vq26t3wuccs2.jpg",
+		"path": "/images/items/01_2391/157_3325.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["endlesswaltz"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "新機動戦記ガンダムW",
+		"en": "New Mobile Report GundamW"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/492.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0492/0492.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/492/",
+	"itemId": "01_2391"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0421",
+	"id": "421",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ジム・カスタム",
@@ -12,20 +12,29 @@
 		"month": 1,
 		"day": 22
 	},
-	"productImage": "https://bandai-hobby.net/images/158_754_s_zvgf0qilv7rt738k97b76dq0bg6f.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_754_s_zvgf0qilv7rt738k97b76dq0bg6f.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/421/",
-	"extractedAt": "2025-12-05T23:09:47.003Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_754_s_zvgf0qilv7rt738k97b76dq0bg6f.jpg",
+		"path": "/images/items/01_5688/158_754.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-0083"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 0083 STARDUST MEMORY",
+		"en": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/421.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0421/0421.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/421/",
+	"itemId": "01_5688"
 }

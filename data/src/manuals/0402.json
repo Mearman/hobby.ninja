@@ -1,5 +1,5 @@
 {
-	"id": "0402",
+	"id": "402",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 水陸両用モビルスーツセット",
@@ -11,20 +11,29 @@
 		"year": 2007,
 		"month": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/155_5539_o_1goisdh5v2j81aqb1hah16vt1s7k23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_5539_o_1goisdh5v2j81aqb1hah16vt1s7k23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/402/",
-	"extractedAt": "2025-12-05T23:09:46.981Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_5539_o_1goisdh5v2j81aqb1hah16vt1s7k23.jpg",
+		"path": "/images/items/01_4646/155_5539.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/402.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0402/0402.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/402/",
+	"itemId": "01_4646"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0490",
+	"id": "490",
 	"type": "manual",
 	"name": {
 		"ja": "HGAC 1/144 マグアナック",
@@ -12,20 +12,28 @@
 		"month": 4,
 		"day": 20
 	},
-	"productImage": "https://bandai-hobby.net/images/190_3125_s_5fnfia40bf9lu0pyy3w3hgcu7bka.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/190_3125_s_5fnfia40bf9lu0pyy3w3hgcu7bka.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/490/",
-	"extractedAt": "2025-12-05T23:09:47.117Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/190_3125_s_5fnfia40bf9lu0pyy3w3hgcu7bka.jpg",
+		"path": "/manuals/0490/190_3125.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["endlesswaltz"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "新機動戦記ガンダムW",
+		"en": "New Mobile Report GundamW"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/490.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0490/0490.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/490/"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0482",
+	"id": "482",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 バイアラン",
@@ -12,20 +12,29 @@
 		"month": 7,
 		"day": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/189_2319_s_wudsk8xcbficyf7gqwsydexoy8zd.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_2319_s_wudsk8xcbficyf7gqwsydexoy8zd.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/482/",
-	"extractedAt": "2025-12-05T23:09:47.104Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_2319_s_wudsk8xcbficyf7gqwsydexoy8zd.jpg",
+		"path": "/images/items/01_1395/189_2319.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["z-gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士Zガンダム",
+		"en": "Mobile Suit ZGundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/482.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0482/0482.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/482/",
+	"itemId": "01_1395"
 }

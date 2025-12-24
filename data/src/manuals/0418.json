@@ -1,5 +1,5 @@
 {
-	"id": "0418",
+	"id": "418",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 デルタプラス",
@@ -12,20 +12,29 @@
 		"month": 9,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/158_741_s_7w74aj52355jgfeytv56a3e4k5b5.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_741_s_7w74aj52355jgfeytv56a3e4k5b5.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/418/",
-	"extractedAt": "2025-12-05T23:09:47.000Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_741_s_7w74aj52355jgfeytv56a3e4k5b5.jpg",
+		"path": "/images/items/01_5675/158_741.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/418.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0418/0418.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/418/",
+	"itemId": "01_5675"
 }

@@ -1,8 +1,8 @@
 {
-	"id": "0427",
+	"id": "427",
 	"type": "manual",
 	"name": {
-		"ja": "MG 1/100 ガンダム NT-1",
+		"ja": "MG 1/100 ガンダムNT-1",
 		"en": "MG 1/100 GundamNT-1"
 	},
 	"productNumber": "1070949",
@@ -11,20 +11,29 @@
 		"year": 1999,
 		"month": 10
 	},
-	"productImage": "https://bandai-hobby.net/images/159_2530_s_w1xfetfc88dus3vj94uw3mrtrrx4.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_2530_s_w1xfetfc88dus3vj94uw3mrtrrx4.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/427/",
-	"extractedAt": "2025-12-05T23:09:47.010Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_2530_s_w1xfetfc88dus3vj94uw3mrtrrx4.jpg",
+		"path": "/images/items/01_1619/159_2530.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["g-0080"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム0080 ポケットの中の戦争",
+		"en": "Mobile Suit Gundam0080 War in the Pocket"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/427.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0427/0427.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/427/",
+	"itemId": "01_1619"
 }

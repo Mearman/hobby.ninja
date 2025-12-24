@@ -1,8 +1,8 @@
 {
-	"id": "0419",
+	"id": "419",
 	"type": "manual",
 	"name": {
-		"ja": "MG 1/100 ガンダム GP01Fb",
+		"ja": "MG 1/100 ガンダムGP01Fb",
 		"en": "MG 1/100 GundamGP01Fb"
 	},
 	"productNumber": "1059766",
@@ -11,20 +11,29 @@
 		"year": 1997,
 		"month": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/156_2485_s_mbduwtwpvw1bxxisouqkze6luaq9.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_2485_s_mbduwtwpvw1bxxisouqkze6luaq9.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/419/",
-	"extractedAt": "2025-12-05T23:09:47.001Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_2485_s_mbduwtwpvw1bxxisouqkze6luaq9.jpg",
+		"path": "/images/items/01_1569/156_2485.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["g-0083"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 0083 STARDUST MEMORY",
+		"en": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/419.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0419/0419.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/419/",
+	"itemId": "01_1569"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0488",
+	"id": "488",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 シナンジュ・スタイン (ナラティブVer.)",
@@ -12,20 +12,29 @@
 		"month": 10,
 		"day": 27
 	},
-	"productImage": "https://bandai-hobby.net/images/191_2916_s_dz8bq3hgcgf3oy8070sndkv0vu0k.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/191_2916_s_dz8bq3hgcgf3oy8070sndkv0vu0k.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/488/",
-	"extractedAt": "2025-12-05T23:09:47.114Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/191_2916_s_dz8bq3hgcgf3oy8070sndkv0vu0k.jpg",
+		"path": "/images/items/01_1987/191_2916.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["narrative"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムNT（ナラティブ）",
+		"en": "Mobile Suit GundamNT (Narrative)"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/488.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0488/0488.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/488/",
+	"itemId": "01_1987"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0452",
+	"id": "452",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ネオ・ジオング",
@@ -12,20 +12,29 @@
 		"month": 6,
 		"day": 28
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1124_s_dqlxezwja8uj6o3cmqyehdpiwtdy.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1124_s_dqlxezwja8uj6o3cmqyehdpiwtdy.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/452/",
-	"extractedAt": "2025-12-05T23:09:47.046Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1124_s_dqlxezwja8uj6o3cmqyehdpiwtdy.jpg",
+		"path": "/images/items/01_0132/156_1124.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/452.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0452/0452.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/452/",
+	"itemId": "01_0132"
 }

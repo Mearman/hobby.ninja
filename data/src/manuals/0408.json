@@ -1,5 +1,5 @@
 {
-	"id": "0408",
+	"id": "408",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 リック・ドムII ライトグリーンバージョン",
@@ -12,20 +12,29 @@
 		"month": 8,
 		"day": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/191_3366_s_ijyk5okbp4i8qaajr5o7d0fvb7p4.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/191_3366_s_ijyk5okbp4i8qaajr5o7d0fvb7p4.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/408/",
-	"extractedAt": "2025-12-05T23:09:46.988Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/191_3366_s_ijyk5okbp4i8qaajr5o7d0fvb7p4.jpg",
+		"path": "/images/items/01_2436/191_3366.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-0080"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム0080 ポケットの中の戦争",
+		"en": "Mobile Suit Gundam0080 War in the Pocket"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/408.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0408/0408.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/408/",
+	"itemId": "01_2436"
 }

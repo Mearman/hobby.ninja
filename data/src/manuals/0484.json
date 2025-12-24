@@ -1,5 +1,5 @@
 {
-	"id": "0484",
+	"id": "484",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ナラティブガンダム A装備",
@@ -12,20 +12,28 @@
 		"month": 11,
 		"day": 30
 	},
-	"productImage": "https://bandai-hobby.net/images/196_2999_s_38xkph0flb170bqx0ux4s2hbwz8x.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_2999_s_38xkph0flb170bqx0ux4s2hbwz8x.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/484/",
-	"extractedAt": "2025-12-05T23:09:47.107Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_2999_s_38xkph0flb170bqx0ux4s2hbwz8x.jpg",
+		"path": "/manuals/0484/196_2999.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["narrative"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムNT（ナラティブ）",
+		"en": "Mobile Suit GundamNT (Narrative)"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/484.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0484/0484.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/484/"
 }

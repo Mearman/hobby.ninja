@@ -1,5 +1,5 @@
 {
-	"id": "0478",
+	"id": "478",
 	"type": "manual",
 	"name": {
 		"ja": "HGAC 1/144 リーオー",
@@ -12,20 +12,28 @@
 		"month": 5,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/189_2238_s_nan0wmsjkti7klwjjhjfdmrti8ak.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_2238_s_nan0wmsjkti7klwjjhjfdmrti8ak.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/478/",
-	"extractedAt": "2025-12-05T23:09:47.096Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_2238_s_nan0wmsjkti7klwjjhjfdmrti8ak.jpg",
+		"path": "/manuals/0478/189_2238.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["endlesswaltz"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "新機動戦記ガンダムW",
+		"en": "New Mobile Report GundamW"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/478.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0478/0478.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/478/"
 }

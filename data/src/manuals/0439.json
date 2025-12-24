@@ -1,5 +1,5 @@
 {
-	"id": "0439",
+	"id": "439",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ローゼン・ズール",
@@ -12,20 +12,29 @@
 		"month": 12,
 		"day": 29
 	},
-	"productImage": "https://bandai-hobby.net/images/156_835_s_5hzphtv4nixhxw5ppcyyz697naxb.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_835_s_5hzphtv4nixhxw5ppcyyz697naxb.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/439/",
-	"extractedAt": "2025-12-05T23:09:47.025Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_835_s_5hzphtv4nixhxw5ppcyyz697naxb.jpg",
+		"path": "/images/items/01_5773/156_835.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/439.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0439/0439.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/439/",
+	"itemId": "01_5773"
 }

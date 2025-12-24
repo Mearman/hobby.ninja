@@ -1,5 +1,5 @@
 {
-	"id": "0466",
+	"id": "466",
 	"type": "manual",
 	"name": {
 		"ja": "HGCE 1/144 フォースインパルスガンダム",
@@ -12,20 +12,29 @@
 		"month": 6,
 		"day": 18
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1527_s_c2su2runw4qifuyb7ztwh4c3lz1t.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1527_s_c2su2runw4qifuyb7ztwh4c3lz1t.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/466/",
-	"extractedAt": "2025-12-05T23:09:47.076Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1527_s_c2su2runw4qifuyb7ztwh4c3lz1t.jpg",
+		"path": "/images/items/01_0569/156_1527.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed-d"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムSEED DESTINY",
+		"en": "Mobile Suit GundamSEED DESTINY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/466.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0466/0466.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/466/",
+	"itemId": "01_0569"
 }

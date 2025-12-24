@@ -1,8 +1,8 @@
 {
-	"id": "0477",
+	"id": "477",
 	"type": "manual",
 	"name": {
-		"ja": "HG 1/144 ガンダム AN-01 トリスタン",
+		"ja": "HG 1/144 ガンダムAN-01 トリスタン",
 		"en": "HG 1/144 GundamAN-01 Tristan"
 	},
 	"productNumber": "2384320",
@@ -12,20 +12,29 @@
 		"month": 6,
 		"day": 10
 	},
-	"productImage": "https://bandai-hobby.net/images/191_1948_s_236rnw4ugfjfwl3g1iqrvmc16p8l.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/191_1948_s_236rnw4ugfjfwl3g1iqrvmc16p8l.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/477/",
-	"extractedAt": "2025-12-05T23:09:47.095Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/191_1948_s_236rnw4ugfjfwl3g1iqrvmc16p8l.jpg",
+		"path": "/images/items/01_1012/191_1948.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": [],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム Twilight AXIS",
+		"en": "Mobile Suit Gundam Twilight AXIS"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/477.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0477/0477.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/477/",
+	"itemId": "01_1012"
 }

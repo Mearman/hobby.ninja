@@ -1,5 +1,5 @@
 {
-	"id": "0432",
+	"id": "432",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 RGM-79N ジムカスタム",
@@ -11,20 +11,29 @@
 		"year": 1999,
 		"month": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/156_4272_s_jcafzyrp645o04puz2hh6ayoak0l.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_4272_s_jcafzyrp645o04puz2hh6ayoak0l.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/432/",
-	"extractedAt": "2025-12-05T23:09:47.016Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_4272_s_jcafzyrp645o04puz2hh6ayoak0l.jpg",
+		"path": "/images/items/01_3317/156_4272.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["g-0083"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 0083 STARDUST MEMORY",
+		"en": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/432.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0432/0432.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/432/",
+	"itemId": "01_3317"
 }
