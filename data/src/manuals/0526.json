@@ -1,5 +1,5 @@
 {
-	"id": "0526",
+	"id": "526",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 キュベレイMk-II（プルツー専用機）",
@@ -11,20 +11,29 @@
 		"year": 2004,
 		"month": 2
 	},
-	"productImage": "https://bandai-hobby.net/images/158_410_s_lhu55x2p0dvucttxqop6ye3nghf4.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_410_s_lhu55x2p0dvucttxqop6ye3nghf4.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/526/",
-	"extractedAt": "2025-12-05T23:09:47.187Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_410_s_lhu55x2p0dvucttxqop6ye3nghf4.jpg",
+		"path": "/images/items/01_3147/158_410.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam-zz"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムZZ",
+		"en": "Mobile Suit GundamZZ"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/526.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0526/0526.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/526/",
+	"itemId": "01_3147"
 }

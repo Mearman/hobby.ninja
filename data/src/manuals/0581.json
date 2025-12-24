@@ -1,5 +1,5 @@
 {
-	"id": "0581",
+	"id": "581",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 フルアーマーガンダム",
@@ -12,20 +12,29 @@
 		"month": 6,
 		"day": 24
 	},
-	"productImage": "https://bandai-hobby.net/images/157_2702_s_hsyccmt8km2hompppocxvi8cnl9b.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_2702_s_hsyccmt8km2hompppocxvi8cnl9b.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/581/",
-	"extractedAt": "2025-12-05T23:09:47.278Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_2702_s_hsyccmt8km2hompppocxvi8cnl9b.jpg",
+		"path": "/images/items/01_1761/157_2702.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["msv"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "ガンダムMSV",
+		"en": "GundamMSV"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/581.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0581/0581.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/581/",
+	"itemId": "01_1761"
 }

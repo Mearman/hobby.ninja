@@ -1,8 +1,8 @@
 {
-	"id": "0598",
+	"id": "598",
 	"type": "manual",
 	"name": {
-		"ja": "MG 1/100 ガンダム AGE-1 スパロー",
+		"ja": "MG 1/100 ガンダムAGE-1 スパロー",
 		"en": "MG 1/100 GundamAGE-1 Sparrow"
 	},
 	"productNumber": "2156346",
@@ -12,20 +12,29 @@
 		"month": 4,
 		"day": 28
 	},
-	"productImage": "https://bandai-hobby.net/images/157_4551_s_0b10rwoosx6g8gq998im0f4ydanz.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_4551_s_0b10rwoosx6g8gq998im0f4ydanz.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/598/",
-	"extractedAt": "2025-12-05T23:09:47.303Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_4551_s_0b10rwoosx6g8gq998im0f4ydanz.jpg",
+		"path": "/images/items/01_3596/157_4551.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["age"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムAGE",
+		"en": "Mobile Suit GundamAGE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/598.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0598/0598.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/598/",
+	"itemId": "01_3596"
 }

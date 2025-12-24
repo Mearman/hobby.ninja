@@ -1,8 +1,8 @@
 {
-	"id": "0557",
+	"id": "557",
 	"type": "manual",
 	"name": {
-		"ja": "MG 1/100 RX-78-2 ガンダム Ver2.0",
+		"ja": "MG 1/100 RX-78-2ガンダム Ver2.0",
 		"en": "MG 1/100 RX-78-2Gundam Ver2.0"
 	},
 	"productNumber": "2028924",
@@ -12,20 +12,29 @@
 		"month": 7,
 		"day": 26
 	},
-	"productImage": "https://bandai-hobby.net/images/157_2376_s_53hcw1w800i6jm9goyihbeouzn2d.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_2376_s_53hcw1w800i6jm9goyihbeouzn2d.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/557/",
-	"extractedAt": "2025-12-05T23:09:47.246Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_2376_s_53hcw1w800i6jm9goyihbeouzn2d.jpg",
+		"path": "/images/items/01_1453/157_2376.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/557.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0557/0557.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/557/",
+	"itemId": "01_1453"
 }

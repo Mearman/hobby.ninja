@@ -1,5 +1,5 @@
 {
-	"id": "0552",
+	"id": "552",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 デスティニーガンダム",
@@ -11,20 +11,28 @@
 		"year": 2007,
 		"month": 10
 	},
-	"productImage": "https://bandai-hobby.net/images/157_2575_s_2e0l5zdh1grdbb3k37p9ds5yahgu.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_2575_s_2e0l5zdh1grdbb3k37p9ds5yahgu.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/552/",
-	"extractedAt": "2025-12-05T23:09:47.236Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_2575_s_2e0l5zdh1grdbb3k37p9ds5yahgu.jpg",
+		"path": "/manuals/0552/157_2575.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["seed-d"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムSEED DESTINY",
+		"en": "Mobile Suit GundamSEED DESTINY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/552.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0552/0552.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/552/"
 }

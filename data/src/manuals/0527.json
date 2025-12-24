@@ -1,5 +1,5 @@
 {
-	"id": "0527",
+	"id": "527",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 パーフェクトジオング",
@@ -11,20 +11,29 @@
 		"year": 2004,
 		"month": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/157_456_s_gxp2lxyxduw7fiwuztakmhj27obr.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_456_s_gxp2lxyxduw7fiwuztakmhj27obr.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/527/",
-	"extractedAt": "2025-12-05T23:09:47.189Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_456_s_gxp2lxyxduw7fiwuztakmhj27obr.jpg",
+		"path": "/images/items/01_3614/157_4569.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/527.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0527/0527.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/527/",
+	"itemId": "01_3614"
 }

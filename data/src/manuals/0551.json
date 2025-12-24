@@ -1,5 +1,5 @@
 {
-	"id": "0551",
+	"id": "551",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ユニコーンガンダム Ver.Ka",
@@ -11,20 +11,29 @@
 		"year": 2007,
 		"month": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/157_725_s_g3fhfcogdmtob251imte5hv3p495.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_725_s_g3fhfcogdmtob251imte5hv3p495.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/551/",
-	"extractedAt": "2025-12-05T23:09:47.234Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_725_s_g3fhfcogdmtob251imte5hv3p495.jpg",
+		"path": "/images/items/01_5657/157_725.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/551.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0551/0551.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/551/",
+	"itemId": "01_5657"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0547",
+	"id": "547",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 Hi-νガンダム",
@@ -11,20 +11,29 @@
 		"year": 2007,
 		"month": 2
 	},
-	"productImage": "https://bandai-hobby.net/images/155_2551_s_pwl4spsgdmfvkorjpigr5myll1si.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_2551_s_pwl4spsgdmfvkorjpigr5myll1si.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/547/",
-	"extractedAt": "2025-12-05T23:09:47.229Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_2551_s_pwl4spsgdmfvkorjpigr5myll1si.jpg",
+		"path": "/images/items/01_1642/155_2551.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam-cca"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 逆襲のシャア",
+		"en": "Mobile Suit Gundam Char's Counterattack"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/547.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0547/0547.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/547/",
+	"itemId": "01_1642"
 }

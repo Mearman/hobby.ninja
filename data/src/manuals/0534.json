@@ -1,5 +1,5 @@
 {
-	"id": "0534",
+	"id": "534",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ボール(第08MS小隊版)",
@@ -11,20 +11,29 @@
 		"year": 2005,
 		"month": 5
 	},
-	"productImage": "https://bandai-hobby.net/images/157_549_s_ln7l9csfbq26vhqfktzfvpp1ghti.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_549_s_ln7l9csfbq26vhqfktzfvpp1ghti.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/534/",
-	"extractedAt": "2025-12-05T23:09:47.201Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_549_s_ln7l9csfbq26vhqfktzfvpp1ghti.jpg",
+		"path": "/images/items/01_4602/157_549.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": [],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 第08MS小隊",
+		"en": "Mobile Suit Gundam 08th MS Platoon"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/534.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0534/0534.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/534/",
+	"itemId": "01_4602"
 }

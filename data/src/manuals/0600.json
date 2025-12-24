@@ -1,5 +1,5 @@
 {
-	"id": "0600",
+	"id": "600",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 デュエルガンダム アサルトシュラウド",
@@ -12,20 +12,28 @@
 		"month": 2,
 		"day": 18
 	},
-	"productImage": "https://bandai-hobby.net/images/157_2728_s_d6yy4qgcfsy6k67mv1ee6jxcodxs.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_2728_s_d6yy4qgcfsy6k67mv1ee6jxcodxs.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/600/",
-	"extractedAt": "2025-12-05T23:09:47.306Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_2728_s_d6yy4qgcfsy6k67mv1ee6jxcodxs.jpg",
+		"path": "/manuals/0600/157_2728.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/600.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0600/0600.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/600/"
 }

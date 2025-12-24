@@ -1,5 +1,5 @@
 {
-	"id": "0524",
+	"id": "524",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 シャア専用ズゴック",
@@ -11,20 +11,28 @@
 		"year": 2003,
 		"month": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/157_387_s_6b1hxx6o2gurgygvcy9f2zndhs3m.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_387_s_6b1hxx6o2gurgygvcy9f2zndhs3m.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/524/",
-	"extractedAt": "2025-12-05T23:09:47.182Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_387_s_6b1hxx6o2gurgygvcy9f2zndhs3m.jpg",
+		"path": "/manuals/0524/157_387.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/524.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0524/0524.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/524/"
 }

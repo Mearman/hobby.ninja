@@ -1,5 +1,5 @@
 {
-	"id": "0553",
+	"id": "553",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 デスティニーガンダム エクストリームブラストモード",
@@ -11,20 +11,28 @@
 		"year": 2007,
 		"month": 10
 	},
-	"productImage": "https://bandai-hobby.net/images/157_2576_s_unhebg7f45vu4srdrxcr8xrw5mc7.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_2576_s_unhebg7f45vu4srdrxcr8xrw5mc7.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/553/",
-	"extractedAt": "2025-12-05T23:09:47.238Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_2576_s_unhebg7f45vu4srdrxcr8xrw5mc7.jpg",
+		"path": "/manuals/0553/157_2576.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["seed-d"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムSEED DESTINY",
+		"en": "Mobile Suit GundamSEED DESTINY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/553.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0553/0553.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/553/"
 }

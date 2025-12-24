@@ -1,5 +1,5 @@
 {
-	"id": "0579",
+	"id": "579",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ガンダムデスサイズヘル EW",
@@ -12,20 +12,28 @@
 		"month": 2,
 		"day": 26
 	},
-	"productImage": "https://bandai-hobby.net/images/190_2715_s_8hj8jalilnlqqqcz3gj2pul1vjl6.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/190_2715_s_8hj8jalilnlqqqcz3gj2pul1vjl6.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/579/",
-	"extractedAt": "2025-12-05T23:09:47.276Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/190_2715_s_8hj8jalilnlqqqcz3gj2pul1vjl6.jpg",
+		"path": "/manuals/0579/190_2715.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["endlesswaltz"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "新機動戦記ガンダムW",
+		"en": "New Mobile Report GundamW"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/579.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0579/0579.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/579/"
 }

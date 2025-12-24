@@ -1,5 +1,5 @@
 {
-	"id": "0521",
+	"id": "521",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 MS-14A ゲルググ(アナベル・ガトー専用機)",
@@ -11,20 +11,29 @@
 		"year": 2003,
 		"month": 2
 	},
-	"productImage": "https://bandai-hobby.net/images/157_324_s_cjf0pvdgfyeoikhkr6tmgtc9xggh.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_324_s_cjf0pvdgfyeoikhkr6tmgtc9xggh.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/521/",
-	"extractedAt": "2025-12-05T23:09:47.175Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_324_s_cjf0pvdgfyeoikhkr6tmgtc9xggh.jpg",
+		"path": "/images/items/01_2311/157_324.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["g-0083"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 0083 STARDUST MEMORY",
+		"en": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/521.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0521/0521.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/521/",
+	"itemId": "01_2311"
 }

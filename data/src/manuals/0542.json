@@ -1,5 +1,5 @@
 {
-	"id": "0542",
+	"id": "542",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ストライクガンダム＋I.W.S.P.",
@@ -12,20 +12,29 @@
 		"month": 10,
 		"day": 28
 	},
-	"productImage": "https://bandai-hobby.net/images/157_685_s_pueptscnuvrtkg831ju3z474v6w4.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_685_s_pueptscnuvrtkg831ju3z474v6w4.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/542/",
-	"extractedAt": "2025-12-05T23:09:47.219Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_685_s_pueptscnuvrtkg831ju3z474v6w4.jpg",
+		"path": "/images/items/01_5627/157_685.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/542.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0542/0542.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/542/",
+	"itemId": "01_5627"
 }

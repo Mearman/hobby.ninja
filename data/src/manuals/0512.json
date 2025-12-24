@@ -1,5 +1,5 @@
 {
-	"id": "0512",
+	"id": "512",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 RX-77-2 ガンキャノン",
@@ -11,20 +11,29 @@
 		"year": 2001,
 		"month": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/157_236_s_dvtu0xqafw0gpiagvvplko6bd5x2.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_236_s_dvtu0xqafw0gpiagvvplko6bd5x2.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/512/",
-	"extractedAt": "2025-12-05T23:09:47.156Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_236_s_dvtu0xqafw0gpiagvvplko6bd5x2.jpg",
+		"path": "/images/items/01_1446/157_236.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/512.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0512/0512.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/512/",
+	"itemId": "01_1446"
 }

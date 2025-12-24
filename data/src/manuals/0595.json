@@ -1,8 +1,8 @@
 {
-	"id": "0595",
+	"id": "595",
 	"type": "manual",
 	"name": {
-		"ja": "MG 1/100 RX-0 ユニコーンガンダム 2号機 バンシィ",
+		"ja": "MG 1/100 RX-0 ユニコーンガンダム2号機 バンシィ",
 		"en": "MG 1/100 RX-0 Unicorn Gundam Unit 2 Banshee"
 	},
 	"productNumber": "2155482",
@@ -12,20 +12,28 @@
 		"month": 3,
 		"day": 24
 	},
-	"productImage": "https://bandai-hobby.net/images/157_810_s_7um8t9rcxo9rxsa4tvwmkbs16q00.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_810_s_7um8t9rcxo9rxsa4tvwmkbs16q00.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/595/",
-	"extractedAt": "2025-12-05T23:09:47.298Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_810_s_7um8t9rcxo9rxsa4tvwmkbs16q00.jpg",
+		"path": "/manuals/0595/157_810.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/595.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0595/0595.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/595/"
 }

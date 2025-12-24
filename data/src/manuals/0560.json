@@ -1,8 +1,8 @@
 {
-	"id": "0560",
+	"id": "560",
 	"type": "manual",
 	"name": {
-		"ja": "MG 1/100 Gファイター (ガンダム Ver.2.0用 V作戦モデル)",
+		"ja": "MG 1/100 Gファイター (ガンダムVer.2.0用 V作戦モデル)",
 		"en": "MG 1/100 G Fighter (V Operation Model for GundamVer.2.0)"
 	},
 	"productNumber": "2028930",
@@ -11,20 +11,29 @@
 		"year": 2009,
 		"month": 1
 	},
-	"productImage": "https://bandai-hobby.net/images/157_2600_s_6ktq6f129o3shb2ejwlheuz3laha.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_2600_s_6ktq6f129o3shb2ejwlheuz3laha.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/560/",
-	"extractedAt": "2025-12-05T23:09:47.249Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_2600_s_6ktq6f129o3shb2ejwlheuz3laha.jpg",
+		"path": "/images/items/01_1692/157_2600.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/560.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0560/0560.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/560/",
+	"itemId": "01_1692"
 }

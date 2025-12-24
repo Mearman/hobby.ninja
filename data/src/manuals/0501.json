@@ -1,5 +1,5 @@
 {
-	"id": "0501",
+	"id": "501",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 シャア専用ザクII",
@@ -12,20 +12,28 @@
 		"month": 7,
 		"day": 31
 	},
-	"productImage": "https://bandai-hobby.net/images/190_3791_s_kdhb5t1fwrczp41azxinksy1y7wh.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/190_3791_s_kdhb5t1fwrczp41azxinksy1y7wh.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/501/",
-	"extractedAt": "2025-12-05T23:09:47.130Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/190_3791_s_kdhb5t1fwrczp41azxinksy1y7wh.jpg",
+		"path": "/manuals/0501/190_3791.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/501.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0501/0501.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/501/"
 }

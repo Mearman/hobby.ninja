@@ -1,5 +1,5 @@
 {
-	"id": "0519",
+	"id": "519",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 MS-06F-2 ザクII F2型 (連邦軍仕様)",
@@ -11,20 +11,29 @@
 		"year": 2002,
 		"month": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/157_292_s_necyktyxyitqkcktonvpzadmc3n8.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_292_s_necyktyxyitqkcktonvpzadmc3n8.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/519/",
-	"extractedAt": "2025-12-05T23:09:47.168Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_292_s_necyktyxyitqkcktonvpzadmc3n8.jpg",
+		"path": "/images/items/01_2002/157_292.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["g-0083"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 0083 STARDUST MEMORY",
+		"en": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/519.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0519/0519.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/519/",
+	"itemId": "01_2002"
 }

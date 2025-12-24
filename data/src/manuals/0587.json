@@ -1,5 +1,5 @@
 {
-	"id": "0587",
+	"id": "587",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ダブルオーガンダム セブンソード/G",
@@ -12,20 +12,28 @@
 		"month": 9,
 		"day": 23
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1924_s_pwcby3bewl1xx5b9vfx3170f9ifw.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1924_s_pwcby3bewl1xx5b9vfx3170f9ifw.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/587/",
-	"extractedAt": "2025-12-05T23:09:47.285Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_1924_s_pwcby3bewl1xx5b9vfx3170f9ifw.jpg",
+		"path": "/manuals/0587/158_1924.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["g-00"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム00",
+		"en": "Mobile Suit Gundam00"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/587.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0587/0587.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/587/"
 }

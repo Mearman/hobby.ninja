@@ -1,5 +1,5 @@
 {
-	"id": "0550",
+	"id": "550",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 WD-M01 ターンエーガンダム",
@@ -11,24 +11,28 @@
 		"year": 2007,
 		"month": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/159_2571_s_40qusdfr3n7c3mw7jqxj24v2if5i.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_2571_s_40qusdfr3n7c3mw7jqxj24v2if5i.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/550/",
-	"extractedAt": "2025-12-05T23:09:47.233Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_2571_s_40qusdfr3n7c3mw7jqxj24v2if5i.jpg",
+		"path": "/manuals/0550/159_2571.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "∀ガンダム",
+		"en": "∀Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/550.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0550/0550.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/550/"
 }

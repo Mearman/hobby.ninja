@@ -1,5 +1,5 @@
 {
-	"id": "0530",
+	"id": "530",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ストライクルージュ",
@@ -11,20 +11,29 @@
 		"year": 2004,
 		"month": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/156_475_s_uaafphdqx35ducb3m7ap70dw0aaf.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_475_s_uaafphdqx35ducb3m7ap70dw0aaf.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/530/",
-	"extractedAt": "2025-12-05T23:09:47.194Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_475_s_uaafphdqx35ducb3m7ap70dw0aaf.jpg",
+		"path": "/images/items/01_3811/156_475.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/530.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0530/0530.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/530/",
+	"itemId": "01_3811"
 }

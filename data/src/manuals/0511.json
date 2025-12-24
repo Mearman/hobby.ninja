@@ -1,5 +1,5 @@
 {
-	"id": "0511",
+	"id": "511",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ゼータプラステストカラー",
@@ -11,20 +11,29 @@
 		"year": 2001,
 		"month": 10
 	},
-	"productImage": "https://bandai-hobby.net/images/157_227_s_rypcxr585g56v31xorhpxnjzu99y.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_227_s_rypcxr585g56v31xorhpxnjzu99y.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/511/",
-	"extractedAt": "2025-12-05T23:09:47.154Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_227_s_rypcxr585g56v31xorhpxnjzu99y.jpg",
+		"path": "/images/items/01_1352/157_227.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["sentinel"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "ガンダム・センチネル",
+		"en": "Gundam Sentinel"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/511.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0511/0511.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/511/",
+	"itemId": "01_1352"
 }

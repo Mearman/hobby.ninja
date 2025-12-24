@@ -1,5 +1,5 @@
 {
-	"id": "0507",
+	"id": "507",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 シェンロンガンダム",
@@ -12,20 +12,29 @@
 		"month": 9,
 		"day": 10
 	},
-	"productImage": "https://bandai-hobby.net/images/189_5100_s_hk4y62s9vnahw37vuluvj50iva7h.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_5100_s_hk4y62s9vnahw37vuluvj50iva7h.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/507/",
-	"extractedAt": "2025-12-05T23:09:47.144Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_5100_s_hk4y62s9vnahw37vuluvj50iva7h.jpg",
+		"path": "/images/items/01_4179/189_5100.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["endlesswaltz"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "新機動戦記ガンダムW",
+		"en": "New Mobile Report GundamW"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/507.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0507/0507.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/507/",
+	"itemId": "01_4179"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0567",
+	"id": "567",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 真武者頑駄無 戦国ノ陣",
@@ -11,20 +11,28 @@
 		"year": 2009,
 		"month": 3
 	},
-	"productImage": "https://bandai-hobby.net/images/156_2605_s_oy6etaj2yktvs2k9mgjsfu39c5ke.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_2605_s_oy6etaj2yktvs2k9mgjsfu39c5ke.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/567/",
-	"extractedAt": "2025-12-05T23:09:47.260Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_2605_s_oy6etaj2yktvs2k9mgjsfu39c5ke.jpg",
+		"path": "/manuals/0567/156_2605.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/567.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0567/0567.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/567/"
 }

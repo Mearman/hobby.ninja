@@ -1,8 +1,8 @@
 {
-	"id": "0503",
+	"id": "503",
 	"type": "manual",
 	"name": {
-		"ja": "HGUC 1/144 Ξガンダム VSペーネロペー ファンネル・ミサイル エフェクトセット",
+		"ja": "HGUC 1/144 ΞガンダムVSペーネロペー ファンネル・ミサイル エフェクトセット",
 		"en": "HGUC 1/144 ΞGundamVS Penelope Funnel Missile Effect Set"
 	},
 	"productNumber": "2551156",
@@ -12,20 +12,29 @@
 		"month": 4,
 		"day": 24
 	},
-	"productImage": "https://bandai-hobby.net/images/189_4340_s_tyvtdlkxnvlrsc66gc82v94lhaao.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_4340_s_tyvtdlkxnvlrsc66gc82v94lhaao.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/503/",
-	"extractedAt": "2025-12-05T23:09:47.132Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_4340_s_tyvtdlkxnvlrsc66gc82v94lhaao.jpg",
+		"path": "/images/items/01_3387/189_4340.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["hathaway"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 閃光のハサウェイ",
+		"en": "Mobile Suit Gundam Flash Hathaway"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/503.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0503/0503.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/503/",
+	"itemId": "01_3387"
 }

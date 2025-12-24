@@ -1,8 +1,8 @@
 {
-	"id": "0523",
+	"id": "523",
 	"type": "manual",
 	"name": {
-		"ja": "MG 1/100 RX-78-5 ガンダム 5号機",
+		"ja": "MG 1/100 RX-78-5 ガンダム5号機",
 		"en": "MG 1/100 RX-78-5 Gundam Unit 5"
 	},
 	"productNumber": "1120467",
@@ -11,24 +11,29 @@
 		"year": 2003,
 		"month": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/158_370_s_f9ul4nhtq9tafznlmhai0z3f6drz.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_370_s_f9ul4nhtq9tafznlmhai0z3f6drz.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/523/",
-	"extractedAt": "2025-12-05T23:09:47.178Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_370_s_f9ul4nhtq9tafznlmhai0z3f6drz.jpg",
+		"path": "/images/items/01_2714/158_3707.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gunpla"
-	],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "ガンプラ",
+		"en": "Gunpla"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/523.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0523/0523.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/523/",
+	"itemId": "01_2714"
 }

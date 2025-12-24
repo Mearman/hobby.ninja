@@ -1,8 +1,8 @@
 {
-	"id": "0522",
+	"id": "522",
 	"type": "manual",
 	"name": {
-		"ja": "MG 1/100 RX-78-4 ガンダム 4号機",
+		"ja": "MG 1/100 RX-78-4 ガンダム4号機",
 		"en": "MG 1/100 RX-78-4 Gundam Unit 4"
 	},
 	"productNumber": "1120466",
@@ -11,24 +11,29 @@
 		"year": 2003,
 		"month": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/158_2546_s_xoxaf8cys8dnbdfdm4eaeoadlna1.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_2546_s_xoxaf8cys8dnbdfdm4eaeoadlna1.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/522/",
-	"extractedAt": "2025-12-05T23:09:47.177Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_2546_s_xoxaf8cys8dnbdfdm4eaeoadlna1.jpg",
+		"path": "/images/items/01_1636/158_2546.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gunpla"
-	],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "ガンプラ",
+		"en": "Gunpla"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/522.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0522/0522.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/522/",
+	"itemId": "01_1636"
 }

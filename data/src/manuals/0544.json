@@ -1,5 +1,5 @@
 {
-	"id": "0544",
+	"id": "544",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ガンダム F91（ハリソン・マディン専用機）",
@@ -12,20 +12,29 @@
 		"month": 11,
 		"day": 18
 	},
-	"productImage": "https://bandai-hobby.net/images/155_689_o_1h36thngr50q5h11nhg1vt1gbc23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_689_o_1h36thngr50q5h11nhg1vt1gbc23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/544/",
-	"extractedAt": "2025-12-05T23:09:47.225Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_689_o_1h36thngr50q5h11nhg1vt1gbc23.jpg",
+		"path": "/images/items/01_5629/155_689.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["crossbone"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士クロスボーン・ガンダム",
+		"en": "Mobile Suit Crossbone Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/544.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0544/0544.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/544/",
+	"itemId": "01_5629"
 }

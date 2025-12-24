@@ -1,5 +1,5 @@
 {
-	"id": "0528",
+	"id": "528",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 フリーダムガンダム",
@@ -11,20 +11,29 @@
 		"year": 2004,
 		"month": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/155_465_o_1h3706e12j2o1j0g1h80u2h4a23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_465_o_1h3706e12j2o1j0g1h80u2h4a23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/528/",
-	"extractedAt": "2025-12-05T23:09:47.191Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_465_o_1h3706e12j2o1j0g1h80u2h4a23.jpg",
+		"path": "/images/items/01_3706/155_465.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/528.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0528/0528.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/528/",
+	"itemId": "01_3706"
 }

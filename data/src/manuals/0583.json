@@ -1,5 +1,5 @@
 {
-	"id": "0583",
+	"id": "583",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 PMX-003 ジ・O",
@@ -12,20 +12,28 @@
 		"month": 8,
 		"day": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/157_2386_s_m2kuqgt9fexq7z8bzef2cc033r72.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_2386_s_m2kuqgt9fexq7z8bzef2cc033r72.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/583/",
-	"extractedAt": "2025-12-05T23:09:47.280Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_2386_s_m2kuqgt9fexq7z8bzef2cc033r72.jpg",
+		"path": "/manuals/0583/157_2386.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["z-gundam"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士Zガンダム",
+		"en": "Mobile Suit ZGundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/583.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0583/0583.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/583/"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0578",
+	"id": "578",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ウイングガンダム",
@@ -12,20 +12,28 @@
 		"month": 4,
 		"day": 28
 	},
-	"productImage": "https://bandai-hobby.net/images/155_2693_s_38r4p8bqdbu7tzf1pqwb5fv0otxz.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_2693_s_38r4p8bqdbu7tzf1pqwb5fv0otxz.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/578/",
-	"extractedAt": "2025-12-05T23:09:47.274Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_2693_s_38r4p8bqdbu7tzf1pqwb5fv0otxz.jpg",
+		"path": "/manuals/0578/155_2693.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["endlesswaltz"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "新機動戦記ガンダムW",
+		"en": "New Mobile Report GundamW"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/578.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0578/0578.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/578/"
 }

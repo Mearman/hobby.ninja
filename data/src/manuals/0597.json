@@ -1,8 +1,8 @@
 {
-	"id": "0597",
+	"id": "597",
 	"type": "manual",
 	"name": {
-		"ja": "MG 1/100 ガンダム AGE-1 タイタス",
+		"ja": "MG 1/100 ガンダムAGE-1 タイタス",
 		"en": "MG 1/100 GundamAGE-1 Titus"
 	},
 	"productNumber": "2156345",
@@ -12,20 +12,29 @@
 		"month": 3,
 		"day": 17
 	},
-	"productImage": "https://bandai-hobby.net/images/157_4547_s_4d7ly72sknus9de1ciik607q0o6n.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_4547_s_4d7ly72sknus9de1ciik607q0o6n.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/597/",
-	"extractedAt": "2025-12-05T23:09:47.300Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_4547_s_4d7ly72sknus9de1ciik607q0o6n.jpg",
+		"path": "/images/items/01_3592/157_4547.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["age"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムAGE",
+		"en": "Mobile Suit GundamAGE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/597.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0597/0597.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/597/",
+	"itemId": "01_3592"
 }

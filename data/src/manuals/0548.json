@@ -1,5 +1,5 @@
 {
-	"id": "0548",
+	"id": "548",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 MS-06R 黒い三連星ザク Ver.2.0",
@@ -11,20 +11,29 @@
 		"year": 2008,
 		"month": 1
 	},
-	"productImage": "https://bandai-hobby.net/images/156_5413_s_m0o6fzht55z0gcgisgpo07nsutmj.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_5413_s_m0o6fzht55z0gcgisgpo07nsutmj.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/548/",
-	"extractedAt": "2025-12-05T23:09:47.231Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_5413_s_m0o6fzht55z0gcgisgpo07nsutmj.jpg",
+		"path": "/images/items/01_4511/156_5413.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["msv"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "ガンダムMSV",
+		"en": "GundamMSV"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/548.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0548/0548.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/548/",
+	"itemId": "01_4511"
 }

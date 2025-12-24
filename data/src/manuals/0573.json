@@ -1,5 +1,5 @@
 {
-	"id": "0573",
+	"id": "573",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 RX-0 ユニコーンガンダム",
@@ -12,20 +12,28 @@
 		"month": 3,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/156_738_s_8zicxt97wqsn6wzv2dzsa2moeslc.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_738_s_8zicxt97wqsn6wzv2dzsa2moeslc.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/573/",
-	"extractedAt": "2025-12-05T23:09:47.267Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_738_s_8zicxt97wqsn6wzv2dzsa2moeslc.jpg",
+		"path": "/manuals/0573/156_738.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/573.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0573/0573.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/573/"
 }

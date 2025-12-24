@@ -1,5 +1,5 @@
 {
-	"id": "0565",
+	"id": "565",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 RX-75ガンタンク",
@@ -12,20 +12,29 @@
 		"month": 9,
 		"day": 17
 	},
-	"productImage": "https://bandai-hobby.net/images/157_2627_s_ydsdhanflthd5f12bjlhs272l6d3.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_2627_s_ydsdhanflthd5f12bjlhs272l6d3.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/565/",
-	"extractedAt": "2025-12-05T23:09:47.257Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_2627_s_ydsdhanflthd5f12bjlhs272l6d3.jpg",
+		"path": "/images/items/01_1718/157_2627.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/565.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0565/0565.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/565/",
+	"itemId": "01_1718"
 }

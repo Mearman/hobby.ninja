@@ -1,5 +1,5 @@
 {
-	"id": "0504",
+	"id": "504",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ザクII",
@@ -12,20 +12,28 @@
 		"month": 12,
 		"day": 4
 	},
-	"productImage": "https://bandai-hobby.net/images/190_4622_s_p9dgdgrc1q5aarjmr1162jenr78z.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/190_4622_s_p9dgdgrc1q5aarjmr1162jenr78z.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/504/",
-	"extractedAt": "2025-12-05T23:09:47.135Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/190_4622_s_p9dgdgrc1q5aarjmr1162jenr78z.jpg",
+		"path": "/manuals/0504/190_4622.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/504.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0504/0504.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/504/"
 }
