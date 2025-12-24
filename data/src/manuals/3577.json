@@ -12,19 +12,23 @@
 		"month": 3,
 		"day": 23
 	},
-	"productImage": "https://bandai-hobby.net/images/2680793.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/2680793.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3577/",
-	"extractedAt": "2025-12-05T23:09:49.376Z",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
+	"brand": {
+		"ja": "30 MINUTES LABEL",
+		"en": "30 MINUTES LABEL"
+	},
+	"series": {
+		"ja": "30 MINUTES SISTERS",
+		"en": "30 MINUTES SISTERS"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/3577.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/3577/3577.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3577/"
 }
