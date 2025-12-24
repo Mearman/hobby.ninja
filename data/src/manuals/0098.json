@@ -1,5 +1,5 @@
 {
-	"id": "0098",
+	"id": "98",
 	"type": "manual",
 	"name": {
 		"ja": "HGBD:R 1/144 リライジングガンダム",
@@ -12,20 +12,28 @@
 		"month": 9,
 		"day": 26
 	},
-	"productImage": "https://bandai-hobby.net/images/196_3834_s_tmctrgj777lt2116om5vxbcijfe3.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_3834_s_tmctrgj777lt2116om5vxbcijfe3.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/98/",
-	"extractedAt": "2025-12-05T23:09:46.456Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_3834_s_tmctrgj777lt2116om5vxbcijfe3.jpg",
+		"path": "/manuals/0098/196_3834.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers-rerise"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズRe:RISE",
+		"en": "Gundam Build Divers Re:RISE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/98.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0098/0098.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/98/"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0099",
+	"id": "99",
 	"type": "manual",
 	"name": {
 		"ja": "HGBD:R 1/144 ガンダムアニマリゼ",
@@ -12,20 +12,29 @@
 		"month": 8,
 		"day": 29
 	},
-	"productImage": "https://bandai-hobby.net/images/193_3824_s_1fy0j2eicislrdb9bqzdr0mrujo5.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/193_3824_s_1fy0j2eicislrdb9bqzdr0mrujo5.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/99/",
-	"extractedAt": "2025-12-05T23:09:46.457Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/193_3824_s_1fy0j2eicislrdb9bqzdr0mrujo5.jpg",
+		"path": "/images/items/01_2841/193_3824.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers-rerise"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズRe:RISE",
+		"en": "Gundam Build Divers Re:RISE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/99.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0099/0099.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/99/",
+	"itemId": "01_2841"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0097",
+	"id": "97",
 	"type": "manual",
 	"name": {
 		"ja": "HGBD:R 1/144 ウォドムポッド",
@@ -12,20 +12,29 @@
 		"month": 6,
 		"day": 27
 	},
-	"productImage": "https://bandai-hobby.net/images/191_3738_s_1jze3xl4v2oix7kdj8t4njma44zl.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/191_3738_s_1jze3xl4v2oix7kdj8t4njma44zl.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/97/",
-	"extractedAt": "2025-12-05T23:09:46.455Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/191_3738_s_1jze3xl4v2oix7kdj8t4njma44zl.jpg",
+		"path": "/images/items/01_2748/191_3738.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers-rerise"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズRe:RISE",
+		"en": "Gundam Build Divers Re:RISE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/97.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0097/0097.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/97/",
+	"itemId": "01_2748"
 }
