@@ -31,8 +31,6 @@ interface ManualReleaseDate {
 
 /** Brand reference */
 export interface ManualBrand {
-	/** Brand ID (optional, can be mapped later) */
-	id?: string;
 	/** Japanese brand name */
 	ja: string;
 	/** English brand name */
@@ -41,8 +39,6 @@ export interface ManualBrand {
 
 /** Series reference */
 export interface ManualSeries {
-	/** Series ID (optional, can be mapped later) */
-	id?: string;
 	/** Japanese series name */
 	ja: string;
 	/** English series name */
