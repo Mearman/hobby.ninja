@@ -244,7 +244,8 @@ export const ManualsIndexUpdater = {
 
 		return Object.entries(manualsIndex.manuals)
 			.filter(([_, entry]) => entry.hasPage)
-			.map(([id]) => id);
+			.map(([id]) => id)
+			.toSorted((a, b) => Number.parseInt(a, 10) - Number.parseInt(b, 10));
 	},
 
 	/**
