@@ -137,8 +137,8 @@ interface Manual {
 	name: LocalizedString;
 	brandIds: string[];
 	seriesIds: string[];
-	/** Linked item ID (bidirectional with item.manual.id) */
-	itemId?: string | null;
+	/** Linked item IDs (computed from items referencing this manual) */
+	itemIds: string[];
 	productImage?: string;
 	thumbnailImage?: string;
 	[key: string]: unknown;
@@ -566,83 +566,57 @@ function buildHomepageData(
 }
 
 /**
- * Validate that item-manual relationships are 1-to-1 and bidirectional
+ * Validate item-manual relationships and compute manual.itemIds
+ * - One item can reference one manual (N:1 from items perspective)
+ * - One manual can be referenced by many items (1:N from manual perspective)
  * Throws an error if validation fails
  */
 function validateItemManualRelationships(items: Map<string, Item>, manuals: Map<string, Manual>): void {
 	const errors: string[] = [];
 
-	// Track which items are linked by manuals (to detect duplicates)
-	const itemsLinkedByManuals = new Map<string, string[]>(); // itemId -> [manualIds...]
-	// Track which manuals are linked by items (to detect duplicates)
+	// Track which manuals are linked by which items
 	const manualsLinkedByItems = new Map<string, string[]>(); // manualId -> [itemIds...]
+	// Track which items reference manuals (to detect items with multiple manuals)
+	const itemManualCount = new Map<string, number>(); // itemId -> count
 
-	// Check items -> manuals direction
+	// Check items -> manuals direction and build reverse mapping
 	for (const [itemId, item] of items) {
 		if (item.manual?.id) {
 			const manualId = item.manual.id;
 
-			// Track this link for duplicate detection
+			// Track for computing itemIds
 			if (!manualsLinkedByItems.has(manualId)) {
 				manualsLinkedByItems.set(manualId, []);
 			}
 			manualsLinkedByItems.get(manualId)!.push(itemId);
 
+			// Track item's manual count (should only have one)
+			itemManualCount.set(itemId, (itemManualCount.get(itemId) ?? 0) + 1);
+
 			// Check if manual exists
 			const manual = manuals.get(manualId);
 			if (!manual) {
 				errors.push(`Item ${itemId} references manual ${manualId} which does not exist`);
-				continue;
-			}
-
-			// Check bidirectional link
-			if (!manual.itemId) {
-				errors.push(`Item ${itemId} -> Manual ${manualId}: manual missing itemId (should be ${itemId})`);
-			} else if (manual.itemId !== itemId) {
-				errors.push(`Item ${itemId} -> Manual ${manualId}: manual.itemId is ${manual.itemId} (expected ${itemId})`);
 			}
 		}
 	}
 
-	// Check manuals -> items direction
+	// Validate: one item should only reference one manual
+	for (const [itemId, count] of itemManualCount) {
+		if (count > 1) {
+			errors.push(`Item ${itemId} references multiple manuals (found ${count})`);
+		}
+	}
+
+	// Compute itemIds for each manual from the items that reference it
 	for (const [manualId, manual] of manuals) {
-		if (manual.itemId) {
-			const itemId = manual.itemId;
-
-			// Track this link for duplicate detection
-			if (!itemsLinkedByManuals.has(itemId)) {
-				itemsLinkedByManuals.set(itemId, []);
-			}
-			itemsLinkedByManuals.get(itemId)!.push(manualId);
-
-			// Check if item exists
-			const item = items.get(itemId);
-			if (!item) {
-				errors.push(`Manual ${manualId} references item ${itemId} which does not exist`);
-				continue;
-			}
-
-			// Check bidirectional link
-			if (!item.manual?.id) {
-				errors.push(`Manual ${manualId} -> Item ${itemId}: item missing manual.id (should be ${manualId})`);
-			} else if (item.manual.id !== manualId) {
-				errors.push(`Manual ${manualId} -> Item ${itemId}: item.manual.id is ${item.manual.id} (expected ${manualId})`);
-			}
-		}
+		manual.itemIds = manualsLinkedByItems.get(manualId) ?? [];
 	}
 
-	// Check for duplicate links (one item linked by multiple manuals)
-	for (const [itemId, manualIds] of itemsLinkedByManuals) {
-		if (manualIds.length > 1) {
-			errors.push(`Item ${itemId} is linked by multiple manuals: ${manualIds.join(", ")}`);
-		}
-	}
-
-	// Check for duplicate links (one manual linked by multiple items)
-	for (const [manualId, itemIds] of manualsLinkedByItems) {
-		if (itemIds.length > 1) {
-			errors.push(`Manual ${manualId} is linked by multiple items: ${itemIds.join(", ")}`);
-		}
+	// Log statistics
+	const manualsWithMultipleItems = [...manualsLinkedByItems.entries()].filter(([, ids]) => ids.length > 1);
+	if (manualsWithMultipleItems.length > 0) {
+		console.log(`  ℹ ${manualsWithMultipleItems.length} manuals shared by multiple items (color variants)`);
 	}
 
 	if (errors.length > 0) {
