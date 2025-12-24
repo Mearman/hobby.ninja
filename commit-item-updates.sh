@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Script to commit and push item updates in batches
-# Usage: ./commit-item-updates.sh [start_id] [end_id] [batch_size]
-# Defaults: start_id=1000, end_id=2000, batch_size=100
+# Script to commit and push item/manual updates in batches
+# Usage: ./commit-item-updates.sh [OPTIONS]
+# Supports both items and manuals via --type flag
 
 set -e  # Exit on any error
 
@@ -10,16 +10,22 @@ set -e  # Exit on any error
 DEFAULT_START_ID=1
 DEFAULT_END_ID=10000
 DEFAULT_BATCH_SIZE=100
+DEFAULT_TYPE="items"
 
 # Default values
 START_ID=$DEFAULT_START_ID
 END_ID=$DEFAULT_END_ID
 BATCH_SIZE=$DEFAULT_BATCH_SIZE
 WATCH_MODE=false
+DATA_TYPE=$DEFAULT_TYPE
 
 # Parse named arguments
 while [[ $# -gt 0 ]]; do
     case $1 in
+        --type)
+            DATA_TYPE="$2"
+            shift 2
+            ;;
         --start-id)
             START_ID="$2"
             shift 2
@@ -44,19 +50,19 @@ while [[ $# -gt 0 ]]; do
             echo "Usage: $0 [OPTIONS]"
             echo ""
             echo "Options:"
-            echo "  --start-id ID     Starting item ID (default: $DEFAULT_START_ID)"
-            echo "  --end-id ID       Ending item ID (default: $DEFAULT_END_ID)"
+            echo "  --type TYPE       Data type: 'items' or 'manuals' (default: $DEFAULT_TYPE)"
+            echo "  --start-id ID     Starting ID (default: $DEFAULT_START_ID)"
+            echo "  --end-id ID       Ending ID (default: $DEFAULT_END_ID)"
             echo "  --batch-size SIZE Number of IDs per batch (default: $DEFAULT_BATCH_SIZE)"
             echo "  --watch           Enable watch mode (default: disabled)"
             echo "  --no-watch        Disable watch mode (default: disabled)"
             echo "  -h, --help        Show this help message"
             echo ""
             echo "Examples:"
-            echo "  $0                                            # Use defaults: 1000-2000 in batches of 100"
-            echo "  $0 --start-id 1000 --end-id 1500             # Process IDs 1000-1500 in batches of 100"
-            echo "  $0 --start-id 1000 --end-id 2000 --batch-size 50  # Process with batches of 50"
-            echo "  $0 --start-id 1000 --end-id 2000 --watch     # Watch mode: monitor for changes"
-            echo "  $0 --start-id 1000 --end-id 2000 --batch-size 20 --watch  # Watch mode with small batches"
+            echo "  $0                                            # Items: 1-10000 in batches of 100"
+            echo "  $0 --type manuals --start-id 1 --end-id 500  # Manuals: 1-500"
+            echo "  $0 --start-id 1000 --end-id 1500             # Items: 1000-1500 in batches of 100"
+            echo "  $0 --type manuals --watch                    # Watch mode for manuals"
             echo ""
             echo "Watch Mode:"
             echo "  Continuously monitors for changes and processes complete batches"
@@ -72,6 +78,12 @@ while [[ $# -gt 0 ]]; do
             ;;
     esac
 done
+
+# Validate type
+if [[ "$DATA_TYPE" != "items" && "$DATA_TYPE" != "manuals" ]]; then
+    echo "Invalid type: $DATA_TYPE. Must be 'items' or 'manuals'"
+    exit 1
+fi
 
 # Validate arguments
 if ! [[ "$START_ID" =~ ^[0-9]+$ ]] || ! [[ "$END_ID" =~ ^[0-9]+$ ]] || ! [[ "$BATCH_SIZE" =~ ^[0-9]+$ ]]; then
@@ -113,13 +125,112 @@ print_error() {
     echo -e "${RED}[ERROR]${NC} $1"
 }
 
+# Helper functions for type-specific paths
+get_json_file() {
+    local id=$1
+    local padded_id=$(printf "%04d" $id)
+    if [[ "$DATA_TYPE" == "items" ]]; then
+        echo "data/src/items/01_${padded_id}.json"
+    else
+        echo "data/src/manuals/${padded_id}.json"
+    fi
+}
+
+get_asset_dir() {
+    local id=$1
+    local padded_id=$(printf "%04d" $id)
+    if [[ "$DATA_TYPE" == "items" ]]; then
+        echo "assets/images/items/01_${padded_id}"
+    else
+        echo "assets/manuals/${padded_id}"
+    fi
+}
+
+get_alt_asset_dir() {
+    local id=$1
+    local padded_id=$(printf "%04d" $id)
+    if [[ "$DATA_TYPE" == "items" ]]; then
+        echo "apps/next/public/images/items/01_${padded_id}"
+    else
+        echo ""  # No alternate location for manuals
+    fi
+}
+
+get_old_flat_pattern() {
+    local id=$1
+    local padded_id=$(printf "%04d" $id)
+    if [[ "$DATA_TYPE" == "items" ]]; then
+        echo "apps/next/public/images/items/01_${padded_id}_*.jpg"
+    else
+        echo ""  # No old flat pattern for manuals
+    fi
+}
+
+# Get old manual cover pattern (e.g., assets/manuals/0088/0088.jpg)
+get_old_manual_cover() {
+    local id=$1
+    local padded_id=$(printf "%04d" $id)
+    if [[ "$DATA_TYPE" == "manuals" ]]; then
+        echo "assets/manuals/${padded_id}/${padded_id}.jpg"
+    else
+        echo ""
+    fi
+}
+
+get_commit_prefix() {
+    if [[ "$DATA_TYPE" == "items" ]]; then
+        echo "items"
+    else
+        echo "manuals"
+    fi
+}
+
+# Check if a specific ID has any changes (JSON, deleted covers, or new assets)
+id_has_changes() {
+    local id=$1
+    local json_file=$(get_json_file $id)
+    local asset_dir=$(get_asset_dir $id)
+    local old_cover=$(get_old_manual_cover $id)
+
+    # Check JSON file: untracked, modified, or staged
+    if [[ -f "$json_file" ]]; then
+        if ! git ls-files --error-unmatch "$json_file" 2>/dev/null; then
+            return 0  # Untracked JSON
+        fi
+        if ! git diff --quiet "$json_file" 2>/dev/null; then
+            return 0  # Modified JSON
+        fi
+        if ! git diff --cached --quiet "$json_file" 2>/dev/null; then
+            return 0  # Staged JSON changes
+        fi
+    fi
+
+    # Check for deleted old manual cover (shows as "D" in worktree)
+    if [[ -n "$old_cover" ]]; then
+        # File was tracked but is now deleted in worktree
+        if git ls-files --error-unmatch "$old_cover" 2>/dev/null && [[ ! -f "$old_cover" ]]; then
+            return 0  # Deleted cover
+        fi
+    fi
+
+    # Check for untracked files in asset directory
+    if [[ -d "$asset_dir" ]]; then
+        local untracked_count=$(git ls-files --others --exclude-standard "$asset_dir" 2>/dev/null | wc -l | tr -d ' ')
+        if [[ "$untracked_count" -gt 0 ]]; then
+            return 0  # Has new untracked assets
+        fi
+    fi
+
+    return 1  # No changes
+}
+
 # Function to process a single batch
 process_batch() {
     local batch_start=$1
     local batch_end=$2
     local batch_num=$3
 
-    print_status "Processing batch $batch_num: IDs $batch_start-$batch_end"
+    print_status "Processing batch $batch_num: IDs $batch_start-$batch_end ($DATA_TYPE)"
 
     # Clean staging area to avoid including unrelated staged changes
     if ! git diff --cached --quiet; then
@@ -134,77 +245,77 @@ process_batch() {
 
     # Process each ID with its own pattern
     for ((id=batch_start; id<=batch_end; id++)); do
-        local padded_id=$(printf "%04d" $id)
-        local item_dir="01_${padded_id}"
-        local json_file="data/src/items/01_${padded_id}.json"
-
-        # Skip this ID if there's no JSON file or if it hasn't been modified
-        if [[ ! -f "$json_file" ]]; then
-            print_status "  - Skipping ID $id: No JSON file found"
+        # Use unified change detection (JSON, deleted covers, new assets)
+        if ! id_has_changes $id; then
             continue
         fi
 
-        # Check if JSON file is untracked (new file)
-        if git ls-files --error-unmatch "$json_file" 2>/dev/null; then
-            # File is tracked - check for modifications
-            if ! git diff --quiet "$json_file" 2>/dev/null; then
-                print_status "  - Processing ID $id: Found modified JSON file"
-            elif ! git diff --cached --quiet "$json_file" 2>/dev/null; then
-                print_status "  - Processing ID $id: Found staged JSON file changes"
-            else
-                # JSON file exists but has no changes (neither staged nor unstaged)
-                print_status "  - Skipping ID $id: JSON file not modified"
-                continue
-            fi
-        else
-            # File is untracked (new file)
-            print_status "  - Processing ID $id: Found new untracked JSON file"
-        fi
+        print_status "  - Processing ID $id: Found changes"
 
-        # Add JSON file first
-        git add "$json_file" 2>/dev/null || true
+        local json_file=$(get_json_file $id)
+        local dir_path=$(get_asset_dir $id)
+        local alt_dir_path=$(get_alt_asset_dir $id)
+        local delete_pattern=$(get_old_flat_pattern $id)
+        local old_cover=$(get_old_manual_cover $id)
+
+        # Stage JSON file if it exists and has changes
+        if [[ -f "$json_file" ]]; then
+            git add "$json_file" 2>/dev/null || true
+        fi
         staged=true
 
-        # Delete old flat files for this ID using pattern
-        local delete_pattern="apps/next/public/images/items/${item_dir}_*.jpg"
-        local deleted_output=$(git rm $delete_pattern 2>&1)
-        local deleted_count=$(echo "$deleted_output" | grep "rm '" | wc -l)
-        # Ensure we have a clean number
-        deleted_count=$(echo "$deleted_count" | tr -d '[:space:]')
-        if [[ "$deleted_count" =~ ^[0-9]+$ ]] && ((deleted_count > 0)); then
-            deleted_files=$((deleted_files + deleted_count))
-            print_status "  - ID $id: Deleted $deleted_count old image files"
+        # Delete old flat files for items using pattern
+        if [[ -n "$delete_pattern" ]]; then
+            local deleted_output=$(git rm $delete_pattern 2>&1)
+            local deleted_count=$(echo "$deleted_output" | grep "rm '" | wc -l)
+            deleted_count=$(echo "$deleted_count" | tr -d '[:space:]')
+            if [[ "$deleted_count" =~ ^[0-9]+$ ]] && ((deleted_count > 0)); then
+                deleted_files=$((deleted_files + deleted_count))
+                print_status "  - ID $id: Deleted $deleted_count old image files"
+            fi
+        fi
+
+        # Delete old manual cover if it's been removed from worktree
+        if [[ -n "$old_cover" ]]; then
+            if git ls-files --error-unmatch "$old_cover" 2>/dev/null && [[ ! -f "$old_cover" ]]; then
+                git rm "$old_cover" 2>/dev/null || true
+                deleted_files=$((deleted_files + 1))
+                print_status "  - ID $id: Deleted old manual cover"
+            fi
         fi
 
         # Add new directory if it exists (check both possible locations)
-        local dir_path="assets/images/items/${item_dir}/"
-        local alt_dir_path="apps/next/public/images/items/${item_dir}/"
         if [[ -d "$dir_path" ]]; then
             git add "$dir_path" 2>/dev/null || true
-            # Count files in this directory for reporting
             local file_count=$(find "$dir_path" -type f 2>/dev/null | wc -l)
-            added_files=$((added_files + file_count))
-            print_status "  - ID $id: Added $file_count new image files from assets/"
-        elif [[ -d "$alt_dir_path" ]]; then
+            file_count=$(echo "$file_count" | tr -d '[:space:]')
+            if [[ "$file_count" -gt 0 ]]; then
+                added_files=$((added_files + file_count))
+                print_status "  - ID $id: Added $file_count new asset files"
+            fi
+        elif [[ -n "$alt_dir_path" && -d "$alt_dir_path" ]]; then
             git add "$alt_dir_path" 2>/dev/null || true
-            # Count files in this directory for reporting
             local file_count=$(find "$alt_dir_path" -type f 2>/dev/null | wc -l)
-            added_files=$((added_files + file_count))
-            print_status "  - ID $id: Added $file_count new image files from apps/next/"
+            file_count=$(echo "$file_count" | tr -d '[:space:]')
+            if [[ "$file_count" -gt 0 ]]; then
+                added_files=$((added_files + file_count))
+                print_status "  - ID $id: Added $file_count new asset files from alt location"
+            fi
         fi
     done
 
     # Log summary for this batch
     if ((deleted_files > 0)); then
-        print_status "  - Deleted $deleted_files old image files in this batch"
+        print_status "  - Deleted $deleted_files old files in this batch"
     fi
     if ((added_files > 0)); then
-        print_status "  - Added $added_files new image files in this batch"
+        print_status "  - Added $added_files new files in this batch"
     fi
 
     # Commit if there are staged changes
     if $staged; then
-        local commit_msg="feat: update items $batch_start-$batch_end"
+        local commit_prefix=$(get_commit_prefix)
+        local commit_msg="feat: update ${commit_prefix} $batch_start-$batch_end"
 
         git commit --no-verify -m "$commit_msg"
         print_success "Committed batch $batch_num (IDs $batch_start-$batch_end)"
@@ -219,22 +330,14 @@ process_batch() {
 check_for_changes() {
     local batch_start=$1
     local batch_end=$2
-    local has_changes=false
 
     for ((id=batch_start; id<=batch_end; id++)); do
-        local padded_id=$(printf "%04d" $id)
-        local json_file="data/src/items/01_${padded_id}.json"
-
-        if [[ -f "$json_file" ]]; then
-            # Check if file is untracked OR has modifications
-            if ! git ls-files --error-unmatch "$json_file" 2>/dev/null || ! git diff --quiet "$json_file" 2>/dev/null || ! git diff --cached --quiet "$json_file" 2>/dev/null; then
-                has_changes=true
-                break
-            fi
+        if id_has_changes $id; then
+            return 0  # Has changes
         fi
     done
 
-    $has_changes
+    return 1  # No changes
 }
 
 # Function to check if the current batch has changes
@@ -259,15 +362,9 @@ find_earliest_change() {
     local search_end=$2
 
     for ((id=search_start; id<=search_end; id++)); do
-        local padded_id=$(printf "%04d" $id)
-        local json_file="data/src/items/01_${padded_id}.json"
-
-        if [[ -f "$json_file" ]]; then
-            # Check if file is untracked OR has modifications
-            if ! git ls-files --error-unmatch "$json_file" 2>/dev/null || ! git diff --quiet "$json_file" 2>/dev/null || ! git diff --cached --quiet "$json_file" 2>/dev/null; then
-                echo $id
-                return 0
-            fi
+        if id_has_changes $id; then
+            echo $id
+            return 0
         fi
     done
 
@@ -280,36 +377,19 @@ wait_for_batch_changes() {
     local wait_start_id=$1
     local wait_end_id=$2
 
-    print_status "Waiting for JSON file changes in batch $wait_start_id-$wait_end_id..."
+    print_status "Waiting for changes in batch $wait_start_id-$wait_end_id..."
 
     while true; do
-        local has_changes=false
         local changed_ids=()
 
-        # Check each ID in the batch for actual JSON file diffs
         for ((id=wait_start_id; id<=wait_end_id; id++)); do
-            local padded_id=$(printf "%04d" $id)
-            local json_file="data/src/items/01_${padded_id}.json"
-
-            if [[ -f "$json_file" ]]; then
-                # Check for untracked files first
-                if ! git ls-files --error-unmatch "$json_file" 2>/dev/null; then
-                    changed_ids+=("$id(untracked)")
-                    has_changes=true
-                # Check for unstaged changes
-                elif ! git diff --quiet "$json_file" 2>/dev/null; then
-                    changed_ids+=("$id(unstaged)")
-                    has_changes=true
-                # Check for staged changes
-                elif ! git diff --cached --quiet "$json_file" 2>/dev/null; then
-                    changed_ids+=("$id(staged)")
-                    has_changes=true
-                fi
+            if id_has_changes $id; then
+                changed_ids+=("$id")
             fi
         done
 
-        if $has_changes; then
-            print_status "JSON changes detected in batch $wait_start_id-$wait_end_id for IDs: ${changed_ids[*]}"
+        if [[ ${#changed_ids[@]} -gt 0 ]]; then
+            print_status "Changes detected in batch $wait_start_id-$wait_end_id for IDs: ${changed_ids[*]}"
             return 0
         fi
 
@@ -336,15 +416,9 @@ wait_for_batch_completion() {
 
         # Count current changes in this batch
         for ((id=wait_start_id; id<=wait_end_id; id++)); do
-            local padded_id=$(printf "%04d" $id)
-            local json_file="data/src/items/01_${padded_id}.json"
-
-            if [[ -f "$json_file" ]]; then
-                # Check if file is untracked OR has modifications
-                if ! git ls-files --error-unmatch "$json_file" 2>/dev/null || ! git diff --quiet "$json_file" 2>/dev/null || ! git diff --cached --quiet "$json_file" 2>/dev/null; then
-                    changed_ids+=("$id")
-                    current_change_count=$((current_change_count + 1))
-                fi
+            if id_has_changes $id; then
+                changed_ids+=("$id")
+                current_change_count=$((current_change_count + 1))
             fi
         done
 
@@ -376,17 +450,11 @@ find_change_boundaries() {
     local highest_id=-1
 
     for ((id=search_start; id<=search_end; id++)); do
-        local padded_id=$(printf "%04d" $id)
-        local json_file="data/src/items/01_${padded_id}.json"
-
-        if [[ -f "$json_file" ]]; then
-            # Check if file is untracked OR has modifications
-            if ! git ls-files --error-unmatch "$json_file" 2>/dev/null || ! git diff --quiet "$json_file" 2>/dev/null || ! git diff --cached --quiet "$json_file" 2>/dev/null; then
-                if ((lowest_id == -1)); then
-                    lowest_id=$id
-                fi
-                highest_id=$id
+        if id_has_changes $id; then
+            if ((lowest_id == -1)); then
+                lowest_id=$id
             fi
+            highest_id=$id
         fi
     done
 
@@ -554,7 +622,7 @@ push_changes() {
 
 # Main execution
 main() {
-    print_status "Starting item update process"
+    print_status "Starting $DATA_TYPE update process"
 
     # Check if we're in a git repository
     if ! git rev-parse --git-head > /dev/null 2>&1; then
@@ -564,14 +632,14 @@ main() {
 
     # Watch mode: continuously monitor and process complete batches
     if [[ "$WATCH_MODE" == "true" ]]; then
-        print_status "Watch mode enabled"
+        print_status "Watch mode enabled for $DATA_TYPE"
         print_status "Range: $START_ID to $END_ID (batch size: $BATCH_SIZE)"
         watch_and_process
         return
     fi
 
     # Normal mode: process all batches once
-    print_status "Range: $START_ID to $END_ID (batch size: $BATCH_SIZE)"
+    print_status "Processing $DATA_TYPE: $START_ID to $END_ID (batch size: $BATCH_SIZE)"
 
     # Check if working directory is clean
     if ! git diff --quiet || ! git diff --cached --quiet; then
@@ -622,7 +690,7 @@ main() {
         print_warning "No batches were committed"
     fi
 
-    print_success "Item update process completed successfully"
+    print_success "$DATA_TYPE update process completed successfully"
 }
 
 # Run main function
