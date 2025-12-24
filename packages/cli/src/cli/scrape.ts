@@ -29,7 +29,6 @@ import { chromium, type Browser, type BrowserContext, type Route } from "playwri
 
 import { writeJsonIfChanged } from "../utils/file-utils.js";
 import { findExistingItemImage, stripEphemeralImageUrls } from "../utils/image-utils.js";
-import { BandaiRateLimiter } from "../utils/rate-limiter.js";
 
 
 import { BandaiCatalogParser, type EntityData, type Item, type ItemImage, type ParsedAccessoryItem } from "./bandai-catalog-parser.js";
@@ -181,7 +180,6 @@ const ASSETS_DIR = resolveWorkspacePath("assets/images/items");
 const MANUALS_ASSETS_DIR = resolveWorkspacePath("assets/manuals");
 
 export class ScrapeCommand {
-	private rateLimiter: BandaiRateLimiter;
 	private parser: BandaiCatalogParser;
 	private manualParser: ManualParser;
 	private globalLookup: GlobalSiteLookup;
@@ -195,7 +193,6 @@ export class ScrapeCommand {
 	private translationsAdded = false;
 
 	constructor() {
-		this.rateLimiter = new BandaiRateLimiter();
 		this.parser = new BandaiCatalogParser();
 		this.manualParser = new ManualParser();
 		this.globalLookup = new GlobalSiteLookup();
@@ -716,11 +713,7 @@ export class ScrapeCommand {
 		if (!html) {
 			console.log(`  Fetching fresh...`);
 			try {
-				html = await time("fetch-html", () =>
-					this.rateLimiter.executeWithLimit(async () => {
-						return this.fetchPage(url);
-					}),
-				);
+				html = await time("fetch-html", () => this.fetchPage(url));
 
 				// Save HTML file
 				await time("save-html", () => fs.writeFile(htmlPath, html, "utf8"));
@@ -928,11 +921,7 @@ export class ScrapeCommand {
 		if (!html) {
 			console.log(`  Fetching fresh...`);
 			try {
-				html = await time("fetch-html", () =>
-					this.rateLimiter.executeWithLimit(async () => {
-						return this.fetchManualPage(url);
-					}),
-				);
+				html = await time("fetch-html", () => this.fetchManualPage(url));
 
 				// Save HTML file
 				await fs.mkdir(path.dirname(htmlPath), { recursive: true });
