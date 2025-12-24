@@ -1,8 +1,8 @@
 {
-	"id": "0619",
+	"id": "619",
 	"type": "manual",
 	"name": {
-		"ja": "MG 1/100 ガンダム X",
+		"ja": "MG 1/100 ガンダムX",
 		"en": "MG 1/100 GundamX"
 	},
 	"productNumber": "2241576",
@@ -12,20 +12,29 @@
 		"month": 1,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/157_1030_s_phj6qgppgtde99iwl4c49kf5k3ei.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_1030_s_phj6qgppgtde99iwl4c49kf5k3ei.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/619/",
-	"extractedAt": "2025-12-05T23:09:47.330Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_1030_s_phj6qgppgtde99iwl4c49kf5k3ei.jpg",
+		"path": "/images/items/01_0033/157_1030.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["x"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動新世紀ガンダムＸ",
+		"en": "Mobile New Century GundamX"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/619.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0619/0619.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/619/",
+	"itemId": "01_0033"
 }

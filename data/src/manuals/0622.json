@@ -1,5 +1,5 @@
 {
-	"id": "0622",
+	"id": "622",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ガンダムダブルエックス",
@@ -12,20 +12,29 @@
 		"month": 3,
 		"day": 28
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1280_s_qs81hb63u4pjsol1fztpx4ik65yw.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1280_s_qs81hb63u4pjsol1fztpx4ik65yw.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/622/",
-	"extractedAt": "2025-12-05T23:09:47.334Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1280_s_qs81hb63u4pjsol1fztpx4ik65yw.jpg",
+		"path": "/images/items/01_0298/156_1280.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["x"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動新世紀ガンダムＸ",
+		"en": "Mobile New Century GundamX"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/622.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0622/0622.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/622/",
+	"itemId": "01_0298"
 }

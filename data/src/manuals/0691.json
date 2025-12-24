@@ -1,5 +1,5 @@
 {
-	"id": "0691",
+	"id": "691",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC 1/144 チェンジリングライフル",
@@ -12,20 +12,29 @@
 		"month": 4,
 		"day": 14
 	},
-	"productImage": "https://bandai-hobby.net/images/159_2247_s_e29767vkaq0maxc4lt6j12dyag05.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_2247_s_e29767vkaq0maxc4lt6j12dyag05.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/691/",
-	"extractedAt": "2025-12-05T23:09:47.416Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_2247_s_e29767vkaq0maxc4lt6j12dyag05.jpg",
+		"path": "/images/items/01_1318/159_2247.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズ",
+		"en": "Gundam Build Divers"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/691.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0691/0691.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/691/",
+	"itemId": "01_1318"
 }

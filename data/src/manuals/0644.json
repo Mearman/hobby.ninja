@@ -1,5 +1,5 @@
 {
-	"id": "0644",
+	"id": "644",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ガンダムヴァーチェ",
@@ -12,20 +12,28 @@
 		"month": 11,
 		"day": 27
 	},
-	"productImage": "https://bandai-hobby.net/images/196_4610_s_tb9db8pzgy6lfpau9fp1d9ic6qjm.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_4610_s_tb9db8pzgy6lfpau9fp1d9ic6qjm.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/644/",
-	"extractedAt": "2025-12-05T23:09:47.357Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_4610_s_tb9db8pzgy6lfpau9fp1d9ic6qjm.jpg",
+		"path": "/manuals/0644/196_4610.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["g-00"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム00",
+		"en": "Mobile Suit Gundam00"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/644.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0644/0644.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/644/"
 }

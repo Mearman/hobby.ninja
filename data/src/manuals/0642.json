@@ -1,5 +1,5 @@
 {
-	"id": "0642",
+	"id": "642",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ウイングガンダムゼロEW Ver.Ka",
@@ -12,20 +12,28 @@
 		"month": 11,
 		"day": 28
 	},
-	"productImage": "https://bandai-hobby.net/images/196_3954_s_04hlljem5jcipt3jg1oupjc9ylvo.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_3954_s_04hlljem5jcipt3jg1oupjc9ylvo.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/642/",
-	"extractedAt": "2025-12-05T23:09:47.355Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_3954_s_04hlljem5jcipt3jg1oupjc9ylvo.jpg",
+		"path": "/manuals/0642/196_3954.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["endlesswaltz"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "新機動戦記ガンダムW",
+		"en": "New Mobile Report GundamW"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/642.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0642/0642.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/642/"
 }

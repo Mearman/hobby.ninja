@@ -1,5 +1,5 @@
 {
-	"id": "0625",
+	"id": "625",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ジム・スナイパーII",
@@ -12,20 +12,29 @@
 		"month": 1,
 		"day": 21
 	},
-	"productImage": "https://bandai-hobby.net/images/190_1729_s_c7r9it300c7uljzl97on4vpgsqse.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/190_1729_s_c7r9it300c7uljzl97on4vpgsqse.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/625/",
-	"extractedAt": "2025-12-05T23:09:47.337Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/190_1729_s_c7r9it300c7uljzl97on4vpgsqse.jpg",
+		"path": "/images/items/01_0783/190_1729.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["g-0080"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム0080 ポケットの中の戦争",
+		"en": "Mobile Suit Gundam0080 War in the Pocket"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/625.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0625/0625.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/625/",
+	"itemId": "01_0783"
 }

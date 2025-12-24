@@ -1,5 +1,5 @@
 {
-	"id": "0629",
+	"id": "629",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ダブルゼータガンダム Ver.Ka",
@@ -11,20 +11,28 @@
 		"year": 2017,
 		"month": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/156_4658_s_72vow7ag9wna9qzyzvq9yv1nyevq.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_4658_s_72vow7ag9wna9qzyzvq9yv1nyevq.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/629/",
-	"extractedAt": "2025-12-05T23:09:47.342Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_4658_s_72vow7ag9wna9qzyzvq9yv1nyevq.jpg",
+		"path": "/manuals/0629/156_4658.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam-zz"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムZZ",
+		"en": "Mobile Suit GundamZZ"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/629.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0629/0629.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/629/"
 }

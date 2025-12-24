@@ -1,5 +1,5 @@
 {
-	"id": "0670",
+	"id": "670",
 	"type": "manual",
 	"name": {
 		"ja": "RG 1/144 MSN-06S シナンジュ",
@@ -12,20 +12,28 @@
 		"month": 8,
 		"day": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/157_1612_s_76yoyls9ivpasinfenexrnmmlwj8.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_1612_s_76yoyls9ivpasinfenexrnmmlwj8.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/670/",
-	"extractedAt": "2025-12-05T23:09:47.392Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_1612_s_76yoyls9ivpasinfenexrnmmlwj8.jpg",
+		"path": "/manuals/0670/157_1612.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["rg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "RG",
+		"en": "R.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/670.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0670/0670.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/670/"
 }

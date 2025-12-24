@@ -1,5 +1,5 @@
 {
-	"id": "0646",
+	"id": "646",
 	"type": "manual",
 	"name": {
 		"ja": "MGEX 1/100 ストライクフリーダムガンダム",
@@ -12,20 +12,27 @@
 		"month": 11,
 		"day": 19
 	},
-	"productImage": "https://bandai-hobby.net/images/196_5149_s_4h4ix8i0czfctrqhwa4e0dygycqs.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_5149_s_4h4ix8i0czfctrqhwa4e0dygycqs.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/646/",
-	"extractedAt": "2025-12-05T23:09:47.361Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_5149_s_4h4ix8i0czfctrqhwa4e0dygycqs.jpg",
+		"path": "/manuals/0646/196_5149.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["seed-d"],
+	"brand": {
+		"ja": "MGEX"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムSEED DESTINY",
+		"en": "Mobile Suit GundamSEED DESTINY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/646.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0646/0646.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/646/"
 }

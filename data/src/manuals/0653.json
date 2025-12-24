@@ -1,5 +1,5 @@
 {
-	"id": "0653",
+	"id": "653",
 	"type": "manual",
 	"name": {
 		"ja": "PG 1/60 スカイグラスパー+エールストライカー",
@@ -12,20 +12,29 @@
 		"month": 6,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/158_555_s_ykmyrecad8kgncsw82feefz7m1b4.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_555_s_ykmyrecad8kgncsw82feefz7m1b4.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/653/",
-	"extractedAt": "2025-12-05T23:09:47.371Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_555_s_ykmyrecad8kgncsw82feefz7m1b4.jpg",
+		"path": "/images/items/01_4669/158_555.jpg"
+	},
 	"scale": "1/60",
-	"brandIds": ["pg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "PG",
+		"en": "P.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/653.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0653/0653.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/653/",
+	"itemId": "01_4669"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0636",
+	"id": "636",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 FAZZ Ver.Ka",
@@ -12,20 +12,29 @@
 		"month": 2,
 		"day": 15
 	},
-	"productImage": "https://bandai-hobby.net/images/157_3508_s_w2zp3m357bk2a3qe1jtlo6hx3som.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_3508_s_w2zp3m357bk2a3qe1jtlo6hx3som.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/636/",
-	"extractedAt": "2025-12-05T23:09:47.350Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_3508_s_w2zp3m357bk2a3qe1jtlo6hx3som.jpg",
+		"path": "/images/items/01_2584/157_3508.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["sentinel"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "ガンダム・センチネル",
+		"en": "Gundam Sentinel"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/636.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0636/0636.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/636/",
+	"itemId": "01_2584"
 }

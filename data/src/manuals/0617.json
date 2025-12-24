@@ -1,5 +1,5 @@
 {
-	"id": "0617",
+	"id": "617",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ストライクルージュ オオトリ装備 Ver.RM",
@@ -12,20 +12,28 @@
 		"month": 9,
 		"day": 28
 	},
-	"productImage": "https://bandai-hobby.net/images/158_948_s_3q4iiouixzadwjkljytsdgvek170.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_948_s_3q4iiouixzadwjkljytsdgvek170.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/617/",
-	"extractedAt": "2025-12-05T23:09:47.327Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_948_s_3q4iiouixzadwjkljytsdgvek170.jpg",
+		"path": "/manuals/0617/158_948.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["seed-d"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムSEED DESTINY",
+		"en": "Mobile Suit GundamSEED DESTINY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/617.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0617/0617.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/617/"
 }

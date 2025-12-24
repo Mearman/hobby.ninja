@@ -1,5 +1,5 @@
 {
-	"id": "0621",
+	"id": "621",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ガンダムアストレイ ブルーフレームD",
@@ -12,20 +12,28 @@
 		"month": 11,
 		"day": 22
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1212_s_1rk9yh96nw9l5apt2tqb7o88ajsj.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1212_s_1rk9yh96nw9l5apt2tqb7o88ajsj.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/621/",
-	"extractedAt": "2025-12-05T23:09:47.332Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_1212_s_1rk9yh96nw9l5apt2tqb7o88ajsj.jpg",
+		"path": "/manuals/0621/158_1212.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/621.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0621/0621.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/621/"
 }

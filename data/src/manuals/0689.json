@@ -1,5 +1,5 @@
 {
-	"id": "0689",
+	"id": "689",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガンプラスターターセットVol.2 ガンダム+ガンダムマーカー",
@@ -12,20 +12,29 @@
 		"month": 3,
 		"day": 26
 	},
-	"productImage": "https://bandai-hobby.net/images/157_4671_s_6h7ke8zeptsybnuyssqmb3fp6sae.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_4671_s_6h7ke8zeptsybnuyssqmb3fp6sae.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/689/",
-	"extractedAt": "2025-12-05T23:09:47.415Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_4671_s_6h7ke8zeptsybnuyssqmb3fp6sae.jpg",
+		"path": "/images/items/01_3719/157_4671.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/689.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0689/0689.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/689/",
+	"itemId": "01_3719"
 }

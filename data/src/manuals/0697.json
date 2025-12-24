@@ -1,5 +1,5 @@
 {
-	"id": "0697",
+	"id": "697",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC マシンライダー",
@@ -12,19 +12,28 @@
 		"month": 8,
 		"day": 25
 	},
-	"productImage": "https://bandai-hobby.net/images/190_2335_o_1ckhvggk0qm51qhnrvj1298sr33b.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/190_2335_o_1ckhvggk0qm51qhnrvj1298sr33b.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/697/",
-	"extractedAt": "2025-12-05T23:09:47.424Z",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers"],
+	"image": {
+		"src": "https://bandai-hobby.net/images/190_2335_o_1ckhvggk0qm51qhnrvj1298sr33b.jpg",
+		"path": "/images/items/01_1412/190_2335.jpg"
+	},
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズ",
+		"en": "Gundam Build Divers"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/697.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0697/0697.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/697/",
+	"itemId": "01_1412"
 }

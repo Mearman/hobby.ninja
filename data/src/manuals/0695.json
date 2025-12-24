@@ -1,5 +1,5 @@
 {
-	"id": "0695",
+	"id": "695",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC 1/144 スピニングブラスター",
@@ -12,20 +12,29 @@
 		"month": 6,
 		"day": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/158_2303_s_k417w8kj0ig21umzafd23w3hedlq.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_2303_s_k417w8kj0ig21umzafd23w3hedlq.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/695/",
-	"extractedAt": "2025-12-05T23:09:47.421Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_2303_s_k417w8kj0ig21umzafd23w3hedlq.jpg",
+		"path": "/images/items/01_1378/158_2303.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズ",
+		"en": "Gundam Build Divers"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/695.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0695/0695.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/695/",
+	"itemId": "01_1378"
 }

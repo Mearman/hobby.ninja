@@ -1,5 +1,5 @@
 {
-	"id": "0688",
+	"id": "688",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ギラ・ズール（親衛隊仕様）",
@@ -12,20 +12,29 @@
 		"month": 3,
 		"day": 5
 	},
-	"productImage": "https://bandai-hobby.net/images/156_759_s_q66vlam44m4ttmi8wu96324hbm5b.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_759_s_q66vlam44m4ttmi8wu96324hbm5b.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/688/",
-	"extractedAt": "2025-12-05T23:09:47.413Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_759_s_q66vlam44m4ttmi8wu96324hbm5b.jpg",
+		"path": "/images/items/01_5693/156_759.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/688.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0688/0688.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/688/",
+	"itemId": "01_5693"
 }

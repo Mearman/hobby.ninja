@@ -1,5 +1,5 @@
 {
-	"id": "0659",
+	"id": "659",
 	"type": "manual",
 	"name": {
 		"ja": "RG 1/144 MS-06F 量産型ザク",
@@ -12,20 +12,28 @@
 		"month": 7,
 		"day": 23
 	},
-	"productImage": "https://bandai-hobby.net/images/158_3168_s_c8p2pjvvw3xlzw81t1mxl8ixdeq0.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_3168_s_c8p2pjvvw3xlzw81t1mxl8ixdeq0.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/659/",
-	"extractedAt": "2025-12-05T23:09:47.379Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_3168_s_c8p2pjvvw3xlzw81t1mxl8ixdeq0.jpg",
+		"path": "/manuals/0659/158_3168.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["rg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "RG",
+		"en": "R.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/659.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0659/0659.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/659/"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0616",
+	"id": "616",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ユニバースブースター",
@@ -12,20 +12,29 @@
 		"month": 3,
 		"day": 15
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1065_s_wp1jfqmbxt13x0wfkh7jrt5dy1y1.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1065_s_wp1jfqmbxt13x0wfkh7jrt5dy1y1.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/616/",
-	"extractedAt": "2025-12-05T23:09:47.326Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1065_s_wp1jfqmbxt13x0wfkh7jrt5dy1y1.jpg",
+		"path": "/images/items/01_0068/156_1065.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/616.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0616/0616.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/616/",
+	"itemId": "01_0068"
 }

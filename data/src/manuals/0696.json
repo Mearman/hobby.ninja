@@ -1,5 +1,5 @@
 {
-	"id": "0696",
+	"id": "696",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC 1/144 バインダーガン",
@@ -12,20 +12,29 @@
 		"month": 7,
 		"day": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/189_2323_s_rir59yunp8wdbcrhz45ehuwfteon.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_2323_s_rir59yunp8wdbcrhz45ehuwfteon.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/696/",
-	"extractedAt": "2025-12-05T23:09:47.422Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_2323_s_rir59yunp8wdbcrhz45ehuwfteon.jpg",
+		"path": "/images/items/01_1400/189_2323.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズ",
+		"en": "Gundam Build Divers"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/696.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0696/0696.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/696/",
+	"itemId": "01_1400"
 }

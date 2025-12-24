@@ -1,8 +1,8 @@
 {
-	"id": "0623",
+	"id": "623",
 	"type": "manual",
 	"name": {
-		"ja": "MG 1/100 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)",
+		"ja": "MG 1/100 RX-78-02 ガンダム(GUNDAM  THE ORIGIN版)",
 		"en": "MG 1/100 RX-78-02 Gundam (GUNDAM THE ORIGIN version)"
 	},
 	"productNumber": "2312363",
@@ -12,20 +12,28 @@
 		"month": 11,
 		"day": 21
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1404_s_yr8hmvg4hkiupcwu7q8008vp3a9n.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1404_s_yr8hmvg4hkiupcwu7q8008vp3a9n.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/623/",
-	"extractedAt": "2025-12-05T23:09:47.335Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_1404_s_yr8hmvg4hkiupcwu7q8008vp3a9n.jpg",
+		"path": "/manuals/0623/158_1404.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["origin"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム THE ORIGIN",
+		"en": "Mobile Suit Gundam THE ORIGIN"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/623.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0623/0623.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/623/"
 }

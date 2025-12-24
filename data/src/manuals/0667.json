@@ -1,5 +1,5 @@
 {
-	"id": "0667",
+	"id": "667",
 	"type": "manual",
 	"name": {
 		"ja": "RG 1/144 GN-0000+GNR-010 ダブルオーライザー",
@@ -12,20 +12,28 @@
 		"month": 4,
 		"day": 29
 	},
-	"productImage": "https://bandai-hobby.net/images/193_1298_s_fvp5kyyyb3fcj07wox4h8bvr9yoq.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/193_1298_s_fvp5kyyyb3fcj07wox4h8bvr9yoq.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/667/",
-	"extractedAt": "2025-12-05T23:09:47.389Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/193_1298_s_fvp5kyyyb3fcj07wox4h8bvr9yoq.jpg",
+		"path": "/manuals/0667/193_1298.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["rg"],
-	"seriesIds": ["g-00"],
+	"brand": {
+		"ja": "RG",
+		"en": "R.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム00",
+		"en": "Mobile Suit Gundam00"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/667.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0667/0667.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/667/"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0662",
+	"id": "662",
 	"type": "manual",
 	"name": {
 		"ja": "RG 1/144 ジャスティスガンダム",
@@ -12,20 +12,29 @@
 		"month": 7,
 		"day": 28
 	},
-	"productImage": "https://bandai-hobby.net/images/156_4678_s_eo4w85d6jmaq5v2cjvkshvdkoqtf.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_4678_s_eo4w85d6jmaq5v2cjvkshvdkoqtf.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/662/",
-	"extractedAt": "2025-12-05T23:09:47.382Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_4678_s_eo4w85d6jmaq5v2cjvkshvdkoqtf.jpg",
+		"path": "/images/items/01_3726/156_4678.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["rg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "RG",
+		"en": "R.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/662.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0662/0662.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/662/",
+	"itemId": "01_3726"
 }

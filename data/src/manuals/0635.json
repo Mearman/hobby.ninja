@@ -1,5 +1,5 @@
 {
-	"id": "0635",
+	"id": "635",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ガナーザクウォーリア（ルナマリア・ホーク専用機）",
@@ -12,20 +12,28 @@
 		"month": 9,
 		"day": 28
 	},
-	"productImage": "https://bandai-hobby.net/images/192_3335_s_26su6apjw5nwnx2aiendn9u5546w.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/192_3335_s_26su6apjw5nwnx2aiendn9u5546w.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/635/",
-	"extractedAt": "2025-12-05T23:09:47.349Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/192_3335_s_26su6apjw5nwnx2aiendn9u5546w.jpg",
+		"path": "/manuals/0635/192_3335.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["seed-d"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムSEED DESTINY",
+		"en": "Mobile Suit GundamSEED DESTINY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/635.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0635/0635.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/635/"
 }

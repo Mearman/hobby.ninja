@@ -1,8 +1,8 @@
 {
-	"id": "0680",
+	"id": "680",
 	"type": "manual",
 	"name": {
-		"ja": "HG 1/144 ガンダム G40 (Industrial Design Ver.)",
+		"ja": "HG 1/144 ガンダムG40 (Industrial Design Ver.)",
 		"en": "HG 1/144 GundamG40 (Industrial Design Ver.)"
 	},
 	"productNumber": "2475036",
@@ -12,20 +12,29 @@
 		"month": 12,
 		"day": 14
 	},
-	"productImage": "https://bandai-hobby.net/images/192_3478_s_tr4bz3jwpzemymqbuxfrqq0abyfd.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/192_3478_s_tr4bz3jwpzemymqbuxfrqq0abyfd.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/680/",
-	"extractedAt": "2025-12-05T23:09:47.405Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/192_3478_s_tr4bz3jwpzemymqbuxfrqq0abyfd.jpg",
+		"path": "/images/items/01_2552/192_3478.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/680.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0680/0680.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/680/",
+	"itemId": "01_2552"
 }

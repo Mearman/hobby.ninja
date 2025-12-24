@@ -1,5 +1,5 @@
 {
-	"id": "0620",
+	"id": "620",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 Concept-X 6-1-2 ターンX",
@@ -12,24 +12,29 @@
 		"month": 6,
 		"day": 14
 	},
-	"productImage": "https://bandai-hobby.net/images/193_1113_s_wwyr8rugly3hs6tggnfrz6mqz2wt.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/193_1113_s_wwyr8rugly3hs6tggnfrz6mqz2wt.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/620/",
-	"extractedAt": "2025-12-05T23:09:47.331Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/193_1113_s_wwyr8rugly3hs6tggnfrz6mqz2wt.jpg",
+		"path": "/images/items/01_0120/193_1113.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "∀ガンダム",
+		"en": "∀Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/620.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0620/0620.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/620/",
+	"itemId": "01_0120"
 }

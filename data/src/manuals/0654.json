@@ -1,5 +1,5 @@
 {
-	"id": "0654",
+	"id": "654",
 	"type": "manual",
 	"name": {
 		"ja": "PG 1/60 ストライクルージュ＋スカイグラスパー",
@@ -12,27 +12,36 @@
 		"month": 8,
 		"day": 27
 	},
-	"productImage": "https://bandai-hobby.net/images/196_581_o_1h36vug4go97jbh1er91ovk14st23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_581_o_1h36vug4go97jbh1er91ovk14st23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/654/",
-	"extractedAt": "2025-12-05T23:09:47.373Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_581_o_1h36vug4go97jbh1er91ovk14st23.jpg",
+		"path": "/manuals/0654/196_581.jpg"
+	},
 	"scale": "1/60",
-	"brandIds": ["pg"],
-	"seriesIds": ["seed-d"],
+	"brand": {
+		"ja": "PG",
+		"en": "P.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムSEED DESTINY",
+		"en": "Mobile Suit GundamSEED DESTINY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/654.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0654/0654.pdf"
 		},
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/654_2.pdf",
 			"name": {
 				"ja": "補足説明書",
 				"en": "Supplementary Manual"
-			}
+			},
+			"path": "/manuals/0654/0654.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/654/"
 }

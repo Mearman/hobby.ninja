@@ -1,5 +1,5 @@
 {
-	"id": "0645",
+	"id": "645",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 エクリプスガンダム",
@@ -12,20 +12,29 @@
 		"month": 8,
 		"day": 21
 	},
-	"productImage": "https://bandai-hobby.net/images/193_4474_s_08wfrdx1xw6kf4olaelvfae8tmpk.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/193_4474_s_08wfrdx1xw6kf4olaelvfae8tmpk.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/645/",
-	"extractedAt": "2025-12-05T23:09:47.359Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/193_4474_s_08wfrdx1xw6kf4olaelvfae8tmpk.jpg",
+		"path": "/images/items/01_3523/193_4474.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/645.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0645/0645.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/645/",
+	"itemId": "01_3523"
 }

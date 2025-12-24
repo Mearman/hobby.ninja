@@ -1,5 +1,5 @@
 {
-	"id": "0650",
+	"id": "650",
 	"type": "manual",
 	"name": {
 		"ja": "PG 1/60 ウイングガンダムゼロカスタム",
@@ -12,20 +12,29 @@
 		"month": 11,
 		"day": 23
 	},
-	"productImage": "https://bandai-hobby.net/images/158_174_s_xb4chfdwam0wgsyjnf02hg7yl9iq.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_174_s_xb4chfdwam0wgsyjnf02hg7yl9iq.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/650/",
-	"extractedAt": "2025-12-05T23:09:47.368Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_174_s_xb4chfdwam0wgsyjnf02hg7yl9iq.jpg",
+		"path": "/images/items/01_0803/158_174.jpg"
+	},
 	"scale": "1/60",
-	"brandIds": ["pg"],
-	"seriesIds": ["endlesswaltz"],
+	"brand": {
+		"ja": "PG",
+		"en": "P.G."
+	},
+	"series": {
+		"ja": "新機動戦記ガンダムW",
+		"en": "New Mobile Report GundamW"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/650.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0650/0650.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/650/",
+	"itemId": "01_0803"
 }

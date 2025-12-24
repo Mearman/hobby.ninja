@@ -1,5 +1,5 @@
 {
-	"id": "0641",
+	"id": "641",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 リック・ドム",
@@ -12,20 +12,28 @@
 		"month": 3,
 		"day": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/191_4722_s_bf5b3y3c1qnuiswquibtwjiogdsy.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/191_4722_s_bf5b3y3c1qnuiswquibtwjiogdsy.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/641/",
-	"extractedAt": "2025-12-05T23:09:47.354Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/191_4722_s_bf5b3y3c1qnuiswquibtwjiogdsy.jpg",
+		"path": "/manuals/0641/191_4722.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/641.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0641/0641.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/641/"
 }

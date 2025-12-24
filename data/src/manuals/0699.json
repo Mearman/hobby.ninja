@@ -1,5 +1,5 @@
 {
-	"id": "0699",
+	"id": "699",
 	"type": "manual",
 	"name": {
 		"ja": "HGBC 1/144 スカイハイウイングス",
@@ -12,20 +12,29 @@
 		"month": 8,
 		"day": 31
 	},
-	"productImage": "https://bandai-hobby.net/images/157_2336_o_1cm5dh6gg11j47mp1qvj1q8f1snh23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_2336_o_1cm5dh6gg11j47mp1qvj1q8f1snh23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/699/",
-	"extractedAt": "2025-12-05T23:09:47.426Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_2336_o_1cm5dh6gg11j47mp1qvj1q8f1snh23.jpg",
+		"path": "/images/items/01_1413/157_2336.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズ",
+		"en": "Gundam Build Divers"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/699.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0699/0699.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/699/",
+	"itemId": "01_1413"
 }

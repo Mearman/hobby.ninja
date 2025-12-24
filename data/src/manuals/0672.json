@@ -1,5 +1,5 @@
 {
-	"id": "0672",
+	"id": "672",
 	"type": "manual",
 	"name": {
 		"ja": "RG 1/144 MS-06R-2 ジョニー・ライデン専用ザクII",
@@ -12,20 +12,28 @@
 		"month": 11,
 		"day": 18
 	},
-	"productImage": "https://bandai-hobby.net/images/196_2089_s_4wcrvxn516o1fb55utcw3jt1tb97.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_2089_s_4wcrvxn516o1fb55utcw3jt1tb97.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/672/",
-	"extractedAt": "2025-12-05T23:09:47.394Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_2089_s_4wcrvxn516o1fb55utcw3jt1tb97.jpg",
+		"path": "/manuals/0672/196_2089.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["rg"],
-	"seriesIds": ["msv"],
+	"brand": {
+		"ja": "RG",
+		"en": "R.G."
+	},
+	"series": {
+		"ja": "ガンダムMSV",
+		"en": "GundamMSV"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/672.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0672/0672.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/672/"
 }

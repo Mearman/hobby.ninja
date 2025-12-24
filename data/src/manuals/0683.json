@@ -1,5 +1,5 @@
 {
-	"id": "0683",
+	"id": "683",
 	"type": "manual",
 	"name": {
 		"ja": "RG 1/144 Hi-νガンダム",
@@ -12,20 +12,28 @@
 		"month": 9,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/196_4475_s_o3b7s58tcpaz9uz41vhh15aalqr4.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_4475_s_o3b7s58tcpaz9uz41vhh15aalqr4.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/683/",
-	"extractedAt": "2025-12-05T23:09:47.409Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_4475_s_o3b7s58tcpaz9uz41vhh15aalqr4.jpg",
+		"path": "/manuals/0683/196_4475.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["rg"],
-	"seriesIds": ["gundam-cca"],
+	"brand": {
+		"ja": "RG",
+		"en": "R.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 逆襲のシャア",
+		"en": "Mobile Suit Gundam Char's Counterattack"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/683.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0683/0683.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/683/"
 }

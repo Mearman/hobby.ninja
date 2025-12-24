@@ -1,5 +1,5 @@
 {
-	"id": "0665",
+	"id": "665",
 	"type": "manual",
 	"name": {
 		"ja": "RG 1/144 RX-78GP01Fb ガンダム試作1号機フルバーニアン",
@@ -12,20 +12,28 @@
 		"month": 7,
 		"day": 27
 	},
-	"productImage": "https://bandai-hobby.net/images/155_914_s_bvl9xawoyykda59tr6pztr5usu4h.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_914_s_bvl9xawoyykda59tr6pztr5usu4h.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/665/",
-	"extractedAt": "2025-12-05T23:09:47.386Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_914_s_bvl9xawoyykda59tr6pztr5usu4h.jpg",
+		"path": "/manuals/0665/155_914.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["rg"],
-	"seriesIds": ["g-0083"],
+	"brand": {
+		"ja": "RG",
+		"en": "R.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 0083 STARDUST MEMORY",
+		"en": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/665.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0665/0665.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/665/"
 }
