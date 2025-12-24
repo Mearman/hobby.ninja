@@ -2,7 +2,7 @@
 	"id": "2127",
 	"type": "manual",
 	"name": {
-		"ja": "ＭＧ 1/100 小説版ユニコーンガンダム 2号機バンシィＶｅｒ．Ka 最終決戦仕様",
+		"ja": "ＭＧ 1/100 小説版ユニコーンガンダム2号機バンシィＶｅｒ．Ka 最終決戦仕様",
 		"en": "MG 1/100 Novel version Unicorn Gundam Unit 02 Banshee Ver. Ka final battle specification"
 	},
 	"productNumber": "2168180",
@@ -11,27 +11,37 @@
 		"year": 2012,
 		"month": 3
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4771_s_ssnujsmx16jks9gbtlthurxsc6v8.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4771_s_ssnujsmx16jks9gbtlthurxsc6v8.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2127/",
-	"extractedAt": "2025-12-05T23:09:48.314Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4771_s_ssnujsmx16jks9gbtlthurxsc6v8.jpg",
+		"path": "/images/items/01_3823/153_4771.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2127.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2127/2127.pdf"
 		},
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2127_2.pdf",
 			"name": {
 				"ja": "補足説明書",
 				"en": "Supplementary Manual"
-			}
+			},
+			"path": "/manuals/2127/2127_2.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2127/",
+	"itemId": "01_3823"
 }

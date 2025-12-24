@@ -11,27 +11,37 @@
 		"year": 2012,
 		"month": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4801_s_gm1mzsc7pbrt5e6cf2p8986ggt26.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4801_s_gm1mzsc7pbrt5e6cf2p8986ggt26.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2138/",
-	"extractedAt": "2025-12-05T23:09:48.327Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4801_s_gm1mzsc7pbrt5e6cf2p8986ggt26.jpg",
+		"path": "/images/items/01_3857/153_4801.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["z-gundam"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士Zガンダム",
+		"en": "Mobile Suit ZGundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2138.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2138/2138.pdf"
 		},
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2138_2.pdf",
 			"name": {
 				"ja": "補足説明書",
 				"en": "Supplementary Manual"
-			}
+			},
+			"path": "/manuals/2138/2138_2.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2138/",
+	"itemId": "01_3857"
 }

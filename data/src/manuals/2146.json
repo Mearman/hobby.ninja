@@ -12,19 +12,27 @@
 		"month": 2,
 		"day": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/196_6299_s_8sjilc9kq9zqvnij1kzvwznql1an.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_6299_s_8sjilc9kq9zqvnij1kzvwznql1an.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2146/",
-	"extractedAt": "2025-12-05T23:09:48.346Z",
-	"brandIds": [],
-	"seriesIds": ["gundam-zz"],
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_6299_s_8sjilc9kq9zqvnij1kzvwznql1an.jpg",
+		"path": "/manuals/2146/196_6299.jpg"
+	},
+	"brand": {
+		"ja": "Figure-rise Standard",
+		"en": "Figure-rise Standard"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムZZ",
+		"en": "Mobile Suit GundamZZ"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2146.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2146/2146.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2146/"
 }

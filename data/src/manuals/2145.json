@@ -2,7 +2,7 @@
 	"id": "2145",
 	"type": "manual",
 	"name": {
-		"ja": "ＲＧ 1/144 ゼータガンダム 3号機",
+		"ja": "ＲＧ 1/144 ゼータガンダム3号機",
 		"en": "RG 1/144 Zeta Gundam Unit 3"
 	},
 	"productNumber": "2206990",
@@ -11,27 +11,37 @@
 		"year": 2013,
 		"month": 3
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4809_s_q71m7dvabaywv3j76s7kuoyw0idb.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4809_s_q71m7dvabaywv3j76s7kuoyw0idb.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2145/",
-	"extractedAt": "2025-12-05T23:09:48.343Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4809_s_q71m7dvabaywv3j76s7kuoyw0idb.jpg",
+		"path": "/images/items/01_3865/153_4809.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["rg"],
-	"seriesIds": [],
+	"brand": {
+		"ja": "RG",
+		"en": "R.G."
+	},
+	"series": {
+		"ja": "その他",
+		"en": "others"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2145.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2145/2145.pdf"
 		},
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2145_2.pdf",
 			"name": {
 				"ja": "補足説明書",
 				"en": "Supplementary Manual"
-			}
+			},
+			"path": "/manuals/2145/2145_2.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2145/",
+	"itemId": "01_3865"
 }
