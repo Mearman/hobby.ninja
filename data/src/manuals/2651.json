@@ -2,7 +2,7 @@
 	"id": "2651",
 	"type": "manual",
 	"name": {
-		"ja": "ＭＧ 1/100 ガンダムＦ９１ Ｖｅｒ．２．０ バックキャノン装着型 ＆ ツイン・ヴェスバー装着型",
+		"ja": "ＭＧ 1/100 ガンダムＦ９１ Ｖｅｒ．２．０  バックキャノン装着型 ＆ ツイン・ヴェスバー装着型",
 		"en": "MG 1/100 GundamF91 Ver. 2.0 Back cannon mounted type & Twin Vesbar mounted type"
 	},
 	"productNumber": "2435745",
@@ -11,20 +11,28 @@
 		"year": 2018,
 		"month": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/153_2995_s_iy6lj2dbjrscnaw6bm0sgdnsev2c.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_2995_s_iy6lj2dbjrscnaw6bm0sgdnsev2c.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2651/",
-	"extractedAt": "2025-12-05T23:09:48.896Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_2995_s_iy6lj2dbjrscnaw6bm0sgdnsev2c.jpg",
+		"path": "/manuals/2651/153_2995.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["msv"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "ガンダムMSV",
+		"en": "GundamMSV"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2651.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2651/2651.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2651/"
 }

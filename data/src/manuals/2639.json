@@ -11,20 +11,28 @@
 		"year": 2018,
 		"month": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/153_2307_s_lxvvyguextmjsmi0iardf85cgmju.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_2307_s_lxvvyguextmjsmi0iardf85cgmju.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2639/",
-	"extractedAt": "2025-12-05T23:09:48.882Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_2307_s_lxvvyguextmjsmi0iardf85cgmju.jpg",
+		"path": "/manuals/2639/153_2307.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム外伝 THE BLUE DESTINY",
+		"en": "Mobile Suit Gundam Gaiden THE BLUE DESTINY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2639.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2639/2639.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2639/"
 }

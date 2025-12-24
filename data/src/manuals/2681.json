@@ -11,20 +11,29 @@
 		"year": 2017,
 		"month": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/153_2048_o_1bivf22og1uommnhah9bf180t23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_2048_o_1bivf22og1uommnhah9bf180t23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2681/",
-	"extractedAt": "2025-12-05T23:09:48.933Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_2048_o_1bivf22og1uommnhah9bf180t23.jpg",
+		"path": "/images/items/01_1116/153_2048.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": [],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム Twilight AXIS",
+		"en": "Mobile Suit Gundam Twilight AXIS"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2681.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2681/2681.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2681/",
+	"itemId": "01_1116"
 }

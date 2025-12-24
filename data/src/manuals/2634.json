@@ -2,7 +2,7 @@
 	"id": "2634",
 	"type": "manual",
 	"name": {
-		"ja": "ＭＧ 1/100 ガンダム TR−1 [アドバンスド・ヘイズル]",
+		"ja": "ＭＧ 1/100 ガンダムTR−1 [アドバンスド・ヘイズル]",
 		"en": "MG 1/100 GundamTR-1 [Advanced Hazel]"
 	},
 	"productNumber": "2417173",
@@ -11,24 +11,29 @@
 		"year": 2018,
 		"month": 5
 	},
-	"productImage": "https://bandai-hobby.net/images/153_2276_o_1c6ts1kjg1of11n2k1co2no61eab23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_2276_o_1c6ts1kjg1of11n2k1co2no61eab23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2634/",
-	"extractedAt": "2025-12-05T23:09:48.877Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_2276_o_1c6ts1kjg1of11n2k1co2no61eab23.jpg",
+		"path": "/images/items/01_1348/153_2276.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"advance-of-z"
-	],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "ADVANCE OF Z",
+		"en": "ADVANCE OF Z"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2634.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2634/2634.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2634/",
+	"itemId": "01_1348"
 }

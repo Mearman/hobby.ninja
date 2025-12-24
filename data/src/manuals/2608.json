@@ -11,20 +11,29 @@
 		"year": 2017,
 		"month": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/153_1963_o_1bci4rhubj661oo9mfk3g411723.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_1963_o_1bci4rhubj661oo9mfk3g411723.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2608/",
-	"extractedAt": "2025-12-05T23:09:48.844Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_1963_o_1bci4rhubj661oo9mfk3g411723.jpg",
+		"path": "/images/items/01_1029/153_1963.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["origin"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム THE ORIGIN",
+		"en": "Mobile Suit Gundam THE ORIGIN"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2608.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2608/2608.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2608/",
+	"itemId": "01_1029"
 }

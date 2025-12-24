@@ -2,7 +2,7 @@
 	"id": "2675",
 	"type": "manual",
 	"name": {
-		"ja": "ＭＧ 1/100 クロスボーン・ガンダム X2改 Ｖｅｒ．Ka",
+		"ja": "ＭＧ 1/100 クロスボーン・ガンダムX2改 Ｖｅｒ．Ka",
 		"en": "MG 1/100 Crossbone GundamX2 Kai Ver. Ka"
 	},
 	"productNumber": "2378348",
@@ -11,20 +11,29 @@
 		"year": 2017,
 		"month": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/153_1967_o_1bd0cog58hk5c43cvf1b1d8fd23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_1967_o_1bd0cog58hk5c43cvf1b1d8fd23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2675/",
-	"extractedAt": "2025-12-05T23:09:48.926Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_1967_o_1bd0cog58hk5c43cvf1b1d8fd23.jpg",
+		"path": "/images/items/01_1033/153_1967.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["crossbone"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士クロスボーン・ガンダム",
+		"en": "Mobile Suit Crossbone Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2675.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2675/2675.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2675/",
+	"itemId": "01_1033"
 }

@@ -11,20 +11,29 @@
 		"year": 2017,
 		"month": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/153_2043_o_1bhttpjct3gb6pc1khr4i4vd223.JPG",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_2043_o_1bhttpjct3gb6pc1khr4i4vd223.JPG",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2685/",
-	"extractedAt": "2025-12-05T23:09:48.937Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_2043_o_1bhttpjct3gb6pc1khr4i4vd223.JPG",
+		"path": "/images/items/01_1111/153_2043.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["thunderbolt"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム サンダーボルト",
+		"en": "Mobile Suit Gundam Thunderbolt"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2685.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2685/2685.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2685/",
+	"itemId": "01_1111"
 }

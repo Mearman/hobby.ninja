@@ -2,7 +2,7 @@
 	"id": "2636",
 	"type": "manual",
 	"name": {
-		"ja": "ＨＧ 1/144 ガンダム TR-6[ウーンドウォート]",
+		"ja": "ＨＧ 1/144 ガンダムTR-6[ウーンドウォート]",
 		"en": "HG 1/144 GundamTR-6 [Woundwort]"
 	},
 	"productNumber": "2417175",
@@ -11,24 +11,28 @@
 		"year": 2018,
 		"month": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/153_2309_s_8rtp25848jdxm4e07is1cwoz5qo8.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_2309_s_8rtp25848jdxm4e07is1cwoz5qo8.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2636/",
-	"extractedAt": "2025-12-05T23:09:48.879Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_2309_s_8rtp25848jdxm4e07is1cwoz5qo8.jpg",
+		"path": "/manuals/2636/153_2309.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"advance-of-z"
-	],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ADVANCE OF Z",
+		"en": "ADVANCE OF Z"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2636.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2636/2636.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2636/"
 }

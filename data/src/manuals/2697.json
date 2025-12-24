@@ -2,7 +2,7 @@
 	"id": "2697",
 	"type": "manual",
 	"name": {
-		"ja": "ＨＧ 1/144 ガンダム X十魔王",
+		"ja": "ＨＧ 1/144 ガンダムX十魔王",
 		"en": "HG 1/144 GundamX Ten Demon Lords"
 	},
 	"productNumber": "2393114",
@@ -11,20 +11,29 @@
 		"year": 2017,
 		"month": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/153_2109_o_1bocpjpo72oj8d1vm31stj13c823.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_2109_o_1bocpjpo72oj8d1vm31stj13c823.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2697/",
-	"extractedAt": "2025-12-05T23:09:48.951Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_2109_o_1bocpjpo72oj8d1vm31stj13c823.jpg",
+		"path": "/images/items/01_1181/153_2109.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2697.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2697/2697.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2697/",
+	"itemId": "01_1181"
 }

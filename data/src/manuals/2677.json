@@ -11,20 +11,28 @@
 		"year": 2017,
 		"month": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/153_2047_o_1bingo12i1mbnf7hfi11eplttt23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_2047_o_1bingo12i1mbnf7hfi11eplttt23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2677/",
-	"extractedAt": "2025-12-05T23:09:48.928Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_2047_o_1bingo12i1mbnf7hfi11eplttt23.jpg",
+		"path": "/manuals/2677/153_2047.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": [],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "その他",
+		"en": "others"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2677.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2677/2677.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2677/"
 }

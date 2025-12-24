@@ -2,7 +2,7 @@
 	"id": "2604",
 	"type": "manual",
 	"name": {
-		"ja": "ＭＧ 1/100 ガンダム TR-1[ヘイズル・アウスラ]",
+		"ja": "ＭＧ 1/100 ガンダムTR-1[ヘイズル・アウスラ]",
 		"en": "MG 1/100 GundamTR-1 [Hazel Ausura]"
 	},
 	"productNumber": "2536553",
@@ -11,24 +11,29 @@
 		"year": 2020,
 		"month": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4243_s_8673ypx9y3qbrnnsxbw6tijeb0du.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4243_s_8673ypx9y3qbrnnsxbw6tijeb0du.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2604/",
-	"extractedAt": "2025-12-05T23:09:48.840Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4243_s_8673ypx9y3qbrnnsxbw6tijeb0du.jpg",
+		"path": "/images/items/01_3288/153_4243.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"advance-of-z"
-	],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "ADVANCE OF Z",
+		"en": "ADVANCE OF Z"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2604.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2604/2604.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2604/",
+	"itemId": "01_3288"
 }

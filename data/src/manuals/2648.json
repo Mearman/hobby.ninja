@@ -11,20 +11,29 @@
 		"year": 2018,
 		"month": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/153_2991_o_1cn8sa6na1stg9bi11vf34nqcg23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_2991_o_1cn8sa6na1stg9bi11vf34nqcg23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2648/",
-	"extractedAt": "2025-12-05T23:09:48.893Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_2991_o_1cn8sa6na1stg9bi11vf34nqcg23.jpg",
+		"path": "/images/items/01_2040/153_2991.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["g-00"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム00",
+		"en": "Mobile Suit Gundam00"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2648.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2648/2648.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2648/",
+	"itemId": "01_2040"
 }
