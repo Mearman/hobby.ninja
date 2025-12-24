@@ -26,26 +26,38 @@
 			"Acguy's MG series plastic model that appears in \"Mobile Suit Gundam\". The arm part uses a mechanism for the first time in plastic model history, reproducing the telescopic gimmick and the movement of the elbow joint. The claw extension storage gimmick on the right forearm is also reproduced, and the Vulcan cannon has a switch function and can be deployed with a spring action. Parts to express the firing scene can be attached to the torpedo on the left arm. A display stand is included that allows you to recreate underwater scenes. Figures of the children who were on board the White Base, Katsu, Retsu, and Kikka are included."
 		]
 	},
-	"images": [
-		"/images/items/01_4827/1000070726_1.jpg",
-		"/images/items/01_4827/1000070726_2.jpg",
-		"/images/items/01_4827/1000070726_3.jpg",
-		"/images/items/01_4827/1000070726_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000070726_1.jpg",
+				"path": "/images/items/01_4827/1000070726_1.jpg",
+				"hash": "f1ab1cb64eadc43ce333b9d3b08bd93e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000070726_2.jpg",
+				"path": "/images/items/01_4827/1000070726_2.jpg",
+				"hash": "32bafd8ef39c28556ba07b361f8f16bb"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000070726_3.jpg",
+				"path": "/images/items/01_4827/1000070726_3.jpg",
+				"hash": "4ac04e3c02a8c5735524349cf5b7faf0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000070726_4.jpg",
+				"path": "/images/items/01_4827/1000070726_4.jpg",
+				"hash": "7b74c587d6568a801cecdaf10126a8f8"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4827/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	]
+	"brandIds": ["mg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
+	"manual": {
+		"id": "535",
+		"url": "https://manual.bandai-hobby.net/menus/detail/535/"
+	}
 }
