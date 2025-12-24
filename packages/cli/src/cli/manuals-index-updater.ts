@@ -12,7 +12,7 @@ import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
 const MANUALS_INDEX_PATH = resolveWorkspacePath("data/src/manuals/index.json");
 
 // Helper function to get current ISO timestamp
-const getCurrentTimestamp = (): string => getCurrentTimestamp();
+const getCurrentTimestamp = (): string => new Date().toISOString();
 
 interface ManualIndexEntry {
 	hasPage: boolean;
@@ -81,14 +81,22 @@ export const ManualsIndexUpdater = {
 	},
 
 	/**
-	 * Record a valid manual
+	 * Record a valid manual (creates or updates entry with current timestamp)
 	 */
 	recordValid(manualId: string, name?: string): void {
 		if (!manualsIndex) this.load();
 		if (!manualsIndex) return;
 
 		const entry = manualsIndex.manuals[manualId];
-		if (!entry) {
+		if (entry) {
+			// Update existing entry
+			entry.hasPage = true;
+			entry.checkedAt = getCurrentTimestamp();
+			if (name) entry.name = name;
+			delete entry.error;
+			isDirty = true;
+		} else {
+			// Create new entry
 			manualsIndex.manuals[manualId] = {
 				hasPage: true,
 				checkedAt: getCurrentTimestamp(),
@@ -99,14 +107,22 @@ export const ManualsIndexUpdater = {
 	},
 
 	/**
-	 * Record an invalid (404) manual
+	 * Record an invalid (404) manual (creates or updates entry with current timestamp)
 	 */
 	recordInvalid(manualId: string, error?: string): void {
 		if (!manualsIndex) this.load();
 		if (!manualsIndex) return;
 
 		const entry = manualsIndex.manuals[manualId];
-		if (!entry) {
+		if (entry) {
+			// Update existing entry
+			entry.hasPage = false;
+			entry.checkedAt = getCurrentTimestamp();
+			entry.error = error;
+			delete entry.name;
+			isDirty = true;
+		} else {
+			// Create new entry
 			manualsIndex.manuals[manualId] = {
 				hasPage: false,
 				checkedAt: getCurrentTimestamp(),
