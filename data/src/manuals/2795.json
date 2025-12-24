@@ -11,20 +11,28 @@
 		"year": 2016,
 		"month": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4961_s_c3v6x43j9uaa6q3oqnozqi1ad2xz.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4961_s_c3v6x43j9uaa6q3oqnozqi1ad2xz.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2795/",
-	"extractedAt": "2025-12-05T23:09:49.038Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4961_s_c3v6x43j9uaa6q3oqnozqi1ad2xz.jpg",
+		"path": "/manuals/2795/153_4961.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": [],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "RE/100",
+		"en": "RE/100"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2795.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2795/2795.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2795/"
 }

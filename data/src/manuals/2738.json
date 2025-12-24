@@ -11,27 +11,37 @@
 		"year": 2019,
 		"month": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/153_3433_o_1dh8r0fgg12sr1qm1u2c1lr412jn23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_3433_o_1dh8r0fgg12sr1qm1u2c1lr412jn23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2738/",
-	"extractedAt": "2025-12-05T23:09:49.003Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_3433_o_1dh8r0fgg12sr1qm1u2c1lr412jn23.jpg",
+		"path": "/images/items/01_2508/153_3433.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["endlesswaltz"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "新機動戦記ガンダムW",
+		"en": "New Mobile Report GundamW"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2738.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2738/2738.pdf"
 		},
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2738_2.pdf",
 			"name": {
 				"ja": "補足説明書",
 				"en": "Supplementary Manual"
-			}
+			},
+			"path": "/manuals/2738/2738_2.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2738/",
+	"itemId": "01_2508"
 }

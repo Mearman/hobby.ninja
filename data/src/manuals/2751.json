@@ -11,27 +11,37 @@
 		"year": 2020,
 		"month": 10
 	},
-	"productImage": "https://bandai-hobby.net/images/153_3980_s_od2gpk2nbnlto66fkx9nd9n2p7va.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_3980_s_od2gpk2nbnlto66fkx9nd9n2p7va.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2751/",
-	"extractedAt": "2025-12-05T23:09:49.021Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_3980_s_od2gpk2nbnlto66fkx9nd9n2p7va.jpg",
+		"path": "/images/items/01_3008/153_3980.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズ",
+		"en": "Gundam Build Divers"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2751.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2751/2751.pdf"
 		},
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2751_2.pdf",
 			"name": {
 				"ja": "補足説明書",
 				"en": "Supplementary Manual"
-			}
+			},
+			"path": "/manuals/2751/2751_2.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2751/",
+	"itemId": "01_3008"
 }

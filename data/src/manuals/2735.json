@@ -2,7 +2,7 @@
 	"id": "2735",
 	"type": "manual",
 	"name": {
-		"ja": "ＨＧ 1/144 ガンダム TR-1[アドバンスド・ヘイズル]&ガンダム TR-6専用拡張パーツセット",
+		"ja": "ＨＧ 1/144 ガンダムTR-1[アドバンスド・ヘイズル]&ガンダムTR-6専用拡張パーツセット",
 		"en": "HG 1/144 GundamTR-1 [Advanced Hazel] & GundamTR-6 exclusive expansion parts set"
 	},
 	"productNumber": "2469594",
@@ -11,31 +11,37 @@
 		"year": 2019,
 		"month": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/153_3154_o_1d3jdm6j715ek7rpbnqcdf52323.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_3154_o_1d3jdm6j715ek7rpbnqcdf52323.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2735/",
-	"extractedAt": "2025-12-05T23:09:49.000Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_3154_o_1d3jdm6j715ek7rpbnqcdf52323.jpg",
+		"path": "/images/items/01_2209/153_3154.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"advance-of-z"
-	],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ADVANCE OF Z",
+		"en": "ADVANCE OF Z"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2735.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2735/2735.pdf"
 		},
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2735_2.pdf",
 			"name": {
 				"ja": "補足説明書",
 				"en": "Supplementary Manual"
-			}
+			},
+			"path": "/manuals/2735/2735_2.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2735/",
+	"itemId": "01_2209"
 }

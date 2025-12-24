@@ -2,7 +2,7 @@
 	"id": "2711",
 	"type": "manual",
 	"name": {
-		"ja": "RE/100 1/100 ガンダム Mk-III 8号機",
+		"ja": "RE/100 1/100 ガンダムMk-III 8号機",
 		"en": "RE/100 1/100 GundamMk-III Unit 8"
 	},
 	"productNumber": "2419043",
@@ -11,27 +11,37 @@
 		"year": 2018,
 		"month": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/153_2308_o_1c915ksc8ffk8oc4gd1j421u6f23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_2308_o_1c915ksc8ffk8oc4gd1j421u6f23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2711/",
-	"extractedAt": "2025-12-05T23:09:48.972Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_2308_o_1c915ksc8ffk8oc4gd1j421u6f23.jpg",
+		"path": "/images/items/01_1383/153_2308.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": [],
-	"seriesIds": [],
+	"brand": {
+		"ja": "RE/100",
+		"en": "RE/100"
+	},
+	"series": {
+		"ja": "その他",
+		"en": "others"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2711.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2711/2711.pdf"
 		},
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2711_2.pdf",
 			"name": {
 				"ja": "補足説明書",
 				"en": "Supplementary Manual"
-			}
+			},
+			"path": "/manuals/2711/2711_2.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2711/",
+	"itemId": "01_1383"
 }

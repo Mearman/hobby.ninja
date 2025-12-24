@@ -2,7 +2,7 @@
 	"id": "2726",
 	"type": "manual",
 	"name": {
-		"ja": "ＭＧ 1/100 ガンダム X3号機",
+		"ja": "ＭＧ 1/100 ガンダムX3号機",
 		"en": "MG 1/100 GundamX3"
 	},
 	"productNumber": "2440865",
@@ -11,27 +11,37 @@
 		"year": 2018,
 		"month": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/153_2311_o_1c9qrh2ii41kmrnug47m71n6f23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_2311_o_1c9qrh2ii41kmrnug47m71n6f23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2726/",
-	"extractedAt": "2025-12-05T23:09:48.990Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_2311_o_1c9qrh2ii41kmrnug47m71n6f23.jpg",
+		"path": "/images/items/01_1387/153_2311.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["x"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動新世紀ガンダムＸ",
+		"en": "Mobile New Century GundamX"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2726.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2726/2726.pdf"
 		},
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2726_2.pdf",
 			"name": {
 				"ja": "補足説明書",
 				"en": "Supplementary Manual"
-			}
+			},
+			"path": "/manuals/2726/2726_2.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2726/",
+	"itemId": "01_1387"
 }
