@@ -58,6 +58,28 @@ export const ManualPdfSchema = z.object({
 export type ManualPdf = z.infer<typeof ManualPdfSchema>;
 
 /**
+ * Source image reference with src URL and local path
+ * At least one of src or path must be present
+ */
+export const SourceImageSchema = z.object({
+	src: z.string().optional(),
+	path: z.string().optional(),
+});
+
+export type SourceImage = z.infer<typeof SourceImageSchema>;
+
+/**
+ * Images object containing categorized arrays of images
+ */
+export const ImagesSchema = z.object({
+	product: z.array(SourceImageSchema).default([]),
+	instructions: z.array(SourceImageSchema).default([]),
+});
+
+export type Images = z.infer<typeof ImagesSchema>;
+
+/**
+ * Legacy image schema - kept for backward compatibility
  * Image can be a simple URL string or an object with URL and metadata
  */
 export const ImageSchema = z.union([
@@ -74,6 +96,24 @@ export const ImageSchema = z.union([
 export type Image = z.infer<typeof ImageSchema>;
 
 /**
+ * Accessory item with localized name and count
+ */
+export const AccessoryItemSchema = z.object({
+	name: LocalizedStringSchema,
+	count: z.number().optional(),
+});
+
+export type AccessoryItem = z.infer<typeof AccessoryItemSchema>;
+
+/**
+ * Accessories array
+ */
+export const AccessoriesSchema = z.array(AccessoryItemSchema);
+
+export type Accessories = z.infer<typeof AccessoriesSchema>;
+
+/**
+ * Legacy accessory schema - kept for backward compatibility
  * Accessory can be a simple string or localized name
  */
 export const AccessorySchema = z.union([
@@ -84,21 +124,79 @@ export const AccessorySchema = z.union([
 export type Accessory = z.infer<typeof AccessorySchema>;
 
 /**
- * Item node schema with array-based relationships (canonical format)
- * Uses brandIds[], seriesIds[], categoryIds[], relatedItemIds[] and manualId (1:1) instead of edges
+ * Reference to a brand with id, url, and localized name
+ */
+export const BrandRefSchema = z.object({
+	id: z.string(),
+	url: z.string().optional(),
+	ja: z.string().optional(),
+	en: z.string().optional(),
+});
+
+export type BrandRef = z.infer<typeof BrandRefSchema>;
+
+/**
+ * Reference to a series with id, url, and localized name
+ */
+export const SeriesRefSchema = z.object({
+	id: z.string(),
+	url: z.string().optional(),
+	ja: z.string().optional(),
+	en: z.string().optional(),
+});
+
+export type SeriesRef = z.infer<typeof SeriesRefSchema>;
+
+/**
+ * Reference to a category with id, url, and localized name
+ */
+export const CategoryRefSchema = z.object({
+	id: z.string(),
+	url: z.string().optional(),
+	ja: z.string().optional(),
+	en: z.string().optional(),
+});
+
+export type CategoryRef = z.infer<typeof CategoryRefSchema>;
+
+/**
+ * Reference to a related item with id, url, and localized name
+ */
+export const RelatedItemRefSchema = z.object({
+	id: z.string(),
+	url: z.string().optional(),
+	ja: z.string().optional(),
+	en: z.string().optional(),
+});
+
+export type RelatedItemRef = z.infer<typeof RelatedItemRefSchema>;
+
+/**
+ * Reference to a manual with id and url
+ */
+export const ManualRefSchema = z.object({
+	id: z.string(),
+	url: z.string().optional(),
+});
+
+export type ManualRef = z.infer<typeof ManualRefSchema>;
+
+/**
+ * Item node schema with object-based relationships (source format)
+ * Uses brands[], series[], categories[], relatedItems[] and manual object
  */
 export const ItemSchema = z.object({
 	id: z.string(),
 	type: z.literal("item"),
 	name: z.union([z.string(), LocalizedStringSchema]),
 
-	// Array-based relationships (NEW format)
-	brandIds: z.array(z.string()).default([]),
-	seriesIds: z.array(z.string()).default([]),
-	categoryIds: z.array(z.string()).default([]),
-	relatedItemIds: z.array(z.string()).default([]),
+	// Object-based relationships (source format)
+	brands: z.array(BrandRefSchema).default([]),
+	series: z.array(SeriesRefSchema).default([]),
+	categories: z.array(CategoryRefSchema).default([]),
+	relatedItems: z.array(RelatedItemRefSchema).default([]),
 	// 1:1 relationship - each item has at most one manual
-	manualId: z.string().optional(),
+	manual: ManualRefSchema.optional(),
 
 	// Product information
 	scale: z.string().optional(),
@@ -110,10 +208,12 @@ export const ItemSchema = z.object({
 	grades: z.record(z.string(), z.array(z.string())).default({}),
 
 	// Content and metadata
-	images: z.array(ImageSchema).optional(),
+	// images can be new format (object with product/instructions) or old format (array of strings)
+	images: z.union([ImagesSchema, z.array(z.string())]).optional(),
 	displayImage: z.string().optional(), // Computed: first image or manual.productImage fallback
 	description: LocalizedTextArraySchema.optional(),
-	accessories: LocalizedTextArraySchema.optional(),
+	// accessories can be new format (array of objects) or old format (LocalizedTextArray)
+	accessories: z.union([AccessoriesSchema, LocalizedTextArraySchema]).optional(),
 	targetAge: z.number().optional(),
 	tags: z.array(z.string()).optional(),
 	specifications: z.record(z.string(), z.unknown()).optional(),
@@ -221,7 +321,7 @@ export const ManualSchema = z.object({
 	type: z.literal("manual"),
 	name: z.union([z.string(), LocalizedStringSchema]),
 
-	// Relationships
+	// Relationships (legacy format - single objects, not arrays)
 	brandIds: z.array(z.string()).default([]),
 	seriesIds: z.array(z.string()).default([]),
 
@@ -544,13 +644,33 @@ export const getNodeReleaseDateSortable = (item: Item): string => {
 
 /**
  * Get array of image URLs from an item
+ * Returns product images first, then instructions
+ * Handles both new format (object with product/instructions) and old format (array of strings)
  */
 export const getNodeImages = (item: Item): string[] => {
 	if (!item.images) return [];
-	return item.images.map(img => {
-		if (typeof img === "string") return img;
-		return img.url;
-	});
+
+	// Handle old format (array of strings)
+	if (Array.isArray(item.images)) {
+		return item.images;
+	}
+
+	// Handle new format (object with product/instructions)
+	const result: string[] = [];
+
+	// Add product images (using local path if available, else src)
+	for (const img of item.images.product) {
+		const url = img.path ?? img.src;
+		if (url) result.push(url);
+	}
+
+	// Add instruction images
+	for (const img of item.images.instructions) {
+		const url = img.path ?? img.src;
+		if (url) result.push(url);
+	}
+
+	return result;
 };
 
 /**
@@ -565,19 +685,56 @@ export const getNodeDescription = (item: Item): string[] => {
 
 /**
  * Get array of accessory names from an item, preferring English if available
+ * Handles both new format (array of objects) and old format (LocalizedTextArray)
  */
 export const getNodeAccessories = (item: Item): string[] => {
 	if (!item.accessories) return [];
 
-	// Return English array if available, otherwise Japanese
-	return item.accessories.en ?? item.accessories.ja;
+	// Handle old format (LocalizedTextArray with ja/en arrays)
+	if ("ja" in item.accessories) {
+		return item.accessories.en ?? item.accessories.ja;
+	}
+
+	// Handle new format (array of AccessoryItem objects)
+	return item.accessories.map(acc => {
+		const name = acc.name.en ?? acc.name.ja;
+		return acc.count && acc.count > 1 ? `${name} x${acc.count}` : name;
+	});
 };
 
 /**
  * Get manual ID from an item (1:1 relationship)
  */
 export const getNodeManualId = (item: Item): string | undefined => {
-	return item.manualId;
+	return item.manual?.id;
+};
+
+/**
+ * Get brand IDs from an item
+ */
+export const getItemBrandIds = (item: Item): string[] => {
+	return item.brands.map((b) => b.id);
+};
+
+/**
+ * Get series IDs from an item
+ */
+export const getItemSeriesIds = (item: Item): string[] => {
+	return item.series.map((s) => s.id);
+};
+
+/**
+ * Get category IDs from an item
+ */
+export const getItemCategoryIds = (item: Item): string[] => {
+	return item.categories.map((c) => c.id);
+};
+
+/**
+ * Get related item IDs from an item
+ */
+export const getItemRelatedIds = (item: Item): string[] => {
+	return item.relatedItems.map((r) => r.id);
 };
 
 /**
