@@ -1,5 +1,5 @@
 {
-	"id": "0089",
+	"id": "89",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 RX-78-02 ガンダム(GUNDAM THE ORIGIN版)",
@@ -12,20 +12,28 @@
 		"month": 3,
 		"day": 14
 	},
-	"productImage": "https://bandai-hobby.net/images/196_3700_s_qlh1w9sfwk0w97kgwcchf802evoq.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_3700_s_qlh1w9sfwk0w97kgwcchf802evoq.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/89/",
-	"extractedAt": "2025-12-05T23:09:46.445Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_3700_s_qlh1w9sfwk0w97kgwcchf802evoq.jpg",
+		"path": "/manuals/0089/196_3700.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["origin"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム THE ORIGIN",
+		"en": "Mobile Suit Gundam THE ORIGIN"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/89.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0089/0089.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/89/"
 }
