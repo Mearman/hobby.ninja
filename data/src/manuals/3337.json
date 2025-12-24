@@ -11,20 +11,24 @@
 		"year": 2025,
 		"month": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/3337.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/3337.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3337/",
-	"extractedAt": "2025-12-05T23:09:49.201Z",
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["hathaway"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 閃光のハサウェイ",
+		"en": "Mobile Suit Gundam Flash Hathaway"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/3337.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/3337/3337.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3337/"
 }

@@ -12,19 +12,23 @@
 		"month": 8,
 		"day": 31
 	},
-	"productImage": "https://bandai-hobby.net/images/2715316.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/2715316.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3368/",
-	"extractedAt": "2025-12-05T23:09:49.204Z",
-	"brandIds": ["30mf"],
-	"seriesIds": [],
+	"brand": {
+		"ja": "30 MINUTES LABEL",
+		"en": "30 MINUTES LABEL"
+	},
+	"series": {
+		"ja": "30 MINUTES FANTASY",
+		"en": "30 MINUTES FANTASY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/3368.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/3368/3368.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3368/"
 }
