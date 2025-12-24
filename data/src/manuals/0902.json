@@ -1,5 +1,5 @@
 {
-	"id": "0902",
+	"id": "902",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 RX-79〔G〕 陸戦型ガンダム",
@@ -11,20 +11,29 @@
 		"year": 2007,
 		"month": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/157_2562_s_6ipflm4j7ytcoa1o60e90dhnbg1s.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_2562_s_6ipflm4j7ytcoa1o60e90dhnbg1s.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/902/",
-	"extractedAt": "2025-12-05T23:09:47.743Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_2562_s_6ipflm4j7ytcoa1o60e90dhnbg1s.jpg",
+		"path": "/images/items/01_1653/157_2562.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": [],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 第08MS小隊",
+		"en": "Mobile Suit Gundam 08th MS Platoon"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/902.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0902/0902.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/902/",
+	"itemId": "01_1653"
 }

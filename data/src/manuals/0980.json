@@ -1,5 +1,5 @@
 {
-	"id": "0980",
+	"id": "980",
 	"type": "manual",
 	"name": {
 		"ja": "ENTRY GRADE 1/144 ストライクガンダム",
@@ -12,20 +12,28 @@
 		"month": 1,
 		"day": 15
 	},
-	"productImage": "https://bandai-hobby.net/images/196_4698_s_58tm16vdulsjy4f2c7xaobp0nm4n.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_4698_s_58tm16vdulsjy4f2c7xaobp0nm4n.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/980/",
-	"extractedAt": "2025-12-05T23:09:47.854Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_4698_s_58tm16vdulsjy4f2c7xaobp0nm4n.jpg",
+		"path": "/manuals/0980/196_4698.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["entry_grade"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "ENTRY GRADE",
+		"en": "ENTRY GRADE"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/980.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0980/0980.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/980/"
 }

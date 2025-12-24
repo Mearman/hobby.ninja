@@ -1,5 +1,5 @@
 {
-	"id": "0956",
+	"id": "956",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 モンテーロ(クリム・ニック専用機)",
@@ -12,20 +12,29 @@
 		"month": 11,
 		"day": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1194_s_azqixz4y8r6oovliv8fo80wrd39i.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1194_s_azqixz4y8r6oovliv8fo80wrd39i.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/956/",
-	"extractedAt": "2025-12-05T23:09:47.821Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_1194_s_azqixz4y8r6oovliv8fo80wrd39i.jpg",
+		"path": "/images/items/01_0205/158_1194.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-reco"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダム Gのレコンギスタ",
+		"en": "Gundam G's Reconguista"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/956.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0956/0956.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/956/",
+	"itemId": "01_0205"
 }

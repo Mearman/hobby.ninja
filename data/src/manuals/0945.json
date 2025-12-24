@@ -1,5 +1,5 @@
 {
-	"id": "0945",
+	"id": "945",
 	"type": "manual",
 	"name": {
 		"ja": "RG 1/144 ZGMF-X10A フリーダムガンダム",
@@ -12,20 +12,28 @@
 		"month": 11,
 		"day": 19
 	},
-	"productImage": "https://bandai-hobby.net/images/156_4673_s_1exlxhc5rr4v174u73q9naqko5i9.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_4673_s_1exlxhc5rr4v174u73q9naqko5i9.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/945/",
-	"extractedAt": "2025-12-05T23:09:47.806Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_4673_s_1exlxhc5rr4v174u73q9naqko5i9.jpg",
+		"path": "/manuals/0945/156_4673.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["rg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "RG",
+		"en": "R.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/945.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0945/0945.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/945/"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0949",
+	"id": "949",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 MSN-04 サザビーVer.ka",
@@ -12,20 +12,28 @@
 		"month": 12,
 		"day": 14
 	},
-	"productImage": "https://bandai-hobby.net/images/155_1012_s_yl0pfjk38u178wm9o5grcj9kwdga.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_1012_s_yl0pfjk38u178wm9o5grcj9kwdga.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/949/",
-	"extractedAt": "2025-12-05T23:09:47.812Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_1012_s_yl0pfjk38u178wm9o5grcj9kwdga.jpg",
+		"path": "/manuals/0949/155_1012.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam-cca"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 逆襲のシャア",
+		"en": "Mobile Suit Gundam Char's Counterattack"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/949.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0949/0949.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/949/"
 }

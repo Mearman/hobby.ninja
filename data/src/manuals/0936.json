@@ -1,5 +1,5 @@
 {
-	"id": "0936",
+	"id": "936",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ジェスタ",
@@ -12,20 +12,29 @@
 		"month": 9,
 		"day": 17
 	},
-	"productImage": "https://bandai-hobby.net/images/157_784_s_lo7cm33xbav9pk1gccx0k8ynim0d.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_784_s_lo7cm33xbav9pk1gccx0k8ynim0d.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/936/",
-	"extractedAt": "2025-12-05T23:09:47.795Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_784_s_lo7cm33xbav9pk1gccx0k8ynim0d.jpg",
+		"path": "/images/items/01_5717/157_784.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/936.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0936/0936.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/936/",
+	"itemId": "01_5717"
 }

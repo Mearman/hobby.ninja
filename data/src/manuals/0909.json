@@ -1,5 +1,5 @@
 {
-	"id": "0909",
+	"id": "909",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ギラ・ドーガ",
@@ -12,20 +12,28 @@
 		"month": 11,
 		"day": 15
 	},
-	"productImage": "https://bandai-hobby.net/images/159_2747_s_vij1gxki1s45bd2pi1grqri88zhg.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_2747_s_vij1gxki1s45bd2pi1grqri88zhg.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/909/",
-	"extractedAt": "2025-12-05T23:09:47.756Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_2747_s_vij1gxki1s45bd2pi1grqri88zhg.jpg",
+		"path": "/manuals/0909/159_2747.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam-cca"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 逆襲のシャア",
+		"en": "Mobile Suit Gundam Char's Counterattack"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/909.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0909/0909.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/909/"
 }

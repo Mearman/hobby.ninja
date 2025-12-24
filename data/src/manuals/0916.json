@@ -1,5 +1,5 @@
 {
-	"id": "0916",
+	"id": "916",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 シュツルム・ディアス",
@@ -12,20 +12,29 @@
 		"month": 5,
 		"day": 2
 	},
-	"productImage": "https://bandai-hobby.net/images/157_4666_s_kdby3uvz3foc9x4s3ldqoszu8bjs.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_4666_s_kdby3uvz3foc9x4s3ldqoszu8bjs.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/916/",
-	"extractedAt": "2025-12-05T23:09:47.766Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_4666_s_kdby3uvz3foc9x4s3ldqoszu8bjs.jpg",
+		"path": "/images/items/01_3713/157_4666.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam-zz"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムZZ",
+		"en": "Mobile Suit GundamZZ"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/916.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0916/0916.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/916/",
+	"itemId": "01_3713"
 }

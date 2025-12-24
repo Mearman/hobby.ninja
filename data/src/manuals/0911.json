@@ -1,5 +1,5 @@
 {
-	"id": "0911",
+	"id": "911",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ダブルオーライザー デザイナーズカラーVer.",
@@ -12,20 +12,29 @@
 		"month": 2,
 		"day": 14
 	},
-	"productImage": "https://bandai-hobby.net/images/158_3596_s_j3iks0rle3y6lm5c6rbprp54dura.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_3596_s_j3iks0rle3y6lm5c6rbprp54dura.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/911/",
-	"extractedAt": "2025-12-05T23:09:47.759Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_3596_s_j3iks0rle3y6lm5c6rbprp54dura.jpg",
+		"path": "/images/items/01_2672/158_3596.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-00"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム00",
+		"en": "Mobile Suit Gundam00"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/911.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0911/0911.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/911/",
+	"itemId": "01_2672"
 }

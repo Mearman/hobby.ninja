@@ -1,5 +1,5 @@
 {
-	"id": "0997",
+	"id": "997",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ザク地上戦セット",
@@ -12,24 +12,29 @@
 		"month": 2,
 		"day": 14
 	},
-	"productImage": "https://bandai-hobby.net/images/156_5427_s_5qw6m5ub3g8bi2uk29lj8y1axq3d.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_5427_s_5qw6m5ub3g8bi2uk29lj8y1axq3d.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/997/",
-	"extractedAt": "2025-12-05T23:09:47.876Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_5427_s_5qw6m5ub3g8bi2uk29lj8y1axq3d.jpg",
+		"path": "/images/items/01_4526/156_5427.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gunpla"
-	],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "ガンプラ",
+		"en": "Gunpla"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/997.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0997/0997.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/997/",
+	"itemId": "01_4526"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0977",
+	"id": "977",
 	"type": "manual",
 	"name": {
 		"ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム",
@@ -12,20 +12,28 @@
 		"month": 5,
 		"day": 29
 	},
-	"productImage": "https://bandai-hobby.net/images/192_3957_s_nu2eu3w3wi6si29md1mok2zlxt40.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/192_3957_s_nu2eu3w3wi6si29md1mok2zlxt40.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/977/",
-	"extractedAt": "2025-12-05T23:09:47.850Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/192_3957_s_nu2eu3w3wi6si29md1mok2zlxt40.jpg",
+		"path": "/manuals/0977/192_3957.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["entry_grade"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "ENTRY GRADE",
+		"en": "ENTRY GRADE"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/977.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0977/0977.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/977/"
 }

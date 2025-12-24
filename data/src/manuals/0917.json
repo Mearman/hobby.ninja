@@ -1,5 +1,5 @@
 {
-	"id": "0917",
+	"id": "917",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 アイザック",
@@ -11,20 +11,29 @@
 		"year": 2009,
 		"month": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/157_2616_s_9zosbobofpt0znab0mxk3a06041p.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_2616_s_9zosbobofpt0znab0mxk3a06041p.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/917/",
-	"extractedAt": "2025-12-05T23:09:47.769Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_2616_s_9zosbobofpt0znab0mxk3a06041p.jpg",
+		"path": "/images/items/01_1707/157_2616.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam-zz"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムZZ",
+		"en": "Mobile Suit GundamZZ"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/917.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0917/0917.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/917/",
+	"itemId": "01_1707"
 }

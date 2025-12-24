@@ -1,5 +1,5 @@
 {
-	"id": "0988",
+	"id": "988",
 	"type": "manual",
 	"name": {
 		"ja": "PG 1/60 MS-06F 量産型ザク2",
@@ -11,20 +11,29 @@
 		"year": 1999,
 		"month": 3
 	},
-	"productImage": "https://bandai-hobby.net/images/158_3857_s_vksyyllz6gmsz7nd51k9d1sgfg5a.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_3857_s_vksyyllz6gmsz7nd51k9d1sgfg5a.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/988/",
-	"extractedAt": "2025-12-05T23:09:47.863Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_3857_s_vksyyllz6gmsz7nd51k9d1sgfg5a.jpg",
+		"path": "/images/items/01_2876/158_3857.jpg"
+	},
 	"scale": "1/60",
-	"brandIds": ["pg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "PG",
+		"en": "P.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/988.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0988/0988.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/988/",
+	"itemId": "01_2876"
 }

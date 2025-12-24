@@ -1,5 +1,5 @@
 {
-	"id": "0985",
+	"id": "985",
 	"type": "manual",
 	"name": {
 		"ja": "PG 1/60 RX-78-2 ガンダム",
@@ -11,20 +11,29 @@
 		"year": 1998,
 		"month": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/158_3856_s_ra3mn9farm0re7b9yft7f27ui0fd.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_3856_s_ra3mn9farm0re7b9yft7f27ui0fd.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/985/",
-	"extractedAt": "2025-12-05T23:09:47.860Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_3856_s_ra3mn9farm0re7b9yft7f27ui0fd.jpg",
+		"path": "/images/items/01_2875/158_3856.jpg"
+	},
 	"scale": "1/60",
-	"brandIds": ["pg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "PG",
+		"en": "P.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/985.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0985/0985.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/985/",
+	"itemId": "01_2875"
 }

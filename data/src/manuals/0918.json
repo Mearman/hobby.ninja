@@ -1,5 +1,5 @@
 {
-	"id": "0918",
+	"id": "918",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 フルアーマーガンダム７号機",
@@ -12,20 +12,29 @@
 		"month": 9,
 		"day": 4
 	},
-	"productImage": "https://bandai-hobby.net/images/158_2625_s_4dorlofnqau0lf5d5nqakc5qztlk.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_2625_s_4dorlofnqau0lf5d5nqakc5qztlk.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/918/",
-	"extractedAt": "2025-12-05T23:09:47.771Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_2625_s_4dorlofnqau0lf5d5nqakc5qztlk.jpg",
+		"path": "/images/items/01_1716/158_2625.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/918.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0918/0918.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/918/",
+	"itemId": "01_1716"
 }

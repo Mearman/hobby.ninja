@@ -1,5 +1,5 @@
 {
-	"id": "0928",
+	"id": "928",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 MS-06F-2 ザクII(連邦軍仕様)",
@@ -12,20 +12,29 @@
 		"month": 3,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/157_2690_s_2mpjpt77uzlhfx2gd2plhu97zwzw.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_2690_s_2mpjpt77uzlhfx2gd2plhu97zwzw.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/928/",
-	"extractedAt": "2025-12-05T23:09:47.785Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_2690_s_2mpjpt77uzlhfx2gd2plhu97zwzw.jpg",
+		"path": "/images/items/01_1749/157_2690.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-0083"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 0083 STARDUST MEMORY",
+		"en": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/928.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0928/0928.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/928/",
+	"itemId": "01_1749"
 }

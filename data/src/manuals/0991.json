@@ -1,8 +1,8 @@
 {
-	"id": "0991",
+	"id": "991",
 	"type": "manual",
 	"name": {
-		"ja": "HGUC 1/144 ガンダム V作戦セット",
+		"ja": "HGUC 1/144 ガンダムV作戦セット",
 		"en": "HGUC 1/144 GundamV Operation Set"
 	},
 	"productNumber": "1104030",
@@ -11,20 +11,29 @@
 		"year": 2001,
 		"month": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/155_214_s_aqen5sc0pzp6tx3huhd2p8qmqihk.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_214_s_aqen5sc0pzp6tx3huhd2p8qmqihk.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/991/",
-	"extractedAt": "2025-12-05T23:09:47.868Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_214_s_aqen5sc0pzp6tx3huhd2p8qmqihk.jpg",
+		"path": "/images/items/01_1215/155_214.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/991.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0991/0991.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/991/",
+	"itemId": "01_1215"
 }

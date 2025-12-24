@@ -1,5 +1,5 @@
 {
-	"id": "0992",
+	"id": "992",
 	"type": "manual",
 	"name": {
 		"ja": "HG メカニクス 1/550 AMX-002 ノイエジール",
@@ -11,19 +11,29 @@
 		"year": 2002,
 		"month": 1
 	},
-	"productImage": "https://bandai-hobby.net/images/158_243_s_3hfjzd2p8awlu0vo1pove9oku7o2.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_243_s_3hfjzd2p8awlu0vo1pove9oku7o2.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/992/",
-	"extractedAt": "2025-12-05T23:09:47.869Z",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-0083"],
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_243_s_3hfjzd2p8awlu0vo1pove9oku7o2.jpg",
+		"path": "/images/items/01_1522/158_243.jpg"
+	},
+	"scale": "1/550",
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 0083 STARDUST MEMORY",
+		"en": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/992.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0992/0992.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/992/",
+	"itemId": "01_1522"
 }

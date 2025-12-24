@@ -1,5 +1,5 @@
 {
-	"id": "0966",
+	"id": "966",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 カバカーリー",
@@ -12,20 +12,29 @@
 		"month": 7,
 		"day": 18
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1339_s_zx7ewhiwjd9w54x0eb289l4gikt1.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1339_s_zx7ewhiwjd9w54x0eb289l4gikt1.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/966/",
-	"extractedAt": "2025-12-05T23:09:47.834Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_1339_s_zx7ewhiwjd9w54x0eb289l4gikt1.jpg",
+		"path": "/images/items/01_0363/158_1339.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-reco"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダム Gのレコンギスタ",
+		"en": "Gundam G's Reconguista"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/966.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0966/0966.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/966/",
+	"itemId": "01_0363"
 }

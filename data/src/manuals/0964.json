@@ -1,5 +1,5 @@
 {
-	"id": "0964",
+	"id": "964",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ダハック",
@@ -12,20 +12,29 @@
 		"month": 5,
 		"day": 15
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1304_s_855sbs1qyaol6hq33kwlzla8p7s1.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1304_s_855sbs1qyaol6hq33kwlzla8p7s1.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/964/",
-	"extractedAt": "2025-12-05T23:09:47.832Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_1304_s_855sbs1qyaol6hq33kwlzla8p7s1.jpg",
+		"path": "/images/items/01_0325/158_1304.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-reco"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダム Gのレコンギスタ",
+		"en": "Gundam G's Reconguista"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/964.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0964/0964.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/964/",
+	"itemId": "01_0325"
 }

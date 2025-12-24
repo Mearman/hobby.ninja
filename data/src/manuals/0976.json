@@ -1,5 +1,5 @@
 {
-	"id": "0976",
+	"id": "976",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 RX-78-2 ガンダム [BEYOND GLOBAL]",
@@ -12,20 +12,28 @@
 		"month": 6,
 		"day": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/193_3736_s_q7cm4u9qxeji25338fuub95h51je.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/193_3736_s_q7cm4u9qxeji25338fuub95h51je.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/976/",
-	"extractedAt": "2025-12-05T23:09:47.848Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/193_3736_s_q7cm4u9qxeji25338fuub95h51je.jpg",
+		"path": "/manuals/0976/193_3736.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/976.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0976/0976.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/976/"
 }

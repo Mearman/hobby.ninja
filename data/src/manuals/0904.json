@@ -1,5 +1,5 @@
 {
-	"id": "0904",
+	"id": "904",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 量産型ゲルググ／ゲルググキャノン",
@@ -11,20 +11,28 @@
 		"year": 2007,
 		"month": 3
 	},
-	"productImage": "https://bandai-hobby.net/images/157_2553_s_6qvbktoaa6eaap7vbbh999zwejop.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_2553_s_6qvbktoaa6eaap7vbbh999zwejop.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/904/",
-	"extractedAt": "2025-12-05T23:09:47.745Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_2553_s_6qvbktoaa6eaap7vbbh999zwejop.jpg",
+		"path": "/manuals/0904/157_2553.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/904.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0904/0904.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/904/"
 }

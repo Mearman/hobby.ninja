@@ -1,5 +1,5 @@
 {
-	"id": "0973",
+	"id": "973",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ジム（GUNDAM THUNDERBOLT Ver.）",
@@ -12,20 +12,29 @@
 		"month": 5,
 		"day": 13
 	},
-	"productImage": "https://bandai-hobby.net/images/189_1512_s_8l8s9gew3tur8jzknncmq7ygh51y.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_1512_s_8l8s9gew3tur8jzknncmq7ygh51y.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/973/",
-	"extractedAt": "2025-12-05T23:09:47.845Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_1512_s_8l8s9gew3tur8jzknncmq7ygh51y.jpg",
+		"path": "/images/items/01_0553/189_1512.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["thunderbolt"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム サンダーボルト",
+		"en": "Mobile Suit Gundam Thunderbolt"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/973.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0973/0973.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/973/",
+	"itemId": "01_0553"
 }

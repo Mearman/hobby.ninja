@@ -1,5 +1,5 @@
 {
-	"id": "0903",
+	"id": "903",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 MSM-10 ゾック",
@@ -11,20 +11,28 @@
 		"year": 2007,
 		"month": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/156_2567_s_b6b19ygzvsesxeufmo4rbypa6ovq.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_2567_s_b6b19ygzvsesxeufmo4rbypa6ovq.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/903/",
-	"extractedAt": "2025-12-05T23:09:47.744Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_2567_s_b6b19ygzvsesxeufmo4rbypa6ovq.jpg",
+		"path": "/manuals/0903/156_2567.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/903.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0903/0903.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/903/"
 }

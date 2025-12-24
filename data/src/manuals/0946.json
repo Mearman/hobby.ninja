@@ -1,5 +1,5 @@
 {
-	"id": "0946",
+	"id": "946",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ゼー・ズール",
@@ -12,20 +12,29 @@
 		"month": 11,
 		"day": 26
 	},
-	"productImage": "https://bandai-hobby.net/images/157_791_s_47kumd9bhsv68zfijsgi6xb481pv.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_791_s_47kumd9bhsv68zfijsgi6xb481pv.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/946/",
-	"extractedAt": "2025-12-05T23:09:47.807Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_791_s_47kumd9bhsv68zfijsgi6xb481pv.jpg",
+		"path": "/images/items/01_5724/157_791.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/946.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0946/0946.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/946/",
+	"itemId": "01_5724"
 }

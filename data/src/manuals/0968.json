@@ -1,5 +1,5 @@
 {
-	"id": "0968",
+	"id": "968",
 	"type": "manual",
 	"name": {
 		"ja": "MG 1/100 ガンダムアメイジングレッドウォーリア",
@@ -12,20 +12,29 @@
 		"month": 8,
 		"day": 29
 	},
-	"productImage": "https://bandai-hobby.net/images/157_1368_s_vszsjzpxkvq6yfqjy83x2dr1ngq6.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_1368_s_vszsjzpxkvq6yfqjy83x2dr1ngq6.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/968/",
-	"extractedAt": "2025-12-05T23:09:47.838Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_1368_s_vszsjzpxkvq6yfqjy83x2dr1ngq6.jpg",
+		"path": "/images/items/01_0395/157_1368.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/968.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0968/0968.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/968/",
+	"itemId": "01_0395"
 }

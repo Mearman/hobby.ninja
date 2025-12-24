@@ -1,5 +1,5 @@
 {
-	"id": "0971",
+	"id": "971",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 量産型ザク+ビッグ・ガン(GUNDAM THUNDERBOLT Ver.)",
@@ -12,20 +12,29 @@
 		"month": 4,
 		"day": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/159_1489_s_xtj273g83z4sawvdzjaw5wb0utmz.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_1489_s_xtj273g83z4sawvdzjaw5wb0utmz.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/971/",
-	"extractedAt": "2025-12-05T23:09:47.843Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_1489_s_xtj273g83z4sawvdzjaw5wb0utmz.jpg",
+		"path": "/images/items/01_0526/159_1489.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["thunderbolt"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム サンダーボルト",
+		"en": "Mobile Suit Gundam Thunderbolt"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/971.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0971/0971.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/971/",
+	"itemId": "01_0526"
 }

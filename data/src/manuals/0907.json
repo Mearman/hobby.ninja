@@ -1,5 +1,5 @@
 {
-	"id": "0907",
+	"id": "907",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ザクII改",
@@ -11,20 +11,28 @@
 		"year": 2008,
 		"month": 5
 	},
-	"productImage": "https://bandai-hobby.net/images/189_2587_s_rmzv0yh64q15ckc1a3t0kc3stdsw.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_2587_s_rmzv0yh64q15ckc1a3t0kc3stdsw.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/907/",
-	"extractedAt": "2025-12-05T23:09:47.752Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_2587_s_rmzv0yh64q15ckc1a3t0kc3stdsw.jpg",
+		"path": "/manuals/0907/189_2587.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-0080"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム0080 ポケットの中の戦争",
+		"en": "Mobile Suit Gundam0080 War in the Pocket"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/907.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0907/0907.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/907/"
 }

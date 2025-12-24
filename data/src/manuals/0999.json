@@ -1,5 +1,5 @@
 {
-	"id": "0999",
+	"id": "999",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 シャア専用ザクII（オリジン）",
@@ -12,20 +12,29 @@
 		"month": 4,
 		"day": 24
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1293_s_5cee2t9jx0nokg00wyh98c4ny563.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1293_s_5cee2t9jx0nokg00wyh98c4ny563.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/999/",
-	"extractedAt": "2025-12-05T23:09:47.878Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_1293_s_5cee2t9jx0nokg00wyh98c4ny563.jpg",
+		"path": "/images/items/01_0312/158_1293.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["origin"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム THE ORIGIN",
+		"en": "Mobile Suit Gundam THE ORIGIN"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/999.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0999/0999.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/999/",
+	"itemId": "01_0312"
 }

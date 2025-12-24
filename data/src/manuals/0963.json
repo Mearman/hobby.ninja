@@ -1,5 +1,5 @@
 {
-	"id": "0963",
+	"id": "963",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガンダム G-セルフ（アサルトパック装備型）",
@@ -12,20 +12,29 @@
 		"month": 4,
 		"day": 18
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1290_s_d3y8pejjl4ez2q4menzu7nbns486.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1290_s_d3y8pejjl4ez2q4menzu7nbns486.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/963/",
-	"extractedAt": "2025-12-05T23:09:47.830Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_1290_s_d3y8pejjl4ez2q4menzu7nbns486.jpg",
+		"path": "/images/items/01_0309/158_1290.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-reco"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダム Gのレコンギスタ",
+		"en": "Gundam G's Reconguista"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/963.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0963/0963.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/963/",
+	"itemId": "01_0309"
 }

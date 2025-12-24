@@ -1,5 +1,5 @@
 {
-	"id": "0910",
+	"id": "910",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 GNアーチャー（ガンアーチャー）",
@@ -11,20 +11,29 @@
 		"year": 2009,
 		"month": 1
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1853_o_1bblu34f451k157cecmtaemj62i.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1853_o_1bblu34f451k157cecmtaemj62i.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/910/",
-	"extractedAt": "2025-12-05T23:09:47.758Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1853_o_1bblu34f451k157cecmtaemj62i.jpg",
+		"path": "/images/items/01_0912/156_1853.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-00"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム00",
+		"en": "Mobile Suit Gundam00"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/910.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0910/0910.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/910/",
+	"itemId": "01_0912"
 }

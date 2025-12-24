@@ -1,5 +1,5 @@
 {
-	"id": "0952",
+	"id": "952",
 	"type": "manual",
 	"name": {
 		"ja": "RG 1/144 MSM-07S シャア専用ズゴック",
@@ -12,20 +12,28 @@
 		"month": 7,
 		"day": 19
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1141_s_7ed0xaykw54llakem6h1tpwgd1pn.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1141_s_7ed0xaykw54llakem6h1tpwgd1pn.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/952/",
-	"extractedAt": "2025-12-05T23:09:47.816Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1141_s_7ed0xaykw54llakem6h1tpwgd1pn.jpg",
+		"path": "/manuals/0952/156_1141.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["rg"],
-	"seriesIds": ["gundam"],
+	"brand": {
+		"ja": "RG",
+		"en": "R.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/952.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0952/0952.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/952/"
 }

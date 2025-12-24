@@ -1,5 +1,5 @@
 {
-	"id": "0947",
+	"id": "947",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ドラッツェ",
@@ -12,20 +12,29 @@
 		"month": 11,
 		"day": 26
 	},
-	"productImage": "https://bandai-hobby.net/images/158_2726_s_oaapte99906zqgqdhd8dq85x9po7.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_2726_s_oaapte99906zqgqdhd8dq85x9po7.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/947/",
-	"extractedAt": "2025-12-05T23:09:47.809Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_2726_s_oaapte99906zqgqdhd8dq85x9po7.jpg",
+		"path": "/images/items/01_1787/158_2726.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-0083"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 0083 STARDUST MEMORY",
+		"en": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/947.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0947/0947.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/947/",
+	"itemId": "01_1787"
 }

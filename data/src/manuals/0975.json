@@ -1,8 +1,8 @@
 {
-	"id": "0975",
+	"id": "975",
 	"type": "manual",
 	"name": {
-		"ja": "HG 1/144 陸戦型ガンダム S型（GUNDAM THUNDERBOLT Ver.）",
+		"ja": "HG 1/144 陸戦型ガンダムS型（GUNDAM THUNDERBOLT Ver.）",
 		"en": "HG 1/144 Ground type GundamS type (GUNDAM THUNDERBOLT Ver.)"
 	},
 	"productNumber": "2376498",
@@ -12,20 +12,29 @@
 		"month": 5,
 		"day": 27
 	},
-	"productImage": "https://bandai-hobby.net/images/191_1935_s_j5nsi1xnmn5tu9cuso1x0jl1waen.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/191_1935_s_j5nsi1xnmn5tu9cuso1x0jl1waen.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/975/",
-	"extractedAt": "2025-12-05T23:09:47.847Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/191_1935_s_j5nsi1xnmn5tu9cuso1x0jl1waen.jpg",
+		"path": "/images/items/01_0998/191_1935.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["thunderbolt"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム サンダーボルト",
+		"en": "Mobile Suit Gundam Thunderbolt"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/975.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0975/0975.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/975/",
+	"itemId": "01_0998"
 }

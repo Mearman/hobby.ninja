@@ -1,8 +1,8 @@
 {
-	"id": "0942",
+	"id": "942",
 	"type": "manual",
 	"name": {
-		"ja": "HG 1/144 ガンダム AGE-2 ノーマル",
+		"ja": "HG 1/144 ガンダムAGE-2 ノーマル",
 		"en": "HG 1/144 GundamAGE-2 Normal"
 	},
 	"productNumber": "2139093",
@@ -12,20 +12,29 @@
 		"month": 1,
 		"day": 21
 	},
-	"productImage": "https://bandai-hobby.net/images/189_2752_o_1cetefaqf1i3m1fjp1gi01f201coi36.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_2752_o_1cetefaqf1i3m1fjp1gi01f201coi36.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/942/",
-	"extractedAt": "2025-12-05T23:09:47.802Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_2752_o_1cetefaqf1i3m1fjp1gi01f201coi36.jpg",
+		"path": "/images/items/01_1815/189_2752.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムAGE",
+		"en": "Mobile Suit GundamAGE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/942.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0942/0942.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/942/",
+	"itemId": "01_1815"
 }

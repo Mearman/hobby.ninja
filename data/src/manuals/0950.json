@@ -1,5 +1,5 @@
 {
-	"id": "0950",
+	"id": "950",
 	"type": "manual",
 	"name": {
 		"ja": "RG 1/144 ストライクフリーダムガンダム",
@@ -12,20 +12,28 @@
 		"month": 11,
 		"day": 21
 	},
-	"productImage": "https://bandai-hobby.net/images/196_973_s_v4n7ep538aoy1e6d95nj7w3viis1.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_973_s_v4n7ep538aoy1e6d95nj7w3viis1.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/950/",
-	"extractedAt": "2025-12-05T23:09:47.814Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_973_s_v4n7ep538aoy1e6d95nj7w3viis1.jpg",
+		"path": "/manuals/0950/196_973.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["rg"],
-	"seriesIds": ["seed-d"],
+	"brand": {
+		"ja": "RG",
+		"en": "R.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムSEED DESTINY",
+		"en": "Mobile Suit GundamSEED DESTINY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/950.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0950/0950.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/950/"
 }

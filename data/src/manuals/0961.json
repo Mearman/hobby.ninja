@@ -1,5 +1,5 @@
 {
-	"id": "0961",
+	"id": "961",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 宇宙用ジャハナム（量産型）)",
@@ -12,20 +12,29 @@
 		"month": 12,
 		"day": 20
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1235_s_ibaalzjlyozt7n3gxf3suvqs6h25.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1235_s_ibaalzjlyozt7n3gxf3suvqs6h25.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/961/",
-	"extractedAt": "2025-12-05T23:09:47.826Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_1235_s_ibaalzjlyozt7n3gxf3suvqs6h25.jpg",
+		"path": "/images/items/01_0249/158_1235.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-reco"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダム Gのレコンギスタ",
+		"en": "Gundam G's Reconguista"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/961.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0961/0961.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/961/",
+	"itemId": "01_0249"
 }

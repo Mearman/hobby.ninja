@@ -1,5 +1,5 @@
 {
-	"id": "0958",
+	"id": "958",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 エルフ・ブルック(マスク専用機)",
@@ -12,20 +12,29 @@
 		"month": 2,
 		"day": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1253_s_97mfa2qvvc8lyo5mmztcx4o5xxr1.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1253_s_97mfa2qvvc8lyo5mmztcx4o5xxr1.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/958/",
-	"extractedAt": "2025-12-05T23:09:47.824Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_1253_s_97mfa2qvvc8lyo5mmztcx4o5xxr1.jpg",
+		"path": "/images/items/01_0268/158_1253.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-reco"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダム Gのレコンギスタ",
+		"en": "Gundam G's Reconguista"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/958.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0958/0958.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/958/",
+	"itemId": "01_0268"
 }

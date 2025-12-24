@@ -1,8 +1,8 @@
 {
-	"id": "0955",
+	"id": "955",
 	"type": "manual",
 	"name": {
-		"ja": "HG 1/144 ガンダム G-アルケイン",
+		"ja": "HG 1/144 ガンダムG-アルケイン",
 		"en": "HG 1/144 GundamG-Arcane"
 	},
 	"productNumber": "2269663",
@@ -12,20 +12,29 @@
 		"month": 11,
 		"day": 22
 	},
-	"productImage": "https://bandai-hobby.net/images/158_1210_s_s7u8xiz1gkf8g5wvifkvbk6j1wpm.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_1210_s_s7u8xiz1gkf8g5wvifkvbk6j1wpm.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/955/",
-	"extractedAt": "2025-12-05T23:09:47.820Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_1210_s_s7u8xiz1gkf8g5wvifkvbk6j1wpm.jpg",
+		"path": "/images/items/01_0224/158_1210.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-reco"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダム Gのレコンギスタ",
+		"en": "Gundam G's Reconguista"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/955.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0955/0955.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/955/",
+	"itemId": "01_0224"
 }

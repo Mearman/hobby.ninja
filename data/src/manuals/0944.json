@@ -1,5 +1,5 @@
 {
-	"id": "0944",
+	"id": "944",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 Gバウンサー",
@@ -12,20 +12,29 @@
 		"month": 2,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/156_5497_s_tmp4o1tiamgj1x5y5vsnhktb9lxm.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_5497_s_tmp4o1tiamgj1x5y5vsnhktb9lxm.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/944/",
-	"extractedAt": "2025-12-05T23:09:47.804Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_5497_s_tmp4o1tiamgj1x5y5vsnhktb9lxm.jpg",
+		"path": "/images/items/01_4599/156_5497.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムAGE",
+		"en": "Mobile Suit GundamAGE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/944.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0944/0944.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/944/",
+	"itemId": "01_4599"
 }
