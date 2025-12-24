@@ -5,6 +5,53 @@
 		"ja": "ADVANCE OF Z ティターンズの旗のもとに 復刻セット",
 		"en": "ADVANCE OF Z Under the Flag of Titans Reprint Set"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_others",
+			"url": "https://bandai-hobby.net/brand/pb_others/",
+			"ja": "その他シリーズ／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -85,36 +132,46 @@
 			"・Product information is current as of 20209. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"images": [
-		"/images/items/01_3324/153_4279.jpg",
-		"/images/items/01_3324/155_4279.jpg",
-		"/images/items/01_3324/156_4279.jpg",
-		"/images/items/01_3324/157_4279.jpg",
-		"/images/items/01_3324/158_4279.jpg",
-		"/images/items/01_3324/159_4279.jpg",
-		"/images/items/01_3324/189_4279.jpg",
-		"/images/items/01_3324/190_4279.jpg",
-		"/images/items/01_3324/191_4279.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3324/",
-	"brandIds": [
-		"hg",
-		"pb_others",
-		"pb_gunpla"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	],
-	"manualId": "2326",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4279_s_iaqkdd0xxqcvinkxsgzcyvl4rz1f.jpg",
+				"path": "/images/items/01_3324/153_4279.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4279_s_6i4ystclpibdofvuqj95zux4ip9p.jpg",
+				"path": "/images/items/01_3324/155_4279.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4279_s_7kbigwez9f8i4f5wtzl97mhr3152.jpg",
+				"path": "/images/items/01_3324/156_4279.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4279_s_mwsfj80i0j3f45pdof26wx97iica.jpg",
+				"path": "/images/items/01_3324/157_4279.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4279_s_r4cwl8dog5wjsgya8wonauqv3i17.jpg",
+				"path": "/images/items/01_3324/158_4279.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4279_s_db8p6sv0kfbm3x4i1p6g6qvw023y.jpg",
+				"path": "/images/items/01_3324/159_4279.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4279_s_pqfkfz35wg7dfkv3ckvkutwltlt4.jpg",
+				"path": "/images/items/01_3324/189_4279.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4279_s_bhjch2pc41pf3zysyrizdr0hobtp.jpg",
+				"path": "/images/items/01_3324/190_4279.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4279_s_mqokr7p4g7jiikubgm5kuri1q6z9.jpg",
+				"path": "/images/items/01_3324/191_4279.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3324/"
 }

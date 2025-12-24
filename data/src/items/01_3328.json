@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "PG UNLEASHED 1/60 RX-78-2 ガンダム",
-		"en": "PG UNLEASHED 1/60 RX-78-2 Gundam"
+		"en": "PG UNLEASHED 1/60 RX-78-2 GUNDAM"
 	},
+	"brands": [
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］",
+			"en": "PG [PERFECT GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム",
+			"en": "MOBILE SUIT GUNDAM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3373",
+			"url": "https://bandai-hobby.net/item/01_3373/",
+			"ja": "ＰＧ ＵＮＬＥＡＳＨＥＤ 1/60 RX-78-2 ガンダム クリアカラーボディ"
+		},
+		{
+			"id": "01_2829",
+			"url": "https://bandai-hobby.net/item/01_2829/",
+			"ja": "PG 1/60 ガンダムベース限定 RX-78-2 ガンダム [チタニウムフィニッシュ]"
+		},
+		{
+			"id": "01_1902",
+			"url": "https://bandai-hobby.net/item/01_1902/",
+			"ja": "PG 1/60 ガンダムベース限定 RX-78-3 G-3ガンダム [エクストラフィニッシュ]"
+		},
+		{
+			"id": "01_4875",
+			"url": "https://bandai-hobby.net/item/01_4875/",
+			"ja": "PG 1/60 MS-06F「ザクII」+ウエポンズ アニメーションカラーバージョン"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 27500,
 		"currency": "JPY",
@@ -18,7 +64,6 @@
 		"day": 19
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
 			"• 〈GUNPLA EVOLUTION LINK SYSTEM〉では段階的組み立て工程を採用、本物のMSを建造する疑似体験を演出。",
@@ -33,91 +78,199 @@
 			"• 発光再現にはピン型リチウム電池BR435（テスト用１個付属）と、ボタン電池［LR41］（別売り）2個が必要です。"
 		],
 		"en": [
-			"• ``GUNPLA EVOLUTION LINK SYSTEM'' uses a step-by-step assembly process to create a simulated experience of building a real MS.",
-			"• Designed to allow you to experience Gunpla's evolution by condensing Gunpla's latest technology in each assembly phase: \"assembly \", \" movable \", \" structure \", \" exterior \", and \" direction\".",
-			"• Adopts Gunpla's largest insert frame in history, with a total leg length of approximately 180mm. It has a specification that allows the frame of the whole body, which is the bones, to be assembled at the earliest stage in the history of PG.",
-			"• The largest movable axis in Gunpla history at over 90 locations throughout the body. The body uses a core block mechanism, with a new structure that combines 40 movable axes.",
+			"• The GUNPLA EVOLUTION LINK SYSTEM uses a step-by-step assembly process to create a simulated experience of building a real MS.",
+			"• Designed to condense the latest GUNPLA technology in each assembly phase, such as \"assembly\", \"movement\", \"structure\", \"exterior\", and \"production\", so that you can experience the evolution of GUNPLA.",
+			"• GUNPLA One of the largest insert frames ever built, with a total leg length of about 180 mm. It is a specification that allows the frame of the whole body, which is the bone, to be assembled at the earliest stage in the history of PG.",
+			"• GUNPLA More than 90 movable axes are set in the entire body, the largest in history. The fuselage, which uses a core block mechanism, adopts a new structure that combines 40 movable axes.",
 			"• The multi-layered truss frame uses metallic molding colors and plated parts to create four types of metallic feel.",
 			"• A variety of materials are used, including three types of secondary processing such as silver plating, matte plating, and chrome plating, metal parts, and newly developed etched seals.",
-			"• Equipped with the largest number of whole body hatch opening gimmicks in Gunpla history.",
-			"• Equipped with a new LED unit that creates a working scene. A new compact RGB 2-lamp LED light that enables color tone changes and a design that maximizes light guiding efficiency achieves both movability and light emission.",
-			"• A very small illumination unit is installed inside the 1/60 Scale beam saber. The beam blade has been designed with a carefully selected blend of molding materials to create a bright gradation of light that looks like the beam is actually being emitted from the base.",
-			"• To reproduce the light emission, a pin type lithium battery BR435 (one for testing is included) and two button batteries [LR41] (sold separately) are required."
+			"• GUNPLA Equipped with the largest full-body hatch opening gimmick in history.",
+			"• Equipped with a new LED unit that produces an operation scene. A new compact RGB 2-lamp LED light that enables color tone change and a design that maximizes light conduction efficiency achieve both mobility and light emission.",
+			"• A 1/60 scale beam saber is equipped with a very small lighting unit. The beam blade, which pursues the blending of molding materials, achieves vivid gradation light emission as if the beam was actually output from the base.",
+			"• For light reproduction, a pin-type lithium battery BR435 (one for testing included) and two button batteries [LR41] (sold separately) are required."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×１",
-			"ビーム・サーベル×2",
-			"LEDビーム・サーベル×１",
-			"シールド×１",
-			"コア・ファイター×１",
-			"RGB 2灯式LED×１",
-			"ハンドパーツ（左右）×各4種",
-			"フィギュア×4種（アムロ［立ち、座り×2］、セイラ［立ち］）",
-			"金属パーツ（バーニア）×2",
-			"金属パーツ（バルカン）×2",
-			"サーベル組立補助治具×1",
-			"ピン型リチウム電池BR435（テスト用）×１",
-			"マグネットユニット×１",
-			"マグネット用金属プレート×2",
-			"マーキングシール×１",
-			"ネーマーシール×１",
-			"エッチングシール×１",
-			"メタリック３Dシール×１",
-			"取扱説明書×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル×１",
+				"en": "• Beam Rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "• Beam Saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "LEDビーム・サーベル×１",
+				"en": "• LED Beam Saber"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド×１",
+				"en": "• Shield"
+			}
+		},
+		{
+			"name": {
+				"ja": "コア・ファイター×１",
+				"en": "• Core Fighter"
+			}
+		},
+		{
+			"name": {
+				"ja": "RGB 2灯式LED×１",
+				"en": "• RGB 2-lamp LED"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ（左右）×各4種",
+				"en": "• Hand parts (left and right)"
+			},
+			"unit": {
+				"ja": "types",
+				"en": "types"
+			}
+		},
+		{
+			"name": {
+				"ja": "フィギュア",
+				"en": "• Figures"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "金属パーツ（バーニア）",
+				"en": "• Metal parts (verniers)"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "金属パーツ（バルカン）",
+				"en": "• Metal parts (Vulcan)"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "サーベル組立補助治具",
+				"en": "• Saber assembly aid jig"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ピン型リチウム電池BR435（テスト用）×１",
+				"en": "• Pin type lithium battery BR435 (for testing)"
+			}
+		},
+		{
+			"name": {
+				"ja": "マグネットユニット×１",
+				"en": "• Magnet unit"
+			}
+		},
+		{
+			"name": {
+				"ja": "マグネット用金属プレート",
+				"en": "• Metal plate for magnet"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "マーキングシール×１",
+				"en": "• Marking sticker"
+			}
+		},
+		{
+			"name": {
+				"ja": "ネーマーシール×１",
+				"en": "• Namer Seal"
+			}
+		},
+		{
+			"name": {
+				"ja": "エッチングシール×１",
+				"en": "• Etching seal"
+			}
+		},
+		{
+			"name": {
+				"ja": "メタリック３Dシール×１",
+				"en": "• Metallic 3D Seal"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書×１",
+				"en": "• Instruction manual"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153119_1.jpg",
+				"path": "/images/items/01_3328/1000153119_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153119_2.jpg",
+				"path": "/images/items/01_3328/1000153119_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153119_3.jpg",
+				"path": "/images/items/01_3328/1000153119_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153119_4.jpg",
+				"path": "/images/items/01_3328/1000153119_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153119_5.jpg",
+				"path": "/images/items/01_3328/1000153119_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153119_6.jpg",
+				"path": "/images/items/01_3328/1000153119_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153119_7.jpg",
+				"path": "/images/items/01_3328/1000153119_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153119_8.jpg",
+				"path": "/images/items/01_3328/1000153119_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153119_9.jpg",
+				"path": "/images/items/01_3328/1000153119_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153119_10.jpg",
+				"path": "/images/items/01_3328/1000153119_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153119_11.jpg",
+				"path": "/images/items/01_3328/1000153119_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153119_12.jpg",
+				"path": "/images/items/01_3328/1000153119_12.jpg"
+			}
 		],
-		"en": [
-			"Beam rifle x1",
-			"Beam saber x2",
-			"LED beam saber x 1",
-			"Seal de x1",
-			"Core fighter x1",
-			"RGB 2-light LED x 1",
-			"Hand parts (left and right) x 4 types each",
-			"Figures x 4 types (Amuro [standing, sitting x 2], Sayla [standing])",
-			"Metal parts (vernier) x 2",
-			"Metal parts (Vulcan) x 2",
-			"Saber assembly aid jig x 1",
-			"Pin type lithium battery BR435 (for testing) x 1",
-			"Magnet unit x 1",
-			"Metal plate for magnet x 2",
-			"MarkingSeal×1",
-			"Namer Seal×1",
-			"Etching Seal×1",
-			"Metallic 3DSeal×1",
-			"Handling manual×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3328/1000153119_1.jpg",
-		"/images/items/01_3328/1000153119_10.jpg",
-		"/images/items/01_3328/1000153119_11.jpg",
-		"/images/items/01_3328/1000153119_12.jpg",
-		"/images/items/01_3328/1000153119_2.jpg",
-		"/images/items/01_3328/1000153119_3.jpg",
-		"/images/items/01_3328/1000153119_4.jpg",
-		"/images/items/01_3328/1000153119_5.jpg",
-		"/images/items/01_3328/1000153119_6.jpg",
-		"/images/items/01_3328/1000153119_7.jpg",
-		"/images/items/01_3328/1000153119_8.jpg",
-		"/images/items/01_3328/1000153119_9.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3328/",
-	"brandIds": [
-		"pg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3373",
-		"01_2829",
-		"01_1902",
-		"01_4875"
-	],
-	"manualId": "1066"
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_3328/"
+	}
 }

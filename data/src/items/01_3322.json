@@ -5,6 +5,54 @@
 		"ja": "ＨＧ 1/144 クルーザーモード用ブースター拡張セット（ADVANCE OF Z ティターンズの旗のもとに）",
 		"en": "HG 1/144 Booster expansion set for cruiser mode (ADVANCE OF Z Under the flag of Titans)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 2
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－",
@@ -70,7 +117,7 @@
 			"● Various joint parts and MarkingSeal are included.",
 			"A joint that can be connected to the boost pod part of [Heisensley II Ra] is included for MS/MA form.",
 			"(Set contents) Booster unit / various joint parts / display stand / display base",
-			"(Compatible product) HG 1/144 Gundam TR-6 [Heizensley II Ra] (ADVANCE OF Z Under the flag of Titans) (Premium Bandai sales item sold separately)",
+			"(Compatible product) HG 1/144 GundamTR-6 [Heizensley II Ra] (ADVANCE OF Z Under the flag of Titans) (Premium Bandai sales item sold separately)",
 			"*This product does not include the MS body.",
 			"*[Heisensley II Ra] To reproduce the cruiser cruising mode, items sold separately are required.",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -92,37 +139,50 @@
 			"・Product information is current as of 20209. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"images": [
-		"/images/items/01_3322/153_4277.jpg",
-		"/images/items/01_3322/155_4277.jpg",
-		"/images/items/01_3322/156_4277.jpg",
-		"/images/items/01_3322/157_4277.jpg",
-		"/images/items/01_3322/158_4277.jpg",
-		"/images/items/01_3322/159_4277.jpg",
-		"/images/items/01_3322/189_4277.jpg",
-		"/images/items/01_3322/190_4277.jpg",
-		"/images/items/01_3322/191_4277.jpg",
-		"/images/items/01_3322/192_4277.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3322/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	],
-	"manualId": "2393",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4277_s_x2ut35g65gynwyhwetcz4sci34my.jpg",
+				"path": "/images/items/01_3322/153_4277.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4277_s_oqgvyq5tcr7r1sfq2y9fq40yky83.jpg",
+				"path": "/images/items/01_3322/155_4277.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4277_s_opbjw7ir451msjbxe20ji0h6llaq.jpg",
+				"path": "/images/items/01_3322/156_4277.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4277_s_6nyjbdj87nigaxxicmp68jc9fg6f.jpg",
+				"path": "/images/items/01_3322/157_4277.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4277_s_j9paz1qddmarzc3t6q25j1vocpq4.jpg",
+				"path": "/images/items/01_3322/158_4277.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4277_s_req7ze3ucx8fiznsqa8ouamm0y2r.jpg",
+				"path": "/images/items/01_3322/159_4277.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4277_s_5s7nygl9u9wfx9yaw2d4txdxrox8.jpg",
+				"path": "/images/items/01_3322/189_4277.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4277_s_efmir3ieg235012yikklmq88d6lp.jpg",
+				"path": "/images/items/01_3322/190_4277.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4277_s_0xwi3284wst40xswdhot101gcfk8.jpg",
+				"path": "/images/items/01_3322/191_4277.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4277_s_0jxyk50n2e97bna7t3107nopy0mm.jpg",
+				"path": "/images/items/01_3322/192_4277.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3322/"
 }

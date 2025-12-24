@@ -3,8 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 エルガイム",
-		"en": "HG 1/144 L-Gaim"
+		"en": "HG 1/144 L-GAIM"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]",
+			"en": "HG [HIGH GRADE]"
+		}
+	],
+	"series": [
+		{
+			"id": "lgaim",
+			"url": "https://bandai-hobby.net/series/lgaim/",
+			"ja": "重戦機エルガイム",
+			"en": "HEAVY METAL L-GAIM"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216436",
+			"url": "https://p-bandai.jp/item/item-1000216436/",
+			"ja": "ＨＧ 1/144 エルガイム [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000205639",
+			"url": "https://p-bandai.jp/item/item-1000205639/",
+			"ja": "ＨＧ 1/144 バッシュ"
+		},
+		{
+			"id": "01_3350",
+			"url": "https://bandai-hobby.net/item/01_3350/",
+			"ja": "HG 1/144 オージ"
+		},
+		{
+			"id": "01_3351",
+			"url": "https://bandai-hobby.net/item/01_3351/",
+			"ja": "HG 1/144 アトール"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -18,7 +64,6 @@
 		"day": 13
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『重戦機エルガイム』より、エルガイムがアップグレードしてHGシリーズにラインアップ！",
@@ -29,49 +74,72 @@
 			"• アクションベース５へ取り付け可能な新規ジョイントパーツが付属。"
 		],
 		"en": [
-			"From \"Heavy Battle Machine L-Gaim\", L-Gaim has been upgraded and added to the HG series!",
-			"• Adjusted the balance of the head parts and changed the division of thigh parts. More stylish.",
-			"• To improve mobility, the shoulder has been changed to a ball axis.",
-			"• New parts make it possible to pull the arms forward and backward.",
-			"• The Buster Launcher is made with a new mold to improve color separation.",
-			"• New joint parts that can be attached to Action Base 5 are included."
+			"From \"HEAVY METAL L-GAIM\", L-GAIM has upgraded to the HG series!",
+			"• Adjusted the balance of the head parts and changed the division of the thigh parts. Be more stylish.",
+			"• In order to improve mobility, the shoulder part has been changed to a ball shaft.",
+			"• It is possible to pull the arm back and forth with new parts.",
+			"• Buster Launcher was created with a new mold to improve color coding.",
+			"• Comes with new joint parts that can be attached to the ACTION BASE 5."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"バスターランチャー×1",
-			"パワーランチャー×2",
-			"シールド×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "バスターランチャー",
+				"en": "• Buster Launcher"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "パワーランチャー",
+				"en": "• Power Launcher"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "• Shield"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151707_1.jpg",
+				"path": "/images/items/01_3349/1000151707_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151707_2.jpg",
+				"path": "/images/items/01_3349/1000151707_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151707_3.jpg",
+				"path": "/images/items/01_3349/1000151707_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151707_4.jpg",
+				"path": "/images/items/01_3349/1000151707_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151707_5.jpg",
+				"path": "/images/items/01_3349/1000151707_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151707_6.jpg",
+				"path": "/images/items/01_3349/1000151707_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151707_7.jpg",
+				"path": "/images/items/01_3349/1000151707_7.jpg"
+			}
 		],
-		"en": [
-			"Buster launcher x 1",
-			"Power launcher x2",
-			"Seal × 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3349/1000151707_1.jpg",
-		"/images/items/01_3349/1000151707_2.jpg",
-		"/images/items/01_3349/1000151707_3.jpg",
-		"/images/items/01_3349/1000151707_4.jpg",
-		"/images/items/01_3349/1000151707_5.jpg",
-		"/images/items/01_3349/1000151707_6.jpg",
-		"/images/items/01_3349/1000151707_7.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3349/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"lgaim"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000216436",
-		"item-1000205639",
-		"01_3350",
-		"01_3351"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_3349/"
+	}
 }

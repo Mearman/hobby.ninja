@@ -5,6 +5,49 @@
 		"ja": "RG 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン 正規実用型(ヴィレカスタム) 8号機α",
 		"en": "RG General purpose humanoid decisive battle weapon Android Evangelion regular practical type (Ville custom) Unit 8 α"
 	},
+	"brands": [
+		{
+			"id": "rg-c",
+			"url": "https://bandai-hobby.net/brand/rg-c/",
+			"ja": "RG［ リアルグレード ］"
+		}
+	],
+	"series": [
+		{
+			"id": "evangelion",
+			"url": "https://bandai-hobby.net/series/evangelion/",
+			"ja": "エヴァンゲリオン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000163344",
+			"url": "https://p-bandai.jp/item/item-1000163344/",
+			"ja": "ＲＧ エヴァンゲリオン専用拘束兼移動式射出台セット"
+		},
+		{
+			"id": "01_3617",
+			"url": "https://bandai-hobby.net/item/01_3617/",
+			"ja": "RG 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン 正規実用型 3号機 ESVシールド セット"
+		},
+		{
+			"id": "01_3413",
+			"url": "https://bandai-hobby.net/item/01_3413/",
+			"ja": "RG エヴァンゲリオン Mark.06"
+		},
+		{
+			"id": "01_2855",
+			"url": "https://bandai-hobby.net/item/01_2855/",
+			"ja": "RG 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン 正規実用型 2号機（先行量産機）"
+		}
+	],
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -21,58 +64,97 @@
 	"description": {
 		"ja": [
 			"『ヱヴァンゲリヲン新劇場版:Q』冒頭に登場した8号機αがRGブランドより登場！",
-			"■「人造人間」という劇中の設定をもとに、ヒトとして自然なアクションポーズの再現を追求。",
-			"■「背骨可動」「腕の捻り」などの人間らしい可動性を実現。",
-			"■劇中に登場した超長距離ライフルが付属。"
+			"• 「人造人間」という劇中の設定をもとに、ヒトとして自然なアクションポーズの再現を追求。",
+			"• 「背骨可動」「腕の捻り」などの人間らしい可動性を実現。",
+			"• 劇中に登場した超長距離ライフルが付属。"
 		],
 		"en": [
 			"Unit 8 α that appeared at the beginning of \"Evangelion: Rebuild of the Movie: Q\" is now available from the RG brand!",
 			"• Based on the setting in the play of \"androids,\" we strive to reproduce action poses that are natural for humans.",
-			"• Realizes human-like mobility such as \"moving the spine \" and \" twisting the arms.\"",
+			"• Realizes human-like mobility such as \"moving the spine\" and \"twisting the arms.\"",
 			"• Includes the ultra-long range rifle that appeared in the movie."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"超長距離ライフル×1",
-			"プログレッシブナイフ×2",
-			"パレットライフル×1",
-			"アンビリカルケーブル×1",
-			"リアリスティックデカール×1",
-			"ハンドパーツ（左右）×各7種、超長距離ライフル用持ち手×1式"
+	"accessories": [
+		{
+			"name": {
+				"ja": "超長距離ライフル",
+				"en": "ultra long range rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "プログレッシブナイフ",
+				"en": "progressive knife"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "パレットライフル",
+				"en": "pallet rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アンビリカルケーブル",
+				"en": "umbilical cable"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール",
+				"en": "realistic decals"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ（左右）×各7種、超長距離ライフル用持ち手",
+				"en": "Hand parts (left and right) x 7 types each, ultra-long range rifle handle"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4284_s_khza5er5ib1ntoxdf79vvt84tpja.jpg",
+				"path": "/images/items/01_3329/153_4284.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4284_s_uqs4xzcv5s9vy1ml1m8q7sdmwpuu.jpg",
+				"path": "/images/items/01_3329/155_4284.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4284_s_bu1z8w1w9tcffbsw1kcar9qdmfaj.jpg",
+				"path": "/images/items/01_3329/156_4284.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4284_s_sqk11jqube36nwycih4k5dlhr93i.jpg",
+				"path": "/images/items/01_3329/157_4284.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4284_s_b55th55azt3g226k1m85u0vwc6sf.jpg",
+				"path": "/images/items/01_3329/158_4284.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4284_s_ow3joxmnj3citj7o0lvxibgioonq.jpg",
+				"path": "/images/items/01_3329/159_4284.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4284_s_rs53nl1l30n9pubot35lftqd8qz6.jpg",
+				"path": "/images/items/01_3329/189_4284.jpg"
+			}
 		],
-		"en": [
-			"Super long range rifle x1",
-			"Progressive knife x 2",
-			"Pallet rifle x 1",
-			"Umbilical cable x 1",
-			"Realistic decal x 1",
-			"Hand parts (left and right) x 7 types each, ultra-long range rifle handle x 1 set"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3329/153_4284.jpg",
-		"/images/items/01_3329/155_4284.jpg",
-		"/images/items/01_3329/156_4284.jpg",
-		"/images/items/01_3329/157_4284.jpg",
-		"/images/items/01_3329/158_4284.jpg",
-		"/images/items/01_3329/159_4284.jpg",
-		"/images/items/01_3329/189_4284.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3329/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"evangelion"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000163344",
-		"01_3617",
-		"01_3413",
-		"01_2855"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3329/"
 }

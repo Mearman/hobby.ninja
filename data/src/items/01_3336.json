@@ -5,6 +5,50 @@
 		"ja": "RG 1/144 ガンダムベース限定 ダブルオーライザー[トランザムクリア]",
 		"en": "RG 1/144 Gundam Base Limited 00 Raiser [Trans-Am Clear]"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2648",
+			"url": "https://bandai-hobby.net/item/01_2648/",
+			"ja": "RG 1/144 ガンダムベース限定 ダブルオークアンタフルセイバー[トランザムクリア]"
+		},
+		{
+			"id": "01_2114",
+			"url": "https://bandai-hobby.net/item/01_2114/",
+			"ja": "RG 1/144 ガンダムベース限定 ダブルオークアンタフルセイバー [クリアカラー]"
+		},
+		{
+			"id": "01_2189",
+			"url": "https://bandai-hobby.net/item/01_2189/",
+			"ja": "RG 1/144 ダブルオーライザー[クリアカラー]"
+		},
+		{
+			"id": "item-1000118869",
+			"url": "http://p-bandai.jp/item/item-1000118869/",
+			"ja": "ＲＧ 1/144 ダブルオークアンタ（トランザムモード） [メタリックグロスインジェクション]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -18,11 +62,10 @@
 		"day": 12
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"• 『機動戦士ガンダム OO』に登場するダブルオーライザーがトランザムモードをイメージしたトランザムクリアになって登場！",
+			"• 『機動戦士ガンダムOO』に登場するダブルオーライザーがトランザムモードをイメージしたトランザムクリアになって登場！",
 			"• リアリスティックデカールにより金属感を再現。GNコンデンサー内部のきらめきを演出！",
 			"• オーライザー、ウイング部のスライド機構や各部の可動によりダブルオーガンダムとの合体を再現！",
 			"• 剣劇アクションを可能にする円運動の可動構造を採用！",
@@ -32,7 +75,7 @@
 		],
 		"en": [
 			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"• The 00 Raiser that appears in \"Mobile Suit Gundam OO\" is now available as a Trans-Am clear model inspired by Trans-Am mode!",
+			"• The 00 Raiser that appears in \"Mobile Suit GundamOO\" is now available as a Trans-Am clear model inspired by Trans-Am mode!",
 			"• Realistic decals reproduce the metallic feel. Produce the sparkle inside the GN condenser!",
 			"• Reproduce the combination with 00 Gundam by using the slide mechanism of the O Raiser and the wing part and the movement of each part!",
 			"• Adopts a circular motion movable structure that enables swordplay action!",
@@ -41,30 +84,22 @@
 			"• Comes with a limited edition pedestal designed with the Gundam base logo!"
 		]
 	},
-	"images": [
-		"/images/items/01_3336/1000152016_1.jpg",
-		"/images/items/01_3336/1000152016_2.jpg",
-		"/images/items/01_3336/1000152016_3.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3336/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2648",
-		"01_2114",
-		"01_2189",
-		"item-1000118869"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152016_1.jpg",
+				"path": "/images/items/01_3336/1000152016_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152016_2.jpg",
+				"path": "/images/items/01_3336/1000152016_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152016_3.jpg",
+				"path": "/images/items/01_3336/1000152016_3.jpg"
+			}
+		],
+		"instructions": []
 	},
-	"manualId": "0667"
+	"sourceUrl": "https://bandai-hobby.net/item/01_3336/"
 }

@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 鋼鉄ジーグ(INFINITISM)",
 		"en": "HG 1/144 Steel Jeeg (INFINITISM)"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dynamic_characters",
+			"url": "https://bandai-hobby.net/series/dynamic_characters/",
+			"ja": "ダイナミックキャラクターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4234",
+			"url": "https://bandai-hobby.net/item/01_4234/",
+			"ja": "HG 1/144 マジンガーZERO(INFINITISM)"
+		},
+		{
+			"id": "01_3528",
+			"url": "https://bandai-hobby.net/item/01_3528/",
+			"ja": "HG ゲッターアーク"
+		},
+		{
+			"id": "01_2853",
+			"url": "https://bandai-hobby.net/item/01_2853/",
+			"ja": "HG 1/144 ゲッタードラゴン(INFINITISM）"
+		},
+		{
+			"id": "item-1000139230",
+			"url": "https://p-bandai.jp/item/item-1000139230/",
+			"ja": "ＨＧ 1/144 マジンガーＺ ブラックＶｅｒ．（マジンガーＺ ＩＮＦＩＮＩＴＹ Ｖｅｒ．）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -18,19 +62,18 @@
 		"day": 30
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"欧米諸国でも高い人気を誇るアニメ『鋼鉄ジーグ』の主役機「鋼鉄ジーグ」が、アレンジシリーズ「INFINITISM」第四弾として登場！",
-			"■メカデザイナー柳瀬敬之氏デザインアレンジ。頭長高175mmにINFINITISMの世界観を盛り込むことに成功。",
-			"■ギミックや細部の作り込みなど、プラモデルオリジナルアレンジも搭載。",
-			"■マッハドリル装備時の全高は230mm超となる大型キット。",
-			"■シールを使わず、組み立てるだけでカラフルな仕上がり。",
-			"■アクションベース付属で飛行状態での展示が可能。",
-			"■両手指を組んだナックルボンバー再現パーツとエフェクトも同梱。"
+			"• メカデザイナー柳瀬敬之氏デザインアレンジ。頭長高175mmにINFINITISMの世界観を盛り込むことに成功。",
+			"• ギミックや細部の作り込みなど、プラモデルオリジナルアレンジも搭載。",
+			"• マッハドリル装備時の全高は230mm超となる大型キット。",
+			"• シールを使わず、組み立てるだけでカラフルな仕上がり。",
+			"• アクションベース付属で飛行状態での展示が可能。",
+			"• 両手指を組んだナックルボンバー再現パーツとエフェクトも同梱。"
 		],
 		"en": [
-			"The main character \"Kotetsu Jeeg \" from the anime \" Kotetsu Jeeg \", which is very popular in Western countries, is now available as the fourth installment of the arrangement series \" INFINITISM\"!",
+			"The main character \"Kotetsu Jeeg\" from the anime \"Kotetsu Jeeg\", which is very popular in Western countries, is now available as the fourth installment of the arrangement series \"INFINITISM\"!",
 			"• Designed and arranged by mechanical designer Noriyuki Yanase. Succeeded in incorporating INFINITISM's world view into a head length of 175mm.",
 			"• Equipped with original plastic model arrangements such as gimmicks and detailed details.",
 			"• A large kit with a total height of over 230mm when equipped with a Mach drill.",
@@ -39,50 +82,99 @@
 			"• Knuckle Bomber reproduction parts and effects are also included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"マッハドリル×1式",
-			"ディスプレイベース×1",
-			"横向き飛行ポーズ再現パーツ×1",
-			"ナックルボンバーエフェクト×1",
-			"ハンドパーツ×4（握り手・左右/開き手・右/ナックルボンバー手×1式）"
+	"accessories": [
+		{
+			"name": {
+				"ja": "マッハドリル",
+				"en": "mach drill"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース",
+				"en": "display base"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "横向き飛行ポーズ再現パーツ",
+				"en": "Sideways flight pose reproduction parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ナックルボンバーエフェクト",
+				"en": "knuckle bomber effect"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 4
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154145_1.jpg",
+				"path": "/images/items/01_3332/1000154145_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154145_2.jpg",
+				"path": "/images/items/01_3332/1000154145_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154145_3.jpg",
+				"path": "/images/items/01_3332/1000154145_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154145_4.jpg",
+				"path": "/images/items/01_3332/1000154145_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154145_5.jpg",
+				"path": "/images/items/01_3332/1000154145_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154145_6.jpg",
+				"path": "/images/items/01_3332/1000154145_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154145_7.jpg",
+				"path": "/images/items/01_3332/1000154145_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154145_8.jpg",
+				"path": "/images/items/01_3332/1000154145_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154145_9.jpg",
+				"path": "/images/items/01_3332/1000154145_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154145_10.jpg",
+				"path": "/images/items/01_3332/1000154145_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154145_11.jpg",
+				"path": "/images/items/01_3332/1000154145_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154145_12.jpg",
+				"path": "/images/items/01_3332/1000154145_12.jpg"
+			}
 		],
-		"en": [
-			"Mach drill x 1 set",
-			"Display base x 1",
-			"Sideways flight pose reproduction parts x 1",
-			"Knuckle bomber effect x1",
-			"Hand parts x 4 (grip hand, left and right/open hand, right/knuckle bomber hand x 1 set)"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3332/1000154145_1.jpg",
-		"/images/items/01_3332/1000154145_10.jpg",
-		"/images/items/01_3332/1000154145_11.jpg",
-		"/images/items/01_3332/1000154145_12.jpg",
-		"/images/items/01_3332/1000154145_2.jpg",
-		"/images/items/01_3332/1000154145_3.jpg",
-		"/images/items/01_3332/1000154145_4.jpg",
-		"/images/items/01_3332/1000154145_5.jpg",
-		"/images/items/01_3332/1000154145_6.jpg",
-		"/images/items/01_3332/1000154145_7.jpg",
-		"/images/items/01_3332/1000154145_8.jpg",
-		"/images/items/01_3332/1000154145_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3332/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"dynamic_characters"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4234",
-		"01_3528",
-		"01_2853",
-		"item-1000139230"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3332/"
 }

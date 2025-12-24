@@ -5,6 +5,49 @@
 		"ja": "ハロプラ ハロ［GUNDAM FACTORY YOKOHAMAカラー］",
 		"en": "Haropla Haro [GUNDAM FACTORY YOKOHAMA color]"
 	},
+	"brands": [
+		{
+			"id": "gfy",
+			"url": "https://bandai-hobby.net/brand/gfy/",
+			"ja": "GUNDAM FACTORY YOKOHAMA"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5035",
+			"url": "https://bandai-hobby.net/item/01_5035/",
+			"ja": "1/144 RX-78F00 HMT ガンダム高機動型(G-3イメージカラー)"
+		},
+		{
+			"id": "01_4239",
+			"url": "https://bandai-hobby.net/item/01_4239/",
+			"ja": "1/144 RX-78F00 HMT ガンダム高機動型"
+		},
+		{
+			"id": "01_3472",
+			"url": "https://bandai-hobby.net/item/01_3472/",
+			"ja": "ハロプラ ハロ [クリームホワイト]"
+		},
+		{
+			"id": "01_3841",
+			"url": "https://bandai-hobby.net/item/01_3841/",
+			"ja": "1/144 RX-78F00 ガンダム[チタニウムフィニッシュ]"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -31,35 +74,36 @@
 			"• Comes with GUNDAM FACTORY YOKOHAMA logo MarkingSeal."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"台座×１",
-			"マーキングシール×１"
+	"accessories": [
+		{
+			"name": {
+				"ja": "台座×１",
+				"en": "Pedestal x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール×１",
+				"en": "MarkingSeal×1"
+			}
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4274_o_1eja589se17d21h1p1v7o1qae1giu23.jpg",
+				"path": "/images/items/01_3319/153_4274.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4274_o_1eja58n131j2phopm1l1fvn1t2d.jpg",
+				"path": "/images/items/01_3319/155_4274.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4274_o_1eja58r8v1s9oge919iqufh16v32i.jpg",
+				"path": "/images/items/01_3319/156_4274.jpg"
+			}
 		],
-		"en": [
-			"Pedestal x 1",
-			"MarkingSeal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3319/153_4274.jpg",
-		"/images/items/01_3319/155_4274.jpg",
-		"/images/items/01_3319/156_4274.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3319/",
-	"brandIds": [
-		"gfy"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5035",
-		"01_4239",
-		"01_3472",
-		"01_3841"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3319/"
 }

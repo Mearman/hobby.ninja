@@ -5,6 +5,50 @@
 		"ja": "RG 1/144 ガンダムベース限定 ガンダムエクシア[トランザムクリア]",
 		"en": "RG 1/144 Gundam Base Limited Gundam Exia [Trans-Am Clear]"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3336",
+			"url": "https://bandai-hobby.net/item/01_3336/",
+			"ja": "RG 1/144 ガンダムベース限定 ダブルオーライザー[トランザムクリア]"
+		},
+		{
+			"id": "01_3337",
+			"url": "https://bandai-hobby.net/item/01_3337/",
+			"ja": "RG 1/144 ガンダムベース限定 ダブルオークアンタ[トランザムクリア]"
+		},
+		{
+			"id": "01_2648",
+			"url": "https://bandai-hobby.net/item/01_2648/",
+			"ja": "RG 1/144 ガンダムベース限定 ダブルオークアンタフルセイバー[トランザムクリア]"
+		},
+		{
+			"id": "01_2114",
+			"url": "https://bandai-hobby.net/item/01_2114/",
+			"ja": "RG 1/144 ガンダムベース限定 ダブルオークアンタフルセイバー [クリアカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2970,
 		"currency": "JPY",
@@ -18,11 +62,10 @@
 		"day": 12
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"• 『機動戦士ガンダム OO』に登場するガンダムエクシアがトランザムモードをイメージしたトランザムクリアになって登場！",
+			"• 『機動戦士ガンダムOO』に登場するガンダムエクシアがトランザムモードをイメージしたトランザムクリアになって登場！",
 			"• アドヴァンスドMSジョイントにより、人体的な動きを再現可能！",
 			"• GNドライブは脱着可能。GNコードはプラズマチューブアレイからイメージした質感とディテールを追求！",
 			"• GNコンデンサーは、内部を始めクリアパーツとリアリスティックデカールにより金属の輝き・質感をリアルに再現。GN粒子供給コードはホログラムPETにて再現！",
@@ -31,7 +74,7 @@
 		],
 		"en": [
 			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"• Gundam Exia that appears in \"Mobile Suit Gundam OO\" is now available as a Trans-Am clear model inspired by Trans-Am mode!",
+			"• Gundam Exia that appears in \"Mobile Suit GundamOO\" is now available as a Trans-Am clear model inspired by Trans-Am mode!",
 			"• Advanced MS joint allows you to reproduce human-like movements!",
 			"• GN drive is removable. GN code pursues texture and detail inspired by plasma tube array!",
 			"• The GN condenser realistically reproduces the shine and texture of metal using clear parts and realistic decals, including the interior. GN particle supply code is reproduced with hologram PET!",
@@ -39,30 +82,26 @@
 			"• Comes with a limited edition pedestal designed with the Gundam base logo!"
 		]
 	},
-	"images": [
-		"/images/items/01_3338/153_4292.jpg",
-		"/images/items/01_3338/155_4292.jpg",
-		"/images/items/01_3338/156_4292.jpg",
-		"/images/items/01_3338/157_4292.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3338/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3336",
-		"01_3337",
-		"01_2648",
-		"01_2114"
-	],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4292_s_ndogfmplsq5hqecc9y4wwjpv19o5.jpg",
+				"path": "/images/items/01_3338/153_4292.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4292_s_2yjz7uen5gubzu85hd7ie0madbfs.jpg",
+				"path": "/images/items/01_3338/155_4292.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4292_s_5h00phm8sgeyb5cwlvrkvnz7wo8w.jpg",
+				"path": "/images/items/01_3338/156_4292.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4292_s_w3592xpwa9gjl6dcpz949s3kfdnd.jpg",
+				"path": "/images/items/01_3338/157_4292.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3338/"
 }

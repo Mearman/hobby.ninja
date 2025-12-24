@@ -5,6 +5,50 @@
 		"ja": "HG 1/24 霊子戦闘機・試製桜武(天宮さくら機)",
 		"en": "HG 1/24 Spirit Fighter Prototype Sakurabu (Amamiya Sakura Machine)"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "shinsakura_wars",
+			"url": "https://bandai-hobby.net/series/shinsakura_wars/",
+			"ja": "新サクラ大戦"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3399",
+			"url": "https://bandai-hobby.net/item/01_3399/",
+			"ja": "HG 1/24 霊子戦闘機・無限(東雲初穂機)"
+		},
+		{
+			"id": "01_3331",
+			"url": "https://bandai-hobby.net/item/01_3331/",
+			"ja": "HG 1/24 霊子戦闘機・無限(クラリス機)"
+		},
+		{
+			"id": "01_2975",
+			"url": "https://bandai-hobby.net/item/01_2975/",
+			"ja": "HG 1/24 霊子戦闘機・無限(アナスタシア・パルマ機)"
+		},
+		{
+			"id": "01_2773",
+			"url": "https://bandai-hobby.net/item/01_2773/",
+			"ja": "HG 1/24 霊子戦闘機・無限(望月あざみ機)"
+		}
+	],
+	"scale": "1/24",
 	"price": {
 		"amount": 5830,
 		"currency": "JPY",
@@ -18,18 +62,17 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"scale": "1/24",
 	"description": {
 		"ja": [
 			"『新サクラ大戦』より、幻の機体「霊子戦闘機・試製桜武（天宮さくら機）」がHGにラインアップ！",
-			"■他の霊子戦闘機とは異なる構造・ギミックをプラモデルでも再現。",
-			"■特有の方法で開閉するコックピットハッチを再現。",
-			"■羽根の展開ギミックを搭載。",
-			"■手足の関節部分に伸縮を可能とする延長ギミックを搭載。アクションポーズの幅が広がる。",
-			"■天宮さくらの搭乗時の姿を再現したフィギュアも付属。"
+			"• 他の霊子戦闘機とは異なる構造・ギミックをプラモデルでも再現。",
+			"• 特有の方法で開閉するコックピットハッチを再現。",
+			"• 羽根の展開ギミックを搭載。",
+			"• 手足の関節部分に伸縮を可能とする延長ギミックを搭載。アクションポーズの幅が広がる。",
+			"• 天宮さくらの搭乗時の姿を再現したフィギュアも付属。"
 		],
 		"en": [
-			"From \"New Sakura Wars \", the phantom aircraft \" Spiritual Fighter Prototype Sakurabu (Sakura Amamiya Machine)\" is added to the HG lineup!",
+			"From \"New Sakura Wars\", the phantom aircraft \"Spiritual Fighter Prototype Sakurabu (Amamiya Sakura Machine)\" is added to the HG lineup!",
 			"• The structure and gimmicks that are different from other Aiko fighters are also reproduced in the plastic model.",
 			"• Reproduces the cockpit hatch that opens and closes in a unique way.",
 			"• Equipped with a feather deployment gimmick.",
@@ -37,48 +80,88 @@
 			"• A figure that reproduces Sakura Amamiya's appearance when she is on board is also included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"刀×1",
-			"ホイルシール×1",
-			"ジュエルシール×1",
-			"水転写式デカール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "刀",
+				"en": "sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "foil seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジュエルシール",
+				"en": "Jewel Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154982_1.jpg",
+				"path": "/images/items/01_3344/1000154982_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154982_2.jpg",
+				"path": "/images/items/01_3344/1000154982_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154982_3.jpg",
+				"path": "/images/items/01_3344/1000154982_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154982_4.jpg",
+				"path": "/images/items/01_3344/1000154982_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154982_5.jpg",
+				"path": "/images/items/01_3344/1000154982_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154982_6.jpg",
+				"path": "/images/items/01_3344/1000154982_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154982_7.jpg",
+				"path": "/images/items/01_3344/1000154982_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154982_8.jpg",
+				"path": "/images/items/01_3344/1000154982_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154982_9.jpg",
+				"path": "/images/items/01_3344/1000154982_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154982_10.jpg",
+				"path": "/images/items/01_3344/1000154982_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154982_11.jpg",
+				"path": "/images/items/01_3344/1000154982_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154982_12.jpg",
+				"path": "/images/items/01_3344/1000154982_12.jpg"
+			}
 		],
-		"en": [
-			"Sword x1",
-			"Foil Seal×1",
-			"Jewel Seal×1",
-			"Water transfer decal x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3344/1000154982_1.jpg",
-		"/images/items/01_3344/1000154982_10.jpg",
-		"/images/items/01_3344/1000154982_11.jpg",
-		"/images/items/01_3344/1000154982_12.jpg",
-		"/images/items/01_3344/1000154982_2.jpg",
-		"/images/items/01_3344/1000154982_3.jpg",
-		"/images/items/01_3344/1000154982_4.jpg",
-		"/images/items/01_3344/1000154982_5.jpg",
-		"/images/items/01_3344/1000154982_6.jpg",
-		"/images/items/01_3344/1000154982_7.jpg",
-		"/images/items/01_3344/1000154982_8.jpg",
-		"/images/items/01_3344/1000154982_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3344/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"shinsakura_wars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_3399",
-		"01_3331",
-		"01_2975",
-		"01_2773"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3344/"
 }

@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 アトール",
 		"en": "HG 1/144 Atoll"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "lgaim",
+			"url": "https://bandai-hobby.net/series/lgaim/",
+			"ja": "重戦機エルガイム"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216436",
+			"url": "https://p-bandai.jp/item/item-1000216436/",
+			"ja": "ＨＧ 1/144 エルガイム [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000205639",
+			"url": "https://p-bandai.jp/item/item-1000205639/",
+			"ja": "ＨＧ 1/144 バッシュ"
+		},
+		{
+			"id": "01_3350",
+			"url": "https://bandai-hobby.net/item/01_3350/",
+			"ja": "HG 1/144 オージ"
+		},
+		{
+			"id": "01_3352",
+			"url": "https://bandai-hobby.net/item/01_3352/",
+			"ja": "1/144 A級ヘビーメタルセット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,13 +62,12 @@
 		"day": 13
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『重戦機エルガイム』より、アトールがアップグレードしてHGシリーズにラインアップ！",
-			"■股関節の干渉を改善し、脚の可動域が拡大。よりダイナミックなポーズが可能に。",
-			"■腕部のビニールチューブは赤のリード線へ変更し、ポージングの自由度がアップ。",
-			"■アトールV再現用のテトロンシールが新規で付属。"
+			"• 股関節の干渉を改善し、脚の可動域が拡大。よりダイナミックなポーズが可能に。",
+			"• 腕部のビニールチューブは赤のリード線へ変更し、ポージングの自由度がアップ。",
+			"• アトールV再現用のテトロンシールが新規で付属。"
 		],
 		"en": [
 			"From \"Heavy Battle Machine L-Gaim\", Atholl has been upgraded and added to the HG series!",
@@ -33,42 +76,65 @@
 			"• A new Tetron Seal for reproducing Atoll V is included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"セイバー・フロッガー×1",
-			"マーキングシール×1",
-			"リード線×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "セイバー・フロッガー",
+				"en": "Saber Frogger"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リード線",
+				"en": "lead wire"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4305_s_q7vv9936c0vzyo0q6exi3al7gczg.jpg",
+				"path": "/images/items/01_3351/153_4305.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4305_s_wk5u150do2dfljgq091hvrb0ttvh.jpg",
+				"path": "/images/items/01_3351/155_4305.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4305_s_j4415b4n3d1nrjt7dcxv3s1poyma.jpg",
+				"path": "/images/items/01_3351/156_4305.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4305_s_f9reid9owiez01tw38rkbhgeyza5.jpg",
+				"path": "/images/items/01_3351/157_4305.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4305_s_tq4wc3b72164852fxnsr20595mbz.jpg",
+				"path": "/images/items/01_3351/158_4305.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4305_s_axi69sguugt8yxpm2a15sf2obzd0.jpg",
+				"path": "/images/items/01_3351/159_4305.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4305_s_h9sfxycuckj8ishw56sc50qhnzja.jpg",
+				"path": "/images/items/01_3351/189_4305.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4305_s_y2bpcexd9gu6ce6rr9x7bw9xp8dp.jpg",
+				"path": "/images/items/01_3351/190_4305.jpg"
+			}
 		],
-		"en": [
-			"Saber Frogger×1",
-			"MarkingSeal×1",
-			"Lead wire x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3351/153_4305.jpg",
-		"/images/items/01_3351/155_4305.jpg",
-		"/images/items/01_3351/156_4305.jpg",
-		"/images/items/01_3351/157_4305.jpg",
-		"/images/items/01_3351/158_4305.jpg",
-		"/images/items/01_3351/159_4305.jpg",
-		"/images/items/01_3351/189_4305.jpg",
-		"/images/items/01_3351/190_4305.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3351/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"lgaim"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000216436",
-		"item-1000205639",
-		"01_3350",
-		"01_3352"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3351/"
 }

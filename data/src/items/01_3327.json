@@ -5,6 +5,43 @@
 		"ja": "ENTRY GRADE 江戸川コナン",
 		"en": "ENTRY GRADE Conan Edogawa"
 	},
+	"brands": [
+		{
+			"id": "entry_grade",
+			"url": "https://bandai-hobby.net/brand/entry_grade/",
+			"ja": "ENTRY GRADE"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5584",
+			"url": "https://bandai-hobby.net/item/01_5584/",
+			"ja": "EXPO2025 ENTRY GRADE 1/144 RX-78F00/E ガンダム"
+		},
+		{
+			"id": "01_5585",
+			"url": "https://bandai-hobby.net/item/01_5585/",
+			"ja": "EXPO2025 ENTRY GRADE 1/144 RX-78F00/E ガンダム用オプションパーツセット (EX-001 グラスフェザー装備)"
+		},
+		{
+			"id": "01_5440",
+			"url": "https://bandai-hobby.net/item/01_5440/",
+			"ja": "ENTRY GRADE 1/144 ストライクルージュ"
+		},
+		{
+			"id": "01_5244",
+			"url": "https://bandai-hobby.net/item/01_5244/",
+			"ja": "ENTRY GRADE ULTRAMAN(ULTRAMAN: RISING)"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -21,10 +58,10 @@
 	"description": {
 		"ja": [
 			"全てのプラモデル未経験者に贈る入門用シリーズ「ENTRY GRADE」に江戸川コナンが登場！",
-			"■謎解き要素が隠された組み立てが楽しい！",
-			"■タッチゲートだからパーツは手で\"プチッ！\"と取れる！",
-			"■接着剤や工具は不要。説明書は見やすい色付き。",
-			"■パーツごとに色分けもしっかり再現されているので、組み立てるだけでポーズを決めたカッコいい江戸川コナンを作ることが出来る！"
+			"• 謎解き要素が隠された組み立てが楽しい！",
+			"• タッチゲートだからパーツは手で\"プチッ！\"と取れる！",
+			"• 接着剤や工具は不要。説明書は見やすい色付き。",
+			"• パーツごとに色分けもしっかり再現されているので、組み立てるだけでポーズを決めたカッコいい江戸川コナンを作ることが出来る！"
 		],
 		"en": [
 			"Conan Edogawa appears in the introductory series \"ENTRY GRADE\" for all plastic model inexperienced people!",
@@ -34,40 +71,65 @@
 			"• The color coding of each part is well reproduced, so you can create a cool Edogawa Conan in a pose just by assembling it!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ランナー×3",
-			"ホイルシール×1",
-			"取扱説明書×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ランナー",
+				"en": "Runner"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "foil seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書",
+				"en": "Handling manual"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4302_s_kkraztfcu3w00nsu3u07edn4m30g.jpg",
+				"path": "/images/items/01_3327/153_4302.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4302_s_chte7216c78gdx71mt02c9bl5j17.jpg",
+				"path": "/images/items/01_3327/155_4302.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4302_s_llw0qakxe0fm717t9wi2io1gjn6f.jpg",
+				"path": "/images/items/01_3327/156_4302.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4302_s_4aepcxrsf1vv9oisoejuf2kd1r57.jpg",
+				"path": "/images/items/01_3327/157_4302.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4302_s_ekrorx47cajmg1qq3ih19gzb89pu.jpg",
+				"path": "/images/items/01_3327/158_4302.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4302_s_4ze6g1cphnaqqguc8ozri1aa5ba4.jpg",
+				"path": "/images/items/01_3327/159_4302.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4302_s_z2lj6bt51lwmjy72qchn595r9fkc.jpg",
+				"path": "/images/items/01_3327/189_4302.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4302_s_k780z2geaz5iedcuddbxwb2vxg4j.jpg",
+				"path": "/images/items/01_3327/190_4302.jpg"
+			}
 		],
-		"en": [
-			"Runner×3",
-			"Foil Seal×1",
-			"Handling manual×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3327/153_4302.jpg",
-		"/images/items/01_3327/155_4302.jpg",
-		"/images/items/01_3327/156_4302.jpg",
-		"/images/items/01_3327/157_4302.jpg",
-		"/images/items/01_3327/158_4302.jpg",
-		"/images/items/01_3327/159_4302.jpg",
-		"/images/items/01_3327/189_4302.jpg",
-		"/images/items/01_3327/190_4302.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3327/",
-	"brandIds": [
-		"entry_grade"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5584",
-		"01_5585",
-		"01_5440",
-		"01_5244"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3327/"
 }

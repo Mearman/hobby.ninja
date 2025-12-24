@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "ポケモンプラモコレクション クイック!! 04 イーブイ",
-		"en": "Pokemon Plastic Model Collection Quick!! 04 Eevee"
+		"en": "Pokémon Model Kit QUICK!! 04 EEVEE"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター",
+			"en": "Pokémon"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5984",
+			"url": "https://bandai-hobby.net/item/01_5984/",
+			"ja": "ポケモンプラモコレクション 60 セレクトシリーズ コライドン"
+		},
+		{
+			"id": "01_5958",
+			"url": "https://bandai-hobby.net/item/01_5958/",
+			"ja": "ポケモンプラモコレクション 59 セレクトシリーズ ミライドン"
+		},
+		{
+			"id": "01_5947",
+			"url": "https://bandai-hobby.net/item/01_5947/",
+			"ja": "ポケモンプラモコレクション クイック!! 23 ジラーチ"
+		},
+		{
+			"id": "01_5568",
+			"url": "https://bandai-hobby.net/item/01_5568/",
+			"ja": "ポケモンプラモコレクション 58 セレクトシリーズ グレンアルマ"
+		}
+	],
 	"price": {
 		"amount": 715,
 		"currency": "JPY",
@@ -28,43 +66,58 @@
 			"• シールの使用箇所も最小限に。"
 		],
 		"en": [
-			"Easy and simple assembly! Eevee appears in \"PokéPla Quick!!\", which is perfect for your first plastic model experience!",
-			"• Eevee with a total length of approximately 75mm made of 20 parts.",
-			"• Easy assembly and colorful finish achieved by carefully dividing parts.",
-			"• Simple specifications that make you imagine the finished product the moment you see the Runner.",
-			"• Touch gate method without tools.",
-			"• Minimize the number of seals used."
+			"Easy and simple assembly! \"Pokémon Quick!!\" is perfect for your first plastic model experience! Eevee is here!",
+			"• Eevee with a total length of about 75 mm that can be made with a total of 20 parts.",
+			"• Easy assembly and colorful finish by dividing the parts with special parts.",
+			"• A simple specification that comes to mind the moment you see the runner.",
+			"• Touch gate method without using tools.",
+			"• Minimize the use of seals."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ホイルシール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "• Foil seal"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154984_1.jpg",
+				"path": "/images/items/01_3348/1000154984_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154984_2.jpg",
+				"path": "/images/items/01_3348/1000154984_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154984_3.jpg",
+				"path": "/images/items/01_3348/1000154984_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154984_4.jpg",
+				"path": "/images/items/01_3348/1000154984_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154984_5.jpg",
+				"path": "/images/items/01_3348/1000154984_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154984_6.jpg",
+				"path": "/images/items/01_3348/1000154984_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154984_7.jpg",
+				"path": "/images/items/01_3348/1000154984_7.jpg"
+			}
 		],
-		"en": [
-			"Foil Seal×1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3348/1000154984_1.jpg",
-		"/images/items/01_3348/1000154984_2.jpg",
-		"/images/items/01_3348/1000154984_3.jpg",
-		"/images/items/01_3348/1000154984_4.jpg",
-		"/images/items/01_3348/1000154984_5.jpg",
-		"/images/items/01_3348/1000154984_6.jpg",
-		"/images/items/01_3348/1000154984_7.jpg"
-	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3348/",
-	"brandIds": [],
-	"seriesIds": [
-		"pokemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"globalSiteUrls": {
+		"enUs": "https://global.bandai-hobby.net/en-us/item/01_3348/"
+	}
 }

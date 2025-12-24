@@ -5,6 +5,50 @@
 		"ja": "HG 1/24 霊子戦闘機・無限(クラリス機)",
 		"en": "HG 1/24 Spirit Fighter Mugen (Clarice Machine)"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "shinsakura_wars",
+			"url": "https://bandai-hobby.net/series/shinsakura_wars/",
+			"ja": "新サクラ大戦"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3399",
+			"url": "https://bandai-hobby.net/item/01_3399/",
+			"ja": "HG 1/24 霊子戦闘機・無限(東雲初穂機)"
+		},
+		{
+			"id": "01_3344",
+			"url": "https://bandai-hobby.net/item/01_3344/",
+			"ja": "HG 1/24 霊子戦闘機・試製桜武(天宮さくら機)"
+		},
+		{
+			"id": "01_2975",
+			"url": "https://bandai-hobby.net/item/01_2975/",
+			"ja": "HG 1/24 霊子戦闘機・無限(アナスタシア・パルマ機)"
+		},
+		{
+			"id": "01_2773",
+			"url": "https://bandai-hobby.net/item/01_2773/",
+			"ja": "HG 1/24 霊子戦闘機・無限(望月あざみ機)"
+		}
+	],
+	"scale": "1/24",
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -18,18 +62,17 @@
 		"day": 30
 	},
 	"targetAge": 15,
-	"scale": "1/24",
 	"description": {
 		"ja": [
 			"『新サクラ大戦』より、「霊子戦闘機・無限（クラリス機）」がHGにラインアップ！",
-			"■コックピットハッチにオープンギミックを搭載。",
-			"■アクションポーズの幅が広がる延長ギミックを手・足の関節部分に採用。手足の伸縮が可能に。",
-			"■閉じた魔導書、開いた魔導書が付属。",
-			"■開いた魔導書のページ部分は、取扱説明書を切り出して再現。",
-			"■搭乗姿のキャラクターフィギュアが付属。"
+			"• コックピットハッチにオープンギミックを搭載。",
+			"• アクションポーズの幅が広がる延長ギミックを手・足の関節部分に採用。手足の伸縮が可能に。",
+			"• 閉じた魔導書、開いた魔導書が付属。",
+			"• 開いた魔導書のページ部分は、取扱説明書を切り出して再現。",
+			"• 搭乗姿のキャラクターフィギュアが付属。"
 		],
 		"en": [
-			"From \"New Sakura Wars \", \" Reiko Fighter Mugen (Clarice Machine)\" is added to the HG lineup!",
+			"From \"New Sakura Wars\", \"Reiko Fighter Mugen (Clarice Machine)\" is added to the HG lineup!",
 			"• Equipped with an open gimmick on the cockpit hatch.",
 			"• Extension gimmicks are used in the joints of the hands and feet to expand the range of action poses. Allows limbs to expand and contract.",
 			"• Comes with closed and open spellbooks.",
@@ -37,48 +80,88 @@
 			"• A character figure in boarding form is included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"魔導書×2種（閉じた魔導書、開いた魔導書）",
-			"ホイルシール×1",
-			"ジュエルシール×1",
-			"水転写式デカール×1"
+	"accessories": [
+		{
+			"name": {
+				"ja": "魔導書",
+				"en": "magic book"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "foil seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジュエルシール",
+				"en": "Jewel Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154144_1.jpg",
+				"path": "/images/items/01_3331/1000154144_1.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154144_2.jpg",
+				"path": "/images/items/01_3331/1000154144_2.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154144_3.jpg",
+				"path": "/images/items/01_3331/1000154144_3.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154144_4.jpg",
+				"path": "/images/items/01_3331/1000154144_4.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154144_5.jpg",
+				"path": "/images/items/01_3331/1000154144_5.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154144_6.jpg",
+				"path": "/images/items/01_3331/1000154144_6.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154144_7.jpg",
+				"path": "/images/items/01_3331/1000154144_7.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154144_8.jpg",
+				"path": "/images/items/01_3331/1000154144_8.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154144_9.jpg",
+				"path": "/images/items/01_3331/1000154144_9.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154144_10.jpg",
+				"path": "/images/items/01_3331/1000154144_10.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154144_11.jpg",
+				"path": "/images/items/01_3331/1000154144_11.jpg"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000154144_12.jpg",
+				"path": "/images/items/01_3331/1000154144_12.jpg"
+			}
 		],
-		"en": [
-			"Magic book x 2 types (closed magic book, open magic book)",
-			"Foil Seal×1",
-			"Jewel Seal×1",
-			"Water transfer decal x 1"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3331/1000154144_1.jpg",
-		"/images/items/01_3331/1000154144_10.jpg",
-		"/images/items/01_3331/1000154144_11.jpg",
-		"/images/items/01_3331/1000154144_12.jpg",
-		"/images/items/01_3331/1000154144_2.jpg",
-		"/images/items/01_3331/1000154144_3.jpg",
-		"/images/items/01_3331/1000154144_4.jpg",
-		"/images/items/01_3331/1000154144_5.jpg",
-		"/images/items/01_3331/1000154144_6.jpg",
-		"/images/items/01_3331/1000154144_7.jpg",
-		"/images/items/01_3331/1000154144_8.jpg",
-		"/images/items/01_3331/1000154144_9.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3331/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"shinsakura_wars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_3399",
-		"01_3344",
-		"01_2975",
-		"01_2773"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3331/"
 }

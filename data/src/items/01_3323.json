@@ -5,6 +5,54 @@
 		"ja": "HG 1/144 クルーザーモード用ブースター拡張セット（実戦配備カラー）（ADVANCE OF Z ティターンズの旗のもとに）",
 		"en": "HG 1/144 Booster expansion set for cruiser mode (actual deployment color) (ADVANCE OF Z Under the flag of Titans)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 2
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－",
@@ -73,7 +120,7 @@
 			"● Various joint parts and MarkingSeal are included.",
 			"TR-6 Drum frame type parts and joint parts for connecting the backpack are included.",
 			"(Set contents) Booster unit / various joint parts / display stand / display base",
-			"(Compatible product) HG 1/144 Gundam TR-1 [Heizensley Ra II] (ADVANCE OF Z Under the banner of the Titans) (Premium Bandai sales item sold separately)",
+			"(Compatible product) HG 1/144 GundamTR-1 [Heizensley Ra II] (ADVANCE OF Z Under the banner of the Titans) (Premium Bandai sales item sold separately)",
 			"HG 1/144 G parts [Furudodo] (actual deployment color) (sold separately Premium Bandai sales item)",
 			"HG 1/144 Gundam TR-1 [Advanced Hazel] & Expansion parts for Gundam TR-6 (sold separately Premium Bandai sales item)",
 			"HG 1/144 Gundam TR-1 [Hazel Kai] & Gundam TR-6 expansion parts (sold separately Premium Bandai sales item)",
@@ -98,37 +145,50 @@
 			"・Product information is current as of 20209. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"images": [
-		"/images/items/01_3323/153_4278.jpg",
-		"/images/items/01_3323/155_4278.jpg",
-		"/images/items/01_3323/156_4278.jpg",
-		"/images/items/01_3323/157_4278.jpg",
-		"/images/items/01_3323/158_4278.jpg",
-		"/images/items/01_3323/159_4278.jpg",
-		"/images/items/01_3323/189_4278.jpg",
-		"/images/items/01_3323/190_4278.jpg",
-		"/images/items/01_3323/191_4278.jpg",
-		"/images/items/01_3323/192_4278.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3323/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	],
-	"manualId": "2394",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4278_s_c5m6femskod7zyog4tn9mn88fzmh.jpg",
+				"path": "/images/items/01_3323/153_4278.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4278_s_w41qlddpih5wb9kjhu0nu0wyuxzf.jpg",
+				"path": "/images/items/01_3323/155_4278.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4278_s_s2n1jxvy6c56vw7lq5i6nhjj422i.jpg",
+				"path": "/images/items/01_3323/156_4278.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4278_s_5ggyvc0el6wctotlgag7su4q85vm.jpg",
+				"path": "/images/items/01_3323/157_4278.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4278_s_p4jqw6xrs6tox4tneo4szu7ge0f0.jpg",
+				"path": "/images/items/01_3323/158_4278.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4278_s_zq62ll0e015voebktkv2stbjnz3c.jpg",
+				"path": "/images/items/01_3323/159_4278.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4278_s_ntbnqmwy1m0bkiyw7ugee4ppro4e.jpg",
+				"path": "/images/items/01_3323/189_4278.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4278_s_kxnl8a1jktf12qmck5jq5u2ctmsf.jpg",
+				"path": "/images/items/01_3323/190_4278.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4278_s_os3ge5dwfsh9kevwzx5hoxz2ne07.jpg",
+				"path": "/images/items/01_3323/191_4278.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4278_s_3j27ruk8usp8mqt70tp6h6d2lxyf.jpg",
+				"path": "/images/items/01_3323/192_4278.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3323/"
 }

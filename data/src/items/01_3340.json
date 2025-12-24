@@ -5,6 +5,54 @@
 		"ja": "ＨＧ 1/144 ガンダム５号機",
 		"en": "HG 1/144 Gundam Unit 5"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2475,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 3
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－",
@@ -90,37 +137,50 @@
 			"・Product specifications are as of 202010. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"images": [
-		"/images/items/01_3340/153_4294.jpg",
-		"/images/items/01_3340/155_4294.jpg",
-		"/images/items/01_3340/156_4294.jpg",
-		"/images/items/01_3340/157_4294.jpg",
-		"/images/items/01_3340/158_4294.jpg",
-		"/images/items/01_3340/159_4294.jpg",
-		"/images/items/01_3340/189_4294.jpg",
-		"/images/items/01_3340/190_4294.jpg",
-		"/images/items/01_3340/191_4294.jpg",
-		"/images/items/01_3340/192_4294.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3340/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	],
-	"manualId": "2316",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4294_s_5cg6q5v4gvtwlwh6rtkhkl85ix5f.jpg",
+				"path": "/images/items/01_3340/153_4294.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4294_s_8rcs4rit230y29sf7bt9rvaeno15.jpg",
+				"path": "/images/items/01_3340/155_4294.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4294_s_9xjgyoktpro5io6rjrz8jqtkzqhd.jpg",
+				"path": "/images/items/01_3340/156_4294.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4294_s_vib82ii1st9yuaozaun0bdz6z4ac.jpg",
+				"path": "/images/items/01_3340/157_4294.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4294_s_fe4m32u5yqy0s6johnqzletfynpq.jpg",
+				"path": "/images/items/01_3340/158_4294.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4294_s_zom5uu9x5hu6g0iubwxex15jy4hv.jpg",
+				"path": "/images/items/01_3340/159_4294.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4294_s_8j8v7pb48kpjfkfgm1iixqoaqlvq.jpg",
+				"path": "/images/items/01_3340/189_4294.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4294_s_13opy94dx4acdkjmr0yacoqot6ao.jpg",
+				"path": "/images/items/01_3340/190_4294.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4294_s_tppug2flw28n10x3sokk6t8o0zgf.jpg",
+				"path": "/images/items/01_3340/191_4294.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4294_s_vram09uex573oix9kq15mk2q2jng.jpg",
+				"path": "/images/items/01_3340/192_4294.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3340/"
 }

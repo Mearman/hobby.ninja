@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "ＨＧ 1/144 ガンダムＴＲ-１ 次世代量産機（実戦配備カラー）（ADVANCE OF Z ティターンズの旗のもとに）",
-		"en": "HG 1/144 Gundam TR-1 next generation mass production machine (actual deployment color) (under the flag of ADVANCE OF Z Titans)"
+		"en": "HG 1/144 GundamTR-1 next generation mass production machine (actual deployment color) (under the flag of ADVANCE OF Z Titans)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 2
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガ ン ダ ム Ｔ Ｒ - １ ［ ヘ イ ズ ル ］",
@@ -58,7 +105,7 @@
 		"en": [
 			"Gundam TR-1 [Hazel]",
 			"Next-generation mass-produced machines connected to the development lineage -",
-			"From \"ADVANCE OF Z ~Under the Flag of the Titans~\", the next generation mass-produced Gundam TR-1 [Hazel Ausura] is now available in HG in its actual combat color!",
+			"From \"ADVANCE OF Z ~Under the Flag of the Titans~\", the next generation mass-produced GundamTR-1 [Hazel Ausura] is now available in HG in its actual combat color!",
 			"Includes various optional parts to configure and expand the aircraft, as well as an emergency escape pod [Primrose]. In addition, expansion parts for Gundam TR-6 in actual combat color are included.",
 			"● Reproduce the actual combat color [Hazel Ausura] with various options and molding color changes",
 			"Hazle Ausla is reproduced by attaching Advanced Hazle parts to the core of Primrose in the actual battle color.",
@@ -92,37 +139,50 @@
 			"・Product information is current as of 20209. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"images": [
-		"/images/items/01_3326/153_4280.jpg",
-		"/images/items/01_3326/155_4280.jpg",
-		"/images/items/01_3326/156_4280.jpg",
-		"/images/items/01_3326/157_4280.jpg",
-		"/images/items/01_3326/158_4280.jpg",
-		"/images/items/01_3326/159_4280.jpg",
-		"/images/items/01_3326/189_4280.jpg",
-		"/images/items/01_3326/190_4280.jpg",
-		"/images/items/01_3326/191_4280.jpg",
-		"/images/items/01_3326/192_4280.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3326/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	],
-	"manualId": "2398",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4280_s_ivlamjhhf3ow7lgdoox57buvvfgp.jpg",
+				"path": "/images/items/01_3326/153_4280.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4280_s_iso8qm5ejzo8c5h30qkj1h5vbz1k.jpg",
+				"path": "/images/items/01_3326/155_4280.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4280_s_k2ufxqn5tn5ytiyb8hpyzw9llog0.jpg",
+				"path": "/images/items/01_3326/156_4280.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4280_s_coq2rvrcsu84uymnit8b8fmgsfn8.jpg",
+				"path": "/images/items/01_3326/157_4280.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4280_s_jzm6u8xdpl7arc0o9qvgtpr6pfwi.jpg",
+				"path": "/images/items/01_3326/158_4280.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4280_s_x5iukx9n80pbtqzxq7edk13hgrhd.jpg",
+				"path": "/images/items/01_3326/159_4280.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4280_s_6rpplppfovrjbeuv2gsex78nkys2.jpg",
+				"path": "/images/items/01_3326/189_4280.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4280_s_6m6ral3md4tpzkzs915xiinp9qnb.jpg",
+				"path": "/images/items/01_3326/190_4280.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4280_s_a64mq1tds4y7qbuo79whqaqisbn6.jpg",
+				"path": "/images/items/01_3326/191_4280.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4280_s_u1uejl5pe9bpkw3qelyuj39s6t56.jpg",
+				"path": "/images/items/01_3326/192_4280.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3326/"
 }

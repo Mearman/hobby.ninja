@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 RGM-79N ジムカスタム",
 		"en": "MG 1/100 RGM-79N Jim Custom"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "g-0083",
+			"url": "https://bandai-hobby.net/series/g-0083/",
+			"ja": "機動戦士ガンダム0083 STARDUST MEMORY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000127907",
+			"url": "http://p-bandai.jp/item/item-1000127907",
+			"ja": "ＭＧ 1/100 MS-06F-2 ザクＩＩ Ｆ２型（ノイエン・ビッター機）"
+		},
+		{
+			"id": "item-1000127908",
+			"url": "http://p-bandai.jp/item/item-1000127908",
+			"ja": "ＭＧ 1/100 MS-06F-2 ザクＩＩ Ｆ２型（キンバライト基地仕様）"
+		},
+		{
+			"id": "item-1000124942",
+			"url": "http://p-bandai.jp/item/item-1000124942",
+			"ja": "ＭＧ 1/100 アナベル・ガトー専用ゲルググ Ver.2.0"
+		},
+		{
+			"id": "item-1000105596",
+			"url": "https://p-bandai.jp/item/item-1000105596",
+			"ja": "ＭＧ 1/100 パワード・ジム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,35 +61,30 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム 0083』に登場する地球連邦軍のエースクラスパイロット用、高性能量産型モビルスーツのキット化です。足部とバックパックの外装は取り外しができ、内部再現された細密なメカディティールを見る事ができます。ジムライフル、90mmマシンガン、ビームサーベル、シールドが付いています。1/20スケールのサウス・バニングのフィギュアが付いています。"
+			"『機動戦士ガンダム0083』に登場する地球連邦軍のエースクラスパイロット用、高性能量産型モビルスーツのキット化です。足部とバックパックの外装は取り外しができ、内部再現された細密なメカディティールを見る事ができます。ジムライフル、90mmマシンガン、ビームサーベル、シールドが付いています。1/20スケールのサウス・バニングのフィギュアが付いています。"
 		],
 		"en": [
-			"A kit of the high-performance mass-produced mobile suit for the Earth Federation's ace class pilots that appears in \"Mobile Suit Gundam 0083.\" The legs and the exterior of the backpack can be removed, allowing you to see the detailed mechanical details reproduced inside. Comes with a gym rifle, 90mm machine gun, beam saber, and Seal. Comes with a 1/20 Scale South Banning figure."
+			"A kit version of the high-performance mass-produced mobile suit for the Earth Federation's ace-class pilots that appears in \"Mobile Suit Gundam 0083.\" The legs and the exterior of the backpack can be removed, allowing you to see the detailed mechanical details reproduced inside. Comes with a gym rifle, 90mm machine gun, beam saber, and Seal. Comes with a 1/20 Scale South Banning figure."
 		]
 	},
-	"images": [
-		"/images/items/01_3317/153_4272.jpg",
-		"/images/items/01_3317/155_4272.jpg",
-		"/images/items/01_3317/156_4272.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3317/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"g-0083"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000127907",
-		"item-1000127908",
-		"item-1000124942",
-		"item-1000105596"
-	],
-	"manualId": "0432"
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4272_s_r4v5bbx7errppsv60iyw9i3l7840.jpg",
+				"path": "/images/items/01_3317/153_4272.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4272_s_rsa9xl2snmf8nsw8lf1mye6a1uhw.jpg",
+				"path": "/images/items/01_3317/155_4272.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4272_s_jcafzyrp645o04puz2hh6ayoak0l.jpg",
+				"path": "/images/items/01_3317/156_4272.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3317/"
 }

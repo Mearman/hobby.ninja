@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 オージ",
 		"en": "HG 1/144 Oji"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "lgaim",
+			"url": "https://bandai-hobby.net/series/lgaim/",
+			"ja": "重戦機エルガイム"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216436",
+			"url": "https://p-bandai.jp/item/item-1000216436/",
+			"ja": "ＨＧ 1/144 エルガイム [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000205639",
+			"url": "https://p-bandai.jp/item/item-1000205639/",
+			"ja": "ＨＧ 1/144 バッシュ"
+		},
+		{
+			"id": "01_3351",
+			"url": "https://bandai-hobby.net/item/01_3351/",
+			"ja": "HG 1/144 アトール"
+		},
+		{
+			"id": "01_3352",
+			"url": "https://bandai-hobby.net/item/01_3352/",
+			"ja": "1/144 A級ヘビーメタルセット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -18,14 +62,13 @@
 		"day": 13
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『重戦機エルガイム』より、オージがアップグレードしてHGシリーズにラインアップ！",
-			"■額はクリアパーツを使用。",
-			"■肩の色分けはパーツ分割で再現。",
-			"■股関節割を変更し、可動域の拡大を実現。",
-			"■新規サーベルが付属。"
+			"• 額はクリアパーツを使用。",
+			"• 肩の色分けはパーツ分割で再現。",
+			"• 股関節割を変更し、可動域の拡大を実現。",
+			"• 新規サーベルが付属。"
 		],
 		"en": [
 			"From \"Heavy Battle Machine L-Gaim\", Oji has been upgraded and added to the HG series!",
@@ -35,39 +78,54 @@
 			"• New saber included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"大鎌×1",
-			"ビームセイバー×2"
+	"accessories": [
+		{
+			"name": {
+				"ja": "大鎌",
+				"en": "scythe"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームセイバー",
+				"en": "beam saver"
+			},
+			"count": 2
+		}
+	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4304_s_b6uvpgewoeyqbxfujxzldmh50a5e.jpg",
+				"path": "/images/items/01_3350/153_4304.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4304_s_u9hs5nq64vym6h2udda6e8ukf8sk.jpg",
+				"path": "/images/items/01_3350/155_4304.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4304_s_vqi1zz9u7fhd4cap1mj8rdogl9rn.jpg",
+				"path": "/images/items/01_3350/156_4304.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4304_s_kqzyjo8xisjnocejdh7klzjwnsh0.jpg",
+				"path": "/images/items/01_3350/157_4304.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4304_s_vwrqni0u29ohaxzvhxmd1cioq930.jpg",
+				"path": "/images/items/01_3350/158_4304.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4304_s_j1qx5zsfevnvxtjgtdfzgc0g1gpc.jpg",
+				"path": "/images/items/01_3350/159_4304.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4304_s_kbs0icasa3kvpoas1dh3k9x4agn0.jpg",
+				"path": "/images/items/01_3350/189_4304.jpg"
+			}
 		],
-		"en": [
-			"Scythe×1",
-			"Beam saver x2"
-		]
+		"instructions": []
 	},
-	"images": [
-		"/images/items/01_3350/153_4304.jpg",
-		"/images/items/01_3350/155_4304.jpg",
-		"/images/items/01_3350/156_4304.jpg",
-		"/images/items/01_3350/157_4304.jpg",
-		"/images/items/01_3350/158_4304.jpg",
-		"/images/items/01_3350/159_4304.jpg",
-		"/images/items/01_3350/189_4304.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3350/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"lgaim"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000216436",
-		"item-1000205639",
-		"01_3351",
-		"01_3352"
-	]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3350/"
 }

@@ -5,6 +5,60 @@
 		"ja": "ＨＧ 1/144 ガンダムジェミナス０２",
 		"en": "HG 1/144 Gundam Geminass 02"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "g-unit",
+			"url": "https://bandai-hobby.net/series/g-unit/",
+			"ja": "新機動戦記ガンダムW デュアルストーリー G-UNIT"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000217501",
+			"url": "https://p-bandai.jp/item/item-1000217501/",
+			"ja": "ＨＧ 1/144 レオール"
+		},
+		{
+			"id": "item-1000209099",
+			"url": "https://p-bandai.jp/item/item-1000209099/",
+			"ja": "ＨＧ 1/144 ガンダムバーンレプオス"
+		},
+		{
+			"id": "01_4393",
+			"url": "https://bandai-hobby.net/item/01_4393/",
+			"ja": "ＨＧ 1/144 ヴァイエイト・シュイヴァン & メリクリウス・シュイヴァン"
+		},
+		{
+			"id": "item-1000176706",
+			"url": "https://p-bandai.jp/item/item-1000176706/",
+			"ja": "ＨＧ 1/144 ガンダムエルオーブースター"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 1
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－",
@@ -61,8 +114,8 @@
 			"First Gunpla commercialized!",
 			"G-UNIT's second machine, “Geminas”, appears!",
 			"－－－－－－－－－－－－－－－－－－－－",
-			"From \"Mobile Suit Gundam W DUAL STORY G-UNIT\", Gundam Geminass 02 is the first Gunpla kit in the latest HG format.",
-			"The new design drawn by original mechanical designer Akutsu is reproduced along with coloring. Can be equipped with separately sold \"Assault Booster \" and \" High Mobility Unit\".",
+			"From \"Mobile Suit GundamW DUAL STORY G-UNIT\", Gundam Geminass 02 is the first Gunpla kit in the latest HG format.",
+			"The new design drawn by original mechanical designer Akutsu is reproduced along with coloring. Can be equipped with separately sold \"Assault Booster\" and \"High Mobility Unit\".",
 			"● Reproduce the coloring of Unit 2 driven by Odell Burnett",
 			"The dark blue coloring of Gundam Geminus 02, which appeared in the early part of the movie, has been thoroughly reproduced.",
 			"The yellow chest is also reproduced by molding color and parts division.",
@@ -94,39 +147,50 @@
 			"・Product specifications are as of 202010. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"images": [
-		"/images/items/01_3330/153_4285.jpg",
-		"/images/items/01_3330/155_4285.jpg",
-		"/images/items/01_3330/156_4285.jpg",
-		"/images/items/01_3330/157_4285.jpg",
-		"/images/items/01_3330/158_4285.jpg",
-		"/images/items/01_3330/159_4285.jpg",
-		"/images/items/01_3330/189_4285.jpg",
-		"/images/items/01_3330/190_4285.jpg",
-		"/images/items/01_3330/191_4285.jpg",
-		"/images/items/01_3330/192_4285.jpg"
-	],
-	"sourceUrl": "https://bandai-hobby.net/item/01_3330/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"g-unit"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000217501",
-		"item-1000209099",
-		"01_4393",
-		"item-1000176706"
-	],
-	"manualId": "2318",
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4285_s_d2dol2q34qgbulw1i0xf17fpx918.jpg",
+				"path": "/images/items/01_3330/153_4285.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4285_s_0iw58uj74zp9p808wv5fgdby01k3.jpg",
+				"path": "/images/items/01_3330/155_4285.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4285_s_vst9z7iqvhljkba2f8oex3txq9hr.jpg",
+				"path": "/images/items/01_3330/156_4285.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4285_s_vp3mdwjkm7j5ydaysi5flguurld1.jpg",
+				"path": "/images/items/01_3330/157_4285.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4285_s_sr4ln4p3hb80vi72b78nnlxh1mgt.jpg",
+				"path": "/images/items/01_3330/158_4285.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4285_s_v8ldgonsyyumr5qho5bnvxt0ztnz.jpg",
+				"path": "/images/items/01_3330/159_4285.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4285_s_1yyj59101n42dc0d1nswlvt7v6az.jpg",
+				"path": "/images/items/01_3330/189_4285.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4285_s_eg4blgeleflsbi63ghl17yfovixy.jpg",
+				"path": "/images/items/01_3330/190_4285.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4285_s_30wzpzw7675dlc9my0oyieryq4s7.jpg",
+				"path": "/images/items/01_3330/191_4285.jpg"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4285_s_2zf64ubg46wtv3eidtbgo7p9uagb.jpg",
+				"path": "/images/items/01_3330/192_4285.jpg"
+			}
+		],
+		"instructions": []
+	},
+	"sourceUrl": "https://bandai-hobby.net/item/01_3330/"
 }
