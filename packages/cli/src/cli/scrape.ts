@@ -788,6 +788,7 @@ export class ScrapeCommand {
 
 		// Fetch fresh HTML if needed
 		if (!html) {
+			console.log(`  Fetching fresh...`);
 			try {
 				html = await time("fetch-html", () =>
 					this.rateLimiter.executeWithLimit(async () => {
@@ -963,6 +964,7 @@ export class ScrapeCommand {
 		try {
 			await fs.access(localPath);
 			manualData.image.path = relativePath;
+			console.log(`    Image already exists: ${filename}`);
 			return;
 		} catch {
 			// File doesn't exist, download it
