@@ -11,20 +11,29 @@
 		"year": 2005,
 		"month": 3
 	},
-	"productImage": "https://bandai-hobby.net/images/155_526_o_1hgi3m3ke93t16n1p4ifju1dds23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_526_o_1hgi3m3ke93t16n1p4ifju1dds23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1153/",
-	"extractedAt": "2025-12-05T23:09:48.125Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_526_o_1hgi3m3ke93t16n1p4ifju1dds23.jpg",
+		"path": "/images/items/01_4362/155_526.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": [],
-	"seriesIds": ["seed-d"],
+	"brand": {
+		"ja": "その他",
+		"en": "others"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムSEED DESTINY",
+		"en": "Mobile Suit GundamSEED DESTINY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1153.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1153/1153.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1153/",
+	"itemId": "01_4362"
 }

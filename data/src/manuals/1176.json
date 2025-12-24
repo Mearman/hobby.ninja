@@ -12,20 +12,29 @@
 		"month": 9,
 		"day": 28
 	},
-	"productImage": "https://bandai-hobby.net/images/156_5536_o_1gois7sebhhj12101imi1s9cdc23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_5536_o_1gois7sebhhj12101imi1s9cdc23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1176/",
-	"extractedAt": "2025-12-05T23:09:48.152Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_5536_o_1gois7sebhhj12101imi1s9cdc23.jpg",
+		"path": "/images/items/01_4643/156_5536.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": [],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "その他",
+		"en": "others"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1176.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1176/1176.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1176/",
+	"itemId": "01_4643"
 }

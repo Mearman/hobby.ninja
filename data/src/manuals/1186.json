@@ -12,19 +12,27 @@
 		"month": 12,
 		"day": 16
 	},
-	"productImage": "https://bandai-hobby.net/images/156_2101_s_j6f53924k6r3q36uud4fswjdj36e.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_2101_s_j6f53924k6r3q36uud4fswjdj36e.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1186/",
-	"extractedAt": "2025-12-05T23:09:48.163Z",
-	"brandIds": [],
-	"seriesIds": ["gundam"],
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_2101_s_j6f53924k6r3q36uud4fswjdj36e.jpg",
+		"path": "/manuals/1186/156_2101.jpg"
+	},
+	"brand": {
+		"ja": "アクションベース",
+		"en": "action base"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1186.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1186/1186.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1186/"
 }
