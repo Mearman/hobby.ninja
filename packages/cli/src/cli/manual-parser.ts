@@ -61,6 +61,8 @@ export interface ManualData {
 	series?: ManualSeries;
 	pdfs: ManualPdf[];
 	sourceUrl: string;
+	/** Linked product item ID (discovered via shared image) */
+	itemId?: string;
 }
 
 /** Parse result */

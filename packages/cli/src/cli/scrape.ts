@@ -829,20 +829,31 @@ export class ScrapeCommand {
 			}
 		}
 
-		// Step 3b: Download/locate image
+		// Step 3b: Download/locate image and establish bidirectional links
 		// Image can come from: HTML parsing (manualData.image?.src) OR cached HTML file
+		let discoveredItemId: string | undefined;
 		if (!options.dryRun) {
 			if (manualData.image?.src) {
 				// Parser found image in HTML - download or find existing
-				await time("download-image", () => this.downloadManualImage(manualId, manualData));
+				discoveredItemId = await time("download-image", () => this.downloadManualImage(manualId, manualData));
 			} else {
 				// Parser didn't find image - try to get src from cached HTML
 				const srcUrl = await time("find-src", () => this.findImageSrcFromHtml(htmlPath, ""));
 				if (srcUrl) {
 					// Found src in HTML - use the standard download flow
 					manualData.image = { src: srcUrl };
-					await time("download-image", () => this.downloadManualImage(manualId, manualData));
+					discoveredItemId = await time("download-image", () => this.downloadManualImage(manualId, manualData));
 				}
+			}
+
+			// Establish bidirectional link if item was discovered via shared image
+			if (discoveredItemId) {
+				const itemId = discoveredItemId; // Capture for closure
+				manualData.itemId = itemId;
+				console.log(`    Linked to item: ${itemId}`);
+
+				// Update item JSON with manual reference
+				await time("update-item-link", () => this.updateItemWithManualLink(itemId, manualId));
 			}
 		}
 
@@ -1004,12 +1015,13 @@ export class ScrapeCommand {
 	 * Download or locate manual image
 	 * Prefers existing item assets over manual assets to avoid duplication.
 	 * If image exists in items, removes any manual copies (even incorrectly named ones).
+	 * @returns The item ID if an existing item image was found, undefined otherwise
 	 */
 	private async downloadManualImage(
 		manualId: string,
 		manualData: ManualData,
-	): Promise<void> {
-		if (!manualData.image?.src) return;
+	): Promise<string | undefined> {
+		if (!manualData.image?.src) return undefined;
 
 		const imageUrl = manualData.image.src;
 		const filename = extractFilenameFromUrl(imageUrl);
@@ -1032,7 +1044,10 @@ export class ScrapeCommand {
 
 			// Remove ALL image files from manual assets (they're duplicates)
 			await this.cleanupManualImages(manualImageDir);
-			return;
+
+			// Extract item ID from path: /images/items/01_5771/157_833.jpg -> 01_5771
+			const itemIdMatch = /\/images\/items\/([^/]+)\//.exec(existingItemPath);
+			return itemIdMatch?.[1];
 		}
 
 		// No item image found - check/download to manuals directory
@@ -1047,7 +1062,7 @@ export class ScrapeCommand {
 			console.log(`    Image already exists: ${cleanFilename}`);
 			// Clean up any incorrectly named duplicates
 			await this.cleanupManualImages(manualImageDir, cleanFilename);
-			return;
+			return undefined;
 		} catch {
 			// File doesn't exist, download it
 		}
@@ -1074,6 +1089,8 @@ export class ScrapeCommand {
 			const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
 			console.log(`    Failed to download image: ${msg}`);
 		}
+
+		return undefined;
 	}
 
 	/**
@@ -1109,6 +1126,32 @@ export class ScrapeCommand {
 			}
 		} catch {
 			// Directory doesn't exist or can't be read
+		}
+	}
+
+	/**
+	 * Update an item JSON with a manual link reference
+	 * Only updates if the item doesn't already have a manual link
+	 */
+	private async updateItemWithManualLink(itemId: string, manualId: string): Promise<void> {
+		const itemJsonPath = path.join(ITEMS_DATA_DIR, `${itemId}.json`);
+
+		try {
+			const content = await fs.readFile(itemJsonPath, "utf8");
+			const item = JSON.parse(content) as Item;
+
+			// Only update if manual link is missing or different
+			if (item.manual?.id !== manualId) {
+				item.manual = {
+					id: manualId,
+					url: `https://manual.bandai-hobby.net/menus/detail/${manualId}/`,
+				};
+
+				await writeJsonIfChanged(itemJsonPath, item);
+				console.log(`    Updated item ${itemId} with manual link`);
+			}
+		} catch {
+			// Item file doesn't exist or is invalid - skip
 		}
 	}
 
