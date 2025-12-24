@@ -92,10 +92,64 @@ export interface ScrapeResult {
 const UNKNOWN_ERROR = "Unknown error";
 const MAX_ITEM_ID = 9999;
 const DEFAULT_USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36";
+const FETCH_TIMEOUT_MS = 30_000; // 30 second timeout for HTTP requests
+const MAX_FETCH_RETRIES = 3;
+const RETRY_DELAY_MS = 2000; // Base delay between retries (exponential backoff)
+
+/**
+ * Fetch with timeout and retry logic
+ */
+async function fetchWithRetry(
+	url: string,
+	options: RequestInit,
+	maxRetries = MAX_FETCH_RETRIES,
+): Promise<Response> {
+	let lastError: Error | undefined;
+
+	for (let attempt = 1; attempt <= maxRetries; attempt++) {
+		try {
+			const response = await fetch(url, {
+				...options,
+				signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+			});
+			return response;
+		} catch (error) {
+			lastError = error instanceof Error ? error : new Error(UNKNOWN_ERROR);
+			const isTimeout = lastError.name === "TimeoutError" || lastError.message.includes("timeout");
+			const isAbort = lastError.name === "AbortError";
+
+			if (attempt < maxRetries && (isTimeout || isAbort)) {
+				const delay = RETRY_DELAY_MS * Math.pow(2, attempt - 1); // Exponential backoff
+				console.log(`    Retry ${attempt}/${maxRetries} after ${delay}ms (${lastError.message})`);
+				await new Promise(resolve => setTimeout(resolve, delay));
+			} else if (attempt === maxRetries) {
+				throw lastError;
+			}
+		}
+	}
+
+	throw lastError ?? new Error("Fetch failed after retries");
+}
 
 // Data directories
 const ITEMS_DATA_DIR = resolveWorkspacePath("data/src/items");
 const MANUALS_DATA_DIR = resolveWorkspacePath("data/src/manuals");
+
+/**
+ * Normalize manual ID to 4-digit zero-padded format for filenames
+ * e.g., "106" -> "0106", "1234" -> "1234"
+ */
+function padManualId(id: string): string {
+	return id.replace(/^0+/, "").padStart(4, "0");
+}
+
+/**
+ * Get canonical (unpadded) manual ID for URLs and data
+ * e.g., "0106" -> "106", "1234" -> "1234"
+ */
+function unpadManualId(id: string): string {
+	return id.replace(/^0+/, "") || "0";
+}
 const BRANDS_DATA_DIR = resolveWorkspacePath("data/src/brands");
 const SERIES_DATA_DIR = resolveWorkspacePath("data/src/series");
 const CATEGORIES_DATA_DIR = resolveWorkspacePath("data/src/categories");
@@ -705,10 +759,12 @@ export class ScrapeCommand {
 		// Step 4: Process linked manual if exists
 		const manualId = itemData.manual?.id;
 		if (manualId) {
-			console.log(`  ✓ Manual link: ${manualId}`);
+			const paddedManualId = padManualId(manualId);
+			console.log(`  ✓ Manual link: ${paddedManualId}`);
 			try {
 				await time("process-manual", () => this.processManualComplete(manualId, options));
-				ManualsIndexUpdater.recordValid(manualId, itemData.name.ja);
+				// Use unpadded ID for index key (matches canonical format)
+				ManualsIndexUpdater.recordValid(unpadManualId(manualId), itemData.name.ja);
 			} catch (error) {
 				const errorMsg = error instanceof Error ? error.message : UNKNOWN_ERROR;
 				console.error(`  ⚠ Manual processing failed: ${errorMsg}`);
@@ -757,9 +813,12 @@ export class ScrapeCommand {
 			return result;
 		};
 
-		const url = `https://manual.bandai-hobby.net/menus/detail/${manualId}/`;
-		const htmlPath = path.join(MANUALS_DATA_DIR, `${manualId}.html`);
-		const jsonPath = path.join(MANUALS_DATA_DIR, `${manualId}.json`);
+		// Use unpadded ID for URLs (canonical format), padded for filenames (consistent sorting)
+		const canonicalId = unpadManualId(manualId);
+		const paddedId = padManualId(manualId);
+		const url = `https://manual.bandai-hobby.net/menus/detail/${canonicalId}/`;
+		const htmlPath = path.join(MANUALS_DATA_DIR, `${paddedId}.html`);
+		const jsonPath = path.join(MANUALS_DATA_DIR, `${paddedId}.json`);
 
 		console.log(`  Scraping manual at ${url}`);
 
@@ -801,16 +860,16 @@ export class ScrapeCommand {
 				await time("save-html", () => fs.writeFile(htmlPath, html, "utf8"));
 			} catch (error) {
 				const errorMsg = error instanceof Error ? error.message : UNKNOWN_ERROR;
-				ManualsIndexUpdater.recordChecked(manualId);
+				ManualsIndexUpdater.recordChecked(canonicalId);
 				this.printTimings(options, timings);
 				return { success: false, error: `Fetch failed: ${errorMsg}` };
 			}
 		}
 
-		// Step 2: Parse with ManualParser
-		const parseResult = time("parse", () => this.manualParser.parse(html, manualId, url));
+		// Step 2: Parse with ManualParser (use canonical unpadded ID, canonical URL)
+		const parseResult = time("parse", () => this.manualParser.parse(html, canonicalId, url));
 		if (!parseResult.success || !parseResult.data) {
-			ManualsIndexUpdater.recordChecked(manualId);
+			ManualsIndexUpdater.recordChecked(canonicalId);
 			this.printTimings(options, timings);
 			return { success: false, error: parseResult.error ?? "Parse failed" };
 		}
@@ -819,10 +878,10 @@ export class ScrapeCommand {
 		console.log(`  ✓ Manual data extracted: ${manualData.name.ja}`);
 		console.log(`  ✓ Found ${manualData.pdfs.length} PDF(s)`);
 
-		// Step 3: Download PDFs
+		// Step 3: Download PDFs (use padded ID for asset directories)
 		if (manualData.pdfs.length > 0 && !options.dryRun) {
 			const downloadResult = await time("download-pdfs", () =>
-				this.downloadManualPdfs(manualId, manualData),
+				this.downloadManualPdfs(paddedId, manualData),
 			);
 			if (downloadResult.downloaded > 0) {
 				console.log(`  ✓ PDFs: ${downloadResult.downloaded} downloaded, ${downloadResult.skipped} skipped`);
@@ -834,15 +893,15 @@ export class ScrapeCommand {
 		let discoveredItemId: string | undefined;
 		if (!options.dryRun) {
 			if (manualData.image?.src) {
-				// Parser found image in HTML - download or find existing
-				discoveredItemId = await time("download-image", () => this.downloadManualImage(manualId, manualData));
+				// Parser found image in HTML - download or find existing (use padded ID for assets)
+				discoveredItemId = await time("download-image", () => this.downloadManualImage(paddedId, manualData));
 			} else {
 				// Parser didn't find image - try to get src from cached HTML
 				const srcUrl = await time("find-src", () => this.findImageSrcFromHtml(htmlPath, ""));
 				if (srcUrl) {
 					// Found src in HTML - use the standard download flow
 					manualData.image = { src: srcUrl };
-					discoveredItemId = await time("download-image", () => this.downloadManualImage(manualId, manualData));
+					discoveredItemId = await time("download-image", () => this.downloadManualImage(paddedId, manualData));
 				}
 			}
 
@@ -852,8 +911,8 @@ export class ScrapeCommand {
 				manualData.itemId = itemId;
 				console.log(`    Linked to item: ${itemId}`);
 
-				// Update item JSON with manual reference
-				await time("update-item-link", () => this.updateItemWithManualLink(itemId, manualId));
+				// Update item JSON with manual reference (use canonical unpadded ID)
+				await time("update-item-link", () => this.updateItemWithManualLink(itemId, canonicalId));
 			}
 		}
 
@@ -874,19 +933,19 @@ export class ScrapeCommand {
 		await time("save-json", () => this.saveManualJson(jsonPath, manualData));
 		console.log(`  ✓ Manual JSON saved`);
 
-		// Record in index (valid status + extraction timestamp)
-		ManualsIndexUpdater.recordValid(manualId, manualData.name.ja);
-		ManualsIndexUpdater.recordExtracted(manualId);
+		// Record in index (valid status + extraction timestamp) using canonical unpadded ID
+		ManualsIndexUpdater.recordValid(canonicalId, manualData.name.ja);
+		ManualsIndexUpdater.recordExtracted(canonicalId);
 
 		this.printTimings(options, timings);
 		return { success: true };
 	}
 
 	/**
-	 * Fetch a manual page HTML
+	 * Fetch a manual page HTML with retry on timeout
 	 */
 	private async fetchManualPage(url: string): Promise<string> {
-		const response = await fetch(url, {
+		const response = await fetchWithRetry(url, {
 			headers: {
 				"User-Agent": DEFAULT_USER_AGENT,
 				"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
@@ -993,10 +1052,10 @@ export class ScrapeCommand {
 	}
 
 	/**
-	 * Download a PDF from URL
+	 * Download a PDF from URL with retry on timeout
 	 */
 	private async downloadPdf(url: string): Promise<Buffer> {
-		const response = await fetch(url, {
+		const response = await fetchWithRetry(url, {
 			headers: {
 				"User-Agent": DEFAULT_USER_AGENT,
 				"Accept": "application/pdf,*/*;q=0.8",
@@ -1071,7 +1130,7 @@ export class ScrapeCommand {
 		await this.cleanupManualImages(manualImageDir);
 
 		try {
-			const response = await fetch(imageUrl, {
+			const response = await fetchWithRetry(imageUrl, {
 				headers: {
 					"User-Agent": DEFAULT_USER_AGENT,
 					"Accept": "image/*",
@@ -1477,6 +1536,7 @@ export class ScrapeCommand {
 					"Accept": "image/webp,image/apng,image/*,*/*;q=0.8",
 					"Referer": "https://bandai-hobby.net/",
 				},
+				signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
 			});
 
 			if (response.ok) {
@@ -1882,6 +1942,7 @@ export class ScrapeCommand {
 					"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 					"Accept-Language": "ja,en-US,en;q=0.9",
 				},
+				signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
 			});
 
 			if (response.ok) {

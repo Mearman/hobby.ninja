@@ -643,6 +643,7 @@ export class BandaiCatalogParser {
 	/**
 	 * Extract manual ID from links to manual.bandai-hobby.net/menus/detail/{id}
 	 * These are direct 1:1 links between items and their assembly manuals.
+	 * Returns canonical unpadded ID (e.g., "106" not "0106")
 	 */
 	private extractManualId($: CheerioAPI): string | undefined {
 		// Pattern: manual.bandai-hobby.net/menus/detail/{id}
@@ -657,7 +658,8 @@ export class BandaiCatalogParser {
 			if (href) {
 				const match = manualPattern.exec(href);
 				if (match?.[1]) {
-					manualId = match[1];
+					// Return canonical unpadded format (strip leading zeros)
+					manualId = match[1].replace(/^0+/, "") || "0";
 				}
 			}
 		});
