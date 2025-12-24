@@ -33,26 +33,31 @@
 			"• Reproduces the movement of the manipulator (hidden arm) behind the front skirt. A beam saber can be attached to the hidden arm."
 		]
 	},
-	"images": [
-		"/images/items/01_6837/01_6837_0.jpg",
-		"/images/items/01_6837/01_6837_1.jpg",
-		"/images/items/01_6837/01_6837_2.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6837_0.jpg",
+				"path": "/images/items/01_6837/01_6837_0.jpg",
+				"hash": "3fb5886f304943995c3c3d0357903a03"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6837_1.jpg",
+				"path": "/images/items/01_6837/01_6837_1.jpg",
+				"hash": "618102dc0a9a70fa8c6a0d3c27e0f4af"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6837_2.jpg",
+				"path": "/images/items/01_6837/01_6837_2.jpg",
+				"hash": "60cca826819f678f836bb8bdf72dd0d7"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6837/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6740",
-		"01_5346",
-		"01_5210"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_6740", "01_5346", "01_5210"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

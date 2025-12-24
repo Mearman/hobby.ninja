@@ -43,29 +43,41 @@
 			"• The block on the side of the chest is responsible for the movement of the part corresponding to the shoulder blade, and is designed to prevent the axis of movement of the shoulder from being exposed due to outward movement."
 		]
 	},
-	"images": [
-		"/images/items/01_3457/153_4411.jpg",
-		"/images/items/01_3457/155_4411.jpg",
-		"/images/items/01_3457/156_4411.jpg",
-		"/images/items/01_3457/157_4411.jpg",
-		"/images/items/01_3457/158_4411.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4411.jpg",
+				"path": "/images/items/01_3457/153_4411.jpg",
+				"hash": "86d977626f56f166590dc9634965926e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4411.jpg",
+				"path": "/images/items/01_3457/155_4411.jpg",
+				"hash": "bb31efc2212b28ab543f938f9b962d36"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4411.jpg",
+				"path": "/images/items/01_3457/156_4411.jpg",
+				"hash": "612688df74f55247dc0d38da07c5eb0f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4411.jpg",
+				"path": "/images/items/01_3457/157_4411.jpg",
+				"hash": "8079158c78247afe79b5659b30a62132"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4411.jpg",
+				"path": "/images/items/01_3457/158_4411.jpg",
+				"hash": "ce6420bd08e0f5e94840184e86e5b9e8"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3457/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

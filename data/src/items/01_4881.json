@@ -26,23 +26,29 @@
 			"The Seven People of Light \"Tensho Hunter Mayaku (Tensho Kaliud Mark Two)\" is commercialized as a BB Senshi plastic model. The heavy armor and various weapons are realistically reproduced. By rearranging the parts, it can be transformed into General Barzam or Super Eagle form. The horns are reproduced with gold-plated parts, and the visor is reproduced with clear parts."
 		]
 	},
-	"images": [
-		"/images/items/01_4881/153_575.jpg",
-		"/images/items/01_4881/155_575.jpg",
-		"/images/items/01_4881/156_575.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_575.jpg",
+				"path": "/images/items/01_4881/153_575.jpg",
+				"hash": "a8bada9bd9f2ed3547dd41130b5795d8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_575.jpg",
+				"path": "/images/items/01_4881/155_575.jpg",
+				"hash": "ee66faa8de577c131ad47e72c40b4c97"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_575.jpg",
+				"path": "/images/items/01_4881/156_575.jpg",
+				"hash": "8252f3aee83bf62d759f6399a9098199"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4881/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

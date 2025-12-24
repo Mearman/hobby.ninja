@@ -51,30 +51,54 @@
 			"Head replacement parts x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_3750/153_4702.jpg",
-		"/images/items/01_3750/155_4702.jpg",
-		"/images/items/01_3750/156_4702.jpg",
-		"/images/items/01_3750/157_4702.jpg",
-		"/images/items/01_3750/158_4702.jpg",
-		"/images/items/01_3750/159_4702.jpg",
-		"/images/items/01_3750/189_4702.jpg",
-		"/images/items/01_3750/190_4702.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4702.jpg",
+				"path": "/images/items/01_3750/153_4702.jpg",
+				"hash": "48c588405dd9bebceb3807045e65b5ef"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4702.jpg",
+				"path": "/images/items/01_3750/155_4702.jpg",
+				"hash": "d33df1472422647591e17db1228bd04d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4702.jpg",
+				"path": "/images/items/01_3750/156_4702.jpg",
+				"hash": "9ce08b01d1ae19f409eec20f35c8d9af"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4702.jpg",
+				"path": "/images/items/01_3750/157_4702.jpg",
+				"hash": "7cc7fba439dcd162a8e47e8353fb0ffe"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4702.jpg",
+				"path": "/images/items/01_3750/158_4702.jpg",
+				"hash": "d93c5964185fc82b338c849ab0a021de"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4702.jpg",
+				"path": "/images/items/01_3750/159_4702.jpg",
+				"hash": "f3c5e5e7a7bc8bf14752cca15ef4f953"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4702.jpg",
+				"path": "/images/items/01_3750/189_4702.jpg",
+				"hash": "2794639d24e10b383f4da8727e32b9ba"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4702.jpg",
+				"path": "/images/items/01_3750/190_4702.jpg",
+				"hash": "5a76f54e06b50bf8c8f95cfe11064421"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3750/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"kyoukaisenki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5196",
-		"01_5183",
-		"01_5170",
-		"01_5171"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["kyoukaisenki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
 }

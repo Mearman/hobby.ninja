@@ -34,25 +34,36 @@
 			"*There is no scheduled sale at THE GUNDAM BASE stores."
 		]
 	},
-	"images": [
-		"/images/items/01_4204/1000173744_1.jpg",
-		"/images/items/01_4204/1000173744_2.jpg",
-		"/images/items/01_4204/1000173744_3.jpg",
-		"/images/items/01_4204/1000173744_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173744_1.jpg",
+				"path": "/images/items/01_4204/1000173744_1.jpg",
+				"hash": "4f3d44915552c209ae04bc8ae5aba6df"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173744_2.jpg",
+				"path": "/images/items/01_4204/1000173744_2.jpg",
+				"hash": "a255296fa3bc5fb0fccb2fac6e795845"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173744_3.jpg",
+				"path": "/images/items/01_4204/1000173744_3.jpg",
+				"hash": "96bc652e60c70e8fcfffa23995cdb546"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173744_4.jpg",
+				"path": "/images/items/01_4204/1000173744_4.jpg",
+				"hash": "cd24b6739ec83d756cb8f6b4675ef740"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4204/",
-	"brandIds": [
-		"actionbase"
-	],
+	"brandIds": ["actionbase"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5934",
-		"01_5256",
-		"01_5258"
-	],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5934", "01_5256", "01_5258"],
 	"tag": {
 		"ja": "GUNDAM SIDE-F",
 		"en": "GUNDAM SIDE-F"

@@ -19,30 +19,32 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"●SD ガンダムシリーズからエコプラでキット化"
-		],
-		"en": [
-			"-Kit from SD Gundam series with eco plastic"
-		]
+		"ja": ["●SD ガンダムシリーズからエコプラでキット化"],
+		"en": ["-Kit from SD Gundam series with eco plastic"]
 	},
-	"images": [
-		"/images/items/01_3702/153_4656.jpg",
-		"/images/items/01_3702/155_4656.jpg",
-		"/images/items/01_3702/156_4656.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4656.jpg",
+				"path": "/images/items/01_3702/153_4656.jpg",
+				"hash": "4f1fe2c92c61e31813277919cfddabff"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4656.jpg",
+				"path": "/images/items/01_3702/155_4656.jpg",
+				"hash": "33955cc7f30fb75eeea5380b4df6e2f9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4656.jpg",
+				"path": "/images/items/01_3702/156_4656.jpg",
+				"hash": "f356d04aa4d8c9ab3718c9fa3e5d21eb"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3702/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4975",
-		"01_3703"
-	]
+	"brandIds": ["sdgundamseries"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4975", "01_3703"]
 }

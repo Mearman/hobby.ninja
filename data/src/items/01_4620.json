@@ -27,27 +27,31 @@
 			"• Space Pirate Visidian Captain Ash's MS. • The unique anchors on the left and right wings can be used to recreate the ejection scene using the included lead wires. • Dods Lancer included. Molded product x 7, foil seal x 1, lead wire x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4620/153_5515.jpg",
-		"/images/items/01_4620/155_5515.jpg",
-		"/images/items/01_4620/156_5515.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5515.jpg",
+				"path": "/images/items/01_4620/153_5515.jpg",
+				"hash": "2a30e40c0166b02b8a3e67f117cd2a97"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5515.jpg",
+				"path": "/images/items/01_4620/155_5515.jpg",
+				"hash": "8c4b33cfbd2bb9cdff8310e1b0f20eed"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5515.jpg",
+				"path": "/images/items/01_4620/156_5515.jpg",
+				"hash": "fbb5d37752bea2e1cbaa03d413439df9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4620/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "323",
 		"url": "https://manual.bandai-hobby.net/menus/detail/323/"

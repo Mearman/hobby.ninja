@@ -18,32 +18,35 @@
 		"day": 14
 	},
 	"description": {
-		"ja": [
-			"• 2275F編成「たま電車」の楽しいラッピング塗装を特殊印刷で再現。",
-			"• 付属のステッカーを貼ることも可能。"
-		],
+		"ja": ["• 2275F編成「たま電車」の楽しいラッピング塗装を特殊印刷で再現。", "• 付属のステッカーを貼ることも可能。"],
 		"en": [
 			"• The fun wrapping painting of the 2275F formation \"Tama Densha\" is reproduced with special printing.",
 			"• You can also attach the included Sticker."
 		]
 	},
-	"images": [
-		"/images/items/01_5856/153_934.jpg",
-		"/images/items/01_5856/155_934.jpg",
-		"/images/items/01_5856/156_934.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_934.jpg",
+				"path": "/images/items/01_5856/153_934.jpg",
+				"hash": "92d769f0543dc01407d71c9522bf5311"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_934.jpg",
+				"path": "/images/items/01_5856/155_934.jpg",
+				"hash": "710db35619f983ba6725a6500f2c42fc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_934.jpg",
+				"path": "/images/items/01_5856/156_934.jpg",
+				"hash": "50afec181be0d65f8ab17c054ca6cd12"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5856/",
-	"brandIds": [
-		"train"
-	],
+	"brandIds": ["train"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_1276", "01_1277", "01_1278", "01_1280"]
 }

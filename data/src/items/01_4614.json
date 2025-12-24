@@ -28,7 +28,21 @@
 			"Weapons include special weapons sword and launcher, special beam rifle, and Seal (deployed). The sword and launcher can be stored and deployed by replacing them, and the storage holder is also movable, allowing you to reproduce the bombardment mode."
 		]
 	},
-	"images": ["/images/items/01_4614/153_550.jpg", "/images/items/01_4614/155_550.jpg"],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_550.jpg",
+				"path": "/images/items/01_4614/153_550.jpg",
+				"hash": "ba81f51fd7e32d1811d545f051de8db1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_550.jpg",
+				"path": "/images/items/01_4614/155_550.jpg",
+				"hash": "5fd4c45ba646a50d8f0f2fd720318f36"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4614/",
 	"brandIds": [],
 	"seriesIds": ["seed-d"],

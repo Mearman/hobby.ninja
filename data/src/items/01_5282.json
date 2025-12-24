@@ -51,28 +51,54 @@
 			"Also, depending on the application status, the deadline may be extended."
 		]
 	},
-	"images": [
-		"/images/items/01_5282/153_6132.jpg",
-		"/images/items/01_5282/155_6132.jpg",
-		"/images/items/01_5282/156_6132.jpg",
-		"/images/items/01_5282/157_6132.jpg",
-		"/images/items/01_5282/158_6132.jpg",
-		"/images/items/01_5282/159_6132.jpg",
-		"/images/items/01_5282/189_6132.jpg",
-		"/images/items/01_5282/190_6132.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6132.jpg",
+				"path": "/images/items/01_5282/153_6132.jpg",
+				"hash": "0130957e59983420e69893c54f2cfa7f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6132.jpg",
+				"path": "/images/items/01_5282/155_6132.jpg",
+				"hash": "1a2f01d0979d88cf229ab86dcbad0ab1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6132.jpg",
+				"path": "/images/items/01_5282/156_6132.jpg",
+				"hash": "616049b57fb590107e900d484da10cee"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6132.jpg",
+				"path": "/images/items/01_5282/157_6132.jpg",
+				"hash": "bb39a7da43d4f8939be64eee47f6a209"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6132.jpg",
+				"path": "/images/items/01_5282/158_6132.jpg",
+				"hash": "69a52792b363ee79fe47db2a57567d78"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6132.jpg",
+				"path": "/images/items/01_5282/159_6132.jpg",
+				"hash": "075d60a754ec42c6fe84186b90fd7662"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6132.jpg",
+				"path": "/images/items/01_5282/189_6132.jpg",
+				"hash": "84efa74fa7aff52e8ff2bf2efcb9696e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6132.jpg",
+				"path": "/images/items/01_5282/190_6132.jpg",
+				"hash": "0f1a29642a960968a8084b409851f1e0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5282/",
-	"brandIds": [
-		"pb_charapla"
-	],
-	"seriesIds": [
-		"macross"
-	],
+	"brandIds": ["pb_charapla"],
+	"seriesIds": ["macross"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"item-1000211093",
-		"item-1000194043",
-		"01_5310",
-		"01_5309"
-	]
+	"relatedItemIds": ["item-1000211093", "item-1000194043", "01_5310", "01_5309"]
 }

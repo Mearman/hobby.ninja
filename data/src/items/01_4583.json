@@ -27,27 +27,31 @@
 			"• Zedas from UE (Unknown Enemy), a threat to humanity, is now available as HG. • The “pupil” part and chest of the head part are reproduced with clear parts and foil seals. Molded parts x 5, foil seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_4583/153_5481.jpg",
-		"/images/items/01_4583/155_5481.jpg",
-		"/images/items/01_4583/156_5481.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5481.jpg",
+				"path": "/images/items/01_4583/153_5481.jpg",
+				"hash": "3936f9dae07a494521e719b1f2ce3e14"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5481.jpg",
+				"path": "/images/items/01_4583/155_5481.jpg",
+				"hash": "8ae1282fc947e85c572bb87be206b87e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5481.jpg",
+				"path": "/images/items/01_4583/156_5481.jpg",
+				"hash": "f8b427fb74b7f8917a46dd574e3153c4"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4583/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "940",
 		"url": "https://manual.bandai-hobby.net/menus/detail/940/"

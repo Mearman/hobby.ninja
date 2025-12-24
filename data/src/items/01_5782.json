@@ -39,26 +39,31 @@
 			"• You can recreate the \"Giant Bazooka \" by combining the dedicated bazooka with the separately sold \" HGUC Dom\" bazooka. Can also be hung on a Seal weapon rack."
 		]
 	},
-	"images": [
-		"/images/items/01_5782/153_843.jpg",
-		"/images/items/01_5782/155_843.jpg",
-		"/images/items/01_5782/156_843.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_843.jpg",
+				"path": "/images/items/01_5782/153_843.jpg",
+				"hash": "73cc8a0860a5e0a587d1dfaa2be958c7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_843.jpg",
+				"path": "/images/items/01_5782/155_843.jpg",
+				"hash": "775daf0b641d7f016bf8abe88a7f245b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_843.jpg",
+				"path": "/images/items/01_5782/156_843.jpg",
+				"hash": "ed00838eb6950431a19815c71809bf8b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5782/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
+	"brandIds": ["hg", "hguc"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5963", "01_5961", "01_5951"],
 	"manual": {
 		"id": "381",
 		"url": "https://manual.bandai-hobby.net/menus/detail/381/"

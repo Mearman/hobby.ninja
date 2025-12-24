@@ -48,14 +48,7 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"滑腔砲×1",
-			"高周波ブレード×2",
-			"リード線×2",
-			"フィギュア×1",
-			"マーキングシール×1",
-			"ホイルシール×"
-		],
+		"ja": ["滑腔砲×1", "高周波ブレード×2", "リード線×2", "フィギュア×1", "マーキングシール×1", "ホイルシール×"],
 		"en": [
 			"Smoothbore gun x 1",
 			"High frequency blade x 2",
@@ -65,31 +58,59 @@
 			"Foil Seal×"
 		]
 	},
-	"images": [
-		"/images/items/01_3647/153_4601.jpg",
-		"/images/items/01_3647/155_4601.jpg",
-		"/images/items/01_3647/156_4601.jpg",
-		"/images/items/01_3647/157_4601.jpg",
-		"/images/items/01_3647/158_4601.jpg",
-		"/images/items/01_3647/159_4601.jpg",
-		"/images/items/01_3647/189_4601.jpg",
-		"/images/items/01_3647/190_4601.jpg",
-		"/images/items/01_3647/191_4601.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4601.jpg",
+				"path": "/images/items/01_3647/153_4601.jpg",
+				"hash": "33f1388161a195a0bcabcbc197a89348"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4601.jpg",
+				"path": "/images/items/01_3647/155_4601.jpg",
+				"hash": "aca1cf57ec2f225cf071bec28ce7a322"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4601.jpg",
+				"path": "/images/items/01_3647/156_4601.jpg",
+				"hash": "a9a80e04529e72dac8c3bdb7b4060d22"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4601.jpg",
+				"path": "/images/items/01_3647/157_4601.jpg",
+				"hash": "9d931c32516764b5bb9531e434290a1d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4601.jpg",
+				"path": "/images/items/01_3647/158_4601.jpg",
+				"hash": "24b9a8c32bf73865d11097b4b6cf973a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4601.jpg",
+				"path": "/images/items/01_3647/159_4601.jpg",
+				"hash": "a53d4ef483a923775a22b0e59492a284"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4601.jpg",
+				"path": "/images/items/01_3647/189_4601.jpg",
+				"hash": "539a23109fde131814dc36fb04ebb7b1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4601.jpg",
+				"path": "/images/items/01_3647/190_4601.jpg",
+				"hash": "cd0a49f589c64b1048540393a3275bb3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4601.jpg",
+				"path": "/images/items/01_3647/191_4601.jpg",
+				"hash": "94a215a37e6c1fc2e6d14ba463a7796c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3647/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"eightysix"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_3665",
-		"01_3648",
-		"01_3400",
-		"01_3391"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["eightysix"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_3665", "01_3648", "01_3400", "01_3391"]
 }

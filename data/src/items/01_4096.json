@@ -71,30 +71,46 @@
 			"Lead wire x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4096/153_5020.jpg",
-		"/images/items/01_4096/155_5020.jpg",
-		"/images/items/01_4096/156_5020.jpg",
-		"/images/items/01_4096/157_5020.jpg",
-		"/images/items/01_4096/158_5020.jpg",
-		"/images/items/01_4096/159_5020.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5020.jpg",
+				"path": "/images/items/01_4096/153_5020.jpg",
+				"hash": "910d5a8267ea6bac62167797451db046"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5020.jpg",
+				"path": "/images/items/01_4096/155_5020.jpg",
+				"hash": "6f933ddabd2554f24d0a2b8a0f1fb301"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5020.jpg",
+				"path": "/images/items/01_4096/156_5020.jpg",
+				"hash": "9b45727f0efec07a260ce149a5a2c2f1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5020.jpg",
+				"path": "/images/items/01_4096/157_5020.jpg",
+				"hash": "c14a11978d4671c516220aea325c9bcf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5020.jpg",
+				"path": "/images/items/01_4096/158_5020.jpg",
+				"hash": "81759f8c5e720039150e05a63d010a41"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5020.jpg",
+				"path": "/images/items/01_4096/159_5020.jpg",
+				"hash": "a9abe47f1b9d9f529539ba7c529c6f19"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4096/",
-	"brandIds": [
-		"fullmechanics"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5209",
-		"01_4906",
-		"01_3573",
-		"01_3426"
-	],
+	"brandIds": ["fullmechanics"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5209", "01_4906", "01_3573", "01_3426"],
 	"manual": {
 		"id": "1094",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1094/"

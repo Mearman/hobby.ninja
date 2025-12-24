@@ -30,35 +30,71 @@
 			"The external armor slides according to the movement of the internal skeleton. Equipment includes a rifle, a seal, and an assault knife."
 		]
 	},
-	"images": [
-		"/images/items/01_4040/153_496.jpg",
-		"/images/items/01_4040/155_496.jpg",
-		"/images/items/01_4040/156_496.jpg",
-		"/images/items/01_4040/157_496.jpg",
-		"/images/items/01_4040/158_496.jpg",
-		"/images/items/01_4040/159_496.jpg",
-		"/images/items/01_4040/189_496.jpg",
-		"/images/items/01_4040/190_496.jpg",
-		"/images/items/01_4040/191_496.jpg",
-		"/images/items/01_4040/192_496.jpg",
-		"/images/items/01_4040/193_496.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_496.jpg",
+				"path": "/images/items/01_4040/153_496.jpg",
+				"hash": "58dd420de4035f2533883aefad803f97"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_496.jpg",
+				"path": "/images/items/01_4040/155_496.jpg",
+				"hash": "200ed106c9b08877f3505bcc1a2ab807"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_496.jpg",
+				"path": "/images/items/01_4040/156_496.jpg",
+				"hash": "19cfcf68e6aa575ed1f7952527cc7bf2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_496.jpg",
+				"path": "/images/items/01_4040/157_496.jpg",
+				"hash": "c833f91e0d88f78cd9fecb2a3c45b7e9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_496.jpg",
+				"path": "/images/items/01_4040/158_496.jpg",
+				"hash": "dff4dfca53747c05b88d6ddaa40e235c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_496.jpg",
+				"path": "/images/items/01_4040/159_496.jpg",
+				"hash": "88e5bfcb6855877bf28982d7ddbeb667"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_496.jpg",
+				"path": "/images/items/01_4040/189_496.jpg",
+				"hash": "4c00e47942ab63f3415d11c7d45cb01b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_496.jpg",
+				"path": "/images/items/01_4040/190_496.jpg",
+				"hash": "bb132e8efaed8db9fd1495d2b4986f71"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_496.jpg",
+				"path": "/images/items/01_4040/191_496.jpg",
+				"hash": "2c459d2bff3992d90311812111bd766b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_496.jpg",
+				"path": "/images/items/01_4040/192_496.jpg",
+				"hash": "62e8fda765106c276c3651efd529a7d2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_496.jpg",
+				"path": "/images/items/01_4040/193_496.jpg",
+				"hash": "fd8952a19ad1ae4a9b560ef2ca59b7f2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4040/",
-	"brandIds": [
-		"pg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2583",
-		"item-1000140845",
-		"01_1913",
-		"01_4873"
-	],
+	"brandIds": ["pg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2583", "item-1000140845", "01_1913", "01_4873"],
 	"manual": {
 		"id": "652",
 		"url": "https://manual.bandai-hobby.net/menus/detail/652/"

@@ -20,30 +20,24 @@
 	"targetAge": 8,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"1/100 ガンダムエクシアロールアウトカラーバージョン登場！"
-		],
-		"en": [
-			"1/100 Gundam Exia rollout color version now available!"
-		]
+		"ja": ["1/100 ガンダムエクシアロールアウトカラーバージョン登場！"],
+		"en": ["1/100 Gundam Exia rollout color version now available!"]
 	},
-	"images": [
-		"/images/items/01_4945/153_5818.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5818.jpg",
+				"path": "/images/items/01_4945/153_5818.jpg",
+				"hash": "7063f9f4a6826368fca1825543fc5bcb"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4945/",
 	"brandIds": [],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216602",
-		"01_5526",
-		"item-1000161849",
-		"01_5102"
-	],
+	"seriesIds": ["g-00"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216602", "01_5526", "item-1000161849", "01_5102"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

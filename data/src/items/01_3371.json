@@ -36,24 +36,31 @@
 			"• Comes with a twin buster rifle that can be combined and separated. It can be held in both hands when separated."
 		]
 	},
-	"images": [
-		"/images/items/01_3371/153_4323.jpg",
-		"/images/items/01_3371/155_4323.jpg",
-		"/images/items/01_3371/156_4323.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4323.jpg",
+				"path": "/images/items/01_3371/153_4323.jpg",
+				"hash": "a4cde82d5bd91a9daf216ce578a0d669"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4323.jpg",
+				"path": "/images/items/01_3371/155_4323.jpg",
+				"hash": "0aaa3432b33c9808c8f9f77a63fda1de"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4323.jpg",
+				"path": "/images/items/01_3371/156_4323.jpg",
+				"hash": "1429f69e1b5d5401b6bb890f5c8c49e7"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3371/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2494"
-	],
+	"brandIds": ["sdcs"],
+	"seriesIds": ["endlesswaltz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2494"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

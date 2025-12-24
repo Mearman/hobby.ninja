@@ -31,26 +31,24 @@
 			"-Two types of heat rods are included with soft material stars."
 		]
 	},
-	"images": [
-		"/images/items/01_4070/153_4998.jpg",
-		"/images/items/01_4070/155_4998.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4998.jpg",
+				"path": "/images/items/01_4070/153_4998.jpg",
+				"hash": "25435094a966e24ae08275c1384fe7bb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4998.jpg",
+				"path": "/images/items/01_4070/155_4998.jpg",
+				"hash": "bce2b5457e188d5dbba1fa3d1ec205a8"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4070/",
-	"brandIds": [
-		"ecoplaproject_g",
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5045",
-		"01_4985",
-		"01_4971",
-		"01_4365"
-	]
+	"brandIds": ["ecoplaproject_g", "hg", "hguc"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5045", "01_4985", "01_4971", "01_4365"]
 }

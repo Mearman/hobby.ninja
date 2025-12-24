@@ -26,22 +26,24 @@
 			"• Taishi Jidom who appears in \"SD Gundam Sangokuden Brave Battle Warriors \". • A special weapon \" Koshi Tsurei Kotsuda \" is included. • Pla Model's original support mecha \" Steel Armored Machine \" is included, and can be combined with the main body to reproduce \" Steel Armored Form \" and \" Steel Armored Form\". Molded product x 4, Seal x 1, instruction manual included *New package, molding color changed"
 		]
 	},
-	"images": [
-		"/images/items/01_4666/153_5557.jpg",
-		"/images/items/01_4666/155_5557.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5557.jpg",
+				"path": "/images/items/01_4666/153_5557.jpg",
+				"hash": "46ef074b0e32078276181bb7ffd5fba2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5557.jpg",
+				"path": "/images/items/01_4666/155_5557.jpg",
+				"hash": "db5880687f8828cefe1b93ae801da2c1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4666/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

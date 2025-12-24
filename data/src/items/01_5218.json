@@ -46,27 +46,46 @@
 			"Warm, vintage-style coloring that takes advantage of the texture of the material."
 		]
 	},
-	"images": [
-		"/images/items/01_5218/153_6073.jpg",
-		"/images/items/01_5218/155_6073.jpg",
-		"/images/items/01_5218/156_6073.jpg",
-		"/images/items/01_5218/157_6073.jpg",
-		"/images/items/01_5218/158_6073.jpg",
-		"/images/items/01_5218/159_6073.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6073.jpg",
+				"path": "/images/items/01_5218/153_6073.jpg",
+				"hash": "38466a38c823ffff6cf99add6a7eae18"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6073.jpg",
+				"path": "/images/items/01_5218/155_6073.jpg",
+				"hash": "4335ee920a3350de83b9fca15cb40338"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6073.jpg",
+				"path": "/images/items/01_5218/156_6073.jpg",
+				"hash": "745b90016feb2fef4a02be238fc0fe9a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6073.jpg",
+				"path": "/images/items/01_5218/157_6073.jpg",
+				"hash": "4a1b2f7e2eefdc257adf8d915391a64c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6073.jpg",
+				"path": "/images/items/01_5218/158_6073.jpg",
+				"hash": "1523a2213996cc002f9cd9dfe9f6351c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6073.jpg",
+				"path": "/images/items/01_5218/159_6073.jpg",
+				"hash": "8bd51666e7d819681dfdcb6f006f1578"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5218/",
-	"brandIds": [
-		"entry_grade"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5045"
-	],
+	"brandIds": ["entry_grade"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5045"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

@@ -36,44 +36,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"フェダーインライフル",
-			"ビーム・サーベル"
-		],
-		"en": [
-			"federin rifle",
-			"beam saber"
-		]
+		"ja": ["フェダーインライフル", "ビーム・サーベル"],
+		"en": ["federin rifle", "beam saber"]
 	},
-	"images": [
-		"/images/items/01_5245/153_609.jpg",
-		"/images/items/01_5245/155_609.jpg",
-		"/images/items/01_5245/156_609.jpg",
-		"/images/items/01_5245/157_609.jpg",
-		"/images/items/01_5245/158_609.jpg",
-		"/images/items/01_5245/159_609.jpg",
-		"/images/items/01_5245/189_609.jpg",
-		"/images/items/01_5245/190_609.jpg",
-		"/images/items/01_5245/191_609.jpg",
-		"/images/items/01_5245/192_609.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_609.jpg",
+				"path": "/images/items/01_5245/153_609.jpg",
+				"hash": "9092199f03fb55d30b57b565be6f1406"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_609.jpg",
+				"path": "/images/items/01_5245/155_609.jpg",
+				"hash": "e837c72fd9fba86835f6e60c799cebe4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_609.jpg",
+				"path": "/images/items/01_5245/156_609.jpg",
+				"hash": "706a741ba5a110fe23ba62985a09c884"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_609.jpg",
+				"path": "/images/items/01_5245/157_609.jpg",
+				"hash": "a735cfced301aae9ea43bd5c278c6703"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_609.jpg",
+				"path": "/images/items/01_5245/158_609.jpg",
+				"hash": "dc219ac2650d92aab4e3fa91e2d32b8a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_609.jpg",
+				"path": "/images/items/01_5245/159_609.jpg",
+				"hash": "bd903874874653b2386c8511c1abcf5f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_609.jpg",
+				"path": "/images/items/01_5245/189_609.jpg",
+				"hash": "a0d9a6b69bf10d2aeeff23f8c7c73c19"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_609.jpg",
+				"path": "/images/items/01_5245/190_609.jpg",
+				"hash": "4f5e3b07e1db97b18121d5b368802407"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_609.jpg",
+				"path": "/images/items/01_5245/191_609.jpg",
+				"hash": "b3207e276d19421f7dc88111d77599c9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_609.jpg",
+				"path": "/images/items/01_5245/192_609.jpg",
+				"hash": "a26e395f672f83f913c13622b76122cc"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5245/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"],
 	"manual": {
 		"id": "895",
 		"url": "https://manual.bandai-hobby.net/menus/detail/895/"

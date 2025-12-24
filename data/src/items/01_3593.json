@@ -20,35 +20,41 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"• ジェノアス第二世代機がHGシリーズに登場。 成形品×7、ホイルシール×1、組立説明書×1"
-		],
+		"ja": ["• ジェノアス第二世代機がHGシリーズに登場。 成形品×7、ホイルシール×1、組立説明書×1"],
 		"en": [
 			"• Genoas second generation machine is now available in the HG series. Molded product x 7, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_3593/153_4548.jpg",
-		"/images/items/01_3593/155_4548.jpg",
-		"/images/items/01_3593/156_4548.jpg",
-		"/images/items/01_3593/157_4548.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4548.jpg",
+				"path": "/images/items/01_3593/153_4548.jpg",
+				"hash": "cf426a53f9586309594e8989bd9d94ee"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4548.jpg",
+				"path": "/images/items/01_3593/155_4548.jpg",
+				"hash": "f82533ce6432534ac9aec3690696bf19"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4548.jpg",
+				"path": "/images/items/01_3593/156_4548.jpg",
+				"hash": "9d6166a49f063d1068cb9976a9a3dae7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4548.jpg",
+				"path": "/images/items/01_3593/157_4548.jpg",
+				"hash": "fd409ce0cf985d6fa3de0f5ad3aebc0b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3593/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "326",
 		"url": "https://manual.bandai-hobby.net/menus/detail/326/"

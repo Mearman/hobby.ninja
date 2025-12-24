@@ -70,31 +70,61 @@
 			"Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5490/01_5490_0.jpg",
-		"/images/items/01_5490/01_5490_1.jpg",
-		"/images/items/01_5490/01_5490_2.jpg",
-		"/images/items/01_5490/01_5490_3.jpg",
-		"/images/items/01_5490/01_5490_4.jpg",
-		"/images/items/01_5490/01_5490_5.jpg",
-		"/images/items/01_5490/01_5490_6.jpg",
-		"/images/items/01_5490/01_5490_7.jpg",
-		"/images/items/01_5490/01_5490_8.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5490_0.jpg",
+				"path": "/images/items/01_5490/01_5490_0.jpg",
+				"hash": "aa6e1e16b019bd93fd9ccb2424ab2e76"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5490_1.jpg",
+				"path": "/images/items/01_5490/01_5490_1.jpg",
+				"hash": "d2627fad59107fa714611611fc27e48e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5490_2.jpg",
+				"path": "/images/items/01_5490/01_5490_2.jpg",
+				"hash": "66cdba9140a87e34e94011344e8f3f37"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5490_3.jpg",
+				"path": "/images/items/01_5490/01_5490_3.jpg",
+				"hash": "da87136274a1f92c15cece9e47567219"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5490_4.jpg",
+				"path": "/images/items/01_5490/01_5490_4.jpg",
+				"hash": "4ee4eede8d9dff81330b62ae563c08fb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5490_5.jpg",
+				"path": "/images/items/01_5490/01_5490_5.jpg",
+				"hash": "fcb0fa4347ff8257bfec9321f24224dc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5490_6.jpg",
+				"path": "/images/items/01_5490/01_5490_6.jpg",
+				"hash": "86aaf6fb648e478a37ec18ea4eb5070e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5490_7.jpg",
+				"path": "/images/items/01_5490/01_5490_7.jpg",
+				"hash": "f8d03c347c60d8e8c40944a904acb5c2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5490_8.jpg",
+				"path": "/images/items/01_5490/01_5490_8.jpg",
+				"hash": "64c62343765bbbae07fe09763c4f85a0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5490/",
-	"brandIds": [
-		"30mf"
-	],
+	"brandIds": ["30mf"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5990",
-		"01_5989",
-		"01_5972",
-		"01_5973"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"],
 	"manual": {
 		"id": "3417",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3417/"

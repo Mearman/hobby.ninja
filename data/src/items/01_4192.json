@@ -28,21 +28,21 @@
 			"Goods featuring the character \"Gunpla-kun\" that conveys the fun of Gunpla are now available! Released at Gundam Base Tokyo/Fukuoka and Gundam Base Satellite Nagoya/Kyoto/Yokohama!"
 		]
 	},
-	"images": [
-		"/images/items/01_4192/153_5113.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5113.jpg",
+				"path": "/images/items/01_4192/153_5113.jpg",
+				"hash": "70e5ea5f4d9766697faf4d0e02cf4cb8"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4192/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
-	"relatedItemIds": [
-		"01_5571",
-		"01_5556",
-		"01_5992",
-		"01_5478"
-	],
+	"categoryIds": ["product-list"],
+	"relatedItemIds": ["01_5571", "01_5556", "01_5992", "01_5478"],
 	"tag": {
 		"ja": "ガンプラくんグッズ",
 		"en": "Gunpla-kun Goods"

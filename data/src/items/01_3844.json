@@ -35,27 +35,31 @@
 			"• Includes parts that can reproduce the beam size storage state. Can be attached to rear armor."
 		]
 	},
-	"images": [
-		"/images/items/01_3844/1000166557_1.jpg",
-		"/images/items/01_3844/1000166557_2.jpg",
-		"/images/items/01_3844/1000166557_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000166557_1.jpg",
+				"path": "/images/items/01_3844/1000166557_1.jpg",
+				"hash": "4d44590fe68a8bff2e70a650fa1014bc"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000166557_2.jpg",
+				"path": "/images/items/01_3844/1000166557_2.jpg",
+				"hash": "f1316b8cf8c332d906db2c70651465d5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000166557_3.jpg",
+				"path": "/images/items/01_3844/1000166557_3.jpg",
+				"hash": "3606c53f8e0c8e77bfe4a5bdd81b275b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3844/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5590",
-		"item-1000213249",
-		"01_5340",
-		"item-1000183318"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["endlesswaltz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5590", "item-1000213249", "01_5340", "item-1000183318"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

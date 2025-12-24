@@ -20,34 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"「HGUC 1/144 RX-78-2 ガンダム グロスインジェクションバージョン」登場！"
-		],
-		"en": [
-			"\"HGUC 1/144 RX-78-2 Gundam Gloss Injection Version\" now available!"
-		]
+		"ja": ["「HGUC 1/144 RX-78-2 ガンダム グロスインジェクションバージョン」登場！"],
+		"en": ["\"HGUC 1/144 RX-78-2 Gundam Gloss Injection Version\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4830/153_5712.jpg",
-		"/images/items/01_4830/155_5712.jpg",
-		"/images/items/01_4830/156_5712.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5712.jpg",
+				"path": "/images/items/01_4830/153_5712.jpg",
+				"hash": "564bcce8b4d0b3b8536ad277e0ec2588"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5712.jpg",
+				"path": "/images/items/01_4830/155_5712.jpg",
+				"hash": "12066ddb7088f0a931ad33f5631fc6a8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5712.jpg",
+				"path": "/images/items/01_4830/156_5712.jpg",
+				"hash": "e7eb21dc19371a490148e0e25f59c924"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4830/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

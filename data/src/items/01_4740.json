@@ -19,30 +19,32 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"• 孫権ガンダムのの新装備バージョン"
-		],
-		"en": [
-			"• New equipment version of Sun Quan Gundam"
-		]
+		"ja": ["• 孫権ガンダムのの新装備バージョン"],
+		"en": ["• New equipment version of Sun Quan Gundam"]
 	},
-	"images": [
-		"/images/items/01_4740/153_5625.jpg",
-		"/images/items/01_4740/155_5625.jpg",
-		"/images/items/01_4740/156_5625.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5625.jpg",
+				"path": "/images/items/01_4740/153_5625.jpg",
+				"hash": "2b5eb8631b572828032fa80b93ad932e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5625.jpg",
+				"path": "/images/items/01_4740/155_5625.jpg",
+				"hash": "4144487ae1d025b97ab67cf4327aeed3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5625.jpg",
+				"path": "/images/items/01_4740/156_5625.jpg",
+				"hash": "f5f0f472d3d2cd3eec9356e0b8a4c19f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4740/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

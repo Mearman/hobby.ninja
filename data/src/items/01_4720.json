@@ -26,22 +26,24 @@
 			"A kit version of the successor to the Gundam Leopard that appeared on the TV \"Mobile New Century Gundam X\". The twin beam cylinder of the backpack can be combined with both arms and the deformation mechanism can be reproduced. The right shoulder beam cannon is movable. n Left shoulder 11 missile pod, breasted gatling, and hornet missile each reproduce the opening and closing mechanism. The wrist beam cannon on the forearm can be slid. Plated parts are used for the head antenna and chest details. Comes with a heat ax, separate missile, and beam knife. Comes with foil seal."
 		]
 	},
-	"images": [
-		"/images/items/01_4720/153_5606.jpg",
-		"/images/items/01_4720/155_5606.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5606.jpg",
+				"path": "/images/items/01_4720/153_5606.jpg",
+				"hash": "86e4776d7f4727a9fcdc7be8a6d30809"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5606.jpg",
+				"path": "/images/items/01_4720/155_5606.jpg",
+				"hash": "3e3ad97bb25ec398bbba31a7e83fe578"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4720/",
 	"brandIds": [],
-	"seriesIds": [
-		"x"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000147185",
-		"item-1000147187",
-		"item-1000124674",
-		"01_298"
-	]
+	"seriesIds": ["x"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000147185", "item-1000147187", "item-1000124674", "01_298"]
 }

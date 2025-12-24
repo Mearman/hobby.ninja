@@ -33,27 +33,31 @@
 			"• If you remove the Glastro Launcher, you can recreate AGE-1 Gransa, and if you remove the armor, you can recreate AGE-1 Flat."
 		]
 	},
-	"images": [
-		"/images/items/01_5789/153_855.jpg",
-		"/images/items/01_5789/155_855.jpg",
-		"/images/items/01_5789/156_855.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_855.jpg",
+				"path": "/images/items/01_5789/153_855.jpg",
+				"hash": "3828165eececb1613901c2ab57b8ceb4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_855.jpg",
+				"path": "/images/items/01_5789/155_855.jpg",
+				"hash": "dc0a775d42464669c6e7d06ff9e48fbf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_855.jpg",
+				"path": "/images/items/01_5789/156_855.jpg",
+				"hash": "6dfd684cb684a54c3b629c7534673f0c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5789/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "3",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3/"

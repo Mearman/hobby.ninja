@@ -26,26 +26,26 @@
 			"A plastic model of the HG series of the Jinhai Maneuver 2 type aboard \"Mobile Suit Gundam SEED DESTINY\". Various parts such as the head, shield, beam rifle, sword, shoulder armor, etc. are realistically expressed using new parts. Just like in the movie, you can also recreate poses holding a sword or beam rifle. The included weapon sword has separate parts for the scabbard and sword."
 		]
 	},
-	"images": [
-		"/images/items/01_4777/153_565.jpg",
-		"/images/items/01_4777/155_565.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_565.jpg",
+				"path": "/images/items/01_4777/153_565.jpg",
+				"hash": "f678f461aa1bc579528893f972a4b224"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_565.jpg",
+				"path": "/images/items/01_4777/155_565.jpg",
+				"hash": "0ea257d351c8101bbe45405ea1912b7a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4777/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000203308", "01_5097", "01_3739", "item-1000157417"],
 	"manual": {
 		"id": "166",
 		"url": "https://manual.bandai-hobby.net/menus/detail/166/"

@@ -33,29 +33,36 @@
 			"Molds are engraved on the inside of the rear skirt and leg armor, and weapons include a beam rifle, beam naginata, and seal."
 		]
 	},
-	"images": [
-		"/images/items/01_5623/153_681.jpg",
-		"/images/items/01_5623/155_681.jpg",
-		"/images/items/01_5623/156_681.jpg",
-		"/images/items/01_5623/157_681.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_681.jpg",
+				"path": "/images/items/01_5623/153_681.jpg",
+				"hash": "d59601afee285fc7ff56d9227cafca3a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_681.jpg",
+				"path": "/images/items/01_5623/155_681.jpg",
+				"hash": "c811aeac4e2cee3127d14abb8705862c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_681.jpg",
+				"path": "/images/items/01_5623/156_681.jpg",
+				"hash": "80d9a5be502757ac7d057ff781ee223c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_681.jpg",
+				"path": "/images/items/01_5623/157_681.jpg",
+				"hash": "797455ca2bd0301b9f11991442b86017"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5623/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"manual": {
 		"id": "828",
 		"url": "https://manual.bandai-hobby.net/menus/detail/828/"

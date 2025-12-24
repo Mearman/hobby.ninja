@@ -20,34 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"「HGUC 1/144 MS-06S シャア専用ザク エクストラフィニッシュバージョン」登場！"
-		],
-		"en": [
-			"\"HGUC 1/144 MS-06S Char's Zaku Extra Finish Version\" now available!"
-		]
+		"ja": ["「HGUC 1/144 MS-06S シャア専用ザク エクストラフィニッシュバージョン」登場！"],
+		"en": ["\"HGUC 1/144 MS-06S Char's Zaku Extra Finish Version\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4851/153_5731.jpg",
-		"/images/items/01_4851/155_5731.jpg",
-		"/images/items/01_4851/156_5731.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5731.jpg",
+				"path": "/images/items/01_4851/153_5731.jpg",
+				"hash": "fa6579ffee6e75014af3d85ad5dddd53"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5731.jpg",
+				"path": "/images/items/01_4851/155_5731.jpg",
+				"hash": "4e6ba118d482a10d1977ceb86b2436bb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5731.jpg",
+				"path": "/images/items/01_4851/156_5731.jpg",
+				"hash": "0c17193904a0ef8357a20ebe2fa66b5e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4851/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

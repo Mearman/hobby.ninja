@@ -43,43 +43,57 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"カラータイマー用パーツ×2種",
-			"ハンドパーツ×1式",
-			"チルソナイトソード×1",
-			"シール×1"
-		],
-		"en": [
-			"Color timer parts x 2 types",
-			"Hand parts x 1 set",
-			"Chilsonite sword x1",
-			"Seal×1"
-		]
+		"ja": ["カラータイマー用パーツ×2種", "ハンドパーツ×1式", "チルソナイトソード×1", "シール×1"],
+		"en": ["Color timer parts x 2 types", "Hand parts x 1 set", "Chilsonite sword x1", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_5046/1000204121_1.jpg",
-		"/images/items/01_5046/1000204121_2.jpg",
-		"/images/items/01_5046/1000204121_3.jpg",
-		"/images/items/01_5046/1000204121_4.jpg",
-		"/images/items/01_5046/1000204121_5.jpg",
-		"/images/items/01_5046/1000204121_6.jpg",
-		"/images/items/01_5046/1000204121_7.jpg",
-		"/images/items/01_5046/1000204121_8.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204121_1.jpg",
+				"path": "/images/items/01_5046/1000204121_1.jpg",
+				"hash": "f7452d9cae1f58d50f7decfc03835a05"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204121_2.jpg",
+				"path": "/images/items/01_5046/1000204121_2.jpg",
+				"hash": "f38509a6cbcd450eabf09a94c3c57b53"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204121_3.jpg",
+				"path": "/images/items/01_5046/1000204121_3.jpg",
+				"hash": "97c83eacc4a4b298c760869e938e362a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204121_4.jpg",
+				"path": "/images/items/01_5046/1000204121_4.jpg",
+				"hash": "887577dce4fc91b70414c9d7449de856"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204121_5.jpg",
+				"path": "/images/items/01_5046/1000204121_5.jpg",
+				"hash": "930637baea15f8f6c25ca3cb4dd98f68"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204121_6.jpg",
+				"path": "/images/items/01_5046/1000204121_6.jpg",
+				"hash": "9b2f50aab58d973583d23865b7c637a0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204121_7.jpg",
+				"path": "/images/items/01_5046/1000204121_7.jpg",
+				"hash": "ca4ca7d4ac6e044f898952b3748cc0da"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204121_8.jpg",
+				"path": "/images/items/01_5046/1000204121_8.jpg",
+				"hash": "894b0cb304784893865e972974f957b5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5046/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"ultraman"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5371",
-		"01_5198",
-		"01_5096",
-		"01_5006"
-	]
+	"brandIds": ["figurerise-standard"],
+	"seriesIds": ["ultraman"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5371", "01_5198", "01_5096", "01_5006"]
 }

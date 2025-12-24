@@ -20,35 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HGUC 1/144 MSN-04 サザビー Ver.GFT　登場！"
-		],
-		"en": [
-			"HGUC 1/144 MSN-04 Sazabi Ver.GFT now available!"
-		]
+		"ja": ["HGUC 1/144 MSN-04 サザビー Ver.GFT　登場！"],
+		"en": ["HGUC 1/144 MSN-04 Sazabi Ver.GFT now available!"]
 	},
-	"images": [
-		"/images/items/01_4774/153_5657.jpg",
-		"/images/items/01_4774/155_5657.jpg",
-		"/images/items/01_4774/156_5657.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5657.jpg",
+				"path": "/images/items/01_4774/153_5657.jpg",
+				"hash": "cbbf73d1639e1246851339c7ce0ab352"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5657.jpg",
+				"path": "/images/items/01_4774/155_5657.jpg",
+				"hash": "ad98f34843c07998d73a20e0bcf1cce5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5657.jpg",
+				"path": "/images/items/01_4774/156_5657.jpg",
+				"hash": "ad38d0f17149ade77c143f44f23f41dc"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4774/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5346",
-		"01_5210",
-		"01_4971",
-		"01_4408"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5346", "01_5210", "01_4971", "01_4408"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

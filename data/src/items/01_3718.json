@@ -52,27 +52,41 @@
 			"In addition to the assembly manual, an aircraft manual and an original manga written by Koichi Tokita are included."
 		]
 	},
-	"images": [
-		"/images/items/01_3718/1000092468_1.jpg",
-		"/images/items/01_3718/1000092468_2.jpg",
-		"/images/items/01_3718/1000092468_3.jpg",
-		"/images/items/01_3718/1000092468_4.jpg",
-		"/images/items/01_3718/1000092468_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092468_1.jpg",
+				"path": "/images/items/01_3718/1000092468_1.jpg",
+				"hash": "e75975157bb0127d010d386c04f30ff0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092468_2.jpg",
+				"path": "/images/items/01_3718/1000092468_2.jpg",
+				"hash": "ff4050ceb1609848885c97b3f1945d5b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092468_3.jpg",
+				"path": "/images/items/01_3718/1000092468_3.jpg",
+				"hash": "c1009d8a0830612076d13ce69e57ef72"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092468_4.jpg",
+				"path": "/images/items/01_3718/1000092468_4.jpg",
+				"hash": "5c9a5b7c1dee6f0e44bb656d4df6b90f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092468_5.jpg",
+				"path": "/images/items/01_3718/1000092468_5.jpg",
+				"hash": "cf0dac13ea3a92dccb774d530b8740af"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3718/",
-	"brandIds": [
-		"pg"
-	],
+	"brandIds": ["pg"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000164780",
-		"item-1000164779",
-		"01_3373",
-		"item-1000150097"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000164780", "item-1000164779", "01_3373", "item-1000150097"],
 	"manual": {
 		"id": "655",
 		"url": "https://manual.bandai-hobby.net/menus/detail/655/"

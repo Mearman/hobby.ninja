@@ -35,31 +35,51 @@
 			"• Comes with a pedestal perfect for display."
 		]
 	},
-	"images": [
-		"/images/items/01_3462/153_4416.jpg",
-		"/images/items/01_3462/155_4416.jpg",
-		"/images/items/01_3462/156_4416.jpg",
-		"/images/items/01_3462/157_4416.jpg",
-		"/images/items/01_3462/158_4416.jpg",
-		"/images/items/01_3462/159_4416.jpg",
-		"/images/items/01_3462/189_4416.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4416.jpg",
+				"path": "/images/items/01_3462/153_4416.jpg",
+				"hash": "c05203d7dfae69352f2fe210a1bba330"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4416.jpg",
+				"path": "/images/items/01_3462/155_4416.jpg",
+				"hash": "41a83de49041eba2ddd889c3da87279f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4416.jpg",
+				"path": "/images/items/01_3462/156_4416.jpg",
+				"hash": "99a357ebb4d1f2b5c76d0d9b351cce78"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4416.jpg",
+				"path": "/images/items/01_3462/157_4416.jpg",
+				"hash": "da0399ca1ab244df09d485dba55f24d0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4416.jpg",
+				"path": "/images/items/01_3462/158_4416.jpg",
+				"hash": "d8d6a60183fc7208a9c21b0e8a8c764d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4416.jpg",
+				"path": "/images/items/01_3462/159_4416.jpg",
+				"hash": "4a8f78525393249d2d58b20bb2e35d65"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4416.jpg",
+				"path": "/images/items/01_3462/189_4416.jpg",
+				"hash": "9c5f016ac90c20cb6f3fdd07915456b1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3462/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

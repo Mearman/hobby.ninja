@@ -80,28 +80,54 @@
 			"- Product specifications are scheduled as of 20131. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_5322/153_6174.jpg",
-		"/images/items/01_5322/155_6174.jpg",
-		"/images/items/01_5322/156_6174.jpg",
-		"/images/items/01_5322/157_6174.jpg",
-		"/images/items/01_5322/158_6174.jpg",
-		"/images/items/01_5322/159_6174.jpg",
-		"/images/items/01_5322/189_6174.jpg",
-		"/images/items/01_5322/190_6174.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6174.jpg",
+				"path": "/images/items/01_5322/153_6174.jpg",
+				"hash": "ee43d43462053eda1c6971c2053ba8d2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6174.jpg",
+				"path": "/images/items/01_5322/155_6174.jpg",
+				"hash": "8871e293caac89ca21b3d23e288ad307"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6174.jpg",
+				"path": "/images/items/01_5322/156_6174.jpg",
+				"hash": "e0029795395e31207abecd9c72f6c7f4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6174.jpg",
+				"path": "/images/items/01_5322/157_6174.jpg",
+				"hash": "83bf995745dfe4d0deee764112988ef4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6174.jpg",
+				"path": "/images/items/01_5322/158_6174.jpg",
+				"hash": "642192e852bfcb3d5442ceb34b61d9f3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6174.jpg",
+				"path": "/images/items/01_5322/159_6174.jpg",
+				"hash": "9db5295473566830597a9f02e770a621"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6174.jpg",
+				"path": "/images/items/01_5322/189_6174.jpg",
+				"hash": "ba0b95898ba4d7bdb59699b8c9adbcef"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6174.jpg",
+				"path": "/images/items/01_5322/190_6174.jpg",
+				"hash": "a08eba3cb78813752b1252a08828ca5a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5322/",
-	"brandIds": [
-		"pb_charapla"
-	],
-	"seriesIds": [
-		"dunbine"
-	],
+	"brandIds": ["pb_charapla"],
+	"seriesIds": ["dunbine"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"item-1000203131",
-		"item-1000217021",
-		"item-1000211055",
-		"item-1000199895"
-	]
+	"relatedItemIds": ["item-1000203131", "item-1000217021", "item-1000211055", "item-1000199895"]
 }

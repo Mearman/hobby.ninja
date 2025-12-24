@@ -33,41 +33,47 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"VP-66LR×1",
-			"VP-67LD×1式",
-			"Vvc-70VPM×1式",
-			"Vvc-700LD×1式"
-		],
-		"en": [
-			"VP-66LR×1",
-			"VP-67LD×1 set",
-			"Vvc-70VPM×1 set",
-			"Vvc-700LD×1 set"
-		]
+		"ja": ["VP-66LR×1", "VP-67LD×1式", "Vvc-70VPM×1式", "Vvc-700LD×1式"],
+		"en": ["VP-66LR×1", "VP-67LD×1 set", "Vvc-70VPM×1 set", "Vvc-700LD×1 set"]
 	},
-	"images": [
-		"/images/items/01_5269/1000217438_1.jpg",
-		"/images/items/01_5269/1000217438_2.jpg",
-		"/images/items/01_5269/1000217438_3.jpg",
-		"/images/items/01_5269/1000217438_4.jpg",
-		"/images/items/01_5269/1000217438_5.jpg",
-		"/images/items/01_5269/1000217438_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217438_1.jpg",
+				"path": "/images/items/01_5269/1000217438_1.jpg",
+				"hash": "5f2ac95c97c07d9a00676de77bf5155a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217438_2.jpg",
+				"path": "/images/items/01_5269/1000217438_2.jpg",
+				"hash": "d1ddfeb1712c954212849495bebcbdcb"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217438_3.jpg",
+				"path": "/images/items/01_5269/1000217438_3.jpg",
+				"hash": "26127e6d5680d1d79b7c6323cb7ea9ed"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217438_4.jpg",
+				"path": "/images/items/01_5269/1000217438_4.jpg",
+				"hash": "ac465076b491bd81490eae88b49a981b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217438_5.jpg",
+				"path": "/images/items/01_5269/1000217438_5.jpg",
+				"hash": "e8be06629007d35374be756f79c9733b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217438_6.jpg",
+				"path": "/images/items/01_5269/1000217438_6.jpg",
+				"hash": "6c964e704932c217dd15498ec226ff4a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5269/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [
-		"armoredcore"
-	],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5973",
-		"01_5974",
-		"01_5573",
-		"01_5574"
-	]
+	"brandIds": ["30mm"],
+	"seriesIds": ["armoredcore"],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5973", "01_5974", "01_5573", "01_5574"]
 }

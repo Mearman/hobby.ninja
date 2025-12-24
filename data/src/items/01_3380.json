@@ -109,52 +109,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"シェキナー",
-			"ビーム・ジャベリン",
-			"ビーム・サーベル",
-			"ハイパー・ビーム・ライフル",
-			"シールド"
-		],
-		"en": [
-			"Shekinah",
-			"beam javelin",
-			"beam saber",
-			"hyper beam rifle",
-			"Seal de"
-		]
+		"ja": ["シェキナー", "ビーム・ジャベリン", "ビーム・サーベル", "ハイパー・ビーム・ライフル", "シールド"],
+		"en": ["Shekinah", "beam javelin", "beam saber", "hyper beam rifle", "Seal de"]
 	},
-	"images": [
-		"/images/items/01_3380/1000152855_1.jpg",
-		"/images/items/01_3380/1000152855_10.jpg",
-		"/images/items/01_3380/1000152855_2.jpg",
-		"/images/items/01_3380/1000152855_3.jpg",
-		"/images/items/01_3380/1000152855_4.jpg",
-		"/images/items/01_3380/1000152855_5.jpg",
-		"/images/items/01_3380/1000152855_6.jpg",
-		"/images/items/01_3380/1000152855_7.jpg",
-		"/images/items/01_3380/1000152855_8.jpg",
-		"/images/items/01_3380/1000152855_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152855_1.jpg",
+				"path": "/images/items/01_3380/1000152855_1.jpg",
+				"hash": "6dcc9811cee7407839aa5da84a05fecb"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152855_10.jpg",
+				"path": "/images/items/01_3380/1000152855_10.jpg",
+				"hash": "65aa2a481953dcc322f3bdfcf0f8d8d1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152855_2.jpg",
+				"path": "/images/items/01_3380/1000152855_2.jpg",
+				"hash": "bc8fcb448d2817682b8bc945fffd5f7f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152855_3.jpg",
+				"path": "/images/items/01_3380/1000152855_3.jpg",
+				"hash": "f2220e572456735ae6bd76fb35c6ca21"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152855_4.jpg",
+				"path": "/images/items/01_3380/1000152855_4.jpg",
+				"hash": "5c59764b8978732003bc1fb9ce5321c8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152855_5.jpg",
+				"path": "/images/items/01_3380/1000152855_5.jpg",
+				"hash": "7ad303d03783f88ae88a022afd659e30"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152855_6.jpg",
+				"path": "/images/items/01_3380/1000152855_6.jpg",
+				"hash": "c3a9f6b2347a9658357d5584ed4fb307"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152855_7.jpg",
+				"path": "/images/items/01_3380/1000152855_7.jpg",
+				"hash": "0b219afbd910e08d9aa88aa164b9ec93"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152855_8.jpg",
+				"path": "/images/items/01_3380/1000152855_8.jpg",
+				"hash": "57e99e39d14bc71101118add265626e3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152855_9.jpg",
+				"path": "/images/items/01_3380/1000152855_9.jpg",
+				"hash": "206e01248a4de00967bbf86d66ddbc58"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3380/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla",
-		"hguc"
-	],
-	"seriesIds": [
-		"missinglink"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000148541",
-		"item-1000140759",
-		"item-1000140492",
-		"item-1000140220"
-	],
+	"brandIds": ["hg", "pb_hg", "pb_gunpla", "hguc"],
+	"seriesIds": ["missinglink"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000148541", "item-1000140759", "item-1000140492", "item-1000140220"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

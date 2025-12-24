@@ -38,13 +38,7 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"共通パーツ×1式",
-			"通常戦闘モードボディ×2",
-			"高機動モードボディ×2",
-			"台座×2",
-			"水転写式デカール×1"
-		],
+		"ja": ["共通パーツ×1式", "通常戦闘モードボディ×2", "高機動モードボディ×2", "台座×2", "水転写式デカール×1"],
 		"en": [
 			"Common parts x 1 set",
 			"Normal battle mode body x 2",
@@ -53,29 +47,49 @@
 			"Water transfer decal x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5500/153_6340.jpeg",
-		"/images/items/01_5500/155_6340.jpeg",
-		"/images/items/01_5500/156_6340.jpeg",
-		"/images/items/01_5500/157_6340.jpeg",
-		"/images/items/01_5500/158_6340.jpeg",
-		"/images/items/01_5500/159_6340.jpeg",
-		"/images/items/01_5500/189_6340.jpeg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6340.jpeg",
+				"path": "/images/items/01_5500/153_6340.jpeg",
+				"hash": "e4dd7ec1a652d36ac7c942ed9f820253"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6340.jpeg",
+				"path": "/images/items/01_5500/155_6340.jpeg",
+				"hash": "190d182ce155503987d8f1dd7f35ec23"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6340.jpeg",
+				"path": "/images/items/01_5500/156_6340.jpeg",
+				"hash": "28a01428e3c6f8a87039a53e125df60e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6340.jpeg",
+				"path": "/images/items/01_5500/157_6340.jpeg",
+				"hash": "f34436a39b975192934a242503548290"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6340.jpeg",
+				"path": "/images/items/01_5500/158_6340.jpeg",
+				"hash": "e79aa560f361517e03f12c31e5fcb8e5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6340.jpeg",
+				"path": "/images/items/01_5500/159_6340.jpeg",
+				"hash": "cf7ec656f2cdc3ee7514576e33294442"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6340.jpeg",
+				"path": "/images/items/01_5500/189_6340.jpeg",
+				"hash": "d329287552b85f236090d85466ff12a2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5500/",
-	"brandIds": [
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"yamato"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5498",
-		"01_3667",
-		"01_3650",
-		"01_2854"
-	]
+	"brandIds": ["mecha-colle"],
+	"seriesIds": ["yamato"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5498", "01_3667", "01_3650", "01_2854"]
 }

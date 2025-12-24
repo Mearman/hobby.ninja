@@ -29,25 +29,31 @@
 			"Even though it is soft vinyl, it reproduces details such as the wrinkles that are unique to balloons."
 		]
 	},
-	"images": [
-		"/images/items/01_5149/153_6008.jpg",
-		"/images/items/01_5149/155_6008.jpg",
-		"/images/items/01_5149/156_6008.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6008.jpg",
+				"path": "/images/items/01_5149/153_6008.jpg",
+				"hash": "6f29e1540788bc8acb49a4b45a724da0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6008.jpg",
+				"path": "/images/items/01_5149/155_6008.jpg",
+				"hash": "1a1fdbc123498fdcbeefc8573187bdab"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6008.jpg",
+				"path": "/images/items/01_5149/156_6008.jpg",
+				"hash": "d0b5d477a04ac897e8df483c184681a5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5149/",
 	"brandIds": [],
-	"seriesIds": [
-		"g-0080"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5429",
-		"01_5150",
-		"01_2461",
-		"01_2260"
-	],
+	"seriesIds": ["g-0080"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5429", "01_5150", "01_2461", "01_2260"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

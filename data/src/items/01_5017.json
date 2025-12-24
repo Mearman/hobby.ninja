@@ -35,34 +35,42 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"二人乗り用鞍パーツ×１式",
-			"シール×１"
-		],
-		"en": [
-			"Two-seater saddle parts x 1 set",
-			"Seal×1"
-		]
+		"ja": ["二人乗り用鞍パーツ×１式", "シール×１"],
+		"en": ["Two-seater saddle parts x 1 set", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_5017/153_5884.jpg",
-		"/images/items/01_5017/155_5884.jpg",
-		"/images/items/01_5017/156_5884.jpg",
-		"/images/items/01_5017/157_5884.jpg",
-		"/images/items/01_5017/158_5884.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5884.jpg",
+				"path": "/images/items/01_5017/153_5884.jpg",
+				"hash": "278cee1b8ef2a9674d7be2c07fe45ade"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5884.jpg",
+				"path": "/images/items/01_5017/155_5884.jpg",
+				"hash": "baa42451301c48788f6353bf928cf5fa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5884.jpg",
+				"path": "/images/items/01_5017/156_5884.jpg",
+				"hash": "7456ce2c7c016c82d64d9ddf4949bcee"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5884.jpg",
+				"path": "/images/items/01_5017/157_5884.jpg",
+				"hash": "fc7955ca6fcf335cce9363ab60dfa0bc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5884.jpg",
+				"path": "/images/items/01_5017/158_5884.jpg",
+				"hash": "20ff818cd7c9dbcda9aac5fd394f0977"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5017/",
 	"brandIds": [],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5470",
-		"01_5471",
-		"01_5472",
-		"01_5347"
-	]
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
 }

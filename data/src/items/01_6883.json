@@ -39,30 +39,41 @@
 			"バックパック×1",
 			"ジョイントパーツ×1式"
 		],
-		"en": [
-			"Fin Funnel x 6",
-			"New hyper bazooka x1",
-			"Beam saber x 1 set",
-			"Backpack x 1",
-			"Joint parts x 1 set"
-		]
+		"en": ["Fin Funnel x 6", "New hyper bazooka x1", "Beam saber x 1 set", "Backpack x 1", "Joint parts x 1 set"]
 	},
-	"images": [
-		"/images/items/01_6883/01_6883_0.jpg",
-		"/images/items/01_6883/01_6883_1.jpg",
-		"/images/items/01_6883/01_6883_2.jpg",
-		"/images/items/01_6883/01_6883_3.jpg",
-		"/images/items/01_6883/01_6883_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6883_0.jpg",
+				"path": "/images/items/01_6883/01_6883_0.jpg",
+				"hash": "4b81e03d7a74390312fa36f0828e8534"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6883_1.jpg",
+				"path": "/images/items/01_6883/01_6883_1.jpg",
+				"hash": "ab729e1b078c405315979f91ac8f093c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6883_2.jpg",
+				"path": "/images/items/01_6883/01_6883_2.jpg",
+				"hash": "d26756fc45a0209feed047172b0f3522"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6883_3.jpg",
+				"path": "/images/items/01_6883/01_6883_3.jpg",
+				"hash": "f38081727d43c58cb64f17a2e6030e13"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6883_4.jpg",
+				"path": "/images/items/01_6883/01_6883_4.jpg",
+				"hash": "94c2b6e7c262d28f8baeb6c94dad36c2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6883/",
-	"brandIds": [
-		"optionpartsset"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["optionpartsset"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": []
 }

@@ -36,23 +36,29 @@
 			"• You can recreate the dark general by wearing dark armor."
 		]
 	},
-	"images": [
-		"/images/items/01_5790/153_856.jpg",
-		"/images/items/01_5790/155_856.jpg",
-		"/images/items/01_5790/156_856.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_856.jpg",
+				"path": "/images/items/01_5790/153_856.jpg",
+				"hash": "f3fd2576a7898a6fc4ffc0b002957efd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_856.jpg",
+				"path": "/images/items/01_5790/155_856.jpg",
+				"hash": "1c7ef1ff8a182ad88d0a20387a0417c2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_856.jpg",
+				"path": "/images/items/01_5790/156_856.jpg",
+				"hash": "e5bd18d2a8ab99aa377487b4e7b88c13"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5790/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

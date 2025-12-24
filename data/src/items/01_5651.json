@@ -33,23 +33,29 @@
 			"• Weapons include rifle and seal"
 		]
 	},
-	"images": [
-		"/images/items/01_5651/153_718.jpg",
-		"/images/items/01_5651/155_718.jpg",
-		"/images/items/01_5651/156_718.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_718.jpg",
+				"path": "/images/items/01_5651/153_718.jpg",
+				"hash": "a378ced3be1d9ffe5e27153311cdae66"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_718.jpg",
+				"path": "/images/items/01_5651/155_718.jpg",
+				"hash": "fdeb7d06dff349df72549b182217ca12"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_718.jpg",
+				"path": "/images/items/01_5651/156_718.jpg",
+				"hash": "0579d1fabe6a873ab50128dee04c1eec"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5651/",
 	"brandIds": [],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216602",
-		"01_5526",
-		"item-1000161849",
-		"01_5102"
-	]
+	"seriesIds": ["g-00"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216602", "01_5526", "item-1000161849", "01_5102"]
 }

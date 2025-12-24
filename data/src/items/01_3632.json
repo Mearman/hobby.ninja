@@ -40,44 +40,73 @@
 			"ビーム・ジャベリン×1",
 			"ガンダム・ハンマー×1"
 		],
-		"en": [
-			"Beam rifle x1",
-			"Seal de x1",
-			"Beam saber x2",
-			"Hyper bazooka x1",
-			"Beam Javelin×1",
-			"Gundam hammer x 1"
-		]
+		"en": ["Beam rifle x1", "Seal de x1", "Beam saber x2", "Hyper bazooka x1", "Beam Javelin×1", "Gundam hammer x 1"]
 	},
-	"images": [
-		"/images/items/01_3632/153_4586.jpg",
-		"/images/items/01_3632/155_4586.jpg",
-		"/images/items/01_3632/156_4586.jpg",
-		"/images/items/01_3632/157_4586.jpg",
-		"/images/items/01_3632/158_4586.jpg",
-		"/images/items/01_3632/159_4586.jpg",
-		"/images/items/01_3632/189_4586.jpg",
-		"/images/items/01_3632/190_4586.jpg",
-		"/images/items/01_3632/191_4586.jpg",
-		"/images/items/01_3632/192_4586.jpg",
-		"/images/items/01_3632/193_4586.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4586.jpg",
+				"path": "/images/items/01_3632/153_4586.jpg",
+				"hash": "ce2f3f84dac13e4915f051804b8cacc1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4586.jpg",
+				"path": "/images/items/01_3632/155_4586.jpg",
+				"hash": "0a58916731934ef80a7def461211c51b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4586.jpg",
+				"path": "/images/items/01_3632/156_4586.jpg",
+				"hash": "a3f86143346c3b96ba062b99e4e27dcb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4586.jpg",
+				"path": "/images/items/01_3632/157_4586.jpg",
+				"hash": "fde6b450c911af088fe2708832952b5b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4586.jpg",
+				"path": "/images/items/01_3632/158_4586.jpg",
+				"hash": "f851903da4bc120ce17c6c9e4c9bec7a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4586.jpg",
+				"path": "/images/items/01_3632/159_4586.jpg",
+				"hash": "5c8269d10a9495da6e4da6df33bf7fc5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4586.jpg",
+				"path": "/images/items/01_3632/189_4586.jpg",
+				"hash": "7d404bb95af56451db314e5b0d6d64a2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4586.jpg",
+				"path": "/images/items/01_3632/190_4586.jpg",
+				"hash": "f475a13a8b49f179deaba93db39acbb7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4586.jpg",
+				"path": "/images/items/01_3632/191_4586.jpg",
+				"hash": "c4c27e5c65e15bc9ad31cbc7500fda55"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4586.jpg",
+				"path": "/images/items/01_3632/192_4586.jpg",
+				"hash": "8cd8caef0c9c5892aa9c01f109faa5a9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_4586.jpg",
+				"path": "/images/items/01_3632/193_4586.jpg",
+				"hash": "c38e2ce1314e13e22fd264410cea7fc3"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3632/",
-	"brandIds": [
-		"entry_grade"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5218",
-		"01_5045",
-		"01_4249",
-		"01_4202"
-	],
+	"brandIds": ["entry_grade"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5218", "01_5045", "01_4249", "01_4202"],
 	"manual": {
 		"id": "979",
 		"url": "https://manual.bandai-hobby.net/menus/detail/979/"

@@ -80,31 +80,51 @@
 			"*This product is not available for sale at Premium Bandai."
 		]
 	},
-	"images": [
-		"/images/items/01_3885/153_4827.jpg",
-		"/images/items/01_3885/155_4827.jpg",
-		"/images/items/01_3885/156_4827.jpg",
-		"/images/items/01_3885/157_4827.jpg",
-		"/images/items/01_3885/158_4827.jpg",
-		"/images/items/01_3885/159_4827.jpg",
-		"/images/items/01_3885/189_4827.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4827.jpg",
+				"path": "/images/items/01_3885/153_4827.jpg",
+				"hash": "ceb5742198f30bf7f62a1e00006ab9a2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4827.jpg",
+				"path": "/images/items/01_3885/155_4827.jpg",
+				"hash": "4edfaaf296a7ad2d54aa34c50f577512"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4827.jpg",
+				"path": "/images/items/01_3885/156_4827.jpg",
+				"hash": "9f0f67e7ff89d3341846f0487992748f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4827.jpg",
+				"path": "/images/items/01_3885/157_4827.jpg",
+				"hash": "404e4dd83049880728736f211058a71f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4827.jpg",
+				"path": "/images/items/01_3885/158_4827.jpg",
+				"hash": "7298df6aaecaa6f2327f8f72015eae4e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4827.jpg",
+				"path": "/images/items/01_3885/159_4827.jpg",
+				"hash": "d2d390915e6487cbcf9a9868225fc45c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4827.jpg",
+				"path": "/images/items/01_3885/189_4827.jpg",
+				"hash": "0edd0c6bc1bc7cdfe917268c711c7c18"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3885/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
+	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5963", "01_5961", "01_5951"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

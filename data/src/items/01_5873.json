@@ -35,27 +35,31 @@
 			"■ Just by assembling, you can reproduce the coloring of GUNDAM and the scene in the play. Molded product ×11, foil seal ×1, assembly instruction ×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5873/1000084425_1.jpg",
-		"/images/items/01_5873/1000084425_2.jpg",
-		"/images/items/01_5873/1000084425_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000084425_1.jpg",
+				"path": "/images/items/01_5873/1000084425_1.jpg",
+				"hash": "5411b456955daf6e18728a68a3335116"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000084425_2.jpg",
+				"path": "/images/items/01_5873/1000084425_2.jpg",
+				"hash": "90c557878c09a903f9f1b459060d2c5e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000084425_3.jpg",
+				"path": "/images/items/01_5873/1000084425_3.jpg",
+				"hash": "8055f351ab723fcaba6cbf85f6914c89"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5873/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["buildfighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5057", "01_1942", "01_1288", "01_1261"],
 	"manual": {
 		"id": "703",
 		"url": "https://manual.bandai-hobby.net/menus/detail/703/"

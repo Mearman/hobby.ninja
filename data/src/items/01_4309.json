@@ -40,43 +40,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ビームサーベル×２",
-			"武装×1"
-		],
-		"en": [
-			"Beam saber x2",
-			"Armed x1"
-		]
+		"ja": ["ビームサーベル×２", "武装×1"],
+		"en": ["Beam saber x2", "Armed x1"]
 	},
-	"images": [
-		"/images/items/01_4309/153_5221.jpg",
-		"/images/items/01_4309/155_5221.jpg",
-		"/images/items/01_4309/156_5221.jpg",
-		"/images/items/01_4309/157_5221.jpg",
-		"/images/items/01_4309/158_5221.jpg",
-		"/images/items/01_4309/159_5221.jpg",
-		"/images/items/01_4309/189_5221.jpg",
-		"/images/items/01_4309/190_5221.jpg",
-		"/images/items/01_4309/191_5221.jpg",
-		"/images/items/01_4309/01_4309_inst_0.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5221.jpg",
+				"path": "/images/items/01_4309/153_5221.jpg",
+				"hash": "ec27ace3e958b660c511a0d392d2ef98"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5221.jpg",
+				"path": "/images/items/01_4309/155_5221.jpg",
+				"hash": "a575ed47403ce0e4d48367ee7b52d7b6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5221.jpg",
+				"path": "/images/items/01_4309/156_5221.jpg",
+				"hash": "b4451467ebd2e2e1a9da93438707c72f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5221.jpg",
+				"path": "/images/items/01_4309/157_5221.jpg",
+				"hash": "fdaa244e4ba45c1c00279550fd481db4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5221.jpg",
+				"path": "/images/items/01_4309/158_5221.jpg",
+				"hash": "d5343ff7e24240caddb75d32db2085fa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5221.jpg",
+				"path": "/images/items/01_4309/159_5221.jpg",
+				"hash": "aebe00247616f49dc4016c36d48692e8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5221.jpg",
+				"path": "/images/items/01_4309/189_5221.jpg",
+				"hash": "56fafce16b9d6cfa1508ef44bc6d479b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5221.jpg",
+				"path": "/images/items/01_4309/190_5221.jpg",
+				"hash": "e577060628e85af320d85c15640a2046"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5221.jpg",
+				"path": "/images/items/01_4309/191_5221.jpg",
+				"hash": "868337f28b12579e1bf89ce922808c31"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4309_inst_0.jpg",
+				"path": "/images/items/01_4309/01_4309_inst_0.jpg",
+				"hash": "f81edbacb9670c2c74af85fa7da1a9f5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4309/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"g-witch"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216474",
-		"item-1000211616",
-		"01_5422",
-		"item-1000203129"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["g-witch"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203129"],
 	"manual": {
 		"id": "143",
 		"url": "https://manual.bandai-hobby.net/menus/detail/143/"

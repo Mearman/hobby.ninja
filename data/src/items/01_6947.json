@@ -34,40 +34,42 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ソード×1",
-			"槍×1",
-			"アーマーパーツ×1式",
-			"武装パーツ×1式",
-			"ジョイントパーツ×1式"
-		],
-		"en": [
-			"Sword x1",
-			"Spear x1",
-			"Armor parts x 1 set",
-			"Armed parts x 1 set",
-			"Joint parts x 1 set"
-		]
+		"ja": ["ソード×1", "槍×1", "アーマーパーツ×1式", "武装パーツ×1式", "ジョイントパーツ×1式"],
+		"en": ["Sword x1", "Spear x1", "Armor parts x 1 set", "Armed parts x 1 set", "Joint parts x 1 set"]
 	},
-	"images": [
-		"/images/items/01_6947/01_6947_0.jpg",
-		"/images/items/01_6947/01_6947_1.jpg",
-		"/images/items/01_6947/01_6947_2.jpg",
-		"/images/items/01_6947/01_6947_3.jpg",
-		"/images/items/01_6947/01_6947_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6947_0.jpg",
+				"path": "/images/items/01_6947/01_6947_0.jpg",
+				"hash": "2145dc1cba53e1a85230b1f83d34e989"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6947_1.jpg",
+				"path": "/images/items/01_6947/01_6947_1.jpg",
+				"hash": "0ee8b31cf9ef8e059ab2c46f8e52e1de"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6947_2.jpg",
+				"path": "/images/items/01_6947/01_6947_2.jpg",
+				"hash": "cf90405307b0ff79662da4894554cace"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6947_3.jpg",
+				"path": "/images/items/01_6947/01_6947_3.jpg",
+				"hash": "ac623bf4b17bff5d719656767ba12b09"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6947_4.jpg",
+				"path": "/images/items/01_6947/01_6947_4.jpg",
+				"hash": "86abd59d9048fd433993f63d10d9489e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6947/",
-	"brandIds": [
-		"30mf"
-	],
+	"brandIds": ["30mf"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_6946",
-		"01_6938",
-		"01_6931",
-		"01_6932"
-	]
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_6946", "01_6938", "01_6931", "01_6932"]
 }

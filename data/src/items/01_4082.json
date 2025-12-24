@@ -38,42 +38,64 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"シールド×1",
-			"マーキングシール×1"
-		],
-		"en": [
-			"Beam rifle x1",
-			"Seal × 1",
-			"MarkingSeal×1"
-		]
+		"ja": ["ビーム・ライフル×1", "シールド×1", "マーキングシール×1"],
+		"en": ["Beam rifle x1", "Seal × 1", "MarkingSeal×1"]
 	},
-	"images": [
-		"/images/items/01_4082/1000173150_1.jpg",
-		"/images/items/01_4082/1000173150_2.jpg",
-		"/images/items/01_4082/1000173150_3.jpg",
-		"/images/items/01_4082/1000173150_4.jpg",
-		"/images/items/01_4082/1000173150_5.jpg",
-		"/images/items/01_4082/1000173150_6.jpg",
-		"/images/items/01_4082/1000173150_7.jpg",
-		"/images/items/01_4082/1000173150_8.jpg",
-		"/images/items/01_4082/1000173150_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173150_1.jpg",
+				"path": "/images/items/01_4082/1000173150_1.jpg",
+				"hash": "f3fa384e9fa90be2dc1fdc298528ad39"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173150_2.jpg",
+				"path": "/images/items/01_4082/1000173150_2.jpg",
+				"hash": "2ede3cf4be6537853a01ef815039c4c3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173150_3.jpg",
+				"path": "/images/items/01_4082/1000173150_3.jpg",
+				"hash": "81cf20c194674223ae3fc5bb40de1348"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173150_4.jpg",
+				"path": "/images/items/01_4082/1000173150_4.jpg",
+				"hash": "38dcd24ed60b23d072a32bb6cdb9a270"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173150_5.jpg",
+				"path": "/images/items/01_4082/1000173150_5.jpg",
+				"hash": "7e23517a323366ef87a0b68d045516f4"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173150_6.jpg",
+				"path": "/images/items/01_4082/1000173150_6.jpg",
+				"hash": "28fe9907eb16462a9be0e1fba85dca93"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173150_7.jpg",
+				"path": "/images/items/01_4082/1000173150_7.jpg",
+				"hash": "a1770ceab240003a40e3aada2f79f09d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173150_8.jpg",
+				"path": "/images/items/01_4082/1000173150_8.jpg",
+				"hash": "0c72f7abc4cb17ae5cec82f66aa344f5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173150_9.jpg",
+				"path": "/images/items/01_4082/1000173150_9.jpg",
+				"hash": "e5464ef7ce029ffc6506a0c99b1e4ce9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4082/",
-	"brandIds": [
-		"entry_grade"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4974",
-		"01_4191"
-	],
+	"brandIds": ["entry_grade"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4974", "01_4191"],
 	"manual": {
 		"id": "1051",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1051/"

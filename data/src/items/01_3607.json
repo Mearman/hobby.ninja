@@ -32,21 +32,19 @@
 			"Molded product x 2"
 		]
 	},
-	"images": [
-		"/images/items/01_3607/153_4562.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4562.jpg",
+				"path": "/images/items/01_3607/153_4562.jpg",
+				"hash": "b806cbbda84e57a652da9e159f990e8b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3607/",
-	"brandIds": [
-		"parts"
-	],
+	"brandIds": ["parts"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3582",
-		"01_3563",
-		"01_3564",
-		"01_636"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3582", "01_3563", "01_3564", "01_636"]
 }

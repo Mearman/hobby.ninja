@@ -25,23 +25,29 @@
 			"A plastic model of Bakunetsumaru's BB warrior that appears in the currently airing TV anime \"SD Gundam Force\". The biggest feature is that by attaching and detaching the armor, it is possible to reproduce the lightly equipped state. The head helmet, shoulder armor, arm pads, and ankle pads are completely reproduced. Weapons include sword and scabbard."
 		]
 	},
-	"images": [
-		"/images/items/01_3717/153_466.jpg",
-		"/images/items/01_3717/155_466.jpg",
-		"/images/items/01_3717/156_466.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_466.jpg",
+				"path": "/images/items/01_3717/153_466.jpg",
+				"hash": "21bd6c2d32205b116c7271dbd4ef5220"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_466.jpg",
+				"path": "/images/items/01_3717/155_466.jpg",
+				"hash": "b8ce6ae7aa6261d305bc96cf1eae96df"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_466.jpg",
+				"path": "/images/items/01_3717/156_466.jpg",
+				"hash": "5851d0091dcd897910d5e47101c3ed0a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3717/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

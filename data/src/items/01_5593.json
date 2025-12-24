@@ -33,27 +33,31 @@
 			"• Faithfully reproduces various armed gimmicks including Incom."
 		]
 	},
-	"images": [
-		"/images/items/01_5593/153_6428.jpg",
-		"/images/items/01_5593/155_6428.jpg",
-		"/images/items/01_5593/156_6428.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6428.jpg",
+				"path": "/images/items/01_5593/153_6428.jpg",
+				"hash": "00a763141b0b2eb9d09bfb538c728357"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6428.jpg",
+				"path": "/images/items/01_5593/155_6428.jpg",
+				"hash": "c7153b146957467d8ac20bb71156acb7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6428.jpg",
+				"path": "/images/items/01_5593/156_6428.jpg",
+				"hash": "5dbe161a4c0d1e1f7203af0f9a1595b1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5593/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"sentinel"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3408",
-		"01_2176",
-		"01_1291",
-		"item-1000089611"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["sentinel"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3408", "01_2176", "01_1291", "item-1000089611"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

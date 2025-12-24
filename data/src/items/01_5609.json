@@ -19,31 +19,37 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"BB戦士112烈空頑駄無登場！！"
-		],
-		"en": [
-			"BB Senshi 112 Reku Gundam is here! !"
-		]
+		"ja": ["BB戦士112烈空頑駄無登場！！"],
+		"en": ["BB Senshi 112 Reku Gundam is here! !"]
 	},
-	"images": [
-		"/images/items/01_5609/153_65.jpg",
-		"/images/items/01_5609/155_65.jpg",
-		"/images/items/01_5609/156_65.jpg",
-		"/images/items/01_5609/157_65.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_65.jpg",
+				"path": "/images/items/01_5609/153_65.jpg",
+				"hash": "4d6b8f41fcd0233fc59e72cbad0ce27a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_65.jpg",
+				"path": "/images/items/01_5609/155_65.jpg",
+				"hash": "c40634b5dbcc7441b37aeb6e8667c8d7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_65.jpg",
+				"path": "/images/items/01_5609/156_65.jpg",
+				"hash": "30ce6a8223aa43df77b3b4067809c219"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_65.jpg",
+				"path": "/images/items/01_5609/157_65.jpg",
+				"hash": "a7383742642aadf7484fe3b690cf4c0d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5609/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

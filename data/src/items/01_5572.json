@@ -50,28 +50,41 @@
 			"Hand parts x 1 set"
 		]
 	},
-	"images": [
-		"/images/items/01_5572/01_5572_0.jpg",
-		"/images/items/01_5572/01_5572_1.jpg",
-		"/images/items/01_5572/01_5572_2.jpg",
-		"/images/items/01_5572/01_5572_3.jpg",
-		"/images/items/01_5572/01_5572_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5572_0.jpg",
+				"path": "/images/items/01_5572/01_5572_0.jpg",
+				"hash": "47e1a162d4520d81e9e225f2958afe7d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5572_1.jpg",
+				"path": "/images/items/01_5572/01_5572_1.jpg",
+				"hash": "df720b8c2cc75413a4c5fde25e132c5a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5572_2.jpg",
+				"path": "/images/items/01_5572/01_5572_2.jpg",
+				"hash": "c7339cb0a5c8cac6139450e31eabe07c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5572_3.jpg",
+				"path": "/images/items/01_5572/01_5572_3.jpg",
+				"hash": "44738be7c8fa2abd0b36b7d62c87bce4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5572_4.jpg",
+				"path": "/images/items/01_5572/01_5572_4.jpg",
+				"hash": "adabcf0e064dd31d7a586fee587891fa"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5572/",
-	"brandIds": [
-		"customize_scenebase",
-		"30mm"
-	],
+	"brandIds": ["customize_scenebase", "30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3800",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3800/"

@@ -49,45 +49,78 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"メイス×1",
-			"太刀×1",
-			"300mm滑腔砲×1",
-			"ジョイントパーツ×1式",
-			"マーキングシール×1"
-		],
-		"en": [
-			"Mace x 1",
-			"Long sword x1",
-			"300mm smoothbore gun x 1",
-			"Joint parts x 1 set",
-			"MarkingSeal×1"
-		]
+		"ja": ["メイス×1", "太刀×1", "300mm滑腔砲×1", "ジョイントパーツ×1式", "マーキングシール×1"],
+		"en": ["Mace x 1", "Long sword x1", "300mm smoothbore gun x 1", "Joint parts x 1 set", "MarkingSeal×1"]
 	},
-	"images": [
-		"/images/items/01_4994/1000201209_1.jpg",
-		"/images/items/01_4994/1000201209_10.jpg",
-		"/images/items/01_4994/1000201209_11.jpg",
-		"/images/items/01_4994/1000201209_12.jpg",
-		"/images/items/01_4994/1000201209_2.jpg",
-		"/images/items/01_4994/1000201209_3.jpg",
-		"/images/items/01_4994/1000201209_4.jpg",
-		"/images/items/01_4994/1000201209_5.jpg",
-		"/images/items/01_4994/1000201209_6.jpg",
-		"/images/items/01_4994/1000201209_7.jpg",
-		"/images/items/01_4994/1000201209_8.jpg",
-		"/images/items/01_4994/1000201209_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201209_1.jpg",
+				"path": "/images/items/01_4994/1000201209_1.jpg",
+				"hash": "edfaf1416ea17fff7bc9e471ed9029c9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201209_10.jpg",
+				"path": "/images/items/01_4994/1000201209_10.jpg",
+				"hash": "8da635f88017aab15ac46bf7c57fc883"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201209_11.jpg",
+				"path": "/images/items/01_4994/1000201209_11.jpg",
+				"hash": "455033037883e8cc2397e8b3c207b114"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201209_12.jpg",
+				"path": "/images/items/01_4994/1000201209_12.jpg",
+				"hash": "ca41fd408039ada93bc3f07c545ef3c7"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201209_2.jpg",
+				"path": "/images/items/01_4994/1000201209_2.jpg",
+				"hash": "feb9d07a4567947d78268b7ce998a310"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201209_3.jpg",
+				"path": "/images/items/01_4994/1000201209_3.jpg",
+				"hash": "4271768f3fbd9149651b2fa5896ea056"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201209_4.jpg",
+				"path": "/images/items/01_4994/1000201209_4.jpg",
+				"hash": "d4b2901f80fe5075c514fa5cffc39a0e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201209_5.jpg",
+				"path": "/images/items/01_4994/1000201209_5.jpg",
+				"hash": "c7a06fc67756d61766a560100b702c72"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201209_6.jpg",
+				"path": "/images/items/01_4994/1000201209_6.jpg",
+				"hash": "34ee8c651018e205a9a143fe04fc6a66"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201209_7.jpg",
+				"path": "/images/items/01_4994/1000201209_7.jpg",
+				"hash": "44617b8b4bf24a4be93e35f179965a9c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201209_8.jpg",
+				"path": "/images/items/01_4994/1000201209_8.jpg",
+				"hash": "4233d63f97c8ae2b7c9b00e114383a70"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201209_9.jpg",
+				"path": "/images/items/01_4994/1000201209_9.jpg",
+				"hash": "0d57e2a25220ab7c1b2f5c24eb560d8b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4994/",
-	"brandIds": [
-		"mgsd"
-	],
-	"seriesIds": [
-		"tekketsu"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["mgsd"],
+	"seriesIds": ["tekketsu"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": [],
 	"manual": {
 		"id": "1100",

@@ -31,21 +31,19 @@
 			"water transfer decal"
 		]
 	},
-	"images": [
-		"/images/items/01_4538/153_5439.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5439.jpg",
+				"path": "/images/items/01_4538/153_5439.jpg",
+				"hash": "9f1093610657a43a7aa5e7f92ba94924"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4538/",
-	"brandIds": [
-		"gundam_decal"
-	],
+	"brandIds": ["gundam_decal"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5987",
-		"01_5988",
-		"01_5969",
-		"01_5970"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5987", "01_5988", "01_5969", "01_5970"]
 }

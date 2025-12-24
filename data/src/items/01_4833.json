@@ -20,34 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"「HG 1/144 デスティニーガンダム クリアカラーバージョン」登場！"
-		],
-		"en": [
-			"\"HG 1/144 Destiny Gundam Clear Color Version\" now available!"
-		]
+		"ja": ["「HG 1/144 デスティニーガンダム クリアカラーバージョン」登場！"],
+		"en": ["\"HG 1/144 Destiny Gundam Clear Color Version\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4833/153_5715.jpg",
-		"/images/items/01_4833/155_5715.jpg",
-		"/images/items/01_4833/156_5715.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5715.jpg",
+				"path": "/images/items/01_4833/153_5715.jpg",
+				"hash": "a96b19e70ec3a8d418110e18b986440b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5715.jpg",
+				"path": "/images/items/01_4833/155_5715.jpg",
+				"hash": "d79a837959b04ecbf5c6364377e0f2bc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5715.jpg",
+				"path": "/images/items/01_4833/156_5715.jpg",
+				"hash": "fada55c2254582bd002d10aed4dfde3c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4833/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000203308", "01_5097", "01_3739", "item-1000157417"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

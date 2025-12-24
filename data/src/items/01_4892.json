@@ -34,28 +34,54 @@
 			"Easily reproduce the set color with Iropla and Seal."
 		]
 	},
-	"images": [
-		"/images/items/01_4892/153_576.jpg",
-		"/images/items/01_4892/155_576.jpg",
-		"/images/items/01_4892/156_576.jpg",
-		"/images/items/01_4892/157_576.jpg",
-		"/images/items/01_4892/158_576.jpg",
-		"/images/items/01_4892/159_576.jpg",
-		"/images/items/01_4892/189_576.jpg",
-		"/images/items/01_4892/190_576.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_576.jpg",
+				"path": "/images/items/01_4892/153_576.jpg",
+				"hash": "22c9f28f9db0c1387ec55e07dc8b7fbe"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_576.jpg",
+				"path": "/images/items/01_4892/155_576.jpg",
+				"hash": "57db44f929af8539996afd8cf194defc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_576.jpg",
+				"path": "/images/items/01_4892/156_576.jpg",
+				"hash": "6c003fece028546925f61f67d35f0ff0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_576.jpg",
+				"path": "/images/items/01_4892/157_576.jpg",
+				"hash": "5d8fc53a74f209256a2c575365803050"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_576.jpg",
+				"path": "/images/items/01_4892/158_576.jpg",
+				"hash": "7a559560939095d8d7958977f7952e00"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_576.jpg",
+				"path": "/images/items/01_4892/159_576.jpg",
+				"hash": "557707abe599377fb6e7a316406fd78b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_576.jpg",
+				"path": "/images/items/01_4892/189_576.jpg",
+				"hash": "98ba87a27a6cda3dc060fd62e439dee6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_576.jpg",
+				"path": "/images/items/01_4892/190_576.jpg",
+				"hash": "176c8c7e866a5fc06ab05f0c33d92442"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4892/",
 	"brandIds": [],
-	"seriesIds": [
-		"keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7034",
-		"01_2120",
-		"01_2122",
-		"01_2104"
-	]
+	"seriesIds": ["keroro"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7034", "01_2120", "01_2122", "01_2104"]
 }

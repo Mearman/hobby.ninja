@@ -27,28 +27,36 @@
 			"• A mass-produced machine from the Madona workshop that appeared in \"Mobile Suit Gundam AGE: Asemu Edition\". Molded product x 6, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_3594/153_4549.jpg",
-		"/images/items/01_3594/155_4549.jpg",
-		"/images/items/01_3594/156_4549.jpg",
-		"/images/items/01_3594/157_4549.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4549.jpg",
+				"path": "/images/items/01_3594/153_4549.jpg",
+				"hash": "4b7b06dc8400b16a9ad2ccaed55f9f24"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4549.jpg",
+				"path": "/images/items/01_3594/155_4549.jpg",
+				"hash": "1fec3ea38dd8c5e5a5cde011806cd4f6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4549.jpg",
+				"path": "/images/items/01_3594/156_4549.jpg",
+				"hash": "9347b9e0ed133a093893a7fbede04455"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4549.jpg",
+				"path": "/images/items/01_3594/157_4549.jpg",
+				"hash": "1865fc526f96379372332eb68ec99d93"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3594/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "348",
 		"url": "https://manual.bandai-hobby.net/menus/detail/348/"

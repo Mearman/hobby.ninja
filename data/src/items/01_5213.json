@@ -111,40 +111,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"スラッシュハーケン"
-		],
-		"en": [
-			"Slash Harken"
-		]
+		"ja": ["スラッシュハーケン"],
+		"en": ["Slash Harken"]
 	},
-	"images": [
-		"/images/items/01_5213/153_6069.jpg",
-		"/images/items/01_5213/155_6069.jpg",
-		"/images/items/01_5213/156_6069.jpg",
-		"/images/items/01_5213/157_6069.jpg",
-		"/images/items/01_5213/158_6069.jpg",
-		"/images/items/01_5213/159_6069.jpg",
-		"/images/items/01_5213/189_6069.jpg",
-		"/images/items/01_5213/190_6069.jpg",
-		"/images/items/01_5213/191_6069.jpg",
-		"/images/items/01_5213/192_6069.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6069.jpg",
+				"path": "/images/items/01_5213/153_6069.jpg",
+				"hash": "589e575f479cb232b75374ced8c2a1fb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6069.jpg",
+				"path": "/images/items/01_5213/155_6069.jpg",
+				"hash": "44089a7f7f97a2512184922c8501f2b7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6069.jpg",
+				"path": "/images/items/01_5213/156_6069.jpg",
+				"hash": "54fc715265d1ab6401612750d0d72ade"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6069.jpg",
+				"path": "/images/items/01_5213/157_6069.jpg",
+				"hash": "ff12050b868fa8cae5860c133dffb710"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6069.jpg",
+				"path": "/images/items/01_5213/158_6069.jpg",
+				"hash": "484885c4845bbae31cf6dc579f87afce"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6069.jpg",
+				"path": "/images/items/01_5213/159_6069.jpg",
+				"hash": "234e699d5d8d46e27db22fd80d8a5fa2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6069.jpg",
+				"path": "/images/items/01_5213/189_6069.jpg",
+				"hash": "0934e4dc17105c6df9c93eeff14edecc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6069.jpg",
+				"path": "/images/items/01_5213/190_6069.jpg",
+				"hash": "5222cb9b1aff2d0bb9dc17871fadd279"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_6069.jpg",
+				"path": "/images/items/01_5213/191_6069.jpg",
+				"hash": "d9bb34dccd742373be4cf5355a55be63"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_6069.jpg",
+				"path": "/images/items/01_5213/192_6069.jpg",
+				"hash": "89899ae93488ccdfb87e7eae537b851a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5213/",
-	"brandIds": [
-		"pb_charapla",
-		"hg"
-	],
-	"seriesIds": [
-		"geass"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000187724",
-		"item-1000167903"
-	],
+	"brandIds": ["pb_charapla", "hg"],
+	"seriesIds": ["geass"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000187724", "item-1000167903"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

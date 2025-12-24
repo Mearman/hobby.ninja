@@ -41,28 +41,36 @@
 			"• Includes soft material parts that expand the range of motion of the lower back. You can now choose between plastic parts and soft material parts!"
 		]
 	},
-	"images": [
-		"/images/items/01_3382/153_4333.jpg",
-		"/images/items/01_3382/155_4333.jpg",
-		"/images/items/01_3382/156_4333.jpg",
-		"/images/items/01_3382/157_4333.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4333.jpg",
+				"path": "/images/items/01_3382/153_4333.jpg",
+				"hash": "38bd78cd64253393eb2ec7af023eeca1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4333.jpg",
+				"path": "/images/items/01_3382/155_4333.jpg",
+				"hash": "31e7207887d4f227c51dd58680a0c1d4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4333.jpg",
+				"path": "/images/items/01_3382/156_4333.jpg",
+				"hash": "6d2c962028ce90de751b486ba7b93d65"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4333.jpg",
+				"path": "/images/items/01_3382/157_4333.jpg",
+				"hash": "f53616cc2c3dac35fb8ab05c905c36df"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3382/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

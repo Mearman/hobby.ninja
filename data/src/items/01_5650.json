@@ -33,23 +33,29 @@
 			"• Weapons include a GN sniper rifle and a shoulder-mounted Seal."
 		]
 	},
-	"images": [
-		"/images/items/01_5650/153_717.jpg",
-		"/images/items/01_5650/155_717.jpg",
-		"/images/items/01_5650/156_717.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_717.jpg",
+				"path": "/images/items/01_5650/153_717.jpg",
+				"hash": "a0f86ce34bed42beea4f0f4fd10868f1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_717.jpg",
+				"path": "/images/items/01_5650/155_717.jpg",
+				"hash": "acb562e06a4a56b665302ab0aa649f15"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_717.jpg",
+				"path": "/images/items/01_5650/156_717.jpg",
+				"hash": "573b871e71e0b5825cc4905e8a739999"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5650/",
 	"brandIds": [],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216602",
-		"01_5526",
-		"item-1000161849",
-		"01_5102"
-	]
+	"seriesIds": ["g-00"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216602", "01_5526", "item-1000161849", "01_5102"]
 }

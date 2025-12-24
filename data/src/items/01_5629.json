@@ -34,25 +34,26 @@
 			"Weapons include beam rifle, beam saber x 2, beam bazooka, and beam seal."
 		]
 	},
-	"images": [
-		"/images/items/01_5629/153_689.jpg",
-		"/images/items/01_5629/155_689.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_689.jpg",
+				"path": "/images/items/01_5629/153_689.jpg",
+				"hash": "4989642e91ed9fb3f4c66ae3685db1e4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_689.jpg",
+				"path": "/images/items/01_5629/155_689.jpg",
+				"hash": "ad0d792f9151858facc1d341483389fd"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5629/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"crossbone"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000136952",
-		"01_1941",
-		"01_5649"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["crossbone"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000136952", "01_1941", "01_5649"],
 	"manual": {
 		"id": "544",
 		"url": "https://manual.bandai-hobby.net/menus/detail/544/"

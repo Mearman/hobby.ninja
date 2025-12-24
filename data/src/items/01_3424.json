@@ -66,28 +66,41 @@
 			"Hand parts Ninja hand (right)"
 		]
 	},
-	"images": [
-		"/images/items/01_3424/1000158650_1.jpg",
-		"/images/items/01_3424/1000158650_2.jpg",
-		"/images/items/01_3424/1000158650_3.jpg",
-		"/images/items/01_3424/1000158650_4.jpg",
-		"/images/items/01_3424/1000158650_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158650_1.jpg",
+				"path": "/images/items/01_3424/1000158650_1.jpg",
+				"hash": "53fbc9728573058096156e7339df89cb"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158650_2.jpg",
+				"path": "/images/items/01_3424/1000158650_2.jpg",
+				"hash": "6908e2fb5d08500ddd63fa4b93fd43f8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158650_3.jpg",
+				"path": "/images/items/01_3424/1000158650_3.jpg",
+				"hash": "4cbeffb734db6c70753cd16a83934af6"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158650_4.jpg",
+				"path": "/images/items/01_3424/1000158650_4.jpg",
+				"hash": "7d2e588ba0c7186d0cde411e05a536f7"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158650_5.jpg",
+				"path": "/images/items/01_3424/1000158650_5.jpg",
+				"hash": "2da1641ec21f04993ec0df81c11e8709"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3424/",
-	"brandIds": [
-		"customize_scenebase",
-		"30mm"
-	],
+	"brandIds": ["customize_scenebase", "30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3717",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3717/"

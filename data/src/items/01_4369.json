@@ -39,27 +39,31 @@
 			"• As a new gimmick, the Twin Buster Rifle can be stored in the wings and transformed into Neo Bird form."
 		]
 	},
-	"images": [
-		"/images/items/01_4369/153_5276.jpg",
-		"/images/items/01_4369/155_5276.jpg",
-		"/images/items/01_4369/156_5276.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5276.jpg",
+				"path": "/images/items/01_4369/153_5276.jpg",
+				"hash": "77cb62f8166dcd19c982fa147a1eb214"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5276.jpg",
+				"path": "/images/items/01_4369/155_5276.jpg",
+				"hash": "45539b303510375d67d29deb001f24a7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5276.jpg",
+				"path": "/images/items/01_4369/156_5276.jpg",
+				"hash": "690ac0b0718a89635875c4b361c51d1e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4369/",
-	"brandIds": [
-		"mgka"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5993",
-		"01_4005",
-		"01_2981",
-		"01_3158"
-	],
+	"brandIds": ["mgka"],
+	"seriesIds": ["endlesswaltz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5993", "01_4005", "01_2981", "01_3158"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

@@ -20,34 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HG 1/144 ZGMF-X20A ストライクフリーダムガンダム Ver.GFT　登場！"
-		],
-		"en": [
-			"HG 1/144 ZGMF-X20A Strike Freedom Gundam Ver.GFT is now available!"
-		]
+		"ja": ["HG 1/144 ZGMF-X20A ストライクフリーダムガンダム Ver.GFT　登場！"],
+		"en": ["HG 1/144 ZGMF-X20A Strike Freedom Gundam Ver.GFT is now available!"]
 	},
-	"images": [
-		"/images/items/01_4772/153_5655.jpg",
-		"/images/items/01_4772/155_5655.jpg",
-		"/images/items/01_4772/156_5655.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5655.jpg",
+				"path": "/images/items/01_4772/153_5655.jpg",
+				"hash": "74df163a20ba5a43ab6d21cd8a937f78"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5655.jpg",
+				"path": "/images/items/01_4772/155_5655.jpg",
+				"hash": "2566c1767196f80de5cf836de8895670"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5655.jpg",
+				"path": "/images/items/01_4772/156_5655.jpg",
+				"hash": "12cfc86be2a750b87156bce988b01de6"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4772/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000203308", "01_5097", "01_3739", "item-1000157417"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

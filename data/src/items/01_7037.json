@@ -76,24 +76,24 @@
 			"Acrylic stand x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_7037/01_7037_0.jpg",
-		"/images/items/01_7037/01_7037_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_7037_0.jpg",
+				"path": "/images/items/01_7037/01_7037_0.jpg",
+				"hash": "e8059c10e549eb051a12622d1e984edf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7037_1.jpg",
+				"path": "/images/items/01_7037/01_7037_1.jpg",
+				"hash": "77b5034fe600381aba4a546eb1611b6a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_7037/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"macross"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7035",
-		"01_7036",
-		"01_6869",
-		"01_6870"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["macross"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7035", "01_7036", "01_6869", "01_6870"]
 }

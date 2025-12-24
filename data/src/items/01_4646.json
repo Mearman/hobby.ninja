@@ -26,26 +26,26 @@
 			"A set of “Aggai”, “Z’Gok” and “Gog” from the HGUC series has been released. Acguy's arm extension and contraction can be reproduced by replacing parts. Z'Gok's highly flexible joints allow him to recreate action poses just like in the movie. Gog can be transformed into an underwater navigation form by replacing parts. A set-specific decal is included."
 		]
 	},
-	"images": [
-		"/images/items/01_4646/153_5539.jpg",
-		"/images/items/01_4646/155_5539.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5539.jpg",
+				"path": "/images/items/01_4646/153_5539.jpg",
+				"hash": "3badb253d76301e1a47a2b51e2219a56"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5539.jpg",
+				"path": "/images/items/01_4646/155_5539.jpg",
+				"hash": "9e35bc8914594c1422cec605603ede10"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4646/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"manual": {
 		"id": "402",
 		"url": "https://manual.bandai-hobby.net/menus/detail/402/"

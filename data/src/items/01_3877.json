@@ -26,27 +26,31 @@
 			"A 1/144HG plastic model of the prototype \"Dreadnought Gundam \" that appears in \" Mobile Suit Gundam SEED MSV\". A large backpack can be equipped on the back, and it can be removed to reproduce a light type. The attack state of the side armor can be reproduced by replacing the tube parts. Armed with a beam rifle and a seal."
 		]
 	},
-	"images": [
-		"/images/items/01_3877/153_481.jpg",
-		"/images/items/01_3877/155_481.jpg",
-		"/images/items/01_3877/156_481.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_481.jpg",
+				"path": "/images/items/01_3877/153_481.jpg",
+				"hash": "7925bc5de62a6d072b9b06c7e11b9f9e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_481.jpg",
+				"path": "/images/items/01_3877/155_481.jpg",
+				"hash": "8f89d6ef285d751fcb8a68e7f1bd5035"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_481.jpg",
+				"path": "/images/items/01_3877/156_481.jpg",
+				"hash": "70e165c3c2470c279777f761321a646b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3877/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181726",
-		"01_1930",
-		"01_384",
-		"01_83"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181726", "01_1930", "01_384", "01_83"],
 	"manual": {
 		"id": "889",
 		"url": "https://manual.bandai-hobby.net/menus/detail/889/"

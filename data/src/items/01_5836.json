@@ -31,20 +31,24 @@
 			"• The intermediate car can be made into car No. 15 (787 type 1500 series) using the included parts."
 		]
 	},
-	"images": [
-		"/images/items/01_5836/153_907.jpg",
-		"/images/items/01_5836/155_907.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_907.jpg",
+				"path": "/images/items/01_5836/153_907.jpg",
+				"hash": "eb7871ea00d60c779f59a99e56661d0f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_907.jpg",
+				"path": "/images/items/01_5836/155_907.jpg",
+				"hash": "aa57c63beb6d18c101787da8bd3c1724"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5836/",
-	"brandIds": [
-		"train"
-	],
+	"brandIds": ["train"],
 	"seriesIds": [],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"relatedItemIds": ["01_1276", "01_1277", "01_1278", "01_1280"]
 }

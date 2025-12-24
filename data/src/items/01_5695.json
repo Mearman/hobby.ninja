@@ -34,26 +34,44 @@
 			"Molded product x 15, Seal x 1, instruction manual manga included"
 		]
 	},
-	"images": [
-		"/images/items/01_5695/153_760.jpg",
-		"/images/items/01_5695/155_760.jpg",
-		"/images/items/01_5695/156_760.jpg",
-		"/images/items/01_5695/157_760.jpg",
-		"/images/items/01_5695/158_760.jpg",
-		"/images/items/01_5695/159_760.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_760.jpg",
+				"path": "/images/items/01_5695/153_760.jpg",
+				"hash": "be61b9d041f75340a45756b0445e7440"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_760.jpg",
+				"path": "/images/items/01_5695/155_760.jpg",
+				"hash": "9a869c77267efb5f566a01b637b74076"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_760.jpg",
+				"path": "/images/items/01_5695/156_760.jpg",
+				"hash": "9006ddc4b74c7d4e2818401dbdb4fbc6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_760.jpg",
+				"path": "/images/items/01_5695/157_760.jpg",
+				"hash": "f318dc0cb3722ff57a844924e7dbebb0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_760.jpg",
+				"path": "/images/items/01_5695/158_760.jpg",
+				"hash": "5ba55be5d880f01c0c7462f23832839c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_760.jpg",
+				"path": "/images/items/01_5695/159_760.jpg",
+				"hash": "4b3140ec734f82effaba68d401172c79"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5695/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

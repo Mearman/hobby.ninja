@@ -35,27 +35,41 @@
 			"• The King of Hearts emblem, the original shoulder opening and head sensors, reminiscent of Shining Gundam's super mode, are reproduced with Namer Seal."
 		]
 	},
-	"images": [
-		"/images/items/01_5995/01_5995_0.jpg",
-		"/images/items/01_5995/01_5995_1.jpg",
-		"/images/items/01_5995/01_5995_2.jpg",
-		"/images/items/01_5995/01_5995_3.jpg",
-		"/images/items/01_5995/01_5995_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5995_0.jpg",
+				"path": "/images/items/01_5995/01_5995_0.jpg",
+				"hash": "24c9b730da6e71e3814514d93ea8fab1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5995_1.jpg",
+				"path": "/images/items/01_5995/01_5995_1.jpg",
+				"hash": "1a1e34084873694d6a6c563f79352844"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5995_2.jpg",
+				"path": "/images/items/01_5995/01_5995_2.jpg",
+				"hash": "c5b740b95c68ddebf30d2a6fab22bba2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5995_3.jpg",
+				"path": "/images/items/01_5995/01_5995_3.jpg",
+				"hash": "f3c747a26931acc6ff2ce1f41541fbe1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5995_4.jpg",
+				"path": "/images/items/01_5995/01_5995_4.jpg",
+				"hash": "e8cc93ddf632898632bb4907399c5701"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5995/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"ggundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000177309",
-		"01_4104"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["ggundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000177309", "01_4104"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

@@ -27,23 +27,29 @@
 			"• The strongest Gunpla operated by Gunpla Meister Schauer in \"Model Warrior Gunpla Builders Beginning G\". • Mecha design by Kunio Okawara. • Fully armed like G30th. • The cannon on the back is flexible and the tip is removable. Molded product x 8, chain x 1, foil seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_4564/153_5463.jpg",
-		"/images/items/01_4564/155_5463.jpg",
-		"/images/items/01_4564/156_5463.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5463.jpg",
+				"path": "/images/items/01_4564/153_5463.jpg",
+				"hash": "879348604299380bcd6f6e104a7d3649"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5463.jpg",
+				"path": "/images/items/01_4564/155_5463.jpg",
+				"hash": "a4db0ee8e903a7cbe5ad611b930389ca"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5463.jpg",
+				"path": "/images/items/01_4564/156_5463.jpg",
+				"hash": "070a93bad2ab8c4246a1ffb9b0a13ea5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4564/",
-	"brandIds": [
-		"hg"
-	],
+	"brandIds": ["hg"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5951"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"]
 }

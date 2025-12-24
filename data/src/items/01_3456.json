@@ -41,29 +41,51 @@
 			"• The characteristic cloak and effect parts are reproduced with dynamic modeling!"
 		]
 	},
-	"images": [
-		"/images/items/01_3456/153_4410.jpg",
-		"/images/items/01_3456/155_4410.jpg",
-		"/images/items/01_3456/156_4410.jpg",
-		"/images/items/01_3456/157_4410.jpg",
-		"/images/items/01_3456/158_4410.jpg",
-		"/images/items/01_3456/159_4410.jpg",
-		"/images/items/01_3456/189_4410.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4410.jpg",
+				"path": "/images/items/01_3456/153_4410.jpg",
+				"hash": "8e7c1fc57386af3272ec8c67d1319bf7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4410.jpg",
+				"path": "/images/items/01_3456/155_4410.jpg",
+				"hash": "cf6cdcb84ae44d0e98f09681693ddedf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4410.jpg",
+				"path": "/images/items/01_3456/156_4410.jpg",
+				"hash": "d0a6bc43d5b1d1e6aafbaa0043274ef3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4410.jpg",
+				"path": "/images/items/01_3456/157_4410.jpg",
+				"hash": "d3f544d7b7080168df400237e5ba793a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4410.jpg",
+				"path": "/images/items/01_3456/158_4410.jpg",
+				"hash": "b2a16c2421b9663810fd849d8d157a63"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4410.jpg",
+				"path": "/images/items/01_3456/159_4410.jpg",
+				"hash": "a5aaf19a425342384e374b50ef141faa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4410.jpg",
+				"path": "/images/items/01_3456/189_4410.jpg",
+				"hash": "19facaf05a68adb45cf9a1c4f82c99df"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3456/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"crossbone"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000142961",
-		"01_2251"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["crossbone"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000142961", "01_2251"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

@@ -27,23 +27,29 @@
 			"• Sortie to the new white MS, AG series. • \"Touch gate \" allows parts to be removed by hand without using tools. • \" Iropla \" creates a colorful finish just by assembling it. • \" Block build\" allows for intuitive and quick assembly."
 		]
 	},
-	"images": [
-		"/images/items/01_4608/153_5504.jpg",
-		"/images/items/01_4608/155_5504.jpg",
-		"/images/items/01_4608/156_5504.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5504.jpg",
+				"path": "/images/items/01_4608/153_5504.jpg",
+				"hash": "cef5b854b5e09ce89a9b55e576c88789"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5504.jpg",
+				"path": "/images/items/01_4608/155_5504.jpg",
+				"hash": "80ab3aca8b1777281db7278de97880d4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5504.jpg",
+				"path": "/images/items/01_4608/156_5504.jpg",
+				"hash": "194f2b51edb705604f69eb75d45a3b09"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4608/",
 	"brandIds": [],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181355",
-		"item-1000181354",
-		"item-1000170540",
-		"01_4196"
-	]
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181355", "item-1000181354", "item-1000170540", "01_4196"]
 }

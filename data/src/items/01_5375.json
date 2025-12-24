@@ -42,45 +42,59 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"頭部パーツ（発光状態）×1",
-			"エフェクトパーツ×1式",
-			"ハンドパーツ×1式",
-			"シール×1"
-		],
-		"en": [
-			"Head parts (light emitting state) x 1",
-			"Effect parts x 1",
-			"Hand parts x 1 set",
-			"Seal×1"
-		]
+		"ja": ["頭部パーツ（発光状態）×1", "エフェクトパーツ×1式", "ハンドパーツ×1式", "シール×1"],
+		"en": ["Head parts (light emitting state) x 1", "Effect parts x 1", "Hand parts x 1 set", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_5375/153_6225.jpg",
-		"/images/items/01_5375/155_6225.jpg",
-		"/images/items/01_5375/156_6225.jpg",
-		"/images/items/01_5375/157_6225.jpg",
-		"/images/items/01_5375/158_6225.jpg",
-		"/images/items/01_5375/159_6225.jpg",
-		"/images/items/01_5375/189_6225.jpg",
-		"/images/items/01_5375/190_6225.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6225.jpg",
+				"path": "/images/items/01_5375/153_6225.jpg",
+				"hash": "9bf9aa08403f95cb67e5148b8ab34659"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6225.jpg",
+				"path": "/images/items/01_5375/155_6225.jpg",
+				"hash": "a4288f0c22025dee36ab2ce7fbe27ed3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6225.jpg",
+				"path": "/images/items/01_5375/156_6225.jpg",
+				"hash": "3a22fc15f88519f31540a00c17bf0f3f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6225.jpg",
+				"path": "/images/items/01_5375/157_6225.jpg",
+				"hash": "a19363a413579a978ba3f34145b9cf66"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6225.jpg",
+				"path": "/images/items/01_5375/158_6225.jpg",
+				"hash": "4b4608cf4ec6066a903ea2ace8104d07"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6225.jpg",
+				"path": "/images/items/01_5375/159_6225.jpg",
+				"hash": "a5be65b968d154e2661b853f01a259f9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6225.jpg",
+				"path": "/images/items/01_5375/189_6225.jpg",
+				"hash": "4bc8995646de51d8d4b207a2d1028d24"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6225.jpg",
+				"path": "/images/items/01_5375/190_6225.jpg",
+				"hash": "73b2a5f74e6957741c01dfdb5ee13a5f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5375/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5162",
-		"01_4985",
-		"01_4972"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5468", "01_5162", "01_4985", "01_4972"],
 	"manual": {
 		"id": "1949",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1949/"

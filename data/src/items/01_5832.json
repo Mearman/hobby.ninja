@@ -31,21 +31,29 @@
 			"• Strike parts attached to the legs, arms, and back can be replaced without changing the VF-1 main body."
 		]
 	},
-	"images": [
-		"/images/items/01_5832/153_902.jpg",
-		"/images/items/01_5832/155_902.jpg",
-		"/images/items/01_5832/156_902.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_902.jpg",
+				"path": "/images/items/01_5832/153_902.jpg",
+				"hash": "d89f0bf4ad9a54e597ef688e250184ff"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_902.jpg",
+				"path": "/images/items/01_5832/155_902.jpg",
+				"hash": "542cab97e33d2d955e374b9a95b4d6d0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_902.jpg",
+				"path": "/images/items/01_5832/156_902.jpg",
+				"hash": "37e4124e358de4fa7bf5f4dcbceff379"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5832/",
 	"brandIds": [],
-	"seriesIds": [
-		"macross"
-	],
+	"seriesIds": ["macross"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5944",
-		"01_5945",
-		"01_5946",
-		"01_5465"
-	]
+	"relatedItemIds": ["01_5944", "01_5945", "01_5946", "01_5465"]
 }

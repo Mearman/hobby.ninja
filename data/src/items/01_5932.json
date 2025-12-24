@@ -38,44 +38,54 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"武装×1式",
-			"ハンドパーツ×1式",
-			"マーキングシール×1",
-			"リード線×1"
-		],
-		"en": [
-			"Armed x 1 type",
-			"Hand parts x 1 set",
-			"MarkingSeal×1",
-			"Lead wire x 1"
-		]
+		"ja": ["武装×1式", "ハンドパーツ×1式", "マーキングシール×1", "リード線×1"],
+		"en": ["Armed x 1 type", "Hand parts x 1 set", "MarkingSeal×1", "Lead wire x 1"]
 	},
-	"images": [
-		"/images/items/01_5932/01_5932_0.jpg",
-		"/images/items/01_5932/01_5932_1.jpg",
-		"/images/items/01_5932/01_5932_2.jpg",
-		"/images/items/01_5932/01_5932_3.jpg",
-		"/images/items/01_5932/01_5932_4.jpg",
-		"/images/items/01_5932/01_5932_5.jpg",
-		"/images/items/01_5932/01_5932_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5932_0.jpg",
+				"path": "/images/items/01_5932/01_5932_0.jpg",
+				"hash": "9a297811f2517cd860b3df08bbb23074"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5932_1.jpg",
+				"path": "/images/items/01_5932/01_5932_1.jpg",
+				"hash": "9ee32f6bcc6af33d82afb4421840050c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5932_2.jpg",
+				"path": "/images/items/01_5932/01_5932_2.jpg",
+				"hash": "31053a66c50cecf4fb16279a408a8f37"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5932_3.jpg",
+				"path": "/images/items/01_5932/01_5932_3.jpg",
+				"hash": "e92780777e1be6662b25e39ed01697ff"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5932_4.jpg",
+				"path": "/images/items/01_5932/01_5932_4.jpg",
+				"hash": "53502aa10ec3e2f02dc925956fd1f841"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5932_5.jpg",
+				"path": "/images/items/01_5932/01_5932_5.jpg",
+				"hash": "fd7b644ef5f2339dd91a455d00d0c90f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5932_6.jpg",
+				"path": "/images/items/01_5932/01_5932_6.jpg",
+				"hash": "326b90dd05f9476c19705172499036ba"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5932/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gquuuuuux"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5951",
-		"01_5952"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gquuuuuux"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5951", "01_5952"],
 	"manual": {
 		"id": "3071",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3071/"

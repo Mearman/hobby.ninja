@@ -27,23 +27,29 @@
 			"• The third generation enemy ace appears in a crimson suit. • \"Touch gate \" allows parts to be removed by hand without using tools. • \" Iropla \" creates a colorful finish just by assembling it. • \" Block build\" allows for intuitive and quick assembly. • Comes with 1 gauging tip."
 		]
 	},
-	"images": [
-		"/images/items/01_4615/153_5510.jpg",
-		"/images/items/01_4615/155_5510.jpg",
-		"/images/items/01_4615/156_5510.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5510.jpg",
+				"path": "/images/items/01_4615/153_5510.jpg",
+				"hash": "b6becd8123ebd7a412f6498156372bc6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5510.jpg",
+				"path": "/images/items/01_4615/155_5510.jpg",
+				"hash": "be3447595f24b1145c78cf01db540e90"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5510.jpg",
+				"path": "/images/items/01_4615/156_5510.jpg",
+				"hash": "67a073f1741be59983273a499466bdac"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4615/",
 	"brandIds": [],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181355",
-		"item-1000181354",
-		"item-1000170540",
-		"01_4196"
-	]
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181355", "item-1000181354", "item-1000170540", "01_4196"]
 }

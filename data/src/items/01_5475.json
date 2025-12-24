@@ -27,22 +27,24 @@
 			"• The keychain part comes with a rubber charm with the name written on it."
 		]
 	},
-	"images": [
-		"/images/items/01_5475/01_5475_0.jpg",
-		"/images/items/01_5475/01_5475_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5475_0.jpg",
+				"path": "/images/items/01_5475/01_5475_0.jpg",
+				"hash": "f666a06ecd68b728354d9542a9488009"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5475_1.jpg",
+				"path": "/images/items/01_5475/01_5475_1.jpg",
+				"hash": "add59e190f3506da5ddf8b2314ca47c3"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5475/",
 	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5969",
-		"01_5970",
-		"01_5986"
-	]
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5969", "01_5970", "01_5986"]
 }

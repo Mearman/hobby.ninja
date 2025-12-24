@@ -20,34 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HG 1/144 ガンダム G-セルフ(宇宙用パック+大気圏パック) Ver.GFT スペースメタリック カラー　登場！"
-		],
-		"en": [
-			"HG 1/144 Gundam G-Self (Space Pack + Atmospheric Pack) Ver.GFT Space Metallic Color now available!"
-		]
+		"ja": ["HG 1/144 ガンダム G-セルフ(宇宙用パック+大気圏パック) Ver.GFT スペースメタリック カラー　登場！"],
+		"en": ["HG 1/144 Gundam G-Self (Space Pack + Atmospheric Pack) Ver.GFT Space Metallic Color now available!"]
 	},
-	"images": [
-		"/images/items/01_4791/153_5672.jpg",
-		"/images/items/01_4791/155_5672.jpg",
-		"/images/items/01_4791/156_5672.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5672.jpg",
+				"path": "/images/items/01_4791/153_5672.jpg",
+				"hash": "ba23a9b18ba99f490976917d188dc7be"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5672.jpg",
+				"path": "/images/items/01_4791/155_5672.jpg",
+				"hash": "5150ed4c6b5394bac3cb939884cf3378"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5672.jpg",
+				"path": "/images/items/01_4791/156_5672.jpg",
+				"hash": "722ccf0ea5999df6e76c09f0bdc9acdd"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4791/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"g-reco"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5515",
-		"item-1000098380",
-		"01_390",
-		"01_363"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["g-reco"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5515", "item-1000098380", "01_390", "01_363"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

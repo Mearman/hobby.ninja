@@ -27,22 +27,24 @@
 			"• Late type of the 500 series for the Yamanote Line with an enhanced attic cooler.・Compatible with power unit 3 ・Compatible with running trolley T ・Contains 2 cars"
 		]
 	},
-	"images": [
-		"/images/items/01_5877/153_955.jpg",
-		"/images/items/01_5877/155_955.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_955.jpg",
+				"path": "/images/items/01_5877/153_955.jpg",
+				"hash": "57ba78c148417c76ef1a1bf9b9d3e029"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_955.jpg",
+				"path": "/images/items/01_5877/155_955.jpg",
+				"hash": "1a00c5d057a463a39261c44028f892df"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5877/",
-	"brandIds": [
-		"train"
-	],
+	"brandIds": ["train"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_1276", "01_1277", "01_1278", "01_1280"]
 }

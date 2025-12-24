@@ -18,18 +18,19 @@
 		"day": 15
 	},
 	"targetAge": 8,
-	"images": [
-		"/images/items/01_4073/153_49.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_49.jpg",
+				"path": "/images/items/01_4073/153_49.jpg",
+				"hash": "4b67ad5294447ea0725130fc27a225f1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4073/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"f90"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["bb"],
+	"seriesIds": ["f90"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": []
 }

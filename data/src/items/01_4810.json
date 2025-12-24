@@ -20,34 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HG 1/144 ガンダム AGE-3 ノーマル フルカラーメッキVer.登場！"
-		],
-		"en": [
-			"HG 1/144 Gundam AGE-3 Normal Full Color Plated Ver. now available!"
-		]
+		"ja": ["HG 1/144 ガンダム AGE-3 ノーマル フルカラーメッキVer.登場！"],
+		"en": ["HG 1/144 Gundam AGE-3 Normal Full Color Plated Ver. now available!"]
 	},
-	"images": [
-		"/images/items/01_4810/153_5691.jpg",
-		"/images/items/01_4810/155_5691.jpg",
-		"/images/items/01_4810/156_5691.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5691.jpg",
+				"path": "/images/items/01_4810/153_5691.jpg",
+				"hash": "1fbee763917f734b892197f3d3f0bef8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5691.jpg",
+				"path": "/images/items/01_4810/155_5691.jpg",
+				"hash": "0a1b702aa06bf94eafa00621a11430ab"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5691.jpg",
+				"path": "/images/items/01_4810/156_5691.jpg",
+				"hash": "31bf591075349befd06823be5cc4002a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4810/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

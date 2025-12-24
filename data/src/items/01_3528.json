@@ -56,34 +56,74 @@
 			"Display base x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_3528/1000164279_1.jpg",
-		"/images/items/01_3528/1000164279_10.jpg",
-		"/images/items/01_3528/1000164279_11.jpg",
-		"/images/items/01_3528/1000164279_12.jpg",
-		"/images/items/01_3528/1000164279_2.jpg",
-		"/images/items/01_3528/1000164279_3.jpg",
-		"/images/items/01_3528/1000164279_4.jpg",
-		"/images/items/01_3528/1000164279_5.jpg",
-		"/images/items/01_3528/1000164279_6.jpg",
-		"/images/items/01_3528/1000164279_7.jpg",
-		"/images/items/01_3528/1000164279_8.jpg",
-		"/images/items/01_3528/1000164279_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164279_1.jpg",
+				"path": "/images/items/01_3528/1000164279_1.jpg",
+				"hash": "9c02e934d444606df92dded51735d37b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164279_10.jpg",
+				"path": "/images/items/01_3528/1000164279_10.jpg",
+				"hash": "98955f515eca1bf489dfd1e9ba8e2f20"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164279_11.jpg",
+				"path": "/images/items/01_3528/1000164279_11.jpg",
+				"hash": "850b873fc81222ba57e1eb448534710d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164279_12.jpg",
+				"path": "/images/items/01_3528/1000164279_12.jpg",
+				"hash": "45072fa51362d8053936e74c88ac9c76"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164279_2.jpg",
+				"path": "/images/items/01_3528/1000164279_2.jpg",
+				"hash": "fcd33d569caa41f8f41096c1660e31ba"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164279_3.jpg",
+				"path": "/images/items/01_3528/1000164279_3.jpg",
+				"hash": "23760b41a0fe0bbe190318e06ebd63bc"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164279_4.jpg",
+				"path": "/images/items/01_3528/1000164279_4.jpg",
+				"hash": "b2add760495fa67b82f8722bd2830270"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164279_5.jpg",
+				"path": "/images/items/01_3528/1000164279_5.jpg",
+				"hash": "594f524630b2198554edbad5f1c9440c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164279_6.jpg",
+				"path": "/images/items/01_3528/1000164279_6.jpg",
+				"hash": "120d77ebfeb06a9dac0fcdd9f99be13c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164279_7.jpg",
+				"path": "/images/items/01_3528/1000164279_7.jpg",
+				"hash": "04b47d611b143e54462e196a6ddb2913"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164279_8.jpg",
+				"path": "/images/items/01_3528/1000164279_8.jpg",
+				"hash": "781b726d9549df7135d895fe3f036073"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164279_9.jpg",
+				"path": "/images/items/01_3528/1000164279_9.jpg",
+				"hash": "1a84264bf406f5d7e30a49294e64e07b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3528/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"dynamic_characters"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4234",
-		"01_3332",
-		"01_2853",
-		"item-1000139230"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["dynamic_characters"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4234", "01_3332", "01_2853", "item-1000139230"]
 }

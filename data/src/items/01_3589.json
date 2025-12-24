@@ -27,28 +27,36 @@
 			"• The second generation allied mass-produced machine is now available as HG. • Improved posing performance due to improved range of motion. • The face part is reproduced with clear parts. Molded product x 5, foil seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_3589/153_4544.jpg",
-		"/images/items/01_3589/155_4544.jpg",
-		"/images/items/01_3589/156_4544.jpg",
-		"/images/items/01_3589/157_4544.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4544.jpg",
+				"path": "/images/items/01_3589/153_4544.jpg",
+				"hash": "3b897b442733a080350d316207ba657d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4544.jpg",
+				"path": "/images/items/01_3589/155_4544.jpg",
+				"hash": "4590c12a44ea8d3b807f5c601a1910af"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4544.jpg",
+				"path": "/images/items/01_3589/156_4544.jpg",
+				"hash": "7b5956ff53dce497440c2e7592b6f465"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4544.jpg",
+				"path": "/images/items/01_3589/157_4544.jpg",
+				"hash": "d02ece8cdf7bd1efa7a7d8ee02ee85a8"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3589/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "321",
 		"url": "https://manual.bandai-hobby.net/menus/detail/321/"

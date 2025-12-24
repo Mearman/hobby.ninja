@@ -20,31 +20,29 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HGUC 1/144 G-3 ガンダム登場！"
-		],
-		"en": [
-			"HGUC 1/144 G-3 Gundam is here!"
-		]
+		"ja": ["HGUC 1/144 G-3 ガンダム登場！"],
+		"en": ["HGUC 1/144 G-3 Gundam is here!"]
 	},
-	"images": [
-		"/images/items/01_4819/153_5702.jpg",
-		"/images/items/01_4819/155_5702.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5702.jpg",
+				"path": "/images/items/01_4819/153_5702.jpg",
+				"hash": "95913b0b65e571f82e5e217758cfdecb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5702.jpg",
+				"path": "/images/items/01_4819/155_5702.jpg",
+				"hash": "86789754c91abb6087937984beb8032b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4819/",
-	"brandIds": [
-		"hg"
-	],
+	"brandIds": ["hg"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5951"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

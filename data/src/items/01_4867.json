@@ -27,24 +27,34 @@
 			"• From ``Code Geass: Akito the Exiled'', Alexander type-02 appears. • Comes with a variety of weapons such as missile pods and axes. • Insect mode can be reproduced. • Ryo figure included. Molded product x 10, Color Seal x 1, Marking Seal x 1, Assembly Manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4867/153_5746.jpg",
-		"/images/items/01_4867/155_5746.jpg",
-		"/images/items/01_4867/156_5746.jpg",
-		"/images/items/01_4867/157_5746.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5746.jpg",
+				"path": "/images/items/01_4867/153_5746.jpg",
+				"hash": "87e7b006ad7d9ebab6638dc6bce48228"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5746.jpg",
+				"path": "/images/items/01_4867/155_5746.jpg",
+				"hash": "96951d062949f1fe4f812e2c787bcc13"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5746.jpg",
+				"path": "/images/items/01_4867/156_5746.jpg",
+				"hash": "b52736e52844bbdaeb64ca48a99f2b0a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5746.jpg",
+				"path": "/images/items/01_4867/157_5746.jpg",
+				"hash": "d31237a021ef5912795fffab2bace545"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4867/",
 	"brandIds": [],
-	"seriesIds": [
-		"geass"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000203132",
-		"item-1000187724",
-		"item-1000167903",
-		"01_5809"
-	]
+	"seriesIds": ["geass"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000203132", "item-1000187724", "item-1000167903", "01_5809"]
 }

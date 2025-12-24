@@ -62,30 +62,54 @@
 			"Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_4238/1000180203_1.jpg",
-		"/images/items/01_4238/1000180203_2.jpg",
-		"/images/items/01_4238/1000180203_3.jpg",
-		"/images/items/01_4238/1000180203_4.jpg",
-		"/images/items/01_4238/1000180203_5.jpg",
-		"/images/items/01_4238/1000180203_6.jpg",
-		"/images/items/01_4238/1000180203_7.jpg",
-		"/images/items/01_4238/1000180203_8.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180203_1.jpg",
+				"path": "/images/items/01_4238/1000180203_1.jpg",
+				"hash": "98bcb29da167b5e019359ed01b583f67"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180203_2.jpg",
+				"path": "/images/items/01_4238/1000180203_2.jpg",
+				"hash": "be093f39553a420c23b7b5cc05105583"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180203_3.jpg",
+				"path": "/images/items/01_4238/1000180203_3.jpg",
+				"hash": "85f8fbddfe7b9ab35f194e96dcea0dc6"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180203_4.jpg",
+				"path": "/images/items/01_4238/1000180203_4.jpg",
+				"hash": "bdf2d2190bee729860b97a1d6efdd210"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180203_5.jpg",
+				"path": "/images/items/01_4238/1000180203_5.jpg",
+				"hash": "5f33ddd526d0f9347243ead8f5f41c2d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180203_6.jpg",
+				"path": "/images/items/01_4238/1000180203_6.jpg",
+				"hash": "1a0abaf90cd8efc030485af7506d67da"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180203_7.jpg",
+				"path": "/images/items/01_4238/1000180203_7.jpg",
+				"hash": "eb9fc64ae806b21d49a60e9e6993bf56"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180203_8.jpg",
+				"path": "/images/items/01_4238/1000180203_8.jpg",
+				"hash": "7f4dc3729f4b3cc17e931bb3679c68ce"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4238/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"rider"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5451",
-		"item-1000215369",
-		"01_5276",
-		"01_5175"
-	]
+	"brandIds": ["figurerise-standard"],
+	"seriesIds": ["rider"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5451", "item-1000215369", "01_5276", "01_5175"]
 }

@@ -25,20 +25,24 @@
 			"A set of two items: \"Ground Type Gundam \" and \" Zaku 2 J Type \" that appear in \" Mobile Suit Gundam 08th MS Platoon\". The ground battle type Gundam can reproduce three types of heads by rearranging parts. The Weapon container can be attached and removed on the back, and the container hatch can be opened and closed. Weapons include a 180mm cannon, 100mm machine gun, two beam sabers, a beam rifle, and a Seal. The head of the Zaku II J type can be selected for general soldiers or for commanders with horns. The cockpit hatch on the chest is removable, and the internal mechanical details are also reproduced. The power pipes in various parts of the aircraft are made of soft material and do not interfere with movement. Weapons include a Zaku machine gun and a Zaku bazooka."
 		]
 	},
-	"images": [
-		"/images/items/01_4721/153_5607.jpg",
-		"/images/items/01_4721/155_5607.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5607.jpg",
+				"path": "/images/items/01_4721/153_5607.jpg",
+				"hash": "f565faadb1e0858d8d129045a9888298"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5607.jpg",
+				"path": "/images/items/01_4721/155_5607.jpg",
+				"hash": "95d04d1df698daecc3c6c95b172e2554"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4721/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5986",
-		"01_5987",
-		"01_5988"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5986", "01_5987", "01_5988"]
 }

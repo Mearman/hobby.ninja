@@ -51,13 +51,7 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"表情パーツ×３種",
-			"ハンドパーツ×１式",
-			"専用台座×１式",
-			"水転写式デカール×1",
-			"シール×１"
-		],
+		"ja": ["表情パーツ×３種", "ハンドパーツ×１式", "専用台座×１式", "水転写式デカール×1", "シール×１"],
 		"en": [
 			"Facial expression parts x 3 types",
 			"Hand parts x 1 set",
@@ -66,32 +60,74 @@
 			"Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_4118/1000175029_1.jpg",
-		"/images/items/01_4118/1000175029_10.jpg",
-		"/images/items/01_4118/1000175029_11.jpg",
-		"/images/items/01_4118/1000175029_12.jpg",
-		"/images/items/01_4118/1000175029_2.jpg",
-		"/images/items/01_4118/1000175029_3.jpg",
-		"/images/items/01_4118/1000175029_4.jpg",
-		"/images/items/01_4118/1000175029_5.jpg",
-		"/images/items/01_4118/1000175029_6.jpg",
-		"/images/items/01_4118/1000175029_7.jpg",
-		"/images/items/01_4118/1000175029_8.jpg",
-		"/images/items/01_4118/1000175029_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_1.jpg",
+				"path": "/images/items/01_4118/1000175029_1.jpg",
+				"hash": "35690169efef7c98da337d741d6e8c66"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_10.jpg",
+				"path": "/images/items/01_4118/1000175029_10.jpg",
+				"hash": "0d2e64d6ac82a1cb6c642503b446234c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_11.jpg",
+				"path": "/images/items/01_4118/1000175029_11.jpg",
+				"hash": "f9cf68b87d78ac131b2270987dfa0bda"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_12.jpg",
+				"path": "/images/items/01_4118/1000175029_12.jpg",
+				"hash": "0d7c38679a5a599aa3dd0a8c34ee5aa3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_2.jpg",
+				"path": "/images/items/01_4118/1000175029_2.jpg",
+				"hash": "9593a0fa0c8fb13213147efe427e3d43"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_3.jpg",
+				"path": "/images/items/01_4118/1000175029_3.jpg",
+				"hash": "21aad6d1ff5e073004769c72e8d6788e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_4.jpg",
+				"path": "/images/items/01_4118/1000175029_4.jpg",
+				"hash": "44c173e181b59b2f02834fe53f26abe6"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_5.jpg",
+				"path": "/images/items/01_4118/1000175029_5.jpg",
+				"hash": "f222f12d83a031d98ea96ce652637e14"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_6.jpg",
+				"path": "/images/items/01_4118/1000175029_6.jpg",
+				"hash": "d80f5778bf2c5abac3be94f90ac4bc4e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_7.jpg",
+				"path": "/images/items/01_4118/1000175029_7.jpg",
+				"hash": "bdc679273e0de08c7959b18cfc97af6f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_8.jpg",
+				"path": "/images/items/01_4118/1000175029_8.jpg",
+				"hash": "94828543efd5e8afc2af3364a5f4385d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_9.jpg",
+				"path": "/images/items/01_4118/1000175029_9.jpg",
+				"hash": "8f99f0e60023aab7502a6855c535971c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4118/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"umamusume"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5417",
-		"01_4989"
-	]
+	"brandIds": ["figurerise-standard"],
+	"seriesIds": ["umamusume"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5417", "01_4989"]
 }

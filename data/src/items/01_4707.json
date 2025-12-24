@@ -26,22 +26,24 @@
 			"A 1/100 Scale Model of Gundam Epyon, a rival aircraft of Wing Gundam Zero that appears in \"Mobile Suit Gundam W\". Gold plated parts are used for each part such as the forearm claw. Ball joints are used for the neck, wrists, hips, and ankles, and all fingers and waist armor can move independently. The chest and abdomen are separate parts, the waist can be twisted, the forearm claws and the center of the shin can swing. The camera eye is reproduced with clear parts, and the search eye in the center of the chest is reproduced with a jewel seal. The rear wing can move over a wide range, ensuring the necessary clearance for transformation. The heat rod is movable for each part and can be attached to and detached from the Seal. The handle of the beam sword can be mounted on the waist side armor, and can also be attached to and detached from the vinyl energy tube. There are two types of blades: normal and hyper. Transformation into MA form can be recreated by simply attaching and detaching the wrists. Comes with image-enhancing parts made of clear parts that can be attached to and removed from the base of the rear wing."
 		]
 	},
-	"images": [
-		"/images/items/01_4707/153_5595.jpg",
-		"/images/items/01_4707/155_5595.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5595.jpg",
+				"path": "/images/items/01_4707/153_5595.jpg",
+				"hash": "385c0373c619e3e46deb8172846adc43"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5595.jpg",
+				"path": "/images/items/01_4707/155_5595.jpg",
+				"hash": "a15d61e03c648c89e35c61e75fa3429b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4707/",
 	"brandIds": [],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5993",
-		"01_5590",
-		"01_5377"
-	]
+	"seriesIds": ["endlesswaltz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5993", "01_5590", "01_5377"]
 }

@@ -31,35 +31,39 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ボディパーツ×1式",
-			"ジョイントパーツ×１式"
-		],
-		"en": [
-			"Body parts x 1 set",
-			"Joint parts x 1 set"
-		]
+		"ja": ["ボディパーツ×1式", "ジョイントパーツ×１式"],
+		"en": ["Body parts x 1 set", "Joint parts x 1 set"]
 	},
-	"images": [
-		"/images/items/01_3543/153_4494.jpg",
-		"/images/items/01_3543/155_4494.jpg",
-		"/images/items/01_3543/156_4494.jpg",
-		"/images/items/01_3543/157_4494.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4494.jpg",
+				"path": "/images/items/01_3543/153_4494.jpg",
+				"hash": "d8e7aad294547fd931f105263b7eb8a5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4494.jpg",
+				"path": "/images/items/01_3543/155_4494.jpg",
+				"hash": "3c9a35bfd8b42c4a29e950bcefd37821"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4494.jpg",
+				"path": "/images/items/01_3543/156_4494.jpg",
+				"hash": "aeb6790d41344332375c49e12914272b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4494.jpg",
+				"path": "/images/items/01_3543/157_4494.jpg",
+				"hash": "ee65720497ffa27376e8b88012bda445"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3543/",
-	"brandIds": [
-		"30ms"
-	],
+	"brandIds": ["30ms"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5975",
-		"01_5976",
-		"01_5977",
-		"01_5954"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3438",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3438/"

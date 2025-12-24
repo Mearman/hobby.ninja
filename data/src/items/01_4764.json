@@ -20,33 +20,24 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HGPG 1/144 プチッガイ ユニコーンホワイト＆プラカード登場！"
-		],
-		"en": [
-			"HGPG 1/144 Petitgguy Unicorn White & Placard now available!"
-		]
+		"ja": ["HGPG 1/144 プチッガイ ユニコーンホワイト＆プラカード登場！"],
+		"en": ["HGPG 1/144 Petitgguy Unicorn White & Placard now available!"]
 	},
-	"images": [
-		"/images/items/01_4764/153_5648.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5648.jpg",
+				"path": "/images/items/01_4764/153_5648.jpg",
+				"hash": "9ffeaf3d114a5ec0ec9534bf673c6a2a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4764/",
-	"brandIds": [
-		"hg",
-		"petitgguy"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
+	"brandIds": ["hg", "petitgguy"],
+	"seriesIds": ["buildfighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5057", "01_1942", "01_1288", "01_1261"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

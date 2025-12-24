@@ -20,33 +20,29 @@
 	"targetAge": 15,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"MG 1/100 ガンダム Ver.2.0リアルタイプカラー 大河原展Ver.登場！"
-		],
-		"en": [
-			"MG 1/100 Gundam Ver.2.0 Real Type Color Okawara Exhibition Ver. is now available!"
-		]
+		"ja": ["MG 1/100 ガンダム Ver.2.0リアルタイプカラー 大河原展Ver.登場！"],
+		"en": ["MG 1/100 Gundam Ver.2.0 Real Type Color Okawara Exhibition Ver. is now available!"]
 	},
-	"images": [
-		"/images/items/01_4953/153_5825.jpg",
-		"/images/items/01_4953/155_5825.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5825.jpg",
+				"path": "/images/items/01_4953/153_5825.jpg",
+				"hash": "1b4a472ab01d9707b1cb1e2d97874606"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5825.jpg",
+				"path": "/images/items/01_4953/155_5825.jpg",
+				"hash": "b1e1c02148b8a2e02bdc312ae785a1a6"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4953/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

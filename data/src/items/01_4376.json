@@ -39,37 +39,52 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ランナー×５",
-			"シール×2種",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Runner×5",
-			"Seal×2 types",
-			"Handling manual×1"
-		]
+		"ja": ["ランナー×５", "シール×2種", "取扱説明書×1"],
+		"en": ["Runner×5", "Seal×2 types", "Handling manual×1"]
 	},
-	"images": [
-		"/images/items/01_4376/153_5282.jpg",
-		"/images/items/01_4376/155_5282.jpg",
-		"/images/items/01_4376/156_5282.jpg",
-		"/images/items/01_4376/157_5282.jpg",
-		"/images/items/01_4376/158_5282.jpg",
-		"/images/items/01_4376/159_5282.jpg",
-		"/images/items/01_4376/189_5282.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5282.jpg",
+				"path": "/images/items/01_4376/153_5282.jpg",
+				"hash": "b46a42b8238005935d6f2b30f9da6c23"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5282.jpg",
+				"path": "/images/items/01_4376/155_5282.jpg",
+				"hash": "644662ebc15ea16feee76dc1e1cbde65"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5282.jpg",
+				"path": "/images/items/01_4376/156_5282.jpg",
+				"hash": "49b751e59796db2ed51b9caaf7bbbbaa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5282.jpg",
+				"path": "/images/items/01_4376/157_5282.jpg",
+				"hash": "159c9c2a1d2ac213879258db136e5280"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5282.jpg",
+				"path": "/images/items/01_4376/158_5282.jpg",
+				"hash": "b326196e16ccc44a4a33234b6cc69124"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5282.jpg",
+				"path": "/images/items/01_4376/159_5282.jpg",
+				"hash": "96526859d74fa8e39872fb0a384bab9e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5282.jpg",
+				"path": "/images/items/01_4376/189_5282.jpg",
+				"hash": "731605e41e32b74d09f5d0852449c965"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4376/",
-	"brandIds": [
-		"entry_grade"
-	],
-	"seriesIds": [
-		"naruto"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4375"
-	]
+	"brandIds": ["entry_grade"],
+	"seriesIds": ["naruto"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4375"]
 }

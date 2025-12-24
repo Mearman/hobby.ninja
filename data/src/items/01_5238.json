@@ -35,47 +35,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ヴァリュアブルポッド×1式",
-			"ジョイントパーツ×1式",
-			"グリップ×1式",
-			"シール×1"
-		],
-		"en": [
-			"Valuable pod x 1 set",
-			"Joint parts x 1 set",
-			"Grip x 1 set",
-			"Seal×1"
-		]
+		"ja": ["ヴァリュアブルポッド×1式", "ジョイントパーツ×1式", "グリップ×1式", "シール×1"],
+		"en": ["Valuable pod x 1 set", "Joint parts x 1 set", "Grip x 1 set", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_5238/1000209855_1.jpg",
-		"/images/items/01_5238/1000209855_10.jpg",
-		"/images/items/01_5238/1000209855_2.jpg",
-		"/images/items/01_5238/1000209855_3.jpg",
-		"/images/items/01_5238/1000209855_4.jpg",
-		"/images/items/01_5238/1000209855_5.jpg",
-		"/images/items/01_5238/1000209855_6.jpg",
-		"/images/items/01_5238/1000209855_7.jpg",
-		"/images/items/01_5238/1000209855_8.jpg",
-		"/images/items/01_5238/1000209855_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209855_1.jpg",
+				"path": "/images/items/01_5238/1000209855_1.jpg",
+				"hash": "35ab62bc4baabd81874c7a2f2597dce8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209855_10.jpg",
+				"path": "/images/items/01_5238/1000209855_10.jpg",
+				"hash": "fd54b484e54a0b88f97d1434074aafb7"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209855_2.jpg",
+				"path": "/images/items/01_5238/1000209855_2.jpg",
+				"hash": "32b497a0dd3f3d4d1fbe712c8aaba2b2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209855_3.jpg",
+				"path": "/images/items/01_5238/1000209855_3.jpg",
+				"hash": "9b2243529fe9ab68ffe57cf9ea89cc31"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209855_4.jpg",
+				"path": "/images/items/01_5238/1000209855_4.jpg",
+				"hash": "4f58d7bae7992d7b2f4c7909a9d6b129"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209855_5.jpg",
+				"path": "/images/items/01_5238/1000209855_5.jpg",
+				"hash": "624e9f27f8fd5a1cf00dc63cef92be72"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209855_6.jpg",
+				"path": "/images/items/01_5238/1000209855_6.jpg",
+				"hash": "1647c11e385c73b8d3d668c7d7e65e0f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209855_7.jpg",
+				"path": "/images/items/01_5238/1000209855_7.jpg",
+				"hash": "65f47d807190c089077a041117f90b51"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209855_8.jpg",
+				"path": "/images/items/01_5238/1000209855_8.jpg",
+				"hash": "6c10928b3b05ea618b2b9d26f5ea2cbb"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209855_9.jpg",
+				"path": "/images/items/01_5238/1000209855_9.jpg",
+				"hash": "2b41ce59ad79a05fe437512bc9383af5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5238/",
-	"brandIds": [
-		"optionpartsset"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5240",
-		"01_5188",
-		"01_5189",
-		"01_5190"
-	],
+	"brandIds": ["optionpartsset"],
+	"seriesIds": ["buildfighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5240", "01_5188", "01_5189", "01_5190"],
 	"manual": {
 		"id": "1656",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1656/"

@@ -102,42 +102,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"HG Amplified IMGN 龍神丸用 シールド"
-		],
-		"en": [
-			"HG Amplified IMGN Seal for Ryujinmaru"
-		]
+		"ja": ["HG Amplified IMGN 龍神丸用 シールド"],
+		"en": ["HG Amplified IMGN Seal for Ryujinmaru"]
 	},
-	"images": [
-		"/images/items/01_5106/153_5969.jpg",
-		"/images/items/01_5106/155_5969.jpg",
-		"/images/items/01_5106/156_5969.jpg",
-		"/images/items/01_5106/157_5969.jpg",
-		"/images/items/01_5106/158_5969.jpg",
-		"/images/items/01_5106/159_5969.jpg",
-		"/images/items/01_5106/189_5969.jpg",
-		"/images/items/01_5106/190_5969.jpg",
-		"/images/items/01_5106/191_5969.jpg",
-		"/images/items/01_5106/192_5969.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5969.jpg",
+				"path": "/images/items/01_5106/153_5969.jpg",
+				"hash": "d494aa9cb38d0988d9248390e1a53d35"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5969.jpg",
+				"path": "/images/items/01_5106/155_5969.jpg",
+				"hash": "0e61bf00500e6db30ee80ffaeb91fceb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5969.jpg",
+				"path": "/images/items/01_5106/156_5969.jpg",
+				"hash": "7ef270bf9c1f11d90ba8d96d0da0beba"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5969.jpg",
+				"path": "/images/items/01_5106/157_5969.jpg",
+				"hash": "b4b7320cb93192096f6db002c6f06171"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5969.jpg",
+				"path": "/images/items/01_5106/158_5969.jpg",
+				"hash": "352d2a05ba46e3032c615cdc0bf14e5d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5969.jpg",
+				"path": "/images/items/01_5106/159_5969.jpg",
+				"hash": "fc85389df697d890a3ffd0dfc6db166d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5969.jpg",
+				"path": "/images/items/01_5106/189_5969.jpg",
+				"hash": "419809b8e08fdf5de2cfa363754ecc18"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5969.jpg",
+				"path": "/images/items/01_5106/190_5969.jpg",
+				"hash": "7f29f0003605111f654d577eb6e85d0b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5969.jpg",
+				"path": "/images/items/01_5106/191_5969.jpg",
+				"hash": "d4c0ff0dc9dc803be244755b87040e4b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5969.jpg",
+				"path": "/images/items/01_5106/192_5969.jpg",
+				"hash": "7a28c111290c12f7994a91deecd0ab29"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5106/",
-	"brandIds": [
-		"pb_charapla",
-		"hgamplifiedimgn"
-	],
-	"seriesIds": [
-		"wataru"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000209764",
-		"01_5186",
-		"item-1000184927",
-		"01_4169"
-	],
+	"brandIds": ["pb_charapla", "hgamplifiedimgn"],
+	"seriesIds": ["wataru"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000209764", "01_5186", "item-1000184927", "01_4169"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

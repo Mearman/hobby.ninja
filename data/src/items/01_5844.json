@@ -36,28 +36,31 @@
 			"■ The forearm injection scene can be reproduced with a dedicated stand."
 		]
 	},
-	"images": [
-		"/images/items/01_5844/1000083324_1.jpg",
-		"/images/items/01_5844/1000083324_2.jpg",
-		"/images/items/01_5844/1000083324_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000083324_1.jpg",
+				"path": "/images/items/01_5844/1000083324_1.jpg",
+				"hash": "1f0026d01b0cd6427da83a1d8026678b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000083324_2.jpg",
+				"path": "/images/items/01_5844/1000083324_2.jpg",
+				"hash": "7e9f8637f22eaeeb37904db05469fa82"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000083324_3.jpg",
+				"path": "/images/items/01_5844/1000083324_3.jpg",
+				"hash": "3d5961429ab857ac3ef061d80b0019f2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5844/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "384",
 		"url": "https://manual.bandai-hobby.net/menus/detail/384/"

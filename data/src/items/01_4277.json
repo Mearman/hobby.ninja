@@ -138,36 +138,66 @@
 			"・Product information is current as of 20228. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"images": [
-		"/images/items/01_4277/1000177309_1.jpg",
-		"/images/items/01_4277/1000177309_10.jpg",
-		"/images/items/01_4277/1000177309_2.jpg",
-		"/images/items/01_4277/1000177309_3.jpg",
-		"/images/items/01_4277/1000177309_4.jpg",
-		"/images/items/01_4277/1000177309_5.jpg",
-		"/images/items/01_4277/1000177309_6.jpg",
-		"/images/items/01_4277/1000177309_7.jpg",
-		"/images/items/01_4277/1000177309_8.jpg",
-		"/images/items/01_4277/1000177309_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000177309_1.jpg",
+				"path": "/images/items/01_4277/1000177309_1.jpg",
+				"hash": "861081938beafe5eb59280015c7aaf2c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000177309_10.jpg",
+				"path": "/images/items/01_4277/1000177309_10.jpg",
+				"hash": "e0cbea2031278e93483c71247c5de6ef"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000177309_2.jpg",
+				"path": "/images/items/01_4277/1000177309_2.jpg",
+				"hash": "38a7e8f1e7bb6d2dc0a6d3d2817e1403"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000177309_3.jpg",
+				"path": "/images/items/01_4277/1000177309_3.jpg",
+				"hash": "099c0e1af390570837ce76319bf8c15b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000177309_4.jpg",
+				"path": "/images/items/01_4277/1000177309_4.jpg",
+				"hash": "47a61232875bd75eeb881a0fe07a2691"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000177309_5.jpg",
+				"path": "/images/items/01_4277/1000177309_5.jpg",
+				"hash": "c23dc768d63893b83365b421d4b9f398"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000177309_6.jpg",
+				"path": "/images/items/01_4277/1000177309_6.jpg",
+				"hash": "96d19be1019cab003ddbcc19aca6e271"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000177309_7.jpg",
+				"path": "/images/items/01_4277/1000177309_7.jpg",
+				"hash": "591f405df968a6cd9eb6febbb2e854fb"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000177309_8.jpg",
+				"path": "/images/items/01_4277/1000177309_8.jpg",
+				"hash": "c4c3c6883daeb77c5d91d031b9ef26a5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000177309_9.jpg",
+				"path": "/images/items/01_4277/1000177309_9.jpg",
+				"hash": "0671edd834ae7e762cef851a134d710e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4277/",
-	"brandIds": [
-		"rg",
-		"pb_rg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"ggundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000213247",
-		"item-1000194970",
-		"item-1000182906",
-		"01_4104"
-	],
+	"brandIds": ["rg", "pb_rg", "pb_gunpla"],
+	"seriesIds": ["ggundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000213247", "item-1000194970", "item-1000182906", "01_4104"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

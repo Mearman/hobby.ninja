@@ -32,22 +32,24 @@
 			"• The color is a soft coral pink."
 		]
 	},
-	"images": [
-		"/images/items/01_3361/153_4314.jpg",
-		"/images/items/01_3361/155_4314.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4314.jpg",
+				"path": "/images/items/01_3361/153_4314.jpg",
+				"hash": "2b9b2db7d6e51fc0b4fa905249d41ce9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4314.jpg",
+				"path": "/images/items/01_3361/155_4314.jpg",
+				"hash": "609b85cccc5ced10ed88f6192ff257b1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3361/",
-	"brandIds": [
-		"tool"
-	],
+	"brandIds": ["tool"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4930",
-		"01_4931",
-		"01_4305",
-		"01_4101"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4930", "01_4931", "01_4305", "01_4101"]
 }

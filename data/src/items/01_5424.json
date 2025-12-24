@@ -27,12 +27,31 @@
 			"HGUC series plastic model of Metas that appears in \"Mobile Suit Z Gundam\". Can be transformed into mobile armor form by replacing some parts. Connect parts are included to create a connection scene with Hyakushiki + Mega Bazooka Launcher."
 		]
 	},
-	"images": [
-		"/images/items/01_5424/153_626.jpg",
-		"/images/items/01_5424/155_626.jpg",
-		"/images/items/01_5424/156_626.jpg",
-		"/images/items/01_5424/157_626.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_626.jpg",
+				"path": "/images/items/01_5424/153_626.jpg",
+				"hash": "8cb20ed833e94661d129a525e3103709"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_626.jpg",
+				"path": "/images/items/01_5424/155_626.jpg",
+				"hash": "2ae7f2ec79629065e26bd7c7591ae36f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_626.jpg",
+				"path": "/images/items/01_5424/156_626.jpg",
+				"hash": "9e88895025924707cbc21e9d45c65a68"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_626.jpg",
+				"path": "/images/items/01_5424/157_626.jpg",
+				"hash": "50cee1f79874ec0d47a03d1d78676b71"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5424/",
 	"brandIds": ["hg", "hguc"],
 	"seriesIds": ["z-gundam"],

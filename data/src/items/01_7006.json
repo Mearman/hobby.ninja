@@ -40,15 +40,7 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ドゥロースケルトン×2",
-			"斧×1",
-			"ナイフ×1",
-			"槍×1",
-			"ベルト×1",
-			"ハンドパーツ×1式",
-			"ジョイントパーツ×1式"
-		],
+		"ja": ["ドゥロースケルトン×2", "斧×1", "ナイフ×1", "槍×1", "ベルト×1", "ハンドパーツ×1式", "ジョイントパーツ×1式"],
 		"en": [
 			"Drose skeleton x2",
 			"Ax x1",
@@ -59,22 +51,24 @@
 			"Joint parts x 1 set"
 		]
 	},
-	"images": [
-		"/images/items/01_7006/01_7006_0.jpg",
-		"/images/items/01_7006/01_7006_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_7006_0.jpg",
+				"path": "/images/items/01_7006/01_7006_0.jpg",
+				"hash": "109f4c7fde23b7004a8ea12770f88369"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7006_1.jpg",
+				"path": "/images/items/01_7006/01_7006_1.jpg",
+				"hash": "4aab62e8fd49d3b1a6d31992756d86fa"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_7006/",
-	"brandIds": [
-		"30mf"
-	],
+	"brandIds": ["30mf"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7024",
-		"01_7025",
-		"01_7026",
-		"01_7007"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7024", "01_7025", "01_7026", "01_7007"]
 }

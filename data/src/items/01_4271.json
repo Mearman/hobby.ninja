@@ -41,31 +41,51 @@
 			"*This product can only reproduce Destroy mode (light crystal). It is not possible to transform into Unicorn Mode or reproduce Destroy Mode (normal)."
 		]
 	},
-	"images": [
-		"/images/items/01_4271/1000179659_1.jpg",
-		"/images/items/01_4271/1000179659_2.jpg",
-		"/images/items/01_4271/1000179659_3.jpg",
-		"/images/items/01_4271/1000179659_4.jpg",
-		"/images/items/01_4271/1000179659_5.jpg",
-		"/images/items/01_4271/1000179659_6.jpg",
-		"/images/items/01_4271/1000179659_7.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000179659_1.jpg",
+				"path": "/images/items/01_4271/1000179659_1.jpg",
+				"hash": "fcf6852b02ddb02c7afc2d538a02531f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000179659_2.jpg",
+				"path": "/images/items/01_4271/1000179659_2.jpg",
+				"hash": "c5225b12e9316f8643dc0b5b5ee502bd"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000179659_3.jpg",
+				"path": "/images/items/01_4271/1000179659_3.jpg",
+				"hash": "bf6f19d632bad05de7f0f06010a40579"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000179659_4.jpg",
+				"path": "/images/items/01_4271/1000179659_4.jpg",
+				"hash": "e4b8780eeff9461e8558f8437d96ff59"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000179659_5.jpg",
+				"path": "/images/items/01_4271/1000179659_5.jpg",
+				"hash": "0362d1124b593167ca9f8b59b227e2bd"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000179659_6.jpg",
+				"path": "/images/items/01_4271/1000179659_6.jpg",
+				"hash": "a4b519f74a6a3069d2cc37ad7c599a1f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000179659_7.jpg",
+				"path": "/images/items/01_4271/1000179659_7.jpg",
+				"hash": "07a64c1ba74283bcd1a69fd299a940e0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4271/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000183366",
-		"01_2670",
-		"item-1000138934",
-		"01_2437"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000183366", "01_2670", "item-1000138934", "01_2437"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

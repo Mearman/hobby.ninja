@@ -34,37 +34,49 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"フェイスパーツ(タンポ印刷)×３種",
-			"首パーツ×1式"
-		],
-		"en": [
-			"Face parts (tampo printing) x 3 types",
-			"Neck parts x 1 set"
-		]
+		"ja": ["フェイスパーツ(タンポ印刷)×３種", "首パーツ×1式"],
+		"en": ["Face parts (tampo printing) x 3 types", "Neck parts x 1 set"]
 	},
-	"images": [
-		"/images/items/01_4899/1000195251_1.jpg",
-		"/images/items/01_4899/1000195251_2.jpg",
-		"/images/items/01_4899/1000195251_3.jpg",
-		"/images/items/01_4899/1000195251_4.jpg",
-		"/images/items/01_4899/1000195251_5.jpg",
-		"/images/items/01_4899/1000195251_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195251_1.jpg",
+				"path": "/images/items/01_4899/1000195251_1.jpg",
+				"hash": "5b3b44f1abce337d0d3e9c863ce0461e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195251_2.jpg",
+				"path": "/images/items/01_4899/1000195251_2.jpg",
+				"hash": "ff06e87bb2875dd4dcf2549ddb25094f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195251_3.jpg",
+				"path": "/images/items/01_4899/1000195251_3.jpg",
+				"hash": "90f33d5ab7a0840c5e82fe954365fab8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195251_4.jpg",
+				"path": "/images/items/01_4899/1000195251_4.jpg",
+				"hash": "4f40d102a42740c48aa2627449e4f2e6"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195251_5.jpg",
+				"path": "/images/items/01_4899/1000195251_5.jpg",
+				"hash": "aaa3821f9fcd0f802de75ba2f005127e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195251_6.jpg",
+				"path": "/images/items/01_4899/1000195251_6.jpg",
+				"hash": "25b0436c457f1fe563d8ddc35a60d68f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4899/",
-	"brandIds": [
-		"30ms"
-	],
+	"brandIds": ["30ms"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5975",
-		"01_5976",
-		"01_5977",
-		"01_5954"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3565",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3565/"

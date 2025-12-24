@@ -47,32 +47,66 @@
 			"Customized head parts (mask x 1, base parts x 2)"
 		]
 	},
-	"images": [
-		"/images/items/01_4295/153_5208.jpg",
-		"/images/items/01_4295/155_5208.jpg",
-		"/images/items/01_4295/156_5208.jpg",
-		"/images/items/01_4295/157_5208.jpg",
-		"/images/items/01_4295/158_5208.jpg",
-		"/images/items/01_4295/159_5208.jpg",
-		"/images/items/01_4295/189_5208.jpg",
-		"/images/items/01_4295/190_5208.jpg",
-		"/images/items/01_4295/191_5208.jpg",
-		"/images/items/01_4295/192_5208.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5208.jpg",
+				"path": "/images/items/01_4295/153_5208.jpg",
+				"hash": "fd1b0788e4734f4238ca838d1df2c5da"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5208.jpg",
+				"path": "/images/items/01_4295/155_5208.jpg",
+				"hash": "fb3c190008f5686fc444a976e964ee72"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5208.jpg",
+				"path": "/images/items/01_4295/156_5208.jpg",
+				"hash": "f73c17a697674bfbae2b97b20aaa0a58"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5208.jpg",
+				"path": "/images/items/01_4295/157_5208.jpg",
+				"hash": "317d91dc4ecc193401183d35fb638711"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5208.jpg",
+				"path": "/images/items/01_4295/158_5208.jpg",
+				"hash": "bce47c6a8f61d05a2931b74ea28aecec"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5208.jpg",
+				"path": "/images/items/01_4295/159_5208.jpg",
+				"hash": "fc84a5c9c5672f72e0eb97a83259aab8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5208.jpg",
+				"path": "/images/items/01_4295/189_5208.jpg",
+				"hash": "297683fa2bda0b1296cacb506b7d7031"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5208.jpg",
+				"path": "/images/items/01_4295/190_5208.jpg",
+				"hash": "d2e5548e671d0d1714b5999d1ef8ae54"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5208.jpg",
+				"path": "/images/items/01_4295/191_5208.jpg",
+				"hash": "e5a2bb6158623e3cc9f9ee7ab3d94669"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5208.jpg",
+				"path": "/images/items/01_4295/192_5208.jpg",
+				"hash": "54bab2be5ac4f629ebbec23de09d5392"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4295/",
-	"brandIds": [
-		"30mm"
-	],
+	"brandIds": ["30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3750",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3750/"

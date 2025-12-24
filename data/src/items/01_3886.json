@@ -79,40 +79,53 @@
 			"ビーム・ソード・アックス（ビームエフェクト３種）",
 			"シールド"
 		],
-		"en": [
-			"Beam machine gun (2 types)",
-			"Sturm Faust",
-			"Beam sword ax (3 types of beam effects)",
-			"Seal de"
-		]
+		"en": ["Beam machine gun (2 types)", "Sturm Faust", "Beam sword ax (3 types of beam effects)", "Seal de"]
 	},
-	"images": [
-		"/images/items/01_3886/153_4828.jpg",
-		"/images/items/01_3886/155_4828.jpg",
-		"/images/items/01_3886/156_4828.jpg",
-		"/images/items/01_3886/157_4828.jpg",
-		"/images/items/01_3886/158_4828.jpg",
-		"/images/items/01_3886/159_4828.jpg",
-		"/images/items/01_3886/189_4828.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4828.jpg",
+				"path": "/images/items/01_3886/153_4828.jpg",
+				"hash": "c33c919497b5503141f89e17107d7145"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4828.jpg",
+				"path": "/images/items/01_3886/155_4828.jpg",
+				"hash": "083b1dad19d65507fd77226895f55eb0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4828.jpg",
+				"path": "/images/items/01_3886/156_4828.jpg",
+				"hash": "5935d30240618ea4a7f59db7c4464ea5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4828.jpg",
+				"path": "/images/items/01_3886/157_4828.jpg",
+				"hash": "0722283a9838238ca7c6c14f5267a14e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4828.jpg",
+				"path": "/images/items/01_3886/158_4828.jpg",
+				"hash": "ebe5a7fb8d643f13c96ecf137f55fba8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4828.jpg",
+				"path": "/images/items/01_3886/159_4828.jpg",
+				"hash": "c6ea7f68df0f3877bf345570fda1fe10"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4828.jpg",
+				"path": "/images/items/01_3886/189_4828.jpg",
+				"hash": "57b6b4f51abdd8fafa5b1285de559562"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3886/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000219110",
-		"item-1000136789",
-		"01_2336",
-		"item-1000129742"
-	],
+	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000219110", "item-1000136789", "01_2336", "item-1000129742"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

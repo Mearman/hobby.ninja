@@ -26,27 +26,26 @@
 			"A set of 3 HGUC series plastic models: Z Gundam, Hyakushiki, and Mk-II, which are the main mobile suits used in the Gryps battle in \"Mobile Suit Z Gundam\". All three figures are fully reproduced in real color to recreate the images from the play. Mk-II comes with a new beam saber reproduced with clear parts. Includes a booklet-style instruction manual with Gryps campaign commentary and a special marking seal."
 		]
 	},
-	"images": [
-		"/images/items/01_5413/153_625.jpg",
-		"/images/items/01_5413/155_625.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_625.jpg",
+				"path": "/images/items/01_5413/153_625.jpg",
+				"hash": "2634f817da9c3f6019cba8148537ac9c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_625.jpg",
+				"path": "/images/items/01_5413/155_625.jpg",
+				"hash": "ca4400d6947b19bc1e3780038a2127c5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5413/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"],
 	"manual": {
 		"id": "249",
 		"url": "https://manual.bandai-hobby.net/menus/detail/249/"

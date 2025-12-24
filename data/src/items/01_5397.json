@@ -36,40 +36,64 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ビークル×1式",
-			"ジョイントパーツ×1"
-		],
-		"en": [
-			"Vehicle x 1 set",
-			"Joint parts x 1"
-		]
+		"ja": ["ビークル×1式", "ジョイントパーツ×1"],
+		"en": ["Vehicle x 1 set", "Joint parts x 1"]
 	},
-	"images": [
-		"/images/items/01_5397/153_6245.jpg",
-		"/images/items/01_5397/155_6245.jpg",
-		"/images/items/01_5397/156_6245.jpg",
-		"/images/items/01_5397/157_6245.jpg",
-		"/images/items/01_5397/158_6245.jpg",
-		"/images/items/01_5397/159_6245.jpg",
-		"/images/items/01_5397/189_6245.jpg",
-		"/images/items/01_5397/190_6245.jpg",
-		"/images/items/01_5397/191_6245.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6245.jpg",
+				"path": "/images/items/01_5397/153_6245.jpg",
+				"hash": "26d44b6cf00dbe4c15878fc0d87b1d41"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6245.jpg",
+				"path": "/images/items/01_5397/155_6245.jpg",
+				"hash": "9583327bc023ba9c410065ae2e254fda"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6245.jpg",
+				"path": "/images/items/01_5397/156_6245.jpg",
+				"hash": "87b83430ef8a4ebfb5a6aff4eb7ec889"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6245.jpg",
+				"path": "/images/items/01_5397/157_6245.jpg",
+				"hash": "e7e75d0e12d0509ac5a71e170e461670"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6245.jpg",
+				"path": "/images/items/01_5397/158_6245.jpg",
+				"hash": "ade33b615632a15d6acc3b386eff98fb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6245.jpg",
+				"path": "/images/items/01_5397/159_6245.jpg",
+				"hash": "298bcdb92122cd0efd374a341d64e817"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6245.jpg",
+				"path": "/images/items/01_5397/189_6245.jpg",
+				"hash": "c8d159cbbad61ed1404d15d6d5b86bca"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6245.jpg",
+				"path": "/images/items/01_5397/190_6245.jpg",
+				"hash": "68e40b21e6627034d241e80219da41ae"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_6245.jpg",
+				"path": "/images/items/01_5397/191_6245.jpg",
+				"hash": "556585755cf4abd4814ab26fc91246e9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5397/",
-	"brandIds": [
-		"30mm"
-	],
+	"brandIds": ["30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3791",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3791/"

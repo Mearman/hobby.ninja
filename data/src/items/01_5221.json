@@ -35,27 +35,31 @@
 			"• Comes with original plastic model decals."
 		]
 	},
-	"images": [
-		"/images/items/01_5221/153_6077.jpg",
-		"/images/items/01_5221/155_6077.jpg",
-		"/images/items/01_5221/156_6077.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6077.jpg",
+				"path": "/images/items/01_5221/153_6077.jpg",
+				"hash": "a87e7f0a492702727fd9c354333a0624"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6077.jpg",
+				"path": "/images/items/01_5221/155_6077.jpg",
+				"hash": "a26fa626338ee45185bea95052d98c21"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6077.jpg",
+				"path": "/images/items/01_5221/156_6077.jpg",
+				"hash": "9f13f8f1a0f9d1532ef919a37d54dd4d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5221/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_4272",
-		"01_4195",
-		"01_4067"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5994", "01_4272", "01_4195", "01_4067"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

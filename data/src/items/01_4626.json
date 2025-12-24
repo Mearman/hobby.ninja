@@ -32,24 +32,34 @@
 			"Set includes 2 types of beam sabers and 2 types of nozzle effects. Nozzle effect x 2 types, beam sabers x 2 types"
 		]
 	},
-	"images": [
-		"/images/items/01_4626/1000076408_1.jpg",
-		"/images/items/01_4626/1000076408_2.jpg",
-		"/images/items/01_4626/1000076408_3.jpg",
-		"/images/items/01_4626/1000076408_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000076408_1.jpg",
+				"path": "/images/items/01_4626/1000076408_1.jpg",
+				"hash": "a9391f41d61f4b0a84522454841e8d80"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000076408_2.jpg",
+				"path": "/images/items/01_4626/1000076408_2.jpg",
+				"hash": "017faf413b1a4ba3ee4e4838f33b9201"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000076408_3.jpg",
+				"path": "/images/items/01_4626/1000076408_3.jpg",
+				"hash": "9874a3b99e9bcbd3b389e9f586ab2211"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000076408_4.jpg",
+				"path": "/images/items/01_4626/1000076408_4.jpg",
+				"hash": "8fb701c07a975955e55db0acfe07b78a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4626/",
-	"brandIds": [
-		"parts"
-	],
+	"brandIds": ["parts"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3582",
-		"01_3563",
-		"01_3564",
-		"01_636"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3582", "01_3563", "01_3564", "01_636"]
 }

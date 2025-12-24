@@ -26,27 +26,31 @@
 			"Isaac's exclusive white Gouf Ignited is now available in the SEED HG series.The opening and closing of the large back wing is reproduced with a metal shaft.The base of the shoulder is pull-out, allowing for bold poses when using the heat rod and special sword, just like in the movie.Two types of beam swords are included: a dagger type that can be stored in the seal, and an extension type that reproduces the beam blade with clear parts.A flight display stand whose height can be adjusted with an adapter is included."
 		]
 	},
-	"images": [
-		"/images/items/01_3435/153_4389.jpg",
-		"/images/items/01_3435/155_4389.jpg",
-		"/images/items/01_3435/156_4389.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4389.jpg",
+				"path": "/images/items/01_3435/153_4389.jpg",
+				"hash": "b994b1f99171bd56804aece49134a413"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4389.jpg",
+				"path": "/images/items/01_3435/155_4389.jpg",
+				"hash": "50eb05dd796a9c17ff10c97d3e2ff817"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4389.jpg",
+				"path": "/images/items/01_3435/156_4389.jpg",
+				"hash": "9c636d4f191e9cca0eafed63fe7f74b5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3435/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000203308", "01_5097", "01_3739", "item-1000157417"],
 	"manual": {
 		"id": "199",
 		"url": "https://manual.bandai-hobby.net/menus/detail/199/"

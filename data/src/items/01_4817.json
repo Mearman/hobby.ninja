@@ -20,33 +20,29 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HG 1/144 シャア専用ザクII メタリックVer.登場！"
-		],
-		"en": [
-			"HG 1/144 Char's Zaku II Metallic Ver. now available!"
-		]
+		"ja": ["HG 1/144 シャア専用ザクII メタリックVer.登場！"],
+		"en": ["HG 1/144 Char's Zaku II Metallic Ver. now available!"]
 	},
-	"images": [
-		"/images/items/01_4817/153_5700.jpg",
-		"/images/items/01_4817/155_5700.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5700.jpg",
+				"path": "/images/items/01_4817/153_5700.jpg",
+				"hash": "6d0d7e0c8fc7979d0390cf08ee4a608d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5700.jpg",
+				"path": "/images/items/01_4817/155_5700.jpg",
+				"hash": "f71032d1e38480f385828ae4595ed4ce"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4817/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

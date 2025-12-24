@@ -40,34 +40,39 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ホープ・エッジ"
-		],
-		"en": [
-			"hope edge"
-		]
+		"ja": ["ホープ・エッジ"],
+		"en": ["hope edge"]
 	},
-	"images": [
-		"/images/items/01_6993/01_6993_0.jpg",
-		"/images/items/01_6993/01_6993_1.jpg",
-		"/images/items/01_6993/01_6993_2.jpg",
-		"/images/items/01_6993/01_6993_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6993_0.jpg",
+				"path": "/images/items/01_6993/01_6993_0.jpg",
+				"hash": "4da7b0e66bc8bffa8d9c12901d1c0691"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6993_1.jpg",
+				"path": "/images/items/01_6993/01_6993_1.jpg",
+				"hash": "a705e8add4e6a47d08dace1503159159"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6993_2.jpg",
+				"path": "/images/items/01_6993/01_6993_2.jpg",
+				"hash": "c5cfa41fb7a2eb2c93f9613d7d932dee"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6993_3.jpg",
+				"path": "/images/items/01_6993/01_6993_3.jpg",
+				"hash": "bba03b946ad0a8255dfbdc45d479258f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6993/",
-	"brandIds": [
-		"pb_charapla"
-	],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_6991",
-		"01_6992",
-		"01_6747"
-	],
+	"brandIds": ["pb_charapla"],
+	"seriesIds": ["lbx"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_6991", "01_6992", "01_6747"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

@@ -36,39 +36,64 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"アーマーシュナイダー×２"
-		],
-		"en": [
-			"Armor Schneider x2"
-		]
+		"ja": ["アーマーシュナイダー×２"],
+		"en": ["Armor Schneider x2"]
 	},
-	"images": [
-		"/images/items/01_3788/153_4738.jpg",
-		"/images/items/01_3788/155_4738.jpg",
-		"/images/items/01_3788/156_4738.jpg",
-		"/images/items/01_3788/157_4738.jpg",
-		"/images/items/01_3788/158_4738.jpg",
-		"/images/items/01_3788/159_4738.jpg",
-		"/images/items/01_3788/189_4738.jpg",
-		"/images/items/01_3788/190_4738.jpg",
-		"/images/items/01_3788/191_4738.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4738.jpg",
+				"path": "/images/items/01_3788/153_4738.jpg",
+				"hash": "14a49b3837da0caf8045e1e00ba404d2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4738.jpg",
+				"path": "/images/items/01_3788/155_4738.jpg",
+				"hash": "e1c1f880cd8af0053d6e2a35c2c18476"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4738.jpg",
+				"path": "/images/items/01_3788/156_4738.jpg",
+				"hash": "ca081eb075b4c9c61133f819262bc0bb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4738.jpg",
+				"path": "/images/items/01_3788/157_4738.jpg",
+				"hash": "8b93243f692b868d676e2065a0bd0099"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4738.jpg",
+				"path": "/images/items/01_3788/158_4738.jpg",
+				"hash": "2ee3853087f8fd2154b89615298b9161"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4738.jpg",
+				"path": "/images/items/01_3788/159_4738.jpg",
+				"hash": "f4048b9e53d525a590ff61c66e94ae15"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4738.jpg",
+				"path": "/images/items/01_3788/189_4738.jpg",
+				"hash": "e46961d5ae6bfe2c7853ed5fcb6dd5d0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4738.jpg",
+				"path": "/images/items/01_3788/190_4738.jpg",
+				"hash": "1f62e47e8d7bfe818e8fe9e6146d12c6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4738.jpg",
+				"path": "/images/items/01_3788/191_4738.jpg",
+				"hash": "a36b260c63e292cc9a8dd0b13f91cbca"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3788/",
-	"brandIds": [
-		"entry_grade"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5440",
-		"01_4211",
-		"01_3744"
-	],
+	"brandIds": ["entry_grade"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5440", "01_4211", "01_3744"],
 	"manual": {
 		"id": "1050",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1050/"

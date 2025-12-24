@@ -41,28 +41,36 @@
 			"• The Core Fighter can be transformed and stored inside the body."
 		]
 	},
-	"images": [
-		"/images/items/01_3709/1000163006_1.jpg",
-		"/images/items/01_3709/1000163006_2.jpg",
-		"/images/items/01_3709/1000163006_3.jpg",
-		"/images/items/01_3709/1000163006_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163006_1.jpg",
+				"path": "/images/items/01_3709/1000163006_1.jpg",
+				"hash": "f5f1e4c46c0b4499fb1e7db3610bf1b0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163006_2.jpg",
+				"path": "/images/items/01_3709/1000163006_2.jpg",
+				"hash": "78369a66148d30692cd56093d901b189"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163006_3.jpg",
+				"path": "/images/items/01_3709/1000163006_3.jpg",
+				"hash": "35a2525c7e79b41aed2f839101fb30af"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163006_4.jpg",
+				"path": "/images/items/01_3709/1000163006_4.jpg",
+				"hash": "a5a547cb5dd92f004345eab05a434071"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3709/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

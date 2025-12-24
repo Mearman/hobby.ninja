@@ -33,46 +33,64 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ギャラクシーブースター×1",
-			"ジョイントパーツ×1式",
-			"台座×1",
-			"シール×1"
-		],
-		"en": [
-			"Galaxy booster x1",
-			"Joint parts x 1 set",
-			"Pedestal x 1",
-			"Seal×1"
-		]
+		"ja": ["ギャラクシーブースター×1", "ジョイントパーツ×1式", "台座×1", "シール×1"],
+		"en": ["Galaxy booster x1", "Joint parts x 1 set", "Pedestal x 1", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_5242/1000209859_1.jpg",
-		"/images/items/01_5242/1000209859_2.jpg",
-		"/images/items/01_5242/1000209859_3.jpg",
-		"/images/items/01_5242/1000209859_4.jpg",
-		"/images/items/01_5242/1000209859_5.jpg",
-		"/images/items/01_5242/1000209859_6.jpg",
-		"/images/items/01_5242/1000209859_7.jpg",
-		"/images/items/01_5242/1000209859_8.jpg",
-		"/images/items/01_5242/1000209859_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209859_1.jpg",
+				"path": "/images/items/01_5242/1000209859_1.jpg",
+				"hash": "4d5c8c0cae3599c8717c4291940a1423"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209859_2.jpg",
+				"path": "/images/items/01_5242/1000209859_2.jpg",
+				"hash": "fb3e372517a595280abbde86935b7bca"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209859_3.jpg",
+				"path": "/images/items/01_5242/1000209859_3.jpg",
+				"hash": "f5700eada0cc9d5258b92dea0f2c0f8f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209859_4.jpg",
+				"path": "/images/items/01_5242/1000209859_4.jpg",
+				"hash": "34cb7bef87f2dba568bae531685ed3d9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209859_5.jpg",
+				"path": "/images/items/01_5242/1000209859_5.jpg",
+				"hash": "7a5dfb806d56dceea15bfd1069eb3caf"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209859_6.jpg",
+				"path": "/images/items/01_5242/1000209859_6.jpg",
+				"hash": "8ee3a024531108ec0aa3dc391c0260cc"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209859_7.jpg",
+				"path": "/images/items/01_5242/1000209859_7.jpg",
+				"hash": "8cd7fe5ab3702741803dcc761ef5b685"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209859_8.jpg",
+				"path": "/images/items/01_5242/1000209859_8.jpg",
+				"hash": "0ab9982bf3cc16e3c414db784a8f7ae2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209859_9.jpg",
+				"path": "/images/items/01_5242/1000209859_9.jpg",
+				"hash": "800e9f74d3e3fffb12d772d3e3f964d9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5242/",
-	"brandIds": [
-		"optionpartsset"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5937",
-		"01_5545",
-		"01_5453",
-		"01_5441"
-	],
+	"brandIds": ["optionpartsset"],
+	"seriesIds": ["buildfighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5937", "01_5545", "01_5453", "01_5441"],
 	"manual": {
 		"id": "1660",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1660/"

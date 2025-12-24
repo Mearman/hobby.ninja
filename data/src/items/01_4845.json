@@ -26,23 +26,29 @@
 			"The long-awaited kit version of the 2nd Nightmare Frame \"Crimson Type 2 \" from \" Code Geass: Lelouch of the Rebellion\" The characteristic right arm is movable as in the movie, and various poses can be reproduced. The hatch in the back cockpit opens and closes, and the internal details are precisely reproduced. A special dagger is included. A Karen figure (standing and seated) is included."
 		]
 	},
-	"images": [
-		"/images/items/01_4845/1000091719_1.jpg",
-		"/images/items/01_4845/1000091719_2.jpg",
-		"/images/items/01_4845/1000091719_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000091719_1.jpg",
+				"path": "/images/items/01_4845/1000091719_1.jpg",
+				"hash": "f6c77cb6e0d13135722b3b7357504ab2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000091719_2.jpg",
+				"path": "/images/items/01_4845/1000091719_2.jpg",
+				"hash": "978e4bd675b1eacd61865e708191afe4"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000091719_3.jpg",
+				"path": "/images/items/01_4845/1000091719_3.jpg",
+				"hash": "a5cd0e528fbbf52513486d74e93f20b6"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4845/",
 	"brandIds": [],
-	"seriesIds": [
-		"geass"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000203132",
-		"item-1000187724",
-		"item-1000167903",
-		"01_5809"
-	]
+	"seriesIds": ["geass"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000203132", "item-1000187724", "item-1000167903", "01_5809"]
 }

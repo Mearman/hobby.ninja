@@ -35,42 +35,52 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"HG-003 COQUILLETT×1式",
-			"SG-027 ZIMMERMAN×1式",
-			"BO-044 HUXLEY×1式",
-			"BML-G3/P04ACT-01×1式"
-		],
-		"en": [
-			"HG-003 COQUILLETT×1 set",
-			"SG-027 ZIMMERMAN×1 set",
-			"BO-044 HUXLEY×1 set",
-			"BML-G3/P04ACT-01×1 set"
-		]
+		"ja": ["HG-003 COQUILLETT×1式", "SG-027 ZIMMERMAN×1式", "BO-044 HUXLEY×1式", "BML-G3/P04ACT-01×1式"],
+		"en": ["HG-003 COQUILLETT×1 set", "SG-027 ZIMMERMAN×1 set", "BO-044 HUXLEY×1 set", "BML-G3/P04ACT-01×1 set"]
 	},
-	"images": [
-		"/images/items/01_5459/1000225849_1.jpg",
-		"/images/items/01_5459/1000225849_2.jpg",
-		"/images/items/01_5459/1000225849_3.jpg",
-		"/images/items/01_5459/1000225849_4.jpg",
-		"/images/items/01_5459/1000225849_5.jpg",
-		"/images/items/01_5459/1000225849_6.jpg",
-		"/images/items/01_5459/1000225849_7.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225849_1.jpg",
+				"path": "/images/items/01_5459/1000225849_1.jpg",
+				"hash": "394d055e75386451ce2cf1fd2dac8984"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225849_2.jpg",
+				"path": "/images/items/01_5459/1000225849_2.jpg",
+				"hash": "9d7802be44f728bafed33d2f1e227fb3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225849_3.jpg",
+				"path": "/images/items/01_5459/1000225849_3.jpg",
+				"hash": "ace12d5a28c8206d0eba5800f3145930"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225849_4.jpg",
+				"path": "/images/items/01_5459/1000225849_4.jpg",
+				"hash": "4a8118ef1d11231e33cd49abff104046"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225849_5.jpg",
+				"path": "/images/items/01_5459/1000225849_5.jpg",
+				"hash": "2a8e16817d776ce6c400360579508498"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225849_6.jpg",
+				"path": "/images/items/01_5459/1000225849_6.jpg",
+				"hash": "527e228c46d0a8e078c3dbaa3799a3f3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225849_7.jpg",
+				"path": "/images/items/01_5459/1000225849_7.jpg",
+				"hash": "635300843c1d6632c605865f41682213"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5459/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [
-		"armoredcore"
-	],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5973",
-		"01_5974",
-		"01_5573",
-		"01_5574"
-	]
+	"brandIds": ["30mm"],
+	"seriesIds": ["armoredcore"],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5973", "01_5974", "01_5573", "01_5574"]
 }

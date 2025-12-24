@@ -34,44 +34,72 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ナイフパーツ（左右）",
-			"自立補助パーツ×２",
-			"シール×１"
-		],
-		"en": [
-			"Knife parts (left and right)",
-			"Self-supporting auxiliary parts x 2",
-			"Seal×1"
-		]
+		"ja": ["ナイフパーツ（左右）", "自立補助パーツ×２", "シール×１"],
+		"en": ["Knife parts (left and right)", "Self-supporting auxiliary parts x 2", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_3689/153_4643.jpg",
-		"/images/items/01_3689/155_4643.jpg",
-		"/images/items/01_3689/156_4643.jpg",
-		"/images/items/01_3689/157_4643.jpg",
-		"/images/items/01_3689/158_4643.jpg",
-		"/images/items/01_3689/159_4643.jpg",
-		"/images/items/01_3689/189_4643.jpg",
-		"/images/items/01_3689/190_4643.jpg",
-		"/images/items/01_3689/191_4643.jpg",
-		"/images/items/01_3689/192_4643.jpg",
-		"/images/items/01_3689/193_4643.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4643.jpg",
+				"path": "/images/items/01_3689/153_4643.jpg",
+				"hash": "7171b9d0dc8c165d10d6a176aa786d97"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4643.jpg",
+				"path": "/images/items/01_3689/155_4643.jpg",
+				"hash": "764f5d030f81408df98e07165ff803e7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4643.jpg",
+				"path": "/images/items/01_3689/156_4643.jpg",
+				"hash": "c129e9d6c36b859caff2bffe16d6458b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4643.jpg",
+				"path": "/images/items/01_3689/157_4643.jpg",
+				"hash": "dc0b76303730ac67c93a1875219d633e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4643.jpg",
+				"path": "/images/items/01_3689/158_4643.jpg",
+				"hash": "7a18c9fef6fe03f0b79fc0775e42c659"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4643.jpg",
+				"path": "/images/items/01_3689/159_4643.jpg",
+				"hash": "da06c3014be539c4fde79a22d4088fa0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4643.jpg",
+				"path": "/images/items/01_3689/189_4643.jpg",
+				"hash": "435273743a4af6ab455661390ce7fe8f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4643.jpg",
+				"path": "/images/items/01_3689/190_4643.jpg",
+				"hash": "46964d5af6a7e60812e542de15eeaef3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4643.jpg",
+				"path": "/images/items/01_3689/191_4643.jpg",
+				"hash": "b3502cb72b5f74e23ca69ec2ca703442"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4643.jpg",
+				"path": "/images/items/01_3689/192_4643.jpg",
+				"hash": "e939e1e7db9558bc32b8efc284b3f325"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_4643.jpg",
+				"path": "/images/items/01_3689/193_4643.jpg",
+				"hash": "15ebe8e3e6b322a2d00b65a493c5807c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3689/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"kyoukaisenki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5196",
-		"01_5183",
-		"01_5170",
-		"01_5171"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["kyoukaisenki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
 }

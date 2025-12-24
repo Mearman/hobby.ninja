@@ -34,34 +34,32 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"口差し替えパーツ×1",
-			"ディスプレイ台座×1",
-			"シール×1"
-		],
-		"en": [
-			"Mouth replacement parts x 1",
-			"Display pedestal x 1",
-			"Seal×1"
-		]
+		"ja": ["口差し替えパーツ×1", "ディスプレイ台座×1", "シール×1"],
+		"en": ["Mouth replacement parts x 1", "Display pedestal x 1", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_7038/01_7038_0.jpg",
-		"/images/items/01_7038/01_7038_1.jpg",
-		"/images/items/01_7038/01_7038_2.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_7038_0.jpg",
+				"path": "/images/items/01_7038/01_7038_0.jpg",
+				"hash": "814f65f7efea82ee26874c05c5a8c5d4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7038_1.jpg",
+				"path": "/images/items/01_7038/01_7038_1.jpg",
+				"hash": "dae87b5b2176ef6bb964877a926f4d90"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7038_2.jpg",
+				"path": "/images/items/01_7038/01_7038_2.jpg",
+				"hash": "04a8d3feff65f02bca2015f0a4db3ace"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_7038/",
 	"brandIds": [],
-	"seriesIds": [
-		"pokemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7015",
-		"01_7010",
-		"01_6895",
-		"01_6897"
-	]
+	"seriesIds": ["pokemon"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7015", "01_7010", "01_6895", "01_6897"]
 }

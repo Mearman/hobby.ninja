@@ -18,29 +18,27 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"• SD ガンダム Gジェネレーションにドラゴンガンダム(ドラゴンクロ―モード)が登場！"
-		],
-		"en": [
-			"• Dragon Gundam (Dragon Claw Mode) is now available in SD Gundam G Generation!"
-		]
+		"ja": ["• SD ガンダム Gジェネレーションにドラゴンガンダム(ドラゴンクロ―モード)が登場！"],
+		"en": ["• Dragon Gundam (Dragon Claw Mode) is now available in SD Gundam G Generation!"]
 	},
-	"images": [
-		"/images/items/01_4683/153_5572.jpg",
-		"/images/items/01_4683/155_5572.JPG"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5572.jpg",
+				"path": "/images/items/01_4683/153_5572.jpg",
+				"hash": "5ed7c436914b18f4497b730ce03a1d2a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5572.JPG",
+				"path": "/images/items/01_4683/155_5572.JPG",
+				"hash": "3873337b315688f3434d93f1399503ea"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4683/",
-	"brandIds": [
-		"sdgundamseries"
-	],
+	"brandIds": ["sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
 }

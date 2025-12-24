@@ -53,32 +53,64 @@
 			"Hand parts Weapon holder (left) x 2"
 		]
 	},
-	"images": [
-		"/images/items/01_4397/153_5301.jpg",
-		"/images/items/01_4397/155_5301.jpg",
-		"/images/items/01_4397/156_5301.jpg",
-		"/images/items/01_4397/157_5301.jpg",
-		"/images/items/01_4397/158_5301.jpg",
-		"/images/items/01_4397/159_5301.jpg",
-		"/images/items/01_4397/189_5301.jpg",
-		"/images/items/01_4397/190_5301.jpg",
-		"/images/items/01_4397/191_5301.jpg",
-		"/images/items/01_4397/192_5301.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5301.jpg",
+				"path": "/images/items/01_4397/153_5301.jpg",
+				"hash": "ce739e752937d5690976d2029c73dc20"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5301.jpg",
+				"path": "/images/items/01_4397/155_5301.jpg",
+				"hash": "d3b19a71d0d7450dae97c816de07a1db"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5301.jpg",
+				"path": "/images/items/01_4397/156_5301.jpg",
+				"hash": "720359fff321bb2f5c5ee527772084fa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5301.jpg",
+				"path": "/images/items/01_4397/157_5301.jpg",
+				"hash": "0b542dca97b29d2831cd31cc552749cb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5301.jpg",
+				"path": "/images/items/01_4397/158_5301.jpg",
+				"hash": "f3a2a0806d573ad9c38268bd190dd10a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5301.jpg",
+				"path": "/images/items/01_4397/159_5301.jpg",
+				"hash": "2fd2cf430e3fda8bb7220f4d57ccddec"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5301.jpg",
+				"path": "/images/items/01_4397/189_5301.jpg",
+				"hash": "19a31425061ded57fd4a495df4ba8a84"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5301.jpg",
+				"path": "/images/items/01_4397/190_5301.jpg",
+				"hash": "4244b42ca6ce5fa241359d6429efa931"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5301.jpg",
+				"path": "/images/items/01_4397/191_5301.jpg",
+				"hash": "7dcf9f6a42ecda56ff58a42f8317a537"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5301.jpg",
+				"path": "/images/items/01_4397/192_5301.jpg",
+				"hash": "4aff4a044b40430b0ee944aa9af709ae"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4397/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"kyoukaisenki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5196",
-		"01_5183",
-		"01_5170",
-		"01_5171"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["kyoukaisenki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
 }

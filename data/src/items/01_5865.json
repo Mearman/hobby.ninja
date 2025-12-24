@@ -29,22 +29,24 @@
 			"• The upper part of the car is ivory. Hankyu maroon color is reproduced with glossy paint."
 		]
 	},
-	"images": [
-		"/images/items/01_5865/153_944.jpg",
-		"/images/items/01_5865/155_944.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_944.jpg",
+				"path": "/images/items/01_5865/153_944.jpg",
+				"hash": "b98749498626052ef9d7d26a56007f62"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_944.jpg",
+				"path": "/images/items/01_5865/155_944.jpg",
+				"hash": "b16b55377d28756da7afcdcf96d846d8"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5865/",
-	"brandIds": [
-		"train"
-	],
+	"brandIds": ["train"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_1276", "01_1277", "01_1278", "01_1280"]
 }

@@ -37,38 +37,57 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ビームライフル×１",
-			"ビームサーベル×2",
-			"シールド×１",
-			"シール×1"
-		],
-		"en": [
-			"Beam rifle x1",
-			"Beam saber x2",
-			"Seal de x1",
-			"Seal×1"
-		]
+		"ja": ["ビームライフル×１", "ビームサーベル×2", "シールド×１", "シール×1"],
+		"en": ["Beam rifle x1", "Beam saber x2", "Seal de x1", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_5074/1000205375_1.jpg",
-		"/images/items/01_5074/1000205375_2.jpg",
-		"/images/items/01_5074/1000205375_3.jpg",
-		"/images/items/01_5074/1000205375_4.jpg",
-		"/images/items/01_5074/1000205375_5.jpg",
-		"/images/items/01_5074/1000205375_6.jpg",
-		"/images/items/01_5074/1000205375_7.jpg",
-		"/images/items/01_5074/1000205375_8.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205375_1.jpg",
+				"path": "/images/items/01_5074/1000205375_1.jpg",
+				"hash": "d5d24be7312afa9c592d0e40457ade9b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205375_2.jpg",
+				"path": "/images/items/01_5074/1000205375_2.jpg",
+				"hash": "cebbbb24d6a6b5c1f74956bad7330ac0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205375_3.jpg",
+				"path": "/images/items/01_5074/1000205375_3.jpg",
+				"hash": "41ec36c9685edebea1565bd50f29c241"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205375_4.jpg",
+				"path": "/images/items/01_5074/1000205375_4.jpg",
+				"hash": "97491bed7f7a49c7dd3ae4d5a743b50b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205375_5.jpg",
+				"path": "/images/items/01_5074/1000205375_5.jpg",
+				"hash": "ba03a27ee0a877eef60676b8581483dc"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205375_6.jpg",
+				"path": "/images/items/01_5074/1000205375_6.jpg",
+				"hash": "ab43378ea8812c4b3e6dd639fd32ece2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205375_7.jpg",
+				"path": "/images/items/01_5074/1000205375_7.jpg",
+				"hash": "6a31a68e40461d81e20ce9d85b3fa245"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205375_8.jpg",
+				"path": "/images/items/01_5074/1000205375_8.jpg",
+				"hash": "3c0d02e600e8d38c1526cfe1da25f5a1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5074/",
-	"brandIds": [
-		"SDEX"
-	],
-	"seriesIds": [
-		"seed-freedom"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["SDEX"],
+	"seriesIds": ["seed-freedom"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": []
 }

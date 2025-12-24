@@ -68,24 +68,24 @@
 			"Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_7035/01_7035_0.jpg",
-		"/images/items/01_7035/01_7035_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_7035_0.jpg",
+				"path": "/images/items/01_7035/01_7035_0.jpg",
+				"hash": "e3abd6fd8f3608f2f979945329fed449"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7035_1.jpg",
+				"path": "/images/items/01_7035/01_7035_1.jpg",
+				"hash": "8eb35eade092ba348180fafe16b9f8ad"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_7035/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"macross"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7036",
-		"01_7037",
-		"01_6869",
-		"01_6870"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["macross"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7036", "01_7037", "01_6869", "01_6870"]
 }

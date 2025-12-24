@@ -43,30 +43,46 @@
 			"• Water transfer decals"
 		]
 	},
-	"images": [
-		"/images/items/01_4972/153_5843.jpg",
-		"/images/items/01_4972/155_5843.jpg",
-		"/images/items/01_4972/156_5843.jpg",
-		"/images/items/01_4972/157_5843.jpg",
-		"/images/items/01_4972/158_5843.jpg",
-		"/images/items/01_4972/159_5843.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5843.jpg",
+				"path": "/images/items/01_4972/153_5843.jpg",
+				"hash": "ce505fe23e66da0586f1534f17a96831"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5843.jpg",
+				"path": "/images/items/01_4972/155_5843.jpg",
+				"hash": "bb555650edc3c2d9ba5c8d5d66435419"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5843.jpg",
+				"path": "/images/items/01_4972/156_5843.jpg",
+				"hash": "d8bdf22b0128f0b633188c2462581101"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5843.jpg",
+				"path": "/images/items/01_4972/157_5843.jpg",
+				"hash": "d821dff2dfc98e9ea3b77c4563a946c4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5843.jpg",
+				"path": "/images/items/01_4972/158_5843.jpg",
+				"hash": "715fecf8737f351a08b1f9038d4b6a49"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5843.jpg",
+				"path": "/images/items/01_4972/159_5843.jpg",
+				"hash": "96bb8ab798568037f94ed5488a2517d1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4972/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

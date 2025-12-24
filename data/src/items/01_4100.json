@@ -56,29 +56,49 @@
 			"Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_4100/153_5024.jpg",
-		"/images/items/01_4100/155_5024.jpg",
-		"/images/items/01_4100/156_5024.jpg",
-		"/images/items/01_4100/157_5024.jpg",
-		"/images/items/01_4100/158_5024.jpg",
-		"/images/items/01_4100/159_5024.jpg",
-		"/images/items/01_4100/189_5024.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5024.jpg",
+				"path": "/images/items/01_4100/153_5024.jpg",
+				"hash": "fa76a9f79a0da4935b30f7c977c34a9f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5024.jpg",
+				"path": "/images/items/01_4100/155_5024.jpg",
+				"hash": "41263de0b007ef0a3ae365a10104207c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5024.jpg",
+				"path": "/images/items/01_4100/156_5024.jpg",
+				"hash": "ba1969190c1d5b1e7a59ca6c3c5dcd0d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5024.jpg",
+				"path": "/images/items/01_4100/157_5024.jpg",
+				"hash": "7c0501d8252c4bbfeeab07c58188fb7e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5024.jpg",
+				"path": "/images/items/01_4100/158_5024.jpg",
+				"hash": "8e82d18469f4c0dcc45dc95c12d0bb70"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5024.jpg",
+				"path": "/images/items/01_4100/159_5024.jpg",
+				"hash": "5414feae43890905831ed967c0340103"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5024.jpg",
+				"path": "/images/items/01_4100/189_5024.jpg",
+				"hash": "f8db013550c1b8ce374f49b2d6f077e3"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4100/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"superrobot_og"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5578",
-		"01_5491",
-		"item-1000214961",
-		"01_5369"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["superrobot_og"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5578", "01_5491", "item-1000214961", "01_5369"]
 }

@@ -26,25 +26,31 @@
 			"From \"Mobile Suit Gundam \", Zeon's ace unit \" Black Tri-Star \" specification \" High Mobility Type Zaku \" is lined up in MG with Ver. 2.0 specification Features of the High Mobility Type The legs and backpack have solid mechanical details to reproduce the MSV feel 1/100 Scale \" Gaia \", \" Ortega \", and \" Mash\" standing and seated figures are included."
 		]
 	},
-	"images": [
-		"/images/items/01_4511/153_5413.jpg",
-		"/images/items/01_4511/155_5413.jpg",
-		"/images/items/01_4511/156_5413.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5413.jpg",
+				"path": "/images/items/01_4511/153_5413.jpg",
+				"hash": "77bcd98cd0d409ebfec53987241917c3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5413.jpg",
+				"path": "/images/items/01_4511/155_5413.jpg",
+				"hash": "db2de54afd8c4f245b916b1a2b4c4734"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5413.jpg",
+				"path": "/images/items/01_4511/156_5413.jpg",
+				"hash": "738362f749f0f593ab48f744bbf5374e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4511/",
-	"brandIds": [
-		"mg"
-	],
+	"brandIds": ["mg"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5469",
-		"01_5593",
-		"item-1000216602"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5994", "01_5469", "01_5593", "item-1000216602"],
 	"manual": {
 		"id": "548",
 		"url": "https://manual.bandai-hobby.net/menus/detail/548/"

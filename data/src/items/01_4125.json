@@ -100,46 +100,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"バニティリッパー",
-			"ディスカッター",
-			"ハイファミリア"
-		],
-		"en": [
-			"vanity ripper",
-			"Discutter",
-			"High Familia"
-		]
+		"ja": ["バニティリッパー", "ディスカッター", "ハイファミリア"],
+		"en": ["vanity ripper", "Discutter", "High Familia"]
 	},
-	"images": [
-		"/images/items/01_4125/153_5052.jpg",
-		"/images/items/01_4125/155_5052.jpg",
-		"/images/items/01_4125/156_5052.jpg",
-		"/images/items/01_4125/157_5052.jpg",
-		"/images/items/01_4125/158_5052.jpg",
-		"/images/items/01_4125/159_5052.jpg",
-		"/images/items/01_4125/189_5052.jpg",
-		"/images/items/01_4125/190_5052.jpg",
-		"/images/items/01_4125/191_5052.jpg",
-		"/images/items/01_4125/192_5052.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5052.jpg",
+				"path": "/images/items/01_4125/153_5052.jpg",
+				"hash": "b8eb130412e45b17349f684784f8d93d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5052.jpg",
+				"path": "/images/items/01_4125/155_5052.jpg",
+				"hash": "2486edc115dd7785c31630b519f99e17"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5052.jpg",
+				"path": "/images/items/01_4125/156_5052.jpg",
+				"hash": "7c77158976c8f033f6a80e9e6e3508c7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5052.jpg",
+				"path": "/images/items/01_4125/157_5052.jpg",
+				"hash": "c82a22468f6cce880cd8d20538691a14"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5052.jpg",
+				"path": "/images/items/01_4125/158_5052.jpg",
+				"hash": "13ece11f2caf19d89cc8bf52fa167832"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5052.jpg",
+				"path": "/images/items/01_4125/159_5052.jpg",
+				"hash": "ca560ab41a0b35edfa9323ea8b8c9e10"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5052.jpg",
+				"path": "/images/items/01_4125/189_5052.jpg",
+				"hash": "f92c022eb1a2992bc455193af37f50fe"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5052.jpg",
+				"path": "/images/items/01_4125/190_5052.jpg",
+				"hash": "47de0a7ddf9e3b85f4208e190370a9bd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5052.jpg",
+				"path": "/images/items/01_4125/191_5052.jpg",
+				"hash": "dcf890aaea19189b65bf204bb10c45b3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5052.jpg",
+				"path": "/images/items/01_4125/192_5052.jpg",
+				"hash": "743a0fdc21b7a238029f932517570471"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4125/",
-	"brandIds": [
-		"pb_charapla",
-		"hg"
-	],
-	"seriesIds": [
-		"superrobot_og"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5578",
-		"01_5491",
-		"item-1000214961",
-		"01_5369"
-	],
+	"brandIds": ["pb_charapla", "hg"],
+	"seriesIds": ["superrobot_og"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5578", "01_5491", "item-1000214961", "01_5369"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

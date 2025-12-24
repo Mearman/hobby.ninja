@@ -38,28 +38,46 @@
 			"• SDW HEROES Sergeant Verde Buster Gundam"
 		]
 	},
-	"images": [
-		"/images/items/01_3639/153_4593.jpg",
-		"/images/items/01_3639/155_4593.jpg",
-		"/images/items/01_3639/156_4593.jpg",
-		"/images/items/01_3639/157_4593.jpg",
-		"/images/items/01_3639/158_4593.jpg",
-		"/images/items/01_3639/159_4593.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4593.jpg",
+				"path": "/images/items/01_3639/153_4593.jpg",
+				"hash": "31a132755260482a3c049a7c4902b1a5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4593.jpg",
+				"path": "/images/items/01_3639/155_4593.jpg",
+				"hash": "3de67ec850867baca65d875679ccf99d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4593.jpg",
+				"path": "/images/items/01_3639/156_4593.jpg",
+				"hash": "046a703d643cc8d4a72382e1e618cd10"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4593.jpg",
+				"path": "/images/items/01_3639/157_4593.jpg",
+				"hash": "8c0ba9b040e63987f3c4ec74083f3e55"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4593.jpg",
+				"path": "/images/items/01_3639/158_4593.jpg",
+				"hash": "c8f9071f9192ec09590599b493de10fd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4593.jpg",
+				"path": "/images/items/01_3639/159_4593.jpg",
+				"hash": "fdbf8e81ec0a051c02fc89875fdb0eb1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3639/",
 	"brandIds": [],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5470",
-		"01_5471",
-		"01_5472",
-		"01_5347"
-	],
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

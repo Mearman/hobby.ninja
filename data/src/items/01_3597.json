@@ -27,28 +27,36 @@
 			"• The tragic aircraft that Yurin piloted in \"Mobile Suit Gundam AGE Flit Edition\". • By inserting a clear rod into the special pedestal, you can recreate the bit injection scene from the movie. • 5 bits included. Molded product x 5, foil seal x 1, clear rod for effects x 4, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_3597/153_4552.jpg",
-		"/images/items/01_3597/155_4552.jpg",
-		"/images/items/01_3597/156_4552.jpg",
-		"/images/items/01_3597/157_4552.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4552.jpg",
+				"path": "/images/items/01_3597/153_4552.jpg",
+				"hash": "37b265815d4f7a3f0d6e0eadec45fa4c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4552.jpg",
+				"path": "/images/items/01_3597/155_4552.jpg",
+				"hash": "dfb34fa9735a3e8483eba5c9ac2dc0e4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4552.jpg",
+				"path": "/images/items/01_3597/156_4552.jpg",
+				"hash": "07bbe95e39623449d50e55193517eeb4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4552.jpg",
+				"path": "/images/items/01_3597/157_4552.jpg",
+				"hash": "be19c5c4b38cd7bf6d65c20a4f312cc0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3597/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "329",
 		"url": "https://manual.bandai-hobby.net/menus/detail/329/"

@@ -60,32 +60,64 @@
 			"Display base x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4341/153_5250.jpg",
-		"/images/items/01_4341/155_5250.jpg",
-		"/images/items/01_4341/156_5250.jpg",
-		"/images/items/01_4341/157_5250.jpg",
-		"/images/items/01_4341/158_5250.jpg",
-		"/images/items/01_4341/159_5250.jpg",
-		"/images/items/01_4341/189_5250.jpg",
-		"/images/items/01_4341/190_5250.jpg",
-		"/images/items/01_4341/191_5250.jpg",
-		"/images/items/01_4341/192_5250.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5250.jpg",
+				"path": "/images/items/01_4341/153_5250.jpg",
+				"hash": "160550a0cfaf877fce92a46bc3873b9a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5250.jpg",
+				"path": "/images/items/01_4341/155_5250.jpg",
+				"hash": "edf9faf3a21dbe6b18b5cd6f2a36ba95"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5250.jpg",
+				"path": "/images/items/01_4341/156_5250.jpg",
+				"hash": "d0946b1efc7f82a9616a62513358b8ee"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5250.jpg",
+				"path": "/images/items/01_4341/157_5250.jpg",
+				"hash": "73a63ed09ef06c8e0715584104aa62e0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5250.jpg",
+				"path": "/images/items/01_4341/158_5250.jpg",
+				"hash": "8825bd2faeefc0423a2c16068d758dd6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5250.jpg",
+				"path": "/images/items/01_4341/159_5250.jpg",
+				"hash": "d0673cc7f63b488f7e8c11c3ffb6aac7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5250.jpg",
+				"path": "/images/items/01_4341/189_5250.jpg",
+				"hash": "40614bcbdd3ae81989ece411ea62dbeb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5250.jpg",
+				"path": "/images/items/01_4341/190_5250.jpg",
+				"hash": "7e4d4e6aaa624d0028be0eeb88ce346b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5250.jpg",
+				"path": "/images/items/01_4341/191_5250.jpg",
+				"hash": "bd2edf5c21f3082890edcd8419f7c00a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5250.jpg",
+				"path": "/images/items/01_4341/192_5250.jpg",
+				"hash": "4d5ad3307153da8da0b6c372df286e9c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4341/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"superrobot_og"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5578",
-		"01_5491",
-		"item-1000214961",
-		"01_5369"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["superrobot_og"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5578", "01_5491", "item-1000214961", "01_5369"]
 }

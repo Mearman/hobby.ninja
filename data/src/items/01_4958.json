@@ -32,25 +32,39 @@
 			"Comes with various weapons."
 		]
 	},
-	"images": [
-		"/images/items/01_4958/153_582.jpg",
-		"/images/items/01_4958/155_582.jpg",
-		"/images/items/01_4958/156_582.jpg",
-		"/images/items/01_4958/157_582.jpg",
-		"/images/items/01_4958/158_582.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_582.jpg",
+				"path": "/images/items/01_4958/153_582.jpg",
+				"hash": "3783c621c9e4419184022fbf25392226"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_582.jpg",
+				"path": "/images/items/01_4958/155_582.jpg",
+				"hash": "6408b31c42cb77638a6286a3111bb4ee"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_582.jpg",
+				"path": "/images/items/01_4958/156_582.jpg",
+				"hash": "2c964106e5a7fd7d7cdb835e52ea503e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_582.jpg",
+				"path": "/images/items/01_4958/157_582.jpg",
+				"hash": "0643e248867d0b189fffd5e29003ca84"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_582.jpg",
+				"path": "/images/items/01_4958/158_582.jpg",
+				"hash": "5392530384d5a6eb2228bb6804f204c6"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4958/",
 	"brandIds": [],
-	"seriesIds": [
-		"keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7034",
-		"01_2120",
-		"01_2122",
-		"01_2104"
-	]
+	"seriesIds": ["keroro"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7034", "01_2120", "01_2122", "01_2104"]
 }

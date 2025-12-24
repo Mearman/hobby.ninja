@@ -35,34 +35,42 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"クリアパーツ×1式",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Clear parts x 1 set",
-			"Foil Seal×1"
-		]
+		"ja": ["クリアパーツ×1式", "ホイルシール×1"],
+		"en": ["Clear parts x 1 set", "Foil Seal×1"]
 	},
-	"images": [
-		"/images/items/01_3681/153_4635.jpg",
-		"/images/items/01_3681/155_4635.jpg",
-		"/images/items/01_3681/156_4635.jpg",
-		"/images/items/01_3681/157_4635.jpg",
-		"/images/items/01_3681/158_4635.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4635.jpg",
+				"path": "/images/items/01_3681/153_4635.jpg",
+				"hash": "cd9cc222bc45fe2601990196de865050"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4635.jpg",
+				"path": "/images/items/01_3681/155_4635.jpg",
+				"hash": "42d73e641352929adfefb654ab7f99aa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4635.jpg",
+				"path": "/images/items/01_3681/156_4635.jpg",
+				"hash": "a48a4fc3b574e6accc46f473e59823d2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4635.jpg",
+				"path": "/images/items/01_3681/157_4635.jpg",
+				"hash": "885028ad48776a4558e54336ddf45e5e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4635.jpg",
+				"path": "/images/items/01_3681/158_4635.jpg",
+				"hash": "311af060a2819a89ea2d146d70878234"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3681/",
 	"brandIds": [],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5470",
-		"01_5471",
-		"01_5472",
-		"01_5347"
-	]
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
 }

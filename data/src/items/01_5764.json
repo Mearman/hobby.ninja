@@ -31,20 +31,24 @@
 			"• Reproduce the open/close button on the side of the guest door."
 		]
 	},
-	"images": [
-		"/images/items/01_5764/153_827.jpg",
-		"/images/items/01_5764/155_827.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_827.jpg",
+				"path": "/images/items/01_5764/153_827.jpg",
+				"hash": "2f0b63a6b4338017396fbc5ca9a4793f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_827.jpg",
+				"path": "/images/items/01_5764/155_827.jpg",
+				"hash": "29de3ccd9d2f2d39fb3cf9ed5efa5415"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5764/",
-	"brandIds": [
-		"train"
-	],
+	"brandIds": ["train"],
 	"seriesIds": [],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"relatedItemIds": ["01_1276", "01_1277", "01_1278", "01_1280"]
 }

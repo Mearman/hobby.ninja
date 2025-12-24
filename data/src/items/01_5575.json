@@ -37,13 +37,7 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"RF-024 TURNER×1",
-			"HI-32：BU-TT/A×1式",
-			"BML-G1/P07VTC-12×1式",
-			"SI-24：SU-Q5×1式",
-			"PETシート×1"
-		],
+		"ja": ["RF-024 TURNER×1", "HI-32：BU-TT/A×1式", "BML-G1/P07VTC-12×1式", "SI-24：SU-Q5×1式", "PETシート×1"],
 		"en": [
 			"RF-024 TURNER×1",
 			"HI-32: BU-TT/A x 1 set",
@@ -52,28 +46,44 @@
 			"PET sheet x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5575/01_5575_0.jpg",
-		"/images/items/01_5575/01_5575_1.jpg",
-		"/images/items/01_5575/01_5575_2.jpg",
-		"/images/items/01_5575/01_5575_3.jpg",
-		"/images/items/01_5575/01_5575_4.jpg",
-		"/images/items/01_5575/01_5575_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5575_0.jpg",
+				"path": "/images/items/01_5575/01_5575_0.jpg",
+				"hash": "5f6f5a2294fe7d71d9c9ddf1b39d24d8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5575_1.jpg",
+				"path": "/images/items/01_5575/01_5575_1.jpg",
+				"hash": "2e45c9a1219bcbf661e302aff2421b2b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5575_2.jpg",
+				"path": "/images/items/01_5575/01_5575_2.jpg",
+				"hash": "f870788406a129e12ed9e9b092ccf41c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5575_3.jpg",
+				"path": "/images/items/01_5575/01_5575_3.jpg",
+				"hash": "5224098083ac7824233cffef57b4c03c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5575_4.jpg",
+				"path": "/images/items/01_5575/01_5575_4.jpg",
+				"hash": "e51b910dd7be1ae44feb068799165254"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5575_5.jpg",
+				"path": "/images/items/01_5575/01_5575_5.jpg",
+				"hash": "02e7644dfa6d3995eb7427b122c6b691"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5575/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [
-		"armoredcore"
-	],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5973",
-		"01_5974",
-		"01_5573",
-		"01_5574"
-	]
+	"brandIds": ["30mm"],
+	"seriesIds": ["armoredcore"],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5973", "01_5974", "01_5573", "01_5574"]
 }

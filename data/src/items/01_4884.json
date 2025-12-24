@@ -20,32 +20,24 @@
 	"targetAge": 15,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"「MG 1/100 MSZ-006 Z ガンダム Ver.2.0 エクストラフィニッシュVer.」登場！"
-		],
-		"en": [
-			"\"MG 1/100 MSZ-006 Z Gundam Ver.2.0 Extra Finish Ver.\" now available!"
-		]
+		"ja": ["「MG 1/100 MSZ-006 Z ガンダム Ver.2.0 エクストラフィニッシュVer.」登場！"],
+		"en": ["\"MG 1/100 MSZ-006 Z Gundam Ver.2.0 Extra Finish Ver.\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4884/153_5762.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5762.jpg",
+				"path": "/images/items/01_4884/153_5762.jpg",
+				"hash": "ed231edb627dc44c6bae3b240356afbc"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4884/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000145352",
-		"item-1000131596",
-		"01_4270",
-		"item-1000112091"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000145352", "item-1000131596", "01_4270", "item-1000112091"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

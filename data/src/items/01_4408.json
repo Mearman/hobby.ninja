@@ -41,31 +41,51 @@
 			"*Later, it will be sold at Premium Bandai (Bandai Namco Group official mail order site) and THE GUNDAM BASE stores."
 		]
 	},
-	"images": [
-		"/images/items/01_4408/153_5313.jpg",
-		"/images/items/01_4408/155_5313.jpg",
-		"/images/items/01_4408/156_5313.jpg",
-		"/images/items/01_4408/157_5313.jpg",
-		"/images/items/01_4408/158_5313.jpg",
-		"/images/items/01_4408/159_5313.jpg",
-		"/images/items/01_4408/189_5313.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5313.jpg",
+				"path": "/images/items/01_4408/153_5313.jpg",
+				"hash": "0d684f49d38b33dc16ec596170c04422"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5313.jpg",
+				"path": "/images/items/01_4408/155_5313.jpg",
+				"hash": "e765d92926fb7e1ca65730a2207e07ed"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5313.jpg",
+				"path": "/images/items/01_4408/156_5313.jpg",
+				"hash": "d5a1d738eaa9480db091f2abd8deebb5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5313.jpg",
+				"path": "/images/items/01_4408/157_5313.jpg",
+				"hash": "4d9e557090fbfa172201f0ba552df8b8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5313.jpg",
+				"path": "/images/items/01_4408/158_5313.jpg",
+				"hash": "2dfcc9dd614807fb6175af763bf443f5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5313.jpg",
+				"path": "/images/items/01_4408/159_5313.jpg",
+				"hash": "d7415246e268d872b5480eefbd3d319d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5313.jpg",
+				"path": "/images/items/01_4408/189_5313.jpg",
+				"hash": "92998cceea67c6080f2b9f467cedb993"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4408/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5346",
-		"01_5210",
-		"01_4971",
-		"01_4251"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5346", "01_5210", "01_4971", "01_4251"],
 	"tag": {
 		"ja": "GUNDAM SIDE-F",
 		"en": "GUNDAM SIDE-F"

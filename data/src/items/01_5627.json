@@ -27,28 +27,36 @@
 			"“Strike Gundam I.W.S.P.”, which appeared in in-store promotional videos, is now available in the MG series. The Strike Gundam body reproduces the molding color in a realistic dark tone color. The 9.1m anti-ship sword equipped on I.W.S.P. can be removed and equipped on Strike Gundam. The weapon \"Grand Slam\" that came with PG Strike Gundam is now included in MG size. The beam boomerang blade that comes with the Combined Seal is reproduced with clear parts. A pedestal is included, allowing you to recreate poses during space battles."
 		]
 	},
-	"images": [
-		"/images/items/01_5627/153_685.jpg",
-		"/images/items/01_5627/155_685.jpg",
-		"/images/items/01_5627/156_685.jpg",
-		"/images/items/01_5627/157_685.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_685.jpg",
+				"path": "/images/items/01_5627/153_685.jpg",
+				"hash": "b46ecdc62023754ddc5c3b7723ae67fd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_685.jpg",
+				"path": "/images/items/01_5627/155_685.jpg",
+				"hash": "849c72722fb5e9545dea09c6e534ae19"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_685.jpg",
+				"path": "/images/items/01_5627/156_685.jpg",
+				"hash": "34ec03edb0113dab4ac51d75449d12a6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_685.jpg",
+				"path": "/images/items/01_5627/157_685.jpg",
+				"hash": "52ddc9333360a608d4e5792c4c92b1e6"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5627/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5221",
-		"01_4272",
-		"01_4195"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5994", "01_5221", "01_4272", "01_4195"],
 	"manual": {
 		"id": "542",
 		"url": "https://manual.bandai-hobby.net/menus/detail/542/"

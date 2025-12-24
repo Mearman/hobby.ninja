@@ -27,28 +27,36 @@
 			"• From \"Mobile Suit Gundam AGE\", the first generation main character appears as an MG. • For the MG version, mechanical designer Mr. Ebikawa himself drew up the settings and added details to various parts such as the head, shoulders, waist, and legs. • The light-emitting parts of the head and chest are made of foil seals to express light. • Equipped with gimmicks unique to MG, such as opening and closing the cockpit hatch. Molded product x 14, Tetron Seal x 1, Foil Seal x 1, Dry decal x 1, PETSeal x 1, Assembly Manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_3591/153_4546.jpg",
-		"/images/items/01_3591/155_4546.jpg",
-		"/images/items/01_3591/156_4546.jpg",
-		"/images/items/01_3591/157_4546.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4546.jpg",
+				"path": "/images/items/01_3591/153_4546.jpg",
+				"hash": "41f7a9d6e3c44e870c729eb99f9a53bd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4546.jpg",
+				"path": "/images/items/01_3591/155_4546.jpg",
+				"hash": "1330191be0bb8134318ecef594014b64"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4546.jpg",
+				"path": "/images/items/01_3591/156_4546.jpg",
+				"hash": "492e65cbd534df7659494f14328916f3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4546.jpg",
+				"path": "/images/items/01_3591/157_4546.jpg",
+				"hash": "5f0c4b265cc9de47491e0b573b68d6eb"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3591/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181355",
-		"item-1000181354",
-		"01_4196",
-		"item-1000128729"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181355", "item-1000181354", "01_4196", "item-1000128729"],
 	"manual": {
 		"id": "596",
 		"url": "https://manual.bandai-hobby.net/menus/detail/596/"

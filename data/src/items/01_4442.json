@@ -26,22 +26,24 @@
 			"The largest new type mobile armor in the history of the Neo Zeon army that appeared in \"Mobile Suit Gundam: Char's Counterattack\" has been dynamically turned into a kit. It comes with the same Scale 1/550 size ν Gundam and a display stand, creating a sense of scale and collectability. The deformation gimmick that stores the head into the body is reproduced, making it possible to transform into the landing position without replacing parts. The extension and contraction mechanism of the front and rear landing (descent) arms has been reproduced. The triple beam cannon is movable, and the mega arm cannon also has a rotating body. The unfolding and retracting mechanism of the hidden arm is reproduced as set. Front armor and rear skirt are movable. The propellant tank is movable. The large funnel is mounted on the rear skirt."
 		]
 	},
-	"images": [
-		"/images/items/01_4442/153_5348.jpg",
-		"/images/items/01_4442/155_5348.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5348.jpg",
+				"path": "/images/items/01_4442/153_5348.jpg",
+				"hash": "4f9af299870e25f424281bc31fc4f8eb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5348.jpg",
+				"path": "/images/items/01_4442/155_5348.jpg",
+				"hash": "acb5dbc0158c4bacae1ab72716f0799d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4442/",
 	"brandIds": [],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5478",
-		"01_5531",
-		"01_5532",
-		"01_5423"
-	]
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5478", "01_5531", "01_5532", "01_5423"]
 }

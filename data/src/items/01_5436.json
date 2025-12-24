@@ -27,15 +27,20 @@
 			"Chocolate Crunch is now available in matcha flavor! Recommended as a souvenir!"
 		]
 	},
-	"images": [
-		"/images/items/01_5436/153_6281.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6281.jpg",
+				"path": "/images/items/01_5436/153_6281.jpg",
+				"hash": "90f1cac81af27caa1a918af4c0fef869"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5436/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
+	"categoryIds": ["product-list"],
 	"relatedItemIds": [],
 	"tag": {
 		"ja": "ガンダムベースグッズ",

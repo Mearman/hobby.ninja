@@ -31,24 +31,44 @@
 			"• Mechacolle-sized Melanka is also included."
 		]
 	},
-	"images": [
-		"/images/items/01_5812/153_884.jpg",
-		"/images/items/01_5812/155_884.jpg",
-		"/images/items/01_5812/156_884.jpg",
-		"/images/items/01_5812/157_884.jpg",
-		"/images/items/01_5812/158_884.jpg",
-		"/images/items/01_5812/159_884.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_884.jpg",
+				"path": "/images/items/01_5812/153_884.jpg",
+				"hash": "e44b985fb66027a94b69ead860b5e11d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_884.jpg",
+				"path": "/images/items/01_5812/155_884.jpg",
+				"hash": "e6c594abcde3b238ad07be0cd2bc685f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_884.jpg",
+				"path": "/images/items/01_5812/156_884.jpg",
+				"hash": "3fea4bf9edc2b0242b00547343017c0f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_884.jpg",
+				"path": "/images/items/01_5812/157_884.jpg",
+				"hash": "b1b3b3ef7d30ffe9718791fa09b48d84"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_884.jpg",
+				"path": "/images/items/01_5812/158_884.jpg",
+				"hash": "166e0f31e2d29e7bef1abe7ab0356202"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_884.jpg",
+				"path": "/images/items/01_5812/159_884.jpg",
+				"hash": "b60966a36bcdb44adddfa40281bba5d5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5812/",
 	"brandIds": [],
-	"seriesIds": [
-		"yamato"
-	],
+	"seriesIds": ["yamato"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5971",
-		"01_5498",
-		"01_5500",
-		"01_5388"
-	]
+	"relatedItemIds": ["01_5971", "01_5498", "01_5500", "01_5388"]
 }

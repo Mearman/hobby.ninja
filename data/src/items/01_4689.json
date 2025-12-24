@@ -20,29 +20,27 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"「ビルダーズパーツ 1/144 システムウェポン004」登場！"
-		],
-		"en": [
-			"\"Builders Parts 1/144 System Weapon004\" now available!"
-		]
+		"ja": ["「ビルダーズパーツ 1/144 システムウェポン004」登場！"],
+		"en": ["\"Builders Parts 1/144 System Weapon004\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4689/153_5578.jpg",
-		"/images/items/01_4689/155_5578.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5578.jpg",
+				"path": "/images/items/01_4689/153_5578.jpg",
+				"hash": "f23d4f30a57c575943c989254309a5e8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5578.jpg",
+				"path": "/images/items/01_4689/155_5578.jpg",
+				"hash": "f1063a35f08415345273f5a005bd3f71"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4689/",
-	"brandIds": [
-		"parts"
-	],
+	"brandIds": ["parts"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3582",
-		"01_3563",
-		"01_3564",
-		"01_636"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3582", "01_3563", "01_3564", "01_636"]
 }

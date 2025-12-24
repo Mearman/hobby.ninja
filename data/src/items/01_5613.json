@@ -26,23 +26,29 @@
 			"The fourth Bancho \"Blue Wolf Gundam \" appears in \" SD Gundam Musha Bancho Fuunroku\". By replacing parts, it can be recombined from warrior form to small animal form, beastman form, and large beast first half (second half). An eyepatch scope can be attached to the head. The two bazookas included can be equipped on both shoulders, and a long bazooka can be recreated by connecting the two bazookas."
 		]
 	},
-	"images": [
-		"/images/items/01_5613/153_665.jpg",
-		"/images/items/01_5613/155_665.jpg",
-		"/images/items/01_5613/156_665.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_665.jpg",
+				"path": "/images/items/01_5613/153_665.jpg",
+				"hash": "7e65a25b8949882e40492b19daf49bd0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_665.jpg",
+				"path": "/images/items/01_5613/155_665.jpg",
+				"hash": "1f152e85266d1bacff524a7940b85ee3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_665.jpg",
+				"path": "/images/items/01_5613/156_665.jpg",
+				"hash": "7731d0e39859bd78628dabd182417c8c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5613/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

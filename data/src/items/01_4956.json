@@ -19,33 +19,29 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"HGUC ユニコーンガンダム(デストロイモード)「セブン-イレブンカラー」登場！"
-		],
-		"en": [
-			"HGUC Unicorn Gundam (Destroy Mode) \"7-Eleven Color\" now available!"
-		]
+		"ja": ["HGUC ユニコーンガンダム(デストロイモード)「セブン-イレブンカラー」登場！"],
+		"en": ["HGUC Unicorn Gundam (Destroy Mode) \"7-Eleven Color\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4956/153_5828.jpg",
-		"/images/items/01_4956/155_5828.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5828.jpg",
+				"path": "/images/items/01_4956/153_5828.jpg",
+				"hash": "0b0105f46890fb1ceca0c98c98c8edb2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5828.jpg",
+				"path": "/images/items/01_4956/155_5828.jpg",
+				"hash": "db5634447c47d97e87336b3c2fd1b53f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4956/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

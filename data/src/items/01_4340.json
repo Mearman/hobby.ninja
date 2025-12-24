@@ -26,28 +26,36 @@
 			"A 1/144 Scale, HG plastic model of the main character \"Sword Impulse Gundam \" that appears in \" Mobile Suit Gundam SEED DESTINY\". The large sword on the back can be held in two patterns, one-handed and two-handed. The beam boomerang is removable, the beam part is reproduced with clear parts, and it can also be equipped on the hand. Core Splendor in flight form is included. By attaching a backpack to the flyer unit of 1/144HG Force Impulse Gundam, you can reproduce the sword silhouette."
 		]
 	},
-	"images": [
-		"/images/items/01_4340/153_524.jpg",
-		"/images/items/01_4340/155_524.jpg",
-		"/images/items/01_4340/156_524.jpg",
-		"/images/items/01_4340/157_524.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_524.jpg",
+				"path": "/images/items/01_4340/153_524.jpg",
+				"hash": "99d40922d29fbb27392d1eeea06c370f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_524.jpg",
+				"path": "/images/items/01_4340/155_524.jpg",
+				"hash": "101fd8e7c5b301eea1f33fdc205a89fa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_524.jpg",
+				"path": "/images/items/01_4340/156_524.jpg",
+				"hash": "100f3f5ba0f2ead537fe0c6eaa2d5bbd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_524.jpg",
+				"path": "/images/items/01_4340/157_524.jpg",
+				"hash": "61458f4a316d1b350a566d7516df8447"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4340/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000203308", "01_5097", "01_3739", "item-1000157417"],
 	"manual": {
 		"id": "164",
 		"url": "https://manual.bandai-hobby.net/menus/detail/164/"

@@ -34,34 +34,37 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"EXジョイントコアキューブ×2",
-			"マルチジョイントパーツ×1式"
-		],
-		"en": [
-			"EX joint core cube x 2",
-			"Multi-joint parts x 1 set"
-		]
+		"ja": ["EXジョイントコアキューブ×2", "マルチジョイントパーツ×1式"],
+		"en": ["EX joint core cube x 2", "Multi-joint parts x 1 set"]
 	},
-	"images": [
-		"/images/items/01_6944/01_6944_0.jpg",
-		"/images/items/01_6944/01_6944_1.jpg",
-		"/images/items/01_6944/01_6944_2.jpg",
-		"/images/items/01_6944/01_6944_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6944_0.jpg",
+				"path": "/images/items/01_6944/01_6944_0.jpg",
+				"hash": "1346d6dc4afc76cab79d473f7a96e419"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6944_1.jpg",
+				"path": "/images/items/01_6944/01_6944_1.jpg",
+				"hash": "6a464baf95c2cd119bd7beb9b9cb465b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6944_2.jpg",
+				"path": "/images/items/01_6944/01_6944_2.jpg",
+				"hash": "e3343fc95b6dc773b004daee05f309e3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6944_3.jpg",
+				"path": "/images/items/01_6944/01_6944_3.jpg",
+				"hash": "b789cdeb787de866e64cec7a17648d79"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6944/",
-	"brandIds": [
-		"customize_scenebase",
-		"30mm"
-	],
+	"brandIds": ["customize_scenebase", "30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_6943",
-		"01_6937",
-		"01_6930",
-		"01_6774"
-	]
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_6943", "01_6937", "01_6930", "01_6774"]
 }

@@ -20,33 +20,29 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"「HG 1/144 ガンダム AGE-2 フルカラーメッキVer.」登場！"
-		],
-		"en": [
-			"\"HG 1/144 Gundam AGE-2 Full Color Plated Ver.\" now available!"
-		]
+		"ja": ["「HG 1/144 ガンダム AGE-2 フルカラーメッキVer.」登場！"],
+		"en": ["\"HG 1/144 Gundam AGE-2 Full Color Plated Ver.\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4889/153_5767.jpg",
-		"/images/items/01_4889/155_5767.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5767.jpg",
+				"path": "/images/items/01_4889/153_5767.jpg",
+				"hash": "d0b1910fffd3cb55b331144329f7400e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5767.jpg",
+				"path": "/images/items/01_4889/155_5767.jpg",
+				"hash": "918ae6b87a4618f2e9618964875fc43d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4889/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

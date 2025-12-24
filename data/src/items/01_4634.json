@@ -36,29 +36,41 @@
 			"• SDW HEROES Warlock Aegis Gundam"
 		]
 	},
-	"images": [
-		"/images/items/01_4634/153_5528.jpg",
-		"/images/items/01_4634/155_5528.jpg",
-		"/images/items/01_4634/156_5528.jpg",
-		"/images/items/01_4634/157_5528.jpg",
-		"/images/items/01_4634/158_5528.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5528.jpg",
+				"path": "/images/items/01_4634/153_5528.jpg",
+				"hash": "38d432c1e32bad2c8804e1ab39da9534"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5528.jpg",
+				"path": "/images/items/01_4634/155_5528.jpg",
+				"hash": "f9deda0cd284dc56812ca50f055f892b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5528.jpg",
+				"path": "/images/items/01_4634/156_5528.jpg",
+				"hash": "640a3daf3bba534d47291fb69c5dbf8a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5528.jpg",
+				"path": "/images/items/01_4634/157_5528.jpg",
+				"hash": "44dc3939be9b2543030efc9babf5b91c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5528.jpg",
+				"path": "/images/items/01_4634/158_5528.jpg",
+				"hash": "71d89ff0a4f9e4f181fda5eb8264bee3"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4634/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4336",
-		"01_4312",
-		"01_4294"
-	],
+	"brandIds": ["sdgundamseries"],
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4294"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

@@ -34,21 +34,19 @@
 			"Molded product x 5, Seal x 1, Assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_5123/153_5986.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5986.jpg",
+				"path": "/images/items/01_5123/153_5986.jpg",
+				"hash": "5631d3f26102251e0500ebfae8fd570c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5123/",
 	"brandIds": [],
-	"seriesIds": [
-		"pokemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"seriesIds": ["pokemon"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
 }

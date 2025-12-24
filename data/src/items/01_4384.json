@@ -26,28 +26,36 @@
 			"A 1/144 Scale HG plastic model of the ZAFT MS \"Gunner Zaku Warrior \" ridden by Dearka who appears in \" Mobile Suit Gundam SEED DESTINY\". Similar to the Gunner Zaku Warrior exclusive to Lunamaria Hawk, the color scheme is more similar to the one in the play with four-color illustrations. The front waist armor and side armor are movable. The large beam cannon can be held with both hands, allowing you to recreate the firing pose from the movie."
 		]
 	},
-	"images": [
-		"/images/items/01_4384/153_528.jpg",
-		"/images/items/01_4384/155_528.jpg",
-		"/images/items/01_4384/156_528.jpg",
-		"/images/items/01_4384/157_528.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_528.jpg",
+				"path": "/images/items/01_4384/153_528.jpg",
+				"hash": "74efe2ead657dbe56a9a4883aa5a7bba"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_528.jpg",
+				"path": "/images/items/01_4384/155_528.jpg",
+				"hash": "1e6d4f989117228e3e981589fb2f493c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_528.jpg",
+				"path": "/images/items/01_4384/156_528.jpg",
+				"hash": "c041d627e3fb26953be7c43b54158b99"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_528.jpg",
+				"path": "/images/items/01_4384/157_528.jpg",
+				"hash": "64763289dfee830a459b28191b1de036"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4384/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000203308", "01_5097", "01_3739", "item-1000157417"],
 	"manual": {
 		"id": "890",
 		"url": "https://manual.bandai-hobby.net/menus/detail/890/"

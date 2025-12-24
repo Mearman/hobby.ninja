@@ -88,42 +88,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"シシオウブレード"
-		],
-		"en": [
-			"Shishiou Blade"
-		]
+		"ja": ["シシオウブレード"],
+		"en": ["Shishiou Blade"]
 	},
-	"images": [
-		"/images/items/01_4246/153_5164.jpg",
-		"/images/items/01_4246/155_5164.jpg",
-		"/images/items/01_4246/156_5164.jpg",
-		"/images/items/01_4246/157_5164.jpg",
-		"/images/items/01_4246/158_5164.jpg",
-		"/images/items/01_4246/159_5164.jpg",
-		"/images/items/01_4246/189_5164.jpg",
-		"/images/items/01_4246/190_5164.jpg",
-		"/images/items/01_4246/191_5164.jpg",
-		"/images/items/01_4246/192_5164.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5164.jpg",
+				"path": "/images/items/01_4246/153_5164.jpg",
+				"hash": "05f548069b691481e33c509f01c36f8c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5164.jpg",
+				"path": "/images/items/01_4246/155_5164.jpg",
+				"hash": "c517bcef1c5651cafd793ac2072e6dbb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5164.jpg",
+				"path": "/images/items/01_4246/156_5164.jpg",
+				"hash": "e068f309a7ab373609938bfa9b1d1419"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5164.jpg",
+				"path": "/images/items/01_4246/157_5164.jpg",
+				"hash": "fdf714c6b0718c4255403457a8815cc0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5164.jpg",
+				"path": "/images/items/01_4246/158_5164.jpg",
+				"hash": "351af25da50fec2b54afbf6538297b8b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5164.jpg",
+				"path": "/images/items/01_4246/159_5164.jpg",
+				"hash": "e030a9dd1c9dfcdfd9019b0efe3ba45f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5164.jpg",
+				"path": "/images/items/01_4246/189_5164.jpg",
+				"hash": "f6f2ee87bf775703878556641c22b342"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5164.jpg",
+				"path": "/images/items/01_4246/190_5164.jpg",
+				"hash": "a81b9c17a81ec5dcb07e8123e7f1bf46"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5164.jpg",
+				"path": "/images/items/01_4246/191_5164.jpg",
+				"hash": "e37a7489977e0abff70093e22f722624"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5164.jpg",
+				"path": "/images/items/01_4246/192_5164.jpg",
+				"hash": "5c8d7d08b9c0fe8a21053f2bad13917b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4246/",
-	"brandIds": [
-		"pb_charapla",
-		"hg"
-	],
-	"seriesIds": [
-		"superrobot_og"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5578",
-		"01_5491",
-		"item-1000214961",
-		"01_5369"
-	],
+	"brandIds": ["pb_charapla", "hg"],
+	"seriesIds": ["superrobot_og"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5578", "01_5491", "item-1000214961", "01_5369"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

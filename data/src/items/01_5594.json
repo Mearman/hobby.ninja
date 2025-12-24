@@ -33,27 +33,31 @@
 			"• Beam rifle, beam saber, and seal included."
 		]
 	},
-	"images": [
-		"/images/items/01_5594/153_6429.jpg",
-		"/images/items/01_5594/155_6429.jpg",
-		"/images/items/01_5594/156_6429.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6429.jpg",
+				"path": "/images/items/01_5594/153_6429.jpg",
+				"hash": "ca8a7d53f0d9bf2d81d2f4dbdc5fb054"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6429.jpg",
+				"path": "/images/items/01_5594/155_6429.jpg",
+				"hash": "46f39afd95bca6302d371086b1551fdd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6429.jpg",
+				"path": "/images/items/01_5594/156_6429.jpg",
+				"hash": "e8634844a19ea2a8d6d2857b72e27a52"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5594/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"hathaway"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4971",
-		"01_4269",
-		"item-1000157737",
-		"item-1000157736"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["hathaway"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4971", "01_4269", "item-1000157737", "item-1000157736"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

@@ -41,28 +41,36 @@
 			"• Comes with a new exclusive MarkingSeal and a realistic decal with the same design as Amamina."
 		]
 	},
-	"images": [
-		"/images/items/01_4768/153_5651.jpg",
-		"/images/items/01_4768/155_5651.jpg",
-		"/images/items/01_4768/156_5651.jpg",
-		"/images/items/01_4768/157_5651.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5651.jpg",
+				"path": "/images/items/01_4768/153_5651.jpg",
+				"hash": "abaa5894552342d973ac0c61ce6c2e58"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5651.jpg",
+				"path": "/images/items/01_4768/155_5651.jpg",
+				"hash": "d4d64ffa9c8190bfcc314f7f72260a2c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5651.jpg",
+				"path": "/images/items/01_4768/156_5651.jpg",
+				"hash": "77f8f73cbb40cf49c2f8cbc0abfc2b36"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5651.jpg",
+				"path": "/images/items/01_4768/157_5651.jpg",
+				"hash": "4d1740255fff10c0b199386416c42343"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4768/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"astrays"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2190",
-		"item-1000116090",
-		"01_833",
-		"01_1908"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["astrays"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2190", "item-1000116090", "01_833", "01_1908"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

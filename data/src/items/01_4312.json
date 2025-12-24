@@ -31,33 +31,37 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"シール×１"
-		],
-		"en": [
-			"Seal×1"
-		]
+		"ja": ["シール×１"],
+		"en": ["Seal×1"]
 	},
-	"images": [
-		"/images/items/01_4312/153_5224.jpg",
-		"/images/items/01_4312/155_5224.jpg",
-		"/images/items/01_4312/156_5224.jpg",
-		"/images/items/01_4312/157_5224.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5224.jpg",
+				"path": "/images/items/01_4312/153_5224.jpg",
+				"hash": "996b62c54ab66658c9a671da44c94a15"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5224.jpg",
+				"path": "/images/items/01_4312/155_5224.jpg",
+				"hash": "78032a38cdbd9a376a340fadf676d999"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5224.jpg",
+				"path": "/images/items/01_4312/156_5224.jpg",
+				"hash": "56c64d240d71043032aa53cef422cb66"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5224.jpg",
+				"path": "/images/items/01_4312/157_5224.jpg",
+				"hash": "a63832e91b9367e7435eed5624c76415"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4312/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4336",
-		"01_4634",
-		"01_4294"
-	]
+	"brandIds": ["sdgundamseries"],
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4336", "01_4634", "01_4294"]
 }

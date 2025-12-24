@@ -27,25 +27,31 @@
 			"To commemorate Gundam's 45th anniversary, Gunpla-kun is now available in a color scheme inspired by the poster for the movie \"Mobile Suit Gundam\"!"
 		]
 	},
-	"images": [
-		"/images/items/01_5586/153_6421.jpg",
-		"/images/items/01_5586/155_6421.jpg",
-		"/images/items/01_5586/156_6421.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6421.jpg",
+				"path": "/images/items/01_5586/153_6421.jpg",
+				"hash": "28243b09f86c5b60a8b06f7849a3852d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6421.jpg",
+				"path": "/images/items/01_5586/155_6421.jpg",
+				"hash": "e731022321475c839cdc8e6ec249c245"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6421.jpg",
+				"path": "/images/items/01_5586/156_6421.jpg",
+				"hash": "4b84e6354366539818eba017b516c593"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5586/",
 	"brandIds": [],
-	"seriesIds": [
-		"gunplakun"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5571",
-		"01_5556",
-		"01_5478",
-		"01_5473"
-	],
+	"seriesIds": ["gunplakun"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5571", "01_5556", "01_5478", "01_5473"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

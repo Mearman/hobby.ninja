@@ -55,31 +55,51 @@
 			"Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5235/153_6090.jpg",
-		"/images/items/01_5235/155_6090.jpg",
-		"/images/items/01_5235/156_6090.jpg",
-		"/images/items/01_5235/157_6090.jpg",
-		"/images/items/01_5235/158_6090.jpg",
-		"/images/items/01_5235/159_6090.jpg",
-		"/images/items/01_5235/189_6090.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6090.jpg",
+				"path": "/images/items/01_5235/153_6090.jpg",
+				"hash": "d7cee39ceb0e9c285a4ad4bc8cb518d4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6090.jpg",
+				"path": "/images/items/01_5235/155_6090.jpg",
+				"hash": "ab6823f22291a6b8d5893621172ab4da"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6090.jpg",
+				"path": "/images/items/01_5235/156_6090.jpg",
+				"hash": "5aab49f42df55c249539db3b770d2f21"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6090.jpg",
+				"path": "/images/items/01_5235/157_6090.jpg",
+				"hash": "d7a646faef35ad666e1cc0ba30795eb1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6090.jpg",
+				"path": "/images/items/01_5235/158_6090.jpg",
+				"hash": "c8d8233774d448779974224bec7da149"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6090.jpg",
+				"path": "/images/items/01_5235/159_6090.jpg",
+				"hash": "965e05e661667258871ff97f9acd59a8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6090.jpg",
+				"path": "/images/items/01_5235/189_6090.jpg",
+				"hash": "43520ad138a3c00e84c204e26d224e40"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5235/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundambuildmetaverse"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5236",
-		"01_5083",
-		"01_5071",
-		"01_5025"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundambuildmetaverse"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5236", "01_5083", "01_5071", "01_5025"],
 	"manual": {
 		"id": "1653",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1653/"

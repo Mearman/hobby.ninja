@@ -41,27 +41,31 @@
 			"• \"Käfer Zwei\" (Seal) with swingable gun barrel is included. Can be attached to the forearm using joint parts."
 		]
 	},
-	"images": [
-		"/images/items/01_5209/153_6065.jpg",
-		"/images/items/01_5209/155_6065.jpg",
-		"/images/items/01_5209/156_6065.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6065.jpg",
+				"path": "/images/items/01_5209/153_6065.jpg",
+				"hash": "df0833544ee2088011e3e8b2ec2ffbc8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6065.jpg",
+				"path": "/images/items/01_5209/155_6065.jpg",
+				"hash": "059fa6aeae4c180601a2cc36230a745e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6065.jpg",
+				"path": "/images/items/01_5209/156_6065.jpg",
+				"hash": "5d056a0ec231b84520c9fe957c80b322"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5209/",
-	"brandIds": [
-		"fullmechanics"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4906",
-		"01_4096",
-		"01_3573",
-		"01_3426"
-	],
+	"brandIds": ["fullmechanics"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4906", "01_4096", "01_3573", "01_3426"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

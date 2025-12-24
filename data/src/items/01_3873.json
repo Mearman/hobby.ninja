@@ -68,33 +68,46 @@
 			"- Product specifications are scheduled as of 20134. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_3873/153_4816.jpg",
-		"/images/items/01_3873/155_4816.jpg",
-		"/images/items/01_3873/156_4816.jpg",
-		"/images/items/01_3873/157_4816.jpg",
-		"/images/items/01_3873/158_4816.jpg",
-		"/images/items/01_3873/159_4816.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4816.jpg",
+				"path": "/images/items/01_3873/153_4816.jpg",
+				"hash": "f65d24cc0709040db999da7081944d59"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4816.jpg",
+				"path": "/images/items/01_3873/155_4816.jpg",
+				"hash": "1f9cda1d9f4aa38bec0eade8ce7e0c9a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4816.jpg",
+				"path": "/images/items/01_3873/156_4816.jpg",
+				"hash": "10b7f689fe2ba4c3561bc3a043139ca2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4816.jpg",
+				"path": "/images/items/01_3873/157_4816.jpg",
+				"hash": "5d7f180d9cd59748eba37ea4e64ddfd6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4816.jpg",
+				"path": "/images/items/01_3873/158_4816.jpg",
+				"hash": "4fde29113174af48e43020995c75ec91"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4816.jpg",
+				"path": "/images/items/01_3873/159_4816.jpg",
+				"hash": "8c204db0a2138ea6a60f47055b4c74e7"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3873/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla",
-		"hguc"
-	],
-	"seriesIds": [
-		"g-0083"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000127907",
-		"item-1000127908",
-		"item-1000124942",
-		"item-1000105596"
-	],
+	"brandIds": ["hg", "pb_hg", "pb_gunpla", "hguc"],
+	"seriesIds": ["g-0083"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000127907", "item-1000127908", "item-1000124942", "item-1000105596"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

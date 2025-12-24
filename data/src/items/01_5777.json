@@ -31,29 +31,36 @@
 			"• Weapons and hand parts are included. It is also possible to replace it with the normal Jesta."
 		]
 	},
-	"images": [
-		"/images/items/01_5777/153_839.jpg",
-		"/images/items/01_5777/155_839.jpg",
-		"/images/items/01_5777/156_839.jpg",
-		"/images/items/01_5777/157_839.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_839.jpg",
+				"path": "/images/items/01_5777/153_839.jpg",
+				"hash": "54e4f74d33f50282dec49a5184a43e3c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_839.jpg",
+				"path": "/images/items/01_5777/155_839.jpg",
+				"hash": "d49f07c9cc9fd4c487436529f3b7d896"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_839.jpg",
+				"path": "/images/items/01_5777/156_839.jpg",
+				"hash": "b9561dccf1db8d2c902f805fb51dd6bb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_839.jpg",
+				"path": "/images/items/01_5777/157_839.jpg",
+				"hash": "c679c8d07f8242a67ab47745a6bbfc62"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5777/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "438",
 		"url": "https://manual.bandai-hobby.net/menus/detail/438/"

@@ -58,35 +58,71 @@
 			"Water transfer decal x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4259/153_5176.jpg",
-		"/images/items/01_4259/155_5176.jpg",
-		"/images/items/01_4259/156_5176.jpg",
-		"/images/items/01_4259/157_5176.jpg",
-		"/images/items/01_4259/158_5176.jpg",
-		"/images/items/01_4259/159_5176.jpg",
-		"/images/items/01_4259/189_5176.jpg",
-		"/images/items/01_4259/190_5176.jpg",
-		"/images/items/01_4259/191_5176.jpg",
-		"/images/items/01_4259/192_5176.jpg",
-		"/images/items/01_4259/193_5176.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5176.jpg",
+				"path": "/images/items/01_4259/153_5176.jpg",
+				"hash": "6e28b435699ae3b4b5e70bf9d8f71755"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5176.jpg",
+				"path": "/images/items/01_4259/155_5176.jpg",
+				"hash": "324408e6fd42228b63f8583308077a24"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5176.jpg",
+				"path": "/images/items/01_4259/156_5176.jpg",
+				"hash": "dbb92d11d670725af87d6426abf0e9c3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5176.jpg",
+				"path": "/images/items/01_4259/157_5176.jpg",
+				"hash": "ca6797f400ced18a3cafbc0e613b33c8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5176.jpg",
+				"path": "/images/items/01_4259/158_5176.jpg",
+				"hash": "0c4c4c4ea7e60c5ee7894f4f01442740"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5176.jpg",
+				"path": "/images/items/01_4259/159_5176.jpg",
+				"hash": "b70889233fe695a63052cc141495be5a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5176.jpg",
+				"path": "/images/items/01_4259/189_5176.jpg",
+				"hash": "afa10228b70d76949630a21724fd5e61"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5176.jpg",
+				"path": "/images/items/01_4259/190_5176.jpg",
+				"hash": "92a4b79f3c37ffe594d5287f01188625"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5176.jpg",
+				"path": "/images/items/01_4259/191_5176.jpg",
+				"hash": "09b16631bdc5d7e668414ec5f35bbde8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5176.jpg",
+				"path": "/images/items/01_4259/192_5176.jpg",
+				"hash": "fd13920a82e2a7851f55a00b74cdca2d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_5176.jpg",
+				"path": "/images/items/01_4259/193_5176.jpg",
+				"hash": "386534e751756d333334c54119f94fbd"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4259/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"g-witch"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5364",
-		"01_5082",
-		"item-1000194221",
-		"01_4264"
-	],
+	"brandIds": ["figurerise-standard"],
+	"seriesIds": ["g-witch"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5364", "01_5082", "item-1000194221", "01_4264"],
 	"manual": {
 		"id": "140",
 		"url": "https://manual.bandai-hobby.net/menus/detail/140/"

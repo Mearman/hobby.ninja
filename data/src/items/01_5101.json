@@ -41,36 +41,62 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"シール×1"
-		],
-		"en": [
-			"Seal×1"
-		]
+		"ja": ["シール×1"],
+		"en": ["Seal×1"]
 	},
-	"images": [
-		"/images/items/01_5101/153_6035.jpg",
-		"/images/items/01_5101/155_6035.jpg",
-		"/images/items/01_5101/156_6035.jpg",
-		"/images/items/01_5101/157_6035.jpg",
-		"/images/items/01_5101/158_6035.jpg",
-		"/images/items/01_5101/159_6035.jpg",
-		"/images/items/01_5101/189_6035.jpg",
-		"/images/items/01_5101/190_6035.jpg",
-		"/images/items/01_5101/191_6035.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6035.jpg",
+				"path": "/images/items/01_5101/153_6035.jpg",
+				"hash": "63c9d2c3276f990e08b4c152ea667d2d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6035.jpg",
+				"path": "/images/items/01_5101/155_6035.jpg",
+				"hash": "e8f75e895839aada72cb3ad1d295d0f6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6035.jpg",
+				"path": "/images/items/01_5101/156_6035.jpg",
+				"hash": "cad6e6263f68004c37d797088cbaecf5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6035.jpg",
+				"path": "/images/items/01_5101/157_6035.jpg",
+				"hash": "b03ef64af9d4575c6ff6a594cf5d0b10"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6035.jpg",
+				"path": "/images/items/01_5101/158_6035.jpg",
+				"hash": "e0067ca8b01602e8c0a2a90950a64901"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6035.jpg",
+				"path": "/images/items/01_5101/159_6035.jpg",
+				"hash": "ba04fafa16eeea6b7001bfee1c4d3b8c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6035.jpg",
+				"path": "/images/items/01_5101/189_6035.jpg",
+				"hash": "563b905381ee3c1f43cc7549df0441ea"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6035.jpg",
+				"path": "/images/items/01_5101/190_6035.jpg",
+				"hash": "3b1c157302abe7004bbe7ed265e1ef28"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_6035.jpg",
+				"path": "/images/items/01_5101/191_6035.jpg",
+				"hash": "a7a86987070f23c65ed385a56d299ce6"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5101/",
 	"brandIds": [],
-	"seriesIds": [
-		"kimetsu"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5011",
-		"01_4391",
-		"01_3889",
-		"01_3521"
-	]
+	"seriesIds": ["kimetsu"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5011", "01_4391", "01_3889", "01_3521"]
 }

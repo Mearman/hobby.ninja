@@ -97,47 +97,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"レイザーブレイド",
-			"アルティメス・ビームサーベル",
-			"ツインドッズライフル"
-		],
-		"en": [
-			"razor blade",
-			"Artimes Beam Saber",
-			"twin dods rifle"
-		]
+		"ja": ["レイザーブレイド", "アルティメス・ビームサーベル", "ツインドッズライフル"],
+		"en": ["razor blade", "Artimes Beam Saber", "twin dods rifle"]
 	},
-	"images": [
-		"/images/items/01_4126/153_5053.jpg",
-		"/images/items/01_4126/155_5053.jpg",
-		"/images/items/01_4126/156_5053.jpg",
-		"/images/items/01_4126/157_5053.jpg",
-		"/images/items/01_4126/158_5053.jpg",
-		"/images/items/01_4126/159_5053.jpg",
-		"/images/items/01_4126/189_5053.jpg",
-		"/images/items/01_4126/190_5053.jpg",
-		"/images/items/01_4126/191_5053.jpg",
-		"/images/items/01_4126/192_5053.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5053.jpg",
+				"path": "/images/items/01_4126/153_5053.jpg",
+				"hash": "7fbf1d05478c82f3c4cd9d4dcf73df16"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5053.jpg",
+				"path": "/images/items/01_4126/155_5053.jpg",
+				"hash": "1fe2675e7acd15e56f28096c1c6141c1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5053.jpg",
+				"path": "/images/items/01_4126/156_5053.jpg",
+				"hash": "0ad7fbb33e1e66d5ecb35349b039f7c4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5053.jpg",
+				"path": "/images/items/01_4126/157_5053.jpg",
+				"hash": "235de540c6d0d06ac53a574e2ea5b366"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5053.jpg",
+				"path": "/images/items/01_4126/158_5053.jpg",
+				"hash": "de324e5e6572dccdf413dca1fe4e1668"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5053.jpg",
+				"path": "/images/items/01_4126/159_5053.jpg",
+				"hash": "1902a734d964e122415c32556be8208f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5053.jpg",
+				"path": "/images/items/01_4126/189_5053.jpg",
+				"hash": "88d3031289faffa8f64f2976c3c3e1cd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5053.jpg",
+				"path": "/images/items/01_4126/190_5053.jpg",
+				"hash": "f5b94be5b73c6ab7ab75e20a2cccac88"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5053.jpg",
+				"path": "/images/items/01_4126/191_5053.jpg",
+				"hash": "ec56c540b48bd8ff563745903fa8400c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5053.jpg",
+				"path": "/images/items/01_4126/192_5053.jpg",
+				"hash": "0a55998beb8bff1bfe89879f6abca6ce"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4126/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181355",
-		"item-1000181354",
-		"item-1000170540",
-		"01_3738"
-	],
+	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181355", "item-1000181354", "item-1000170540", "01_3738"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

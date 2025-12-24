@@ -35,41 +35,47 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"剣×1",
-			"表情手（右）×1",
-			"クリアパーツ×1式",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Sword x1",
-			"Expression hand (right) x 1",
-			"Clear parts x 1 set",
-			"Foil Seal×1"
-		]
+		"ja": ["剣×1", "表情手（右）×1", "クリアパーツ×1式", "ホイルシール×1"],
+		"en": ["Sword x1", "Expression hand (right) x 1", "Clear parts x 1 set", "Foil Seal×1"]
 	},
-	"images": [
-		"/images/items/01_3745/1000173143_1.jpg",
-		"/images/items/01_3745/1000173143_2.jpg",
-		"/images/items/01_3745/1000173143_3.jpg",
-		"/images/items/01_3745/1000173143_4.jpg",
-		"/images/items/01_3745/1000173143_5.jpg",
-		"/images/items/01_3745/1000173143_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173143_1.jpg",
+				"path": "/images/items/01_3745/1000173143_1.jpg",
+				"hash": "a5cd592d96e2b3f54f8d846cc9934b5b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173143_2.jpg",
+				"path": "/images/items/01_3745/1000173143_2.jpg",
+				"hash": "1019ef20ced5b1c495b454ecd74803d1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173143_3.jpg",
+				"path": "/images/items/01_3745/1000173143_3.jpg",
+				"hash": "504a13b893d3de8bc3a67cefcd410a73"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173143_4.jpg",
+				"path": "/images/items/01_3745/1000173143_4.jpg",
+				"hash": "52ef913b5e1e43accc05e73e7594967b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173143_5.jpg",
+				"path": "/images/items/01_3745/1000173143_5.jpg",
+				"hash": "73d5741a744e2bed735ba02ef5e959b0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173143_6.jpg",
+				"path": "/images/items/01_3745/1000173143_6.jpg",
+				"hash": "233d65436db7738063689fd69db2b2b5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3745/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4336",
-		"01_4312",
-		"01_4634"
-	]
+	"brandIds": ["sdgundamseries"],
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
 }

@@ -20,33 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/48",
 	"description": {
-		"ja": [
-			"1/48 メガサイズモデル シャア専用ザク Ver.GFT　登場！"
-		],
-		"en": [
-			"1/48 Mega Size Model Char's Zaku Ver.GFT now available!"
-		]
+		"ja": ["1/48 メガサイズモデル シャア専用ザク Ver.GFT　登場！"],
+		"en": ["1/48 Mega Size Model Char's Zaku Ver.GFT now available!"]
 	},
-	"images": [
-		"/images/items/01_4784/153_5666.jpg",
-		"/images/items/01_4784/155_5666.jpg",
-		"/images/items/01_4784/156_5666.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5666.jpg",
+				"path": "/images/items/01_4784/153_5666.jpg",
+				"hash": "b0bcbe636d65bb1e454b04c359628d91"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5666.jpg",
+				"path": "/images/items/01_4784/155_5666.jpg",
+				"hash": "25a71c80ef8daff5b4a7cd5f7209ae8a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5666.jpg",
+				"path": "/images/items/01_4784/156_5666.jpg",
+				"hash": "ce27db34054fa0b33b9f7713da1f418e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4784/",
-	"brandIds": [
-		"megasize"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4961",
-		"01_4782",
-		"item-1000007202"
-	],
+	"brandIds": ["megasize"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4961", "01_4782", "item-1000007202"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

@@ -37,26 +37,26 @@
 			"• Comes with a special attachment to strengthen the holding power when equipped with Seal!"
 		]
 	},
-	"images": [
-		"/images/items/01_3683/153_4637.jpg",
-		"/images/items/01_3683/155_4637.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4637.jpg",
+				"path": "/images/items/01_3683/153_4637.jpg",
+				"hash": "2a834567ae84a2470d9bd1a0a71ea152"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4637.jpg",
+				"path": "/images/items/01_3683/155_4637.jpg",
+				"hash": "dc12d23f48164ca5c7978d3503e2ff09"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3683/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4121",
-		"01_3524",
-		"item-1000161850",
-		"01_3496"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4121", "01_3524", "item-1000161850", "01_3496"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

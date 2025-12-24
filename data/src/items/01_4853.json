@@ -26,23 +26,29 @@
 			"“Vincent” from the popular anime “Code Geass: Lelouch of the Rebellion R2” is the fastest to become three-dimensional! Introducing a new movable gimmick to the elbow joint, realizing a very wide range of motion even though it is a single axis joint. Built-in armed gimmick deployment inside the elbow. Reproducing the movable and combined gimmick of the large sword."
 		]
 	},
-	"images": [
-		"/images/items/01_4853/1000091711_1.jpg",
-		"/images/items/01_4853/1000091711_2.jpg",
-		"/images/items/01_4853/1000091711_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000091711_1.jpg",
+				"path": "/images/items/01_4853/1000091711_1.jpg",
+				"hash": "701f2b28bc9f327a04d12b90ad9e0794"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000091711_2.jpg",
+				"path": "/images/items/01_4853/1000091711_2.jpg",
+				"hash": "5f4cf1995fc5c39b0dfa2ec7ef8f562b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000091711_3.jpg",
+				"path": "/images/items/01_4853/1000091711_3.jpg",
+				"hash": "5be96cc6884973922bc4b9a9ba16f24b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4853/",
 	"brandIds": [],
-	"seriesIds": [
-		"geass"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000203132",
-		"item-1000187724",
-		"item-1000167903",
-		"01_5809"
-	]
+	"seriesIds": ["geass"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000203132", "item-1000187724", "item-1000167903", "01_5809"]
 }

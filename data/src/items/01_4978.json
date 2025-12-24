@@ -35,28 +35,31 @@
 			"■ Comes with a variety of weapons such as a Mega Beam Rifle and a Mega Beam Shield."
 		]
 	},
-	"images": [
-		"/images/items/01_4978/1000192423_1.jpg",
-		"/images/items/01_4978/1000192423_2.jpg",
-		"/images/items/01_4978/1000192423_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000192423_1.jpg",
+				"path": "/images/items/01_4978/1000192423_1.jpg",
+				"hash": "53137e21528bba83edb8264098972bc5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000192423_2.jpg",
+				"path": "/images/items/01_4978/1000192423_2.jpg",
+				"hash": "ab13b39bcb6d1c8ce72f4b865652aeec"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000192423_3.jpg",
+				"path": "/images/items/01_4978/1000192423_3.jpg",
+				"hash": "04102fb6ba5e528f75f2554851ac4420"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4978/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"v-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3311",
-		"item-1000137105",
-		"01_333",
-		"item-1000098694"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["v-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3311", "item-1000137105", "01_333", "item-1000098694"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

@@ -18,29 +18,27 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"「SD ガンダム Gジェネレーション37 ガンダムサンドロック」が登場！"
-		],
-		"en": [
-			"\"SD Gundam G Generation 37 Gundam Sandrock\" is now available!"
-		]
+		"ja": ["「SD ガンダム Gジェネレーション37 ガンダムサンドロック」が登場！"],
+		"en": ["\"SD Gundam G Generation 37 Gundam Sandrock\" is now available!"]
 	},
-	"images": [
-		"/images/items/01_4473/153_5378.jpg",
-		"/images/items/01_4473/155_5378.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5378.jpg",
+				"path": "/images/items/01_4473/153_5378.jpg",
+				"hash": "86ed8a7dec46b610a791c7aa6d404539"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5378.jpg",
+				"path": "/images/items/01_4473/155_5378.jpg",
+				"hash": "022edcdb031db5dfa32c765aba5b8fd4"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4473/",
-	"brandIds": [
-		"sdgundamseries"
-	],
+	"brandIds": ["sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
 }

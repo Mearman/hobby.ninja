@@ -97,48 +97,59 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ビームナギナタ一式",
-			"ビームライフル",
-			"レールガン",
-			"ビームシールド"
-		],
-		"en": [
-			"Beam naginata set",
-			"beam rifle",
-			"railgun",
-			"Beam Seal"
-		]
+		"ja": ["ビームナギナタ一式", "ビームライフル", "レールガン", "ビームシールド"],
+		"en": ["Beam naginata set", "beam rifle", "railgun", "Beam Seal"]
 	},
-	"images": [
-		"/images/items/01_5425/153_6270.jpg",
-		"/images/items/01_5425/155_6270.jpg",
-		"/images/items/01_5425/156_6270.jpg",
-		"/images/items/01_5425/157_6270.jpg",
-		"/images/items/01_5425/158_6270.jpg",
-		"/images/items/01_5425/159_6270.jpg",
-		"/images/items/01_5425/189_6270.jpg",
-		"/images/items/01_5425/190_6270.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6270.jpg",
+				"path": "/images/items/01_5425/153_6270.jpg",
+				"hash": "2928f1fd0a0fad3b1380c56fd1be08ec"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6270.jpg",
+				"path": "/images/items/01_5425/155_6270.jpg",
+				"hash": "ddaa20a8a22e797a5f9852de533f708c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6270.jpg",
+				"path": "/images/items/01_5425/156_6270.jpg",
+				"hash": "eeefe059ae5c9a3e5a21efab44eb6705"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6270.jpg",
+				"path": "/images/items/01_5425/157_6270.jpg",
+				"hash": "21890d5a359b25eba2aaf5bbe537181d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6270.jpg",
+				"path": "/images/items/01_5425/158_6270.jpg",
+				"hash": "e2b1eed51008fb96e3f396c7d0f5dfa7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6270.jpg",
+				"path": "/images/items/01_5425/159_6270.jpg",
+				"hash": "b7c577cf2edc5377694cb39b9678b407"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6270.jpg",
+				"path": "/images/items/01_5425/189_6270.jpg",
+				"hash": "134de8e2c67c87716e6c80a0bcaf3942"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6270.jpg",
+				"path": "/images/items/01_5425/190_6270.jpg",
+				"hash": "baacbfbf0ab349441fb47c50f224d7f5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5425/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla",
-		"hgce"
-	],
-	"seriesIds": [
-		"seed-freedom"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216105",
-		"01_5452",
-		"item-1000214960",
-		"01_5374"
-	],
+	"brandIds": ["hg", "pb_hg", "pb_gunpla", "hgce"],
+	"seriesIds": ["seed-freedom"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216105", "01_5452", "item-1000214960", "01_5374"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

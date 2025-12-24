@@ -19,27 +19,27 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"「ライトニングベース プレートタイプ グリーンVer.」登場！"
-		],
-		"en": [
-			"\"Lightning Base Plate Type Green Ver.\" now available!"
-		]
+		"ja": ["「ライトニングベース プレートタイプ グリーンVer.」登場！"],
+		"en": ["\"Lightning Base Plate Type Green Ver.\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4692/153_5581.jpg",
-		"/images/items/01_4692/155_5581.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5581.jpg",
+				"path": "/images/items/01_4692/153_5581.jpg",
+				"hash": "cd63a3240f1ecec0c25838bb5619731f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5581.jpg",
+				"path": "/images/items/01_4692/155_5581.jpg",
+				"hash": "94723b854d8c0131159955107cbb721e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4692/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5986",
-		"01_5987",
-		"01_5988"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5986", "01_5987", "01_5988"]
 }

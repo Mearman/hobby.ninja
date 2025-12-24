@@ -47,27 +47,39 @@
 			"Hair style parts x 1 set each"
 		]
 	},
-	"images": [
-		"/images/items/01_7008/01_7008_0.jpg",
-		"/images/items/01_7008/01_7008_1.jpg",
-		"/images/items/01_7008/01_7008_2.jpg",
-		"/images/items/01_7008/01_7008_3.jpg",
-		"/images/items/01_7008/01_7008_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_7008_0.jpg",
+				"path": "/images/items/01_7008/01_7008_0.jpg",
+				"hash": "6fa3464d712e44afd022e25969dc011a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7008_1.jpg",
+				"path": "/images/items/01_7008/01_7008_1.jpg",
+				"hash": "0b2d68c7abf79b8431ebc4465c78202d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7008_2.jpg",
+				"path": "/images/items/01_7008/01_7008_2.jpg",
+				"hash": "b8ffdd359dcd30a7d652bea0e14f39a4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7008_3.jpg",
+				"path": "/images/items/01_7008/01_7008_3.jpg",
+				"hash": "f54d48e5b2cadb8b8e3dbb5a3dd33b3f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7008_4.jpg",
+				"path": "/images/items/01_7008/01_7008_4.jpg",
+				"hash": "7f41d59c044642844e570986a65fec06"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_7008/",
-	"brandIds": [
-		"30ms"
-	],
-	"seriesIds": [
-		"idolmaster"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7012",
-		"01_7013",
-		"01_6950",
-		"01_6934"
-	]
+	"brandIds": ["30ms"],
+	"seriesIds": ["idolmaster"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7012", "01_7013", "01_6950", "01_6934"]
 }

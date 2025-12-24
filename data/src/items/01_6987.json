@@ -41,46 +41,64 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ビーム・ライフル",
-			"シールド",
-			"ビーム・サーベル×2"
-		],
-		"en": [
-			"beam rifle",
-			"Seal de",
-			"Beam saber x2"
-		]
+		"ja": ["ビーム・ライフル", "シールド", "ビーム・サーベル×2"],
+		"en": ["beam rifle", "Seal de", "Beam saber x2"]
 	},
-	"images": [
-		"/images/items/01_6987/01_6987_0.jpg",
-		"/images/items/01_6987/01_6987_1.jpg",
-		"/images/items/01_6987/01_6987_2.jpg",
-		"/images/items/01_6987/01_6987_3.jpg",
-		"/images/items/01_6987/01_6987_4.jpg",
-		"/images/items/01_6987/01_6987_5.jpg",
-		"/images/items/01_6987/01_6987_6.jpg",
-		"/images/items/01_6987/01_6987_7.jpg",
-		"/images/items/01_6987/01_6987_8.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6987_0.jpg",
+				"path": "/images/items/01_6987/01_6987_0.jpg",
+				"hash": "d268c8684d03bf053a7833cd66c75d75"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6987_1.jpg",
+				"path": "/images/items/01_6987/01_6987_1.jpg",
+				"hash": "af93e4a0ec4c4378e2c59120dcd41fc9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6987_2.jpg",
+				"path": "/images/items/01_6987/01_6987_2.jpg",
+				"hash": "7fa9d605826363a59acb9fd08366feec"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6987_3.jpg",
+				"path": "/images/items/01_6987/01_6987_3.jpg",
+				"hash": "4f26bc325f74d21f02f30acdc24c36bd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6987_4.jpg",
+				"path": "/images/items/01_6987/01_6987_4.jpg",
+				"hash": "6aece2ae1d827046207d1b5e24b68b78"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6987_5.jpg",
+				"path": "/images/items/01_6987/01_6987_5.jpg",
+				"hash": "e5367c7419e2ec7c20aa94e5a30aa0d1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6987_6.jpg",
+				"path": "/images/items/01_6987/01_6987_6.jpg",
+				"hash": "3b1e445c8e09178451462ee445997daa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6987_7.jpg",
+				"path": "/images/items/01_6987/01_6987_7.jpg",
+				"hash": "14c7fd179671f79f3da87724cc842bf8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6987_8.jpg",
+				"path": "/images/items/01_6987/01_6987_8.jpg",
+				"hash": "38ecf6f043bfe637b52f92dd28c7f55e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6987/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla",
-		"hguc"
-	],
-	"seriesIds": [
-		"g-senki"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6687",
-		"01_5159",
-		"01_1345"
-	],
+	"brandIds": ["hg", "pb_hg", "pb_gunpla", "hguc"],
+	"seriesIds": ["g-senki"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_6687", "01_5159", "01_1345"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

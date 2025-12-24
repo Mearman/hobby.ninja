@@ -27,28 +27,36 @@
 			"• Space Pirate Visidian's MS. • Comes with a clear pink molded beam saber. • Dods Rifle IIB included. The knife can also be removed and held in your hand. Molded product x 6, Foil Seal x 1, Tetron Seal x 1, Assembly Manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_3599/153_4554.jpg",
-		"/images/items/01_3599/155_4554.jpg",
-		"/images/items/01_3599/156_4554.jpg",
-		"/images/items/01_3599/157_4554.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4554.jpg",
+				"path": "/images/items/01_3599/153_4554.jpg",
+				"hash": "c9cd30af7d3ccd456bfcb90067291575"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4554.jpg",
+				"path": "/images/items/01_3599/155_4554.jpg",
+				"hash": "9e664840d1d1d6a1982dbf31f33f9763"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4554.jpg",
+				"path": "/images/items/01_3599/156_4554.jpg",
+				"hash": "2914808cc0d6c4aa5afe3d41135d8b6f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4554.jpg",
+				"path": "/images/items/01_3599/157_4554.jpg",
+				"hash": "64137b08754d502b10861d1081a1ed42"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3599/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "358",
 		"url": "https://manual.bandai-hobby.net/menus/detail/358/"

@@ -40,26 +40,31 @@
 			"• The characteristic cloak and effect parts are reproduced with dynamic modeling!"
 		]
 	},
-	"images": [
-		"/images/items/01_3415/153_4369.jpg",
-		"/images/items/01_3415/155_4369.jpg",
-		"/images/items/01_3415/156_4369.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4369.jpg",
+				"path": "/images/items/01_3415/153_4369.jpg",
+				"hash": "0bfaeebab6782c40f4731f89a4882f62"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4369.jpg",
+				"path": "/images/items/01_3415/155_4369.jpg",
+				"hash": "d7499fcd551f056af351aba246bfabb6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4369.jpg",
+				"path": "/images/items/01_3415/156_4369.jpg",
+				"hash": "ee54309dbd578d2fa94e910d183e644b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3415/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"crossbone"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3456",
-		"item-1000142961",
-		"01_2251"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["crossbone"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3456", "item-1000142961", "01_2251"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

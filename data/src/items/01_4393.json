@@ -123,49 +123,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ビームキャノン",
-			"プラネイトディフェンサー",
-			"クラッシュシールド",
-			"ビームガン"
-		],
-		"en": [
-			"beam cannon",
-			"planet defender",
-			"Crash Seal Do",
-			"beam gun"
-		]
+		"ja": ["ビームキャノン", "プラネイトディフェンサー", "クラッシュシールド", "ビームガン"],
+		"en": ["beam cannon", "planet defender", "Crash Seal Do", "beam gun"]
 	},
-	"images": [
-		"/images/items/01_4393/153_5298.jpg",
-		"/images/items/01_4393/155_5298.jpg",
-		"/images/items/01_4393/156_5298.jpg",
-		"/images/items/01_4393/157_5298.jpg",
-		"/images/items/01_4393/158_5298.jpg",
-		"/images/items/01_4393/159_5298.jpg",
-		"/images/items/01_4393/189_5298.jpg",
-		"/images/items/01_4393/190_5298.jpg",
-		"/images/items/01_4393/191_5298.jpg",
-		"/images/items/01_4393/192_5298.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5298.jpg",
+				"path": "/images/items/01_4393/153_5298.jpg",
+				"hash": "59530a9e3affde5d6cad1c815e1c8996"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5298.jpg",
+				"path": "/images/items/01_4393/155_5298.jpg",
+				"hash": "1c4c2de3d7758e23057ab7e8c60b1488"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5298.jpg",
+				"path": "/images/items/01_4393/156_5298.jpg",
+				"hash": "5e4cccd7f03fcb5185d04f8f9ea75b34"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5298.jpg",
+				"path": "/images/items/01_4393/157_5298.jpg",
+				"hash": "06fa3ff70365b9b95709e55df17df5b7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5298.jpg",
+				"path": "/images/items/01_4393/158_5298.jpg",
+				"hash": "456b1f5dd8234ea92d165eb957afc19a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5298.jpg",
+				"path": "/images/items/01_4393/159_5298.jpg",
+				"hash": "1b635fe42ff6078bb0ce5c30b396a6ff"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5298.jpg",
+				"path": "/images/items/01_4393/189_5298.jpg",
+				"hash": "3cb95bc2d7a281830f1bdcf87b23eeb2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5298.jpg",
+				"path": "/images/items/01_4393/190_5298.jpg",
+				"hash": "beb327f70d2299a9254c8b6c72910d6e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5298.jpg",
+				"path": "/images/items/01_4393/191_5298.jpg",
+				"hash": "276b03a604d14447f7f7865bdea42fe2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5298.jpg",
+				"path": "/images/items/01_4393/192_5298.jpg",
+				"hash": "05e342f242c487bc270a7630c3f26b8f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4393/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"g-unit"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000217501",
-		"item-1000209099",
-		"item-1000176706",
-		"01_3798"
-	],
+	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
+	"seriesIds": ["g-unit"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000217501", "item-1000209099", "item-1000176706", "01_3798"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

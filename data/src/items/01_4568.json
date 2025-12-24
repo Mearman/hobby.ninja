@@ -26,17 +26,24 @@
 			"• Liu Bei Gundam's final form. • Luxurious size with a height of 196 mm, twice the size of a regular SD. • The head and abdomen are decorated with gorgeous plated parts. • Clear parts are used for distinctive parts. • Three new weapons are included. Molded product x 16, Seal x 1, instruction manual manga included"
 		]
 	},
-	"images": [
-		"/images/items/01_4568/153_5467.jpg",
-		"/images/items/01_4568/155_5467.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5467.jpg",
+				"path": "/images/items/01_4568/153_5467.jpg",
+				"hash": "8b556d77a5e44ea0fab3b53bee74b837"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5467.jpg",
+				"path": "/images/items/01_4568/155_5467.jpg",
+				"hash": "b56207913ad631435d3efe45997b17ca"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4568/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": []
 }

@@ -27,27 +27,31 @@
 			"• From \"Mobile Suit Gundam SEED \", the mass-produced orb machine \" M1 Astray \" appears. • Comes with a variety of optional parts such as various weapons and hand parts. • The beam part of the beam saber is reproduced with clear parts. • Comes with Gunpla's original weapon \" anti-ship sword\". Molded product x 8, foil seal x 1, marking seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_4619/153_5514.jpg",
-		"/images/items/01_4619/155_5514.jpg",
-		"/images/items/01_4619/156_5514.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5514.jpg",
+				"path": "/images/items/01_4619/153_5514.jpg",
+				"hash": "8b2bf4569ac324160df4edddb07dee77"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5514.jpg",
+				"path": "/images/items/01_4619/155_5514.jpg",
+				"hash": "034c525d79cac045337a95f5e31960cb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5514.jpg",
+				"path": "/images/items/01_4619/156_5514.jpg",
+				"hash": "0454e68e0470f5b713891f3654069d23"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4619/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181726",
-		"01_1930",
-		"01_384",
-		"01_83"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181726", "01_1930", "01_384", "01_83"],
 	"manual": {
 		"id": "342",
 		"url": "https://manual.bandai-hobby.net/menus/detail/342/"

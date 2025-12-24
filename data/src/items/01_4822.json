@@ -20,33 +20,31 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HGUC 1/144 ペイルライダー（陸戦重装備仕様）HADES MODE エクストラフィニッシュVer.登場！"
-		],
+		"ja": ["HGUC 1/144 ペイルライダー（陸戦重装備仕様）HADES MODE エクストラフィニッシュVer.登場！"],
 		"en": [
 			"HGUC 1/144 Pale Rider (Land Combat Heavy Equipment Specification) HADES MODE Extra Finish Ver. is now available!"
 		]
 	},
-	"images": [
-		"/images/items/01_4822/153_5705.jpg",
-		"/images/items/01_4822/155_5705.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5705.jpg",
+				"path": "/images/items/01_4822/153_5705.jpg",
+				"hash": "7bc91e7544fb6766b416a78bdcfd2e48"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5705.jpg",
+				"path": "/images/items/01_4822/155_5705.jpg",
+				"hash": "ea97b1477d4aadb0572fc10c55312e18"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4822/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"missinglink"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000152855",
-		"item-1000148541",
-		"item-1000140759",
-		"item-1000140492"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["missinglink"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000152855", "item-1000148541", "item-1000140759", "item-1000140492"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

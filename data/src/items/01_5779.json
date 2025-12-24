@@ -39,27 +39,31 @@
 			"• Armed with Seals, beam rifles, and the ``Sinanju Bazooka'' that appeared in the novel ``Mobile Suit Gundam UC'' is included."
 		]
 	},
-	"images": [
-		"/images/items/01_5779/153_840.jpg",
-		"/images/items/01_5779/155_840.jpg",
-		"/images/items/01_5779/156_840.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_840.jpg",
+				"path": "/images/items/01_5779/153_840.jpg",
+				"hash": "e5cc7aa08e9ccc8c7b7b851cb356a0f3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_840.jpg",
+				"path": "/images/items/01_5779/155_840.jpg",
+				"hash": "5231ff80abbff79a6bd7a1647922d7e1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_840.jpg",
+				"path": "/images/items/01_5779/156_840.jpg",
+				"hash": "f769a7d58a73ebcd279d734bb6c31f04"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5779/",
-	"brandIds": [
-		"mgka"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1292",
-		"item-1000095303",
-		"01_5726",
-		"01_5668"
-	],
+	"brandIds": ["mgka"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_1292", "item-1000095303", "01_5726", "01_5668"],
 	"manual": {
 		"id": "606",
 		"url": "https://manual.bandai-hobby.net/menus/detail/606/"

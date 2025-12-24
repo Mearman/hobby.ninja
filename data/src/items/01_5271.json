@@ -60,30 +60,64 @@
 			"Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5271/153_6122.jpg",
-		"/images/items/01_5271/155_6122.jpg",
-		"/images/items/01_5271/156_6122.jpg",
-		"/images/items/01_5271/157_6122.jpg",
-		"/images/items/01_5271/158_6122.jpg",
-		"/images/items/01_5271/159_6122.jpg",
-		"/images/items/01_5271/189_6122.jpg",
-		"/images/items/01_5271/190_6122.jpg",
-		"/images/items/01_5271/191_6122.jpg",
-		"/images/items/01_5271/192_6122.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6122.jpg",
+				"path": "/images/items/01_5271/153_6122.jpg",
+				"hash": "d0278806131771a2a3b8c949600e9b3a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6122.jpg",
+				"path": "/images/items/01_5271/155_6122.jpg",
+				"hash": "3c7b22e6b93c97c16bdddb692be70476"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6122.jpg",
+				"path": "/images/items/01_5271/156_6122.jpg",
+				"hash": "868ff99bdc13cec5cc51d1ed44e1452c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6122.jpg",
+				"path": "/images/items/01_5271/157_6122.jpg",
+				"hash": "7063d72f66ecdf66d73364beb62bd9c9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6122.jpg",
+				"path": "/images/items/01_5271/158_6122.jpg",
+				"hash": "3e994e2a67bb566937454a48ff65b961"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6122.jpg",
+				"path": "/images/items/01_5271/159_6122.jpg",
+				"hash": "f54dc795bc5486c783d2327edc6ae9e0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6122.jpg",
+				"path": "/images/items/01_5271/189_6122.jpg",
+				"hash": "879c01245f4e0ceeec68c103dc14d2ee"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6122.jpg",
+				"path": "/images/items/01_5271/190_6122.jpg",
+				"hash": "44e8615d96794e9c52d19e8737aaecdd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_6122.jpg",
+				"path": "/images/items/01_5271/191_6122.jpg",
+				"hash": "a8d13a61fb92c5b580d00522a62ca4b9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_6122.jpg",
+				"path": "/images/items/01_5271/192_6122.jpg",
+				"hash": "688b4be5ffdc84c5a8f23c7dffdd3fb8"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5271/",
-	"brandIds": [
-		"30ms"
-	],
-	"seriesIds": [
-		"idolmaster"
-	],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_6755",
-		"01_6756"
-	]
+	"brandIds": ["30ms"],
+	"seriesIds": ["idolmaster"],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_6755", "01_6756"]
 }

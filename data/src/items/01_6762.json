@@ -34,27 +34,49 @@
 			"• Touch gate method without tools."
 		]
 	},
-	"images": [
-		"/images/items/01_6762/01_6762_0.jpg",
-		"/images/items/01_6762/01_6762_1.jpg",
-		"/images/items/01_6762/01_6762_2.jpg",
-		"/images/items/01_6762/01_6762_3.jpg",
-		"/images/items/01_6762/01_6762_4.jpg",
-		"/images/items/01_6762/01_6762_5.jpg",
-		"/images/items/01_6762/01_6762_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6762_0.jpg",
+				"path": "/images/items/01_6762/01_6762_0.jpg",
+				"hash": "cb42e55a79a3977a5089935288c4b71a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6762_1.jpg",
+				"path": "/images/items/01_6762/01_6762_1.jpg",
+				"hash": "19dd9e45712c0feaff207e4f60f5b0b8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6762_2.jpg",
+				"path": "/images/items/01_6762/01_6762_2.jpg",
+				"hash": "92e43617b5379209e44dd365b9bcc1f7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6762_3.jpg",
+				"path": "/images/items/01_6762/01_6762_3.jpg",
+				"hash": "88dcf1db66f697cc412b9f4a8dae54fe"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6762_4.jpg",
+				"path": "/images/items/01_6762/01_6762_4.jpg",
+				"hash": "5e7521a0d88ff2174ad46b1795385595"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6762_5.jpg",
+				"path": "/images/items/01_6762/01_6762_5.jpg",
+				"hash": "376ca83a6cc37bf7b075185123c97667"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6762_6.jpg",
+				"path": "/images/items/01_6762/01_6762_6.jpg",
+				"hash": "4c5525167dbe793f213ae72372345a8a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6762/",
 	"brandIds": [],
-	"seriesIds": [
-		"pokemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"seriesIds": ["pokemon"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
 }

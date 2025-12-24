@@ -27,23 +27,29 @@
 			"• The final form of the Beginning Gundam is packed with additional weapons and is very useful. • Newly added parts for a more heroic style. • Beam ejection can be created using clear parts. Runner x 11, foil seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_4566/153_5465.jpg",
-		"/images/items/01_4566/155_5465.jpg",
-		"/images/items/01_4566/156_5465.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5465.jpg",
+				"path": "/images/items/01_4566/153_5465.jpg",
+				"hash": "0ddd7a402672e06a03d9d1683f705fa9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5465.jpg",
+				"path": "/images/items/01_4566/155_5465.jpg",
+				"hash": "f4740c6476fc0f432090daa974a4176e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5465.jpg",
+				"path": "/images/items/01_4566/156_5465.jpg",
+				"hash": "709eab8a70536e16ef9aa03ad31fcffd"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4566/",
-	"brandIds": [
-		"hg"
-	],
+	"brandIds": ["hg"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5951"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"]
 }

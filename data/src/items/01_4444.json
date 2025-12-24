@@ -26,28 +26,36 @@
 			"A special product of 1/144 Scale HG specification of \"Zaku Warrior \" appearing in \" Mobile Suit Gundam SEED DESTINY\". The bright pink color reminiscent of Meer Campbell is realistically reproduced. The logos and illustrations on the shoulder armor, chest, and seal can be reproduced with Tetron Seals. Weapons include a beam rifle and an axe."
 		]
 	},
-	"images": [
-		"/images/items/01_4444/153_534.jpg",
-		"/images/items/01_4444/155_534.jpg",
-		"/images/items/01_4444/156_534.jpg",
-		"/images/items/01_4444/157_534.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_534.jpg",
+				"path": "/images/items/01_4444/153_534.jpg",
+				"hash": "0a7941fdce0f62d963fe8d82444d7409"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_534.jpg",
+				"path": "/images/items/01_4444/155_534.jpg",
+				"hash": "871d4bce1fdbcaa5aea8eabd0cb14303"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_534.jpg",
+				"path": "/images/items/01_4444/156_534.jpg",
+				"hash": "3ef6300ca19fdc265104eb1a46f190c2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_534.jpg",
+				"path": "/images/items/01_4444/157_534.jpg",
+				"hash": "fa33df3193857b1edfc1ad09f28b6815"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4444/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181726",
-		"01_1930",
-		"01_384",
-		"01_83"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181726", "01_1930", "01_384", "01_83"],
 	"manual": {
 		"id": "891",
 		"url": "https://manual.bandai-hobby.net/menus/detail/891/"

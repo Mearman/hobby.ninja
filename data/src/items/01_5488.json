@@ -27,30 +27,41 @@
 			"HGUC series plastic model of Gaza C (general aircraft), the Axis mobile suit that appears in \"Mobile Suit Z Gundam\". Transformation into mobile armor can be reproduced by replacing some parts. Comes with a stand that can be displayed with Haman's Gaza C."
 		]
 	},
-	"images": [
-		"/images/items/01_5488/153_632.jpg",
-		"/images/items/01_5488/155_632.jpg",
-		"/images/items/01_5488/156_632.jpg",
-		"/images/items/01_5488/157_632.jpg",
-		"/images/items/01_5488/158_632.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_632.jpg",
+				"path": "/images/items/01_5488/153_632.jpg",
+				"hash": "0f2990697976bf012bce6713407caa2e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_632.jpg",
+				"path": "/images/items/01_5488/155_632.jpg",
+				"hash": "1b41447844a829777ae9540fbf55d3ad"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_632.jpg",
+				"path": "/images/items/01_5488/156_632.jpg",
+				"hash": "1978237efef7e0c915aa528e99463147"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_632.jpg",
+				"path": "/images/items/01_5488/157_632.jpg",
+				"hash": "b07e6887d93d4ee59b4a1917d6dfba6f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_632.jpg",
+				"path": "/images/items/01_5488/158_632.jpg",
+				"hash": "4ed610d6013eed88dac7b5397cdb8994"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5488/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"],
 	"manual": {
 		"id": "894",
 		"url": "https://manual.bandai-hobby.net/menus/detail/894/"

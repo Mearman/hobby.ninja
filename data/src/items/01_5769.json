@@ -39,28 +39,31 @@
 			"• Also compatible with action bases using the included special mount parts."
 		]
 	},
-	"images": [
-		"/images/items/01_5769/153_831.jpg",
-		"/images/items/01_5769/155_831.jpg",
-		"/images/items/01_5769/156_831.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_831.jpg",
+				"path": "/images/items/01_5769/153_831.jpg",
+				"hash": "c759fe32226f8d07512a575cba10a8d1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_831.jpg",
+				"path": "/images/items/01_5769/155_831.jpg",
+				"hash": "243e0123f1170f9309f03cad96e82577"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_831.jpg",
+				"path": "/images/items/01_5769/156_831.jpg",
+				"hash": "88d07d9399a47371b20015b4e04654a3"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5769/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "375",
 		"url": "https://manual.bandai-hobby.net/menus/detail/375/"

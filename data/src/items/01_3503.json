@@ -31,26 +31,27 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"水転写式デカール×1"
-		],
-		"en": [
-			"Water transfer decal x 1"
-		]
+		"ja": ["水転写式デカール×1"],
+		"en": ["Water transfer decal x 1"]
 	},
-	"images": [
-		"/images/items/01_3503/153_4455.jpg",
-		"/images/items/01_3503/155_4455.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4455.jpg",
+				"path": "/images/items/01_3503/153_4455.jpg",
+				"hash": "a4f7d850cfc65dbebdd95542f8224c3d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4455.jpg",
+				"path": "/images/items/01_3503/155_4455.jpg",
+				"hash": "fe021ecaaa212fd379edb5e450f772ae"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3503/",
-	"brandIds": [
-		"gundam_decal"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["gundam_decal"],
+	"seriesIds": ["builddivers-rerise"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": []
 }

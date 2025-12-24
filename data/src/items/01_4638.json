@@ -25,23 +25,29 @@
 			"\"Aegis Gundam \" that appears in the TV anime \" Mobile Suit Gundam SEED\" is now available as a quick Gundam Model. Since it is already colored, you can reproduce the aircraft color just by assembling it. The joints are made of ABS and various action poses can be reproduced. Equipped with a beam rifle and a Seal weapon."
 		]
 	},
-	"images": [
-		"/images/items/01_4638/153_5531.jpg",
-		"/images/items/01_4638/155_5531.jpg",
-		"/images/items/01_4638/156_5531.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5531.jpg",
+				"path": "/images/items/01_4638/153_5531.jpg",
+				"hash": "939694eabd84aa599a0f51d07f5492c3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5531.jpg",
+				"path": "/images/items/01_4638/155_5531.jpg",
+				"hash": "6717f46364ae80617d1c9db0f192abee"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5531.jpg",
+				"path": "/images/items/01_4638/156_5531.jpg",
+				"hash": "8b0ea8cbee6b953077c916352a47c604"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4638/",
 	"brandIds": [],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5440",
-		"01_5441",
-		"01_5365"
-	]
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5994", "01_5440", "01_5441", "01_5365"]
 }

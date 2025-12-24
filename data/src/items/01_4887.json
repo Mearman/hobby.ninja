@@ -20,31 +20,29 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"「HG 1/144 ビギニング30 ガンダム GPB-Jカラー クリアIFS Ver.＋アクションベース3 レッド」登場！"
-		],
-		"en": [
-			"\"HG 1/144 Beginning 30 Gundam GPB-J Color Clear IFS Ver. + Action Base 3 Red\" now available!"
-		]
+		"ja": ["「HG 1/144 ビギニング30 ガンダム GPB-Jカラー クリアIFS Ver.＋アクションベース3 レッド」登場！"],
+		"en": ["\"HG 1/144 Beginning 30 Gundam GPB-J Color Clear IFS Ver. + Action Base 3 Red\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4887/153_5765.jpg",
-		"/images/items/01_4887/155_5765.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5765.jpg",
+				"path": "/images/items/01_4887/153_5765.jpg",
+				"hash": "d1a07728f03741a1ac9af591e3c07ac7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5765.jpg",
+				"path": "/images/items/01_4887/155_5765.jpg",
+				"hash": "f1275f87aaa004452c8085998df3a8fa"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4887/",
-	"brandIds": [
-		"hg"
-	],
+	"brandIds": ["hg"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5951"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

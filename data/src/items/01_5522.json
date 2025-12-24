@@ -31,16 +31,25 @@
 			"*Height: approx. 44mm x width: approx. 64mm x depth: approx. 30mm"
 		]
 	},
-	"images": [
-		"/images/items/01_5522/153_6362.jpg",
-		"/images/items/01_5522/155_6362.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6362.jpg",
+				"path": "/images/items/01_5522/153_6362.jpg",
+				"hash": "c85f3694230b0fc7b8799fe09ca76b76"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6362.jpg",
+				"path": "/images/items/01_5522/155_6362.jpg",
+				"hash": "4e40f7c0f8bd734f64533e8f94938c58"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5522/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
+	"categoryIds": ["product-list"],
 	"relatedItemIds": [],
 	"tag": {
 		"ja": "ガンダムベースグッズ",

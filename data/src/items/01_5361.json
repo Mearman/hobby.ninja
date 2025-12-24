@@ -54,41 +54,58 @@
 			"ジョイントパーツ×1",
 			"シール×2"
 		],
-		"en": [
-			"Beam rifle x1",
-			"Beam saber (grip) x 3",
-			"Seal × 1",
-			"Hand parts x 1",
-			"Joint parts x 1",
-			"Seal×2"
-		]
+		"en": ["Beam rifle x1", "Beam saber (grip) x 3", "Seal × 1", "Hand parts x 1", "Joint parts x 1", "Seal×2"]
 	},
-	"images": [
-		"/images/items/01_5361/1000219086_1.jpg",
-		"/images/items/01_5361/1000219086_2.jpg",
-		"/images/items/01_5361/1000219086_3.jpg",
-		"/images/items/01_5361/1000219086_4.jpg",
-		"/images/items/01_5361/1000219086_5.jpg",
-		"/images/items/01_5361/1000219086_6.jpg",
-		"/images/items/01_5361/1000219086_7.jpg",
-		"/images/items/01_5361/1000219086_8.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219086_1.jpg",
+				"path": "/images/items/01_5361/1000219086_1.jpg",
+				"hash": "c7f3b407d5f7ee34ce8aa6b4c696299e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219086_2.jpg",
+				"path": "/images/items/01_5361/1000219086_2.jpg",
+				"hash": "c4cec7e6c7167d46846f87489652c8d2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219086_3.jpg",
+				"path": "/images/items/01_5361/1000219086_3.jpg",
+				"hash": "7b66401b5f5cbcdad829e35bada715ab"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219086_4.jpg",
+				"path": "/images/items/01_5361/1000219086_4.jpg",
+				"hash": "bad70b94cf33ac34c637b599e6e574f1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219086_5.jpg",
+				"path": "/images/items/01_5361/1000219086_5.jpg",
+				"hash": "86469c2b45ee27da5679f6df219e584a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219086_6.jpg",
+				"path": "/images/items/01_5361/1000219086_6.jpg",
+				"hash": "bd965a990c2d6c5af5eacca77fe03f9a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219086_7.jpg",
+				"path": "/images/items/01_5361/1000219086_7.jpg",
+				"hash": "8dff8ab221f853bd0a61fe0cf9e20456"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219086_8.jpg",
+				"path": "/images/items/01_5361/1000219086_8.jpg",
+				"hash": "3f8351a7d5cd887157878fe59441e4e8"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5361/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"requiem"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5969",
-		"01_5970",
-		"01_5986"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["requiem"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5969", "01_5970", "01_5986"],
 	"manual": {
 		"id": "1883",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1883/"

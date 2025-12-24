@@ -30,25 +30,39 @@
 			"Keroro's favorite Gunpla is included, such as 1/6 package of \"1/100 Gundam \", 1/6 Runner of \" 1/100 Gundam \", 1/6 Scale Model of \" 1/100 Zaku\", nippers, etc."
 		]
 	},
-	"images": [
-		"/images/items/01_5541/153_637.jpg",
-		"/images/items/01_5541/155_637.jpg",
-		"/images/items/01_5541/156_637.jpg",
-		"/images/items/01_5541/157_637.jpg",
-		"/images/items/01_5541/158_637.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_637.jpg",
+				"path": "/images/items/01_5541/153_637.jpg",
+				"hash": "f09c67feef452b1daf20353db33338cf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_637.jpg",
+				"path": "/images/items/01_5541/155_637.jpg",
+				"hash": "4bfe874431b53528c6a4d3ebb1a28b60"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_637.jpg",
+				"path": "/images/items/01_5541/156_637.jpg",
+				"hash": "15fb6243fcc1f30822025adf8bafda12"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_637.jpg",
+				"path": "/images/items/01_5541/157_637.jpg",
+				"hash": "b1c4b25449b9be256a407e6ae79837c7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_637.jpg",
+				"path": "/images/items/01_5541/158_637.jpg",
+				"hash": "b10536ed5ba95c26a73f616c08bf561b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5541/",
 	"brandIds": [],
-	"seriesIds": [
-		"keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7034",
-		"01_2120",
-		"01_2122",
-		"01_2104"
-	]
+	"seriesIds": ["keroro"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7034", "01_2120", "01_2122", "01_2104"]
 }

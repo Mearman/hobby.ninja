@@ -20,32 +20,24 @@
 	"targetAge": 15,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"MG 1/100 シャア専用 リック・ドム(コーティングバージョン)登場！"
-		],
-		"en": [
-			"MG 1/100 Char's exclusive Rick Dom (coated version) now available!"
-		]
+		"ja": ["MG 1/100 シャア専用 リック・ドム(コーティングバージョン)登場！"],
+		"en": ["MG 1/100 Char's exclusive Rick Dom (coated version) now available!"]
 	},
-	"images": [
-		"/images/items/01_4940/153_5813.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5813.jpg",
+				"path": "/images/items/01_4940/153_5813.jpg",
+				"hash": "8d415046efaf0425a6b54763fd7c115a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4940/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

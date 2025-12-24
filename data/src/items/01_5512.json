@@ -46,29 +46,41 @@
 			"■ The mechanism that allows the connection axis of the hip joints of both legs to slide individually promotes bold movement of the legs. [What is Recirculation Color?] In the black born from circulation, the vivid neon color makes its presence felt. The futuristic outfit becomes a symbol of a circular future."
 		]
 	},
-	"images": [
-		"/images/items/01_5512/01_5512_2.jpg",
-		"/images/items/01_5512/01_5512_3.jpg",
-		"/images/items/01_5512/153_6352.jpg",
-		"/images/items/01_5512/155_6352.jpg",
-		"/images/items/01_5512/158_6352.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5512_2.jpg",
+				"path": "/images/items/01_5512/01_5512_2.jpg",
+				"hash": "018b0b149a656c5102164c854ad91aaf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5512_3.jpg",
+				"path": "/images/items/01_5512/01_5512_3.jpg",
+				"hash": "e4acfeb6edc4a8ee8276abfd277f10bf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_6352.jpg",
+				"path": "/images/items/01_5512/153_6352.jpg",
+				"hash": "c5f3d6e34675073df7a4330680e010f0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6352.jpg",
+				"path": "/images/items/01_5512/155_6352.jpg",
+				"hash": "21fb16f80d1a49721f0a6b2729d00e2b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6352.jpg",
+				"path": "/images/items/01_5512/158_6352.jpg",
+				"hash": "adc0d44fe070fd142fa13d83f27befe0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5512/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-freedom"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5969",
-		"01_5970",
-		"01_5986"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed-freedom"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5969", "01_5970", "01_5986"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

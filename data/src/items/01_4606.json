@@ -27,23 +27,29 @@
 			"• UE's new model appears in the AG series. • \"Touch gate \" allows parts to be removed by hand without using tools. • \" Iropla \" creates a colorful finish just by assembling it. • \" Block build\" allows for intuitive and quick assembly."
 		]
 	},
-	"images": [
-		"/images/items/01_4606/153_5502.jpg",
-		"/images/items/01_4606/155_5502.jpg",
-		"/images/items/01_4606/156_5502.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5502.jpg",
+				"path": "/images/items/01_4606/153_5502.jpg",
+				"hash": "3b151523de7c7a9827ff2128ebaf19d6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5502.jpg",
+				"path": "/images/items/01_4606/155_5502.jpg",
+				"hash": "72f26b41ec269657ad54450b33697e15"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5502.jpg",
+				"path": "/images/items/01_4606/156_5502.jpg",
+				"hash": "471a6a8bd6747d82bc58dd3637f056ad"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4606/",
 	"brandIds": [],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181355",
-		"item-1000181354",
-		"item-1000170540",
-		"01_4196"
-	]
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181355", "item-1000181354", "item-1000170540", "01_4196"]
 }

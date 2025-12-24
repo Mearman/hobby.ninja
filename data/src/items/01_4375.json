@@ -37,36 +37,47 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ランナー×3",
-			"シール×2種",
-			"取扱説明書×1"
-		],
-		"en": [
-			"Runner×3",
-			"Seal×2 types",
-			"Handling manual×1"
-		]
+		"ja": ["ランナー×3", "シール×2種", "取扱説明書×1"],
+		"en": ["Runner×3", "Seal×2 types", "Handling manual×1"]
 	},
-	"images": [
-		"/images/items/01_4375/153_5281.jpg",
-		"/images/items/01_4375/155_5281.jpg",
-		"/images/items/01_4375/156_5281.jpg",
-		"/images/items/01_4375/157_5281.jpg",
-		"/images/items/01_4375/158_5281.jpg",
-		"/images/items/01_4375/159_5281.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5281.jpg",
+				"path": "/images/items/01_4375/153_5281.jpg",
+				"hash": "737dd283902d95a819aba628b2e8cd4e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5281.jpg",
+				"path": "/images/items/01_4375/155_5281.jpg",
+				"hash": "84b211d05eb29dbfd0729818abb2a615"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5281.jpg",
+				"path": "/images/items/01_4375/156_5281.jpg",
+				"hash": "d6511e14318b03bf5648f0280d5a5157"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5281.jpg",
+				"path": "/images/items/01_4375/157_5281.jpg",
+				"hash": "5215bea94f5cc4c9ce7040b0a62e6439"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5281.jpg",
+				"path": "/images/items/01_4375/158_5281.jpg",
+				"hash": "c8090ad90245e1a558d74f3e842d49f6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5281.jpg",
+				"path": "/images/items/01_4375/159_5281.jpg",
+				"hash": "1baf45c9a81e324d8269397a0acf543b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4375/",
-	"brandIds": [
-		"entry_grade"
-	],
-	"seriesIds": [
-		"naruto"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4376"
-	]
+	"brandIds": ["entry_grade"],
+	"seriesIds": ["naruto"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4376"]
 }

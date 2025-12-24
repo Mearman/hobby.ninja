@@ -32,24 +32,26 @@
 			"• Let's recreate the deadly battle between Amuro and Char by combining the two machines!"
 		]
 	},
-	"images": [
-		"/images/items/01_3494/153_4447.jpg",
-		"/images/items/01_3494/155_4447.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4447.jpg",
+				"path": "/images/items/01_3494/153_4447.jpg",
+				"hash": "598778f8bf7ae5df50fcc0ed5f7467ee"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4447.jpg",
+				"path": "/images/items/01_3494/155_4447.jpg",
+				"hash": "bb610c702bcd3a5c933d45bc17dd8d8d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3494/",
-	"brandIds": [
-		"SDEX"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3020",
-		"01_3021"
-	],
+	"brandIds": ["SDEX"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3020", "01_3021"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

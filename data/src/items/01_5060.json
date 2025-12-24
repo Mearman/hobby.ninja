@@ -38,42 +38,54 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"バーニアパーツ×１式",
-			"アーマーパーツ×１式",
-			"ダクトパーツ×１式",
-			"ジョイントパーツ×1式"
-		],
-		"en": [
-			"Vernier parts x 1 set",
-			"Armor parts x 1 set",
-			"Duct parts x 1 set",
-			"Joint parts x 1 set"
-		]
+		"ja": ["バーニアパーツ×１式", "アーマーパーツ×１式", "ダクトパーツ×１式", "ジョイントパーツ×1式"],
+		"en": ["Vernier parts x 1 set", "Armor parts x 1 set", "Duct parts x 1 set", "Joint parts x 1 set"]
 	},
-	"images": [
-		"/images/items/01_5060/1000205362_1.jpg",
-		"/images/items/01_5060/1000205362_2.jpg",
-		"/images/items/01_5060/1000205362_3.jpg",
-		"/images/items/01_5060/1000205362_4.jpg",
-		"/images/items/01_5060/1000205362_5.jpg",
-		"/images/items/01_5060/1000205362_6.jpg",
-		"/images/items/01_5060/1000205362_7.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205362_1.jpg",
+				"path": "/images/items/01_5060/1000205362_1.jpg",
+				"hash": "7c888671b0ef744d27beb3e3bff3804e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205362_2.jpg",
+				"path": "/images/items/01_5060/1000205362_2.jpg",
+				"hash": "540ae5cc061d5f267167c5b13e30990a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205362_3.jpg",
+				"path": "/images/items/01_5060/1000205362_3.jpg",
+				"hash": "32ce46b0111c3a153bacd90cc184f17e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205362_4.jpg",
+				"path": "/images/items/01_5060/1000205362_4.jpg",
+				"hash": "da6cb98fdb5af558588203fadb5e2ffa"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205362_5.jpg",
+				"path": "/images/items/01_5060/1000205362_5.jpg",
+				"hash": "4fdd20fcb9e09e15bf1d4e134bdc35c9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205362_6.jpg",
+				"path": "/images/items/01_5060/1000205362_6.jpg",
+				"hash": "e0333d54ebd4ae2fdad596303dabf532"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205362_7.jpg",
+				"path": "/images/items/01_5060/1000205362_7.jpg",
+				"hash": "f019bf6d9385ae616c5aa2022ad1b84c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5060/",
-	"brandIds": [
-		"30mm"
-	],
+	"brandIds": ["30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3772",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3772/"

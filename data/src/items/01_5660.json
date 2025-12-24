@@ -27,30 +27,41 @@
 			"-Mobile Suit Gundam Unicorn series appears in HGUC. - Completely three-dimensional version of the Psycommu-equipped MS owned by the Neo-Zeon army remnant organization \"Sleeves\". ●1/144 Scale HGUC with a total height of 155mm and a size of nearly 200mm including the binder. ●Each of the four super-large binders can be moved freely, and a locking mechanism is used on a part of the base to fix the pose. -Equipped with gimmicks that can be used in a variety of situations, the back of the binder can store 2 large verniers and 6 funnels, and the hidden arm is also reproduced. Molded product x 13, foil seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_5660/153_728.jpg",
-		"/images/items/01_5660/155_728.jpg",
-		"/images/items/01_5660/156_728.jpg",
-		"/images/items/01_5660/157_728.jpg",
-		"/images/items/01_5660/158_728.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_728.jpg",
+				"path": "/images/items/01_5660/153_728.jpg",
+				"hash": "e51ae383ede18e0bc03e0987c38995f3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_728.jpg",
+				"path": "/images/items/01_5660/155_728.jpg",
+				"hash": "146f51129e5922237653663a13e4df3a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_728.jpg",
+				"path": "/images/items/01_5660/156_728.jpg",
+				"hash": "f9e3dfda8151cff10207257fae4097b4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_728.jpg",
+				"path": "/images/items/01_5660/157_728.jpg",
+				"hash": "956cbda0285bfcdad5068c1d64b5ee28"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_728.jpg",
+				"path": "/images/items/01_5660/158_728.jpg",
+				"hash": "0d4022e0bde96a41b1afad2ce1fa65d2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5660/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "412",
 		"url": "https://manual.bandai-hobby.net/menus/detail/412/"

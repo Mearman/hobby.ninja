@@ -35,20 +35,24 @@
 			"• Enjoy the scene of mutual direct operation with Tokyu Corporation 8500 series, Tobu Corporation 50000 series, etc."
 		]
 	},
-	"images": [
-		"/images/items/01_5814/153_886.jpg",
-		"/images/items/01_5814/155_886.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_886.jpg",
+				"path": "/images/items/01_5814/153_886.jpg",
+				"hash": "5ac890bdc51122ff75d51512d8971c44"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_886.jpg",
+				"path": "/images/items/01_5814/155_886.jpg",
+				"hash": "9118043701a09069bc8a5c6b1e247c70"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5814/",
-	"brandIds": [
-		"train"
-	],
+	"brandIds": ["train"],
 	"seriesIds": [],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"relatedItemIds": ["01_1276", "01_1277", "01_1278", "01_1280"]
 }

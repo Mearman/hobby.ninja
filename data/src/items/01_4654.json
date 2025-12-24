@@ -25,22 +25,24 @@
 			"Sima Yi Sazabi, the aircraft commander who binds the aircraft, is made into a kit as it appears in the new chapter. Sazabi's original red aircraft color is reproduced with color plating. Can be rearranged into two forms: military commander mode and tactician mode. The weapons \"Silver Fang \" and \" Red Wing Fan \" are combined into the \" Fang Wing Great Sword\"."
 		]
 	},
-	"images": [
-		"/images/items/01_4654/153_5546.jpg",
-		"/images/items/01_4654/155_5546.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5546.jpg",
+				"path": "/images/items/01_4654/153_5546.jpg",
+				"hash": "78df4885aed80adb499f6c5b70fe967c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5546.jpg",
+				"path": "/images/items/01_4654/155_5546.jpg",
+				"hash": "12c68f7d2527fbc63dbb1000009030ad"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4654/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

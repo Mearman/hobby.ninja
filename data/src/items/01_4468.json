@@ -26,22 +26,24 @@
 			"Part of the \"First Grade \" series created to commemorate the 20th anniversary of \" Mobile Suit Gundam \". The head, shoulder joints, upper arms, elbows, wrists, hips, knees, and ankles can be moved without using polycaps. The image of the backpack, bulges, etc. is inherited from the \" PG MS-06S Zaku 2\". The weapon comes with a Zaku machine gun."
 		]
 	},
-	"images": [
-		"/images/items/01_4468/153_5373.jpg",
-		"/images/items/01_4468/155_5373.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5373.jpg",
+				"path": "/images/items/01_4468/153_5373.jpg",
+				"hash": "e4c12823232cb08f8004913c5746cd89"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5373.jpg",
+				"path": "/images/items/01_4468/155_5373.jpg",
+				"hash": "71777bae52b3c2454b6cc880d1fcf451"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4468/",
 	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5992", "01_5473", "01_5474", "01_5475"]
 }

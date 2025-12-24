@@ -25,23 +25,29 @@
 			"A BB Senshi plastic model of the power-up form of Musha Gundam Bakushinmaru that appears in \"SD Gundam Force\". The biggest feature is that you can recreate a lightly armored state by attaching and detaching the armor. The helmet, shoulder armor, arm pads, and ankle pads are completely reproduced. Armed with a sword and two scabbards."
 		]
 	},
-	"images": [
-		"/images/items/01_3888/153_482.jpg",
-		"/images/items/01_3888/155_482.jpg",
-		"/images/items/01_3888/156_482.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_482.jpg",
+				"path": "/images/items/01_3888/153_482.jpg",
+				"hash": "4f30a7d208a933aaba313f122a25ae30"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_482.jpg",
+				"path": "/images/items/01_3888/155_482.jpg",
+				"hash": "003cf00d6146279f0082dcca0250cefd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_482.jpg",
+				"path": "/images/items/01_3888/156_482.jpg",
+				"hash": "1ac7858516d10a72cf2067d449002494"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3888/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

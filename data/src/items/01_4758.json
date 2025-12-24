@@ -20,35 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HGPG 1/144 黒い三連プチッガイ登場！"
-		],
-		"en": [
-			"HGPG 1/144 Black triple petitguy now available!"
-		]
+		"ja": ["HGPG 1/144 黒い三連プチッガイ登場！"],
+		"en": ["HGPG 1/144 Black triple petitguy now available!"]
 	},
-	"images": [
-		"/images/items/01_4758/1000188964_1.jpg",
-		"/images/items/01_4758/1000188964_2.jpg",
-		"/images/items/01_4758/1000188964_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000188964_1.jpg",
+				"path": "/images/items/01_4758/1000188964_1.jpg",
+				"hash": "80ebe2f703a9a785d7d05eeedb659ca1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000188964_2.jpg",
+				"path": "/images/items/01_4758/1000188964_2.jpg",
+				"hash": "0af1f911ff2742b579641d55eaaa6ede"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000188964_3.jpg",
+				"path": "/images/items/01_4758/1000188964_3.jpg",
+				"hash": "5d6d730d1fb5a0d31637f3b1323d5517"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4758/",
-	"brandIds": [
-		"hg",
-		"petitgguy"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
+	"brandIds": ["hg", "petitgguy"],
+	"seriesIds": ["buildfighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5057", "01_1942", "01_1288", "01_1261"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

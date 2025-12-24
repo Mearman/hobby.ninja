@@ -20,33 +20,29 @@
 	"targetAge": 15,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"MG 1/100 シャア専用ザク Ver.2.0 クリアカラーバージョン登場！！"
-		],
-		"en": [
-			"MG 1/100 Char's Zaku Ver.2.0 Clear color version now available! !"
-		]
+		"ja": ["MG 1/100 シャア専用ザク Ver.2.0 クリアカラーバージョン登場！！"],
+		"en": ["MG 1/100 Char's Zaku Ver.2.0 Clear color version now available! !"]
 	},
-	"images": [
-		"/images/items/01_4807/153_5687.jpg",
-		"/images/items/01_4807/155_5687.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5687.jpg",
+				"path": "/images/items/01_4807/153_5687.jpg",
+				"hash": "b1a0e5c89280050bcf61498418a45d57"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5687.jpg",
+				"path": "/images/items/01_4807/155_5687.jpg",
+				"hash": "ce53adbc00bc49ad64071bcf2c240d89"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4807/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

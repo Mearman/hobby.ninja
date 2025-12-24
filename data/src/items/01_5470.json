@@ -35,37 +35,47 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ライフル×1",
-			"シールド×1",
-			"シール×1"
-		],
-		"en": [
-			"Rifle x 1",
-			"Seal × 1",
-			"Seal×1"
-		]
+		"ja": ["ライフル×1", "シールド×1", "シール×1"],
+		"en": ["Rifle x 1", "Seal × 1", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_5470/01_5470_0.jpg",
-		"/images/items/01_5470/01_5470_1.jpg",
-		"/images/items/01_5470/01_5470_2.jpg",
-		"/images/items/01_5470/01_5470_3.jpg",
-		"/images/items/01_5470/01_5470_4.jpg",
-		"/images/items/01_5470/01_5470_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5470_0.jpg",
+				"path": "/images/items/01_5470/01_5470_0.jpg",
+				"hash": "addff89988a770680e255843a85b5667"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5470_1.jpg",
+				"path": "/images/items/01_5470/01_5470_1.jpg",
+				"hash": "0005847b67c2b2bb928dd23d0f84ba6d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5470_2.jpg",
+				"path": "/images/items/01_5470/01_5470_2.jpg",
+				"hash": "399e95acdaa8c8d20ffb5153c56c4ce3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5470_3.jpg",
+				"path": "/images/items/01_5470/01_5470_3.jpg",
+				"hash": "8593b60f72b41d8c249114169a7015b9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5470_4.jpg",
+				"path": "/images/items/01_5470/01_5470_4.jpg",
+				"hash": "ef44864afa4036c9147bb6dd69eb8155"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5470_5.jpg",
+				"path": "/images/items/01_5470/01_5470_5.jpg",
+				"hash": "ec9b08da8315b939cccb4415c752b90f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5470/",
 	"brandIds": [],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5969",
-		"01_5970",
-		"01_5986"
-	]
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5969", "01_5970", "01_5986"]
 }

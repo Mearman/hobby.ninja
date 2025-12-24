@@ -54,29 +54,36 @@
 			"Futuristic attire becomes a symbol of a cyclical future."
 		]
 	},
-	"images": [
-		"/images/items/01_5045/1000197390_1.jpg",
-		"/images/items/01_5045/1000197390_2.jpg",
-		"/images/items/01_5045/1000197390_3.jpg",
-		"/images/items/01_5045/1000197390_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000197390_1.jpg",
+				"path": "/images/items/01_5045/1000197390_1.jpg",
+				"hash": "db1b1be7d6210cf43a4c7b04a773b556"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000197390_2.jpg",
+				"path": "/images/items/01_5045/1000197390_2.jpg",
+				"hash": "55b852b53ad1e746c6fb73c2eefbf091"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000197390_3.jpg",
+				"path": "/images/items/01_5045/1000197390_3.jpg",
+				"hash": "e8722368aa43b2a8e43ff2915666f2ce"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000197390_4.jpg",
+				"path": "/images/items/01_5045/1000197390_4.jpg",
+				"hash": "3f6a9a9eae28f575584928551b012eb1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5045/",
-	"brandIds": [
-		"ecoplaproject_g",
-		"entry_grade"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4066",
-		"01_3699",
-		"01_3700",
-		"01_3701"
-	],
+	"brandIds": ["ecoplaproject_g", "entry_grade"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4066", "01_3699", "01_3700", "01_3701"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

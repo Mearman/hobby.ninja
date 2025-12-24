@@ -86,29 +86,59 @@
 			"- Product specifications are scheduled as of 20143. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_5311/153_6162.jpg",
-		"/images/items/01_5311/155_6162.jpg",
-		"/images/items/01_5311/156_6162.jpg",
-		"/images/items/01_5311/157_6162.jpg",
-		"/images/items/01_5311/158_6162.jpg",
-		"/images/items/01_5311/159_6162.jpg",
-		"/images/items/01_5311/189_6162.jpg",
-		"/images/items/01_5311/190_6162.jpg",
-		"/images/items/01_5311/191_6162.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6162.jpg",
+				"path": "/images/items/01_5311/153_6162.jpg",
+				"hash": "9f5ff99444b3abb3171fb3fa34af093f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6162.jpg",
+				"path": "/images/items/01_5311/155_6162.jpg",
+				"hash": "4b009b60e90cf29cded1210a936a79a2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6162.jpg",
+				"path": "/images/items/01_5311/156_6162.jpg",
+				"hash": "d23d019387caa79080f6bb6846e62c26"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6162.jpg",
+				"path": "/images/items/01_5311/157_6162.jpg",
+				"hash": "eeae74992cfe9e0718ae55ecff5be2ab"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6162.jpg",
+				"path": "/images/items/01_5311/158_6162.jpg",
+				"hash": "c60d83ebda3c91ae3d7dec1ad90bbf26"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6162.jpg",
+				"path": "/images/items/01_5311/159_6162.jpg",
+				"hash": "23cd6ba0ca73a6d285f4106cc45d44d5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6162.jpg",
+				"path": "/images/items/01_5311/189_6162.jpg",
+				"hash": "951b532466763e4625976d8da5e9daad"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6162.jpg",
+				"path": "/images/items/01_5311/190_6162.jpg",
+				"hash": "d785125c65f2250263e5db2263c286cf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_6162.jpg",
+				"path": "/images/items/01_5311/191_6162.jpg",
+				"hash": "bf16ee271621cf9d4455668551418aa5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5311/",
-	"brandIds": [
-		"pb_charapla"
-	],
-	"seriesIds": [
-		"yamato"
-	],
+	"brandIds": ["pb_charapla"],
+	"seriesIds": ["yamato"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"item-1000118865",
-		"01_5312",
-		"01_5307",
-		"01_5304"
-	]
+	"relatedItemIds": ["item-1000118865", "01_5312", "01_5307", "01_5304"]
 }

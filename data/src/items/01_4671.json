@@ -26,22 +26,24 @@
 			"• Trinity set of dragon armor, Liu Bei, demon fangs, Guan Yu, thunder armor, and Zhang Fei. • The awakening of the Shinryutei sword is reproduced with gold plating. • Comes with effect parts for performing the special move \"Trinity Star Dragon Slash\" and an original pedestal."
 		]
 	},
-	"images": [
-		"/images/items/01_4671/153_5561.jpg",
-		"/images/items/01_4671/155_5561.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5561.jpg",
+				"path": "/images/items/01_4671/153_5561.jpg",
+				"hash": "1f0d93eccaa690525743356306d739d3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5561.jpg",
+				"path": "/images/items/01_4671/155_5561.jpg",
+				"hash": "3a860a4ca9fedb73874e885a87985cba"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4671/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

@@ -27,25 +27,31 @@
 			"• From the \"Mobile Suit Gundam SEED ASTRAY \" series, Gold Frame Amatsu Mina is now available in HG. • Balances the latest proportions and movement. • Reproduce a dynamic pose with a sense of volume by unfolding the backpack. • Various weapons are reproduced with gimmicks, such as the offensive and defensive shield \" Trikeros Kai \", the deployable claw \" Tsumuhanotachi \", and the \" Maganoicutachi\" that steals the enemy's energy. Molded product x 10, lead wire x 2, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5866/153_945.jpg",
-		"/images/items/01_5866/155_945.jpg",
-		"/images/items/01_5866/156_945.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_945.jpg",
+				"path": "/images/items/01_5866/153_945.jpg",
+				"hash": "ac6bca5a415396c78f4a9ccb90dcbf81"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_945.jpg",
+				"path": "/images/items/01_5866/155_945.jpg",
+				"hash": "9ff706a37206e03096309c35758794c8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_945.jpg",
+				"path": "/images/items/01_5866/156_945.jpg",
+				"hash": "97b4a5264211437c5118e0d3458f2e5c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5866/",
-	"brandIds": [
-		"hg"
-	],
+	"brandIds": ["hg"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5963", "01_5961", "01_5951"],
 	"manual": {
 		"id": "7",
 		"url": "https://manual.bandai-hobby.net/menus/detail/7/"

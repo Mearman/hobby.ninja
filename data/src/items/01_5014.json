@@ -35,44 +35,73 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"クナイ×2",
-			"忍者刀×1",
-			"エフェクトパーツ×1式",
-			"ジョイントパーツ×1式",
-			"シール×1"
-		],
-		"en": [
-			"Kunai x 2",
-			"Ninja sword x1",
-			"Effect parts x 1",
-			"Joint parts x 1 set",
-			"Seal×1"
-		]
+		"ja": ["クナイ×2", "忍者刀×1", "エフェクトパーツ×1式", "ジョイントパーツ×1式", "シール×1"],
+		"en": ["Kunai x 2", "Ninja sword x1", "Effect parts x 1", "Joint parts x 1 set", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_5014/153_5881.jpg",
-		"/images/items/01_5014/155_5881.jpg",
-		"/images/items/01_5014/156_5881.jpg",
-		"/images/items/01_5014/157_5881.jpg",
-		"/images/items/01_5014/158_5881.jpg",
-		"/images/items/01_5014/159_5881.jpg",
-		"/images/items/01_5014/189_5881.jpg",
-		"/images/items/01_5014/190_5881.jpg",
-		"/images/items/01_5014/191_5881.jpg",
-		"/images/items/01_5014/192_5881.jpg",
-		"/images/items/01_5014/193_5881.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5881.jpg",
+				"path": "/images/items/01_5014/153_5881.jpg",
+				"hash": "6310084bfa115513d395bb893605a8a3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5881.jpg",
+				"path": "/images/items/01_5014/155_5881.jpg",
+				"hash": "d62ed41a50bee2df4ee440788d0f868c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5881.jpg",
+				"path": "/images/items/01_5014/156_5881.jpg",
+				"hash": "acd44b3dde1b1d5faa8be49643e9492e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5881.jpg",
+				"path": "/images/items/01_5014/157_5881.jpg",
+				"hash": "5a14f06e19cae0d465b1f72da1611c40"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5881.jpg",
+				"path": "/images/items/01_5014/158_5881.jpg",
+				"hash": "1e66dddffdc00896601af49e3a40b88b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5881.jpg",
+				"path": "/images/items/01_5014/159_5881.jpg",
+				"hash": "9d93ce9312b4a34c4bb17207f0d3f750"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5881.jpg",
+				"path": "/images/items/01_5014/189_5881.jpg",
+				"hash": "9a3482b459d6334c123d0239eaf85259"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5881.jpg",
+				"path": "/images/items/01_5014/190_5881.jpg",
+				"hash": "58ac117ae2085af1a671b11fcf08a6b3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5881.jpg",
+				"path": "/images/items/01_5014/191_5881.jpg",
+				"hash": "14011b2f39a09134152f713bfe514736"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5881.jpg",
+				"path": "/images/items/01_5014/192_5881.jpg",
+				"hash": "4290d2fe8dd0155828b4b17816f3d668"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_5881.jpg",
+				"path": "/images/items/01_5014/193_5881.jpg",
+				"hash": "06797ca6877a87bcd9a776a3c8c00e3f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5014/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"gundambuildmetaverse"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["sdcs"],
+	"seriesIds": ["gundambuildmetaverse"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": [],
 	"manual": {
 		"id": "1102",

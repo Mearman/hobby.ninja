@@ -40,44 +40,54 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ミサイル×1式",
-			"煙エフェクトパーツ×1式",
-			"砲台用支柱×1式",
-			"グリップ×2",
-			"パイロン×2"
-		],
-		"en": [
-			"Missile x 1 type",
-			"Smoke effect parts x 1 set",
-			"Battery strut x 1 set",
-			"Grip x 2",
-			"Pylon x 2"
-		]
+		"ja": ["ミサイル×1式", "煙エフェクトパーツ×1式", "砲台用支柱×1式", "グリップ×2", "パイロン×2"],
+		"en": ["Missile x 1 type", "Smoke effect parts x 1 set", "Battery strut x 1 set", "Grip x 2", "Pylon x 2"]
 	},
-	"images": [
-		"/images/items/01_5965/01_5965_0.jpg",
-		"/images/items/01_5965/01_5965_1.jpg",
-		"/images/items/01_5965/01_5965_2.jpg",
-		"/images/items/01_5965/01_5965_3.jpg",
-		"/images/items/01_5965/01_5965_4.jpg",
-		"/images/items/01_5965/01_5965_5.jpg",
-		"/images/items/01_5965/01_5965_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5965_0.jpg",
+				"path": "/images/items/01_5965/01_5965_0.jpg",
+				"hash": "7d0044396610b073a5e9552bd01a96c4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5965_1.jpg",
+				"path": "/images/items/01_5965/01_5965_1.jpg",
+				"hash": "3a316f86c432c638f0cd65d13d700a80"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5965_2.jpg",
+				"path": "/images/items/01_5965/01_5965_2.jpg",
+				"hash": "9afecafbc6dd386072177142b9ef6e0f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5965_3.jpg",
+				"path": "/images/items/01_5965/01_5965_3.jpg",
+				"hash": "ad05773f7e1536407509695db88458f5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5965_4.jpg",
+				"path": "/images/items/01_5965/01_5965_4.jpg",
+				"hash": "9ab98d5d7de4b878f130cf685b6e65a0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5965_5.jpg",
+				"path": "/images/items/01_5965/01_5965_5.jpg",
+				"hash": "0d5cd1afd7d9cac75c843cf2f12ffa33"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5965_6.jpg",
+				"path": "/images/items/01_5965/01_5965_6.jpg",
+				"hash": "a926386ee176db21e06fdcc082a125f8"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5965/",
-	"brandIds": [
-		"30mm"
-	],
+	"brandIds": ["30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3806",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3806/"

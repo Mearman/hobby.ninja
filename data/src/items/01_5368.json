@@ -39,12 +39,7 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ボディパーツ×1式",
-			"腹部パーツ×2種（選択式）",
-			"ハンドパーツ×1式",
-			"胸部パーツ×2種（選択式）"
-		],
+		"ja": ["ボディパーツ×1式", "腹部パーツ×2種（選択式）", "ハンドパーツ×1式", "胸部パーツ×2種（選択式）"],
 		"en": [
 			"Body parts x 1 set",
 			"Abdominal parts x 2 types (selectable)",
@@ -52,34 +47,74 @@
 			"Chest parts x 2 types (selectable)"
 		]
 	},
-	"images": [
-		"/images/items/01_5368/1000219432_1.jpg",
-		"/images/items/01_5368/1000219432_10.jpg",
-		"/images/items/01_5368/1000219432_11.jpg",
-		"/images/items/01_5368/1000219432_12.jpg",
-		"/images/items/01_5368/1000219432_2.jpg",
-		"/images/items/01_5368/1000219432_3.jpg",
-		"/images/items/01_5368/1000219432_4.jpg",
-		"/images/items/01_5368/1000219432_5.jpg",
-		"/images/items/01_5368/1000219432_6.jpg",
-		"/images/items/01_5368/1000219432_7.jpg",
-		"/images/items/01_5368/1000219432_8.jpg",
-		"/images/items/01_5368/1000219432_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219432_1.jpg",
+				"path": "/images/items/01_5368/1000219432_1.jpg",
+				"hash": "00a7f43c41e2e820334158d3c490bb07"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219432_10.jpg",
+				"path": "/images/items/01_5368/1000219432_10.jpg",
+				"hash": "fae9dbfe9339875a26e38cffdf0be492"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219432_11.jpg",
+				"path": "/images/items/01_5368/1000219432_11.jpg",
+				"hash": "d8be57af3580c309e83404d5c73b0f3b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219432_12.jpg",
+				"path": "/images/items/01_5368/1000219432_12.jpg",
+				"hash": "7647d54deef0b5768b2781a58bb6cdc9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219432_2.jpg",
+				"path": "/images/items/01_5368/1000219432_2.jpg",
+				"hash": "df9d6906825ffb995f0381e836673440"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219432_3.jpg",
+				"path": "/images/items/01_5368/1000219432_3.jpg",
+				"hash": "26a4a1b0a19c5230904b4aefb58b9db5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219432_4.jpg",
+				"path": "/images/items/01_5368/1000219432_4.jpg",
+				"hash": "a8d0428f2d59e124862017615b463db9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219432_5.jpg",
+				"path": "/images/items/01_5368/1000219432_5.jpg",
+				"hash": "020ddc6ac7c5b3fda364b834af14a08c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219432_6.jpg",
+				"path": "/images/items/01_5368/1000219432_6.jpg",
+				"hash": "883e95223988ef6845deb425cc0472b1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219432_7.jpg",
+				"path": "/images/items/01_5368/1000219432_7.jpg",
+				"hash": "1f2c181e74667c64eb8d3b3c043338a1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219432_8.jpg",
+				"path": "/images/items/01_5368/1000219432_8.jpg",
+				"hash": "b265833b1bf43144aecc248e4290ae37"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219432_9.jpg",
+				"path": "/images/items/01_5368/1000219432_9.jpg",
+				"hash": "742e9fcf4353099fa9f0f5f3f9bd80b8"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5368/",
-	"brandIds": [
-		"30ms"
-	],
-	"seriesIds": [
-		"idolmaster"
-	],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_6755",
-		"01_6756",
-		"01_5977",
-		"01_5976"
-	]
+	"brandIds": ["30ms"],
+	"seriesIds": ["idolmaster"],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_6755", "01_6756", "01_5977", "01_5976"]
 }

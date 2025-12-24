@@ -47,27 +47,31 @@
 			"• The barrel of the smoothbore gun is equipped with a sliding/folding gimmick. Pursuing ease of play with the lock mechanism."
 		]
 	},
-	"images": [
-		"/images/items/01_3458/153_4412.jpg",
-		"/images/items/01_3458/155_4412.jpg",
-		"/images/items/01_3458/156_4412.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4412.jpg",
+				"path": "/images/items/01_3458/153_4412.jpg",
+				"hash": "be5b7e6fee991a58cded765f572ee27e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4412.jpg",
+				"path": "/images/items/01_3458/155_4412.jpg",
+				"hash": "5d8e1d8863a1c82e6805d43ecd33429d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4412.jpg",
+				"path": "/images/items/01_3458/156_4412.jpg",
+				"hash": "02a489162ff6f7aa40694f08130fa505"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3458/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"tekketsu"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5469",
-		"01_4255",
-		"01_4214",
-		"01_3842"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["tekketsu"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5469", "01_4255", "01_4214", "01_3842"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

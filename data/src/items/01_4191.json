@@ -40,31 +40,61 @@
 			"*This product is scheduled to be sold on the Bandai Namco Group's official mail order site, THE GUNDAM BASE stores, and overseas."
 		]
 	},
-	"images": [
-		"/images/items/01_4191/1000173137_1.jpg",
-		"/images/items/01_4191/1000173137_2.jpg",
-		"/images/items/01_4191/1000173137_3.jpg",
-		"/images/items/01_4191/1000173137_4.jpg",
-		"/images/items/01_4191/1000173137_5.jpg",
-		"/images/items/01_4191/1000173137_6.jpg",
-		"/images/items/01_4191/1000173137_7.jpg",
-		"/images/items/01_4191/1000173137_8.jpg",
-		"/images/items/01_4191/1000173137_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173137_1.jpg",
+				"path": "/images/items/01_4191/1000173137_1.jpg",
+				"hash": "6f162445d910dc3799dad046e08b4a89"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173137_2.jpg",
+				"path": "/images/items/01_4191/1000173137_2.jpg",
+				"hash": "2d03b164ee8e3a4c602f58ec824d14d9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173137_3.jpg",
+				"path": "/images/items/01_4191/1000173137_3.jpg",
+				"hash": "81637b01e4ea252f40e8e73555f69c1c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173137_4.jpg",
+				"path": "/images/items/01_4191/1000173137_4.jpg",
+				"hash": "8231fecd4c5d78d3debc8212932a85ef"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173137_5.jpg",
+				"path": "/images/items/01_4191/1000173137_5.jpg",
+				"hash": "07cb6eb4c41af51ea7ccd74cf418c3ee"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173137_6.jpg",
+				"path": "/images/items/01_4191/1000173137_6.jpg",
+				"hash": "2e793276f1fab037dd1aa1692d9465c6"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173137_7.jpg",
+				"path": "/images/items/01_4191/1000173137_7.jpg",
+				"hash": "5c8e7702e6a5ed8895b08f9b450f47ae"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173137_8.jpg",
+				"path": "/images/items/01_4191/1000173137_8.jpg",
+				"hash": "89a685cf3cf7d2f3702935558188830a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173137_9.jpg",
+				"path": "/images/items/01_4191/1000173137_9.jpg",
+				"hash": "a6f7fc19553e143178ab7fd6b176ffdf"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4191/",
-	"brandIds": [
-		"entry_grade"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4974",
-		"01_4082"
-	],
+	"brandIds": ["entry_grade"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4974", "01_4082"],
 	"tag": {
 		"ja": "GUNDAM SIDE-F",
 		"en": "GUNDAM SIDE-F"

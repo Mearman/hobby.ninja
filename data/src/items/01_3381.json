@@ -37,28 +37,36 @@
 			"• MarkingSeal by Hajime Katoki is included!"
 		]
 	},
-	"images": [
-		"/images/items/01_3381/1000153904_1.jpg",
-		"/images/items/01_3381/1000153904_2.jpg",
-		"/images/items/01_3381/1000153904_3.jpg",
-		"/images/items/01_3381/1000153904_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153904_1.jpg",
+				"path": "/images/items/01_3381/1000153904_1.jpg",
+				"hash": "9aad3315e5e46391296afb3252350eef"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153904_2.jpg",
+				"path": "/images/items/01_3381/1000153904_2.jpg",
+				"hash": "d30300ebee13bbb27c7dd7ae7a2f5248"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153904_3.jpg",
+				"path": "/images/items/01_3381/1000153904_3.jpg",
+				"hash": "9bb0f5326e3adb5397a3772022748d17"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153904_4.jpg",
+				"path": "/images/items/01_3381/1000153904_4.jpg",
+				"hash": "affd40de41bc6076292c0c2de289000a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3381/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000194972",
-		"01_3410",
-		"item-1000142325",
-		"01_2703"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["endlesswaltz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000194972", "01_3410", "item-1000142325", "01_2703"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

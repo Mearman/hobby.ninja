@@ -36,28 +36,36 @@
 			"• The arm part has a rotating/extending gimmick."
 		]
 	},
-	"images": [
-		"/images/items/01_6740/01_6740_0.jpg",
-		"/images/items/01_6740/01_6740_1.jpg",
-		"/images/items/01_6740/01_6740_2.jpg",
-		"/images/items/01_6740/01_6740_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6740_0.jpg",
+				"path": "/images/items/01_6740/01_6740_0.jpg",
+				"hash": "90ab66c7f4c4f5d4e36888c972dadf57"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6740_1.jpg",
+				"path": "/images/items/01_6740/01_6740_1.jpg",
+				"hash": "9f873e94eee46672f25ec3942a0e7e88"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6740_2.jpg",
+				"path": "/images/items/01_6740/01_6740_2.jpg",
+				"hash": "7410f15f81ebe60e3d358dde9fbe19a0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6740_3.jpg",
+				"path": "/images/items/01_6740/01_6740_3.jpg",
+				"hash": "afb6905b89a9762e4d483abcc4e96de5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6740/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5346",
-		"01_5210",
-		"01_4971",
-		"01_4408"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5346", "01_5210", "01_4971", "01_4408"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

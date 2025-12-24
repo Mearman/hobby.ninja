@@ -74,36 +74,76 @@
 			"Realistic decal x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4923/1000198841_1.jpg",
-		"/images/items/01_4923/1000198841_10.jpg",
-		"/images/items/01_4923/1000198841_11.jpg",
-		"/images/items/01_4923/1000198841_12.jpg",
-		"/images/items/01_4923/1000198841_2.jpg",
-		"/images/items/01_4923/1000198841_3.jpg",
-		"/images/items/01_4923/1000198841_4.jpg",
-		"/images/items/01_4923/1000198841_5.jpg",
-		"/images/items/01_4923/1000198841_6.jpg",
-		"/images/items/01_4923/1000198841_7.jpg",
-		"/images/items/01_4923/1000198841_8.jpg",
-		"/images/items/01_4923/1000198841_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198841_1.jpg",
+				"path": "/images/items/01_4923/1000198841_1.jpg",
+				"hash": "b903c65634e2332a9fb57db768e7899c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198841_10.jpg",
+				"path": "/images/items/01_4923/1000198841_10.jpg",
+				"hash": "f50c762364e1602eddcef2c263284514"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198841_11.jpg",
+				"path": "/images/items/01_4923/1000198841_11.jpg",
+				"hash": "d6a8b6832f75c7d94c342be28c589a1f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198841_12.jpg",
+				"path": "/images/items/01_4923/1000198841_12.jpg",
+				"hash": "032bd19253327041591ba29798b50b59"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198841_2.jpg",
+				"path": "/images/items/01_4923/1000198841_2.jpg",
+				"hash": "4e86934e9a9c48215bce7050021d186e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198841_3.jpg",
+				"path": "/images/items/01_4923/1000198841_3.jpg",
+				"hash": "fd22ae17a4bd7f038fd1d48c2cf6f5a8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198841_4.jpg",
+				"path": "/images/items/01_4923/1000198841_4.jpg",
+				"hash": "06f39e20ff105387c887d6773c2e30d3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198841_5.jpg",
+				"path": "/images/items/01_4923/1000198841_5.jpg",
+				"hash": "7abf0bd2bb96555c1d4a17f128eacb66"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198841_6.jpg",
+				"path": "/images/items/01_4923/1000198841_6.jpg",
+				"hash": "bee0653b19a67bd909a4ce31ffee8296"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198841_7.jpg",
+				"path": "/images/items/01_4923/1000198841_7.jpg",
+				"hash": "2b0e2a6cfbcc615bd743ff26cf8bb9d8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198841_8.jpg",
+				"path": "/images/items/01_4923/1000198841_8.jpg",
+				"hash": "1d1b79a8eedb72be013f70235dcef4fe"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198841_9.jpg",
+				"path": "/images/items/01_4923/1000198841_9.jpg",
+				"hash": "7c0454c17b3da073eea15f350106684b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4923/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3425",
-		"item-1000154310",
-		"item-1000142878",
-		"item-1000135281"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["endlesswaltz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3425", "item-1000154310", "item-1000142878", "item-1000135281"],
 	"manual": {
 		"id": "1097",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1097/"

@@ -27,25 +27,29 @@
 			"• Two rivals from Mobile Suit Gundam: Char's Counterattack appear in metallic coating versions! • Achieved with a metallic coating that gives a luxurious and heavy feel! Molded product x 10, Foil Seal x 1, Tetron Seal x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4542/153_5442.jpg",
-		"/images/items/01_4542/155_5442.jpg",
-		"/images/items/01_4542/156_5442.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5442.jpg",
+				"path": "/images/items/01_4542/153_5442.jpg",
+				"hash": "bac213aae944c349091eee70ea3a351d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5442.jpg",
+				"path": "/images/items/01_4542/155_5442.jpg",
+				"hash": "6f4688c31368441534efd660a38aba3a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5442.jpg",
+				"path": "/images/items/01_4542/156_5442.jpg",
+				"hash": "0d7057724c47394beb3a63ff9868482a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4542/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5346",
-		"01_5210",
-		"01_4971",
-		"01_4408"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5346", "01_5210", "01_4971", "01_4408"]
 }

@@ -36,44 +36,64 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"バトルアンカー×1",
-			"ハンドパーツ×１式",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Battle anchor x1",
-			"Hand parts x 1 set",
-			"Foil Seal×1"
-		]
+		"ja": ["バトルアンカー×1", "ハンドパーツ×１式", "ホイルシール×1"],
+		"en": ["Battle anchor x1", "Hand parts x 1 set", "Foil Seal×1"]
 	},
-	"images": [
-		"/images/items/01_3642/153_4597.jpg",
-		"/images/items/01_3642/155_4597.jpg",
-		"/images/items/01_3642/156_4597.jpg",
-		"/images/items/01_3642/157_4597.jpg",
-		"/images/items/01_3642/158_4597.jpg",
-		"/images/items/01_3642/159_4597.jpg",
-		"/images/items/01_3642/189_4597.jpg",
-		"/images/items/01_3642/190_4597.jpg",
-		"/images/items/01_3642/01_3642_inst_0.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4597.jpg",
+				"path": "/images/items/01_3642/153_4597.jpg",
+				"hash": "b09fa1c494603c33da72ef6b24b3e01e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4597.jpg",
+				"path": "/images/items/01_3642/155_4597.jpg",
+				"hash": "e9a6421dc1a129d6e27e4d0ef27000bf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4597.jpg",
+				"path": "/images/items/01_3642/156_4597.jpg",
+				"hash": "8b0271531b6f2139bf1ff8e5ba42b0ea"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4597.jpg",
+				"path": "/images/items/01_3642/157_4597.jpg",
+				"hash": "1f5c90969f0b44e4ec538015b20e7ff4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4597.jpg",
+				"path": "/images/items/01_3642/158_4597.jpg",
+				"hash": "2fe8e7a76eae3f569190d040199fead3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4597.jpg",
+				"path": "/images/items/01_3642/159_4597.jpg",
+				"hash": "7930ed429b1bf5a4aaa6ff410c04950b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4597.jpg",
+				"path": "/images/items/01_3642/189_4597.jpg",
+				"hash": "fdf0955a7be85a739f22a4077be986e6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4597.jpg",
+				"path": "/images/items/01_3642/190_4597.jpg",
+				"hash": "453939b2c2ca82aa8c77075f9d50b236"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_3642_inst_0.jpg",
+				"path": "/images/items/01_3642/01_3642_inst_0.jpg",
+				"hash": "b4c09e72b422d6b4c81a5d8069505850"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3642/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"tekketsu"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4103",
-		"01_4240",
-		"01_4188",
-		"01_4094"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["tekketsu"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4103", "01_4240", "01_4188", "01_4094"],
 	"manual": {
 		"id": "114",
 		"url": "https://manual.bandai-hobby.net/menus/detail/114/"

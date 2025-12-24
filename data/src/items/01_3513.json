@@ -31,36 +31,52 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"カイナスシール×1",
-			"専用ディスプレイベース×1"
-		],
-		"en": [
-			"Cainus Seal×1",
-			"Dedicated display base x 1"
-		]
+		"ja": ["カイナスシール×1", "専用ディスプレイベース×1"],
+		"en": ["Cainus Seal×1", "Dedicated display base x 1"]
 	},
-	"images": [
-		"/images/items/01_3513/1000161300_1.jpg",
-		"/images/items/01_3513/1000161300_2.jpg",
-		"/images/items/01_3513/1000161300_3.jpg",
-		"/images/items/01_3513/1000161300_4.jpg",
-		"/images/items/01_3513/1000161300_5.jpg",
-		"/images/items/01_3513/1000161300_6.jpg",
-		"/images/items/01_3513/1000161300_7.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161300_1.jpg",
+				"path": "/images/items/01_3513/1000161300_1.jpg",
+				"hash": "a5b4f341478ea9976a9d40c0a51826ad"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161300_2.jpg",
+				"path": "/images/items/01_3513/1000161300_2.jpg",
+				"hash": "258978f783ccfb24e8611bc5680cc44e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161300_3.jpg",
+				"path": "/images/items/01_3513/1000161300_3.jpg",
+				"hash": "c03ea43e3b416d462f83a0e51332028c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161300_4.jpg",
+				"path": "/images/items/01_3513/1000161300_4.jpg",
+				"hash": "a459038d55a7701489e24b295bb705b1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161300_5.jpg",
+				"path": "/images/items/01_3513/1000161300_5.jpg",
+				"hash": "3145448d6843d40857835b36c811c080"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161300_6.jpg",
+				"path": "/images/items/01_3513/1000161300_6.jpg",
+				"hash": "c89dcb1d5304d9517425687dd18355d2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161300_7.jpg",
+				"path": "/images/items/01_3513/1000161300_7.jpg",
+				"hash": "c33263d7284e3b3ca5d9aa6a687b5bf2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3513/",
 	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3515"
-	]
+	"seriesIds": ["starwars"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4153", "01_4154", "01_3514", "01_3515"]
 }

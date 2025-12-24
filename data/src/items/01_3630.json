@@ -64,32 +64,46 @@
 			"Foil Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_3630/153_4584.jpg",
-		"/images/items/01_3630/155_4584.jpg",
-		"/images/items/01_3630/156_4584.jpg",
-		"/images/items/01_3630/157_4584.jpg",
-		"/images/items/01_3630/158_4584.jpg",
-		"/images/items/01_3630/159_4584.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4584.jpg",
+				"path": "/images/items/01_3630/153_4584.jpg",
+				"hash": "81ce1acf372ea13b2e53e0891075c097"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4584.jpg",
+				"path": "/images/items/01_3630/155_4584.jpg",
+				"hash": "d118590b963807548ce8045658d9f642"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4584.jpg",
+				"path": "/images/items/01_3630/156_4584.jpg",
+				"hash": "300d4451f8f7152243898783e3dc5a39"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4584.jpg",
+				"path": "/images/items/01_3630/157_4584.jpg",
+				"hash": "fe4d03a94ea01807a11ffd046de52290"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4584.jpg",
+				"path": "/images/items/01_3630/158_4584.jpg",
+				"hash": "7f114dae1d4b89c0a06109c359948bef"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4584.jpg",
+				"path": "/images/items/01_3630/159_4584.jpg",
+				"hash": "005a7ff3c76729191836fb00fee080ff"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3630/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"gundam_breaker_battlogue"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4128",
-		"item-1000166359",
-		"item-1000166322",
-		"item-1000166324"
-	],
+	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
+	"seriesIds": ["gundam_breaker_battlogue"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4128", "item-1000166359", "item-1000166322", "item-1000166324"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

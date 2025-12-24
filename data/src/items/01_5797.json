@@ -41,27 +41,31 @@
 			"Learn more"
 		]
 	},
-	"images": [
-		"/images/items/01_5797/153_862.jpg",
-		"/images/items/01_5797/155_862.jpg",
-		"/images/items/01_5797/156_862.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_862.jpg",
+				"path": "/images/items/01_5797/153_862.jpg",
+				"hash": "07acfef9ab1375c8b05765860a6e974f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_862.jpg",
+				"path": "/images/items/01_5797/155_862.jpg",
+				"hash": "454e7f42d72dec1e7772813f5ccca826"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_862.jpg",
+				"path": "/images/items/01_5797/156_862.jpg",
+				"hash": "8d103a89832021c6dafe77f23e18b797"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5797/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000183366",
-		"01_4271",
-		"01_2670",
-		"item-1000138934"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000183366", "01_4271", "01_2670", "item-1000138934"],
 	"manual": {
 		"id": "609",
 		"url": "https://manual.bandai-hobby.net/menus/detail/609/"

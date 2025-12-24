@@ -34,23 +34,29 @@
 			"• Three special pedestals are included."
 		]
 	},
-	"images": [
-		"/images/items/01_5850/153_926.jpg",
-		"/images/items/01_5850/155_926.jpg",
-		"/images/items/01_5850/156_926.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_926.jpg",
+				"path": "/images/items/01_5850/153_926.jpg",
+				"hash": "212705bdf3a811de3fd3c7987623c5a2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_926.jpg",
+				"path": "/images/items/01_5850/155_926.jpg",
+				"hash": "4bc56a5e12dbd86c3fd36b6de3be3563"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_926.jpg",
+				"path": "/images/items/01_5850/156_926.jpg",
+				"hash": "ebf2b262695fe4a0fd0fc568458e1d5b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5850/",
 	"brandIds": [],
-	"seriesIds": [
-		"pokemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"seriesIds": ["pokemon"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
 }

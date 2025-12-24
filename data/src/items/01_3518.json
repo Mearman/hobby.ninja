@@ -29,38 +29,42 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"Gコントローラー×1",
-			"アタッチメントパーツ×4種",
-			"ホイルシール×1"
-		],
-		"en": [
-			"G controller x 1",
-			"Attachment parts x 4 types",
-			"Foil Seal×1"
-		]
+		"ja": ["Gコントローラー×1", "アタッチメントパーツ×4種", "ホイルシール×1"],
+		"en": ["G controller x 1", "Attachment parts x 4 types", "Foil Seal×1"]
 	},
-	"images": [
-		"/images/items/01_3518/153_4469.jpg",
-		"/images/items/01_3518/155_4469.jpg",
-		"/images/items/01_3518/156_4469.jpg",
-		"/images/items/01_3518/157_4469.jpg",
-		"/images/items/01_3518/158_4469.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4469.jpg",
+				"path": "/images/items/01_3518/153_4469.jpg",
+				"hash": "a92d207df4dd137b19d86f7aa387c740"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4469.jpg",
+				"path": "/images/items/01_3518/155_4469.jpg",
+				"hash": "c5ed3d1364b425eec99b790935de751b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4469.jpg",
+				"path": "/images/items/01_3518/156_4469.jpg",
+				"hash": "e72b11b05ffc316dc5955fce8ce36aac"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4469.jpg",
+				"path": "/images/items/01_3518/157_4469.jpg",
+				"hash": "3e014440d345c620f21f3ab2384eda77"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4469.jpg",
+				"path": "/images/items/01_3518/158_4469.jpg",
+				"hash": "638db20c639ca494899edaff88d7bdd3"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3518/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4336",
-		"01_4312",
-		"01_4634"
-	]
+	"brandIds": ["sdgundamseries"],
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
 }

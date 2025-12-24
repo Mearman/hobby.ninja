@@ -36,29 +36,41 @@
 			"• Includes GN Sniper Rifle, GN Full Seal Do x 2, GNSeal Do x 2, Beam Saber x 2 (handle only)"
 		]
 	},
-	"images": [
-		"/images/items/01_5655/153_722.jpg",
-		"/images/items/01_5655/155_722.jpg",
-		"/images/items/01_5655/156_722.jpg",
-		"/images/items/01_5655/157_722.jpg",
-		"/images/items/01_5655/158_722.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_722.jpg",
+				"path": "/images/items/01_5655/153_722.jpg",
+				"hash": "9204f9c33a13dc74315c6d601320f176"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_722.jpg",
+				"path": "/images/items/01_5655/155_722.jpg",
+				"hash": "f8e29c8aca274404eaf1a706f5722a02"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_722.jpg",
+				"path": "/images/items/01_5655/156_722.jpg",
+				"hash": "cac68bde1edf67c78c101f5d7b73511a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_722.jpg",
+				"path": "/images/items/01_5655/157_722.jpg",
+				"hash": "92144bc2da2917b0dcdd77ef3656044b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_722.jpg",
+				"path": "/images/items/01_5655/158_722.jpg",
+				"hash": "6c514c8713d72d23f0af31bee96fb697"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5655/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1954",
-		"01_1953",
-		"item-1000114085",
-		"01_957"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["g-00"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_1954", "01_1953", "item-1000114085", "01_957"],
 	"manual": {
 		"id": "187",
 		"url": "https://manual.bandai-hobby.net/menus/detail/187/"

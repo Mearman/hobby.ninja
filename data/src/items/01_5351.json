@@ -86,41 +86,59 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"エルシオンハルバード",
-			"エルシオンシールド"
-		],
-		"en": [
-			"Elsion Halberd",
-			"Elcyon Seal"
-		]
+		"ja": ["エルシオンハルバード", "エルシオンシールド"],
+		"en": ["Elsion Halberd", "Elcyon Seal"]
 	},
-	"images": [
-		"/images/items/01_5351/153_6201.jpg",
-		"/images/items/01_5351/155_6201.jpg",
-		"/images/items/01_5351/156_6201.jpg",
-		"/images/items/01_5351/157_6201.jpg",
-		"/images/items/01_5351/158_6201.jpg",
-		"/images/items/01_5351/159_6201.jpg",
-		"/images/items/01_5351/189_6201.jpg",
-		"/images/items/01_5351/190_6201.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6201.jpg",
+				"path": "/images/items/01_5351/153_6201.jpg",
+				"hash": "ed7a7a4cd1910af69046bd63f50e62e0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6201.jpg",
+				"path": "/images/items/01_5351/155_6201.jpg",
+				"hash": "fea058b08172a28db17aaa22f717d42c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6201.jpg",
+				"path": "/images/items/01_5351/156_6201.jpg",
+				"hash": "d5e1726e96ec3c644fb3968c167e6fc5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6201.jpg",
+				"path": "/images/items/01_5351/157_6201.jpg",
+				"hash": "55f75ea0c9327630df3e9630e4dba2dc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6201.jpg",
+				"path": "/images/items/01_5351/158_6201.jpg",
+				"hash": "bb20219f2b2f9b6e01df396871a57cd4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6201.jpg",
+				"path": "/images/items/01_5351/159_6201.jpg",
+				"hash": "bc19f24fbfeb638d2bcae7c51d121cc2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6201.jpg",
+				"path": "/images/items/01_5351/189_6201.jpg",
+				"hash": "a43567123fac3fb0baa59bca2bef19c2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6201.jpg",
+				"path": "/images/items/01_5351/190_6201.jpg",
+				"hash": "13c99f6502eba9503343b790d80a5c2f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5351/",
-	"brandIds": [
-		"pb_charapla"
-	],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210041",
-		"01_5305"
-	],
+	"brandIds": ["pb_charapla"],
+	"seriesIds": ["lbx"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000215196", "item-1000215197", "item-1000210041", "01_5305"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

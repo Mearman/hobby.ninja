@@ -33,25 +33,31 @@
 			"• Can be combined with 1/100 MS Vernier (sold separately)!"
 		]
 	},
-	"images": [
-		"/images/items/01_3582/153_4537.jpg",
-		"/images/items/01_3582/155_4537.jpg",
-		"/images/items/01_3582/156_4537.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4537.jpg",
+				"path": "/images/items/01_3582/153_4537.jpg",
+				"hash": "9c72e2b7eb218468d8f4048a964a2865"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4537.jpg",
+				"path": "/images/items/01_3582/155_4537.jpg",
+				"hash": "60b7cd2ed0fb937cff2dbd55bcad667b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4537.jpg",
+				"path": "/images/items/01_3582/156_4537.jpg",
+				"hash": "57d04e2f202e53d31bbfc1c009b1ab36"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3582/",
-	"brandIds": [
-		"parts"
-	],
+	"brandIds": ["parts"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3563",
-		"01_3564",
-		"01_636",
-		"01_637"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3563", "01_3564", "01_636", "01_637"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

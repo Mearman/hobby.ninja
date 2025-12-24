@@ -41,29 +41,41 @@
 			"• Comes with a movable stabilizer shaped like a bird's feathers!"
 		]
 	},
-	"images": [
-		"/images/items/01_3489/01_3489_0.jpg",
-		"/images/items/01_3489/01_3489_1.jpg",
-		"/images/items/01_3489/01_3489_2.jpg",
-		"/images/items/01_3489/01_3489_3.jpg",
-		"/images/items/01_3489/01_3489_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_3489_0.jpg",
+				"path": "/images/items/01_3489/01_3489_0.jpg",
+				"hash": "431d5ea34402746979795e9a4c3e9d7c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_3489_1.jpg",
+				"path": "/images/items/01_3489/01_3489_1.jpg",
+				"hash": "59d2e7f629e75170d8a8bcfb4ec4c34a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_3489_2.jpg",
+				"path": "/images/items/01_3489/01_3489_2.jpg",
+				"hash": "8de9935da19046198adf7622ff191acb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_3489_3.jpg",
+				"path": "/images/items/01_3489/01_3489_3.jpg",
+				"hash": "b6722b645953b48ac3a44ad0c8d9a5c6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_3489_4.jpg",
+				"path": "/images/items/01_3489/01_3489_4.jpg",
+				"hash": "415aba25259747443ae9d6bb18038a3d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3489/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

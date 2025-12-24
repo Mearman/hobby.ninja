@@ -19,28 +19,22 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"「SD ガンダムちーびー戦士 騎士ガンダムＧＰ０３Ｊｒ．」が登場！"
-		],
-		"en": [
-			"\"SD Gundam Little Warrior Knight Gundam GP03 Jr.\" is now available!"
-		]
+		"ja": ["「SD ガンダムちーびー戦士 騎士ガンダムＧＰ０３Ｊｒ．」が登場！"],
+		"en": ["\"SD Gundam Little Warrior Knight Gundam GP03 Jr.\" is now available!"]
 	},
-	"images": [
-		"/images/items/01_4140/153_5066.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5066.jpg",
+				"path": "/images/items/01_4140/153_5066.jpg",
+				"hash": "e759bf6a3c391bf5b406cc80e4008edf"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4140/",
-	"brandIds": [
-		"sdgundamseries"
-	],
+	"brandIds": ["sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
 }

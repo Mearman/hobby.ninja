@@ -35,38 +35,53 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ビームサーベル×１",
-			"ビームライフル×１",
-			"シールド×１",
-			"シール×１"
-		],
-		"en": [
-			"Beam saber x1",
-			"Beam rifle x1",
-			"Seal de x1",
-			"Seal×1"
-		]
+		"ja": ["ビームサーベル×１", "ビームライフル×１", "シールド×１", "シール×１"],
+		"en": ["Beam saber x1", "Beam rifle x1", "Seal de x1", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_4260/1000180057_1.jpg",
-		"/images/items/01_4260/1000180057_2.jpg",
-		"/images/items/01_4260/1000180057_3.jpg",
-		"/images/items/01_4260/1000180057_4.jpg",
-		"/images/items/01_4260/1000180057_5.jpg",
-		"/images/items/01_4260/1000180057_6.jpg",
-		"/images/items/01_4260/1000180057_7.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180057_1.jpg",
+				"path": "/images/items/01_4260/1000180057_1.jpg",
+				"hash": "ec566e26f0882fa9edf7321a90be644a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180057_2.jpg",
+				"path": "/images/items/01_4260/1000180057_2.jpg",
+				"hash": "10b77084ef3289ea8e03a9a0d3a8ac86"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180057_3.jpg",
+				"path": "/images/items/01_4260/1000180057_3.jpg",
+				"hash": "183a270c565b9cb8b4878a35f07dd6c6"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180057_4.jpg",
+				"path": "/images/items/01_4260/1000180057_4.jpg",
+				"hash": "fbd083209c78fb2894db3764362b32c0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180057_5.jpg",
+				"path": "/images/items/01_4260/1000180057_5.jpg",
+				"hash": "b3b84232d078649fcdb7a57ac0b55b4d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180057_6.jpg",
+				"path": "/images/items/01_4260/1000180057_6.jpg",
+				"hash": "dbf4abb3fd51d9006151db3fa2b8e00c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180057_7.jpg",
+				"path": "/images/items/01_4260/1000180057_7.jpg",
+				"hash": "e346da0cfd8d8661d4e09378781c5adc"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4260/",
-	"brandIds": [
-		"SDEX"
-	],
-	"seriesIds": [
-		"g-witch"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["SDEX"],
+	"seriesIds": ["g-witch"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": [],
 	"manual": {
 		"id": "1052",

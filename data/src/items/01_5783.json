@@ -31,27 +31,31 @@
 			"• Dods Buster can be replaced with left hand parts."
 		]
 	},
-	"images": [
-		"/images/items/01_5783/153_846.jpg",
-		"/images/items/01_5783/155_846.jpg",
-		"/images/items/01_5783/156_846.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_846.jpg",
+				"path": "/images/items/01_5783/153_846.jpg",
+				"hash": "eef6aa23c4eed54dfdc4fc5e9973ce0e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_846.jpg",
+				"path": "/images/items/01_5783/155_846.jpg",
+				"hash": "29ab6b966c62256f9edab21cba98c4f2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_846.jpg",
+				"path": "/images/items/01_5783/156_846.jpg",
+				"hash": "156ff2be2cffcb3e9aaacaa99b59f2a7"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5783/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "6",
 		"url": "https://manual.bandai-hobby.net/menus/detail/6/"

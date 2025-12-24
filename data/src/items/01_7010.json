@@ -34,30 +34,32 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"シール×1"
-		],
-		"en": [
-			"Seal×1"
-		]
+		"ja": ["シール×1"],
+		"en": ["Seal×1"]
 	},
-	"images": [
-		"/images/items/01_7010/01_7010_0.jpg",
-		"/images/items/01_7010/01_7010_1.jpg",
-		"/images/items/01_7010/01_7010_2.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_7010_0.jpg",
+				"path": "/images/items/01_7010/01_7010_0.jpg",
+				"hash": "e9f567f818776b904c98aa94646591df"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7010_1.jpg",
+				"path": "/images/items/01_7010/01_7010_1.jpg",
+				"hash": "a45db51a3e25488d4a1558b971b40ab3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7010_2.jpg",
+				"path": "/images/items/01_7010/01_7010_2.jpg",
+				"hash": "45e696734b358106396cae9ab9953f6a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_7010/",
 	"brandIds": [],
-	"seriesIds": [
-		"pokemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7038",
-		"01_7015",
-		"01_6895",
-		"01_6897"
-	]
+	"seriesIds": ["pokemon"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7038", "01_7015", "01_6895", "01_6897"]
 }

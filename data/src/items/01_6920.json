@@ -34,28 +34,46 @@
 			"*There may be variations in plated parts due to the painting process. Thank you for your understanding."
 		]
 	},
-	"images": [
-		"/images/items/01_6920/01_6920_0.jpg",
-		"/images/items/01_6920/01_6920_1.jpg",
-		"/images/items/01_6920/01_6920_2.jpg",
-		"/images/items/01_6920/01_6920_3.jpg",
-		"/images/items/01_6920/01_6920_4.jpg",
-		"/images/items/01_6920/01_6920_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6920_0.jpg",
+				"path": "/images/items/01_6920/01_6920_0.jpg",
+				"hash": "54954369056b0603d620215227fa0f07"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6920_1.jpg",
+				"path": "/images/items/01_6920/01_6920_1.jpg",
+				"hash": "3496780988d7df2449966f1ca951a36f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6920_2.jpg",
+				"path": "/images/items/01_6920/01_6920_2.jpg",
+				"hash": "d147cd32bf7f10ee1fb0a9523a7b81dc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6920_3.jpg",
+				"path": "/images/items/01_6920/01_6920_3.jpg",
+				"hash": "46d59d5fe816989dce1a11cab62a6238"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6920_4.jpg",
+				"path": "/images/items/01_6920/01_6920_4.jpg",
+				"hash": "fb2d0dcb0c300c5b0a9139abd3ea8ab8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6920_5.jpg",
+				"path": "/images/items/01_6920/01_6920_5.jpg",
+				"hash": "9e0497c539db379bc2793a572f7935e0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6920/",
 	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6854",
-		"01_6688",
-		"01_5992",
-		"01_5473"
-	],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_6854", "01_6688", "01_5992", "01_5473"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

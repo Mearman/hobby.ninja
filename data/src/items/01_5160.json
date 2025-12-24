@@ -36,40 +36,44 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ビームライフル",
-			"ビームサーベル",
-			"シールド"
-		],
-		"en": [
-			"beam rifle",
-			"beam saber",
-			"Seal de"
-		]
+		"ja": ["ビームライフル", "ビームサーベル", "シールド"],
+		"en": ["beam rifle", "beam saber", "Seal de"]
 	},
-	"images": [
-		"/images/items/01_5160/01_5160_2.jpg",
-		"/images/items/01_5160/01_5160_3.jpg",
-		"/images/items/01_5160/153_6018.jpg",
-		"/images/items/01_5160/155_6018.jpg",
-		"/images/items/01_5160/158_6018.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5160_2.jpg",
+				"path": "/images/items/01_5160/01_5160_2.jpg",
+				"hash": "00204375582aae18149d5628348b0c79"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5160_3.jpg",
+				"path": "/images/items/01_5160/01_5160_3.jpg",
+				"hash": "a22106d0891e11a1ec5a0a1c4f25fa3a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_6018.jpg",
+				"path": "/images/items/01_5160/153_6018.jpg",
+				"hash": "0d1992a08272380f24fd19739d847990"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6018.jpg",
+				"path": "/images/items/01_5160/155_6018.jpg",
+				"hash": "fac2d857bce558503c5ac1fa92df7e81"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6018.jpg",
+				"path": "/images/items/01_5160/158_6018.jpg",
+				"hash": "c07c3f4dba604944a0983947795659d7"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5160/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000136194",
-		"item-1000114754",
-		"item-1000132011",
-		"01_3726"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000136194", "item-1000114754", "item-1000132011", "01_3726"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

@@ -20,32 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/60",
 	"description": {
-		"ja": [
-			"「1/60 ガンダムエクシア クリアカラーバージョン」登場！"
-		],
-		"en": [
-			"\"1/60 Gundam Exia Clear Color Version\" now available!"
-		]
+		"ja": ["「1/60 ガンダムエクシア クリアカラーバージョン」登場！"],
+		"en": ["\"1/60 Gundam Exia Clear Color Version\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4848/153_5729.jpg",
-		"/images/items/01_4848/155_5729.jpg",
-		"/images/items/01_4848/156_5729.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5729.jpg",
+				"path": "/images/items/01_4848/153_5729.jpg",
+				"hash": "cb2df430c5308d87b2c4c1a64826d128"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5729.jpg",
+				"path": "/images/items/01_4848/155_5729.jpg",
+				"hash": "a855a0b7b4d0b7065eedc29d92f74cd8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5729.jpg",
+				"path": "/images/items/01_4848/156_5729.jpg",
+				"hash": "aea29e72812a13c48a3cb43a5cb2af20"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4848/",
 	"brandIds": [],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216602",
-		"01_5526",
-		"item-1000161849",
-		"01_5102"
-	],
+	"seriesIds": ["g-00"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216602", "01_5526", "item-1000161849", "01_5102"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

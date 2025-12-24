@@ -103,44 +103,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"オーラ・ソード",
-			"シールド"
-		],
-		"en": [
-			"aura sword",
-			"Seal de"
-		]
+		"ja": ["オーラ・ソード", "シールド"],
+		"en": ["aura sword", "Seal de"]
 	},
-	"images": [
-		"/images/items/01_5350/153_6200.jpg",
-		"/images/items/01_5350/155_6200.jpg",
-		"/images/items/01_5350/156_6200.jpg",
-		"/images/items/01_5350/157_6200.jpg",
-		"/images/items/01_5350/158_6200.jpg",
-		"/images/items/01_5350/159_6200.jpg",
-		"/images/items/01_5350/189_6200.jpg",
-		"/images/items/01_5350/190_6200.jpg",
-		"/images/items/01_5350/191_6200.jpg",
-		"/images/items/01_5350/192_6200.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6200.jpg",
+				"path": "/images/items/01_5350/153_6200.jpg",
+				"hash": "3aa21c37618716e5f9c3dc3b69b7aa6f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6200.jpg",
+				"path": "/images/items/01_5350/155_6200.jpg",
+				"hash": "e38928c39195b9e2eb9849fd407cf289"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6200.jpg",
+				"path": "/images/items/01_5350/156_6200.jpg",
+				"hash": "72136332f480ac4be1ff8d01f511e687"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6200.jpg",
+				"path": "/images/items/01_5350/157_6200.jpg",
+				"hash": "289ea4c53700de806dfc6645931ad124"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6200.jpg",
+				"path": "/images/items/01_5350/158_6200.jpg",
+				"hash": "6ca52961c23a473abd15e5d767cf2f39"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6200.jpg",
+				"path": "/images/items/01_5350/159_6200.jpg",
+				"hash": "3041860a09e8a1a575c8546d681effa9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6200.jpg",
+				"path": "/images/items/01_5350/189_6200.jpg",
+				"hash": "fa543d8298faf51cdd770a796f9150d7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6200.jpg",
+				"path": "/images/items/01_5350/190_6200.jpg",
+				"hash": "ced7b511e0ad45f3a58c562719fcb536"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_6200.jpg",
+				"path": "/images/items/01_5350/191_6200.jpg",
+				"hash": "acec47d77684abd1dee6efafd71da8f9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_6200.jpg",
+				"path": "/images/items/01_5350/192_6200.jpg",
+				"hash": "19523f177209a601e3f1e5d9dc3d1294"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5350/",
-	"brandIds": [
-		"pb_charapla",
-		"hg"
-	],
-	"seriesIds": [
-		"dunbine"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000203131",
-		"item-1000217021",
-		"item-1000199895",
-		"item-1000194225"
-	],
+	"brandIds": ["pb_charapla", "hg"],
+	"seriesIds": ["dunbine"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000203131", "item-1000217021", "item-1000199895", "item-1000194225"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

@@ -26,25 +26,29 @@
 			"SD series plastic model of Strike Freedom Gundam, the main character appearing in \"Mobile Suit Gundam SEED DESTINY\". Reproduce the deployment of the railgun!"
 		]
 	},
-	"images": [
-		"/images/items/01_5402/153_624.jpg",
-		"/images/items/01_5402/155_624.jpg",
-		"/images/items/01_5402/156_624.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_624.jpg",
+				"path": "/images/items/01_5402/153_624.jpg",
+				"hash": "75719962a44882d6c149ad40a5ec8e3e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_624.jpg",
+				"path": "/images/items/01_5402/155_624.jpg",
+				"hash": "195ca5843ebe5df842bb17ab69e0061b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_624.jpg",
+				"path": "/images/items/01_5402/156_624.jpg",
+				"hash": "30ade170e0274cdee236fa4c1184fa28"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5402/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5378",
-		"01_5365",
-		"01_4648",
-		"01_1662"
-	]
+	"brandIds": ["bb"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5378", "01_5365", "01_4648", "01_1662"]
 }

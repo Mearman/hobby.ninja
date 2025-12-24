@@ -18,29 +18,27 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"SD ガンダム Gジェネレーション34 ウイングガンダムが登場！"
-		],
-		"en": [
-			"SD Gundam G Generation 34 Wing Gundam is here!"
-		]
+		"ja": ["SD ガンダム Gジェネレーション34 ウイングガンダムが登場！"],
+		"en": ["SD Gundam G Generation 34 Wing Gundam is here!"]
 	},
-	"images": [
-		"/images/items/01_4687/153_5576.jpg",
-		"/images/items/01_4687/155_5576.JPG"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5576.jpg",
+				"path": "/images/items/01_4687/153_5576.jpg",
+				"hash": "643d85164ab06a5f1e02e3f30f63b78b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5576.JPG",
+				"path": "/images/items/01_4687/155_5576.JPG",
+				"hash": "8f95456f6a6496b14f95135e3101d8fa"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4687/",
-	"brandIds": [
-		"sdgundamseries"
-	],
+	"brandIds": ["sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
 }

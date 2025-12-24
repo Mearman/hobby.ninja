@@ -41,32 +41,47 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"剣×1",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Sword x1",
-			"Foil Seal×1"
-		]
+		"ja": ["剣×1", "ホイルシール×1"],
+		"en": ["Sword x1", "Foil Seal×1"]
 	},
-	"images": [
-		"/images/items/01_3756/1000174416_1.jpg",
-		"/images/items/01_3756/1000174416_2.jpg",
-		"/images/items/01_3756/1000174416_3.jpg",
-		"/images/items/01_3756/1000174416_4.jpg",
-		"/images/items/01_3756/1000174416_5.jpg",
-		"/images/items/01_3756/1000174416_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000174416_1.jpg",
+				"path": "/images/items/01_3756/1000174416_1.jpg",
+				"hash": "24daf142b34ea6578fa9da072fba6e10"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000174416_2.jpg",
+				"path": "/images/items/01_3756/1000174416_2.jpg",
+				"hash": "ecd49ff678270198c3c2ace81a7efc80"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000174416_3.jpg",
+				"path": "/images/items/01_3756/1000174416_3.jpg",
+				"hash": "5030b357619e3ad277a4c29fb74bb715"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000174416_4.jpg",
+				"path": "/images/items/01_3756/1000174416_4.jpg",
+				"hash": "14a109bfb12118606af2b1ee027012ae"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000174416_5.jpg",
+				"path": "/images/items/01_3756/1000174416_5.jpg",
+				"hash": "de76d9863795134a0d92f68752eb4dd3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000174416_6.jpg",
+				"path": "/images/items/01_3756/1000174416_6.jpg",
+				"hash": "a70352d7e4fb7c8d56cc5244ea80a9d2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3756/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["sdgundamseries"],
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": []
 }

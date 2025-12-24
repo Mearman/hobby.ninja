@@ -33,23 +33,29 @@
 			"• GN bazooka is included as a weapon."
 		]
 	},
-	"images": [
-		"/images/items/01_5652/153_719.jpg",
-		"/images/items/01_5652/155_719.jpg",
-		"/images/items/01_5652/156_719.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_719.jpg",
+				"path": "/images/items/01_5652/153_719.jpg",
+				"hash": "512cf1848ff7ac2e8f8f9fbc381700ed"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_719.jpg",
+				"path": "/images/items/01_5652/155_719.jpg",
+				"hash": "babbd804806cb23f16bad3b1d0895cb1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_719.jpg",
+				"path": "/images/items/01_5652/156_719.jpg",
+				"hash": "8bc4d957d37972dafe7a08cfe39705f5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5652/",
 	"brandIds": [],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216602",
-		"01_5526",
-		"item-1000161849",
-		"01_5102"
-	]
+	"seriesIds": ["g-00"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216602", "01_5526", "item-1000161849", "01_5102"]
 }

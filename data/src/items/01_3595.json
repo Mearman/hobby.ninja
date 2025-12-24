@@ -27,28 +27,36 @@
 			"• Adel, who appeared in \"Mobile Suit Gundam AGE Asemu Edition\", is now available in a color exclusive to the Diva squad. Molded product x 5, Marking Seal x 1, Foil Seal x 1, Assembly Manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_3595/153_4550.jpg",
-		"/images/items/01_3595/155_4550.jpg",
-		"/images/items/01_3595/156_4550.jpg",
-		"/images/items/01_3595/157_4550.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4550.jpg",
+				"path": "/images/items/01_3595/153_4550.jpg",
+				"hash": "980b4adf2e0092a4ae448a763f3c54db"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4550.jpg",
+				"path": "/images/items/01_3595/155_4550.jpg",
+				"hash": "f8014d9d893859be5aa747aafaa46aa2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4550.jpg",
+				"path": "/images/items/01_3595/156_4550.jpg",
+				"hash": "d8b1093d62a4c13915979959c978df06"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4550.jpg",
+				"path": "/images/items/01_3595/157_4550.jpg",
+				"hash": "68e18a5256e124b06a3c48b10e847e0d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3595/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "356",
 		"url": "https://manual.bandai-hobby.net/menus/detail/356/"

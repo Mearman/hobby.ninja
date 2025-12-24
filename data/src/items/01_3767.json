@@ -32,24 +32,39 @@
 			"• The outside of the Golden Chest is decorated with a precise mold inspired by the movie, creating a worldview."
 		]
 	},
-	"images": [
-		"/images/items/01_3767/153_4718.jpg",
-		"/images/items/01_3767/155_4718.jpg",
-		"/images/items/01_3767/156_4718.jpg",
-		"/images/items/01_3767/157_4718.jpg",
-		"/images/items/01_3767/158_4718.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4718.jpg",
+				"path": "/images/items/01_3767/153_4718.jpg",
+				"hash": "ca0acbf7d87251f7a9b7ce2612dbea0e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4718.jpg",
+				"path": "/images/items/01_3767/155_4718.jpg",
+				"hash": "b80333ca38a8a43b31375707959ce308"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4718.jpg",
+				"path": "/images/items/01_3767/156_4718.jpg",
+				"hash": "11df1c5aa05f059063ef05834bd4eb27"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4718.jpg",
+				"path": "/images/items/01_3767/157_4718.jpg",
+				"hash": "13ee07eb2f4a2dedca8d4a878e14fc6d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4718.jpg",
+				"path": "/images/items/01_3767/158_4718.jpg",
+				"hash": "dc0b8e5e40b5470d922ac5d512a469c9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3767/",
-	"brandIds": [
-		"ultimagear"
-	],
-	"seriesIds": [
-		"yugioh"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_3520"
-	]
+	"brandIds": ["ultimagear"],
+	"seriesIds": ["yugioh"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_3520"]
 }

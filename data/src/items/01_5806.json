@@ -31,21 +31,29 @@
 			"• Either 8500 series or 8000 series can be selected. All have front red bands, no side bands, and air-conditioned cars."
 		]
 	},
-	"images": [
-		"/images/items/01_5806/153_879.jpg",
-		"/images/items/01_5806/155_879.jpg",
-		"/images/items/01_5806/156_879.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_879.jpg",
+				"path": "/images/items/01_5806/153_879.jpg",
+				"hash": "4c348952d21aa97d64cdb5d7e5db7c57"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_879.jpg",
+				"path": "/images/items/01_5806/155_879.jpg",
+				"hash": "03f09c655b328af283b9992723bb9972"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_879.jpg",
+				"path": "/images/items/01_5806/156_879.jpg",
+				"hash": "adc6ea43710a159693c8d5b4ff83edc9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5806/",
-	"brandIds": [
-		"train"
-	],
+	"brandIds": ["train"],
 	"seriesIds": [],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"relatedItemIds": ["01_1276", "01_1277", "01_1278", "01_1280"]
 }

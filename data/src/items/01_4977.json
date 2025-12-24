@@ -37,29 +37,41 @@
 			"• Comes with a variety of weapons including Giant Buzz, Raketen Buzz, and Sturm Faust."
 		]
 	},
-	"images": [
-		"/images/items/01_4977/153_5848.jpg",
-		"/images/items/01_4977/155_5848.jpg",
-		"/images/items/01_4977/156_5848.jpg",
-		"/images/items/01_4977/157_5848.jpg",
-		"/images/items/01_4977/158_5848.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5848.jpg",
+				"path": "/images/items/01_4977/153_5848.jpg",
+				"hash": "ea2e94a22caca2604487c8ed36308514"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5848.jpg",
+				"path": "/images/items/01_4977/155_5848.jpg",
+				"hash": "b26153b67a8c6fe5ecbc9a0df046821a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5848.jpg",
+				"path": "/images/items/01_4977/156_5848.jpg",
+				"hash": "c2c5dc51cf97a61d66db2667abb0f4bd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5848.jpg",
+				"path": "/images/items/01_4977/157_5848.jpg",
+				"hash": "288c353b565b57c7544cf7cfa11e9ae9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5848.jpg",
+				"path": "/images/items/01_4977/158_5848.jpg",
+				"hash": "f7914531bb936a263b3a119b65cde780"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4977/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_3772",
-		"01_3754",
-		"01_4066"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5509", "01_3772", "01_3754", "01_4066"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

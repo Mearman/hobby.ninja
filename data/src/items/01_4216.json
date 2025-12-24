@@ -110,35 +110,66 @@
 			"leg thread"
 		]
 	},
-	"images": [
-		"/images/items/01_4216/153_5135.jpg",
-		"/images/items/01_4216/155_5135.jpg",
-		"/images/items/01_4216/156_5135.jpg",
-		"/images/items/01_4216/157_5135.jpg",
-		"/images/items/01_4216/158_5135.jpg",
-		"/images/items/01_4216/159_5135.jpg",
-		"/images/items/01_4216/189_5135.jpg",
-		"/images/items/01_4216/190_5135.jpg",
-		"/images/items/01_4216/191_5135.jpg",
-		"/images/items/01_4216/192_5135.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5135.jpg",
+				"path": "/images/items/01_4216/153_5135.jpg",
+				"hash": "9f1ac09652622c97ac20e622da007693"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5135.jpg",
+				"path": "/images/items/01_4216/155_5135.jpg",
+				"hash": "bb4e7168e1a7c358f2bf43e904fa312d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5135.jpg",
+				"path": "/images/items/01_4216/156_5135.jpg",
+				"hash": "ae8ea9fdeda625fb3f56fec028e3991d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5135.jpg",
+				"path": "/images/items/01_4216/157_5135.jpg",
+				"hash": "66cf8f7e9bb5ed3e46c5cc4d211f277f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5135.jpg",
+				"path": "/images/items/01_4216/158_5135.jpg",
+				"hash": "1002eac558d570bb51ae5c951183c006"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5135.jpg",
+				"path": "/images/items/01_4216/159_5135.jpg",
+				"hash": "d3ed2e8ee2436d3b3fec3b75fc1ef7bc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5135.jpg",
+				"path": "/images/items/01_4216/189_5135.jpg",
+				"hash": "c0b4bbef49f827c6fbebc3d7e17576ea"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5135.jpg",
+				"path": "/images/items/01_4216/190_5135.jpg",
+				"hash": "044eda6deabf331ad6a266f03ffcbd92"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5135.jpg",
+				"path": "/images/items/01_4216/191_5135.jpg",
+				"hash": "752243adcf5226a1fa77677e1a55c206"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5135.jpg",
+				"path": "/images/items/01_4216/192_5135.jpg",
+				"hash": "8415d22aedc9dccc79cd57d674fec515"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4216/",
-	"brandIds": [
-		"pb_charapla",
-		"hg"
-	],
-	"seriesIds": [
-		"kyoukaisenki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5196",
-		"01_5183",
-		"01_5170",
-		"01_5171"
-	],
+	"brandIds": ["pb_charapla", "hg"],
+	"seriesIds": ["kyoukaisenki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

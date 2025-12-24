@@ -20,29 +20,27 @@
 	"targetAge": 15,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"「1/144 MS-14J リゲルグ」登場！"
-		],
-		"en": [
-			"\"1/144 MS-14J Rigelgu\" now available!"
-		]
+		"ja": ["「1/144 MS-14J リゲルグ」登場！"],
+		"en": ["\"1/144 MS-14J Rigelgu\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4436/153_5342.jpg",
-		"/images/items/01_4436/155_5342.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5342.jpg",
+				"path": "/images/items/01_4436/153_5342.jpg",
+				"hash": "d871b358a48d30f56f82aa5674a10fbb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5342.jpg",
+				"path": "/images/items/01_4436/155_5342.jpg",
+				"hash": "5a57bfca3c01fd490eccdfb41f317231"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4436/",
 	"brandIds": [],
-	"seriesIds": [
-		"gundam-zz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5963",
-		"01_5454",
-		"01_4985",
-		"01_4971"
-	]
+	"seriesIds": ["gundam-zz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5963", "01_5454", "01_4985", "01_4971"]
 }

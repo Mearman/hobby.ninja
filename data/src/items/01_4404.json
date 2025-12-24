@@ -38,45 +38,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"大型専用武器×１",
-			"開き手(左)×１",
-			"シール×２種"
-		],
-		"en": [
-			"Large special weapon x1",
-			"Opening hand (left) x 1",
-			"Seal x 2 types"
-		]
+		"ja": ["大型専用武器×１", "開き手(左)×１", "シール×２種"],
+		"en": ["Large special weapon x1", "Opening hand (left) x 1", "Seal x 2 types"]
 	},
-	"images": [
-		"/images/items/01_4404/1000191420_1.jpg",
-		"/images/items/01_4404/1000191420_10.jpg",
-		"/images/items/01_4404/1000191420_2.jpg",
-		"/images/items/01_4404/1000191420_3.jpg",
-		"/images/items/01_4404/1000191420_4.jpg",
-		"/images/items/01_4404/1000191420_5.jpg",
-		"/images/items/01_4404/1000191420_6.jpg",
-		"/images/items/01_4404/1000191420_7.jpg",
-		"/images/items/01_4404/1000191420_8.jpg",
-		"/images/items/01_4404/1000191420_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191420_1.jpg",
+				"path": "/images/items/01_4404/1000191420_1.jpg",
+				"hash": "507c7c4dd372a41cb4077a46d1066d89"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191420_10.jpg",
+				"path": "/images/items/01_4404/1000191420_10.jpg",
+				"hash": "65f6acb17ba1251779bad8f57a116111"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191420_2.jpg",
+				"path": "/images/items/01_4404/1000191420_2.jpg",
+				"hash": "dfde5a1789042fd655866137ba07b3fa"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191420_3.jpg",
+				"path": "/images/items/01_4404/1000191420_3.jpg",
+				"hash": "f4f6cb74595aa45ab73372fa03b522ed"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191420_4.jpg",
+				"path": "/images/items/01_4404/1000191420_4.jpg",
+				"hash": "285ad313b4d72c439c8fc46a64e98cad"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191420_5.jpg",
+				"path": "/images/items/01_4404/1000191420_5.jpg",
+				"hash": "c588781671e4ba95676c47fd20f97d72"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191420_6.jpg",
+				"path": "/images/items/01_4404/1000191420_6.jpg",
+				"hash": "0c075865590de21897686c07407e4a7f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191420_7.jpg",
+				"path": "/images/items/01_4404/1000191420_7.jpg",
+				"hash": "d3f94b79120694146f9efc6a9d54506c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191420_8.jpg",
+				"path": "/images/items/01_4404/1000191420_8.jpg",
+				"hash": "2578c3cb2a61bf472786b9f7e9391fb5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191420_9.jpg",
+				"path": "/images/items/01_4404/1000191420_9.jpg",
+				"hash": "821a28a2ce3586e152e68c0aeaaaea43"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4404/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"g-witch"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216474",
-		"item-1000211616",
-		"01_5422",
-		"item-1000203899"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["g-witch"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203899"],
 	"manual": {
 		"id": "1091",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1091/"

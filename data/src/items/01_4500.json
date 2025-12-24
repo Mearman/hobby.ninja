@@ -25,21 +25,24 @@
 			"Introducing the “Action Base” decorative stand compatible with most Gunpla! The pillar supporting the Kit can be expanded/contracted, and the direction and angle can be adjusted. Five types of joint parts for attaching the kit are included: 8mm width, 9mm width, and 10mm width for the crotch, as well as one for insertion and one for fixing with screws. The pedestals can be connected, making them ideal for displaying them side by side."
 		]
 	},
-	"images": [
-		"/images/items/01_4500/1000092556_1.jpg",
-		"/images/items/01_4500/1000092556_2.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092556_1.jpg",
+				"path": "/images/items/01_4500/1000092556_1.jpg",
+				"hash": "e69a8eedfa6b9ed5ab9a87773f0a19b6"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092556_2.jpg",
+				"path": "/images/items/01_4500/1000092556_2.jpg",
+				"hash": "2e2b62a960f2cc85ad6476d3b7855e47"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4500/",
-	"brandIds": [
-		"actionbase"
-	],
+	"brandIds": ["actionbase"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5934",
-		"01_5256",
-		"01_5258"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5934", "01_5256", "01_5258"]
 }

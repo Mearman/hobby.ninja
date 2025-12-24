@@ -58,30 +58,54 @@
 			"Realistic decal x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_3529/153_4480.jpg",
-		"/images/items/01_3529/155_4480.jpg",
-		"/images/items/01_3529/156_4480.jpg",
-		"/images/items/01_3529/157_4480.jpg",
-		"/images/items/01_3529/158_4480.jpg",
-		"/images/items/01_3529/159_4480.jpg",
-		"/images/items/01_3529/189_4480.jpg",
-		"/images/items/01_3529/190_4480.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4480.jpg",
+				"path": "/images/items/01_3529/153_4480.jpg",
+				"hash": "20a3a53e17782b19884501a074609547"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4480.jpg",
+				"path": "/images/items/01_3529/155_4480.jpg",
+				"hash": "d0d11693bbee434c3d2a6a6a0d9cf194"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4480.jpg",
+				"path": "/images/items/01_3529/156_4480.jpg",
+				"hash": "b5f5e8834757728fcc2c2a3498cf47a7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4480.jpg",
+				"path": "/images/items/01_3529/157_4480.jpg",
+				"hash": "50b11710f82dc73498e8f2855f427639"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4480.jpg",
+				"path": "/images/items/01_3529/158_4480.jpg",
+				"hash": "796aaa8e56d4d4e0f489278e5ae631ac"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4480.jpg",
+				"path": "/images/items/01_3529/159_4480.jpg",
+				"hash": "bf596acd4e85dfd135fbdeb86f323570"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4480.jpg",
+				"path": "/images/items/01_3529/189_4480.jpg",
+				"hash": "407e56b4b82dc3ee816e03a3fd6ca126"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4480.jpg",
+				"path": "/images/items/01_3529/190_4480.jpg",
+				"hash": "ba73d067da42b03e25c8430cd7d2cc63"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3529/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"rider"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5451",
-		"item-1000215369",
-		"01_5276",
-		"01_5175"
-	]
+	"brandIds": ["figurerise-standard"],
+	"seriesIds": ["rider"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5451", "item-1000215369", "01_5276", "01_5175"]
 }

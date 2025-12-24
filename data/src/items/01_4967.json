@@ -20,32 +20,24 @@
 	"targetAge": 15,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"RG 1/144 RX-78-2 ガンダム カラークリア登場！"
-		],
-		"en": [
-			"RG 1/144 RX-78-2 Gundam color clear now available!"
-		]
+		"ja": ["RG 1/144 RX-78-2 ガンダム カラークリア登場！"],
+		"en": ["RG 1/144 RX-78-2 Gundam color clear now available!"]
 	},
-	"images": [
-		"/images/items/01_4967/153_5838.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5838.jpg",
+				"path": "/images/items/01_4967/153_5838.jpg",
+				"hash": "4ef353eb3c0a696c17459b7917c2292a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4967/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_151",
-		"01_4775",
-		"01_2224",
-		"01_2230"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_151", "01_4775", "01_2224", "01_2230"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

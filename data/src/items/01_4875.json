@@ -20,33 +20,29 @@
 	"targetAge": 15,
 	"scale": "1/60",
 	"description": {
-		"ja": [
-			"「PG 1/60 MS-06F「ザクII」+ウエポンズ アニメーションカラーバージョン」登場！"
-		],
-		"en": [
-			"\"PG 1/60 MS-06F \" Zaku II \" + Weapons Animation Color Version\" now available!"
-		]
+		"ja": ["「PG 1/60 MS-06F「ザクII」+ウエポンズ アニメーションカラーバージョン」登場！"],
+		"en": ["\"PG 1/60 MS-06F \" Zaku II \" + Weapons Animation Color Version\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4875/153_5754.jpg",
-		"/images/items/01_4875/155_5754.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5754.jpg",
+				"path": "/images/items/01_4875/153_5754.jpg",
+				"hash": "897f3d9f248acdfef1d687e4af356b4b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5754.jpg",
+				"path": "/images/items/01_4875/155_5754.jpg",
+				"hash": "b1ee8e8c513cb021151678932b86502e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4875/",
-	"brandIds": [
-		"pg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3373",
-		"01_3328",
-		"01_2829",
-		"01_1902"
-	],
+	"brandIds": ["pg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3373", "01_3328", "01_2829", "01_1902"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

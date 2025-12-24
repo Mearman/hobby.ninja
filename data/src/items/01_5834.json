@@ -34,25 +34,29 @@
 			"• Display pedestal included."
 		]
 	},
-	"images": [
-		"/images/items/01_5834/153_904.jpg",
-		"/images/items/01_5834/155_904.jpg",
-		"/images/items/01_5834/156_904.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_904.jpg",
+				"path": "/images/items/01_5834/153_904.jpg",
+				"hash": "1e28d52fbbbccff5ad8b96bee58637ca"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_904.jpg",
+				"path": "/images/items/01_5834/155_904.jpg",
+				"hash": "12a2434eead7c0a230009976f76f198d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_904.jpg",
+				"path": "/images/items/01_5834/156_904.jpg",
+				"hash": "db94a7873eff3e8db115a4ecd70db8d0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5834/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4975",
-		"01_4190",
-		"01_2323",
-		"01_46"
-	]
+	"brandIds": ["bb"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4975", "01_4190", "01_2323", "01_46"]
 }

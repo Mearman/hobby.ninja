@@ -26,23 +26,26 @@
 			"• Introducing an action base that allows you to express the background. • The opening is postcard size. Add your favorite photos or postcards to create an original base. • Compatible with each scale plastic model by replacing the included joint parts. Molded product x 2, screw x 2, nut x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4570/153_5469.jpg",
-		"/images/items/01_4570/155_5469.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5469.jpg",
+				"path": "/images/items/01_4570/153_5469.jpg",
+				"hash": "80669076c086ad7c3d540923e9e474d8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5469.jpg",
+				"path": "/images/items/01_4570/155_5469.jpg",
+				"hash": "6198f4219316f2525e4f1e751533f340"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4570/",
-	"brandIds": [
-		"actionbase"
-	],
+	"brandIds": ["actionbase"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5934",
-		"01_5256",
-		"01_5258"
-	],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5934", "01_5256", "01_5258"],
 	"manual": {
 		"id": "1185",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1185/"

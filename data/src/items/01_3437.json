@@ -105,35 +105,66 @@
 			"・Product specifications are current information as of 20212."
 		]
 	},
-	"images": [
-		"/images/items/01_3437/153_4390.jpg",
-		"/images/items/01_3437/155_4390.jpg",
-		"/images/items/01_3437/156_4390.jpg",
-		"/images/items/01_3437/157_4390.jpg",
-		"/images/items/01_3437/158_4390.jpg",
-		"/images/items/01_3437/159_4390.jpg",
-		"/images/items/01_3437/189_4390.jpg",
-		"/images/items/01_3437/190_4390.jpg",
-		"/images/items/01_3437/191_4390.jpg",
-		"/images/items/01_3437/192_4390.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4390.jpg",
+				"path": "/images/items/01_3437/153_4390.jpg",
+				"hash": "aa63b0f8618106f1fc590297806538a6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4390.jpg",
+				"path": "/images/items/01_3437/155_4390.jpg",
+				"hash": "ed2aa533b1543215fea0c3afe5d97793"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4390.jpg",
+				"path": "/images/items/01_3437/156_4390.jpg",
+				"hash": "47c5801c38d322f411afaa55513baa1f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4390.jpg",
+				"path": "/images/items/01_3437/157_4390.jpg",
+				"hash": "9d9674a851dceb84c9b8961f1800cf82"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4390.jpg",
+				"path": "/images/items/01_3437/158_4390.jpg",
+				"hash": "9c888d9bd2aa34a22e5e800f83b57451"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4390.jpg",
+				"path": "/images/items/01_3437/159_4390.jpg",
+				"hash": "4d6789441f3378e66ad5c5436d085b8e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4390.jpg",
+				"path": "/images/items/01_3437/189_4390.jpg",
+				"hash": "3f7834009f6e360b63cf60f3b4ed906f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4390.jpg",
+				"path": "/images/items/01_3437/190_4390.jpg",
+				"hash": "f45bff88598cb4a332a37e98d7a42c2f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4390.jpg",
+				"path": "/images/items/01_3437/191_4390.jpg",
+				"hash": "c51ee25f65e6bce4585af22c019f0c87"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4390.jpg",
+				"path": "/images/items/01_3437/192_4390.jpg",
+				"hash": "2e8097c85b6fd8f422aed5a65a11b287"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3437/",
-	"brandIds": [
-		"pb_charapla",
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"rider"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5451",
-		"item-1000215369",
-		"01_5276",
-		"01_5175"
-	],
+	"brandIds": ["pb_charapla", "figurerise-standard"],
+	"seriesIds": ["rider"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5451", "item-1000215369", "01_5276", "01_5175"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

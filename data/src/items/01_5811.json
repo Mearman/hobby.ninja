@@ -27,27 +27,31 @@
 			"• HG version of the second L equipped with Tactical Arms. • Reproduces the transformation into three forms: sword form, flight form, and gatling form. • Comes with a special pedestal. A large sword can also be displayed with one hand. • Two armor schneiders are included. Molded product x 8, foil seal x 1, Tetron seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5811/153_883.jpg",
-		"/images/items/01_5811/155_883.jpg",
-		"/images/items/01_5811/156_883.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_883.jpg",
+				"path": "/images/items/01_5811/153_883.jpg",
+				"hash": "8206a8cde48a00f52193f9a25f3e46a7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_883.jpg",
+				"path": "/images/items/01_5811/155_883.jpg",
+				"hash": "7d64e20dfeb6d45dcdfe85e3864720e4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_883.jpg",
+				"path": "/images/items/01_5811/156_883.jpg",
+				"hash": "f42147f680925fabe037ba8e99f7f0b6"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5811/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000203308", "01_5097", "01_3739", "item-1000157417"],
 	"manual": {
 		"id": "5",
 		"url": "https://manual.bandai-hobby.net/menus/detail/5/"

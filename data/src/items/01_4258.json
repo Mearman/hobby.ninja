@@ -44,48 +44,74 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ビームパルチザン×１",
-			"ビームトーチ×１",
-			"ビームライフル×１",
-			"シール×１"
-		],
-		"en": [
-			"Beam partisan x1",
-			"Beam torch x1",
-			"Beam rifle x1",
-			"Seal×1"
-		]
+		"ja": ["ビームパルチザン×１", "ビームトーチ×１", "ビームライフル×１", "シール×１"],
+		"en": ["Beam partisan x1", "Beam torch x1", "Beam rifle x1", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_4258/1000180055_1.jpg",
-		"/images/items/01_4258/1000180055_10.jpg",
-		"/images/items/01_4258/1000180055_2.jpg",
-		"/images/items/01_4258/1000180055_3.jpg",
-		"/images/items/01_4258/1000180055_4.jpg",
-		"/images/items/01_4258/1000180055_5.jpg",
-		"/images/items/01_4258/1000180055_6.jpg",
-		"/images/items/01_4258/1000180055_7.jpg",
-		"/images/items/01_4258/1000180055_8.jpg",
-		"/images/items/01_4258/1000180055_9.jpg",
-		"/images/items/01_4258/01_4258_inst_0.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180055_1.jpg",
+				"path": "/images/items/01_4258/1000180055_1.jpg",
+				"hash": "979d392cb4234790549e9883ba231717"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180055_10.jpg",
+				"path": "/images/items/01_4258/1000180055_10.jpg",
+				"hash": "ca918d66f3d1a2530ea2f10d8342f922"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180055_2.jpg",
+				"path": "/images/items/01_4258/1000180055_2.jpg",
+				"hash": "bedad545b2dca9544028682d9465aacd"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180055_3.jpg",
+				"path": "/images/items/01_4258/1000180055_3.jpg",
+				"hash": "7da0f3319cc72535dd49d846896c843a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180055_4.jpg",
+				"path": "/images/items/01_4258/1000180055_4.jpg",
+				"hash": "170168ae193a0af688df09b56525246f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180055_5.jpg",
+				"path": "/images/items/01_4258/1000180055_5.jpg",
+				"hash": "5d989251fc713dd8e73e6001188391ac"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180055_6.jpg",
+				"path": "/images/items/01_4258/1000180055_6.jpg",
+				"hash": "a29b4eb9e84040984e024ea4ad49cf2c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180055_7.jpg",
+				"path": "/images/items/01_4258/1000180055_7.jpg",
+				"hash": "81eddf84ebe7e9a3c84343956a491871"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180055_8.jpg",
+				"path": "/images/items/01_4258/1000180055_8.jpg",
+				"hash": "6e933a52c6f5dfcb3a9cb9d227252bca"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180055_9.jpg",
+				"path": "/images/items/01_4258/1000180055_9.jpg",
+				"hash": "6dd8828d2bdb6449594cd7b870ea514c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4258_inst_0.jpg",
+				"path": "/images/items/01_4258/01_4258_inst_0.jpg",
+				"hash": "0b37b98185247026b1b236fc74cadd41"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4258/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"g-witch"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216474",
-		"item-1000211616",
-		"01_5422",
-		"item-1000203899"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["g-witch"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203899"],
 	"manual": {
 		"id": "130",
 		"url": "https://manual.bandai-hobby.net/menus/detail/130/"

@@ -26,28 +26,36 @@
 			"A 1/144 Scale, HG plastic model of Unit 3 \"Gaia Gundam \" that appears in \" Mobile Suit Gundam SEED DESTINY\". By replacing some parts, it can be transformed into MA form. The face in MA form can be smoothly transformed using the polycap. The beam blades on the back open left and right and can be deployed like the main wings of an airplane. Clear parts are used for the beam blade's light emitting part and beam saber."
 		]
 	},
-	"images": [
-		"/images/items/01_4210/153_512.jpg",
-		"/images/items/01_4210/155_512.jpg",
-		"/images/items/01_4210/156_512.jpg",
-		"/images/items/01_4210/157_512.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_512.jpg",
+				"path": "/images/items/01_4210/153_512.jpg",
+				"hash": "8fa13bf37857667163ad9a5f5de8ccb9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_512.jpg",
+				"path": "/images/items/01_4210/155_512.jpg",
+				"hash": "3cd2ff9f7ae2ff70896e1da4094ae503"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_512.jpg",
+				"path": "/images/items/01_4210/156_512.jpg",
+				"hash": "1f722fadfb6ae896c6feee8db330de8d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_512.jpg",
+				"path": "/images/items/01_4210/157_512.jpg",
+				"hash": "2d61ba0204ce235d9f82f8b48f82066c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4210/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000203308", "01_5097", "01_3739", "item-1000157417"],
 	"manual": {
 		"id": "161",
 		"url": "https://manual.bandai-hobby.net/menus/detail/161/"

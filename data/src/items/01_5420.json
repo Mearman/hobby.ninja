@@ -18,21 +18,21 @@
 	},
 	"targetAge": 15,
 	"scale": "1/72",
-	"images": [
-		"/images/items/01_5420/153_6266.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6266.jpg",
+				"path": "/images/items/01_5420/153_6266.jpg",
+				"hash": "15ce38245329ff4aecba4d6ff2a05e14"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5420/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5990",
-		"01_5989",
-		"01_5972",
-		"01_5973"
-	],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

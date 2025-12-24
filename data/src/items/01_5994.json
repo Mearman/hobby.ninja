@@ -47,28 +47,36 @@
 			"Futuristic attire becomes a symbol of a cyclical future."
 		]
 	},
-	"images": [
-		"/images/items/01_5994/01_5994_0.jpg",
-		"/images/items/01_5994/01_5994_1.jpg",
-		"/images/items/01_5994/01_5994_2.jpg",
-		"/images/items/01_5994/01_5994_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5994_0.jpg",
+				"path": "/images/items/01_5994/01_5994_0.jpg",
+				"hash": "47e66abb3569c4c0c1a0bef625aca86f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5994_1.jpg",
+				"path": "/images/items/01_5994/01_5994_1.jpg",
+				"hash": "391ae805032b3520bdf20a2a12dcdeef"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5994_2.jpg",
+				"path": "/images/items/01_5994/01_5994_2.jpg",
+				"hash": "8e390b9d92775a0ced64c01c77999780"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5994_3.jpg",
+				"path": "/images/items/01_5994/01_5994_3.jpg",
+				"hash": "b868db112ad0a575fcf10bc72b11f504"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5994/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5221",
-		"01_4272",
-		"01_4195",
-		"01_4067"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5221", "01_4272", "01_4195", "01_4067"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

@@ -34,24 +34,34 @@
 			"• If you insert a pin into the polycap, it won't get crushed when you pinch it."
 		]
 	},
-	"images": [
-		"/images/items/01_4101/1000174423_1.jpg",
-		"/images/items/01_4101/1000174423_2.jpg",
-		"/images/items/01_4101/1000174423_3.jpg",
-		"/images/items/01_4101/1000174423_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000174423_1.jpg",
+				"path": "/images/items/01_4101/1000174423_1.jpg",
+				"hash": "5c1b57990d1e145a891ed3dc4239235a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000174423_2.jpg",
+				"path": "/images/items/01_4101/1000174423_2.jpg",
+				"hash": "bb8bc1b39df5d10bd407d8e5b4884602"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000174423_3.jpg",
+				"path": "/images/items/01_4101/1000174423_3.jpg",
+				"hash": "a99345c709c398e71820893da80e86f6"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000174423_4.jpg",
+				"path": "/images/items/01_4101/1000174423_4.jpg",
+				"hash": "f04ff62a35d6ceef2cfeb560af9e1231"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4101/",
-	"brandIds": [
-		"tool"
-	],
+	"brandIds": ["tool"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4930",
-		"01_4931",
-		"01_3784",
-		"01_3785"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4930", "01_4931", "01_3784", "01_3785"]
 }

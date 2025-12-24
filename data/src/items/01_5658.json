@@ -26,25 +26,29 @@
 			"Introducing the MG Unicorn Gundam Ver.Ka with a shining white titanium finish Limited production to commemorate Gundam's 30th anniversary (produced only in 2009) Complete transformation from unicorn mode to destroyoid mode Special item with newly developed white plating applied to the white parts of the body Foil decals are used on the gold parts of the corners to match the body Includes Beam Magnum, Hyper Bazooka, Seal, Beam Saber x 4, and Beam Magnum spare magazine x 2."
 		]
 	},
-	"images": [
-		"/images/items/01_5658/153_726.jpg",
-		"/images/items/01_5658/155_726.jpg",
-		"/images/items/01_5658/156_726.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_726.jpg",
+				"path": "/images/items/01_5658/153_726.jpg",
+				"hash": "db610f1accf1790dee2456c0870a973e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_726.jpg",
+				"path": "/images/items/01_5658/155_726.jpg",
+				"hash": "09f7b872cbb94de6cfcb54b2a8ae8a3e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_726.jpg",
+				"path": "/images/items/01_5658/156_726.jpg",
+				"hash": "a0e527054a750f6e91eab4e37371f986"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5658/",
-	"brandIds": [
-		"mgka"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1292",
-		"01_5779",
-		"item-1000095303",
-		"01_5726"
-	]
+	"brandIds": ["mgka"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_1292", "01_5779", "item-1000095303", "01_5726"]
 }

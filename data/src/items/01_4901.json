@@ -48,12 +48,7 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"表情パーツ×4種",
-			"腕組み用パーツ×1",
-			"ハンドパーツ（左右）×5種",
-			"ディスプレイ用台座×1"
-		],
+		"ja": ["表情パーツ×4種", "腕組み用パーツ×1", "ハンドパーツ（左右）×5種", "ディスプレイ用台座×1"],
 		"en": [
 			"Facial expression parts x 4 types",
 			"Arm parts x 1",
@@ -61,33 +56,69 @@
 			"Display pedestal x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4901/1000195253_1.jpg",
-		"/images/items/01_4901/1000195253_10.jpg",
-		"/images/items/01_4901/1000195253_11.jpg",
-		"/images/items/01_4901/1000195253_2.jpg",
-		"/images/items/01_4901/1000195253_3.jpg",
-		"/images/items/01_4901/1000195253_4.jpg",
-		"/images/items/01_4901/1000195253_5.jpg",
-		"/images/items/01_4901/1000195253_6.jpg",
-		"/images/items/01_4901/1000195253_7.jpg",
-		"/images/items/01_4901/1000195253_8.jpg",
-		"/images/items/01_4901/1000195253_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195253_1.jpg",
+				"path": "/images/items/01_4901/1000195253_1.jpg",
+				"hash": "fab82aab6edcc3de4a210440d2796942"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195253_10.jpg",
+				"path": "/images/items/01_4901/1000195253_10.jpg",
+				"hash": "ca09349e232213ba6784f7e0ae8db401"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195253_11.jpg",
+				"path": "/images/items/01_4901/1000195253_11.jpg",
+				"hash": "02b5435375867bd88f8feabe5533b6b8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195253_2.jpg",
+				"path": "/images/items/01_4901/1000195253_2.jpg",
+				"hash": "040579f0d967e5e7ecc9dad7918adcef"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195253_3.jpg",
+				"path": "/images/items/01_4901/1000195253_3.jpg",
+				"hash": "fcab0b53adb98b9644d07cd7a25d4dd2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195253_4.jpg",
+				"path": "/images/items/01_4901/1000195253_4.jpg",
+				"hash": "04414e872bbc7c3fcd76e3cca7c48679"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195253_5.jpg",
+				"path": "/images/items/01_4901/1000195253_5.jpg",
+				"hash": "0067c4cc41eeedecdaee63bb0ef3b626"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195253_6.jpg",
+				"path": "/images/items/01_4901/1000195253_6.jpg",
+				"hash": "ae51cfdd10ba88cfc9451a38c5ec6ee4"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195253_7.jpg",
+				"path": "/images/items/01_4901/1000195253_7.jpg",
+				"hash": "1150634efb90946d63bf8bccbd17603d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195253_8.jpg",
+				"path": "/images/items/01_4901/1000195253_8.jpg",
+				"hash": "357fedb8a676ef29b02601450389eae0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195253_9.jpg",
+				"path": "/images/items/01_4901/1000195253_9.jpg",
+				"hash": "f81a4ee087c9ab62bb65eea7131960f2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4901/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"dragonball"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4219",
-		"01_2974",
-		"01_2769",
-		"01_2595"
-	]
+	"brandIds": ["figurerise-standard"],
+	"seriesIds": ["dragonball"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4219", "01_2974", "01_2769", "01_2595"]
 }

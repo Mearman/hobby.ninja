@@ -27,26 +27,26 @@
 			"\"HGUC 1/144 RX-78-2 Gundam + Gundam Trailer Gundam Earth Standing Set (Extra Finish Version)\" now available!"
 		]
 	},
-	"images": [
-		"/images/items/01_4828/153_5710.jpg",
-		"/images/items/01_4828/155_5710.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5710.jpg",
+				"path": "/images/items/01_4828/153_5710.jpg",
+				"hash": "a6c0e802fc41d53fdfcb310e9d9d0e84"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5710.jpg",
+				"path": "/images/items/01_4828/155_5710.jpg",
+				"hash": "500a1b1181e5130adb4a3c9f07a5eae5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4828/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

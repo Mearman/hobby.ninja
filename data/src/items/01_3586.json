@@ -27,28 +27,36 @@
 			"• Mass-produced MS for Earth Federation forces. • The canopy is made of clear parts. • The whole body is fully movable to recreate the poses from the movie. • Each weapon is full of gimmicks. Molded product x 5, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_3586/153_4541.jpg",
-		"/images/items/01_3586/155_4541.jpg",
-		"/images/items/01_3586/156_4541.jpg",
-		"/images/items/01_3586/157_4541.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4541.jpg",
+				"path": "/images/items/01_3586/153_4541.jpg",
+				"hash": "b1dc6453590798685dec010d1fdbfa7b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4541.jpg",
+				"path": "/images/items/01_3586/155_4541.jpg",
+				"hash": "9c8fd9c37dfac6f13e8e8470556e3a0e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4541.jpg",
+				"path": "/images/items/01_3586/156_4541.jpg",
+				"hash": "7ca2e3b95d62025f54d114b500f19004"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4541.jpg",
+				"path": "/images/items/01_3586/157_4541.jpg",
+				"hash": "2424e7c8254749e287d3ea2c89d820bf"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3586/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "939",
 		"url": "https://manual.bandai-hobby.net/menus/detail/939/"

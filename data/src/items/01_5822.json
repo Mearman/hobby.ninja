@@ -31,25 +31,39 @@
 			"■ The size is 90% compared to the MS Hand (Federal) 01."
 		]
 	},
-	"images": [
-		"/images/items/01_5822/1000082296_1.jpg",
-		"/images/items/01_5822/1000082296_2.jpg",
-		"/images/items/01_5822/1000082296_3.jpg",
-		"/images/items/01_5822/1000082296_4.jpg",
-		"/images/items/01_5822/1000082296_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000082296_1.jpg",
+				"path": "/images/items/01_5822/1000082296_1.jpg",
+				"hash": "46f779684659ad46b547bea6dca870e0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000082296_2.jpg",
+				"path": "/images/items/01_5822/1000082296_2.jpg",
+				"hash": "9cc2a2b2f3f8bcb5e720e73584a08b4c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000082296_3.jpg",
+				"path": "/images/items/01_5822/1000082296_3.jpg",
+				"hash": "edfbb7666af4f2c73a3f44f4d86f48bf"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000082296_4.jpg",
+				"path": "/images/items/01_5822/1000082296_4.jpg",
+				"hash": "89dbb9681f7396534604815b1de940f6"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000082296_5.jpg",
+				"path": "/images/items/01_5822/1000082296_5.jpg",
+				"hash": "6e82d3f1d9aca18ec2aa86a82aaa5a70"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5822/",
-	"brandIds": [
-		"parts"
-	],
+	"brandIds": ["parts"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3582",
-		"01_3563",
-		"01_3564",
-		"01_636"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3582", "01_3563", "01_3564", "01_636"]
 }

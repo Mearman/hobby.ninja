@@ -18,29 +18,27 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"SD ガンダム Gジェネレーション07 ガンダム MK-II登場！"
-		],
-		"en": [
-			"SD Gundam G Generation 07 Gundam MK-II is here!"
-		]
+		"ja": ["SD ガンダム Gジェネレーション07 ガンダム MK-II登場！"],
+		"en": ["SD Gundam G Generation 07 Gundam MK-II is here!"]
 	},
-	"images": [
-		"/images/items/01_4674/153_5564.jpg",
-		"/images/items/01_4674/155_5564.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5564.jpg",
+				"path": "/images/items/01_4674/153_5564.jpg",
+				"hash": "0d71727bf87e7d136d2dc672a65f995d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5564.jpg",
+				"path": "/images/items/01_4674/155_5564.jpg",
+				"hash": "6051e0a91827228cc48c703f06001e45"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4674/",
-	"brandIds": [
-		"sdgundamseries"
-	],
+	"brandIds": ["sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
 }

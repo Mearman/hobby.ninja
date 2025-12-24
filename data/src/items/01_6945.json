@@ -53,26 +53,34 @@
 			"MarkingSeal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_6945/01_6945_0.jpg",
-		"/images/items/01_6945/01_6945_1.jpg",
-		"/images/items/01_6945/01_6945_2.jpg",
-		"/images/items/01_6945/01_6945_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6945_0.jpg",
+				"path": "/images/items/01_6945/01_6945_0.jpg",
+				"hash": "0b69a67f652766c60904614ea1ded7b0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6945_1.jpg",
+				"path": "/images/items/01_6945/01_6945_1.jpg",
+				"hash": "9f70d9bff7ab4265b3d27e87ca2c5322"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6945_2.jpg",
+				"path": "/images/items/01_6945/01_6945_2.jpg",
+				"hash": "b7f1c24db506c14c451d15861ce94a58"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6945_3.jpg",
+				"path": "/images/items/01_6945/01_6945_3.jpg",
+				"hash": "a1c6ad2c4345a5881f01985af37d8fb1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6945/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [
-		"armoredcore"
-	],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_6775",
-		"01_5973",
-		"01_5974",
-		"01_5573"
-	]
+	"brandIds": ["30mm"],
+	"seriesIds": ["armoredcore"],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_6775", "01_5973", "01_5974", "01_5573"]
 }

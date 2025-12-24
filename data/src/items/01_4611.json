@@ -27,23 +27,29 @@
 			"• Gundam AGE finally reaches its third generation. \"Gundam AGE-3 Normal \" piloted by Asemu's son, Kio, appears in AG. • \" Touch gate \" allows parts to be removed by hand without using tools. • \" Iropla \" creates a colorful finish just by assembling it. • \" Block build\" allows for intuitive and quick assembly. • Comes with 1 gauging tip."
 		]
 	},
-	"images": [
-		"/images/items/01_4611/153_5507.jpg",
-		"/images/items/01_4611/155_5507.jpg",
-		"/images/items/01_4611/156_5507.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5507.jpg",
+				"path": "/images/items/01_4611/153_5507.jpg",
+				"hash": "1e0e83ade42a8be86b62f1140ead6192"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5507.jpg",
+				"path": "/images/items/01_4611/155_5507.jpg",
+				"hash": "378be0f661367dff0f01b16ba0ef1379"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5507.jpg",
+				"path": "/images/items/01_4611/156_5507.jpg",
+				"hash": "228b8f7d9cb69f73e5775798989115e8"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4611/",
 	"brandIds": [],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181355",
-		"item-1000181354",
-		"item-1000170540",
-		"01_4196"
-	]
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181355", "item-1000181354", "item-1000170540", "01_4196"]
 }

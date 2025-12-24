@@ -26,28 +26,41 @@
 			"“Gundam TR-1 [Hazel Unit 2]” that appears in “Advance of Zeta” is now available in the HGUC series. The characteristic tri-booster movable frame uses ABS to reproduce flexible movement. A sensor-enhanced version of the head crest is also included. Includes rifle, seal, and beam saber."
 		]
 	},
-	"images": [
-		"/images/items/01_5619/153_677.jpg",
-		"/images/items/01_5619/155_677.jpg",
-		"/images/items/01_5619/156_677.jpg",
-		"/images/items/01_5619/157_677.jpg",
-		"/images/items/01_5619/158_677.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_677.jpg",
+				"path": "/images/items/01_5619/153_677.jpg",
+				"hash": "5083edd7a3549beb10ff783fd39aec48"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_677.jpg",
+				"path": "/images/items/01_5619/155_677.jpg",
+				"hash": "9637664b89b0613d1fde50584ee203b9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_677.jpg",
+				"path": "/images/items/01_5619/156_677.jpg",
+				"hash": "10c3c1ff0e997735d34c5215d785b1e1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_677.jpg",
+				"path": "/images/items/01_5619/157_677.jpg",
+				"hash": "b3d1df89daaf62e5aa591be071781c8d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_677.jpg",
+				"path": "/images/items/01_5619/158_677.jpg",
+				"hash": "3f3ce3b43c3b76d5c3b9eff207f0c2b4"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5619/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
+	"brandIds": ["hg", "hguc"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5963", "01_5961", "01_5951"],
 	"manual": {
 		"id": "255",
 		"url": "https://manual.bandai-hobby.net/menus/detail/255/"

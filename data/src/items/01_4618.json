@@ -27,23 +27,29 @@
 			"• A mysterious black Gundam wearing a skull. • \"Touch gate \" allows parts to be removed by hand without using tools. • \" Iropla \" creates a colorful finish just by assembling it. • \" Block build\" allows for intuitive and quick assembly. • Comes with 1 gauging tip."
 		]
 	},
-	"images": [
-		"/images/items/01_4618/153_5513.jpg",
-		"/images/items/01_4618/155_5513.jpg",
-		"/images/items/01_4618/156_5513.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5513.jpg",
+				"path": "/images/items/01_4618/153_5513.jpg",
+				"hash": "84085a80360b502fb193e8ab816ff11a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5513.jpg",
+				"path": "/images/items/01_4618/155_5513.jpg",
+				"hash": "60c093a419ecc629a82e55fac584d76f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5513.jpg",
+				"path": "/images/items/01_4618/156_5513.jpg",
+				"hash": "1e64c5c201fa72470bf0ad20f0aff195"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4618/",
 	"brandIds": [],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181355",
-		"item-1000181354",
-		"item-1000170540",
-		"01_4196"
-	]
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181355", "item-1000181354", "item-1000170540", "01_4196"]
 }

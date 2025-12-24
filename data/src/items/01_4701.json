@@ -29,30 +29,41 @@
 			"The setting colors are realistically reproduced by using Iropla. With the cooperation of Hajime Katoki, it is possible to completely transform into mobile armor form without losing balance. Elaborate details are reproduced on the rifle handle and fist wrist parts. The included beam rifle can be attached to the waist in either MS or MA form. A special display stand is included, allowing you to display it in a pose inspired by the air."
 		]
 	},
-	"images": [
-		"/images/items/01_4701/1000070972_1.jpg",
-		"/images/items/01_4701/1000070972_2.jpg",
-		"/images/items/01_4701/1000070972_3.jpg",
-		"/images/items/01_4701/1000070972_4.jpg",
-		"/images/items/01_4701/1000070972_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000070972_1.jpg",
+				"path": "/images/items/01_4701/1000070972_1.jpg",
+				"hash": "92d0de8f6edbe1f1879b2950c2f0d869"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000070972_2.jpg",
+				"path": "/images/items/01_4701/1000070972_2.jpg",
+				"hash": "eff180f147f6b86968492e3d474deb70"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000070972_3.jpg",
+				"path": "/images/items/01_4701/1000070972_3.jpg",
+				"hash": "33f5e98d27f8ee4657a372c034492a11"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000070972_4.jpg",
+				"path": "/images/items/01_4701/1000070972_4.jpg",
+				"hash": "bd65891243c1c88e844a79797acacbf5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000070972_5.jpg",
+				"path": "/images/items/01_4701/1000070972_5.jpg",
+				"hash": "419ede4c68d48e8066cfd2cdfedfa3df"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4701/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"],
 	"manual": {
 		"id": "892",
 		"url": "https://manual.bandai-hobby.net/menus/detail/892/"

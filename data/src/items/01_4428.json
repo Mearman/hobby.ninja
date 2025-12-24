@@ -20,27 +20,27 @@
 	"targetAge": 15,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"「1/144 ザクマインレイヤー」登場！"
-		],
-		"en": [
-			"\"1/144 Zaku Minelayer\" now available!"
-		]
+		"ja": ["「1/144 ザクマインレイヤー」登場！"],
+		"en": ["\"1/144 Zaku Minelayer\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4428/153_5334.jpg",
-		"/images/items/01_4428/155_5334.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5334.jpg",
+				"path": "/images/items/01_4428/153_5334.jpg",
+				"hash": "080df513120b5fe6f74df7d09f3b45b1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5334.jpg",
+				"path": "/images/items/01_4428/155_5334.jpg",
+				"hash": "938aa7c7dc60bc9f93ecd831455faecc"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4428/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5986",
-		"01_5987",
-		"01_5988"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5986", "01_5987", "01_5988"]
 }

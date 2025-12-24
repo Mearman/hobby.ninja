@@ -27,15 +27,20 @@
 			"Gunpla-kun's head from the popular \"Gunpla-kun\" is now available as a large stuffed toy!"
 		]
 	},
-	"images": [
-		"/images/items/01_5540/153_6379.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6379.jpg",
+				"path": "/images/items/01_5540/153_6379.jpg",
+				"hash": "b3b73d38beedaf9ef35ed06263fdbd55"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5540/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
+	"categoryIds": ["product-list"],
 	"relatedItemIds": [],
 	"tag": {
 		"ja": "ガンプラくんグッズ",

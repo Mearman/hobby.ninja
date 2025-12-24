@@ -29,22 +29,24 @@
 			"• Dress up your aircraft with Federation or Zeon emblems."
 		]
 	},
-	"images": [
-		"/images/items/01_5795/153_860.jpg",
-		"/images/items/01_5795/155_860.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_860.jpg",
+				"path": "/images/items/01_5795/153_860.jpg",
+				"hash": "f0c41470457a7fd01402fef1f3f60b7a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_860.jpg",
+				"path": "/images/items/01_5795/155_860.jpg",
+				"hash": "d8677ff5b30e2bca3a5f96b5127d9496"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5795/",
-	"brandIds": [
-		"parts"
-	],
+	"brandIds": ["parts"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3582",
-		"01_3563",
-		"01_3564",
-		"01_636"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3582", "01_3563", "01_3564", "01_636"]
 }

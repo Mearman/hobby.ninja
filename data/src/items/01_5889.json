@@ -30,29 +30,36 @@
 			"■ The rifle used in the play is included. Molded part ×11, foil seal ×1, marking seal ×1, assembly instruction ×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5889/1000084964_1.jpg",
-		"/images/items/01_5889/1000084964_2.jpg",
-		"/images/items/01_5889/1000084964_3.jpg",
-		"/images/items/01_5889/1000084964_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000084964_1.jpg",
+				"path": "/images/items/01_5889/1000084964_1.jpg",
+				"hash": "02bfe4d173127879e042d18ece9da37a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000084964_2.jpg",
+				"path": "/images/items/01_5889/1000084964_2.jpg",
+				"hash": "f16c5d489d04128b9dec15bee78b047c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000084964_3.jpg",
+				"path": "/images/items/01_5889/1000084964_3.jpg",
+				"hash": "ad92038030e9fb3f03117a732b5b011c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000084964_4.jpg",
+				"path": "/images/items/01_5889/1000084964_4.jpg",
+				"hash": "f7b58149cb5642a757f0a3f417f65dbd"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5889/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "369",
 		"url": "https://manual.bandai-hobby.net/menus/detail/369/"

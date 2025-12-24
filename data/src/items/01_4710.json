@@ -26,22 +26,24 @@
 			"A kit version of the successor to the Gundam Heavy Arms that appeared on the TV \"Mobile New Century Gundam X\". The grenade launcher mounted on the forearm slides. The opening and closing mechanism of the breast gatling and shoulder missile hatch on the shoulder armor can be reproduced. The inner arm gatling can be stored inside by removing the left wrist part. The hornet missile in the knee armor has a rack that opens and closes, allowing the missile to be attached and detached. The beam knife can be stored in the right shin area."
 		]
 	},
-	"images": [
-		"/images/items/01_4710/153_5598.jpg",
-		"/images/items/01_4710/155_5598.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5598.jpg",
+				"path": "/images/items/01_4710/153_5598.jpg",
+				"hash": "bf27060b3d4f1fb0e51f9c346a1d1781"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5598.jpg",
+				"path": "/images/items/01_4710/155_5598.jpg",
+				"hash": "97eb387b800da748eb07bd0b6cc3401d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4710/",
 	"brandIds": [],
-	"seriesIds": [
-		"x"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000147185",
-		"item-1000147187",
-		"item-1000124674",
-		"01_298"
-	]
+	"seriesIds": ["x"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000147185", "item-1000147187", "item-1000124674", "01_298"]
 }

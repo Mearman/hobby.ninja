@@ -31,21 +31,29 @@
 			"• The 113 series and Shonan color were used on the Tokaido Main Line and Sanyo Main Line, and the 115 series and Shonan color were used on the Takasaki Line, Tohoku Main Line, Joetsu Line, Shinetsu Main Line, Ryomo Line, and Sanyo Main Line."
 		]
 	},
-	"images": [
-		"/images/items/01_5826/153_898.jpg",
-		"/images/items/01_5826/155_898.jpg",
-		"/images/items/01_5826/156_898.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_898.jpg",
+				"path": "/images/items/01_5826/153_898.jpg",
+				"hash": "25b37564cb54bbbb2b81d99f7a2861c7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_898.jpg",
+				"path": "/images/items/01_5826/155_898.jpg",
+				"hash": "cf7c837e6d9d7324df9ad1224a1342b5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_898.jpg",
+				"path": "/images/items/01_5826/156_898.jpg",
+				"hash": "0119867e4f9328e5061f7153991c9781"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5826/",
-	"brandIds": [
-		"train"
-	],
+	"brandIds": ["train"],
 	"seriesIds": [],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"relatedItemIds": ["01_1276", "01_1277", "01_1278", "01_1280"]
 }

@@ -33,29 +33,41 @@
 			"(PG Strike Gundam sold separately)"
 		]
 	},
-	"images": [
-		"/images/items/01_4669/153_555.jpg",
-		"/images/items/01_4669/155_555.jpg",
-		"/images/items/01_4669/156_555.jpg",
-		"/images/items/01_4669/157_555.jpg",
-		"/images/items/01_4669/158_555.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_555.jpg",
+				"path": "/images/items/01_4669/153_555.jpg",
+				"hash": "69017f911b5ff4bac97c52e7673535bf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_555.jpg",
+				"path": "/images/items/01_4669/155_555.jpg",
+				"hash": "6ac02b09a75e889915dc81e714e7935b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_555.jpg",
+				"path": "/images/items/01_4669/156_555.jpg",
+				"hash": "309e27035c4cf160e030fd63dba064ec"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_555.jpg",
+				"path": "/images/items/01_4669/157_555.jpg",
+				"hash": "e77384d3a2a235b8ddaa91c5253e3d4a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_555.jpg",
+				"path": "/images/items/01_4669/158_555.jpg",
+				"hash": "8a55659819cc780afc66a0c4a5c43633"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4669/",
-	"brandIds": [
-		"pg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2583",
-		"item-1000140845",
-		"01_1913",
-		"01_4873"
-	],
+	"brandIds": ["pg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2583", "item-1000140845", "01_1913", "01_4873"],
 	"manual": {
 		"id": "653",
 		"url": "https://manual.bandai-hobby.net/menus/detail/653/"

@@ -38,45 +38,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"専用シールド×１",
-			"専用武器×１",
-			"シール×1"
-		],
-		"en": [
-			"Dedicated Seal × 1",
-			"Special weapon x1",
-			"Seal×1"
-		]
+		"ja": ["専用シールド×１", "専用武器×１", "シール×1"],
+		"en": ["Dedicated Seal × 1", "Special weapon x1", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_4308/153_5220.jpg",
-		"/images/items/01_4308/155_5220.jpg",
-		"/images/items/01_4308/156_5220.jpg",
-		"/images/items/01_4308/157_5220.jpg",
-		"/images/items/01_4308/158_5220.jpg",
-		"/images/items/01_4308/159_5220.jpg",
-		"/images/items/01_4308/189_5220.jpg",
-		"/images/items/01_4308/190_5220.jpg",
-		"/images/items/01_4308/191_5220.jpg",
-		"/images/items/01_4308/01_4308_inst_0.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5220.jpg",
+				"path": "/images/items/01_4308/153_5220.jpg",
+				"hash": "a80ab50f0bae2a86da9958d3eaa32aba"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5220.jpg",
+				"path": "/images/items/01_4308/155_5220.jpg",
+				"hash": "bd5e2c7586f0976c583c487247b2d13b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5220.jpg",
+				"path": "/images/items/01_4308/156_5220.jpg",
+				"hash": "efcaddc4e85cee0d70909743e7f3bb0b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5220.jpg",
+				"path": "/images/items/01_4308/157_5220.jpg",
+				"hash": "010a609e8728f04d8b20c6d01769ac4a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5220.jpg",
+				"path": "/images/items/01_4308/158_5220.jpg",
+				"hash": "9c879134ccf869c0c6debbdd6fd6c9c5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5220.jpg",
+				"path": "/images/items/01_4308/159_5220.jpg",
+				"hash": "bb17da2139a12a8c01e2afadea8f4754"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5220.jpg",
+				"path": "/images/items/01_4308/189_5220.jpg",
+				"hash": "23f2eafe9ecc55225f9e10bb8d9fbf65"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5220.jpg",
+				"path": "/images/items/01_4308/190_5220.jpg",
+				"hash": "c8a5f9e07bf8b11cfd46a75004acc03d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5220.jpg",
+				"path": "/images/items/01_4308/191_5220.jpg",
+				"hash": "944e308d5a1e5f95fb45b3c7ce4e27f7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4308_inst_0.jpg",
+				"path": "/images/items/01_4308/01_4308_inst_0.jpg",
+				"hash": "fcad1dc97a4c96d6e9d2d1b4ba05e161"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4308/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"g-witch"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216474",
-		"item-1000211616",
-		"01_5422",
-		"item-1000203129"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["g-witch"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203129"],
 	"manual": {
 		"id": "146",
 		"url": "https://manual.bandai-hobby.net/menus/detail/146/"

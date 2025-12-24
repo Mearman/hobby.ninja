@@ -36,29 +36,41 @@
 			"■ Each part joint is movable, and various poses are possible."
 		]
 	},
-	"images": [
-		"/images/items/01_5346/1000211731_1.jpg",
-		"/images/items/01_5346/1000211731_2.jpg",
-		"/images/items/01_5346/1000211731_3.jpg",
-		"/images/items/01_5346/1000211731_4.jpg",
-		"/images/items/01_5346/1000211731_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000211731_1.jpg",
+				"path": "/images/items/01_5346/1000211731_1.jpg",
+				"hash": "598aeb4f268f3e6c5a97a206df3a6d26"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000211731_2.jpg",
+				"path": "/images/items/01_5346/1000211731_2.jpg",
+				"hash": "c168a8b9920d37be9a310ceb0dec0946"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000211731_3.jpg",
+				"path": "/images/items/01_5346/1000211731_3.jpg",
+				"hash": "2d0311d61a72ff90e34dd44c1f3ec809"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000211731_4.jpg",
+				"path": "/images/items/01_5346/1000211731_4.jpg",
+				"hash": "bfda496c4cc443ac32eba60cb009afdb"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000211731_5.jpg",
+				"path": "/images/items/01_5346/1000211731_5.jpg",
+				"hash": "f33ed4948b54168b5336075cbaa1102b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5346/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5969",
-		"01_5970",
-		"01_5986"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5969", "01_5970", "01_5986"],
 	"tag": {
 		"ja": "GUNDAM SIDE-F",
 		"en": "GUNDAM SIDE-F"

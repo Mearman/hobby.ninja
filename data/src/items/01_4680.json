@@ -27,22 +27,24 @@
 			"“Mobile Armor Exus” that appeared in “Mobile Suit Gundam SEED Destiny” is now available as an EXModel! Pursuing the quality of ScaleModel with precision and attention to detail. All gun barrels are removable, and the cable connecting the main body and gun barrel is reproduced with lead wires. Missile launcher deployed. Reproduce the beam cutter using clear parts. A display stand dedicated to the main body and each gun barrel is included."
 		]
 	},
-	"images": [
-		"/images/items/01_4680/153_556.jpg",
-		"/images/items/01_4680/155_556.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_556.jpg",
+				"path": "/images/items/01_4680/153_556.jpg",
+				"hash": "a3eb726b1ce702e2a42d8c9ad022bd24"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_556.jpg",
+				"path": "/images/items/01_4680/155_556.jpg",
+				"hash": "fce6848c5d76ab7b25309227cc97e614"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4680/",
 	"brandIds": [],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5394",
-		"item-1000214960",
-		"01_5378",
-		"01_5365"
-	]
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5394", "item-1000214960", "01_5378", "01_5365"]
 }

@@ -41,48 +41,54 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ツインバスターライフル×1式",
-			"ビームサーベル×２",
-			"シールド×1",
-			"ジョイントパーツ×1",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Twin buster rifle x 1",
-			"Beam saber x2",
-			"Seal × 1",
-			"Joint parts x 1",
-			"Foil Seal×1"
-		]
+		"ja": ["ツインバスターライフル×1式", "ビームサーベル×２", "シールド×1", "ジョイントパーツ×1", "ホイルシール×1"],
+		"en": ["Twin buster rifle x 1", "Beam saber x2", "Seal × 1", "Joint parts x 1", "Foil Seal×1"]
 	},
-	"images": [
-		"/images/items/01_3631/153_4585.jpg",
-		"/images/items/01_3631/155_4585.jpg",
-		"/images/items/01_3631/156_4585.jpg",
-		"/images/items/01_3631/157_4585.jpg",
-		"/images/items/01_3631/158_4585.jpg",
-		"/images/items/01_3631/159_4585.jpg",
-		"/images/items/01_3631/189_4585.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4585.jpg",
+				"path": "/images/items/01_3631/153_4585.jpg",
+				"hash": "b9bf02851a95fd81d1c3321f6b218233"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4585.jpg",
+				"path": "/images/items/01_3631/155_4585.jpg",
+				"hash": "8df82122b35c0fcac74f009109af6f61"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4585.jpg",
+				"path": "/images/items/01_3631/156_4585.jpg",
+				"hash": "f1a3cbfa233f8c9b59d9f920c8979584"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4585.jpg",
+				"path": "/images/items/01_3631/157_4585.jpg",
+				"hash": "5ab7bc643704ae6ee30297d34e07341e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4585.jpg",
+				"path": "/images/items/01_3631/158_4585.jpg",
+				"hash": "872a875561accb27c34093c75d0d156e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4585.jpg",
+				"path": "/images/items/01_3631/159_4585.jpg",
+				"hash": "5ca4e1330a4987db2b855cceee1431a6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4585.jpg",
+				"path": "/images/items/01_3631/189_4585.jpg",
+				"hash": "ffcb9623586f0f98be187d099423678e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3631/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"gundam_breaker_battlogue"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4128",
-		"item-1000166359",
-		"item-1000166322",
-		"item-1000166358"
-	],
+	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
+	"seriesIds": ["gundam_breaker_battlogue"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4128", "item-1000166359", "item-1000166322", "item-1000166358"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

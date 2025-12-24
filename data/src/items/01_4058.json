@@ -87,46 +87,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ビーム・ライフル",
-			"ビーム・サーベル",
-			"ビーム・バズーカ",
-			"ビーム・シールド"
-		],
-		"en": [
-			"beam rifle",
-			"beam saber",
-			"beam bazooka",
-			"Beam Seal"
-		]
+		"ja": ["ビーム・ライフル", "ビーム・サーベル", "ビーム・バズーカ", "ビーム・シールド"],
+		"en": ["beam rifle", "beam saber", "beam bazooka", "Beam Seal"]
 	},
-	"images": [
-		"/images/items/01_4058/153_4987.jpg",
-		"/images/items/01_4058/155_4987.jpg",
-		"/images/items/01_4058/156_4987.jpg",
-		"/images/items/01_4058/157_4987.jpg",
-		"/images/items/01_4058/158_4987.jpg",
-		"/images/items/01_4058/159_4987.jpg",
-		"/images/items/01_4058/189_4987.jpg",
-		"/images/items/01_4058/190_4987.jpg",
-		"/images/items/01_4058/191_4987.jpg",
-		"/images/items/01_4058/192_4987.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4987.jpg",
+				"path": "/images/items/01_4058/153_4987.jpg",
+				"hash": "61999e9c759f3ebcc10d9c1f63ad06f9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4987.jpg",
+				"path": "/images/items/01_4058/155_4987.jpg",
+				"hash": "86bbad51aaae1a4ec4bf17baaaaad7a5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4987.jpg",
+				"path": "/images/items/01_4058/156_4987.jpg",
+				"hash": "19368529ceb214dec125fabf64f01641"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4987.jpg",
+				"path": "/images/items/01_4058/157_4987.jpg",
+				"hash": "eef7a9f8f0393337e1e22983db212a15"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4987.jpg",
+				"path": "/images/items/01_4058/158_4987.jpg",
+				"hash": "1838019c25909415e95ff024187a3a67"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4987.jpg",
+				"path": "/images/items/01_4058/159_4987.jpg",
+				"hash": "059c902104e721708ee811e35e486e16"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4987.jpg",
+				"path": "/images/items/01_4058/189_4987.jpg",
+				"hash": "b3964e40e4f23e6e123ca3b535ee7871"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4987.jpg",
+				"path": "/images/items/01_4058/190_4987.jpg",
+				"hash": "b3a0e2a25a65834eff59b29a8f93afac"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4987.jpg",
+				"path": "/images/items/01_4058/191_4987.jpg",
+				"hash": "7cf3bcdd858a5a624d06fce676c8efd9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4987.jpg",
+				"path": "/images/items/01_4058/192_4987.jpg",
+				"hash": "868482d9764226633a4047b6d1b0ea15"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4058/",
-	"brandIds": [
-		"re100",
-		"pb_gunpla"
-	],
+	"brandIds": ["re100", "pb_gunpla"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000220190",
-		"item-1000220189",
-		"item-1000216105",
-		"item-1000216110"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000220190", "item-1000220189", "item-1000216105", "item-1000216110"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

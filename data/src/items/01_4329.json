@@ -26,26 +26,44 @@
 			"The battleship that appears in \"Mobile Suit Gundam SEED\" is reproduced with a high-detail ScaleModel! Produces a sense of scale by reproducing precise details. Precise reproduction of internal mechanisms such as catapult hatch and bridge. Wings can be opened and closed. Includes Freedom Gundam, Justice Gundam, Providence Gundam, and 2 Meteors of the same scale. The joint parts can be opened and closed to store Meteor."
 		]
 	},
-	"images": [
-		"/images/items/01_4329/153_523.jpg",
-		"/images/items/01_4329/155_523.jpg",
-		"/images/items/01_4329/156_523.jpg",
-		"/images/items/01_4329/157_523.jpg",
-		"/images/items/01_4329/158_523.jpg",
-		"/images/items/01_4329/159_523.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_523.jpg",
+				"path": "/images/items/01_4329/153_523.jpg",
+				"hash": "7aa1a865f6afda8c69c17fb1c5ad62b9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_523.jpg",
+				"path": "/images/items/01_4329/155_523.jpg",
+				"hash": "c08ab7f1b5be52423f96d1974ccdd792"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_523.jpg",
+				"path": "/images/items/01_4329/156_523.jpg",
+				"hash": "15a8bef1f92d0f4b52e4afdd72ee6b1f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_523.jpg",
+				"path": "/images/items/01_4329/157_523.jpg",
+				"hash": "35d5930d4239d0f176caf08947f0e22d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_523.jpg",
+				"path": "/images/items/01_4329/158_523.jpg",
+				"hash": "5e960619380f970804828dbfcca49860"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_523.jpg",
+				"path": "/images/items/01_4329/159_523.jpg",
+				"hash": "d4e04d985d6080b40ad55998890e1e34"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4329/",
 	"brandIds": [],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5440",
-		"01_5441",
-		"01_5365"
-	]
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5994", "01_5440", "01_5441", "01_5365"]
 }

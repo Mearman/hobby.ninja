@@ -20,31 +20,29 @@
 	"targetAge": 15,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"「MG 1/100 RX-78-3 G-3 ガンダム Ver.ONE YEAR WAR 0079」登場！"
-		],
-		"en": [
-			"\"MG 1/100 RX-78-3 G-3 Gundam Ver.ONE YEAR WAR 0079\" is now available!"
-		]
+		"ja": ["「MG 1/100 RX-78-3 G-3 ガンダム Ver.ONE YEAR WAR 0079」登場！"],
+		"en": ["\"MG 1/100 RX-78-3 G-3 Gundam Ver.ONE YEAR WAR 0079\" is now available!"]
 	},
-	"images": [
-		"/images/items/01_4856/153_5736.jpg",
-		"/images/items/01_4856/155_5736.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5736.jpg",
+				"path": "/images/items/01_4856/153_5736.jpg",
+				"hash": "ec895220816fb63588a4d89109344c7c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5736.jpg",
+				"path": "/images/items/01_4856/155_5736.jpg",
+				"hash": "f8382f1dd02093e9d70c76d88c2514bd"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4856/",
-	"brandIds": [
-		"mg"
-	],
+	"brandIds": ["mg"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5469",
-		"01_5593",
-		"item-1000216602"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5994", "01_5469", "01_5593", "item-1000216602"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

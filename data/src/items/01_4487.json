@@ -18,30 +18,27 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"「SD ガンダム Gジェネレーション51 ガンダムＧＰ０４」が登場！"
-		],
-		"en": [
-			"\"SD Gundam G Generation 51 Gundam GP04\" is now available!"
-		]
+		"ja": ["「SD ガンダム Gジェネレーション51 ガンダムＧＰ０４」が登場！"],
+		"en": ["\"SD Gundam G Generation 51 Gundam GP04\" is now available!"]
 	},
-	"images": [
-		"/images/items/01_4487/153_5391.jpg",
-		"/images/items/01_4487/155_5391.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5391.jpg",
+				"path": "/images/items/01_4487/153_5391.jpg",
+				"hash": "2f033f27d0a83c7b98fc73fa2dfd738a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5391.jpg",
+				"path": "/images/items/01_4487/155_5391.jpg",
+				"hash": "6042a1294a327ba4fdd9d20b6821ca13"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4487/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"g-0083"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1396",
-		"01_4465",
-		"01_1604"
-	]
+	"brandIds": ["sdgundamseries"],
+	"seriesIds": ["g-0083"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_1396", "01_4465", "01_1604"]
 }

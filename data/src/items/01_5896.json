@@ -37,32 +37,51 @@
 			"Molded product x 8, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5896/153_974.jpg",
-		"/images/items/01_5896/155_974.jpg",
-		"/images/items/01_5896/156_974.jpg",
-		"/images/items/01_5896/157_974.jpg",
-		"/images/items/01_5896/158_974.jpg",
-		"/images/items/01_5896/159_974.jpg",
-		"/images/items/01_5896/01_5896_inst_0.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_974.jpg",
+				"path": "/images/items/01_5896/153_974.jpg",
+				"hash": "58853b00fd2495152902242eb0a0b1fc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_974.jpg",
+				"path": "/images/items/01_5896/155_974.jpg",
+				"hash": "49c3ce30f59067212fe57c31f227de07"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_974.jpg",
+				"path": "/images/items/01_5896/156_974.jpg",
+				"hash": "5c4e3ea5f897778e883b1a8de77a0dd0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_974.jpg",
+				"path": "/images/items/01_5896/157_974.jpg",
+				"hash": "9518da469b969498ac6e4df183d43913"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_974.jpg",
+				"path": "/images/items/01_5896/158_974.jpg",
+				"hash": "ff4b9230c20eb0a71743913fb9a78824"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_974.jpg",
+				"path": "/images/items/01_5896/159_974.jpg",
+				"hash": "807907b30a0222fb60fb7511dae06cb7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5896_inst_0.jpg",
+				"path": "/images/items/01_5896/01_5896_inst_0.jpg",
+				"hash": "0a5d52e26a1debdecb4342fed5680048"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5896/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"v-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4978",
-		"01_3311",
-		"item-1000137105",
-		"01_333"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["v-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4978", "01_3311", "item-1000137105", "01_333"],
 	"manual": {
 		"id": "389",
 		"url": "https://manual.bandai-hobby.net/menus/detail/389/"

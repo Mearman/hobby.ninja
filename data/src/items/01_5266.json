@@ -37,12 +37,7 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ナイトフォール 武器×1式",
-			"PB-033M ASHMEAD 射出状態再現用パーツ×1式",
-			"頭部パーツ×1",
-			"シール×1"
-		],
+		"ja": ["ナイトフォール 武器×1式", "PB-033M ASHMEAD 射出状態再現用パーツ×1式", "頭部パーツ×1", "シール×1"],
 		"en": [
 			"Nightfall weapon x 1",
 			"PB-033M ASHMEAD injection state reproduction parts x 1 set",
@@ -50,33 +45,69 @@
 			"Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5266/1000217436_1.jpg",
-		"/images/items/01_5266/1000217436_10.jpg",
-		"/images/items/01_5266/1000217436_11.jpg",
-		"/images/items/01_5266/1000217436_2.jpg",
-		"/images/items/01_5266/1000217436_3.jpg",
-		"/images/items/01_5266/1000217436_4.jpg",
-		"/images/items/01_5266/1000217436_5.jpg",
-		"/images/items/01_5266/1000217436_6.jpg",
-		"/images/items/01_5266/1000217436_7.jpg",
-		"/images/items/01_5266/1000217436_8.jpg",
-		"/images/items/01_5266/1000217436_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217436_1.jpg",
+				"path": "/images/items/01_5266/1000217436_1.jpg",
+				"hash": "e3ce996ebc9e791e927947ad855d3ab7"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217436_10.jpg",
+				"path": "/images/items/01_5266/1000217436_10.jpg",
+				"hash": "35a3207476df223f7b8e5263f90690c7"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217436_11.jpg",
+				"path": "/images/items/01_5266/1000217436_11.jpg",
+				"hash": "92a3996c2d3691fe57596f16e9cfdc0f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217436_2.jpg",
+				"path": "/images/items/01_5266/1000217436_2.jpg",
+				"hash": "1f20a0cdb011f8724f7cd1abd4a60e65"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217436_3.jpg",
+				"path": "/images/items/01_5266/1000217436_3.jpg",
+				"hash": "1239524fa381c3e8d9bf3bb3202052f6"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217436_4.jpg",
+				"path": "/images/items/01_5266/1000217436_4.jpg",
+				"hash": "33f6c4c342f118473fe3928ab1ef3d62"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217436_5.jpg",
+				"path": "/images/items/01_5266/1000217436_5.jpg",
+				"hash": "3a1e20a168705d86ed582ac5962e7f5c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217436_6.jpg",
+				"path": "/images/items/01_5266/1000217436_6.jpg",
+				"hash": "8fd46f228e630718faf3021bc8315158"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217436_7.jpg",
+				"path": "/images/items/01_5266/1000217436_7.jpg",
+				"hash": "ce575a74a139a60ac4289f4a7f7f6b63"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217436_8.jpg",
+				"path": "/images/items/01_5266/1000217436_8.jpg",
+				"hash": "93e991b8c7fcb6cba7fde80a2cc26b2e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217436_9.jpg",
+				"path": "/images/items/01_5266/1000217436_9.jpg",
+				"hash": "c05e5fbd109b6959abb8bc863c054603"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5266/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [
-		"armoredcore"
-	],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5973",
-		"01_5974",
-		"01_5573",
-		"01_5574"
-	]
+	"brandIds": ["30mm"],
+	"seriesIds": ["armoredcore"],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5973", "01_5974", "01_5573", "01_5574"]
 }

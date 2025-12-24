@@ -27,23 +27,29 @@
 			"• Introducing the next generation plastic model \"Advanced Grade \" series. • No painting or tools required. By using \" block build\", which allows for intuitive assembly, it can be completed in no time. • By incorporating the included gazing chip and scanning it with the gazing battle base, you can create your own team and battle."
 		]
 	},
-	"images": [
-		"/images/items/01_4574/153_5472.jpg",
-		"/images/items/01_4574/155_5472.jpg",
-		"/images/items/01_4574/156_5472.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5472.jpg",
+				"path": "/images/items/01_4574/153_5472.jpg",
+				"hash": "862d2a0a98c44cec322b87f461f3422e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5472.jpg",
+				"path": "/images/items/01_4574/155_5472.jpg",
+				"hash": "58479c020a41f0e9ebbd981fb281d841"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5472.jpg",
+				"path": "/images/items/01_4574/156_5472.jpg",
+				"hash": "fff278b852b9ee2d7b1d357223bf6897"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4574/",
 	"brandIds": [],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181355",
-		"item-1000181354",
-		"item-1000170540",
-		"01_4196"
-	]
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181355", "item-1000181354", "item-1000170540", "01_4196"]
 }

@@ -20,32 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HG 1/144 Ez-SR-MAXIMA登場！"
-		],
-		"en": [
-			"HG 1/144 Ez-SR-MAXIMA is here!"
-		]
+		"ja": ["HG 1/144 Ez-SR-MAXIMA登場！"],
+		"en": ["HG 1/144 Ez-SR-MAXIMA is here!"]
 	},
-	"images": [
-		"/images/items/01_4969/153_5840.jpg",
-		"/images/items/01_4969/155_5840.jpg",
-		"/images/items/01_4969/156_5840.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5840.jpg",
+				"path": "/images/items/01_4969/153_5840.jpg",
+				"hash": "b219dc4eefc7b2442fe4c491fee5491f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5840.jpg",
+				"path": "/images/items/01_4969/155_5840.jpg",
+				"hash": "0e7dd2324e472bde457833e4ce985db9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5840.jpg",
+				"path": "/images/items/01_4969/156_5840.jpg",
+				"hash": "f26687a0161a24931e2be55f2225de0c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4969/",
-	"brandIds": [
-		"hg"
-	],
+	"brandIds": ["hg"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5951"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

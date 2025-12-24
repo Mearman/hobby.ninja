@@ -26,23 +26,29 @@
 			"• Equipped with Hakurinken and Musk Tail! • Gongsun's cloak moves horizontally and vertically! • There are two eye seals, one for \"normal \" and one for \" combat\", so choose the one you like and stick it on!"
 		]
 	},
-	"images": [
-		"/images/items/01_4737/153_5622.jpg",
-		"/images/items/01_4737/155_5622.jpg",
-		"/images/items/01_4737/156_5622.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5622.jpg",
+				"path": "/images/items/01_4737/153_5622.jpg",
+				"hash": "e8e4a3e2d0ce448b35d0c6740127734e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5622.jpg",
+				"path": "/images/items/01_4737/155_5622.jpg",
+				"hash": "443d85ecc1de9e37cea51ced210c2aa4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5622.jpg",
+				"path": "/images/items/01_4737/156_5622.jpg",
+				"hash": "3cf2f4fdc8e59c1fcd2459a4c78dbcf4"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4737/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

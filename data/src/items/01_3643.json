@@ -29,43 +29,57 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"杖×1",
-			"仮面×１",
-			"エフェクト×１式",
-			"スタンド×１",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Cane x 1",
-			"Mask x1",
-			"Effect x 1 type",
-			"Stand x 1",
-			"Foil Seal×1"
-		]
+		"ja": ["杖×1", "仮面×１", "エフェクト×１式", "スタンド×１", "ホイルシール×1"],
+		"en": ["Cane x 1", "Mask x1", "Effect x 1 type", "Stand x 1", "Foil Seal×1"]
 	},
-	"images": [
-		"/images/items/01_3643/153_4598.jpg",
-		"/images/items/01_3643/155_4598.jpg",
-		"/images/items/01_3643/156_4598.jpg",
-		"/images/items/01_3643/157_4598.jpg",
-		"/images/items/01_3643/158_4598.jpg",
-		"/images/items/01_3643/159_4598.jpg",
-		"/images/items/01_3643/189_4598.jpg",
-		"/images/items/01_3643/190_4598.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4598.jpg",
+				"path": "/images/items/01_3643/153_4598.jpg",
+				"hash": "d905fdd351024d0e4ae302c9527f6bf1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4598.jpg",
+				"path": "/images/items/01_3643/155_4598.jpg",
+				"hash": "5e3776815201878b2c0eaf2d5fa6e6f3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4598.jpg",
+				"path": "/images/items/01_3643/156_4598.jpg",
+				"hash": "41dc5911c233cf276681ea375f214588"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4598.jpg",
+				"path": "/images/items/01_3643/157_4598.jpg",
+				"hash": "3af348941c6d0fdd7a900a7134d2410d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4598.jpg",
+				"path": "/images/items/01_3643/158_4598.jpg",
+				"hash": "200e4022900a5f808533a64aa8a0f133"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4598.jpg",
+				"path": "/images/items/01_3643/159_4598.jpg",
+				"hash": "9db8ca9d084d17af93e7309248862804"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4598.jpg",
+				"path": "/images/items/01_3643/189_4598.jpg",
+				"hash": "344f96e3b3c2ba01e1e860ae4cb6ae04"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4598.jpg",
+				"path": "/images/items/01_3643/190_4598.jpg",
+				"hash": "dace38381b5992385a395fab7ea0dc8f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3643/",
 	"brandIds": [],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5470",
-		"01_5471",
-		"01_5472",
-		"01_5347"
-	]
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
 }

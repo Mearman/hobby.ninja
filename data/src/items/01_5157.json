@@ -122,32 +122,56 @@
 			"- Product specifications are scheduled as of 20145. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_5157/153_6015.jpg",
-		"/images/items/01_5157/155_6015.jpg",
-		"/images/items/01_5157/156_6015.jpg",
-		"/images/items/01_5157/157_6015.jpg",
-		"/images/items/01_5157/158_6015.jpg",
-		"/images/items/01_5157/159_6015.jpg",
-		"/images/items/01_5157/189_6015.jpg",
-		"/images/items/01_5157/190_6015.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6015.jpg",
+				"path": "/images/items/01_5157/153_6015.jpg",
+				"hash": "7c121fcfa93c44d6eebea9a7adcf0b06"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6015.jpg",
+				"path": "/images/items/01_5157/155_6015.jpg",
+				"hash": "91b72e4fbef918b3e3722c2728ff4954"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6015.jpg",
+				"path": "/images/items/01_5157/156_6015.jpg",
+				"hash": "a3a779387d517bf767a9a80a1cea182e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6015.jpg",
+				"path": "/images/items/01_5157/157_6015.jpg",
+				"hash": "1573faddfd1aba49a963d8a6e7760915"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6015.jpg",
+				"path": "/images/items/01_5157/158_6015.jpg",
+				"hash": "73b43b3ce6326242847a7b6bafd3979c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6015.jpg",
+				"path": "/images/items/01_5157/159_6015.jpg",
+				"hash": "3264de2f678e93aef39a7d27f472526a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6015.jpg",
+				"path": "/images/items/01_5157/189_6015.jpg",
+				"hash": "98346b0f98aabeaf81285e45ad9a6277"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6015.jpg",
+				"path": "/images/items/01_5157/190_6015.jpg",
+				"hash": "ebe0b370be12f2dcdfa499d6832aa716"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5157/",
-	"brandIds": [
-		"pb_charapla"
-	],
-	"seriesIds": [
-		"votoms"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000223037",
-		"item-1000209959",
-		"item-1000209960",
-		"item-1000209961"
-	],
+	"brandIds": ["pb_charapla"],
+	"seriesIds": ["votoms"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000223037", "item-1000209959", "item-1000209960", "item-1000209961"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

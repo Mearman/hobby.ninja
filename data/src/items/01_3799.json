@@ -81,29 +81,31 @@
 			"Also, depending on the application status, the deadline may be extended."
 		]
 	},
-	"images": [
-		"/images/items/01_3799/153_4748.jpg",
-		"/images/items/01_3799/155_4748.jpg",
-		"/images/items/01_3799/156_4748.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4748.jpg",
+				"path": "/images/items/01_3799/153_4748.jpg",
+				"hash": "3f4491dce8ac420ecf455f76829cdfcb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4748.jpg",
+				"path": "/images/items/01_3799/155_4748.jpg",
+				"hash": "06e6285176cb883b462285370eec983b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4748.jpg",
+				"path": "/images/items/01_3799/156_4748.jpg",
+				"hash": "28425f775e6a3052a3aa0b60b9f09bfa"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3799/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000209098",
-		"01_4985",
-		"01_4971",
-		"01_4365"
-	],
+	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000209098", "01_4985", "01_4971", "01_4365"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

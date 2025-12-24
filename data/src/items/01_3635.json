@@ -33,39 +33,67 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"シール×1"
-		],
-		"en": [
-			"Seal×1"
-		]
+		"ja": ["シール×1"],
+		"en": ["Seal×1"]
 	},
-	"images": [
-		"/images/items/01_3635/153_4589.jpg",
-		"/images/items/01_3635/155_4589.jpg",
-		"/images/items/01_3635/156_4589.jpg",
-		"/images/items/01_3635/157_4589.jpg",
-		"/images/items/01_3635/158_4589.jpg",
-		"/images/items/01_3635/159_4589.jpg",
-		"/images/items/01_3635/189_4589.jpg",
-		"/images/items/01_3635/190_4589.jpg",
-		"/images/items/01_3635/191_4589.jpg",
-		"/images/items/01_3635/192_4589.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4589.jpg",
+				"path": "/images/items/01_3635/153_4589.jpg",
+				"hash": "a16a23b57b8787eb2dd0515b1ba3a1bf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4589.jpg",
+				"path": "/images/items/01_3635/155_4589.jpg",
+				"hash": "af07ae8428c88a6d55d4734e38285209"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4589.jpg",
+				"path": "/images/items/01_3635/156_4589.jpg",
+				"hash": "f49e79378242a5c00dbec1263f018d45"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4589.jpg",
+				"path": "/images/items/01_3635/157_4589.jpg",
+				"hash": "726154dac6b237f7f5bd68d92b9e922a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4589.jpg",
+				"path": "/images/items/01_3635/158_4589.jpg",
+				"hash": "92217a1922a718cab36e8ad38fa52f44"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4589.jpg",
+				"path": "/images/items/01_3635/159_4589.jpg",
+				"hash": "dfa93e26946e721c966eeecb5df1efa9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4589.jpg",
+				"path": "/images/items/01_3635/189_4589.jpg",
+				"hash": "7f6860508689c747667f7f03c1012256"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4589.jpg",
+				"path": "/images/items/01_3635/190_4589.jpg",
+				"hash": "4b4aa14384e7838d80e3fd69c4850706"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4589.jpg",
+				"path": "/images/items/01_3635/191_4589.jpg",
+				"hash": "2d5b8af6a9c4dbb864413e89e8b34a7a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4589.jpg",
+				"path": "/images/items/01_3635/192_4589.jpg",
+				"hash": "f56f35413be5c6dce71bdbebd7caf86b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3635/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"digimon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4917",
-		"01_4302",
-		"01_4113",
-		"01_3766"
-	]
+	"brandIds": ["figurerise-standard"],
+	"seriesIds": ["digimon"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4917", "01_4302", "01_4113", "01_3766"]
 }

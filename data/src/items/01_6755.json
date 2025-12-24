@@ -39,13 +39,7 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"フェイスパーツ(タンポ印刷)×3種",
-			"ハンドパーツ×1式",
-			"髪パーツ(髪飾りなし)×1式",
-			"マイク×1",
-			"シール×1"
-		],
+		"ja": ["フェイスパーツ(タンポ印刷)×3種", "ハンドパーツ×1式", "髪パーツ(髪飾りなし)×1式", "マイク×1", "シール×1"],
 		"en": [
 			"Face parts (tampo printing) x 3 types",
 			"Hand parts x 1 set",
@@ -54,31 +48,64 @@
 			"Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_6755/01_6755_0.jpg",
-		"/images/items/01_6755/01_6755_1.jpg",
-		"/images/items/01_6755/01_6755_2.jpg",
-		"/images/items/01_6755/01_6755_3.jpg",
-		"/images/items/01_6755/01_6755_4.jpg",
-		"/images/items/01_6755/01_6755_5.jpg",
-		"/images/items/01_6755/01_6755_6.jpg",
-		"/images/items/01_6755/01_6755_7.jpg",
-		"/images/items/01_6755/01_6755_8.jpg",
-		"/images/items/01_6755/01_6755_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6755_0.jpg",
+				"path": "/images/items/01_6755/01_6755_0.jpg",
+				"hash": "0805497fddbe8c93c897830bc9487e56"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6755_1.jpg",
+				"path": "/images/items/01_6755/01_6755_1.jpg",
+				"hash": "134b6f75f802dbb4f3a10d6018ed8f25"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6755_2.jpg",
+				"path": "/images/items/01_6755/01_6755_2.jpg",
+				"hash": "6b15ff319e4811f4f9e779d5dade68e6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6755_3.jpg",
+				"path": "/images/items/01_6755/01_6755_3.jpg",
+				"hash": "0e0c5c8dd325e00bbaed92d00706699c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6755_4.jpg",
+				"path": "/images/items/01_6755/01_6755_4.jpg",
+				"hash": "4e60397880c78ae3c5e9035fdc37087c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6755_5.jpg",
+				"path": "/images/items/01_6755/01_6755_5.jpg",
+				"hash": "cb777b8df2657d7dcb427afd8ebf6643"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6755_6.jpg",
+				"path": "/images/items/01_6755/01_6755_6.jpg",
+				"hash": "bb8d71f7c4b9d3399d2b2f30efeb225a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6755_7.jpg",
+				"path": "/images/items/01_6755/01_6755_7.jpg",
+				"hash": "35f02653f2746428a7b6e9f5572ecddc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6755_8.jpg",
+				"path": "/images/items/01_6755/01_6755_8.jpg",
+				"hash": "72d02ff39fb62ea59927325c56c59ecd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6755_9.jpg",
+				"path": "/images/items/01_6755/01_6755_9.jpg",
+				"hash": "ec239b3b7710a069e44dc5baec6ffc55"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6755/",
-	"brandIds": [
-		"30ms"
-	],
-	"seriesIds": [
-		"idolmaster"
-	],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_6756",
-		"01_5976",
-		"01_5975"
-	]
+	"brandIds": ["30ms"],
+	"seriesIds": ["idolmaster"],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_6756", "01_5976", "01_5975"]
 }

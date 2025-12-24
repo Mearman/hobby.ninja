@@ -33,13 +33,7 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"大刀(ホワイト)×1",
-			"小刀(ホワイト)×2",
-			"大刀(シルバー)×1",
-			"小刀(シルバー)×2",
-			"シール×1"
-		],
+		"ja": ["大刀(ホワイト)×1", "小刀(ホワイト)×2", "大刀(シルバー)×1", "小刀(シルバー)×2", "シール×1"],
 		"en": [
 			"Great sword (white) x 1",
 			"Small sword (white) x 2",
@@ -48,30 +42,54 @@
 			"Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_4220/153_5139.jpg",
-		"/images/items/01_4220/155_5139.jpg",
-		"/images/items/01_4220/156_5139.jpg",
-		"/images/items/01_4220/157_5139.jpg",
-		"/images/items/01_4220/158_5139.jpg",
-		"/images/items/01_4220/159_5139.jpg",
-		"/images/items/01_4220/189_5139.jpg",
-		"/images/items/01_4220/190_5139.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5139.jpg",
+				"path": "/images/items/01_4220/153_5139.jpg",
+				"hash": "359d91ec03fa29f217d621576a69d078"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5139.jpg",
+				"path": "/images/items/01_4220/155_5139.jpg",
+				"hash": "750e2490cbc0d23c565137231309e520"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5139.jpg",
+				"path": "/images/items/01_4220/156_5139.jpg",
+				"hash": "a91068b4130e41b11d0e8b3a586df2de"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5139.jpg",
+				"path": "/images/items/01_4220/157_5139.jpg",
+				"hash": "1e524ff15d810e66ed7e7eaa9c8e217e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5139.jpg",
+				"path": "/images/items/01_4220/158_5139.jpg",
+				"hash": "150279be4f77576e58a0d96022d16090"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5139.jpg",
+				"path": "/images/items/01_4220/159_5139.jpg",
+				"hash": "7f53af77db41d79babf05beed5de015d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5139.jpg",
+				"path": "/images/items/01_4220/189_5139.jpg",
+				"hash": "457dca1fc35f87d6bb30452ce4b28103"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5139.jpg",
+				"path": "/images/items/01_4220/190_5139.jpg",
+				"hash": "b506f3dea130b016703b3bbfe9ad4d0b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4220/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4336",
-		"01_4312",
-		"01_4634"
-	]
+	"brandIds": ["sdgundamseries"],
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
 }

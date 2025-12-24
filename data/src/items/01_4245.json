@@ -37,40 +37,49 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ベースパーツ×2",
-			"支柱パーツ×1式",
-			"C型アーム×2",
-			"ジョイントパーツ×1式"
-		],
-		"en": [
-			"Base parts x 2",
-			"Strut parts x 1 set",
-			"C type arm x 2",
-			"Joint parts x 1 set"
-		]
+		"ja": ["ベースパーツ×2", "支柱パーツ×1式", "C型アーム×2", "ジョイントパーツ×1式"],
+		"en": ["Base parts x 2", "Strut parts x 1 set", "C type arm x 2", "Joint parts x 1 set"]
 	},
-	"images": [
-		"/images/items/01_4245/1000180053_1.jpg",
-		"/images/items/01_4245/1000180053_2.jpg",
-		"/images/items/01_4245/1000180053_3.jpg",
-		"/images/items/01_4245/1000180053_4.jpg",
-		"/images/items/01_4245/1000180053_5.jpg",
-		"/images/items/01_4245/1000180053_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180053_1.jpg",
+				"path": "/images/items/01_4245/1000180053_1.jpg",
+				"hash": "b7520ce451a438200316e14e69432390"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180053_2.jpg",
+				"path": "/images/items/01_4245/1000180053_2.jpg",
+				"hash": "78dc5756657092bce6dabef0842233f9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180053_3.jpg",
+				"path": "/images/items/01_4245/1000180053_3.jpg",
+				"hash": "30c8b89032ad06fed99c68f81769e1c2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180053_4.jpg",
+				"path": "/images/items/01_4245/1000180053_4.jpg",
+				"hash": "f30d8c24858f2307fb8bc7a44c5acf70"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180053_5.jpg",
+				"path": "/images/items/01_4245/1000180053_5.jpg",
+				"hash": "953353d2d09a008a095308192a779f4b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180053_6.jpg",
+				"path": "/images/items/01_4245/1000180053_6.jpg",
+				"hash": "61cb19a771d53f6ad202d930015537da"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4245/",
-	"brandIds": [
-		"actionbase"
-	],
+	"brandIds": ["actionbase"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5934",
-		"01_5256",
-		"01_5258"
-	],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5934", "01_5256", "01_5258"],
 	"manual": {
 		"id": "1188",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1188/"

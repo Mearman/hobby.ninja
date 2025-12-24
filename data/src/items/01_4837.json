@@ -20,32 +20,24 @@
 	"targetAge": 15,
 	"scale": "1/60",
 	"description": {
-		"ja": [
-			"「PG 1/60 RX-78-2 ガンダム+ウエポンズ アニメーションカラーバージョン」登場！"
-		],
-		"en": [
-			"\"PG 1/60 RX-78-2 Gundam+Weapons Animation Color Version\" now available!"
-		]
+		"ja": ["「PG 1/60 RX-78-2 ガンダム+ウエポンズ アニメーションカラーバージョン」登場！"],
+		"en": ["\"PG 1/60 RX-78-2 Gundam+Weapons Animation Color Version\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4837/153_5719.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5719.jpg",
+				"path": "/images/items/01_4837/153_5719.jpg",
+				"hash": "486463b214ab7637547b1019776595b2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4837/",
-	"brandIds": [
-		"pg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3373",
-		"01_3328",
-		"01_2829",
-		"01_1902"
-	],
+	"brandIds": ["pg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3373", "01_3328", "01_2829", "01_1902"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

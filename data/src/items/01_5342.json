@@ -36,28 +36,51 @@
 			"• The original miniskirt version of the plastic model can also be reproduced."
 		]
 	},
-	"images": [
-		"/images/items/01_5342/153_6194.jpg",
-		"/images/items/01_5342/155_6194.jpg",
-		"/images/items/01_5342/156_6194.jpg",
-		"/images/items/01_5342/157_6194.jpg",
-		"/images/items/01_5342/158_6194.jpg",
-		"/images/items/01_5342/159_6194.jpg",
-		"/images/items/01_5342/189_6194.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6194.jpg",
+				"path": "/images/items/01_5342/153_6194.jpg",
+				"hash": "6ce7b73b70d6ff37583edc6ed0c49852"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6194.jpg",
+				"path": "/images/items/01_5342/155_6194.jpg",
+				"hash": "07e168fb9d0a017ef14b64af99a73e8a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6194.jpg",
+				"path": "/images/items/01_5342/156_6194.jpg",
+				"hash": "e591086850c157ac370e824497569edb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6194.jpg",
+				"path": "/images/items/01_5342/157_6194.jpg",
+				"hash": "53d657c2211c434d64eee068b6ffa761"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6194.jpg",
+				"path": "/images/items/01_5342/158_6194.jpg",
+				"hash": "d46b5aad23278ef9ec82b14d9a486b6a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6194.jpg",
+				"path": "/images/items/01_5342/159_6194.jpg",
+				"hash": "f3d8b7d908545744fa7208cabeb248ec"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6194.jpg",
+				"path": "/images/items/01_5342/189_6194.jpg",
+				"hash": "1389656f67ae2d950e1e84e46419548b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5342/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3519"
-	],
+	"brandIds": ["figurerise-standard"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3519"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

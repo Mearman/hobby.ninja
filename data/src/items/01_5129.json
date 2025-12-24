@@ -19,28 +19,22 @@
 	},
 	"targetAge": 6,
 	"description": {
-		"ja": [
-			"ポケモンプラモコレクションNo.6 進化シリーズ エンペルト進化セット登場！"
-		],
-		"en": [
-			"Pokemon Plastic Model Collection No.6 Evolution Series Empelt Evolution Set is now available!"
-		]
+		"ja": ["ポケモンプラモコレクションNo.6 進化シリーズ エンペルト進化セット登場！"],
+		"en": ["Pokemon Plastic Model Collection No.6 Evolution Series Empelt Evolution Set is now available!"]
 	},
-	"images": [
-		"/images/items/01_5129/153_5991.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5991.jpg",
+				"path": "/images/items/01_5129/153_5991.jpg",
+				"hash": "ceda3a26e6e9e9e5850fed7599030f1d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5129/",
 	"brandIds": [],
-	"seriesIds": [
-		"pokemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"seriesIds": ["pokemon"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
 }

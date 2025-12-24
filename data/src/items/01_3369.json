@@ -33,41 +33,57 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"LEDユニット",
-			"ホイルシール",
-			"マーキングシール"
-		],
-		"en": [
-			"LED unit",
-			"foil seal",
-			"MarkingSeal"
-		]
+		"ja": ["LEDユニット", "ホイルシール", "マーキングシール"],
+		"en": ["LED unit", "foil seal", "MarkingSeal"]
 	},
-	"images": [
-		"/images/items/01_3369/153_4321.jpg",
-		"/images/items/01_3369/155_4321.jpg",
-		"/images/items/01_3369/156_4321.jpg",
-		"/images/items/01_3369/157_4321.jpg",
-		"/images/items/01_3369/158_4321.jpg",
-		"/images/items/01_3369/159_4321.jpg",
-		"/images/items/01_3369/189_4321.jpg",
-		"/images/items/01_3369/190_4321.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4321.jpg",
+				"path": "/images/items/01_3369/153_4321.jpg",
+				"hash": "ea01effedd1170030c53f2014bea5607"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4321.jpg",
+				"path": "/images/items/01_3369/155_4321.jpg",
+				"hash": "6e8b2fd26aa1912b89fed5392c448ca3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4321.jpg",
+				"path": "/images/items/01_3369/156_4321.jpg",
+				"hash": "4d938e011047b984a85abe3ddeb864cc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4321.jpg",
+				"path": "/images/items/01_3369/157_4321.jpg",
+				"hash": "8c87a6a4d6e4c61b43965133daffb94f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4321.jpg",
+				"path": "/images/items/01_3369/158_4321.jpg",
+				"hash": "0952d88f0bf34ccdec04ace3a6855295"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4321.jpg",
+				"path": "/images/items/01_3369/159_4321.jpg",
+				"hash": "b34dc392bcec71a93d9611a01d0349f9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4321.jpg",
+				"path": "/images/items/01_3369/189_4321.jpg",
+				"hash": "97fbcfc6a5980285e0d4a6ec5f9d7697"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4321.jpg",
+				"path": "/images/items/01_3369/190_4321.jpg",
+				"hash": "309a1e49c2cfce60d2cfc53a5f992cd0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3369/",
-	"brandIds": [
-		"gfy"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5035",
-		"01_4239",
-		"01_3472",
-		"01_3841"
-	]
+	"brandIds": ["gfy"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5035", "01_4239", "01_3472", "01_3841"]
 }

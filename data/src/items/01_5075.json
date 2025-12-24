@@ -27,30 +27,46 @@
 			"A 1/144 Scale HG series plastic model of the legendary Gundam that appears in \"Mobile Suit Gundam SEED DESTINY \". The light production that is reproduced as attack mode in the play is reproduced with clear parts. The distinctive large long rifle can be held with both hands by moving the shoulders forward. By using the pedestal that comes with some products in the \" DESTINY\" HG series, you can recreate the flying form with confrontation scenes in mind."
 		]
 	},
-	"images": [
-		"/images/items/01_5075/153_593.jpg",
-		"/images/items/01_5075/155_593.jpg",
-		"/images/items/01_5075/156_593.jpg",
-		"/images/items/01_5075/157_593.jpg",
-		"/images/items/01_5075/158_593.jpg",
-		"/images/items/01_5075/159_593.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_593.jpg",
+				"path": "/images/items/01_5075/153_593.jpg",
+				"hash": "e09e62106686b81890b57468c336d015"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_593.jpg",
+				"path": "/images/items/01_5075/155_593.jpg",
+				"hash": "1b5eec20ee17b342d639ae0ef2545ae0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_593.jpg",
+				"path": "/images/items/01_5075/156_593.jpg",
+				"hash": "83d3ad007d472a6a616158dd473c975c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_593.jpg",
+				"path": "/images/items/01_5075/157_593.jpg",
+				"hash": "9325515f04ed553c7e7bc5b763de38eb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_593.jpg",
+				"path": "/images/items/01_5075/158_593.jpg",
+				"hash": "c3a3f5f36e58c91fa3885f4814a30e6e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_593.jpg",
+				"path": "/images/items/01_5075/159_593.jpg",
+				"hash": "c5add04bdd4bd0aa78a0e5a2f17817a3"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5075/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000203308", "01_5097", "01_3739", "item-1000157417"],
 	"manual": {
 		"id": "173",
 		"url": "https://manual.bandai-hobby.net/menus/detail/173/"

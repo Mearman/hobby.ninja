@@ -35,27 +35,31 @@
 			"• Includes a large buster rifle and two beam sabers."
 		]
 	},
-	"images": [
-		"/images/items/01_4280/01_4280_1.jpg",
-		"/images/items/01_4280/01_4280_2.jpg",
-		"/images/items/01_4280/153_5195.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_4280_1.jpg",
+				"path": "/images/items/01_4280/01_4280_1.jpg",
+				"hash": "9d2739f453a82ea5afad23d81e8c8bb7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4280_2.jpg",
+				"path": "/images/items/01_4280/01_4280_2.jpg",
+				"hash": "6bd76a50b61f7bbdbe696e5bfc6adcc5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_5195.jpg",
+				"path": "/images/items/01_4280/153_5195.jpg",
+				"hash": "48699a8a9a42750927b09013be5ce334"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4280/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5590",
-		"item-1000213249",
-		"01_5340",
-		"item-1000183318"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["endlesswaltz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5590", "item-1000213249", "01_5340", "item-1000183318"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

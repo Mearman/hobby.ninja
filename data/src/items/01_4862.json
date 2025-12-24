@@ -20,33 +20,29 @@
 	"targetAge": 15,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"「MG 1/100 デスティニーガンダム クリアカラーバージョン」登場！"
-		],
-		"en": [
-			"\"MG 1/100 Destiny Gundam Clear Color Version\" now available!"
-		]
+		"ja": ["「MG 1/100 デスティニーガンダム クリアカラーバージョン」登場！"],
+		"en": ["\"MG 1/100 Destiny Gundam Clear Color Version\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4862/153_5741.jpg",
-		"/images/items/01_4862/155_5741.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5741.jpg",
+				"path": "/images/items/01_4862/153_5741.jpg",
+				"hash": "c9838f0df7c057182840916485c24cf9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5741.jpg",
+				"path": "/images/items/01_4862/155_5741.jpg",
+				"hash": "1be4b04a1e1ee88f6cfbbb30dc1b052e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4862/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5421",
-		"item-1000183862",
-		"01_3712",
-		"item-1000155441"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5421", "item-1000183862", "01_3712", "item-1000155441"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

@@ -27,24 +27,34 @@
 			"• Akito's Nightmare Frame \"Alexander\" has been made into a plastic model. • Akito figure is also included. Molded product x 9, color seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4866/153_5745.jpg",
-		"/images/items/01_4866/155_5745.jpg",
-		"/images/items/01_4866/156_5745.jpg",
-		"/images/items/01_4866/157_5745.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5745.jpg",
+				"path": "/images/items/01_4866/153_5745.jpg",
+				"hash": "68d6c2d66564de8d81006a697d146060"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5745.jpg",
+				"path": "/images/items/01_4866/155_5745.jpg",
+				"hash": "e4306d2e42469bb49bb8b3211b664e30"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5745.jpg",
+				"path": "/images/items/01_4866/156_5745.jpg",
+				"hash": "7c3bd27abd480de3dd87eb68d55e84d5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5745.jpg",
+				"path": "/images/items/01_4866/157_5745.jpg",
+				"hash": "b5d85f53941147f369a3e04568c6d37e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4866/",
 	"brandIds": [],
-	"seriesIds": [
-		"geass"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000203132",
-		"item-1000187724",
-		"item-1000167903",
-		"01_5809"
-	]
+	"seriesIds": ["geass"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000203132", "item-1000187724", "item-1000167903", "01_5809"]
 }

@@ -71,26 +71,44 @@
 			"Upon request, we may sell tickets on this site even after the theater has closed."
 		]
 	},
-	"images": [
-		"/images/items/01_5281/153_6131.jpg",
-		"/images/items/01_5281/155_6131.jpg",
-		"/images/items/01_5281/156_6131.jpg",
-		"/images/items/01_5281/157_6131.jpg",
-		"/images/items/01_5281/158_6131.jpg",
-		"/images/items/01_5281/159_6131.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6131.jpg",
+				"path": "/images/items/01_5281/153_6131.jpg",
+				"hash": "3a8735ddc1ee20b56d9d16679c11564b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6131.jpg",
+				"path": "/images/items/01_5281/155_6131.jpg",
+				"hash": "72385185849e7a11cf3d44648fc0b0d2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6131.jpg",
+				"path": "/images/items/01_5281/156_6131.jpg",
+				"hash": "8185c5c5894dd92fac96a2b9b8499f78"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6131.jpg",
+				"path": "/images/items/01_5281/157_6131.jpg",
+				"hash": "685f133d4c5fd2e9a12fbb6a39a64aef"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6131.jpg",
+				"path": "/images/items/01_5281/158_6131.jpg",
+				"hash": "e399299abffcb10cf646f51f94fced4e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6131.jpg",
+				"path": "/images/items/01_5281/159_6131.jpg",
+				"hash": "3ea3670950ade424a59d1a1d1c08e985"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5281/",
-	"brandIds": [
-		"pb_charapla"
-	],
-	"seriesIds": [
-		"yamato"
-	],
+	"brandIds": ["pb_charapla"],
+	"seriesIds": ["yamato"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"item-1000118865",
-		"01_5311",
-		"01_5312",
-		"01_5307"
-	]
+	"relatedItemIds": ["item-1000118865", "01_5311", "01_5312", "01_5307"]
 }

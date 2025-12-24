@@ -36,24 +36,34 @@
 			"Molded product x 7, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5897/153_975.jpg",
-		"/images/items/01_5897/155_975.jpg",
-		"/images/items/01_5897/156_975.jpg",
-		"/images/items/01_5897/157_975.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_975.jpg",
+				"path": "/images/items/01_5897/153_975.jpg",
+				"hash": "9a995079a7d175a945c2d50f201bb76f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_975.jpg",
+				"path": "/images/items/01_5897/155_975.jpg",
+				"hash": "a877b696127193fe622abebc18a4b96d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_975.jpg",
+				"path": "/images/items/01_5897/156_975.jpg",
+				"hash": "c74069ef6003a88b12c93d42ad296747"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_975.jpg",
+				"path": "/images/items/01_5897/157_975.jpg",
+				"hash": "037628646f173cd9ce018d855f273953"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5897/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

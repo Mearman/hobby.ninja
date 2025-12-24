@@ -27,27 +27,31 @@
 			"The black Zaku that Dearka piloted in \"Mobile Suit Gundam SEED DESTINY\" is now available in the HG series. The Blaze Wizard missile hatch on the back can be opened and closed, and the thruster cover can also be moved up and down. Beam assault gun and beam tomahawk are included. Only the first shipment comes with Dearka's compartment card from Seed Club modile."
 		]
 	},
-	"images": [
-		"/images/items/01_4508/153_5410.jpg",
-		"/images/items/01_4508/155_5410.jpg",
-		"/images/items/01_4508/156_5410.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5410.jpg",
+				"path": "/images/items/01_4508/153_5410.jpg",
+				"hash": "e83972e73a3dc9e18910b53f1ef74479"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5410.jpg",
+				"path": "/images/items/01_4508/155_5410.jpg",
+				"hash": "307c3b8b397818e66d8c00c16fc960af"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5410.jpg",
+				"path": "/images/items/01_4508/156_5410.jpg",
+				"hash": "d85ce17eb44b672df5538af0e7ba076f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4508/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000203308", "01_5097", "01_3739", "item-1000157417"],
 	"manual": {
 		"id": "198",
 		"url": "https://manual.bandai-hobby.net/menus/detail/198/"

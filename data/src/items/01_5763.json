@@ -40,16 +40,29 @@
 			"Molded product x 6, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5763/153_826.jpg",
-		"/images/items/01_5763/155_826.jpg",
-		"/images/items/01_5763/156_826.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_826.jpg",
+				"path": "/images/items/01_5763/153_826.jpg",
+				"hash": "a5b4f6fb320f6463b7bbb8ddb8ad28a6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_826.jpg",
+				"path": "/images/items/01_5763/155_826.jpg",
+				"hash": "d088184ff36d6314a8e28651dc645a12"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_826.jpg",
+				"path": "/images/items/01_5763/156_826.jpg",
+				"hash": "1deba8d499b926ef8c856d788b567242"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5763/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
+	"categoryIds": ["product-list"],
 	"relatedItemIds": []
 }

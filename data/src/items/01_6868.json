@@ -72,28 +72,44 @@
 			"Namer Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_6868/01_6868_0.jpg",
-		"/images/items/01_6868/01_6868_1.jpg",
-		"/images/items/01_6868/01_6868_2.jpg",
-		"/images/items/01_6868/01_6868_3.jpg",
-		"/images/items/01_6868/01_6868_4.jpg",
-		"/images/items/01_6868/01_6868_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6868_0.jpg",
+				"path": "/images/items/01_6868/01_6868_0.jpg",
+				"hash": "cacaebf445100326a5de184bc27d4c99"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6868_1.jpg",
+				"path": "/images/items/01_6868/01_6868_1.jpg",
+				"hash": "be442f8c90ee1b6dbbfb052dba7a1e95"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6868_2.jpg",
+				"path": "/images/items/01_6868/01_6868_2.jpg",
+				"hash": "dee44c34dbe91338386a76f5ee7921df"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6868_3.jpg",
+				"path": "/images/items/01_6868/01_6868_3.jpg",
+				"hash": "39cff1e026bd0124770037f171bc1757"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6868_4.jpg",
+				"path": "/images/items/01_6868/01_6868_4.jpg",
+				"hash": "634ba508d8c486d9bfcb34698cd5f2ee"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6868_5.jpg",
+				"path": "/images/items/01_6868/01_6868_5.jpg",
+				"hash": "f6ce573e8780f457bc3bc5c44b21ee80"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6868/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"macross"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_6869",
-		"01_6759",
-		"01_6760",
-		"01_6761"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["macross"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_6869", "01_6759", "01_6760", "01_6761"]
 }

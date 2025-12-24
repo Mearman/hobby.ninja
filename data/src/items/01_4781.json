@@ -20,34 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HG 1/144 ガンダム Ver.GFT　登場！"
-		],
-		"en": [
-			"HG 1/144 Gundam Ver.GFT is now available!"
-		]
+		"ja": ["HG 1/144 ガンダム Ver.GFT　登場！"],
+		"en": ["HG 1/144 Gundam Ver.GFT is now available!"]
 	},
-	"images": [
-		"/images/items/01_4781/153_5663.jpg",
-		"/images/items/01_4781/155_5663.jpg",
-		"/images/items/01_4781/156_5663.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5663.jpg",
+				"path": "/images/items/01_4781/153_5663.jpg",
+				"hash": "812dc38b5421867e3b8254eb8eda4324"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5663.jpg",
+				"path": "/images/items/01_4781/155_5663.jpg",
+				"hash": "399030d9e68244ee763d0e20e9ea5cd7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5663.jpg",
+				"path": "/images/items/01_4781/156_5663.jpg",
+				"hash": "e6cf00d2e90d7148fdcc10e873bb9eb4"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4781/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

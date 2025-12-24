@@ -27,29 +27,41 @@
 			"The unique MS “Mobile Baku” that represents the world of Cosmic Illa has been made into a long-awaited kit for the SEED HG series. Reproduces the unique proportions and movement of the quadruped beast type. Armament on the back can be selected from a dual rail gun and a missile pod. The caterpillar legs deform when in running mode, allowing for a stable display. The beam saber blade is reproduced with clear parts."
 		]
 	},
-	"images": [
-		"/images/items/01_5647/153_710.jpg",
-		"/images/items/01_5647/155_710.jpg",
-		"/images/items/01_5647/156_710.jpg",
-		"/images/items/01_5647/157_710.jpg",
-		"/images/items/01_5647/158_710.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_710.jpg",
+				"path": "/images/items/01_5647/153_710.jpg",
+				"hash": "0cd200d106a0a1b973780295b22c69cf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_710.jpg",
+				"path": "/images/items/01_5647/155_710.jpg",
+				"hash": "99d166d4c0ea45f52c760137436070fa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_710.jpg",
+				"path": "/images/items/01_5647/156_710.jpg",
+				"hash": "333f7048ac5bb20bc10c97e3f1217039"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_710.jpg",
+				"path": "/images/items/01_5647/157_710.jpg",
+				"hash": "878090440b3dce585a754ccd967fcbbc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_710.jpg",
+				"path": "/images/items/01_5647/158_710.jpg",
+				"hash": "467d383f3fe5fc2d929d56370ae30b8d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5647/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000203308", "01_5097", "01_3739", "item-1000157417"],
 	"manual": {
 		"id": "185",
 		"url": "https://manual.bandai-hobby.net/menus/detail/185/"

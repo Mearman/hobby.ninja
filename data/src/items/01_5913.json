@@ -31,27 +31,36 @@
 			"Molded product x 25, Seal x 3, Instruction manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5913/153_991.jpg",
-		"/images/items/01_5913/155_991.jpg",
-		"/images/items/01_5913/156_991.jpg",
-		"/images/items/01_5913/157_991.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_991.jpg",
+				"path": "/images/items/01_5913/153_991.jpg",
+				"hash": "668836a196a56c0b76e5f4f989a199d3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_991.jpg",
+				"path": "/images/items/01_5913/155_991.jpg",
+				"hash": "89ced8061456c7ba27ed542219eded32"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_991.jpg",
+				"path": "/images/items/01_5913/156_991.jpg",
+				"hash": "e8e39938597d41e5cb907aaf5d1f4679"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_991.jpg",
+				"path": "/images/items/01_5913/157_991.jpg",
+				"hash": "ae7302148e5e2a179c20bb8b6323db62"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5913/",
-	"brandIds": [
-		"mgka"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4275",
-		"01_1997",
-		"01_4818"
-	],
+	"brandIds": ["mgka"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4275", "01_1997", "01_4818"],
 	"manual": {
 		"id": "949",
 		"url": "https://manual.bandai-hobby.net/menus/detail/949/"

@@ -34,43 +34,54 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ビームカービン×1",
-			"ビームサーベル×2",
-			"シールド×1"
-		],
-		"en": [
-			"Beam carbine x 1",
-			"Beam saber x2",
-			"Seal × 1"
-		]
+		"ja": ["ビームカービン×1", "ビームサーベル×2", "シールド×1"],
+		"en": ["Beam carbine x 1", "Beam saber x2", "Seal × 1"]
 	},
-	"images": [
-		"/images/items/01_3388/153_4341.jpg",
-		"/images/items/01_3388/155_4341.jpg",
-		"/images/items/01_3388/156_4341.jpg",
-		"/images/items/01_3388/157_4341.jpg",
-		"/images/items/01_3388/158_4341.jpg",
-		"/images/items/01_3388/159_4341.jpg",
-		"/images/items/01_3388/189_4341.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4341.jpg",
+				"path": "/images/items/01_3388/153_4341.jpg",
+				"hash": "3350cab4049e454370eba5251aa93789"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4341.jpg",
+				"path": "/images/items/01_3388/155_4341.jpg",
+				"hash": "985472985e36fcb4d06f2eb3d80279b9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4341.jpg",
+				"path": "/images/items/01_3388/156_4341.jpg",
+				"hash": "43fdad6cc4d23439d258fcd8248b9a23"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4341.jpg",
+				"path": "/images/items/01_3388/157_4341.jpg",
+				"hash": "3ba07753f79b668d58246bc723c4e979"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4341.jpg",
+				"path": "/images/items/01_3388/158_4341.jpg",
+				"hash": "25028268c9c942be776f9651bd3c52c2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4341.jpg",
+				"path": "/images/items/01_3388/159_4341.jpg",
+				"hash": "969d5c2508e24646918d0c0121f082d0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4341.jpg",
+				"path": "/images/items/01_3388/189_4341.jpg",
+				"hash": "816b3478639cbbeb0b22dba603cd0b71"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3388/",
-	"brandIds": [
-		"hg",
-		"hgce"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
+	"brandIds": ["hg", "hgce"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000203308", "01_5097", "01_3739", "item-1000157417"],
 	"manual": {
 		"id": "505",
 		"url": "https://manual.bandai-hobby.net/menus/detail/505/"

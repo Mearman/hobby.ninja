@@ -57,26 +57,54 @@
 			"*Product images may differ slightly from the actual product."
 		]
 	},
-	"images": [
-		"/images/items/01_5690/153_756.jpg",
-		"/images/items/01_5690/155_756.jpg",
-		"/images/items/01_5690/156_756.jpg",
-		"/images/items/01_5690/157_756.jpg",
-		"/images/items/01_5690/158_756.jpg",
-		"/images/items/01_5690/159_756.jpg",
-		"/images/items/01_5690/189_756.jpg",
-		"/images/items/01_5690/190_756.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_756.jpg",
+				"path": "/images/items/01_5690/153_756.jpg",
+				"hash": "865914d48e671e9e74ee7e9f918dffc8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_756.jpg",
+				"path": "/images/items/01_5690/155_756.jpg",
+				"hash": "cbfb327b2694d6e173e614a4700010fc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_756.jpg",
+				"path": "/images/items/01_5690/156_756.jpg",
+				"hash": "ed03360aed526741939c0d17c9e13548"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_756.jpg",
+				"path": "/images/items/01_5690/157_756.jpg",
+				"hash": "7b450c1ab1824e531ae33da2037e8677"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_756.jpg",
+				"path": "/images/items/01_5690/158_756.jpg",
+				"hash": "2ff3f80627f2b24a8cea4ee1e2dc23f7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_756.jpg",
+				"path": "/images/items/01_5690/159_756.jpg",
+				"hash": "45192152dcc28f9277a0c03123f33c12"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_756.jpg",
+				"path": "/images/items/01_5690/189_756.jpg",
+				"hash": "480350b06a9b75d0dc3b7c3432a6fc57"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_756.jpg",
+				"path": "/images/items/01_5690/190_756.jpg",
+				"hash": "43fa0aea28a5409e022ff835db1104d4"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5690/",
 	"brandIds": [],
-	"seriesIds": [
-		"rider"
-	],
+	"seriesIds": ["rider"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5451",
-		"item-1000215369",
-		"01_5276",
-		"01_5175"
-	]
+	"relatedItemIds": ["01_5451", "item-1000215369", "01_5276", "01_5175"]
 }

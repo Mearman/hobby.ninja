@@ -49,23 +49,24 @@
 			"Water transfer decal x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_7032/01_7032_0.jpg",
-		"/images/items/01_7032/01_7032_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_7032_0.jpg",
+				"path": "/images/items/01_7032/01_7032_0.jpg",
+				"hash": "2586ce9df3f41798e0d31b0c54515f47"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7032_1.jpg",
+				"path": "/images/items/01_7032/01_7032_1.jpg",
+				"hash": "188069a517cab2d30c8fc7ffef75fde0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_7032/",
-	"brandIds": [
-		"30mp"
-	],
-	"seriesIds": [
-		"bocchi-rocks"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_6953",
-		"01_5982",
-		"01_5492"
-	]
+	"brandIds": ["30mp"],
+	"seriesIds": ["bocchi-rocks"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_6953", "01_5982", "01_5492"]
 }

@@ -35,27 +35,31 @@
 			"• Comes with a special rifle."
 		]
 	},
-	"images": [
-		"/images/items/01_4187/153_5108.jpg",
-		"/images/items/01_4187/155_5108.jpg",
-		"/images/items/01_4187/156_5108.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5108.jpg",
+				"path": "/images/items/01_4187/153_5108.jpg",
+				"hash": "e5dc4cb60ee7414d6b4583fc90ee0f55"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5108.jpg",
+				"path": "/images/items/01_4187/155_5108.jpg",
+				"hash": "770073cafed8f0ff6ce5484b5b2eb4b3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5108.jpg",
+				"path": "/images/items/01_4187/156_5108.jpg",
+				"hash": "72990669a867b62d5b3863eb83d73dbf"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4187/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"tekketsu"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4103",
-		"01_4240",
-		"01_4094",
-		"01_4188"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["tekketsu"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4103", "01_4240", "01_4094", "01_4188"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

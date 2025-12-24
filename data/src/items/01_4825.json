@@ -20,32 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HGBF 1/144 すーぱーふみな エゥーゴメイドVer.登場！"
-		],
-		"en": [
-			"HGBF 1/144 Super Fumina Eugo Maid Ver. is now available!"
-		]
+		"ja": ["HGBF 1/144 すーぱーふみな エゥーゴメイドVer.登場！"],
+		"en": ["HGBF 1/144 Super Fumina Eugo Maid Ver. is now available!"]
 	},
-	"images": [
-		"/images/items/01_4825/153_5708.jpg",
-		"/images/items/01_4825/155_5708.jpg",
-		"/images/items/01_4825/156_5708.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5708.jpg",
+				"path": "/images/items/01_4825/153_5708.jpg",
+				"hash": "9cb82de78ec17699e97f388c5d1173d2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5708.jpg",
+				"path": "/images/items/01_4825/155_5708.jpg",
+				"hash": "92055d686f5943974d53bb2f1582bc97"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5708.jpg",
+				"path": "/images/items/01_4825/156_5708.jpg",
+				"hash": "882cfe48b1336a238056e86c3ae058e6"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4825/",
-	"brandIds": [
-		"hg"
-	],
+	"brandIds": ["hg"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5951"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

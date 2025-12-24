@@ -40,30 +40,56 @@
 			"■ It is possible to equip the armament of the HGUC 1/144 RX-93ν GUNDAM (sold separately)."
 		]
 	},
-	"images": [
-		"/images/items/01_4974/1000192389_1.jpg",
-		"/images/items/01_4974/1000192389_2.jpg",
-		"/images/items/01_4974/1000192389_3.jpg",
-		"/images/items/01_4974/1000192389_4.jpg",
-		"/images/items/01_4974/1000192389_5.jpg",
-		"/images/items/01_4974/1000192389_6.jpg",
-		"/images/items/01_4974/1000192389_7.jpg",
-		"/images/items/01_4974/1000192389_8.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000192389_1.jpg",
+				"path": "/images/items/01_4974/1000192389_1.jpg",
+				"hash": "8862bbc9845405d818c3dfce5a86b98c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000192389_2.jpg",
+				"path": "/images/items/01_4974/1000192389_2.jpg",
+				"hash": "240ec141ab006d858fdf9db27b641a5a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000192389_3.jpg",
+				"path": "/images/items/01_4974/1000192389_3.jpg",
+				"hash": "be0c4200975c0e0094537f6c150913a7"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000192389_4.jpg",
+				"path": "/images/items/01_4974/1000192389_4.jpg",
+				"hash": "370da1b8e26c298a927bfebebef5f1d1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000192389_5.jpg",
+				"path": "/images/items/01_4974/1000192389_5.jpg",
+				"hash": "26b723581785cc1e45ecf9c7f796378d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000192389_6.jpg",
+				"path": "/images/items/01_4974/1000192389_6.jpg",
+				"hash": "7b40d0637a610f5ee8dc594b6525ac94"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000192389_7.jpg",
+				"path": "/images/items/01_4974/1000192389_7.jpg",
+				"hash": "418f08da6817d84bb994112d759641df"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000192389_8.jpg",
+				"path": "/images/items/01_4974/1000192389_8.jpg",
+				"hash": "63bfeb03d5bb12993aca27dd53d241bd"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4974/",
-	"brandIds": [
-		"entry_grade"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4082",
-		"01_4191"
-	],
+	"brandIds": ["entry_grade"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4082", "01_4191"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

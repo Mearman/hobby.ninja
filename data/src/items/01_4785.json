@@ -23,32 +23,33 @@
 		"ja": [
 			"HGUC 1/144 RX-0 ユニコーンガンダム 3号機フェネクス(デストロイモード) Ver.GFT カラークリアバージョン　登場！"
 		],
-		"en": [
-			"HGUC 1/144 RX-0 Unicorn Gundam Unit 3 Phenex (Destroy Mode) Ver.GFT Color Clear Version now available!"
-		]
+		"en": ["HGUC 1/144 RX-0 Unicorn Gundam Unit 3 Phenex (Destroy Mode) Ver.GFT Color Clear Version now available!"]
 	},
-	"images": [
-		"/images/items/01_4785/153_5667.jpg",
-		"/images/items/01_4785/155_5667.jpg",
-		"/images/items/01_4785/156_5667.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5667.jpg",
+				"path": "/images/items/01_4785/153_5667.jpg",
+				"hash": "ce434e0289f1c6693ffe4b0548699590"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5667.jpg",
+				"path": "/images/items/01_4785/155_5667.jpg",
+				"hash": "53fd734739b0a56a74a5c734ffc6c189"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5667.jpg",
+				"path": "/images/items/01_4785/156_5667.jpg",
+				"hash": "d25867a826e43a75e360ded4673312c1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4785/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"narrative"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5039",
-		"01_5038",
-		"01_3460",
-		"01_2666"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["narrative"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5039", "01_5038", "01_3460", "01_2666"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

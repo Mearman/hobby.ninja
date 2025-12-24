@@ -26,22 +26,24 @@
 			"• A dream co-starring of two great Gundam s that ran through the Heisei era! • Includes newly added MarkingSeal. • God Gundam mode changes to hyper mode by partially replacing it. • Memorial scene transformation to atmospheric entry mode is reproduced without replacement. The twin buster rifle firing form is also reproduced. Molded product x 10, foil seal x 2, Tetron seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4650/153_5542.JPG",
-		"/images/items/01_4650/155_5542.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5542.JPG",
+				"path": "/images/items/01_4650/153_5542.JPG",
+				"hash": "20aa2aa8fe51666b98a798ba1bac96cc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5542.jpg",
+				"path": "/images/items/01_4650/155_5542.jpg",
+				"hash": "f1f0718f0d86f8a3f387d17672185b77"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4650/",
-	"brandIds": [
-		"sdgundamseries"
-	],
+	"brandIds": ["sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
 }

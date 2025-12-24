@@ -27,29 +27,36 @@
 			"The Guncannon, which sorties with the Guntank as a support mecha for Gundam, creates a worldview of a war. The familiar cannon firing position from the opening scene can be recreated with open palm parts and a movable abdomen. Spray missile launchers can also be attached to the 240mm cannon mounts on both shoulders. It also comes with a beam rifle."
 		]
 	},
-	"images": [
-		"/images/items/01_3793/153_4742.jpg",
-		"/images/items/01_3793/155_4742.jpg",
-		"/images/items/01_3793/156_4742.jpg",
-		"/images/items/01_3793/157_4742.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4742.jpg",
+				"path": "/images/items/01_3793/153_4742.jpg",
+				"hash": "19fa6b6c5e596b65cb26df5c8a3753af"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4742.jpg",
+				"path": "/images/items/01_3793/155_4742.jpg",
+				"hash": "ca118690a2cd45744dc308f553958a61"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4742.jpg",
+				"path": "/images/items/01_3793/156_4742.jpg",
+				"hash": "c1d591e739cc1006376fc4a9eb54a348"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4742.jpg",
+				"path": "/images/items/01_3793/157_4742.jpg",
+				"hash": "3aeb780556721c081ef14f389b3efc52"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3793/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"manual": {
 		"id": "204",
 		"url": "https://manual.bandai-hobby.net/menus/detail/204/"

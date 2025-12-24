@@ -57,31 +57,51 @@
 			"Hand parts x 1 set"
 		]
 	},
-	"images": [
-		"/images/items/01_3627/153_4696.jpg",
-		"/images/items/01_3627/155_4696.jpg",
-		"/images/items/01_3627/156_4696.jpg",
-		"/images/items/01_3627/157_4696.jpg",
-		"/images/items/01_3627/158_4696.jpg",
-		"/images/items/01_3627/159_4696.jpg",
-		"/images/items/01_3627/189_4696.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4696.jpg",
+				"path": "/images/items/01_3627/153_4696.jpg",
+				"hash": "49bd78b58e23ae52ef5d34f967926d83"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4696.jpg",
+				"path": "/images/items/01_3627/155_4696.jpg",
+				"hash": "671c9f5c0bf248a3fc9889bdba5c418d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4696.jpg",
+				"path": "/images/items/01_3627/156_4696.jpg",
+				"hash": "4d3e7be1c0074977ca2ea2451c66dd17"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4696.jpg",
+				"path": "/images/items/01_3627/157_4696.jpg",
+				"hash": "313e7e02dc7347e9f855386fcaca6924"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4696.jpg",
+				"path": "/images/items/01_3627/158_4696.jpg",
+				"hash": "71817c5b95d761028cc53aba1760f305"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4696.jpg",
+				"path": "/images/items/01_3627/159_4696.jpg",
+				"hash": "de285234a764de351508b54e583985ab"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4696.jpg",
+				"path": "/images/items/01_3627/189_4696.jpg",
+				"hash": "b4921a5c3751e7c1ca49a383976b49be"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3627/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam_breaker_battlogue"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4128",
-		"item-1000166359",
-		"item-1000166322",
-		"item-1000166358"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam_breaker_battlogue"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4128", "item-1000166359", "item-1000166322", "item-1000166358"],
 	"manual": {
 		"id": "121",
 		"url": "https://manual.bandai-hobby.net/menus/detail/121/"

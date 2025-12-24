@@ -20,32 +20,24 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HGUC 1/144 グフ クリアカラーVer.登場！"
-		],
-		"en": [
-			"HGUC 1/144 Gouf Clear Color Ver. now available!"
-		]
+		"ja": ["HGUC 1/144 グフ クリアカラーVer.登場！"],
+		"en": ["HGUC 1/144 Gouf Clear Color Ver. now available!"]
 	},
-	"images": [
-		"/images/items/01_4824/153_5707.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5707.jpg",
+				"path": "/images/items/01_4824/153_5707.jpg",
+				"hash": "164cfae9d987162929721d4b1f6f3659"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4824/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

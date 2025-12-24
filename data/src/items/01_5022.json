@@ -60,30 +60,54 @@
 			"Lead wire x 2 types"
 		]
 	},
-	"images": [
-		"/images/items/01_5022/153_5889.jpg",
-		"/images/items/01_5022/155_5889.jpg",
-		"/images/items/01_5022/156_5889.jpg",
-		"/images/items/01_5022/157_5889.jpg",
-		"/images/items/01_5022/158_5889.jpg",
-		"/images/items/01_5022/159_5889.jpg",
-		"/images/items/01_5022/189_5889.jpg",
-		"/images/items/01_5022/190_5889.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5889.jpg",
+				"path": "/images/items/01_5022/153_5889.jpg",
+				"hash": "2dcbfdcd7d72fab72120c262f4f6af2c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5889.jpg",
+				"path": "/images/items/01_5022/155_5889.jpg",
+				"hash": "d279952b7e3fef77ebb96c1731027f9c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5889.jpg",
+				"path": "/images/items/01_5022/156_5889.jpg",
+				"hash": "fbad1ba307e597d525d03761b37a3aaa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5889.jpg",
+				"path": "/images/items/01_5022/157_5889.jpg",
+				"hash": "45d075368d0cfeb27d5b4a3298d525a1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5889.jpg",
+				"path": "/images/items/01_5022/158_5889.jpg",
+				"hash": "f6fb8b7f4ad176333115b75bdf4c3154"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5889.jpg",
+				"path": "/images/items/01_5022/159_5889.jpg",
+				"hash": "4ad3556f37c47ee7a5c263ea5324549b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5889.jpg",
+				"path": "/images/items/01_5022/189_5889.jpg",
+				"hash": "ca13ab130bf9bee7b5554a6865667e64"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5889.jpg",
+				"path": "/images/items/01_5022/190_5889.jpg",
+				"hash": "51cf0d80e8e6c1e1d45ac39a9f5c03c8"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5022/",
-	"brandIds": [
-		"figurerise-standard-amp"
-	],
-	"seriesIds": [
-		"digimon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5983",
-		"item-1000216437",
-		"01_5277",
-		"item-1000198198"
-	]
+	"brandIds": ["figurerise-standard-amp"],
+	"seriesIds": ["digimon"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5983", "item-1000216437", "01_5277", "item-1000198198"]
 }

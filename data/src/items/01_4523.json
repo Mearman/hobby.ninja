@@ -19,30 +19,32 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"「BB戦士 三国伝 孔明リ・ガズィ 趙雲ガンダム 赤壁の爆炎」登場！"
-		],
-		"en": [
-			"\"BB Senshi Sangokuden Komei Ri Gazi Zhao Yun Gundam Red Cliff Flame\" is now available!"
-		]
+		"ja": ["「BB戦士 三国伝 孔明リ・ガズィ 趙雲ガンダム 赤壁の爆炎」登場！"],
+		"en": ["\"BB Senshi Sangokuden Komei Ri Gazi Zhao Yun Gundam Red Cliff Flame\" is now available!"]
 	},
-	"images": [
-		"/images/items/01_4523/153_5424.jpg",
-		"/images/items/01_4523/155_5424.jpg",
-		"/images/items/01_4523/156_5424.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5424.jpg",
+				"path": "/images/items/01_4523/153_5424.jpg",
+				"hash": "f4b89cef6884b9c523fe93a1eb12185a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5424.jpg",
+				"path": "/images/items/01_4523/155_5424.jpg",
+				"hash": "85fde33877ab1f10128dc5fb58b45a33"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5424.jpg",
+				"path": "/images/items/01_4523/156_5424.jpg",
+				"hash": "9dd5e5d6c28e39830881b84826b096b5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4523/",
-	"brandIds": [
-		"sdgundamseries"
-	],
+	"brandIds": ["sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
 }

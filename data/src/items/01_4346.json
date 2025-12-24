@@ -43,43 +43,57 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"マフラーパーツ×2種",
-			"ハンドパーツ×1式",
-			"Figure-rise Effect 台座×1",
-			"シール×1"
-		],
-		"en": [
-			"Muffler parts x 2 types",
-			"Hand parts x 1 set",
-			"Figure-rise Effect pedestal x 1",
-			"Seal×1"
-		]
+		"ja": ["マフラーパーツ×2種", "ハンドパーツ×1式", "Figure-rise Effect 台座×1", "シール×1"],
+		"en": ["Muffler parts x 2 types", "Hand parts x 1 set", "Figure-rise Effect pedestal x 1", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_4346/153_5255.jpg",
-		"/images/items/01_4346/155_5255.jpg",
-		"/images/items/01_4346/156_5255.jpg",
-		"/images/items/01_4346/157_5255.jpg",
-		"/images/items/01_4346/158_5255.jpg",
-		"/images/items/01_4346/159_5255.jpg",
-		"/images/items/01_4346/189_5255.jpg",
-		"/images/items/01_4346/190_5255.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5255.jpg",
+				"path": "/images/items/01_4346/153_5255.jpg",
+				"hash": "7072471dc525c283cae538bf8c512ce8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5255.jpg",
+				"path": "/images/items/01_4346/155_5255.jpg",
+				"hash": "e3f5a2f9c1b56540ea2603054ce865e5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5255.jpg",
+				"path": "/images/items/01_4346/156_5255.jpg",
+				"hash": "aa3a79bb150d02e7ba0f1e8eec666d13"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5255.jpg",
+				"path": "/images/items/01_4346/157_5255.jpg",
+				"hash": "0f4301ac1478988ee8530fac72f46f95"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5255.jpg",
+				"path": "/images/items/01_4346/158_5255.jpg",
+				"hash": "40547f3fa2e02939846943e14ab81e4f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5255.jpg",
+				"path": "/images/items/01_4346/159_5255.jpg",
+				"hash": "49e98be1edd5d1b94e45bfa320ee0e70"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5255.jpg",
+				"path": "/images/items/01_4346/189_5255.jpg",
+				"hash": "f0dda5e2e0eb1ba6cf3ea2386f3d4118"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5255.jpg",
+				"path": "/images/items/01_4346/190_5255.jpg",
+				"hash": "56dc22e9fb6dd492db6a755eafe6a377"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4346/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"rider"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5451",
-		"item-1000215369",
-		"01_5276",
-		"01_5175"
-	]
+	"brandIds": ["figurerise-standard"],
+	"seriesIds": ["rider"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5451", "item-1000215369", "01_5276", "01_5175"]
 }

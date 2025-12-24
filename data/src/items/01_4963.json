@@ -20,33 +20,29 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HG 1/144 ベアッガイIII「セブン-イレブンカラー」登場！"
-		],
-		"en": [
-			"HG 1/144 Beargguy III \"7-Eleven Color\" now available!"
-		]
+		"ja": ["HG 1/144 ベアッガイIII「セブン-イレブンカラー」登場！"],
+		"en": ["HG 1/144 Beargguy III \"7-Eleven Color\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4963/153_5834.jpg",
-		"/images/items/01_4963/155_5834.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5834.jpg",
+				"path": "/images/items/01_4963/153_5834.jpg",
+				"hash": "6da9fcbda0fc9d95abaa86276c0f9a42"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5834.jpg",
+				"path": "/images/items/01_4963/155_5834.jpg",
+				"hash": "937f624884340c20adc7fbf661d636f7"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4963/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["buildfighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5057", "01_1942", "01_1288", "01_1261"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

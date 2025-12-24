@@ -19,32 +19,34 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"SD ガンダム三国伝 真 龍装劉備ガンダム+白銀流星馬 出陣バージョン登場！"
-		],
-		"en": [
-			"SD Gundam Sangokuden Shin Ryusou Liu Bei Gundam + Shirogane Ryuseima Departure version now available!"
-		]
+		"ja": ["SD ガンダム三国伝 真 龍装劉備ガンダム+白銀流星馬 出陣バージョン登場！"],
+		"en": ["SD Gundam Sangokuden Shin Ryusou Liu Bei Gundam + Shirogane Ryuseima Departure version now available!"]
 	},
-	"images": [
-		"/images/items/01_4808/153_5688.jpg",
-		"/images/items/01_4808/155_5688.jpg",
-		"/images/items/01_4808/156_5688.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5688.jpg",
+				"path": "/images/items/01_4808/153_5688.jpg",
+				"hash": "6f0b2d4f9bcce6cbfda5867d666b493d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5688.jpg",
+				"path": "/images/items/01_4808/155_5688.jpg",
+				"hash": "95279d5bd483afce88ae3a1dedf6a810"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5688.jpg",
+				"path": "/images/items/01_4808/156_5688.jpg",
+				"hash": "36f49f945980d9da100474bfb5479d2d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4808/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

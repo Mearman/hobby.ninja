@@ -53,28 +53,46 @@
 			"Multi-joint x 1 set"
 		]
 	},
-	"images": [
-		"/images/items/01_4997/1000201561_1.jpg",
-		"/images/items/01_4997/1000201561_2.jpg",
-		"/images/items/01_4997/1000201561_3.jpg",
-		"/images/items/01_4997/1000201561_4.jpg",
-		"/images/items/01_4997/1000201561_5.jpg",
-		"/images/items/01_4997/1000201561_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201561_1.jpg",
+				"path": "/images/items/01_4997/1000201561_1.jpg",
+				"hash": "ba6453c77d5f5d6e4d7beb8b4491cafb"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201561_2.jpg",
+				"path": "/images/items/01_4997/1000201561_2.jpg",
+				"hash": "d2af12f673d6281d31ff170d3216a0a0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201561_3.jpg",
+				"path": "/images/items/01_4997/1000201561_3.jpg",
+				"hash": "e263d1393efcda461f586fc55f8d6db8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201561_4.jpg",
+				"path": "/images/items/01_4997/1000201561_4.jpg",
+				"hash": "c8660f87d9fdc8c0e4cf785e45c74778"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201561_5.jpg",
+				"path": "/images/items/01_4997/1000201561_5.jpg",
+				"hash": "48a36be3632457097b93be5a746bc1ea"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201561_6.jpg",
+				"path": "/images/items/01_4997/1000201561_6.jpg",
+				"hash": "6c062db360c329ef8264c8502dcf9eaf"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4997/",
-	"brandIds": [
-		"30mm"
-	],
+	"brandIds": ["30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3766",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3766/"

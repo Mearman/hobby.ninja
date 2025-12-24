@@ -20,34 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HG 1/144 RX-78-2 GUNDAM Ver.G30th グリーン東京プロジェクト登場！"
-		],
-		"en": [
-			"HG 1/144 RX-78-2 GUNDAM Ver.G30th Green Tokyo Project is here!"
-		]
+		"ja": ["HG 1/144 RX-78-2 GUNDAM Ver.G30th グリーン東京プロジェクト登場！"],
+		"en": ["HG 1/144 RX-78-2 GUNDAM Ver.G30th Green Tokyo Project is here!"]
 	},
-	"images": [
-		"/images/items/01_4948/153_5820.jpg",
-		"/images/items/01_4948/155_5820.jpg",
-		"/images/items/01_4948/156_5820.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5820.jpg",
+				"path": "/images/items/01_4948/153_5820.jpg",
+				"hash": "d1e44713a3c5cdec85ff994b484e2441"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5820.jpg",
+				"path": "/images/items/01_4948/155_5820.jpg",
+				"hash": "1dca33bbc8e2322467518f745f9836f1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5820.jpg",
+				"path": "/images/items/01_4948/156_5820.jpg",
+				"hash": "a8cfecffbc6037282dbb5f508bd22f48"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4948/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

@@ -26,24 +26,26 @@
 			"1/144 Scale, collection series plastic model of \"Sword Impulse Gundam \", another form of Impulse Gundam that appears in \" Mobile Suit Gundam SEED DESTINY\". An introductory version that is easy to assemble even for plastic model beginners. The large sword Excalibur can be equipped in the backpack on the back. It is possible to connect two swords by attaching parts. A special beam rifle is included."
 		]
 	},
-	"images": [
-		"/images/items/01_4199/153_511.jpg",
-		"/images/items/01_4199/155_511.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_511.jpg",
+				"path": "/images/items/01_4199/153_511.jpg",
+				"hash": "d4da836c1acda56eed513f1d10e6e0e9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_511.jpg",
+				"path": "/images/items/01_4199/155_511.jpg",
+				"hash": "70f40c910b3076ec5826714b0bdc2256"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4199/",
 	"brandIds": [],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5394",
-		"item-1000214960",
-		"01_5378",
-		"01_5365"
-	],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5394", "item-1000214960", "01_5378", "01_5365"],
 	"manual": {
 		"id": "1147",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1147/"

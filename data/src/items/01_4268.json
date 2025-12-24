@@ -57,33 +57,61 @@
 			"Joint parts x 1 set"
 		]
 	},
-	"images": [
-		"/images/items/01_4268/153_5184.jpg",
-		"/images/items/01_4268/155_5184.jpg",
-		"/images/items/01_4268/156_5184.jpg",
-		"/images/items/01_4268/157_5184.jpg",
-		"/images/items/01_4268/158_5184.jpg",
-		"/images/items/01_4268/159_5184.jpg",
-		"/images/items/01_4268/189_5184.jpg",
-		"/images/items/01_4268/190_5184.jpg",
-		"/images/items/01_4268/01_4268_inst_0.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5184.jpg",
+				"path": "/images/items/01_4268/153_5184.jpg",
+				"hash": "13be1f7ca9bd55c42569408db68ccebe"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5184.jpg",
+				"path": "/images/items/01_4268/155_5184.jpg",
+				"hash": "9b4d8bab02b35445bced922062b38a31"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5184.jpg",
+				"path": "/images/items/01_4268/156_5184.jpg",
+				"hash": "d6bbf417518984e4c99ddb28963e6702"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5184.jpg",
+				"path": "/images/items/01_4268/157_5184.jpg",
+				"hash": "d1a06e2301a6191329264a9b63ba5d5e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5184.jpg",
+				"path": "/images/items/01_4268/158_5184.jpg",
+				"hash": "dfc1d578a99433ff04f46edc1fc2dd39"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5184.jpg",
+				"path": "/images/items/01_4268/159_5184.jpg",
+				"hash": "35745e4842bc16b03c6a78a845bd248a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5184.jpg",
+				"path": "/images/items/01_4268/189_5184.jpg",
+				"hash": "d73d1c0079917a0d4cd19a44aba7ba74"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5184.jpg",
+				"path": "/images/items/01_4268/190_5184.jpg",
+				"hash": "551045c733ed32931f935322404b92c0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4268_inst_0.jpg",
+				"path": "/images/items/01_4268/01_4268_inst_0.jpg",
+				"hash": "db895a708a9766c94aeafad544ce3620"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4268/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"g-witch"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216474",
-		"item-1000211616",
-		"01_5422",
-		"item-1000203129"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["g-witch"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203129"],
 	"manual": {
 		"id": "136",
 		"url": "https://manual.bandai-hobby.net/menus/detail/136/"

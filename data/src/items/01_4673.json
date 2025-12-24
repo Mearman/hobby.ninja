@@ -18,29 +18,27 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"SD ガンダム Gジェネレーション02 サザビー登場！"
-		],
-		"en": [
-			"SD Gundam G Generation 02 Sazabi is here!"
-		]
+		"ja": ["SD ガンダム Gジェネレーション02 サザビー登場！"],
+		"en": ["SD Gundam G Generation 02 Sazabi is here!"]
 	},
-	"images": [
-		"/images/items/01_4673/153_5563.jpg",
-		"/images/items/01_4673/155_5563.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5563.jpg",
+				"path": "/images/items/01_4673/153_5563.jpg",
+				"hash": "9b1e4ba8f6b15a5228bb2fdd8137abb5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5563.jpg",
+				"path": "/images/items/01_4673/155_5563.jpg",
+				"hash": "5165bbe2acb83e7e4eff7fede0b120ff"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4673/",
-	"brandIds": [
-		"sdgundamseries"
-	],
+	"brandIds": ["sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
 }

@@ -49,28 +49,46 @@
 			"Large Seal parts x 1 set"
 		]
 	},
-	"images": [
-		"/images/items/01_3360/1000156206_1.jpg",
-		"/images/items/01_3360/1000156206_2.jpg",
-		"/images/items/01_3360/1000156206_3.jpg",
-		"/images/items/01_3360/1000156206_4.jpg",
-		"/images/items/01_3360/1000156206_5.jpg",
-		"/images/items/01_3360/1000156206_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156206_1.jpg",
+				"path": "/images/items/01_3360/1000156206_1.jpg",
+				"hash": "d3f08b036b5964e9e3e7017af90c56e2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156206_2.jpg",
+				"path": "/images/items/01_3360/1000156206_2.jpg",
+				"hash": "7e1ac5f02dd96f0c47f92b3f56fc2c0d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156206_3.jpg",
+				"path": "/images/items/01_3360/1000156206_3.jpg",
+				"hash": "ef8a665f29e19fd48f2a21b982b1dcc9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156206_4.jpg",
+				"path": "/images/items/01_3360/1000156206_4.jpg",
+				"hash": "02cd77e02be69650830833d150073595"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156206_5.jpg",
+				"path": "/images/items/01_3360/1000156206_5.jpg",
+				"hash": "b6ec0c147433a6ed060d3e568db9371a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156206_6.jpg",
+				"path": "/images/items/01_3360/1000156206_6.jpg",
+				"hash": "1ab230eebd81edc715420c804fe86275"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3360/",
-	"brandIds": [
-		"30mm"
-	],
+	"brandIds": ["30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3712",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3712/"

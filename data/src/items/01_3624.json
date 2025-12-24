@@ -61,33 +61,61 @@
 			"Hand parts x 1 set"
 		]
 	},
-	"images": [
-		"/images/items/01_3624/153_4578.jpg",
-		"/images/items/01_3624/155_4578.jpg",
-		"/images/items/01_3624/156_4578.jpg",
-		"/images/items/01_3624/157_4578.jpg",
-		"/images/items/01_3624/158_4578.jpg",
-		"/images/items/01_3624/159_4578.jpg",
-		"/images/items/01_3624/189_4578.jpg",
-		"/images/items/01_3624/190_4578.jpg",
-		"/images/items/01_3624/191_4578.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4578.jpg",
+				"path": "/images/items/01_3624/153_4578.jpg",
+				"hash": "c1aa266f63548797a9ff93a7685cb103"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4578.jpg",
+				"path": "/images/items/01_3624/155_4578.jpg",
+				"hash": "cb684ec895653622421d7236678c9d6c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4578.jpg",
+				"path": "/images/items/01_3624/156_4578.jpg",
+				"hash": "f8f8b85e744dc3bd2e53fd90d38de1cd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4578.jpg",
+				"path": "/images/items/01_3624/157_4578.jpg",
+				"hash": "7ffa7f66b7ad3babe447c74e54eedacf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4578.jpg",
+				"path": "/images/items/01_3624/158_4578.jpg",
+				"hash": "7bc5cd61812fdb248a44623173bd2e8d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4578.jpg",
+				"path": "/images/items/01_3624/159_4578.jpg",
+				"hash": "9c293be722f35766318bc92e2eed1229"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4578.jpg",
+				"path": "/images/items/01_3624/189_4578.jpg",
+				"hash": "73f330a4c4200186dd44954ac3b60487"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4578.jpg",
+				"path": "/images/items/01_3624/190_4578.jpg",
+				"hash": "df2af567f7f2c94a97de16f74d2570cd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4578.jpg",
+				"path": "/images/items/01_3624/191_4578.jpg",
+				"hash": "2a08ee628f92602426631461b0a91b62"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3624/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam_breaker_battlogue"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4128",
-		"item-1000166359",
-		"item-1000166322",
-		"item-1000166358"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam_breaker_battlogue"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4128", "item-1000166359", "item-1000166322", "item-1000166358"],
 	"manual": {
 		"id": "119",
 		"url": "https://manual.bandai-hobby.net/menus/detail/119/"

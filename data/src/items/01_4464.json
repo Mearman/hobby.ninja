@@ -18,29 +18,27 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"SD ガンダム Gジェネレーション17 ザクII(フル装備型)が登場！"
-		],
-		"en": [
-			"SD Gundam G Generation 17 Zaku II (fully equipped) is now available!"
-		]
+		"ja": ["SD ガンダム Gジェネレーション17 ザクII(フル装備型)が登場！"],
+		"en": ["SD Gundam G Generation 17 Zaku II (fully equipped) is now available!"]
 	},
-	"images": [
-		"/images/items/01_4464/153_5369.jpg",
-		"/images/items/01_4464/155_5369.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5369.jpg",
+				"path": "/images/items/01_4464/153_5369.jpg",
+				"hash": "7fc315f76efcc6ac5a4edad007745c02"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5369.jpg",
+				"path": "/images/items/01_4464/155_5369.jpg",
+				"hash": "b3e16b4d5db8baca94edb3165879449b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4464/",
-	"brandIds": [
-		"sdgundamseries"
-	],
+	"brandIds": ["sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
 }

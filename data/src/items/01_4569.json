@@ -29,25 +29,29 @@
 			"Molded product x 21, water transfer decal x 1, assembly manual, booklet x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4569/153_5468.jpg",
-		"/images/items/01_4569/155_5468.jpg",
-		"/images/items/01_4569/156_5468.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5468.jpg",
+				"path": "/images/items/01_4569/153_5468.jpg",
+				"hash": "d37cf340435155104f6131928e7b21d8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5468.jpg",
+				"path": "/images/items/01_4569/155_5468.jpg",
+				"hash": "9fee547f569ef837b9640150df569c24"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5468.jpg",
+				"path": "/images/items/01_4569/156_5468.jpg",
+				"hash": "2a386c14a36b2cd5a9a886936bd1622d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4569/",
-	"brandIds": [
-		"megasize"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4961",
-		"01_4784",
-		"01_4782",
-		"01_4569"
-	]
+	"brandIds": ["megasize"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4961", "01_4784", "01_4782", "01_4569"]
 }

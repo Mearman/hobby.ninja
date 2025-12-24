@@ -20,33 +20,29 @@
 	"targetAge": 15,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"MG 1/100 ハイネ専用デスティニーガンダム 登場！"
-		],
-		"en": [
-			"MG 1/100 Heine exclusive Destiny Gundam now available!"
-		]
+		"ja": ["MG 1/100 ハイネ専用デスティニーガンダム 登場！"],
+		"en": ["MG 1/100 Heine exclusive Destiny Gundam now available!"]
 	},
-	"images": [
-		"/images/items/01_4806/153_5686.jpg",
-		"/images/items/01_4806/155_5686.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5686.jpg",
+				"path": "/images/items/01_4806/153_5686.jpg",
+				"hash": "574c46d9dee657a49a96de2f7e559f3c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5686.jpg",
+				"path": "/images/items/01_4806/155_5686.jpg",
+				"hash": "b58810a4e82846d2e7c916d274028701"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4806/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5421",
-		"item-1000183862",
-		"01_3712",
-		"item-1000155441"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5421", "item-1000183862", "01_3712", "item-1000155441"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

@@ -32,25 +32,26 @@
 			"A display stand is included to recreate the confrontation scene with MA Rafflesia, Rafflesia's tentacle arm and transparent cockpit canopy are also reproduced, and an \"Iron Mask\" figure is included in the cockpit."
 		]
 	},
-	"images": [
-		"/images/items/01_5608/153_659.jpg",
-		"/images/items/01_5608/155_659.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_659.jpg",
+				"path": "/images/items/01_5608/153_659.jpg",
+				"hash": "87c67418eab6b2667d00bc6ac72b0899"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_659.jpg",
+				"path": "/images/items/01_5608/155_659.jpg",
+				"hash": "a4bc52399ca5e087a5d08f3a5e541d00"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5608/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundamf91"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000155996",
-		"item-1000130517",
-		"01_1838"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["gundamf91"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000155996", "item-1000130517", "01_1838"],
 	"manual": {
 		"id": "825",
 		"url": "https://manual.bandai-hobby.net/menus/detail/825/"

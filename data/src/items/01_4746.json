@@ -18,30 +18,32 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"• SD ガンダム Gジェネレーションにギラ・ドーガ改が登場！"
-		],
-		"en": [
-			"• Gira Doga Kai appears in SD Gundam G Generation!"
-		]
+		"ja": ["• SD ガンダム Gジェネレーションにギラ・ドーガ改が登場！"],
+		"en": ["• Gira Doga Kai appears in SD Gundam G Generation!"]
 	},
-	"images": [
-		"/images/items/01_4746/153_5631.jpg",
-		"/images/items/01_4746/155_5631.jpg",
-		"/images/items/01_4746/156_5631.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5631.jpg",
+				"path": "/images/items/01_4746/153_5631.jpg",
+				"hash": "370811885057aaab7028c46d4b3ad7e9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5631.jpg",
+				"path": "/images/items/01_4746/155_5631.jpg",
+				"hash": "e0a850d01c646f4f4e06df3374f3e389"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5631.jpg",
+				"path": "/images/items/01_4746/156_5631.jpg",
+				"hash": "0bb64fa20f6d193d0c1812f59f248640"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4746/",
-	"brandIds": [
-		"sdgundamseries"
-	],
+	"brandIds": ["sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
 }

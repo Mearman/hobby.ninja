@@ -55,22 +55,29 @@
 			"Water transfer decal x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_7009/01_7009_0.jpg",
-		"/images/items/01_7009/01_7009_1.jpg",
-		"/images/items/01_7009/01_7009_2.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_7009_0.jpg",
+				"path": "/images/items/01_7009/01_7009_0.jpg",
+				"hash": "78a18e4e201b6cc2f3ac7b5824332e7a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7009_1.jpg",
+				"path": "/images/items/01_7009/01_7009_1.jpg",
+				"hash": "bcd52f4d603904d1521ac9e3766da6c5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7009_2.jpg",
+				"path": "/images/items/01_7009/01_7009_2.jpg",
+				"hash": "42b1524109a988c3422e487235039ee0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_7009/",
-	"brandIds": [
-		"30mp"
-	],
-	"seriesIds": [
-		"evangelion"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_6757"
-	]
+	"brandIds": ["30mp"],
+	"seriesIds": ["evangelion"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_6757"]
 }

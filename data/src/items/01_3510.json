@@ -52,32 +52,64 @@
 			"Foil Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_3510/153_4461.jpg",
-		"/images/items/01_3510/155_4461.jpg",
-		"/images/items/01_3510/156_4461.jpg",
-		"/images/items/01_3510/157_4461.jpg",
-		"/images/items/01_3510/158_4461.jpg",
-		"/images/items/01_3510/159_4461.jpg",
-		"/images/items/01_3510/189_4461.jpg",
-		"/images/items/01_3510/190_4461.jpg",
-		"/images/items/01_3510/191_4461.jpg",
-		"/images/items/01_3510/192_4461.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4461.jpg",
+				"path": "/images/items/01_3510/153_4461.jpg",
+				"hash": "64a4685e19e52b5d7dcd6bd314bd25c1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4461.jpg",
+				"path": "/images/items/01_3510/155_4461.jpg",
+				"hash": "f221bf63d36b3e35f8c3ebdd2fa3b96e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4461.jpg",
+				"path": "/images/items/01_3510/156_4461.jpg",
+				"hash": "fb677818861c8ba23a894162177dedd1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4461.jpg",
+				"path": "/images/items/01_3510/157_4461.jpg",
+				"hash": "158e7f7a7bc469729cf711469c7166d7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4461.jpg",
+				"path": "/images/items/01_3510/158_4461.jpg",
+				"hash": "b530e7919c39dda7019c77f5c183189d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4461.jpg",
+				"path": "/images/items/01_3510/159_4461.jpg",
+				"hash": "7324f1020f972af5c63ec8866db4e0b0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4461.jpg",
+				"path": "/images/items/01_3510/189_4461.jpg",
+				"hash": "a6671c165501fbc5ff969756e2d884d5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4461.jpg",
+				"path": "/images/items/01_3510/190_4461.jpg",
+				"hash": "c05b947964f17b6d16611daaf11e8884"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4461.jpg",
+				"path": "/images/items/01_3510/191_4461.jpg",
+				"hash": "de29ed7a71420019787e4fd5d69522fc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4461.jpg",
+				"path": "/images/items/01_3510/192_4461.jpg",
+				"hash": "6d90e78d32b9459b3b2084f214d7d0f1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3510/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"rider"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5451",
-		"item-1000215369",
-		"01_5276",
-		"01_5175"
-	]
+	"brandIds": ["figurerise-standard"],
+	"seriesIds": ["rider"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5451", "item-1000215369", "01_5276", "01_5175"]
 }

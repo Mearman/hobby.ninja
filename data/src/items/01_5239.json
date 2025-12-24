@@ -54,32 +54,61 @@
 			"Joint parts x 1 set"
 		]
 	},
-	"images": [
-		"/images/items/01_5239/1000209856_1.jpg",
-		"/images/items/01_5239/1000209856_2.jpg",
-		"/images/items/01_5239/1000209856_3.jpg",
-		"/images/items/01_5239/1000209856_4.jpg",
-		"/images/items/01_5239/1000209856_5.jpg",
-		"/images/items/01_5239/1000209856_6.jpg",
-		"/images/items/01_5239/1000209856_7.jpg",
-		"/images/items/01_5239/1000209856_8.jpg",
-		"/images/items/01_5239/1000209856_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209856_1.jpg",
+				"path": "/images/items/01_5239/1000209856_1.jpg",
+				"hash": "508677a86ca7b3546fa068bbf63c7c6c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209856_2.jpg",
+				"path": "/images/items/01_5239/1000209856_2.jpg",
+				"hash": "6053b828c91f8caefb5779284b297128"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209856_3.jpg",
+				"path": "/images/items/01_5239/1000209856_3.jpg",
+				"hash": "70835cb7c2ccd7e1db2bcad66f91525b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209856_4.jpg",
+				"path": "/images/items/01_5239/1000209856_4.jpg",
+				"hash": "a89d9088f1e0839b6c02d674426f3793"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209856_5.jpg",
+				"path": "/images/items/01_5239/1000209856_5.jpg",
+				"hash": "960114e17f1a4c429faa137a71fb8e48"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209856_6.jpg",
+				"path": "/images/items/01_5239/1000209856_6.jpg",
+				"hash": "aadf2ecc50f192d432c88a0aeade77b6"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209856_7.jpg",
+				"path": "/images/items/01_5239/1000209856_7.jpg",
+				"hash": "8419894ca9ad58a3d270c7f0bfad4702"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209856_8.jpg",
+				"path": "/images/items/01_5239/1000209856_8.jpg",
+				"hash": "acdfbe441a2640bcb87c39241ab0abf9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209856_9.jpg",
+				"path": "/images/items/01_5239/1000209856_9.jpg",
+				"hash": "92a9203ce33e4ca947d03f208d56d61e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5239/",
-	"brandIds": [
-		"optionpartsset"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6765",
-		"01_5237",
-		"01_5238"
-	],
+	"brandIds": ["optionpartsset"],
+	"seriesIds": ["buildfighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_6765", "01_5237", "01_5238"],
 	"manual": {
 		"id": "1657",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1657/"

@@ -27,25 +27,31 @@
 			"• Commercialize the Gundam Astray Mirage Frame 2nd issue that appears in Versus Astray. • Transforms from normal mode to fighting mode. • Wide range of movement allows various poses. • Marking design accelerates bold design. Molded product x 9, foil seal x 1, Tetron seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4544/153_5444.jpg",
-		"/images/items/01_4544/155_5444.jpg",
-		"/images/items/01_4544/156_5444.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5444.jpg",
+				"path": "/images/items/01_4544/153_5444.jpg",
+				"hash": "4c97c9eccfdb7936e8eb99db6e9ce4cf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5444.jpg",
+				"path": "/images/items/01_4544/155_5444.jpg",
+				"hash": "d4d210e19567dfa5527791e03dfe4043"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5444.jpg",
+				"path": "/images/items/01_4544/156_5444.jpg",
+				"hash": "a86166e742de083f3128f19d71849686"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4544/",
 	"brandIds": [],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5440",
-		"01_5441",
-		"01_5365"
-	],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5994", "01_5440", "01_5441", "01_5365"],
 	"manual": {
 		"id": "1180",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1180/"

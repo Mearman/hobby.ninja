@@ -41,41 +41,63 @@
 			"リード線×１式",
 			"シール×1"
 		],
-		"en": [
-			"Valkyria Rapier x1",
-			"Valkyria Round Seal × 1",
-			"Hand parts x 1 set",
-			"Lead wire x 1 set",
-			"Seal×1"
-		]
+		"en": ["Valkyria Rapier x1", "Valkyria Round Seal × 1", "Hand parts x 1 set", "Lead wire x 1 set", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_4103/153_5031.jpg",
-		"/images/items/01_4103/155_5031.jpg",
-		"/images/items/01_4103/156_5031.jpg",
-		"/images/items/01_4103/157_5031.jpg",
-		"/images/items/01_4103/158_5031.jpg",
-		"/images/items/01_4103/159_5031.jpg",
-		"/images/items/01_4103/01_4103_inst_0.jpg",
-		"/images/items/01_4103/01_4103_inst_1.jpg",
-		"/images/items/01_4103/01_4103_inst_2.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5031.jpg",
+				"path": "/images/items/01_4103/153_5031.jpg",
+				"hash": "95f5950c8e5489d77dfb10bde0d31df6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5031.jpg",
+				"path": "/images/items/01_4103/155_5031.jpg",
+				"hash": "238eee110fccd7a97d0c4d6f86a2407c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5031.jpg",
+				"path": "/images/items/01_4103/156_5031.jpg",
+				"hash": "554d60fc975f92b057f2edd1663a077c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5031.jpg",
+				"path": "/images/items/01_4103/157_5031.jpg",
+				"hash": "f90a64034e8147ae09889dc1cd935f65"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5031.jpg",
+				"path": "/images/items/01_4103/158_5031.jpg",
+				"hash": "5bef5c28d189ba7ec69b37cbfa0bf8ad"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5031.jpg",
+				"path": "/images/items/01_4103/159_5031.jpg",
+				"hash": "21ff68ede26d6451b49322a89247e82c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4103_inst_0.jpg",
+				"path": "/images/items/01_4103/01_4103_inst_0.jpg",
+				"hash": "55812dd94b80d4437706810a44c66a33"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4103_inst_1.jpg",
+				"path": "/images/items/01_4103/01_4103_inst_1.jpg",
+				"hash": "819fbb848f2de3bb0d78a89ab7d0fc96"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4103_inst_2.jpg",
+				"path": "/images/items/01_4103/01_4103_inst_2.jpg",
+				"hash": "80b1cbffc43131ee4284ade04a007170"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4103/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"tekketsu"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6773",
-		"01_6763",
-		"01_4240",
-		"01_4188"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["tekketsu"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_6773", "01_6763", "01_4240", "01_4188"],
 	"manual": {
 		"id": "139",
 		"url": "https://manual.bandai-hobby.net/menus/detail/139/"

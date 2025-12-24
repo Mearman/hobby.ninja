@@ -30,22 +30,24 @@
 			"• It is also possible to equip Super General, Great Steel Flash Crystal, and New World General's Wings."
 		]
 	},
-	"images": [
-		"/images/items/01_5853/153_92.jpg",
-		"/images/items/01_5853/155_92.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_92.jpg",
+				"path": "/images/items/01_5853/153_92.jpg",
+				"hash": "7195708203ca2c332801f45cbc7b8dc2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_92.jpg",
+				"path": "/images/items/01_5853/155_92.jpg",
+				"hash": "fe52cb39c4b820aaa8002a5bed327124"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5853/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

@@ -33,30 +33,41 @@
 			"• Comes with a pole to support the large booster."
 		]
 	},
-	"images": [
-		"/images/items/01_5804/153_874.jpg",
-		"/images/items/01_5804/155_874.jpg",
-		"/images/items/01_5804/156_874.jpg",
-		"/images/items/01_5804/157_874.jpg",
-		"/images/items/01_5804/01_5804_inst_0.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_874.jpg",
+				"path": "/images/items/01_5804/153_874.jpg",
+				"hash": "70563608360e9ef95baed326efb4ddab"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_874.jpg",
+				"path": "/images/items/01_5804/155_874.jpg",
+				"hash": "24bfaab292f1a84e1edf61c9e1061382"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_874.jpg",
+				"path": "/images/items/01_5804/156_874.jpg",
+				"hash": "68a76dd7e5032a874170241a760a02e8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_874.jpg",
+				"path": "/images/items/01_5804/157_874.jpg",
+				"hash": "dace64acc60a89c193afe38d8f3d8889"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5804_inst_0.jpg",
+				"path": "/images/items/01_5804/01_5804_inst_0.jpg",
+				"hash": "b8d339aad30982824e1932287e6b801b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5804/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "382",
 		"url": "https://manual.bandai-hobby.net/menus/detail/382/"

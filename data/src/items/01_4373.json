@@ -26,12 +26,31 @@
 			"A 1/144 Scale HG plastic model of \"Saber Gundam \" that appears in \" Mobile Suit Gundam SEED DESTINY\". Complete transformation to MA form is possible by replacing some parts. The large beam cannon on the back can be smoothly transformed and moved, and the beam saber attached to the shoulder can be attached and detached."
 		]
 	},
-	"images": [
-		"/images/items/01_4373/153_527.jpg",
-		"/images/items/01_4373/155_527.jpg",
-		"/images/items/01_4373/156_527.jpg",
-		"/images/items/01_4373/157_527.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_527.jpg",
+				"path": "/images/items/01_4373/153_527.jpg",
+				"hash": "22bee9724af14c5ba62c8062eda16550"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_527.jpg",
+				"path": "/images/items/01_4373/155_527.jpg",
+				"hash": "f78e79c5066978bb5eef66a7e2479a43"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_527.jpg",
+				"path": "/images/items/01_4373/156_527.jpg",
+				"hash": "c3488e15ba78b4b05bba8a2c697c1a75"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_527.jpg",
+				"path": "/images/items/01_4373/157_527.jpg",
+				"hash": "a0e1c47bdaf5e4a890d826dd509c6281"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4373/",
 	"brandIds": ["hg"],
 	"seriesIds": ["seed-d"],

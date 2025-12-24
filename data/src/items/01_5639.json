@@ -31,26 +31,34 @@
 			"■ --Arcade game [MOBILE SUIT GUNDAM Battlefield Bonds] and other Harmony of GUNDAM Source Latest MS [Jim Striker] lineup in the HGUC series -Rivets on the armor part of the whole body, reproduce the mold of welding and pursue a realistic feeling -Double joints are used for the elbows, and various poses are possible. -Comes with characteristic weapon [Twin Beam Spear], machine gun, shield -The beam part of the twin beam spear is reproduced with clear parts, and the saber part can be moved as set -The spike at the tip of the shield is equipped with a telescopic gimmick"
 		]
 	},
-	"images": [
-		"/images/items/01_5639/1000068441_1.jpg",
-		"/images/items/01_5639/1000068441_2.jpg",
-		"/images/items/01_5639/1000068441_3.jpg",
-		"/images/items/01_5639/1000068441_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000068441_1.jpg",
+				"path": "/images/items/01_5639/1000068441_1.jpg",
+				"hash": "b6d0f335459034e0d15cb9c2f3e56d9b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000068441_2.jpg",
+				"path": "/images/items/01_5639/1000068441_2.jpg",
+				"hash": "fa5206dd015f18badc60ebddf547454b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000068441_3.jpg",
+				"path": "/images/items/01_5639/1000068441_3.jpg",
+				"hash": "079eb35d3c9e580bc684e10869f8fc4e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000068441_4.jpg",
+				"path": "/images/items/01_5639/1000068441_4.jpg",
+				"hash": "6ca3755d6acecc60417d60433a27dc21"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5639/",
-	"brandIds": [
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2163",
-		"01_2161",
-		"01_2162",
-		"01_2144"
-	]
+	"brandIds": ["hguc"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2163", "01_2161", "01_2162", "01_2144"]
 }

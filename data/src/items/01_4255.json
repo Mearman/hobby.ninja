@@ -41,29 +41,36 @@
 			"Stylish coloring with vivid neon colors that make their presence felt in the black created from circulation. Futuristic attire becomes a symbol of a cyclical future."
 		]
 	},
-	"images": [
-		"/images/items/01_4255/153_5172.jpg",
-		"/images/items/01_4255/155_5172.jpg",
-		"/images/items/01_4255/156_5172.jpg",
-		"/images/items/01_4255/157_5172.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5172.jpg",
+				"path": "/images/items/01_4255/153_5172.jpg",
+				"hash": "fab25d500fc2128d924bdb5131532c3a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5172.jpg",
+				"path": "/images/items/01_4255/155_5172.jpg",
+				"hash": "8eaa2510a7741443def0ab0f3939582e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5172.jpg",
+				"path": "/images/items/01_4255/156_5172.jpg",
+				"hash": "586bb732a8fc0e33e8ecf0308da6b625"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5172.jpg",
+				"path": "/images/items/01_4255/157_5172.jpg",
+				"hash": "b64bbad5275ec27deb9cb8aacd455288"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4255/",
-	"brandIds": [
-		"ecoplaproject_g",
-		"mg"
-	],
-	"seriesIds": [
-		"tekketsu"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5469",
-		"01_4214",
-		"01_3842",
-		"01_3458"
-	],
+	"brandIds": ["ecoplaproject_g", "mg"],
+	"seriesIds": ["tekketsu"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5469", "01_4214", "01_3842", "01_3458"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

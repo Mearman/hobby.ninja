@@ -26,23 +26,29 @@
 			"Cao Cao's military strategist, Sima Yi Sazabi, appears in the \"SD Gundam Three Kingdoms Brave Battle Warriors\" series."
 		]
 	},
-	"images": [
-		"/images/items/01_4739/153_5624.jpg",
-		"/images/items/01_4739/155_5624.jpg",
-		"/images/items/01_4739/156_5624.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5624.jpg",
+				"path": "/images/items/01_4739/153_5624.jpg",
+				"hash": "aded084fd103f2039c6325a876812021"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5624.jpg",
+				"path": "/images/items/01_4739/155_5624.jpg",
+				"hash": "0c9b7342e2fb38ddbf92f9d3f3e12817"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5624.jpg",
+				"path": "/images/items/01_4739/156_5624.jpg",
+				"hash": "5951cb395478750cbd2cb71ceaf7cf4f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4739/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

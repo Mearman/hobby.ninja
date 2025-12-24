@@ -26,22 +26,24 @@
 			"The aircraft that appeared on the TV \"Mobile New Century Gundam X\" has been made into a 1/100 scale kit. The deformation of the inner arm Gatling and the combination and storage gimmick with the left arm can be reproduced. The opening and closing mechanisms of the Breast Gatling, Shoulder Missile, and Hornet Missile can be reproduced. Some plated parts are used. The right shoulder missile hatch is movable. The seal is movable. The beam knife can be stored in the right shin. A separate missile pod can be mounted on the left shin. Comes with foil seal."
 		]
 	},
-	"images": [
-		"/images/items/01_4717/153_5603.jpg",
-		"/images/items/01_4717/155_5603.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5603.jpg",
+				"path": "/images/items/01_4717/153_5603.jpg",
+				"hash": "4ab19803b3430e2c074c6c57a623b52a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5603.jpg",
+				"path": "/images/items/01_4717/155_5603.jpg",
+				"hash": "06e948fb0bcfd5c79c1e08f9eb6c296d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4717/",
 	"brandIds": [],
-	"seriesIds": [
-		"x"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000147185",
-		"item-1000147187",
-		"item-1000124674",
-		"01_298"
-	]
+	"seriesIds": ["x"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000147185", "item-1000147187", "item-1000124674", "01_298"]
 }

@@ -37,25 +37,31 @@
 			"*This product is scheduled to be sold on the Bandai Namco Group's official mail order site, THE GUNDAM BASE stores, and overseas."
 		]
 	},
-	"images": [
-		"/images/items/01_4253/153_5170.jpg",
-		"/images/items/01_4253/155_5170.jpg",
-		"/images/items/01_4253/156_5170.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5170.jpg",
+				"path": "/images/items/01_4253/153_5170.jpg",
+				"hash": "801e5c2c6dd088fd7068b0637a2539f1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5170.jpg",
+				"path": "/images/items/01_4253/155_5170.jpg",
+				"hash": "56b9f4a9c3bf68fb76d36bd9cc484cfe"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5170.jpg",
+				"path": "/images/items/01_4253/156_5170.jpg",
+				"hash": "5ebbac3f76238159417eb2b1186f6139"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4253/",
 	"brandIds": [],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5478",
-		"01_5531",
-		"01_5532",
-		"01_5423"
-	],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5478", "01_5531", "01_5532", "01_5423"],
 	"tag": {
 		"ja": "GUNDAM SIDE-F",
 		"en": "GUNDAM SIDE-F"

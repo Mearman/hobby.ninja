@@ -39,29 +39,41 @@
 			"• Various weapons such as Seals, Bazooka, and Vulcan Pods are also included!"
 		]
 	},
-	"images": [
-		"/images/items/01_3581/153_4536.jpg",
-		"/images/items/01_3581/155_4536.jpg",
-		"/images/items/01_3581/156_4536.jpg",
-		"/images/items/01_3581/157_4536.jpg",
-		"/images/items/01_3581/158_4536.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4536.jpg",
+				"path": "/images/items/01_3581/153_4536.jpg",
+				"hash": "91ce77e84fd734d23ae0a295701aae4e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4536.jpg",
+				"path": "/images/items/01_3581/155_4536.jpg",
+				"hash": "c6337ef5b707727265376606af6e4f46"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4536.jpg",
+				"path": "/images/items/01_3581/156_4536.jpg",
+				"hash": "137a8494c39bf176dbf4c641bd46e0eb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4536.jpg",
+				"path": "/images/items/01_3581/157_4536.jpg",
+				"hash": "22a09b2e963c7765ad6e3d7f9704fd92"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4536.jpg",
+				"path": "/images/items/01_3581/158_4536.jpg",
+				"hash": "1cb980264ebb00cb5b6df1846fff30c9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3581/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

@@ -19,30 +19,32 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"「BB戦士 三国伝 曹操ガンダム・司馬懿サザビー 官渡の奇跡」登場！"
-		],
-		"en": [
-			"\"BB Senshi Three Kingdoms Cao Cao Gundam/Sima Yi Sazabi Miracle of Guandu\" now available!"
-		]
+		"ja": ["「BB戦士 三国伝 曹操ガンダム・司馬懿サザビー 官渡の奇跡」登場！"],
+		"en": ["\"BB Senshi Three Kingdoms Cao Cao Gundam/Sima Yi Sazabi Miracle of Guandu\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4520/153_5421.jpg",
-		"/images/items/01_4520/155_5421.jpg",
-		"/images/items/01_4520/156_5421.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5421.jpg",
+				"path": "/images/items/01_4520/153_5421.jpg",
+				"hash": "bfef77cbfbfa135d66b7f0a763c07f16"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5421.jpg",
+				"path": "/images/items/01_4520/155_5421.jpg",
+				"hash": "b99345e5269189351d12cb7c9f9ba3f6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5421.jpg",
+				"path": "/images/items/01_4520/156_5421.jpg",
+				"hash": "25f32c4bcc7f514348f25a27035d4a92"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4520/",
-	"brandIds": [
-		"sdgundamseries"
-	],
+	"brandIds": ["sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
 }

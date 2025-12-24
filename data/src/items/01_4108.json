@@ -35,48 +35,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"コアライフル×１",
-			"ガトリングユニット×１式",
-			"レールガンユニット×１",
-			"マガジン×2種",
-			"バレルユニット×2種"
-		],
-		"en": [
-			"Core rifle x1",
-			"Gatling unit x 1 set",
-			"Railgun unit x 1",
-			"Magazine x 2 types",
-			"Barrel unit x 2 types"
-		]
+		"ja": ["コアライフル×１", "ガトリングユニット×１式", "レールガンユニット×１", "マガジン×2種", "バレルユニット×2種"],
+		"en": ["Core rifle x1", "Gatling unit x 1 set", "Railgun unit x 1", "Magazine x 2 types", "Barrel unit x 2 types"]
 	},
-	"images": [
-		"/images/items/01_4108/153_5035.jpg",
-		"/images/items/01_4108/155_5035.jpg",
-		"/images/items/01_4108/156_5035.jpg",
-		"/images/items/01_4108/157_5035.jpg",
-		"/images/items/01_4108/158_5035.jpg",
-		"/images/items/01_4108/159_5035.jpg",
-		"/images/items/01_4108/189_5035.jpg",
-		"/images/items/01_4108/190_5035.jpg",
-		"/images/items/01_4108/191_5035.jpg",
-		"/images/items/01_4108/192_5035.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5035.jpg",
+				"path": "/images/items/01_4108/153_5035.jpg",
+				"hash": "d0335967bc5c73386aa24e0088b00ae3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5035.jpg",
+				"path": "/images/items/01_4108/155_5035.jpg",
+				"hash": "b05df362371ffc8b66317232401790c5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5035.jpg",
+				"path": "/images/items/01_4108/156_5035.jpg",
+				"hash": "94cde12ab42582afca5b532a8a68d361"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5035.jpg",
+				"path": "/images/items/01_4108/157_5035.jpg",
+				"hash": "37ed274b04a0ac654fa083a457fce847"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5035.jpg",
+				"path": "/images/items/01_4108/158_5035.jpg",
+				"hash": "a774236ae1d9eb72502e9243b0a2f0d4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5035.jpg",
+				"path": "/images/items/01_4108/159_5035.jpg",
+				"hash": "2329a97883caef10e79a7e44948bd77f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5035.jpg",
+				"path": "/images/items/01_4108/189_5035.jpg",
+				"hash": "1f01e0c765ae73776a20075213d04125"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5035.jpg",
+				"path": "/images/items/01_4108/190_5035.jpg",
+				"hash": "278f3a21b0f50cf0fca87ecda26531af"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5035.jpg",
+				"path": "/images/items/01_4108/191_5035.jpg",
+				"hash": "fe97d45ce2948b06a97e212a2e8c53a2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5035.jpg",
+				"path": "/images/items/01_4108/192_5035.jpg",
+				"hash": "1ae1f1295587e5bb34c0f30da1954eb6"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4108/",
-	"brandIds": [
-		"customize_scenebase",
-		"30mm"
-	],
+	"brandIds": ["customize_scenebase", "30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3740",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3740/"

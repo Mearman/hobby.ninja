@@ -37,21 +37,30 @@
 			"Molded product x 8, realistic decal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_3720/1000092481_1.jpg",
-		"/images/items/01_3720/1000092481_2.jpg",
-		"/images/items/01_3720/1000092481_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092481_1.jpg",
+				"path": "/images/items/01_3720/1000092481_1.jpg",
+				"hash": "63848cffc4d3db6df31811abc67060b4"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092481_2.jpg",
+				"path": "/images/items/01_3720/1000092481_2.jpg",
+				"hash": "cdc9fc67c5247d05d21bf87ff92ade4f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092481_3.jpg",
+				"path": "/images/items/01_3720/1000092481_3.jpg",
+				"hash": "ab7a1e3034e20f9beb9907edb9cfd7b3"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3720/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": [],
 	"manual": {
 		"id": "658",

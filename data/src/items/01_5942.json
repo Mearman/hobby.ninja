@@ -35,36 +35,44 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"アーマーパーツ×1式",
-			"武装パーツ×1式"
-		],
-		"en": [
-			"Armor parts x 1 set",
-			"Armed parts x 1 set"
-		]
+		"ja": ["アーマーパーツ×1式", "武装パーツ×1式"],
+		"en": ["Armor parts x 1 set", "Armed parts x 1 set"]
 	},
-	"images": [
-		"/images/items/01_5942/01_5942_0.jpg",
-		"/images/items/01_5942/01_5942_1.jpg",
-		"/images/items/01_5942/01_5942_2.jpg",
-		"/images/items/01_5942/01_5942_3.jpg",
-		"/images/items/01_5942/01_5942_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5942_0.jpg",
+				"path": "/images/items/01_5942/01_5942_0.jpg",
+				"hash": "f07f2bfa4952e4c9ab2f651bcddeeb6a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5942_1.jpg",
+				"path": "/images/items/01_5942/01_5942_1.jpg",
+				"hash": "4cf123f1fcf8dc642acf10d34da1047a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5942_2.jpg",
+				"path": "/images/items/01_5942/01_5942_2.jpg",
+				"hash": "93a49ecaf8e7f66019691fd5246e0c9a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5942_3.jpg",
+				"path": "/images/items/01_5942/01_5942_3.jpg",
+				"hash": "9f2c9ace0627c44157cad7f2ba19184d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5942_4.jpg",
+				"path": "/images/items/01_5942/01_5942_4.jpg",
+				"hash": "2fbe1a54f4d258549294edc951799f3f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5942/",
-	"brandIds": [
-		"30mf"
-	],
+	"brandIds": ["30mf"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5978",
-		"01_5979",
-		"01_5980",
-		"01_5981"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5978", "01_5979", "01_5980", "01_5981"],
 	"manual": {
 		"id": "3426",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3426/"

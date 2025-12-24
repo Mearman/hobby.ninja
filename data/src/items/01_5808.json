@@ -35,23 +35,31 @@
 			"■ Use the optional LAUNCHER STRIKER / SWORD STRIKER PACK for MG 1/100 AILE STRIKE GUNDAM Ver. RM to recreate Perfect Strike GUNDAM."
 		]
 	},
-	"images": [
-		"/images/items/01_5808/1000081599_1.jpg",
-		"/images/items/01_5808/1000081599_2.jpg",
-		"/images/items/01_5808/1000081599_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000081599_1.jpg",
+				"path": "/images/items/01_5808/1000081599_1.jpg",
+				"hash": "7861969dca16cca4abced1e7df3cf8ab"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000081599_2.jpg",
+				"path": "/images/items/01_5808/1000081599_2.jpg",
+				"hash": "41ad72d9fb4395af38f9dcf7083b76e2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000081599_3.jpg",
+				"path": "/images/items/01_5808/1000081599_3.jpg",
+				"hash": "84905ee2d7fde24ed8b550c0a9e127e6"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5808/",
 	"brandIds": [],
-	"seriesIds": [
-		"seed"
-	],
+	"seriesIds": ["seed"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5221",
-		"01_4272",
-		"01_4195"
-	],
+	"relatedItemIds": ["01_5994", "01_5221", "01_4272", "01_4195"],
 	"manual": {
 		"id": "849",
 		"url": "https://manual.bandai-hobby.net/menus/detail/849/"

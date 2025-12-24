@@ -26,28 +26,36 @@
 			"HG specification plastic model of the MS variation machine \"105 dagger + gun barrel \" developed in the model magazine Hobby Japan, Dengeki Hobby Magazine, Gundam Ace, and Small Ace's \" Mobile Suit Gundam SEED MSV\". The gun barrel can be transformed into MA form by replacing the nose. A special pedestal is included, allowing you to display the flying dagger gun barrel and MA form gun barrel. The four barrel parts of the gun barrel are removable, and the opening and closing of the missile hatch can be recreated by replacing parts. Weapons include a special beam rifle and Seal."
 		]
 	},
-	"images": [
-		"/images/items/01_3832/153_477.jpg",
-		"/images/items/01_3832/155_477.jpg",
-		"/images/items/01_3832/156_477.jpg",
-		"/images/items/01_3832/157_477.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_477.jpg",
+				"path": "/images/items/01_3832/153_477.jpg",
+				"hash": "d170b36a9da5bd511c1b673f8399c596"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_477.jpg",
+				"path": "/images/items/01_3832/155_477.jpg",
+				"hash": "765c8b7a04fa8bbd1c132b4d505e6d98"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_477.jpg",
+				"path": "/images/items/01_3832/156_477.jpg",
+				"hash": "bee4441e8d869fd40a867fea3d5cae6b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_477.jpg",
+				"path": "/images/items/01_3832/157_477.jpg",
+				"hash": "019b89bd7f5c29399d62b396dd3b084c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3832/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181726",
-		"01_1930",
-		"01_384",
-		"01_83"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181726", "01_1930", "01_384", "01_83"],
 	"manual": {
 		"id": "158",
 		"url": "https://manual.bandai-hobby.net/menus/detail/158/"

@@ -33,21 +33,19 @@
 			"Hands (left and right) x 2 each, back parts x 12"
 		]
 	},
-	"images": [
-		"/images/items/01_3600/153_4555.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4555.jpg",
+				"path": "/images/items/01_3600/153_4555.jpg",
+				"hash": "67299284ddc265f1cf8c885a75450cd0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3600/",
-	"brandIds": [
-		"parts"
-	],
+	"brandIds": ["parts"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3582",
-		"01_3563",
-		"01_3564",
-		"01_636"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3582", "01_3563", "01_3564", "01_636"]
 }

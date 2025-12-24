@@ -33,23 +33,31 @@
 			"■ Comes with the Sinanju bazooka used in the play. The barrel is equipped with a telescopic gimmick."
 		]
 	},
-	"images": [
-		"/images/items/01_5788/1000080901_1.jpg",
-		"/images/items/01_5788/1000080901_2.jpg",
-		"/images/items/01_5788/1000080901_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000080901_1.jpg",
+				"path": "/images/items/01_5788/1000080901_1.jpg",
+				"hash": "e36ccec0dc4489f70583085e49dfdc10"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000080901_2.jpg",
+				"path": "/images/items/01_5788/1000080901_2.jpg",
+				"hash": "07231168b7decd1497c2b3eafb725f36"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000080901_3.jpg",
+				"path": "/images/items/01_5788/1000080901_3.jpg",
+				"hash": "13748df9de6ada7f8a14af8a8eebf63c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5788/",
 	"brandIds": [],
-	"seriesIds": [
-		"unicorn"
-	],
+	"seriesIds": ["unicorn"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"item-1000183366",
-		"01_4271",
-		"01_2670",
-		"item-1000138934"
-	],
+	"relatedItemIds": ["item-1000183366", "01_4271", "01_2670", "item-1000138934"],
 	"manual": {
 		"id": "610",
 		"url": "https://manual.bandai-hobby.net/menus/detail/610/"

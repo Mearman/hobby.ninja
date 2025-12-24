@@ -19,32 +19,24 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"SD ゴッグ&アッガイ&ゾック Ver.GFT トリコロールペイント　登場！"
-		],
-		"en": [
-			"SD Gog & Acguy & Zock Ver.GFT tricolor paint now available!"
-		]
+		"ja": ["SD ゴッグ&アッガイ&ゾック Ver.GFT トリコロールペイント　登場！"],
+		"en": ["SD Gog & Acguy & Zock Ver.GFT tricolor paint now available!"]
 	},
-	"images": [
-		"/images/items/01_4789/153_5670.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5670.jpg",
+				"path": "/images/items/01_4789/153_5670.jpg",
+				"hash": "11c3acce06f382cd46d8032f277a91f6"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4789/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_4783",
-		"01_2038",
-		"01_1916"
-	],
+	"brandIds": ["bb"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_4783", "01_2038", "01_1916"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

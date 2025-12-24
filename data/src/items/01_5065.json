@@ -39,47 +39,67 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ブレード×１",
-			"シールド×１",
-			"ハンドパーツ×１式",
-			"ジョイントパーツ×１",
-			"シール×１"
-		],
-		"en": [
-			"Blade x 1",
-			"Seal de x1",
-			"Hand parts x 1 set",
-			"Joint parts x 1",
-			"Seal×1"
-		]
+		"ja": ["ブレード×１", "シールド×１", "ハンドパーツ×１式", "ジョイントパーツ×１", "シール×１"],
+		"en": ["Blade x 1", "Seal de x1", "Hand parts x 1 set", "Joint parts x 1", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_5065/153_5930.jpg",
-		"/images/items/01_5065/155_5930.jpg",
-		"/images/items/01_5065/156_5930.jpg",
-		"/images/items/01_5065/157_5930.jpg",
-		"/images/items/01_5065/158_5930.jpg",
-		"/images/items/01_5065/159_5930.jpg",
-		"/images/items/01_5065/189_5930.jpg",
-		"/images/items/01_5065/190_5930.jpg",
-		"/images/items/01_5065/191_5930.jpg",
-		"/images/items/01_5065/192_5930.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5930.jpg",
+				"path": "/images/items/01_5065/153_5930.jpg",
+				"hash": "6049470e7c6cffe3913f325984deb0e4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5930.jpg",
+				"path": "/images/items/01_5065/155_5930.jpg",
+				"hash": "4914bfe37d3116d43acbc08d5e3177f2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5930.jpg",
+				"path": "/images/items/01_5065/156_5930.jpg",
+				"hash": "4097aa9676a586ddec879b53601738ad"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5930.jpg",
+				"path": "/images/items/01_5065/157_5930.jpg",
+				"hash": "1b265fd4de5020d6d3af9fe1bf2f34ef"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5930.jpg",
+				"path": "/images/items/01_5065/158_5930.jpg",
+				"hash": "9355f08fc92cfc6f5a0821f8c1a619ec"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5930.jpg",
+				"path": "/images/items/01_5065/159_5930.jpg",
+				"hash": "1bf344542210862154ffc91efc46a4cf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5930.jpg",
+				"path": "/images/items/01_5065/189_5930.jpg",
+				"hash": "ca051618e2c482d065286aa6cb3c129d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5930.jpg",
+				"path": "/images/items/01_5065/190_5930.jpg",
+				"hash": "d939564e006147ab895944d53de74d82"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5930.jpg",
+				"path": "/images/items/01_5065/191_5930.jpg",
+				"hash": "a52ae99ec28058421b1e44b3eeb57efa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5930.jpg",
+				"path": "/images/items/01_5065/192_5930.jpg",
+				"hash": "f25679b13fcf09014efae2ca60d7500c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5065/",
-	"brandIds": [
-		"figurerise-standard-amp"
-	],
-	"seriesIds": [
-		"yugioh"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5554",
-		"01_5370",
-		"01_4916",
-		"01_4344"
-	]
+	"brandIds": ["figurerise-standard-amp"],
+	"seriesIds": ["yugioh"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5554", "01_5370", "01_4916", "01_4344"]
 }

@@ -20,37 +20,49 @@
 	"targetAge": 15,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"RG 1/144 RX-78-2 ガンダム & エールストライクガンダム セット [ガンダムワールドコントラストカラー]"
-		],
-		"en": [
-			"RG 1/144 RX-78-2 Gundam & Ale Strike Gundam Set [Gundam World Contrast Color]"
-		]
+		"ja": ["RG 1/144 RX-78-2 ガンダム & エールストライクガンダム セット [ガンダムワールドコントラストカラー]"],
+		"en": ["RG 1/144 RX-78-2 Gundam & Ale Strike Gundam Set [Gundam World Contrast Color]"]
 	},
-	"images": [
-		"/images/items/01_4769/153_5652.jpg",
-		"/images/items/01_4769/155_5652.jpg",
-		"/images/items/01_4769/156_5652.jpg",
-		"/images/items/01_4769/157_5652.jpg",
-		"/images/items/01_4769/158_5652.jpg",
-		"/images/items/01_4769/159_5652.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5652.jpg",
+				"path": "/images/items/01_4769/153_5652.jpg",
+				"hash": "cd3482ba71520eefbcde3e826a42e40d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5652.jpg",
+				"path": "/images/items/01_4769/155_5652.jpg",
+				"hash": "de5ebe5d74a2537459f63532a30cb3cd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5652.jpg",
+				"path": "/images/items/01_4769/156_5652.jpg",
+				"hash": "98431a4a169e090a0523fe51b9f1af0a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5652.jpg",
+				"path": "/images/items/01_4769/157_5652.jpg",
+				"hash": "0716130a824e7bae4b069abf34d848ab"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5652.jpg",
+				"path": "/images/items/01_4769/158_5652.jpg",
+				"hash": "9020cb6b6c51fd69d9a9439f84c43ae1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5652.jpg",
+				"path": "/images/items/01_4769/159_5652.jpg",
+				"hash": "21d9ab16da66cded674fc8b093a5b469"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4769/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5160",
-		"01_3792",
-		"01_3414",
-		"01_3307"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5160", "01_3792", "01_3414", "01_3307"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

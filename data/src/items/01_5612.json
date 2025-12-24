@@ -27,29 +27,36 @@
 			"The MS \"Powered Jim \" that appears in \" Mobile Suit Gundam 0083 Stardust Memory\" is now available in the HGUC series. Pursuing a smart appearance with parts that make the seams as inconspicuous as possible throughout the body. The elbows have double joints, increasing the range of motion. Three types of wrists are included: a right wrist for rifle/bazooka, a right wrist for saber, and a left wrist for bazooka with a movable axis added to the wrist. Includes bullbop machine gun, seal, beam saber, and hyper bazooka."
 		]
 	},
-	"images": [
-		"/images/items/01_5612/153_664.jpg",
-		"/images/items/01_5612/155_664.jpg",
-		"/images/items/01_5612/156_664.jpg",
-		"/images/items/01_5612/157_664.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_664.jpg",
+				"path": "/images/items/01_5612/153_664.jpg",
+				"hash": "f575046e63512a4cd61f183000e815e2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_664.jpg",
+				"path": "/images/items/01_5612/155_664.jpg",
+				"hash": "0097a26be485ca3099b31feb5abf3417"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_664.jpg",
+				"path": "/images/items/01_5612/156_664.jpg",
+				"hash": "8c7166a1d8b31eefdbede0b63f49fa9d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_664.jpg",
+				"path": "/images/items/01_5612/157_664.jpg",
+				"hash": "4e3eb13a0fde422d0c422dcd90d954cd"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5612/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"g-0083"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000102912",
-		"item-1000102910",
-		"item-1000115500",
-		"01_5843"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["g-0083"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000102912", "item-1000102910", "item-1000115500", "01_5843"],
 	"manual": {
 		"id": "826",
 		"url": "https://manual.bandai-hobby.net/menus/detail/826/"

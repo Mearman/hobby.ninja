@@ -31,24 +31,26 @@
 			"A display stand is included for the first time only, so you can display it as is in the impressive aerial scene."
 		]
 	},
-	"images": [
-		"/images/items/01_5563/153_639.jpg",
-		"/images/items/01_5563/155_639.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_639.jpg",
+				"path": "/images/items/01_5563/153_639.jpg",
+				"hash": "c8031885c3da73d48224560f55664469"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_639.jpg",
+				"path": "/images/items/01_5563/155_639.jpg",
+				"hash": "4f036ab92f7053f8097dfa9525551706"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5563/",
 	"brandIds": [],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5394",
-		"item-1000214960",
-		"01_5378",
-		"01_5365"
-	],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5394", "item-1000214960", "01_5378", "01_5365"],
 	"manual": {
 		"id": "1167",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1167/"

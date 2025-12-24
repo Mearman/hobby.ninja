@@ -43,27 +43,31 @@
 			"■ Dedicated pedestal included. With a special joint, both MS and Neobird forms can be displayed in the air. Molded ×18, Foil Seal ×1, Dry Decal×1, Tetoron Seal ×1, Assembly Instructions ×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5882/1000084423_1.jpg",
-		"/images/items/01_5882/1000084423_2.jpg",
-		"/images/items/01_5882/1000084423_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000084423_1.jpg",
+				"path": "/images/items/01_5882/1000084423_1.jpg",
+				"hash": "83a4762bdc8d4472d71e018bbc5b1bef"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000084423_2.jpg",
+				"path": "/images/items/01_5882/1000084423_2.jpg",
+				"hash": "872d07bc0893e2cccb7be45769efaa56"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000084423_3.jpg",
+				"path": "/images/items/01_5882/1000084423_3.jpg",
+				"hash": "2ed3a8fe5902ed43e26c6f1369b9e281"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5882/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000194972",
-		"01_3410",
-		"item-1000171722",
-		"item-1000142325"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["endlesswaltz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000194972", "01_3410", "item-1000171722", "item-1000142325"],
 	"manual": {
 		"id": "608",
 		"url": "https://manual.bandai-hobby.net/menus/detail/608/"

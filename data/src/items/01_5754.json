@@ -30,30 +30,41 @@
 			"■ By joint with a dedicated bar, it is possible to reproduce the \"sub-flight system\" that carries other MS. Molded product ×13, foil seal ×1, assembly instruction ×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5754/1000092205_1.jpg",
-		"/images/items/01_5754/1000092205_2.jpg",
-		"/images/items/01_5754/1000092205_3.jpg",
-		"/images/items/01_5754/1000092205_4.jpg",
-		"/images/items/01_5754/1000092205_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092205_1.jpg",
+				"path": "/images/items/01_5754/1000092205_1.jpg",
+				"hash": "9439e994fcb22d0cb7a7b2ea03502384"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092205_2.jpg",
+				"path": "/images/items/01_5754/1000092205_2.jpg",
+				"hash": "1289d0d2880a026087f0db6bf58742ab"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092205_3.jpg",
+				"path": "/images/items/01_5754/1000092205_3.jpg",
+				"hash": "ee756907b8572aec3a095339083bb562"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092205_4.jpg",
+				"path": "/images/items/01_5754/1000092205_4.jpg",
+				"hash": "7e268c98af05795851b57b7b192bd14f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092205_5.jpg",
+				"path": "/images/items/01_5754/1000092205_5.jpg",
+				"hash": "6bf51c59648878d3d7fcfa95bd913c77"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5754/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "365",
 		"url": "https://manual.bandai-hobby.net/menus/detail/365/"

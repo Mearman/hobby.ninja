@@ -20,33 +20,29 @@
 	"targetAge": 15,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"MG 1/100 ガンダムフェニーチェリナーシタ [クリアカラー]登場！"
-		],
-		"en": [
-			"MG 1/100 Gundam Fenice Linacita [Clear Color] now available!"
-		]
+		"ja": ["MG 1/100 ガンダムフェニーチェリナーシタ [クリアカラー]登場！"],
+		"en": ["MG 1/100 Gundam Fenice Linacita [Clear Color] now available!"]
 	},
-	"images": [
-		"/images/items/01_4760/153_5644.jpg",
-		"/images/items/01_4760/155_5644.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5644.jpg",
+				"path": "/images/items/01_4760/153_5644.jpg",
+				"hash": "e8bcfc586511818a91c867a6c83f4437"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5644.jpg",
+				"path": "/images/items/01_4760/155_5644.jpg",
+				"hash": "2ef2d3260fa3f05475352810524901d4"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4760/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000106283",
-		"item-1000106282",
-		"01_395",
-		"01_356"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["buildfighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000106283", "item-1000106282", "01_395", "01_356"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

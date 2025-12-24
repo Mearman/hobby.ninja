@@ -52,27 +52,64 @@
 			"Display pedestal x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_3728/153_4680.jpg",
-		"/images/items/01_3728/155_4680.jpg",
-		"/images/items/01_3728/156_4680.jpg",
-		"/images/items/01_3728/157_4680.jpg",
-		"/images/items/01_3728/158_4680.jpg",
-		"/images/items/01_3728/159_4680.jpg",
-		"/images/items/01_3728/189_4680.jpg",
-		"/images/items/01_3728/190_4680.jpg",
-		"/images/items/01_3728/191_4680.jpg",
-		"/images/items/01_3728/192_4680.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4680.jpg",
+				"path": "/images/items/01_3728/153_4680.jpg",
+				"hash": "99e6e5b352ba3bb2c03b89ab67953935"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4680.jpg",
+				"path": "/images/items/01_3728/155_4680.jpg",
+				"hash": "3f70cb1a7f1a9e1cf2123098b8923468"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4680.jpg",
+				"path": "/images/items/01_3728/156_4680.jpg",
+				"hash": "9e3fc078b5f90dbc92383549f946ce7e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4680.jpg",
+				"path": "/images/items/01_3728/157_4680.jpg",
+				"hash": "10b1d485c9f5a52148de90e325b8dd57"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4680.jpg",
+				"path": "/images/items/01_3728/158_4680.jpg",
+				"hash": "e597c98e5549971eae20631993fe9dfc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4680.jpg",
+				"path": "/images/items/01_3728/159_4680.jpg",
+				"hash": "91dc5bb6c2fbc0fb514798d0b13254d6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4680.jpg",
+				"path": "/images/items/01_3728/189_4680.jpg",
+				"hash": "bb328cc0c9e25e1ee813157ec48e3652"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4680.jpg",
+				"path": "/images/items/01_3728/190_4680.jpg",
+				"hash": "5b2a235ffa2fc2a04bf681b3a4fd1bdd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4680.jpg",
+				"path": "/images/items/01_3728/191_4680.jpg",
+				"hash": "92376e6a6860551232beca075fa37a1a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4680.jpg",
+				"path": "/images/items/01_3728/192_4680.jpg",
+				"hash": "886282f732fcbfd1c5d11585fdfa210c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3728/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"kyoukaisenki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
+	"brandIds": ["figurerise-standard"],
+	"seriesIds": ["kyoukaisenki"],
+	"categoryIds": ["character-plastic-model"],
 	"relatedItemIds": []
 }

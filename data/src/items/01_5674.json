@@ -33,29 +33,36 @@
 			"• The cooling belt is made of flexible resin."
 		]
 	},
-	"images": [
-		"/images/items/01_5674/153_740.jpg",
-		"/images/items/01_5674/155_740.jpg",
-		"/images/items/01_5674/156_740.jpg",
-		"/images/items/01_5674/157_740.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_740.jpg",
+				"path": "/images/items/01_5674/153_740.jpg",
+				"hash": "b65244fd00d2cce0fd3eb26b16ce6a24"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_740.jpg",
+				"path": "/images/items/01_5674/155_740.jpg",
+				"hash": "58b2ca6bb31cbaa7bb9dfa5112112b02"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_740.jpg",
+				"path": "/images/items/01_5674/156_740.jpg",
+				"hash": "90331d0e7fe26a9bd2eed271927d1479"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_740.jpg",
+				"path": "/images/items/01_5674/157_740.jpg",
+				"hash": "b35fa228aae5e2961d68bf8880d218e3"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5674/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "934",
 		"url": "https://manual.bandai-hobby.net/menus/detail/934/"

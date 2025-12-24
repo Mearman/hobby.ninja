@@ -27,26 +27,26 @@
 			"A 1/144 Scale HG series plastic model of Destiny Gundam, the main character of \"Mobile Suit Gundam SEED DESTINY\". The wings of light that unfold from the wings on the back are reproduced with clear parts. Includes wrist parts that allow you to recreate the pose of holding up your palm and holding a beam cannon. The front armor on the waist can be separated on the left and right, and the shoulders can be pulled out and moved to recreate various action poses, including holding a sword in both hands. A display stand and joint parts for reproducing confrontation scenes are included."
 		]
 	},
-	"images": [
-		"/images/items/01_5151/153_600.jpg",
-		"/images/items/01_5151/155_600.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_600.jpg",
+				"path": "/images/items/01_5151/153_600.jpg",
+				"hash": "59c3612d926aa334cf848801ffe90878"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_600.jpg",
+				"path": "/images/items/01_5151/155_600.jpg",
+				"hash": "6af873553fb315be7bdad30c7105f643"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5151/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000203308", "01_5097", "01_3739", "item-1000157417"],
 	"manual": {
 		"id": "174",
 		"url": "https://manual.bandai-hobby.net/menus/detail/174/"

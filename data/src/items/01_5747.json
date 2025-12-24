@@ -27,30 +27,41 @@
 			"• Zeon military specification UC version Marasai. • Reproduced with the green molding color that appeared in episode 4. • One of the weapons, the \"sea snake\", can reproduce the ejection state with the lead wire. • Includes a newly designed Federin rifle. The spear state can also be reproduced. Molded product x 5, foil seal x 1, lead wire x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5747/153_811.jpg",
-		"/images/items/01_5747/155_811.jpg",
-		"/images/items/01_5747/156_811.jpg",
-		"/images/items/01_5747/157_811.jpg",
-		"/images/items/01_5747/158_811.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_811.jpg",
+				"path": "/images/items/01_5747/153_811.jpg",
+				"hash": "f8c92d810b745d6303755063d7ebf8e7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_811.jpg",
+				"path": "/images/items/01_5747/155_811.jpg",
+				"hash": "a9de6b350e34d13f67ffd1bd58b04732"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_811.jpg",
+				"path": "/images/items/01_5747/156_811.jpg",
+				"hash": "3cf28b72c514913133ead137f96fc44e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_811.jpg",
+				"path": "/images/items/01_5747/157_811.jpg",
+				"hash": "a667fcd5920f179039def87dd127179d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_811.jpg",
+				"path": "/images/items/01_5747/158_811.jpg",
+				"hash": "37f20fe5f82b755ee5b08b5ac25672c2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5747/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "368",
 		"url": "https://manual.bandai-hobby.net/menus/detail/368/"

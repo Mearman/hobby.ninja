@@ -36,29 +36,41 @@
 			"■ Comes with a Dover gun that can reproduce blowback. Molded ×13, Foil Seal ×1, Dry Decal×1, Tetoron Seal ×1, Assembly Instruction ×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5774/1000106016_1.jpg",
-		"/images/items/01_5774/1000106016_2.jpg",
-		"/images/items/01_5774/1000106016_3.jpg",
-		"/images/items/01_5774/1000106016_4.jpg",
-		"/images/items/01_5774/1000106016_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000106016_1.jpg",
+				"path": "/images/items/01_5774/1000106016_1.jpg",
+				"hash": "4ef85e45214195dce36b4d5a79d40fcf"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000106016_2.jpg",
+				"path": "/images/items/01_5774/1000106016_2.jpg",
+				"hash": "05a7b330cff63fbefb67c86796600412"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000106016_3.jpg",
+				"path": "/images/items/01_5774/1000106016_3.jpg",
+				"hash": "6aa92b71635d2cfbbb32e3198f19e7da"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000106016_4.jpg",
+				"path": "/images/items/01_5774/1000106016_4.jpg",
+				"hash": "0e2d18e2fdf6492767b7c351b3c0ef44"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000106016_5.jpg",
+				"path": "/images/items/01_5774/1000106016_5.jpg",
+				"hash": "b0c7c5f461a8f23cd7ba11e6a58f21c9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5774/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6682",
-		"01_6683",
-		"item-1000194972",
-		"01_3410"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["endlesswaltz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_6682", "01_6683", "item-1000194972", "01_3410"],
 	"manual": {
 		"id": "848",
 		"url": "https://manual.bandai-hobby.net/menus/detail/848/"

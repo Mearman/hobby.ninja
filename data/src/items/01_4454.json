@@ -26,29 +26,41 @@
 			"An MG plastic model of the main character Gundam that appears in the PS2 software \"Mobile Suit Gundam: War\" released in 200547. Adopting the game's original design, the molds of each part are faithfully reproduced. Developing Gundam Ver1.5, we added movable parts to each part, allowing you to achieve natural poses with an unprecedented range of motion. A new gimmick has been added to the hip joint frame that slides back and forth, allowing for natural kneeling poses."
 		]
 	},
-	"images": [
-		"/images/items/01_4454/153_535.jpg",
-		"/images/items/01_4454/155_535.jpg",
-		"/images/items/01_4454/156_535.jpg",
-		"/images/items/01_4454/157_535.jpg",
-		"/images/items/01_4454/158_535.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_535.jpg",
+				"path": "/images/items/01_4454/153_535.jpg",
+				"hash": "48e3cff93e5da356bcbc973a86ba46ae"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_535.jpg",
+				"path": "/images/items/01_4454/155_535.jpg",
+				"hash": "d98f18a13169dc1ca0168d6bb2f999f1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_535.jpg",
+				"path": "/images/items/01_4454/156_535.jpg",
+				"hash": "035732ee76631428a353f77a5f87f317"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_535.jpg",
+				"path": "/images/items/01_4454/157_535.jpg",
+				"hash": "d3dca8ef005b8897a5b18457b1067cce"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_535.jpg",
+				"path": "/images/items/01_4454/158_535.jpg",
+				"hash": "fcca83e97cfd8f95b3b9217d7dd5dee0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4454/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
 	"manual": {
 		"id": "533",
 		"url": "https://manual.bandai-hobby.net/menus/detail/533/"

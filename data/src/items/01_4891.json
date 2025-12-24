@@ -20,30 +20,29 @@
 	"targetAge": 15,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"「RG 1/144 ウイングガンダムゼロ EW パールグロスVer.」登場！"
-		],
-		"en": [
-			"\"RG 1/144 Wing Gundam Zero EW Pearl Gloss Ver.\" now available!"
-		]
+		"ja": ["「RG 1/144 ウイングガンダムゼロ EW パールグロスVer.」登場！"],
+		"en": ["\"RG 1/144 Wing Gundam Zero EW Pearl Gloss Ver.\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4891/153_5769.jpg",
-		"/images/items/01_4891/155_5769.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5769.jpg",
+				"path": "/images/items/01_4891/153_5769.jpg",
+				"hash": "e4be74baf0abf5da1d045cc4132b19fb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5769.jpg",
+				"path": "/images/items/01_4891/155_5769.jpg",
+				"hash": "b412742fd0dacdc1f5cd5a5174382beb"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4891/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_251"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["endlesswaltz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_251"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

@@ -20,32 +20,24 @@
 	"targetAge": 15,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"「MG 1/100 インパルスガンダム(フルカラーメッキバージョン)」登場！"
-		],
-		"en": [
-			"\"MG 1/100 Impulse Gundam (full color plated version)\" now available!"
-		]
+		"ja": ["「MG 1/100 インパルスガンダム(フルカラーメッキバージョン)」登場！"],
+		"en": ["\"MG 1/100 Impulse Gundam (full color plated version)\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4882/153_5760.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5760.jpg",
+				"path": "/images/items/01_4882/153_5760.jpg",
+				"hash": "eadb890bf366e0ff7014ada375a3e0a4"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4882/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5421",
-		"item-1000183862",
-		"01_3712",
-		"item-1000155441"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5421", "item-1000183862", "01_3712", "item-1000155441"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

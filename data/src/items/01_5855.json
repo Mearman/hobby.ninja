@@ -29,24 +29,44 @@
 			"• The coloring, which has a different impression from the black Valvrave, is reproduced with molded colors."
 		]
 	},
-	"images": [
-		"/images/items/01_5855/153_933.jpg",
-		"/images/items/01_5855/155_933.jpg",
-		"/images/items/01_5855/156_933.jpg",
-		"/images/items/01_5855/157_933.jpg",
-		"/images/items/01_5855/158_933.jpg",
-		"/images/items/01_5855/159_933.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_933.jpg",
+				"path": "/images/items/01_5855/153_933.jpg",
+				"hash": "10d2e52b2b5d561ea0140909b1ba6f20"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_933.jpg",
+				"path": "/images/items/01_5855/155_933.jpg",
+				"hash": "3e5738a8f248e444b23a13738494c90b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_933.jpg",
+				"path": "/images/items/01_5855/156_933.jpg",
+				"hash": "33ba4966db00b94425f9e0e87c807153"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_933.jpg",
+				"path": "/images/items/01_5855/157_933.jpg",
+				"hash": "81bda6b857a89ef950fe8b1a9033e713"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_933.jpg",
+				"path": "/images/items/01_5855/158_933.jpg",
+				"hash": "454a816034f726c8c11db2f40898b491"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_933.jpg",
+				"path": "/images/items/01_5855/159_933.jpg",
+				"hash": "d13e08faef4ac96fb8794ffe4a70f045"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5855/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
-	"relatedItemIds": [
-		"01_5990",
-		"01_5989",
-		"01_5984",
-		"01_5972"
-	]
+	"categoryIds": ["product-list"],
+	"relatedItemIds": ["01_5990", "01_5989", "01_5984", "01_5972"]
 }

@@ -20,34 +20,29 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HGUC 1/144 MSZ-010 ZZ ガンダム クリアカラーバージョン登場！"
-		],
-		"en": [
-			"HGUC 1/144 MSZ-010 ZZ Gundam clear color version now available!"
-		]
+		"ja": ["HGUC 1/144 MSZ-010 ZZ ガンダム クリアカラーバージョン登場！"],
+		"en": ["HGUC 1/144 MSZ-010 ZZ Gundam clear color version now available!"]
 	},
-	"images": [
-		"/images/items/01_4804/153_5684.jpg",
-		"/images/items/01_4804/155_5684.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5684.jpg",
+				"path": "/images/items/01_4804/153_5684.jpg",
+				"hash": "f7ff1fdd98af62151ea913b056f2275e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5684.jpg",
+				"path": "/images/items/01_4804/155_5684.jpg",
+				"hash": "1b23a2a41aa30d6594f093b745b33189"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4804/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam-zz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5963",
-		"01_4985",
-		"01_4971",
-		"01_2079"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["gundam-zz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5963", "01_4985", "01_4971", "01_2079"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

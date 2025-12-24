@@ -64,36 +64,76 @@
 			"Water transfer decal x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4264/1000180180_1.jpg",
-		"/images/items/01_4264/1000180180_10.jpg",
-		"/images/items/01_4264/1000180180_11.jpg",
-		"/images/items/01_4264/1000180180_12.jpg",
-		"/images/items/01_4264/1000180180_2.jpg",
-		"/images/items/01_4264/1000180180_3.jpg",
-		"/images/items/01_4264/1000180180_4.jpg",
-		"/images/items/01_4264/1000180180_5.jpg",
-		"/images/items/01_4264/1000180180_6.jpg",
-		"/images/items/01_4264/1000180180_7.jpg",
-		"/images/items/01_4264/1000180180_8.jpg",
-		"/images/items/01_4264/1000180180_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180180_1.jpg",
+				"path": "/images/items/01_4264/1000180180_1.jpg",
+				"hash": "1ee66b32f82755e396b949cf45507327"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180180_10.jpg",
+				"path": "/images/items/01_4264/1000180180_10.jpg",
+				"hash": "f4df861e418d550222264c9e5bb30d24"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180180_11.jpg",
+				"path": "/images/items/01_4264/1000180180_11.jpg",
+				"hash": "7297f6bc54d96558959a32e6720e929e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180180_12.jpg",
+				"path": "/images/items/01_4264/1000180180_12.jpg",
+				"hash": "59cfdf42fcf0f8264b5cc2ac4600314d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180180_2.jpg",
+				"path": "/images/items/01_4264/1000180180_2.jpg",
+				"hash": "27b10d83f90bf251d8bb9d4cf7811a44"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180180_3.jpg",
+				"path": "/images/items/01_4264/1000180180_3.jpg",
+				"hash": "1e6696728f6de5ea2d23646fba8ab7b2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180180_4.jpg",
+				"path": "/images/items/01_4264/1000180180_4.jpg",
+				"hash": "15f6f7d5ad840213b9f56d86c09cc95f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180180_5.jpg",
+				"path": "/images/items/01_4264/1000180180_5.jpg",
+				"hash": "d5cd9305e494d445e5d2b40b5c9e500b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180180_6.jpg",
+				"path": "/images/items/01_4264/1000180180_6.jpg",
+				"hash": "f8f8cef18fb1e0c760c45e07f0c90f38"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180180_7.jpg",
+				"path": "/images/items/01_4264/1000180180_7.jpg",
+				"hash": "e037d14713dc298ec62a0b1838567d5b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180180_8.jpg",
+				"path": "/images/items/01_4264/1000180180_8.jpg",
+				"hash": "9c0c3aae8d0efb9e3aae51047eaa8e3d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180180_9.jpg",
+				"path": "/images/items/01_4264/1000180180_9.jpg",
+				"hash": "e243959b4988080922d1db5155ec48cd"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4264/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"g-witch"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5364",
-		"01_5082",
-		"item-1000194221",
-		"01_4259"
-	],
+	"brandIds": ["figurerise-standard"],
+	"seriesIds": ["g-witch"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5364", "01_5082", "item-1000194221", "01_4259"],
 	"manual": {
 		"id": "141",
 		"url": "https://manual.bandai-hobby.net/menus/detail/141/"

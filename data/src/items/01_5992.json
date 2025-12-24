@@ -43,28 +43,36 @@
 			"There was an error in the product description, so we have corrected it."
 		]
 	},
-	"images": [
-		"/images/items/01_5992/01_5992_0.jpg",
-		"/images/items/01_5992/01_5992_1.jpg",
-		"/images/items/01_5992/01_5992_2.jpg",
-		"/images/items/01_5992/01_5992_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5992_0.jpg",
+				"path": "/images/items/01_5992/01_5992_0.jpg",
+				"hash": "0d78ab72ec2892af397e22602d57ade0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5992_1.jpg",
+				"path": "/images/items/01_5992/01_5992_1.jpg",
+				"hash": "93f942c99cac709ea0a33515115eeb23"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5992_2.jpg",
+				"path": "/images/items/01_5992/01_5992_2.jpg",
+				"hash": "a9ffec8e80adc2e314d68c2be5d8e001"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5992_3.jpg",
+				"path": "/images/items/01_5992/01_5992_3.jpg",
+				"hash": "cdf211032d19fec614b4aaeb3663ce9f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5992/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5428",
-		"01_5261",
-		"item-1000209098",
-		"01_3792"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5428", "01_5261", "item-1000209098", "01_3792"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

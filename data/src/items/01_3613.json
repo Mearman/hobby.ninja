@@ -27,27 +27,31 @@
 			"• Shaldor's custom machine, Shaldor Rogue, is now available in HG. • Official Gaiden, Mobile Suit Gundam AGE ~Sid Reminiscence~ MS owned by the space pirate Visidian. • The main equipment Dods Buster can be installed by replacing it with hand parts. • Beam ax and beam saber included. Molded product x 6, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_3613/153_4568.jpg",
-		"/images/items/01_3613/155_4568.jpg",
-		"/images/items/01_3613/156_4568.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4568.jpg",
+				"path": "/images/items/01_3613/153_4568.jpg",
+				"hash": "beb3e0d1a3bbacf0de08c30af4f05fd6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4568.jpg",
+				"path": "/images/items/01_3613/155_4568.jpg",
+				"hash": "5b2539b2ce6614311514162fb1ada42d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4568.jpg",
+				"path": "/images/items/01_3613/156_4568.jpg",
+				"hash": "440b5efc8a021639c1ef13045cba89be"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3613/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "349",
 		"url": "https://manual.bandai-hobby.net/menus/detail/349/"

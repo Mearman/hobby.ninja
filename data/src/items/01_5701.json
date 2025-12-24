@@ -31,20 +31,24 @@
 			"・Contains 2 cars"
 		]
 	},
-	"images": [
-		"/images/items/01_5701/153_766.jpg",
-		"/images/items/01_5701/155_766.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_766.jpg",
+				"path": "/images/items/01_5701/153_766.jpg",
+				"hash": "d8639d8b29dccbe21c8bca484f24c40c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_766.jpg",
+				"path": "/images/items/01_5701/155_766.jpg",
+				"hash": "fb734d40b7413245f022a89c4da719a1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5701/",
-	"brandIds": [
-		"train"
-	],
+	"brandIds": ["train"],
 	"seriesIds": [],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"relatedItemIds": ["01_1276", "01_1277", "01_1278", "01_1280"]
 }

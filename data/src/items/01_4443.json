@@ -20,28 +20,27 @@
 	"targetAge": 15,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"「1/144 スペリオルガンダム」登場！"
-		],
-		"en": [
-			"\"1/144 Superior Gundam\" now available!"
-		]
+		"ja": ["「1/144 スペリオルガンダム」登場！"],
+		"en": ["\"1/144 Superior Gundam\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4443/153_5349.jpg",
-		"/images/items/01_4443/155_5349.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5349.jpg",
+				"path": "/images/items/01_4443/153_5349.jpg",
+				"hash": "cc7f60c7132016dbb22cd4b9d74e1172"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5349.jpg",
+				"path": "/images/items/01_4443/155_5349.jpg",
+				"hash": "d8bce38a02f1d6c91d6df0772291fa54"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4443/",
 	"brandIds": [],
-	"seriesIds": [
-		"sentinel"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5593",
-		"01_3408",
-		"01_3062"
-	]
+	"seriesIds": ["sentinel"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5593", "01_3408", "01_3062"]
 }

@@ -31,33 +31,47 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"水転写式デカール×1"
-		],
-		"en": [
-			"Water transfer decal x 1"
-		]
+		"ja": ["水転写式デカール×1"],
+		"en": ["Water transfer decal x 1"]
 	},
-	"images": [
-		"/images/items/01_4330/1000182369_1.jpg",
-		"/images/items/01_4330/01_4330_inst_0.jpg",
-		"/images/items/01_4330/01_4330_inst_1.jpg",
-		"/images/items/01_4330/01_4330_inst_2.jpg",
-		"/images/items/01_4330/01_4330_inst_3.jpg",
-		"/images/items/01_4330/01_4330_inst_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182369_1.jpg",
+				"path": "/images/items/01_4330/1000182369_1.jpg",
+				"hash": "556aebc940ecac561c16a613f0288495"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4330_inst_0.jpg",
+				"path": "/images/items/01_4330/01_4330_inst_0.jpg",
+				"hash": "7e9387caa00453e4963d41dc18deb9f9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4330_inst_1.jpg",
+				"path": "/images/items/01_4330/01_4330_inst_1.jpg",
+				"hash": "3d70953e340f84898a28ee09378b80bd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4330_inst_2.jpg",
+				"path": "/images/items/01_4330/01_4330_inst_2.jpg",
+				"hash": "d2060a3bfb9ba38d9042fbc592050e49"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4330_inst_3.jpg",
+				"path": "/images/items/01_4330/01_4330_inst_3.jpg",
+				"hash": "b061f10a8012ce8c6ef509dd12a1d958"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4330_inst_4.jpg",
+				"path": "/images/items/01_4330/01_4330_inst_4.jpg",
+				"hash": "f60e5a8611aeee9dced51fb5fb17ad31"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4330/",
-	"brandIds": [
-		"gundam_decal"
-	],
-	"seriesIds": [
-		"g-witch"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4331",
-		"01_4332"
-	]
+	"brandIds": ["gundam_decal"],
+	"seriesIds": ["g-witch"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4331", "01_4332"]
 }

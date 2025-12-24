@@ -20,34 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"「HGUC 1/144 MSZ-006 ゼータガンダム グロスインジェクションバージョン」登場！"
-		],
-		"en": [
-			"\"HGUC 1/144 MSZ-006 Zeta Gundam Gloss Injection Version\" now available!"
-		]
+		"ja": ["「HGUC 1/144 MSZ-006 ゼータガンダム グロスインジェクションバージョン」登場！"],
+		"en": ["\"HGUC 1/144 MSZ-006 Zeta Gundam Gloss Injection Version\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4831/153_5713.jpg",
-		"/images/items/01_4831/155_5713.jpg",
-		"/images/items/01_4831/156_5713.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5713.jpg",
+				"path": "/images/items/01_4831/153_5713.jpg",
+				"hash": "6bde687abddebb0369904903bc46a0d4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5713.jpg",
+				"path": "/images/items/01_4831/155_5713.jpg",
+				"hash": "9bbb25ea4b6baed816a6b241c43c18ff"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5713.jpg",
+				"path": "/images/items/01_4831/156_5713.jpg",
+				"hash": "6a352575236ee42e7d4a487759d67a9e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4831/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

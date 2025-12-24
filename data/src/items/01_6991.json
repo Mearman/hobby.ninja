@@ -44,38 +44,49 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"Σツインブラスター",
-			"Σガーター"
-		],
-		"en": [
-			"ΣTwin Blaster",
-			"Σ Garter"
-		]
+		"ja": ["Σツインブラスター", "Σガーター"],
+		"en": ["ΣTwin Blaster", "Σ Garter"]
 	},
-	"images": [
-		"/images/items/01_6991/01_6991_0.jpg",
-		"/images/items/01_6991/01_6991_1.jpg",
-		"/images/items/01_6991/01_6991_2.jpg",
-		"/images/items/01_6991/01_6991_3.jpg",
-		"/images/items/01_6991/01_6991_4.jpg",
-		"/images/items/01_6991/01_6991_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6991_0.jpg",
+				"path": "/images/items/01_6991/01_6991_0.jpg",
+				"hash": "da4292f870f56d8536bc318320cf120a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6991_1.jpg",
+				"path": "/images/items/01_6991/01_6991_1.jpg",
+				"hash": "5ced6282d4a664324bb7109632961b0b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6991_2.jpg",
+				"path": "/images/items/01_6991/01_6991_2.jpg",
+				"hash": "6f64df2df35d0e389aeac15808a849b6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6991_3.jpg",
+				"path": "/images/items/01_6991/01_6991_3.jpg",
+				"hash": "cf3039ee76c70312ceca035513c0ca5f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6991_4.jpg",
+				"path": "/images/items/01_6991/01_6991_4.jpg",
+				"hash": "e1325d7b75379f4a7ee780f8023c8656"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6991_5.jpg",
+				"path": "/images/items/01_6991/01_6991_5.jpg",
+				"hash": "aff28722dd59b4f0b68b377b36360936"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6991/",
-	"brandIds": [
-		"pb_charapla"
-	],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_6992",
-		"01_6993",
-		"01_6747"
-	],
+	"brandIds": ["pb_charapla"],
+	"seriesIds": ["lbx"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_6992", "01_6993", "01_6747"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

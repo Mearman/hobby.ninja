@@ -35,27 +35,31 @@
 			"• In addition to a wide variety of weapons such as beam sabers and beam seals, a grip that can reproduce the connected state of the beam saber is also included."
 		]
 	},
-	"images": [
-		"/images/items/01_6727/01_6727_0.jpg",
-		"/images/items/01_6727/01_6727_1.jpg",
-		"/images/items/01_6727/01_6727_2.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6727_0.jpg",
+				"path": "/images/items/01_6727/01_6727_0.jpg",
+				"hash": "d5e88d9df32555e2c6b10e3a7b9ffe3f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6727_1.jpg",
+				"path": "/images/items/01_6727/01_6727_1.jpg",
+				"hash": "b6d5dae366ad911218af5f83b5bc664d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6727_2.jpg",
+				"path": "/images/items/01_6727/01_6727_2.jpg",
+				"hash": "e86a07078000d16f2d0788e08ddd8eff"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6727/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-freedom"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5452",
-		"01_5374",
-		"01_5363",
-		"01_5362"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed-freedom"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5452", "01_5374", "01_5363", "01_5362"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

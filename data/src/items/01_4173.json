@@ -35,33 +35,47 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ジョイントパーツ×1"
-		],
-		"en": [
-			"Joint parts x 1"
-		]
+		"ja": ["ジョイントパーツ×1"],
+		"en": ["Joint parts x 1"]
 	},
-	"images": [
-		"/images/items/01_4173/1000175249_1.jpg",
-		"/images/items/01_4173/1000175249_2.jpg",
-		"/images/items/01_4173/1000175249_3.jpg",
-		"/images/items/01_4173/1000175249_4.jpg",
-		"/images/items/01_4173/1000175249_5.jpg",
-		"/images/items/01_4173/1000175249_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175249_1.jpg",
+				"path": "/images/items/01_4173/1000175249_1.jpg",
+				"hash": "67a8178d0f47d640c926b6263682c3d6"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175249_2.jpg",
+				"path": "/images/items/01_4173/1000175249_2.jpg",
+				"hash": "bb25f12f719841ea8350ad98069f1f13"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175249_3.jpg",
+				"path": "/images/items/01_4173/1000175249_3.jpg",
+				"hash": "d5b9ea010c2507f1bd9c15f7d025f9c2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175249_4.jpg",
+				"path": "/images/items/01_4173/1000175249_4.jpg",
+				"hash": "d74becfe38a471f701905703c5722fee"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175249_5.jpg",
+				"path": "/images/items/01_4173/1000175249_5.jpg",
+				"hash": "f1ca6e0ac59605ec357d8a4f7bcf3c5a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175249_6.jpg",
+				"path": "/images/items/01_4173/1000175249_6.jpg",
+				"hash": "99205f0d6c29aadc55c52fb3d2bc1956"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4173/",
 	"brandIds": [],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5470",
-		"01_5471",
-		"01_5472",
-		"01_5347"
-	]
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
 }

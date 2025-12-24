@@ -27,27 +27,31 @@
 			"• Perfect Strike Gundam, which appeared in the HD remastered version of \"Mobile Suit Gundam SEED\", is now available in HG. • Equipped with ale, sword, launcher and all strikers. Each striker mode can be reproduced. • Comes with a variety of weapons such as a 350mm gun launcher, 120mm anti-ship Vulcan cannon, anti-ship sword (Schwertgeber), rocket anchor, and beam boomerang. Molded product x 7, foil seal x 1, Tetron seal x 1, lead wire x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4641/153_5534.jpg",
-		"/images/items/01_4641/155_5534.jpg",
-		"/images/items/01_4641/156_5534.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5534.jpg",
+				"path": "/images/items/01_4641/153_5534.jpg",
+				"hash": "d75d89afc833e8a57b149fb826e74db8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5534.jpg",
+				"path": "/images/items/01_4641/155_5534.jpg",
+				"hash": "2e60e5f1ff7821916c414df086053a12"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5534.jpg",
+				"path": "/images/items/01_4641/156_5534.jpg",
+				"hash": "7e92bc5870e4c30fb41b0169a4959cc9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4641/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181726",
-		"01_1930",
-		"01_384",
-		"01_83"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181726", "01_1930", "01_384", "01_83"],
 	"manual": {
 		"id": "4",
 		"url": "https://manual.bandai-hobby.net/menus/detail/4/"

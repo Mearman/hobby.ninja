@@ -33,28 +33,36 @@
 			"• Can be installed in a wide range of ways depending on your ingenuity. The range of customization expands. Molded product x 4, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5875/153_953.jpg",
-		"/images/items/01_5875/155_953.jpg",
-		"/images/items/01_5875/156_953.jpg",
-		"/images/items/01_5875/01_5875_inst_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_953.jpg",
+				"path": "/images/items/01_5875/153_953.jpg",
+				"hash": "15db0c353dd028e74a6d579a92a90567"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_953.jpg",
+				"path": "/images/items/01_5875/155_953.jpg",
+				"hash": "da38290f60689330cc81acb919f4f079"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_953.jpg",
+				"path": "/images/items/01_5875/156_953.jpg",
+				"hash": "2d3072196720042a75a83fe695f14725"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5875_inst_1.jpg",
+				"path": "/images/items/01_5875/01_5875_inst_1.jpg",
+				"hash": "bd1056a9d40129a227cc4a5b3271da1d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5875/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["buildfighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5057", "01_1942", "01_1288", "01_1261"],
 	"manual": {
 		"id": "714",
 		"url": "https://manual.bandai-hobby.net/menus/detail/714/"

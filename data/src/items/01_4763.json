@@ -20,34 +20,34 @@
 	"targetAge": 15,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"MG 1/100 ユニコーンガンダム［メタリックグロスインジェクション］登場！"
-		],
-		"en": [
-			"MG 1/100 Unicorn Gundam [Metallic Gloss Injection] now available!"
-		]
+		"ja": ["MG 1/100 ユニコーンガンダム［メタリックグロスインジェクション］登場！"],
+		"en": ["MG 1/100 Unicorn Gundam [Metallic Gloss Injection] now available!"]
 	},
-	"images": [
-		"/images/items/01_4763/153_5647.jpg",
-		"/images/items/01_4763/155_5647.jpg",
-		"/images/items/01_4763/156_5647.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5647.jpg",
+				"path": "/images/items/01_4763/153_5647.jpg",
+				"hash": "d44c78dba25aaf43a8c51039643f7a09"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5647.jpg",
+				"path": "/images/items/01_4763/155_5647.jpg",
+				"hash": "127089dcba236507ade36eb7bc5a99aa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5647.jpg",
+				"path": "/images/items/01_4763/156_5647.jpg",
+				"hash": "dce99d4931fc7f41a050e1c6417ef638"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4763/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000183366",
-		"01_4271",
-		"01_2670",
-		"item-1000138934"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000183366", "01_4271", "01_2670", "item-1000138934"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

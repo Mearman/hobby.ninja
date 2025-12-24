@@ -32,25 +32,31 @@
 			"Common weapons beam tomahawk, beam assault rifle, and hand grenade are also included. The beam tomahawk blade is reproduced with clear parts."
 		]
 	},
-	"images": [
-		"/images/items/01_4625/153_551.jpg",
-		"/images/items/01_4625/155_551.jpg",
-		"/images/items/01_4625/156_551.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_551.jpg",
+				"path": "/images/items/01_4625/153_551.jpg",
+				"hash": "4da1e5497869ead2575dc4a46314cb52"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_551.jpg",
+				"path": "/images/items/01_4625/155_551.jpg",
+				"hash": "a25a074d8166a265c4a1181d32dab213"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_551.jpg",
+				"path": "/images/items/01_4625/156_551.jpg",
+				"hash": "8e6302fd5b212904acf09887ec4f019a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4625/",
 	"brandIds": [],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5394",
-		"item-1000214960",
-		"01_5378",
-		"01_5365"
-	],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5394", "item-1000214960", "01_5378", "01_5365"],
 	"manual": {
 		"id": "1162",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1162/"

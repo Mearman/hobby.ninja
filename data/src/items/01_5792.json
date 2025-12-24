@@ -33,26 +33,31 @@
 			"• Parachute pack is removable. Can be replaced with the HGUC 1/144 Ground Type Gundam container sold separately."
 		]
 	},
-	"images": [
-		"/images/items/01_5792/153_858.jpg",
-		"/images/items/01_5792/155_858.jpg",
-		"/images/items/01_5792/156_858.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_858.jpg",
+				"path": "/images/items/01_5792/153_858.jpg",
+				"hash": "f9d06f8c1f319ebff5e10d2d44c6d88e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_858.jpg",
+				"path": "/images/items/01_5792/155_858.jpg",
+				"hash": "5f94ece2b1aa467a0922bf78fd26e42f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_858.jpg",
+				"path": "/images/items/01_5792/156_858.jpg",
+				"hash": "1172b7f9e20035686609d0427cb7679e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5792/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
+	"brandIds": ["hg", "hguc"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5963", "01_5961", "01_5951"],
 	"manual": {
 		"id": "378",
 		"url": "https://manual.bandai-hobby.net/menus/detail/378/"

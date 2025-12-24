@@ -36,29 +36,41 @@
 			"■ Reproduce the barrel deformation gimmick."
 		]
 	},
-	"images": [
-		"/images/items/01_5057/1000199946_1.jpg",
-		"/images/items/01_5057/1000199946_2.jpg",
-		"/images/items/01_5057/1000199946_3.jpg",
-		"/images/items/01_5057/1000199946_4.jpg",
-		"/images/items/01_5057/1000199946_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000199946_1.jpg",
+				"path": "/images/items/01_5057/1000199946_1.jpg",
+				"hash": "90c6933e0f110c77829fbc53ff95738b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000199946_2.jpg",
+				"path": "/images/items/01_5057/1000199946_2.jpg",
+				"hash": "7de3674294f34bc7f1cb9f2f00255981"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000199946_3.jpg",
+				"path": "/images/items/01_5057/1000199946_3.jpg",
+				"hash": "362a7761195d25fdd7e85f834b1bf21d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000199946_4.jpg",
+				"path": "/images/items/01_5057/1000199946_4.jpg",
+				"hash": "6ef61a845d0d40d11f2467cdb152694d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000199946_5.jpg",
+				"path": "/images/items/01_5057/1000199946_5.jpg",
+				"hash": "6540704fd6b38d5b767a15c22c3a0fd9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5057/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1942",
-		"01_1288",
-		"01_1261",
-		"01_1262"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["buildfighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_1942", "01_1288", "01_1261", "01_1262"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

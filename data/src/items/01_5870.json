@@ -35,23 +35,39 @@
 			"• Includes hard afterglow effect parts that match the shape of the multi-leg spine."
 		]
 	},
-	"images": [
-		"/images/items/01_5870/153_949.jpg",
-		"/images/items/01_5870/155_949.jpg",
-		"/images/items/01_5870/156_949.jpg",
-		"/images/items/01_5870/157_949.jpg",
-		"/images/items/01_5870/158_949.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_949.jpg",
+				"path": "/images/items/01_5870/153_949.jpg",
+				"hash": "0445f8279155783e2afd25c9044316ea"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_949.jpg",
+				"path": "/images/items/01_5870/155_949.jpg",
+				"hash": "77a49797d2d6d313ef803d138b5a6070"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_949.jpg",
+				"path": "/images/items/01_5870/156_949.jpg",
+				"hash": "3b2ea42d76f7f9d9d31fe76bb11e3565"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_949.jpg",
+				"path": "/images/items/01_5870/157_949.jpg",
+				"hash": "42700259dbccf20692f7433879cee082"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_949.jpg",
+				"path": "/images/items/01_5870/158_949.jpg",
+				"hash": "dcbbb3dee25f4452f3068b3e2fdadc93"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5870/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
-	"relatedItemIds": [
-		"01_5990",
-		"01_5989",
-		"01_5984",
-		"01_5972"
-	]
+	"categoryIds": ["product-list"],
+	"relatedItemIds": ["01_5990", "01_5989", "01_5984", "01_5972"]
 }

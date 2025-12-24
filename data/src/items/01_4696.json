@@ -26,20 +26,24 @@
 			"A three-dimensional version of the anti-aircraft defense aircraft that is a development of the Zeon J-type Zaku. The mono eye block is molded as a separate part. The head antenna can be selected from one or two (rabbit type). The arms can swing back and forth. The hip joint can be opened and closed on the left and right. The big gun can be mounted on a backpack. Comes with a replaceable palm. Comes with a special decal."
 		]
 	},
-	"images": [
-		"/images/items/01_4696/153_5585.jpg",
-		"/images/items/01_4696/155_5585.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5585.jpg",
+				"path": "/images/items/01_4696/153_5585.jpg",
+				"hash": "d2066bc71a6b6f64bf358643a216589b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5585.jpg",
+				"path": "/images/items/01_4696/155_5585.jpg",
+				"hash": "e9cfb8b355da9b004dddf2a306d362a4"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4696/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5986",
-		"01_5987",
-		"01_5988"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5986", "01_5987", "01_5988"]
 }

@@ -31,37 +31,47 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"開き手(左右)×1",
-			"シール×１"
-		],
-		"en": [
-			"Open hand (left and right) x 1",
-			"Seal×1"
-		]
+		"ja": ["開き手(左右)×1", "シール×１"],
+		"en": ["Open hand (left and right) x 1", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_4336/153_5246.jpg",
-		"/images/items/01_4336/155_5246.jpg",
-		"/images/items/01_4336/156_5246.jpg",
-		"/images/items/01_4336/157_5246.jpg",
-		"/images/items/01_4336/158_5246.jpg",
-		"/images/items/01_4336/159_5246.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5246.jpg",
+				"path": "/images/items/01_4336/153_5246.jpg",
+				"hash": "58f2650f25afaca3dac5c2ce71634823"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5246.jpg",
+				"path": "/images/items/01_4336/155_5246.jpg",
+				"hash": "f68f06729ab4c25f863b94e6417c1faa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5246.jpg",
+				"path": "/images/items/01_4336/156_5246.jpg",
+				"hash": "24fea93ccac37ccef5b023e23b306cd7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5246.jpg",
+				"path": "/images/items/01_4336/157_5246.jpg",
+				"hash": "bba0b7919d8acca79727132f3d53c0b6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5246.jpg",
+				"path": "/images/items/01_4336/158_5246.jpg",
+				"hash": "d3837a6c8777b189ad0229185c1c1d18"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5246.jpg",
+				"path": "/images/items/01_4336/159_5246.jpg",
+				"hash": "9497f20a64f7c2a3d3e9f316a4e3c238"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4336/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4312",
-		"01_4634",
-		"01_4294"
-	]
+	"brandIds": ["sdgundamseries"],
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4312", "01_4634", "01_4294"]
 }

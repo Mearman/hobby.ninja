@@ -30,29 +30,41 @@
 			"■ Each part, beam, rifle, and shield are reproduced in a new form according to the setting."
 		]
 	},
-	"images": [
-		"/images/items/01_5532/1000222883_1.jpg",
-		"/images/items/01_5532/1000222883_2.jpg",
-		"/images/items/01_5532/1000222883_3.jpg",
-		"/images/items/01_5532/1000222883_4.jpg",
-		"/images/items/01_5532/1000222883_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222883_1.jpg",
+				"path": "/images/items/01_5532/1000222883_1.jpg",
+				"hash": "dcd6f8ce33ba2164e2c949ff98f2d55a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222883_2.jpg",
+				"path": "/images/items/01_5532/1000222883_2.jpg",
+				"hash": "68812d299d6d2bc118743c736ac925a9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222883_3.jpg",
+				"path": "/images/items/01_5532/1000222883_3.jpg",
+				"hash": "6e2651b4559305ce44a67a95a08d5901"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222883_4.jpg",
+				"path": "/images/items/01_5532/1000222883_4.jpg",
+				"hash": "702c7fcc3c3edc48832806de472655f9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222883_5.jpg",
+				"path": "/images/items/01_5532/1000222883_5.jpg",
+				"hash": "9761ed6c297904aeebc549246aad475a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5532/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5423",
-		"01_5163",
-		"item-1000190277",
-		"01_4933"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5423", "01_5163", "item-1000190277", "01_4933"],
 	"tag": {
 		"ja": "GUNDAM SIDE-F",
 		"en": "GUNDAM SIDE-F"

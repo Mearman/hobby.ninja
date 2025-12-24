@@ -59,23 +59,44 @@
 			"Water transfer decal x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_6886/01_6886_0.jpg",
-		"/images/items/01_6886/01_6886_1.jpg",
-		"/images/items/01_6886/01_6886_2.jpg",
-		"/images/items/01_6886/01_6886_3.jpg",
-		"/images/items/01_6886/01_6886_4.jpg",
-		"/images/items/01_6886/01_6886_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6886_0.jpg",
+				"path": "/images/items/01_6886/01_6886_0.jpg",
+				"hash": "84ff9066f6dba79d745353851bb47227"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6886_1.jpg",
+				"path": "/images/items/01_6886/01_6886_1.jpg",
+				"hash": "22acf9ef2dfe7730b545aedd5f8d8785"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6886_2.jpg",
+				"path": "/images/items/01_6886/01_6886_2.jpg",
+				"hash": "fccd3dbdec80d9d68ea9fcd22cda4b64"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6886_3.jpg",
+				"path": "/images/items/01_6886/01_6886_3.jpg",
+				"hash": "0e390bb2cccbb8da32032ffc48bf1b12"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6886_4.jpg",
+				"path": "/images/items/01_6886/01_6886_4.jpg",
+				"hash": "bd8ff24fcb99d21280fae33670364621"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6886_5.jpg",
+				"path": "/images/items/01_6886/01_6886_5.jpg",
+				"hash": "425319c33a7ea12b38a4d3650eab9207"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6886/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"x"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["figurerise-standard"],
+	"seriesIds": ["x"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": []
 }

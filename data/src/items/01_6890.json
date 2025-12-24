@@ -60,25 +60,39 @@
 			"Water transfer decal x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_6890/01_6890_0.jpg",
-		"/images/items/01_6890/01_6890_1.jpg",
-		"/images/items/01_6890/01_6890_2.jpg",
-		"/images/items/01_6890/01_6890_3.jpg",
-		"/images/items/01_6890/01_6890_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6890_0.jpg",
+				"path": "/images/items/01_6890/01_6890_0.jpg",
+				"hash": "91553879f631fbf34d8d8cb6ac3be558"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6890_1.jpg",
+				"path": "/images/items/01_6890/01_6890_1.jpg",
+				"hash": "5453bcd5e9a804752f409b144a901b6b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6890_2.jpg",
+				"path": "/images/items/01_6890/01_6890_2.jpg",
+				"hash": "95495489b0a8bd03bd27f61562330923"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6890_3.jpg",
+				"path": "/images/items/01_6890/01_6890_3.jpg",
+				"hash": "59019fcc11100c1366c3689adf6b1631"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6890_4.jpg",
+				"path": "/images/items/01_6890/01_6890_4.jpg",
+				"hash": "beaf943a9e6f8d3532fb947d57002cc0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6890/",
 	"brandIds": [],
-	"seriesIds": [
-		"yamato"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_6866",
-		"01_5971",
-		"01_5498",
-		"01_5500"
-	]
+	"seriesIds": ["yamato"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_6866", "01_5971", "01_5498", "01_5500"]
 }

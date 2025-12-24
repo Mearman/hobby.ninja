@@ -20,34 +20,34 @@
 	"targetAge": 15,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"MG 1/100 MS-06S シャア専用ザクVer.2.0 エクストラフィニッシュバージョン登場！"
-		],
-		"en": [
-			"MG 1/100 MS-06S Char's Zaku Ver.2.0 Extra Finish version now available!"
-		]
+		"ja": ["MG 1/100 MS-06S シャア専用ザクVer.2.0 エクストラフィニッシュバージョン登場！"],
+		"en": ["MG 1/100 MS-06S Char's Zaku Ver.2.0 Extra Finish version now available!"]
 	},
-	"images": [
-		"/images/items/01_4802/153_5682.jpg",
-		"/images/items/01_4802/155_5682.jpg",
-		"/images/items/01_4802/156_5682.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5682.jpg",
+				"path": "/images/items/01_4802/153_5682.jpg",
+				"hash": "6e56524ae45accde4f4f58a4a2bdc5ae"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5682.jpg",
+				"path": "/images/items/01_4802/155_5682.jpg",
+				"hash": "33edf6b9d1d0d19d1b6d23d89adb9c8f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5682.jpg",
+				"path": "/images/items/01_4802/156_5682.jpg",
+				"hash": "b354ae0e338a4907719c94e80246ea54"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4802/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

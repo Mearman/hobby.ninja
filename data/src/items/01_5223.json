@@ -79,30 +79,46 @@
 			"・Product specifications are as of 20243. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"images": [
-		"/images/items/01_5223/153_6079.jpg",
-		"/images/items/01_5223/155_6079.jpg",
-		"/images/items/01_5223/156_6079.jpg",
-		"/images/items/01_5223/157_6079.jpg",
-		"/images/items/01_5223/158_6079.jpg",
-		"/images/items/01_5223/159_6079.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6079.jpg",
+				"path": "/images/items/01_5223/153_6079.jpg",
+				"hash": "35a3f52b3691abdb1354a2bf009c50ca"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6079.jpg",
+				"path": "/images/items/01_5223/155_6079.jpg",
+				"hash": "ede499eb348a6bbd85e72877cdec8334"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6079.jpg",
+				"path": "/images/items/01_5223/156_6079.jpg",
+				"hash": "d299a15ce7e2d8bba3a14558b8eabc58"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6079.jpg",
+				"path": "/images/items/01_5223/157_6079.jpg",
+				"hash": "51a5a179719c5ea181e31296ccfcc592"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6079.jpg",
+				"path": "/images/items/01_5223/158_6079.jpg",
+				"hash": "32fccd1c961cd5ba0b2cd22bdcf2db61"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6079.jpg",
+				"path": "/images/items/01_5223/159_6079.jpg",
+				"hash": "ad97216aa04ea7b2fc94dc36446740ff"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5223/",
-	"brandIds": [
-		"pb_charapla"
-	],
-	"seriesIds": [
-		"lgaim"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000216436",
-		"item-1000207143",
-		"item-1000205639",
-		"01_3363"
-	],
+	"brandIds": ["pb_charapla"],
+	"seriesIds": ["lgaim"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000216436", "item-1000207143", "item-1000205639", "01_3363"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

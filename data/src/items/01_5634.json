@@ -32,30 +32,41 @@
 			"The mono eye and scope lens are realistically reproduced with clear parts."
 		]
 	},
-	"images": [
-		"/images/items/01_5634/153_698.jpg",
-		"/images/items/01_5634/155_698.jpg",
-		"/images/items/01_5634/156_698.jpg",
-		"/images/items/01_5634/157_698.jpg",
-		"/images/items/01_5634/158_698.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_698.jpg",
+				"path": "/images/items/01_5634/153_698.jpg",
+				"hash": "64d176634cd69c31d2efdcce21468a26"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_698.jpg",
+				"path": "/images/items/01_5634/155_698.jpg",
+				"hash": "c47810fbdb7c40e25c0e847ff2fb4aba"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_698.jpg",
+				"path": "/images/items/01_5634/156_698.jpg",
+				"hash": "2f94ae86340a0e731f9a96473d7ba9ab"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_698.jpg",
+				"path": "/images/items/01_5634/157_698.jpg",
+				"hash": "cb474b19c45128ed16127b7115065024"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_698.jpg",
+				"path": "/images/items/01_5634/158_698.jpg",
+				"hash": "82b02193f20e60b8f9416d180db822a2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5634/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"manual": {
 		"id": "257",
 		"url": "https://manual.bandai-hobby.net/menus/detail/257/"

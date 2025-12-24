@@ -37,42 +37,62 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"スティールヘイズ 武器×1式",
-			"Vvc-774LS 展開時再現用パーツ×1式",
-			"シール×1"
-		],
-		"en": [
-			"Steel Haze Weapon x 1",
-			"Vvc-774LS Deployment reproduction parts x 1 set",
-			"Seal×1"
-		]
+		"ja": ["スティールヘイズ 武器×1式", "Vvc-774LS 展開時再現用パーツ×1式", "シール×1"],
+		"en": ["Steel Haze Weapon x 1", "Vvc-774LS Deployment reproduction parts x 1 set", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_5267/1000217437_1.jpg",
-		"/images/items/01_5267/1000217437_2.jpg",
-		"/images/items/01_5267/1000217437_3.jpg",
-		"/images/items/01_5267/1000217437_4.jpg",
-		"/images/items/01_5267/1000217437_5.jpg",
-		"/images/items/01_5267/1000217437_6.jpg",
-		"/images/items/01_5267/1000217437_7.jpg",
-		"/images/items/01_5267/1000217437_8.jpg",
-		"/images/items/01_5267/1000217437_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217437_1.jpg",
+				"path": "/images/items/01_5267/1000217437_1.jpg",
+				"hash": "9e092c07115eb26cf1da3429e5bbf8b2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217437_2.jpg",
+				"path": "/images/items/01_5267/1000217437_2.jpg",
+				"hash": "6dfc0b097a82940547ac5cee714966e4"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217437_3.jpg",
+				"path": "/images/items/01_5267/1000217437_3.jpg",
+				"hash": "08744d65a5b33f0b8174a98a890f9f68"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217437_4.jpg",
+				"path": "/images/items/01_5267/1000217437_4.jpg",
+				"hash": "773d6cd92678542dba986bd5d82a67f4"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217437_5.jpg",
+				"path": "/images/items/01_5267/1000217437_5.jpg",
+				"hash": "f599dec0c3afb4cf3e5dd84e85aa05f9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217437_6.jpg",
+				"path": "/images/items/01_5267/1000217437_6.jpg",
+				"hash": "411df1a41e491ae890ef0f03d0938da6"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217437_7.jpg",
+				"path": "/images/items/01_5267/1000217437_7.jpg",
+				"hash": "3e49d559b1379b6e6763435c11d347e9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217437_8.jpg",
+				"path": "/images/items/01_5267/1000217437_8.jpg",
+				"hash": "c6d5524b0461f524e9ee375d39bcff66"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217437_9.jpg",
+				"path": "/images/items/01_5267/1000217437_9.jpg",
+				"hash": "905020e2128c5f7cd5b3691a51f091d7"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5267/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [
-		"armoredcore"
-	],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5973",
-		"01_5974",
-		"01_5573",
-		"01_5574"
-	]
+	"brandIds": ["30mm"],
+	"seriesIds": ["armoredcore"],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5973", "01_5974", "01_5573", "01_5574"]
 }

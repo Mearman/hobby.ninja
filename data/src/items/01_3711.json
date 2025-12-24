@@ -41,28 +41,36 @@
 			"• Attached weapons can be attached to the joints on the waist and Seal."
 		]
 	},
-	"images": [
-		"/images/items/01_3711/153_4664.jpg",
-		"/images/items/01_3711/155_4664.jpg",
-		"/images/items/01_3711/156_4664.jpg",
-		"/images/items/01_3711/157_4664.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4664.jpg",
+				"path": "/images/items/01_3711/153_4664.jpg",
+				"hash": "af4000f7e5de2d972455f15033db4dbb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4664.jpg",
+				"path": "/images/items/01_3711/155_4664.jpg",
+				"hash": "63429eb28a68a7aa4a33f50ce0265e99"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4664.jpg",
+				"path": "/images/items/01_3711/156_4664.jpg",
+				"hash": "8f5814cc7525558b8808c173c11ed707"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4664.jpg",
+				"path": "/images/items/01_3711/157_4664.jpg",
+				"hash": "b76de62fa003077d08ac1a26dea608cb"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3711/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"origin"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2828",
-		"01_2707",
-		"item-1000135687",
-		"01_2174"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["origin"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2828", "01_2707", "item-1000135687", "01_2174"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

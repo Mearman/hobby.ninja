@@ -35,36 +35,42 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ビームサーベル×1",
-			"シールド×1",
-			"シール×1"
-		],
-		"en": [
-			"Beam saber x 1",
-			"Seal × 1",
-			"Seal×1"
-		]
+		"ja": ["ビームサーベル×1", "シールド×1", "シール×1"],
+		"en": ["Beam saber x 1", "Seal × 1", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_5472/01_5472_0.jpg",
-		"/images/items/01_5472/01_5472_1.jpg",
-		"/images/items/01_5472/01_5472_2.jpg",
-		"/images/items/01_5472/01_5472_3.jpg",
-		"/images/items/01_5472/01_5472_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5472_0.jpg",
+				"path": "/images/items/01_5472/01_5472_0.jpg",
+				"hash": "7284c00f567df5d49c60e0e794d7ae08"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5472_1.jpg",
+				"path": "/images/items/01_5472/01_5472_1.jpg",
+				"hash": "4fd865754f1923e83c15261a1307db2d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5472_2.jpg",
+				"path": "/images/items/01_5472/01_5472_2.jpg",
+				"hash": "7d91a2cca9dbd9fcea7ff776b11abc84"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5472_3.jpg",
+				"path": "/images/items/01_5472/01_5472_3.jpg",
+				"hash": "58aeec22e88a6bab4144063c1c0d4cbb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5472_4.jpg",
+				"path": "/images/items/01_5472/01_5472_4.jpg",
+				"hash": "031b973d76e4deb4d862a966c94eb743"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5472/",
 	"brandIds": [],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5969",
-		"01_5970",
-		"01_5986"
-	]
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5969", "01_5970", "01_5986"]
 }

@@ -27,23 +27,29 @@
 			"• Purple Vagan machine appears in AG. • \"Touch gate \" allows parts to be removed by hand without using tools. • \" Iropla \" creates a colorful finish just by assembling it. • \" Block build\" allows for intuitive and quick assembly. • Comes with 1 gauging tip."
 		]
 	},
-	"images": [
-		"/images/items/01_4612/153_5508.jpg",
-		"/images/items/01_4612/155_5508.jpg",
-		"/images/items/01_4612/156_5508.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5508.jpg",
+				"path": "/images/items/01_4612/153_5508.jpg",
+				"hash": "d7fdaae768324f72833caf6ba29c456e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5508.jpg",
+				"path": "/images/items/01_4612/155_5508.jpg",
+				"hash": "9f5196fb8af3c4c5604a3be4c1c9a26d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5508.jpg",
+				"path": "/images/items/01_4612/156_5508.jpg",
+				"hash": "93cc0dd66b9b818e047a076830f17fda"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4612/",
 	"brandIds": [],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181355",
-		"item-1000181354",
-		"item-1000170540",
-		"01_4196"
-	]
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181355", "item-1000181354", "item-1000170540", "01_4196"]
 }

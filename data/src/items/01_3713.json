@@ -27,29 +27,36 @@
 			"From \"Mobile Suit Gundam ZZ \", Rick Diaz's developed and enhanced MS \" Sturm Diaz\" is now available in HGUC.Characteristic Gray Binder is made three-dimensional for the first time, and the inner mechanical details are also minutely reproduced.Head cover can be selected from two types, one for captain machine and one for general machine.Beam pistol x 2 and clay bazooka are included."
 		]
 	},
-	"images": [
-		"/images/items/01_3713/153_4666.jpg",
-		"/images/items/01_3713/155_4666.jpg",
-		"/images/items/01_3713/156_4666.jpg",
-		"/images/items/01_3713/157_4666.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4666.jpg",
+				"path": "/images/items/01_3713/153_4666.jpg",
+				"hash": "dd10ba199e0edcba7e6f53ad548d3037"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4666.jpg",
+				"path": "/images/items/01_3713/155_4666.jpg",
+				"hash": "1cf38623ae7847caf6b05f30b4bffbff"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4666.jpg",
+				"path": "/images/items/01_3713/156_4666.jpg",
+				"hash": "f388fcf328500e2b422fa432269a4b79"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4666.jpg",
+				"path": "/images/items/01_3713/157_4666.jpg",
+				"hash": "c50ae7fedd8b3f19f5bc15c65612f5fc"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3713/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam-zz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5963",
-		"01_4985",
-		"01_4971",
-		"01_2079"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["gundam-zz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5963", "01_4985", "01_4971", "01_2079"],
 	"manual": {
 		"id": "916",
 		"url": "https://manual.bandai-hobby.net/menus/detail/916/"

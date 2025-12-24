@@ -20,31 +20,24 @@
 	"targetAge": 15,
 	"scale": "1/60",
 	"description": {
-		"ja": [
-			"「PG 1/60 RX-178 ガンダム Mk-II マルチコーティングバージョン」登場！"
-		],
-		"en": [
-			"\"PG 1/60 RX-178 Gundam Mk-II Multi-Coated Version\" now available!"
-		]
+		"ja": ["「PG 1/60 RX-178 ガンダム Mk-II マルチコーティングバージョン」登場！"],
+		"en": ["\"PG 1/60 RX-178 Gundam Mk-II Multi-Coated Version\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4870/153_5749.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5749.jpg",
+				"path": "/images/items/01_4870/153_5749.jpg",
+				"hash": "d0d3f70734480ab39fc5762fcb4e9956"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4870/",
-	"brandIds": [
-		"pg"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4475",
-		"01_1417",
-		"01_1832"
-	],
+	"brandIds": ["pg"],
+	"seriesIds": ["z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4475", "01_1417", "01_1832"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

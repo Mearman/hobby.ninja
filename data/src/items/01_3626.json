@@ -26,30 +26,46 @@
 			"A 1/144HG plastic model of the \"Jinhai Maneuver \" that appears in Gundam Ace's \" Mobile Suit Gundam SEED X Astray \". This aircraft is an improved version of the \" Jin \" that appeared in \" Mobile Suit Gundam SEED\" and has been upgraded to a high-mobility type. Additional parts have been added to each part, such as the chest and shoulders. The weapon comes with a newly designed beam rifle that can be equipped with a heavy sword."
 		]
 	},
-	"images": [
-		"/images/items/01_3626/153_457.jpg",
-		"/images/items/01_3626/155_457.jpg",
-		"/images/items/01_3626/156_457.jpg",
-		"/images/items/01_3626/157_457.jpg",
-		"/images/items/01_3626/158_457.jpg",
-		"/images/items/01_3626/159_457.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_457.jpg",
+				"path": "/images/items/01_3626/153_457.jpg",
+				"hash": "38b2b204c7b9a1ee732c9f1423e69f53"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_457.jpg",
+				"path": "/images/items/01_3626/155_457.jpg",
+				"hash": "84d304fe4ee5b9706960769499e41790"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_457.jpg",
+				"path": "/images/items/01_3626/156_457.jpg",
+				"hash": "d12430b0c8a086d3362846859008b2fc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_457.jpg",
+				"path": "/images/items/01_3626/157_457.jpg",
+				"hash": "29b30550fea8573fb7289e57a5313b1a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_457.jpg",
+				"path": "/images/items/01_3626/158_457.jpg",
+				"hash": "808273f75f607fb6abac1604a7a16355"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_457.jpg",
+				"path": "/images/items/01_3626/159_457.jpg",
+				"hash": "9454a17511525af92c19f676cef43aff"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3626/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181726",
-		"01_1930",
-		"01_384",
-		"01_83"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181726", "01_1930", "01_384", "01_83"],
 	"manual": {
 		"id": "155",
 		"url": "https://manual.bandai-hobby.net/menus/detail/155/"

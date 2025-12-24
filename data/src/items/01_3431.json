@@ -37,38 +37,52 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ランナー×4",
-			"取扱説明書×1",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Runner×4",
-			"Handling manual×1",
-			"Foil Seal×1"
-		]
+		"ja": ["ランナー×4", "取扱説明書×1", "ホイルシール×1"],
+		"en": ["Runner×4", "Handling manual×1", "Foil Seal×1"]
 	},
-	"images": [
-		"/images/items/01_3431/153_4385.jpg",
-		"/images/items/01_3431/155_4385.jpg",
-		"/images/items/01_3431/156_4385.jpg",
-		"/images/items/01_3431/157_4385.jpg",
-		"/images/items/01_3431/158_4385.jpg",
-		"/images/items/01_3431/159_4385.jpg",
-		"/images/items/01_3431/189_4385.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4385.jpg",
+				"path": "/images/items/01_3431/153_4385.jpg",
+				"hash": "777b26d8f84848a12a613948631e74a6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4385.jpg",
+				"path": "/images/items/01_3431/155_4385.jpg",
+				"hash": "8bc2cd87659657c16aa83d1874cca62c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4385.jpg",
+				"path": "/images/items/01_3431/156_4385.jpg",
+				"hash": "5f3b2ce38b6ab9fae3901e5cec3b51bc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4385.jpg",
+				"path": "/images/items/01_3431/157_4385.jpg",
+				"hash": "12ca6a209ca4f2d8f16db2bf9faff7ab"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4385.jpg",
+				"path": "/images/items/01_3431/158_4385.jpg",
+				"hash": "4cc612c006b4862bd4ede768e19e90dd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4385.jpg",
+				"path": "/images/items/01_3431/159_4385.jpg",
+				"hash": "082c0f7749bd2a2d46d3e06c3d9c809c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4385.jpg",
+				"path": "/images/items/01_3431/189_4385.jpg",
+				"hash": "9954ec377242050fd786195f3c5c1406"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3431/",
-	"brandIds": [
-		"entry_grade"
-	],
+	"brandIds": ["entry_grade"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5584",
-		"01_5585",
-		"01_5440",
-		"01_5244"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5584", "01_5585", "01_5440", "01_5244"]
 }

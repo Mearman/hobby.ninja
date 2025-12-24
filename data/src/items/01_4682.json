@@ -18,28 +18,27 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"• SD ガンダム Gジェネレーションにシャイニングガンダム(シャイニングフィンガーモード)が登場！"
-		],
-		"en": [
-			"• Shining Gundam (Shining Finger Mode) is now available in SD Gundam G Generation!"
-		]
+		"ja": ["• SD ガンダム Gジェネレーションにシャイニングガンダム(シャイニングフィンガーモード)が登場！"],
+		"en": ["• Shining Gundam (Shining Finger Mode) is now available in SD Gundam G Generation!"]
 	},
-	"images": [
-		"/images/items/01_4682/153_5571.jpg",
-		"/images/items/01_4682/155_5571.JPG"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5571.jpg",
+				"path": "/images/items/01_4682/153_5571.jpg",
+				"hash": "e17cd3c1530a331bdc3ef7f0567c6d0f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5571.JPG",
+				"path": "/images/items/01_4682/155_5571.JPG",
+				"hash": "5ddafdf676168282de5e1e55d4b3a2cd"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4682/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"ggundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1003"
-	]
+	"brandIds": ["sdgundamseries"],
+	"seriesIds": ["ggundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_1003"]
 }

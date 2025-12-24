@@ -35,29 +35,59 @@
 			"Semi-finished products x 2, molded products x 2, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_4589/153_5487.jpg",
-		"/images/items/01_4589/155_5487.jpg",
-		"/images/items/01_4589/156_5487.jpg",
-		"/images/items/01_4589/157_5487.jpg",
-		"/images/items/01_4589/158_5487.jpg",
-		"/images/items/01_4589/159_5487.jpg",
-		"/images/items/01_4589/189_5487.jpg",
-		"/images/items/01_4589/190_5487.jpg",
-		"/images/items/01_4589/191_5487.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5487.jpg",
+				"path": "/images/items/01_4589/153_5487.jpg",
+				"hash": "b9762799484761bc2c60fb3c45ba66b2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5487.jpg",
+				"path": "/images/items/01_4589/155_5487.jpg",
+				"hash": "eee3a7b03bd63bffac6558163ef46f13"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5487.jpg",
+				"path": "/images/items/01_4589/156_5487.jpg",
+				"hash": "bac326cd5450715c24c05a7aed254156"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5487.jpg",
+				"path": "/images/items/01_4589/157_5487.jpg",
+				"hash": "f195eb97bedebd07f61329d312725e4e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5487.jpg",
+				"path": "/images/items/01_4589/158_5487.jpg",
+				"hash": "d6fbba2c074732c9ec540422b7295d23"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5487.jpg",
+				"path": "/images/items/01_4589/159_5487.jpg",
+				"hash": "20a9ad5e2e5f75b7b2142edab0875168"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5487.jpg",
+				"path": "/images/items/01_4589/189_5487.jpg",
+				"hash": "02d6f81ace7bed922edd69ad5d8e376a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5487.jpg",
+				"path": "/images/items/01_4589/190_5487.jpg",
+				"hash": "1c5234b02bbc9a6ec94933153f1a8062"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5487.jpg",
+				"path": "/images/items/01_4589/191_5487.jpg",
+				"hash": "5bfc06b4c056ce0e6807723a089f0e94"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4589/",
-	"brandIds": [
-		"parts"
-	],
+	"brandIds": ["parts"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3582",
-		"01_3563",
-		"01_3564",
-		"01_636"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3582", "01_3563", "01_3564", "01_636"]
 }

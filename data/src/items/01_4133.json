@@ -25,23 +25,29 @@
 			"A BB Senshi plastic model of \"Shoboshi Kirimaru \" that appears in \" SD Gundam Force Emaki Musha Retsuden Busaka Maika Hen\" which is currently being serialized in Comic Bonbon. It is composed of a small number of parts that are easy to assemble even at a young age. Can be equipped with a fin funnel feather fan and a tin cane. The neck, arms, and base of the legs are movable. It is possible to attach the Heavenly Wings of Busaka Maika to the pro-Musha Ryujin Doushi Niu. The helmet, shoulder armor, and fin funnels that come with Dragon God Master Niu can be attached."
 		]
 	},
-	"images": [
-		"/images/items/01_4133/153_505.jpg",
-		"/images/items/01_4133/155_505.jpg",
-		"/images/items/01_4133/156_505.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_505.jpg",
+				"path": "/images/items/01_4133/153_505.jpg",
+				"hash": "4df99ad2ed7cc9c436f938b8df368f0a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_505.jpg",
+				"path": "/images/items/01_4133/155_505.jpg",
+				"hash": "5e5cc0af327b5107142330a57e97cc75"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_505.jpg",
+				"path": "/images/items/01_4133/156_505.jpg",
+				"hash": "abce90c558dd04e9333e4a6c4e699920"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4133/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

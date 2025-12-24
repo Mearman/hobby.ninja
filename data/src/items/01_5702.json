@@ -30,29 +30,36 @@
 			"■ The back is equipped with three Tri-Blades, which are exclusive weapons for Driessen. Molded product ×8, foil seal ×1, assembly instructions"
 		]
 	},
-	"images": [
-		"/images/items/01_5702/1000092267_1.jpg",
-		"/images/items/01_5702/1000092267_2.jpg",
-		"/images/items/01_5702/1000092267_3.jpg",
-		"/images/items/01_5702/1000092267_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092267_1.jpg",
+				"path": "/images/items/01_5702/1000092267_1.jpg",
+				"hash": "7250fe48ef08ce19dee06d55c5bad922"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092267_2.jpg",
+				"path": "/images/items/01_5702/1000092267_2.jpg",
+				"hash": "87b74f0319341ae42f6d89e3b6d46e27"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092267_3.jpg",
+				"path": "/images/items/01_5702/1000092267_3.jpg",
+				"hash": "309dd30e2f608f7caa5694d5f54e5096"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092267_4.jpg",
+				"path": "/images/items/01_5702/1000092267_4.jpg",
+				"hash": "c9e42e589bdb0728d2d553686ed9d757"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5702/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "1074",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1074/"

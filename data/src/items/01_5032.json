@@ -39,42 +39,44 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ザク・マシンガン×1",
-			"ザク・バズーカ×1",
-			"ヒート・ホーク×1",
-			"マーキングシール"
-		],
-		"en": [
-			"Zaku machine gun x1",
-			"Zaku Bazooka×1",
-			"Heat Hawk x1",
-			"MarkingSeal"
-		]
+		"ja": ["ザク・マシンガン×1", "ザク・バズーカ×1", "ヒート・ホーク×1", "マーキングシール"],
+		"en": ["Zaku machine gun x1", "Zaku Bazooka×1", "Heat Hawk x1", "MarkingSeal"]
 	},
-	"images": [
-		"/images/items/01_5032/153_5899.jpeg",
-		"/images/items/01_5032/155_5899.jpeg",
-		"/images/items/01_5032/156_5899.jpeg",
-		"/images/items/01_5032/157_5899.jpeg",
-		"/images/items/01_5032/158_5899.jpeg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5899.jpeg",
+				"path": "/images/items/01_5032/153_5899.jpeg",
+				"hash": "6f48d4e2d214e738a3e4eeb5cc753ff1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5899.jpeg",
+				"path": "/images/items/01_5032/155_5899.jpeg",
+				"hash": "409aaa93e774d1dcb6de17cd819a006e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5899.jpeg",
+				"path": "/images/items/01_5032/156_5899.jpeg",
+				"hash": "45c8eca59b751619ba04dfd5afa59e92"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5899.jpeg",
+				"path": "/images/items/01_5032/157_5899.jpeg",
+				"hash": "4b6c9b1cf2db6ab314d5f2ea4c1deec9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5899.jpeg",
+				"path": "/images/items/01_5032/158_5899.jpeg",
+				"hash": "c2d5beac20f4a349280605322569ca52"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5032/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
+	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5951"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

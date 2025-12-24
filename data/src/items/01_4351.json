@@ -26,24 +26,26 @@
 			"1/144 Scale, collection series plastic model of \"Orange Zaku Phantom \" that appears in \" Mobile Suit Gundam SEED DESTINY \". The setting color and form are reproduced in the color variations of 1Release's \" 1/144 Blaze Zaku Phantom \". Equipped with Blaze Wizard on the back, it can also be attached to the currently released \" HG Zaku Warrior\". The guided missile cannon can move up and down, allowing you to take a missile firing pose."
 		]
 	},
-	"images": [
-		"/images/items/01_4351/153_525.jpg",
-		"/images/items/01_4351/155_525.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_525.jpg",
+				"path": "/images/items/01_4351/153_525.jpg",
+				"hash": "72cc7d6071bacdbc6de4a210eeb107a0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_525.jpg",
+				"path": "/images/items/01_4351/155_525.jpg",
+				"hash": "0bed71172559f52ecb9c65a723bde093"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4351/",
 	"brandIds": [],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5394",
-		"item-1000214960",
-		"01_5378",
-		"01_5365"
-	],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5394", "item-1000214960", "01_5378", "01_5365"],
 	"manual": {
 		"id": "1152",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1152/"

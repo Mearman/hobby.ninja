@@ -36,14 +36,7 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"フェイスパーツ(タンポ印刷)×3種",
-			"帽子×1",
-			"杖×1",
-			"本×1",
-			"ジョイントパーツ×1式",
-			"ハンドパーツ×1式"
-		],
+		"ja": ["フェイスパーツ(タンポ印刷)×3種", "帽子×1", "杖×1", "本×1", "ジョイントパーツ×1式", "ハンドパーツ×1式"],
 		"en": [
 			"Face parts (tampo printing) x 3 types",
 			"Hat x 1",
@@ -53,26 +46,44 @@
 			"Hand parts x 1 set"
 		]
 	},
-	"images": [
-		"/images/items/01_6933/01_6933_0.jpg",
-		"/images/items/01_6933/01_6933_1.jpg",
-		"/images/items/01_6933/01_6933_2.jpg",
-		"/images/items/01_6933/01_6933_3.jpg",
-		"/images/items/01_6933/01_6933_4.jpg",
-		"/images/items/01_6933/01_6933_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6933_0.jpg",
+				"path": "/images/items/01_6933/01_6933_0.jpg",
+				"hash": "2aad8d082560092a2ff94875a59c813d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6933_1.jpg",
+				"path": "/images/items/01_6933/01_6933_1.jpg",
+				"hash": "487bf97a6c713cac0cdf6152881e15bb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6933_2.jpg",
+				"path": "/images/items/01_6933/01_6933_2.jpg",
+				"hash": "6e674675eeb796536400a3e8febf9929"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6933_3.jpg",
+				"path": "/images/items/01_6933/01_6933_3.jpg",
+				"hash": "6d887cb594de79b1f7dd2b4f612853f7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6933_4.jpg",
+				"path": "/images/items/01_6933/01_6933_4.jpg",
+				"hash": "b3ef384b106f16ca25d0f9989d88f6c7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6933_5.jpg",
+				"path": "/images/items/01_6933/01_6933_5.jpg",
+				"hash": "3804056bdc68470b45660c2493ca70fd"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6933/",
-	"brandIds": [
-		"30ms"
-	],
+	"brandIds": ["30ms"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_6777",
-		"01_6778",
-		"01_6770",
-		"01_6771"
-	]
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_6777", "01_6778", "01_6770", "01_6771"]
 }

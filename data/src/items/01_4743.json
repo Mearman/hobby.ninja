@@ -19,30 +19,32 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"• 呂蒙ディジェ、甘寧ケンプファーが率いる「強襲水軍」。"
-		],
-		"en": [
-			"• \"Assault Navy\" led by Lu Meng Dijie and Gan Ning Kaempfer."
-		]
+		"ja": ["• 呂蒙ディジェ、甘寧ケンプファーが率いる「強襲水軍」。"],
+		"en": ["• \"Assault Navy\" led by Lu Meng Dijie and Gan Ning Kaempfer."]
 	},
-	"images": [
-		"/images/items/01_4743/153_5628.jpg",
-		"/images/items/01_4743/155_5628.jpg",
-		"/images/items/01_4743/156_5628.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5628.jpg",
+				"path": "/images/items/01_4743/153_5628.jpg",
+				"hash": "274d81ead40aee487c486f81780ec08d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5628.jpg",
+				"path": "/images/items/01_4743/155_5628.jpg",
+				"hash": "6d20ffe00f44bc7294d81ed23a455c67"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5628.jpg",
+				"path": "/images/items/01_4743/156_5628.jpg",
+				"hash": "c08f7b12b410ae0a983c2a9875751e2d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4743/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

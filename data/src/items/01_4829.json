@@ -20,32 +20,24 @@
 	"targetAge": 15,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"「MG 1/100 ギャン エクストラフィニッシュバージョン」登場！"
-		],
-		"en": [
-			"\"MG 1/100 Gyan Extra Finish Version\" now available!"
-		]
+		"ja": ["「MG 1/100 ギャン エクストラフィニッシュバージョン」登場！"],
+		"en": ["\"MG 1/100 Gyan Extra Finish Version\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4829/153_5711.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5711.jpg",
+				"path": "/images/items/01_4829/153_5711.jpg",
+				"hash": "c49035944d0394adc91bb66ede0e04e5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4829/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

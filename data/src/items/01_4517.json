@@ -27,27 +27,31 @@
 			"\"Gundam Astray Green Frame \" from \" Mobile Suit Gundam SEED FRAME ASTRAYS\" currently being serialized in Dengeki Hobby Magazine has been made into a kit. The included special beam rifle has a beam saber section that slides forward. Troya Noiret's special marking seal is included."
 		]
 	},
-	"images": [
-		"/images/items/01_4517/153_5419.jpg",
-		"/images/items/01_4517/155_5419.jpg",
-		"/images/items/01_4517/156_5419.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5419.jpg",
+				"path": "/images/items/01_4517/153_5419.jpg",
+				"hash": "305dd4cee26438887426677c4d9df1b4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5419.jpg",
+				"path": "/images/items/01_4517/155_5419.jpg",
+				"hash": "0da4b5a4e2ba4a33c0ee76427654bcb8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5419.jpg",
+				"path": "/images/items/01_4517/156_5419.jpg",
+				"hash": "19ae4d694f4b54a754400c018210ced1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4517/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181726",
-		"01_1930",
-		"01_384",
-		"01_83"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181726", "01_1930", "01_384", "01_83"],
 	"manual": {
 		"id": "277",
 		"url": "https://manual.bandai-hobby.net/menus/detail/277/"

@@ -31,35 +31,47 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"シール",
-			"ディスプレイ台座×1"
-		],
-		"en": [
-			"Seal",
-			"Display pedestal x 1"
-		]
+		"ja": ["シール", "ディスプレイ台座×1"],
+		"en": ["Seal", "Display pedestal x 1"]
 	},
-	"images": [
-		"/images/items/01_5958/01_5958_0.jpg",
-		"/images/items/01_5958/01_5958_1.jpg",
-		"/images/items/01_5958/01_5958_2.jpg",
-		"/images/items/01_5958/01_5958_3.jpg",
-		"/images/items/01_5958/01_5958_4.jpg",
-		"/images/items/01_5958/01_5958_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5958_0.jpg",
+				"path": "/images/items/01_5958/01_5958_0.jpg",
+				"hash": "3d16944abf5988160a69ae87c1f0604f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5958_1.jpg",
+				"path": "/images/items/01_5958/01_5958_1.jpg",
+				"hash": "e0eb486882036e047a79eaf50eca0fda"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5958_2.jpg",
+				"path": "/images/items/01_5958/01_5958_2.jpg",
+				"hash": "664c8cc06b64632d64a88e2797ac8794"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5958_3.jpg",
+				"path": "/images/items/01_5958/01_5958_3.jpg",
+				"hash": "ad60948c28658146994e50bbd3ec1623"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5958_4.jpg",
+				"path": "/images/items/01_5958/01_5958_4.jpg",
+				"hash": "8f9434cd9aebb75606427b350a7972b2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5958_5.jpg",
+				"path": "/images/items/01_5958/01_5958_5.jpg",
+				"hash": "6d6edb340da7c1956e8f61b366c5efb2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5958/",
 	"brandIds": [],
-	"seriesIds": [
-		"pokemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_6780",
-		"01_6762",
-		"01_5984",
-		"01_5947"
-	]
+	"seriesIds": ["pokemon"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_6780", "01_6762", "01_5984", "01_5947"]
 }

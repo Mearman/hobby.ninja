@@ -31,34 +31,44 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ヘアスタイルパーツ×1"
-		],
-		"en": [
-			"Hair style parts x 1"
-		]
+		"ja": ["ヘアスタイルパーツ×1"],
+		"en": ["Hair style parts x 1"]
 	},
-	"images": [
-		"/images/items/01_3762/153_4713.jpg",
-		"/images/items/01_3762/155_4713.jpg",
-		"/images/items/01_3762/156_4713.jpg",
-		"/images/items/01_3762/157_4713.jpg",
-		"/images/items/01_3762/158_4713.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4713.jpg",
+				"path": "/images/items/01_3762/153_4713.jpg",
+				"hash": "e31c6e4f6720439662b1d47cd6aff0e8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4713.jpg",
+				"path": "/images/items/01_3762/155_4713.jpg",
+				"hash": "bd0af4aa10f6dabaa5c35a0d74cff860"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4713.jpg",
+				"path": "/images/items/01_3762/156_4713.jpg",
+				"hash": "38322326effdaaa255fd7cfc326cc507"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4713.jpg",
+				"path": "/images/items/01_3762/157_4713.jpg",
+				"hash": "d65ed45652968f7bab1916bd68487fe5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4713.jpg",
+				"path": "/images/items/01_3762/158_4713.jpg",
+				"hash": "5824c4085129dcf877fc22511d686999"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3762/",
-	"brandIds": [
-		"30ms"
-	],
+	"brandIds": ["30ms"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5975",
-		"01_5976",
-		"01_5977",
-		"01_5954"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3464",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3464/"

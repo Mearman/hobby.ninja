@@ -35,24 +35,44 @@
 			"• Comes with a special pedestal that can reproduce flight conditions."
 		]
 	},
-	"images": [
-		"/images/items/01_5784/153_847.jpg",
-		"/images/items/01_5784/155_847.jpg",
-		"/images/items/01_5784/156_847.jpg",
-		"/images/items/01_5784/157_847.jpg",
-		"/images/items/01_5784/158_847.jpg",
-		"/images/items/01_5784/159_847.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_847.jpg",
+				"path": "/images/items/01_5784/153_847.jpg",
+				"hash": "0d2fc783c1fccccf8cc8cf6618b81292"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_847.jpg",
+				"path": "/images/items/01_5784/155_847.jpg",
+				"hash": "184ee5ca408be96c0e7ee9227034c71d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_847.jpg",
+				"path": "/images/items/01_5784/156_847.jpg",
+				"hash": "ae188a3c5df2f0cd33cd0f9536e0b019"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_847.jpg",
+				"path": "/images/items/01_5784/157_847.jpg",
+				"hash": "071b5acc89afe71e615c9fbe72fd1b56"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_847.jpg",
+				"path": "/images/items/01_5784/158_847.jpg",
+				"hash": "bb72593e005dcc00f1f45998ee280156"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_847.jpg",
+				"path": "/images/items/01_5784/159_847.jpg",
+				"hash": "0420c86cf40a5e076fb23431a0a00ea0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5784/",
 	"brandIds": [],
-	"seriesIds": [
-		"yamato"
-	],
+	"seriesIds": ["yamato"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5971",
-		"01_5498",
-		"01_5500",
-		"01_5388"
-	]
+	"relatedItemIds": ["01_5971", "01_5498", "01_5500", "01_5388"]
 }

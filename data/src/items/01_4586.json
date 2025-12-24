@@ -29,22 +29,29 @@
 			"Molded product x 20, water transfer decal x 1, foil seal x 1, booklet x 1, assembly manual, test battery (LR41) x 2"
 		]
 	},
-	"images": [
-		"/images/items/01_4586/153_5484.jpg",
-		"/images/items/01_4586/155_5484.jpg",
-		"/images/items/01_4586/156_5484.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5484.jpg",
+				"path": "/images/items/01_4586/153_5484.jpg",
+				"hash": "df93586144cd1aaf775fb488933614d1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5484.jpg",
+				"path": "/images/items/01_4586/155_5484.jpg",
+				"hash": "61963286de39a0b09c2446a3f2bbb8a3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5484.jpg",
+				"path": "/images/items/01_4586/156_5484.jpg",
+				"hash": "db582e3692c750d15b499e13e2c2c08a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4586/",
-	"brandIds": [
-		"megasize"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4607"
-	]
+	"brandIds": ["megasize"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4607"]
 }

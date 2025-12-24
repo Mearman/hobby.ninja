@@ -20,30 +20,32 @@
 	"targetAge": 15,
 	"scale": "1/35",
 	"description": {
-		"ja": [
-			"「1/35 メカニックコレクション ランスロット・コンクエスター」登場！"
-		],
-		"en": [
-			"\"1/35 Mechanic Collection Lancelot Conquester\" now available!"
-		]
+		"ja": ["「1/35 メカニックコレクション ランスロット・コンクエスター」登場！"],
+		"en": ["\"1/35 Mechanic Collection Lancelot Conquester\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4839/153_5720.jpg",
-		"/images/items/01_4839/155_5720.jpg",
-		"/images/items/01_4839/156_5720.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5720.jpg",
+				"path": "/images/items/01_4839/153_5720.jpg",
+				"hash": "61240fe904e2bcb3578e57028fc924d6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5720.jpg",
+				"path": "/images/items/01_4839/155_5720.jpg",
+				"hash": "2d463f2509973d12a1fcd2cecc013a89"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5720.jpg",
+				"path": "/images/items/01_4839/156_5720.jpg",
+				"hash": "acc2734f1833bca73bf079935450e7b1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4839/",
 	"brandIds": [],
-	"seriesIds": [
-		"geass"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000203132",
-		"item-1000187724",
-		"item-1000167903",
-		"01_5809"
-	]
+	"seriesIds": ["geass"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000203132", "item-1000187724", "item-1000167903", "01_5809"]
 }

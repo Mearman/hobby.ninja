@@ -37,21 +37,29 @@
 			"• Two types of markings are included: Kynas Seal and water transfer decal."
 		]
 	},
-	"images": [
-		"/images/items/01_5831/153_901.jpg",
-		"/images/items/01_5831/155_901.jpg",
-		"/images/items/01_5831/156_901.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_901.jpg",
+				"path": "/images/items/01_5831/153_901.jpg",
+				"hash": "5ebbe454c0446ca2f15b0f156acc7ad5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_901.jpg",
+				"path": "/images/items/01_5831/155_901.jpg",
+				"hash": "205eb82567b0f235bf9640608abbc181"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_901.jpg",
+				"path": "/images/items/01_5831/156_901.jpg",
+				"hash": "156c6b7932ec79639bbf829915d8a852"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5831/",
 	"brandIds": [],
-	"seriesIds": [
-		"macross"
-	],
+	"seriesIds": ["macross"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5944",
-		"01_5945",
-		"01_5946",
-		"01_5465"
-	]
+	"relatedItemIds": ["01_5944", "01_5945", "01_5946", "01_5465"]
 }

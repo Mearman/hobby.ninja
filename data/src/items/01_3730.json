@@ -31,34 +31,44 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"台座×１"
-		],
-		"en": [
-			"Pedestal x 1"
-		]
+		"ja": ["台座×１"],
+		"en": ["Pedestal x 1"]
 	},
-	"images": [
-		"/images/items/01_3730/153_4682.jpg",
-		"/images/items/01_3730/155_4682.jpg",
-		"/images/items/01_3730/156_4682.jpg",
-		"/images/items/01_3730/157_4682.jpg",
-		"/images/items/01_3730/158_4682.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4682.jpg",
+				"path": "/images/items/01_3730/153_4682.jpg",
+				"hash": "06833d3659977460df31efcdcc50ac46"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4682.jpg",
+				"path": "/images/items/01_3730/155_4682.jpg",
+				"hash": "0ea2ef8ffba56f537cd347c5def75ce8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4682.jpg",
+				"path": "/images/items/01_3730/156_4682.jpg",
+				"hash": "d84d848a225e94a0f5f415602ca0fcf5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4682.jpg",
+				"path": "/images/items/01_3730/157_4682.jpg",
+				"hash": "053c9c3256afce4c85ae19d6aa60d18a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4682.jpg",
+				"path": "/images/items/01_3730/158_4682.jpg",
+				"hash": "9de2dabe21b6083cf9770a99b445a06d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3730/",
 	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5571",
-		"01_5556",
-		"01_5992",
-		"01_5478"
-	],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5571", "01_5556", "01_5992", "01_5478"],
 	"tag": {
 		"ja": "ガンプラくんグッズ",
 		"en": "Gunpla-kun Goods"

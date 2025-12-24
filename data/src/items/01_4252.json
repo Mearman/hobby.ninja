@@ -38,7 +38,21 @@
 		"ja": ["ビーム・ライフル", "シールド", "ビーム・サーベル×2"],
 		"en": ["beam rifle", "Seal de", "Beam saber x2"]
 	},
-	"images": ["/images/items/01_4252/1000071580_1.jpg", "/images/items/01_4252/1000071580_2.jpg"],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000071580_1.jpg",
+				"path": "/images/items/01_4252/1000071580_1.jpg",
+				"hash": "49804ba635e46a9f2d09937f9e4593d7"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000071580_2.jpg",
+				"path": "/images/items/01_4252/1000071580_2.jpg",
+				"hash": "161907f86db4837b0b7ed137fb46d3ec"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4252/",
 	"brandIds": ["hg", "hguc"],
 	"seriesIds": ["z-gundam"],

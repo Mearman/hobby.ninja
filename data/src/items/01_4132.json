@@ -34,29 +34,41 @@
 			"• Gundam base original special marking seal included!"
 		]
 	},
-	"images": [
-		"/images/items/01_4132/1000171644_1.jpg",
-		"/images/items/01_4132/1000171644_2.jpg",
-		"/images/items/01_4132/1000171644_3.jpg",
-		"/images/items/01_4132/1000171644_4.jpg",
-		"/images/items/01_4132/1000171644_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000171644_1.jpg",
+				"path": "/images/items/01_4132/1000171644_1.jpg",
+				"hash": "005a85d0b476e8f816b77d81b3944bbc"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000171644_2.jpg",
+				"path": "/images/items/01_4132/1000171644_2.jpg",
+				"hash": "9ffd6144b7b878eb6e8740dd20083c84"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000171644_3.jpg",
+				"path": "/images/items/01_4132/1000171644_3.jpg",
+				"hash": "c959381fe705e90e6322d1095939efef"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000171644_4.jpg",
+				"path": "/images/items/01_4132/1000171644_4.jpg",
+				"hash": "c881f23144aad0e68c400185f5f6b011"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000171644_5.jpg",
+				"path": "/images/items/01_4132/1000171644_5.jpg",
+				"hash": "bb4de53c4a83c654ad20724a2bcba5be"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4132/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3495",
-		"01_3321",
-		"01_2806",
-		"01_2831"
-	],
+	"brandIds": ["sdcs"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3495", "01_3321", "01_2806", "01_2831"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

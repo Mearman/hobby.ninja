@@ -27,27 +27,41 @@
 			"1/100 Scale plastic model of Blaze Zaku Phantom (Heine machine) that appears in \"Mobile Suit Gundam SEED DESTINY \". The hatch of the missile pod equipped as a weapon in the backpack \" Blaze Wizard\" can be opened and closed, and the thruster cover can be moved up and down, allowing you to recreate the missile launch scene from the movie. The tomahawk, beam assault rifle, and grenade used as weapons are all included, and the beam tomahawk blade is realistically reproduced with clear parts."
 		]
 	},
-	"images": [
-		"/images/items/01_4658/153_554.jpg",
-		"/images/items/01_4658/155_554.jpg",
-		"/images/items/01_4658/156_554.jpg",
-		"/images/items/01_4658/157_554.jpg",
-		"/images/items/01_4658/158_554.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_554.jpg",
+				"path": "/images/items/01_4658/153_554.jpg",
+				"hash": "ea2c0bc27fcb3feb9555c544f736f737"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_554.jpg",
+				"path": "/images/items/01_4658/155_554.jpg",
+				"hash": "15f97a8f9d51dd0a04e364887c699859"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_554.jpg",
+				"path": "/images/items/01_4658/156_554.jpg",
+				"hash": "7a80853b8d550b75af31f104499c8cc3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_554.jpg",
+				"path": "/images/items/01_4658/157_554.jpg",
+				"hash": "468c3a39ac8a076da57af5b3ba5c8361"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_554.jpg",
+				"path": "/images/items/01_4658/158_554.jpg",
+				"hash": "41c8bc56779b0367b16c86f03b25efe4"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4658/",
 	"brandIds": [],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5394",
-		"item-1000214960",
-		"01_5378",
-		"01_5365"
-	],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5394", "item-1000214960", "01_5378", "01_5365"],
 	"manual": {
 		"id": "1163",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1163/"

@@ -32,31 +32,51 @@
 			"*The finished product in the photo is painted. The actual product may differ. *Please note that some of the clear parts may contain air bubbles due to the manufacturing process. *Product materials may change depending on the production period of the sold product. Thank you for your understanding. *There may be variations in plated parts due to the painting process. Thank you for your understanding. *Depending on sales conditions, the quantity that can be purchased may change in the future."
 		]
 	},
-	"images": [
-		"/images/items/01_6841/01_6841_0.jpg",
-		"/images/items/01_6841/01_6841_1.jpg",
-		"/images/items/01_6841/01_6841_2.jpg",
-		"/images/items/01_6841/01_6841_3.jpg",
-		"/images/items/01_6841/01_6841_4.jpg",
-		"/images/items/01_6841/01_6841_5.jpg",
-		"/images/items/01_6841/01_6841_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6841_0.jpg",
+				"path": "/images/items/01_6841/01_6841_0.jpg",
+				"hash": "dc43cf21fdace1bcd60e31b0c59cc859"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6841_1.jpg",
+				"path": "/images/items/01_6841/01_6841_1.jpg",
+				"hash": "1ccd773e21bd4bd46ef900914dbd7a97"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6841_2.jpg",
+				"path": "/images/items/01_6841/01_6841_2.jpg",
+				"hash": "54517b227be2d6d64711eb32d9e40f30"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6841_3.jpg",
+				"path": "/images/items/01_6841/01_6841_3.jpg",
+				"hash": "73946ad1ea2f8aa79f89dcaf78a33bec"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6841_4.jpg",
+				"path": "/images/items/01_6841/01_6841_4.jpg",
+				"hash": "edbbfc11da72acb25f5cd5a251fd40f6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6841_5.jpg",
+				"path": "/images/items/01_6841/01_6841_5.jpg",
+				"hash": "5734a335f736e80d9aede75ded466f5f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6841_6.jpg",
+				"path": "/images/items/01_6841/01_6841_6.jpg",
+				"hash": "1621f30ccdf10d2a80fc99da79e524d4"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6841/",
-	"brandIds": [
-		"pb_charapla"
-	],
-	"seriesIds": [
-		"dragonar"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_6840",
-		"item-1000212946",
-		"item-1000212721",
-		"01_3902"
-	],
+	"brandIds": ["pb_charapla"],
+	"seriesIds": ["dragonar"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_6840", "item-1000212946", "item-1000212721", "01_3902"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

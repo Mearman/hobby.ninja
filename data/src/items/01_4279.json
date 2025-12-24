@@ -36,27 +36,41 @@
 			"• SDW HEROES Caesar Legend Gundam"
 		]
 	},
-	"images": [
-		"/images/items/01_4279/153_5194.jpg",
-		"/images/items/01_4279/155_5194.jpg",
-		"/images/items/01_4279/156_5194.jpg",
-		"/images/items/01_4279/157_5194.jpg",
-		"/images/items/01_4279/158_5194.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5194.jpg",
+				"path": "/images/items/01_4279/153_5194.jpg",
+				"hash": "cdc0b34138794029d88591fe7ca4aa0a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5194.jpg",
+				"path": "/images/items/01_4279/155_5194.jpg",
+				"hash": "19330b051a53e0726e4b0c53b21435c7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5194.jpg",
+				"path": "/images/items/01_4279/156_5194.jpg",
+				"hash": "bd1f6155a083d539c78d003f56a9946f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5194.jpg",
+				"path": "/images/items/01_4279/157_5194.jpg",
+				"hash": "f852db2ec06ffb69d141cea90a2bdedc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5194.jpg",
+				"path": "/images/items/01_4279/158_5194.jpg",
+				"hash": "b8ecc007e9c3421d23d8ce09685757d3"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4279/",
 	"brandIds": [],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5470",
-		"01_5471",
-		"01_5472",
-		"01_5347"
-	],
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

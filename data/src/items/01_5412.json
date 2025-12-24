@@ -113,44 +113,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"グレネード・ランチャー付きビーム・ライフル",
-			"ビーム・サーベル"
-		],
-		"en": [
-			"Beam rifle with grenade launcher",
-			"beam saber"
-		]
+		"ja": ["グレネード・ランチャー付きビーム・ライフル", "ビーム・サーベル"],
+		"en": ["Beam rifle with grenade launcher", "beam saber"]
 	},
-	"images": [
-		"/images/items/01_5412/153_6259.jpg",
-		"/images/items/01_5412/155_6259.jpg",
-		"/images/items/01_5412/156_6259.jpg",
-		"/images/items/01_5412/157_6259.jpg",
-		"/images/items/01_5412/158_6259.jpg",
-		"/images/items/01_5412/159_6259.jpg",
-		"/images/items/01_5412/189_6259.jpg",
-		"/images/items/01_5412/190_6259.jpg",
-		"/images/items/01_5412/191_6259.jpg",
-		"/images/items/01_5412/192_6259.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6259.jpg",
+				"path": "/images/items/01_5412/153_6259.jpg",
+				"hash": "afa7f670ba6bb1ec7d335ea994c10112"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6259.jpg",
+				"path": "/images/items/01_5412/155_6259.jpg",
+				"hash": "0c28e065eaee51682cfae2c1ba5a8c33"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6259.jpg",
+				"path": "/images/items/01_5412/156_6259.jpg",
+				"hash": "d53da422a9c5dfba8d0f40dafc0f20cf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6259.jpg",
+				"path": "/images/items/01_5412/157_6259.jpg",
+				"hash": "1dd7e25652709a32685ade06ea142856"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6259.jpg",
+				"path": "/images/items/01_5412/158_6259.jpg",
+				"hash": "403e3d0c11b71c9436c7ca4e0fb24a12"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6259.jpg",
+				"path": "/images/items/01_5412/159_6259.jpg",
+				"hash": "1272ee932aa9daa98398a2b8a64414d7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6259.jpg",
+				"path": "/images/items/01_5412/189_6259.jpg",
+				"hash": "aa5850407bb27d04e3f6df7c2cf5e545"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6259.jpg",
+				"path": "/images/items/01_5412/190_6259.jpg",
+				"hash": "08c98a2adc2802f0c416e3b9a43c332b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_6259.jpg",
+				"path": "/images/items/01_5412/191_6259.jpg",
+				"hash": "7e90783e8598ecae5ea884fb99847952"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_6259.jpg",
+				"path": "/images/items/01_5412/192_6259.jpg",
+				"hash": "959828050bc9e0221e933f6985aa0eb3"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5412/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla",
-		"hguc"
-	],
+	"brandIds": ["hg", "pb_hg", "pb_gunpla", "hguc"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5951"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

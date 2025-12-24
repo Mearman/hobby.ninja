@@ -20,32 +20,24 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"「HG 1/144 ガンダム Ver.G30th＆EX ガンダムトレーラー フルカラーメッキバージョン」登場！"
-		],
-		"en": [
-			"\"HG 1/144 Gundam Ver.G30th & EX Gundam Trailer Full Color Plated Version\" is now available!"
-		]
+		"ja": ["「HG 1/144 ガンダム Ver.G30th＆EX ガンダムトレーラー フルカラーメッキバージョン」登場！"],
+		"en": ["\"HG 1/144 Gundam Ver.G30th & EX Gundam Trailer Full Color Plated Version\" is now available!"]
 	},
-	"images": [
-		"/images/items/01_4869/153_5748.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5748.jpg",
+				"path": "/images/items/01_4869/153_5748.jpg",
+				"hash": "a9ef83475c3415f949134c641e4e0c83"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4869/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

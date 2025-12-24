@@ -30,28 +30,36 @@
 			"■ Thorough details such as reproducing the mechanical mold behind the transparent windshield parts. Molded product ×15, foil seal, marking seal, GUNDAM DECAL × 1 each, assembly instructions"
 		]
 	},
-	"images": [
-		"/images/items/01_5677/1000092360_1.jpg",
-		"/images/items/01_5677/1000092360_2.jpg",
-		"/images/items/01_5677/1000092360_3.jpg",
-		"/images/items/01_5677/1000092360_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092360_1.jpg",
+				"path": "/images/items/01_5677/1000092360_1.jpg",
+				"hash": "da3270d85d765eb219e9988d8e0d9568"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092360_2.jpg",
+				"path": "/images/items/01_5677/1000092360_2.jpg",
+				"hash": "f9b66afc8fef2e6e2311a9c32ce644f8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092360_3.jpg",
+				"path": "/images/items/01_5677/1000092360_3.jpg",
+				"hash": "1a7cd6acc6e4de02cd751895ce6801f1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092360_4.jpg",
+				"path": "/images/items/01_5677/1000092360_4.jpg",
+				"hash": "e31b01a4963490b7213812665bb2470b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5677/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000183366",
-		"01_4271",
-		"01_2670",
-		"item-1000138934"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000183366", "01_4271", "01_2670", "item-1000138934"],
 	"manual": {
 		"id": "584",
 		"url": "https://manual.bandai-hobby.net/menus/detail/584/"

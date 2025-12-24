@@ -27,25 +27,31 @@
 			"• Commercialization of the Vansaver Gundam that appears in the official side story \"Versus Astray \" of \" Mobile Suit Gundam SEED\" serialized in Dengeki Hobby Magazine. • A reinforced mobile suit based on Saber Gundam. Transforms into flight form. • There is a connection part on the back that can be connected to a striker. Hailbuster Gundam's striker etc. can be equipped. Molded product x 11, foil seal x 1, Tetron seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4645/153_5538.jpg",
-		"/images/items/01_4645/155_5538.jpg",
-		"/images/items/01_4645/156_5538.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5538.jpg",
+				"path": "/images/items/01_4645/153_5538.jpg",
+				"hash": "6f38566a1a43ac8985e278ac2192ed35"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5538.jpg",
+				"path": "/images/items/01_4645/155_5538.jpg",
+				"hash": "2e858838e9876789096e4fbc297838f4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5538.jpg",
+				"path": "/images/items/01_4645/156_5538.jpg",
+				"hash": "7d0ff28546f9701e135926a2702603c2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4645/",
 	"brandIds": [],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5440",
-		"01_5441",
-		"01_5365"
-	],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5994", "01_5440", "01_5441", "01_5365"],
 	"manual": {
 		"id": "1178",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1178/"

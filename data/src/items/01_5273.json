@@ -37,38 +37,57 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"デコレーションパーツ×1式",
-			"専用シール×2"
-		],
-		"en": [
-			"Decoration parts x 1 set",
-			"Exclusive Seal×2"
-		]
+		"ja": ["デコレーションパーツ×1式", "専用シール×2"],
+		"en": ["Decoration parts x 1 set", "Exclusive Seal×2"]
 	},
-	"images": [
-		"/images/items/01_5273/1000217285_1.jpg",
-		"/images/items/01_5273/1000217285_2.jpg",
-		"/images/items/01_5273/1000217285_3.jpg",
-		"/images/items/01_5273/1000217285_4.jpg",
-		"/images/items/01_5273/1000217285_5.jpg",
-		"/images/items/01_5273/1000217285_6.jpg",
-		"/images/items/01_5273/1000217285_7.jpg",
-		"/images/items/01_5273/1000217285_8.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217285_1.jpg",
+				"path": "/images/items/01_5273/1000217285_1.jpg",
+				"hash": "b83e5cb0ffe35ab6b9c381c3b04679b1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217285_2.jpg",
+				"path": "/images/items/01_5273/1000217285_2.jpg",
+				"hash": "8c926a52a8ace40885cf100ea795b20c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217285_3.jpg",
+				"path": "/images/items/01_5273/1000217285_3.jpg",
+				"hash": "cae1f3c31424c44a85d96ce92bc7b651"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217285_4.jpg",
+				"path": "/images/items/01_5273/1000217285_4.jpg",
+				"hash": "8b61e7043be3b519414e15530b77135e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217285_5.jpg",
+				"path": "/images/items/01_5273/1000217285_5.jpg",
+				"hash": "8905d5d4e4e21c6fbd95e989d195a442"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217285_6.jpg",
+				"path": "/images/items/01_5273/1000217285_6.jpg",
+				"hash": "64d1480af517c609339a7d8b439ed85a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217285_7.jpg",
+				"path": "/images/items/01_5273/1000217285_7.jpg",
+				"hash": "82ac0fc42f8f4d7f63e1a91a4f7aa1fb"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217285_8.jpg",
+				"path": "/images/items/01_5273/1000217285_8.jpg",
+				"hash": "d0efebc4d85fd699e32879876a1d566e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5273/",
-	"brandIds": [
-		"customize_scenebase",
-		"30mm"
-	],
+	"brandIds": ["customize_scenebase", "30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	]
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"]
 }

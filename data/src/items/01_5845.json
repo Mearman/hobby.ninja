@@ -30,21 +30,29 @@
 			"• You can also recreate the launch condition with the included sea surface effects."
 		]
 	},
-	"images": [
-		"/images/items/01_5845/153_919.jpg",
-		"/images/items/01_5845/155_919.jpg",
-		"/images/items/01_5845/156_919.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_919.jpg",
+				"path": "/images/items/01_5845/153_919.jpg",
+				"hash": "222b32a29776efe0df39f6dc4b338c0a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_919.jpg",
+				"path": "/images/items/01_5845/155_919.jpg",
+				"hash": "8427dc9c251768a8364a2afa1dccbfae"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_919.jpg",
+				"path": "/images/items/01_5845/156_919.jpg",
+				"hash": "9029e608155179578c64eae003dceff0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5845/",
 	"brandIds": [],
-	"seriesIds": [
-		"onepiece"
-	],
+	"seriesIds": ["onepiece"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5409",
-		"01_5410",
-		"01_4236",
-		"01_4170"
-	]
+	"relatedItemIds": ["01_5409", "01_5410", "01_4236", "01_4170"]
 }

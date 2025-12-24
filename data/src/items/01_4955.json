@@ -20,34 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HG 1/144 ビルドアカツキガンダム(川口克己プロデュース)登場！"
-		],
-		"en": [
-			"HG 1/144 Build Akatsuki Gundam (produced by Katsumi Kawaguchi) is now available!"
-		]
+		"ja": ["HG 1/144 ビルドアカツキガンダム(川口克己プロデュース)登場！"],
+		"en": ["HG 1/144 Build Akatsuki Gundam (produced by Katsumi Kawaguchi) is now available!"]
 	},
-	"images": [
-		"/images/items/01_4955/153_5827.jpg",
-		"/images/items/01_4955/155_5827.jpg",
-		"/images/items/01_4955/156_5827.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5827.jpg",
+				"path": "/images/items/01_4955/153_5827.jpg",
+				"hash": "c8a0308d3aaef2c8cca25f9bb402f17c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5827.jpg",
+				"path": "/images/items/01_4955/155_5827.jpg",
+				"hash": "6a8def24fc5e3cde74a7bcbf3c649f75"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5827.jpg",
+				"path": "/images/items/01_4955/156_5827.jpg",
+				"hash": "6d0c465dcfc596cbc4562b05949c083b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4955/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["buildfighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5057", "01_1942", "01_1288", "01_1261"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

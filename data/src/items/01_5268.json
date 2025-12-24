@@ -27,30 +27,41 @@
 			"HGUC series plastic model of the famous war machine \"Dom \" that appears in \" Mobile Suit Gundam \". A compatible kit that becomes a \" Ricdom\" by replacing the parts of the vernier, skirt, and soles of the feet. Two types of bazooka are included: a giant bazooka and a beam bazooka, and a heat saber can be stored in the back."
 		]
 	},
-	"images": [
-		"/images/items/01_5268/153_611.jpg",
-		"/images/items/01_5268/155_611.jpg",
-		"/images/items/01_5268/156_611.jpg",
-		"/images/items/01_5268/157_611.jpg",
-		"/images/items/01_5268/158_611.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_611.jpg",
+				"path": "/images/items/01_5268/153_611.jpg",
+				"hash": "a51e20d7ce78fdc43dee083dbb30023f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_611.jpg",
+				"path": "/images/items/01_5268/155_611.jpg",
+				"hash": "bb449affc65ec38a0b59ee59b03d168e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_611.jpg",
+				"path": "/images/items/01_5268/156_611.jpg",
+				"hash": "4ff4531e08e35fc2d6c28d1322fcce18"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_611.jpg",
+				"path": "/images/items/01_5268/157_611.jpg",
+				"hash": "0a92d49dcaea416857f98ef5e45c439d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_611.jpg",
+				"path": "/images/items/01_5268/158_611.jpg",
+				"hash": "681f27d4305190930b194cab67c31e66"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5268/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"manual": {
 		"id": "251",
 		"url": "https://manual.bandai-hobby.net/menus/detail/251/"

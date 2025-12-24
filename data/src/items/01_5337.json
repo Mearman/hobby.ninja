@@ -27,26 +27,44 @@
 			"Dark Keroro's distinctive hands and cloak are included."
 		]
 	},
-	"images": [
-		"/images/items/01_5337/153_6189.jpg",
-		"/images/items/01_5337/155_6189.jpg",
-		"/images/items/01_5337/156_6189.jpg",
-		"/images/items/01_5337/157_6189.jpg",
-		"/images/items/01_5337/158_6189.jpg",
-		"/images/items/01_5337/159_6189.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6189.jpg",
+				"path": "/images/items/01_5337/153_6189.jpg",
+				"hash": "50f1173204ebb30cc23b13b1d8468c10"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6189.jpg",
+				"path": "/images/items/01_5337/155_6189.jpg",
+				"hash": "bfc072380d1fff466435d2237ceab8dd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6189.jpg",
+				"path": "/images/items/01_5337/156_6189.jpg",
+				"hash": "3e01f84a64725c54797711e7eef6b573"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6189.jpg",
+				"path": "/images/items/01_5337/157_6189.jpg",
+				"hash": "50f943a930b630c5b7fc3b47792e621f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6189.jpg",
+				"path": "/images/items/01_5337/158_6189.jpg",
+				"hash": "c17b935f95cdb34ff0c77af2a544f600"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6189.jpg",
+				"path": "/images/items/01_5337/159_6189.jpg",
+				"hash": "8a9fd03e1a59e734c612bad5b4151201"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5337/",
 	"brandIds": [],
-	"seriesIds": [
-		"keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7034",
-		"01_2120",
-		"01_2122",
-		"01_2104"
-	]
+	"seriesIds": ["keroro"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7034", "01_2120", "01_2122", "01_2104"]
 }

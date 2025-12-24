@@ -19,29 +19,27 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"SD三国伝 033 真 趙雲ガンダム・飛影閃登場！"
-		],
-		"en": [
-			"SD Sangokuden 033 Shin Choun Gundam/Hieisen is here!"
-		]
+		"ja": ["SD三国伝 033 真 趙雲ガンダム・飛影閃登場！"],
+		"en": ["SD Sangokuden 033 Shin Choun Gundam/Hieisen is here!"]
 	},
-	"images": [
-		"/images/items/01_4554/153_5454.jpg",
-		"/images/items/01_4554/155_5454.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5454.jpg",
+				"path": "/images/items/01_4554/153_5454.jpg",
+				"hash": "e135ed9ad425a03f243714136406d844"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5454.jpg",
+				"path": "/images/items/01_4554/155_5454.jpg",
+				"hash": "937befd46d2893b9bfea529a17939416"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4554/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

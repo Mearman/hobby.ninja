@@ -34,35 +34,37 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"台座×4",
-			"アーム(短)×6",
-			"アーム(長)×6",
-			"ジョイントパーツ×1式"
-		],
-		"en": [
-			"Pedestal x 4",
-			"Arm (short) x 6",
-			"Arm (long) x 6",
-			"Joint parts x 1 set"
-		]
+		"ja": ["台座×4", "アーム(短)×6", "アーム(長)×6", "ジョイントパーツ×1式"],
+		"en": ["Pedestal x 4", "Arm (short) x 6", "Arm (long) x 6", "Joint parts x 1 set"]
 	},
-	"images": [
-		"/images/items/01_6882/01_6882_0.jpg",
-		"/images/items/01_6882/01_6882_1.jpg",
-		"/images/items/01_6882/01_6882_2.jpg",
-		"/images/items/01_6882/01_6882_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6882_0.jpg",
+				"path": "/images/items/01_6882/01_6882_0.jpg",
+				"hash": "2b6091cc68ff12e5b3ea1af865532933"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6882_1.jpg",
+				"path": "/images/items/01_6882/01_6882_1.jpg",
+				"hash": "b9285e4f5f74c92ff59dd12ddcf793e2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6882_2.jpg",
+				"path": "/images/items/01_6882/01_6882_2.jpg",
+				"hash": "3444802e44c2ee446d37698f3f55534c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6882_3.jpg",
+				"path": "/images/items/01_6882/01_6882_3.jpg",
+				"hash": "4f6b2180aae8138521323b4ae875aef0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6882/",
-	"brandIds": [
-		"actionbase"
-	],
+	"brandIds": ["actionbase"],
 	"seriesIds": [],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5934",
-		"01_5256",
-		"01_5258",
-		"01_5165"
-	]
+	"relatedItemIds": ["01_5934", "01_5256", "01_5258", "01_5165"]
 }

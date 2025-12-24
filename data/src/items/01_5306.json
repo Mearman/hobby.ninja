@@ -91,28 +91,54 @@
 			"- Product specifications are scheduled as of 20136. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_5306/153_6158.jpg",
-		"/images/items/01_5306/155_6158.jpg",
-		"/images/items/01_5306/156_6158.jpg",
-		"/images/items/01_5306/157_6158.jpg",
-		"/images/items/01_5306/158_6158.jpg",
-		"/images/items/01_5306/159_6158.jpg",
-		"/images/items/01_5306/189_6158.jpg",
-		"/images/items/01_5306/190_6158.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6158.jpg",
+				"path": "/images/items/01_5306/153_6158.jpg",
+				"hash": "3f03962aea28794abe594be4b69f3919"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6158.jpg",
+				"path": "/images/items/01_5306/155_6158.jpg",
+				"hash": "491f33d78b5f3996e825a87553fb7bfb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6158.jpg",
+				"path": "/images/items/01_5306/156_6158.jpg",
+				"hash": "5e8b282dde774b5fca5c511b0f51964a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6158.jpg",
+				"path": "/images/items/01_5306/157_6158.jpg",
+				"hash": "a330cc6c76d4cb885977ec5d46ea247a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6158.jpg",
+				"path": "/images/items/01_5306/158_6158.jpg",
+				"hash": "59b1baf1e8727137de71b4a3877abb8c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6158.jpg",
+				"path": "/images/items/01_5306/159_6158.jpg",
+				"hash": "cc99b5e4dbd76d68b4565a495d0a11a8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6158.jpg",
+				"path": "/images/items/01_5306/189_6158.jpg",
+				"hash": "cd45f038de17127010d6b0ec35f2d720"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6158.jpg",
+				"path": "/images/items/01_5306/190_6158.jpg",
+				"hash": "43a6492ccf7bdda80e818f723561bfa8"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5306/",
-	"brandIds": [
-		"pb_charapla"
-	],
-	"seriesIds": [
-		"lbx"
-	],
+	"brandIds": ["pb_charapla"],
+	"seriesIds": ["lbx"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"relatedItemIds": ["item-1000215196", "item-1000215197", "item-1000210042", "item-1000210041"]
 }

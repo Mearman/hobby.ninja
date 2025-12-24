@@ -38,29 +38,41 @@
 			"• By replacing parts, you can reproduce both unicorn mode and destroy mode!"
 		]
 	},
-	"images": [
-		"/images/items/01_3490/153_4443.jpg",
-		"/images/items/01_3490/155_4443.jpg",
-		"/images/items/01_3490/156_4443.jpg",
-		"/images/items/01_3490/157_4443.jpg",
-		"/images/items/01_3490/158_4443.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4443.jpg",
+				"path": "/images/items/01_3490/153_4443.jpg",
+				"hash": "3c8fab3890e72f0d42f322eab4ee8cc9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4443.jpg",
+				"path": "/images/items/01_3490/155_4443.jpg",
+				"hash": "c226ddf8929917c0817d4975ccdd41bb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4443.jpg",
+				"path": "/images/items/01_3490/156_4443.jpg",
+				"hash": "1c824e8e1ac8848ac610032f3aef8432"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4443.jpg",
+				"path": "/images/items/01_3490/157_4443.jpg",
+				"hash": "e2f66fc093337d17a48378740ea36c06"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4443.jpg",
+				"path": "/images/items/01_3490/158_4443.jpg",
+				"hash": "2c893c2cd0a3474f87710d6dc9dde528"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3490/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2646",
-		"01_1932",
-		"item-1000095978",
-		"01_185"
-	],
+	"brandIds": ["bb"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2646", "01_1932", "item-1000095978", "01_185"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

@@ -33,22 +33,21 @@
 			"• Emotion Manipulator SP has all joints movable and can reproduce various facial expressions!"
 		]
 	},
-	"images": [
-		"/images/items/01_3564/153_4519.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4519.jpg",
+				"path": "/images/items/01_3564/153_4519.jpg",
+				"hash": "94580c315559757edd0ef0aa123c5ac7"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3564/",
-	"brandIds": [
-		"parts"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3563"
-	],
+	"brandIds": ["parts"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3563"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

@@ -20,33 +20,24 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HGUC 1/144 シャア専用ズゴック VS ジム Ver.GFT　登場！"
-		],
-		"en": [
-			"HGUC 1/144 Char's Z'Gok VS Jim Ver.GFT now available!"
-		]
+		"ja": ["HGUC 1/144 シャア専用ズゴック VS ジム Ver.GFT　登場！"],
+		"en": ["HGUC 1/144 Char's Z'Gok VS Jim Ver.GFT now available!"]
 	},
-	"images": [
-		"/images/items/01_4787/153_5669.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5669.jpg",
+				"path": "/images/items/01_4787/153_5669.jpg",
+				"hash": "928422e35af4ab1fc3a430f41bc5ef6e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4787/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

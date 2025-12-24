@@ -33,40 +33,42 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"DF-GA-08 HU-BEN×1式",
-			"DF-ET-09 TAI-YANG-SHOU×1",
-			"BML-G2/P17SPL-16×1式",
-			"BML-G1/P20MLT-04×1式"
-		],
-		"en": [
-			"DF-GA-08 HU-BEN×1 set",
-			"DF-ET-09 TAI-YANG-SHOU×1",
-			"BML-G2/P17SPL-16×1 set",
-			"BML-G1/P20MLT-04×1 set"
-		]
+		"ja": ["DF-GA-08 HU-BEN×1式", "DF-ET-09 TAI-YANG-SHOU×1", "BML-G2/P17SPL-16×1式", "BML-G1/P20MLT-04×1式"],
+		"en": ["DF-GA-08 HU-BEN×1 set", "DF-ET-09 TAI-YANG-SHOU×1", "BML-G2/P17SPL-16×1 set", "BML-G1/P20MLT-04×1 set"]
 	},
-	"images": [
-		"/images/items/01_5482/01_5482_0.jpg",
-		"/images/items/01_5482/01_5482_1.jpg",
-		"/images/items/01_5482/01_5482_2.jpg",
-		"/images/items/01_5482/01_5482_3.jpg",
-		"/images/items/01_5482/01_5482_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5482_0.jpg",
+				"path": "/images/items/01_5482/01_5482_0.jpg",
+				"hash": "93455e62df2dbad0ac04ad94b9851abf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5482_1.jpg",
+				"path": "/images/items/01_5482/01_5482_1.jpg",
+				"hash": "0856883ad8f53df5704755cf29fa614d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5482_2.jpg",
+				"path": "/images/items/01_5482/01_5482_2.jpg",
+				"hash": "c175841e79923f89aa5d93415d953a7c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5482_3.jpg",
+				"path": "/images/items/01_5482/01_5482_3.jpg",
+				"hash": "14551b64e245874ffb50a2a496107ed2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5482_4.jpg",
+				"path": "/images/items/01_5482/01_5482_4.jpg",
+				"hash": "f4a734159740cc24b36bcbf6b1ede30d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5482/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [
-		"armoredcore"
-	],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5973",
-		"01_5974",
-		"01_5573",
-		"01_5574"
-	]
+	"brandIds": ["30mm"],
+	"seriesIds": ["armoredcore"],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5973", "01_5974", "01_5573", "01_5574"]
 }

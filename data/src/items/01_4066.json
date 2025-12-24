@@ -42,33 +42,56 @@
 			"Futuristic attire becomes a symbol of a cyclical future."
 		]
 	},
-	"images": [
-		"/images/items/01_4066/01_4066_4.jpg",
-		"/images/items/01_4066/01_4066_5.jpg",
-		"/images/items/01_4066/01_4066_6.jpg",
-		"/images/items/01_4066/153_4994.jpg",
-		"/images/items/01_4066/155_4994.jpg",
-		"/images/items/01_4066/156_4994.jpg",
-		"/images/items/01_4066/157_4994.jpg",
-		"/images/items/01_4066/190_4994.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_4066_4.jpg",
+				"path": "/images/items/01_4066/01_4066_4.jpg",
+				"hash": "0795079f61eb4ea1e4ed3968a0136810"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4066_5.jpg",
+				"path": "/images/items/01_4066/01_4066_5.jpg",
+				"hash": "24e3b6e3d4792ad1a91687d532b1575a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4066_6.jpg",
+				"path": "/images/items/01_4066/01_4066_6.jpg",
+				"hash": "e2994281def4a5b21b4662eb964be46e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_4994.jpg",
+				"path": "/images/items/01_4066/153_4994.jpg",
+				"hash": "3f4dc6acd4a1268cbacf5dcef0aef8ec"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4994.jpg",
+				"path": "/images/items/01_4066/155_4994.jpg",
+				"hash": "b8966e6dc039afbd518c5faf010ee5e5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4994.jpg",
+				"path": "/images/items/01_4066/156_4994.jpg",
+				"hash": "62908716fee97a290fad1d7bf4953a4a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4994.jpg",
+				"path": "/images/items/01_4066/157_4994.jpg",
+				"hash": "65521181916225d3c9accccdd2f462c3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4994.jpg",
+				"path": "/images/items/01_4066/190_4994.jpg",
+				"hash": "968be4aa4fe6647f0b0e19694e80f5c0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4066/",
-	"brandIds": [
-		"ecoplaproject_g",
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_5045",
-		"01_4977",
-		"01_3772"
-	],
+	"brandIds": ["ecoplaproject_g", "mg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5509", "01_5045", "01_4977", "01_3772"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

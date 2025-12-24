@@ -103,35 +103,66 @@
 			"・Product specifications are as of 20238. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"images": [
-		"/images/items/01_5534/153_6373.jpg",
-		"/images/items/01_5534/155_6373.jpg",
-		"/images/items/01_5534/156_6373.jpg",
-		"/images/items/01_5534/157_6373.jpg",
-		"/images/items/01_5534/158_6373.jpg",
-		"/images/items/01_5534/159_6373.jpg",
-		"/images/items/01_5534/189_6373.jpg",
-		"/images/items/01_5534/190_6373.jpg",
-		"/images/items/01_5534/191_6373.jpg",
-		"/images/items/01_5534/192_6373.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6373.jpg",
+				"path": "/images/items/01_5534/153_6373.jpg",
+				"hash": "7112a2347f19896d5645bebafaed58dc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6373.jpg",
+				"path": "/images/items/01_5534/155_6373.jpg",
+				"hash": "18aa707a1189dfd1fdfdfde570cf36f3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6373.jpg",
+				"path": "/images/items/01_5534/156_6373.jpg",
+				"hash": "87618db1e032ef04b3dee721daba9168"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6373.jpg",
+				"path": "/images/items/01_5534/157_6373.jpg",
+				"hash": "2be9d6ebf0628a6c924b428fe81e4a3b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6373.jpg",
+				"path": "/images/items/01_5534/158_6373.jpg",
+				"hash": "27fa39d8cd15a6e44bbde250663d99b5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6373.jpg",
+				"path": "/images/items/01_5534/159_6373.jpg",
+				"hash": "e3c5fc836a03f68d3e96079db9c169b8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6373.jpg",
+				"path": "/images/items/01_5534/189_6373.jpg",
+				"hash": "fd05030dea164fc02d2c24a4c1b798bd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6373.jpg",
+				"path": "/images/items/01_5534/190_6373.jpg",
+				"hash": "0c56425fa2700748820f2b722220de80"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_6373.jpg",
+				"path": "/images/items/01_5534/191_6373.jpg",
+				"hash": "214ee11de01b08d2345bca41118c1ba2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_6373.jpg",
+				"path": "/images/items/01_5534/192_6373.jpg",
+				"hash": "160a7aabd103716dfceb513f8611d969"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5534/",
-	"brandIds": [
-		"pb_charapla",
-		"figurerise-standard-amp"
-	],
-	"seriesIds": [
-		"digimon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5983",
-		"01_5277",
-		"item-1000198198",
-		"01_5022"
-	],
+	"brandIds": ["pb_charapla", "figurerise-standard-amp"],
+	"seriesIds": ["digimon"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5983", "01_5277", "item-1000198198", "01_5022"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

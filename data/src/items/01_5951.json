@@ -36,41 +36,49 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"武装×1式",
-			"ハンドパーツ×1式",
-			"シール×1"
-		],
-		"en": [
-			"Armed x 1 type",
-			"Hand parts x 1 set",
-			"Seal×1"
-		]
+		"ja": ["武装×1式", "ハンドパーツ×1式", "シール×1"],
+		"en": ["Armed x 1 type", "Hand parts x 1 set", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_5951/01_5951_0.jpg",
-		"/images/items/01_5951/01_5951_1.jpg",
-		"/images/items/01_5951/01_5951_2.jpg",
-		"/images/items/01_5951/01_5951_3.jpg",
-		"/images/items/01_5951/01_5951_4.jpg",
-		"/images/items/01_5951/01_5951_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5951_0.jpg",
+				"path": "/images/items/01_5951/01_5951_0.jpg",
+				"hash": "6c026e588b89f825e80bb497c1a824d7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5951_1.jpg",
+				"path": "/images/items/01_5951/01_5951_1.jpg",
+				"hash": "1f24a607362fdbaa76ca359aa5f6568c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5951_2.jpg",
+				"path": "/images/items/01_5951/01_5951_2.jpg",
+				"hash": "97ccd0b7ee3343e56cdcf519507c33d6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5951_3.jpg",
+				"path": "/images/items/01_5951/01_5951_3.jpg",
+				"hash": "2a253c128bd8da6f277654e9940f23ec"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5951_4.jpg",
+				"path": "/images/items/01_5951/01_5951_4.jpg",
+				"hash": "7584c046f7cd6806fc16f0120886082d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5951_5.jpg",
+				"path": "/images/items/01_5951/01_5951_5.jpg",
+				"hash": "57987d35b6c038d476a648439c96fa2b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5951/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gquuuuuux"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5952",
-		"01_5935"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gquuuuuux"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5952", "01_5935"],
 	"manual": {
 		"id": "3235",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3235/"

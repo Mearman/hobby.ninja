@@ -26,25 +26,29 @@
 			"• From \"Mobile Suit Gundam UC\", Kshatriya appears as a BB Senshi. • Volume with a total height of approximately 120mm. Make it even more realistic with the included Tetron Seal. • Packed with gimmicks, the binder can also be expanded. The sub-arm can also be expanded by replacing it. • Equipped with BB original mode. • Lotto included. Molded product x 7, foil seal x 1, Tetron seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_5714/153_781.jpg",
-		"/images/items/01_5714/155_781.jpg",
-		"/images/items/01_5714/156_781.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_781.jpg",
+				"path": "/images/items/01_5714/153_781.jpg",
+				"hash": "857f905006729679bb4baf3f8b4f7a0c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_781.jpg",
+				"path": "/images/items/01_5714/155_781.jpg",
+				"hash": "0103366bd808b94549db32878edb0e76"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_781.jpg",
+				"path": "/images/items/01_5714/156_781.jpg",
+				"hash": "92d713cc8d419781a16d7816ef115beb"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5714/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3490",
-		"01_2646",
-		"01_1932",
-		"item-1000095978"
-	]
+	"brandIds": ["bb"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3490", "01_2646", "01_1932", "item-1000095978"]
 }

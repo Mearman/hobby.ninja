@@ -53,31 +53,51 @@
 			"Foil Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_3420/153_4374.jpg",
-		"/images/items/01_3420/155_4374.jpg",
-		"/images/items/01_3420/156_4374.jpg",
-		"/images/items/01_3420/157_4374.jpg",
-		"/images/items/01_3420/158_4374.jpg",
-		"/images/items/01_3420/159_4374.jpg",
-		"/images/items/01_3420/189_4374.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4374.jpg",
+				"path": "/images/items/01_3420/153_4374.jpg",
+				"hash": "9db641d4fc3bebb5bda2aa3ff0e0e8df"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4374.jpg",
+				"path": "/images/items/01_3420/155_4374.jpg",
+				"hash": "1450df9462314fc4176d7599d0b35e7f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4374.jpg",
+				"path": "/images/items/01_3420/156_4374.jpg",
+				"hash": "ee28a69eb37a038ef3ffede037ea1698"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4374.jpg",
+				"path": "/images/items/01_3420/157_4374.jpg",
+				"hash": "c59ac6b2adfac430d7ff7790512ec93e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4374.jpg",
+				"path": "/images/items/01_3420/158_4374.jpg",
+				"hash": "9ca0d7cb190c9b28c4b4340e102c665c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4374.jpg",
+				"path": "/images/items/01_3420/159_4374.jpg",
+				"hash": "735542c2a2fe9f68bcd8683c353a7e06"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4374.jpg",
+				"path": "/images/items/01_3420/189_4374.jpg",
+				"hash": "f43cfd7a2fedfe879f383b19a9954fe2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3420/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5590",
-		"item-1000213249",
-		"01_5340",
-		"item-1000183318"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["endlesswaltz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5590", "item-1000213249", "01_5340", "item-1000183318"],
 	"manual": {
 		"id": "506",
 		"url": "https://manual.bandai-hobby.net/menus/detail/506/"

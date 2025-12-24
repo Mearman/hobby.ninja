@@ -27,29 +27,36 @@
 			"• The base jabber that was active in the aerial battle in \"Mobile Suit Gundam UC \" episode 5 \" Black Unicorn\" has been transformed into an HGUC. • Compatible with various MS by expanding and contracting the foot panel. • Compatible with Action Base 1 (sold separately). You can recreate powerful battle scenes. • Landing gear included. It can also be placed on the ground. Molded product x 3, Seal, Assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5762/153_825.jpg",
-		"/images/items/01_5762/155_825.jpg",
-		"/images/items/01_5762/156_825.jpg",
-		"/images/items/01_5762/157_825.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_825.jpg",
+				"path": "/images/items/01_5762/153_825.jpg",
+				"hash": "099f3c11c17a2f3fffc2aa4f815cd6ad"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_825.jpg",
+				"path": "/images/items/01_5762/155_825.jpg",
+				"hash": "6043559b90a7e00045762ebe79ec3202"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_825.jpg",
+				"path": "/images/items/01_5762/156_825.jpg",
+				"hash": "cc61047c51ddba1b7897d5309da0975e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_825.jpg",
+				"path": "/images/items/01_5762/157_825.jpg",
+				"hash": "a2a1033d088038fab0a91fa5d11a0bc5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5762/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "373",
 		"url": "https://manual.bandai-hobby.net/menus/detail/373/"

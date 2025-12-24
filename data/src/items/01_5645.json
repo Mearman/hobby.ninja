@@ -30,25 +30,39 @@
 			"Dororo rides on a special saucer, and the saucer is combined with the robot itself!"
 		]
 	},
-	"images": [
-		"/images/items/01_5645/153_709.jpg",
-		"/images/items/01_5645/155_709.jpg",
-		"/images/items/01_5645/156_709.jpg",
-		"/images/items/01_5645/157_709.jpg",
-		"/images/items/01_5645/158_709.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_709.jpg",
+				"path": "/images/items/01_5645/153_709.jpg",
+				"hash": "02ea5a66a8b322a6ed1bc1f95dccd90f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_709.jpg",
+				"path": "/images/items/01_5645/155_709.jpg",
+				"hash": "5256d5d9db6e8dd24b49652be8230583"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_709.jpg",
+				"path": "/images/items/01_5645/156_709.jpg",
+				"hash": "1a14663c0374fbbcaa3ad441835721b7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_709.jpg",
+				"path": "/images/items/01_5645/157_709.jpg",
+				"hash": "1afede0e52a9cdf303326b97d6a53303"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_709.jpg",
+				"path": "/images/items/01_5645/158_709.jpg",
+				"hash": "7c4f33fea88eba0e6f5bb6ea65cfc23d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5645/",
 	"brandIds": [],
-	"seriesIds": [
-		"keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7034",
-		"01_2120",
-		"01_2122",
-		"01_2104"
-	]
+	"seriesIds": ["keroro"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7034", "01_2120", "01_2122", "01_2104"]
 }

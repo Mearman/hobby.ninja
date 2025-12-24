@@ -27,27 +27,31 @@
 			"• From \"Mobile Suit Gundam AGE \", a new white aircraft \" G Bouncer\" appears in the HG series. Molded product x 6, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4599/153_5497.jpg",
-		"/images/items/01_4599/155_5497.jpg",
-		"/images/items/01_4599/156_5497.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5497.jpg",
+				"path": "/images/items/01_4599/153_5497.jpg",
+				"hash": "d3fa848beb5ab17ec8f83ac13fc95baa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5497.jpg",
+				"path": "/images/items/01_4599/155_5497.jpg",
+				"hash": "ad7a4664363f88283e09ee7c0d0fa62f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5497.jpg",
+				"path": "/images/items/01_4599/156_5497.jpg",
+				"hash": "d885e4d6beeac79a0ff8216c6ae4be11"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4599/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "944",
 		"url": "https://manual.bandai-hobby.net/menus/detail/944/"

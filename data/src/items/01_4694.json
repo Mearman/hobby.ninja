@@ -20,29 +20,27 @@
 	"targetAge": 15,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"「1/144 ジムキャノン」登場！"
-		],
-		"en": [
-			"\"1/144 Jim Cannon\" now available!"
-		]
+		"ja": ["「1/144 ジムキャノン」登場！"],
+		"en": ["\"1/144 Jim Cannon\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4694/153_5583.jpg",
-		"/images/items/01_4694/155_5583.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5583.jpg",
+				"path": "/images/items/01_4694/153_5583.jpg",
+				"hash": "4e0e83595409542741bdd4e54c485e95"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5583.jpg",
+				"path": "/images/items/01_4694/155_5583.jpg",
+				"hash": "e7cf48fe375dee10f627f4eb491ccf93"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4694/",
 	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5992", "01_5473", "01_5474", "01_5475"]
 }

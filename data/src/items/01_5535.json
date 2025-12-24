@@ -18,26 +18,21 @@
 	},
 	"targetAge": 15,
 	"scale": "1/72",
-	"images": [
-		"/images/items/01_5535/153_6374.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6374.jpg",
+				"path": "/images/items/01_5535/153_6374.jpg",
+				"hash": "41c8716589345f8da18ab783ead41fc0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5535/",
-	"brandIds": [
-		"pb_charapla",
-		"hg"
-	],
-	"seriesIds": [
-		"dunbine"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000217021",
-		"item-1000211055",
-		"item-1000199895",
-		"item-1000194225"
-	],
+	"brandIds": ["pb_charapla", "hg"],
+	"seriesIds": ["dunbine"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000217021", "item-1000211055", "item-1000199895", "item-1000194225"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

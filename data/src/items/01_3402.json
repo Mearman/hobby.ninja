@@ -35,39 +35,57 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"刀×1",
-			"仮面×１",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Sword x1",
-			"Mask x1",
-			"Foil Seal×1"
-		]
+		"ja": ["刀×1", "仮面×１", "ホイルシール×1"],
+		"en": ["Sword x1", "Mask x1", "Foil Seal×1"]
 	},
-	"images": [
-		"/images/items/01_3402/1000159973_1.jpg",
-		"/images/items/01_3402/1000159973_2.jpg",
-		"/images/items/01_3402/1000159973_3.jpg",
-		"/images/items/01_3402/1000159973_4.jpg",
-		"/images/items/01_3402/1000159973_5.jpg",
-		"/images/items/01_3402/1000159973_6.jpg",
-		"/images/items/01_3402/1000159973_7.jpg",
-		"/images/items/01_3402/1000159973_8.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159973_1.jpg",
+				"path": "/images/items/01_3402/1000159973_1.jpg",
+				"hash": "6f0bfdcb070ee6746198d51c411cf042"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159973_2.jpg",
+				"path": "/images/items/01_3402/1000159973_2.jpg",
+				"hash": "c7286cc6c032db551471c7aecfb13a9f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159973_3.jpg",
+				"path": "/images/items/01_3402/1000159973_3.jpg",
+				"hash": "7dfbaa2e3f71cc82c39c743ea11557e9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159973_4.jpg",
+				"path": "/images/items/01_3402/1000159973_4.jpg",
+				"hash": "45339a2533549ea7db7656ec04643126"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159973_5.jpg",
+				"path": "/images/items/01_3402/1000159973_5.jpg",
+				"hash": "a290035635c92e8a632f636283a1977d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159973_6.jpg",
+				"path": "/images/items/01_3402/1000159973_6.jpg",
+				"hash": "985602c1fe6363c4fb51bdd18f5610ee"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159973_7.jpg",
+				"path": "/images/items/01_3402/1000159973_7.jpg",
+				"hash": "f4a5436ca23c914d3d2a43d4dd851d67"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159973_8.jpg",
+				"path": "/images/items/01_3402/1000159973_8.jpg",
+				"hash": "107996dc965dc94ec159ae9cbe21ca8f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3402/",
 	"brandIds": [],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5470",
-		"01_5471",
-		"01_5472",
-		"01_5347"
-	]
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
 }

@@ -18,29 +18,27 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"• SD ガンダム Gジェネレーションにガンダム Mk-IVが登場！"
-		],
-		"en": [
-			"• Gundam Mk-IV is now available in the SD Gundam G generation!"
-		]
+		"ja": ["• SD ガンダム Gジェネレーションにガンダム Mk-IVが登場！"],
+		"en": ["• Gundam Mk-IV is now available in the SD Gundam G generation!"]
 	},
-	"images": [
-		"/images/items/01_4686/153_5575.jpg",
-		"/images/items/01_4686/155_5575.JPG"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5575.jpg",
+				"path": "/images/items/01_4686/153_5575.jpg",
+				"hash": "9fb5272ada56076841600d208cc28b71"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5575.JPG",
+				"path": "/images/items/01_4686/155_5575.JPG",
+				"hash": "772adaf133938ae4e1531535a81dc70e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4686/",
-	"brandIds": [
-		"sdgundamseries"
-	],
+	"brandIds": ["sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
 }

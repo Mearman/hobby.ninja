@@ -36,38 +36,52 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ホイルシール",
-			"マーキングシール"
-		],
-		"en": [
-			"foil seal",
-			"MarkingSeal"
-		]
+		"ja": ["ホイルシール", "マーキングシール"],
+		"en": ["foil seal", "MarkingSeal"]
 	},
-	"images": [
-		"/images/items/01_3841/153_4788.jpg",
-		"/images/items/01_3841/155_4788.jpg",
-		"/images/items/01_3841/156_4788.jpg",
-		"/images/items/01_3841/157_4788.jpg",
-		"/images/items/01_3841/158_4788.jpg",
-		"/images/items/01_3841/159_4788.jpg",
-		"/images/items/01_3841/189_4788.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4788.jpg",
+				"path": "/images/items/01_3841/153_4788.jpg",
+				"hash": "a962732f208522b68c74ee3d2ba6275e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4788.jpg",
+				"path": "/images/items/01_3841/155_4788.jpg",
+				"hash": "9315d7f2df2e0a86bf7ebc6b1ac3012e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4788.jpg",
+				"path": "/images/items/01_3841/156_4788.jpg",
+				"hash": "50193a87bebccaeb7a5c40b235b7d0b3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4788.jpg",
+				"path": "/images/items/01_3841/157_4788.jpg",
+				"hash": "0ee1b03043f08fd609abfb81034bbcb9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4788.jpg",
+				"path": "/images/items/01_3841/158_4788.jpg",
+				"hash": "80e47dfbfd3221c758b62ba74504297d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4788.jpg",
+				"path": "/images/items/01_3841/159_4788.jpg",
+				"hash": "a9dbbeb6ab2727d36bf7645f4c2533ca"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4788.jpg",
+				"path": "/images/items/01_3841/189_4788.jpg",
+				"hash": "3a824e67e09d68db1bc97b59b51108d8"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3841/",
-	"brandIds": [
-		"gfy"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5035",
-		"01_4239",
-		"01_3472",
-		"01_3471"
-	]
+	"brandIds": ["gfy"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5035", "01_4239", "01_3472", "01_3471"]
 }

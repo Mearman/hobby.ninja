@@ -61,32 +61,56 @@
 			"Hand parts x 1 set"
 		]
 	},
-	"images": [
-		"/images/items/01_3625/153_4579.jpg",
-		"/images/items/01_3625/155_4579.jpg",
-		"/images/items/01_3625/156_4579.jpg",
-		"/images/items/01_3625/157_4579.jpg",
-		"/images/items/01_3625/158_4579.jpg",
-		"/images/items/01_3625/159_4579.jpg",
-		"/images/items/01_3625/189_4579.jpg",
-		"/images/items/01_3625/190_4579.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4579.jpg",
+				"path": "/images/items/01_3625/153_4579.jpg",
+				"hash": "f742a6f3eb400ce1738482e7ee68dc02"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4579.jpg",
+				"path": "/images/items/01_3625/155_4579.jpg",
+				"hash": "0a5f99bf1874641ebcb74461ea9ce515"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4579.jpg",
+				"path": "/images/items/01_3625/156_4579.jpg",
+				"hash": "958c070b574d4e3aaef128a5f1697c1a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4579.jpg",
+				"path": "/images/items/01_3625/157_4579.jpg",
+				"hash": "8610f991a5208c9600b5795b44854f03"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4579.jpg",
+				"path": "/images/items/01_3625/158_4579.jpg",
+				"hash": "c1fb9c3bbd70cbf63009796c001658a1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4579.jpg",
+				"path": "/images/items/01_3625/159_4579.jpg",
+				"hash": "de0d6ed2661e861487d9670776e54fb9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4579.jpg",
+				"path": "/images/items/01_3625/189_4579.jpg",
+				"hash": "977ceb3a17999e0dfd10dd39b5d26cc7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4579.jpg",
+				"path": "/images/items/01_3625/190_4579.jpg",
+				"hash": "3b7b6c982e3e40882803c9b40f94c6a9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3625/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam_breaker_battlogue"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4128",
-		"item-1000166359",
-		"item-1000166322",
-		"item-1000166358"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam_breaker_battlogue"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4128", "item-1000166359", "item-1000166322", "item-1000166358"],
 	"manual": {
 		"id": "120",
 		"url": "https://manual.bandai-hobby.net/menus/detail/120/"

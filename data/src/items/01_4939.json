@@ -20,32 +20,24 @@
 	"targetAge": 15,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"MG 1/100 リック・ドム クリアメッキバージョン登場！"
-		],
-		"en": [
-			"MG 1/100 Rick Dom clear plated version now available!"
-		]
+		"ja": ["MG 1/100 リック・ドム クリアメッキバージョン登場！"],
+		"en": ["MG 1/100 Rick Dom clear plated version now available!"]
 	},
-	"images": [
-		"/images/items/01_4939/153_5812.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5812.jpg",
+				"path": "/images/items/01_4939/153_5812.jpg",
+				"hash": "caba82277f6a8acb9e4112c4a4b54844"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4939/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

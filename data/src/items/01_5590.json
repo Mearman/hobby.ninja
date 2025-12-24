@@ -31,27 +31,31 @@
 			"• Twin buster rifles can be connected and separated. The machine cannon on the shoulder can also be deployed."
 		]
 	},
-	"images": [
-		"/images/items/01_5590/153_6425.jpg",
-		"/images/items/01_5590/155_6425.jpg",
-		"/images/items/01_5590/156_6425.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6425.jpg",
+				"path": "/images/items/01_5590/153_6425.jpg",
+				"hash": "7eb63fc8912912f06f49ceffaba3e780"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6425.jpg",
+				"path": "/images/items/01_5590/155_6425.jpg",
+				"hash": "b452afd33d4263cf60c1db8711735011"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6425.jpg",
+				"path": "/images/items/01_5590/156_6425.jpg",
+				"hash": "9c2a61efe0fa575f769a435c51798751"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5590/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000213249",
-		"01_5340",
-		"item-1000183318",
-		"01_4179"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["endlesswaltz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000213249", "01_5340", "item-1000183318", "01_4179"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

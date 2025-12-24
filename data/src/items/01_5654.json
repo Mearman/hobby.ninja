@@ -34,29 +34,41 @@
 			"■ Weapons include GN Sword, GN Long Blade, GN Short Blade, GN Shield, GN Beam Saber ×2, GN Beam Dagger ×2"
 		]
 	},
-	"images": [
-		"/images/items/01_5654/1000067218_1.jpg",
-		"/images/items/01_5654/1000067218_2.jpg",
-		"/images/items/01_5654/1000067218_3.jpg",
-		"/images/items/01_5654/1000067218_4.jpg",
-		"/images/items/01_5654/1000067218_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000067218_1.jpg",
+				"path": "/images/items/01_5654/1000067218_1.jpg",
+				"hash": "f97586fbb1e6589a79be1e10fc0cc868"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000067218_2.jpg",
+				"path": "/images/items/01_5654/1000067218_2.jpg",
+				"hash": "97f4968f48fb57c4ddf9ba9107ad5ec8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000067218_3.jpg",
+				"path": "/images/items/01_5654/1000067218_3.jpg",
+				"hash": "3c9ad920db4a08dbb494efa7772ee070"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000067218_4.jpg",
+				"path": "/images/items/01_5654/1000067218_4.jpg",
+				"hash": "38aad4cab3629a7dce0ef0cb25744c19"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000067218_5.jpg",
+				"path": "/images/items/01_5654/1000067218_5.jpg",
+				"hash": "189413d3ded04e7ad2a136f0811bc0c1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5654/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1954",
-		"01_1953",
-		"item-1000114085",
-		"01_957"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["g-00"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_1954", "01_1953", "item-1000114085", "01_957"],
 	"manual": {
 		"id": "186",
 		"url": "https://manual.bandai-hobby.net/menus/detail/186/"

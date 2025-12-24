@@ -18,29 +18,27 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"「SD ガンダム Gジェネレーション38 シェンロンガンダム」が登場！"
-		],
-		"en": [
-			"\"SD Gundam G Generation 38 Shenron Gundam\" is now available!"
-		]
+		"ja": ["「SD ガンダム Gジェネレーション38 シェンロンガンダム」が登場！"],
+		"en": ["\"SD Gundam G Generation 38 Shenron Gundam\" is now available!"]
 	},
-	"images": [
-		"/images/items/01_4471/153_5376.jpg",
-		"/images/items/01_4471/155_5376.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5376.jpg",
+				"path": "/images/items/01_4471/153_5376.jpg",
+				"hash": "93590ffca7389d3600682f67233244ff"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5376.jpg",
+				"path": "/images/items/01_4471/155_5376.jpg",
+				"hash": "c2bcd2809eb39f18220d55c8bd9a93cd"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4471/",
-	"brandIds": [
-		"sdgundamseries"
-	],
+	"brandIds": ["sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
 }

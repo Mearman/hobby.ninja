@@ -39,47 +39,67 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"聖槍グラム×1",
-			"聖盾イージス×1",
-			"聖盾イージス用台座×1",
-			"マント×１",
-			"シール×1"
-		],
-		"en": [
-			"Holy Spear Gram x1",
-			"Holy Shield Aegis x1",
-			"Holy shield Aegis pedestal x 1",
-			"Cloak x 1",
-			"Seal×1"
-		]
+		"ja": ["聖槍グラム×1", "聖盾イージス×1", "聖盾イージス用台座×1", "マント×１", "シール×1"],
+		"en": ["Holy Spear Gram x1", "Holy Shield Aegis x1", "Holy shield Aegis pedestal x 1", "Cloak x 1", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_4113/153_5040.jpg",
-		"/images/items/01_4113/155_5040.jpg",
-		"/images/items/01_4113/156_5040.jpg",
-		"/images/items/01_4113/157_5040.jpg",
-		"/images/items/01_4113/158_5040.jpg",
-		"/images/items/01_4113/159_5040.jpg",
-		"/images/items/01_4113/189_5040.jpg",
-		"/images/items/01_4113/190_5040.jpg",
-		"/images/items/01_4113/191_5040.jpg",
-		"/images/items/01_4113/192_5040.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5040.jpg",
+				"path": "/images/items/01_4113/153_5040.jpg",
+				"hash": "39bc415ef3b15c2db27b52680888ce59"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5040.jpg",
+				"path": "/images/items/01_4113/155_5040.jpg",
+				"hash": "3e3f9c4e5cd506fed8f6d4a3293fa98c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5040.jpg",
+				"path": "/images/items/01_4113/156_5040.jpg",
+				"hash": "d5a560d9b8c0d696f9f9d78d25c66023"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5040.jpg",
+				"path": "/images/items/01_4113/157_5040.jpg",
+				"hash": "7662c08ce7055581c0b5e8d0c8b59314"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5040.jpg",
+				"path": "/images/items/01_4113/158_5040.jpg",
+				"hash": "b9fb669adb1f5a42b0e8e693dde75c58"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5040.jpg",
+				"path": "/images/items/01_4113/159_5040.jpg",
+				"hash": "bcc2d483d942a0239c24ccf6ef709a84"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5040.jpg",
+				"path": "/images/items/01_4113/189_5040.jpg",
+				"hash": "fdae7cb82581f5a2a40e98c9e1c5aa61"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5040.jpg",
+				"path": "/images/items/01_4113/190_5040.jpg",
+				"hash": "a645b6c82401ceddb966f981729bf6a5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5040.jpg",
+				"path": "/images/items/01_4113/191_5040.jpg",
+				"hash": "6f0a185339904b04565c14697aaa4e4d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5040.jpg",
+				"path": "/images/items/01_4113/192_5040.jpg",
+				"hash": "4778cfc0cc3e70e8a04a5ea383b4a099"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4113/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"digimon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4917",
-		"01_4302",
-		"01_3766",
-		"01_3637"
-	]
+	"brandIds": ["figurerise-standard"],
+	"seriesIds": ["digimon"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4917", "01_4302", "01_3766", "01_3637"]
 }

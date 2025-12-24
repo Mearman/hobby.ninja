@@ -43,51 +43,77 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ジオグレイソード×1",
-			"ジョイントパーツ×1式",
-			"シール×1",
-			"PETシール×1",
-			"ジュエルシール×1",
-			"リード線×1"
-		],
-		"en": [
-			"Geo Gray Sword x1",
-			"Joint parts x 1 set",
-			"Seal×1",
-			"PETSeal×1",
-			"Jewel Seal×1",
-			"Lead wire x 1"
-		]
+		"ja": ["ジオグレイソード×1", "ジョイントパーツ×1式", "シール×1", "PETシール×1", "ジュエルシール×1", "リード線×1"],
+		"en": ["Geo Gray Sword x1", "Joint parts x 1 set", "Seal×1", "PETSeal×1", "Jewel Seal×1", "Lead wire x 1"]
 	},
-	"images": [
-		"/images/items/01_4398/1000191429_1.jpg",
-		"/images/items/01_4398/1000191429_10.jpg",
-		"/images/items/01_4398/1000191429_11.jpg",
-		"/images/items/01_4398/1000191429_12.jpg",
-		"/images/items/01_4398/1000191429_2.jpg",
-		"/images/items/01_4398/1000191429_3.jpg",
-		"/images/items/01_4398/1000191429_4.jpg",
-		"/images/items/01_4398/1000191429_5.jpg",
-		"/images/items/01_4398/1000191429_6.jpg",
-		"/images/items/01_4398/1000191429_7.jpg",
-		"/images/items/01_4398/1000191429_8.jpg",
-		"/images/items/01_4398/1000191429_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191429_1.jpg",
+				"path": "/images/items/01_4398/1000191429_1.jpg",
+				"hash": "6985eb10a1d4b78797b05c9b84710ae7"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191429_10.jpg",
+				"path": "/images/items/01_4398/1000191429_10.jpg",
+				"hash": "b38e6665ff041e6be467f3324e5dac8d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191429_11.jpg",
+				"path": "/images/items/01_4398/1000191429_11.jpg",
+				"hash": "9b0b430ee68caa32923c30a6ddb7399f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191429_12.jpg",
+				"path": "/images/items/01_4398/1000191429_12.jpg",
+				"hash": "7a6656988b068ca182fa1c541cf37c78"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191429_2.jpg",
+				"path": "/images/items/01_4398/1000191429_2.jpg",
+				"hash": "5cd5da3b9df0d73fa6428b7864c188a3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191429_3.jpg",
+				"path": "/images/items/01_4398/1000191429_3.jpg",
+				"hash": "87de88b98205dff86dd45bc2e984dc73"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191429_4.jpg",
+				"path": "/images/items/01_4398/1000191429_4.jpg",
+				"hash": "6d61c376d340e1c665d14f8bea556574"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191429_5.jpg",
+				"path": "/images/items/01_4398/1000191429_5.jpg",
+				"hash": "e4beffe696718f213c0c0887d218c296"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191429_6.jpg",
+				"path": "/images/items/01_4398/1000191429_6.jpg",
+				"hash": "1e34aab5f3beb901c1f2cefac1bf848d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191429_7.jpg",
+				"path": "/images/items/01_4398/1000191429_7.jpg",
+				"hash": "58bdec9dd607c5bebb64aeb611cc5014"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191429_8.jpg",
+				"path": "/images/items/01_4398/1000191429_8.jpg",
+				"hash": "f46d7719d5e7d92b9abfc1d10bc50623"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191429_9.jpg",
+				"path": "/images/items/01_4398/1000191429_9.jpg",
+				"hash": "fb7825c798c606a349e0571ff5db958a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4398/",
-	"brandIds": [
-		"figurerise-standard-amp"
-	],
-	"seriesIds": [
-		"digimon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5983",
-		"item-1000216437",
-		"01_5277",
-		"item-1000198198"
-	]
+	"brandIds": ["figurerise-standard-amp"],
+	"seriesIds": ["digimon"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5983", "item-1000216437", "01_5277", "item-1000198198"]
 }

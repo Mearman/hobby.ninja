@@ -20,34 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HG 1/144 ストライクフリーダムガンダム クリアカラーバージョン登場！"
-		],
-		"en": [
-			"HG 1/144 Strike Freedom Gundam clear color version now available!"
-		]
+		"ja": ["HG 1/144 ストライクフリーダムガンダム クリアカラーバージョン登場！"],
+		"en": ["HG 1/144 Strike Freedom Gundam clear color version now available!"]
 	},
-	"images": [
-		"/images/items/01_4803/153_5683.jpg",
-		"/images/items/01_4803/155_5683.jpg",
-		"/images/items/01_4803/156_5683.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5683.jpg",
+				"path": "/images/items/01_4803/153_5683.jpg",
+				"hash": "0a876ba73893fb0756f9a7585cacac4c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5683.jpg",
+				"path": "/images/items/01_4803/155_5683.jpg",
+				"hash": "8510cffb326df01f17b796ae97de61f1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5683.jpg",
+				"path": "/images/items/01_4803/156_5683.jpg",
+				"hash": "f96be57dd667bc8918a38a9f7ec17657"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4803/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000203308", "01_5097", "01_3739", "item-1000157417"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

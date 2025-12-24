@@ -26,22 +26,24 @@
 			"King's genius \"Xun Iku \" appears in \" Sangokuden Brave Battle Record \"! The pedestal and wings of the giant cannon \" Ougekiho\" can be removed and held in the hand. The removed pedestal can also be attached to the back. A small sword is hidden inside the sword."
 		]
 	},
-	"images": [
-		"/images/items/01_4733/153_5618.jpg",
-		"/images/items/01_4733/155_5618.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5618.jpg",
+				"path": "/images/items/01_4733/153_5618.jpg",
+				"hash": "d64a6201ab8b79380bc60e56dbd702d1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5618.jpg",
+				"path": "/images/items/01_4733/155_5618.jpg",
+				"hash": "3a797fc9fc5a3fabeeeffa2a97df6fff"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4733/",
-	"brandIds": [
-		"sdgundamseries"
-	],
+	"brandIds": ["sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
 }

@@ -35,23 +35,29 @@
 			"• Comes with 1 gauging tip."
 		]
 	},
-	"images": [
-		"/images/items/01_5755/153_819.jpg",
-		"/images/items/01_5755/155_819.jpg",
-		"/images/items/01_5755/156_819.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_819.jpg",
+				"path": "/images/items/01_5755/153_819.jpg",
+				"hash": "4336e8e5e410ffbd75edbeca248a195d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_819.jpg",
+				"path": "/images/items/01_5755/155_819.jpg",
+				"hash": "b88a7f2abffa9b8e8ef9e5d92303ee70"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_819.jpg",
+				"path": "/images/items/01_5755/156_819.jpg",
+				"hash": "e5dcfeafc9269181a848c342f47f3a42"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5755/",
 	"brandIds": [],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181355",
-		"item-1000181354",
-		"item-1000170540",
-		"01_4196"
-	]
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181355", "item-1000181354", "item-1000170540", "01_4196"]
 }

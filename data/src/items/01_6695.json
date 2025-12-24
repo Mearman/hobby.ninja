@@ -34,29 +34,41 @@
 			"• Comes with an original designed sticker that can be attached to the mobile suit body."
 		]
 	},
-	"images": [
-		"/images/items/01_6695/01_6695_0.jpg",
-		"/images/items/01_6695/01_6695_1.jpg",
-		"/images/items/01_6695/01_6695_2.jpg",
-		"/images/items/01_6695/01_6695_3.jpg",
-		"/images/items/01_6695/01_6695_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6695_0.jpg",
+				"path": "/images/items/01_6695/01_6695_0.jpg",
+				"hash": "c2ffd324dbbb2f04d2bcf5f286bef4fa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6695_1.jpg",
+				"path": "/images/items/01_6695/01_6695_1.jpg",
+				"hash": "ae1895d6829f4e1ed465aa7b9d2c8a9e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6695_2.jpg",
+				"path": "/images/items/01_6695/01_6695_2.jpg",
+				"hash": "28764be14f1cdf6f6afd21e8fd0a49b3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6695_3.jpg",
+				"path": "/images/items/01_6695/01_6695_3.jpg",
+				"hash": "a53f30842812a078b2b229ac27d3b860"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6695_4.jpg",
+				"path": "/images/items/01_6695/01_6695_4.jpg",
+				"hash": "f43dedd0c6ee0692fa4381e4acf3cc62"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6695/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

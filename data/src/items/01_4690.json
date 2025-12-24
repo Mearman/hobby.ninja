@@ -26,22 +26,24 @@
 			"• Officially modified parts with great attention to detail. You can enjoy Gunpla even more by improving the details. • Color variations are now available on the system base that is ideal for Gunpla displays. • Gunmetal color with a mechanical and solid impression. • 1/144Scale recommended. Molded product x 3, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4690/01_4690_0.jpg",
-		"/images/items/01_4690/155_5579.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_4690_0.jpg",
+				"path": "/images/items/01_4690/01_4690_0.jpg",
+				"hash": "c3f8ecf1634a2baf6498bc501e18a66b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5579.jpg",
+				"path": "/images/items/01_4690/155_5579.jpg",
+				"hash": "280c64179eceb2dbad6b2b5772285157"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4690/",
-	"brandIds": [
-		"parts"
-	],
+	"brandIds": ["parts"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3582",
-		"01_3563",
-		"01_3564",
-		"01_636"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3582", "01_3563", "01_3564", "01_636"]
 }

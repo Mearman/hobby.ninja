@@ -27,28 +27,36 @@
 			"• Fortress, a new form derived from the AGE system, is now available as HG. • Can be separated into core fighter and G hopper. • The leg Sigmasis Cannon is removable. • Comes with a special pedestal that can be displayed in both MS form and flight form. Molded product x 7, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_3609/153_4564.jpg",
-		"/images/items/01_3609/155_4564.jpg",
-		"/images/items/01_3609/156_4564.jpg",
-		"/images/items/01_3609/157_4564.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4564.jpg",
+				"path": "/images/items/01_3609/153_4564.jpg",
+				"hash": "8f6f29b38c7ba6a777ba253b4ed3b080"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4564.jpg",
+				"path": "/images/items/01_3609/155_4564.jpg",
+				"hash": "a615589d40b7e183d1015994a4a1f037"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4564.jpg",
+				"path": "/images/items/01_3609/156_4564.jpg",
+				"hash": "7349f62343c8f8d5770485b0359fa567"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4564.jpg",
+				"path": "/images/items/01_3609/157_4564.jpg",
+				"hash": "f03647a802db219e629340a05621660b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3609/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "357",
 		"url": "https://manual.bandai-hobby.net/menus/detail/357/"

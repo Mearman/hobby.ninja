@@ -29,20 +29,24 @@
 			"• A set of Suha 43 type and Suhafu 42 type (brown)."
 		]
 	},
-	"images": [
-		"/images/items/01_5801/153_871.jpg",
-		"/images/items/01_5801/155_871.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_871.jpg",
+				"path": "/images/items/01_5801/153_871.jpg",
+				"hash": "1fe4981a08b9ecce639fc91ad7e09c42"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_871.jpg",
+				"path": "/images/items/01_5801/155_871.jpg",
+				"hash": "795b17de2f74df009275228a85907a1d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5801/",
-	"brandIds": [
-		"train"
-	],
+	"brandIds": ["train"],
 	"seriesIds": [],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"relatedItemIds": ["01_1276", "01_1277", "01_1278", "01_1280"]
 }

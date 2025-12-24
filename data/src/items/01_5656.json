@@ -36,29 +36,41 @@
 			"• Includes GN submachine gun, Seal, anti-MS knife, and beam saber x 2 (handle only)"
 		]
 	},
-	"images": [
-		"/images/items/01_5656/153_723.jpg",
-		"/images/items/01_5656/155_723.jpg",
-		"/images/items/01_5656/156_723.jpg",
-		"/images/items/01_5656/157_723.jpg",
-		"/images/items/01_5656/158_723.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_723.jpg",
+				"path": "/images/items/01_5656/153_723.jpg",
+				"hash": "5a105477d99e8a4293cfd4dff2510381"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_723.jpg",
+				"path": "/images/items/01_5656/155_723.jpg",
+				"hash": "0e5a48e6dba89d14c014c62a17514eb9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_723.jpg",
+				"path": "/images/items/01_5656/156_723.jpg",
+				"hash": "645fafda6ed7094e838369a11465cc9d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_723.jpg",
+				"path": "/images/items/01_5656/157_723.jpg",
+				"hash": "fab9105c6e1a402448094ae88f061406"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_723.jpg",
+				"path": "/images/items/01_5656/158_723.jpg",
+				"hash": "254dbc929556579666afe779816cc43e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5656/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1954",
-		"01_1953",
-		"item-1000114085",
-		"01_957"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["g-00"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_1954", "01_1953", "item-1000114085", "01_957"],
 	"manual": {
 		"id": "188",
 		"url": "https://manual.bandai-hobby.net/menus/detail/188/"

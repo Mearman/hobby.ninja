@@ -35,29 +35,41 @@
 			"• The intense energy release of the Hyper Beam Sword is reproduced with clear effect parts. Molded product x 9, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5876/153_954.jpg",
-		"/images/items/01_5876/155_954.jpg",
-		"/images/items/01_5876/156_954.jpg",
-		"/images/items/01_5876/157_954.jpg",
-		"/images/items/01_5876/01_5876_inst_0.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_954.jpg",
+				"path": "/images/items/01_5876/153_954.jpg",
+				"hash": "4246e23c84cd84b773f3bdc2586720e5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_954.jpg",
+				"path": "/images/items/01_5876/155_954.jpg",
+				"hash": "c1f746273e19e9e674bfe37b77479e82"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_954.jpg",
+				"path": "/images/items/01_5876/156_954.jpg",
+				"hash": "fc0c167fad11f560fb828b00b1552073"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_954.jpg",
+				"path": "/images/items/01_5876/157_954.jpg",
+				"hash": "83282007141ba3835b945680a1c1b42f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5876_inst_0.jpg",
+				"path": "/images/items/01_5876/01_5876_inst_0.jpg",
+				"hash": "53bbfd9724635de7d5a155706d5f60aa"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5876/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"x"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000147185",
-		"item-1000147187",
-		"01_160",
-		"01_1772"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["x"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000147185", "item-1000147187", "01_160", "01_1772"],
 	"manual": {
 		"id": "388",
 		"url": "https://manual.bandai-hobby.net/menus/detail/388/"

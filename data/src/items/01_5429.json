@@ -33,28 +33,36 @@
 			"■ Each part of the crane arm can be moved by slide."
 		]
 	},
-	"images": [
-		"/images/items/01_5429/1000215419_1.jpg",
-		"/images/items/01_5429/1000215419_2.jpg",
-		"/images/items/01_5429/1000215419_3.jpg",
-		"/images/items/01_5429/1000215419_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000215419_1.jpg",
+				"path": "/images/items/01_5429/1000215419_1.jpg",
+				"hash": "88a6641234c78b91645be2776bc56623"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000215419_2.jpg",
+				"path": "/images/items/01_5429/1000215419_2.jpg",
+				"hash": "25d1f13d793e480a121d94b9495a596f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000215419_3.jpg",
+				"path": "/images/items/01_5429/1000215419_3.jpg",
+				"hash": "3283b43856ab12b5da08b5c409c426b9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000215419_4.jpg",
+				"path": "/images/items/01_5429/1000215419_4.jpg",
+				"hash": "97b9c1ef9df919c024586ab17522683d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5429/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"g-0080"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5768",
-		"01_2436",
-		"01_1686",
-		"01_1635"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["g-0080"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5768", "01_2436", "01_1686", "01_1635"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

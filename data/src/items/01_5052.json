@@ -94,27 +94,21 @@
 			"・Product information is current as of 20238. Packages, logos and product specifications are subject to change without notice."
 		]
 	},
-	"images": [
-		"/images/items/01_5052/153_5918.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5918.jpg",
+				"path": "/images/items/01_5052/153_5918.jpg",
+				"hash": "62dcd7d3a3bf17a8826b8ddd2669631d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5052/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000213249",
-		"item-1000183318",
-		"item-1000170382",
-		"01_3410"
-	],
+	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
+	"seriesIds": ["endlesswaltz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000213249", "item-1000183318", "item-1000170382", "01_3410"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

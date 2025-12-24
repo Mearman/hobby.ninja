@@ -25,22 +25,24 @@
 			"Shuyu Hyakushiki, Todoroki's staff who has mastered both literary and martial arts, is now available as a BB warrior. Weapons include a bow combined with the binder on his back, arrows with clear parts, and a large sword. By attaching the bow, arrow, sword, and backpack to the special parts, you can recreate the large weapon Mega Bazooka Launcher. In addition to the regular eyes, an eye seal with a visor attached is also included."
 		]
 	},
-	"images": [
-		"/images/items/01_4732/153_5617.jpg",
-		"/images/items/01_4732/155_5617.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5617.jpg",
+				"path": "/images/items/01_4732/153_5617.jpg",
+				"hash": "0dbf8f52b32f0a9266894a6fea2875e6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5617.jpg",
+				"path": "/images/items/01_4732/155_5617.jpg",
+				"hash": "9ba121e48e082a9f681e3158141d9340"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4732/",
-	"brandIds": [
-		"sdgundamseries"
-	],
+	"brandIds": ["sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
 }

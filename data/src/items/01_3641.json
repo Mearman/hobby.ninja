@@ -31,28 +31,26 @@
 			"- Possible to take bold action poses reminiscent of battle scenes in the movie"
 		]
 	},
-	"images": [
-		"/images/items/01_3641/153_4595.jpg",
-		"/images/items/01_3641/155_4595.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4595.jpg",
+				"path": "/images/items/01_3641/153_4595.jpg",
+				"hash": "602251921b085cd66c8f22fb9c960f0f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4595.jpg",
+				"path": "/images/items/01_3641/155_4595.jpg",
+				"hash": "6ba2b7a4f69ee5870e18bd18e43bbd2a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3641/",
-	"brandIds": [
-		"ecoplaproject_g",
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5045",
-		"01_4985",
-		"01_4971",
-		"01_4365"
-	],
+	"brandIds": ["ecoplaproject_g", "hg", "hguc"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5045", "01_4985", "01_4971", "01_4365"],
 	"manual": {
 		"id": "907",
 		"url": "https://manual.bandai-hobby.net/menus/detail/907/"

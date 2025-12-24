@@ -37,29 +37,36 @@
 			"• Includes an upgraded Armed Armor VN that can also be attached to the HGUC Banshee Destroy Mode (sold separately)."
 		]
 	},
-	"images": [
-		"/images/items/01_5780/153_841.jpg",
-		"/images/items/01_5780/155_841.jpg",
-		"/images/items/01_5780/156_841.jpg",
-		"/images/items/01_5780/158_841.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_841.jpg",
+				"path": "/images/items/01_5780/153_841.jpg",
+				"hash": "a7b97bce312e1fd2007a7699fe45c671"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_841.jpg",
+				"path": "/images/items/01_5780/155_841.jpg",
+				"hash": "d5a2c207454de8ed94fe49396eb452fe"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_841.jpg",
+				"path": "/images/items/01_5780/156_841.jpg",
+				"hash": "888d4df1897485ca489dd354187139c7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_841.jpg",
+				"path": "/images/items/01_5780/158_841.jpg",
+				"hash": "99e516cf5804590b16f44bd6530c681e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5780/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "377",
 		"url": "https://manual.bandai-hobby.net/menus/detail/377/"

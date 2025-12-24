@@ -117,43 +117,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"試作型シェキナー",
-			"ヒート・レイピア"
-		],
-		"en": [
-			"Prototype Shekinah",
-			"heat rapier"
-		]
+		"ja": ["試作型シェキナー", "ヒート・レイピア"],
+		"en": ["Prototype Shekinah", "heat rapier"]
 	},
-	"images": [
-		"/images/items/01_4077/153_5002.jpg",
-		"/images/items/01_4077/155_5002.jpg",
-		"/images/items/01_4077/156_5002.jpg",
-		"/images/items/01_4077/157_5002.jpg",
-		"/images/items/01_4077/158_5002.jpg",
-		"/images/items/01_4077/159_5002.jpg",
-		"/images/items/01_4077/189_5002.jpg",
-		"/images/items/01_4077/190_5002.jpg",
-		"/images/items/01_4077/191_5002.jpg",
-		"/images/items/01_4077/192_5002.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5002.jpg",
+				"path": "/images/items/01_4077/153_5002.jpg",
+				"hash": "b7d839e5abc904949c64b555272c774c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5002.jpg",
+				"path": "/images/items/01_4077/155_5002.jpg",
+				"hash": "b4daee709fbb1179a26e2d1e3859fe73"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5002.jpg",
+				"path": "/images/items/01_4077/156_5002.jpg",
+				"hash": "ebbfafa115f0ac473f68a780a26c0818"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5002.jpg",
+				"path": "/images/items/01_4077/157_5002.jpg",
+				"hash": "511866b2d1aa5b7462332f4ac0c3d54e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5002.jpg",
+				"path": "/images/items/01_4077/158_5002.jpg",
+				"hash": "3ea2277dd73b398200fb2da061d537fd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5002.jpg",
+				"path": "/images/items/01_4077/159_5002.jpg",
+				"hash": "6746ba155ce2ea807d090698a20cbe2d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5002.jpg",
+				"path": "/images/items/01_4077/189_5002.jpg",
+				"hash": "6e59b62cdae966ccd6cd404c0c70806f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5002.jpg",
+				"path": "/images/items/01_4077/190_5002.jpg",
+				"hash": "86e20531768ac134fbc0444c6f7d9ba1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5002.jpg",
+				"path": "/images/items/01_4077/191_5002.jpg",
+				"hash": "ba9d10c5949b67ac3095f032dad491f0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5002.jpg",
+				"path": "/images/items/01_4077/192_5002.jpg",
+				"hash": "474a6410d9f904c54ad2a041a319b92b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4077/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
+	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5951"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

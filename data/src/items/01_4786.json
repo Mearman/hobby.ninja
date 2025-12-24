@@ -20,35 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HGUC 1/144 MSM-04 アッガイ Ver.GFT トリコロールペイント　登場！"
-		],
-		"en": [
-			"HGUC 1/144 MSM-04 Acguy Ver.GFT tricolor paint now available!"
-		]
+		"ja": ["HGUC 1/144 MSM-04 アッガイ Ver.GFT トリコロールペイント　登場！"],
+		"en": ["HGUC 1/144 MSM-04 Acguy Ver.GFT tricolor paint now available!"]
 	},
-	"images": [
-		"/images/items/01_4786/153_5668.jpg",
-		"/images/items/01_4786/155_5668.jpg",
-		"/images/items/01_4786/156_5668.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5668.jpg",
+				"path": "/images/items/01_4786/153_5668.jpg",
+				"hash": "063ccbe18e0cf27746d4d2ff444b8a67"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5668.jpg",
+				"path": "/images/items/01_4786/155_5668.jpg",
+				"hash": "1024683d0c6d801a38f30ac1e53ea430"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5668.jpg",
+				"path": "/images/items/01_4786/156_5668.jpg",
+				"hash": "fb72e90fbc38ac14b352fc2b12f3ef84"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4786/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

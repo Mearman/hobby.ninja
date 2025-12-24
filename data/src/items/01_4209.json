@@ -41,31 +41,51 @@
 			"• MS connection parts are included and an action base can be used to create various operational forms."
 		]
 	},
-	"images": [
-		"/images/items/01_4209/153_5129.jpg",
-		"/images/items/01_4209/155_5129.jpg",
-		"/images/items/01_4209/156_5129.jpg",
-		"/images/items/01_4209/157_5129.jpg",
-		"/images/items/01_4209/158_5129.jpg",
-		"/images/items/01_4209/159_5129.jpg",
-		"/images/items/01_4209/189_5129.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5129.jpg",
+				"path": "/images/items/01_4209/153_5129.jpg",
+				"hash": "a21bea07fb5602cf1f6896f62c65a85b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5129.jpg",
+				"path": "/images/items/01_4209/155_5129.jpg",
+				"hash": "7a85815715922db0b0aa700dd547e3d8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5129.jpg",
+				"path": "/images/items/01_4209/156_5129.jpg",
+				"hash": "56d489ec5d9448296cf669b28501f557"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5129.jpg",
+				"path": "/images/items/01_4209/157_5129.jpg",
+				"hash": "b09703d97a00392f988c2e25045c8623"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5129.jpg",
+				"path": "/images/items/01_4209/158_5129.jpg",
+				"hash": "0677c7b81c8b2fccddc2004e6e1acd88"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5129.jpg",
+				"path": "/images/items/01_4209/159_5129.jpg",
+				"hash": "63b9abe27d14009f4010b2e507cc0929"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5129.jpg",
+				"path": "/images/items/01_4209/189_5129.jpg",
+				"hash": "9b6183bbd48291586f0811889aa6e5d1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4209/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5346",
-		"01_5210",
-		"01_4971",
-		"01_4408"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5346", "01_5210", "01_4971", "01_4408"],
 	"tag": {
 		"ja": "GUNDAM SIDE-F",
 		"en": "GUNDAM SIDE-F"

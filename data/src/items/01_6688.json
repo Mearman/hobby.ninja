@@ -33,43 +33,49 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ザク・マシンガン",
-			"ザク・バズーカ",
-			"ヒート・ホーク"
-		],
-		"en": [
-			"zaku machine gun",
-			"Zaku Bazooka",
-			"heat hawk"
-		]
+		"ja": ["ザク・マシンガン", "ザク・バズーカ", "ヒート・ホーク"],
+		"en": ["zaku machine gun", "Zaku Bazooka", "heat hawk"]
 	},
-	"images": [
-		"/images/items/01_6688/01_6688_0.jpg",
-		"/images/items/01_6688/01_6688_1.jpg",
-		"/images/items/01_6688/01_6688_2.jpg",
-		"/images/items/01_6688/01_6688_3.jpg",
-		"/images/items/01_6688/01_6688_4.jpg",
-		"/images/items/01_6688/01_6688_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6688_0.jpg",
+				"path": "/images/items/01_6688/01_6688_0.jpg",
+				"hash": "e1158e4fb5715f2c2e37338e5f91a988"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6688_1.jpg",
+				"path": "/images/items/01_6688/01_6688_1.jpg",
+				"hash": "0c1e99a370713a9cf6991d9da9f1d94d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6688_2.jpg",
+				"path": "/images/items/01_6688/01_6688_2.jpg",
+				"hash": "07a0ba356af75d7556edc81ec74a105f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6688_3.jpg",
+				"path": "/images/items/01_6688/01_6688_3.jpg",
+				"hash": "9b53e232fca239e85e4914992ff8661b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6688_4.jpg",
+				"path": "/images/items/01_6688/01_6688_4.jpg",
+				"hash": "8dedb477749445196cbab6389b21f839"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6688_5.jpg",
+				"path": "/images/items/01_6688/01_6688_5.jpg",
+				"hash": "1315807a5239a0f8046475e6a68ea086"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6688/",
-	"brandIds": [
-		"rg",
-		"pb_rg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5428",
-		"01_5261",
-		"item-1000209098"
-	],
+	"brandIds": ["rg", "pb_rg", "pb_gunpla"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5992", "01_5428", "01_5261", "item-1000209098"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

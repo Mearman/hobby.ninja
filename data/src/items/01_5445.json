@@ -47,42 +47,54 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"杖×1",
-			"アーマーパーツ×1式",
-			"ハンドパーツ×1式",
-			"ジョイントパーツ×1式"
-		],
-		"en": [
-			"Cane x 1",
-			"Armor parts x 1 set",
-			"Hand parts x 1 set",
-			"Joint parts x 1 set"
-		]
+		"ja": ["杖×1", "アーマーパーツ×1式", "ハンドパーツ×1式", "ジョイントパーツ×1式"],
+		"en": ["Cane x 1", "Armor parts x 1 set", "Hand parts x 1 set", "Joint parts x 1 set"]
 	},
-	"images": [
-		"/images/items/01_5445/1000224146_1.jpg",
-		"/images/items/01_5445/1000224146_2.jpg",
-		"/images/items/01_5445/1000224146_3.jpg",
-		"/images/items/01_5445/1000224146_4.jpg",
-		"/images/items/01_5445/1000224146_5.jpg",
-		"/images/items/01_5445/1000224146_6.jpg",
-		"/images/items/01_5445/1000224146_7.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224146_1.jpg",
+				"path": "/images/items/01_5445/1000224146_1.jpg",
+				"hash": "64a54908f5bfba88275dd2f7ffc45420"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224146_2.jpg",
+				"path": "/images/items/01_5445/1000224146_2.jpg",
+				"hash": "21496f0c4466a9dc755042ee265c62c1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224146_3.jpg",
+				"path": "/images/items/01_5445/1000224146_3.jpg",
+				"hash": "a4f1554bb0172a276a3e66a7e294cd8d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224146_4.jpg",
+				"path": "/images/items/01_5445/1000224146_4.jpg",
+				"hash": "f35f782e66b2d60df1b9883779172670"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224146_5.jpg",
+				"path": "/images/items/01_5445/1000224146_5.jpg",
+				"hash": "f4ae596ee327201d1a55a64e61efffa8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224146_6.jpg",
+				"path": "/images/items/01_5445/1000224146_6.jpg",
+				"hash": "2bb4e637b0b7934fe0ef9bb3e05703a8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224146_7.jpg",
+				"path": "/images/items/01_5445/1000224146_7.jpg",
+				"hash": "388c3a435d93b6deb5e3b978a854692a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5445/",
-	"brandIds": [
-		"30mf"
-	],
+	"brandIds": ["30mf"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5990",
-		"01_5989",
-		"01_5972",
-		"01_5973"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"],
 	"manual": {
 		"id": "3412",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3412/"

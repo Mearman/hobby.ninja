@@ -37,38 +37,57 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"デコレーションパーツ×1式",
-			"専用シール×2"
-		],
-		"en": [
-			"Decoration parts x 1 set",
-			"Exclusive Seal×2"
-		]
+		"ja": ["デコレーションパーツ×1式", "専用シール×2"],
+		"en": ["Decoration parts x 1 set", "Exclusive Seal×2"]
 	},
-	"images": [
-		"/images/items/01_5272/153_6123.jpg",
-		"/images/items/01_5272/155_6123.jpg",
-		"/images/items/01_5272/156_6123.jpg",
-		"/images/items/01_5272/157_6123.jpg",
-		"/images/items/01_5272/158_6123.jpg",
-		"/images/items/01_5272/159_6123.jpg",
-		"/images/items/01_5272/189_6123.jpg",
-		"/images/items/01_5272/190_6123.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6123.jpg",
+				"path": "/images/items/01_5272/153_6123.jpg",
+				"hash": "11fa519ff3297fc2549ea640b51b2f91"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6123.jpg",
+				"path": "/images/items/01_5272/155_6123.jpg",
+				"hash": "927464310053956f8887d2405d3eb322"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6123.jpg",
+				"path": "/images/items/01_5272/156_6123.jpg",
+				"hash": "4b77eaa6ba09d7d49a03197a55a0798f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6123.jpg",
+				"path": "/images/items/01_5272/157_6123.jpg",
+				"hash": "a8ff546382b88066df46d47804b4efc5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6123.jpg",
+				"path": "/images/items/01_5272/158_6123.jpg",
+				"hash": "b40b6eb08aa06a83006a42d60b4475e7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6123.jpg",
+				"path": "/images/items/01_5272/159_6123.jpg",
+				"hash": "ad2ea6c97a41261ae3ac7f8c96278d99"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6123.jpg",
+				"path": "/images/items/01_5272/189_6123.jpg",
+				"hash": "bf1555f12e925f1a4b265789795b132b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6123.jpg",
+				"path": "/images/items/01_5272/190_6123.jpg",
+				"hash": "17c3687ebd8d8022cbd91821fb8e83e3"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5272/",
-	"brandIds": [
-		"customize_scenebase",
-		"30mm"
-	],
+	"brandIds": ["customize_scenebase", "30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	]
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"]
 }

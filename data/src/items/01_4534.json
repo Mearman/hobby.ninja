@@ -19,29 +19,27 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"「BB戦士 三国伝 呂布トールギス・赤兎馬・天玉鎧 クリアカラーバーション」登場！"
-		],
-		"en": [
-			"\"BB Senshi Sangokuden Ryobu Tallgeese, Red Rabbit, Tendama Armor Clear Color Version\" now available!"
-		]
+		"ja": ["「BB戦士 三国伝 呂布トールギス・赤兎馬・天玉鎧 クリアカラーバーション」登場！"],
+		"en": ["\"BB Senshi Sangokuden Ryobu Tallgeese, Red Rabbit, Tendama Armor Clear Color Version\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4534/153_5434.jpg",
-		"/images/items/01_4534/155_5434.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5434.jpg",
+				"path": "/images/items/01_4534/153_5434.jpg",
+				"hash": "3a5c4f090b19a4506bb7da155ede6fdd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5434.jpg",
+				"path": "/images/items/01_4534/155_5434.jpg",
+				"hash": "884cae57935af250c79b87a0c1f7c5b1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4534/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

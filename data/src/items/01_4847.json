@@ -20,34 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"「HG 1/144 ガンダムエクシア メタリックバージョン」登場！"
-		],
-		"en": [
-			"\"HG 1/144 Gundam Exia Metallic Version\" now available!"
-		]
+		"ja": ["「HG 1/144 ガンダムエクシア メタリックバージョン」登場！"],
+		"en": ["\"HG 1/144 Gundam Exia Metallic Version\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4847/153_5728.jpg",
-		"/images/items/01_4847/155_5728.jpg",
-		"/images/items/01_4847/156_5728.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5728.jpg",
+				"path": "/images/items/01_4847/153_5728.jpg",
+				"hash": "8aa778da67b3c3dfdec9595315f496b7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5728.jpg",
+				"path": "/images/items/01_4847/155_5728.jpg",
+				"hash": "976fbf48890655118680cab2ec9fd511"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5728.jpg",
+				"path": "/images/items/01_4847/156_5728.jpg",
+				"hash": "38ea8d19e387be23fe31fe86d512902d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4847/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1954",
-		"01_1953",
-		"item-1000114085",
-		"01_957"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["g-00"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_1954", "01_1953", "item-1000114085", "01_957"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

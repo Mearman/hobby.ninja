@@ -32,25 +32,29 @@
 			"• Equipped with an armed armor VN deployment gimmick for both arms."
 		]
 	},
-	"images": [
-		"/images/items/01_5781/153_842.jpg",
-		"/images/items/01_5781/155_842.jpg",
-		"/images/items/01_5781/156_842.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_842.jpg",
+				"path": "/images/items/01_5781/153_842.jpg",
+				"hash": "42694e8d4646b4dc3c5327005a88e6c6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_842.jpg",
+				"path": "/images/items/01_5781/155_842.jpg",
+				"hash": "e66244ec86219559b8ba1841d285eb04"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_842.jpg",
+				"path": "/images/items/01_5781/156_842.jpg",
+				"hash": "8d9c21af68ca075a655123846ab62c2b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5781/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3490",
-		"01_2646",
-		"01_1932",
-		"item-1000095978"
-	]
+	"brandIds": ["bb"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3490", "01_2646", "01_1932", "item-1000095978"]
 }

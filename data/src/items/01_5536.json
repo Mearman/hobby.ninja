@@ -17,30 +17,46 @@
 		"month": 2
 	},
 	"targetAge": 15,
-	"images": [
-		"/images/items/01_5536/153_6375.jpg",
-		"/images/items/01_5536/155_6375.jpg",
-		"/images/items/01_5536/156_6375.jpg",
-		"/images/items/01_5536/157_6375.jpg",
-		"/images/items/01_5536/158_6375.jpg",
-		"/images/items/01_5536/159_6375.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6375.jpg",
+				"path": "/images/items/01_5536/153_6375.jpg",
+				"hash": "4df720da73efa6cca81521e4ee61eaeb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6375.jpg",
+				"path": "/images/items/01_5536/155_6375.jpg",
+				"hash": "1e9a228432d6401ccce960d5e036e3bd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6375.jpg",
+				"path": "/images/items/01_5536/156_6375.jpg",
+				"hash": "ba510f72bca49541b5edcd78a62d7b7b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6375.jpg",
+				"path": "/images/items/01_5536/157_6375.jpg",
+				"hash": "d4e58618abe619b40d91cbc8c903201c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6375.jpg",
+				"path": "/images/items/01_5536/158_6375.jpg",
+				"hash": "26ad08ab5d5880fdead68a368fb60048"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6375.jpg",
+				"path": "/images/items/01_5536/159_6375.jpg",
+				"hash": "581d97b671a5cb1d8de4a6cf2703f20f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5536/",
-	"brandIds": [
-		"pb_charapla"
-	],
-	"seriesIds": [
-		"dunbine"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000203131",
-		"item-1000211055",
-		"item-1000199895",
-		"item-1000194225"
-	],
+	"brandIds": ["pb_charapla"],
+	"seriesIds": ["dunbine"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000203131", "item-1000211055", "item-1000199895", "item-1000194225"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

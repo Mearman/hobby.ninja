@@ -66,32 +66,64 @@
 			"Foil Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_3395/153_4349.jpg",
-		"/images/items/01_3395/155_4349.jpg",
-		"/images/items/01_3395/156_4349.jpg",
-		"/images/items/01_3395/157_4349.jpg",
-		"/images/items/01_3395/158_4349.jpg",
-		"/images/items/01_3395/159_4349.jpg",
-		"/images/items/01_3395/189_4349.jpg",
-		"/images/items/01_3395/190_4349.jpg",
-		"/images/items/01_3395/191_4349.jpg",
-		"/images/items/01_3395/192_4349.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4349.jpg",
+				"path": "/images/items/01_3395/153_4349.jpg",
+				"hash": "19ab7dd2f6d3a90e4f961183cc5f263b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4349.jpg",
+				"path": "/images/items/01_3395/155_4349.jpg",
+				"hash": "cddf42b7c73b21a89c7046c016e0dd33"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4349.jpg",
+				"path": "/images/items/01_3395/156_4349.jpg",
+				"hash": "5ae1e8f61c2ba0a675d2a8779dfc28de"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4349.jpg",
+				"path": "/images/items/01_3395/157_4349.jpg",
+				"hash": "c4223f3a4547d6116f9415e0c49dbe4f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4349.jpg",
+				"path": "/images/items/01_3395/158_4349.jpg",
+				"hash": "c41ef5db42b605f01e8b9e610a7c166e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4349.jpg",
+				"path": "/images/items/01_3395/159_4349.jpg",
+				"hash": "a954856c82c2ba4f3199eb5a4375a907"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4349.jpg",
+				"path": "/images/items/01_3395/189_4349.jpg",
+				"hash": "cb661b1a93ce7573392655981cc61fc7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4349.jpg",
+				"path": "/images/items/01_3395/190_4349.jpg",
+				"hash": "5f43624ce2e25221728241a4e7e78964"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4349.jpg",
+				"path": "/images/items/01_3395/191_4349.jpg",
+				"hash": "de62ea10eae61d82280cb29c246927c6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4349.jpg",
+				"path": "/images/items/01_3395/192_4349.jpg",
+				"hash": "fbeebc2a8484ae94959fe260b75f758b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3395/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"ultraman"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5371",
-		"01_5198",
-		"01_5096",
-		"01_5046"
-	]
+	"brandIds": ["figurerise-standard"],
+	"seriesIds": ["ultraman"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5371", "01_5198", "01_5096", "01_5046"]
 }

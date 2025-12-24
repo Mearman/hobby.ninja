@@ -37,27 +37,31 @@
 			"• There are plenty of gimmicks for each part, such as movable left and right mono eyes, open chest hatch, and open rifle mounting hole!"
 		]
 	},
-	"images": [
-		"/images/items/01_3712/153_4665.jpg",
-		"/images/items/01_3712/155_4665.jpg",
-		"/images/items/01_3712/156_4665.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4665.jpg",
+				"path": "/images/items/01_3712/153_4665.jpg",
+				"hash": "0fbb411f1cadf57dcd2a7a1442740961"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4665.jpg",
+				"path": "/images/items/01_3712/155_4665.jpg",
+				"hash": "1b7ddde47fb2d55fe3cb15edebdb66ed"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4665.jpg",
+				"path": "/images/items/01_3712/156_4665.jpg",
+				"hash": "2c1d60e84d2d75d12834b9efd3d887a5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3712/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5421",
-		"item-1000183862",
-		"item-1000155441",
-		"01_3454"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5421", "item-1000183862", "item-1000155441", "01_3454"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

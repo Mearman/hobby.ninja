@@ -39,23 +39,29 @@
 			"• Ayano machine marking included."
 		]
 	},
-	"images": [
-		"/images/items/01_5809/153_881.jpg",
-		"/images/items/01_5809/155_881.jpg",
-		"/images/items/01_5809/156_881.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_881.jpg",
+				"path": "/images/items/01_5809/153_881.jpg",
+				"hash": "5ac2516176ee83d4f77ebac8c3614a37"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_881.jpg",
+				"path": "/images/items/01_5809/155_881.jpg",
+				"hash": "dee03c74081a61631e605456d6128fff"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_881.jpg",
+				"path": "/images/items/01_5809/156_881.jpg",
+				"hash": "c8b97249ca3cfe979d8ae1a8098297dd"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5809/",
 	"brandIds": [],
-	"seriesIds": [
-		"geass"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000203132",
-		"item-1000187724",
-		"item-1000167903",
-		"01_5776"
-	]
+	"seriesIds": ["geass"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000203132", "item-1000187724", "item-1000167903", "01_5776"]
 }

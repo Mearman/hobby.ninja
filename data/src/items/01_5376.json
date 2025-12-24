@@ -64,32 +64,56 @@
 			"Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5376/1000220943_1.jpg",
-		"/images/items/01_5376/1000220943_2.jpg",
-		"/images/items/01_5376/1000220943_3.jpg",
-		"/images/items/01_5376/1000220943_4.jpg",
-		"/images/items/01_5376/1000220943_5.jpg",
-		"/images/items/01_5376/1000220943_6.jpg",
-		"/images/items/01_5376/1000220943_7.jpg",
-		"/images/items/01_5376/1000220943_8.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220943_1.jpg",
+				"path": "/images/items/01_5376/1000220943_1.jpg",
+				"hash": "4c2b244aae4cd479bfad2ceee05a24cc"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220943_2.jpg",
+				"path": "/images/items/01_5376/1000220943_2.jpg",
+				"hash": "2919bdbb3f78a0779dd5351f72be245d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220943_3.jpg",
+				"path": "/images/items/01_5376/1000220943_3.jpg",
+				"hash": "63e77c7f5f2f4f7cdb77d0a4f75cb11e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220943_4.jpg",
+				"path": "/images/items/01_5376/1000220943_4.jpg",
+				"hash": "8afa4aff9cabf25d3bfd24c3bae5f55e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220943_5.jpg",
+				"path": "/images/items/01_5376/1000220943_5.jpg",
+				"hash": "a5eeafd7c97ebc3b2d703a00d416421e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220943_6.jpg",
+				"path": "/images/items/01_5376/1000220943_6.jpg",
+				"hash": "02c5f69b977a35a902544efee9d58a07"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220943_7.jpg",
+				"path": "/images/items/01_5376/1000220943_7.jpg",
+				"hash": "240c2c83b4b8f9afcaa835b3fc9f266b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220943_8.jpg",
+				"path": "/images/items/01_5376/1000220943_8.jpg",
+				"hash": "dcb6244b2aeb4f28ee7cad62fad429ac"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5376/",
-	"brandIds": [
-		"optionpartsset"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6765",
-		"01_5240",
-		"01_5241",
-		"01_5242"
-	],
+	"brandIds": ["optionpartsset"],
+	"seriesIds": ["buildfighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_6765", "01_5240", "01_5241", "01_5242"],
 	"manual": {
 		"id": "1950",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1950/"

@@ -33,22 +33,34 @@
 			"Nozzle effect x 2 types, beam saber x 2 types <x 2 sets>"
 		]
 	},
-	"images": [
-		"/images/items/01_3724/1000076401_1.jpg",
-		"/images/items/01_3724/1000076401_2.jpg",
-		"/images/items/01_3724/1000076401_3.jpg",
-		"/images/items/01_3724/1000076401_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000076401_1.jpg",
+				"path": "/images/items/01_3724/1000076401_1.jpg",
+				"hash": "21d0ed7beed9d6afae2d578635a74a0f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000076401_2.jpg",
+				"path": "/images/items/01_3724/1000076401_2.jpg",
+				"hash": "49e10b117f6473103855322873500bb0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000076401_3.jpg",
+				"path": "/images/items/01_3724/1000076401_3.jpg",
+				"hash": "0b9da762b99be3e154e15fbc00a7b509"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000076401_4.jpg",
+				"path": "/images/items/01_3724/1000076401_4.jpg",
+				"hash": "eb0f6a4402a8abd039862cbdc323e4ea"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3724/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5987",
-		"01_5988",
-		"01_5969"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5987", "01_5988", "01_5969"]
 }

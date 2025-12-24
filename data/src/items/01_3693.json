@@ -36,43 +36,57 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"超熱振式薙刀×１",
-			"捕縛用電撃網発射機×１",
-			"ハンドパーツ×一式",
-			"シール×１"
-		],
-		"en": [
-			"Super heat wave type naginata x 1",
-			"Capturing electric net launcher x 1",
-			"Hand parts x set",
-			"Seal×1"
-		]
+		"ja": ["超熱振式薙刀×１", "捕縛用電撃網発射機×１", "ハンドパーツ×一式", "シール×１"],
+		"en": ["Super heat wave type naginata x 1", "Capturing electric net launcher x 1", "Hand parts x set", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_3693/153_4647.jpg",
-		"/images/items/01_3693/155_4647.jpg",
-		"/images/items/01_3693/156_4647.jpg",
-		"/images/items/01_3693/157_4647.jpg",
-		"/images/items/01_3693/158_4647.jpg",
-		"/images/items/01_3693/159_4647.jpg",
-		"/images/items/01_3693/189_4647.jpg",
-		"/images/items/01_3693/190_4647.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4647.jpg",
+				"path": "/images/items/01_3693/153_4647.jpg",
+				"hash": "0b2ae6ad3be5764a126dda0351479b9b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4647.jpg",
+				"path": "/images/items/01_3693/155_4647.jpg",
+				"hash": "d196583a66efce9fb1bd33c481ca63f2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4647.jpg",
+				"path": "/images/items/01_3693/156_4647.jpg",
+				"hash": "d17cb969ca08fec65b184a6e19179287"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4647.jpg",
+				"path": "/images/items/01_3693/157_4647.jpg",
+				"hash": "498a1af0fbeff8ff7d1df65dc14b3df9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4647.jpg",
+				"path": "/images/items/01_3693/158_4647.jpg",
+				"hash": "3e984bb31b8c6c5ac187f8740593251c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4647.jpg",
+				"path": "/images/items/01_3693/159_4647.jpg",
+				"hash": "9b40362e37cf3b2c7f4fd73dc98819f7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4647.jpg",
+				"path": "/images/items/01_3693/189_4647.jpg",
+				"hash": "c9f1c71da3f3165f3b43ec920a8712d3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4647.jpg",
+				"path": "/images/items/01_3693/190_4647.jpg",
+				"hash": "7682567fa8bae32d6b6d28bc9b06df50"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3693/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"kyoukaisenki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5196",
-		"01_5183",
-		"01_5170",
-		"01_5171"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["kyoukaisenki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
 }

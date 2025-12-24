@@ -39,12 +39,7 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"シール×1式",
-			"台座×1",
-			"背景台紙×1",
-			"▼『ジュラシックワールド／復活の大地』アイテム 特設サイトはコチラ！"
-		],
+		"ja": ["シール×1式", "台座×1", "背景台紙×1", "▼『ジュラシックワールド／復活の大地』アイテム 特設サイトはコチラ！"],
 		"en": [
 			"Seal×1 type",
 			"Pedestal x 1",
@@ -52,32 +47,74 @@
 			"▼Click here for the special site for “Jurassic World/Resurrection Earth” items!"
 		]
 	},
-	"images": [
-		"/images/items/01_6726/01_6726_0.jpg",
-		"/images/items/01_6726/01_6726_1.jpg",
-		"/images/items/01_6726/01_6726_10.jpg",
-		"/images/items/01_6726/01_6726_11.jpg",
-		"/images/items/01_6726/01_6726_2.jpg",
-		"/images/items/01_6726/01_6726_3.jpg",
-		"/images/items/01_6726/01_6726_4.jpg",
-		"/images/items/01_6726/01_6726_5.jpg",
-		"/images/items/01_6726/01_6726_6.jpg",
-		"/images/items/01_6726/01_6726_7.jpg",
-		"/images/items/01_6726/01_6726_8.jpg",
-		"/images/items/01_6726/01_6726_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6726_0.jpg",
+				"path": "/images/items/01_6726/01_6726_0.jpg",
+				"hash": "5015f2b25878680ba75c17b289fef74c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6726_1.jpg",
+				"path": "/images/items/01_6726/01_6726_1.jpg",
+				"hash": "394650cc78c741aa7ceb1d91e398bc27"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6726_10.jpg",
+				"path": "/images/items/01_6726/01_6726_10.jpg",
+				"hash": "ca5670020fda5a197672ae1f73c3c02b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6726_11.jpg",
+				"path": "/images/items/01_6726/01_6726_11.jpg",
+				"hash": "0578adb54bffe33252b8623857a7358c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6726_2.jpg",
+				"path": "/images/items/01_6726/01_6726_2.jpg",
+				"hash": "5cca573c3603c4ab7a03577c148c0b4c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6726_3.jpg",
+				"path": "/images/items/01_6726/01_6726_3.jpg",
+				"hash": "b2d5490a59027183b7718731145aa54d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6726_4.jpg",
+				"path": "/images/items/01_6726/01_6726_4.jpg",
+				"hash": "f63541916ae056aba19b952ff39f32be"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6726_5.jpg",
+				"path": "/images/items/01_6726/01_6726_5.jpg",
+				"hash": "dfa66d964e563e29446d063fce71ee04"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6726_6.jpg",
+				"path": "/images/items/01_6726/01_6726_6.jpg",
+				"hash": "0fc56ceea1899f54dc85e9b8df96b2ea"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6726_7.jpg",
+				"path": "/images/items/01_6726/01_6726_7.jpg",
+				"hash": "9421b91fcde7366dd5150fa980ddf4bb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6726_8.jpg",
+				"path": "/images/items/01_6726/01_6726_8.jpg",
+				"hash": "38f58892778afd6a532ab86a997a5230"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6726_9.jpg",
+				"path": "/images/items/01_6726/01_6726_9.jpg",
+				"hash": "343a61253cc933ad9752a6d5fe24b049"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6726/",
 	"brandIds": [],
-	"seriesIds": [
-		"plannosaurus"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_6724",
-		"01_6725",
-		"01_6722",
-		"01_6723"
-	]
+	"seriesIds": ["plannosaurus"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_6724", "01_6725", "01_6722", "01_6723"]
 }

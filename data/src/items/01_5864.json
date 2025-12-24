@@ -33,22 +33,24 @@
 			"• Skull marks corresponding to \"VF-1 A/S Valkyrie Hikaru Ichijo machine \" and \" VF-1S Valkyrie Roy Focker machine\" are included."
 		]
 	},
-	"images": [
-		"/images/items/01_5864/153_941.jpg",
-		"/images/items/01_5864/155_941.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_941.jpg",
+				"path": "/images/items/01_5864/153_941.jpg",
+				"hash": "f3eeaf7033695e6afe16bf84aa4c31ed"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_941.jpg",
+				"path": "/images/items/01_5864/155_941.jpg",
+				"hash": "b9afb1dc4fbd6f0390e65d011793e56c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5864/",
 	"brandIds": [],
-	"seriesIds": [
-		"macross"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5944",
-		"01_5945",
-		"01_5946",
-		"01_5465"
-	]
+	"seriesIds": ["macross"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5944", "01_5945", "01_5946", "01_5465"]
 }

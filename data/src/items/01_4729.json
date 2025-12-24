@@ -27,23 +27,29 @@
 			"• RX-93-ν2 Hi-νGundam that appears in \"Model Warrior Gunpla Builders Beginning G \". • Original color version controlled by the main character \" Haru \"'s rival \" Koji\"! Molded product x 8, foil seal x 1, Tetron seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_4729/153_5614.jpg",
-		"/images/items/01_4729/155_5614.jpg",
-		"/images/items/01_4729/156_5614.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5614.jpg",
+				"path": "/images/items/01_4729/153_5614.jpg",
+				"hash": "9254d149ed3509d424875cc7d7b20793"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5614.jpg",
+				"path": "/images/items/01_4729/155_5614.jpg",
+				"hash": "a0417794f67c1d616c8c8c587fb50c77"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5614.jpg",
+				"path": "/images/items/01_4729/156_5614.jpg",
+				"hash": "a2c5c79133e020fb25105acf009ec421"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4729/",
-	"brandIds": [
-		"hg"
-	],
+	"brandIds": ["hg"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5951"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"]
 }

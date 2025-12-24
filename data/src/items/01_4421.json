@@ -109,45 +109,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"キャノン砲（360mmロケット砲）",
-			"ミサイル・ベイ",
-			"２連装ビーム・ガン"
-		],
-		"en": [
-			"Cannon (360mm rocket gun)",
-			"missile bay",
-			"double beam gun"
-		]
+		"ja": ["キャノン砲（360mmロケット砲）", "ミサイル・ベイ", "２連装ビーム・ガン"],
+		"en": ["Cannon (360mm rocket gun)", "missile bay", "double beam gun"]
 	},
-	"images": [
-		"/images/items/01_4421/153_5328.jpg",
-		"/images/items/01_4421/155_5328.jpg",
-		"/images/items/01_4421/156_5328.jpg",
-		"/images/items/01_4421/157_5328.jpg",
-		"/images/items/01_4421/158_5328.jpg",
-		"/images/items/01_4421/159_5328.jpg",
-		"/images/items/01_4421/189_5328.jpg",
-		"/images/items/01_4421/190_5328.jpg",
-		"/images/items/01_4421/191_5328.jpg",
-		"/images/items/01_4421/192_5328.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5328.jpg",
+				"path": "/images/items/01_4421/153_5328.jpg",
+				"hash": "a02f470fdbee1365b89f001b22ae70c2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5328.jpg",
+				"path": "/images/items/01_4421/155_5328.jpg",
+				"hash": "8bae31c434cb3482ee259ce1a708646b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5328.jpg",
+				"path": "/images/items/01_4421/156_5328.jpg",
+				"hash": "b3e8af35b02744844866fe4e8c174d0d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5328.jpg",
+				"path": "/images/items/01_4421/157_5328.jpg",
+				"hash": "1f695f0415c83e2e61467df3fb0cfd2b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5328.jpg",
+				"path": "/images/items/01_4421/158_5328.jpg",
+				"hash": "ebccd04a1ca01eb9c6ec0f96c1bb950e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5328.jpg",
+				"path": "/images/items/01_4421/159_5328.jpg",
+				"hash": "f750ad388b4513f073e216fbd4c29d83"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5328.jpg",
+				"path": "/images/items/01_4421/189_5328.jpg",
+				"hash": "bfbb54e04a1a1e1e4d7270be98e21790"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5328.jpg",
+				"path": "/images/items/01_4421/190_5328.jpg",
+				"hash": "e74a7b18bbac3e03d661175c284dc57d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5328.jpg",
+				"path": "/images/items/01_4421/191_5328.jpg",
+				"hash": "3637f613d7607244f8cb98c90fac8add"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5328.jpg",
+				"path": "/images/items/01_4421/192_5328.jpg",
+				"hash": "f94d632c4ac87f13049f7b1377ab2080"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4421/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
+	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5951"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

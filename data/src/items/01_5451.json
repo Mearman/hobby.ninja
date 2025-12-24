@@ -56,30 +56,54 @@
 			"action base 6×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5451/153_6296.jpg",
-		"/images/items/01_5451/155_6296.jpg",
-		"/images/items/01_5451/156_6296.jpg",
-		"/images/items/01_5451/157_6296.jpg",
-		"/images/items/01_5451/158_6296.jpg",
-		"/images/items/01_5451/159_6296.jpg",
-		"/images/items/01_5451/189_6296.jpg",
-		"/images/items/01_5451/190_6296.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6296.jpg",
+				"path": "/images/items/01_5451/153_6296.jpg",
+				"hash": "35132d09a148cc11d49d5bf38658e25e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6296.jpg",
+				"path": "/images/items/01_5451/155_6296.jpg",
+				"hash": "9f76232c1e8eeb7baac61bb2ed127497"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6296.jpg",
+				"path": "/images/items/01_5451/156_6296.jpg",
+				"hash": "50b088548cc76c1289c020bf1181011c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6296.jpg",
+				"path": "/images/items/01_5451/157_6296.jpg",
+				"hash": "2f06285160ecc0fa6e061387950b8f90"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6296.jpg",
+				"path": "/images/items/01_5451/158_6296.jpg",
+				"hash": "b5bc25be15228127ba2664671aa456c5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6296.jpg",
+				"path": "/images/items/01_5451/159_6296.jpg",
+				"hash": "8fa0f5299652a5e7a3a0a1d182aad092"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6296.jpg",
+				"path": "/images/items/01_5451/189_6296.jpg",
+				"hash": "c7da469237d6cfd669d603252a09a647"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6296.jpg",
+				"path": "/images/items/01_5451/190_6296.jpg",
+				"hash": "94099a5b78b587a3b29284851a1cae05"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5451/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"rider"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215369",
-		"01_5276",
-		"01_5175",
-		"01_5068"
-	]
+	"brandIds": ["figurerise-standard"],
+	"seriesIds": ["rider"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000215369", "01_5276", "01_5175", "01_5068"]
 }

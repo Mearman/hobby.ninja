@@ -97,45 +97,59 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"フォーンファルシアバトン",
-			"ファルシアビット",
-			"ファルシアソード"
-		],
-		"en": [
-			"fawn falcia baton",
-			"Falcia bit",
-			"Farcia Sword"
-		]
+		"ja": ["フォーンファルシアバトン", "ファルシアビット", "ファルシアソード"],
+		"en": ["fawn falcia baton", "Falcia bit", "Farcia Sword"]
 	},
-	"images": [
-		"/images/items/01_4150/1000170540_1.jpg",
-		"/images/items/01_4150/1000170540_2.jpg",
-		"/images/items/01_4150/1000170540_3.jpg",
-		"/images/items/01_4150/1000170540_4.jpg",
-		"/images/items/01_4150/1000170540_5.jpg",
-		"/images/items/01_4150/1000170540_6.jpg",
-		"/images/items/01_4150/1000170540_7.jpg",
-		"/images/items/01_4150/1000170540_8.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170540_1.jpg",
+				"path": "/images/items/01_4150/1000170540_1.jpg",
+				"hash": "93aa28513fb73594b86bb8aa9fbf6f09"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170540_2.jpg",
+				"path": "/images/items/01_4150/1000170540_2.jpg",
+				"hash": "bf053e0c546ca2273b31fd79bbe70f7a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170540_3.jpg",
+				"path": "/images/items/01_4150/1000170540_3.jpg",
+				"hash": "8c4249d4b762db08e743dc6c1611b648"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170540_4.jpg",
+				"path": "/images/items/01_4150/1000170540_4.jpg",
+				"hash": "6c3143fd1fb3b5f95641081025c1fedd"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170540_5.jpg",
+				"path": "/images/items/01_4150/1000170540_5.jpg",
+				"hash": "8bda0ea9bc36a4dc2288d02111ed4604"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170540_6.jpg",
+				"path": "/images/items/01_4150/1000170540_6.jpg",
+				"hash": "495246d3e8c14ebef6a8b6ee25357ae2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170540_7.jpg",
+				"path": "/images/items/01_4150/1000170540_7.jpg",
+				"hash": "73b86ffcdd10b5d6477d098df2185b8e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170540_8.jpg",
+				"path": "/images/items/01_4150/1000170540_8.jpg",
+				"hash": "6a226b162d30a392fb9fc835d5aec683"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4150/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181355",
-		"item-1000181354",
-		"item-1000169836",
-		"01_3738"
-	],
+	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181355", "item-1000181354", "item-1000169836", "01_3738"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

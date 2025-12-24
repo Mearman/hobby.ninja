@@ -37,39 +37,57 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"グレネードランチャー×1",
-			"大型シールド×1",
-			"スコープバイザー×1"
-		],
-		"en": [
-			"Grenade launcher x 1",
-			"Large Seal × 1",
-			"Scope visor x1"
-		]
+		"ja": ["グレネードランチャー×1", "大型シールド×1", "スコープバイザー×1"],
+		"en": ["Grenade launcher x 1", "Large Seal × 1", "Scope visor x1"]
 	},
-	"images": [
-		"/images/items/01_6937/01_6937_0.jpg",
-		"/images/items/01_6937/01_6937_1.jpg",
-		"/images/items/01_6937/01_6937_2.jpg",
-		"/images/items/01_6937/01_6937_3.jpg",
-		"/images/items/01_6937/01_6937_4.jpg",
-		"/images/items/01_6937/01_6937_5.jpg",
-		"/images/items/01_6937/01_6937_6.jpg",
-		"/images/items/01_6937/01_6937_7.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6937_0.jpg",
+				"path": "/images/items/01_6937/01_6937_0.jpg",
+				"hash": "61362a827f88cc255fcfab2be10a4bee"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6937_1.jpg",
+				"path": "/images/items/01_6937/01_6937_1.jpg",
+				"hash": "519c4f58176bb06f6c34f93b3f007df6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6937_2.jpg",
+				"path": "/images/items/01_6937/01_6937_2.jpg",
+				"hash": "b4e18054b06b511d7c8208d19a00b130"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6937_3.jpg",
+				"path": "/images/items/01_6937/01_6937_3.jpg",
+				"hash": "2230a34a38c79eb8d94cd35d5f428f01"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6937_4.jpg",
+				"path": "/images/items/01_6937/01_6937_4.jpg",
+				"hash": "d98b5e57fed8c178f0ab1a6f251e76fc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6937_5.jpg",
+				"path": "/images/items/01_6937/01_6937_5.jpg",
+				"hash": "22cf4a6c024dcb35114c5fde09b15783"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6937_6.jpg",
+				"path": "/images/items/01_6937/01_6937_6.jpg",
+				"hash": "4323173eedc0fd62528b1b1ec04677ce"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6937_7.jpg",
+				"path": "/images/items/01_6937/01_6937_7.jpg",
+				"hash": "f6f0ffd5ed784ab64bd6a732a6743a1b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6937/",
-	"brandIds": [
-		"30mm"
-	],
+	"brandIds": ["30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_6930",
-		"01_6774",
-		"01_6775",
-		"01_6766"
-	]
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_6930", "01_6774", "01_6775", "01_6766"]
 }

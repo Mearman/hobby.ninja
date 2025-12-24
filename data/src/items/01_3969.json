@@ -116,41 +116,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"剣王の剣"
-		],
-		"en": [
-			"sword king's sword"
-		]
+		"ja": ["剣王の剣"],
+		"en": ["sword king's sword"]
 	},
-	"images": [
-		"/images/items/01_3969/153_4903.jpg",
-		"/images/items/01_3969/155_4903.jpg",
-		"/images/items/01_3969/156_4903.jpg",
-		"/images/items/01_3969/157_4903.jpg",
-		"/images/items/01_3969/158_4903.jpg",
-		"/images/items/01_3969/159_4903.jpg",
-		"/images/items/01_3969/189_4903.jpg",
-		"/images/items/01_3969/190_4903.jpg",
-		"/images/items/01_3969/191_4903.jpg",
-		"/images/items/01_3969/192_4903.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4903.jpg",
+				"path": "/images/items/01_3969/153_4903.jpg",
+				"hash": "0c5fdab1a78cc5ba6c35cb2a041d6c3a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4903.jpg",
+				"path": "/images/items/01_3969/155_4903.jpg",
+				"hash": "315a0e1e0596802ca05c3c24496561dc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4903.jpg",
+				"path": "/images/items/01_3969/156_4903.jpg",
+				"hash": "e0cf0894e3ba007f12f7b4d9d67143c1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4903.jpg",
+				"path": "/images/items/01_3969/157_4903.jpg",
+				"hash": "ea49a88eaaac8f61c657c845f6337b35"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4903.jpg",
+				"path": "/images/items/01_3969/158_4903.jpg",
+				"hash": "515671ae4eaf99ea68a26159302c7731"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4903.jpg",
+				"path": "/images/items/01_3969/159_4903.jpg",
+				"hash": "9bf033d8949f5d40a6d2643586f3ce56"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4903.jpg",
+				"path": "/images/items/01_3969/189_4903.jpg",
+				"hash": "b829b0cd9c509603e7e8b2d23d922491"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4903.jpg",
+				"path": "/images/items/01_3969/190_4903.jpg",
+				"hash": "bf1bb6c0cf25f597266b652968ba7afd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4903.jpg",
+				"path": "/images/items/01_3969/191_4903.jpg",
+				"hash": "db770ed1c291775b4f0ab89de30eba58"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4903.jpg",
+				"path": "/images/items/01_3969/192_4903.jpg",
+				"hash": "1c1fba0170a027db7efcb021214b3195"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3969/",
-	"brandIds": [
-		"pb_charapla",
-		"hg"
-	],
-	"seriesIds": [
-		"wataru"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000209764",
-		"item-1000195652",
-		"01_5029"
-	],
+	"brandIds": ["pb_charapla", "hg"],
+	"seriesIds": ["wataru"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000209764", "item-1000195652", "01_5029"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

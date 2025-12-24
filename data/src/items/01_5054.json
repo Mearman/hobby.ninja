@@ -35,32 +35,56 @@
 			"• Comes with the plastic model's original MarkingSeal."
 		]
 	},
-	"images": [
-		"/images/items/01_5054/153_5920.jpg",
-		"/images/items/01_5054/155_5920.jpg",
-		"/images/items/01_5054/156_5920.jpg",
-		"/images/items/01_5054/157_5920.jpg",
-		"/images/items/01_5054/158_5920.jpg",
-		"/images/items/01_5054/159_5920.jpg",
-		"/images/items/01_5054/189_5920.jpg",
-		"/images/items/01_5054/190_5920.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5920.jpg",
+				"path": "/images/items/01_5054/153_5920.jpg",
+				"hash": "c3bbde6101e36af901b6833ef07c3996"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5920.jpg",
+				"path": "/images/items/01_5054/155_5920.jpg",
+				"hash": "dae6a3918c13c3b5c6b37bb2e2329da7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5920.jpg",
+				"path": "/images/items/01_5054/156_5920.jpg",
+				"hash": "b06cef2b52effd64e4536d443afeda8a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5920.jpg",
+				"path": "/images/items/01_5054/157_5920.jpg",
+				"hash": "57b37eb2245bfc8f358f9851bea28f39"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5920.jpg",
+				"path": "/images/items/01_5054/158_5920.jpg",
+				"hash": "1d748513602e84df79cfbc3f7a824d74"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5920.jpg",
+				"path": "/images/items/01_5054/159_5920.jpg",
+				"hash": "c57cd72b84e7ac27a5c4c274d7747ef9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5920.jpg",
+				"path": "/images/items/01_5054/189_5920.jpg",
+				"hash": "36a1f5b09df06c151cf2e1d793234789"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5920.jpg",
+				"path": "/images/items/01_5054/190_5920.jpg",
+				"hash": "6a7da8dfa9ecac6d99be9890b908ce3a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5054/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"builddivers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3562",
-		"01_3565",
-		"01_3291",
-		"01_3292"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["builddivers-rerise"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3562", "01_3565", "01_3291", "01_3292"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

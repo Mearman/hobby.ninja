@@ -37,28 +37,46 @@
 			"• Comes with a variety of weapons such as the Zaku Machine Gun, Zaku Bazooka, and Heat Hawk."
 		]
 	},
-	"images": [
-		"/images/items/01_5104/153_5967.jpg",
-		"/images/items/01_5104/155_5967.jpg",
-		"/images/items/01_5104/156_5967.jpg",
-		"/images/items/01_5104/157_5967.jpg",
-		"/images/items/01_5104/158_5967.jpg",
-		"/images/items/01_5104/159_5967.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5967.jpg",
+				"path": "/images/items/01_5104/153_5967.jpg",
+				"hash": "11556af9c8fb6a801ef0e3a37dd1fe83"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5967.jpg",
+				"path": "/images/items/01_5104/155_5967.jpg",
+				"hash": "44098f52e1be1894acf1511e949a35f6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5967.jpg",
+				"path": "/images/items/01_5104/156_5967.jpg",
+				"hash": "76110218a90b3deb6f4dab59a2d4c59d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5967.jpg",
+				"path": "/images/items/01_5104/157_5967.jpg",
+				"hash": "5f0a12d44baa326bac412ddecc60da09"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5967.jpg",
+				"path": "/images/items/01_5104/158_5967.jpg",
+				"hash": "0f471f3fb6894ec03d6efc6206a96a09"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5967.jpg",
+				"path": "/images/items/01_5104/159_5967.jpg",
+				"hash": "f84649ae3d0a207277d950b0530f92ba"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5104/",
-	"brandIds": [
-		"mg"
-	],
+	"brandIds": ["mg"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5469",
-		"01_5593",
-		"item-1000216602"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5994", "01_5469", "01_5593", "item-1000216602"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

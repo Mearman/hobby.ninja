@@ -20,31 +20,29 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"「HG 1/144 フォーエバーガンダム GPB-Dカラー ミシマ・サキ Ver.＋アクションベース3 ブルー」登場！"
-		],
-		"en": [
-			"\"HG 1/144 Forever Gundam GPB-D Color Mishima Saki Ver. + Action Base 3 Blue\" now available!"
-		]
+		"ja": ["「HG 1/144 フォーエバーガンダム GPB-Dカラー ミシマ・サキ Ver.＋アクションベース3 ブルー」登場！"],
+		"en": ["\"HG 1/144 Forever Gundam GPB-D Color Mishima Saki Ver. + Action Base 3 Blue\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4886/153_5764.jpg",
-		"/images/items/01_4886/155_5764.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5764.jpg",
+				"path": "/images/items/01_4886/153_5764.jpg",
+				"hash": "b11781e0c2969421dfcb67a8fb60c90d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5764.jpg",
+				"path": "/images/items/01_4886/155_5764.jpg",
+				"hash": "9ff068177c6f00583af5129b3d407fcb"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4886/",
-	"brandIds": [
-		"hg"
-	],
+	"brandIds": ["hg"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5951"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

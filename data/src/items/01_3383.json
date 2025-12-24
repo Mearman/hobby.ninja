@@ -37,27 +37,31 @@
 			"• A powerful full-open gimmick can be reproduced."
 		]
 	},
-	"images": [
-		"/images/items/01_3383/1000153906_1.jpg",
-		"/images/items/01_3383/1000153906_2.jpg",
-		"/images/items/01_3383/1000153906_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153906_1.jpg",
+				"path": "/images/items/01_3383/1000153906_1.jpg",
+				"hash": "ee27d09f1e324dd64a5fa504a79477a1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153906_2.jpg",
+				"path": "/images/items/01_3383/1000153906_2.jpg",
+				"hash": "7a3d052bdb5cae4df5d22ef9184d0925"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153906_3.jpg",
+				"path": "/images/items/01_3383/1000153906_3.jpg",
+				"hash": "df50d004566d33332085594758938124"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3383/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5590",
-		"item-1000213249",
-		"01_5340",
-		"item-1000183318"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["endlesswaltz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5590", "item-1000213249", "01_5340", "item-1000183318"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

@@ -20,35 +20,39 @@
 	"targetAge": 8,
 	"scale": "1/1",
 	"description": {
-		"ja": [
-			"SD RX-78-2 ガンダム Ver.G30th REAL GRADE 1/1 GUNDAM PROJECT登場！"
-		],
-		"en": [
-			"SD RX-78-2 Gundam Ver.G30th REAL GRADE 1/1 GUNDAM PROJECT is now available!"
-		]
+		"ja": ["SD RX-78-2 ガンダム Ver.G30th REAL GRADE 1/1 GUNDAM PROJECT登場！"],
+		"en": ["SD RX-78-2 Gundam Ver.G30th REAL GRADE 1/1 GUNDAM PROJECT is now available!"]
 	},
-	"images": [
-		"/images/items/01_4951/153_5823.jpg",
-		"/images/items/01_4951/155_5823.jpg",
-		"/images/items/01_4951/156_5823.jpg",
-		"/images/items/01_4951/157_5823.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5823.jpg",
+				"path": "/images/items/01_4951/153_5823.jpg",
+				"hash": "094da614786de439d127003b86a4de6c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5823.jpg",
+				"path": "/images/items/01_4951/155_5823.jpg",
+				"hash": "76bf07d0d86b45ca42824948c0a68878"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5823.jpg",
+				"path": "/images/items/01_4951/156_5823.jpg",
+				"hash": "4f6790bf27c92b13a05da67f3cb80b9b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5823.jpg",
+				"path": "/images/items/01_4951/157_5823.jpg",
+				"hash": "5a3296fd94018768e5a5b6cab59753a5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4951/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3699",
-		"01_4076",
-		"01_429",
-		"01_375"
-	],
+	"brandIds": ["sdgundamseries"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3699", "01_4076", "01_429", "01_375"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

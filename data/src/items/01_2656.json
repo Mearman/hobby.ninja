@@ -34,25 +34,41 @@
 			"●The backpack is removable. Can be exchanged with a backpack from the same series."
 		]
 	},
-	"images": [
-		"/images/items/01_2656/153_3578.jpg",
-		"/images/items/01_2656/155_3578.jpg",
-		"/images/items/01_2656/156_3578.jpg",
-		"/images/items/01_2656/157_3578.jpg",
-		"/images/items/01_2656/158_3578.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_3578.jpg",
+				"path": "/images/items/01_2656/153_3578.jpg",
+				"hash": "f090bbb3faadcf0edfcc71f84afc8069"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_3578.jpg",
+				"path": "/images/items/01_2656/155_3578.jpg",
+				"hash": "6a2f1d9ceb208709d5767f34ed424a05"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_3578.jpg",
+				"path": "/images/items/01_2656/156_3578.jpg",
+				"hash": "7243b57db534df7460e996829c1c3aea"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_3578.jpg",
+				"path": "/images/items/01_2656/157_3578.jpg",
+				"hash": "a864031f2b700e2d33cf8bc1f165e930"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_3578.jpg",
+				"path": "/images/items/01_2656/158_3578.jpg",
+				"hash": "41b21086a26f8e4f83c8f1b9b79f6114"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_2656/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5986",
-		"01_5987",
-		"01_5988"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5986", "01_5987", "01_5988"],
 	"manual": {
 		"id": "1175",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1175/"

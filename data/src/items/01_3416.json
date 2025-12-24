@@ -38,27 +38,31 @@
 			"• The waist parts move in blocks to ensure a wide range of motion!"
 		]
 	},
-	"images": [
-		"/images/items/01_3416/153_4370.jpg",
-		"/images/items/01_3416/155_4370.jpg",
-		"/images/items/01_3416/156_4370.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4370.jpg",
+				"path": "/images/items/01_3416/153_4370.jpg",
+				"hash": "6d3e7fedccaf429a69a5c37350900844"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4370.jpg",
+				"path": "/images/items/01_3416/155_4370.jpg",
+				"hash": "50ba952e58bd29e947e15ebdc185ca0e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4370.jpg",
+				"path": "/images/items/01_3416/156_4370.jpg",
+				"hash": "b857a5ed27304ac2465698501e489e0f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3416/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3305",
-		"item-1000147802",
-		"01_2797",
-		"01_2712"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3305", "item-1000147802", "01_2797", "01_2712"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

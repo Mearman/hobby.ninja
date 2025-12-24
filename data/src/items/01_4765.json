@@ -20,34 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HGBF 1/144 カミキバーニングガンダム［プラフスキーパーティクルクリア］登場！"
-		],
-		"en": [
-			"HGBF 1/144 Kamiki Burning Gundam [Plavsky Particle Clear] now available!"
-		]
+		"ja": ["HGBF 1/144 カミキバーニングガンダム［プラフスキーパーティクルクリア］登場！"],
+		"en": ["HGBF 1/144 Kamiki Burning Gundam [Plavsky Particle Clear] now available!"]
 	},
-	"images": [
-		"/images/items/01_4765/153_5649.jpg",
-		"/images/items/01_4765/155_5649.jpg",
-		"/images/items/01_4765/156_5649.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5649.jpg",
+				"path": "/images/items/01_4765/153_5649.jpg",
+				"hash": "0d5d28a4475e1158d577de591fe7559b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5649.jpg",
+				"path": "/images/items/01_4765/155_5649.jpg",
+				"hash": "77ec1b21479620674287e1641bd47da3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5649.jpg",
+				"path": "/images/items/01_4765/156_5649.jpg",
+				"hash": "1fdeaacbaeed1347222e3019d828cbf9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4765/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["buildfighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5057", "01_1942", "01_1288", "01_1261"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

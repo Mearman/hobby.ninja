@@ -35,24 +35,31 @@
 			"• Comes with weapons such as a beam rifle and a seal with added details unique to RG."
 		]
 	},
-	"images": [
-		"/images/items/01_5840/153_913.jpg",
-		"/images/items/01_5840/155_913.jpg",
-		"/images/items/01_5840/156_913.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_913.jpg",
+				"path": "/images/items/01_5840/153_913.jpg",
+				"hash": "e8b9fb211db002e79f1316afb35bb2bf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_913.jpg",
+				"path": "/images/items/01_5840/155_913.jpg",
+				"hash": "a8b5fe454fd1d4aa87f6b777512f47c9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_913.jpg",
+				"path": "/images/items/01_5840/156_913.jpg",
+				"hash": "b822631359dbdd4c23c82e33a44c5304"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5840/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"g-0083"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5841"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["g-0083"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5841"],
 	"manual": {
 		"id": "664",
 		"url": "https://manual.bandai-hobby.net/menus/detail/664/"

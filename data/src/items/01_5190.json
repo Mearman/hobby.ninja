@@ -35,40 +35,63 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ハンドパーツS（3種×左右）×2",
-			"ハンドパーツM（3種×左右）×2",
-			"ハンドパーツL（3種×左右）×2"
-		],
+		"ja": ["ハンドパーツS（3種×左右）×2", "ハンドパーツM（3種×左右）×2", "ハンドパーツL（3種×左右）×2"],
 		"en": [
 			"Hand parts S (3 types x left and right) x 2",
 			"Hand parts M (3 types x left and right) x 2",
 			"Hand parts L (3 types x left and right) x 2"
 		]
 	},
-	"images": [
-		"/images/items/01_5190/1000209616_1.jpg",
-		"/images/items/01_5190/1000209616_2.jpg",
-		"/images/items/01_5190/1000209616_3.jpg",
-		"/images/items/01_5190/1000209616_4.jpg",
-		"/images/items/01_5190/1000209616_5.jpg",
-		"/images/items/01_5190/1000209616_6.jpg",
-		"/images/items/01_5190/1000209616_7.jpg",
-		"/images/items/01_5190/1000209616_8.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209616_1.jpg",
+				"path": "/images/items/01_5190/1000209616_1.jpg",
+				"hash": "d5118c791c14f000d82a7c079d434796"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209616_2.jpg",
+				"path": "/images/items/01_5190/1000209616_2.jpg",
+				"hash": "9f12c2df5d0f71bd67a2d2a3aac592d2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209616_3.jpg",
+				"path": "/images/items/01_5190/1000209616_3.jpg",
+				"hash": "553f5bfb56ec8044b75b4c55ade430f0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209616_4.jpg",
+				"path": "/images/items/01_5190/1000209616_4.jpg",
+				"hash": "8b3798e8f6ce9b0b1312b97e7fe149ed"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209616_5.jpg",
+				"path": "/images/items/01_5190/1000209616_5.jpg",
+				"hash": "606c1b4f185e21a3ad67fda28a4be8e4"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209616_6.jpg",
+				"path": "/images/items/01_5190/1000209616_6.jpg",
+				"hash": "ec244d1e0c47ac2c5c612e2bd8ef4d3a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209616_7.jpg",
+				"path": "/images/items/01_5190/1000209616_7.jpg",
+				"hash": "2ff7304d9ff3c18177e6fa5305ead0c9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209616_8.jpg",
+				"path": "/images/items/01_5190/1000209616_8.jpg",
+				"hash": "598546414ed91acde07548d4377056ce"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5190/",
-	"brandIds": [
-		"optionpartsset"
-	],
-	"seriesIds": [
-		"builddivers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5189"
-	],
+	"brandIds": ["optionpartsset"],
+	"seriesIds": ["builddivers"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5189"],
 	"manual": {
 		"id": "1620",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1620/"

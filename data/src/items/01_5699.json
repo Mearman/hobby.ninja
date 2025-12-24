@@ -27,28 +27,31 @@
 			"• From ``Mobile Suit Gundam Unicorn'', Jegan's custom machine, Echoes specification, is now available in HGUC. • Reproduce the opening/closing gimmick of the head visor by replacing it. • Comes with a general-purpose bazouga, seal, and rifle, allowing you to recreate scenes from the movie. • Additional armor on the chest is also faithfully reproduced. Molded product x 8, MarkingSeal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_5699/153_764.jpg",
-		"/images/items/01_5699/155_764.jpg",
-		"/images/items/01_5699/156_764.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_764.jpg",
+				"path": "/images/items/01_5699/153_764.jpg",
+				"hash": "3c6e3bae34087baa3d78a446c097b2bd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_764.jpg",
+				"path": "/images/items/01_5699/155_764.jpg",
+				"hash": "34a365850ad4ca512c0e986dca6fd94a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_764.jpg",
+				"path": "/images/items/01_5699/156_764.jpg",
+				"hash": "ab189f192b6dd33d408c6044b845dc1d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5699/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "429",
 		"url": "https://manual.bandai-hobby.net/menus/detail/429/"

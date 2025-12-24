@@ -32,21 +32,19 @@
 			"Lens parts x 2, mount parts x 2"
 		]
 	},
-	"images": [
-		"/images/items/01_3612/153_4567.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4567.jpg",
+				"path": "/images/items/01_3612/153_4567.jpg",
+				"hash": "7c880ca8253b66be7f5ce0da5b43fa4b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3612/",
-	"brandIds": [
-		"parts"
-	],
+	"brandIds": ["parts"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3582",
-		"01_3563",
-		"01_3564",
-		"01_636"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3582", "01_3563", "01_3564", "01_636"]
 }

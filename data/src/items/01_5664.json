@@ -31,29 +31,36 @@
 			"• The engraving is reproduced with mold and seal."
 		]
 	},
-	"images": [
-		"/images/items/01_5664/153_731.jpg",
-		"/images/items/01_5664/155_731.jpg",
-		"/images/items/01_5664/156_731.jpg",
-		"/images/items/01_5664/157_731.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_731.jpg",
+				"path": "/images/items/01_5664/153_731.jpg",
+				"hash": "cd54f0019feafa14532d6b19c4d93fdf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_731.jpg",
+				"path": "/images/items/01_5664/155_731.jpg",
+				"hash": "72e94432fff7a2b37189e06803a0b42a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_731.jpg",
+				"path": "/images/items/01_5664/156_731.jpg",
+				"hash": "b4c03f80bd21a119cbc44e229535799b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_731.jpg",
+				"path": "/images/items/01_5664/157_731.jpg",
+				"hash": "597836c525f9527844ea005c32ca6880"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5664/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "920",
 		"url": "https://manual.bandai-hobby.net/menus/detail/920/"

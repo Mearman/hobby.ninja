@@ -19,42 +19,37 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"『SD ガンダムワールド ヒーローズ』より、レジーナワールドの巫女「クレオパトラキュベレイ」がついに登場！"
-		],
-		"en": [
-			"From \"SD Gundam World Heroes \", Regina World's shrine maiden \" Cleopatra Cybele\" is finally here!"
-		]
+		"ja": ["『SD ガンダムワールド ヒーローズ』より、レジーナワールドの巫女「クレオパトラキュベレイ」がついに登場！"],
+		"en": ["From \"SD Gundam World Heroes \", Regina World's shrine maiden \" Cleopatra Cybele\" is finally here!"]
 	},
 	"accessories": {
-		"ja": [
-			"杖×1",
-			"仮面×１",
-			"エフェクト×１式",
-			"スタンド×１",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Cane x 1",
-			"Mask x1",
-			"Effect x 1 type",
-			"Stand x 1",
-			"Foil Seal×1"
-		]
+		"ja": ["杖×1", "仮面×１", "エフェクト×１式", "スタンド×１", "ホイルシール×1"],
+		"en": ["Cane x 1", "Mask x1", "Effect x 1 type", "Stand x 1", "Foil Seal×1"]
 	},
-	"images": [
-		"/images/items/01_4278/153_5193.jpg",
-		"/images/items/01_4278/155_5193.jpg",
-		"/images/items/01_4278/156_5193.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5193.jpg",
+				"path": "/images/items/01_4278/153_5193.jpg",
+				"hash": "2c024e855eb92b2e2f18e210ef73661b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5193.jpg",
+				"path": "/images/items/01_4278/155_5193.jpg",
+				"hash": "b6638c4eaf282a3bb2bd1a014c491a3e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5193.jpg",
+				"path": "/images/items/01_4278/156_5193.jpg",
+				"hash": "a812451176461063b7ead9f9437fb305"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4278/",
 	"brandIds": [],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": [],
 	"tag": {
 		"ja": "イベント",

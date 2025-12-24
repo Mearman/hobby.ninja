@@ -18,29 +18,27 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"SD ガンダム Gジェネレーション16 ガンキャノン(フル装備型)登場！"
-		],
-		"en": [
-			"SD Gundam G Generation 16 Guncannon (fully equipped) is now available!"
-		]
+		"ja": ["SD ガンダム Gジェネレーション16 ガンキャノン(フル装備型)登場！"],
+		"en": ["SD Gundam G Generation 16 Guncannon (fully equipped) is now available!"]
 	},
-	"images": [
-		"/images/items/01_4675/153_5565.jpg",
-		"/images/items/01_4675/155_5565.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5565.jpg",
+				"path": "/images/items/01_4675/153_5565.jpg",
+				"hash": "8582db1e3ecc04fd86a8af6ab32a7c2e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5565.jpg",
+				"path": "/images/items/01_4675/155_5565.jpg",
+				"hash": "6736dcd4668d19c1fbb4550c6a2995b2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4675/",
-	"brandIds": [
-		"sdgundamseries"
-	],
+	"brandIds": ["sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
 }

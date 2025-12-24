@@ -61,30 +61,46 @@
 			"Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5468/01_5468_0.jpg",
-		"/images/items/01_5468/01_5468_1.jpg",
-		"/images/items/01_5468/01_5468_2.jpg",
-		"/images/items/01_5468/01_5468_3.jpg",
-		"/images/items/01_5468/01_5468_4.jpg",
-		"/images/items/01_5468/01_5468_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5468_0.jpg",
+				"path": "/images/items/01_5468/01_5468_0.jpg",
+				"hash": "8366434686eb2c694d952dc226a551df"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5468_1.jpg",
+				"path": "/images/items/01_5468/01_5468_1.jpg",
+				"hash": "10ea997dcc6711e3161e919e753a036e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5468_2.jpg",
+				"path": "/images/items/01_5468/01_5468_2.jpg",
+				"hash": "4842f2403ca79957d1d9167aa1508a79"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5468_3.jpg",
+				"path": "/images/items/01_5468/01_5468_3.jpg",
+				"hash": "5c84b92ade0738990eb33a0e3df2fbcb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5468_4.jpg",
+				"path": "/images/items/01_5468/01_5468_4.jpg",
+				"hash": "10ef2b9968fb7ef150791eb66eb73c43"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5468_5.jpg",
+				"path": "/images/items/01_5468/01_5468_5.jpg",
+				"hash": "2090b8691b533a3e18ca9b2ce51c2776"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5468/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5990",
-		"01_5989",
-		"01_5972",
-		"01_5973"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"],
 	"manual": {
 		"id": "2939",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2939/"

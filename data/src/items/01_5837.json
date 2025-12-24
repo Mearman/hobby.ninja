@@ -41,27 +41,31 @@
 			"• The wrist comes with an \"emotion manipulator\" and interchangeable unit hand parts."
 		]
 	},
-	"images": [
-		"/images/items/01_5837/153_908.jpg",
-		"/images/items/01_5837/155_908.jpg",
-		"/images/items/01_5837/156_908.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_908.jpg",
+				"path": "/images/items/01_5837/153_908.jpg",
+				"hash": "e83f68264ca9330c2c33fbe706b6abce"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_908.jpg",
+				"path": "/images/items/01_5837/155_908.jpg",
+				"hash": "930e933e9ee7b8090eef0803c62dcf81"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_908.jpg",
+				"path": "/images/items/01_5837/156_908.jpg",
+				"hash": "3a2509bcd768011d96c3b386af0f4cdf"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5837/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000219110",
-		"01_1394",
-		"item-1000097986",
-		"item-1000128400"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000219110", "01_1394", "item-1000097986", "item-1000128400"],
 	"manual": {
 		"id": "850",
 		"url": "https://manual.bandai-hobby.net/menus/detail/850/"

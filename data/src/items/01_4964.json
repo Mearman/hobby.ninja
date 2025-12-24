@@ -20,33 +20,29 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HGUC 1/144 ボール ツインセット ｢セブン-イレブン カラー｣登場！"
-		],
-		"en": [
-			"HGUC 1/144 Ball Twin Set “7-Eleven Color” now available!"
-		]
+		"ja": ["HGUC 1/144 ボール ツインセット ｢セブン-イレブン カラー｣登場！"],
+		"en": ["HGUC 1/144 Ball Twin Set “7-Eleven Color” now available!"]
 	},
-	"images": [
-		"/images/items/01_4964/153_5835.jpg",
-		"/images/items/01_4964/155_5835.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5835.jpg",
+				"path": "/images/items/01_4964/153_5835.jpg",
+				"hash": "114464197ec063c4abd640af8f2ebe72"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5835.jpg",
+				"path": "/images/items/01_4964/155_5835.jpg",
+				"hash": "28099fc8cd03d29740c8f83ba2d293c7"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4964/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

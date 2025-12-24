@@ -35,24 +35,34 @@
 			"Molded product x 9, Color Seal x 1, Marking Seal x 1, Assembly Manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5776/153_838.jpg",
-		"/images/items/01_5776/155_838.jpg",
-		"/images/items/01_5776/156_838.jpg",
-		"/images/items/01_5776/157_838.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_838.jpg",
+				"path": "/images/items/01_5776/153_838.jpg",
+				"hash": "9b2e53a02c2a77d2f54f54410b107905"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_838.jpg",
+				"path": "/images/items/01_5776/155_838.jpg",
+				"hash": "53117158e10f12b6d030ceb2913c3d2c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_838.jpg",
+				"path": "/images/items/01_5776/156_838.jpg",
+				"hash": "c678c7b14bb3b7fe056f75ca86145c5b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_838.jpg",
+				"path": "/images/items/01_5776/157_838.jpg",
+				"hash": "de5917f5838242fb79fa4b44099ddce8"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5776/",
 	"brandIds": [],
-	"seriesIds": [
-		"geass"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000203132",
-		"item-1000187724",
-		"item-1000167903",
-		"01_5809"
-	]
+	"seriesIds": ["geass"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000203132", "item-1000187724", "item-1000167903", "01_5809"]
 }

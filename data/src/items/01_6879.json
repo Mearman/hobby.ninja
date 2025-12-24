@@ -27,23 +27,29 @@
 			"• The keychain part comes with a rubber charm with the name written on it."
 		]
 	},
-	"images": [
-		"/images/items/01_6879/01_6879_0.jpg",
-		"/images/items/01_6879/01_6879_1.jpg",
-		"/images/items/01_6879/01_6879_2.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6879_0.jpg",
+				"path": "/images/items/01_6879/01_6879_0.jpg",
+				"hash": "5ab1285b6deec0b66bb64c4f320bd618"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6879_1.jpg",
+				"path": "/images/items/01_6879/01_6879_1.jpg",
+				"hash": "a523440c23c80215b62152ef48d15f48"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6879_2.jpg",
+				"path": "/images/items/01_6879/01_6879_2.jpg",
+				"hash": "f7ceef34384ab9d0e55fb9963a1dd3b9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6879/",
 	"brandIds": [],
-	"seriesIds": [
-		"gunplakun"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5571",
-		"01_5556",
-		"01_5473",
-		"01_5474"
-	]
+	"seriesIds": ["gunplakun"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5571", "01_5556", "01_5473", "01_5474"]
 }

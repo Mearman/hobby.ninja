@@ -31,21 +31,29 @@
 			"• The 113 series Yokosuka color was used on the Yokosuka Line, Sobu Rapid Line, Sobu Main Line, etc., and the 115 Yokosuka color was used on the Chuo Main Line, Shinonoi Line, etc."
 		]
 	},
-	"images": [
-		"/images/items/01_5825/153_897.jpg",
-		"/images/items/01_5825/155_897.jpg",
-		"/images/items/01_5825/156_897.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_897.jpg",
+				"path": "/images/items/01_5825/153_897.jpg",
+				"hash": "180342567b6c42978e4784d5e85d4c75"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_897.jpg",
+				"path": "/images/items/01_5825/155_897.jpg",
+				"hash": "ead71c9ee0d7cf8c128dee467aa44677"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_897.jpg",
+				"path": "/images/items/01_5825/156_897.jpg",
+				"hash": "604edd1cb9e0eb6dfd4b19fb4164954e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5825/",
-	"brandIds": [
-		"train"
-	],
+	"brandIds": ["train"],
 	"seriesIds": [],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"relatedItemIds": ["01_1276", "01_1277", "01_1278", "01_1280"]
 }

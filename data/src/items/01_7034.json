@@ -32,36 +32,37 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"バックパック×1式",
-			"武装×1式",
-			"エフェクトパーツ×1式",
-			"自立用パーツ",
-			"シール×1"
-		],
-		"en": [
-			"Backpack x 1 set",
-			"Armed x 1 type",
-			"Effect parts x 1",
-			"Freestanding parts",
-			"Seal×1"
-		]
+		"ja": ["バックパック×1式", "武装×1式", "エフェクトパーツ×1式", "自立用パーツ", "シール×1"],
+		"en": ["Backpack x 1 set", "Armed x 1 type", "Effect parts x 1", "Freestanding parts", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_7034/01_7034_0.jpg",
-		"/images/items/01_7034/01_7034_1.jpg",
-		"/images/items/01_7034/01_7034_2.jpg",
-		"/images/items/01_7034/01_7034_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_7034_0.jpg",
+				"path": "/images/items/01_7034/01_7034_0.jpg",
+				"hash": "daf42b248a3205382cb1a45a5977a66e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7034_1.jpg",
+				"path": "/images/items/01_7034/01_7034_1.jpg",
+				"hash": "d71a176703c54a1c77bd5180620aea8a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7034_2.jpg",
+				"path": "/images/items/01_7034/01_7034_2.jpg",
+				"hash": "ce04afec0bb9d3122b10bbdc1cc27995"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7034_3.jpg",
+				"path": "/images/items/01_7034/01_7034_3.jpg",
+				"hash": "254f87a6704ca091e9833d6f966ebc34"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_7034/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["keroro"],
+	"categoryIds": ["character-plastic-model"],
 	"relatedItemIds": []
 }

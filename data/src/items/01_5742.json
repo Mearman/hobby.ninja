@@ -30,30 +30,41 @@
 			"■ Comes with a large rifle, shield, and two beam sabers. Molded part ×9, foil seal ×1, assembly instruction ×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5742/1000092264_1.jpg",
-		"/images/items/01_5742/1000092264_2.jpg",
-		"/images/items/01_5742/1000092264_3.jpg",
-		"/images/items/01_5742/1000092264_4.jpg",
-		"/images/items/01_5742/1000092264_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092264_1.jpg",
+				"path": "/images/items/01_5742/1000092264_1.jpg",
+				"hash": "2224ed3b4e95482f5250713737b018e0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092264_2.jpg",
+				"path": "/images/items/01_5742/1000092264_2.jpg",
+				"hash": "9ef90e828207b78cc46fe11c50566113"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092264_3.jpg",
+				"path": "/images/items/01_5742/1000092264_3.jpg",
+				"hash": "2ade3a8c98c387ef56dddb56f9f201b2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092264_4.jpg",
+				"path": "/images/items/01_5742/1000092264_4.jpg",
+				"hash": "795dcd068a8881545103877b17120f72"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092264_5.jpg",
+				"path": "/images/items/01_5742/1000092264_5.jpg",
+				"hash": "65f3f2bda7621c3d928a9611108c85f3"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5742/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "360",
 		"url": "https://manual.bandai-hobby.net/menus/detail/360/"

@@ -34,21 +34,29 @@
 			"Molded product x 12, water transfer decal x 1, Marking Seal x 1, color seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_5721/153_789.jpg",
-		"/images/items/01_5721/155_789.jpg",
-		"/images/items/01_5721/156_789.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_789.jpg",
+				"path": "/images/items/01_5721/153_789.jpg",
+				"hash": "0c2bc53aeced6a48728499726e767c09"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_789.jpg",
+				"path": "/images/items/01_5721/155_789.jpg",
+				"hash": "4071f8385c6563e52f0749ab57f35e9e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_789.jpg",
+				"path": "/images/items/01_5721/156_789.jpg",
+				"hash": "8794e73eafca5c8d14758c5b41c7934f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5721/",
 	"brandIds": [],
-	"seriesIds": [
-		"onepiece"
-	],
+	"seriesIds": ["onepiece"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5409",
-		"01_5410",
-		"01_4236",
-		"01_4170"
-	]
+	"relatedItemIds": ["01_5409", "01_5410", "01_4236", "01_4170"]
 }

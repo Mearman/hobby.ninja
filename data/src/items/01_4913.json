@@ -40,12 +40,7 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"参式斬艦刀（通常時）×1",
-			"参式斬艦刀（展開時）×1",
-			"ハンドパーツ×1式",
-			"ディスプレイベース×1"
-		],
+		"ja": ["参式斬艦刀（通常時）×1", "参式斬艦刀（展開時）×1", "ハンドパーツ×1式", "ディスプレイベース×1"],
 		"en": [
 			"Sanshiki Zankanto (normal) x 1",
 			"Sanshiki Zankanto (when deployed) x 1",
@@ -53,33 +48,69 @@
 			"Display base x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4913/153_5789.jpg",
-		"/images/items/01_4913/155_5789.jpg",
-		"/images/items/01_4913/156_5789.jpg",
-		"/images/items/01_4913/157_5789.jpg",
-		"/images/items/01_4913/158_5789.jpg",
-		"/images/items/01_4913/159_5789.jpg",
-		"/images/items/01_4913/189_5789.jpg",
-		"/images/items/01_4913/190_5789.jpg",
-		"/images/items/01_4913/191_5789.jpg",
-		"/images/items/01_4913/192_5789.jpg",
-		"/images/items/01_4913/193_5789.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5789.jpg",
+				"path": "/images/items/01_4913/153_5789.jpg",
+				"hash": "5522448869d0929c96937b733300a88f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5789.jpg",
+				"path": "/images/items/01_4913/155_5789.jpg",
+				"hash": "f75fb49c0b35c4df2c5d10696ba5be40"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5789.jpg",
+				"path": "/images/items/01_4913/156_5789.jpg",
+				"hash": "f6e6cfef92ad49469aae0955f0a29d68"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5789.jpg",
+				"path": "/images/items/01_4913/157_5789.jpg",
+				"hash": "526b9ab01037255ef33fff534b9dc72d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5789.jpg",
+				"path": "/images/items/01_4913/158_5789.jpg",
+				"hash": "9c05dd46dafe136aca7b4cf170d176fd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5789.jpg",
+				"path": "/images/items/01_4913/159_5789.jpg",
+				"hash": "6a827ab961b25749816753711249463d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5789.jpg",
+				"path": "/images/items/01_4913/189_5789.jpg",
+				"hash": "851d5ac5d39b6115135d78e5085caa8d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5789.jpg",
+				"path": "/images/items/01_4913/190_5789.jpg",
+				"hash": "d959381301d42531467ebc82dc48b87d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5789.jpg",
+				"path": "/images/items/01_4913/191_5789.jpg",
+				"hash": "ab4e5f9b0c651c8d8a53d787ae393b50"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5789.jpg",
+				"path": "/images/items/01_4913/192_5789.jpg",
+				"hash": "9f1c7be5027edd1714e084453faa1cbe"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_5789.jpg",
+				"path": "/images/items/01_4913/193_5789.jpg",
+				"hash": "b6886c395b6ec871b15b4d5d0544fb38"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4913/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"superrobot_og"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5578",
-		"01_5491",
-		"item-1000214961",
-		"01_5369"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["superrobot_og"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5578", "01_5491", "item-1000214961", "01_5369"]
 }

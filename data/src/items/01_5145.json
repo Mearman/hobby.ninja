@@ -19,28 +19,22 @@
 	},
 	"targetAge": 6,
 	"description": {
-		"ja": [
-			"ポケモンプラモコレクションNo.2 進化シリーズ バクフーン進化セット登場！"
-		],
-		"en": [
-			"Pokemon Plastic Model Collection No.2 Evolution Series Bakufu Evolution Set is now available!"
-		]
+		"ja": ["ポケモンプラモコレクションNo.2 進化シリーズ バクフーン進化セット登場！"],
+		"en": ["Pokemon Plastic Model Collection No.2 Evolution Series Bakufu Evolution Set is now available!"]
 	},
-	"images": [
-		"/images/items/01_5145/153_6004.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6004.jpg",
+				"path": "/images/items/01_5145/153_6004.jpg",
+				"hash": "6e3203949693956a48fa573d7ec94ddd"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5145/",
 	"brandIds": [],
-	"seriesIds": [
-		"pokemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"seriesIds": ["pokemon"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
 }

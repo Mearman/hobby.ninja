@@ -26,22 +26,24 @@
 			"A three-dimensional version of the advanced version of the Gundam Air Master that appeared on the TV \"Mobile New Century Gundam X\". By replacing the head parts and fighter nose, you can recreate the transformation to fighter mode. The shoulder armor can reproduce the wing deployment gimmick. Comes with two buster rifles."
 		]
 	},
-	"images": [
-		"/images/items/01_4715/153_5601.jpg",
-		"/images/items/01_4715/155_5601.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5601.jpg",
+				"path": "/images/items/01_4715/153_5601.jpg",
+				"hash": "8107f656f11eb351b1d1bdcc3a85dc03"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5601.jpg",
+				"path": "/images/items/01_4715/155_5601.jpg",
+				"hash": "e1b97df513a50d7de7b68fa90fca1c10"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4715/",
 	"brandIds": [],
-	"seriesIds": [
-		"x"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000147185",
-		"item-1000147187",
-		"item-1000124674",
-		"01_298"
-	]
+	"seriesIds": ["x"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000147185", "item-1000147187", "item-1000124674", "01_298"]
 }

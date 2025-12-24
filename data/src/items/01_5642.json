@@ -27,28 +27,36 @@
 			"■ MG Strike Freedom GUNDAM is now available in a special version full of luxury options! Reproduce the joints of the aircraft with golden-colored plated parts as set Dragoon effect parts that can reproduce the full burst scene in the play Clear blue ACTION BASE that can only be obtained in the special version Included"
 		]
 	},
-	"images": [
-		"/images/items/01_5642/1000068374_1.jpg",
-		"/images/items/01_5642/1000068374_2.jpg",
-		"/images/items/01_5642/1000068374_3.jpg",
-		"/images/items/01_5642/1000068374_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000068374_1.jpg",
+				"path": "/images/items/01_5642/1000068374_1.jpg",
+				"hash": "9fcde284ee81324b1742f4e59322a891"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000068374_2.jpg",
+				"path": "/images/items/01_5642/1000068374_2.jpg",
+				"hash": "8f9d8200f4906e3c634433d5c4e4ea1c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000068374_3.jpg",
+				"path": "/images/items/01_5642/1000068374_3.jpg",
+				"hash": "dde3892ec3f74bc14785a91750579a1a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000068374_4.jpg",
+				"path": "/images/items/01_5642/1000068374_4.jpg",
+				"hash": "df22c6b27d3a78691e4fd7ccf7b8ec75"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5642/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5421",
-		"item-1000183862",
-		"01_3712",
-		"item-1000155441"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5421", "item-1000183862", "01_3712", "item-1000155441"],
 	"manual": {
 		"id": "543",
 		"url": "https://manual.bandai-hobby.net/menus/detail/543/"

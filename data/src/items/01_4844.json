@@ -26,23 +26,29 @@
 			"\"Lancelot Air Cavalry\" equipped with a float system is now available in the Mechanic Collection. The wings of the float system are movable and can reproduce flight and standby states. The land spinners on the legs are movable flexibly and the wheels also rotate. Slash Harken on both arms can use lead wires to reproduce the ejection scene. Comes with 2 Maser Vibration Swords, Valis, and a Sealdo made of clear material."
 		]
 	},
-	"images": [
-		"/images/items/01_4844/153_5725.jpg",
-		"/images/items/01_4844/155_5725.jpg",
-		"/images/items/01_4844/156_5725.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5725.jpg",
+				"path": "/images/items/01_4844/153_5725.jpg",
+				"hash": "48152a92c1ee50e87cc55fb26a56cbcf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5725.jpg",
+				"path": "/images/items/01_4844/155_5725.jpg",
+				"hash": "106bc4bbf36d501c7dc37d6f19f7ac7b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5725.jpg",
+				"path": "/images/items/01_4844/156_5725.jpg",
+				"hash": "7712e17d690b5cdca4ade2d123787ba4"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4844/",
 	"brandIds": [],
-	"seriesIds": [
-		"geass"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000203132",
-		"item-1000187724",
-		"item-1000167903",
-		"01_5809"
-	]
+	"seriesIds": ["geass"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000203132", "item-1000187724", "item-1000167903", "01_5809"]
 }

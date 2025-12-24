@@ -27,28 +27,31 @@
 			"• The Proto-Fin Funnel-equipped Delta from the PS3 game ``Mobile Suit Gundam UC'' is now available as HG. • Reproduce the transformation into wave rider form with replacement parts. • The two funnels on the back are removable. It is also possible to display the funnel alone using a dedicated pedestal. • High Mega Cannon is included as additional equipment for Seal. • Long Mega Buster can be attached to the back. • Two beam sabers are included. The beam part is reproduced with clear parts. Molded product x 14, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5772/153_834.jpg",
-		"/images/items/01_5772/155_834.jpg",
-		"/images/items/01_5772/156_834.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_834.jpg",
+				"path": "/images/items/01_5772/153_834.jpg",
+				"hash": "ac3ba649e50dbb2395863c70ce91e592"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_834.jpg",
+				"path": "/images/items/01_5772/155_834.jpg",
+				"hash": "dbac22e7d921aecae3dd258cc29c263e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_834.jpg",
+				"path": "/images/items/01_5772/156_834.jpg",
+				"hash": "33a3b36f0bbfbcb30a482c88874ca4f1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5772/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "361",
 		"url": "https://manual.bandai-hobby.net/menus/detail/361/"

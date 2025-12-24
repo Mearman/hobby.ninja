@@ -35,25 +35,31 @@
 			"• In addition to a large rifle and Seal, 2 beam sabers are included."
 		]
 	},
-	"images": [
-		"/images/items/01_5341/153_6193.jpg",
-		"/images/items/01_5341/155_6193.jpg",
-		"/images/items/01_5341/156_6193.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6193.jpg",
+				"path": "/images/items/01_5341/153_6193.jpg",
+				"hash": "0201d30e5db75363da5f8eee11abd847"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6193.jpg",
+				"path": "/images/items/01_5341/155_6193.jpg",
+				"hash": "3e2ae6540c6e043c816f5ed4c56de1db"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6193.jpg",
+				"path": "/images/items/01_5341/156_6193.jpg",
+				"hash": "f6df611694024087026055b7dafddc8b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5341/",
-	"brandIds": [
-		"hg"
-	],
+	"brandIds": ["hg"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5951"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

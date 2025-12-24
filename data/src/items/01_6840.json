@@ -62,34 +62,61 @@
 			"Assault knife for mortar combat x2"
 		]
 	},
-	"images": [
-		"/images/items/01_6840/01_6840_0.jpg",
-		"/images/items/01_6840/01_6840_1.jpg",
-		"/images/items/01_6840/01_6840_2.jpg",
-		"/images/items/01_6840/01_6840_3.jpg",
-		"/images/items/01_6840/01_6840_4.jpg",
-		"/images/items/01_6840/01_6840_5.jpg",
-		"/images/items/01_6840/01_6840_6.jpg",
-		"/images/items/01_6840/01_6840_7.jpg",
-		"/images/items/01_6840/01_6840_8.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6840_0.jpg",
+				"path": "/images/items/01_6840/01_6840_0.jpg",
+				"hash": "50c464bdd9029219dc8b42bf7715d829"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6840_1.jpg",
+				"path": "/images/items/01_6840/01_6840_1.jpg",
+				"hash": "324d0c9dedf7a09e27b4046737b9488f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6840_2.jpg",
+				"path": "/images/items/01_6840/01_6840_2.jpg",
+				"hash": "8566908e06482ab7014c747fcde9e981"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6840_3.jpg",
+				"path": "/images/items/01_6840/01_6840_3.jpg",
+				"hash": "039ce073d1d6838bf7f3f5d63b6f7827"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6840_4.jpg",
+				"path": "/images/items/01_6840/01_6840_4.jpg",
+				"hash": "ac94f6b4007b9baf689593aa90ebd16b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6840_5.jpg",
+				"path": "/images/items/01_6840/01_6840_5.jpg",
+				"hash": "8aec6b4ab126c7cf048b38e0dcb3c7dd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6840_6.jpg",
+				"path": "/images/items/01_6840/01_6840_6.jpg",
+				"hash": "19842d8fec7094ad648c4105b2afc991"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6840_7.jpg",
+				"path": "/images/items/01_6840/01_6840_7.jpg",
+				"hash": "d67c836d2a4247356a6e105ded4c01c7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6840_8.jpg",
+				"path": "/images/items/01_6840/01_6840_8.jpg",
+				"hash": "17790e5f12f8b75559549be37f42f577"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6840/",
-	"brandIds": [
-		"pb_charapla",
-		"hg"
-	],
-	"seriesIds": [
-		"dragonar"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_6841",
-		"item-1000212946",
-		"item-1000212721",
-		"01_3902"
-	],
+	"brandIds": ["pb_charapla", "hg"],
+	"seriesIds": ["dragonar"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_6841", "item-1000212946", "item-1000212721", "01_3902"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

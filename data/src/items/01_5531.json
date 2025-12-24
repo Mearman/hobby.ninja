@@ -35,29 +35,41 @@
 			"■ A wide variety of hand parts and weapons that symbolize Sotheby's are included, and various hand parts and a high range of motion allow you to reproduce poses in the play, such as two-handed poses! * Plated parts may vary in the painting process. Thank you for your understanding."
 		]
 	},
-	"images": [
-		"/images/items/01_5531/01_5531_2.jpg",
-		"/images/items/01_5531/01_5531_3.jpg",
-		"/images/items/01_5531/153_6370.jpg",
-		"/images/items/01_5531/155_6370.jpg",
-		"/images/items/01_5531/158_6370.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5531_2.jpg",
+				"path": "/images/items/01_5531/01_5531_2.jpg",
+				"hash": "ba4b37b01697fb7303c17d6fdbe15528"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5531_3.jpg",
+				"path": "/images/items/01_5531/01_5531_3.jpg",
+				"hash": "4809331bae4f215290665dcb0f4d4986"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_6370.jpg",
+				"path": "/images/items/01_5531/153_6370.jpg",
+				"hash": "bde827eb0c5d17ac3663486703d2870d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6370.jpg",
+				"path": "/images/items/01_5531/155_6370.jpg",
+				"hash": "5ea44fbb2cac0c646136499b671072ba"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6370.jpg",
+				"path": "/images/items/01_5531/158_6370.jpg",
+				"hash": "bd158ab54c9157f0f614de071e5635cd"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5531/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5532",
-		"01_5423",
-		"01_5163",
-		"item-1000190277"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5532", "01_5423", "01_5163", "item-1000190277"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

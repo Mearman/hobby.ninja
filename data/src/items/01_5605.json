@@ -37,22 +37,39 @@
 			"A special poster is included for the first shipment only."
 		]
 	},
-	"images": [
-		"/images/items/01_5605/153_653.jpg",
-		"/images/items/01_5605/155_653.jpg",
-		"/images/items/01_5605/156_653.jpg",
-		"/images/items/01_5605/157_653.jpg",
-		"/images/items/01_5605/158_653.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_653.jpg",
+				"path": "/images/items/01_5605/153_653.jpg",
+				"hash": "2d26a7d9c2423345f2ee113224434ae0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_653.jpg",
+				"path": "/images/items/01_5605/155_653.jpg",
+				"hash": "ffaff925fadf648a56f3fddf90075e3f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_653.jpg",
+				"path": "/images/items/01_5605/156_653.jpg",
+				"hash": "c01648ceb44ff837190d56d8a69794fa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_653.jpg",
+				"path": "/images/items/01_5605/157_653.jpg",
+				"hash": "d717574c442a84c977bc0c026f875d2a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_653.jpg",
+				"path": "/images/items/01_5605/158_653.jpg",
+				"hash": "d158cdc4f870bcc687ae3a752f122c07"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5605/",
-	"brandIds": [
-		"pg"
-	],
-	"seriesIds": [
-		"evangelion"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
+	"brandIds": ["pg"],
+	"seriesIds": ["evangelion"],
+	"categoryIds": ["character-plastic-model"],
 	"relatedItemIds": []
 }

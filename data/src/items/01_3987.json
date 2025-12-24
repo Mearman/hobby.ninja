@@ -26,24 +26,26 @@
 			"A 1/144 Scale plastic model of the collection series of \"Chaos Gundam \" that appears in the currently airing TV anime \" Mobile Suit Gundam SEED DESTINY \". An introductory version that is easy to assemble even for plastic model beginners. The new polycap \" array joint\" expands the range of motion and allows you to recreate cool animation poses. Using 5 colors (white, blue, red, yellow, and black) of Iropla, the set colors of Chaos Gundam are reproduced. Movable parts include the neck, shoulders, groin, and ankles. Comes with foil seal."
 		]
 	},
-	"images": [
-		"/images/items/01_3987/153_491.jpg",
-		"/images/items/01_3987/155_491.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_491.jpg",
+				"path": "/images/items/01_3987/153_491.jpg",
+				"hash": "01afb24073704f2e1c74c861d7d359ac"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_491.jpg",
+				"path": "/images/items/01_3987/155_491.jpg",
+				"hash": "c4e8d5eb9f09c2512b27223e354c8bf3"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3987/",
 	"brandIds": [],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5394",
-		"item-1000214960",
-		"01_5378",
-		"01_5365"
-	],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5394", "item-1000214960", "01_5378", "01_5365"],
 	"manual": {
 		"id": "1145",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1145/"

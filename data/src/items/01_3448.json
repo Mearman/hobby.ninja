@@ -50,30 +50,64 @@
 			"Foil Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_3448/153_4402.jpg",
-		"/images/items/01_3448/155_4402.jpg",
-		"/images/items/01_3448/156_4402.jpg",
-		"/images/items/01_3448/157_4402.jpg",
-		"/images/items/01_3448/158_4402.jpg",
-		"/images/items/01_3448/159_4402.jpg",
-		"/images/items/01_3448/189_4402.jpg",
-		"/images/items/01_3448/190_4402.jpg",
-		"/images/items/01_3448/191_4402.jpg",
-		"/images/items/01_3448/192_4402.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4402.jpg",
+				"path": "/images/items/01_3448/153_4402.jpg",
+				"hash": "4ff84eb5b9b31cdb3fba4850c5ac87a3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4402.jpg",
+				"path": "/images/items/01_3448/155_4402.jpg",
+				"hash": "c5519a18bf2d54e9868af4efa01647fd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4402.jpg",
+				"path": "/images/items/01_3448/156_4402.jpg",
+				"hash": "d6fa745d3db10f9d22d630a26b41a05b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4402.jpg",
+				"path": "/images/items/01_3448/157_4402.jpg",
+				"hash": "5b53fbb1db800e16a43440598ba94c15"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4402.jpg",
+				"path": "/images/items/01_3448/158_4402.jpg",
+				"hash": "413b11e539f81158aaa41f11417ce6b6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4402.jpg",
+				"path": "/images/items/01_3448/159_4402.jpg",
+				"hash": "fd3d563af9fc49ce456292f11153e134"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4402.jpg",
+				"path": "/images/items/01_3448/189_4402.jpg",
+				"hash": "2b77b6b0ebcc9155e58d449bbb6ebd8a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4402.jpg",
+				"path": "/images/items/01_3448/190_4402.jpg",
+				"hash": "f6bb1a6d2552c9757277ed9839c9b19d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4402.jpg",
+				"path": "/images/items/01_3448/191_4402.jpg",
+				"hash": "c334900de7212077be7c2e9fb03b9016"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4402.jpg",
+				"path": "/images/items/01_3448/192_4402.jpg",
+				"hash": "124f5eb23a4ae1ca697a08cd6a3def40"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3448/",
 	"brandIds": [],
-	"seriesIds": [
-		"girlgunlady"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_3559",
-		"01_3558",
-		"01_3449",
-		"01_3450"
-	]
+	"seriesIds": ["girlgunlady"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_3559", "01_3558", "01_3449", "01_3450"]
 }

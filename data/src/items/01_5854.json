@@ -39,30 +39,41 @@
 			"• The boomerang cutter on the head is removable. A total of 10 units are included."
 		]
 	},
-	"images": [
-		"/images/items/01_5854/153_932.jpg",
-		"/images/items/01_5854/155_932.jpg",
-		"/images/items/01_5854/156_932.jpg",
-		"/images/items/01_5854/157_932.jpg",
-		"/images/items/01_5854/01_5854_inst_0.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_932.jpg",
+				"path": "/images/items/01_5854/153_932.jpg",
+				"hash": "305eee75a83712715325063dc6896657"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_932.jpg",
+				"path": "/images/items/01_5854/155_932.jpg",
+				"hash": "286c0ebf6e2964429d00e42d7627045f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_932.jpg",
+				"path": "/images/items/01_5854/156_932.jpg",
+				"hash": "2a5175f7dbbb5bc76e020e5173e7d130"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_932.jpg",
+				"path": "/images/items/01_5854/157_932.jpg",
+				"hash": "f8a6508437e7e83ea5ce21901991a979"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5854_inst_0.jpg",
+				"path": "/images/items/01_5854/01_5854_inst_0.jpg",
+				"hash": "8228d3b22a4af291de72a6ac3a4f2d52"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5854/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "385",
 		"url": "https://manual.bandai-hobby.net/menus/detail/385/"

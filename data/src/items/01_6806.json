@@ -25,20 +25,24 @@
 			"A 1/20 scale plastic model of \"Flapter \" that appears in \" Laputa: Castle in the Sky\". Reprinted with snap fit (some adhesive is used) and Iropla (color-coded molding) specifications. 1/20 Scale Pazu and Theta's eyes are reproduced with water transfer decals."
 		]
 	},
-	"images": [
-		"/images/items/01_6806/01_6806_1.jpg",
-		"/images/items/01_6806/1000072298_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6806_1.jpg",
+				"path": "/images/items/01_6806/01_6806_1.jpg",
+				"hash": "3e1f074b4006244e607a3567101eb486"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000072298_1.jpg",
+				"path": "/images/items/01_6806/1000072298_1.jpg",
+				"hash": "517b3d660509e388a777ad44a78ff989"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6806/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_6774",
-		"01_6776",
-		"01_6777",
-		"01_6778"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_6774", "01_6776", "01_6777", "01_6778"]
 }

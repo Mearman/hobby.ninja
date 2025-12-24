@@ -33,31 +33,37 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ペーパークラフト式ランナースタンド×２"
-		],
-		"en": [
-			"Paper craft type Runner stand x 2"
-		]
+		"ja": ["ペーパークラフト式ランナースタンド×２"],
+		"en": ["Paper craft type Runner stand x 2"]
 	},
-	"images": [
-		"/images/items/01_4931/1000198837_1.jpg",
-		"/images/items/01_4931/1000198837_2.jpg",
-		"/images/items/01_4931/1000198837_3.jpg",
-		"/images/items/01_4931/1000198837_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198837_1.jpg",
+				"path": "/images/items/01_4931/1000198837_1.jpg",
+				"hash": "7fd521426fdac3fae838f18d7f904247"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198837_2.jpg",
+				"path": "/images/items/01_4931/1000198837_2.jpg",
+				"hash": "60a5cce21c3f87f4226c7404a53a9a24"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198837_3.jpg",
+				"path": "/images/items/01_4931/1000198837_3.jpg",
+				"hash": "989ce40874505d24cc8d7c463aa68e9f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198837_4.jpg",
+				"path": "/images/items/01_4931/1000198837_4.jpg",
+				"hash": "eda621af9d92bec507206c8093169e34"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4931/",
-	"brandIds": [
-		"tool"
-	],
+	"brandIds": ["tool"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4930",
-		"01_4305",
-		"01_4101",
-		"01_3784"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4930", "01_4305", "01_4101", "01_3784"]
 }

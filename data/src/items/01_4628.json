@@ -31,25 +31,39 @@
 			"Reproduce the rounded fingers that are a characteristic of the Zeon system. 2 each × handshake (left and right), 2 each × flat hand (left and right), weapon holding Hands (left and right) × 2 each, hand back parts×12"
 		]
 	},
-	"images": [
-		"/images/items/01_4628/1000076406_1.jpg",
-		"/images/items/01_4628/1000076406_2.jpg",
-		"/images/items/01_4628/1000076406_3.jpg",
-		"/images/items/01_4628/1000076406_4.jpg",
-		"/images/items/01_4628/1000076406_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000076406_1.jpg",
+				"path": "/images/items/01_4628/1000076406_1.jpg",
+				"hash": "d725def37333a1b865dfbf36596e94db"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000076406_2.jpg",
+				"path": "/images/items/01_4628/1000076406_2.jpg",
+				"hash": "6d3124b9ef8f54950615ee2a11d8ff71"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000076406_3.jpg",
+				"path": "/images/items/01_4628/1000076406_3.jpg",
+				"hash": "4e52bf7f47e07527e7abd9e755c98031"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000076406_4.jpg",
+				"path": "/images/items/01_4628/1000076406_4.jpg",
+				"hash": "401f519006b619b7f315297ad922186f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000076406_5.jpg",
+				"path": "/images/items/01_4628/1000076406_5.jpg",
+				"hash": "41ff2126f33a5dcf80249c4849385075"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4628/",
-	"brandIds": [
-		"parts"
-	],
+	"brandIds": ["parts"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3582",
-		"01_3563",
-		"01_3564",
-		"01_636"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3582", "01_3563", "01_3564", "01_636"]
 }

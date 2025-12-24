@@ -33,35 +33,37 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ディスプレイベース×1",
-			"水転写式デカール×1"
-		],
-		"en": [
-			"Display base x 1",
-			"Water transfer decal x 1"
-		]
+		"ja": ["ディスプレイベース×1", "水転写式デカール×1"],
+		"en": ["Display base x 1", "Water transfer decal x 1"]
 	},
-	"images": [
-		"/images/items/01_3667/153_4620.jpg",
-		"/images/items/01_3667/155_4620.jpg",
-		"/images/items/01_3667/156_4620.jpg",
-		"/images/items/01_3667/157_4620.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4620.jpg",
+				"path": "/images/items/01_3667/153_4620.jpg",
+				"hash": "b8d556a3d4e59bef0552121e68bf8406"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4620.jpg",
+				"path": "/images/items/01_3667/155_4620.jpg",
+				"hash": "61738f74e6218261b12ae9757647071c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4620.jpg",
+				"path": "/images/items/01_3667/156_4620.jpg",
+				"hash": "a054c1966f611e1037f68528aa52c8a1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4620.jpg",
+				"path": "/images/items/01_3667/157_4620.jpg",
+				"hash": "705cb2ea16d5b4fcdd5320dee4fd5564"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3667/",
-	"brandIds": [
-		"mecha-colle"
-	],
-	"seriesIds": [
-		"yamato"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5498",
-		"01_5500",
-		"01_3650",
-		"01_2854"
-	]
+	"brandIds": ["mecha-colle"],
+	"seriesIds": ["yamato"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5498", "01_5500", "01_3650", "01_2854"]
 }

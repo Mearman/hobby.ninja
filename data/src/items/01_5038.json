@@ -40,40 +40,34 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ビームサーベル×2",
-			"大型ビームサーベル×2",
-			"ディスプレイ台座×1",
-			"キャノン用スタンド×2"
-		],
-		"en": [
-			"Beam saber x2",
-			"Large beam saber x2",
-			"Display pedestal x 1",
-			"Canon stand x 2"
-		]
+		"ja": ["ビームサーベル×2", "大型ビームサーベル×2", "ディスプレイ台座×1", "キャノン用スタンド×2"],
+		"en": ["Beam saber x2", "Large beam saber x2", "Display pedestal x 1", "Canon stand x 2"]
 	},
-	"images": [
-		"/images/items/01_5038/153_5904.jpg",
-		"/images/items/01_5038/155_5904.jpg",
-		"/images/items/01_5038/156_5904.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5904.jpg",
+				"path": "/images/items/01_5038/153_5904.jpg",
+				"hash": "d93c87cbebdf1d6a004405b1c2970331"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5904.jpg",
+				"path": "/images/items/01_5038/155_5904.jpg",
+				"hash": "ac9f200a651d4b5862f05e3023301564"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5904.jpg",
+				"path": "/images/items/01_5038/156_5904.jpg",
+				"hash": "55805726d8728768752376e353c1bebc"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5038/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"narrative"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5039",
-		"01_3460",
-		"01_2666",
-		"01_2604"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["narrative"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5039", "01_3460", "01_2666", "01_2604"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

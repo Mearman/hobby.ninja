@@ -27,28 +27,36 @@
 			"• An unknown enemy called \"UE (Unknown Enemy)\". • The beam cannon on the chest is made of clear parts. • Reproduces the transformation into a dragon type. • The whole body is fully movable to recreate the poses from the movie. Molded product x 4, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_3585/153_4540.jpg",
-		"/images/items/01_3585/155_4540.jpg",
-		"/images/items/01_3585/156_4540.jpg",
-		"/images/items/01_3585/157_4540.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4540.jpg",
+				"path": "/images/items/01_3585/153_4540.jpg",
+				"hash": "03c427908e43b451e63391c79498b793"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4540.jpg",
+				"path": "/images/items/01_3585/155_4540.jpg",
+				"hash": "4b0fdf9f0994119a49ff99d74965a42d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4540.jpg",
+				"path": "/images/items/01_3585/156_4540.jpg",
+				"hash": "6a0e5f43c1d07e7858e15e07d70b5be3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4540.jpg",
+				"path": "/images/items/01_3585/157_4540.jpg",
+				"hash": "7d09ad44098b6491a4234fc7cfbe9fd7"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3585/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "320",
 		"url": "https://manual.bandai-hobby.net/menus/detail/320/"

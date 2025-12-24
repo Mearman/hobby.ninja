@@ -29,20 +29,24 @@
 			"• Three types of roof plates for the intermediate car are included: 2 pantographs, 1 pantograph, and no pantograph."
 		]
 	},
-	"images": [
-		"/images/items/01_5848/153_921.jpg",
-		"/images/items/01_5848/155_921.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_921.jpg",
+				"path": "/images/items/01_5848/153_921.jpg",
+				"hash": "5d9e0912aecd45862c38630f771edfcc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_921.jpg",
+				"path": "/images/items/01_5848/155_921.jpg",
+				"hash": "6e549262599684dcac69a1983e9de38d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5848/",
-	"brandIds": [
-		"train"
-	],
+	"brandIds": ["train"],
 	"seriesIds": [],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"relatedItemIds": ["01_1276", "01_1277", "01_1278", "01_1280"]
 }

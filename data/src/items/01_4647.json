@@ -25,23 +25,29 @@
 			"``Secret Ninja Nomaru'', a character from ``SD Gundam Force Emaki Musha Retsuden Busaka Maika Hen'' serialized in Comic Bonbon since 20045 and brother of Rekka Musha Gundam u, has been commercialized as a BB Senshi plastic model. Gold-plated parts are used for the horn decoration, Komainu parts, and eyepatch. The hand-held weapon, a giant shuriken, can be transformed into a variety of ninja weapons and playable pieces."
 		]
 	},
-	"images": [
-		"/images/items/01_4647/153_553.jpg",
-		"/images/items/01_4647/155_553.jpg",
-		"/images/items/01_4647/156_553.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_553.jpg",
+				"path": "/images/items/01_4647/153_553.jpg",
+				"hash": "cabbfb6b9a73dfb81bd4e9bca0a8ea2b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_553.jpg",
+				"path": "/images/items/01_4647/155_553.jpg",
+				"hash": "3f812e70fb5df126b7731e0dc33da768"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_553.jpg",
+				"path": "/images/items/01_4647/156_553.jpg",
+				"hash": "7b819eef4392174cd6c6039089a16f43"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4647/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

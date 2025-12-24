@@ -42,12 +42,31 @@
 			"*The eggshells used in this product are processed at high temperatures during the manufacturing process, and although the possibility of causing allergies is extremely low, this product has not been medically verified, so if you are concerned about having an egg allergy, please avoid purchasing or assembling this product."
 		]
 	},
-	"images": [
-		"/images/items/01_4249/153_5167.jpg",
-		"/images/items/01_4249/155_5167.jpg",
-		"/images/items/01_4249/156_5167.jpg",
-		"/images/items/01_4249/157_5167.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5167.jpg",
+				"path": "/images/items/01_4249/153_5167.jpg",
+				"hash": "ce7c00a9c3b48cb1acd9cf54c1ba9418"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5167.jpg",
+				"path": "/images/items/01_4249/155_5167.jpg",
+				"hash": "2ccae1c5c6fa90a00599737be53605f3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5167.jpg",
+				"path": "/images/items/01_4249/156_5167.jpg",
+				"hash": "6321b87356c48524db9ac8519a495964"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5167.jpg",
+				"path": "/images/items/01_4249/157_5167.jpg",
+				"hash": "b023cbeec5f20229018ef852a73e7d07"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4249/",
 	"brandIds": ["entry_grade"],
 	"seriesIds": ["gundam"],

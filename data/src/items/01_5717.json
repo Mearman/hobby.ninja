@@ -27,29 +27,36 @@
 			"• From \"Mobile Suit Gundam UC\", Jegan's strongest high-end machine is transformed into HGUC. • Completely new mold realizes a wide range of motion. • Reproduce the frame movement of the seal base. • Comes with a variety of weapons and hand parts. Molded product x 8, foil seal x 1, Tetron seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5717/153_784.jpg",
-		"/images/items/01_5717/155_784.jpg",
-		"/images/items/01_5717/156_784.jpg",
-		"/images/items/01_5717/157_784.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_784.jpg",
+				"path": "/images/items/01_5717/153_784.jpg",
+				"hash": "df75883708dedfaa51920e2136c0350d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_784.jpg",
+				"path": "/images/items/01_5717/155_784.jpg",
+				"hash": "87bda8ed7d5a81884feeea38a06f4f2c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_784.jpg",
+				"path": "/images/items/01_5717/156_784.jpg",
+				"hash": "72919cff8b47984e410f3f8e4ffb7067"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_784.jpg",
+				"path": "/images/items/01_5717/157_784.jpg",
+				"hash": "60d55396ccae62cfee6c803e4b55d67c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5717/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "936",
 		"url": "https://manual.bandai-hobby.net/menus/detail/936/"

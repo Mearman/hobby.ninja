@@ -27,30 +27,41 @@
 			"• Delta Plus from Mobile Suit Gundam Unicorn is now available in HG. • Reproduce the Wave Rider form by replacing it and transforming it. • Variable proportions and posing performance in MS form. • Clear parts are used for the head. Molded product x 8, foil seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_5675/153_741.jpg",
-		"/images/items/01_5675/155_741.jpg",
-		"/images/items/01_5675/156_741.jpg",
-		"/images/items/01_5675/157_741.jpg",
-		"/images/items/01_5675/158_741.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_741.jpg",
+				"path": "/images/items/01_5675/153_741.jpg",
+				"hash": "ffd45622c15b544617d22dec08108412"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_741.jpg",
+				"path": "/images/items/01_5675/155_741.jpg",
+				"hash": "00d714894e5fa669b915885ee2b3eead"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_741.jpg",
+				"path": "/images/items/01_5675/156_741.jpg",
+				"hash": "5c70ec2badda8f959709f47687c3cb0c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_741.jpg",
+				"path": "/images/items/01_5675/157_741.jpg",
+				"hash": "0c6f5fd4a64ca2b4fbd0e01800529a45"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_741.jpg",
+				"path": "/images/items/01_5675/158_741.jpg",
+				"hash": "bf36288cee814b39b65258d6e2444c1d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5675/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "418",
 		"url": "https://manual.bandai-hobby.net/menus/detail/418/"

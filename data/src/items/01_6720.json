@@ -29,26 +29,26 @@
 			"Pre-sale at \"GUNDAM SIDE-F\"."
 		]
 	},
-	"images": [
-		"/images/items/01_6720/01_6720_0.jpg",
-		"/images/items/01_6720/01_6720_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6720_0.jpg",
+				"path": "/images/items/01_6720/01_6720_0.jpg",
+				"hash": "9fa53c6085047bc6b222613a39b17d5f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6720_1.jpg",
+				"path": "/images/items/01_6720/01_6720_1.jpg",
+				"hash": "7027900569e7dc02b3c4f8e99d4863f9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6720/",
-	"brandIds": [
-		"gundam_decal"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6719",
-		"01_4971",
-		"01_3672",
-		"01_3675"
-	],
+	"brandIds": ["gundam_decal"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_6719", "01_4971", "01_3672", "01_3675"],
 	"tag": {
 		"ja": "GUNDAM SIDE-F",
 		"en": "GUNDAM SIDE-F"

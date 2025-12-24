@@ -34,25 +34,39 @@
 			"A display stand is included to display the beam rifle, Sealdo, Keroro, and saucer."
 		]
 	},
-	"images": [
-		"/images/items/01_5614/153_666.jpg",
-		"/images/items/01_5614/155_666.jpg",
-		"/images/items/01_5614/156_666.jpg",
-		"/images/items/01_5614/157_666.jpg",
-		"/images/items/01_5614/158_666.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_666.jpg",
+				"path": "/images/items/01_5614/153_666.jpg",
+				"hash": "80a1dfc3e363aaee8439715f2811bcd2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_666.jpg",
+				"path": "/images/items/01_5614/155_666.jpg",
+				"hash": "4dcbcc1a560fb7c06ffbb05cb1d402c1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_666.jpg",
+				"path": "/images/items/01_5614/156_666.jpg",
+				"hash": "23ec94240a1e4a8daf367ac281236f0e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_666.jpg",
+				"path": "/images/items/01_5614/157_666.jpg",
+				"hash": "4fc9503d7a52ce04240cc63eb2d72494"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_666.jpg",
+				"path": "/images/items/01_5614/158_666.jpg",
+				"hash": "e279b8b825d2f23fe9e212647c5e7fd6"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5614/",
 	"brandIds": [],
-	"seriesIds": [
-		"keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7034",
-		"01_2120",
-		"01_2122",
-		"01_2104"
-	]
+	"seriesIds": ["keroro"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7034", "01_2120", "01_2122", "01_2104"]
 }

@@ -31,21 +31,29 @@
 			"• The first limited edition comes with special parts for ED77 901."
 		]
 	},
-	"images": [
-		"/images/items/01_5805/153_878.jpg",
-		"/images/items/01_5805/155_878.jpg",
-		"/images/items/01_5805/156_878.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_878.jpg",
+				"path": "/images/items/01_5805/153_878.jpg",
+				"hash": "470b798242af06101fc7defcfe724d75"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_878.jpg",
+				"path": "/images/items/01_5805/155_878.jpg",
+				"hash": "731b113b413ec5117b58b753bca9a81c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_878.jpg",
+				"path": "/images/items/01_5805/156_878.jpg",
+				"hash": "8bf2dc0c69e18c4aba5fe5f0128c99db"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5805/",
-	"brandIds": [
-		"train"
-	],
+	"brandIds": ["train"],
 	"seriesIds": [],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"relatedItemIds": ["01_1276", "01_1277", "01_1278", "01_1280"]
 }

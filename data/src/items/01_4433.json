@@ -26,24 +26,26 @@
 			"A 1/100 scale plastic model of Luna Maria's special machine \"Gunner Zaku Warrior \" that appears in \" Mobile Suit Gundam SEED DESTINY\". Various points of the characteristic Gunner Wizard (backpack) are movable, and the colors are reproduced in detail. The cord extending from the Gunner Wizard to the large beam cannon is reproduced with lead wires and mesh pipes. A stopper is attached to prevent the lead wire from coming off even if you recreate the gunfire pose from the movie. Weapons include a beam tomahawk, beam assault rifle, and grenade."
 		]
 	},
-	"images": [
-		"/images/items/01_4433/153_533.jpg",
-		"/images/items/01_4433/155_533.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_533.jpg",
+				"path": "/images/items/01_4433/153_533.jpg",
+				"hash": "2f616ea39e7e432ad375d9817edb0672"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_533.jpg",
+				"path": "/images/items/01_4433/155_533.jpg",
+				"hash": "faf963e6b1d2982205ba06d28e582966"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4433/",
 	"brandIds": [],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5394",
-		"item-1000214960",
-		"01_5378",
-		"01_5365"
-	],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5394", "item-1000214960", "01_5378", "01_5365"],
 	"manual": {
 		"id": "1159",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1159/"

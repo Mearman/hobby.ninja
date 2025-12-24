@@ -78,29 +78,49 @@
 			"Acrylic stand x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_6870/01_6870_0.jpg",
-		"/images/items/01_6870/01_6870_1.jpg",
-		"/images/items/01_6870/01_6870_2.jpg",
-		"/images/items/01_6870/01_6870_3.jpg",
-		"/images/items/01_6870/01_6870_4.jpg",
-		"/images/items/01_6870/01_6870_5.jpg",
-		"/images/items/01_6870/01_6870_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6870_0.jpg",
+				"path": "/images/items/01_6870/01_6870_0.jpg",
+				"hash": "87667c15e7f3c57fa329f543e78e214f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6870_1.jpg",
+				"path": "/images/items/01_6870/01_6870_1.jpg",
+				"hash": "dc5cd09e060a93846b76a51efd25274c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6870_2.jpg",
+				"path": "/images/items/01_6870/01_6870_2.jpg",
+				"hash": "cacaebf445100326a5de184bc27d4c99"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6870_3.jpg",
+				"path": "/images/items/01_6870/01_6870_3.jpg",
+				"hash": "be442f8c90ee1b6dbbfb052dba7a1e95"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6870_4.jpg",
+				"path": "/images/items/01_6870/01_6870_4.jpg",
+				"hash": "dee44c34dbe91338386a76f5ee7921df"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6870_5.jpg",
+				"path": "/images/items/01_6870/01_6870_5.jpg",
+				"hash": "39cff1e026bd0124770037f171bc1757"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6870_6.jpg",
+				"path": "/images/items/01_6870/01_6870_6.jpg",
+				"hash": "634ba508d8c486d9bfcb34698cd5f2ee"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6870/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"macross"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_6868",
-		"01_6869",
-		"01_6759",
-		"01_6760"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["macross"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_6868", "01_6869", "01_6759", "01_6760"]
 }

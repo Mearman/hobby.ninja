@@ -30,28 +30,27 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"水転写式デカール×1"
-		],
-		"en": [
-			"Water transfer decal x 1"
-		]
+		"ja": ["水転写式デカール×1"],
+		"en": ["Water transfer decal x 1"]
 	},
-	"images": [
-		"/images/items/01_4335/153_5245.jpg",
-		"/images/items/01_4335/155_5245.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5245.jpg",
+				"path": "/images/items/01_4335/153_5245.jpg",
+				"hash": "182ba0d0d17c0fa56d8276ea308c606a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5245.jpg",
+				"path": "/images/items/01_4335/155_5245.jpg",
+				"hash": "666605b5a314edf9f165e320b6dc9da4"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4335/",
-	"brandIds": [
-		"gundam_decal"
-	],
-	"seriesIds": [
-		"ggundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4197"
-	]
+	"brandIds": ["gundam_decal"],
+	"seriesIds": ["ggundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4197"]
 }

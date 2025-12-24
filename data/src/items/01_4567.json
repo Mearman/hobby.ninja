@@ -32,28 +32,54 @@
 			"Molded product x 10, Seal x 1, instruction manual included"
 		]
 	},
-	"images": [
-		"/images/items/01_4567/153_5466.jpg",
-		"/images/items/01_4567/155_5466.jpg",
-		"/images/items/01_4567/156_5466.jpg",
-		"/images/items/01_4567/157_5466.jpg",
-		"/images/items/01_4567/158_5466.jpg",
-		"/images/items/01_4567/159_5466.jpg",
-		"/images/items/01_4567/189_5466.jpg",
-		"/images/items/01_4567/190_5466.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5466.jpg",
+				"path": "/images/items/01_4567/153_5466.jpg",
+				"hash": "2608e5c660234576e76cb41ea8977576"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5466.jpg",
+				"path": "/images/items/01_4567/155_5466.jpg",
+				"hash": "2608e5c660234576e76cb41ea8977576"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5466.jpg",
+				"path": "/images/items/01_4567/156_5466.jpg",
+				"hash": "e320f1a2d8fb9aa4d36936b6cf1e2d59"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5466.jpg",
+				"path": "/images/items/01_4567/157_5466.jpg",
+				"hash": "1f03601b1a5691b0aaadb722104837cc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5466.jpg",
+				"path": "/images/items/01_4567/158_5466.jpg",
+				"hash": "312a346babfabc1ea488f4f7ae4cbf31"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5466.jpg",
+				"path": "/images/items/01_4567/159_5466.jpg",
+				"hash": "631b21fafc15fc78043a016191507d88"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5466.jpg",
+				"path": "/images/items/01_4567/189_5466.jpg",
+				"hash": "5f42b050e4850c2ea936d4277a0f898a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5466.jpg",
+				"path": "/images/items/01_4567/190_5466.jpg",
+				"hash": "88fc78a2a4e2a9a5404195b5f2e779f1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4567/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

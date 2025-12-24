@@ -28,22 +28,24 @@
 			"*Product size is approximately 41 x 64mm."
 		]
 	},
-	"images": [
-		"/images/items/01_4798/153_5679.jpg",
-		"/images/items/01_4798/155_5679.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5679.jpg",
+				"path": "/images/items/01_4798/153_5679.jpg",
+				"hash": "a0e74dd886fb22462f0c94ea257e0f41"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5679.jpg",
+				"path": "/images/items/01_4798/155_5679.jpg",
+				"hash": "57535ac579388e363923e4938c88a6ef"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4798/",
 	"brandIds": [],
-	"seriesIds": [
-		"g-witch"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5962",
-		"01_5479",
-		"item-1000216474",
-		"01_5364"
-	]
+	"seriesIds": ["g-witch"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5962", "01_5479", "item-1000216474", "01_5364"]
 }

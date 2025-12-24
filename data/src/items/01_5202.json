@@ -107,44 +107,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ザク・マシンガン",
-			"ヒート・ホーク×2"
-		],
-		"en": [
-			"zaku machine gun",
-			"Heat Hawk x2"
-		]
+		"ja": ["ザク・マシンガン", "ヒート・ホーク×2"],
+		"en": ["zaku machine gun", "Heat Hawk x2"]
 	},
-	"images": [
-		"/images/items/01_5202/153_6059.jpg",
-		"/images/items/01_5202/155_6059.jpg",
-		"/images/items/01_5202/156_6059.jpg",
-		"/images/items/01_5202/157_6059.jpg",
-		"/images/items/01_5202/158_6059.jpg",
-		"/images/items/01_5202/159_6059.jpg",
-		"/images/items/01_5202/189_6059.jpg",
-		"/images/items/01_5202/190_6059.jpg",
-		"/images/items/01_5202/191_6059.jpg",
-		"/images/items/01_5202/192_6059.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6059.jpg",
+				"path": "/images/items/01_5202/153_6059.jpg",
+				"hash": "6f92cbc15354813d5308294545552b6a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6059.jpg",
+				"path": "/images/items/01_5202/155_6059.jpg",
+				"hash": "b1980123c23464fda46096b9b29e2c0c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6059.jpg",
+				"path": "/images/items/01_5202/156_6059.jpg",
+				"hash": "8f531ace56fb0f2bb91e70fee6f36d42"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6059.jpg",
+				"path": "/images/items/01_5202/157_6059.jpg",
+				"hash": "839b19d803f36219174b066fac7133bd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6059.jpg",
+				"path": "/images/items/01_5202/158_6059.jpg",
+				"hash": "4708eaa99de0c8e846bded83d952867b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6059.jpg",
+				"path": "/images/items/01_5202/159_6059.jpg",
+				"hash": "3e2cc1309523ed40b22fc545a106d034"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6059.jpg",
+				"path": "/images/items/01_5202/189_6059.jpg",
+				"hash": "6e9a66311efa4f449dac75301f6fea4c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6059.jpg",
+				"path": "/images/items/01_5202/190_6059.jpg",
+				"hash": "f2f4726ab69dd46578406e960bc7e6be"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_6059.jpg",
+				"path": "/images/items/01_5202/191_6059.jpg",
+				"hash": "b393b46f2f0e54b7c9d9dfcbccacb38e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_6059.jpg",
+				"path": "/images/items/01_5202/192_6059.jpg",
+				"hash": "716b6539e8a351e5c1b9f5c3b3a3193f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5202/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"g-doan"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000220189",
-		"01_5514",
-		"item-1000190747"
-	],
+	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
+	"seriesIds": ["g-doan"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000220189", "01_5514", "item-1000190747"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

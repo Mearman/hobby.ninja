@@ -19,33 +19,29 @@
 	"targetAge": 15,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"MG 1/100 百式 Ver.2.0 [メカニカルクリア]で登場！"
-		],
-		"en": [
-			"MG 1/100 Hyakushiki Ver.2.0 [Mechanical Clear] now available!"
-		]
+		"ja": ["MG 1/100 百式 Ver.2.0 [メカニカルクリア]で登場！"],
+		"en": ["MG 1/100 Hyakushiki Ver.2.0 [Mechanical Clear] now available!"]
 	},
-	"images": [
-		"/images/items/01_4270/153_5186.jpg",
-		"/images/items/01_4270/155_5186.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5186.jpg",
+				"path": "/images/items/01_4270/153_5186.jpg",
+				"hash": "dbd50a528534bc8ba139e1aca06461cb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5186.jpg",
+				"path": "/images/items/01_4270/155_5186.jpg",
+				"hash": "804518e038bb22a773f172611a46d58b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4270/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000145352",
-		"item-1000131596",
-		"item-1000112091",
-		"item-1000112040"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000145352", "item-1000131596", "item-1000112091", "item-1000112040"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

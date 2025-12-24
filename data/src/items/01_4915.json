@@ -69,31 +69,59 @@
 			"Seal×2 types"
 		]
 	},
-	"images": [
-		"/images/items/01_4915/153_5790.jpg",
-		"/images/items/01_4915/155_5790.jpg",
-		"/images/items/01_4915/156_5790.jpg",
-		"/images/items/01_4915/157_5790.jpg",
-		"/images/items/01_4915/158_5790.jpg",
-		"/images/items/01_4915/159_5790.jpg",
-		"/images/items/01_4915/189_5790.jpg",
-		"/images/items/01_4915/190_5790.jpg",
-		"/images/items/01_4915/191_5790.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5790.jpg",
+				"path": "/images/items/01_4915/153_5790.jpg",
+				"hash": "71199cf3a8997d40222f5eebfbf403cd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5790.jpg",
+				"path": "/images/items/01_4915/155_5790.jpg",
+				"hash": "102e6d3bcba7bc9cb8e0241036791d86"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5790.jpg",
+				"path": "/images/items/01_4915/156_5790.jpg",
+				"hash": "1065057706a3306f6636b71a89652270"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5790.jpg",
+				"path": "/images/items/01_4915/157_5790.jpg",
+				"hash": "921daacb68a1e9fa119d1328eb78ced8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5790.jpg",
+				"path": "/images/items/01_4915/158_5790.jpg",
+				"hash": "4527876fc8984ce60d7a617358f7f95c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5790.jpg",
+				"path": "/images/items/01_4915/159_5790.jpg",
+				"hash": "8692ebe26a25327ed37474fb3beb088b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5790.jpg",
+				"path": "/images/items/01_4915/189_5790.jpg",
+				"hash": "a7b1060c0a2f90821c5a38f6a536161a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5790.jpg",
+				"path": "/images/items/01_4915/190_5790.jpg",
+				"hash": "c12e6a204b0229b448416b42e3296a47"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5790.jpg",
+				"path": "/images/items/01_4915/191_5790.jpg",
+				"hash": "cb675b5c55eaec4f7c65f2efa17e8a5b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4915/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"kyoukaisenki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5196",
-		"01_5183",
-		"01_5170",
-		"01_5171"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["kyoukaisenki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
 }

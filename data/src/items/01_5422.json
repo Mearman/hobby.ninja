@@ -36,30 +36,46 @@
 			"■ Comes with a pedestal for the main body display."
 		]
 	},
-	"images": [
-		"/images/items/01_5422/1000214930_1.jpg",
-		"/images/items/01_5422/1000214930_2.jpg",
-		"/images/items/01_5422/1000214930_3.jpg",
-		"/images/items/01_5422/1000214930_4.jpg",
-		"/images/items/01_5422/1000214930_5.jpg",
-		"/images/items/01_5422/1000214930_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000214930_1.jpg",
+				"path": "/images/items/01_5422/1000214930_1.jpg",
+				"hash": "948200a03e8cfcb3998ab2f032d59da9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000214930_2.jpg",
+				"path": "/images/items/01_5422/1000214930_2.jpg",
+				"hash": "24cec9c06ff1d4db86dd1c56b7b93653"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000214930_3.jpg",
+				"path": "/images/items/01_5422/1000214930_3.jpg",
+				"hash": "f2c24ee088203a07412af6dca1e7421e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000214930_4.jpg",
+				"path": "/images/items/01_5422/1000214930_4.jpg",
+				"hash": "6bec390f2c2613bdd5e271828c8b2aba"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000214930_5.jpg",
+				"path": "/images/items/01_5422/1000214930_5.jpg",
+				"hash": "de702cb39d7097fc6911dfdf2c142f8f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000214930_6.jpg",
+				"path": "/images/items/01_5422/1000214930_6.jpg",
+				"hash": "d25f6d2df7003261c980cc6eed94c0f5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5422/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"g-witch"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216474",
-		"item-1000211616",
-		"item-1000203129",
-		"item-1000203899"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["g-witch"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216474", "item-1000211616", "item-1000203129", "item-1000203899"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

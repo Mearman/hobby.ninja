@@ -36,39 +36,59 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ビークル×1式",
-			"シール×1"
-		],
-		"en": [
-			"Vehicle x 1 set",
-			"Seal×1"
-		]
+		"ja": ["ビークル×1式", "シール×1"],
+		"en": ["Vehicle x 1 set", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_5019/1000202945_1.jpg",
-		"/images/items/01_5019/1000202945_2.jpg",
-		"/images/items/01_5019/1000202945_3.jpg",
-		"/images/items/01_5019/1000202945_4.jpg",
-		"/images/items/01_5019/1000202945_5.jpg",
-		"/images/items/01_5019/1000202945_6.jpg",
-		"/images/items/01_5019/1000202945_7.jpg",
-		"/images/items/01_5019/1000202945_8.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202945_1.jpg",
+				"path": "/images/items/01_5019/1000202945_1.jpg",
+				"hash": "1396bae05131a82e4f9becc508f0009c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202945_2.jpg",
+				"path": "/images/items/01_5019/1000202945_2.jpg",
+				"hash": "30a81266dd200daa96d572005f9a4b9a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202945_3.jpg",
+				"path": "/images/items/01_5019/1000202945_3.jpg",
+				"hash": "26c30e3f403634f53ac4c596af27098a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202945_4.jpg",
+				"path": "/images/items/01_5019/1000202945_4.jpg",
+				"hash": "454ca231dc7fd1ec68405f5c60223c63"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202945_5.jpg",
+				"path": "/images/items/01_5019/1000202945_5.jpg",
+				"hash": "b1308ecf9cae8144d66d253e4eb0678b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202945_6.jpg",
+				"path": "/images/items/01_5019/1000202945_6.jpg",
+				"hash": "14e750766bccd30823fe740727214027"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202945_7.jpg",
+				"path": "/images/items/01_5019/1000202945_7.jpg",
+				"hash": "179cec43932617f24f4d2f39e58a3d16"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202945_8.jpg",
+				"path": "/images/items/01_5019/1000202945_8.jpg",
+				"hash": "59bcb59b14baa2f6b959fd4e3ef1774f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5019/",
-	"brandIds": [
-		"30mm"
-	],
+	"brandIds": ["30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3768",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3768/"

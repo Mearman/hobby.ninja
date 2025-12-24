@@ -19,28 +19,22 @@
 	},
 	"targetAge": 6,
 	"description": {
-		"ja": [
-			"ポケモンプラモコレクションNo.10 セレクトシリーズ ライコウ登場！"
-		],
-		"en": [
-			"Pokemon Plastic Model Collection No.10 Select Series Raikou is here!"
-		]
+		"ja": ["ポケモンプラモコレクションNo.10 セレクトシリーズ ライコウ登場！"],
+		"en": ["Pokemon Plastic Model Collection No.10 Select Series Raikou is here!"]
 	},
-	"images": [
-		"/images/items/01_5133/153_5995.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5995.jpg",
+				"path": "/images/items/01_5133/153_5995.jpg",
+				"hash": "da738b86b60d0e8f0a98718f36a35e8e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5133/",
 	"brandIds": [],
-	"seriesIds": [
-		"pokemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"seriesIds": ["pokemon"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
 }

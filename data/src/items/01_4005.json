@@ -37,31 +37,51 @@
 			"• Comes with a blue action base perfect for posing."
 		]
 	},
-	"images": [
-		"/images/items/01_4005/153_4936.jpg",
-		"/images/items/01_4005/155_4936.jpg",
-		"/images/items/01_4005/156_4936.jpg",
-		"/images/items/01_4005/157_4936.jpg",
-		"/images/items/01_4005/158_4936.jpg",
-		"/images/items/01_4005/159_4936.jpg",
-		"/images/items/01_4005/189_4936.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4936.jpg",
+				"path": "/images/items/01_4005/153_4936.jpg",
+				"hash": "44e940d8cc9302fb8a18fc88a52d5fa4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4936.jpg",
+				"path": "/images/items/01_4005/155_4936.jpg",
+				"hash": "036ca9ace953f5e151ec22c4af4612ed"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4936.jpg",
+				"path": "/images/items/01_4005/156_4936.jpg",
+				"hash": "af7963b86cde8f79b377ac3dc0f0c94d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4936.jpg",
+				"path": "/images/items/01_4005/157_4936.jpg",
+				"hash": "83649743b1c53629ff8b1e8f699f3c61"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4936.jpg",
+				"path": "/images/items/01_4005/158_4936.jpg",
+				"hash": "221c0b49b16142921bf7cdea4b5d54f6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4936.jpg",
+				"path": "/images/items/01_4005/159_4936.jpg",
+				"hash": "c112773362706d7828019ca711ca7dd5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4936.jpg",
+				"path": "/images/items/01_4005/189_4936.jpg",
+				"hash": "41fa68273d0e6832b1f324a9c6233e04"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4005/",
-	"brandIds": [
-		"mgka"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5993",
-		"01_4369",
-		"01_2981",
-		"01_3158"
-	],
+	"brandIds": ["mgka"],
+	"seriesIds": ["endlesswaltz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5993", "01_4369", "01_2981", "01_3158"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

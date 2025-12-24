@@ -29,28 +29,36 @@
 			"In addition to the beam assault rifle and hand grenade, two beam tomahawks are included."
 		]
 	},
-	"images": [
-		"/images/items/01_4755/153_563.jpg",
-		"/images/items/01_4755/155_563.jpg",
-		"/images/items/01_4755/156_563.jpg",
-		"/images/items/01_4755/157_563.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_563.jpg",
+				"path": "/images/items/01_4755/153_563.jpg",
+				"hash": "0dd26936a6648857ec5eaa2742eec4c4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_563.jpg",
+				"path": "/images/items/01_4755/155_563.jpg",
+				"hash": "85ee8102d636e88ff0bcbad8a3498095"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_563.jpg",
+				"path": "/images/items/01_4755/156_563.jpg",
+				"hash": "9e77c8f8a8fa935b070088ed2f8ae368"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_563.jpg",
+				"path": "/images/items/01_4755/157_563.jpg",
+				"hash": "7a9cd991e8532d185f03443da4721d78"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4755/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000203308", "01_5097", "01_3739", "item-1000157417"],
 	"manual": {
 		"id": "170",
 		"url": "https://manual.bandai-hobby.net/menus/detail/170/"

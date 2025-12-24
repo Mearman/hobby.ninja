@@ -37,21 +37,54 @@
 			"• Comes with a special pedestal."
 		]
 	},
-	"images": [
-		"/images/items/01_5803/153_873.jpg",
-		"/images/items/01_5803/155_873.jpg",
-		"/images/items/01_5803/156_873.jpg",
-		"/images/items/01_5803/157_873.jpg",
-		"/images/items/01_5803/158_873.jpg",
-		"/images/items/01_5803/159_873.jpg",
-		"/images/items/01_5803/189_873.jpg",
-		"/images/items/01_5803/190_873.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_873.jpg",
+				"path": "/images/items/01_5803/153_873.jpg",
+				"hash": "2617b862009c1e765c3a312def35a83a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_873.jpg",
+				"path": "/images/items/01_5803/155_873.jpg",
+				"hash": "afee8a7d16949b10bd03bb02a164f794"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_873.jpg",
+				"path": "/images/items/01_5803/156_873.jpg",
+				"hash": "097e7cc20ebda5c946ee0a9986dee503"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_873.jpg",
+				"path": "/images/items/01_5803/157_873.jpg",
+				"hash": "51cd8f60b4dd7272171dd4690f8ef984"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_873.jpg",
+				"path": "/images/items/01_5803/158_873.jpg",
+				"hash": "3c3ed1aa91558269354d12d20d4367f4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_873.jpg",
+				"path": "/images/items/01_5803/159_873.jpg",
+				"hash": "c611d9e970f131ff808cc35438a62137"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_873.jpg",
+				"path": "/images/items/01_5803/189_873.jpg",
+				"hash": "f94ca9ba6fa55639adc04f6016d95df6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_873.jpg",
+				"path": "/images/items/01_5803/190_873.jpg",
+				"hash": "acfeec692655a8cdd30f296b60647cd2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5803/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
+	"categoryIds": ["product-list"],
 	"relatedItemIds": []
 }

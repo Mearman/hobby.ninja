@@ -36,28 +36,31 @@
 			"■ Angry or surprised, 6 patterns of facial expression stickers are included. Molded product ×11, foil seal ×1, assembly instruction ×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5914/1000085695_1.jpg",
-		"/images/items/01_5914/1000085695_2.jpg",
-		"/images/items/01_5914/1000085695_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000085695_1.jpg",
+				"path": "/images/items/01_5914/1000085695_1.jpg",
+				"hash": "d3888a0327c6fbacdcc5b93b124908e3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000085695_2.jpg",
+				"path": "/images/items/01_5914/1000085695_2.jpg",
+				"hash": "dd140c3633f5daa259dd45a9c73ce072"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000085695_3.jpg",
+				"path": "/images/items/01_5914/1000085695_3.jpg",
+				"hash": "47bbe616d4615f06e0d9ea687f164666"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5914/",
-	"brandIds": [
-		"hg",
-		"petitgguy"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
+	"brandIds": ["hg", "petitgguy"],
+	"seriesIds": ["buildfighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5057", "01_1942", "01_1288", "01_1261"],
 	"manual": {
 		"id": "10",
 		"url": "https://manual.bandai-hobby.net/menus/detail/10/"

@@ -31,19 +31,19 @@
 			"■ The size is 110% compared to the MS Hand (Federal) 01."
 		]
 	},
-	"images": [
-		"/images/items/01_5823/1000082295_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000082295_1.jpg",
+				"path": "/images/items/01_5823/1000082295_1.jpg",
+				"hash": "45c59f25104d5dde0d25fd97917513bf"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5823/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
-	"relatedItemIds": [
-		"01_3582",
-		"01_3563",
-		"01_3564",
-		"01_636"
-	]
+	"categoryIds": ["product-list"],
+	"relatedItemIds": ["01_3582", "01_3563", "01_3564", "01_636"]
 }

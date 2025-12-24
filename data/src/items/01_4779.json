@@ -20,35 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HGUC 1/144 ユニコーンガンダム 1号機&2号機 Ver.GFT [ストライクス オダイバセット]登場！"
-		],
-		"en": [
-			"HGUC 1/144 Unicorn Gundam Unit 1 & Unit 2 Ver.GFT [Strikes Odaiba Set] now available!"
-		]
+		"ja": ["HGUC 1/144 ユニコーンガンダム 1号機&2号機 Ver.GFT [ストライクス オダイバセット]登場！"],
+		"en": ["HGUC 1/144 Unicorn Gundam Unit 1 & Unit 2 Ver.GFT [Strikes Odaiba Set] now available!"]
 	},
-	"images": [
-		"/images/items/01_4779/153_5661.jpg",
-		"/images/items/01_4779/155_5661.jpg",
-		"/images/items/01_4779/156_5661.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5661.jpg",
+				"path": "/images/items/01_4779/153_5661.jpg",
+				"hash": "caf994d4476470e415bf36e34020d75c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5661.jpg",
+				"path": "/images/items/01_4779/155_5661.jpg",
+				"hash": "e92be1e0287c09c850c3562b80a212ec"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5661.jpg",
+				"path": "/images/items/01_4779/156_5661.jpg",
+				"hash": "88213ae41f47e19055e08bc6ac0ce020"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4779/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

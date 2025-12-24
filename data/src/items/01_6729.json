@@ -20,34 +20,36 @@
 	"targetAge": 15,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"『機動戦士ガンダム　逆襲のシャア』に登場する「MG 1/100 νガンダム Ver.Ka」がメカニカルクリアになって登場！"
-		],
+		"ja": ["『機動戦士ガンダム　逆襲のシャア』に登場する「MG 1/100 νガンダム Ver.Ka」がメカニカルクリアになって登場！"],
 		"en": [
 			"\"MG 1/100 νGundam Ver.Ka \" that appears in \" Mobile Suit Gundam: Char's Counterattack\" is now available in mechanical clear form!"
 		]
 	},
-	"images": [
-		"/images/items/01_6729/01_6729_0.jpg",
-		"/images/items/01_6729/01_6729_1.jpg",
-		"/images/items/01_6729/01_6729_2.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6729_0.jpg",
+				"path": "/images/items/01_6729/01_6729_0.jpg",
+				"hash": "7dcf7f90a4f59ebfc35ab98e29f7b164"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6729_1.jpg",
+				"path": "/images/items/01_6729/01_6729_1.jpg",
+				"hash": "a4f6d179c9107e6258b5355dcfbf8db3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6729_2.jpg",
+				"path": "/images/items/01_6729/01_6729_2.jpg",
+				"hash": "c5e25832c2d29b07523119ca3f00f968"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6729/",
-	"brandIds": [
-		"mgka"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6730",
-		"01_4275",
-		"01_4818",
-		"01_15"
-	],
+	"brandIds": ["mgka"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_6730", "01_4275", "01_4818", "01_15"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

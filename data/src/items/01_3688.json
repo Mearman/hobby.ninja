@@ -57,29 +57,49 @@
 			"MarkingSeal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_3688/153_4642.jpg",
-		"/images/items/01_3688/155_4642.jpg",
-		"/images/items/01_3688/156_4642.jpg",
-		"/images/items/01_3688/157_4642.jpg",
-		"/images/items/01_3688/158_4642.jpg",
-		"/images/items/01_3688/159_4642.jpg",
-		"/images/items/01_3688/189_4642.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4642.jpg",
+				"path": "/images/items/01_3688/153_4642.jpg",
+				"hash": "e51d51d71384f574e3dc9729e9ec5c00"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4642.jpg",
+				"path": "/images/items/01_3688/155_4642.jpg",
+				"hash": "709ab639ada8651d2b2ca677f6fe5fbc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4642.jpg",
+				"path": "/images/items/01_3688/156_4642.jpg",
+				"hash": "2d45b9ee16f94b70859cf308388d5527"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4642.jpg",
+				"path": "/images/items/01_3688/157_4642.jpg",
+				"hash": "116a630456f53b302a5e29277dae7c19"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4642.jpg",
+				"path": "/images/items/01_3688/158_4642.jpg",
+				"hash": "a84003da0f90de94ebee095fd046882e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4642.jpg",
+				"path": "/images/items/01_3688/159_4642.jpg",
+				"hash": "ca266347a6a69e3bbed7de758ac724a1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4642.jpg",
+				"path": "/images/items/01_3688/189_4642.jpg",
+				"hash": "1da95f1289beeb27fce62c3610f9bda8"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3688/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"kyoukaisenki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5196",
-		"01_5183",
-		"01_5170",
-		"01_5171"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["kyoukaisenki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
 }

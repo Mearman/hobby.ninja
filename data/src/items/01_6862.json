@@ -32,36 +32,32 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ディスプレイベース×1",
-			"波エフェクト×1式",
-			"シール×1",
-			"マーキングシール×1"
-		],
-		"en": [
-			"Display base x 1",
-			"Wave effect x 1",
-			"Seal×1",
-			"MarkingSeal×1"
-		]
+		"ja": ["ディスプレイベース×1", "波エフェクト×1式", "シール×1", "マーキングシール×1"],
+		"en": ["Display base x 1", "Wave effect x 1", "Seal×1", "MarkingSeal×1"]
 	},
-	"images": [
-		"/images/items/01_6862/01_6862_0.jpg",
-		"/images/items/01_6862/01_6862_1.jpg",
-		"/images/items/01_6862/01_6862_2.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6862_0.jpg",
+				"path": "/images/items/01_6862/01_6862_0.jpg",
+				"hash": "6ac3fbb125b47c7d5a5aa264ad0c0f50"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6862_1.jpg",
+				"path": "/images/items/01_6862/01_6862_1.jpg",
+				"hash": "3a5a668aec28d664c46880c009cb1855"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6862_2.jpg",
+				"path": "/images/items/01_6862/01_6862_2.jpg",
+				"hash": "c84723142e62060acfd09eb890b390c8"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6862/",
 	"brandIds": [],
-	"seriesIds": [
-		"onepiece"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5409",
-		"01_5410",
-		"01_4236",
-		"01_4170"
-	]
+	"seriesIds": ["onepiece"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5409", "01_5410", "01_4236", "01_4170"]
 }

@@ -29,31 +29,69 @@
 			"Molded product x 8, water transfer decal x 1, foil seal x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5691/153_757.jpg",
-		"/images/items/01_5691/155_757.jpg",
-		"/images/items/01_5691/156_757.jpg",
-		"/images/items/01_5691/157_757.jpg",
-		"/images/items/01_5691/158_757.jpg",
-		"/images/items/01_5691/159_757.jpg",
-		"/images/items/01_5691/189_757.jpg",
-		"/images/items/01_5691/190_757.jpg",
-		"/images/items/01_5691/191_757.jpg",
-		"/images/items/01_5691/192_757.jpg",
-		"/images/items/01_5691/193_757.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_757.jpg",
+				"path": "/images/items/01_5691/153_757.jpg",
+				"hash": "637e23f601ca792bc131e554b99d2c8c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_757.jpg",
+				"path": "/images/items/01_5691/155_757.jpg",
+				"hash": "5fb2a6e17e580c4a5bdf806a10d356de"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_757.jpg",
+				"path": "/images/items/01_5691/156_757.jpg",
+				"hash": "778014b3438e9a66a48533aa6a3a3cd8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_757.jpg",
+				"path": "/images/items/01_5691/157_757.jpg",
+				"hash": "bc8775bfee5d7426f66bb47c96b87e0e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_757.jpg",
+				"path": "/images/items/01_5691/158_757.jpg",
+				"hash": "d4535308a648655ff429c1d3f4de65f3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_757.jpg",
+				"path": "/images/items/01_5691/159_757.jpg",
+				"hash": "7f5400d65234e65ad18c02dc0df2b3e0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_757.jpg",
+				"path": "/images/items/01_5691/189_757.jpg",
+				"hash": "1fba882a7656e0403010bf4b1d4ea028"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_757.jpg",
+				"path": "/images/items/01_5691/190_757.jpg",
+				"hash": "c2487af447f2c0b3787ec1f3bb8f7b02"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_757.jpg",
+				"path": "/images/items/01_5691/191_757.jpg",
+				"hash": "ea4a30fb650239b45cad68c51278287a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_757.jpg",
+				"path": "/images/items/01_5691/192_757.jpg",
+				"hash": "eefc4ce2878917efc4dd80a16031efa4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_757.jpg",
+				"path": "/images/items/01_5691/193_757.jpg",
+				"hash": "68078c595a2e44f64dca21529c5a6703"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5691/",
 	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5992", "01_5473", "01_5474", "01_5475"]
 }

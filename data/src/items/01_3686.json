@@ -38,28 +38,51 @@
 			"• The color coding of the nails on the open hand is reproduced with molded colors!"
 		]
 	},
-	"images": [
-		"/images/items/01_3686/153_4640.jpg",
-		"/images/items/01_3686/155_4640.jpg",
-		"/images/items/01_3686/156_4640.jpg",
-		"/images/items/01_3686/157_4640.jpg",
-		"/images/items/01_3686/158_4640.jpg",
-		"/images/items/01_3686/159_4640.jpg",
-		"/images/items/01_3686/189_4640.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4640.jpg",
+				"path": "/images/items/01_3686/153_4640.jpg",
+				"hash": "1bc9ca8e1f2c86186ef4e11fd622fbfa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4640.jpg",
+				"path": "/images/items/01_3686/155_4640.jpg",
+				"hash": "db88ec7df6bc15cfeed932350d30bab1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4640.jpg",
+				"path": "/images/items/01_3686/156_4640.jpg",
+				"hash": "c0be14e434dcb97c0f1e59e994f11989"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4640.jpg",
+				"path": "/images/items/01_3686/157_4640.jpg",
+				"hash": "647cd84567bf45584d8a8c25c8863f84"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4640.jpg",
+				"path": "/images/items/01_3686/158_4640.jpg",
+				"hash": "c7f84ec40256e7d0d46528074553cf2c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4640.jpg",
+				"path": "/images/items/01_3686/159_4640.jpg",
+				"hash": "7f303d617a11447829eb056ffbc2ddd1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4640.jpg",
+				"path": "/images/items/01_3686/189_4640.jpg",
+				"hash": "47eb33509ba477e050cceeab600a1088"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3686/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"tekketsu"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2711"
-	],
+	"brandIds": ["sdcs"],
+	"seriesIds": ["tekketsu"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2711"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

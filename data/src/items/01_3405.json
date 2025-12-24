@@ -37,38 +37,52 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"如意棒×1",
-			"クリアエフェクトパーツ(仮面/紅蓮爪他)×1式",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Nyoi stick x1",
-			"Clear effect parts (mask/crimson claw, etc.) x 1 set",
-			"Foil Seal×1"
-		]
+		"ja": ["如意棒×1", "クリアエフェクトパーツ(仮面/紅蓮爪他)×1式", "ホイルシール×1"],
+		"en": ["Nyoi stick x1", "Clear effect parts (mask/crimson claw, etc.) x 1 set", "Foil Seal×1"]
 	},
-	"images": [
-		"/images/items/01_3405/153_4359.jpg",
-		"/images/items/01_3405/155_4359.jpg",
-		"/images/items/01_3405/156_4359.jpg",
-		"/images/items/01_3405/157_4359.jpg",
-		"/images/items/01_3405/158_4359.jpg",
-		"/images/items/01_3405/159_4359.jpg",
-		"/images/items/01_3405/189_4359.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4359.jpg",
+				"path": "/images/items/01_3405/153_4359.jpg",
+				"hash": "489f15eea27059aa45ee164ad6050efc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4359.jpg",
+				"path": "/images/items/01_3405/155_4359.jpg",
+				"hash": "29c648c44818bb872396e831d81a2e52"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4359.jpg",
+				"path": "/images/items/01_3405/156_4359.jpg",
+				"hash": "9ad230b03db587de3fe43b1944fb3f0d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4359.jpg",
+				"path": "/images/items/01_3405/157_4359.jpg",
+				"hash": "8093c41889319b18a1ee73fe8077e61d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4359.jpg",
+				"path": "/images/items/01_3405/158_4359.jpg",
+				"hash": "64383a45d5102e3a12518c05940dbfa2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4359.jpg",
+				"path": "/images/items/01_3405/159_4359.jpg",
+				"hash": "62daa86e4aef23d13a32ccc38dccf1b3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4359.jpg",
+				"path": "/images/items/01_3405/189_4359.jpg",
+				"hash": "4be889e93dfa62ea4677dd5740c7b676"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3405/",
 	"brandIds": [],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5470",
-		"01_5471",
-		"01_5472",
-		"01_5347"
-	]
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
 }

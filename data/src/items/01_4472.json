@@ -18,29 +18,27 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"「SD ガンダム Gジェネレーション36 ガンダムヘビーアームズ」が登場！"
-		],
-		"en": [
-			"\"SD Gundam G Generation 36 Gundam Heavy Arms\" is now available!"
-		]
+		"ja": ["「SD ガンダム Gジェネレーション36 ガンダムヘビーアームズ」が登場！"],
+		"en": ["\"SD Gundam G Generation 36 Gundam Heavy Arms\" is now available!"]
 	},
-	"images": [
-		"/images/items/01_4472/153_5377.jpg",
-		"/images/items/01_4472/155_5377.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5377.jpg",
+				"path": "/images/items/01_4472/153_5377.jpg",
+				"hash": "a37e79c6552d1d6568321075a022167f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5377.jpg",
+				"path": "/images/items/01_4472/155_5377.jpg",
+				"hash": "2c18ad6cf5bb1346deb269f6a6ee8057"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4472/",
-	"brandIds": [
-		"sdgundamseries"
-	],
+	"brandIds": ["sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
 }

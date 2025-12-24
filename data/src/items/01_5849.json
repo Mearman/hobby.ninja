@@ -39,23 +39,31 @@
 			"■ Paintable material is used for the internal structure."
 		]
 	},
-	"images": [
-		"/images/items/01_5849/1000083326_1.jpg",
-		"/images/items/01_5849/1000083326_2.jpg",
-		"/images/items/01_5849/1000083326_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000083326_1.jpg",
+				"path": "/images/items/01_5849/1000083326_1.jpg",
+				"hash": "220b43486246cebf24e17c14d4f8da9b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000083326_2.jpg",
+				"path": "/images/items/01_5849/1000083326_2.jpg",
+				"hash": "e8390b06a7a63f7b98a59e5cb8058d9a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000083326_3.jpg",
+				"path": "/images/items/01_5849/1000083326_3.jpg",
+				"hash": "c858d7e18183db6d3b7d8b162cbc1aa6"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5849/",
 	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
+	"seriesIds": ["gundam"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
+	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
 	"manual": {
 		"id": "611",
 		"url": "https://manual.bandai-hobby.net/menus/detail/611/"

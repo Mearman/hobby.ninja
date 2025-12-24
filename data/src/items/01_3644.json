@@ -36,42 +36,74 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ビームライフル×2",
-			"シールド×２"
-		],
-		"en": [
-			"Beam rifle x2",
-			"Seal × 2"
-		]
+		"ja": ["ビームライフル×2", "シールド×２"],
+		"en": ["Beam rifle x2", "Seal × 2"]
 	},
-	"images": [
-		"/images/items/01_3644/153_4599.jpg",
-		"/images/items/01_3644/155_4599.jpg",
-		"/images/items/01_3644/156_4599.jpg",
-		"/images/items/01_3644/157_4599.jpg",
-		"/images/items/01_3644/158_4599.jpg",
-		"/images/items/01_3644/159_4599.jpg",
-		"/images/items/01_3644/189_4599.jpg",
-		"/images/items/01_3644/190_4599.jpg",
-		"/images/items/01_3644/191_4599.jpg",
-		"/images/items/01_3644/192_4599.jpg",
-		"/images/items/01_3644/193_4599.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4599.jpg",
+				"path": "/images/items/01_3644/153_4599.jpg",
+				"hash": "bd90113bf960a745f566668db30eec04"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4599.jpg",
+				"path": "/images/items/01_3644/155_4599.jpg",
+				"hash": "edcc295cb7757b43679053683031c6c7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4599.jpg",
+				"path": "/images/items/01_3644/156_4599.jpg",
+				"hash": "961fdb68e8c8b0647a97446774e04e17"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4599.jpg",
+				"path": "/images/items/01_3644/157_4599.jpg",
+				"hash": "f725e4b34a38cedf80f33666388805cd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4599.jpg",
+				"path": "/images/items/01_3644/158_4599.jpg",
+				"hash": "fac98e7f491a860c93a1b151021445e8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4599.jpg",
+				"path": "/images/items/01_3644/159_4599.jpg",
+				"hash": "a8fc341554d6280c394c37d1149fd336"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4599.jpg",
+				"path": "/images/items/01_3644/189_4599.jpg",
+				"hash": "15cf5ac99cc05018091008e8c72ed13b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4599.jpg",
+				"path": "/images/items/01_3644/190_4599.jpg",
+				"hash": "4ded03ae221f8cd76548aa5b8d5aec28"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4599.jpg",
+				"path": "/images/items/01_3644/191_4599.jpg",
+				"hash": "41398ba4428aa0245859d974dcea1de9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4599.jpg",
+				"path": "/images/items/01_3644/192_4599.jpg",
+				"hash": "2bef1d69dd4bfeeffc15dcc08192af1d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_4599.jpg",
+				"path": "/images/items/01_3644/193_4599.jpg",
+				"hash": "1a35753dd28deda5348506d411ca4b31"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3644/",
-	"brandIds": [
-		"30mm"
-	],
+	"brandIds": ["30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3727",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3727/"

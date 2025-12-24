@@ -27,22 +27,24 @@
 			"• Intermediate cars can be made with two pantographs (Moha E233 type 1000 series), one pantograph (Moha E233 type 1200/1400 series), or no pantograph (Moha E232 type/Saha E233 type)."
 		]
 	},
-	"images": [
-		"/images/items/01_5839/153_912.jpg",
-		"/images/items/01_5839/155_912.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_912.jpg",
+				"path": "/images/items/01_5839/153_912.jpg",
+				"hash": "70c4d7a7d3d070d6b6fa171f4b0fc508"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_912.jpg",
+				"path": "/images/items/01_5839/155_912.jpg",
+				"hash": "68c5e995540e2ced20a5f749ae545d2e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5839/",
-	"brandIds": [
-		"train"
-	],
+	"brandIds": ["train"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_1276", "01_1277", "01_1278", "01_1280"]
 }

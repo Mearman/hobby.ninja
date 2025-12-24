@@ -31,27 +31,31 @@
 			"■ Type 94 bass jabber can be reproduced. Molded × 38, Foil Seal ×1, Dry Decal×1, Tetoron Seal ×1, Assembly Instructions ×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5726/1000092362_1.jpg",
-		"/images/items/01_5726/1000092362_2.jpg",
-		"/images/items/01_5726/1000092362_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092362_1.jpg",
+				"path": "/images/items/01_5726/1000092362_1.jpg",
+				"hash": "d18f087a7da101e9a80391167b2416ea"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092362_2.jpg",
+				"path": "/images/items/01_5726/1000092362_2.jpg",
+				"hash": "f8743b47010dc844e51a2ee3e1effcea"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092362_3.jpg",
+				"path": "/images/items/01_5726/1000092362_3.jpg",
+				"hash": "a324781b40a6c3664217cc40c66d80c9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5726/",
-	"brandIds": [
-		"mgka"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1292",
-		"01_5779",
-		"item-1000095303",
-		"01_5668"
-	],
+	"brandIds": ["mgka"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_1292", "01_5779", "item-1000095303", "01_5668"],
 	"manual": {
 		"id": "592",
 		"url": "https://manual.bandai-hobby.net/menus/detail/592/"

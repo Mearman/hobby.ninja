@@ -26,25 +26,29 @@
 			"• Volume suitable for heavy MS even though it is SD. • Monoeye moves when you move your head from side to side. • Both upper and lower body transform into beast mode. • Comes with a variety of weapon parts such as a large lance and a large bowgun. Molded product x 6, foil seal x 1, Tetron seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_5692/153_758.jpg",
-		"/images/items/01_5692/155_758.jpg",
-		"/images/items/01_5692/156_758.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_758.jpg",
+				"path": "/images/items/01_5692/153_758.jpg",
+				"hash": "d2c14a2e412fc897404740352130b30f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_758.jpg",
+				"path": "/images/items/01_5692/155_758.jpg",
+				"hash": "204150e3480e539dc96b15077cbec0f5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_758.jpg",
+				"path": "/images/items/01_5692/156_758.jpg",
+				"hash": "a8a53c07296ad7d62fcbc48836ca8941"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5692/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3490",
-		"01_2646",
-		"01_1932",
-		"item-1000095978"
-	]
+	"brandIds": ["bb"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3490", "01_2646", "01_1932", "item-1000095978"]
 }

@@ -29,25 +29,36 @@
 			"■ For GUNPLA fans around the world, this is a limited edition item at the official GUNPLA complex \"GUNDAM Base\". The ACTION BASE 7 is now available in a polarized clear color inspired by the MOBILE SUIT GUNDAM SEED FREEDOM only on the GUNDAM base. Comes with a marking sticker of the emblem in the work that can be used as you like. * All products except \"THE GUNDAM BASE LIMITED ACTION BASE 7 [MOBILE SUIT GUNDAM SEED FREEDOM IMAGE CLEAR COLOR]\" are sold separately."
 		]
 	},
-	"images": [
-		"/images/items/01_5220/1000208799_1.jpg",
-		"/images/items/01_5220/1000208799_2.jpg",
-		"/images/items/01_5220/1000208799_3.jpg",
-		"/images/items/01_5220/1000208799_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000208799_1.jpg",
+				"path": "/images/items/01_5220/1000208799_1.jpg",
+				"hash": "3c7fd81d5e9bbb4d730bcc04b048aef8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000208799_2.jpg",
+				"path": "/images/items/01_5220/1000208799_2.jpg",
+				"hash": "6d34cfb024e8f5a1925e79dff9e35226"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000208799_3.jpg",
+				"path": "/images/items/01_5220/1000208799_3.jpg",
+				"hash": "32bf96a53d2d9cb9f7ac06bb48dacd42"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000208799_4.jpg",
+				"path": "/images/items/01_5220/1000208799_4.jpg",
+				"hash": "4d960236d3bc3b9bbf602b1f8207ba05"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5220/",
-	"brandIds": [
-		"actionbase"
-	],
-	"seriesIds": [
-		"seed-freedom"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5220"
-	],
+	"brandIds": ["actionbase"],
+	"seriesIds": ["seed-freedom"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5220"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

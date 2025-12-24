@@ -20,32 +20,24 @@
 	"targetAge": 15,
 	"scale": "1/60",
 	"description": {
-		"ja": [
-			"「PG 1/60 エールストライクガンダム+スカイグラスパー(クリアパールシフトバージョン)」登場！"
-		],
-		"en": [
-			"\"PG 1/60 Ale Strike Gundam + Sky Grasper (Clear Pearl Shift Version)\" is now available!"
-		]
+		"ja": ["「PG 1/60 エールストライクガンダム+スカイグラスパー(クリアパールシフトバージョン)」登場！"],
+		"en": ["\"PG 1/60 Ale Strike Gundam + Sky Grasper (Clear Pearl Shift Version)\" is now available!"]
 	},
-	"images": [
-		"/images/items/01_4873/153_5752.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5752.jpg",
+				"path": "/images/items/01_4873/153_5752.jpg",
+				"hash": "15d98dc8d33f742b39c0238fd5cd07fd"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4873/",
-	"brandIds": [
-		"pg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2583",
-		"item-1000140845",
-		"01_1913",
-		"01_4669"
-	],
+	"brandIds": ["pg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2583", "item-1000140845", "01_1913", "01_4669"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

@@ -54,32 +54,64 @@
 			"MarkingSeal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_4186/153_5107.jpg",
-		"/images/items/01_4186/155_5107.jpg",
-		"/images/items/01_4186/156_5107.jpg",
-		"/images/items/01_4186/157_5107.jpg",
-		"/images/items/01_4186/158_5107.jpg",
-		"/images/items/01_4186/159_5107.jpg",
-		"/images/items/01_4186/189_5107.jpg",
-		"/images/items/01_4186/190_5107.jpg",
-		"/images/items/01_4186/191_5107.jpg",
-		"/images/items/01_4186/192_5107.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5107.jpg",
+				"path": "/images/items/01_4186/153_5107.jpg",
+				"hash": "8809a3bb33cb67b5583e747e54ba41bb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5107.jpg",
+				"path": "/images/items/01_4186/155_5107.jpg",
+				"hash": "ee25afe52638cd5eeb18b0129bf786d8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5107.jpg",
+				"path": "/images/items/01_4186/156_5107.jpg",
+				"hash": "0b0e88b58988e761f21192076d609f9d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5107.jpg",
+				"path": "/images/items/01_4186/157_5107.jpg",
+				"hash": "92bc2fee1757e3c8ba7426db9acbc3d6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5107.jpg",
+				"path": "/images/items/01_4186/158_5107.jpg",
+				"hash": "3293d9aa97313603b0dab0719c008b8e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5107.jpg",
+				"path": "/images/items/01_4186/159_5107.jpg",
+				"hash": "1709d95bc81bd967405c71550372ed3c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5107.jpg",
+				"path": "/images/items/01_4186/189_5107.jpg",
+				"hash": "70e37817dbc03741961041f62681bc7f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5107.jpg",
+				"path": "/images/items/01_4186/190_5107.jpg",
+				"hash": "fcb498ec492d883b24e28044a84dc026"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5107.jpg",
+				"path": "/images/items/01_4186/191_5107.jpg",
+				"hash": "ad5710c436e5bce2c260549e954f2e0b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5107.jpg",
+				"path": "/images/items/01_4186/192_5107.jpg",
+				"hash": "a155400bfb2ca7974dc4f146b4ac7486"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4186/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"ultraman"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5371",
-		"01_5198",
-		"01_5096",
-		"01_5046"
-	]
+	"brandIds": ["figurerise-standard"],
+	"seriesIds": ["ultraman"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5371", "01_5198", "01_5096", "01_5046"]
 }

@@ -19,28 +19,22 @@
 	},
 	"targetAge": 6,
 	"description": {
-		"ja": [
-			"ポケモンプラモコレクションNo.8 進化シリーズ ドダイトス進化セット登場！"
-		],
-		"en": [
-			"■ Pokémon Model Kit TORTERRA EVOLUTION SET Appeared!"
-		]
+		"ja": ["ポケモンプラモコレクションNo.8 進化シリーズ ドダイトス進化セット登場！"],
+		"en": ["■ Pokémon Model Kit TORTERRA EVOLUTION SET Appeared!"]
 	},
-	"images": [
-		"/images/items/01_5131/01_5131_0.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5131_0.jpg",
+				"path": "/images/items/01_5131/01_5131_0.jpg",
+				"hash": "b546fe996c9a20d6e1b11355df39fa1b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5131/",
 	"brandIds": [],
-	"seriesIds": [
-		"pokemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"seriesIds": ["pokemon"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
 }

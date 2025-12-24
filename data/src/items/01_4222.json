@@ -41,38 +41,58 @@
 			"大型プロペラントタンク×2",
 			"ジョイントパーツ×1"
 		],
-		"en": [
-			"Base block x 1",
-			"Head block x 1",
-			"Large booster x 2",
-			"Large propellant tank x 2",
-			"Joint parts x 1"
-		]
+		"en": ["Base block x 1", "Head block x 1", "Large booster x 2", "Large propellant tank x 2", "Joint parts x 1"]
 	},
-	"images": [
-		"/images/items/01_4222/1000180171_1.jpg",
-		"/images/items/01_4222/1000180171_2.jpg",
-		"/images/items/01_4222/1000180171_3.jpg",
-		"/images/items/01_4222/1000180171_4.jpg",
-		"/images/items/01_4222/1000180171_5.jpg",
-		"/images/items/01_4222/1000180171_6.jpg",
-		"/images/items/01_4222/1000180171_7.jpg",
-		"/images/items/01_4222/1000180171_8.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180171_1.jpg",
+				"path": "/images/items/01_4222/1000180171_1.jpg",
+				"hash": "3190c1fe559cb70eecabb79e29af2a57"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180171_2.jpg",
+				"path": "/images/items/01_4222/1000180171_2.jpg",
+				"hash": "875ff086de8e39f6bc4a3a41504d6b90"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180171_3.jpg",
+				"path": "/images/items/01_4222/1000180171_3.jpg",
+				"hash": "66736acba21edf74b91ef5f51cfa1e46"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180171_4.jpg",
+				"path": "/images/items/01_4222/1000180171_4.jpg",
+				"hash": "0573c23ddadf02430f4f039a632ddbe7"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180171_5.jpg",
+				"path": "/images/items/01_4222/1000180171_5.jpg",
+				"hash": "eb07c9bc06a18b71e3698743c2a86373"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180171_6.jpg",
+				"path": "/images/items/01_4222/1000180171_6.jpg",
+				"hash": "48735b8a99a983afaaf2f9abd83fb0fc"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180171_7.jpg",
+				"path": "/images/items/01_4222/1000180171_7.jpg",
+				"hash": "52ebe294c5306785155f98a4c2e19d98"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180171_8.jpg",
+				"path": "/images/items/01_4222/1000180171_8.jpg",
+				"hash": "f26522375bc7e9a5ca5443a13a8f4d46"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4222/",
-	"brandIds": [
-		"30mm"
-	],
+	"brandIds": ["30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3748",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3748/"

@@ -20,34 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/48",
 	"description": {
-		"ja": [
-			"1/48 メガサイズモデル ガンダム Ver.GFT　登場！"
-		],
-		"en": [
-			"1/48 Mega Size Model Gundam Ver.GFT is now available!"
-		]
+		"ja": ["1/48 メガサイズモデル ガンダム Ver.GFT　登場！"],
+		"en": ["1/48 Mega Size Model Gundam Ver.GFT is now available!"]
 	},
-	"images": [
-		"/images/items/01_4782/153_5664.jpg",
-		"/images/items/01_4782/155_5664.jpg",
-		"/images/items/01_4782/156_5664.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5664.jpg",
+				"path": "/images/items/01_4782/153_5664.jpg",
+				"hash": "a32a779886b51c48c4afe831813c1d94"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5664.jpg",
+				"path": "/images/items/01_4782/155_5664.jpg",
+				"hash": "0ba21cc503b7e71498fd05f4b1e85444"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5664.jpg",
+				"path": "/images/items/01_4782/156_5664.jpg",
+				"hash": "dc3b576660e10bc288ed0eed7a80ce46"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4782/",
-	"brandIds": [
-		"megasize"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1925",
-		"01_4961",
-		"01_4784",
-		"01_4569"
-	],
+	"brandIds": ["megasize"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_1925", "01_4961", "01_4784", "01_4569"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

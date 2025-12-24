@@ -38,25 +38,31 @@
 			"*There is no scheduled sale at THE GUNDAM BASE stores."
 		]
 	},
-	"images": [
-		"/images/items/01_4203/153_5123.jpg",
-		"/images/items/01_4203/155_5123.jpg",
-		"/images/items/01_4203/156_5123.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5123.jpg",
+				"path": "/images/items/01_4203/153_5123.jpg",
+				"hash": "b365e86d6a16a3845a3b4c53ede92b0c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5123.jpg",
+				"path": "/images/items/01_4203/155_5123.jpg",
+				"hash": "2984e02c5ee9ccadc53a95a491cb2f15"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5123.jpg",
+				"path": "/images/items/01_4203/156_5123.jpg",
+				"hash": "566b23dee3619323bfaba84139d222d2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4203/",
 	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5992", "01_5473", "01_5474", "01_5475"],
 	"tag": {
 		"ja": "GUNDAM SIDE-F",
 		"en": "GUNDAM SIDE-F"

@@ -37,28 +37,46 @@
 			"• Monoeye can be moved by removing parts."
 		]
 	},
-	"images": [
-		"/images/items/01_5041/153_5907.jpg",
-		"/images/items/01_5041/155_5907.jpg",
-		"/images/items/01_5041/156_5907.jpg",
-		"/images/items/01_5041/157_5907.jpg",
-		"/images/items/01_5041/158_5907.jpg",
-		"/images/items/01_5041/159_5907.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5907.jpg",
+				"path": "/images/items/01_5041/153_5907.jpg",
+				"hash": "807c26ad002b6832a1a74505aec13929"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5907.jpg",
+				"path": "/images/items/01_5041/155_5907.jpg",
+				"hash": "0b8753565dafe52d1129bad79f6902b9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5907.jpg",
+				"path": "/images/items/01_5041/156_5907.jpg",
+				"hash": "c01084ff3380eb7c12a0e10e9ea998e7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5907.jpg",
+				"path": "/images/items/01_5041/157_5907.jpg",
+				"hash": "d6192b1e4b12d70128ec9958ee36d195"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5907.jpg",
+				"path": "/images/items/01_5041/158_5907.jpg",
+				"hash": "b4bc57168bbd8c08393d7675005a8369"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5907.jpg",
+				"path": "/images/items/01_5041/159_5907.jpg",
+				"hash": "a3684ba5b46397ff7a9c372110f4260e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5041/",
-	"brandIds": [
-		"hg"
-	],
+	"brandIds": ["hg"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5951"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
 	"tag": {
 		"ja": "GUNDAM SIDE-F",
 		"en": "GUNDAM SIDE-F"

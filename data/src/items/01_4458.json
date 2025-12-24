@@ -26,24 +26,24 @@
 			"A special version of the 1/144 Scale Model that reproduces the Gundam Death Scythe Hell Custom that appears in \"Mobile Suit Gundam W Endless Waltz\" with full body clear parts and plated parts. In addition to using ball joints for the neck, wrists, hips, and ankles, newly designed joint parts are used for each other joint to achieve smooth and wide range of movement. In order to reproduce the pose of swinging the beam scissors wide, torso parts with the shoulders tilted and hips twisted are included as fighting action parts. The shoulder armor can be attached to the back, and the blade can be moved independently. The backpack located in the center of the active cloakroom can be swung up and down. The opening and closing of the active cloak is reproduced with a replacement type. A new interpretation of the setting in the play, with beautiful curves and elaborate molds."
 		]
 	},
-	"images": [
-		"/images/items/01_4458/153_5363.jpg",
-		"/images/items/01_4458/155_5363.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5363.jpg",
+				"path": "/images/items/01_4458/153_5363.jpg",
+				"hash": "e1fc2efd91ce1603f1a5f9c36da01af7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5363.jpg",
+				"path": "/images/items/01_4458/155_5363.jpg",
+				"hash": "f130d1bfb225fb3ba2b9909ce17aacb6"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4458/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5590",
-		"item-1000213249",
-		"01_5340",
-		"item-1000183318"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["endlesswaltz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5590", "item-1000213249", "01_5340", "item-1000183318"]
 }

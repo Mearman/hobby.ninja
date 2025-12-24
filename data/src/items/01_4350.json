@@ -32,25 +32,36 @@
 			"*All products other than \"Gundam Base Limited Action Base 5 [Mercury's Witch Image Color]\" are sold separately."
 		]
 	},
-	"images": [
-		"/images/items/01_4350/1000181744_1.jpg",
-		"/images/items/01_4350/1000181744_2.jpg",
-		"/images/items/01_4350/1000181744_3.jpg",
-		"/images/items/01_4350/1000181744_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000181744_1.jpg",
+				"path": "/images/items/01_4350/1000181744_1.jpg",
+				"hash": "d75ebd5a3aea0040a8a1ec6a93879630"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000181744_2.jpg",
+				"path": "/images/items/01_4350/1000181744_2.jpg",
+				"hash": "c36585a3415edeca06758a11f1e69fcc"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000181744_3.jpg",
+				"path": "/images/items/01_4350/1000181744_3.jpg",
+				"hash": "73c454b44b6f86c682aec13d758f090f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000181744_4.jpg",
+				"path": "/images/items/01_4350/1000181744_4.jpg",
+				"hash": "c13c28fd28bd0ef06de37ffde65d35a4"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4350/",
-	"brandIds": [
-		"actionbase"
-	],
-	"seriesIds": [
-		"g-witch"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4350"
-	],
+	"brandIds": ["actionbase"],
+	"seriesIds": ["g-witch"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4350"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

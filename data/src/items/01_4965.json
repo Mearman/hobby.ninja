@@ -20,33 +20,29 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HG 1/144 ガンダム 「ゴールドインジェクションカラー」登場！"
-		],
-		"en": [
-			"HG 1/144 Gundam \"Gold Injection Color\" now available!"
-		]
+		"ja": ["HG 1/144 ガンダム 「ゴールドインジェクションカラー」登場！"],
+		"en": ["HG 1/144 Gundam \"Gold Injection Color\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4965/153_5836.jpg",
-		"/images/items/01_4965/155_5836.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5836.jpg",
+				"path": "/images/items/01_4965/153_5836.jpg",
+				"hash": "d407195bd15e0c53286501ef4ee0486c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5836.jpg",
+				"path": "/images/items/01_4965/155_5836.jpg",
+				"hash": "a3801216af5388fd76b48c4f2de2f89c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4965/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

@@ -38,40 +38,34 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ベイオネット×2",
-			"リード線×１",
-			"シール×１",
-			"ノンキネティックポッド用台座×１"
-		],
-		"en": [
-			"Bayonet x2",
-			"Lead wire x 1",
-			"Seal×1",
-			"Non-kinetic pod pedestal x 1"
-		]
+		"ja": ["ベイオネット×2", "リード線×１", "シール×１", "ノンキネティックポッド用台座×１"],
+		"en": ["Bayonet x2", "Lead wire x 1", "Seal×1", "Non-kinetic pod pedestal x 1"]
 	},
-	"images": [
-		"/images/items/01_4370/153_5277.jpg",
-		"/images/items/01_4370/155_5277.jpg",
-		"/images/items/01_4370/156_5277.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5277.jpg",
+				"path": "/images/items/01_4370/153_5277.jpg",
+				"hash": "a9d2955a39fa0f6ebf63e9fb8126a940"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5277.jpg",
+				"path": "/images/items/01_4370/155_5277.jpg",
+				"hash": "99fc234959d3838c18933b5ae45245cb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5277.jpg",
+				"path": "/images/items/01_4370/156_5277.jpg",
+				"hash": "67248610f4ec282b6f59dd5a7e135e4b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4370/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"g-witch"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216474",
-		"item-1000211616",
-		"01_5422",
-		"item-1000203129"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["g-witch"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203129"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

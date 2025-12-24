@@ -38,29 +38,41 @@
 			"■ Comes with ACTION BASE 7 released in January 2024."
 		]
 	},
-	"images": [
-		"/images/items/01_5515/1000219089_1.jpg",
-		"/images/items/01_5515/1000219089_2.jpg",
-		"/images/items/01_5515/1000219089_3.jpg",
-		"/images/items/01_5515/1000219089_4.jpg",
-		"/images/items/01_5515/1000219089_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219089_1.jpg",
+				"path": "/images/items/01_5515/1000219089_1.jpg",
+				"hash": "0eae2bdaff38051343a670bb7a9f2f98"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219089_2.jpg",
+				"path": "/images/items/01_5515/1000219089_2.jpg",
+				"hash": "658c8897acd06d1a2983b53a96f6e675"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219089_3.jpg",
+				"path": "/images/items/01_5515/1000219089_3.jpg",
+				"hash": "cc4d51eb0ea027e82aac1a4bb41648ea"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219089_4.jpg",
+				"path": "/images/items/01_5515/1000219089_4.jpg",
+				"hash": "27c5db7f62ea76ca5a2daaf18b9d05c3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219089_5.jpg",
+				"path": "/images/items/01_5515/1000219089_5.jpg",
+				"hash": "71de5e5d73ce2411cbaa1f867a44f144"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5515/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"g-reco"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000098380",
-		"01_363",
-		"01_347",
-		"item-1000097210"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["g-reco"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000098380", "01_363", "01_347", "item-1000097210"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

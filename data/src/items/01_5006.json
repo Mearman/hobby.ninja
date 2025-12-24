@@ -56,30 +56,54 @@
 			"MarkingSeal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5006/153_5874.jpg",
-		"/images/items/01_5006/155_5874.jpg",
-		"/images/items/01_5006/156_5874.jpg",
-		"/images/items/01_5006/157_5874.jpg",
-		"/images/items/01_5006/158_5874.jpg",
-		"/images/items/01_5006/159_5874.jpg",
-		"/images/items/01_5006/189_5874.jpg",
-		"/images/items/01_5006/190_5874.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5874.jpg",
+				"path": "/images/items/01_5006/153_5874.jpg",
+				"hash": "c3c0b2df99dc9c9780ffeb5bf62bbe95"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5874.jpg",
+				"path": "/images/items/01_5006/155_5874.jpg",
+				"hash": "6797a6cc243a313d0db973f9b659c390"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5874.jpg",
+				"path": "/images/items/01_5006/156_5874.jpg",
+				"hash": "8a67fa2749f8c39bd4e384037da4e5f3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5874.jpg",
+				"path": "/images/items/01_5006/157_5874.jpg",
+				"hash": "839a97fa9db6624534dcd4dbb9d582fa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5874.jpg",
+				"path": "/images/items/01_5006/158_5874.jpg",
+				"hash": "8cf3e31e39dc2ae730ebd0a2e6344bd1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5874.jpg",
+				"path": "/images/items/01_5006/159_5874.jpg",
+				"hash": "ed17e7d363c5a4cb59ff0b330da48b54"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5874.jpg",
+				"path": "/images/items/01_5006/189_5874.jpg",
+				"hash": "510dd4239d31e763c74310ad740c7eff"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5874.jpg",
+				"path": "/images/items/01_5006/190_5874.jpg",
+				"hash": "3449214335a4c028a77cbff7824691ba"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5006/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"ultraman"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5371",
-		"01_5198",
-		"01_5096",
-		"01_5046"
-	]
+	"brandIds": ["figurerise-standard"],
+	"seriesIds": ["ultraman"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5371", "01_5198", "01_5096", "01_5046"]
 }

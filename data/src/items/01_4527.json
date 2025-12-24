@@ -19,30 +19,32 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"「BB戦士 三国伝 孫権ガンダム 周瑜ヒャクシキ 赤壁の轟砲」登場！"
-		],
-		"en": [
-			"\"BB Senshi Sangokuden Sun Quan Gundam Shu Yu Hyakushiki Red Cliff Roaring Cannon\" is now available!"
-		]
+		"ja": ["「BB戦士 三国伝 孫権ガンダム 周瑜ヒャクシキ 赤壁の轟砲」登場！"],
+		"en": ["\"BB Senshi Sangokuden Sun Quan Gundam Shu Yu Hyakushiki Red Cliff Roaring Cannon\" is now available!"]
 	},
-	"images": [
-		"/images/items/01_4527/153_5428.jpg",
-		"/images/items/01_4527/155_5428.jpg",
-		"/images/items/01_4527/156_5428.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5428.jpg",
+				"path": "/images/items/01_4527/153_5428.jpg",
+				"hash": "0eaa47dd7fafc10be95ad35443f26a42"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5428.jpg",
+				"path": "/images/items/01_4527/155_5428.jpg",
+				"hash": "b584c44f0d13f6cc69af7699197712c7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5428.jpg",
+				"path": "/images/items/01_4527/156_5428.jpg",
+				"hash": "3ea360d6c9c39bde0ac56fd06b679ae2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4527/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

@@ -34,43 +34,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ハンドガン×1",
-			"バックパック×1",
-			"マーキングシール×1"
-		],
-		"en": [
-			"Hand gun x 1",
-			"Backpack x 1",
-			"MarkingSeal×1"
-		]
+		"ja": ["ハンドガン×1", "バックパック×1", "マーキングシール×1"],
+		"en": ["Hand gun x 1", "Backpack x 1", "MarkingSeal×1"]
 	},
-	"images": [
-		"/images/items/01_3422/153_4376.jpg",
-		"/images/items/01_3422/155_4376.jpg",
-		"/images/items/01_3422/156_4376.jpg",
-		"/images/items/01_3422/157_4376.jpg",
-		"/images/items/01_3422/158_4376.jpg",
-		"/images/items/01_3422/159_4376.jpg",
-		"/images/items/01_3422/189_4376.jpg",
-		"/images/items/01_3422/190_4376.jpg",
-		"/images/items/01_3422/191_4376.jpg",
-		"/images/items/01_3422/192_4376.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4376.jpg",
+				"path": "/images/items/01_3422/153_4376.jpg",
+				"hash": "37d425aa5573404366648a26bb56a48c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4376.jpg",
+				"path": "/images/items/01_3422/155_4376.jpg",
+				"hash": "49b1ebd14157e765fa2c1def872fcddf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4376.jpg",
+				"path": "/images/items/01_3422/156_4376.jpg",
+				"hash": "daea7fc513994d7d6263ea27a782458c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4376.jpg",
+				"path": "/images/items/01_3422/157_4376.jpg",
+				"hash": "15cb2a49a7785c305df15b438daa8968"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4376.jpg",
+				"path": "/images/items/01_3422/158_4376.jpg",
+				"hash": "bd421a3c762bcd754fa854391345fc33"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4376.jpg",
+				"path": "/images/items/01_3422/159_4376.jpg",
+				"hash": "06d6c070f8613c80c2a5b4b90b909e64"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4376.jpg",
+				"path": "/images/items/01_3422/189_4376.jpg",
+				"hash": "fa73fc2fe4c516e2c515a15879e82687"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4376.jpg",
+				"path": "/images/items/01_3422/190_4376.jpg",
+				"hash": "c457cf6aea1a0dc7ab908ad098eb9b2f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4376.jpg",
+				"path": "/images/items/01_3422/191_4376.jpg",
+				"hash": "ea63961a9cf13f6306df515a42c02de0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4376.jpg",
+				"path": "/images/items/01_3422/192_4376.jpg",
+				"hash": "45c5814af419b87a7e080afccc1701e7"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3422/",
-	"brandIds": [
-		"30mm"
-	],
+	"brandIds": ["30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3715",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3715/"

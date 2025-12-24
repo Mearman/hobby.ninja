@@ -27,23 +27,29 @@
 			"• No painting or tools required. By using \"block build\", which allows for intuitive assembly, it can be completed in no time. • By incorporating the included gazing chip and scanning it with the gazing battle base, you can create your own team and battle."
 		]
 	},
-	"images": [
-		"/images/items/01_4597/153_5495.jpg",
-		"/images/items/01_4597/155_5495.jpg",
-		"/images/items/01_4597/156_5495.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5495.jpg",
+				"path": "/images/items/01_4597/153_5495.jpg",
+				"hash": "ea25729da4b25fdec2a7b0568e83b121"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5495.jpg",
+				"path": "/images/items/01_4597/155_5495.jpg",
+				"hash": "8ba92036f4ccf5a41b81d77cb07b888c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5495.jpg",
+				"path": "/images/items/01_4597/156_5495.jpg",
+				"hash": "2b08e4917e5e1b20b7c07eb4d0be8df5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4597/",
 	"brandIds": [],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181355",
-		"item-1000181354",
-		"item-1000170540",
-		"01_4196"
-	]
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181355", "item-1000181354", "item-1000170540", "01_4196"]
 }

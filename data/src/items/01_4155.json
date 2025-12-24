@@ -26,25 +26,39 @@
 			"The battleship that appears in \"Mobile Suit Gundam\" is reproduced in high detail ScaleModel! Pursuing a sense of scale by reproducing precise details. Photo-etched parts are included to reproduce details. Komsai can be separated. MS figure of the same scale is included."
 		]
 	},
-	"images": [
-		"/images/items/01_4155/153_507.jpg",
-		"/images/items/01_4155/155_507.jpg",
-		"/images/items/01_4155/156_507.jpg",
-		"/images/items/01_4155/157_507.jpg",
-		"/images/items/01_4155/158_507.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_507.jpg",
+				"path": "/images/items/01_4155/153_507.jpg",
+				"hash": "57293e54d73e7c115342d3279e27855e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_507.jpg",
+				"path": "/images/items/01_4155/155_507.jpg",
+				"hash": "240c533ccabba486768054fa8070104d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_507.jpg",
+				"path": "/images/items/01_4155/156_507.jpg",
+				"hash": "beb56c39992e43762e8166c74b876a57"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_507.jpg",
+				"path": "/images/items/01_4155/157_507.jpg",
+				"hash": "c42bf0dde27473cbd3bedc07873c0091"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_507.jpg",
+				"path": "/images/items/01_4155/158_507.jpg",
+				"hash": "99caf88730fbd914524e0f3f41b50364"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4155/",
 	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5992", "01_5473", "01_5474", "01_5475"]
 }

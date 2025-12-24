@@ -26,22 +26,24 @@
 			"• Put on the heavenly armor and head to the battlefield. • Tentama armor transforms into flame phoenix • Plated parts make it even more dignified. • Comes with clear effect parts to reproduce the special move. • Comes with a jade seal. Molded product x 9, Seal x 1, instruction manual manga included, molding color changed"
 		]
 	},
-	"images": [
-		"/images/items/01_4555/153_5455.jpg",
-		"/images/items/01_4555/155_5455.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5455.jpg",
+				"path": "/images/items/01_4555/153_5455.jpg",
+				"hash": "ee17442f63eafe0edb6b9b87395d6141"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5455.jpg",
+				"path": "/images/items/01_4555/155_5455.jpg",
+				"hash": "ba052c61ea77c744e2c5f0d13f68e736"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4555/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

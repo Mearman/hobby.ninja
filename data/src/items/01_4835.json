@@ -20,34 +20,34 @@
 	"targetAge": 15,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"「MG 1/100 フリーダムガンダム クリアカラーバージョン」登場！"
-		],
-		"en": [
-			"\"MG 1/100 Freedom Gundam Clear Color Version\" now available!"
-		]
+		"ja": ["「MG 1/100 フリーダムガンダム クリアカラーバージョン」登場！"],
+		"en": ["\"MG 1/100 Freedom Gundam Clear Color Version\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4835/153_5717.jpg",
-		"/images/items/01_4835/155_5717.jpg",
-		"/images/items/01_4835/156_5717.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5717.jpg",
+				"path": "/images/items/01_4835/153_5717.jpg",
+				"hash": "8d661297a4cb01e0e174d9f287707a84"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5717.jpg",
+				"path": "/images/items/01_4835/155_5717.jpg",
+				"hash": "85cc6bd4bc75736270b3d23b7ec37a68"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5717.jpg",
+				"path": "/images/items/01_4835/156_5717.jpg",
+				"hash": "8066202ad3209a1a7252f1add60c0892"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4835/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5221",
-		"01_4272",
-		"01_4195"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5994", "01_5221", "01_4272", "01_4195"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

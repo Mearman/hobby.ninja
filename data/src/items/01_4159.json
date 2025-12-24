@@ -39,46 +39,62 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"聖剣グレイダルファー×1",
-			"ハンドパーツ×1式",
-			"PETシート×2種",
-			"シール×1",
-			"ジュエルシール×1式"
-		],
-		"en": [
-			"Holy sword Graydalfur x1",
-			"Hand parts x 1 set",
-			"PET sheet x 2 types",
-			"Seal×1",
-			"Jewel Seal x 1"
-		]
+		"ja": ["聖剣グレイダルファー×1", "ハンドパーツ×1式", "PETシート×2種", "シール×1", "ジュエルシール×1式"],
+		"en": ["Holy sword Graydalfur x1", "Hand parts x 1 set", "PET sheet x 2 types", "Seal×1", "Jewel Seal x 1"]
 	},
-	"images": [
-		"/images/items/01_4159/153_5083.jpg",
-		"/images/items/01_4159/155_5083.jpg",
-		"/images/items/01_4159/156_5083.jpg",
-		"/images/items/01_4159/157_5083.jpg",
-		"/images/items/01_4159/158_5083.jpg",
-		"/images/items/01_4159/159_5083.jpg",
-		"/images/items/01_4159/189_5083.jpg",
-		"/images/items/01_4159/190_5083.jpg",
-		"/images/items/01_4159/191_5083.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5083.jpg",
+				"path": "/images/items/01_4159/153_5083.jpg",
+				"hash": "1401df19d7a06c3c28b7e9c2c151ec41"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5083.jpg",
+				"path": "/images/items/01_4159/155_5083.jpg",
+				"hash": "1fd467d4d97ebf1e6acb67b190b9191a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5083.jpg",
+				"path": "/images/items/01_4159/156_5083.jpg",
+				"hash": "de1b6c5baa229f48ca7fa8900880a688"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5083.jpg",
+				"path": "/images/items/01_4159/157_5083.jpg",
+				"hash": "0a11aacebeae2b5744dfd586a9ff536a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5083.jpg",
+				"path": "/images/items/01_4159/158_5083.jpg",
+				"hash": "f4821bed680f24260a25fa2cdc2c7316"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5083.jpg",
+				"path": "/images/items/01_4159/159_5083.jpg",
+				"hash": "de491cd3fe39202606105bb77b27eabf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5083.jpg",
+				"path": "/images/items/01_4159/189_5083.jpg",
+				"hash": "3ab37e1bfbd44b80d7ab92a000360371"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5083.jpg",
+				"path": "/images/items/01_4159/190_5083.jpg",
+				"hash": "adf32e0f9018720c3a53539d8632989b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5083.jpg",
+				"path": "/images/items/01_4159/191_5083.jpg",
+				"hash": "7078276264eb65af885f461f29e7c3b8"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4159/",
-	"brandIds": [
-		"figurerise-standard-amp"
-	],
-	"seriesIds": [
-		"digimon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5983",
-		"item-1000216437",
-		"01_5277",
-		"item-1000198198"
-	]
+	"brandIds": ["figurerise-standard-amp"],
+	"seriesIds": ["digimon"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5983", "item-1000216437", "01_5277", "item-1000198198"]
 }

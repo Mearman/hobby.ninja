@@ -31,36 +31,52 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"カイナスシール×1",
-			"専用ディスプレイベース×1"
-		],
-		"en": [
-			"Cainus Seal×1",
-			"Dedicated display base x 1"
-		]
+		"ja": ["カイナスシール×1", "専用ディスプレイベース×1"],
+		"en": ["Cainus Seal×1", "Dedicated display base x 1"]
 	},
-	"images": [
-		"/images/items/01_3514/153_4465.jpg",
-		"/images/items/01_3514/155_4465.jpg",
-		"/images/items/01_3514/156_4465.jpg",
-		"/images/items/01_3514/157_4465.jpg",
-		"/images/items/01_3514/158_4465.jpg",
-		"/images/items/01_3514/159_4465.jpg",
-		"/images/items/01_3514/189_4465.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4465.jpg",
+				"path": "/images/items/01_3514/153_4465.jpg",
+				"hash": "48753f4cc54aa6aad80b9c28ab0e048c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4465.jpg",
+				"path": "/images/items/01_3514/155_4465.jpg",
+				"hash": "335029cd7aa7b417268e8f1213c6ede3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4465.jpg",
+				"path": "/images/items/01_3514/156_4465.jpg",
+				"hash": "2050aac7c9ed2737a2370ff9d99a58b4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4465.jpg",
+				"path": "/images/items/01_3514/157_4465.jpg",
+				"hash": "faa48e54c17916a09b179c0ad0d2a6a7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4465.jpg",
+				"path": "/images/items/01_3514/158_4465.jpg",
+				"hash": "e058407cb3ccf5a37dd6b7703b1f741f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4465.jpg",
+				"path": "/images/items/01_3514/159_4465.jpg",
+				"hash": "5dc04f1ff603c7188e002372c657a7f5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4465.jpg",
+				"path": "/images/items/01_3514/189_4465.jpg",
+				"hash": "e89adeecfab8c1965651e21e596b6297"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3514/",
 	"brandIds": [],
-	"seriesIds": [
-		"starwars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3513",
-		"01_3515"
-	]
+	"seriesIds": ["starwars"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4153", "01_4154", "01_3513", "01_3515"]
 }

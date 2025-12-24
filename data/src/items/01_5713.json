@@ -27,28 +27,36 @@
 			"• The 100-type variable machine, Delta Plus, is now available in MG. • Complete transformation from MS form to Waverider form. • Equipped with a locking mechanism to prevent the shape from collapsing after deformation. • Includes MarkingSticker by Hajime Katoki. • Figures of the same scale are included. Molded product x 16, foil seal x 1, dry decal x 1, Tetron Seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_5713/153_780.jpg",
-		"/images/items/01_5713/155_780.jpg",
-		"/images/items/01_5713/156_780.jpg",
-		"/images/items/01_5713/157_780.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_780.jpg",
+				"path": "/images/items/01_5713/153_780.jpg",
+				"hash": "6c4e748417de200289abcaccae2dbaca"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_780.jpg",
+				"path": "/images/items/01_5713/155_780.jpg",
+				"hash": "24f71dcca04ada1b3afaee16b94e3003"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_780.jpg",
+				"path": "/images/items/01_5713/156_780.jpg",
+				"hash": "a8b9210c5e91f8e12010ff758a5031bb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_780.jpg",
+				"path": "/images/items/01_5713/157_780.jpg",
+				"hash": "008f2f524c698be12e105dd471fa6c80"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5713/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000183366",
-		"01_4271",
-		"01_2670",
-		"item-1000138934"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000183366", "01_4271", "01_2670", "item-1000138934"],
 	"manual": {
 		"id": "591",
 		"url": "https://manual.bandai-hobby.net/menus/detail/591/"

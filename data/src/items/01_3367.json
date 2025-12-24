@@ -26,24 +26,26 @@
 			"A 1/100 scale plastic model of the last Gundam \"Providence Gundam \" that appears in \" Mobile Suit Gundam SEED \". The characteristic dragoon system fully reproduces movement and separation. The ankles, knees, and hip joints are highly movable, allowing for various poses. The grip of the Eudychium Beam Rifle is a separate part, allowing you to hold the gun naturally. A 1/20 Scale \" Rau Le Creuset\" figure is included."
 		]
 	},
-	"images": [
-		"/images/items/01_3367/153_431.jpg",
-		"/images/items/01_3367/155_431.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_431.jpg",
+				"path": "/images/items/01_3367/153_431.jpg",
+				"hash": "c02e18f960c9fb33e1b20cadf37f8673"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_431.jpg",
+				"path": "/images/items/01_3367/155_431.jpg",
+				"hash": "a6ad1a0096e2175f6447f0b102054d40"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3367/",
 	"brandIds": [],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5440",
-		"01_5441",
-		"01_5365"
-	],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5994", "01_5440", "01_5441", "01_5365"],
 	"manual": {
 		"id": "1137",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1137/"

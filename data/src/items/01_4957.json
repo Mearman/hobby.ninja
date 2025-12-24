@@ -20,34 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HG 1/144 ガンダム THE ART OF GUNDAM OSAKA メタリックエディション登場！"
-		],
-		"en": [
-			"HG 1/144 Gundam THE ART OF GUNDAM OSAKA Metallic Edition now available!"
-		]
+		"ja": ["HG 1/144 ガンダム THE ART OF GUNDAM OSAKA メタリックエディション登場！"],
+		"en": ["HG 1/144 Gundam THE ART OF GUNDAM OSAKA Metallic Edition now available!"]
 	},
-	"images": [
-		"/images/items/01_4957/153_5829.jpg",
-		"/images/items/01_4957/155_5829.jpg",
-		"/images/items/01_4957/156_5829.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5829.jpg",
+				"path": "/images/items/01_4957/153_5829.jpg",
+				"hash": "51f410574e49eb0bc15d315a611d24c0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5829.jpg",
+				"path": "/images/items/01_4957/155_5829.jpg",
+				"hash": "5ceba5ed742bea289b4ef278f3c35249"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5829.jpg",
+				"path": "/images/items/01_4957/156_5829.jpg",
+				"hash": "a5a4f5b7e32d8620fd8d2fa7f4f0714b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4957/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

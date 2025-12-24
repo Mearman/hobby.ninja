@@ -35,40 +35,42 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"RF-025 SCUDDER×1式",
-			"PB-033M ASHMEAD×1式",
-			"SONGBIRDS×1式",
-			"BML-G1/P32DUO-03×1式"
-		],
-		"en": [
-			"RF-025 Scudder×1 set",
-			"PB-033M ASHMEAD×1 set",
-			"SONGBIRDS×1 set",
-			"BML-G1/P32DUO-03×1 set"
-		]
+		"ja": ["RF-025 SCUDDER×1式", "PB-033M ASHMEAD×1式", "SONGBIRDS×1式", "BML-G1/P32DUO-03×1式"],
+		"en": ["RF-025 Scudder×1 set", "PB-033M ASHMEAD×1 set", "SONGBIRDS×1 set", "BML-G1/P32DUO-03×1 set"]
 	},
-	"images": [
-		"/images/items/01_5400/1000222176_1.jpg",
-		"/images/items/01_5400/1000222176_2.jpg",
-		"/images/items/01_5400/1000222176_3.jpg",
-		"/images/items/01_5400/1000222176_4.jpg",
-		"/images/items/01_5400/1000222176_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222176_1.jpg",
+				"path": "/images/items/01_5400/1000222176_1.jpg",
+				"hash": "ffbe378d680f3c3bfe2beb1f041c24c8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222176_2.jpg",
+				"path": "/images/items/01_5400/1000222176_2.jpg",
+				"hash": "66898b8060cc14f6ae9f3f2a46e877f3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222176_3.jpg",
+				"path": "/images/items/01_5400/1000222176_3.jpg",
+				"hash": "bfbb10b2c9417d62bbab7762e9210138"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222176_4.jpg",
+				"path": "/images/items/01_5400/1000222176_4.jpg",
+				"hash": "eac6549ebe0c5cdcc23c707385fe8831"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222176_5.jpg",
+				"path": "/images/items/01_5400/1000222176_5.jpg",
+				"hash": "8648995adec0173f06083295d295077f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5400/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [
-		"armoredcore"
-	],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5973",
-		"01_5974",
-		"01_5573",
-		"01_5574"
-	]
+	"brandIds": ["30mm"],
+	"seriesIds": ["armoredcore"],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5973", "01_5974", "01_5573", "01_5574"]
 }

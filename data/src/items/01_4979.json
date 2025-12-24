@@ -27,30 +27,41 @@
 			"Hazel Kai's HGUC series plastic model that appears in \"Advance of Zeta \". The back boost pod is movable and the sealed booster is also removable, realistically reproducing Hazel Kai's characteristic unit replacement. The weapon mount on the shoulder can be replaced and selected, and the grenade launcher equipped state can also be reproduced. The elbow joint uses a double joint, the first of its kind in HGUC. L-shaped joints are also used in the shoulders, further expanding the range of motion. Weapons include a beam rifle, a seal, a seal booster, and a beam saber. In addition, the rifle, seal, and backpack from the same series \" HGUC Gundam Mk-II\" can be attached."
 		]
 	},
-	"images": [
-		"/images/items/01_4979/153_584.jpg",
-		"/images/items/01_4979/155_584.jpg",
-		"/images/items/01_4979/156_584.jpg",
-		"/images/items/01_4979/157_584.jpg",
-		"/images/items/01_4979/158_584.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_584.jpg",
+				"path": "/images/items/01_4979/153_584.jpg",
+				"hash": "abb416284a015cf3c4db05c61ec75854"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_584.jpg",
+				"path": "/images/items/01_4979/155_584.jpg",
+				"hash": "e457870049e6d2f797dbdf326d085d21"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_584.jpg",
+				"path": "/images/items/01_4979/156_584.jpg",
+				"hash": "e8f57c3c9be3d9a8a298a59efc36f170"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_584.jpg",
+				"path": "/images/items/01_4979/157_584.jpg",
+				"hash": "781c124236d1871a3dd33d3498b31024"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_584.jpg",
+				"path": "/images/items/01_4979/158_584.jpg",
+				"hash": "276e6c77742b94ad3e0d6fadfecbca96"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4979/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"],
 	"manual": {
 		"id": "248",
 		"url": "https://manual.bandai-hobby.net/menus/detail/248/"

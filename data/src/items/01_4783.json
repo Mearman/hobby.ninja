@@ -19,34 +19,34 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"SD RX-78-2 ガンダム Ver.GFT　登場！"
-		],
-		"en": [
-			"SD RX-78-2 Gundam Ver.GFT is now available!"
-		]
+		"ja": ["SD RX-78-2 ガンダム Ver.GFT　登場！"],
+		"en": ["SD RX-78-2 Gundam Ver.GFT is now available!"]
 	},
-	"images": [
-		"/images/items/01_4783/153_5665.jpg",
-		"/images/items/01_4783/155_5665.jpg",
-		"/images/items/01_4783/156_5665.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5665.jpg",
+				"path": "/images/items/01_4783/153_5665.jpg",
+				"hash": "c527eb06972cf28c19c544190709658b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5665.jpg",
+				"path": "/images/items/01_4783/155_5665.jpg",
+				"hash": "6deb018c72a46c54108542865a2163de"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5665.jpg",
+				"path": "/images/items/01_4783/156_5665.jpg",
+				"hash": "8607b22ddda0f91ec6637c2c5fbfadf9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4783/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_4789",
-		"01_2038",
-		"01_1916"
-	],
+	"brandIds": ["bb"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_4789", "01_2038", "01_1916"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

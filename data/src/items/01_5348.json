@@ -27,29 +27,36 @@
 			"Pallas Athene, who appears in \"Mobile Suit Z Gundam,\" is now available in the HGUC series as a fully equipped plastic model for the first time. The twin beam gun and Seal do not use ribs, but instead add joints to the arms and attach the mount parts by sliding, in pursuit of realism. The claws on the legs can move up and down, and the movable seal on the back can move forward, backward, left and right. Each power pipe is reproduced with soft material so as not to interfere with movement. Armed with twin beam guns, Seals, large missiles x 8, and beam sabers x 2."
 		]
 	},
-	"images": [
-		"/images/items/01_5348/153_619.jpg",
-		"/images/items/01_5348/155_619.jpg",
-		"/images/items/01_5348/156_619.jpg",
-		"/images/items/01_5348/157_619.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_619.jpg",
+				"path": "/images/items/01_5348/153_619.jpg",
+				"hash": "32301c3dcd7ee0c9c8c5fe92733a1024"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_619.jpg",
+				"path": "/images/items/01_5348/155_619.jpg",
+				"hash": "b0e5746cb0ee502619934b5566511cd7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_619.jpg",
+				"path": "/images/items/01_5348/156_619.jpg",
+				"hash": "8f5358dcc6549202727537a2d0dab43f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_619.jpg",
+				"path": "/images/items/01_5348/157_619.jpg",
+				"hash": "dd12f621a58a4a8c10f54e0485e40f43"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5348/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"],
 	"manual": {
 		"id": "996",
 		"url": "https://manual.bandai-hobby.net/menus/detail/996/"

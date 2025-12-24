@@ -32,25 +32,39 @@
 			"The hatch of the missile pod on Giroro Robo's left arm can be opened and closed, and the internal missile details are reproduced."
 		]
 	},
-	"images": [
-		"/images/items/01_5628/153_688.jpg",
-		"/images/items/01_5628/155_688.jpg",
-		"/images/items/01_5628/156_688.jpg",
-		"/images/items/01_5628/157_688.jpg",
-		"/images/items/01_5628/158_688.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_688.jpg",
+				"path": "/images/items/01_5628/153_688.jpg",
+				"hash": "6c35a9c05c42b771a637df5bfd65660f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_688.jpg",
+				"path": "/images/items/01_5628/155_688.jpg",
+				"hash": "cd526968971982c57cbba02168dbf585"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_688.jpg",
+				"path": "/images/items/01_5628/156_688.jpg",
+				"hash": "6d83d3b18c0660e27139949aaf3d21c7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_688.jpg",
+				"path": "/images/items/01_5628/157_688.jpg",
+				"hash": "cfc707bfcd226e531b0110262ea0fd64"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_688.jpg",
+				"path": "/images/items/01_5628/158_688.jpg",
+				"hash": "8448e0ca2694abe5053109986d571745"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5628/",
 	"brandIds": [],
-	"seriesIds": [
-		"keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7034",
-		"01_2120",
-		"01_2122",
-		"01_2104"
-	]
+	"seriesIds": ["keroro"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7034", "01_2120", "01_2122", "01_2104"]
 }

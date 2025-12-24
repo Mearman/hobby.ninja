@@ -63,23 +63,29 @@
 			"- Product specifications are scheduled as of 20118. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_5284/153_6134.jpg",
-		"/images/items/01_5284/155_6134.jpg",
-		"/images/items/01_5284/156_6134.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6134.jpg",
+				"path": "/images/items/01_5284/153_6134.jpg",
+				"hash": "fb08347e67bbc7193b3f55c5880b9912"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6134.jpg",
+				"path": "/images/items/01_5284/155_6134.jpg",
+				"hash": "5e991ad9a4f154f3f1591e92e7aca6a7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6134.jpg",
+				"path": "/images/items/01_5284/156_6134.jpg",
+				"hash": "d6fbc78031f21080587b8ee8077a8b8e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5284/",
-	"brandIds": [
-		"pb_charapla"
-	],
-	"seriesIds": [
-		"lbx"
-	],
+	"brandIds": ["pb_charapla"],
+	"seriesIds": ["lbx"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"relatedItemIds": ["item-1000215196", "item-1000215197", "item-1000210042", "item-1000210041"]
 }

@@ -20,35 +20,39 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HG 1/144 ガンダムエクシア リペアII & O ガンダム(実践配備型)クリアカラーバージョン登場！"
-		],
-		"en": [
-			"HG 1/144 Gundam Exia Repair II & O Gundam (practical deployment type) clear color version now available!"
-		]
+		"ja": ["HG 1/144 ガンダムエクシア リペアII & O ガンダム(実践配備型)クリアカラーバージョン登場！"],
+		"en": ["HG 1/144 Gundam Exia Repair II & O Gundam (practical deployment type) clear color version now available!"]
 	},
-	"images": [
-		"/images/items/01_4809/153_5689.jpg",
-		"/images/items/01_4809/155_5689.jpg",
-		"/images/items/01_4809/156_5689.jpg",
-		"/images/items/01_4809/157_5689.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5689.jpg",
+				"path": "/images/items/01_4809/153_5689.jpg",
+				"hash": "8c0392948e48f836e32209be592ed284"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5689.jpg",
+				"path": "/images/items/01_4809/155_5689.jpg",
+				"hash": "26e6e24d942973a696b519908c598788"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5689.jpg",
+				"path": "/images/items/01_4809/156_5689.jpg",
+				"hash": "3b55bcd06af982d0b2904885e4c492ed"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5689.jpg",
+				"path": "/images/items/01_4809/157_5689.jpg",
+				"hash": "b1a1a822c170617acd719b2dd07afd06"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4809/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1954",
-		"01_1953",
-		"item-1000114085",
-		"01_957"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["g-00"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_1954", "01_1953", "item-1000114085", "01_957"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

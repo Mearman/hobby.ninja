@@ -31,37 +31,49 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ボディパーツ×1式",
-			"ジョイントパーツ×1式"
-		],
-		"en": [
-			"Body parts x 1 set",
-			"Joint parts x 1 set"
-		]
+		"ja": ["ボディパーツ×1式", "ジョイントパーツ×1式"],
+		"en": ["Body parts x 1 set", "Joint parts x 1 set"]
 	},
-	"images": [
-		"/images/items/01_3749/153_4701.jpg",
-		"/images/items/01_3749/155_4701.jpg",
-		"/images/items/01_3749/156_4701.jpg",
-		"/images/items/01_3749/157_4701.jpg",
-		"/images/items/01_3749/158_4701.jpg",
-		"/images/items/01_3749/159_4701.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4701.jpg",
+				"path": "/images/items/01_3749/153_4701.jpg",
+				"hash": "10eea82f057a480d03b3c8a6515339bc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4701.jpg",
+				"path": "/images/items/01_3749/155_4701.jpg",
+				"hash": "4b529e32b5d2c8587b0fa54a16f9199b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4701.jpg",
+				"path": "/images/items/01_3749/156_4701.jpg",
+				"hash": "3c428f4c273e7a3419e2653491ac743e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4701.jpg",
+				"path": "/images/items/01_3749/157_4701.jpg",
+				"hash": "93d4a7953164df4c6fb460d0b7e94990"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4701.jpg",
+				"path": "/images/items/01_3749/158_4701.jpg",
+				"hash": "b44bc8565a3121ea6b0525adf066719b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4701.jpg",
+				"path": "/images/items/01_3749/159_4701.jpg",
+				"hash": "dc42a59a5497a789fbc222306eb7835e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3749/",
-	"brandIds": [
-		"30ms"
-	],
+	"brandIds": ["30ms"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5975",
-		"01_5976",
-		"01_5977",
-		"01_5954"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3456",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3456/"

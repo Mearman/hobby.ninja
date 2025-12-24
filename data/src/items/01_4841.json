@@ -20,34 +20,34 @@
 	"targetAge": 15,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"「MG 1/100 ストライクフリーダムガンダム クリアカラーバージョン」登場！"
-		],
-		"en": [
-			"\"MG 1/100 Strike Freedom Gundam Clear Color Version\" now available!"
-		]
+		"ja": ["「MG 1/100 ストライクフリーダムガンダム クリアカラーバージョン」登場！"],
+		"en": ["\"MG 1/100 Strike Freedom Gundam Clear Color Version\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4841/153_5722.jpg",
-		"/images/items/01_4841/155_5722.jpg",
-		"/images/items/01_4841/156_5722.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5722.jpg",
+				"path": "/images/items/01_4841/153_5722.jpg",
+				"hash": "85d24e9777c77e993cde26ae5517acb5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5722.jpg",
+				"path": "/images/items/01_4841/155_5722.jpg",
+				"hash": "4d765a625ac19b0feb3b8f1776ddf66f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5722.jpg",
+				"path": "/images/items/01_4841/156_5722.jpg",
+				"hash": "aa57ef6f3242051b77a43f4ea53e7f34"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4841/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5421",
-		"item-1000183862",
-		"01_3712",
-		"item-1000155441"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5421", "item-1000183862", "01_3712", "item-1000155441"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

@@ -37,31 +37,51 @@
 			"• Includes a large buster rifle and two beam sabers."
 		]
 	},
-	"images": [
-		"/images/items/01_5861/153_939.jpg",
-		"/images/items/01_5861/155_939.jpg",
-		"/images/items/01_5861/156_939.jpg",
-		"/images/items/01_5861/157_939.jpg",
-		"/images/items/01_5861/158_939.jpg",
-		"/images/items/01_5861/159_939.jpg",
-		"/images/items/01_5861/01_5861_inst_0.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_939.jpg",
+				"path": "/images/items/01_5861/153_939.jpg",
+				"hash": "7b80a79212c3d9abe7ca3030a74eaaff"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_939.jpg",
+				"path": "/images/items/01_5861/155_939.jpg",
+				"hash": "bc64c9851d0d6fe5fe86932f46d55313"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_939.jpg",
+				"path": "/images/items/01_5861/156_939.jpg",
+				"hash": "fb95e2fe60db9404837168c7dd43b3a6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_939.jpg",
+				"path": "/images/items/01_5861/157_939.jpg",
+				"hash": "5b10f3487ac47b0de4d742cec79e654d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_939.jpg",
+				"path": "/images/items/01_5861/158_939.jpg",
+				"hash": "e9269266de5cc8bf8eae2c861f13950e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_939.jpg",
+				"path": "/images/items/01_5861/159_939.jpg",
+				"hash": "2e7067732420ad3b8c18c63dae384b69"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5861_inst_0.jpg",
+				"path": "/images/items/01_5861/01_5861_inst_0.jpg",
+				"hash": "63899dc5073d3339b93c95add67ab542"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5861/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5590",
-		"item-1000213249",
-		"01_5340",
-		"item-1000183318"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["endlesswaltz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5590", "item-1000213249", "01_5340", "item-1000183318"],
 	"manual": {
 		"id": "387",
 		"url": "https://manual.bandai-hobby.net/menus/detail/387/"

@@ -35,34 +35,42 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ジョイントパーツ×1"
-		],
-		"en": [
-			"Joint parts x 1"
-		]
+		"ja": ["ジョイントパーツ×1"],
+		"en": ["Joint parts x 1"]
 	},
-	"images": [
-		"/images/items/01_3774/153_4724.jpg",
-		"/images/items/01_3774/155_4724.jpg",
-		"/images/items/01_3774/156_4724.jpg",
-		"/images/items/01_3774/157_4724.jpg",
-		"/images/items/01_3774/158_4724.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4724.jpg",
+				"path": "/images/items/01_3774/153_4724.jpg",
+				"hash": "e058566ddb36c13b801cd6680b974f91"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4724.jpg",
+				"path": "/images/items/01_3774/155_4724.jpg",
+				"hash": "542079789f79d7f379544d4e01ea6f24"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4724.jpg",
+				"path": "/images/items/01_3774/156_4724.jpg",
+				"hash": "097fe0d0dcf4044d6ddb3c4a68cd11e0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4724.jpg",
+				"path": "/images/items/01_3774/157_4724.jpg",
+				"hash": "eed4b2615e08da6411bfa22c72626e2c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4724.jpg",
+				"path": "/images/items/01_3774/158_4724.jpg",
+				"hash": "b0fa22d8b50b29f9aa01951ed1634a84"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3774/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4336",
-		"01_4312",
-		"01_4634"
-	]
+	"brandIds": ["sdgundamseries"],
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
 }

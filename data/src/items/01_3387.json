@@ -57,34 +57,61 @@
 			"Water transfer decal x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_3387/153_4340.jpg",
-		"/images/items/01_3387/155_4340.jpg",
-		"/images/items/01_3387/156_4340.jpg",
-		"/images/items/01_3387/157_4340.jpg",
-		"/images/items/01_3387/158_4340.jpg",
-		"/images/items/01_3387/159_4340.jpg",
-		"/images/items/01_3387/189_4340.jpg",
-		"/images/items/01_3387/01_3387_inst_0.jpg",
-		"/images/items/01_3387/01_3387_inst_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4340.jpg",
+				"path": "/images/items/01_3387/153_4340.jpg",
+				"hash": "8bbce6883749e13410284d75666ff1a4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4340.jpg",
+				"path": "/images/items/01_3387/155_4340.jpg",
+				"hash": "8b670417e84758e84e8a048beff60333"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4340.jpg",
+				"path": "/images/items/01_3387/156_4340.jpg",
+				"hash": "99885060f6ca423164fda4ea198cc0a0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4340.jpg",
+				"path": "/images/items/01_3387/157_4340.jpg",
+				"hash": "c7c3968086982a65cf3054390aaef28b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4340.jpg",
+				"path": "/images/items/01_3387/158_4340.jpg",
+				"hash": "45ad65559d45fd5eea8191890ae25654"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4340.jpg",
+				"path": "/images/items/01_3387/159_4340.jpg",
+				"hash": "f3a68a5270c0100f8dfbfa094c48e5fc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4340.jpg",
+				"path": "/images/items/01_3387/189_4340.jpg",
+				"hash": "0325fa9e611e01fd315b1339f506a04b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_3387_inst_0.jpg",
+				"path": "/images/items/01_3387/01_3387_inst_0.jpg",
+				"hash": "8296570c6f969598f7686a638fe9c7bf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_3387_inst_1.jpg",
+				"path": "/images/items/01_3387/01_3387_inst_1.jpg",
+				"hash": "a44a59ae2287e8740369f3f2ce031d3a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3387/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"hathaway"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5594",
-		"01_4971",
-		"01_4269",
-		"item-1000157737"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["hathaway"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5594", "01_4971", "01_4269", "item-1000157737"],
 	"manual": {
 		"id": "503",
 		"url": "https://manual.bandai-hobby.net/menus/detail/503/"

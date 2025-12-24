@@ -35,37 +35,49 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"アーマーパーツ×1式",
-			"武装パーツ×1"
-		],
-		"en": [
-			"Armor parts x 1 set",
-			"Armed parts x 1"
-		]
+		"ja": ["アーマーパーツ×1式", "武装パーツ×1"],
+		"en": ["Armor parts x 1 set", "Armed parts x 1"]
 	},
-	"images": [
-		"/images/items/01_5264/1000217701_1.jpg",
-		"/images/items/01_5264/1000217701_2.jpg",
-		"/images/items/01_5264/1000217701_3.jpg",
-		"/images/items/01_5264/1000217701_4.jpg",
-		"/images/items/01_5264/1000217701_5.jpg",
-		"/images/items/01_5264/1000217701_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217701_1.jpg",
+				"path": "/images/items/01_5264/1000217701_1.jpg",
+				"hash": "5a1299ecb9eb45c3f0947c9c756a59aa"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217701_2.jpg",
+				"path": "/images/items/01_5264/1000217701_2.jpg",
+				"hash": "4754ee69070edc6669840abf1e7c3d08"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217701_3.jpg",
+				"path": "/images/items/01_5264/1000217701_3.jpg",
+				"hash": "05451a590f7658abc556e00bebc069fd"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217701_4.jpg",
+				"path": "/images/items/01_5264/1000217701_4.jpg",
+				"hash": "6d4b0b246d18b19bcf40e9448949f959"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217701_5.jpg",
+				"path": "/images/items/01_5264/1000217701_5.jpg",
+				"hash": "ba5dc8e77e80e5893c71dba8f44de417"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217701_6.jpg",
+				"path": "/images/items/01_5264/1000217701_6.jpg",
+				"hash": "57b093a86d6e027c074784826eeb5fdb"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5264/",
-	"brandIds": [
-		"30mf"
-	],
+	"brandIds": ["30mf"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5978",
-		"01_5979",
-		"01_5980",
-		"01_5981"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5978", "01_5979", "01_5980", "01_5981"],
 	"manual": {
 		"id": "3403",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3403/"

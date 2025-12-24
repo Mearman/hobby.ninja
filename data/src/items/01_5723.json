@@ -29,23 +29,29 @@
 			"• By incorporating the included gazing chip and scanning it with the gazing battle base, you can create your own team and battle."
 		]
 	},
-	"images": [
-		"/images/items/01_5723/153_790.jpg",
-		"/images/items/01_5723/155_790.jpg",
-		"/images/items/01_5723/156_790.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_790.jpg",
+				"path": "/images/items/01_5723/153_790.jpg",
+				"hash": "d6d37f978a66e893190051f0dee4c233"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_790.jpg",
+				"path": "/images/items/01_5723/155_790.jpg",
+				"hash": "b8e67cdd7d56b4fde2b71b5ec4ea2fd6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_790.jpg",
+				"path": "/images/items/01_5723/156_790.jpg",
+				"hash": "4988de98a811b34851e43077ebe52a57"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5723/",
 	"brandIds": [],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181355",
-		"item-1000181354",
-		"item-1000170540",
-		"01_4196"
-	]
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181355", "item-1000181354", "item-1000170540", "01_4196"]
 }

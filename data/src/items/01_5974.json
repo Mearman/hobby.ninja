@@ -54,28 +54,44 @@
 			"Joint parts x 1 set"
 		]
 	},
-	"images": [
-		"/images/items/01_5974/01_5974_0.jpg",
-		"/images/items/01_5974/01_5974_1.jpg",
-		"/images/items/01_5974/01_5974_2.jpg",
-		"/images/items/01_5974/01_5974_3.jpg",
-		"/images/items/01_5974/01_5974_4.jpg",
-		"/images/items/01_5974/01_5974_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5974_0.jpg",
+				"path": "/images/items/01_5974/01_5974_0.jpg",
+				"hash": "48570e626ddad6b0d67b09240dfce5a8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5974_1.jpg",
+				"path": "/images/items/01_5974/01_5974_1.jpg",
+				"hash": "64d3ee2dc61a3fe88f471001b45fe2a8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5974_2.jpg",
+				"path": "/images/items/01_5974/01_5974_2.jpg",
+				"hash": "0c71b1fd33d77dbcf607d10b9a339fed"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5974_3.jpg",
+				"path": "/images/items/01_5974/01_5974_3.jpg",
+				"hash": "db5e0453f8fbfda26a46438f7d7cee47"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5974_4.jpg",
+				"path": "/images/items/01_5974/01_5974_4.jpg",
+				"hash": "7c01e2b7ca06cffba6a7b2b7b6d0c749"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5974_5.jpg",
+				"path": "/images/items/01_5974/01_5974_5.jpg",
+				"hash": "1762994b0793b2fd0f9dd1916c404be7"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5974/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [
-		"armoredcore"
-	],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5973",
-		"01_5573",
-		"01_5574",
-		"01_5482"
-	]
+	"brandIds": ["30mm"],
+	"seriesIds": ["armoredcore"],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5973", "01_5573", "01_5574", "01_5482"]
 }

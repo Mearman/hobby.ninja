@@ -20,28 +20,22 @@
 	"targetAge": 15,
 	"scale": "1/60",
 	"description": {
-		"ja": [
-			"「1/60 Z ガンダム」登場！"
-		],
-		"en": [
-			"\"1/60 Z Gundam\" now available!"
-		]
+		"ja": ["「1/60 Z ガンダム」登場！"],
+		"en": ["\"1/60 Z Gundam\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4432/153_5339.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5339.jpg",
+				"path": "/images/items/01_4432/153_5339.jpg",
+				"hash": "8c22ec2de154eb456fd2d3511c560ffa"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4432/",
 	"brandIds": [],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	]
+	"seriesIds": ["z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"]
 }

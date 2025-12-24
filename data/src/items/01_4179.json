@@ -51,32 +51,56 @@
 			"Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_4179/153_5100.jpg",
-		"/images/items/01_4179/155_5100.jpg",
-		"/images/items/01_4179/156_5100.jpg",
-		"/images/items/01_4179/157_5100.jpg",
-		"/images/items/01_4179/158_5100.jpg",
-		"/images/items/01_4179/159_5100.jpg",
-		"/images/items/01_4179/189_5100.jpg",
-		"/images/items/01_4179/01_4179_inst_0.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5100.jpg",
+				"path": "/images/items/01_4179/153_5100.jpg",
+				"hash": "95be00f6eeb076dc1802700e3fe250ef"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5100.jpg",
+				"path": "/images/items/01_4179/155_5100.jpg",
+				"hash": "86dafaa9ee875dc9b1fc315f1e5c02d7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5100.jpg",
+				"path": "/images/items/01_4179/156_5100.jpg",
+				"hash": "5d46893d2e8cb4f4e69b41442e19fb1b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5100.jpg",
+				"path": "/images/items/01_4179/157_5100.jpg",
+				"hash": "65985b49fd9893d07a7fd491ef90cf7a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5100.jpg",
+				"path": "/images/items/01_4179/158_5100.jpg",
+				"hash": "febb0e5130bac89b30027437dd341743"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5100.jpg",
+				"path": "/images/items/01_4179/159_5100.jpg",
+				"hash": "67b18c910dace0d86b1ad58afcbe43b9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5100.jpg",
+				"path": "/images/items/01_4179/189_5100.jpg",
+				"hash": "de1c0205dbc23678928f3a060adf762e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4179_inst_0.jpg",
+				"path": "/images/items/01_4179/01_4179_inst_0.jpg",
+				"hash": "cb0cddc0b4ce90be3af88faec18a687a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4179/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5590",
-		"item-1000213249",
-		"01_5340",
-		"item-1000183318"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["endlesswaltz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5590", "item-1000213249", "01_5340", "item-1000183318"],
 	"manual": {
 		"id": "507",
 		"url": "https://manual.bandai-hobby.net/menus/detail/507/"

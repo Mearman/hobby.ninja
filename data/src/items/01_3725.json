@@ -31,22 +31,34 @@
 			"Needle x 3 types, pedestal x 3 types <x 2 sets>"
 		]
 	},
-	"images": [
-		"/images/items/01_3725/153_4677.jpg",
-		"/images/items/01_3725/155_4677.jpg",
-		"/images/items/01_3725/156_4677.jpg",
-		"/images/items/01_3725/157_4677.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4677.jpg",
+				"path": "/images/items/01_3725/153_4677.jpg",
+				"hash": "89cb567f2ec1297206287965b641bc40"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4677.jpg",
+				"path": "/images/items/01_3725/155_4677.jpg",
+				"hash": "79349360fbaf2b2e55a65c01b80f3f51"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4677.jpg",
+				"path": "/images/items/01_3725/156_4677.jpg",
+				"hash": "9bd834f6e6c6d1e255fdd5de20f3561b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4677.jpg",
+				"path": "/images/items/01_3725/157_4677.jpg",
+				"hash": "b0df0a54782b1ebe556f7f7c78c055da"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3725/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5986",
-		"01_5987",
-		"01_5988"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5986", "01_5987", "01_5988"]
 }

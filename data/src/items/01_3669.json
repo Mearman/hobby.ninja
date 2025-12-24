@@ -53,30 +53,54 @@
 			"Foil Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_3669/1000167718_1.jpg",
-		"/images/items/01_3669/1000167718_2.jpg",
-		"/images/items/01_3669/1000167718_3.jpg",
-		"/images/items/01_3669/1000167718_4.jpg",
-		"/images/items/01_3669/1000167718_5.jpg",
-		"/images/items/01_3669/1000167718_6.jpg",
-		"/images/items/01_3669/1000167718_7.jpg",
-		"/images/items/01_3669/1000167718_8.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000167718_1.jpg",
+				"path": "/images/items/01_3669/1000167718_1.jpg",
+				"hash": "c0e5f8d5a7e823dfa060570af4edf9c7"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000167718_2.jpg",
+				"path": "/images/items/01_3669/1000167718_2.jpg",
+				"hash": "b7713615aa04f0100eacc01b0052dfe5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000167718_3.jpg",
+				"path": "/images/items/01_3669/1000167718_3.jpg",
+				"hash": "c8aed1e358e1c275e1288fff66b39a49"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000167718_4.jpg",
+				"path": "/images/items/01_3669/1000167718_4.jpg",
+				"hash": "145ccc13451abd1e6c59a68852cc2962"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000167718_5.jpg",
+				"path": "/images/items/01_3669/1000167718_5.jpg",
+				"hash": "2a4aab554afd7c293bffe18b690c18f3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000167718_6.jpg",
+				"path": "/images/items/01_3669/1000167718_6.jpg",
+				"hash": "1a81bbb901cf865c697c206aee6352f5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000167718_7.jpg",
+				"path": "/images/items/01_3669/1000167718_7.jpg",
+				"hash": "7a089302f8cd68e16db68c8ae03bc3e5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000167718_8.jpg",
+				"path": "/images/items/01_3669/1000167718_8.jpg",
+				"hash": "1a04e1d4f916a067c1c6cc4d3b73e812"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3669/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"item-1000161796"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "item-1000161796"]
 }

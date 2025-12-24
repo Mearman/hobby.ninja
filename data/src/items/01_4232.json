@@ -33,31 +33,37 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"水転写式デカール×1"
-		],
-		"en": [
-			"Water transfer decal x 1"
-		]
+		"ja": ["水転写式デカール×1"],
+		"en": ["Water transfer decal x 1"]
 	},
-	"images": [
-		"/images/items/01_4232/153_5151.jpg",
-		"/images/items/01_4232/155_5151.jpg",
-		"/images/items/01_4232/156_5151.jpg",
-		"/images/items/01_4232/157_5151.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5151.jpg",
+				"path": "/images/items/01_4232/153_5151.jpg",
+				"hash": "49222b1bb9644a239556ed75680628ed"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5151.jpg",
+				"path": "/images/items/01_4232/155_5151.jpg",
+				"hash": "3cb7e16def101e2836f0062c53e72288"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5151.jpg",
+				"path": "/images/items/01_4232/156_5151.jpg",
+				"hash": "d046ea8ec597429a137cba9e92680185"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5151.jpg",
+				"path": "/images/items/01_4232/157_5151.jpg",
+				"hash": "615577303c0a3b0e48f3af1022bf9ea1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4232/",
-	"brandIds": [
-		"30mm"
-	],
+	"brandIds": ["30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	]
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"]
 }

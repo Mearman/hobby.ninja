@@ -59,35 +59,66 @@
 			"Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5232/1000209846_1.jpg",
-		"/images/items/01_5232/1000209846_10.jpg",
-		"/images/items/01_5232/1000209846_2.jpg",
-		"/images/items/01_5232/1000209846_3.jpg",
-		"/images/items/01_5232/1000209846_4.jpg",
-		"/images/items/01_5232/1000209846_5.jpg",
-		"/images/items/01_5232/1000209846_6.jpg",
-		"/images/items/01_5232/1000209846_7.jpg",
-		"/images/items/01_5232/1000209846_8.jpg",
-		"/images/items/01_5232/1000209846_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209846_1.jpg",
+				"path": "/images/items/01_5232/1000209846_1.jpg",
+				"hash": "e0c4b46a3d1b916e81f668df2b56f09c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209846_10.jpg",
+				"path": "/images/items/01_5232/1000209846_10.jpg",
+				"hash": "91c58c3cb582ee2e55344d892f831c5a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209846_2.jpg",
+				"path": "/images/items/01_5232/1000209846_2.jpg",
+				"hash": "bb9b9fa673d68456b91ea5b962738078"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209846_3.jpg",
+				"path": "/images/items/01_5232/1000209846_3.jpg",
+				"hash": "4406343d22b3c659f191269152c9936c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209846_4.jpg",
+				"path": "/images/items/01_5232/1000209846_4.jpg",
+				"hash": "369f1fcb2633e5000652dcab2e80b04f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209846_5.jpg",
+				"path": "/images/items/01_5232/1000209846_5.jpg",
+				"hash": "b14bf6873c87ab9c0540a92b3afcf8ec"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209846_6.jpg",
+				"path": "/images/items/01_5232/1000209846_6.jpg",
+				"hash": "c8a62767491699a09745abf437896fd9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209846_7.jpg",
+				"path": "/images/items/01_5232/1000209846_7.jpg",
+				"hash": "461a07601bf71f039114cbbf71fe5674"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209846_8.jpg",
+				"path": "/images/items/01_5232/1000209846_8.jpg",
+				"hash": "e8b029c42ec3af45e7cec28ea2d8b825"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209846_9.jpg",
+				"path": "/images/items/01_5232/1000209846_9.jpg",
+				"hash": "5971a70da523dd2b6c4ef32606e6a10e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5232/",
-	"brandIds": [
-		"hg",
-		"hgce"
-	],
-	"seriesIds": [
-		"seed-freedom"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5452",
-		"01_5374",
-		"01_5363",
-		"01_5362"
-	],
+	"brandIds": ["hg", "hgce"],
+	"seriesIds": ["seed-freedom"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5452", "01_5374", "01_5363", "01_5362"],
 	"manual": {
 		"id": "1651",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1651/"

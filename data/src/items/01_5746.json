@@ -30,28 +30,36 @@
 			"■ The Armed Armor VN on the left hand and the Armed Armor BS on the right hand are equipped with gimmicks such as deployment. Molded ×21, Foil Seal ×1, Dry Decal×1, Tetoron Seal ×1, Assembly Instructions ×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5746/1000092364_1.jpg",
-		"/images/items/01_5746/1000092364_2.jpg",
-		"/images/items/01_5746/1000092364_3.jpg",
-		"/images/items/01_5746/1000092364_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092364_1.jpg",
+				"path": "/images/items/01_5746/1000092364_1.jpg",
+				"hash": "3a98d7ffe962b10c84839722f9cff953"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092364_2.jpg",
+				"path": "/images/items/01_5746/1000092364_2.jpg",
+				"hash": "44dc53ca4ea8d38a34e977f7d93535fd"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092364_3.jpg",
+				"path": "/images/items/01_5746/1000092364_3.jpg",
+				"hash": "5910710dcb637ffcf52818224d12457a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092364_4.jpg",
+				"path": "/images/items/01_5746/1000092364_4.jpg",
+				"hash": "46199ca79aa19426be182a15a6da756d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5746/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000183366",
-		"01_4271",
-		"01_2670",
-		"item-1000138934"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000183366", "01_4271", "01_2670", "item-1000138934"],
 	"manual": {
 		"id": "595",
 		"url": "https://manual.bandai-hobby.net/menus/detail/595/"

@@ -26,22 +26,24 @@
 			"The first piece of the \"First Grade \" series created to commemorate the 20th anniversary of \" Mobile Suit Gundam\". The head, shoulder joints, upper arms, elbows, wrists, hips, knees, and ankles can be moved without using polycaps. The handle of the beam saber on the backpack is removable. There are also two items in used condition. In addition, it comes with weapons such as a beam rifle and a seal."
 		]
 	},
-	"images": [
-		"/images/items/01_4467/153_5372.jpg",
-		"/images/items/01_4467/155_5372.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5372.jpg",
+				"path": "/images/items/01_4467/153_5372.jpg",
+				"hash": "ea0918f146d7f8b3eae1584de3b6fe23"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5372.jpg",
+				"path": "/images/items/01_4467/155_5372.jpg",
+				"hash": "ca0d47dc399dda04a51044bc06af90e2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4467/",
 	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5992", "01_5473", "01_5474", "01_5475"]
 }

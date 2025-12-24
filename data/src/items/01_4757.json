@@ -20,34 +20,29 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HGPG 1/144 量産型プチッガイ登場！"
-		],
-		"en": [
-			"HGPG 1/144 mass-produced Petit'gguy now available!"
-		]
+		"ja": ["HGPG 1/144 量産型プチッガイ登場！"],
+		"en": ["HGPG 1/144 mass-produced Petit'gguy now available!"]
 	},
-	"images": [
-		"/images/items/01_4757/1000189041_1.jpg",
-		"/images/items/01_4757/1000189041_2.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000189041_1.jpg",
+				"path": "/images/items/01_4757/1000189041_1.jpg",
+				"hash": "f1756f729f73ab49c439a5cff3faca12"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000189041_2.jpg",
+				"path": "/images/items/01_4757/1000189041_2.jpg",
+				"hash": "aad99b19741498d93e5c6b10b93b7fb7"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4757/",
-	"brandIds": [
-		"hg",
-		"petitgguy"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
+	"brandIds": ["hg", "petitgguy"],
+	"seriesIds": ["buildfighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5057", "01_1942", "01_1288", "01_1261"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

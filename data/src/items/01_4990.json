@@ -27,28 +27,36 @@
 			"A 1/100MG series plastic model of Hyakushiki equipped with the Ballute system that also appeared in the movie \"Mobile Suit Z Gundam - Heir to the Stars.\" The ballet system can be attached to the chest, legs, and back, and the internal parachute is reproduced in the stored state. A soft material is used for the pipes on the side of the ballet system to realistically reproduce the texture."
 		]
 	},
-	"images": [
-		"/images/items/01_4990/153_585.jpg",
-		"/images/items/01_4990/155_585.jpg",
-		"/images/items/01_4990/156_585.jpg",
-		"/images/items/01_4990/157_585.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_585.jpg",
+				"path": "/images/items/01_4990/153_585.jpg",
+				"hash": "b9a746d514ef32ab22f2f2b3f0a6c061"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_585.jpg",
+				"path": "/images/items/01_4990/155_585.jpg",
+				"hash": "56e5c1ff35a81a5a926bd4112eb0e580"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_585.jpg",
+				"path": "/images/items/01_4990/156_585.jpg",
+				"hash": "08b8c555c77bbddefc9be59fc78f73a1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_585.jpg",
+				"path": "/images/items/01_4990/157_585.jpg",
+				"hash": "b8b20074e6430a25f16212e54663b0a6"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4990/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000145352",
-		"item-1000131596",
-		"01_4270",
-		"item-1000112091"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000145352", "item-1000131596", "01_4270", "item-1000112091"],
 	"manual": {
 		"id": "536",
 		"url": "https://manual.bandai-hobby.net/menus/detail/536/"

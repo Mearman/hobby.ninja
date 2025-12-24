@@ -61,33 +61,61 @@
 			"Display pedestal x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5025/153_5892.jpg",
-		"/images/items/01_5025/155_5892.jpg",
-		"/images/items/01_5025/156_5892.jpg",
-		"/images/items/01_5025/157_5892.jpg",
-		"/images/items/01_5025/158_5892.jpg",
-		"/images/items/01_5025/159_5892.jpg",
-		"/images/items/01_5025/189_5892.jpg",
-		"/images/items/01_5025/190_5892.jpg",
-		"/images/items/01_5025/191_5892.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5892.jpg",
+				"path": "/images/items/01_5025/153_5892.jpg",
+				"hash": "6589aa5c8eda11958932ba09cbbead96"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5892.jpg",
+				"path": "/images/items/01_5025/155_5892.jpg",
+				"hash": "ebf096a3fe5bbbe74b1c11b471a83516"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5892.jpg",
+				"path": "/images/items/01_5025/156_5892.jpg",
+				"hash": "019322c12dfe9944fb513bd1f10d79fd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5892.jpg",
+				"path": "/images/items/01_5025/157_5892.jpg",
+				"hash": "d696b820bc33e47bb228b2c980f85238"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5892.jpg",
+				"path": "/images/items/01_5025/158_5892.jpg",
+				"hash": "fdc8a1eed37da85ffe32fc23c3eafb7a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5892.jpg",
+				"path": "/images/items/01_5025/159_5892.jpg",
+				"hash": "c409ce17013a0b46a7d9b2356415200b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5892.jpg",
+				"path": "/images/items/01_5025/189_5892.jpg",
+				"hash": "d17931fd419fadb77292259cb965d477"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5892.jpg",
+				"path": "/images/items/01_5025/190_5892.jpg",
+				"hash": "4058122d772fc287b864f8703b1484e1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5892.jpg",
+				"path": "/images/items/01_5025/191_5892.jpg",
+				"hash": "71d47cf1c9ffde8ee7a310d8ee370bf0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5025/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundambuildmetaverse"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5236",
-		"01_5235",
-		"01_5083",
-		"01_5071"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundambuildmetaverse"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5236", "01_5235", "01_5083", "01_5071"],
 	"manual": {
 		"id": "1224",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1224/"

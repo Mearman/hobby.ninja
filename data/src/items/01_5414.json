@@ -46,36 +46,38 @@
 			"３連装ミサイルポッド×1式",
 			"マーキングシール"
 		],
-		"en": [
-			"Zaku machine gun x1",
-			"Zaku Bazooka×1",
-			"Heat Hawk x1",
-			"Triple missile pod x 1",
-			"MarkingSeal"
-		]
+		"en": ["Zaku machine gun x1", "Zaku Bazooka×1", "Heat Hawk x1", "Triple missile pod x 1", "MarkingSeal"]
 	},
-	"images": [
-		"/images/items/01_5414/153_6260.jpeg",
-		"/images/items/01_5414/155_6260.jpeg",
-		"/images/items/01_5414/156_6260.jpeg",
-		"/images/items/01_5414/157_6260.jpeg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6260.jpeg",
+				"path": "/images/items/01_5414/153_6260.jpeg",
+				"hash": "43e21a6d51fbd64ab8db1f737a8f7224"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6260.jpeg",
+				"path": "/images/items/01_5414/155_6260.jpeg",
+				"hash": "8b0428a8f4c7c41a8bca99fa88b6a20b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6260.jpeg",
+				"path": "/images/items/01_5414/156_6260.jpeg",
+				"hash": "5431169e46ac369fb52c49b8b0287fdc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6260.jpeg",
+				"path": "/images/items/01_5414/157_6260.jpeg",
+				"hash": "a7371816e7846414436cfd9b04f46991"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5414/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
+	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"item-1000220190",
-		"item-1000220189",
-		"item-1000216105"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5994", "item-1000220190", "item-1000220189", "item-1000216105"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

@@ -33,45 +33,57 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"拳銃×1",
-			"手錠×1",
-			"シールド×1",
-			"警棒×1",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Handgun x 1",
-			"Handcuffs x 1",
-			"Seal × 1",
-			"Baton x 1",
-			"Foil Seal×1"
-		]
+		"ja": ["拳銃×1", "手錠×1", "シールド×1", "警棒×1", "ホイルシール×1"],
+		"en": ["Handgun x 1", "Handcuffs x 1", "Seal × 1", "Baton x 1", "Foil Seal×1"]
 	},
-	"images": [
-		"/images/items/01_3527/153_4478.jpg",
-		"/images/items/01_3527/155_4478.jpg",
-		"/images/items/01_3527/156_4478.jpg",
-		"/images/items/01_3527/157_4478.jpg",
-		"/images/items/01_3527/158_4478.jpg",
-		"/images/items/01_3527/159_4478.jpg",
-		"/images/items/01_3527/189_4478.jpg",
-		"/images/items/01_3527/190_4478.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4478.jpg",
+				"path": "/images/items/01_3527/153_4478.jpg",
+				"hash": "e3ec0090dfaaa55d64a6d759830970dc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4478.jpg",
+				"path": "/images/items/01_3527/155_4478.jpg",
+				"hash": "4face039b770d98f93d83d1810be2fdc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4478.jpg",
+				"path": "/images/items/01_3527/156_4478.jpg",
+				"hash": "a4a40aa227505ba67b741ce00509f2a8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4478.jpg",
+				"path": "/images/items/01_3527/157_4478.jpg",
+				"hash": "010816785addfc28f2adec71cad8a03e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4478.jpg",
+				"path": "/images/items/01_3527/158_4478.jpg",
+				"hash": "764e0335b1ab00fed7211d8a38232604"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4478.jpg",
+				"path": "/images/items/01_3527/159_4478.jpg",
+				"hash": "b691a2bf9ac57bc905d755606bb79f9e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4478.jpg",
+				"path": "/images/items/01_3527/189_4478.jpg",
+				"hash": "d7a3fc87c2963e2ae61cad7758623a5d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4478.jpg",
+				"path": "/images/items/01_3527/190_4478.jpg",
+				"hash": "ca4e47af3811467205df15c464053e6e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3527/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4336",
-		"01_4312",
-		"01_4634"
-	]
+	"brandIds": ["sdgundamseries"],
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
 }

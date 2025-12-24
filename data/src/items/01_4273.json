@@ -33,26 +33,36 @@
 			"• Can be transformed into a Gundam head-type mobile armor form by replacing parts."
 		]
 	},
-	"images": [
-		"/images/items/01_4273/1000179663_1.jpg",
-		"/images/items/01_4273/1000179663_2.jpg",
-		"/images/items/01_4273/1000179663_3.jpg",
-		"/images/items/01_4273/1000179663_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000179663_1.jpg",
+				"path": "/images/items/01_4273/1000179663_1.jpg",
+				"hash": "6d04975a8d626632b226056a513290bc"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000179663_2.jpg",
+				"path": "/images/items/01_4273/1000179663_2.jpg",
+				"hash": "9992d8a174fc88d2a5edd44681ebd9cc"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000179663_3.jpg",
+				"path": "/images/items/01_4273/1000179663_3.jpg",
+				"hash": "36688ded653cb6d36f9f57f2936cc1cb"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000179663_4.jpg",
+				"path": "/images/items/01_4273/1000179663_4.jpg",
+				"hash": "5965db12926c387f12ab1dba5803f2e4"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4273/",
 	"brandIds": [],
-	"seriesIds": [
-		"ggundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5544",
-		"01_5995",
-		"item-1000213247",
-		"item-1000194970"
-	],
+	"seriesIds": ["ggundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5544", "01_5995", "item-1000213247", "item-1000194970"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

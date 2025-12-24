@@ -37,21 +37,19 @@
 			"Type x 1, mounting parts x 8 <x 2 sets>"
 		]
 	},
-	"images": [
-		"/images/items/01_3601/1000076400_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000076400_1.jpg",
+				"path": "/images/items/01_3601/1000076400_1.jpg",
+				"hash": "b89633aee8050fd5b0ad14d4ec78138a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3601/",
-	"brandIds": [
-		"parts"
-	],
+	"brandIds": ["parts"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3582",
-		"01_3563",
-		"01_3564",
-		"01_636"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3582", "01_3563", "01_3564", "01_636"]
 }

@@ -35,34 +35,52 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"シール×1"
-		],
-		"en": [
-			"Seal×1"
-		]
+		"ja": ["シール×1"],
+		"en": ["Seal×1"]
 	},
-	"images": [
-		"/images/items/01_5009/1000201214_1.jpg",
-		"/images/items/01_5009/1000201214_2.jpg",
-		"/images/items/01_5009/1000201214_3.jpg",
-		"/images/items/01_5009/1000201214_4.jpg",
-		"/images/items/01_5009/1000201214_5.jpg",
-		"/images/items/01_5009/1000201214_6.jpg",
-		"/images/items/01_5009/1000201214_7.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201214_1.jpg",
+				"path": "/images/items/01_5009/1000201214_1.jpg",
+				"hash": "86e753d2f6ea86937c08167eb25ffed0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201214_2.jpg",
+				"path": "/images/items/01_5009/1000201214_2.jpg",
+				"hash": "052897876078bb5844213e9784bc848d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201214_3.jpg",
+				"path": "/images/items/01_5009/1000201214_3.jpg",
+				"hash": "cf36831f348b4a900bb6e5dd38c58acb"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201214_4.jpg",
+				"path": "/images/items/01_5009/1000201214_4.jpg",
+				"hash": "beeae51d74fe5f0ad72583d785852c01"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201214_5.jpg",
+				"path": "/images/items/01_5009/1000201214_5.jpg",
+				"hash": "ef6db06b6698da854ad35a015372f2af"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201214_6.jpg",
+				"path": "/images/items/01_5009/1000201214_6.jpg",
+				"hash": "e4454a07bb0d16060c963ea34280b6cc"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201214_7.jpg",
+				"path": "/images/items/01_5009/1000201214_7.jpg",
+				"hash": "ea951ab5b2eca23d7d892276127cb3b1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5009/",
 	"brandIds": [],
-	"seriesIds": [
-		"pokemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"seriesIds": ["pokemon"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
 }

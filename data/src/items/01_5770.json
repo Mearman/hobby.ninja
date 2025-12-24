@@ -30,16 +30,29 @@
 			"Molded product x 5, Foil Seal x 1, Tetron Seal x 1, Assembly Manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5770/153_832.jpg",
-		"/images/items/01_5770/155_832.jpg",
-		"/images/items/01_5770/156_832.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_832.jpg",
+				"path": "/images/items/01_5770/153_832.jpg",
+				"hash": "402aab8a5adb0158866d9aa6e85f541b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_832.jpg",
+				"path": "/images/items/01_5770/155_832.jpg",
+				"hash": "56964ade264cd6dc48cce23a359e8f1a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_832.jpg",
+				"path": "/images/items/01_5770/156_832.jpg",
+				"hash": "f3009cf161c788d227749cf2e6fcc470"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5770/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
+	"categoryIds": ["product-list"],
 	"relatedItemIds": []
 }

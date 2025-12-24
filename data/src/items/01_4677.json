@@ -18,29 +18,27 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"SD ガンダム GジェネレーションにRX78-2 ガンダム(Gアーマー仕様)が登場！"
-		],
-		"en": [
-			"RX78-2 Gundam (G Armor specification) is now available in SD Gundam G Generation!"
-		]
+		"ja": ["SD ガンダム GジェネレーションにRX78-2 ガンダム(Gアーマー仕様)が登場！"],
+		"en": ["RX78-2 Gundam (G Armor specification) is now available in SD Gundam G Generation!"]
 	},
-	"images": [
-		"/images/items/01_4677/153_5567.jpg",
-		"/images/items/01_4677/155_5567.JPG"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5567.jpg",
+				"path": "/images/items/01_4677/153_5567.jpg",
+				"hash": "7142a49024fea518fdf1067a9c274ec7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5567.JPG",
+				"path": "/images/items/01_4677/155_5567.JPG",
+				"hash": "3256b02aa7eac79550e567deb7c65852"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4677/",
-	"brandIds": [
-		"sdgundamseries"
-	],
+	"brandIds": ["sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
 }

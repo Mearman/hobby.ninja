@@ -27,28 +27,31 @@
 			"• The long-awaited Stark Jegan is now available as a Gundam UC series aircraft! • Reproduce the distinctive missile pod and armor. Some parts are removable. • Even with armor, you can pose freely. • Rondobell squad mark and aircraft number Seal are included. Molded product x 7, MarkingSeal x 1, Assembly Manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5666/153_733.jpg",
-		"/images/items/01_5666/155_733.jpg",
-		"/images/items/01_5666/156_733.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_733.jpg",
+				"path": "/images/items/01_5666/153_733.jpg",
+				"hash": "d906c8aadee5e5b9f7ee424f7e6003e6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_733.jpg",
+				"path": "/images/items/01_5666/155_733.jpg",
+				"hash": "ead99f6fdde8b099a3149f23eee031b4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_733.jpg",
+				"path": "/images/items/01_5666/156_733.jpg",
+				"hash": "d4db77470ea76e6005871560ba6deac6"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5666/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "921",
 		"url": "https://manual.bandai-hobby.net/menus/detail/921/"

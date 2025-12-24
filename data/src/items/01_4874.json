@@ -20,33 +20,29 @@
 	"targetAge": 15,
 	"scale": "1/60",
 	"description": {
-		"ja": [
-			"「PG 1/60 RX78-2 ガンダム(大河原邦男氏イラストイメージカラーバージョン) 」登場！"
-		],
-		"en": [
-			"\"PG 1/60 RX78-2 Gundam (Illustrated image color version by Kunio Okawara)\" is now available!"
-		]
+		"ja": ["「PG 1/60 RX78-2 ガンダム(大河原邦男氏イラストイメージカラーバージョン) 」登場！"],
+		"en": ["\"PG 1/60 RX78-2 Gundam (Illustrated image color version by Kunio Okawara)\" is now available!"]
 	},
-	"images": [
-		"/images/items/01_4874/153_5753.jpg",
-		"/images/items/01_4874/155_5753.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5753.jpg",
+				"path": "/images/items/01_4874/153_5753.jpg",
+				"hash": "eb918cc4d5e72d1403248a26d33a8adc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5753.jpg",
+				"path": "/images/items/01_4874/155_5753.jpg",
+				"hash": "3ebf974c51d3938f3f4ebe39ed2d0702"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4874/",
-	"brandIds": [
-		"pg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3373",
-		"01_3328",
-		"01_2829",
-		"01_1902"
-	],
+	"brandIds": ["pg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3373", "01_3328", "01_2829", "01_1902"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

@@ -32,27 +32,31 @@
 			"■ Includes an unfolded shield, beam magnum, and spare magazine. Molded product ×7, Foil seal ×1, Assembly instruction ×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5661/1000092282_1.jpg",
-		"/images/items/01_5661/1000092282_2.jpg",
-		"/images/items/01_5661/1000092282_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092282_1.jpg",
+				"path": "/images/items/01_5661/1000092282_1.jpg",
+				"hash": "538d2e20684c0e0128e371d5f3eec607"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092282_2.jpg",
+				"path": "/images/items/01_5661/1000092282_2.jpg",
+				"hash": "77be85b3ccec46d4cdeb35b1522e1c1c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092282_3.jpg",
+				"path": "/images/items/01_5661/1000092282_3.jpg",
+				"hash": "bc4dcf4ba152d967a2424414bdbdcd00"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5661/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6741",
-		"01_6835",
-		"01_5527",
-		"01_4986"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_6741", "01_6835", "01_5527", "01_4986"],
 	"manual": {
 		"id": "919",
 		"url": "https://manual.bandai-hobby.net/menus/detail/919/"

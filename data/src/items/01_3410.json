@@ -35,27 +35,31 @@
 			"• MarkingSeal by Hajime Katoki is included!"
 		]
 	},
-	"images": [
-		"/images/items/01_3410/153_4364.jpg",
-		"/images/items/01_3410/155_4364.jpg",
-		"/images/items/01_3410/156_4364.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4364.jpg",
+				"path": "/images/items/01_3410/153_4364.jpg",
+				"hash": "315346e7394acd8133ac18711af325d1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4364.jpg",
+				"path": "/images/items/01_3410/155_4364.jpg",
+				"hash": "a23208c10464fef53efaec6d7f78c6a9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4364.jpg",
+				"path": "/images/items/01_3410/156_4364.jpg",
+				"hash": "65e1ae1f76daa459355e5016c89dbf60"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3410/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000194972",
-		"item-1000171722",
-		"item-1000142325",
-		"01_2703"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["endlesswaltz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000194972", "item-1000171722", "item-1000142325", "01_2703"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

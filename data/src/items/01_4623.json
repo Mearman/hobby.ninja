@@ -34,25 +34,39 @@
 			"×3 types, Φ4.0 lens ×3 types, Φ5.5 lens ×3 types, each pedestal ×3 types＜×2 sets＞"
 		]
 	},
-	"images": [
-		"/images/items/01_4623/153_5518.jpg",
-		"/images/items/01_4623/155_5518.jpg",
-		"/images/items/01_4623/156_5518.jpg",
-		"/images/items/01_4623/157_5518.jpg",
-		"/images/items/01_4623/158_5518.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5518.jpg",
+				"path": "/images/items/01_4623/153_5518.jpg",
+				"hash": "358fcaf939aa4e10eaefc972cc38280a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5518.jpg",
+				"path": "/images/items/01_4623/155_5518.jpg",
+				"hash": "077dedf56e58a68c7e8db4ddcef19ab9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5518.jpg",
+				"path": "/images/items/01_4623/156_5518.jpg",
+				"hash": "34c45c1aeddfbc1936c0abc862c2970c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5518.jpg",
+				"path": "/images/items/01_4623/157_5518.jpg",
+				"hash": "7e6cfb97724b3279c7e1a8a300c65d7f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5518.jpg",
+				"path": "/images/items/01_4623/158_5518.jpg",
+				"hash": "a233c4310eda06e484b0048a87864296"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4623/",
-	"brandIds": [
-		"parts"
-	],
+	"brandIds": ["parts"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3582",
-		"01_3563",
-		"01_3564",
-		"01_636"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3582", "01_3563", "01_3564", "01_636"]
 }

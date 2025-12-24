@@ -26,25 +26,29 @@
 			"• Transformation destroy mode even in SD! Furthermore, Unicorn Gundam can be transformed into an original gimmick! • BB Senshi original gimmick! Further transformation \"Unicorn Beast Mode\"! • The characteristic full psycho frame is reproduced with clear parts! • Marking Tetron Seal for an even more realistic finish! Molded product x 5, Foil Seal x 1, Tetron Seal x 1, Assembly Manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5667/153_734.jpg",
-		"/images/items/01_5667/155_734.jpg",
-		"/images/items/01_5667/156_734.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_734.jpg",
+				"path": "/images/items/01_5667/153_734.jpg",
+				"hash": "92a21e4a6d2e60eaa1dd074c07324603"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_734.jpg",
+				"path": "/images/items/01_5667/155_734.jpg",
+				"hash": "731441faa2c8997ab87b28c5dc1ce077"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_734.jpg",
+				"path": "/images/items/01_5667/156_734.jpg",
+				"hash": "62440bccf94fe0258a2e2b03be1e47fa"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5667/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3490",
-		"01_2646",
-		"01_1932",
-		"item-1000095978"
-	]
+	"brandIds": ["bb"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3490", "01_2646", "01_1932", "item-1000095978"]
 }

@@ -25,22 +25,24 @@
 			"A special set has been released that allows you to recreate famous scenes from \"BB Senshi Sangokuden \"! A set of clear-colored Liu Bei Gundam, Zhang Fei Gundam, and Guan Yu Gundam based on the set color.The included diorama sheet is reversible, with the front side showing the \" Oath of Taoyuan\" and the back side reproducing the battle scene."
 		]
 	},
-	"images": [
-		"/images/items/01_4653/153_5545.jpg",
-		"/images/items/01_4653/155_5545.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5545.jpg",
+				"path": "/images/items/01_4653/153_5545.jpg",
+				"hash": "d11ad6360817d714404be96d2faa1488"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5545.jpg",
+				"path": "/images/items/01_4653/155_5545.jpg",
+				"hash": "7c555b5c9a62e5d1075b807a59238a48"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4653/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

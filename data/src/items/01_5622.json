@@ -27,28 +27,36 @@
 			"From \"Mobile Suit Crossbone Gundam \", the main character \" Crossbone Gundam Equipped with a sliding mechanism on the face mask to reproduce the heat dissipation state without replacing parts. Comes with a variety of equipment such as a buster gun, beam samber, brand marker, beam saber, heat dagger, scissor anchor, screw whip, and anti-beam coating cloak."
 		]
 	},
-	"images": [
-		"/images/items/01_5622/153_680.jpg",
-		"/images/items/01_5622/155_680.jpg",
-		"/images/items/01_5622/156_680.jpg",
-		"/images/items/01_5622/157_680.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_680.jpg",
+				"path": "/images/items/01_5622/153_680.jpg",
+				"hash": "335f6bbe2a5c10e51d46eeb8d7da2e05"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_680.jpg",
+				"path": "/images/items/01_5622/155_680.jpg",
+				"hash": "9d1954697ca181763aca79d34e89e66e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_680.jpg",
+				"path": "/images/items/01_5622/156_680.jpg",
+				"hash": "98d97ff1f17264b1b216531de9c7b9a5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_680.jpg",
+				"path": "/images/items/01_5622/157_680.jpg",
+				"hash": "77e5bc59d74d40b8709d2ce9ee6c9c2b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5622/",
-	"brandIds": [
-		"mgka"
-	],
-	"seriesIds": [
-		"crossbone"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000113952",
-		"item-1000163275",
-		"item-1000163274",
-		"01_1844"
-	],
+	"brandIds": ["mgka"],
+	"seriesIds": ["crossbone"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000113952", "item-1000163275", "item-1000163274", "01_1844"],
 	"manual": {
 		"id": "827",
 		"url": "https://manual.bandai-hobby.net/menus/detail/827/"

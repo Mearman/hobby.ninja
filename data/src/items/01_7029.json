@@ -30,29 +30,27 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ヘアスタイルパーツ×1"
-		],
-		"en": [
-			"Hair style parts x 1"
-		]
+		"ja": ["ヘアスタイルパーツ×1"],
+		"en": ["Hair style parts x 1"]
 	},
-	"images": [
-		"/images/items/01_7029/01_7029_0.jpg",
-		"/images/items/01_7029/01_7029_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_7029_0.jpg",
+				"path": "/images/items/01_7029/01_7029_0.jpg",
+				"hash": "a0ae05a3490f3c34668aff919ae710a7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7029_1.jpg",
+				"path": "/images/items/01_7029/01_7029_1.jpg",
+				"hash": "90a340f3bccaa8a7d7e01a55eda2136f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_7029/",
-	"brandIds": [
-		"30ms"
-	],
+	"brandIds": ["30ms"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7027",
-		"01_7028",
-		"01_7030",
-		"01_7031"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7027", "01_7028", "01_7030", "01_7031"]
 }

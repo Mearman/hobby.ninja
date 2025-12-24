@@ -31,23 +31,29 @@
 			"• Can also be combined with the already released 1/144 MS Spike 01."
 		]
 	},
-	"images": [
-		"/images/items/01_5858/153_936.jpg",
-		"/images/items/01_5858/155_936.jpg",
-		"/images/items/01_5858/156_936.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_936.jpg",
+				"path": "/images/items/01_5858/153_936.jpg",
+				"hash": "aa080ca173c84e90b77825efee879949"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_936.jpg",
+				"path": "/images/items/01_5858/155_936.jpg",
+				"hash": "94c4f4a68da35c78b60084cb7578ea8a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_936.jpg",
+				"path": "/images/items/01_5858/156_936.jpg",
+				"hash": "76db970d416a586d0d958b87a89d0e19"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5858/",
-	"brandIds": [
-		"parts"
-	],
+	"brandIds": ["parts"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3582",
-		"01_3563",
-		"01_3564",
-		"01_636"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3582", "01_3563", "01_3564", "01_636"]
 }

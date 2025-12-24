@@ -35,46 +35,62 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"モンスター（キノコ）×1",
-			"モンスター（鳥）×1",
-			"モンスター（スライム）ｘ3種",
-			"標識×1",
-			"丸太×1",
-			"岩×1"
-		],
-		"en": [
-			"Monster (mushroom) x1",
-			"Monster (bird) x1",
-			"Monster (slime) x3 types",
-			"Sign x1",
-			"Log x1",
-			"Rock x 1"
-		]
+		"ja": ["モンスター（キノコ）×1", "モンスター（鳥）×1", "モンスター（スライム）ｘ3種", "標識×1", "丸太×1", "岩×1"],
+		"en": ["Monster (mushroom) x1", "Monster (bird) x1", "Monster (slime) x3 types", "Sign x1", "Log x1", "Rock x 1"]
 	},
-	"images": [
-		"/images/items/01_6769/01_6769_0.jpg",
-		"/images/items/01_6769/01_6769_1.jpg",
-		"/images/items/01_6769/01_6769_2.jpg",
-		"/images/items/01_6769/01_6769_3.jpg",
-		"/images/items/01_6769/01_6769_4.jpg",
-		"/images/items/01_6769/01_6769_5.jpg",
-		"/images/items/01_6769/01_6769_6.jpg",
-		"/images/items/01_6769/01_6769_7.jpg",
-		"/images/items/01_6769/01_6769_8.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6769_0.jpg",
+				"path": "/images/items/01_6769/01_6769_0.jpg",
+				"hash": "94be25d0821ef80cd85fb90c045084da"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6769_1.jpg",
+				"path": "/images/items/01_6769/01_6769_1.jpg",
+				"hash": "41e8493740269ddce08ac1b550b7a744"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6769_2.jpg",
+				"path": "/images/items/01_6769/01_6769_2.jpg",
+				"hash": "03d70a7aa63f1af380ae83215ac89123"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6769_3.jpg",
+				"path": "/images/items/01_6769/01_6769_3.jpg",
+				"hash": "03851aa1096cb728407c91367dc719fe"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6769_4.jpg",
+				"path": "/images/items/01_6769/01_6769_4.jpg",
+				"hash": "e915025561d04b259a7864ba24b2e6d0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6769_5.jpg",
+				"path": "/images/items/01_6769/01_6769_5.jpg",
+				"hash": "d0cf256b21ab18f0e6d64c2535a8730d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6769_6.jpg",
+				"path": "/images/items/01_6769/01_6769_6.jpg",
+				"hash": "413d539004fec24c7bfd778692cdab26"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6769_7.jpg",
+				"path": "/images/items/01_6769/01_6769_7.jpg",
+				"hash": "bb0f54cb338f1fe427cc4f29cbf9f513"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6769_8.jpg",
+				"path": "/images/items/01_6769/01_6769_8.jpg",
+				"hash": "e3519328de2429bcfaf3ffd065d1cddb"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6769/",
-	"brandIds": [
-		"30mf"
-	],
+	"brandIds": ["30mf"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_6768",
-		"01_5978",
-		"01_5979",
-		"01_5980"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_6768", "01_5978", "01_5979", "01_5980"]
 }

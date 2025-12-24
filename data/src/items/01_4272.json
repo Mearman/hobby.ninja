@@ -39,34 +39,66 @@
 			"• A special pedestal inspired by a catapult is included."
 		]
 	},
-	"images": [
-		"/images/items/01_4272/153_5188.jpg",
-		"/images/items/01_4272/155_5188.jpg",
-		"/images/items/01_4272/156_5188.jpg",
-		"/images/items/01_4272/157_5188.jpg",
-		"/images/items/01_4272/158_5188.jpg",
-		"/images/items/01_4272/159_5188.jpg",
-		"/images/items/01_4272/189_5188.jpg",
-		"/images/items/01_4272/190_5188.jpg",
-		"/images/items/01_4272/191_5188.jpg",
-		"/images/items/01_4272/192_5188.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5188.jpg",
+				"path": "/images/items/01_4272/153_5188.jpg",
+				"hash": "bd9386d655832060b2394f57cb118fd4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5188.jpg",
+				"path": "/images/items/01_4272/155_5188.jpg",
+				"hash": "b95e4420dd7857abf1c29fbbc3f6cf08"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5188.jpg",
+				"path": "/images/items/01_4272/156_5188.jpg",
+				"hash": "5525e79eb4562cdb8deaf4d2ff7b2767"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5188.jpg",
+				"path": "/images/items/01_4272/157_5188.jpg",
+				"hash": "7ddb4f6cf594c4df41278636502d208a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5188.jpg",
+				"path": "/images/items/01_4272/158_5188.jpg",
+				"hash": "4fb9165e9f661cd11c6549e2e654d8ba"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5188.jpg",
+				"path": "/images/items/01_4272/159_5188.jpg",
+				"hash": "225ce1273c1b8d1d6edba0f5fad06d79"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5188.jpg",
+				"path": "/images/items/01_4272/189_5188.jpg",
+				"hash": "ddde344c42a3ede08059a17c75d996ed"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5188.jpg",
+				"path": "/images/items/01_4272/190_5188.jpg",
+				"hash": "9805f1b35625d971202aa3bf706b5cbc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5188.jpg",
+				"path": "/images/items/01_4272/191_5188.jpg",
+				"hash": "936ffbef4647f44de5bfa5abfa6b8c1b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5188.jpg",
+				"path": "/images/items/01_4272/192_5188.jpg",
+				"hash": "5720e44ae92219eb9880b59595eedf0c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4272/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5221",
-		"01_4195",
-		"01_4067"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5994", "01_5221", "01_4195", "01_4067"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

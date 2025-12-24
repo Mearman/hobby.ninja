@@ -38,26 +38,41 @@
 			"• The facial expressions are reproduced with one type of pad-printed part and two types of water transfer decal parts."
 		]
 	},
-	"images": [
-		"/images/items/01_6970/01_6970_0.jpg",
-		"/images/items/01_6970/01_6970_1.jpg",
-		"/images/items/01_6970/01_6970_2.jpg",
-		"/images/items/01_6970/01_6970_3.jpg",
-		"/images/items/01_6970/01_6970_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6970_0.jpg",
+				"path": "/images/items/01_6970/01_6970_0.jpg",
+				"hash": "ae821b3193fa66a7cc8334c9674c4b15"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6970_1.jpg",
+				"path": "/images/items/01_6970/01_6970_1.jpg",
+				"hash": "1e2ab7e2e0b93f2ac31f4dd755fe09b3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6970_2.jpg",
+				"path": "/images/items/01_6970/01_6970_2.jpg",
+				"hash": "33a71cd22a9114650ebb5b9914b9d700"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6970_3.jpg",
+				"path": "/images/items/01_6970/01_6970_3.jpg",
+				"hash": "12aa476219575d2b4c960f7ae89ada01"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6970_4.jpg",
+				"path": "/images/items/01_6970/01_6970_4.jpg",
+				"hash": "e6ac67c14332910aa1104a521b275500"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6970/",
-	"brandIds": [
-		"figurerise-standard"
-	],
-	"seriesIds": [
-		"gundam-zz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5454"
-	],
+	"brandIds": ["figurerise-standard"],
+	"seriesIds": ["gundam-zz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5454"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

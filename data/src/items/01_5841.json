@@ -35,24 +35,31 @@
 			"■ Comes with weapons such as beam rifles and shields with additional details unique to RG."
 		]
 	},
-	"images": [
-		"/images/items/01_5841/1000082805_1.jpg",
-		"/images/items/01_5841/1000082805_2.jpg",
-		"/images/items/01_5841/1000082805_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000082805_1.jpg",
+				"path": "/images/items/01_5841/1000082805_1.jpg",
+				"hash": "8cc0a6fef28dcf089b3bee78b5ed2d0a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000082805_2.jpg",
+				"path": "/images/items/01_5841/1000082805_2.jpg",
+				"hash": "f86c83287a47117cbbd38fecc8b02bda"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000082805_3.jpg",
+				"path": "/images/items/01_5841/1000082805_3.jpg",
+				"hash": "1947eaf4d573df9b1897ac0258b4bdd5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5841/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"g-0083"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5840"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["g-0083"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5840"],
 	"manual": {
 		"id": "665",
 		"url": "https://manual.bandai-hobby.net/menus/detail/665/"

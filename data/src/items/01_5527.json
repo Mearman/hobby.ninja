@@ -37,30 +37,46 @@
 			"• Make use of the movable structure of the whole body to create impressive poses!"
 		]
 	},
-	"images": [
-		"/images/items/01_5527/153_6367.jpg",
-		"/images/items/01_5527/155_6367.jpg",
-		"/images/items/01_5527/156_6367.jpg",
-		"/images/items/01_5527/157_6367.jpg",
-		"/images/items/01_5527/158_6367.jpg",
-		"/images/items/01_5527/159_6367.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6367.jpg",
+				"path": "/images/items/01_5527/153_6367.jpg",
+				"hash": "676431d6d63336f1731c86c3ba8a455e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6367.jpg",
+				"path": "/images/items/01_5527/155_6367.jpg",
+				"hash": "17b74154e8e6527d252062f3e35a0707"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6367.jpg",
+				"path": "/images/items/01_5527/156_6367.jpg",
+				"hash": "a1029da3201efe6063c43f070f2a4ba7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6367.jpg",
+				"path": "/images/items/01_5527/157_6367.jpg",
+				"hash": "a12d93b65f9eba5820732e3736603161"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6367.jpg",
+				"path": "/images/items/01_5527/158_6367.jpg",
+				"hash": "ce53725e10a43903e50d439ed90f12a2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6367.jpg",
+				"path": "/images/items/01_5527/159_6367.jpg",
+				"hash": "639e27b7834387fa43eacbeda91f01af"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5527/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4986",
-		"01_4971",
-		"item-1000163998",
-		"item-1000164004"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4986", "01_4971", "item-1000163998", "item-1000164004"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

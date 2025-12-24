@@ -20,32 +20,24 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HG 1/144 ガンダム G-セルフ（大気圏用パック装備型）カラークリアVer.登場！"
-		],
-		"en": [
-			"HG 1/144 Gundam G-Self (equipped with atmosphere pack) Color Clear Ver. is now available!"
-		]
+		"ja": ["HG 1/144 ガンダム G-セルフ（大気圏用パック装備型）カラークリアVer.登場！"],
+		"en": ["HG 1/144 Gundam G-Self (equipped with atmosphere pack) Color Clear Ver. is now available!"]
 	},
-	"images": [
-		"/images/items/01_4814/153_5698.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5698.jpg",
+				"path": "/images/items/01_4814/153_5698.jpg",
+				"hash": "5fe6b17cd20e09679a4ba8b47fc863a7"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4814/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"g-reco"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5515",
-		"item-1000098380",
-		"01_390",
-		"01_363"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["g-reco"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5515", "item-1000098380", "01_390", "01_363"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

@@ -25,21 +25,24 @@
 			"\"Sparkle Clear Green \" inspired by Gundam from \" Mobile Suit Gundam 00\" is now available on Action Base 2! The pedestal containing the mechanical mold can be connected. The height and orientation of the post to which the kit is attached can be adjusted. Interlocks with action base 1, remove the pillar and joint to action base 1."
 		]
 	},
-	"images": [
-		"/images/items/01_4513/153_5415.jpg",
-		"/images/items/01_4513/155_5415.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5415.jpg",
+				"path": "/images/items/01_4513/153_5415.jpg",
+				"hash": "5190ae1149c0aace3dec858936479368"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5415.jpg",
+				"path": "/images/items/01_4513/155_5415.jpg",
+				"hash": "2f2905e6e9a70ad32edd8356e7ccfa83"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4513/",
-	"brandIds": [
-		"actionbase"
-	],
+	"brandIds": ["actionbase"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5934",
-		"01_5256",
-		"01_5258"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5934", "01_5256", "01_5258"]
 }

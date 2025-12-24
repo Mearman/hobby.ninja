@@ -36,42 +36,64 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ハンドパーツ×1式",
-			"シール×1"
-		],
-		"en": [
-			"Hand parts x 1 set",
-			"Seal×1"
-		]
+		"ja": ["ハンドパーツ×1式", "シール×1"],
+		"en": ["Hand parts x 1 set", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_4291/153_5204.jpg",
-		"/images/items/01_4291/155_5204.jpg",
-		"/images/items/01_4291/156_5204.jpg",
-		"/images/items/01_4291/157_5204.jpg",
-		"/images/items/01_4291/158_5204.jpg",
-		"/images/items/01_4291/159_5204.jpg",
-		"/images/items/01_4291/189_5204.jpg",
-		"/images/items/01_4291/190_5204.jpg",
-		"/images/items/01_4291/01_4291_inst_0.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5204.jpg",
+				"path": "/images/items/01_4291/153_5204.jpg",
+				"hash": "d1b653eb97004bc15abed24fd00e6abc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5204.jpg",
+				"path": "/images/items/01_4291/155_5204.jpg",
+				"hash": "e10b1532a4087669280ce464e9f47429"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5204.jpg",
+				"path": "/images/items/01_4291/156_5204.jpg",
+				"hash": "83cdb4d542072a085dee22646d481c62"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5204.jpg",
+				"path": "/images/items/01_4291/157_5204.jpg",
+				"hash": "5f20ec602a6d419f1526188c89af138b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5204.jpg",
+				"path": "/images/items/01_4291/158_5204.jpg",
+				"hash": "fe7750c961ffef86c2fbc73977c657f2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5204.jpg",
+				"path": "/images/items/01_4291/159_5204.jpg",
+				"hash": "9c15cc0ca48fe8d0dda0b20866d67d97"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5204.jpg",
+				"path": "/images/items/01_4291/189_5204.jpg",
+				"hash": "bbeea926321550bb4ee3451e11cb3ca1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5204.jpg",
+				"path": "/images/items/01_4291/190_5204.jpg",
+				"hash": "0ef05e6848cb7210d133ce2d4cc95318"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4291_inst_0.jpg",
+				"path": "/images/items/01_4291/01_4291_inst_0.jpg",
+				"hash": "56688bbd4da29cbe5f71b04003c4b4ff"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4291/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"g-witch"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216474",
-		"item-1000211616",
-		"01_5422",
-		"item-1000203129"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["g-witch"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203129"],
 	"manual": {
 		"id": "138",
 		"url": "https://manual.bandai-hobby.net/menus/detail/138/"

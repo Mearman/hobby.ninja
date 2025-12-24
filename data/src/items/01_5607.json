@@ -27,29 +27,36 @@
 			"From the popular series \"Mobile Suit Gundam 0083 Stardust Memory \", \" RX-78 GP-02A Gundam Prototype Unit 2\" is now available in the HGUC series. By pursuing the range of motion, it is possible to reproduce the flying form with the binders on both shoulders deployed. The atomic bazooka reproduces the gimmick that connects the base of the right shoulder and the gun barrel stored in the seal, and can also be held in flying form. By pursuing the shape of the wrist and elbow joint, the arm can hold the bazooka in a natural form. By replacing the joint parts that connect the included display stand and the main body, you can recreate the confrontation scene with Gundam GP01Fb."
 		]
 	},
-	"images": [
-		"/images/items/01_5607/153_656.jpg",
-		"/images/items/01_5607/155_656.jpg",
-		"/images/items/01_5607/156_656.jpg",
-		"/images/items/01_5607/157_656.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_656.jpg",
+				"path": "/images/items/01_5607/153_656.jpg",
+				"hash": "00738bb5baa1396be57b536aef469dff"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_656.jpg",
+				"path": "/images/items/01_5607/155_656.jpg",
+				"hash": "7c1f9a9a04f80979d3ab471795455b7a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_656.jpg",
+				"path": "/images/items/01_5607/156_656.jpg",
+				"hash": "47974a4ffc76340f9e45fc7730d7e718"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_656.jpg",
+				"path": "/images/items/01_5607/157_656.jpg",
+				"hash": "181b41d79de5aebfc0cda82860d228e6"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5607/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"g-0083"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000102912",
-		"item-1000102910",
-		"item-1000115500",
-		"01_5843"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["g-0083"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000102912", "item-1000102910", "item-1000115500", "01_5843"],
 	"manual": {
 		"id": "898",
 		"url": "https://manual.bandai-hobby.net/menus/detail/898/"

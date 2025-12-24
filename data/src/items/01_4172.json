@@ -35,44 +35,72 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"マント×1式",
-			"ダガー×1",
-			"SDW HEROES  ナイトストライクガンダム用盾×1",
-			"シール×1"
-		],
-		"en": [
-			"Cloak x 1 set",
-			"Dagger x 1",
-			"SDW HEROES Night Strike Gundam shield x 1",
-			"Seal×1"
-		]
+		"ja": ["マント×1式", "ダガー×1", "SDW HEROES  ナイトストライクガンダム用盾×1", "シール×1"],
+		"en": ["Cloak x 1 set", "Dagger x 1", "SDW HEROES Night Strike Gundam shield x 1", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_4172/153_5095.jpg",
-		"/images/items/01_4172/155_5095.jpg",
-		"/images/items/01_4172/156_5095.jpg",
-		"/images/items/01_4172/157_5095.jpg",
-		"/images/items/01_4172/158_5095.jpg",
-		"/images/items/01_4172/159_5095.jpg",
-		"/images/items/01_4172/189_5095.jpg",
-		"/images/items/01_4172/190_5095.jpg",
-		"/images/items/01_4172/191_5095.jpg",
-		"/images/items/01_4172/192_5095.jpg",
-		"/images/items/01_4172/193_5095.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5095.jpg",
+				"path": "/images/items/01_4172/153_5095.jpg",
+				"hash": "af03449f73be8f9c770deaa201d03732"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5095.jpg",
+				"path": "/images/items/01_4172/155_5095.jpg",
+				"hash": "1a114d71250d5809bf6e14b290f77e31"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5095.jpg",
+				"path": "/images/items/01_4172/156_5095.jpg",
+				"hash": "d34dca9d81f5c8d74601e4276dbc424b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5095.jpg",
+				"path": "/images/items/01_4172/157_5095.jpg",
+				"hash": "837bf5d0d4b5339ac3f5f83c2cd39ff9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5095.jpg",
+				"path": "/images/items/01_4172/158_5095.jpg",
+				"hash": "f53426ae8ffb0e84e8acd7904439bce0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5095.jpg",
+				"path": "/images/items/01_4172/159_5095.jpg",
+				"hash": "b6b3c325dba63fd65e27fbec3831532f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5095.jpg",
+				"path": "/images/items/01_4172/189_5095.jpg",
+				"hash": "a62651b9755ab4b6636182708ac75813"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5095.jpg",
+				"path": "/images/items/01_4172/190_5095.jpg",
+				"hash": "426c208876ceebc9505031c2932c86dd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5095.jpg",
+				"path": "/images/items/01_4172/191_5095.jpg",
+				"hash": "5f54f8c92bc95743fc702f9d2671996e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5095.jpg",
+				"path": "/images/items/01_4172/192_5095.jpg",
+				"hash": "e061d364e1426f8219f19297b1d91266"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_5095.jpg",
+				"path": "/images/items/01_4172/193_5095.jpg",
+				"hash": "44f53d9012df17168b2c1e55be8eaf1c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4172/",
 	"brandIds": [],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5470",
-		"01_5471",
-		"01_5472",
-		"01_5347"
-	]
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
 }

@@ -20,35 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HGUC 1/144 RX-93 νガンダム Ver.GFT　登場！"
-		],
-		"en": [
-			"HGUC 1/144 RX-93 νGundam Ver.GFT is now available!"
-		]
+		"ja": ["HGUC 1/144 RX-93 νガンダム Ver.GFT　登場！"],
+		"en": ["HGUC 1/144 RX-93 νGundam Ver.GFT is now available!"]
 	},
-	"images": [
-		"/images/items/01_4771/153_5654.jpg",
-		"/images/items/01_4771/155_5654.jpg",
-		"/images/items/01_4771/156_5654.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5654.jpg",
+				"path": "/images/items/01_4771/153_5654.jpg",
+				"hash": "b8cac1289ff28350545fa7e1755dc7e9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5654.jpg",
+				"path": "/images/items/01_4771/155_5654.jpg",
+				"hash": "0add3391fc27a884c0a2b33f47a52cde"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5654.jpg",
+				"path": "/images/items/01_4771/156_5654.jpg",
+				"hash": "2e7f1da643782f3adf9456cf5b87ed14"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4771/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5346",
-		"01_5210",
-		"01_4971",
-		"01_4408"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5346", "01_5210", "01_4971", "01_4408"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

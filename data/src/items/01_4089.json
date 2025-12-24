@@ -34,41 +34,61 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ハンドパーツ 武器持ち手(左右)、平手(左右)",
-			"ライフル(グレネードランチャー装備)×１",
-			"シール×１"
-		],
+		"ja": ["ハンドパーツ 武器持ち手(左右)、平手(左右)", "ライフル(グレネードランチャー装備)×１", "シール×１"],
 		"en": [
 			"Hand parts Weapon handle (left and right), open hand (left and right)",
 			"Rifle (equipped with grenade launcher) x 1",
 			"Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_4089/153_5013.jpg",
-		"/images/items/01_4089/155_5013.jpg",
-		"/images/items/01_4089/156_5013.jpg",
-		"/images/items/01_4089/157_5013.jpg",
-		"/images/items/01_4089/158_5013.jpg",
-		"/images/items/01_4089/159_5013.jpg",
-		"/images/items/01_4089/189_5013.jpg",
-		"/images/items/01_4089/190_5013.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5013.jpg",
+				"path": "/images/items/01_4089/153_5013.jpg",
+				"hash": "9b307377b0b809489673710814bda621"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5013.jpg",
+				"path": "/images/items/01_4089/155_5013.jpg",
+				"hash": "ec9639e00ff5a6e39aa58c380459347d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5013.jpg",
+				"path": "/images/items/01_4089/156_5013.jpg",
+				"hash": "6322e406a5b4a9318f30ce0902be9f98"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5013.jpg",
+				"path": "/images/items/01_4089/157_5013.jpg",
+				"hash": "79ee9bfb16170b54c1652e1cee25c221"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5013.jpg",
+				"path": "/images/items/01_4089/158_5013.jpg",
+				"hash": "b1994db6276e6be1499329117b05910b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5013.jpg",
+				"path": "/images/items/01_4089/159_5013.jpg",
+				"hash": "2cb077d5a1117c3492183c45cf334833"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5013.jpg",
+				"path": "/images/items/01_4089/189_5013.jpg",
+				"hash": "4f28080d55d3c9d71d47e93734b1eebc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5013.jpg",
+				"path": "/images/items/01_4089/190_5013.jpg",
+				"hash": "725ffc404866ef49e921a3235306db8c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4089/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"kyoukaisenki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5196",
-		"01_5183",
-		"01_5170",
-		"01_5171"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["kyoukaisenki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
 }

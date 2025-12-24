@@ -18,23 +18,19 @@
 		"day": 1
 	},
 	"targetAge": 15,
-	"images": [
-		"/images/items/01_5807/153_87.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_87.jpg",
+				"path": "/images/items/01_5807/153_87.jpg",
+				"hash": "896d7cdb97265dec7a2678e7559cbda5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5807/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"ggundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2322",
-		"01_1980",
-		"01_5846",
-		"01_5828"
-	]
+	"brandIds": ["bb"],
+	"seriesIds": ["ggundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2322", "01_1980", "01_5846", "01_5828"]
 }

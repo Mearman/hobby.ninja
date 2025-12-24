@@ -28,24 +28,36 @@
 			"■ Reproduce the original armament of the anime version. The Psycho Frame can be seen through the gaps in the armor."
 		]
 	},
-	"images": [
-		"/images/items/01_5727/1000092285_1.jpg",
-		"/images/items/01_5727/1000092285_2.jpg",
-		"/images/items/01_5727/1000092285_3.jpg",
-		"/images/items/01_5727/1000092285_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092285_1.jpg",
+				"path": "/images/items/01_5727/1000092285_1.jpg",
+				"hash": "90f2d54c28cfdce27fdcfcd72db211ae"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092285_2.jpg",
+				"path": "/images/items/01_5727/1000092285_2.jpg",
+				"hash": "c500f005a945ae3e9ad7f75a67270a91"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092285_3.jpg",
+				"path": "/images/items/01_5727/1000092285_3.jpg",
+				"hash": "6c413f4bf1c88a1c0e864f12bf2b5517"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092285_4.jpg",
+				"path": "/images/items/01_5727/1000092285_4.jpg",
+				"hash": "af869f19ae96d714889095ab3f1ef28d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5727/",
 	"brandIds": [],
-	"seriesIds": [
-		"unicorn"
-	],
+	"seriesIds": ["unicorn"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "441",
 		"url": "https://manual.bandai-hobby.net/menus/detail/441/"

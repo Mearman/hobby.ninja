@@ -46,31 +46,37 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ロイロイ×2種"
-		],
-		"en": [
-			"Loi Loi x 2 types"
-		]
+		"ja": ["ロイロイ×2種"],
+		"en": ["Loi Loi x 2 types"]
 	},
-	"images": [
-		"/images/items/01_5972/01_5972_0.jpg",
-		"/images/items/01_5972/01_5972_1.jpg",
-		"/images/items/01_5972/01_5972_2.jpg",
-		"/images/items/01_5972/01_5972_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5972_0.jpg",
+				"path": "/images/items/01_5972/01_5972_0.jpg",
+				"hash": "6e72c1fac93583adf2c9af460796fc9e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5972_1.jpg",
+				"path": "/images/items/01_5972/01_5972_1.jpg",
+				"hash": "8789f1b3135e43aecec802a75ec07fd4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5972_2.jpg",
+				"path": "/images/items/01_5972/01_5972_2.jpg",
+				"hash": "81af18e05189c8e5fd2bd9d230f46fff"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5972_3.jpg",
+				"path": "/images/items/01_5972/01_5972_3.jpg",
+				"hash": "0f4fa0debbb86be95ec729e185bfe528"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5972/",
-	"brandIds": [
-		"30mm"
-	],
+	"brandIds": ["30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5973",
-		"01_5974",
-		"01_5964",
-		"01_5965"
-	]
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5973", "01_5974", "01_5964", "01_5965"]
 }

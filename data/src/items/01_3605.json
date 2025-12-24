@@ -27,28 +27,36 @@
 			"• A new MS developed by analyzing Gundam AGE-3 and adding Vagan technology. • Regill core and body can be separated. • You can choose from two eye designs: Vegan type and Gundam type. • Seal can reproduce the opening/closing gimmick during bit injection by replacing parts. Molded product x 7, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_3605/153_4560.jpg",
-		"/images/items/01_3605/155_4560.jpg",
-		"/images/items/01_3605/156_4560.jpg",
-		"/images/items/01_3605/157_4560.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4560.jpg",
+				"path": "/images/items/01_3605/153_4560.jpg",
+				"hash": "59cbbe978f28c78c12c4e96e163b3f8d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4560.jpg",
+				"path": "/images/items/01_3605/155_4560.jpg",
+				"hash": "ba060b4634bc7767a7614ac006e3a210"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4560.jpg",
+				"path": "/images/items/01_3605/156_4560.jpg",
+				"hash": "b7e88c2614881f711ec3d78db5dbd15a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4560.jpg",
+				"path": "/images/items/01_3605/157_4560.jpg",
+				"hash": "9a6469bca95aaaca9db77d08685764d8"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3605/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "353",
 		"url": "https://manual.bandai-hobby.net/menus/detail/353/"

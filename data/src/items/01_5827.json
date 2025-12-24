@@ -33,22 +33,34 @@
 			"• Mecha collection size Salver S-Vl is included. The total length is approximately 75mm, and the gun barrel can be moved up and down."
 		]
 	},
-	"images": [
-		"/images/items/01_5827/153_899.jpg",
-		"/images/items/01_5827/155_899.jpg",
-		"/images/items/01_5827/156_899.jpg",
-		"/images/items/01_5827/157_899.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_899.jpg",
+				"path": "/images/items/01_5827/153_899.jpg",
+				"hash": "2644bc98df54971e8bc839de518acd85"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_899.jpg",
+				"path": "/images/items/01_5827/155_899.jpg",
+				"hash": "74b3ab20cbdfe5b967ef5887e3dba281"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_899.jpg",
+				"path": "/images/items/01_5827/156_899.jpg",
+				"hash": "6dd694df167892fa2ffd614766d29b1a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_899.jpg",
+				"path": "/images/items/01_5827/157_899.jpg",
+				"hash": "3bb1c23155127b368373eeafbb41a268"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5827/",
 	"brandIds": [],
-	"seriesIds": [
-		"yamato"
-	],
+	"seriesIds": ["yamato"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5971",
-		"01_5498",
-		"01_5500",
-		"01_5388"
-	]
+	"relatedItemIds": ["01_5971", "01_5498", "01_5500", "01_5388"]
 }

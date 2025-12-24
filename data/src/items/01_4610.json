@@ -27,27 +27,31 @@
 			"• A new form led by the AGE system. \"Gundam AGE-2 Double Bullet\" is now available in the HG series. Molded product x 7, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4610/153_5506.jpg",
-		"/images/items/01_4610/155_5506.jpg",
-		"/images/items/01_4610/156_5506.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5506.jpg",
+				"path": "/images/items/01_4610/153_5506.jpg",
+				"hash": "b4baa43b2457086221b06f9cbc0b7331"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5506.jpg",
+				"path": "/images/items/01_4610/155_5506.jpg",
+				"hash": "5aff00463b2524bce5a0652435601277"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5506.jpg",
+				"path": "/images/items/01_4610/156_5506.jpg",
+				"hash": "f5ace3033632204351d0dca0b6c1d5b6"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4610/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "943",
 		"url": "https://manual.bandai-hobby.net/menus/detail/943/"

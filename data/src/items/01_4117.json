@@ -111,44 +111,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"サブアーム",
-			"クラッキングケーブル"
-		],
-		"en": [
-			"sub arm",
-			"cracking cable"
-		]
+		"ja": ["サブアーム", "クラッキングケーブル"],
+		"en": ["sub arm", "cracking cable"]
 	},
-	"images": [
-		"/images/items/01_4117/153_5045.jpg",
-		"/images/items/01_4117/155_5045.jpg",
-		"/images/items/01_4117/156_5045.jpg",
-		"/images/items/01_4117/157_5045.jpg",
-		"/images/items/01_4117/158_5045.jpg",
-		"/images/items/01_4117/159_5045.jpg",
-		"/images/items/01_4117/189_5045.jpg",
-		"/images/items/01_4117/190_5045.jpg",
-		"/images/items/01_4117/191_5045.jpg",
-		"/images/items/01_4117/192_5045.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5045.jpg",
+				"path": "/images/items/01_4117/153_5045.jpg",
+				"hash": "9f90d3bb280463ea2014353cbdb297ea"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5045.jpg",
+				"path": "/images/items/01_4117/155_5045.jpg",
+				"hash": "f6cc78882cd9de34b1adfe5686a2a475"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5045.jpg",
+				"path": "/images/items/01_4117/156_5045.jpg",
+				"hash": "b1f5049f7188f1a2c414e18309a4fa86"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5045.jpg",
+				"path": "/images/items/01_4117/157_5045.jpg",
+				"hash": "3966fed3ab1400d94b625fdb779ea1e6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5045.jpg",
+				"path": "/images/items/01_4117/158_5045.jpg",
+				"hash": "1f65793e39d0d10e3fdb87ad052203f9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5045.jpg",
+				"path": "/images/items/01_4117/159_5045.jpg",
+				"hash": "74112ac9babbe01872ded48aa7ddbf08"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5045.jpg",
+				"path": "/images/items/01_4117/189_5045.jpg",
+				"hash": "93227699b19ea5fdc988b66975a062fd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5045.jpg",
+				"path": "/images/items/01_4117/190_5045.jpg",
+				"hash": "80022c76dcd442d3052a8e1fb2cd1f44"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5045.jpg",
+				"path": "/images/items/01_4117/191_5045.jpg",
+				"hash": "8ca01fac3b53c37d09c9dca1e5e7430a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5045.jpg",
+				"path": "/images/items/01_4117/192_5045.jpg",
+				"hash": "4c4f926dc1f3a55ff0328b67ada50197"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4117/",
-	"brandIds": [
-		"pb_charapla",
-		"hg"
-	],
-	"seriesIds": [
-		"kyoukaisenki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5196",
-		"01_5183",
-		"01_5170",
-		"01_5171"
-	],
+	"brandIds": ["pb_charapla", "hg"],
+	"seriesIds": ["kyoukaisenki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

@@ -31,27 +31,49 @@
 			"The beam saber can be mounted as a cannon by changing its mounting position."
 		]
 	},
-	"images": [
-		"/images/items/01_5338/153_6190.jpg",
-		"/images/items/01_5338/155_6190.jpg",
-		"/images/items/01_5338/156_6190.jpg",
-		"/images/items/01_5338/157_6190.jpg",
-		"/images/items/01_5338/158_6190.jpg",
-		"/images/items/01_5338/159_6190.jpg",
-		"/images/items/01_5338/189_6190.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6190.jpg",
+				"path": "/images/items/01_5338/153_6190.jpg",
+				"hash": "6777f61820e2df5debcc2c55f49879d5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6190.jpg",
+				"path": "/images/items/01_5338/155_6190.jpg",
+				"hash": "6ef20c06412959262c1e30c66493002c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6190.jpg",
+				"path": "/images/items/01_5338/156_6190.jpg",
+				"hash": "c00ade80c2263d2b4f88c4c97bbe21aa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6190.jpg",
+				"path": "/images/items/01_5338/157_6190.jpg",
+				"hash": "c393a706613f5c9b0f223d21c093a115"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6190.jpg",
+				"path": "/images/items/01_5338/158_6190.jpg",
+				"hash": "da23cd8fb8e779378c29df245824d781"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6190.jpg",
+				"path": "/images/items/01_5338/159_6190.jpg",
+				"hash": "624de0ecce19026ea29a10adeed0c4e0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6190.jpg",
+				"path": "/images/items/01_5338/189_6190.jpg",
+				"hash": "0f6e90c59c663325c2a65aacfd805c56"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5338/",
 	"brandIds": [],
-	"seriesIds": [
-		"keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7034",
-		"01_2120",
-		"01_2122",
-		"01_2104"
-	]
+	"seriesIds": ["keroro"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7034", "01_2120", "01_2122", "01_2104"]
 }

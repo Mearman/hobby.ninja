@@ -26,22 +26,24 @@
 			"The aircraft that appeared on the TV \"Mobile New Century Gundam X\" has been made into a kit. By replacing the head parts and fighter nose, the transformation mechanism of mobile suit mode and fighter mode can be reproduced. The two buster rifles can be mounted on the forearm in mobile suit mode, and on the side armor in fighter mode. The shoulder armor can reproduce the wing deployment mechanism."
 		]
 	},
-	"images": [
-		"/images/items/01_4709/153_5597.jpg",
-		"/images/items/01_4709/155_5597.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5597.jpg",
+				"path": "/images/items/01_4709/153_5597.jpg",
+				"hash": "6b4ed1b3ec6b253b6127384f56846b67"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5597.jpg",
+				"path": "/images/items/01_4709/155_5597.jpg",
+				"hash": "342e0627a7c998746ec17c3170ae3cf8"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4709/",
 	"brandIds": [],
-	"seriesIds": [
-		"x"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000147185",
-		"item-1000147187",
-		"item-1000124674",
-		"01_298"
-	]
+	"seriesIds": ["x"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000147185", "item-1000147187", "item-1000124674", "01_298"]
 }

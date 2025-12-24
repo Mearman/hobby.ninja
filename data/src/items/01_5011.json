@@ -35,42 +35,72 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"日輪刀×2",
-			"素顔パーツ(タンポ印刷)×1",
-			"シール×1"
-		],
-		"en": [
-			"Ring sword x2",
-			"Real face parts (tampo printing) x 1",
-			"Seal×1"
-		]
+		"ja": ["日輪刀×2", "素顔パーツ(タンポ印刷)×1", "シール×1"],
+		"en": ["Ring sword x2", "Real face parts (tampo printing) x 1", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_5011/153_5879.jpg",
-		"/images/items/01_5011/155_5879.jpg",
-		"/images/items/01_5011/156_5879.jpg",
-		"/images/items/01_5011/157_5879.jpg",
-		"/images/items/01_5011/158_5879.jpg",
-		"/images/items/01_5011/159_5879.jpg",
-		"/images/items/01_5011/189_5879.jpg",
-		"/images/items/01_5011/190_5879.jpg",
-		"/images/items/01_5011/191_5879.jpg",
-		"/images/items/01_5011/192_5879.jpg",
-		"/images/items/01_5011/193_5879.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5879.jpg",
+				"path": "/images/items/01_5011/153_5879.jpg",
+				"hash": "d2515a5affd055dbe433399f98b9f853"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5879.jpg",
+				"path": "/images/items/01_5011/155_5879.jpg",
+				"hash": "729a0e3516cf4424e71783c097408fdd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5879.jpg",
+				"path": "/images/items/01_5011/156_5879.jpg",
+				"hash": "5519fa68b97fab9f7aad04d0122afa4a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5879.jpg",
+				"path": "/images/items/01_5011/157_5879.jpg",
+				"hash": "66aaf326899173dd47ab7856c9345280"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5879.jpg",
+				"path": "/images/items/01_5011/158_5879.jpg",
+				"hash": "8b533747f5337a4deac530d965bbad13"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5879.jpg",
+				"path": "/images/items/01_5011/159_5879.jpg",
+				"hash": "b76d89e76e962dd6f0cdcd0ff0024382"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5879.jpg",
+				"path": "/images/items/01_5011/189_5879.jpg",
+				"hash": "5a475baafe656b9fed3b9d2c503b0191"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5879.jpg",
+				"path": "/images/items/01_5011/190_5879.jpg",
+				"hash": "4c5d33f1712d8165e78139b5b3e0ffc7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5879.jpg",
+				"path": "/images/items/01_5011/191_5879.jpg",
+				"hash": "e18349c0ba45fed881bec1a8d7146237"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5879.jpg",
+				"path": "/images/items/01_5011/192_5879.jpg",
+				"hash": "5d277dcec3e222c9ef53448f55acec17"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_5879.jpg",
+				"path": "/images/items/01_5011/193_5879.jpg",
+				"hash": "ee15ae153ea67d6a171f6bc0fe4ae49d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5011/",
 	"brandIds": [],
-	"seriesIds": [
-		"kimetsu"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5101",
-		"01_4391",
-		"01_3889",
-		"01_3521"
-	]
+	"seriesIds": ["kimetsu"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5101", "01_4391", "01_3889", "01_3521"]
 }

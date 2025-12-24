@@ -35,37 +35,57 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"槍×2種",
-			"コマンドパッケージ再現用パーツ×1式",
-			"シール×1"
-		],
-		"en": [
-			"Spear x 2 types",
-			"Command package reproduction parts x 1 set",
-			"Seal×1"
-		]
+		"ja": ["槍×2種", "コマンドパッケージ再現用パーツ×1式", "シール×1"],
+		"en": ["Spear x 2 types", "Command package reproduction parts x 1 set", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_4180/1000175349_1.jpg",
-		"/images/items/01_4180/1000175349_2.jpg",
-		"/images/items/01_4180/1000175349_3.jpg",
-		"/images/items/01_4180/1000175349_4.jpg",
-		"/images/items/01_4180/1000175349_5.jpg",
-		"/images/items/01_4180/1000175349_6.jpg",
-		"/images/items/01_4180/1000175349_7.jpg",
-		"/images/items/01_4180/1000175349_8.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175349_1.jpg",
+				"path": "/images/items/01_4180/1000175349_1.jpg",
+				"hash": "1082583e88182c6f8ca2805b3fa20371"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175349_2.jpg",
+				"path": "/images/items/01_4180/1000175349_2.jpg",
+				"hash": "f81ff814f92298e828a1b0dd29ab2e6c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175349_3.jpg",
+				"path": "/images/items/01_4180/1000175349_3.jpg",
+				"hash": "60061e9aad88ec6752944cbcff7c887e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175349_4.jpg",
+				"path": "/images/items/01_4180/1000175349_4.jpg",
+				"hash": "eb78ef10d6f0f7abb47ab12bd0ac0448"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175349_5.jpg",
+				"path": "/images/items/01_4180/1000175349_5.jpg",
+				"hash": "3ca8fa1723b7a3bd170080839761d0ea"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175349_6.jpg",
+				"path": "/images/items/01_4180/1000175349_6.jpg",
+				"hash": "38955b03810824a39017bc7a2893c2dc"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175349_7.jpg",
+				"path": "/images/items/01_4180/1000175349_7.jpg",
+				"hash": "136bfcda792ea6650cf50ca201a37f85"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175349_8.jpg",
+				"path": "/images/items/01_4180/1000175349_8.jpg",
+				"hash": "b917a2d48450bd1affdef04b940c9955"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4180/",
 	"brandIds": [],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
+	"seriesIds": ["sdgundamworld_heroes"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5470",
-		"01_5471",
-		"01_5472",
-		"01_5347"
-	]
+	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
 }

@@ -26,20 +26,24 @@
 			"Gouf Custom, a popular MS in \"Mobile Suit Gundam 08th MS Platoon\", is modeled in 1/144 scale. The head mono-eye is reproduced with Seal. The shoulder armor is connected by a polycap and can be moved and removed. The heat rod on the right forearm is reproduced with a lead wire and can be attached and detached. Comes with a variety of weapons such as 3-association 35mm Gatling gun, Gatling Seal, normal Seal, and heat saber. Heat saber can be mounted on Gatling Seal. The left wrist can be replaced with a 5-barreled machine gun type item."
 		]
 	},
-	"images": [
-		"/images/items/01_4725/153_5610.jpg",
-		"/images/items/01_4725/155_5610.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5610.jpg",
+				"path": "/images/items/01_4725/153_5610.jpg",
+				"hash": "02efd447f9bace3b8b4ee75d7d4f718d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5610.jpg",
+				"path": "/images/items/01_4725/155_5610.jpg",
+				"hash": "dcafd4b1d29d7738a88f34498398fe2e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4725/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5986",
-		"01_5987",
-		"01_5988"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5986", "01_5987", "01_5988"]
 }

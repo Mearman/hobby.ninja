@@ -27,23 +27,29 @@
 			"• \"AGE-2 Double Bullet \", the \" evolution \" form of AGE-2 presented by the AGE system, is now available in AG. • \" Touch gate \" allows parts to be removed by hand without using tools. • \" Iropla \" creates a colorful finish just by assembling it. • \" Block build\" allows for intuitive and quick assembly."
 		]
 	},
-	"images": [
-		"/images/items/01_4609/153_5505.jpg",
-		"/images/items/01_4609/155_5505.jpg",
-		"/images/items/01_4609/156_5505.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5505.jpg",
+				"path": "/images/items/01_4609/153_5505.jpg",
+				"hash": "6a9bfa4b34445497eb236e6ca8b8d7a4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5505.jpg",
+				"path": "/images/items/01_4609/155_5505.jpg",
+				"hash": "09e163e5e1313cb4976d6e2f55c2b0d1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5505.jpg",
+				"path": "/images/items/01_4609/156_5505.jpg",
+				"hash": "60db31bc78679c6e7c06bc29a623c890"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4609/",
 	"brandIds": [],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181355",
-		"item-1000181354",
-		"item-1000170540",
-		"01_4196"
-	]
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181355", "item-1000181354", "item-1000170540", "01_4196"]
 }

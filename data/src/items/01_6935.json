@@ -55,22 +55,24 @@
 			"Joint parts x 1 set"
 		]
 	},
-	"images": [
-		"/images/items/01_6935/01_6935_0.jpg",
-		"/images/items/01_6935/01_6935_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6935_0.jpg",
+				"path": "/images/items/01_6935/01_6935_0.jpg",
+				"hash": "171573b3042c2a14ce3e5e5b4401a400"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6935_1.jpg",
+				"path": "/images/items/01_6935/01_6935_1.jpg",
+				"hash": "7a7ff2c22fc11534da141ca3a06dbc2b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6935/",
-	"brandIds": [
-		"30ms"
-	],
+	"brandIds": ["30ms"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_6933",
-		"01_6934",
-		"01_6777",
-		"01_6778"
-	]
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_6933", "01_6934", "01_6777", "01_6778"]
 }

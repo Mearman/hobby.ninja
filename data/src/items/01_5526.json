@@ -34,29 +34,41 @@
 			"■ The cords of each part of the fuselage are made of translucent resin material."
 		]
 	},
-	"images": [
-		"/images/items/01_5526/1000220956_1.jpg",
-		"/images/items/01_5526/1000220956_2.jpg",
-		"/images/items/01_5526/1000220956_3.jpg",
-		"/images/items/01_5526/1000220956_4.jpg",
-		"/images/items/01_5526/1000220956_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220956_1.jpg",
+				"path": "/images/items/01_5526/1000220956_1.jpg",
+				"hash": "877c6e385385e97e4d813f7d488e4786"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220956_2.jpg",
+				"path": "/images/items/01_5526/1000220956_2.jpg",
+				"hash": "62e13d4929a0726ff5b7cc7437cd85cc"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220956_3.jpg",
+				"path": "/images/items/01_5526/1000220956_3.jpg",
+				"hash": "9bb9661a89ae6984302f5dc54f5dd5ea"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220956_4.jpg",
+				"path": "/images/items/01_5526/1000220956_4.jpg",
+				"hash": "8d013943299f6e9c262a0478eba95fac"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220956_5.jpg",
+				"path": "/images/items/01_5526/1000220956_5.jpg",
+				"hash": "5e20ac5f6ebb17a62448208997ea901c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5526/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216602",
-		"01_5102",
-		"01_4422",
-		"01_4242"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["g-00"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216602", "01_5102", "01_4422", "01_4242"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

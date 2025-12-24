@@ -53,25 +53,39 @@
 			"Water transfer decal x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_6953/01_6953_0.jpg",
-		"/images/items/01_6953/01_6953_1.jpg",
-		"/images/items/01_6953/01_6953_2.jpg",
-		"/images/items/01_6953/01_6953_3.jpg",
-		"/images/items/01_6953/01_6953_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6953_0.jpg",
+				"path": "/images/items/01_6953/01_6953_0.jpg",
+				"hash": "c435ee4705680965bb607f1324ed5f28"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6953_1.jpg",
+				"path": "/images/items/01_6953/01_6953_1.jpg",
+				"hash": "dbc105a7a9463dc3ac1447a6d3aa4c95"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6953_2.jpg",
+				"path": "/images/items/01_6953/01_6953_2.jpg",
+				"hash": "ae2ddcc50efd0cd43435f14daf4ee491"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6953_3.jpg",
+				"path": "/images/items/01_6953/01_6953_3.jpg",
+				"hash": "5b75e3f6dea30d3779066f18967bd6dc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6953_4.jpg",
+				"path": "/images/items/01_6953/01_6953_4.jpg",
+				"hash": "188069a517cab2d30c8fc7ffef75fde0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6953/",
-	"brandIds": [
-		"30mp"
-	],
-	"seriesIds": [
-		"bocchi-rocks"
-	],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5982",
-		"01_5492"
-	]
+	"brandIds": ["30mp"],
+	"seriesIds": ["bocchi-rocks"],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5982", "01_5492"]
 }

@@ -29,15 +29,20 @@
 			"*There are a total of 6 types of prints on the surface of the confectionery, but as they are randomly included, you may not get all of them."
 		]
 	},
-	"images": [
-		"/images/items/01_5359/153_6209.JPG"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6209.JPG",
+				"path": "/images/items/01_5359/153_6209.JPG",
+				"hash": "ba424e9b3acac54a6a7b9b9f41b7fef6"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5359/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
+	"categoryIds": ["product-list"],
 	"relatedItemIds": [],
 	"tag": {
 		"ja": "ガンダムベースグッズ",

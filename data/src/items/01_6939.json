@@ -36,39 +36,47 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"フェイスパーツ(タンポ印刷)×3種",
-			"武装パーツ×1式",
-			"ジョイントパーツ×1式",
-			"ハンドパーツ×1式"
-		],
-		"en": [
-			"Face parts (tampo printing) x 3 types",
-			"Armed parts x 1 set",
-			"Joint parts x 1 set",
-			"Hand parts x 1 set"
-		]
+		"ja": ["フェイスパーツ(タンポ印刷)×3種", "武装パーツ×1式", "ジョイントパーツ×1式", "ハンドパーツ×1式"],
+		"en": ["Face parts (tampo printing) x 3 types", "Armed parts x 1 set", "Joint parts x 1 set", "Hand parts x 1 set"]
 	},
-	"images": [
-		"/images/items/01_6939/01_6939_0.jpg",
-		"/images/items/01_6939/01_6939_1.jpg",
-		"/images/items/01_6939/01_6939_2.jpg",
-		"/images/items/01_6939/01_6939_3.jpg",
-		"/images/items/01_6939/01_6939_4.jpg",
-		"/images/items/01_6939/01_6939_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6939_0.jpg",
+				"path": "/images/items/01_6939/01_6939_0.jpg",
+				"hash": "05727ac5fe5ad202e33e1e15a5b0b0d1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6939_1.jpg",
+				"path": "/images/items/01_6939/01_6939_1.jpg",
+				"hash": "7c8a89a17042480af3ae69f19152e5b2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6939_2.jpg",
+				"path": "/images/items/01_6939/01_6939_2.jpg",
+				"hash": "3b84d4209b429523b8959bc26cd1ce4b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6939_3.jpg",
+				"path": "/images/items/01_6939/01_6939_3.jpg",
+				"hash": "23fe4536dfaac637bfb4aeb20eaf74fe"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6939_4.jpg",
+				"path": "/images/items/01_6939/01_6939_4.jpg",
+				"hash": "7946df9e284528af4f8f6e8f2147b6ef"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6939_5.jpg",
+				"path": "/images/items/01_6939/01_6939_5.jpg",
+				"hash": "5f53abb566f24650e7f0e388a55b9c69"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6939/",
-	"brandIds": [
-		"30ms"
-	],
+	"brandIds": ["30ms"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_6933",
-		"01_6934",
-		"01_6935",
-		"01_6936"
-	]
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_6933", "01_6934", "01_6935", "01_6936"]
 }

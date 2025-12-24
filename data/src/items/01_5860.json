@@ -37,23 +37,39 @@
 			"• Includes riding gear and display stand to recreate flight conditions."
 		]
 	},
-	"images": [
-		"/images/items/01_5860/153_938.jpg",
-		"/images/items/01_5860/155_938.jpg",
-		"/images/items/01_5860/156_938.jpg",
-		"/images/items/01_5860/157_938.jpg",
-		"/images/items/01_5860/158_938.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_938.jpg",
+				"path": "/images/items/01_5860/153_938.jpg",
+				"hash": "14712b81018fcc1f4437da95532a8152"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_938.jpg",
+				"path": "/images/items/01_5860/155_938.jpg",
+				"hash": "d5db24ef0bdec3d1ef50449223de362a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_938.jpg",
+				"path": "/images/items/01_5860/156_938.jpg",
+				"hash": "c80b423ac6ed16187548fc00e7d7e2ca"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_938.jpg",
+				"path": "/images/items/01_5860/157_938.jpg",
+				"hash": "31a92ff7aaadedf714e469537d62e1f7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_938.jpg",
+				"path": "/images/items/01_5860/158_938.jpg",
+				"hash": "86e85aa53037f290769a5cd0366fc3d1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5860/",
 	"brandIds": [],
-	"seriesIds": [
-		"yamato"
-	],
+	"seriesIds": ["yamato"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5971",
-		"01_5498",
-		"01_5500",
-		"01_5388"
-	]
+	"relatedItemIds": ["01_5971", "01_5498", "01_5500", "01_5388"]
 }

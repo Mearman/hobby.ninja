@@ -57,32 +57,56 @@
 			"Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5071/153_5936.jpg",
-		"/images/items/01_5071/155_5936.jpg",
-		"/images/items/01_5071/156_5936.jpg",
-		"/images/items/01_5071/157_5936.jpg",
-		"/images/items/01_5071/158_5936.jpg",
-		"/images/items/01_5071/159_5936.jpg",
-		"/images/items/01_5071/189_5936.jpg",
-		"/images/items/01_5071/190_5936.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5936.jpg",
+				"path": "/images/items/01_5071/153_5936.jpg",
+				"hash": "e48c33648993339c82578498ef034661"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5936.jpg",
+				"path": "/images/items/01_5071/155_5936.jpg",
+				"hash": "932978764200d6a37ea50e0006207885"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5936.jpg",
+				"path": "/images/items/01_5071/156_5936.jpg",
+				"hash": "b8e87c7740d793369c35da896a42c1e2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5936.jpg",
+				"path": "/images/items/01_5071/157_5936.jpg",
+				"hash": "a07275e20cba948becfd35d80497d85d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5936.jpg",
+				"path": "/images/items/01_5071/158_5936.jpg",
+				"hash": "96a8292389280f318ec3716d13e08f8f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5936.jpg",
+				"path": "/images/items/01_5071/159_5936.jpg",
+				"hash": "58b3af76c9b9c58d618de4d7b755de4d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5936.jpg",
+				"path": "/images/items/01_5071/189_5936.jpg",
+				"hash": "a015dfe7a2f6fe70be46086c937e5b0d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5936.jpg",
+				"path": "/images/items/01_5071/190_5936.jpg",
+				"hash": "9c42ac3bdcf0d7fdd96d1db077bbcd7b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5071/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundambuildmetaverse"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5236",
-		"01_5235",
-		"01_5083",
-		"01_5025"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundambuildmetaverse"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5236", "01_5235", "01_5083", "01_5025"],
 	"manual": {
 		"id": "1289",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1289/"

@@ -36,29 +36,41 @@
 			"■ Comes with a dedicated pedestal that can reproduce action poses in the air."
 		]
 	},
-	"images": [
-		"/images/items/01_5869/1000083680_1.jpg",
-		"/images/items/01_5869/1000083680_2.jpg",
-		"/images/items/01_5869/1000083680_3.jpg",
-		"/images/items/01_5869/1000083680_4.jpg",
-		"/images/items/01_5869/1000083680_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000083680_1.jpg",
+				"path": "/images/items/01_5869/1000083680_1.jpg",
+				"hash": "d7f57fe9927b2afff6b0dce2dffc0649"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000083680_2.jpg",
+				"path": "/images/items/01_5869/1000083680_2.jpg",
+				"hash": "eff72d695ea8a36feaa8eaf7bd5b3a01"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000083680_3.jpg",
+				"path": "/images/items/01_5869/1000083680_3.jpg",
+				"hash": "833c792caed7a3f745360138aff88978"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000083680_4.jpg",
+				"path": "/images/items/01_5869/1000083680_4.jpg",
+				"hash": "b3c5fb78a9495e133975d78d9e3718c0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000083680_5.jpg",
+				"path": "/images/items/01_5869/1000083680_5.jpg",
+				"hash": "a78b0a6a52703285f4bb8baa26832eb7"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5869/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5421",
-		"item-1000183862",
-		"01_3712",
-		"item-1000155441"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5421", "item-1000183862", "01_3712", "item-1000155441"],
 	"manual": {
 		"id": "617",
 		"url": "https://manual.bandai-hobby.net/menus/detail/617/"

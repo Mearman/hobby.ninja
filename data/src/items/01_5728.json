@@ -27,28 +27,31 @@
 			"• Unicorn Gundam Unit 02 \"Banshee \", which finally appeared in \" Mobile Suit Gundam Unicorn \" episode 4, has been transformed into HGUC. • Reproduce the original weapons of the anime version. • Yellow parts such as \" corners\" are reproduced with a glossy molding color."
 		]
 	},
-	"images": [
-		"/images/items/01_5728/153_795.jpg",
-		"/images/items/01_5728/155_795.jpg",
-		"/images/items/01_5728/156_795.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_795.jpg",
+				"path": "/images/items/01_5728/153_795.jpg",
+				"hash": "06177cab92c3522e051e6737e809c060"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_795.jpg",
+				"path": "/images/items/01_5728/155_795.jpg",
+				"hash": "490fbc7177ce74b29e4d2161dcbd6ef5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_795.jpg",
+				"path": "/images/items/01_5728/156_795.jpg",
+				"hash": "d4e626b985c04fec30ee9b004abfe798"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5728/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "938",
 		"url": "https://manual.bandai-hobby.net/menus/detail/938/"

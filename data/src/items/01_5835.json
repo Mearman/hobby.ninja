@@ -31,21 +31,29 @@
 			"• The intermediate car can be made into car No. 8 (775 type 1000 series) using the included parts."
 		]
 	},
-	"images": [
-		"/images/items/01_5835/153_906.jpg",
-		"/images/items/01_5835/155_906.jpg",
-		"/images/items/01_5835/156_906.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_906.jpg",
+				"path": "/images/items/01_5835/153_906.jpg",
+				"hash": "a23ba9e75dadd349d77b6b242c211b15"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_906.jpg",
+				"path": "/images/items/01_5835/155_906.jpg",
+				"hash": "ab2e39ce5677ad20fd07db6ad8732471"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_906.jpg",
+				"path": "/images/items/01_5835/156_906.jpg",
+				"hash": "bc45db98379507818a95e7be1ae882e5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5835/",
-	"brandIds": [
-		"train"
-	],
+	"brandIds": ["train"],
 	"seriesIds": [],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"relatedItemIds": ["01_1276", "01_1277", "01_1278", "01_1280"]
 }

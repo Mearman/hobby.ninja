@@ -31,40 +31,42 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"刀×1",
-			"手裏剣×1式",
-			"仮面×1",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Sword x1",
-			"Shuriken x 1 set",
-			"Mask x1",
-			"Foil Seal×1"
-		]
+		"ja": ["刀×1", "手裏剣×1式", "仮面×1", "ホイルシール×1"],
+		"en": ["Sword x1", "Shuriken x 1 set", "Mask x1", "Foil Seal×1"]
 	},
-	"images": [
-		"/images/items/01_3773/153_4723.jpg",
-		"/images/items/01_3773/155_4723.jpg",
-		"/images/items/01_3773/156_4723.jpg",
-		"/images/items/01_3773/157_4723.jpg",
-		"/images/items/01_3773/158_4723.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4723.jpg",
+				"path": "/images/items/01_3773/153_4723.jpg",
+				"hash": "b7c6672b865ec9505ec3eb1957e09c12"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4723.jpg",
+				"path": "/images/items/01_3773/155_4723.jpg",
+				"hash": "a91fc345db5ae90f5accc91a01ca426b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4723.jpg",
+				"path": "/images/items/01_3773/156_4723.jpg",
+				"hash": "c1c7ca5130406b65a662718cfb0c72d0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4723.jpg",
+				"path": "/images/items/01_3773/157_4723.jpg",
+				"hash": "f955d096a42727e8ad64add5e0fbd1d6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4723.jpg",
+				"path": "/images/items/01_3773/158_4723.jpg",
+				"hash": "fbb116ee6219e361d2d30ff62cd1bb40"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3773/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4336",
-		"01_4312",
-		"01_4634"
-	]
+	"brandIds": ["sdgundamseries"],
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
 }

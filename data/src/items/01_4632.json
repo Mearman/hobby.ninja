@@ -26,23 +26,31 @@
 			"Astray Unit 01 \"Gundam Astray Gold Frame\", which was taken out from Heliopolis on the verge of collapse, is now available as a 1/100 Scale Model.The frame of the whole body is reproduced with gold plating.Parts to reproduce the missing arm in the comic are included.In addition to the beam rifle, Seal, and beam saber x 2, the duel-specific bazooka used when escaping Heliopolis is included."
 		]
 	},
-	"images": [
-		"/images/items/01_4632/153_5526.jpg",
-		"/images/items/01_4632/155_5526.jpg",
-		"/images/items/01_4632/156_5526.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5526.jpg",
+				"path": "/images/items/01_4632/153_5526.jpg",
+				"hash": "8469d1eab5f8a10bcb3f24e9ac6c862b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5526.jpg",
+				"path": "/images/items/01_4632/155_5526.jpg",
+				"hash": "54c0ea08b71a788d361b5e8b48d2b129"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5526.jpg",
+				"path": "/images/items/01_4632/156_5526.jpg",
+				"hash": "8a3eac5cd709a746b96f25fd196652a1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4632/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5986",
-		"01_5987",
-		"01_5988"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5986", "01_5987", "01_5988"],
 	"manual": {
 		"id": "1139",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1139/"

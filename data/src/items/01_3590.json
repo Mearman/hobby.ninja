@@ -27,28 +27,36 @@
 			"• From \"Mobile Suit Gundam AGE \", a new deep red \" Zeidora\" has appeared in the HG series. Molded product x 4, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_3590/153_4545.jpg",
-		"/images/items/01_3590/155_4545.jpg",
-		"/images/items/01_3590/156_4545.jpg",
-		"/images/items/01_3590/157_4545.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4545.jpg",
+				"path": "/images/items/01_3590/153_4545.jpg",
+				"hash": "c700365df1fc4307e71cce2774a6b2cc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4545.jpg",
+				"path": "/images/items/01_3590/155_4545.jpg",
+				"hash": "4111d35e60e5ec0c757ed5c2fcdfca14"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4545.jpg",
+				"path": "/images/items/01_3590/156_4545.jpg",
+				"hash": "9aff4a920cd28e17c6f2550f897c85f9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4545.jpg",
+				"path": "/images/items/01_3590/157_4545.jpg",
+				"hash": "a71b36db5f8efe2421bf6e7ad367d575"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3590/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "322",
 		"url": "https://manual.bandai-hobby.net/menus/detail/322/"

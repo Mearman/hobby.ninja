@@ -25,26 +25,34 @@
 			"The main character of \"Mobile Suit Gundam SEED Destiny\" has become a BB Senshi! Reproduces the transformation and combination gimmick of Core Splendor. All joints are movable, allowing for cool poses. Reproduce the aircraft color with Iropla and Seal. Comes with a special stand to display Impulse Gundam and Core Splendor."
 		]
 	},
-	"images": [
-		"/images/items/01_4724/153_560.jpg",
-		"/images/items/01_4724/155_560.jpg",
-		"/images/items/01_4724/156_560.jpg",
-		"/images/items/01_4724/157_560.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_560.jpg",
+				"path": "/images/items/01_4724/153_560.jpg",
+				"hash": "e27ed9e450d26e556520caadf32e5500"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_560.jpg",
+				"path": "/images/items/01_4724/155_560.jpg",
+				"hash": "ffed298917928f649f64b7ec80b295ec"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_560.jpg",
+				"path": "/images/items/01_4724/156_560.jpg",
+				"hash": "e282b8c45a063ff48f4b1e2b01552672"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_560.jpg",
+				"path": "/images/items/01_4724/157_560.jpg",
+				"hash": "e50465dd264d116a8d38987f58bcd188"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4724/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5378",
-		"01_5365",
-		"01_4648",
-		"01_1662"
-	]
+	"brandIds": ["bb"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5378", "01_5365", "01_4648", "01_1662"]
 }

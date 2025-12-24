@@ -37,26 +37,31 @@
 			"• Includes MarkingSeal to reproduce unit badges, etc.!"
 		]
 	},
-	"images": [
-		"/images/items/01_4119/153_5047.jpg",
-		"/images/items/01_4119/155_5047.jpg",
-		"/images/items/01_4119/156_5047.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5047.jpg",
+				"path": "/images/items/01_4119/153_5047.jpg",
+				"hash": "41ea93116b2dc1c34122f12bfa019d98"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5047.jpg",
+				"path": "/images/items/01_4119/155_5047.jpg",
+				"hash": "e05d7d004e8f28f559a6d73fb12071fc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5047.jpg",
+				"path": "/images/items/01_4119/156_5047.jpg",
+				"hash": "f3ebe2d9226dc30997eb5ae8617e1450"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4119/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
+	"brandIds": ["hg", "hguc"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5951"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

@@ -34,23 +34,29 @@
 			"Molded product x 4, Marking Seal x 1, Color Seal x 1, Assembly Manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5921/153_999.jpg",
-		"/images/items/01_5921/155_999.jpg",
-		"/images/items/01_5921/156_999.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_999.jpg",
+				"path": "/images/items/01_5921/153_999.jpg",
+				"hash": "5e119f886bf81895d5e788794422bd65"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_999.jpg",
+				"path": "/images/items/01_5921/155_999.jpg",
+				"hash": "35f227dc2d3967cf49fe84699943b165"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_999.jpg",
+				"path": "/images/items/01_5921/156_999.jpg",
+				"hash": "6ce87a9633bb352ea5a41cebcc2a1d97"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5921/",
 	"brandIds": [],
-	"seriesIds": [
-		"onepiece"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5409",
-		"01_5410",
-		"01_4236",
-		"01_4170"
-	]
+	"seriesIds": ["onepiece"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5409", "01_5410", "01_4236", "01_4170"]
 }

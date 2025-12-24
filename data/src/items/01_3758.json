@@ -25,23 +25,29 @@
 			"A plastic model of ``Rekka Musha Gundam'', the main character of ``Musha Retsuden'', which is being serialized in Comic Bonbon and is the father of ``Retsumaru''. The heavy armor reminiscent of the \"first generation warrior Gundam\" can be recreated by attaching and detaching it. Weapons can include a real sword, a naginata, and a tanegashima rifle. When not equipped with armor, you can recreate the pedestal state by combining the armor pieces."
 		]
 	},
-	"images": [
-		"/images/items/01_3758/153_470.jpg",
-		"/images/items/01_3758/155_470.jpg",
-		"/images/items/01_3758/156_470.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_470.jpg",
+				"path": "/images/items/01_3758/153_470.jpg",
+				"hash": "d8244473a41ce421b4410b7b4365f8da"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_470.jpg",
+				"path": "/images/items/01_3758/155_470.jpg",
+				"hash": "e9e3018a0e2702ec4accc90996e7c25d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_470.jpg",
+				"path": "/images/items/01_3758/156_470.jpg",
+				"hash": "099fc3df00f72beb8069f194893aab57"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3758/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

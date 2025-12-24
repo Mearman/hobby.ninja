@@ -35,30 +35,41 @@
 			"Molded product x 7, MarkingSeal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_5688/153_754.jpg",
-		"/images/items/01_5688/155_754.jpg",
-		"/images/items/01_5688/156_754.jpg",
-		"/images/items/01_5688/157_754.jpg",
-		"/images/items/01_5688/158_754.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_754.jpg",
+				"path": "/images/items/01_5688/153_754.jpg",
+				"hash": "1a86c3ff040a3440c583412139cc8c31"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_754.jpg",
+				"path": "/images/items/01_5688/155_754.jpg",
+				"hash": "0064dda58fc4009871e08b4245d8e379"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_754.jpg",
+				"path": "/images/items/01_5688/156_754.jpg",
+				"hash": "4e5b7b784eace69734a174ffd8dfd255"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_754.jpg",
+				"path": "/images/items/01_5688/157_754.jpg",
+				"hash": "c2e1b19d4aa3519a76da94d38cc86dfe"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_754.jpg",
+				"path": "/images/items/01_5688/158_754.jpg",
+				"hash": "bac4aeae4cca7b760345f1fdd6ce9a9b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5688/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"g-0083"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000102912",
-		"item-1000102910",
-		"item-1000115500",
-		"01_5843"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["g-0083"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000102912", "item-1000102910", "item-1000115500", "01_5843"],
 	"manual": {
 		"id": "421",
 		"url": "https://manual.bandai-hobby.net/menus/detail/421/"

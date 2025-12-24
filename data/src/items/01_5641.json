@@ -32,25 +32,39 @@
 			"The missile pod is replaceable and reproduces the firing state."
 		]
 	},
-	"images": [
-		"/images/items/01_5641/153_703.jpg",
-		"/images/items/01_5641/155_703.jpg",
-		"/images/items/01_5641/156_703.jpg",
-		"/images/items/01_5641/157_703.jpg",
-		"/images/items/01_5641/158_703.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_703.jpg",
+				"path": "/images/items/01_5641/153_703.jpg",
+				"hash": "fa7a920d63c87a43f03ad4df516b5bc1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_703.jpg",
+				"path": "/images/items/01_5641/155_703.jpg",
+				"hash": "56e5518457397f7441046ad21a08309c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_703.jpg",
+				"path": "/images/items/01_5641/156_703.jpg",
+				"hash": "1511c132cbd5e0f8497681824768e520"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_703.jpg",
+				"path": "/images/items/01_5641/157_703.jpg",
+				"hash": "b5a5ae5397b2c929c2591ae8430c63ec"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_703.jpg",
+				"path": "/images/items/01_5641/158_703.jpg",
+				"hash": "02b65df889ffdcea6173815389a42341"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5641/",
 	"brandIds": [],
-	"seriesIds": [
-		"keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7034",
-		"01_2120",
-		"01_2122",
-		"01_2104"
-	]
+	"seriesIds": ["keroro"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7034", "01_2120", "01_2122", "01_2104"]
 }

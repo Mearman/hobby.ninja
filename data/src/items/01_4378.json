@@ -44,33 +44,51 @@
 			"シールド×1",
 			"ディスプレイ用台座×1"
 		],
-		"en": [
-			"Runner parts x 1",
-			"Seal×1",
-			"Beam saber x 1",
-			"Beam rifle x1",
-			"Seal × 1",
-			"Display pedestal x 1"
-		]
+		"en": ["Runner parts x 1", "Seal×1", "Beam saber x 1", "Beam rifle x1", "Seal × 1", "Display pedestal x 1"]
 	},
-	"images": [
-		"/images/items/01_4378/1000191319_1.jpg",
-		"/images/items/01_4378/1000191319_2.jpg",
-		"/images/items/01_4378/1000191319_3.jpg",
-		"/images/items/01_4378/1000191319_4.jpg",
-		"/images/items/01_4378/1000191319_5.jpg",
-		"/images/items/01_4378/1000191319_6.jpg",
-		"/images/items/01_4378/1000191319_7.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191319_1.jpg",
+				"path": "/images/items/01_4378/1000191319_1.jpg",
+				"hash": "3cbf22c429034dcb5508c4560bc9d4af"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191319_2.jpg",
+				"path": "/images/items/01_4378/1000191319_2.jpg",
+				"hash": "3200157916dee72412479effc504ccf1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191319_3.jpg",
+				"path": "/images/items/01_4378/1000191319_3.jpg",
+				"hash": "1b955c179a5f7ca9f6df5f821ff4a997"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191319_4.jpg",
+				"path": "/images/items/01_4378/1000191319_4.jpg",
+				"hash": "b6ee43ef26ad5a9b68e512efc699f6af"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191319_5.jpg",
+				"path": "/images/items/01_4378/1000191319_5.jpg",
+				"hash": "1820176bc9cb75b4d208d882dd8f162a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191319_6.jpg",
+				"path": "/images/items/01_4378/1000191319_6.jpg",
+				"hash": "0e9fa43885877b569c632181823150d2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191319_7.jpg",
+				"path": "/images/items/01_4378/1000191319_7.jpg",
+				"hash": "eed139ff9e0dfe9d2dd1697407237853"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4378/",
-	"brandIds": [
-		"limex"
-	],
-	"seriesIds": [
-		"gunplakun"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["limex"],
+	"seriesIds": ["gunplakun"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": []
 }

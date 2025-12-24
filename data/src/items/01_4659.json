@@ -26,24 +26,34 @@
 			"• Indispensable soldiers appear on the battlefield of Sangokuden. One product contains soldiers of three colors! Get lots of soldiers and create your own army! Molded product x 3, foil seal x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4659/153_5550.jpg",
-		"/images/items/01_4659/155_5550.jpg",
-		"/images/items/01_4659/156_5550.jpg",
-		"/images/items/01_4659/157_5550.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5550.jpg",
+				"path": "/images/items/01_4659/153_5550.jpg",
+				"hash": "a51cef8f2a1d9339f90c3831f9e6dc32"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5550.jpg",
+				"path": "/images/items/01_4659/155_5550.jpg",
+				"hash": "c76529db1900ad6bec7c8d0eb53db3a6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5550.jpg",
+				"path": "/images/items/01_4659/156_5550.jpg",
+				"hash": "0b75be3dad062544e098c43aa918b085"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5550.jpg",
+				"path": "/images/items/01_4659/157_5550.jpg",
+				"hash": "ea7e596a65cd3216dcafdfbca202ec7f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4659/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

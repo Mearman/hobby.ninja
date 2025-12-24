@@ -31,27 +31,31 @@
 			"• The characteristic gray and orange coloring of the General/Revil specification is reproduced with molded colors."
 		]
 	},
-	"images": [
-		"/images/items/01_5786/153_852.jpg",
-		"/images/items/01_5786/155_852.jpg",
-		"/images/items/01_5786/156_852.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_852.jpg",
+				"path": "/images/items/01_5786/153_852.jpg",
+				"hash": "40a042cde62f78abefa71cda170f232b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_852.jpg",
+				"path": "/images/items/01_5786/155_852.jpg",
+				"hash": "090ff324bd0bce0993fef4d0bb27d5ec"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_852.jpg",
+				"path": "/images/items/01_5786/156_852.jpg",
+				"hash": "b52006b592908e0c60bfeb61fdc077d0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5786/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000183366",
-		"01_4271",
-		"01_2670",
-		"item-1000138934"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000183366", "01_4271", "01_2670", "item-1000138934"],
 	"manual": {
 		"id": "607",
 		"url": "https://manual.bandai-hobby.net/menus/detail/607/"

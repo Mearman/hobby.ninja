@@ -45,43 +45,67 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"通常カートリッジ×3",
-			"カスタム銃口パーツ×1",
-			"ディスプレイ台座×1",
-			"マーキングシール×1"
-		],
-		"en": [
-			"Normal cartridge x 3",
-			"Custom muzzle parts x 1",
-			"Display pedestal x 1",
-			"MarkingSeal×1"
-		]
+		"ja": ["通常カートリッジ×3", "カスタム銃口パーツ×1", "ディスプレイ台座×1", "マーキングシール×1"],
+		"en": ["Normal cartridge x 3", "Custom muzzle parts x 1", "Display pedestal x 1", "MarkingSeal×1"]
 	},
-	"images": [
-		"/images/items/01_3442/153_4395.jpg",
-		"/images/items/01_3442/155_4395.jpg",
-		"/images/items/01_3442/156_4395.jpg",
-		"/images/items/01_3442/157_4395.jpg",
-		"/images/items/01_3442/158_4395.jpg",
-		"/images/items/01_3442/159_4395.jpg",
-		"/images/items/01_3442/189_4395.jpg",
-		"/images/items/01_3442/190_4395.jpg",
-		"/images/items/01_3442/191_4395.jpg",
-		"/images/items/01_3442/192_4395.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4395.jpg",
+				"path": "/images/items/01_3442/153_4395.jpg",
+				"hash": "049bf779561a8a569789c820993f264d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4395.jpg",
+				"path": "/images/items/01_3442/155_4395.jpg",
+				"hash": "e5a8c43e8bd362e380b9cf9ed06754ad"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4395.jpg",
+				"path": "/images/items/01_3442/156_4395.jpg",
+				"hash": "02aede8eb41654fd792ad08dfc63ca01"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4395.jpg",
+				"path": "/images/items/01_3442/157_4395.jpg",
+				"hash": "fcedd10061dc037d7a2cf7e3ea239acf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4395.jpg",
+				"path": "/images/items/01_3442/158_4395.jpg",
+				"hash": "71eabf0531863f34de99e8e6fd5130e5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4395.jpg",
+				"path": "/images/items/01_3442/159_4395.jpg",
+				"hash": "bbdb1550993d8a9bc0289a1774b03203"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4395.jpg",
+				"path": "/images/items/01_3442/189_4395.jpg",
+				"hash": "6bb255bc1318e31aa77dddc229105863"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4395.jpg",
+				"path": "/images/items/01_3442/190_4395.jpg",
+				"hash": "fbabd83bb6068055870ed54a37d2f4b0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4395.jpg",
+				"path": "/images/items/01_3442/191_4395.jpg",
+				"hash": "55a5ef9f5d05ca7e2953f86662a28171"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4395.jpg",
+				"path": "/images/items/01_3442/192_4395.jpg",
+				"hash": "a5f56e7197bfd305c43bb8f425181777"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3442/",
 	"brandIds": [],
-	"seriesIds": [
-		"girlgunlady"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_3559",
-		"01_3558",
-		"01_3449",
-		"01_3450"
-	]
+	"seriesIds": ["girlgunlady"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_3559", "01_3558", "01_3449", "01_3450"]
 }

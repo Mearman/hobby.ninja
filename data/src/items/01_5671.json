@@ -28,27 +28,31 @@
 			"■ Reproduce the transformation into unicorn mode and destroy mode! A fixed antenna dedicated to destroy mode has been added, and three types of open/close, closed, and open are included! Molded ×19, Tetoron Seal ×1, Foil Seal ×1, Dry Decal×1, Assembly Instructions"
 		]
 	},
-	"images": [
-		"/images/items/01_5671/1000092363_1.jpg",
-		"/images/items/01_5671/1000092363_2.jpg",
-		"/images/items/01_5671/1000092363_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092363_1.jpg",
+				"path": "/images/items/01_5671/1000092363_1.jpg",
+				"hash": "f46a800df0246e7ad0c07b22ac466a43"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092363_2.jpg",
+				"path": "/images/items/01_5671/1000092363_2.jpg",
+				"hash": "4900911e02f63f0f975e25899978cc3e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092363_3.jpg",
+				"path": "/images/items/01_5671/1000092363_3.jpg",
+				"hash": "05492b4a348c6da18a396302240e9b7b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5671/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000183366",
-		"01_4271",
-		"01_2670",
-		"item-1000138934"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000183366", "01_4271", "01_2670", "item-1000138934"],
 	"manual": {
 		"id": "573",
 		"url": "https://manual.bandai-hobby.net/menus/detail/573/"

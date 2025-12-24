@@ -37,25 +37,36 @@
 			"• In addition to the display pedestal, a 1/100 scale maintenance worker figure is also included!"
 		]
 	},
-	"images": [
-		"/images/items/01_3737/1000163419_1.jpg",
-		"/images/items/01_3737/1000163419_2.jpg",
-		"/images/items/01_3737/1000163419_3.jpg",
-		"/images/items/01_3737/1000163419_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163419_1.jpg",
+				"path": "/images/items/01_3737/1000163419_1.jpg",
+				"hash": "7985d260aaadffcf16241d8b44860b25"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163419_2.jpg",
+				"path": "/images/items/01_3737/1000163419_2.jpg",
+				"hash": "6982843a99e9de64bc20d71a736c2aa1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163419_3.jpg",
+				"path": "/images/items/01_3737/1000163419_3.jpg",
+				"hash": "27be38bdda8f51181d9ff769761af1e1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163419_4.jpg",
+				"path": "/images/items/01_3737/1000163419_4.jpg",
+				"hash": "3a60f1235e6d0ac010dbe457922a66d4"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3737/",
-	"brandIds": [
-		"mgka"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2226"
-	],
+	"brandIds": ["mgka"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2226"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

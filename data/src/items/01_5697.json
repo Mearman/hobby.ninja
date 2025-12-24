@@ -20,33 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"• HGUCシナンジュが、重厚感のあるチタニウムフィニッシュ仕様で登場。 成形品×10、ホイルシール×1、組立説明書"
-		],
+		"ja": ["• HGUCシナンジュが、重厚感のあるチタニウムフィニッシュ仕様で登場。 成形品×10、ホイルシール×1、組立説明書"],
 		"en": [
 			"• HGUC Sinanju is now available with a heavy titanium finish. Molded product x 10, foil seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_5697/153_762.jpg",
-		"/images/items/01_5697/155_762.jpg",
-		"/images/items/01_5697/156_762.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_762.jpg",
+				"path": "/images/items/01_5697/153_762.jpg",
+				"hash": "c9b238a1c17b487e6820e8972152c573"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_762.jpg",
+				"path": "/images/items/01_5697/155_762.jpg",
+				"hash": "5bf1329084d9ccb0672773b33baaaa6c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_762.jpg",
+				"path": "/images/items/01_5697/156_762.jpg",
+				"hash": "18124e4325aff55ccacd82344411cea3"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5697/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	]
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"]
 }

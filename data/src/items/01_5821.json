@@ -39,27 +39,31 @@
 			"• Comes with an Asemu figure of the same scale."
 		]
 	},
-	"images": [
-		"/images/items/01_5821/153_893.jpg",
-		"/images/items/01_5821/155_893.jpg",
-		"/images/items/01_5821/156_893.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_893.jpg",
+				"path": "/images/items/01_5821/153_893.jpg",
+				"hash": "1ea80d0bfc0ef8da0f8906d46cf80182"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_893.jpg",
+				"path": "/images/items/01_5821/155_893.jpg",
+				"hash": "4b568cbf253a61f56169799553150d4b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_893.jpg",
+				"path": "/images/items/01_5821/156_893.jpg",
+				"hash": "768aa441fc18f00ad74a4e488fd6a35a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5821/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181355",
-		"item-1000181354",
-		"01_4196",
-		"item-1000128729"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181355", "item-1000181354", "01_4196", "item-1000128729"],
 	"manual": {
 		"id": "612",
 		"url": "https://manual.bandai-hobby.net/menus/detail/612/"

@@ -27,27 +27,31 @@
 			"• High-mobility Zedas now available as HG. • Reproduce the coloring with molded colors. • Equipped with gimmicks such as a movable tail-shaped sword and a deformation mechanism. Molded product x 5, foil seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_4595/153_5493.jpg",
-		"/images/items/01_4595/155_5493.jpg",
-		"/images/items/01_4595/156_5493.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5493.jpg",
+				"path": "/images/items/01_4595/153_5493.jpg",
+				"hash": "206795236638794015b72d8d06a170b2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5493.jpg",
+				"path": "/images/items/01_4595/155_5493.jpg",
+				"hash": "97fe607d2d7c35c43f8c77bd6225488e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5493.jpg",
+				"path": "/images/items/01_4595/156_5493.jpg",
+				"hash": "2590972461210d98bd511f8c0957a604"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4595/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "327",
 		"url": "https://manual.bandai-hobby.net/menus/detail/327/"

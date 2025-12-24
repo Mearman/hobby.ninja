@@ -32,36 +32,42 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"台座×１",
-			"マーキングシール×１"
-		],
-		"en": [
-			"Pedestal x 1",
-			"MarkingSeal×1"
-		]
+		"ja": ["台座×１", "マーキングシール×１"],
+		"en": ["Pedestal x 1", "MarkingSeal×1"]
 	},
-	"images": [
-		"/images/items/01_3467/153_4421.jpg",
-		"/images/items/01_3467/155_4421.jpg",
-		"/images/items/01_3467/156_4421.jpg",
-		"/images/items/01_3467/157_4421.jpg",
-		"/images/items/01_3467/158_4421.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4421.jpg",
+				"path": "/images/items/01_3467/153_4421.jpg",
+				"hash": "ad2af26a8da1817c27dce967485a4651"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4421.jpg",
+				"path": "/images/items/01_3467/155_4421.jpg",
+				"hash": "f6c58a676104287f586e3408ad57f3c3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4421.jpg",
+				"path": "/images/items/01_3467/156_4421.jpg",
+				"hash": "8518cc3b1bc607d7d89d7199c17635d9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4421.jpg",
+				"path": "/images/items/01_3467/157_4421.jpg",
+				"hash": "ab155852715faf8cbf9eafc6b25d16a5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4421.jpg",
+				"path": "/images/items/01_3467/158_4421.jpg",
+				"hash": "c2d31ecb1e965f6ffaeca326ea01ecab"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3467/",
-	"brandIds": [
-		"gfy"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5035",
-		"01_4239",
-		"01_3472",
-		"01_3841"
-	]
+	"brandIds": ["gfy"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5035", "01_4239", "01_3472", "01_3841"]
 }

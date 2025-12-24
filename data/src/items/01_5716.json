@@ -39,20 +39,24 @@
 			"*Excluding Waki ​​8000"
 		]
 	},
-	"images": [
-		"/images/items/01_5716/153_783.jpg",
-		"/images/items/01_5716/155_783.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_783.jpg",
+				"path": "/images/items/01_5716/153_783.jpg",
+				"hash": "3d8f2093c6aa51dc9054fe654389e450"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_783.jpg",
+				"path": "/images/items/01_5716/155_783.jpg",
+				"hash": "b7ac10ad2d549572e011243d975c65a2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5716/",
-	"brandIds": [
-		"train"
-	],
+	"brandIds": ["train"],
 	"seriesIds": [],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"relatedItemIds": ["01_1276", "01_1277", "01_1278", "01_1280"]
 }

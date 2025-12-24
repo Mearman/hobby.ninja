@@ -26,22 +26,24 @@
 			"A three-dimensional version of the aircraft that appeared on the TV \"Mobile New Century Gundam X\". You can reproduce the deployment gimmick of the megasonic cannon built into the torso. The claw beam cannon on the forearm is movable. The rear wing can reproduce the deployment mechanism. Ball joints are used for the wrist, hip, and ankle joints. It has a beam saber."
 		]
 	},
-	"images": [
-		"/images/items/01_4711/153_5599.jpg",
-		"/images/items/01_4711/155_5599.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5599.jpg",
+				"path": "/images/items/01_4711/153_5599.jpg",
+				"hash": "e87c2257a979f58824f8d87e623384b9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5599.jpg",
+				"path": "/images/items/01_4711/155_5599.jpg",
+				"hash": "f1db37d81461bab4d2d2357ec98d316b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4711/",
 	"brandIds": [],
-	"seriesIds": [
-		"x"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000147185",
-		"item-1000147187",
-		"item-1000124674",
-		"01_298"
-	]
+	"seriesIds": ["x"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000147185", "item-1000147187", "item-1000124674", "01_298"]
 }

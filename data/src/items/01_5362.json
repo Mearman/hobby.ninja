@@ -36,14 +36,7 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ビームサーベル×1",
-			"ビームライフル×1",
-			"シールド×1",
-			"MA変形用パーツ×1",
-			"増槽パーツ×2",
-			"シール×1"
-		],
+		"ja": ["ビームサーベル×1", "ビームライフル×1", "シールド×1", "MA変形用パーツ×1", "増槽パーツ×2", "シール×1"],
 		"en": [
 			"Beam saber x 1",
 			"Beam rifle x 1",
@@ -53,35 +46,71 @@
 			"Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5362/153_6212.jpg",
-		"/images/items/01_5362/155_6212.jpg",
-		"/images/items/01_5362/156_6212.jpg",
-		"/images/items/01_5362/157_6212.jpg",
-		"/images/items/01_5362/158_6212.jpg",
-		"/images/items/01_5362/159_6212.jpg",
-		"/images/items/01_5362/189_6212.jpg",
-		"/images/items/01_5362/190_6212.jpg",
-		"/images/items/01_5362/191_6212.jpg",
-		"/images/items/01_5362/192_6212.jpg",
-		"/images/items/01_5362/193_6212.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6212.jpg",
+				"path": "/images/items/01_5362/153_6212.jpg",
+				"hash": "ee895b043e2242b79d9f24cc6813aef2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6212.jpg",
+				"path": "/images/items/01_5362/155_6212.jpg",
+				"hash": "b096ced3e982f86da9b5cfcbee8934de"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6212.jpg",
+				"path": "/images/items/01_5362/156_6212.jpg",
+				"hash": "26ea58f986fbe58b79d3ef5d1e5b5a06"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6212.jpg",
+				"path": "/images/items/01_5362/157_6212.jpg",
+				"hash": "96f4d83661616732f53d4d3acddb05ba"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6212.jpg",
+				"path": "/images/items/01_5362/158_6212.jpg",
+				"hash": "3c9454911c16ab792d59b300e75162c1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6212.jpg",
+				"path": "/images/items/01_5362/159_6212.jpg",
+				"hash": "0cbd801f16fd47120fe0a5be9e68c3a1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6212.jpg",
+				"path": "/images/items/01_5362/189_6212.jpg",
+				"hash": "f3f8196e3a2b9a06cb84de863bd305dd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6212.jpg",
+				"path": "/images/items/01_5362/190_6212.jpg",
+				"hash": "18bea6a5c2036b1fb78e11f760f6cbfb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_6212.jpg",
+				"path": "/images/items/01_5362/191_6212.jpg",
+				"hash": "a02cf27afaa9c0bbb0b14ef3175ea965"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_6212.jpg",
+				"path": "/images/items/01_5362/192_6212.jpg",
+				"hash": "0ac59517cce23851f7645af8097b7b2e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_6212.jpg",
+				"path": "/images/items/01_5362/193_6212.jpg",
+				"hash": "70913e04d1426010507d495f05882bf8"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5362/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-freedom"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5452",
-		"01_5374",
-		"01_5363",
-		"item-1000211615"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed-freedom"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5452", "01_5374", "01_5363", "item-1000211615"],
 	"manual": {
 		"id": "1884",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1884/"

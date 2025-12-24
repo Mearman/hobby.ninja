@@ -52,27 +52,64 @@
 			"Backpack extension arm x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_3559/153_4514.jpg",
-		"/images/items/01_3559/155_4514.jpg",
-		"/images/items/01_3559/156_4514.jpg",
-		"/images/items/01_3559/157_4514.jpg",
-		"/images/items/01_3559/158_4514.jpg",
-		"/images/items/01_3559/159_4514.jpg",
-		"/images/items/01_3559/189_4514.jpg",
-		"/images/items/01_3559/190_4514.jpg",
-		"/images/items/01_3559/191_4514.jpg",
-		"/images/items/01_3559/192_4514.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4514.jpg",
+				"path": "/images/items/01_3559/153_4514.jpg",
+				"hash": "50462a6e5858dea0f0f020bd43ff94e7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4514.jpg",
+				"path": "/images/items/01_3559/155_4514.jpg",
+				"hash": "361116bc1466cbfd6e5f41f0b983860e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4514.jpg",
+				"path": "/images/items/01_3559/156_4514.jpg",
+				"hash": "c5603244a34a213c7e96408836fd3783"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4514.jpg",
+				"path": "/images/items/01_3559/157_4514.jpg",
+				"hash": "efd78d604973333f9af4ef4d749ece66"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4514.jpg",
+				"path": "/images/items/01_3559/158_4514.jpg",
+				"hash": "62cf2d03243b9f2a85b15ee5fc8c35a6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4514.jpg",
+				"path": "/images/items/01_3559/159_4514.jpg",
+				"hash": "2c771b3ab7a7ab411b191c7b259048c1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4514.jpg",
+				"path": "/images/items/01_3559/189_4514.jpg",
+				"hash": "b9d875a43932824b84a656b1da6cd208"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4514.jpg",
+				"path": "/images/items/01_3559/190_4514.jpg",
+				"hash": "1e79c7c92e7493b85ba7e284f3a5ce09"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4514.jpg",
+				"path": "/images/items/01_3559/191_4514.jpg",
+				"hash": "ecda6c4c7927f7af9283f826db929ab8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4514.jpg",
+				"path": "/images/items/01_3559/192_4514.jpg",
+				"hash": "5045c86681bbf7572331ae0378942e63"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3559/",
-	"brandIds": [
-		"30ms"
-	],
-	"seriesIds": [
-		"girlgunlady"
-	],
-	"categoryIds": [
-		"30-minutes-label"
-	],
+	"brandIds": ["30ms"],
+	"seriesIds": ["girlgunlady"],
+	"categoryIds": ["30-minutes-label"],
 	"relatedItemIds": []
 }

@@ -39,44 +39,78 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"フェイスパーツ×3種",
-			"アーマーパーツ×１式",
-			"ハンドパーツ　握り手（左右）、武器持ち手（左右）"
-		],
+		"ja": ["フェイスパーツ×3種", "アーマーパーツ×１式", "ハンドパーツ　握り手（左右）、武器持ち手（左右）"],
 		"en": [
 			"Face parts x 3 types",
 			"Armor parts x 1 set",
 			"Hand parts Gripping hands (left and right), weapon handles (left and right)"
 		]
 	},
-	"images": [
-		"/images/items/01_3534/153_4485.jpg",
-		"/images/items/01_3534/155_4485.jpg",
-		"/images/items/01_3534/156_4485.jpg",
-		"/images/items/01_3534/157_4485.jpg",
-		"/images/items/01_3534/158_4485.jpg",
-		"/images/items/01_3534/159_4485.jpg",
-		"/images/items/01_3534/189_4485.jpg",
-		"/images/items/01_3534/190_4485.jpg",
-		"/images/items/01_3534/191_4485.jpg",
-		"/images/items/01_3534/192_4485.jpg",
-		"/images/items/01_3534/193_4485.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4485.jpg",
+				"path": "/images/items/01_3534/153_4485.jpg",
+				"hash": "4e4f3832f1357614b06efd5df8d4282b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4485.jpg",
+				"path": "/images/items/01_3534/155_4485.jpg",
+				"hash": "e2bf35fc171837c41807861523b6ac24"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4485.jpg",
+				"path": "/images/items/01_3534/156_4485.jpg",
+				"hash": "f7bfc7ee797c05d1b2c4ef97a2cd4928"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4485.jpg",
+				"path": "/images/items/01_3534/157_4485.jpg",
+				"hash": "933c0d5130372e721b5d7cadccedf9a8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4485.jpg",
+				"path": "/images/items/01_3534/158_4485.jpg",
+				"hash": "3205b6c0cf7c663d7008779f1fcb307e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4485.jpg",
+				"path": "/images/items/01_3534/159_4485.jpg",
+				"hash": "2fd3131848a88a950b9f7f39918ab9d8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4485.jpg",
+				"path": "/images/items/01_3534/189_4485.jpg",
+				"hash": "aa8d3563c58ab49aed85afb8a8a5833a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4485.jpg",
+				"path": "/images/items/01_3534/190_4485.jpg",
+				"hash": "036e0e83a7c143284e4421af3e6d0e59"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4485.jpg",
+				"path": "/images/items/01_3534/191_4485.jpg",
+				"hash": "746820346d465bd258176aca4f0b8695"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4485.jpg",
+				"path": "/images/items/01_3534/192_4485.jpg",
+				"hash": "30f612b966f3d379a1fab807e8ca3dc1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_4485.jpg",
+				"path": "/images/items/01_3534/193_4485.jpg",
+				"hash": "a5ab1317b76a3a1fe7d51b398bf464b0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3534/",
-	"brandIds": [
-		"30ms"
-	],
+	"brandIds": ["30ms"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5975",
-		"01_5976",
-		"01_5977",
-		"01_5954"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3433",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3433/"

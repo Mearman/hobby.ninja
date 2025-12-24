@@ -91,43 +91,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"クロスメイス",
-			"スマートクローシールド"
-		],
-		"en": [
-			"cross mace",
-			"Smart Claw Seal"
-		]
+		"ja": ["クロスメイス", "スマートクローシールド"],
+		"en": ["cross mace", "Smart Claw Seal"]
 	},
-	"images": [
-		"/images/items/01_5043/153_5909.jpg",
-		"/images/items/01_5043/155_5909.jpg",
-		"/images/items/01_5043/156_5909.jpg",
-		"/images/items/01_5043/157_5909.jpg",
-		"/images/items/01_5043/158_5909.jpg",
-		"/images/items/01_5043/159_5909.jpg",
-		"/images/items/01_5043/189_5909.jpg",
-		"/images/items/01_5043/190_5909.jpg",
-		"/images/items/01_5043/191_5909.jpg",
-		"/images/items/01_5043/192_5909.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5909.jpg",
+				"path": "/images/items/01_5043/153_5909.jpg",
+				"hash": "58fe94269695d367a421f893e3e64bea"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5909.jpg",
+				"path": "/images/items/01_5043/155_5909.jpg",
+				"hash": "f2b42d6d4eea054106cec74ee035736a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5909.jpg",
+				"path": "/images/items/01_5043/156_5909.jpg",
+				"hash": "b5a124dda9495818d25fc05705d1ba62"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5909.jpg",
+				"path": "/images/items/01_5043/157_5909.jpg",
+				"hash": "a26706f7369d7efd7e247889d8cb33e1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5909.jpg",
+				"path": "/images/items/01_5043/158_5909.jpg",
+				"hash": "c24bb339a11b99b80cbf1cdd193a46ca"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5909.jpg",
+				"path": "/images/items/01_5043/159_5909.jpg",
+				"hash": "ae2ad86600f822e558bb84f16b3425a4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5909.jpg",
+				"path": "/images/items/01_5043/189_5909.jpg",
+				"hash": "9fcab0a5c18779ca6bb99c3ad6eaaf87"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5909.jpg",
+				"path": "/images/items/01_5043/190_5909.jpg",
+				"hash": "ea71261d66fe3e667d4f98d9f93fad2d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5909.jpg",
+				"path": "/images/items/01_5043/191_5909.jpg",
+				"hash": "ed69ba9cf35387b9e6f2d453d05bd1eb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5909.jpg",
+				"path": "/images/items/01_5043/192_5909.jpg",
+				"hash": "d4bb560f3e141843be3f3511011e39ef"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5043/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
+	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5951"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

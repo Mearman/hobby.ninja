@@ -33,21 +33,19 @@
 			"■ Comes with a dedicated pedestal that can reproduce a floating figure. Molded product ×4, seal ×1, assembly instructions"
 		]
 	},
-	"images": [
-		"/images/items/01_5117/1000015100_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000015100_1.jpg",
+				"path": "/images/items/01_5117/1000015100_1.jpg",
+				"hash": "75d3fccdfacd66a4d5048579e33ece7a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5117/",
 	"brandIds": [],
-	"seriesIds": [
-		"pokemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"seriesIds": ["pokemon"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
 }

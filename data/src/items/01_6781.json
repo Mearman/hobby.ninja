@@ -34,42 +34,52 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"武装×1式",
-			"ハンドパーツ×1",
-			"マーキングシール×1",
-			"シール×1"
-		],
-		"en": [
-			"Armed x 1 type",
-			"Hand parts x 1",
-			"MarkingSeal×1",
-			"Seal×1"
-		]
+		"ja": ["武装×1式", "ハンドパーツ×1", "マーキングシール×1", "シール×1"],
+		"en": ["Armed x 1 type", "Hand parts x 1", "MarkingSeal×1", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_6781/01_6781_0.jpg",
-		"/images/items/01_6781/01_6781_1.jpg",
-		"/images/items/01_6781/01_6781_2.jpg",
-		"/images/items/01_6781/01_6781_3.jpg",
-		"/images/items/01_6781/01_6781_4.jpg",
-		"/images/items/01_6781/01_6781_5.jpg",
-		"/images/items/01_6781/01_6781_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6781_0.jpg",
+				"path": "/images/items/01_6781/01_6781_0.jpg",
+				"hash": "218b63cfafce22ff76a46ee2d95efaf2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6781_1.jpg",
+				"path": "/images/items/01_6781/01_6781_1.jpg",
+				"hash": "0254bce0718df7abd81636587236c342"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6781_2.jpg",
+				"path": "/images/items/01_6781/01_6781_2.jpg",
+				"hash": "8a8f30c787726bcac02df84274497ec5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6781_3.jpg",
+				"path": "/images/items/01_6781/01_6781_3.jpg",
+				"hash": "f31f647f7488ab835b44208cdd3d92e7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6781_4.jpg",
+				"path": "/images/items/01_6781/01_6781_4.jpg",
+				"hash": "8be282f4c83f61bdc5963e57f0b457ea"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6781_5.jpg",
+				"path": "/images/items/01_6781/01_6781_5.jpg",
+				"hash": "9e4d316dc1743b8063fc771870c5e4f0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6781_6.jpg",
+				"path": "/images/items/01_6781/01_6781_6.jpg",
+				"hash": "94c3f244b6d1564fd022932fdfba1423"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6781/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gquuuuuux"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6772",
-		"01_5986",
-		"01_5961",
-		"01_5951"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["gquuuuuux"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_6772", "01_5986", "01_5961", "01_5951"]
 }

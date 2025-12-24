@@ -86,39 +86,59 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ペルセウスソード"
-		],
-		"en": [
-			"perseus sword"
-		]
+		"ja": ["ペルセウスソード"],
+		"en": ["perseus sword"]
 	},
-	"images": [
-		"/images/items/01_5352/153_6202.jpg",
-		"/images/items/01_5352/155_6202.jpg",
-		"/images/items/01_5352/156_6202.jpg",
-		"/images/items/01_5352/157_6202.jpg",
-		"/images/items/01_5352/158_6202.jpg",
-		"/images/items/01_5352/159_6202.jpg",
-		"/images/items/01_5352/189_6202.jpg",
-		"/images/items/01_5352/190_6202.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6202.jpg",
+				"path": "/images/items/01_5352/153_6202.jpg",
+				"hash": "afa8dd306ab507cea076693cc2c4e098"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6202.jpg",
+				"path": "/images/items/01_5352/155_6202.jpg",
+				"hash": "3f6fd9499dff2ac8c2f902dcbc959962"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6202.jpg",
+				"path": "/images/items/01_5352/156_6202.jpg",
+				"hash": "475b8137c7e50ace9207a9b1754641b3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6202.jpg",
+				"path": "/images/items/01_5352/157_6202.jpg",
+				"hash": "3464c3f313027b36f26905ac2516f530"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6202.jpg",
+				"path": "/images/items/01_5352/158_6202.jpg",
+				"hash": "685512fd3652531aa8d2ea2c5339daaa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6202.jpg",
+				"path": "/images/items/01_5352/159_6202.jpg",
+				"hash": "781c80db57ad192cab9bfcfa0603643f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6202.jpg",
+				"path": "/images/items/01_5352/189_6202.jpg",
+				"hash": "c4bc468175f2a7c17cb5b85924479fc2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6202.jpg",
+				"path": "/images/items/01_5352/190_6202.jpg",
+				"hash": "634e1f8f216e5739f97e369e7dbd5bc9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5352/",
-	"brandIds": [
-		"pb_charapla"
-	],
-	"seriesIds": [
-		"lbx"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"01_5305"
-	],
+	"brandIds": ["pb_charapla"],
+	"seriesIds": ["lbx"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000215196", "item-1000215197", "item-1000210042", "01_5305"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

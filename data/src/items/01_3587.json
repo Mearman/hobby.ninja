@@ -27,22 +27,35 @@
 			"• A custom version of the Earth Federation military's mass-produced Genoas is now available as HG. • Newly sculpted shoulder parts, head parts, special weapons, etc. • The personal mark of “Wolf” which is the proof of Wolf machine is reproduced with foil seal. Molded product x 6, foil seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_3587/153_4542.jpg",
-		"/images/items/01_3587/155_4542.jpg",
-		"/images/items/01_3587/156_4542.jpg",
-		"/images/items/01_3587/157_4542.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4542.jpg",
+				"path": "/images/items/01_3587/153_4542.jpg",
+				"hash": "5a922a7ada4cd599d5606fa792f9da06"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4542.jpg",
+				"path": "/images/items/01_3587/155_4542.jpg",
+				"hash": "c3cb3ce4b9888e71a5f3e479fb1f2b9c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4542.jpg",
+				"path": "/images/items/01_3587/156_4542.jpg",
+				"hash": "fbcbcdbbf77f329c08aa0aa0d6c5f7a7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4542.jpg",
+				"path": "/images/items/01_3587/157_4542.jpg",
+				"hash": "f236f76f2201ea86927a5c0d3d714836"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3587/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": [],
 	"manual": {
 		"id": "324",

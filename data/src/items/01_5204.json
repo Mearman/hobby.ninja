@@ -107,44 +107,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ザク・マシンガン",
-			"銃剣（ヒート・ダガー）"
-		],
-		"en": [
-			"zaku machine gun",
-			"Bayonet (heat dagger)"
-		]
+		"ja": ["ザク・マシンガン", "銃剣（ヒート・ダガー）"],
+		"en": ["zaku machine gun", "Bayonet (heat dagger)"]
 	},
-	"images": [
-		"/images/items/01_5204/153_6060.jpg",
-		"/images/items/01_5204/155_6060.jpg",
-		"/images/items/01_5204/156_6060.jpg",
-		"/images/items/01_5204/157_6060.jpg",
-		"/images/items/01_5204/158_6060.jpg",
-		"/images/items/01_5204/159_6060.jpg",
-		"/images/items/01_5204/189_6060.jpg",
-		"/images/items/01_5204/190_6060.jpg",
-		"/images/items/01_5204/191_6060.jpg",
-		"/images/items/01_5204/192_6060.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6060.jpg",
+				"path": "/images/items/01_5204/153_6060.jpg",
+				"hash": "07ec6d824a739fd94d8de8ce1e122c34"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6060.jpg",
+				"path": "/images/items/01_5204/155_6060.jpg",
+				"hash": "368b90673a81fa5973a095932bcc09ef"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6060.jpg",
+				"path": "/images/items/01_5204/156_6060.jpg",
+				"hash": "0dbff54dec10cd1c7507ca190978d94e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6060.jpg",
+				"path": "/images/items/01_5204/157_6060.jpg",
+				"hash": "128f31fb9ec98bf5848f59af4185ea62"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6060.jpg",
+				"path": "/images/items/01_5204/158_6060.jpg",
+				"hash": "b3e80d45b86dfb283eceacebd906f72b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6060.jpg",
+				"path": "/images/items/01_5204/159_6060.jpg",
+				"hash": "0568a3b0efbe65459e6cfc2e4aeeaacd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6060.jpg",
+				"path": "/images/items/01_5204/189_6060.jpg",
+				"hash": "61e0f444b5bfbed3eb9f7bf4cbd77a59"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6060.jpg",
+				"path": "/images/items/01_5204/190_6060.jpg",
+				"hash": "e4d4584f07bc512ebc5dcab988d3a056"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_6060.jpg",
+				"path": "/images/items/01_5204/191_6060.jpg",
+				"hash": "c88380103775778b09cc8f037de5040a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_6060.jpg",
+				"path": "/images/items/01_5204/192_6060.jpg",
+				"hash": "9530ef4b162fd8a31c6d7f5102d440bc"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5204/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"g-doan"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000220189",
-		"01_5514",
-		"item-1000190747"
-	],
+	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
+	"seriesIds": ["g-doan"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000220189", "01_5514", "item-1000190747"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

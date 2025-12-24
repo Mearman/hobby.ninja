@@ -37,29 +37,51 @@
 			"○Limited to the first shipment, a free viewing ticket for the digest video of \"Mobile Suit Gundam SEED C.E.73 -STARGAZER-\" is included."
 		]
 	},
-	"images": [
-		"/images/items/01_5633/153_696.jpg",
-		"/images/items/01_5633/155_696.jpg",
-		"/images/items/01_5633/156_696.jpg",
-		"/images/items/01_5633/157_696.jpg",
-		"/images/items/01_5633/158_696.jpg",
-		"/images/items/01_5633/159_696.jpg",
-		"/images/items/01_5633/189_696.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_696.jpg",
+				"path": "/images/items/01_5633/153_696.jpg",
+				"hash": "565172df403b97099e285fc99f86205a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_696.jpg",
+				"path": "/images/items/01_5633/155_696.jpg",
+				"hash": "4a3e6745a99568c38b1220933507d231"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_696.jpg",
+				"path": "/images/items/01_5633/156_696.jpg",
+				"hash": "08d216d9a8a72caa355cc5862c1e6da9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_696.jpg",
+				"path": "/images/items/01_5633/157_696.jpg",
+				"hash": "8a0ede3396836832afe0c260807381d4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_696.jpg",
+				"path": "/images/items/01_5633/158_696.jpg",
+				"hash": "c63cd0860a1cb54a16fcad4e79643eac"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_696.jpg",
+				"path": "/images/items/01_5633/159_696.jpg",
+				"hash": "604546070b791b245fcfa5ce916b7e2c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_696.jpg",
+				"path": "/images/items/01_5633/189_696.jpg",
+				"hash": "1bdefd8e87ab6886f0ebf5eb450b060d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5633/",
-	"brandIds": [
-		"hg"
-	],
+	"brandIds": ["hg"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5963", "01_5961", "01_5951"],
 	"manual": {
 		"id": "184",
 		"url": "https://manual.bandai-hobby.net/menus/detail/184/"

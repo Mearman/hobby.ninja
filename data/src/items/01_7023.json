@@ -30,37 +30,27 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"WB-0000 BAD COOK×1",
-			"WB-0010 DOUBLE TROUBLE×1式",
-			"BML-G2/P19SPL-12×1式",
-			"SB-033M MORLEY×1式"
-		],
-		"en": [
-			"WB-0000 BAD COOK×1",
-			"WB-0010 DOUBLE TROUBLE×1 set",
-			"BML-G2/P19SPL-12×1 set",
-			"SB-033M MORLEY×1 set"
-		]
+		"ja": ["WB-0000 BAD COOK×1", "WB-0010 DOUBLE TROUBLE×1式", "BML-G2/P19SPL-12×1式", "SB-033M MORLEY×1式"],
+		"en": ["WB-0000 BAD COOK×1", "WB-0010 DOUBLE TROUBLE×1 set", "BML-G2/P19SPL-12×1 set", "SB-033M MORLEY×1 set"]
 	},
-	"images": [
-		"/images/items/01_7023/01_7023_0.jpg",
-		"/images/items/01_7023/01_7023_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_7023_0.jpg",
+				"path": "/images/items/01_7023/01_7023_0.jpg",
+				"hash": "3220d73f505f198f9f49614f120085b2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7023_1.jpg",
+				"path": "/images/items/01_7023/01_7023_1.jpg",
+				"hash": "4e750816c02aec8b10ccb160371afbf9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_7023/",
-	"brandIds": [
-		"30mm"
-	],
-	"seriesIds": [
-		"armoredcore"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7022",
-		"01_6945",
-		"01_6775",
-		"01_5973"
-	]
+	"brandIds": ["30mm"],
+	"seriesIds": ["armoredcore"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7022", "01_6945", "01_6775", "01_5973"]
 }

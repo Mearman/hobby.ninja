@@ -30,25 +30,39 @@
 			"Keropla is full of play value and comes with a flying board that appears in the movie and a decorative pedestal! !"
 		]
 	},
-	"images": [
-		"/images/items/01_5380/153_622.jpg",
-		"/images/items/01_5380/155_622.jpg",
-		"/images/items/01_5380/156_622.jpg",
-		"/images/items/01_5380/157_622.jpg",
-		"/images/items/01_5380/158_622.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_622.jpg",
+				"path": "/images/items/01_5380/153_622.jpg",
+				"hash": "569ef354da84929cb44af564faeef800"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_622.jpg",
+				"path": "/images/items/01_5380/155_622.jpg",
+				"hash": "179b1f81f4c2f6fd1a2be76d28cedd3e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_622.jpg",
+				"path": "/images/items/01_5380/156_622.jpg",
+				"hash": "9d9e8d0b6dfac3c57ff52c64653800fe"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_622.jpg",
+				"path": "/images/items/01_5380/157_622.jpg",
+				"hash": "2833a454f058055e983622a996ec283a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_622.jpg",
+				"path": "/images/items/01_5380/158_622.jpg",
+				"hash": "55852201b12e7039f67d1768163adf07"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5380/",
 	"brandIds": [],
-	"seriesIds": [
-		"keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7034",
-		"01_2120",
-		"01_2122",
-		"01_2104"
-	]
+	"seriesIds": ["keroro"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7034", "01_2120", "01_2122", "01_2104"]
 }

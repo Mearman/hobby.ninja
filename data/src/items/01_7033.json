@@ -32,34 +32,32 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ハンドパーツ×1式",
-			"3Dメタリックシール×1"
-		],
-		"en": [
-			"Hand parts x 1 set",
-			"3D metallic seal×1"
-		]
+		"ja": ["ハンドパーツ×1式", "3Dメタリックシール×1"],
+		"en": ["Hand parts x 1 set", "3D metallic seal×1"]
 	},
-	"images": [
-		"/images/items/01_7033/01_7033_0.jpg",
-		"/images/items/01_7033/01_7033_1.jpg",
-		"/images/items/01_7033/01_7033_2.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_7033_0.jpg",
+				"path": "/images/items/01_7033/01_7033_0.jpg",
+				"hash": "09b4f857894c233e41fbc68e8e02e07a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7033_1.jpg",
+				"path": "/images/items/01_7033/01_7033_1.jpg",
+				"hash": "99589895607f515013f8e932d7b49c65"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7033_2.jpg",
+				"path": "/images/items/01_7033/01_7033_2.jpg",
+				"hash": "5d6e8995d1b7fa03c45381799545e21e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_7033/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"votoms"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000223037",
-		"item-1000209959",
-		"item-1000209960",
-		"item-1000209961"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["votoms"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000223037", "item-1000209959", "item-1000209960", "item-1000209961"]
 }

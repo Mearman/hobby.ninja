@@ -27,23 +27,29 @@
 			"• A mysterious Vagan aircraft painted in tricolor. • \"Touch gate \" allows parts to be removed by hand without the use of tools. • \" Iropla \" creates a colorful finish just by assembling it. • \" Block build\" allows for intuitive and quick assembly. • Comes with 1 gauging tip."
 		]
 	},
-	"images": [
-		"/images/items/01_4621/153_5516.jpg",
-		"/images/items/01_4621/155_5516.jpg",
-		"/images/items/01_4621/156_5516.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5516.jpg",
+				"path": "/images/items/01_4621/153_5516.jpg",
+				"hash": "9d390353193e0632dff503a7be2b8a39"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5516.jpg",
+				"path": "/images/items/01_4621/155_5516.jpg",
+				"hash": "514147965c21a4c4a2fe77b49aae6340"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5516.jpg",
+				"path": "/images/items/01_4621/156_5516.jpg",
+				"hash": "3eea097eee1a31758f37957d32ca5549"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4621/",
 	"brandIds": [],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181355",
-		"item-1000181354",
-		"item-1000170540",
-		"01_4196"
-	]
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181355", "item-1000181354", "item-1000170540", "01_4196"]
 }

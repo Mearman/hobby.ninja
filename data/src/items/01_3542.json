@@ -33,36 +33,54 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"フェイスパーツ×3種"
-		],
-		"en": [
-			"Face parts x 3 types"
-		]
+		"ja": ["フェイスパーツ×3種"],
+		"en": ["Face parts x 3 types"]
 	},
-	"images": [
-		"/images/items/01_3542/153_4493.jpg",
-		"/images/items/01_3542/155_4493.jpg",
-		"/images/items/01_3542/156_4493.jpg",
-		"/images/items/01_3542/157_4493.jpg",
-		"/images/items/01_3542/158_4493.jpg",
-		"/images/items/01_3542/159_4493.jpg",
-		"/images/items/01_3542/189_4493.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4493.jpg",
+				"path": "/images/items/01_3542/153_4493.jpg",
+				"hash": "a4db3e04b89d1322e85adefb68c81d76"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4493.jpg",
+				"path": "/images/items/01_3542/155_4493.jpg",
+				"hash": "a8d95e11906570d72e65db51fb0b8202"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4493.jpg",
+				"path": "/images/items/01_3542/156_4493.jpg",
+				"hash": "18084234e7184c2670159f6a98e31877"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4493.jpg",
+				"path": "/images/items/01_3542/157_4493.jpg",
+				"hash": "62473f696ffa3ef9ff3c954901aa3a52"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4493.jpg",
+				"path": "/images/items/01_3542/158_4493.jpg",
+				"hash": "b5bdf3e245469eb6e78329216f2e3d1b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4493.jpg",
+				"path": "/images/items/01_3542/159_4493.jpg",
+				"hash": "97d0eb486005cb92ba2ebf14fc5dd124"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4493.jpg",
+				"path": "/images/items/01_3542/189_4493.jpg",
+				"hash": "1f0ca285c68123d0c9326be56de3109b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3542/",
-	"brandIds": [
-		"30ms"
-	],
+	"brandIds": ["30ms"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5975",
-		"01_5976",
-		"01_5977",
-		"01_5954"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3460",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3460/"

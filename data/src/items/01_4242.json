@@ -40,29 +40,36 @@
 			"Futuristic attire becomes a symbol of a cyclical future."
 		]
 	},
-	"images": [
-		"/images/items/01_4242/01_4242_2.jpg",
-		"/images/items/01_4242/153_5160.jpg",
-		"/images/items/01_4242/155_5160.jpg",
-		"/images/items/01_4242/157_5160.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_4242_2.jpg",
+				"path": "/images/items/01_4242/01_4242_2.jpg",
+				"hash": "1cdae7575172e539da026755cd0a0349"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/153_5160.jpg",
+				"path": "/images/items/01_4242/153_5160.jpg",
+				"hash": "a6b5228eb01331b7ee760e2d7c6c4a2d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5160.jpg",
+				"path": "/images/items/01_4242/155_5160.jpg",
+				"hash": "08b31880912b18154a1b0db52c2c7ad4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5160.jpg",
+				"path": "/images/items/01_4242/157_5160.jpg",
+				"hash": "1f049887306f90ba5cf8c282c38fe3e2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4242/",
-	"brandIds": [
-		"ecoplaproject_g",
-		"mg"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216602",
-		"01_5526",
-		"01_5102",
-		"01_4422"
-	],
+	"brandIds": ["ecoplaproject_g", "mg"],
+	"seriesIds": ["g-00"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216602", "01_5526", "01_5102", "01_4422"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

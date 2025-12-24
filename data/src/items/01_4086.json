@@ -33,37 +33,49 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"オプションアーマー×1式",
-			"30MINUTES汎用ジョイントランナー×1"
-		],
-		"en": [
-			"Optional armor x 1 set",
-			"30MINUTES General purpose joint Runner x 1"
-		]
+		"ja": ["オプションアーマー×1式", "30MINUTES汎用ジョイントランナー×1"],
+		"en": ["Optional armor x 1 set", "30MINUTES General purpose joint Runner x 1"]
 	},
-	"images": [
-		"/images/items/01_4086/153_5010.jpg",
-		"/images/items/01_4086/155_5010.jpg",
-		"/images/items/01_4086/156_5010.jpg",
-		"/images/items/01_4086/157_5010.jpg",
-		"/images/items/01_4086/158_5010.jpg",
-		"/images/items/01_4086/159_5010.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5010.jpg",
+				"path": "/images/items/01_4086/153_5010.jpg",
+				"hash": "b0c9fea8d76e4044b5f22888d225debf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5010.jpg",
+				"path": "/images/items/01_4086/155_5010.jpg",
+				"hash": "3e13cf75ebb5f2ba64308ffcbe354f1d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5010.jpg",
+				"path": "/images/items/01_4086/156_5010.jpg",
+				"hash": "81818ee64527e39370dd4ff98cf86032"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5010.jpg",
+				"path": "/images/items/01_4086/157_5010.jpg",
+				"hash": "af3e900c4743297578d2da63139aae6b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5010.jpg",
+				"path": "/images/items/01_4086/158_5010.jpg",
+				"hash": "0b6509f45e5fc18a801d29dcd3107504"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5010.jpg",
+				"path": "/images/items/01_4086/159_5010.jpg",
+				"hash": "6e572ea1574421fa3e2334229bfca573"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4086/",
-	"brandIds": [
-		"30ms"
-	],
+	"brandIds": ["30ms"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5975",
-		"01_5976",
-		"01_5977",
-		"01_5954"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3465",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3465/"

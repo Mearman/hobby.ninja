@@ -31,28 +31,36 @@
 			"• Comes with one Gundam marker for inking. Gundam marker (smearing) x 1, chain x 1, molded items x 10, step-up manual x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_3719/153_4671.jpg",
-		"/images/items/01_3719/155_4671.jpg",
-		"/images/items/01_3719/156_4671.jpg",
-		"/images/items/01_3719/157_4671.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4671.jpg",
+				"path": "/images/items/01_3719/153_4671.jpg",
+				"hash": "99c0c27b0d071b0a552293e851621a3d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4671.jpg",
+				"path": "/images/items/01_3719/155_4671.jpg",
+				"hash": "6af2241e8c4a4bc5da9643612346c9c0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4671.jpg",
+				"path": "/images/items/01_3719/156_4671.jpg",
+				"hash": "02c0ee393334b06904bce084fd2a3da6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4671.jpg",
+				"path": "/images/items/01_3719/157_4671.jpg",
+				"hash": "6912329860aaf2e5ee2bf3ddb309f717"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3719/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"manual": {
 		"id": "689",
 		"url": "https://manual.bandai-hobby.net/menus/detail/689/"

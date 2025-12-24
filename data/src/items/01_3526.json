@@ -52,28 +52,44 @@
 			"Foil Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_3526/153_4477.jpg",
-		"/images/items/01_3526/155_4477.jpg",
-		"/images/items/01_3526/156_4477.jpg",
-		"/images/items/01_3526/157_4477.jpg",
-		"/images/items/01_3526/158_4477.jpg",
-		"/images/items/01_3526/159_4477.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4477.jpg",
+				"path": "/images/items/01_3526/153_4477.jpg",
+				"hash": "ee0a8170352b838f3be2242eb2d04221"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4477.jpg",
+				"path": "/images/items/01_3526/155_4477.jpg",
+				"hash": "801d521774687a6aad190b199eec6e29"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4477.jpg",
+				"path": "/images/items/01_3526/156_4477.jpg",
+				"hash": "1ca30131d253dce8fddc79b71a543c1e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4477.jpg",
+				"path": "/images/items/01_3526/157_4477.jpg",
+				"hash": "aa72eaada3a739e4fbcc39850189ab1f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4477.jpg",
+				"path": "/images/items/01_3526/158_4477.jpg",
+				"hash": "2ab389862dd243701ce86848fc816ead"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4477.jpg",
+				"path": "/images/items/01_3526/159_4477.jpg",
+				"hash": "1c84832b6154aa9252e2b67fe4d3a922"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3526/",
-	"brandIds": [
-		"sdgundamseries"
-	],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4336",
-		"01_4312",
-		"01_4634"
-	]
+	"brandIds": ["sdgundamseries"],
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
 }

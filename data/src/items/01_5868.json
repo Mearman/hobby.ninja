@@ -32,21 +32,29 @@
 			"• Includes handguns and rifles used in the movie."
 		]
 	},
-	"images": [
-		"/images/items/01_5868/153_947.jpg",
-		"/images/items/01_5868/155_947.jpg",
-		"/images/items/01_5868/156_947.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_947.jpg",
+				"path": "/images/items/01_5868/153_947.jpg",
+				"hash": "ec0a9aa9f6071619f60fdff9a212f82e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_947.jpg",
+				"path": "/images/items/01_5868/155_947.jpg",
+				"hash": "7b416bc1151cd68c9dce39a7db3e4282"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_947.jpg",
+				"path": "/images/items/01_5868/156_947.jpg",
+				"hash": "6ff399cca83398e62502998f014f607e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5868/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
-	"relatedItemIds": [
-		"01_5990",
-		"01_5989",
-		"01_5984",
-		"01_5972"
-	]
+	"categoryIds": ["product-list"],
+	"relatedItemIds": ["01_5990", "01_5989", "01_5984", "01_5972"]
 }

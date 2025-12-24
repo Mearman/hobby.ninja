@@ -30,43 +30,67 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"1/144 グルーン×1",
-			"1/144 バッシュ×1",
-			"1/144 オージェ×1",
-			"1/144 アシュラテンプル×1"
-		],
-		"en": [
-			"1/144 Groon x 1",
-			"1/144 Bash x 1",
-			"1/144 Auger x 1",
-			"1/144 Ashura Temple x 1"
-		]
+		"ja": ["1/144 グルーン×1", "1/144 バッシュ×1", "1/144 オージェ×1", "1/144 アシュラテンプル×1"],
+		"en": ["1/144 Groon x 1", "1/144 Bash x 1", "1/144 Auger x 1", "1/144 Ashura Temple x 1"]
 	},
-	"images": [
-		"/images/items/01_3352/153_4306.jpg",
-		"/images/items/01_3352/155_4306.jpg",
-		"/images/items/01_3352/156_4306.jpg",
-		"/images/items/01_3352/157_4306.jpg",
-		"/images/items/01_3352/158_4306.jpg",
-		"/images/items/01_3352/159_4306.jpg",
-		"/images/items/01_3352/189_4306.jpg",
-		"/images/items/01_3352/190_4306.jpg",
-		"/images/items/01_3352/191_4306.jpg",
-		"/images/items/01_3352/192_4306.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4306.jpg",
+				"path": "/images/items/01_3352/153_4306.jpg",
+				"hash": "0a1aa5a8b24b45b62960a57964b83092"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4306.jpg",
+				"path": "/images/items/01_3352/155_4306.jpg",
+				"hash": "400dca6f6eb30c5ee44c11d8bdd784bf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4306.jpg",
+				"path": "/images/items/01_3352/156_4306.jpg",
+				"hash": "dd8806cb56e1722b2a1e72cafd53dc7b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4306.jpg",
+				"path": "/images/items/01_3352/157_4306.jpg",
+				"hash": "8451632c0b53cb6050eeaf0a6e050b0b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4306.jpg",
+				"path": "/images/items/01_3352/158_4306.jpg",
+				"hash": "290060115c54f318a19da2807d2e33a5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4306.jpg",
+				"path": "/images/items/01_3352/159_4306.jpg",
+				"hash": "f8d46f68f166614174fb6c5b0d42f06e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4306.jpg",
+				"path": "/images/items/01_3352/189_4306.jpg",
+				"hash": "0602cc5b9257cbe8de31f4eaa186d6e6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4306.jpg",
+				"path": "/images/items/01_3352/190_4306.jpg",
+				"hash": "03ab9bb403d4f579d6049bc70e1ee66c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4306.jpg",
+				"path": "/images/items/01_3352/191_4306.jpg",
+				"hash": "3ab188bc3e0b98a2f5a16a930b235f1a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4306.jpg",
+				"path": "/images/items/01_3352/192_4306.jpg",
+				"hash": "798e0ce9c7eb1b52cb4f3a942b9081f0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3352/",
 	"brandIds": [],
-	"seriesIds": [
-		"lgaim"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_6989",
-		"01_6990",
-		"item-1000225988",
-		"item-1000216436"
-	]
+	"seriesIds": ["lgaim"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_6989", "01_6990", "item-1000225988", "item-1000216436"]
 }

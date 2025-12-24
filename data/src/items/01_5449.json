@@ -32,32 +32,32 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"水転写式デカール×1"
-		],
-		"en": [
-			"Water transfer decal x 1"
-		]
+		"ja": ["水転写式デカール×1"],
+		"en": ["Water transfer decal x 1"]
 	},
-	"images": [
-		"/images/items/01_5449/153_6294.jpg",
-		"/images/items/01_5449/155_6294.jpg",
-		"/images/items/01_5449/156_6294.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6294.jpg",
+				"path": "/images/items/01_5449/153_6294.jpg",
+				"hash": "cb66a220c319d545941783e2eb47acd7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6294.jpg",
+				"path": "/images/items/01_5449/155_6294.jpg",
+				"hash": "474b37815ab5d12f7a7039a15e1b2cfb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6294.jpg",
+				"path": "/images/items/01_5449/156_6294.jpg",
+				"hash": "e8edf2617024eccf76c287fa8647074a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5449/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"macross"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5944",
-		"01_5946",
-		"01_5465",
-		"01_5448"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["macross"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5944", "01_5946", "01_5465", "01_5448"]
 }

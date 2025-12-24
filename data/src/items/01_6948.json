@@ -55,24 +55,49 @@
 			"Effect parts x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_6948/01_6948_0.jpg",
-		"/images/items/01_6948/01_6948_1.jpg",
-		"/images/items/01_6948/01_6948_2.jpg",
-		"/images/items/01_6948/01_6948_3.jpg",
-		"/images/items/01_6948/01_6948_4.jpg",
-		"/images/items/01_6948/01_6948_5.jpg",
-		"/images/items/01_6948/01_6948_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6948_0.jpg",
+				"path": "/images/items/01_6948/01_6948_0.jpg",
+				"hash": "b6d5ae74dac9a46d10c6bf2fa1a6682a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6948_1.jpg",
+				"path": "/images/items/01_6948/01_6948_1.jpg",
+				"hash": "9f4929b4cc6e8cd9eabbb5790839b4f0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6948_2.jpg",
+				"path": "/images/items/01_6948/01_6948_2.jpg",
+				"hash": "1d3f90a466e032e7e2c56d10a10cf693"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6948_3.jpg",
+				"path": "/images/items/01_6948/01_6948_3.jpg",
+				"hash": "787b4736d5f2ea079051c8b116a98172"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6948_4.jpg",
+				"path": "/images/items/01_6948/01_6948_4.jpg",
+				"hash": "88f0fce09a2ad29382b8201015070a98"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6948_5.jpg",
+				"path": "/images/items/01_6948/01_6948_5.jpg",
+				"hash": "31e152061198d8972ce92dee0fee78a8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6948_6.jpg",
+				"path": "/images/items/01_6948/01_6948_6.jpg",
+				"hash": "3474a3410886b718daa20c28d43cb716"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6948/",
-	"brandIds": [
-		"30mf"
-	],
-	"seriesIds": [
-		"samurai-trooper"
-	],
-	"categoryIds": [
-		"30-minutes-label"
-	],
+	"brandIds": ["30mf"],
+	"seriesIds": ["samurai-trooper"],
+	"categoryIds": ["30-minutes-label"],
 	"relatedItemIds": []
 }

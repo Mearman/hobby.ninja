@@ -26,22 +26,24 @@
 			"• Introducing a carry case that allows you to store and carry your gazing link items. • Design inspired by the \"Gundam shipping container\" that appears in the movie. • The included urethane partition allows you to store not only AG, but also GB, age devices, etc. • Made of durable plastic. • You can freely attach the included special stickers to create your own carry case."
 		]
 	},
-	"images": [
-		"/images/items/01_4590/153_5488.jpg",
-		"/images/items/01_4590/155_5488.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5488.jpg",
+				"path": "/images/items/01_4590/153_5488.jpg",
+				"hash": "4b3ed1e5fa082d82ff0fc139f4335b16"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5488.jpg",
+				"path": "/images/items/01_4590/155_5488.jpg",
+				"hash": "4736c8cac1102950af5536091a330456"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4590/",
 	"brandIds": [],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181355",
-		"item-1000181354",
-		"item-1000170540",
-		"01_4196"
-	]
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181355", "item-1000181354", "item-1000170540", "01_4196"]
 }

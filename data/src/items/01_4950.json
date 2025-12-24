@@ -20,33 +20,29 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HG 1/144 RX-78-2 ガンダム Ver.G30th REAL GRADE 1/1 GUNDAM PROJECT登場！"
-		],
-		"en": [
-			"HG 1/144 RX-78-2 Gundam Ver.G30th REAL GRADE 1/1 GUNDAM PROJECT is now available!"
-		]
+		"ja": ["HG 1/144 RX-78-2 ガンダム Ver.G30th REAL GRADE 1/1 GUNDAM PROJECT登場！"],
+		"en": ["HG 1/144 RX-78-2 Gundam Ver.G30th REAL GRADE 1/1 GUNDAM PROJECT is now available!"]
 	},
-	"images": [
-		"/images/items/01_4950/153_5822.jpg",
-		"/images/items/01_4950/155_5822.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5822.jpg",
+				"path": "/images/items/01_4950/153_5822.jpg",
+				"hash": "6964bcc05875ebdda23246afd7d0ccb7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5822.jpg",
+				"path": "/images/items/01_4950/155_5822.jpg",
+				"hash": "16406e1831097ed014da4d142676ef4b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4950/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

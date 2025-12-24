@@ -67,33 +67,66 @@
 			"Seal x 1 set"
 		]
 	},
-	"images": [
-		"/images/items/01_5187/1000209614_1.jpg",
-		"/images/items/01_5187/1000209614_10.jpg",
-		"/images/items/01_5187/1000209614_2.jpg",
-		"/images/items/01_5187/1000209614_3.jpg",
-		"/images/items/01_5187/1000209614_4.jpg",
-		"/images/items/01_5187/1000209614_5.jpg",
-		"/images/items/01_5187/1000209614_6.jpg",
-		"/images/items/01_5187/1000209614_7.jpg",
-		"/images/items/01_5187/1000209614_8.jpg",
-		"/images/items/01_5187/1000209614_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209614_1.jpg",
+				"path": "/images/items/01_5187/1000209614_1.jpg",
+				"hash": "f8174604eda5d5bfdc6a4d94c8ea7dda"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209614_10.jpg",
+				"path": "/images/items/01_5187/1000209614_10.jpg",
+				"hash": "2530ebc6ca265160b7ee73315efd916d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209614_2.jpg",
+				"path": "/images/items/01_5187/1000209614_2.jpg",
+				"hash": "0598b0b789b8f571bf5cf6ffa22d2b00"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209614_3.jpg",
+				"path": "/images/items/01_5187/1000209614_3.jpg",
+				"hash": "6819031ee2b61d2f96305fa5741ad06b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209614_4.jpg",
+				"path": "/images/items/01_5187/1000209614_4.jpg",
+				"hash": "e4327ff3a688f51fed6a8973bfbf087b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209614_5.jpg",
+				"path": "/images/items/01_5187/1000209614_5.jpg",
+				"hash": "5a0533854b3f0c15cd8e5f52e37f9cd7"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209614_6.jpg",
+				"path": "/images/items/01_5187/1000209614_6.jpg",
+				"hash": "7a2d6a9fcb859d5dceea5f41d38c982c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209614_7.jpg",
+				"path": "/images/items/01_5187/1000209614_7.jpg",
+				"hash": "80dbe060e8a547e33c896c934034abfe"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209614_8.jpg",
+				"path": "/images/items/01_5187/1000209614_8.jpg",
+				"hash": "b11eb14ef43341fe0b23db8cab46a6e5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209614_9.jpg",
+				"path": "/images/items/01_5187/1000209614_9.jpg",
+				"hash": "a2cf719ca8d59f4fe0d1c3ea552a60ab"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5187/",
-	"brandIds": [
-		"mgka"
-	],
-	"seriesIds": [
-		"narrative"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000213253",
-		"item-1000213251",
-		"01_5164"
-	],
+	"brandIds": ["mgka"],
+	"seriesIds": ["narrative"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000213253", "item-1000213251", "01_5164"],
 	"manual": {
 		"id": "1618",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1618/"

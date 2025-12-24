@@ -33,38 +33,44 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"オプションアーマー×1式",
-			"太モモパーツ×1式",
-			"脚部膝上パーツ×1式"
-		],
-		"en": [
-			"Optional armor x 1 set",
-			"Thick thigh parts x 1 set",
-			"Leg above knee parts x 1 set"
-		]
+		"ja": ["オプションアーマー×1式", "太モモパーツ×1式", "脚部膝上パーツ×1式"],
+		"en": ["Optional armor x 1 set", "Thick thigh parts x 1 set", "Leg above knee parts x 1 set"]
 	},
-	"images": [
-		"/images/items/01_3554/153_4508.jpg",
-		"/images/items/01_3554/155_4508.jpg",
-		"/images/items/01_3554/156_4508.jpg",
-		"/images/items/01_3554/157_4508.jpg",
-		"/images/items/01_3554/158_4508.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4508.jpg",
+				"path": "/images/items/01_3554/153_4508.jpg",
+				"hash": "214818e17c46808d84f7291247dbf044"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4508.jpg",
+				"path": "/images/items/01_3554/155_4508.jpg",
+				"hash": "bdc40f5b94c444b2435222e8e16faca2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4508.jpg",
+				"path": "/images/items/01_3554/156_4508.jpg",
+				"hash": "5def8f48d2a0647edb6c3b0a1223a895"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4508.jpg",
+				"path": "/images/items/01_3554/157_4508.jpg",
+				"hash": "7f1d7fc2377cb5418b576cd75992ebbe"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4508.jpg",
+				"path": "/images/items/01_3554/158_4508.jpg",
+				"hash": "04483d09117cbb37cb1575fcb160ba17"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3554/",
-	"brandIds": [
-		"30ms"
-	],
+	"brandIds": ["30ms"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5975",
-		"01_5976",
-		"01_5977",
-		"01_5954"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3442",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3442/"

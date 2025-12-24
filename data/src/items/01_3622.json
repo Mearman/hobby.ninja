@@ -38,45 +38,59 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ロッド×１",
-			"ビームランス用エフェクト×1",
-			"ホイルシール×1",
-			"ハンドパーツ×１式"
-		],
-		"en": [
-			"Rod x1",
-			"Beam lance effect x 1",
-			"Foil Seal×1",
-			"Hand parts x 1 set"
-		]
+		"ja": ["ロッド×１", "ビームランス用エフェクト×1", "ホイルシール×1", "ハンドパーツ×１式"],
+		"en": ["Rod x1", "Beam lance effect x 1", "Foil Seal×1", "Hand parts x 1 set"]
 	},
-	"images": [
-		"/images/items/01_3622/153_4576.jpg",
-		"/images/items/01_3622/155_4576.jpg",
-		"/images/items/01_3622/156_4576.jpg",
-		"/images/items/01_3622/157_4576.jpg",
-		"/images/items/01_3622/158_4576.jpg",
-		"/images/items/01_3622/159_4576.jpg",
-		"/images/items/01_3622/189_4576.jpg",
-		"/images/items/01_3622/190_4576.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4576.jpg",
+				"path": "/images/items/01_3622/153_4576.jpg",
+				"hash": "010b460d325f811245c31a1857590985"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4576.jpg",
+				"path": "/images/items/01_3622/155_4576.jpg",
+				"hash": "855ebe9dab69c86b607d36f65d97e128"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4576.jpg",
+				"path": "/images/items/01_3622/156_4576.jpg",
+				"hash": "0483c9ad5c77d01ec87ec57bb1a253aa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4576.jpg",
+				"path": "/images/items/01_3622/157_4576.jpg",
+				"hash": "61f6604f34cb36fef588befd42d58f52"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4576.jpg",
+				"path": "/images/items/01_3622/158_4576.jpg",
+				"hash": "c8bf068ec361efa7376dc3754ae5cd97"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4576.jpg",
+				"path": "/images/items/01_3622/159_4576.jpg",
+				"hash": "3985cb595bfe47a771e437a652e92281"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4576.jpg",
+				"path": "/images/items/01_3622/189_4576.jpg",
+				"hash": "2b8b3e48ea80d7df11b5f12a0740cc56"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4576.jpg",
+				"path": "/images/items/01_3622/190_4576.jpg",
+				"hash": "50305b2199e728182c9ec6fde2270a0a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3622/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam_breaker_battlogue"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4128",
-		"item-1000166359",
-		"item-1000166322",
-		"item-1000166358"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam_breaker_battlogue"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4128", "item-1000166359", "item-1000166322", "item-1000166358"],
 	"manual": {
 		"id": "117",
 		"url": "https://manual.bandai-hobby.net/menus/detail/117/"

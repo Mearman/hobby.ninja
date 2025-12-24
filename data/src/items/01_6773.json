@@ -36,38 +36,52 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ハンドパーツ×1式",
-			"シール×1"
-		],
-		"en": [
-			"Hand parts x 1 set",
-			"Seal×1"
-		]
+		"ja": ["ハンドパーツ×1式", "シール×1"],
+		"en": ["Hand parts x 1 set", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_6773/01_6773_0.jpg",
-		"/images/items/01_6773/01_6773_1.jpg",
-		"/images/items/01_6773/01_6773_2.jpg",
-		"/images/items/01_6773/01_6773_3.jpg",
-		"/images/items/01_6773/01_6773_4.jpg",
-		"/images/items/01_6773/01_6773_5.jpg",
-		"/images/items/01_6773/01_6773_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6773_0.jpg",
+				"path": "/images/items/01_6773/01_6773_0.jpg",
+				"hash": "edab358e7cccd271337587dd92ae654b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6773_1.jpg",
+				"path": "/images/items/01_6773/01_6773_1.jpg",
+				"hash": "1fe0bcf4e134dab0f3667222e33700bc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6773_2.jpg",
+				"path": "/images/items/01_6773/01_6773_2.jpg",
+				"hash": "78bd78e3de4e036848ea9826e8b973e3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6773_3.jpg",
+				"path": "/images/items/01_6773/01_6773_3.jpg",
+				"hash": "f08906146571a392f7903540f2a1f8c4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6773_4.jpg",
+				"path": "/images/items/01_6773/01_6773_4.jpg",
+				"hash": "78a7199010ea2d79a235ded1e4491031"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6773_5.jpg",
+				"path": "/images/items/01_6773/01_6773_5.jpg",
+				"hash": "e5e63a84658368f87e6a08a561a367b0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6773_6.jpg",
+				"path": "/images/items/01_6773/01_6773_6.jpg",
+				"hash": "44a34f347734e67c019fad5f702b7fea"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6773/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"tekketsu"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6763",
-		"01_4103",
-		"01_4240",
-		"01_4094"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["tekketsu"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_6763", "01_4103", "01_4240", "01_4094"]
 }

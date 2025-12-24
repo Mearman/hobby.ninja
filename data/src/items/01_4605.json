@@ -26,24 +26,24 @@
 			"• Gundam AGE-1 appears from BB Senshi. • Can reproduce AGE-1's WEAR3 forms (Normal, Titus, Sparrow). • AGE-1 normal can hold the Dodds rifle with both hands. • AGE-1 Titus can reproduce beam lariat and beam shoulder. • AGE-1 Sparrow can mount Siguru Blade on his waist. • A support mechanism for changing clothing is also included. SD original gimmick too. Molded product x 5, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4605/153_5501.jpg",
-		"/images/items/01_4605/155_5501.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5501.jpg",
+				"path": "/images/items/01_4605/153_5501.jpg",
+				"hash": "7b4a21716edfdf0ee4af36282c80c328"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5501.jpg",
+				"path": "/images/items/01_4605/155_5501.jpg",
+				"hash": "df642b85798b2eeddc5e3f9c0351fc1f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4605/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2834",
-		"01_2833",
-		"01_5759",
-		"01_5753"
-	]
+	"brandIds": ["bb"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2834", "01_2833", "01_5759", "01_5753"]
 }

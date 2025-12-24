@@ -33,28 +33,41 @@
 			"• Has a wide range of motion and can be posed freely."
 		]
 	},
-	"images": [
-		"/images/items/01_6745/01_6745_0.jpg",
-		"/images/items/01_6745/01_6745_1.jpg",
-		"/images/items/01_6745/01_6745_2.jpg",
-		"/images/items/01_6745/01_6745_3.jpg",
-		"/images/items/01_6745/01_6745_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6745_0.jpg",
+				"path": "/images/items/01_6745/01_6745_0.jpg",
+				"hash": "09f1849a881d09e9a4b2b4c8d02816f3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6745_1.jpg",
+				"path": "/images/items/01_6745/01_6745_1.jpg",
+				"hash": "a6b724786c2fd8d8d2f14c2aef216ccb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6745_2.jpg",
+				"path": "/images/items/01_6745/01_6745_2.jpg",
+				"hash": "a5a30aebf5eafc3fde035d05e90ff98e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6745_3.jpg",
+				"path": "/images/items/01_6745/01_6745_3.jpg",
+				"hash": "a4dfa886bf7f894f7d7d6beba674cd02"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6745_4.jpg",
+				"path": "/images/items/01_6745/01_6745_4.jpg",
+				"hash": "124a478032ec0c0f7b635670ae84012f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6745/",
-	"brandIds": [
-		"entry_grade"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4974",
-		"01_4082",
-		"01_4191"
-	],
+	"brandIds": ["entry_grade"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4974", "01_4082", "01_4191"],
 	"tag": {
 		"ja": "GUNDAM SIDE-F",
 		"en": "GUNDAM SIDE-F"

@@ -33,26 +33,24 @@
 			"-All foot missile missiles are reproduced with separate parts."
 		]
 	},
-	"images": [
-		"/images/items/01_3698/153_4652.jpg",
-		"/images/items/01_3698/155_4652.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4652.jpg",
+				"path": "/images/items/01_3698/153_4652.jpg",
+				"hash": "fa0c6f38210a4b030e62e81a7faf3289"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4652.jpg",
+				"path": "/images/items/01_3698/155_4652.jpg",
+				"hash": "20a3fc1648a5c8099ade0ac677767f04"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3698/",
-	"brandIds": [
-		"ecoplaproject_g",
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5045",
-		"01_4985",
-		"01_4971",
-		"01_4365"
-	]
+	"brandIds": ["ecoplaproject_g", "hg", "hguc"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5045", "01_4985", "01_4971", "01_4365"]
 }

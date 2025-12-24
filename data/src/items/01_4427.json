@@ -20,29 +20,27 @@
 	"targetAge": 15,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"「1/144 RMS-106 ハイザック」登場！"
-		],
-		"en": [
-			"\"1/144 RMS-106 Hizak\" now available!"
-		]
+		"ja": ["「1/144 RMS-106 ハイザック」登場！"],
+		"en": ["\"1/144 RMS-106 Hizak\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4427/153_5333.jpg",
-		"/images/items/01_4427/155_5333.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5333.jpg",
+				"path": "/images/items/01_4427/153_5333.jpg",
+				"hash": "0d445f965d26ce2eb80802486dd5bfba"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5333.jpg",
+				"path": "/images/items/01_4427/155_5333.jpg",
+				"hash": "0e912c22d020ef89fc88e550ebbc00f1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4427/",
 	"brandIds": [],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	]
+	"seriesIds": ["z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"]
 }

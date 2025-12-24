@@ -27,26 +27,29 @@
 			"• HGUC Unicorn Gundam is now available with a solid titanium finish. Molded product x 7, foil seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_5696/153_761.jpg",
-		"/images/items/01_5696/155_761.jpg",
-		"/images/items/01_5696/156_761.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_761.jpg",
+				"path": "/images/items/01_5696/153_761.jpg",
+				"hash": "7464ff6a1c0e960ceff1d37f666245b4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_761.jpg",
+				"path": "/images/items/01_5696/155_761.jpg",
+				"hash": "d1824ba9b4329c42f2402a47b17b84e2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_761.jpg",
+				"path": "/images/items/01_5696/156_761.jpg",
+				"hash": "638d9b327128bd2d39e5fe7fb0af4c9e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5696/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	]
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"]
 }

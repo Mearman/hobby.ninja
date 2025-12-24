@@ -44,28 +44,64 @@
 			"1/24 Twinkle head x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4301/153_5213.jpg",
-		"/images/items/01_4301/155_5213.jpg",
-		"/images/items/01_4301/156_5213.jpg",
-		"/images/items/01_4301/157_5213.jpg",
-		"/images/items/01_4301/158_5213.jpg",
-		"/images/items/01_4301/159_5213.jpg",
-		"/images/items/01_4301/189_5213.jpg",
-		"/images/items/01_4301/190_5213.jpg",
-		"/images/items/01_4301/191_5213.jpg",
-		"/images/items/01_4301/192_5213.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5213.jpg",
+				"path": "/images/items/01_4301/153_5213.jpg",
+				"hash": "fde345fec5da03a917c4c01bff982bf9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5213.jpg",
+				"path": "/images/items/01_4301/155_5213.jpg",
+				"hash": "5df8e5f33513307e854d98e7107bf93d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5213.jpg",
+				"path": "/images/items/01_4301/156_5213.jpg",
+				"hash": "e6074851f1771e643054aefbd78cb6ca"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5213.jpg",
+				"path": "/images/items/01_4301/157_5213.jpg",
+				"hash": "917965c38f95afb883526690d0912330"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5213.jpg",
+				"path": "/images/items/01_4301/158_5213.jpg",
+				"hash": "8bf435158a773c2b0857d949d8378465"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5213.jpg",
+				"path": "/images/items/01_4301/159_5213.jpg",
+				"hash": "09b45539c28afb62b23771da8fc886ed"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5213.jpg",
+				"path": "/images/items/01_4301/189_5213.jpg",
+				"hash": "216101d7e1ad64eed6279f317dcaf23f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5213.jpg",
+				"path": "/images/items/01_4301/190_5213.jpg",
+				"hash": "5dbda5159d7b861aea8ebcbd17ebb489"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5213.jpg",
+				"path": "/images/items/01_4301/191_5213.jpg",
+				"hash": "7744a2187d982ae6278ec382687b6d7a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5213.jpg",
+				"path": "/images/items/01_4301/192_5213.jpg",
+				"hash": "b6392b4957d73537009d191630fee8ad"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4301/",
 	"brandIds": [],
-	"seriesIds": [
-		"vifam"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4300",
-		"item-1000179682"
-	]
+	"seriesIds": ["vifam"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4300", "item-1000179682"]
 }

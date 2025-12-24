@@ -35,28 +35,36 @@
 			"Molded product x 3, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5920/153_998.jpg",
-		"/images/items/01_5920/155_998.jpg",
-		"/images/items/01_5920/156_998.jpg",
-		"/images/items/01_5920/01_5920_inst_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_998.jpg",
+				"path": "/images/items/01_5920/153_998.jpg",
+				"hash": "f0700d8688bb03c74dd055acf06572d9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_998.jpg",
+				"path": "/images/items/01_5920/155_998.jpg",
+				"hash": "617f598e4cb1dd9766198b8d9e3a4ab5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_998.jpg",
+				"path": "/images/items/01_5920/156_998.jpg",
+				"hash": "ed6558eaa4c9825da9655fb77443ffdd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5920_inst_1.jpg",
+				"path": "/images/items/01_5920/01_5920_inst_1.jpg",
+				"hash": "7f34b16ee86b975492e256dd05f605bd"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5920/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["buildfighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5057", "01_1942", "01_1288", "01_1261"],
 	"manual": {
 		"id": "717",
 		"url": "https://manual.bandai-hobby.net/menus/detail/717/"

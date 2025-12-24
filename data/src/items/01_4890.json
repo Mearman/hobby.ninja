@@ -20,33 +20,29 @@
 	"targetAge": 15,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"「MG 1/100 GAT-X207 ブリッツガンダム ミラージュコロイド（クリアーVer.）」登場！"
-		],
-		"en": [
-			"\"MG 1/100 GAT-X207 Blitz Gundam Mirage Colloid (Clear Ver.)\" now available!"
-		]
+		"ja": ["「MG 1/100 GAT-X207 ブリッツガンダム ミラージュコロイド（クリアーVer.）」登場！"],
+		"en": ["\"MG 1/100 GAT-X207 Blitz Gundam Mirage Colloid (Clear Ver.)\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4890/153_5768.jpg",
-		"/images/items/01_4890/155_5768.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5768.jpg",
+				"path": "/images/items/01_4890/153_5768.jpg",
+				"hash": "6010a423769436f2a97507482b827470"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5768.jpg",
+				"path": "/images/items/01_4890/155_5768.jpg",
+				"hash": "3471fb25f7cd107a6ded5b4812cb1984"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4890/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5221",
-		"01_4272",
-		"01_4195"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5994", "01_5221", "01_4272", "01_4195"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

@@ -52,31 +52,61 @@
 			"Joint parts x 1 set"
 		]
 	},
-	"images": [
-		"/images/items/01_4909/1000195260_1.jpg",
-		"/images/items/01_4909/1000195260_2.jpg",
-		"/images/items/01_4909/1000195260_3.jpg",
-		"/images/items/01_4909/1000195260_4.jpg",
-		"/images/items/01_4909/1000195260_5.jpg",
-		"/images/items/01_4909/1000195260_6.jpg",
-		"/images/items/01_4909/1000195260_7.jpg",
-		"/images/items/01_4909/1000195260_8.jpg",
-		"/images/items/01_4909/1000195260_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195260_1.jpg",
+				"path": "/images/items/01_4909/1000195260_1.jpg",
+				"hash": "a6e664e60880fc357b1bce5d1c3c2292"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195260_2.jpg",
+				"path": "/images/items/01_4909/1000195260_2.jpg",
+				"hash": "12387d3812f6bd1d34e11cd78d9c565f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195260_3.jpg",
+				"path": "/images/items/01_4909/1000195260_3.jpg",
+				"hash": "478628883c253eb87b5ed91ea414ac7a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195260_4.jpg",
+				"path": "/images/items/01_4909/1000195260_4.jpg",
+				"hash": "f44fe46248ee99207c87f06a7ef89c41"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195260_5.jpg",
+				"path": "/images/items/01_4909/1000195260_5.jpg",
+				"hash": "b0b225e198d2dd54cfe2a0d2a61067f4"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195260_6.jpg",
+				"path": "/images/items/01_4909/1000195260_6.jpg",
+				"hash": "c58e75545101c1c9157f1ee1fcf6ced3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195260_7.jpg",
+				"path": "/images/items/01_4909/1000195260_7.jpg",
+				"hash": "399bfc08040e580cc091fa486cf9d3aa"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195260_8.jpg",
+				"path": "/images/items/01_4909/1000195260_8.jpg",
+				"hash": "f32f6bec2f29f1638856b009370d1cae"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195260_9.jpg",
+				"path": "/images/items/01_4909/1000195260_9.jpg",
+				"hash": "25014b1d2ac88ed68b68cca90f9b9c54"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4909/",
-	"brandIds": [
-		"30mm"
-	],
+	"brandIds": ["30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_6774",
-		"01_6775",
-		"01_6766",
-		"01_6767"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_6774", "01_6775", "01_6766", "01_6767"],
 	"manual": {
 		"id": "3763",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3763/"

@@ -26,25 +26,29 @@
 			"• Both Waverider form and MS form can be reproduced with replacement parts. • You can choose whether or not to have eyes. • Base Jabber type base included. • Comes with a clear pedestal that can be used to display Delta Plus alone. Molded product x 8, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5775/153_837.jpg",
-		"/images/items/01_5775/155_837.jpg",
-		"/images/items/01_5775/156_837.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_837.jpg",
+				"path": "/images/items/01_5775/153_837.jpg",
+				"hash": "b044033db42ac79adea3b3d416f73168"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_837.jpg",
+				"path": "/images/items/01_5775/155_837.jpg",
+				"hash": "996a14570f6acd5d4805df8409bd95cc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_837.jpg",
+				"path": "/images/items/01_5775/156_837.jpg",
+				"hash": "b22ddfbbc62888a36ca3d34333e060fc"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5775/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3490",
-		"01_2646",
-		"01_1932",
-		"item-1000095978"
-	]
+	"brandIds": ["bb"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3490", "01_2646", "01_1932", "item-1000095978"]
 }

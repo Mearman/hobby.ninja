@@ -27,27 +27,31 @@
 			"• The GunplaHG series has been completely renewed in line with the HD remastering of Mobile Suit Gundam SEED. • New attachment parts that can be connected to Action Base 2 (sold separately) are included. • Added a new MarkingSeal design that allows you to dress up your aircraft by simply pasting on it, such as your military identification mark or aircraft number. • New packaging design. • Reproduce colors more faithful to the anime."
 		]
 	},
-	"images": [
-		"/images/items/01_4580/153_5478.jpg",
-		"/images/items/01_4580/155_5478.jpg",
-		"/images/items/01_4580/156_5478.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5478.jpg",
+				"path": "/images/items/01_4580/153_5478.jpg",
+				"hash": "10e44164b6cc876a765460b9dbfc7c43"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5478.jpg",
+				"path": "/images/items/01_4580/155_5478.jpg",
+				"hash": "d771500eccf94cdf7065440e7a6aa6b3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5478.jpg",
+				"path": "/images/items/01_4580/156_5478.jpg",
+				"hash": "8bad98b82beae06275ab53bd62c8092d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4580/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181726",
-		"01_1930",
-		"01_384",
-		"01_83"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181726", "01_1930", "01_384", "01_83"],
 	"manual": {
 		"id": "332",
 		"url": "https://manual.bandai-hobby.net/menus/detail/332/"

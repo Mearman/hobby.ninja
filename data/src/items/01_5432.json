@@ -78,30 +78,56 @@
 			"・Product specifications are as of 20248. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"images": [
-		"/images/items/01_5432/153_6277.jpg",
-		"/images/items/01_5432/155_6277.jpg",
-		"/images/items/01_5432/156_6277.jpg",
-		"/images/items/01_5432/157_6277.jpg",
-		"/images/items/01_5432/158_6277.jpg",
-		"/images/items/01_5432/159_6277.jpg",
-		"/images/items/01_5432/189_6277.jpg",
-		"/images/items/01_5432/190_6277.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6277.jpg",
+				"path": "/images/items/01_5432/153_6277.jpg",
+				"hash": "f9e404a02978c6980a5d54632829da83"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6277.jpg",
+				"path": "/images/items/01_5432/155_6277.jpg",
+				"hash": "f0bb3840b5117396550f9f251f7151ca"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6277.jpg",
+				"path": "/images/items/01_5432/156_6277.jpg",
+				"hash": "3b9be480011e906ea0a83a172de77643"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6277.jpg",
+				"path": "/images/items/01_5432/157_6277.jpg",
+				"hash": "42d131b1a52ac23671a64339bd71b106"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6277.jpg",
+				"path": "/images/items/01_5432/158_6277.jpg",
+				"hash": "9c220f9a3260fd2afb926854c71b8d5b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6277.jpg",
+				"path": "/images/items/01_5432/159_6277.jpg",
+				"hash": "b70717924ae26ef4948c73c81e069fe7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6277.jpg",
+				"path": "/images/items/01_5432/189_6277.jpg",
+				"hash": "21d67c077ae8286318b7b2d37d7d2e57"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6277.jpg",
+				"path": "/images/items/01_5432/190_6277.jpg",
+				"hash": "12f9c3d9fefbcc6274e63d760746308b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5432/",
-	"brandIds": [
-		"pb_charapla"
-	],
-	"seriesIds": [
-		"dragonar"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000212721",
-		"01_3902"
-	],
+	"brandIds": ["pb_charapla"],
+	"seriesIds": ["dragonar"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000212721", "01_3902"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

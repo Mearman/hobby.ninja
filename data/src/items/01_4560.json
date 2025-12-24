@@ -26,26 +26,36 @@
 			"1/100 Scale plastic model of Sword Impulse Gundam that appears in \"Mobile Suit Gundam SEED DESTINY \". It can be completely transformed into core splendor, chest flyer, and leg flyer forms, and by installing a stopper mechanism at each point required for transformation, it can be displayed properly even after transformation. The beam boomerang mechanism of the backpack (sword silhouette) is movable, and the rotation mechanism of the thruster block is also fully reproduced. The large sword \" Excalibur\" and the beam boomerang blade are made of clear parts, and the beam shape is realistically reproduced. Both the large sword and beam boomerang can be attached to the sword silhouette."
 		]
 	},
-	"images": [
-		"/images/items/01_4560/153_545.jpg",
-		"/images/items/01_4560/155_545.jpg",
-		"/images/items/01_4560/156_545.jpg",
-		"/images/items/01_4560/157_545.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_545.jpg",
+				"path": "/images/items/01_4560/153_545.jpg",
+				"hash": "f8cc5afddfb68fcc6086c86ea4a3876a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_545.jpg",
+				"path": "/images/items/01_4560/155_545.jpg",
+				"hash": "19833e815ccc643d2e7374ef6bb9be9d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_545.jpg",
+				"path": "/images/items/01_4560/156_545.jpg",
+				"hash": "49937442d3025dc903362969755ca248"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_545.jpg",
+				"path": "/images/items/01_4560/157_545.jpg",
+				"hash": "6081950138309e83a79acb0b91bca1a7"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4560/",
 	"brandIds": [],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5394",
-		"item-1000214960",
-		"01_5378",
-		"01_5365"
-	],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5394", "item-1000214960", "01_5378", "01_5365"],
 	"manual": {
 		"id": "1161",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1161/"

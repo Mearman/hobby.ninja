@@ -39,27 +39,31 @@
 			"• The arm armor is also useful as a striking weapon, and can be reversed to be used as a claw."
 		]
 	},
-	"images": [
-		"/images/items/01_4188/153_5109.jpg",
-		"/images/items/01_4188/155_5109.jpg",
-		"/images/items/01_4188/156_5109.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5109.jpg",
+				"path": "/images/items/01_4188/153_5109.jpg",
+				"hash": "df582ebee0dad8c10ee2fd77199066bb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5109.jpg",
+				"path": "/images/items/01_4188/155_5109.jpg",
+				"hash": "d6465a9ff3716d25c7b6f722f4ac1acf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5109.jpg",
+				"path": "/images/items/01_4188/156_5109.jpg",
+				"hash": "8aa10b333e45f85a0596abb89a60c82d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4188/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"tekketsu"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4103",
-		"01_4240",
-		"01_4094",
-		"01_4187"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["tekketsu"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4103", "01_4240", "01_4094", "01_4187"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

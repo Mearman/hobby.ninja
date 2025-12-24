@@ -32,23 +32,21 @@
 			"Details scheduled to be released later!"
 		]
 	},
-	"images": [
-		"/images/items/01_6982/01_6982_0.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6982_0.jpg",
+				"path": "/images/items/01_6982/01_6982_0.jpg",
+				"hash": "e43ee5cac71370de182143de087ad272"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6982/",
 	"brandIds": [],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6920",
-		"01_6854",
-		"01_6688",
-		"01_5992"
-	],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_6920", "01_6854", "01_6688", "01_5992"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

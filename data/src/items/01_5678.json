@@ -40,23 +40,29 @@
 			"Molded product x 11, water transfer decal x 1, Marking Seal x 1, foil seal x 1, nylon string x 1, assembly manual, special pedestal x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5678/153_744.jpg",
-		"/images/items/01_5678/155_744.jpg",
-		"/images/items/01_5678/156_744.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_744.jpg",
+				"path": "/images/items/01_5678/153_744.jpg",
+				"hash": "7e5dd95a1f612a8c50b7a200e3c8db94"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_744.jpg",
+				"path": "/images/items/01_5678/155_744.jpg",
+				"hash": "2b561c129cb0634de39e350fd7c3bf2b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_744.jpg",
+				"path": "/images/items/01_5678/156_744.jpg",
+				"hash": "e29476505b3b7bf2dc47e4f833b78c1c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5678/",
 	"brandIds": [],
-	"seriesIds": [
-		"onepiece"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5409",
-		"01_5410",
-		"01_4236",
-		"01_4170"
-	]
+	"seriesIds": ["onepiece"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5409", "01_5410", "01_4236", "01_4170"]
 }

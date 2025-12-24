@@ -32,22 +32,24 @@
 			"Molded product x 4, Seal x 1, Lead wire x 1, Instruction manual included"
 		]
 	},
-	"images": [
-		"/images/items/01_4670/153_5560.jpg",
-		"/images/items/01_4670/155_5560.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5560.jpg",
+				"path": "/images/items/01_4670/153_5560.jpg",
+				"hash": "14e065a1f1688f613b35db385ca30538"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5560.jpg",
+				"path": "/images/items/01_4670/155_5560.jpg",
+				"hash": "75699a32047e3408799cd9434fd3c07e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4670/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

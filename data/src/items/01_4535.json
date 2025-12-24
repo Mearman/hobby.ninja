@@ -26,23 +26,29 @@
 			"Sanrisaichi’s superhuman strength! The strong commander of the aircraft, “Heo Cho Gundam”, appears in BB Senshi. The parts of both shoulders are combined to form a hard iron ball. You can freely combine the five squid steel swords by attaching them to your back or weapons. By removing the armor, you can recreate Xu Cho from his childhood."
 		]
 	},
-	"images": [
-		"/images/items/01_4535/153_5436.jpg",
-		"/images/items/01_4535/155_5436.jpg",
-		"/images/items/01_4535/156_5436.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5436.jpg",
+				"path": "/images/items/01_4535/153_5436.jpg",
+				"hash": "e8f9e2d6bf696a5595b8fd7b2bbf3db0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5436.jpg",
+				"path": "/images/items/01_4535/155_5436.jpg",
+				"hash": "62f7ea4d2668cff12ee77642d3ac9c8a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5436.jpg",
+				"path": "/images/items/01_4535/156_5436.jpg",
+				"hash": "c57cac861f1b103e45e761440d26de28"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4535/",
-	"brandIds": [
-		"sdgundamseries"
-	],
+	"brandIds": ["sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
 }

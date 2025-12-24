@@ -107,47 +107,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"専用狙撃ライフル",
-			"ヒート・ナイフ",
-			"ショットガン",
-			"クラッカー"
-		],
-		"en": [
-			"special sniper rifle",
-			"heat knife",
-			"shotgun",
-			"cracker"
-		]
+		"ja": ["専用狙撃ライフル", "ヒート・ナイフ", "ショットガン", "クラッカー"],
+		"en": ["special sniper rifle", "heat knife", "shotgun", "cracker"]
 	},
-	"images": [
-		"/images/items/01_4079/153_5004.jpg",
-		"/images/items/01_4079/155_5004.jpg",
-		"/images/items/01_4079/156_5004.jpg",
-		"/images/items/01_4079/157_5004.jpg",
-		"/images/items/01_4079/158_5004.jpg",
-		"/images/items/01_4079/159_5004.jpg",
-		"/images/items/01_4079/189_5004.jpg",
-		"/images/items/01_4079/190_5004.jpg",
-		"/images/items/01_4079/191_5004.jpg",
-		"/images/items/01_4079/192_5004.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5004.jpg",
+				"path": "/images/items/01_4079/153_5004.jpg",
+				"hash": "6ab344bc0066ac0ac2aef4487e2bc585"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5004.jpg",
+				"path": "/images/items/01_4079/155_5004.jpg",
+				"hash": "d1b616557ceeeca496ec70788cf84ee9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5004.jpg",
+				"path": "/images/items/01_4079/156_5004.jpg",
+				"hash": "5cbd82e7209b3d179aa69f329689c5cb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5004.jpg",
+				"path": "/images/items/01_4079/157_5004.jpg",
+				"hash": "904a55f0ac4bcfdde6a618043d555d31"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5004.jpg",
+				"path": "/images/items/01_4079/158_5004.jpg",
+				"hash": "8f9ba06657a7750e4af9199f63049a46"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5004.jpg",
+				"path": "/images/items/01_4079/159_5004.jpg",
+				"hash": "a3716cc0a088489768b5f707ea63be0b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5004.jpg",
+				"path": "/images/items/01_4079/189_5004.jpg",
+				"hash": "6f0f4d1a4c21f09160475768f091a3c8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5004.jpg",
+				"path": "/images/items/01_4079/190_5004.jpg",
+				"hash": "95183c263208b204ea291719f2703d33"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5004.jpg",
+				"path": "/images/items/01_4079/191_5004.jpg",
+				"hash": "5fd0ade42fd2a47913eb69c5a9d20951"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5004.jpg",
+				"path": "/images/items/01_4079/192_5004.jpg",
+				"hash": "93721bdb999cd18e6a8e033726f8e97b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4079/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla"
-	],
+	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5951"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

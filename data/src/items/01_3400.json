@@ -57,32 +57,64 @@
 			"MarkingSeal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_3400/153_4354.jpg",
-		"/images/items/01_3400/155_4354.jpg",
-		"/images/items/01_3400/156_4354.jpg",
-		"/images/items/01_3400/157_4354.jpg",
-		"/images/items/01_3400/158_4354.jpg",
-		"/images/items/01_3400/159_4354.jpg",
-		"/images/items/01_3400/189_4354.jpg",
-		"/images/items/01_3400/190_4354.jpg",
-		"/images/items/01_3400/191_4354.jpg",
-		"/images/items/01_3400/192_4354.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4354.jpg",
+				"path": "/images/items/01_3400/153_4354.jpg",
+				"hash": "5ae3ff47bab6b44c51b27a7428c8048d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4354.jpg",
+				"path": "/images/items/01_3400/155_4354.jpg",
+				"hash": "9be0eadddc92c575d11403ada9a4aa29"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4354.jpg",
+				"path": "/images/items/01_3400/156_4354.jpg",
+				"hash": "49e4717ce1fc16890c94b2215e80257f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4354.jpg",
+				"path": "/images/items/01_3400/157_4354.jpg",
+				"hash": "4e88f21e1df1fb387d3b2479047b079d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4354.jpg",
+				"path": "/images/items/01_3400/158_4354.jpg",
+				"hash": "f11b4563b2b97ec808a3edbbba304bb7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4354.jpg",
+				"path": "/images/items/01_3400/159_4354.jpg",
+				"hash": "888a1d22e7bcfda448d8fb6896d32820"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4354.jpg",
+				"path": "/images/items/01_3400/189_4354.jpg",
+				"hash": "01230adc33b95407326bc6e71d4d4c4a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4354.jpg",
+				"path": "/images/items/01_3400/190_4354.jpg",
+				"hash": "ee6c51e85d0fe449c9b3e9d79b741cb4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4354.jpg",
+				"path": "/images/items/01_3400/191_4354.jpg",
+				"hash": "0b818ecd53d10b083e7954b0de4e685a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4354.jpg",
+				"path": "/images/items/01_3400/192_4354.jpg",
+				"hash": "f62b5260782c12acd835493bdbef4101"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3400/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"eightysix"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_3665",
-		"01_3647",
-		"01_3648",
-		"01_3391"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["eightysix"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_3665", "01_3647", "01_3648", "01_3391"]
 }

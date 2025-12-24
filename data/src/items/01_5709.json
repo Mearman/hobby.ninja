@@ -37,23 +37,29 @@
 			"Molded product x 3, MarkingSeal x 2, assembly manual, marking pasting instructions"
 		]
 	},
-	"images": [
-		"/images/items/01_5709/153_777.jpg",
-		"/images/items/01_5709/155_777.jpg",
-		"/images/items/01_5709/156_777.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_777.jpg",
+				"path": "/images/items/01_5709/153_777.jpg",
+				"hash": "cf10b730922b2c8dcaa6333ede706d1a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_777.jpg",
+				"path": "/images/items/01_5709/155_777.jpg",
+				"hash": "899e4ddb75a6f68c663a78c696d5a544"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_777.jpg",
+				"path": "/images/items/01_5709/156_777.jpg",
+				"hash": "1bc4d1222b60202faa83618affee920f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5709/",
 	"brandIds": [],
-	"seriesIds": [
-		"macross"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5944",
-		"01_5945",
-		"01_5946",
-		"01_5465"
-	]
+	"seriesIds": ["macross"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5944", "01_5945", "01_5946", "01_5465"]
 }

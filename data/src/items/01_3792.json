@@ -47,28 +47,36 @@
 			"• Reproduce the arm wired mega particle cannon by removing the forearm and attaching the lead wire."
 		]
 	},
-	"images": [
-		"/images/items/01_3792/1000165370_1.jpg",
-		"/images/items/01_3792/1000165370_2.jpg",
-		"/images/items/01_3792/1000165370_3.jpg",
-		"/images/items/01_3792/1000165370_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165370_1.jpg",
+				"path": "/images/items/01_3792/1000165370_1.jpg",
+				"hash": "6bb09f66d77a7d734b33291dce6b2ae1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165370_2.jpg",
+				"path": "/images/items/01_3792/1000165370_2.jpg",
+				"hash": "486d7d24c49a99f0ca667a9a79e77db1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165370_3.jpg",
+				"path": "/images/items/01_3792/1000165370_3.jpg",
+				"hash": "0e1a24ff1177a4a080792e74bd188423"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165370_4.jpg",
+				"path": "/images/items/01_3792/1000165370_4.jpg",
+				"hash": "ecd39f88a524385f8c501b3764942ab2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3792/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3307",
-		"01_3306",
-		"01_3372",
-		"item-1000162572"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3307", "01_3306", "01_3372", "item-1000162572"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

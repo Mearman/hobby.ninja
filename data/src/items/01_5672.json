@@ -27,29 +27,36 @@
 			"• From ``Mobile Suit Gundam UC'', Liesel's captain's machine appears! • The captain's machine is equipped with a mega beam launcher! The backpack is also larger, and the coloring is similar to the captain's model! • Reproduce the deformation by replacing the body. Molded product x 12, Foil Seal x 1, Tetron Seal x 1, Assembly Manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5672/153_739.jpg",
-		"/images/items/01_5672/155_739.jpg",
-		"/images/items/01_5672/156_739.jpg",
-		"/images/items/01_5672/157_739.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_739.jpg",
+				"path": "/images/items/01_5672/153_739.jpg",
+				"hash": "ca9c8cbfc2d7acb517bfa11f8b96d046"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_739.jpg",
+				"path": "/images/items/01_5672/155_739.jpg",
+				"hash": "7059a95bd0c7acab07f8fbdeaf78dcc9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_739.jpg",
+				"path": "/images/items/01_5672/156_739.jpg",
+				"hash": "c5210dae972a4b3b33bf56114605db5e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_739.jpg",
+				"path": "/images/items/01_5672/157_739.jpg",
+				"hash": "130ad7fa28e536da5ce9c5e48b2ddf2b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5672/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "415",
 		"url": "https://manual.bandai-hobby.net/menus/detail/415/"

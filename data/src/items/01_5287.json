@@ -95,27 +95,49 @@
 			"- Product specifications are scheduled as of 20121. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_5287/153_6137.jpg",
-		"/images/items/01_5287/155_6137.jpg",
-		"/images/items/01_5287/156_6137.jpg",
-		"/images/items/01_5287/157_6137.jpg",
-		"/images/items/01_5287/158_6137.jpg",
-		"/images/items/01_5287/159_6137.jpg",
-		"/images/items/01_5287/189_6137.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6137.jpg",
+				"path": "/images/items/01_5287/153_6137.jpg",
+				"hash": "c38bf3e9ae1e85ebb52cfa47e827f95a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6137.jpg",
+				"path": "/images/items/01_5287/155_6137.jpg",
+				"hash": "e0826376fc000fe4da72c2ab6d47aeec"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6137.jpg",
+				"path": "/images/items/01_5287/156_6137.jpg",
+				"hash": "dda44c9acf2a5443bcacf6a618c1b285"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6137.jpg",
+				"path": "/images/items/01_5287/157_6137.jpg",
+				"hash": "8e31d27d36bcbef841ce2ed2398cd05a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6137.jpg",
+				"path": "/images/items/01_5287/158_6137.jpg",
+				"hash": "496f89000c8e71af10ccd5dceceb8896"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6137.jpg",
+				"path": "/images/items/01_5287/159_6137.jpg",
+				"hash": "39bc5fa22b0de13f851b722002800e60"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6137.jpg",
+				"path": "/images/items/01_5287/189_6137.jpg",
+				"hash": "1d88d335a3399fbe3374a237f791351e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5287/",
-	"brandIds": [
-		"pb_charapla"
-	],
-	"seriesIds": [
-		"lbx"
-	],
+	"brandIds": ["pb_charapla"],
+	"seriesIds": ["lbx"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"relatedItemIds": ["item-1000215196", "item-1000215197", "item-1000210042", "item-1000210041"]
 }

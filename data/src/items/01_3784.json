@@ -35,31 +35,42 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"スティックヤスリ×3種"
-		],
-		"en": [
-			"Stick file x 3 types"
-		]
+		"ja": ["スティックヤスリ×3種"],
+		"en": ["Stick file x 3 types"]
 	},
-	"images": [
-		"/images/items/01_3784/1000172106_1.jpg",
-		"/images/items/01_3784/1000172106_2.jpg",
-		"/images/items/01_3784/1000172106_3.jpg",
-		"/images/items/01_3784/1000172106_4.jpg",
-		"/images/items/01_3784/1000172106_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000172106_1.jpg",
+				"path": "/images/items/01_3784/1000172106_1.jpg",
+				"hash": "7d56608cbd787e358734c9f4a43951e8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000172106_2.jpg",
+				"path": "/images/items/01_3784/1000172106_2.jpg",
+				"hash": "7d85cb87f9e4fba5a6c95ebfb5ac030b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000172106_3.jpg",
+				"path": "/images/items/01_3784/1000172106_3.jpg",
+				"hash": "926e2dabdb9299dfc54310cf35e36db3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000172106_4.jpg",
+				"path": "/images/items/01_3784/1000172106_4.jpg",
+				"hash": "3738db8db3e19da2753c0159ddf82fe0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000172106_5.jpg",
+				"path": "/images/items/01_3784/1000172106_5.jpg",
+				"hash": "13b4f3b87a4a75b6b6c34ae3728f00ff"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3784/",
-	"brandIds": [
-		"tool"
-	],
+	"brandIds": ["tool"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4930",
-		"01_4931",
-		"01_4305"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4930", "01_4931", "01_4305"]
 }

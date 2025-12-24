@@ -33,46 +33,72 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ディスプレイベース×1",
-			"波エフェクト×1",
-			"ホイルシール×1",
-			"マーキングシール×1",
-			"キャラクタープレート×1"
-		],
-		"en": [
-			"Display base x 1",
-			"Wave effect x1",
-			"Foil Seal×1",
-			"MarkingSeal×1",
-			"Character plate x 1"
-		]
+		"ja": ["ディスプレイベース×1", "波エフェクト×1", "ホイルシール×1", "マーキングシール×1", "キャラクタープレート×1"],
+		"en": ["Display base x 1", "Wave effect x1", "Foil Seal×1", "MarkingSeal×1", "Character plate x 1"]
 	},
-	"images": [
-		"/images/items/01_4170/153_5093.jpg",
-		"/images/items/01_4170/155_5093.jpg",
-		"/images/items/01_4170/156_5093.jpg",
-		"/images/items/01_4170/157_5093.jpg",
-		"/images/items/01_4170/158_5093.jpg",
-		"/images/items/01_4170/159_5093.jpg",
-		"/images/items/01_4170/189_5093.jpg",
-		"/images/items/01_4170/190_5093.jpg",
-		"/images/items/01_4170/191_5093.jpg",
-		"/images/items/01_4170/192_5093.jpg",
-		"/images/items/01_4170/193_5093.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5093.jpg",
+				"path": "/images/items/01_4170/153_5093.jpg",
+				"hash": "0c627fb1b4c3e637294dbea6dbd65bbb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5093.jpg",
+				"path": "/images/items/01_4170/155_5093.jpg",
+				"hash": "218946a4d903d24a16ad31c395e07032"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5093.jpg",
+				"path": "/images/items/01_4170/156_5093.jpg",
+				"hash": "420b96b712ddf550bf5e20192b7c1cab"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5093.jpg",
+				"path": "/images/items/01_4170/157_5093.jpg",
+				"hash": "27b1aa13c8bb0f021405d93dc9f0580e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5093.jpg",
+				"path": "/images/items/01_4170/158_5093.jpg",
+				"hash": "a654da57e47195534f460041cd5e49fa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5093.jpg",
+				"path": "/images/items/01_4170/159_5093.jpg",
+				"hash": "95d8caf7eee1086330ed8351630a9fba"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5093.jpg",
+				"path": "/images/items/01_4170/189_5093.jpg",
+				"hash": "95ba20ee19c284328cdad156eabfab65"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5093.jpg",
+				"path": "/images/items/01_4170/190_5093.jpg",
+				"hash": "03ee74af44e39e40df9a5527ab52c5ce"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5093.jpg",
+				"path": "/images/items/01_4170/191_5093.jpg",
+				"hash": "b6be196158561bf431ee542292824206"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5093.jpg",
+				"path": "/images/items/01_4170/192_5093.jpg",
+				"hash": "342e153e8b2b43b5e6e3f55eef1802cf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_5093.jpg",
+				"path": "/images/items/01_4170/193_5093.jpg",
+				"hash": "5671ed82b5018fcd0865e3fca8d6a7e0"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4170/",
 	"brandIds": [],
-	"seriesIds": [
-		"onepiece"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5409",
-		"01_5410",
-		"01_4236",
-		"01_4171"
-	]
+	"seriesIds": ["onepiece"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5409", "01_5410", "01_4236", "01_4171"]
 }

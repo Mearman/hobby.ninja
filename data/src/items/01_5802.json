@@ -39,21 +39,30 @@
 			"■ Comes with a variety of weapons such as long-range beam cannons and beam shields."
 		]
 	},
-	"images": [
-		"/images/items/01_5802/1000081030_1.jpg",
-		"/images/items/01_5802/1000081030_2.jpg",
-		"/images/items/01_5802/1000081030_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000081030_1.jpg",
+				"path": "/images/items/01_5802/1000081030_1.jpg",
+				"hash": "430dc1da8543db33666b9a95563acd18"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000081030_2.jpg",
+				"path": "/images/items/01_5802/1000081030_2.jpg",
+				"hash": "02ec5a7b1ced3152345a4e1886db0ce2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000081030_3.jpg",
+				"path": "/images/items/01_5802/1000081030_3.jpg",
+				"hash": "221c7f84444504be90b6cc5b1c05edd4"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5802/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": [],
 	"manual": {
 		"id": "663",

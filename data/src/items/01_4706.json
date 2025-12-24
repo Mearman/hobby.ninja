@@ -26,22 +26,24 @@
 			"The new main character Wing Gundam Zero, which appears from the middle of the story in \"Mobile Suit Gundam W\", has been made into a 1/100 scale model. Gold-plated parts are used for each part such as the head antenna. Ball joints are used for the neck, wrists, hips, and ankles, and the hips and fingers are also movable. The camera eye is made of clear parts, the chest search eye is made of jewel seal, and the machine cannons on both shoulders can be recreated in their deployed state by removing the covers. The Twin Buster Rifle can be separated and combined to the left and right, and can be attached to Seal's left and right sides even in Neobird mode. The saber racks on both shoulders can be opened and closed. Also, the calf hatch opens and closes. Can be transformed into Neobird form without replacement. The wing vernier deployment mechanism is also reproduced without replacement. Image-up parts made of clear parts can be attached to and removed from Seal."
 		]
 	},
-	"images": [
-		"/images/items/01_4706/153_5594.jpg",
-		"/images/items/01_4706/155_5594.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5594.jpg",
+				"path": "/images/items/01_4706/153_5594.jpg",
+				"hash": "6f3cba821b4b3b42c06df6556e835629"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5594.jpg",
+				"path": "/images/items/01_4706/155_5594.jpg",
+				"hash": "4b72f32bb9295664728ef39c50701158"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4706/",
 	"brandIds": [],
-	"seriesIds": [
-		"endlesswaltz"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5993",
-		"01_5590",
-		"01_5377"
-	]
+	"seriesIds": ["endlesswaltz"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5993", "01_5590", "01_5377"]
 }

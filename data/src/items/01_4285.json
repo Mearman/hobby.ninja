@@ -26,24 +26,26 @@
 			"1/144 Scale of \"Saber Gundam \" that appears in \" Mobile Suit Gundam SEED DESTINY\", a collection series plastic model. An introductory version that is easy to assemble even for beginners. A simple transformation to MA can be recreated by rotating the lower body 180 degrees and changing the attachment position of the beam cannon on the back. The beam cannon on the back can move up and down. The head and face are separate parts, and the set colors are reproduced in detail. Beam rifle and Seal are included."
 		]
 	},
-	"images": [
-		"/images/items/01_4285/153_519.jpg",
-		"/images/items/01_4285/155_519.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_519.jpg",
+				"path": "/images/items/01_4285/153_519.jpg",
+				"hash": "199ebaf7dcd028af5d6ba5c9f78404b0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_519.jpg",
+				"path": "/images/items/01_4285/155_519.jpg",
+				"hash": "440d2be4aa91b0fcc860b023948bfbcd"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4285/",
 	"brandIds": [],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5394",
-		"item-1000214960",
-		"01_5378",
-		"01_5365"
-	],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5394", "item-1000214960", "01_5378", "01_5365"],
 	"manual": {
 		"id": "1151",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1151/"

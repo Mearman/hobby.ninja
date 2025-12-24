@@ -20,34 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"「HGUC 1/144 MS-06S シャア専用ザク クリアカラーバージョン」登場！"
-		],
-		"en": [
-			"\"HGUC 1/144 MS-06S Char's Zaku Clear Color Version\" now available!"
-		]
+		"ja": ["「HGUC 1/144 MS-06S シャア専用ザク クリアカラーバージョン」登場！"],
+		"en": ["\"HGUC 1/144 MS-06S Char's Zaku Clear Color Version\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4832/153_5714.jpg",
-		"/images/items/01_4832/155_5714.jpg",
-		"/images/items/01_4832/156_5714.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5714.jpg",
+				"path": "/images/items/01_4832/153_5714.jpg",
+				"hash": "7b404b262abe880a4224f13fd34e11f2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5714.jpg",
+				"path": "/images/items/01_4832/155_5714.jpg",
+				"hash": "85d572ac9059b8fd8ad33e4af6b2ffef"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5714.jpg",
+				"path": "/images/items/01_4832/156_5714.jpg",
+				"hash": "f35cb3884acc020bff99af8feea0cf25"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4832/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

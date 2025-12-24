@@ -20,34 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HGUC 1/144 シャア専用ザク&量産型ザク THE ART OF GUNDAM OSAKA メタリックエディション登場！"
-		],
-		"en": [
-			"HGUC 1/144 Char's Zaku & mass-produced Zaku THE ART OF GUNDAM OSAKA Metallic Edition now available!"
-		]
+		"ja": ["HGUC 1/144 シャア専用ザク&量産型ザク THE ART OF GUNDAM OSAKA メタリックエディション登場！"],
+		"en": ["HGUC 1/144 Char's Zaku & mass-produced Zaku THE ART OF GUNDAM OSAKA Metallic Edition now available!"]
 	},
-	"images": [
-		"/images/items/01_4959/153_5830.jpg",
-		"/images/items/01_4959/155_5830.jpg",
-		"/images/items/01_4959/156_5830.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5830.jpg",
+				"path": "/images/items/01_4959/153_5830.jpg",
+				"hash": "339530f7e458607f7ffb3b6d254840c0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5830.jpg",
+				"path": "/images/items/01_4959/155_5830.jpg",
+				"hash": "a60cbddbd814dbd114e661b521893fbd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5830.jpg",
+				"path": "/images/items/01_4959/156_5830.jpg",
+				"hash": "20bfe10dc8d5b9cc3f68506963a3fcbe"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4959/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

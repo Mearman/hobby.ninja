@@ -45,31 +45,51 @@
 			"• Sky Grasper"
 		]
 	},
-	"images": [
-		"/images/items/01_4250/153_5168.jpg",
-		"/images/items/01_4250/155_5168.jpg",
-		"/images/items/01_4250/156_5168.jpg",
-		"/images/items/01_4250/157_5168.jpg",
-		"/images/items/01_4250/158_5168.jpg",
-		"/images/items/01_4250/159_5168.jpg",
-		"/images/items/01_4250/189_5168.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5168.jpg",
+				"path": "/images/items/01_4250/153_5168.jpg",
+				"hash": "5a6e53565430e0cb29aaa6206ab61de9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5168.jpg",
+				"path": "/images/items/01_4250/155_5168.jpg",
+				"hash": "2bba30867bd54f126d78954ea835e991"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5168.jpg",
+				"path": "/images/items/01_4250/156_5168.jpg",
+				"hash": "5bc4847ef3642b33852432fcce4a0219"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5168.jpg",
+				"path": "/images/items/01_4250/157_5168.jpg",
+				"hash": "0d58d09aaf468fe7c8d1781f86a5e6a5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5168.jpg",
+				"path": "/images/items/01_4250/158_5168.jpg",
+				"hash": "698bbf760aec352d94d128e8a73cd826"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5168.jpg",
+				"path": "/images/items/01_4250/159_5168.jpg",
+				"hash": "036d0a0d8568ed09d81def5499bd73fc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5168.jpg",
+				"path": "/images/items/01_4250/189_5168.jpg",
+				"hash": "31c4bb3e4189e1e98d8b9c66b0133db3"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4250/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5199",
-		"01_5160",
-		"01_4769",
-		"01_3414"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5199", "01_5160", "01_4769", "01_3414"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

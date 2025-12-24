@@ -55,33 +55,61 @@
 			"Display pedestal x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_4266/1000180205_1.jpg",
-		"/images/items/01_4266/1000180205_2.jpg",
-		"/images/items/01_4266/1000180205_3.jpg",
-		"/images/items/01_4266/1000180205_4.jpg",
-		"/images/items/01_4266/1000180205_5.jpg",
-		"/images/items/01_4266/1000180205_6.jpg",
-		"/images/items/01_4266/1000180205_7.jpg",
-		"/images/items/01_4266/1000180205_8.jpg",
-		"/images/items/01_4266/01_4266_inst_0.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180205_1.jpg",
+				"path": "/images/items/01_4266/1000180205_1.jpg",
+				"hash": "a0ed19153d97339e54b89ef8d8f67855"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180205_2.jpg",
+				"path": "/images/items/01_4266/1000180205_2.jpg",
+				"hash": "ba6c04b30f1914db3c38775485430eee"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180205_3.jpg",
+				"path": "/images/items/01_4266/1000180205_3.jpg",
+				"hash": "3d129cc375d4e8fb6ae610276c29e912"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180205_4.jpg",
+				"path": "/images/items/01_4266/1000180205_4.jpg",
+				"hash": "01c928f5cc0d7bd3b79d2951f3b311c2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180205_5.jpg",
+				"path": "/images/items/01_4266/1000180205_5.jpg",
+				"hash": "354ea81ac2056e27a1448ce5e6ba6493"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180205_6.jpg",
+				"path": "/images/items/01_4266/1000180205_6.jpg",
+				"hash": "3873baffd97164fed87ba8466eb98ff2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180205_7.jpg",
+				"path": "/images/items/01_4266/1000180205_7.jpg",
+				"hash": "5af21e9dd65bd2b71a9c964b58fca344"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180205_8.jpg",
+				"path": "/images/items/01_4266/1000180205_8.jpg",
+				"hash": "7d9d2b6e5246824f7f3eeb7f4c235bab"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4266_inst_0.jpg",
+				"path": "/images/items/01_4266/01_4266_inst_0.jpg",
+				"hash": "79b4a0ddf351ed3871705d7fb80e6d61"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4266/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"g-witch"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216474",
-		"item-1000211616",
-		"01_5422",
-		"item-1000203899"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["g-witch"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203899"],
 	"manual": {
 		"id": "134",
 		"url": "https://manual.bandai-hobby.net/menus/detail/134/"

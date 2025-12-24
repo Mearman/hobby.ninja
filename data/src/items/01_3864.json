@@ -64,33 +64,46 @@
 			"- Product specifications are scheduled as of 20132. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_3864/153_4808.jpg",
-		"/images/items/01_3864/155_4808.jpg",
-		"/images/items/01_3864/156_4808.jpg",
-		"/images/items/01_3864/157_4808.jpg",
-		"/images/items/01_3864/158_4808.jpg",
-		"/images/items/01_3864/159_4808.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4808.jpg",
+				"path": "/images/items/01_3864/153_4808.jpg",
+				"hash": "13a2954eca8b4f572efbe6d8b1ba2968"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4808.jpg",
+				"path": "/images/items/01_3864/155_4808.jpg",
+				"hash": "91d69be428a6b916f608246de01017ed"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4808.jpg",
+				"path": "/images/items/01_3864/156_4808.jpg",
+				"hash": "7fc91da40cf2c386f239502ba7211acc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4808.jpg",
+				"path": "/images/items/01_3864/157_4808.jpg",
+				"hash": "7340aede426b519b3f8a99867afcd2a5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4808.jpg",
+				"path": "/images/items/01_3864/158_4808.jpg",
+				"hash": "84d64befb9422ef11010d470da841781"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4808.jpg",
+				"path": "/images/items/01_3864/159_4808.jpg",
+				"hash": "a9f8752903d93ff0db121a987ac7ae79"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3864/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216106",
-		"item-1000183366",
-		"item-1000164780",
-		"item-1000164779"
-	],
+	"brandIds": ["hg", "pb_hg", "pb_gunpla", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216106", "item-1000183366", "item-1000164780", "item-1000164779"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

@@ -20,35 +20,39 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"「HG 1/144 セラヴィーガンダム & セラフィムガンダム クリアカラーバージョン」登場！"
-		],
-		"en": [
-			"\"HG 1/144 Seravee Gundam & Seraphim Gundam Clear Color Version\" now available!"
-		]
+		"ja": ["「HG 1/144 セラヴィーガンダム & セラフィムガンダム クリアカラーバージョン」登場！"],
+		"en": ["\"HG 1/144 Seravee Gundam & Seraphim Gundam Clear Color Version\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4864/153_5743.jpg",
-		"/images/items/01_4864/155_5743.jpg",
-		"/images/items/01_4864/156_5743.jpg",
-		"/images/items/01_4864/157_5743.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5743.jpg",
+				"path": "/images/items/01_4864/153_5743.jpg",
+				"hash": "a45f83ef13858d615afed55bc49266ed"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5743.jpg",
+				"path": "/images/items/01_4864/155_5743.jpg",
+				"hash": "6db716fbd7ff67baf2711e084a613d9c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5743.jpg",
+				"path": "/images/items/01_4864/156_5743.jpg",
+				"hash": "d86e524f43c87c3327887ca6fdd09ed7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5743.jpg",
+				"path": "/images/items/01_4864/157_5743.jpg",
+				"hash": "d72c6a9123e9f0bac6e2486ad9892c56"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4864/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1954",
-		"01_1953",
-		"item-1000114085",
-		"01_957"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["g-00"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_1954", "01_1953", "item-1000114085", "01_957"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

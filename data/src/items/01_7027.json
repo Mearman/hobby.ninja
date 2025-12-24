@@ -40,35 +40,27 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"フェイスパーツ(タンポ印刷)×3種",
-			"ハンドパーツ×1式",
-			"武装パーツ×1式",
-			"シール×1式"
-		],
-		"en": [
-			"Face parts (tampo printing) x 3 types",
-			"Hand parts x 1 set",
-			"Armed parts x 1 set",
-			"Seal×1 type"
-		]
+		"ja": ["フェイスパーツ(タンポ印刷)×3種", "ハンドパーツ×1式", "武装パーツ×1式", "シール×1式"],
+		"en": ["Face parts (tampo printing) x 3 types", "Hand parts x 1 set", "Armed parts x 1 set", "Seal×1 type"]
 	},
-	"images": [
-		"/images/items/01_7027/01_7027_0.jpg",
-		"/images/items/01_7027/01_7027_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_7027_0.jpg",
+				"path": "/images/items/01_7027/01_7027_0.jpg",
+				"hash": "ce4771b6d3d238c56f7c8bac529cae4a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7027_1.jpg",
+				"path": "/images/items/01_7027/01_7027_1.jpg",
+				"hash": "2e3c6e99d424b7cf184b375c34871dbc"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_7027/",
-	"brandIds": [
-		"30ms"
-	],
+	"brandIds": ["30ms"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7028",
-		"01_7029",
-		"01_7030",
-		"01_7031"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7028", "01_7029", "01_7030", "01_7031"]
 }

@@ -76,35 +76,56 @@
 			"- Product specifications are scheduled as of 201210. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_3858/153_4802.jpg",
-		"/images/items/01_3858/155_4802.jpg",
-		"/images/items/01_3858/156_4802.jpg",
-		"/images/items/01_3858/157_4802.jpg",
-		"/images/items/01_3858/158_4802.jpg",
-		"/images/items/01_3858/159_4802.jpg",
-		"/images/items/01_3858/189_4802.jpg",
-		"/images/items/01_3858/190_4802.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4802.jpg",
+				"path": "/images/items/01_3858/153_4802.jpg",
+				"hash": "3075d9e281ac044d594df2f614010afd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4802.jpg",
+				"path": "/images/items/01_3858/155_4802.jpg",
+				"hash": "339c9e8dbef14134abc27fb310579c62"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4802.jpg",
+				"path": "/images/items/01_3858/156_4802.jpg",
+				"hash": "fd8030f93a41dda5e042638ba6b51aec"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4802.jpg",
+				"path": "/images/items/01_3858/157_4802.jpg",
+				"hash": "bda2d5977144a5ce707079e42dd8afbf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4802.jpg",
+				"path": "/images/items/01_3858/158_4802.jpg",
+				"hash": "073dbaa151637e7ba053b03b333f79c9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4802.jpg",
+				"path": "/images/items/01_3858/159_4802.jpg",
+				"hash": "b4d8ec8c5b35026aabc2eed13ebc3206"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4802.jpg",
+				"path": "/images/items/01_3858/189_4802.jpg",
+				"hash": "978361858a44ba1994f041048fafd491"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4802.jpg",
+				"path": "/images/items/01_3858/190_4802.jpg",
+				"hash": "6a078c253be7ad06ec02c1ed38437137"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3858/",
-	"brandIds": [
-		"hg",
-		"pb_hg",
-		"pb_gunpla",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216106",
-		"item-1000183366",
-		"item-1000164780",
-		"item-1000164779"
-	],
+	"brandIds": ["hg", "pb_hg", "pb_gunpla", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216106", "item-1000183366", "item-1000164780", "item-1000164779"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

@@ -83,48 +83,69 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"バスターランチャー",
-			"セイバー",
-			"パワーランチャー×２",
-			"バインダー"
-		],
-		"en": [
-			"buster launcher",
-			"Saber",
-			"Power launcher x2",
-			"binder"
-		]
+		"ja": ["バスターランチャー", "セイバー", "パワーランチャー×２", "バインダー"],
+		"en": ["buster launcher", "Saber", "Power launcher x2", "binder"]
 	},
-	"images": [
-		"/images/items/01_5537/153_6376.jpg",
-		"/images/items/01_5537/155_6376.jpg",
-		"/images/items/01_5537/156_6376.jpg",
-		"/images/items/01_5537/157_6376.jpg",
-		"/images/items/01_5537/158_6376.jpg",
-		"/images/items/01_5537/159_6376.jpg",
-		"/images/items/01_5537/189_6376.jpg",
-		"/images/items/01_5537/190_6376.jpg",
-		"/images/items/01_5537/191_6376.jpg",
-		"/images/items/01_5537/192_6376.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6376.jpg",
+				"path": "/images/items/01_5537/153_6376.jpg",
+				"hash": "90c2e8ad15c6ec9a088655c487ca257f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6376.jpg",
+				"path": "/images/items/01_5537/155_6376.jpg",
+				"hash": "97a36f641911b2824c94ea58ccaa4c0c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6376.jpg",
+				"path": "/images/items/01_5537/156_6376.jpg",
+				"hash": "1150dddd619aebc228828b9671741f91"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6376.jpg",
+				"path": "/images/items/01_5537/157_6376.jpg",
+				"hash": "d630158a3227f6ffe8fd4403de21b9bc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6376.jpg",
+				"path": "/images/items/01_5537/158_6376.jpg",
+				"hash": "4156eca0a35ff1eddd1399ddaf626ab2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6376.jpg",
+				"path": "/images/items/01_5537/159_6376.jpg",
+				"hash": "13f2b98ede7a77d75df4120ae720b0ff"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6376.jpg",
+				"path": "/images/items/01_5537/189_6376.jpg",
+				"hash": "db7bdaceffc171b7a9580e1f928bd231"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6376.jpg",
+				"path": "/images/items/01_5537/190_6376.jpg",
+				"hash": "709cfdba0969fb4ccd5ee5c95ec0fe00"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_6376.jpg",
+				"path": "/images/items/01_5537/191_6376.jpg",
+				"hash": "2d4e02cd93e515a7ecbb032de88287c1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_6376.jpg",
+				"path": "/images/items/01_5537/192_6376.jpg",
+				"hash": "4340c50a24ee60efe9ab8c758dce81be"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5537/",
-	"brandIds": [
-		"pb_charapla",
-		"hg"
-	],
-	"seriesIds": [
-		"lgaim"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000207143",
-		"item-1000207142",
-		"item-1000205639",
-		"01_3350"
-	],
+	"brandIds": ["pb_charapla", "hg"],
+	"seriesIds": ["lgaim"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000207143", "item-1000207142", "item-1000205639", "01_3350"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

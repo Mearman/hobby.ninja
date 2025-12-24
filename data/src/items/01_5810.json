@@ -38,25 +38,29 @@
 			"• Beam tomahawk can be stored in the seal."
 		]
 	},
-	"images": [
-		"/images/items/01_5810/153_882.jpg",
-		"/images/items/01_5810/155_882.jpg",
-		"/images/items/01_5810/156_882.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_882.jpg",
+				"path": "/images/items/01_5810/153_882.jpg",
+				"hash": "02eeb4d75d2242af49fd8b380cf14b61"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_882.jpg",
+				"path": "/images/items/01_5810/155_882.jpg",
+				"hash": "acb44018aa647cce7c6005db743f3b6b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_882.jpg",
+				"path": "/images/items/01_5810/156_882.jpg",
+				"hash": "4356e2651955bfe13b79a2d4827ad153"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5810/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4975",
-		"01_4190",
-		"01_2323",
-		"01_46"
-	]
+	"brandIds": ["bb"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4975", "01_4190", "01_2323", "01_46"]
 }

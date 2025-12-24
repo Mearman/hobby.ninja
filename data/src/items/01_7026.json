@@ -36,33 +36,27 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ドゥローワイバーン×1",
-			"ジョイントパーツ×1",
-			"リード線×1"
-		],
-		"en": [
-			"Draw Wyvern×1",
-			"Joint parts x 1",
-			"Lead wire x 1"
-		]
+		"ja": ["ドゥローワイバーン×1", "ジョイントパーツ×1", "リード線×1"],
+		"en": ["Draw Wyvern×1", "Joint parts x 1", "Lead wire x 1"]
 	},
-	"images": [
-		"/images/items/01_7026/01_7026_0.jpg",
-		"/images/items/01_7026/01_7026_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_7026_0.jpg",
+				"path": "/images/items/01_7026/01_7026_0.jpg",
+				"hash": "062f5f96f9f24581caef6d28c8c91b02"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7026_1.jpg",
+				"path": "/images/items/01_7026/01_7026_1.jpg",
+				"hash": "9060b7b592019513d66dc29d3c44fb32"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_7026/",
-	"brandIds": [
-		"30mf"
-	],
+	"brandIds": ["30mf"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7024",
-		"01_7025",
-		"01_7007",
-		"01_7005"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7024", "01_7025", "01_7007", "01_7005"]
 }

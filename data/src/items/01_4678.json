@@ -18,29 +18,27 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"SD ガンダム Gジェネレーション21 ガンダム F91(V.S.B.R可動タイプ)登場！"
-		],
-		"en": [
-			"SD Gundam G Generation 21 Gundam F91 (V.S.B.R movable type) is now available!"
-		]
+		"ja": ["SD ガンダム Gジェネレーション21 ガンダム F91(V.S.B.R可動タイプ)登場！"],
+		"en": ["SD Gundam G Generation 21 Gundam F91 (V.S.B.R movable type) is now available!"]
 	},
-	"images": [
-		"/images/items/01_4678/153_5568.jpg",
-		"/images/items/01_4678/155_5568.JPG"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5568.jpg",
+				"path": "/images/items/01_4678/153_5568.jpg",
+				"hash": "73d5bb1c7a77a75fcc9405faca72c520"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5568.JPG",
+				"path": "/images/items/01_4678/155_5568.JPG",
+				"hash": "c8a478e21ae3383c3a12c4352bff4338"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4678/",
-	"brandIds": [
-		"sdgundamseries"
-	],
+	"brandIds": ["sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
 }

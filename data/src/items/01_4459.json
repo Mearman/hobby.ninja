@@ -26,27 +26,31 @@
 			"From \"Mobile Suit Gundam \", we have recreated the Zaku I used by the famous \" Black Tri-Stars \" as the ace unit of the Zeon Principality Army. The triple star specification aircraft whose aircraft color has been reproduced can be made more realistic with MarkingSeal and Gundam decals. Equipped with Zaku Machine Gun, 105mm Machine Gun, Heat Hawk, and Zaku Bazooka. The bazooka can be mounted on the opening/closing latch on the waist. Comes with a 1/20 scale figure of \" Gaia \", the leader of the \" Black Tri-Stars\"."
 		]
 	},
-	"images": [
-		"/images/items/01_4459/153_5364.jpg",
-		"/images/items/01_4459/155_5364.jpg",
-		"/images/items/01_4459/156_5364.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5364.jpg",
+				"path": "/images/items/01_4459/153_5364.jpg",
+				"hash": "01ca0cc1d9b73e52bfbfa652dd5a74f6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5364.jpg",
+				"path": "/images/items/01_4459/155_5364.jpg",
+				"hash": "824a46527bcf303ae9fee290fce9d449"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5364.jpg",
+				"path": "/images/items/01_4459/156_5364.jpg",
+				"hash": "a8810705b5b3631bb1448a2633aa08fc"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4459/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
 	"manual": {
 		"id": "440",
 		"url": "https://manual.bandai-hobby.net/menus/detail/440/"

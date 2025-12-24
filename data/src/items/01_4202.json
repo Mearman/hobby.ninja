@@ -37,34 +37,66 @@
 			"• Runner arrangement organized by body part!"
 		]
 	},
-	"images": [
-		"/images/items/01_4202/1000173659_1.jpg",
-		"/images/items/01_4202/1000173659_10.jpg",
-		"/images/items/01_4202/1000173659_2.jpg",
-		"/images/items/01_4202/1000173659_3.jpg",
-		"/images/items/01_4202/1000173659_4.jpg",
-		"/images/items/01_4202/1000173659_5.jpg",
-		"/images/items/01_4202/1000173659_6.jpg",
-		"/images/items/01_4202/1000173659_7.jpg",
-		"/images/items/01_4202/1000173659_8.jpg",
-		"/images/items/01_4202/1000173659_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173659_1.jpg",
+				"path": "/images/items/01_4202/1000173659_1.jpg",
+				"hash": "477d9b1830286a1cd7f1856ba75cff0d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173659_10.jpg",
+				"path": "/images/items/01_4202/1000173659_10.jpg",
+				"hash": "3536ce4ea50c163dedbf98c769e657d7"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173659_2.jpg",
+				"path": "/images/items/01_4202/1000173659_2.jpg",
+				"hash": "8ada7bb7616d3e306ab907c6453cdf22"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173659_3.jpg",
+				"path": "/images/items/01_4202/1000173659_3.jpg",
+				"hash": "38922a443265d2a3a18f5e4c881c1f3b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173659_4.jpg",
+				"path": "/images/items/01_4202/1000173659_4.jpg",
+				"hash": "a0cab7e41302d02e8318bfed1619e8ac"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173659_5.jpg",
+				"path": "/images/items/01_4202/1000173659_5.jpg",
+				"hash": "a4c196696c4614f3ff2679ba711d4699"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173659_6.jpg",
+				"path": "/images/items/01_4202/1000173659_6.jpg",
+				"hash": "4b631c8ce1dfd3d92289608b68f3dd0b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173659_7.jpg",
+				"path": "/images/items/01_4202/1000173659_7.jpg",
+				"hash": "7adbcf2451f74b290cae2d2b0aad7517"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173659_8.jpg",
+				"path": "/images/items/01_4202/1000173659_8.jpg",
+				"hash": "538cbba88c5b33b5d70e2ad176045e25"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173659_9.jpg",
+				"path": "/images/items/01_4202/1000173659_9.jpg",
+				"hash": "faa211435a1a4b30e870bf4469a61541"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4202/",
-	"brandIds": [
-		"entry_grade"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5218",
-		"01_5045",
-		"01_4249",
-		"01_3632"
-	],
+	"brandIds": ["entry_grade"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5218", "01_5045", "01_4249", "01_3632"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

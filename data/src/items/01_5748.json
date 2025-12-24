@@ -35,29 +35,36 @@
 			"Molded product x 8, foil seal x 1, lead wire x 1, varnish tube x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5748/153_812.jpg",
-		"/images/items/01_5748/155_812.jpg",
-		"/images/items/01_5748/156_812.jpg",
-		"/images/items/01_5748/157_812.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_812.jpg",
+				"path": "/images/items/01_5748/153_812.jpg",
+				"hash": "f26d804c88605420479225bdfe1f477f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_812.jpg",
+				"path": "/images/items/01_5748/155_812.jpg",
+				"hash": "d20409ebc50c511c5df85f25ce21f511"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_812.jpg",
+				"path": "/images/items/01_5748/156_812.jpg",
+				"hash": "d4fac43a52d36f61785c70787b5e5081"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_812.jpg",
+				"path": "/images/items/01_5748/157_812.jpg",
+				"hash": "235f2bc0c80a00440605d4b21c99aa02"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5748/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "367",
 		"url": "https://manual.bandai-hobby.net/menus/detail/367/"

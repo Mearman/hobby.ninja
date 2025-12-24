@@ -60,34 +60,84 @@
 			"Water transfer decal x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_5982/01_5982_0.jpg",
-		"/images/items/01_5982/01_5982_1.jpg",
-		"/images/items/01_5982/01_5982_10.jpg",
-		"/images/items/01_5982/01_5982_11.jpg",
-		"/images/items/01_5982/01_5982_12.jpg",
-		"/images/items/01_5982/01_5982_2.jpg",
-		"/images/items/01_5982/01_5982_3.jpg",
-		"/images/items/01_5982/01_5982_4.jpg",
-		"/images/items/01_5982/01_5982_5.jpg",
-		"/images/items/01_5982/01_5982_6.jpg",
-		"/images/items/01_5982/01_5982_7.jpg",
-		"/images/items/01_5982/01_5982_8.jpg",
-		"/images/items/01_5982/01_5982_9.jpg",
-		"/images/items/01_5982/01_5982_inst_0.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5982_0.jpg",
+				"path": "/images/items/01_5982/01_5982_0.jpg",
+				"hash": "d23ae7d78a2b7fb28240ede5f037ca41"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5982_1.jpg",
+				"path": "/images/items/01_5982/01_5982_1.jpg",
+				"hash": "6007cf0d989d80198a35b6a1f24c022d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5982_10.jpg",
+				"path": "/images/items/01_5982/01_5982_10.jpg",
+				"hash": "c451ef83b1230c42095a298c9fedfb40"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5982_11.jpg",
+				"path": "/images/items/01_5982/01_5982_11.jpg",
+				"hash": "188069a517cab2d30c8fc7ffef75fde0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5982_12.jpg",
+				"path": "/images/items/01_5982/01_5982_12.jpg",
+				"hash": "62c52118771276c63af54eb85ac6ed4e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5982_2.jpg",
+				"path": "/images/items/01_5982/01_5982_2.jpg",
+				"hash": "a4a912e0a050270414a447e73ec70fb0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5982_3.jpg",
+				"path": "/images/items/01_5982/01_5982_3.jpg",
+				"hash": "67965025bc26943c301ee2688cfb852c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5982_4.jpg",
+				"path": "/images/items/01_5982/01_5982_4.jpg",
+				"hash": "00beb08717ef282aee7738cc4ba4f73b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5982_5.jpg",
+				"path": "/images/items/01_5982/01_5982_5.jpg",
+				"hash": "ea4f147a60ed968f69d912ceebd352cd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5982_6.jpg",
+				"path": "/images/items/01_5982/01_5982_6.jpg",
+				"hash": "930272bcf3a9bf11a0eaa5e2a42f3764"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5982_7.jpg",
+				"path": "/images/items/01_5982/01_5982_7.jpg",
+				"hash": "d4d0c1ec1817ff724b8aed38ec636e7e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5982_8.jpg",
+				"path": "/images/items/01_5982/01_5982_8.jpg",
+				"hash": "0f68e62f3bea2df74a6955c5f63ae16d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5982_9.jpg",
+				"path": "/images/items/01_5982/01_5982_9.jpg",
+				"hash": "522f5e29ca04b65bc8fa395c72ac35a2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5982_inst_0.jpg",
+				"path": "/images/items/01_5982/01_5982_inst_0.jpg",
+				"hash": "fdbd257a74c1088791ef02d90c136fa6"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5982/",
-	"brandIds": [
-		"30mp"
-	],
-	"seriesIds": [
-		"bocchi-rocks"
-	],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_6953",
-		"01_5492"
-	]
+	"brandIds": ["30mp"],
+	"seriesIds": ["bocchi-rocks"],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_6953", "01_5492"]
 }

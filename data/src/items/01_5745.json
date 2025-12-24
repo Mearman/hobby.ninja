@@ -19,25 +19,22 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"V2アサルトバスターガンダムがBB戦士で登場！"
-		],
-		"en": [
-			"V2 Assault Buster Gundam is now available as BB Senshi!"
-		]
+		"ja": ["V2アサルトバスターガンダムがBB戦士で登場！"],
+		"en": ["V2 Assault Buster Gundam is now available as BB Senshi!"]
 	},
-	"images": [
-		"/images/items/01_5745/153_80.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_80.jpg",
+				"path": "/images/items/01_5745/153_80.jpg",
+				"hash": "3b663a74f7a7ae73b24bc3ecea07f9cb"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5745/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"v-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["bb"],
+	"seriesIds": ["v-gundam"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": []
 }

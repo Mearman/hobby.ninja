@@ -26,27 +26,26 @@
 			"A luxurious set plastic model of 3 HGUCs + α of the black triple star \"Triple Dom \" that appears in \" Mobile Suit Gundam \". The aircraft color reproduces the image color in the play. A 3-piece simultaneous display stand is included to recreate the famous scene \" Jet Stream Attack\". The left and right wrists can be combined to recreate the scene of crushing Midea, and effect parts for the smoke when the bazooka is fired are also included, allowing you to recreate the image from the movie."
 		]
 	},
-	"images": [
-		"/images/items/01_5279/153_612.jpg",
-		"/images/items/01_5279/155_612.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_612.jpg",
+				"path": "/images/items/01_5279/153_612.jpg",
+				"hash": "c79a224430a07916c9a92843be6ab633"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_612.jpg",
+				"path": "/images/items/01_5279/155_612.jpg",
+				"hash": "3aa44287247329398206b0139a222524"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5279/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"manual": {
 		"id": "252",
 		"url": "https://manual.bandai-hobby.net/menus/detail/252/"

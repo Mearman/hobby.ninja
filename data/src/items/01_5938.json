@@ -44,37 +44,59 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ロイロイ×2種"
-		],
-		"en": [
-			"Loi Loi x 2 types"
-		]
+		"ja": ["ロイロイ×2種"],
+		"en": ["Loi Loi x 2 types"]
 	},
-	"images": [
-		"/images/items/01_5938/01_5938_0.jpg",
-		"/images/items/01_5938/01_5938_1.jpg",
-		"/images/items/01_5938/01_5938_2.jpg",
-		"/images/items/01_5938/01_5938_3.jpg",
-		"/images/items/01_5938/01_5938_4.jpg",
-		"/images/items/01_5938/01_5938_5.jpg",
-		"/images/items/01_5938/01_5938_6.jpg",
-		"/images/items/01_5938/01_5938_7.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5938_0.jpg",
+				"path": "/images/items/01_5938/01_5938_0.jpg",
+				"hash": "d08b565c980459b4fe27d38a42ad0e27"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5938_1.jpg",
+				"path": "/images/items/01_5938/01_5938_1.jpg",
+				"hash": "541f008b1692056f984b1b7520e3bbd6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5938_2.jpg",
+				"path": "/images/items/01_5938/01_5938_2.jpg",
+				"hash": "706af2cc4cbacb2c4025c185e72dfa96"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5938_3.jpg",
+				"path": "/images/items/01_5938/01_5938_3.jpg",
+				"hash": "827b2f78c6921c154ecd8f6132ef1b3d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5938_4.jpg",
+				"path": "/images/items/01_5938/01_5938_4.jpg",
+				"hash": "9f3de63f8db01f8fe36cffe22c7b39fa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5938_5.jpg",
+				"path": "/images/items/01_5938/01_5938_5.jpg",
+				"hash": "96121c934074e640c46ee4fde47a8cc0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5938_6.jpg",
+				"path": "/images/items/01_5938/01_5938_6.jpg",
+				"hash": "fe4df1b0e077eb9861d1b7a483c6001c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5938_7.jpg",
+				"path": "/images/items/01_5938/01_5938_7.jpg",
+				"hash": "5ec9be87a1544136330be492d9529b5f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5938/",
-	"brandIds": [
-		"30mm"
-	],
+	"brandIds": ["30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3802",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3802/"

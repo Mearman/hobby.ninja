@@ -39,41 +39,57 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ディスプレイベース×1式",
-			"ディスプレイ用ジョイントパーツ×2種",
-			"シール×1"
-		],
-		"en": [
-			"Display base x 1",
-			"Joint parts for display x 2 types",
-			"Seal×1"
-		]
+		"ja": ["ディスプレイベース×1式", "ディスプレイ用ジョイントパーツ×2種", "シール×1"],
+		"en": ["Display base x 1", "Joint parts for display x 2 types", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_5370/153_6220.jpg",
-		"/images/items/01_5370/155_6220.jpg",
-		"/images/items/01_5370/156_6220.jpg",
-		"/images/items/01_5370/157_6220.jpg",
-		"/images/items/01_5370/158_6220.jpg",
-		"/images/items/01_5370/159_6220.jpg",
-		"/images/items/01_5370/189_6220.jpg",
-		"/images/items/01_5370/190_6220.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6220.jpg",
+				"path": "/images/items/01_5370/153_6220.jpg",
+				"hash": "666352beabcb0141b92f1dbbbce2be32"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6220.jpg",
+				"path": "/images/items/01_5370/155_6220.jpg",
+				"hash": "a3d39d0a141e69557c02487b56d3b403"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6220.jpg",
+				"path": "/images/items/01_5370/156_6220.jpg",
+				"hash": "718787d286b80f59acb359e6a7a1de15"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6220.jpg",
+				"path": "/images/items/01_5370/157_6220.jpg",
+				"hash": "5703794c2651ff654727858b82db888d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6220.jpg",
+				"path": "/images/items/01_5370/158_6220.jpg",
+				"hash": "4a5f8e89e122d34c90fb462249343908"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6220.jpg",
+				"path": "/images/items/01_5370/159_6220.jpg",
+				"hash": "feb7d7be086b39bef800f4d863f058a8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6220.jpg",
+				"path": "/images/items/01_5370/189_6220.jpg",
+				"hash": "e6fbc895af1cb4004b688e67f16f90ec"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6220.jpg",
+				"path": "/images/items/01_5370/190_6220.jpg",
+				"hash": "60c0e1e22953a2605d5c64db0be3ea83"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5370/",
-	"brandIds": [
-		"figurerise-standard-amp"
-	],
-	"seriesIds": [
-		"yugioh"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5554",
-		"01_5065",
-		"01_4916",
-		"01_4344"
-	]
+	"brandIds": ["figurerise-standard-amp"],
+	"seriesIds": ["yugioh"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5554", "01_5065", "01_4916", "01_4344"]
 }

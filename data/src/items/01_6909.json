@@ -33,29 +33,41 @@
 			"*The finished product in the photo is painted. The actual product may differ. *Please note that some of the clear parts may contain air bubbles due to the manufacturing process. *Product materials may change depending on the production period of the sold product. Thank you for your understanding. *There may be variations in plated parts due to the painting process. Thank you for your understanding. *Depending on sales conditions, the quantity that can be purchased may change in the future."
 		]
 	},
-	"images": [
-		"/images/items/01_6909/01_6909_0.jpg",
-		"/images/items/01_6909/01_6909_1.jpg",
-		"/images/items/01_6909/01_6909_2.jpg",
-		"/images/items/01_6909/01_6909_3.jpg",
-		"/images/items/01_6909/01_6909_4.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6909_0.jpg",
+				"path": "/images/items/01_6909/01_6909_0.jpg",
+				"hash": "5ee20fd123599833acf8d00806881a71"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6909_1.jpg",
+				"path": "/images/items/01_6909/01_6909_1.jpg",
+				"hash": "c3263ed0f294e8f3ef529403b142c8f8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6909_2.jpg",
+				"path": "/images/items/01_6909/01_6909_2.jpg",
+				"hash": "427587388419d3eb667b6cdedb32a772"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6909_3.jpg",
+				"path": "/images/items/01_6909/01_6909_3.jpg",
+				"hash": "91c821a73a58f974c9b6993bfa90568a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6909_4.jpg",
+				"path": "/images/items/01_6909/01_6909_4.jpg",
+				"hash": "93432871c76283e1e954028cfd0b27e7"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6909/",
-	"brandIds": [
-		"pb_charapla"
-	],
-	"seriesIds": [
-		"dunbine"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_6908",
-		"01_6793",
-		"item-1000203131",
-		"item-1000217021"
-	],
+	"brandIds": ["pb_charapla"],
+	"seriesIds": ["dunbine"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_6908", "01_6793", "item-1000203131", "item-1000217021"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

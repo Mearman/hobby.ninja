@@ -26,22 +26,24 @@
 			"The main character from \"Mobile Suit Gundam: Char's Counterattack\" is now three-dimensional. Screws are used to secure the forearms, legs, chest, abdomen, and seal arms, and special driver parts are included. The hands have movable fingers. Front and side armor move independently. The handle of the beam saber can be mounted on a backpack. Comes with a beam rifle, beam saber, new hyper bazooka, and Seal."
 		]
 	},
-	"images": [
-		"/images/items/01_4438/153_5344.jpg",
-		"/images/items/01_4438/155_5344.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5344.jpg",
+				"path": "/images/items/01_4438/153_5344.jpg",
+				"hash": "2a2c243cf12869444de53ec99ce3d23d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5344.jpg",
+				"path": "/images/items/01_4438/155_5344.jpg",
+				"hash": "96eaa82f3c44f6f7629e8f195dfaa1e4"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4438/",
 	"brandIds": [],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5478",
-		"01_5531",
-		"01_5532",
-		"01_5423"
-	]
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5478", "01_5531", "01_5532", "01_5423"]
 }

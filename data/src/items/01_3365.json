@@ -35,28 +35,36 @@
 			"• Each part of the aircraft is movable, allowing you to create poses inspired by the movie! Two beam sabers are included."
 		]
 	},
-	"images": [
-		"/images/items/01_3365/153_4318.jpg",
-		"/images/items/01_3365/155_4318.jpg",
-		"/images/items/01_3365/156_4318.jpg",
-		"/images/items/01_3365/157_4318.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4318.jpg",
+				"path": "/images/items/01_3365/153_4318.jpg",
+				"hash": "1004664002113fdf82d0ef6108572fc9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4318.jpg",
+				"path": "/images/items/01_3365/155_4318.jpg",
+				"hash": "851a02a59cd47574e6aa0a1394e5b356"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4318.jpg",
+				"path": "/images/items/01_3365/156_4318.jpg",
+				"hash": "9f4a54d79b12cddca068b827be842b63"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4318.jpg",
+				"path": "/images/items/01_3365/157_4318.jpg",
+				"hash": "8876a6879e1596a851254dd560f24a8d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3365/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

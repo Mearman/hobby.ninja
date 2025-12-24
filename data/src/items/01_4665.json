@@ -26,22 +26,24 @@
 			"• New equipment version of Kanu Gundam. • Comes with a special weapon \"Shinkiga Ryuto \". • Reproduce the Trinity using the parts of \" Ryuso Liu Bei Gundam \" and \" Raiso Zhang Fei Gundam\" sold separately. • By changing the joint part of the shoulder armor, you can replace the parts without taking them apart when replacing the armor. Molded product x 4, Seal x 1, instruction manual manga included"
 		]
 	},
-	"images": [
-		"/images/items/01_4665/153_5556.jpg",
-		"/images/items/01_4665/155_5556.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5556.jpg",
+				"path": "/images/items/01_4665/153_5556.jpg",
+				"hash": "4bf141e899d694e338511c1896c6ca7c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5556.jpg",
+				"path": "/images/items/01_4665/155_5556.jpg",
+				"hash": "9f67f10c18105d982e890dd020b0b2fc"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4665/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

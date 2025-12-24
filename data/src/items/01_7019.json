@@ -47,32 +47,32 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"キャノン(ロイロイ)×1",
-			"クロー(ロイロイ)×1"
-		],
-		"en": [
-			"Cannon (Roi Roy) x 1",
-			"Claw (Roi Roy) x 1"
-		]
+		"ja": ["キャノン(ロイロイ)×1", "クロー(ロイロイ)×1"],
+		"en": ["Cannon (Roi Roy) x 1", "Claw (Roi Roy) x 1"]
 	},
-	"images": [
-		"/images/items/01_7019/01_7019_0.jpg",
-		"/images/items/01_7019/01_7019_1.jpg",
-		"/images/items/01_7019/01_7019_2.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_7019_0.jpg",
+				"path": "/images/items/01_7019/01_7019_0.jpg",
+				"hash": "8a98adb982ed3652936e297ab729aefe"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7019_1.jpg",
+				"path": "/images/items/01_7019/01_7019_1.jpg",
+				"hash": "77c588159120de87f67d5e79bbd1ce82"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7019_2.jpg",
+				"path": "/images/items/01_7019/01_7019_2.jpg",
+				"hash": "45b74ec31ec3043babe9623ece961030"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_7019/",
-	"brandIds": [
-		"30mm"
-	],
+	"brandIds": ["30mm"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7020",
-		"01_7021",
-		"01_7022",
-		"01_7023"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7020", "01_7021", "01_7022", "01_7023"]
 }

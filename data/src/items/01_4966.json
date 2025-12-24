@@ -20,31 +20,29 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HG 1/144 ガンダムデュナメスアームアームズ(川口克己プロデュース プロショップ専用商品)登場！"
-		],
-		"en": [
-			"HG 1/144 Gundam Dynames Arms (pro shop exclusive product produced by Katsumi Kawaguchi) now available!"
-		]
+		"ja": ["HG 1/144 ガンダムデュナメスアームアームズ(川口克己プロデュース プロショップ専用商品)登場！"],
+		"en": ["HG 1/144 Gundam Dynames Arms (pro shop exclusive product produced by Katsumi Kawaguchi) now available!"]
 	},
-	"images": [
-		"/images/items/01_4966/153_5837.jpg",
-		"/images/items/01_4966/155_5837.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5837.jpg",
+				"path": "/images/items/01_4966/153_5837.jpg",
+				"hash": "afeafbdfdfa4560e5b6acee735845577"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5837.jpg",
+				"path": "/images/items/01_4966/155_5837.jpg",
+				"hash": "2e76a7f6fceec87a5c0f8d3240c396e1"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4966/",
-	"brandIds": [
-		"hg"
-	],
+	"brandIds": ["hg"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5951"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

@@ -35,26 +35,26 @@
 			"• The legs are equipped with a \"multi-link gimmick\" that allows the armor to slide in conjunction with the movement of each joint! Bold and flexible poses are possible!"
 		]
 	},
-	"images": [
-		"/images/items/01_3496/1000160172_1.jpg",
-		"/images/items/01_3496/1000160172_2.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160172_1.jpg",
+				"path": "/images/items/01_3496/1000160172_1.jpg",
+				"hash": "1dabdb2ced7e5fd8f9b048b96ff69492"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160172_2.jpg",
+				"path": "/images/items/01_3496/1000160172_2.jpg",
+				"hash": "4c103c256eaefda0a67ed9bf57cba560"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3496/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"gundam-cca"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4121",
-		"01_2734",
-		"01_2531",
-		"item-1000136789"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["gundam-cca"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4121", "01_2734", "01_2531", "item-1000136789"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

@@ -40,26 +40,26 @@
 			"• Comes with apple parts and apple-shaped pedestal."
 		]
 	},
-	"images": [
-		"/images/items/01_3495/153_4448.jpg",
-		"/images/items/01_3495/155_4448.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4448.jpg",
+				"path": "/images/items/01_3495/153_4448.jpg",
+				"hash": "3663e92531f974341e53e4f8a13e154b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4448.jpg",
+				"path": "/images/items/01_3495/155_4448.jpg",
+				"hash": "424f0aeb8d7bd70073f7512a7f0d0495"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3495/",
-	"brandIds": [
-		"sdcs"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4132",
-		"01_3295",
-		"01_3321",
-		"01_2806"
-	],
+	"brandIds": ["sdcs"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4132", "01_3295", "01_3321", "01_2806"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

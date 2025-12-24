@@ -20,37 +20,32 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"●「機動戦士ガンダム」に登場する機体をエコプラでキット化",
-			"●表情のついた左手首が付属"
-		],
+		"ja": ["●「機動戦士ガンダム」に登場する機体をエコプラでキット化", "●表情のついた左手首が付属"],
 		"en": [
 			"●The aircraft that appears in \"Mobile Suit Gundam\" is made into a kit using Ecopla.",
 			"-Left wrist with expression included"
 		]
 	},
-	"images": [
-		"/images/items/01_4075/153_5000.jpg",
-		"/images/items/01_4075/155_5000.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5000.jpg",
+				"path": "/images/items/01_4075/153_5000.jpg",
+				"hash": "3c8622f920beffc2f14e5edb1d207175"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5000.jpg",
+				"path": "/images/items/01_4075/155_5000.jpg",
+				"hash": "a9540ee70808e74c6a738ddbc21c3879"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4075/",
-	"brandIds": [
-		"ecoplaproject_g",
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5045",
-		"01_4985",
-		"01_4971",
-		"01_4365"
-	],
+	"brandIds": ["ecoplaproject_g", "hg", "hguc"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5045", "01_4985", "01_4971", "01_4365"],
 	"manual": {
 		"id": "258",
 		"url": "https://manual.bandai-hobby.net/menus/detail/258/"

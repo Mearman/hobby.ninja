@@ -93,35 +93,66 @@
 			"- Product specifications are scheduled as of 20142. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_3921/153_4860.jpg",
-		"/images/items/01_3921/155_4860.jpg",
-		"/images/items/01_3921/156_4860.jpg",
-		"/images/items/01_3921/157_4860.jpg",
-		"/images/items/01_3921/158_4860.jpg",
-		"/images/items/01_3921/159_4860.jpg",
-		"/images/items/01_3921/189_4860.jpg",
-		"/images/items/01_3921/190_4860.jpg",
-		"/images/items/01_3921/191_4860.jpg",
-		"/images/items/01_3921/192_4860.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4860.jpg",
+				"path": "/images/items/01_3921/153_4860.jpg",
+				"hash": "b89579932f37e2ca424e65fe05c47f2c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4860.jpg",
+				"path": "/images/items/01_3921/155_4860.jpg",
+				"hash": "377a8e74c2b763f8df1f6bc9b79369bf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4860.jpg",
+				"path": "/images/items/01_3921/156_4860.jpg",
+				"hash": "5dfe802ee61cc669c9d6b593cb4b8cae"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4860.jpg",
+				"path": "/images/items/01_3921/157_4860.jpg",
+				"hash": "26f776b541557c5319e2d5bebf424e71"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4860.jpg",
+				"path": "/images/items/01_3921/158_4860.jpg",
+				"hash": "9434a9a6fe7c2a7e2a2a5b15a1a5881c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4860.jpg",
+				"path": "/images/items/01_3921/159_4860.jpg",
+				"hash": "ef7bb7e8f4bcdebe0b415b10d9c29ce0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4860.jpg",
+				"path": "/images/items/01_3921/189_4860.jpg",
+				"hash": "d8fcbfcd9dd7c10c2a7e05fba683d86a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4860.jpg",
+				"path": "/images/items/01_3921/190_4860.jpg",
+				"hash": "72e439216741f356caabc5336f1c4e05"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4860.jpg",
+				"path": "/images/items/01_3921/191_4860.jpg",
+				"hash": "9467f3d12f63e570858791fb22909df1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4860.jpg",
+				"path": "/images/items/01_3921/192_4860.jpg",
+				"hash": "6209d17fc315434f90df25c56855864b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3921/",
-	"brandIds": [
-		"bb",
-		"pb_bb",
-		"pb_gunpla",
-		"sdgundamseries"
-	],
+	"brandIds": ["bb", "pb_bb", "pb_gunpla", "sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000220190",
-		"item-1000220189",
-		"item-1000216105",
-		"item-1000216112"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000220190", "item-1000220189", "item-1000216105", "item-1000216112"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

@@ -25,28 +25,36 @@
 			"A 1/144 Scale, HG plastic model of \"Zaku Warrior \" that appears in the currently airing TV anime \" Mobile Suit Gundam SEED DESTINY\". The color scheme close to the setting is reproduced by Elopura. The head, waist, and leg tubes are made into separate parts to reproduce the color and express the presence of a pipe. The front armor on the waist is movable. Weapons can include beam axes, machine guns, and grenades. The machine gun can be attached to the back of the waist."
 		]
 	},
-	"images": [
-		"/images/items/01_3976/153_490.jpg",
-		"/images/items/01_3976/155_490.jpg",
-		"/images/items/01_3976/156_490.jpg",
-		"/images/items/01_3976/157_490.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_490.jpg",
+				"path": "/images/items/01_3976/153_490.jpg",
+				"hash": "ab33f19fd056479a89aaf1cb0baea4cc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_490.jpg",
+				"path": "/images/items/01_3976/155_490.jpg",
+				"hash": "a04f838feaa558a3903da3cc3c7def70"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_490.jpg",
+				"path": "/images/items/01_3976/156_490.jpg",
+				"hash": "cfd70b4a41a7bf1a48be77cb3a41f03b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_490.jpg",
+				"path": "/images/items/01_3976/157_490.jpg",
+				"hash": "398cfa502b91132e4e9c064c8bbcd178"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3976/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"01_3739",
-		"item-1000157417"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000203308", "01_5097", "01_3739", "item-1000157417"],
 	"manual": {
 		"id": "160",
 		"url": "https://manual.bandai-hobby.net/menus/detail/160/"

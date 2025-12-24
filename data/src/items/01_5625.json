@@ -27,25 +27,31 @@
 			"\"Saber Gundam \", which played an active role with Athrun in \" Mobile Suit Gundam SEED DESTINY\", is now available as a 1/100 Scale Model with the best proportions. Characteristic Transformation to MA form thoroughly reproduces detailed gimmicks such as head antenna, lower arm armor, and beam rifle. It has an outstanding range of motion, including double joints at the elbows and independent movement of the toes and heel. Includes beam rifle, beam saber x 2, and Seal. The beam saber is realistically reproduced with clear parts."
 		]
 	},
-	"images": [
-		"/images/items/01_5625/153_683.jpg",
-		"/images/items/01_5625/155_683.jpg",
-		"/images/items/01_5625/156_683.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_683.jpg",
+				"path": "/images/items/01_5625/153_683.jpg",
+				"hash": "bf60bf76870cb622470849bcd5dd4e38"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_683.jpg",
+				"path": "/images/items/01_5625/155_683.jpg",
+				"hash": "bd1c1e58a8a7957da41053d8f6091586"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_683.jpg",
+				"path": "/images/items/01_5625/156_683.jpg",
+				"hash": "47118f0edf7ac8175d37a81ea7c8f76f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5625/",
 	"brandIds": [],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5394",
-		"item-1000214960",
-		"01_5378",
-		"01_5365"
-	],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5394", "item-1000214960", "01_5378", "01_5365"],
 	"manual": {
 		"id": "1170",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1170/"

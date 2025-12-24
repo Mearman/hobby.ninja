@@ -39,31 +39,51 @@
 			"• Runner arrangement organized by body part!"
 		]
 	},
-	"images": [
-		"/images/items/01_3583/1000159998_1.jpg",
-		"/images/items/01_3583/1000159998_2.jpg",
-		"/images/items/01_3583/1000159998_3.jpg",
-		"/images/items/01_3583/1000159998_4.jpg",
-		"/images/items/01_3583/1000159998_5.jpg",
-		"/images/items/01_3583/1000159998_6.jpg",
-		"/images/items/01_3583/1000159998_7.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159998_1.jpg",
+				"path": "/images/items/01_3583/1000159998_1.jpg",
+				"hash": "50e82c310658678f7c42949bb2c86d9e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159998_2.jpg",
+				"path": "/images/items/01_3583/1000159998_2.jpg",
+				"hash": "1e64d2bc1ceba114c917dc8b098bfd93"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159998_3.jpg",
+				"path": "/images/items/01_3583/1000159998_3.jpg",
+				"hash": "46fb74382de3c2c695ad21fec0f36aa0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159998_4.jpg",
+				"path": "/images/items/01_3583/1000159998_4.jpg",
+				"hash": "c9f454bdd1ec1c59f057211cf86240cd"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159998_5.jpg",
+				"path": "/images/items/01_3583/1000159998_5.jpg",
+				"hash": "1413430b7e7ac376b0aa03ce9c8103d5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159998_6.jpg",
+				"path": "/images/items/01_3583/1000159998_6.jpg",
+				"hash": "7ee4daeb163edef2d9faa993bd0cffec"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159998_7.jpg",
+				"path": "/images/items/01_3583/1000159998_7.jpg",
+				"hash": "e97d69148b083b295c62d476e713f2be"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3583/",
-	"brandIds": [
-		"entry_grade"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5218",
-		"01_5045",
-		"01_4249",
-		"01_3632"
-	],
+	"brandIds": ["entry_grade"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5218", "01_5045", "01_4249", "01_3632"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

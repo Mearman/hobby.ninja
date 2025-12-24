@@ -63,17 +63,34 @@
 			"- Product specifications are scheduled as of 20118. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_5719/153_787.jpg",
-		"/images/items/01_5719/155_787.jpg",
-		"/images/items/01_5719/156_787.jpg",
-		"/images/items/01_5719/157_787.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_787.jpg",
+				"path": "/images/items/01_5719/153_787.jpg",
+				"hash": "d5ca5342dab87dc8bdf195826712669c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_787.jpg",
+				"path": "/images/items/01_5719/155_787.jpg",
+				"hash": "1d4a05d79e46ce3624a3655f1ad4d97c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_787.jpg",
+				"path": "/images/items/01_5719/156_787.jpg",
+				"hash": "cb59598bad3fdf0d571d90b51cadeeba"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_787.jpg",
+				"path": "/images/items/01_5719/157_787.jpg",
+				"hash": "0a27381752d63087b79b1d83e6d0f8fb"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5719/",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
+	"categoryIds": ["product-list"],
 	"relatedItemIds": []
 }

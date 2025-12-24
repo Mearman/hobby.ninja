@@ -18,29 +18,27 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"「SD ガンダム Gジェネレーション13 パーフェクトガンダム」が登場！"
-		],
-		"en": [
-			"\"SD Gundam G Generation 13 Perfect Gundam\" is now available!"
-		]
+		"ja": ["「SD ガンダム Gジェネレーション13 パーフェクトガンダム」が登場！"],
+		"en": ["\"SD Gundam G Generation 13 Perfect Gundam\" is now available!"]
 	},
-	"images": [
-		"/images/items/01_4462/153_5367.jpg",
-		"/images/items/01_4462/155_5367.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5367.jpg",
+				"path": "/images/items/01_4462/153_5367.jpg",
+				"hash": "0b795eec37837436d9ef44deb101b721"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5367.jpg",
+				"path": "/images/items/01_4462/155_5367.jpg",
+				"hash": "37756953b27678a50c86cf7f662f7f0c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4462/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

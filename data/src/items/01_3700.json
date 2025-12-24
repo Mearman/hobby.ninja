@@ -31,26 +31,24 @@
 			"- Spray missile launchers can also be replaced and installed on the 240mm cannon mounts on both shoulders."
 		]
 	},
-	"images": [
-		"/images/items/01_3700/153_4654.jpg",
-		"/images/items/01_3700/155_4654.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4654.jpg",
+				"path": "/images/items/01_3700/153_4654.jpg",
+				"hash": "0254c2c4ce2f894834b09d83e8cff5b8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4654.jpg",
+				"path": "/images/items/01_3700/155_4654.jpg",
+				"hash": "e332c64488ac7b9deccc6184beee434b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3700/",
-	"brandIds": [
-		"ecoplaproject_g",
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5045",
-		"01_4985",
-		"01_4971",
-		"01_4365"
-	]
+	"brandIds": ["ecoplaproject_g", "hg", "hguc"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5045", "01_4985", "01_4971", "01_4365"]
 }

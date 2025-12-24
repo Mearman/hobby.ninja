@@ -35,28 +35,31 @@
 			"■ Comes with a ACTION BASE 1 compatible joint. It is also compatible with ACTION BASE 2 and can be displayed in the air."
 		]
 	},
-	"images": [
-		"/images/items/01_5817/1000082299_1.jpg",
-		"/images/items/01_5817/1000082299_2.jpg",
-		"/images/items/01_5817/1000082299_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000082299_1.jpg",
+				"path": "/images/items/01_5817/1000082299_1.jpg",
+				"hash": "e30a529d320a1791dedad6debc70fec4"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000082299_2.jpg",
+				"path": "/images/items/01_5817/1000082299_2.jpg",
+				"hash": "5cd9af993b564017603ad89d9a72e25a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000082299_3.jpg",
+				"path": "/images/items/01_5817/1000082299_3.jpg",
+				"hash": "cc4f01505dc0b0dba9e906e958b6d997"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5817/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "380",
 		"url": "https://manual.bandai-hobby.net/menus/detail/380/"

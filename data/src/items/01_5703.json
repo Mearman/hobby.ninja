@@ -53,20 +53,24 @@
 			"*This product is not exclusive to Hobby Online Shop."
 		]
 	},
-	"images": [
-		"/images/items/01_5703/153_769.jpg",
-		"/images/items/01_5703/155_769.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_769.jpg",
+				"path": "/images/items/01_5703/153_769.jpg",
+				"hash": "84a3d2245c5d8dde05ccb071d7ff052d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_769.jpg",
+				"path": "/images/items/01_5703/155_769.jpg",
+				"hash": "e0e420cd9662ea4fdea17569881e15c9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5703/",
-	"brandIds": [
-		"train"
-	],
+	"brandIds": ["train"],
 	"seriesIds": [],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"relatedItemIds": ["01_1276", "01_1277", "01_1278", "01_1280"]
 }

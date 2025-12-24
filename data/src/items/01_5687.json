@@ -27,28 +27,36 @@
 			"• Liesel's captain machine, which is active in \"Mobile Suit Gundam Unicorn\" Episode 2, is now available as an MG. • Achieves detailed details unique to MG, such as hatch opening/closing and internal mechanical reproduction. • Equipped with wing binder. • Equipped with a mega beam launcher. Molded product x 17, Foil Seal x 1, Marking Seal x 1, Gundam decal x 1 Assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_5687/153_753.jpg",
-		"/images/items/01_5687/155_753.jpg",
-		"/images/items/01_5687/156_753.jpg",
-		"/images/items/01_5687/157_753.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_753.jpg",
+				"path": "/images/items/01_5687/153_753.jpg",
+				"hash": "ff7a72ec983327306073f76173c93b99"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_753.jpg",
+				"path": "/images/items/01_5687/155_753.jpg",
+				"hash": "572371998ba78a295a0b15376ff83e85"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_753.jpg",
+				"path": "/images/items/01_5687/156_753.jpg",
+				"hash": "8e42ea35776a22266cb09becc6bf4b2d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_753.jpg",
+				"path": "/images/items/01_5687/157_753.jpg",
+				"hash": "6309482d84e6f5b33a8d803f77e4f8dd"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5687/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000183366",
-		"01_4271",
-		"01_2670",
-		"item-1000138934"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000183366", "01_4271", "01_2670", "item-1000138934"],
 	"manual": {
 		"id": "585",
 		"url": "https://manual.bandai-hobby.net/menus/detail/585/"

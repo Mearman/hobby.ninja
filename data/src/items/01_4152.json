@@ -93,34 +93,66 @@
 			"- Product specifications are scheduled as of 20223. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_4152/153_5077.jpg",
-		"/images/items/01_4152/155_5077.jpg",
-		"/images/items/01_4152/156_5077.jpg",
-		"/images/items/01_4152/157_5077.jpg",
-		"/images/items/01_4152/158_5077.jpg",
-		"/images/items/01_4152/159_5077.jpg",
-		"/images/items/01_4152/189_5077.jpg",
-		"/images/items/01_4152/190_5077.jpg",
-		"/images/items/01_4152/191_5077.jpg",
-		"/images/items/01_4152/192_5077.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5077.jpg",
+				"path": "/images/items/01_4152/153_5077.jpg",
+				"hash": "e45376aabe20facc0ea43cb0dd4eac6a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5077.jpg",
+				"path": "/images/items/01_4152/155_5077.jpg",
+				"hash": "b14abaac461f00d2574b5978973ba260"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5077.jpg",
+				"path": "/images/items/01_4152/156_5077.jpg",
+				"hash": "c9212ddfff54d7272decf446b3c9f55e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5077.jpg",
+				"path": "/images/items/01_4152/157_5077.jpg",
+				"hash": "198d757eb5e528c36a0ffdb1df5c2c54"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5077.jpg",
+				"path": "/images/items/01_4152/158_5077.jpg",
+				"hash": "e541c36161ece37c640dda443660ae09"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5077.jpg",
+				"path": "/images/items/01_4152/159_5077.jpg",
+				"hash": "b5c977014a394a9ba1f08a7f3c7b43dd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5077.jpg",
+				"path": "/images/items/01_4152/189_5077.jpg",
+				"hash": "9ce270ffdaa05422de3f7f19d49a6d0b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5077.jpg",
+				"path": "/images/items/01_4152/190_5077.jpg",
+				"hash": "eedaad46b22a419eefa4af58311be233"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5077.jpg",
+				"path": "/images/items/01_4152/191_5077.jpg",
+				"hash": "63b789144d6c92d653a4b16c4bc7f50d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5077.jpg",
+				"path": "/images/items/01_4152/192_5077.jpg",
+				"hash": "c6bee231f7fe78446b4b6819289b6aa4"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4152/",
-	"brandIds": [
-		"pb_charapla",
-		"rg"
-	],
-	"seriesIds": [
-		"evangelion"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000181665",
-		"item-1000163344",
-		"item-1000163343"
-	],
+	"brandIds": ["pb_charapla", "rg"],
+	"seriesIds": ["evangelion"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000181665", "item-1000163344", "item-1000163343"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

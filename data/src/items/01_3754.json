@@ -55,32 +55,56 @@
 			"Water transfer decal x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_3754/153_4706.jpg",
-		"/images/items/01_3754/155_4706.jpg",
-		"/images/items/01_3754/156_4706.jpg",
-		"/images/items/01_3754/157_4706.jpg",
-		"/images/items/01_3754/158_4706.jpg",
-		"/images/items/01_3754/159_4706.jpg",
-		"/images/items/01_3754/189_4706.jpg",
-		"/images/items/01_3754/190_4706.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4706.jpg",
+				"path": "/images/items/01_3754/153_4706.jpg",
+				"hash": "9222cba1e99295f9223979aa59c19927"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4706.jpg",
+				"path": "/images/items/01_3754/155_4706.jpg",
+				"hash": "38e456a3189bb56583206ac24260e154"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4706.jpg",
+				"path": "/images/items/01_3754/156_4706.jpg",
+				"hash": "03989576b588ab5cebfa4469405295fd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4706.jpg",
+				"path": "/images/items/01_3754/157_4706.jpg",
+				"hash": "18a2997195b329ffae7c09ae21d7d2d8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4706.jpg",
+				"path": "/images/items/01_3754/158_4706.jpg",
+				"hash": "0cbe35dee853640f9ef3f9b6c8ae31ba"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4706.jpg",
+				"path": "/images/items/01_3754/159_4706.jpg",
+				"hash": "4d4763d948f6f2a1db312c74c54043f3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4706.jpg",
+				"path": "/images/items/01_3754/189_4706.jpg",
+				"hash": "d1be56cf90b5269dcfd5f9bdacf9c483"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4706.jpg",
+				"path": "/images/items/01_3754/190_4706.jpg",
+				"hash": "ece51810d178774c1f9af895f481e4cc"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3754/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_4066"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_4066"],
 	"manual": {
 		"id": "640",
 		"url": "https://manual.bandai-hobby.net/menus/detail/640/"

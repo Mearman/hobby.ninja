@@ -26,23 +26,29 @@
 			"The popular KMF \"Guren 2 Type\" is now available as a luxurious royal coating version. The entire body has a glittering special coating. The radiation wave mechanism on the right arm reproduces its gimmick. The cockpit is reproduced in clear color, and the cockpit hatch can be opened and closed. A Karen figure (standing and seated) is included."
 		]
 	},
-	"images": [
-		"/images/items/01_4857/153_5737.jpg",
-		"/images/items/01_4857/155_5737.jpg",
-		"/images/items/01_4857/156_5737.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5737.jpg",
+				"path": "/images/items/01_4857/153_5737.jpg",
+				"hash": "8419fcd1f96b902064be5a5f8c087216"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5737.jpg",
+				"path": "/images/items/01_4857/155_5737.jpg",
+				"hash": "69d082b93defdaddb9dafbcbdec01c6e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5737.jpg",
+				"path": "/images/items/01_4857/156_5737.jpg",
+				"hash": "c9b68f9a05182e90033b0a9389c640a2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4857/",
 	"brandIds": [],
-	"seriesIds": [
-		"geass"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000203132",
-		"item-1000187724",
-		"item-1000167903",
-		"01_5809"
-	]
+	"seriesIds": ["geass"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000203132", "item-1000187724", "item-1000167903", "01_5809"]
 }

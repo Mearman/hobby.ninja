@@ -55,32 +55,51 @@
 			"*Sales may end once supplies run out."
 		]
 	},
-	"images": [
-		"/images/items/01_3560/153_4515.jpg",
-		"/images/items/01_3560/155_4515.jpg",
-		"/images/items/01_3560/156_4515.jpg",
-		"/images/items/01_3560/157_4515.jpg",
-		"/images/items/01_3560/158_4515.jpg",
-		"/images/items/01_3560/159_4515.jpg",
-		"/images/items/01_3560/189_4515.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4515.jpg",
+				"path": "/images/items/01_3560/153_4515.jpg",
+				"hash": "4d01926706d5b44e3f3aa06b6b88a9db"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4515.jpg",
+				"path": "/images/items/01_3560/155_4515.jpg",
+				"hash": "22f870610f2437f8a47c9ab3a17661a0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4515.jpg",
+				"path": "/images/items/01_3560/156_4515.jpg",
+				"hash": "340c7f450eef36d7ea95e2fd70086dd6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4515.jpg",
+				"path": "/images/items/01_3560/157_4515.jpg",
+				"hash": "83479e6e8a9517ae080f1108d0a9e41e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4515.jpg",
+				"path": "/images/items/01_3560/158_4515.jpg",
+				"hash": "a7d183a52bdbf1b93e0952c2b706db53"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4515.jpg",
+				"path": "/images/items/01_3560/159_4515.jpg",
+				"hash": "ee894a571a98923aa8c8d8022c2d181d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4515.jpg",
+				"path": "/images/items/01_3560/189_4515.jpg",
+				"hash": "9d1f57e9dba1247bd61eb7ed60ef945d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3560/",
-	"brandIds": [
-		"hg",
-		"entry_grade"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5594",
-		"01_5218",
-		"01_5045",
-		"01_4985"
-	],
+	"brandIds": ["hg", "entry_grade"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5594", "01_5218", "01_5045", "01_4985"],
 	"tag": {
 		"ja": "特別商品",
 		"en": "Special Product"

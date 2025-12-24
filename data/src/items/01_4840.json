@@ -119,35 +119,66 @@
 			"Mega Blaster Cannon reproduction parts"
 		]
 	},
-	"images": [
-		"/images/items/01_4840/153_5721.jpg",
-		"/images/items/01_4840/155_5721.jpg",
-		"/images/items/01_4840/156_5721.jpg",
-		"/images/items/01_4840/157_5721.jpg",
-		"/images/items/01_4840/158_5721.jpg",
-		"/images/items/01_4840/159_5721.jpg",
-		"/images/items/01_4840/189_5721.jpg",
-		"/images/items/01_4840/190_5721.jpg",
-		"/images/items/01_4840/191_5721.jpg",
-		"/images/items/01_4840/192_5721.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5721.jpg",
+				"path": "/images/items/01_4840/153_5721.jpg",
+				"hash": "b45abb0eb2a39edf9c932cc91b43e8db"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5721.jpg",
+				"path": "/images/items/01_4840/155_5721.jpg",
+				"hash": "ead6c85204940bf64dee4dbfadf52651"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5721.jpg",
+				"path": "/images/items/01_4840/156_5721.jpg",
+				"hash": "ccb378018fe24c9a6ebcf0bea85d4df3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5721.jpg",
+				"path": "/images/items/01_4840/157_5721.jpg",
+				"hash": "e9d59246957c7e94953b93e9c5f37557"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5721.jpg",
+				"path": "/images/items/01_4840/158_5721.jpg",
+				"hash": "f7e1bdfc40007d9796b46002d850fcd6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5721.jpg",
+				"path": "/images/items/01_4840/159_5721.jpg",
+				"hash": "b37768eb3a31b6c3584de0f5b1f07b7c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5721.jpg",
+				"path": "/images/items/01_4840/189_5721.jpg",
+				"hash": "082f6c2fa98fbf90f794b37f87a6f535"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5721.jpg",
+				"path": "/images/items/01_4840/190_5721.jpg",
+				"hash": "a0f559f59342fa81af2bb3991e76ff9f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5721.jpg",
+				"path": "/images/items/01_4840/191_5721.jpg",
+				"hash": "332c1404bbe98b0e544e7f8ba9d326e6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5721.jpg",
+				"path": "/images/items/01_4840/192_5721.jpg",
+				"hash": "e9cf6c86837a7589bc086c6a8317e29f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4840/",
-	"brandIds": [
-		"pb_charapla",
-		"hg"
-	],
-	"seriesIds": [
-		"superrobot_og"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5578",
-		"01_5491",
-		"item-1000214961",
-		"01_5369"
-	],
+	"brandIds": ["pb_charapla", "hg"],
+	"seriesIds": ["superrobot_og"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5578", "01_5491", "item-1000214961", "01_5369"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

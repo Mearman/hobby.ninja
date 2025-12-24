@@ -26,22 +26,24 @@
 			"• War horses, which are indispensable to the battlefields of Sangokuden, appear. Let's recreate the battlefield by mounting a military commander on the Silver Meteor Horse! Molded product x 2, foil seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_4660/153_5551.jpg",
-		"/images/items/01_4660/155_5551.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5551.jpg",
+				"path": "/images/items/01_4660/153_5551.jpg",
+				"hash": "fc93406e52a67af9b93cfdef9a18a8c2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5551.jpg",
+				"path": "/images/items/01_4660/155_5551.jpg",
+				"hash": "1fa56d2d6a1cd362870708569a00bd1e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4660/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

@@ -59,20 +59,24 @@
 			"*Product images may differ from the actual product."
 		]
 	},
-	"images": [
-		"/images/items/01_5718/153_786.jpg",
-		"/images/items/01_5718/155_786.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_786.jpg",
+				"path": "/images/items/01_5718/153_786.jpg",
+				"hash": "5738a170ac97891f2bb797d89abff2aa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_786.jpg",
+				"path": "/images/items/01_5718/155_786.jpg",
+				"hash": "a304838e99d6e0cdb130a591b266fc58"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5718/",
-	"brandIds": [
-		"train"
-	],
+	"brandIds": ["train"],
 	"seriesIds": [],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"relatedItemIds": ["01_1276", "01_1277", "01_1278", "01_1280"]
 }

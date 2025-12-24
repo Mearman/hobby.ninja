@@ -38,32 +38,46 @@
 			"• GN particle storage tank is also included. The movie version of 00 Raiser can also be reproduced."
 		]
 	},
-	"images": [
-		"/images/items/01_4409/153_5314.jpg",
-		"/images/items/01_4409/155_5314.jpg",
-		"/images/items/01_4409/156_5314.jpg",
-		"/images/items/01_4409/157_5314.jpg",
-		"/images/items/01_4409/158_5314.jpg",
-		"/images/items/01_4409/159_5314.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5314.jpg",
+				"path": "/images/items/01_4409/153_5314.jpg",
+				"hash": "a458438b2d942c6faa0d3119459a1cf0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5314.jpg",
+				"path": "/images/items/01_4409/155_5314.jpg",
+				"hash": "fa6233512031fc258648a0cb7baeac34"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5314.jpg",
+				"path": "/images/items/01_4409/156_5314.jpg",
+				"hash": "5c45e64331da006dd827f046b427cfc8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5314.jpg",
+				"path": "/images/items/01_4409/157_5314.jpg",
+				"hash": "f5b18986931a4f1958f94451b63055a8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5314.jpg",
+				"path": "/images/items/01_4409/158_5314.jpg",
+				"hash": "22010d41ad3fa5f3b1b9337a1c0f4885"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5314.jpg",
+				"path": "/images/items/01_4409/159_5314.jpg",
+				"hash": "b1bf96e4e2b04f1a18b4b31569fe6788"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4409/",
-	"brandIds": [
-		"mg",
-		"pb_mg",
-		"pb_gunpla"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216602",
-		"01_5526",
-		"item-1000161849",
-		"01_5102"
-	],
+	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
+	"seriesIds": ["g-00"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216602", "01_5526", "item-1000161849", "01_5102"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

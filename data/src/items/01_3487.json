@@ -27,29 +27,36 @@
 			"• \"Immortal 4th Platoon\" Jim Cannon II appears in HGUC. • A solid form. The head camera is reproduced with clear parts. • Beam cannon can move 90 degrees. • You can recreate storing and drawing a saber. • Includes a variety of wrist parts. Molded product x 7, foil seal x 1, assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_3487/153_4440.jpg",
-		"/images/items/01_3487/155_4440.jpg",
-		"/images/items/01_3487/156_4440.jpg",
-		"/images/items/01_3487/157_4440.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4440.jpg",
+				"path": "/images/items/01_3487/153_4440.jpg",
+				"hash": "4d524cf1d5e1f960e2c9b27670b3da77"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4440.jpg",
+				"path": "/images/items/01_3487/155_4440.jpg",
+				"hash": "42bcaec5d927a16fc4c2e38a96b38ff1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4440.jpg",
+				"path": "/images/items/01_3487/156_4440.jpg",
+				"hash": "59808850a2940f1fc8ece1bd1c3f3604"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4440.jpg",
+				"path": "/images/items/01_3487/157_4440.jpg",
+				"hash": "7d8c3ba81ff168568ad4c0dd584fa527"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3487/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"g-0083"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000102912",
-		"item-1000102910",
-		"item-1000115500",
-		"01_5843"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["g-0083"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000102912", "item-1000102910", "item-1000115500", "01_5843"],
 	"manual": {
 		"id": "359",
 		"url": "https://manual.bandai-hobby.net/menus/detail/359/"

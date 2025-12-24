@@ -27,22 +27,24 @@
 			"• The entire car body has a line color.・Compatible with power unit 3 ・Compatible with running trolley T ・Contains 2 cars"
 		]
 	},
-	"images": [
-		"/images/items/01_5880/153_958.jpg",
-		"/images/items/01_5880/155_958.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_958.jpg",
+				"path": "/images/items/01_5880/153_958.jpg",
+				"hash": "c86b22a263ea3846d3a1616c50346d24"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_958.jpg",
+				"path": "/images/items/01_5880/155_958.jpg",
+				"hash": "648bfbe313f56137af4abaa998bfb01c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5880/",
-	"brandIds": [
-		"train"
-	],
+	"brandIds": ["train"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_1276", "01_1277", "01_1278", "01_1280"]
 }

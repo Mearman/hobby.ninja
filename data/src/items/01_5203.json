@@ -32,25 +32,39 @@
 			"The head can be attached to the BB warrior."
 		]
 	},
-	"images": [
-		"/images/items/01_5203/153_605.jpg",
-		"/images/items/01_5203/155_605.jpg",
-		"/images/items/01_5203/156_605.jpg",
-		"/images/items/01_5203/157_605.jpg",
-		"/images/items/01_5203/158_605.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_605.jpg",
+				"path": "/images/items/01_5203/153_605.jpg",
+				"hash": "108a02701482971020915e4f4c08ee03"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_605.jpg",
+				"path": "/images/items/01_5203/155_605.jpg",
+				"hash": "cbb989646f9f925c870a055f5007c5c9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_605.jpg",
+				"path": "/images/items/01_5203/156_605.jpg",
+				"hash": "180cc5172086e2ab18e2a295976e16f1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_605.jpg",
+				"path": "/images/items/01_5203/157_605.jpg",
+				"hash": "f7f987bfddd5b6fdc50f218aa6a1f63d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_605.jpg",
+				"path": "/images/items/01_5203/158_605.jpg",
+				"hash": "263ac6569c3a20dc125825deb5e11451"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5203/",
 	"brandIds": [],
-	"seriesIds": [
-		"keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7034",
-		"01_2120",
-		"01_2122",
-		"01_2104"
-	]
+	"seriesIds": ["keroro"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7034", "01_2120", "01_2122", "01_2104"]
 }

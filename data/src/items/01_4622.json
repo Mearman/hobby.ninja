@@ -27,23 +27,29 @@
 			"• Gundam AGE's final form appears in AG. • \"Touch gate \" allows parts to be removed by hand without using tools. • \" Iropla \" creates a colorful finish just by assembling it. • \" Block build\" allows for intuitive and quick assembly. • Comes with 1 gauging tip."
 		]
 	},
-	"images": [
-		"/images/items/01_4622/153_5517.jpg",
-		"/images/items/01_4622/155_5517.jpg",
-		"/images/items/01_4622/156_5517.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5517.jpg",
+				"path": "/images/items/01_4622/153_5517.jpg",
+				"hash": "546291c6e9c0be17668bd33958350800"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5517.jpg",
+				"path": "/images/items/01_4622/155_5517.jpg",
+				"hash": "7f4f5158fd6305e2d10fb47fc9768274"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5517.jpg",
+				"path": "/images/items/01_4622/156_5517.jpg",
+				"hash": "3bf3cbcbf405b17417113baff915ea32"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4622/",
 	"brandIds": [],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000181355",
-		"item-1000181354",
-		"item-1000170540",
-		"01_4196"
-	]
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000181355", "item-1000181354", "item-1000170540", "01_4196"]
 }

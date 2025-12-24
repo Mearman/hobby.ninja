@@ -41,32 +41,56 @@
 			"• Water transfer decals"
 		]
 	},
-	"images": [
-		"/images/items/01_4985/153_5855.jpg",
-		"/images/items/01_4985/155_5855.jpg",
-		"/images/items/01_4985/156_5855.jpg",
-		"/images/items/01_4985/157_5855.jpg",
-		"/images/items/01_4985/158_5855.jpg",
-		"/images/items/01_4985/159_5855.jpg",
-		"/images/items/01_4985/189_5855.jpg",
-		"/images/items/01_4985/190_5855.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5855.jpg",
+				"path": "/images/items/01_4985/153_5855.jpg",
+				"hash": "15c58e62a7f96c49dcb1295173b5a8f8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5855.jpg",
+				"path": "/images/items/01_4985/155_5855.jpg",
+				"hash": "890808283885cc6b3498f872c68b89ac"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5855.jpg",
+				"path": "/images/items/01_4985/156_5855.jpg",
+				"hash": "5687ac0ea90f3cff4ca8193a3cbcfb93"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5855.jpg",
+				"path": "/images/items/01_4985/157_5855.jpg",
+				"hash": "f1a25b39a1d04283d0f20f744f8dc542"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5855.jpg",
+				"path": "/images/items/01_4985/158_5855.jpg",
+				"hash": "220973998c0a7b76b870e39409f41fd8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5855.jpg",
+				"path": "/images/items/01_4985/159_5855.jpg",
+				"hash": "0c01dc1acf583d2e3061d3d6cc9bae69"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5855.jpg",
+				"path": "/images/items/01_4985/189_5855.jpg",
+				"hash": "dc4a866ca14e390a31547f8bf927afb1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5855.jpg",
+				"path": "/images/items/01_4985/190_5855.jpg",
+				"hash": "6c9959d4ab166ebc91bf58a3092e2a9e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4985/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5963",
-		"01_5468",
-		"01_5375",
-		"01_5162"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5963", "01_5468", "01_5375", "01_5162"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

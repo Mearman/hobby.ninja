@@ -26,24 +26,26 @@
 			"A 1/144 scale plastic model of Isaac's aircraft \"Slash Zaku Phantom \" that appears in \" Mobile Suit Gundam SEED DESTINY \". The iron array type polycap expands the range of motion, allowing you to recreate cool stances and standing poses. A combat-specific backpack \" Slash Wizard \" is attached to the back, and this equipment can also be attached to \" HG Zaku Warrior\"."
 		]
 	},
-	"images": [
-		"/images/items/01_4474/153_537.jpg",
-		"/images/items/01_4474/155_537.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_537.jpg",
+				"path": "/images/items/01_4474/153_537.jpg",
+				"hash": "45d0478f62486b5e629e069e9a07c6cd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_537.jpg",
+				"path": "/images/items/01_4474/155_537.jpg",
+				"hash": "5fc062c65df2141e73d041686d069402"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4474/",
 	"brandIds": [],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5394",
-		"item-1000214960",
-		"01_5378",
-		"01_5365"
-	],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5394", "item-1000214960", "01_5378", "01_5365"],
 	"manual": {
 		"id": "1154",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1154/"

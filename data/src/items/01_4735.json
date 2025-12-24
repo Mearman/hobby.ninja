@@ -19,30 +19,32 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"SD ガンダム 三国伝 003 真 関羽ガンダムが登場！"
-		],
-		"en": [
-			"SD Gundam Sangokuden 003 Shin Kanu Gundam is here!"
-		]
+		"ja": ["SD ガンダム 三国伝 003 真 関羽ガンダムが登場！"],
+		"en": ["SD Gundam Sangokuden 003 Shin Kanu Gundam is here!"]
 	},
-	"images": [
-		"/images/items/01_4735/153_5620.jpg",
-		"/images/items/01_4735/155_5620.jpg",
-		"/images/items/01_4735/156_5620.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5620.jpg",
+				"path": "/images/items/01_4735/153_5620.jpg",
+				"hash": "2f92af9abe3a3067b3f1a37f1fb4f795"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5620.jpg",
+				"path": "/images/items/01_4735/155_5620.jpg",
+				"hash": "7270c5c86f14ba0fb50d91978b01c49b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5620.jpg",
+				"path": "/images/items/01_4735/156_5620.jpg",
+				"hash": "52eb59dab6e89f9239275d1d3f6d4502"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4735/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

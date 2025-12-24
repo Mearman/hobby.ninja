@@ -30,28 +30,31 @@
 			"■ With a wide variety of weapon parts, it is possible to reproduce the specifications in the play by rearranging. Molded part ×10, foil seal ×1, assembly instructions"
 		]
 	},
-	"images": [
-		"/images/items/01_5676/1000092246_1.jpg",
-		"/images/items/01_5676/1000092246_2.jpg",
-		"/images/items/01_5676/1000092246_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092246_1.jpg",
+				"path": "/images/items/01_5676/1000092246_1.jpg",
+				"hash": "02a807089ca6f40b1bc2251376c7aa33"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092246_2.jpg",
+				"path": "/images/items/01_5676/1000092246_2.jpg",
+				"hash": "9cc6e6fc83546a7427caa14feeb798b2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092246_3.jpg",
+				"path": "/images/items/01_5676/1000092246_3.jpg",
+				"hash": "105d7af107ccf459de4d689f597dd9e2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5676/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "420",
 		"url": "https://manual.bandai-hobby.net/menus/detail/420/"

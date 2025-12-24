@@ -27,28 +27,36 @@
 			"• Evolution form of Gundam AGE3. • Reproduces a thruster booster that has been enhanced with space operations in mind. • Equipped with a combination deformation mechanism. Both flight form and MS form can be displayed on a special pedestal. Molded product x 8, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_3603/153_4558.jpg",
-		"/images/items/01_3603/155_4558.jpg",
-		"/images/items/01_3603/156_4558.jpg",
-		"/images/items/01_3603/157_4558.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4558.jpg",
+				"path": "/images/items/01_3603/153_4558.jpg",
+				"hash": "be0992d5162f4e5df443f215d3d11e05"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4558.jpg",
+				"path": "/images/items/01_3603/155_4558.jpg",
+				"hash": "0c74a95d21fb54a7c3abd7905fb5e36f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4558.jpg",
+				"path": "/images/items/01_3603/156_4558.jpg",
+				"hash": "61cdbc7aecf19f8c4b8649427531e975"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4558.jpg",
+				"path": "/images/items/01_3603/157_4558.jpg",
+				"hash": "891e9310dad44bbe704e5d1f5868de15"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3603/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "351",
 		"url": "https://manual.bandai-hobby.net/menus/detail/351/"

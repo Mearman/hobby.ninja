@@ -34,26 +34,36 @@
 			"There was an error in the listed price, so we have corrected it."
 		]
 	},
-	"images": [
-		"/images/items/01_4208/153_5128.jpg",
-		"/images/items/01_4208/155_5128.jpg",
-		"/images/items/01_4208/156_5128.jpg",
-		"/images/items/01_4208/157_5128.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5128.jpg",
+				"path": "/images/items/01_4208/153_5128.jpg",
+				"hash": "83b03319ab13fea22716bc1790883573"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5128.jpg",
+				"path": "/images/items/01_4208/155_5128.jpg",
+				"hash": "b5dffdb2b6326b9f82b44b749c2cd547"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5128.jpg",
+				"path": "/images/items/01_4208/156_5128.jpg",
+				"hash": "23c83f7f212b0ca0ef6e5434fde1a8a2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5128.jpg",
+				"path": "/images/items/01_4208/157_5128.jpg",
+				"hash": "3c3398e333ae91fef272702d890af818"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4208/",
 	"brandIds": [],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5470",
-		"01_5471",
-		"01_5472",
-		"01_5347"
-	],
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

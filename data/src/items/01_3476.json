@@ -19,39 +19,67 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"「ＨＧ ダンバイン」が登場！"
-		],
-		"en": [
-			"\"HG Dunbine\" is now available!"
-		]
+		"ja": ["「ＨＧ ダンバイン」が登場！"],
+		"en": ["\"HG Dunbine\" is now available!"]
 	},
-	"images": [
-		"/images/items/01_3476/153_4430.jpg",
-		"/images/items/01_3476/155_4430.jpg",
-		"/images/items/01_3476/156_4430.jpg",
-		"/images/items/01_3476/157_4430.jpg",
-		"/images/items/01_3476/158_4430.jpg",
-		"/images/items/01_3476/159_4430.jpg",
-		"/images/items/01_3476/189_4430.jpg",
-		"/images/items/01_3476/190_4430.jpg",
-		"/images/items/01_3476/191_4430.jpg",
-		"/images/items/01_3476/192_4430.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4430.jpg",
+				"path": "/images/items/01_3476/153_4430.jpg",
+				"hash": "1c0942bbab9c71b3147bb6a07ba8d342"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4430.jpg",
+				"path": "/images/items/01_3476/155_4430.jpg",
+				"hash": "4b77448f5939ecc1a64f1206efe25008"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4430.jpg",
+				"path": "/images/items/01_3476/156_4430.jpg",
+				"hash": "d170b1f838c4154cdd37549921cd3c89"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4430.jpg",
+				"path": "/images/items/01_3476/157_4430.jpg",
+				"hash": "e094faba6e47c6a03fc5b86cd87be577"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4430.jpg",
+				"path": "/images/items/01_3476/158_4430.jpg",
+				"hash": "ac99a062aaadce9bf7070b78f4fc0443"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4430.jpg",
+				"path": "/images/items/01_3476/159_4430.jpg",
+				"hash": "452605a779086eaa5cc0b11f1a8cd082"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4430.jpg",
+				"path": "/images/items/01_3476/189_4430.jpg",
+				"hash": "7016381d8e0d8cc8b05e6b70235cad30"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4430.jpg",
+				"path": "/images/items/01_3476/190_4430.jpg",
+				"hash": "05b3911bccf34c754efb0e3d98b0cebf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_4430.jpg",
+				"path": "/images/items/01_3476/191_4430.jpg",
+				"hash": "b9ff1f1fc1e9db08e98973c7c517c46e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_4430.jpg",
+				"path": "/images/items/01_3476/192_4430.jpg",
+				"hash": "c26824ab30dcce9d9a98ea1d0606464b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3476/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"dunbine"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000203131",
-		"item-1000211055",
-		"item-1000199895",
-		"item-1000194225"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["dunbine"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000203131", "item-1000211055", "item-1000199895", "item-1000194225"]
 }

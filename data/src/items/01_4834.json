@@ -20,34 +20,34 @@
 	"targetAge": 15,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"「MG 1/100 RX-78-2 ガンダム Ver.ONE YEAR WAR 0079 エクストラフィニッシュバージョン」登場！"
-		],
-		"en": [
-			"\"MG 1/100 RX-78-2 Gundam Ver.ONE YEAR WAR 0079 Extra Finish Version\" is now available!"
-		]
+		"ja": ["「MG 1/100 RX-78-2 ガンダム Ver.ONE YEAR WAR 0079 エクストラフィニッシュバージョン」登場！"],
+		"en": ["\"MG 1/100 RX-78-2 Gundam Ver.ONE YEAR WAR 0079 Extra Finish Version\" is now available!"]
 	},
-	"images": [
-		"/images/items/01_4834/153_5716.jpg",
-		"/images/items/01_4834/155_5716.jpg",
-		"/images/items/01_4834/156_5716.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5716.jpg",
+				"path": "/images/items/01_4834/153_5716.jpg",
+				"hash": "e4d88dfc06262c23e7507c40a93a78e2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5716.jpg",
+				"path": "/images/items/01_4834/155_5716.jpg",
+				"hash": "a89089543228beeafe0070cda590330c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5716.jpg",
+				"path": "/images/items/01_4834/156_5716.jpg",
+				"hash": "2042dbc762800a83c598f8a90493fb47"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4834/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

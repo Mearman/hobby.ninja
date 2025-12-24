@@ -20,33 +20,34 @@
 	"targetAge": 15,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"RG 1/144 MS-06S ザクII Ver.GFT　登場！"
-		],
-		"en": [
-			"RG 1/144 MS-06S Zaku II Ver.GFT now available!"
-		]
+		"ja": ["RG 1/144 MS-06S ザクII Ver.GFT　登場！"],
+		"en": ["RG 1/144 MS-06S Zaku II Ver.GFT now available!"]
 	},
-	"images": [
-		"/images/items/01_4775/153_5658.jpg",
-		"/images/items/01_4775/155_5658.jpg",
-		"/images/items/01_4775/156_5658.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5658.jpg",
+				"path": "/images/items/01_4775/153_5658.jpg",
+				"hash": "8e92c256f98540d411c05e6357cf1841"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5658.jpg",
+				"path": "/images/items/01_4775/155_5658.jpg",
+				"hash": "d018654c4b2658afef4844d8bad18427"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5658.jpg",
+				"path": "/images/items/01_4775/156_5658.jpg",
+				"hash": "ffcd33c4fb6e35612adcd0a0897a1531"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4775/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2224",
-		"01_2230",
-		"01_2228"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2224", "01_2230", "01_2228"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

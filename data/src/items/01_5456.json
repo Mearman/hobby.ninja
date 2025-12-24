@@ -29,12 +29,7 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"BB戦士218 ザクII F型×1",
-			"BB戦士231 ザクII S型×1",
-			"BB戦士238 ゴッグ&アッガイ&ゾック×1",
-			"シール×3"
-		],
+		"ja": ["BB戦士218 ザクII F型×1", "BB戦士231 ザクII S型×1", "BB戦士238 ゴッグ&アッガイ&ゾック×1", "シール×3"],
 		"en": [
 			"BB Senshi 218 Zaku II F type x 1",
 			"BB Senshi 231 Zaku II S type x 1",
@@ -42,33 +37,69 @@
 			"Seal×3"
 		]
 	},
-	"images": [
-		"/images/items/01_5456/153_6300.jpg",
-		"/images/items/01_5456/155_6300.jpg",
-		"/images/items/01_5456/156_6300.jpg",
-		"/images/items/01_5456/157_6300.jpg",
-		"/images/items/01_5456/158_6300.jpg",
-		"/images/items/01_5456/159_6300.jpg",
-		"/images/items/01_5456/189_6300.jpg",
-		"/images/items/01_5456/190_6300.jpg",
-		"/images/items/01_5456/191_6300.jpg",
-		"/images/items/01_5456/192_6300.jpg",
-		"/images/items/01_5456/193_6300.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6300.jpg",
+				"path": "/images/items/01_5456/153_6300.jpg",
+				"hash": "6e63909127daf815d928699405b8124b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6300.jpg",
+				"path": "/images/items/01_5456/155_6300.jpg",
+				"hash": "76bd4ed5b022071245267554b71c73b6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6300.jpg",
+				"path": "/images/items/01_5456/156_6300.jpg",
+				"hash": "fe8ea4a04d420ed35671274d0aa633d4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6300.jpg",
+				"path": "/images/items/01_5456/157_6300.jpg",
+				"hash": "fdcd1095f317dc1101a2e8047528048c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6300.jpg",
+				"path": "/images/items/01_5456/158_6300.jpg",
+				"hash": "d3c16843c2fb85f6e0265ed4771c643b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6300.jpg",
+				"path": "/images/items/01_5456/159_6300.jpg",
+				"hash": "b92623e0a1cd9a4bc3f22353dc27e13a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6300.jpg",
+				"path": "/images/items/01_5456/189_6300.jpg",
+				"hash": "ce9c840f83b069d3d32badf9c6be56d3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6300.jpg",
+				"path": "/images/items/01_5456/190_6300.jpg",
+				"hash": "7860099ac39df279863caf2b7b8bbae3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_6300.jpg",
+				"path": "/images/items/01_5456/191_6300.jpg",
+				"hash": "17a2426d696676464fc149b1754f3df0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_6300.jpg",
+				"path": "/images/items/01_5456/192_6300.jpg",
+				"hash": "736b59f7a3b00af4ae7cd20403aeaf2e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/193_6300.jpg",
+				"path": "/images/items/01_5456/193_6300.jpg",
+				"hash": "d677bd286af0718edc292201294c7f58"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5456/",
-	"brandIds": [
-		"bb"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4789",
-		"01_4783",
-		"01_2038",
-		"01_1916"
-	]
+	"brandIds": ["bb"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4789", "01_4783", "01_2038", "01_1916"]
 }

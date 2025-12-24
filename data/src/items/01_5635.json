@@ -31,27 +31,41 @@
 			"In addition to the beam sniper rifle, missile pods, machine guns, and beam sabers are also included."
 		]
 	},
-	"images": [
-		"/images/items/01_5635/153_699.jpg",
-		"/images/items/01_5635/155_699.jpg",
-		"/images/items/01_5635/156_699.jpg",
-		"/images/items/01_5635/157_699.jpg",
-		"/images/items/01_5635/158_699.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_699.jpg",
+				"path": "/images/items/01_5635/153_699.jpg",
+				"hash": "9f520424a80b019203fd6885309db52c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_699.jpg",
+				"path": "/images/items/01_5635/155_699.jpg",
+				"hash": "7777a90865ec5b664a40811b48c0bf6f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_699.jpg",
+				"path": "/images/items/01_5635/156_699.jpg",
+				"hash": "e61134cf462acdd5ba2a1998c8a7682c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_699.jpg",
+				"path": "/images/items/01_5635/157_699.jpg",
+				"hash": "00f5a04113bddf7aed584433d5c32ce8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_699.jpg",
+				"path": "/images/items/01_5635/158_699.jpg",
+				"hash": "088df1851b73a7027581706bb206cd9c"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5635/",
-	"brandIds": [
-		"mg"
-	],
+	"brandIds": ["mg"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5469",
-		"01_5593",
-		"item-1000216602"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5994", "01_5469", "01_5593", "item-1000216602"],
 	"manual": {
 		"id": "829",
 		"url": "https://manual.bandai-hobby.net/menus/detail/829/"

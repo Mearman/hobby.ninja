@@ -32,24 +32,34 @@
 			"• You can store the Steel Dragon Sword in the back rack. The sword can also be worn on the waist."
 		]
 	},
-	"images": [
-		"/images/items/01_5820/153_892.jpg",
-		"/images/items/01_5820/155_892.jpg",
-		"/images/items/01_5820/156_892.jpg",
-		"/images/items/01_5820/157_892.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_892.jpg",
+				"path": "/images/items/01_5820/153_892.jpg",
+				"hash": "ba7be232a577035c4d39f1f09d3bc392"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_892.jpg",
+				"path": "/images/items/01_5820/155_892.jpg",
+				"hash": "bdba09847debfb3b7be25edb97368787"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_892.jpg",
+				"path": "/images/items/01_5820/156_892.jpg",
+				"hash": "83afa80b70c0c24f149c2317c6b77e18"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_892.jpg",
+				"path": "/images/items/01_5820/157_892.jpg",
+				"hash": "a02c60515ea718f95bd1e17810e323e3"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5820/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

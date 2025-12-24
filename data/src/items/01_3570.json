@@ -19,50 +19,41 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"• 支柱（短）と台座が付属。",
-			"• 豊富なジョイントパーツとサポートパーツが付属。"
-		],
-		"en": [
-			"• Post (short) and pedestal included.",
-			"• Comes with a variety of joint parts and support parts."
-		]
+		"ja": ["• 支柱（短）と台座が付属。", "• 豊富なジョイントパーツとサポートパーツが付属。"],
+		"en": ["• Post (short) and pedestal included.", "• Comes with a variety of joint parts and support parts."]
 	},
 	"accessories": {
-		"ja": [
-			"ベースパーツ×1",
-			"支柱パーツ（短）×1",
-			"ジョイントパーツ各種",
-			"その他サポートパーツ各種"
-		],
-		"en": [
-			"Base parts x 1",
-			"Prop parts (short) x 1",
-			"Various joint parts",
-			"Various other support parts"
-		]
+		"ja": ["ベースパーツ×1", "支柱パーツ（短）×1", "ジョイントパーツ各種", "その他サポートパーツ各種"],
+		"en": ["Base parts x 1", "Prop parts (short) x 1", "Various joint parts", "Various other support parts"]
 	},
-	"images": [
-		"/images/items/01_3570/153_4525.jpg",
-		"/images/items/01_3570/155_4525.jpg",
-		"/images/items/01_3570/156_4525.jpg",
-		"/images/items/01_3570/157_4525.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4525.jpg",
+				"path": "/images/items/01_3570/153_4525.jpg",
+				"hash": "0ddcb09d848c65267bc935c067524b48"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4525.jpg",
+				"path": "/images/items/01_3570/155_4525.jpg",
+				"hash": "991f64a671f8c939299ba571dc22a6cb"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4525.jpg",
+				"path": "/images/items/01_3570/156_4525.jpg",
+				"hash": "b615d00373878b377beafcd771e734c5"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4525.jpg",
+				"path": "/images/items/01_3570/157_4525.jpg",
+				"hash": "d1c0a8fa9387c941d1ce738dbe484c64"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3570/",
-	"brandIds": [
-		"gfy",
-		"actionbase"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5035",
-		"01_4239",
-		"01_3472",
-		"01_3841"
-	]
+	"brandIds": ["gfy", "actionbase"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5035", "01_4239", "01_3472", "01_3841"]
 }

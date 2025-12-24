@@ -37,30 +37,46 @@
 			"• In addition to the GN Drive, a solar furnace is also included as a bonus part."
 		]
 	},
-	"images": [
-		"/images/items/01_5102/153_5965.jpg",
-		"/images/items/01_5102/155_5965.jpg",
-		"/images/items/01_5102/156_5965.jpg",
-		"/images/items/01_5102/157_5965.jpg",
-		"/images/items/01_5102/158_5965.jpg",
-		"/images/items/01_5102/159_5965.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5965.jpg",
+				"path": "/images/items/01_5102/153_5965.jpg",
+				"hash": "476f9884c098d4470f7f7f81e3c1217e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5965.jpg",
+				"path": "/images/items/01_5102/155_5965.jpg",
+				"hash": "e6a69f02d561c1a8a3b83db7eb381717"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5965.jpg",
+				"path": "/images/items/01_5102/156_5965.jpg",
+				"hash": "040471c36e245f0708718db8d6c29426"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5965.jpg",
+				"path": "/images/items/01_5102/157_5965.jpg",
+				"hash": "195b3a95479ee424c4b4676668da4bfe"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5965.jpg",
+				"path": "/images/items/01_5102/158_5965.jpg",
+				"hash": "49ff81e6a4ce47d77700436ef8e441f9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5965.jpg",
+				"path": "/images/items/01_5102/159_5965.jpg",
+				"hash": "67e5a92759fa8c75da984b125fd3f830"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5102/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"g-00"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216602",
-		"01_5526",
-		"01_4422",
-		"01_4242"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["g-00"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216602", "01_5526", "01_4422", "01_4242"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

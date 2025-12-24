@@ -36,32 +36,51 @@
 			"• Comes with a triple action base that allows you to display 3 figures at the same time!"
 		]
 	},
-	"images": [
-		"/images/items/01_5199/153_6056.jpg",
-		"/images/items/01_5199/155_6056.jpg",
-		"/images/items/01_5199/156_6056.jpg",
-		"/images/items/01_5199/157_6056.jpg",
-		"/images/items/01_5199/158_6056.jpg",
-		"/images/items/01_5199/159_6056.jpg",
-		"/images/items/01_5199/189_6056.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6056.jpg",
+				"path": "/images/items/01_5199/153_6056.jpg",
+				"hash": "cea2a50b368296783d6058994c969b92"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6056.jpg",
+				"path": "/images/items/01_5199/155_6056.jpg",
+				"hash": "6a0346c1b27f69165bf353f5bd59d601"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6056.jpg",
+				"path": "/images/items/01_5199/156_6056.jpg",
+				"hash": "37939849d4b11805aa441a26b93fc1f3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6056.jpg",
+				"path": "/images/items/01_5199/157_6056.jpg",
+				"hash": "1d9e9f55448972743597ec5fdf9a243c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6056.jpg",
+				"path": "/images/items/01_5199/158_6056.jpg",
+				"hash": "109281686027fee5db3c5693ea7cfffd"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6056.jpg",
+				"path": "/images/items/01_5199/159_6056.jpg",
+				"hash": "ca04daf4cacc8b5250558fb77f6c28ff"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6056.jpg",
+				"path": "/images/items/01_5199/189_6056.jpg",
+				"hash": "af6919305b97ea04f2509c7db7a9e764"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5199/",
-	"brandIds": [
-		"hg",
-		"rg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5160",
-		"item-1000181726",
-		"01_4769",
-		"01_3414"
-	],
+	"brandIds": ["hg", "rg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5160", "item-1000181726", "01_4769", "01_3414"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

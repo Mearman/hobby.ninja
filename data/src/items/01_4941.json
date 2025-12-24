@@ -20,32 +20,24 @@
 	"targetAge": 15,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"MG 1/100 ガンダム NT-1(メタルクリヤーバージョン）登場！"
-		],
-		"en": [
-			"MG 1/100 Gundam NT-1 (metal clear version) is now available!"
-		]
+		"ja": ["MG 1/100 ガンダム NT-1(メタルクリヤーバージョン）登場！"],
+		"en": ["MG 1/100 Gundam NT-1 (metal clear version) is now available!"]
 	},
-	"images": [
-		"/images/items/01_4941/153_5814.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5814.jpg",
+				"path": "/images/items/01_4941/153_5814.jpg",
+				"hash": "479dea841d87695e4046c5ec45c96bcd"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4941/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"g-0080"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2461",
-		"01_2254",
-		"item-1000134463",
-		"01_1955"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["g-0080"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2461", "01_2254", "item-1000134463", "01_1955"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

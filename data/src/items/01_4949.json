@@ -20,35 +20,39 @@
 	"targetAge": 15,
 	"scale": "1/100",
 	"description": {
-		"ja": [
-			"MG 1/100 ザクII Ver.2.0 ア・バオア・クー防衛隊仕様登場！"
-		],
-		"en": [
-			"MG 1/100 Zaku II Ver.2.0 A Baoa Ku Defense Force specification now available!"
-		]
+		"ja": ["MG 1/100 ザクII Ver.2.0 ア・バオア・クー防衛隊仕様登場！"],
+		"en": ["MG 1/100 Zaku II Ver.2.0 A Baoa Ku Defense Force specification now available!"]
 	},
-	"images": [
-		"/images/items/01_4949/01_4949_0.jpg",
-		"/images/items/01_4949/01_4949_1.jpg",
-		"/images/items/01_4949/01_4949_2.jpg",
-		"/images/items/01_4949/01_4949_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_4949_0.jpg",
+				"path": "/images/items/01_4949/01_4949_0.jpg",
+				"hash": "c006df8081cc37ae04f51fb60a788527"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4949_1.jpg",
+				"path": "/images/items/01_4949/01_4949_1.jpg",
+				"hash": "ad2094c1013619cc62ff8f49d2a85350"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4949_2.jpg",
+				"path": "/images/items/01_4949/01_4949_2.jpg",
+				"hash": "4839b8cb1cbc3afd6361169ce6dd970d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4949_3.jpg",
+				"path": "/images/items/01_4949/01_4949_3.jpg",
+				"hash": "ad28dbb5c7e9264cbeef5e501e411d84"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4949/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6680",
-		"01_5509",
-		"01_4977",
-		"01_3772"
-	],
+	"brandIds": ["mg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_6680", "01_5509", "01_4977", "01_3772"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

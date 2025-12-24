@@ -40,34 +40,32 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ホイルシール",
-			"マーキングシール"
-		],
-		"en": [
-			"foil seal",
-			"MarkingSeal"
-		]
+		"ja": ["ホイルシール", "マーキングシール"],
+		"en": ["foil seal", "MarkingSeal"]
 	},
-	"images": [
-		"/images/items/01_3568/153_4523.jpg",
-		"/images/items/01_3568/155_4523.jpg",
-		"/images/items/01_3568/156_4523.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4523.jpg",
+				"path": "/images/items/01_3568/153_4523.jpg",
+				"hash": "6932037593085a7a8f7848d8e062c1e8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4523.jpg",
+				"path": "/images/items/01_3568/155_4523.jpg",
+				"hash": "650b6363483b6111aec761dc02a880f2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4523.jpg",
+				"path": "/images/items/01_3568/156_4523.jpg",
+				"hash": "ee2ec87fc7eb5f8519b79d83217a7b95"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3568/",
-	"brandIds": [
-		"gfy"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5035",
-		"01_4239",
-		"01_3472",
-		"01_3841"
-	]
+	"brandIds": ["gfy"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5035", "01_4239", "01_3472", "01_3841"]
 }

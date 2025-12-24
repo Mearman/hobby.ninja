@@ -44,45 +44,49 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ザクマシンガン×1",
-			"ヒートホーク×1",
-			"ハンドパーツ×2",
-			"ジョイントパーツ×1式",
-			"シール×1"
-		],
-		"en": [
-			"Zaku machine gun x1",
-			"Heat Hawk x1",
-			"Hand parts x 2",
-			"Joint parts x 1 set",
-			"Seal×1"
-		]
+		"ja": ["ザクマシンガン×1", "ヒートホーク×1", "ハンドパーツ×2", "ジョイントパーツ×1式", "シール×1"],
+		"en": ["Zaku machine gun x1", "Heat Hawk x1", "Hand parts x 2", "Joint parts x 1 set", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_5360/1000219085_1.jpg",
-		"/images/items/01_5360/1000219085_2.jpg",
-		"/images/items/01_5360/1000219085_3.jpg",
-		"/images/items/01_5360/1000219085_4.jpg",
-		"/images/items/01_5360/1000219085_5.jpg",
-		"/images/items/01_5360/1000219085_6.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219085_1.jpg",
+				"path": "/images/items/01_5360/1000219085_1.jpg",
+				"hash": "4254b03b8cd3f7f05b7c135b789bcf20"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219085_2.jpg",
+				"path": "/images/items/01_5360/1000219085_2.jpg",
+				"hash": "40eba01fd8d37821f2a556c806a63b1c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219085_3.jpg",
+				"path": "/images/items/01_5360/1000219085_3.jpg",
+				"hash": "300b873a8ca1256370225db9aca3f182"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219085_4.jpg",
+				"path": "/images/items/01_5360/1000219085_4.jpg",
+				"hash": "2a57741d4955fab4d34f25eb1419812c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219085_5.jpg",
+				"path": "/images/items/01_5360/1000219085_5.jpg",
+				"hash": "21629515f05b4ae9b03fccc68cbb75b5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219085_6.jpg",
+				"path": "/images/items/01_5360/1000219085_6.jpg",
+				"hash": "70a6c74efc9277582675c052d7bdbded"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5360/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"requiem"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5969",
-		"01_5970",
-		"01_5986"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["requiem"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5969", "01_5970", "01_5986"],
 	"manual": {
 		"id": "1882",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1882/"

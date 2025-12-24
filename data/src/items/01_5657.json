@@ -28,28 +28,36 @@
 			"M.G."
 		]
 	},
-	"images": [
-		"/images/items/01_5657/153_725.jpg",
-		"/images/items/01_5657/155_725.jpg",
-		"/images/items/01_5657/156_725.jpg",
-		"/images/items/01_5657/157_725.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_725.jpg",
+				"path": "/images/items/01_5657/153_725.jpg",
+				"hash": "12d856dc18ef42aa649dea54d723948b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_725.jpg",
+				"path": "/images/items/01_5657/155_725.jpg",
+				"hash": "e15b14ab05d698ff703f1f22db612df7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_725.jpg",
+				"path": "/images/items/01_5657/156_725.jpg",
+				"hash": "40b107791677e2f25bd6f505d525de74"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_725.jpg",
+				"path": "/images/items/01_5657/157_725.jpg",
+				"hash": "b73fb7ae8782d02e21d77e5cb7ff544a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5657/",
-	"brandIds": [
-		"mgka"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1292",
-		"01_5779",
-		"item-1000095303",
-		"01_5726"
-	],
+	"brandIds": ["mgka"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_1292", "01_5779", "item-1000095303", "01_5726"],
 	"manual": {
 		"id": "551",
 		"url": "https://manual.bandai-hobby.net/menus/detail/551/"

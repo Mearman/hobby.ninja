@@ -20,33 +20,29 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"「HGUC 1/144 デルタプラス メタリックVer.」登場！"
-		],
-		"en": [
-			"\"HGUC 1/144 Delta Plus Metallic Ver.\" now available!"
-		]
+		"ja": ["「HGUC 1/144 デルタプラス メタリックVer.」登場！"],
+		"en": ["\"HGUC 1/144 Delta Plus Metallic Ver.\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4888/153_5766.jpg",
-		"/images/items/01_4888/155_5766.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5766.jpg",
+				"path": "/images/items/01_4888/153_5766.jpg",
+				"hash": "887dbe324c91cc44b0e7d14cf0828c60"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5766.jpg",
+				"path": "/images/items/01_4888/155_5766.jpg",
+				"hash": "d1e9409e435fdf98f46e96f5870c7b0b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4888/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

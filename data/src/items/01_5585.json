@@ -40,13 +40,7 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"グラスフェザー装備×1式",
-			"アーマーパーツ×1式",
-			"ランドセルパーツ×1",
-			"ビーム溶接ガン×1式",
-			"シール×1"
-		],
+		"ja": ["グラスフェザー装備×1式", "アーマーパーツ×1式", "ランドセルパーツ×1", "ビーム溶接ガン×1式", "シール×1"],
 		"en": [
 			"Glass feather equipment x 1 set",
 			"Armor parts x 1 set",
@@ -55,32 +49,61 @@
 			"Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5585/01_5585_0.jpg",
-		"/images/items/01_5585/01_5585_1.jpg",
-		"/images/items/01_5585/01_5585_2.jpg",
-		"/images/items/01_5585/01_5585_3.jpg",
-		"/images/items/01_5585/01_5585_4.jpg",
-		"/images/items/01_5585/01_5585_5.jpg",
-		"/images/items/01_5585/01_5585_6.jpg",
-		"/images/items/01_5585/01_5585_7.jpg",
-		"/images/items/01_5585/01_5585_8.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5585_0.jpg",
+				"path": "/images/items/01_5585/01_5585_0.jpg",
+				"hash": "4c2d10af853e6c24a1a722b28a374cd0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5585_1.jpg",
+				"path": "/images/items/01_5585/01_5585_1.jpg",
+				"hash": "852d88706db5deeb94d093c7a152ebc0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5585_2.jpg",
+				"path": "/images/items/01_5585/01_5585_2.jpg",
+				"hash": "a8a7bbf4932b3c885a4c9129b796c59f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5585_3.jpg",
+				"path": "/images/items/01_5585/01_5585_3.jpg",
+				"hash": "3d473d2b4f80b91b71db98db16982c95"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5585_4.jpg",
+				"path": "/images/items/01_5585/01_5585_4.jpg",
+				"hash": "f9f4207fc6e1752e62a4ee26bdb1ef39"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5585_5.jpg",
+				"path": "/images/items/01_5585/01_5585_5.jpg",
+				"hash": "ae61b7c93216793c4853009c3a61f8fe"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5585_6.jpg",
+				"path": "/images/items/01_5585/01_5585_6.jpg",
+				"hash": "bd4364b18edfdf92908b7cc0f208dd7e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5585_7.jpg",
+				"path": "/images/items/01_5585/01_5585_7.jpg",
+				"hash": "d73dbccc5f49169bc6d58d415f64b8d4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5585_8.jpg",
+				"path": "/images/items/01_5585/01_5585_8.jpg",
+				"hash": "1adda0304050d3888832cc1302186d65"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5585/",
-	"brandIds": [
-		"expo2025-gunpla",
-		"entry_grade"
-	],
+	"brandIds": ["expo2025-gunpla", "entry_grade"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6753",
-		"01_6745",
-		"01_5584",
-		"01_5585"
-	],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_6753", "01_6745", "01_5584", "01_5585"],
 	"manual": {
 		"id": "3039",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3039/"

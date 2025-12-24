@@ -29,25 +29,39 @@
 			"1/144 scale recommended. Molded product ×3, Assembly instruction ×1"
 		]
 	},
-	"images": [
-		"/images/items/01_4631/1000080014_1.jpg",
-		"/images/items/01_4631/1000080014_2.jpg",
-		"/images/items/01_4631/1000080014_3.jpg",
-		"/images/items/01_4631/1000080014_4.jpg",
-		"/images/items/01_4631/1000080014_5.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000080014_1.jpg",
+				"path": "/images/items/01_4631/1000080014_1.jpg",
+				"hash": "896fd8d8018eec0676aa31db07fa0fbd"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000080014_2.jpg",
+				"path": "/images/items/01_4631/1000080014_2.jpg",
+				"hash": "3eac2b749a2732dc990e90bb04dbf3dd"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000080014_3.jpg",
+				"path": "/images/items/01_4631/1000080014_3.jpg",
+				"hash": "5153d791d0ef155baca9b5de9da664fe"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000080014_4.jpg",
+				"path": "/images/items/01_4631/1000080014_4.jpg",
+				"hash": "2f34f68098dfe7506b6c522778ef1c02"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000080014_5.jpg",
+				"path": "/images/items/01_4631/1000080014_5.jpg",
+				"hash": "5cbf9a58dfe2bec966d671227642b19a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4631/",
-	"brandIds": [
-		"parts"
-	],
+	"brandIds": ["parts"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3582",
-		"01_3563",
-		"01_3564",
-		"01_636"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3582", "01_3563", "01_3564", "01_636"]
 }

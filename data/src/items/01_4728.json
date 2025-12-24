@@ -27,23 +27,29 @@
 			"• Beginning Gundam that appears in \"Model Warrior Gunpla Builders Beginning G\". • Equipped with original weapons linked to the anime, including 3 saber bands. • High movability that allows you to recreate anime scenes. Molded product x 8, Seal x 1, Assembly manual"
 		]
 	},
-	"images": [
-		"/images/items/01_4728/153_5613.jpg",
-		"/images/items/01_4728/155_5613.jpg",
-		"/images/items/01_4728/156_5613.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5613.jpg",
+				"path": "/images/items/01_4728/153_5613.jpg",
+				"hash": "128abd0a976a65f1b91115a9ffa361b4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5613.jpg",
+				"path": "/images/items/01_4728/155_5613.jpg",
+				"hash": "30eef41d1b08706dd5011756b1e9c8e2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5613.jpg",
+				"path": "/images/items/01_4728/156_5613.jpg",
+				"hash": "a27440159f8e1a74396b5124a65b71c9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4728/",
-	"brandIds": [
-		"hg"
-	],
+	"brandIds": ["hg"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5963",
-		"01_5951"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"]
 }

@@ -26,29 +26,36 @@
 			"A 1/144 Scale HG plastic model of the large weapon \"Mega Bazooka Launcher \" used by the \" Hyaku Shiki \" that appears in \" Mobile Suit Z Gundam\". A set product with HGUC Hyakushiki with parts changed to new colors. The movable deformation mechanism, which is a feature of the Mega Bazooka Launcher, is realistically reproduced. The extension and contraction mechanism of the step arm that moves during the shooting pose can be reproduced by replacing parts."
 		]
 	},
-	"images": [
-		"/images/items/01_3696/153_464.jpg",
-		"/images/items/01_3696/155_464.jpg",
-		"/images/items/01_3696/156_464.jpg",
-		"/images/items/01_3696/157_464.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_464.jpg",
+				"path": "/images/items/01_3696/153_464.jpg",
+				"hash": "625825da2d2949bffe83ca2d27f0b549"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_464.jpg",
+				"path": "/images/items/01_3696/155_464.jpg",
+				"hash": "be341a73f6b65862b09f352496096485"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_464.jpg",
+				"path": "/images/items/01_3696/156_464.jpg",
+				"hash": "ce470bc93fe3b63f9ba084c2f5954f7e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_464.jpg",
+				"path": "/images/items/01_3696/157_464.jpg",
+				"hash": "f099dba8bb1d860bc52c34230ef17d7a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3696/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"],
 	"manual": {
 		"id": "821",
 		"url": "https://manual.bandai-hobby.net/menus/detail/821/"

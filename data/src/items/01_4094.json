@@ -32,43 +32,59 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"専用ハンドガン×2",
-			"シールド×1",
-			"シール×1"
-		],
-		"en": [
-			"Dedicated handgun x 2",
-			"Seal × 1",
-			"Seal×1"
-		]
+		"ja": ["専用ハンドガン×2", "シールド×1", "シール×1"],
+		"en": ["Dedicated handgun x 2", "Seal × 1", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_4094/153_5018.jpg",
-		"/images/items/01_4094/155_5018.jpg",
-		"/images/items/01_4094/156_5018.jpg",
-		"/images/items/01_4094/157_5018.jpg",
-		"/images/items/01_4094/158_5018.jpg",
-		"/images/items/01_4094/159_5018.jpg",
-		"/images/items/01_4094/01_4094_inst_0.jpg",
-		"/images/items/01_4094/01_4094_inst_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5018.jpg",
+				"path": "/images/items/01_4094/153_5018.jpg",
+				"hash": "b57fab159635c4f8496a742e745420b3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5018.jpg",
+				"path": "/images/items/01_4094/155_5018.jpg",
+				"hash": "45e0fdeaacd2236004c6392df0108969"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5018.jpg",
+				"path": "/images/items/01_4094/156_5018.jpg",
+				"hash": "3abb570c382e82440f1d30b7bdf6d5e1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5018.jpg",
+				"path": "/images/items/01_4094/157_5018.jpg",
+				"hash": "0af6d6fecaae166114dee5944b343b0d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5018.jpg",
+				"path": "/images/items/01_4094/158_5018.jpg",
+				"hash": "828fe6d20c5d5f1c70a71d007bf848a3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5018.jpg",
+				"path": "/images/items/01_4094/159_5018.jpg",
+				"hash": "fec5b9cafa7a522ab7886780c9943143"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4094_inst_0.jpg",
+				"path": "/images/items/01_4094/01_4094_inst_0.jpg",
+				"hash": "a772ef9c8f13a5876c044e2233787c89"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_4094_inst_1.jpg",
+				"path": "/images/items/01_4094/01_4094_inst_1.jpg",
+				"hash": "819fbb848f2de3bb0d78a89ab7d0fc96"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4094/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"tekketsu"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4103",
-		"01_4240",
-		"01_4188",
-		"01_4081"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["tekketsu"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4103", "01_4240", "01_4188", "01_4081"],
 	"manual": {
 		"id": "126",
 		"url": "https://manual.bandai-hobby.net/menus/detail/126/"

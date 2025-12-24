@@ -37,27 +37,31 @@
 			"• Comes with a variety of effect parts that will add color to your impressive poses!"
 		]
 	},
-	"images": [
-		"/images/items/01_3739/1000163421_1.jpg",
-		"/images/items/01_3739/1000163421_2.jpg",
-		"/images/items/01_3739/1000163421_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163421_1.jpg",
+				"path": "/images/items/01_3739/1000163421_1.jpg",
+				"hash": "18d16e2b2aedcb3c0091f0398ac99bed"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163421_2.jpg",
+				"path": "/images/items/01_3739/1000163421_2.jpg",
+				"hash": "f5a20d6fb14c7ff783d10eeb16257d45"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163421_3.jpg",
+				"path": "/images/items/01_3739/1000163421_3.jpg",
+				"hash": "e5bd5b2e0d88646fca24b4e19177d85b"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3739/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"seed-d"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000203308",
-		"01_5097",
-		"item-1000157417",
-		"item-1000156577"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["seed-d"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000203308", "01_5097", "item-1000157417", "item-1000156577"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

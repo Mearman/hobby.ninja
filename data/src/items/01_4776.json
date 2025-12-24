@@ -20,35 +20,34 @@
 	"targetAge": 8,
 	"scale": "1/144",
 	"description": {
-		"ja": [
-			"HGUC 1/144 RX-0 ユニコーンガンダム 2号機バンシィ(デストロイモード) Ver.GFT　登場！"
-		],
-		"en": [
-			"HGUC 1/144 RX-0 Unicorn Gundam Unit 2 Banshee (Destroy Mode) Ver.GFT is now available!"
-		]
+		"ja": ["HGUC 1/144 RX-0 ユニコーンガンダム 2号機バンシィ(デストロイモード) Ver.GFT　登場！"],
+		"en": ["HGUC 1/144 RX-0 Unicorn Gundam Unit 2 Banshee (Destroy Mode) Ver.GFT is now available!"]
 	},
-	"images": [
-		"/images/items/01_4776/153_5659.jpg",
-		"/images/items/01_4776/155_5659.jpg",
-		"/images/items/01_4776/156_5659.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5659.jpg",
+				"path": "/images/items/01_4776/153_5659.jpg",
+				"hash": "24b0f3d9174ccf4a8189101b690ee05c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5659.jpg",
+				"path": "/images/items/01_4776/155_5659.jpg",
+				"hash": "b983aa474f6fedacf1afb603311697d7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5659.jpg",
+				"path": "/images/items/01_4776/156_5659.jpg",
+				"hash": "2bc5e3f8ffa027e0f98793e3ad99f09e"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4776/",
-	"brandIds": [
-		"hg",
-		"hguc"
-	],
-	"seriesIds": [
-		"unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5527",
-		"01_4986",
-		"01_4971",
-		"item-1000163998"
-	],
+	"brandIds": ["hg", "hguc"],
+	"seriesIds": ["unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

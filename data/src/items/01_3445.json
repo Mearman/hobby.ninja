@@ -18,21 +18,19 @@
 		"day": 10
 	},
 	"targetAge": 8,
-	"images": [
-		"/images/items/01_3445/153_43.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_43.jpg",
+				"path": "/images/items/01_3445/153_43.jpg",
+				"hash": "c9602803e4ac3545f8c1cc26bff37e23"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3445/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

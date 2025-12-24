@@ -27,23 +27,29 @@
 			"• You can also attach the included Sticker."
 		]
 	},
-	"images": [
-		"/images/items/01_5857/153_935.jpg",
-		"/images/items/01_5857/155_935.jpg",
-		"/images/items/01_5857/156_935.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_935.jpg",
+				"path": "/images/items/01_5857/153_935.jpg",
+				"hash": "e2fc37afd9d2ac6c5459b23f70db31c8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_935.jpg",
+				"path": "/images/items/01_5857/155_935.jpg",
+				"hash": "daa8bb8bcda93ea8582cf448c3e7d8da"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_935.jpg",
+				"path": "/images/items/01_5857/156_935.jpg",
+				"hash": "d3de0195bb6079808e5ab73f586e989a"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5857/",
-	"brandIds": [
-		"train"
-	],
+	"brandIds": ["train"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1276",
-		"01_1277",
-		"01_1278",
-		"01_1280"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_1276", "01_1277", "01_1278", "01_1280"]
 }

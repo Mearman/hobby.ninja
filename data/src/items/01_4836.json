@@ -20,32 +20,24 @@
 	"targetAge": 15,
 	"scale": "1/60",
 	"description": {
-		"ja": [
-			"「PG 1/60MS-06S シャア専用ザク フルカラーコーティングバージョン」登場！"
-		],
-		"en": [
-			"\"PG 1/60MS-06S Char's Zaku full color coating version\" now available!"
-		]
+		"ja": ["「PG 1/60MS-06S シャア専用ザク フルカラーコーティングバージョン」登場！"],
+		"en": ["\"PG 1/60MS-06S Char's Zaku full color coating version\" now available!"]
 	},
-	"images": [
-		"/images/items/01_4836/153_5718.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5718.jpg",
+				"path": "/images/items/01_4836/153_5718.jpg",
+				"hash": "d370a645173d76fbd82d1d7b8632d1d2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4836/",
-	"brandIds": [
-		"pg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3373",
-		"01_3328",
-		"01_2829",
-		"01_1902"
-	],
+	"brandIds": ["pg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3373", "01_3328", "01_2829", "01_1902"],
 	"tag": {
 		"ja": "イベント",
 		"en": "Event"

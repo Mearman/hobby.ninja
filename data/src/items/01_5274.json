@@ -40,43 +40,64 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"銃身パーツ×2",
-			"シール×1"
-		],
-		"en": [
-			"Gun barrel parts x 2",
-			"Seal×1"
-		]
+		"ja": ["銃身パーツ×2", "シール×1"],
+		"en": ["Gun barrel parts x 2", "Seal×1"]
 	},
-	"images": [
-		"/images/items/01_5274/1000217439_1.jpg",
-		"/images/items/01_5274/1000217439_2.jpg",
-		"/images/items/01_5274/1000217439_3.jpg",
-		"/images/items/01_5274/1000217439_4.jpg",
-		"/images/items/01_5274/1000217439_5.jpg",
-		"/images/items/01_5274/1000217439_6.jpg",
-		"/images/items/01_5274/1000217439_7.jpg",
-		"/images/items/01_5274/1000217439_8.jpg",
-		"/images/items/01_5274/1000217439_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217439_1.jpg",
+				"path": "/images/items/01_5274/1000217439_1.jpg",
+				"hash": "36b6c826b7e4cddf5c87de5a3cedf0ac"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217439_2.jpg",
+				"path": "/images/items/01_5274/1000217439_2.jpg",
+				"hash": "e7a75b0ce324972e914bc640bd14c555"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217439_3.jpg",
+				"path": "/images/items/01_5274/1000217439_3.jpg",
+				"hash": "65bf29c5a040c378058bf8f08089e031"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217439_4.jpg",
+				"path": "/images/items/01_5274/1000217439_4.jpg",
+				"hash": "f7d760d86f20b49b793306ebf709aa2e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217439_5.jpg",
+				"path": "/images/items/01_5274/1000217439_5.jpg",
+				"hash": "8e66ef8c9425215bbf9ee680ea0dd923"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217439_6.jpg",
+				"path": "/images/items/01_5274/1000217439_6.jpg",
+				"hash": "76b9a2a7b66840435d9e8ceaae58143d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217439_7.jpg",
+				"path": "/images/items/01_5274/1000217439_7.jpg",
+				"hash": "b2b63d3ac9d44a1c570b2c20c10aad06"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217439_8.jpg",
+				"path": "/images/items/01_5274/1000217439_8.jpg",
+				"hash": "fd3a0c66aa75d9ef31e89a61a2ac65dc"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217439_9.jpg",
+				"path": "/images/items/01_5274/1000217439_9.jpg",
+				"hash": "b9a81d5ec5557fc985cdf57b9ed59a9d"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5274/",
-	"brandIds": [
-		"hg",
-		"hgce"
-	],
-	"seriesIds": [
-		"seed-freedom"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5452",
-		"01_5374",
-		"01_5363",
-		"01_5362"
-	],
+	"brandIds": ["hg", "hgce"],
+	"seriesIds": ["seed-freedom"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5452", "01_5374", "01_5363", "01_5362"],
 	"manual": {
 		"id": "1783",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1783/"

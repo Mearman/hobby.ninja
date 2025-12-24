@@ -36,39 +36,57 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ホイルシール",
-			"マーキングシール"
-		],
-		"en": [
-			"foil seal",
-			"MarkingSeal"
-		]
+		"ja": ["ホイルシール", "マーキングシール"],
+		"en": ["foil seal", "MarkingSeal"]
 	},
-	"images": [
-		"/images/items/01_3714/153_4667.jpg",
-		"/images/items/01_3714/155_4667.jpg",
-		"/images/items/01_3714/156_4667.jpg",
-		"/images/items/01_3714/157_4667.jpg",
-		"/images/items/01_3714/158_4667.jpg",
-		"/images/items/01_3714/159_4667.jpg",
-		"/images/items/01_3714/189_4667.jpg",
-		"/images/items/01_3714/190_4667.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4667.jpg",
+				"path": "/images/items/01_3714/153_4667.jpg",
+				"hash": "addb8414695f93e6426b80f00357eff8"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4667.jpg",
+				"path": "/images/items/01_3714/155_4667.jpg",
+				"hash": "8f8036c8d6aaa76f8d6b1de41033941f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4667.jpg",
+				"path": "/images/items/01_3714/156_4667.jpg",
+				"hash": "92d1cfd9b90e72954593e5221cabaee9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4667.jpg",
+				"path": "/images/items/01_3714/157_4667.jpg",
+				"hash": "e6c8fa8487a520812c5fbd31c239bf3d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4667.jpg",
+				"path": "/images/items/01_3714/158_4667.jpg",
+				"hash": "c3883100a376e0725ef59256d5e8d74f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4667.jpg",
+				"path": "/images/items/01_3714/159_4667.jpg",
+				"hash": "e07d33f6a5d1325be132c529ccd1c7d2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_4667.jpg",
+				"path": "/images/items/01_3714/189_4667.jpg",
+				"hash": "e18f343a2b1caa2417e15a2b986a8cdc"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4667.jpg",
+				"path": "/images/items/01_3714/190_4667.jpg",
+				"hash": "874b553d2f5dd7da47bba015f24621ac"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3714/",
-	"brandIds": [
-		"gfy"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5035",
-		"01_4239",
-		"01_3472",
-		"01_3841"
-	]
+	"brandIds": ["gfy"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5035", "01_4239", "01_3472", "01_3841"]
 }

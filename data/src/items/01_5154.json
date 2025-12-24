@@ -112,29 +112,41 @@
 			"- Product specifications are scheduled as of 20145. Please note that there may be changes."
 		]
 	},
-	"images": [
-		"/images/items/01_5154/153_6012.jpg",
-		"/images/items/01_5154/155_6012.jpg",
-		"/images/items/01_5154/156_6012.jpg",
-		"/images/items/01_5154/157_6012.jpg",
-		"/images/items/01_5154/158_6012.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6012.jpg",
+				"path": "/images/items/01_5154/153_6012.jpg",
+				"hash": "59d0e8f814c23450a6a3fdf2ed1bd005"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6012.jpg",
+				"path": "/images/items/01_5154/155_6012.jpg",
+				"hash": "b951dc998a6d2c7c88344565f0a213d4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6012.jpg",
+				"path": "/images/items/01_5154/156_6012.jpg",
+				"hash": "17f547d4dcd6e3c850d1d789d0f59f67"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6012.jpg",
+				"path": "/images/items/01_5154/157_6012.jpg",
+				"hash": "24e1b8a01b60066129590870e34e5327"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6012.jpg",
+				"path": "/images/items/01_5154/158_6012.jpg",
+				"hash": "ae56007128ac2fb70448c1165dc74113"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5154/",
-	"brandIds": [
-		"pb_charapla"
-	],
-	"seriesIds": [
-		"votoms"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000223037",
-		"item-1000209959",
-		"item-1000209960",
-		"item-1000209961"
-	],
+	"brandIds": ["pb_charapla"],
+	"seriesIds": ["votoms"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000223037", "item-1000209959", "item-1000209960", "item-1000209961"],
 	"tag": {
 		"ja": "ホビーオンライン",
 		"en": "Hobby Online"

@@ -36,37 +36,27 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"フェイスパーツ(タンポ印刷)×3種",
-			"ハンドパーツ×1式",
-			"髪パーツ×1式",
-			"マイク×1"
-		],
-		"en": [
-			"Face parts (tampo printing) x 3 types",
-			"Hand parts x 1 set",
-			"Hair parts x 1 set",
-			"Microphone x 1"
-		]
+		"ja": ["フェイスパーツ(タンポ印刷)×3種", "ハンドパーツ×1式", "髪パーツ×1式", "マイク×1"],
+		"en": ["Face parts (tampo printing) x 3 types", "Hand parts x 1 set", "Hair parts x 1 set", "Microphone x 1"]
 	},
-	"images": [
-		"/images/items/01_7013/01_7013_0.jpg",
-		"/images/items/01_7013/01_7013_1.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_7013_0.jpg",
+				"path": "/images/items/01_7013/01_7013_0.jpg",
+				"hash": "febe17a572320110d0685d3d951d5ba7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_7013_1.jpg",
+				"path": "/images/items/01_7013/01_7013_1.jpg",
+				"hash": "31e428defee83d7ec3afe6d3604cc302"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_7013/",
-	"brandIds": [
-		"30ms"
-	],
-	"seriesIds": [
-		"idolmaster"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7012",
-		"01_7008",
-		"01_6950",
-		"01_6934"
-	]
+	"brandIds": ["30ms"],
+	"seriesIds": ["idolmaster"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7012", "01_7008", "01_6950", "01_6934"]
 }

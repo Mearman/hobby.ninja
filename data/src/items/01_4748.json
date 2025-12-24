@@ -18,29 +18,27 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"「SD ガンダム Gジェネレーション35 ガンダムデスサイズ」が登場！"
-		],
-		"en": [
-			"\"SD Gundam G Generation 35 Gundam Death Scythe\" is now available!"
-		]
+		"ja": ["「SD ガンダム Gジェネレーション35 ガンダムデスサイズ」が登場！"],
+		"en": ["\"SD Gundam G Generation 35 Gundam Death Scythe\" is now available!"]
 	},
-	"images": [
-		"/images/items/01_4748/153_5633.jpg",
-		"/images/items/01_4748/155_5633.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5633.jpg",
+				"path": "/images/items/01_4748/153_5633.jpg",
+				"hash": "6a1b3df1ea1f695bef9aa5063317c40b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5633.jpg",
+				"path": "/images/items/01_4748/155_5633.jpg",
+				"hash": "a1afd5fddfd103785a299b9e73973677"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4748/",
-	"brandIds": [
-		"sdgundamseries"
-	],
+	"brandIds": ["sdgundamseries"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4975",
-		"01_4336",
-		"01_4312"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
 }

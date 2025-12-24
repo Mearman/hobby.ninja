@@ -29,27 +29,39 @@
 			"Reproduced with molding colors that match the colors that appear in the game, and the packaging and handling manual have been redesigned to reflect the dark taste recorded in the game."
 		]
 	},
-	"images": [
-		"/images/items/01_4529/153_542.jpg",
-		"/images/items/01_4529/155_542.jpg",
-		"/images/items/01_4529/156_542.jpg",
-		"/images/items/01_4529/157_542.jpg",
-		"/images/items/01_4529/158_542.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_542.jpg",
+				"path": "/images/items/01_4529/153_542.jpg",
+				"hash": "3029955f01a8e68fa34eadb95af60106"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_542.jpg",
+				"path": "/images/items/01_4529/155_542.jpg",
+				"hash": "ad5b549200bdf10540f99feb33391e9a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_542.jpg",
+				"path": "/images/items/01_4529/156_542.jpg",
+				"hash": "0661032ad019c3591513726e890e5e23"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_542.jpg",
+				"path": "/images/items/01_4529/157_542.jpg",
+				"hash": "51af96b6b6bf277dac4197d87674d67e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_542.jpg",
+				"path": "/images/items/01_4529/158_542.jpg",
+				"hash": "e636917cb8f54ef11a4f3e8f96467b91"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4529/",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	]
+	"brandIds": ["mg"],
+	"seriesIds": ["gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"]
 }

@@ -19,30 +19,32 @@
 	},
 	"targetAge": 10,
 	"description": {
-		"ja": [
-			"• 「SD ガンダム Brave Battle Warriors」登場の武将を商品化。"
-		],
-		"en": [
-			"• Commercialize military commanders from \"SD Gundam Brave Battle Warriors.\""
-		]
+		"ja": ["• 「SD ガンダム Brave Battle Warriors」登場の武将を商品化。"],
+		"en": ["• Commercialize military commanders from \"SD Gundam Brave Battle Warriors.\""]
 	},
-	"images": [
-		"/images/items/01_4736/153_5621.jpg",
-		"/images/items/01_4736/155_5621.jpg",
-		"/images/items/01_4736/156_5621.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5621.jpg",
+				"path": "/images/items/01_4736/153_5621.jpg",
+				"hash": "b938feef0437b93f1ac59a7ddf2dcf36"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5621.jpg",
+				"path": "/images/items/01_4736/155_5621.jpg",
+				"hash": "9fd192362493cd6d1e4dd2b1cf08c2c6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5621.jpg",
+				"path": "/images/items/01_4736/156_5621.jpg",
+				"hash": "d55f1b711d244b7bff4d1a2dacc5ce95"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4736/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

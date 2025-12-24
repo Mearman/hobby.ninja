@@ -32,28 +32,36 @@
 			"• Comes with a decal symbolizing Strike Rouge!"
 		]
 	},
-	"images": [
-		"/images/items/01_3414/153_4368.jpg",
-		"/images/items/01_3414/155_4368.jpg",
-		"/images/items/01_3414/156_4368.jpg",
-		"/images/items/01_3414/157_4368.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4368.jpg",
+				"path": "/images/items/01_3414/153_4368.jpg",
+				"hash": "be1f102c7cfc1edc9c2eba612aa3abca"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4368.jpg",
+				"path": "/images/items/01_3414/155_4368.jpg",
+				"hash": "5ebef0e0917d25ec4fabd1694271b564"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4368.jpg",
+				"path": "/images/items/01_3414/156_4368.jpg",
+				"hash": "f46ed4dd6547c1447c13bbe093c5a684"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4368.jpg",
+				"path": "/images/items/01_3414/157_4368.jpg",
+				"hash": "67d41f5386ae00ffe1b81c0f16ef5f83"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3414/",
-	"brandIds": [
-		"rg"
-	],
-	"seriesIds": [
-		"seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5160",
-		"item-1000136194",
-		"item-1000114754",
-		"item-1000132011"
-	],
+	"brandIds": ["rg"],
+	"seriesIds": ["seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5160", "item-1000136194", "item-1000114754", "item-1000132011"],
 	"tag": {
 		"ja": "ガンダムベース",
 		"en": "Gundam Base"

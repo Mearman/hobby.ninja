@@ -41,12 +41,7 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"表情パーツ(タンポ印刷)×３種",
-			"ジョイントパーツ×１式",
-			"ハンドパーツ×１式",
-			"専用台座×１式"
-		],
+		"ja": ["表情パーツ(タンポ印刷)×３種", "ジョイントパーツ×１式", "ハンドパーツ×１式", "専用台座×１式"],
 		"en": [
 			"Facial expression parts (tampo printing) x 3 types",
 			"Joint parts x 1 set",
@@ -54,27 +49,64 @@
 			"Dedicated pedestal x 1 set"
 		]
 	},
-	"images": [
-		"/images/items/01_4284/153_5199.jpg",
-		"/images/items/01_4284/155_5199.jpg",
-		"/images/items/01_4284/156_5199.jpg",
-		"/images/items/01_4284/157_5199.jpg",
-		"/images/items/01_4284/158_5199.jpg",
-		"/images/items/01_4284/159_5199.jpg",
-		"/images/items/01_4284/189_5199.jpg",
-		"/images/items/01_4284/190_5199.jpg",
-		"/images/items/01_4284/191_5199.jpg",
-		"/images/items/01_4284/192_5199.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5199.jpg",
+				"path": "/images/items/01_4284/153_5199.jpg",
+				"hash": "f113d6a4634ec8bcbb493b4bbb253725"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5199.jpg",
+				"path": "/images/items/01_4284/155_5199.jpg",
+				"hash": "a9a2d4f59d3349b5ba0bf865c77c075b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5199.jpg",
+				"path": "/images/items/01_4284/156_5199.jpg",
+				"hash": "27a32a21ad77610b68ca04c64f039f06"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5199.jpg",
+				"path": "/images/items/01_4284/157_5199.jpg",
+				"hash": "38631afd06bf09f1189cac2159b2b641"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_5199.jpg",
+				"path": "/images/items/01_4284/158_5199.jpg",
+				"hash": "2d6680a974bb1390a3f16b60660ac3e6"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_5199.jpg",
+				"path": "/images/items/01_4284/159_5199.jpg",
+				"hash": "f07137924de879df8a8f6835b0ec18b4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_5199.jpg",
+				"path": "/images/items/01_4284/189_5199.jpg",
+				"hash": "f381ec5c07662f69a4ff20fb2d813fe4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_5199.jpg",
+				"path": "/images/items/01_4284/190_5199.jpg",
+				"hash": "02f49c92aaca2479406f66bdca511d30"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_5199.jpg",
+				"path": "/images/items/01_4284/191_5199.jpg",
+				"hash": "d6fef1b4ae39f2aba60b91200d015dc0"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/192_5199.jpg",
+				"path": "/images/items/01_4284/192_5199.jpg",
+				"hash": "9f246b96407ec22640726ab9726983c5"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4284/",
-	"brandIds": [
-		"30ms"
-	],
-	"seriesIds": [
-		"umamusume"
-	],
-	"categoryIds": [
-		"30-minutes-label"
-	],
+	"brandIds": ["30ms"],
+	"seriesIds": ["umamusume"],
+	"categoryIds": ["30-minutes-label"],
 	"relatedItemIds": []
 }

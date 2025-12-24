@@ -38,39 +38,37 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"モンスター（コウモリ）×1",
-			"モンスター（一つ目）×1",
-			"モンスター（罠）×1",
-			"石柱×1",
-			"岩×2種"
-		],
-		"en": [
-			"Monster (bat) x1",
-			"Monster (one eye) x1",
-			"Monster (trap) x1",
-			"Stone pillar x1",
-			"Rock x 2 types"
-		]
+		"ja": ["モンスター（コウモリ）×1", "モンスター（一つ目）×1", "モンスター（罠）×1", "石柱×1", "岩×2種"],
+		"en": ["Monster (bat) x1", "Monster (one eye) x1", "Monster (trap) x1", "Stone pillar x1", "Rock x 2 types"]
 	},
-	"images": [
-		"/images/items/01_6938/01_6938_0.jpg",
-		"/images/items/01_6938/01_6938_1.jpg",
-		"/images/items/01_6938/01_6938_2.jpg",
-		"/images/items/01_6938/01_6938_3.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6938_0.jpg",
+				"path": "/images/items/01_6938/01_6938_0.jpg",
+				"hash": "bbff2ead781ad05d8130c2626f89119d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6938_1.jpg",
+				"path": "/images/items/01_6938/01_6938_1.jpg",
+				"hash": "6edde5ba8080fccd61716212183bece1"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6938_2.jpg",
+				"path": "/images/items/01_6938/01_6938_2.jpg",
+				"hash": "a6e125366faad42281614bd111ac6596"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6938_3.jpg",
+				"path": "/images/items/01_6938/01_6938_3.jpg",
+				"hash": "48cd2ec46f7a7213130c8d2628c5dd2f"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6938/",
-	"brandIds": [
-		"30mf"
-	],
+	"brandIds": ["30mf"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_6931",
-		"01_6932",
-		"01_6776",
-		"01_6912"
-	]
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_6931", "01_6932", "01_6776", "01_6912"]
 }

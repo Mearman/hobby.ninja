@@ -25,23 +25,29 @@
 			"This is a plastic model of the BB warrior of \"Young Gunshi Raimaru \"'s father \" Gonetsu Machinist Damayuru Seita \" who appears in the manga series \" SD Gundam Force Emaki Musha Retsuden Busaka Maikahen \" published in Comic Bonbon. Equipped with heavy armor reminiscent of the \" first generation Double Zeta Gundam\". A sword and a cannon are included as handheld weapons, and the sword sheath and cannon can also be attached to the armor on the back. By assembling the armor, the warrior tank form can be reproduced. You can also perform combination techniques with his son Raimaru (sold separately)."
 		]
 	},
-	"images": [
-		"/images/items/01_4423/153_532.jpg",
-		"/images/items/01_4423/155_532.jpg",
-		"/images/items/01_4423/156_532.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_532.jpg",
+				"path": "/images/items/01_4423/153_532.jpg",
+				"hash": "87cb7b93363045be76bf52448560f198"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_532.jpg",
+				"path": "/images/items/01_4423/155_532.jpg",
+				"hash": "2516a432c6d460d142577de7aa8462bf"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_532.jpg",
+				"path": "/images/items/01_4423/156_532.jpg",
+				"hash": "c6ab851810f93f8070f70db938061cf9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4423/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

@@ -19,30 +19,32 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"• 「SD ガンダム三国伝　Brave Battle Warriors」に登場する陸遜ゼータプラス。"
-		],
-		"en": [
-			"• Rikusun Zeta Plus appearing in \"SD Gundam Sangokuden Brave Battle Warriors\"."
-		]
+		"ja": ["• 「SD ガンダム三国伝　Brave Battle Warriors」に登場する陸遜ゼータプラス。"],
+		"en": ["• Rikusun Zeta Plus appearing in \"SD Gundam Sangokuden Brave Battle Warriors\"."]
 	},
-	"images": [
-		"/images/items/01_4742/153_5627.jpg",
-		"/images/items/01_4742/155_5627.jpg",
-		"/images/items/01_4742/156_5627.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_5627.jpg",
+				"path": "/images/items/01_4742/153_5627.jpg",
+				"hash": "4910d46f3cfe4b353846d67615751242"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_5627.jpg",
+				"path": "/images/items/01_4742/155_5627.jpg",
+				"hash": "c4f798f774f05eb208d07ac334b41a3e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_5627.jpg",
+				"path": "/images/items/01_4742/156_5627.jpg",
+				"hash": "a23c188acf1b88f66a35da63f1ce51a4"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4742/",
-	"brandIds": [
-		"bb"
-	],
+	"brandIds": ["bb"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

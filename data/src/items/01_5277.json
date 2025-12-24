@@ -37,44 +37,62 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ジョイントパーツ×1式",
-			"シール×1",
-			"PETシート×1",
-			"リード線×1式"
-		],
-		"en": [
-			"Joint parts x 1 set",
-			"Seal×1",
-			"PET sheet x 1",
-			"Lead wire x 1 set"
-		]
+		"ja": ["ジョイントパーツ×1式", "シール×1", "PETシート×1", "リード線×1式"],
+		"en": ["Joint parts x 1 set", "Seal×1", "PET sheet x 1", "Lead wire x 1 set"]
 	},
-	"images": [
-		"/images/items/01_5277/153_6128.jpg",
-		"/images/items/01_5277/155_6128.jpg",
-		"/images/items/01_5277/156_6128.jpg",
-		"/images/items/01_5277/157_6128.jpg",
-		"/images/items/01_5277/158_6128.jpg",
-		"/images/items/01_5277/159_6128.jpg",
-		"/images/items/01_5277/189_6128.jpg",
-		"/images/items/01_5277/190_6128.jpg",
-		"/images/items/01_5277/191_6128.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_6128.jpg",
+				"path": "/images/items/01_5277/153_6128.jpg",
+				"hash": "4a0453f8cf3353fa27232abf9f631ac4"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_6128.jpg",
+				"path": "/images/items/01_5277/155_6128.jpg",
+				"hash": "5a5f994bbe7eec47e30355101e2ddf8b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_6128.jpg",
+				"path": "/images/items/01_5277/156_6128.jpg",
+				"hash": "561ad5fe3cc2298a00b9d81ea9d39b2f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_6128.jpg",
+				"path": "/images/items/01_5277/157_6128.jpg",
+				"hash": "7a74c07002841a5de60a588b60edc63c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6128.jpg",
+				"path": "/images/items/01_5277/158_6128.jpg",
+				"hash": "da3fc2c8ea727e6bb18fc522ce789c07"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_6128.jpg",
+				"path": "/images/items/01_5277/159_6128.jpg",
+				"hash": "729c82c606735f1d6b897ba8e0855c1c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/189_6128.jpg",
+				"path": "/images/items/01_5277/189_6128.jpg",
+				"hash": "c7eeed17148817e1dc33a74dc20b3d47"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_6128.jpg",
+				"path": "/images/items/01_5277/190_6128.jpg",
+				"hash": "61ec1912fc573c63c79775854e19e95b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/191_6128.jpg",
+				"path": "/images/items/01_5277/191_6128.jpg",
+				"hash": "b09560eef342d268778ce875c93cacc9"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5277/",
-	"brandIds": [
-		"figurerise-standard-amp"
-	],
-	"seriesIds": [
-		"digimon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5983",
-		"item-1000216437",
-		"item-1000198198",
-		"01_5022"
-	]
+	"brandIds": ["figurerise-standard-amp"],
+	"seriesIds": ["digimon"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5983", "item-1000216437", "item-1000198198", "01_5022"]
 }

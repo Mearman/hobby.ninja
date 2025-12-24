@@ -35,37 +35,47 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"拳銃(ＥXT-マグナムLB)×1",
-			"手錠(ジャスティスロック)×1",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Handgun (EXT-Magnum LB) x 1",
-			"Handcuffs (Justice Lock) x 1",
-			"Foil Seal×1"
-		]
+		"ja": ["拳銃(ＥXT-マグナムLB)×1", "手錠(ジャスティスロック)×1", "ホイルシール×1"],
+		"en": ["Handgun (EXT-Magnum LB) x 1", "Handcuffs (Justice Lock) x 1", "Foil Seal×1"]
 	},
-	"images": [
-		"/images/items/01_3407/153_4361.jpg",
-		"/images/items/01_3407/155_4361.jpg",
-		"/images/items/01_3407/156_4361.jpg",
-		"/images/items/01_3407/157_4361.jpg",
-		"/images/items/01_3407/158_4361.jpg",
-		"/images/items/01_3407/159_4361.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4361.jpg",
+				"path": "/images/items/01_3407/153_4361.jpg",
+				"hash": "12b7c7ffeafc2322d986f8732bdcb0a2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4361.jpg",
+				"path": "/images/items/01_3407/155_4361.jpg",
+				"hash": "e95a5a401eb4b6dbd5e78d448dae2c07"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4361.jpg",
+				"path": "/images/items/01_3407/156_4361.jpg",
+				"hash": "a87abc779e6b62501c5e1d44771269e3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4361.jpg",
+				"path": "/images/items/01_3407/157_4361.jpg",
+				"hash": "9bef49da55db4f45a6ed8b1b8c360c02"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_4361.jpg",
+				"path": "/images/items/01_3407/158_4361.jpg",
+				"hash": "0280c4bec5109354bacf14d61d42aae9"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/159_4361.jpg",
+				"path": "/images/items/01_3407/159_4361.jpg",
+				"hash": "2720c204fd74271b6752157c9f686867"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3407/",
 	"brandIds": [],
-	"seriesIds": [
-		"sdgundamworld_heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5470",
-		"01_5471",
-		"01_5472",
-		"01_5347"
-	]
+	"seriesIds": ["sdgundamworld_heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
 }

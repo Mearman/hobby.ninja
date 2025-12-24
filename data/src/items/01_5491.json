@@ -60,30 +60,54 @@
 			"Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_5491/01_5491_0.jpg",
-		"/images/items/01_5491/01_5491_1.jpg",
-		"/images/items/01_5491/01_5491_2.jpg",
-		"/images/items/01_5491/01_5491_3.jpg",
-		"/images/items/01_5491/01_5491_4.jpg",
-		"/images/items/01_5491/01_5491_5.jpg",
-		"/images/items/01_5491/01_5491_6.jpg",
-		"/images/items/01_5491/01_5491_7.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_5491_0.jpg",
+				"path": "/images/items/01_5491/01_5491_0.jpg",
+				"hash": "8f27c5e30f368623b776166b2f129e3c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5491_1.jpg",
+				"path": "/images/items/01_5491/01_5491_1.jpg",
+				"hash": "2e556e2d99ff4e85564e9252b16844ef"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5491_2.jpg",
+				"path": "/images/items/01_5491/01_5491_2.jpg",
+				"hash": "d5f90fd76aa2baea81ecdc9fba6d68d3"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5491_3.jpg",
+				"path": "/images/items/01_5491/01_5491_3.jpg",
+				"hash": "e435f015e84ef1769171a0c3c1cb2f46"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5491_4.jpg",
+				"path": "/images/items/01_5491/01_5491_4.jpg",
+				"hash": "4baef75ad8919e62ebb43a2616b0841d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5491_5.jpg",
+				"path": "/images/items/01_5491/01_5491_5.jpg",
+				"hash": "405d0aef69c440161c0e6162f1cf688c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5491_6.jpg",
+				"path": "/images/items/01_5491/01_5491_6.jpg",
+				"hash": "0b0050f577603568961e37198c763c05"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_5491_7.jpg",
+				"path": "/images/items/01_5491/01_5491_7.jpg",
+				"hash": "5d11578c6f4ebf3c8cc5a0cb374e04c2"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5491/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"superrobot_og"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5578",
-		"item-1000214961",
-		"01_5369",
-		"item-1000208235"
-	]
+	"brandIds": ["hg"],
+	"seriesIds": ["superrobot_og"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5578", "item-1000214961", "01_5369", "item-1000208235"]
 }

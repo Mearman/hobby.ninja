@@ -27,28 +27,36 @@
 			"• Mass-produced aircraft of the Earth Federation military that has a mechanism to transform into flight form. • Can be displayed in flight form using the attached pedestal. • The inside of the head canopy made of clear parts reproduces the mechanical parts with mold. • Includes Dodds Rifle, Beam Saber, and Seal. Molded product x 7, foil seal x 1, assembly manual x 1"
 		]
 	},
-	"images": [
-		"/images/items/01_3604/153_4559.jpg",
-		"/images/items/01_3604/155_4559.jpg",
-		"/images/items/01_3604/156_4559.jpg",
-		"/images/items/01_3604/157_4559.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/153_4559.jpg",
+				"path": "/images/items/01_3604/153_4559.jpg",
+				"hash": "ddefd4d697b406287b29b48026c8034b"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/155_4559.jpg",
+				"path": "/images/items/01_3604/155_4559.jpg",
+				"hash": "0f16ac80d35bd39952f1107c172ed18f"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/156_4559.jpg",
+				"path": "/images/items/01_3604/156_4559.jpg",
+				"hash": "587949dd15e08814d60d6e457f61aed7"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_4559.jpg",
+				"path": "/images/items/01_3604/157_4559.jpg",
+				"hash": "8732b480eaf0577f85a6016c63e15692"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3604/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"age"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000170540",
-		"item-1000169836",
-		"01_3738",
-		"item-1000082540"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["age"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "347",
 		"url": "https://manual.bandai-hobby.net/menus/detail/347/"

@@ -35,38 +35,77 @@
 		]
 	},
 	"accessories": {
-		"ja": [
-			"ビルドブースター×1",
-			"ビルドブースターMk-II×1"
-		],
-		"en": [
-			"Build booster x1",
-			"Build Booster Mk-II×1"
-		]
+		"ja": ["ビルドブースター×1", "ビルドブースターMk-II×1"],
+		"en": ["Build booster x1", "Build Booster Mk-II×1"]
 	},
-	"images": [
-		"/images/items/01_6765/01_6765_0.jpg",
-		"/images/items/01_6765/01_6765_1.jpg",
-		"/images/items/01_6765/01_6765_10.jpg",
-		"/images/items/01_6765/01_6765_11.jpg",
-		"/images/items/01_6765/01_6765_2.jpg",
-		"/images/items/01_6765/01_6765_3.jpg",
-		"/images/items/01_6765/01_6765_4.jpg",
-		"/images/items/01_6765/01_6765_5.jpg",
-		"/images/items/01_6765/01_6765_6.jpg",
-		"/images/items/01_6765/01_6765_7.jpg",
-		"/images/items/01_6765/01_6765_8.jpg",
-		"/images/items/01_6765/01_6765_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-hobby.net/images/01_6765_0.jpg",
+				"path": "/images/items/01_6765/01_6765_0.jpg",
+				"hash": "65e465072da14cb03397a81293606911"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6765_1.jpg",
+				"path": "/images/items/01_6765/01_6765_1.jpg",
+				"hash": "2854ac7be25259ea8f115c0a328b0b88"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6765_10.jpg",
+				"path": "/images/items/01_6765/01_6765_10.jpg",
+				"hash": "57b7d826592b5824906f34db4349a4ea"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6765_11.jpg",
+				"path": "/images/items/01_6765/01_6765_11.jpg",
+				"hash": "b3d52d8ac90465423918945d8c6ce9fa"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6765_2.jpg",
+				"path": "/images/items/01_6765/01_6765_2.jpg",
+				"hash": "c99b703c2120e445e9f8f971e3c28724"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6765_3.jpg",
+				"path": "/images/items/01_6765/01_6765_3.jpg",
+				"hash": "f9cdc75b5dc5dfe97cdb41927cbb1a7a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6765_4.jpg",
+				"path": "/images/items/01_6765/01_6765_4.jpg",
+				"hash": "01c2aac79ed14f17795c656c7ec66d1c"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6765_5.jpg",
+				"path": "/images/items/01_6765/01_6765_5.jpg",
+				"hash": "f6a5820626a23321782365b4b3bd8dc2"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6765_6.jpg",
+				"path": "/images/items/01_6765/01_6765_6.jpg",
+				"hash": "e771f16b2e7f3f68834ccd0a2eb35c00"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6765_7.jpg",
+				"path": "/images/items/01_6765/01_6765_7.jpg",
+				"hash": "7c5b11ff9205c2cf66bdcf235e2c9299"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6765_8.jpg",
+				"path": "/images/items/01_6765/01_6765_8.jpg",
+				"hash": "8ca66e379aeea8989196730169910b2d"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/01_6765_9.jpg",
+				"path": "/images/items/01_6765/01_6765_9.jpg",
+				"hash": "03049ee76098ba64ec8fc368f6558dab"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6765/",
-	"brandIds": [
-		"optionpartsset"
-	],
-	"seriesIds": [
-		"buildfighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["optionpartsset"],
+	"seriesIds": ["buildfighters"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": []
 }

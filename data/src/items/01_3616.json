@@ -59,29 +59,74 @@
 			"Jewel Seal×1"
 		]
 	},
-	"images": [
-		"/images/items/01_3616/1000165458_1.jpg",
-		"/images/items/01_3616/1000165458_10.jpg",
-		"/images/items/01_3616/1000165458_11.jpg",
-		"/images/items/01_3616/1000165458_12.jpg",
-		"/images/items/01_3616/1000165458_2.jpg",
-		"/images/items/01_3616/1000165458_3.jpg",
-		"/images/items/01_3616/1000165458_4.jpg",
-		"/images/items/01_3616/1000165458_5.jpg",
-		"/images/items/01_3616/1000165458_6.jpg",
-		"/images/items/01_3616/1000165458_7.jpg",
-		"/images/items/01_3616/1000165458_8.jpg",
-		"/images/items/01_3616/1000165458_9.jpg"
-	],
+	"images": {
+		"product": [
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165458_1.jpg",
+				"path": "/images/items/01_3616/1000165458_1.jpg",
+				"hash": "acee584f0236607ef2b544a95cbafe31"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165458_10.jpg",
+				"path": "/images/items/01_3616/1000165458_10.jpg",
+				"hash": "3096380de28b704327ea10c3ede0e7ae"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165458_11.jpg",
+				"path": "/images/items/01_3616/1000165458_11.jpg",
+				"hash": "91cfe0aa3de90c89ef43d6d6d518645c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165458_12.jpg",
+				"path": "/images/items/01_3616/1000165458_12.jpg",
+				"hash": "0d0893abe32ead712520e8f5962d4bec"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165458_2.jpg",
+				"path": "/images/items/01_3616/1000165458_2.jpg",
+				"hash": "b354e0bf3e11c777043c1bccd77ad558"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165458_3.jpg",
+				"path": "/images/items/01_3616/1000165458_3.jpg",
+				"hash": "0f3444604e77980d400900d282ba66c6"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165458_4.jpg",
+				"path": "/images/items/01_3616/1000165458_4.jpg",
+				"hash": "5f84be0ad9dc82396e3384bf1ec274b0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165458_5.jpg",
+				"path": "/images/items/01_3616/1000165458_5.jpg",
+				"hash": "f9aa40ab65f4a25a7529497e60d9591a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165458_6.jpg",
+				"path": "/images/items/01_3616/1000165458_6.jpg",
+				"hash": "63e18ddccba53099593427d163fa37cc"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165458_7.jpg",
+				"path": "/images/items/01_3616/1000165458_7.jpg",
+				"hash": "d85dda3ea650e1ee52efd82b8eac40f5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165458_8.jpg",
+				"path": "/images/items/01_3616/1000165458_8.jpg",
+				"hash": "2b1ff1de340b00ae6f33341a86564389"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165458_9.jpg",
+				"path": "/images/items/01_3616/1000165458_9.jpg",
+				"hash": "44ba6d4e6ea44157b1bd6b50c11cadcf"
+			}
+		],
+		"instructions": []
+	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3616/",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"sakugan"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
+	"brandIds": ["hg"],
+	"seriesIds": ["sakugan"],
+	"categoryIds": ["character-plastic-model"],
 	"relatedItemIds": []
 }
