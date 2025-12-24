@@ -78,9 +78,9 @@ export function ItemCard({ item, viewMode }: ItemCardProps) {
 					<Text className={itemCardTitle} lineClamp={2}>
 						{getNodeDisplayName(item)}
 					</Text>
-					{item.seriesIds.length > 0 && (
+					{item.series.length > 0 && (
 						<Text className={itemCardSubtitle} lineClamp={1}>
-							<EntityList ids={item.seriesIds} entityType="series" mode="text" size="xs" emptyText="" />
+							<EntityList ids={item.series.map(s => s.id)} entityType="series" mode="text" size="xs" emptyText="" />
 						</Text>
 					)}
 					<Box className={itemCardMetadata}>
@@ -99,7 +99,7 @@ export function ItemCard({ item, viewMode }: ItemCardProps) {
 								{item.scale}
 							</Badge>
 						)}
-						<EntityList ids={item.brandIds} entityType="brand" size="xs" clickable={false} />
+						<EntityList ids={item.brands.map(b => b.id)} entityType="brand" size="xs" clickable={false} />
 					</Box>
 				</Box>
 			</Card>
@@ -131,9 +131,9 @@ export function ItemCard({ item, viewMode }: ItemCardProps) {
 						<Title order={4} mb="xs">
 							{getNodeDisplayName(item)}
 						</Title>
-						{item.seriesIds.length > 0 && (
+						{item.series.length > 0 && (
 							<Box mb="sm">
-								<EntityList ids={item.seriesIds} entityType="series" mode="text" size="sm" emptyText="" />
+								<EntityList ids={item.series.map(s => s.id)} entityType="series" mode="text" size="sm" emptyText="" />
 							</Box>
 						)}
 						<Group gap="xs">
@@ -155,7 +155,7 @@ export function ItemCard({ item, viewMode }: ItemCardProps) {
 							{itemHasManual(item) && (
 								<RelationshipBadge type="manual" viewMode="list" />
 							)}
-							<EntityList ids={item.brandIds} entityType="brand" size="sm" clickable={false} />
+							<EntityList ids={item.brands.map(b => b.id)} entityType="brand" size="sm" clickable={false} />
 						</Group>
 					</Box>
 				</Group>
@@ -193,11 +193,11 @@ export function ItemCard({ item, viewMode }: ItemCardProps) {
 				</Box>
 			</Table.Td>
 			<Table.Td c="dimmed">{releaseDate ?? "-"}</Table.Td>
-			<Table.Td><EntityList ids={item.seriesIds} entityType="series" size="sm" /></Table.Td>
+			<Table.Td><EntityList ids={item.series.map(s => s.id)} entityType="series" size="sm" /></Table.Td>
 			<Table.Td>{getNodePrimaryGrade(item) ?? "-"}</Table.Td>
 			<Table.Td>{item.scale ?? "-"}</Table.Td>
 			<Table.Td>
-				<EntityList ids={item.brandIds} entityType="brand" size="sm" />
+				<EntityList ids={item.brands.map(b => b.id)} entityType="brand" size="sm" />
 			</Table.Td>
 		</Table.Tr>
 	);

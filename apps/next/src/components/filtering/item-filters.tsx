@@ -777,13 +777,13 @@ export function ItemFilters({
 		// Count all items for each filter option
 		for (const item of validItems) {
 			// Brand counts
-			for (const brandId of item.brandIds) {
-				if (brandId in brandCounts) {
-					brandCounts[brandId]++;
+			for (const brand of item.brands) {
+				if (brand.id in brandCounts) {
+					brandCounts[brand.id]++;
 				}
 			}
 			// Handle "Other" brands
-			if (item.brandIds.length === 0 && "Other" in brandCounts) {
+			if (item.brands.length === 0 && "Other" in brandCounts) {
 				brandCounts.Other++;
 			}
 
@@ -815,20 +815,20 @@ export function ItemFilters({
 			}
 
 			// Series counts
-			for (const seriesId of item.seriesIds) {
-				if (seriesId in seriesCounts) {
-					seriesCounts[seriesId]++;
+			for (const series of item.series) {
+				if (series.id in seriesCounts) {
+					seriesCounts[series.id]++;
 				}
 			}
 			// Handle "Other" series
-			if (item.seriesIds.length === 0 && "Other" in seriesCounts) {
+			if (item.series.length === 0 && "Other" in seriesCounts) {
 				seriesCounts.Other++;
 			}
 
 			// Category counts
-			for (const categoryId of item.categoryIds) {
-				if (categoryId in categoryCounts) {
-					categoryCounts[categoryId]++;
+			for (const category of item.categories) {
+				if (category.id in categoryCounts) {
+					categoryCounts[category.id]++;
 				}
 			}
 

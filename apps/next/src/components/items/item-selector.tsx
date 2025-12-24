@@ -97,7 +97,7 @@ function ComparisonModal({ items, opened, onClose }: ComparisonModalProps) {
 								<Table.Td fw={500}>Series</Table.Td>
 								{comparisonItems.map((item) => (
 									<Table.Td key={`series-${item.id}`} ta="center">
-										<EntityList ids={item.seriesIds} entityType="series" size="sm" />
+										<EntityList ids={item.series.map(s => s.id)} entityType="series" size="sm" />
 									</Table.Td>
 								))}
 							</Table.Tr>
@@ -107,7 +107,7 @@ function ComparisonModal({ items, opened, onClose }: ComparisonModalProps) {
 								<Table.Td fw={500}>Brand</Table.Td>
 								{comparisonItems.map((item) => (
 									<Table.Td key={`brand-${item.id}`} ta="center">
-										<EntityList ids={item.brandIds} entityType="brand" size="sm" />
+										<EntityList ids={item.brands.map(b => b.id)} entityType="brand" size="sm" />
 									</Table.Td>
 								))}
 							</Table.Tr>
@@ -141,7 +141,7 @@ function ComparisonModal({ items, opened, onClose }: ComparisonModalProps) {
 								<Table.Td fw={500}>Category</Table.Td>
 								{comparisonItems.map((item) => (
 									<Table.Td key={`category-${item.id}`} ta="center">
-										<EntityList ids={item.categoryIds} entityType="category" size="sm" />
+										<EntityList ids={item.categories.map(c => c.id)} entityType="category" size="sm" />
 									</Table.Td>
 								))}
 							</Table.Tr>
@@ -315,11 +315,11 @@ export function SelectableItemCard({
 						</Group>
 					</Box>
 				</Table.Td>
-				<Table.Td><EntityList ids={item.seriesIds} entityType="series" size="sm" /></Table.Td>
+				<Table.Td><EntityList ids={item.series.map(s => s.id)} entityType="series" size="sm" /></Table.Td>
 				<Table.Td>{getNodePrimaryGrade(item) ?? "-"}</Table.Td>
 				<Table.Td>{item.scale ?? "-"}</Table.Td>
 				<Table.Td>
-					<EntityList ids={item.brandIds} entityType="brand" size="sm" />
+					<EntityList ids={item.brands.map(b => b.id)} entityType="brand" size="sm" />
 				</Table.Td>
 			</Table.Tr>
 		);
@@ -368,9 +368,9 @@ export function SelectableItemCard({
 				<Text size="sm" fw={500} lineClamp={2}>
 					{getNodeDisplayName(item)}
 				</Text>
-				{item.seriesIds.length > 0 && (
+				{item.series.length > 0 && (
 					<Box mt={2}>
-						<EntityList ids={item.seriesIds} entityType="series" mode="text" size="xs" emptyText="" />
+						<EntityList ids={item.series.map(s => s.id)} entityType="series" mode="text" size="xs" emptyText="" />
 					</Box>
 				)}
 				<Group gap={4} mt={8} wrap="wrap">
@@ -380,7 +380,7 @@ export function SelectableItemCard({
 					{item.scale && (
 						<Badge size="xs" variant="light">{item.scale}</Badge>
 					)}
-					<EntityList ids={item.brandIds} entityType="brand" size="xs" clickable={false} />
+					<EntityList ids={item.brands.map(b => b.id)} entityType="brand" size="xs" clickable={false} />
 				</Group>
 			</Box>
 		</Card>

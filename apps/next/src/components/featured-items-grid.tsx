@@ -1,6 +1,6 @@
 "use client";
 
-import { getNodeDisplayName, getNodePrimaryGrade, resolveCdnUrl, type Item } from "@hobby-ninja/data";
+import { getNodeDisplayName, getNodeImages, getNodePrimaryGrade, resolveCdnUrl, type Item } from "@hobby-ninja/data";
 import { Box, Card, Flex, SimpleGrid, Stack, Text } from "@mantine/core";
 import { IconDatabase } from "@tabler/icons-react";
 import Link from "next/link";
@@ -38,22 +38,25 @@ function ItemCard({ item }: { item: Item }): React.ReactElement {
 							background: "linear-gradient(135deg, var(--mantine-color-gray-0) 0%, var(--mantine-color-gray-1) 100%)",
 						}}
 					>
-						{item.images && item.images.length > 0 ? (
-							<img
-								src={resolveCdnUrl(typeof item.images[0] === "string" ? item.images[0] : item.images[0].url)}
-								alt={getNodeDisplayName(item)}
-								style={{
-									width: "100%",
-									height: "100%",
-									objectFit: "cover",
-									borderRadius: "var(--mantine-radius-sm)",
-								}}
-							/>
-						) : (
-							<Flex justify="center" align="center" h="100%">
-								<IconDatabase size={40} color="var(--mantine-color-gray-4)" />
-							</Flex>
-						)}
+						{(() => {
+							const images = getNodeImages(item);
+							return images.length > 0 ? (
+								<img
+									src={resolveCdnUrl(images[0])}
+									alt={getNodeDisplayName(item)}
+									style={{
+										width: "100%",
+										height: "100%",
+										objectFit: "cover",
+										borderRadius: "var(--mantine-radius-sm)",
+									}}
+								/>
+							) : (
+								<Flex justify="center" align="center" h="100%">
+									<IconDatabase size={40} color="var(--mantine-color-gray-4)" />
+								</Flex>
+							);
+						})()}
 					</Box>
 
 					<Stack gap={4}>

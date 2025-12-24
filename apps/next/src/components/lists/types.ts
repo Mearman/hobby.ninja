@@ -61,7 +61,7 @@ export interface GenericListPageProps<T, TFilterState = Record<string, unknown>,
 
 // Type guards for entity identification
 export function isItem(entry: unknown): entry is Item {
-	return typeof entry === "object" && entry !== null && "type" in entry && entry.type === "item" && "brandIds" in entry && "categoryIds" in entry;
+	return typeof entry === "object" && entry !== null && "type" in entry && entry.type === "item" && "brands" in entry && "categories" in entry;
 }
 
 export function isManual(entry: unknown): entry is Manual {
