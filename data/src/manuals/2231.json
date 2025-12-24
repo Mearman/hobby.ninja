@@ -11,20 +11,29 @@
 		"year": 2013,
 		"month": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4838_s_o9ymafym19mjh29htkfma6crucgi.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4838_s_o9ymafym19mjh29htkfma6crucgi.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2231/",
-	"extractedAt": "2025-12-05T23:09:48.421Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4838_s_o9ymafym19mjh29htkfma6crucgi.jpg",
+		"path": "/images/items/01_3897/153_4838.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["crossbone"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士クロスボーン・ガンダム",
+		"en": "Mobile Suit Crossbone Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2231.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2231/2231.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2231/",
+	"itemId": "01_3897"
 }

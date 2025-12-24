@@ -11,20 +11,29 @@
 		"year": 2016,
 		"month": 5
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4942_s_50b4r4abfk7hdpukoyz5kyt3hvlp.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4942_s_50b4r4abfk7hdpukoyz5kyt3hvlp.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2293/",
-	"extractedAt": "2025-12-05T23:09:48.491Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4942_s_50b4r4abfk7hdpukoyz5kyt3hvlp.jpg",
+		"path": "/images/items/01_4011/153_4942.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["msv"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "ガンダムMSV",
+		"en": "GundamMSV"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2293.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2293/2293.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2293/",
+	"itemId": "01_4011"
 }

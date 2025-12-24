@@ -11,24 +11,28 @@
 		"year": 2014,
 		"month": 4
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4854_s_utycxfbp2y132352pv3998ofienw.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4854_s_utycxfbp2y132352pv3998ofienw.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2201/",
-	"extractedAt": "2025-12-05T23:09:48.391Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4854_s_utycxfbp2y132352pv3998ofienw.jpg",
+		"path": "/manuals/2201/153_4854.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": [
-		"hg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "∀ガンダム",
+		"en": "∀Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2201.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2201/2201.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2201/"
 }

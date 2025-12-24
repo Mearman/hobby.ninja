@@ -2,7 +2,7 @@
 	"id": "2217",
 	"type": "manual",
 	"name": {
-		"ja": "ＨＧ 1/144 V2 ガンダム用拡張エフェクトユニット“光の翼\"",
+		"ja": "ＨＧ 1/144 V2ガンダム用拡張エフェクトユニット“光の翼\"",
 		"en": "HG 1/144 V2Gundam expansion effect unit “Wings of Light”"
 	},
 	"productNumber": "2273501",
@@ -11,20 +11,28 @@
 		"year": 2015,
 		"month": 5
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4892_s_z2teg5ynz7ne9yj4aa0p22zfuqeu.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4892_s_z2teg5ynz7ne9yj4aa0p22zfuqeu.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2217/",
-	"extractedAt": "2025-12-05T23:09:48.406Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4892_s_z2teg5ynz7ne9yj4aa0p22zfuqeu.jpg",
+		"path": "/manuals/2217/153_4892.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["v-gundam"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士Vガンダム",
+		"en": "Mobile Suit V Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2217.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2217/2217.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2217/"
 }

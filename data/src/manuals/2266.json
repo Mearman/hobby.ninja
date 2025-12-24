@@ -11,20 +11,29 @@
 		"year": 2015,
 		"month": 1
 	},
-	"productImage": "https://bandai-hobby.net/images/153_3886_s_oggk4hk0j09ju5vy2exwdx0tu3bi.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_3886_s_oggk4hk0j09ju5vy2exwdx0tu3bi.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2266/",
-	"extractedAt": "2025-12-05T23:09:48.459Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_3886_s_oggk4hk0j09ju5vy2exwdx0tu3bi.jpg",
+		"path": "/images/items/01_2908/153_3886.jpg"
+	},
 	"scale": "1/60",
-	"brandIds": ["pg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "PG",
+		"en": "P.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2266.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2266/2266.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2266/",
+	"itemId": "01_2908"
 }

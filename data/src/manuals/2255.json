@@ -11,20 +11,29 @@
 		"year": 2014,
 		"month": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4873_s_v1vajbgk3fmezv4g47dyswkhmnmo.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4873_s_v1vajbgk3fmezv4g47dyswkhmnmo.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2255/",
-	"extractedAt": "2025-12-05T23:09:48.446Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4873_s_v1vajbgk3fmezv4g47dyswkhmnmo.jpg",
+		"path": "/images/items/01_3935/153_4873.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["ggundam"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動武闘伝Gガンダム",
+		"en": "Mobile Fighter GGundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2255.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2255/2255.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2255/",
+	"itemId": "01_3935"
 }

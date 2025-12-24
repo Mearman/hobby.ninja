@@ -2,7 +2,7 @@
 	"id": "2267",
 	"type": "manual",
 	"name": {
-		"ja": "ＭＧ 1/100 ゼータガンダム 3号機P2型 レッド・ゼータ",
+		"ja": "ＭＧ 1/100 ゼータガンダム3号機P2型 レッド・ゼータ",
 		"en": "MG 1/100 Zeta Gundam Unit 3 P2 type Red Zeta"
 	},
 	"productNumber": "2277363",
@@ -11,20 +11,28 @@
 		"year": 2015,
 		"month": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4896_s_fi4haod5jww0ltcynhdnv1f7f00v.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4896_s_fi4haod5jww0ltcynhdnv1f7f00v.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2267/",
-	"extractedAt": "2025-12-05T23:09:48.461Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4896_s_fi4haod5jww0ltcynhdnv1f7f00v.jpg",
+		"path": "/manuals/2267/153_4896.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": [],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "その他",
+		"en": "others"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2267.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2267/2267.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2267/"
 }

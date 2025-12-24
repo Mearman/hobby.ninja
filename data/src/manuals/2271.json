@@ -11,31 +11,37 @@
 		"year": 2015,
 		"month": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4906_s_a0ocbaxclbrjkvv1ptdmontvidq3.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4906_s_a0ocbaxclbrjkvv1ptdmontvidq3.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2271/",
-	"extractedAt": "2025-12-05T23:09:48.466Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4906_s_a0ocbaxclbrjkvv1ptdmontvidq3.jpg",
+		"path": "/images/items/01_3972/153_4906.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": [
-		"mg"
-	],
-	"seriesIds": [
-		"gundam"
-	],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "∀ガンダム",
+		"en": "∀Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2271.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2271/2271.pdf"
 		},
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2271_2.pdf",
 			"name": {
 				"ja": "補足説明書",
 				"en": "Supplementary Manual"
-			}
+			},
+			"path": "/manuals/2271/2271_2.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2271/",
+	"itemId": "01_3972"
 }

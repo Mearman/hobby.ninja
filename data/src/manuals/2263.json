@@ -2,7 +2,7 @@
 	"id": "2263",
 	"type": "manual",
 	"name": {
-		"ja": "ＨＧ 1/144 クロスボーン・ガンダム X1改",
+		"ja": "ＨＧ 1/144 クロスボーン・ガンダムX1改",
 		"en": "HG 1/144 Crossbone GundamX1 modified"
 	},
 	"productNumber": "2301517",
@@ -11,27 +11,37 @@
 		"year": 2015,
 		"month": 5
 	},
-	"productImage": "https://bandai-hobby.net/images/153_3882_s_zqkor2zrv165tzq0xkts915b8xdr.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_3882_s_zqkor2zrv165tzq0xkts915b8xdr.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2263/",
-	"extractedAt": "2025-12-05T23:09:48.455Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_3882_s_zqkor2zrv165tzq0xkts915b8xdr.jpg",
+		"path": "/images/items/01_2904/153_3882.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["crossbone"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士クロスボーン・ガンダム",
+		"en": "Mobile Suit Crossbone Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2263.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2263/2263.pdf"
 		},
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2263_2.pdf",
 			"name": {
 				"ja": "補足説明書",
 				"en": "Supplementary Manual"
-			}
+			},
+			"path": "/manuals/2263/2263_2.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2263/",
+	"itemId": "01_2904"
 }

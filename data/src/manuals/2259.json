@@ -2,7 +2,7 @@
 	"id": "2259",
 	"type": "manual",
 	"name": {
-		"ja": "ＭＧ 1/100 S ガンダム ブースター・ユニット装着型",
+		"ja": "ＭＧ 1/100 Sガンダム ブースター・ユニット装着型",
 		"en": "MG 1/100 SGundam booster unit installed type"
 	},
 	"productNumber": "2262266",
@@ -11,20 +11,29 @@
 		"year": 2014,
 		"month": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4872_s_gei69cnumvgpy73ecfvj0kzdvkfg.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4872_s_gei69cnumvgpy73ecfvj0kzdvkfg.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2259/",
-	"extractedAt": "2025-12-05T23:09:48.450Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4872_s_gei69cnumvgpy73ecfvj0kzdvkfg.jpg",
+		"path": "/images/items/01_3934/153_4872.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["sentinel"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "ガンダム・センチネル",
+		"en": "Gundam Sentinel"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2259.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2259/2259.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2259/",
+	"itemId": "01_3934"
 }

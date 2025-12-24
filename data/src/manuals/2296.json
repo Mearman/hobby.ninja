@@ -11,20 +11,29 @@
 		"year": 2015,
 		"month": 12
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4924_s_6kle7kzf4ae9x4lhpke8rzrd1s6x.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4924_s_6kle7kzf4ae9x4lhpke8rzrd1s6x.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2296/",
-	"extractedAt": "2025-12-05T23:09:48.495Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4924_s_6kle7kzf4ae9x4lhpke8rzrd1s6x.jpg",
+		"path": "/images/items/01_3992/153_4924.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["buildfighters"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドファイターズ",
+		"en": "Gundam Build Fighters"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2296.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2296/2296.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2296/",
+	"itemId": "01_3992"
 }

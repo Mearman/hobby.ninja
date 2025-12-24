@@ -2,7 +2,7 @@
 	"id": "2250",
 	"type": "manual",
 	"name": {
-		"ja": "ＭＧ 1/100 ユニコーンガンダム 2号機 バンシィ・ノルン",
+		"ja": "ＭＧ 1/100 ユニコーンガンダム2号機 バンシィ・ノルン",
 		"en": "MG 1/100 Unicorn Gundam Unit 2 Banshee Norn"
 	},
 	"productNumber": "2250299",
@@ -11,20 +11,29 @@
 		"year": 2014,
 		"month": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4864_s_jb39aqowqt9wl81ori56oxjofec9.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4864_s_jb39aqowqt9wl81ori56oxjofec9.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2250/",
-	"extractedAt": "2025-12-05T23:09:48.440Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4864_s_jb39aqowqt9wl81ori56oxjofec9.jpg",
+		"path": "/images/items/01_3925/153_4864.jpg"
+	},
 	"scale": "1/100",
-	"brandIds": ["mg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "MG",
+		"en": "M.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2250.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2250/2250.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2250/",
+	"itemId": "01_3925"
 }

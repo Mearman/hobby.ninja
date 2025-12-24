@@ -11,20 +11,29 @@
 		"year": 2015,
 		"month": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4897_s_dkdm3iv13l39ofbe7gy4opujf8ks.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4897_s_dkdm3iv13l39ofbe7gy4opujf8ks.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2272/",
-	"extractedAt": "2025-12-05T23:09:48.467Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4897_s_dkdm3iv13l39ofbe7gy4opujf8ks.jpg",
+		"path": "/images/items/01_3961/153_4897.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-reco"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダム Gのレコンギスタ",
+		"en": "Gundam G's Reconguista"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/2272.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/2272/2272.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2272/",
+	"itemId": "01_3961"
 }
