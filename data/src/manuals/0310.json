@@ -1,5 +1,5 @@
 {
-	"id": "0310",
+	"id": "310",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガンダムアストレア タイプ-F",
@@ -12,20 +12,29 @@
 		"month": 4,
 		"day": 22
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1886_o_1bbm13k45c26b19ugup7v1qoh2i.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1886_o_1bbm13k45c26b19ugup7v1qoh2i.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/310/",
-	"extractedAt": "2025-12-05T23:09:46.822Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1886_o_1bbm13k45c26b19ugup7v1qoh2i.jpg",
+		"path": "/images/items/01_0947/156_1886.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-00"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム00",
+		"en": "Mobile Suit Gundam00"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/310.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0310/0310.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/310/",
+	"itemId": "01_0947"
 }

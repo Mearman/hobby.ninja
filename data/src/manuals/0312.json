@@ -1,5 +1,5 @@
 {
-	"id": "0312",
+	"id": "312",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ダブルオークアンタ",
@@ -12,20 +12,29 @@
 		"month": 8,
 		"day": 7
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1890_o_1bbm1ij421r188n59is1bi27bc2n.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1890_o_1bbm1ij421r188n59is1bi27bc2n.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/312/",
-	"extractedAt": "2025-12-05T23:09:46.826Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1890_o_1bbm1ij421r188n59is1bi27bc2n.jpg",
+		"path": "/images/items/01_0952/156_1890.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-00"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム00",
+		"en": "Mobile Suit Gundam00"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/312.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0312/0312.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/312/",
+	"itemId": "01_0952"
 }

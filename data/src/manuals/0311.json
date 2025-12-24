@@ -1,5 +1,5 @@
 {
-	"id": "0311",
+	"id": "311",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ダブルオーライザー（粒子貯蔵タンク型）",
@@ -12,20 +12,29 @@
 		"month": 10,
 		"day": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1894_o_1bbm1u7j3o8ohb61hkce6ohr12i.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1894_o_1bbm1u7j3o8ohb61hkce6ohr12i.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/311/",
-	"extractedAt": "2025-12-05T23:09:46.824Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1894_o_1bbm1u7j3o8ohb61hkce6ohr12i.jpg",
+		"path": "/images/items/01_0956/156_1894.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-00"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム00",
+		"en": "Mobile Suit Gundam00"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/311.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0311/0311.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/311/",
+	"itemId": "01_0956"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0399",
+	"id": "399",
 	"type": "manual",
 	"name": {
 		"ja": "HGCE 1/144 ストライクルージュ",
@@ -12,20 +12,29 @@
 		"month": 3,
 		"day": 29
 	},
-	"productImage": "https://bandai-hobby.net/images/159_1079_s_5rav1809s96s1qn14b1hii5blgdv.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_1079_s_5rav1809s96s1qn14b1hii5blgdv.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/399/",
-	"extractedAt": "2025-12-05T23:09:46.978Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_1079_s_5rav1809s96s1qn14b1hii5blgdv.jpg",
+		"path": "/images/items/01_0083/159_1079.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/399.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0399/0399.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/399/",
+	"itemId": "01_0083"
 }

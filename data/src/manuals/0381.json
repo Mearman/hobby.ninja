@@ -1,5 +1,5 @@
 {
-	"id": "0381",
+	"id": "381",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 MS-06R-1A シン・マツナガ専用ザク",
@@ -12,20 +12,29 @@
 		"month": 3,
 		"day": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/156_843_s_6os1wi0icih10n8vr5d14v6t2jlj.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_843_s_6os1wi0icih10n8vr5d14v6t2jlj.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/381/",
-	"extractedAt": "2025-12-05T23:09:46.956Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_843_s_6os1wi0icih10n8vr5d14v6t2jlj.jpg",
+		"path": "/images/items/01_5782/156_843.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["msv"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "ガンダムMSV",
+		"en": "GundamMSV"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/381.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0381/0381.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/381/",
+	"itemId": "01_5782"
 }

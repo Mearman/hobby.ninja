@@ -1,5 +1,5 @@
 {
-	"id": "0327",
+	"id": "327",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ゼダスR",
@@ -12,20 +12,29 @@
 		"month": 1,
 		"day": 28
 	},
-	"productImage": "https://bandai-hobby.net/images/156_5493_s_w6fnakrs7s36ddhnh8b7u6ubki37.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_5493_s_w6fnakrs7s36ddhnh8b7u6ubki37.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/327/",
-	"extractedAt": "2025-12-05T23:09:46.883Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_5493_s_w6fnakrs7s36ddhnh8b7u6ubki37.jpg",
+		"path": "/images/items/01_4595/156_5493.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムAGE",
+		"en": "Mobile Suit GundamAGE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/327.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0327/0327.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/327/",
+	"itemId": "01_4595"
 }

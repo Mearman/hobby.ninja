@@ -1,5 +1,5 @@
 {
-	"id": "0380",
+	"id": "380",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 89式ベースジャバー",
@@ -12,20 +12,28 @@
 		"month": 6,
 		"day": 15
 	},
-	"productImage": "https://bandai-hobby.net/images/155_889_s_637hxapmhhok9rqe3bwy2kvkm057.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_889_s_637hxapmhhok9rqe3bwy2kvkm057.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/380/",
-	"extractedAt": "2025-12-05T23:09:46.954Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_889_s_637hxapmhhok9rqe3bwy2kvkm057.jpg",
+		"path": "/manuals/0380/155_889.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/380.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0380/0380.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/380/"
 }

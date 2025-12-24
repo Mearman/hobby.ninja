@@ -1,5 +1,5 @@
 {
-	"id": "0393",
+	"id": "393",
 	"type": "manual",
 	"name": {
 		"ja": "HGAC 1/144 ウイングガンダムゼロ",
@@ -12,20 +12,28 @@
 		"month": 3,
 		"day": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/159_1060_s_thj8erv2g9ft38r4xa3zlfh9hwfw.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_1060_s_thj8erv2g9ft38r4xa3zlfh9hwfw.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/393/",
-	"extractedAt": "2025-12-05T23:09:46.970Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_1060_s_thj8erv2g9ft38r4xa3zlfh9hwfw.jpg",
+		"path": "/manuals/0393/159_1060.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["endlesswaltz"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "新機動戦記ガンダムW",
+		"en": "New Mobile Report GundamW"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/393.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0393/0393.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/393/"
 }

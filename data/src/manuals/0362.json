@@ -1,5 +1,5 @@
 {
-	"id": "0362",
+	"id": "362",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ジムII",
@@ -12,20 +12,29 @@
 		"month": 10,
 		"day": 22
 	},
-	"productImage": "https://bandai-hobby.net/images/158_2724_s_v1id8k2lm7rnvh3lbvv3fihmqj12.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_2724_s_v1id8k2lm7rnvh3lbvv3fihmqj12.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/362/",
-	"extractedAt": "2025-12-05T23:09:46.925Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_2724_s_v1id8k2lm7rnvh3lbvv3fihmqj12.jpg",
+		"path": "/images/items/01_1785/158_2724.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["z-gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士Zガンダム",
+		"en": "Mobile Suit ZGundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/362.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0362/0362.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/362/",
+	"itemId": "01_1785"
 }

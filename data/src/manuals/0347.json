@@ -1,5 +1,5 @@
 {
-	"id": "0347",
+	"id": "347",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 クランシェ",
@@ -12,20 +12,29 @@
 		"month": 9,
 		"day": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/157_4559_s_r2fm3rw25ahrqlo1bfwhmht2hk1k.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_4559_s_r2fm3rw25ahrqlo1bfwhmht2hk1k.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/347/",
-	"extractedAt": "2025-12-05T23:09:46.907Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_4559_s_r2fm3rw25ahrqlo1bfwhmht2hk1k.jpg",
+		"path": "/images/items/01_3604/157_4559.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムAGE",
+		"en": "Mobile Suit GundamAGE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/347.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0347/0347.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/347/",
+	"itemId": "01_3604"
 }

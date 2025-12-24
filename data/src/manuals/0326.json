@@ -1,5 +1,5 @@
 {
-	"id": "0326",
+	"id": "326",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ジェノアスII",
@@ -12,20 +12,29 @@
 		"month": 3,
 		"day": 17
 	},
-	"productImage": "https://bandai-hobby.net/images/157_4548_s_110m3871f8zuiuz2ewd88zu5bu0w.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_4548_s_110m3871f8zuiuz2ewd88zu5bu0w.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/326/",
-	"extractedAt": "2025-12-05T23:09:46.881Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_4548_s_110m3871f8zuiuz2ewd88zu5bu0w.jpg",
+		"path": "/images/items/01_3593/157_4548.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムAGE",
+		"en": "Mobile Suit GundamAGE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/326.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0326/0326.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/326/",
+	"itemId": "01_3593"
 }

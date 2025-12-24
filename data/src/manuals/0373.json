@@ -1,5 +1,5 @@
 {
-	"id": "0373",
+	"id": "373",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ベースジャバー（ユニコーンVer.）",
@@ -12,20 +12,29 @@
 		"month": 7,
 		"day": 14
 	},
-	"productImage": "https://bandai-hobby.net/images/157_825_s_ieovmwbepv10oly8v9ofshf03aqp.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_825_s_ieovmwbepv10oly8v9ofshf03aqp.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/373/",
-	"extractedAt": "2025-12-05T23:09:46.942Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_825_s_ieovmwbepv10oly8v9ofshf03aqp.jpg",
+		"path": "/images/items/01_5762/157_825.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/373.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0373/0373.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/373/",
+	"itemId": "01_5762"
 }

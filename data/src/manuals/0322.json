@@ -1,5 +1,5 @@
 {
-	"id": "0322",
+	"id": "322",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ゼイドラ",
@@ -12,20 +12,29 @@
 		"month": 2,
 		"day": 25
 	},
-	"productImage": "https://bandai-hobby.net/images/157_4545_s_eium2qaqq5dbz1sihno7jz56f289.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_4545_s_eium2qaqq5dbz1sihno7jz56f289.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/322/",
-	"extractedAt": "2025-12-05T23:09:46.871Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_4545_s_eium2qaqq5dbz1sihno7jz56f289.jpg",
+		"path": "/images/items/01_3590/157_4545.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムAGE",
+		"en": "Mobile Suit GundamAGE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/322.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0322/0322.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/322/",
+	"itemId": "01_3590"
 }

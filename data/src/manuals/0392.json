@@ -1,5 +1,5 @@
 {
-	"id": "0392",
+	"id": "392",
 	"type": "manual",
 	"name": {
 		"ja": "HGCE 1/144 エールストライクガンダム",
@@ -12,20 +12,28 @@
 		"month": 2,
 		"day": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/155_1045_s_3eotkxcsbh4zpd05ii8h17uryvxg.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_1045_s_3eotkxcsbh4zpd05ii8h17uryvxg.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/392/",
-	"extractedAt": "2025-12-05T23:09:46.969Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_1045_s_3eotkxcsbh4zpd05ii8h17uryvxg.jpg",
+		"path": "/manuals/0392/155_1045.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/392.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0392/0392.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/392/"
 }

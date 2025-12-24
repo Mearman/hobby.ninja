@@ -1,5 +1,5 @@
 {
-	"id": "0366",
+	"id": "366",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ネモ",
@@ -12,20 +12,29 @@
 		"month": 1,
 		"day": 26
 	},
-	"productImage": "https://bandai-hobby.net/images/189_2740_s_8tvtzz70j9mivdzrcery3bqhtu1n.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_2740_s_8tvtzz70j9mivdzrcery3bqhtu1n.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/366/",
-	"extractedAt": "2025-12-05T23:09:46.931Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_2740_s_8tvtzz70j9mivdzrcery3bqhtu1n.jpg",
+		"path": "/images/items/01_1802/189_2740.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["z-gundam"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士Zガンダム",
+		"en": "Mobile Suit ZGundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/366.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0366/0366.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/366/",
+	"itemId": "01_1802"
 }

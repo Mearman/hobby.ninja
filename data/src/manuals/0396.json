@@ -1,5 +1,5 @@
 {
-	"id": "0396",
+	"id": "396",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ドライセン",
@@ -12,20 +12,29 @@
 		"month": 2,
 		"day": 22
 	},
-	"productImage": "https://bandai-hobby.net/images/157_1053_s_hbvezljit0fezwsjecofpdivehbt.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_1053_s_hbvezljit0fezwsjecofpdivehbt.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/396/",
-	"extractedAt": "2025-12-05T23:09:46.973Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_1053_s_hbvezljit0fezwsjecofpdivehbt.jpg",
+		"path": "/images/items/01_0056/157_1053.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam-zz"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムZZ",
+		"en": "Mobile Suit GundamZZ"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/396.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0396/0396.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/396/",
+	"itemId": "01_0056"
 }

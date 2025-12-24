@@ -1,5 +1,5 @@
 {
-	"id": "0305",
+	"id": "305",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 マスラオ",
@@ -12,20 +12,29 @@
 		"month": 12,
 		"day": 10
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1879_o_1bbm0eg041lcq137fqad1gckfbn2i.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1879_o_1bbm0eg041lcq137fqad1gckfbn2i.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/305/",
-	"extractedAt": "2025-12-05T23:09:46.815Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1879_o_1bbm0eg041lcq137fqad1gckfbn2i.jpg",
+		"path": "/images/items/01_0939/156_1879.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-00"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム00",
+		"en": "Mobile Suit Gundam00"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/305.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0305/0305.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/305/",
+	"itemId": "01_0939"
 }

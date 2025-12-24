@@ -1,8 +1,8 @@
 {
-	"id": "0397",
+	"id": "397",
 	"type": "manual",
 	"name": {
-		"ja": "HGUC 1/144 ユニコーンガンダム 2号機 バンシィ・ノルン（デストロイモード）",
+		"ja": "HGUC 1/144 ユニコーンガンダム2号機 バンシィ・ノルン（デストロイモード）",
 		"en": "HGUC 1/144 Unicorn Gundam Unit 2 Banshee Norn (Destroy Mode)"
 	},
 	"productNumber": "2246116",
@@ -12,20 +12,28 @@
 		"month": 3,
 		"day": 22
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1078_s_mbpqssxp6nuy730z8cvqtjjg1pkm.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1078_s_mbpqssxp6nuy730z8cvqtjjg1pkm.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/397/",
-	"extractedAt": "2025-12-05T23:09:46.975Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1078_s_mbpqssxp6nuy730z8cvqtjjg1pkm.jpg",
+		"path": "/manuals/0397/156_1078.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/397.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0397/0397.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/397/"
 }

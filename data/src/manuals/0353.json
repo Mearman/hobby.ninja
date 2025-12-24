@@ -1,5 +1,5 @@
 {
-	"id": "0353",
+	"id": "353",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガンダム レギルス",
@@ -12,20 +12,29 @@
 		"month": 10,
 		"day": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/157_4560_s_4xne15au0qfk3kvvy1z2e83bx0gm.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_4560_s_4xne15au0qfk3kvvy1z2e83bx0gm.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/353/",
-	"extractedAt": "2025-12-05T23:09:46.915Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_4560_s_4xne15au0qfk3kvvy1z2e83bx0gm.jpg",
+		"path": "/images/items/01_3605/157_4560.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムAGE",
+		"en": "Mobile Suit GundamAGE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/353.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0353/0353.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/353/",
+	"itemId": "01_3605"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0365",
+	"id": "365",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 アンクシャ",
@@ -12,20 +12,28 @@
 		"month": 5,
 		"day": 26
 	},
-	"productImage": "https://bandai-hobby.net/images/158_818_s_wpzmmo1nh9eowvb1hznzxwd5sukm.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_818_s_wpzmmo1nh9eowvb1hznzxwd5sukm.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/365/",
-	"extractedAt": "2025-12-05T23:09:46.929Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_818_s_wpzmmo1nh9eowvb1hznzxwd5sukm.jpg",
+		"path": "/manuals/0365/158_818.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/365.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0365/0365.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/365/"
 }

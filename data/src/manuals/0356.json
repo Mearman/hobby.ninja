@@ -1,5 +1,5 @@
 {
-	"id": "0356",
+	"id": "356",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 アデル(ディーヴァ所属部隊カラー)",
@@ -12,20 +12,29 @@
 		"month": 4,
 		"day": 21
 	},
-	"productImage": "https://bandai-hobby.net/images/157_4550_s_o5940hi4ad9inez3gm20jv5sf78r.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_4550_s_o5940hi4ad9inez3gm20jv5sf78r.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/356/",
-	"extractedAt": "2025-12-05T23:09:46.919Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_4550_s_o5940hi4ad9inez3gm20jv5sf78r.jpg",
+		"path": "/images/items/01_3595/157_4550.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムAGE",
+		"en": "Mobile Suit GundamAGE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/356.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0356/0356.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/356/",
+	"itemId": "01_3595"
 }

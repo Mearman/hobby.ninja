@@ -1,8 +1,8 @@
 {
-	"id": "0323",
+	"id": "323",
 	"type": "manual",
 	"name": {
-		"ja": "HG 1/144 ガンダム AGE-2 ダークハウンド",
+		"ja": "HG 1/144 ガンダムAGE-2 ダークハウンド",
 		"en": "HG 1/144 GundamAGE-2 Dark Hound"
 	},
 	"productNumber": "2139097",
@@ -12,20 +12,29 @@
 		"month": 7,
 		"day": 14
 	},
-	"productImage": "https://bandai-hobby.net/images/156_5515_s_jpsadi57atssx3i9c0419wbqtirg.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_5515_s_jpsadi57atssx3i9c0419wbqtirg.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/323/",
-	"extractedAt": "2025-12-05T23:09:46.872Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_5515_s_jpsadi57atssx3i9c0419wbqtirg.jpg",
+		"path": "/images/items/01_4620/156_5515.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムAGE",
+		"en": "Mobile Suit GundamAGE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/323.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0323/0323.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/323/",
+	"itemId": "01_4620"
 }

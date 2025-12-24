@@ -1,8 +1,8 @@
 {
-	"id": "0398",
+	"id": "398",
 	"type": "manual",
 	"name": {
-		"ja": "HGUC 1/144 ガンダム F91 ハリソン・マディン専用機",
+		"ja": "HGUC 1/144 ガンダムF91 ハリソン・マディン専用機",
 		"en": "HGUC 1/144 GundamF91 Harrison Maddin special machine"
 	},
 	"productNumber": "2246510",
@@ -12,20 +12,29 @@
 		"month": 12,
 		"day": 28
 	},
-	"productImage": "https://bandai-hobby.net/images/157_1026_s_umx4m3u5s272o9btxpitfogb3mg1.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_1026_s_umx4m3u5s272o9btxpitfogb3mg1.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/398/",
-	"extractedAt": "2025-12-05T23:09:46.977Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_1026_s_umx4m3u5s272o9btxpitfogb3mg1.jpg",
+		"path": "/images/items/01_0028/157_1026.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundamf91"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムF91",
+		"en": "Mobile Suit GundamF91"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/398.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0398/0398.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/398/",
+	"itemId": "01_0028"
 }

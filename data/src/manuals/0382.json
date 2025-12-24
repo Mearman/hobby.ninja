@@ -1,5 +1,5 @@
 {
-	"id": "0382",
+	"id": "382",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 フルアーマー・ユニコーンガンダム(ユニコーンモード)",
@@ -12,20 +12,29 @@
 		"month": 5,
 		"day": 2
 	},
-	"productImage": "https://bandai-hobby.net/images/157_874_s_00ziuv1ic1lxj91ku99fu62eg8e7.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_874_s_00ziuv1ic1lxj91ku99fu62eg8e7.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/382/",
-	"extractedAt": "2025-12-05T23:09:46.957Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_874_s_00ziuv1ic1lxj91ku99fu62eg8e7.jpg",
+		"path": "/images/items/01_5804/157_874.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/382.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0382/0382.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/382/",
+	"itemId": "01_5804"
 }

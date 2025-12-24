@@ -1,5 +1,5 @@
 {
-	"id": "0372",
+	"id": "372",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 ザク・マリナー",
@@ -12,20 +12,29 @@
 		"month": 7,
 		"day": 14
 	},
-	"productImage": "https://bandai-hobby.net/images/157_824_s_d6aku63oop9glaeb0shleq4eig2d.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_824_s_d6aku63oop9glaeb0shleq4eig2d.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/372/",
-	"extractedAt": "2025-12-05T23:09:46.941Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_824_s_d6aku63oop9glaeb0shleq4eig2d.jpg",
+		"path": "/images/items/01_5761/157_824.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam-zz"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムZZ",
+		"en": "Mobile Suit GundamZZ"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/372.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0372/0372.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/372/",
+	"itemId": "01_5761"
 }

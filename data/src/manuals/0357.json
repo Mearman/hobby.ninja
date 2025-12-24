@@ -1,8 +1,8 @@
 {
-	"id": "0357",
+	"id": "357",
 	"type": "manual",
 	"name": {
-		"ja": "HG 1/144 ガンダム AGE-3 フォートレス",
+		"ja": "HG 1/144 ガンダムAGE-3 フォートレス",
 		"en": "HG 1/144 GundamAGE-3 Fortress"
 	},
 	"productNumber": "2174176",
@@ -12,20 +12,29 @@
 		"month": 11,
 		"day": 23
 	},
-	"productImage": "https://bandai-hobby.net/images/157_4564_s_0at0sgykcq3or15rpmjs29oczby9.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_4564_s_0at0sgykcq3or15rpmjs29oczby9.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/357/",
-	"extractedAt": "2025-12-05T23:09:46.920Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_4564_s_0at0sgykcq3or15rpmjs29oczby9.jpg",
+		"path": "/images/items/01_3609/157_4564.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムAGE",
+		"en": "Mobile Suit GundamAGE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/357.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0357/0357.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/357/",
+	"itemId": "01_3609"
 }

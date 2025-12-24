@@ -1,5 +1,5 @@
 {
-	"id": "0348",
+	"id": "348",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 シャルドール改",
@@ -12,20 +12,29 @@
 		"month": 4,
 		"day": 14
 	},
-	"productImage": "https://bandai-hobby.net/images/157_4549_s_og0bfzavvep8jabsk77pznqdud0k.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_4549_s_og0bfzavvep8jabsk77pznqdud0k.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/348/",
-	"extractedAt": "2025-12-05T23:09:46.909Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_4549_s_og0bfzavvep8jabsk77pznqdud0k.jpg",
+		"path": "/images/items/01_3594/157_4549.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムAGE",
+		"en": "Mobile Suit GundamAGE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/348.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0348/0348.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/348/",
+	"itemId": "01_3594"
 }

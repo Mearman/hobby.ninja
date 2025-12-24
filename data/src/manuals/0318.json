@@ -1,8 +1,8 @@
 {
-	"id": "0318",
+	"id": "318",
 	"type": "manual",
 	"name": {
-		"ja": "HG 1/144 ガンダム AGE-1 タイタス",
+		"ja": "HG 1/144 ガンダムAGE-1 タイタス",
 		"en": "HG 1/144 GundamAGE-1 Titus"
 	},
 	"productNumber": "2138281",
@@ -12,20 +12,29 @@
 		"month": 11,
 		"day": 19
 	},
-	"productImage": "https://bandai-hobby.net/images/157_4533_s_mx07krywl9jgbe519cu4dzyzdaq7.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_4533_s_mx07krywl9jgbe519cu4dzyzdaq7.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/318/",
-	"extractedAt": "2025-12-05T23:09:46.858Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_4533_s_mx07krywl9jgbe519cu4dzyzdaq7.jpg",
+		"path": "/images/items/01_3578/157_4533.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムAGE",
+		"en": "Mobile Suit GundamAGE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/318.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0318/0318.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/318/",
+	"itemId": "01_3578"
 }

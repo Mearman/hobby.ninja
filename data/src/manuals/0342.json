@@ -1,5 +1,5 @@
 {
-	"id": "0342",
+	"id": "342",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 R16 M1アストレイ",
@@ -12,20 +12,29 @@
 		"month": 6,
 		"day": 23
 	},
-	"productImage": "https://bandai-hobby.net/images/156_5514_s_z6x5p0oqi1mhmfuehvjjz6iptjtu.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_5514_s_z6x5p0oqi1mhmfuehvjjz6iptjtu.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/342/",
-	"extractedAt": "2025-12-05T23:09:46.901Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_5514_s_z6x5p0oqi1mhmfuehvjjz6iptjtu.jpg",
+		"path": "/images/items/01_4619/156_5514.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/342.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0342/0342.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/342/",
+	"itemId": "01_4619"
 }

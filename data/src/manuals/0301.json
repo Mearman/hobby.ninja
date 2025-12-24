@@ -1,5 +1,5 @@
 {
-	"id": "0301",
+	"id": "301",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガッデス",
@@ -11,20 +11,29 @@
 		"year": 2009,
 		"month": 8
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1873_o_1bblvujga18qc5tt164n1lhl1k6q2i.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1873_o_1bblvujga18qc5tt164n1lhl1k6q2i.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/301/",
-	"extractedAt": "2025-12-05T23:09:46.810Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1873_o_1bblvujga18qc5tt164n1lhl1k6q2i.jpg",
+		"path": "/images/items/01_0933/156_1873.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-00"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム00",
+		"en": "Mobile Suit Gundam00"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/301.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0301/0301.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/301/",
+	"itemId": "01_0933"
 }

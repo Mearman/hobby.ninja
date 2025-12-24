@@ -1,5 +1,5 @@
 {
-	"id": "0319",
+	"id": "319",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 Gエグゼス",
@@ -12,20 +12,29 @@
 		"month": 12,
 		"day": 17
 	},
-	"productImage": "https://bandai-hobby.net/images/157_792_s_d01cpmxme6aoqsmoalw8z2hg6luq.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_792_s_d01cpmxme6aoqsmoalw8z2hg6luq.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/319/",
-	"extractedAt": "2025-12-05T23:09:46.862Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_792_s_d01cpmxme6aoqsmoalw8z2hg6luq.jpg",
+		"path": "/images/items/01_5725/157_792.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムAGE",
+		"en": "Mobile Suit GundamAGE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/319.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0319/0319.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/319/",
+	"itemId": "01_5725"
 }

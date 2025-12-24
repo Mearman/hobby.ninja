@@ -1,5 +1,5 @@
 {
-	"id": "0370",
+	"id": "370",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 リゼルC型（ディフェンサーbユニット／ゼネラル・レビル配備機）",
@@ -12,20 +12,29 @@
 		"month": 6,
 		"day": 16
 	},
-	"productImage": "https://bandai-hobby.net/images/157_820_s_idymcwxjx4lvj3uog93x8niqh2gb.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_820_s_idymcwxjx4lvj3uog93x8niqh2gb.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/370/",
-	"extractedAt": "2025-12-05T23:09:46.938Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_820_s_idymcwxjx4lvj3uog93x8niqh2gb.jpg",
+		"path": "/images/items/01_5757/157_820.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "機動戦士ガンダムUC",
+		"en": "Mobile Suit GundamUC"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/370.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0370/0370.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/370/",
+	"itemId": "01_5757"
 }

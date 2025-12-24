@@ -1,5 +1,5 @@
 {
-	"id": "0309",
+	"id": "309",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 リボーンズガンダム（トランザムモード）グロスインジェクションバージョン",
@@ -12,20 +12,29 @@
 		"month": 1,
 		"day": 14
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1884_o_1bbm0tkoedo415n1lkq1e3812pu2i.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1884_o_1bbm0tkoedo415n1lkq1e3812pu2i.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/309/",
-	"extractedAt": "2025-12-05T23:09:46.820Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1884_o_1bbm0tkoedo415n1lkq1e3812pu2i.jpg",
+		"path": "/images/items/01_0945/156_1884.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-00"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム00",
+		"en": "Mobile Suit Gundam00"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/309.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0309/0309.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/309/",
+	"itemId": "01_0945"
 }

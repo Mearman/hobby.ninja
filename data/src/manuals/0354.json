@@ -1,8 +1,8 @@
 {
-	"id": "0354",
+	"id": "354",
 	"type": "manual",
 	"name": {
-		"ja": "HG 1/144 ガンダム AGE-FX バースト",
+		"ja": "HG 1/144 ガンダムAGE-FX バースト",
 		"en": "HG 1/144 GundamAGE-FX Burst"
 	},
 	"productNumber": "2165087",
@@ -12,20 +12,29 @@
 		"month": 1,
 		"day": 19
 	},
-	"productImage": "https://bandai-hobby.net/images/157_4565_s_lv8i3diqfp5afhgdp2lpxww7rk6j.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_4565_s_lv8i3diqfp5afhgdp2lpxww7rk6j.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/354/",
-	"extractedAt": "2025-12-05T23:09:46.916Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_4565_s_lv8i3diqfp5afhgdp2lpxww7rk6j.jpg",
+		"path": "/images/items/01_3610/157_4565.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムAGE",
+		"en": "Mobile Suit GundamAGE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/354.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0354/0354.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/354/",
+	"itemId": "01_3610"
 }

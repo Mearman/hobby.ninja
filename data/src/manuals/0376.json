@@ -1,5 +1,5 @@
 {
-	"id": "0376",
+	"id": "376",
 	"type": "manual",
 	"name": {
 		"ja": "HGUC 1/144 MS-06R-1A 黒い三連星ザク",
@@ -12,20 +12,29 @@
 		"month": 2,
 		"day": 16
 	},
-	"productImage": "https://bandai-hobby.net/images/157_2741_s_kw9o06nkuuon3idkdflo2siemytp.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_2741_s_kw9o06nkuuon3idkdflo2siemytp.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/376/",
-	"extractedAt": "2025-12-05T23:09:46.945Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_2741_s_kw9o06nkuuon3idkdflo2siemytp.jpg",
+		"path": "/images/items/01_1803/157_2741.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["msv"],
+	"brand": {
+		"ja": "HGUC",
+		"en": "HGUC"
+	},
+	"series": {
+		"ja": "ガンダムMSV",
+		"en": "GundamMSV"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/376.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0376/0376.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/376/",
+	"itemId": "01_1803"
 }

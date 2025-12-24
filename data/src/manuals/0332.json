@@ -1,5 +1,5 @@
 {
-	"id": "0332",
+	"id": "332",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 R03 バスターガンダム",
@@ -12,20 +12,29 @@
 		"month": 11,
 		"day": 19
 	},
-	"productImage": "https://bandai-hobby.net/images/156_5478_s_uivx7oawst51l9crf9ngisiath0e.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_5478_s_uivx7oawst51l9crf9ngisiath0e.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/332/",
-	"extractedAt": "2025-12-05T23:09:46.889Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_5478_s_uivx7oawst51l9crf9ngisiath0e.jpg",
+		"path": "/images/items/01_4580/156_5478.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/332.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0332/0332.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/332/",
+	"itemId": "01_4580"
 }

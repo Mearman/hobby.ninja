@@ -1,5 +1,5 @@
 {
-	"id": "0316",
+	"id": "316",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ブレイヴ一般用試験機",
@@ -12,20 +12,29 @@
 		"month": 11,
 		"day": 13
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1896_o_1bbm238gk6srtf33se1hpv1rpf2i.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1896_o_1bbm238gk6srtf33se1hpv1rpf2i.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/316/",
-	"extractedAt": "2025-12-05T23:09:46.841Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1896_o_1bbm238gk6srtf33se1hpv1rpf2i.jpg",
+		"path": "/images/items/01_0958/156_1896.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-00"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム00",
+		"en": "Mobile Suit Gundam00"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/316.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0316/0316.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/316/",
+	"itemId": "01_0958"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0344",
+	"id": "344",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 R13 プロヴィデンスガンダム",
@@ -12,20 +12,29 @@
 		"month": 2,
 		"day": 25
 	},
-	"productImage": "https://bandai-hobby.net/images/156_5499_s_ee2gwtkjzg6yok2vouqsd7j87k5b.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_5499_s_ee2gwtkjzg6yok2vouqsd7j87k5b.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/344/",
-	"extractedAt": "2025-12-05T23:09:46.904Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_5499_s_ee2gwtkjzg6yok2vouqsd7j87k5b.jpg",
+		"path": "/images/items/01_4601/156_5499.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/344.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0344/0344.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/344/",
+	"itemId": "01_4601"
 }

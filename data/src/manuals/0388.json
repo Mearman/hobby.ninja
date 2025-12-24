@@ -1,5 +1,5 @@
 {
-	"id": "0388",
+	"id": "388",
 	"type": "manual",
 	"name": {
 		"ja": "HGAW 1/144 ガンダムダブルエックス",
@@ -12,20 +12,29 @@
 		"month": 10,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/157_954_s_14272in3bbbs0lhej37ldnr0otkn.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_954_s_14272in3bbbs0lhej37ldnr0otkn.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/388/",
-	"extractedAt": "2025-12-05T23:09:46.964Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_954_s_14272in3bbbs0lhej37ldnr0otkn.jpg",
+		"path": "/images/items/01_5876/157_954.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["x"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動新世紀ガンダムＸ",
+		"en": "Mobile New Century GundamX"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/388.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0388/0388.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/388/",
+	"itemId": "01_5876"
 }
