@@ -1,5 +1,5 @@
 {
-	"id": "0104",
+	"id": "104",
 	"type": "manual",
 	"name": {
 		"ja": "HGBD:R 1/144 テルティウムアームズ",
@@ -12,20 +12,29 @@
 		"month": 9,
 		"day": 26
 	},
-	"productImage": "https://bandai-hobby.net/images/159_3833_s_y1zzj70s1gvprl9lltnru1zsjayf.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_3833_s_y1zzj70s1gvprl9lltnru1zsjayf.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/104/",
-	"extractedAt": "2025-12-05T23:09:46.463Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_3833_s_y1zzj70s1gvprl9lltnru1zsjayf.jpg",
+		"path": "/images/items/01_2850/159_3833.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers-rerise"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズRe:RISE",
+		"en": "Gundam Build Divers Re:RISE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/104.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0104/0104.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/104/",
+	"itemId": "01_2850"
 }

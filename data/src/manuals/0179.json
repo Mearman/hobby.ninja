@@ -1,5 +1,5 @@
 {
-	"id": "0179",
+	"id": "179",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ストライクノワールガンダム",
@@ -12,20 +12,29 @@
 		"month": 6,
 		"day": 30
 	},
-	"productImage": "https://bandai-hobby.net/images/189_652_s_92kmj21tu0j1r3jipsv9rzumeufk.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_652_s_92kmj21tu0j1r3jipsv9rzumeufk.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/179/",
-	"extractedAt": "2025-12-05T23:09:46.591Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_652_s_92kmj21tu0j1r3jipsv9rzumeufk.jpg",
+		"path": "/images/items/01_5604/189_652.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/179.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0179/0179.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/179/",
+	"itemId": "01_5604"
 }

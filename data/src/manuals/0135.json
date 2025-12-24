@@ -1,5 +1,5 @@
 {
-	"id": "0135",
+	"id": "135",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 デミトレーナー",
@@ -12,20 +12,28 @@
 		"month": 12,
 		"day": 10
 	},
-	"productImage": "https://bandai-hobby.net/images/191_5183_s_ywjurd5hghetjsn6419ct869serr.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/191_5183_s_ywjurd5hghetjsn6419ct869serr.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/135/",
-	"extractedAt": "2025-12-05T23:09:46.510Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/191_5183_s_ywjurd5hghetjsn6419ct869serr.jpg",
+		"path": "/manuals/0135/191_5183.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 水星の魔女",
+		"en": "Mobile Suit Gundam Witch of Mercury"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/135.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0135/0135.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/135/"
 }

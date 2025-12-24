@@ -1,5 +1,5 @@
 {
-	"id": "0190",
+	"id": "190",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ユニオンフラッグ量産型",
@@ -11,20 +11,29 @@
 		"year": 2007,
 		"month": 10
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1828_o_1bblqr1bl1rmao9ihnd1i7kh6m2i.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1828_o_1bblqr1bl1rmao9ihnd1i7kh6m2i.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/190/",
-	"extractedAt": "2025-12-05T23:09:46.611Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1828_o_1bblqr1bl1rmao9ihnd1i7kh6m2i.jpg",
+		"path": "/images/items/01_0885/156_1828.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-00"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム00",
+		"en": "Mobile Suit Gundam00"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/190.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0190/0190.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/190/",
+	"itemId": "01_0885"
 }

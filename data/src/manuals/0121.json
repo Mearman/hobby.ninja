@@ -1,5 +1,5 @@
 {
-	"id": "0121",
+	"id": "121",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガンダムダブルオーコマンドクアンタ",
@@ -12,20 +12,29 @@
 		"month": 1,
 		"day": 15
 	},
-	"productImage": "https://bandai-hobby.net/images/189_4696_s_csnkatu02nnovqyx2ez8iko8c5l6.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_4696_s_csnkatu02nnovqyx2ez8iko8c5l6.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/121/",
-	"extractedAt": "2025-12-05T23:09:46.489Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_4696_s_csnkatu02nnovqyx2ez8iko8c5l6.jpg",
+		"path": "/images/items/01_3627/189_4696.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam_breaker_battlogue"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "GUNDAM BREAKER BATTLOGUE",
+		"en": "GUNDAM BREAKER BATTLOGUE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/121.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0121/0121.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/121/",
+	"itemId": "01_3627"
 }

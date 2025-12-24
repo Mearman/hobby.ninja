@@ -1,5 +1,5 @@
 {
-	"id": "0174",
+	"id": "174",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 デスティニーガンダム",
@@ -12,20 +12,29 @@
 		"month": 11,
 		"day": 23
 	},
-	"productImage": "https://bandai-hobby.net/images/155_600_o_1h0q0i1mhrun1an1kqk1cse1gvk23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_600_o_1h0q0i1mhrun1an1kqk1cse1gvk23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/174/",
-	"extractedAt": "2025-12-05T23:09:46.585Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_600_o_1h0q0i1mhrun1an1kqk1cse1gvk23.jpg",
+		"path": "/images/items/01_5151/155_600.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed-d"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムSEED DESTINY",
+		"en": "Mobile Suit GundamSEED DESTINY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/174.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0174/0174.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/174/",
+	"itemId": "01_5151"
 }

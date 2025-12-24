@@ -1,5 +1,5 @@
 {
-	"id": "0124",
+	"id": "124",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガンダムアストレイレッドフレームインバージョン",
@@ -11,20 +11,29 @@
 		"year": 2022,
 		"month": 2
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4584_o_1f7vsup1r1ib54l25om60s2s823.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4584_o_1f7vsup1r1ib54l25om60s2s823.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/124/",
-	"extractedAt": "2025-12-05T23:09:46.496Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4584_o_1f7vsup1r1ib54l25om60s2s823.jpg",
+		"path": "/images/items/01_3630/153_4584.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam_breaker_battlogue"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "GUNDAM BREAKER BATTLOGUE",
+		"en": "GUNDAM BREAKER BATTLOGUE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/124.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0124/0124.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/124/",
+	"itemId": "01_3630"
 }

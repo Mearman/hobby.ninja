@@ -1,5 +1,5 @@
 {
-	"id": "0194",
+	"id": "194",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガンダムスローネアイン",
@@ -11,20 +11,29 @@
 		"year": 2008,
 		"month": 2
 	},
-	"productImage": "https://bandai-hobby.net/images/156_1833_o_1bblrcah3b5jt4atr1fgc1ti62i.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/156_1833_o_1bblrcah3b5jt4atr1fgc1ti62i.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/194/",
-	"extractedAt": "2025-12-05T23:09:46.618Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/156_1833_o_1bblrcah3b5jt4atr1fgc1ti62i.jpg",
+		"path": "/images/items/01_0891/156_1833.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-00"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム00",
+		"en": "Mobile Suit Gundam00"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/194.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0194/0194.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/194/",
+	"itemId": "01_0891"
 }

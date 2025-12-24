@@ -1,5 +1,5 @@
 {
-	"id": "0143",
+	"id": "143",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ザウォート",
@@ -12,20 +12,29 @@
 		"month": 2,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/191_5221_s_10vwem550ms6iopr2v51ue42slv3.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/191_5221_s_10vwem550ms6iopr2v51ue42slv3.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/143/",
-	"extractedAt": "2025-12-05T23:09:46.519Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/191_5221_s_10vwem550ms6iopr2v51ue42slv3.jpg",
+		"path": "/images/items/01_4309/191_5221.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 水星の魔女",
+		"en": "Mobile Suit Gundam Witch of Mercury"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/143.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0143/0143.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/143/",
+	"itemId": "01_4309"
 }

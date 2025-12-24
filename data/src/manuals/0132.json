@@ -1,5 +1,5 @@
 {
-	"id": "0132",
+	"id": "132",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ディランザ（一般機/ラウダ専用機）",
@@ -12,20 +12,28 @@
 		"month": 11,
 		"day": 5
 	},
-	"productImage": "https://bandai-hobby.net/images/196_5178_s_rtdhtp2ghkd2qjkiiymxpz3zo0co.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_5178_s_rtdhtp2ghkd2qjkiiymxpz3zo0co.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/132/",
-	"extractedAt": "2025-12-05T23:09:46.506Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_5178_s_rtdhtp2ghkd2qjkiiymxpz3zo0co.jpg",
+		"path": "/manuals/0132/196_5178.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 水星の魔女",
+		"en": "Mobile Suit Gundam Witch of Mercury"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/132.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0132/0132.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/132/"
 }

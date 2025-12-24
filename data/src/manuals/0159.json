@@ -1,5 +1,5 @@
 {
-	"id": "0159",
+	"id": "159",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 フォースインパルスガンダム",
@@ -11,20 +11,29 @@
 		"year": 2004,
 		"month": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/158_489_s_3c5e385vilnp3gn1lafcqpb9c4qm.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_489_s_3c5e385vilnp3gn1lafcqpb9c4qm.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/159/",
-	"extractedAt": "2025-12-05T23:09:46.541Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_489_s_3c5e385vilnp3gn1lafcqpb9c4qm.jpg",
+		"path": "/images/items/01_3962/158_4898.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed-d"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムSEED DESTINY",
+		"en": "Mobile Suit GundamSEED DESTINY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/159.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0159/0159.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/159/",
+	"itemId": "01_3962"
 }

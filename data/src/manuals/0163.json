@@ -1,5 +1,5 @@
 {
-	"id": "0163",
+	"id": "163",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 セイバーガンダム",
@@ -11,20 +11,29 @@
 		"year": 2005,
 		"month": 3
 	},
-	"productImage": "https://bandai-hobby.net/images/157_527_s_0bfqtcjo32auxqyuitpsb4iuutiw.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_527_s_0bfqtcjo32auxqyuitpsb4iuutiw.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/163/",
-	"extractedAt": "2025-12-05T23:09:46.550Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_527_s_0bfqtcjo32auxqyuitpsb4iuutiw.jpg",
+		"path": "/images/items/01_4366/157_5273.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed-d"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムSEED DESTINY",
+		"en": "Mobile Suit GundamSEED DESTINY"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/163.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0163/0163.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/163/",
+	"itemId": "01_4366"
 }

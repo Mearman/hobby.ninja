@@ -1,5 +1,5 @@
 {
-	"id": "0122",
+	"id": "122",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 陸戦型ガンダム(市街地戦仕様)",
@@ -11,20 +11,29 @@
 		"year": 2022,
 		"month": 2
 	},
-	"productImage": "https://bandai-hobby.net/images/153_4582_o_1f7vsbtjos0m6f118mdhiq1uat23.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/153_4582_o_1f7vsbtjos0m6f118mdhiq1uat23.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/122/",
-	"extractedAt": "2025-12-05T23:09:46.490Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/153_4582_o_1f7vsbtjos0m6f118mdhiq1uat23.jpg",
+		"path": "/images/items/01_3628/153_4582.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam_breaker_battlogue"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "GUNDAM BREAKER BATTLOGUE",
+		"en": "GUNDAM BREAKER BATTLOGUE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/122.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0122/0122.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/122/",
+	"itemId": "01_3628"
 }

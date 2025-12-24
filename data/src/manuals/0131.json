@@ -1,5 +1,5 @@
 {
-	"id": "0131",
+	"id": "131",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 デミトレーナー （チュチュ専用機）",
@@ -12,20 +12,28 @@
 		"month": 11,
 		"day": 5
 	},
-	"productImage": "https://bandai-hobby.net/images/192_5179_s_s2h52h7b7htpja1ycpfz907cqa2q.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/192_5179_s_s2h52h7b7htpja1ycpfz907cqa2q.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/131/",
-	"extractedAt": "2025-12-05T23:09:46.505Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/192_5179_s_s2h52h7b7htpja1ycpfz907cqa2q.jpg",
+		"path": "/manuals/0131/192_5179.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 水星の魔女",
+		"en": "Mobile Suit Gundam Witch of Mercury"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/131.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0131/0131.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/131/"
 }

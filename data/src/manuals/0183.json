@@ -1,5 +1,5 @@
 {
-	"id": "0183",
+	"id": "183",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ケルベロス・バクゥハウンド",
@@ -12,20 +12,29 @@
 		"month": 11,
 		"day": 24
 	},
-	"productImage": "https://bandai-hobby.net/images/158_691_s_zu99sk89atzmv941bo8acdyrdb0r.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_691_s_zu99sk89atzmv941bo8acdyrdb0r.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/183/",
-	"extractedAt": "2025-12-05T23:09:46.598Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_691_s_zu99sk89atzmv941bo8acdyrdb0r.jpg",
+		"path": "/images/items/01_5631/158_691.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/183.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0183/0183.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/183/",
+	"itemId": "01_5631"
 }

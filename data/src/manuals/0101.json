@@ -1,5 +1,5 @@
 {
-	"id": "0101",
+	"id": "101",
 	"type": "manual",
 	"name": {
 		"ja": "SDBD:R エクスヴァルキランダー",
@@ -12,19 +12,28 @@
 		"month": 6,
 		"day": 13
 	},
-	"productImage": "https://bandai-hobby.net/images/192_3737_s_bz9vta6ioby5ven8imsa0sfnd616.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/192_3737_s_bz9vta6ioby5ven8imsa0sfnd616.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/101/",
-	"extractedAt": "2025-12-05T23:09:46.460Z",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["builddivers-rerise"],
+	"image": {
+		"src": "https://bandai-hobby.net/images/192_3737_s_bz9vta6ioby5ven8imsa0sfnd616.jpg",
+		"path": "/images/items/01_2747/192_3737.jpg"
+	},
+	"brand": {
+		"ja": "SDBD",
+		"en": "SDBD"
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズRe:RISE",
+		"en": "Gundam Build Divers Re:RISE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/101.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0101/0101.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/101/",
+	"itemId": "01_2747"
 }

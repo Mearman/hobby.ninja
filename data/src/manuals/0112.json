@@ -1,8 +1,8 @@
 {
-	"id": "0112",
+	"id": "112",
 	"type": "manual",
 	"name": {
-		"ja": "HGBD:R 1/144 コアガンダム II(G-3カラー)",
+		"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)",
 		"en": "HGBD:R 1/144 Core Gundam II (G-3 color)"
 	},
 	"productNumber": "2552127",
@@ -12,20 +12,29 @@
 		"month": 12,
 		"day": 26
 	},
-	"productImage": "https://bandai-hobby.net/images/189_4246_s_ekq40lq6f336wtad32ebhonldfh0.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_4246_s_ekq40lq6f336wtad32ebhonldfh0.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/112/",
-	"extractedAt": "2025-12-05T23:09:46.474Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_4246_s_ekq40lq6f336wtad32ebhonldfh0.jpg",
+		"path": "/images/items/01_3291/189_4246.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers-rerise"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズRe:RISE",
+		"en": "Gundam Build Divers Re:RISE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/112.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0112/0112.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/112/",
+	"itemId": "01_3291"
 }

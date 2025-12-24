@@ -1,5 +1,5 @@
 {
-	"id": "0110",
+	"id": "110",
 	"type": "manual",
 	"name": {
 		"ja": "HGBD:R 1/144 サタニクス ウェポンズ",
@@ -12,20 +12,29 @@
 		"month": 5,
 		"day": 30
 	},
-	"productImage": "https://bandai-hobby.net/images/158_3777_s_ns27qo9yc30ktk4isx2prop85hu5.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_3777_s_ns27qo9yc30ktk4isx2prop85hu5.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/110/",
-	"extractedAt": "2025-12-05T23:09:46.472Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_3777_s_ns27qo9yc30ktk4isx2prop85hu5.jpg",
+		"path": "/images/items/01_2790/158_3777.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers-rerise"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズRe:RISE",
+		"en": "Gundam Build Divers Re:RISE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/110.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0110/0110.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/110/",
+	"itemId": "01_2790"
 }

@@ -1,5 +1,5 @@
 {
-	"id": "0105",
+	"id": "105",
 	"type": "manual",
 	"name": {
 		"ja": "HGBD:R 1/144 フェイクニューウェポンズ",
@@ -12,20 +12,29 @@
 		"month": 6,
 		"day": 27
 	},
-	"productImage": "https://bandai-hobby.net/images/158_3740_s_dknlvi7k7wczodatrpg8njab9qi6.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_3740_s_dknlvi7k7wczodatrpg8njab9qi6.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/105/",
-	"extractedAt": "2025-12-05T23:09:46.464Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_3740_s_dknlvi7k7wczodatrpg8njab9qi6.jpg",
+		"path": "/images/items/01_2751/158_3740.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers-rerise"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズRe:RISE",
+		"en": "Gundam Build Divers Re:RISE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/105.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0105/0105.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/105/",
+	"itemId": "01_2751"
 }

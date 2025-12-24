@@ -1,5 +1,5 @@
 {
-	"id": "0180",
+	"id": "180",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ヴェルデバスターガンダム",
@@ -12,20 +12,29 @@
 		"month": 8,
 		"day": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/158_662_s_v6q8ppscu5zc38mzahl8r8mqj1t0.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/158_662_s_v6q8ppscu5zc38mzahl8r8mqj1t0.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/180/",
-	"extractedAt": "2025-12-05T23:09:46.592Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/158_662_s_v6q8ppscu5zc38mzahl8r8mqj1t0.jpg",
+		"path": "/images/items/01_5610/158_662.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/180.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0180/0180.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/180/",
+	"itemId": "01_5610"
 }

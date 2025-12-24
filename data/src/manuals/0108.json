@@ -1,5 +1,5 @@
 {
-	"id": "0108",
+	"id": "108",
 	"type": "manual",
 	"name": {
 		"ja": "HGBD:R 1/144 ガンダムダブルオースカイメビウス",
@@ -12,20 +12,29 @@
 		"month": 12,
 		"day": 5
 	},
-	"productImage": "https://bandai-hobby.net/images/159_3983_s_vrr4t6rb0f1s3v3oyggl45k03rpj.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_3983_s_vrr4t6rb0f1s3v3oyggl45k03rpj.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/108/",
-	"extractedAt": "2025-12-05T23:09:46.469Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_3983_s_vrr4t6rb0f1s3v3oyggl45k03rpj.jpg",
+		"path": "/images/items/01_3011/159_3983.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["builddivers-rerise"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "ガンダムビルドダイバーズRe:RISE",
+		"en": "Gundam Build Divers Re:RISE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/108.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0108/0108.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/108/",
+	"itemId": "01_3011"
 }

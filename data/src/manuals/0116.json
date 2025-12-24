@@ -1,5 +1,5 @@
 {
-	"id": "0116",
+	"id": "116",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガンダムヘリオス",
@@ -12,20 +12,29 @@
 		"month": 11,
 		"day": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/189_4575_s_1q7vvw5jpktjuvr3yvfvkxbl55lb.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/189_4575_s_1q7vvw5jpktjuvr3yvfvkxbl55lb.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/116/",
-	"extractedAt": "2025-12-05T23:09:46.481Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/189_4575_s_1q7vvw5jpktjuvr3yvfvkxbl55lb.jpg",
+		"path": "/images/items/01_3621/189_4575.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam_breaker_battlogue"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "GUNDAM BREAKER BATTLOGUE",
+		"en": "GUNDAM BREAKER BATTLOGUE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/116.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0116/0116.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/116/",
+	"itemId": "01_3621"
 }

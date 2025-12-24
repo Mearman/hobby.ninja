@@ -1,5 +1,5 @@
 {
-	"id": "0158",
+	"id": "158",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 105ダガー＋ガンバレル",
@@ -11,20 +11,29 @@
 		"year": 2004,
 		"month": 9
 	},
-	"productImage": "https://bandai-hobby.net/images/157_477_s_pvcvp05bfiy7hjwxerhqsk3qar6j.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/157_477_s_pvcvp05bfiy7hjwxerhqsk3qar6j.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/158/",
-	"extractedAt": "2025-12-05T23:09:46.539Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/157_477_s_pvcvp05bfiy7hjwxerhqsk3qar6j.jpg",
+		"path": "/images/items/01_3832/157_477.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム SEED",
+		"en": "Mobile Suit Gundam SEED"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/158.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0158/0158.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/158/",
+	"itemId": "01_3832"
 }

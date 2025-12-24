@@ -1,5 +1,5 @@
 {
-	"id": "0120",
+	"id": "120",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ブレイジングガンダム",
@@ -12,20 +12,29 @@
 		"month": 12,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/190_4579_s_yd3ljmdcwt9pvzil62exhk008jwm.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/190_4579_s_yd3ljmdcwt9pvzil62exhk008jwm.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/120/",
-	"extractedAt": "2025-12-05T23:09:46.487Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/190_4579_s_yd3ljmdcwt9pvzil62exhk008jwm.jpg",
+		"path": "/images/items/01_3625/190_4579.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam_breaker_battlogue"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "GUNDAM BREAKER BATTLOGUE",
+		"en": "GUNDAM BREAKER BATTLOGUE"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/120.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0120/0120.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/120/",
+	"itemId": "01_3625"
 }

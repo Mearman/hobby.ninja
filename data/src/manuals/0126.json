@@ -1,5 +1,5 @@
 {
-	"id": "0126",
+	"id": "126",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 シュヴァルベカスタム(シクラーゼ機)",
@@ -12,20 +12,29 @@
 		"month": 5,
 		"day": 21
 	},
-	"productImage": "https://bandai-hobby.net/images/159_5018_s_z3kw5c9667t8k86l4f94zzld6ysp.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/159_5018_s_z3kw5c9667t8k86l4f94zzld6ysp.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/126/",
-	"extractedAt": "2025-12-05T23:09:46.499Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/159_5018_s_z3kw5c9667t8k86l4f94zzld6ysp.jpg",
+		"path": "/images/items/01_4094/159_5018.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 鉄血のオルフェンズ",
+		"en": "Mobile Suit Gundam Iron-Blooded Orphans"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/126.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0126/0126.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/126/",
+	"itemId": "01_4094"
 }

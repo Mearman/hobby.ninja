@@ -1,5 +1,5 @@
 {
-	"id": "0127",
+	"id": "127",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ガンダムルブリス",
@@ -12,20 +12,28 @@
 		"month": 8,
 		"day": 6
 	},
-	"productImage": "https://bandai-hobby.net/images/196_5161_s_flv3akmnk1eeuyl70co3vuve6mo3.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_5161_s_flv3akmnk1eeuyl70co3vuve6mo3.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/127/",
-	"extractedAt": "2025-12-05T23:09:46.500Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_5161_s_flv3akmnk1eeuyl70co3vuve6mo3.jpg",
+		"path": "/manuals/0127/196_5161.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 水星の魔女",
+		"en": "Mobile Suit Gundam Witch of Mercury"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/127.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0127/0127.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/127/"
 }

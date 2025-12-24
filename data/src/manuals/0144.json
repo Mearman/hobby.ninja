@@ -1,5 +1,5 @@
 {
-	"id": "0144",
+	"id": "144",
 	"type": "manual",
 	"name": {
 		"ja": "HG 1/144 ティックバラン",
@@ -12,20 +12,29 @@
 		"month": 2,
 		"day": 11
 	},
-	"productImage": "https://bandai-hobby.net/images/191_5222_s_n3drjw7p47hifw6rbdrnuclr9p56.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/191_5222_s_n3drjw7p47hifw6rbdrnuclr9p56.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/144/",
-	"extractedAt": "2025-12-05T23:09:46.520Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/191_5222_s_n3drjw7p47hifw6rbdrnuclr9p56.jpg",
+		"path": "/images/items/01_4310/191_5222.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
+	"brand": {
+		"ja": "HG",
+		"en": "H.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダム 水星の魔女",
+		"en": "Mobile Suit Gundam Witch of Mercury"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/144.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/0144/0144.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/144/",
+	"itemId": "01_4310"
 }
