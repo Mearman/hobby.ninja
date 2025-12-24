@@ -97,7 +97,29 @@ const MAX_FETCH_RETRIES = 3;
 const RETRY_DELAY_MS = 2000; // Base delay between retries (exponential backoff)
 
 /**
+ * Promise with a hard timeout
+ * Rejects if the operation doesn't complete within timeoutMs
+ */
+async function withTimeout<T>(
+	promise: Promise<T>,
+	timeoutMs: number,
+	timeoutMsg = "Operation timed out",
+): Promise<T> {
+	let timeoutId: ReturnType<typeof setTimeout>;
+	const timeoutPromise = new Promise<never>((_, reject) => {
+		timeoutId = setTimeout(() => { reject(new Error(timeoutMsg)); }, timeoutMs);
+	});
+
+	try {
+		return await Promise.race([promise, timeoutPromise]);
+	} finally {
+		clearTimeout(timeoutId!);
+	}
+}
+
+/**
  * Fetch with timeout and retry logic
+ * Uses hard timeout that covers the entire operation including body reading
  */
 async function fetchWithRetry(
 	url: string,
@@ -108,14 +130,15 @@ async function fetchWithRetry(
 
 	for (let attempt = 1; attempt <= maxRetries; attempt++) {
 		try {
-			const response = await fetch(url, {
-				...options,
-				signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
-			});
+			const response = await withTimeout(
+				fetch(url, options),
+				FETCH_TIMEOUT_MS,
+				`Fetch timeout after ${FETCH_TIMEOUT_MS}ms`,
+			);
 			return response;
 		} catch (error) {
 			lastError = error instanceof Error ? error : new Error(UNKNOWN_ERROR);
-			const isTimeout = lastError.name === "TimeoutError" || lastError.message.includes("timeout");
+			const isTimeout = lastError.message.includes("timeout") || lastError.message.includes("Timeout");
 			const isAbort = lastError.name === "AbortError";
 
 			if (attempt < maxRetries && (isTimeout || isAbort)) {
@@ -958,7 +981,8 @@ export class ScrapeCommand {
 			throw new Error(`HTTP ${response.status}`);
 		}
 
-		return response.text();
+		// Wrap body reading in timeout too (server might hang during transfer)
+		return withTimeout(response.text(), FETCH_TIMEOUT_MS, "Response body read timeout");
 	}
 
 	/**
@@ -1068,7 +1092,13 @@ export class ScrapeCommand {
 			throw new Error(`HTTP ${response.status}`);
 		}
 
-		return Buffer.from(await response.arrayBuffer());
+		// Wrap body reading in timeout (PDFs can be large and hang during transfer)
+		const arrayBuffer = await withTimeout(
+			response.arrayBuffer(),
+			FETCH_TIMEOUT_MS * 2, // 60s for PDF downloads (they can be large)
+			"PDF download timeout",
+		);
+		return Buffer.from(arrayBuffer);
 	}
 
 	/**
@@ -1141,7 +1171,13 @@ export class ScrapeCommand {
 
 			if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
-			const buffer = Buffer.from(await response.arrayBuffer());
+			// Wrap body reading in timeout
+			const arrayBuffer = await withTimeout(
+				response.arrayBuffer(),
+				FETCH_TIMEOUT_MS,
+				"Image download timeout",
+			);
+			const buffer = Buffer.from(arrayBuffer);
 			await fs.writeFile(manualLocalPath, buffer);
 			manualData.image.path = relativePath;
 			console.log(`    Downloaded image: ${cleanFilename}`);
@@ -1529,19 +1565,27 @@ export class ScrapeCommand {
 	 * Download an image from URL
 	 */
 	private async downloadImage(url: string): Promise<Buffer> {
-		// Try plain fetch first
+		// Try plain fetch first with hard timeout
 		try {
-			const response = await fetch(url, {
-				headers: {
-					"User-Agent": DEFAULT_USER_AGENT,
-					"Accept": "image/webp,image/apng,image/*,*/*;q=0.8",
-					"Referer": "https://bandai-hobby.net/",
-				},
-				signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
-			});
+			const response = await withTimeout(
+				fetch(url, {
+					headers: {
+						"User-Agent": DEFAULT_USER_AGENT,
+						"Accept": "image/webp,image/apng,image/*,*/*;q=0.8",
+						"Referer": "https://bandai-hobby.net/",
+					},
+				}),
+				FETCH_TIMEOUT_MS,
+				"Image fetch timeout",
+			);
 
 			if (response.ok) {
-				return Buffer.from(await response.arrayBuffer());
+				const arrayBuffer = await withTimeout(
+					response.arrayBuffer(),
+					FETCH_TIMEOUT_MS,
+					"Image download timeout",
+				);
+				return Buffer.from(arrayBuffer);
 			}
 		} catch {
 			// Fall back to Playwright
@@ -1935,19 +1979,22 @@ export class ScrapeCommand {
 	}
 
 	private async fetchPage(url: string): Promise<string> {
-		// Try plain fetch first (faster)
+		// Try plain fetch first (faster) with hard timeout
 		try {
-			const response = await fetch(url, {
-				headers: {
-					"User-Agent": DEFAULT_USER_AGENT,
-					"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-					"Accept-Language": "ja,en-US,en;q=0.9",
-				},
-				signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
-			});
+			const response = await withTimeout(
+				fetch(url, {
+					headers: {
+						"User-Agent": DEFAULT_USER_AGENT,
+						"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+						"Accept-Language": "ja,en-US,en;q=0.9",
+					},
+				}),
+				FETCH_TIMEOUT_MS,
+				"Page fetch timeout",
+			);
 
 			if (response.ok) {
-				const html = await response.text();
+				const html = await withTimeout(response.text(), FETCH_TIMEOUT_MS, "Page body read timeout");
 				// Check if we got real content (not a 404 page or empty shell)
 				const has404 = html.includes("404 NOT FOUND");
 				const hasMain = html.includes("<main");
