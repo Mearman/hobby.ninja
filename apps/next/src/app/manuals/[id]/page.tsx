@@ -104,7 +104,7 @@ export default async function ManualDetailPage({ params }: ManualPageProps) {
 	const manualPages = manual.pages;
 	const manualLanguage = manual.language;
 	const manualSize = manual.size;
-	const itemId = manual.itemId;
+	const itemIds = manual.itemIds;
 	const itemName = manual.itemName;
 
 	// The Manual type doesn't have productImage or thumbnailImage fields
@@ -184,27 +184,31 @@ export default async function ManualDetailPage({ params }: ManualPageProps) {
 					</Stack>
 				</Card>
 
-				{/* Related Item */}
-				{itemId && (
+				{/* Related Items */}
+				{itemIds.length > 0 && (
 					<Card p="lg" radius="md" withBorder={true}>
-						<Title order={3} mb="md">Related Product</Title>
-						<Group>
-							<IconPhoto size={20} />
-							<div>
-								<Link href={`/items/${itemId}`} style={{ textDecoration: "none" }}>
-									<Text fw={500} c="blue">
-										{typeof itemName === "string"
-											? itemName
-											: typeof itemName === "object"
-												? (itemName.en ?? itemName.ja)
-												: "View Product"}
-									</Text>
-								</Link>
-								<Text size="xs" c="dimmed">
-									Product ID: {itemId}
-								</Text>
-							</div>
-						</Group>
+						<Title order={3} mb="md">Related {itemIds.length === 1 ? "Product" : "Products"}</Title>
+						<Stack gap="sm">
+							{itemIds.map((itemId) => (
+								<Group key={itemId}>
+									<IconPhoto size={20} />
+									<div>
+										<Link href={`/items/${itemId}`} style={{ textDecoration: "none" }}>
+											<Text fw={500} c="blue">
+												{typeof itemName === "string"
+													? itemName
+													: typeof itemName === "object"
+														? (itemName.en ?? itemName.ja)
+														: "View Product"}
+											</Text>
+										</Link>
+										<Text size="xs" c="dimmed">
+											Product ID: {itemId}
+										</Text>
+									</div>
+								</Group>
+							))}
+						</Stack>
 					</Card>
 				)}
 

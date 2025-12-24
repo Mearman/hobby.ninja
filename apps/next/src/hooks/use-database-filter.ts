@@ -158,8 +158,7 @@ export function useDatabaseFilter(items: Item[], manuals: Manual[]) {
 						(entry): entry is Manual & { type: "manual" } =>
 							entry.type === "manual",
 					)
-					.map((manual) => manual.itemId)
-					.filter((itemId): itemId is string => itemId != null),
+					.flatMap((manual) => manual.itemIds),
 			);
 			filtered = filtered.filter(
 				(entry) => !(entry.type === "item" && manualItemIds.has(entry.id)),
