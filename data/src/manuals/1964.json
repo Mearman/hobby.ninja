@@ -11,19 +11,29 @@
 		"year": 1981,
 		"month": 10
 	},
-	"productImage": "https://bandai-hobby.net/images/155_4062_s_h2fce97rkl2htnlb16hie1lqc7b9.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/155_4062_s_h2fce97rkl2htnlb16hie1lqc7b9.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1964/",
-	"extractedAt": "2025-12-05T23:09:48.272Z",
-	"brandIds": [],
-	"seriesIds": ["gundam"],
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_4062_s_h2fce97rkl2htnlb16hie1lqc7b9.jpg",
+		"path": "/images/items/01_3095/155_4062.jpg"
+	},
+	"scale": "1/550",
+	"brand": {
+		"ja": "その他",
+		"en": "others"
+	},
+	"series": {
+		"ja": "機動戦士ガンダム",
+		"en": "Mobile Suit Gundam"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1964.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1964/1964.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1964/",
+	"itemId": "01_3095"
 }
