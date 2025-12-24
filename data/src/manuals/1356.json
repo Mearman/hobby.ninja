@@ -12,20 +12,28 @@
 		"month": 2,
 		"day": 10
 	},
-	"productImage": "https://bandai-hobby.net/images/196_5949_s_qhklngjxu7ntpydwbz65i4k8k39y.jpg",
-	"thumbnailImage": "https://bandai-hobby.net/images/196_5949_s_qhklngjxu7ntpydwbz65i4k8k39y.jpg",
-	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1356/",
-	"extractedAt": "2025-12-05T23:09:48.185Z",
+	"image": {
+		"src": "https://bandai-hobby.net/images/196_5949_s_qhklngjxu7ntpydwbz65i4k8k39y.jpg",
+		"path": "/manuals/1356/196_5949.jpg"
+	},
 	"scale": "1/144",
-	"brandIds": ["rg"],
-	"seriesIds": ["seed-freedom"],
+	"brand": {
+		"ja": "RG",
+		"en": "R.G."
+	},
+	"series": {
+		"ja": "機動戦士ガンダムSEED FREEDOM",
+		"en": "Mobile Suit GundamSEED FREEDOM"
+	},
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1356.pdf",
 			"name": {
 				"ja": "取扱説明書",
 				"en": "Handling manual"
-			}
+			},
+			"path": "/manuals/1356/1356.pdf"
 		}
-	]
+	],
+	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1356/"
 }
