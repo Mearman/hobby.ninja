@@ -880,23 +880,24 @@ export class ScrapeCommand {
 		for (const pdf of manualData.pdfs) {
 			if (!pdf.url) continue;
 
-			// Extract filename from URL
+			// Extract filename from URL (e.g., "1.pdf" from ".../pdf/1.pdf")
 			const urlPath = new URL(pdf.url).pathname;
 			const filename = path.basename(urlPath);
+
+			// Check for existing file with either unpadded or padded name
+			// URLs use unpadded (1.pdf) but existing files may be padded (0001.pdf)
+			const existingPath = await this.findExistingPdf(manualPdfDir, filename);
+			if (existingPath) {
+				const existingFilename = path.basename(existingPath);
+				pdf.path = `/manuals/${manualId}/${existingFilename}`;
+				stats.skipped++;
+				continue;
+			}
+
+			// Download the PDF using the URL filename
 			const localPath = path.join(manualPdfDir, filename);
 			const relativePath = `/manuals/${manualId}/${filename}`;
 
-			// Check if already downloaded
-			try {
-				await fs.access(localPath);
-				pdf.path = relativePath;
-				stats.skipped++;
-				continue;
-			} catch {
-				// File doesn't exist, download it
-			}
-
-			// Download the PDF
 			try {
 				const pdfBuffer = await this.downloadPdf(pdf.url);
 				await fs.writeFile(localPath, pdfBuffer);
@@ -910,6 +911,48 @@ export class ScrapeCommand {
 		}
 
 		return stats;
+	}
+
+	/**
+	 * Find existing PDF file, checking both unpadded and padded filenames
+	 * e.g., for "1.pdf", also checks "0001.pdf", "001.pdf", "01.pdf"
+	 */
+	private async findExistingPdf(dir: string, filename: string): Promise<string | null> {
+		// Try exact filename first
+		const exactPath = path.join(dir, filename);
+		try {
+			await fs.access(exactPath);
+			return exactPath;
+		} catch {
+			// Not found, try padded versions
+		}
+
+		// Extract base name and extension (e.g., "1" and ".pdf")
+		const ext = path.extname(filename);
+		const base = path.basename(filename, ext);
+
+		// If base is numeric, try padded versions
+		const num = Number.parseInt(base, 10);
+		if (!Number.isNaN(num)) {
+			const paddedVersions = [
+				num.toString().padStart(4, "0"), // 0001
+				num.toString().padStart(3, "0"), // 001
+				num.toString().padStart(2, "0"), // 01
+			];
+
+			for (const padded of paddedVersions) {
+				if (padded === base) continue; // Skip if same as original
+				const paddedPath = path.join(dir, `${padded}${ext}`);
+				try {
+					await fs.access(paddedPath);
+					return paddedPath;
+				} catch {
+					// Not found, try next
+				}
+			}
+		}
+
+		return null;
 	}
 
 	/**
