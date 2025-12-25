@@ -5,6 +5,44 @@
 		"ja": "LBXパンドラ (宇崎悠介専用)",
 		"en": "LBX Pandora (for Yusuke Uzaki only)"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "lbx",
+			"url": "https://bandai-hobby.net/series/lbx/",
+			"ja": "ダンボール戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6991",
+			"url": "https://bandai-hobby.net/item/01_6991/",
+			"ja": "LBXΣオービス"
+		},
+		{
+			"id": "01_6992",
+			"url": "https://bandai-hobby.net/item/01_6992/",
+			"ja": "LBXアキレス・ディード"
+		},
+		{
+			"id": "01_6747",
+			"url": "https://bandai-hobby.net/item/01_6747/",
+			"ja": "LBXオーディーンMk-2"
+		}
+	],
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -39,42 +77,34 @@
 			"*The finished product in the photo is painted. Also, a prototype that is still under development. The actual product may differ. *Due to the manufacturing process, air bubbles may appear in the clear parts. *Product materials may change depending on the production period of the sold product. Thank you for your understanding. *There may be variations in plated parts due to the painting process. Thank you for your understanding. *Depending on sales conditions, the quantity that can be purchased may change in the future."
 		]
 	},
-	"accessories": {
-		"ja": ["ホープ・エッジ"],
-		"en": ["hope edge"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ホープ・エッジ",
+				"en": "hope edge"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6993_0.jpg",
 				"path": "/images/items/01_6993/01_6993_0.jpg",
 				"hash": "4da7b0e66bc8bffa8d9c12901d1c0691"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6993_1.jpg",
 				"path": "/images/items/01_6993/01_6993_1.jpg",
 				"hash": "a705e8add4e6a47d08dace1503159159"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6993_2.jpg",
 				"path": "/images/items/01_6993/01_6993_2.jpg",
 				"hash": "c5cfa41fb7a2eb2c93f9613d7d932dee"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6993_3.jpg",
 				"path": "/images/items/01_6993/01_6993_3.jpg",
 				"hash": "bba03b946ad0a8255dfbdc45d479258f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6993/",
-	"brandIds": ["pb_charapla"],
-	"seriesIds": ["lbx"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_6991", "01_6992", "01_6747"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6993/"
 }

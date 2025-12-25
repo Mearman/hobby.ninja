@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MS オプションパーツセット27(ミネルヴァコスチューム)[カラーA]",
-		"en": "30MS OPTION PARTS SET 27 (MINERVA COSTUME) [COLOR A]"
+		"en": "30MS Option Parts Set 27 (Minerva Costume) [Color A]"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6949",
+			"url": "https://bandai-hobby.net/item/01_6949/",
+			"ja": "30MS SIS-Hc106k ベルベリア=ベリィス(フェローチェフォーム)"
+		},
+		{
+			"id": "01_6950",
+			"url": "https://bandai-hobby.net/item/01_6950/",
+			"ja": "30MS 春日未来 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_6939",
+			"url": "https://bandai-hobby.net/item/01_6939/",
+			"ja": "30MS ルルチェ(リリーウエア)[カラーC]"
+		},
+		{
+			"id": "01_6940",
+			"url": "https://bandai-hobby.net/item/01_6940/",
+			"ja": "30MS オプションパーツセット25(ターボコスチュームγ)[カラーC]"
+		}
+	],
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -20,9 +62,9 @@
 	"description": {
 		"ja": [
 			"30MS素体との組み合わせで世界観が広がる！頭部、腕、脚、武装がセットになったオプションパーツがラインアップ！",
-			"■脚部などの成形色は「30MS リシェッタ(フリージアウエア)［カラーA]」(別売り)と同様の[カラーA]が付属。",
-			"■特徴的なマントや武装も付属。",
-			"■腕、脚に装着可能なリングタイプのジョイントパーツも多数付属し、キャラメイキングの幅が更に拡大！"
+			"• 脚部などの成形色は「30MS リシェッタ(フリージアウエア)［カラーA]」(別売り)と同様の[カラーA]が付属。",
+			"• 特徴的なマントや武装も付属。",
+			"• 腕、脚に装着可能なリングタイプのジョイントパーツも多数付属し、キャラメイキングの幅が更に拡大！"
 		],
 		"en": [
 			"The world view expands when combined with the 30MS body! A lineup of optional parts including a head, arms, legs, and weapons!",
@@ -31,48 +73,115 @@
 			"• Many ring-type joint parts that can be attached to arms and legs are also included, further expanding the range of character creation!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"無塗装フェイスパーツ×1",
-			"頭部パーツ×1式",
-			"ヘアスタイルパーツ×1式",
-			"首パーツ×1式",
-			"腕パーツ×1式",
-			"脚パーツ×1式",
-			"武装パーツ×1式",
-			"ハンドパーツ×1式",
-			"ジョイントパーツ×1式"
-		],
-		"en": [
-			"Unpainted face parts x 1",
-			"Head parts x 1 set",
-			"Hair style parts x 1 set",
-			"Neck parts x 1 set",
-			"Arm parts x 1 set",
-			"Leg parts x 1 set",
-			"Armed parts x 1 set",
-			"Hand parts x 1 set",
-			"Joint parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "無塗装フェイスパーツ",
+				"en": "Unpainted face parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "頭部パーツ",
+				"en": "head parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヘアスタイルパーツ",
+				"en": "hairstyle parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "首パーツ",
+				"en": "neck parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "腕パーツ",
+				"en": "arm parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "脚パーツ",
+				"en": "leg parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "武装パーツ",
+				"en": "armed parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6951_0.jpg",
 				"path": "/images/items/01_6951/01_6951_0.jpg",
 				"hash": "637eb9c7d1f632a623ab38d13662bf45"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6951_1.jpg",
 				"path": "/images/items/01_6951/01_6951_1.jpg",
 				"hash": "8d6afe5f9f326410a1b27ae2a0192ef0"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6951/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_6949", "01_6950", "01_6939", "01_6940"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6951/"
 }

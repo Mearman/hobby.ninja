@@ -5,6 +5,48 @@
 		"ja": "30MS SIS-J00 メルンジャ[カラーA]",
 		"en": "30MS SIS-J00 Melunga [Color A]"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7028",
+			"url": "https://bandai-hobby.net/item/01_7028/",
+			"ja": "30MS オプションヘアスタイルパーツVol.13 全4種 ツインテール1[イエロー5]"
+		},
+		{
+			"id": "01_7029",
+			"url": "https://bandai-hobby.net/item/01_7029/",
+			"ja": "30MS オプションヘアスタイルパーツVol.13 全4種 ツインテール10[ピンク3]"
+		},
+		{
+			"id": "01_7030",
+			"url": "https://bandai-hobby.net/item/01_7030/",
+			"ja": "30MS オプションヘアスタイルパーツVol.13 全4種 ミディアムヘア7[ブルー2]"
+		},
+		{
+			"id": "01_7031",
+			"url": "https://bandai-hobby.net/item/01_7031/",
+			"ja": "30MS オプションヘアスタイルパーツVol.13 全4種 ミディアムヘア8[ブラック1]"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -20,47 +62,83 @@
 	"description": {
 		"ja": [
 			"「30 MINUTES SISTERS」シリーズに新たなシスター「30MS SIS-J00 メルンジャ[カラーA]」が登場！",
-			"■キャラクター素体、タンポ印刷を施した3種類の表情パーツ、武器パーツが一式セット。",
-			"■フェイスパーツはタンポ印刷により豊かな表情が付属。口の中の色分けはパーツ分割で再現。",
-			"■眼帯を再現可能な立体的なシールが付属。",
-			"■パーツの付け替えにより、袖の形状を2種類から選択可能。",
-			"■フードはパーツの差し替えで着脱可能。",
-			"■「30 MINUTES SISTERS」はフェイスパーツ/ヘアスタイルパーツ/ボディパーツを部位ごとにラインアップ展開。別売りのパーツと組み替えて自分好みのシスターを創ることができる。",
-			"■30 MINUTES LABEL共通の3mmジョイントを採用。他シリーズのパーツもオプションとして装着が可能。"
+			"• キャラクター素体、タンポ印刷を施した3種類の表情パーツ、武器パーツが一式セット。",
+			"• フェイスパーツはタンポ印刷により豊かな表情が付属。口の中の色分けはパーツ分割で再現。",
+			"• 眼帯を再現可能な立体的なシールが付属。",
+			"• パーツの付け替えにより、袖の形状を2種類から選択可能。",
+			"• フードはパーツの差し替えで着脱可能。",
+			"• 「30 MINUTES SISTERS」はフェイスパーツ/ヘアスタイルパーツ/ボディパーツを部位ごとにラインアップ展開。別売りのパーツと組み替えて自分好みのシスターを創ることができる。",
+			"• 30 MINUTES LABEL共通の3mmジョイントを採用。他シリーズのパーツもオプションとして装着が可能。"
 		],
 		"en": [
-			"A new sister \"30MS SIS-J00 Melunja [Color A]\" is now available in the \" 30 MINUTES SISTERS\" series!",
+			"A new sister \"30MS SIS-J00 Melunja [Color A]\" is now available in the \"30 MINUTES SISTERS\" series!",
 			"• Complete set of character body, 3 types of facial expression parts with tampo printing, and weapon parts.",
 			"• Face parts come with rich facial expressions thanks to tampo printing. The color coding inside the mouth is reproduced by dividing the parts.",
-			"• Comes with a three-dimensional Seal that can reproduce an eyepatch.",
+			"• Comes with a three-dimensional seal that can reproduce an eyepatch.",
 			"• By replacing parts, you can choose from two types of sleeve shapes.",
 			"• The hood can be attached or removed by replacing parts.",
 			"• \"30 MINUTES SISTERS\" offers a lineup of face parts, hairstyle parts, and body parts by body part. You can create your own sister by combining parts sold separately.",
 			"• Adopts 3mm joint common to 30 MINUTES LABEL. Parts from other series can also be installed as options."
 		]
 	},
-	"accessories": {
-		"ja": ["フェイスパーツ(タンポ印刷)×3種", "ハンドパーツ×1式", "武装パーツ×1式", "シール×1式"],
-		"en": ["Face parts (tampo printing) x 3 types", "Hand parts x 1 set", "Armed parts x 1 set", "Seal×1 type"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フェイスパーツ(タンポ印刷)",
+				"en": "Face parts (tampo printing)"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "武装パーツ",
+				"en": "armed parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_7027_0.jpg",
 				"path": "/images/items/01_7027/01_7027_0.jpg",
 				"hash": "ce4771b6d3d238c56f7c8bac529cae4a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7027_1.jpg",
 				"path": "/images/items/01_7027/01_7027_1.jpg",
 				"hash": "2e3c6e99d424b7cf184b375c34871dbc"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_7027/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_7028", "01_7029", "01_7030", "01_7031"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_7027/"
 }

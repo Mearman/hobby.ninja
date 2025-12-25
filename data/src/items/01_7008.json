@@ -5,6 +5,54 @@
 		"ja": "30MS オプションヘアスタイル&フェイスパーツセット(西城樹里/有栖川夏葉)",
 		"en": "30MS Optional Hairstyle & Face Parts Set (Juri Saijo/Natsuha Arisugawa)"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [
+		{
+			"id": "idolmaster",
+			"url": "https://bandai-hobby.net/series/idolmaster/",
+			"ja": "アイドルマスターシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7012",
+			"url": "https://bandai-hobby.net/item/01_7012/",
+			"ja": "30MS 小宮果穂"
+		},
+		{
+			"id": "01_7013",
+			"url": "https://bandai-hobby.net/item/01_7013/",
+			"ja": "30MS 櫻木真乃 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_6950",
+			"url": "https://bandai-hobby.net/item/01_6950/",
+			"ja": "30MS 春日未来 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_6934",
+			"url": "https://bandai-hobby.net/item/01_6934/",
+			"ja": "30MS オプションヘアスタイル&フェイスパーツセット(園田智代子/杜野凛世)"
+		}
+	],
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -21,65 +69,74 @@
 		"ja": [
 			"「アイドルマスター シャイニーカラーズ」より、放課後クライマックスガールズの「西城樹里」「有栖川夏葉」のヘアスタイルパーツとフェイスパーツのセット商品。",
 			"別売りの30MSオプションボディパーツと組み合わせてアイドルたちを様々なコスチュームに着せ替え可能。",
-			"■繊細な髪の流れを丁寧に立体化、ポーズに合わせてなびく動きを表現。",
-			"■衣装のデザインに合わせて、パーツの着脱で髪飾りの無い状態も再現可能。",
-			"■表情パーツはタンポ印刷を施し、各2種類ずつ付属。",
-			"■別売りの「30MS オプションボディパーツ ビヨンドザブルースカイ1[カラーA]」、「30MS オプションボディパーツ ビヨンドザブルースカイ2[カラーA]」等と組み合わせ可能！"
+			"• 繊細な髪の流れを丁寧に立体化、ポーズに合わせてなびく動きを表現。",
+			"• 衣装のデザインに合わせて、パーツの着脱で髪飾りの無い状態も再現可能。",
+			"• 表情パーツはタンポ印刷を施し、各2種類ずつ付属。",
+			"• 別売りの「30MS オプションボディパーツ ビヨンドザブルースカイ1[カラーA]」、「30MS オプションボディパーツ ビヨンドザブルースカイ2[カラーA]」等と組み合わせ可能！"
 		],
 		"en": [
-			"From \"THE IDOLM@STER Shiny Colors \", this is a set of hair style parts and face parts for \" Juri Saijo \" and \" Natsuha Arisugawa\" from After School Climax Girls.",
+			"From \"THE IDOLM@STER Shiny Colors\", this is a set of hair style parts and face parts for \"Juri Saijo\" and \"Natsuha Arisugawa\" from After School Climax Girls.",
 			"Idols can be dressed up in various costumes by combining with the 30MS optional body parts (sold separately).",
 			"• The delicate flow of her hair has been carefully sculpted into three-dimensional form to express fluttering movements that match the pose.",
 			"• Depending on the costume design, you can also recreate the state without the hair ornament by attaching and detaching parts.",
 			"• Two types of facial expression parts are included with tampo printing.",
-			"• Can be combined with the separately sold \"30MS Optional Body Parts Beyond the Blue Sky 1 [Color A]\", \" 30MS Optional Body Parts Beyond the Blue Sky 2 [Color A]\", etc.!"
+			"• Can be combined with the separately sold \"30MS Optional Body Parts Beyond the Blue Sky 1 [Color A]\", \"30MS Optional Body Parts Beyond the Blue Sky 2 [Color A]\", etc.!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"西城樹里フェイスパーツ(タンポ印刷)×2種",
-			"有栖川夏葉フェイスパーツ(タンポ印刷)×2種",
-			"ヘアスタイルパーツ×各1セット"
-		],
-		"en": [
-			"Juri Saijo face parts (tampo printing) x 2 types",
-			"Arisugawa Natsuha face parts (tampo printing) x 2 types",
-			"Hair style parts x 1 set each"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "西城樹里フェイスパーツ(タンポ印刷)",
+				"en": "Juri Saijo face parts (tampo printing)"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "有栖川夏葉フェイスパーツ(タンポ印刷)",
+				"en": "Arisugawa Natsuha face parts (tampo printing)"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヘアスタイルパーツ×各1セット",
+				"en": "Hair style parts x 1 set each"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_7008_0.jpg",
 				"path": "/images/items/01_7008/01_7008_0.jpg",
 				"hash": "6fa3464d712e44afd022e25969dc011a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7008_1.jpg",
 				"path": "/images/items/01_7008/01_7008_1.jpg",
 				"hash": "0b2d68c7abf79b8431ebc4465c78202d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7008_2.jpg",
 				"path": "/images/items/01_7008/01_7008_2.jpg",
 				"hash": "b8ffdd359dcd30a7d652bea0e14f39a4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7008_3.jpg",
 				"path": "/images/items/01_7008/01_7008_3.jpg",
 				"hash": "f54d48e5b2cadb8b8e3dbb5a3dd33b3f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7008_4.jpg",
 				"path": "/images/items/01_7008/01_7008_4.jpg",
 				"hash": "7f41d59c044642844e570986a65fec06"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_7008/",
-	"brandIds": ["30ms"],
-	"seriesIds": ["idolmaster"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_7012", "01_7013", "01_6950", "01_6934"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_7008/"
 }

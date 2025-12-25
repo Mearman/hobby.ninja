@@ -5,6 +5,60 @@
 		"ja": "MG 1/100 ガンダムアストレイミラージュフレーム セカンドイシュー",
 		"en": "MG 1/100 Gundam Astray Mirage Frame Second Issue"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "astrays",
+			"url": "https://bandai-hobby.net/series/astrays/",
+			"ja": "機動戦士ガンダムSEED ASTRAY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000134497",
+			"url": "https://p-bandai.jp/item/item-1000134497",
+			"ja": "ＲＧ 1/144 ガンダムアストレイ ゴールドフレーム天（アマツ）ハナ"
+		},
+		{
+			"id": "item-1000116090",
+			"url": "http://p-bandai.jp/item/item-1000116090/",
+			"ja": "ＲＧ 1/144 ガンダムアストレイ ゴールドフレーム天（アマツ）"
+		},
+		{
+			"id": "item-1000145557",
+			"url": "https://p-bandai.jp/item/item-1000145557",
+			"ja": "ＲＧ 1/144 ガンダムアストレイゴールドフレーム"
+		},
+		{
+			"id": "item-1000114752",
+			"url": "https://p-bandai.jp/item/item-1000114752",
+			"ja": "ＲＧ 1/144 ガンダムアストレイ ブルーフレーム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 6600,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 11
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－超至近距離の格闘戦特化型機体、出る！－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -34,7 +87,7 @@
 		],
 		"en": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－超至近距離の格闘戦特化型機体、出る！ －－－－－－－－－－－－－－－－－－－－－－－－－－",
-			"From \"Mobile Suit Gundam SEED VS ASTRAY \", the Gundam Astray Mirage Frame 2nd Issue, a machine with further modifications to the Mirage Frame, is now available in the MG series with new modeling! The characteristic body color is reproduced with molding color, and it can also be transformed into a quadrupedal \" brute mode\".",
+			"From \"Mobile Suit GundamSEED VS ASTRAY\", the Gundam Astray Mirage Frame 2nd Issue, a machine with further modifications to the Mirage Frame, is now available in the MG series with new modeling! The characteristic body color is reproduced with molding color, and it can also be transformed into a quadrupedal \"brute mode\".",
 			"- Under the supervision of designer Junichi Akutsu, three-dimensional with a new design! Reproduce the aircraft color and shape with new molded parts.",
 			"The characteristic shapes of each part of the second issue are reproduced by finely divided parts.",
 			"- Can be posed with MG standard armament Comes with a variety of equipment such as beam rifle / beam saber / anti-beam seal / C sword A type / C sword B type. Reproduce the newly designed C (compact) sword. It is called B (bracelet) type. The C sword that is attached to the leg is called the A (anklet) type.",
@@ -46,66 +99,73 @@
 			"*The finished product in the photo is painted. Also, a prototype that is still under development. The actual product may differ. *Due to the manufacturing process, air bubbles may appear in the clear parts. *Product materials may change depending on the production period of the sold product. Thank you for your understanding. *There may be variations in plated parts due to the painting process. Thank you for your understanding. *Depending on sales conditions, the quantity that can be purchased may change in the future."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームライフル",
-			"ビームサーベル",
-			"対ビームシールド付属品：ロンド・ギナ・サハクフィギュア×２",
-			"エフェクトパーツ一式",
-			"アクションベース"
-		],
-		"en": [
-			"beam rifle",
-			"beam saber",
-			"Anti-beam Seal accessories: Rondo Gina Sahaku figure x 2",
-			"Effect parts set",
-			"action base"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "beam rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "beam saber"
+			}
+		},
+		{
+			"name": {
+				"ja": "対ビームシールド付属品：ロンド・ギナ・サハクフィギュア×２",
+				"en": "Anti-beam Seal accessories: Rondo Gina Sahaku figure x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "エフェクトパーツ一式",
+				"en": "Effect parts set"
+			}
+		},
+		{
+			"name": {
+				"ja": "アクションベース",
+				"en": "action base"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6958_0.jpg",
 				"path": "/images/items/01_6958/01_6958_0.jpg",
 				"hash": "477a19cf29c249fc225cf11eb5a280c0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6958_1.jpg",
 				"path": "/images/items/01_6958/01_6958_1.jpg",
 				"hash": "9790df4b8b69fd406efe2e8bb4c86129"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6958_2.jpg",
 				"path": "/images/items/01_6958/01_6958_2.jpg",
 				"hash": "1c3a909a3090cb8163ea96f3dfac2dd0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6958_3.jpg",
 				"path": "/images/items/01_6958/01_6958_3.jpg",
 				"hash": "e42747d04edb6b7b1e23eb59761be633"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6958_4.jpg",
 				"path": "/images/items/01_6958/01_6958_4.jpg",
 				"hash": "aa87e1ba7b424cd56b428a826c87d770"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6958_5.jpg",
 				"path": "/images/items/01_6958/01_6958_5.jpg",
 				"hash": "54b6e5d40d5fca0112affcb11d3b78a7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6958_6.jpg",
 				"path": "/images/items/01_6958/01_6958_6.jpg",
 				"hash": "4ee3cee12aa0e2c24549584a2b7b1622"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6958_7.jpg",
 				"path": "/images/items/01_6958/01_6958_7.jpg",
 				"hash": "185714179be0d49944b3a87e413eb3e9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6958_8.jpg",
 				"path": "/images/items/01_6958/01_6958_8.jpg",
 				"hash": "db09f17a686656fa9d6d2cdda3572020"
 			}
@@ -113,14 +173,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6958/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": ["astrays"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000134497", "item-1000116090", "item-1000145557", "item-1000114752"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "4003",
 		"url": "https://manual.bandai-hobby.net/menus/detail/4003/"

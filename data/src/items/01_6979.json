@@ -5,6 +5,60 @@
 		"ja": "MGEX 1/100 ストライクフリーダムガンダム [メカニカルクリア]",
 		"en": "MGEX 1/100 Strike Freedom Gundam [Mechanical Clear]"
 	},
+	"brands": [
+		{
+			"id": "mgex",
+			"url": "https://bandai-hobby.net/brand/mgex/",
+			"ja": "MGEX [マスターグレードエクストリーム]"
+		},
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6800",
+			"url": "https://bandai-hobby.net/item/01_6800/",
+			"ja": "MG 1/100 ブレイズザクファントム (ディアッカ・エルスマン専用機)"
+		},
+		{
+			"id": "item-1000214960",
+			"url": "https://p-bandai.jp/item/item-1000214960/",
+			"ja": "ＲＧ 1/144 アカツキガンダム用シラヌイパック & ＨＧゼウスシルエット用接続パーツ"
+		},
+		{
+			"id": "item-1000203308",
+			"url": "https://p-bandai.jp/item/item-1000203308/",
+			"ja": "ＨＧ 1/144 ダークダガーＬ"
+		},
+		{
+			"id": "item-1000183862",
+			"url": "https://p-bandai.jp/item/item-1000183862/",
+			"ja": "ＭＧ 1/100 ガナーウィザード／スラッシュウィザード／ブレイズウィザードセット"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 18700,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 1
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－自 由 （ フ リ ー ダ ム ） を 極 限 ま で 表 現 ！メ カ ニ カ ル ク リ ア で 出 撃 ！－－－－－－－－－－－－－－－－－－－－",
@@ -31,7 +84,7 @@
 		],
 		"en": [
 			"－－－－－－－－－－－－－－－－－－－－ Express your freedom to the utmost! Sortie with mechanical clear! －－－－－－－－－－－－－－－－－－－－",
-			"From \"Mobile Suit Gundam SEED DESTINY \", Strike Freedom Gundam is now available with mechanical clear specifications! By making Gunpla's best-ever \" metal expression\" mechanically clear, you can enjoy the internal structure down to the smallest detail.",
+			"From \"Mobile Suit Gundam SEED DESTINY\", Strike Freedom Gundam is now available with mechanical clear specifications! By making Gunpla's best-ever \"metal expression\" mechanically clear, you can enjoy the internal structure down to the smallest detail.",
 			"● Reproduce the ultimate metal expression with mechanical clear. Express the metallic feel of the internal frame with multiple metal expressions. Clear exterior parts allow you to visualize every detail of the MS. Create a sense of luxury!",
 			"● Equipped with a \"frame-linked movable gimmick\" that allows you to create the poses you envision. The movable gimmicks on each part of the armor slide in conjunction to achieve smooth movement.",
 			"● Comes with a wide variety of weapons! Long Range Beam Rifle You can reproduce a long range beam rifle by connecting two beam rifles back and forth. Super Lacerta Beam Saber The two included beam sabers can be connected and combined. Xyphias 3 rail gun",
@@ -40,79 +93,78 @@
 			"*The finished product in the photo is a prototype that is still under development. There may be slight differences from the actual product. *The image emphasizes the mechanical clear image, and there are some areas where the seal is not pasted. Customers can choose whether or not to use a seal. *Due to the manufacturing process, air bubbles may appear in the clear parts. *Due to the arrangement of parts, there are some parts where the plating is thin. Thank you for your understanding. *Product materials may change depending on the production period of the sold product. Thank you for your understanding."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームライフル ×２付属品：ハンドパーツ一式",
-			"エフェクトパーツ一式",
-			"フィギュア×２（キラ・ヤマト",
-			"ラクス・クライン）",
-			"ディスプレイベース"
-		],
-		"en": [
-			"Beam rifle x2 Accessories: Hand parts set",
-			"Effect parts set",
-			"Figure x 2 (Kira Yamato",
-			"Lacus Clyne)",
-			"display base"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル ×２付属品：ハンドパーツ一式",
+				"en": "Beam rifle x2 Accessories: Hand parts set"
+			}
+		},
+		{
+			"name": {
+				"ja": "エフェクトパーツ一式",
+				"en": "Effect parts set"
+			}
+		},
+		{
+			"name": {
+				"ja": "フィギュア×２（キラ・ヤマト",
+				"en": "Figure x 2 (Kira Yamato"
+			}
+		},
+		{
+			"name": {
+				"ja": "ラクス・クライン）",
+				"en": "Lacus Clyne)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース",
+				"en": "display base"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6979_0.jpg",
 				"path": "/images/items/01_6979/01_6979_0.jpg",
 				"hash": "f625f4c25dde08794d2b89dc26f7a911"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6979_1.jpg",
 				"path": "/images/items/01_6979/01_6979_1.jpg",
 				"hash": "934c908c97dfe1e73637df4906fe5b6c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6979_2.jpg",
 				"path": "/images/items/01_6979/01_6979_2.jpg",
 				"hash": "7119e656709e1396e27bbfbc3695c6cf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6979_3.jpg",
 				"path": "/images/items/01_6979/01_6979_3.jpg",
 				"hash": "dfdd7394d8d2668d65741a4c012f5ac4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6979_4.jpg",
 				"path": "/images/items/01_6979/01_6979_4.jpg",
 				"hash": "f6e16f79f558158da23ce2d7a793b38c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6979_5.jpg",
 				"path": "/images/items/01_6979/01_6979_5.jpg",
 				"hash": "95b593c356d23a35080243f975eff274"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6979_6.jpg",
 				"path": "/images/items/01_6979/01_6979_6.jpg",
 				"hash": "93915b52b79b5497f52c8328a4479507"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6979_7.jpg",
 				"path": "/images/items/01_6979/01_6979_7.jpg",
 				"hash": "7b893fd65c2906bfc9b1c800a64eb4e3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6979_8.jpg",
 				"path": "/images/items/01_6979/01_6979_8.jpg",
 				"hash": "2f54b5b124e2d5bb9d11f64555c3ff67"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6979/",
-	"brandIds": ["mgex", "mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": ["seed-d"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6800", "item-1000214960", "item-1000203308", "item-1000183862"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6979/"
 }

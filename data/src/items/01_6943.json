@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 bEXM-15FA フルアーマーポルタノヴァ",
-		"en": "30MM 1/144 bEXM-15FA FULL ARMOR PORTANOVA"
+		"en": "30MM 1/144 bEXM-15FA Full Armor Portanova"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6937",
+			"url": "https://bandai-hobby.net/item/01_6937/",
+			"ja": "30MM 1/144 eEXM-23 テックプロト 02"
+		},
+		{
+			"id": "01_6930",
+			"url": "https://bandai-hobby.net/item/01_6930/",
+			"ja": "30MM 1/144 eEXM-23 テックプロト 01"
+		},
+		{
+			"id": "01_6774",
+			"url": "https://bandai-hobby.net/item/01_6774/",
+			"ja": "30MM 1/144 エグザビークル(ブーストワイルドバイクVer.)"
+		},
+		{
+			"id": "01_6775",
+			"url": "https://bandai-hobby.net/item/01_6775/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON ARQUEBUS ADD VE-40A"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2178,
 		"currency": "JPY",
@@ -17,16 +60,15 @@
 		"month": 3
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMシリーズを代表する機体「ポルタノヴァ」が待望のフルアーマー化！強力な武装を携え再び戦場にその姿を現す！",
-			"■従来のポルタノヴァのカスタマイズ性をさらに引き上げる中間アーマーが付属。中間アーマーを経由しフルアーマー状態にグレードアップ。",
-			"■ライフルが付属。フルアーマー状態でも大胆なアクションポーズが可能。",
-			"■アックスは先端が可動。合体させて大型アックスに。",
-			"■付属するアックスとライフルはバックパックにマウントが可能。",
-			"■支援メカ「ロイロイ」もフルアーマー化。ジョイントの追加によりカスタマイズ性がアップ。",
-			"■「30MM 1/144 指揮官機用オプションアーマー[ポルタノヴァ用/レッド]｣（別売り）に付属するアーマーパーツの一部が新規カラーリングで付属。"
+			"• 従来のポルタノヴァのカスタマイズ性をさらに引き上げる中間アーマーが付属。中間アーマーを経由しフルアーマー状態にグレードアップ。",
+			"• ライフルが付属。フルアーマー状態でも大胆なアクションポーズが可能。",
+			"• アックスは先端が可動。合体させて大型アックスに。",
+			"• 付属するアックスとライフルはバックパックにマウントが可能。",
+			"• 支援メカ「ロイロイ」もフルアーマー化。ジョイントの追加によりカスタマイズ性がアップ。",
+			"• 「30MM 1/144 指揮官機用オプションアーマー[ポルタノヴァ用/レッド]｣（別売り）に付属するアーマーパーツの一部が新規カラーリングで付属。"
 		],
 		"en": [
 			"The long-awaited full armor version of the 30MM series representative aircraft \"Portanova\"! It reappears on the battlefield armed with powerful weapons!",
@@ -38,58 +80,83 @@
 			"• Some of the armor parts included with \"30MM 1/144 Optional Armor for Commander Aircraft [Portanova/Red]\" (sold separately) are included in new coloring."
 		]
 	},
-	"accessories": {
-		"ja": ["アーマーパーツ×1式", "ロイロイ×1", "アックス×2", "ライフル×2", "ガントレット×2"],
-		"en": ["Armor parts x 1 set", "Loi Loi x 1", "Ax x2", "Rifle x 2", "Gauntlet x 2"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "アーマーパーツ",
+				"en": "armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ロイロイ",
+				"en": "Loi Loi"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アックス",
+				"en": "ax"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ライフル",
+				"en": "rifle"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ガントレット",
+				"en": "gauntlet"
+			},
+			"count": 2
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6943_0.jpg",
 				"path": "/images/items/01_6943/01_6943_0.jpg",
 				"hash": "9de485118f4584ac764a8e12e10df106"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6943_1.jpg",
 				"path": "/images/items/01_6943/01_6943_1.jpg",
 				"hash": "855cabd25d4c7174404f0827514d5374"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6943_2.jpg",
 				"path": "/images/items/01_6943/01_6943_2.jpg",
 				"hash": "c56f3fb2ffc7a0aaa8b2cc361e7520a2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6943_3.jpg",
 				"path": "/images/items/01_6943/01_6943_3.jpg",
 				"hash": "4542f0f73c7ee6a1136161526c1665c2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6943_4.jpg",
 				"path": "/images/items/01_6943/01_6943_4.jpg",
 				"hash": "aac0698fd69149c4ec49095913e472d1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6943_5.jpg",
 				"path": "/images/items/01_6943/01_6943_5.jpg",
 				"hash": "b45707f5e74c536a4efc7d5e985c17b4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6943_6.jpg",
 				"path": "/images/items/01_6943/01_6943_6.jpg",
 				"hash": "3ba7fb11206e286abe46f2a859799987"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6943_7.jpg",
 				"path": "/images/items/01_6943/01_6943_7.jpg",
 				"hash": "ce7d3ab149b53f9106fd13f535f37c73"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6943/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_6937", "01_6930", "01_6774", "01_6775"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6943/"
 }

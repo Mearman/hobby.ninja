@@ -2,9 +2,56 @@
 	"id": "01_7022",
 	"type": "item",
 	"name": {
-		"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON ARQUEBUS CORPORATION VP-40S",
-		"en": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON ARQUEBUS CORPORATION VP-40S"
+		"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON ARQUEBUS CORPORATION VP-40S"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [
+		{
+			"id": "armoredcore",
+			"url": "https://bandai-hobby.net/series/armoredcore/",
+			"ja": "ARMORED CORE Ⅵ FIRES OF RUBICON"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6945",
+			"url": "https://bandai-hobby.net/item/01_6945/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON ARQUEBUS CORPORATION VP-40S ロックスミス"
+		},
+		{
+			"id": "01_6775",
+			"url": "https://bandai-hobby.net/item/01_6775/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON ARQUEBUS ADD VE-40A"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		}
+	],
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -21,40 +68,56 @@
 		"ja": [
 			"『ARMORED CORE VI FIRES OF RUBICON』のアイテムが『30 MINUTES MISSIONS』シリーズで商品化。",
 			"シリーズのキーコンセプト「シンプル組み立て」「カスタム遊び」のもと、アーキバス製AC「VP-40S」を商品化。",
-			"■頭部、コア、腕部、脚部それぞれにシリーズ共通構造を採用し、ゲーム内同様に「アセンブル」をプラモデルで楽しめる。",
-			"■両肩武器と一部左手武器の取り付けには3mmジョイントを採用し様々なアセンブルに対応可能。",
-			"■武器は「VP-66LH」が付属。"
+			"• 頭部、コア、腕部、脚部それぞれにシリーズ共通構造を採用し、ゲーム内同様に「アセンブル」をプラモデルで楽しめる。",
+			"• 両肩武器と一部左手武器の取り付けには3mmジョイントを採用し様々なアセンブルに対応可能。",
+			"• 武器は「VP-66LH」が付属。"
 		],
 		"en": [
-			"\"ARMORED CORE VI FIRES OF RUBICON \" items are commercialized in the \" 30 MINUTES MISSIONS\" series.",
-			"Based on the series' key concepts of \"simple assembly \" and \" custom play,\" we have commercialized the AC \" VP-40S\" made by Archibus.",
+			"\"ARMORED CORE VI FIRES OF RUBICON\" items are commercialized in the \"30 MINUTES MISSIONS\" series.",
+			"Based on the series' key concepts of \"Simple Assembly\" and \"Customized Play,\" we have commercialized the AC \"VP-40S\" manufactured by Archibus.",
 			"• The head, core, arms, and legs each use the same structure as the series, allowing you to enjoy \"assembling\" the plastic model just like in the game.",
 			"• 3mm joints are used to attach both shoulder weapons and some left-handed weapons, allowing for a variety of assemblies.",
 			"• \"VP-66LH\" weapon is included."
 		]
 	},
-	"accessories": {
-		"ja": ["VP-66LH×1", "ジョイントパーツ×1式", "マーキングシール×1"],
-		"en": ["VP-66LH×1", "Joint parts x 1 set", "MarkingSeal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "VP-66LH"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_7022_0.jpg",
 				"path": "/images/items/01_7022/01_7022_0.jpg",
 				"hash": "555d86c37211d04462a0bd4da1b45fef"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7022_1.jpg",
 				"path": "/images/items/01_7022/01_7022_1.jpg",
 				"hash": "e6bf18c1b7cb6b1d1c40a716041ccff0"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_7022/",
-	"brandIds": ["30mm"],
-	"seriesIds": ["armoredcore"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_6945", "01_6775", "01_5973", "01_5974"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_7022/"
 }

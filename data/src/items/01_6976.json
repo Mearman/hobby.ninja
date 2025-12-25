@@ -5,6 +5,60 @@
 		"ja": "HG 1/144 G-セルフ(大気圏用パック&宇宙用パック)(劇場版『Gのレコンギスタ』Ver.)",
 		"en": "HG 1/144 G-Self (Atmospheric pack & Space pack) (Theatrical version \"G's Reconguista\" Ver.)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "g-reco",
+			"url": "https://bandai-hobby.net/series/g-reco/",
+			"ja": "ガンダム Gのレコンギスタ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6741",
+			"url": "https://bandai-hobby.net/item/01_6741/",
+			"ja": "HG 1/144 ガンダムベース限定 ユニコーンガンダム3号機 フェネクス(デストロイモード)GOLD & SILVER COATING SET"
+		},
+		{
+			"id": "01_5515",
+			"url": "https://bandai-hobby.net/item/01_5515/",
+			"ja": "HG 1/144 ガンダムベース限定 G-セルフ (パーフェクトパック装備型) (劇場版『Gのレコンギスタ』Ver.)"
+		},
+		{
+			"id": "item-1000098380",
+			"url": "https://p-bandai.jp/item/item-1000098380",
+			"ja": "ＨＧ 1/144 ガンダムG-セルフ(リフレクターパック装備型)"
+		},
+		{
+			"id": "01_363",
+			"url": "https://bandai-hobby.net/item/01_363/",
+			"ja": "HG 1/144 カバカーリー"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 6050,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 1
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－大気圏から宇宙まで――２つのバックパックでG-セルフ出撃！－－－－－－－－－－－－－－－－－－－－－",
@@ -40,82 +93,98 @@
 			"*The finished product in the photo is painted. Also, a prototype that is still under development. The actual product may differ. *Due to the manufacturing process, air bubbles may appear in the clear parts. *Product materials may change depending on the production period of the sold product. Thank you for your understanding. *There may be variations in plated parts due to the painting process. Thank you for your understanding. *Depending on sales conditions, the quantity that can be purchased may change in the future."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"大気圏用パック",
-			"宇宙用パック",
-			"ビーム・ライフル(アメリア製)",
-			"ビーム・ライフル(トワサンガ製)",
-			"ビーム・サーベル×２",
-			"シールド(アメリア製)",
-			"シールド(トワサンガ製)",
-			"コア・ファイター　付属品：アクションベース７",
-			"ハンドパーツ一式"
-		],
-		"en": [
-			"atmospheric pack",
-			"space pack",
-			"Beam rifle (made by Amelia)",
-			"Beam rifle (manufactured by Towasanga)",
-			"Beam saber x2",
-			"Seal (made by Amelia)",
-			"Seal (made by Towasanga)",
-			"Core Fighter Accessories: Action Base 7",
-			"Hand parts set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "大気圏用パック",
+				"en": "atmospheric pack"
+			}
+		},
+		{
+			"name": {
+				"ja": "宇宙用パック",
+				"en": "space pack"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・ライフル(アメリア製)",
+				"en": "Beam rifle (made by Amelia)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・ライフル(トワサンガ製)",
+				"en": "Beam rifle (manufactured by Towasanga)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル×２",
+				"en": "Beam saber x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド(アメリア製)",
+				"en": "Seal (made by Amelia)"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド(トワサンガ製)",
+				"en": "Seal (made by Towasanga)"
+			}
+		},
+		{
+			"name": {
+				"ja": "コア・ファイター　付属品：アクションベース７",
+				"en": "Core Fighter Accessories: Action Base 7"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ一式",
+				"en": "Hand parts set"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6976_0.jpg",
 				"path": "/images/items/01_6976/01_6976_0.jpg",
 				"hash": "f2c56009244a110d41cd37acdc86d686"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6976_1.jpg",
 				"path": "/images/items/01_6976/01_6976_1.jpg",
 				"hash": "c31a1bb0eccd65a76d3f9e1df40fccc6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6976_2.jpg",
 				"path": "/images/items/01_6976/01_6976_2.jpg",
 				"hash": "773a3b9985fbd606e0248d706a63e899"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6976_3.jpg",
 				"path": "/images/items/01_6976/01_6976_3.jpg",
 				"hash": "dd4535fd4d88a8929e9bcf3619e2f236"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6976_4.jpg",
 				"path": "/images/items/01_6976/01_6976_4.jpg",
 				"hash": "7e355dc4d84137a00a29c167447b5cf4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6976_5.jpg",
 				"path": "/images/items/01_6976/01_6976_5.jpg",
 				"hash": "a45ac7c92232728fb1e2068231b44d3c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6976_6.jpg",
 				"path": "/images/items/01_6976/01_6976_6.jpg",
 				"hash": "65accaf5c2cf8fbed6e2d1d081c631cf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6976_7.jpg",
 				"path": "/images/items/01_6976/01_6976_7.jpg",
 				"hash": "5e31bc9c8e4b66fbd96a9004e561cd48"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6976/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["g-reco"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6741", "01_5515", "item-1000098380", "01_363"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6976/"
 }

@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 bEXM-40 ノヴァルヴ[グリーン]",
 		"en": "30MM 1/144 bEXM-40 Novalve [Green]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7020",
+			"url": "https://bandai-hobby.net/item/01_7020/",
+			"ja": "30MM 1/144 オプションパーツセット23(フルアーマーユニット2)"
+		},
+		{
+			"id": "01_7021",
+			"url": "https://bandai-hobby.net/item/01_7021/",
+			"ja": "30MM 1/144 オプションパーツセット24(マルチオブジェクト1)"
+		},
+		{
+			"id": "01_7022",
+			"url": "https://bandai-hobby.net/item/01_7022/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON ARQUEBUS CORPORATION VP-40S"
+		},
+		{
+			"id": "01_7023",
+			"url": "https://bandai-hobby.net/item/01_7023/",
+			"ja": "30MM オプションパーツセット ARMORED CORE Ⅵ FIRES OF RUBICON WEAPON SET 07"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1430,
 		"currency": "JPY",
@@ -17,26 +60,25 @@
 		"month": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"バイロン軍から、機能性と拡張性に特化した新たな主力量産機「ノヴァルヴ」がロールアウト！！",
-			"■30MMシリーズにより手を伸ばしやすくなるエントリーモデル。",
+			"• 30MMシリーズにより手を伸ばしやすくなるエントリーモデル。",
 			"初心者にもスターターとしておすすめできる商品仕様。",
-			"■シリーズの看板ライバル機体が「ポルタノヴァ」から「ノヴァルヴ」に交代。",
+			"• シリーズの看板ライバル機体が「ポルタノヴァ」から「ノヴァルヴ」に交代。",
 			"シリーズの新たな看板機体「イグライト」の前に立ちはだかる。",
-			"■パーツ・ジョイントを簡略化し、さらに早く、簡単に組み立てられる。",
-			"■タッチゲートを採用。ニッパーなしでより手軽に、より早く簡単に組み立てられる仕様を追求。",
-			"■スリムな造形に、シリーズ共通の3mmジョイントを多数配置。",
-			"■30MMの支援メカ「ロイロイ」が新デザインで2体付属。1キットで部隊感を手軽に楽しめる。",
-			"■ロイロイはそれぞれがノヴァルヴの武器として使用できる。",
-			"■腕部に可動する3mmジョイントを搭載。約180度回転するため、装備や装甲を様々な方向から接続できる。"
+			"• パーツ・ジョイントを簡略化し、さらに早く、簡単に組み立てられる。",
+			"• タッチゲートを採用。ニッパーなしでより手軽に、より早く簡単に組み立てられる仕様を追求。",
+			"• スリムな造形に、シリーズ共通の3mmジョイントを多数配置。",
+			"• 30MMの支援メカ「ロイロイ」が新デザインで2体付属。1キットで部隊感を手軽に楽しめる。",
+			"• ロイロイはそれぞれがノヴァルヴの武器として使用できる。",
+			"• 腕部に可動する3mmジョイントを搭載。約180度回転するため、装備や装甲を様々な方向から接続できる。"
 		],
 		"en": [
 			"From the Byron Army, a new main mass-produced machine specializing in functionality and expandability, \"Novalve\", is rolled out! !",
-			"• Entry model that is easy to reach due to the 30MM series.",
+			"• Entry model that is easier to reach due to the 30MM series.",
 			"Product specifications that can be recommended as a starter for beginners.",
-			"• The series' signature rival aircraft has been replaced by \"Novaluv \" from \" Portanova\".",
+			"• The series' signature rival aircraft has been replaced by \"Novaluv\" from \"Portanova\".",
 			"Standing in front of the series' new signature aircraft, \"Iglite.\"",
 			"• Simplify parts and joints for faster and easier assembly.",
 			"• Adopts touch gate. Pursuing specifications that allow easier, faster assembly without nippers.",
@@ -46,33 +88,38 @@
 			"• Equipped with a movable 3mm joint on the arm. It rotates approximately 180 degrees, allowing you to connect equipment and armor from various directions."
 		]
 	},
-	"accessories": {
-		"ja": ["キャノン(ロイロイ)×1", "クロー(ロイロイ)×1"],
-		"en": ["Cannon (Roi Roy) x 1", "Claw (Roi Roy) x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "キャノン(ロイロイ)",
+				"en": "Canon (Roi Roy)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "クロー(ロイロイ)",
+				"en": "Claw (Roi Roy)"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_7019_0.jpg",
 				"path": "/images/items/01_7019/01_7019_0.jpg",
 				"hash": "8a98adb982ed3652936e297ab729aefe"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7019_1.jpg",
 				"path": "/images/items/01_7019/01_7019_1.jpg",
 				"hash": "77c588159120de87f67d5e79bbd1ce82"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7019_2.jpg",
 				"path": "/images/items/01_7019/01_7019_2.jpg",
 				"hash": "45b74ec31ec3043babe9623ece961030"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_7019/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_7020", "01_7021", "01_7022", "01_7023"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_7019/"
 }

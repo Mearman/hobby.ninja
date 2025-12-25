@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムダブルエックス [クリアカラー]",
 		"en": "HG 1/144 Gundam Double X [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "x",
+			"url": "https://bandai-hobby.net/series/x/",
+			"ja": "機動新世紀ガンダムＸ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000147185",
+			"url": "https://p-bandai.jp/item/item-1000147185/",
+			"ja": "ＨＧ 1/144 ドートレス"
+		},
+		{
+			"id": "item-1000147187",
+			"url": "https://p-bandai.jp/item/item-1000147187/",
+			"ja": "ＨＧ 1/144 ガンダムエアマスターバースト"
+		},
+		{
+			"id": "01_160",
+			"url": "https://bandai-hobby.net/item/01_160/",
+			"ja": "HGAW 1/144 ガンダムエアマスター"
+		},
+		{
+			"id": "01_5876",
+			"url": "https://bandai-hobby.net/item/01_5876/",
+			"ja": "HGAW 1/144 ガンダムダブルエックス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 5
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動新世紀ガンダムX』より、ガンダムXの強化発展機ダブルエックスがクリアカラーになって登場！",
@@ -25,7 +68,7 @@
 			"詳細は後日公開予定！"
 		],
 		"en": [
-			"From \"Mobile New Century Gundam X\", Gundam X's enhanced development machine Double X is now available in clear color!",
+			"From \"Mobile New Century GundamX\", GundamX's enhanced development machine Double X is now available in clear color!",
 			"Preliminary exhibition at all model hobby shows!",
 			"Details scheduled to be released later!"
 		]
@@ -33,20 +76,11 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6983_0.jpg",
 				"path": "/images/items/01_6983/01_6983_0.jpg",
 				"hash": "8abb1cd69b989c2bf985d531978450d9"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6983/",
-	"brandIds": ["hg"],
-	"seriesIds": ["x"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000147185", "item-1000147187", "01_160", "01_5876"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6983/"
 }

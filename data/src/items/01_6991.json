@@ -5,6 +5,44 @@
 		"ja": "LBXΣオービス",
 		"en": "LBXΣOrbis"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "lbx",
+			"url": "https://bandai-hobby.net/series/lbx/",
+			"ja": "ダンボール戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6992",
+			"url": "https://bandai-hobby.net/item/01_6992/",
+			"ja": "LBXアキレス・ディード"
+		},
+		{
+			"id": "01_6993",
+			"url": "https://bandai-hobby.net/item/01_6993/",
+			"ja": "LBXパンドラ (宇崎悠介専用)"
+		},
+		{
+			"id": "01_6747",
+			"url": "https://bandai-hobby.net/item/01_6747/",
+			"ja": "LBXオーディーンMk-2"
+		}
+	],
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -32,10 +70,10 @@
 		],
 		"en": [
 			"-LBXΣOrbis is back! -",
-			"From \"Danball Senki W \" comes the Super LBX Σ Orbis, which combines Elcyon, Perseus, and Minerva with a \" mutant bonding electromagnet\"! Restored with the original Runner specifications intact!",
+			"From \"Danball Senki W\" comes the Super LBX Σ Orbis, which combines Elcyon, Perseus, and Minerva with a \"mutant bonding electromagnet\"! Restored with the original Runner specifications intact!",
 			"●1/1 LBXΣ Orbis is back! The color coding of the main body is reproduced with molding colors and seals.",
 			"●Runner has icons that make it easy to find parts!",
-			"- \"Σ Twin Blaster \" and \"Σ Garter\" are included.",
+			"- \"Σ Twin Blaster\" and \"Σ Garter\" are included.",
 			"- Possible to pose coolly with a wide range of motion!",
 			"-You can recreate the special function \"Σ Drive Sword\" by posing!",
 			"Attached weapons: Σ Twin Blaster/Σ Garter",
@@ -43,52 +81,48 @@
 			"*The finished product in the photo is painted. Also, a prototype that is still under development. The actual product may differ. *Due to the manufacturing process, air bubbles may appear in the clear parts. *Product materials may change depending on the production period of the sold product. Thank you for your understanding. *There may be variations in plated parts due to the painting process. Thank you for your understanding. *Depending on sales conditions, the quantity that can be purchased may change in the future."
 		]
 	},
-	"accessories": {
-		"ja": ["Σツインブラスター", "Σガーター"],
-		"en": ["ΣTwin Blaster", "Σ Garter"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "Σツインブラスター",
+				"en": "ΣTwin Blaster"
+			}
+		},
+		{
+			"name": {
+				"ja": "Σガーター",
+				"en": "Σ Garter"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6991_0.jpg",
 				"path": "/images/items/01_6991/01_6991_0.jpg",
 				"hash": "da4292f870f56d8536bc318320cf120a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6991_1.jpg",
 				"path": "/images/items/01_6991/01_6991_1.jpg",
 				"hash": "5ced6282d4a664324bb7109632961b0b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6991_2.jpg",
 				"path": "/images/items/01_6991/01_6991_2.jpg",
 				"hash": "6f64df2df35d0e389aeac15808a849b6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6991_3.jpg",
 				"path": "/images/items/01_6991/01_6991_3.jpg",
 				"hash": "cf3039ee76c70312ceca035513c0ca5f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6991_4.jpg",
 				"path": "/images/items/01_6991/01_6991_4.jpg",
 				"hash": "e1325d7b75379f4a7ee780f8023c8656"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6991_5.jpg",
 				"path": "/images/items/01_6991/01_6991_5.jpg",
 				"hash": "aff28722dd59b4f0b68b377b36360936"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6991/",
-	"brandIds": ["pb_charapla"],
-	"seriesIds": ["lbx"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_6992", "01_6993", "01_6747"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6991/"
 }

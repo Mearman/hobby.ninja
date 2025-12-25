@@ -5,6 +5,43 @@
 		"ja": "ポケモンプラモコレクション カセキポケモンシリーズ ガチゴラス",
 		"en": "Pokemon plastic model collection Kaseki Pokemon series Gachigorasu"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6780",
+			"url": "https://bandai-hobby.net/item/01_6780/",
+			"ja": "ポケモンプラモコレクション 61 セレクトシリーズ メガレックウザ"
+		},
+		{
+			"id": "01_6762",
+			"url": "https://bandai-hobby.net/item/01_6762/",
+			"ja": "ポケモンプラモコレクション クイック!! 24 ピチュー"
+		},
+		{
+			"id": "01_5984",
+			"url": "https://bandai-hobby.net/item/01_5984/",
+			"ja": "ポケモンプラモコレクション 60 セレクトシリーズ コライドン"
+		},
+		{
+			"id": "01_5958",
+			"url": "https://bandai-hobby.net/item/01_5958/",
+			"ja": "ポケモンプラモコレクション 59 セレクトシリーズ ミライドン"
+		}
+	],
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -20,9 +57,9 @@
 	"description": {
 		"ja": [
 			"骨格からポケモンを組み立てて遊べる、「ポケプラカセキポケモンシリーズ」が新たに登場！",
-			"■骨格からポケモンを組み立てる仕様で、ガチゴラスについて学びながら作ることができる！",
-			"■組み立てやすいパーツ構成と色分けを両立！",
-			"■ディスプレイ台座が付属！"
+			"• 骨格からポケモンを組み立てる仕様で、ガチゴラスについて学びながら作ることができる！",
+			"• 組み立てやすいパーツ構成と色分けを両立！",
+			"• ディスプレイ台座が付属！"
 		],
 		"en": [
 			"Introducing the new \"PokéPlakaseki Pokémon Series\" where you can play by assembling Pokémon from their skeletons!",
@@ -31,28 +68,34 @@
 			"• Display pedestal included!"
 		]
 	},
-	"accessories": {
-		"ja": ["台座×1", "シール×1"],
-		"en": ["Pedestal x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6888_0.jpg",
 				"path": "/images/items/01_6888/01_6888_0.jpg",
 				"hash": "85413c611263cb3336746b96ecb42adc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6888_1.jpg",
 				"path": "/images/items/01_6888/01_6888_1.jpg",
 				"hash": "d9fbf4ed337e1965a5794c55da7d5d25"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6888/",
-	"brandIds": [],
-	"seriesIds": ["pokemon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_6780", "01_6762", "01_5984", "01_5958"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6888/"
 }

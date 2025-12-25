@@ -5,6 +5,50 @@
 		"ja": "RG 1/144 ガンダムベース限定 ガンダムエピオン [スペシャルコーティング]",
 		"en": "RG 1/144 Gundam Base Limited Gundam Epyon [Special Coating]"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_4923",
+			"url": "https://bandai-hobby.net/item/01_4923/",
+			"ja": "RG 1/144 ガンダムエピオン"
+		},
+		{
+			"id": "01_3425",
+			"url": "https://bandai-hobby.net/item/01_3425/",
+			"ja": "RG 1/144 ウイングガンダム"
+		},
+		{
+			"id": "item-1000154310",
+			"url": "https://p-bandai.jp/item/item-1000154310/",
+			"ja": "ＲＧ 1/144 トールギスＩＩＩ［チタニウムフィニッシュ］"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 11000,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 3
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定アイテム。",
@@ -27,7 +70,7 @@
 		],
 		"en": [
 			"A limited edition item from the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"\"RG 1/144 Gundam Epyon \" is now available with \" special coating\"!",
+			"\"RG 1/144 Gundam Epyon\" is now available with \"special coating\"!",
 			"Preliminary exhibition at all model hobby shows!",
 			"Details scheduled to be released later!"
 		]
@@ -35,20 +78,11 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6981_0.jpg",
 				"path": "/images/items/01_6981/01_6981_0.jpg",
 				"hash": "686cd8974909fa2fbb658e79ecf24f88"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6981/",
-	"brandIds": ["rg"],
-	"seriesIds": ["endlesswaltz"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5968", "01_4923", "01_3425", "item-1000154310"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6981/"
 }

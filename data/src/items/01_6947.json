@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MF クラスアップアーマー(ローザングラディエーター)",
-		"en": "30MF CLASS UP ARMOR ROSAN GLADIATOR"
+		"en": "30MF Class Up Armor (Lozan Gladiator)"
 	},
+	"brands": [
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		},
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6946",
+			"url": "https://bandai-hobby.net/item/01_6946/",
+			"ja": "30MF ローザンソードマン"
+		},
+		{
+			"id": "01_6938",
+			"url": "https://bandai-hobby.net/item/01_6938/",
+			"ja": "30MF カスタマイズストラクチャー2"
+		},
+		{
+			"id": "01_6931",
+			"url": "https://bandai-hobby.net/item/01_6931/",
+			"ja": "30MF リーベルソードマン"
+		},
+		{
+			"id": "01_6932",
+			"url": "https://bandai-hobby.net/item/01_6932/",
+			"ja": "30MF クラスアップアーマー(リーベルグラディエーター)"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -20,56 +62,92 @@
 	"description": {
 		"ja": [
 			"自分だけのファンタジージョブを創り出すことが出来る『30 MINUTES FANTASY』より、「クラスアップアーマー(ローザングラディエーター)」が登場！",
-			"■“アーマークロス”［装甲換装］することで上位ジョブへ“クラスアップ”が可能なアーマーや武装のセット。",
-			"■別売りの「30MF ローザンソードマン」と組み合わせることで「ローザングラディエーター」に“クラスアップ”が可能。",
-			"■“エレメントコア”の属性は「水」。",
-			"■別売りのリーベル共和国の「グラディエーター」とは異なるフェイスデザインとカラーリング。"
+			"• “アーマークロス”［装甲換装］することで上位ジョブへ“クラスアップ”が可能なアーマーや武装のセット。",
+			"• 別売りの「30MF ローザンソードマン」と組み合わせることで「ローザングラディエーター」に“クラスアップ”が可能。",
+			"• “エレメントコア”の属性は「水」。",
+			"• 別売りのリーベル共和国の「グラディエーター」とは異なるフェイスデザインとカラーリング。"
 		],
 		"en": [
-			"From \"30 MINUTES FANTASY \", where you can create your own fantasy job, \" Class Up Armor (Rozan Gladiator)\" is now available!",
+			"From \"30 MINUTES FANTASY\", where you can create your own fantasy job, \"Class Up Armor (Rozan Gladiator)\" is now available!",
 			"• “Armor Cross” [Armor Replacement] A set of armor and weapons that can be “classed up” to a higher-level job.",
-			"• By combining it with the separately sold \"30MF Rosan Swordsman \", it is possible to \" class up \" to the \" Rosan Gladiator\".",
+			"• By combining it with the separately sold \"30MF Rosan Swordsman\", it is possible to \"class up\" to the \"Rosan Gladiator\".",
 			"• The attribute of “element core” is “water”.",
 			"• Face design and coloring different from Liber Republic's \"Gladiator\" sold separately."
 		]
 	},
-	"accessories": {
-		"ja": ["ソード×1", "槍×1", "アーマーパーツ×1式", "武装パーツ×1式", "ジョイントパーツ×1式"],
-		"en": ["Sword x1", "Spear x1", "Armor parts x 1 set", "Armed parts x 1 set", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ソード",
+				"en": "sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "槍",
+				"en": "spear"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アーマーパーツ",
+				"en": "armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "武装パーツ",
+				"en": "armed parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6947_0.jpg",
 				"path": "/images/items/01_6947/01_6947_0.jpg",
 				"hash": "2145dc1cba53e1a85230b1f83d34e989"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6947_1.jpg",
 				"path": "/images/items/01_6947/01_6947_1.jpg",
 				"hash": "0ee8b31cf9ef8e059ab2c46f8e52e1de"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6947_2.jpg",
 				"path": "/images/items/01_6947/01_6947_2.jpg",
 				"hash": "cf90405307b0ff79662da4894554cace"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6947_3.jpg",
 				"path": "/images/items/01_6947/01_6947_3.jpg",
 				"hash": "ac623bf4b17bff5d719656767ba12b09"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6947_4.jpg",
 				"path": "/images/items/01_6947/01_6947_4.jpg",
 				"hash": "86abd59d9048fd433993f63d10d9489e"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6947/",
-	"brandIds": ["30mf"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_6946", "01_6938", "01_6931", "01_6932"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6947/"
 }

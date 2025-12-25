@@ -5,6 +5,43 @@
 		"ja": "ポケモンプラモコレクション クイック!! Lite フシギダネ",
 		"en": "Pokemon Plastic Model Collection Quick!! Lite Bulbasaur"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6888",
+			"url": "https://bandai-hobby.net/item/01_6888/",
+			"ja": "ポケモンプラモコレクション カセキポケモンシリーズ ガチゴラス"
+		},
+		{
+			"id": "01_6889",
+			"url": "https://bandai-hobby.net/item/01_6889/",
+			"ja": "ポケモンプラモコレクション カセキポケモンシリーズ プテラ"
+		},
+		{
+			"id": "01_6894",
+			"url": "https://bandai-hobby.net/item/01_6894/",
+			"ja": "ポケモンプラモコレクション クイック!! 25 ブースター"
+		},
+		{
+			"id": "01_6780",
+			"url": "https://bandai-hobby.net/item/01_6780/",
+			"ja": "ポケモンプラモコレクション 61 セレクトシリーズ メガレックウザ"
+		}
+	],
 	"price": {
 		"amount": 858,
 		"currency": "JPY",
@@ -21,15 +58,15 @@
 		"ja": [
 			"パーツを取り外す工程をなくしたランナーレス仕様の、",
 			"『ポケモンプラモコレクション クイック!! Lite』より「フシギダネ」が登場！",
-			"■全長約82mmのフシギダネ。",
-			"■こだわりのパーツ分割で簡単組み立て＆カラフルな仕上がりを両立。",
-			"■出来上がりが思い浮かぶシンプル仕様。",
-			"■シールの使用箇所も最小限に。",
-			"■出来上がりはポケモンプラモコレクション クイック!! フシギダネと同じ仕上がりに！"
+			"• 全長約82mmのフシギダネ。",
+			"• こだわりのパーツ分割で簡単組み立て＆カラフルな仕上がりを両立。",
+			"• 出来上がりが思い浮かぶシンプル仕様。",
+			"• シールの使用箇所も最小限に。",
+			"• 出来上がりはポケモンプラモコレクション クイック!! フシギダネと同じ仕上がりに！"
 		],
 		"en": [
 			"Runner-less specification that eliminates the process of removing parts.",
-			"\"Bulbasaur \" appears from \" Pokémon Plastic Model Collection Quick!! Lite\"!",
+			"\"Bulbasaur\" appears from \"Pokémon Plastic Model Collection Quick!! Lite\"!",
 			"• Bulbasaur with a total length of about 82mm.",
 			"• Easy assembly and colorful finish achieved by carefully dividing parts.",
 			"• Simple specifications that give you an idea of ​​the finished product.",
@@ -37,28 +74,27 @@
 			"• The finished product is a Pokemon plastic model collection quick!! It has the same finish as Bulbasaur!"
 		]
 	},
-	"accessories": {
-		"ja": ["シール×1"],
-		"en": ["Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6899_0.jpg",
 				"path": "/images/items/01_6899/01_6899_0.jpg",
 				"hash": "9561b02f2e4f45e04b6a6d19d6b3e59f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6899_1.jpg",
 				"path": "/images/items/01_6899/01_6899_1.jpg",
 				"hash": "517926b2bc3226881df1d22696e8619c"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6899/",
-	"brandIds": [],
-	"seriesIds": ["pokemon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_6888", "01_6889", "01_6894", "01_6780"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6899/"
 }

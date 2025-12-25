@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MS オプションパーツセット26(クライムユニット)[カラーC]",
-		"en": "30MS OPTION PARTS SET 26 (CLIMB UNIT) [COLOR C]"
+		"en": "30MS Option Parts Set 26 (Climb Unit) [Color C]"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6933",
+			"url": "https://bandai-hobby.net/item/01_6933/",
+			"ja": "30MS SIS-W00 マリカル[カラーC]"
+		},
+		{
+			"id": "01_6934",
+			"url": "https://bandai-hobby.net/item/01_6934/",
+			"ja": "30MS オプションヘアスタイル&フェイスパーツセット(園田智代子/杜野凛世)"
+		},
+		{
+			"id": "01_6935",
+			"url": "https://bandai-hobby.net/item/01_6935/",
+			"ja": "30MS オプションパーツセット23(ヴァルキュリアコスチューム)[カラーC]"
+		},
+		{
+			"id": "01_6936",
+			"url": "https://bandai-hobby.net/item/01_6936/",
+			"ja": "30MS オプションパーツセット24(ターボコスチュームβ)[カラーA]"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -20,8 +62,8 @@
 	"description": {
 		"ja": [
 			"30MS素体との組み合わせで世界観が広がる！スポーティーな腕、脚がセットになったオプションパーツがラインアップ！",
-			"■脚部などの成形色は「30MS ルルチェ(リリーウエア)[カラーC]」(別売り)と同様の[カラーC]が付属。",
-			"■腕、脚に装着可能なリングタイプのジョイントパーツも多数付属し、キャラメイキングの幅が更に拡大！"
+			"• 脚部などの成形色は「30MS ルルチェ(リリーウエア)[カラーC]」(別売り)と同様の[カラーC]が付属。",
+			"• 腕、脚に装着可能なリングタイプのジョイントパーツも多数付属し、キャラメイキングの幅が更に拡大！"
 		],
 		"en": [
 			"The world view expands when combined with the 30MS body! A lineup of optional parts including sporty arms and legs!",
@@ -29,28 +71,75 @@
 			"• Many ring-type joint parts that can be attached to arms and legs are also included, further expanding the range of character creation!"
 		]
 	},
-	"accessories": {
-		"ja": ["腕パーツ×1式", "脚パーツ×1式", "シューズパーツ×1式", "ハンドパーツ×1式", "ジョイントパーツ×1式"],
-		"en": ["Arm parts x 1 set", "Leg parts x 1 set", "Shoe parts x 1 set", "Hand parts x 1 set", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "腕パーツ",
+				"en": "arm parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "脚パーツ",
+				"en": "leg parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シューズパーツ",
+				"en": "shoe parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6941_0.jpg",
 				"path": "/images/items/01_6941/01_6941_0.jpg",
 				"hash": "bdb84b97743d317e48999704a2a1c88d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6941_1.jpg",
 				"path": "/images/items/01_6941/01_6941_1.jpg",
 				"hash": "9d726730be84a2715df5c953a258d292"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6941/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_6933", "01_6934", "01_6935", "01_6936"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6941/"
 }

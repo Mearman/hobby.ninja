@@ -2,9 +2,63 @@
 	"id": "01_6988",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 01 ガンダム",
-		"en": "HG 1/144 01 Gundam"
+		"ja": "HG 1/144 01ガンダム",
+		"en": "HG 1/144 01Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "gquuuuuux",
+			"url": "https://bandai-hobby.net/series/gquuuuuux/",
+			"ja": "機動戦士Gundam GQuuuuuuX"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6872",
+			"url": "https://bandai-hobby.net/item/01_6872/",
+			"ja": "HG 1/144 シャリア専用リック・ドム(GQ)"
+		},
+		{
+			"id": "01_6865",
+			"url": "https://bandai-hobby.net/item/01_6865/",
+			"ja": "HG 1/144 GQuuuuuuX(エンディミオン・ユニット覚醒時)"
+		},
+		{
+			"id": "01_6781",
+			"url": "https://bandai-hobby.net/item/01_6781/",
+			"ja": "HG 1/144 白いガンダム"
+		},
+		{
+			"id": "01_6782",
+			"url": "https://bandai-hobby.net/item/01_6782/",
+			"ja": "HG 1/144 シャア専用ザク(GQ)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 1
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－地球連邦軍が開発した試作機迫る－－－－－－－－－－－－－－－－－－－－",
@@ -31,8 +84,8 @@
 		],
 		"en": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
-			"\"01 Gundam \" from \" Mobile Suit Gundam GQuuuuuuX\" (Sieg Ax) is now available in the HG series! The characteristic body color is reproduced with molding color, and the head is three-dimensional with new modeling. Includes various weapons such as the hyper bazooka used by 01 Gundam in the movie.",
-			"● 01 Gundam's characteristic head is reproduced with new modeling.The body color is reproduced by color coding with molding colors.",
+			"From \"Mobile Suit Gundam GQuuuuuuX\" (Sieg Ax), \"01 Gundam\" is now available in the HG series! The characteristic body color is reproduced with molding color, and the head is three-dimensional with new modeling. Includes various weapons such as the hyper bazooka used by 01Gundam in the movie.",
+			"● 01Gundam's characteristic head is reproduced with new modeling.The body color is reproduced by color coding with molding color.",
 			"● Pursuing movable performance that can reproduce the movements in the play It is possible to expand the range of expression with a rich armament.",
 			"Seal can be attached to the arm or backpack via joint parts.",
 			"Attached Armaments: Beam Rifle / Beam Saber x 2 / Hyper Bazooka / Seal Accessories: Complete set of hand parts / Complete set of joint parts",
@@ -40,68 +93,74 @@
 			"*The finished product in the photo is a painted product. Also, a prototype that is still under development. The actual product may differ. *When using clear parts, there may be air bubbles in the clear parts due to the manufacturing process. *There may be variations in plated parts due to the painting process. Thank you for your understanding. *Product materials may change depending on production time. Thank you for your understanding. *Depending on sales conditions, the quantity that can be purchased may change in the future."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル",
-			"ビーム・サーベル×２",
-			"ハイパー・バズーカ",
-			"シールド付属品：ハンドパーツ一式",
-			"ジョイントパーツ一式"
-		],
-		"en": ["beam rifle", "Beam saber x2", "hyper bazooka", "Seal accessories: set of hand parts", "Joint parts set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル",
+				"en": "beam rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル×２",
+				"en": "Beam saber x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハイパー・バズーカ",
+				"en": "hyper bazooka"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド付属品：ハンドパーツ一式",
+				"en": "Seal accessories: set of hand parts"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ一式",
+				"en": "Joint parts set"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6988_0.jpg",
 				"path": "/images/items/01_6988/01_6988_0.jpg",
 				"hash": "947f5b438bd565143c4dbde27e03366b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6988_1.jpg",
 				"path": "/images/items/01_6988/01_6988_1.jpg",
 				"hash": "9496f6da0c018b4a35a2f59f62ad9164"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6988_2.jpg",
 				"path": "/images/items/01_6988/01_6988_2.jpg",
 				"hash": "8c2b6c29ae84ee65553546dde45e7639"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6988_3.jpg",
 				"path": "/images/items/01_6988/01_6988_3.jpg",
 				"hash": "e257ea83c13ec7be3bcd0580f94f9768"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6988_4.jpg",
 				"path": "/images/items/01_6988/01_6988_4.jpg",
 				"hash": "66f886c479c85779054f36ca98d50843"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6988_5.jpg",
 				"path": "/images/items/01_6988/01_6988_5.jpg",
 				"hash": "6b471f14d8592b8e0f5fbb2045b1678f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6988_6.jpg",
 				"path": "/images/items/01_6988/01_6988_6.jpg",
 				"hash": "8d76311a7331811caa522254bcd3f09b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6988_7.jpg",
 				"path": "/images/items/01_6988/01_6988_7.jpg",
 				"hash": "c41490bdb457ac2776535df125cb9f59"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6988/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["gquuuuuux"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6872", "01_6865", "01_6781", "01_6782"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6988/"
 }

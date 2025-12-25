@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 eEXM-23 テックプロト 02",
-		"en": "30MM 1/144 eEXM-23 TECPROT 02"
+		"en": "30MM 1/144 eEXM-23 Tech Proto 02"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6930",
+			"url": "https://bandai-hobby.net/item/01_6930/",
+			"ja": "30MM 1/144 eEXM-23 テックプロト 01"
+		},
+		{
+			"id": "01_6774",
+			"url": "https://bandai-hobby.net/item/01_6774/",
+			"ja": "30MM 1/144 エグザビークル(ブーストワイルドバイクVer.)"
+		},
+		{
+			"id": "01_6775",
+			"url": "https://bandai-hobby.net/item/01_6775/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON ARQUEBUS ADD VE-40A"
+		},
+		{
+			"id": "01_6766",
+			"url": "https://bandai-hobby.net/item/01_6766/",
+			"ja": "30MM 1/144 EXM-X20B レヴィニクス(TYPE-B)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1628,
 		"currency": "JPY",
@@ -17,15 +60,14 @@
 		"month": 2
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"地球連合軍から、地球内の治安維持にも運用される警備型量産機「テックプロト」が登場！",
-			"■大型シールドが付属。新技術によりシールドの模様を１パーツで再現。",
-			"■局地戦をサポートするスコープ型のバイザーが付属。",
-			"■リアスカートは背中への取り付けも可能。",
-			"■装甲パーツを取り外すことで軽装状態を再現可能。",
-			"■機体各箇所に可動ギミックを搭載。"
+			"• 大型シールドが付属。新技術によりシールドの模様を１パーツで再現。",
+			"• 局地戦をサポートするスコープ型のバイザーが付属。",
+			"• リアスカートは背中への取り付けも可能。",
+			"• 装甲パーツを取り外すことで軽装状態を再現可能。",
+			"• 機体各箇所に可動ギミックを搭載。"
 		],
 		"en": [
 			"From the Earth Alliance Forces, the mass-produced security aircraft \"Tech Proto\", which is also used to maintain public order on Earth, has arrived!",
@@ -36,58 +78,65 @@
 			"• Equipped with movable gimmicks in each part of the aircraft."
 		]
 	},
-	"accessories": {
-		"ja": ["グレネードランチャー×1", "大型シールド×1", "スコープバイザー×1"],
-		"en": ["Grenade launcher x 1", "Large Seal × 1", "Scope visor x1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "グレネードランチャー",
+				"en": "grenade launcher"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "大型シールド",
+				"en": "Large Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "スコープバイザー",
+				"en": "scope visor"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6937_0.jpg",
 				"path": "/images/items/01_6937/01_6937_0.jpg",
 				"hash": "61362a827f88cc255fcfab2be10a4bee"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6937_1.jpg",
 				"path": "/images/items/01_6937/01_6937_1.jpg",
 				"hash": "519c4f58176bb06f6c34f93b3f007df6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6937_2.jpg",
 				"path": "/images/items/01_6937/01_6937_2.jpg",
 				"hash": "b4e18054b06b511d7c8208d19a00b130"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6937_3.jpg",
 				"path": "/images/items/01_6937/01_6937_3.jpg",
 				"hash": "2230a34a38c79eb8d94cd35d5f428f01"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6937_4.jpg",
 				"path": "/images/items/01_6937/01_6937_4.jpg",
 				"hash": "d98b5e57fed8c178f0ab1a6f251e76fc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6937_5.jpg",
 				"path": "/images/items/01_6937/01_6937_5.jpg",
 				"hash": "22cf4a6c024dcb35114c5fde09b15783"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6937_6.jpg",
 				"path": "/images/items/01_6937/01_6937_6.jpg",
 				"hash": "4323173eedc0fd62528b1b1ec04677ce"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6937_7.jpg",
 				"path": "/images/items/01_6937/01_6937_7.jpg",
 				"hash": "f6f0ffd5ed784ab64bd6a732a6743a1b"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6937/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_6930", "01_6774", "01_6775", "01_6766"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6937/"
 }

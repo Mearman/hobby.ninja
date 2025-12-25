@@ -5,6 +5,43 @@
 		"ja": "ポケモンプラモコレクション クイック!! 27 シャワーズ",
 		"en": "Pokemon Plastic Model Collection Quick!! 27 Vaporeon"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7038",
+			"url": "https://bandai-hobby.net/item/01_7038/",
+			"ja": "ポケモンプラモコレクション 62 セレクトシリーズ カイオーガ"
+		},
+		{
+			"id": "01_7010",
+			"url": "https://bandai-hobby.net/item/01_7010/",
+			"ja": "ポケモンプラモコレクション クイック!! 26 サンダース"
+		},
+		{
+			"id": "01_6895",
+			"url": "https://bandai-hobby.net/item/01_6895/",
+			"ja": "ポケモンプラモコレクション クイック!! Lite ピカチュウ"
+		},
+		{
+			"id": "01_6897",
+			"url": "https://bandai-hobby.net/item/01_6897/",
+			"ja": "ポケモンプラモコレクション クイック!! Lite ヒトカゲ"
+		}
+	],
 	"price": {
 		"amount": 858,
 		"currency": "JPY",
@@ -20,10 +57,10 @@
 	"description": {
 		"ja": [
 			"道具いらずで、初めてでも簡単に組み立てられる「ポケプラクイック!!」にシャワーズが仲間入り！",
-			"■集めたくなる魅力的な可愛いポーズを楽しもう。",
-			"■こだわりのパーツ分割で簡単組み立て＆カラフルな仕上がりを両立。",
-			"■ランナーを見た瞬間、出来上がりが思い浮かぶシンプル仕様。",
-			"■道具を使わないタッチゲート方式。"
+			"• 集めたくなる魅力的な可愛いポーズを楽しもう。",
+			"• こだわりのパーツ分割で簡単組み立て＆カラフルな仕上がりを両立。",
+			"• ランナーを見た瞬間、出来上がりが思い浮かぶシンプル仕様。",
+			"• 道具を使わないタッチゲート方式。"
 		],
 		"en": [
 			"Vaporeon has joined the \"Pokepla Quick!!\" that can be easily assembled even for the first time without any tools!",
@@ -33,33 +70,31 @@
 			"• Touch gate method without tools."
 		]
 	},
-	"accessories": {
-		"ja": ["シール×1"],
-		"en": ["Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_7015_0.jpg",
 				"path": "/images/items/01_7015/01_7015_0.jpg",
 				"hash": "8e74ddf4f3a84c7a70d9e66e4beeedd5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7015_1.jpg",
 				"path": "/images/items/01_7015/01_7015_1.jpg",
 				"hash": "5ab78d7d12e47d5712f1e6032469a929"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7015_2.jpg",
 				"path": "/images/items/01_7015/01_7015_2.jpg",
 				"hash": "560ee5a8a3402e15fe4b8102ed5f6dff"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_7015/",
-	"brandIds": [],
-	"seriesIds": ["pokemon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_7038", "01_7010", "01_6895", "01_6897"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_7015/"
 }

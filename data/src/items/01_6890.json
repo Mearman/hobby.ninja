@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "1/1000 波動実験艦 銀河 [3199]",
-		"en": "1/1000 THE EXPERIMENTAL SHIP OF TRANSCENDENTAL DIMENSION BBY-03 GINGA [3199]"
+		"en": "1/1000 Wave Experimental Ship Ginga [3199]"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "yamato",
+			"url": "https://bandai-hobby.net/series/yamato/",
+			"ja": "宇宙戦艦ヤマトシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6866",
+			"url": "https://bandai-hobby.net/item/01_6866/",
+			"ja": "メカコレクション 宇宙戦艦ヤマト 3199（第3次改装型：参戦章叙勲式典記念塗装）"
+		},
+		{
+			"id": "01_5971",
+			"url": "https://bandai-hobby.net/item/01_5971/",
+			"ja": "1/1000 地球防衛軍 ヒュウガ級 戦闘航宙母艦 DCV-01ヒュウガ"
+		},
+		{
+			"id": "01_5498",
+			"url": "https://bandai-hobby.net/item/01_5498/",
+			"ja": "メカコレクションDX 1式空間戦闘攻撃機 コスモタイガーII(単座型/銃座型) [2機セット]"
+		},
+		{
+			"id": "01_5500",
+			"url": "https://bandai-hobby.net/item/01_5500/",
+			"ja": "メカコレクションDX 試製空間戦闘攻撃機 コスモパイソン [2機セット]"
+		}
+	],
+	"scale": "1/1000",
 	"price": {
 		"amount": 6050,
 		"currency": "JPY",
@@ -12,23 +50,23 @@
 		"taxRate": 10
 	},
 	"releaseDate": {
-		"ja": "2026年01月",
+		"ja": "2026年01月10日 (土)",
 		"year": 2026,
-		"month": 1
+		"month": 1,
+		"day": 10
 	},
 	"targetAge": 15,
-	"scale": "1/1000",
 	"description": {
 		"ja": [
 			"『ヤマトよ永遠に REBEL3199』に登場する、宇宙戦艦ヤマトの姉妹艦「銀河」が豊富な付属品を同梱して、1/1000スケールで商品化！",
-			"■1/1000スケールで細部ディテール、モールドを再現したディスプレイモデル。",
-			"■エフェクトパーツが付属し、主砲の発射を再現。",
-			"■艦橋ドームパーツは色再現用のほか、別売りのLEDユニットを使用する際に使える無色のクリアパーツが付属。",
-			"■付属のディスプレイスタンドには艦載機が取り付け可能。",
-			"■各種マーキングを収録した水転写式デカールが付属。"
+			"• 1/1000スケールで細部ディテール、モールドを再現したディスプレイモデル。",
+			"• エフェクトパーツが付属し、主砲の発射を再現。",
+			"• 艦橋ドームパーツは色再現用のほか、別売りのLEDユニットを使用する際に使える無色のクリアパーツが付属。",
+			"• 付属のディスプレイスタンドには艦載機が取り付け可能。",
+			"• 各種マーキングを収録した水転写式デカールが付属。"
 		],
 		"en": [
-			"Space Battleship Yamato's sister ship \"Ginga \" that appears in \" Yamato Forever REBEL 3199\" is commercialized in 1/1000 Scale with a rich variety of accessories!",
+			"Space Battleship Yamato's sister ship \"Ginga\" that appears in \"Yamato Forever REBEL 3199\" is commercialized in 1/1000 Scale with a rich variety of accessories!",
 			"• A display model that reproduces fine details and molds in 1/1000 scale.",
 			"• Effect parts are included to reproduce the firing of the main gun.",
 			"• In addition to the bridge dome parts for color reproduction, colorless clear parts that can be used when using the separately sold LED unit are also included.",
@@ -36,63 +74,98 @@
 			"• Water transfer decals containing various markings are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ディスプレイベース×1",
-			"艦橋ドームパーツ×1式",
-			"コスモゼロ×1",
-			"コスモゼロミサイル搭載機×1",
-			"コスモタイガーII×2",
-			"コスモタイガーII三座×2",
-			"主砲エフェクト(大、中、小)×各3",
-			"シール×1",
-			"水転写式デカール×1"
-		],
-		"en": [
-			"Display base x 1",
-			"Bridge dome parts x 1 set",
-			"Cosmo Zero x 1",
-			"Cosmo Zero missile equipped machine x 1",
-			"Cosmo Tiger II×2",
-			"Cosmo Tiger II three seats x 2",
-			"Main gun effects (large, medium, small) x 3 each",
-			"Seal×1",
-			"Water transfer decal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイベース",
+				"en": "display base"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "艦橋ドームパーツ",
+				"en": "bridge dome parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "コスモゼロ",
+				"en": "Cosmo Zero"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "コスモゼロミサイル搭載機",
+				"en": "Cosmo Zero missile equipped aircraft"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "コスモタイガーII",
+				"en": "Cosmo Tiger II"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "コスモタイガーII三座",
+				"en": "Cosmo Tiger II Three Seats"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "主砲エフェクト(大、中、小)×各3",
+				"en": "Main gun effects (large, medium, small) x 3 each"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6890_0.jpg",
 				"path": "/images/items/01_6890/01_6890_0.jpg",
 				"hash": "91553879f631fbf34d8d8cb6ac3be558"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6890_1.jpg",
 				"path": "/images/items/01_6890/01_6890_1.jpg",
 				"hash": "5453bcd5e9a804752f409b144a901b6b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6890_2.jpg",
 				"path": "/images/items/01_6890/01_6890_2.jpg",
 				"hash": "95495489b0a8bd03bd27f61562330923"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6890_3.jpg",
 				"path": "/images/items/01_6890/01_6890_3.jpg",
 				"hash": "59019fcc11100c1366c3689adf6b1631"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6890_4.jpg",
 				"path": "/images/items/01_6890/01_6890_4.jpg",
 				"hash": "beaf943a9e6f8d3532fb947d57002cc0"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6890/",
-	"brandIds": [],
-	"seriesIds": ["yamato"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_6866", "01_5971", "01_5498", "01_5500"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6890/"
 }

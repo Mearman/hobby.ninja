@@ -3,8 +3,30 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard ティファ・アディール",
-		"en": "Figure-rise Standard TIFFA ADILL"
+		"en": "Figure-rise Standard Tifa Adir"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "x",
+			"url": "https://bandai-hobby.net/series/x/",
+			"ja": "機動新世紀ガンダムＸ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -12,91 +34,148 @@
 		"taxRate": 10
 	},
 	"releaseDate": {
-		"ja": "2026年01月",
+		"ja": "2026年01月10日 (土)",
 		"year": 2026,
-		"month": 1
+		"month": 1,
+		"day": 10
 	},
 	"targetAge": 15,
 	"description": {
 		"ja": [
 			"『機動新世紀ガンダムX』に登場する「ティファ・アディール」がFigure-rise Standardで商品化！",
-			"■表情パーツはタンポ印刷を施した2種が付属。",
-			"■劇中イメージを再現できる椅子と脚部パーツが付属。",
-			"■D.O.M.E、Gコントローラー、ロングヘアーパーツなど豊富な付属品。",
-			"■「祈り手」、「Gコントローラー持ち手」、「D.O.M.E持ち手」など豊富なハンドパーツが付属。"
+			"• 表情パーツはタンポ印刷を施した2種が付属。",
+			"• 劇中イメージを再現できる椅子と脚部パーツが付属。",
+			"• D.O.M.E、Gコントローラー、ロングヘアーパーツなど豊富な付属品。",
+			"• 「祈り手」、「Gコントローラー持ち手」、「D.O.M.E持ち手」など豊富なハンドパーツが付属。"
 		],
 		"en": [
-			"\"Tifa Adir \" appearing in \" Mobile New Century Gundam X\" is commercialized as Figure-rise Standard!",
+			"\"Tifa Adir\" appearing in \"Mobile New Century GundamX\" is commercialized as Figure-rise Standard!",
 			"• Two types of expression parts with tampo printing are included.",
 			"• Comes with chair and leg parts that allow you to recreate images from the movie.",
 			"• Abundant accessories such as D.O.M.E, G controller, long hair parts, etc.",
-			"• Comes with a variety of hand parts such as \"prayer hands \", \" G controller handle \", and \" D.O.M.E handle\"."
+			"• Comes with a variety of hand parts such as \"prayer hands\", \"G controller handle\", and \"D.O.M.E handle\"."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"フェイスパーツ(タンポ印刷)×2種",
-			"フェイスパーツ(印刷無し)×1式",
-			"D.O.M.E×1",
-			"Gコントローラー×1",
-			"ロングヘアパーツ×1式",
-			"ハンドパーツ×1式",
-			"椅子×1",
-			"座り用パーツ×1式",
-			"シール×1",
-			"水転写式デカール×1"
-		],
-		"en": [
-			"Face parts (tampo printing) x 2 types",
-			"Face parts (no printing) x 1 set",
-			"D.O.M.E×1",
-			"G controller x 1",
-			"Long hair parts x 1 set",
-			"Hand parts x 1 set",
-			"Chair x 1",
-			"Sitting parts x 1 set",
-			"Seal×1",
-			"Water transfer decal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フェイスパーツ(タンポ印刷)",
+				"en": "Face parts (tampo printing)"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "フェイスパーツ(印刷無し)",
+				"en": "Face parts (no printing)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "D.O.M.E",
+				"en": "D.O.M.E."
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "Gコントローラー",
+				"en": "G controller"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ロングヘアパーツ",
+				"en": "long hair parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "椅子",
+				"en": "chair"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "座り用パーツ",
+				"en": "parts for sitting"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6886_0.jpg",
 				"path": "/images/items/01_6886/01_6886_0.jpg",
 				"hash": "84ff9066f6dba79d745353851bb47227"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6886_1.jpg",
 				"path": "/images/items/01_6886/01_6886_1.jpg",
 				"hash": "22acf9ef2dfe7730b545aedd5f8d8785"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6886_2.jpg",
 				"path": "/images/items/01_6886/01_6886_2.jpg",
 				"hash": "fccd3dbdec80d9d68ea9fcd22cda4b64"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6886_3.jpg",
 				"path": "/images/items/01_6886/01_6886_3.jpg",
 				"hash": "0e390bb2cccbb8da32032ffc48bf1b12"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6886_4.jpg",
 				"path": "/images/items/01_6886/01_6886_4.jpg",
 				"hash": "bd8ff24fcb99d21280fae33670364621"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6886_5.jpg",
 				"path": "/images/items/01_6886/01_6886_5.jpg",
 				"hash": "425319c33a7ea12b38a4d3650eab9207"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6886/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["x"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_6886/"
 }

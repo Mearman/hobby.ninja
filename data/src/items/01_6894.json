@@ -5,6 +5,43 @@
 		"ja": "ポケモンプラモコレクション クイック!! 25 ブースター",
 		"en": "Pokemon Plastic Model Collection Quick!! 25 Booster"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6888",
+			"url": "https://bandai-hobby.net/item/01_6888/",
+			"ja": "ポケモンプラモコレクション カセキポケモンシリーズ ガチゴラス"
+		},
+		{
+			"id": "01_6889",
+			"url": "https://bandai-hobby.net/item/01_6889/",
+			"ja": "ポケモンプラモコレクション カセキポケモンシリーズ プテラ"
+		},
+		{
+			"id": "01_6780",
+			"url": "https://bandai-hobby.net/item/01_6780/",
+			"ja": "ポケモンプラモコレクション 61 セレクトシリーズ メガレックウザ"
+		},
+		{
+			"id": "01_6895",
+			"url": "https://bandai-hobby.net/item/01_6895/",
+			"ja": "ポケモンプラモコレクション クイック!! Lite ピカチュウ"
+		}
+	],
 	"price": {
 		"amount": 858,
 		"currency": "JPY",
@@ -12,18 +49,19 @@
 		"taxRate": 10
 	},
 	"releaseDate": {
-		"ja": "2026年01月",
+		"ja": "2026年01月24日 (土)",
 		"year": 2026,
-		"month": 1
+		"month": 1,
+		"day": 24
 	},
 	"targetAge": 6,
 	"description": {
 		"ja": [
 			"道具いらずで、初めてでも簡単に組み立てられる「ポケプラクイック!!」にブースターが仲間入り！",
-			"■全高約87mm。集めたくなる魅力的な可愛いポーズを楽しもう。",
-			"■こだわりのパーツ分割で簡単組み立て＆カラフルな仕上がりを両立。",
-			"■ランナーを見た瞬間、出来上がりが思い浮かぶシンプル仕様。",
-			"■道具を使わないタッチゲート方式。"
+			"• 全高約87mm。集めたくなる魅力的な可愛いポーズを楽しもう。",
+			"• こだわりのパーツ分割で簡単組み立て＆カラフルな仕上がりを両立。",
+			"• ランナーを見た瞬間、出来上がりが思い浮かぶシンプル仕様。",
+			"• 道具を使わないタッチゲート方式。"
 		],
 		"en": [
 			"Booster has joined the \"Pokepla Quick!!\" that can be easily assembled even for the first time without any tools!",
@@ -33,43 +71,39 @@
 			"• Touch gate method without tools."
 		]
 	},
-	"accessories": {
-		"ja": ["シール×1"],
-		"en": ["Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6894_0.jpg",
 				"path": "/images/items/01_6894/01_6894_0.jpg",
 				"hash": "8390d4cd345afdf326eab5fea802a34f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6894_1.jpg",
 				"path": "/images/items/01_6894/01_6894_1.jpg",
 				"hash": "f8b01cd01a6229316166f6b7978c9109"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6894_2.jpg",
 				"path": "/images/items/01_6894/01_6894_2.jpg",
 				"hash": "46ec7b6ca453005912b8fb9884405781"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6894_3.jpg",
 				"path": "/images/items/01_6894/01_6894_3.jpg",
 				"hash": "35f2fbf274c5b3ad5896d033b7b6842e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6894_4.jpg",
 				"path": "/images/items/01_6894/01_6894_4.jpg",
 				"hash": "b1a9ab0ba49d76333b4ef9034e67c468"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6894/",
-	"brandIds": [],
-	"seriesIds": ["pokemon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_6888", "01_6889", "01_6780", "01_6895"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6894/"
 }

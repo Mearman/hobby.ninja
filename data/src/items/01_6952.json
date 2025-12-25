@@ -3,8 +3,35 @@
 	"type": "item",
 	"name": {
 		"ja": "30MP 鹿目まどか(制服Ver.)",
-		"en": "30MP MADOKA KANAME (SCHOOL UNIFORM Ver.)"
+		"en": "30MP Madoka Kaname (Uniform Ver.)"
 	},
+	"brands": [
+		{
+			"id": "30mp",
+			"url": "https://bandai-hobby.net/brand/30mp/",
+			"ja": "30 MINUTES PREFERENCE"
+		},
+		{
+			"id": "30mp",
+			"url": "https://bandai-hobby.net/brand/30mp/",
+			"ja": "30 MINUTES PREFERENCE"
+		}
+	],
+	"series": [
+		{
+			"id": "madoka-magica",
+			"url": "https://bandai-hobby.net/series/madoka-magica/",
+			"ja": "魔法少女まどか☆マギカ"
+		}
+	],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -20,56 +47,91 @@
 	"description": {
 		"ja": [
 			"30 MINUTES LABEL 「30 MINUTES PREFERENCE」より『魔法少女まどか☆マギカ』の鹿目まどかを制服姿で商品化！",
-			"■タンポ印刷を施した2種類のフェイスパーツが付属。",
-			"■各種劇中再現用のパーツは多数付属。"
+			"• タンポ印刷を施した2種類のフェイスパーツが付属。",
+			"• 各種劇中再現用のパーツは多数付属。"
 		],
 		"en": [
-			"30 MINUTES LABEL From \"30 MINUTES PREFERENCE \", Madoka Kaname from \" Puella Magi Madoka Magica\" is commercialized in a uniform!",
+			"30 MINUTES LABEL From \"30 MINUTES PREFERENCE\", Madoka Kaname from \"Puella Magi Madoka Magica\" is commercialized in a uniform!",
 			"• Two types of face parts with tampo printing are included.",
-			"• A large number of parts are included to recreate various scenes from the play."
+			"• Many parts are included to recreate various scenes from the play."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"フェイスパーツ(タンポ印刷済み)×2種",
-			"フェイスパーツ(印刷無し)×1式",
-			"ハンドパーツ×1式",
-			"劇中再現用パーツ×1式",
-			"水転写式デカール×1",
-			"シール×1"
-		],
-		"en": [
-			"Face parts (tampo printed) x 2 types",
-			"Face parts (no printing) x 1 set",
-			"Hand parts x 1 set",
-			"Parts for reproduction in the play x 1 set",
-			"Water transfer decal x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フェイスパーツ(タンポ印刷済み)",
+				"en": "Face parts (tampo printed)"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "フェイスパーツ(印刷無し)",
+				"en": "Face parts (no printing)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "劇中再現用パーツ",
+				"en": "Parts for reproduction in the play"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6952_0.jpg",
 				"path": "/images/items/01_6952/01_6952_0.jpg",
 				"hash": "3c6c582c8800d6d1d06a3e2cb2f1aa25"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6952_1.jpg",
 				"path": "/images/items/01_6952/01_6952_1.jpg",
 				"hash": "5af0aa1851e398c4875f295f64e7cda3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6952_2.jpg",
 				"path": "/images/items/01_6952/01_6952_2.jpg",
 				"hash": "13a408b61c9abbcaa23b59470e4ff5c0"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6952/",
-	"brandIds": ["30mp"],
-	"seriesIds": ["madoka-magica"],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_6952/"
 }

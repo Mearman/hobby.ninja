@@ -5,6 +5,39 @@
 		"ja": "30MP 式波・アスカ・ラングレー(プラグスーツVer.)",
 		"en": "30MP Shikinami Asuka Langley (Plug Suit Ver.)"
 	},
+	"brands": [
+		{
+			"id": "30mp",
+			"url": "https://bandai-hobby.net/brand/30mp/",
+			"ja": "30 MINUTES PREFERENCE"
+		},
+		{
+			"id": "30mp",
+			"url": "https://bandai-hobby.net/brand/30mp/",
+			"ja": "30 MINUTES PREFERENCE"
+		}
+	],
+	"series": [
+		{
+			"id": "evangelion",
+			"url": "https://bandai-hobby.net/series/evangelion/",
+			"ja": "エヴァンゲリオン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6757",
+			"url": "https://bandai-hobby.net/item/01_6757/",
+			"ja": "30MP 綾波レイ(プラグスーツVer.)"
+		}
+	],
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -20,14 +53,14 @@
 	"description": {
 		"ja": [
 			"30 MINUTES LABEL 「30 MINUTES PREFERENCE」より『ヱヴァンゲリヲン新劇場版』に登場する式波・アスカ・ラングレーをプラグスーツ姿で商品化！",
-			"■2種類のタンポ印刷済のフェイスパーツが付属。",
-			"■印刷無しのフェイスパーツと表情再現用の水転写式デカールが付属。",
-			"■カシウスの槍が付属。",
-			"■座り用の交換パーツが付属。",
-			"■プラグスーツは艶のある質感で表現。"
+			"• 2種類のタンポ印刷済のフェイスパーツが付属。",
+			"• 印刷無しのフェイスパーツと表情再現用の水転写式デカールが付属。",
+			"• カシウスの槍が付属。",
+			"• 座り用の交換パーツが付属。",
+			"• プラグスーツは艶のある質感で表現。"
 		],
 		"en": [
-			"30 MINUTES LABEL From \"30 MINUTES PREFERENCE \", Shikinami Asuka Langley who appears in \" Evangelion Rebuild\" is commercialized in a plug suit!",
+			"30 MINUTES LABEL From \"30 MINUTES PREFERENCE\", Shikinami Asuka Langley who appears in \"Evangelion Rebuild\" is commercialized in a plug suit!",
 			"• Comes with two types of face parts with tampo printing.",
 			"• Comes with unprinted face parts and water transfer decals to recreate facial expressions.",
 			"• Comes with the Spear of Cassius.",
@@ -35,49 +68,89 @@
 			"• The plug suit has a glossy texture."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"フェイスパーツ(タンポ印刷済み)×2種",
-			"フェイスパーツ(印刷無し)×1式",
-			"ハンドパーツ×1式",
-			"カシウスの槍×1",
-			"座りポーズ用交換パーツ×1式",
-			"テトロンシール×1",
-			"水転写式デカール×1"
-		],
-		"en": [
-			"Face parts (tampo printed) x 2 types",
-			"Face parts (no printing) x 1 set",
-			"Hand parts x 1 set",
-			"Spear of Cassius x1",
-			"Replacement parts for sitting pose x 1 set",
-			"Tetron Seal×1",
-			"Water transfer decal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フェイスパーツ(タンポ印刷済み)",
+				"en": "Face parts (tampo printed)"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "フェイスパーツ(印刷無し)",
+				"en": "Face parts (no printing)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "カシウスの槍",
+				"en": "Spear of Cassius"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "座りポーズ用交換パーツ",
+				"en": "Replacement parts for sitting pose"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "テトロンシール",
+				"en": "Tetron Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_7009_0.jpg",
 				"path": "/images/items/01_7009/01_7009_0.jpg",
 				"hash": "78a18e4e201b6cc2f3ac7b5824332e7a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7009_1.jpg",
 				"path": "/images/items/01_7009/01_7009_1.jpg",
 				"hash": "bcd52f4d603904d1521ac9e3766da6c5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7009_2.jpg",
 				"path": "/images/items/01_7009/01_7009_2.jpg",
 				"hash": "42b1524109a988c3422e487235039ee0"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_7009/",
-	"brandIds": ["30mp"],
-	"seriesIds": ["evangelion"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_6757"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_7009/"
 }

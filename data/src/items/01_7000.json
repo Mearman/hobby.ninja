@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ガンダムベース限定 ガンダムヴァーチェ [クリアカラー]",
 		"en": "MG 1/100 Gundam Base Limited Gundam Verce [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216602",
+			"url": "https://p-bandai.jp/item/item-1000216602/",
+			"ja": "ＭＧ 1/100 ガンダムアストレア＋プロトＧＮツインブロードブレイド"
+		},
+		{
+			"id": "01_5526",
+			"url": "https://bandai-hobby.net/item/01_5526/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムエクシア [クリアカラー]"
+		},
+		{
+			"id": "01_5102",
+			"url": "https://bandai-hobby.net/item/01_5102/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムナドレ"
+		},
+		{
+			"id": "01_4422",
+			"url": "https://bandai-hobby.net/item/01_4422/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムキュリオス[クリアカラー］"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 9460,
 		"currency": "JPY",
@@ -18,14 +62,13 @@
 		"day": 29
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定アイテム。",
 			"「MG 1/100 ガンダムヴァーチェ」がクリアカラーになって登場！",
-			"■極限まで構造を追求し、最大の特徴でもあるガンダムナドレへの換装を実現。",
-			"■装甲は設定をイメージした着脱が可能。裏打ちパーツで密度感と積層感を演出。",
-			"■各部ハッチはスライドし、GNフィールド展開状態を再現可能。"
+			"• 極限まで構造を追求し、最大の特徴でもあるガンダムナドレへの換装を実現。",
+			"• 装甲は設定をイメージした着脱が可能。裏打ちパーツで密度感と積層感を演出。",
+			"• 各部ハッチはスライドし、GNフィールド展開状態を再現可能。"
 		],
 		"en": [
 			"A limited edition item from the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
@@ -38,40 +81,27 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_7000_0.jpg",
 				"path": "/images/items/01_7000/01_7000_0.jpg",
 				"hash": "f6dd5c79b0754db0ce6e29c79cc9c741"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7000_1.jpg",
 				"path": "/images/items/01_7000/01_7000_1.jpg",
 				"hash": "b506c7dfe76575723302c03378af50db"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7000_2.jpg",
 				"path": "/images/items/01_7000/01_7000_2.jpg",
 				"hash": "c50a1c2539effab8345308563d5eb118"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7000_3.jpg",
 				"path": "/images/items/01_7000/01_7000_3.jpg",
 				"hash": "a602d35a4241750f174657794cc1b0cf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7000_4.jpg",
 				"path": "/images/items/01_7000/01_7000_4.jpg",
 				"hash": "df23effcc1668f9a69743b68f87d5abe"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_7000/",
-	"brandIds": ["mg"],
-	"seriesIds": ["g-00"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216602", "01_5526", "01_5102", "01_4422"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_7000/"
 }

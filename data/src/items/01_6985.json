@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ギラ･ドーガ(重武装仕様)",
-		"en": "HG 1/144 Gira Doga (heavy armed specification)"
+		"en": "HG 1/144 Gira Doga (heavily armed specification)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6740",
+			"url": "https://bandai-hobby.net/item/01_6740/",
+			"ja": "HG ガンダムベース限定 メッド"
+		},
+		{
+			"id": "01_6837",
+			"url": "https://bandai-hobby.net/item/01_6837/",
+			"ja": "HG 1/144 MSN-04Ⅱ ナイチンゲール [クリアカラー]"
+		},
+		{
+			"id": "01_5346",
+			"url": "https://bandai-hobby.net/item/01_5346/",
+			"ja": "HG 1/144 ジムIII(アクシズ・ショックイメージカラー)"
+		},
+		{
+			"id": "01_5210",
+			"url": "https://bandai-hobby.net/item/01_5210/",
+			"ja": "HG 1/144 ギラ・ドーガ(アクシズ・ショックイメージカラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -12,43 +56,50 @@
 		"taxRate": 10
 	},
 	"releaseDate": {
-		"ja": "2026年01月",
+		"ja": "2026年01月10日 (土)",
 		"year": 2026,
-		"month": 1
+		"month": 1,
+		"day": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"「HGUC 1/144 ギラ・ドーガ」が重武装仕様なって登場！",
+			"「HGUC 1/144 ギラ・ドーガ」が重武装仕様になって登場！",
 			"「GUNDAM SIDE-F」で先行販売いたします。",
-			"全日本模型ホビーショーで先行展示！",
-			"詳細は後日公開予定！"
+			"• 重武装仕様のバックパックを新規造形で立体化。",
+			"• ランゲ・ブルーノ砲の砲身は、特殊加工でテクスチャーを表現。"
 		],
 		"en": [
 			"\"HGUC 1/144 Gira Doga\" is now available in a heavily armed version!",
 			"Pre-sale at \"GUNDAM SIDE-F\".",
-			"Preliminary exhibition at all model hobby shows!",
-			"Details scheduled to be released later!"
+			"• The heavily armed backpack is now three-dimensional with new modeling.",
+			"• The barrel of the Lange Bruno gun has been specially processed to express its texture."
 		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6985_0.jpg",
-				"path": "/images/items/01_6985/01_6985_0.jpg",
-				"hash": "5921e686c637f2d482a7bc6005f38b08"
+				"path": "/images/items/01_6985/ah57wGYjbyDX35gv.jpg",
+				"hash": "cb13666d33bc6c4923ca71eb3eda4493"
+			},
+			{
+				"path": "/images/items/01_6985/YxFF55TyEfv65nD9.jpg",
+				"hash": "8d755800fad5e033cea314264715912b"
+			},
+			{
+				"path": "/images/items/01_6985/J8NnLtqSC87mruGH.jpg",
+				"hash": "03f25f51633f4fc0fcf4e02aeca22692"
+			},
+			{
+				"path": "/images/items/01_6985/cc04SQ8or8Zh3pxN.jpg",
+				"hash": "beff8a559d633226b2de8d48306f1c49"
+			},
+			{
+				"path": "/images/items/01_6985/BBg9wcplVfWwLMpD.jpg",
+				"hash": "b0e3ae71471a139337c67d44f6fb66a2"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6985/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam-cca"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6740", "01_6837", "01_5346", "01_5210"],
-	"tag": {
-		"ja": "GUNDAM SIDE-F",
-		"en": "GUNDAM SIDE-F"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6985/"
 }

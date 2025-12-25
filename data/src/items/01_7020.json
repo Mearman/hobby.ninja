@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 オプションパーツセット23(フルアーマーユニット2)",
 		"en": "30MM 1/144 Option Parts Set 23 (Full Armor Unit 2)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7019",
+			"url": "https://bandai-hobby.net/item/01_7019/",
+			"ja": "30MM 1/144 bEXM-40 ノヴァルヴ[グリーン]"
+		},
+		{
+			"id": "01_7021",
+			"url": "https://bandai-hobby.net/item/01_7021/",
+			"ja": "30MM 1/144 オプションパーツセット24(マルチオブジェクト1)"
+		},
+		{
+			"id": "01_7022",
+			"url": "https://bandai-hobby.net/item/01_7022/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON ARQUEBUS CORPORATION VP-40S"
+		},
+		{
+			"id": "01_7023",
+			"url": "https://bandai-hobby.net/item/01_7023/",
+			"ja": "30MM オプションパーツセット ARMORED CORE Ⅵ FIRES OF RUBICON WEAPON SET 07"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -17,13 +60,12 @@
 		"month": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「30MM 1/144 bEXM-15FA フルアーマーポルタノヴァ」（別売り）に付属した武装や装甲が、汎用性の高いグレーべースのカラーリングオプションパーツセットとなって登場！",
-			"■様々な機体に取り付けが可能。",
-			"■取り付け方次第で様々なバリエーションを生み出せる。",
-			"■同梱のジョイントパーツを使用することで様々な接続ジョイントに対応。"
+			"• 様々な機体に取り付けが可能。",
+			"• 取り付け方次第で様々なバリエーションを生み出せる。",
+			"• 同梱のジョイントパーツを使用することで様々な接続ジョイントに対応。"
 		],
 		"en": [
 			"The weapons and armor that came with the \"30MM 1/144 bEXM-15FA Full Armor Portanova\" (sold separately) are now available as a highly versatile gray-based coloring option parts set!",
@@ -32,28 +74,63 @@
 			"• Compatible with various connection joints by using the included joint parts."
 		]
 	},
-	"accessories": {
-		"ja": ["アーマーパーツ×1式", "ライフル×2", "アックス×2", "ガントレット×2", "ジョイントパーツ×1式"],
-		"en": ["Armor parts x 1 set", "Rifle x 2", "Ax x2", "Gauntlet x 2", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "アーマーパーツ",
+				"en": "armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ライフル",
+				"en": "rifle"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "アックス",
+				"en": "ax"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ガントレット",
+				"en": "gauntlet"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_7020_0.jpg",
 				"path": "/images/items/01_7020/01_7020_0.jpg",
 				"hash": "1e7070e97d22b24f200ab9e289518ba4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7020_1.jpg",
 				"path": "/images/items/01_7020/01_7020_1.jpg",
 				"hash": "b8d0f082e91837cd7c0dfb8e7487fe01"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_7020/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_7019", "01_7021", "01_7022", "01_7023"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_7020/"
 }

@@ -5,6 +5,64 @@
 		"ja": "RE/100 1/100 デナン・ゲー",
 		"en": "RE/100 1/100 Denan Game"
 	},
+	"brands": [
+		{
+			"id": "re100",
+			"url": "https://bandai-hobby.net/brand/re100/",
+			"ja": "RE/100[リボーンワンハンドレッド]"
+		},
+		{
+			"id": "pb_others",
+			"url": "https://bandai-hobby.net/brand/pb_others/",
+			"ja": "その他シリーズ／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "gundamf91",
+			"url": "https://bandai-hobby.net/series/gundamf91/",
+			"ja": "機動戦士ガンダムF91"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000155996",
+			"url": "https://p-bandai.jp/item/item-1000155996/",
+			"ja": "ＭＧ 1/100 ガンダムＦ９１ Ｖｅｒ．２．０［チタニウムフィニッシュ］"
+		},
+		{
+			"id": "01_3484",
+			"url": "https://bandai-hobby.net/item/01_3484/",
+			"ja": "ＲＥ/100 1/100 ビギナ・ギナ ［エクストラフィニッシュ］"
+		},
+		{
+			"id": "01_2252",
+			"url": "https://bandai-hobby.net/item/01_2252/",
+			"ja": "RE/100 1/100 ビギナ・ギナII"
+		},
+		{
+			"id": "item-1000130517",
+			"url": "https://p-bandai.jp/item/item-1000130517",
+			"ja": "ＭＧ 1/100 ガンダムＦ９１ Ｖｅｒ．２．０（残像イメージカラー）"
+		}
+	],
+	"manual": {
+		"id": "3931",
+		"url": "https://manual.bandai-hobby.net/menus/detail/3931"
+	},
+	"scale": "1/100",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,7 +75,6 @@
 		"month": 10
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"クロスボーン・バンガードの戦術を体現するMS RE/100にて遂に出撃ーー",
@@ -36,73 +93,78 @@
 			"In addition to a wide range of motion, both the setting and the cockpit hatch, which exist in two patterns in the play, are included. Parade covers attached to the soles of the feet are also included.",
 			"● Denan Game finally becomes a plastic model The first plastic model in the RE/100 format. Parade covers attached to the soles of the feet are also included. The cockpit hatch comes with settings and two parts from the play. You can choose freely depending on the content you want to reproduce.",
 			"● Contains various armed parts In addition to the beam rifle and beam seal, beam seal and arm beam gun are also included.",
-			"● Wide range of motion that allows you to recreate scenes from the play The design has been redesigned based on the images from the play. The wide range of motion allows posing with high scene reproducibility.",
+			"● Wide range of motion that allows you to recreate scenes from the play The design has been redesigned based on the image from the play. The wide range of motion allows posing with high scene reproducibility.",
 			"Attached Armaments: Beam Rifle x 1 / Beam Seal x 1 / Beam Saber x 1 / Parade Cover LR x 1",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－1/100 Scale Assembly type plastic model Target age: 1 For ages 5 and over Product material: No adhesive is used for PS/Assembly.",
 			"*The finished product in the photo is painted. Also, a prototype that is still under development. The actual product may differ. *Please note that some of the clear parts may contain air bubbles due to the manufacturing process. *Product materials may change depending on the production period of the sold product. Thank you for your understanding."
 		]
 	},
-	"accessories": {
-		"ja": ["ビーム・ライフル ×１", "ビーム・シールド ×１", "ビーム・サーベル ×１", "パレード用カバーLR ×１"],
-		"en": ["Beam rifle ×1", "Beam Seal ×1", "Beam saber ×1", "Parade cover LR x1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル ×１",
+				"en": "Beam rifle ×1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・シールド ×１",
+				"en": "Beam Seal ×1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル ×１",
+				"en": "Beam saber ×1"
+			}
+		},
+		{
+			"name": {
+				"ja": "パレード用カバーLR ×１",
+				"en": "Parade cover LR x1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6926_0.jpg",
 				"path": "/images/items/01_6926/01_6926_0.jpg",
 				"hash": "d9b6d06cbeb005646373515113d6e0b8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6926_1.jpg",
 				"path": "/images/items/01_6926/01_6926_1.jpg",
 				"hash": "1edda0e1299ead9cb8b5cd3ae0a7757d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6926_2.jpg",
 				"path": "/images/items/01_6926/01_6926_2.jpg",
 				"hash": "1241803770a93aef763f9f580136be42"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6926_3.jpg",
 				"path": "/images/items/01_6926/01_6926_3.jpg",
 				"hash": "c9aea4243d046a1b394a59b67b8a466d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6926_4.jpg",
 				"path": "/images/items/01_6926/01_6926_4.jpg",
 				"hash": "0988b2ca3def759c436aa18d60f70fdf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6926_5.jpg",
 				"path": "/images/items/01_6926/01_6926_5.jpg",
 				"hash": "4acfd6d9fefea8d5247a917c47ecaa89"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6926_6.jpg",
 				"path": "/images/items/01_6926/01_6926_6.jpg",
 				"hash": "fed94b45eb0e3950c0e2e9959aa8f826"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6926_7.jpg",
 				"path": "/images/items/01_6926/01_6926_7.jpg",
 				"hash": "70e51632f249934d968c2a682d5609d2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6926_8.jpg",
 				"path": "/images/items/01_6926/01_6926_8.jpg",
 				"hash": "4eeb9ca9be3764d497abcc513181c558"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6926/",
-	"brandIds": ["re100", "pb_others", "pb_gunpla"],
-	"seriesIds": ["gundamf91"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000155996", "01_3484", "01_2252", "item-1000130517"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6926/"
 }

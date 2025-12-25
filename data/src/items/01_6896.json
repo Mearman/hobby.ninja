@@ -5,6 +5,43 @@
 		"ja": "ポケモンプラモコレクション クイック!! Lite イーブイ",
 		"en": "Pokemon Plastic Model Collection Quick!! Lite Eevee"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6888",
+			"url": "https://bandai-hobby.net/item/01_6888/",
+			"ja": "ポケモンプラモコレクション カセキポケモンシリーズ ガチゴラス"
+		},
+		{
+			"id": "01_6889",
+			"url": "https://bandai-hobby.net/item/01_6889/",
+			"ja": "ポケモンプラモコレクション カセキポケモンシリーズ プテラ"
+		},
+		{
+			"id": "01_6894",
+			"url": "https://bandai-hobby.net/item/01_6894/",
+			"ja": "ポケモンプラモコレクション クイック!! 25 ブースター"
+		},
+		{
+			"id": "01_6780",
+			"url": "https://bandai-hobby.net/item/01_6780/",
+			"ja": "ポケモンプラモコレクション 61 セレクトシリーズ メガレックウザ"
+		}
+	],
 	"price": {
 		"amount": 858,
 		"currency": "JPY",
@@ -21,15 +58,15 @@
 		"ja": [
 			"パーツを取り外す工程をなくしたランナーレス仕様の、",
 			"『ポケモンプラモコレクション クイック!! Lite』より「イーブイ」が登場！",
-			"■全長約75mmのイーブイ。",
-			"■こだわりのパーツ分割で簡単組み立て＆カラフルな仕上がりを両立。",
-			"■出来上がりが思い浮かぶシンプル仕様。",
-			"■シールの使用箇所も最小限に。",
-			"■出来上がりは「ポケモンプラモコレクション クイック!! 04 イーブイ」と同じ仕上がりに！"
+			"• 全長約75mmのイーブイ。",
+			"• こだわりのパーツ分割で簡単組み立て＆カラフルな仕上がりを両立。",
+			"• 出来上がりが思い浮かぶシンプル仕様。",
+			"• シールの使用箇所も最小限に。",
+			"• 出来上がりは「ポケモンプラモコレクション クイック!! 04 イーブイ」と同じ仕上がりに！"
 		],
 		"en": [
 			"Runner-less specification that eliminates the process of removing parts.",
-			"\"Eevee \" appears from \" Pokemon Plastic Model Collection Quick!! Lite\"!",
+			"\"Eevee\" appears from \"Pokemon Plastic Model Collection Quick!! Lite\"!",
 			"• Eevee with a total length of approximately 75mm.",
 			"• Easy assembly and colorful finish achieved by carefully dividing parts.",
 			"• Simple specifications that give you an idea of ​​the finished product.",
@@ -37,28 +74,27 @@
 			"• The finished product is the same as \"Pokemon Plastic Model Collection Quick!! 04 Eevee\"!"
 		]
 	},
-	"accessories": {
-		"ja": ["シール×1"],
-		"en": ["Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6896_0.jpg",
 				"path": "/images/items/01_6896/01_6896_0.jpg",
 				"hash": "bd571486232da38f122af42060cf5759"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6896_1.jpg",
 				"path": "/images/items/01_6896/01_6896_1.jpg",
 				"hash": "e679c27357be0eecf7385c76a0e5669c"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6896/",
-	"brandIds": [],
-	"seriesIds": ["pokemon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_6888", "01_6889", "01_6894", "01_6780"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6896/"
 }

@@ -2,9 +2,53 @@
 	"id": "01_6984",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 ガンダム F91 [残像イメージクリアーVer.]",
-		"en": "HG 1/144 Gundam F91 [Afterimage Image Clear Ver.]"
+		"ja": "HG 1/144 ガンダムF91 [残像イメージクリアーVer.]",
+		"en": "HG 1/144 GundamF91 [Afterimage image clear Ver.]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundamf91",
+			"url": "https://bandai-hobby.net/series/gundamf91/",
+			"ja": "機動戦士ガンダムF91"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000160843",
+			"url": "https://p-bandai.jp/item/item-1000160843",
+			"ja": "HGUC 1/144 RGM-89R ジェガンＡタイプ（Ｆ９１Ｖｅｒ.）"
+		},
+		{
+			"id": "item-1000160842",
+			"url": "https://p-bandai.jp/item/item-1000160842",
+			"ja": "HGUC 1/144 RGM-89M ジェガンＢタイプ（Ｆ９１Ｖｅｒ.）"
+		},
+		{
+			"id": "item-1000160841",
+			"url": "https://p-bandai.jp/item/item-1000160841",
+			"ja": "HGUC 1/144 RGM-89J ジェガン ノーマルタイプ（Ｆ９１Ｖｅｒ．）"
+		},
+		{
+			"id": "01_23",
+			"url": "https://bandai-hobby.net/item/01_23/",
+			"ja": "HGUC 1/144 ガンダムF91"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1870,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダムF91』より、最終決戦において機体を強制冷却するための「ＭＥＰＥ効果」により",
@@ -26,7 +69,7 @@
 			"詳細は後日公開予定！"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam F91 \", due to the \" MEPE effect\" to forcefully cool the aircraft during the final battle.",
+			"From \"Mobile Suit Gundam F91\", due to the \"MEPE effect\" to forcefully cool the aircraft during the final battle.",
 			"The F91's \"massive afterimage\" that appears when the armor surface peels off is now available in HG version!",
 			"Preliminary exhibition at all model hobby shows!",
 			"Details scheduled to be released later!"
@@ -35,20 +78,11 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6984_0.jpg",
 				"path": "/images/items/01_6984/01_6984_0.jpg",
 				"hash": "a718e9938ba0d4dfc1b6d9d5560dbd88"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6984/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundamf91"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000160843", "item-1000160842", "item-1000160841", "01_23"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6984/"
 }

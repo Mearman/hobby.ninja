@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ハンブラビ(GQ)",
-		"en": "HG 1/144 HAMBRABI(GQ)"
+		"en": "HG 1/144 Hambrabi (GQ)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gquuuuuux",
+			"url": "https://bandai-hobby.net/series/gquuuuuux/",
+			"ja": "機動戦士Gundam GQuuuuuuX"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6872",
+			"url": "https://bandai-hobby.net/item/01_6872/",
+			"ja": "HG 1/144 シャリア専用リック・ドム(GQ)"
+		},
+		{
+			"id": "01_6865",
+			"url": "https://bandai-hobby.net/item/01_6865/",
+			"ja": "HG 1/144 GQuuuuuuX(エンディミオン・ユニット覚醒時)"
+		},
+		{
+			"id": "01_6988",
+			"url": "https://bandai-hobby.net/item/01_6988/",
+			"ja": "HG 1/144 01ガンダム"
+		},
+		{
+			"id": "01_6781",
+			"url": "https://bandai-hobby.net/item/01_6781/",
+			"ja": "HG 1/144 白いガンダム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -17,18 +61,17 @@
 		"month": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士Gundam GQuuuuuuX』(ジークアクス)より、ゲーツ・キャパが搭乗する「ハンブラビ」をHGで立体化！",
-			"■劇中の動きが再現できる可動性。",
-			"■MA形態への変形を実現。",
-			"■頭部のモノアイは可動式。",
-			"■フェダーイン・ライフル、海ヘビが付属。",
-			"■リード線を用いて海ヘビ射出状態を再現可能。"
+			"• 劇中の動きが再現できる可動性。",
+			"• MA形態への変形を実現。",
+			"• 頭部のモノアイは可動式。",
+			"• フェダーイン・ライフル、海ヘビが付属。",
+			"• リード線を用いて海ヘビ射出状態を再現可能。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam GQuuuuuuX \" (Sieg Ax), the \" Humbrabi\" piloted by Gates Capa is made into a three-dimensional HG!",
+			"From \"Mobile Suit Gundam GQuuuuuuX\" (Sieg Ax), the \"Humbrabi\" piloted by Gates Capa is made into a three-dimensional HG!",
 			"• Mobility that allows you to reproduce the movements in the play.",
 			"• Realizes transformation to MA form.",
 			"• The mono-eye on the head is movable.",
@@ -36,28 +79,74 @@
 			"• Sea snake ejection condition can be reproduced using lead wire."
 		]
 	},
-	"accessories": {
-		"ja": ["フェダーイン・ライフル×1", "エフェクト×1", "海ヘビ×1式", "リード線×1式", "ハンドパーツ×1式", "シール×1"],
-		"en": ["Federin Rifle x 1", "Effect x 1", "Sea snake x 1 set", "Lead wire x 1 set", "Hand parts x 1 set", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フェダーイン・ライフル",
+				"en": "federin rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "エフェクト",
+				"en": "effect"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "海ヘビ",
+				"en": "sea ​​snake"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "リード線",
+				"en": "lead wire"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_7016_0.jpg",
 				"path": "/images/items/01_7016/01_7016_0.jpg",
 				"hash": "fe38b30c2382c2a962d158015f5bfcc7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7016_1.jpg",
 				"path": "/images/items/01_7016/01_7016_1.jpg",
 				"hash": "1fc707756a731e817172729bef4dd5de"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_7016/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gquuuuuux"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6872", "01_6865", "01_6988", "01_6781"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_7016/"
 }

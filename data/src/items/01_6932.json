@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MF クラスアップアーマー(リーベルグラディエーター)",
-		"en": "30MF CLASS UP ARMOR LIBER GLADIATOR"
+		"en": "30MF Class Up Armor (Liber Gladiator)"
 	},
+	"brands": [
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		},
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6931",
+			"url": "https://bandai-hobby.net/item/01_6931/",
+			"ja": "30MF リーベルソードマン"
+		},
+		{
+			"id": "01_6776",
+			"url": "https://bandai-hobby.net/item/01_6776/",
+			"ja": "30MF クラスアップアーマー(ドラゴニアロード)"
+		},
+		{
+			"id": "01_6912",
+			"url": "https://bandai-hobby.net/item/01_6912/",
+			"ja": "30MF リーベルホーリーナイト(セレモニアル)"
+		},
+		{
+			"id": "01_6769",
+			"url": "https://bandai-hobby.net/item/01_6769/",
+			"ja": "30MF カスタマイズストラクチャー1"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -12,64 +54,85 @@
 		"taxRate": 10
 	},
 	"releaseDate": {
-		"ja": "2026年01月",
+		"ja": "2026年01月17日 (土)",
 		"year": 2026,
-		"month": 1
+		"month": 1,
+		"day": 17
 	},
 	"targetAge": 15,
 	"description": {
 		"ja": [
 			"自分だけのファンタジージョブを創り出すことが出来る『30 MINUTES FANTASY』より、「クラスアップアーマー(リーベルグラディエーター)」が登場！",
-			"■“アーマークロス”［装甲換装］することで上位ジョブへ“クラスアップ”が可能なアーマーや武装のセット。",
-			"■別売りの「30MF リーベルソードマン」と組み合わせることで「リーベルグラディエーター」に“クラスアップ”が可能。",
-			"■“エレメントコア”の属性は「火」。",
-			"■別売りのローザン帝国の「グラディエーター」とは異なるフェイスデザインとカラーリング。"
+			"• “アーマークロス”［装甲換装］することで上位ジョブへ“クラスアップ”が可能なアーマーや武装のセット。",
+			"• 別売りの「30MF リーベルソードマン」と組み合わせることで「リーベルグラディエーター」に“クラスアップ”が可能。",
+			"• “エレメントコア”の属性は「火」。",
+			"• 別売りのローザン帝国の「グラディエーター」とは異なるフェイスデザインとカラーリング。"
 		],
 		"en": [
-			"From \"30 MINUTES FANTASY \", where you can create your own fantasy job, \" Class Up Armor (Liber Gladiator)\" is now available!",
+			"From \"30 MINUTES FANTASY\", where you can create your own fantasy job, \"Class Up Armor (Liber Gladiator)\" is now available!",
 			"• “Armor Cross” [Armor Replacement] A set of armor and weapons that can be “classed up” to a higher-level job.",
-			"• By combining with the separately sold \"30MF Liber Swordsman \", it is possible to \" class up \" to the \" Libel Gladiator\".",
+			"• By combining with the separately sold \"30MF Liber Swordsman\", it is possible to \"class up\" to the \"Libel Gladiator\".",
 			"• The attribute of “element core” is “fire”.",
 			"• The face design and coloring are different from the Rosean Empire's \"Gladiator\", which is sold separately."
 		]
 	},
-	"accessories": {
-		"ja": ["ソード×1", "槍×1", "アーマーパーツ×1式", "武装パーツ×1式", "ジョイントパーツ×1式"],
-		"en": ["Sword x1", "Spear x1", "Armor parts x 1 set", "Armed parts x 1 set", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ソード",
+				"en": "sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "槍",
+				"en": "spear"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アーマーパーツ",
+				"en": "armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "武装パーツ",
+				"en": "armed parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6932_0.jpg",
 				"path": "/images/items/01_6932/01_6932_0.jpg",
 				"hash": "b321e41974ee84eae528e26b9f0b4225"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_6932_1.jpg",
-				"path": "/images/items/01_6932/01_6932_1.jpg",
-				"hash": "383b26987933b12807b3b08df6340b06"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_6932_2.jpg",
-				"path": "/images/items/01_6932/01_6932_2.jpg",
-				"hash": "b7c3ad816c93c444cd2ecf538d8aab9b"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_6932_3.jpg",
-				"path": "/images/items/01_6932/01_6932_3.jpg",
-				"hash": "86e9dcec61272dec9ae8487ef2ce2b92"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_6932_4.jpg",
-				"path": "/images/items/01_6932/01_6932_4.jpg",
-				"hash": "4984773c012b719da84d7d45dc9eb0a1"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6932/",
-	"brandIds": ["30mf"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_6931", "01_6776", "01_6912", "01_6769"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6932/"
 }

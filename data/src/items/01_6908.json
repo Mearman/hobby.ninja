@@ -5,6 +5,49 @@
 		"ja": "HG 1/72 トッドダンバイン",
 		"en": "HG 1/72 Todd Dunbine"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		},
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dunbine",
+			"url": "https://bandai-hobby.net/series/dunbine/",
+			"ja": "聖戦士ダンバイン"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_6793",
+			"url": "https://bandai-hobby.net/item/01_6793/",
+			"ja": "Ｒ３ 1/35 ビルバイン"
+		},
+		{
+			"id": "item-1000203131",
+			"url": "https://p-bandai.jp/item/item-1000203131/",
+			"ja": "HG 1/72 トカマクダンバイン"
+		},
+		{
+			"id": "item-1000217021",
+			"url": "https://p-bandai.jp/item/item-1000217021/",
+			"ja": "聖戦士ダンバインセット１"
+		},
+		{
+			"id": "item-1000211055",
+			"url": "https://p-bandai.jp/item/item-1000211055/",
+			"ja": "ＨＧ 1/72 サーバイン [スペシャルコーティング]"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -17,7 +60,6 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－魅 力 的 な マ シ ン を 作 っ て く れ た も ん だ な ！－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -34,7 +76,7 @@
 		],
 		"en": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ You have created an attractive machine! －－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
-			"From \"Sacred Warrior Dunbine \", \" Todd Dunbine\", the experimental aura battler driven by Todd Guinness, is now available in the HG series. The characteristic body color and wings are reproduced in molded color. Clear chest canopy and wings are included as bonus parts.",
+			"From \"Sacred Warrior Dunbine\", \"Todd Dunbine\", the experimental aura battler driven by Todd Guinness, is now available in the HG series. The characteristic body color and wings are reproduced in molded color. Clear chest canopy and wings are included as bonus parts.",
 			"● Reproduce the characteristic coloring The impressive whole body coloring even in the work is reproduced with modern HG standard division and molding colors. The characteristic head is reproduced in molded color by precise parts division. The aura converter and four wings can be moved over a wide range. The wings are made of light-concentrating resin with pearls and details that imitate the veins of the wings to create a sense of life.",
 			"● It is possible to reproduce various poses inspired by Todd Dunbine who appears in the work.",
 			"● You can freely paint the clear parts and create your own original Dunbine.",
@@ -46,67 +88,60 @@
 			"*The finished product in the photo is a prototype that is still under development. It is also painted. The actual product may differ. *Please note that some of the clear parts may contain air bubbles due to the manufacturing process. *Product materials may change depending on the production period of the sold product. Thank you for your understanding. *There may be variations in plated parts due to the painting process. Thank you for your understanding. *Depending on sales conditions, the quantity that can be purchased may change in the future."
 		]
 	},
-	"accessories": {
-		"ja": ["オーラ・ソード", "オーラ・ショット"],
-		"en": ["aura sword", "aura shot"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "オーラ・ソード",
+				"en": "aura sword"
+			}
+		},
+		{
+			"name": {
+				"ja": "オーラ・ショット",
+				"en": "aura shot"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6908_0.jpg",
 				"path": "/images/items/01_6908/01_6908_0.jpg",
 				"hash": "c7372b29c032447f57e3c9df9d413311"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6908_1.jpg",
 				"path": "/images/items/01_6908/01_6908_1.jpg",
 				"hash": "7432a5513bfe047d3025831bf40fe683"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6908_2.jpg",
 				"path": "/images/items/01_6908/01_6908_2.jpg",
 				"hash": "57b2f331ac6921762b98a4f08f5fc2c7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6908_3.jpg",
 				"path": "/images/items/01_6908/01_6908_3.jpg",
 				"hash": "11d90e4917b1fd62e05e90578f5f2ca8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6908_4.jpg",
 				"path": "/images/items/01_6908/01_6908_4.jpg",
 				"hash": "ee25b3d2dc2b74de3d8b7cffebf89ada"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6908_5.jpg",
 				"path": "/images/items/01_6908/01_6908_5.jpg",
 				"hash": "fd2e3ea08ed29c39c59289554dfec96c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6908_6.jpg",
 				"path": "/images/items/01_6908/01_6908_6.jpg",
 				"hash": "4e524d310fbb9fc412ff57bd86bf8c83"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6908_7.jpg",
 				"path": "/images/items/01_6908/01_6908_7.jpg",
 				"hash": "7c808d631a31e0572651efe3d6a7f368"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6908_8.jpg",
 				"path": "/images/items/01_6908/01_6908_8.jpg",
 				"hash": "2e01f8341f6f9f044ac7486f6d81edba"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6908/",
-	"brandIds": ["pb_charapla", "hg"],
-	"seriesIds": ["dunbine"],
-	"categoryIds": [],
-	"relatedItemIds": ["01_6793", "item-1000203131", "item-1000217021", "item-1000211055"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6908/"
 }

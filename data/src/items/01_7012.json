@@ -5,6 +5,54 @@
 		"ja": "30MS 小宮果穂",
 		"en": "30MS Kaho Komiya"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [
+		{
+			"id": "idolmaster",
+			"url": "https://bandai-hobby.net/series/idolmaster/",
+			"ja": "アイドルマスターシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7008",
+			"url": "https://bandai-hobby.net/item/01_7008/",
+			"ja": "30MS オプションヘアスタイル&フェイスパーツセット(西城樹里/有栖川夏葉)"
+		},
+		{
+			"id": "01_6950",
+			"url": "https://bandai-hobby.net/item/01_6950/",
+			"ja": "30MS 春日未来 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_6934",
+			"url": "https://bandai-hobby.net/item/01_6934/",
+			"ja": "30MS オプションヘアスタイル&フェイスパーツセット(園田智代子/杜野凛世)"
+		},
+		{
+			"id": "01_6755",
+			"url": "https://bandai-hobby.net/item/01_6755/",
+			"ja": "30MS 芹沢あさひ"
+		}
+	],
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -20,14 +68,14 @@
 	"description": {
 		"ja": [
 			"「アイドルマスター シャイニーカラーズ」より、放課後クライマックスガールズの「小宮果穂」を30MSフォーマットで立体化！全身のパーツが同梱されているオールインワンアイテム。",
-			"■表情パーツはタンポ印刷を施した3種が付属。口の中の色分けはパーツ分割で再現。髪はパーツの組み替えで髪飾りのない状態を再現可能。",
-			"■衣装の胸部パーツは限界まで追求したパーツ構成で、そのまま組み立てるだけでカラフルな色分けや精密なディテールを再現。背中の小さな羽もパーツ形状で再現。",
-			"■スカートは模様をプリントしたシートで波打った形状を表現。一部のパーツにはラメ入りのスモーククリア素材を採用。",
-			"■肌パーツは仕上げの際に金型表面に艶消し処理を施し、柔らかく光を反射する演出がされている。",
-			"■表情付きハンドパーツに加えマイクが保持できるハンドパーツが3種付属。"
+			"• 表情パーツはタンポ印刷を施した3種が付属。口の中の色分けはパーツ分割で再現。髪はパーツの組み替えで髪飾りのない状態を再現可能。",
+			"• 衣装の胸部パーツは限界まで追求したパーツ構成で、そのまま組み立てるだけでカラフルな色分けや精密なディテールを再現。背中の小さな羽もパーツ形状で再現。",
+			"• スカートは模様をプリントしたシートで波打った形状を表現。一部のパーツにはラメ入りのスモーククリア素材を採用。",
+			"• 肌パーツは仕上げの際に金型表面に艶消し処理を施し、柔らかく光を反射する演出がされている。",
+			"• 表情付きハンドパーツに加えマイクが保持できるハンドパーツが3種付属。"
 		],
 		"en": [
-			"From \"THE IDOLM@STER Shiny Colors \", \" Kaho Komiya\" from After School Climax Girls is made into a 3D model in 30MS format! All-in-one item that includes all parts of the whole body.",
+			"From \"THE IDOLM@STER Shiny Colors\", \"Kaho Komiya\" from After School Climax Girls is made into a 3D model in 30MS format! All-in-one item that includes all parts of the whole body.",
 			"• Three types of expression parts with tampo printing are included. The color coding inside the mouth is reproduced by dividing the parts. The hair can be recreated without any hair ornaments by rearranging the parts.",
 			"• The chest part of the costume has a parts configuration that has been pushed to the limit, and the colorful color coding and precise details can be reproduced just by assembling it. The small wings on the back are also reproduced in parts form.",
 			"• The skirt is made of a sheet with a pattern printed on it to create a wavy shape. Some parts are made of smoked clear material with glitter.",
@@ -35,34 +83,67 @@
 			"• In addition to hand parts with facial expressions, 3 types of hand parts that can hold a microphone are included."
 		]
 	},
-	"accessories": {
-		"ja": ["フェイスパーツ(タンポ印刷)×3種", "ハンドパーツ×1式", "髪パーツ(髪飾りなし)×1式", "マイク×1", "シール×1"],
-		"en": [
-			"Face parts (tampo printing) x 3 types",
-			"Hand parts x 1 set",
-			"Hair parts (no hair ornaments) x 1 set",
-			"Microphone x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フェイスパーツ(タンポ印刷)",
+				"en": "Face parts (tampo printing)"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "髪パーツ(髪飾りなし)",
+				"en": "Hair parts (no hair ornaments)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "マイク",
+				"en": "microphone"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_7012_0.jpg",
 				"path": "/images/items/01_7012/01_7012_0.jpg",
 				"hash": "53ed14f010c23303670d750912c5863d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7012_1.jpg",
 				"path": "/images/items/01_7012/01_7012_1.jpg",
 				"hash": "335f122e5c08513025e4f3defe83fffb"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_7012/",
-	"brandIds": ["30ms"],
-	"seriesIds": ["idolmaster"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_7008", "01_6950", "01_6934", "01_6755"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_7012/"
 }

@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 オプションパーツセット24(マルチオブジェクト1)",
 		"en": "30MM 1/144 Option parts set 24 (multi-object 1)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7019",
+			"url": "https://bandai-hobby.net/item/01_7019/",
+			"ja": "30MM 1/144 bEXM-40 ノヴァルヴ[グリーン]"
+		},
+		{
+			"id": "01_7020",
+			"url": "https://bandai-hobby.net/item/01_7020/",
+			"ja": "30MM 1/144 オプションパーツセット23(フルアーマーユニット2)"
+		},
+		{
+			"id": "01_7022",
+			"url": "https://bandai-hobby.net/item/01_7022/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON ARQUEBUS CORPORATION VP-40S"
+		},
+		{
+			"id": "01_7023",
+			"url": "https://bandai-hobby.net/item/01_7023/",
+			"ja": "30MM オプションパーツセット ARMORED CORE Ⅵ FIRES OF RUBICON WEAPON SET 07"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -17,12 +60,11 @@
 		"month": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMの世界観を演出する、1/144スケールの車両・情景パーツをセットにしたオプションパーツが登場！",
-			"■窓やタイヤなど、細部のディテールを追求して再現。",
-			"■可動部や接続部には3mmジョイントを採用し、30MM既存商品とも互換。"
+			"• 窓やタイヤなど、細部のディテールを追求して再現。",
+			"• 可動部や接続部には3mmジョイントを採用し、30MM既存商品とも互換。"
 		],
 		"en": [
 			"Introducing optional parts that are a set of 1/144 Scale vehicle and scenery parts that create a 30MM world view!",
@@ -30,48 +72,83 @@
 			"• 3mm joints are used for movable parts and connection parts, making it compatible with existing 30MM products."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"重戦車×2",
-			"軽戦車×2",
-			"軽輸送車×2",
-			"軽装甲車×2",
-			"大型テント×1",
-			"大型コンテナ×1",
-			"中型コンテナ×1",
-			"小型タンク×2",
-			"給水塔×2"
-		],
-		"en": [
-			"Heavy tank x2",
-			"Light tank x2",
-			"Light transport vehicle x 2",
-			"Light armored vehicle x 2",
-			"Large tent x 1",
-			"Large container x 1",
-			"Medium container x 1",
-			"Small tank x 2",
-			"Water tower x2"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "重戦車",
+				"en": "heavy tank"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "軽戦車",
+				"en": "light tank"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "軽輸送車",
+				"en": "light transport vehicle"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "軽装甲車",
+				"en": "light armored vehicle"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "大型テント",
+				"en": "large tent"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "大型コンテナ",
+				"en": "large container"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "中型コンテナ",
+				"en": "medium container"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "小型タンク",
+				"en": "small tank"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "給水塔",
+				"en": "water tower"
+			},
+			"count": 2
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_7021_0.jpg",
 				"path": "/images/items/01_7021/01_7021_0.jpg",
 				"hash": "d7a3f9e0c4af7d6067d2af4fc1c9de9d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7021_1.jpg",
 				"path": "/images/items/01_7021/01_7021_1.jpg",
 				"hash": "7f33510ea3fc31649b82fd15f1aced2c"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_7021/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_7019", "01_7020", "01_7022", "01_7023"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_7021/"
 }

@@ -5,6 +5,54 @@
 		"ja": "30MM オプションパーツセット ARMORED CORE Ⅵ FIRES OF RUBICON WEAPON SET 07",
 		"en": "30MM Option parts set ARMORED CORE Ⅵ FIRES OF RUBICON WEAPON SET 07"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [
+		{
+			"id": "armoredcore",
+			"url": "https://bandai-hobby.net/series/armoredcore/",
+			"ja": "ARMORED CORE Ⅵ FIRES OF RUBICON"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7022",
+			"url": "https://bandai-hobby.net/item/01_7022/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON ARQUEBUS CORPORATION VP-40S"
+		},
+		{
+			"id": "01_6945",
+			"url": "https://bandai-hobby.net/item/01_6945/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON ARQUEBUS CORPORATION VP-40S ロックスミス"
+		},
+		{
+			"id": "01_6775",
+			"url": "https://bandai-hobby.net/item/01_6775/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON ARQUEBUS ADD VE-40A"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -21,36 +69,64 @@
 		"ja": [
 			"『ARMORED CORE Ⅵ FIRES OF RUBICON』のアイテムが『30 MINUTES MISSIONS』シリーズで商品化。",
 			"シリーズのキーコンセプト「シンプル組み立て」「カスタム遊び」のもと、特徴的な近接武装であるチェーンソーを含めた武器群をセットで商品化。",
-			"■装備する際に左右で形状が変わる武装は再現用のパーツがそれぞれ付属し、選択式で組み立てが可能。"
+			"• 装備する際に左右で形状が変わる武装は再現用のパーツがそれぞれ付属し、選択式で組み立てが可能。"
 		],
 		"en": [
-			"\"ARMORED CORE Ⅵ FIRES OF RUBICON \" items are commercialized in the \" 30 MINUTES MISSIONS\" series.",
-			"Based on the series' key concepts of \"simple assembly \" and \" custom play,\" we have commercialized a set of weapons, including the characteristic close-range weapon chainsaw.",
+			"\"ARMORED CORE Ⅵ FIRES OF RUBICON\" items are commercialized in the \"30 MINUTES MISSIONS\" series.",
+			"Based on the series' key concepts of \"simple assembly\" and \"custom play,\" we have commercialized a set of weapons, including the characteristic close-range weapon chainsaw.",
 			"• Weapons that change shape on the left and right when equipped come with parts for reproduction, and can be assembled selectively."
 		]
 	},
-	"accessories": {
-		"ja": ["WB-0000 BAD COOK×1", "WB-0010 DOUBLE TROUBLE×1式", "BML-G2/P19SPL-12×1式", "SB-033M MORLEY×1式"],
-		"en": ["WB-0000 BAD COOK×1", "WB-0010 DOUBLE TROUBLE×1 set", "BML-G2/P19SPL-12×1 set", "SB-033M MORLEY×1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "WB-0000 BAD COOK"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "WB-0010 DOUBLE TROUBLE"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "BML-G2/P19SPL-12"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "SB-033M MORLEY"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_7023_0.jpg",
 				"path": "/images/items/01_7023/01_7023_0.jpg",
 				"hash": "3220d73f505f198f9f49614f120085b2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7023_1.jpg",
 				"path": "/images/items/01_7023/01_7023_1.jpg",
 				"hash": "4e750816c02aec8b10ccb160371afbf9"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_7023/",
-	"brandIds": ["30mm"],
-	"seriesIds": ["armoredcore"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_7022", "01_6945", "01_6775", "01_5973"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_7023/"
 }

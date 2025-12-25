@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 eEXM-23 テックプロト 01",
-		"en": "30MM 1/144 eEXM-23 TECPROT 01"
+		"en": "30MM 1/144 eEXM-23 Tech Proto 01"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6774",
+			"url": "https://bandai-hobby.net/item/01_6774/",
+			"ja": "30MM 1/144 エグザビークル(ブーストワイルドバイクVer.)"
+		},
+		{
+			"id": "01_6775",
+			"url": "https://bandai-hobby.net/item/01_6775/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON ARQUEBUS ADD VE-40A"
+		},
+		{
+			"id": "01_6766",
+			"url": "https://bandai-hobby.net/item/01_6766/",
+			"ja": "30MM 1/144 EXM-X20B レヴィニクス(TYPE-B)"
+		},
+		{
+			"id": "01_6767",
+			"url": "https://bandai-hobby.net/item/01_6767/",
+			"ja": "30MM 1/144 オプションパーツセット22(ウィングユニット2)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1628,
 		"currency": "JPY",
@@ -12,20 +55,20 @@
 		"taxRate": 10
 	},
 	"releaseDate": {
-		"ja": "2026年01月",
+		"ja": "2026年01月10日 (土)",
 		"year": 2026,
-		"month": 1
+		"month": 1,
+		"day": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"地球連合軍から、地球内の治安維持にも運用される警備型量産機「テックプロト」が登場！",
-			"■大型シールドが付属。新技術によりシールドの模様を１パーツで再現。",
-			"■バイザーの開閉状態を再現可能。",
-			"■リアスカートは背中への取り付けも可能。",
-			"■装甲パーツを取り外すことで軽装状態を再現可能。",
-			"■機体各箇所に可動ギミックを搭載。"
+			"• 大型シールドが付属。新技術によりシールドの模様を１パーツで再現。",
+			"• バイザーの開閉状態を再現可能。",
+			"• リアスカートは背中への取り付けも可能。",
+			"• 装甲パーツを取り外すことで軽装状態を再現可能。",
+			"• 機体各箇所に可動ギミックを搭載。"
 		],
 		"en": [
 			"From the Earth Alliance Forces, the mass-produced security aircraft \"Tech Proto\", which is also used to maintain public order on Earth, has arrived!",
@@ -36,58 +79,65 @@
 			"• Equipped with movable gimmicks in each part of the aircraft."
 		]
 	},
-	"accessories": {
-		"ja": ["グレネードランチャー×1", "大型シールド×1", "クリアバイザー×1"],
-		"en": ["Grenade launcher x 1", "Large Seal × 1", "Clear visor x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "グレネードランチャー",
+				"en": "grenade launcher"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "大型シールド",
+				"en": "Large Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "クリアバイザー",
+				"en": "clear visor"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6930_0.jpg",
 				"path": "/images/items/01_6930/01_6930_0.jpg",
 				"hash": "49636382aefb06db7d70f9328cded109"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6930_1.jpg",
 				"path": "/images/items/01_6930/01_6930_1.jpg",
 				"hash": "0330a217f77160975026f4f2f8ce07f2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6930_2.jpg",
 				"path": "/images/items/01_6930/01_6930_2.jpg",
 				"hash": "edcc163478724d5013b230b29737aa33"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6930_3.jpg",
 				"path": "/images/items/01_6930/01_6930_3.jpg",
 				"hash": "397af7507395a2ccd0d59c6c811923b3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6930_4.jpg",
 				"path": "/images/items/01_6930/01_6930_4.jpg",
 				"hash": "e188aa343b5330c39a8e6021bda8a543"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6930_5.jpg",
 				"path": "/images/items/01_6930/01_6930_5.jpg",
 				"hash": "233837d47226220c81660d99485e1661"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6930_6.jpg",
 				"path": "/images/items/01_6930/01_6930_6.jpg",
 				"hash": "cd82a2f9c94acc86ab519fe69f34dcd2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6930_7.jpg",
 				"path": "/images/items/01_6930/01_6930_7.jpg",
 				"hash": "83442dfd6ff0cfb711dfe95046fb095f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6930/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_6774", "01_6775", "01_6766", "01_6767"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6930/"
 }

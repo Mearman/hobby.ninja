@@ -5,6 +5,48 @@
 		"ja": "30MS オプションヘアスタイルパーツVol.13 全4種 ミディアムヘア8[ブラック1]",
 		"en": "30MS Option Hairstyle Parts Vol.13 All 4 types Medium Hair 8 [Black 1]"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7027",
+			"url": "https://bandai-hobby.net/item/01_7027/",
+			"ja": "30MS SIS-J00 メルンジャ[カラーA]"
+		},
+		{
+			"id": "01_7028",
+			"url": "https://bandai-hobby.net/item/01_7028/",
+			"ja": "30MS オプションヘアスタイルパーツVol.13 全4種 ツインテール1[イエロー5]"
+		},
+		{
+			"id": "01_7029",
+			"url": "https://bandai-hobby.net/item/01_7029/",
+			"ja": "30MS オプションヘアスタイルパーツVol.13 全4種 ツインテール10[ピンク3]"
+		},
+		{
+			"id": "01_7030",
+			"url": "https://bandai-hobby.net/item/01_7030/",
+			"ja": "30MS オプションヘアスタイルパーツVol.13 全4種 ミディアムヘア7[ブルー2]"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -20,8 +62,8 @@
 	"description": {
 		"ja": [
 			"30MS素体との組み合わせで世界観が広がる！新たなオプションヘアスタイルパーツがラインアップ！",
-			"■ブラックのミディアムヘア。",
-			"■パーツの差し替えでヘアスタイルとヘアカラーを自分の好みに合わせてキャラメイキング。"
+			"• ブラックのミディアムヘア。",
+			"• パーツの差し替えでヘアスタイルとヘアカラーを自分の好みに合わせてキャラメイキング。"
 		],
 		"en": [
 			"The world view expands when combined with the 30MS body! New optional hairstyle parts are now available!",
@@ -29,28 +71,27 @@
 			"• Create your character by changing the hair style and hair color to your liking by replacing parts."
 		]
 	},
-	"accessories": {
-		"ja": ["ヘアスタイルパーツ×1"],
-		"en": ["Hair style parts x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヘアスタイルパーツ",
+				"en": "hairstyle parts"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_7031_0.jpg",
 				"path": "/images/items/01_7031/01_7031_0.jpg",
 				"hash": "aeed37fb56209d3165b47ef2ee2b692b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7031_1.jpg",
 				"path": "/images/items/01_7031/01_7031_1.jpg",
 				"hash": "8ab185fbdbe14be55fcf1cfd11f8eb2f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_7031/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_7027", "01_7028", "01_7029", "01_7030"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_7031/"
 }

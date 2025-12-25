@@ -3,8 +3,35 @@
 	"type": "item",
 	"name": {
 		"ja": "30MF 鎧真伝サムライトルーパー 灼熱のガイ",
-		"en": "30MF Yoroi-Shinden Samurai Troopers(Ronin Warriors) Gai of the Heat"
+		"en": "30MF Armor Shinden Samurai Trooper Burning Guy"
 	},
+	"brands": [
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		},
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		}
+	],
+	"series": [
+		{
+			"id": "samurai-trooper",
+			"url": "https://bandai-hobby.net/series/samurai-trooper/",
+			"ja": "鎧真伝サムライトルーパー"
+		}
+	],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -20,84 +47,124 @@
 	"description": {
 		"ja": [
 			"2026年1月放送開始のTVアニメ『鎧真伝サムライトルーパー』より主人公の「凱」を30MFフォーマットで立体化！",
-			"■パーツの差し替えで「アンダーギア」から「ヨロイギア」への変身が可能。",
-			"■ヨロイギア召喚シーンの再現用ハンドパーツとエフェクトが付属。",
-			"■タンポ印刷を施した2種類のフェイスパーツが付属。",
-			"■印刷無しのフェイスパーツと、多数のバリエーションから表情を選択できる水転写式デカールが付属。",
-			"■武装には「刀」が2本付属し、鞘から抜刀が可能。"
+			"• パーツの差し替えで「アンダーギア」から「ヨロイギア」への変身が可能。",
+			"• ヨロイギア召喚シーンの再現用ハンドパーツとエフェクトが付属。",
+			"• タンポ印刷を施した2種類のフェイスパーツが付属。",
+			"• 印刷無しのフェイスパーツと、多数のバリエーションから表情を選択できる水転写式デカールが付属。",
+			"• 武装には「刀」が2本付属し、鞘から抜刀が可能。"
 		],
 		"en": [
-			"From the TV anime \"Shinden Samurai Trooper \", which started airing in 20261, the main character \" Gai\" is made into a 30MF format!",
-			"• It is possible to transform from \"Under Gear \" to \" Armor Gear\" by replacing parts.",
+			"From the TV anime \"Shinden Samurai Trooper\", which started airing in 20261, the main character \"Gai\" is made into a 30MF format!",
+			"• It is possible to transform from \"Under Gear\" to \"Armor Gear\" by replacing parts.",
 			"• Comes with hand parts and effects to recreate the Armor Gear summoning scene.",
 			"• Two types of face parts with tampo printing are included.",
 			"• Comes with unprinted face parts and water transfer decals that allow you to choose from a wide variety of expressions.",
 			"• Two \"katana\" are included as weapons, and the swords can be drawn from the sheath."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"表情パーツ(タンポ印刷)×2種",
-			"表情パーツ(水転写式デカール用)×1種",
-			"刀×2",
-			"ヨロイギア再現用パーツ×1式",
-			"ジョイントパーツ×1式",
-			"ハンドパーツ×1式",
-			"エフェクトパーツ×1"
-		],
-		"en": [
-			"Facial expression parts (tampo printing) x 2 types",
-			"Facial expression parts (for water transfer decals) x 1 type",
-			"Sword x2",
-			"Armor gear reproduction parts x 1 set",
-			"Joint parts x 1 set",
-			"Hand parts x 1 set",
-			"Effect parts x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情パーツ(タンポ印刷)",
+				"en": "Facial expression parts (tampo printing)"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "表情パーツ(水転写式デカール用)",
+				"en": "Facial expression parts (for water transfer decals)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "刀",
+				"en": "sword"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ヨロイギア再現用パーツ",
+				"en": "Parts for reproducing armor gear"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "エフェクトパーツ",
+				"en": "effect parts"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6948_0.jpg",
 				"path": "/images/items/01_6948/01_6948_0.jpg",
 				"hash": "b6d5ae74dac9a46d10c6bf2fa1a6682a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6948_1.jpg",
 				"path": "/images/items/01_6948/01_6948_1.jpg",
 				"hash": "9f4929b4cc6e8cd9eabbb5790839b4f0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6948_2.jpg",
 				"path": "/images/items/01_6948/01_6948_2.jpg",
 				"hash": "1d3f90a466e032e7e2c56d10a10cf693"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6948_3.jpg",
 				"path": "/images/items/01_6948/01_6948_3.jpg",
 				"hash": "787b4736d5f2ea079051c8b116a98172"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6948_4.jpg",
 				"path": "/images/items/01_6948/01_6948_4.jpg",
 				"hash": "88f0fce09a2ad29382b8201015070a98"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6948_5.jpg",
 				"path": "/images/items/01_6948/01_6948_5.jpg",
 				"hash": "31e152061198d8972ce92dee0fee78a8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6948_6.jpg",
 				"path": "/images/items/01_6948/01_6948_6.jpg",
 				"hash": "3474a3410886b718daa20c28d43cb716"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6948/",
-	"brandIds": ["30mf"],
-	"seriesIds": ["samurai-trooper"],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_6948/"
 }

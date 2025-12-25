@@ -2,9 +2,52 @@
 	"id": "01_7033",
 	"type": "item",
 	"name": {
-		"ja": "HG ブルーティッシュドッグ(仮)",
-		"en": "HG Blue Tissue Dog (tentative)"
+		"ja": "HG ブルーティッシュドッグ",
+		"en": "HG Blue Tissue Dog"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "votoms",
+			"url": "https://bandai-hobby.net/series/votoms/",
+			"ja": "装甲騎兵ボトムズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000223037",
+			"url": "https://p-bandai.jp/item/item-1000223037/",
+			"ja": "ＨＧ スコープドッグ用拡張パーツセット6"
+		},
+		{
+			"id": "item-1000209959",
+			"url": "https://p-bandai.jp/item/item-1000209959/",
+			"ja": "ＨＧ スコープドッグ用拡張パーツセット3"
+		},
+		{
+			"id": "item-1000209960",
+			"url": "https://p-bandai.jp/item/item-1000209960/",
+			"ja": "ＨＧ スコープドッグ用拡張パーツセット4"
+		},
+		{
+			"id": "item-1000209961",
+			"url": "https://p-bandai.jp/item/item-1000209961/",
+			"ja": "ＨＧ スコープドッグ用拡張パーツセット5"
+		}
+	],
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -20,44 +63,53 @@
 	"description": {
 		"ja": [
 			"『装甲騎兵ボトムズ』より、「フィアナ」が搭乗した「ブルーティッシュドッグ」がHGで登場！",
-			"■HGスコープドッグベースに各種拡張パーツの組み合わせにより「フィアナ」が搭乗した「ブルーティッシュドッグ」を再現。",
-			"■「ブルーティッシュドッグ」特有のボディ色を再現。",
-			"■降着ポーズ、アームパンチ(薬莢パージはオミット)、ローラーダッシュポーズが再現可能。"
+			"• HGスコープドッグベースに各種拡張パーツの組み合わせにより「フィアナ」が搭乗した「ブルーティッシュドッグ」を再現。",
+			"• 「ブルーティッシュドッグ」特有のボディ色を再現。",
+			"• 降着ポーズ、アームパンチ(薬莢パージはオミット)、ローラーダッシュポーズが再現可能。"
 		],
 		"en": [
-			"From \"Armored Trooper Votoms \", \" Bluetish Dog \" piloted by \" Fianna\" is now available in HG!",
-			"• Reproduce the \"Bluetish Dog \" piloted by \" Fiana\" by combining various expansion parts on the HG Scopedog base.",
+			"From \"Armored Trooper Votoms\", \"Bluetish Dog\" piloted by \"Fianna\" is now available in HG!",
+			"• Reproduce the \"Bluetish Dog\" piloted by \"Fiana\" by combining various expansion parts on the HG Scopedog base.",
 			"• Reproduces the unique body color of the \"Blue Tissue Dog\".",
 			"• Accretion pose, arm punch (cart case purge is Omit), and roller dash pose can be reproduced."
 		]
 	},
-	"accessories": {
-		"ja": ["ハンドパーツ×1式", "3Dメタリックシール×1"],
-		"en": ["Hand parts x 1 set", "3D metallic seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "3Dメタリックシール",
+				"en": "3D Metallic Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_7033_0.jpg",
 				"path": "/images/items/01_7033/01_7033_0.jpg",
 				"hash": "09b4f857894c233e41fbc68e8e02e07a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7033_1.jpg",
 				"path": "/images/items/01_7033/01_7033_1.jpg",
 				"hash": "99589895607f515013f8e932d7b49c65"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7033_2.jpg",
 				"path": "/images/items/01_7033/01_7033_2.jpg",
 				"hash": "5d6e8995d1b7fa03c45381799545e21e"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_7033/",
-	"brandIds": ["hg"],
-	"seriesIds": ["votoms"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["item-1000223037", "item-1000209959", "item-1000209960", "item-1000209961"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_7033/"
 }
