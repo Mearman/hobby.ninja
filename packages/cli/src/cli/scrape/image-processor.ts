@@ -10,7 +10,7 @@ import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
 import type { BrowserContext } from "playwright";
 
 import { computeBufferHash, computeFileHash } from "../../utils/file-utils.js";
-import { findExistingItemImage } from "../../utils/image-utils.js";
+import { findExistingItemImage, ImageHashIndex } from "../../utils/image-utils.js";
 import type { Item, ItemImage } from "../bandai-catalog-parser.js";
 import { extractFilenameFromUrl } from "../download-command.js";
 import type { ManualData } from "../manual-parser.js";
@@ -89,13 +89,15 @@ async function fetchWithRetry(
 /**
  * Download item images (product and instructions) from URLs
  * Creates item-specific directory and downloads images with appropriate naming
+ * Uses hash-based deduplication to avoid storing duplicate images
  *
  * @param itemId - Item identifier (e.g., "01_5771")
  * @param itemData - Item data containing images to download
  * @param jsonPath - Path to item JSON file (for updating after download)
  * @param browserContext - Playwright browser context for signed/protected URLs
  * @param saveItemJson - Callback to save updated item JSON
- * @returns Download statistics (downloaded/skipped counts)
+ * @param hashIndex - Optional hash index for deduplication (item assets are authoritative)
+ * @returns Download statistics (downloaded/skipped/deduplicated counts)
  */
 export async function downloadItemImages(
 	itemId: string,
@@ -103,8 +105,9 @@ export async function downloadItemImages(
 	jsonPath: string,
 	browserContext: BrowserContext | null,
 	saveItemJson: (path: string, data: Item) => Promise<void>,
+	hashIndex?: ImageHashIndex,
 ): Promise<DownloadStats> {
-	const stats: DownloadStats = { downloaded: 0, skipped: 0 };
+	const stats: DownloadStats = { downloaded: 0, skipped: 0, deduplicated: 0 };
 
 	if (!itemData.images) {
 		return stats;
@@ -137,24 +140,48 @@ export async function downloadItemImages(
 		const localPath = path.join(itemImagesDir, filename);
 		const relativePath = `/images/items/${itemId}/${filename}`;
 
-		// Check if already downloaded
+		// Check if already downloaded locally
 		try {
 			await fs.access(localPath);
 			// File exists, update path and compute hash
 			image.path = relativePath;
 			image.hash = await computeFileHash(localPath);
+			// Add to hash index for future deduplication
+			if (hashIndex && image.hash) {
+				hashIndex.add(image.hash, relativePath);
+			}
 			stats.skipped++;
 			continue;
 		} catch {
-			// File doesn't exist, download it
+			// File doesn't exist, need to download
 		}
 
 		// Download the image
 		try {
 			const imageBuffer = await downloadImage(image.src, browserContext);
+			const hash = computeBufferHash(imageBuffer);
+
+			// Check if this image already exists elsewhere (hash-based deduplication)
+			const existingPath = hashIndex?.findByHash(hash);
+			if (existingPath) {
+				// Use existing image path instead of saving duplicate
+				image.path = existingPath;
+				image.hash = hash;
+				stats.deduplicated = (stats.deduplicated ?? 0) + 1;
+				console.log(`    Deduplicated: ${filename} → ${existingPath}`);
+				continue;
+			}
+
+			// Save new image
 			await fs.writeFile(localPath, imageBuffer);
 			image.path = relativePath;
-			image.hash = computeBufferHash(imageBuffer);
+			image.hash = hash;
+
+			// Add to hash index for future deduplication
+			if (hashIndex) {
+				hashIndex.add(hash, relativePath);
+			}
+
 			stats.downloaded++;
 			console.log(`    Downloaded: ${filename}`);
 		} catch (error) {
@@ -163,8 +190,8 @@ export async function downloadItemImages(
 		}
 	}
 
-	// Update JSON with local paths if any images were processed (downloaded or already existed)
-	if (stats.downloaded > 0 || stats.skipped > 0) {
+	// Update JSON with local paths if any images were processed
+	if (stats.downloaded > 0 || stats.skipped > 0 || (stats.deduplicated ?? 0) > 0) {
 		await saveItemJson(jsonPath, itemData);
 	}
 
@@ -313,17 +340,19 @@ export function mergeImagePaths(
 
 /**
  * Download manual cover image
- * Checks for existing item images first to avoid duplicates
+ * Uses hash-based deduplication - item assets are the authoritative source
  *
  * @param manualId - Manual identifier (4-digit padded, e.g., "0106")
  * @param manualData - Manual data containing image to download
- * @returns Item ID if image found in items directory, undefined otherwise
+ * @param hashIndex - Optional hash index for deduplication
+ * @returns Object with itemId if found via existing item, and whether image was deduplicated
  */
 export async function downloadManualImage(
 	manualId: string,
 	manualData: ManualData,
-): Promise<string | undefined> {
-	if (!manualData.image?.src) return undefined;
+	hashIndex?: ImageHashIndex,
+): Promise<{ itemId?: string; deduplicated?: boolean }> {
+	if (!manualData.image?.src) return {};
 
 	const imageUrl = manualData.image.src;
 	const filename = extractFilenameFromUrl(imageUrl);
@@ -338,7 +367,7 @@ export async function downloadManualImage(
 	// Manual asset paths
 	const manualImageDir = path.join(MANUALS_ASSETS_DIR, manualId);
 
-	// Check for existing image in items (preferred location)
+	// Check for existing image in items by filename (preferred location)
 	const existingItemPath = await findExistingItemImage(filenamePrefix);
 	if (existingItemPath) {
 		manualData.image.path = existingItemPath;
@@ -351,13 +380,13 @@ export async function downloadManualImage(
 		await cleanupManualImages(manualImageDir);
 
 		// Extract item ID from path: /images/items/01_5771/157_833.jpg -> 01_5771
-		const itemIdMatch = /\/images\/items\/([^/]+)\//.test(existingItemPath) 
+		const itemIdMatch = /\/images\/items\/([^/]+)\//.test(existingItemPath)
 			? (/\/images\/items\/([^/]+)\//.exec(existingItemPath))
 			: null;
-		return itemIdMatch?.[1];
+		return { itemId: itemIdMatch?.[1] };
 	}
 
-	// No item image found - check/download to manuals directory
+	// No item image found by filename - check/download to manuals directory
 	await fs.mkdir(manualImageDir, { recursive: true });
 	const manualLocalPath = path.join(manualImageDir, cleanFilename);
 	const relativePath = `/manuals/${manualId}/${cleanFilename}`;
@@ -370,7 +399,7 @@ export async function downloadManualImage(
 		console.log(`    Image already exists: ${cleanFilename}`);
 		// Clean up any incorrectly named duplicates
 		await cleanupManualImages(manualImageDir, cleanFilename);
-		return undefined;
+		return {};
 	} catch {
 		// File doesn't exist, download it
 	}
@@ -396,16 +425,37 @@ export async function downloadManualImage(
 			"Image download timeout",
 		);
 		const buffer = Buffer.from(arrayBuffer);
+		const hash = computeBufferHash(buffer);
+
+		// Check hash index for existing image with same content
+		const existingPath = hashIndex?.findByHash(hash);
+		if (existingPath) {
+			// Use existing image path instead of saving duplicate
+			manualData.image.path = existingPath;
+			manualData.image.hash = hash;
+			console.log(`    Deduplicated: ${cleanFilename} → ${existingPath}`);
+
+			// Clean up manual images directory since we don't need it
+			await cleanupManualImages(manualImageDir);
+
+			// Extract item ID from path if it's an item image
+			const itemIdMatch = /\/images\/items\/([^/]+)\//.test(existingPath)
+				? /\/images\/items\/([^/]+)\//.exec(existingPath)
+				: null;
+			return { itemId: itemIdMatch?.[1], deduplicated: true };
+		}
+
+		// No duplicate found - save new image
 		await fs.writeFile(manualLocalPath, buffer);
 		manualData.image.path = relativePath;
-		manualData.image.hash = computeBufferHash(buffer);
+		manualData.image.hash = hash;
 		console.log(`    Downloaded image: ${cleanFilename}`);
 	} catch (error) {
 		const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
 		console.log(`    Failed to download image: ${msg}`);
 	}
 
-	return undefined;
+	return {};
 }
 
 /**

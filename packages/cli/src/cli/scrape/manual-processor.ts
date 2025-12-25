@@ -8,6 +8,7 @@ import path from "node:path";
 
 import type { TranslationService } from "@hobby-ninja/translation";
 
+import type { ImageHashIndex } from "../../utils/image-utils.js";
 import type { ManualParser } from "../manual-parser.js";
 
 import { calculateMaxAgeMs } from "./cache-manager.js";
@@ -51,6 +52,8 @@ export interface ManualProcessResult {
 export interface ManualProcessDeps {
 	manualParser: ManualParser;
 	translator: TranslationService;
+	/** Hash index for image deduplication (item assets are authoritative) */
+	hashIndex?: ImageHashIndex;
 }
 
 // ============================================================================
@@ -163,25 +166,36 @@ export async function processManualComplete(
 
 	// Step 3b: Download/locate image and establish bidirectional links
 	// Image can come from: HTML parsing (manualData.image?.src) OR cached HTML file
+	// Uses hash-based deduplication - item assets are the authoritative source
 	let discoveredItemId: string | undefined;
+	let imageDeduplicated = false;
 	if (!options.dryRun) {
 		if (manualData.image?.src) {
 			// Parser found image in HTML - download or find existing (use padded ID for assets)
-			discoveredItemId = await time("download-image", () => downloadManualImage(paddedId, manualData));
+			const result = await time("download-image", () =>
+				downloadManualImage(paddedId, manualData, deps.hashIndex),
+			);
+			discoveredItemId = result.itemId;
+			imageDeduplicated = result.deduplicated ?? false;
 		} else {
 			// Parser didn't find image - try to get src from cached HTML
 			const srcUrl = await time("find-src", () => findImageSrcFromHtml(htmlPath, ""));
 			if (srcUrl) {
 				// Found src in HTML - use the standard download flow
 				manualData.image = { src: srcUrl };
-				discoveredItemId = await time("download-image", () => downloadManualImage(paddedId, manualData));
+				const result = await time("download-image", () =>
+					downloadManualImage(paddedId, manualData, deps.hashIndex),
+				);
+				discoveredItemId = result.itemId;
+				imageDeduplicated = result.deduplicated ?? false;
 			}
 		}
 
 		// Establish bidirectional link if item was discovered via shared image
 		if (discoveredItemId) {
 			manualData.itemId = discoveredItemId;
-			console.log(`    Linked to item: ${discoveredItemId}`);
+			const msg = imageDeduplicated ? `Linked to item (via hash): ${discoveredItemId}` : `Linked to item: ${discoveredItemId}`;
+			console.log(`    ${msg}`);
 		}
 	}
 

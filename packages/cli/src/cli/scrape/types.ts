@@ -73,6 +73,7 @@ export interface StepTiming {
 export interface DownloadStats {
 	downloaded: number;
 	skipped: number;
+	deduplicated?: number;
 }
 
 // ============================================================================

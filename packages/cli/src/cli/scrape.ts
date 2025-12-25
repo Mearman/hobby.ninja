@@ -29,6 +29,7 @@ import {
 	type ScrapeResult,
 	UNKNOWN_ERROR,
 	BrowserManager,
+	ImageHashIndex,
 	getAllItemIds,
 	getItemsToProcess,
 	getOrphanManualIds,
@@ -124,10 +125,15 @@ export class ScrapeCommand {
 			}
 			this.globalLookup.setBrowserContext(browserContext);
 
+			// Build hash index for image deduplication (item assets are authoritative)
+			const hashIndex = new ImageHashIndex();
+			await hashIndex.initialize();
+
 			// Create dependency objects for processing functions
 			const manualDeps: ManualProcessDeps = {
 				manualParser: this.manualParser,
 				translator: this.translator,
+				hashIndex,
 			};
 
 			const itemDeps: ItemProcessDeps = {
@@ -137,6 +143,7 @@ export class ScrapeCommand {
 				browserManager: this.browserManager,
 				processManualComplete: (manualId, opts) => processManualComplete(manualId, opts, manualDeps),
 				onTranslationsAdded: () => { this.translationsAdded = true; },
+				hashIndex,
 			};
 
 			const translationDeps = {

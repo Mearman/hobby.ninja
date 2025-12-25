@@ -70,6 +70,9 @@ export {
 	findImageSrcFromHtml,
 } from "./image-processor.js";
 
+// Image hash index for deduplication
+export { ImageHashIndex } from "../../utils/image-utils.js";
+
 // PDF processing
 export {
 	downloadPdf,

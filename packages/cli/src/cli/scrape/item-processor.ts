@@ -15,6 +15,7 @@ import path from "node:path";
 import type { TranslationService } from "@hobby-ninja/translation";
 
 import { writeJsonIfChanged } from "../../utils/file-utils.js";
+import type { ImageHashIndex } from "../../utils/image-utils.js";
 import type { BandaiCatalogParser, Item } from "../bandai-catalog-parser.js";
 import type { GlobalSiteLookup, GlobalSiteData } from "../global-site-lookup.js";
 import { ItemsIndexUpdater } from "../items-index-updater.js";
@@ -66,6 +67,8 @@ export interface ItemProcessDeps {
 	processManualComplete: (manualId: string, options: ScrapeOptions) => Promise<{ success: boolean; error?: string }>;
 	/** Callback to track when translations are added */
 	onTranslationsAdded?: () => void;
+	/** Hash index for image deduplication (item assets are authoritative) */
+	hashIndex?: ImageHashIndex;
 }
 
 /**
@@ -280,14 +283,24 @@ export async function processItemComplete(
 		}
 	}
 
-	// Step 5: Download images for this item
+	// Step 5: Download images for this item (with hash-based deduplication)
 	if (itemData.images && !options.dryRun) {
 		try {
 			const downloadResult = await time("download-images", () =>
-				downloadItemImages(itemId, itemData, jsonPath, deps.browserManager.getBrowserContext(), async (p, d) => { await saveItemJson(p, d); }),
+				downloadItemImages(
+					itemId,
+					itemData,
+					jsonPath,
+					deps.browserManager.getBrowserContext(),
+					async (p, d) => { await saveItemJson(p, d); },
+					deps.hashIndex,
+				),
 			);
-			if (downloadResult.downloaded > 0) {
-				console.log(`  ✓ Images: ${downloadResult.downloaded} downloaded, ${downloadResult.skipped} skipped`);
+			const deduped = downloadResult.deduplicated ?? 0;
+			if (downloadResult.downloaded > 0 || deduped > 0) {
+				const parts = [`${downloadResult.downloaded} downloaded`, `${downloadResult.skipped} skipped`];
+				if (deduped > 0) parts.push(`${deduped} deduplicated`);
+				console.log(`  ✓ Images: ${parts.join(", ")}`);
 			}
 		} catch (error) {
 			const errorMsg = error instanceof Error ? error.message : UNKNOWN_ERROR;
