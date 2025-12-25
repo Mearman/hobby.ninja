@@ -195,6 +195,11 @@ export async function downloadImage(url: string, browserContext: BrowserContext 
 		);
 
 		if (response.ok) {
+			// Validate content-type is actually an image (servers may return HTML for 404s with 200 status)
+			const contentType = response.headers.get("content-type") ?? "";
+			if (!contentType.startsWith("image/")) {
+				throw new Error(`Invalid content-type: ${contentType} (expected image/*)`);
+			}
 			const arrayBuffer = await withTimeout(
 				response.arrayBuffer(),
 				FETCH_TIMEOUT_MS,
@@ -219,6 +224,11 @@ export async function downloadImage(url: string, browserContext: BrowserContext 
 		}
 		if (!response.ok()) {
 			throw new Error(`HTTP ${String(response.status())}`);
+		}
+		// Validate content-type is actually an image
+		const contentType = response.headers()["content-type"] ?? "";
+		if (!contentType.startsWith("image/")) {
+			throw new Error(`Invalid content-type: ${contentType} (expected image/*)`);
 		}
 		return await response.body();
 	} finally {
