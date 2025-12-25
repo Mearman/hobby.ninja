@@ -92,7 +92,7 @@ async function execCommand(command: string, args: string[], options: Record<stri
   }
 }
 
-function getAllFiles(dir: string, extensions: string[] = ['.jpg', '.jpeg', '.png', '.svg', '.pdf']): FileInfo[] {
+function getAllFiles(dir: string, extensions: string[] = ['.jpg', '.jpeg', '.png', '.svg', '.pdf', '.webp']): FileInfo[] {
   const files: FileInfo[] = [];
   const normalizedExtensions = extensions.map(ext => ext.toLowerCase());
 
@@ -197,7 +197,7 @@ async function uploadFiles(): Promise<void> {
   console.log('🚀 Starting R2 upload to hobby-ninja bucket...');
   console.log(`📁 Source directory: ${DATA_DIR}`);
   console.log(`🗑️  Target bucket: ${BUCKET_NAME}`);
-  console.log(`🔍 File types: .jpg, .jpeg, .png, .svg, .pdf`);
+  console.log(`🔍 File types: .jpg, .jpeg, .png, .svg, .pdf, .webp`);
   console.log(`🔄 Normalizing: all extensions to lowercase, .jpeg → .jpg (old variants auto-deleted)`);
   console.log('');
 
@@ -232,6 +232,9 @@ async function uploadFiles(): Promise<void> {
   const pdfFiles = allFiles.filter(f =>
     extname(f.remotePath).toLowerCase() === '.pdf'
   );
+  const webpFiles = allFiles.filter(f =>
+    extname(f.remotePath).toLowerCase() === '.webp'
+  );
 
   // Count files that will be normalized
   const filesToNormalize = allFiles.filter(f => f.remotePath !== f.originalRemotePath);
@@ -242,6 +245,7 @@ async function uploadFiles(): Promise<void> {
   console.log(`   🖼️  PNG: ${pngFiles.length} files (${formatBytes(pngFiles.reduce((sum, f) => sum + f.size, 0))})`);
   console.log(`   🎨 SVG: ${svgFiles.length} files (${formatBytes(svgFiles.reduce((sum, f) => sum + f.size, 0))})`);
   console.log(`   📄 PDF: ${pdfFiles.length} files (${formatBytes(pdfFiles.reduce((sum, f) => sum + f.size, 0))})`);
+  console.log(`   🖼️  WebP: ${webpFiles.length} files (${formatBytes(webpFiles.reduce((sum, f) => sum + f.size, 0))})`);
   console.log(`   💾 Total: ${formatBytes(allFiles.reduce((sum, f) => sum + f.size, 0))}`);
   if (filesToNormalize.length > 0) {
     console.log(`   🔄 Extensions to normalize: ${filesToNormalize.length} files`);
