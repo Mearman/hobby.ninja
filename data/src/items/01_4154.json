@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "1/4 グローグー",
-		"en": "1/4 GROGU"
+		"en": "1/4 Glow Goo"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3515",
+			"url": "https://bandai-hobby.net/item/01_3515/",
+			"ja": "1/12 ザ・マンダロリアン(ベスカーアーマー)"
+		},
+		{
+			"id": "01_3516",
+			"url": "https://bandai-hobby.net/item/01_3516/",
+			"ja": "1/12 ザ・マンダロリアン(ベスカーアーマー)シルバーコーテイングVer."
+		}
+	],
+	"scale": "1/4",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -18,60 +56,78 @@
 		"day": 30
 	},
 	"targetAge": 15,
-	"scale": "1/4",
 	"description": {
 		"ja": [
 			"『スター・ウォーズ』より、「マンダロリアン」と共に旅をする人気キャラクター「グローグー」を1/4スケールでプラモデル化！",
-			"■全高約100mm。「通常顔」に加え3種の表情パーツ、垂れた耳パーツも付属し、差し替えで表情豊かなグローグーを表現できる。",
-			"■付属のホバリングプラム（1/12スケール）は、カバーの開閉をパーツの差し替えで再現。クリア台座も付属し、浮遊感を演出できる。",
-			"■ホバリングプラムに搭乗できる1/12スケールのグローグーも同梱。別売りの「1/12 ザ・マンダロリアン（ベスカーアーマー）」と並べることで劇中イメージの再現が可能。"
+			"• 全高約100mm。「通常顔」に加え3種の表情パーツ、垂れた耳パーツも付属し、差し替えで表情豊かなグローグーを表現できる。",
+			"• 付属のホバリングプラム（1/12スケール）は、カバーの開閉をパーツの差し替えで再現。クリア台座も付属し、浮遊感を演出できる。",
+			"• ホバリングプラムに搭乗できる1/12スケールのグローグーも同梱。別売りの「1/12 ザ・マンダロリアン（ベスカーアーマー）」と並べることで劇中イメージの再現が可能。"
 		],
 		"en": [
-			"From \"Star Wars \", the popular character \" Grogoo \" who travels with \" The Mandalorian\" is made into a 1/4 scale plastic model!",
+			"From \"Star Wars\", the popular character \"Grogoo\" who travels with \"The Mandalorian\" is made into a 1/4 scale plastic model!",
 			"• Overall height approximately 100mm. In addition to the \"normal face\", 3 types of expression parts and drooping ear parts are also included, allowing you to express a richly expressive Glow Goo by replacing them.",
 			"• The included hovering plum (1/12 Scale) reproduces the opening and closing of the cover by replacing parts. A clear pedestal is also included to create a floating feeling.",
 			"• Also included is a 1/12 Scale Groogoo that can be used to board the Hovering Plum. By arranging it with \"1/12 The Mandalorian (Beskar Armor)\" (sold separately), you can recreate the image from the movie."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"表情パーツ（1/4 グローグー用）×4種",
-			"耳パーツ（1/4 グローグー用）×2種",
-			"ホバリングプラム（1/12 グローグー用）×1",
-			"ホバリングプラムカバー×1",
-			"ホバリングプラム用ディスプレイスタンド×1",
-			"シール×1"
-		],
-		"en": [
-			"Expression parts (for 1/4 glow goo) x 4 types",
-			"Ear parts (for 1/4 Glow Goo) x 2 types",
-			"Hovering plum (for 1/12 glow goo) x 1",
-			"Hovering plum cover x 1",
-			"Display stand for hovering plum x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情パーツ（1/4 グローグー用）",
+				"en": "Facial expression parts (for 1/4 Glow Goo)"
+			},
+			"count": 4,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "耳パーツ（1/4 グローグー用）",
+				"en": "Ear parts (for 1/4 Glow Goo)"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホバリングプラム（1/12 グローグー用）",
+				"en": "Hovering Plum (for 1/12 Glow Goo)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホバリングプラムカバー",
+				"en": "hovering plum cover"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホバリングプラム用ディスプレイスタンド",
+				"en": "Display stand for hovering plums"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175238_1.jpg",
 				"path": "/images/items/01_4154/1000175238_1.jpg",
 				"hash": "18617670edf4c4149447c51d0a38b046"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175238_10.jpg",
-				"path": "/images/items/01_4154/1000175238_10.jpg",
-				"hash": "6d65996566a5ba01ea402c1ab9786f4f"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175238_11.jpg",
-				"path": "/images/items/01_4154/1000175238_11.jpg",
-				"hash": "9854518a3441bf93c373f0d082147ed4"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175238_12.jpg",
-				"path": "/images/items/01_4154/1000175238_12.jpg",
-				"hash": "55afd5328cc8c950143be8fce1b06ec2"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175238_2.jpg",
@@ -112,13 +168,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175238_9.jpg",
 				"path": "/images/items/01_4154/1000175238_9.jpg",
 				"hash": "83096cdc3f42d0359c4e3fd3d4096f8d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175238_10.jpg",
+				"path": "/images/items/01_4154/1000175238_10.jpg",
+				"hash": "6d65996566a5ba01ea402c1ab9786f4f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175238_11.jpg",
+				"path": "/images/items/01_4154/1000175238_11.jpg",
+				"hash": "9854518a3441bf93c373f0d082147ed4"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175238_12.jpg",
+				"path": "/images/items/01_4154/1000175238_12.jpg",
+				"hash": "55afd5328cc8c950143be8fce1b06ec2"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4154/",
-	"brandIds": [],
-	"seriesIds": ["starwars"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_4153", "01_3514", "01_3515", "01_3516"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4154/"
 }

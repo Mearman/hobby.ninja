@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 リックディアス(クワトロ機)",
 		"en": "MG 1/100 Rick Diaz (Quattro machine)"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000145352",
+			"url": "https://p-bandai.jp/item/item-1000145352/",
+			"ja": "ＭＧ 1/100 RMS-179 ジムII（エゥーゴカラーＶｅｒ．）"
+		},
+		{
+			"id": "item-1000131596",
+			"url": "https://p-bandai.jp/item/item-1000131596",
+			"ja": "ＭＧ 1/100 ジム・キャノン ［レッド・ヘッド］（ジャブロー防衛隊仕様）"
+		},
+		{
+			"id": "01_4270",
+			"url": "https://bandai-hobby.net/item/01_4270/",
+			"ja": "MG 1/100 百式 Ver.2.0 [メカニカルクリア]"
+		},
+		{
+			"id": "item-1000112091",
+			"url": "http://p-bandai.jp/item/item-1000112091/",
+			"ja": "ＭＧ 1/100 RMS-179 ジムＩＩ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3960,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"好評発売中のMGリック・ディアス(前期型黒バージョン)をクワトロ専用機仕様にバージョンアップしたプラモデル。クワトロ機と一般用にコンパチ可能です。頭部バルカンファランクスのカバー形状が変化しています。膝アーマーやリアスカートが大型化され、高機動タイプに変更しています。クレイバズーカ、ビームピストル、ビームサーベル、1/100スケールのパイロットフィギュアが付属します。"
@@ -29,22 +72,22 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_509.jpg",
+				"src": "https://bandai-hobby.net/images/153_509_s_e98biee042szaf8gfi9j4c3mmpib.jpg",
 				"path": "/images/items/01_4177/153_509.jpg",
 				"hash": "122f265684da21157d5547952c73c984"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_509.jpg",
+				"src": "https://bandai-hobby.net/images/155_509_s_2w7ebajvh094adosaq3orn6tli2p.jpg",
 				"path": "/images/items/01_4177/155_509.jpg",
 				"hash": "b5236f5fcc35bc20ef75601b9a3d4c28"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_509.jpg",
+				"src": "https://bandai-hobby.net/images/156_509_s_9ia736mbxp081aiwo6n1gujoe444.jpg",
 				"path": "/images/items/01_4177/156_509.jpg",
 				"hash": "ff92886e09cb25d524b1a627d0d7cd60"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_509.jpg",
+				"src": "https://bandai-hobby.net/images/157_509_s_7zzayjos85g5155pmf1wp57ohw6u.jpg",
 				"path": "/images/items/01_4177/157_509.jpg",
 				"hash": "a519cace31e46f87b18751ff1d1bf439"
 			}
@@ -52,10 +95,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4177/",
-	"brandIds": ["mg"],
-	"seriesIds": ["z-gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000145352", "item-1000131596", "01_4270", "item-1000112091"],
 	"manual": {
 		"id": "532",
 		"url": "https://manual.bandai-hobby.net/menus/detail/532/"

@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard 孫悟空 (NEW SPEC Ver.)",
-		"en": "Figure-rise Standard SON GOKU (NEW SPEC Ver.)"
+		"en": "Figure-rise Standard Son Goku (NEW SPEC Ver.)"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4901",
+			"url": "https://bandai-hobby.net/item/01_4901/",
+			"ja": "Figure-rise Standard ベジータ (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_2974",
+			"url": "https://bandai-hobby.net/item/01_2974/",
+			"ja": "Figure-rise Standard アルティメット孫悟飯"
+		},
+		{
+			"id": "01_2769",
+			"url": "https://bandai-hobby.net/item/01_2769/",
+			"ja": "Figure-rise Standard ジレン"
+		},
+		{
+			"id": "01_2595",
+			"url": "https://bandai-hobby.net/item/01_2595/",
+			"ja": "Figure-rise Standard バーダック"
+		}
+	],
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -45,41 +88,55 @@
 			"• Thorough examination of human body structure. Pursuing the reality in every detail, from the bulges of the muscles to the tips of the fingers.",
 			"• We are particular about parts division and molding color, and reproduce the color coding of the whole body just by assembling.",
 			"• The surface of the gi and shoes, as well as the wrinkles on the joint parts, are expressed in dense detail. Achieving absolute beauty.",
-			"• Represent Runner's number tag with the number of stars in \"Dragon Ball \". Runner can be divided by number tag, making it easy to manage parts. You can have fun assembling while searching for \" Dragon Balls\".",
+			"• Represent Runner's number tag with the number of stars in \"Dragon Ball\". Runner can be divided by number tag, making it easy to manage parts. You can have fun assembling while searching for \"Dragon Balls\".",
 			"• Comes with a gi mark as a bonus Seal.",
 			"• Display pedestal included."
 		]
 	},
-	"accessories": {
-		"ja": ["表情パーツ×5種", "ハンドパーツ（左右）×3種、（右手）×2種", "マーキングシール×1", "ディスプレイ用台座×1"],
-		"en": [
-			"Facial expression parts x 5 types",
-			"Hand parts (left and right) x 3 types, (right hand) x 2 types",
-			"MarkingSeal×1",
-			"Display pedestal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情パーツ",
+				"en": "facial expression parts"
+			},
+			"count": 5,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ（左右）",
+				"en": "Hand parts (left and right)"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種、（右手）×2種",
+				"en": "Seeds, (right hand) x 2 types"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ用台座",
+				"en": "display pedestal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180051_1.jpg",
 				"path": "/images/items/01_4219/1000180051_1.jpg",
 				"hash": "5850b8cc656e2676b695d1a8d53bd0cc"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180051_10.jpg",
-				"path": "/images/items/01_4219/1000180051_10.jpg",
-				"hash": "9d30ec4c32fc50df0abb240e27154bdf"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180051_11.jpg",
-				"path": "/images/items/01_4219/1000180051_11.jpg",
-				"hash": "8d8e718f6dcc03263234ccfd1cab8c31"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180051_12.jpg",
-				"path": "/images/items/01_4219/1000180051_12.jpg",
-				"hash": "7658f80bbe333960bdeb28dd71d90161"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180051_2.jpg",
@@ -120,13 +177,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180051_9.jpg",
 				"path": "/images/items/01_4219/1000180051_9.jpg",
 				"hash": "8594e7673f2c976e37d8d984b64ce01e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180051_10.jpg",
+				"path": "/images/items/01_4219/1000180051_10.jpg",
+				"hash": "9d30ec4c32fc50df0abb240e27154bdf"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180051_11.jpg",
+				"path": "/images/items/01_4219/1000180051_11.jpg",
+				"hash": "8d8e718f6dcc03263234ccfd1cab8c31"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180051_12.jpg",
+				"path": "/images/items/01_4219/1000180051_12.jpg",
+				"hash": "7658f80bbe333960bdeb28dd71d90161"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4219/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["dragonball"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_4901", "01_2974", "01_2769", "01_2595"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4219/"
 }

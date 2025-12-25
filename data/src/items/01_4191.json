@@ -3,8 +3,42 @@
 	"type": "item",
 	"name": {
 		"ja": "ENTRY GRADE 1/144 RX-93ff νガンダム",
-		"en": "ENTRY GRADE 1/144 RX-93ff ν GUNDAM"
+		"en": "ENTRY GRADE 1/144 RX-93ff νGundam"
 	},
+	"brands": [
+		{
+			"id": "entry_grade_g",
+			"url": "https://bandai-hobby.net/brand/entry_grade_g/",
+			"ja": "ENTRY GRADE"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4974",
+			"url": "https://bandai-hobby.net/item/01_4974/",
+			"ja": "ENTRY GRADE 1/144 ガンダムベース限定 νガンダム [ペインティング モデル]"
+		},
+		{
+			"id": "01_4082",
+			"url": "https://bandai-hobby.net/item/01_4082/",
+			"ja": "ENTRY GRADE 1/144 νガンダム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1430,
 		"currency": "JPY",
@@ -17,15 +51,14 @@
 		"month": 4
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"実物大νガンダム立像「RX-93ff νガンダム」が、新感覚の組み立てやすさを実現したENTRY GRADEシリーズから登場！",
-			"■成形色には立像をイメージしたカラーリングを採用。エンブレム等はマーキングシールで再現！",
-			"■新規造形のロングレンジ・フィン・ファンネルは展開ギミックを差し替えで表現可能！",
-			"■立像に準拠したオリジナルのハンドパーツが付属！",
-			"■ニッパーを使わず手でパチパチと簡単に外せるタッチゲート仕様。",
-			"■可動域が広く、自由自在にポージングが決められる。",
+			"• 成形色には立像をイメージしたカラーリングを採用。エンブレム等はマーキングシールで再現！",
+			"• 新規造形のロングレンジ・フィン・ファンネルは展開ギミックを差し替えで表現可能！",
+			"• 立像に準拠したオリジナルのハンドパーツが付属！",
+			"• ニッパーを使わず手でパチパチと簡単に外せるタッチゲート仕様。",
+			"• 可動域が広く、自由自在にポージングが決められる。",
 			"※一般流通での販売はございません。",
 			"※この商品は後日バンダイナムコグループ公式通販サイト、THE GUNDAM BASE各店、海外での販売も予定しております。"
 		],
@@ -90,13 +123,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4191/",
-	"brandIds": ["entry_grade"],
-	"seriesIds": ["gundam-cca"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4974", "01_4082"],
-	"tag": {
-		"ja": "GUNDAM SIDE-F",
-		"en": "GUNDAM SIDE-F"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4191/"
 }

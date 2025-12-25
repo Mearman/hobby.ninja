@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムマルコシアス[アイアンブラッドコーティング]",
 		"en": "HG 1/144 Gundam Marcosias [Iron Blood Coating]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6773",
+			"url": "https://bandai-hobby.net/item/01_6773/",
+			"ja": "HG 1/144 ガンダムザガン"
+		},
+		{
+			"id": "01_6763",
+			"url": "https://bandai-hobby.net/item/01_6763/",
+			"ja": "HG 1/144 モンキーロディ(598機)/モンキークラブロディ"
+		},
+		{
+			"id": "01_4103",
+			"url": "https://bandai-hobby.net/item/01_4103/",
+			"ja": "HG 1/144 ジークルーネ"
+		},
+		{
+			"id": "01_4240",
+			"url": "https://bandai-hobby.net/item/01_4240/",
+			"ja": "HG 1/144 ガンダム端白星[クリアカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 5720,
 		"currency": "JPY",
@@ -18,13 +62,11 @@
 		"day": 21
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"HG 1/144 ガンダムマルコシアスが、重厚感あるアイアンブラッドコーティング仕様になって登場！",
 			"厄祭戦の最中に失われたと思われる幻の機体。",
-			"マルコシアスの最大の特徴は背部と腰部に装備した計4枚のバインダー。",
-			"これらはすべてサブアームとして機能し、人型の形状を持たないMAとのあらゆる戦闘に対処するために設計されたと言われる。",
+			"• マルコシアスの最大の特徴は背部と腰部に装備した計4枚のバインダー。　これらはすべてサブアームとして機能し、人型の形状を持たないMAとのあらゆる戦闘に対処するために設計されたと言われる。",
 			"• バスタードメイスは鞘自体に重量を持たせメイスとしても使用可能なマルコシアスの主力武装。",
 			"• 背部と腰部にある４枚のバインダーには、サブアームと短剣が収納されている。",
 			"• 腕部装甲は、打撃武装としても有用であり、反転させることでクローとしても使用可能。"
@@ -32,8 +74,7 @@
 		"en": [
 			"HG 1/144 Gundam Marcosias is now available with a heavy iron blood coating!",
 			"A phantom machine that is thought to have been lost during the Battle of Calamity.",
-			"Marcosias' biggest feature is a total of four binders attached to his back and waist.",
-			"All of these function as sub-arms, and are said to be designed to deal with any type of battle against MA, which does not have a humanoid shape.",
+			"• The biggest feature of Marcosias is a total of 4 binders attached to his back and waist. All of these function as sub-arms, and are said to be designed to deal with any type of battle against MA, which does not have a humanoid shape.",
 			"• The Bastard Mace is Marcosias' main weapon, which has a weight in its scabbard and can be used as a mace.",
 			"• The four binders on the back and waist store the sub-arm and dagger.",
 			"• The arm armor is also useful as a striking weapon, and can be reversed to be used as a claw."
@@ -42,30 +83,22 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5109.jpg",
+				"src": "https://bandai-hobby.net/images/153_5109_s_q98gm35h9hq1dbxnfq2m8nz3rb6w.jpg",
 				"path": "/images/items/01_4188/153_5109.jpg",
 				"hash": "df582ebee0dad8c10ee2fd77199066bb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5109.jpg",
+				"src": "https://bandai-hobby.net/images/155_5109_s_a2nobkjbosp2x4q6jai9ag2ajnm5.jpg",
 				"path": "/images/items/01_4188/155_5109.jpg",
 				"hash": "d6465a9ff3716d25c7b6f722f4ac1acf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5109.jpg",
+				"src": "https://bandai-hobby.net/images/156_5109_s_g5qp9ishkrbme3897ozhvmfnvh0x.jpg",
 				"path": "/images/items/01_4188/156_5109.jpg",
 				"hash": "8aa10b333e45f85a0596abb89a60c82d"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4188/",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4103", "01_4240", "01_4094", "01_4187"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4188/"
 }

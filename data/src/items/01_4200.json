@@ -5,6 +5,55 @@
 		"ja": "ＨＧ 1/72 メイレスビャクチ（F.G.E.カラー）",
 		"en": "HG 1/72 Mayles Byakuchi (F.G.E. color)"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		},
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -17,7 +66,6 @@
 		"month": 7
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"月刊ホビージャパンで連載の外伝『境界戦機 フロストフラワー』より、第２話に登場した大ユーラシア連邦（FGE：Federation of Great Eurasia）が所有していたときのメイレスビャクチを商品化。",
@@ -68,7 +116,7 @@
 			"Attached weapons: Machete / Multi-launcher / Grenade launcher / 60mm portable machine gun (multi-magazine type) / Quadruple guided missile portable launcher / General-purpose carrying shield / Weapon rack",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/72 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -88,88 +136,104 @@
 			"・Product specifications are as of 20224. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"マチェット",
-			"マルチランチャー",
-			"グレネードランチャー",
-			"６０ｍｍ携行機関砲（多弾倉型）",
-			"四連装誘導弾携行発射機",
-			"汎用携行盾",
-			"ウェポンラック"
-		],
-		"en": [
-			"machete",
-			"multi launcher",
-			"grenade launcher",
-			"60mm portable machine gun (multi-magazine type)",
-			"Quadruple guided missile portable launcher",
-			"General purpose shield",
-			"Weapon rack"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "マチェット",
+				"en": "machete"
+			}
+		},
+		{
+			"name": {
+				"ja": "マルチランチャー",
+				"en": "multi launcher"
+			}
+		},
+		{
+			"name": {
+				"ja": "グレネードランチャー",
+				"en": "grenade launcher"
+			}
+		},
+		{
+			"name": {
+				"ja": "６０ｍｍ携行機関砲（多弾倉型）",
+				"en": "60mm portable machine gun (multi-magazine type)"
+			}
+		},
+		{
+			"name": {
+				"ja": "四連装誘導弾携行発射機",
+				"en": "Quadruple guided missile portable launcher"
+			}
+		},
+		{
+			"name": {
+				"ja": "汎用携行盾",
+				"en": "General purpose shield"
+			}
+		},
+		{
+			"name": {
+				"ja": "ウェポンラック",
+				"en": "Weapon rack"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5120.jpg",
+				"src": "https://bandai-hobby.net/images/153_5120_s_0ssccypnq1hy0m180u6ozantnizp.jpg",
 				"path": "/images/items/01_4200/153_5120.jpg",
 				"hash": "a4e03eb8ca8be6b9e5d137dbd8d9daf7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5120.jpg",
+				"src": "https://bandai-hobby.net/images/155_5120_s_fvw9z2mh8m5ayy0uoay6tuh7in2y.jpg",
 				"path": "/images/items/01_4200/155_5120.jpg",
 				"hash": "aa677ee8088f2f0c418277ebd045c3f0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5120.jpg",
+				"src": "https://bandai-hobby.net/images/156_5120_s_5sz269l2f2r4r6v3yl7x83kwc7ru.jpg",
 				"path": "/images/items/01_4200/156_5120.jpg",
 				"hash": "82c0b9961ddb7a662fb8bf599b024069"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5120.jpg",
+				"src": "https://bandai-hobby.net/images/157_5120_s_bizwmtiellloql8onptv5p2mlzur.jpg",
 				"path": "/images/items/01_4200/157_5120.jpg",
 				"hash": "ed813b2414e57fa320f53d4048e07170"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5120.jpg",
+				"src": "https://bandai-hobby.net/images/158_5120_s_5gr13vjntndtt47e7fbbiz90yyi9.jpg",
 				"path": "/images/items/01_4200/158_5120.jpg",
 				"hash": "a655a18785b20eb7a5ef7267aedcbc85"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5120.jpg",
+				"src": "https://bandai-hobby.net/images/159_5120_s_huatglhiocpe7ajlxcgbzmk17aa2.jpg",
 				"path": "/images/items/01_4200/159_5120.jpg",
 				"hash": "688e84ec92732c500a2e216fa1a89a07"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5120.jpg",
+				"src": "https://bandai-hobby.net/images/189_5120_s_6asc33i2rspj93ko2bk494y2i8h4.jpg",
 				"path": "/images/items/01_4200/189_5120.jpg",
 				"hash": "31c9cfa54e6950529eec637bccff5b10"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5120.jpg",
+				"src": "https://bandai-hobby.net/images/190_5120_s_mn3mtzyljmy4j2la0gpj23mie78i.jpg",
 				"path": "/images/items/01_4200/190_5120.jpg",
 				"hash": "5921e2984c79eeffe0310b7ca6ff5cd0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5120.jpg",
+				"src": "https://bandai-hobby.net/images/191_5120_s_zjtx18nn76mc4nj14ic4jzno7wxb.jpg",
 				"path": "/images/items/01_4200/191_5120.jpg",
 				"hash": "1ec94e9f1256404e97ebd8bdd21fe286"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5120.jpg",
+				"src": "https://bandai-hobby.net/images/192_5120_s_2x3xjlefr67pizpz70zu9lrljmyk.jpg",
 				"path": "/images/items/01_4200/192_5120.jpg",
 				"hash": "68305d5d0edd2a7485a0ded2299c47c4"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4200/",
-	"brandIds": ["pb_charapla", "hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4200/"
 }

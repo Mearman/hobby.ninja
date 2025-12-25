@@ -3,8 +3,30 @@
 	"type": "item",
 	"name": {
 		"ja": "RG ガオガイガー",
-		"en": "RG GAOGAIGAR"
+		"en": "RG Gaogaigar"
 	},
+	"brands": [
+		{
+			"id": "rg-c",
+			"url": "https://bandai-hobby.net/brand/rg-c/",
+			"ja": "RG［ リアルグレード ］"
+		}
+	],
+	"series": [
+		{
+			"id": "gaogaigar",
+			"url": "https://bandai-hobby.net/series/gaogaigar/",
+			"ja": "勇者王ガオガイガー"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 6600,
 		"currency": "JPY",
@@ -21,19 +43,19 @@
 	"description": {
 		"ja": [
 			"『勇者王ガオガイガー』より、RGならではの意匠を凝らしたガオガイガーが登場！",
-			"■変形合体と豊富なアクション性能を両立しつつ劇中イメージを追求。プラモデルオリジナルの解釈、検証を重ねた高次元のプロポーション。",
-			"■各種関節機構を徹底追求し、変形合体機構を有したままでの柔軟な可動域を実現。",
-			"■長年蓄積された設計、金型、成形技術により、組み立てるだけで劇中イメージに近い色分けを再現。",
-			"■各種ガオーマシンとの合体が可能。",
-			"■ガオガイガーの激しいアクションを新規開発のマニピュレータハンドで再現。全指関節が可動することで自然な手指可動を実現。",
-			"■脚部の“履帯”は１パーツずつを組み合わせる精密な構成。スライド可動することで、アクション時の干渉を軽減。広範囲の膝可動を実現。",
-			"■背部に装着したステルスガオーは、ヘル・アンド・ヘブン発動時のスラスター開口ギミックを搭載。",
-			"■ディバイディングドライバーは金属パーツを採用し、質感も追求。スプリングを内蔵し、シャフト部分には伸縮ギミックを搭載。",
-			"■プロテクトシェード発動時を再現したエフェクトPETパーツが付属。",
-			"■ヘル・アンド・ヘブン発動シーンをイメージした固定大型ハンドパーツが付属。"
+			"• 変形合体と豊富なアクション性能を両立しつつ劇中イメージを追求。プラモデルオリジナルの解釈、検証を重ねた高次元のプロポーション。",
+			"• 各種関節機構を徹底追求し、変形合体機構を有したままでの柔軟な可動域を実現。",
+			"• 長年蓄積された設計、金型、成形技術により、組み立てるだけで劇中イメージに近い色分けを再現。",
+			"• 各種ガオーマシンとの合体が可能。",
+			"• ガオガイガーの激しいアクションを新規開発のマニピュレータハンドで再現。全指関節が可動することで自然な手指可動を実現。",
+			"• 脚部の“履帯”は１パーツずつを組み合わせる精密な構成。スライド可動することで、アクション時の干渉を軽減。広範囲の膝可動を実現。",
+			"• 背部に装着したステルスガオーは、ヘル・アンド・ヘブン発動時のスラスター開口ギミックを搭載。",
+			"• ディバイディングドライバーは金属パーツを採用し、質感も追求。スプリングを内蔵し、シャフト部分には伸縮ギミックを搭載。",
+			"• プロテクトシェード発動時を再現したエフェクトPETパーツが付属。",
+			"• ヘル・アンド・ヘブン発動シーンをイメージした固定大型ハンドパーツが付属。"
 		],
 		"en": [
-			"From ``King of Braves Gaogaigar'' comes Gaogaigar with a design unique to RG!",
+			"From \"King of Braves Gaogaigar\" comes Gaogaigar with a design unique to RG!",
 			"• Pursuing the image from the play while balancing deformation and combination with abundant action performance. High-dimensional proportions that have been repeatedly interpreted and verified as a plastic model original.",
 			"• We have thoroughly pursued various joint mechanisms to achieve a flexible range of motion while maintaining a deformation and combination mechanism.",
 			"• Using long-accumulated design, mold, and molding technology, color coding close to the image in the movie can be reproduced just by assembling.",
@@ -46,47 +68,75 @@
 			"• Includes fixed large hand parts based on the Hell and Heaven activation scene."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"可動指ハンドパーツ×1式／ヘル・アンド・ヘブンイメージハンドパーツ×1式／ガイガー用ハンドパーツ×2種",
-			"ジョイントパーツ×1式",
-			"リード線×1",
-			"ディバイディングドライバー×1",
-			"プロテクトシェードイメージエフェクト×1式",
-			"リアリスティックデカール×1",
-			"メタリック３Dシール×1"
-		],
-		"en": [
-			"Movable finger hand parts x 1 set / Hell and Heaven image hand parts x 1 set / Hand parts for Geiger x 2 types",
-			"Joint parts x 1 set",
-			"Lead wire x 1",
-			"Dividing driver x 1",
-			"Protect shade image effect x 1",
-			"Realistic decal x 1",
-			"Metallic 3DSeal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "可動指ハンドパーツ",
+				"en": "movable finger hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "リード線",
+				"en": "lead wire"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディバイディングドライバー",
+				"en": "dividing driver"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "プロテクトシェードイメージエフェクト",
+				"en": "Protect shade image effect"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール",
+				"en": "realistic decals"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "メタリック３Dシール",
+				"en": "Metallic 3DSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175350_1.jpg",
 				"path": "/images/items/01_4181/1000175350_1.jpg",
 				"hash": "fbb8fad824803265af742d8df39245a6"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175350_10.jpg",
-				"path": "/images/items/01_4181/1000175350_10.jpg",
-				"hash": "81d49f72d49136e8c338f2e75d155b66"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175350_11.jpg",
-				"path": "/images/items/01_4181/1000175350_11.jpg",
-				"hash": "842f98d4c2bbc9ce36baed6f0d83a203"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175350_12.jpg",
-				"path": "/images/items/01_4181/1000175350_12.jpg",
-				"hash": "a48945b71fac39f04d2a1cd946bcc027"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175350_2.jpg",
@@ -129,61 +179,22 @@
 				"hash": "ba0a79515975ea4edddd6d99401ab944"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4181_inst_0.jpg",
-				"path": "/images/items/01_4181/01_4181_inst_0.jpg",
-				"hash": "2f6f4b7d827f03b7aee063abf8dcb806"
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175350_10.jpg",
+				"path": "/images/items/01_4181/1000175350_10.jpg",
+				"hash": "81d49f72d49136e8c338f2e75d155b66"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4181_inst_1.jpg",
-				"path": "/images/items/01_4181/01_4181_inst_1.jpg",
-				"hash": "9d1d10ee04b76886b6545e5dacc177f1"
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175350_11.jpg",
+				"path": "/images/items/01_4181/1000175350_11.jpg",
+				"hash": "842f98d4c2bbc9ce36baed6f0d83a203"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4181_inst_2.jpg",
-				"path": "/images/items/01_4181/01_4181_inst_2.jpg",
-				"hash": "ba64265ef661dd2def16b1e28d9e4ed7"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4181_inst_3.jpg",
-				"path": "/images/items/01_4181/01_4181_inst_3.jpg",
-				"hash": "ea75bd0cfe2fc42adc49c67ad6b31824"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4181_inst_4.jpg",
-				"path": "/images/items/01_4181/01_4181_inst_4.jpg",
-				"hash": "719e4072ae14861442a8e01a984e7ee9"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4181_inst_5.jpg",
-				"path": "/images/items/01_4181/01_4181_inst_5.jpg",
-				"hash": "6b5f60a5159120184004bb3dc39195f4"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4181_inst_6.jpg",
-				"path": "/images/items/01_4181/01_4181_inst_6.jpg",
-				"hash": "f7ac117e0c0884ad3c990195ad981b49"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4181_inst_7.jpg",
-				"path": "/images/items/01_4181/01_4181_inst_7.jpg",
-				"hash": "5b5c2a4cf210f9f2bf3607c646c9d949"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4181_inst_8.jpg",
-				"path": "/images/items/01_4181/01_4181_inst_8.jpg",
-				"hash": "442bccd4eb00af8b4923b0c3b6b22c45"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4181_inst_9.jpg",
-				"path": "/images/items/01_4181/01_4181_inst_9.jpg",
-				"hash": "3dcda3b1c88f95c6c8f87c1105ce3c60"
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175350_12.jpg",
+				"path": "/images/items/01_4181/1000175350_12.jpg",
+				"hash": "a48945b71fac39f04d2a1cd946bcc027"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4181/",
-	"brandIds": ["rg"],
-	"seriesIds": ["gaogaigar"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_4181/"
 }

@@ -2,9 +2,46 @@
 	"id": "01_4140",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダムちーびー戦士 騎士ガンダム GP03Jr.",
-		"en": "SD Gundam Little Warrior Knight Gundam GP03Jr."
+		"ja": "SDガンダムちーびー戦士 騎士ガンダムGP03Jr.",
+		"en": "SDGundam Little Warrior Knight GundamGP03Jr."
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4975",
+			"url": "https://bandai-hobby.net/item/01_4975/",
+			"ja": "BB戦士 MSN-04FF サザビー"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		}
+	],
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -19,22 +56,22 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": ["「SD ガンダムちーびー戦士 騎士ガンダムＧＰ０３Ｊｒ．」が登場！"],
-		"en": ["\"SD Gundam Little Warrior Knight Gundam GP03 Jr.\" is now available!"]
+		"ja": [
+			"「SDガンダムちーびー戦士 騎士ガンダムＧＰ０３Ｊｒ．」が登場！"
+		],
+		"en": [
+			"\"SD Gundam Little Warrior Knight Gundam GP03 Jr.\" is now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5066.jpg",
+				"src": "https://bandai-hobby.net/images/153_5066_s_s0th7is4wgb7u38i2olkxaad0sn4.jpg",
 				"path": "/images/items/01_4140/153_5066.jpg",
 				"hash": "e759bf6a3c391bf5b406cc80e4008edf"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4140/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4140/"
 }

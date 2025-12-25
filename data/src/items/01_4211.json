@@ -3,8 +3,47 @@
 	"type": "item",
 	"name": {
 		"ja": "ENTRY GRADE 1/144 ガンダムベース限定 ストライクガンダム [ペインティング モデル]",
-		"en": "ENTRY GRADE 1/144 THE GUNDAM BASE LIMITED STRIKE GUNDAM [PAINTING MODEL]"
+		"en": "ENTRY GRADE 1/144 Gundam Base Limited Strike Gundam [Painting Model]"
 	},
+	"brands": [
+		{
+			"id": "entry_grade_g",
+			"url": "https://bandai-hobby.net/brand/entry_grade_g/",
+			"ja": "ENTRY GRADE"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5440",
+			"url": "https://bandai-hobby.net/item/01_5440/",
+			"ja": "ENTRY GRADE 1/144 ストライクルージュ"
+		},
+		{
+			"id": "01_3744",
+			"url": "https://bandai-hobby.net/item/01_3744/",
+			"ja": "ENTRY GRADE 1/144 ストライクガンダム"
+		},
+		{
+			"id": "01_3788",
+			"url": "https://bandai-hobby.net/item/01_3788/",
+			"ja": "ENTRY GRADE 1/144 ストライクガンダム(ライトパッケージVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -18,7 +57,6 @@
 		"day": 21
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定商品です。",
@@ -84,13 +122,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4211/",
-	"brandIds": ["entry_grade"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5440", "01_3744", "01_3788"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4211/"
 }

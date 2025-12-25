@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MS SIS-T00 リリネル[カラーA]",
-		"en": "30MS SIS-T00 LIRINEL[COLOR A]"
+		"en": "30MS SIS-T00 Lilinel [Color A]"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5975",
+			"url": "https://bandai-hobby.net/item/01_5975/",
+			"ja": "30MS 和泉愛依"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5954",
+			"url": "https://bandai-hobby.net/item/01_5954/",
+			"ja": "30MS オプションヘアスタイルパーツVol.12 全4種 ミディアムヘア2[イエロー4]"
+		}
+	],
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -37,78 +79,110 @@
 			"• Comes with armor inspired by a white rabbit.",
 			"• Comes with a colorful rabbit ear headgear that uses multiple parts.",
 			"• The hair parts that extend all the way to the back are movable.",
-			"• Face parts can be changed from three types: \"normal \", \" smiling \", and \" crying\". You can enjoy the expressions that match the poses.",
+			"• Face parts can be changed from three types: \"normal\", \"smiling\", and \"crying\". You can enjoy the expressions that match the poses.",
 			"• Comes with facial expression parts that can be placed next to \"30MS SIS-T00 Laranel [Color B]\" (sold separately) to create an intersecting look.",
 			"• You can customize the fully equipped state by attaching the \"30MS SIS-T00 Laranel [Color B]\" (sold separately) armament!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"フェイスパーツ×3種",
-			"アーマーパーツ×1式",
-			"ヘッドギア用前髪パーツ×1",
-			"ポージング用スカートパーツ×1",
-			"ハンドパーツ×1式",
-			"ジョイントパーツ×1式"
-		],
-		"en": [
-			"Face parts x 3 types",
-			"Armor parts x 1 set",
-			"Bangs parts for headgear x 1",
-			"Skirt parts for posing x 1",
-			"Hand parts x 1 set",
-			"Joint parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フェイスパーツ",
+				"en": "face parts"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "アーマーパーツ",
+				"en": "armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヘッドギア用前髪パーツ",
+				"en": "Bangs parts for headgear"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ポージング用スカートパーツ",
+				"en": "Skirt parts for posing"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_4223_0.jpg",
 				"path": "/images/items/01_4223/01_4223_0.jpg",
 				"hash": "9cc896c2315d54e369128129999e6e6c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4223_1.jpg",
 				"path": "/images/items/01_4223/01_4223_1.jpg",
 				"hash": "9d76e6e1b16eb6ec98be33707e0be9f6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4223_2.jpg",
 				"path": "/images/items/01_4223/01_4223_2.jpg",
 				"hash": "8e2bc05e1925074be4079b38f637e64e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4223_3.jpg",
 				"path": "/images/items/01_4223/01_4223_3.jpg",
 				"hash": "a5b7f2da06f9292f658061eb1e275882"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4223_4.jpg",
 				"path": "/images/items/01_4223/01_4223_4.jpg",
 				"hash": "a8f109126a08e849ad8b7a83d622fe22"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4223_5.jpg",
 				"path": "/images/items/01_4223/01_4223_5.jpg",
 				"hash": "24f248b5b3beea51a3ae88bed2d21c72"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4223_6.jpg",
 				"path": "/images/items/01_4223/01_4223_6.jpg",
 				"hash": "5da3868849a0303dda8cf79e3304eee1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4223_7.jpg",
 				"path": "/images/items/01_4223/01_4223_7.jpg",
 				"hash": "dc226770a0a380b330927da457c034b5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4223_8.jpg",
 				"path": "/images/items/01_4223/01_4223_8.jpg",
 				"hash": "60acf09b336ed4d9c3fb455dab20b5f5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4223_9.jpg",
 				"path": "/images/items/01_4223/01_4223_9.jpg",
 				"hash": "fe17b779c74119a4b7a1550bf9bc5c42"
 			}
@@ -116,10 +190,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4223/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3479",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3479/"

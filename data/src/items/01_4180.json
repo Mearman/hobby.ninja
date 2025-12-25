@@ -3,8 +3,39 @@
 	"type": "item",
 	"name": {
 		"ja": "SDW HEROES 趙雲ダブルオーガンダム コマンドパッケージ",
-		"en": "SDW HEROES ZHAO YUN 00 GUNDAM COMMAND PACKAGE"
+		"en": "SDW HEROES Zhao Yun 00 Gundam Command Package"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_5470",
+			"url": "https://bandai-hobby.net/item/01_5470/",
+			"ja": "SDW HEROES キャプテンクアンタ GF"
+		},
+		{
+			"id": "01_5471",
+			"url": "https://bandai-hobby.net/item/01_5471/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-B"
+		},
+		{
+			"id": "01_5472",
+			"url": "https://bandai-hobby.net/item/01_5472/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-F"
+		},
+		{
+			"id": "01_5347",
+			"url": "https://bandai-hobby.net/item/01_5347/",
+			"ja": "SDW HEROES スペリオルフォーミュラー ファイナルドラゴン[クリアカラー]"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -20,24 +51,51 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"～『SD ガンダムワールド ヒーローズ THE LEGEND OF DRAGON KNIGHT』始動！～",
-			"『SD ガンダムワールド ヒーローズ』に続く、新たな物語が始動！新たな姿で“趙雲”が再び駆ける！",
-			"• 『SD ガンダムワールド 三国創傑伝』から活躍を続ける「趙雲ダブルオーガンダム」が新形態で登場。",
+			"～『SDガンダムワールド ヒーローズ THE LEGEND OF DRAGON KNIGHT』始動！～",
+			"『SDガンダムワールド ヒーローズ』に続く、新たな物語が始動！新たな姿で“趙雲”が再び駆ける！",
+			"• 『SDガンダムワールド 三国創傑伝』から活躍を続ける「趙雲ダブルオーガンダム」が新形態で登場。",
 			"• 新武装『コマンドパッケージ』を大ボリュームで立体化。一部ハッチが展開可能なほか、ウイング含む各パーツは共通の3mm軸と直径4mmボールジョイントを多数搭載。「SD 三国創傑伝 トリニティバイク」（別売り）などへの取り付けが可能。",
 			"• 特徴的な髪パーツはクリアイエローの成形色を採用。「SD三国創傑伝 趙雲ダブルオーガンダム＆碧竜駆」（別売り）とのミキシングでアニメ意匠が再現可能。"
 		],
 		"en": [
 			"~ “SD Gundam World Heroes THE LEGEND OF DRAGON KNIGHT” has started! ～",
-			"A new story following \"SD Gundam World Heroes\" has begun! “Zhao Yun” runs again with a new appearance!",
-			"• \"Zhao Yun 0 Gundam \", which has been active since \" SD Gundam World Sangoku Soketsuden\", is now available in a new form.",
+			"A new story following “SD Gundam World Heroes” has started! “Zhao Yun” runs again with a new look!",
+			"• \"Zhao Yun 0 Gundam\", which has been active since \"SD Gundam World Sangoku Soketsuden\", is now available in a new form.",
 			"• The new weapon ``Command Package'' is made into a large volume three-dimensional figure. In addition to some hatches that can be expanded, each part, including the wing, is equipped with a common 3mm shaft and a number of 4mm diameter ball joints. Can be attached to \"SD Sangoku Soketsuden Trinity Bike\" (sold separately).",
 			"• The distinctive hair parts are molded in clear yellow. Anime design can be reproduced by mixing with \"SD Sangoku Soketsuden Choun 00 Gundam & Aoi Ryukoku\" (sold separately)."
 		]
 	},
-	"accessories": {
-		"ja": ["槍×2種", "コマンドパッケージ再現用パーツ×1式", "シール×1"],
-		"en": ["Spear x 2 types", "Command package reproduction parts x 1 set", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "槍",
+				"en": "spear"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "コマンドパッケージ再現用パーツ",
+				"en": "Command package reproduction parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -83,9 +141,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4180/",
-	"brandIds": [],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": [],
-	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4180/"
 }

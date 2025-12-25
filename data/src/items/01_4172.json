@@ -2,9 +2,46 @@
 	"id": "01_4172",
 	"type": "item",
 	"name": {
-		"ja": "SDW HEROES レイフガンダム GP04",
-		"en": "SDW HEROES LEIF GUNDAM GP04"
+		"ja": "SDW HEROES レイフガンダムGP04",
+		"en": "SDW HEROES Leif GundamGP04"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5470",
+			"url": "https://bandai-hobby.net/item/01_5470/",
+			"ja": "SDW HEROES キャプテンクアンタ GF"
+		},
+		{
+			"id": "01_5471",
+			"url": "https://bandai-hobby.net/item/01_5471/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-B"
+		},
+		{
+			"id": "01_5472",
+			"url": "https://bandai-hobby.net/item/01_5472/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-F"
+		},
+		{
+			"id": "01_5347",
+			"url": "https://bandai-hobby.net/item/01_5347/",
+			"ja": "SDW HEROES スペリオルフォーミュラー ファイナルドラゴン[クリアカラー]"
+		}
+	],
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -22,85 +59,111 @@
 		"ja": [
 			"～『SDガンダムワールド ヒーローズ THE LEGEND OF DRAGON KNIGHT』始動！～",
 			"『SDガンダムワールド ヒーローズ』に続く、新たな物語が始動！マント姿や肩のシルエットが特徴的な新ヒーローが参戦！",
-			"■幻の試作機GP04モチーフの新英雄。",
-			"■マントパーツの換装でシルエットが一変。形態チェンジを楽しめる。",
-			"■専用短剣のほか、ナイトストライクガンダム用の盾も付属。さらに、ミキシングを行えば「SDW HEROES ナイトストライクガンダム」（別売り）にもマントの一部を取り付け可能。"
+			"• 幻の試作機GP04モチーフの新英雄。",
+			"• マントパーツの換装でシルエットが一変。形態チェンジを楽しめる。",
+			"• 専用短剣のほか、ナイトストライクガンダム用の盾も付属。さらに、ミキシングを行えば「SDW HEROES ナイトストライクガンダム」（別売り）にもマントの一部を取り付け可能。"
 		],
 		"en": [
 			"~ “SD Gundam World Heroes THE LEGEND OF DRAGON KNIGHT” has started! ～",
-			"A new story following \"SD Gundam World Heroes\" has begun! A new hero with a distinctive cape and shoulder silhouette joins the battle!",
+			"A new story following “SD Gundam World Heroes” has started! A new hero with a distinctive cape and shoulder silhouette joins the battle!",
 			"• A new hero based on the phantom prototype GP04 motif.",
 			"• The silhouette changes completely by replacing the cloak parts. You can enjoy changing the shape.",
 			"• In addition to a special dagger, a shield for Night Strike Gundam is also included. Furthermore, if you do some mixing, you can also attach part of the cloak to \"SDW HEROES Night Strike Gundam\" (sold separately)."
 		]
 	},
-	"accessories": {
-		"ja": ["マント×1式", "ダガー×1", "SDW HEROES  ナイトストライクガンダム用盾×1", "シール×1"],
-		"en": ["Cloak x 1 set", "Dagger x 1", "SDW HEROES Night Strike Gundam shield x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "マント",
+				"en": "cloak"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ダガー",
+				"en": "dagger"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "SDW HEROES  ナイトストライクガンダム用盾",
+				"en": "SDW HEROES Night Strike Gundam Shield"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5095.jpg",
+				"src": "https://bandai-hobby.net/images/153_5095_s_wlmxd21svnwkkcimat0hvhydhdtq.jpg",
 				"path": "/images/items/01_4172/153_5095.jpg",
 				"hash": "af03449f73be8f9c770deaa201d03732"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5095.jpg",
+				"src": "https://bandai-hobby.net/images/155_5095_s_82u6wfxyw4d16lupmgfheh1js8ed.jpg",
 				"path": "/images/items/01_4172/155_5095.jpg",
 				"hash": "1a114d71250d5809bf6e14b290f77e31"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5095.jpg",
+				"src": "https://bandai-hobby.net/images/156_5095_s_15i3i7yb34buqruj7wvlmsh09xng.jpg",
 				"path": "/images/items/01_4172/156_5095.jpg",
 				"hash": "d34dca9d81f5c8d74601e4276dbc424b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5095.jpg",
+				"src": "https://bandai-hobby.net/images/157_5095_s_8vfyxzsztny04ind71wk56t4nyif.jpg",
 				"path": "/images/items/01_4172/157_5095.jpg",
 				"hash": "837bf5d0d4b5339ac3f5f83c2cd39ff9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5095.jpg",
+				"src": "https://bandai-hobby.net/images/158_5095_s_s2f7pohrvr8476cfdqoeg8bm9951.jpg",
 				"path": "/images/items/01_4172/158_5095.jpg",
 				"hash": "f53426ae8ffb0e84e8acd7904439bce0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5095.jpg",
+				"src": "https://bandai-hobby.net/images/159_5095_s_qw8bfbqzbjafx7slkh9bq8pzprwk.jpg",
 				"path": "/images/items/01_4172/159_5095.jpg",
 				"hash": "b6b3c325dba63fd65e27fbec3831532f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5095.jpg",
+				"src": "https://bandai-hobby.net/images/189_5095_s_jp9fqetzdl312c7xohbhjo9zcsrh.jpg",
 				"path": "/images/items/01_4172/189_5095.jpg",
 				"hash": "a62651b9755ab4b6636182708ac75813"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5095.jpg",
+				"src": "https://bandai-hobby.net/images/190_5095_s_46woysylb5e0frq3jen4k19hw0p4.jpg",
 				"path": "/images/items/01_4172/190_5095.jpg",
 				"hash": "426c208876ceebc9505031c2932c86dd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5095.jpg",
+				"src": "https://bandai-hobby.net/images/191_5095_s_bwm3ahfgm6p2cqv2x0lbdf100vo0.jpg",
 				"path": "/images/items/01_4172/191_5095.jpg",
 				"hash": "5f54f8c92bc95743fc702f9d2671996e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5095.jpg",
+				"src": "https://bandai-hobby.net/images/192_5095_s_w4fa7q50dgwhia7kue03z5g4folp.jpg",
 				"path": "/images/items/01_4172/192_5095.jpg",
 				"hash": "e061d364e1426f8219f19297b1d91266"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_5095.jpg",
+				"src": "https://bandai-hobby.net/images/193_5095_s_h4su6m94q9b8dz15iehk1ofaqw8c.jpg",
 				"path": "/images/items/01_4172/193_5095.jpg",
 				"hash": "44f53d9012df17168b2c1e55be8eaf1c"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4172/",
-	"brandIds": [],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4172/"
 }

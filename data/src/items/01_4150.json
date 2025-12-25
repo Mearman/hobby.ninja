@@ -5,6 +5,60 @@
 		"ja": "ＨＧ 1/144 フォーンファルシア",
 		"en": "HG 1/144 Fawn Farcia"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "age",
+			"url": "https://bandai-hobby.net/series/age/",
+			"ja": "機動戦士ガンダムAGE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181355",
+			"url": "https://p-bandai.jp/item/item-1000181355/",
+			"ja": "ＭＧ 1/100 ガンダムＡＧＥ－１ フルグランサ用 拡張パーツ"
+		},
+		{
+			"id": "item-1000181354",
+			"url": "https://p-bandai.jp/item/item-1000181354/",
+			"ja": "ＭＧ 1/100 ガンダムＡＧＥ－１ フルグランサ [デザイナーズカラーＶｅｒ．]"
+		},
+		{
+			"id": "item-1000169836",
+			"url": "https://p-bandai.jp/item/item-1000169836/",
+			"ja": "ＨＧ 1/144 ガンダムＡＧＥ-１ レイザー＆ガンダムＡＧＥ-２ アルティメス セット"
+		},
+		{
+			"id": "01_3738",
+			"url": "https://bandai-hobby.net/item/01_3738/",
+			"ja": "HG 1/144 「機動戦士ガンダムAGE」 MSセット[クリアカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1870,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－",
@@ -62,7 +115,7 @@
 			"An X-rounder of phosphorescent light dances gracefully on the battlefield.",
 			"Fawn Farcia appears!",
 			"－－－－－－－－－－－－－－－－－－－－",
-			"From \"Mobile Suit Gundam AGE\", Fawn Farcia is commercialized in the HG series.",
+			"From \"Mobile Suit GundamAGE\", Fawn Farcia is commercialized in the HG series.",
 			"The impressive body color based on pink is reproduced with molded color, and special weapons such as Fawn Farcia baton are included with new molding. Includes a display stand and soft material effect parts that reproduce the trajectory of Falcia Bit when it is deployed.",
 			"● Reproduce the characteristic coloring with molded colors.",
 			"Fawn Farcia's body color, which is based on pink, is reproduced in molding color.",
@@ -71,7 +124,7 @@
 			"In addition, a new handle for the \"Fawn Farcia Baton\" is included.",
 			"● Includes display stand and soft material effect parts.",
 			"A new connection part has been added to the stand to reproduce the trajectory of Falcia Bit.",
-			"The effect parts are made of transparent soft material. It is possible to create a display based on the movement and development of Falcia Bit in the play.",
+			"Effect parts are made of transparent soft material. It is possible to create a display based on the movement and development of Falcia Bit in the play.",
 			"Attached weapons: Fawn Falcia Baton / Falcia Bit / Falcia Sword",
 			"Accessories: Display stand",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -96,10 +149,26 @@
 			"・Product specifications are as of 20222. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["フォーンファルシアバトン", "ファルシアビット", "ファルシアソード"],
-		"en": ["fawn falcia baton", "Falcia bit", "Farcia Sword"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フォーンファルシアバトン",
+				"en": "fawn falcia baton"
+			}
+		},
+		{
+			"name": {
+				"ja": "ファルシアビット",
+				"en": "Falcia bit"
+			}
+		},
+		{
+			"name": {
+				"ja": "ファルシアソード",
+				"en": "Farcia Sword"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -145,13 +214,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4150/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["age"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000181355", "item-1000181354", "item-1000169836", "01_3738"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4150/"
 }

@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 シェンロンガンダム",
-		"en": "HG 1/144 SHENLONG GUNDAM"
+		"en": "HG 1/144 Shenron Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5590",
+			"url": "https://bandai-hobby.net/item/01_5590/",
+			"ja": "HG 1/144 ウイングガンダムゼロ [クリアカラー]"
+		},
+		{
+			"id": "item-1000213249",
+			"url": "https://p-bandai.jp/item/item-1000213249/",
+			"ja": "ＨＧ 1/144 アルトロンガンダム"
+		},
+		{
+			"id": "01_5340",
+			"url": "https://bandai-hobby.net/item/01_5340/",
+			"ja": "HG 1/144 シェンロンガンダム [クリアカラー]"
+		},
+		{
+			"id": "item-1000183318",
+			"url": "https://p-bandai.jp/item/item-1000183318/",
+			"ja": "ＨＧ 1/144 ガンダムデスサイズヘル"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,89 +62,104 @@
 		"day": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『新機動戦記ガンダムW』より、「張五飛」の搭乗機「シェンロンガンダム」がHGフォーマットにより立体化！",
-			"■胸ブロックの内部に設けられた可動軸により側屈・前後屈が可能。前後屈時にはコックピットブロックが上下に可動。",
-			"■肩関節のスライド機構により可動域が向上。胸の可動と相まってダイナミックなポージングに対応。",
-			"■特徴的な武装「ドラゴンハング」は展開・格納状態の再現に加え、付属の延長用パーツによりアーム伸長も再現できる。",
-			"■シールドやビームグレイブといった武装のほか、各種ハンドパーツが付属。"
+			"• 胸ブロックの内部に設けられた可動軸により側屈・前後屈が可能。前後屈時にはコックピットブロックが上下に可動。",
+			"• 肩関節のスライド機構により可動域が向上。胸の可動と相まってダイナミックなポージングに対応。",
+			"• 特徴的な武装「ドラゴンハング」は展開・格納状態の再現に加え、付属の延長用パーツによりアーム伸長も再現できる。",
+			"• シールドやビームグレイブといった武装のほか、各種ハンドパーツが付属。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam W \", \" Zhang Wufei \"'s aircraft \" Shenlong Gundam\" is now three-dimensional in HG format!",
+			"From \"Mobile Suit GundamW\", \"Zhang Wufei\"'s aircraft \"Shenlong Gundam\" is now three-dimensional in HG format!",
 			"• A movable axis installed inside the chest block allows for side bending and forward/backward bending. The cockpit block moves up and down when bending forward and backward.",
 			"• The sliding mechanism of the shoulder joint improves the range of motion. Coupled with the movable chest, it supports dynamic poses.",
 			"• The characteristic weapon \"Dragon Hang\" can be reproduced in its deployed and retracted states, as well as its arm can be extended using the included extension parts.",
 			"• In addition to weapons such as Seal and Beam Glaive, various hand parts are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームグレイブ×1",
-			"シェンロンシールド×1",
-			"ハンドパーツ（左右）×3種",
-			"ドラゴンハング伸縮用ジョイント×2",
-			"シール×1"
-		],
-		"en": [
-			"Beam Grave x1",
-			"Shenron Seal ×1",
-			"Hand parts (left and right) x 3 types",
-			"Dragon hang expansion joint x 2",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームグレイブ",
+				"en": "beam grave"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シェンロンシールド",
+				"en": "Shenron Seal Do"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ（左右）",
+				"en": "Hand parts (left and right)"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ドラゴンハング伸縮用ジョイント",
+				"en": "Dragon hang expansion joint"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5100.jpg",
+				"src": "https://bandai-hobby.net/images/153_5100_s_qpa5tt43n8htcin6sw6p6e00okqz.jpg",
 				"path": "/images/items/01_4179/153_5100.jpg",
 				"hash": "95be00f6eeb076dc1802700e3fe250ef"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5100.jpg",
+				"src": "https://bandai-hobby.net/images/155_5100_s_pdbnbsrpmpylerbh3dc14ezf9y3y.jpg",
 				"path": "/images/items/01_4179/155_5100.jpg",
 				"hash": "86dafaa9ee875dc9b1fc315f1e5c02d7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5100.jpg",
+				"src": "https://bandai-hobby.net/images/156_5100_s_gtp4q6ttj8magdeqfeb4f130r2fe.jpg",
 				"path": "/images/items/01_4179/156_5100.jpg",
 				"hash": "5d46893d2e8cb4f4e69b41442e19fb1b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5100.jpg",
+				"src": "https://bandai-hobby.net/images/157_5100_s_r8zbrigfg48obt48bzvi81y0q1zo.jpg",
 				"path": "/images/items/01_4179/157_5100.jpg",
 				"hash": "65985b49fd9893d07a7fd491ef90cf7a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5100.jpg",
+				"src": "https://bandai-hobby.net/images/158_5100_s_qjywe4sev1tpongd5lw9pi7nf48k.jpg",
 				"path": "/images/items/01_4179/158_5100.jpg",
 				"hash": "febb0e5130bac89b30027437dd341743"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5100.jpg",
+				"src": "https://bandai-hobby.net/images/159_5100_s_jtmlxggicn5ckygk8tw049x3m633.jpg",
 				"path": "/images/items/01_4179/159_5100.jpg",
 				"hash": "67b18c910dace0d86b1ad58afcbe43b9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5100.jpg",
+				"src": "https://bandai-hobby.net/images/189_5100_s_hk4y62s9vnahw37vuluvj50iva7h.jpg",
 				"path": "/images/items/01_4179/189_5100.jpg",
 				"hash": "de1c0205dbc23678928f3a060adf762e"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4179_inst_0.jpg",
-				"path": "/images/items/01_4179/01_4179_inst_0.jpg",
-				"hash": "cb0cddc0b4ce90be3af88faec18a687a"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4179/",
-	"brandIds": ["hg"],
-	"seriesIds": ["endlesswaltz"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5590", "item-1000213249", "01_5340", "item-1000183318"],
 	"manual": {
 		"id": "507",
 		"url": "https://manual.bandai-hobby.net/menus/detail/507/"

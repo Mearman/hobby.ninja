@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard 仮面ライダースカル",
-		"en": "Figure-rise Standard KAMEN RIDER SKULL"
+		"en": "Figure-rise Standard Kamen Rider Skull"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "rider",
+			"url": "https://bandai-hobby.net/series/rider/",
+			"ja": "仮面ライダーシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5451",
+			"url": "https://bandai-hobby.net/item/01_5451/",
+			"ja": "Figure-rise Standard 仮面ライダーゼロワン ライジングホッパー"
+		},
+		{
+			"id": "item-1000215369",
+			"url": "https://p-bandai.jp/item/item-1000215369/",
+			"ja": "Figure-rise Standard 仮面ライダーファイズ ブラスターフォーム"
+		},
+		{
+			"id": "01_5276",
+			"url": "https://bandai-hobby.net/item/01_5276/",
+			"ja": "Figure-rise Standard 仮面ライダークウガ アルティメットフォーム"
+		},
+		{
+			"id": "01_5175",
+			"url": "https://bandai-hobby.net/item/01_5175/",
+			"ja": "Figure-rise Standard 仮面ライダーキバ キバフォーム"
+		}
+	],
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -21,110 +64,159 @@
 	"description": {
 		"ja": [
 			"『仮面ライダーW 』より、「仮面ライダースカル」がFigure-rise Standardにラインアップ！",
-			"■特徴的な頭部の造形をディテールまで再現。",
-			"■シルバー部分にはエクストラフィニッシュを採用し、メタリック感を表現。",
-			"■象徴的な帽子はパーツの選択により切れ目アリ、切れ目ナシを再現。帽子を持ったポージングのための専用持ち手も付属。",
-			"■付属のスカルマグナムはスカルメモリの装着が可能。通常モードのほか、銃身を回転させることでマキシマムモードを再現できる。",
-			"■開閉可能なアタッシュケースが付属。付属のダブルドライバーやスカルメモリ、「Figure-rise Standard 仮面ライダーW サイクロンジョーカー」（別売り）などに付属するガイアメモリも収納可能。",
-			"■表情豊かなハンドパーツも豊富に付属。"
+			"• 特徴的な頭部の造形をディテールまで再現。",
+			"• シルバー部分にはエクストラフィニッシュを採用し、メタリック感を表現。",
+			"• 象徴的な帽子はパーツの選択により切れ目アリ、切れ目ナシを再現。帽子を持ったポージングのための専用持ち手も付属。",
+			"• 付属のスカルマグナムはスカルメモリの装着が可能。通常モードのほか、銃身を回転させることでマキシマムモードを再現できる。",
+			"• 開閉可能なアタッシュケースが付属。付属のダブルドライバーやスカルメモリ、「Figure-rise Standard 仮面ライダーW サイクロンジョーカー」（別売り）などに付属するガイアメモリも収納可能。",
+			"• 表情豊かなハンドパーツも豊富に付属。"
 		],
 		"en": [
-			"From \"Kamen Rider W \", \" Kamen Rider Skull\" is now available in the Figure-rise Standard lineup!",
+			"From \"Kamen Rider W\", \"Kamen Rider Skull\" is now available in the Figure-rise Standard lineup!",
 			"• The characteristic head shape is reproduced down to the last detail.",
-			"• Extra finish is used on the silver part to create a metallic feel.",
+			"• The silver part uses an extra finish to create a metallic feel.",
 			"• The iconic hat can be recreated with or without a cut depending on the selection of parts. A special handle is also included for posing with the hat.",
 			"• Skull memory can be attached to the included Skull Magnum. In addition to normal mode, maximum mode can be reproduced by rotating the gun barrel.",
 			"• Comes with an attache case that can be opened and closed. It can also store the included double driver, skull memory, and Gaia memory included with \"Figure-rise Standard Kamen Rider W Cyclone Joker\" (sold separately).",
 			"• A variety of expressive hand parts are also included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"帽子×1式",
-			"アタッシュケース×1",
-			"スカルマグナム×1",
-			"スカルメモリ×1",
-			"ジョーカーメモリ×1",
-			"ジョイントパーツ×1式",
-			"ハンドパーツ×1式",
-			"Figure-rise Effect 台座×1",
-			"シール×1"
-		],
-		"en": [
-			"Hat x 1 set",
-			"Attache case x 1",
-			"Skull Magnum x 1",
-			"Skull memory x 1",
-			"Joker memory x 1",
-			"Joint parts x 1 set",
-			"Hand parts x 1 set",
-			"Figure-rise Effect pedestal x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "帽子",
+				"en": "hat"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "アタッシュケース",
+				"en": "attache case"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "スカルマグナム",
+				"en": "skull magnum"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "スカルメモリ",
+				"en": "skull memory"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョーカーメモリ",
+				"en": "joker memory"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "Figure-rise Effect 台座",
+				"en": "Figure-rise Effect pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5085.jpg",
+				"src": "https://bandai-hobby.net/images/153_5085_s_ds1c3r8qi6nnvjnkugiinm3l48g9.jpg",
 				"path": "/images/items/01_4161/153_5085.jpg",
 				"hash": "44b8af6818727f5f8114db4dd45486cd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5085.jpg",
+				"src": "https://bandai-hobby.net/images/155_5085_s_fk2krme6ci6nykag93rxwbcahuju.jpg",
 				"path": "/images/items/01_4161/155_5085.jpg",
 				"hash": "b68071b11f9a4c099b14780ad854b380"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5085.jpg",
+				"src": "https://bandai-hobby.net/images/156_5085_s_queypbrazvpyqljjprhyo86iqnhe.jpg",
 				"path": "/images/items/01_4161/156_5085.jpg",
 				"hash": "c87557a3eb9d6da2dff03fc77a167a99"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5085.jpg",
+				"src": "https://bandai-hobby.net/images/157_5085_s_wl0fm7w3oljwljatid0k80qrtbmt.jpg",
 				"path": "/images/items/01_4161/157_5085.jpg",
 				"hash": "4651c989f031f7d1d0b91627b04bf433"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5085.jpg",
+				"src": "https://bandai-hobby.net/images/158_5085_s_8efbq9yx5j12fc6py64bxb92jt3w.jpg",
 				"path": "/images/items/01_4161/158_5085.jpg",
 				"hash": "9620e067504deee90bad05fc613bfa07"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5085.jpg",
+				"src": "https://bandai-hobby.net/images/159_5085_s_hnvdpiksmihedtmk7w7woahr2ef8.jpg",
 				"path": "/images/items/01_4161/159_5085.jpg",
 				"hash": "ba8d611a42b4d3f38208a96aaceca4e8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5085.jpg",
+				"src": "https://bandai-hobby.net/images/189_5085_s_soubobxupu09uoivceo5vh4uwof8.jpg",
 				"path": "/images/items/01_4161/189_5085.jpg",
 				"hash": "25334f8aaa7ac6c9bd0f0406b0f10b70"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5085.jpg",
+				"src": "https://bandai-hobby.net/images/190_5085_s_tmk538s7tewfipjg7xqe3zm934tq.jpg",
 				"path": "/images/items/01_4161/190_5085.jpg",
 				"hash": "26f206f9a535493eb6179cff92098727"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5085.jpg",
+				"src": "https://bandai-hobby.net/images/191_5085_s_vvyi0uackzer42z7dviot6z8wp22.jpg",
 				"path": "/images/items/01_4161/191_5085.jpg",
 				"hash": "c66008ffd0c67ef765365725aa489877"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5085.jpg",
+				"src": "https://bandai-hobby.net/images/192_5085_s_5xl0a7rkmxo0y7prt03s5o2wzlvi.jpg",
 				"path": "/images/items/01_4161/192_5085.jpg",
 				"hash": "7b95c7fe4665bd0686dc9f7a795ebfeb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_5085.jpg",
+				"src": "https://bandai-hobby.net/images/193_5085_s_i1qkgaewwziizoxze9c96qghg0ao.jpg",
 				"path": "/images/items/01_4161/193_5085.jpg",
 				"hash": "50501908924629128a0cf3cc28b664f5"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4161/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["rider"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5451", "item-1000215369", "01_5276", "01_5175"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4161/"
 }

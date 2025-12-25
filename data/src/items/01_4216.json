@@ -5,6 +5,55 @@
 		"ja": "ＨＧ 1/72 セツロ",
 		"en": "HG 1/72 Setsuro"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		},
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -17,7 +66,6 @@
 		"month": 9
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"月刊ホビージャパンで連載の外伝『境界戦機 フロストフラワー』より、メイレスビャクチと並び“際の極光”で運用される機体セツロを商品化。",
@@ -72,7 +120,7 @@
 			"Attached weapons: Winch unit equipment / Anchor (claw deployment) / Waist back weapon rack (with spare magazine) / Grenade spare bullet case / Rifle / Leg thread",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/72 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS/PVC",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -92,86 +140,98 @@
 			"・Product specifications are as of 20225. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ウインチユニット装備",
-			"アンカー（ツメ展開）",
-			"腰背部ウェポンラック（スペア弾倉付）",
-			"グレネード予備弾ケース",
-			"ライフル",
-			"脚部スレッド"
-		],
-		"en": [
-			"Equipped with winch unit",
-			"Anchor (claw expansion)",
-			"Waist back weapon rack (with spare magazine)",
-			"Grenade spare bullet case",
-			"rifle",
-			"leg thread"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ウインチユニット装備",
+				"en": "Equipped with winch unit"
+			}
+		},
+		{
+			"name": {
+				"ja": "アンカー（ツメ展開）",
+				"en": "Anchor (claw expansion)"
+			}
+		},
+		{
+			"name": {
+				"ja": "腰背部ウェポンラック（スペア弾倉付）",
+				"en": "Waist back weapon rack (with spare magazine)"
+			}
+		},
+		{
+			"name": {
+				"ja": "グレネード予備弾ケース",
+				"en": "Grenade spare bullet case"
+			}
+		},
+		{
+			"name": {
+				"ja": "ライフル",
+				"en": "rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "脚部スレッド",
+				"en": "leg thread"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5135.jpg",
+				"src": "https://bandai-hobby.net/images/153_5135_s_1e1en5o72tlp4jihb2v87ya3sho2.jpg",
 				"path": "/images/items/01_4216/153_5135.jpg",
 				"hash": "9f1ac09652622c97ac20e622da007693"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5135.jpg",
+				"src": "https://bandai-hobby.net/images/155_5135_s_v5rttnwoukpd7jk6y86rprs1ney4.jpg",
 				"path": "/images/items/01_4216/155_5135.jpg",
 				"hash": "bb4e7168e1a7c358f2bf43e904fa312d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5135.jpg",
+				"src": "https://bandai-hobby.net/images/156_5135_s_v8i0ztrwrlway8vxrpogvnqs156z.jpg",
 				"path": "/images/items/01_4216/156_5135.jpg",
 				"hash": "ae8ea9fdeda625fb3f56fec028e3991d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5135.jpg",
+				"src": "https://bandai-hobby.net/images/157_5135_s_zgrk1xbkvutnnbugxvr1hwy6vdzz.jpg",
 				"path": "/images/items/01_4216/157_5135.jpg",
 				"hash": "66cf8f7e9bb5ed3e46c5cc4d211f277f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5135.jpg",
+				"src": "https://bandai-hobby.net/images/158_5135_s_eit0o8qeunei65x4hujz8s03fsu9.jpg",
 				"path": "/images/items/01_4216/158_5135.jpg",
 				"hash": "1002eac558d570bb51ae5c951183c006"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5135.jpg",
+				"src": "https://bandai-hobby.net/images/159_5135_s_8qlklvbblb2ot52ai3zz6ucj94kk.jpg",
 				"path": "/images/items/01_4216/159_5135.jpg",
 				"hash": "d3ed2e8ee2436d3b3fec3b75fc1ef7bc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5135.jpg",
+				"src": "https://bandai-hobby.net/images/189_5135_s_qopygekbq2q52pqjyb4dff7pkzat.jpg",
 				"path": "/images/items/01_4216/189_5135.jpg",
 				"hash": "c0b4bbef49f827c6fbebc3d7e17576ea"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5135.jpg",
+				"src": "https://bandai-hobby.net/images/190_5135_s_cu18p51p2sittz3dxu27m8etyuwd.jpg",
 				"path": "/images/items/01_4216/190_5135.jpg",
 				"hash": "044eda6deabf331ad6a266f03ffcbd92"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5135.jpg",
+				"src": "https://bandai-hobby.net/images/191_5135_s_jbokbwfil81odubijzdx764rgx7i.jpg",
 				"path": "/images/items/01_4216/191_5135.jpg",
 				"hash": "752243adcf5226a1fa77677e1a55c206"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5135.jpg",
+				"src": "https://bandai-hobby.net/images/192_5135_s_8bwfeagboipzfnmbn09gu8dy29ja.jpg",
 				"path": "/images/items/01_4216/192_5135.jpg",
 				"hash": "8415d22aedc9dccc79cd57d674fec515"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4216/",
-	"brandIds": ["pb_charapla", "hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4216/"
 }

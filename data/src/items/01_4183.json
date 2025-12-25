@@ -3,8 +3,60 @@
 	"type": "item",
 	"name": {
 		"ja": "カスタマイズウェポンズ(ミリタリー武装)",
-		"en": "CUSTOMIZE WEAPONS(MILITARY WEAPON)"
+		"en": "Customized Weapons (Military Weapons)"
 	},
+	"brands": [
+		{
+			"id": "customize_scenebase",
+			"url": "https://bandai-hobby.net/brand/customize_scenebase/",
+			"ja": "カスタマイズシーンベース/エフェクト/マテリアル/ウェポンズ"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "customize_scenebase",
+			"url": "https://bandai-hobby.net/brand/customize_scenebase/",
+			"ja": "カスタマイズシーンベース/エフェクト/マテリアル/ウェポンズ"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -32,28 +84,64 @@
 			"• By storing revolvers and handguns in holsters, they can be attached to the waist of 30MM series aircraft."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ライフル×1",
-			"リボルバー×1",
-			"ホルスター×1",
-			"ショットガン×1",
-			"ハンドガン×1",
-			"ランチャー×1",
-			"コンバットナイフ×1",
-			"シールド×1"
-		],
-		"en": [
-			"Rifle x 1",
-			"Revolver x 1",
-			"Holster x 1",
-			"Shotgun x 1",
-			"Hand gun x 1",
-			"Launcher x 1",
-			"Combat knife x 1",
-			"Seal × 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ライフル",
+				"en": "rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リボルバー",
+				"en": "revolver"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホルスター",
+				"en": "holster"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ショットガン",
+				"en": "shotgun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドガン",
+				"en": "hand gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ランチャー",
+				"en": "launcher"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "コンバットナイフ",
+				"en": "combat knife"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -85,10 +173,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4183/",
-	"brandIds": ["customize_scenebase", "30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3745",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3745/"

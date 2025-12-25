@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MS オプションボディパーツ アームパーツ&レッグパーツ[カラーA]",
-		"en": "30MS OPTION BODY PARTS ARM PARTS & LEG PARTS [COLOR A]"
+		"en": "30MS Optional Body Parts Arm Parts & Leg Parts [Color A]"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5975",
+			"url": "https://bandai-hobby.net/item/01_5975/",
+			"ja": "30MS 和泉愛依"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5954",
+			"url": "https://bandai-hobby.net/item/01_5954/",
+			"ja": "30MS オプションヘアスタイルパーツVol.12 全4種 ミディアムヘア2[イエロー4]"
+		}
+	],
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -21,29 +63,76 @@
 	"description": {
 		"ja": [
 			"30MS素体との組み合わせで世界観が広がる！手、腕、脚、首、無塗装フェイスパーツがセットになったオプションパーツがラインアップ！",
-			"■成形色パターンは「30MS SIS-G00 リシェッタ」(別売り)と同様の[カラーA]。",
-			"■表情豊かなハンドパーツと腕部・脚部パーツが付属。",
-			"■「左右の可動」「前後の可動」を実現する可動方向の異なる首パーツが2種付属。",
-			"■無塗装状態のフェイスパーツが付属し、キャラメイキングの幅が更に拡大！「30 MINUTES SISTERS 水転写式デカール 汎用1」(別売り)との組み合わせで表情豊かなキャラメイキングを実現！"
+			"• 成形色パターンは「30MS SIS-G00 リシェッタ」(別売り)と同様の[カラーA]。",
+			"• 表情豊かなハンドパーツと腕部・脚部パーツが付属。",
+			"• 「左右の可動」「前後の可動」を実現する可動方向の異なる首パーツが2種付属。",
+			"• 無塗装状態のフェイスパーツが付属し、キャラメイキングの幅が更に拡大！「30 MINUTES SISTERS 水転写式デカール 汎用1」(別売り)との組み合わせで表情豊かなキャラメイキングを実現！"
 		],
 		"en": [
 			"The world view expands when combined with the 30MS body! A lineup of optional parts includes hands, arms, legs, neck, and unpainted face parts!",
 			"• The molding color pattern is [Color A], which is the same as \"30MS SIS-G00 Richetta\" (sold separately).",
 			"• Includes expressive hand parts, arm and leg parts.",
-			"• Two types of neck parts with different movable directions are included to achieve \"left and right movement \" and \" front and back movement.\"",
+			"• Two types of neck parts with different movable directions are included to achieve \"left and right movement\" and \"front and back movement.\"",
 			"• Unpainted face parts are included, further expanding the range of character creation! In combination with \"30 MINUTES SISTERS Water Transfer Decal General Purpose 1\" (sold separately), you can create expressive characters!"
 		]
 	},
-	"accessories": {
-		"ja": ["無塗装フェイスパーツ×1式", "首パーツ×1式", "腕パーツ×1式", "脚パーツ×1式", "ハンドパーツ×1式"],
-		"en": [
-			"Unpainted face parts x 1 set",
-			"Neck parts x 1 set",
-			"Arm parts x 1 set",
-			"Leg parts x 1 set",
-			"Hand parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "無塗装フェイスパーツ",
+				"en": "Unpainted face parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "首パーツ",
+				"en": "neck parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "腕パーツ",
+				"en": "arm parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "脚パーツ",
+				"en": "leg parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -95,10 +184,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4165/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3474",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3474/"

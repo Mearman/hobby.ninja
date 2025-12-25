@@ -2,9 +2,52 @@
 	"id": "01_4132",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット ガンダムベース限定 RX-78-2 ガンダム(クロスシルエットフレームVer.)[ガンダムベースカラー]",
-		"en": "SD GUNDAM CROSS SILHOUETTE THE GUNDAM BASE LIMITED RX-78-2 GUNDAM(CROSS SILHOUETTE FRAME Ver.) [THE GUNDAM BASE COLOR]"
+		"ja": "SDガンダム クロスシルエット ガンダムベース限定 RX-78-2 ガンダム(クロスシルエットフレームVer.)[ガンダムベースカラー]",
+		"en": "SDGundam Cross Silhouette Gundam Base Limited RX-78-2 Gundam (Cross Silhouette Frame Ver.) [Gundam Base Color]"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3495",
+			"url": "https://bandai-hobby.net/item/01_3495/",
+			"ja": "ハローキティ/ザクII[SDガンダムクロスシルエット][クリアカラー]"
+		},
+		{
+			"id": "01_3321",
+			"url": "https://bandai-hobby.net/item/01_3321/",
+			"ja": "SDガンダムクロスシルエット RX-78F00 ガンダム"
+		},
+		{
+			"id": "01_2806",
+			"url": "https://bandai-hobby.net/item/01_2806/",
+			"ja": "SDガンダムクロスシルエット RX-78-2 ガンダム＆シャア専用ザクII"
+		},
+		{
+			"id": "01_2831",
+			"url": "https://bandai-hobby.net/item/01_2831/",
+			"ja": "SDガンダム クロスシルエット シャア専用ザクII(クロスシルエットフレームVer.) [クリアカラー]"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -21,8 +64,8 @@
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"2つのシルエットが楽しめる「SD ガンダム クロスシルエット」シリーズから、RX-78-2 ガンダムが、爽やかなガンダムベースカラーで登場！",
-			"• 同梱の「SD ガンダム クロスシルエットフレーム」により高頭身化を実現！",
+			"2つのシルエットが楽しめる「SDガンダム クロスシルエット」シリーズから、RX-78-2 ガンダムが、爽やかなガンダムベースカラーで登場！",
+			"• 同梱の「SDガンダム クロスシルエットフレーム」により高頭身化を実現！",
 			"• 広い可動範囲を生かして、ポージングがクールに決まる！",
 			"• ガンダムベースオリジナルのスペシャルマーキングシールが付属！"
 		],
@@ -64,13 +107,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4132/",
-	"brandIds": ["sdcs"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_3495", "01_3321", "01_2806", "01_2831"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4132/"
 }

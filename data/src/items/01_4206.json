@@ -5,6 +5,50 @@
 		"ja": "ＨＧ 1/144 ドアン専用ザク",
 		"en": "HG 1/144 Doan's Zaku"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "g-doan",
+			"url": "https://bandai-hobby.net/series/g-doan/",
+			"ja": "機動戦士ガンダム ククルス・ドアンの島"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "01_5514",
+			"url": "https://bandai-hobby.net/item/01_5514/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムFSD (試作型ロングレンジ・ビームライフル装備)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"“ク ク ル ス ・ ド ア ン”",
@@ -73,7 +116,7 @@
 			"Seal de",
 			"The appearance of peeling off armor in various places is reproduced with new parts.",
 			"● New water transfer decal included",
-			"A new water slide decal containing the Southern Cross unit emblem and caution mark is included.",
+			"Includes a new water slide decal that includes the Southern Cross squad's unit insignia and caution marks.",
 			"● Comes with heat hawk and left palm parts that can reproduce the sword sheathed and unsheathed states. More expressive poses are possible!",
 			"Attached weapon: Heat Hawk",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -98,59 +141,63 @@
 			"・Product specifications are as of 20224. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["ヒート・ホーク"],
-		"en": ["heat hawk"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヒート・ホーク",
+				"en": "heat hawk"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5126.jpg",
+				"src": "https://bandai-hobby.net/images/153_5126_s_txo5ziak9pchxnuhg1jmgtqhfe88.jpg",
 				"path": "/images/items/01_4206/153_5126.jpg",
 				"hash": "d3f0748c7d80b5bc9649a06c476f0e80"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5126.jpg",
+				"src": "https://bandai-hobby.net/images/155_5126_s_1hbkwx1ehkic9o2ju33mkwoyv06o.jpg",
 				"path": "/images/items/01_4206/155_5126.jpg",
 				"hash": "5cfe53b2ce26370e54d5bdeebc918a74"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5126.jpg",
+				"src": "https://bandai-hobby.net/images/156_5126_s_1rhikug1z082axsocyy0prwa05z1.jpg",
 				"path": "/images/items/01_4206/156_5126.jpg",
 				"hash": "7894c88c9510162bc2ed3eda612058c0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5126.jpg",
+				"src": "https://bandai-hobby.net/images/157_5126_s_o4amnyodsqsdcs6v6v6yc8qvscp7.jpg",
 				"path": "/images/items/01_4206/157_5126.jpg",
 				"hash": "ec997dc55b880f3d6d2992b141b14e34"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5126.jpg",
+				"src": "https://bandai-hobby.net/images/158_5126_s_rk3wso6naf2x3uqdvwq2nbg37mmq.jpg",
 				"path": "/images/items/01_4206/158_5126.jpg",
 				"hash": "78cd2d9195d2f7c59f5b82f2c4f299bc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5126.jpg",
+				"src": "https://bandai-hobby.net/images/159_5126_s_de1acax998i1ymgn3ddacrr5mw2i.jpg",
 				"path": "/images/items/01_4206/159_5126.jpg",
 				"hash": "422e5dd969ebac89cd4e9f5db60dd869"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5126.jpg",
+				"src": "https://bandai-hobby.net/images/189_5126_s_4iteu6rfp8gmu04vxm6hydb6gile.jpg",
 				"path": "/images/items/01_4206/189_5126.jpg",
 				"hash": "922e232cb26522cd7a211ac1f67bb193"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5126.jpg",
+				"src": "https://bandai-hobby.net/images/190_5126_s_5i28fxozqjsco6hqijr2ga3rtw98.jpg",
 				"path": "/images/items/01_4206/190_5126.jpg",
 				"hash": "2a9d02ab8ee350805b45d2a969c15566"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5126.jpg",
+				"src": "https://bandai-hobby.net/images/191_5126_s_vtmajv2siyl9d2nun8rn9v0eszqm.jpg",
 				"path": "/images/items/01_4206/191_5126.jpg",
 				"hash": "0c91ba3519555334489fd6d657f27146"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5126.jpg",
+				"src": "https://bandai-hobby.net/images/192_5126_s_y6svnuqpro3l8m89zho452a1nc1y.jpg",
 				"path": "/images/items/01_4206/192_5126.jpg",
 				"hash": "e7f025c419b9a05d9e1f63dac014b9cd"
 			}
@@ -158,14 +205,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4206/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["g-doan"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000220189", "01_5514"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2369",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2369/"

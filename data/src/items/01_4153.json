@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "1/12 ボバ・フェット（マンダロリアン）",
-		"en": "1/12 BOBA FETT (THE MANDALORIAN）"
+		"en": "1/12 Boba Fett (The Mandalorian)"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3515",
+			"url": "https://bandai-hobby.net/item/01_3515/",
+			"ja": "1/12 ザ・マンダロリアン(ベスカーアーマー)"
+		},
+		{
+			"id": "01_3516",
+			"url": "https://bandai-hobby.net/item/01_3516/",
+			"ja": "1/12 ザ・マンダロリアン(ベスカーアーマー)シルバーコーテイングVer."
+		}
+	],
+	"scale": "1/12",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -18,14 +56,13 @@
 		"day": 30
 	},
 	"targetAge": 15,
-	"scale": "1/12",
 	"description": {
 		"ja": [
 			"『スター・ウォーズ』初の実写ドラマシリーズ『マンダロリアン』よりボバ・フェットが登場！",
-			"■新規造形パーツによる設定再現と劇中イメージに合わせた成形色採用により、印象的なスーツのディテールや色味をアップデート。",
-			"■マフラーや腰布部分には布素材を採用し、リアルな質感を追求。",
-			"■素顔の状態を再現できる無塗装ヘッドパーツが付属。",
-			"■ブラスター・ライフル、ブラスター・ピストルなど劇中に登場する武装のほか、ハンドパーツ、専用台座が付属。"
+			"• 新規造形パーツによる設定再現と劇中イメージに合わせた成形色採用により、印象的なスーツのディテールや色味をアップデート。",
+			"• マフラーや腰布部分には布素材を採用し、リアルな質感を追求。",
+			"• 素顔の状態を再現できる無塗装ヘッドパーツが付属。",
+			"• ブラスター・ライフル、ブラスター・ピストルなど劇中に登場する武装のほか、ハンドパーツ、専用台座が付属。"
 		],
 		"en": [
 			"Boba Fett appears from Star Wars' first live-action drama series, The Mandalorian!",
@@ -35,49 +72,82 @@
 			"• In addition to weapons that appear in the movie such as blaster rifle and blaster pistol, hand parts and special pedestal are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ブラスター・ライフル×1",
-			"ブラスター・ピストル×1",
-			"マフラー、腰布×1式",
-			"無塗装ヘッドパーツ×1",
-			"ハンドパーツ×1式",
-			"ジョイントパーツ×1式",
-			"専用ディスプレイベース×1",
-			"シール×1"
-		],
-		"en": [
-			"Blaster rifle x1",
-			"Blaster pistol x1",
-			"Muffler, loincloth x 1 set",
-			"Unpainted head parts x 1",
-			"Hand parts x 1 set",
-			"Joint parts x 1 set",
-			"Dedicated display base x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ブラスター・ライフル",
+				"en": "blaster rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ブラスター・ピストル",
+				"en": "blaster pistol"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マフラー、腰布",
+				"en": "muffler, loincloth"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "無塗装ヘッドパーツ",
+				"en": "Unpainted head parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "専用ディスプレイベース",
+				"en": "Dedicated display base"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175237_1.jpg",
 				"path": "/images/items/01_4153/1000175237_1.jpg",
 				"hash": "d5544c29f21543f2d17cff6834451896"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175237_10.jpg",
-				"path": "/images/items/01_4153/1000175237_10.jpg",
-				"hash": "f2527ab5f65ed37e70cbd10c23132f7c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175237_11.jpg",
-				"path": "/images/items/01_4153/1000175237_11.jpg",
-				"hash": "ff416a1d82d0d7ebd4eec92fc120c541"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175237_12.jpg",
-				"path": "/images/items/01_4153/1000175237_12.jpg",
-				"hash": "2cc16ff0188ba35fa3fa10740cf438b8"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175237_2.jpg",
@@ -118,13 +188,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175237_9.jpg",
 				"path": "/images/items/01_4153/1000175237_9.jpg",
 				"hash": "4ef1eabebab10f65a92e08ce232a1e1e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175237_10.jpg",
+				"path": "/images/items/01_4153/1000175237_10.jpg",
+				"hash": "f2527ab5f65ed37e70cbd10c23132f7c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175237_11.jpg",
+				"path": "/images/items/01_4153/1000175237_11.jpg",
+				"hash": "ff416a1d82d0d7ebd4eec92fc120c541"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175237_12.jpg",
+				"path": "/images/items/01_4153/1000175237_12.jpg",
+				"hash": "2cc16ff0188ba35fa3fa10740cf438b8"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4153/",
-	"brandIds": [],
-	"seriesIds": ["starwars"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_4154", "01_3514", "01_3515", "01_3516"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4153/"
 }

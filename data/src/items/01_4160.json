@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard 仮面ライダーW ファングジョーカー",
-		"en": "Figure-rise Standard KAMEN RIDER DOUBLE FANGJOKER"
+		"en": "Figure-rise Standard Kamen Rider W Fang Joker"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "rider",
+			"url": "https://bandai-hobby.net/series/rider/",
+			"ja": "仮面ライダーシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5451",
+			"url": "https://bandai-hobby.net/item/01_5451/",
+			"ja": "Figure-rise Standard 仮面ライダーゼロワン ライジングホッパー"
+		},
+		{
+			"id": "item-1000215369",
+			"url": "https://p-bandai.jp/item/item-1000215369/",
+			"ja": "Figure-rise Standard 仮面ライダーファイズ ブラスターフォーム"
+		},
+		{
+			"id": "01_5276",
+			"url": "https://bandai-hobby.net/item/01_5276/",
+			"ja": "Figure-rise Standard 仮面ライダークウガ アルティメットフォーム"
+		},
+		{
+			"id": "01_5175",
+			"url": "https://bandai-hobby.net/item/01_5175/",
+			"ja": "Figure-rise Standard 仮面ライダーキバ キバフォーム"
+		}
+	],
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -21,108 +64,158 @@
 	"description": {
 		"ja": [
 			"『仮面ライダーW』より、変身形態の中でも高いスペックを誇る「ファングジョーカー」がFigure-rise Standardで登場！",
-			"■特徴的なセイバーの展開状態をパーツの組み替えで再現。アームセイバー、マキシマムセイバー、ショルダーセイバー再現用パーツが付属。",
-			"■スーツのホワイト部分は光沢感のある成形色を採用。パーツにより異なる成形材料を採用し、スーツの質感の差を表現。",
-			"■ダブルドライバーに装着するファングメモリもディテールまで再現。",
-			"■手持ち用セイバーと専用ハンドパーツのほか、表情豊かな各種ハンドパーツが付属。"
+			"• 特徴的なセイバーの展開状態をパーツの組み替えで再現。アームセイバー、マキシマムセイバー、ショルダーセイバー再現用パーツが付属。",
+			"• スーツのホワイト部分は光沢感のある成形色を採用。パーツにより異なる成形材料を採用し、スーツの質感の差を表現。",
+			"• ダブルドライバーに装着するファングメモリもディテールまで再現。",
+			"• 手持ち用セイバーと専用ハンドパーツのほか、表情豊かな各種ハンドパーツが付属。"
 		],
 		"en": [
-			"From \"Kamen Rider W \", \" Fang Joker\", which boasts the highest specs among the transformation forms, is now available in Figure-rise Standard!",
+			"From \"Kamen Rider W\", \"Fang Joker\", which boasts the highest specs among the transformation forms, is now available in Figure-rise Standard!",
 			"• Reproduce the characteristic Saber deployment state by rearranging parts. Includes parts to reproduce Arm Saber, Maximum Saber, and Shoulder Saber.",
 			"• The white part of the suit uses a glossy molded color. Different molding materials are used for different parts to express the different textures of the suit.",
 			"• The fang memory attached to the double driver is also reproduced in detail.",
 			"• In addition to the hand-held saber and special hand parts, various expressive hand parts are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"アームセイバー×1",
-			"マキシマムセイバー×1",
-			"ショルダーセイバー×1",
-			"手持ち用ショルダーセイバー×1",
-			"ファングメモリ×1",
-			"ジョーカーメモリ×1",
-			"ジョイントパーツ×1式",
-			"ハンドパーツ×1式",
-			"Figure-rise Effect 台座×1",
-			"シール×1"
-		],
-		"en": [
-			"Arm saver x1",
-			"Maximum Saber×1",
-			"Shoulder saver x 1",
-			"Hand-held shoulder saver x 1",
-			"Fang memory x 1",
-			"Joker memory x 1",
-			"Joint parts x 1 set",
-			"Hand parts x 1 set",
-			"Figure-rise Effect pedestal x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "アームセイバー",
+				"en": "arm saver"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マキシマムセイバー",
+				"en": "Maximum Saber"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ショルダーセイバー",
+				"en": "shoulder saber"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "手持ち用ショルダーセイバー",
+				"en": "Hand-held shoulder saver"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ファングメモリ",
+				"en": "fang memory"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョーカーメモリ",
+				"en": "joker memory"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "Figure-rise Effect 台座",
+				"en": "Figure-rise Effect pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5084.jpg",
+				"src": "https://bandai-hobby.net/images/153_5084_s_3wlskncatvq2zvczy85wgvx6usqt.jpg",
 				"path": "/images/items/01_4160/153_5084.jpg",
 				"hash": "ce636c3f78aa8d3af79510d7a58045e7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5084.jpg",
+				"src": "https://bandai-hobby.net/images/155_5084_s_80xacnv1lv6jk6quo3cl2bik38b1.jpg",
 				"path": "/images/items/01_4160/155_5084.jpg",
 				"hash": "a259591b76245f07d718f689d88b24e9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5084.jpg",
+				"src": "https://bandai-hobby.net/images/156_5084_s_ysbw0glf4r96k29m8id6dwy8q7fn.jpg",
 				"path": "/images/items/01_4160/156_5084.jpg",
 				"hash": "863559acf0ba7eecd706f8f9f0f4cc3f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5084.jpg",
+				"src": "https://bandai-hobby.net/images/157_5084_s_owqpbcvhwnu1lyz2cae6o3vpdlyu.jpg",
 				"path": "/images/items/01_4160/157_5084.jpg",
 				"hash": "ed31f7b37975936ca52cc7ae4f91af9a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5084.jpg",
+				"src": "https://bandai-hobby.net/images/158_5084_s_m13e8kwr2xabjz7yb2st8p2jjjxy.jpg",
 				"path": "/images/items/01_4160/158_5084.jpg",
 				"hash": "2248bfc715386f4dcb16419d265ef880"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5084.jpg",
+				"src": "https://bandai-hobby.net/images/159_5084_s_tvpnl4iw5x7r2itff54yyfxwxfsr.jpg",
 				"path": "/images/items/01_4160/159_5084.jpg",
 				"hash": "f473e08bfaaf7b133f3e8ed3122808b5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5084.jpg",
+				"src": "https://bandai-hobby.net/images/189_5084_s_jf2outbuegjq1hrrlttozf1jkjud.jpg",
 				"path": "/images/items/01_4160/189_5084.jpg",
 				"hash": "7845785fa6eeca3a9998a92e34074269"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5084.jpg",
+				"src": "https://bandai-hobby.net/images/190_5084_s_smiojwcmscsivufw7rnw8wevkssi.jpg",
 				"path": "/images/items/01_4160/190_5084.jpg",
 				"hash": "d1b2040dea1709191f517b391a67539a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5084.jpg",
+				"src": "https://bandai-hobby.net/images/191_5084_s_6ananunfdxlj0j00242ehs1q6g0w.jpg",
 				"path": "/images/items/01_4160/191_5084.jpg",
 				"hash": "9fb050eb43ee1975214e5a2d5d6cfdb1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5084.jpg",
+				"src": "https://bandai-hobby.net/images/192_5084_s_w94ffo4e3h73600iabqulh294c08.jpg",
 				"path": "/images/items/01_4160/192_5084.jpg",
 				"hash": "945e4cafb7011a1e142805ae588df44f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_5084.jpg",
+				"src": "https://bandai-hobby.net/images/193_5084_s_l0id8gdfauu01scpwgcuiulndngg.jpg",
 				"path": "/images/items/01_4160/193_5084.jpg",
 				"hash": "0cc2813657d611a32d8143c29bec1b31"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4160/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["rider"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5451", "item-1000215369", "01_5276", "01_5175"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4160/"
 }

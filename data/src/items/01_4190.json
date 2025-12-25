@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "BB戦士 RX-93ff νガンダム",
-		"en": "BB SENSHI RX-93ff ν GUNDAM"
+		"en": "BB Senshi RX-93ff νGundam"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4975",
+			"url": "https://bandai-hobby.net/item/01_4975/",
+			"ja": "BB戦士 MSN-04FF サザビー"
+		},
+		{
+			"id": "01_2323",
+			"url": "https://bandai-hobby.net/item/01_2323/",
+			"ja": "BB戦士 ガンダムベース限定 Hi-νガンダム[スペシャルコーティング]"
+		},
+		{
+			"id": "01_46",
+			"url": "https://bandai-hobby.net/item/01_46/",
+			"ja": "BB戦士387 νガンダム"
+		},
+		{
+			"id": "01_5834",
+			"url": "https://bandai-hobby.net/item/01_5834/",
+			"ja": "BB戦士 384　Ｈｉ-νガンダム"
+		}
+	],
 	"price": {
 		"amount": 1870,
 		"currency": "JPY",
@@ -20,11 +63,11 @@
 	"description": {
 		"ja": [
 			"実物大νガンダム立像「RX-93ff νガンダム」が、デフォルメされてBB戦士シリーズで登場！",
-			"■立像をイメージしたカラーリングに加え、ロングレンジ・フィン・ファンネルや平手パーツを新規造形で再現。",
-			"■最大の特徴であるロングレンジ・フィン・ファンネルは差し替えで発射状態を再現できるほか、腕部への装着も可能。",
-			"■瞳の有無は差し替え式で選択可能！",
-			"■89式ベースジャバー付属。ベースジャバーにはνガンダムを搭乗させることも可能。",
-			"■ニュー・ハイパー・バズーカ、ビーム・ライフル、ビーム・サーベルなどが付属。",
+			"• 立像をイメージしたカラーリングに加え、ロングレンジ・フィン・ファンネルや平手パーツを新規造形で再現。",
+			"• 最大の特徴であるロングレンジ・フィン・ファンネルは差し替えで発射状態を再現できるほか、腕部への装着も可能。",
+			"• 瞳の有無は差し替え式で選択可能！",
+			"• 89式ベースジャバー付属。ベースジャバーにはνガンダムを搭乗させることも可能。",
+			"• ニュー・ハイパー・バズーカ、ビーム・ライフル、ビーム・サーベルなどが付属。",
 			"※一般流通での販売はございません。",
 			"※この商品は後日バンダイナムコグループ公式通販サイト、THE GUNDAM BASE各店、海外での販売も予定しております。"
 		],
@@ -45,11 +88,6 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173136_1.jpg",
 				"path": "/images/items/01_4190/1000173136_1.jpg",
 				"hash": "ab9b0e3f9fb7cf1d9a0b88b794a8e089"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173136_10.jpg",
-				"path": "/images/items/01_4190/1000173136_10.jpg",
-				"hash": "1c774526b85cbd7db3da0d010c97ddd0"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173136_2.jpg",
@@ -90,17 +128,14 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173136_9.jpg",
 				"path": "/images/items/01_4190/1000173136_9.jpg",
 				"hash": "580512efffbcc6506d75078130bea015"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173136_10.jpg",
+				"path": "/images/items/01_4190/1000173136_10.jpg",
+				"hash": "1c774526b85cbd7db3da0d010c97ddd0"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4190/",
-	"brandIds": ["bb"],
-	"seriesIds": ["gundam-cca"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4975", "01_2323", "01_46", "01_5834"],
-	"tag": {
-		"ja": "GUNDAM SIDE-F",
-		"en": "GUNDAM SIDE-F"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4190/"
 }

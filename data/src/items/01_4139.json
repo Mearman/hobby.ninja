@@ -2,9 +2,46 @@
 	"id": "01_4139",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダムちーびー戦士 スターガンダム GP01Jr.",
-		"en": "SD Gundam Little Warrior Star Gundam GP01Jr."
+		"ja": "SDガンダムちーびー戦士 スターガンダムGP01Jr.",
+		"en": "SDGundam Little Warrior Star GundamGP01Jr."
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4975",
+			"url": "https://bandai-hobby.net/item/01_4975/",
+			"ja": "BB戦士 MSN-04FF サザビー"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		}
+	],
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -19,22 +56,22 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": ["「SD ガンダムちーびー戦士 スターガンダムＧＰ０１Ｊｒ．」が登場！"],
-		"en": ["\"SD Gundam Little Warrior Star Gundam GP01 Jr.\" is now available!"]
+		"ja": [
+			"「SDガンダムちーびー戦士 スターガンダムＧＰ０１Ｊｒ．」が登場！"
+		],
+		"en": [
+			"\"SD Gundam Little Warrior Star Gundam GP01 Jr.\" is now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5065.jpg",
+				"src": "https://bandai-hobby.net/images/153_5065_s_5lalvtryoaesgzx1g3w5i9ef5w1n.jpg",
 				"path": "/images/items/01_4139/153_5065.jpg",
 				"hash": "70a33c8ccbc1c09b45e280defd627abb"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4139/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4139/"
 }

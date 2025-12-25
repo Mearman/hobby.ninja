@@ -2,9 +2,46 @@
 	"id": "01_4135",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダムちーびー戦士 ガンファイヤーJr.",
-		"en": "SD Gundam Little Warrior Gunfire Jr."
+		"ja": "SDガンダムちーびー戦士 ガンファイヤーJr.",
+		"en": "SDGundam Little Warrior Gunfire Jr."
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4975",
+			"url": "https://bandai-hobby.net/item/01_4975/",
+			"ja": "BB戦士 MSN-04FF サザビー"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		}
+	],
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -19,22 +56,22 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": ["「SD ガンダムちーびー戦士 ガンファイヤーＪｒ．」が登場！"],
-		"en": ["\"SD Gundam Little Warrior Gunfire Jr.\" is now available!"]
+		"ja": [
+			"「SDガンダムちーびー戦士 ガンファイヤーＪｒ．」が登場！"
+		],
+		"en": [
+			"\"SD Gundam Little Warrior Gunfire Jr.\" is now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5061.jpg",
+				"src": "https://bandai-hobby.net/images/153_5061_s_rypgkdeeyofvunpy08tjtmarw40k.jpg",
 				"path": "/images/items/01_4135/153_5061.jpg",
 				"hash": "519802e34e4498e12ea7c9525dca22c1"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4135/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4135/"
 }

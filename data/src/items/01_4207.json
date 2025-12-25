@@ -5,6 +5,50 @@
 		"ja": "ＨＧ 1/144 RX-78-02 ガンダム（ククルス・ドアンの島版）",
 		"en": "HG 1/144 RX-78-02 Gundam (Cucurrus Doan's island version)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "g-doan",
+			"url": "https://bandai-hobby.net/series/g-doan/",
+			"ja": "機動戦士ガンダム ククルス・ドアンの島"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "01_5514",
+			"url": "https://bandai-hobby.net/item/01_5514/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムFSD (試作型ロングレンジ・ビームライフル装備)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガ ン ダ ム 、",
@@ -90,79 +133,98 @@
 			"・Product specifications are as of 20224. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル（前期型",
-			"中期型）",
-			"ハイパー・バズーカ",
-			"ビーム・サーベル",
-			"シールド",
-			"ショルダー・キャノン"
-		],
-		"en": ["Beam rifle (early model)", "mid-term type)", "hyper bazooka", "beam saber", "Seal de", "shoulder cannon"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル（前期型",
+				"en": "Beam rifle (early model)"
+			}
+		},
+		{
+			"name": {
+				"ja": "中期型）",
+				"en": "mid-term type)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハイパー・バズーカ",
+				"en": "hyper bazooka"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		},
+		{
+			"name": {
+				"ja": "ショルダー・キャノン",
+				"en": "shoulder cannon"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5127.jpg",
+				"src": "https://bandai-hobby.net/images/153_5127_s_i1tul0yiqc7kywgwjsazk5noge4b.jpg",
 				"path": "/images/items/01_4207/153_5127.jpg",
 				"hash": "2c482309b0a70a817da839f6ed7ea89d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5127.jpg",
+				"src": "https://bandai-hobby.net/images/155_5127_s_uwqmibiwfl6yxaz7xtlx5x5rnuen.jpg",
 				"path": "/images/items/01_4207/155_5127.jpg",
 				"hash": "52794d291985bd253e9c7967faee348d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5127.jpg",
+				"src": "https://bandai-hobby.net/images/156_5127_s_d7s6mmvhtzk2a1ne6dizctkj9alf.jpg",
 				"path": "/images/items/01_4207/156_5127.jpg",
 				"hash": "b63bb6562d9dc25c7e64dba4334b0c1d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5127.jpg",
+				"src": "https://bandai-hobby.net/images/157_5127_s_1t8vjaonq8ngwtw417snehql00tm.jpg",
 				"path": "/images/items/01_4207/157_5127.jpg",
 				"hash": "f4003f1d1e4ad527c51d623d0b37c964"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5127.jpg",
+				"src": "https://bandai-hobby.net/images/158_5127_s_3s57kb3xrs4bsr77x5cvv8dy4w0c.jpg",
 				"path": "/images/items/01_4207/158_5127.jpg",
 				"hash": "a5a81baac9202001152fa5bac9064237"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5127.jpg",
+				"src": "https://bandai-hobby.net/images/159_5127_s_6u2hdnprieu4am18901mx7xtnl8v.jpg",
 				"path": "/images/items/01_4207/159_5127.jpg",
 				"hash": "2efa7a5b91941ab08b005fbab6ade7ff"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5127.jpg",
+				"src": "https://bandai-hobby.net/images/189_5127_s_g5hqaxrghxouf47p7o6j900gd2zu.jpg",
 				"path": "/images/items/01_4207/189_5127.jpg",
 				"hash": "722cde307474056703e90b54d41e326b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5127.jpg",
+				"src": "https://bandai-hobby.net/images/190_5127_s_7ofuvlny6z1euz2tcxfefib197pu.jpg",
 				"path": "/images/items/01_4207/190_5127.jpg",
 				"hash": "0015c76aa8f8d5505ba42c15c140830a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5127.jpg",
+				"src": "https://bandai-hobby.net/images/191_5127_s_o4p8vi2y7dyb1xzy2woeqx54byxe.jpg",
 				"path": "/images/items/01_4207/191_5127.jpg",
 				"hash": "5579a899150867a5d4223e367040bf75"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5127.jpg",
+				"src": "https://bandai-hobby.net/images/192_5127_s_ovoj496ovhh8toh4ox5asa2bct0b.jpg",
 				"path": "/images/items/01_4207/192_5127.jpg",
 				"hash": "498c0138f0980bc162910386e240d53f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4207/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["g-doan"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000220189", "01_5514"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4207/"
 }

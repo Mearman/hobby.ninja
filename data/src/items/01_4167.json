@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30 MINUTES SISTERS 水転写式デカール 汎用1",
-		"en": "30 MINUTES SISTERS WATER DECALS MULTIUSE ①"
+		"en": "30 MINUTES SISTERS water transfer decal general purpose 1"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5975",
+			"url": "https://bandai-hobby.net/item/01_5975/",
+			"ja": "30MS 和泉愛依"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5954",
+			"url": "https://bandai-hobby.net/item/01_5954/",
+			"ja": "30MS オプションヘアスタイルパーツVol.12 全4種 ミディアムヘア2[イエロー4]"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -21,8 +63,8 @@
 	"description": {
 		"ja": [
 			"30MSシリーズに待望の汎用水転写式デカールが登場！",
-			"■別売りの各種「30MS オプションボディパーツ アームパーツ&レッグパーツ」の無塗装フェイスパーツとの組み合わせで、キャラクターの表情を更に豊かに表現！",
-			"■豊富な汎用マークでアーマーや武装を自分好みにキャラメイキング可能。"
+			"• 別売りの各種「30MS オプションボディパーツ アームパーツ&レッグパーツ」の無塗装フェイスパーツとの組み合わせで、キャラクターの表情を更に豊かに表現！",
+			"• 豊富な汎用マークでアーマーや武装を自分好みにキャラメイキング可能。"
 		],
 		"en": [
 			"The long-awaited general-purpose water transfer decal is now available in the 30MS series!",
@@ -30,23 +72,24 @@
 			"• You can customize your character with armor and weapons using a wide variety of general-purpose marks."
 		]
 	},
-	"accessories": {
-		"ja": ["水転写式デカール×1"],
-		"en": ["Water transfer decal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5090.jpg",
+				"src": "https://bandai-hobby.net/images/153_5090_s_lu4vn326ch478mbylqdlpqvo637r.jpg",
 				"path": "/images/items/01_4167/153_5090.jpg",
 				"hash": "4484536d26d1549f250c98052a4ad076"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4167/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4167/"
 }

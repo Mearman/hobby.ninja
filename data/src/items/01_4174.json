@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 オプションパーツセット9(大型ブースターユニット)",
-		"en": "30MM 1/144 OPTION PARTS SET 9(LARGE BOOSTER UNIT)"
+		"en": "30MM 1/144 Option parts set 9 (large booster unit)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 858,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 13
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMオプションパーツセットに、各機体に装着可能な大型ブースターユニットが登場！",
@@ -33,26 +75,55 @@
 			"• Seal binder, large leg unit, joint parts, and many other parts convenient for customization are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"コアパーツ×1",
-			"大型脚部ブースターユニット×1",
-			"スラスターユニット×1",
-			"シールドバインダー×2",
-			"バックパック中継パーツ×1",
-			"ジョイントパーツ×1",
-			">"
-		],
-		"en": [
-			"Core parts x 1",
-			"Large leg booster unit x 1",
-			"Thruster unit x 1",
-			"Seal binder x 2",
-			"Backpack relay parts x 1",
-			"Joint parts x 1",
-			">"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "コアパーツ",
+				"en": "core parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "大型脚部ブースターユニット",
+				"en": "Large leg booster unit"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "スラスターユニット",
+				"en": "thruster unit"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールドバインダー",
+				"en": "Seal binder"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "バックパック中継パーツ",
+				"en": "backpack relay parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": ">"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -94,10 +165,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4174/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3743",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3743/"

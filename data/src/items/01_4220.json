@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "SDW HEROES 孫権ガンダムアストレイ 赫炎翔虎",
-		"en": "SDW HEROES SUN QUAN GUNDAM ASTRAY HE YAN XIANG HU"
+		"en": "SDW HEROES Son Quan Gundam Astray Heen Shoutora"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		},
+		{
+			"id": "01_4634",
+			"url": "https://bandai-hobby.net/item/01_4634/",
+			"ja": "SDW HEROES クリアカラーセットIII"
+		}
+	],
 	"price": {
 		"amount": 1210,
 		"currency": "JPY",
@@ -21,75 +64,98 @@
 	"description": {
 		"ja": [
 			"外伝プロジェクト『SDガンダムワールド ヒーローズ THE LEGEND OF DRAGON KNIGHT』より、『三国創傑伝』『ヒーローズ』で活躍した孫権がパワーアップし「孫権ガンダムアストレイ 赫炎翔虎（かくえんしょうこ）」として登場！",
-			"■様々な形態に組み替え可能な新武装が付属。",
-			"■バックパックも新規造形で再現。各種武器と組み合わせが可能。",
-			"■全身に鮮やかなクリアパーツをまとい、燃えるような炎のシルエットを迫力の造形で実現！"
+			"• 様々な形態に組み替え可能な新武装が付属。",
+			"• バックパックも新規造形で再現。各種武器と組み合わせが可能。",
+			"• 全身に鮮やかなクリアパーツをまとい、燃えるような炎のシルエットを迫力の造形で実現！"
 		],
 		"en": [
-			"From the side story project \"SD Gundam World Heroes THE LEGEND OF DRAGON KNIGHT \", Sun Quan, who was active in \" Sangoku Soketsuden \" and \" Heroes \", has been powered up and appears as \" Son Quan Gundam Astray Kakuen Shoko\"!",
+			"From the side story project \"SD Gundam World Heroes THE LEGEND OF DRAGON KNIGHT\", Sun Quan, who was active in \"Sangoku Soketsuden\" and \"Heroes\", has been powered up and appears as \"Son Quan Gundam Astray Kakuen Shoko\"!",
 			"• Comes with new weapons that can be rearranged into various forms.",
 			"• The backpack is also reproduced with new modeling. Can be combined with various weapons.",
 			"• The entire body is covered in bright clear parts, creating an impressive silhouette of fiery flames!"
 		]
 	},
-	"accessories": {
-		"ja": ["大刀(ホワイト)×1", "小刀(ホワイト)×2", "大刀(シルバー)×1", "小刀(シルバー)×2", "シール×1"],
-		"en": [
-			"Great sword (white) x 1",
-			"Small sword (white) x 2",
-			"Long sword (silver) x 1",
-			"Small sword (silver) x 2",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "大刀(ホワイト)",
+				"en": "Great sword (white)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "小刀(ホワイト)",
+				"en": "Small sword (white)"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "大刀(シルバー)",
+				"en": "Great sword (silver)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "小刀(シルバー)",
+				"en": "Small sword (silver)"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5139.jpg",
+				"src": "https://bandai-hobby.net/images/153_5139_s_g1gr8sgust0wzzh0nw0c8rzttjio.jpg",
 				"path": "/images/items/01_4220/153_5139.jpg",
 				"hash": "359d91ec03fa29f217d621576a69d078"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5139.jpg",
+				"src": "https://bandai-hobby.net/images/155_5139_s_g6n0wp6ono2g3hgwgpnw6is637rn.jpg",
 				"path": "/images/items/01_4220/155_5139.jpg",
 				"hash": "750e2490cbc0d23c565137231309e520"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5139.jpg",
+				"src": "https://bandai-hobby.net/images/156_5139_s_keukze3y8co7gmjolvln0bq1ovj8.jpg",
 				"path": "/images/items/01_4220/156_5139.jpg",
 				"hash": "a91068b4130e41b11d0e8b3a586df2de"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5139.jpg",
+				"src": "https://bandai-hobby.net/images/157_5139_s_lsj89ahzvchlfmvfmnn0n4rp8s4i.jpg",
 				"path": "/images/items/01_4220/157_5139.jpg",
 				"hash": "1e524ff15d810e66ed7e7eaa9c8e217e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5139.jpg",
+				"src": "https://bandai-hobby.net/images/158_5139_s_lk36m82yxt6b6uyjc5b0p69jyae6.jpg",
 				"path": "/images/items/01_4220/158_5139.jpg",
 				"hash": "150279be4f77576e58a0d96022d16090"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5139.jpg",
+				"src": "https://bandai-hobby.net/images/159_5139_s_o32mbxhnbz8e19itrqz4xjuju56t.jpg",
 				"path": "/images/items/01_4220/159_5139.jpg",
 				"hash": "7f53af77db41d79babf05beed5de015d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5139.jpg",
+				"src": "https://bandai-hobby.net/images/189_5139_s_048sh4gprq47cgyos7i8joh1qd2x.jpg",
 				"path": "/images/items/01_4220/189_5139.jpg",
 				"hash": "457dca1fc35f87d6bb30452ce4b28103"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5139.jpg",
+				"src": "https://bandai-hobby.net/images/190_5139_s_jnn3o0n10ws91mxdi62ytsv4yhu8.jpg",
 				"path": "/images/items/01_4220/190_5139.jpg",
 				"hash": "b506f3dea130b016703b3bbfe9ad4d0b"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4220/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4220/"
 }

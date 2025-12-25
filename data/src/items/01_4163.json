@@ -3,8 +3,40 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 eEXM-S01U フォレスティエリ 01",
-		"en": "30MM 1/144 eEXM-S01U FORESTIERI 01"
+		"en": "30MM 1/144 eEXM-S01U Forestieri 01"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "item_all",
+			"url": "https://bandai-hobby.net/item_all",
+			"ja": "商品一覧"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1210,
 		"currency": "JPY",
@@ -18,7 +50,6 @@
 		"day": 30
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"地球連合軍の新機体「eEXM-S01U フォレスティエリ 01」が登場！30MMシリーズのコンセプト、組み立てやすさを徹底追求した「ブロックアッセンブルシステム」を採用！",
@@ -35,7 +66,7 @@
 			"• 既存の30MMシリーズのアイテムともミキシングできる共通関節構造、3mmジョイントを採用し多彩なカスタマイズを実現。"
 		],
 		"en": [
-			"The Earth Allied Forces' new aircraft \"eEXM-S01U Forestieri 01 \" is now available! The concept of the 30MM series is a \" block assembly system\" that thoroughly pursues ease of assembly!",
+			"The Earth Allied Forces' new aircraft \"eEXM-S01U Forestieri 01\" is now available! The concept of the 30MM series is a \"block assembly system\" that thoroughly pursues ease of assembly!",
 			"• Key points of \"block assembly system\"",
 			"<Point 1> Snap! Divide into “blocks”!",
 			"-Separate Runners to make it easier to search and enjoy intuitive assembly!",
@@ -49,26 +80,46 @@
 			"• Adopts a 3mm joint, a common joint structure that can be mixed with existing 30MM series items, allowing for a variety of customizations."
 		]
 	},
-	"accessories": {
-		"ja": ["ライフル×1", "ビームソード×1", "ロイロイ×1", "ハンドパーツ×1式"],
-		"en": ["Rifle x 1", "Beam sword x1", "Loi Loi x 1", "Hand parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ライフル",
+				"en": "rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームソード",
+				"en": "beam sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ロイロイ",
+				"en": "Loi Loi"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175230_1.jpg",
 				"path": "/images/items/01_4163/1000175230_1.jpg",
 				"hash": "539bdaf333369fb8562489c43a93c1e5"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175230_10.jpg",
-				"path": "/images/items/01_4163/1000175230_10.jpg",
-				"hash": "89f90f27c6ac2c78d35ea70079791a1f"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175230_11.jpg",
-				"path": "/images/items/01_4163/1000175230_11.jpg",
-				"hash": "1e07360a2732c4cad0516c3febe6d955"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175230_2.jpg",
@@ -109,15 +160,21 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175230_9.jpg",
 				"path": "/images/items/01_4163/1000175230_9.jpg",
 				"hash": "3bc0171c48544b60369d338ff6efb30c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175230_10.jpg",
+				"path": "/images/items/01_4163/1000175230_10.jpg",
+				"hash": "89f90f27c6ac2c78d35ea70079791a1f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175230_11.jpg",
+				"path": "/images/items/01_4163/1000175230_11.jpg",
+				"hash": "1e07360a2732c4cad0516c3febe6d955"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4163/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": ["product-list"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3741",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3741/"

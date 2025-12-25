@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "SDW HEROES シャイングラスパードラゴン",
-		"en": "SDW HEROES SHINING GRASPER DRAGON"
+		"en": "SDW HEROES Shine Grasper Dragon"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5470",
+			"url": "https://bandai-hobby.net/item/01_5470/",
+			"ja": "SDW HEROES キャプテンクアンタ GF"
+		},
+		{
+			"id": "01_5471",
+			"url": "https://bandai-hobby.net/item/01_5471/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-B"
+		},
+		{
+			"id": "01_5472",
+			"url": "https://bandai-hobby.net/item/01_5472/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-F"
+		},
+		{
+			"id": "01_5347",
+			"url": "https://bandai-hobby.net/item/01_5347/",
+			"ja": "SDW HEROES スペリオルフォーミュラー ファイナルドラゴン[クリアカラー]"
+		}
+	],
 	"price": {
 		"amount": 990,
 		"currency": "JPY",
@@ -20,24 +57,29 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"～『SD ガンダムワールド ヒーローズ THE LEGEND OF DRAGON KNIGHT』始動！～",
-			"『SD ガンダムワールド ヒーローズ』に続く、新たな物語が始動！バイク、馬に続くのはドラゴン！？幅広いキャラクターが騎乗可能な新アイテム！",
+			"～『SDガンダムワールド ヒーローズ THE LEGEND OF DRAGON KNIGHT』始動！～",
+			"『SDガンダムワールド ヒーローズ』に続く、新たな物語が始動！バイク、馬に続くのはドラゴン！？幅広いキャラクターが騎乗可能な新アイテム！",
 			"• クリアブルーを基調とした成形色を使用。",
 			"• 全身１２か所以上が可動し、様々なポージングでディスプレイを楽しめる。",
 			"• SDW HEROESシリーズはもちろんSD三国創傑伝シリーズのキャラクターも騎乗可能。"
 		],
 		"en": [
 			"~ “SD Gundam World Heroes THE LEGEND OF DRAGON KNIGHT” has started! ～",
-			"A new story following \"SD Gundam World Heroes\" has begun! After bikes and horses, there are dragons! ? A new item that can be ridden by a wide range of characters!",
+			"A new story following “SD Gundam World Heroes” has started! After bikes and horses, there are dragons! ? A new item that can be ridden by a wide range of characters!",
 			"• Uses a molding color based on clear blue.",
 			"•More than 12 parts of the body can be moved, allowing you to enjoy display in various poses.",
 			"• Characters from the SDW HEROES series as well as the SD Sangoku Soketsuden series can be ridden."
 		]
 	},
-	"accessories": {
-		"ja": ["ジョイントパーツ×1"],
-		"en": ["Joint parts x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -73,9 +115,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4173/",
-	"brandIds": [],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4173/"
 }

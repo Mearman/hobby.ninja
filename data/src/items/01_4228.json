@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard ウルトラマントリガー マルチタイプ",
-		"en": "Figure-rise Standard ULTRAMAN TRIGGER MULTI TYPE"
+		"en": "Figure-rise Standard Ultraman Trigger Multi Type"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "ultraman",
+			"url": "https://bandai-hobby.net/series/ultraman/",
+			"ja": "ウルトラマン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5371",
+			"url": "https://bandai-hobby.net/item/01_5371/",
+			"ja": "Figure-rise Standard ウルトラマンティガ マルチタイプ"
+		},
+		{
+			"id": "01_5198",
+			"url": "https://bandai-hobby.net/item/01_5198/",
+			"ja": "Figure-rise Standard ウルトラマンジード プリミティブ"
+		},
+		{
+			"id": "01_5096",
+			"url": "https://bandai-hobby.net/item/01_5096/",
+			"ja": "Figure-rise Standard ULTRAMAN SUIT JACK -ACTION-"
+		},
+		{
+			"id": "01_5046",
+			"url": "https://bandai-hobby.net/item/01_5046/",
+			"ja": "Figure-rise Standard ウルトラマンブレーザー"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -22,12 +65,12 @@
 		"ja": [
 			"「ウルトラマン」シリーズのプラモデルがFigure-rise Standardでついに始動！",
 			"注目の第１弾ラインアップは「ウルトラマントリガー マルチタイプ」！",
-			"■特徴的なボディはパーツの色分けを徹底追求。",
-			"■「サークルアームズ」は細かなディテールまで表現。",
-			"■各所の可動域拡大ギミックによりポージングの幅が広がる。",
-			"■「カラータイマー」は青色と赤色の２種が付属し、差し替え可能。",
-			"■表情豊かなハンドパーツが付属。",
-			"■「ゼペリオン光線」再現用のエフェクトパーツが付属。"
+			"• 特徴的なボディはパーツの色分けを徹底追求。",
+			"• 「サークルアームズ」は細かなディテールまで表現。",
+			"• 各所の可動域拡大ギミックによりポージングの幅が広がる。",
+			"• 「カラータイマー」は青色と赤色の２種が付属し、差し替え可能。",
+			"• 表情豊かなハンドパーツが付属。",
+			"• 「ゼペリオン光線」再現用のエフェクトパーツが付属。"
 		],
 		"en": [
 			"The plastic model of the \"Ultraman\" series has finally started with Figure-rise Standard!",
@@ -37,25 +80,58 @@
 			"• The gimmick that expands the range of motion in various parts expands the range of poses.",
 			"• \"Color Timer\" comes in two types, blue and red, and can be replaced.",
 			"• Comes with expressive hand parts.",
-			"• Effect parts for reproducing \"Zepperion Ray\" are included."
+			"• Includes effect parts to reproduce \"Zepperion Ray\"."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"サークルアームズ×1",
-			"ゼペリオン光線エフェクトパーツ×1",
-			"カラータイマー×2種",
-			"ハンドパーツ×1式",
-			"シール×2種"
-		],
-		"en": [
-			"Circle Arms x 1",
-			"Zeperion ray effect parts x 1",
-			"Color timer x 2 types",
-			"Hand parts x 1 set",
-			"Seal×2 types"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "サークルアームズ",
+				"en": "circle arms"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ゼペリオン光線エフェクトパーツ",
+				"en": "Zeperion ray effect parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "カラータイマー",
+				"en": "color timer"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -106,9 +182,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4228/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["ultraman"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5371", "01_5198", "01_5096", "01_5046"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4228/"
 }

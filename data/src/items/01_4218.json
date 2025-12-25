@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 エグザビークル(装甲突撃メカVer.)",
-		"en": "30MM 1/144 Extended Armament Vehicle (ARMORED ASSAULT MECHA Ver.)"
+		"en": "30MM 1/144 Exer Vehicle (Armored Assault Mecha Ver.)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1078,
 		"currency": "JPY",
@@ -18,48 +61,55 @@
 		"day": 22
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMエグザビークルシリーズに「装甲突撃メカVer.」が登場！",
-			"■丸みを帯びたフォルムが特徴的な小型のエグザビークル、広範囲なアクションが可能。",
-			"■頭部には新フォルムのロイロイを収納。３６０°回転が可能。",
-			"■グレネードランチャーが付属。",
-			"■30MMシリーズの既存機体と組み合わせることで、スタイルチェンジやカスタマイズを楽しめる。"
+			"• 丸みを帯びたフォルムが特徴的な小型のエグザビークル、広範囲なアクションが可能。",
+			"• 頭部には新フォルムのロイロイを収納。３６０°回転が可能。",
+			"• グレネードランチャーが付属。",
+			"• 30MMシリーズの既存機体と組み合わせることで、スタイルチェンジやカスタマイズを楽しめる。"
 		],
 		"en": [
 			"\"Armored Assault Mecha Ver.\" is now available in the 30MM Exa Vehicle Series!",
 			"• A small experimental vehicle with a distinctive rounded shape, capable of a wide range of actions.",
-			"• A new form of Loi Loi is stored in the head. 360° rotation possible.",
+			"• The head stores a new form of Loi Loi. 360° rotation possible.",
 			"• Includes grenade launcher.",
 			"• Enjoy style changes and customization by combining with existing 30MM series aircraft."
 		]
 	},
-	"accessories": {
-		"ja": ["ビークル×1体", "グレネードランチャー×1", "シール×1"],
-		"en": ["Vehicle x 1", "Grenade launcher x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビークル",
+				"en": "vehicle"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "体",
+				"en": "body"
+			}
+		},
+		{
+			"name": {
+				"ja": "グレネードランチャー",
+				"en": "grenade launcher"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180050_1.jpg",
 				"path": "/images/items/01_4218/1000180050_1.jpg",
 				"hash": "4e5eda685c06e048fa5649247e22fa02"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180050_10.jpg",
-				"path": "/images/items/01_4218/1000180050_10.jpg",
-				"hash": "74cf6269c5e16677e2bb125b0b093823"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180050_11.jpg",
-				"path": "/images/items/01_4218/1000180050_11.jpg",
-				"hash": "ae503e029c63186ae103429393a1315b"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180050_12.jpg",
-				"path": "/images/items/01_4218/1000180050_12.jpg",
-				"hash": "e6309df7c0f8dd4807c88693234e3fcb"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180050_2.jpg",
@@ -100,15 +150,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180050_9.jpg",
 				"path": "/images/items/01_4218/1000180050_9.jpg",
 				"hash": "2943392bfb86677679e783512c203330"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180050_10.jpg",
+				"path": "/images/items/01_4218/1000180050_10.jpg",
+				"hash": "74cf6269c5e16677e2bb125b0b093823"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180050_11.jpg",
+				"path": "/images/items/01_4218/1000180050_11.jpg",
+				"hash": "ae503e029c63186ae103429393a1315b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180050_12.jpg",
+				"path": "/images/items/01_4218/1000180050_12.jpg",
+				"hash": "e6309df7c0f8dd4807c88693234e3fcb"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4218/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3746",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3746/"

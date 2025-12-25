@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "FULL MECHANICS 1/48 メイレスケンブ斬",
-		"en": "FULL MECHANICS 1/48 MAILeS KENBU ZAN"
+		"en": "FULL MECHANICS 1/48 Meireskenbuzan"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/48",
 	"price": {
 		"amount": 6050,
 		"currency": "JPY",
@@ -18,19 +56,18 @@
 		"day": 13
 	},
 	"targetAge": 15,
-	"scale": "1/48",
 	"description": {
 		"ja": [
 			"『境界戦機』第二部の主人公機メイレスケンブ斬がFULL MECHANICSにラインアップ！1/48スケールで構成することで、機体にフレーム構造を内包して立体化！",
-			"■ケンブ斬の全高ほどもある、大型の超熱振式戦闘長刀が付属。",
-			"■背部ウェポンラックのアーム可動により抜刀シーンを再現可能。",
-			"■腕部の機関砲は着脱可能。",
-			"■戦闘時の効率だけでなく、メンテナンスや耐久性まで計算されたメカニックデザイン。",
-			"■人体の筋肉のような構造を模した胸部シリンダーギミックは、伸縮可動を再現。",
-			"■メタリックパーツにより関節部の光沢感などのディテールも再現。",
-			"■リアスカートのアーム昇降アクションを再現。",
-			"■コクピットの開閉ギミックも搭載。",
-			"■メタリック３Dシールにより、四肢のセンサーモールドの質感も再現！",
+			"• ケンブ斬の全高ほどもある、大型の超熱振式戦闘長刀が付属。",
+			"• 背部ウェポンラックのアーム可動により抜刀シーンを再現可能。",
+			"• 腕部の機関砲は着脱可能。",
+			"• 戦闘時の効率だけでなく、メンテナンスや耐久性まで計算されたメカニックデザイン。",
+			"• 人体の筋肉のような構造を模した胸部シリンダーギミックは、伸縮可動を再現。",
+			"• メタリックパーツにより関節部の光沢感などのディテールも再現。",
+			"• リアスカートのアーム昇降アクションを再現。",
+			"• コクピットの開閉ギミックも搭載。",
+			"• メタリック３Dシールにより、四肢のセンサーモールドの質感も再現！",
 			"TVアニメ「境界戦機」第二部は４月開始！！第一部のエピソードはBANDAI SPIRITS 公式 YouTubeにて全話無料配信中！"
 		],
 		"en": [
@@ -47,47 +84,66 @@
 			"The second part of the TV anime \"Kyoukai Senki\" starts in 4! ! All episodes of the first part are available for free on BANDAI SPIRITS official YouTube!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"超熱振式戦闘長刀×1",
-			"40mm腕部機関砲×1",
-			"ウェポンラック×1",
-			"ハンドパーツ 平手（左右）、武器持ち手（左右）",
-			"パイロットフィギュア×2種",
-			"メタリック３Ｄシール×1",
-			"マーキングシール×1"
-		],
-		"en": [
-			"Super heat wave combat long sword x 1",
-			"40mm arm cannon x 1",
-			"Weapon rack x 1",
-			"Hand parts Open hands (left and right), weapon handles (left and right)",
-			"Pilot figure x 2 types",
-			"Metallic 3DSeal×1",
-			"MarkingSeal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "超熱振式戦闘長刀",
+				"en": "Super heat wave fighting long sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "40mm腕部機関砲",
+				"en": "40mm arm cannon"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ウェポンラック",
+				"en": "Weapon rack"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ 平手（左右）、武器持ち手（左右）",
+				"en": "Hand parts Open hands (left and right), weapon handles (left and right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "パイロットフィギュア",
+				"en": "pilot figure"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "メタリック３Ｄシール",
+				"en": "Metallic 3DSeal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175250_1.jpg",
 				"path": "/images/items/01_4158/1000175250_1.jpg",
 				"hash": "e7666d1c4bbf210fbb3d4bc647088e64"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175250_10.jpg",
-				"path": "/images/items/01_4158/1000175250_10.jpg",
-				"hash": "a2abe8fe65d90db10f8812c5a9622930"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175250_11.jpg",
-				"path": "/images/items/01_4158/1000175250_11.jpg",
-				"hash": "0d30899049a2c2928b253c0fd1a7c34b"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175250_12.jpg",
-				"path": "/images/items/01_4158/1000175250_12.jpg",
-				"hash": "cb477ea40e19845ded27efc8d3983af7"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175250_2.jpg",
@@ -128,13 +184,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175250_9.jpg",
 				"path": "/images/items/01_4158/1000175250_9.jpg",
 				"hash": "b6d6edb2869eccd55c615f87d4e43166"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175250_10.jpg",
+				"path": "/images/items/01_4158/1000175250_10.jpg",
+				"hash": "a2abe8fe65d90db10f8812c5a9622930"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175250_11.jpg",
+				"path": "/images/items/01_4158/1000175250_11.jpg",
+				"hash": "0d30899049a2c2928b253c0fd1a7c34b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175250_12.jpg",
+				"path": "/images/items/01_4158/1000175250_12.jpg",
+				"hash": "cb477ea40e19845ded27efc8d3983af7"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4158/",
-	"brandIds": [],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4158/"
 }

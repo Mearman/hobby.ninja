@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/72 ブレイディファントム",
-		"en": "HG 1/72 BRADY PHANTOM"
+		"en": "HG 1/72 Brady Phantom"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -18,15 +62,14 @@
 		"day": 9
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"『境界戦機』より、第二部に登場する謎のAMAIM(アメイン)ブレイディファントムを商品化！",
-			"■武装には専用のガントレットとソード２本が付属。ガントレットの爪は可動。",
-			"■ハンドパーツは２種付属し、武器持ち手は手甲パーツをスライドしナックルモードを再現。",
-			"■北米軍の特徴的な意匠のカメラアイを搭載した最新鋭機。",
-			"■両腕に装備した 巨大な二本の爪が展開するギミックを搭載。",
-			"■背部の大型スタビライザーは上下に展開可動。",
+			"• 武装には専用のガントレットとソード２本が付属。ガントレットの爪は可動。",
+			"• ハンドパーツは２種付属し、武器持ち手は手甲パーツをスライドしナックルモードを再現。",
+			"• 北米軍の特徴的な意匠のカメラアイを搭載した最新鋭機。",
+			"• 両腕に装備した 巨大な二本の爪が展開するギミックを搭載。",
+			"• 背部の大型スタビライザーは上下に展開可動。",
 			"TVアニメ「境界戦機」第二部は４月開始！！第一部のエピソードはBANDAI SPIRITS 公式 YouTubeにて全話無料配信中！"
 		],
 		"en": [
@@ -39,63 +82,77 @@
 			"The second part of the TV anime \"Kyoukai Senki\" starts in 4! ! All episodes of the first part are available for free on BANDAI SPIRITS official YouTube!"
 		]
 	},
-	"accessories": {
-		"ja": ["専用ガントレット×2", "ソード×2", "ハンドパーツ 武器持ち手(左右)、 平手(左右)"],
-		"en": ["Special gauntlet x 2", "Sword x2", "Hand parts Weapon handle (left and right), open hand (left and right)"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ガントレット",
+				"en": "special gauntlet"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ソード",
+				"en": "sword"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ 武器持ち手(左右)、 平手(左右)",
+				"en": "Hand parts Weapon handle (left and right), open hand (left and right)"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5080.jpg",
+				"src": "https://bandai-hobby.net/images/153_5080_s_ve4vggwfzmfz3g8j0grez5wwb4xa.jpg",
 				"path": "/images/items/01_4156/153_5080.jpg",
 				"hash": "abdd57d1e4d00360f41de99875cdcf5b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5080.jpg",
+				"src": "https://bandai-hobby.net/images/155_5080_s_v9st2jfll7mfzhg24xswa3ac2yct.jpg",
 				"path": "/images/items/01_4156/155_5080.jpg",
 				"hash": "43308cad70426c261b3fc8ebdffd0081"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5080.jpg",
+				"src": "https://bandai-hobby.net/images/156_5080_s_07407gzgana0opdrysixy1jov7ok.jpg",
 				"path": "/images/items/01_4156/156_5080.jpg",
 				"hash": "260bfff32c21c804cad45d2fe862f29d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5080.jpg",
+				"src": "https://bandai-hobby.net/images/157_5080_s_rn50rodt2ol0ju0s4o5ebat8iu1k.jpg",
 				"path": "/images/items/01_4156/157_5080.jpg",
 				"hash": "9f0e42208509a4f7c6c28b0cdfd807f4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5080.jpg",
+				"src": "https://bandai-hobby.net/images/158_5080_s_2ro29weafrhz4lbggdtye3s2q54p.jpg",
 				"path": "/images/items/01_4156/158_5080.jpg",
 				"hash": "95505e7dd1dfefbb79995713e48bb608"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5080.jpg",
+				"src": "https://bandai-hobby.net/images/159_5080_s_444jt1px0dre97j4mjixfq1d8ja0.jpg",
 				"path": "/images/items/01_4156/159_5080.jpg",
 				"hash": "87aa042d58de9b280fc655b56ae26cd6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5080.jpg",
+				"src": "https://bandai-hobby.net/images/189_5080_s_0f45cnsjypq9nizcq29dohtoymj2.jpg",
 				"path": "/images/items/01_4156/189_5080.jpg",
 				"hash": "ca8dbdd2fab858b25b265cd0b8d698c8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5080.jpg",
+				"src": "https://bandai-hobby.net/images/190_5080_s_6qyod025nmlmnv1m9dw72ofdyc34.jpg",
 				"path": "/images/items/01_4156/190_5080.jpg",
 				"hash": "4d0fd368ae27caf1dbe36992ab19c13b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5080.jpg",
+				"src": "https://bandai-hobby.net/images/191_5080_s_5yofjfwihf7caobtdcq3r702l2dz.jpg",
 				"path": "/images/items/01_4156/191_5080.jpg",
 				"hash": "6752df6cf92ee04349c8b5ee02be2a4b"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4156/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4156/"
 }

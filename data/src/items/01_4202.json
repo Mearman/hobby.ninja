@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "ENTRY GRADE 1/144 ガンダムベース限定 RX-78-2 ガンダム [ガンダムベースカラー]",
-		"en": "ENTRY GRADE 1/144 THE GUNDAM BASE LIMITED RX-78-2 GUNDAM [THE GUNDAM BASE COLOR]"
+		"en": "ENTRY GRADE 1/144 Gundam Base Limited RX-78-2 Gundam [Gundam Base Color]"
 	},
+	"brands": [
+		{
+			"id": "entry_grade_g",
+			"url": "https://bandai-hobby.net/brand/entry_grade_g/",
+			"ja": "ENTRY GRADE"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5218",
+			"url": "https://bandai-hobby.net/item/01_5218/",
+			"ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム[ヴィンテージカラー]"
+		},
+		{
+			"id": "01_5045",
+			"url": "https://bandai-hobby.net/item/01_5045/",
+			"ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム [リサーキュレーションカラー/ネオンブルー]"
+		},
+		{
+			"id": "01_4249",
+			"url": "https://bandai-hobby.net/item/01_4249/",
+			"ja": "GUNDAM NEXT FUTURE限定 ENTRY GRADE 1/144 RX-78-2 ガンダム [クラシックカラー]"
+		},
+		{
+			"id": "01_3632",
+			"url": "https://bandai-hobby.net/item/01_3632/",
+			"ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム(フルウェポンセット)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 3
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定商品です。",
@@ -43,11 +86,6 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173659_1.jpg",
 				"path": "/images/items/01_4202/1000173659_1.jpg",
 				"hash": "477d9b1830286a1cd7f1856ba75cff0d"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173659_10.jpg",
-				"path": "/images/items/01_4202/1000173659_10.jpg",
-				"hash": "3536ce4ea50c163dedbf98c769e657d7"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173659_2.jpg",
@@ -88,17 +126,14 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173659_9.jpg",
 				"path": "/images/items/01_4202/1000173659_9.jpg",
 				"hash": "faa211435a1a4b30e870bf4469a61541"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173659_10.jpg",
+				"path": "/images/items/01_4202/1000173659_10.jpg",
+				"hash": "3536ce4ea50c163dedbf98c769e657d7"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4202/",
-	"brandIds": ["entry_grade"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5218", "01_5045", "01_4249", "01_3632"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4202/"
 }

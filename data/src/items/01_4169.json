@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "HG Amplified IMGN 龍神丸",
-		"en": "HG Amplified IMGN RYUJINMARU"
+		"en": "HG Amplified IMGN Ryujinmaru"
 	},
+	"brands": [
+		{
+			"id": "hgamplifiedimgn",
+			"url": "https://bandai-hobby.net/brand/hgamplifiedimgn/",
+			"ja": "HG Amplified IMGN"
+		}
+	],
+	"series": [
+		{
+			"id": "wataru",
+			"url": "https://bandai-hobby.net/series/wataru/",
+			"ja": "ワタルシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5186",
+			"url": "https://bandai-hobby.net/item/01_5186/",
+			"ja": "HG Amplified IMGN 龍王丸"
+		},
+		{
+			"id": "item-1000195652",
+			"url": "https://p-bandai.jp/item/item-1000195652/",
+			"ja": "HG Amplified IMGN 空神丸"
+		}
+	],
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -28,41 +61,60 @@
 			"• 巨大な刀身にゴールドメッキを施した「登龍剣」と各種ハンドパーツが付属。「登龍剣」は背面に取り付け可能。"
 		],
 		"en": [
-			"From \"Mashin Hero Wataru \", \" Ryujinmaru\" with a tall head and body arrangement based on the original interpretation of the plastic model is now three-dimensional with HG Amplified IMGN!",
+			"From \"Mashin Hero Wataru\", \"Ryujinmaru\" with a tall head and body arrangement based on the original interpretation of the plastic model is now three-dimensional with HG Amplified IMGN!",
 			"• The empty-handed air fist action that takes advantage of the long limbs unique to his tall head and body amplifies his new appeal.",
 			"• Adopts gloss injection molding and gold plated parts. The high-density modeling of the parts configuration expresses a glossy texture and luxury.",
 			"• The white and red molding areas are made of gloss injection that emphasizes the three-dimensional effect.",
 			"• The gold plating on various parts of the aircraft has a matte finish, giving it a luxurious feel.",
-			"• \"Toryuken \" with a huge gold-plated blade and various hand parts are included. \" Toryuken\" can be attached to the back."
+			"• \"Toryuken\" with a huge gold-plated blade and various hand parts are included. \"Toryuken\" can be attached to the back."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"登龍剣×1",
-			"ハンドパーツ 武器持ち手(左右)、組み替え用平手パーツ(左右)",
-			"ホイルシール×1",
-			"ジュエルシール×1式",
-			"PETシール×1"
-		],
-		"en": [
-			"Toryu sword x1",
-			"Hand parts Weapon handles (left and right), open hand parts for rearrangement (left and right)",
-			"Foil Seal×1",
-			"Jewel Seal x 1",
-			"PETSeal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "登龍剣",
+				"en": "Toryuken"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ 武器持ち手(左右)、組み替え用平手パーツ(左右)",
+				"en": "Hand parts Weapon handles (left and right), open hand parts for rearrangement (left and right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジュエルシール",
+				"en": "Jewel Seal"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "PETシール",
+				"en": "PETSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175243_1.jpg",
 				"path": "/images/items/01_4169/1000175243_1.jpg",
 				"hash": "8fb7d9d1b05ba6c8e72e83f8fa05e959"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175243_10.jpg",
-				"path": "/images/items/01_4169/1000175243_10.jpg",
-				"hash": "917e275571110f4f1bfb100c2db8bd03"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175243_2.jpg",
@@ -103,13 +155,14 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175243_9.jpg",
 				"path": "/images/items/01_4169/1000175243_9.jpg",
 				"hash": "d7865ccbcae2e68489bb898335d26bbb"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175243_10.jpg",
+				"path": "/images/items/01_4169/1000175243_10.jpg",
+				"hash": "917e275571110f4f1bfb100c2db8bd03"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4169/",
-	"brandIds": ["hgamplifiedimgn"],
-	"seriesIds": ["wataru"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5186", "item-1000195652"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4169/"
 }

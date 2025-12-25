@@ -3,8 +3,31 @@
 	"type": "item",
 	"name": {
 		"ja": "MGEX 1/100 ストライクフリーダムガンダム",
-		"en": "MGEX 1/100 STRIKE FREEDOM GUNDAM"
+		"en": "MGEX 1/100 Strike Freedom Gundam"
 	},
+	"brands": [
+		{
+			"id": "mgex",
+			"url": "https://bandai-hobby.net/brand/mgex/",
+			"ja": "MGEX [マスターグレードエクストリーム]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/100",
 	"price": {
 		"amount": 17050,
 		"currency": "JPY",
@@ -18,7 +41,6 @@
 		"day": 19
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"BANDAI SPIRITSが積み重ねた技術と異素材の組み合わせにより、機体ごとに設定した『テーマ』をもとに、MSの“極限表現”に挑むMGハイエンドブランド。第二弾は「ストライクフリーダムガンダム」。",
@@ -30,62 +52,97 @@
 			"• 組み立て工程で複数のランナーを管理しやすい「ペーパークラフト式ランナースタンド」付属。"
 		],
 		"en": [
-			"An MG high-end brand that challenges the \"extreme expression \" of MS based on the \" theme \" set for each aircraft, using the technology accumulated by BANDAI SPIRITS and the combination of different materials. The second installment is \" Strike Freedom Gundam\".",
-			"• The theme this time is \"Gunpla's highest level of metal expression\". A total of 6 patterns, including 3 types of special processing, 2 types of metallic molding, and etching seals, express the metallic feel of the internal frame.",
-			"• The internal frame is equipped with the largest number of \"frame-linked movable gimmicks\" in MG history. The armor-linked movable gimmick that has been partially adopted in MG and RG is adopted in many parts. The way each part works together organically is a new experience.",
+			"An MG high-end brand that challenges the \"extreme expression\" of MS based on the \"theme\" set for each aircraft, using the technology accumulated by BANDAI SPIRITS and the combination of different materials. The second installment is \"Strike Freedom Gundam\".",
+			"• This time's theme is \"Gunpla's highest level of metal expression\". A total of 6 patterns, including 3 types of special processing, 2 types of metallic molding, and etching seals, express the metallic feel of the internal frame.",
+			"• The internal frame is equipped with the largest number of \"frame-linked movable gimmicks\" in MG history. The armor-linked movable gimmick, which has been partially adopted in MG and RG, is adopted in many parts. The way each part works together organically is a new experience.",
 			"• In order to emphasize the presence of the internal frame, we have adopted a parts structure that leaves room in the gaps between the armor and red clear parts. Equipped with many \"attractive gimmicks\" created to highlight the metal expression.",
 			"• Implemented multiple movements in the hip joint. By taking the two steps of \"drawing out ⇒ movable\", you can naturally recreate the flying pose with both legs stacked on top of each other.",
-			"• Comes with a wide range of weapons equipped with many gimmicks, such as the \"Long Range Beam Rifle \", \" Xyphias 3-Rail Cannon \", and the \" Super Lacerta Beam Saber\".",
+			"• Comes with a wide range of weapons equipped with many gimmicks, such as the \"Long Range Beam Rifle\", \"Xyphias 3-Rail Cannon\", and the \"Super Lacerta Beam Saber\".",
 			"• Comes with a \"Paper Craft Runner Stand\" that makes it easy to manage multiple Runners during the assembly process."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームライフル×2",
-			"ビームサーベル刃×2",
-			"ハンドパーツ×1式",
-			"フィギュア×2種（キラ・ヤマト、ラクス・クライン）",
-			"アクションベース×1",
-			"PETシート（ビームシールド用）×2",
-			"水転写式デカール×1",
-			"エッチングシール×1",
-			"メタリック３Dシール×1",
-			"ペーパークラフト式ランナースタンド×1"
-		],
-		"en": [
-			"Beam rifle x2",
-			"Beam saber blade x2",
-			"Hand parts x 1 set",
-			"Figure x 2 types (Kira Yamato, Lacus Clyne)",
-			"Action base x 1",
-			"PET sheet (for beam seal) x 2",
-			"Water transfer decal x 1",
-			"Etched Seal×1",
-			"Metallic 3DSeal×1",
-			"Paper craft type Runner stand x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "beam rifle"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル刃",
+				"en": "beam saber blade"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "フィギュア",
+				"en": "figure"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "アクションベース",
+				"en": "action base"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "PETシート（ビームシールド用）",
+				"en": "PET sheet (for beam seal)"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "エッチングシール",
+				"en": "Etched Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "メタリック３Dシール",
+				"en": "Metallic 3DSeal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ペーパークラフト式ランナースタンド",
+				"en": "Papercraft Runner Stand"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180177_1.jpg",
 				"path": "/images/items/01_4230/1000180177_1.jpg",
 				"hash": "c2e51487028095b5c18756afaaa84e96"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180177_10.jpg",
-				"path": "/images/items/01_4230/1000180177_10.jpg",
-				"hash": "8b606e580fb62aa31a1cb83cf0e6961d"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180177_11.jpg",
-				"path": "/images/items/01_4230/1000180177_11.jpg",
-				"hash": "6c7b0664040f9d2ac3af36038775873f"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180177_12.jpg",
-				"path": "/images/items/01_4230/1000180177_12.jpg",
-				"hash": "b9f4467d7d91e1060a1389afa59dbb34"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180177_2.jpg",
@@ -126,15 +183,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180177_9.jpg",
 				"path": "/images/items/01_4230/1000180177_9.jpg",
 				"hash": "ce8760f3d2c2a0d6e806b215fe7c2ca0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180177_10.jpg",
+				"path": "/images/items/01_4230/1000180177_10.jpg",
+				"hash": "8b606e580fb62aa31a1cb83cf0e6961d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180177_11.jpg",
+				"path": "/images/items/01_4230/1000180177_11.jpg",
+				"hash": "6c7b0664040f9d2ac3af36038775873f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180177_12.jpg",
+				"path": "/images/items/01_4230/1000180177_12.jpg",
+				"hash": "b9f4467d7d91e1060a1389afa59dbb34"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4230/",
-	"brandIds": ["mgex"],
-	"seriesIds": ["seed-d"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": [],
 	"manual": {
 		"id": "646",
 		"url": "https://manual.bandai-hobby.net/menus/detail/646/"
