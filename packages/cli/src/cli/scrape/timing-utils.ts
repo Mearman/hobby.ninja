@@ -5,25 +5,12 @@
  */
 
 import {
-	HOURS_PER_DAY,
 	MINUTES_PER_HOUR,
 	MS_PER_SECOND,
 	SECONDS_PER_MINUTE,
+	type ScrapeOptions,
 	type StepTiming,
 } from "./types.js";
-
-/**
- * Calculate max age in milliseconds from days
- *
- * @param maxAgeDays - Number of days
- * @returns Age in milliseconds
- *
- * @example
- * const maxAgeMs = calculateMaxAgeMs(7); // 7 days in milliseconds
- */
-export function calculateMaxAgeMs(maxAgeDays: number): number {
-	return maxAgeDays * HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE * MS_PER_SECOND;
-}
 
 /**
  * Create a timing helper function that records execution time
@@ -66,14 +53,14 @@ export function createTimer(timings: StepTiming[]): <T>(name: string, fn: () => 
  * Only prints if profile option is enabled and timings exist.
  * Format: ⏱ Timings: name=Xms, name=Yms (total=Zms)
  *
+ * @param options - Scrape options (checks profile flag)
  * @param timings - Array of timing measurements
- * @param options - Options including profile flag
  *
  * @example
- * printTimings(timings, { profile: true });
+ * printTimings({ profile: true }, timings);
  * // Output: ⏱ Timings: fetch=150ms, parse=45ms, save=30ms (total=225ms)
  */
-export function printTimings(timings: StepTiming[], options: { profile?: boolean }): void {
+export function printTimings(options: ScrapeOptions, timings: StepTiming[]): void {
 	if (!options.profile || timings.length === 0) return;
 
 	const total = timings.reduce((sum, t) => sum + t.durationMs, 0);

@@ -10,6 +10,7 @@ import type { TranslationService } from "@hobby-ninja/translation";
 
 import type { ManualParser } from "../manual-parser.js";
 
+import { calculateMaxAgeMs } from "./cache-manager.js";
 import { saveManualJson } from "./data-merger.js";
 import { fetchWithRetry, withTimeout } from "./http-client.js";
 import { padManualId, unpadManualId } from "./id-utils.js";
@@ -18,11 +19,11 @@ import {
 	findImageSrcFromHtml,
 } from "./image-processor.js";
 import { downloadManualPdfs } from "./pdf-processor.js";
+import { createTimer, printTimings } from "./timing-utils.js";
 import { translateManualFallback } from "./translation-handler.js";
 import {
 	DEFAULT_USER_AGENT,
 	FETCH_TIMEOUT_MS,
-	HOURS_PER_DAY,
 	MANUALS_DATA_DIR,
 	MINUTES_PER_HOUR,
 	MS_PER_SECOND,
@@ -51,11 +52,6 @@ export interface ManualProcessDeps {
 	manualParser: ManualParser;
 	translator: TranslationService;
 }
-
-/**
- * Internal timing utility function type
- */
-type TimingFunction = <T>(name: string, fn: () => T) => T;
 
 // ============================================================================
 // Public API
@@ -289,53 +285,4 @@ export function getManualsNeedingFormatMigration(manualIds: string[]): string[] 
 	}
 
 	return needsMigration;
-}
-
-// ============================================================================
-// Internal Utilities
-// ============================================================================
-
-/**
- * Calculate maximum age in milliseconds from days
- *
- * @param maxAgeDays - Maximum age in days (0 = no limit)
- * @returns Maximum age in milliseconds
- */
-function calculateMaxAgeMs(maxAgeDays: number): number {
-	return maxAgeDays * HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE * MS_PER_SECOND;
-}
-
-/**
- * Create a timing utility function for profiling
- *
- * @param timings - Array to store timing data
- * @returns Timing function that wraps operations and records their duration
- */
-function createTimer(timings: StepTiming[]): TimingFunction {
-	return <T>(name: string, fn: () => T): T => {
-		const start = performance.now();
-		const result = fn();
-		if (result instanceof Promise) {
-			const timedPromise = result.then((r: Awaited<T>) => {
-				timings.push({ name, durationMs: performance.now() - start });
-				return r;
-			});
-			return timedPromise as T;
-		}
-		timings.push({ name, durationMs: performance.now() - start });
-		return result;
-	};
-}
-
-/**
- * Print timing summary for profiling
- *
- * @param options - Scrape options (checks profile flag)
- * @param timings - Timing data collected during operation
- */
-function printTimings(options: ScrapeOptions, timings: StepTiming[]): void {
-	if (!options.profile || timings.length === 0) return;
-
-	const total = timings.reduce((sum, t) => sum + t.durationMs, 0);
-	console.log(`  ⏱ Timings: ${timings.map((t) => `${t.name}=${t.durationMs.toFixed(0)}ms`).join(", ")} (total=${total.toFixed(0)}ms)`);
 }

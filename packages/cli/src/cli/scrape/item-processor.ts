@@ -20,6 +20,13 @@ import type { GlobalSiteLookup, GlobalSiteData } from "../global-site-lookup.js"
 import { ItemsIndexUpdater } from "../items-index-updater.js";
 import { ManualsIndexUpdater } from "../manuals-index-updater.js";
 
+import { calculateMaxAgeMs } from "./cache-manager.js";
+import { saveItemJson, upsertEntities, mergeEnglishTranslation } from "./data-merger.js";
+import { BrowserManager, withTimeout } from "./http-client.js";
+import { padManualId, unpadManualId } from "./id-utils.js";
+import { downloadItemImages } from "./image-processor.js";
+import { createTimer, printTimings } from "./timing-utils.js";
+import { storeCanonicalTranslations, translateItemFallback } from "./translation-handler.js";
 import {
 	type ScrapeOptions,
 	type StepTiming,
@@ -29,20 +36,9 @@ import {
 	MS_PER_SECOND,
 	SECONDS_PER_MINUTE,
 	MINUTES_PER_HOUR,
-	HOURS_PER_DAY,
 	ITEMS_DATA_DIR,
 	ASSETS_DIR,
-	padManualId,
-	unpadManualId,
-	BrowserManager,
-	downloadItemImages,
-	mergeEnglishTranslation,
-	saveItemJson,
-	upsertEntities,
-	storeCanonicalTranslations,
-	translateItemFallback,
-	withTimeout,
-} from "./index.js";
+} from "./types.js";
 
 /**
  * Result of processing a single item
@@ -70,48 +66,6 @@ export interface ItemProcessDeps {
 	processManualComplete: (manualId: string, options: ScrapeOptions) => Promise<{ success: boolean; error?: string }>;
 	/** Callback to track when translations are added */
 	onTranslationsAdded?: () => void;
-}
-
-/**
- * Create a timing function for profiling
- * @param timings - Array to collect timing data
- * @returns Timing wrapper function
- */
-function createTimer(timings: StepTiming[]): <T>(name: string, fn: () => T) => T {
-	return <T>(name: string, fn: () => T): T => {
-		const start = performance.now();
-		const result = fn();
-		if (result instanceof Promise) {
-			const timedPromise = result.then((r: Awaited<T>) => {
-				timings.push({ name, durationMs: performance.now() - start });
-				return r;
-			});
-			return timedPromise as T;
-		}
-		timings.push({ name, durationMs: performance.now() - start });
-		return result;
-	};
-}
-
-/**
- * Print timing summary for profiling
- * @param options - Scrape options (checks if profiling is enabled)
- * @param timings - Timing data to print
- */
-function printTimings(options: ScrapeOptions, timings: StepTiming[]): void {
-	if (!options.profile || timings.length === 0) return;
-
-	const total = timings.reduce((sum, t) => sum + t.durationMs, 0);
-	console.log(`  ⏱ Timings: ${timings.map((t) => `${t.name}=${t.durationMs.toFixed(0)}ms`).join(", ")} (total=${total.toFixed(0)}ms)`);
-}
-
-/**
- * Calculate maximum age in milliseconds from days
- * @param maxAgeDays - Maximum age in days
- * @returns Maximum age in milliseconds
- */
-export function calculateMaxAgeMs(maxAgeDays: number): number {
-	return maxAgeDays * HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE * MS_PER_SECOND;
 }
 
 /**
