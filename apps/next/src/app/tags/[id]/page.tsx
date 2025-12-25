@@ -31,6 +31,9 @@ interface TagPageProps {
 	params: Promise<{ id: string }>;
 }
 
+// Disable dynamic params - only pre-generated pages are valid
+export const dynamicParams = false;
+
 // Generate static params for all tags
 export function generateStaticParams() {
 	const tagIds = getTagIds();
