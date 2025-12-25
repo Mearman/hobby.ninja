@@ -5,6 +5,50 @@
 		"ja": "HGUC 1/144 ザクII",
 		"en": "HGUC 1/144 Zaku II"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "item-1000161796",
+			"url": "https://p-bandai.jp/item/item-1000161796/",
+			"ja": "ＨＧ 1/144 RX-78-2 ガンダム［2020年ドバイ国際博覧会 日本館PRアンバサダー］"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 4
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、ザクIIがHGシリーズに登場！",
@@ -35,24 +78,58 @@
 			"• The school bag is shaped to match the Zaku II settings."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"軟質素材スカートパーツ×1式",
-			"PS成形スカートパーツ×1式",
-			"ザク・マシンガン×1",
-			"ザク・バズーカ×1",
-			"ヒート・ホーク×1",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Soft material skirt parts x 1 set",
-			"PS molded skirt parts x 1 set",
-			"Zaku machine gun x1",
-			"Zaku Bazooka×1",
-			"Heat Hawk x1",
-			"Foil Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "軟質素材スカートパーツ",
+				"en": "Soft material skirt parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "PS成形スカートパーツ",
+				"en": "PS molded skirt parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ザク・マシンガン",
+				"en": "zaku machine gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ザク・バズーカ",
+				"en": "Zaku Bazooka"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ヒート・ホーク",
+				"en": "heat hawk"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -99,8 +176,8 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3669/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "item-1000161796"]
+	"manual": {
+		"id": "504",
+		"url": "https://manual.bandai-hobby.net/menus/detail/504/"
+	}
 }

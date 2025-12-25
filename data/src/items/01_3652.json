@@ -5,6 +5,43 @@
 		"ja": "SDマクロス　バルキリースペシャルセット2",
 		"en": "SD Macross Valkyrie Special Set 2"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "macross",
+			"url": "https://bandai-hobby.net/series/macross/",
+			"ja": "マクロスシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5944",
+			"url": "https://bandai-hobby.net/item/01_5944/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機)"
+		},
+		{
+			"id": "01_5945",
+			"url": "https://bandai-hobby.net/item/01_5945/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) 専用水転写式デカール"
+		},
+		{
+			"id": "01_5946",
+			"url": "https://bandai-hobby.net/item/01_5946/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) デラックスセット"
+		},
+		{
+			"id": "01_5465",
+			"url": "https://bandai-hobby.net/item/01_5465/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(マクシミリアン・ジーナス機)"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -21,9 +58,9 @@
 	"description": {
 		"ja": [
 			"1990年の発売以来、長年にわたり発売されていなかったSDバルキリープラモデルが仕様も新たに登場！",
-			"■TVアニメ『超時空要塞マクロス』および、劇場版『超時空要塞マクロス　愛・おぼえていますか』に登場する可変戦闘機バルキリーの各種機体。",
-			"■VF-1J(一条機）＋ストライクパック、VF-1A（一条機）＋スーパーパック、VF-１J（マックス機）＋スーパーパック、VF-1J（ミリア機） スーパーパックの4機体セット。",
-			"■各機体はSDながら差し替えでファイター、ガウォーク、バトロイドの３形態に変形。"
+			"• TVアニメ『超時空要塞マクロス』および、劇場版『超時空要塞マクロス　愛・おぼえていますか』に登場する可変戦闘機バルキリーの各種機体。",
+			"• VF-1J(一条機）＋ストライクパック、VF-1A（一条機）＋スーパーパック、VF-１J（マックス機）＋スーパーパック、VF-1J（ミリア機） スーパーパックの4機体セット。",
+			"• 各機体はSDながら差し替えでファイター、ガウォーク、バトロイドの３形態に変形。"
 		],
 		"en": [
 			"The SD Valkyrie Plastic Model, which has not been released for a long time since its release in 1990, has new specifications!",
@@ -32,31 +69,21 @@
 			"• Each aircraft is SD, but can be replaced to transform into three forms: Fighter, Gerwalk, and Battroid."
 		]
 	},
-	"accessories": {
-		"ja": ["ホイルシール×1"],
-		"en": ["Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165464_1.jpg",
 				"path": "/images/items/01_3652/1000165464_1.jpg",
 				"hash": "c957b774417f405e98cdafc8e8b2f82b"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165464_10.jpg",
-				"path": "/images/items/01_3652/1000165464_10.jpg",
-				"hash": "01c0037569cceeb38874d3e8d72b6c7f"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165464_11.jpg",
-				"path": "/images/items/01_3652/1000165464_11.jpg",
-				"hash": "fa23e9a04885ea8644cbd6a927896387"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165464_12.jpg",
-				"path": "/images/items/01_3652/1000165464_12.jpg",
-				"hash": "5830eabbd3331b0a7c0ffc211ed9d8c0"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165464_2.jpg",
@@ -97,13 +124,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165464_9.jpg",
 				"path": "/images/items/01_3652/1000165464_9.jpg",
 				"hash": "7981592872141479ee35b9391fe2db7e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165464_10.jpg",
+				"path": "/images/items/01_3652/1000165464_10.jpg",
+				"hash": "01c0037569cceeb38874d3e8d72b6c7f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165464_11.jpg",
+				"path": "/images/items/01_3652/1000165464_11.jpg",
+				"hash": "fa23e9a04885ea8644cbd6a927896387"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165464_12.jpg",
+				"path": "/images/items/01_3652/1000165464_12.jpg",
+				"hash": "5830eabbd3331b0a7c0ffc211ed9d8c0"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3652/",
-	"brandIds": [],
-	"seriesIds": ["macross"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5944", "01_5945", "01_5946", "01_5465"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3652/"
 }

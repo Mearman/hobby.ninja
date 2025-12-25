@@ -5,6 +5,50 @@
 		"ja": "HG 1/72 特大型装甲特殊運搬車",
 		"en": "HG 1/72 Extra Large Armored Special Transport Vehicle"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -18,18 +62,17 @@
 		"day": 13
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"「境界戦機」よりレジスタンスの「特大型装甲特殊運搬車」を立体化。別売りのＨＧアイテムとの連動も可能！",
-			"■商品化に於いてKEN OKUYAMA DESIGNによるデザイン検証を経て立体化された大型車両。",
-			"■車両前方の防護シャッターの開閉再現、タイヤの回転、車両後方の両サイド“あおり”部分の開閉など各種ギミックを再現。",
-			"■別売りのHGケンブやHGジョウガンなどのAMAIM(アメイン)の積載が可能。",
-			"■ケンブの腕部超熱振式戦闘爪(わんぶちょうねっしんしきせんとうづめ)がボーナスパーツで付属。",
-			"■複数を組み合わせることで、荷台部分が連結可能となっている。"
+			"• 商品化に於いてKEN OKUYAMA DESIGNによるデザイン検証を経て立体化された大型車両。",
+			"• 車両前方の防護シャッターの開閉再現、タイヤの回転、車両後方の両サイド“あおり”部分の開閉など各種ギミックを再現。",
+			"• 別売りのHGケンブやHGジョウガンなどのAMAIM(アメイン)の積載が可能。",
+			"• ケンブの腕部超熱振式戦闘爪(わんぶちょうねっしんしきせんとうづめ)がボーナスパーツで付属。",
+			"• 複数を組み合わせることで、荷台部分が連結可能となっている。"
 		],
 		"en": [
-			"A three-dimensional version of the Resistance's \"extra-large armored special transport vehicle \" from \" Kyoukai Senki\". Can also be linked with HG items sold separately!",
+			"A three-dimensional version of the Resistance's \"extra-large armored special transport vehicle\" from \"Kyoukai Senki\". Can also be linked with HG items sold separately!",
 			"• A large vehicle that was made into a three-dimensional product after undergoing design verification by KEN OKUYAMA DESIGN.",
 			"• Reproduce various gimmicks such as opening and closing the protective shutter at the front of the vehicle, rotating the tires, and opening and closing the \"swings\" on both sides of the rear of the vehicle.",
 			"• It is possible to load AMAIM such as HG Kenbu and HG Jogan (sold separately).",
@@ -37,31 +80,26 @@
 			"• By combining multiple units, the loading platform can be connected."
 		]
 	},
-	"accessories": {
-		"ja": ["腕部超熱振式戦闘爪×１", "シール×１"],
-		"en": ["Arm super heat wave fighting claw x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "腕部超熱振式戦闘爪×１",
+				"en": "Arm super heat wave fighting claw x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000166032_1.jpg",
 				"path": "/images/items/01_3691/1000166032_1.jpg",
 				"hash": "b924a48bc30e61b25b118efcc70084b7"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000166032_10.jpg",
-				"path": "/images/items/01_3691/1000166032_10.jpg",
-				"hash": "ee73bc2c91f9737ebda342b8f0febfa6"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000166032_11.jpg",
-				"path": "/images/items/01_3691/1000166032_11.jpg",
-				"hash": "19621a1c229939925c659e40025db66b"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000166032_12.jpg",
-				"path": "/images/items/01_3691/1000166032_12.jpg",
-				"hash": "14663aa6291494cd8265b75601635250"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000166032_2.jpg",
@@ -102,13 +140,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000166032_9.jpg",
 				"path": "/images/items/01_3691/1000166032_9.jpg",
 				"hash": "4b82addf58aefff42b4c9e23cb5b3105"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000166032_10.jpg",
+				"path": "/images/items/01_3691/1000166032_10.jpg",
+				"hash": "ee73bc2c91f9737ebda342b8f0febfa6"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000166032_11.jpg",
+				"path": "/images/items/01_3691/1000166032_11.jpg",
+				"hash": "19621a1c229939925c659e40025db66b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000166032_12.jpg",
+				"path": "/images/items/01_3691/1000166032_12.jpg",
+				"hash": "14663aa6291494cd8265b75601635250"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3691/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3691/"
 }

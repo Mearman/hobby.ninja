@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 シュツルム・ディアス",
 		"en": "HGUC 1/144 Sturm Dias"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-zz",
+			"url": "https://bandai-hobby.net/series/gundam-zz/",
+			"ja": "機動戦士ガンダムＺＺ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_2079",
+			"url": "https://bandai-hobby.net/item/01_2079/",
+			"ja": "HGUC 1/144 R・ジャジャ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1870,
 		"currency": "JPY",
@@ -18,34 +67,33 @@
 		"day": 2
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム ZZ」よりリック・ディアスの発展強化型MS“シュツルム・ディアス”がHGUCにラインナップ 特徴であるグライ・バインダーを初立体化、内面のメカディテールも細密に再現 頭部カバーは隊長機用と一般機用の2種類から選択可能 ビーム・ピストル×2、クレイ・バズーカが付属"
+			"「機動戦士ガンダムZZ」よりリック・ディアスの発展強化型MS“シュツルム・ディアス”がHGUCにラインナップ 特徴であるグライ・バインダーを初立体化、内面のメカディテールも細密に再現 頭部カバーは隊長機用と一般機用の2種類から選択可能 ビーム・ピストル×2、クレイ・バズーカが付属"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam ZZ \", Rick Diaz's developed and enhanced MS \" Sturm Diaz\" is now available in HGUC.Characteristic Gray Binder is made three-dimensional for the first time, and the inner mechanical details are also minutely reproduced.Head cover can be selected from two types, one for captain machine and one for general machine.Beam pistol x 2 and clay bazooka are included."
+			"From \"Mobile Suit GundamZZ\", Rick Diaz's developed and enhanced MS \"Sturm Diaz\" is now available in HGUC.Characteristics: The Gray Binder is made into a three-dimensional model for the first time, and the inner mechanical details are also minutely reproduced.The head cover can be selected from two types: for the captain's machine and for the general machine.Beam pistol x 2 and clay bazooka are included."
 		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4666.jpg",
+				"src": "https://bandai-hobby.net/images/153_4666_s_iissewgehda3pivxbvy6wn1iasdm.jpg",
 				"path": "/images/items/01_3713/153_4666.jpg",
 				"hash": "dd10ba199e0edcba7e6f53ad548d3037"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4666.jpg",
+				"src": "https://bandai-hobby.net/images/155_4666_s_pirfpu7j6mguncmedxa416z38gf4.jpg",
 				"path": "/images/items/01_3713/155_4666.jpg",
 				"hash": "1cf38623ae7847caf6b05f30b4bffbff"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4666.jpg",
+				"src": "https://bandai-hobby.net/images/156_4666_s_y5lt33ik7vxauomwg1gp0ygg5j0a.jpg",
 				"path": "/images/items/01_3713/156_4666.jpg",
 				"hash": "f388fcf328500e2b422fa432269a4b79"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4666.jpg",
+				"src": "https://bandai-hobby.net/images/157_4666_s_kdby3uvz3foc9x4s3ldqoszu8bjs.jpg",
 				"path": "/images/items/01_3713/157_4666.jpg",
 				"hash": "c50ae7fedd8b3f19f5bc15c65612f5fc"
 			}
@@ -53,10 +101,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3713/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["gundam-zz"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5963", "01_4985", "01_4971", "01_2079"],
 	"manual": {
 		"id": "916",
 		"url": "https://manual.bandai-hobby.net/menus/detail/916/"

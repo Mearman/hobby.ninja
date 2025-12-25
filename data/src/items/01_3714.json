@@ -5,6 +5,50 @@
 		"ja": "1/100 RX-78F00 ガンダム [クリアカラー]",
 		"en": "1/100 RX-78F00 Gundam [Clear color]"
 	},
+	"brands": [
+		{
+			"id": "gfy",
+			"url": "https://bandai-hobby.net/brand/gfy/",
+			"ja": "GUNDAM FACTORY YOKOHAMA"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5035",
+			"url": "https://bandai-hobby.net/item/01_5035/",
+			"ja": "1/144 RX-78F00 HMT ガンダム高機動型(G-3イメージカラー)"
+		},
+		{
+			"id": "01_4239",
+			"url": "https://bandai-hobby.net/item/01_4239/",
+			"ja": "1/144 RX-78F00 HMT ガンダム高機動型"
+		},
+		{
+			"id": "01_3472",
+			"url": "https://bandai-hobby.net/item/01_3472/",
+			"ja": "ハロプラ ハロ [クリームホワイト]"
+		},
+		{
+			"id": "01_3841",
+			"url": "https://bandai-hobby.net/item/01_3841/",
+			"ja": "1/144 RX-78F00 ガンダム[チタニウムフィニッシュ]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3960,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 7
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『GUNDAM FACTORY YOKOHAMA』の動く実物大ガンダムの限定商品。動く“RX-78F00 ガンダム”を、トリコロールカラーの色合いに合わせたクリア成型色で立体化。",
@@ -28,65 +71,71 @@
 			"• 実際の動く実物大ガンダムの挙動を再現するハンドパーツが付属"
 		],
 		"en": [
-			"A limited edition moving life-sized Gundam from \"GUNDAM FACTORY YOKOHAMA \". The moving \" RX-78F00 Gundam\" is made into a three-dimensional model with clear molding colors that match the tricolor color.",
+			"A limited edition moving life-sized Gundam from \"GUNDAM FACTORY YOKOHAMA\". The moving \"RX-78F00 Gundam\" is made into a three-dimensional model with clear molding colors that match the tricolor color.",
 			"• Range of motion that allows you to reproduce Gundam's movements such as walking, raising the right arm, raising both arms, etc.!",
 			"• Thorough reproduction of the details and coloring of the moving Gundam \"RX-78F00\"",
 			"• Comes with a special pedestal, rifle, and seal as an original product.",
 			"• Comes with hand parts that reproduce the behavior of the actual moving life-sized Gundam."
 		]
 	},
-	"accessories": {
-		"ja": ["ホイルシール", "マーキングシール"],
-		"en": ["foil seal", "MarkingSeal"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4667.jpg",
+				"src": "https://bandai-hobby.net/images/153_4667_o_1fboarlqp1jpl8m22mp3356q323.jpg",
 				"path": "/images/items/01_3714/153_4667.jpg",
 				"hash": "addb8414695f93e6426b80f00357eff8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4667.jpg",
+				"src": "https://bandai-hobby.net/images/155_4667_o_1fbob37301jl75c6ne7o13lif2d.jpg",
 				"path": "/images/items/01_3714/155_4667.jpg",
 				"hash": "8f8036c8d6aaa76f8d6b1de41033941f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4667.jpg",
+				"src": "https://bandai-hobby.net/images/156_4667_o_1fbob3h7uhsi9ap231qf0mbi2i.jpg",
 				"path": "/images/items/01_3714/156_4667.jpg",
 				"hash": "92d1cfd9b90e72954593e5221cabaee9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4667.jpg",
+				"src": "https://bandai-hobby.net/images/157_4667_o_1fbob3pbj1b9gdk4s7dphl1uv92n.jpg",
 				"path": "/images/items/01_3714/157_4667.jpg",
 				"hash": "e6c8fa8487a520812c5fbd31c239bf3d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4667.jpg",
+				"src": "https://bandai-hobby.net/images/158_4667_o_1fbob3vn4qcbs2te0nfllsg2s.jpg",
 				"path": "/images/items/01_3714/158_4667.jpg",
 				"hash": "c3883100a376e0725ef59256d5e8d74f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4667.jpg",
+				"src": "https://bandai-hobby.net/images/159_4667_o_1fbob45n2ujn13ec13ej1meh1nrq31.jpg",
 				"path": "/images/items/01_3714/159_4667.jpg",
 				"hash": "e07d33f6a5d1325be132c529ccd1c7d2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4667.jpg",
+				"src": "https://bandai-hobby.net/images/189_4667_o_1fbob589lg941iu8mbr1am8j8g36.jpg",
 				"path": "/images/items/01_3714/189_4667.jpg",
 				"hash": "e18f343a2b1caa2417e15a2b986a8cdc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4667.jpg",
+				"src": "https://bandai-hobby.net/images/190_4667_o_1fc2q2h8b77810p910io1lsn1u4723.jpg",
 				"path": "/images/items/01_3714/190_4667.jpg",
 				"hash": "874b553d2f5dd7da47bba015f24621ac"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3714/",
-	"brandIds": ["gfy"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5035", "01_4239", "01_3472", "01_3841"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3714/"
 }

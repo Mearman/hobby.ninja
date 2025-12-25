@@ -5,6 +5,43 @@
 		"ja": "SDW HEROES 窮奇ストライクフリーダムガンダム",
 		"en": "SDW HEROES Kyuki Strike Freedom Gundam"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5470",
+			"url": "https://bandai-hobby.net/item/01_5470/",
+			"ja": "SDW HEROES キャプテンクアンタ GF"
+		},
+		{
+			"id": "01_5471",
+			"url": "https://bandai-hobby.net/item/01_5471/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-B"
+		},
+		{
+			"id": "01_5472",
+			"url": "https://bandai-hobby.net/item/01_5472/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-F"
+		},
+		{
+			"id": "01_5347",
+			"url": "https://bandai-hobby.net/item/01_5347/",
+			"ja": "SDW HEROES スペリオルフォーミュラー ファイナルドラゴン[クリアカラー]"
+		}
+	],
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -21,56 +58,68 @@
 	"description": {
 		"ja": [
 			"『SDガンダムワールド ヒーローズ』より、「窮奇ストライクフリーダムガンダム」が登場！",
-			"■シリーズを通してのこだわりの１つである「密度感」「積層感」を追求したパーツ分割。",
-			"■ボリューム感あるバックパックが特徴。",
-			"■成形色には、クリアイエロー、クリアパープル、ブラック、レッド、ダークブルー、ライトゴールド、ダークゴールド、の全７色を採用。",
-			"■瞳は２種のホイルシールから選択可能。"
+			"• シリーズを通してのこだわりの１つである「密度感」「積層感」を追求したパーツ分割。",
+			"• ボリューム感あるバックパックが特徴。",
+			"• 成形色には、クリアイエロー、クリアパープル、ブラック、レッド、ダークブルー、ライトゴールド、ダークゴールド、の全７色を採用。",
+			"• 瞳は２種のホイルシールから選択可能。"
 		],
 		"en": [
-			"From \"SD Gundam World Heroes \", \" Kiki Strike Freedom Gundam\" is now available!",
-			"• Parts are divided in pursuit of the \"feel of density \" and \" feel of lamination\", which is one of the commitments throughout the series.",
+			"From \"SD Gundam World Heroes\", \"Kiki Strike Freedom Gundam\" is now available!",
+			"• Parts are divided in pursuit of the \"feel of density\" and \"feel of lamination\", which is one of the commitments throughout the series.",
 			"• Features a voluminous backpack.",
 			"• Seven molding colors are used: clear yellow, clear purple, black, red, dark blue, light gold, and dark gold.",
 			"• Eyes can be selected from two types of foil seals."
 		]
 	},
-	"accessories": {
-		"ja": ["クリアパーツ×1式", "ホイルシール×1"],
-		"en": ["Clear parts x 1 set", "Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "クリアパーツ",
+				"en": "clear parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4635.jpg",
+				"src": "https://bandai-hobby.net/images/153_4635_s_h282vyw9ix9nbucz9wbiqdjop5rp.jpg",
 				"path": "/images/items/01_3681/153_4635.jpg",
 				"hash": "cd9cc222bc45fe2601990196de865050"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4635.jpg",
+				"src": "https://bandai-hobby.net/images/155_4635_s_lmv4uhxftwjfoblt108y1vr75un9.jpg",
 				"path": "/images/items/01_3681/155_4635.jpg",
 				"hash": "42d73e641352929adfefb654ab7f99aa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4635.jpg",
+				"src": "https://bandai-hobby.net/images/156_4635_s_gmo0dobj9km0ull2ekngynub7brq.jpg",
 				"path": "/images/items/01_3681/156_4635.jpg",
 				"hash": "a48a4fc3b574e6accc46f473e59823d2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4635.jpg",
+				"src": "https://bandai-hobby.net/images/157_4635_s_1w4498x8vxtxrjvztcv6txqqbk5x.jpg",
 				"path": "/images/items/01_3681/157_4635.jpg",
 				"hash": "885028ad48776a4558e54336ddf45e5e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4635.jpg",
+				"src": "https://bandai-hobby.net/images/158_4635_s_o16bvi8wdr70xr5scfavo9cwwpkn.jpg",
 				"path": "/images/items/01_3681/158_4635.jpg",
 				"hash": "311af060a2819a89ea2d146d70878234"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3681/",
-	"brandIds": [],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3681/"
 }

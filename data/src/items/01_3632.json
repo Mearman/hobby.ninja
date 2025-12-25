@@ -5,6 +5,50 @@
 		"ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム(フルウェポンセット)",
 		"en": "ENTRY GRADE 1/144 RX-78-2 Gundam (Full Weapon Set)"
 	},
+	"brands": [
+		{
+			"id": "entry_grade_g",
+			"url": "https://bandai-hobby.net/brand/entry_grade_g/",
+			"ja": "ENTRY GRADE"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5218",
+			"url": "https://bandai-hobby.net/item/01_5218/",
+			"ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム[ヴィンテージカラー]"
+		},
+		{
+			"id": "01_5045",
+			"url": "https://bandai-hobby.net/item/01_5045/",
+			"ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム [リサーキュレーションカラー/ネオンブルー]"
+		},
+		{
+			"id": "01_4249",
+			"url": "https://bandai-hobby.net/item/01_4249/",
+			"ja": "GUNDAM NEXT FUTURE限定 ENTRY GRADE 1/144 RX-78-2 ガンダム [クラシックカラー]"
+		},
+		{
+			"id": "01_4202",
+			"url": "https://bandai-hobby.net/item/01_4202/",
+			"ja": "ENTRY GRADE 1/144 ガンダムベース限定 RX-78-2 ガンダム [ガンダムベースカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -18,11 +62,10 @@
 		"day": 4
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"組み立てやすさはそのままに、成形色をアレンジ、武装を充実させた「ENTRY GRADE ＲＸ-７８-２ガンダム」が商品化！",
-			"■通常版に付属する、ビーム・ライフル、シールドに加え、ビーム・サーベル用エフェクト（2本）、ビーム・ジャベリン、ハイパー・バズーカ、ガンダム・ハンマーが付属するフルウェポン仕様。",
+			"• 通常版に付属する、ビーム・ライフル、シールドに加え、ビーム・サーベル用エフェクト（2本）、ビーム・ジャベリン、ハイパー・バズーカ、ガンダム・ハンマーが付属するフルウェポン仕様。",
 			"※ビーム・サーベルのクリアパーツをランナーから取り外す際にはニッパーをご使用ください。"
 		],
 		"en": [
@@ -31,71 +74,101 @@
 			"*Please use nippers when removing the clear parts of the beam saber from the Runner."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×１",
-			"シールド×１",
-			"ビーム・サーベル×２",
-			"ハイパー・バズーカ×1",
-			"ビーム・ジャベリン×1",
-			"ガンダム・ハンマー×1"
-		],
-		"en": ["Beam rifle x1", "Seal de x1", "Beam saber x2", "Hyper bazooka x1", "Beam Javelin×1", "Gundam hammer x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル×１",
+				"en": "Beam rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド×１",
+				"en": "Seal de x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル×２",
+				"en": "Beam saber x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハイパー・バズーカ",
+				"en": "hyper bazooka"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・ジャベリン",
+				"en": "beam javelin"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ガンダム・ハンマー",
+				"en": "Gundam・Hammer"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4586.jpg",
+				"src": "https://bandai-hobby.net/images/153_4586_s_d10pomrx3o48dr5kvov86orxsrd5.jpg",
 				"path": "/images/items/01_3632/153_4586.jpg",
 				"hash": "ce2f3f84dac13e4915f051804b8cacc1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4586.jpg",
+				"src": "https://bandai-hobby.net/images/155_4586_s_a7s4wkaa5e6fw350qcv5inigde1x.jpg",
 				"path": "/images/items/01_3632/155_4586.jpg",
 				"hash": "0a58916731934ef80a7def461211c51b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4586.jpg",
+				"src": "https://bandai-hobby.net/images/156_4586_s_d29uuglmm1s1kgtv76eobeyyq732.jpg",
 				"path": "/images/items/01_3632/156_4586.jpg",
 				"hash": "a3f86143346c3b96ba062b99e4e27dcb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4586.jpg",
+				"src": "https://bandai-hobby.net/images/157_4586_s_1i5b5t35h0eypn8ieof4rai0zwp2.jpg",
 				"path": "/images/items/01_3632/157_4586.jpg",
 				"hash": "fde6b450c911af088fe2708832952b5b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4586.jpg",
+				"src": "https://bandai-hobby.net/images/158_4586_s_nc9badvo4jyuvuvrniwa132akdro.jpg",
 				"path": "/images/items/01_3632/158_4586.jpg",
 				"hash": "f851903da4bc120ce17c6c9e4c9bec7a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4586.jpg",
+				"src": "https://bandai-hobby.net/images/159_4586_s_e1wf7d85yomwtsgrwhsut00bcc1m.jpg",
 				"path": "/images/items/01_3632/159_4586.jpg",
 				"hash": "5c8269d10a9495da6e4da6df33bf7fc5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4586.jpg",
+				"src": "https://bandai-hobby.net/images/189_4586_s_2i3hyc25e701qgdak84y5vbm2m9w.jpg",
 				"path": "/images/items/01_3632/189_4586.jpg",
 				"hash": "7d404bb95af56451db314e5b0d6d64a2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4586.jpg",
+				"src": "https://bandai-hobby.net/images/190_4586_s_uwcgvopxw8se9qjw6v0nt5b0i3h1.jpg",
 				"path": "/images/items/01_3632/190_4586.jpg",
 				"hash": "f475a13a8b49f179deaba93db39acbb7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4586.jpg",
+				"src": "https://bandai-hobby.net/images/191_4586_s_qdws1zv8i9o80iwhtq78goyl3wx7.jpg",
 				"path": "/images/items/01_3632/191_4586.jpg",
 				"hash": "c4c27e5c65e15bc9ad31cbc7500fda55"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4586.jpg",
+				"src": "https://bandai-hobby.net/images/192_4586_s_esb46ukglfq9otvi58f289fht0b3.jpg",
 				"path": "/images/items/01_3632/192_4586.jpg",
 				"hash": "8cd8caef0c9c5892aa9c01f109faa5a9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_4586.jpg",
+				"src": "https://bandai-hobby.net/images/193_4586_s_7w6aa0vmusocdk60i00dug828tjm.jpg",
 				"path": "/images/items/01_3632/193_4586.jpg",
 				"hash": "c38e2ce1314e13e22fd264410cea7fc3"
 			}
@@ -103,10 +176,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3632/",
-	"brandIds": ["entry_grade"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5218", "01_5045", "01_4249", "01_4202"],
 	"manual": {
 		"id": "979",
 		"url": "https://manual.bandai-hobby.net/menus/detail/979/"

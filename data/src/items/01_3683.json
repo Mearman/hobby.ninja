@@ -2,9 +2,53 @@
 	"id": "01_3683",
 	"type": "item",
 	"name": {
-		"ja": "RG 1/144 νガンダム HWS [クリアカラー]",
-		"en": "RG 1/144 νGundam HWS [Clear Color]"
+		"ja": "RG 1/144 νガンダムHWS [クリアカラー]",
+		"en": "RG 1/144 νGundamHWS [Clear color]"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4121",
+			"url": "https://bandai-hobby.net/item/01_4121/",
+			"ja": "RG 1/144 ガンダムベース限定 Hi-νガンダム[チタニウムフィニッシュ]"
+		},
+		{
+			"id": "01_3524",
+			"url": "https://bandai-hobby.net/item/01_3524/",
+			"ja": "RG 1/144 Hi-νガンダム"
+		},
+		{
+			"id": "item-1000161850",
+			"url": "https://p-bandai.jp/item/item-1000161850/",
+			"ja": "ＲＧ 1/144 Hi-νガンダム専用ハイパー・メガ・バズーカ・ランチャー"
+		},
+		{
+			"id": "01_3496",
+			"url": "https://bandai-hobby.net/item/01_3496/",
+			"ja": "RG 1/144 νガンダム[クリアカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 7150,
 		"currency": "JPY",
@@ -18,10 +62,9 @@
 		"day": 10
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"RG 1/144 νガンダムに追加装甲を装備した、RG 1/144 νガンダム HWS(ヘビー・ウェポン・システム)がクリアカラーになって登場！",
+			"RG 1/144 νガンダムに追加装甲を装備した、RG 1/144 νガンダムHWS(ヘビー・ウェポン・システム)がクリアカラーになって登場！",
 			"• RG準拠のハイディテールでHWS(ヘビー・ウェポン・システム)を再現！",
 			"• 細やかなパーツ分割、緻密なモールドが施された装甲は、クリアカラーになり、よりメカニカルな印象に！",
 			"• ハイパー・メガ・ライフルは、伸縮ギミックを搭載！前下部のバイポッドは可動展開し、通常状態と超長距離射撃状態を再現可能！",
@@ -29,7 +72,7 @@
 			"• シールド装備時の保持力強化のための専用アタッチメントが付属！"
 		],
 		"en": [
-			"RG 1/144 νGundam HWS (Heavy Weapon System), which is equipped with additional armor on RG 1/144 νGundam, is now available in clear color!",
+			"RG 1/144 νGundam HWS (Heavy Weapon System), which is equipped with additional armor to RG 1/144 νGundam, is now available in clear color!",
 			"• Reproduce HWS (Heavy Weapon System) with RG-compliant high detail!",
 			"• The armor has detailed parts divisions and detailed molding, and is now clear-colored, giving it a more mechanical impression!",
 			"• Hyper Mega Rifle is equipped with a telescopic gimmick! The bipod at the bottom of the front can be moved and expanded to reproduce normal and ultra-long range shooting conditions!",
@@ -40,25 +83,17 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4637.jpg",
+				"src": "https://bandai-hobby.net/images/153_4637_o_1f91bot7qpa6759i3e1frsl6323.jpg",
 				"path": "/images/items/01_3683/153_4637.jpg",
 				"hash": "2a834567ae84a2470d9bd1a0a71ea152"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4637.jpg",
+				"src": "https://bandai-hobby.net/images/155_4637_o_1f91bpbbm70h176dl2h16fc1hcb2d.jpg",
 				"path": "/images/items/01_3683/155_4637.jpg",
 				"hash": "dc12d23f48164ca5c7978d3503e2ff09"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3683/",
-	"brandIds": ["rg"],
-	"seriesIds": ["gundam-cca"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4121", "01_3524", "item-1000161850", "01_3496"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3683/"
 }

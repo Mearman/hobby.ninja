@@ -5,6 +5,45 @@
 		"ja": "MG 1/100 ダブルゼータガンダム Ver.Ka",
 		"en": "MG 1/100 Double Zeta Gundam Ver.Ka"
 	},
+	"brands": [
+		{
+			"id": "mgka",
+			"url": "https://bandai-hobby.net/brand/mgka/",
+			"ja": "MG Ver.Ka［マスターグレード バージョンカトキ］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-zz",
+			"url": "https://bandai-hobby.net/series/gundam-zz/",
+			"ja": "機動戦士ガンダムＺＺ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2133",
+			"url": "https://bandai-hobby.net/item/01_2133/",
+			"ja": "MG 1/100 ダブルゼータガンダム Ver.Ka [クリアカラー]"
+		},
+		{
+			"id": "01_1211",
+			"url": "https://bandai-hobby.net/item/01_1211/",
+			"ja": "ＭＧ 1/100 強化型ダブルゼータガンダム Ver.Ka"
+		},
+		{
+			"id": "item-1000118343",
+			"url": "http://p-bandai.jp/item/item-1000118343/",
+			"ja": "ＭＧ 1/100 ダブルゼータガンダム Ver.Ka用 強化型拡張パーツ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 7150,
 		"currency": "JPY",
@@ -18,7 +57,6 @@
 		"day": 1
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"• 待望の「MG ダブルゼータガンダム Ver.Ka」がついに登場！",
@@ -30,33 +68,81 @@
 		"en": [
 			"• The long-awaited \"MG Double Zeta Gundam Ver.Ka\" is finally here!",
 			"• The shoulder joint has multiple axes of motion to ensure a wide range of motion, and the knee joint can perform complex deformations and even deep bends!",
-			"• An unprecedented 3-axis structure has been adopted for the lower back, allowing for \"twisting \" and \" forward bending\" while retaining the deformation function!",
+			"• An unprecedented 3-axis structure has been adopted for the lower back, allowing for \"twisting\" and \"forward bending\" while retaining the deformation function!",
 			"• Not only can it be transformed into various forms such as G Fortress, but it also pursues an aircraft-like form!",
-			"• Some parts have been given an \"extra finish \" treatment to add a \" heavy feel\", and the lining parts provide a high-detailed appearance even when transformed!"
+			"• Some parts have been given an \"extra finish\" treatment to add a \"heavy feel\", and the lining parts provide a high-detailed appearance even when transformed!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ダブル・ビーム・ライフル×1",
-			"ハイパー・ビーム・サーベル×2",
-			"握り手（左右）×各1",
-			"サーベル持ち手（左右）×各1",
-			"変形用手（左右）×各1",
-			"武器持ち手（右）×1"
-		],
-		"en": [
-			"Double beam rifle x 1",
-			"Hyper beam saber x2",
-			"Gripping hands (left and right) x 1 each",
-			"Saber handle (left and right) x 1 each",
-			"Transformation hands (left and right) x 1 each",
-			"Weapon holder (right) x 1"
-		]
-	},
-	"contents": {
-		"ja": ["成形品×17", "ホイルシール×１", "水転写式デカール×1", "取扱説明書×1"],
-		"en": ["Molded product x 17", "Foil Seal×1", "Water transfer decal x 1", "Handling manual×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ダブル・ビーム・ライフル",
+				"en": "double beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハイパー・ビーム・サーベル",
+				"en": "hyper beam saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "握り手（左右）×各1",
+				"en": "Gripping hands (left and right) x 1 each"
+			}
+		},
+		{
+			"name": {
+				"ja": "サーベル持ち手（左右）×各1",
+				"en": "Saber handle (left and right) x 1 each"
+			}
+		},
+		{
+			"name": {
+				"ja": "変形用手（左右）×各1",
+				"en": "Transformation hands (left and right) x 1 each"
+			}
+		},
+		{
+			"name": {
+				"ja": "武器持ち手（右）",
+				"en": "Weapon holder (right)"
+			},
+			"count": 1
+		}
+	],
+	"contents": [
+		{
+			"name": {
+				"ja": "成形品",
+				"en": "Molded product"
+			},
+			"count": 17
+		},
+		{
+			"name": {
+				"ja": "ホイルシール×１",
+				"en": "Foil Seal×1"
+			}
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書",
+				"en": "Handling manual"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -78,10 +164,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3704/",
-	"brandIds": ["mgka"],
-	"seriesIds": ["gundam-zz"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_2133", "01_1211", "item-1000118343"],
 	"manual": {
 		"id": "629",
 		"url": "https://manual.bandai-hobby.net/menus/detail/629/"

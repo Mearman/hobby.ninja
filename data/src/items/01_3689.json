@@ -5,6 +5,50 @@
 		"ja": "HG 1/72 バンイップ・ブーメラン",
 		"en": "HG 1/72 Bunyip Boomerang"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -18,88 +62,99 @@
 		"day": 9
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"「境界戦機」より、オセアニア連合が所有する無人機AMAIM(アメイン)「バンイップ・ブーメラン」をＨＧで商品化！",
-			"■商品化に於いてKEN OKUYAMA DESIGNによる可動構造の検証を経て立体化されたAMAIM(アメイン)。",
-			"■頭部ユニットの収納、左右機関砲の展開、差し替えにより、小型アームの隠しナイフギミックなども再現可能。",
-			"■哨戒状態/高機動戦闘状態/駐機状態など各形態を一部パーツの差し替えにより再現。"
+			"• 商品化に於いてKEN OKUYAMA DESIGNによる可動構造の検証を経て立体化されたAMAIM(アメイン)。",
+			"• 頭部ユニットの収納、左右機関砲の展開、差し替えにより、小型アームの隠しナイフギミックなども再現可能。",
+			"• 哨戒状態/高機動戦闘状態/駐機状態など各形態を一部パーツの差し替えにより再現。"
 		],
 		"en": [
-			"From \"Kyoukai Senki \", the unmanned aircraft AMAIM \" Bunyip Boomerang\" owned by the Oceania Alliance is commercialized in HG!",
+			"From \"Kyoukai Senki\", the unmanned aircraft AMAIM \"Bunyip Boomerang\" owned by the Oceania Alliance is commercialized in HG!",
 			"• AMAIM was made into a three-dimensional product after verification of its movable structure by KEN OKUYAMA DESIGN.",
 			"• By storing the head unit, deploying the left and right cannons, and replacing them, you can also recreate the hidden knife gimmick of the small arm.",
-			"• Reproduce various modes such as patrol state/high mobility combat state/parked state by replacing some parts."
+			"• Reproduce each form such as patrol state/high mobility combat state/parked state by replacing some parts."
 		]
 	},
-	"accessories": {
-		"ja": ["ナイフパーツ（左右）", "自立補助パーツ×２", "シール×１"],
-		"en": ["Knife parts (left and right)", "Self-supporting auxiliary parts x 2", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ナイフパーツ（左右）",
+				"en": "Knife parts (left and right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "自立補助パーツ×２",
+				"en": "Self-supporting auxiliary parts x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4643.jpg",
+				"src": "https://bandai-hobby.net/images/153_4643_s_rebqvb5neq3uxj45h5l4d5jpjctx.jpg",
 				"path": "/images/items/01_3689/153_4643.jpg",
 				"hash": "7171b9d0dc8c165d10d6a176aa786d97"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4643.jpg",
+				"src": "https://bandai-hobby.net/images/155_4643_s_8udba1ekae080a00adb710ils5zn.jpg",
 				"path": "/images/items/01_3689/155_4643.jpg",
 				"hash": "764f5d030f81408df98e07165ff803e7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4643.jpg",
+				"src": "https://bandai-hobby.net/images/156_4643_s_apfs2bzhk4foxm4fe3k2o2axr726.jpg",
 				"path": "/images/items/01_3689/156_4643.jpg",
 				"hash": "c129e9d6c36b859caff2bffe16d6458b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4643.jpg",
+				"src": "https://bandai-hobby.net/images/157_4643_s_uzsnuya4vr4iazffv6085w14ug41.jpg",
 				"path": "/images/items/01_3689/157_4643.jpg",
 				"hash": "dc0b76303730ac67c93a1875219d633e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4643.jpg",
+				"src": "https://bandai-hobby.net/images/158_4643_s_dlssdxr2esfao6i5q5qafn6j0l3c.jpg",
 				"path": "/images/items/01_3689/158_4643.jpg",
 				"hash": "7a18c9fef6fe03f0b79fc0775e42c659"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4643.jpg",
+				"src": "https://bandai-hobby.net/images/159_4643_s_dlyrya765p84svwybdknu6lxnfpk.jpg",
 				"path": "/images/items/01_3689/159_4643.jpg",
 				"hash": "da06c3014be539c4fde79a22d4088fa0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4643.jpg",
+				"src": "https://bandai-hobby.net/images/189_4643_s_p4erzr0s8u5712bmekisg81pal5f.jpg",
 				"path": "/images/items/01_3689/189_4643.jpg",
 				"hash": "435273743a4af6ab455661390ce7fe8f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4643.jpg",
+				"src": "https://bandai-hobby.net/images/190_4643_s_66q9wb5zjdlm64xu4yalyykxjwf8.jpg",
 				"path": "/images/items/01_3689/190_4643.jpg",
 				"hash": "46964d5af6a7e60812e542de15eeaef3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4643.jpg",
+				"src": "https://bandai-hobby.net/images/191_4643_s_12m6xoikgny4fuhmt4xfwixhe8qa.jpg",
 				"path": "/images/items/01_3689/191_4643.jpg",
 				"hash": "b3502cb72b5f74e23ca69ec2ca703442"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4643.jpg",
+				"src": "https://bandai-hobby.net/images/192_4643_s_e3bp44gelk8k7i8085j5kzvmvdh9.jpg",
 				"path": "/images/items/01_3689/192_4643.jpg",
 				"hash": "e939e1e7db9558bc32b8efc284b3f325"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_4643.jpg",
+				"src": "https://bandai-hobby.net/images/193_4643_s_i45uevww8dg7pm11edhm5s5l4l5l.jpg",
 				"path": "/images/items/01_3689/193_4643.jpg",
 				"hash": "15ebe8e3e6b322a2d00b65a493c5807c"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3689/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3689/"
 }

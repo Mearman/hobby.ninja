@@ -5,6 +5,44 @@
 		"ja": "1/1000 地球防衛軍ドレッドノート改級補給母艦 アスカ",
 		"en": "1/1000 Earth Defense Force Dreadnought Replenishment Carrier Asuka"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "yamato",
+			"url": "https://bandai-hobby.net/series/yamato/",
+			"ja": "宇宙戦艦ヤマトシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5971",
+			"url": "https://bandai-hobby.net/item/01_5971/",
+			"ja": "1/1000 地球防衛軍 ヒュウガ級 戦闘航宙母艦 DCV-01ヒュウガ"
+		},
+		{
+			"id": "01_5498",
+			"url": "https://bandai-hobby.net/item/01_5498/",
+			"ja": "メカコレクションDX 1式空間戦闘攻撃機 コスモタイガーII(単座型/銃座型) [2機セット]"
+		},
+		{
+			"id": "01_5500",
+			"url": "https://bandai-hobby.net/item/01_5500/",
+			"ja": "メカコレクションDX 試製空間戦闘攻撃機 コスモパイソン [2機セット]"
+		},
+		{
+			"id": "01_5388",
+			"url": "https://bandai-hobby.net/item/01_5388/",
+			"ja": "1/1000 宇宙戦艦ヤマト3199（第3次改装型：参戦章叙勲式典記念塗装）"
+		}
+	],
+	"scale": "1/1000",
 	"price": {
 		"amount": 6050,
 		"currency": "JPY",
@@ -18,13 +56,12 @@
 		"day": 30
 	},
 	"targetAge": 15,
-	"scale": "1/1000",
 	"description": {
 		"ja": [
 			"『宇宙戦艦ヤマト2205 新たなる旅立ち』に登場する宇宙戦艦ヤマトの右翼を担う補給母艦アスカが1/1000シリーズで待望のラインアップ！",
-			"■艦橋は付属のLEDユニットにより青く発光させることが可能。",
-			"■細部までこだわった精密なディテールと水転写式デカールで船体甲板のラインを再現。",
-			"■専用ディスプレイベース付属。"
+			"• 艦橋は付属のLEDユニットにより青く発光させることが可能。",
+			"• 細部までこだわった精密なディテールと水転写式デカールで船体甲板のラインを再現。",
+			"• 専用ディスプレイベース付属。"
 		],
 		"en": [
 			"The long-awaited lineup of the supply carrier Asuka, which plays the right wing of Space Battleship Yamato in \"Space Battleship Yamato 2205: A New Journey\", is now available in the 1/1000 series!",
@@ -33,31 +70,49 @@
 			"• Comes with a dedicated display base."
 		]
 	},
-	"accessories": {
-		"ja": ["LEDユニット(青)×1", "ディスプレイベース×1", "ビス×1", "水転写式デカール×1", "ホイルシール×1"],
-		"en": ["LED unit (blue) x 1", "Display base x 1", "Screw x 1", "Water transfer decal x 1", "Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "LEDユニット(青)",
+				"en": "LED unit (blue)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース",
+				"en": "display base"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビス",
+				"en": "bis"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165462_1.jpg",
 				"path": "/images/items/01_3649/1000165462_1.jpg",
 				"hash": "b8ccb54c3748b08a67320377a3183547"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165462_10.jpg",
-				"path": "/images/items/01_3649/1000165462_10.jpg",
-				"hash": "ff6e6261a92e193e1359e2151abf4c4d"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165462_11.jpg",
-				"path": "/images/items/01_3649/1000165462_11.jpg",
-				"hash": "d5564de22be08ad7419be62b7d91bd54"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165462_12.jpg",
-				"path": "/images/items/01_3649/1000165462_12.jpg",
-				"hash": "fea76456e2e3813603fb3669b986c261"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165462_2.jpg",
@@ -98,13 +153,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165462_9.jpg",
 				"path": "/images/items/01_3649/1000165462_9.jpg",
 				"hash": "816932a617cd5a611eee346e95883514"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165462_10.jpg",
+				"path": "/images/items/01_3649/1000165462_10.jpg",
+				"hash": "ff6e6261a92e193e1359e2151abf4c4d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165462_11.jpg",
+				"path": "/images/items/01_3649/1000165462_11.jpg",
+				"hash": "d5564de22be08ad7419be62b7d91bd54"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165462_12.jpg",
+				"path": "/images/items/01_3649/1000165462_12.jpg",
+				"hash": "fea76456e2e3813603fb3669b986c261"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3649/",
-	"brandIds": [],
-	"seriesIds": ["yamato"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5971", "01_5498", "01_5500", "01_5388"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3649/"
 }

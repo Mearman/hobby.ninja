@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 エグザビークル(小型量産機Ver.)",
 		"en": "30MM 1/144 Exer Vehicle (Small Mass Production Machine Ver.)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 858,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMエグザビークルシリーズに「小型量産機Ver.」がラインアップ！",
@@ -29,35 +71,29 @@
 		"en": [
 			"\"Small mass-produced machine version\" is now available in the 30MM Exa Vehicle series!",
 			"• Comes with the first cockpit parts of the 30MM series.",
-			"• Comes with the same \"C-type \" Runner as \" Spinatio \" and \" Spinatia\", which expands the range of customization.",
+			"• Comes with the same \"C-type\" Runner as \"Spinatio\" and \"Spinatia\", which expands the range of customization.",
 			"• Can be used as customized parts if disassembled."
 		]
 	},
-	"accessories": {
-		"ja": ["ビークル×1体"],
-		"en": ["Vehicle x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビークル",
+				"en": "vehicle"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "体",
+				"en": "body"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168006_1.jpg",
 				"path": "/images/items/01_3676/1000168006_1.jpg",
 				"hash": "8ce5476ce08eb1bc062548341d6692ff"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168006_10.jpg",
-				"path": "/images/items/01_3676/1000168006_10.jpg",
-				"hash": "bd2252beb82ff0f09762de84b922d09a"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168006_11.jpg",
-				"path": "/images/items/01_3676/1000168006_11.jpg",
-				"hash": "e01863853a4c8a9d6c6d2089fbd8570f"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168006_12.jpg",
-				"path": "/images/items/01_3676/1000168006_12.jpg",
-				"hash": "8006e4023dbef22d75add38dfe27ebd7"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168006_2.jpg",
@@ -98,15 +134,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168006_9.jpg",
 				"path": "/images/items/01_3676/1000168006_9.jpg",
 				"hash": "08642796ee315cddb9fe88ef06450e82"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168006_10.jpg",
+				"path": "/images/items/01_3676/1000168006_10.jpg",
+				"hash": "bd2252beb82ff0f09762de84b922d09a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168006_11.jpg",
+				"path": "/images/items/01_3676/1000168006_11.jpg",
+				"hash": "e01863853a4c8a9d6c6d2089fbd8570f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168006_12.jpg",
+				"path": "/images/items/01_3676/1000168006_12.jpg",
+				"hash": "8006e4023dbef22d75add38dfe27ebd7"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3676/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3731",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3731/"

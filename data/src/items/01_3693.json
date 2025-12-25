@@ -5,6 +5,50 @@
 		"ja": "HG 1/72 メイレスレイキ",
 		"en": "HG 1/72 Meires Reiki"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -18,75 +62,92 @@
 		"day": 18
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"「境界戦機」より、I-LeS(自律思考型AI)を搭載したAMAIM(アメイン)「レイキ」が商品化！",
-			"■KEN OKUYAMA DESIGNによる可動構造の検証を経て、立体化されたAMAIM(アメイン)。",
-			"■紫々部シオンがパイロットとして搭乗。",
-			"■大型のリアスカートの展開に加え、全身に装備されたスラスターユニットは回転可能。",
-			"■捕縛用電撃網発射機、超熱振式薙刀が付属。"
+			"• KEN OKUYAMA DESIGNによる可動構造の検証を経て、立体化されたAMAIM(アメイン)。",
+			"• 紫々部シオンがパイロットとして搭乗。",
+			"• 大型のリアスカートの展開に加え、全身に装備されたスラスターユニットは回転可能。",
+			"• 捕縛用電撃網発射機、超熱振式薙刀が付属。"
 		],
 		"en": [
-			"From \"Kyoukai Senki \", AMAIM \" Reiki\" equipped with I-LeS (autonomous thinking AI) is commercialized!",
+			"From \"Kyoukai Senki\", AMAIM \"Reiki\" equipped with I-LeS (autonomous thinking AI) is commercialized!",
 			"• AMAIM was made into a three-dimensional model after the movable structure was verified by KEN OKUYAMA DESIGN.",
 			"• Shion Murasakibe will be on board as the pilot.",
-			"• In addition to deploying a large rear skirt, the thruster units equipped throughout the body can rotate.",
+			"• In addition to deploying a large rear skirt, the thruster units equipped all over the body can rotate.",
 			"• Comes with an electric net launcher for capture and a super heat wave naginata."
 		]
 	},
-	"accessories": {
-		"ja": ["超熱振式薙刀×１", "捕縛用電撃網発射機×１", "ハンドパーツ×一式", "シール×１"],
-		"en": ["Super heat wave type naginata x 1", "Capturing electric net launcher x 1", "Hand parts x set", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "超熱振式薙刀×１",
+				"en": "Super heat wave type naginata x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "捕縛用電撃網発射機×１",
+				"en": "Capturing electric net launcher x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×一式",
+				"en": "Hand parts x set"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4647.jpg",
+				"src": "https://bandai-hobby.net/images/153_4647_s_grx9lq05wwnkyri5qy9cjoqrizsh.jpg",
 				"path": "/images/items/01_3693/153_4647.jpg",
 				"hash": "0b2ae6ad3be5764a126dda0351479b9b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4647.jpg",
+				"src": "https://bandai-hobby.net/images/155_4647_s_iu99378x99mjs5ah845xqk5dup40.jpg",
 				"path": "/images/items/01_3693/155_4647.jpg",
 				"hash": "d196583a66efce9fb1bd33c481ca63f2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4647.jpg",
+				"src": "https://bandai-hobby.net/images/156_4647_s_krnc8elic29mbivamkpo63c3cb1e.jpg",
 				"path": "/images/items/01_3693/156_4647.jpg",
 				"hash": "d17cb969ca08fec65b184a6e19179287"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4647.jpg",
+				"src": "https://bandai-hobby.net/images/157_4647_s_po5k3frocfbxutpt994c08p1rw48.jpg",
 				"path": "/images/items/01_3693/157_4647.jpg",
 				"hash": "498a1af0fbeff8ff7d1df65dc14b3df9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4647.jpg",
+				"src": "https://bandai-hobby.net/images/158_4647_s_fiid8nnuxskb6e1t04e7dsoqzbqe.jpg",
 				"path": "/images/items/01_3693/158_4647.jpg",
 				"hash": "3e984bb31b8c6c5ac187f8740593251c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4647.jpg",
+				"src": "https://bandai-hobby.net/images/159_4647_s_l9br53d46gc2ls3zk21gh1s0uh9c.jpg",
 				"path": "/images/items/01_3693/159_4647.jpg",
 				"hash": "9b40362e37cf3b2c7f4fd73dc98819f7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4647.jpg",
+				"src": "https://bandai-hobby.net/images/189_4647_s_dt6j09fgugrw6qty95d92db8kpnp.jpg",
 				"path": "/images/items/01_3693/189_4647.jpg",
 				"hash": "c9f1c71da3f3165f3b43ec920a8712d3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4647.jpg",
+				"src": "https://bandai-hobby.net/images/190_4647_s_a9m4jt440fzupqn5ofpa8qxoktqb.jpg",
 				"path": "/images/items/01_3693/190_4647.jpg",
 				"hash": "7682567fa8bae32d6b6d28bc9b06df50"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3693/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3693/"
 }

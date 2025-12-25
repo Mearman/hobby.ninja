@@ -5,6 +5,50 @@
 		"ja": "ガンダムデカールNo.129 HG 1/144 ナイチンゲール用",
 		"en": "Gundam Decal No.129 HG 1/144 Nightingale"
 	},
+	"brands": [
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6719",
+			"url": "https://bandai-hobby.net/item/01_6719/",
+			"ja": "ガンダムデカール RG 1/144 RX-93ff νガンダム用 SP Ver."
+		},
+		{
+			"id": "01_6720",
+			"url": "https://bandai-hobby.net/item/01_6720/",
+			"ja": "ガンダムデカール RG 1/144 MSN-04FF サザビー用 SP Ver."
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_3675",
+			"url": "https://bandai-hobby.net/item/01_3675/",
+			"ja": "ガンダムデカールNo.132 RG 1/144 Hi-νガンダム用"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,39 +62,39 @@
 		"day": 18
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「ガンダムデカール」新ラインアップ！1/144スケールに使用できる水転写式デカールが登場！",
-			"■HG 1/144 ナイチンゲール用。"
+			"• HG 1/144 ナイチンゲール用。"
 		],
 		"en": [
 			"\"Gundam Decal\" new lineup! Introducing water transfer decals that can be used on 1/144 Scale!",
 			"• For HG 1/144 Nightingale."
 		]
 	},
-	"accessories": {
-		"ja": ["水転写式デカール×1"],
-		"en": ["Water transfer decal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4625.jpg",
+				"src": "https://bandai-hobby.net/images/153_4625_s_6e8lnmix9juff3roomwlcjm970gr.jpg",
 				"path": "/images/items/01_3672/153_4625.jpg",
 				"hash": "d8c2fc34518abc617faa57ca82008c5b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4625.jpg",
+				"src": "https://bandai-hobby.net/images/155_4625_s_6bhlmnv48b3aqiex49iqi4tr93x2.jpg",
 				"path": "/images/items/01_3672/155_4625.jpg",
 				"hash": "8eb88eecf1df6d077c9795be3c40aa8f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3672/",
-	"brandIds": ["gundam_decal"],
-	"seriesIds": ["gundam-cca"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6719", "01_6720", "01_4971", "01_3675"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3672/"
 }

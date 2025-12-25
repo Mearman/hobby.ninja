@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンプラスターターセットVol.2 ガンダム+ガンダムマーカー",
 		"en": "HG 1/144 Gunpla Starter Set Vol.2 Gundam+Gundam Marker"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -18,15 +62,14 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• ガンプラスターターセット第２弾として、HG RX-78-2 ガンダム Ver.G30thがアニメカラーで登場。",
+			"• ガンプラスターターセット第２弾として、HG RX-78-2ガンダムVer.G30thがアニメカラーで登場。",
 			"• 写真付きの組み立てガイドのほか、さまざまなテクニックを紹介したステップアップマニュアルが付属。",
 			"• スミ入れ用のガンダムマーカーが１本付いている。 ガンダムマーカー（スミ入れ）×1、チェーン×1、成形品×10、ステップアップマニュアル×1、組立説明書"
 		],
 		"en": [
-			"• As the second Gunpla starter set, HG RX-78-2 Gundam Ver.G30th is now available in anime colors.",
+			"• As the second Gunpla starter set, HG RX-78-2 GundamVer.G30th is now available in anime colors.",
 			"• Includes an assembly guide with photos and a step-up manual that introduces various techniques.",
 			"• Comes with one Gundam marker for inking. Gundam marker (smearing) x 1, chain x 1, molded items x 10, step-up manual x 1, assembly manual"
 		]
@@ -34,22 +77,22 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4671.jpg",
+				"src": "https://bandai-hobby.net/images/153_4671_s_hdoju36gujwg5g6q6xdisqqek1e0.jpg",
 				"path": "/images/items/01_3719/153_4671.jpg",
 				"hash": "99c0c27b0d071b0a552293e851621a3d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4671.jpg",
+				"src": "https://bandai-hobby.net/images/155_4671_s_mo38pl1z4r045cql2ws5nc7obu1a.jpg",
 				"path": "/images/items/01_3719/155_4671.jpg",
 				"hash": "6af2241e8c4a4bc5da9643612346c9c0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4671.jpg",
+				"src": "https://bandai-hobby.net/images/156_4671_s_2ag8w6i146kux7q23ohslxhqlnnj.jpg",
 				"path": "/images/items/01_3719/156_4671.jpg",
 				"hash": "02c0ee393334b06904bce084fd2a3da6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4671.jpg",
+				"src": "https://bandai-hobby.net/images/157_4671_s_6h7ke8zeptsybnuyssqmb3fp6sae.jpg",
 				"path": "/images/items/01_3719/157_4671.jpg",
 				"hash": "6912329860aaf2e5ee2bf3ddb309f717"
 			}
@@ -57,10 +100,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3719/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"manual": {
 		"id": "689",
 		"url": "https://manual.bandai-hobby.net/menus/detail/689/"

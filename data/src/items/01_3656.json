@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ガンダムヴァーチェ",
 		"en": "MG 1/100 Gundam Verce"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216602",
+			"url": "https://p-bandai.jp/item/item-1000216602/",
+			"ja": "ＭＧ 1/100 ガンダムアストレア＋プロトＧＮツインブロードブレイド"
+		},
+		{
+			"id": "01_5526",
+			"url": "https://bandai-hobby.net/item/01_5526/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムエクシア [クリアカラー]"
+		},
+		{
+			"id": "01_5102",
+			"url": "https://bandai-hobby.net/item/01_5102/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムナドレ"
+		},
+		{
+			"id": "01_4422",
+			"url": "https://bandai-hobby.net/item/01_4422/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムキュリオス[クリアカラー］"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 8800,
 		"currency": "JPY",
@@ -18,10 +62,9 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム 00』より、ティエリア・アーデが搭乗するガンダムヴァーチェがMGにラインアップ！",
+			"『機動戦士ガンダム00』より、ティエリア・アーデが搭乗するガンダムヴァーチェがMGにラインアップ！",
 			"• 極限まで構造を追求し、最大の特徴でもあるガンダムナドレへの換装を実現。",
 			"• 装甲は設定をイメージした着脱が可能。裏打ちパーツで密度感と積層感を演出。",
 			"• 各部ハッチはスライドし、GNフィールド展開状態を再現可能。",
@@ -45,57 +88,102 @@
 			"• In addition to the pilot suit, a 1/100 scale Tieria figure in a dress is included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ＧＮキャノン×2",
-			"ＧＮバズーカ×1",
-			"ＧＮシールド×1",
-			"ＧＮビームサーベル×2",
-			"ＧＮビームライフル×1",
-			"ＧＮビームライフル用エフェクトパーツ×1",
-			"ＧＮドライヴ×1",
-			"太陽炉×1",
-			"フィギュア×3種",
-			"ホイルシール×1",
-			"マーキングシール×1",
-			"PPシート×1"
-		],
-		"en": [
-			"GN cannon x2",
-			"GN bazooka x1",
-			"GNSeal do×1",
-			"GN beam saber x2",
-			"GN beam rifle x1",
-			"Effect parts for GN beam rifle x 1",
-			"GN drive x1",
-			"Solar furnace x 1",
-			"Figures x 3 types",
-			"Foil Seal×1",
-			"MarkingSeal×1",
-			"PP sheet x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ＧＮキャノン",
+				"en": "GN Cannon"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ＧＮバズーカ",
+				"en": "GN Bazooka"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ＧＮシールド",
+				"en": "GNSeal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ＧＮビームサーベル",
+				"en": "GN beam saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ＧＮビームライフル",
+				"en": "GN beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ＧＮビームライフル用エフェクトパーツ",
+				"en": "Effect parts for GN beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ＧＮドライヴ",
+				"en": "GN drive"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "太陽炉",
+				"en": "solar furnace"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "フィギュア",
+				"en": "figure"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "PPシート",
+				"en": "PP sheet"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165961_1.jpg",
 				"path": "/images/items/01_3656/1000165961_1.jpg",
 				"hash": "224271b3a9f1b2bdd366d1b1498a76b3"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165961_10.jpg",
-				"path": "/images/items/01_3656/1000165961_10.jpg",
-				"hash": "822a0c97ebe48ff14e0b79e707c3392a"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165961_11.jpg",
-				"path": "/images/items/01_3656/1000165961_11.jpg",
-				"hash": "f36ec7ce022c8b83613123c1b0a7eba0"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165961_12.jpg",
-				"path": "/images/items/01_3656/1000165961_12.jpg",
-				"hash": "447c02e68401b134c59689b9f6e77f03"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165961_2.jpg",
@@ -136,15 +224,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165961_9.jpg",
 				"path": "/images/items/01_3656/1000165961_9.jpg",
 				"hash": "7f7dbe21abebcb8421c08e2ddd35e41d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165961_10.jpg",
+				"path": "/images/items/01_3656/1000165961_10.jpg",
+				"hash": "822a0c97ebe48ff14e0b79e707c3392a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165961_11.jpg",
+				"path": "/images/items/01_3656/1000165961_11.jpg",
+				"hash": "f36ec7ce022c8b83613123c1b0a7eba0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165961_12.jpg",
+				"path": "/images/items/01_3656/1000165961_12.jpg",
+				"hash": "447c02e68401b134c59689b9f6e77f03"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3656/",
-	"brandIds": ["mg"],
-	"seriesIds": ["g-00"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216602", "01_5526", "01_5102", "01_4422"],
 	"manual": {
 		"id": "644",
 		"url": "https://manual.bandai-hobby.net/menus/detail/644/"

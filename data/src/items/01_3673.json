@@ -5,6 +5,50 @@
 		"ja": "ガンダムデカールNo.130 RG 1/144 フォースインパルスガンダム用",
 		"en": "Gundam Decal No.130 RG 1/144 Force Impulse Gundam"
 	},
+	"brands": [
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4197",
+			"url": "https://bandai-hobby.net/item/01_4197/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 アザーセンチュリーズエンブレムセット1"
+		},
+		{
+			"id": "01_5901",
+			"url": "https://bandai-hobby.net/item/01_5901/",
+			"ja": "ガンダムデカールNo.94 RG 1/144 ストライクフリーダムガンダム用"
+		},
+		{
+			"id": "01_1876",
+			"url": "https://bandai-hobby.net/item/01_1876/",
+			"ja": "ガンダムデカールNo.67 MG 1/100 ソードインパルスガンダム用"
+		},
+		{
+			"id": "01_1859",
+			"url": "https://bandai-hobby.net/item/01_1859/",
+			"ja": "ガンダムデカールNo.50 MG 1/100 フォースインパルスガンダム用"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,39 +62,39 @@
 		"day": 18
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「ガンダムデカール」新ラインアップ！1/144スケールに使用できる水転写式デカールが登場！",
-			"■RG 1/144 フォースインパルスガンダム用。"
+			"• RG 1/144 フォースインパルスガンダム用。"
 		],
 		"en": [
 			"\"Gundam Decal\" new lineup! Introducing water transfer decals that can be used on 1/144 Scale!",
 			"• For RG 1/144 Force Impulse Gundam."
 		]
 	},
-	"accessories": {
-		"ja": ["水転写式デカール×1"],
-		"en": ["Water transfer decal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4626.jpg",
+				"src": "https://bandai-hobby.net/images/153_4626_s_na4rri97bma0z020mm8xw8fm43ve.jpg",
 				"path": "/images/items/01_3673/153_4626.jpg",
 				"hash": "8302f3ee8e6cd0a77bca11febdc24e74"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4626.jpg",
+				"src": "https://bandai-hobby.net/images/155_4626_s_aho6dt85yjj6ka2j8ppspf8h76wr.jpg",
 				"path": "/images/items/01_3673/155_4626.jpg",
 				"hash": "facaeef610766d08882b336e4334a104"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3673/",
-	"brandIds": ["gundam_decal"],
-	"seriesIds": ["seed-d"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4197", "01_5901", "01_1876", "01_1859"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3673/"
 }

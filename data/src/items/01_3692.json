@@ -5,6 +5,50 @@
 		"ja": "HG 1/72 アメインゴースト",
 		"en": "HG 1/72 Amain Ghost"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 3080,
 		"currency": "JPY",
@@ -18,20 +62,19 @@
 		"day": 11
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"「境界戦機」より、謎に包まれた漆黒のAMAIM(アメイン)ゴーストが登場！",
-			"■KEN OKUYAMA DESIGNによる可動構造の検証を経て立体化された謎多きAMAIM。",
-			"■脚部の特徴的な構造によりアクション性の高いキットとなっている。",
-			"■背部のジャミングユニットの可動・開閉が可能。",
-			"■左右異なる腕部形状、頭部のカメラアイも精密に表現。",
-			"■手足の爪の色、及び可動もパーツ分割により再現。",
-			"■右手は武器持ち手として手甲パーツをスライドし、ナックルモードを再現。別売りの「境界戦機」商品の武装も一部装備可能。"
+			"• KEN OKUYAMA DESIGNによる可動構造の検証を経て立体化された謎多きAMAIM。",
+			"• 脚部の特徴的な構造によりアクション性の高いキットとなっている。",
+			"• 背部のジャミングユニットの可動・開閉が可能。",
+			"• 左右異なる腕部形状、頭部のカメラアイも精密に表現。",
+			"• 手足の爪の色、及び可動もパーツ分割により再現。",
+			"• 右手は武器持ち手として手甲パーツをスライドし、ナックルモードを再現。別売りの「境界戦機」商品の武装も一部装備可能。"
 		],
 		"en": [
 			"From \"Kyoukai Senki\" comes the mysterious jet-black AMAIM Ghost!",
-			"• The mysterious AMAIM was made into three-dimensional form after verification of its movable structure by KEN OKUYAMA DESIGN.",
+			"• The mysterious AMAIM was made into a three-dimensional model after verification of its movable structure by KEN OKUYAMA DESIGN.",
 			"• The unique structure of the legs makes this kit highly actionable.",
 			"• The jamming unit on the back can be moved and opened/closed.",
 			"• The different arm shapes on the left and right sides and the camera eye on the head are also precisely expressed.",
@@ -39,53 +82,59 @@
 			"• The right hand can be used as a weapon holder by sliding the gauntlet parts to recreate knuckle mode. It can also be equipped with some weapons from the separately sold \"Kyoukai Senki\" products."
 		]
 	},
-	"accessories": {
-		"ja": ["ハンドパーツ×１式", "シール×１"],
-		"en": ["Hand parts x 1 set", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4651.jpg",
+				"src": "https://bandai-hobby.net/images/153_4651_s_ihzmyp42wzl94tahgahre5co0ljw.jpg",
 				"path": "/images/items/01_3692/153_4651.jpg",
 				"hash": "913e9410feea35e37a0005e994183ca2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4651.jpg",
+				"src": "https://bandai-hobby.net/images/155_4651_s_mgekr5p6w3jw6m0ztr5w54o3jhrz.jpg",
 				"path": "/images/items/01_3692/155_4651.jpg",
 				"hash": "df6ac74f71e7b288e0e40677a0fc813f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4651.jpg",
+				"src": "https://bandai-hobby.net/images/156_4651_s_a58db8jrrfyum3jv0slmx8kui4wx.jpg",
 				"path": "/images/items/01_3692/156_4651.jpg",
 				"hash": "0d94389b3d0ab52699523bd77d3bcd49"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4651.jpg",
+				"src": "https://bandai-hobby.net/images/157_4651_s_o48h20ofqk8pvynlsevoknynq8x8.jpg",
 				"path": "/images/items/01_3692/157_4651.jpg",
 				"hash": "40c17f430535d40136111a4836a73a66"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4651.jpg",
+				"src": "https://bandai-hobby.net/images/158_4651_s_xt09iivcmwcgykrt7lae9f3i8d30.jpg",
 				"path": "/images/items/01_3692/158_4651.jpg",
 				"hash": "9a7195c0cf051772150f331a1af667a8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4651.jpg",
+				"src": "https://bandai-hobby.net/images/159_4651_s_fjlzlb6nxfk8a5ub77zt47jfa4a9.jpg",
 				"path": "/images/items/01_3692/159_4651.jpg",
 				"hash": "29149348af8e02a3035bb2a92081ea65"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4651.jpg",
+				"src": "https://bandai-hobby.net/images/189_4651_s_1frblli5qz12c7q3w8p84npvmfna.jpg",
 				"path": "/images/items/01_3692/189_4651.jpg",
 				"hash": "85331b59843e9a18f84743ade58dc861"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3692/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3692/"
 }

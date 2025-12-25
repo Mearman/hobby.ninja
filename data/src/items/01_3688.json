@@ -5,6 +5,50 @@
 		"ja": "HG 1/72 メイレスビャクチ",
 		"en": "HG 1/72 Meires Byakuchi"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -18,15 +62,14 @@
 		"day": 25
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
-			"■月刊ホビージャパンで連載の外伝「境界戦機フロストフラワー」に登場するI-LeS(自律思考型AI)を搭載したAMAIM(アメイン)。",
-			"■北条カイがパイロットとして搭乗。",
-			"■商品化に於いてKEN OKUYAMA DESIGNによる可動構造の検証を経て立体化されたAMAIM(アメイン)。",
-			"■胸部シリンダーギミックの再現。",
-			"■各所に設けられたハードポイント、背部ウェポンラックにより各種兵装・ユニットを換装可能。",
-			"■肩、シールドなどに使用可能なマーキングシールが付属。"
+			"• 月刊ホビージャパンで連載の外伝「境界戦機フロストフラワー」に登場するI-LeS(自律思考型AI)を搭載したAMAIM(アメイン)。",
+			"• 北条カイがパイロットとして搭乗。",
+			"• 商品化に於いてKEN OKUYAMA DESIGNによる可動構造の検証を経て立体化されたAMAIM(アメイン)。",
+			"• 胸部シリンダーギミックの再現。",
+			"• 各所に設けられたハードポイント、背部ウェポンラックにより各種兵装・ユニットを換装可能。",
+			"• 肩、シールドなどに使用可能なマーキングシールが付属。"
 		],
 		"en": [
 			"• AMAIM equipped with I-LeS (autonomous thinking AI) that appears in the side story \"Kyoukai Senki Frost Flower\" serialized in Hobby Japan.",
@@ -37,69 +80,89 @@
 			"• Comes with MarkingSeal that can be used on shoulders, seals, etc."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"60mm携行機関砲(多弾倉型)×１",
-			"四連装誘導弾携行発射機×１",
-			"汎用携行盾×１",
-			"ウェポンラック×１",
-			"ハンドパーツ 平手（左右）、武器持ち手（左右）、銃持ち手（右）",
-			"シール×１",
-			"マーキングシール×１"
-		],
-		"en": [
-			"60mm portable machine gun (multi-magazine type) x 1",
-			"Quadruple guided missile portable launcher x 1",
-			"General-purpose carrying shield x 1",
-			"Weapon rack x 1",
-			"Hand parts Open hands (left and right), weapon handles (left and right), gun handles (right)",
-			"Seal×1",
-			"MarkingSeal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "60mm携行機関砲(多弾倉型)×１",
+				"en": "60mm portable machine gun (multi-magazine type) x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "四連装誘導弾携行発射機×１",
+				"en": "Quadruple guided missile portable launcher x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "汎用携行盾×１",
+				"en": "General-purpose carrying shield x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ウェポンラック×１",
+				"en": "Weapon rack x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ 平手（左右）、武器持ち手（左右）、銃持ち手（右）",
+				"en": "Hand parts Open hands (left and right), weapon handles (left and right), gun handles (right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール×１",
+				"en": "MarkingSeal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4642.jpg",
+				"src": "https://bandai-hobby.net/images/153_4642_s_9u4j3rdnlz7xrb31oggnl4ke1s6u.jpg",
 				"path": "/images/items/01_3688/153_4642.jpg",
 				"hash": "e51d51d71384f574e3dc9729e9ec5c00"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4642.jpg",
+				"src": "https://bandai-hobby.net/images/155_4642_s_nwtrhi64rbnegtwqa9manvo1gih1.jpg",
 				"path": "/images/items/01_3688/155_4642.jpg",
 				"hash": "709ab639ada8651d2b2ca677f6fe5fbc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4642.jpg",
+				"src": "https://bandai-hobby.net/images/156_4642_s_meytr9ltciw0vboa9wez2y4371eh.jpg",
 				"path": "/images/items/01_3688/156_4642.jpg",
 				"hash": "2d45b9ee16f94b70859cf308388d5527"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4642.jpg",
+				"src": "https://bandai-hobby.net/images/157_4642_s_dnzvs655spdhysfg2495zcih0myd.jpg",
 				"path": "/images/items/01_3688/157_4642.jpg",
 				"hash": "116a630456f53b302a5e29277dae7c19"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4642.jpg",
+				"src": "https://bandai-hobby.net/images/158_4642_s_zgxeorodkyuh4q4zzmx79j4lzcrl.jpg",
 				"path": "/images/items/01_3688/158_4642.jpg",
 				"hash": "a84003da0f90de94ebee095fd046882e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4642.jpg",
+				"src": "https://bandai-hobby.net/images/159_4642_s_nj0nd2mjt4qakh8enltue5slo10y.jpg",
 				"path": "/images/items/01_3688/159_4642.jpg",
 				"hash": "ca266347a6a69e3bbed7de758ac724a1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4642.jpg",
+				"src": "https://bandai-hobby.net/images/189_4642_s_ng333k2wnngol9kpvqffg2oa19fx.jpg",
 				"path": "/images/items/01_3688/189_4642.jpg",
 				"hash": "1da95f1289beeb27fce62c3610f9bda8"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3688/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3688/"
 }

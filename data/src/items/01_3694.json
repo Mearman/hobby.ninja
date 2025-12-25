@@ -5,6 +5,54 @@
 		"ja": "ＭＧ 1/100 トールギスＦ ＥＷ",
 		"en": "MG 1/100 Tallgeese F EW"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "item-1000220190",
+			"url": "https://p-bandai.jp/item/item-1000220190/",
+			"ja": "ＨＧ 1/144 ザク・デザートタイプ ピンクパンサー隊機"
+		},
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "item-1000216105",
+			"url": "https://p-bandai.jp/item/item-1000216105/",
+			"ja": "RG 1/144 ソードインパルスガンダムＳｐｅｃＩＩ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 7040,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 10
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『新機動戦記ガンダムＷ Ｅｎｄｌｅｓｓ Ｗａｌｔｚ 敗者たちの栄光』に登場する",
@@ -62,8 +109,8 @@
 			"・ 商品情報は2021年7月現在のものです。パッケージ、ロゴ及び商品の仕様は、予告なく変更するする場合がございます。"
 		],
 		"en": [
-			"Appearing in \"Mobile Suit Gundam W Endless Waltz: Glory of the Losers\"",
-			"Tallgeese F EW equipped with original weapons such as \"Wing Binder \" and \" Heat Lance\" is commercialized in the Master Grade Series.",
+			"Appearing in \"Mobile Suit GundamW Endless Waltz: Glory of the Losers\"",
+			"Tallgeese F EW equipped with original weapons such as \"Wing Binder\" and \"Heat Lance\" is commercialized in the Master Grade Series.",
 			"● The original equipment that appears in \"The Glory of the Losers\" is thoroughly reproduced with new modeling!",
 			"The shape and equipment of Tallgeese F EW are reproduced according to the settings. The details and color coding of various parts are reproduced with molded colors.",
 			"head",
@@ -72,7 +119,7 @@
 			"The characteristic wing binder is reproduced with new molded parts.",
 			"The impressive personal mark of Zechs Marquis is reproduced in different colors by dividing the parts.",
 			"Equipped with movable and deployable gimmicks in various places, such as the expanded thruster deployment gimmick.",
-			"● Original weapons \"Heat Lance (Tempest Equipment)\" and \" Heat Halberd\" are included.",
+			"● Original weapons \"Heat Lance (Tempest Equipment)\" and \"Heat Halberd\" are included.",
 			"Heat Lance (Tempest equipment)",
 			"The characteristic shape and color coding are reproduced in accordance with the settings.",
 			"Reproduces the folding gimmick of the side grip.",
@@ -86,7 +133,7 @@
 			"Attached weapons: Dover gun / Seal / Beam saber / Heat Lance / Heat Halberd",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/100 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS/PE/ABS",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -110,11 +157,6 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160952_1.jpg",
 				"path": "/images/items/01_3694/1000160952_1.jpg",
 				"hash": "89fb850a38643f142ba69ac8555c84a0"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160952_10.jpg",
-				"path": "/images/items/01_3694/1000160952_10.jpg",
-				"hash": "25b94b2f13bd956b86f3167bb63debda"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160952_2.jpg",
@@ -155,19 +197,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160952_9.jpg",
 				"path": "/images/items/01_3694/1000160952_9.jpg",
 				"hash": "6c408ca67a17798458f8e39106ad44ad"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160952_10.jpg",
+				"path": "/images/items/01_3694/1000160952_10.jpg",
+				"hash": "25b94b2f13bd956b86f3167bb63debda"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3694/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5994", "item-1000220190", "item-1000220189", "item-1000216105"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2360",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2360/"

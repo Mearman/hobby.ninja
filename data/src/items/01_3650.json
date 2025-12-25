@@ -5,6 +5,49 @@
 		"ja": "メカコレクション デウスーラIII世",
 		"en": "Mecha Collection Deusura III"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "yamato",
+			"url": "https://bandai-hobby.net/series/yamato/",
+			"ja": "宇宙戦艦ヤマトシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5498",
+			"url": "https://bandai-hobby.net/item/01_5498/",
+			"ja": "メカコレクションDX 1式空間戦闘攻撃機 コスモタイガーII(単座型/銃座型) [2機セット]"
+		},
+		{
+			"id": "01_5500",
+			"url": "https://bandai-hobby.net/item/01_5500/",
+			"ja": "メカコレクションDX 試製空間戦闘攻撃機 コスモパイソン [2機セット]"
+		},
+		{
+			"id": "01_3667",
+			"url": "https://bandai-hobby.net/item/01_3667/",
+			"ja": "メカコレクション ガイペロン級多層式航宙母艦 バルメス(外洋機動艦隊仕様)"
+		},
+		{
+			"id": "01_2854",
+			"url": "https://bandai-hobby.net/item/01_2854/",
+			"ja": "メカコレクション 自律無人戦闘艦BBB アンドロメダブラック"
+		}
+	],
 	"price": {
 		"amount": 1430,
 		"currency": "JPY",
@@ -21,54 +64,62 @@
 	"description": {
 		"ja": [
 			"『宇宙戦艦ヤマト2205 新たなる旅立ち』より、デスラー戦闘空母「デウスーラIII世」をメカコレクションで商品化！",
-			"■「甲板形態」「砲撃形態」「デスラー砲形態」などの各形態は選択式で組み立てが可能。",
-			"■水転写式デカールでマーキングを再現。",
-			"■角度調整が可能な台座が付属。"
+			"• 「甲板形態」「砲撃形態」「デスラー砲形態」などの各形態は選択式で組み立てが可能。",
+			"• 水転写式デカールでマーキングを再現。",
+			"• 角度調整が可能な台座が付属。"
 		],
 		"en": [
-			"From \"Space Battleship Yamato 2205: A New Journey \", the Dessler battle aircraft carrier \" Deusura III\" is commercialized as a mecha collection!",
-			"• Each form such as \"deck form \", \" battery form \", and \" Desler gun form\" can be assembled selectively.",
+			"From \"Space Battleship Yamato 2205: A New Journey\", the Dessler battle aircraft carrier \"Deusura III\" is commercialized as a mecha collection!",
+			"• Each form such as \"deck form\", \"battery form\", and \"Desler gun form\" can be assembled selectively.",
 			"• Reproduce markings with water transfer decals.",
 			"• Comes with an adjustable pedestal."
 		]
 	},
-	"accessories": {
-		"ja": ["ディスプレイベース×1", "水転写式デカール×1"],
-		"en": ["Display base x 1", "Water transfer decal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイベース",
+				"en": "display base"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4604.jpg",
+				"src": "https://bandai-hobby.net/images/153_4604_s_s9o6jiz6rkv00eyx39hz8ayqytts.jpg",
 				"path": "/images/items/01_3650/153_4604.jpg",
 				"hash": "f60f3bcc829071d367d17eaec55a31d2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4604.jpg",
+				"src": "https://bandai-hobby.net/images/155_4604_s_jgbe66lvnam7bt11hmysdxvjabvn.jpg",
 				"path": "/images/items/01_3650/155_4604.jpg",
 				"hash": "fbb8f15c0971d249e407a7bb8352ea10"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4604.jpg",
+				"src": "https://bandai-hobby.net/images/156_4604_s_jx9zi680x3rw8zivyz104c9ophvn.jpg",
 				"path": "/images/items/01_3650/156_4604.jpg",
 				"hash": "127c8eac471d09cfc4a81a67e5704372"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4604.jpg",
+				"src": "https://bandai-hobby.net/images/157_4604_s_c9rtyl25tqpcqmyt74tvys0z9lv8.jpg",
 				"path": "/images/items/01_3650/157_4604.jpg",
 				"hash": "5850b4e7e514b6c5f8d8dc0b4a0468c8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4604.jpg",
+				"src": "https://bandai-hobby.net/images/158_4604_s_9fyjcndrkzwy0b6xamm4w2rjw7di.jpg",
 				"path": "/images/items/01_3650/158_4604.jpg",
 				"hash": "3add2dff525c216e8f901f827b0525de"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3650/",
-	"brandIds": ["mecha-colle"],
-	"seriesIds": ["yamato"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5498", "01_5500", "01_3667", "01_2854"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3650/"
 }

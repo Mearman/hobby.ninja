@@ -5,6 +5,54 @@
 		"ja": "ＨＧ 1/144 ガンダムハルート（最終決戦仕様）",
 		"en": "HG 1/144 Gundam Harut (Final Battle Specification)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－",
@@ -100,11 +147,6 @@
 				"hash": "d4382b7299470e134f3075a09ada6d8a"
 			},
 			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161766_10.jpg",
-				"path": "/images/items/01_3705/1000161766_10.jpg",
-				"hash": "628c50038b98548f1723683714439e88"
-			},
-			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161766_2.jpg",
 				"path": "/images/items/01_3705/1000161766_2.jpg",
 				"hash": "72bc3d92d1e3506defd95cac932fc1e8"
@@ -143,19 +185,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161766_9.jpg",
 				"path": "/images/items/01_3705/1000161766_9.jpg",
 				"hash": "0abf23a3185048bdba864b19c3a03448"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161766_10.jpg",
+				"path": "/images/items/01_3705/1000161766_10.jpg",
+				"hash": "628c50038b98548f1723683714439e88"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3705/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5963", "01_5961", "01_5951"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2358",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2358/"

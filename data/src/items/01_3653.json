@@ -2,9 +2,51 @@
 	"id": "01_3653",
 	"type": "item",
 	"name": {
-		"ja": "Figure-rise Standard ULTRAMAN SUIT ZOFFY -ACTION-",
-		"en": "Figure-rise Standard ULTRAMAN SUIT ZOFFY -ACTION-"
+		"ja": "Figure-rise Standard ULTRAMAN SUIT ZOFFY -ACTION-"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "ultraman",
+			"url": "https://bandai-hobby.net/series/ultraman/",
+			"ja": "ウルトラマン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5371",
+			"url": "https://bandai-hobby.net/item/01_5371/",
+			"ja": "Figure-rise Standard ウルトラマンティガ マルチタイプ"
+		},
+		{
+			"id": "01_5198",
+			"url": "https://bandai-hobby.net/item/01_5198/",
+			"ja": "Figure-rise Standard ウルトラマンジード プリミティブ"
+		},
+		{
+			"id": "01_5096",
+			"url": "https://bandai-hobby.net/item/01_5096/",
+			"ja": "Figure-rise Standard ULTRAMAN SUIT JACK -ACTION-"
+		},
+		{
+			"id": "01_5046",
+			"url": "https://bandai-hobby.net/item/01_5046/",
+			"ja": "Figure-rise Standard ウルトラマンブレーザー"
+		}
+	],
 	"price": {
 		"amount": 3740,
 		"currency": "JPY",
@@ -21,93 +63,129 @@
 	"description": {
 		"ja": [
 			"『ULTRAMAN』より、早田進が装着するゾフィースーツがFigure-rise Standardに堂々参戦！",
-			"■複数のボールジョイントで胸部と腹部を連結し可動させることにより、ひねり方向の可動域の大幅アップに成功。",
-			"■首パーツがボールジョイントになったことで、頭部の回転方向の可動域が大幅に拡大。",
-			"■胸、肩のほか、エフェクトパーツにも偏光パール素材を用いたクリアパーツを採用。",
-			"■腹部関節は「可動優先時」と「LEDユニット（別売り）内蔵時」の２パターンの選択式。",
-			"■LEDユニット（別売り）を胸部に収め、胸と目を光らせることができる。"
+			"• 複数のボールジョイントで胸部と腹部を連結し可動させることにより、ひねり方向の可動域の大幅アップに成功。",
+			"• 首パーツがボールジョイントになったことで、頭部の回転方向の可動域が大幅に拡大。",
+			"• 胸、肩のほか、エフェクトパーツにも偏光パール素材を用いたクリアパーツを採用。",
+			"• 腹部関節は「可動優先時」と「LEDユニット（別売り）内蔵時」の２パターンの選択式。",
+			"• LEDユニット（別売り）を胸部に収め、胸と目を光らせることができる。"
 		],
 		"en": [
 			"From \"ULTRAMAN\", the Sophie suit worn by Susumu Hayata will be participating in Figure-rise Standard!",
 			"• By connecting and moving the chest and abdomen with multiple ball joints, we have succeeded in significantly increasing the range of motion in the twisting direction.",
 			"• The neck part is now a ball joint, which greatly expands the range of motion in the rotational direction of the head.",
 			"• In addition to the chest, shoulders, and effect parts, clear parts using polarized pearl material are used.",
-			"• The abdominal joint can be selected from two patterns: \"when movable is prioritized \" and \" when the LED unit (sold separately) is built in\".",
+			"• The abdominal joint can be selected from two patterns: \"when movable is prioritized\" and \"when the LED unit (sold separately) is built in\".",
 			"• An LED unit (sold separately) can be placed in the chest to make the chest and eyes shine."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"マルス１３３改×1",
-			"スペシウム光線×1",
-			"ウルトラスラッシュ×2",
-			"スペシウムブレード×2",
-			"ハンドパーツ　握り手（左右）、表情手（左右）、武器持ち手（右）",
-			"ジョイントパーツ×1",
-			"Figure-rise Effect台座×1",
-			"ホイルシール×1",
-			"マーキングシール×1"
-		],
-		"en": [
-			"Mars 133 Kai x1",
-			"Specium ray x1",
-			"Ultra Slash x2",
-			"Specium blade x2",
-			"Hand parts Gripping hands (left and right), expression hands (left and right), weapon holders (right)",
-			"Joint parts x 1",
-			"Figure-rise Effect pedestal x 1",
-			"Foil Seal×1",
-			"MarkingSeal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "マルス１３３改",
+				"en": "Mars 133 Kai"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "スペシウム光線",
+				"en": "specium ray"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ウルトラスラッシュ",
+				"en": "ultra slash"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "スペシウムブレード",
+				"en": "specium blade"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ　握り手（左右）、表情手（左右）、武器持ち手（右）",
+				"en": "Hand parts Gripping hands (left and right), expression hands (left and right), weapon holders (right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "Figure-rise Effect台座",
+				"en": "Figure-rise Effect pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4607.jpg",
+				"src": "https://bandai-hobby.net/images/153_4607_s_71q5assi5908hp25ql9g2ab8z8wt.jpg",
 				"path": "/images/items/01_3653/153_4607.jpg",
 				"hash": "67c78e32acf3dc386c6d03e30328c938"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4607.jpg",
+				"src": "https://bandai-hobby.net/images/155_4607_s_vf2akty9ucuhw68ti9xz5wi98qw5.jpg",
 				"path": "/images/items/01_3653/155_4607.jpg",
 				"hash": "7314e3ad5cd159a4304a13fd93b2c5e4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4607.jpg",
+				"src": "https://bandai-hobby.net/images/156_4607_s_lcasyu71qcdowsk2wtgijc353006.jpg",
 				"path": "/images/items/01_3653/156_4607.jpg",
 				"hash": "215198a240f2cba0d658f43f38025882"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4607.jpg",
+				"src": "https://bandai-hobby.net/images/157_4607_s_88c8y7j1ifh5ffhewp0fyscm8l9n.jpg",
 				"path": "/images/items/01_3653/157_4607.jpg",
 				"hash": "15367832b808b0a073efe2e76f6baf15"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4607.jpg",
+				"src": "https://bandai-hobby.net/images/158_4607_s_zifwm7f3s7supwwmgqttrm0rpoq7.jpg",
 				"path": "/images/items/01_3653/158_4607.jpg",
 				"hash": "7c7e001a53412aadad0b8ef0398d3027"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4607.jpg",
+				"src": "https://bandai-hobby.net/images/159_4607_s_fjnekj6js3ejulbre9b1svgen06c.jpg",
 				"path": "/images/items/01_3653/159_4607.jpg",
 				"hash": "5be605805a942a7fb2dc8525a7a9fd09"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4607.jpg",
+				"src": "https://bandai-hobby.net/images/189_4607_s_oy5gazgtfbv1kojm7iuo1zmc32r3.jpg",
 				"path": "/images/items/01_3653/189_4607.jpg",
 				"hash": "eef2ef844ce96f297bc029e923366f61"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4607.jpg",
+				"src": "https://bandai-hobby.net/images/190_4607_s_kgv5q7zrnb6olh40ppoqdd4xd4fk.jpg",
 				"path": "/images/items/01_3653/190_4607.jpg",
 				"hash": "42a4d6276d4fa7cac06b70edb25971e4"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3653/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["ultraman"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5371", "01_5198", "01_5096", "01_5046"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3653/"
 }

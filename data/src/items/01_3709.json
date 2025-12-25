@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ガンダムベース限定 RX-78-2 ガンダム Ver.3.0[チタニウムフィニッシュ]",
 		"en": "MG 1/100 Gundam Base Limited RX-78-2 Gundam Ver.3.0 [Titanium Finish]"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 10340,
 		"currency": "JPY",
@@ -18,11 +62,10 @@
 		"day": 7
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"「MG 1/100 RX-78-2 ガンダム Ver.3.0」が、豪華限定仕様のチタニウムフィニッシュで登場！",
+			"「MG 1/100 RX-78-2 ガンダムVer.3.0」が、豪華限定仕様のチタニウムフィニッシュで登場！",
 			"• ホワイトの外装にはチタニウムフィニッシュを採用。加えて、首元や胸部には艶消し金メッキ加工を施し、高級感のある仕上がりに。",
 			"• トリコロールカラーを彩るブルーやレッドの外装には、メタリック成形色を採用！",
 			"• 「ムーバブルアーマーシステム」を搭載。装甲パーツ内部と連動した可動性を付加。",
@@ -32,7 +75,7 @@
 		],
 		"en": [
 			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"\"MG 1/100 RX-78-2 Gundam Ver.3.0\" is now available in a luxurious limited edition titanium finish!",
+			"\"MG 1/100 RX-78-2 GundamVer.3.0\" is now available in a luxurious limited edition titanium finish!",
 			"• The white exterior features a titanium finish. In addition, the neck and chest are plated with matte gold for a luxurious finish.",
 			"• Metallic molding colors are used for the blue and red exterior that colors the tricolor!",
 			"• Equipped with a \"movable armor system\". Added mobility linked to the inside of the armored parts.",
@@ -66,13 +109,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3709/",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3709/"
 }

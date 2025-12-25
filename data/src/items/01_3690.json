@@ -5,6 +5,50 @@
 		"ja": "HG 1/72 メイレスジョウガン",
 		"en": "HG 1/72 Meires Jogun"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -18,89 +62,104 @@
 		"day": 13
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"「境界戦機」よりレジスタンスの鉄塚ガシンが搭乗するI-LeS(自律思考型AI)を搭載したAMAIM(アメイン)「ジョウガン」をHGで立体化。",
-			"■商品化に於いてKEN OKUYAMA DESIGNによる可動構造の検証を経て立体化されたAMAIM(アメイン)。",
-			"■リアアーマーにはアウトリガー展開状態をパーツの差し替えで再現。カカト部分も展開し、射撃ポーズの再現が可能。",
-			"■120mm二連装狙撃砲が付属。銃床パーツはスライド式のストックで射撃ポーズを再現。",
-			"■左肩シールド裏への戦闘短刀の収納が可能。"
+			"• 商品化に於いてKEN OKUYAMA DESIGNによる可動構造の検証を経て立体化されたAMAIM(アメイン)。",
+			"• リアアーマーにはアウトリガー展開状態をパーツの差し替えで再現。カカト部分も展開し、射撃ポーズの再現が可能。",
+			"• 120mm二連装狙撃砲が付属。銃床パーツはスライド式のストックで射撃ポーズを再現。",
+			"• 左肩シールド裏への戦闘短刀の収納が可能。"
 		],
 		"en": [
-			"From \"Kyoukai Senki \", the AMAIM \" Jougan\" equipped with I-LeS (autonomous thinking AI), piloted by Gasin Tetsuzuka of the Resistance, is made into a three-dimensional HG.",
+			"From \"Kyoukai Senki\", the AMAIM \"Jougan\" equipped with I-LeS (autonomous thinking AI), piloted by Gasin Tetsuzuka of the Resistance, is made into a three-dimensional HG.",
 			"• AMAIM was made into a three-dimensional product after verification of its movable structure by KEN OKUYAMA DESIGN.",
 			"• The outrigger deployment state is reproduced on the rear armor by replacing parts. The heel part can also be expanded to recreate shooting poses.",
 			"• 120mm dual sniper gun included. The gun stock part reproduces the shooting pose with a sliding stock.",
 			"• A combat dagger can be stored on the back of the left shoulder seal."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"120mm二連装狙撃砲×１",
-			"戦闘短刀×１",
-			"左肩用シールド×１",
-			"ハンドパーツ 平手（左右）、武器持ち手(左右)、ライフル持ち手(右)",
-			"リアアーマー展開用パーツ×１",
-			"シール×１"
-		],
-		"en": [
-			"120mm dual sniper gun x 1",
-			"Combat dagger x1",
-			"Seal for left shoulder x 1",
-			"Hand parts Open hand (left and right), weapon handle (left and right), rifle handle (right)",
-			"Rear armor deployment parts x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "120mm二連装狙撃砲×１",
+				"en": "120mm dual sniper gun x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "戦闘短刀×１",
+				"en": "Combat dagger x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "左肩用シールド×１",
+				"en": "Seal for left shoulder x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ 平手（左右）、武器持ち手(左右)、ライフル持ち手(右)",
+				"en": "Hand parts Open hand (left and right), weapon handle (left and right), rifle handle (right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "リアアーマー展開用パーツ×１",
+				"en": "Rear armor deployment parts x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4644.jpg",
+				"src": "https://bandai-hobby.net/images/153_4644_s_8godae8xeuf81fvfanyif0e7xvjc.jpg",
 				"path": "/images/items/01_3690/153_4644.jpg",
 				"hash": "7cd3726ba9b0b0f9a3d3cb6a5a377dda"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4644.jpg",
+				"src": "https://bandai-hobby.net/images/155_4644_s_r1773xunhfydb5iewpzbtva927ap.jpg",
 				"path": "/images/items/01_3690/155_4644.jpg",
 				"hash": "e6acb6bb974f9b65887b636799836df7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4644.jpg",
+				"src": "https://bandai-hobby.net/images/156_4644_s_z4ozgcuft23qai6zx2yj6o2fpldu.jpg",
 				"path": "/images/items/01_3690/156_4644.jpg",
 				"hash": "d681935e82fffad90daf5371054997b1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4644.jpg",
+				"src": "https://bandai-hobby.net/images/157_4644_s_uv12p59o81ps1ip9uq2rn2zw57hn.jpg",
 				"path": "/images/items/01_3690/157_4644.jpg",
 				"hash": "573e41d859b154035f7d1ab69462c39d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4644.jpg",
+				"src": "https://bandai-hobby.net/images/158_4644_s_du9krnhz3iuy1ysr0gt8arexbp3d.jpg",
 				"path": "/images/items/01_3690/158_4644.jpg",
 				"hash": "630686ea28cc8827107265cc70bc4f48"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4644.jpg",
+				"src": "https://bandai-hobby.net/images/159_4644_s_6mr5b1zsxln48x9u14ol5ra329hn.jpg",
 				"path": "/images/items/01_3690/159_4644.jpg",
 				"hash": "4d701173ac1acab89605cf19abff765b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4644.jpg",
+				"src": "https://bandai-hobby.net/images/189_4644_s_00njnjk9f3tf2geqvjxzcvoulefj.jpg",
 				"path": "/images/items/01_3690/189_4644.jpg",
 				"hash": "0abacc39fd1b3424ec0fa787407d00ea"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4644.jpg",
+				"src": "https://bandai-hobby.net/images/190_4644_s_pwnkqna1gs2og6554jg22gyyuzh3.jpg",
 				"path": "/images/items/01_3690/190_4644.jpg",
 				"hash": "5ecc8e39759fe8376736a91ed3ba11b6"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3690/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3690/"
 }

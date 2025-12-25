@@ -2,9 +2,63 @@
 	"id": "01_3641",
 	"type": "item",
 	"name": {
-		"ja": "HGUC 1/144 BHC専用エコプラ RX-78-2 ガンダム",
-		"en": "HGUC 1/144 BHC exclusive eco plastic RX-78-2 Gundam"
+		"ja": "HGUC 1/144 BHC専用エコプラ RX-78-2ガンダム",
+		"en": "HGUC 1/144 BHC exclusive eco plastic RX-78-2Gundam"
 	},
+	"brands": [
+		{
+			"id": "ecoplaproject_g",
+			"url": "https://bandai-hobby.net/brand/ecoplaproject_g/",
+			"ja": "エコプラプロジェクト"
+		},
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5045",
+			"url": "https://bandai-hobby.net/item/01_5045/",
+			"ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム [リサーキュレーションカラー/ネオンブルー]"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -18,7 +72,6 @@
 		"day": 17
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「ＨＧ 1/144 バンダイホビーセンター専用エコプラ ＲＸ－７８－２ ガンダム」が登場！",
@@ -34,12 +87,12 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4595.jpg",
+				"src": "https://bandai-hobby.net/images/153_4595_s_nmtww7p0i5eifma9tgalgskatz3a.jpg",
 				"path": "/images/items/01_3641/153_4595.jpg",
 				"hash": "602251921b085cd66c8f22fb9c960f0f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4595.jpg",
+				"src": "https://bandai-hobby.net/images/155_4595_s_2z4139viiny658a2ghac7nnx7hg1.jpg",
 				"path": "/images/items/01_3641/155_4595.jpg",
 				"hash": "6ba2b7a4f69ee5870e18bd18e43bbd2a"
 			}
@@ -47,10 +100,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3641/",
-	"brandIds": ["ecoplaproject_g", "hg", "hguc"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5045", "01_4985", "01_4971", "01_4365"],
 	"manual": {
 		"id": "907",
 		"url": "https://manual.bandai-hobby.net/menus/detail/907/"
