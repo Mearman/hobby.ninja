@@ -35,9 +35,17 @@ interface TagPageProps {
 export const dynamicParams = false;
 
 // Generate static params for all tags
+// Returns placeholder when empty to satisfy Next.js static export requirements
 export function generateStaticParams() {
 	const tagIds = getTagIds();
 	console.log(`Generating static params for ${tagIds.length} tags`);
+
+	// Next.js static export requires at least one param
+	// Return placeholder that will 404 via notFound() in page component
+	if (tagIds.length === 0) {
+		return [{ id: "__placeholder__" }];
+	}
+
 	return tagIds.map(id => ({ id }));
 }
 
