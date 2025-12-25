@@ -5,6 +5,60 @@
 		"ja": "ＨＧ 1/144 ヴァイエイト・シュイヴァン & メリクリウス・シュイヴァン",
 		"en": "HG 1/144 Vayate Schuyvan & Meriklius Schuyvan"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "g-unit",
+			"url": "https://bandai-hobby.net/series/g-unit/",
+			"ja": "新機動戦記ガンダムW デュアルストーリー G-UNIT"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000217501",
+			"url": "https://p-bandai.jp/item/item-1000217501/",
+			"ja": "ＨＧ 1/144 レオール"
+		},
+		{
+			"id": "item-1000209099",
+			"url": "https://p-bandai.jp/item/item-1000209099/",
+			"ja": "ＨＧ 1/144 ガンダムバーンレプオス"
+		},
+		{
+			"id": "item-1000176706",
+			"url": "https://p-bandai.jp/item/item-1000176706/",
+			"ja": "ＨＧ 1/144 ガンダムエルオーブースター"
+		},
+		{
+			"id": "01_3798",
+			"url": "https://bandai-hobby.net/item/01_3798/",
+			"ja": "ＨＧ 1/144 ガンダムアスクレプオス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 4
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－",
@@ -75,7 +128,7 @@
 			"Inseparable “attack” and “defense”",
 			"Vaieit Schuyvan & Meriklius Schuyvan",
 			"－－－－－－－－－－－－－－－－－－－－",
-			"From \"Mobile Suit Gundam W DUAL STORY G-UNIT\", driven by the Armonia sisters of OZ Prize",
+			"From \"Mobile Suit GundamW DUAL STORY G-UNIT\", driven by the Armonia sisters of OZ Prize",
 			"Vayate Shuivan and Meriklius Shuivan appear in a set of two HGs.",
 			"The characteristic coloring that is different from Vayate and Merricrius is the molding color,",
 			"Weapons with heads and movable gimmicks are reproduced with new modeling. New display parts for Planet Defensor are included.",
@@ -97,7 +150,7 @@
 			"Two stands and four deployment frames are included. The frame becomes circular by connecting all of them, and it is also possible to deploy all 20 frames.",
 			"● It is possible to reproduce the form of Vayate Shuivan Kai!",
 			"A new container and rear armor parts for storing the planet defender for Vayate Shuivan are included.",
-			"By replacing parts, it is possible to reproduce the specifications of the final battle in the comic ``Mobile Suit Gundam W G-UNIT Operation Galiarest''.",
+			"By replacing parts, you can recreate the specifications from the final battle in the comic ``New Mobile Report GundamW G-UNIT Operation Galiarest.''",
 			"● Transcription delivered in full color package",
 			"Attached weapons: Beam Cannon / Planet Defensor / Crash Seal / Beam Gun",
 			"Accessories: Planet Defensor frame & stand set / Planet Defensor container",
@@ -122,59 +175,81 @@
 			"・Product information is current as of 202211. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["ビームキャノン", "プラネイトディフェンサー", "クラッシュシールド", "ビームガン"],
-		"en": ["beam cannon", "planet defender", "Crash Seal Do", "beam gun"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームキャノン",
+				"en": "beam cannon"
+			}
+		},
+		{
+			"name": {
+				"ja": "プラネイトディフェンサー",
+				"en": "planet defender"
+			}
+		},
+		{
+			"name": {
+				"ja": "クラッシュシールド",
+				"en": "Crash Seal Do"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームガン",
+				"en": "beam gun"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5298.jpg",
+				"src": "https://bandai-hobby.net/images/153_5298_s_yptjpflt0x5t97xhqcl1m9yqok0m.jpg",
 				"path": "/images/items/01_4393/153_5298.jpg",
 				"hash": "59530a9e3affde5d6cad1c815e1c8996"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5298.jpg",
+				"src": "https://bandai-hobby.net/images/155_5298_s_0m5enqxwrrhqcxgipvd5rgjhs48h.jpg",
 				"path": "/images/items/01_4393/155_5298.jpg",
 				"hash": "1c4c2de3d7758e23057ab7e8c60b1488"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5298.jpg",
+				"src": "https://bandai-hobby.net/images/156_5298_s_vadgi7v2jt3f5qurofwwpub3reiz.jpg",
 				"path": "/images/items/01_4393/156_5298.jpg",
 				"hash": "5e4cccd7f03fcb5185d04f8f9ea75b34"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5298.jpg",
+				"src": "https://bandai-hobby.net/images/157_5298_s_tzto7xumtqmt998xpl358m1qed6g.jpg",
 				"path": "/images/items/01_4393/157_5298.jpg",
 				"hash": "06fa3ff70365b9b95709e55df17df5b7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5298.jpg",
+				"src": "https://bandai-hobby.net/images/158_5298_s_1lu6po4qjgl96r0gruejoo4k2lvo.jpg",
 				"path": "/images/items/01_4393/158_5298.jpg",
 				"hash": "456b1f5dd8234ea92d165eb957afc19a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5298.jpg",
+				"src": "https://bandai-hobby.net/images/159_5298_s_2p63gs5xlqirfl0wej4oy5bq7j38.jpg",
 				"path": "/images/items/01_4393/159_5298.jpg",
 				"hash": "1b635fe42ff6078bb0ce5c30b396a6ff"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5298.jpg",
+				"src": "https://bandai-hobby.net/images/189_5298_s_pc903ju0hsaj5f0yx9e52d83xc2l.jpg",
 				"path": "/images/items/01_4393/189_5298.jpg",
 				"hash": "3cb95bc2d7a281830f1bdcf87b23eeb2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5298.jpg",
+				"src": "https://bandai-hobby.net/images/190_5298_s_fksejos22rcdzraqbdn1h1s0uyg7.jpg",
 				"path": "/images/items/01_4393/190_5298.jpg",
 				"hash": "beb327f70d2299a9254c8b6c72910d6e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5298.jpg",
+				"src": "https://bandai-hobby.net/images/191_5298_s_9kgwf5tzpv24nixyvqnee4an4cnr.jpg",
 				"path": "/images/items/01_4393/191_5298.jpg",
 				"hash": "276b03a604d14447f7f7865bdea42fe2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5298.jpg",
+				"src": "https://bandai-hobby.net/images/192_5298_s_6oahnv6k00ojprq2m524el93llnd.jpg",
 				"path": "/images/items/01_4393/192_5298.jpg",
 				"hash": "05e342f242c487bc270a7630c3f26b8f"
 			}
@@ -182,14 +257,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4393/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["g-unit"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000217501", "item-1000209099", "item-1000176706", "01_3798"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2478",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2478/"

@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン",
-		"en": "SDW HEROES DOMINANT SUPERIOR D DRAGON"
+		"en": "SDW HEROES Dominant Superior Darkness Dragon"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		},
+		{
+			"id": "01_4634",
+			"url": "https://bandai-hobby.net/item/01_4634/",
+			"ja": "SDW HEROES クリアカラーセットIII"
+		},
+		{
+			"id": "01_4294",
+			"url": "https://bandai-hobby.net/item/01_4294/",
+			"ja": "SDW HEROES スペリオルストライク フリーダムドラゴン"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -21,57 +64,64 @@
 	"description": {
 		"ja": [
 			"外伝プロジェクト『SDガンダムワールド ヒーローズ THE LEGEND OF DRAGON KNIGHT』より、「SDW HEROESドミナントスペリオル ダークネスドラゴン」が登場！",
-			"■羽部分と尻尾パーツはボールジョイントにより可動し、表情をつけてディスプレイが可能。",
-			"■クリアパープルの平手パーツが付属。"
+			"• 羽部分と尻尾パーツはボールジョイントにより可動し、表情をつけてディスプレイが可能。",
+			"• クリアパープルの平手パーツが付属。"
 		],
 		"en": [
-			"\"SDW HEROES Dominant Superior Darkness Dragon \" is now available from the side story project \" SD Gundam World Heroes THE LEGEND OF DRAGON KNIGHT\"!",
+			"\"SDW HEROES Dominant Superior Darkness Dragon\" is now available from the side story project \"SD Gundam World Heroes THE LEGEND OF DRAGON KNIGHT\"!",
 			"• The wings and tail parts can be moved using ball joints, allowing you to display different expressions.",
 			"• Clear purple open hand parts are included."
 		]
 	},
-	"accessories": {
-		"ja": ["開き手(左右)×1", "シール×１"],
-		"en": ["Open hand (left and right) x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "開き手(左右)",
+				"en": "Open hand (left and right)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5246.jpg",
+				"src": "https://bandai-hobby.net/images/153_5246_s_a6w216e6gq5lng9lu6ucx7p63hwk.jpg",
 				"path": "/images/items/01_4336/153_5246.jpg",
 				"hash": "58f2650f25afaca3dac5c2ce71634823"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5246.jpg",
+				"src": "https://bandai-hobby.net/images/155_5246_s_odwdcg8strx9kf7tkxmvixz7qgm8.jpg",
 				"path": "/images/items/01_4336/155_5246.jpg",
 				"hash": "f68f06729ab4c25f863b94e6417c1faa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5246.jpg",
+				"src": "https://bandai-hobby.net/images/156_5246_s_820xjgav0317srv9dsnuoagyb16v.jpg",
 				"path": "/images/items/01_4336/156_5246.jpg",
 				"hash": "24fea93ccac37ccef5b023e23b306cd7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5246.jpg",
+				"src": "https://bandai-hobby.net/images/157_5246_s_ikpg6an282ksiyhy5m7cvvt3bgi0.jpg",
 				"path": "/images/items/01_4336/157_5246.jpg",
 				"hash": "bba0b7919d8acca79727132f3d53c0b6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5246.jpg",
+				"src": "https://bandai-hobby.net/images/158_5246_s_vex8uxg2ruiglnwg3vsv1lp9r69v.jpg",
 				"path": "/images/items/01_4336/158_5246.jpg",
 				"hash": "d3837a6c8777b189ad0229185c1c1d18"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5246.jpg",
+				"src": "https://bandai-hobby.net/images/159_5246_s_8qi75woogr0anwgw01nzb4u4u3m9.jpg",
 				"path": "/images/items/01_4336/159_5246.jpg",
 				"hash": "9497f20a64f7c2a3d3e9f316a4e3c238"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4336/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000193966", "01_4312", "01_4634", "01_4294"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4336/"
 }

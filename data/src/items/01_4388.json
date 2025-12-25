@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard ウルトラマンデッカー フラッシュタイプ",
-		"en": "Figure-rise Standard ULTRAMAN DECKER FLASH TYPE"
+		"en": "Figure-rise Standard Ultraman Decker Flash Type"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "ultraman",
+			"url": "https://bandai-hobby.net/series/ultraman/",
+			"ja": "ウルトラマン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5371",
+			"url": "https://bandai-hobby.net/item/01_5371/",
+			"ja": "Figure-rise Standard ウルトラマンティガ マルチタイプ"
+		},
+		{
+			"id": "01_5198",
+			"url": "https://bandai-hobby.net/item/01_5198/",
+			"ja": "Figure-rise Standard ウルトラマンジード プリミティブ"
+		},
+		{
+			"id": "01_5096",
+			"url": "https://bandai-hobby.net/item/01_5096/",
+			"ja": "Figure-rise Standard ULTRAMAN SUIT JACK -ACTION-"
+		},
+		{
+			"id": "01_5046",
+			"url": "https://bandai-hobby.net/item/01_5046/",
+			"ja": "Figure-rise Standard ウルトラマンブレーザー"
+		}
+	],
 	"price": {
 		"amount": 3630,
 		"currency": "JPY",
@@ -21,16 +64,16 @@
 	"description": {
 		"ja": [
 			"好評放送中の『ウルトラマンデッカー』より「ウルトラマンデッカー フラッシュタイプ」がFigure-rise Standardシリーズにラインアップ！",
-			"■「カラータイマー」は赤色と青色の２種が付属し、パーツの差し替えにより劇中シーンの再現が可能。",
-			"■パーツの色分けを徹底追求。シールの使用箇所を最小限におさえ、成形色により色分けを再現。",
-			"■「ウルトラデュアルソード」は、ウイングの開閉により２形態を再現可能。",
-			"■首の後ろのパーツが沈み込むことで頭部の可動が拡大。また、肩部アーマーのスライドにより自然な腕の可動を実現！",
-			"■額のパーツと専用ハンドパーツの差し替えにより、必殺技直前のポージングも可能に。",
-			"■「セルジェンド光線」を再現するエフェクトには、PETシートを採用し、カラフルな色彩を再現。",
-			"■表情豊かなハンドパーツも付属。"
+			"• 「カラータイマー」は赤色と青色の２種が付属し、パーツの差し替えにより劇中シーンの再現が可能。",
+			"• パーツの色分けを徹底追求。シールの使用箇所を最小限におさえ、成形色により色分けを再現。",
+			"• 「ウルトラデュアルソード」は、ウイングの開閉により２形態を再現可能。",
+			"• 首の後ろのパーツが沈み込むことで頭部の可動が拡大。また、肩部アーマーのスライドにより自然な腕の可動を実現！",
+			"• 額のパーツと専用ハンドパーツの差し替えにより、必殺技直前のポージングも可能に。",
+			"• 「セルジェンド光線」を再現するエフェクトには、PETシートを採用し、カラフルな色彩を再現。",
+			"• 表情豊かなハンドパーツも付属。"
 		],
 		"en": [
-			"\"Ultraman Decker Flash Type \" from the popular \" Ultraman Decker\" is now available in the Figure-rise Standard series!",
+			"\"Ultraman Decker Flash Type\" from the popular \"Ultraman Decker\" is now available in the Figure-rise Standard series!",
 			"• Two types of \"Color Timer\" are included: red and blue, and scenes from the play can be recreated by replacing parts.",
 			"• Thorough pursuit of color-coding of parts. The number of seals used is kept to a minimum, and color coding is reproduced by molding color.",
 			"• \"Ultra Dual Sword\" can reproduce two forms by opening and closing the wings.",
@@ -40,82 +83,119 @@
 			"• Expressive hand parts are also included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ウルトラデュアルソード×1",
-			"セルジェンド光線用エフェクト×１式",
-			"カラータイマー×2種",
-			"額パーツ×2種",
-			"ハンドパーツ×1式",
-			"シール×2種"
-		],
-		"en": [
-			"Ultra dual sword x1",
-			"Cellgend ray effect x 1",
-			"Color timer x 2 types",
-			"Forehead parts x 2 types",
-			"Hand parts x 1 set",
-			"Seal×2 types"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ウルトラデュアルソード",
+				"en": "ultra dual sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "セルジェンド光線用エフェクト×１式",
+				"en": "Cellgend ray effect x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "カラータイマー",
+				"en": "color timer"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "額パーツ",
+				"en": "forehead parts"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5293.jpg",
+				"src": "https://bandai-hobby.net/images/153_5293_s_hlxyvik4syvqmclab1n7o2j8fxbh.jpg",
 				"path": "/images/items/01_4388/153_5293.jpg",
 				"hash": "fee64a06f4f3d6779d59be6640fff44a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5293.jpg",
+				"src": "https://bandai-hobby.net/images/155_5293_s_7py25h5pa623jmbnyrzuqhug5b7m.jpg",
 				"path": "/images/items/01_4388/155_5293.jpg",
 				"hash": "2335e3b426cdab398b645afe6d6b07b7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5293.jpg",
+				"src": "https://bandai-hobby.net/images/156_5293_s_sev3c8ax8bs3tyqo76p6et39dsdz.jpg",
 				"path": "/images/items/01_4388/156_5293.jpg",
 				"hash": "fb4137896f4404cdcb0a6d679238a93b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5293.jpg",
+				"src": "https://bandai-hobby.net/images/157_5293_s_o529gnala8tcvjvgw9canvl2einh.jpg",
 				"path": "/images/items/01_4388/157_5293.jpg",
 				"hash": "4fa46b50a7944ac0879a0abd7aa65a91"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5293.jpg",
+				"src": "https://bandai-hobby.net/images/158_5293_s_tn1ji8anycwjnkju1ko0utt3vj1c.jpg",
 				"path": "/images/items/01_4388/158_5293.jpg",
 				"hash": "fce565f0c86720e92cbcd07e579bd899"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5293.jpg",
+				"src": "https://bandai-hobby.net/images/159_5293_s_6g8czi6sihrfo76koezj8m9d9ocd.jpg",
 				"path": "/images/items/01_4388/159_5293.jpg",
 				"hash": "aa85fb808ea9ff219dbd423c6f3a4f60"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5293.jpg",
+				"src": "https://bandai-hobby.net/images/189_5293_s_mloa9254zlqn7pe0w61pr37m8yuo.jpg",
 				"path": "/images/items/01_4388/189_5293.jpg",
 				"hash": "79c3052dc34b679ebfa8e3863d25ace8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5293.jpg",
+				"src": "https://bandai-hobby.net/images/190_5293_s_t0kegvqpyki7k0ldjcacim7pvloh.jpg",
 				"path": "/images/items/01_4388/190_5293.jpg",
 				"hash": "909fd74e0f504e159af25f43b25dea47"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5293.jpg",
+				"src": "https://bandai-hobby.net/images/191_5293_s_c5l1fmwc04hxnntufoi4dfn8jwel.jpg",
 				"path": "/images/items/01_4388/191_5293.jpg",
 				"hash": "a47c68feff163afd6891ab42caa81e3f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5293.jpg",
+				"src": "https://bandai-hobby.net/images/192_5293_s_xy2otrheiug8l0oj4rs9nvf99ho2.jpg",
 				"path": "/images/items/01_4388/192_5293.jpg",
 				"hash": "72fd0c1520c5e0f622909703ad17c6a3"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4388/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["ultraman"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5371", "01_5198", "01_5096", "01_5046"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4388/"
 }

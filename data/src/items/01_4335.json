@@ -3,8 +3,37 @@
 	"type": "item",
 	"name": {
 		"ja": "ガンダムデカールNo.138 RG 1/144 ゴッドガンダム用",
-		"en": "GUNDAM DECAL138 RG 1/144 GOD GUNDAM"
+		"en": "Gundam Decal No.138 RG 1/144 for God Gundam"
 	},
+	"brands": [
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "ggundam",
+			"url": "https://bandai-hobby.net/series/ggundam/",
+			"ja": "機動武闘伝Ｇガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4197",
+			"url": "https://bandai-hobby.net/item/01_4197/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 アザーセンチュリーズエンブレムセット1"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,39 +47,39 @@
 		"day": 18
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「ガンダムデカール」新ラインアップ！1/144スケールに使用できる水転写式デカールが登場！",
-			"■RG 1/144 ゴッドガンダム用。"
+			"• RG 1/144 ゴッドガンダム用。"
 		],
 		"en": [
 			"\"Gundam Decal\" new lineup! Introducing water transfer decals that can be used on 1/144 Scale!",
 			"• For RG 1/144 God Gundam."
 		]
 	},
-	"accessories": {
-		"ja": ["水転写式デカール×1"],
-		"en": ["Water transfer decal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5245.jpg",
+				"src": "https://bandai-hobby.net/images/153_5245_s_72wb8xngtaa88ebptqrg430ue18a.jpg",
 				"path": "/images/items/01_4335/153_5245.jpg",
 				"hash": "182ba0d0d17c0fa56d8276ea308c606a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5245.jpg",
+				"src": "https://bandai-hobby.net/images/155_5245_s_upd52xz8uns9cfo5y0xgl6x1kqmk.jpg",
 				"path": "/images/items/01_4335/155_5245.jpg",
 				"hash": "666605b5a314edf9f165e320b6dc9da4"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4335/",
-	"brandIds": ["gundam_decal"],
-	"seriesIds": ["ggundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4197"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4335/"
 }

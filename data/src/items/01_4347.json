@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "プラノサウルス ステゴサウルス",
-		"en": "PLANNOSAURUS Stegosaurus"
+		"en": "planosaurus stegosaurus"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "plannosaurus",
+			"url": "https://bandai-hobby.net/series/plannosaurus/",
+			"ja": "プラノサウルス"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5501",
+			"url": "https://bandai-hobby.net/item/01_5501/",
+			"ja": "プラノサウルス テリジノサウルス"
+		},
+		{
+			"id": "01_5389",
+			"url": "https://bandai-hobby.net/item/01_5389/",
+			"ja": "プラノサウルス ブラキオサウルス"
+		},
+		{
+			"id": "01_5390",
+			"url": "https://bandai-hobby.net/item/01_5390/",
+			"ja": "プラノサウルス 陸海空恐竜セット"
+		},
+		{
+			"id": "01_5248",
+			"url": "https://bandai-hobby.net/item/01_5248/",
+			"ja": "プラノサウルス パラサウロロフス"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -34,35 +71,32 @@
 			"• \"Dinosaur Build\" allows you to restore the dinosaur's appearance using specifications unique to plastic models, where the skin parts are attached to the top of the skeleton.",
 			"• Easy to assemble as there is no need for tools such as nippers or adhesives.",
 			"• Small details such as the hard bone studs on the sides of the body and bony armor that protect against carnivorous dinosaurs are faithfully rendered.",
-			"• Distinctive back bone plates and tail spines are included in each form of \"skeletal build \" and \" dinosaur build\".",
+			"• Distinctive back bone plates and tail spines are included in each form of \"skeletal build\" and \"dinosaur build\".",
 			"• Various parts such as the front legs, hind legs, and neck are movable, allowing you to display your favorite poses."
 		]
 	},
-	"accessories": {
-		"ja": ["シール×1", "台座×1"],
-		"en": ["Seal×1", "Pedestal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182412_1.jpg",
 				"path": "/images/items/01_4347/1000182412_1.jpg",
 				"hash": "e98a58447a9ee6b9baf2ee4997db3ad3"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182412_10.jpg",
-				"path": "/images/items/01_4347/1000182412_10.jpg",
-				"hash": "a207c89f5bab5acbd763a8f6b9896e2a"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182412_11.jpg",
-				"path": "/images/items/01_4347/1000182412_11.jpg",
-				"hash": "759128adeaa85f24c674ba360cd48c42"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182412_12.jpg",
-				"path": "/images/items/01_4347/1000182412_12.jpg",
-				"hash": "1b1972fffc469b8291f9f5944e675ab4"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182412_2.jpg",
@@ -103,13 +137,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182412_9.jpg",
 				"path": "/images/items/01_4347/1000182412_9.jpg",
 				"hash": "9d9311305e1125349d171980a2d6070f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182412_10.jpg",
+				"path": "/images/items/01_4347/1000182412_10.jpg",
+				"hash": "a207c89f5bab5acbd763a8f6b9896e2a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182412_11.jpg",
+				"path": "/images/items/01_4347/1000182412_11.jpg",
+				"hash": "759128adeaa85f24c674ba360cd48c42"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182412_12.jpg",
+				"path": "/images/items/01_4347/1000182412_12.jpg",
+				"hash": "1b1972fffc469b8291f9f5944e675ab4"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4347/",
-	"brandIds": [],
-	"seriesIds": ["plannosaurus"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5501", "01_5389", "01_5390", "01_5248"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4347/"
 }

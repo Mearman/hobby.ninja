@@ -3,8 +3,31 @@
 	"type": "item",
 	"name": {
 		"ja": "1/1 ガンプラくんDXセット(ランナーVer.再現パーツ付き)",
-		"en": "1/1 GUNPLA-KUN DX SET (WITH RUNNER Ver. RECREATION PARTS)"
+		"en": "1/1 Gunpla-kun DX set (Runner Ver. with reproduction parts)"
 	},
+	"brands": [
+		{
+			"id": "limex",
+			"url": "https://bandai-hobby.net/brand/limex/",
+			"ja": "ライメックス"
+		}
+	],
+	"series": [
+		{
+			"id": "gunplakun",
+			"url": "https://bandai-hobby.net/series/gunplakun/",
+			"ja": "ガンプラくん"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/1",
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -18,7 +41,6 @@
 		"day": 29
 	},
 	"targetAge": 8,
-	"scale": "1/1",
 	"description": {
 		"ja": [
 			"ついに「ガンプラくん」が色付き版で登場！選択式でランナー状態でもディスプレイが可能！おなじみの装備も付属。素材にはLIMEXを採用。LIMEXに多色成形が実現されていることは史上初。",
@@ -35,17 +57,50 @@
 			"LIMEX is a new material that is environmentally friendly and contains more than 50% limestone as its main raw material, greatly reducing the use of conventional petroleum-derived resins."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ランナーパーツ×1",
-			"シール×1",
-			"ビーム・サーベル×1",
-			"ビーム・ライフル×1",
-			"シールド×1",
-			"ディスプレイ用台座×1"
-		],
-		"en": ["Runner parts x 1", "Seal×1", "Beam saber x 1", "Beam rifle x1", "Seal × 1", "Display pedestal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ランナーパーツ",
+				"en": "Runner parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・ライフル",
+				"en": "beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ用台座",
+				"en": "display pedestal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -86,9 +141,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4378/",
-	"brandIds": ["limex"],
-	"seriesIds": ["gunplakun"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_4378/"
 }

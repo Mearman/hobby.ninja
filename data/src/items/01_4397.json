@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/72 境界戦機ウェポンセット5",
-		"en": "HG 1/72 AMAIM Warrior at the Borderline Weapon Set5"
+		"en": "HG 1/72 Kyoukai Senki Weapon Set 5"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -18,15 +62,14 @@
 		"day": 17
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"『境界戦機』より、メイレス系機体のカスタマイズの幅を広げるウェポンセットが登場！",
-			"■超熱振式戦闘湾曲刀や180mm背部懸架型自動擲弾砲などの武装および装甲パーツのセット。",
-			"■200mm戦闘杭射出機の杭部分はスライド可動し、差し替えなしで射出状態を再現。",
-			"■左手の武器持ち手も付属。",
-			"■「HG 1/72 メイレスビャクチ」（別売り）と組み合わせることで、外伝の最終決戦時をイメージさせるカスタマイズが可能。",
-			"■「ビャクチ」以外のメイレス系機体へのカスタマイズにも最適。"
+			"• 超熱振式戦闘湾曲刀や180mm背部懸架型自動擲弾砲などの武装および装甲パーツのセット。",
+			"• 200mm戦闘杭射出機の杭部分はスライド可動し、差し替えなしで射出状態を再現。",
+			"• 左手の武器持ち手も付属。",
+			"• 「HG 1/72 メイレスビャクチ」（別売り）と組み合わせることで、外伝の最終決戦時をイメージさせるカスタマイズが可能。",
+			"• 「ビャクチ」以外のメイレス系機体へのカスタマイズにも最適。"
 		],
 		"en": [
 			"From \"Kyoukai Senki\" comes a Weapon set that expands the range of customization of Meires-type aircraft!",
@@ -37,80 +80,101 @@
 			"• Ideal for customizing Meires type aircraft other than \"Byakuchi\"."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"装甲パーツ×1式",
-			"180mm背部懸架型自動擲弾砲×2",
-			"200mm戦闘杭射出機×2",
-			"超熱振式戦闘湾曲刀×2",
-			"ハンドパーツ 武器持ち手（左）×2"
-		],
-		"en": [
-			"Armor parts x 1 set",
-			"180mm back-suspended automatic grenade gun x 2",
-			"200mm combat pile injector x 2",
-			"Super heat wave combat curved sword x 2",
-			"Hand parts Weapon holder (left) x 2"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "装甲パーツ",
+				"en": "armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "180mm背部懸架型自動擲弾砲",
+				"en": "180mm dorsal automatic grenade gun"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "200mm戦闘杭射出機",
+				"en": "200mm combat pile injection machine"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "超熱振式戦闘湾曲刀",
+				"en": "Super heat wave combat curved sword"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ 武器持ち手（左）",
+				"en": "Hand parts Weapon holder (left)"
+			},
+			"count": 2
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5301.jpg",
+				"src": "https://bandai-hobby.net/images/153_5301_s_rnr0mysyewk7x9iwh3vze3485b3w.jpg",
 				"path": "/images/items/01_4397/153_5301.jpg",
 				"hash": "ce739e752937d5690976d2029c73dc20"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5301.jpg",
+				"src": "https://bandai-hobby.net/images/155_5301_s_olk4bofz4s493e005i5qsci2qv66.jpg",
 				"path": "/images/items/01_4397/155_5301.jpg",
 				"hash": "d3b19a71d0d7450dae97c816de07a1db"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5301.jpg",
+				"src": "https://bandai-hobby.net/images/156_5301_s_mr88tfmqajfv6iu0ign6q15tbqyk.jpg",
 				"path": "/images/items/01_4397/156_5301.jpg",
 				"hash": "720359fff321bb2f5c5ee527772084fa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5301.jpg",
+				"src": "https://bandai-hobby.net/images/157_5301_s_a35agmu9ps6dqg1xl6wehilb8v9p.jpg",
 				"path": "/images/items/01_4397/157_5301.jpg",
 				"hash": "0b542dca97b29d2831cd31cc552749cb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5301.jpg",
+				"src": "https://bandai-hobby.net/images/158_5301_s_g4iv8udy1s7wn2q3ckfikpj7yoem.jpg",
 				"path": "/images/items/01_4397/158_5301.jpg",
 				"hash": "f3a2a0806d573ad9c38268bd190dd10a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5301.jpg",
+				"src": "https://bandai-hobby.net/images/159_5301_s_rh2ugtr1mw6ln3b82iy5uy0bbrq0.jpg",
 				"path": "/images/items/01_4397/159_5301.jpg",
 				"hash": "2fd2cf430e3fda8bb7220f4d57ccddec"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5301.jpg",
+				"src": "https://bandai-hobby.net/images/189_5301_s_l563cbpo04fqlc45f44tyno1sc39.jpg",
 				"path": "/images/items/01_4397/189_5301.jpg",
 				"hash": "19a31425061ded57fd4a495df4ba8a84"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5301.jpg",
+				"src": "https://bandai-hobby.net/images/190_5301_s_5ro10dn4o41bpbelarbd0kzq7ppk.jpg",
 				"path": "/images/items/01_4397/190_5301.jpg",
 				"hash": "4244b42ca6ce5fa241359d6429efa931"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5301.jpg",
+				"src": "https://bandai-hobby.net/images/191_5301_s_wgtigte4pwpjnexwcgbhyyytui13.jpg",
 				"path": "/images/items/01_4397/191_5301.jpg",
 				"hash": "7dcf9f6a42ecda56ff58a42f8317a537"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5301.jpg",
+				"src": "https://bandai-hobby.net/images/192_5301_s_zny30ayl2g7dvuwjntchnk0cbd0b.jpg",
 				"path": "/images/items/01_4397/192_5301.jpg",
 				"hash": "4aff4a044b40430b0ee944aa9af709ae"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4397/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4397/"
 }

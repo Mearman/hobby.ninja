@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 bEXM-33T ヴォルパノヴァ(タンクVer.)",
-		"en": "30MM 1/144 bEXM-33T VOLPANOVA (TANK Ver.)"
+		"en": "30MM 1/144 bEXM-33T Volpanova (Tank Ver.)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1628,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 20
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMバイロン軍に可変型の新機体「ヴォルパノヴァ」が登場！",
@@ -37,10 +79,20 @@
 			"• Can also be customized with existing aircraft and optional parts. Create your own mass-produced machine with unlimited customization!"
 		]
 	},
-	"accessories": {
-		"ja": ["バズーカ×１", "シールドライフル×１"],
-		"en": ["Bazooka x1", "Seal dry rifle x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "バズーカ×１",
+				"en": "Bazooka x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールドライフル×１",
+				"en": "Seal dry rifle x 1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -92,10 +144,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4382/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3758",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3758/"

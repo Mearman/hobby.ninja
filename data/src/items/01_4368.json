@@ -5,6 +5,60 @@
 		"ja": "ＭＧ 1/100 ガンダムＦ９０用 ミッションパック Ｃタイプ&Ｔタイプ",
 		"en": "Mission pack for MG 1/100 Gundam F90 C type & T type"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "f90",
+			"url": "https://bandai-hobby.net/series/f90/",
+			"ja": "機動戦士ガンダムF90"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7056",
+			"url": "https://bandai-hobby.net/item/01_7056/",
+			"ja": "MG 1/100 F90IIIY クラスターガンダム用 ミッションパック Xタイプ"
+		},
+		{
+			"id": "item-1000224327",
+			"url": "https://p-bandai.jp/item/item-1000224327/",
+			"ja": "ＭＧ 1/100 Ｆ８０ ガンレイド"
+		},
+		{
+			"id": "item-1000214719",
+			"url": "https://p-bandai.jp/item/item-1000214719/",
+			"ja": "ＭＧ 1/100 ガンダムＦ９０用 ミッションパック Ｐタイプ"
+		},
+		{
+			"id": "item-1000224957",
+			"url": "https://p-bandai.jp/item/item-1000224957/",
+			"ja": "ＭＧ 1/100 ガンダムＦ９０用 ミッションパック 専用ハンガー 2個セット"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 2
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"ス キ ー ユ ニ ッ ト ＆ 寒 冷 地 仕 様 の C タ イ プ",
@@ -80,7 +133,7 @@
 			"Introducing a mission pack that can be jointed with \"MG 1/100 Gundam F90\" (sold separately) to reproduce the cold region specification C type and chase battle specification T type!",
 			"---",
 			"*The MS body is not included with this product.",
-			"* To reproduce the posted photo, this product and \"MG 1/100 Gundam F90\" (sold separately/Premium Bandai sales item) are required.",
+			"* To reproduce the posted photo, this product and \"MG 1/100 GundamF90\" (sold separately/Premium Bandai sales item) are required.",
 			"A mission pack developed for the prototype MS Gundam F90 of the \"Formula Plan\" by Sanary (S・N・R・I).",
 			"The C type and T type have been newly drawn by Mr. Kunio Okawara and are now available in master grade with completely new modeling!",
 			"<Two types of mission packs can be reproduced! ＞",
@@ -108,9 +161,9 @@
 			"*This product only includes “Mission Pack C Type & T Type”.",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/100 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS/PVC/PE",
-			"No glue is used for assembly",
+			"No glue used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"*The finished product in the photo is painted. Also, a prototype that is still under development. The actual product may differ.",
 			"*Product materials may change depending on the production period of the sold product. Thank you for your understanding.",
@@ -134,11 +187,6 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182414_1.jpg",
 				"path": "/images/items/01_4368/1000182414_1.jpg",
 				"hash": "6acda9dd3f1ee79452b40eba51290896"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182414_10.jpg",
-				"path": "/images/items/01_4368/1000182414_10.jpg",
-				"hash": "d444c5582c862e55f139da662774c5d9"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182414_2.jpg",
@@ -179,19 +227,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182414_9.jpg",
 				"path": "/images/items/01_4368/1000182414_9.jpg",
 				"hash": "d9f7b04e5f09669b04a19631da03f9da"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182414_10.jpg",
+				"path": "/images/items/01_4368/1000182414_10.jpg",
+				"hash": "d444c5582c862e55f139da662774c5d9"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4368/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": ["f90"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_7056", "item-1000224327", "item-1000214719", "item-1000224957"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2475",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2475/"

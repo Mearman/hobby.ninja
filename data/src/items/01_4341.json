@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "HG ヒュッケバインMk-II",
-		"en": "HG HÜCKEBEIN Mk-II"
+		"en": "HG Huckebein Mk-II"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "superrobot_og",
+			"url": "https://bandai-hobby.net/series/superrobot_og/",
+			"ja": "スーパーロボット大戦OG"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5578",
+			"url": "https://bandai-hobby.net/item/01_5578/",
+			"ja": "HG アシュセイヴァー"
+		},
+		{
+			"id": "01_5491",
+			"url": "https://bandai-hobby.net/item/01_5491/",
+			"ja": "HG ヴァイスリッター"
+		},
+		{
+			"id": "item-1000214961",
+			"url": "https://p-bandai.jp/item/item-1000214961/",
+			"ja": "ＨＧ ヒュッケバインＭｋ－ＩＩトロンベ"
+		},
+		{
+			"id": "01_5369",
+			"url": "https://bandai-hobby.net/item/01_5369/",
+			"ja": "HG ガンレオン"
+		}
+	],
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -21,103 +64,139 @@
 	"description": {
 		"ja": [
 			"『スーパーロボット大戦OG』より、ヒュッケバインの後継機として開発されたパーソナルトルーパー「ヒュッケバインMk-II」が豊富な武装と共にHGシリーズでロールアウト！",
-			"■各所に内蔵された可動ギミックが躍動感のあるアクションを演出。胸部、腹部、腰部に搭載されたギミックにより、腰をひねる動きが可能。",
-			"■左腕には「チャクラム・シューター」が装着可能。射出用の「チャクラム」にはリード線を取り付けることで、有線による射出状態を再現。",
-			"■脚部の接地性を意識した関節機構により説得力のあるアクションポーズが可能に。",
-			"■大型武装「Gインパクト・キャノン」は、各所の展開ギミックと腰部へのジョイントにより射撃体勢を取ることが可能。",
-			"■「フォトン・ライフル」や「ビームソード」など特徴的な武装が付属。"
+			"• 各所に内蔵された可動ギミックが躍動感のあるアクションを演出。胸部、腹部、腰部に搭載されたギミックにより、腰をひねる動きが可能。",
+			"• 左腕には「チャクラム・シューター」が装着可能。射出用の「チャクラム」にはリード線を取り付けることで、有線による射出状態を再現。",
+			"• 脚部の接地性を意識した関節機構により説得力のあるアクションポーズが可能に。",
+			"• 大型武装「Gインパクト・キャノン」は、各所の展開ギミックと腰部へのジョイントにより射撃体勢を取ることが可能。",
+			"• 「フォトン・ライフル」や「ビームソード」など特徴的な武装が付属。"
 		],
 		"en": [
-			"From \"Super Robot Wars OG \", the personal trooper \" Huckebein Mk-II\", which was developed as a successor to the Huckebein, is rolled out in the HG series with a rich armament!",
+			"From \"Super Robot Wars OG\", the personal trooper \"Huckebein Mk-II\", which was developed as a successor to the Huckebein, is rolled out in the HG series with a rich armament!",
 			"• Movable gimmicks built into various parts create dynamic action. Gimmicks installed on the chest, abdomen, and waist allow for movements that twist the waist.",
-			"• A \"Chakram Shooter \" can be attached to the left arm. By attaching a lead wire to the \" Chakram\" for injection, it reproduces the wired injection state.",
+			"• A \"Chakram Shooter\" can be attached to the left arm. By attaching a lead wire to the \"Chakram\" for injection, it reproduces the wired injection state.",
 			"• A joint mechanism that takes into account the ground contact of the legs allows for convincing action poses.",
 			"• The large armament \"G Impact Cannon\" can be put into a shooting position by deploying gimmicks in various places and by connecting it to the waist.",
-			"• Comes with distinctive weapons such as \"Photon Rifle \" and \" Beam Sword\"."
+			"• Comes with distinctive weapons such as \"Photon Rifle\" and \"Beam Sword\"."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ハンドパーツ×１式",
-			"チャクラム・シューター×1",
-			"差し替え用チャクラム×1",
-			"ビームソード×2",
-			"Gインパクト・キャノン×1",
-			"フォトン・ライフル×1",
-			"シール×1",
-			"リード線×1",
-			"ディスプレイベース×1"
-		],
-		"en": [
-			"Hand parts x 1 set",
-			"Chakram Shooter x1",
-			"Replacement chakram x 1",
-			"Beam sword x2",
-			"G impact cannon x 1",
-			"Photon rifle x1",
-			"Seal×1",
-			"Lead wire x 1",
-			"Display base x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "チャクラム・シューター",
+				"en": "chakram shooter"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "差し替え用チャクラム",
+				"en": "Replacement chakram"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームソード",
+				"en": "beam sword"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "Gインパクト・キャノン",
+				"en": "G impact cannon"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "フォトン・ライフル",
+				"en": "photon rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リード線",
+				"en": "lead wire"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース",
+				"en": "display base"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5250.jpg",
+				"src": "https://bandai-hobby.net/images/153_5250_s_8peoeskbp6f36jbsclhf5yzsx3pk.jpg",
 				"path": "/images/items/01_4341/153_5250.jpg",
 				"hash": "160550a0cfaf877fce92a46bc3873b9a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5250.jpg",
+				"src": "https://bandai-hobby.net/images/155_5250_s_mywxp6zu9kfrqp9db3pssnzper88.jpg",
 				"path": "/images/items/01_4341/155_5250.jpg",
 				"hash": "edf9faf3a21dbe6b18b5cd6f2a36ba95"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5250.jpg",
+				"src": "https://bandai-hobby.net/images/156_5250_s_flugallf8yspj79g3zunxskjyrfg.jpg",
 				"path": "/images/items/01_4341/156_5250.jpg",
 				"hash": "d0946b1efc7f82a9616a62513358b8ee"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5250.jpg",
+				"src": "https://bandai-hobby.net/images/157_5250_s_ahfzxx4av12obbcv8jihyjonrqd7.jpg",
 				"path": "/images/items/01_4341/157_5250.jpg",
 				"hash": "73a63ed09ef06c8e0715584104aa62e0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5250.jpg",
+				"src": "https://bandai-hobby.net/images/158_5250_s_w1jdxk8gqw69yhhvjd2s1erd2voc.jpg",
 				"path": "/images/items/01_4341/158_5250.jpg",
 				"hash": "8825bd2faeefc0423a2c16068d758dd6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5250.jpg",
+				"src": "https://bandai-hobby.net/images/159_5250_s_pgfvxp40eufamtxluzthpw8ouaws.jpg",
 				"path": "/images/items/01_4341/159_5250.jpg",
 				"hash": "d0673cc7f63b488f7e8c11c3ffb6aac7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5250.jpg",
+				"src": "https://bandai-hobby.net/images/189_5250_s_kud7dwfnrffwuxfoukk58vfoqp1y.jpg",
 				"path": "/images/items/01_4341/189_5250.jpg",
 				"hash": "40614bcbdd3ae81989ece411ea62dbeb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5250.jpg",
+				"src": "https://bandai-hobby.net/images/190_5250_s_k01r76vdj4j3tshgwnb3hxerkcuc.jpg",
 				"path": "/images/items/01_4341/190_5250.jpg",
 				"hash": "7e4d4e6aaa624d0028be0eeb88ce346b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5250.jpg",
+				"src": "https://bandai-hobby.net/images/191_5250_s_szgq2a360sc17lai5is6ked0z7xm.jpg",
 				"path": "/images/items/01_4341/191_5250.jpg",
 				"hash": "bd2edf5c21f3082890edcd8419f7c00a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5250.jpg",
+				"src": "https://bandai-hobby.net/images/192_5250_s_d166ezj1lzzw54x3obxb69pjxiap.jpg",
 				"path": "/images/items/01_4341/192_5250.jpg",
 				"hash": "4d5ad3307153da8da0b6c372df286e9c"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4341/",
-	"brandIds": ["hg"],
-	"seriesIds": ["superrobot_og"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5578", "01_5491", "item-1000214961", "01_5369"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4341/"
 }

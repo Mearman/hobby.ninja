@@ -3,8 +3,60 @@
 	"type": "item",
 	"name": {
 		"ja": "カスタマイズウェポンズ(エネルギー武装)",
-		"en": "CUSTOMIZE WEAPONS (ENERGY WEAPON)"
+		"en": "Customized Weapons (Energy Weapons)"
 	},
+	"brands": [
+		{
+			"id": "customize_scenebase",
+			"url": "https://bandai-hobby.net/brand/customize_scenebase/",
+			"ja": "カスタマイズシーンベース/エフェクト/マテリアル/ウェポンズ"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "customize_scenebase",
+			"url": "https://bandai-hobby.net/brand/customize_scenebase/",
+			"ja": "カスタマイズシーンベース/エフェクト/マテリアル/ウェポンズ"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
 	"price": {
 		"amount": 825,
 		"currency": "JPY",
@@ -32,35 +84,80 @@
 			"• Comes with round and square energy tanks. Can be attached to each aircraft and weapon."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"合体剣×1式",
-			"刀身パーツ(クリアブルー)×1式",
-			"刀身パーツ(グレー)×1式",
-			"中型剣持ち手パーツ(柄＋鍔)×2セット",
-			"エネルギータンクパーツ(クリアブルー)角型×1、丸型×1",
-			"エネルギータンクパーツ(グレー)角型×1、丸型×1"
-		],
-		"en": [
-			"Combined sword x 1 type",
-			"Blade parts (clear blue) x 1 set",
-			"Blade parts (gray) x 1 set",
-			"Medium-sized sword handle parts (handle + tsuba) x 2 sets",
-			"Energy tank parts (clear blue) square type x 1, round type x 1",
-			"Energy tank parts (gray) square type x 1, round type x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "合体剣",
+				"en": "combined sword"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "刀身パーツ(クリアブルー)",
+				"en": "Blade parts (clear blue)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "刀身パーツ(グレー)",
+				"en": "Blade parts (gray)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "中型剣持ち手パーツ(柄＋鍔)",
+				"en": "Medium-sized sword handle parts (hilt + tsuba)"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "セット",
+				"en": "set"
+			}
+		},
+		{
+			"name": {
+				"ja": "エネルギータンクパーツ(クリアブルー)角型",
+				"en": "Energy tank parts (clear blue) square type"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "、丸型×1",
+				"en": ", round x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "エネルギータンクパーツ(グレー)角型",
+				"en": "Energy tank parts (gray) square type"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "、丸型×1",
+				"en": ", round x 1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191379_1.jpg",
 				"path": "/images/items/01_4383/1000191379_1.jpg",
 				"hash": "592ab5647c2dadce48421e7204705cd4"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191379_10.jpg",
-				"path": "/images/items/01_4383/1000191379_10.jpg",
-				"hash": "6598b633f18e8b939b0c483088fe7275"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191379_2.jpg",
@@ -101,15 +198,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191379_9.jpg",
 				"path": "/images/items/01_4383/1000191379_9.jpg",
 				"hash": "cea6e7da3bc075efc4b590788863422c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191379_10.jpg",
+				"path": "/images/items/01_4383/1000191379_10.jpg",
+				"hash": "6598b633f18e8b939b0c483088fe7275"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4383/",
-	"brandIds": ["customize_scenebase", "30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3759",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3759/"

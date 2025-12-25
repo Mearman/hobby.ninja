@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard Amplified シャイングレイモン",
-		"en": "Figure-rise Standard Amplified SHINEGREYMON"
+		"en": "Figure-rise Standard Amplified Shine Greymon"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard-amp",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard-amp/",
+			"ja": "Figure-rise Standard Amplified[フィギュアライズ スタンダード アンプリファイド]"
+		}
+	],
+	"series": [
+		{
+			"id": "digimon",
+			"url": "https://bandai-hobby.net/series/digimon/",
+			"ja": "デジモンシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5983",
+			"url": "https://bandai-hobby.net/item/01_5983/",
+			"ja": "Figure-rise Standard Amplified カイゼルグレイモン"
+		},
+		{
+			"id": "item-1000216437",
+			"url": "https://p-bandai.jp/item/item-1000216437/",
+			"ja": "Figure-rise Standard Amplified オメガモン(Ｘ抗体) [リミテッドカラー]"
+		},
+		{
+			"id": "01_5277",
+			"url": "https://bandai-hobby.net/item/01_5277/",
+			"ja": "Figure-rise Standard Amplified パイルドラモン"
+		},
+		{
+			"id": "item-1000198198",
+			"url": "https://p-bandai.jp/item/item-1000198198/",
+			"ja": "Figure-rise Standard Amplified デュークモン[スペシャルコーティング]"
+		}
+	],
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -21,17 +64,17 @@
 	"description": {
 		"ja": [
 			"『デジモンセイバーズ』より光竜型デジモン「シャイングレイモン」がAmplifiedシリーズにラインアップ!",
-			"■「As'まりあ氏」全面協力のもと造形とギミックを徹底追求。",
-			"■巨大な剣「ジオグレイソード」にはジュエルシールやPETシールを使用し、艶やかな質感とディテール表現を実現。さらにプラモデルオリジナルギミックを搭載し、パーツの差し替えで双剣モードに変形が可能。",
-			"■ジョイントパーツを使用することで「ジオグレイソード」は双剣モードで両脚にマウント可能。",
-			"■肩の関節は引き出し式の構造により可動範囲が拡大し、「ジオグレイソード」の両手持ちを再現。",
-			"■足先に可動軸を設けることで安定感のある接地を実現。また、膝裏の装甲は脚に連動し可動域を拡大。",
-			"■翼の各羽が個別に可動し、展開時と収納時で大きくシルエットが変化。",
-			"■尻尾にはリード線を内蔵することで細やかな表情付けが可能。",
-			"■プラモデルとしての拡張性を考慮し、各所に拡張用のハードポイントを配置。"
+			"• 「As'まりあ氏」全面協力のもと造形とギミックを徹底追求。",
+			"• 巨大な剣「ジオグレイソード」にはジュエルシールやPETシールを使用し、艶やかな質感とディテール表現を実現。さらにプラモデルオリジナルギミックを搭載し、パーツの差し替えで双剣モードに変形が可能。",
+			"• ジョイントパーツを使用することで「ジオグレイソード」は双剣モードで両脚にマウント可能。",
+			"• 肩の関節は引き出し式の構造により可動範囲が拡大し、「ジオグレイソード」の両手持ちを再現。",
+			"• 足先に可動軸を設けることで安定感のある接地を実現。また、膝裏の装甲は脚に連動し可動域を拡大。",
+			"• 翼の各羽が個別に可動し、展開時と収納時で大きくシルエットが変化。",
+			"• 尻尾にはリード線を内蔵することで細やかな表情付けが可能。",
+			"• プラモデルとしての拡張性を考慮し、各所に拡張用のハードポイントを配置。"
 		],
 		"en": [
-			"Light dragon type Digimon \"Shine Greymon \" from \" Digimon Savers\" is now available in the Amplified series!",
+			"Light dragon type Digimon \"Shine Greymon\" from \"Digimon Savers\" is now available in the Amplified series!",
 			"• Thoroughly pursue modeling and gimmicks with the full cooperation of \"As'Maria\".",
 			"• The giant sword \"Geo Gray Sword\" uses Jewel Seal and PETSeal to achieve a glossy texture and detailed expression. Furthermore, it is equipped with a plastic model original gimmick, and can be transformed into dual sword mode by replacing parts.",
 			"• By using joint parts, \"Geo Gray Sword\" can be mounted on both legs in dual sword mode.",
@@ -42,31 +85,60 @@
 			"• Considering expandability as a plastic model, hard points for expansion are placed in various places."
 		]
 	},
-	"accessories": {
-		"ja": ["ジオグレイソード×1", "ジョイントパーツ×1式", "シール×1", "PETシール×1", "ジュエルシール×1", "リード線×1"],
-		"en": ["Geo Gray Sword x1", "Joint parts x 1 set", "Seal×1", "PETSeal×1", "Jewel Seal×1", "Lead wire x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ジオグレイソード",
+				"en": "geo gray sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "PETシール",
+				"en": "PETSeal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジュエルシール",
+				"en": "Jewel Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リード線",
+				"en": "lead wire"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191429_1.jpg",
 				"path": "/images/items/01_4398/1000191429_1.jpg",
 				"hash": "6985eb10a1d4b78797b05c9b84710ae7"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191429_10.jpg",
-				"path": "/images/items/01_4398/1000191429_10.jpg",
-				"hash": "b38e6665ff041e6be467f3324e5dac8d"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191429_11.jpg",
-				"path": "/images/items/01_4398/1000191429_11.jpg",
-				"hash": "9b0b430ee68caa32923c30a6ddb7399f"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191429_12.jpg",
-				"path": "/images/items/01_4398/1000191429_12.jpg",
-				"hash": "7a6656988b068ca182fa1c541cf37c78"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191429_2.jpg",
@@ -107,13 +179,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191429_9.jpg",
 				"path": "/images/items/01_4398/1000191429_9.jpg",
 				"hash": "fb7825c798c606a349e0571ff5db958a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191429_10.jpg",
+				"path": "/images/items/01_4398/1000191429_10.jpg",
+				"hash": "b38e6665ff041e6be467f3324e5dac8d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191429_11.jpg",
+				"path": "/images/items/01_4398/1000191429_11.jpg",
+				"hash": "9b0b430ee68caa32923c30a6ddb7399f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191429_12.jpg",
+				"path": "/images/items/01_4398/1000191429_12.jpg",
+				"hash": "7a6656988b068ca182fa1c541cf37c78"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4398/",
-	"brandIds": ["figurerise-standard-amp"],
-	"seriesIds": ["digimon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5983", "item-1000216437", "01_5277", "item-1000198198"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4398/"
 }

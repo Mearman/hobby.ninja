@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MS オプションパーツセット７（イビルコスチューム）［カラーＡ］",
-		"en": "30MS OPTION PARTS SET 7 (EVIL COSTUME) [COLOR A]"
+		"en": "30MS Option Parts Set 7 (Evil Costume) [Color A]"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5975",
+			"url": "https://bandai-hobby.net/item/01_5975/",
+			"ja": "30MS 和泉愛依"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5954",
+			"url": "https://bandai-hobby.net/item/01_5954/",
+			"ja": "30MS オプションヘアスタイルパーツVol.12 全4種 ミディアムヘア2[イエロー4]"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -27,47 +69,68 @@
 			"• 30 MINUTESシリーズ共通の3mm径の軸を採用。「30 MINUTES MISSIONS」のパーツもオプションとして装着が可能。(※「30 MINUTES MISSIONS」キットの対象年齢は8才以上です)"
 		],
 		"en": [
-			"• Smooth assembly is possible due to the ``optimum'' Runner parts arrangement, with consideration for ease of assembly and work flow.",
+			"• Smooth assembly is possible due to the ``optimal'' Runner parts arrangement, with consideration for ease of assembly and work flow.",
 			"• In addition to 2 unprinted face parts, 2 types of head parts (FP-C type) are included. In combination with \"30 MINUTES SISTERS Water Transfer Decal General Purpose 1\" (sold separately), you can create expressive characters!",
 			"• Purple medium hairstyle parts and horn parts are included.",
 			"• \"30 MINUTES SISTERS\" has a lineup of face parts, hairstyle parts, and body parts for each part. You can create your own sister by combining parts sold separately.",
-			"• Adopts a 3mm diameter shaft common to the 30 MINUTES series. \"30 MINUTES MISSIONS \" parts can also be installed as options. (*\" 30 MINUTES MISSIONS\" Kit is for ages 8 and up)"
+			"• Adopts a 3mm diameter shaft common to the 30 MINUTES series. \"30 MINUTES MISSIONS\" parts can also be installed as options. (*\"30 MINUTES MISSIONS\" Kit is for ages 8 and up)"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ボディパーツ×１式",
-			"ジョイントパーツ×１式",
-			"無塗装フェイスパーツ×２",
-			"頭部パーツ×2種",
-			"ヘアスタイルパーツ×1",
-			"首パーツ×1式"
-		],
-		"en": [
-			"Body parts x 1 set",
-			"Joint parts x 1 set",
-			"Unpainted face parts x 2",
-			"Head parts x 2 types",
-			"Hair style parts x 1",
-			"Neck parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ボディパーツ×１式",
+				"en": "Body parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ×１式",
+				"en": "Joint parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "無塗装フェイスパーツ×２",
+				"en": "Unpainted face parts x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "頭部パーツ",
+				"en": "head parts"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヘアスタイルパーツ",
+				"en": "hairstyle parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "首パーツ",
+				"en": "neck parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182386_1.jpg",
 				"path": "/images/items/01_4338/1000182386_1.jpg",
 				"hash": "c2ee37def61df4b9b1ac7164abb7f19c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182386_10.jpg",
-				"path": "/images/items/01_4338/1000182386_10.jpg",
-				"hash": "dc8cf3eaf1d11e46706de9a9c8f2a5c7"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182386_11.jpg",
-				"path": "/images/items/01_4338/1000182386_11.jpg",
-				"hash": "3100b1570edc8d051e668067ac375226"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182386_2.jpg",
@@ -108,15 +171,21 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182386_9.jpg",
 				"path": "/images/items/01_4338/1000182386_9.jpg",
 				"hash": "a37c3d487ae12c29f5f46126cc432d86"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182386_10.jpg",
+				"path": "/images/items/01_4338/1000182386_10.jpg",
+				"hash": "dc8cf3eaf1d11e46706de9a9c8f2a5c7"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182386_11.jpg",
+				"path": "/images/items/01_4338/1000182386_11.jpg",
+				"hash": "3100b1570edc8d051e668067ac375226"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4338/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3491",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3491/"

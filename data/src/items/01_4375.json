@@ -3,8 +3,36 @@
 	"type": "item",
 	"name": {
 		"ja": "ENTRY GRADE うずまきナルト",
-		"en": "ENTRY GRADE UZUMAKI NARUTO"
+		"en": "ENTRY GRADE Uzumaki Naruto"
 	},
+	"brands": [
+		{
+			"id": "entry_grade",
+			"url": "https://bandai-hobby.net/brand/entry_grade/",
+			"ja": "ENTRY GRADE"
+		}
+	],
+	"series": [
+		{
+			"id": "naruto",
+			"url": "https://bandai-hobby.net/series/naruto/",
+			"ja": "NARUTO -ナルト-"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4376",
+			"url": "https://bandai-hobby.net/item/01_4376/",
+			"ja": "ENTRY GRADE うちはサスケ"
+		}
+	],
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -21,11 +49,11 @@
 	"description": {
 		"ja": [
 			"全てのプラモデル未経験者に贈る入門用シリーズ「ENTRY GRADE」にうずまきナルトが登場！",
-			"■少ないパーツ数で、プラモデルを初めてつくる方でもサクサクと組み立てが可能。",
-			"■タッチゲートだからパーツは道具を使わず手で“プチッ！”と取れる。",
-			"■接着剤なしでパズルのように楽しく組み立てられる。",
-			"■パーツは色が分かれているから、最小限のシールだけで塗装なしでもカッコよく仕上がる。",
-			"■ポーズを固定し、パーツ数を抑えることで、躍動感あるこだわりの造形表現を実現。"
+			"• 少ないパーツ数で、プラモデルを初めてつくる方でもサクサクと組み立てが可能。",
+			"• タッチゲートだからパーツは道具を使わず手で“プチッ！”と取れる。",
+			"• 接着剤なしでパズルのように楽しく組み立てられる。",
+			"• パーツは色が分かれているから、最小限のシールだけで塗装なしでもカッコよく仕上がる。",
+			"• ポーズを固定し、パーツ数を抑えることで、躍動感あるこだわりの造形表現を実現。"
 		],
 		"en": [
 			"Uzumaki Naruto appears in the introductory series \"ENTRY GRADE\" given to all plastic model inexperienced people!",
@@ -36,48 +64,67 @@
 			"• By fixing the pose and reducing the number of parts, we have achieved a dynamic and detailed modeling expression."
 		]
 	},
-	"accessories": {
-		"ja": ["ランナー×3", "シール×2種", "取扱説明書×1"],
-		"en": ["Runner×3", "Seal×2 types", "Handling manual×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ランナー",
+				"en": "Runner"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "取扱説明書",
+				"en": "Handling manual"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5281.jpg",
+				"src": "https://bandai-hobby.net/images/153_5281_s_8fe4rncma6osfmc5esixmnzwtjiw.jpg",
 				"path": "/images/items/01_4375/153_5281.jpg",
 				"hash": "737dd283902d95a819aba628b2e8cd4e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5281.jpg",
+				"src": "https://bandai-hobby.net/images/155_5281_s_w3ul6npiflhupijsm36ic4vcpn8w.jpg",
 				"path": "/images/items/01_4375/155_5281.jpg",
 				"hash": "84b211d05eb29dbfd0729818abb2a615"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5281.jpg",
+				"src": "https://bandai-hobby.net/images/156_5281_s_p9d7wh0dk5kqrgwn2myn3zkgeede.jpg",
 				"path": "/images/items/01_4375/156_5281.jpg",
 				"hash": "d6511e14318b03bf5648f0280d5a5157"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5281.jpg",
+				"src": "https://bandai-hobby.net/images/157_5281_s_7rispcm5ysaf00cbk4xnow7zkrfh.jpg",
 				"path": "/images/items/01_4375/157_5281.jpg",
 				"hash": "5215bea94f5cc4c9ce7040b0a62e6439"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5281.jpg",
+				"src": "https://bandai-hobby.net/images/158_5281_s_a257kxmw6uulcg5r1on4ye63nb83.jpg",
 				"path": "/images/items/01_4375/158_5281.jpg",
 				"hash": "c8090ad90245e1a558d74f3e842d49f6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5281.jpg",
+				"src": "https://bandai-hobby.net/images/159_5281_s_alsfoi6e9tm6vjn3jujynz6h22sc.jpg",
 				"path": "/images/items/01_4375/159_5281.jpg",
 				"hash": "1baf45c9a81e324d8269397a0acf543b"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4375/",
-	"brandIds": ["entry_grade"],
-	"seriesIds": ["naruto"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_4376"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4375/"
 }

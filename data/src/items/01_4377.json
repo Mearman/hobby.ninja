@@ -2,9 +2,46 @@
 	"id": "01_4377",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダムクロスシルエット トルネードガンダム",
-		"en": "SD GUNDAM CROSS SILHOUETTE TORNADO GUNDAM"
+		"ja": "SDガンダムクロスシルエット トルネードガンダム",
+		"en": "SDGundam Cross Silhouette Tornado Gundam"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5275",
+			"url": "https://bandai-hobby.net/item/01_5275/",
+			"ja": "SDガンダム クロスシルエット マイティーストライクフリーダムガンダム"
+		},
+		{
+			"id": "01_5191",
+			"url": "https://bandai-hobby.net/item/01_5191/",
+			"ja": "SDガンダム クロスシルエット ガンダムキャリバーン"
+		},
+		{
+			"id": "01_5014",
+			"url": "https://bandai-hobby.net/item/01_5014/",
+			"ja": "SDガンダム クロスシルエット F9ノ1改"
+		},
+		{
+			"id": "01_4893",
+			"url": "https://bandai-hobby.net/item/01_4893/",
+			"ja": "SDガンダムクロスシルエット ユニコーンガンダム2号機バンシィ（デストロイモード）＆バンシィ・ノルン パーツセット"
+		}
+	],
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -21,14 +58,14 @@
 	"description": {
 		"ja": [
 			"『SDガンダム ジージェネレーション』シリーズより、トルネードガンダムがSDガンダム クロスシルエットにラインアップ！",
-			"■腕部のガトリングガンはパーツ着脱で通常／展開状態を再現。",
-			"■ビームサーベルは連結が可能。",
-			"■CS、SDの２種のフレームが同梱！ フレームは選択式で自分好みのプロポーションが楽しめる。",
-			"■背部のバインダーは各部が可動。",
-			"■ビームライフル等豊富な武装や差し替え手首が付属。"
+			"• 腕部のガトリングガンはパーツ着脱で通常／展開状態を再現。",
+			"• ビームサーベルは連結が可能。",
+			"• CS、SDの２種のフレームが同梱！ フレームは選択式で自分好みのプロポーションが楽しめる。",
+			"• 背部のバインダーは各部が可動。",
+			"• ビームライフル等豊富な武装や差し替え手首が付属。"
 		],
 		"en": [
-			"From the \"SD Gundam G Generation\" series, Tornado Gundam is now available in the SD Gundam Cross Silhouette lineup!",
+			"From the \"SD Gundam G Generation\" series, Tornado Gundam is now available in the SDGundam Cross Silhouette lineup!",
 			"• The Gatling gun on the arm can be recreated in its normal/expanded state by attaching and detaching parts.",
 			"• Beam sabers can be connected.",
 			"• Two types of frames, CS and SD, are included! The frame is selectable and you can enjoy proportions to your liking.",
@@ -36,53 +73,88 @@
 			"• Comes with a variety of weapons such as beam rifles and replacement wrists."
 		]
 	},
-	"accessories": {
-		"ja": ["ハンドパーツ×1式", "展開用ガトリング×1式", "ビームライフル×１", "ビームサーベル×２", "シール×1"],
-		"en": ["Hand parts x 1 set", "Deployment gatling x 1 set", "Beam rifle x1", "Beam saber x2", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "展開用ガトリング",
+				"en": "Gatling for deployment"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームライフル×１",
+				"en": "Beam rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル×２",
+				"en": "Beam saber x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5283.jpg",
+				"src": "https://bandai-hobby.net/images/153_5283_s_t6ivht2zrd9d79xevghajaq6qaxj.jpg",
 				"path": "/images/items/01_4377/153_5283.jpg",
 				"hash": "e74924cd3c05f31bdaf13426e773cb1a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5283.jpg",
+				"src": "https://bandai-hobby.net/images/155_5283_s_v6s8ft7qd8yog5wgvzkh0utupxo1.jpg",
 				"path": "/images/items/01_4377/155_5283.jpg",
 				"hash": "a10a8511778a7e49a82a3bef59a61a87"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5283.jpg",
+				"src": "https://bandai-hobby.net/images/156_5283_s_045rly6lge9ptsv0p4qoyif418as.jpg",
 				"path": "/images/items/01_4377/156_5283.jpg",
 				"hash": "78302b9a53e8ee7c0d5c47431b7eb301"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5283.jpg",
+				"src": "https://bandai-hobby.net/images/157_5283_s_mggy46qikuet3qanb0grj2ylh8db.jpg",
 				"path": "/images/items/01_4377/157_5283.jpg",
 				"hash": "6fa4f0cfe90d1a58090014f52a02e296"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5283.jpg",
+				"src": "https://bandai-hobby.net/images/158_5283_s_p9br9jokcglljh6rfbzfup0z09s5.jpg",
 				"path": "/images/items/01_4377/158_5283.jpg",
 				"hash": "3c8c24d72b19fd3c1e0869722a5c9fbd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5283.jpg",
+				"src": "https://bandai-hobby.net/images/159_5283_s_gi8cmhpgj13riu4xnj3l9pbqcdie.jpg",
 				"path": "/images/items/01_4377/159_5283.jpg",
 				"hash": "82216e19605dc9d42041fa2d32455b68"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5283.jpg",
+				"src": "https://bandai-hobby.net/images/189_5283_s_madjt3hnv09d6kls6rmm3vdz596s.jpg",
 				"path": "/images/items/01_4377/189_5283.jpg",
 				"hash": "3713d071bfd2ec66033079f34a258029"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4377/",
-	"brandIds": ["sdcs"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5275", "01_5191", "01_5014", "01_4893"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4377/"
 }

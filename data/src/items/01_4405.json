@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガンヴォルヴァ",
-		"en": "HG 1/144 GUNDVÖLVA"
+		"en": "HG 1/144 Gunvolva"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216474",
+			"url": "https://p-bandai.jp/item/item-1000216474/",
+			"ja": "ＨＧ 1/144 デスルター"
+		},
+		{
+			"id": "item-1000211616",
+			"url": "https://p-bandai.jp/item/item-1000211616/",
+			"ja": "ＨＧ 1/144 ベギルベウトルシュ(ケナンジ小隊所属機/リドリック小隊所属機)"
+		},
+		{
+			"id": "01_5422",
+			"url": "https://bandai-hobby.net/item/01_5422/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムキャリバーン [クリアカラー]"
+		},
+		{
+			"id": "item-1000203129",
+			"url": "https://p-bandai.jp/item/item-1000203129/",
+			"ja": "ＨＧ 1/144 ガンダムキャリバーン パーメットスコア・ファイブ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -18,71 +62,92 @@
 		"day": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、「HG 1/144 ガンヴォルヴァ」が商品化！",
-			"■首･腰部のボールジョイントは空間を設けた構造で前後傾の姿勢にも対応。",
-			"■シールド裏にビームサーベルのグリップと、ビームライフルのマガジンを格納できる。",
-			"■サイドアーマーは軸可動とボールジョイントの採用で腰部可動域を確保。",
-			"■ビームライフルは脚部に着脱が可能。"
+			"• 首･腰部のボールジョイントは空間を設けた構造で前後傾の姿勢にも対応。",
+			"• シールド裏にビームサーベルのグリップと、ビームライフルのマガジンを格納できる。",
+			"• サイドアーマーは軸可動とボールジョイントの採用で腰部可動域を確保。",
+			"• ビームライフルは脚部に着脱が可能。"
 		],
 		"en": [
-			"From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury \", \" HG 1/144 Gunvolva\" is commercialized!",
+			"From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\", \"HG 1/144 Gunvolva\" is commercialized!",
 			"• The ball joints in the neck and waist have a spaced structure that allows for forward and backward leaning postures.",
 			"• Beam saber grip and beam rifle magazine can be stored behind the seal.",
 			"• The side armor has a movable axis and a ball joint to ensure range of motion at the waist.",
 			"• Beam rifle can be attached and detached from the legs."
 		]
 	},
-	"accessories": {
-		"ja": ["ビームライフル×１", "ビームサーベル×２", "シールド×１", "シール×１"],
-		"en": ["Beam rifle x1", "Beam saber x2", "Seal de x1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル×１",
+				"en": "Beam rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル×２",
+				"en": "Beam saber x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド×１",
+				"en": "Seal de x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5310.jpg",
+				"src": "https://bandai-hobby.net/images/153_5310_s_e1ed6tc8c3293xik0jff3b68ru3x.jpg",
 				"path": "/images/items/01_4405/153_5310.jpg",
 				"hash": "84a7870c4a66e0e97d18fb6ecbfbc3b0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5310.jpg",
+				"src": "https://bandai-hobby.net/images/155_5310_s_cwpmfekzuea9nior70pcdllb5hn8.jpg",
 				"path": "/images/items/01_4405/155_5310.jpg",
 				"hash": "c7fd77d91d94d10474b71b291936f12b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5310.jpg",
+				"src": "https://bandai-hobby.net/images/156_5310_s_84xpi922w82mmy2idshp8pjsxnkk.jpg",
 				"path": "/images/items/01_4405/156_5310.jpg",
 				"hash": "4fa5320b496eafd65a2abe2835323ea5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5310.jpg",
+				"src": "https://bandai-hobby.net/images/157_5310_s_a8umvi5tzw3uxhfq1tkj51q7cnhu.jpg",
 				"path": "/images/items/01_4405/157_5310.jpg",
 				"hash": "f5187820fe1ae79292b14ac56ed7506d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5310.jpg",
+				"src": "https://bandai-hobby.net/images/158_5310_s_54b3h03t1a9ffw00od686q4eu8bw.jpg",
 				"path": "/images/items/01_4405/158_5310.jpg",
 				"hash": "92a18c4e9f8294a7ead7cd0b00b1244a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5310.jpg",
+				"src": "https://bandai-hobby.net/images/159_5310_s_pjwrv8mub5syt9lmel31fgt0iqjb.jpg",
 				"path": "/images/items/01_4405/159_5310.jpg",
 				"hash": "4c750e531cc854b4772b02b52a0c4f5f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5310.jpg",
+				"src": "https://bandai-hobby.net/images/189_5310_s_peq1vqb9owdiyqq8txxt0s61tuuv.jpg",
 				"path": "/images/items/01_4405/189_5310.jpg",
 				"hash": "08a40eb1c050833261114a9e26a61bbb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5310.jpg",
+				"src": "https://bandai-hobby.net/images/190_5310_s_yd51cg7qauzf196yd2d6hzjew7lo.jpg",
 				"path": "/images/items/01_4405/190_5310.jpg",
 				"hash": "fc6b24894d4362aacc2af27c577cfbc6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5310.jpg",
+				"src": "https://bandai-hobby.net/images/191_5310_s_5jqf7bcsqkpy3td5b7szne44zi32.jpg",
 				"path": "/images/items/01_4405/191_5310.jpg",
 				"hash": "86d00381ae848960e0168f69be7f7864"
 			}
@@ -90,10 +155,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4405/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203129"],
 	"manual": {
 		"id": "1388",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1388/"

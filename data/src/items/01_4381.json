@@ -3,8 +3,42 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガンキャノン(ククルス・ドアンの島版)",
-		"en": "HG 1/144 GUNCANNON (CUCURUZ DOAN’S ISLAND Ver.)"
+		"en": "HG 1/144 Guncannon (Cucrus Doan's island version)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-doan",
+			"url": "https://bandai-hobby.net/series/g-doan/",
+			"ja": "機動戦士ガンダム ククルス・ドアンの島"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "01_5514",
+			"url": "https://bandai-hobby.net/item/01_5514/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムFSD (試作型ロングレンジ・ビームライフル装備)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -18,7 +52,6 @@
 		"day": 20
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム ククルス・ドアンの島』より、「ガンキャノン」がHG化！",
@@ -29,28 +62,48 @@
 			"• バックパック２種、ビーム・ライフル、ハンドパーツが新規造形で付属。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam Cucurrus Doan Island \", \" Guncannon\" is made into HG!",
+			"From \"Mobile Suit Gundam Cucurrus Doan Island\", \"Guncannon\" is made into HG!",
 			"• Both Kai and Hayato machines can be reproduced by replacing the backpack parts, which are new models.",
 			"• The high articulation performance of the HG format allows for impressive gun cannon poses such as lying on the ground and firing a cannon, or a mid-waisted launch pose.",
 			"• Expressing the coloring of Cucurrus Doan's island version Guncannon with molded colors. Faithfully reproduces the details of the setting image.",
-			"• Includes plastic model original marking seal designed by Hajime Katoki. You can enjoy the original details of the plastic model with the identification numbers of Kai and Hayato machines and the caution marks placed in various places.",
+			"• Comes with original plastic model marking seal designed by Hajime Katoki. You can enjoy the original details of the plastic model with the identification numbers of Kai and Hayato machines and the caution marks placed in various places.",
 			"• Two types of backpacks, beam rifle, and hand parts are included with new modeling."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"バックパックパーツ×2種(カイ機再現用/ハヤト機再現用)",
-			"ビーム・ライフル×1",
-			"ハンドパーツ×1式",
-			"マーキングシール×1"
-		],
-		"en": [
-			"Backpack parts x 2 types (for reproducing Kai machine/for reproducing Hayato machine)",
-			"Beam rifle x1",
-			"Hand parts x 1 set",
-			"MarkingSeal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "バックパックパーツ",
+				"en": "backpack parts"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビーム・ライフル",
+				"en": "beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -82,55 +135,11 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191367_6.jpg",
 				"path": "/images/items/01_4381/1000191367_6.jpg",
 				"hash": "e120ff5c72c629f702d50a0b0da57ba1"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4381_inst_0.jpg",
-				"path": "/images/items/01_4381/01_4381_inst_0.jpg",
-				"hash": "5b5fc755dcd087be2abee73ca09bef75"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4381_inst_1.jpg",
-				"path": "/images/items/01_4381/01_4381_inst_1.jpg",
-				"hash": "a78ab7bf33794c0031e5e156fb61c861"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4381_inst_2.jpg",
-				"path": "/images/items/01_4381/01_4381_inst_2.jpg",
-				"hash": "92972614113468e9a9c7f90cd0932db7"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4381_inst_3.jpg",
-				"path": "/images/items/01_4381/01_4381_inst_3.jpg",
-				"hash": "8e5b99d6abeaec9f01bd21e0885bafdf"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4381_inst_4.jpg",
-				"path": "/images/items/01_4381/01_4381_inst_4.jpg",
-				"hash": "22e02502a7f4e9269aba12f4fccc83b3"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4381_inst_5.jpg",
-				"path": "/images/items/01_4381/01_4381_inst_5.jpg",
-				"hash": "62cdfe221f4224a5fd79e11041219321"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4381_inst_6.jpg",
-				"path": "/images/items/01_4381/01_4381_inst_6.jpg",
-				"hash": "c681a72a4926dbe01709afa501bcdece"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4381_inst_7.jpg",
-				"path": "/images/items/01_4381/01_4381_inst_7.jpg",
-				"hash": "00e28e4aebc69fdde76f9a6fe6cfb28a"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4381/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-doan"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000220189", "01_5514"],
 	"manual": {
 		"id": "1392",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1392/"

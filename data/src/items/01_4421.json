@@ -5,6 +5,54 @@
 		"ja": "ＨＧ 1/144 フルアーマーガンダム",
 		"en": "HG 1/144 Full Armor Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 2
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"“ ガ ン ダ ム ” の 攻 撃 ・ 防 御 力 向 上 プ ラ ン ―ＦＳＷＳ―",
@@ -70,7 +117,7 @@
 			"Various weapons and armor parts are three-dimensionalized with new modeling. The distinctive green-based aircraft color pattern is reproduced in molding color, including the base RX-78.",
 			"Includes water transfer decals including new designs.",
 			"● Reproduce the color pattern of each part increased armor & MSD version with new modeling",
-			"The increased armor of each part of the whole body is reproduced with new modeling. The MSD version's aircraft coloring is reproduced with molding colors, including the base RX-78.",
+			"The increased armor of each part of the whole body is reproduced with new modeling. The MSD version's aircraft coloring is reproduced with molding colors, including the RX-78 body.",
 			"The shape is reproduced down to the smallest detail, including the chest duct, abdominal armor, and leg sub-thrusters.",
 			"● The MSD version's aircraft coloring is reproduced with molding colors, including the base RX-78.",
 			"The main body of RX-78 can be attached and detached with armor and a small seal on the left arm.",
@@ -108,59 +155,75 @@
 			"・Product specifications are as of 202212. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["キャノン砲（360mmロケット砲）", "ミサイル・ベイ", "２連装ビーム・ガン"],
-		"en": ["Cannon (360mm rocket gun)", "missile bay", "double beam gun"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "キャノン砲（360mmロケット砲）",
+				"en": "Cannon (360mm rocket gun)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ミサイル・ベイ",
+				"en": "missile bay"
+			}
+		},
+		{
+			"name": {
+				"ja": "２連装ビーム・ガン",
+				"en": "double beam gun"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5328.jpg",
+				"src": "https://bandai-hobby.net/images/153_5328_s_6rbwekq8dso7ir9e3dmnzvodhrqj.jpg",
 				"path": "/images/items/01_4421/153_5328.jpg",
 				"hash": "a02f470fdbee1365b89f001b22ae70c2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5328.jpg",
+				"src": "https://bandai-hobby.net/images/155_5328_s_mm8zuu91ujru305x0v2f87z2s9u5.jpg",
 				"path": "/images/items/01_4421/155_5328.jpg",
 				"hash": "8bae31c434cb3482ee259ce1a708646b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5328.jpg",
+				"src": "https://bandai-hobby.net/images/156_5328_s_b5f509bhn5oywdgylczgaampk8fv.jpg",
 				"path": "/images/items/01_4421/156_5328.jpg",
 				"hash": "b3e8af35b02744844866fe4e8c174d0d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5328.jpg",
+				"src": "https://bandai-hobby.net/images/157_5328_s_195x9wvroqhew4uhx7mabs4ln51s.jpg",
 				"path": "/images/items/01_4421/157_5328.jpg",
 				"hash": "1f695f0415c83e2e61467df3fb0cfd2b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5328.jpg",
+				"src": "https://bandai-hobby.net/images/158_5328_s_f5vummm8q6bgz9e71s463fiasrho.jpg",
 				"path": "/images/items/01_4421/158_5328.jpg",
 				"hash": "ebccd04a1ca01eb9c6ec0f96c1bb950e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5328.jpg",
+				"src": "https://bandai-hobby.net/images/159_5328_s_n6aodmv5fsazavookinr6bu7xin2.jpg",
 				"path": "/images/items/01_4421/159_5328.jpg",
 				"hash": "f750ad388b4513f073e216fbd4c29d83"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5328.jpg",
+				"src": "https://bandai-hobby.net/images/189_5328_s_998ey3nwslu9a5d9ybudytm9yx8p.jpg",
 				"path": "/images/items/01_4421/189_5328.jpg",
 				"hash": "bfbb54e04a1a1e1e4d7270be98e21790"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5328.jpg",
+				"src": "https://bandai-hobby.net/images/190_5328_s_5edhhfmmot6e740mp89jixfnvofk.jpg",
 				"path": "/images/items/01_4421/190_5328.jpg",
 				"hash": "e74a7b18bbac3e03d661175c284dc57d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5328.jpg",
+				"src": "https://bandai-hobby.net/images/191_5328_s_w46fefwn55a38xln0r63ug8vd0fx.jpg",
 				"path": "/images/items/01_4421/191_5328.jpg",
 				"hash": "3637f613d7607244f8cb98c90fac8add"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5328.jpg",
+				"src": "https://bandai-hobby.net/images/192_5328_s_dza48iy2tw7n5h0bgxgddjntsp9k.jpg",
 				"path": "/images/items/01_4421/192_5328.jpg",
 				"hash": "f94d632c4ac87f13049f7b1377ab2080"
 			}
@@ -168,14 +231,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4421/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2465",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2465/"

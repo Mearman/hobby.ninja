@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "プラノサウルス モササウルス",
-		"en": "PLANNOSAURUS Mosasaurus"
+		"en": "planosaurus mosasaurus"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "plannosaurus",
+			"url": "https://bandai-hobby.net/series/plannosaurus/",
+			"ja": "プラノサウルス"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5501",
+			"url": "https://bandai-hobby.net/item/01_5501/",
+			"ja": "プラノサウルス テリジノサウルス"
+		},
+		{
+			"id": "01_5389",
+			"url": "https://bandai-hobby.net/item/01_5389/",
+			"ja": "プラノサウルス ブラキオサウルス"
+		},
+		{
+			"id": "01_5390",
+			"url": "https://bandai-hobby.net/item/01_5390/",
+			"ja": "プラノサウルス 陸海空恐竜セット"
+		},
+		{
+			"id": "01_5248",
+			"url": "https://bandai-hobby.net/item/01_5248/",
+			"ja": "プラノサウルス パラサウロロフス"
+		}
+	],
 	"price": {
 		"amount": 1870,
 		"currency": "JPY",
@@ -40,31 +77,28 @@
 			"• Various parts such as the opening and closing of the mouth, fins, neck and tail can be moved, allowing you to recreate the swimming appearance."
 		]
 	},
-	"accessories": {
-		"ja": ["シール×1", "台座×1"],
-		"en": ["Seal×1", "Pedestal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191422_1.jpg",
 				"path": "/images/items/01_4392/1000191422_1.jpg",
 				"hash": "2dace228c976ba56370a096d7c50da13"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191422_10.jpg",
-				"path": "/images/items/01_4392/1000191422_10.jpg",
-				"hash": "07242f15581cbc879e4f1b6b1f1a99e9"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191422_11.jpg",
-				"path": "/images/items/01_4392/1000191422_11.jpg",
-				"hash": "b21cd201c5eb7a279f4948eca5e5fa93"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191422_12.jpg",
-				"path": "/images/items/01_4392/1000191422_12.jpg",
-				"hash": "fa658c6691150d9a30b7b5818933fe3f"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191422_2.jpg",
@@ -105,13 +139,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191422_9.jpg",
 				"path": "/images/items/01_4392/1000191422_9.jpg",
 				"hash": "76392f9afc07086bb8394c55d5472d6c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191422_10.jpg",
+				"path": "/images/items/01_4392/1000191422_10.jpg",
+				"hash": "07242f15581cbc879e4f1b6b1f1a99e9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191422_11.jpg",
+				"path": "/images/items/01_4392/1000191422_11.jpg",
+				"hash": "b21cd201c5eb7a279f4948eca5e5fa93"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000191422_12.jpg",
+				"path": "/images/items/01_4392/1000191422_12.jpg",
+				"hash": "fa658c6691150d9a30b7b5818933fe3f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4392/",
-	"brandIds": [],
-	"seriesIds": ["plannosaurus"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5501", "01_5389", "01_5390", "01_5248"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4392/"
 }

@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/72 ブレイディフォックス(TYPE G)",
-		"en": "HG 1/72 BRADY FOX(TYPE G)"
+		"en": "HG 1/72 Brady Fox (TYPE G)"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -18,16 +62,15 @@
 		"day": 11
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"『境界戦機』アニメ第二部に登場し主人公達を追い詰めた「ブレイディフォックス」の強化機体「TYPE G」がHGで登場！",
-			"■ゴーストの力を試験運用した強化機体のダークなカラーリングを再現。",
-			"■レーザー砲が付属。専用のハンドパーツにより両手持ちで構えることが可能。",
-			"■大型シールドは手持ちで装備可能。中央に可動箇所が設けられている。",
-			"■頭部バイザー部分はパーツ差替えにより、有人機と無人機を再現。",
-			"■下部は可動する大型シールドが付属。",
-			"■別売りの「HG 1/72 V-33 ストークキャリー」と組み合わせて輸送状態を再現可能。"
+			"• ゴーストの力を試験運用した強化機体のダークなカラーリングを再現。",
+			"• レーザー砲が付属。専用のハンドパーツにより両手持ちで構えることが可能。",
+			"• 大型シールドは手持ちで装備可能。中央に可動箇所が設けられている。",
+			"• 頭部バイザー部分はパーツ差替えにより、有人機と無人機を再現。",
+			"• 下部は可動する大型シールドが付属。",
+			"• 別売りの「HG 1/72 V-33 ストークキャリー」と組み合わせて輸送状態を再現可能。"
 		],
 		"en": [
 			"``TYPE G'', a strengthened machine of the ``Brady Fox'' that appeared in the second part of the ``Kyoukai Senki'' anime and cornered the main characters, is now available in HG!",
@@ -39,75 +82,87 @@
 			"• Transport conditions can be reproduced by combining with the separately sold \"HG 1/72 V-33 Stalk Carry\"."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"レーザー砲×１",
-			"大型シールド×１",
-			"ハンドパーツ平手(左右)、武器持ち手(左右)、銃持ち手(右)",
-			"有人機再現用パーツ×１",
-			"ホイルシール×１"
-		],
-		"en": [
-			"Laser cannon x 1",
-			"Large Seal × 1",
-			"Hand parts Open hand (left and right), weapon handle (left and right), gun handle (right)",
-			"Manned aircraft reproduction parts x 1",
-			"Foil Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "レーザー砲×１",
+				"en": "Laser cannon x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "大型シールド×１",
+				"en": "Large Seal × 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ平手(左右)、武器持ち手(左右)、銃持ち手(右)",
+				"en": "Hand parts Open hand (left and right), weapon handle (left and right), gun handle (right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "有人機再現用パーツ×１",
+				"en": "Manned aircraft reproduction parts x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール×１",
+				"en": "Foil Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5251.jpg",
+				"src": "https://bandai-hobby.net/images/153_5251_s_f24rio6jrsq19eyd27ivnl6k0kaf.jpg",
 				"path": "/images/items/01_4342/153_5251.jpg",
 				"hash": "9fd1fedecfd12dc54e8a46ba1c139c2d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5251.jpg",
+				"src": "https://bandai-hobby.net/images/155_5251_s_fbmfi0j4cdh9aw8inpx4b59mquhg.jpg",
 				"path": "/images/items/01_4342/155_5251.jpg",
 				"hash": "6eb3b8ebf7786cb9725d41c8ccc5cd93"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5251.jpg",
+				"src": "https://bandai-hobby.net/images/156_5251_s_ox5uv25iuu6scbqy7gxlx99mjo14.jpg",
 				"path": "/images/items/01_4342/156_5251.jpg",
 				"hash": "40f7d4ef4810544d49e174e172ecea29"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5251.jpg",
+				"src": "https://bandai-hobby.net/images/157_5251_s_4l85uoyzaqis2ltksf3pk2dyuma5.jpg",
 				"path": "/images/items/01_4342/157_5251.jpg",
 				"hash": "7d4e4c7f3e36df0f145af26eb4860ff8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5251.jpg",
+				"src": "https://bandai-hobby.net/images/158_5251_s_yqzmz1ltw6so4xp09ou0tic6rp0o.jpg",
 				"path": "/images/items/01_4342/158_5251.jpg",
 				"hash": "5fb419351611eb7f42cba9e10783bbcc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5251.jpg",
+				"src": "https://bandai-hobby.net/images/159_5251_s_qcopsr6e8uh21nw35lwdywa23zc1.jpg",
 				"path": "/images/items/01_4342/159_5251.jpg",
 				"hash": "878e9c30bf3d3666264811ab87dfa9d8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5251.jpg",
+				"src": "https://bandai-hobby.net/images/189_5251_s_p18dlgfbz3rbdvmue8u0agyy4inf.jpg",
 				"path": "/images/items/01_4342/189_5251.jpg",
 				"hash": "de4f7195e76d37d4859da79ab8c394f8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5251.jpg",
+				"src": "https://bandai-hobby.net/images/190_5251_s_2i15w04a38up2t1iieyubeig7nbk.jpg",
 				"path": "/images/items/01_4342/190_5251.jpg",
 				"hash": "aef35c3073700aae5eb295fb577a1e93"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5251.jpg",
+				"src": "https://bandai-hobby.net/images/191_5251_s_mnj8knkv7vlcxrl63laje5s8ou6n.jpg",
 				"path": "/images/items/01_4342/191_5251.jpg",
 				"hash": "d9fc1d1add5db575f0c5efdbf3340d3e"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4342/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4342/"
 }

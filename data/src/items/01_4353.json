@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムルブリス [クリアカラー]",
 		"en": "HG 1/144 Gundam Rubris [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216474",
+			"url": "https://p-bandai.jp/item/item-1000216474/",
+			"ja": "ＨＧ 1/144 デスルター"
+		},
+		{
+			"id": "item-1000211616",
+			"url": "https://p-bandai.jp/item/item-1000211616/",
+			"ja": "ＨＧ 1/144 ベギルベウトルシュ(ケナンジ小隊所属機/リドリック小隊所属機)"
+		},
+		{
+			"id": "01_5422",
+			"url": "https://bandai-hobby.net/item/01_5422/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムキャリバーン [クリアカラー]"
+		},
+		{
+			"id": "item-1000203129",
+			"url": "https://p-bandai.jp/item/item-1000203129/",
+			"ja": "ＨＧ 1/144 ガンダムキャリバーン パーメットスコア・ファイブ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』の前日譚「PROLOGUE」で活躍する「HG 1/144 ガンダムルブリス」がクリアカラーになって登場！",
@@ -28,58 +71,70 @@
 			"• レシーバーガンには巨大なビーム刃のエフェクトパーツを取り付けることが可能。"
 		],
 		"en": [
-			"\"HG 1/144 Gundam Rubris \", which is active in the prequel \" PROLOGUE \" of the latest Gundam series \" Mobile Suit Gundam: Witch of Mercury\", is now available in clear color!",
+			"\"HG 1/144 Gundam Rubris\", which is active in the prequel \"PROLOGUE\" of the latest Gundam series \"Mobile Suit Gundam: Witch of Mercury\", is now available in clear color!",
 			"• The clear molding color and carefully divided parts create a beautiful finish just by assembling.",
 			"• Shell unit reproduces clear parts. The double side seal allows you to selectively reproduce the shell unit's light-emitting and non-light-emitting states.",
 			"• Seal can be separated into 7 bit staves and connected to backpack and receiver gun.",
 			"• A huge beam blade effect part can be attached to the receiver gun."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームサーベル×２",
-			"レシーバーガン×１",
-			"シールド×１",
-			"ビームブレイド用エフェクトパーツ×１",
-			"ジョイントパーツ×１",
-			"シール×１"
-		],
-		"en": [
-			"Beam saber x2",
-			"Receiver gun x 1",
-			"Seal de x1",
-			"Effect parts for beam blade x 1",
-			"Joint parts x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームサーベル×２",
+				"en": "Beam saber x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "レシーバーガン×１",
+				"en": "Receiver gun x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド×１",
+				"en": "Seal de x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームブレイド用エフェクトパーツ×１",
+				"en": "Effect parts for beam blade x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ×１",
+				"en": "Joint parts x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5261.jpg",
+				"src": "https://bandai-hobby.net/images/153_5261_s_491vgnfc16zmz1jiv7yk730g5mbv.jpg",
 				"path": "/images/items/01_4353/153_5261.jpg",
 				"hash": "63a0ccf33ee2a51df7d289f1f9cd5d49"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5261.jpg",
+				"src": "https://bandai-hobby.net/images/155_5261_s_jd1stnuim19gw00tzto9p7px9jys.jpg",
 				"path": "/images/items/01_4353/155_5261.jpg",
 				"hash": "5827d667f322eeffa49bb9bb5cc97bb7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5261.jpg",
+				"src": "https://bandai-hobby.net/images/156_5261_s_q4axnqxl0irfmxyfepr99kn3p08x.jpg",
 				"path": "/images/items/01_4353/156_5261.jpg",
 				"hash": "962e1c8cc96feefe8de843351c2ef3dc"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4353/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203129"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4353/"
 }

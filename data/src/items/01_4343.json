@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/72 境界戦機ウェポンセット3",
-		"en": "HG 1/72 AMAIM Warrior at the Borderline Weapon Set3"
+		"en": "HG 1/72 Kyoukai Senki Weapon Set 3"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,97 +62,126 @@
 		"day": 11
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"『境界戦機』シリーズの武装を集約したウェポンセットが登場！さまざまな機体と組み合わせてプラモデルオリジナルのアレンジを楽しもう！",
-			"■ウインチユニット装備、レーザー砲、ソードなど北米同盟軍の量産機等の武装をまとめたセット。"
+			"• ウインチユニット装備、レーザー砲、ソードなど北米同盟軍の量産機等の武装をまとめたセット。"
 		],
 		"en": [
 			"Introducing a Weapon set that combines the weapons of the \"Kyoukai Senki\" series! Enjoy the original arrangement of the plastic model by combining it with various aircraft!",
 			"• A set of armaments such as winch unit equipment, laser cannons, swords, etc. of mass-produced aircraft of the North American Alliance Army."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"レーザー砲×１",
-			"大型シールド×１",
-			"ソード×2",
-			"ウインチユニット装備×2",
-			"アンカー（ツメ展開） ×2",
-			"腰背部ウェポンラック（スペア弾倉付）×1",
-			"脚部スレッド×2",
-			"リード線×2"
-		],
-		"en": [
-			"Laser cannon x 1",
-			"Large Seal × 1",
-			"Sword x2",
-			"Winch unit equipment x 2",
-			"Anchor (claw development) ×2",
-			"Waist back weapon rack (with spare magazine) x 1",
-			"Leg thread x 2",
-			"Lead wire x 2"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "レーザー砲×１",
+				"en": "Laser cannon x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "大型シールド×１",
+				"en": "Large Seal × 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ソード",
+				"en": "sword"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ウインチユニット装備",
+				"en": "Equipped with winch unit"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "アンカー（ツメ展開）",
+				"en": "Anchor (claw expansion)"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "腰背部ウェポンラック（スペア弾倉付）",
+				"en": "Waist back weapon rack (with spare magazine)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "脚部スレッド",
+				"en": "leg thread"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "リード線",
+				"en": "lead wire"
+			},
+			"count": 2
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5252.jpg",
+				"src": "https://bandai-hobby.net/images/153_5252_s_uxn9laku7bk8exuwnvq28ib4g12t.jpg",
 				"path": "/images/items/01_4343/153_5252.jpg",
 				"hash": "ed0aa71f6156fbe7cff612589644fd7f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5252.jpg",
+				"src": "https://bandai-hobby.net/images/155_5252_s_2r0uddzlcei8953lt9ezfgijenu7.jpg",
 				"path": "/images/items/01_4343/155_5252.jpg",
 				"hash": "78111d8f6610b63161dce10216cb0808"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5252.jpg",
+				"src": "https://bandai-hobby.net/images/156_5252_s_zkc9jn30ys0h8gc2o13hyd4fkpkw.jpg",
 				"path": "/images/items/01_4343/156_5252.jpg",
 				"hash": "74c3db663f8a47e49d836b169bc7d144"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5252.jpg",
+				"src": "https://bandai-hobby.net/images/157_5252_s_sqzvxw00p06xx3ksjwucgnw80rqg.jpg",
 				"path": "/images/items/01_4343/157_5252.jpg",
 				"hash": "db0b3b0d7ae3eb2096c5e413ccf1b56a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5252.jpg",
+				"src": "https://bandai-hobby.net/images/158_5252_s_2hjah5juonvz1423mjlq3ktcw9ea.jpg",
 				"path": "/images/items/01_4343/158_5252.jpg",
 				"hash": "dd05cd628a6f5a6f4c663599db20473b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5252.jpg",
+				"src": "https://bandai-hobby.net/images/159_5252_s_vjuicxui5ni0ohlza8ddpif0zl6q.jpg",
 				"path": "/images/items/01_4343/159_5252.jpg",
 				"hash": "797623e8863891adeeb9b23584422671"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5252.jpg",
+				"src": "https://bandai-hobby.net/images/189_5252_s_t6486r9hqhuyc025f2ekpwbuj24s.jpg",
 				"path": "/images/items/01_4343/189_5252.jpg",
 				"hash": "f83bc86227ce22284c30ffc87e29c10f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5252.jpg",
+				"src": "https://bandai-hobby.net/images/190_5252_s_fwpwplrzivzz263g2uj0hszji03b.jpg",
 				"path": "/images/items/01_4343/190_5252.jpg",
 				"hash": "ae97e81a700ffb534c29f0211931441a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5252.jpg",
+				"src": "https://bandai-hobby.net/images/191_5252_s_5t7ks46nqelc59uyo6ba89qokatz.jpg",
 				"path": "/images/items/01_4343/191_5252.jpg",
 				"hash": "4e3b4a044f0d51c80955cfecfec94a04"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5252.jpg",
+				"src": "https://bandai-hobby.net/images/192_5252_s_07orsfo4v4gfxp4p31c3bgz2hxym.jpg",
 				"path": "/images/items/01_4343/192_5252.jpg",
 				"hash": "17ff3758508991aa04f68e7914036954"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4343/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4343/"
 }

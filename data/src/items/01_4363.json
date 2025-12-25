@@ -3,8 +3,62 @@
 	"type": "item",
 	"name": {
 		"ja": "ＭＧ 1/100 ガンダムＡＧＥ－１ フルグランサ [デザイナーズカラーＶｅｒ．]",
-		"en": "MG 1/100 GUNDAM AGE-1 FULL GLANSA [DESIGNERS COLOR Ver.]"
+		"en": "MG 1/100 GundamAGE-1 Full Grancer [Designer Color Ver. ]"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "age",
+			"url": "https://bandai-hobby.net/series/age/",
+			"ja": "機動戦士ガンダムAGE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181355",
+			"url": "https://p-bandai.jp/item/item-1000181355/",
+			"ja": "ＭＧ 1/100 ガンダムＡＧＥ－１ フルグランサ用 拡張パーツ"
+		},
+		{
+			"id": "item-1000170540",
+			"url": "https://p-bandai.jp/item/item-1000170540/",
+			"ja": "ＨＧ 1/144 フォーンファルシア"
+		},
+		{
+			"id": "01_4196",
+			"url": "https://bandai-hobby.net/item/01_4196/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムAGE-1 ウェアシステムセット[クリアカラー]"
+		},
+		{
+			"id": "item-1000169836",
+			"url": "https://p-bandai.jp/item/item-1000169836/",
+			"ja": "ＨＧ 1/144 ガンダムＡＧＥ-１ レイザー＆ガンダムＡＧＥ-２ アルティメス セット"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 7810,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 1
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -80,7 +133,7 @@
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"AGE-1 Full Granza Launch!",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
-			"From \"Mobile Suit Gundam AGE\", the long-awaited MG commercialization of the Gundam AGE-1 Full Granta piloted by Flit Asuno!",
+			"From \"Mobile Suit GundamAGE\", the long-awaited MG product of GundamAGE-1 Full Granta, piloted by Flit Asuno, is now available!",
 			"Under the supervision of mechanical designer Kanetake Ebikawa, additional armor and Glastro launcher, which are new modeling parts, are included!",
 			"All-in-one designer color specification that includes the main body and additional armor!",
 			"● Thorough reproduction of Gundam AGE-1 Gransa/Furugransa with new modeling",
@@ -96,7 +149,7 @@
 			"Equipped with a gimmick that allows the gun barrel to expand up and down by sliding it.",
 			"In addition, by replacing the tip, it is possible to reproduce the Zefurd launcher used in the Asemu edition.",
 			"The missile hatch is equipped with an interlocking opening and closing mechanism, allowing you to open and close the missile hatch and take out the missile.",
-			"● Gundam AGE-1 flat can be reproduced by adding some new parts",
+			"● GundamAGE-1 flat can be reproduced by adding some new parts",
 			"Some upgrade parts are included, and the clear parts have been changed to yellow.",
 			"head",
 			"A new antenna part is included that resembles the sharp eyes in the movie.",
@@ -107,15 +160,15 @@
 			"Comes with upgrade parts that can hold the joints more firmly.",
 			"● Designer colors with a profound feel",
 			"Under the supervision of Mr. Kanetake Ebikawa, the coloring is rich and dignified.",
-			"Imaged after Gundam AGE-1, which continued to fight against Vagan for many years.",
+			"Image of GundamAGE-1, which continued to fight against Vagan for a long time.",
 			"● Newly designed water transfer decals are included.",
 			"A new water transfer decal designed by Kanetake Ebikawa is included! For a more realistic finish.",
-			"<Set contents>: Gundam AGE-1 flat body set / Gundam AGE-1 upgrade parts",
+			"<Set contents>: GundamAGE-1 flat body set / GundamAGE-1 upgrade parts",
 			"/ Gransa equipment set / Glastro (Zefrud) launcher",
 			"／Action base ／Auxiliary support column ／ Water transfer decal",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/100 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS/PE",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -140,11 +193,6 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000181354_1.jpg",
 				"path": "/images/items/01_4363/1000181354_1.jpg",
 				"hash": "e4de76cd0fa7e00fd94ef197a784e8e3"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000181354_10.jpg",
-				"path": "/images/items/01_4363/1000181354_10.jpg",
-				"hash": "d717380756236410c36e7abcb06584d7"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000181354_2.jpg",
@@ -185,19 +233,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000181354_9.jpg",
 				"path": "/images/items/01_4363/1000181354_9.jpg",
 				"hash": "8159fb3b3920a6db130f200031590d4e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000181354_10.jpg",
+				"path": "/images/items/01_4363/1000181354_10.jpg",
+				"hash": "d717380756236410c36e7abcb06584d7"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4363/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": ["age"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000181355", "item-1000170540", "01_4196", "item-1000169836"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2477",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2477/"

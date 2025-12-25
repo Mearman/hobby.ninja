@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ディランザソル",
-		"en": "HG 1/144 DILANZA SOL"
+		"en": "HG 1/144 Dylan the Sol"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216474",
+			"url": "https://p-bandai.jp/item/item-1000216474/",
+			"ja": "ＨＧ 1/144 デスルター"
+		},
+		{
+			"id": "item-1000211616",
+			"url": "https://p-bandai.jp/item/item-1000211616/",
+			"ja": "ＨＧ 1/144 ベギルベウトルシュ(ケナンジ小隊所属機/リドリック小隊所属機)"
+		},
+		{
+			"id": "01_5422",
+			"url": "https://bandai-hobby.net/item/01_5422/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムキャリバーン [クリアカラー]"
+		},
+		{
+			"id": "item-1000203129",
+			"url": "https://p-bandai.jp/item/item-1000203129/",
+			"ja": "ＨＧ 1/144 ガンダムキャリバーン パーメットスコア・ファイブ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,13 +62,12 @@
 		"day": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、ジェターク社の実戦用モビルスーツ、ディランザ・ソルをHGで立体化！",
-			"■ビームライフルやビームトーチは両肩のシールド裏に格納が可能。",
-			"■リアアーマーの両端が動き脚部後方への可動域を拡張。",
-			"■トーチのエフェクトパーツはクリア成形で再現。エフェクトとトーチは取り外し可能。"
+			"• ビームライフルやビームトーチは両肩のシールド裏に格納が可能。",
+			"• リアアーマーの両端が動き脚部後方への可動域を拡張。",
+			"• トーチのエフェクトパーツはクリア成形で再現。エフェクトとトーチは取り外し可能。"
 		],
 		"en": [
 			"From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\", Jetak's combat mobile suit, Dilanza Sol, is made into a three-dimensional HG figure!",
@@ -33,64 +76,86 @@
 			"• The torch effect parts are reproduced with clear molding. Effects and torch are removable."
 		]
 	},
-	"accessories": {
-		"ja": ["ビームトーチ×１", "ビームライフル×１", "ビームエフェクトパーツ×２", "シール×１"],
-		"en": ["Beam torch x1", "Beam rifle x1", "Beam effect parts x 2", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームトーチ×１",
+				"en": "Beam torch x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームライフル×１",
+				"en": "Beam rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームエフェクトパーツ×２",
+				"en": "Beam effect parts x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5304.jpg",
+				"src": "https://bandai-hobby.net/images/153_5304_s_24gsyu5324jhtvtu37yz111byu36.jpg",
 				"path": "/images/items/01_4400/153_5304.jpg",
 				"hash": "a569a01987c6015adb779055a1f65fe5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5304.jpg",
+				"src": "https://bandai-hobby.net/images/155_5304_s_xxdvuf6iy15rmyic4kh97d93z45h.jpg",
 				"path": "/images/items/01_4400/155_5304.jpg",
 				"hash": "82d54371b783a25a96ddd5159f32650b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5304.jpg",
+				"src": "https://bandai-hobby.net/images/156_5304_s_pff1mkzfpy27yw43c69ftvwinkj1.jpg",
 				"path": "/images/items/01_4400/156_5304.jpg",
 				"hash": "de97667c50362039bafda2f7247bff1f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5304.jpg",
+				"src": "https://bandai-hobby.net/images/157_5304_s_opqe288r5wfbvx3wf384aj5jf5g3.jpg",
 				"path": "/images/items/01_4400/157_5304.jpg",
 				"hash": "7e2a07511cde4917cfef61755831e0ac"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5304.jpg",
+				"src": "https://bandai-hobby.net/images/158_5304_s_rnjo3f8ki4rhdf3ozzzuuycui64n.jpg",
 				"path": "/images/items/01_4400/158_5304.jpg",
 				"hash": "7402ca033579d723429d5a326d762e9b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5304.jpg",
+				"src": "https://bandai-hobby.net/images/159_5304_s_s3t1m99tvzova8qvvig9z6d4cym2.jpg",
 				"path": "/images/items/01_4400/159_5304.jpg",
 				"hash": "24c756059fd193ad0ba19340b4c1e2e9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5304.jpg",
+				"src": "https://bandai-hobby.net/images/189_5304_s_9qb1ut2auysyyvebrvhgi12k9iqg.jpg",
 				"path": "/images/items/01_4400/189_5304.jpg",
 				"hash": "c99a5a16f04d57a07d25fe548df6f886"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5304.jpg",
+				"src": "https://bandai-hobby.net/images/190_5304_s_3tncmi6tlww1k04a4fszad3f5xqq.jpg",
 				"path": "/images/items/01_4400/190_5304.jpg",
 				"hash": "e0199ed22aa668b3c3134f282bc6f858"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5304.jpg",
+				"src": "https://bandai-hobby.net/images/191_5304_s_04cn7qyyqg06e323zvta3lqcemt3.jpg",
 				"path": "/images/items/01_4400/191_5304.jpg",
 				"hash": "f6650c60059833911aef8014e835e264"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5304.jpg",
+				"src": "https://bandai-hobby.net/images/192_5304_s_qpw4owbhnolvonh6rkeobdnwphoj.jpg",
 				"path": "/images/items/01_4400/192_5304.jpg",
 				"hash": "9e4b5c7688b7e29f6f61937f14a36268"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_5304.jpg",
+				"src": "https://bandai-hobby.net/images/193_5304_s_yl5165pc5032dwwb0ff5bp85niup.jpg",
 				"path": "/images/items/01_4400/193_5304.jpg",
 				"hash": "f2d476f5acc641a03867aa28858acd8e"
 			}
@@ -98,10 +163,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4400/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203129"],
 	"manual": {
 		"id": "1391",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1391/"

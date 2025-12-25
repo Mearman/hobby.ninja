@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/72 境界戦機ウェポンセット4 マルチジョイントフレーム",
-		"en": "HG 1/72 AMAIM Warrior at the Borderline Weapon Set4 Multi Joint Frame"
+		"en": "HG 1/72 Kyoukai Senki Weapon Set 4 Multi-Joint Frame"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -18,14 +62,13 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"カスタマイズ特化型の新規アーム・レッグパーツ等がセットになった「境界戦機ウェポンセット4 マルチジョイントフレーム」が登場！",
-			"■新規アーム・レッグパーツには拡張性の高いカスタマイズ用3mm径の接続穴を各所に配置。",
-			"■拡張性の高いウェポンラックやリアスカートラックが付属し、背部のカスタマイズの自由度もアップ。",
-			"■新規デザインのヘッドパーツが付属。",
-			"■別売りの既存の機体や「ウェポンセット」と組み合わせることで、これまで以上に幅広いカスタマイズが可能。"
+			"• 新規アーム・レッグパーツには拡張性の高いカスタマイズ用3mm径の接続穴を各所に配置。",
+			"• 拡張性の高いウェポンラックやリアスカートラックが付属し、背部のカスタマイズの自由度もアップ。",
+			"• 新規デザインのヘッドパーツが付属。",
+			"• 別売りの既存の機体や「ウェポンセット」と組み合わせることで、これまで以上に幅広いカスタマイズが可能。"
 		],
 		"en": [
 			"Introducing the \"Kyoukai Senki Weapon Set 4 Multi-Joint Frame\", which includes customization-specific new arm and leg parts!",
@@ -35,74 +78,105 @@
 			"• By combining with existing aircraft and \"Weapon Sets\" sold separately, a wider range of customization is possible than ever before."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"アームパーツ （左右）",
-			"レッグパーツ （左右）",
-			"ウェポンラック×１",
-			"リアスカートラック×１",
-			"ヘッドパーツ×1",
-			"ハンドパーツ×1式",
-			"ジョイントパーツ×1式"
-		],
-		"en": [
-			"Arm parts (left and right)",
-			"Leg parts (left and right)",
-			"Weapon rack x 1",
-			"Rear skirt track x 1",
-			"Head parts x 1",
-			"Hand parts x 1 set",
-			"Joint parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "アームパーツ （左右）",
+				"en": "Arm parts (left and right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "レッグパーツ （左右）",
+				"en": "Leg parts (left and right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ウェポンラック×１",
+				"en": "Weapon rack x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "リアスカートラック×１",
+				"en": "Rear skirt track x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヘッドパーツ",
+				"en": "head parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5292.jpg",
+				"src": "https://bandai-hobby.net/images/153_5292_s_1az2v3h44vw6mbdc12rvrjgdfz7o.jpg",
 				"path": "/images/items/01_4387/153_5292.jpg",
 				"hash": "422356ab771869d691d5d6dde5a5da17"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5292.jpg",
+				"src": "https://bandai-hobby.net/images/155_5292_s_qquhpkqtekb42fsnj7vwpjan6gy3.jpg",
 				"path": "/images/items/01_4387/155_5292.jpg",
 				"hash": "31b795ab0580acd7cfa97e8772cfb608"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5292.jpg",
+				"src": "https://bandai-hobby.net/images/156_5292_s_zfbid4evdjer1pt9aje2p5mdl2vu.jpg",
 				"path": "/images/items/01_4387/156_5292.jpg",
 				"hash": "fa32cea72c412e265f947b347f790edc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5292.jpg",
+				"src": "https://bandai-hobby.net/images/157_5292_s_340nl1xhpkrpa5f3ehmrp2a8sugh.jpg",
 				"path": "/images/items/01_4387/157_5292.jpg",
 				"hash": "9007c9999fd4294a5011d463a2db31a2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5292.jpg",
+				"src": "https://bandai-hobby.net/images/158_5292_s_2x496mjh0jbyotadzux5itrp1e1l.jpg",
 				"path": "/images/items/01_4387/158_5292.jpg",
 				"hash": "1d43c5e45e4b9fa21026adcd4e05b2b7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5292.jpg",
+				"src": "https://bandai-hobby.net/images/159_5292_s_8mfw286p8uj0z8lt7kmmp45gjcy5.jpg",
 				"path": "/images/items/01_4387/159_5292.jpg",
 				"hash": "6b63d3c2cc61847185bd6a4126e9879e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5292.jpg",
+				"src": "https://bandai-hobby.net/images/189_5292_s_5veq1s5wrdxdpaeejrz3yh8b17x3.jpg",
 				"path": "/images/items/01_4387/189_5292.jpg",
 				"hash": "72ae7e88cfa14d492980703e7e659360"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5292.jpg",
+				"src": "https://bandai-hobby.net/images/190_5292_s_g6vx3g0qvkjow4akszj7crsk81th.jpg",
 				"path": "/images/items/01_4387/190_5292.jpg",
 				"hash": "f2d13d3179200f9ef7f9eace7d83ac7e"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4387/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4387/"
 }

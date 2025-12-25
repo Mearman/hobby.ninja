@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 オプションパーツセット12(ハンドパーツ/マルチジョイント)",
-		"en": "30MM 1/144 OPTION PARTS SET 12 (HAND PARTS /MULTI-JOINT)"
+		"en": "30MM 1/144 Option parts set 12 (hand parts/multi joint)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 825,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 15
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMオプションパーツセットに、カスタマイズの幅が広がるハンドパーツとマルチジョイントのセットが登場！",
@@ -35,24 +77,74 @@
 			"• Comes with a Runner set that includes multi-joints essential for customization, such as 3mm joints, C-type joints, and detail cover parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ハンドパーツSサイズ6種(左右)×1式",
-			"ハンドパーツMサイズ3種(左右)×1式",
-			"手甲パーツSサイズ(Aタイプ)グレー×4、ホワイト×2",
-			"手甲パーツSサイズ(Bタイプ)グレー×4、ホワイト×2",
-			"手甲パーツMサイズ(Cタイプ)グレー×4、ホワイト×2",
-			"マルチジョイント×1式"
-		],
-		"en": [
-			"Hand parts S size 6 types (left and right) x 1 set",
-			"Hand parts M size 3 types (left and right) x 1 set",
-			"Gauntlet parts S size (A type) Gray x 4, White x 2",
-			"Gauntlet parts S size (B type) Gray x 4, White x 2",
-			"Back of hand parts M size (C type) Gray x 4, White x 2",
-			"Multi-joint x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハンドパーツSサイズ6種(左右)",
+				"en": "Hand parts S size 6 types (left and right)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツMサイズ3種(左右)",
+				"en": "Hand parts M size 3 types (left and right)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "手甲パーツSサイズ(Aタイプ)グレー",
+				"en": "Back of hand parts S size (A type) gray"
+			},
+			"count": 4,
+			"unit": {
+				"ja": "、ホワイト×2",
+				"en": ", white x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "手甲パーツSサイズ(Bタイプ)グレー",
+				"en": "Back of hand parts S size (B type) gray"
+			},
+			"count": 4,
+			"unit": {
+				"ja": "、ホワイト×2",
+				"en": ", white x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "手甲パーツMサイズ(Cタイプ)グレー",
+				"en": "Back of hand parts M size (C type) gray"
+			},
+			"count": 4,
+			"unit": {
+				"ja": "、ホワイト×2",
+				"en": ", white x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "マルチジョイント",
+				"en": "multi joint"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -99,10 +191,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4380/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3757",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3757/"

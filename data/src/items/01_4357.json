@@ -5,6 +5,34 @@
 		"ja": "ＨＧ 1/144 バイファム スリング・パニアー装備型",
 		"en": "HG 1/144 Vifam sling pannier equipped type"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		},
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "vifam",
+			"url": "https://bandai-hobby.net/series/vifam/",
+			"ja": "銀河漂流バイファム"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/144",
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -17,7 +45,6 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -102,7 +129,7 @@
 			"Attached weapons: Sling pannier / Beam gun / Seal",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/144 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -120,72 +147,80 @@
 			"- Product specifications are scheduled as of 202210. Please note that there may be changes."
 		]
 	},
-	"accessories": {
-		"ja": ["スリング・パニアー", "ビームガン", "シールド"],
-		"en": ["sling pannier", "beam gun", "Seal de"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "スリング・パニアー",
+				"en": "sling pannier"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームガン",
+				"en": "beam gun"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5265.jpg",
+				"src": "https://bandai-hobby.net/images/153_5265_s_vw0k64lq5stbnnjamiy5g30zfpk7.jpg",
 				"path": "/images/items/01_4357/153_5265.jpg",
 				"hash": "3ffb2375cab04e17872136208afb26bb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5265.jpg",
+				"src": "https://bandai-hobby.net/images/155_5265_s_74njys5pn5t6pzdefgxzxi09f52n.jpg",
 				"path": "/images/items/01_4357/155_5265.jpg",
 				"hash": "70b2203c7b0eaa8e103ac440ae2de709"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5265.jpg",
+				"src": "https://bandai-hobby.net/images/156_5265_s_i0lzhw60iu05khyfh17uor7d8685.jpg",
 				"path": "/images/items/01_4357/156_5265.jpg",
 				"hash": "f707f9c63e4f8df75ab509a09494c6fe"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5265.jpg",
+				"src": "https://bandai-hobby.net/images/157_5265_s_rdqc308hdgart5gjhevf5oml0c1o.jpg",
 				"path": "/images/items/01_4357/157_5265.jpg",
 				"hash": "6d7c0c95ce45fd0cc35292e4b20ef8f3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5265.jpg",
+				"src": "https://bandai-hobby.net/images/158_5265_s_qqbw8eughhw35b8y0cvps0opirg3.jpg",
 				"path": "/images/items/01_4357/158_5265.jpg",
 				"hash": "1857c9f32b8aabd1bf73a8fbb08bfe5c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5265.jpg",
+				"src": "https://bandai-hobby.net/images/159_5265_s_mcikz3dwg1yivixnfwi9109qyw6f.jpg",
 				"path": "/images/items/01_4357/159_5265.jpg",
 				"hash": "fd5d7d5f6cbfe799e89460defab5ed0e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5265.jpg",
+				"src": "https://bandai-hobby.net/images/189_5265_s_xeqvsehhual485w4r0fjh6ogkqxh.jpg",
 				"path": "/images/items/01_4357/189_5265.jpg",
 				"hash": "d799b53b057a04ef0e0578049a24a0e3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5265.jpg",
+				"src": "https://bandai-hobby.net/images/190_5265_s_f9fhzb2k79hfryvmrtpcuhmnfaqs.jpg",
 				"path": "/images/items/01_4357/190_5265.jpg",
 				"hash": "3a896fe1de90c0825eb80654a818e976"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5265.jpg",
+				"src": "https://bandai-hobby.net/images/191_5265_s_23ss1drowj7xj5nsyhbhle14itgl.jpg",
 				"path": "/images/items/01_4357/191_5265.jpg",
 				"hash": "630bb2faf60aab2f9cb59383df71dfa9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5265.jpg",
+				"src": "https://bandai-hobby.net/images/192_5265_s_qymt6kuywve5swdruo6k4b20dlac.jpg",
 				"path": "/images/items/01_4357/192_5265.jpg",
 				"hash": "0528fa837ad7add6b75b00b922a1a430"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4357/",
-	"brandIds": ["pb_charapla", "hg"],
-	"seriesIds": ["vifam"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": [],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4357/"
 }
