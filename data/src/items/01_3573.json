@@ -5,6 +5,50 @@
 		"ja": "フルメカニクス 1/100 ガンダムベース限定 ZGMF-X10A フリーダムガンダム Ver.GCP",
 		"en": "Full Mechanics 1/100 Gundam Base Limited ZGMF-X10A Freedom Gundam Ver.GCP"
 	},
+	"brands": [
+		{
+			"id": "fullmechanics",
+			"url": "https://bandai-hobby.net/brand/fullmechanics/",
+			"ja": "FULL MECHANICS[フルメカニクス]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5209",
+			"url": "https://bandai-hobby.net/item/01_5209/",
+			"ja": "FULL MECHANICS 1/100 カラミティガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_4906",
+			"url": "https://bandai-hobby.net/item/01_4906/",
+			"ja": "FULL MECHANICS 1/100 フォビドゥンガンダム"
+		},
+		{
+			"id": "01_4096",
+			"url": "https://bandai-hobby.net/item/01_4096/",
+			"ja": "FULL MECHANICS 1/100 レイダーガンダム"
+		},
+		{
+			"id": "01_3426",
+			"url": "https://bandai-hobby.net/item/01_3426/",
+			"ja": "FULL MECHANICS 1/100 カラミティガンダム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 19
 	},
 	"targetAge": 8,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"※ガンダムベース東京・福岡、およびガンダムベースサテライト名古屋・京都・横浜では、2021年9月19日(日)より販売予定です。",
@@ -26,9 +69,9 @@
 			"楽しみに商品をお待ちいただいているお客様におかれましては、多大なるご迷惑をおかけしますことを深くお詫び申し上げます。何卒ご理解賜りますようお願い申し上げます。",
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラが登場！",
 			"上海に降臨した実物大フリーダムガンダム立像が、フルメカニクス1/100で立体化！",
-			"■全身のパネルラインやディテールを新規造形で再現、1/100で迫力のスケールを堪能できる。",
-			"■新たな設定である着地用のランディング・ギアパーツと平手パーツにより、立像と同じポーズでのディスプレイが楽しめる。",
-			"■機体各部のマーキングを再現するシールが付属",
+			"• 全身のパネルラインやディテールを新規造形で再現、1/100で迫力のスケールを堪能できる。",
+			"• 新たな設定である着地用のランディング・ギアパーツと平手パーツにより、立像と同じポーズでのディスプレイが楽しめる。",
+			"• 機体各部のマーキングを再現するシールが付属",
 			"付属武装：ビームライフル / ビームサーベル / シールド / レール砲",
 			"付属物： ディスプレイ台座"
 		],
@@ -45,52 +88,61 @@
 			"Accessories: Display pedestal"
 		]
 	},
-	"accessories": {
-		"ja": ["ビームライフル", "ビームサーベル", "シールド", "レール砲"],
-		"en": ["beam rifle", "beam saber", "Seal de", "rail gun"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "beam rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "beam saber"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		},
+		{
+			"name": {
+				"ja": "レール砲",
+				"en": "rail gun"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_3573_0.jpg",
 				"path": "/images/items/01_3573/01_3573_0.jpg",
 				"hash": "5af36f686e616191f6bbedb6a89a82d7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_3573_1.jpg",
 				"path": "/images/items/01_3573/01_3573_1.jpg",
 				"hash": "fca28c8ec10eb92e422b903ae6b4b417"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_3573_2.jpg",
 				"path": "/images/items/01_3573/01_3573_2.jpg",
 				"hash": "e3bf1877ef31f06c42924e8f91794ea4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_3573_3.jpg",
 				"path": "/images/items/01_3573/01_3573_3.jpg",
 				"hash": "21fdf07f059df67a7a867dec8401795b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_3573_4.jpg",
 				"path": "/images/items/01_3573/01_3573_4.jpg",
 				"hash": "48d5123c00c2e6a9810666438b9a177f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4528.jpg",
+				"src": "https://bandai-hobby.net/images/159_4528_o_1f49686g312aq1snk16jv1k9f1u5k31.jpg",
 				"path": "/images/items/01_3573/159_4528.jpg",
 				"hash": "7505250dca06a62cd650e0ce80e51d2e"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3573/",
-	"brandIds": ["fullmechanics"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5209", "01_4906", "01_4096", "01_3426"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3573/"
 }

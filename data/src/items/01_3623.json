@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムバルバタウロス",
 		"en": "HG 1/144 Gundam Barbataur"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam_breaker_battlogue",
+			"url": "https://bandai-hobby.net/series/gundam_breaker_battlogue/",
+			"ja": "GUNDAM BREAKER BATTLOGUE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4128",
+			"url": "https://bandai-hobby.net/item/01_4128/",
+			"ja": "HG 1/144 ガンダムヘリオス[クリアカラー]"
+		},
+		{
+			"id": "item-1000166359",
+			"url": "https://p-bandai.jp/item/item-1000166359",
+			"ja": "HG 1/144 陸戦型ガンダム(市街地戦仕様)"
+		},
+		{
+			"id": "item-1000166322",
+			"url": "https://p-bandai.jp/item/item-1000166322",
+			"ja": "HG 1/144 グフクリムゾンカスタム"
+		},
+		{
+			"id": "item-1000166358",
+			"url": "https://p-bandai.jp/item/item-1000166358",
+			"ja": "HG 1/144 ガンダムアストレイレッドフレームインバージョン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -18,16 +62,15 @@
 		"day": 15
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンプラとゲームが連動する「ガンダムブレイカー バトローグ プロジェクト」が2021年より全世界にて展開スタート！！",
 			"プロジェクトのオリジナル機体が、2021年10月配信予定の新作ショートフィルム『ガンダムブレイカー バトローグ』に登場。そのオリジナル機体が、ゲーム同様にカスタマイズ可能なHGガンプラシリーズとして登場！",
-			"■ガンダム・バルバトスをベースに、ガンダム・フレームを２基用いた大胆な構造の機体！",
-			"■MSでは稀有なシルエットの人馬一体を大ボリュームで実現。",
-			"■ツインブレードはハンドガンモードに変形。さらには合体し、クリアパーツを用いた大型の弓へと組み替え、付属の弓矢を引くポーズも可能。",
-			"■機体後部のテイルブレードはリード線を用いて再現。",
-			"■ガンダム・バルバトスと同様の太刀が付属。"
+			"• ガンダム・バルバトスをベースに、ガンダム・フレームを２基用いた大胆な構造の機体！",
+			"• MSでは稀有なシルエットの人馬一体を大ボリュームで実現。",
+			"• ツインブレードはハンドガンモードに変形。さらには合体し、クリアパーツを用いた大型の弓へと組み替え、付属の弓矢を引くポーズも可能。",
+			"• 機体後部のテイルブレードはリード線を用いて再現。",
+			"• ガンダム・バルバトスと同様の太刀が付属。"
 		],
 		"en": [
 			"The \"Gundam Breaker Battlogue Project\", which links Gunpla and the game, will start rolling out worldwide in 2021! !",
@@ -39,65 +82,100 @@
 			"• A long sword similar to Gundam Barbatos is included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ツインブレード×1",
-			"太刀×1",
-			"矢×1",
-			"弦エフェクトパーツ×1",
-			"ジョイントパーツ×1式",
-			"リード線×1",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Twin blade x1",
-			"Long sword x1",
-			"Arrow x1",
-			"String effect parts x 1",
-			"Joint parts x 1 set",
-			"Lead wire x 1",
-			"Foil Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ツインブレード",
+				"en": "twin blade"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "太刀",
+				"en": "long sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "矢",
+				"en": "arrow"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "弦エフェクトパーツ",
+				"en": "string effect parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "リード線",
+				"en": "lead wire"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4697.jpg",
+				"src": "https://bandai-hobby.net/images/153_4697_s_2txrnrccolau8fw56ne388qzg9q0.jpg",
 				"path": "/images/items/01_3623/153_4697.jpg",
 				"hash": "cc514640561b1ba45bc0c0c0b0571a38"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4697.jpg",
+				"src": "https://bandai-hobby.net/images/155_4697_s_a1j58tgyknn7yqqyc6lq35lqtfqv.jpg",
 				"path": "/images/items/01_3623/155_4697.jpg",
 				"hash": "8d91b2b30202e0932cb277d98880cba4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4697.jpg",
+				"src": "https://bandai-hobby.net/images/156_4697_s_e6uua2crwwft9iy8rdj55w9sxnms.jpg",
 				"path": "/images/items/01_3623/156_4697.jpg",
 				"hash": "cc282f34b14dd6948e38fe30b1f0aabb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4697.jpg",
+				"src": "https://bandai-hobby.net/images/157_4697_s_uqn3ssmi35d1gkqfqwnexd8dreix.jpg",
 				"path": "/images/items/01_3623/157_4697.jpg",
 				"hash": "0388ad39d9de8a88dab935d641ff9134"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4697.jpg",
+				"src": "https://bandai-hobby.net/images/158_4697_s_g78v8lx2w0stmx9zs3yf0e5in3fj.jpg",
 				"path": "/images/items/01_3623/158_4697.jpg",
 				"hash": "9d072808d3f910368cdd93874fd9e968"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4697.jpg",
+				"src": "https://bandai-hobby.net/images/159_4697_s_jbrxcicyln27v6bmdkovutgtjnrx.jpg",
 				"path": "/images/items/01_3623/159_4697.jpg",
 				"hash": "3982795002bf2e1a9ce7ce2ed3a58d00"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4697.jpg",
+				"src": "https://bandai-hobby.net/images/189_4697_s_q2s02wqpuo898kxn4dy4u3xye6wz.jpg",
 				"path": "/images/items/01_3623/189_4697.jpg",
 				"hash": "ad7244beaa925604c5a797569f55c446"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4697.jpg",
+				"src": "https://bandai-hobby.net/images/190_4697_s_gfb4spzr1enuk2v9dj74f1vsuy66.jpg",
 				"path": "/images/items/01_3623/190_4697.jpg",
 				"hash": "a43bbd4a928de9c33ad80a815d89cfcf"
 			}
@@ -105,10 +183,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3623/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam_breaker_battlogue"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4128", "item-1000166359", "item-1000166322", "item-1000166358"],
 	"manual": {
 		"id": "118",
 		"url": "https://manual.bandai-hobby.net/menus/detail/118/"

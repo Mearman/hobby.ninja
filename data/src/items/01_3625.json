@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ブレイジングガンダム",
 		"en": "HG 1/144 Blazing Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam_breaker_battlogue",
+			"url": "https://bandai-hobby.net/series/gundam_breaker_battlogue/",
+			"ja": "GUNDAM BREAKER BATTLOGUE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4128",
+			"url": "https://bandai-hobby.net/item/01_4128/",
+			"ja": "HG 1/144 ガンダムヘリオス[クリアカラー]"
+		},
+		{
+			"id": "item-1000166359",
+			"url": "https://p-bandai.jp/item/item-1000166359",
+			"ja": "HG 1/144 陸戦型ガンダム(市街地戦仕様)"
+		},
+		{
+			"id": "item-1000166322",
+			"url": "https://p-bandai.jp/item/item-1000166322",
+			"ja": "HG 1/144 グフクリムゾンカスタム"
+		},
+		{
+			"id": "item-1000166358",
+			"url": "https://p-bandai.jp/item/item-1000166358",
+			"ja": "HG 1/144 ガンダムアストレイレッドフレームインバージョン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,18 +62,17 @@
 		"day": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンプラとゲームが連動する「ガンダムブレイカー バトローグ プロジェクト」が2021年夏より全世界にて展開スタート！！",
 			"プロジェクトのオリジナル機体が、2021年秋配信予定のアニメ『ガンダムブレイカー バトローグ』に登場。",
 			"そのオリジナル機体が、ゲーム同様にカスタマイズ可能なHGガンプラシリーズとして登場！",
-			"■ゴッドガンダムの兄弟機をコンセプトにカスタマイズされたMS。",
-			"■シャイニングガンダムに対するライジングガンダムのような、兄弟機から着想を得ている。",
-			"■格闘技を主体としたMSならではの特徴として、各部の関節は広い可動範囲を確保。",
-			"■エメラルドグリーンに輝く足技をクリアグリーンの足パーツで再現。",
-			"■１対のビームトンファーを装備し、ビーム部分はグリーンのクリアパーツを装着可能。",
-			"■パーツ選択によりマスク非装備の頭部も再現可能。"
+			"• ゴッドガンダムの兄弟機をコンセプトにカスタマイズされたMS。",
+			"• シャイニングガンダムに対するライジングガンダムのような、兄弟機から着想を得ている。",
+			"• 格闘技を主体としたMSならではの特徴として、各部の関節は広い可動範囲を確保。",
+			"• エメラルドグリーンに輝く足技をクリアグリーンの足パーツで再現。",
+			"• １対のビームトンファーを装備し、ビーム部分はグリーンのクリアパーツを装着可能。",
+			"• パーツ選択によりマスク非装備の頭部も再現可能。"
 		],
 		"en": [
 			"The \"Gundam Breaker Battlogue Project\", which links Gunpla and games, will start rolling out worldwide from summer 2021! !",
@@ -43,63 +86,86 @@
 			"• Heads without masks can also be reproduced by selecting parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム刃×2",
-			"ビームトンファー×２",
-			"ビームサーベル柄×２",
-			"キックエフェクトパーツ×1",
-			"ホイルシール×1",
-			"ハンドパーツ×１式"
-		],
-		"en": [
-			"Beam blade x2",
-			"Beam tonfa x2",
-			"Beam saber pattern x 2",
-			"Kick effect parts x 1",
-			"Foil Seal×1",
-			"Hand parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム刃",
+				"en": "beam blade"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビームトンファー×２",
+				"en": "Beam tonfa x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル柄×２",
+				"en": "Beam saber pattern x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "キックエフェクトパーツ",
+				"en": "kick effect parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4579.jpg",
+				"src": "https://bandai-hobby.net/images/153_4579_s_cihxikr1hdr5f1p1sdcyf6bsuo98.jpg",
 				"path": "/images/items/01_3625/153_4579.jpg",
 				"hash": "f742a6f3eb400ce1738482e7ee68dc02"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4579.jpg",
+				"src": "https://bandai-hobby.net/images/155_4579_s_76fp9fr896o1o0gd3qkukjju5nnf.jpg",
 				"path": "/images/items/01_3625/155_4579.jpg",
 				"hash": "0a5f99bf1874641ebcb74461ea9ce515"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4579.jpg",
+				"src": "https://bandai-hobby.net/images/156_4579_s_mdgjbpr38ur9q043g5tiixhot6fw.jpg",
 				"path": "/images/items/01_3625/156_4579.jpg",
 				"hash": "958c070b574d4e3aaef128a5f1697c1a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4579.jpg",
+				"src": "https://bandai-hobby.net/images/157_4579_s_75hzjztea74nuledu5pypshbbdie.jpg",
 				"path": "/images/items/01_3625/157_4579.jpg",
 				"hash": "8610f991a5208c9600b5795b44854f03"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4579.jpg",
+				"src": "https://bandai-hobby.net/images/158_4579_s_0sqytvzo22dabeql3fwvx9it8r9s.jpg",
 				"path": "/images/items/01_3625/158_4579.jpg",
 				"hash": "c1fb9c3bbd70cbf63009796c001658a1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4579.jpg",
+				"src": "https://bandai-hobby.net/images/159_4579_s_5cn87rleua6nlcm3g0gw1jvb83o8.jpg",
 				"path": "/images/items/01_3625/159_4579.jpg",
 				"hash": "de0d6ed2661e861487d9670776e54fb9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4579.jpg",
+				"src": "https://bandai-hobby.net/images/189_4579_s_he0u1aa1lv5tntoxq0cm10u2t7tp.jpg",
 				"path": "/images/items/01_3625/189_4579.jpg",
 				"hash": "977ceb3a17999e0dfd10dd39b5d26cc7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4579.jpg",
+				"src": "https://bandai-hobby.net/images/190_4579_s_yd3ljmdcwt9pvzil62exhk008jwm.jpg",
 				"path": "/images/items/01_3625/190_4579.jpg",
 				"hash": "3b7b6c982e3e40882803c9b40f94c6a9"
 			}
@@ -107,10 +173,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3625/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam_breaker_battlogue"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4128", "item-1000166359", "item-1000166322", "item-1000166358"],
 	"manual": {
 		"id": "120",
 		"url": "https://manual.bandai-hobby.net/menus/detail/120/"

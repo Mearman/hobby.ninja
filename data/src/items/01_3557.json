@@ -5,6 +5,48 @@
 		"ja": "30MS SIS-A00 ルルチェ[カラーC]",
 		"en": "30MS SIS-A00 Lulche [Color C]"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5975",
+			"url": "https://bandai-hobby.net/item/01_5975/",
+			"ja": "30MS 和泉愛依"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5954",
+			"url": "https://bandai-hobby.net/item/01_5954/",
+			"ja": "30MS オプションヘアスタイルパーツVol.12 全4種 ミディアムヘア2[イエロー4]"
+		}
+	],
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -31,7 +73,7 @@
 		],
 		"en": [
 			"• An all-in-one item that includes a character body, three types of expression parts, and armor parts.",
-			"• Smooth assembly is possible due to the ``optimum'' Runner parts arrangement, with consideration for ease of assembly and work flow.",
+			"• Smooth assembly is possible due to the ``optimal'' Runner parts arrangement, with consideration for ease of assembly and work flow.",
 			"• Face parts use tampo printing. You can enjoy changing the facial expressions according to the scene.",
 			"• Face parts/hairstyle parts/body parts are lined up by body part. You can create your own sister by combining parts sold separately.",
 			"• You can also enjoy \"extensive customization\" by installing various optional parts sold separately.",
@@ -40,35 +82,37 @@
 			"• The official website of ``30 MINUTES SISTERS'' has a ``customization simulator'' that allows you to imagine how to modify actual plastic models."
 		]
 	},
-	"accessories": {
-		"ja": ["フェイスパーツ×3種", "アーマーパーツ×１式", "ハンドパーツ　握り手（左右）、武器持ち手（左右）"],
-		"en": [
-			"Face parts x 3 types",
-			"Armor parts x 1 set",
-			"Hand parts Gripping hands (left and right), weapon handles (left and right)"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フェイスパーツ",
+				"en": "face parts"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "アーマーパーツ×１式",
+				"en": "Armor parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ　握り手（左右）、武器持ち手（左右）",
+				"en": "Hand parts Gripping hands (left and right), weapon handles (left and right)"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165472_1.jpg",
 				"path": "/images/items/01_3557/1000165472_1.jpg",
 				"hash": "470e75f77a00e89b0a317aee62257d32"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165472_10.jpg",
-				"path": "/images/items/01_3557/1000165472_10.jpg",
-				"hash": "d99ede3387a0b20711bb265025a5ee0f"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165472_11.jpg",
-				"path": "/images/items/01_3557/1000165472_11.jpg",
-				"hash": "72e442c576d0ec470cdc5e0b85fb8127"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165472_12.jpg",
-				"path": "/images/items/01_3557/1000165472_12.jpg",
-				"hash": "3c7594a9d0f415151c454f0bd01754e9"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165472_2.jpg",
@@ -109,15 +153,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165472_9.jpg",
 				"path": "/images/items/01_3557/1000165472_9.jpg",
 				"hash": "ffe8451e1ac88c9d6b096c12ed306e4f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165472_10.jpg",
+				"path": "/images/items/01_3557/1000165472_10.jpg",
+				"hash": "d99ede3387a0b20711bb265025a5ee0f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165472_11.jpg",
+				"path": "/images/items/01_3557/1000165472_11.jpg",
+				"hash": "72e442c576d0ec470cdc5e0b85fb8127"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165472_12.jpg",
+				"path": "/images/items/01_3557/1000165472_12.jpg",
+				"hash": "3c7594a9d0f415151c454f0bd01754e9"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3557/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3447",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3447/"

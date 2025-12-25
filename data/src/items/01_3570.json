@@ -5,6 +5,64 @@
 		"ja": "アクションベース5 [GUNDAM FACTORY YOKOHAMA Ver.]",
 		"en": "Action Base 5 [GUNDAM FACTORY YOKOHAMA Ver.]"
 	},
+	"brands": [
+		{
+			"id": "gfy",
+			"url": "https://bandai-hobby.net/brand/gfy/",
+			"ja": "GUNDAM FACTORY YOKOHAMA"
+		},
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		},
+		{
+			"id": "gfy",
+			"url": "https://bandai-hobby.net/brand/gfy/",
+			"ja": "GUNDAM FACTORY YOKOHAMA"
+		},
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5035",
+			"url": "https://bandai-hobby.net/item/01_5035/",
+			"ja": "1/144 RX-78F00 HMT ガンダム高機動型(G-3イメージカラー)"
+		},
+		{
+			"id": "01_4239",
+			"url": "https://bandai-hobby.net/item/01_4239/",
+			"ja": "1/144 RX-78F00 HMT ガンダム高機動型"
+		},
+		{
+			"id": "01_3472",
+			"url": "https://bandai-hobby.net/item/01_3472/",
+			"ja": "ハロプラ ハロ [クリームホワイト]"
+		},
+		{
+			"id": "01_3841",
+			"url": "https://bandai-hobby.net/item/01_3841/",
+			"ja": "1/144 RX-78F00 ガンダム[チタニウムフィニッシュ]"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -19,41 +77,67 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": ["• 支柱（短）と台座が付属。", "• 豊富なジョイントパーツとサポートパーツが付属。"],
-		"en": ["• Post (short) and pedestal included.", "• Comes with a variety of joint parts and support parts."]
+		"ja": [
+			"• 支柱（短）と台座が付属。",
+			"• 豊富なジョイントパーツとサポートパーツが付属。"
+		],
+		"en": [
+			"• Post (short) and pedestal included.",
+			"• Comes with a variety of joint parts and support parts."
+		]
 	},
-	"accessories": {
-		"ja": ["ベースパーツ×1", "支柱パーツ（短）×1", "ジョイントパーツ各種", "その他サポートパーツ各種"],
-		"en": ["Base parts x 1", "Prop parts (short) x 1", "Various joint parts", "Various other support parts"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ベースパーツ",
+				"en": "base parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "支柱パーツ（短）",
+				"en": "Strut parts (short)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ各種",
+				"en": "Various joint parts"
+			}
+		},
+		{
+			"name": {
+				"ja": "その他サポートパーツ各種",
+				"en": "Various other support parts"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4525.jpg",
+				"src": "https://bandai-hobby.net/images/153_4525_o_1f3pk4b9a9rl1ob41uf287n1ld123.jpg",
 				"path": "/images/items/01_3570/153_4525.jpg",
 				"hash": "0ddcb09d848c65267bc935c067524b48"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4525.jpg",
+				"src": "https://bandai-hobby.net/images/155_4525_o_1f3pk4u0e1pkbgr6ebi1bbg1ibc2d.jpg",
 				"path": "/images/items/01_3570/155_4525.jpg",
 				"hash": "991f64a671f8c939299ba571dc22a6cb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4525.jpg",
+				"src": "https://bandai-hobby.net/images/156_4525_o_1f3pk50sb180t1r4es162b5k9f2i.jpg",
 				"path": "/images/items/01_3570/156_4525.jpg",
 				"hash": "b615d00373878b377beafcd771e734c5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4525.jpg",
+				"src": "https://bandai-hobby.net/images/157_4525_o_1f3pk549kfpojto1nld1ju8mgj2n.jpg",
 				"path": "/images/items/01_3570/157_4525.jpg",
 				"hash": "d1c0a8fa9387c941d1ce738dbe484c64"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3570/",
-	"brandIds": ["gfy", "actionbase"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5035", "01_4239", "01_3472", "01_3841"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3570/"
 }

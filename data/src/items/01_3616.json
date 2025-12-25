@@ -5,6 +5,29 @@
 		"ja": "HG 1/72 ビッグトニー(ガガンバー・メメンプー機)",
 		"en": "HG 1/72 Big Tony (Gaganbar Memenpu machine)"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "sakugan",
+			"url": "https://bandai-hobby.net/series/sakugan/",
+			"ja": "サクガン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/72",
 	"price": {
 		"amount": 5720,
 		"currency": "JPY",
@@ -18,68 +41,95 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"冒険メカアクション『サクガン』より「ビッグトニー」がHG 1/72モデルで登場！",
-			"■幅広い可動域でビッグトニーのコミカルかつスタイリッシュな動きを再現。",
-			"■作中同様のビークルモードへの変形ギミックを組み替え式で再現。",
-			"■腕部はアンカーパーツを取り付けることで射出状態を再現可能。",
-			"■マニピュレーターと掘削ドリルは組み替えで変更が可能。",
-			"■履帯はこだわりのディテールでリアル感を追求。",
-			"■アイシャッターとライトの蓋はパーツの差し替えで再現。"
+			"• 幅広い可動域でビッグトニーのコミカルかつスタイリッシュな動きを再現。",
+			"• 作中同様のビークルモードへの変形ギミックを組み替え式で再現。",
+			"• 腕部はアンカーパーツを取り付けることで射出状態を再現可能。",
+			"• マニピュレーターと掘削ドリルは組み替えで変更が可能。",
+			"• 履帯はこだわりのディテールでリアル感を追求。",
+			"• アイシャッターとライトの蓋はパーツの差し替えで再現。"
 		],
 		"en": [
-			"\"Big Tony \" from the adventure mecha action \" Sakugan\" is now available as an HG 1/72 Model!",
+			"\"Big Tony\" from the adventure mecha action \"Sakugan\" is now available as an HG 1/72 Model!",
 			"• Reproduce Big Tony's comical and stylish movements with a wide range of motion.",
-			"• The transformation gimmick to the vehicle mode similar to the one in the work is reproduced by recombination.",
+			"• The gimmick that transforms into vehicle mode, similar to the one in the work, is reproduced by recombination.",
 			"• The arm part can reproduce the injection state by attaching anchor parts.",
 			"• The manipulator and drilling drill can be changed by rearranging them.",
 			"• The track pursues a realistic feel with careful details.",
 			"• The eye shutter and light lid can be recreated by replacing parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ドリルパーツ×1式",
-			"アンカーパーツ×1式",
-			"アイシャッター×1",
-			"ライト用パーツ×1式",
-			"リード線×2",
-			"マーキングシール×1",
-			"ジュエルシール×1"
-		],
-		"en": [
-			"Drill parts x 1 set",
-			"Anchor parts x 1 set",
-			"Eye shutter x 1",
-			"Light parts x 1 set",
-			"Lead wire x 2",
-			"MarkingSeal×1",
-			"Jewel Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ドリルパーツ",
+				"en": "drill parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "アンカーパーツ",
+				"en": "anchor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "アイシャッター",
+				"en": "eye shutter"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ライト用パーツ",
+				"en": "parts for lights"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "リード線",
+				"en": "lead wire"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジュエルシール",
+				"en": "Jewel Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165458_1.jpg",
 				"path": "/images/items/01_3616/1000165458_1.jpg",
 				"hash": "acee584f0236607ef2b544a95cbafe31"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165458_10.jpg",
-				"path": "/images/items/01_3616/1000165458_10.jpg",
-				"hash": "3096380de28b704327ea10c3ede0e7ae"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165458_11.jpg",
-				"path": "/images/items/01_3616/1000165458_11.jpg",
-				"hash": "91cfe0aa3de90c89ef43d6d6d518645c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165458_12.jpg",
-				"path": "/images/items/01_3616/1000165458_12.jpg",
-				"hash": "0d0893abe32ead712520e8f5962d4bec"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165458_2.jpg",
@@ -120,13 +170,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165458_9.jpg",
 				"path": "/images/items/01_3616/1000165458_9.jpg",
 				"hash": "44ba6d4e6ea44157b1bd6b50c11cadcf"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165458_10.jpg",
+				"path": "/images/items/01_3616/1000165458_10.jpg",
+				"hash": "3096380de28b704327ea10c3ede0e7ae"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165458_11.jpg",
+				"path": "/images/items/01_3616/1000165458_11.jpg",
+				"hash": "91cfe0aa3de90c89ef43d6d6d518645c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000165458_12.jpg",
+				"path": "/images/items/01_3616/1000165458_12.jpg",
+				"hash": "0d0893abe32ead712520e8f5962d4bec"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3616/",
-	"brandIds": ["hg"],
-	"seriesIds": ["sakugan"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_3616/"
 }

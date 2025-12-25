@@ -5,6 +5,50 @@
 		"ja": "ENTRY GRADE 1/144 ガンダムベース限定 RX-78 ガンダム [ペインティングモデル]",
 		"en": "ENTRY GRADE 1/144 Gundam Base Limited RX-78 Gundam [Painting Model]"
 	},
+	"brands": [
+		{
+			"id": "entry_grade_g",
+			"url": "https://bandai-hobby.net/brand/entry_grade_g/",
+			"ja": "ENTRY GRADE"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5218",
+			"url": "https://bandai-hobby.net/item/01_5218/",
+			"ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム[ヴィンテージカラー]"
+		},
+		{
+			"id": "01_5045",
+			"url": "https://bandai-hobby.net/item/01_5045/",
+			"ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム [リサーキュレーションカラー/ネオンブルー]"
+		},
+		{
+			"id": "01_4249",
+			"url": "https://bandai-hobby.net/item/01_4249/",
+			"ja": "GUNDAM NEXT FUTURE限定 ENTRY GRADE 1/144 RX-78-2 ガンダム [クラシックカラー]"
+		},
+		{
+			"id": "01_3632",
+			"url": "https://bandai-hobby.net/item/01_3632/",
+			"ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム(フルウェポンセット)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 21
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
@@ -79,13 +122,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3583/",
-	"brandIds": ["entry_grade"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5218", "01_5045", "01_4249", "01_3632"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3583/"
 }

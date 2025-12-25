@@ -5,6 +5,48 @@
 		"ja": "30MS オプションパーツセット3(メカニカルユニット)",
 		"en": "30MS option parts set 3 (mechanical unit)"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5975",
+			"url": "https://bandai-hobby.net/item/01_5975/",
+			"ja": "30MS 和泉愛依"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5954",
+			"url": "https://bandai-hobby.net/item/01_5954/",
+			"ja": "30MS オプションヘアスタイルパーツVol.12 全4種 ミディアムヘア2[イエロー4]"
+		}
+	],
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -28,10 +70,19 @@
 			"• You can customize the look by rearranging both arms and legs."
 		]
 	},
-	"accessories": {
-		"ja": ["オプションアーマー×1式"],
-		"en": ["Optional armor x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "オプションアーマー",
+				"en": "optional armor"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -73,10 +124,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3556/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3448",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3448/"

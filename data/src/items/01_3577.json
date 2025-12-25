@@ -5,6 +5,50 @@
 		"ja": "HG 1/72 メイレスケンブ",
 		"en": "HG 1/72 Mayleskembu"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -18,13 +62,12 @@
 		"day": 9
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"商品化において、KEN OKUYAMA DESIGNによる１０ｍ級の機体を実際に設計するための構造検証を経て、立体化された主人公機。",
-			"■ジャンクパーツを集めていたアモウが出会った自律思考型AIガイと一緒に組み上げたAMAIM(アメイン）",
-			"■胸部にはシリンダーギミックを搭載。付属武装の剣及び銃によるアクションのポージングも広範囲な可動域で再現可能。",
-			"■未完成状態の装備もパーツの選択式で再現する事ができる。"
+			"• ジャンクパーツを集めていたアモウが出会った自律思考型AIガイと一緒に組み上げたAMAIM(アメイン）",
+			"• 胸部にはシリンダーギミックを搭載。付属武装の剣及び銃によるアクションのポージングも広範囲な可動域で再現可能。",
+			"• 未完成状態の装備もパーツの選択式で再現する事ができる。"
 		],
 		"en": [
 			"In commercialization, the main character was made into a three-dimensional model after undergoing structural verification to actually design a 10m-class aircraft by KEN OKUYAMA DESIGN.",
@@ -33,84 +76,104 @@
 			"• Unfinished equipment can also be reproduced by selecting parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"60mm携行機関砲×１",
-			"超熱振式戦闘直刀×１",
-			"盾付短剣×１",
-			"ウェポンラック×１",
-			"ハンドパーツ 平手（左右）&#8203;、武器持ち手（左右）&#8203;、銃持ち手（右）",
-			"未完成状態再現用パーツ一式",
-			"ホイルシール×１"
-		],
-		"en": [
-			"60mm portable machine gun x 1",
-			"Super heat wave fighting straight sword x1",
-			"Dagger with shield x1",
-			"Weapon rack x 1",
-			"Hand parts: open hand (left and right), weapon handle (left and right), gun handle (right)",
-			"Complete set of parts for unfinished state reproduction",
-			"Foil Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "60mm携行機関砲×１",
+				"en": "60mm portable machine gun x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "超熱振式戦闘直刀×１",
+				"en": "Super heat wave fighting straight sword x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "盾付短剣×１",
+				"en": "Dagger with shield x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ウェポンラック×１",
+				"en": "Weapon rack x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ 平手（左右）&#8203;、武器持ち手（左右）&#8203;、銃持ち手（右）",
+				"en": "Hand parts: open hand (left and right), weapon handle (left and right), gun handle (right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "未完成状態再現用パーツ一式",
+				"en": "Complete set of parts for unfinished state reproduction"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール×１",
+				"en": "Foil Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4532.jpg",
+				"src": "https://bandai-hobby.net/images/153_4532_s_x3p272edjnypijix8tiqtcmec79i.jpg",
 				"path": "/images/items/01_3577/153_4532.jpg",
 				"hash": "84f8a53a270053a6efe8649deea066bb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4532.jpg",
+				"src": "https://bandai-hobby.net/images/155_4532_s_9zxq3zeu46p4ttpgrvqayvga3zkt.jpg",
 				"path": "/images/items/01_3577/155_4532.jpg",
 				"hash": "98724a9918da8b7725410d24bfa9feb9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4532.jpg",
+				"src": "https://bandai-hobby.net/images/156_4532_s_wmkvbad3uap1kje5evouer3xtsfv.jpg",
 				"path": "/images/items/01_3577/156_4532.jpg",
 				"hash": "46e6ab8908713949e15961fabc4e5b5d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4532.jpg",
+				"src": "https://bandai-hobby.net/images/157_4532_s_skzogyx13rknua92acuun06h0030.jpg",
 				"path": "/images/items/01_3577/157_4532.jpg",
 				"hash": "3ab797727d2557c559ca73291a7b04a4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4532.jpg",
+				"src": "https://bandai-hobby.net/images/158_4532_s_f2z292jobh5yph1gtt4pkqpn7pz3.jpg",
 				"path": "/images/items/01_3577/158_4532.jpg",
 				"hash": "d8acc9c0687e1d22212b1fe35e5a07d3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4532.jpg",
+				"src": "https://bandai-hobby.net/images/159_4532_s_22lqt2fg7z4k6mbw1i4g2kgd4vx1.jpg",
 				"path": "/images/items/01_3577/159_4532.jpg",
 				"hash": "049eacef531d84f071f14ba689a0fada"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4532.jpg",
+				"src": "https://bandai-hobby.net/images/189_4532_s_dvia9bvwv9maqpd0bd0osbi9seo0.jpg",
 				"path": "/images/items/01_3577/189_4532.jpg",
 				"hash": "06e84c3d44a5ef6d6000cbe76c7bd0bf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4532.jpg",
+				"src": "https://bandai-hobby.net/images/190_4532_s_88vaskmgesmsbqoqwkmm8k0qx2ym.jpg",
 				"path": "/images/items/01_3577/190_4532.jpg",
 				"hash": "2304cc7a5096b8d571e29eb0af6caaf1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4532.jpg",
+				"src": "https://bandai-hobby.net/images/191_4532_s_vt551gv2j6y8wc59nt6mq1lk50z9.jpg",
 				"path": "/images/items/01_3577/191_4532.jpg",
 				"hash": "6ff0a99f9df6f470293326c2eb4d376b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4532.jpg",
+				"src": "https://bandai-hobby.net/images/192_4532_s_hq4mdnqnk4jii4z14waw6f1f63nf.jpg",
 				"path": "/images/items/01_3577/192_4532.jpg",
 				"hash": "89e6d7d355bca2917f36826c45e864ee"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3577/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3577/"
 }

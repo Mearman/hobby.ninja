@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 オプションパーツセット5(マルチウィング/マルチブースター)",
 		"en": "30MM 1/144 Option parts set 5 (Multi-wing/Multi-booster)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -18,14 +61,13 @@
 		"day": 17
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"展開することで姿を変えるマルチウィングが付属のオプションパーツセット！",
-			"■変形するマルチウィングが付属。同梱のジョイントパーツを使用し既存機体にも取り付け可能。",
-			"■マルチウィングは脚部のカスタムパーツとしても使用可能。",
-			"■複数の可動箇所により折りたたみも可能なマルチブースターも付属。",
-			"■カスタム用のマスクパーツとヘッドパーツが各2種類付属。"
+			"• 変形するマルチウィングが付属。同梱のジョイントパーツを使用し既存機体にも取り付け可能。",
+			"• マルチウィングは脚部のカスタムパーツとしても使用可能。",
+			"• 複数の可動箇所により折りたたみも可能なマルチブースターも付属。",
+			"• カスタム用のマスクパーツとヘッドパーツが各2種類付属。"
 		],
 		"en": [
 			"An optional parts set that comes with a multi-wing that changes its appearance by unfolding!",
@@ -35,68 +77,102 @@
 			"• Two types of custom mask parts and head parts are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"マルチウイング×2",
-			"マルチブースター×2",
-			"マスク×2種",
-			"ツインテールパーツ×1",
-			"ポニーテール パーツ×1",
-			"ジョイントパーツ×1式"
-		],
-		"en": [
-			"Multi wing x 2",
-			"Multi booster x 2",
-			"Mask x 2 types",
-			"Twin tail parts x 1",
-			"Ponytail parts x 1",
-			"Joint parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "マルチウイング",
+				"en": "multi wing"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "マルチブースター",
+				"en": "multi booster"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "マスク",
+				"en": "mask"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ツインテールパーツ",
+				"en": "twin tail parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ポニーテール パーツ",
+				"en": "ponytail parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4484.jpg",
+				"src": "https://bandai-hobby.net/images/153_4484_s_86e7b2agnbenjmjlajyj2qr85tw0.jpg",
 				"path": "/images/items/01_3533/153_4484.jpg",
 				"hash": "b6265d99e36b4a1e395b2a1eb8d4067e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4484.jpg",
+				"src": "https://bandai-hobby.net/images/155_4484_s_nyo1gqbk34prdui5u9oyc2yxj8m8.jpg",
 				"path": "/images/items/01_3533/155_4484.jpg",
 				"hash": "b07144c2d868490f6387aa73946fc4a0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4484.jpg",
+				"src": "https://bandai-hobby.net/images/156_4484_s_a9cg0ruy7qtjhctedry94i9a7xd6.jpg",
 				"path": "/images/items/01_3533/156_4484.jpg",
 				"hash": "81e73cadb4b210db052a4ae357cba80f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4484.jpg",
+				"src": "https://bandai-hobby.net/images/157_4484_s_aw2mnxgwyknoo9f6pb4jn2c4hu3o.jpg",
 				"path": "/images/items/01_3533/157_4484.jpg",
 				"hash": "fffd6ca749a0eb6de38ac8b727018c3c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4484.jpg",
+				"src": "https://bandai-hobby.net/images/158_4484_s_0vrxtxo1h0kh6gpu28vzurbrf184.jpg",
 				"path": "/images/items/01_3533/158_4484.jpg",
 				"hash": "51bc34e21a6c06a57553f8c98340f68f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4484.jpg",
+				"src": "https://bandai-hobby.net/images/159_4484_s_4s8g4suzjkopl2r6h70f0jlytz29.jpg",
 				"path": "/images/items/01_3533/159_4484.jpg",
 				"hash": "b5ac89536bb9b8d859e40cac4089aa35"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4484.jpg",
+				"src": "https://bandai-hobby.net/images/189_4484_s_thqhj1gmw8jbyyme2zhxnqw3dg8i.jpg",
 				"path": "/images/items/01_3533/189_4484.jpg",
 				"hash": "272ec292513ae1e2ebab4b99edc8ff72"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4484.jpg",
+				"src": "https://bandai-hobby.net/images/190_4484_s_qyusll8rhurtb2ijck1bi6li0uy2.jpg",
 				"path": "/images/items/01_3533/190_4484.jpg",
 				"hash": "7c25ab6d9eab3eb55595161e8dad7c5a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4484.jpg",
+				"src": "https://bandai-hobby.net/images/191_4484_s_4bqhfgxiuo561de5dcsg2vfv1zvk.jpg",
 				"path": "/images/items/01_3533/191_4484.jpg",
 				"hash": "c4d66ae4bda20363d782f93e3584e980"
 			}
@@ -104,10 +180,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3533/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3723",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3723/"

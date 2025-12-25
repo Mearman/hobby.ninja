@@ -5,6 +5,49 @@
 		"ja": "HG アルトアイゼン",
 		"en": "HG Alt Eisen"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "superrobot_og",
+			"url": "https://bandai-hobby.net/series/superrobot_og/",
+			"ja": "スーパーロボット大戦OG"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5578",
+			"url": "https://bandai-hobby.net/item/01_5578/",
+			"ja": "HG アシュセイヴァー"
+		},
+		{
+			"id": "01_5491",
+			"url": "https://bandai-hobby.net/item/01_5491/",
+			"ja": "HG ヴァイスリッター"
+		},
+		{
+			"id": "item-1000214961",
+			"url": "https://p-bandai.jp/item/item-1000214961/",
+			"ja": "ＨＧ ヒュッケバインＭｋ－ＩＩトロンベ"
+		},
+		{
+			"id": "01_5369",
+			"url": "https://bandai-hobby.net/item/01_5369/",
+			"ja": "HG ガンレオン"
+		}
+	],
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -21,67 +64,73 @@
 	"description": {
 		"ja": [
 			"『スーパーロボット大戦OG』シリーズより、「アルトアイゼン」がHGシリーズで立体化！",
-			"■右腕に搭載された「リボルビング・ステーク」のシリンダーには回転可動機能を搭載。両肩装甲を展開することで「スクエア・クレイモア」の発射直前の状態を再現可能。",
-			"■ディスプレイ用の台座が付属。"
+			"• 右腕に搭載された「リボルビング・ステーク」のシリンダーには回転可動機能を搭載。両肩装甲を展開することで「スクエア・クレイモア」の発射直前の状態を再現可能。",
+			"• ディスプレイ用の台座が付属。"
 		],
 		"en": [
-			"From the \"Super Robot Wars OG \" series, \" Alt Eisen\" is now three-dimensional in the HG series!",
-			"• The \"revolving stake \" cylinder mounted on the right arm has a rotating function. By deploying both shoulder armor, it is possible to reproduce the state immediately before the \" Square Claymore\" is launched.",
+			"From the \"Super Robot Wars OG\" series, \"Alt Eisen\" is now three-dimensional in the HG series!",
+			"• The \"revolving stake\" cylinder mounted on the right arm has a rotating function. By deploying both shoulder armor, it is possible to reproduce the state immediately before the \"Square Claymore\" is launched.",
 			"• Includes display pedestal."
 		]
 	},
-	"accessories": {
-		"ja": ["ディスプレイベース", "シール×１"],
-		"en": ["display base", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイベース",
+				"en": "display base"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4569.jpg",
+				"src": "https://bandai-hobby.net/images/153_4569_s_bvv67qe53n24jvnuwpmgexbl1p0s.jpg",
 				"path": "/images/items/01_3614/153_4569.jpg",
 				"hash": "84e4d2d7fb27d4c377b26fd6a003db5e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4569.jpg",
+				"src": "https://bandai-hobby.net/images/155_4569_s_65oxzc33kz9qaaqdk6bcooms2kva.jpg",
 				"path": "/images/items/01_3614/155_4569.jpg",
 				"hash": "bd1ab87905712c584a8ac257e3c11251"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4569.jpg",
+				"src": "https://bandai-hobby.net/images/156_4569_s_qo588qra33atf3gr17ucw6g44rp9.jpg",
 				"path": "/images/items/01_3614/156_4569.jpg",
 				"hash": "1e989031169062558511f8283960466f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4569.jpg",
+				"src": "https://bandai-hobby.net/images/157_4569_s_k2jaojmn6wiodd7zjrr7c4fr1zn1.jpg",
 				"path": "/images/items/01_3614/157_4569.jpg",
 				"hash": "000593b8bafb1df26922d4adaf74bb61"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4569.jpg",
+				"src": "https://bandai-hobby.net/images/158_4569_s_nymj3e1ksrca5il5sqlmrf8te1tp.jpg",
 				"path": "/images/items/01_3614/158_4569.jpg",
 				"hash": "171b13c81f80779f8cbf45046edc7b39"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4569.jpg",
+				"src": "https://bandai-hobby.net/images/159_4569_s_mnfwzsqoh62dwufwb54sbgwj8t93.jpg",
 				"path": "/images/items/01_3614/159_4569.jpg",
 				"hash": "41b657ca61ef4f829a5be05d2cb0fdd7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4569.jpg",
+				"src": "https://bandai-hobby.net/images/189_4569_s_zr65y3jkuzkwxp58gaescvkbr5kr.jpg",
 				"path": "/images/items/01_3614/189_4569.jpg",
 				"hash": "a34dbd95e9dd11bf990755c4ec27757d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4569.jpg",
+				"src": "https://bandai-hobby.net/images/190_4569_s_ihielqhoyscr6ykdrqgffdea0o9s.jpg",
 				"path": "/images/items/01_3614/190_4569.jpg",
 				"hash": "d1834a52f43e5cbff201746dc7b334ac"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3614/",
-	"brandIds": ["hg"],
-	"seriesIds": ["superrobot_og"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5578", "01_5491", "item-1000214961", "01_5369"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3614/"
 }

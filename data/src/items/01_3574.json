@@ -2,9 +2,42 @@
 	"id": "01_3574",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム EXスタンダード ガンダムベース限定 ZGMF-X10A フリーダムガンダム Ver.GCP",
-		"en": "SD Gundam EX Standard Gundam Base Limited ZGMF-X10A Freedom Gundam Ver.GCP"
+		"ja": "SDガンダムEXスタンダード ガンダムベース限定 ZGMF-X10A フリーダムガンダム Ver.GCP",
+		"en": "SDGundamEX Standard Gundam Base Limited ZGMF-X10A Freedom Gundam Ver.GCP"
 	},
+	"brands": [
+		{
+			"id": "SDEX",
+			"url": "https://bandai-hobby.net/brand/SDEX/",
+			"ja": "SDEXスタンダード"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_605",
+			"url": "https://bandai-hobby.net/item/01_605/",
+			"ja": "SDEXスタンダード007 ガンダムアストレイ レッドフレーム"
+		},
+		{
+			"id": "01_598",
+			"url": "https://bandai-hobby.net/item/01_598/",
+			"ja": "SDEXスタンダード002 エールストライクガンダム"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -25,9 +58,9 @@
 			"楽しみに商品をお待ちいただいているお客様におかれましては、多大なるご迷惑をおかけしますことを深くお詫び申し上げます。何卒ご理解賜りますようお願い申し上げます。",
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラが登場！",
 			"上海に降臨した実物大フリーダムガンダム立像が、ＳＤＥＸで立体化！",
-			"■全身のパネルラインやディテールを新規造形で再現",
-			"■ビームライフル、ビームサーベル、シールドが付属。",
-			"■（別売り）ＨＧシリーズとのカスタマイズ遊びが可能",
+			"• 全身のパネルラインやディテールを新規造形で再現",
+			"• ビームライフル、ビームサーベル、シールドが付属。",
+			"• （別売り）ＨＧシリーズとのカスタマイズ遊びが可能",
 			"付属武装：ビームライフル / ビームサーベル / シールド / レール砲"
 		],
 		"en": [
@@ -42,47 +75,56 @@
 			"Attached weapons: beam rifle / beam saber / seal / rail gun"
 		]
 	},
-	"accessories": {
-		"ja": ["ビームライフル", "ビームサーベル", "シールド", "レール砲"],
-		"en": ["beam rifle", "beam saber", "Seal de", "rail gun"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "beam rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "beam saber"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		},
+		{
+			"name": {
+				"ja": "レール砲",
+				"en": "rail gun"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_3574_0.jpg",
 				"path": "/images/items/01_3574/01_3574_0.jpg",
 				"hash": "8409ad0d730236d6b33126d49340cd65"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_3574_1.jpg",
 				"path": "/images/items/01_3574/01_3574_1.jpg",
 				"hash": "f0f0473420790c31d0bde25867ff8a77"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_3574_2.jpg",
 				"path": "/images/items/01_3574/01_3574_2.jpg",
 				"hash": "ac5e8639eead77dc5616b13f138d2c3b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_3574_3.jpg",
 				"path": "/images/items/01_3574/01_3574_3.jpg",
 				"hash": "7b5cf230e637c4b71e52a5d8e6e61b50"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_3574_4.jpg",
 				"path": "/images/items/01_3574/01_3574_4.jpg",
 				"hash": "bb53f89c4948e31690c2017ff2ff65b5"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3574/",
-	"brandIds": ["SDEX"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_605", "01_598"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3574/"
 }

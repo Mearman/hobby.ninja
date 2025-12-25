@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 EXM-E7a スピナティア (アサシン仕様)",
 		"en": "30MM 1/144 EXM-E7a Spinatia (Assassin specification)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1408,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMシリーズに新たに加わった第３勢力「マクシオン軍」に、女性型の新機体「スピナティア」がアサシン仕様で登場！",
@@ -28,42 +70,60 @@
 			"• 既存アイテムともミキシングできる共通関節構造、３mmジョイントを採用。"
 		],
 		"en": [
-			"A new female aircraft, \"Spinatia \", is now available as an assassin in the third force \" Maxion Army\" that has newly joined the 30MM series!",
+			"A new female aircraft, \"Spinatia\", is now available as an assassin in the third force \"Maxion Army\" that has newly joined the 30MM series!",
 			"• A new female body has been added to the 30MM series.",
 			"• An all-in-one item that includes the main body, armor parts, and weapon parts.",
 			"• New structure that is even easier to assemble! While taking advantage of the range of motion, there is no pinching during assembly.",
 			"• Adopts a 3mm joint, a common joint structure that can be mixed with existing items."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ハンドガン×2",
-			"クナイ×2",
-			"シールドバインダー×2",
-			"ハンドパーツ　武器持ち手（左右）、平手（左右）、表情武器持ち手（右）",
-			"アサシンアーマー×１式",
-			"ジョイントパーツ×１式"
-		],
-		"en": [
-			"Hand gun x 2",
-			"Kunai x 2",
-			"Seal binder x 2",
-			"Hand parts Weapon holder (left and right), open hand (left and right), facial expression weapon holder (right)",
-			"Assassin armor x 1 set",
-			"Joint parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハンドガン",
+				"en": "hand gun"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "クナイ",
+				"en": "kunai"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールドバインダー",
+				"en": "Seal binder"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ　武器持ち手（左右）、平手（左右）、表情武器持ち手（右）",
+				"en": "Hand parts Weapon holder (left and right), open hand (left and right), facial expression weapon holder (right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "アサシンアーマー×１式",
+				"en": "Assassin armor x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ×１式",
+				"en": "Joint parts x 1 set"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000162613_1.jpg",
 				"path": "/images/items/01_3545/1000162613_1.jpg",
 				"hash": "1e9d1b7f3ecab67091c74740887edcb7"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000162613_10.jpg",
-				"path": "/images/items/01_3545/1000162613_10.jpg",
-				"hash": "e523c86563c9470b464c72c870a7904f"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000162613_2.jpg",
@@ -104,15 +164,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000162613_9.jpg",
 				"path": "/images/items/01_3545/1000162613_9.jpg",
 				"hash": "964a59f164a96bb32db9467056d77759"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000162613_10.jpg",
+				"path": "/images/items/01_3545/1000162613_10.jpg",
+				"hash": "e523c86563c9470b464c72c870a7904f"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3545/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3724",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3724/"

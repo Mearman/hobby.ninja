@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダム レギルス",
 		"en": "HG 1/144 Gundam Regillus"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "age",
+			"url": "https://bandai-hobby.net/series/age/",
+			"ja": "機動戦士ガンダムAGE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000170540",
+			"url": "https://p-bandai.jp/item/item-1000170540/",
+			"ja": "ＨＧ 1/144 フォーンファルシア"
+		},
+		{
+			"id": "item-1000169836",
+			"url": "https://p-bandai.jp/item/item-1000169836/",
+			"ja": "ＨＧ 1/144 ガンダムＡＧＥ-１ レイザー＆ガンダムＡＧＥ-２ アルティメス セット"
+		},
+		{
+			"id": "01_3738",
+			"url": "https://bandai-hobby.net/item/01_3738/",
+			"ja": "HG 1/144 「機動戦士ガンダムAGE」 MSセット[クリアカラー]"
+		},
+		{
+			"id": "item-1000082540",
+			"url": "https://p-bandai.jp/item/item-1000082540",
+			"ja": "ＨＧ 1/144 ガンダムレギルス〔MEMORY OF EDEN〕"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,34 +62,33 @@
 		"day": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• ガンダム AGE-3を解析し、ヴェイガンの技術を加えて開発された新型MS。 • レギルスコアと胴体は分離可能。 • 瞳のデザインは、ヴェイガンタイプとガンダムタイプの２パターンから選択できる。 • シールドはパーツの差し替えによりビット射出時の開閉ギミックを再現可能。 成形品×7、ホイルシール×1、組立説明書×１"
+			"• ガンダムAGE-3を解析し、ヴェイガンの技術を加えて開発された新型MS。 ■レギルスコアと胴体は分離可能。 ■瞳のデザインは、ヴェイガンタイプとガンダムタイプの２パターンから選択できる。 ■シールドはパーツの差し替えによりビット射出時の開閉ギミックを再現可能。 成形品×7、ホイルシール×1、組立説明書×１"
 		],
 		"en": [
-			"• A new MS developed by analyzing Gundam AGE-3 and adding Vagan technology. • Regill core and body can be separated. • You can choose from two eye designs: Vegan type and Gundam type. • Seal can reproduce the opening/closing gimmick during bit injection by replacing parts. Molded product x 7, foil seal x 1, assembly manual x 1"
+			"• A new MS developed by analyzing GundamAGE-3 and adding Vagan technology. ■Regil core and body can be separated. ■You can choose from two eye designs: Vegan type and Gundam type. ■Seal can reproduce the opening/closing gimmick during bit injection by replacing parts. Molded product x 7, foil seal x 1, assembly manual x 1"
 		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4560.jpg",
+				"src": "https://bandai-hobby.net/images/153_4560_s_ae9fbce7drfipnczrqyw8ss73vjj.jpg",
 				"path": "/images/items/01_3605/153_4560.jpg",
 				"hash": "59cbbe978f28c78c12c4e96e163b3f8d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4560.jpg",
+				"src": "https://bandai-hobby.net/images/155_4560_s_fj5gtbxrrzdvuukr1t1tsgup8c0s.jpg",
 				"path": "/images/items/01_3605/155_4560.jpg",
 				"hash": "ba060b4634bc7767a7614ac006e3a210"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4560.jpg",
+				"src": "https://bandai-hobby.net/images/156_4560_s_tk7khnkndb3yyl2gpogsz549w26y.jpg",
 				"path": "/images/items/01_3605/156_4560.jpg",
 				"hash": "b7e88c2614881f711ec3d78db5dbd15a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4560.jpg",
+				"src": "https://bandai-hobby.net/images/157_4560_s_4xne15au0qfk3kvvy1z2e83bx0gm.jpg",
 				"path": "/images/items/01_3605/157_4560.jpg",
 				"hash": "9a6469bca95aaaca9db77d08685764d8"
 			}
@@ -53,10 +96,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3605/",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "353",
 		"url": "https://manual.bandai-hobby.net/menus/detail/353/"

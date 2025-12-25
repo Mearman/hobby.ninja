@@ -5,6 +5,49 @@
 		"ja": "RG 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン 正規実用型 3号機 ESVシールド セット",
 		"en": "RG General Purpose Humanoid Battle Weapon Android Evangelion Regular Practical Type Unit 3 ESVSeal Set"
 	},
+	"brands": [
+		{
+			"id": "rg-c",
+			"url": "https://bandai-hobby.net/brand/rg-c/",
+			"ja": "RG［ リアルグレード ］"
+		}
+	],
+	"series": [
+		{
+			"id": "evangelion",
+			"url": "https://bandai-hobby.net/series/evangelion/",
+			"ja": "エヴァンゲリオン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181665",
+			"url": "https://p-bandai.jp/item/item-1000181665/",
+			"ja": "ＲＧ エヴァンゲリオン用武器セット"
+		},
+		{
+			"id": "item-1000171750",
+			"url": "https://p-bandai.jp/item/item-1000171750/",
+			"ja": "ＲＧ 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン４号機"
+		},
+		{
+			"id": "item-1000163344",
+			"url": "https://p-bandai.jp/item/item-1000163344/",
+			"ja": "ＲＧ エヴァンゲリオン専用拘束兼移動式射出台セット"
+		},
+		{
+			"id": "item-1000163343",
+			"url": "https://p-bandai.jp/item/item-1000163343/",
+			"ja": "ＲＧ 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン 初号機（シン・エヴァンゲリオン劇場版）"
+		}
+	],
 	"price": {
 		"amount": 6600,
 		"currency": "JPY",
@@ -21,103 +64,149 @@
 	"description": {
 		"ja": [
 			"『ヱヴァンゲリヲン新劇場版』より正規実用型 3号機がESVシールドとセットで登場！",
-			"■「人造人間」という劇中の設定をもとに、ヒトとして自然なアクションポーズの再現を追求。",
-			"■「背骨可動」「腕の捻り」などの人間らしい可動性を実現。",
-			"■３号機輸送時の「エヴァンゲリオン専用光学系保護カバー」を初立体化。",
-			"■零号機用の「エヴァンゲリオン専用単独防御兵装 ENCHANTED SHIELD OF VIRTUE」が付属。",
-			"■ESVシールド用の零号機ハンドパーツが付属。"
+			"• 「人造人間」という劇中の設定をもとに、ヒトとして自然なアクションポーズの再現を追求。",
+			"• 「背骨可動」「腕の捻り」などの人間らしい可動性を実現。",
+			"• ３号機輸送時の「エヴァンゲリオン専用光学系保護カバー」を初立体化。",
+			"• 零号機用の「エヴァンゲリオン専用単独防御兵装 ENCHANTED SHIELD OF VIRTUE」が付属。",
+			"• ESVシールド用の零号機ハンドパーツが付属。"
 		],
 		"en": [
 			"From \"Evangelion: New Theatrical Version\", the official practical type Unit 3 is now available as a set with ESVSeal!",
 			"• Based on the setting in the play of \"androids,\" we strive to reproduce action poses that are natural for humans.",
-			"• Realizes human-like mobility such as \"moving the spine \" and \" twisting the arms.\"",
+			"• Realizes human-like mobility such as \"moving the spine\" and \"twisting the arms.\"",
 			"• The first three-dimensional version of the \"Evangelion optical system protection cover\" used during Unit 3 transportation.",
-			"• ENCHANTED SHIELD OF VIRTUE, an exclusive Evangelion defensive weapon, for Unit 0 is included.",
+			"• ENCHANTED SHIELD OF VIRTUE, an exclusive Evangelion defensive weapon, is included for Unit-00.",
 			"• Includes Unit 0 hand parts for ESVSeal."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"エヴァンゲリオン専用光学系保護カバー×1式",
-			"エヴァンゲリオン専用単独防御兵装 ENCHANTED SHIELD OF VIRTUE×1",
-			"シールド用補助台座×1",
-			"シールド用零号機ハンドパーツ×1式",
-			"プログレッシブナイフ×２種（通常時・格納時）",
-			"ハンドパーツ×1式",
-			"パレットライフル×１",
-			"アンビリカルケーブル×１",
-			"リアリスティックデカール×1"
-		],
-		"en": [
-			"Optical system protection cover for Evangelion x 1 set",
-			"Evangelion exclusive defense weapon ENCHANTED SHIELD OF VIRTUE×1",
-			"Auxiliary pedestal for Seal x 1",
-			"Unit 0 hand parts for Seal × 1 set",
-			"Progressive knife x 2 types (normal/stored)",
-			"Hand parts x 1 set",
-			"Pallet rifle x1",
-			"Umbilical cable x 1",
-			"Realistic decal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "エヴァンゲリオン専用光学系保護カバー",
+				"en": "Optical system protection cover for Evangelion"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "エヴァンゲリオン専用単独防御兵装 ENCHANTED SHIELD OF VIRTUE",
+				"en": "Evangelion exclusive defense weapon ENCHANTED SHIELD OF VIRTUE"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド用補助台座",
+				"en": "Auxiliary pedestal for Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド用零号機ハンドパーツ",
+				"en": "Unit 0 hand parts for Seal"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "プログレッシブナイフ×２種（通常時・格納時）",
+				"en": "Progressive knife x 2 types (normal/stored)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "パレットライフル×１",
+				"en": "Pallet rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "アンビリカルケーブル×１",
+				"en": "Umbilical cable x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール",
+				"en": "realistic decals"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4571.jpg",
+				"src": "https://bandai-hobby.net/images/153_4571_s_2gl3cq0ku1edu4tfc24hg4ed9p8r.jpg",
 				"path": "/images/items/01_3617/153_4571.jpg",
 				"hash": "f7f12f043e79af758e8aa2dbdd39a2f1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4571.jpg",
+				"src": "https://bandai-hobby.net/images/155_4571_s_xp7x09islisgq5uymywvy6ri0210.jpg",
 				"path": "/images/items/01_3617/155_4571.jpg",
 				"hash": "34f6049d2ab89bce5d751cb2df5a5e3a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4571.jpg",
+				"src": "https://bandai-hobby.net/images/156_4571_s_17ksl5zaza2x37wzpo39e4o22lt8.jpg",
 				"path": "/images/items/01_3617/156_4571.jpg",
 				"hash": "6e8f754ca6d3906fabbf75323ac3707d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4571.jpg",
+				"src": "https://bandai-hobby.net/images/157_4571_s_9v6bo3l4cc151d20qgq8ldgfpin2.jpg",
 				"path": "/images/items/01_3617/157_4571.jpg",
 				"hash": "056c8ddff0ff28db2531d963fe5f71b3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4571.jpg",
+				"src": "https://bandai-hobby.net/images/158_4571_s_3wgqcflnglv6cx0vrji8hvxtlycv.jpg",
 				"path": "/images/items/01_3617/158_4571.jpg",
 				"hash": "e29dcec43adc626c3c550f100b59bc42"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4571.jpg",
+				"src": "https://bandai-hobby.net/images/159_4571_s_wf8121zu85801rypfb82v22oq8jq.jpg",
 				"path": "/images/items/01_3617/159_4571.jpg",
 				"hash": "c27524fd49cae2325ba673f9a096f254"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4571.jpg",
+				"src": "https://bandai-hobby.net/images/189_4571_s_mv3m9mdq1l1cj8romvy9huspo5vj.jpg",
 				"path": "/images/items/01_3617/189_4571.jpg",
 				"hash": "e1a1dbd7b4036b2827d3f2a2796a8274"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4571.jpg",
+				"src": "https://bandai-hobby.net/images/190_4571_s_jhwkfey1my7zmiaxqvinhi3ijwqp.jpg",
 				"path": "/images/items/01_3617/190_4571.jpg",
 				"hash": "cff0c63826a34a0a8c9993998015c849"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4571.jpg",
+				"src": "https://bandai-hobby.net/images/191_4571_s_tfdrfn15m8kn8l48w99fm6shdy15.jpg",
 				"path": "/images/items/01_3617/191_4571.jpg",
 				"hash": "268f19a3e8251c775a93c5ba8378c057"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4571.jpg",
+				"src": "https://bandai-hobby.net/images/192_4571_s_5g6uq9i64iy7c7xc0bla75bqu8km.jpg",
 				"path": "/images/items/01_3617/192_4571.jpg",
 				"hash": "4b4ecb1175ea8cc2fa1156bd669908d6"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3617/",
-	"brandIds": ["rg"],
-	"seriesIds": ["evangelion"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["item-1000181665", "item-1000171750", "item-1000163344", "item-1000163343"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3617/"
 }

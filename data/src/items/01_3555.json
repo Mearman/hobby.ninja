@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 エグザビークル (ドッグメカVer.)",
 		"en": "30MM 1/144 Exer Vehicle (Dog Mecha Ver.)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 858,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 18
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"カスタマイズの幅を広げる30MM「エグザビークルシリーズ」にドッグメカVer.が登場！",
@@ -33,21 +75,46 @@
 			"• It can be used as customized parts by disassembling it."
 		]
 	},
-	"accessories": {
-		"ja": ["ビークル×1体", "パックパック×1", "リード線×1", "ホイルシール×1"],
-		"en": ["Vehicle x 1", "Pack pack x 1", "Lead wire x 1", "Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビークル",
+				"en": "vehicle"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "体",
+				"en": "body"
+			}
+		},
+		{
+			"name": {
+				"ja": "パックパック",
+				"en": "pack pack"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リード線",
+				"en": "lead wire"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164291_1.jpg",
 				"path": "/images/items/01_3555/1000164291_1.jpg",
 				"hash": "5a105dac4294f31372960de54fd522c6"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164291_10.jpg",
-				"path": "/images/items/01_3555/1000164291_10.jpg",
-				"hash": "c4f53dad9c97b01f170148d861e3ef6f"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164291_2.jpg",
@@ -88,15 +155,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164291_9.jpg",
 				"path": "/images/items/01_3555/1000164291_9.jpg",
 				"hash": "d8728351a7178768a15bf4aa7a1c4538"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164291_10.jpg",
+				"path": "/images/items/01_3555/1000164291_10.jpg",
+				"hash": "c4f53dad9c97b01f170148d861e3ef6f"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3555/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3726",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3726/"

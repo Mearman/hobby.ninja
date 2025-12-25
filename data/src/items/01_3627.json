@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムダブルオーコマンドクアンタ",
 		"en": "HG 1/144 Gundam 00 Commando Quanta"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam_breaker_battlogue",
+			"url": "https://bandai-hobby.net/series/gundam_breaker_battlogue/",
+			"ja": "GUNDAM BREAKER BATTLOGUE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4128",
+			"url": "https://bandai-hobby.net/item/01_4128/",
+			"ja": "HG 1/144 ガンダムヘリオス[クリアカラー]"
+		},
+		{
+			"id": "item-1000166359",
+			"url": "https://p-bandai.jp/item/item-1000166359",
+			"ja": "HG 1/144 陸戦型ガンダム(市街地戦仕様)"
+		},
+		{
+			"id": "item-1000166322",
+			"url": "https://p-bandai.jp/item/item-1000166322",
+			"ja": "HG 1/144 グフクリムゾンカスタム"
+		},
+		{
+			"id": "item-1000166358",
+			"url": "https://p-bandai.jp/item/item-1000166358",
+			"ja": "HG 1/144 ガンダムアストレイレッドフレームインバージョン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,15 +62,14 @@
 		"day": 15
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンプラとゲームが連動する「ガンダムブレイカー バトローグ プロジェクト」が2021年より全世界にて展開スタート！！",
 			"プロジェクトのオリジナル機体が、2021年10月配信予定の新作ショートフィルム『ガンダムブレイカー バトローグ』に登場。そのオリジナル機体が、ゲーム同様にカスタマイズ可能なHGガンプラシリーズとして登場！",
-			"■ダブルオークアンタにコマンドガンダムの要素を加えてカスタマイズされたMS。",
-			"■ダブルオークアンタのスタイリッシュなシルエットを深い緑色で刷新！",
-			"■ミサイルランチャー、ヘビーマシンガン、アームズシールドといった多数の射撃武器が付属。",
-			"■コマンドソードやアームズシールドに格納された二振りのコンバットナイフなど、斬撃武装も付属し、カラーリングだけでなく、ミリタリー要素もコマンドガンダムの特徴を備えている。"
+			"• ダブルオークアンタにコマンドガンダムの要素を加えてカスタマイズされたMS。",
+			"• ダブルオークアンタのスタイリッシュなシルエットを深い緑色で刷新！",
+			"• ミサイルランチャー、ヘビーマシンガン、アームズシールドといった多数の射撃武器が付属。",
+			"• コマンドソードやアームズシールドに格納された二振りのコンバットナイフなど、斬撃武装も付属し、カラーリングだけでなく、ミリタリー要素もコマンドガンダムの特徴を備えている。"
 		],
 		"en": [
 			"The \"Gundam Breaker Battlogue Project\", which links Gunpla and the game, will start rolling out worldwide in 2021! !",
@@ -37,60 +80,90 @@
 			"• Slashing weapons such as the command sword and two combat knives stored in the arms seal are also included, and not only the coloring but also the military elements are characteristic of the command Gundam."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"コマンドソード×1",
-			"アームズシールド×1",
-			"コンバットナイフ×2",
-			"ヘビーマシンガン×1",
-			"ミサイルランチャー×1",
-			"ホイルシール×1",
-			"ハンドパーツ×１式"
-		],
-		"en": [
-			"Command sword x1",
-			"Arms Seal × 1",
-			"Combat knife x 2",
-			"Heavy machine gun x1",
-			"Missile launcher x1",
-			"Foil Seal×1",
-			"Hand parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "コマンドソード",
+				"en": "command sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アームズシールド",
+				"en": "Arms Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "コンバットナイフ",
+				"en": "combat knife"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ヘビーマシンガン",
+				"en": "heavy machine gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ミサイルランチャー",
+				"en": "missile launcher"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4696.jpg",
+				"src": "https://bandai-hobby.net/images/153_4696_s_rmdrnvmqgta54pc35csi5qxi8nxl.jpg",
 				"path": "/images/items/01_3627/153_4696.jpg",
 				"hash": "49bd78b58e23ae52ef5d34f967926d83"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4696.jpg",
+				"src": "https://bandai-hobby.net/images/155_4696_s_h9b5e8hlb88jtj3sja8h8adbh4c2.jpg",
 				"path": "/images/items/01_3627/155_4696.jpg",
 				"hash": "671c9f5c0bf248a3fc9889bdba5c418d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4696.jpg",
+				"src": "https://bandai-hobby.net/images/156_4696_s_qflqhsf0bs6qyfxryzxqacsbbf0s.jpg",
 				"path": "/images/items/01_3627/156_4696.jpg",
 				"hash": "4d3e7be1c0074977ca2ea2451c66dd17"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4696.jpg",
+				"src": "https://bandai-hobby.net/images/157_4696_s_okl4kqcx5uwd1lq29z203ia3x9nr.jpg",
 				"path": "/images/items/01_3627/157_4696.jpg",
 				"hash": "313e7e02dc7347e9f855386fcaca6924"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4696.jpg",
+				"src": "https://bandai-hobby.net/images/158_4696_s_6eutbgrw0k3fhpvqbpmktxjwwrks.jpg",
 				"path": "/images/items/01_3627/158_4696.jpg",
 				"hash": "71817c5b95d761028cc53aba1760f305"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4696.jpg",
+				"src": "https://bandai-hobby.net/images/159_4696_s_s6dznprt4oyjono44wswww8ctzxx.jpg",
 				"path": "/images/items/01_3627/159_4696.jpg",
 				"hash": "de285234a764de351508b54e583985ab"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4696.jpg",
+				"src": "https://bandai-hobby.net/images/189_4696_s_csnkatu02nnovqyx2ez8iko8c5l6.jpg",
 				"path": "/images/items/01_3627/189_4696.jpg",
 				"hash": "b4921a5c3751e7c1ca49a383976b49be"
 			}
@@ -98,10 +171,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3627/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam_breaker_battlogue"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4128", "item-1000166359", "item-1000166322", "item-1000166358"],
 	"manual": {
 		"id": "121",
 		"url": "https://manual.bandai-hobby.net/menus/detail/121/"

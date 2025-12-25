@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 EXM-E7f スピナティア (フェンサー仕様)",
 		"en": "30MM 1/144 EXM-E7f Spinatia (Fencer specification)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1408,
 		"currency": "JPY",
@@ -18,91 +61,103 @@
 		"day": 17
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMシリーズに新たに加わった第３勢力「マクシオン軍」に、女性型の新機体「スピナティア」がフェンサー仕様で登場！",
-			"■30MMシリーズに女性型の素体が新たに登場。",
-			"■素体となる本体のほか、アーマーパーツ、武器パーツがひとつになったオールインワンアイテム。",
-			"■更に組み立てやすくなった新構造！可動範囲を活かしつつも組み立ての際の挟み込みは一切なし。",
-			"■既存アイテムともミキシングできる共通関節構造、３mmジョイントを採用。"
+			"• 30MMシリーズに女性型の素体が新たに登場。",
+			"• 素体となる本体のほか、アーマーパーツ、武器パーツがひとつになったオールインワンアイテム。",
+			"• 更に組み立てやすくなった新構造！可動範囲を活かしつつも組み立ての際の挟み込みは一切なし。",
+			"• 既存アイテムともミキシングできる共通関節構造、３mmジョイントを採用。"
 		],
 		"en": [
-			"A new female aircraft, \"Spinatia \", is now available as a fencer in the third force \" Maxion Army\" that has newly joined the 30MM series!",
+			"A new female aircraft, \"Spinatia\", is now available as a fencer in the third force \"Maxion Army\" that has newly joined the 30MM series!",
 			"• A new female body has been added to the 30MM series.",
 			"• An all-in-one item that includes the main body, armor parts, and weapon parts.",
 			"• New structure that is even easier to assemble! While taking advantage of the range of motion, there is no pinching during assembly.",
 			"• Adopts a 3mm joint, a common joint structure that can be mixed with existing items."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"細剣×2",
-			"ハンドパーツ　武器持ち手（左右）、平手（左右）、表情武器持ち手（右）",
-			"フェンサーアーマー×１式",
-			"ジョイントパーツ×１式"
-		],
-		"en": [
-			"Thin sword x2",
-			"Hand parts Weapon holder (left and right), open hand (left and right), facial expression weapon holder (right)",
-			"Fencer armor x 1 set",
-			"Joint parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "細剣",
+				"en": "thin sword"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ　武器持ち手（左右）、平手（左右）、表情武器持ち手（右）",
+				"en": "Hand parts Weapon holder (left and right), open hand (left and right), facial expression weapon holder (right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "フェンサーアーマー×１式",
+				"en": "Fencer armor x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ×１式",
+				"en": "Joint parts x 1 set"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4483.jpg",
+				"src": "https://bandai-hobby.net/images/153_4483_s_ix5rs1s42zb88ahywgjld5qwzgdb.jpg",
 				"path": "/images/items/01_3532/153_4483.jpg",
 				"hash": "3bbd1d828407d875438ad7c0770cc81b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4483.jpg",
+				"src": "https://bandai-hobby.net/images/155_4483_s_72xy6z4ct022w4ugtvnxhbm8u923.jpg",
 				"path": "/images/items/01_3532/155_4483.jpg",
 				"hash": "23d55c2fd5302c413393b27d7c42cffa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4483.jpg",
+				"src": "https://bandai-hobby.net/images/156_4483_s_jsgpb4tmciulorsdu3y2t14fwhy1.jpg",
 				"path": "/images/items/01_3532/156_4483.jpg",
 				"hash": "35ec6c65c01f8b073157e6e5d5855f9e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4483.jpg",
+				"src": "https://bandai-hobby.net/images/157_4483_s_j4s94n994kx7ntxr50bjsopob1tj.jpg",
 				"path": "/images/items/01_3532/157_4483.jpg",
 				"hash": "6b2d867da325ba7d6711f1597bd8c702"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4483.jpg",
+				"src": "https://bandai-hobby.net/images/158_4483_s_x703daml2xw96btge52ht164t882.jpg",
 				"path": "/images/items/01_3532/158_4483.jpg",
 				"hash": "a80099ff1465a0f5a94f1bc5776e9a23"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4483.jpg",
+				"src": "https://bandai-hobby.net/images/159_4483_s_0ajdg0zcit9h5hwgf4m163378grw.jpg",
 				"path": "/images/items/01_3532/159_4483.jpg",
 				"hash": "99db9e34629ef5d9cce3756e8dfbb32b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4483.jpg",
+				"src": "https://bandai-hobby.net/images/189_4483_s_rbyz71xhev4ii4594zaacreqhb46.jpg",
 				"path": "/images/items/01_3532/189_4483.jpg",
 				"hash": "bb82b8a50611e8ecee458c5d0ebec1a7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4483.jpg",
+				"src": "https://bandai-hobby.net/images/190_4483_s_6tu8o2xw1mk4b50vnlht8xl1ah5x.jpg",
 				"path": "/images/items/01_3532/190_4483.jpg",
 				"hash": "58f76ab2d953d2afccc44f0cbd7ddf2f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4483.jpg",
+				"src": "https://bandai-hobby.net/images/191_4483_s_jtibqptkwnk6nvbf5rdlpwtvy6lr.jpg",
 				"path": "/images/items/01_3532/191_4483.jpg",
 				"hash": "869977f3a29a006fcd37316bb1450bbf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4483.jpg",
+				"src": "https://bandai-hobby.net/images/192_4483_s_34unlmex1ldwf0ry1gyqzyl6q0ay.jpg",
 				"path": "/images/items/01_3532/192_4483.jpg",
 				"hash": "66fc13978d2c28ca600ebcee46f668b5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_4483.jpg",
+				"src": "https://bandai-hobby.net/images/193_4483_s_i0qs9lena83wo9ph7avfogyq6rwm.jpg",
 				"path": "/images/items/01_3532/193_4483.jpg",
 				"hash": "abae9335177d6fe66a94d39ad8ed2a01"
 			}
@@ -110,10 +165,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3532/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3722",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3722/"

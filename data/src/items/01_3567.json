@@ -5,6 +5,50 @@
 		"ja": "GUNDAM FACTORY YOKOHAMA専用エコプラ 1/144 RX-78F00 ガンダム",
 		"en": "GUNDAM FACTORY YOKOHAMA exclusive eco plastic 1/144 RX-78F00 Gundam"
 	},
+	"brands": [
+		{
+			"id": "gfy",
+			"url": "https://bandai-hobby.net/brand/gfy/",
+			"ja": "GUNDAM FACTORY YOKOHAMA"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5035",
+			"url": "https://bandai-hobby.net/item/01_5035/",
+			"ja": "1/144 RX-78F00 HMT ガンダム高機動型(G-3イメージカラー)"
+		},
+		{
+			"id": "01_4239",
+			"url": "https://bandai-hobby.net/item/01_4239/",
+			"ja": "1/144 RX-78F00 HMT ガンダム高機動型"
+		},
+		{
+			"id": "01_3472",
+			"url": "https://bandai-hobby.net/item/01_3472/",
+			"ja": "ハロプラ ハロ [クリームホワイト]"
+		},
+		{
+			"id": "01_3841",
+			"url": "https://bandai-hobby.net/item/01_3841/",
+			"ja": "1/144 RX-78F00 ガンダム[チタニウムフィニッシュ]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 24
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『GUNDAM FACTORY YOKOHAMA』の動く実物大ガンダムの限定商品がエコプラで登場！",
@@ -35,33 +78,39 @@
 			"• Thorough reproduction of the details of the moving Gundam \"RX-78F00\"."
 		]
 	},
-	"accessories": {
-		"ja": ["マーキングシール", "ホイルシール"],
-		"en": ["MarkingSeal", "foil seal"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4522.jpg",
+				"src": "https://bandai-hobby.net/images/153_4522_o_1f3kmhtco1iv310cj12981kvi1hf923.jpg",
 				"path": "/images/items/01_3567/153_4522.jpg",
 				"hash": "2d9fbec395eecf01736e826ceb60f821"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4522.jpg",
+				"src": "https://bandai-hobby.net/images/155_4522_o_1f3kmi6mo8h5nf916k11jr51uc42d.jpg",
 				"path": "/images/items/01_3567/155_4522.jpg",
 				"hash": "5320e25de3a080c0847ccf1a273da25e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4522.jpg",
+				"src": "https://bandai-hobby.net/images/156_4522_o_1f3krc89k14nt1nqv180tq6tjjc23.jpg",
 				"path": "/images/items/01_3567/156_4522.jpg",
 				"hash": "1ecd5e122606e6d5d41c4b8a7462466c"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3567/",
-	"brandIds": ["gfy"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5035", "01_4239", "01_3472", "01_3841"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3567/"
 }

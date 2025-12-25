@@ -5,6 +5,60 @@
 		"ja": "HG 1/144 ガンダムアストレイレッドフレームインバージョン",
 		"en": "HG 1/144 Gundam Astray Red Frame Inversion"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam_breaker_battlogue",
+			"url": "https://bandai-hobby.net/series/gundam_breaker_battlogue/",
+			"ja": "GUNDAM BREAKER BATTLOGUE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4128",
+			"url": "https://bandai-hobby.net/item/01_4128/",
+			"ja": "HG 1/144 ガンダムヘリオス[クリアカラー]"
+		},
+		{
+			"id": "item-1000166359",
+			"url": "https://p-bandai.jp/item/item-1000166359",
+			"ja": "HG 1/144 陸戦型ガンダム(市街地戦仕様)"
+		},
+		{
+			"id": "item-1000166322",
+			"url": "https://p-bandai.jp/item/item-1000166322",
+			"ja": "HG 1/144 グフクリムゾンカスタム"
+		},
+		{
+			"id": "item-1000166324",
+			"url": "https://p-bandai.jp/item/item-1000166324",
+			"ja": "HG 1/144 ウイングガンダムスカイゼロ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 2
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"【プレミアムバンダイにて後日予約受付開始予定】",
@@ -42,57 +95,89 @@
 			"• Comes with joint parts that can be used for rearrangement and customization."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ガーベラ・ストレート×1",
-			"ビームライフル×1",
-			"バクゥ偵察タイプ頭部ユニット×１",
-			"シールド×1",
-			"ビームサーベル刃（大､小）×各2",
-			"ジョイントパーツ×１",
-			"ハンドパーツ×１式",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Gerbera Straight×1",
-			"Beam rifle x 1",
-			"Baku reconnaissance type head unit x 1",
-			"Seal × 1",
-			"Beam saber blade (large, small) x 2 each",
-			"Joint parts x 1",
-			"Hand parts x 1 set",
-			"Foil Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ガーベラ・ストレート",
+				"en": "gerbera straight"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バクゥ偵察タイプ頭部ユニット×１",
+				"en": "Baku reconnaissance type head unit x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル刃（大､小）×各2",
+				"en": "Beam saber blade (large, small) x 2 each"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ×１",
+				"en": "Joint parts x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4584.jpg",
+				"src": "https://bandai-hobby.net/images/153_4584_o_1f7vsup1r1ib54l25om60s2s823.jpg",
 				"path": "/images/items/01_3630/153_4584.jpg",
 				"hash": "81ce1acf372ea13b2e53e0891075c097"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4584.jpg",
+				"src": "https://bandai-hobby.net/images/155_4584_o_1f7vsv44k1mihtsv18p8vdp172g2d.jpg",
 				"path": "/images/items/01_3630/155_4584.jpg",
 				"hash": "d118590b963807548ce8045658d9f642"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4584.jpg",
+				"src": "https://bandai-hobby.net/images/156_4584_o_1f7vsv9u41bsh1qbg18au35s8u32i.jpg",
 				"path": "/images/items/01_3630/156_4584.jpg",
 				"hash": "300d4451f8f7152243898783e3dc5a39"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4584.jpg",
+				"src": "https://bandai-hobby.net/images/157_4584_o_1f7vsvgda1en4dbr1utnb7qn7h2n.jpg",
 				"path": "/images/items/01_3630/157_4584.jpg",
 				"hash": "fe4d03a94ea01807a11ffd046de52290"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4584.jpg",
+				"src": "https://bandai-hobby.net/images/158_4584_o_1f7vsvmq1c1b1mue1d5912nb1hb92s.jpg",
 				"path": "/images/items/01_3630/158_4584.jpg",
 				"hash": "7f114dae1d4b89c0a06109c359948bef"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4584.jpg",
+				"src": "https://bandai-hobby.net/images/159_4584_o_1f7vsvsnurna19d1e9u103d4c531.jpg",
 				"path": "/images/items/01_3630/159_4584.jpg",
 				"hash": "005a7ff3c76729191836fb00fee080ff"
 			}
@@ -100,14 +185,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3630/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["gundam_breaker_battlogue"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4128", "item-1000166359", "item-1000166322", "item-1000166324"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "124",
 		"url": "https://manual.bandai-hobby.net/menus/detail/124/"

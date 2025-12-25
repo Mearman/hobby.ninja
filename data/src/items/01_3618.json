@@ -5,6 +5,43 @@
 		"ja": "RG エヴァンゲリオンデカール1",
 		"en": "RG Evangelion Decal 1"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "evangelion",
+			"url": "https://bandai-hobby.net/series/evangelion/",
+			"ja": "エヴァンゲリオン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6757",
+			"url": "https://bandai-hobby.net/item/01_6757/",
+			"ja": "30MP 綾波レイ(プラグスーツVer.)"
+		},
+		{
+			"id": "item-1000181665",
+			"url": "https://p-bandai.jp/item/item-1000181665/",
+			"ja": "ＲＧ エヴァンゲリオン用武器セット"
+		},
+		{
+			"id": "item-1000171750",
+			"url": "https://p-bandai.jp/item/item-1000171750/",
+			"ja": "ＲＧ 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン４号機"
+		},
+		{
+			"id": "item-1000163344",
+			"url": "https://p-bandai.jp/item/item-1000163344/",
+			"ja": "ＲＧ エヴァンゲリオン専用拘束兼移動式射出台セット"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -21,52 +58,53 @@
 	"description": {
 		"ja": [
 			"RGエヴァンゲリオンシリーズ用のマーキングが水転写式デカールにて登場！",
-			"■「RG 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン初号機」「RG 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン試作零号機DX 陽電子砲セット」用。",
-			"■汎用NERVマークなども追加された特別デカールセット。"
+			"• 「RG 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン初号機」「RG 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン試作零号機DX 陽電子砲セット」用。",
+			"• 汎用NERVマークなども追加された特別デカールセット。"
 		],
 		"en": [
 			"Marking for the RG Evangelion series is now available as a water transfer decal!",
-			"• For \"RG General Purpose Humanoid Battle Weapon Android Evangelion Unit-01 \" and \" RG General Purpose Humanoid Battle Weapon Android Evangelion Prototype Unit 0 DX Positron Cannon Set\".",
+			"• For \"RG General Purpose Humanoid Battle Weapon Android Evangelion Unit-01\" and \"RG General Purpose Humanoid Battle Weapon Android Evangelion Prototype Unit 0 DX Positron Cannon Set\".",
 			"• A special decal set that also includes the general-purpose NERV mark."
 		]
 	},
-	"accessories": {
-		"ja": ["水転写式デカール×2"],
-		"en": ["Water transfer decal x 2"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 2
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4572.jpg",
+				"src": "https://bandai-hobby.net/images/153_4572_s_9lwyw4onos9rdu94tsoh1b7n5qr0.jpg",
 				"path": "/images/items/01_3618/153_4572.jpg",
 				"hash": "9531dcdc5ed585ed04303e95eebe67f3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4572.jpg",
+				"src": "https://bandai-hobby.net/images/155_4572_s_dzh2b1bd2qud475qu01enlgyoat7.jpg",
 				"path": "/images/items/01_3618/155_4572.jpg",
 				"hash": "4867e7cff754548711a27e6ef38d9e45"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4572.jpg",
+				"src": "https://bandai-hobby.net/images/156_4572_s_zs0tsvb1o1l95gxmfth5e1bgh63z.jpg",
 				"path": "/images/items/01_3618/156_4572.jpg",
 				"hash": "f23a2edde933e5833f38c1bbda9b5b0c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4572.jpg",
+				"src": "https://bandai-hobby.net/images/157_4572_s_5b2acr8wvt714pgeg85471ggeihd.jpg",
 				"path": "/images/items/01_3618/157_4572.jpg",
 				"hash": "5b36efbdc3ddb0b2edad82d49a7a61b7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4572.jpg",
+				"src": "https://bandai-hobby.net/images/158_4572_s_lxibncs8nrirf4vuuoqqivow2i0d.jpg",
 				"path": "/images/items/01_3618/158_4572.jpg",
 				"hash": "2bb0a82b7ec32a88fdb5c3b0087c9964"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3618/",
-	"brandIds": [],
-	"seriesIds": ["evangelion"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_6757", "item-1000181665", "item-1000171750", "item-1000163344"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3618/"
 }

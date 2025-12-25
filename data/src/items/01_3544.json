@@ -5,6 +5,48 @@
 		"ja": "30MS オプションパーツセット1(スピードアーマー)",
 		"en": "30MS Option Parts Set 1 (Speed ​​Armor)"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5975",
+			"url": "https://bandai-hobby.net/item/01_5975/",
+			"ja": "30MS 和泉愛依"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5954",
+			"url": "https://bandai-hobby.net/item/01_5954/",
+			"ja": "30MS オプションヘアスタイルパーツVol.12 全4種 ミディアムヘア2[イエロー4]"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -21,35 +63,66 @@
 	"description": {
 		"ja": [
 			"キャラクター素体への盛りカスタマイズが可能！",
-			"■主に「SIS-G00 リシェッタ」への装着が可能な、虎をイメージしたデザインのオプションパーツセット。",
-			"■太モモパーツはリシェッタと異なるカラーのパーツが付属。",
-			"■”脚部膝上パーツ”を介して、別売りの「３０MM」シリーズのメカニカルな脚パーツが装着可能となっている。(※「30 MINUTES MISSIONS」キットの対象年齢は8才です。)"
+			"• 主に「SIS-G00 リシェッタ」への装着が可能な、虎をイメージしたデザインのオプションパーツセット。",
+			"• 太モモパーツはリシェッタと異なるカラーのパーツが付属。",
+			"• ”脚部膝上パーツ”を介して、別売りの「３０MM」シリーズのメカニカルな脚パーツが装着可能となっている。(※「30 MINUTES MISSIONS」キットの対象年齢は8才です。)"
 		],
 		"en": [
 			"You can customize the character body to the fullest!",
 			"• An optional parts set with a tiger-inspired design that can be attached mainly to the \"SIS-G00 Richetta\".",
 			"• Thick thigh parts come with parts in a different color from Richetta.",
-			"• Mechanical leg parts from the \"30MM \" series (sold separately) can be attached via the \" leg parts above the knee \". (*The target age for the \" 30 MINUTES MISSIONS\" Kit is 8 years old.)"
+			"• Mechanical leg parts from the \"30MM\" series (sold separately) can be attached via the \"leg parts above the knee\". (*The target age for the \"30 MINUTES MISSIONS\" Kit is 8 years old.)"
 		]
 	},
-	"accessories": {
-		"ja": ["オプションアーマー×1式", "太モモパーツ×1式", "脚部膝上パーツ×1式"],
-		"en": ["Optional armor x 1 set", "Thick thigh parts x 1 set", "Leg above knee parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "オプションアーマー",
+				"en": "optional armor"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "太モモパーツ",
+				"en": "Thick thigh parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "脚部膝上パーツ",
+				"en": "Leg above knee parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/155_4495.jpg",
+				"src": "https://bandai-hobby.net/images/155_4495_o_1i75v4r3e1k9n7op6g013rfmj023.jpg",
 				"path": "/images/items/01_3544/155_4495.jpg",
 				"hash": "33682a6a0c7b913fad352640dcc4111f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4495.jpg",
+				"src": "https://bandai-hobby.net/images/156_4495_s_wuuysk7vqdb3fy6tjx09njxs9k74.jpg",
 				"path": "/images/items/01_3544/156_4495.jpg",
 				"hash": "6a53c07ab8f9ae38e9a9eb1ab1dd8014"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4495.jpg",
+				"src": "https://bandai-hobby.net/images/157_4495_s_lic2hcfmertmvu850elh5tq3wkru.jpg",
 				"path": "/images/items/01_3544/157_4495.jpg",
 				"hash": "01622a87e1bf13394bbf572def161699"
 			}
@@ -57,10 +130,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3544/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3439",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3439/"

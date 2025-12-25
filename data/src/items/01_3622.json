@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムリヴランスヘブン",
 		"en": "HG 1/144 Gundam Revrance Heaven"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam_breaker_battlogue",
+			"url": "https://bandai-hobby.net/series/gundam_breaker_battlogue/",
+			"ja": "GUNDAM BREAKER BATTLOGUE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4128",
+			"url": "https://bandai-hobby.net/item/01_4128/",
+			"ja": "HG 1/144 ガンダムヘリオス[クリアカラー]"
+		},
+		{
+			"id": "item-1000166359",
+			"url": "https://p-bandai.jp/item/item-1000166359",
+			"ja": "HG 1/144 陸戦型ガンダム(市街地戦仕様)"
+		},
+		{
+			"id": "item-1000166322",
+			"url": "https://p-bandai.jp/item/item-1000166322",
+			"ja": "HG 1/144 グフクリムゾンカスタム"
+		},
+		{
+			"id": "item-1000166358",
+			"url": "https://p-bandai.jp/item/item-1000166358",
+			"ja": "HG 1/144 ガンダムアストレイレッドフレームインバージョン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,15 +62,14 @@
 		"day": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンプラとゲームが連動する「ガンダムブレイカー バトローグ プロジェクト」が2021年夏より全世界にて展開スタート！！",
 			"プロジェクトのオリジナル機体が、2021年秋配信予定のアニメ『ガンダムブレイカー バトローグ』に登場。",
 			"そのオリジナル機体が、ゲーム同様にカスタマイズ可能なHGガンプラシリーズとして登場！",
-			"■アクティブクロークを展開した姿が神々しい「ガンダムデスサイズヘル」の改造機体。元機体とは対照的に、白と金のカラーリングで全身を包む。",
-			"■大型のビームパーツを装着し、ロッドモード・ランスモード・サイズモードの3形態に変化するビームランスを携える。",
-			"■クローズ状態ではベースの機体であるガンダムデスサイズヘルを思わせるが、内蔵した新たなアーム構造によりアクティブクロークを展開した際は翼を広げた天使を想起させる。"
+			"• アクティブクロークを展開した姿が神々しい「ガンダムデスサイズヘル」の改造機体。元機体とは対照的に、白と金のカラーリングで全身を包む。",
+			"• 大型のビームパーツを装着し、ロッドモード・ランスモード・サイズモードの3形態に変化するビームランスを携える。",
+			"• クローズ状態ではベースの機体であるガンダムデスサイズヘルを思わせるが、内蔵した新たなアーム構造によりアクティブクロークを展開した際は翼を広げた天使を想起させる。"
 		],
 		"en": [
 			"The \"Gundam Breaker Battlogue Project\", which links Gunpla and games, will start rolling out worldwide from summer 2021! !",
@@ -37,49 +80,73 @@
 			"• In the closed state, it is reminiscent of the base aircraft Gundam Death Scythe Hell, but when the active cloak is deployed due to the new built-in arm structure, it is reminiscent of an angel with spread wings."
 		]
 	},
-	"accessories": {
-		"ja": ["ロッド×１", "ビームランス用エフェクト×1", "ホイルシール×1", "ハンドパーツ×１式"],
-		"en": ["Rod x1", "Beam lance effect x 1", "Foil Seal×1", "Hand parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ロッド×１",
+				"en": "Rod x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームランス用エフェクト",
+				"en": "Effects for beam lance"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4576.jpg",
+				"src": "https://bandai-hobby.net/images/153_4576_s_aovfbpogumy7lc06x2gvwbdn2cnw.jpg",
 				"path": "/images/items/01_3622/153_4576.jpg",
 				"hash": "010b460d325f811245c31a1857590985"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4576.jpg",
+				"src": "https://bandai-hobby.net/images/155_4576_s_uhao2tqzkef4i3h72363q1h5bjiv.jpg",
 				"path": "/images/items/01_3622/155_4576.jpg",
 				"hash": "855ebe9dab69c86b607d36f65d97e128"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4576.jpg",
+				"src": "https://bandai-hobby.net/images/156_4576_s_oy1jemop98nyfivbkhga3hkuenl6.jpg",
 				"path": "/images/items/01_3622/156_4576.jpg",
 				"hash": "0483c9ad5c77d01ec87ec57bb1a253aa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4576.jpg",
+				"src": "https://bandai-hobby.net/images/157_4576_s_pc67vlpd06safdbr84ffd3lb6nla.jpg",
 				"path": "/images/items/01_3622/157_4576.jpg",
 				"hash": "61f6604f34cb36fef588befd42d58f52"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4576.jpg",
+				"src": "https://bandai-hobby.net/images/158_4576_s_825oqp4opvedazxs8tkhxob8z46n.jpg",
 				"path": "/images/items/01_3622/158_4576.jpg",
 				"hash": "c8bf068ec361efa7376dc3754ae5cd97"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4576.jpg",
+				"src": "https://bandai-hobby.net/images/159_4576_s_01zuhm9tf4abvyp2pjwh2i7okxrz.jpg",
 				"path": "/images/items/01_3622/159_4576.jpg",
 				"hash": "3985cb595bfe47a771e437a652e92281"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4576.jpg",
+				"src": "https://bandai-hobby.net/images/189_4576_s_b07escqxd3je9ns3pegiomm6x0k6.jpg",
 				"path": "/images/items/01_3622/189_4576.jpg",
 				"hash": "2b8b3e48ea80d7df11b5f12a0740cc56"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4576.jpg",
+				"src": "https://bandai-hobby.net/images/190_4576_s_dphi7g263hvs51n4r4pfgs9kf6yd.jpg",
 				"path": "/images/items/01_3622/190_4576.jpg",
 				"hash": "50305b2199e728182c9ec6fde2270a0a"
 			}
@@ -87,10 +154,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3622/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam_breaker_battlogue"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4128", "item-1000166359", "item-1000166322", "item-1000166358"],
 	"manual": {
 		"id": "117",
 		"url": "https://manual.bandai-hobby.net/menus/detail/117/"

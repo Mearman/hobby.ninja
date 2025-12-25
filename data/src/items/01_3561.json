@@ -5,6 +5,59 @@
 		"ja": "ＨＧ 1/144 ペイルライダーＤＩＩ（ティターンズ仕様）",
 		"en": "HG 1/144 Pale Rider DII (Titans specification)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -17,7 +70,6 @@
 		"month": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"即 応 態 勢 ―",
@@ -80,21 +132,44 @@
 			"・Product specifications are as of 20214. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["シェキナー", "ビーム・ジャベリン", "ビーム・サーベル", "ビーム・ライフル", "シールド"],
-		"en": ["Shekinah", "beam javelin", "beam saber", "beam rifle", "Seal de"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シェキナー",
+				"en": "Shekinah"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・ジャベリン",
+				"en": "beam javelin"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・ライフル",
+				"en": "beam rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157175_1.jpg",
 				"path": "/images/items/01_3561/1000157175_1.jpg",
 				"hash": "a432614104a9efbcd6d122743c04f489"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157175_10.jpg",
-				"path": "/images/items/01_3561/1000157175_10.jpg",
-				"hash": "6304dfc988102258c5e18341915e89d5"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157175_2.jpg",
@@ -135,19 +210,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157175_9.jpg",
 				"path": "/images/items/01_3561/1000157175_9.jpg",
 				"hash": "57f51f0fa40226f3e0a29351d91359b1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157175_10.jpg",
+				"path": "/images/items/01_3561/1000157175_10.jpg",
+				"hash": "6304dfc988102258c5e18341915e89d5"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3561/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla", "hguc"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5963", "01_5961", "01_5951"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2355",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2355/"

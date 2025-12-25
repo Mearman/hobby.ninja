@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 シャルドール改",
 		"en": "HG 1/144 Chardor Kai"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "age",
+			"url": "https://bandai-hobby.net/series/age/",
+			"ja": "機動戦士ガンダムAGE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000170540",
+			"url": "https://p-bandai.jp/item/item-1000170540/",
+			"ja": "ＨＧ 1/144 フォーンファルシア"
+		},
+		{
+			"id": "item-1000169836",
+			"url": "https://p-bandai.jp/item/item-1000169836/",
+			"ja": "ＨＧ 1/144 ガンダムＡＧＥ-１ レイザー＆ガンダムＡＧＥ-２ アルティメス セット"
+		},
+		{
+			"id": "01_3738",
+			"url": "https://bandai-hobby.net/item/01_3738/",
+			"ja": "HG 1/144 「機動戦士ガンダムAGE」 MSセット[クリアカラー]"
+		},
+		{
+			"id": "item-1000082540",
+			"url": "https://p-bandai.jp/item/item-1000082540",
+			"ja": "ＨＧ 1/144 ガンダムレギルス〔MEMORY OF EDEN〕"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -18,34 +62,33 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 「機動戦士ガンダム AGE アセム編」で登場したマッドーナ工房の量産機。 成形品×6、ホイルシール×1、組立説明書×1"
+			"• 「機動戦士ガンダムAGE アセム編」で登場したマッドーナ工房の量産機。 成形品×6、ホイルシール×1、組立説明書×1"
 		],
 		"en": [
-			"• A mass-produced machine from the Madona workshop that appeared in \"Mobile Suit Gundam AGE: Asemu Edition\". Molded product x 6, foil seal x 1, assembly manual x 1"
+			"• A mass-produced machine from the Madona workshop that appeared in \"Mobile Suit GundamAGE: Asemu Edition\". Molded product x 6, foil seal x 1, assembly manual x 1"
 		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4549.jpg",
+				"src": "https://bandai-hobby.net/images/153_4549_s_wg0o8142y11umkkhxzvv7gwolfnu.jpg",
 				"path": "/images/items/01_3594/153_4549.jpg",
 				"hash": "4b7b06dc8400b16a9ad2ccaed55f9f24"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4549.jpg",
+				"src": "https://bandai-hobby.net/images/155_4549_s_jksfeli6sqvuflcggiwj19dppfyb.jpg",
 				"path": "/images/items/01_3594/155_4549.jpg",
 				"hash": "1fec3ea38dd8c5e5a5cde011806cd4f6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4549.jpg",
+				"src": "https://bandai-hobby.net/images/156_4549_s_mnnl0hb8yvyhw6lkgrwbs5si5gdk.jpg",
 				"path": "/images/items/01_3594/156_4549.jpg",
 				"hash": "9347b9e0ed133a093893a7fbede04455"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4549.jpg",
+				"src": "https://bandai-hobby.net/images/157_4549_s_og0bfzavvep8jabsk77pznqdud0k.jpg",
 				"path": "/images/items/01_3594/157_4549.jpg",
 				"hash": "1865fc526f96379372332eb68ec99d93"
 			}
@@ -53,10 +96,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3594/",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "348",
 		"url": "https://manual.bandai-hobby.net/menus/detail/348/"

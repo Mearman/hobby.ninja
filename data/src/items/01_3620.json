@@ -5,6 +5,65 @@
 		"ja": "ＨＧ 1/144 バウンド・ドック（ゲーツ・キャパ専用機）",
 		"en": "HG 1/144 Bound Dock (Gates Capa exclusive machine)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -17,7 +76,6 @@
 		"month": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ゲ ー ツ ・ キ ャ パ 駆 る -",
@@ -54,7 +112,7 @@
 		"en": [
 			"Game Capacity Drive -",
 			"gray blue bound dock",
-			"From \"Mobile Suit Z Gundam\", the Bound Dock piloted by Captain Gates Capa is commercialized in the HG series.",
+			"From \"Mobile Suit ZGundam\", the Bound Dock piloted by Captain Gates Capa is commercialized in the HG series.",
 			"The characteristic gray aircraft color is reproduced with molding color. Thorough reproduction of the transformation gimmick to MA form.",
 			"- Reproduce various armor parts in colors exclusive to Gates machine",
 			"Titans' prototype variable MA \"Bound Dock\" is reproduced in the image color of Gates Capa's exclusive machine.",
@@ -84,59 +142,75 @@
 			"- Product specifications are scheduled as of 20215. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["ビーム・ライフル", "ビーム・サーベル", "拡散メガ粒子砲"],
-		"en": ["beam rifle", "beam saber", "Diffusion mega particle cannon"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル",
+				"en": "beam rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			}
+		},
+		{
+			"name": {
+				"ja": "拡散メガ粒子砲",
+				"en": "Diffusion mega particle cannon"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4574.jpg",
+				"src": "https://bandai-hobby.net/images/153_4574_s_68lc9cjpg6xzyldpcxqun4txirqo.jpg",
 				"path": "/images/items/01_3620/153_4574.jpg",
 				"hash": "968571148b206b499334276c46db71e2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4574.jpg",
+				"src": "https://bandai-hobby.net/images/155_4574_s_sukus2axpv0i6mkfce58bx6npqxb.jpg",
 				"path": "/images/items/01_3620/155_4574.jpg",
 				"hash": "7809a335297dbb8bab0f0f860e2bf96e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4574.jpg",
+				"src": "https://bandai-hobby.net/images/156_4574_s_kox4laj4m19qt947tv73dlhal5g6.jpg",
 				"path": "/images/items/01_3620/156_4574.jpg",
 				"hash": "db8d46d5c71dcf736d77d23509f51731"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4574.jpg",
+				"src": "https://bandai-hobby.net/images/157_4574_s_gon9xf841rmvyksnji8e2jhgotxz.jpg",
 				"path": "/images/items/01_3620/157_4574.jpg",
 				"hash": "ceaa7354895a990a53baf282216817b3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4574.jpg",
+				"src": "https://bandai-hobby.net/images/158_4574_s_5nw19lljr3tx0zmgtmk1i03balr0.jpg",
 				"path": "/images/items/01_3620/158_4574.jpg",
 				"hash": "ac190b48a6a0d804119ee4258c93c251"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4574.jpg",
+				"src": "https://bandai-hobby.net/images/159_4574_s_kbtljpqg23ju7nmt6lxj0q2tyxnj.jpg",
 				"path": "/images/items/01_3620/159_4574.jpg",
 				"hash": "5cae3f84567d901c27f435cd33f2315c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4574.jpg",
+				"src": "https://bandai-hobby.net/images/189_4574_s_huoxum8tb8sa3ktq3amc58kmceqn.jpg",
 				"path": "/images/items/01_3620/189_4574.jpg",
 				"hash": "dbcd4ac1afb1369dc2a160c9a0008656"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4574.jpg",
+				"src": "https://bandai-hobby.net/images/190_4574_s_yompxf23s2g0k68poe1gadgcmond.jpg",
 				"path": "/images/items/01_3620/190_4574.jpg",
 				"hash": "08d237cbf56b776643cda3277f934e8b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4574.jpg",
+				"src": "https://bandai-hobby.net/images/191_4574_s_zibfmidxzqh5ow7tzbbol0y70unf.jpg",
 				"path": "/images/items/01_3620/191_4574.jpg",
 				"hash": "6adf1d10c836a2169942573965b73d12"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4574.jpg",
+				"src": "https://bandai-hobby.net/images/192_4574_s_iyon5gjia37jg7ozr68jsusxz3x4.jpg",
 				"path": "/images/items/01_3620/192_4574.jpg",
 				"hash": "715ec6405901686ac9329d1a31014bea"
 			}
@@ -144,14 +218,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3620/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla", "hguc"],
-	"seriesIds": ["z-gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2404",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2404/"

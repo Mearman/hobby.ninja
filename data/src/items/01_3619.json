@@ -5,6 +5,54 @@
 		"ja": "ＨＧ 1/144 ザク・デザートタイプ（ダブルアンテナ仕様）",
 		"en": "HG 1/144 Zaku Desert Type (double antenna specification)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ア フ リ カ 戦 線 に 投 入 さ れ た 局 地 型 ザ ク －",
@@ -55,7 +102,7 @@
 		"en": [
 			"Local-type Zaku deployed on the African front",
 			"From \"Mobile Suit Gundam THE ORIGIN\" MSD (Mobile Suit Discovery),",
-			"The early production type \"double antenna specification \" of the Zaku desert type, a tropical/desert warfare specification model that is connected to the \" Zaku\" variation lineage, has been commercialized.",
+			"The early production type \"double antenna specification\" of the Zaku desert type, a tropical/desert warfare specification model that is connected to the \"Zaku\" variation lineage, has been commercialized.",
 			"A new reproduction of the characteristic head shape. The impressive aircraft color is reproduced with molded colors, and camouflage patterns and line marks are expressed with water transfer decals.",
 			"Comes with a wide variety of optional parts.",
 			"● Reproduce the characteristic head shape with new parts",
@@ -86,71 +133,87 @@
 			"・Product specifications are as of 20216. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"M-120AS ザク・マシンガン",
-			"SA-712 クラッカー・ポッド",
-			"ラッツリバー式P-3 ２連ミサイル・ポッド",
-			"ラッツリバー式３連ミサイル・ポッド",
-			"ヒート・ホーク"
-		],
-		"en": [
-			"M-120AS Zaku Machine Gun",
-			"SA-712 Cracker Pod",
-			"Rats River type P-3 twin missile pod",
-			"Ratsriver triple missile pod",
-			"heat hawk"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "M-120AS ザク・マシンガン",
+				"en": "M-120AS Zaku Machine Gun"
+			}
+		},
+		{
+			"name": {
+				"ja": "SA-712 クラッカー・ポッド",
+				"en": "SA-712 Cracker Pod"
+			}
+		},
+		{
+			"name": {
+				"ja": "ラッツリバー式P-3 ２連ミサイル・ポッド",
+				"en": "Rats River type P-3 twin missile pod"
+			}
+		},
+		{
+			"name": {
+				"ja": "ラッツリバー式３連ミサイル・ポッド",
+				"en": "Ratsriver triple missile pod"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヒート・ホーク",
+				"en": "heat hawk"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4573.jpg",
+				"src": "https://bandai-hobby.net/images/153_4573_s_14g9195g09ef5w8o05cypv4etxq3.jpg",
 				"path": "/images/items/01_3619/153_4573.jpg",
 				"hash": "86f4e97b95720c8cd584fe92b7f4231c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4573.jpg",
+				"src": "https://bandai-hobby.net/images/155_4573_s_oa69rs40rdvkgjvv3wvb56bbbk95.jpg",
 				"path": "/images/items/01_3619/155_4573.jpg",
 				"hash": "460de85134e524ec68fcb1fc149572d9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4573.jpg",
+				"src": "https://bandai-hobby.net/images/156_4573_s_3lu8xoim49yx7so6xoykp3q0jvsk.jpg",
 				"path": "/images/items/01_3619/156_4573.jpg",
 				"hash": "b5d3242481a5148b4bdeddf4060b5eb6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4573.jpg",
+				"src": "https://bandai-hobby.net/images/157_4573_s_oqekpggmnr68zdksxtfh079sez2m.jpg",
 				"path": "/images/items/01_3619/157_4573.jpg",
 				"hash": "580b66aa3b3e35a262142f6b714c1c6d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4573.jpg",
+				"src": "https://bandai-hobby.net/images/158_4573_s_geonaz6kb20ebnzvur6x6o97rlql.jpg",
 				"path": "/images/items/01_3619/158_4573.jpg",
 				"hash": "ec887343ad02cdf090609959194b2b63"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4573.jpg",
+				"src": "https://bandai-hobby.net/images/159_4573_s_tald9kx8vancsjqydqqjfdyvpnq6.jpg",
 				"path": "/images/items/01_3619/159_4573.jpg",
 				"hash": "89734829c22d974f720f051529aaf9e8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4573.jpg",
+				"src": "https://bandai-hobby.net/images/189_4573_s_pr8a6zgsjajin2zrgwlhlid8j2c1.jpg",
 				"path": "/images/items/01_3619/189_4573.jpg",
 				"hash": "4b51dd735e1cc5bfd907f79b46fe456f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4573.jpg",
+				"src": "https://bandai-hobby.net/images/190_4573_s_mh41lsh8sdikfpn7q0e8bucdg8kd.jpg",
 				"path": "/images/items/01_3619/190_4573.jpg",
 				"hash": "2b95ea2c7b7bf719da17c03e8f998444"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4573.jpg",
+				"src": "https://bandai-hobby.net/images/191_4573_s_2yzlbthw31rqfh3gdy4jz8bf7fr1.jpg",
 				"path": "/images/items/01_3619/191_4573.jpg",
 				"hash": "71b0c8cb95b71061b12870b875889716"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4573.jpg",
+				"src": "https://bandai-hobby.net/images/192_4573_s_latu2x7ptukw730k0plaaxyllogr.jpg",
 				"path": "/images/items/01_3619/192_4573.jpg",
 				"hash": "50e9a37fb98154e83356456692a32f27"
 			}
@@ -158,14 +221,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3619/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5963", "01_5961", "01_5951"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2349",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2349/"

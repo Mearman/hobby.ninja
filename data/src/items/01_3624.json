@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムパーフェクトストライクフリーダム",
 		"en": "HG 1/144 Gundam Perfect Strike Freedom"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam_breaker_battlogue",
+			"url": "https://bandai-hobby.net/series/gundam_breaker_battlogue/",
+			"ja": "GUNDAM BREAKER BATTLOGUE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4128",
+			"url": "https://bandai-hobby.net/item/01_4128/",
+			"ja": "HG 1/144 ガンダムヘリオス[クリアカラー]"
+		},
+		{
+			"id": "item-1000166359",
+			"url": "https://p-bandai.jp/item/item-1000166359",
+			"ja": "HG 1/144 陸戦型ガンダム(市街地戦仕様)"
+		},
+		{
+			"id": "item-1000166322",
+			"url": "https://p-bandai.jp/item/item-1000166322",
+			"ja": "HG 1/144 グフクリムゾンカスタム"
+		},
+		{
+			"id": "item-1000166358",
+			"url": "https://p-bandai.jp/item/item-1000166358",
+			"ja": "HG 1/144 ガンダムアストレイレッドフレームインバージョン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -18,93 +62,123 @@
 		"day": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンプラとゲームが連動する「ガンダムブレイカー バトローグ プロジェクト」が2021年夏より全世界にて展開スタート！！",
 			"プロジェクトのオリジナル機体が、2021年秋配信予定のアニメ『ガンダムブレイカー バトローグ』に登場。そのオリジナル機体が、ゲーム同様にカスタマイズ可能なHGガンプラシリーズとして登場！",
-			"■ストライクフリーダムガンダムにパーフェクトストライクガンダムの要素を加えたカスタマイズMS。",
-			"■背部にはエールストライカーのようなシルエットに組み合わせた８基のドラグーンを装備。",
-			"■レーザー対艦刃「シュベルトゲベール」と超高インパルス砲「アグニ」は連結して２形態の武装にアレンジ可能。",
-			"■左肩部のロケットアンカー「パンツァーアイゼン」からのクロー発射ギミックはリード線を使用して再現。",
-			"■左前腕部にビームパーツを装着可能。",
-			"■右肩部のコンボウェポンポッドの他、全身にパーフェクトストライクガンダム由来の多数の武装を搭載している。"
+			"• ストライクフリーダムガンダムにパーフェクトストライクガンダムの要素を加えたカスタマイズMS。",
+			"• 背部にはエールストライカーのようなシルエットに組み合わせた８基のドラグーンを装備。",
+			"• レーザー対艦刃「シュベルトゲベール」と超高インパルス砲「アグニ」は連結して２形態の武装にアレンジ可能。",
+			"• 左肩部のロケットアンカー「パンツァーアイゼン」からのクロー発射ギミックはリード線を使用して再現。",
+			"• 左前腕部にビームパーツを装着可能。",
+			"• 右肩部のコンボウェポンポッドの他、全身にパーフェクトストライクガンダム由来の多数の武装を搭載している。"
 		],
 		"en": [
 			"The \"Gundam Breaker Battlogue Project\", which links Gunpla and games, will start rolling out worldwide from summer 2021! !",
 			"The project's original aircraft will appear in the anime \"Gundam Breaker Battlogue\" scheduled to be released in fall 2021. The original aircraft is now available as the HGGunpla series, which can be customized just like in the game!",
 			"• A customized MS that adds elements of Perfect Strike Gundam to Strike Freedom Gundam.",
 			"• The back is equipped with 8 dragoons arranged in a silhouette similar to Ale Striker.",
-			"• The laser anti-ship blade \"Schwertgeber \" and the ultra-high impulse cannon \" Agni\" can be connected to form two types of armament.",
+			"• The laser anti-ship blade \"Schwertgeber\" and the ultra-high impulse cannon \"Agni\" can be connected to form two types of armament.",
 			"• The claw firing gimmick from the rocket anchor \"Panzer Eisen\" on the left shoulder is reproduced using a lead wire.",
 			"• Beam parts can be attached to the left forearm.",
 			"• In addition to the combo weapon pod on the right shoulder, the entire body is equipped with numerous weapons derived from Perfect Strike Gundam."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームエフェクト×1式",
-			"ビームシールドエフェクト×１",
-			"レーザー対艦刃「シュベルトゲベール」×１",
-			"超高インパルス砲「アグニ」×１",
-			"リード線×1",
-			"ホイルシール×1",
-			"ハンドパーツ×１式"
-		],
-		"en": [
-			"Beam effect x 1",
-			"Beam Seal effect x1",
-			"Laser anti-ship blade \"Schwerdgeber\" x 1",
-			"Super high impulse cannon \"Agni\" x 1",
-			"Lead wire x 1",
-			"Foil Seal×1",
-			"Hand parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームエフェクト",
+				"en": "beam effect"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームシールドエフェクト×１",
+				"en": "Beam Seal effect x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "レーザー対艦刃「シュベルトゲベール」×１",
+				"en": "Laser anti-ship blade \"Schwerdgeber\" x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "超高インパルス砲「アグニ」×１",
+				"en": "Super high impulse cannon \"Agni\" x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "リード線",
+				"en": "lead wire"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4578.jpg",
+				"src": "https://bandai-hobby.net/images/153_4578_s_ak5ngc5mt0py8f9cgk0v4asp15yi.jpg",
 				"path": "/images/items/01_3624/153_4578.jpg",
 				"hash": "c1aa266f63548797a9ff93a7685cb103"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4578.jpg",
+				"src": "https://bandai-hobby.net/images/155_4578_s_1tjx8qau2mnoshkggphu62w365uq.jpg",
 				"path": "/images/items/01_3624/155_4578.jpg",
 				"hash": "cb684ec895653622421d7236678c9d6c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4578.jpg",
+				"src": "https://bandai-hobby.net/images/156_4578_s_d4xrp14papc2bq5gzl97zq4bs4an.jpg",
 				"path": "/images/items/01_3624/156_4578.jpg",
 				"hash": "f8f8b85e744dc3bd2e53fd90d38de1cd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4578.jpg",
+				"src": "https://bandai-hobby.net/images/157_4578_s_ycjzb21uhegjdgncsplyh98aot8q.jpg",
 				"path": "/images/items/01_3624/157_4578.jpg",
 				"hash": "7ffa7f66b7ad3babe447c74e54eedacf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4578.jpg",
+				"src": "https://bandai-hobby.net/images/158_4578_s_jpvm3fnkszb1d2cjy9dehussdxrn.jpg",
 				"path": "/images/items/01_3624/158_4578.jpg",
 				"hash": "7bc5cd61812fdb248a44623173bd2e8d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4578.jpg",
+				"src": "https://bandai-hobby.net/images/159_4578_s_glgcjpq6e6mv00suyhqbza1eaaoa.jpg",
 				"path": "/images/items/01_3624/159_4578.jpg",
 				"hash": "9c293be722f35766318bc92e2eed1229"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4578.jpg",
+				"src": "https://bandai-hobby.net/images/189_4578_s_na7iff0mr7c9jz7yc4d6ktx5nf4y.jpg",
 				"path": "/images/items/01_3624/189_4578.jpg",
 				"hash": "73f330a4c4200186dd44954ac3b60487"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4578.jpg",
+				"src": "https://bandai-hobby.net/images/190_4578_s_fd8h4s1hl30ps58ygry8t2f6qpne.jpg",
 				"path": "/images/items/01_3624/190_4578.jpg",
 				"hash": "df2af567f7f2c94a97de16f74d2570cd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4578.jpg",
+				"src": "https://bandai-hobby.net/images/191_4578_s_ycccf7biethso8j4t1a9djagwg8y.jpg",
 				"path": "/images/items/01_3624/191_4578.jpg",
 				"hash": "2a08ee628f92602426631461b0a91b62"
 			}
@@ -112,10 +186,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3624/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam_breaker_battlogue"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4128", "item-1000166359", "item-1000166322", "item-1000166358"],
 	"manual": {
 		"id": "119",
 		"url": "https://manual.bandai-hobby.net/menus/detail/119/"
