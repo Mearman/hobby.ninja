@@ -5,6 +5,49 @@
 		"ja": "HG ゲッターアーク",
 		"en": "HG Getter Arc"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dynamic_characters",
+			"url": "https://bandai-hobby.net/series/dynamic_characters/",
+			"ja": "ダイナミックキャラクターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4234",
+			"url": "https://bandai-hobby.net/item/01_4234/",
+			"ja": "HG 1/144 マジンガーZERO(INFINITISM)"
+		},
+		{
+			"id": "01_3332",
+			"url": "https://bandai-hobby.net/item/01_3332/",
+			"ja": "HG 1/144 鋼鉄ジーグ(INFINITISM)"
+		},
+		{
+			"id": "01_2853",
+			"url": "https://bandai-hobby.net/item/01_2853/",
+			"ja": "HG 1/144 ゲッタードラゴン(INFINITISM）"
+		},
+		{
+			"id": "item-1000139230",
+			"url": "https://p-bandai.jp/item/item-1000139230/",
+			"ja": "ＨＧ 1/144 マジンガーＺ ブラックＶｅｒ．（マジンガーＺ ＩＮＦＩＮＩＴＹ Ｖｅｒ．）"
+		}
+	],
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -21,14 +64,14 @@
 	"description": {
 		"ja": [
 			"『ゲッターロボ アーク』の主役機「ゲッターアーク」が最新デザインでHG化！",
-			"■成形色再現にこだわり、組み立てるだけで満足のいくクオリティ。",
-			"■頭部は差し替えにより開口状態も表現できる。",
-			"■バトルショットカッターは、パーツの付け替えにより展開版と非展開版が再現可能。",
-			"■特徴的な形状のバックパックは上下反転での付け替えと各ウイングの可動により、「サンダーボンバー」発動状態を再現できる。",
-			"■豊富なオプションが付属。パーツの付け替え変えにより原作シーンの再現が可能。"
+			"• 成形色再現にこだわり、組み立てるだけで満足のいくクオリティ。",
+			"• 頭部は差し替えにより開口状態も表現できる。",
+			"• バトルショットカッターは、パーツの付け替えにより展開版と非展開版が再現可能。",
+			"• 特徴的な形状のバックパックは上下反転での付け替えと各ウイングの可動により、「サンダーボンバー」発動状態を再現できる。",
+			"• 豊富なオプションが付属。パーツの付け替え変えにより原作シーンの再現が可能。"
 		],
 		"en": [
-			"The main character of \"Getter Robo Ark \", \" Getter Ark\", has been made into HG with the latest design!",
+			"The main character of \"Getter Robo Ark\", \"Getter Ark\", has been made into HG with the latest design!",
 			"• We are particular about molding color reproduction, and the quality is satisfactory just by assembling.",
 			"• The head can be replaced to express an open state.",
 			"• Battle Shot Cutter can be reproduced as an expanded version or a non-expanded version by replacing parts.",
@@ -36,47 +79,71 @@
 			"• Comes with a wide range of options. Original scenes can be reproduced by replacing parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ゲッタートマホーク×2",
-			"ゲッタートマホーク連結パーツ×1",
-			"バトルショットカッター（展開・非展開）×1式",
-			"開口顔パーツ×1",
-			"ハンドパーツ×1式",
-			"シール×1",
-			"ディスプレイベース×1"
-		],
-		"en": [
-			"Getter Tomahawk x2",
-			"Getter Tomahawk connection parts x 1",
-			"Battle shot cutter (deployment/non-deployment) x 1 set",
-			"Open face parts x 1",
-			"Hand parts x 1 set",
-			"Seal×1",
-			"Display base x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ゲッタートマホーク",
+				"en": "getter tomahawk"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ゲッタートマホーク連結パーツ",
+				"en": "getter tomahawk connection parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バトルショットカッター（展開・非展開）",
+				"en": "Battle Shot Cutter (deployment/non-deployment)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "開口顔パーツ",
+				"en": "open face parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース",
+				"en": "display base"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164279_1.jpg",
 				"path": "/images/items/01_3528/1000164279_1.jpg",
 				"hash": "9c02e934d444606df92dded51735d37b"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164279_10.jpg",
-				"path": "/images/items/01_3528/1000164279_10.jpg",
-				"hash": "98955f515eca1bf489dfd1e9ba8e2f20"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164279_11.jpg",
-				"path": "/images/items/01_3528/1000164279_11.jpg",
-				"hash": "850b873fc81222ba57e1eb448534710d"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164279_12.jpg",
-				"path": "/images/items/01_3528/1000164279_12.jpg",
-				"hash": "45072fa51362d8053936e74c88ac9c76"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164279_2.jpg",
@@ -117,13 +184,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164279_9.jpg",
 				"path": "/images/items/01_3528/1000164279_9.jpg",
 				"hash": "1a84264bf406f5d7e30a49294e64e07b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164279_10.jpg",
+				"path": "/images/items/01_3528/1000164279_10.jpg",
+				"hash": "98955f515eca1bf489dfd1e9ba8e2f20"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164279_11.jpg",
+				"path": "/images/items/01_3528/1000164279_11.jpg",
+				"hash": "850b873fc81222ba57e1eb448534710d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164279_12.jpg",
+				"path": "/images/items/01_3528/1000164279_12.jpg",
+				"hash": "45072fa51362d8053936e74c88ac9c76"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3528/",
-	"brandIds": ["hg"],
-	"seriesIds": ["dynamic_characters"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_4234", "01_3332", "01_2853", "item-1000139230"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3528/"
 }

@@ -5,6 +5,49 @@
 		"ja": "HGUC 1/144 ガンダム NT-1",
 		"en": "HGUC 1/144 Gundam NT-1"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5429",
+			"url": "https://bandai-hobby.net/item/01_5429/",
+			"ja": "HG ガンダムベース限定 ドラケンE"
+		},
+		{
+			"id": "01_5768",
+			"url": "https://bandai-hobby.net/item/01_5768/",
+			"ja": "HGUC 1/144 ジム・スナイパーII"
+		},
+		{
+			"id": "01_2436",
+			"url": "https://bandai-hobby.net/item/01_2436/",
+			"ja": "HGUC 1/144 リック・ドムII ライトグリーンバージョン"
+		},
+		{
+			"id": "01_1686",
+			"url": "https://bandai-hobby.net/item/01_1686/",
+			"ja": "HGUC 1/144 ケンプファー"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -17,13 +60,12 @@
 		"month": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム 0080」に登場する主役機「ガンダム NT-1」のHGUC仕様のプラモデル。プロポーションを損なうことなくチョバムアーマーの脱着を再現できます。劇中のガトリングを撃つポージングも、差し替えパーツを付けることにより再現可能です。武器はガトリング×2、サーベル×2、シールド、ビームライフルが付属します。"
+			"「機動戦士ガンダム0080」に登場する主役機「ガンダムNT-1」のHGUC仕様のプラモデル。プロポーションを損なうことなくチョバムアーマーの脱着を再現できます。劇中のガトリングを撃つポージングも、差し替えパーツを付けることにより再現可能です。武器はガトリング×2、サーベル×2、シールド、ビームライフルが付属します。"
 		],
 		"en": [
-			"An HGUC plastic model of the main character \"Gundam NT-1 \" that appears in \" Mobile Suit Gundam 0080\". You can reproduce the attachment and detachment of the Chobham armor without compromising the proportions. The pose of shooting Gatling in the movie can also be recreated by attaching replacement parts. Weapons include Gatling x2, saber x2, Seal, and beam rifle."
+			"An HGUC plastic model of the main character \"GundamNT-1\" that appears in \"Mobile Suit Gundam0080\". You can reproduce the attachment and detachment of the Chobham armor without compromising the proportions. The pose of shooting Gatling in the movie can also be recreated by attaching replacement parts. Weapons include Gatling x2, saber x2, Seal, and beam rifle."
 		]
 	},
 	"images": {
@@ -77,10 +119,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3486/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5429", "01_5768", "01_2436", "01_1686"],
 	"manual": {
 		"id": "243",
 		"url": "https://manual.bandai-hobby.net/menus/detail/243/"

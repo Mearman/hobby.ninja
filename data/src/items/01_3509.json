@@ -2,9 +2,37 @@
 	"id": "01_3509",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム EXスタンダード ウイングガンダムゼロ",
-		"en": "SD Gundam EX Standard Wing Gundam Zero"
+		"ja": "SDガンダム EXスタンダード ウイングガンダムゼロ",
+		"en": "SDGundam EX Standard Wing Gundam Zero"
 	},
+	"brands": [
+		{
+			"id": "SDEX",
+			"url": "https://bandai-hobby.net/brand/SDEX/",
+			"ja": "SDEXスタンダード"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_601",
+			"url": "https://bandai-hobby.net/item/01_601/",
+			"ja": "SDEXスタンダード004 ウイングガンダムゼロ EW"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -32,10 +60,36 @@
 			"• The wings of the backpack can be expanded by pivoting. It can also be customized to HG."
 		]
 	},
-	"accessories": {
-		"ja": ["ツインバスターライフル×1", "ビームサーベル×1", "シールド×1", "ホイルシール×1"],
-		"en": ["Twin buster rifle x1", "Beam saber x 1", "Seal × 1", "Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ツインバスターライフル",
+				"en": "twin buster rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "beam saber"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -86,9 +140,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3509/",
-	"brandIds": ["SDEX"],
-	"seriesIds": ["endlesswaltz"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_601"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3509/"
 }

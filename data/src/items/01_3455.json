@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムベース限定 RX-78-2 ガンダム [BEYOND GLOBAL] [ガンダムベースカラー]",
 		"en": "HG 1/144 Gundam Base Limited RX-78-2 Gundam [BEYOND GLOBAL] [Gundam Base Color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンプラ40周年記念！「HGシリーズ」で培った技術を集約した、大河原邦男氏デザインの「RX-78-2 ガンダム」がガンダムベースカラーになって登場！",
@@ -33,14 +76,14 @@
 			"• 胸部側面のブロックは肩甲骨にあたる部分の可動を担っており、外側に開く動きによって肩部の可動軸が露出しないよう配慮して設計。"
 		],
 		"en": [
-			"Gunpla 40th anniversary! The \"RX-78-2 Gundam \" designed by Kunio Okawara, which combines the technology cultivated in the \" HG series\", is now available in Gundam base color!",
+			"Gunpla 40th anniversary! The \"RX-78-2 Gundam\" designed by Kunio Okawara, which combines the technology cultivated in the \"HG series\", is now available in Gundam base color!",
 			"• Gundam base original special marking seal included!",
-			"• Pursuing \"beautiful poses \" and \" movable performance and proportions\". Equipped with many gimmicks throughout the body that allow you to create natural poses.",
+			"• Pursuing \"beautiful poses\" and \"movable performance and proportions\". Equipped with many gimmicks throughout the body that allow you to create natural poses.",
 			"• A design that reexamines the design of the first Gundam and pursues it to the extreme as \"BEYOND GLOBAL.\"",
 			"• Adopts a forward bending/swing movable structure for the torso. The neck axis can also be moved back and forth.",
 			"• A joint that bends inward has been added to the base of the thigh to create a more human-like pose.",
 			"• By allowing the wrists to move independently, the jointed Seals can also be moved freely.",
-			"• The wrist block can be moved as a separate part with a ball joint, allowing you to create powerful movements such as clenching your fist!",
+			"• The wrist block can be moved as a separate part with a ball joint, allowing you to perform powerful movements such as clenching your fist!",
 			"• The hip joint axis swings and can move significantly forward. Furthermore, the rear skirt can be expanded to allow it to be moved backwards.",
 			"• The block on the side of the chest is responsible for the movement of the part corresponding to the shoulder blade, and is designed to prevent the axis of movement of the shoulder from being exposed due to outward movement."
 		]
@@ -81,14 +124,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3455/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	},
 	"manual": {
 		"id": "2321",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2321/"

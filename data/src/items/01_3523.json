@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 エクリプスガンダム",
 		"en": "MG 1/100 Eclipse Gundam"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "01_5221",
+			"url": "https://bandai-hobby.net/item/01_5221/",
+			"ja": "MG 1/100 イージスガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_4272",
+			"url": "https://bandai-hobby.net/item/01_4272/",
+			"ja": "MG 1/100 ガンダムベース限定 パーフェクトストライクガンダム グランドスラム装備型"
+		},
+		{
+			"id": "01_4195",
+			"url": "https://bandai-hobby.net/item/01_4195/",
+			"ja": "MG 1/100 ガンダムベース限定 エクリプスガンダム[クリアカラー]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -18,11 +62,10 @@
 		"day": 21
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED』シリーズ MSV新企画始動！",
-			"2021年7月より『機動戦士ガンダム SEED ECLIPSE』がコミックにて国内外で展開スタート！",
+			"『機動戦士ガンダムSEED』シリーズ MSV新企画始動！",
+			"2021年7月より『機動戦士ガンダムSEED ECLIPSE』がコミックにて国内外で展開スタート！",
 			"国内では7月26日発売予定の「ガンダムエース」9月号より連載開始！",
 			"主役MS「エクリプスガンダム」がMGシリーズで最速立体化！",
 			"• 最新のMG SEED シリーズの意匠を踏襲したプロポーション。特徴的な飛行形態からMS形態への変形機構及び、既存商品(別売り)の様々なストライカー、シルエット、ウィザードなどの装備に対応した劇中の換装も、付属のジョイントパーツで再現。",
@@ -31,8 +74,8 @@
 			"• 高い完成度を追究したオリジナルマーキングシールが付属。"
 		],
 		"en": [
-			"“Mobile Suit Gundam SEED” series MSV new project starts!",
-			"From 20217, \"Mobile Suit Gundam SEED ECLIPSE\" will be released as a comic both domestically and internationally!",
+			"“Mobile Suit GundamSEED” series MSV new project starts!",
+			"From 20217, \"Mobile Suit GundamSEED ECLIPSE\" will be released as a comic both domestically and internationally!",
 			"Serialization started in Japan from 726ReleaseScheduled's \"Gundam Ace\" issue 9!",
 			"The main character MS \"Eclipse Gundam\" is the fastest in the MG series!",
 			"• Proportions follow the design of the latest MG SEED series. The transformation mechanism from the characteristic flight form to the MS form and the conversion in the play that corresponds to the equipment of various strikers, silhouettes, wizards, etc. of existing products (sold separately) are also reproduced with the included joint parts.",
@@ -41,88 +84,139 @@
 			"• Comes with an original MarkingSeal that pursues a high degree of perfection."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームライフル×2",
-			"ビームシールド×2",
-			"ビームサーベル用エフェクトパーツ×2",
-			"ビームシールド用エフェクトパーツ×2",
-			"ハンドパーツ（左右）×5種",
-			"ストライカーパック装備用ジョイントセット×１",
-			"シルエット装備用ジョイントセット×１",
-			"ウィザード装備用ジョイントセット×１",
-			"ホイルシール×1",
-			"マーキングシール×1",
-			"ディスプレイ台座×１"
-		],
-		"en": [
-			"Beam rifle x2",
-			"Beam Seal×2",
-			"Effect parts for beam saber x 2",
-			"Effect parts for beam seal × 2",
-			"Hand parts (left and right) x 5 types",
-			"Joint set for striker pack equipment x 1",
-			"Joint set for silhouette equipment x 1",
-			"Joint set for wizard equipment x 1",
-			"Foil Seal×1",
-			"MarkingSeal×1",
-			"Display pedestal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "beam rifle"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビームシールド",
+				"en": "Beam Seal"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル用エフェクトパーツ",
+				"en": "Effect parts for beam saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビームシールド用エフェクトパーツ",
+				"en": "Effect parts for Beam Seal"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ（左右）",
+				"en": "Hand parts (left and right)"
+			},
+			"count": 5,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ストライカーパック装備用ジョイントセット×１",
+				"en": "Joint set for striker pack equipment x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シルエット装備用ジョイントセット×１",
+				"en": "Joint set for silhouette equipment x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ウィザード装備用ジョイントセット×１",
+				"en": "Joint set for wizard equipment x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座×１",
+				"en": "Display pedestal x 1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4474.jpg",
+				"src": "https://bandai-hobby.net/images/153_4474_s_xpqsknt23wvt78leoyj3fjqvtixj.jpg",
 				"path": "/images/items/01_3523/153_4474.jpg",
 				"hash": "d6439b48a5d2c4b8ffd0e90fdde50268"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4474.jpg",
+				"src": "https://bandai-hobby.net/images/155_4474_s_4bn885rmn1ir310u5k5513b29yxn.jpg",
 				"path": "/images/items/01_3523/155_4474.jpg",
 				"hash": "7b2c24a0d3c99bf39b5290cd795dda0a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4474.jpg",
+				"src": "https://bandai-hobby.net/images/156_4474_s_k6mrpj2e712u1ocieznic0ud6t4z.jpg",
 				"path": "/images/items/01_3523/156_4474.jpg",
 				"hash": "dabb89997f444c35594121fb75217cd5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4474.jpg",
+				"src": "https://bandai-hobby.net/images/157_4474_s_uqwfey44w4vosla6dpwpvnl80vp3.jpg",
 				"path": "/images/items/01_3523/157_4474.jpg",
 				"hash": "677df07b111e485ac34c891e5dc76f85"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4474.jpg",
+				"src": "https://bandai-hobby.net/images/158_4474_s_4fkatvywfryndnnlydauu9s8gjec.jpg",
 				"path": "/images/items/01_3523/158_4474.jpg",
 				"hash": "43d09b88ef72c3a8183bbd7dda617d4f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4474.jpg",
+				"src": "https://bandai-hobby.net/images/159_4474_s_9rbfhmhervzws8kqutc94r4nar09.jpg",
 				"path": "/images/items/01_3523/159_4474.jpg",
 				"hash": "00842ee12a41c60ec7d86c4346e8f90c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4474.jpg",
+				"src": "https://bandai-hobby.net/images/189_4474_s_n44i76gafv6mvyyym31df6d6wrln.jpg",
 				"path": "/images/items/01_3523/189_4474.jpg",
 				"hash": "f5b1058b97c0729d94436eb8c7999588"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4474.jpg",
+				"src": "https://bandai-hobby.net/images/190_4474_s_vfxw2g9vuqdyu77gldiy1a4b0mq5.jpg",
 				"path": "/images/items/01_3523/190_4474.jpg",
 				"hash": "d0bb1e2aaa626d76991fd9fa490ad29a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4474.jpg",
+				"src": "https://bandai-hobby.net/images/191_4474_s_fkreaue0l4tzlin33lfzeq0nvw2w.jpg",
 				"path": "/images/items/01_3523/191_4474.jpg",
 				"hash": "6ef50784dc7acd712eb23a0be67a1425"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4474.jpg",
+				"src": "https://bandai-hobby.net/images/192_4474_s_ymg8zmw9d5097kajaissmqyl71gw.jpg",
 				"path": "/images/items/01_3523/192_4474.jpg",
 				"hash": "ee131a7e534bbbc538663497c9c659dd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_4474.jpg",
+				"src": "https://bandai-hobby.net/images/193_4474_s_08wfrdx1xw6kf4olaelvfae8tmpk.jpg",
 				"path": "/images/items/01_3523/193_4474.jpg",
 				"hash": "1b7b532c9b40f062bbc67142f3d71924"
 			}
@@ -130,10 +224,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3523/",
-	"brandIds": ["mg"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5994", "01_5221", "01_4272", "01_4195"],
 	"manual": {
 		"id": "645",
 		"url": "https://manual.bandai-hobby.net/menus/detail/645/"

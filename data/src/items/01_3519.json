@@ -5,6 +5,34 @@
 		"ja": "Figure-rise Standard SEED ラクス・クライン",
 		"en": "Figure-rise Standard SEED Lacus Clyne"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5342",
+			"url": "https://bandai-hobby.net/item/01_5342/",
+			"ja": "Figure-rise Standard SEED ガンダムベース限定 ラクス・クライン [ガンダムベースカラー]"
+		}
+	],
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -20,54 +48,81 @@
 	"targetAge": 15,
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED』より「ラクス・クライン」をFigure-rise Standardで立体化！",
+			"『機動戦士ガンダムSEED』より「ラクス・クライン」をFigure-rise Standardで立体化！",
 			"• 「通常顔」「笑顔」「困り顔」の３種類の表情パーツ付き。通常顔はタンポ印刷で表現。笑顔と困り顔は水転写式デカールを採用。",
 			"• プラモオリジナルのミニスカートバージョンも再現できる。",
 			"• 各種ハンドパーツと、ラクスに「ピンクちゃん」と呼ばれていたハロが付属。"
 		],
 		"en": [
-			"\"Lacus Clyne \" from \" Mobile Suit Gundam SEED\" is three-dimensionalized with Figure-rise Standard!",
-			"• Comes with 3 types of expression parts: \"normal face \", \" smiling face \", and \" concerned face\". The face is usually expressed by tampo printing. The smiling and troubled faces are water transfer decals.",
+			"\"Lacus Clyne\" from \"Mobile Suit GundamSEED\" is three-dimensionalized with Figure-rise Standard!",
+			"• Comes with 3 types of expression parts: \"normal face\", \"smiling face\", and \"concerned face\". The face is usually expressed by tampo printing. The smiling and troubled faces are water transfer decals.",
 			"• You can also reproduce the miniskirt version of the plastic model original.",
 			"• Includes various hand parts and the halo that Lacus used to call \"Pink-chan.\""
 		]
 	},
-	"accessories": {
-		"ja": [
-			"表情パーツ（タンポ印刷）×1種",
-			"表情パーツ×2種",
-			"手首パーツ　平手（左右）、祈り手（左右）、ハロ持ち手（左右）",
-			"ピンクハロ（耳開き、耳閉じ）×各1種",
-			"ホイルシール×1",
-			"水転写式デカール×1",
-			"ディスプレイ台座×1"
-		],
-		"en": [
-			"Facial expression parts (tampo printing) x 1 type",
-			"Facial expression parts x 2 types",
-			"Wrist parts Open hands (left and right), prayer hands (left and right), halo holding hands (left and right)",
-			"Pink halo (ears open, ears closed) x 1 type each",
-			"Foil Seal×1",
-			"Water transfer decal x 1",
-			"Display pedestal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情パーツ（タンポ印刷）",
+				"en": "Facial expression parts (tampo printing)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "表情パーツ",
+				"en": "facial expression parts"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "手首パーツ　平手（左右）、祈り手（左右）、ハロ持ち手（左右）",
+				"en": "Wrist parts Open hands (left and right), prayer hands (left and right), halo holding hands (left and right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ピンクハロ（耳開き、耳閉じ）×各1種",
+				"en": "Pink halo (ears open, ears closed) x 1 type each"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座",
+				"en": "display pedestal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000162609_1.jpg",
 				"path": "/images/items/01_3519/1000162609_1.jpg",
 				"hash": "8cb68ffdd5a28163da58d1d51d1a2383"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000162609_10.jpg",
-				"path": "/images/items/01_3519/1000162609_10.jpg",
-				"hash": "8a1de83ed060e14e2e50dc7cdb66f5f8"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000162609_11.jpg",
-				"path": "/images/items/01_3519/1000162609_11.jpg",
-				"hash": "856221d8641f69e402121753f75e7195"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000162609_2.jpg",
@@ -108,13 +163,19 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000162609_9.jpg",
 				"path": "/images/items/01_3519/1000162609_9.jpg",
 				"hash": "5d982da5775ac8453d427279621d8666"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000162609_10.jpg",
+				"path": "/images/items/01_3519/1000162609_10.jpg",
+				"hash": "8a1de83ed060e14e2e50dc7cdb66f5f8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000162609_11.jpg",
+				"path": "/images/items/01_3519/1000162609_11.jpg",
+				"hash": "856221d8641f69e402121753f75e7195"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3519/",
-	"brandIds": [],
-	"seriesIds": ["seed"],
-	"categoryIds": [],
-	"relatedItemIds": ["01_5342"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3519/"
 }

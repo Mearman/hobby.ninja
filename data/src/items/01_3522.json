@@ -5,6 +5,43 @@
 		"ja": "ポケモンプラモコレクション 48 セレクトシリーズ ガブリアス",
 		"en": "Pokemon Plastic Model Collection 48 Select Series Gabrielus"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5984",
+			"url": "https://bandai-hobby.net/item/01_5984/",
+			"ja": "ポケモンプラモコレクション 60 セレクトシリーズ コライドン"
+		},
+		{
+			"id": "01_5958",
+			"url": "https://bandai-hobby.net/item/01_5958/",
+			"ja": "ポケモンプラモコレクション 59 セレクトシリーズ ミライドン"
+		},
+		{
+			"id": "01_5947",
+			"url": "https://bandai-hobby.net/item/01_5947/",
+			"ja": "ポケモンプラモコレクション クイック!! 23 ジラーチ"
+		},
+		{
+			"id": "01_5568",
+			"url": "https://bandai-hobby.net/item/01_5568/",
+			"ja": "ポケモンプラモコレクション 58 セレクトシリーズ グレンアルマ"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -25,36 +62,26 @@
 			"• 口・首、腕・肘、脚、しっぽなどに可動箇所を設けることで、ダイナミックなポージングが可能に。"
 		],
 		"en": [
-			"\"Gabrias \" is now available in the Pokemon plastic model collection that combines \" easy-to-assemble parts structure \" and \" color-coded & movable\" features!",
+			"\"Gabrias\" is now available in the Pokemon plastic model collection that combines \"easy-to-assemble parts structure\" and \"color-coded & movable\" features!",
 			"• Total length approximately 16cm. A feeling of size with perfect volume.",
 			"• Dynamic poses are possible by providing movable parts such as the mouth/neck, arms/elbows, legs, and tail."
 		]
 	},
-	"accessories": {
-		"ja": ["ホイルシール×1"],
-		"en": ["Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000162612_1.jpg",
 				"path": "/images/items/01_3522/1000162612_1.jpg",
 				"hash": "696926c0fc0bf2ef2f71e57f9ae77ebb"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000162612_10.jpg",
-				"path": "/images/items/01_3522/1000162612_10.jpg",
-				"hash": "a81e1957d20bd9265c308ebc3b09ae5c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000162612_11.jpg",
-				"path": "/images/items/01_3522/1000162612_11.jpg",
-				"hash": "3d2ea3aeb52e369567e7327874368e0f"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000162612_12.jpg",
-				"path": "/images/items/01_3522/1000162612_12.jpg",
-				"hash": "a927689a400f976b9d6668fd4c6b5eea"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000162612_2.jpg",
@@ -95,13 +122,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000162612_9.jpg",
 				"path": "/images/items/01_3522/1000162612_9.jpg",
 				"hash": "7dadb04e06524337156ffc61bf850c4d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000162612_10.jpg",
+				"path": "/images/items/01_3522/1000162612_10.jpg",
+				"hash": "a81e1957d20bd9265c308ebc3b09ae5c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000162612_11.jpg",
+				"path": "/images/items/01_3522/1000162612_11.jpg",
+				"hash": "3d2ea3aeb52e369567e7327874368e0f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000162612_12.jpg",
+				"path": "/images/items/01_3522/1000162612_12.jpg",
+				"hash": "a927689a400f976b9d6668fd4c6b5eea"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3522/",
-	"brandIds": [],
-	"seriesIds": ["pokemon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3522/"
 }

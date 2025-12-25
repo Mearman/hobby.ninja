@@ -5,6 +5,44 @@
 		"ja": "1/12 ザ・マンダロリアン(ベスカーアーマー)",
 		"en": "1/12 The Mandalorian (Beskar Armor)"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3513",
+			"url": "https://bandai-hobby.net/item/01_3513/",
+			"ja": "ビークルモデル レイザー・クレスト"
+		}
+	],
+	"scale": "1/12",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -18,18 +56,17 @@
 		"day": 22
 	},
 	"targetAge": 15,
-	"scale": "1/12",
 	"description": {
 		"ja": [
 			"『スター・ウォーズ』初の実写ドラマシリーズ『マンダロリアン』より主人公「マンダロリアン」を多彩な付属品と共に1/12スケールでプラモデル化！",
-			"■塗装等の加工がしやすい通常カラー。",
-			"■背中のジェットパックは着脱可能。ジョイントを使用することで、スピアや専用ブラスターを背中に取り付けることが可能。",
-			"■特徴的なマントは布素材のパーツで再現。",
-			"■劇中の様々なシーンで使われる多彩な武装が付属。",
-			"■各種ジョイントパーツ、専用台座が付属。"
+			"• 塗装等の加工がしやすい通常カラー。",
+			"• 背中のジェットパックは着脱可能。ジョイントを使用することで、スピアや専用ブラスターを背中に取り付けることが可能。",
+			"• 特徴的なマントは布素材のパーツで再現。",
+			"• 劇中の様々なシーンで使われる多彩な武装が付属。",
+			"• 各種ジョイントパーツ、専用台座が付属。"
 		],
 		"en": [
-			"The main character \"Mandalorian \" from \" Star Wars \" first live-action drama series \" The Mandalorian\" is made into a 1/12 scale plastic model with various accessories!",
+			"The main character \"Mandalorian\" from \"Star Wars\" first live-action drama series \"The Mandalorian\" is made into a 1/12 scale plastic model with various accessories!",
 			"• Regular color that is easy to process such as painting.",
 			"• The jet pack on the back is removable. By using the joint, it is possible to attach a spear or special blaster to the back.",
 			"• The characteristic cloak is reproduced with cloth material parts.",
@@ -37,47 +74,70 @@
 			"• Various joint parts and special pedestal are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用ブラスター×2種",
-			"スピア×1",
-			"ダークセーバー×1",
-			"マント ×1",
-			"ハンドパーツ　銃持ち手（右）、ライフル持ち手（右）、武器持ち手（右）、表情手（左）",
-			"ジョイントパーツ×1式",
-			"専用ディスプレイベース×1"
-		],
-		"en": [
-			"Dedicated blaster x 2 types",
-			"Spear x 1",
-			"Darksaber x 1",
-			"Cloak ×1",
-			"Hand parts: gun holder (right), rifle holder (right), weapon holder (right), expression hand (left)",
-			"Joint parts x 1 set",
-			"Dedicated display base x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ブラスター",
+				"en": "dedicated blaster"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "スピア",
+				"en": "spear"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ダークセーバー",
+				"en": "dark saber"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マント",
+				"en": "cloak"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ　銃持ち手（右）、ライフル持ち手（右）、武器持ち手（右）、表情手（左）",
+				"en": "Hand parts: gun holder (right), rifle holder (right), weapon holder (right), expression hand (left)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "専用ディスプレイベース",
+				"en": "Dedicated display base"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161304_1.jpg",
 				"path": "/images/items/01_3515/1000161304_1.jpg",
 				"hash": "1e35ab4fe2d6738a45d3bcac8c470d46"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161304_10.jpg",
-				"path": "/images/items/01_3515/1000161304_10.jpg",
-				"hash": "c7746022f294f4a21b4962e35216002b"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161304_11.jpg",
-				"path": "/images/items/01_3515/1000161304_11.jpg",
-				"hash": "986d9635ac847f3175eb457ef71e149a"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161304_12.jpg",
-				"path": "/images/items/01_3515/1000161304_12.jpg",
-				"hash": "e34bc68e0c825e32739a8c294d597b74"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161304_2.jpg",
@@ -118,13 +178,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161304_9.jpg",
 				"path": "/images/items/01_3515/1000161304_9.jpg",
 				"hash": "e9b5456a28bc4703258fc133a14d6e5f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161304_10.jpg",
+				"path": "/images/items/01_3515/1000161304_10.jpg",
+				"hash": "c7746022f294f4a21b4962e35216002b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161304_11.jpg",
+				"path": "/images/items/01_3515/1000161304_11.jpg",
+				"hash": "986d9635ac847f3175eb457ef71e149a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161304_12.jpg",
+				"path": "/images/items/01_3515/1000161304_12.jpg",
+				"hash": "e34bc68e0c825e32739a8c294d597b74"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3515/",
-	"brandIds": [],
-	"seriesIds": ["starwars"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_4153", "01_4154", "01_3514", "01_3513"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3515/"
 }

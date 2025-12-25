@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard 仮面ライダーフォーゼ ベースステイツ",
 		"en": "Figure-rise Standard Kamen Rider Fourze Base States"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "rider",
+			"url": "https://bandai-hobby.net/series/rider/",
+			"ja": "仮面ライダーシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5451",
+			"url": "https://bandai-hobby.net/item/01_5451/",
+			"ja": "Figure-rise Standard 仮面ライダーゼロワン ライジングホッパー"
+		},
+		{
+			"id": "item-1000215369",
+			"url": "https://p-bandai.jp/item/item-1000215369/",
+			"ja": "Figure-rise Standard 仮面ライダーファイズ ブラスターフォーム"
+		},
+		{
+			"id": "01_5276",
+			"url": "https://bandai-hobby.net/item/01_5276/",
+			"ja": "Figure-rise Standard 仮面ライダークウガ アルティメットフォーム"
+		},
+		{
+			"id": "01_5175",
+			"url": "https://bandai-hobby.net/item/01_5175/",
+			"ja": "Figure-rise Standard 仮面ライダーキバ キバフォーム"
+		}
+	],
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -21,91 +64,121 @@
 	"description": {
 		"ja": [
 			"『仮面ライダーフォーゼ』より、細部まで精密に再現されたフォーゼが登場！",
-			"■広い可動域で必殺技や劇中の特徴的なポージングも再現可能。",
-			"■「白」と「黒」のパーツは異なる成形材料を使い、スーツとマスクの質感の相違を表現。",
-			"■異なる成形材料を駆使し、光沢のある頭部と光沢感をおさえたスーツ等の質感の差を再現。エクストラフィニッシュを採用することでシルバー部分の質感も徹底追求。",
-			"■体の黒いラインを再現するために、シェーディングモールドを採用。",
-			"■６種のスイッチは脱着が可能。",
-			"■必殺技再現に欠かせないロケット、ドリルのモジュールと各種ハンドパーツが付属。"
+			"• 広い可動域で必殺技や劇中の特徴的なポージングも再現可能。",
+			"• 「白」と「黒」のパーツは異なる成形材料を使い、スーツとマスクの質感の相違を表現。",
+			"• 異なる成形材料を駆使し、光沢のある頭部と光沢感をおさえたスーツ等の質感の差を再現。エクストラフィニッシュを採用することでシルバー部分の質感も徹底追求。",
+			"• 体の黒いラインを再現するために、シェーディングモールドを採用。",
+			"• ６種のスイッチは脱着が可能。",
+			"• 必殺技再現に欠かせないロケット、ドリルのモジュールと各種ハンドパーツが付属。"
 		],
 		"en": [
-			"From \"Kamen Rider Fourze\" comes Fourze, which has been precisely reproduced in every detail!",
+			"From \"Kamen Rider Fourze\" comes Fourze, which has been precisely reproduced down to the last detail!",
 			"• A wide range of motion allows you to recreate special moves and characteristic poses from the movie.",
-			"• The \"white \" and \" black\" parts use different molding materials to express the difference in texture between the suit and the mask.",
+			"• The \"white\" and \"black\" parts use different molding materials to express the difference in texture between the suit and the mask.",
 			"• By making full use of different molding materials, we reproduce the difference in texture between the shiny head and the less shiny suit. By adopting an extra finish, we have thoroughly pursued the texture of the silver part.",
 			"• A shading mold is used to reproduce the black lines on the body.",
 			"• 6 types of switches are removable.",
 			"• Includes rocket, drill modules and various hand parts that are essential for reproducing special moves."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ロケットモジュール×1",
-			"ドリルモジュール×1",
-			"スイッチパーツ×6種",
-			"手首パーツ ベルトグリップ握り手（右）、握り手（左右）、平手（左右）",
-			"Figure-rise Effect 台座×1",
-			"ホイルシール×1",
-			"リアリスティックデカール×1"
-		],
-		"en": [
-			"Rocket module x 1",
-			"Drill module x 1",
-			"Switch parts x 6 types",
-			"Wrist parts Belt grip grip hand (right), grip hand (left and right), open hand (left and right)",
-			"Figure-rise Effect pedestal x 1",
-			"Foil Seal×1",
-			"Realistic decal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ロケットモジュール",
+				"en": "rocket module"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ドリルモジュール",
+				"en": "drill module"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "スイッチパーツ",
+				"en": "switch parts"
+			},
+			"count": 6,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "手首パーツ ベルトグリップ握り手（右）、握り手（左右）、平手（左右）",
+				"en": "Wrist parts Belt grip grip hand (right), grip hand (left and right), open hand (left and right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "Figure-rise Effect 台座",
+				"en": "Figure-rise Effect pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール",
+				"en": "realistic decals"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4480.jpg",
+				"src": "https://bandai-hobby.net/images/153_4480_s_aodsl50pib6fxefektujqzowmpfu.jpg",
 				"path": "/images/items/01_3529/153_4480.jpg",
 				"hash": "20a3a53e17782b19884501a074609547"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4480.jpg",
+				"src": "https://bandai-hobby.net/images/155_4480_s_7xpl4x93u9e0aoqxdguq6m645nkk.jpg",
 				"path": "/images/items/01_3529/155_4480.jpg",
 				"hash": "d0d11693bbee434c3d2a6a6a0d9cf194"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4480.jpg",
+				"src": "https://bandai-hobby.net/images/156_4480_s_ntp9yt47m691j75oyolnxmbqn3tg.jpg",
 				"path": "/images/items/01_3529/156_4480.jpg",
 				"hash": "b5f5e8834757728fcc2c2a3498cf47a7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4480.jpg",
+				"src": "https://bandai-hobby.net/images/157_4480_s_bvo7kd2aj8ntjvgz9yhrg0lc7fly.jpg",
 				"path": "/images/items/01_3529/157_4480.jpg",
 				"hash": "50b11710f82dc73498e8f2855f427639"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4480.jpg",
+				"src": "https://bandai-hobby.net/images/158_4480_s_lfpa885tqak5v3vmdn46clskhdtw.jpg",
 				"path": "/images/items/01_3529/158_4480.jpg",
 				"hash": "796aaa8e56d4d4e0f489278e5ae631ac"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4480.jpg",
+				"src": "https://bandai-hobby.net/images/159_4480_s_ypdsd1sarjjfbeieug2phqha7bu8.jpg",
 				"path": "/images/items/01_3529/159_4480.jpg",
 				"hash": "bf596acd4e85dfd135fbdeb86f323570"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4480.jpg",
+				"src": "https://bandai-hobby.net/images/189_4480_s_ug8egzewm5ziczvi35ocj21vsf7l.jpg",
 				"path": "/images/items/01_3529/189_4480.jpg",
 				"hash": "407e56b4b82dc3ee816e03a3fd6ca126"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4480.jpg",
+				"src": "https://bandai-hobby.net/images/190_4480_s_8sok8yjoe30cja74m1zftk7r00xv.jpg",
 				"path": "/images/items/01_3529/190_4480.jpg",
 				"hash": "ba73d067da42b03e25c8430cd7d2cc63"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3529/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["rider"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5451", "item-1000215369", "01_5276", "01_5175"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3529/"
 }

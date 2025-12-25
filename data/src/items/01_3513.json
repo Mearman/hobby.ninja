@@ -5,6 +5,43 @@
 		"ja": "ビークルモデル レイザー・クレスト",
 		"en": "Vehicle Model Razor Crest"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3515",
+			"url": "https://bandai-hobby.net/item/01_3515/",
+			"ja": "1/12 ザ・マンダロリアン(ベスカーアーマー)"
+		}
+	],
 	"price": {
 		"amount": 1298,
 		"currency": "JPY",
@@ -25,15 +62,27 @@
 			"• 好みの角度でディスプレイできるボールジョイント付き台座付属。"
 		],
 		"en": [
-			"The armored transportation shuttle \"Razor Crest \" owned by the main character \" Mandalorian \" from \" Star Wars \" first live-action drama series \" The Mandalorian\" appears!",
+			"The armored transportation shuttle \"Razor Crest\" owned by the main character \"Mandalorian\" from \"Star Wars\" first live-action drama series \"The Mandalorian\" appears!",
 			"• Regular color version for painting enthusiasts.",
 			"• Comes with a pedestal with a ball joint that allows you to display it at your preferred angle."
 		]
 	},
-	"accessories": {
-		"ja": ["カイナスシール×1", "専用ディスプレイベース×1"],
-		"en": ["Cainus Seal×1", "Dedicated display base x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "カイナスシール",
+				"en": "Cainus Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "専用ディスプレイベース",
+				"en": "Dedicated display base"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -74,9 +123,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3513/",
-	"brandIds": [],
-	"seriesIds": ["starwars"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_4153", "01_4154", "01_3514", "01_3515"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3513/"
 }

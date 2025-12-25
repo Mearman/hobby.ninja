@@ -5,6 +5,65 @@
 		"ja": "ＨＧ 1/144 リック・ディアス",
 		"en": "HG 1/144 Rick Diaz"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -17,7 +76,6 @@
 		"month": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"黒 の 量 産 機 「 γ （ ガ ン マ ） ガ ン ダ ム 」 ―",
@@ -52,7 +110,7 @@
 		"en": [
 			"Black mass-produced machine \"γ (Gamma) Gundam\" -",
 			"Rick Dear, take off!",
-			"From \"Mobile Suit Z Gundam\", Rick Diaz, piloted by Apoli and Roberto, is commercialized in the HG series.",
+			"From \"Mobile Suit ZGundam\", Rick Diaz, piloted by Apoli and Roberto, is commercialized in the HG series.",
 			"Some of the exterior and joints have been updated, and the characteristic aircraft color has been reproduced with molded color.",
 			"● Updated Rick Diaz and reproduced the armor color with molded color.",
 			"Updated various parts of the aircraft, including the exterior, based on the setting image.",
@@ -80,59 +138,75 @@
 			"- Product specifications are scheduled as of 20212. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["クレイ・バズーカ", "ビーム・ピストル", "ビーム・サーベル"],
-		"en": ["clay bazooka", "beam pistol", "beam saber"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "クレイ・バズーカ",
+				"en": "clay bazooka"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・ピストル",
+				"en": "beam pistol"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4417.jpg",
+				"src": "https://bandai-hobby.net/images/153_4417_s_lpji8wga1z8e5br6oagt5ub5swh4.jpg",
 				"path": "/images/items/01_3463/153_4417.jpg",
 				"hash": "ad57673d3b8f249f434b44d3bf34ff05"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4417.jpg",
+				"src": "https://bandai-hobby.net/images/155_4417_s_3hdi9veeba2v43c5mcq1wxf9bdbr.jpg",
 				"path": "/images/items/01_3463/155_4417.jpg",
 				"hash": "cf5ed8b61af0e9c75c17917c505800d2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4417.jpg",
+				"src": "https://bandai-hobby.net/images/156_4417_s_olzfxn05ivb0zb3hx7bcnpwilwsg.jpg",
 				"path": "/images/items/01_3463/156_4417.jpg",
 				"hash": "63285855c309bf7fef5b9f7b91629d77"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4417.jpg",
+				"src": "https://bandai-hobby.net/images/157_4417_s_arpt96bxhpjpbbkul5wdg9yokdzg.jpg",
 				"path": "/images/items/01_3463/157_4417.jpg",
 				"hash": "e3322a3bba0be64b12a2171662515385"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4417.jpg",
+				"src": "https://bandai-hobby.net/images/158_4417_s_yr61o48en5fcolr36fx6mpnkvbk5.jpg",
 				"path": "/images/items/01_3463/158_4417.jpg",
 				"hash": "c9b1b31bfeae154ecd5def6611d3dbf3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4417.jpg",
+				"src": "https://bandai-hobby.net/images/159_4417_s_2ysbrihl13e0vwhfgho7m8p29vso.jpg",
 				"path": "/images/items/01_3463/159_4417.jpg",
 				"hash": "4b8528c5482b9ac27eda305f43c7de88"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4417.jpg",
+				"src": "https://bandai-hobby.net/images/189_4417_s_9es5fu5kux1ztxzkok1dz9oevf35.jpg",
 				"path": "/images/items/01_3463/189_4417.jpg",
 				"hash": "d0f6a06a3d3ca3f4fd83766c0140b160"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4417.jpg",
+				"src": "https://bandai-hobby.net/images/190_4417_s_tb5dy3a6nvh6cndf09d6hfrjck6v.jpg",
 				"path": "/images/items/01_3463/190_4417.jpg",
 				"hash": "1370a2db280c4946661334362ca56a04"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4417.jpg",
+				"src": "https://bandai-hobby.net/images/191_4417_s_sww8jnm0oq4yqyf2u5n20l2b3441.jpg",
 				"path": "/images/items/01_3463/191_4417.jpg",
 				"hash": "99c70def3f395243ef7a7a8255f88420"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4417.jpg",
+				"src": "https://bandai-hobby.net/images/192_4417_s_biuvkrj9sk2qvctnt8ijiiba2wb8.jpg",
 				"path": "/images/items/01_3463/192_4417.jpg",
 				"hash": "c610f2a90cf2c80c40d96f9174ca1b7c"
 			}
@@ -140,14 +214,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3463/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla", "hguc"],
-	"seriesIds": ["z-gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2399",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2399/"

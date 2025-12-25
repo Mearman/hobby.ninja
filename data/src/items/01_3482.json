@@ -5,6 +5,55 @@
 		"ja": "ＨＧ 1/72 サーバイン",
 		"en": "HG 1/72 Server-in"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		},
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dunbine",
+			"url": "https://bandai-hobby.net/series/dunbine/",
+			"ja": "聖戦士ダンバイン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000203131",
+			"url": "https://p-bandai.jp/item/item-1000203131/",
+			"ja": "HG 1/72 トカマクダンバイン"
+		},
+		{
+			"id": "item-1000217021",
+			"url": "https://p-bandai.jp/item/item-1000217021/",
+			"ja": "聖戦士ダンバインセット１"
+		},
+		{
+			"id": "item-1000211055",
+			"url": "https://p-bandai.jp/item/item-1000211055/",
+			"ja": "ＨＧ 1/72 サーバイン [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000199895",
+			"url": "https://p-bandai.jp/item/item-1000199895/",
+			"ja": "ＨＧ 1/72 ビランビー"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -17,7 +66,6 @@
 		"month": 7
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -107,7 +155,7 @@
 			"Attached weapons: Aura sword / Seal sword",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/72 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Main product material: PS",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -126,72 +174,74 @@
 			"・Product specifications are as of 20213. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["オーラソード", "シールド"],
-		"en": ["aura sword", "Seal de"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "オーラソード",
+				"en": "aura sword"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4436.jpg",
+				"src": "https://bandai-hobby.net/images/153_4436_s_5ddft6b1049v9poj2dlt26ph9468.jpg",
 				"path": "/images/items/01_3482/153_4436.jpg",
 				"hash": "8b4f4b8d6b9840fdbb32365b65a8e348"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4436.jpg",
+				"src": "https://bandai-hobby.net/images/155_4436_s_gy8knmr7p0x90pji90hhgjqz9szd.jpg",
 				"path": "/images/items/01_3482/155_4436.jpg",
 				"hash": "54ae3e506b2223a0b7d1376574a1d7f8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4436.jpg",
+				"src": "https://bandai-hobby.net/images/156_4436_s_0rd62e16s7buq2url8r3sbzucgaf.jpg",
 				"path": "/images/items/01_3482/156_4436.jpg",
 				"hash": "041456f2acd122fa77e59951650c0ecd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4436.jpg",
+				"src": "https://bandai-hobby.net/images/157_4436_s_k761rg9asq8wnjmhhxn0t6f1r6z8.jpg",
 				"path": "/images/items/01_3482/157_4436.jpg",
 				"hash": "46d169b3cca8bc6ca0432f9e4d734818"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4436.jpg",
+				"src": "https://bandai-hobby.net/images/158_4436_s_mr4zui8po54x9uua9c9g089yd35d.jpg",
 				"path": "/images/items/01_3482/158_4436.jpg",
 				"hash": "5f38f9b62266874ae829f1becfa90db9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4436.jpg",
+				"src": "https://bandai-hobby.net/images/159_4436_s_ma9i3j7gw5vdrfoc2t6871pd9b1u.jpg",
 				"path": "/images/items/01_3482/159_4436.jpg",
 				"hash": "e6932c5bef3f006233169b8bc2e00c74"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4436.jpg",
+				"src": "https://bandai-hobby.net/images/189_4436_s_ibwzuipnuhbzqqi0ivernei7lexr.jpg",
 				"path": "/images/items/01_3482/189_4436.jpg",
 				"hash": "2cf890d8b54631abfa73de9099decd88"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4436.jpg",
+				"src": "https://bandai-hobby.net/images/190_4436_s_w7cn13ff0k7nsurx3ztkqxttvihi.jpg",
 				"path": "/images/items/01_3482/190_4436.jpg",
 				"hash": "26bf042d6f9a2b0c810a2640d570410a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4436.jpg",
+				"src": "https://bandai-hobby.net/images/191_4436_s_6wjl6ug7b3cxie9xg9f19zq25lrt.jpg",
 				"path": "/images/items/01_3482/191_4436.jpg",
 				"hash": "11dc760bbe1902e9a61823815400b532"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4436.jpg",
+				"src": "https://bandai-hobby.net/images/192_4436_s_3r6caafwxy13gd9rxuybrzg6ou7o.jpg",
 				"path": "/images/items/01_3482/192_4436.jpg",
 				"hash": "a78c28f8d71ff908ba1f6e7c511d7a83"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3482/",
-	"brandIds": ["pb_charapla", "hg"],
-	"seriesIds": ["dunbine"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["item-1000203131", "item-1000217021", "item-1000211055", "item-1000199895"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3482/"
 }

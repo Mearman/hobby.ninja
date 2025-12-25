@@ -5,6 +5,43 @@
 		"ja": "アタックガールガン×レディコマンダーアリスセットBOX",
 		"en": "Attack Girl Gun x Lady Commander Alice Set BOX"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "girlgunlady",
+			"url": "https://bandai-hobby.net/series/girlgunlady/",
+			"ja": "ガールガンレディ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3559",
+			"url": "https://bandai-hobby.net/item/01_3559/",
+			"ja": "ガールガンレディ&30MINUTESSISTERS 互換オプションパーツセット"
+		},
+		{
+			"id": "01_3558",
+			"url": "https://bandai-hobby.net/item/01_3558/",
+			"ja": "レディコマンダーアマツ"
+		},
+		{
+			"id": "01_3451",
+			"url": "https://bandai-hobby.net/item/01_3451/",
+			"ja": "レディコマンダーシャーロット"
+		},
+		{
+			"id": "01_3449",
+			"url": "https://bandai-hobby.net/item/01_3449/",
+			"ja": "ブラストガールガン Ver.ブラボータンゴ"
+		}
+	],
 	"price": {
 		"amount": 7480,
 		"currency": "JPY",
@@ -29,50 +66,60 @@
 		"en": [
 			"Special effects drama “Girl Gun Lady” that uses plastic models to fight has started!",
 			"Introducing a plastic model that allows you to enter the world of the drama and relive the heroines' activities!",
-			"• A limited quantity set of \"Attack Girl Gun Ver. Alpha Tango \" and \" Lady Commander Alice\" is now available.",
+			"• A limited quantity set of \"Attack Girl Gun Ver. Alpha Tango\" and \"Lady Commander Alice\" is now available.",
 			"• You can get your hands on the plastic model made by the main character Koharu in the movie with this one set.",
 			"• This set comes with \"bonus cards\" for Koharu Tachibana and Alice!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"通常カートリッジ×3",
-			"カスタム銃口パーツ×1",
-			"ディスプレイ台座（銃用）×1",
-			"専用台座（コマンダー用）×１",
-			"マーキングシール×1",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Normal cartridge x 3",
-			"Custom muzzle parts x 1",
-			"Display pedestal (for guns) x 1",
-			"Dedicated pedestal (for commander) x 1",
-			"MarkingSeal×1",
-			"Foil Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "通常カートリッジ",
+				"en": "normal cartridge"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "カスタム銃口パーツ",
+				"en": "custom muzzle parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座（銃用）",
+				"en": "Display pedestal (for guns)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "専用台座（コマンダー用）×１",
+				"en": "Dedicated pedestal (for commander) x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157322_1.jpg",
 				"path": "/images/items/01_3444/1000157322_1.jpg",
 				"hash": "cc5d24ca61f103e4096af0bac29718d9"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157322_10.jpg",
-				"path": "/images/items/01_3444/1000157322_10.jpg",
-				"hash": "0f6bc45f1b701ab5f05d72e3d45e0ddd"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157322_11.jpg",
-				"path": "/images/items/01_3444/1000157322_11.jpg",
-				"hash": "82fa271fde51555497061e2b4ba26127"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157322_12.jpg",
-				"path": "/images/items/01_3444/1000157322_12.jpg",
-				"hash": "3bcefe08b417ea200c527c3db2df14c4"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157322_2.jpg",
@@ -113,13 +160,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157322_9.jpg",
 				"path": "/images/items/01_3444/1000157322_9.jpg",
 				"hash": "6b3741286919eb7b66a67d1ee9daf7fd"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157322_10.jpg",
+				"path": "/images/items/01_3444/1000157322_10.jpg",
+				"hash": "0f6bc45f1b701ab5f05d72e3d45e0ddd"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157322_11.jpg",
+				"path": "/images/items/01_3444/1000157322_11.jpg",
+				"hash": "82fa271fde51555497061e2b4ba26127"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157322_12.jpg",
+				"path": "/images/items/01_3444/1000157322_12.jpg",
+				"hash": "3bcefe08b417ea200c527c3db2df14c4"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3444/",
-	"brandIds": [],
-	"seriesIds": ["girlgunlady"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_3559", "01_3558", "01_3451", "01_3449"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3444/"
 }

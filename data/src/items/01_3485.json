@@ -3,8 +3,62 @@
 	"type": "item",
 	"name": {
 		"ja": "ＭＧ 1/100 ガンダムＦ９１ Ｖｅｒ．２．０［チタニウムフィニッシュ］",
-		"en": "MG 1/100 Gundam F91 Ver. 2.0 [Titanium finish]"
+		"en": "MG 1/100 GundamF91 Ver. 2.0 [Titanium finish]"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundamf91",
+			"url": "https://bandai-hobby.net/series/gundamf91/",
+			"ja": "機動戦士ガンダムF91"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3484",
+			"url": "https://bandai-hobby.net/item/01_3484/",
+			"ja": "ＲＥ/100 1/100 ビギナ・ギナ ［エクストラフィニッシュ］"
+		},
+		{
+			"id": "item-1000130517",
+			"url": "https://p-bandai.jp/item/item-1000130517",
+			"ja": "ＭＧ 1/100 ガンダムＦ９１ Ｖｅｒ．２．０（残像イメージカラー）"
+		},
+		{
+			"id": "01_1349",
+			"url": "https://bandai-hobby.net/item/01_1349/",
+			"ja": "MG 1/100 ガンダムF91 Ver.2.0"
+		},
+		{
+			"id": "item-1000160843",
+			"url": "https://p-bandai.jp/item/item-1000160843",
+			"ja": "HGUC 1/144 RGM-89R ジェガンＡタイプ（Ｆ９１Ｖｅｒ.）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 9680,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 7
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"－－－－－",
@@ -79,7 +132,7 @@
 			"Accessories: Rafflesia type pedestal",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/100 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS/ABS/PVC",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -98,59 +151,81 @@
 			"・Product specifications are as of 20213. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["ビーム・ライフル", "ビーム・サーベル", "ビーム・ランチャー", "ビーム・シールド"],
-		"en": ["beam rifle", "beam saber", "beam launcher", "Beam Seal"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル",
+				"en": "beam rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・ランチャー",
+				"en": "beam launcher"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・シールド",
+				"en": "Beam Seal"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4439.jpg",
+				"src": "https://bandai-hobby.net/images/153_4439_s_2xp1hoh1tj38zgx2jm6z23i36bgu.jpg",
 				"path": "/images/items/01_3485/153_4439.jpg",
 				"hash": "91ed883bddea32b4f0e6e3bafc5bafe3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4439.jpg",
+				"src": "https://bandai-hobby.net/images/155_4439_s_vqs2ns2lj24f4l7ztgtws221pcat.jpg",
 				"path": "/images/items/01_3485/155_4439.jpg",
 				"hash": "76bf326d32243ac98508f13e19c52377"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4439.jpg",
+				"src": "https://bandai-hobby.net/images/156_4439_s_6f3neao3ov06k3vorvlefpitsp7w.jpg",
 				"path": "/images/items/01_3485/156_4439.jpg",
 				"hash": "89df1a2d1b8cb4e6a867f103dbb314c7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4439.jpg",
+				"src": "https://bandai-hobby.net/images/157_4439_s_81toxf285iexe907biyojjby9kra.jpg",
 				"path": "/images/items/01_3485/157_4439.jpg",
 				"hash": "cc9ef86e8333756f76454baaf860d68c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4439.jpg",
+				"src": "https://bandai-hobby.net/images/158_4439_s_owxvpjubzzvqpty1z1wc9g3a971e.jpg",
 				"path": "/images/items/01_3485/158_4439.jpg",
 				"hash": "4e4e06f7405765ee57ce33c0e049c77c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4439.jpg",
+				"src": "https://bandai-hobby.net/images/159_4439_s_g01iyntjcmtlny6rvvoyb8lbjxzf.jpg",
 				"path": "/images/items/01_3485/159_4439.jpg",
 				"hash": "c73eb083030e0b2bcdea2e9e5e73b107"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4439.jpg",
+				"src": "https://bandai-hobby.net/images/189_4439_s_n44pjggr0nk7f2rumbtnz9q3ogcy.jpg",
 				"path": "/images/items/01_3485/189_4439.jpg",
 				"hash": "71c6dfa12002a976a08fd9c34ae7c69b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4439.jpg",
+				"src": "https://bandai-hobby.net/images/190_4439_s_5tq6v8jbn0evv8nu52xbrmwjppnf.jpg",
 				"path": "/images/items/01_3485/190_4439.jpg",
 				"hash": "15d612b96599d5c5b49ef1a268c69897"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4439.jpg",
+				"src": "https://bandai-hobby.net/images/191_4439_s_m9si52tmz780xz36ktyi3gg2c3vy.jpg",
 				"path": "/images/items/01_3485/191_4439.jpg",
 				"hash": "d03a3b5a70b2215127768dc53978929a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4439.jpg",
+				"src": "https://bandai-hobby.net/images/192_4439_s_zzakdk40v01eenbvqpdlp1wc6472.jpg",
 				"path": "/images/items/01_3485/192_4439.jpg",
 				"hash": "91d66ff8c5be2a9cbefc57ae55ad0e3d"
 			}
@@ -158,14 +233,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3485/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": ["gundamf91"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_3484", "item-1000130517", "01_1349", "item-1000160843"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2392",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2392/"

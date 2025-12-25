@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ガンダムベース限定 フリーダムガンダム Ver.2.0[シルバーコーティング]",
 		"en": "MG 1/100 Gundam Base Limited Freedom Gundam Ver.2.0 [Silver Coating]"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "01_5221",
+			"url": "https://bandai-hobby.net/item/01_5221/",
+			"ja": "MG 1/100 イージスガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_4272",
+			"url": "https://bandai-hobby.net/item/01_4272/",
+			"ja": "MG 1/100 ガンダムベース限定 パーフェクトストライクガンダム グランドスラム装備型"
+		},
+		{
+			"id": "01_4195",
+			"url": "https://bandai-hobby.net/item/01_4195/",
+			"ja": "MG 1/100 ガンダムベース限定 エクリプスガンダム[クリアカラー]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 10340,
 		"currency": "JPY",
@@ -18,18 +62,17 @@
 		"day": 10
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"『機動戦士ガンダム SEED』より、フリーダムガンダムが、煌びやかなシルバーコーティング仕様で登場！",
+			"『機動戦士ガンダムSEED』より、フリーダムガンダムが、煌びやかなシルバーコーティング仕様で登場！",
 			"• 肘関節部分で伸縮可動する腕や、スライド機構を備えた太腿装甲、柔軟に可動する腰部など、ヒロイックなポージングが再現可能！",
 			"• ウイング部やビーム砲なども柔軟に可動。フルバーストモードのポージングもしっかりと再現可能！",
 			"• 連結可能なビームサーベルなど各種武器に加え、台座、ハンドパーツといった多彩なオプションも付属！"
 		],
 		"en": [
 			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"From \"Mobile Suit Gundam SEED\", Freedom Gundam is now available with a glittering silver coating!",
+			"From \"Mobile Suit GundamSEED\", Freedom Gundam is now available with a glittering silver coating!",
 			"• Heroic poses can be recreated, including arms that extend and contract at the elbow joints, thigh armor with a sliding mechanism, and a flexibly movable waist!",
 			"• Wings and beam cannons can also be moved flexibly. Poses in full burst mode can also be recreated!",
 			"• In addition to various weapons such as connectable beam sabers, various options such as pedestals and hand parts are also included!"
@@ -70,13 +113,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3488/",
-	"brandIds": ["mg"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5994", "01_5221", "01_4272", "01_4195"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3488/"
 }

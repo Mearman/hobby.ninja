@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard 仮面ライダーアギト グランドフォーム",
 		"en": "Figure-rise Standard Kamen Rider Agito Grand Form"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "rider",
+			"url": "https://bandai-hobby.net/series/rider/",
+			"ja": "仮面ライダーシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5451",
+			"url": "https://bandai-hobby.net/item/01_5451/",
+			"ja": "Figure-rise Standard 仮面ライダーゼロワン ライジングホッパー"
+		},
+		{
+			"id": "item-1000215369",
+			"url": "https://p-bandai.jp/item/item-1000215369/",
+			"ja": "Figure-rise Standard 仮面ライダーファイズ ブラスターフォーム"
+		},
+		{
+			"id": "01_5276",
+			"url": "https://bandai-hobby.net/item/01_5276/",
+			"ja": "Figure-rise Standard 仮面ライダークウガ アルティメットフォーム"
+		},
+		{
+			"id": "01_5175",
+			"url": "https://bandai-hobby.net/item/01_5175/",
+			"ja": "Figure-rise Standard 仮面ライダーキバ キバフォーム"
+		}
+	],
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -21,11 +64,11 @@
 	"description": {
 		"ja": [
 			"仮面ライダーアギト グランドフォームが待望の商品化！",
-			"■メッキパーツを採用し、スーツの金色部分の質感を徹底追求。",
-			"■可動域の広さを特徴としたパーツを採用することにより「ライダーキック」など多彩なアクションポーズが再現可能。",
-			"■「クロスホーン」の展開を差し換えパーツで再現。",
-			"■３種類のハンドパーツが付属。",
-			"■「アギトの紋章」エフェクトパーツが付属。"
+			"• メッキパーツを採用し、スーツの金色部分の質感を徹底追求。",
+			"• 可動域の広さを特徴としたパーツを採用することにより「ライダーキック」など多彩なアクションポーズが再現可能。",
+			"• 「クロスホーン」の展開を差し換えパーツで再現。",
+			"• ３種類のハンドパーツが付属。",
+			"• 「アギトの紋章」エフェクトパーツが付属。"
 		],
 		"en": [
 			"The long-awaited commercialization of Kamen Rider Agito Grand Form!",
@@ -36,80 +79,100 @@
 			"• \"Agito's Crest\" effect parts are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"クロスホーン展開用パーツ×1式",
-			"手首パーツ　握り手（左右）、平手（左右）、決め手（左右）",
-			"エフェクトパーツ×1",
-			"Figure-rise Effect 台座×1",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Cross horn deployment parts x 1 set",
-			"Wrist parts: gripping hand (left and right), open hand (left and right), decisive hand (left and right)",
-			"Effect parts x 1",
-			"Figure-rise Effect pedestal x 1",
-			"Foil Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "クロスホーン展開用パーツ",
+				"en": "Cross horn deployment parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "手首パーツ　握り手（左右）、平手（左右）、決め手（左右）",
+				"en": "Wrist parts: gripping hand (left and right), open hand (left and right), decisive hand (left and right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "エフェクトパーツ",
+				"en": "effect parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "Figure-rise Effect 台座",
+				"en": "Figure-rise Effect pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4461.jpg",
+				"src": "https://bandai-hobby.net/images/153_4461_s_h7gj4q914nsvrcrq1zfv0byhlfu5.jpg",
 				"path": "/images/items/01_3510/153_4461.jpg",
 				"hash": "64a4685e19e52b5d7dcd6bd314bd25c1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4461.jpg",
+				"src": "https://bandai-hobby.net/images/155_4461_s_u4ss8mv2xocxlz9j98fvwfojov6k.jpg",
 				"path": "/images/items/01_3510/155_4461.jpg",
 				"hash": "f221bf63d36b3e35f8c3ebdd2fa3b96e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4461.jpg",
+				"src": "https://bandai-hobby.net/images/156_4461_s_89ytm4mooo48j6jru40t76bhleax.jpg",
 				"path": "/images/items/01_3510/156_4461.jpg",
 				"hash": "fb677818861c8ba23a894162177dedd1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4461.jpg",
+				"src": "https://bandai-hobby.net/images/157_4461_s_smsv44uqxr3zhul20tps3pjl6m6b.jpg",
 				"path": "/images/items/01_3510/157_4461.jpg",
 				"hash": "158e7f7a7bc469729cf711469c7166d7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4461.jpg",
+				"src": "https://bandai-hobby.net/images/158_4461_s_raxby2occ2160bhtavj15suzm8ga.jpg",
 				"path": "/images/items/01_3510/158_4461.jpg",
 				"hash": "b530e7919c39dda7019c77f5c183189d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4461.jpg",
+				"src": "https://bandai-hobby.net/images/159_4461_s_uccx5df94kkq8yjasemkhp856x8r.jpg",
 				"path": "/images/items/01_3510/159_4461.jpg",
 				"hash": "7324f1020f972af5c63ec8866db4e0b0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4461.jpg",
+				"src": "https://bandai-hobby.net/images/189_4461_s_vqaw1s0x1q2w8b5567mwni8wphnp.jpg",
 				"path": "/images/items/01_3510/189_4461.jpg",
 				"hash": "a6671c165501fbc5ff969756e2d884d5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4461.jpg",
+				"src": "https://bandai-hobby.net/images/190_4461_s_laqtrytnhme8pcg7jktsechcod0o.jpg",
 				"path": "/images/items/01_3510/190_4461.jpg",
 				"hash": "c05b947964f17b6d16611daaf11e8884"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4461.jpg",
+				"src": "https://bandai-hobby.net/images/191_4461_s_gn50twv1nksyxr6xpbw47cxcbi4a.jpg",
 				"path": "/images/items/01_3510/191_4461.jpg",
 				"hash": "de29ed7a71420019787e4fd5d69522fc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4461.jpg",
+				"src": "https://bandai-hobby.net/images/192_4461_s_46v5imepitxbapb6ltal9wn5mtq6.jpg",
 				"path": "/images/items/01_3510/192_4461.jpg",
 				"hash": "6d90e78d32b9459b3b2084f214d7d0f1"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3510/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["rider"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5451", "item-1000215369", "01_5276", "01_5175"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3510/"
 }

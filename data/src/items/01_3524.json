@@ -5,6 +5,50 @@
 		"ja": "RG 1/144 Hi-νガンダム",
 		"en": "RG 1/144 Hi-νGundam"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4121",
+			"url": "https://bandai-hobby.net/item/01_4121/",
+			"ja": "RG 1/144 ガンダムベース限定 Hi-νガンダム[チタニウムフィニッシュ]"
+		},
+		{
+			"id": "01_3496",
+			"url": "https://bandai-hobby.net/item/01_3496/",
+			"ja": "RG 1/144 νガンダム[クリアカラー]"
+		},
+		{
+			"id": "01_2995",
+			"url": "https://bandai-hobby.net/item/01_2995/",
+			"ja": "RG 1/144 νガンダム[クリアカラー] 初回生産限定パッケージ"
+		},
+		{
+			"id": "01_2734",
+			"url": "https://bandai-hobby.net/item/01_2734/",
+			"ja": "RG 1/144 ガンダムベース限定 νガンダム[チタニウムフィニッシュ]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 11
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム 逆襲のシャア ベルトーチカ・チルドレン』に登場するHi-νガンダムが、新解釈のディテール表現とリアリティを追求しRGで登場！",
@@ -43,47 +86,70 @@
 			"• Various weapons and hand parts included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"ニュー・ハイパー・バズーカ×1",
-			"シールド×1",
-			"ビーム・サーベル（柄×3 、ビーム刃×2）",
-			"ハンドパーツ（左右）×各3種",
-			"武器持ち手（右）×1種",
-			"リアリスティックデカール×1"
-		],
-		"en": [
-			"Beam rifle x1",
-			"New hyper bazooka x1",
-			"Seal × 1",
-			"Beam saber (handle x 3, beam blade x 2)",
-			"Hand parts (left and right) x 3 types each",
-			"Weapon holder (right) x 1 type",
-			"Realistic decal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル",
+				"en": "beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ニュー・ハイパー・バズーカ",
+				"en": "new hyper bazooka"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル（柄",
+				"en": "Beam saber (handle)"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "、ビーム刃×2）",
+				"en": ", beam blade x 2)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ（左右）×各3種",
+				"en": "Hand parts (left and right) x 3 types each"
+			}
+		},
+		{
+			"name": {
+				"ja": "武器持ち手（右）",
+				"en": "Weapon holder (right)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール",
+				"en": "realistic decals"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163350_1.jpg",
 				"path": "/images/items/01_3524/1000163350_1.jpg",
 				"hash": "e87282b544b1ee6dc62e98508aa972a5"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163350_10.jpg",
-				"path": "/images/items/01_3524/1000163350_10.jpg",
-				"hash": "b4aa7f0055c7cff72c3ca0a1c3859ed8"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163350_11.jpg",
-				"path": "/images/items/01_3524/1000163350_11.jpg",
-				"hash": "c9754bfde3e35526a0a1776e64edb7e4"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163350_12.jpg",
-				"path": "/images/items/01_3524/1000163350_12.jpg",
-				"hash": "cb8dff583db7832555a69c2aa8268591"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163350_2.jpg",
@@ -124,15 +190,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163350_9.jpg",
 				"path": "/images/items/01_3524/1000163350_9.jpg",
 				"hash": "4b67046d5d3b08f2a260df105bd64ec1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163350_10.jpg",
+				"path": "/images/items/01_3524/1000163350_10.jpg",
+				"hash": "b4aa7f0055c7cff72c3ca0a1c3859ed8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163350_11.jpg",
+				"path": "/images/items/01_3524/1000163350_11.jpg",
+				"hash": "c9754bfde3e35526a0a1776e64edb7e4"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163350_12.jpg",
+				"path": "/images/items/01_3524/1000163350_12.jpg",
+				"hash": "cb8dff583db7832555a69c2aa8268591"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3524/",
-	"brandIds": ["rg"],
-	"seriesIds": ["gundam-cca"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4121", "01_3496", "01_2995", "01_2734"],
 	"manual": {
 		"id": "683",
 		"url": "https://manual.bandai-hobby.net/menus/detail/683/"

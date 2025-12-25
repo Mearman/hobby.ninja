@@ -2,9 +2,52 @@
 	"id": "01_3526",
 	"type": "item",
 	"name": {
-		"ja": "SDW HEROES サージェントヴェルデバスターガンダム DXセット",
-		"en": "SDW HEROES Sergeant Verde Buster Gundam DX Set"
+		"ja": "SDW HEROES サージェントヴェルデバスターガンダムDXセット",
+		"en": "SDW HEROES Sergeant Verde Buster GundamDX Set"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		},
+		{
+			"id": "01_4634",
+			"url": "https://bandai-hobby.net/item/01_4634/",
+			"ja": "SDW HEROES クリアカラーセットIII"
+		}
+	],
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -21,75 +64,114 @@
 	"description": {
 		"ja": [
 			"『SDガンダムワールド ヒーローズ』より、「サージェントヴェルデバスターガンダム」と強化武装のDXセットが登場！",
-			"■「サージェントヴェルデバスターガンダム」に取り付けられる強化武装のフルパッケージ再現用パーツ一式が付属。",
-			"■別売りの「ヴェルデバスター隊員」の付属武器である「拳銃」「手錠」「警棒」「シールド」、さらに隊員用の飛行用ユニット、脚部ユニットも同梱。"
+			"• 「サージェントヴェルデバスターガンダム」に取り付けられる強化武装のフルパッケージ再現用パーツ一式が付属。",
+			"• 別売りの「ヴェルデバスター隊員」の付属武器である「拳銃」「手錠」「警棒」「シールド」、さらに隊員用の飛行用ユニット、脚部ユニットも同梱。"
 		],
 		"en": [
-			"From \"SD Gundam World Heroes \" comes a DX set of \" Sergeant Verde Buster Gundam\" and enhanced weapons!",
+			"From \"SD Gundam World Heroes\" comes the DX set of \"Sergeant Verde Buster Gundam\" and enhanced weapons!",
 			"• Includes a set of parts to reproduce the full package of reinforced weapons that can be attached to \"Sergeant Verde Buster Gundam\".",
-			"• Includes the optional \"Pistol Gun \", \" Handcuffs \", \" Baton \", and \" Seal \" for the \" Verde Buster Squad\", as well as the flight unit and leg unit for the squad members."
+			"• Includes the optional \"Pistol Gun\", \"Handcuffs\", \"Baton\", and \"Seal\" for the \"Verde Buster Squad\", as well as the flight unit and leg unit for the squad members."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"拳銃×2",
-			"手錠×1",
-			"シールド×1",
-			"警棒×1",
-			"フルパッケージ再現用パーツ一式",
-			"飛行用ユニット×1式",
-			"脚部ユニット×1式",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Handgun x 2",
-			"Handcuffs x 1",
-			"Seal × 1",
-			"Baton x 1",
-			"Full package reproduction parts set",
-			"Flight unit x 1 set",
-			"Leg unit x 1 set",
-			"Foil Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "拳銃",
+				"en": "handgun"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "手錠",
+				"en": "handcuffs"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "警棒",
+				"en": "baton"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "フルパッケージ再現用パーツ一式",
+				"en": "Full package reproduction parts set"
+			}
+		},
+		{
+			"name": {
+				"ja": "飛行用ユニット",
+				"en": "flight unit"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "脚部ユニット",
+				"en": "leg unit"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4477.jpg",
+				"src": "https://bandai-hobby.net/images/153_4477_s_u2fvbu77o30041y3sg8w0od41w90.jpg",
 				"path": "/images/items/01_3526/153_4477.jpg",
 				"hash": "ee0a8170352b838f3be2242eb2d04221"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4477.jpg",
+				"src": "https://bandai-hobby.net/images/155_4477_s_m868f12eaultue0hromorkglik4r.jpg",
 				"path": "/images/items/01_3526/155_4477.jpg",
 				"hash": "801d521774687a6aad190b199eec6e29"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4477.jpg",
+				"src": "https://bandai-hobby.net/images/156_4477_s_7j6zcl6nou7sptnmo1qea9b0l85t.jpg",
 				"path": "/images/items/01_3526/156_4477.jpg",
 				"hash": "1ca30131d253dce8fddc79b71a543c1e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4477.jpg",
+				"src": "https://bandai-hobby.net/images/157_4477_s_050cpx0jyt67fbmor0vybhg04ylm.jpg",
 				"path": "/images/items/01_3526/157_4477.jpg",
 				"hash": "aa72eaada3a739e4fbcc39850189ab1f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4477.jpg",
+				"src": "https://bandai-hobby.net/images/158_4477_s_u33m4n80u3os2jrcw4bmex2eyqyr.jpg",
 				"path": "/images/items/01_3526/158_4477.jpg",
 				"hash": "2ab389862dd243701ce86848fc816ead"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4477.jpg",
+				"src": "https://bandai-hobby.net/images/159_4477_s_ewgp4tr6jmkz74k2nt84v35h3aks.jpg",
 				"path": "/images/items/01_3526/159_4477.jpg",
 				"hash": "1c84832b6154aa9252e2b67fe4d3a922"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3526/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3526/"
 }

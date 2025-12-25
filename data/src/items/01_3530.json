@@ -5,6 +5,43 @@
 		"ja": "ポケモンプラモコレクション BIG 02 イーブイ",
 		"en": "Pokemon plastic model collection BIG 02 Eevee"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5984",
+			"url": "https://bandai-hobby.net/item/01_5984/",
+			"ja": "ポケモンプラモコレクション 60 セレクトシリーズ コライドン"
+		},
+		{
+			"id": "01_5958",
+			"url": "https://bandai-hobby.net/item/01_5958/",
+			"ja": "ポケモンプラモコレクション 59 セレクトシリーズ ミライドン"
+		},
+		{
+			"id": "01_5947",
+			"url": "https://bandai-hobby.net/item/01_5947/",
+			"ja": "ポケモンプラモコレクション クイック!! 23 ジラーチ"
+		},
+		{
+			"id": "01_5568",
+			"url": "https://bandai-hobby.net/item/01_5568/",
+			"ja": "ポケモンプラモコレクション 58 セレクトシリーズ グレンアルマ"
+		}
+	],
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -21,11 +58,11 @@
 	"description": {
 		"ja": [
 			"ポケモンの魅力を詰め込んだ、とにかく大きいプランモデル「ポケプラBIG」第二弾はイーブイ!!",
-			"■全48パーツ、全長約20cm。組み立て簡単。最小限のシールで色分け再現。",
-			"■いつまでも眺めていたくなるつぶらな瞳をクリアパーツの重ね合わせで表現。",
-			"■頭や耳、お尻が左右に可動することで表情豊かなポージングが可能。",
-			"■触り心地にもこだわり肉球や舌には軟質素材を採用。",
-			"■前脚と首周りの毛が前後に可動することで「タッチ」ポーズが再現可能。"
+			"• 全48パーツ、全長約20cm。組み立て簡単。最小限のシールで色分け再現。",
+			"• いつまでも眺めていたくなるつぶらな瞳をクリアパーツの重ね合わせで表現。",
+			"• 頭や耳、お尻が左右に可動することで表情豊かなポージングが可能。",
+			"• 触り心地にもこだわり肉球や舌には軟質素材を採用。",
+			"• 前脚と首周りの毛が前後に可動することで「タッチ」ポーズが再現可能。"
 		],
 		"en": [
 			"The second model of the \"Pokepla BIG\", a big plan model packed with the charm of Pokemon, is Eevee!!",
@@ -36,31 +73,21 @@
 			"• \"Touch\" poses can be recreated by moving the hair around the front legs and neck back and forth."
 		]
 	},
-	"accessories": {
-		"ja": ["ホイルシール×1"],
-		"en": ["Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164290_1.jpg",
 				"path": "/images/items/01_3530/1000164290_1.jpg",
 				"hash": "78643107b2f5bdf00a5fd3c681de43af"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164290_10.jpg",
-				"path": "/images/items/01_3530/1000164290_10.jpg",
-				"hash": "2bfde7f4867fd92273d54b5b331d0db3"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164290_11.jpg",
-				"path": "/images/items/01_3530/1000164290_11.jpg",
-				"hash": "eeb45b1dd5fa61c5a2886f9cb196c116"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164290_12.jpg",
-				"path": "/images/items/01_3530/1000164290_12.jpg",
-				"hash": "410344569a5f1d71f81d9dc18736cc5b"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164290_2.jpg",
@@ -101,13 +128,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164290_9.jpg",
 				"path": "/images/items/01_3530/1000164290_9.jpg",
 				"hash": "a9312561b4268b6515ae686b1fdc8376"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164290_10.jpg",
+				"path": "/images/items/01_3530/1000164290_10.jpg",
+				"hash": "2bfde7f4867fd92273d54b5b331d0db3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164290_11.jpg",
+				"path": "/images/items/01_3530/1000164290_11.jpg",
+				"hash": "eeb45b1dd5fa61c5a2886f9cb196c116"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164290_12.jpg",
+				"path": "/images/items/01_3530/1000164290_12.jpg",
+				"hash": "410344569a5f1d71f81d9dc18736cc5b"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3530/",
-	"brandIds": [],
-	"seriesIds": ["pokemon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3530/"
 }

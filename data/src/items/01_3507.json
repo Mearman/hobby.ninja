@@ -5,6 +5,49 @@
 		"ja": "SDW HEROES 曹操ウイングガンダム 倚聖の装",
 		"en": "SDW HEROES Cao Cao Wing Gundam Kasei's Attire"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		},
+		{
+			"id": "01_4634",
+			"url": "https://bandai-hobby.net/item/01_4634/",
+			"ja": "SDW HEROES クリアカラーセットIII"
+		}
+	],
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -21,64 +64,83 @@
 	"description": {
 		"ja": [
 			"『SDガンダムワールド ヒーローズ』より、「曹操ウイングガンダム」が新たな装いで登場!",
-			"■肘関節の採用により、刀を構えたポーズが決まる。",
-			"■クリアの仮面が付属。",
-			"■刀身にクリアパーツを重ねる事も可能。"
+			"• 肘関節の採用により、刀を構えたポーズが決まる。",
+			"• クリアの仮面が付属。",
+			"• 刀身にクリアパーツを重ねる事も可能。"
 		],
 		"en": [
-			"From \"SD Gundam World Heroes \", \" Cao Wing Gundam\" appears in a new look!",
+			"From \"SD Gundam World Heroes\", \"Cao Wing Gundam\" appears in a new outfit!",
 			"• The elbow joint determines the pose with the sword held.",
 			"• Comes with a clear mask.",
 			"• It is also possible to layer clear parts on the blade."
 		]
 	},
-	"accessories": {
-		"ja": ["刀×1", "クリアパーツ×1式", "ホイルシール×1"],
-		"en": ["Sword x1", "Clear parts x 1 set", "Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "刀",
+				"en": "sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "クリアパーツ",
+				"en": "clear parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4459.jpg",
+				"src": "https://bandai-hobby.net/images/153_4459_s_kqcqbp6fpx1zkzwxrq88eudctphj.jpg",
 				"path": "/images/items/01_3507/153_4459.jpg",
 				"hash": "e2e3e9defd8fc536936ca1dc7f30499b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4459.jpg",
+				"src": "https://bandai-hobby.net/images/155_4459_s_hygnyehbv89uukdj2il7ttelr5sa.jpg",
 				"path": "/images/items/01_3507/155_4459.jpg",
 				"hash": "e5f45701b85aa1261842ddd855030781"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4459.jpg",
+				"src": "https://bandai-hobby.net/images/156_4459_s_5wntjanw2d73kv5jghdjsythtp4k.jpg",
 				"path": "/images/items/01_3507/156_4459.jpg",
 				"hash": "cbd3e110c4a1e6cab383bf10bc07ffa4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4459.jpg",
+				"src": "https://bandai-hobby.net/images/157_4459_s_75o2urco4wk8f9242274yh3qx4qd.jpg",
 				"path": "/images/items/01_3507/157_4459.jpg",
 				"hash": "0292b3c2847a4225f7a190aa637a0f91"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4459.jpg",
+				"src": "https://bandai-hobby.net/images/158_4459_s_r0b0ykxczx6j54wgh7s46ot67kgh.jpg",
 				"path": "/images/items/01_3507/158_4459.jpg",
 				"hash": "228b1d3042effa7a79afe404d8b2f16c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4459.jpg",
+				"src": "https://bandai-hobby.net/images/159_4459_s_wdps006foh3iezmy76g7a7999jlp.jpg",
 				"path": "/images/items/01_3507/159_4459.jpg",
 				"hash": "ca9f64d6231f4a030cc49eb9c640f288"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4459.jpg",
+				"src": "https://bandai-hobby.net/images/189_4459_s_5zo1xsgqe8mwixjpa7se36xbnkdn.jpg",
 				"path": "/images/items/01_3507/189_4459.jpg",
 				"hash": "c5712790528d3b2767972addb87501be"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3507/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3507/"
 }

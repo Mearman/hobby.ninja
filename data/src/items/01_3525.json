@@ -5,6 +5,49 @@
 		"ja": "SDW HEROES 信長ガンダムエピオン ダークマスクVer.",
 		"en": "SDW HEROES Nobunaga Gundam Epyon Dark Mask Ver."
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		},
+		{
+			"id": "01_4634",
+			"url": "https://bandai-hobby.net/item/01_4634/",
+			"ja": "SDW HEROES クリアカラーセットIII"
+		}
+	],
 	"price": {
 		"amount": 990,
 		"currency": "JPY",
@@ -21,59 +64,74 @@
 	"description": {
 		"ja": [
 			"『SDガンダムワールド ヒーローズ』より、「信長ガンダムエピオン」が謎に包まれた別カラーバージョンで登場！",
-			"■肘に可動パーツを採用、抜刀アクションを表現できる。",
-			"■刀身にクリアパーツを重ね、必殺技「絶刀・燬灼龍穿」を再現。",
-			"■ダークマスクが付属。"
+			"• 肘に可動パーツを採用、抜刀アクションを表現できる。",
+			"• 刀身にクリアパーツを重ね、必殺技「絶刀・燬灼龍穿」を再現。",
+			"• ダークマスクが付属。"
 		],
 		"en": [
-			"From \"SD Gundam World Heroes \", \" Nobunaga Gundam Epyon\" appears in a mysterious different color version!",
+			"From \"SD Gundam World Heroes\", \"Nobunaga Gundam Epyon\" appears in a mysterious different color version!",
 			"• Movable parts are used on the elbows, allowing you to express the action of drawing a sword.",
 			"• Clear parts are layered on the blade to reproduce the special move \"Zetsutou - Sakuro Ryukaku\".",
 			"• Comes with dark mask."
 		]
 	},
-	"accessories": {
-		"ja": ["刀(へし切長谷部)×1", "クリアパーツ(仮面/ヒートロッド)×1", "ホイルシール×1"],
-		"en": ["Sword (Heshikiri Hasebe) x 1", "Clear parts (mask/heat rod) x 1", "Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "刀(へし切長谷部)",
+				"en": "Sword (Heshikiri Hasebe)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "クリアパーツ(仮面/ヒートロッド)",
+				"en": "Clear parts (mask/heat rod)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4476.jpg",
+				"src": "https://bandai-hobby.net/images/153_4476_s_qk65rmld7w3ldfbapds5vwz7c5lw.jpg",
 				"path": "/images/items/01_3525/153_4476.jpg",
 				"hash": "0c7307920dc27ff9602ae572cfa41cd1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4476.jpg",
+				"src": "https://bandai-hobby.net/images/155_4476_s_l5rrfzhsyk9193qdx3q567k4x1dp.jpg",
 				"path": "/images/items/01_3525/155_4476.jpg",
 				"hash": "9a713effed582771d938db5f8df13278"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4476.jpg",
+				"src": "https://bandai-hobby.net/images/156_4476_s_tbbd5x8wh5wraeyosjmduux2ioc3.jpg",
 				"path": "/images/items/01_3525/156_4476.jpg",
 				"hash": "952efff7fc11953cb91eb49e2753bbec"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4476.jpg",
+				"src": "https://bandai-hobby.net/images/157_4476_s_4bmti9cpn21srvslevtaqj9tfuoa.jpg",
 				"path": "/images/items/01_3525/157_4476.jpg",
 				"hash": "5a9d3c797db8058044b27f4c0846f52b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4476.jpg",
+				"src": "https://bandai-hobby.net/images/158_4476_s_bba56hwpv7m3e3imdzp21urfy4kt.jpg",
 				"path": "/images/items/01_3525/158_4476.jpg",
 				"hash": "310372e30b17424d7749e77e394a0fa6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4476.jpg",
+				"src": "https://bandai-hobby.net/images/159_4476_s_e68hv2l8yre1h0vxfa5fsdm3suzd.jpg",
 				"path": "/images/items/01_3525/159_4476.jpg",
 				"hash": "b853b358010d1066623fc032dec0db14"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3525/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3525/"
 }

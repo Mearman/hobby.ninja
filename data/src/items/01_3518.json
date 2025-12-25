@@ -2,9 +2,52 @@
 	"id": "01_3518",
 	"type": "item",
 	"name": {
-		"ja": "SDW HEROES アルセーヌガンダム X",
-		"en": "SDW HEROES Arsene Gundam X"
+		"ja": "SDW HEROES アルセーヌガンダムX",
+		"en": "SDW HEROES Arsene GundamX"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		},
+		{
+			"id": "01_4634",
+			"url": "https://bandai-hobby.net/item/01_4634/",
+			"ja": "SDW HEROES クリアカラーセットIII"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -21,50 +64,69 @@
 	"description": {
 		"ja": [
 			"『SDガンダムワールド ヒーローズ』より、怪盗モチーフの新キャラクターが参戦！",
-			"■各種武装は背中やマントの内側に収納可能。"
+			"• 各種武装は背中やマントの内側に収納可能。"
 		],
 		"en": [
-			"A new character with a phantom thief motif joins the battle from \"SD Gundam World Heroes\"!",
+			"A new character with a phantom thief motif joins the battle from “SD Gundam World Heroes”!",
 			"• Various weapons can be stored on the back or inside the cloak."
 		]
 	},
-	"accessories": {
-		"ja": ["Gコントローラー×1", "アタッチメントパーツ×4種", "ホイルシール×1"],
-		"en": ["G controller x 1", "Attachment parts x 4 types", "Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "Gコントローラー",
+				"en": "G controller"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アタッチメントパーツ",
+				"en": "attachment parts"
+			},
+			"count": 4,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4469.jpg",
+				"src": "https://bandai-hobby.net/images/153_4469_s_z3uiwnnm4w2meb4u63u4jdx47dhc.jpg",
 				"path": "/images/items/01_3518/153_4469.jpg",
 				"hash": "a92d207df4dd137b19d86f7aa387c740"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4469.jpg",
+				"src": "https://bandai-hobby.net/images/155_4469_s_g04n0ebx4eu45f5rdcxcp5due67t.jpg",
 				"path": "/images/items/01_3518/155_4469.jpg",
 				"hash": "c5ed3d1364b425eec99b790935de751b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4469.jpg",
+				"src": "https://bandai-hobby.net/images/156_4469_s_7zmfz39775ja80pdhd8p14ddf4eb.jpg",
 				"path": "/images/items/01_3518/156_4469.jpg",
 				"hash": "e72b11b05ffc316dc5955fce8ce36aac"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4469.jpg",
+				"src": "https://bandai-hobby.net/images/157_4469_s_2zl2sno2l1rc72vc5kgs942s05a6.jpg",
 				"path": "/images/items/01_3518/157_4469.jpg",
 				"hash": "3e014440d345c620f21f3ab2384eda77"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4469.jpg",
+				"src": "https://bandai-hobby.net/images/158_4469_s_bzxcun3sohi9shenqlh23cryntez.jpg",
 				"path": "/images/items/01_3518/158_4469.jpg",
 				"hash": "638db20c639ca494899edaff88d7bdd3"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3518/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3518/"
 }

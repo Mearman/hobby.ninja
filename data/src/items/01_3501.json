@@ -5,6 +5,35 @@
 		"ja": "ガンダムデカールNo.122 HG 1/144 機動戦士ガンダム 閃光のハサウェイ汎用1",
 		"en": "Gundam Decal No.122 HG 1/144 Mobile Suit Gundam Flash Hathaway General Purpose 1"
 	},
+	"brands": [
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "hathaway",
+			"url": "https://bandai-hobby.net/series/hathaway/",
+			"ja": "機動戦士ガンダム 閃光のハサウェイ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,39 +47,39 @@
 		"day": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"約3年ぶりの「ガンダムデカール」新ラインアップ！1/144スケールに使用できる汎用性の高い水転写式デカールが登場！",
-			"■HG 1/144『機動戦士ガンダム 閃光のハサウェイ』汎用。"
+			"• HG 1/144『機動戦士ガンダム 閃光のハサウェイ』汎用。"
 		],
 		"en": [
 			"New lineup of \"Gundam decals\" for the first time in about 3 years! Introducing highly versatile water transfer decals that can be used on 1/144 Scale!",
 			"• HG 1/144 \"Mobile Suit Gundam Flash Hathaway\" general purpose."
 		]
 	},
-	"accessories": {
-		"ja": ["水転写式デカール×1"],
-		"en": ["Water transfer decal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4453.jpg",
+				"src": "https://bandai-hobby.net/images/153_4453_s_88kwqtyqn6rcebxueomdb3wat4y7.jpg",
 				"path": "/images/items/01_3501/153_4453.jpg",
 				"hash": "e9067b6a26893ae3f7dec30c0897e4fc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4453.jpg",
+				"src": "https://bandai-hobby.net/images/155_4453_s_oxjlehl2tm413qarulgjz06v5c1z.jpg",
 				"path": "/images/items/01_3501/155_4453.jpg",
 				"hash": "72b227b44f2e90e0d1c55ca279ab090b"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3501/",
-	"brandIds": ["gundam_decal"],
-	"seriesIds": ["hathaway"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4971"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3501/"
 }

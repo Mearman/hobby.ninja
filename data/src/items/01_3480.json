@@ -5,6 +5,49 @@
 		"ja": "HGAB レプラカーン",
 		"en": "HGAB Leprechaun"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dunbine",
+			"url": "https://bandai-hobby.net/series/dunbine/",
+			"ja": "聖戦士ダンバイン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000203131",
+			"url": "https://p-bandai.jp/item/item-1000203131/",
+			"ja": "HG 1/72 トカマクダンバイン"
+		},
+		{
+			"id": "item-1000211055",
+			"url": "https://p-bandai.jp/item/item-1000211055/",
+			"ja": "ＨＧ 1/72 サーバイン [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000199895",
+			"url": "https://p-bandai.jp/item/item-1000199895/",
+			"ja": "ＨＧ 1/72 ビランビー"
+		},
+		{
+			"id": "item-1000194225",
+			"url": "https://p-bandai.jp/item/item-1000194225/",
+			"ja": "HG 1/72 ダンバイン"
+		}
+	],
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -19,8 +62,12 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": ["「ＨＧ レプラカーン」が登場！"],
-		"en": ["\"HG Leprechaun\" is here!"]
+		"ja": [
+			"「ＨＧ レプラカーン」が登場！"
+		],
+		"en": [
+			"\"HG Leprechaun\" is here!"
+		]
 	},
 	"images": {
 		"product": [
@@ -28,21 +75,6 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000155261_1.jpg",
 				"path": "/images/items/01_3480/1000155261_1.jpg",
 				"hash": "4b5ce39073a9a6135dcab6efa7c2dbf5"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000155261_10.jpg",
-				"path": "/images/items/01_3480/1000155261_10.jpg",
-				"hash": "5c52a0f9192b1d54c5e6878c2e381925"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000155261_11.jpg",
-				"path": "/images/items/01_3480/1000155261_11.jpg",
-				"hash": "adcc0e42fd3c3b800b3c239f66ca1fa8"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000155261_12.jpg",
-				"path": "/images/items/01_3480/1000155261_12.jpg",
-				"hash": "c298bafa1002a48d6ef639d2a66be717"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000155261_2.jpg",
@@ -83,13 +115,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000155261_9.jpg",
 				"path": "/images/items/01_3480/1000155261_9.jpg",
 				"hash": "6b05ea9fe152c713797e07f9f73555ba"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000155261_10.jpg",
+				"path": "/images/items/01_3480/1000155261_10.jpg",
+				"hash": "5c52a0f9192b1d54c5e6878c2e381925"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000155261_11.jpg",
+				"path": "/images/items/01_3480/1000155261_11.jpg",
+				"hash": "adcc0e42fd3c3b800b3c239f66ca1fa8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000155261_12.jpg",
+				"path": "/images/items/01_3480/1000155261_12.jpg",
+				"hash": "c298bafa1002a48d6ef639d2a66be717"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3480/",
-	"brandIds": ["hg"],
-	"seriesIds": ["dunbine"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["item-1000203131", "item-1000211055", "item-1000199895", "item-1000194225"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3480/"
 }

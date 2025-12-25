@@ -2,9 +2,52 @@
 	"id": "01_3517",
 	"type": "item",
 	"name": {
-		"ja": "SDW HEROES 悟空インパルスガンダム DXセット",
-		"en": "SDW HEROES Goku Impulse Gundam DX Set"
+		"ja": "SDW HEROES 悟空インパルスガンダムDXセット",
+		"en": "SDW HEROES Goku Impulse GundamDX Set"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		},
+		{
+			"id": "01_4634",
+			"url": "https://bandai-hobby.net/item/01_4634/",
+			"ja": "SDW HEROES クリアカラーセットIII"
+		}
+	],
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -21,75 +64,94 @@
 	"description": {
 		"ja": [
 			"『SDガンダムワールド ヒーローズ』より、「悟空インパルスガンダム」に沙悟浄シルエットと猪八戒シルエットが再現できるアーマーを追加したDXセットが登場！",
-			"■各形態への組み替えのほか、各パーツを組み合わせたさらなる形態も再現可能。"
+			"• 各形態への組み替えのほか、各パーツを組み合わせたさらなる形態も再現可能。"
 		],
 		"en": [
-			"From \"SD Gundam World Heroes \" comes a DX set that adds armor that can reproduce the Sa Gojyo silhouette and Ino Hakkai silhouette to \" Goku Impulse Gundam\"!",
+			"From \"SD Gundam World Heroes\" comes a DX set that includes \"Goku Impulse Gundam\" with an armor that allows you to reproduce the Sa Gojo silhouette and Ino Hakkai silhouette!",
 			"• In addition to recombining into various forms, it is also possible to reproduce further forms by combining each part."
 		]
 	},
-	"accessories": {
-		"ja": ["如意棒×1", "悟空・猪八戒・沙悟浄 各再現パーツ×1式", "ホイルシール×1"],
-		"en": ["Nyoi stick x1", "Goku, Inohakkai, Sagojo each reproduction parts x 1 set", "Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "如意棒",
+				"en": "Nyoi stick"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "悟空・猪八戒・沙悟浄 各再現パーツ",
+				"en": "Goku, Inohakkai, Sagojo each reproduction parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4468.jpg",
+				"src": "https://bandai-hobby.net/images/153_4468_s_yu6xg3wb1w3zsk9ebpc8u7jt3nv1.jpg",
 				"path": "/images/items/01_3517/153_4468.jpg",
 				"hash": "083831b213c63b5f8bc5216e7567c9c4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4468.jpg",
+				"src": "https://bandai-hobby.net/images/155_4468_s_dv5p1clywz1bhfk16a1xyobqctnz.jpg",
 				"path": "/images/items/01_3517/155_4468.jpg",
 				"hash": "c4d34693cec9c07142d513f1fe2a181b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4468.jpg",
+				"src": "https://bandai-hobby.net/images/156_4468_s_vdmwsauwihxncvmxxjrvwtqulmyy.jpg",
 				"path": "/images/items/01_3517/156_4468.jpg",
 				"hash": "9af7e0511c45bbaccbd5f211780c793d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4468.jpg",
+				"src": "https://bandai-hobby.net/images/157_4468_s_q3h24dx2j6oj37ffqzq55393r348.jpg",
 				"path": "/images/items/01_3517/157_4468.jpg",
 				"hash": "1d2a2e448a23fd40206acfc8639f5bcd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4468.jpg",
+				"src": "https://bandai-hobby.net/images/158_4468_s_iiftp4meequ2tclyh8br36258hod.jpg",
 				"path": "/images/items/01_3517/158_4468.jpg",
 				"hash": "57ef0de5c458ff8db9fe16778f2628e7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4468.jpg",
+				"src": "https://bandai-hobby.net/images/159_4468_s_iwd5abj4d708auuz8l6zxpe15lxs.jpg",
 				"path": "/images/items/01_3517/159_4468.jpg",
 				"hash": "b8a412b9294233e5b9ef2b59ee0be912"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4468.jpg",
+				"src": "https://bandai-hobby.net/images/189_4468_s_bkn5ea74uhjl5i2r66ug0ex4eky9.jpg",
 				"path": "/images/items/01_3517/189_4468.jpg",
 				"hash": "7ef16948621f3462bf43976b1691dee6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4468.jpg",
+				"src": "https://bandai-hobby.net/images/190_4468_s_kygzzinwqzjy30kh1p5ud2hiobx2.jpg",
 				"path": "/images/items/01_3517/190_4468.jpg",
 				"hash": "324606a57711d45821d06662ce9cbc7e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4468.jpg",
+				"src": "https://bandai-hobby.net/images/191_4468_s_yaarq6xpjlvil6qe28ajduxixv90.jpg",
 				"path": "/images/items/01_3517/191_4468.jpg",
 				"hash": "dc6ae715e203e75a8bc967798e6543ad"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4468.jpg",
+				"src": "https://bandai-hobby.net/images/192_4468_s_4afxwcu1amifa1nji0mltat8briu.jpg",
 				"path": "/images/items/01_3517/192_4468.jpg",
 				"hash": "327d08b12b3bf6c994b46fdd898da9ff"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3517/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3517/"
 }

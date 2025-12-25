@@ -5,6 +5,43 @@
 		"ja": "ポケモンプラモコレクション 47 セレクトシリーズ ゲッコウガ",
 		"en": "Pokemon Plastic Model Collection 47 Select Series Gekkouga"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5984",
+			"url": "https://bandai-hobby.net/item/01_5984/",
+			"ja": "ポケモンプラモコレクション 60 セレクトシリーズ コライドン"
+		},
+		{
+			"id": "01_5958",
+			"url": "https://bandai-hobby.net/item/01_5958/",
+			"ja": "ポケモンプラモコレクション 59 セレクトシリーズ ミライドン"
+		},
+		{
+			"id": "01_5947",
+			"url": "https://bandai-hobby.net/item/01_5947/",
+			"ja": "ポケモンプラモコレクション クイック!! 23 ジラーチ"
+		},
+		{
+			"id": "01_5568",
+			"url": "https://bandai-hobby.net/item/01_5568/",
+			"ja": "ポケモンプラモコレクション 58 セレクトシリーズ グレンアルマ"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -26,37 +63,56 @@
 			"• 立ちポーズとは別のポーズ用の足パーツも付属。"
 		],
 		"en": [
-			"\"Gekkouga \" is now available in the Pokemon plastic model collection that combines \" easy-to-assemble parts structure \" and \" color-coded & movable\" features!",
+			"\"Gekkouga\" is now available in the Pokemon plastic model collection that combines \"easy-to-assemble parts structure\" and \"color-coded & movable\" features!",
 			"• Various poses are possible with movable limbs.",
 			"• Two types of clear molded move effect parts are included.",
 			"• Leg parts for poses other than the standing pose are also included."
 		]
 	},
-	"accessories": {
-		"ja": ["技エフェクト×2種", "ポーズ用脚パーツ×1式", "台座×1", "ホイルシール×1"],
-		"en": ["Technique effects x 2 types", "Leg parts for pose x 1 set", "Pedestal x 1", "Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "技エフェクト",
+				"en": "technique effect"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ポーズ用脚パーツ",
+				"en": "Leg parts for poses"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161299_1.jpg",
 				"path": "/images/items/01_3512/1000161299_1.jpg",
 				"hash": "2b4f289c88596ea27be586c3d3855a78"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161299_10.jpg",
-				"path": "/images/items/01_3512/1000161299_10.jpg",
-				"hash": "928b76cbf82ef9962b8a00dc5176fdac"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161299_11.jpg",
-				"path": "/images/items/01_3512/1000161299_11.jpg",
-				"hash": "f65eaed5b3183acf06777e99167feb60"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161299_12.jpg",
-				"path": "/images/items/01_3512/1000161299_12.jpg",
-				"hash": "09cd44ebd61b0043b247a56aafd0f8a7"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161299_2.jpg",
@@ -97,13 +153,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161299_9.jpg",
 				"path": "/images/items/01_3512/1000161299_9.jpg",
 				"hash": "47253e784aeb0308c7c3f13870d179a0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161299_10.jpg",
+				"path": "/images/items/01_3512/1000161299_10.jpg",
+				"hash": "928b76cbf82ef9962b8a00dc5176fdac"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161299_11.jpg",
+				"path": "/images/items/01_3512/1000161299_11.jpg",
+				"hash": "f65eaed5b3183acf06777e99167feb60"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161299_12.jpg",
+				"path": "/images/items/01_3512/1000161299_12.jpg",
+				"hash": "09cd44ebd61b0043b247a56aafd0f8a7"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3512/",
-	"brandIds": [],
-	"seriesIds": ["pokemon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3512/"
 }

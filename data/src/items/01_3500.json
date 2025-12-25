@@ -2,9 +2,37 @@
 	"id": "01_3500",
 	"type": "item",
 	"name": {
-		"ja": "ガンダムデカールNo.121 機動戦士ガンダム AGE汎用1",
-		"en": "Gundam Decal No.121 Mobile Suit Gundam AGE General Purpose 1"
+		"ja": "ガンダムデカールNo.121 機動戦士ガンダムAGE汎用1",
+		"en": "Gundam Decal No.121 Mobile Suit GundamAGE General Purpose 1"
 	},
+	"brands": [
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "age",
+			"url": "https://bandai-hobby.net/series/age/",
+			"ja": "機動戦士ガンダムAGE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4197",
+			"url": "https://bandai-hobby.net/item/01_4197/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 アザーセンチュリーズエンブレムセット1"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -21,37 +49,38 @@
 	"description": {
 		"ja": [
 			"約3年ぶりの「ガンダムデカール」新ラインアップ！1/144スケールに使用できる汎用性の高い水転写式デカールが登場！",
-			"■HG『機動戦士ガンダムAGE』汎用。",
-			"■新規デザインのデカール入り。"
+			"• HG『機動戦士ガンダムAGE』汎用。",
+			"• 新規デザインのデカール入り。"
 		],
 		"en": [
 			"New lineup of \"Gundam decals\" for the first time in about 3 years! Introducing highly versatile water transfer decals that can be used on 1/144 Scale!",
-			"• HG \"Mobile Suit Gundam AGE\" general purpose.",
+			"• HG “Mobile Suit GundamAGE” general purpose.",
 			"• Includes newly designed decals."
 		]
 	},
-	"accessories": {
-		"ja": ["水転写式デカール×1"],
-		"en": ["Water transfer decal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4452.jpg",
+				"src": "https://bandai-hobby.net/images/153_4452_s_l6f1lfyhtvtv73w3oa674ydmzx88.jpg",
 				"path": "/images/items/01_3500/153_4452.jpg",
 				"hash": "960a11abad5d3c62f1627f62e6c63e52"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4452.jpg",
+				"src": "https://bandai-hobby.net/images/155_4452_s_pf4txk0f7uqprzsjd9fv4q8o62ox.jpg",
 				"path": "/images/items/01_3500/155_4452.jpg",
 				"hash": "426eee930f9481e0c96d7a03d9f29920"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3500/",
-	"brandIds": ["gundam_decal"],
-	"seriesIds": ["age"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4197"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3500/"
 }

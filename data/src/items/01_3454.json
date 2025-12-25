@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ガンダムベース限定 ザクウォーリア(ライブコンサート Ver.)",
 		"en": "MG 1/100 Gundam Base Limited Zaku Warrior (Live Concert Ver.)"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5421",
+			"url": "https://bandai-hobby.net/item/01_5421/",
+			"ja": "MG 1/100 ガンダムベース限定 デスティニーガンダム (ハイネ専用機)"
+		},
+		{
+			"id": "item-1000183862",
+			"url": "https://p-bandai.jp/item/item-1000183862/",
+			"ja": "ＭＧ 1/100 ガナーウィザード／スラッシュウィザード／ブレイズウィザードセット"
+		},
+		{
+			"id": "01_3712",
+			"url": "https://bandai-hobby.net/item/01_3712/",
+			"ja": "MG 1/100 ガナーザクウォーリア(ルナマリア・ホーク専用機)[クリアカラー]"
+		},
+		{
+			"id": "item-1000155441",
+			"url": "https://p-bandai.jp/item/item-1000155441/",
+			"ja": "ＭＧ 1/100 ブレイズザクファントム（レイ・ザ・バレル専用機）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4620,
 		"currency": "JPY",
@@ -18,17 +62,16 @@
 		"day": 12
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED DESTINY』より、ミーア・キャンベルのライブコンサート時に登場したザクウォーリアを、劇中を想起させるカラーで再現！",
+			"『機動戦士ガンダムSEED DESTINY』より、ミーア・キャンベルのライブコンサート時に登場したザクウォーリアを、劇中を想起させるカラーで再現！",
 			"• 新規造形の1/100 ミーア・キャンベルが付属！",
 			"• ライブコンサートVer.専用の水転写デカールが付属！ハロやハート型をあしらった、可愛らしいデザイン！",
 			"• 動力パイプはインサート成形を採用し、組み立て易さが格段にアップ！",
 			"• パイプは軟質の樹脂により脚の動きに合わせて可動。一体成形で組み立てる工程が無いパーツとなっている。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam SEED DESTINY\", the Zaku Warrior that appeared during Meer Campbell's live concert is reproduced in colors reminiscent of the movie!",
+			"From \"Mobile Suit GundamSEED DESTINY\", the Zaku Warrior that appeared during Meer Campbell's live concert is reproduced in colors reminiscent of the movie!",
 			"• Newly modeled 1/100 Meer Campbell is included!",
 			"• A water slide decal exclusively for the live concert version is included! A cute design with halo and heart shapes!",
 			"• The power pipe uses insert molding, making assembly much easier!",
@@ -80,13 +123,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3454/",
-	"brandIds": ["mg"],
-	"seriesIds": ["seed-d"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5421", "item-1000183862", "01_3712", "item-1000155441"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3454/"
 }
