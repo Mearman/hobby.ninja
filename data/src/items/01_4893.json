@@ -2,9 +2,37 @@
 	"id": "01_4893",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダムクロスシルエット ユニコーンガンダム 2号機バンシィ（デストロイモード）＆バンシィ・ノルン パーツセット",
-		"en": "SD GUNDAM CROSS SILHOUETTE UNICORN GUNDAM 02 BANSHEE (DESTROY MODE)&BANSHEE NORN PARTS SET"
+		"ja": "SDガンダムクロスシルエット ユニコーンガンダム2号機バンシィ（デストロイモード）＆バンシィ・ノルン パーツセット",
+		"en": "SDGundam Cross Silhouette Unicorn Gundam Unit 2 Banshee (Destroy Mode) & Banshee Norn Parts Set"
 	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2374",
+			"url": "https://bandai-hobby.net/item/01_2374/",
+			"ja": "SDガンダム クロスシルエット ユニコーンガンダム（デストロイモード）"
+		}
+	],
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -21,71 +49,90 @@
 	"description": {
 		"ja": [
 			"「ユニコーンガンダム２号機バンシィ」がSDガンダムクロスシルエットシリーズにスペシャルセットでラインアップ！",
-			"■SD／CSフレーム同梱。組み替えによって、頭身に加えバンシィ／バンシィ・ノルンを再現できる豊富な武装が付属。",
-			"■アンテナパーツに加え、アームド・アーマー３種、リボルビング・ランチャーは新規造形。",
-			"■アームド・アーマーBS用の3Dメタリックシールが付属。",
-			"■瞳の表情シールは２種付属。"
+			"• SD／CSフレーム同梱。組み替えによって、頭身に加えバンシィ／バンシィ・ノルンを再現できる豊富な武装が付属。",
+			"• アンテナパーツに加え、アームド・アーマー３種、リボルビング・ランチャーは新規造形。",
+			"• アームド・アーマーBS用の3Dメタリックシールが付属。",
+			"• 瞳の表情シールは２種付属。"
 		],
 		"en": [
-			"SD/CS frame included. By recombining, in addition to the head and body, a wealth of armaments that can reproduce Banshee/Banshee Norn are included.",
-			"In addition to antenna parts, three types of armored armor and a revolving launcher are newly modeled.",
-			"Comes with a 3D metallic seal for Armed Armor BS.",
-			"Two types of eye expression stickers are included.[Accessories]",
-			"Armed Armor BS×1",
-			"Armed Armor VN×1",
-			"Armed Armor DE×1",
-			"Armed Armor XC×1",
-			"Beam Magnum ×1",
-			"Revolving Launcher ×1",
-			"Beam Saber ×2",
-			"3D Metallic Seal×1"
+			"\"Unicorn Gundam 02 Banshee\" is now available as a special set in the SDGundam Cross Silhouette series!",
+			"• SD/CS frame included. In addition to the head and body, a variety of weapons are included that can be rearranged to recreate the Banshee/Banshee Norn.",
+			"• In addition to antenna parts, 3 types of armed armor and revolving launcher are new models.",
+			"• Includes 3D metallic seal for Armed Armor BS.",
+			"• Two types of eye expression seals are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"アームド・アーマーBS×1",
-			"アームド・アーマーVN×1",
-			"アームド・アーマーDE×1",
-			"アームド・アーマーXC×1",
-			"ビーム・マグナム×1",
-			"リボルビング・ランチャー×1",
-			"ビーム・サーベル×2",
-			"シール×1",
-			"３Ｄメタリックシール×1"
-		],
-		"en": [
-			"Armed Armor BS×1",
-			"Armed Armor VN×1",
-			"Armed Armor DE×1",
-			"Armed Armor XC×1",
-			"Beam Magnum x 1",
-			"Revolving launcher x 1",
-			"Beam saber x2",
-			"Seal×1",
-			"3D metallic seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "アームド・アーマーBS",
+				"en": "Armed Armor BS"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アームド・アーマーVN",
+				"en": "Armed Armor VN"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アームド・アーマーDE",
+				"en": "Armed Armor DE"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アームド・アーマーXC",
+				"en": "Armed Armor XC"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・マグナム",
+				"en": "beam magnum"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リボルビング・ランチャー",
+				"en": "revolving launcher"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "３Ｄメタリックシール",
+				"en": "3D Metallic Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195248_1.jpg",
 				"path": "/images/items/01_4893/1000195248_1.jpg",
 				"hash": "4de65e869d9a0cbe3bf2b5482a46f440"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195248_10.jpg",
-				"path": "/images/items/01_4893/1000195248_10.jpg",
-				"hash": "8eb7af9004f5361ae06249d1c2af96a1"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195248_11.jpg",
-				"path": "/images/items/01_4893/1000195248_11.jpg",
-				"hash": "dec22e3ecfa0a027e53fe933cffc09a9"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195248_12.jpg",
-				"path": "/images/items/01_4893/1000195248_12.jpg",
-				"hash": "fcb5a5d81523acad288fbc331475d078"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195248_2.jpg",
@@ -126,13 +173,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195248_9.jpg",
 				"path": "/images/items/01_4893/1000195248_9.jpg",
 				"hash": "7e36464c6e61feac1c403dfdb60fe7c2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195248_10.jpg",
+				"path": "/images/items/01_4893/1000195248_10.jpg",
+				"hash": "8eb7af9004f5361ae06249d1c2af96a1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195248_11.jpg",
+				"path": "/images/items/01_4893/1000195248_11.jpg",
+				"hash": "dec22e3ecfa0a027e53fe933cffc09a9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195248_12.jpg",
+				"path": "/images/items/01_4893/1000195248_12.jpg",
+				"hash": "fcb5a5d81523acad288fbc331475d078"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4893/",
-	"brandIds": ["sdcs"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_2374"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4893/"
 }

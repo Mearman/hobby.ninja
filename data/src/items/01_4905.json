@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "プラノサウルス スピノサウルス",
-		"en": "PLANNOSAURUS Spinosaurus"
+		"en": "planosaurus spinosaurus"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "plannosaurus",
+			"url": "https://bandai-hobby.net/series/plannosaurus/",
+			"ja": "プラノサウルス"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5501",
+			"url": "https://bandai-hobby.net/item/01_5501/",
+			"ja": "プラノサウルス テリジノサウルス"
+		},
+		{
+			"id": "01_5389",
+			"url": "https://bandai-hobby.net/item/01_5389/",
+			"ja": "プラノサウルス ブラキオサウルス"
+		},
+		{
+			"id": "01_5390",
+			"url": "https://bandai-hobby.net/item/01_5390/",
+			"ja": "プラノサウルス 陸海空恐竜セット"
+		},
+		{
+			"id": "01_5248",
+			"url": "https://bandai-hobby.net/item/01_5248/",
+			"ja": "プラノサウルス パラサウロロフス"
+		}
+	],
 	"price": {
 		"amount": 1595,
 		"currency": "JPY",
@@ -31,44 +68,45 @@
 			"• 口の開閉や舌、前肢、後肢、首など各所が可動し、好みのポージングでディスプレイが可能。"
 		],
 		"en": [
-			"You can learn from the internal structure of dinosaurs in \"Skeletal Build\".",
-			"The \"Dinosaur Build\" restores the appearance of Spinosaurus with specifications unique to plastic models that attach outer skin parts from the top of the skeleton.",
-			"It is easy to assemble because there is no need for tools such as nippers or adhesives.",
-			"By selecting parts, it is possible to reproduce the state of quadruped walking based on the latest scientific theory.",
-			"By using a pedestal, it is possible to display it as it swims.",
-			"It also expresses fine details such as the characteristic thickness of the sail on the back and the sharp key of the forelimbs.",
-			"The position of the eye socket, which is thought to have been useful for exploring the state of the water, and the abdominal bone, which protects the organ from water pressure, are also firmly reproduced.",
-			"The mouth can be opened and closed, the tongue, forelimbs, hind limbs, neck, and other parts can be moved, and the display can be displayed in your favorite pose. [Accessories]",
-			"Front Limb Parts (for quadruped walking) x 1 set",
-			"Sticker x 1",
-			"Pedestal ×1"
+			"The largest carnivorous dinosaur in history, Spinosaurus, is now available from Planosaurus, a brand that allows you to assemble and get to know dinosaurs by yourself while checking each dinosaur's skeleton and skin one by one!",
+			"• \"Skeleton Build\" allows you to learn about the internal structure of dinosaurs.",
+			"• \"Dinosaur Build\" allows you to restore the appearance of Spinosaurus by attaching the skin parts to the top of the skeleton, which is unique to plastic models.",
+			"• Easy to assemble as there is no need for tools such as nippers or adhesives.",
+			"• By selecting parts, it is possible to reproduce a quadrupedal walking state based on the latest theory.",
+			"• By using a pedestal, it is possible to display it as it swims.",
+			"• Fine details such as the characteristic thickness of the sail on the back and the sharp claws on the forelimbs are also expressed.",
+			"• The position of the eye sockets, which are thought to have been useful for exploring conditions above water, and the abdominal bone that protects organs from water pressure are also faithfully recreated.",
+			"• Various parts such as opening and closing the mouth, tongue, front legs, hind legs, and neck can be moved, allowing you to display it in your favorite pose."
 		]
 	},
-	"accessories": {
-		"ja": ["前肢パーツ（四足歩行用）×１式", "シール×1", "台座×1"],
-		"en": ["Forelimb parts (for quadrupedal walking) x 1 set", "Seal×1", "Pedestal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "前肢パーツ（四足歩行用）×１式",
+				"en": "Forelimb parts (for quadrupedal walking) x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195256_1.jpg",
 				"path": "/images/items/01_4905/1000195256_1.jpg",
 				"hash": "b9ae800590f229721250b08a6b6aacc6"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195256_10.jpg",
-				"path": "/images/items/01_4905/1000195256_10.jpg",
-				"hash": "552113bbc55e36a8c98bd46d8c96d619"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195256_11.jpg",
-				"path": "/images/items/01_4905/1000195256_11.jpg",
-				"hash": "e260e77bebbfc38801ba4e26a518487c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195256_12.jpg",
-				"path": "/images/items/01_4905/1000195256_12.jpg",
-				"hash": "64c14cdde7a76248535f7befa8da0305"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195256_2.jpg",
@@ -109,13 +147,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195256_9.jpg",
 				"path": "/images/items/01_4905/1000195256_9.jpg",
 				"hash": "6e9a81fc98f6e1405ddb8fc00378fdd0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195256_10.jpg",
+				"path": "/images/items/01_4905/1000195256_10.jpg",
+				"hash": "552113bbc55e36a8c98bd46d8c96d619"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195256_11.jpg",
+				"path": "/images/items/01_4905/1000195256_11.jpg",
+				"hash": "e260e77bebbfc38801ba4e26a518487c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195256_12.jpg",
+				"path": "/images/items/01_4905/1000195256_12.jpg",
+				"hash": "64c14cdde7a76248535f7befa8da0305"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4905/",
-	"brandIds": [],
-	"seriesIds": ["plannosaurus"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5501", "01_5389", "01_5390", "01_5248"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4905/"
 }

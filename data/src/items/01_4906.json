@@ -5,6 +5,54 @@
 		"ja": "FULL MECHANICS 1/100 フォビドゥンガンダム",
 		"en": "FULL MECHANICS 1/100 Forbidden Gundam"
 	},
+	"brands": [
+		{
+			"id": "fullmechanics",
+			"url": "https://bandai-hobby.net/brand/fullmechanics/",
+			"ja": "FULL MECHANICS[フルメカニクス]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5209",
+			"url": "https://bandai-hobby.net/item/01_5209/",
+			"ja": "FULL MECHANICS 1/100 カラミティガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_4096",
+			"url": "https://bandai-hobby.net/item/01_4096/",
+			"ja": "FULL MECHANICS 1/100 レイダーガンダム"
+		},
+		{
+			"id": "01_3573",
+			"url": "https://bandai-hobby.net/item/01_3573/",
+			"ja": "フルメカニクス 1/100 ガンダムベース限定 ZGMF-X10A フリーダムガンダム Ver.GCP"
+		},
+		{
+			"id": "01_3426",
+			"url": "https://bandai-hobby.net/item/01_3426/",
+			"ja": "FULL MECHANICS 1/100 カラミティガンダム"
+		}
+	],
+	"manual": {
+		"id": "1096",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1096"
+	},
+	"scale": "1/100",
 	"price": {
 		"amount": 6380,
 		"currency": "JPY",
@@ -18,22 +66,21 @@
 		"day": 11
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダムSEED』より、変形機構を搭載したフォビドゥンガンダムが最新のアレンジと構造で1/100フルメカニクスより立体化！",
 			"遂に地球連合軍のブーステッドマンが駆る3機体がフルメカニクスに集結！",
-			"■メカニカルな意匠を追求し、高密度ディテールと組み立てやすさを両立。",
-			"■排気口内部や装甲裏のモールドに至るまで、密度感のあるメカニカルな造形。",
-			"■重刎首鎌（じゅうふんしゅれん）「ニーズヘグ」の刃パーツは2種の表面仕上げにより質感の違いを表現。",
-			"■バックパックから繋がるエネルギーケーブルは付属のワニスチューブにて再現。",
-			"■エネルギー偏向装甲「ゲシュマイディッヒ・パンツァー」は、アーム部がフレキシブルに可動し、シールドが展開。",
-			"■バックパックの接続部には複数の軸を設け、動きのある角度に調整が可能。",
-			"■胸部インテークブロックの回転に連動して襟元が可動。可動に合わせて頭部が沈み込む構造で、バックパックが干渉することなく移動し、最小限のモーションで高速強襲形態へ変形。",
-			"■88mmレールガン「エクツァーン」の展開はもちろん、フレスベルグの弾道を変化させる磁場発生器の回転も可能。繊細な演出で説得力のあるアクションシーンを再現。"
+			"• メカニカルな意匠を追求し、高密度ディテールと組み立てやすさを両立。",
+			"• 排気口内部や装甲裏のモールドに至るまで、密度感のあるメカニカルな造形。",
+			"• 重刎首鎌（じゅうふんしゅれん）「ニーズヘグ」の刃パーツは2種の表面仕上げにより質感の違いを表現。",
+			"• バックパックから繋がるエネルギーケーブルは付属のワニスチューブにて再現。",
+			"• エネルギー偏向装甲「ゲシュマイディッヒ・パンツァー」は、アーム部がフレキシブルに可動し、シールドが展開。",
+			"• バックパックの接続部には複数の軸を設け、動きのある角度に調整が可能。",
+			"• 胸部インテークブロックの回転に連動して襟元が可動。可動に合わせて頭部が沈み込む構造で、バックパックが干渉することなく移動し、最小限のモーションで高速強襲形態へ変形。",
+			"• 88mmレールガン「エクツァーン」の展開はもちろん、フレスベルグの弾道を変化させる磁場発生器の回転も可能。繊細な演出で説得力のあるアクションシーンを再現。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam SEED\", Forbidden Gundam equipped with a deformation mechanism has been made into a three-dimensional version of 1/100 Full Mechanics with the latest arrangement and structure!",
+			"From \"Mobile Suit Gundam SEED\", Forbidden Gundam equipped with a deformation mechanism is now three-dimensional from 1/100 full mechanics with the latest arrangement and structure!",
 			"Finally, the three machines driven by the Boosted Man of the Earth Allied Forces are assembled in full mechanics!",
 			"• Pursuing mechanical design, achieving both high-density detail and ease of assembly.",
 			"• Mechanical modeling with a sense of density, from the inside of the exhaust port to the molding behind the armor.",
@@ -45,77 +92,99 @@
 			"• In addition to deploying the 88mm railgun \"Ekzahn\", it is also possible to rotate the magnetic field generator that changes the trajectory of the Fresberg. Reproduce convincing action scenes with delicate production."
 		]
 	},
-	"accessories": {
-		"ja": ["ニーズヘグ×1", "アクションベースジョイント×1", "ワニスチューブ×2", "シール×2種"],
-		"en": ["Nidheg×1", "Action base joint x 1", "Varnish tube x 2", "Seal×2 types"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ニーズヘグ",
+				"en": "Nidshogg"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アクションベースジョイント",
+				"en": "action base joint"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ワニスチューブ",
+				"en": "varnish tube"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5782.jpg",
+				"src": "https://bandai-hobby.net/images/153_5782_s_6gm4xbn039msu1u5ezi757i6t3v5.jpg",
 				"path": "/images/items/01_4906/153_5782.jpg",
 				"hash": "ec4bfaf7f5da148c14b3d43d74bba4c9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5782.jpg",
+				"src": "https://bandai-hobby.net/images/155_5782_s_g5w5c8ynpzfwc5alo213dgfphlj4.jpg",
 				"path": "/images/items/01_4906/155_5782.jpg",
 				"hash": "3ef5799cf62f686a91c5ac62428ae5a9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5782.jpg",
+				"src": "https://bandai-hobby.net/images/156_5782_s_0h4h9dmgmx13bpkix77qpdgvq1t6.jpg",
 				"path": "/images/items/01_4906/156_5782.jpg",
 				"hash": "ce3c3240a82aa021d339732a1cba12a0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5782.jpg",
+				"src": "https://bandai-hobby.net/images/157_5782_s_9up2gw4iaj1ms2iz6ixj3b699rym.jpg",
 				"path": "/images/items/01_4906/157_5782.jpg",
 				"hash": "cbb8ec3190c7edb15ef63f39edbc795e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5782.jpg",
+				"src": "https://bandai-hobby.net/images/158_5782_s_ylo0zphx03rl82ae4z2mve7fxjo0.jpg",
 				"path": "/images/items/01_4906/158_5782.jpg",
 				"hash": "82b5b5b012e07563186bca5ca24ca3fe"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5782.jpg",
+				"src": "https://bandai-hobby.net/images/159_5782_s_z5hrs49rnci0jmeectc8aawog07m.jpg",
 				"path": "/images/items/01_4906/159_5782.jpg",
 				"hash": "7d8fe71db38a79e78eef90e88ec61fc9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5782.jpg",
+				"src": "https://bandai-hobby.net/images/189_5782_s_vz56i040qfq8oy76tg057alez3mh.jpg",
 				"path": "/images/items/01_4906/189_5782.jpg",
 				"hash": "e6589d67eed5d15913e0c9b0822e7a14"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5782.jpg",
+				"src": "https://bandai-hobby.net/images/190_5782_s_va108a3z0uz048kp15o5dro2gfy1.jpg",
 				"path": "/images/items/01_4906/190_5782.jpg",
 				"hash": "e199ff730fc14757ad5251aefdda8c6c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5782.jpg",
+				"src": "https://bandai-hobby.net/images/191_5782_s_d8nb6krux1ebjfn5nofbev25nhqv.jpg",
 				"path": "/images/items/01_4906/191_5782.jpg",
 				"hash": "4eccaf0e379865be25028050e5eda25c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5782.jpg",
+				"src": "https://bandai-hobby.net/images/192_5782_s_eykqxk07f2mgvfvuopydwre41vis.jpg",
 				"path": "/images/items/01_4906/192_5782.jpg",
 				"hash": "08dc76cf28bab4c088fa0f1c689af595"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_5782.jpg",
+				"src": "https://bandai-hobby.net/images/193_5782_s_rtq5jdhr2bddvynytva3hxx6nfoh.jpg",
 				"path": "/images/items/01_4906/193_5782.jpg",
 				"hash": "1138955cef5c9b1da1641fc2cc36da8e"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4906/",
-	"brandIds": ["fullmechanics"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5209", "01_4096", "01_3573", "01_3426"],
-	"manual": {
-		"id": "1096",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1096/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4906/"
 }

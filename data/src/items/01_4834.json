@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 RX-78-2 ガンダム Ver.ONE YEAR WAR 0079 エクストラフィニッシュバージョン",
 		"en": "MG 1/100 RX-78-2 Gundam Ver.ONE YEAR WAR 0079 Extra Finish Version"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 6809,
 		"currency": "JPY",
@@ -18,25 +62,28 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
-		"ja": ["「MG 1/100 RX-78-2 ガンダム Ver.ONE YEAR WAR 0079 エクストラフィニッシュバージョン」登場！"],
-		"en": ["\"MG 1/100 RX-78-2 Gundam Ver.ONE YEAR WAR 0079 Extra Finish Version\" is now available!"]
+		"ja": [
+			"「MG 1/100 RX-78-2 ガンダム Ver.ONE YEAR WAR 0079 エクストラフィニッシュバージョン」登場！"
+		],
+		"en": [
+			"\"MG 1/100 RX-78-2 Gundam Ver.ONE YEAR WAR 0079 Extra Finish Version\" is now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5716.jpg",
+				"src": "https://bandai-hobby.net/images/153_5716_s_ab2rdvko0nognglfe4mvbgttvsc0.jpg",
 				"path": "/images/items/01_4834/153_5716.jpg",
 				"hash": "e4d88dfc06262c23e7507c40a93a78e2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5716.jpg",
+				"src": "https://bandai-hobby.net/images/155_5716_s_xne1rgd2tl05lny0imeu157wgawl.jpg",
 				"path": "/images/items/01_4834/155_5716.jpg",
 				"hash": "a89089543228beeafe0070cda590330c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5716.jpg",
+				"src": "https://bandai-hobby.net/images/156_5716_s_n06pgttpybz1v501f54ixogec3z6.jpg",
 				"path": "/images/items/01_4834/156_5716.jpg",
 				"hash": "2042dbc762800a83c598f8a90493fb47"
 			}
@@ -44,14 +91,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4834/",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	},
 	"manual": {
 		"id": "533",
 		"url": "https://manual.bandai-hobby.net/menus/detail/533/"

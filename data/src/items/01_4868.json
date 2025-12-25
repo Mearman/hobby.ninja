@@ -5,6 +5,60 @@
 		"ja": "ＭＧ 1/100 ガンダムＦ９０用 ミッションパック Ｐタイプ",
 		"en": "Mission pack P type for MG 1/100 Gundam F90"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "f90",
+			"url": "https://bandai-hobby.net/series/f90/",
+			"ja": "機動戦士ガンダムF90"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7056",
+			"url": "https://bandai-hobby.net/item/01_7056/",
+			"ja": "MG 1/100 F90IIIY クラスターガンダム用 ミッションパック Xタイプ"
+		},
+		{
+			"id": "item-1000224327",
+			"url": "https://p-bandai.jp/item/item-1000224327/",
+			"ja": "ＭＧ 1/100 Ｆ８０ ガンレイド"
+		},
+		{
+			"id": "item-1000224957",
+			"url": "https://p-bandai.jp/item/item-1000224957/",
+			"ja": "ＭＧ 1/100 ガンダムＦ９０用 ミッションパック 専用ハンガー 2個セット"
+		},
+		{
+			"id": "item-1000224956",
+			"url": "https://p-bandai.jp/item/item-1000224956/",
+			"ja": "MG 1/100 ガンダムＦ９０用 ミッションパック Ｈタイプ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 6
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"― 大 気 圏 突 入 仕 様 の  Ｐ タ イ プ ―",
@@ -83,7 +136,7 @@
 			"Introducing a mission pack that can be jointed with \"MG 1/100 Gundam F90\" (sold separately) to reproduce the P type with atmospheric entry specifications!",
 			"---",
 			"*The MS body is not included with this product.",
-			"* To reproduce the posted photo, this product and \"MG 1/100 Gundam F90\" (sold separately/Premium Bandai sales item) are required.",
+			"* To reproduce the posted photo, this product and \"MG 1/100 GundamF90\" (sold separately/Premium Bandai sales item) are required.",
 			"The P type, a mission pack developed for the prototype MS Gundam F90 of the \"Formula Plan\" by Sanary (S・N・R・I), is now available in master grade with a completely new model!",
 			"Can be transformed into atmospheric entry form (Waverider form)!",
 			"● P (plunge) type for atmospheric entry.",
@@ -105,7 +158,7 @@
 			"The cable connected to the buttock tank unit is reproduced with lead wire and varnish tube.",
 			"The coloring of the side wing parts is reproduced with molded colors.",
 			"●P. V. You can recreate the special!",
-			"By attaching special parts to the shoulders and back, \"BB Senshi 96 Gundam F90 P/V-TYPE (general over-the-counter sales item)\"",
+			"By attaching special parts to the shoulders and back, \"BB Senshi 96 GundamF90 P/V-TYPE (general over-the-counter sales item)\"",
 			"It is possible to reproduce the original form published in \"PV Special\"!",
 			"Add some V type equipment from \"Mission Pack R Type & V Type (sold separately)\" for MG 1/100 Gundam F90.",
 			"It can be installed!",
@@ -116,9 +169,9 @@
 			"*This product only includes “Mission Pack P Type”.",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/100 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS/PVC/PET",
-			"No glue is used for assembly",
+			"No glue used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"*The finished product in the photo is painted. Also, a prototype that is still under development. The actual product may differ.",
 			"*Product materials may change depending on the production period of the sold product. Thank you for your understanding.",
@@ -142,11 +195,6 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000187528_1.jpg",
 				"path": "/images/items/01_4868/1000187528_1.jpg",
 				"hash": "2518285fe84beae1b83f5ecdf3718475"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000187528_10.jpg",
-				"path": "/images/items/01_4868/1000187528_10.jpg",
-				"hash": "ff894cb71d327508c3aa25156865369e"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000187528_2.jpg",
@@ -187,19 +235,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000187528_9.jpg",
 				"path": "/images/items/01_4868/1000187528_9.jpg",
 				"hash": "525366e9f0db0dcc08df5c1fc67801fa"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000187528_10.jpg",
+				"path": "/images/items/01_4868/1000187528_10.jpg",
+				"hash": "ff894cb71d327508c3aa25156865369e"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4868/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": ["f90"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_7056", "item-1000224327", "item-1000224957", "item-1000224956"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2444",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2444/"

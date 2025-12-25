@@ -5,6 +5,54 @@
 		"ja": "ＨＧ ゲシュペンストＭｋ－ＩＩ",
 		"en": "HG Gespenst Mk-II"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		},
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "superrobot_og",
+			"url": "https://bandai-hobby.net/series/superrobot_og/",
+			"ja": "スーパーロボット大戦OG"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5578",
+			"url": "https://bandai-hobby.net/item/01_5578/",
+			"ja": "HG アシュセイヴァー"
+		},
+		{
+			"id": "01_5491",
+			"url": "https://bandai-hobby.net/item/01_5491/",
+			"ja": "HG ヴァイスリッター"
+		},
+		{
+			"id": "item-1000214961",
+			"url": "https://p-bandai.jp/item/item-1000214961/",
+			"ja": "ＨＧ ヒュッケバインＭｋ－ＩＩトロンベ"
+		},
+		{
+			"id": "01_5369",
+			"url": "https://bandai-hobby.net/item/01_5369/",
+			"ja": "HG ガンレオン"
+		}
+	],
 	"price": {
 		"amount": 4730,
 		"currency": "JPY",
@@ -63,10 +111,10 @@
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－．",
 			"- Ultimate! Game Pen Strategies! ! ―",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－．",
-			"From the \"Super Robot Wars OG \" series, the successor to the original personal trooper \" Gespenst\",",
+			"From the \"Super Robot Wars OG\" series, the successor to the original personal trooper \"Gespenst\",",
 			"\"Gespenst Mk-II\" is commercialized in the HG series. The characteristic blue aircraft color is reproduced with molding color.",
 			"Newly modeled Mega Beam Rifle and Mega Blaster Cannon reproduction parts are included and can be selected.",
-			"\"Gespenst Mk-II Type R \" and \" Gespenst Mk-II Type S\" can be reproduced!",
+			"\"Gespenst Mk-II Type R\" and \"Gespenst Mk-II Type S\" can be reproduced!",
 			"● Reproduce the characteristic aircraft color",
 			"Reproduce the characteristic blue aircraft color of Gespenst Mk-II with molding color!",
 			"The dual eyes inside the head visor are also precisely reproduced.",
@@ -74,7 +122,7 @@
 			"Equipped with movable gimmicks on the abdominal slide gimmick, arms, hip joints, and front armor.",
 			"The range of motion has been expanded, allowing bold poses similar to those in the play! Hand parts are included to expand the range of production.",
 			"● Reproduce the \"Mega Blaster Cannon\" by replacing parts!",
-			"By replacing the chest parts, parts that can reproduce the \"Mega Blaster Cannon \" of \" Gespenst Mk-II Type S\" are included with new modeling!",
+			"By replacing the chest parts, parts that can reproduce the \"Mega Blaster Cannon\" of \"Gespenst Mk-II Type S\" are included with new modeling!",
 			"● Comes with a wide range of equipment",
 			"In addition to Gespenst's various weapons, a newly designed mega beam rifle is included!",
 			"By using the joint parts included with the display base, it is possible to attach and detach the split missile and slash ripper from the stabilizer.",
@@ -83,7 +131,7 @@
 			"Accessories: Display base",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"Non-Scale Assembly type plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Main product material: PS/PET",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -101,86 +149,98 @@
 			"・Product specifications are as of 20232. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"メガ・ビームライフル",
-			"ニュートロンビーム",
-			"メガ・プラズマカッター",
-			"スプリットミサイル×１式",
-			"スラッシュ・リッパー×１式",
-			"メガ・ブラスターキャノン再現用パーツ"
-		],
-		"en": [
-			"mega beam rifle",
-			"neutron beam",
-			"mega plasma cutter",
-			"Split missile x 1",
-			"Slash Ripper x 1 set",
-			"Mega Blaster Cannon reproduction parts"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "メガ・ビームライフル",
+				"en": "mega beam rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "ニュートロンビーム",
+				"en": "neutron beam"
+			}
+		},
+		{
+			"name": {
+				"ja": "メガ・プラズマカッター",
+				"en": "mega plasma cutter"
+			}
+		},
+		{
+			"name": {
+				"ja": "スプリットミサイル×１式",
+				"en": "Split missile x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "スラッシュ・リッパー×１式",
+				"en": "Slash Ripper x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "メガ・ブラスターキャノン再現用パーツ",
+				"en": "Mega Blaster Cannon reproduction parts"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5721.jpg",
+				"src": "https://bandai-hobby.net/images/153_5721_s_rav9hjk3qkwen5wknojohx436mv9.jpg",
 				"path": "/images/items/01_4840/153_5721.jpg",
 				"hash": "b45abb0eb2a39edf9c932cc91b43e8db"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5721.jpg",
+				"src": "https://bandai-hobby.net/images/155_5721_s_1kkp627mby07cmvs2d75bs3pzc3x.jpg",
 				"path": "/images/items/01_4840/155_5721.jpg",
 				"hash": "ead6c85204940bf64dee4dbfadf52651"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5721.jpg",
+				"src": "https://bandai-hobby.net/images/156_5721_s_0byqjbbpw7w3najk9td5mszf2pfz.jpg",
 				"path": "/images/items/01_4840/156_5721.jpg",
 				"hash": "ccb378018fe24c9a6ebcf0bea85d4df3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5721.jpg",
+				"src": "https://bandai-hobby.net/images/157_5721_s_c5fdxyoz5qqzci2yqverbklovkcc.jpg",
 				"path": "/images/items/01_4840/157_5721.jpg",
 				"hash": "e9d59246957c7e94953b93e9c5f37557"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5721.jpg",
+				"src": "https://bandai-hobby.net/images/158_5721_s_3b4s3byuwwsfqj51ire8nfb1pyoa.jpg",
 				"path": "/images/items/01_4840/158_5721.jpg",
 				"hash": "f7e1bdfc40007d9796b46002d850fcd6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5721.jpg",
+				"src": "https://bandai-hobby.net/images/159_5721_s_ypk23g3wlm3dttpk9onoq3qhy4wu.jpg",
 				"path": "/images/items/01_4840/159_5721.jpg",
 				"hash": "b37768eb3a31b6c3584de0f5b1f07b7c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5721.jpg",
+				"src": "https://bandai-hobby.net/images/189_5721_s_ll6qz0u6iup7poxcoihsba1pu5x8.jpg",
 				"path": "/images/items/01_4840/189_5721.jpg",
 				"hash": "082f6c2fa98fbf90f794b37f87a6f535"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5721.jpg",
+				"src": "https://bandai-hobby.net/images/190_5721_s_rhkg3mxk2rj10vc0hbgo7fobc21j.jpg",
 				"path": "/images/items/01_4840/190_5721.jpg",
 				"hash": "a0f559f59342fa81af2bb3991e76ff9f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5721.jpg",
+				"src": "https://bandai-hobby.net/images/191_5721_s_hvs47vjcsfk32m74vcz4mbev7hwv.jpg",
 				"path": "/images/items/01_4840/191_5721.jpg",
 				"hash": "332c1404bbe98b0e544e7f8ba9d326e6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5721.jpg",
+				"src": "https://bandai-hobby.net/images/192_5721_s_ugmufwkiw24u1ihjre52q5238v0q.jpg",
 				"path": "/images/items/01_4840/192_5721.jpg",
 				"hash": "e9cf6c86837a7589bc086c6a8317e29f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4840/",
-	"brandIds": ["pb_charapla", "hg"],
-	"seriesIds": ["superrobot_og"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5578", "01_5491", "item-1000214961", "01_5369"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4840/"
 }

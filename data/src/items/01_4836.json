@@ -5,6 +5,50 @@
 		"ja": "PG 1/60MS-06S シャア専用ザク フルカラーコーティングバージョン",
 		"en": "PG 1/60MS-06S Char's Zaku full color coating version"
 	},
+	"brands": [
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3373",
+			"url": "https://bandai-hobby.net/item/01_3373/",
+			"ja": "ＰＧ ＵＮＬＥＡＳＨＥＤ 1/60 RX-78-2 ガンダム クリアカラーボディ"
+		},
+		{
+			"id": "01_3328",
+			"url": "https://bandai-hobby.net/item/01_3328/",
+			"ja": "PG UNLEASHED 1/60 RX-78-2 ガンダム"
+		},
+		{
+			"id": "01_2829",
+			"url": "https://bandai-hobby.net/item/01_2829/",
+			"ja": "PG 1/60 ガンダムベース限定 RX-78-2 ガンダム [チタニウムフィニッシュ]"
+		},
+		{
+			"id": "01_1902",
+			"url": "https://bandai-hobby.net/item/01_1902/",
+			"ja": "PG 1/60 ガンダムベース限定 RX-78-3 G-3ガンダム [エクストラフィニッシュ]"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 26191,
 		"currency": "JPY",
@@ -18,28 +62,23 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
-		"ja": ["「PG 1/60MS-06S シャア専用ザク フルカラーコーティングバージョン」登場！"],
-		"en": ["\"PG 1/60MS-06S Char's Zaku full color coating version\" now available!"]
+		"ja": [
+			"「PG 1/60MS-06S シャア専用ザク フルカラーコーティングバージョン」登場！"
+		],
+		"en": [
+			"\"PG 1/60MS-06S Char's Zaku full color coating version\" now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5718.jpg",
+				"src": "https://bandai-hobby.net/images/153_5718_s_ke042ohtbvp4kzfttlux1u0p69q2.jpg",
 				"path": "/images/items/01_4836/153_5718.jpg",
 				"hash": "d370a645173d76fbd82d1d7b8632d1d2"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4836/",
-	"brandIds": ["pg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_3373", "01_3328", "01_2829", "01_1902"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4836/"
 }

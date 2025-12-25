@@ -5,6 +5,50 @@
 		"ja": "HGUC 1/144 デルタプラス メタリックVer.",
 		"en": "HGUC 1/144 Delta Plus Metallic Ver."
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4191,
 		"currency": "JPY",
@@ -18,33 +62,28 @@
 		"day": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["「HGUC 1/144 デルタプラス メタリックVer.」登場！"],
-		"en": ["\"HGUC 1/144 Delta Plus Metallic Ver.\" now available!"]
+		"ja": [
+			"「HGUC 1/144 デルタプラス メタリックVer.」登場！"
+		],
+		"en": [
+			"\"HGUC 1/144 Delta Plus Metallic Ver.\" now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5766.jpg",
+				"src": "https://bandai-hobby.net/images/153_5766_s_emib4527m8j5df0sus74igs7sgt5.jpg",
 				"path": "/images/items/01_4888/153_5766.jpg",
 				"hash": "887dbe324c91cc44b0e7d14cf0828c60"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5766.jpg",
+				"src": "https://bandai-hobby.net/images/155_5766_s_6dz7pcamed58zdx86ai52shs5kcm.jpg",
 				"path": "/images/items/01_4888/155_5766.jpg",
 				"hash": "d1e9409e435fdf98f46e96f5870c7b0b"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4888/",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4888/"
 }

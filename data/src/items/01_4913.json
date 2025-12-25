@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "HG ダイゼンガー",
-		"en": "HG DYGENGUAR"
+		"en": "HG Daizengar"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "superrobot_og",
+			"url": "https://bandai-hobby.net/series/superrobot_og/",
+			"ja": "スーパーロボット大戦OG"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5578",
+			"url": "https://bandai-hobby.net/item/01_5578/",
+			"ja": "HG アシュセイヴァー"
+		},
+		{
+			"id": "01_5491",
+			"url": "https://bandai-hobby.net/item/01_5491/",
+			"ja": "HG ヴァイスリッター"
+		},
+		{
+			"id": "item-1000214961",
+			"url": "https://p-bandai.jp/item/item-1000214961/",
+			"ja": "ＨＧ ヒュッケバインＭｋ－ＩＩトロンベ"
+		},
+		{
+			"id": "01_5369",
+			"url": "https://bandai-hobby.net/item/01_5369/",
+			"ja": "HG ガンレオン"
+		}
+	],
 	"price": {
 		"amount": 5720,
 		"currency": "JPY",
@@ -21,96 +64,114 @@
 	"description": {
 		"ja": [
 			"『スーパーロボット大戦OG』シリーズより根強い人気を誇る「ダイゼンガー」が、大張正己氏によるアニメ版デザインでHGシリーズに見参！",
-			"■「参式斬艦刀」は通常時、展開時の2種類が付属。",
-			"■「ダイナミック・ナックル」や「ゼネラル・ブラスター」など各種必殺技を迫力あるポージングで表現可能！",
-			"■こだわりの成形色とパーツ分割により、シールレスで機体カラーを再現。組み立てるだけでカラフルな仕上がり。",
-			"■背部が展開しスラスターの露出が可能。",
-			"■専用持ち手など各種ハンドパーツやディスプレイベースが付属。"
+			"• 「参式斬艦刀」は通常時、展開時の2種類が付属。",
+			"• 「ダイナミック・ナックル」や「ゼネラル・ブラスター」など各種必殺技を迫力あるポージングで表現可能！",
+			"• こだわりの成形色とパーツ分割により、シールレスで機体カラーを再現。組み立てるだけでカラフルな仕上がり。",
+			"• 背部が展開しスラスターの露出が可能。",
+			"• 専用持ち手など各種ハンドパーツやディスプレイベースが付属。"
 		],
 		"en": [
-			"Two types of \"Sanshiki Sword\" are included: normal and deployed.",
-			"Various special moves such as \"Dynamic Knuckle\" and \"General Blaster\" can be expressed in powerful poses!",
-			"By carefully selecting molding colors and parts division, the aircraft color is reproduced without seals. Colorful finish just by assembling it.",
-			"The back is unfolded to expose the thruster.",
-			"Various hand parts such as special handles and display bases are included.[Accessories]",
-			"Sanshiki Sword (Normal)×1",
-			"Sanshi Sword (when deployed) ×1",
-			"1 set × hand parts",
-			"Display Base × 1"
+			"\"Daizengar\", which is more popular than the \"Super Robot Wars OG\" series, is now available in the HG series with an anime version designed by Masami Obari!",
+			"• Two types of \"Sanshiki Zankanto\" are included: normal and deployed.",
+			"• Various special moves such as \"Dynamic Knuckle\" and \"General Blaster\" can be expressed with powerful poses!",
+			"• The aircraft color is reproduced without seals using carefully selected molding colors and parts division. Colorful finish just by assembly.",
+			"• The back can be expanded to expose the thrusters.",
+			"• Various hand parts such as special handles and display base are included."
 		]
 	},
-	"accessories": {
-		"ja": ["参式斬艦刀（通常時）×1", "参式斬艦刀（展開時）×1", "ハンドパーツ×1式", "ディスプレイベース×1"],
-		"en": [
-			"Sanshiki Zankanto (normal) x 1",
-			"Sanshiki Zankanto (when deployed) x 1",
-			"Hand parts x 1 set",
-			"Display base x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "参式斬艦刀（通常時）",
+				"en": "Sanshiki Zankanto (normal)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "参式斬艦刀（展開時）",
+				"en": "Sanshiki Zankanto (when deployed)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース",
+				"en": "display base"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5789.jpg",
+				"src": "https://bandai-hobby.net/images/153_5789_s_0t7tbrtsvza210snbcly8ykvigpi.jpg",
 				"path": "/images/items/01_4913/153_5789.jpg",
 				"hash": "5522448869d0929c96937b733300a88f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5789.jpg",
+				"src": "https://bandai-hobby.net/images/155_5789_s_nhaldkefb6s1mqx6htc18r1f3shp.jpg",
 				"path": "/images/items/01_4913/155_5789.jpg",
 				"hash": "f75fb49c0b35c4df2c5d10696ba5be40"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5789.jpg",
+				"src": "https://bandai-hobby.net/images/156_5789_s_8lo8qr54gz1pypal6j780r2s6g83.jpg",
 				"path": "/images/items/01_4913/156_5789.jpg",
 				"hash": "f6e6cfef92ad49469aae0955f0a29d68"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5789.jpg",
+				"src": "https://bandai-hobby.net/images/157_5789_s_5fe06qli5gidm1cky0ldvqwiypob.jpg",
 				"path": "/images/items/01_4913/157_5789.jpg",
 				"hash": "526b9ab01037255ef33fff534b9dc72d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5789.jpg",
+				"src": "https://bandai-hobby.net/images/158_5789_s_euh4bovkusd3fb03mj7xp8mawdlo.jpg",
 				"path": "/images/items/01_4913/158_5789.jpg",
 				"hash": "9c05dd46dafe136aca7b4cf170d176fd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5789.jpg",
+				"src": "https://bandai-hobby.net/images/159_5789_s_qc6aazni88nnw6vdtgnjse06uoi0.jpg",
 				"path": "/images/items/01_4913/159_5789.jpg",
 				"hash": "6a827ab961b25749816753711249463d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5789.jpg",
+				"src": "https://bandai-hobby.net/images/189_5789_s_h27a7iymcyq20fzjd9v3b2evfbtd.jpg",
 				"path": "/images/items/01_4913/189_5789.jpg",
 				"hash": "851d5ac5d39b6115135d78e5085caa8d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5789.jpg",
+				"src": "https://bandai-hobby.net/images/190_5789_s_wq6ukzs3yh03apqljufhjpzbpgjm.jpg",
 				"path": "/images/items/01_4913/190_5789.jpg",
 				"hash": "d959381301d42531467ebc82dc48b87d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5789.jpg",
+				"src": "https://bandai-hobby.net/images/191_5789_s_xwlunds2lni0s8cf90wxraxzhb83.jpg",
 				"path": "/images/items/01_4913/191_5789.jpg",
 				"hash": "ab4e5f9b0c651c8d8a53d787ae393b50"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5789.jpg",
+				"src": "https://bandai-hobby.net/images/192_5789_s_ftd5ig35yjpjh9gizik02mr2e9py.jpg",
 				"path": "/images/items/01_4913/192_5789.jpg",
 				"hash": "9f1c7be5027edd1714e084453faa1cbe"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_5789.jpg",
+				"src": "https://bandai-hobby.net/images/193_5789_s_u0j2gnqnq5ufacqvixlbecf2iv1y.jpg",
 				"path": "/images/items/01_4913/193_5789.jpg",
 				"hash": "b6886c395b6ec871b15b4d5d0544fb38"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4913/",
-	"brandIds": ["hg"],
-	"seriesIds": ["superrobot_og"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5578", "01_5491", "item-1000214961", "01_5369"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4913/"
 }

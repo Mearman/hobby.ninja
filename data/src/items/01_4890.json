@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 GAT-X207 ブリッツガンダム ミラージュコロイド（クリアーVer.）",
 		"en": "MG 1/100 GAT-X207 Blitz Gundam Mirage Colloid (Clear Ver.)"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "01_5221",
+			"url": "https://bandai-hobby.net/item/01_5221/",
+			"ja": "MG 1/100 イージスガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_4272",
+			"url": "https://bandai-hobby.net/item/01_4272/",
+			"ja": "MG 1/100 ガンダムベース限定 パーフェクトストライクガンダム グランドスラム装備型"
+		},
+		{
+			"id": "01_4195",
+			"url": "https://bandai-hobby.net/item/01_4195/",
+			"ja": "MG 1/100 ガンダムベース限定 エクリプスガンダム[クリアカラー]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4191,
 		"currency": "JPY",
@@ -18,33 +62,28 @@
 		"day": 25
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
-		"ja": ["「MG 1/100 GAT-X207 ブリッツガンダム ミラージュコロイド（クリアーVer.）」登場！"],
-		"en": ["\"MG 1/100 GAT-X207 Blitz Gundam Mirage Colloid (Clear Ver.)\" now available!"]
+		"ja": [
+			"「MG 1/100 GAT-X207 ブリッツガンダム ミラージュコロイド（クリアーVer.）」登場！"
+		],
+		"en": [
+			"\"MG 1/100 GAT-X207 Blitz Gundam Mirage Colloid (Clear Ver.)\" now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5768.jpg",
+				"src": "https://bandai-hobby.net/images/153_5768_s_pj97s0ooh9zhnpr5b8sp7hpezyq9.jpg",
 				"path": "/images/items/01_4890/153_5768.jpg",
 				"hash": "6010a423769436f2a97507482b827470"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5768.jpg",
+				"src": "https://bandai-hobby.net/images/155_5768_s_8g88egzgzv6ztu5te24o57o15t4y.jpg",
 				"path": "/images/items/01_4890/155_5768.jpg",
 				"hash": "3471fb25f7cd107a6ded5b4812cb1984"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4890/",
-	"brandIds": ["mg"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5994", "01_5221", "01_4272", "01_4195"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4890/"
 }

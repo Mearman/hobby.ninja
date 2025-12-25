@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard ウルトラマンゼット オリジナル",
-		"en": "Figure-rise Standard ULTRAMAN Z ORIGINAL"
+		"en": "Figure-rise Standard Ultraman Z Original"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "ultraman",
+			"url": "https://bandai-hobby.net/series/ultraman/",
+			"ja": "ウルトラマン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5371",
+			"url": "https://bandai-hobby.net/item/01_5371/",
+			"ja": "Figure-rise Standard ウルトラマンティガ マルチタイプ"
+		},
+		{
+			"id": "01_5198",
+			"url": "https://bandai-hobby.net/item/01_5198/",
+			"ja": "Figure-rise Standard ウルトラマンジード プリミティブ"
+		},
+		{
+			"id": "01_5096",
+			"url": "https://bandai-hobby.net/item/01_5096/",
+			"ja": "Figure-rise Standard ULTRAMAN SUIT JACK -ACTION-"
+		},
+		{
+			"id": "01_5046",
+			"url": "https://bandai-hobby.net/item/01_5046/",
+			"ja": "Figure-rise Standard ウルトラマンブレーザー"
+		}
+	],
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -21,95 +64,128 @@
 	"description": {
 		"ja": [
 			"Figure-rise Standard『ウルトラマン』シリーズ第４弾！『ウルトラマンZ』より熱血戦士「ウルトラマンゼット オリジナル」が登場！",
-			"■特徴的な身体の色分けはシールを使わずパーツ分割と成形色のみで再現。組み立てるだけで満足のいくクオリティ。",
-			"■目とカラータイマーには、クリアパーツに光を効率よく反射させる精密形状の加工「リフレクションカット」を採用し、劇中さながらのきらめきを表現。",
-			"■カラータイマーは赤色と青色の２種が付属し、パーツの差し替えで劇中シーンの演出が可能。",
-			"■首の後ろのパーツが沈み込むことで頭部の可動が拡大。肩部付け根も可動し、より自然なポージングが可能に。",
-			"■「ベリアロク」は、順手・逆手の持ち方が可能。さらに口部の開閉ギミックにより、会話シーンを再現できる。",
-			"■「ゼスティウム光線」再現用のエフェクトパーツにはPETシートを採用。",
-			"■さまざまなポージングに対応した充実のハンドパーツが付属。"
+			"• 特徴的な身体の色分けはシールを使わずパーツ分割と成形色のみで再現。組み立てるだけで満足のいくクオリティ。",
+			"• 目とカラータイマーには、クリアパーツに光を効率よく反射させる精密形状の加工「リフレクションカット」を採用し、劇中さながらのきらめきを表現。",
+			"• カラータイマーは赤色と青色の２種が付属し、パーツの差し替えで劇中シーンの演出が可能。",
+			"• 首の後ろのパーツが沈み込むことで頭部の可動が拡大。肩部付け根も可動し、より自然なポージングが可能に。",
+			"• 「ベリアロク」は、順手・逆手の持ち方が可能。さらに口部の開閉ギミックにより、会話シーンを再現できる。",
+			"• 「ゼスティウム光線」再現用のエフェクトパーツにはPETシートを採用。",
+			"• さまざまなポージングに対応した充実のハンドパーツが付属。"
 		],
 		"en": [
-			"The distinctive body color coding is reproduced only by parts division and molding color without using stickers. Satisfying quality just by assembling it.",
-			"The eyes and color timer use a precision-shaped processing called \"reflection cut\" that efficiently reflects light on clear parts, expressing the sparkle just like in the play.",
-			"Two types of color timers are included, red and blue, and it is possible to produce scenes in the play by replacing parts.",
-			"The back of the neck is sunk to expand the movement of the head. The base of the shoulder is also movable, allowing for a more natural pose.",
-			"\"Beria Roku\" can be held in both the right and wrong hands. In addition, the opening and closing gimmick of the mouth allows you to reproduce the conversation scene.",
-			"PET sheets are used for the effect parts for reproducing \"Zestimium rays\".",
-			"A full range of hand parts for various poses are included.[Accessories]",
-			"Belia Roku × 1",
-			"1 set of effect × for Zestium ray",
-			"2 types of color timers×",
-			"1 set × hand parts"
+			"The 4th installment of Figure-rise Standard “Ultraman” series! From \"Ultraman Z\" comes the passionate warrior \"Ultraman Z Original\"!",
+			"• The characteristic body coloring is reproduced only by dividing the parts and molding colors without using seals. The quality is satisfying just by assembling it.",
+			"• The eyes and color timer use a precision-shaped ``reflection cut'' that efficiently reflects light on the clear parts, creating a sparkle just like in the movie.",
+			"• Two types of color timers are included, red and blue, and you can create scenes from the play by replacing the parts.",
+			"• Head movement is expanded by sinking the back part of the neck. The base of the shoulders is also movable, allowing for more natural poses.",
+			"• \"Berialoc\" can be held in either forward or reverse hands. Furthermore, the opening and closing gimmick of the mouth allows you to recreate conversation scenes.",
+			"• PET sheets are used for effect parts to reproduce the \"Zestium Ray\".",
+			"• Comes with a variety of hand parts that can be used in a variety of poses."
 		]
 	},
-	"accessories": {
-		"ja": ["ベリアロク×1", "ゼスティウム光線用エフェクト×１式", "カラータイマー×2種", "ハンドパーツ×1式", "シール×1"],
-		"en": ["Beliarok×1", "Zestium ray effect x 1", "Color timer x 2 types", "Hand parts x 1 set", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ベリアロク",
+				"en": "Beliarok"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ゼスティウム光線用エフェクト×１式",
+				"en": "Zestium ray effect x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "カラータイマー",
+				"en": "color timer"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5793.jpg",
+				"src": "https://bandai-hobby.net/images/153_5793_s_n3wi4spvc64s31r2pmbzm23esddi.jpg",
 				"path": "/images/items/01_4918/153_5793.jpg",
 				"hash": "6f0da08f07a9098b229b7da1d6b3e691"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5793.jpg",
+				"src": "https://bandai-hobby.net/images/155_5793_s_3kow84bpogyu16ms77gwb5m92kt9.jpg",
 				"path": "/images/items/01_4918/155_5793.jpg",
 				"hash": "fc2c1aa30e955001d11c9ca6543ee0d2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5793.jpg",
+				"src": "https://bandai-hobby.net/images/156_5793_s_3jtvtmu8om4p60p7ht7r5oyzadlf.jpg",
 				"path": "/images/items/01_4918/156_5793.jpg",
 				"hash": "03e771cae1fc9c98e6cc33d694e11eda"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5793.jpg",
+				"src": "https://bandai-hobby.net/images/157_5793_s_sferkbizkkonyulz41h58djpvcdf.jpg",
 				"path": "/images/items/01_4918/157_5793.jpg",
 				"hash": "02b7787dd7da81f45461d58bb9fd197c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5793.jpg",
+				"src": "https://bandai-hobby.net/images/158_5793_s_zdhkgbpogbyoa5zd8o5ua09t5juj.jpg",
 				"path": "/images/items/01_4918/158_5793.jpg",
 				"hash": "c9491e671fe1e4c85177b12348960590"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5793.jpg",
+				"src": "https://bandai-hobby.net/images/159_5793_s_2yunrczzo17ds2v8il0doayhwsvb.jpg",
 				"path": "/images/items/01_4918/159_5793.jpg",
 				"hash": "c46a16656892a239b746811b5db4a8c8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5793.jpg",
+				"src": "https://bandai-hobby.net/images/189_5793_s_dqaazdwcvjdrry39rtfj7t7e0y8y.jpg",
 				"path": "/images/items/01_4918/189_5793.jpg",
 				"hash": "bfe69ac8e404f92d21ba8354c3a74038"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5793.jpg",
+				"src": "https://bandai-hobby.net/images/190_5793_s_p59thourf2sgbkceulu0ir6xhuxv.jpg",
 				"path": "/images/items/01_4918/190_5793.jpg",
 				"hash": "0986612cef9e9422e6fb3fef5762b0f4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5793.jpg",
+				"src": "https://bandai-hobby.net/images/191_5793_s_jdi0hra4vs5a57dv8inulyy2ah5e.jpg",
 				"path": "/images/items/01_4918/191_5793.jpg",
 				"hash": "8109dcb67e12ec6d8a366369db7c6378"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5793.jpg",
+				"src": "https://bandai-hobby.net/images/192_5793_s_11f60g0bzadwe4jxhgimlyfdfpan.jpg",
 				"path": "/images/items/01_4918/192_5793.jpg",
 				"hash": "aa6704832d9a4a3bbc07310bc184d567"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_5793.jpg",
+				"src": "https://bandai-hobby.net/images/193_5793_s_p99tufg4wpogatqtxtut1tctokll.jpg",
 				"path": "/images/items/01_4918/193_5793.jpg",
 				"hash": "f6b087f4377c215622323318c00dd31f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4918/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["ultraman"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5371", "01_5198", "01_5096", "01_5046"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4918/"
 }

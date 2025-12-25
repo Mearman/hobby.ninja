@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "RG 1/144 ガンダムエピオン",
-		"en": "RG 1/144 GUNDAM EPYON"
+		"en": "RG 1/144 Gundam Epyon"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3425",
+			"url": "https://bandai-hobby.net/item/01_3425/",
+			"ja": "RG 1/144 ウイングガンダム"
+		},
+		{
+			"id": "item-1000154310",
+			"url": "https://p-bandai.jp/item/item-1000154310/",
+			"ja": "ＲＧ 1/144 トールギスＩＩＩ［チタニウムフィニッシュ］"
+		},
+		{
+			"id": "item-1000142878",
+			"url": "https://p-bandai.jp/item/item-1000142878/",
+			"ja": "ＲＧ 1/144 トールギス（ＴＶアニメカラーVer.）"
+		},
+		{
+			"id": "item-1000135281",
+			"url": "https://p-bandai.jp/item/item-1000135281/",
+			"ja": "ＲＧ 1/144 トールギスＩＩＩ"
+		}
+	],
+	"manual": {
+		"id": "1097",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1097"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 4620,
 		"currency": "JPY",
@@ -18,10 +66,9 @@
 		"day": 30
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『新機動戦記ガンダム W』より「ガンダムエピオン」が完全新規造形のRGで商品化！力強く自然にビームソードを振るうために最適化された新たな可動ギミックを搭載！翼竜をモチーフにしたRGオリジナルアレンジを採用！",
+			"『新機動戦記ガンダムW』より「ガンダムエピオン」が完全新規造形のRGで商品化！力強く自然にビームソードを振るうために最適化された新たな可動ギミックを搭載！翼竜をモチーフにしたRGオリジナルアレンジを採用！",
 			"• 胴体の2軸＋1軸のスイング可動、腹部前方展開可動により前屈時の親和性が向上。",
 			"• 股関節にロック機構を採用。変形と可動を両立し、堅牢かつ大きくスイングさせることが可能。",
 			"• 手首上部に追加された可動軸と前腕ロール可動によりポーズに幅広い表情付けが可能。",
@@ -34,67 +81,81 @@
 			"• ビームソードとマウントラッチをつなぐケーブルはリード線を採用。"
 		],
 		"en": [
-			"2-axis   1-axis swing movement of the torso and forward expansion movement of the abdomen improve affinity when bending forward.",
-			"Locking mechanism is used on the hip joint. It can be both deformed and movable, and can be swung robustly and widely.",
-			"The movable axis added to the upper part of the wrist and the movement of the forearm roll allow for a wide range of expressions in poses.",
-			"Shoulder armor expands, allowing you to raise your arms while maintaining your shoulder position. It also supports powerful poses that swing the beam sword with both hands. The blade follows the movement of the knee and does not interfere with the natural kneeling.",
-			"The wings are interlocking according to the movement of the wings. The height of the wing can also be adjusted by moving the axis at the root.",
-			"In MA form, the corners and mouth open to produce facial expressions.",
-			"Built-in pull-out ball movement in the shin realizes the movement of the neck. The movable axis of the thighs creates a supple neck movement like a pterosaur.",
-			"Advanced MS joint is used for the heat rod. It has a sword-sharp form and a supple movement that draws a spiral.",
-			"The cable connecting the beam sword and the mount latch uses a lead wire.[Accessories]",
-			"Beam Sword × 1",
-			"Beam Sword Holder × 1",
-			"Heat rod × 1",
-			"Hand parts × 1 set",
-			"Display joints × 2 types (for MS and MA)",
-			"Lead wire × 1",
-			"Realistic Decal × 1"
+			"\"Gundam Epyon\" from \"Mobile Suit GundamW\" is commercialized as a completely new model of RG! Equipped with a new movable gimmick optimized for powerful and natural swinging of the beam sword! Adopts an RG original arrangement with a pterosaur motif!",
+			"• Improved compatibility when bending forward by swinging the torso on 2 + 1 axes and moving the abdomen forward.",
+			"• A locking mechanism is used at the hip joint. It is both deformable and movable, making it sturdy and capable of large swings.",
+			"• A movable axis added to the upper wrist and forearm roll movement allow for a wide range of pose expressions.",
+			"• The shoulder armor expands, allowing you to raise your arms while maintaining the shoulder position. It also supports powerful poses in which the beam sword is raised with both hands.",
+			"• The blade follows the movement of the knee and does not interfere with natural kneeling.",
+			"• The wing part has small feathers that expand in conjunction with the movement of the wing. The height of the wings can be adjusted by moving the axis at the base.",
+			"• In MA form, the horns and mouth open to create facial expressions.",
+			"• Built-in movable pull-out ball on the shin to allow the neck to bend. The movable axis of the thighs allows for flexible neck movement like that of a pterodactyl.",
+			"• Advanced MS joint is used for the heat rod. Realizes a sharp form like a sword and flexible movement that draws a spiral.",
+			"• The cable connecting the beam sword and mount latch uses a lead wire."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームソード×１",
-			"ビームソードホルダー×１",
-			"シールド×１",
-			"ヒートロッド×１",
-			"ハンドパーツ×1式",
-			"ディスプレイ用ジョイント×２種(MS用/MA用)",
-			"リード線×１",
-			"リアリスティックデカール×1"
-		],
-		"en": [
-			"Beam sword x1",
-			"Beam sword holder x 1",
-			"Seal de x1",
-			"Heat rod x1",
-			"Hand parts x 1 set",
-			"Display joint x 2 types (for MS/MA)",
-			"Lead wire x 1",
-			"Realistic decal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームソード×１",
+				"en": "Beam sword x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームソードホルダー×１",
+				"en": "Beam sword holder x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド×１",
+				"en": "Seal de x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヒートロッド×１",
+				"en": "Heat rod x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ用ジョイント×２種(MS用/MA用)",
+				"en": "Display joint x 2 types (for MS/MA)"
+			}
+		},
+		{
+			"name": {
+				"ja": "リード線×１",
+				"en": "Lead wire x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール",
+				"en": "realistic decals"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198841_1.jpg",
 				"path": "/images/items/01_4923/1000198841_1.jpg",
 				"hash": "b903c65634e2332a9fb57db768e7899c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198841_10.jpg",
-				"path": "/images/items/01_4923/1000198841_10.jpg",
-				"hash": "f50c762364e1602eddcef2c263284514"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198841_11.jpg",
-				"path": "/images/items/01_4923/1000198841_11.jpg",
-				"hash": "d6a8b6832f75c7d94c342be28c589a1f"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198841_12.jpg",
-				"path": "/images/items/01_4923/1000198841_12.jpg",
-				"hash": "032bd19253327041591ba29798b50b59"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198841_2.jpg",
@@ -135,17 +196,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198841_9.jpg",
 				"path": "/images/items/01_4923/1000198841_9.jpg",
 				"hash": "7c0454c17b3da073eea15f350106684b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198841_10.jpg",
+				"path": "/images/items/01_4923/1000198841_10.jpg",
+				"hash": "f50c762364e1602eddcef2c263284514"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198841_11.jpg",
+				"path": "/images/items/01_4923/1000198841_11.jpg",
+				"hash": "d6a8b6832f75c7d94c342be28c589a1f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000198841_12.jpg",
+				"path": "/images/items/01_4923/1000198841_12.jpg",
+				"hash": "032bd19253327041591ba29798b50b59"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4923/",
-	"brandIds": ["rg"],
-	"seriesIds": ["endlesswaltz"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_3425", "item-1000154310", "item-1000142878", "item-1000135281"],
-	"manual": {
-		"id": "1097",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1097/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4923/"
 }

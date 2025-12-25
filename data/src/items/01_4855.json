@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムエクシア クリアカラーバージョン",
 		"en": "HG 1/144 Gundam Exia Clear Color Version"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1954",
+			"url": "https://bandai-hobby.net/item/01_1954/",
+			"ja": "HG 1/144 「機動戦士ガンダム00」 2nd Season MSセット[クリアカラー]"
+		},
+		{
+			"id": "01_1953",
+			"url": "https://bandai-hobby.net/item/01_1953/",
+			"ja": "HG 1/144 「機動戦士ガンダム00」 1st Season MSセット[クリアカラー]"
+		},
+		{
+			"id": "item-1000114085",
+			"url": "https://p-bandai.jp/item/item-1000114085",
+			"ja": "ＨＧ 1/144 ＧＮアームズ ＴＹＰＥ-Ｅ（リアルカラーＶｅｒ．）"
+		},
+		{
+			"id": "01_957",
+			"url": "https://bandai-hobby.net/item/01_957/",
+			"ja": "HG 1/144 ブレイヴ指揮官用試験機"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,20 +62,23 @@
 		"day": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["「HG 1/144 ガンダムエクシア クリアカラーバージョン」登場！"],
-		"en": ["\"HG 1/144 Gundam Exia Clear Color Version\" now available!"]
+		"ja": [
+			"「HG 1/144 ガンダムエクシア クリアカラーバージョン」登場！"
+		],
+		"en": [
+			"\"HG 1/144 Gundam Exia Clear Color Version\" now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5735.jpg",
+				"src": "https://bandai-hobby.net/images/153_5735_s_ucv6bprpqledpb8cmx9cdap5wsto.jpg",
 				"path": "/images/items/01_4855/153_5735.jpg",
 				"hash": "e7c41db7877d293e933afc632c6e9dd9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5735.jpg",
+				"src": "https://bandai-hobby.net/images/155_5735_s_ehl9l4tevgtnzxzqhqjq4l1h0xk2.jpg",
 				"path": "/images/items/01_4855/155_5735.jpg",
 				"hash": "1baa8d892729725be027e332e47cc5ff"
 			}
@@ -39,14 +86,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4855/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-00"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_1954", "01_1953", "item-1000114085", "01_957"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	},
 	"manual": {
 		"id": "280",
 		"url": "https://manual.bandai-hobby.net/menus/detail/280/"

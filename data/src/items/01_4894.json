@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 eEXM GIG-R01 プロヴェデル(type-REX 01)",
-		"en": "30MM 1/144 eEXM GIG-R02 PROVEDEL(type-REX 01)"
+		"en": "30MM 1/144 eEXM GIG-R01 Provedel (type-REX 01)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -18,80 +61,95 @@
 		"day": 29
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"地球連合軍より30MM史上最大スケールの大型エグザマクスが登場！",
 			"既存のアイテムを搭乗させる“ライドオンカスタマイズ”が可能！",
-			"■全高約200mm～を誇る迫力のスケール感！",
-			"■ライドオン形態とREX形態への差し替え式の変形ギミックを搭載。",
-			"■ライドオン形態では付属する新規造形のバックパックとワニスチューブを既存アイテムにつないで搭乗させることが可能。",
-			"■付属の大型武器は分解して搭乗部への接続が可能。",
-			"■腕部・脚部関節は挟み込み構造により保持力が向上。別売りアイテムに付属するポリキャップをはめて3mm軸を創出することもできる。",
-			"■3mmジョイント、Cタイプジョイント、ディテールカバーパーツ等、カスタマイズに欠かせないマルチジョイントがセットになったランナーが付属。"
+			"• 全高約200mm～を誇る迫力のスケール感！",
+			"• ライドオン形態とREX形態への差し替え式の変形ギミックを搭載。",
+			"• ライドオン形態では付属する新規造形のバックパックとワニスチューブを既存アイテムにつないで搭乗させることが可能。",
+			"• 付属の大型武器は分解して搭乗部への接続が可能。",
+			"• 腕部・脚部関節は挟み込み構造により保持力が向上。別売りアイテムに付属するポリキャップをはめて3mm軸を創出することもできる。",
+			"• 3mmジョイント、Cタイプジョイント、ディテールカバーパーツ等、カスタマイズに欠かせないマルチジョイントがセットになったランナーが付属。"
 		],
 		"en": [
-			"A powerful sense of scale boasting a total height of about 200mm~!",
-			"Equipped with a transformation gimmick that can be replaced with a ride-on form and a REX form.",
-			"In ride-on form, it is possible to connect the included newly shaped backpack and varnish tube to existing items and board them.",
-			"The attached large weapon can be disassembled and connected to the boarding compartment.",
-			"The arm and leg joints have a pinching structure to improve the holding power. You can also create a 3mm axis by attaching the poly cap that comes with the separately sold item.",
-			"Runners are included with a set of 3mm joints, C-type joints, detail cover parts, and other multi-joints that are essential for customization.[Accessories]",
-			"Large Weapon × 1",
-			"Hand parts Flat hand (left and right), Hand grip (left and right)",
-			"Backpack for boarding aircraft×1",
-			"Cover parts for deformation × 1",
-			"Relay parts for riding × 1",
-			"Varnish tube × 2",
-			"Lead wire × 2",
-			"1 set of multi-joint ×"
+			"From the Earth Allied Forces, a large 30MM Examax with the largest scale in history is now available!",
+			"“Ride-on customization” that allows you to board existing items is possible!",
+			"• Impressive sense of scale with a total height of approximately 200mm!",
+			"• Equipped with a transformation gimmick that allows you to switch between ride-on form and REX form.",
+			"• In the ride-on form, the newly designed backpack and varnish tube that come with it can be connected to existing items for boarding.",
+			"• The attached large weapon can be disassembled and connected to the boarding section.",
+			"• The holding power of the arm and leg joints is improved by the sandwich structure. You can also create a 3mm axis by attaching the polycap that comes with the separately sold item.",
+			"• Comes with a Runner set that includes multi-joints essential for customization, such as 3mm joints, C-type joints, and detail cover parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"大型武器×１",
-			"ハンドパーツ　平手(左右)、握り手(左右)",
-			"搭乗機体用バックパック×１",
-			"変形時用カバーパーツ×１",
-			"ライド用中継パーツ×１",
-			"ワニスチューブ×２",
-			"リード線×２",
-			"マルチジョイント×1式",
-			"シール×１"
-		],
-		"en": [
-			"Large weapon x1",
-			"Hand parts Open hands (left and right), grip hands (left and right)",
-			"Backpack for boarding aircraft x 1",
-			"Cover parts for transformation x 1",
-			"Ride relay parts x 1",
-			"Varnish tube x 2",
-			"Lead wire x 2",
-			"Multi-joint x 1 set",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "大型武器×１",
+				"en": "Large weapon x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ　平手(左右)、握り手(左右)",
+				"en": "Hand parts Open hands (left and right), grip hands (left and right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "搭乗機体用バックパック×１",
+				"en": "Backpack for boarding aircraft x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "変形時用カバーパーツ×１",
+				"en": "Cover parts for transformation x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ライド用中継パーツ×１",
+				"en": "Ride relay parts x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ワニスチューブ×２",
+				"en": "Varnish tube x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "リード線×２",
+				"en": "Lead wire x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "マルチジョイント",
+				"en": "multi joint"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195249_1.jpg",
 				"path": "/images/items/01_4894/1000195249_1.jpg",
 				"hash": "cc5131c8c0ee34f004668e95431c9645"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195249_10.jpg",
-				"path": "/images/items/01_4894/1000195249_10.jpg",
-				"hash": "c037f4a720f8cc26da3cec8dce707e98"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195249_11.jpg",
-				"path": "/images/items/01_4894/1000195249_11.jpg",
-				"hash": "e7065a8654d2da4838414fd1cfa3620c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195249_12.jpg",
-				"path": "/images/items/01_4894/1000195249_12.jpg",
-				"hash": "ae74893d87ff126f879ef5c1154a0cc8"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195249_2.jpg",
@@ -132,15 +190,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195249_9.jpg",
 				"path": "/images/items/01_4894/1000195249_9.jpg",
 				"hash": "453f6fc7a96f5a0286a6016088bca176"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195249_10.jpg",
+				"path": "/images/items/01_4894/1000195249_10.jpg",
+				"hash": "c037f4a720f8cc26da3cec8dce707e98"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195249_11.jpg",
+				"path": "/images/items/01_4894/1000195249_11.jpg",
+				"hash": "e7065a8654d2da4838414fd1cfa3620c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195249_12.jpg",
+				"path": "/images/items/01_4894/1000195249_12.jpg",
+				"hash": "ae74893d87ff126f879ef5c1154a0cc8"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4894/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3762",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3762/"

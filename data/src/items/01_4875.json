@@ -5,6 +5,50 @@
 		"ja": "PG 1/60 MS-06F「ザクII」+ウエポンズ アニメーションカラーバージョン",
 		"en": "PG 1/60 MS-06F \"Zaku II\" + Weapons Animation color version"
 	},
+	"brands": [
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3373",
+			"url": "https://bandai-hobby.net/item/01_3373/",
+			"ja": "ＰＧ ＵＮＬＥＡＳＨＥＤ 1/60 RX-78-2 ガンダム クリアカラーボディ"
+		},
+		{
+			"id": "01_3328",
+			"url": "https://bandai-hobby.net/item/01_3328/",
+			"ja": "PG UNLEASHED 1/60 RX-78-2 ガンダム"
+		},
+		{
+			"id": "01_2829",
+			"url": "https://bandai-hobby.net/item/01_2829/",
+			"ja": "PG 1/60 ガンダムベース限定 RX-78-2 ガンダム [チタニウムフィニッシュ]"
+		},
+		{
+			"id": "01_1902",
+			"url": "https://bandai-hobby.net/item/01_1902/",
+			"ja": "PG 1/60 ガンダムベース限定 RX-78-3 G-3ガンダム [エクストラフィニッシュ]"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 14667,
 		"currency": "JPY",
@@ -18,33 +62,28 @@
 		"day": 30
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
-		"ja": ["「PG 1/60 MS-06F「ザクII」+ウエポンズ アニメーションカラーバージョン」登場！"],
-		"en": ["\"PG 1/60 MS-06F \" Zaku II \" + Weapons Animation Color Version\" now available!"]
+		"ja": [
+			"「PG 1/60 MS-06F「ザクII」+ウエポンズ アニメーションカラーバージョン」登場！"
+		],
+		"en": [
+			"\"PG 1/60 MS-06F \"Zaku II\" + Weapons Animation Color Version\" now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5754.jpg",
+				"src": "https://bandai-hobby.net/images/153_5754_s_nzxn6kc7o3w4q3zk775xaxtrou6z.jpg",
 				"path": "/images/items/01_4875/153_5754.jpg",
 				"hash": "897f3d9f248acdfef1d687e4af356b4b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5754.jpg",
+				"src": "https://bandai-hobby.net/images/155_5754_s_j5fmjp60l0bkukso0p30b4rsyli7.jpg",
 				"path": "/images/items/01_4875/155_5754.jpg",
 				"hash": "b1ee8e8c513cb021151678932b86502e"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4875/",
-	"brandIds": ["pg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_3373", "01_3328", "01_2829", "01_1902"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4875/"
 }

@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "マルチビルダーズランナースタンド",
-		"en": "MULTI BUILDERS RUNNER STAND"
+		"en": "Multi Builders Runner Stand"
 	},
+	"brands": [
+		{
+			"id": "tool",
+			"url": "https://bandai-hobby.net/brand/tool/",
+			"ja": "BANDAI SPIRITS ツール"
+		},
+		{
+			"id": "tool",
+			"url": "https://bandai-hobby.net/brand/tool/",
+			"ja": "BANDAI SPIRITS ツール"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4930",
+			"url": "https://bandai-hobby.net/item/01_4930/",
+			"ja": "マルチビルダーズケース"
+		},
+		{
+			"id": "01_4305",
+			"url": "https://bandai-hobby.net/item/01_4305/",
+			"ja": "BANDAI SPIRITS エントリーツールセット"
+		},
+		{
+			"id": "01_4101",
+			"url": "https://bandai-hobby.net/item/01_4101/",
+			"ja": "BANDAI SPIRITS パーツセパレーター"
+		},
+		{
+			"id": "01_3784",
+			"url": "https://bandai-hobby.net/item/01_3784/",
+			"ja": "BANDAI SPIRITS スティックヤスリセット"
+		}
+	],
 	"price": {
 		"amount": 385,
 		"currency": "JPY",
@@ -26,16 +68,20 @@
 			"• 折りたためるから作業が終わった後もコンパクトに収納可能。"
 		],
 		"en": [
-			"Two sets of papercraft runner stands are included, which can accommodate a large number of runners.",
-			"By leaning the runner against it, it saves space and is easy to distinguish, improving the efficiency of assembly work.",
-			"Since it can be folded, it can be stored compactly even after the work is completed. [Accessories]",
-			"Papercraft Runner Stand ×2"
+			"Introducing the papercraft-style \"Multi Builders Runner Stand\" that assists plastic model assembly!",
+			"• Comes with 2 sets of papercraft style runner stands that can accommodate multiple runners.",
+			"• By leaning the Runner up, it saves space and is easy to distinguish, increasing the efficiency of assembly work.",
+			"• It can be folded so it can be stored compactly even after work is finished."
 		]
 	},
-	"accessories": {
-		"ja": ["ペーパークラフト式ランナースタンド×２"],
-		"en": ["Paper craft type Runner stand x 2"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ペーパークラフト式ランナースタンド×２",
+				"en": "Paper craft type Runner stand x 2"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -61,9 +107,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4931/",
-	"brandIds": ["tool"],
-	"seriesIds": [],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_4930", "01_4305", "01_4101", "01_3784"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4931/"
 }

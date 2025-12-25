@@ -5,6 +5,50 @@
 		"ja": "HGUC 1/144 MS-06S シャア専用ザク エクストラフィニッシュバージョン",
 		"en": "HGUC 1/144 MS-06S Char's Zaku Extra Finish Version"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2095,
 		"currency": "JPY",
@@ -18,38 +62,33 @@
 		"day": 25
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["「HGUC 1/144 MS-06S シャア専用ザク エクストラフィニッシュバージョン」登場！"],
-		"en": ["\"HGUC 1/144 MS-06S Char's Zaku Extra Finish Version\" now available!"]
+		"ja": [
+			"「HGUC 1/144 MS-06S シャア専用ザク エクストラフィニッシュバージョン」登場！"
+		],
+		"en": [
+			"\"HGUC 1/144 MS-06S Char's Zaku Extra Finish Version\" now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5731.jpg",
+				"src": "https://bandai-hobby.net/images/153_5731_s_avtrbdiquy4f0l8gegzz3ivkit3c.jpg",
 				"path": "/images/items/01_4851/153_5731.jpg",
 				"hash": "fa6579ffee6e75014af3d85ad5dddd53"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5731.jpg",
+				"src": "https://bandai-hobby.net/images/155_5731_s_59gvflti04ows44ovy7u8w2xyvgx.jpg",
 				"path": "/images/items/01_4851/155_5731.jpg",
 				"hash": "4e6ba118d482a10d1977ceb86b2436bb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5731.jpg",
+				"src": "https://bandai-hobby.net/images/156_5731_s_ql9gupkuhgtx72r0cy2zbnnad3uh.jpg",
 				"path": "/images/items/01_4851/156_5731.jpg",
 				"hash": "0c17193904a0ef8357a20ebe2fa66b5e"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4851/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4851/"
 }

@@ -5,6 +5,48 @@
 		"ja": "カスタマイズウェポンズ(ヘビーウェポン 1)",
 		"en": "Customized Weapons (Heavy Weapon 1)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6774",
+			"url": "https://bandai-hobby.net/item/01_6774/",
+			"ja": "30MM 1/144 エグザビークル(ブーストワイルドバイクVer.)"
+		},
+		{
+			"id": "01_6775",
+			"url": "https://bandai-hobby.net/item/01_6775/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON ARQUEBUS ADD VE-40A"
+		},
+		{
+			"id": "01_6766",
+			"url": "https://bandai-hobby.net/item/01_6766/",
+			"ja": "30MM 1/144 EXM-X20B レヴィニクス(TYPE-B)"
+		},
+		{
+			"id": "01_6767",
+			"url": "https://bandai-hobby.net/item/01_6767/",
+			"ja": "30MM 1/144 オプションパーツセット22(ウィングユニット2)"
+		}
+	],
 	"price": {
 		"amount": 968,
 		"currency": "JPY",
@@ -34,24 +76,50 @@
 			"• The large Seal can store the separately sold \"30MM 1/144 eEXM GIG-R01 Provedel (type-REX 01)\" armament."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"キャノン×２",
-			"ミサイルポッド×２",
-			"バックパック×1",
-			"大型ソード(ハンドブレード＋ショートアックス)×１",
-			"大型シールド×１",
-			"ジョイントパーツ×1式"
-		],
-		"en": [
-			"Cannon x 2",
-			"Missile pod x 2",
-			"Backpack x 1",
-			"Large sword (hand blade + short ax) x 1",
-			"Large Seal × 1",
-			"Joint parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "キャノン×２",
+				"en": "Cannon x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "ミサイルポッド×２",
+				"en": "Missile pod x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "バックパック",
+				"en": "backpack"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "大型ソード(ハンドブレード＋ショートアックス)×１",
+				"en": "Large sword (hand blade + short ax) x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "大型シールド×１",
+				"en": "Large Seal × 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -103,10 +171,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4909/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_6774", "01_6775", "01_6766", "01_6767"],
 	"manual": {
 		"id": "3763",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3763/"

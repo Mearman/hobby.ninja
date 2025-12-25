@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "HG ギルボウ",
-		"en": "HG GILBOW"
+		"en": "HG Gilbou"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "synduality",
+			"url": "https://bandai-hobby.net/series/synduality/",
+			"ja": "SYNDUALITY(シンデュアリティ)"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5069",
+			"url": "https://bandai-hobby.net/item/01_5069/",
+			"ja": "HG デイジーオーガ アルター"
+		},
+		{
+			"id": "01_4904",
+			"url": "https://bandai-hobby.net/item/01_4904/",
+			"ja": "HG デイジーオーガ"
+		}
+	],
 	"price": {
 		"amount": 4620,
 		"currency": "JPY",
@@ -22,70 +55,83 @@
 		"ja": [
 			"人とAIの“すれ違い”をテーマに挑む新規SFプロジェクト『SYNDUALITY』が本格始動！",
 			"2023年放送開始予定のTVアニメ『SYNDUALITY』から、謎の男“黒仮面”が搭乗する「ギルボウ」が特徴的な武装や多彩なギミックを搭載し、HGシリーズで最速立体化！",
-			"■細部までディテールを造形されたコックピットとコフィンはスライド・オープンギミックを搭載。黒仮面とシュネーのフィギュアが付属し搭乗状態を再現できる。",
-			"■腕部の「エネルギー・インパクト・ブレード」と「ミサイルポッド」は展開が可能。",
-			"■特徴的な脚部には複数の可動軸を内蔵。劇中のホバー状態を再現できる脚部形態変形用パーツも付属。",
-			"■ディスプレイ台座が付属しアクションポーズをサポート。",
-			"■印象的なマーキングを再現できるシールが付属。"
+			"• 細部までディテールを造形されたコックピットとコフィンはスライド・オープンギミックを搭載。黒仮面とシュネーのフィギュアが付属し搭乗状態を再現できる。",
+			"• 腕部の「エネルギー・インパクト・ブレード」と「ミサイルポッド」は展開が可能。",
+			"• 特徴的な脚部には複数の可動軸を内蔵。劇中のホバー状態を再現できる脚部形態変形用パーツも付属。",
+			"• ディスプレイ台座が付属しアクションポーズをサポート。",
+			"• 印象的なマーキングを再現できるシールが付属。"
 		],
 		"en": [
-			"The cockpit and coffin, which have been crafted to the smallest detail, are equipped with a slide-open gimmick. A black mask and a figure of Schnee are included, and the boarding state can be reproduced.",
-			"The \"Energy Impact Blade\" and \"Missile Pod\" on the arm can be deployed.",
-			"Distinctive legs have multiple built-in moving axes. Parts for leg form transformation that can reproduce the hover state in the play are also included.",
-			"Comes with a display pedestal to support action poses.",
-			"Comes with a sticker that can reproduce impressive markings.[Accessories]",
-			"Blade Effect × 1",
-			"Missile Pod × 1",
-			"1 set × hand parts",
-			"1 set × parts for leg form deformation",
-			"Display pedestal× 1",
-			"2 types of figures × (black mask, schnee)",
-			"2 types of stickers ×"
+			"A new science fiction project “SYNDUALITY” that challenges the theme of “passing each other” between humans and AI has started in earnest!",
+			"From the TV anime \"SYNDUALITY\" scheduled to start broadcasting in 2023, \"Gilbow\" piloted by the mysterious man \"Black Mask\" is equipped with distinctive weapons and various gimmicks, and is the fastest in the HG series to become three-dimensional!",
+			"• The cockpit and coffin are sculpted with great detail and are equipped with a slide/open gimmick. Black mask and Schnee figures are included, allowing you to recreate the riding state.",
+			"• The \"Energy Impact Blade\" and \"Missile Pod\" on the arm can be expanded.",
+			"• The unique legs have multiple movable axes. Parts for changing the shape of the legs are also included to recreate the hover state from the movie.",
+			"• A display pedestal is included to support action poses.",
+			"• Comes with a seal that can reproduce impressive markings."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ライフル×１",
-			"ブレードエフェクト×１",
-			"ミサイルポッド×１",
-			"ハンドパーツ×１式",
-			"脚部形態変形用パーツ×1式",
-			"ディスプレイ台座×１",
-			"フィギュア×２種(黒仮面、シュネー)",
-			"シール×２種"
-		],
-		"en": [
-			"Rifle x 1",
-			"Blade effect x1",
-			"Missile pod x1",
-			"Hand parts x 1 set",
-			"Leg shape transformation parts x 1 set",
-			"Display pedestal x 1",
-			"Figure x 2 types (Black Mask, Schnee)",
-			"Seal x 2 types"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ライフル×１",
+				"en": "Rifle x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ブレードエフェクト×１",
+				"en": "Blade effect x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ミサイルポッド×１",
+				"en": "Missile pod x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "脚部形態変形用パーツ",
+				"en": "Leg shape transformation parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座×１",
+				"en": "Display pedestal x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "フィギュア×２種(黒仮面、シュネー)",
+				"en": "Figure x 2 types (Black Mask, Schnee)"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×２種",
+				"en": "Seal x 2 types"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195269_1.jpg",
 				"path": "/images/items/01_4921/1000195269_1.jpg",
 				"hash": "56291e82fa401c7a8475f91036bfd4aa"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195269_10.jpg",
-				"path": "/images/items/01_4921/1000195269_10.jpg",
-				"hash": "6d84a28234331e867e18ef634616ff5b"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195269_11.jpg",
-				"path": "/images/items/01_4921/1000195269_11.jpg",
-				"hash": "cb0ebfc3f840dc5bba1daac957979a03"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195269_12.jpg",
-				"path": "/images/items/01_4921/1000195269_12.jpg",
-				"hash": "76ddb2c5e3190fea25c73493be07c684"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195269_2.jpg",
@@ -126,13 +172,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195269_9.jpg",
 				"path": "/images/items/01_4921/1000195269_9.jpg",
 				"hash": "4667c2a15714bf4acfbcd41887924a61"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195269_10.jpg",
+				"path": "/images/items/01_4921/1000195269_10.jpg",
+				"hash": "6d84a28234331e867e18ef634616ff5b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195269_11.jpg",
+				"path": "/images/items/01_4921/1000195269_11.jpg",
+				"hash": "cb0ebfc3f840dc5bba1daac957979a03"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195269_12.jpg",
+				"path": "/images/items/01_4921/1000195269_12.jpg",
+				"hash": "76ddb2c5e3190fea25c73493be07c684"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4921/",
-	"brandIds": ["hg"],
-	"seriesIds": ["synduality"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5069", "01_4904"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4921/"
 }

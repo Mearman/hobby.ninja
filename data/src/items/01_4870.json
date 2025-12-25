@@ -5,6 +5,45 @@
 		"ja": "PG 1/60 RX-178 ガンダム Mk-II マルチコーティングバージョン",
 		"en": "PG 1/60 RX-178 Gundam Mk-II multi-coated version"
 	},
+	"brands": [
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4475",
+			"url": "https://bandai-hobby.net/item/01_4475/",
+			"ja": "PG 1/60 MSZ-006 ゼータガンダム"
+		},
+		{
+			"id": "01_1417",
+			"url": "https://bandai-hobby.net/item/01_1417/",
+			"ja": "PG 1/60 ガンダムMk-II"
+		},
+		{
+			"id": "01_1832",
+			"url": "https://bandai-hobby.net/item/01_1832/",
+			"ja": "PG 1/60 ガンダムMk-II(ティターンズカラー)"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 31428,
 		"currency": "JPY",
@@ -18,28 +57,23 @@
 		"day": 1
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
-		"ja": ["「PG 1/60 RX-178 ガンダム Mk-II マルチコーティングバージョン」登場！"],
-		"en": ["\"PG 1/60 RX-178 Gundam Mk-II Multi-Coated Version\" now available!"]
+		"ja": [
+			"「PG 1/60 RX-178 ガンダム Mk-II マルチコーティングバージョン」登場！"
+		],
+		"en": [
+			"\"PG 1/60 RX-178 Gundam Mk-II Multi-Coated Version\" now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5749.jpg",
+				"src": "https://bandai-hobby.net/images/153_5749_s_8b2ncbb2xdr89fy2cknt4nifngwn.jpg",
 				"path": "/images/items/01_4870/153_5749.jpg",
 				"hash": "d0d3f70734480ab39fc5762fcb4e9956"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4870/",
-	"brandIds": ["pg"],
-	"seriesIds": ["z-gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4475", "01_1417", "01_1832"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4870/"
 }

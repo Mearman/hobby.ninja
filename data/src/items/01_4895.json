@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MS オプションヘアスタイルパーツVol.8 全4種 ツインテ―ル6[イエロー1]",
-		"en": "30MS OPTION HAIR STYLE PARTS Vol.8 ALL 4 TYPES PIGTAILS 6 [YELLOW 1]"
+		"en": "30MS Option Hairstyle Parts Vol.8 4 types in total Twintails 6 [Yellow 1]"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5975",
+			"url": "https://bandai-hobby.net/item/01_5975/",
+			"ja": "30MS 和泉愛依"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5954",
+			"url": "https://bandai-hobby.net/item/01_5954/",
+			"ja": "30MS オプションヘアスタイルパーツVol.12 全4種 ミディアムヘア2[イエロー4]"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -21,38 +63,43 @@
 	"description": {
 		"ja": [
 			"30MS素体との組み合わせで世界観が広がる！新しいオプションヘアスタイルパーツがラインアップ！",
-			"■イエローのツインテール。",
-			"■パーツの差し替えでヘアスタイルとヘアカラーを自分の好みに合わせてキャラメイキング。"
+			"• イエローのツインテール。",
+			"• パーツの差し替えでヘアスタイルとヘアカラーを自分の好みに合わせてキャラメイキング。"
 		],
 		"en": [
-			"Yellow twin tails.",
-			"Character-making according to your own taste by replacing parts.[Accessories]",
-			"Hairstyle parts × 1"
+			"The world view expands when combined with the 30MS body! New optional hairstyle parts are now available!",
+			"• Yellow twintails.",
+			"• Create your character by changing the hair style and hair color to your liking by replacing parts."
 		]
 	},
-	"accessories": {
-		"ja": ["ヘアスタイルパーツ×1"],
-		"en": ["Hair style parts x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヘアスタイルパーツ",
+				"en": "hairstyle parts"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5772.jpg",
+				"src": "https://bandai-hobby.net/images/153_5772_o_1i6mh2iekjcbr6op6n1dgrdi32n.jpg",
 				"path": "/images/items/01_4895/153_5772.jpg",
 				"hash": "580c8a68cfa9eaf9b91fd84beaca4fc0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5772.jpg",
+				"src": "https://bandai-hobby.net/images/155_5772_o_1i6mh2c69b8untc106e9tb1n9i2d.jpg",
 				"path": "/images/items/01_4895/155_5772.jpg",
 				"hash": "963bfc69b9d68559fbe29492ddf9a547"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5772.jpg",
+				"src": "https://bandai-hobby.net/images/156_5772_o_1i6mh27l8vmj4oj1t7pe8k1tmq28.jpg",
 				"path": "/images/items/01_4895/156_5772.jpg",
 				"hash": "999279df40101b9a20ac94f7c132904e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5772.jpg",
+				"src": "https://bandai-hobby.net/images/157_5772_o_1i6mh22uu1boi10eh1h483ucpa823.jpg",
 				"path": "/images/items/01_4895/157_5772.jpg",
 				"hash": "f55e0de498a34def9d7a63a208c2b3f8"
 			}
@@ -60,10 +107,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4895/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3497",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3497/"
