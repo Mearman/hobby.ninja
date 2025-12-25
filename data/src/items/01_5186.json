@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "HG Amplified IMGN 龍王丸",
-		"en": "HG Amplified IMGN RYUOUMARU"
+		"en": "HG Amplified IMGN Ryuomaru"
 	},
+	"brands": [
+		{
+			"id": "hgamplifiedimgn",
+			"url": "https://bandai-hobby.net/brand/hgamplifiedimgn/",
+			"ja": "HG Amplified IMGN"
+		}
+	],
+	"series": [
+		{
+			"id": "wataru",
+			"url": "https://bandai-hobby.net/series/wataru/",
+			"ja": "ワタルシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000195652",
+			"url": "https://p-bandai.jp/item/item-1000195652/",
+			"ja": "HG Amplified IMGN 空神丸"
+		},
+		{
+			"id": "01_4169",
+			"url": "https://bandai-hobby.net/item/01_4169/",
+			"ja": "HG Amplified IMGN 龍神丸"
+		}
+	],
 	"price": {
 		"amount": 6600,
 		"currency": "JPY",
@@ -33,10 +66,10 @@
 			"• ディスプレイ用の台座も付属。"
 		],
 		"en": [
-			"From \"Mashin Hero Wataru \", \" Ryuomaru\" with a tall head and body arrangement based on the plastic model's original interpretation is now three-dimensional with HG Amplified IMGN!",
+			"From \"Mashin Hero Wataru\", \"Ryuomaru\" with a tall head and body arrangement based on the plastic model's original interpretation is now three-dimensional with HG Amplified IMGN!",
 			"“Amplify” Ryuomaru’s charm with actions unique to his tall body and transformation into Houou form!",
-			"• \"HG Amplified IMGN \" is a series that imagines new arrangements based on the product concept of plastic models and \" amplifies\" the charm of the characters.",
-			"• Powerful action with a total length of approximately 170mm! Actions that take advantage of the long limbs unique to his tall head and body “amplify” Ryuomaru’s new charm!",
+			"• \"HG Amplified IMGN\" is a series that imagines new arrangements based on the product concept of plastic models and \"amplifies\" the charm of the characters.",
+			"• Powerful action with a total length of approximately 170mm! Actions that take advantage of the long limbs unique to his tall head “amplify” Ryuomaru’s new charm!",
 			"• The forehead can be reproduced by selecting whether or not there is a pattern.",
 			"• Adopts gloss injection molding and gold plated parts. Expressing a vivid texture with high-density modeling.",
 			"• The blade of the Horyuken is gold plated. The original design pattern is reproduced with 3D metallic seal.",
@@ -46,47 +79,67 @@
 			"• A pedestal for display is also included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"鳳龍剣×1",
-			"鞘盾×1",
-			"エフェクト用PET シート×1式",
-			"台座×1",
-			"台座用ジョイントパーツ×1",
-			"シール×1",
-			"3Dメタリックシール×1"
-		],
-		"en": [
-			"Phoenix Dragon Sword x1",
-			"Scabbard shield x1",
-			"Effect PET sheet x 1 set",
-			"Pedestal x 1",
-			"Joint parts for pedestal x 1",
-			"Seal×1",
-			"3D metallic seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "鳳龍剣",
+				"en": "Horyuken"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "鞘盾",
+				"en": "scabbard shield"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "エフェクト用PET シート",
+				"en": "PET sheet for effects"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "台座用ジョイントパーツ",
+				"en": "Joint parts for pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "3Dメタリックシール",
+				"en": "3D Metallic Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000206422_1.jpg",
 				"path": "/images/items/01_5186/1000206422_1.jpg",
 				"hash": "3e545697c82f47910edbccaa15458221"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000206422_10.jpg",
-				"path": "/images/items/01_5186/1000206422_10.jpg",
-				"hash": "71871e7eb3d7d331c3e49f0fd8a8a2cf"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000206422_11.jpg",
-				"path": "/images/items/01_5186/1000206422_11.jpg",
-				"hash": "43d0f11aaac05a78f7679e5493fc1009"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000206422_12.jpg",
-				"path": "/images/items/01_5186/1000206422_12.jpg",
-				"hash": "c59cec5753fea49de8572f7da3465dbe"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000206422_2.jpg",
@@ -127,13 +180,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000206422_9.jpg",
 				"path": "/images/items/01_5186/1000206422_9.jpg",
 				"hash": "d21d0a7be1d312eab6164b4d636a8a9b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000206422_10.jpg",
+				"path": "/images/items/01_5186/1000206422_10.jpg",
+				"hash": "71871e7eb3d7d331c3e49f0fd8a8a2cf"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000206422_11.jpg",
+				"path": "/images/items/01_5186/1000206422_11.jpg",
+				"hash": "43d0f11aaac05a78f7679e5493fc1009"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000206422_12.jpg",
+				"path": "/images/items/01_5186/1000206422_12.jpg",
+				"hash": "c59cec5753fea49de8572f7da3465dbe"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5186/",
-	"brandIds": ["hgamplifiedimgn"],
-	"seriesIds": ["wataru"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["item-1000195652", "01_4169"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5186/"
 }

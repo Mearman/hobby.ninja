@@ -5,6 +5,54 @@
 		"ja": "ＭＧ 1/100 モビルジン(ミゲル・アイマン専用機)",
 		"en": "MG 1/100 Mobile Jin (Miguel Ayman exclusive machine)"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "item-1000220190",
+			"url": "https://p-bandai.jp/item/item-1000220190/",
+			"ja": "ＨＧ 1/144 ザク・デザートタイプ ピンクパンサー隊機"
+		},
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "item-1000216105",
+			"url": "https://p-bandai.jp/item/item-1000216105/",
+			"ja": "RG 1/144 ソードインパルスガンダムＳｐｅｃＩＩ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5390,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 4
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -59,7 +106,7 @@
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"- Twilight Magic Bullet - Appears in MG!",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
-			"From \"Mobile Suit Gundam SEED MSV \", the Mobile Jin piloted by Miguel Ayman, also known as the \" Twilight Magic Bullet\", is now available in Master Grade!",
+			"From \"Mobile Suit GundamSEED MSV\", the Mobile Jin piloted by Miguel Ayman, also known as the \"Twilight Magic Bullet\", is now available in Master Grade!",
 			"New special seals and water slide decals are included!",
 			"● Reproduce Miguel Ayman's special machine",
 			"The characteristic orange coloring is reproduced with molded color, and a newly molded seal is included.",
@@ -72,7 +119,7 @@
 			"Attached weapons: 76mm heavy assault machine gun / heavy sword / missile pod x 2 / Seal de",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/100 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS",
 			"・No adhesive is used in the assembly.",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -92,59 +139,81 @@
 			"・Product specifications are as of 20241. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["76mm重突撃機銃", "重斬刀", "ミサイルポッド×２", "シールド"],
-		"en": ["76mm heavy assault machine gun", "heavy sword", "Missile pod x 2", "Seal de"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "76mm重突撃機銃",
+				"en": "76mm heavy assault machine gun"
+			}
+		},
+		{
+			"name": {
+				"ja": "重斬刀",
+				"en": "heavy sword"
+			}
+		},
+		{
+			"name": {
+				"ja": "ミサイルポッド×２",
+				"en": "Missile pod x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6068.jpg",
+				"src": "https://bandai-hobby.net/images/153_6068_s_317yz2ycad0kwvpk4w8mwyuly5rg.jpg",
 				"path": "/images/items/01_5212/153_6068.jpg",
 				"hash": "9ca2b18117b00c79ceafa1488ddc4919"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6068.jpg",
+				"src": "https://bandai-hobby.net/images/155_6068_s_lprxvdjao5a5d8z7at7rhr3muwrs.jpg",
 				"path": "/images/items/01_5212/155_6068.jpg",
 				"hash": "d35759fba4f8ecd867b4377c56fa809c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6068.jpg",
+				"src": "https://bandai-hobby.net/images/156_6068_s_sb4voybi9r65dol6cwgm37qtgc9v.jpg",
 				"path": "/images/items/01_5212/156_6068.jpg",
 				"hash": "9788dd152ab62a730e8e19cc4972ccb9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6068.jpg",
+				"src": "https://bandai-hobby.net/images/157_6068_s_0xxfqzfhr4s5d7xvo826i2bzf72j.jpg",
 				"path": "/images/items/01_5212/157_6068.jpg",
 				"hash": "c9e37572f0553bf04d31a4d38292042c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6068.jpg",
+				"src": "https://bandai-hobby.net/images/158_6068_s_oqc9umx5juunfv8zj50jmvqrvz13.jpg",
 				"path": "/images/items/01_5212/158_6068.jpg",
 				"hash": "d5b018ebd9b871fe7ba3110b71e7fc80"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6068.jpg",
+				"src": "https://bandai-hobby.net/images/159_6068_s_a94d1goue58rt7vharn2wi6fqjmd.jpg",
 				"path": "/images/items/01_5212/159_6068.jpg",
 				"hash": "30e197911d2a0ddfc2ebc564a3642450"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6068.jpg",
+				"src": "https://bandai-hobby.net/images/189_6068_s_erve8uagnxmahktqh7p8rrbg1ari.jpg",
 				"path": "/images/items/01_5212/189_6068.jpg",
 				"hash": "1681df65c72ee506c27ed2b2b868b1c0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6068.jpg",
+				"src": "https://bandai-hobby.net/images/190_6068_s_wdany52yzoc10ts1vdqagmva5ve2.jpg",
 				"path": "/images/items/01_5212/190_6068.jpg",
 				"hash": "3408266270ed0cd9cbdafadac5613e9a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6068.jpg",
+				"src": "https://bandai-hobby.net/images/191_6068_s_maym3mqit2cbzmwqtivtdiz9q3x1.jpg",
 				"path": "/images/items/01_5212/191_6068.jpg",
 				"hash": "14729e3363cb8df74c17b9a95980f84a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_6068.jpg",
+				"src": "https://bandai-hobby.net/images/192_6068_s_csef1mfq5ucua9fug3ujx5lxe6mt.jpg",
 				"path": "/images/items/01_5212/192_6068.jpg",
 				"hash": "5ceb989fd966d2d45b9135056c454035"
 			}
@@ -152,14 +221,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5212/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5994", "item-1000220190", "item-1000220189", "item-1000216105"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2471",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2471/"

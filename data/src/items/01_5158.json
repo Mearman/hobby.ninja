@@ -5,6 +5,55 @@
 		"ja": "ＨＧ 1/72 ビランビー",
 		"en": "HG 1/72 Birambee"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		},
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dunbine",
+			"url": "https://bandai-hobby.net/series/dunbine/",
+			"ja": "聖戦士ダンバイン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000203131",
+			"url": "https://p-bandai.jp/item/item-1000203131/",
+			"ja": "HG 1/72 トカマクダンバイン"
+		},
+		{
+			"id": "item-1000217021",
+			"url": "https://p-bandai.jp/item/item-1000217021/",
+			"ja": "聖戦士ダンバインセット１"
+		},
+		{
+			"id": "item-1000211055",
+			"url": "https://p-bandai.jp/item/item-1000211055/",
+			"ja": "ＨＧ 1/72 サーバイン [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000194225",
+			"url": "https://p-bandai.jp/item/item-1000194225/",
+			"ja": "HG 1/72 ダンバイン"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -17,7 +66,6 @@
 		"month": 2
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -102,7 +150,7 @@
 			"Attached weapons: Aura sword / 4-shot aura shot / 5-shot aura launcher x 2 / Shot claw with wire x 2",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/72 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Main product material: PS/PVC",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -122,72 +170,86 @@
 			"・Product specifications are as of 202311. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["オーラ・ソード", "４連オーラ・ショット", "５連装オーラ・ランチャー×２", "ワイヤー付きショット・クロー×２"],
-		"en": ["aura sword", "4 consecutive aura shots", "5-barreled aura launcher x 2", "Shot claw with wire x 2"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "オーラ・ソード",
+				"en": "aura sword"
+			}
+		},
+		{
+			"name": {
+				"ja": "４連オーラ・ショット",
+				"en": "4 consecutive aura shots"
+			}
+		},
+		{
+			"name": {
+				"ja": "５連装オーラ・ランチャー×２",
+				"en": "5-barreled aura launcher x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "ワイヤー付きショット・クロー×２",
+				"en": "Shot claw with wire x 2"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6016.jpg",
+				"src": "https://bandai-hobby.net/images/153_6016_s_7443qixqodrvxf99nujgc05r9ots.jpg",
 				"path": "/images/items/01_5158/153_6016.jpg",
 				"hash": "e16c676d45f1fc8c412f7dadcb5c6760"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6016.jpg",
+				"src": "https://bandai-hobby.net/images/155_6016_s_ufj81fpup5eqx7qd5oele6a5ua5u.jpg",
 				"path": "/images/items/01_5158/155_6016.jpg",
 				"hash": "71e44a23d40f0ce267fca517f13c8aaa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6016.jpg",
+				"src": "https://bandai-hobby.net/images/156_6016_s_qygkml4iy9frppxprlpjyqcoou7n.jpg",
 				"path": "/images/items/01_5158/156_6016.jpg",
 				"hash": "36e8c65a6dd0586feeacbc0b5df3c978"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6016.jpg",
+				"src": "https://bandai-hobby.net/images/157_6016_s_4yk5ggjsecsjuexjsnhcuzr7pdew.jpg",
 				"path": "/images/items/01_5158/157_6016.jpg",
 				"hash": "f581a780107179055187d6a533c4bb60"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6016.jpg",
+				"src": "https://bandai-hobby.net/images/158_6016_s_057ge187atm8aj333eq7gmwujlm4.jpg",
 				"path": "/images/items/01_5158/158_6016.jpg",
 				"hash": "822c385f8b75be417a04416df9590613"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6016.jpg",
+				"src": "https://bandai-hobby.net/images/159_6016_s_lviz2iy8uryws8hn6fzd8jg0lvdm.jpg",
 				"path": "/images/items/01_5158/159_6016.jpg",
 				"hash": "c95426074ea7f1339c43ca986a21be21"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6016.jpg",
+				"src": "https://bandai-hobby.net/images/189_6016_s_f72q6rfp06ff2p8qex9h2bn1t30t.jpg",
 				"path": "/images/items/01_5158/189_6016.jpg",
 				"hash": "044f531bea85157c23a2542b41c0643a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6016.jpg",
+				"src": "https://bandai-hobby.net/images/190_6016_s_s09vz4lfo1zbanxvyjp1waldgsll.jpg",
 				"path": "/images/items/01_5158/190_6016.jpg",
 				"hash": "084c9cbc4893fcd942ca15f614406847"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6016.jpg",
+				"src": "https://bandai-hobby.net/images/191_6016_s_igdtdaev21zedyga91rhlnm0oq1l.jpg",
 				"path": "/images/items/01_5158/191_6016.jpg",
 				"hash": "69d3ec7080cd0ef8aaa4e0bd87ea2335"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_6016.jpg",
+				"src": "https://bandai-hobby.net/images/192_6016_s_91bi172mv8goj203eh142ku5psgz.jpg",
 				"path": "/images/items/01_5158/192_6016.jpg",
 				"hash": "9aa1ddd19a7a8b343306d3c50cf724ae"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5158/",
-	"brandIds": ["pb_charapla", "hg"],
-	"seriesIds": ["dunbine"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["item-1000203131", "item-1000217021", "item-1000211055", "item-1000194225"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5158/"
 }

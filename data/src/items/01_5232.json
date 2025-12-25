@@ -3,8 +3,61 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 デュエルブリッツガンダム",
-		"en": "HG 1/144 DUEL BLITZ GUNDAM"
+		"en": "HG 1/144 Duel Blitz Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hgce",
+			"url": "https://bandai-hobby.net/brand/hgce/",
+			"ja": "HG COSMIC ERA"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-freedom",
+			"url": "https://bandai-hobby.net/series/seed-freedom/",
+			"ja": "機動戦士ガンダムSEED FREEDOM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5452",
+			"url": "https://bandai-hobby.net/item/01_5452/",
+			"ja": "HG 1/144 ズゴック(SEED FREEDOM Ver.)"
+		},
+		{
+			"id": "01_5374",
+			"url": "https://bandai-hobby.net/item/01_5374/",
+			"ja": "HG 1/144 デスティニーガンダムSpecII&ゼウスシルエット"
+		},
+		{
+			"id": "01_5363",
+			"url": "https://bandai-hobby.net/item/01_5363/",
+			"ja": "HG 1/144 ブラックナイトスコードカルラ"
+		},
+		{
+			"id": "01_5362",
+			"url": "https://bandai-hobby.net/item/01_5362/",
+			"ja": "HG 1/144 ムラサメ改"
+		}
+	],
+	"manual": {
+		"id": "1651",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1651"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 2970,
 		"currency": "JPY",
@@ -18,11 +71,10 @@
 		"day": 20
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED FREEDOM』にて、イザーク・ジュールが駆る「デュエルブリッツガンダム」をHGで立体化！",
-			"• 「機動戦士ガンダム SEEDシリーズ」で印象的なアクションポーズ再現に特化した内部構造「SEEDアクションシステム」を搭載。",
+			"『機動戦士ガンダムSEED FREEDOM』にて、イザーク・ジュールが駆る「デュエルブリッツガンダム」をHGで立体化！",
+			"• 「機動戦士ガンダムSEEDシリーズ」で印象的なアクションポーズ再現に特化した内部構造「SEEDアクションシステム」を搭載。",
 			"• 両脚の股関節の接続軸が左右別々で上下にスライド可動することで、大胆なアクションポーズにも対応。",
 			"• 全身を覆う装甲「アサルトシュラウド」は着脱式。",
 			"• 左右の腕には、「グレイプニール」「ランサーダート」をそれぞれ装備。ランサーダートは取り外し、手持ちの武器として保持することができる。グレイプニールはリード線が付属し射出状態を再現可能。",
@@ -30,46 +82,65 @@
 			"• 全身の細かな色分けはパーツの分割により再現。"
 		],
 		"en": [
-			"The \"Duel Blitz Gundam \" driven by Isaac Joule from \" Mobile Suit Gundam SEED FREEDOM\" is made into a three-dimensional HG!",
-			"• Equipped with the internal structure \"SEED Action System \" specialized for reproducing impressive action poses from \" Mobile Suit Gundam SEED Series\".",
+			"The \"Duel Blitz Gundam\" driven by Isaac Joule from \"Mobile Suit GundamSEED FREEDOM\" is made into a three-dimensional HG!",
+			"• Equipped with the internal structure \"SEED Action System\" that specializes in reproducing impressive action poses from the \"Mobile Suit Gundam SEED Series\".",
 			"• The connecting shafts of the hip joints of both legs can be moved up and down separately, allowing for bold action poses.",
 			"• The armor \"assault shroud\" that covers the entire body is removable.",
-			"• Equipped with \"Grape Neil \" and \" Lancer Dart\" on the left and right arms. The Lancer Dart can be removed and kept as a handheld weapon. Grape Neil comes with a lead wire and can reproduce the injection state.",
+			"• Equipped with \"Grape Neil\" and \"Lancer Dart\" on the left and right arms. The Lancer Dart can be removed and kept as a handheld weapon. Grape Neil comes with a lead wire and can reproduce the injection state.",
 			"• Comes with a pedestal to maintain Gleipnir's claw injection state.",
 			"• Detailed color coding of the whole body is reproduced by dividing the parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ライフル×１",
-			"グレイプニール×１",
-			"グレイプニール用台座×１",
-			"ランサーダート×１式",
-			"ビームサーベル×２",
-			"リード線×１",
-			"シール×１"
-		],
-		"en": [
-			"Rifle x 1",
-			"Grape Neil x1",
-			"Pedestal for Grape Neil x 1",
-			"Lancer dart x 1 type",
-			"Beam saber x2",
-			"Lead wire x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ライフル×１",
+				"en": "Rifle x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "グレイプニール×１",
+				"en": "Grape Neil x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "グレイプニール用台座×１",
+				"en": "Pedestal for Grape Neil x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ランサーダート×１式",
+				"en": "Lancer dart x 1 type"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル×２",
+				"en": "Beam saber x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "リード線×１",
+				"en": "Lead wire x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209846_1.jpg",
 				"path": "/images/items/01_5232/1000209846_1.jpg",
 				"hash": "e0c4b46a3d1b916e81f668df2b56f09c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209846_10.jpg",
-				"path": "/images/items/01_5232/1000209846_10.jpg",
-				"hash": "91c58c3cb582ee2e55344d892f831c5a"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209846_2.jpg",
@@ -110,17 +181,14 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209846_9.jpg",
 				"path": "/images/items/01_5232/1000209846_9.jpg",
 				"hash": "5971a70da523dd2b6c4ef32606e6a10e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209846_10.jpg",
+				"path": "/images/items/01_5232/1000209846_10.jpg",
+				"hash": "91c58c3cb582ee2e55344d892f831c5a"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5232/",
-	"brandIds": ["hg", "hgce"],
-	"seriesIds": ["seed-freedom"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5452", "01_5374", "01_5363", "01_5362"],
-	"manual": {
-		"id": "1651",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1651/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5232/"
 }

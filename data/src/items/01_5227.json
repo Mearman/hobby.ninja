@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MS オプションヘアスタイルパーツVol.10 全4種 ミディアムヘア3[ホワイト1]",
-		"en": "30MS OPTION HAIR STYLE PARTS Vol.10 ALL 4 TYPES MEDIUM HAIR 3 [WHITE 1]"
+		"en": "30MS Option Hairstyle Parts Vol.10 All 4 types Medium Hair 3 [White 1]"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5975",
+			"url": "https://bandai-hobby.net/item/01_5975/",
+			"ja": "30MS 和泉愛依"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5954",
+			"url": "https://bandai-hobby.net/item/01_5954/",
+			"ja": "30MS オプションヘアスタイルパーツVol.12 全4種 ミディアムヘア2[イエロー4]"
+		}
+	],
 	"price": {
 		"amount": 600,
 		"currency": "JPY",
@@ -30,40 +72,38 @@
 			"• Create your character by changing the hair style and hair color to your liking by replacing parts."
 		]
 	},
-	"accessories": {
-		"ja": ["ヘアスタイルパーツ×1"],
-		"en": ["Hair style parts x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヘアスタイルパーツ",
+				"en": "hairstyle parts"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5227_1.jpg",
+				"src": "https://bandai-hobby.net/images/153_6083_o_1i6min59ol4i8nf1o8tqs0q8b2n.jpg",
+				"path": "/images/items/01_5227/153_6083.jpg",
+				"hash": "92e534a407594995b11859d336a6767f"
+			},
+			{
 				"path": "/images/items/01_5227/01_5227_1.jpg",
 				"hash": "b4a7cc8bfcd6bb079483496cf6894611"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5227_2.jpg",
 				"path": "/images/items/01_5227/01_5227_2.jpg",
 				"hash": "65393cb252dd546eb9b2e2967ee345b9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5227_3.jpg",
 				"path": "/images/items/01_5227/01_5227_3.jpg",
 				"hash": "f41b067d60ed9a612341b9f44a64c663"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/153_6083.jpg",
-				"path": "/images/items/01_5227/153_6083.jpg",
-				"hash": "92e534a407594995b11859d336a6767f"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5227/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3583",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3583/"

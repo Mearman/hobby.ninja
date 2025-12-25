@@ -3,8 +3,61 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 インフィニットジャスティスガンダム弐式",
-		"en": "HG 1/144 INFINITE JUSTICE GUNDAM Type Ⅱ"
+		"en": "HG 1/144 Infinite Justice Gundam Type 2"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hgce",
+			"url": "https://bandai-hobby.net/brand/hgce/",
+			"ja": "HG COSMIC ERA"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-freedom",
+			"url": "https://bandai-hobby.net/series/seed-freedom/",
+			"ja": "機動戦士ガンダムSEED FREEDOM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5452",
+			"url": "https://bandai-hobby.net/item/01_5452/",
+			"ja": "HG 1/144 ズゴック(SEED FREEDOM Ver.)"
+		},
+		{
+			"id": "01_5374",
+			"url": "https://bandai-hobby.net/item/01_5374/",
+			"ja": "HG 1/144 デスティニーガンダムSpecII&ゼウスシルエット"
+		},
+		{
+			"id": "01_5363",
+			"url": "https://bandai-hobby.net/item/01_5363/",
+			"ja": "HG 1/144 ブラックナイトスコードカルラ"
+		},
+		{
+			"id": "01_5362",
+			"url": "https://bandai-hobby.net/item/01_5362/",
+			"ja": "HG 1/144 ムラサメ改"
+		}
+	],
+	"manual": {
+		"id": "1623",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1623"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 3080,
 		"currency": "JPY",
@@ -18,11 +71,10 @@
 		"day": 29
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED FREEDOM』に登場する「インフィニットジャスティスガンダム弐式」をHGで立体化！",
-			"• 「機動戦士ガンダム SEEDシリーズ」で印象的なアクションポーズ再現に特化した内部構造「SEEDアクションシステム」を搭載。",
+			"『機動戦士ガンダムSEED FREEDOM』に登場する「インフィニットジャスティスガンダム弐式」をHGで立体化！",
+			"• 「機動戦士ガンダムSEEDシリーズ」で印象的なアクションポーズ再現に特化した内部構造「SEEDアクションシステム」を搭載。",
 			"• 脚部に回転軸を追加することで劇中のしなやかな「脚のしなり」を表現可能。",
 			"• アンカーの射出状態を再現するリード線が付属。",
 			"• 背部バックパックの4枚のウイングは個別で上下に展開可能。各ウイングに取り付け用のビームエフェクトが付属。",
@@ -32,8 +84,8 @@
 			"• ビームサーベルやビームシールドなど豊富な武装が付属。シールドに搭載されたビームブーメランは取り外して手に保持することも可能。"
 		],
 		"en": [
-			"The \"Infinite Justice Gundam Type 2 \" that appears in \" Mobile Suit Gundam SEED FREEDOM\" is made into a three-dimensional HG!",
-			"• Equipped with the internal structure \"SEED Action System \" specialized for reproducing impressive action poses from \" Mobile Suit Gundam SEED Series\".",
+			"The \"Infinite Justice Gundam Type 2\" that appears in \"Mobile Suit Gundam SEED FREEDOM\" is made into a three-dimensional HG!",
+			"• Equipped with the internal structure \"SEED Action System\" that specializes in reproducing impressive action poses from the \"Mobile Suit Gundam SEED Series\".",
 			"• By adding a rotation axis to the legs, it is possible to express the supple \"flexing of the legs\" in the movie.",
 			"• Comes with a lead wire that reproduces the anchor injection condition.",
 			"• The 4 wings on the back backpack can be expanded individually up and down. Each wing comes with a beam effect for installation.",
@@ -43,39 +95,70 @@
 			"• Comes with a variety of weapons such as beam sabers and beam seals. The beam boomerang mounted on the Seal can also be removed and held in the hand."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームライフル×１",
-			"ビームサーベル×2",
-			"シールド×１",
-			"ビームシールド×１",
-			"エフェクトパーツ×1式",
-			"ハンドパーツ×１式",
-			"リード線×1",
-			"シール×1"
-		],
-		"en": [
-			"Beam rifle x1",
-			"Beam saber x2",
-			"Seal de x1",
-			"Beam Seal×1",
-			"Effect parts x 1",
-			"Hand parts x 1 set",
-			"Lead wire x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル×１",
+				"en": "Beam rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "beam saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド×１",
+				"en": "Seal de x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームシールド×１",
+				"en": "Beam Seal×1"
+			}
+		},
+		{
+			"name": {
+				"ja": "エフェクトパーツ",
+				"en": "effect parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "リード線",
+				"en": "lead wire"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209627_1.jpg",
 				"path": "/images/items/01_5208/1000209627_1.jpg",
 				"hash": "44aa636981be88ee5aa917de037a8a8a"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209627_10.jpg",
-				"path": "/images/items/01_5208/1000209627_10.jpg",
-				"hash": "a0c14f5d0346237448f8de78fbb4c012"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209627_2.jpg",
@@ -116,17 +199,14 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209627_9.jpg",
 				"path": "/images/items/01_5208/1000209627_9.jpg",
 				"hash": "8ed75490881d8f45564f9d8b2be32e90"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209627_10.jpg",
+				"path": "/images/items/01_5208/1000209627_10.jpg",
+				"hash": "a0c14f5d0346237448f8de78fbb4c012"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5208/",
-	"brandIds": ["hg", "hgce"],
-	"seriesIds": ["seed-freedom"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5452", "01_5374", "01_5363", "01_5362"],
-	"manual": {
-		"id": "1623",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1623/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5208/"
 }

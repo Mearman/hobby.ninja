@@ -5,6 +5,55 @@
 		"ja": "ＨＧ 1/144 バッシュ",
 		"en": "HG 1/144 Bash"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		},
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "lgaim",
+			"url": "https://bandai-hobby.net/series/lgaim/",
+			"ja": "重戦機エルガイム"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216436",
+			"url": "https://p-bandai.jp/item/item-1000216436/",
+			"ja": "ＨＧ 1/144 エルガイム [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000207143",
+			"url": "https://p-bandai.jp/item/item-1000207143/",
+			"ja": "重戦機エルガイムセット 2"
+		},
+		{
+			"id": "item-1000207142",
+			"url": "https://p-bandai.jp/item/item-1000207142/",
+			"ja": "重戦機エルガイムセット 1"
+		},
+		{
+			"id": "01_3350",
+			"url": "https://bandai-hobby.net/item/01_3350/",
+			"ja": "HG 1/144 オージ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -17,7 +66,6 @@
 		"month": 6
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -72,8 +120,8 @@
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－．",
 			"Posedal Army's A-class heavy metal, Bash sortie.",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－．",
-			"From \"Heavy Battle Machine L-Gaim \", \" Bash\" appears in the HG series with a completely new model!",
-			"Various weapons such as the buster launcher are precisely reproduced.",
+			"From \"Heavy Battle Machine L-Gaim\", \"Bash\" appears in the HG series with a completely new model!",
+			"Various weapons such as the buster launcher are accurately reproduced.",
 			"● \"Bash\" is now three-dimensional with a completely new model!",
 			"HG's first commercialized bash has been thoroughly reproduced with attention to detail. The coloring based on purple and red is reproduced by molding color and parts division.",
 			"The head and jaw pipes can be selected from a normal version and a movable Iraku tube version.",
@@ -99,7 +147,7 @@
 			"Attached weapons: Buster Launcher / Long Sword Saber / Energy Bomber / Binder / Spiral Booster",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/144 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Main product materials: PS/PE",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -118,72 +166,92 @@
 			"・Product information is current as of 20243. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["バスターランチャー", "太刀セイバー", "エネルギーボンバー", "バインダー", "スパイラルブースター"],
-		"en": ["buster launcher", "sword saber", "energy bomber", "binder", "spiral booster"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "バスターランチャー",
+				"en": "buster launcher"
+			}
+		},
+		{
+			"name": {
+				"ja": "太刀セイバー",
+				"en": "sword saber"
+			}
+		},
+		{
+			"name": {
+				"ja": "エネルギーボンバー",
+				"en": "energy bomber"
+			}
+		},
+		{
+			"name": {
+				"ja": "バインダー",
+				"en": "binder"
+			}
+		},
+		{
+			"name": {
+				"ja": "スパイラルブースター",
+				"en": "spiral booster"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6080.jpg",
+				"src": "https://bandai-hobby.net/images/153_6080_s_ccseppi3yme3dsylnhffxelfbam8.jpg",
 				"path": "/images/items/01_5224/153_6080.jpg",
 				"hash": "bcffdd3e4529bfcadb71ca852953b264"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6080.jpg",
+				"src": "https://bandai-hobby.net/images/155_6080_s_rch234b72yfgvd7b30tuk29qdfdv.jpg",
 				"path": "/images/items/01_5224/155_6080.jpg",
 				"hash": "2061f814c2ccd5d72cf075421c8134d0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6080.jpg",
+				"src": "https://bandai-hobby.net/images/156_6080_s_eq2x74nl3lzucrs473m49rhii7k0.jpg",
 				"path": "/images/items/01_5224/156_6080.jpg",
 				"hash": "70195c382af315eda63cb688f78499db"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6080.jpg",
+				"src": "https://bandai-hobby.net/images/157_6080_s_apekzjvt4jhsg1ye8j0xf15tpe4a.jpg",
 				"path": "/images/items/01_5224/157_6080.jpg",
 				"hash": "c01ea2fb3a19e922dd8d1fd81f0d4626"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6080.jpg",
+				"src": "https://bandai-hobby.net/images/158_6080_s_3oc4sj4fmc8ve62m6vtght1q2ci8.jpg",
 				"path": "/images/items/01_5224/158_6080.jpg",
 				"hash": "2da447be7b3b29f545154206e6765100"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6080.jpg",
+				"src": "https://bandai-hobby.net/images/159_6080_s_xyrdhojm9hubtoyxa3f9z3xi24aa.jpg",
 				"path": "/images/items/01_5224/159_6080.jpg",
 				"hash": "a36b37fa338a1b4a18b2cb620a544a53"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6080.jpg",
+				"src": "https://bandai-hobby.net/images/189_6080_s_shezjdqg16zvwm2x5jw5em208i25.jpg",
 				"path": "/images/items/01_5224/189_6080.jpg",
 				"hash": "064272b93ede92e0ae6e3972db4903aa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6080.jpg",
+				"src": "https://bandai-hobby.net/images/190_6080_s_pwzouzly1259jma9i6yggs998x5e.jpg",
 				"path": "/images/items/01_5224/190_6080.jpg",
 				"hash": "55e939c120e587c183628b7ca9e7db20"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6080.jpg",
+				"src": "https://bandai-hobby.net/images/191_6080_s_wnpuz6accll82ro8kbd6svsg5u3w.jpg",
 				"path": "/images/items/01_5224/191_6080.jpg",
 				"hash": "fb4641dc9095c29752f58db1426ba4c7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_6080.jpg",
+				"src": "https://bandai-hobby.net/images/192_6080_s_0ndg68xzzan0vjksxymxvgi77lih.jpg",
 				"path": "/images/items/01_5224/192_6080.jpg",
 				"hash": "886f9525316eedfcb554a218cb866e13"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5224/",
-	"brandIds": ["pb_charapla", "hg"],
-	"seriesIds": ["lgaim"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["item-1000216436", "item-1000207143", "item-1000207142", "01_3350"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5224/"
 }

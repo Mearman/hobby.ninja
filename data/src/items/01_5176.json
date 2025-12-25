@@ -3,8 +3,36 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard エリー",
-		"en": "Figure-rise Standard ELLIE"
+		"en": "Figure-rise Standard Ellie"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "synduality",
+			"url": "https://bandai-hobby.net/series/synduality/",
+			"ja": "SYNDUALITY(シンデュアリティ)"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4920",
+			"url": "https://bandai-hobby.net/item/01_4920/",
+			"ja": "Figure-rise Standard ノワール"
+		}
+	],
 	"price": {
 		"amount": 4620,
 		"currency": "JPY",
@@ -27,58 +55,104 @@
 			"• ディスプレイの自由度を向上させるプラモデルオリジナルのジョイントパーツや台座が付属。"
 		],
 		"en": [
-			"From the TV anime \"SYNDUALITY Noir\", main character Kanata's childhood friend Ellie has been made into a figure-rise Standard!",
+			"From the TV anime \"SYNDUALITY Noir\", the main character Kanata's childhood friend Ellie is made into a figure-rise Standard!",
 			"• Jacket and apron can be attached and detached by replacing parts.",
 			"• Three types of hand parts, left and right, are included, allowing you to recreate the pose of playing with her hair, which is impressive in the key visual.",
 			"• Three types of expression parts are included, and you can enjoy variations with tampo printing and selectable water transfer decals.",
 			"• Comes with plastic model original joint parts and pedestal to improve display flexibility."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ジャケット×1式",
-			"ポーチ×1式",
-			"エプロン×1",
-			"フェイスパーツ×3種",
-			"ハンドパーツ×1式",
-			"ディスプレイ用ジョイントパーツ×1式",
-			"ディスプレイ台座×1",
-			"シール×1",
-			"水転写式デカール×1"
-		],
-		"en": [
-			"Jacket x 1 set",
-			"Pouch x 1 set",
-			"Apron x 1",
-			"Face parts x 3 types",
-			"Hand parts x 1 set",
-			"Joint parts for display x 1 set",
-			"Display pedestal x 1",
-			"Seal×1",
-			"Water transfer decal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ジャケット",
+				"en": "jacket"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ポーチ",
+				"en": "pouch"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "エプロン",
+				"en": "apron"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "フェイスパーツ",
+				"en": "face parts"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ用ジョイントパーツ",
+				"en": "Joint parts for display"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座",
+				"en": "display pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205580_1.jpg",
 				"path": "/images/items/01_5176/1000205580_1.jpg",
 				"hash": "5e67e12f63b610ae97b1001d5ef7b6bd"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205580_10.jpg",
-				"path": "/images/items/01_5176/1000205580_10.jpg",
-				"hash": "66ed10247c7bb2b1b3b0a61d7f7115db"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205580_11.jpg",
-				"path": "/images/items/01_5176/1000205580_11.jpg",
-				"hash": "2dfbd4605fd2e8b1feb2bde4fbd571a2"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205580_12.jpg",
-				"path": "/images/items/01_5176/1000205580_12.jpg",
-				"hash": "0428b40dd58441de32b4ec49cd7f2396"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205580_2.jpg",
@@ -119,13 +193,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205580_9.jpg",
 				"path": "/images/items/01_5176/1000205580_9.jpg",
 				"hash": "ce2609c7fba371ca5d6137dfe20c698d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205580_10.jpg",
+				"path": "/images/items/01_5176/1000205580_10.jpg",
+				"hash": "66ed10247c7bb2b1b3b0a61d7f7115db"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205580_11.jpg",
+				"path": "/images/items/01_5176/1000205580_11.jpg",
+				"hash": "2dfbd4605fd2e8b1feb2bde4fbd571a2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205580_12.jpg",
+				"path": "/images/items/01_5176/1000205580_12.jpg",
+				"hash": "0428b40dd58441de32b4ec49cd7f2396"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5176/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["synduality"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_4920"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5176/"
 }

@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MS SIS-F00 ユフィア[カラーA]",
-		"en": "30MS SIS-F00 YUFIA [COLOR A]"
+		"en": "30MS SIS-F00 Yuffia [Color A]"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5975",
+			"url": "https://bandai-hobby.net/item/01_5975/",
+			"ja": "30MS 和泉愛依"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5954",
+			"url": "https://bandai-hobby.net/item/01_5954/",
+			"ja": "30MS オプションヘアスタイルパーツVol.12 全4種 ミディアムヘア2[イエロー4]"
+		}
+	],
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -31,103 +73,128 @@
 			"• 30 MINUTES LABEL共通の3mmジョイントを採用。「30 MINUTES MISSIONS」のパーツもオプションとして装着が可能。(※「30 MINUTES MISSIONS」キットの対象年齢は8才以上です)"
 		],
 		"en": [
-			"A new sister \"30MS SIS-F00 Yuffia [Color A]\" is now available in the \" 30 MINUTES SISTERS\" series!",
+			"A new sister \"30MS SIS-F00 Yuffia [Color A]\" is now available in the \"30 MINUTES SISTERS\" series!",
 			"• Set includes character body, three types of facial parts with tampo printing, and armor parts.",
-			"• \"Color A \" face parts use tampo printing. You can enjoy changing the expression according to the pose from three types: \" normal \", \" smiling \", and \" screaming\".",
+			"• \"Color A\" face parts use tampo printing. You can enjoy changing the expression according to the pose from three types: \"normal\", \"smiling\", and \"screaming\".",
 			"• The tooth parts are divided into parts, and installation is selective.",
 			"• The waist armor is multi-axis movable and has a new structure that allows it to be displayed in a natural kneeling pose.",
 			"• Seals and hammers can be attached to the back.",
 			"• Her hairstyle has a delicate design that highlights her individuality.",
 			"• \"30 MINUTES SISTERS\" offers a lineup of face parts, hairstyle parts, and body parts by body part. You can create your own sister by combining parts sold separately.",
-			"• Adopts 3mm joint common to 30 MINUTES LABEL. \"30 MINUTES MISSIONS \" parts can also be installed as options. (*\" 30 MINUTES MISSIONS\" Kit is for ages 8 and up)"
+			"• Adopts 3mm joint common to 30 MINUTES LABEL. \"30 MINUTES MISSIONS\" parts can also be installed as options. (*\"30 MINUTES MISSIONS\" Kit is for ages 8 and up)"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"フェイスパーツ(タンポ印刷)×3種",
-			"アーマーパーツ×1式",
-			"ジョイントパーツ×1式",
-			"ハンドパーツ×1式",
-			"武装×1式"
-		],
-		"en": [
-			"Face parts (tampo printing) x 3 types",
-			"Armor parts x 1 set",
-			"Joint parts x 1 set",
-			"Hand parts x 1 set",
-			"Armed x 1 type"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フェイスパーツ(タンポ印刷)",
+				"en": "Face parts (tampo printing)"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "アーマーパーツ",
+				"en": "armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "武装",
+				"en": "armed"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5226_0.jpg",
 				"path": "/images/items/01_5226/01_5226_0.jpg",
 				"hash": "fe0901fbac88f70659117deffa2a7915"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5226_1.jpg",
 				"path": "/images/items/01_5226/01_5226_1.jpg",
 				"hash": "13f1f34be35654bd9c3ec076c8913616"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5226_10.jpg",
-				"path": "/images/items/01_5226/01_5226_10.jpg",
-				"hash": "d29358610db8da54a97a95c41db4b16b"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5226_11.jpg",
-				"path": "/images/items/01_5226/01_5226_11.jpg",
-				"hash": "6f0e2454baf679e383ba04ee2b283bed"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5226_2.jpg",
 				"path": "/images/items/01_5226/01_5226_2.jpg",
 				"hash": "377148a8f29d6374231ba47a183b7807"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5226_3.jpg",
 				"path": "/images/items/01_5226/01_5226_3.jpg",
 				"hash": "2c5913ec07cb2a8ad18a1880b2446190"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5226_4.jpg",
 				"path": "/images/items/01_5226/01_5226_4.jpg",
 				"hash": "188a24e712d6e38d2c0e8b401231f7c4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5226_5.jpg",
 				"path": "/images/items/01_5226/01_5226_5.jpg",
 				"hash": "bff835acff137956d5452bf7e2e9cfa1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5226_6.jpg",
 				"path": "/images/items/01_5226/01_5226_6.jpg",
 				"hash": "ada8789607d082abe9156663e8bb31d9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5226_7.jpg",
 				"path": "/images/items/01_5226/01_5226_7.jpg",
 				"hash": "f532243655a29dc63dcb8e7fa661439d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5226_8.jpg",
 				"path": "/images/items/01_5226/01_5226_8.jpg",
 				"hash": "7dd7af7d1ae28df89161075c85dd6281"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5226_9.jpg",
 				"path": "/images/items/01_5226/01_5226_9.jpg",
 				"hash": "78f0582f3c3ab9d92f99127fa739c75a"
+			},
+			{
+				"path": "/images/items/01_5226/01_5226_10.jpg",
+				"hash": "d29358610db8da54a97a95c41db4b16b"
+			},
+			{
+				"path": "/images/items/01_5226/01_5226_11.jpg",
+				"hash": "6f0e2454baf679e383ba04ee2b283bed"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5226/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3582",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3582/"

@@ -3,8 +3,36 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard 怪獣８号",
-		"en": "Figure-rise Standard KAIJU NO. 8"
+		"en": "Figure-rise Standard Kaiju No. 8"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kaiju-no8",
+			"url": "https://bandai-hobby.net/series/kaiju-no8/",
+			"ja": "怪獣8号"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5197",
+			"url": "https://bandai-hobby.net/item/01_5197/",
+			"ja": "Figure-rise Standard 四ノ宮キコル"
+		}
+	],
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -30,47 +58,75 @@
 			"• 背面パーツを外すことで、アクションベース用のジョイント穴が出現する。"
 		],
 		"en": [
-			"From \"Kaiju No. 8 \", which started airing in 20244, \" Kaiju No. 8\" is full of dynamism with sharp details and bold actions!",
+			"From \"Kaiju No. 8\", which started airing in 20244, \"Kaiju No. 8\" is full of dynamism with sharp details and bold actions!",
 			"• The chest parts have an overlapping structure and can move according to the action to accommodate organic movement.",
 			"• The area around the shoulders has a structure that resembles the movement of muscles expanding and contracting, and maintains its shape through exquisite balance.",
 			"• Reproduce the unfolded state of the pile anchor with replacement parts. Parts for leg thruster and elbow thruster are also included.",
-			"• Three types of facial expression parts are included: \"normal \", \" angry face \", and \" open mouth\".",
+			"• Three types of facial expression parts are included: \"normal\", \"angry face\", and \"open mouth\".",
 			"• Making full use of the movable joints throughout the body, the violent movements of Kaiju No. 8 are expressed without disrupting the lines of the biological body.",
 			"• The overall texture of the body takes advantage of organic details and has a calm surface treatment with less gloss.",
 			"• By removing the back part, a joint hole for the action base will appear."
 		]
 	},
-	"accessories": {
-		"ja": ["フェイスパーツ×3種", "右腕交換用パーツ×1式", "右脚交換用パーツ×1式", "ハンドパーツ×1式", "シール×1"],
-		"en": [
-			"Face parts x 3 types",
-			"Right arm replacement parts x 1 set",
-			"Right leg replacement parts x 1 set",
-			"Hand parts x 1 set",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フェイスパーツ",
+				"en": "face parts"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "右腕交換用パーツ",
+				"en": "Right arm replacement parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "右脚交換用パーツ",
+				"en": "Right leg replacement parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205561_1.jpg",
 				"path": "/images/items/01_5173/1000205561_1.jpg",
 				"hash": "acc3ad2bae56a374f313a8ed366deb95"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205561_10.jpg",
-				"path": "/images/items/01_5173/1000205561_10.jpg",
-				"hash": "e439b3212351dc135c39e6487d55e308"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205561_11.jpg",
-				"path": "/images/items/01_5173/1000205561_11.jpg",
-				"hash": "5a1c81626cdc7daec90a21f6080e1a80"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205561_12.jpg",
-				"path": "/images/items/01_5173/1000205561_12.jpg",
-				"hash": "5a0e7d60549a855ab37ecac9a73ee2c1"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205561_2.jpg",
@@ -111,13 +167,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205561_9.jpg",
 				"path": "/images/items/01_5173/1000205561_9.jpg",
 				"hash": "d6c6776f62d96ab0aba4d713a19bffec"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205561_10.jpg",
+				"path": "/images/items/01_5173/1000205561_10.jpg",
+				"hash": "e439b3212351dc135c39e6487d55e308"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205561_11.jpg",
+				"path": "/images/items/01_5173/1000205561_11.jpg",
+				"hash": "5a1c81626cdc7daec90a21f6080e1a80"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205561_12.jpg",
+				"path": "/images/items/01_5173/1000205561_12.jpg",
+				"hash": "5a0e7d60549a855ab37ecac9a73ee2c1"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5173/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["kaiju-no8"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5197"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5173/"
 }

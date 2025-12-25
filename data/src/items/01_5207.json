@@ -3,8 +3,61 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 マイティーストライクフリーダムガンダム",
-		"en": "HG 1/144 MIGHTY STRIKE FREEDOM GUNDAM"
+		"en": "HG 1/144 Mighty Strike Freedom Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hgce",
+			"url": "https://bandai-hobby.net/brand/hgce/",
+			"ja": "HG COSMIC ERA"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-freedom",
+			"url": "https://bandai-hobby.net/series/seed-freedom/",
+			"ja": "機動戦士ガンダムSEED FREEDOM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5452",
+			"url": "https://bandai-hobby.net/item/01_5452/",
+			"ja": "HG 1/144 ズゴック(SEED FREEDOM Ver.)"
+		},
+		{
+			"id": "01_5374",
+			"url": "https://bandai-hobby.net/item/01_5374/",
+			"ja": "HG 1/144 デスティニーガンダムSpecII&ゼウスシルエット"
+		},
+		{
+			"id": "01_5363",
+			"url": "https://bandai-hobby.net/item/01_5363/",
+			"ja": "HG 1/144 ブラックナイトスコードカルラ"
+		},
+		{
+			"id": "01_5362",
+			"url": "https://bandai-hobby.net/item/01_5362/",
+			"ja": "HG 1/144 ムラサメ改"
+		}
+	],
+	"manual": {
+		"id": "1552",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1552"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 2970,
 		"currency": "JPY",
@@ -18,11 +71,10 @@
 		"day": 25
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED FREEDOM』に登場する「マイティーストライクフリーダムガンダム」をHGで立体化！",
-			"• 「機動戦士ガンダム SEEDシリーズ」で印象的なアクションポーズ再現に特化した内部構造「SEEDアクションシステム」を搭載。",
+			"『機動戦士ガンダムSEED FREEDOM』に登場する「マイティーストライクフリーダムガンダム」をHGで立体化！",
+			"• 「機動戦士ガンダムSEEDシリーズ」で印象的なアクションポーズ再現に特化した内部構造「SEEDアクションシステム」を搭載。",
 			"• 両脚の股関節の接続軸が個別で上下にスイング可動することで、つま先を伸ばし揃えるポージングが可能。",
 			"• ゴールド部分には金属光沢感をアップさせた素材であるリアルメタリックグロスインジェクションを採用。",
 			"• ウイング部分は個別で広範囲に可動。さらに白のウイングは8か所がスライド可動し展開状態を再現可能。発光表現には3Dメタリックシールを採用。",
@@ -33,8 +85,8 @@
 			"• ビームサーベルやビームシールドなど豊富な武装のほか、ビームサーベルの連結状態を再現できるグリップも付属。"
 		],
 		"en": [
-			"The \"Mighty Strike Freedom Gundam \" that appears in \" Mobile Suit Gundam SEED FREEDOM\" is made into a three-dimensional HG!",
-			"• Equipped with the internal structure \"SEED Action System \" specialized for reproducing impressive action poses from \" Mobile Suit Gundam SEED Series\".",
+			"\"Mighty Strike Freedom Gundam\" that appears in \"Mobile Suit GundamSEED FREEDOM\" is made into HG!",
+			"• Equipped with the internal structure \"SEED Action System\" that specializes in reproducing impressive action poses from the \"Mobile Suit Gundam SEED Series\".",
 			"• The connecting axes of the hip joints of both legs can swing up and down independently, allowing for poses where the toes are stretched and aligned.",
 			"• The gold part uses real metallic gloss injection, a material that enhances the metallic luster.",
 			"• Wing parts are individually movable over a wide range. Furthermore, the white wing can slide in 8 places to reproduce the unfolded state. Adopts 3D metallic seal for luminous expression.",
@@ -45,41 +97,72 @@
 			"• In addition to a wide variety of weapons such as beam sabers and beam seals, a grip that can reproduce the connected state of the beam saber is also included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"実剣（フツノミタマ）×１",
-			"ビームライフル×2",
-			"ビームサーベル×2",
-			"サーベル連結状態用グリップ×１",
-			"ビームシールド×１",
-			"ヘッドパーツ×１",
-			"ハンドパーツ×１式",
-			"3Dメタリックシール×1",
-			"シール×1"
-		],
-		"en": [
-			"Actual sword (futsunomitama) x 1",
-			"Beam rifle x2",
-			"Beam saber x2",
-			"Grip for saber connected state x 1",
-			"Beam Seal×1",
-			"Head parts x 1",
-			"Hand parts x 1 set",
-			"3D metallic seal×1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "実剣（フツノミタマ）×１",
+				"en": "Actual sword (futsunomitama) x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "beam rifle"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "beam saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "サーベル連結状態用グリップ×１",
+				"en": "Grip for saber connected state x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームシールド×１",
+				"en": "Beam Seal×1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヘッドパーツ×１",
+				"en": "Head parts x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "3Dメタリックシール",
+				"en": "3D Metallic Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209628_1.jpg",
 				"path": "/images/items/01_5207/1000209628_1.jpg",
 				"hash": "1b6a39f640e772f0ec04b1bd77986665"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209628_10.jpg",
-				"path": "/images/items/01_5207/1000209628_10.jpg",
-				"hash": "42d68b4fbf7d67b0fa4a7f6d8792baf4"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209628_2.jpg",
@@ -120,17 +203,14 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209628_9.jpg",
 				"path": "/images/items/01_5207/1000209628_9.jpg",
 				"hash": "59527a7c8dcaa72efe3a0ab7f7bf1686"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209628_10.jpg",
+				"path": "/images/items/01_5207/1000209628_10.jpg",
+				"hash": "42d68b4fbf7d67b0fa4a7f6d8792baf4"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5207/",
-	"brandIds": ["hg", "hgce"],
-	"seriesIds": ["seed-freedom"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5452", "01_5374", "01_5363", "01_5362"],
-	"manual": {
-		"id": "1552",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1552/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5207/"
 }

@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 ナラティブガンダム C装備 Ver.Ka",
-		"en": "MG 1/100 NARRATIVE GUNDAM C-PACKS Ver.Ka"
+		"en": "MG 1/100 Narrative Gundam C equipment Ver.Ka"
 	},
+	"brands": [
+		{
+			"id": "mgka",
+			"url": "https://bandai-hobby.net/brand/mgka/",
+			"ja": "MG Ver.Ka［マスターグレード バージョンカトキ］"
+		}
+	],
+	"series": [
+		{
+			"id": "narrative",
+			"url": "https://bandai-hobby.net/series/narrative/",
+			"ja": "機動戦士ガンダムNT[ナラティブ]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000213253",
+			"url": "https://p-bandai.jp/item/item-1000213253/",
+			"ja": "ＭＧ 1/100 ナラティブガンダム Ｃ装備 Ｖｅｒ．Ｋａ用 Ｂ装備拡張セット"
+		},
+		{
+			"id": "item-1000213251",
+			"url": "https://p-bandai.jp/item/item-1000213251/",
+			"ja": "ＭＧ 1/100 ナラティブガンダム Ｂ装備 Ｖｅｒ．Ｋａ"
+		},
+		{
+			"id": "01_5187",
+			"url": "https://bandai-hobby.net/item/01_5187/",
+			"ja": "MG 1/100 シナンジュ・スタイン (ナラティブ Ver.) Ver.Ka"
+		}
+	],
+	"manual": {
+		"id": "1255",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1255"
+	},
+	"scale": "1/100",
 	"price": {
 		"amount": 7700,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"サイコフレーム試験機として開発されたモビルスーツ「ナラティブガンダム C装備」をMG Ver.Kaで立体化。カトキハジメ氏により物語とプラモデル、双方の視点から盛り込まれた数々のギミックを搭載。",
@@ -41,55 +83,95 @@
 			"• The Yona Bashta figure comes in two versions: sitting and standing."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"シールド×１",
-			"ビーム・ライフル×１",
-			"ジェガン用ビーム・ライフル再現パーツ×１式",
-			"ビーム・サーベル×２",
-			"素体再現用パーツ×1式",
-			"コア・ファイター用ランディングギアパーツ×1式",
-			"ハンドパーツ×１式",
-			"フィギュア×２種",
-			"３Dメタリックシール×１",
-			"水転写式デカール×１",
-			"NT-D未発動時用サイコフレームパーツ×1式"
-		],
-		"en": [
-			"Seal de x1",
-			"Beam rifle x1",
-			"Beam rifle reproduction parts for Jegan x 1 set",
-			"Beam saber x2",
-			"Body reproduction parts x 1 set",
-			"Landing gear parts for Core Fighter x 1 set",
-			"Hand parts x 1 set",
-			"Figure x 2 types",
-			"3D metallic seal×1",
-			"Water transfer decal x 1",
-			"Psycho frame parts for when NT-D is not activated x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シールド×１",
+				"en": "Seal de x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・ライフル×１",
+				"en": "Beam rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジェガン用ビーム・ライフル再現パーツ×１式",
+				"en": "Beam rifle reproduction parts for Jegan x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル×２",
+				"en": "Beam saber x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "素体再現用パーツ",
+				"en": "Body reproduction parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "コア・ファイター用ランディングギアパーツ",
+				"en": "Landing gear parts for core fighter"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "フィギュア×２種",
+				"en": "Figure x 2 types"
+			}
+		},
+		{
+			"name": {
+				"ja": "３Dメタリックシール×１",
+				"en": "3D metallic seal×1"
+			}
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール×１",
+				"en": "Water transfer decal x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "NT-D未発動時用サイコフレームパーツ",
+				"en": "Psycho frame parts for when NT-D is not activated"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205546_1.jpg",
 				"path": "/images/items/01_5164/1000205546_1.jpg",
 				"hash": "30ff3fd520fa75282f4d0be1a0750ce7"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205546_10.jpg",
-				"path": "/images/items/01_5164/1000205546_10.jpg",
-				"hash": "80fa895ee1b1399aa174f98b848206dd"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205546_11.jpg",
-				"path": "/images/items/01_5164/1000205546_11.jpg",
-				"hash": "2ecc94fd5ce4b9152198f1613cf2e4a9"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205546_12.jpg",
-				"path": "/images/items/01_5164/1000205546_12.jpg",
-				"hash": "644a86f3d3308c70df7eae046b294685"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205546_2.jpg",
@@ -130,17 +212,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205546_9.jpg",
 				"path": "/images/items/01_5164/1000205546_9.jpg",
 				"hash": "b358e03fa8f718a4a21620774f513d13"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205546_10.jpg",
+				"path": "/images/items/01_5164/1000205546_10.jpg",
+				"hash": "80fa895ee1b1399aa174f98b848206dd"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205546_11.jpg",
+				"path": "/images/items/01_5164/1000205546_11.jpg",
+				"hash": "2ecc94fd5ce4b9152198f1613cf2e4a9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205546_12.jpg",
+				"path": "/images/items/01_5164/1000205546_12.jpg",
+				"hash": "644a86f3d3308c70df7eae046b294685"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5164/",
-	"brandIds": ["mgka"],
-	"seriesIds": ["narrative"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000213253", "item-1000213251", "01_5187"],
-	"manual": {
-		"id": "1255",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1255/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5164/"
 }

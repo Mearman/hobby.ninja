@@ -3,7 +3,33 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard ルナマリア・ホーク",
-		"en": "Figure-rise Standard LUNAMARIA HAWKE"
+		"en": "Figure-rise Standard Lunamaria Hawk"
+	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"manual": {
+		"id": "1652",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1652"
 	},
 	"price": {
 		"amount": 4180,
@@ -20,61 +46,89 @@
 	"targetAge": 15,
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED DESTINY』より、ルナマリア・ホークがパイロットスーツ姿でFigure-rise Standardシリーズにラインアップ！",
+			"『機動戦士ガンダムSEED DESTINY』より、ルナマリア・ホークがパイロットスーツ姿でFigure-rise Standardシリーズにラインアップ！",
 			"• それぞれの表情はタンポ印刷済みパーツ１種と、水転写式デカール用パーツ２種で再現。",
 			"• ヘルメットはバイザーの取り外しが可能。パーツの組み替えでヘルメットを装着した状態で様々な表情を楽しめる。",
 			"• インナー部分に柔らかい手触りの軟質素材を使用した組み替え式ボディパーツが付属。",
 			"• ハンドパーツは8種付属し、劇中の印象的なポーズも再現可能。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam SEED DESTINY\", Lunamaria Hawk is now available in the Figure-rise Standard series in a pilot suit!",
+			"From \"Mobile Suit GundamSEED DESTINY\", Lunamaria Hawk is now available in the Figure-rise Standard series in a pilot suit!",
 			"• Each expression is reproduced with one type of tampo-printed part and two types of water transfer decal parts.",
 			"• Helmet has a removable visor. By rearranging the parts, you can enjoy various expressions while wearing the helmet.",
 			"• Comes with recombinable body parts that use soft material for the inner part.",
 			"• Eight types of hand parts are included, allowing you to recreate impressive poses from the movie."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"表情パーツ(タンポ印刷)×1種",
-			"表情パーツ(水転写式デカール)×2種",
-			"ヘルメット×1",
-			"ボディパーツ×1",
-			"ハンドパーツ×1式",
-			"水転写式デカール×1",
-			"シール×1"
-		],
-		"en": [
-			"Facial expression parts (tampo printing) x 1 type",
-			"Facial expression parts (water transfer decal) x 2 types",
-			"Helmet x 1",
-			"Body parts x 1",
-			"Hand parts x 1 set",
-			"Water transfer decal x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情パーツ(タンポ印刷)",
+				"en": "Facial expression parts (tampo printing)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "表情パーツ(水転写式デカール)",
+				"en": "Facial expression parts (water transfer decal)"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヘルメット",
+				"en": "helmet"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ボディパーツ",
+				"en": "body parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209847_1.jpg",
 				"path": "/images/items/01_5233/1000209847_1.jpg",
 				"hash": "e585e216ad29b4a14e67b1680c52a3c7"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209847_10.jpg",
-				"path": "/images/items/01_5233/1000209847_10.jpg",
-				"hash": "acc73915639e566b104b1f38b8bc4eb2"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209847_11.jpg",
-				"path": "/images/items/01_5233/1000209847_11.jpg",
-				"hash": "809d5512b7157c6f8991632899685367"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209847_12.jpg",
-				"path": "/images/items/01_5233/1000209847_12.jpg",
-				"hash": "a24b148b61dcad593f44c58800b81db8"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209847_2.jpg",
@@ -115,17 +169,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209847_9.jpg",
 				"path": "/images/items/01_5233/1000209847_9.jpg",
 				"hash": "826c1e281f070f96ada102122029eb8f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209847_10.jpg",
+				"path": "/images/items/01_5233/1000209847_10.jpg",
+				"hash": "acc73915639e566b104b1f38b8bc4eb2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209847_11.jpg",
+				"path": "/images/items/01_5233/1000209847_11.jpg",
+				"hash": "809d5512b7157c6f8991632899685367"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209847_12.jpg",
+				"path": "/images/items/01_5233/1000209847_12.jpg",
+				"hash": "a24b148b61dcad593f44c58800b81db8"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5233/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["seed-d"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": [],
-	"manual": {
-		"id": "1652",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1652/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5233/"
 }

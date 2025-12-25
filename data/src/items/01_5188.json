@@ -3,7 +3,44 @@
 	"type": "item",
 	"name": {
 		"ja": "オプションパーツセット ガンプラ 02 (ランチャーストライカー&ソードストライカー)",
-		"en": "OPTION PARTS SET GUNPLA 02 (LAUNCHER STRIKER & SWORD STRIKER)"
+		"en": "Option parts set Gunpla 02 (Launcher Striker & Sword Striker)"
+	},
+	"brands": [
+		{
+			"id": "optionpartsset",
+			"url": "https://bandai-hobby.net/brand/optionpartsset/",
+			"ja": "オプションパーツセット"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5441",
+			"url": "https://bandai-hobby.net/item/01_5441/",
+			"ja": "オプションパーツセット ガンプラ14(ガンバレルストライカー)"
+		},
+		{
+			"id": "01_5178",
+			"url": "https://bandai-hobby.net/item/01_5178/",
+			"ja": "オプションパーツセット ガンプラ 01 (エールストライカー)"
+		}
+	],
+	"manual": {
+		"id": "1619",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1619"
 	},
 	"price": {
 		"amount": 1210,
@@ -20,47 +57,79 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED』シリーズからランチャーストライカー、ソードストライカーがそれぞれ完全新規造形でオプションパーツで登場！",
+			"『機動戦士ガンダムSEED』シリーズからランチャーストライカー、ソードストライカーがそれぞれ完全新規造形でオプションパーツで登場！",
 			"• 別売りの「ENTRY GRADE 1/144 ストライクガンダム」等と組み合わせてランチャーストライクガンダム、ソードストライクガンダムを再現可能。",
 			"• キットに応じて選べるジョイントパーツが付属。",
 			"• アグニはボールジョイントと3mmジョイントで可動。パンツァーアイゼンは付属のリード線を使用することで射出状態を再現。",
 			"• 別売りの「オプションパーツセット ガンプラ 01 (エールストライカー)」と組み合わせてパーフェクトストライクガンダムが再現可能！"
 		],
 		"en": [
-			"Launcher Striker and Sword Striker from the \"Mobile Suit Gundam SEED\" series are now available as optional parts with completely new shapes!",
+			"Launcher Striker and Sword Striker from the \"Mobile Suit GundamSEED\" series are now available as optional parts with completely new shapes!",
 			"• Launcher Strike Gundam and Sword Strike Gundam can be recreated by combining with the separately sold \"ENTRY GRADE 1/144 Strike Gundam\" etc.",
 			"• Comes with joint parts that can be selected depending on the kit.",
 			"• Agni is movable with a ball joint and 3mm joint. Panzer Eisen reproduces the injection state by using the included lead wire.",
 			"• Perfect Strike Gundam can be recreated by combining with the optional parts set Gunpla 01 (Ale Striker) sold separately!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ランチャーストライカー×1式",
-			"ソードストライカー×1式",
-			"エフェクトパーツ×1式",
-			"ジョイントパーツ×1式",
-			"リード線×1"
-		],
-		"en": [
-			"Launcher striker x 1 set",
-			"Sword striker x 1 set",
-			"Effect parts x 1",
-			"Joint parts x 1 set",
-			"Lead wire x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ランチャーストライカー",
+				"en": "launcher striker"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ソードストライカー",
+				"en": "sword striker"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "エフェクトパーツ",
+				"en": "effect parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "リード線",
+				"en": "lead wire"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209615_1.jpg",
 				"path": "/images/items/01_5188/1000209615_1.jpg",
 				"hash": "12967e0e56e1e722f8b5dc4f159a3fb6"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209615_10.jpg",
-				"path": "/images/items/01_5188/1000209615_10.jpg",
-				"hash": "a45206ef195f7a6b2786ce73bace64f8"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209615_2.jpg",
@@ -101,17 +170,14 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209615_9.jpg",
 				"path": "/images/items/01_5188/1000209615_9.jpg",
 				"hash": "b3259ed474b92e5ee64c0b7c7ed61d4a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209615_10.jpg",
+				"path": "/images/items/01_5188/1000209615_10.jpg",
+				"hash": "a45206ef195f7a6b2786ce73bace64f8"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5188/",
-	"brandIds": ["optionpartsset"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5441", "01_5178"],
-	"manual": {
-		"id": "1619",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1619/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5188/"
 }

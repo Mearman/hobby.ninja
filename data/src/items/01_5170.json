@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/72 メイレス ゴウヨウカスタム",
-		"en": "HG 1/72 MAILeS GOUYOCUSTOM"
+		"en": "HG 1/72 Meires Goyo Custom"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		},
+		{
+			"id": "01_5080",
+			"url": "https://bandai-hobby.net/item/01_5080/",
+			"ja": "HG 1/72 アーロンライノ(グレイディ専用機)"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"『境界戦機 極鋼ノ装鬼』（きょうかいせんき きょっこうのそうき）のもう一人の主人公が駆る機体、「メイレス ゴウヨウカスタム」が商品化！",
@@ -28,93 +71,132 @@
 			"• アームパイルの杭部分はスライド可動し、差し替えなしで射出状態を再現。"
 		],
 		"en": [
-			"The \"Meires Goyou Custom \", the aircraft driven by the other main character of \" Kyoukai Senki Kyokko no Souki\", has been commercialized!",
+			"The \"Meires Goyou Custom\", the aircraft driven by the other main character of \"Kyoukai Senki Kyokko no Souki\", has been commercialized!",
 			"• 3mm diameter connection holes are placed in various locations for customization with emphasis on expandability. If you combine it with the separately sold Weapon set series, you can create an original plastic model arrangement.",
 			"• Comes with a variety of weapons such as arm pile, normal assault rifle, and normal handgun.",
 			"• Normal assault rifles and normal handguns can be attached to various connection holes using the included joints.",
 			"• The pile part of the arm pile can slide and reproduce the injection state without replacement."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ノーマルアサルトライフル×1",
-			"ノーマルハンドガン×1",
-			"アームパイル×1",
-			"ウェポンラック×1",
-			"リアスカ―トラック×1",
-			"ハンドパーツ×1式",
-			"ジョイントパーツ×１式",
-			"シール×2種"
-		],
-		"en": [
-			"Normal assault rifle x1",
-			"Normal hand gun x 1",
-			"Arm pile x1",
-			"Weapon rack x 1",
-			"Rear scar truck x 1",
-			"Hand parts x 1 set",
-			"Joint parts x 1 set",
-			"Seal×2 types"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ノーマルアサルトライフル",
+				"en": "normal assault rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ノーマルハンドガン",
+				"en": "normal hand gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アームパイル",
+				"en": "arm pile"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ウェポンラック",
+				"en": "Weapon rack"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リアスカ―トラック",
+				"en": "rear car truck"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ×１式",
+				"en": "Joint parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6028.jpg",
+				"src": "https://bandai-hobby.net/images/153_6028_s_phnyx4x3pjksazkvh7guhyqdrqs6.jpg",
 				"path": "/images/items/01_5170/153_6028.jpg",
 				"hash": "8b02c8eb3861d7ca2fd0f13bf9d2f402"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6028.jpg",
+				"src": "https://bandai-hobby.net/images/155_6028_s_dd9kehih26gs03aoze3c81jt68ae.jpg",
 				"path": "/images/items/01_5170/155_6028.jpg",
 				"hash": "442f3af294bcc633288c6f5b6ce22f1d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6028.jpg",
+				"src": "https://bandai-hobby.net/images/156_6028_s_nk3yxedaoycyktoot14jhumwgins.jpg",
 				"path": "/images/items/01_5170/156_6028.jpg",
 				"hash": "d4496a302eaf075680b74c879c88085b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6028.jpg",
+				"src": "https://bandai-hobby.net/images/157_6028_s_sugyllubpo0ohtfk17mzqtdg2qca.jpg",
 				"path": "/images/items/01_5170/157_6028.jpg",
 				"hash": "c3df48450a2a199fe775fb187a0e36d0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6028.jpg",
+				"src": "https://bandai-hobby.net/images/158_6028_s_op3x9k9tnu8f1zdan9d96zf53qxr.jpg",
 				"path": "/images/items/01_5170/158_6028.jpg",
 				"hash": "c6c5f961732d077217b321b7b918031d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6028.jpg",
+				"src": "https://bandai-hobby.net/images/159_6028_s_esvx8978tczp2yc33eugvu9k3ij5.jpg",
 				"path": "/images/items/01_5170/159_6028.jpg",
 				"hash": "66f44570953f3653e1e67b5d36e5baa2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6028.jpg",
+				"src": "https://bandai-hobby.net/images/189_6028_s_q2j5hwn44v5qkxfk03rv1v4h6d5k.jpg",
 				"path": "/images/items/01_5170/189_6028.jpg",
 				"hash": "8b7377f0119668d829b2325e25c0942c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6028.jpg",
+				"src": "https://bandai-hobby.net/images/190_6028_s_ineimiqsxb8sqpxsulm7u5k30gxg.jpg",
 				"path": "/images/items/01_5170/190_6028.jpg",
 				"hash": "6fcc8f3a606e5e386bc82fd5d16f01d8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6028.jpg",
+				"src": "https://bandai-hobby.net/images/191_6028_s_686u9v9w7pi6shwhx3q7owx7xa32.jpg",
 				"path": "/images/items/01_5170/191_6028.jpg",
 				"hash": "dc4dd627f2c34dbea264678358a3b6d1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_6028.jpg",
+				"src": "https://bandai-hobby.net/images/192_6028_s_2wwp5o606pehuse4pwb7inkzjkph.jpg",
 				"path": "/images/items/01_5170/192_6028.jpg",
 				"hash": "784bd31d6fc348d16d1843e7e578ed02"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5170/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5171", "01_5080"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5170/"
 }

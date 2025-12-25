@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MS SIS-Dc88w エリエネ=エリエリカ(エレガンテフォーム)",
-		"en": "30MS SIS-Dc88w ELIENE-ELIERICA (ELEGANTE FORM)"
+		"en": "30MS SIS-Dc88w Eliene = Elie Erika (Elegante Form)"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5975",
+			"url": "https://bandai-hobby.net/item/01_5975/",
+			"ja": "30MS 和泉愛依"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5954",
+			"url": "https://bandai-hobby.net/item/01_5954/",
+			"ja": "30MS オプションヘアスタイルパーツVol.12 全4種 ミディアムヘア2[イエロー4]"
+		}
+	],
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -32,59 +74,95 @@
 			"• 30 MINUTES LABEL共通の3mm径の軸を採用。「30 MINUTES MISSIONS」のパーツもオプションとして装着が可能。(※「30 MINUTES MISSIONS」キットの対象年齢は8才以上です)"
 		],
 		"en": [
-			"A new sister \"30MS SIS-Dc88w Eliene = Elie Erika (Elegante Form)\" is now available in the \" 30 MINUTES SISTERS\" series!",
+			"A new sister \"30MS SIS-Dc88w Eliene = Elie Erika (Elegante Form)\" is now available in the \"30 MINUTES SISTERS\" series!",
 			"• An all-in-one item that includes a character body, three types of facial parts with tampo printing, and armor parts.",
-			"• Smooth assembly is possible due to the ``optimum'' Runner parts arrangement, with consideration for ease of assembly and work flow.",
-			"• \"Color B \" face parts use tampo printing. You can enjoy changing the expression according to the pose from three types: \" Normal \", \" Smile \", and \" Aim\".",
+			"• Smooth assembly is possible due to the ``optimal'' Runner parts arrangement, with consideration for ease of assembly and work flow.",
+			"• \"Color B\" face parts use tampo printing. You can enjoy changing the expression according to the pose from three types: \"Normal\", \"Smile\", and \"Aim\".",
 			"• The wings can be moved on multiple axes, allowing you to add expression to the pose.",
 			"• Can be transformed into a large bowgun by rearranging the wings on the back. The shaft of the arrow uses metal parts to express the texture.",
 			"• The hairstyle uses newly designed parts.",
 			"• The included pedestal allows for a floating display.",
 			"• \"30 MINUTES SISTERS\" offers a lineup of face parts, hairstyle parts, and body parts by body part. You can create your own sister by combining parts sold separately.",
-			"• Adopts 3mm diameter shaft common to 30 MINUTES LABEL. \"30 MINUTES MISSIONS \" parts can also be installed as options. (*\" 30 MINUTES MISSIONS\" Kit is for ages 8 and up)"
+			"• Adopts 3mm diameter shaft common to 30 MINUTES LABEL. \"30 MINUTES MISSIONS\" parts can also be installed as options. (*\"30 MINUTES MISSIONS\" Kit is for ages 8 and up)"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"フェイスパーツ(タンポ印刷)×3種",
-			"アーマーパーツ×1式",
-			"ジョイントパーツ×1式",
-			"ハンドパーツ×1式",
-			"武装×1式",
-			"金属パーツ×1",
-			"ディスプレイ台座×1"
-		],
-		"en": [
-			"Face parts (tampo printing) x 3 types",
-			"Armor parts x 1 set",
-			"Joint parts x 1 set",
-			"Hand parts x 1 set",
-			"Armed x 1 type",
-			"Metal parts x 1",
-			"Display pedestal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フェイスパーツ(タンポ印刷)",
+				"en": "Face parts (tampo printing)"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "アーマーパーツ",
+				"en": "armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "武装",
+				"en": "armed"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "金属パーツ",
+				"en": "metal parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座",
+				"en": "display pedestal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209622_1.jpg",
 				"path": "/images/items/01_5194/1000209622_1.jpg",
 				"hash": "b9582d1e9bf4ecc4649b7e1bc4691929"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209622_10.jpg",
-				"path": "/images/items/01_5194/1000209622_10.jpg",
-				"hash": "fdee47d6d741b2968178104373b3d6db"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209622_11.jpg",
-				"path": "/images/items/01_5194/1000209622_11.jpg",
-				"hash": "c5634bd276fcbe4337b00cda5816e7f2"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209622_12.jpg",
-				"path": "/images/items/01_5194/1000209622_12.jpg",
-				"hash": "d32049e7d25ddc6e03607ea0019f180f"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209622_2.jpg",
@@ -125,15 +203,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209622_9.jpg",
 				"path": "/images/items/01_5194/1000209622_9.jpg",
 				"hash": "64e8b18ff87f30e8e12fe87b8a177ee4"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209622_10.jpg",
+				"path": "/images/items/01_5194/1000209622_10.jpg",
+				"hash": "fdee47d6d741b2968178104373b3d6db"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209622_11.jpg",
+				"path": "/images/items/01_5194/1000209622_11.jpg",
+				"hash": "c5634bd276fcbe4337b00cda5816e7f2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209622_12.jpg",
+				"path": "/images/items/01_5194/1000209622_12.jpg",
+				"hash": "d32049e7d25ddc6e03607ea0019f180f"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5194/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3581",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3581/"

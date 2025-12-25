@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/72 バンイップジンガー",
-		"en": "HG 1/72 BUNYIP GINGA"
+		"en": "HG 1/72 Bang Yip Singer"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		},
+		{
+			"id": "01_5080",
+			"url": "https://bandai-hobby.net/item/01_5080/",
+			"ja": "HG 1/72 アーロンライノ(グレイディ専用機)"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 22
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"『境界戦機 極鋼ノ装鬼』（きょうかいせんき きょっこうのそうき）より、変形可能な大型AMAIM「バンイップジンガー」が立体化！",
@@ -37,31 +80,53 @@
 			"• Comes with a variety of weapons such as Flame Thrower and Gatling Gun."
 		]
 	},
-	"accessories": {
-		"ja": ["機関砲×2", "ガトリングガン×1", "フレイムスロワー×1", "ジョイントパーツ×1式", "シール×1"],
-		"en": ["Machine gun x 2", "Gatling gun x 1", "Flame thrower x1", "Joint parts x 1 set", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "機関砲",
+				"en": "machine gun"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ガトリングガン",
+				"en": "gatling gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "フレイムスロワー",
+				"en": "flame thrower"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209624_1.jpg",
 				"path": "/images/items/01_5196/1000209624_1.jpg",
 				"hash": "fe75cdb1d746763fbad9398a8e4496c2"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209624_10.jpg",
-				"path": "/images/items/01_5196/1000209624_10.jpg",
-				"hash": "87b481ead572c3c49610feea150a7fc2"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209624_11.jpg",
-				"path": "/images/items/01_5196/1000209624_11.jpg",
-				"hash": "3f372bbc31bcd23e6a4488be114fbc9f"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209624_12.jpg",
-				"path": "/images/items/01_5196/1000209624_12.jpg",
-				"hash": "bec7ba45c1b01e16087276b0d63345ae"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209624_2.jpg",
@@ -102,13 +167,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209624_9.jpg",
 				"path": "/images/items/01_5196/1000209624_9.jpg",
 				"hash": "28861727c4811faa2d6836d53976e861"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209624_10.jpg",
+				"path": "/images/items/01_5196/1000209624_10.jpg",
+				"hash": "87b481ead572c3c49610feea150a7fc2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209624_11.jpg",
+				"path": "/images/items/01_5196/1000209624_11.jpg",
+				"hash": "3f372bbc31bcd23e6a4488be114fbc9f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209624_12.jpg",
+				"path": "/images/items/01_5196/1000209624_12.jpg",
+				"hash": "bec7ba45c1b01e16087276b0d63345ae"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5196/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5183", "01_5170", "01_5171", "01_5080"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5196/"
 }

@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard 仮面ライダーキバ キバフォーム",
-		"en": "Figure-rise Standard MASKED RIDER KIVA KIVA FORM"
+		"en": "Figure-rise Standard Kamen Rider Kiva Kiva Form"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "rider",
+			"url": "https://bandai-hobby.net/series/rider/",
+			"ja": "仮面ライダーシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5451",
+			"url": "https://bandai-hobby.net/item/01_5451/",
+			"ja": "Figure-rise Standard 仮面ライダーゼロワン ライジングホッパー"
+		},
+		{
+			"id": "item-1000215369",
+			"url": "https://p-bandai.jp/item/item-1000215369/",
+			"ja": "Figure-rise Standard 仮面ライダーファイズ ブラスターフォーム"
+		},
+		{
+			"id": "01_5276",
+			"url": "https://bandai-hobby.net/item/01_5276/",
+			"ja": "Figure-rise Standard 仮面ライダークウガ アルティメットフォーム"
+		},
+		{
+			"id": "01_5068",
+			"url": "https://bandai-hobby.net/item/01_5068/",
+			"ja": "Figure-rise Standard 仮面ライダー鎧武 オレンジアームズ"
+		}
+	],
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -31,64 +74,90 @@
 			"• 豊富なハンドパーツやFigure-rise Effect台座が付属。"
 		],
 		"en": [
-			"■ \"HEISEI RIDER PROJECT Beginning\" is finally FINAL! The last of the Heisei protagonist MASKED RIDER plastic modeling project is \"MASKED RIDER KIVA Kiva Form\" from \"MASKED RIDER KIVA\"! I'm going to go crazy!",
-			"■ In order to reproduce the pose unique to Kiva, the movable axis of the hip and hip joints has been reconstructed. The waist exterior moves in conjunction with the internal parts of the hip joint, enabling a wide range of movement of the legs.",
-			"■ The suit adopts mirror polishing and extra finish. By making a difference in the roughness of the surface, the details of the whole body are expressed.",
-			"■ The chains attached to the armor of the whole body are reproduced in separate parts to pursue realistic details with a three-dimensional effect.",
-			"■ The open state of the hell's gate of the right leg is reproduced by replacing the parts.",
-			"■ Kibatbat III can be detached from the belt. The floating state can be reproduced by using a dedicated pedestal.",
-			"■ 6 types of essls are expressed for each part. Can be stored in the flue slot. It comes with a fuestle handle and can be posed.",
-			"■ Comes with a wide variety of hand parts and a Figure-rise Effect pedestal. [Accessories]",
-			"■ Hell's Gate Open Right Leg Replacement Parts × 1 set",
-			"■ 1 set × Fuessle",
-			"■ 1 set × hand parts",
-			"■ Connection joint parts ×1",
-			"■ Figure-rise Effect Pedestal ×1",
-			"■ Pedestals for Kibatbat III Display ×1",
-			"■ 1 set × seals"
+			"\"HEISEI RIDER PROJECT Beginning\" is finally FINAL!",
+			"The final product of the Heisei era main character Kamen Rider plastic model project is \"Kamen Rider Kiva Kiva Form\" from \"Kamen Rider Kiva\"! Let's move on!",
+			"• The movable axes of the hips and hip joints have been rebuilt to reproduce Kiva's unique poses. By moving the exterior of the waist in conjunction with the internal parts of the hip joint, a wide range of movement of the legs is achieved.",
+			"• The suit has a mirror polish and extra finish. The details of the whole body are expressed by varying the roughness of the surface.",
+			"• The chains attached to the entire body armor are reproduced as separate parts, pursuing realistic details with a three-dimensional feel.",
+			"• Reproduce the Hell's Gate open state of the right leg by replacing parts.",
+			"• Kivat Bat III can be attached and removed from the belt. By using a special pedestal, you can recreate the floating state.",
+			"• 6 types of Fuessuru are expressed in each part. Can be stored in the Fess slot. A fuessuru handle is included and can be posed.",
+			"• Comes with a variety of hand parts and a figure-rise effect pedestal."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ヘルズゲート開放状態 右脚交換パーツ×1式",
-			"フエッスル×1式",
-			"ハンドパーツ×1式",
-			"接続用ジョイントパーツ×1",
-			"Figure-rise Effect台座×1",
-			"キバットバットIII世ディスプレイ用台座×1",
-			"シール×1式"
-		],
-		"en": [
-			"Hell's Gate open state Right leg replacement parts x 1 set",
-			"Fessle x 1 type",
-			"Hand parts x 1 set",
-			"Connection joint parts x 1",
-			"Figure-rise Effect pedestal x 1",
-			"Kivat Bat III display pedestal x 1",
-			"Seal×1 type"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヘルズゲート開放状態 右脚交換パーツ",
+				"en": "Hell's Gate open state right leg replacement parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "フエッスル",
+				"en": "Fessl"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "接続用ジョイントパーツ",
+				"en": "Joint parts for connection"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "Figure-rise Effect台座",
+				"en": "Figure-rise Effect pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "キバットバットIII世ディスプレイ用台座",
+				"en": "Kivat Bat III display pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205577_1.jpg",
 				"path": "/images/items/01_5175/1000205577_1.jpg",
 				"hash": "70d3f6ae6b3bef98dc55110745bf01ee"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205577_10.jpg",
-				"path": "/images/items/01_5175/1000205577_10.jpg",
-				"hash": "01f7ef3c0d32c4d02685039eeb585094"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205577_11.jpg",
-				"path": "/images/items/01_5175/1000205577_11.jpg",
-				"hash": "31d1bd6ee4461a02af53739a9961fb5f"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205577_12.jpg",
-				"path": "/images/items/01_5175/1000205577_12.jpg",
-				"hash": "543e0b75d0ee56f5390984fb3cc5978a"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205577_2.jpg",
@@ -129,13 +198,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205577_9.jpg",
 				"path": "/images/items/01_5175/1000205577_9.jpg",
 				"hash": "f0c295f1d9bdff668868e7920cb30d1e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205577_10.jpg",
+				"path": "/images/items/01_5175/1000205577_10.jpg",
+				"hash": "01f7ef3c0d32c4d02685039eeb585094"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205577_11.jpg",
+				"path": "/images/items/01_5175/1000205577_11.jpg",
+				"hash": "31d1bd6ee4461a02af53739a9961fb5f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205577_12.jpg",
+				"path": "/images/items/01_5175/1000205577_12.jpg",
+				"hash": "543e0b75d0ee56f5390984fb3cc5978a"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5175/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["rider"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5451", "item-1000215369", "01_5276", "01_5068"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5175/"
 }

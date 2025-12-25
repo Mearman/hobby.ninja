@@ -3,7 +3,48 @@
 	"type": "item",
 	"name": {
 		"ja": "アクションベース8 [クリアカラー]",
-		"en": "ACTION BASE 8 [CLEAR COLOR]"
+		"en": "Action Base 8 [Clear Color]"
+	},
+	"brands": [
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		},
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5934",
+			"url": "https://bandai-hobby.net/item/01_5934/",
+			"ja": "アクションベース7 [クリアカラー] 機動戦士Gundam GQuuuuuuXシールセット"
+		},
+		{
+			"id": "01_5256",
+			"url": "https://bandai-hobby.net/item/01_5256/",
+			"ja": "アクションベース6 [クリアカラー] ミラーシールセット"
+		},
+		{
+			"id": "01_5258",
+			"url": "https://bandai-hobby.net/item/01_5258/",
+			"ja": "アクションベース7 [クリアカラー] ミラーシールセット"
+		}
+	],
+	"manual": {
+		"id": "1487",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1487"
 	},
 	"price": {
 		"amount": 770,
@@ -29,17 +70,61 @@
 		],
 		"en": [
 			"Easy assembly with no driver required!",
-			"The structure is ideal for 1/100 scale plastic models and supports display in a wide range of poses!",
+			"The structure is ideal for 1/100 Scale plastic models, and supports display in a wide range of poses!",
 			"• In order to stably hold a large plastic model, the angle of the support is fixed with a hexagon socket head bolt.",
 			"• Comes with wrench parts and can be assembled without a screwdriver.",
 			"• A design that pursues simplicity with a cylindrical base shape.",
 			"• Each axis is movable to create a display with a wide range of poses. Provides solid support for both grounded and floating states."
 		]
 	},
-	"accessories": {
-		"ja": ["ベースパーツ×1", "支柱パーツ×1", "ボルト×4", "ナット×4", "レンチパーツ×5", "ジョイントパーツ×1式"],
-		"en": ["Base parts x 1", "Strut parts x 1", "Bolt x 4", "Nut x 4", "Wrench parts x 5", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ベースパーツ",
+				"en": "base parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "支柱パーツ",
+				"en": "Strut parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ボルト",
+				"en": "bolt"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "ナット",
+				"en": "nut"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "レンチパーツ",
+				"en": "wrench parts"
+			},
+			"count": 5
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -80,13 +165,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5165/",
-	"brandIds": ["actionbase"],
-	"seriesIds": [],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5934", "01_5256", "01_5258"],
-	"manual": {
-		"id": "1487",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1487/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5165/"
 }

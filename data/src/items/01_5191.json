@@ -2,8 +2,34 @@
 	"id": "01_5191",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット ガンダムキャリバーン",
-		"en": "SD GUNDAM CROSS SILHOUETTE GUNDAM CALIBARN"
+		"ja": "SDガンダム クロスシルエット ガンダムキャリバーン",
+		"en": "SDGundam Cross Silhouette Gundam Caliburn"
+	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"manual": {
+		"id": "1622",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1622"
 	},
 	"price": {
 		"amount": 1980,
@@ -38,37 +64,44 @@
 			"• Legs with movable parts can be transformed into high maneuver mode."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"バリアブルロッドライフル×１",
-			"エスカッシャン×１",
-			"ビームサーベル(グリップ)×２",
-			"ハンドパーツ×１式",
-			"シール×１"
-		],
-		"en": ["Variable rod rifle x 1", "Escutcheon x1", "Beam saber (grip) x 2", "Hand parts x 1 set", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "バリアブルロッドライフル×１",
+				"en": "Variable rod rifle x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "エスカッシャン×１",
+				"en": "Escutcheon x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル(グリップ)×２",
+				"en": "Beam saber (grip) x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209619_1.jpg",
 				"path": "/images/items/01_5191/1000209619_1.jpg",
 				"hash": "06246940585dcd8c8367240b6904a6ce"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209619_10.jpg",
-				"path": "/images/items/01_5191/1000209619_10.jpg",
-				"hash": "847a4d9b63ab298e25e49c4cd5c9e527"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209619_11.jpg",
-				"path": "/images/items/01_5191/1000209619_11.jpg",
-				"hash": "4ef0ea0d6699e6a1495b2c4c25e41e42"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209619_12.jpg",
-				"path": "/images/items/01_5191/1000209619_12.jpg",
-				"hash": "b5b64ef0796fe5b16ffaf19db18f5cfc"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209619_2.jpg",
@@ -109,17 +142,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209619_9.jpg",
 				"path": "/images/items/01_5191/1000209619_9.jpg",
 				"hash": "06ea198f1fe6f15904572716016323a3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209619_10.jpg",
+				"path": "/images/items/01_5191/1000209619_10.jpg",
+				"hash": "847a4d9b63ab298e25e49c4cd5c9e527"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209619_11.jpg",
+				"path": "/images/items/01_5191/1000209619_11.jpg",
+				"hash": "4ef0ea0d6699e6a1495b2c4c25e41e42"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209619_12.jpg",
+				"path": "/images/items/01_5191/1000209619_12.jpg",
+				"hash": "b5b64ef0796fe5b16ffaf19db18f5cfc"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5191/",
-	"brandIds": ["sdcs"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": [],
-	"manual": {
-		"id": "1622",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1622/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5191/"
 }

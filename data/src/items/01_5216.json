@@ -5,6 +5,60 @@
 		"ja": "ＨＧ 1/144 ガンダムルブリス量産試作モデル",
 		"en": "HG 1/144 Gundam Rubris mass production prototype model"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216474",
+			"url": "https://p-bandai.jp/item/item-1000216474/",
+			"ja": "ＨＧ 1/144 デスルター"
+		},
+		{
+			"id": "item-1000211616",
+			"url": "https://p-bandai.jp/item/item-1000211616/",
+			"ja": "ＨＧ 1/144 ベギルベウトルシュ(ケナンジ小隊所属機/リドリック小隊所属機)"
+		},
+		{
+			"id": "01_5422",
+			"url": "https://bandai-hobby.net/item/01_5422/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムキャリバーン [クリアカラー]"
+		},
+		{
+			"id": "item-1000203130",
+			"url": "https://p-bandai.jp/item/item-1000203130/",
+			"ja": "FULL MECHANICS 1/100 ガンダムエアリアル パーメットスコア・シックス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 5
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -65,7 +118,7 @@
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"Stay alive. For you, Erik, and everyone else.",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
-			"From the prequel \"PROLOGUE \" to \" Mobile Suit Gundam: Witch of Mercury \", the \" Gundam Lubris mass production prototype model\" is now available in the HG series!",
+			"From the prequel \"PROLOGUE\" to \"Mobile Suit Gundam: Witch of Mercury\", the \"Gundam Lubris mass production prototype model\" is now available in the HG series!",
 			"Part of the exterior and weapons are reproduced with new modeling!",
 			"A 1/144 Scale item that is easy to make.",
 			"● Reproduce the Gundam Rubris mass production prototype model with new modeling!",
@@ -104,59 +157,69 @@
 			"・Product specifications are as of 20242. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["ビームライフル", "ガンビット"],
-		"en": ["beam rifle", "Gambit"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "beam rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "ガンビット",
+				"en": "Gambit"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6071.jpg",
+				"src": "https://bandai-hobby.net/images/153_6071_s_g1l3e7d28rob15dwp81y4mbwjx64.jpg",
 				"path": "/images/items/01_5216/153_6071.jpg",
 				"hash": "35bc99b1bf679ba5cc37a623937bd775"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6071.jpg",
+				"src": "https://bandai-hobby.net/images/155_6071_s_xwy7vf8uvgo032l9u2h9s7ztd0h5.jpg",
 				"path": "/images/items/01_5216/155_6071.jpg",
 				"hash": "85eeedc9c67a22c3ff2424f736c0a8ae"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6071.jpg",
+				"src": "https://bandai-hobby.net/images/156_6071_s_9inlmn14hm2erybcgcvtv0l6semh.jpg",
 				"path": "/images/items/01_5216/156_6071.jpg",
 				"hash": "ae21a72f692f7b7de95267f4f3865871"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6071.jpg",
+				"src": "https://bandai-hobby.net/images/157_6071_s_tgku8iloje4xoiv3ej7p42aj8ec2.jpg",
 				"path": "/images/items/01_5216/157_6071.jpg",
 				"hash": "28113f71b2d8571695e0b630630ba0c4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6071.jpg",
+				"src": "https://bandai-hobby.net/images/158_6071_s_0d985nk1yva0naw4qfck149nhco1.jpg",
 				"path": "/images/items/01_5216/158_6071.jpg",
 				"hash": "df3e9f19374d41ff9730081f0077f0e5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6071.jpg",
+				"src": "https://bandai-hobby.net/images/159_6071_s_sw3bxnvxnbvwsz00oqn1lyeup45h.jpg",
 				"path": "/images/items/01_5216/159_6071.jpg",
 				"hash": "bcb4c7f885154d62c097fee72497dc65"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6071.jpg",
+				"src": "https://bandai-hobby.net/images/189_6071_s_h4a8nauy59nhi14xorz0012neue3.jpg",
 				"path": "/images/items/01_5216/189_6071.jpg",
 				"hash": "2b05e94d2ffba3dfd07a1d30d7fa44cd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6071.jpg",
+				"src": "https://bandai-hobby.net/images/190_6071_s_mn6k7tqlec9uxeadox387f0j5gb9.jpg",
 				"path": "/images/items/01_5216/190_6071.jpg",
 				"hash": "46eb535aac20ad022689a3ae60a5af7a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6071.jpg",
+				"src": "https://bandai-hobby.net/images/191_6071_s_mfwxyyrhpbnsru1q8asjzx5aeyob.jpg",
 				"path": "/images/items/01_5216/191_6071.jpg",
 				"hash": "cbf76888b5cb7a9d292a1eb7008506bf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_6071.jpg",
+				"src": "https://bandai-hobby.net/images/192_6071_s_3jr1d24u9t5hfoq45i9l63230sk0.jpg",
 				"path": "/images/items/01_5216/192_6071.jpg",
 				"hash": "ba230bee1bbf59b6ab8b24229b6c6737"
 			}
@@ -164,14 +227,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5216/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203130"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2513",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2513/"

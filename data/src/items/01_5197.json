@@ -3,8 +3,36 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard 四ノ宮キコル",
-		"en": "Figure-rise Standard KIKORU SHINOMIYA"
+		"en": "Figure-rise Standard Kikoru Shinomiya"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kaiju-no8",
+			"url": "https://bandai-hobby.net/series/kaiju-no8/",
+			"ja": "怪獣8号"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5173",
+			"url": "https://bandai-hobby.net/item/01_5173/",
+			"ja": "Figure-rise Standard 怪獣８号"
+		}
+	],
 	"price": {
 		"amount": 4620,
 		"currency": "JPY",
@@ -36,47 +64,79 @@
 			"• Hand parts include a weapon holder that can hold various weapons, and a palm with expressions."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"フェイスパーツ（タンポ印刷）×1種",
-			"フェイスパーツ（水転写式デカール）×3種",
-			"ハンドパーツ×1式",
-			"基本銃×1",
-			"ハンドガン×1",
-			"斧×1",
-			"シール×1式"
-		],
-		"en": [
-			"Face parts (tampo printing) x 1 type",
-			"Face parts (water transfer decal) x 3 types",
-			"Hand parts x 1 set",
-			"Basic gun x 1",
-			"Hand gun x 1",
-			"Ax x1",
-			"Seal×1 type"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フェイスパーツ（タンポ印刷）",
+				"en": "Face parts (tampo printing)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "フェイスパーツ（水転写式デカール）",
+				"en": "Face parts (water transfer decal)"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "基本銃",
+				"en": "basic gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドガン",
+				"en": "hand gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "斧",
+				"en": "ax"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209625_1.jpg",
 				"path": "/images/items/01_5197/1000209625_1.jpg",
 				"hash": "ff7627c4d26314ebc64b6dcaaa98df79"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209625_10.jpg",
-				"path": "/images/items/01_5197/1000209625_10.jpg",
-				"hash": "dcc0982b11b884540097754f90c6c28d"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209625_11.jpg",
-				"path": "/images/items/01_5197/1000209625_11.jpg",
-				"hash": "50df754762d4f352756fb20055b48c4e"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209625_12.jpg",
-				"path": "/images/items/01_5197/1000209625_12.jpg",
-				"hash": "2ab53a6cc9864cb95a4902e42cbb7d30"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209625_2.jpg",
@@ -117,13 +177,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209625_9.jpg",
 				"path": "/images/items/01_5197/1000209625_9.jpg",
 				"hash": "4c7c9978621cf3062906aa6713ac0b21"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209625_10.jpg",
+				"path": "/images/items/01_5197/1000209625_10.jpg",
+				"hash": "dcc0982b11b884540097754f90c6c28d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209625_11.jpg",
+				"path": "/images/items/01_5197/1000209625_11.jpg",
+				"hash": "50df754762d4f352756fb20055b48c4e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209625_12.jpg",
+				"path": "/images/items/01_5197/1000209625_12.jpg",
+				"hash": "2ab53a6cc9864cb95a4902e42cbb7d30"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5197/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["kaiju-no8"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5173"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5197/"
 }

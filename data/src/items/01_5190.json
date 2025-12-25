@@ -3,7 +3,39 @@
 	"type": "item",
 	"name": {
 		"ja": "オプションパーツセット ガンプラ 03 (ビルドハンズ 角型)",
-		"en": "OPTION PARTS SET GUNPLA 03 (BUILD HANDS EDGE)"
+		"en": "Option parts set Gunpla 03 (Build Hands Square Type)"
+	},
+	"brands": [
+		{
+			"id": "optionpartsset",
+			"url": "https://bandai-hobby.net/brand/optionpartsset/",
+			"ja": "オプションパーツセット"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5189",
+			"url": "https://bandai-hobby.net/item/01_5189/",
+			"ja": "オプションパーツセット ガンプラ 04 (ビルドハンズ 丸型)"
+		}
+	],
+	"manual": {
+		"id": "1620",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1620"
 	},
 	"price": {
 		"amount": 660,
@@ -34,14 +66,29 @@
 			"• The weapon handle can be attached with a 4mm x 2mm weapon grip and a 3mm diameter saber grip."
 		]
 	},
-	"accessories": {
-		"ja": ["ハンドパーツS（3種×左右）×2", "ハンドパーツM（3種×左右）×2", "ハンドパーツL（3種×左右）×2"],
-		"en": [
-			"Hand parts S (3 types x left and right) x 2",
-			"Hand parts M (3 types x left and right) x 2",
-			"Hand parts L (3 types x left and right) x 2"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハンドパーツS（3種×左右）",
+				"en": "Hand parts S (3 types x left and right)"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツM（3種×左右）",
+				"en": "Hand parts M (3 types x left and right)"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツL（3種×左右）",
+				"en": "Hand parts L (3 types x left and right)"
+			},
+			"count": 2
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -87,13 +134,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5190/",
-	"brandIds": ["optionpartsset"],
-	"seriesIds": ["builddivers"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5189"],
-	"manual": {
-		"id": "1620",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1620/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5190/"
 }

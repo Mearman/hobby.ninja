@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MS オプションヘアスタイルパーツVol.10 全4種 ツインテール7［ブラック1］",
-		"en": "30MS OPTION HAIR STYLE PARTS Vol.10 ALL 4 TYPES PIGTAILS 7 [BLACK 1]"
+		"en": "30MS Option Hairstyle Parts Vol.10 All 4 Types Twin Tails 7 [Black 1]"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5975",
+			"url": "https://bandai-hobby.net/item/01_5975/",
+			"ja": "30MS 和泉愛依"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5954",
+			"url": "https://bandai-hobby.net/item/01_5954/",
+			"ja": "30MS オプションヘアスタイルパーツVol.12 全4種 ミディアムヘア2[イエロー4]"
+		}
+	],
 	"price": {
 		"amount": 600,
 		"currency": "JPY",
@@ -26,44 +68,42 @@
 		],
 		"en": [
 			"The world view expands when combined with the 30MS body! New optional hairstyle parts are now available!",
-			"• Black hair in a bun and twin tails.",
+			"• Black hair in a bun with twin tails.",
 			"• Create your character by changing the hair style and hair color to your liking by replacing parts."
 		]
 	},
-	"accessories": {
-		"ja": ["ヘアスタイルパーツ×1"],
-		"en": ["Hair style parts x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヘアスタイルパーツ",
+				"en": "hairstyle parts"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5230_1.jpg",
+				"src": "https://bandai-hobby.net/images/153_6086_o_1i6mit2sauqi1ogc16pq1dfgp8u2n.jpg",
+				"path": "/images/items/01_5230/153_6086.jpg",
+				"hash": "44a070c1a157227bdd6b8898b701fb21"
+			},
+			{
 				"path": "/images/items/01_5230/01_5230_1.jpg",
 				"hash": "fe37bc76ef7256705a5d76acfa021cdd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5230_2.jpg",
 				"path": "/images/items/01_5230/01_5230_2.jpg",
 				"hash": "edda5517bc0ac99ec069932b15cbda13"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5230_3.jpg",
 				"path": "/images/items/01_5230/01_5230_3.jpg",
 				"hash": "fe62cc0ab5e1591c02a8e46102fe9578"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/153_6086.jpg",
-				"path": "/images/items/01_5230/153_6086.jpg",
-				"hash": "44a070c1a157227bdd6b8898b701fb21"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5230/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3586",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3586/"

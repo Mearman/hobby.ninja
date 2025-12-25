@@ -2,9 +2,53 @@
 	"id": "01_5160",
 	"type": "item",
 	"name": {
-		"ja": "RG 1/144 ガンダムベース限定 ZGMF-X10A フリーダムガンダム Ver.GCP",
-		"en": "RG 1/144 GUNDAM Base Limited ZGMF-X10A Freedom GUNDAM Ver.GCP"
+		"ja": "RG 1/144  ガンダムベース限定 ZGMF-X10A フリーダムガンダム Ver.GCP",
+		"en": "RG 1/144 Gundam Base Limited ZGMF-X10A Freedom Gundam Ver.GCP"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000136194",
+			"url": "https://p-bandai.jp/item/item-1000136194",
+			"ja": "ＲＧ 1/144 パーフェクトストライクガンダム"
+		},
+		{
+			"id": "item-1000114754",
+			"url": "https://p-bandai.jp/item/item-1000114754",
+			"ja": "ＲＧ 1/144 ストライクルージュ＋ＨＧ 1/144  Ｉ.Ｗ.Ｓ.Ｐ."
+		},
+		{
+			"id": "item-1000132011",
+			"url": "https://p-bandai.jp/item/item-1000132011",
+			"ja": "RG 1/144 ZGMF-X09A ジャスティスガンダム ディアクティブモード"
+		},
+		{
+			"id": "01_3726",
+			"url": "https://bandai-hobby.net/item/01_3726/",
+			"ja": "RG 1/144 ジャスティスガンダム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -18,64 +62,71 @@
 		"day": 2
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
 			"上海に降臨した実物大フリーダムガンダム立像がRG/144で立体化！",
-			"■パネルラインや色分けを精密に再現",
-			"■新たな設定である着地用のランディング・ギアパーツと平手パーツにより立像と同じポーズで飾ることが可能。",
-			"■マーキングと金属の輝きを再現するリアリスティックデカールが付属",
+			"• パネルラインや色分けを精密に再現",
+			"• 新たな設定である着地用のランディング・ギアパーツと平手パーツにより立像と同じポーズで飾ることが可能。",
+			"• マーキングと金属の輝きを再現するリアリスティックデカールが付属",
 			"付属武装：ビームライフル / ビームサーベル / シールド"
 		],
 		"en": [
-			"■ For GUNPLA fans around the world, this is a limited edition GUNPLA at the official GUNPLA complex \"GUNDAM Base\". The life-size statue of Freedom GUNDAM that descended in Shanghai is three-dimensional with RG/144!",
-			"■ Precise reproduction of panel lines and color coding",
-			"■ It is possible to decorate in the same pose as a standing statue with the landing gear parts and flat hand parts, which are new settings.",
-			"■ Comes with realistic decals that reproduce markings and the shine of metal Armament Included: Beam Rifle / Beam Saber / Shield"
+			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
+			"The life-sized Freedom Gundam statue that descended on Shanghai is now three-dimensional with RG/144!",
+			"• Accurately reproduce panel lines and color coding",
+			"• New setting Landing gear parts and open hand parts allow you to display it in the same pose as the standing statue.",
+			"• Comes with realistic decals that reproduce markings and metal shine.",
+			"Attached weapons: Beam rifle / Beam saber / Seal"
 		]
 	},
-	"accessories": {
-		"ja": ["ビームライフル", "ビームサーベル", "シールド"],
-		"en": ["beam rifle", "beam saber", "Seal de"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "beam rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "beam saber"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5160_2.jpg",
-				"path": "/images/items/01_5160/01_5160_2.jpg",
-				"hash": "00204375582aae18149d5628348b0c79"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5160_3.jpg",
-				"path": "/images/items/01_5160/01_5160_3.jpg",
-				"hash": "a22106d0891e11a1ec5a0a1c4f25fa3a"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/153_6018.jpg",
+				"src": "https://bandai-hobby.net/images/153_6018_o_1hfoa8tu91grab0dhuoltf1cvf23.jpg",
 				"path": "/images/items/01_5160/153_6018.jpg",
 				"hash": "0d1992a08272380f24fd19739d847990"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6018.jpg",
+				"src": "https://bandai-hobby.net/images/155_6018_o_1hfoa9i8v1lv0rog1nmc1qd7epa2d.jpg",
 				"path": "/images/items/01_5160/155_6018.jpg",
 				"hash": "fac2d857bce558503c5ac1fa92df7e81"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6018.jpg",
+				"path": "/images/items/01_5160/01_5160_2.jpg",
+				"hash": "00204375582aae18149d5628348b0c79"
+			},
+			{
+				"path": "/images/items/01_5160/01_5160_3.jpg",
+				"hash": "a22106d0891e11a1ec5a0a1c4f25fa3a"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/158_6018_o_1hfoaad3b8qckr059brrj2c12s.jpg",
 				"path": "/images/items/01_5160/158_6018.jpg",
 				"hash": "c07c3f4dba604944a0983947795659d7"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5160/",
-	"brandIds": ["rg"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000136194", "item-1000114754", "item-1000132011", "01_3726"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5160/"
 }

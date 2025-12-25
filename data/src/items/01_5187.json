@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 シナンジュ・スタイン (ナラティブ Ver.) Ver.Ka",
-		"en": "MG 1/100 SINANJU STEIN (NARRATIVE Ver.) Ver.ka"
+		"en": "MG 1/100 Sinanju Stein (Narrative Ver.) Ver.Ka"
 	},
+	"brands": [
+		{
+			"id": "mgka",
+			"url": "https://bandai-hobby.net/brand/mgka/",
+			"ja": "MG Ver.Ka［マスターグレード バージョンカトキ］"
+		}
+	],
+	"series": [
+		{
+			"id": "narrative",
+			"url": "https://bandai-hobby.net/series/narrative/",
+			"ja": "機動戦士ガンダムNT[ナラティブ]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000213253",
+			"url": "https://p-bandai.jp/item/item-1000213253/",
+			"ja": "ＭＧ 1/100 ナラティブガンダム Ｃ装備 Ｖｅｒ．Ｋａ用 Ｂ装備拡張セット"
+		},
+		{
+			"id": "item-1000213251",
+			"url": "https://p-bandai.jp/item/item-1000213251/",
+			"ja": "ＭＧ 1/100 ナラティブガンダム Ｂ装備 Ｖｅｒ．Ｋａ"
+		},
+		{
+			"id": "01_5164",
+			"url": "https://bandai-hobby.net/item/01_5164/",
+			"ja": "MG 1/100 ナラティブガンダム C装備 Ver.Ka"
+		}
+	],
+	"manual": {
+		"id": "1618",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1618"
+	},
+	"scale": "1/100",
 	"price": {
 		"amount": 8800,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 29
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"RX-0シリーズへと連なるフル・サイコフレームMSの「原石(スタイン)」となったMS。ナラティブバージョンのデザインに更新されVer.Kaで登場。",
@@ -39,45 +81,91 @@
 			"• The Zoltan Akkanen figure comes in two versions: sitting and standing."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"シールド×１",
-			"ハイ・ビーム・ライフル×１",
-			"グレネード・ランチャー×１",
-			"ビーム・アックス×2",
-			"バズーカ×１",
-			"ビーム・サーベル×２",
-			"エフェクトパーツ×1式",
-			"ハンドパーツ×１式",
-			"フィギュア×２種",
-			"ジョイントパーツ×1式",
-			"シール×１式"
-		],
-		"en": [
-			"Seal de x1",
-			"High beam rifle x1",
-			"Grenade launcher x1",
-			"Beam ax x2",
-			"Bazooka x1",
-			"Beam saber x2",
-			"Effect parts x 1",
-			"Hand parts x 1 set",
-			"Figure x 2 types",
-			"Joint parts x 1 set",
-			"Seal x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シールド×１",
+				"en": "Seal de x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハイ・ビーム・ライフル×１",
+				"en": "High beam rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "グレネード・ランチャー×１",
+				"en": "Grenade launcher x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・アックス",
+				"en": "beam ax"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "バズーカ×１",
+				"en": "Bazooka x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル×２",
+				"en": "Beam saber x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "エフェクトパーツ",
+				"en": "effect parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "フィギュア×２種",
+				"en": "Figure x 2 types"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１式",
+				"en": "Seal x 1 set"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209614_1.jpg",
 				"path": "/images/items/01_5187/1000209614_1.jpg",
 				"hash": "f8174604eda5d5bfdc6a4d94c8ea7dda"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209614_10.jpg",
-				"path": "/images/items/01_5187/1000209614_10.jpg",
-				"hash": "2530ebc6ca265160b7ee73315efd916d"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209614_2.jpg",
@@ -118,17 +206,14 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209614_9.jpg",
 				"path": "/images/items/01_5187/1000209614_9.jpg",
 				"hash": "a2cf719ca8d59f4fe0d1c3ea552a60ab"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209614_10.jpg",
+				"path": "/images/items/01_5187/1000209614_10.jpg",
+				"hash": "2530ebc6ca265160b7ee73315efd916d"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5187/",
-	"brandIds": ["mgka"],
-	"seriesIds": ["narrative"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000213253", "item-1000213251", "01_5164"],
-	"manual": {
-		"id": "1618",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1618/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5187/"
 }

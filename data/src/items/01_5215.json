@@ -5,6 +5,54 @@
 		"ja": "FULL MECHANICS 1/100 ソードカラミティガンダム",
 		"en": "FULL MECHANICS 1/100 Sword Calamity Gundam"
 	},
+	"brands": [
+		{
+			"id": "pb_others",
+			"url": "https://bandai-hobby.net/brand/pb_others/",
+			"ja": "その他シリーズ／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "fullmechanics",
+			"url": "https://bandai-hobby.net/brand/fullmechanics/",
+			"ja": "FULL MECHANICS[フルメカニクス]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000220190",
+			"url": "https://p-bandai.jp/item/item-1000220190/",
+			"ja": "ＨＧ 1/144 ザク・デザートタイプ ピンクパンサー隊機"
+		},
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "item-1000216105",
+			"url": "https://p-bandai.jp/item/item-1000216105/",
+			"ja": "RG 1/144 ソードインパルスガンダムＳｐｅｃＩＩ"
+		},
+		{
+			"id": "item-1000216110",
+			"url": "https://p-bandai.jp/item/item-1000216110/",
+			"ja": "ＨＧ 1/144 ザクＩＩ Ｆ型 チャブス機 ＆ ケイル機 + 無識別型ザクＩＩ ソラリ機 再現パーツセット(復讐のレクイエム)"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 6050,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 5
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -76,7 +123,7 @@
 			"Close Combat Type Calamity",
 			"SODO COLOR AMITY GUNDAM",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
-			"From \"Mobile Suit Gundam SEED MSV\", the long-awaited Sword Calamity Gundam is now three-dimensional with FULL MECHANICS!",
+			"From \"Mobile Suit GundamSEED MSV\", the long-awaited Sword Calamity Gundam is now three-dimensional with FULL MECHANICS!",
 			"Part of the exterior and special equipment of Sword Calamity, which specializes in combat, is reproduced with new modeling!",
 			"● Thoroughly reproduce the Sword Calamity Gundam with FULL MECHANICS!",
 			"Based on Calamity Gundam, the shoulders, wrists, shins, and backpack joints are reproduced with new parts!",
@@ -89,7 +136,7 @@
 			"A special beam effect that reproduces the state of stacking anti-ship swords is also included, allowing for a variety of poses.",
 			"・Rocket anchor \"Panzer Eisen\"",
 			"The rocket anchors equipped on both forearms can be expanded by pulling out the claw part.",
-			"Reproduce the injection state by using special joint parts and lead wires.",
+			"The injection state is reproduced by using special joint parts and lead wires.",
 			"・Beam boomerang \"Midas Messer\"",
 			"The beam boomerangs equipped on both shoulders can be attached and detached from the shoulders, and special beam effects can be attached.",
 			"Reproduce the throwing state by using the included action base.",
@@ -97,13 +144,13 @@
 			"Both shins are equipped with combat knives with a different design from Strike Gundam.",
 			"Deploy the shin armor and attach/detach the knife.",
 			"● Includes MarkingSeal for increased detail.",
-			"Including the personal mark of \"Ed the Ripper \", \" Edward Harrelson\", who was on board this machine.",
+			"Including the personal mark of \"Ed the Ripper\", \"Edward Harrelson\", who was on board this machine.",
 			"Comes with MarkingSeal.",
 			"Attached weapons: anti-ship sword x 2 / beam boomerang x 2 / rocket anchor x 2 / combat knife x 2",
 			"Accessories: Action base 6 x 2",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/100 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS/PVC/ABS",
 			"・No adhesive is used in the assembly.",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -122,59 +169,81 @@
 			"・Product specifications are as of 20242. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["対艦刀×２", "ビームブーメラン×２", "ロケットアンカー×２", "コンバットナイフ×２"],
-		"en": ["Anti-ship sword x2", "Beam boomerang x2", "Rocket anchor x2", "Combat knife x 2"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "対艦刀×２",
+				"en": "Anti-ship sword x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームブーメラン×２",
+				"en": "Beam boomerang x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "ロケットアンカー×２",
+				"en": "Rocket anchor x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "コンバットナイフ×２",
+				"en": "Combat knife x 2"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6070.jpg",
+				"src": "https://bandai-hobby.net/images/153_6070_s_ux4n4b1wvusly3npo63v7esdvtvt.jpg",
 				"path": "/images/items/01_5215/153_6070.jpg",
 				"hash": "96fd83cbfd7db6c08c8feefe23064a48"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6070.jpg",
+				"src": "https://bandai-hobby.net/images/155_6070_s_ya5un8m47tibotfcu0lurfrircme.jpg",
 				"path": "/images/items/01_5215/155_6070.jpg",
 				"hash": "13a262d1e718ded3038276b1cf0d8632"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6070.jpg",
+				"src": "https://bandai-hobby.net/images/156_6070_s_2oixfciv9x8hrxs9nivs2t3dj1v1.jpg",
 				"path": "/images/items/01_5215/156_6070.jpg",
 				"hash": "64238c0468ba66a071084c2a3682c800"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6070.jpg",
+				"src": "https://bandai-hobby.net/images/157_6070_s_1rh8zg6mqoaclvcvxeiuxhwbj49m.jpg",
 				"path": "/images/items/01_5215/157_6070.jpg",
 				"hash": "4fdc0252fd27733cc92139187e5d7647"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6070.jpg",
+				"src": "https://bandai-hobby.net/images/158_6070_s_fzm2mkcyn6mzxe5gl9a1b7pu77ls.jpg",
 				"path": "/images/items/01_5215/158_6070.jpg",
 				"hash": "8dedc2d320219599967a6f8372aeb2c3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6070.jpg",
+				"src": "https://bandai-hobby.net/images/159_6070_s_wuhqfpt9aobnxtfalcczoe3hpjfq.jpg",
 				"path": "/images/items/01_5215/159_6070.jpg",
 				"hash": "65f93d5e65018b93213451df90fec760"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6070.jpg",
+				"src": "https://bandai-hobby.net/images/189_6070_s_k66cogpwyd74h0b3r8f7hwii02gr.jpg",
 				"path": "/images/items/01_5215/189_6070.jpg",
 				"hash": "6b52b0f56b81b48839212bbcf7b9f612"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6070.jpg",
+				"src": "https://bandai-hobby.net/images/190_6070_s_d3kgg0s7kcp306p6wpj7tabhcttq.jpg",
 				"path": "/images/items/01_5215/190_6070.jpg",
 				"hash": "81e70c90011e9c2aaac8245aa6fb580e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6070.jpg",
+				"src": "https://bandai-hobby.net/images/191_6070_s_andiayafku25s6e46jcgqwa8qzbn.jpg",
 				"path": "/images/items/01_5215/191_6070.jpg",
 				"hash": "90409978c055beff1850dae28ec8f22a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_6070.jpg",
+				"src": "https://bandai-hobby.net/images/192_6070_s_iuqs593l3hsv9gw3qldx04gqgfak.jpg",
 				"path": "/images/items/01_5215/192_6070.jpg",
 				"hash": "49fc1644a7c8212844e070e76544b44e"
 			}
@@ -182,14 +251,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5215/",
-	"brandIds": ["pb_others", "pb_gunpla", "fullmechanics"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000220190", "item-1000220189", "item-1000216105", "item-1000216110"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2486",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2486/"

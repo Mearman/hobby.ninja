@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/72 境界戦機ウェポンセット8",
-		"en": "HG 1/72 AMAIM Warrior at the Borderline Weapon Set8"
+		"en": "HG 1/72 Kyoukai Senki Weapon Set 8"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5080",
+			"url": "https://bandai-hobby.net/item/01_5080/",
+			"ja": "HG 1/72 アーロンライノ(グレイディ専用機)"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"『境界戦機 極鋼ノ装鬼』（きょうかいせんき きょっこうのそうき）より、武装と支援機を合わせた「境界戦機ウェポンセット8」が登場！",
@@ -35,89 +78,120 @@
 			"• The missile launcher also comes with a grip that can be attached to the aircraft."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ドレッドノータスｘ1",
-			"ミサイルランチャー×2",
-			"スモークディスチャージャー×4",
-			"ガトリングガン×1",
-			"グリップ×2",
-			"ジョイントパーツ×1式",
-			"シール×1"
-		],
-		"en": [
-			"Dreadnoughtus x1",
-			"Missile launcher x2",
-			"Smoke discharger x 4",
-			"Gatling gun x 1",
-			"Grip x 2",
-			"Joint parts x 1 set",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ドレッドノータス",
+				"en": "dreadnought"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ミサイルランチャー",
+				"en": "missile launcher"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "スモークディスチャージャー",
+				"en": "smoke discharger"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "ガトリングガン",
+				"en": "gatling gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "グリップ",
+				"en": "grip"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6029.jpg",
+				"src": "https://bandai-hobby.net/images/153_6029_s_fde2kydv4gnybyvkqojuu1w77lbc.jpg",
 				"path": "/images/items/01_5171/153_6029.jpg",
 				"hash": "a9c7809e8569bdc20020b359b85c2669"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6029.jpg",
+				"src": "https://bandai-hobby.net/images/155_6029_s_9lnsrcqyta8z3n24k3ztxldydh1n.jpg",
 				"path": "/images/items/01_5171/155_6029.jpg",
 				"hash": "6cb1fcf951aac2d370ba70244e458c07"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6029.jpg",
+				"src": "https://bandai-hobby.net/images/156_6029_s_r8jzaw1ici1l4kgjt50mwrqzpnwh.jpg",
 				"path": "/images/items/01_5171/156_6029.jpg",
 				"hash": "d7706908e24b648c6a8a9c66f5539780"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6029.jpg",
+				"src": "https://bandai-hobby.net/images/157_6029_s_2ifam9yti90m00oosauk104j4spc.jpg",
 				"path": "/images/items/01_5171/157_6029.jpg",
 				"hash": "90a5b5354bb6df3a96cc2377787b993e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6029.jpg",
+				"src": "https://bandai-hobby.net/images/158_6029_s_mkkulvuzjxnfprmyj1nrke1fn9we.jpg",
 				"path": "/images/items/01_5171/158_6029.jpg",
 				"hash": "6431a39ca540944e3b869acb4ea77976"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6029.jpg",
+				"src": "https://bandai-hobby.net/images/159_6029_s_7qgl4p9tgi6sut67mpq9buctxufo.jpg",
 				"path": "/images/items/01_5171/159_6029.jpg",
 				"hash": "bf3d5f3db054069d7d2d1611cac09d6d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6029.jpg",
+				"src": "https://bandai-hobby.net/images/189_6029_s_5nz3qcusitbsw6rhkjcbx28hkcav.jpg",
 				"path": "/images/items/01_5171/189_6029.jpg",
 				"hash": "95854eb393f38bcf1ef9fa67905348c6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6029.jpg",
+				"src": "https://bandai-hobby.net/images/190_6029_s_du93sq70wpqygyh8cdnavdz7hn1u.jpg",
 				"path": "/images/items/01_5171/190_6029.jpg",
 				"hash": "addd86b860b9c29307a152905d4e8843"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6029.jpg",
+				"src": "https://bandai-hobby.net/images/191_6029_s_2dw02hj7a68emumu1b5vrfz24z7z.jpg",
 				"path": "/images/items/01_5171/191_6029.jpg",
 				"hash": "c6108888627c0f7580a419be1edeee5e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_6029.jpg",
+				"src": "https://bandai-hobby.net/images/192_6029_s_kf4j97pfzc5yqhxjc7jltzofiokj.jpg",
 				"path": "/images/items/01_5171/192_6029.jpg",
 				"hash": "764e1ec268eeefba0a60551dd9d854e7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_6029.jpg",
+				"src": "https://bandai-hobby.net/images/193_6029_s_hwxw8qyp5thsx247zum9q7lctcpp.jpg",
 				"path": "/images/items/01_5171/193_6029.jpg",
 				"hash": "aa29207f0320746133d5db1ecd22bd3d"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5171/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5080"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5171/"
 }

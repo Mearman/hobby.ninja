@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "30MS オプションボディパーツ ビヨンドザブルースカイ1[カラーB]",
-		"en": "30MS OPTION BODY PARTS BEYOND THE BLUE SKY 1 [COLOR B]"
+		"en": "30MS Option Body Parts Beyond the Blue Sky 1 [Color B]"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [
+		{
+			"id": "idolmaster",
+			"url": "https://bandai-hobby.net/series/idolmaster/",
+			"ja": "アイドルマスターシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6755",
+			"url": "https://bandai-hobby.net/item/01_6755/",
+			"ja": "30MS 芹沢あさひ"
+		},
+		{
+			"id": "01_6756",
+			"url": "https://bandai-hobby.net/item/01_6756/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム3[カラーB]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		}
+	],
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -21,18 +69,18 @@
 	"description": {
 		"ja": [
 			"アイドルマスター シャイニーカラーズより、283(ツバサ)プロダクションに所属するアイドルたちの衣装「ビヨンドザブルースカイ」がオプションボディパーツとして商品化！",
-			"■腕脚などの成形色はティアーシャ同様の「カラーB」が付属。",
-			"■衣装の胸部パーツは限界まで追求したパーツ構成で、そのまま組み立てるだけでカラフルな色分けや精密なディテールを再現。３種のフォルムを選択式で組み立てることが可能となっている。",
-			"■背中の小さな羽もパーツ形状で再現している。",
-			"■胸元のハートはプラスチックシールでクリアな質感を表現。",
-			"■スカートは模様をプリントしたシートで波打った形状を表現。一部のパーツにはラメ入りのスモーククリア素材を採用。",
-			"■選択式の「脚部パーツ」は、組み合わせで２種類の身長を表現。",
-			"■肌パーツは仕上げの際に金型表面に艶消し処理を施し、柔らかく光を反射する演出がされている。",
-			"■表情付きハンドパーツに加えマイクが保持できるハンドパーツが３種付属。"
+			"• 腕脚などの成形色はティアーシャ同様の「カラーB」が付属。",
+			"• 衣装の胸部パーツは限界まで追求したパーツ構成で、そのまま組み立てるだけでカラフルな色分けや精密なディテールを再現。３種のフォルムを選択式で組み立てることが可能となっている。",
+			"• 背中の小さな羽もパーツ形状で再現している。",
+			"• 胸元のハートはプラスチックシールでクリアな質感を表現。",
+			"• スカートは模様をプリントしたシートで波打った形状を表現。一部のパーツにはラメ入りのスモーククリア素材を採用。",
+			"• 選択式の「脚部パーツ」は、組み合わせで２種類の身長を表現。",
+			"• 肌パーツは仕上げの際に金型表面に艶消し処理を施し、柔らかく光を反射する演出がされている。",
+			"• 表情付きハンドパーツに加えマイクが保持できるハンドパーツが３種付属。"
 		],
 		"en": [
 			"From THE IDOLM@STER Shiny Colors, the \"Beyond the Blue Sky\" costumes of idols belonging to 283 (Tsubasa) Production will be commercialized as optional body parts!",
-			"• The molding color of the arms and legs is \"Color B\" similar to Tiasha's.",
+			"• The molding color of the arms and legs is the same as Tiasha's \"Color B\".",
 			"• The chest part of the costume has a parts configuration that has been pushed to the limit, and the colorful color coding and precise details can be reproduced just by assembling it. It is possible to assemble three types of forms selectively.",
 			"• The small wings on the back are also reproduced in the form of parts.",
 			"• The heart on the chest is made of plastic seal to create a clear texture.",
@@ -42,87 +90,103 @@
 			"• In addition to hand parts with facial expressions, 3 types of hand parts that can hold a microphone are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ボディパーツ×１式",
-			"ハンドパーツ×１式",
-			"マイク×１",
-			"胸部パーツ×３種( 選択式)",
-			"脚部パーツ×２種( 選択式)",
-			"シール×１"
-		],
-		"en": [
-			"Body parts x 1 set",
-			"Hand parts x 1 set",
-			"Microphone x 1",
-			"Chest parts x 3 types (selectable)",
-			"Leg parts x 2 types (selectable)",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ボディパーツ×１式",
+				"en": "Body parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "マイク×１",
+				"en": "Microphone x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "胸部パーツ×３種( 選択式)",
+				"en": "Chest parts x 3 types (selectable)"
+			}
+		},
+		{
+			"name": {
+				"ja": "脚部パーツ×２種( 選択式)",
+				"en": "Leg parts x 2 types (selectable)"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6052.jpg",
+				"src": "https://bandai-hobby.net/images/153_6052_s_gha5x03zb0b44d882f7r13uvtim2.jpg",
 				"path": "/images/items/01_5195/153_6052.jpg",
 				"hash": "29863bbd56f60dbf87bd1229992d173d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6052.jpg",
+				"src": "https://bandai-hobby.net/images/155_6052_s_ymis4nknvq5bzh9h04pwq0x9ysnh.jpg",
 				"path": "/images/items/01_5195/155_6052.jpg",
 				"hash": "66b92e8bce9e85c0dda9832d19452bbe"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6052.jpg",
+				"src": "https://bandai-hobby.net/images/156_6052_s_gjpdbcc7nf1qd4cgq4f5pjmzoagx.jpg",
 				"path": "/images/items/01_5195/156_6052.jpg",
 				"hash": "81cbaab7b7a5dddd7fad7dbaf67d31f7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6052.jpg",
+				"src": "https://bandai-hobby.net/images/157_6052_s_1nhe51568w056og3z2hrpfibb1iv.jpg",
 				"path": "/images/items/01_5195/157_6052.jpg",
 				"hash": "28ffa80ccf34b25a44a59c6dbdae0401"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6052.jpg",
+				"src": "https://bandai-hobby.net/images/158_6052_s_ontk1qt51qp0y574i0ot75qb9gcs.jpg",
 				"path": "/images/items/01_5195/158_6052.jpg",
 				"hash": "b87d7f7c774ae37ce50a7afa50d0acea"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6052.jpg",
+				"src": "https://bandai-hobby.net/images/159_6052_s_hb2x26yumg84n3blumbs5doziun6.jpg",
 				"path": "/images/items/01_5195/159_6052.jpg",
 				"hash": "49ce9870340ceea95bb6891da6e00ed8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6052.jpg",
+				"src": "https://bandai-hobby.net/images/189_6052_s_o84j2ivza25i76fzi0x6k09qjun7.jpg",
 				"path": "/images/items/01_5195/189_6052.jpg",
 				"hash": "7b3ead48a64b6cde6692571c791fba31"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6052.jpg",
+				"src": "https://bandai-hobby.net/images/190_6052_s_6id9me39fb3s9pn6gnvwfo3clote.jpg",
 				"path": "/images/items/01_5195/190_6052.jpg",
 				"hash": "239b6e23687c0ee09d32eb758b7f973c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6052.jpg",
+				"src": "https://bandai-hobby.net/images/191_6052_s_390o0oc83sv70iqf2rotm1u5j32l.jpg",
 				"path": "/images/items/01_5195/191_6052.jpg",
 				"hash": "4954a3bdf11eb2c10dff921f50d85e1f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_6052.jpg",
+				"src": "https://bandai-hobby.net/images/192_6052_s_he7mncfkjr1cwabbs9oa34ujvykl.jpg",
 				"path": "/images/items/01_5195/192_6052.jpg",
 				"hash": "a0a44a1912e7b8a99be07cfd166feca9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_6052.jpg",
+				"src": "https://bandai-hobby.net/images/193_6052_s_ky4um5oe11bw88n88zb19kgp76yt.jpg",
 				"path": "/images/items/01_5195/193_6052.jpg",
 				"hash": "1ccb309d71cd83932c8852a4971073cd"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5195/",
-	"brandIds": ["30ms"],
-	"seriesIds": ["idolmaster"],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_6755", "01_6756", "01_5977", "01_5976"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5195/"
 }

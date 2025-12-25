@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 bEXM-28 レヴェルノヴァ [ブラウン]",
-		"en": "30MM 1/144 bEXM-28 REVERNOVA [BROWN]"
+		"en": "30MM 1/144 bEXM-28 Revelnova [Brown]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1518,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 25
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MM カラバリグランプリより、投票上位アイテムの「レヴェルノヴァ [ブラウン]」が登場！",
@@ -37,49 +79,54 @@
 			"• Can also be customized with existing aircraft and optional parts."
 		]
 	},
-	"accessories": {
-		"ja": ["高出力ライフル×1"],
-		"en": ["High power rifle x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "高出力ライフル",
+				"en": "high power rifle"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6037.jpg",
+				"src": "https://bandai-hobby.net/images/153_6037_s_xxp9wvn4i05l84m9iym4sycwabi9.jpg",
 				"path": "/images/items/01_5179/153_6037.jpg",
 				"hash": "8afdb6556e39559c54bd677a6e507bc8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6037.jpg",
+				"src": "https://bandai-hobby.net/images/155_6037_s_nolw67u4nfqpm8eqdct02uuaawel.jpg",
 				"path": "/images/items/01_5179/155_6037.jpg",
 				"hash": "c4e426d50846b86b3a9f8800d7df0830"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6037.jpg",
+				"src": "https://bandai-hobby.net/images/156_6037_s_pu7h2shmxqjxnm57gkgmw8hbyr88.jpg",
 				"path": "/images/items/01_5179/156_6037.jpg",
 				"hash": "de91fcbaa18d1986f71a4588681e7122"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6037.jpg",
+				"src": "https://bandai-hobby.net/images/157_6037_s_udr7v8opsm1qf78jen9u0lmsvpgh.jpg",
 				"path": "/images/items/01_5179/157_6037.jpg",
 				"hash": "0867cef95015a8ef1aa796350e01e5eb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6037.jpg",
+				"src": "https://bandai-hobby.net/images/158_6037_s_d30hkl67d88hqybiq3kfdj83oxbo.jpg",
 				"path": "/images/items/01_5179/158_6037.jpg",
 				"hash": "58dc93e2fd1dfadc2b9f08decd091244"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6037.jpg",
+				"src": "https://bandai-hobby.net/images/159_6037_s_s22i89chwomdsxl8xyxlmv0ejb3n.jpg",
 				"path": "/images/items/01_5179/159_6037.jpg",
 				"hash": "db608cd89375fd50e7a77ae1399c4a2f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6037.jpg",
+				"src": "https://bandai-hobby.net/images/189_6037_s_0sbzxjmj8uwt31d8lwoadnvac9qw.jpg",
 				"path": "/images/items/01_5179/189_6037.jpg",
 				"hash": "1f6c22b7db415f2e71561f0170ed73b1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6037.jpg",
+				"src": "https://bandai-hobby.net/images/190_6037_s_ui2udapxo10nxniz200k20s6kej2.jpg",
 				"path": "/images/items/01_5179/190_6037.jpg",
 				"hash": "cfbf552129c830e5b9113167fdd92ff9"
 			}
@@ -87,10 +134,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5179/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3778",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3778/"

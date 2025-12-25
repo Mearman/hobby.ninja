@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "HG バーグラリードッグ",
-		"en": "HG BURGLARYDOG"
+		"en": "HG Burglar Dog"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "votoms",
+			"url": "https://bandai-hobby.net/series/votoms/",
+			"ja": "装甲騎兵ボトムズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000223037",
+			"url": "https://p-bandai.jp/item/item-1000223037/",
+			"ja": "ＨＧ スコープドッグ用拡張パーツセット6"
+		},
+		{
+			"id": "01_5553",
+			"url": "https://bandai-hobby.net/item/01_5553/",
+			"ja": "HG スコープドッグターボカスタム"
+		},
+		{
+			"id": "item-1000209959",
+			"url": "https://p-bandai.jp/item/item-1000209959/",
+			"ja": "ＨＧ スコープドッグ用拡張パーツセット3"
+		},
+		{
+			"id": "item-1000209960",
+			"url": "https://p-bandai.jp/item/item-1000209960/",
+			"ja": "ＨＧ スコープドッグ用拡張パーツセット4"
+		}
+	],
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -30,7 +73,7 @@
 		],
 		"en": [
 			"Burglarly Dog is commercialized from the OVA work \"Armored Trooper Votoms: Heresy\"!",
-			"• Comes with a variety of weapons and hand parts. \"Trample Rigger \" and \" Dropper's Folding Gun\" are deployed, and the gimmick unique to Burr Rally Dog is also reproduced.",
+			"• Comes with a variety of weapons and hand parts. \"Trample Rigger\" and \"Dropper's Folding Gun\" are deployed, and the gimmick unique to Burr Rally Dog is also reproduced.",
 			"• \"Roller dash\" can be reproduced by the range of motion of the main body and the joint mechanisms of various parts of the legs.",
 			"• Equipped with movable legs that reproduce the landing mechanism in HG size. You can enjoy the display with its characteristic pose.",
 			"• The turret lens can slide left and right and rotate. Combined with the movable head, it creates a variety of expressions. The lens color uses 3D metallic Seal.",
@@ -38,33 +81,61 @@
 			"• Exterior parts for customization that increase compatibility with 3mm joints are also included, allowing you to enjoy a wide range of customization."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ヘビィマシンガン×1",
-			"ハンドパーツ×1式",
-			"カスタマイズ用外装パーツ×1式",
-			"ジョイントパーツ×1式",
-			"３Dメタリックシール×1"
-		],
-		"en": [
-			"Heavy machine gun x1",
-			"Hand parts x 1 set",
-			"Exterior parts for customization x 1 set",
-			"Joint parts x 1 set",
-			"3D metallic seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヘビィマシンガン",
+				"en": "heavy machine gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "カスタマイズ用外装パーツ",
+				"en": "Exterior parts for customization"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "３Dメタリックシール",
+				"en": "3D Metallic Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000206418_1.jpg",
 				"path": "/images/items/01_5181/1000206418_1.jpg",
 				"hash": "d9f5af31695fbfb3b2eae16b4677d4e6"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000206418_10.jpg",
-				"path": "/images/items/01_5181/1000206418_10.jpg",
-				"hash": "d6ccf287d45615b43540b8f1fb0b4e08"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000206418_2.jpg",
@@ -105,13 +176,14 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000206418_9.jpg",
 				"path": "/images/items/01_5181/1000206418_9.jpg",
 				"hash": "123ed0b536cd5bf9a7086b07e0190576"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000206418_10.jpg",
+				"path": "/images/items/01_5181/1000206418_10.jpg",
+				"hash": "d6ccf287d45615b43540b8f1fb0b4e08"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5181/",
-	"brandIds": ["hg"],
-	"seriesIds": ["votoms"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["item-1000223037", "01_5553", "item-1000209959", "item-1000209960"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5181/"
 }

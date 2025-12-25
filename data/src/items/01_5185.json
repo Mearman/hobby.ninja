@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/100 VF-19改 ファイヤーバルキリー サウンドブースター装備 専用水転写式デカール",
-		"en": "HG 1/100 VF-19 CUSTOM FIRE VALKYRIE WITH SOUND BOOSTER WATER DECALS"
+		"en": "HG 1/100 VF-19 Kai Fire Valkyrie Sound Booster Equipped Exclusive Water Transfer Decal"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "macross",
+			"url": "https://bandai-hobby.net/series/macross/",
+			"ja": "マクロスシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5944",
+			"url": "https://bandai-hobby.net/item/01_5944/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機)"
+		},
+		{
+			"id": "01_5946",
+			"url": "https://bandai-hobby.net/item/01_5946/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) デラックスセット"
+		},
+		{
+			"id": "01_5465",
+			"url": "https://bandai-hobby.net/item/01_5465/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(マクシミリアン・ジーナス機)"
+		},
+		{
+			"id": "01_5448",
+			"url": "https://bandai-hobby.net/item/01_5448/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(ミリア・ファリーナ・ジーナス機)"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 18
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「HG 1/100 VF-19改 ファイヤーバルキリー サウンドブースター装備」の航空機モデルとしてのクオリティを追求する水転写式デカールが登場！",
@@ -29,28 +72,29 @@
 			"• For \"HG 1/100 VF-19 Kai Fire Valkyrie Sound Booster Equipped\" only."
 		]
 	},
-	"accessories": {
-		"ja": ["水転写式デカール×1"],
-		"en": ["Water transfer decal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6042.jpg",
+				"src": "https://bandai-hobby.net/images/153_6042_s_g6xsiw7wnxc1vf47fqt5vsz56p21.jpg",
 				"path": "/images/items/01_5185/153_6042.jpg",
 				"hash": "ae9c3ee41c99601798a8662c40f1189f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6042.jpg",
+				"src": "https://bandai-hobby.net/images/155_6042_s_tx9rfakz6pgfgi04jsbqzo0hhctk.jpg",
 				"path": "/images/items/01_5185/155_6042.jpg",
 				"hash": "152c5990d1f5472036b21e29937885ab"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5185/",
-	"brandIds": ["hg"],
-	"seriesIds": ["macross"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5944", "01_5946", "01_5465", "01_5448"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5185/"
 }
