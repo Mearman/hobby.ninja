@@ -35,6 +35,38 @@ jobs:
             !/assets/manuals
           sparse-checkout-cone-mode: false
 
+      - name: Free disk space
+        run: |
+          echo "=== Disk space before cleanup ==="
+          df -h /
+          echo ""
+          echo "=== Removing unnecessary files ==="
+          # Remove Android SDK
+          sudo rm -rf /usr/local/lib/android || true
+          # Remove .NET
+          sudo rm -rf /usr/share/dotnet || true
+          # Remove Haskell
+          sudo rm -rf /opt/ghc || true
+          sudo rm -rf /usr/local/.ghcup || true
+          # Remove Swift
+          sudo rm -rf /usr/share/swift || true
+          # Remove Go
+          sudo rm -rf /usr/local/go || true
+          # Remove CodeQL
+          sudo rm -rf /opt/hostedtoolcache/CodeQL || true
+          # Remove large tool caches
+          sudo rm -rf /opt/hostedtoolcache/Java* || true
+          sudo rm -rf /opt/hostedtoolcache/PyPy* || true
+          sudo rm -rf /opt/hostedtoolcache/Ruby* || true
+          # Clean apt cache
+          sudo apt-get clean || true
+          # Remove swap
+          sudo swapoff -a || true
+          sudo rm -f /swapfile || true
+          echo ""
+          echo "=== Disk space after cleanup ==="
+          df -h /
+
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
