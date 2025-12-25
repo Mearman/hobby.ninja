@@ -2,7 +2,7 @@
 /**
  * Deduplicate images after the fact
  *
- * Scans manual and/or P-Bandai images, finds duplicates that exist in item assets
+ * Scans manual and P-Bandai images, finds duplicates that exist in item assets
  * (the authoritative source), updates JSON files to reference existing paths,
  * and optionally deletes duplicate files.
  *
@@ -10,21 +10,24 @@
  *   pnpm exec tsx packages/cli/src/cli/deduplicate-images.ts [options]
  *
  * Options:
- *   --manuals        Deduplicate manual images (default: true)
- *   --pbandai        Deduplicate P-Bandai US images (default: false)
+ *   --manuals        Deduplicate manual images only
+ *   --pbandai        Deduplicate P-Bandai US images only
  *   --dry-run        Show what would be done without making changes
  *   --keep-files     Update JSON but don't delete duplicate files
  *   --verbose        Show detailed output for each duplicate found
  *
+ * By default, both manuals and P-Bandai images are deduplicated.
+ * Use --manuals or --pbandai to limit to one source.
+ *
  * Examples:
- *   # Deduplicate manual images (default)
+ *   # Deduplicate all (manuals + P-Bandai)
  *   pnpm exec tsx packages/cli/src/cli/deduplicate-images.ts
  *
  *   # Dry run to see what would be deduplicated
  *   pnpm exec tsx packages/cli/src/cli/deduplicate-images.ts --dry-run
  *
- *   # Deduplicate both manuals and P-Bandai
- *   pnpm exec tsx packages/cli/src/cli/deduplicate-images.ts --manuals --pbandai
+ *   # Deduplicate only manuals
+ *   pnpm exec tsx packages/cli/src/cli/deduplicate-images.ts --manuals
  */
 
 import { existsSync, readdirSync, readFileSync, statSync, unlinkSync, writeFileSync } from "node:fs";
@@ -234,9 +237,11 @@ async function main(): Promise<void> {
 		verbose: args.has("--verbose"),
 	};
 
-	// Default to manuals if neither specified
-	const doManuals = args.has("--manuals") || (!args.has("--pbandai"));
-	const doPBandai = args.has("--pbandai");
+	// Default to both if neither specified
+	const explicitManuals = args.has("--manuals");
+	const explicitPBandai = args.has("--pbandai");
+	const doManuals = explicitManuals || !explicitPBandai;
+	const doPBandai = explicitPBandai || !explicitManuals;
 
 	console.log("Image Deduplication Tool");
 	console.log("========================");
