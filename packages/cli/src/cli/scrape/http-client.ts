@@ -172,4 +172,53 @@ export class BrowserManager {
 			await page.close();
 		}
 	}
+
+	/**
+	 * Extract article image URLs after triggering lazy-load
+	 * Article images use data-src for lazy loading - need to scroll and wait
+	 * @param url - Page URL to extract images from
+	 * @returns Array of loaded image URLs
+	 */
+	async extractArticleImageUrls(url: string): Promise<string[]> {
+		if (!this.browserContext) {
+			throw new Error("Browser not initialized. Call initializeBrowser() first.");
+		}
+
+		const page = await this.browserContext.newPage();
+		try {
+			await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30_000 });
+
+			// Extract article image URLs after scrolling to trigger lazy-load
+			const imageUrls = await page.evaluate(async () => {
+				const LAZY_LOAD_WAIT_MS = 2000;
+				const urls: string[] = [];
+
+				// Find article section and scroll to it
+				const articleSection = document.querySelector(".pg-products__article");
+				if (!articleSection) {
+					return urls;
+				}
+
+				// Scroll article into view to trigger lazy loading
+				articleSection.scrollIntoView({ behavior: "instant" });
+				await new Promise(resolve => setTimeout(resolve, LAZY_LOAD_WAIT_MS));
+
+				// Extract loaded image URLs (src, not data-src)
+				const images = articleSection.querySelectorAll("img");
+				for (const img of images) {
+					const src = img.src;
+					// Only include fully loaded http URLs (not data: or relative paths)
+					if (src && src.startsWith("http") && !src.includes("/common/")) {
+						urls.push(src);
+					}
+				}
+
+				return urls;
+			});
+
+			return imageUrls;
+		} finally {
+			await page.close();
+		}
+	}
 }

@@ -608,21 +608,12 @@ export class BandaiCatalogParser {
 			}
 		});
 
-		// Article images (instruction/description images with lazy loading)
-		// These use data-src for lazy loading and are in the pg-products__article section
-		$(".pg-products__article img").each((_, el) => {
-			// Check both src and data-src (lazy loading)
-			const src = $(el).attr("src") ?? $(el).attr("data-src");
-			if (src && !seen.has(src) && !src.includes("common/")) {
-				seen.add(src);
-				// Article images are typically instruction/description images
-				// Resolve relative URLs to absolute
-				const absoluteSrc = src.startsWith("/")
-					? `https://bandai-hobby.net${src}`
-					: src;
-				instructions.push({ src: absoluteSrc });
-			}
-		});
+		// NOTE: Article images in .pg-products__article use lazy loading (data-src)
+		// These cannot be extracted from static HTML - they need Playwright to:
+		// 1. Scroll the element into view
+		// 2. Wait for JavaScript to replace data-src with src
+		// 3. Get the actual CloudFront signed URL
+		// This is handled by BrowserManager.extractArticleImageUrls() in item-processor.ts
 
 		return { product, instructions };
 	}

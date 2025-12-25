@@ -144,6 +144,30 @@ export async function processItemComplete(
 	let itemData = parseResult.data;
 	console.log(`  ✓ Data extracted: ${itemData.name.ja}`);
 
+	// Step 2a: Extract article images with Playwright (lazy-loaded images need browser)
+	// Article images use data-src for lazy loading - static HTML parsing cannot get actual URLs
+	// Need to scroll into view and wait for JavaScript to populate img.src
+	try {
+		const articleImageUrls = await time("extract-article-images", () =>
+			deps.browserManager.extractArticleImageUrls(url),
+		);
+		if (articleImageUrls.length > 0) {
+			// Add article images to instructions
+			itemData.images = {
+				...itemData.images,
+				product: itemData.images?.product ?? [],
+				instructions: [
+					...(itemData.images?.instructions ?? []),
+					...articleImageUrls.map(src => ({ src })),
+				],
+			};
+			console.log(`  ✓ Article images: ${articleImageUrls.length} found`);
+		}
+	} catch (error) {
+		const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
+		console.log(`  ⚠ Article image extraction failed: ${msg}`);
+	}
+
 	// Step 2b: Look up English translations from global site
 	let hasGlobalTranslation = false;
 	const enHtmlPath = path.join(ITEMS_DATA_DIR, `${itemId}.en.html`);
