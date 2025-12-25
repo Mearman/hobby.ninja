@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 レジェンドガンダム",
-		"en": "HG 1/144 LEGEND GUNDAM"
+		"en": "HG 1/144 Legend Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000203308",
+			"url": "https://p-bandai.jp/item/item-1000203308/",
+			"ja": "ＨＧ 1/144 ダークダガーＬ"
+		},
+		{
+			"id": "01_5097",
+			"url": "https://bandai-hobby.net/item/01_5097/",
+			"ja": "HG 1/144 デストロイガンダム"
+		},
+		{
+			"id": "01_3739",
+			"url": "https://bandai-hobby.net/item/01_3739/",
+			"ja": "HG 1/144 デスティニーガンダム(ハイネ専用機)[クリアカラー]"
+		},
+		{
+			"id": "item-1000157417",
+			"url": "https://p-bandai.jp/item/item-1000157417/",
+			"ja": "ＨＧ 1/144 ウィンダム（ネオ・ロアノーク専用機）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3080,
 		"currency": "JPY",
@@ -12,25 +56,25 @@
 		"taxRate": 10
 	},
 	"releaseDate": {
-		"ja": "2026年01月",
+		"ja": "2026年01月31日 (土)",
 		"year": 2026,
-		"month": 1
+		"month": 1,
+		"day": 31
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「SEEDアクションシステム」を搭載した最新フォーマットにて「レジェンドガンダム」を豊富な付属パーツと共に商品化！",
-			"■「機動戦士ガンダムSEEDシリーズ」で印象的なアクションポーズ再現に特化した内部構造「SEEDアクションシステム」を搭載。",
-			"■「GDU-X5 突撃ビーム機動砲」の接続部分は引き出すことで前後に可動。",
-			"■「GDU-X7 突撃ビーム機動砲」用のビームスパイクエフェクトパーツが付属。",
-			"■バックパックには複数の可動軸を設けることでフレキシブルに可動。",
-			"■ビームジャベリンのグリップは脚部装甲内に格納可能。",
-			"■「ビームシールド」再現用のエフェクトパーツが付属。"
+			"• 「機動戦士ガンダムSEEDシリーズ」で印象的なアクションポーズ再現に特化した内部構造「SEEDアクションシステム」を搭載。",
+			"• 「GDU-X5 突撃ビーム機動砲」の接続部分は引き出すことで前後に可動。",
+			"• 「GDU-X7 突撃ビーム機動砲」用のビームスパイクエフェクトパーツが付属。",
+			"• バックパックには複数の可動軸を設けることでフレキシブルに可動。",
+			"• ビームジャベリンのグリップは脚部装甲内に格納可能。",
+			"• 「ビームシールド」再現用のエフェクトパーツが付属。"
 		],
 		"en": [
-			"\"Legend Gundam \" is commercialized in the latest format equipped with \" SEED Action System\" with a wide variety of accessory parts!",
-			"• Equipped with the internal structure \"SEED Action System \" specialized for reproducing impressive action poses from \" Mobile Suit Gundam SEED Series\".",
+			"\"Legend Gundam\" is commercialized in the latest format equipped with \"SEED Action System\" with a wide variety of accessory parts!",
+			"• Equipped with the internal structure \"SEED Action System\" that specializes in reproducing impressive action poses from the \"Mobile Suit Gundam SEED Series\".",
 			"• The connecting part of the \"GDU-X5 assault beam mobile gun\" can be moved forward and backward by pulling it out.",
 			"• Beam spike effect parts for \"GDU-X7 assault beam mobile gun\" are included.",
 			"• The backpack has multiple movable axes for flexible movement.",
@@ -38,52 +82,66 @@
 			"• Includes effect parts to reproduce \"Beam Seal\"."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"高エネルギービームライフル×1",
-			"ビームジャベリン×2",
-			"ビームシールド×1",
-			"ビームスパイクエフェクトパーツ×2",
-			"ハンドパーツ×1式",
-			"シール×1"
-		],
-		"en": [
-			"High energy beam rifle x1",
-			"Beam javelin x2",
-			"Beam Seal × 1",
-			"Beam spike effect parts x 2",
-			"Hand parts x 1 set",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "高エネルギービームライフル",
+				"en": "high energy beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームジャベリン",
+				"en": "beam javelin"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビームシールド",
+				"en": "Beam Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームスパイクエフェクトパーツ",
+				"en": "beam spike effect parts"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6874_0.jpg",
 				"path": "/images/items/01_6874/01_6874_0.jpg",
 				"hash": "6754920e6d06607c86f8bca41729988b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6874_1.jpg",
 				"path": "/images/items/01_6874/01_6874_1.jpg",
 				"hash": "807d1d3af0ce8b50ffe853d8343564fa"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_6874_2.jpg",
-				"path": "/images/items/01_6874/01_6874_2.jpg",
-				"hash": "b1b70db0c9bd5af480e96b765d043c6d"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_6874_3.jpg",
-				"path": "/images/items/01_6874/01_6874_3.jpg",
-				"hash": "9f0ba48a5006ef229d89837095fca062"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6874/",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed-d"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000203308", "01_5097", "01_3739", "item-1000157417"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6874/"
 }

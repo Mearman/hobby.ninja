@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 モンキーロディ(598機)/モンキークラブロディ",
-		"en": "HG 1/144 598’S MONKEY RODI / MONKEY CRAB RODI"
+		"en": "HG 1/144 Monkey Rody (598 machines)/Monkey Club Rody"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4103",
+			"url": "https://bandai-hobby.net/item/01_4103/",
+			"ja": "HG 1/144 ジークルーネ"
+		},
+		{
+			"id": "01_4240",
+			"url": "https://bandai-hobby.net/item/01_4240/",
+			"ja": "HG 1/144 ガンダム端白星[クリアカラー]"
+		},
+		{
+			"id": "01_4094",
+			"url": "https://bandai-hobby.net/item/01_4094/",
+			"ja": "HG 1/144 シュヴァルベカスタム(シクラーゼ機)"
+		},
+		{
+			"id": "01_4188",
+			"url": "https://bandai-hobby.net/item/01_4188/",
+			"ja": "HG 1/144 ガンダムマルコシアス[アイアンブラッドコーティング]"
+		}
+	],
+	"manual": {
+		"id": "3961",
+		"url": "https://manual.bandai-hobby.net/menus/detail/3961"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 1870,
 		"currency": "JPY",
@@ -18,113 +66,131 @@
 		"day": 1
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム 鉄血のオルフェンズ ウルズハント』より、「モンキー・ロディ(598機)」が登場！パーツの差し替えで「モンキー・クラブ・ロディ」も再現可能！",
-			"■「モンキー・クラブ・ロディ」再現用の差し替え用パーツが付属。",
-			"■武装には「バール」「サブマシンガン」「シールド」「手榴弾」などを同梱。",
-			"■「手榴弾」はサイドアーマー裏に取り付けが可能。さらに手榴弾を保持可能なハンドパーツ（右手）も付属。"
+			"• 「モンキー・クラブ・ロディ」再現用の差し替え用パーツが付属。",
+			"• 武装には「バール」「サブマシンガン」「シールド」「手榴弾」などを同梱。",
+			"• 「手榴弾」はサイドアーマー裏に取り付けが可能。さらに手榴弾を保持可能なハンドパーツ（右手）も付属。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam: Iron-Blooded Orphans Uruz Hunt \", \" Monkey Rody (598)\" appears! \" Monkey Crab Roddy\" can also be reproduced by replacing parts!",
+			"From \"Mobile Suit Gundam: Iron-Blooded Orphans Uruz Hunt\", \"Monkey Rody (598)\" appears! \"Monkey Crab Roddy\" can also be reproduced by replacing parts!",
 			"• Includes replacement parts to recreate \"Monkey Club Roddy\".",
 			"• Includes a crowbar, submachine gun, seal, grenade, etc.",
 			"• \"Grenade\" can be attached to the back of side armor. Furthermore, a hand part (right hand) that can hold a grenade is also included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"バール×1",
-			"シールド×1",
-			"サブマシンガン×1",
-			"手榴弾×2",
-			"モンキー・クラブ・ロディ再現用パーツ×1式",
-			"ハンドパーツ×1式",
-			"シール×1"
-		],
-		"en": [
-			"Crowbar x 1",
-			"Seal × 1",
-			"Submachine gun x 1",
-			"Grenade x2",
-			"Monkey Club Rody reproduction parts x 1 set",
-			"Hand parts x 1 set",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "バール",
+				"en": "bar"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "サブマシンガン",
+				"en": "submachine gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "手榴弾",
+				"en": "grenade"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "モンキー・クラブ・ロディ再現用パーツ",
+				"en": "Monkey Crab Rody reproduction parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6763_0.jpg",
 				"path": "/images/items/01_6763/01_6763_0.jpg",
 				"hash": "3667c5e886d3ca5b666a1559b851df7a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6763_1.jpg",
 				"path": "/images/items/01_6763/01_6763_1.jpg",
 				"hash": "feab5e42d1f7aa0a161a196bcf84db5a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6763_10.jpg",
-				"path": "/images/items/01_6763/01_6763_10.jpg",
-				"hash": "a5bad3d3ca079c4783c922fe0f94928c"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_6763_11.jpg",
-				"path": "/images/items/01_6763/01_6763_11.jpg",
-				"hash": "73e944e5ed2eccea6d81aba2f5c5daac"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_6763_2.jpg",
 				"path": "/images/items/01_6763/01_6763_2.jpg",
 				"hash": "25472c254f57f9dfaf1671aa60aa9da9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6763_3.jpg",
 				"path": "/images/items/01_6763/01_6763_3.jpg",
 				"hash": "b6ed0ca7ac05faf89a8820eee57729ea"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6763_4.jpg",
 				"path": "/images/items/01_6763/01_6763_4.jpg",
 				"hash": "a1b9cef962b5ce766c31716a0b3b5048"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6763_5.jpg",
 				"path": "/images/items/01_6763/01_6763_5.jpg",
 				"hash": "333c7ee979d208c7301379844ddce6a2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6763_6.jpg",
 				"path": "/images/items/01_6763/01_6763_6.jpg",
 				"hash": "76516a65210d0d1160ff5c15c966772a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6763_7.jpg",
 				"path": "/images/items/01_6763/01_6763_7.jpg",
 				"hash": "544a99ee1c825453e83a862f26aaf85a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6763_8.jpg",
 				"path": "/images/items/01_6763/01_6763_8.jpg",
 				"hash": "a4b20a4839da304a0d9dabb3ebd40ce7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6763_9.jpg",
 				"path": "/images/items/01_6763/01_6763_9.jpg",
 				"hash": "ba1b3e2af522059945ed4914cfd5ced9"
+			},
+			{
+				"path": "/images/items/01_6763/01_6763_10.jpg",
+				"hash": "a5bad3d3ca079c4783c922fe0f94928c"
+			},
+			{
+				"path": "/images/items/01_6763/01_6763_11.jpg",
+				"hash": "73e944e5ed2eccea6d81aba2f5c5daac"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6763/",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4103", "01_4240", "01_4094", "01_4188"],
-	"manual": {
-		"id": "3961",
-		"url": "https://manual.bandai-hobby.net/menus/detail/3961/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6763/"
 }

@@ -2,9 +2,37 @@
 	"id": "01_6885",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム EXスタンダード ガンダムバルバトス",
-		"en": "SD Gundam EX Standard Gundam Barbatos"
+		"ja": "SDガンダム EXスタンダード ガンダムバルバトス",
+		"en": "SDGundam EX Standard Gundam Barbatos"
 	},
+	"brands": [
+		{
+			"id": "SDEX",
+			"url": "https://bandai-hobby.net/brand/SDEX/",
+			"ja": "SDEXスタンダード"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2156",
+			"url": "https://bandai-hobby.net/item/01_2156/",
+			"ja": "SDEXスタンダード014　ガンダムバルバトスルプス"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -20,66 +48,81 @@
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム 鉄血のオルフェンズ』に登場する「ガンダム・バルバトス」が、SDガンダム EXスタンダードで登場！",
-			"■SDガンダムEXスタンダードならではのデザインアレンジ。",
-			"■大胆なアクションポーズを実現する可動範囲を確保。",
-			"■メイス、太刀、バルバトス用滑腔砲が付属。",
-			"■装備を組み合わせることでHGシリーズとのカスタマイズ遊びが可能。"
+			"• SDガンダムEXスタンダードならではのデザインアレンジ。",
+			"• 大胆なアクションポーズを実現する可動範囲を確保。",
+			"• メイス、太刀、バルバトス用滑腔砲が付属。",
+			"• 装備を組み合わせることでHGシリーズとのカスタマイズ遊びが可能。"
 		],
 		"en": [
-			"\"Gundam Barbatos \" appearing in \" Mobile Suit Gundam Iron-Blooded Orphans\" is now available in SD Gundam EX Standard!",
-			"• Design arrangement unique to SD Gundam EX Standard.",
+			"\"Gundam Barbatos\" appearing in \"Mobile Suit Gundam Iron-Blooded Orphans\" is now available in SDGundam EX Standard!",
+			"• Design arrangement unique to SDGundamEX standard.",
 			"• Ensures a range of motion that allows for bold action poses.",
 			"• Includes mace, long sword, and smoothbore cannon for Barbatos.",
 			"• Customize play with the HG series by combining equipment."
 		]
 	},
-	"accessories": {
-		"ja": ["メイス×1", "太刀×1", "バルバトス用滑腔砲×1", "シール×1"],
-		"en": ["Mace x 1", "Long sword x1", "Barbatos smoothbore gun x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "メイス",
+				"en": "mace"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "太刀",
+				"en": "long sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バルバトス用滑腔砲",
+				"en": "Barbatos smoothbore gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6885_0.jpg",
 				"path": "/images/items/01_6885/01_6885_0.jpg",
 				"hash": "9f46659ac5162b64b80ef701b25372a2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6885_1.jpg",
 				"path": "/images/items/01_6885/01_6885_1.jpg",
 				"hash": "cd84c9caa05c2b388f0a2c3c849a099f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6885_2.jpg",
 				"path": "/images/items/01_6885/01_6885_2.jpg",
 				"hash": "492dce964c12358297b8304a92b1db03"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6885_3.jpg",
 				"path": "/images/items/01_6885/01_6885_3.jpg",
 				"hash": "8cb5f19eb1a1a4aa3e03fb5e1ba63033"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6885_4.jpg",
 				"path": "/images/items/01_6885/01_6885_4.jpg",
 				"hash": "b6a27cfccb56f995d9f04e3794aa6ee0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6885_5.jpg",
 				"path": "/images/items/01_6885/01_6885_5.jpg",
 				"hash": "76ed8c1759bd293e4f10e7a44ced90ee"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6885_6.jpg",
 				"path": "/images/items/01_6885/01_6885_6.jpg",
 				"hash": "ff5be3a834315aa58df14a71f8e4d460"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6885/",
-	"brandIds": ["SDEX"],
-	"seriesIds": ["tekketsu"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_2156"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6885/"
 }

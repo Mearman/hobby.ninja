@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "オプションパーツセット ガンプラ 20 (ライドオンセット)",
-		"en": "OPTION PARTS SET GUNPLA 20 (RIDE-ON SET)"
+		"en": "Optional parts set Gunpla 20 (Ride on set)"
 	},
+	"brands": [
+		{
+			"id": "optionpartsset",
+			"url": "https://bandai-hobby.net/brand/optionpartsset/",
+			"ja": "オプションパーツセット"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6765",
+			"url": "https://bandai-hobby.net/item/01_6765/",
+			"ja": "オプションパーツセット ガンプラ 18 (ビルドブースターセット)"
+		},
+		{
+			"id": "01_5937",
+			"url": "https://bandai-hobby.net/item/01_5937/",
+			"ja": "オプションパーツセット ガンプラ 17 (バインダーガン)"
+		},
+		{
+			"id": "01_5545",
+			"url": "https://bandai-hobby.net/item/01_5545/",
+			"ja": "オプションパーツセット ガンプラ 16 (メテオホッパー)"
+		},
+		{
+			"id": "01_5453",
+			"url": "https://bandai-hobby.net/item/01_5453/",
+			"ja": "オプションパーツセット ガンプラ 15 (キャバリアーアイフリッド)"
+		}
+	],
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -20,14 +57,14 @@
 	"description": {
 		"ja": [
 			"「メガライドランチャー」と「マシンライダー」がセットになって登場！",
-			"■「メガライドランチャー」はメガライダー形態からメガランチャー形態に変形可能。",
-			"■メガライダー形態時にMS牽引状態を再現できる。",
-			"■ジョイントパーツが付属。各HGシリーズに取り付け可能。",
-			"■「マシンライダー」はライドポジションとスタンドポジションに変形し、アイディア次第で様々なガンプラが搭乗可能。",
-			"■フロントカウル部分は3パターンが付属する。"
+			"• 「メガライドランチャー」はメガライダー形態からメガランチャー形態に変形可能。",
+			"• メガライダー形態時にMS牽引状態を再現できる。",
+			"• ジョイントパーツが付属。各HGシリーズに取り付け可能。",
+			"• 「マシンライダー」はライドポジションとスタンドポジションに変形し、アイディア次第で様々なガンプラが搭乗可能。",
+			"• フロントカウル部分は3パターンが付属する。"
 		],
 		"en": [
-			"\"Mega Ride Launcher \" and \" Machine Rider\" are now available as a set!",
+			"\"Mega Ride Launcher\" and \"Machine Rider\" are now available as a set!",
 			"• \"Mega Ride Launcher\" can transform from Mega Rider form to Mega Launcher form.",
 			"• Can reproduce the MS towing state when in Mega Rider mode.",
 			"• Joint parts included. Can be installed on each HG series.",
@@ -35,43 +72,46 @@
 			"• Three patterns are included for the front cowl part."
 		]
 	},
-	"accessories": {
-		"ja": ["メガライドランチャー×1", "マシンライダー×1"],
-		"en": ["Mega ride launcher x 1", "Machine rider x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "メガライドランチャー",
+				"en": "mega ride launcher"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マシンライダー",
+				"en": "machine rider"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6877_0.jpg",
 				"path": "/images/items/01_6877/01_6877_0.jpg",
 				"hash": "c385645f2380eba55adf194728bec5af"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6877_1.jpg",
 				"path": "/images/items/01_6877/01_6877_1.jpg",
 				"hash": "e1dc55dd8ae67e338bbdb3bf5054a2fc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6877_2.jpg",
 				"path": "/images/items/01_6877/01_6877_2.jpg",
 				"hash": "d3c5addac44d4bb4aab4df68eb71df28"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6877_3.jpg",
 				"path": "/images/items/01_6877/01_6877_3.jpg",
 				"hash": "f9ca4cd63dd5230b3c99151c46b877c3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6877_4.jpg",
 				"path": "/images/items/01_6877/01_6877_4.jpg",
 				"hash": "25fa9cd74128d3b6e8bb1cd663e98006"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6877/",
-	"brandIds": ["optionpartsset"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6765", "01_5937", "01_5545", "01_5453"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6877/"
 }

@@ -3,8 +3,55 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 エグザビークル(ブーストワイルドバイクVer.)",
-		"en": "30MM 1/144 Extended Armament Vehicle (BOOST WILD BIKE Ver.)"
+		"en": "30MM 1/144 Exer Vehicle (Boost Wild Bike Ver.)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6766",
+			"url": "https://bandai-hobby.net/item/01_6766/",
+			"ja": "30MM 1/144 EXM-X20B レヴィニクス(TYPE-B)"
+		},
+		{
+			"id": "01_6767",
+			"url": "https://bandai-hobby.net/item/01_6767/",
+			"ja": "30MM 1/144 オプションパーツセット22(ウィングユニット2)"
+		},
+		{
+			"id": "01_6754",
+			"url": "https://bandai-hobby.net/item/01_6754/",
+			"ja": "30MM 1/144 EXM-X20A レヴィニクス(TYPE-A)"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		}
+	],
+	"manual": {
+		"id": "4062",
+		"url": "https://manual.bandai-hobby.net/menus/detail/4062"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,18 +65,17 @@
 		"day": 20
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MM エグザビークルシリーズに「ブーストワイルドバイクVer.」が登場！インサート成形を採用したジョイントパーツと、特徴的な外装パーツで構成された豪華仕様！",
-			"■「インサート成形」を使用した、新規造形のブロック型ジョイントパーツを採用。",
-			"■ブロック型ジョイントパーツを起点に、様々なカスタマイズが可能。",
-			"■シリーズ共通ジョイントを各箇所に採用。重厚感・緻密なディテールを再現。",
-			"■別売りの既存機体の搭乗が可能。",
-			"■大型ホイールが2輪付属。"
+			"• 「インサート成形」を使用した、新規造形のブロック型ジョイントパーツを採用。",
+			"• ブロック型ジョイントパーツを起点に、様々なカスタマイズが可能。",
+			"• シリーズ共通ジョイントを各箇所に採用。重厚感・緻密なディテールを再現。",
+			"• 別売りの既存機体の搭乗が可能。",
+			"• 大型ホイールが2輪付属。"
 		],
 		"en": [
-			"\"Boost Wild Bike Ver.\" is now available in the 30MM Exa Vehicle Series! A luxurious specification consisting of joint parts using insert molding and distinctive exterior parts!",
+			"\"Boost Wild Bike Ver.\" is now available in the 30MM Exa Vehicle Series! Luxurious specification consisting of joint parts using insert molding and distinctive exterior parts!",
 			"• Adopts newly shaped block-type joint parts using \"insert molding\".",
 			"• Various customizations are possible starting with block-type joint parts.",
 			"• Common joints in the series are used at each location. Reproduces a profound feeling and precise details.",
@@ -37,78 +83,78 @@
 			"• Comes with 2 large wheels."
 		]
 	},
-	"accessories": {
-		"ja": ["ビークル×1式", "ブロック型ジョイントパーツ×2"],
-		"en": ["Vehicle x 1 set", "Block type joint parts x 2"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビークル",
+				"en": "vehicle"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ブロック型ジョイントパーツ",
+				"en": "Block type joint parts"
+			},
+			"count": 2
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6774_0.jpg",
 				"path": "/images/items/01_6774/01_6774_0.jpg",
 				"hash": "57eeebe57161ab2830ea248aff098dea"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6774_1.jpg",
 				"path": "/images/items/01_6774/01_6774_1.jpg",
 				"hash": "55584fe5efd70c4142cce1ae06ac6169"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6774_10.jpg",
-				"path": "/images/items/01_6774/01_6774_10.jpg",
-				"hash": "031d6eeda65b47ada8de3621e415d8be"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_6774_11.jpg",
-				"path": "/images/items/01_6774/01_6774_11.jpg",
-				"hash": "18a54db9310e66080b9685ae04a08a85"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_6774_2.jpg",
 				"path": "/images/items/01_6774/01_6774_2.jpg",
 				"hash": "75b26e576556e17f6eee3c7140973576"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6774_3.jpg",
 				"path": "/images/items/01_6774/01_6774_3.jpg",
 				"hash": "70766853aa717aeaeb04c533847dee10"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6774_4.jpg",
 				"path": "/images/items/01_6774/01_6774_4.jpg",
 				"hash": "8d28f5885689b5848084252f2f9c807c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6774_5.jpg",
 				"path": "/images/items/01_6774/01_6774_5.jpg",
 				"hash": "9d7c761964d0bd0233060d80a077ed4a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6774_6.jpg",
 				"path": "/images/items/01_6774/01_6774_6.jpg",
 				"hash": "7bd91a936d017300f25139253fb82878"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6774_7.jpg",
 				"path": "/images/items/01_6774/01_6774_7.jpg",
 				"hash": "c82a193ac7b7920cd578a64075ba5f7e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6774_8.jpg",
 				"path": "/images/items/01_6774/01_6774_8.jpg",
 				"hash": "0a837cb4888d7bb9644e941286d263c8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6774_9.jpg",
 				"path": "/images/items/01_6774/01_6774_9.jpg",
 				"hash": "cf052284a6609125e1a6c6c527b59c1c"
+			},
+			{
+				"path": "/images/items/01_6774/01_6774_10.jpg",
+				"hash": "031d6eeda65b47ada8de3621e415d8be"
+			},
+			{
+				"path": "/images/items/01_6774/01_6774_11.jpg",
+				"hash": "18a54db9310e66080b9685ae04a08a85"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6774/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_6766", "01_6767", "01_6754", "01_5972"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6774/"
 }

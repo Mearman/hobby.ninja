@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "1/48 マンダロリアン N-1スターファイター",
-		"en": "1/48 THE MANDALORIAN’S N-1 STARFIGHTER"
+		"en": "1/48 Mandalorian N-1 Starfighter"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6716",
+			"url": "https://bandai-hobby.net/item/01_6716/",
+			"ja": "1/12 クローン・トルーパー LIMITED Ver."
+		},
+		{
+			"id": "01_6717",
+			"url": "https://bandai-hobby.net/item/01_6717/",
+			"ja": "1/72 Xウイング・スターファイター & 1/12 R2-D2"
+		},
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		}
+	],
+	"scale": "1/48",
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -18,13 +56,12 @@
 		"day": 25
 	},
 	"targetAge": 15,
-	"scale": "1/48",
 	"description": {
 		"ja": [
 			"スター・ウォーズ実写ドラマ『マンダロリアン』からN-1スターファイターが登場！",
-			"■ディテールとカラーリングを忠実に再現。",
-			"■R5-D4搭乗状態などを再現する各種コックピット交換用パーツが付属。",
-			"■水転写式デカール、マーキングシールが付属。"
+			"• ディテールとカラーリングを忠実に再現。",
+			"• R5-D4搭乗状態などを再現する各種コックピット交換用パーツが付属。",
+			"• 水転写式デカール、マーキングシールが付属。"
 		],
 		"en": [
 			"N-1 starfighter appears from the Star Wars live-action drama “The Mandalorian”!",
@@ -33,94 +70,121 @@
 			"• Water transfer decal and MarkingSeal included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"パイロットパーツ×2種（マンダロリアン［座り］）",
-			"グローグパーツ×2種",
-			"R5-D4パーツ×1種",
-			"交換用パーツ×1式",
-			"水転写式デカール×1",
-			"マーキングシール×1",
-			"台座×1"
-		],
-		"en": [
-			"Pilot parts x 2 types (Mandalorian [sitting])",
-			"Grogu parts x 2 types",
-			"R5-D4 parts x 1 type",
-			"Replacement parts x 1 set",
-			"Water transfer decal x 1",
-			"MarkingSeal×1",
-			"Pedestal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "パイロットパーツ",
+				"en": "pilot parts"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "グローグパーツ",
+				"en": "grogue parts"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "R5-D4パーツ",
+				"en": "R5-D4 parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "交換用パーツ",
+				"en": "replacement parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6758_0.jpg",
 				"path": "/images/items/01_6758/01_6758_0.jpg",
 				"hash": "9e579de8fdd3d3ec6407a2c14ef62b53"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6758_1.jpg",
 				"path": "/images/items/01_6758/01_6758_1.jpg",
 				"hash": "c1d7286640ae346cc220680709ada0bf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6758_10.jpg",
-				"path": "/images/items/01_6758/01_6758_10.jpg",
-				"hash": "a6a5bf408df32e78c9aaf7354f0cdd68"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_6758_11.jpg",
-				"path": "/images/items/01_6758/01_6758_11.jpg",
-				"hash": "e298d6c6f531ffeecc500f5ead3fc37d"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_6758_2.jpg",
 				"path": "/images/items/01_6758/01_6758_2.jpg",
 				"hash": "ed504ed919d3434fcd73f6f0b4f6df7b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6758_3.jpg",
 				"path": "/images/items/01_6758/01_6758_3.jpg",
 				"hash": "a9c7c48f79fe6d226bb5310049ca4606"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6758_4.jpg",
 				"path": "/images/items/01_6758/01_6758_4.jpg",
 				"hash": "87bca69274057ae0f8caa46ef1d1df19"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6758_5.jpg",
 				"path": "/images/items/01_6758/01_6758_5.jpg",
 				"hash": "6712ae7bcc9881d73a417f91dedd19f0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6758_6.jpg",
 				"path": "/images/items/01_6758/01_6758_6.jpg",
 				"hash": "3fb30d0096655d02805a711910d3c6c1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6758_7.jpg",
 				"path": "/images/items/01_6758/01_6758_7.jpg",
 				"hash": "04cf921ede6d866836e6b238dbabb962"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6758_8.jpg",
 				"path": "/images/items/01_6758/01_6758_8.jpg",
 				"hash": "33811602514fcec5a9edfde24d638085"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6758_9.jpg",
 				"path": "/images/items/01_6758/01_6758_9.jpg",
 				"hash": "33e1646c429f75d51c4cfa4c8f6e2ef3"
+			},
+			{
+				"path": "/images/items/01_6758/01_6758_10.jpg",
+				"hash": "a6a5bf408df32e78c9aaf7354f0cdd68"
+			},
+			{
+				"path": "/images/items/01_6758/01_6758_11.jpg",
+				"hash": "e298d6c6f531ffeecc500f5ead3fc37d"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6758/",
-	"brandIds": [],
-	"seriesIds": ["starwars"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_6716", "01_6717", "01_4153", "01_4154"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6758/"
 }

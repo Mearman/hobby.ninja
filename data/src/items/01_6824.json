@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 龍王丸",
-		"en": "HG RYUOUMARU"
+		"en": "HG Ryuomaru"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "wataru",
+			"url": "https://bandai-hobby.net/series/wataru/",
+			"ja": "ワタルシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000209764",
+			"url": "https://p-bandai.jp/item/item-1000209764/",
+			"ja": "ＨＧ 龍神丸 DX Ver."
+		},
+		{
+			"id": "01_5029",
+			"url": "https://bandai-hobby.net/item/01_5029/",
+			"ja": "HG 邪虎丸"
+		},
+		{
+			"id": "item-1000184927",
+			"url": "https://p-bandai.jp/item/item-1000184927/",
+			"ja": "ＨＧ 龍星丸"
+		},
+		{
+			"id": "item-1000166277",
+			"url": "https://p-bandai.jp/item/item-1000166277/",
+			"ja": "ＨＧ 超魔神龍神丸"
+		}
+	],
 	"price": {
 		"amount": 3630,
 		"currency": "JPY",
@@ -12,25 +55,26 @@
 		"taxRate": 10
 	},
 	"releaseDate": {
-		"ja": "2026年01月",
+		"ja": "2026年01月31日 (土)",
 		"year": 2026,
-		"month": 1
+		"month": 1,
+		"day": 31
 	},
 	"targetAge": 15,
 	"description": {
 		"ja": [
 			"『魔神英雄伝ワタル』より「龍王丸」がHGで登場！",
-			"■原作イメージに忠実なプロポーションの本体各所に可動ギミックを凝縮。",
-			"■内蔵された可動軸により、胸部両脇のブロックを前方へ引き出すことが可能。",
-			"■肩部アーマー内に組み込まれた軸可動により、腕の可動域が拡大。",
-			"■引き出された胸部両脇のブロックはフレキシブルに可動し、肩部関節の引き出し機構と合わせて、必殺技「鳳龍剣」のポーズを実現。剣を抜く仕草も自然に再現できる。",
-			"■腰部は引き出すことで股関節の可動域が拡大し、大胆なポージングが可能。",
-			"■肩アーマーの龍の模様もパーツ分割で表現。",
-			"■鳳龍剣に加え、鳳龍剣発動時の額パーツ、鞘盾（シースシールド）、ハンドパーツが付属。",
-			"■一部パーツ差し替えにより鳳王形態への再現が可能。"
+			"• 原作イメージに忠実なプロポーションの本体各所に可動ギミックを凝縮。",
+			"• 内蔵された可動軸により、胸部両脇のブロックを前方へ引き出すことが可能。",
+			"• 肩部アーマー内に組み込まれた軸可動により、腕の可動域が拡大。",
+			"• 引き出された胸部両脇のブロックはフレキシブルに可動し、肩部関節の引き出し機構と合わせて、必殺技「鳳龍剣」のポーズを実現。剣を抜く仕草も自然に再現できる。",
+			"• 腰部は引き出すことで股関節の可動域が拡大し、大胆なポージングが可能。",
+			"• 肩アーマーの龍の模様もパーツ分割で表現。",
+			"• 鳳龍剣に加え、鳳龍剣発動時の額パーツ、鞘盾（シースシールド）、ハンドパーツが付属。",
+			"• 一部パーツ差し替えにより鳳王形態への再現が可能。"
 		],
 		"en": [
-			"\"Ryuomaru \" from \" Mashin Hero Wataru\" appears in HG!",
+			"\"Ryuomaru\" from \"Mashin Hero Wataru\" appears in HG!",
 			"• Movable gimmicks are condensed in various parts of the body with proportions that are faithful to the original image.",
 			"• The built-in movable shaft allows the blocks on both sides of the chest to be pulled forward.",
 			"• Axial movement built into the shoulder armor expands the range of arm movement.",
@@ -41,64 +85,97 @@
 			"• Possible to recreate Houou form by replacing some parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"鳳龍剣×1",
-			"鞘盾（シースシールド）×1",
-			"鳳龍剣発動時の額パーツ×1",
-			"鳳王形態用差し替えパーツ×1式",
-			"ハンドパーツ×1式",
-			"ジョイントパーツ×1式",
-			"シール×1"
-		],
-		"en": [
-			"Phoenix Dragon Sword x1",
-			"Sheath Shield x 1",
-			"Forehead part when activating Horyuken x1",
-			"Replacement parts for Houou form x 1 set",
-			"Hand parts x 1 set",
-			"Joint parts x 1 set",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "鳳龍剣",
+				"en": "Horyuken"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "鞘盾（シースシールド）",
+				"en": "Sheath Shield (Sheath Seal)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "鳳龍剣発動時の額パーツ",
+				"en": "Forehead part when activating Horyuken"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "鳳王形態用差し替えパーツ",
+				"en": "Replacement parts for Houou form"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6824_0.jpg",
 				"path": "/images/items/01_6824/01_6824_0.jpg",
 				"hash": "ab739307022268a5ac26d2042823777c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6824_1.jpg",
 				"path": "/images/items/01_6824/01_6824_1.jpg",
 				"hash": "b574e93569f421aa71f08baa5dbeb97e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6824_2.jpg",
 				"path": "/images/items/01_6824/01_6824_2.jpg",
 				"hash": "2c69b47aab9993fc9bb92b7723052836"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6824_3.jpg",
 				"path": "/images/items/01_6824/01_6824_3.jpg",
 				"hash": "c8b9d0fcc1dc89c0a648b51f4ff3738c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6824_4.jpg",
 				"path": "/images/items/01_6824/01_6824_4.jpg",
 				"hash": "452c41d4db15752ec1c424461bd42581"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6824_5.jpg",
 				"path": "/images/items/01_6824/01_6824_5.jpg",
 				"hash": "fa30f3e68e5cec209bee1c3549f03b2f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6824/",
-	"brandIds": ["hg"],
-	"seriesIds": ["wataru"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["item-1000209764", "01_5029", "item-1000184927", "item-1000166277"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6824/"
 }

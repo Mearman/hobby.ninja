@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 シャリア専用リック・ドム(GQ)",
-		"en": "HG 1/144 CHALLIA’S RICK DOM(GQ)"
+		"en": "HG 1/144 Rick Dom (GQ) for Sharia"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gquuuuuux",
+			"url": "https://bandai-hobby.net/series/gquuuuuux/",
+			"ja": "機動戦士Gundam GQuuuuuuX"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6865",
+			"url": "https://bandai-hobby.net/item/01_6865/",
+			"ja": "HG 1/144 GQuuuuuuX(エンディミオン・ユニット覚醒時)"
+		},
+		{
+			"id": "01_6781",
+			"url": "https://bandai-hobby.net/item/01_6781/",
+			"ja": "HG 1/144 白いガンダム"
+		},
+		{
+			"id": "01_6782",
+			"url": "https://bandai-hobby.net/item/01_6782/",
+			"ja": "HG 1/144 シャア専用ザク(GQ)"
+		},
+		{
+			"id": "01_6772",
+			"url": "https://bandai-hobby.net/item/01_6772/",
+			"ja": "HG 1/144 ザク(GQ)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3630,
 		"currency": "JPY",
@@ -17,13 +61,12 @@
 		"month": 2
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"青を基調としたカラーリングのシャリア・ブル専用のリック・ドムを商品化！",
-			"■高機動形態へは差し替えなしで変形可能。",
-			"■ジャイアント・バズが付属し、グリップが可動。",
-			"■電磁ハーケンにはリード線を使用。"
+			"• 高機動形態へは差し替えなしで変形可能。",
+			"• ジャイアント・バズが付属し、グリップが可動。",
+			"• 電磁ハーケンにはリード線を使用。"
 		],
 		"en": [
 			"Commercialize Rick Dom exclusively for Sharia Bull with blue-based coloring!",
@@ -32,43 +75,68 @@
 			"• Use lead wire for electromagnetic Harken."
 		]
 	},
-	"accessories": {
-		"ja": ["武装×1式", "リード線×1", "ハンドパーツ×1式", "マーキングシール×1"],
-		"en": ["Armed x 1 type", "Lead wire x 1", "Hand parts x 1 set", "MarkingSeal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "武装",
+				"en": "armed"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "リード線",
+				"en": "lead wire"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6872_0.jpg",
 				"path": "/images/items/01_6872/01_6872_0.jpg",
 				"hash": "035dac18235d3fe8dd5a77be90e91546"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6872_1.jpg",
 				"path": "/images/items/01_6872/01_6872_1.jpg",
 				"hash": "91fc3d057feebd590a5dac4f151ec13f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6872_2.jpg",
 				"path": "/images/items/01_6872/01_6872_2.jpg",
 				"hash": "bb18a65fe4d72ca5c3fbfc88475279f3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6872_3.jpg",
 				"path": "/images/items/01_6872/01_6872_3.jpg",
 				"hash": "92e414eee8da3f75ba6c515ae19c0074"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6872_4.jpg",
 				"path": "/images/items/01_6872/01_6872_4.jpg",
 				"hash": "ab744ebef58ca58a60802bb0bbf2fe78"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6872/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gquuuuuux"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6865", "01_6781", "01_6782", "01_6772"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6872/"
 }

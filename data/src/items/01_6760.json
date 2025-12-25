@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/100 VF-31C ジークフリード(ミラージュ･ファリーナ･ジーナス機) 専用水転写式デカール",
-		"en": "HG 1/100 VF-31C SIEGFRIED (MIRAGE FARINA JENIUS USE) WATER DECALS"
+		"en": "HG 1/100 VF-31C Siegfried (Mirage Farina Genus machine) exclusive water slide decal"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "macross",
+			"url": "https://bandai-hobby.net/series/macross/",
+			"ja": "マクロスシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6759",
+			"url": "https://bandai-hobby.net/item/01_6759/",
+			"ja": "HG 1/100 VF-31C ジークフリード(ミラージュ･ファリーナ･ジーナス機)"
+		},
+		{
+			"id": "01_5944",
+			"url": "https://bandai-hobby.net/item/01_5944/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機)"
+		},
+		{
+			"id": "01_5946",
+			"url": "https://bandai-hobby.net/item/01_5946/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) デラックスセット"
+		},
+		{
+			"id": "01_5465",
+			"url": "https://bandai-hobby.net/item/01_5465/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(マクシミリアン・ジーナス機)"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -18,34 +62,33 @@
 		"day": 25
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「HG 1/100 VF-31C ジークフリード (ミラージュ･ファリーナ･ジーナス機)」の航空機モデルとしてのクオリティを追求する専用の「水転写式デカール」が登場！",
-			"■「HG 1/100 VF-31C ジークフリード (ミラージュ･ファリーナ･ジーナス機)」専用。"
+			"• 「HG 1/100 VF-31C ジークフリード (ミラージュ･ファリーナ･ジーナス機)」専用。"
 		],
 		"en": [
-			"Introducing a special \"water slide decal \" that pursues the quality of the \" HG 1/100 VF-31C Siegfried (Mirage Farina Genus aircraft)\" as an aircraft model!",
+			"Introducing a special \"water slide decal\" that pursues the quality of the \"HG 1/100 VF-31C Siegfried (Mirage Farina Genus aircraft)\" as an aircraft model!",
 			"• Exclusively for \"HG 1/100 VF-31C Siegfried (Mirage Farina Genus machine)\"."
 		]
 	},
-	"accessories": {
-		"ja": ["水転写式デカール×1"],
-		"en": ["Water transfer decal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6760_0.jpg",
 				"path": "/images/items/01_6760/01_6760_0.jpg",
 				"hash": "3f6a95457b6d23b9b9cfcfa9128ab7e6"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6760/",
-	"brandIds": ["hg"],
-	"seriesIds": ["macross"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_6759", "01_5944", "01_5946", "01_5465"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6760/"
 }

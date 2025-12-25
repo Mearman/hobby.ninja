@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 GQuuuuuuX(エンディミオン・ユニット覚醒時)",
-		"en": "HG 1/144 GQuuuuuuX(Endymion Unit Awakened)"
+		"en": "HG 1/144 GQuuuuuuX (When Endymion unit awakens)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gquuuuuux",
+			"url": "https://bandai-hobby.net/series/gquuuuuux/",
+			"ja": "機動戦士Gundam GQuuuuuuX"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6781",
+			"url": "https://bandai-hobby.net/item/01_6781/",
+			"ja": "HG 1/144 白いガンダム"
+		},
+		{
+			"id": "01_6782",
+			"url": "https://bandai-hobby.net/item/01_6782/",
+			"ja": "HG 1/144 シャア専用ザク(GQ)"
+		},
+		{
+			"id": "01_6772",
+			"url": "https://bandai-hobby.net/item/01_6772/",
+			"ja": "HG 1/144 ザク(GQ)"
+		},
+		{
+			"id": "01_6855",
+			"url": "https://bandai-hobby.net/item/01_6855/",
+			"ja": "HG 1/144 セイラ専用軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -12,21 +56,21 @@
 		"taxRate": 10
 	},
 	"releaseDate": {
-		"ja": "2026年01月",
+		"ja": "2026年01月10日 (土)",
 		"year": 2026,
-		"month": 1
+		"month": 1,
+		"day": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"エンディミオン・ユニット覚醒時のGQuuuuuuXが遂に登場！",
 			"頭部ユニットの開閉ギミックを搭載し、エフェクトはPETシートで再現！",
-			"■頭部ユニットの開閉ギミックを搭載。",
-			"■エフェクトはPETシートで再現。",
-			"■特徴的な機体フォルムを忠実に再現。",
-			"■胴体、股関節など各部関節の可動によりダイナミックなアクションポーズが可能。",
-			"■バリエーション豊かな各種武装が付属。"
+			"• 頭部ユニットの開閉ギミックを搭載。",
+			"• エフェクトはPETシートで再現。",
+			"• 特徴的な機体フォルムを忠実に再現。",
+			"• 胴体、股関節など各部関節の可動によりダイナミックなアクションポーズが可能。",
+			"• バリエーション豊かな各種武装が付属。"
 		],
 		"en": [
 			"GQuuuuuuX when Endymion unit awakens is finally here!",
@@ -38,66 +82,104 @@
 			"• Comes with a wide variety of weapons."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"PETシート×1",
-			"武装×1式",
-			"バックパック×1式",
-			"頭部差し替えパーツ×1",
-			"ハンドパーツ×1式",
-			"ジョイントパーツ×1",
-			"シール×1",
-			"マーキングシール×1"
-		],
-		"en": [
-			"PET sheet x 1",
-			"Armed x 1 type",
-			"Backpack x 1 set",
-			"Head replacement parts x 1",
-			"Hand parts x 1 set",
-			"Joint parts x 1",
-			"Seal×1",
-			"MarkingSeal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "PETシート",
+				"en": "PET sheet"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "武装",
+				"en": "armed"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "バックパック",
+				"en": "backpack"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "頭部差し替えパーツ",
+				"en": "head replacement parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6865_0.jpg",
 				"path": "/images/items/01_6865/01_6865_0.jpg",
 				"hash": "6b5242177a0fbea630b402ab1c5a2101"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6865_1.jpg",
 				"path": "/images/items/01_6865/01_6865_1.jpg",
 				"hash": "4dd6112d7e1aade1f929dbc7787c69fa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6865_2.jpg",
 				"path": "/images/items/01_6865/01_6865_2.jpg",
 				"hash": "935ecc09ee3d7a4ae9758b90c52d9a10"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6865_3.jpg",
 				"path": "/images/items/01_6865/01_6865_3.jpg",
 				"hash": "8bb7baeb47399bfd16cae0301da8c2c8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6865_4.jpg",
 				"path": "/images/items/01_6865/01_6865_4.jpg",
 				"hash": "5ce49fc25279ac7301ad3f8f4c17eb23"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6865_5.jpg",
 				"path": "/images/items/01_6865/01_6865_5.jpg",
 				"hash": "709bce2aa53d6d89f35387a978ea6dff"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6865/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gquuuuuux"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6781", "01_6782", "01_6772", "01_6855"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6865/"
 }

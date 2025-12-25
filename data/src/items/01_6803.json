@@ -3,8 +3,62 @@
 	"type": "item",
 	"name": {
 		"ja": "ＭＧ 1/100 Ｅｘ-Ｓガンダム/Ｓガンダム (タスクフォースα Ｖｅｒ.)",
-		"en": "MG 1/100 Ex-S Gundam/S Gundam (Task Force α Ver.)"
+		"en": "MG 1/100 Ex-SGundam/SGundam (Task Force α Ver.)"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "sentinel",
+			"url": "https://bandai-hobby.net/series/sentinel/",
+			"ja": "ガンダム・センチネル"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5593",
+			"url": "https://bandai-hobby.net/item/01_5593/",
+			"ja": "MG 1/100 ガンダムMk-V [クリアカラー]"
+		},
+		{
+			"id": "01_3408",
+			"url": "https://bandai-hobby.net/item/01_3408/",
+			"ja": "ＭＧ 1/100 ガンダムＭｋ-Ｖ"
+		},
+		{
+			"id": "01_4064",
+			"url": "https://bandai-hobby.net/item/01_4064/",
+			"ja": "ＨＧ 1/144 ゼータプラス（テスト機イメージカラー）"
+		},
+		{
+			"id": "01_2176",
+			"url": "https://bandai-hobby.net/item/01_2176/",
+			"ja": "MG 1/100 Ex-Sガンダム/Sガンダム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 16500,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 7
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"－－－－－アナハイム・エレクトロニクスの第7番目“究極のガンダム”を目指した機体—－－－－－",
@@ -29,67 +82,80 @@
 		],
 		"en": [
 			"－－－－－Anaheim Electronics' 7th aircraft aiming to be the \"Ultimate Gundam\"－－－－－－",
-			"The molding color of the Ex-S Gundam / S Gundam that appears in \"Gundam Sentinel\" has been changed and the α Task Force (Task Force Alpha) version is now available in master grade! Includes new parts and new water transfer decals. S Gundam and Ex-S Gundam assembly is possible by selection. Beam smart gun (with rapid fire equipment) can also be assembled selectively.",
-			"● Thorough reproduction of the color of the α Task Force (Task Force Alpha) version of Ex-S Gundam / S Gundam.The molding color of the disc and radome part of the beam smart gun has been changed. ● Ex-S Gundam is equipped with a wide range of weapons and can be posed. The beam saber can be stored in the beam saber box on the knee. The beam smart gun can be reproduced in two types by selecting the barrel: normal and rapid fire equipment specifications. The beam cannon on the thigh can be flexibly moved by moving the axis. ● It is possible to reproduce the transformation to G Cruiser by replacing parts. ● It is possible to reproduce S Gundam by selecting. *This product can be assembled by selecting either Ex-S Gundam or S Gundam. The beam cannon on the back can be posed with a movable axis and a ball joint to shoot forward. ● New water transfer decals included Water transfer decals including original markings are included.",
+			"The molding color of Ex-SGundam/SGundam that appears in \"Gundam Sentinel\" has been changed and the α Task Force (Task Force Alpha) version is now available in master grade! Includes new parts and new water transfer decals. SGundam and Ex-SGundam assembly is possible by selection. Beam smart gun (with rapid fire equipment) can also be assembled selectively.",
+			"● Thorough reproduction of the color of the α Task Force (Task Force Alpha) version of Ex-SGundam/SGundam Changed the molding color of the disc and radome part of the beam smart gun. ● Ex-SGundam is equipped with a wide variety of weapons and can be posed. The beam saber can be stored in the beam saber box on the knee. The beam smart gun can be reproduced in two types by selecting the barrel: normal and rapid fire equipment specifications. The beam cannon on the thigh is axially movable and can be flexibly moved. ● Can reproduce the transformation to G Cruiser by replacing parts ● Can reproduce SGundam by selecting *This product can be assembled by selecting either Ex-SGundam or SGundam. The beam cannon on the back can be posed with a movable axis and a ball joint to shoot forward. ● New water transfer decals included Water transfer decals including original markings are included.",
 			"Attached weapons: Beam smart gun / Beam saber x 2 / Head incom / Reflector incom x 2 / Beam canon",
 			"1/100 Scale Assembly type plastic model Target age: 15 years old and above Materials: PS, ABS, PE, PET, PVC, no adhesive is used for the assembly.",
 			"*The assembly of this kit requires a + (Philips) screwdriver, so please prepare it separately. *The finished product in the photo is painted. Also, a prototype that is still under development. The actual product may differ. *Due to the manufacturing process, air bubbles may appear in the clear parts. *Product materials may change depending on the production period of the sold product. Thank you for your understanding. *There may be variations in plated parts due to the painting process. Thank you for your understanding. *Depending on sales conditions, the quantity that can be purchased may change in the future."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・スマートガン",
-			"ビーム・サーベル×２",
-			"頭部インコム",
-			"リフレクター・インコム×２",
-			"ビーム・カノン"
-		],
-		"en": ["beam smart gun", "Beam saber x2", "head incom", "Reflector Incom x 2", "beam canon"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・スマートガン",
+				"en": "beam smart gun"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル×２",
+				"en": "Beam saber x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "頭部インコム",
+				"en": "head incom"
+			}
+		},
+		{
+			"name": {
+				"ja": "リフレクター・インコム×２",
+				"en": "Reflector Incom x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・カノン",
+				"en": "beam canon"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6803_0.jpg",
 				"path": "/images/items/01_6803/01_6803_0.jpg",
 				"hash": "6e6105c0b06c0aaa961c6f9a4954f6a5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6803_1.jpg",
 				"path": "/images/items/01_6803/01_6803_1.jpg",
 				"hash": "fe4b334f2e7c660fa0dff472c4bd6441"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6803_2.jpg",
 				"path": "/images/items/01_6803/01_6803_2.jpg",
 				"hash": "33086b88c0d6a08f145894e4ddb07c25"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6803_3.jpg",
 				"path": "/images/items/01_6803/01_6803_3.jpg",
 				"hash": "27565be0a9c78307d1db36e3658a4d63"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6803_4.jpg",
 				"path": "/images/items/01_6803/01_6803_4.jpg",
 				"hash": "88c71b249ea31371ed4aa005b7e90fab"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6803_5.jpg",
 				"path": "/images/items/01_6803/01_6803_5.jpg",
 				"hash": "0f3561b8abfafab1c563c8ac27c8dcc6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6803_6.jpg",
 				"path": "/images/items/01_6803/01_6803_6.jpg",
 				"hash": "09fec8b11e937e4bf0d14c202b2fe6e2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6803_7.jpg",
 				"path": "/images/items/01_6803/01_6803_7.jpg",
 				"hash": "bfded2092336274bf25366a4dc0e4b77"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6803_8.jpg",
 				"path": "/images/items/01_6803/01_6803_8.jpg",
 				"hash": "286f1e06ea87f7c7e5df723f1d53e191"
 			}
@@ -97,14 +163,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6803/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": ["sentinel"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5593", "01_3408", "01_4064", "01_2176"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "3268",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3268/"

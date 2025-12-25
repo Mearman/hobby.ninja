@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ガンダムベース限定 百式 Ver.2.0 [メカニカルコアメッキ]",
 		"en": "MG 1/100 Gundam Base Limited Hyakushiki Ver.2.0 [Mechanical Core Plating]"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000145352",
+			"url": "https://p-bandai.jp/item/item-1000145352/",
+			"ja": "ＭＧ 1/100 RMS-179 ジムII（エゥーゴカラーＶｅｒ．）"
+		},
+		{
+			"id": "item-1000137712",
+			"url": "https://p-bandai.jp/item/item-1000137712/",
+			"ja": "ＭＧ 1/100 ドワッジ改"
+		},
+		{
+			"id": "01_2231",
+			"url": "https://bandai-hobby.net/item/01_2231/",
+			"ja": "MG 1/100 ドワッジ"
+		},
+		{
+			"id": "item-1000131596",
+			"url": "https://p-bandai.jp/item/item-1000131596",
+			"ja": "ＭＧ 1/100 ジム・キャノン ［レッド・ヘッド］（ジャブロー防衛隊仕様）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 17600,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 25
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定アイテム。",
@@ -30,7 +73,7 @@
 		],
 		"en": [
 			"A limited edition item from the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"\"MG 1/100 Hyakushiki Ver.2.0 \" is now available with \" mechanical core plating\"!",
+			"\"MG 1/100 Hyakushiki Ver.2.0\" is now available with \"mechanical core plating\"!",
 			"～What is mechanical core plating～",
 			"A new technology that performs vapor deposition plating only on the core side of parts.",
 			"Through the use of technical techniques, we pursue a beautiful appearance with a deep luster.",
@@ -40,40 +83,27 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6742_0.jpg",
 				"path": "/images/items/01_6742/01_6742_0.jpg",
 				"hash": "301a0e4ce485e5ff4a4fd902268bb783"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6742_1.jpg",
 				"path": "/images/items/01_6742/01_6742_1.jpg",
 				"hash": "f8ffdb68dac2d6140d329cf830134c6e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6742_2.jpg",
 				"path": "/images/items/01_6742/01_6742_2.jpg",
 				"hash": "d8bad3c3ff059d55a42f9d831d855437"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6742_3.jpg",
 				"path": "/images/items/01_6742/01_6742_3.jpg",
 				"hash": "d53e3b8fe0c6306c9e6b119256d959eb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6742_4.jpg",
 				"path": "/images/items/01_6742/01_6742_4.jpg",
 				"hash": "55aa06add3d8d7189fc4d5a5d4ed52b1"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6742/",
-	"brandIds": ["mg"],
-	"seriesIds": ["z-gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000145352", "item-1000137712", "01_2231", "item-1000131596"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6742/"
 }

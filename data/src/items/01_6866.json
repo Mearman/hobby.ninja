@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "メカコレクション 宇宙戦艦ヤマト 3199（第3次改装型：参戦章叙勲式典記念塗装）",
-		"en": "MECHA COLLECTION UNITED NATIONS COSMO FORCE BBY-01 SPACE BATTLESHIP YAMATO 3199"
+		"en": "Mecha Collection Space Battleship Yamato 3199 (Third Renovation Type: Battle Medal Commemoration Ceremony Painting)"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "yamato",
+			"url": "https://bandai-hobby.net/series/yamato/",
+			"ja": "宇宙戦艦ヤマトシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5498",
+			"url": "https://bandai-hobby.net/item/01_5498/",
+			"ja": "メカコレクションDX 1式空間戦闘攻撃機 コスモタイガーII(単座型/銃座型) [2機セット]"
+		},
+		{
+			"id": "01_5500",
+			"url": "https://bandai-hobby.net/item/01_5500/",
+			"ja": "メカコレクションDX 試製空間戦闘攻撃機 コスモパイソン [2機セット]"
+		},
+		{
+			"id": "01_3667",
+			"url": "https://bandai-hobby.net/item/01_3667/",
+			"ja": "メカコレクション ガイペロン級多層式航宙母艦 バルメス(外洋機動艦隊仕様)"
+		},
+		{
+			"id": "01_3650",
+			"url": "https://bandai-hobby.net/item/01_3650/",
+			"ja": "メカコレクション デウスーラIII世"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -20,56 +63,73 @@
 	"description": {
 		"ja": [
 			"『ヤマトよ永遠に REBEL3199』より、「宇宙戦艦ヤマト」が'メカコレクションにラインアップ！",
-			"■エンジンノズル用のエフェクトパーツが付属。",
-			"■選択式で安定翼展開状態を再現可能なパーツが付属。",
-			"■ディスプレイベースにより姿勢調整を行った展示が可能。",
-			"■各種マーキングを収録した水転写式デカールが付属。"
+			"• エンジンノズル用のエフェクトパーツが付属。",
+			"• 選択式で安定翼展開状態を再現可能なパーツが付属。",
+			"• ディスプレイベースにより姿勢調整を行った展示が可能。",
+			"• 各種マーキングを収録した水転写式デカールが付属。"
 		],
 		"en": [
-			"From \"Yamato Forever REBEL3199 \", \" Space Battleship Yamato\" is now available in the Mecha Collection!",
+			"From \"Yamato Forever REBEL3199\", \"Space Battleship Yamato\" is now available in the Mecha Collection!",
 			"• Effect parts for engine nozzle are included.",
 			"• Includes selectable parts that can reproduce the stable wing deployment state.",
 			"• The display base allows for exhibitions with adjusted posture.",
 			"• Water transfer decals containing various markings are included."
 		]
 	},
-	"accessories": {
-		"ja": ["ディスプレイベース×1", "安定翼展開用パーツ×1", "エンジンノズル用エフェクト×1式", "水転写式デカール×1"],
-		"en": [
-			"Display base x 1",
-			"Stable wing deployment parts x 1",
-			"Effect for engine nozzle x 1 set",
-			"Water transfer decal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイベース",
+				"en": "display base"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "安定翼展開用パーツ",
+				"en": "Stable wing deployment parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "エンジンノズル用エフェクト",
+				"en": "Engine nozzle effects"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6866_0.jpg",
 				"path": "/images/items/01_6866/01_6866_0.jpg",
 				"hash": "0a4699403aab5b6221112ec05655c130"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6866_1.jpg",
 				"path": "/images/items/01_6866/01_6866_1.jpg",
 				"hash": "105b0de6fc21aed3cd115feed76e840a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6866_2.jpg",
 				"path": "/images/items/01_6866/01_6866_2.jpg",
 				"hash": "a26e3d48e7d1aeb2f524df1599038a8e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6866_3.jpg",
 				"path": "/images/items/01_6866/01_6866_3.jpg",
 				"hash": "54d7297f3fdf9384cfc2e1133289c2d1"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6866/",
-	"brandIds": ["mecha-colle"],
-	"seriesIds": ["yamato"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5498", "01_5500", "01_3667", "01_3650"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6866/"
 }

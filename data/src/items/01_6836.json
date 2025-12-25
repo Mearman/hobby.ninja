@@ -5,6 +5,29 @@
 		"ja": "HG 1/144 ガンダムベース限定 バルギル(ガンダムヘッド&サイコプレート搭載型)",
 		"en": "HG 1/144 Gundam Base Limited Bargil (Gundam Head & Psycho Plate Equipped)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "moon-gundam",
+			"url": "https://bandai-hobby.net/series/moon-gundam/",
+			"ja": "機動戦士MOONガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/144",
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -18,14 +41,13 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定アイテム。",
 			"『機動戦士ムーンガンダム』より、サイコガンダムMk-IVG・ドアーズの頭部とサイコプレートを装着した状態のバルギルがHGで登場！",
-			"■腕部に装備されたバタフライ・エッジは着脱式。",
-			"■ビーム・ライフル用のハンドパーツが付属し、安定した保持が可能。",
-			"■サイコプレートは分離・組み替えが可能。ロック機構で、プレート同士をしっかりと結合。"
+			"• 腕部に装備されたバタフライ・エッジは着脱式。",
+			"• ビーム・ライフル用のハンドパーツが付属し、安定した保持が可能。",
+			"• サイコプレートは分離・組み替えが可能。ロック機構で、プレート同士をしっかりと結合。"
 		],
 		"en": [
 			"A limited edition item from the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
@@ -38,45 +60,31 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6836_0.jpg",
 				"path": "/images/items/01_6836/01_6836_0.jpg",
 				"hash": "5e0266a9a00e01769f7e143c56ddca18"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6836_1.jpg",
 				"path": "/images/items/01_6836/01_6836_1.jpg",
 				"hash": "b2f1635d4e4270875f9fdd0f69f2410f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6836_2.jpg",
 				"path": "/images/items/01_6836/01_6836_2.jpg",
 				"hash": "df05f7486226f38799bd0fd7cdf07788"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6836_3.jpg",
 				"path": "/images/items/01_6836/01_6836_3.jpg",
 				"hash": "7b88f0dabd8a3b0444fd883578fdd83f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6836_4.jpg",
 				"path": "/images/items/01_6836/01_6836_4.jpg",
 				"hash": "a7bd16a7bf9c51ba12c47d7e54aba324"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6836_5.jpg",
 				"path": "/images/items/01_6836/01_6836_5.jpg",
 				"hash": "14e952795b2b84beef7def0dd290627c"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6836/",
-	"brandIds": ["hg"],
-	"seriesIds": ["moon-gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": [],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6836/"
 }

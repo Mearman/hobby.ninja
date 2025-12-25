@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "ワンピース偉大なる船(グランドシップ) コレクション ゴーイング・メリー号 -A Netflix Series: ONE PIECE-",
-		"en": "GRAND SHIP COLLECTION Going Merry -A Netflix Series: ONE PIECE-"
+		"en": "One Piece Grand Ship Collection Going Merry -A Netflix Series: ONE PIECE-"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "onepiece",
+			"url": "https://bandai-hobby.net/series/onepiece/",
+			"ja": "ワンピース"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5409",
+			"url": "https://bandai-hobby.net/item/01_5409/",
+			"ja": "チョッパーロボ1号&2号(チョッパータンク&チョッパーウイング)"
+		},
+		{
+			"id": "01_5410",
+			"url": "https://bandai-hobby.net/item/01_5410/",
+			"ja": "チョッパーロボ3号&5号(チョッパーサブマリン&チョッパークレーン)"
+		},
+		{
+			"id": "01_4236",
+			"url": "https://bandai-hobby.net/item/01_4236/",
+			"ja": "ワンピース偉大なる船(グランドシップ)コレクション オーロ・ジャクソン号"
+		},
+		{
+			"id": "01_4170",
+			"url": "https://bandai-hobby.net/item/01_4170/",
+			"ja": "ワンピース偉大なる船コレクション サウザンド・サニー号「FILM RED」公開記念カラーVer."
+		}
+	],
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -20,9 +57,9 @@
 	"description": {
 		"ja": [
 			"ワンピース偉大なる船(グランドシップ) コレクションにNetflixシリーズ実写ドラマ版に登場するゴーイング・メリー号がラインアップ！",
-			"■特徴的な船首を再現。",
-			"■波の情景を表現したエフェクトパーツで水面航行イメージを再現可能。",
-			"■海賊旗のマークはマーキングシールで再現。"
+			"• 特徴的な船首を再現。",
+			"• 波の情景を表現したエフェクトパーツで水面航行イメージを再現可能。",
+			"• 海賊旗のマークはマーキングシールで再現。"
 		],
 		"en": [
 			"The Going Merry, which appears in the live-action drama version of the Netflix series, is now available in the One Piece Grand Ship collection!",
@@ -31,33 +68,56 @@
 			"• The pirate flag mark is reproduced with MarkingSeal."
 		]
 	},
-	"accessories": {
-		"ja": ["ディスプレイベース×1", "波エフェクト×1式", "シール×1", "マーキングシール×1"],
-		"en": ["Display base x 1", "Wave effect x 1", "Seal×1", "MarkingSeal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイベース",
+				"en": "display base"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "波エフェクト",
+				"en": "wave effect"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6862_0.jpg",
 				"path": "/images/items/01_6862/01_6862_0.jpg",
 				"hash": "6ac3fbb125b47c7d5a5aa264ad0c0f50"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6862_1.jpg",
 				"path": "/images/items/01_6862/01_6862_1.jpg",
 				"hash": "3a5a668aec28d664c46880c009cb1855"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6862_2.jpg",
 				"path": "/images/items/01_6862/01_6862_2.jpg",
 				"hash": "c84723142e62060acfd09eb890b390c8"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6862/",
-	"brandIds": [],
-	"seriesIds": ["onepiece"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5409", "01_5410", "01_4236", "01_4170"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6862/"
 }

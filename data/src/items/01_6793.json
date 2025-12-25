@@ -5,6 +5,50 @@
 		"ja": "Ｒ３ 1/35 ビルバイン",
 		"en": "R3 1/35 Billbine"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "dunbine",
+			"url": "https://bandai-hobby.net/series/dunbine/",
+			"ja": "聖戦士ダンバイン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000203131",
+			"url": "https://p-bandai.jp/item/item-1000203131/",
+			"ja": "HG 1/72 トカマクダンバイン"
+		},
+		{
+			"id": "item-1000217021",
+			"url": "https://p-bandai.jp/item/item-1000217021/",
+			"ja": "聖戦士ダンバインセット１"
+		},
+		{
+			"id": "item-1000211055",
+			"url": "https://p-bandai.jp/item/item-1000211055/",
+			"ja": "ＨＧ 1/72 サーバイン [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000199895",
+			"url": "https://p-bandai.jp/item/item-1000199895/",
+			"ja": "ＨＧ 1/72 ビランビー"
+		}
+	],
+	"scale": "1/35",
 	"price": {
 		"amount": 6050,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 8
 	},
 	"targetAge": 15,
-	"scale": "1/35",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ナ の 国 の 可 変 型 オ ー ラ ・ バ ト ラ ービ ル バ イ ン 飛 翔ー－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -28,85 +71,84 @@
 		],
 		"en": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ナ の 国 の 可 変 型 オ ー ラ ・ バ ト ラ ービ ル バ イ ン 飛Sho－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
-			"From \"Sacred Warrior Dunbine \", the aura battler \" Billbine\" driven by the main character Sho Zama has appeared in Real Robot Revolution with a completely new model. Real Robot Revolution's meticulous modeling and gimmicks bring out the charm of Aura Battler to its fullest and make it into a kit. Although it has a frameless structure, it has a sophisticated parts structure that is both movable and sculpted, allowing for a satisfying assembly experience. It can also be transformed into a wing caliber.",
+			"From \"Sacred Warrior Dunbine\", the aura battler \"Billbine\" driven by the main character Sho Zama has appeared in Real Robot Revolution with a completely new model. Real Robot Revolution's meticulous modeling and gimmicks bring out the charm of Aura Battler to its fullest and make it into a kit. Although it has a frameless structure, it has a sophisticated parts structure that is both movable and sculpted, allowing for a satisfying assembly experience. Can also be transformed into Wing Caliber.",
 			"● Billbine is now available with completely new modeling and modern technology! Following the setting image and the image in the work, the latest interpretation of Billbine is now available! The various forms unique to the variable aura battler have been thoroughly reproduced using the latest technology. ● The characteristic head is reproduced by color coding with molded colors. ● Full of equipment, allowing for a variety of poses Aura Sword Weapon grips are included on the left and right sides. Expanding the range of poses Aura, Sword, and Rifle Can be used in two ways, sword and rifle, by deformation. Aura Cannon Each part is movable, allowing for expressions. The wings of each part can be expressed with movable shafts and ball joints. ● Thoroughly reproduce the wing caliber by replacing parts The transformation mechanism into the wing caliber allows the head to be lowered for reproduction. The canopy part of the chest can be expanded by moving the axis. ● Delivered in full color package Attached weapons: Aura Sword / Aura Sword Rifle / Aura Cannon Accessories: Effects for Aura Sword Rifle / Complete set of joints / Complete set of hand parts",
 			"1/35 Scale Assembly type plastic model Target age: 15 years old and above Mainly Product materials: PS, PE, PVC, no adhesive is used for the assembly.",
 			"*The finished product in the photo is a prototype that is still under development. It is also painted. The actual product may differ. *Please note that some of the clear parts may contain air bubbles due to the manufacturing process. *Product materials may change depending on the production period of the sold product. Thank you for your understanding. *There may be variations in plated parts due to the painting process. Thank you for your understanding. *Depending on sales conditions, the quantity that can be purchased may change in the future."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"オーラ・ソード",
-			"オーラ・ソード・ライフル",
-			"オーラ・キャノン付属品　：オーラ・ソード・ライフル用エフェクト",
-			"ジョイント一式",
-			"ハンドパーツ一式"
-		],
-		"en": [
-			"aura sword",
-			"aura sword rifle",
-			"Aura Cannon Accessories: Effects for Aura Sword Rifle",
-			"set of joints",
-			"Hand parts set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "オーラ・ソード",
+				"en": "aura sword"
+			}
+		},
+		{
+			"name": {
+				"ja": "オーラ・ソード・ライフル",
+				"en": "aura sword rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "オーラ・キャノン付属品　：オーラ・ソード・ライフル用エフェクト",
+				"en": "Aura Cannon Accessories: Effects for Aura Sword Rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイント一式",
+				"en": "set of joints"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ一式",
+				"en": "Hand parts set"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6793_0.jpg",
 				"path": "/images/items/01_6793/01_6793_0.jpg",
 				"hash": "39365f500e58be6e003673ea089a6fba"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6793_1.jpg",
 				"path": "/images/items/01_6793/01_6793_1.jpg",
 				"hash": "40d3d7fb7987df87e1ecfe9d59c9c591"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6793_2.jpg",
 				"path": "/images/items/01_6793/01_6793_2.jpg",
 				"hash": "3032b6dc7dd1b7053372641c8c985788"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6793_3.jpg",
 				"path": "/images/items/01_6793/01_6793_3.jpg",
 				"hash": "9931de6186d9e0896f88d38b7415b0a3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6793_4.jpg",
 				"path": "/images/items/01_6793/01_6793_4.jpg",
 				"hash": "a47a9a84d693f3e05de7fc23b46830a3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6793_5.jpg",
 				"path": "/images/items/01_6793/01_6793_5.jpg",
 				"hash": "55b4dd598859a77bcb90f716055f9813"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6793_6.jpg",
 				"path": "/images/items/01_6793/01_6793_6.jpg",
 				"hash": "f269fdf1fce568c642de2769ac9a0fd9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6793_7.jpg",
 				"path": "/images/items/01_6793/01_6793_7.jpg",
 				"hash": "813cf18f175bf54a36142582773aaf6c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6793_8.jpg",
 				"path": "/images/items/01_6793/01_6793_8.jpg",
 				"hash": "ca3475557816566c5a1bfaca87c4f386"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6793/",
-	"brandIds": ["pb_charapla"],
-	"seriesIds": ["dunbine"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["item-1000203131", "item-1000217021", "item-1000211055", "item-1000199895"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6793/"
 }

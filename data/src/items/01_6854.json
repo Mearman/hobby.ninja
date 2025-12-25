@@ -2,9 +2,67 @@
 	"id": "01_6854",
 	"type": "item",
 	"name": {
-		"ja": "RG 1/144 G-3 ガンダム Ver.2.0",
-		"en": "RG 1/144 G-3 Gundam Ver.2.0"
+		"ja": "RG 1/144 G-3ガンダム Ver.2.0",
+		"en": "RG 1/144 G-3Gundam Ver.2.0"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6688",
+			"url": "https://bandai-hobby.net/item/01_6688/",
+			"ja": "RG 1/144 MS-06S ザクII [初音ミクVer.]"
+		},
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5428",
+			"url": "https://bandai-hobby.net/item/01_5428/",
+			"ja": "RG 1/144 ガンダムベース限定 ジオング [スペシャルコーティング]"
+		},
+		{
+			"id": "01_5261",
+			"url": "https://bandai-hobby.net/item/01_5261/",
+			"ja": "RG 1/144 RX-78-2 ガンダム Ver.2.0"
+		}
+	],
+	"manual": {
+		"id": "3900",
+		"url": "https://manual.bandai-hobby.net/menus/detail/3900"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -17,7 +75,6 @@
 		"month": 9
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"RX-78の名を冠する3番目のガンダム リアルグレードVer.2.0にて出撃ー",
@@ -38,73 +95,82 @@
 			"*The finished product in the photo is painted. Also, a prototype that is still under development. The actual product may differ. *Product materials may change depending on production time. Thank you for your understanding. *Please note that some of the clear parts may contain air bubbles due to the manufacturing process. *Depending on sales conditions, the quantity that can be purchased may change in the future."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"ビーム・サーベル×2",
-			"シールド×1",
-			"ハイパー・バズーカ×1",
-			"コア・ファイター用ランディングギアパーツ一式"
-		],
-		"en": ["Beam rifle x1", "Beam saber x2", "Seal × 1", "Hyper bazooka x1", "Core fighter landing gear parts set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル",
+				"en": "beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハイパー・バズーカ",
+				"en": "hyper bazooka"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "コア・ファイター用ランディングギアパーツ一式",
+				"en": "Core fighter landing gear parts set"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6854_0.jpg",
 				"path": "/images/items/01_6854/01_6854_0.jpg",
 				"hash": "5dc5ba88ce0024e9b6fdc35714931066"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6854_1.jpg",
 				"path": "/images/items/01_6854/01_6854_1.jpg",
 				"hash": "0f669d78624f50799fa5cfbf61f1a54f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6854_2.jpg",
 				"path": "/images/items/01_6854/01_6854_2.jpg",
 				"hash": "771d1b145cd22e8ec7235ef8c440264f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6854_3.jpg",
 				"path": "/images/items/01_6854/01_6854_3.jpg",
 				"hash": "5a333a0b9330c75b0baa1b7d07370703"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6854_4.jpg",
 				"path": "/images/items/01_6854/01_6854_4.jpg",
 				"hash": "9d2f313d59dba3e5bbeef677782214a3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6854_5.jpg",
 				"path": "/images/items/01_6854/01_6854_5.jpg",
 				"hash": "5c7ec205cd75e69f4bf78d1811dafba3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6854_6.jpg",
 				"path": "/images/items/01_6854/01_6854_6.jpg",
 				"hash": "14324ee313b477071656d44b40088760"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6854_7.jpg",
 				"path": "/images/items/01_6854/01_6854_7.jpg",
 				"hash": "1dc9a95ad2b8c3d0fabe00f1db561bb9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6854_8.jpg",
 				"path": "/images/items/01_6854/01_6854_8.jpg",
 				"hash": "adc0781af7735a7e7c08aedfc3f6d0aa"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6854/",
-	"brandIds": ["rg", "pb_rg", "pb_gunpla"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6688", "01_5992", "01_5428", "01_5261"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6854/"
 }

@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "ウェポンディスプレイベース01",
-		"en": "WEAPON DISPLAY BASE 01"
+		"en": "Weapon display base 01"
 	},
+	"brands": [
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5934",
+			"url": "https://bandai-hobby.net/item/01_5934/",
+			"ja": "アクションベース7 [クリアカラー] 機動戦士Gundam GQuuuuuuXシールセット"
+		},
+		{
+			"id": "01_5256",
+			"url": "https://bandai-hobby.net/item/01_5256/",
+			"ja": "アクションベース6 [クリアカラー] ミラーシールセット"
+		},
+		{
+			"id": "01_5258",
+			"url": "https://bandai-hobby.net/item/01_5258/",
+			"ja": "アクションベース7 [クリアカラー] ミラーシールセット"
+		},
+		{
+			"id": "01_5165",
+			"url": "https://bandai-hobby.net/item/01_5165/",
+			"ja": "アクションベース8 [クリアカラー]"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -12,59 +49,82 @@
 		"taxRate": 10
 	},
 	"releaseDate": {
-		"ja": "2026年01月",
+		"ja": "2026年01月17日 (土)",
 		"year": 2026,
-		"month": 1
+		"month": 1,
+		"day": 17
 	},
 	"targetAge": 8,
 	"description": {
 		"ja": [
 			"組み立てたあとの「飾る楽しさ」の幅を広げる「ウェポンディスプレイベース」が登場！",
-			"■パーツは全てクリアパーツを採用。台座4枚と支柱が12本付属。",
-			"■別売りのアクションベースと連結することができるジョイントパーツも付属。",
-			"■別売りのアクションベースと組み合わせて使うことで、臨場感のあるディスプレイが可能。",
-			"■迫力のある演出ができる。"
+			"• パーツは全てクリアパーツを採用。台座4枚と支柱が12本付属。",
+			"• 別売りのアクションベースと連結することができるジョイントパーツも付属。",
+			"• 別売りのアクションベースと組み合わせて使うことで、臨場感のあるディスプレイが可能。",
+			"• 迫力のある演出ができる。"
 		],
 		"en": [
-			"Introducing the \"Weapon Display Base \" that expands the range of \" fun to display\" after assembly!",
+			"Introducing the \"Weapon Display Base\" that expands the range of \"fun to display\" after assembly!",
 			"• All parts are made of clear parts. Includes 4 pedestals and 12 pillars.",
 			"• Also includes joint parts that can be connected to an action base (sold separately).",
 			"• By using it in combination with the action base (sold separately), you can create an immersive display.",
 			"• Capable of producing powerful performances."
 		]
 	},
-	"accessories": {
-		"ja": ["台座×4", "アーム(短)×6", "アーム(長)×6", "ジョイントパーツ×1式"],
-		"en": ["Pedestal x 4", "Arm (short) x 6", "Arm (long) x 6", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "アーム(短)",
+				"en": "Arm (short)"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "アーム(長)",
+				"en": "Arm (long)"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6882_0.jpg",
 				"path": "/images/items/01_6882/01_6882_0.jpg",
 				"hash": "2b6091cc68ff12e5b3ea1af865532933"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6882_1.jpg",
 				"path": "/images/items/01_6882/01_6882_1.jpg",
 				"hash": "b9285e4f5f74c92ff59dd12ddcf793e2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6882_2.jpg",
 				"path": "/images/items/01_6882/01_6882_2.jpg",
 				"hash": "3444802e44c2ee446d37698f3f55534c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6882_3.jpg",
 				"path": "/images/items/01_6882/01_6882_3.jpg",
 				"hash": "4f6b2180aae8138521323b4ae875aef0"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6882/",
-	"brandIds": ["actionbase"],
-	"seriesIds": [],
-	"categoryIds": [],
-	"relatedItemIds": ["01_5934", "01_5256", "01_5258", "01_5165"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6882/"
 }

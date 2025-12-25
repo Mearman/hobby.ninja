@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 グスタフ･カール００型",
-		"en": "HG 1/144 GUSTAV KARL TYPE-00"
+		"en": "HG 1/144 Gustav Karl 00 type"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "hathaway",
+			"url": "https://bandai-hobby.net/series/hathaway/",
+			"ja": "機動戦士ガンダム 閃光のハサウェイ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6817",
+			"url": "https://bandai-hobby.net/item/01_6817/",
+			"ja": "ＨＧ 1/144 メッサーＦ０２型 マインレイヤー装備"
+		},
+		{
+			"id": "01_5594",
+			"url": "https://bandai-hobby.net/item/01_5594/",
+			"ja": "HG 1/144 メッサーF01型 [クリアカラー]"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4269",
+			"url": "https://bandai-hobby.net/item/01_4269/",
+			"ja": "HG 1/144 ペーネロペー[クリアカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -17,62 +61,90 @@
 		"month": 2
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム 閃光のハサウェイ』に登場する「グスタフ・カール００型」を最新のギミック・可動域を搭載し立体化！",
-			"■左肩のフレキシブル・シールドのアーム部に可動軸を搭載し様々なポージングが可能に。",
-			"■両脚の股関節の接続軸がスライドする機構により、脚部の大胆な可動を促進。",
-			"■バックパックにビーム・ライフルやバズーカを懸架可能。",
-			"■ビーム・サーベルのグリップはサイドアーマーに収納可能。"
+			"• 左肩のフレキシブル・シールドのアーム部に可動軸を搭載し様々なポージングが可能に。",
+			"• 両脚の股関節の接続軸がスライドする機構により、脚部の大胆な可動を促進。",
+			"• バックパックにビーム・ライフルやバズーカを懸架可能。",
+			"• ビーム・サーベルのグリップはサイドアーマーに収納可能。"
 		],
 		"en": [
-			"The \"Gustav Karl Type 00 \" that appears in \" Mobile Suit Gundam Flash Hathaway\" is now three-dimensional with the latest gimmicks and range of motion!",
+			"The \"Gustav Karl Type 00\" that appears in \"Mobile Suit Gundam Flash Hathaway\" is now three-dimensional with the latest gimmicks and range of motion!",
 			"• The flexible Seal arm on the left shoulder is equipped with a movable axis, allowing for various poses.",
 			"• A mechanism in which the connecting shaft of the hip joints of both legs slides facilitates bold movement of the legs.",
 			"• Beam rifle and bazooka can be hung on the backpack.",
 			"• Beam saber grip can be stored in side armor."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"ビーム・サーベル×2",
-			"バズーカ×1",
-			"ハンドパーツ×1式",
-			"シール×1",
-			"マーキングシール×1"
-		],
-		"en": ["Beam rifle x1", "Beam saber x2", "Bazooka×1", "Hand parts x 1 set", "Seal×1", "MarkingSeal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル",
+				"en": "beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "バズーカ",
+				"en": "bazooka"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6873_0.jpg",
 				"path": "/images/items/01_6873/01_6873_0.jpg",
 				"hash": "1bf6bafded38e63783fb13c14e4e5b05"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6873_1.jpg",
 				"path": "/images/items/01_6873/01_6873_1.jpg",
 				"hash": "4a6e90e4d65a293aa6981360d45f7f66"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6873_2.jpg",
 				"path": "/images/items/01_6873/01_6873_2.jpg",
 				"hash": "e72b583fabdf0f35c57db2fd5c4615e7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6873_3.jpg",
 				"path": "/images/items/01_6873/01_6873_3.jpg",
 				"hash": "67cf951eb97236f3546cda5d538f4629"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6873/",
-	"brandIds": ["hg"],
-	"seriesIds": ["hathaway"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6817", "01_5594", "01_4971", "01_4269"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6873/"
 }

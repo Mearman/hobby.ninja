@@ -2,9 +2,53 @@
 	"id": "01_6744",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 ガンダム Mk-Ⅲ [クリアカラー]",
-		"en": "HG 1/144 Gundam Mk-Ⅲ [Clear color]"
+		"ja": "HG 1/144 ガンダムMk-Ⅲ [クリアカラー]",
+		"en": "HG 1/144 GundamMk-Ⅲ [Clear color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6693",
+			"url": "https://bandai-hobby.net/item/01_6693/",
+			"ja": "HG 1/144 ガンダムベース限定 ゼータガンダム[U.C.0088] (バイオセンサーイメージカラー)"
+		},
+		{
+			"id": "01_6694",
+			"url": "https://bandai-hobby.net/item/01_6694/",
+			"ja": "HG 1/144 サイコ･ガンダム [メタリックグロスインジェクション]"
+		},
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -18,15 +62,14 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士Zガンダム』MSVより、「HG 1/144 ガンダムMK-Ⅲ」がクリアカラーになって登場！",
-			"■印象的な機体色をクリア成形色で表現。",
-			"■専用シールド等豊富な武装類が付属。"
+			"• 印象的な機体色をクリア成形色で表現。",
+			"• 専用シールド等豊富な武装類が付属。"
 		],
 		"en": [
-			"From \"Mobile Suit Z Gundam \" MSV, \" HG 1/144 Gundam MK-III\" is now available in clear color!",
+			"From \"Mobile Suit ZGundam\" MSV, \"HG 1/144 GundamMK-III\" is now available in clear color!",
 			"• Expressing the impressive aircraft color with clear molding color.",
 			"• Comes with a variety of weapons such as special Seals."
 		]
@@ -34,30 +77,19 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6744_0.jpg",
 				"path": "/images/items/01_6744/01_6744_0.jpg",
 				"hash": "b777424d061880d01286251306b9a2ab"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6744_1.jpg",
 				"path": "/images/items/01_6744/01_6744_1.jpg",
 				"hash": "2f54997df3620156d8e2e3667347f318"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6744_2.jpg",
 				"path": "/images/items/01_6744/01_6744_2.jpg",
 				"hash": "6a482480af18484936f3af935061edec"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6744/",
-	"brandIds": ["hg"],
-	"seriesIds": ["z-gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6693", "01_6694", "01_5468", "01_5375"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6744/"
 }

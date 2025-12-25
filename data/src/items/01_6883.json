@@ -5,6 +5,28 @@
 		"ja": "オプションパーツセット ガンプラ 19 (フィン・ファンネル)",
 		"en": "Option parts set Gunpla 19 (fin/funnel)"
 	},
+	"brands": [
+		{
+			"id": "optionpartsset",
+			"url": "https://bandai-hobby.net/brand/optionpartsset/",
+			"ja": "オプションパーツセット"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -12,17 +34,18 @@
 		"taxRate": 10
 	},
 	"releaseDate": {
-		"ja": "2026年01月",
+		"ja": "2026年01月24日 (土)",
 		"year": 2026,
-		"month": 1
+		"month": 1,
+		"day": 24
 	},
 	"targetAge": 8,
 	"description": {
 		"ja": [
 			"「ENTRY GRADE 1/144 νガンダム」と連動した待望のウェポンセットが登場！",
-			"■付属のジョイントパーツを使用することで、様々な機体へ取り付けが可能。",
-			"■別売りの「ウェポンディスプレイベース01」を使用することで射出状態を再現できる。",
-			"■2セット組み合わせることでダブル・フィン・ファンネルを再現可能。"
+			"• 付属のジョイントパーツを使用することで、様々な機体へ取り付けが可能。",
+			"• 別売りの「ウェポンディスプレイベース01」を使用することで射出状態を再現できる。",
+			"• 2セット組み合わせることでダブル・フィン・ファンネルを再現可能。"
 		],
 		"en": [
 			"The long-awaited Weapon set linked to \"ENTRY GRADE 1/144 νGundam\" is now available!",
@@ -31,49 +54,75 @@
 			"• Double fin funnel can be recreated by combining 2 sets."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"フィン・ファンネル×6",
-			"ニュー・ハイパー・バズーカ×1",
-			"ビーム・サーベル×1式",
-			"バックパック×1",
-			"ジョイントパーツ×1式"
-		],
-		"en": ["Fin Funnel x 6", "New hyper bazooka x1", "Beam saber x 1 set", "Backpack x 1", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フィン・ファンネル",
+				"en": "fin funnel"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "ニュー・ハイパー・バズーカ",
+				"en": "new hyper bazooka"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "バックパック",
+				"en": "backpack"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6883_0.jpg",
 				"path": "/images/items/01_6883/01_6883_0.jpg",
 				"hash": "4b81e03d7a74390312fa36f0828e8534"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6883_1.jpg",
 				"path": "/images/items/01_6883/01_6883_1.jpg",
 				"hash": "ab729e1b078c405315979f91ac8f093c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6883_2.jpg",
 				"path": "/images/items/01_6883/01_6883_2.jpg",
 				"hash": "d26756fc45a0209feed047172b0f3522"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6883_3.jpg",
 				"path": "/images/items/01_6883/01_6883_3.jpg",
 				"hash": "f38081727d43c58cb64f17a2e6030e13"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6883_4.jpg",
 				"path": "/images/items/01_6883/01_6883_4.jpg",
 				"hash": "94c2b6e7c262d28f8baeb6c94dad36c2"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6883/",
-	"brandIds": ["optionpartsset"],
-	"seriesIds": ["gundam-cca"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_6883/"
 }

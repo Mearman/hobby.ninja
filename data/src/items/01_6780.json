@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "ポケモンプラモコレクション 61 セレクトシリーズ メガレックウザ",
-		"en": "Pokémon Model Kit MEGA RAYQUAZA"
+		"en": "Pokemon Plastic Model Collection 61 Select Series Mega Rayquaza"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6762",
+			"url": "https://bandai-hobby.net/item/01_6762/",
+			"ja": "ポケモンプラモコレクション クイック!! 24 ピチュー"
+		},
+		{
+			"id": "01_5984",
+			"url": "https://bandai-hobby.net/item/01_5984/",
+			"ja": "ポケモンプラモコレクション 60 セレクトシリーズ コライドン"
+		},
+		{
+			"id": "01_5958",
+			"url": "https://bandai-hobby.net/item/01_5958/",
+			"ja": "ポケモンプラモコレクション 59 セレクトシリーズ ミライドン"
+		},
+		{
+			"id": "01_5947",
+			"url": "https://bandai-hobby.net/item/01_5947/",
+			"ja": "ポケモンプラモコレクション クイック!! 23 ジラーチ"
+		}
+	],
 	"price": {
 		"amount": 2970,
 		"currency": "JPY",
@@ -22,11 +59,11 @@
 		"ja": [
 			"道具不要で簡単組み立て！ポケモンプラモコレクション セレクトシリーズからメガレックウザが登場！​",
 			"​",
-			"■胴体の各節は回転可動となっていて、ダイナミックなポージングが可能。",
-			"■ディスプレイ時の長さは300mm超えで、シリーズ史上最大級のボリューム。",
-			"■下あごや腕も可動し、さまざまなポージングを楽しめる。",
-			"■体の色分けはパーツ分割で再現。",
-			"■雲をイメージした専用台座が付属。​"
+			"• 胴体の各節は回転可動となっていて、ダイナミックなポージングが可能。",
+			"• ディスプレイ時の長さは300mm超えで、シリーズ史上最大級のボリューム。",
+			"• 下あごや腕も可動し、さまざまなポージングを楽しめる。",
+			"• 体の色分けはパーツ分割で再現。",
+			"• 雲をイメージした専用台座が付属。​"
 		],
 		"en": [
 			"Easy assembly with no tools required! Mega Rayquaza is now available from the Pokemon Plastic Model Collection Select Series!​",
@@ -38,63 +75,61 @@
 			"• Comes with a special pedestal inspired by clouds.​"
 		]
 	},
-	"accessories": {
-		"ja": ["台座×1", "シール"],
-		"en": ["Pedestal x 1", "Seal"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6780_0.jpg",
 				"path": "/images/items/01_6780/01_6780_0.jpg",
 				"hash": "c8a02cb987077a1ea724925163560953"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6780_1.jpg",
 				"path": "/images/items/01_6780/01_6780_1.jpg",
 				"hash": "a9e97f1ab67a858916f5cbd0b6829348"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6780_2.jpg",
 				"path": "/images/items/01_6780/01_6780_2.jpg",
 				"hash": "23afeeace2e27c2bfc0f3fcda927aca7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6780_3.jpg",
 				"path": "/images/items/01_6780/01_6780_3.jpg",
 				"hash": "8a12d5e857eb3398d9790c9cd62abfc7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6780_4.jpg",
 				"path": "/images/items/01_6780/01_6780_4.jpg",
 				"hash": "ca22d963df7a9ffc26d4c00b96c03b92"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6780_5.jpg",
 				"path": "/images/items/01_6780/01_6780_5.jpg",
 				"hash": "f182e33e15aaa673c7def24af6f26bb0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6780_6.jpg",
 				"path": "/images/items/01_6780/01_6780_6.jpg",
 				"hash": "aa5b14836c8439f037182d9251a7237f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6780_7.jpg",
 				"path": "/images/items/01_6780/01_6780_7.jpg",
 				"hash": "879133a43f7e61841abfebc713619d53"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6780_8.jpg",
 				"path": "/images/items/01_6780/01_6780_8.jpg",
 				"hash": "0ca3a3258405defada855dfadc4eca9d"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6780/",
-	"brandIds": [],
-	"seriesIds": ["pokemon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_6762", "01_5984", "01_5958", "01_5947"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6780/"
 }

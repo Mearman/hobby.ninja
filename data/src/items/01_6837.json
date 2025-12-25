@@ -5,6 +5,45 @@
 		"ja": "HG 1/144 MSN-04Ⅱ ナイチンゲール [クリアカラー]",
 		"en": "HG 1/144 MSN-04Ⅱ Nightingale [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6740",
+			"url": "https://bandai-hobby.net/item/01_6740/",
+			"ja": "HG ガンダムベース限定 メッド"
+		},
+		{
+			"id": "01_5346",
+			"url": "https://bandai-hobby.net/item/01_5346/",
+			"ja": "HG 1/144 ジムIII(アクシズ・ショックイメージカラー)"
+		},
+		{
+			"id": "01_5210",
+			"url": "https://bandai-hobby.net/item/01_5210/",
+			"ja": "HG 1/144 ギラ・ドーガ(アクシズ・ショックイメージカラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 8800,
 		"currency": "JPY",
@@ -18,13 +57,12 @@
 		"day": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「HGUC 1/144 ナイチンゲール」がクリアカラーになって登場！",
-			"■モノアイは回転可動が可能。特徴的なコクピットブロックの形状も再現。",
-			"■ファンネルバインダーは付け根の各部が可動し、バインダーの展開・折りたたみが可能。ファンネルは個別で取り外せる。",
-			"■フロントスカート裏のマニピュレータ（隠し腕）の可動を再現。隠し腕にはビーム・サーベルを取り付け可能。"
+			"• モノアイは回転可動が可能。特徴的なコクピットブロックの形状も再現。",
+			"• ファンネルバインダーは付け根の各部が可動し、バインダーの展開・折りたたみが可能。ファンネルは個別で取り外せる。",
+			"• フロントスカート裏のマニピュレータ（隠し腕）の可動を再現。隠し腕にはビーム・サーベルを取り付け可能。"
 		],
 		"en": [
 			"\"HGUC 1/144 Nightingale\" now available in clear color!",
@@ -36,30 +74,19 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6837_0.jpg",
 				"path": "/images/items/01_6837/01_6837_0.jpg",
 				"hash": "3fb5886f304943995c3c3d0357903a03"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6837_1.jpg",
 				"path": "/images/items/01_6837/01_6837_1.jpg",
 				"hash": "618102dc0a9a70fa8c6a0d3c27e0f4af"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6837_2.jpg",
 				"path": "/images/items/01_6837/01_6837_2.jpg",
 				"hash": "60cca826819f678f836bb8bdf72dd0d7"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6837/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam-cca"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6740", "01_5346", "01_5210"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6837/"
 }

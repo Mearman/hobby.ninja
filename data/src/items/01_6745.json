@@ -5,6 +5,45 @@
 		"ja": "ENTRY GRADE 1/144 νガンダム (アクシズ･ショックイメージカラー)",
 		"en": "ENTRY GRADE 1/144 νGundam (Axis Shock Image Color)"
 	},
+	"brands": [
+		{
+			"id": "entry_grade_g",
+			"url": "https://bandai-hobby.net/brand/entry_grade_g/",
+			"ja": "ENTRY GRADE"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4974",
+			"url": "https://bandai-hobby.net/item/01_4974/",
+			"ja": "ENTRY GRADE 1/144 ガンダムベース限定 νガンダム [ペインティング モデル]"
+		},
+		{
+			"id": "01_4082",
+			"url": "https://bandai-hobby.net/item/01_4082/",
+			"ja": "ENTRY GRADE 1/144 νガンダム"
+		},
+		{
+			"id": "01_4191",
+			"url": "https://bandai-hobby.net/item/01_4191/",
+			"ja": "ENTRY GRADE 1/144 RX-93ff νガンダム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -18,16 +57,15 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"“次世代のファーストガンプラ”第三弾として登場した「νガンダム」が『機動戦士ガンダム 逆襲のシャア』劇中のアクシズ落下阻止時をイメージしたカラーになって登場！",
 			"「GUNDAM SIDE-F」で先行販売いたします。",
-			"■ニッパーを使わず手でパチパチと簡単に外せるタッチゲート仕様。",
-			"■可動域が広く、自由自在にポージングが決められる。"
+			"• ニッパーを使わず手でパチパチと簡単に外せるタッチゲート仕様。",
+			"• 可動域が広く、自由自在にポージングが決められる。"
 		],
 		"en": [
-			"\"νGundam \", which appeared as the third \" Next Generation First Gunpla \", is now available in a color inspired by the time when Axis was stopped from falling in \" Mobile Suit Gundam: Char's Counterattack\"!",
+			"\"νGundam\", which appeared as the third \"Next Generation First Gunpla\", is now available in a color inspired by the time when Axis was stopped from falling in \"Mobile Suit Gundam: Char's Counterattack\"!",
 			"Pre-sale at \"GUNDAM SIDE-F\".",
 			"• Touch gate design that allows you to easily remove it by hand without using nippers.",
 			"• Has a wide range of motion and can be posed freely."
@@ -36,40 +74,27 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6745_0.jpg",
 				"path": "/images/items/01_6745/01_6745_0.jpg",
 				"hash": "09f1849a881d09e9a4b2b4c8d02816f3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6745_1.jpg",
 				"path": "/images/items/01_6745/01_6745_1.jpg",
 				"hash": "a6b724786c2fd8d8d2f14c2aef216ccb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6745_2.jpg",
 				"path": "/images/items/01_6745/01_6745_2.jpg",
 				"hash": "a5a30aebf5eafc3fde035d05e90ff98e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6745_3.jpg",
 				"path": "/images/items/01_6745/01_6745_3.jpg",
 				"hash": "a4dfa886bf7f894f7d7d6beba674cd02"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6745_4.jpg",
 				"path": "/images/items/01_6745/01_6745_4.jpg",
 				"hash": "124a478032ec0c0f7b635670ae84012f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6745/",
-	"brandIds": ["entry_grade"],
-	"seriesIds": ["gundam-cca"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4974", "01_4082", "01_4191"],
-	"tag": {
-		"ja": "GUNDAM SIDE-F",
-		"en": "GUNDAM SIDE-F"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6745/"
 }

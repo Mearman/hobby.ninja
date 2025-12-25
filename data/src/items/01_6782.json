@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 シャア専用ザク(GQ)",
-		"en": "HG 1/144 CHAR’S ZAKU(GQ)"
+		"en": "HG 1/144 Char's Zaku (GQ)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gquuuuuux",
+			"url": "https://bandai-hobby.net/series/gquuuuuux/",
+			"ja": "機動戦士Gundam GQuuuuuuX"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6781",
+			"url": "https://bandai-hobby.net/item/01_6781/",
+			"ja": "HG 1/144 白いガンダム"
+		},
+		{
+			"id": "01_6772",
+			"url": "https://bandai-hobby.net/item/01_6772/",
+			"ja": "HG 1/144 ザク(GQ)"
+		},
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		}
+	],
+	"manual": {
+		"id": "4029",
+		"url": "https://manual.bandai-hobby.net/menus/detail/4029"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -18,80 +66,89 @@
 		"day": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士Gundam GQuuuuuuX』(ジークアクス)より、シャアのパーソナルカラーである赤色にペイントされたモビルスーツ「シャア専用ザク」をHGより商品化！",
-			"■新規造形のザク・バズーカが付属。",
-			"■肩部ブロックは独立して可動し、ダイナミックなアクションポーズが可能。",
-			"■モノアイは可動式。",
-			"■劇中イメージを再現するマーキングシールが付属。"
+			"• 新規造形のザク・バズーカが付属。",
+			"• 肩部ブロックは独立して可動し、ダイナミックなアクションポーズが可能。",
+			"• モノアイは可動式。",
+			"• 劇中イメージを再現するマーキングシールが付属。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam GQuuuuuuX \" (Sieg Ax), HG will commercialize the mobile suit \" Char's Zaku\" painted in Char's personal color red!",
+			"From \"Mobile Suit Gundam GQuuuuuuX\" (Sieg Ax), HG will commercialize the mobile suit \"Char's Zaku\" painted in Char's personal color red!",
 			"• Includes a newly designed Zaku Bazooka.",
 			"• The shoulder blocks can move independently, allowing for dynamic action poses.",
 			"• Monoeye is movable.",
 			"• Comes with a MarkingSeal that reproduces the image from the play."
 		]
 	},
-	"accessories": {
-		"ja": ["武装×1式", "ハンドパーツ×1", "マーキングシール×1"],
-		"en": ["Armed x 1 type", "Hand parts x 1", "MarkingSeal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "武装",
+				"en": "armed"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6782_0.jpg",
 				"path": "/images/items/01_6782/01_6782_0.jpg",
 				"hash": "bdcfd7e02e6133109664d4d503fd0ca7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6782_1.jpg",
 				"path": "/images/items/01_6782/01_6782_1.jpg",
 				"hash": "fb2d27e0fb5bccecf50764ed4718d375"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6782_2.jpg",
 				"path": "/images/items/01_6782/01_6782_2.jpg",
 				"hash": "14aff71ba5856c03709f6ff2f8611fa3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6782_3.jpg",
 				"path": "/images/items/01_6782/01_6782_3.jpg",
 				"hash": "eadf4e9d78593eabae0842ba32f26d14"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6782_4.jpg",
 				"path": "/images/items/01_6782/01_6782_4.jpg",
 				"hash": "fd9d0626c95b45491c7f499b3b1ed0d1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6782_5.jpg",
 				"path": "/images/items/01_6782/01_6782_5.jpg",
 				"hash": "9ccfe19698245b9ec226acfc5a2f5ad0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6782_6.jpg",
 				"path": "/images/items/01_6782/01_6782_6.jpg",
 				"hash": "b109999000ce16023e8438d1552b090d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6782_7.jpg",
 				"path": "/images/items/01_6782/01_6782_7.jpg",
 				"hash": "f41a16aa435e906a9ece4f5a46a1cb65"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6782_8.jpg",
 				"path": "/images/items/01_6782/01_6782_8.jpg",
 				"hash": "8b503fb824b1fb1e90aec7833dcceb13"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6782/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gquuuuuux"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6781", "01_6772", "01_5986", "01_5961"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6782/"
 }

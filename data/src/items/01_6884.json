@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "アクションベース7 & オプションボックス1 [ホワイト]",
-		"en": "ACTION BASE 7 & OPTION BOX [WHITE]"
+		"en": "Action Base 7 & Option Box 1 [White]"
 	},
+	"brands": [
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6882",
+			"url": "https://bandai-hobby.net/item/01_6882/",
+			"ja": "ウェポンディスプレイベース01"
+		},
+		{
+			"id": "01_5934",
+			"url": "https://bandai-hobby.net/item/01_5934/",
+			"ja": "アクションベース7 [クリアカラー] 機動戦士Gundam GQuuuuuuXシールセット"
+		},
+		{
+			"id": "01_5256",
+			"url": "https://bandai-hobby.net/item/01_5256/",
+			"ja": "アクションベース6 [クリアカラー] ミラーシールセット"
+		},
+		{
+			"id": "01_5258",
+			"url": "https://bandai-hobby.net/item/01_5258/",
+			"ja": "アクションベース7 [クリアカラー] ミラーシールセット"
+		}
+	],
 	"price": {
 		"amount": 1595,
 		"currency": "JPY",
@@ -12,17 +49,18 @@
 		"taxRate": 10
 	},
 	"releaseDate": {
-		"ja": "2026年01月",
+		"ja": "2026年01月31日 (土)",
 		"year": 2026,
-		"month": 1
+		"month": 1,
+		"day": 31
 	},
 	"targetAge": 8,
 	"description": {
 		"ja": [
 			"付属パーツを収納できる便利なBOX機能を備えたアクションベースが誕生！",
-			"■プラモデルを組み立てたあとの未使用パーツを収納できる。",
-			"■オプションボックスは大小2種が付属。組み替え遊び時の収納にも活躍。",
-			"■オプションボックスは重ねて連結が可能。高低差を出したディスプレイ演出もできる。"
+			"• プラモデルを組み立てたあとの未使用パーツを収納できる。",
+			"• オプションボックスは大小2種が付属。組み替え遊び時の収納にも活躍。",
+			"• オプションボックスは重ねて連結が可能。高低差を出したディスプレイ演出もできる。"
 		],
 		"en": [
 			"An action base with a convenient BOX function that can store attached parts is born!",
@@ -31,52 +69,74 @@
 			"• Option boxes can be stacked and connected. Display effects with height differences can also be created."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ベースパーツ×2",
-			"支柱パーツ×2",
-			"C型アーム×2",
-			"ジョイントパーツ×1式",
-			"オプションポックス小×1",
-			"オプションボックス大×1"
-		],
-		"en": [
-			"Base parts x 2",
-			"Strut parts x 2",
-			"C type arm x 2",
-			"Joint parts x 1 set",
-			"Option pox small x 1",
-			"Option box large x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ベースパーツ",
+				"en": "base parts"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "支柱パーツ",
+				"en": "Strut parts"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "C型アーム",
+				"en": "C type arm"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "オプションポックス小",
+				"en": "Option pox small"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "オプションボックス大",
+				"en": "option box large"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6884_0.jpg",
 				"path": "/images/items/01_6884/01_6884_0.jpg",
 				"hash": "6728483d0f1a7e2f0513d1e4297318a1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6884_1.jpg",
 				"path": "/images/items/01_6884/01_6884_1.jpg",
 				"hash": "e3c975e134f7bce26a5113b78415b2de"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6884_2.jpg",
 				"path": "/images/items/01_6884/01_6884_2.jpg",
 				"hash": "9677c11e45858cec80ae6fbffa8f95be"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6884_3.jpg",
 				"path": "/images/items/01_6884/01_6884_3.jpg",
 				"hash": "f5f5cdd1129ac0a21c98b3cd07cbb421"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6884/",
-	"brandIds": ["actionbase"],
-	"seriesIds": [],
-	"categoryIds": [],
-	"relatedItemIds": ["01_6882", "01_5934", "01_5256", "01_5258"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6884/"
 }

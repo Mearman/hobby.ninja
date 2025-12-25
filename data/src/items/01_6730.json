@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 サザビー Ver.Ka [メカニカルクリア]",
 		"en": "MG 1/100 Sazabi Ver.Ka [Mechanical Clear]"
 	},
+	"brands": [
+		{
+			"id": "mgka",
+			"url": "https://bandai-hobby.net/brand/mgka/",
+			"ja": "MG Ver.Ka［マスターグレード バージョンカトキ］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4275",
+			"url": "https://bandai-hobby.net/item/01_4275/",
+			"ja": "MG 1/100 GUNDAM SIDE-F限定 RX-93 νガンダム Ver.Ka (サイコフレーム発動イメージカラー)"
+		},
+		{
+			"id": "01_4818",
+			"url": "https://bandai-hobby.net/item/01_4818/",
+			"ja": "MG 1/100 FA-93-ν2HWS Hi-νガンダム H.W.S. Ver.Ka メカニカルクリア"
+		},
+		{
+			"id": "01_15",
+			"url": "https://bandai-hobby.net/item/01_15/",
+			"ja": "MG 1/100 MSN-04 サザビーVer.ka"
+		},
+		{
+			"id": "01_5913",
+			"url": "https://bandai-hobby.net/item/01_5913/",
+			"ja": "MG 1/100 RX-93 νガンダム 〔Ver.Ka〕 チタニウムフィニッシュ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 9900,
 		"currency": "JPY",
@@ -18,40 +62,30 @@
 		"day": 24
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
-		"ja": ["『機動戦士ガンダム　逆襲のシャア』に登場する「MG 1/100 サザビー Ver.Ka」がメカニカルクリアになって登場！"],
+		"ja": [
+			"『機動戦士ガンダム　逆襲のシャア』に登場する「MG 1/100 サザビー Ver.Ka」がメカニカルクリアになって登場！"
+		],
 		"en": [
-			"\"MG 1/100 Sazabi Ver.Ka \" that appears in \" Mobile Suit Gundam: Char's Counterattack\" is now available as a mechanical clear version!"
+			"\"MG 1/100 Sazabi Ver.Ka\" that appears in \"Mobile Suit Gundam: Char's Counterattack\" is now available as a mechanical clear version!"
 		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6730_0.jpg",
 				"path": "/images/items/01_6730/01_6730_0.jpg",
 				"hash": "37e8b20f03ac4fc40b821fb8a1fc4393"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6730_1.jpg",
 				"path": "/images/items/01_6730/01_6730_1.jpg",
 				"hash": "f57865fb32de49b1741215898938d820"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6730_2.jpg",
 				"path": "/images/items/01_6730/01_6730_2.jpg",
 				"hash": "f23e6012d45b7e888e0d1a67593bda81"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6730/",
-	"brandIds": ["mgka"],
-	"seriesIds": ["gundam-cca"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4275", "01_4818", "01_15", "01_5913"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6730/"
 }

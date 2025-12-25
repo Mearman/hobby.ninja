@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "プラノサウルス JURASSIC WORLD モササウルス",
-		"en": "PLANNOSAURUS JURASSIC WORLD Mosasaurus"
+		"en": "Planosaurus JURASSIC WORLD Mosasaurus"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "plannosaurus",
+			"url": "https://bandai-hobby.net/series/plannosaurus/",
+			"ja": "プラノサウルス"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6722",
+			"url": "https://bandai-hobby.net/item/01_6722/",
+			"ja": "プラノサウルス JURASSIC WORLD T-レックス"
+		},
+		{
+			"id": "01_5501",
+			"url": "https://bandai-hobby.net/item/01_5501/",
+			"ja": "プラノサウルス テリジノサウルス"
+		},
+		{
+			"id": "01_5390",
+			"url": "https://bandai-hobby.net/item/01_5390/",
+			"ja": "プラノサウルス 陸海空恐竜セット"
+		},
+		{
+			"id": "01_5389",
+			"url": "https://bandai-hobby.net/item/01_5389/",
+			"ja": "プラノサウルス ブラキオサウルス"
+		}
+	],
 	"price": {
 		"amount": 2970,
 		"currency": "JPY",
@@ -21,12 +58,12 @@
 	"description": {
 		"ja": [
 			"自分の手で恐竜を“知りつくす”ブランド『プラノサウルス』より、映画『ジュラシック・ワールド／復活の大地』の「モササウルス」が登場！",
-			"■「骨格ビルド」で恐竜の内部構造から知ることができる。",
-			"■「恐竜ビルド」で骨格の上から外皮パーツを取り付けるプラモデルならではの仕様で恐竜の姿を復元。",
-			"■ニッパー等の道具や接着剤が必要ないから簡単に組み立てられる。",
-			"■外皮は全て新規造形で、劇中ならではの形状や質感を再現。",
-			"■専用の海台座には、『ジュラシック・ワールド』のロゴパーツが付属。",
-			"■楽しく飾れる背景イラスト付き！"
+			"• 「骨格ビルド」で恐竜の内部構造から知ることができる。",
+			"• 「恐竜ビルド」で骨格の上から外皮パーツを取り付けるプラモデルならではの仕様で恐竜の姿を復元。",
+			"• ニッパー等の道具や接着剤が必要ないから簡単に組み立てられる。",
+			"• 外皮は全て新規造形で、劇中ならではの形状や質感を再現。",
+			"• 専用の海台座には、『ジュラシック・ワールド』のロゴパーツが付属。",
+			"• 楽しく飾れる背景イラスト付き！"
 		],
 		"en": [
 			"From Planosaurus, a brand that lets you get to know dinosaurs with your own hands, comes the Mosasaurus from the movie Jurassic World!",
@@ -38,83 +75,91 @@
 			"• Includes background illustrations for fun decoration!"
 		]
 	},
-	"accessories": {
-		"ja": ["シール×1式", "台座×1", "背景台紙×1", "▼『ジュラシックワールド／復活の大地』アイテム 特設サイトはコチラ！"],
-		"en": [
-			"Seal×1 type",
-			"Pedestal x 1",
-			"Background mount x 1",
-			"▼Click here for the special site for “Jurassic World/Resurrection Earth” items!"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "背景台紙",
+				"en": "background mount"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "▼『ジュラシックワールド／復活の大地』アイテム 特設サイトはコチラ！",
+				"en": "▼Click here for the special site for “Jurassic World/Resurrection Earth” items!"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6723_0.jpg",
 				"path": "/images/items/01_6723/01_6723_0.jpg",
 				"hash": "b959193a2f12ae52df077bf400b86d1d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6723_1.jpg",
 				"path": "/images/items/01_6723/01_6723_1.jpg",
 				"hash": "d7043926d3882857f9497397bfddb6e2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6723_10.jpg",
-				"path": "/images/items/01_6723/01_6723_10.jpg",
-				"hash": "2d8a3a483fe39fd874ce0059fae17e67"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_6723_11.jpg",
-				"path": "/images/items/01_6723/01_6723_11.jpg",
-				"hash": "66c10b3230055ba694e804cab590eb17"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_6723_2.jpg",
 				"path": "/images/items/01_6723/01_6723_2.jpg",
 				"hash": "34a360671d9fc84d1d3d3a76e03c3a32"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6723_3.jpg",
 				"path": "/images/items/01_6723/01_6723_3.jpg",
 				"hash": "2feb74f1ff98e54442d9abc636a14f02"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6723_4.jpg",
 				"path": "/images/items/01_6723/01_6723_4.jpg",
 				"hash": "893f0d3811de1b99c9d03212ff8a9096"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6723_5.jpg",
 				"path": "/images/items/01_6723/01_6723_5.jpg",
 				"hash": "18cf74f1888ec8d2526893d4695fcdd6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6723_6.jpg",
 				"path": "/images/items/01_6723/01_6723_6.jpg",
 				"hash": "b566fccc06e68d8675e9023c044e7743"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6723_7.jpg",
 				"path": "/images/items/01_6723/01_6723_7.jpg",
 				"hash": "6a9c03abbe92904118b4684c9ce40545"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6723_8.jpg",
 				"path": "/images/items/01_6723/01_6723_8.jpg",
 				"hash": "7de49c96e1dbcce50e5f6471e47dcde8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6723_9.jpg",
 				"path": "/images/items/01_6723/01_6723_9.jpg",
 				"hash": "ab0428d1c2415f2f7e66451987621586"
+			},
+			{
+				"path": "/images/items/01_6723/01_6723_10.jpg",
+				"hash": "2d8a3a483fe39fd874ce0059fae17e67"
+			},
+			{
+				"path": "/images/items/01_6723/01_6723_11.jpg",
+				"hash": "66c10b3230055ba694e804cab590eb17"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6723/",
-	"brandIds": [],
-	"seriesIds": ["plannosaurus"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_6722", "01_5501", "01_5390", "01_5389"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6723/"
 }

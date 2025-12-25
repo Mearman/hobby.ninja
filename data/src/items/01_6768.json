@@ -3,7 +3,53 @@
 	"type": "item",
 	"name": {
 		"ja": "30MF ドラゴニアナイト",
-		"en": "30MF DRAGONIAKNIGHT"
+		"en": "30MF Dragonian Knight"
+	},
+	"brands": [
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		},
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5978",
+			"url": "https://bandai-hobby.net/item/01_5978/",
+			"ja": "30MF ローザンウィザード"
+		},
+		{
+			"id": "01_5979",
+			"url": "https://bandai-hobby.net/item/01_5979/",
+			"ja": "30MF クラスアップアーマー (ローザンソーサラー)"
+		},
+		{
+			"id": "01_5980",
+			"url": "https://bandai-hobby.net/item/01_5980/",
+			"ja": "30MF クラスアップアーマー (ローザンエンチャンター)"
+		},
+		{
+			"id": "01_5981",
+			"url": "https://bandai-hobby.net/item/01_5981/",
+			"ja": "30MF アイテムショップ4(クエストオプション)"
+		}
+	],
+	"manual": {
+		"id": "3998",
+		"url": "https://manual.bandai-hobby.net/menus/detail/3998"
 	},
 	"price": {
 		"amount": 2750,
@@ -21,21 +67,21 @@
 	"description": {
 		"ja": [
 			"自分だけのファンタジージョブを創り出すことが出来る『30 MINUTES FANTASY』より、「ドラゴニアナイト」が登場！",
-			"■ベースとなる“シルエット”［素体］の他にアーマー・武装パーツがひとつになったスターターセット。",
-			"■ベースとなる“シルエット”［素体］は竜人族がモチーフ。",
-			"■“シルエット”［素体］は人間のような柔軟性のあるアクションが可能であらゆるジョブに適応。",
-			"■頭部・首に可動軸を設けることで顎を引く、顔を突き出すなどの演出が可能。",
-			"■下顎が可動し口の開閉が可能。",
-			"■肩関節は、こだわりの構造により大胆なポージングでも身体のラインが崩れない。",
-			"■胸・胴・腰の可動軸と腰ジョイントの根元のスライド機構が連動し、自然なポージングを実現。",
-			"■尻尾の節は、ジョイントによる連結で柔軟に可動。",
-			"■“シルエット”［素体］と組み合わせ「ドラゴニアナイト」へ“ジョブチェンジ”するためのアーマー・武装パーツが付属。",
-			"■肩や腰アーマーの取り付けを背中のジョイントを経由する機構にすることで、フレキシブルな可動を実現。",
-			"■武装には2種類の「大剣」が付属。",
-			"■“エレメントコア”の属性は「雷」。"
+			"• ベースとなる“シルエット”［素体］の他にアーマー・武装パーツがひとつになったスターターセット。",
+			"• ベースとなる“シルエット”［素体］は竜人族がモチーフ。",
+			"• “シルエット”［素体］は人間のような柔軟性のあるアクションが可能であらゆるジョブに適応。",
+			"• 頭部・首に可動軸を設けることで顎を引く、顔を突き出すなどの演出が可能。",
+			"• 下顎が可動し口の開閉が可能。",
+			"• 肩関節は、こだわりの構造により大胆なポージングでも身体のラインが崩れない。",
+			"• 胸・胴・腰の可動軸と腰ジョイントの根元のスライド機構が連動し、自然なポージングを実現。",
+			"• 尻尾の節は、ジョイントによる連結で柔軟に可動。",
+			"• “シルエット”［素体］と組み合わせ「ドラゴニアナイト」へ“ジョブチェンジ”するためのアーマー・武装パーツが付属。",
+			"• 肩や腰アーマーの取り付けを背中のジョイントを経由する機構にすることで、フレキシブルな可動を実現。",
+			"• 武装には2種類の「大剣」が付属。",
+			"• “エレメントコア”の属性は「雷」。"
 		],
 		"en": [
-			"\"Dragoneer Knight \" is now available from \" 30 MINUTES FANTASY\", where you can create your own fantasy job!",
+			"\"Dragoneer Knight\" is now available from \"30 MINUTES FANTASY\", where you can create your own fantasy job!",
 			"• A starter set that includes armor and armed parts in addition to the base \"silhouette\" [elementary body].",
 			"• The base “silhouette” [body] is a dragon race motif.",
 			"• The “silhouette” [elementary body] is capable of flexible human-like actions and is adaptable to any job.",
@@ -50,63 +96,92 @@
 			"• The attribute of “element core” is “lightning”."
 		]
 	},
-	"accessories": {
-		"ja": ["大剣×2種", "アーマーパーツ×1式", "ハンドパーツ×1式", "ジョイントパーツ×1式"],
-		"en": ["Great sword x 2 types", "Armor parts x 1 set", "Hand parts x 1 set", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "大剣",
+				"en": "great sword"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "アーマーパーツ",
+				"en": "armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6768_0.jpg",
 				"path": "/images/items/01_6768/01_6768_0.jpg",
 				"hash": "222ede3ac87e7f16aeed10d2f2466d38"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6768_1.jpg",
 				"path": "/images/items/01_6768/01_6768_1.jpg",
 				"hash": "ab235df37ebda05e33d42aeef3d3cff2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6768_2.jpg",
 				"path": "/images/items/01_6768/01_6768_2.jpg",
 				"hash": "05085c85b9851c7e51730670dd77f3bb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6768_3.jpg",
 				"path": "/images/items/01_6768/01_6768_3.jpg",
 				"hash": "ccac10fef23f595ae5ba989ff15a17f4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6768_4.jpg",
 				"path": "/images/items/01_6768/01_6768_4.jpg",
 				"hash": "b612f5011d33a6d67d1044645c7d5c75"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6768_5.jpg",
 				"path": "/images/items/01_6768/01_6768_5.jpg",
 				"hash": "d981e13d9acd9c3044f6fceea2eaacc5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6768_6.jpg",
 				"path": "/images/items/01_6768/01_6768_6.jpg",
 				"hash": "78db01007c02f447889dbdb68f41b89d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6768_7.jpg",
 				"path": "/images/items/01_6768/01_6768_7.jpg",
 				"hash": "d2144062bb5cd26da088de593556713f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6768_8.jpg",
 				"path": "/images/items/01_6768/01_6768_8.jpg",
 				"hash": "004fc11c9f77b60ba0099270d0135653"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6768/",
-	"brandIds": ["30mf"],
-	"seriesIds": [],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5978", "01_5979", "01_5980", "01_5981"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6768/"
 }

@@ -5,6 +5,55 @@
 		"ja": "HG 1/144 ドラグナー2 リフター2装備タイプ",
 		"en": "HG 1/144 Dragoner 2 Lifter 2 equipped type"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		},
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonar",
+			"url": "https://bandai-hobby.net/series/dragonar/",
+			"ja": "機甲戦記ドラグナー"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6841",
+			"url": "https://bandai-hobby.net/item/01_6841/",
+			"ja": "1/144 機甲戦記ドラグナーセット4"
+		},
+		{
+			"id": "item-1000212946",
+			"url": "https://p-bandai.jp/item/item-1000212946/",
+			"ja": "1/144 機甲戦記ドラグナーセット３"
+		},
+		{
+			"id": "item-1000212721",
+			"url": "https://p-bandai.jp/item/item-1000212721/",
+			"ja": "ＨＧ 1/144 ドラグナー3 リフター3装備タイプ"
+		},
+		{
+			"id": "01_3902",
+			"url": "https://bandai-hobby.net/item/01_3902/",
+			"ja": "ＨＧ 1/144 ドラグナー1 リフター１装備タイプ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -17,7 +66,6 @@
 		"month": 11
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－リフター２装備！中距離支援型メタルアーマードラグナー２が出撃！－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -35,7 +83,7 @@
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－ Equipped with 2 lifters! Medium-range support type metal armor Dragonar 2 is out! －－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"The Dragoner 2 lifter 2 equipment type from “Dragoner” is now available in the HG series with a new model! Dragonar 2's aircraft shape and weapons are reproduced in the latest format. Lifter 2, which can be installed on the back, is equipped with a movable gimmick and can reproduce images from the play such as \"parked aircraft\". The rich variety of weapons has been thoroughly reproduced with new modeling.",
 			"● Dragonar 2 is now three-dimensional with new modeling! Metal Armor reproduced with modern technology Dragonar 2, which will be commercialized for the first time in HG, has been made into a three-dimensional model, following the setting image and the image in the work, paying close attention to detail and pursuing the ideal. Equipped with a wide range of motion and various gimmicks, it is possible to perform actions like those in the movie. The characteristic design is reproduced by dividing it into parts. The coloring of the legs is reproduced by molding color by dividing the parts. The distinctive design of the backpack is reproduced with plastic Seal. Reproduce the internal frame! Dragonar 2 can be assembled by equipping the armor. The 280mm rail cannon and 75mm twin automatic cannon are flexibly movable.",
-			"●Reproduces the \"Lifter 2 \" equipment using the latest HG standards Equipped with a flight unit exclusively for Dragoner 2. \" Lifter 2\" is made into three-dimensional. The main wings are movable and the parked state can be reproduced.",
+			"●Reproduces the \"Lifter 2\" equipment using the latest HG standards Equipped with a flight unit exclusively for Dragoner 2. \"Lifter 2\" is made into three-dimensional. The main wings are movable and the parked state can be reproduced.",
 			"● Comes with a variety of weapons! The assault knife for mortar combat is stored in the calf and can be attached and detached.",
 			"● Delivered in full color packaging",
 			"Attached weapons: Lifter 2/88mm hand rail gun LPS7 type/280mm rail cannon x 2/75mm twin automatic cannon x 2/double 25mm machine gun x 2/Assault knife for mortar combat x 2",
@@ -44,81 +92,84 @@
 			"*The finished product in the photo is painted. Also, a prototype that is still under development. The actual product may differ. *Due to the manufacturing process, air bubbles may appear in the clear parts. *Product materials may change depending on the production period of the sold product. Thank you for your understanding. *There may be variations in plated parts due to the painting process. Thank you for your understanding. *Depending on sales conditions, the quantity that can be purchased may change in the future."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"リフター２",
-			"８８ｍｍ ハンドレールガンＬＰＳ７型",
-			"２８０ｍｍレールキャノン×２",
-			"７５ｍｍ２連装自動砲×２",
-			"２連２５ｍｍ機関砲×２",
-			"迫兵戦用アサルトナイフ×２"
-		],
-		"en": [
-			"lifter 2",
-			"88mm hand rail gun LPS7 type",
-			"280mm rail cannon x 2",
-			"75mm twin automatic gun x 2",
-			"Dual 25mm machine gun x 2",
-			"Assault knife for mortar combat x2"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "リフター２",
+				"en": "lifter 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "８８ｍｍ ハンドレールガンＬＰＳ７型",
+				"en": "88mm hand rail gun LPS7 type"
+			}
+		},
+		{
+			"name": {
+				"ja": "２８０ｍｍレールキャノン×２",
+				"en": "280mm rail cannon x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "７５ｍｍ２連装自動砲×２",
+				"en": "75mm twin automatic gun x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "２連２５ｍｍ機関砲×２",
+				"en": "Dual 25mm machine gun x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "迫兵戦用アサルトナイフ×２",
+				"en": "Assault knife for mortar combat x2"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6840_0.jpg",
 				"path": "/images/items/01_6840/01_6840_0.jpg",
 				"hash": "50c464bdd9029219dc8b42bf7715d829"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6840_1.jpg",
 				"path": "/images/items/01_6840/01_6840_1.jpg",
 				"hash": "324d0c9dedf7a09e27b4046737b9488f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6840_2.jpg",
 				"path": "/images/items/01_6840/01_6840_2.jpg",
 				"hash": "8566908e06482ab7014c747fcde9e981"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6840_3.jpg",
 				"path": "/images/items/01_6840/01_6840_3.jpg",
 				"hash": "039ce073d1d6838bf7f3f5d63b6f7827"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6840_4.jpg",
 				"path": "/images/items/01_6840/01_6840_4.jpg",
 				"hash": "ac94f6b4007b9baf689593aa90ebd16b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6840_5.jpg",
 				"path": "/images/items/01_6840/01_6840_5.jpg",
 				"hash": "8aec6b4ab126c7cf048b38e0dcb3c7dd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6840_6.jpg",
 				"path": "/images/items/01_6840/01_6840_6.jpg",
 				"hash": "19842d8fec7094ad648c4105b2afc991"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6840_7.jpg",
 				"path": "/images/items/01_6840/01_6840_7.jpg",
 				"hash": "d67c836d2a4247356a6e105ded4c01c7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6840_8.jpg",
 				"path": "/images/items/01_6840/01_6840_8.jpg",
 				"hash": "17790e5f12f8b75559549be37f42f577"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6840/",
-	"brandIds": ["pb_charapla", "hg"],
-	"seriesIds": ["dragonar"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_6841", "item-1000212946", "item-1000212721", "01_3902"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6840/"
 }

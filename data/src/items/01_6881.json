@@ -3,8 +3,30 @@
 	"type": "item",
 	"name": {
 		"ja": "MGSD デスティニーガンダム",
-		"en": "MGSD DESTINY GUNDAM"
+		"en": "MGSD Destiny Gundam"
 	},
+	"brands": [
+		{
+			"id": "mgsd",
+			"url": "https://bandai-hobby.net/brand/mgsd/",
+			"ja": "MASTER GRADE SD"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -20,78 +42,117 @@
 	"description": {
 		"ja": [
 			"SDハイエンドブランド「MGSD」第五弾。“光の翼”など特徴的な武装が付属した圧倒的ボリュームで「デスティニーガンダム」を商品化！",
-			"■「アロンダイトビームソード」及び「高エネルギー長射程ビーム砲」は、MGSDオリジナルギミックとして刃先の延長や銃身の展開が可能。",
-			"■翼は複数の可動軸を駆使し大きく展開。さらにエフェクトパーツを取り付けることで“光の翼”を表現可能。",
-			"■「高エネルギービームライフル」「シールド」などの武装に加え、ビームシールド用のエフェクトパーツが付属。",
-			"■肩パーツのロックを外すことで「ビームブーメラン」のグリップを脱着可能。ビームブーメラン用のエフェクトパーツは、長短の2種類が付属。",
-			"■掌の「パルマフィオキーナ」は、銃口部分を「リアルメタリックグロスインジェクション」のシルバーパーツで再現。手首の可動を活用することで劇中イメージを表現できる。",
-			"■MGSD独自のフレーム構造により、SDサイズで内部フレームを再現。内部フレームを核になめらかな可動表現を実現。"
+			"• 「アロンダイトビームソード」及び「高エネルギー長射程ビーム砲」は、MGSDオリジナルギミックとして刃先の延長や銃身の展開が可能。",
+			"• 翼は複数の可動軸を駆使し大きく展開。さらにエフェクトパーツを取り付けることで“光の翼”を表現可能。",
+			"• 「高エネルギービームライフル」「シールド」などの武装に加え、ビームシールド用のエフェクトパーツが付属。",
+			"• 肩パーツのロックを外すことで「ビームブーメラン」のグリップを脱着可能。ビームブーメラン用のエフェクトパーツは、長短の2種類が付属。",
+			"• 掌の「パルマフィオキーナ」は、銃口部分を「リアルメタリックグロスインジェクション」のシルバーパーツで再現。手首の可動を活用することで劇中イメージを表現できる。",
+			"• MGSD独自のフレーム構造により、SDサイズで内部フレームを再現。内部フレームを核になめらかな可動表現を実現。"
 		],
 		"en": [
-			"The fifth edition of the SD high-end brand \"MGSD \". \" Destiny Gundam \" is commercialized with an overwhelming volume that comes with distinctive weapons such as \" Wings of Light\"!",
-			"• \"Aron Dite Beam Sword \" and \" High Energy Long Range Beam Cannon\" are MGSD original gimmicks that can extend the blade edge and expand the barrel.",
+			"The fifth edition of the SD high-end brand \"MGSD\". \"Destiny Gundam\" is commercialized with an overwhelming volume that comes with distinctive weapons such as \"Wings of Light\"!",
+			"• \"Aron Dite Beam Sword\" and \"High Energy Long Range Beam Cannon\" are MGSD original gimmicks that can extend the blade edge and expand the barrel.",
 			"• The wings can be expanded using multiple movable axes. Furthermore, by attaching effect parts, it is possible to express \"wings of light\".",
-			"• In addition to weapons such as the \"High Energy Beam Rifle \" and \" Seal\", effect parts for the beam Seal are included.",
+			"• In addition to weapons such as the \"High Energy Beam Rifle\" and \"Seal\", effect parts for the beam Seal are included.",
 			"• The grip of the \"beam boomerang\" can be removed by unlocking the shoulder parts. Two types of effect parts for the beam boomerang are included: long and short.",
-			"• The \"Palma Fiochina \" on the palm has the muzzle part reproduced with \" Real Metallic Gloss Injection\" silver parts. Images from the play can be expressed by using the movement of the wrists.",
+			"• The \"Palma Fiochina\" on the palm has the muzzle part reproduced with \"Real Metallic Gloss Injection\" silver parts. Images from the play can be expressed by using the movement of the wrists.",
 			"• MGSD's unique frame structure reproduces the internal frame in SD size. Realizes smooth movement using the internal frame as the core."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"高エネルギービームライフル×1",
-			"シールド×1",
-			"アロンダイトビームソード×1",
-			"高エネルギー長射程ビーム砲×1",
-			"ビームシールド×1",
-			"エフェクトパーツ×1式",
-			"光の翼×1式",
-			"マーキングシール×1"
-		],
-		"en": [
-			"High energy beam rifle x1",
-			"Seal × 1",
-			"Arondite beam sword x1",
-			"High energy long range beam cannon x 1",
-			"Beam Seal × 1",
-			"Effect parts x 1",
-			"Wings of light x 1 set",
-			"MarkingSeal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "高エネルギービームライフル",
+				"en": "high energy beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アロンダイトビームソード",
+				"en": "Arondite Beam Sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "高エネルギー長射程ビーム砲",
+				"en": "High energy long range beam cannon"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームシールド",
+				"en": "Beam Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "エフェクトパーツ",
+				"en": "effect parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "光の翼",
+				"en": "wings of light"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6881_0.jpg",
 				"path": "/images/items/01_6881/01_6881_0.jpg",
 				"hash": "b03fafe44d0f44be86c43d9c48ec54e9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6881_1.jpg",
 				"path": "/images/items/01_6881/01_6881_1.jpg",
 				"hash": "7632436900dfc2a831794d326ea15809"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6881_2.jpg",
 				"path": "/images/items/01_6881/01_6881_2.jpg",
 				"hash": "4be946180d884645545e9182ff732981"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6881_3.jpg",
 				"path": "/images/items/01_6881/01_6881_3.jpg",
 				"hash": "b5dd9012a89e0a8e9faf3a5628b290b7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6881_4.jpg",
 				"path": "/images/items/01_6881/01_6881_4.jpg",
 				"hash": "a377aa1c4ccde1f4521b1882ebdb8d22"
+			},
+			{
+				"path": "/images/items/01_6881/30j8TSd7iPE68S3U.jpg",
+				"hash": "3e83f025794d4ac55e1abd57b4dadadb"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6881/",
-	"brandIds": ["mgsd"],
-	"seriesIds": ["seed-d"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_6881/"
 }

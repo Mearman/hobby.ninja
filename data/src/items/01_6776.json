@@ -3,7 +3,53 @@
 	"type": "item",
 	"name": {
 		"ja": "30MF クラスアップアーマー(ドラゴニアロード)",
-		"en": "30MF CLASS UP ARMOR (DRAGONIA LORD)"
+		"en": "30MF Class Up Armor (Dragoneer Road)"
+	},
+	"brands": [
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		},
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6768",
+			"url": "https://bandai-hobby.net/item/01_6768/",
+			"ja": "30MF ドラゴニアナイト"
+		},
+		{
+			"id": "01_6769",
+			"url": "https://bandai-hobby.net/item/01_6769/",
+			"ja": "30MF カスタマイズストラクチャー1"
+		},
+		{
+			"id": "01_5978",
+			"url": "https://bandai-hobby.net/item/01_5978/",
+			"ja": "30MF ローザンウィザード"
+		},
+		{
+			"id": "01_5979",
+			"url": "https://bandai-hobby.net/item/01_5979/",
+			"ja": "30MF クラスアップアーマー (ローザンソーサラー)"
+		}
+	],
+	"manual": {
+		"id": "4063",
+		"url": "https://manual.bandai-hobby.net/menus/detail/4063"
 	},
 	"price": {
 		"amount": 1100,
@@ -21,91 +67,95 @@
 	"description": {
 		"ja": [
 			"自分だけのファンタジージョブを創り出すことが出来る『30 MINUTES FANTASY』より、「クラスアップアーマー(ドラゴニアロード)」が登場！",
-			"■“アーマークロス”［装甲換装］することで上位ジョブへ“クラスアップ”が可能なアーマーや武装のセット。",
-			"■別売りの「30MF ドラゴニアナイト」と組み合わせることで「ドラゴニアロード」に“クラスアップ”が可能。",
-			"■“エレメントコア”の属性は「雷」。",
-			"■カスタマイズ用の3種類のフェイスパーツが付属。"
+			"• “アーマークロス”［装甲換装］することで上位ジョブへ“クラスアップ”が可能なアーマーや武装のセット。",
+			"• 別売りの「30MF ドラゴニアナイト」と組み合わせることで「ドラゴニアロード」に“クラスアップ”が可能。",
+			"• “エレメントコア”の属性は「雷」。",
+			"• カスタマイズ用の3種類のフェイスパーツが付属。"
 		],
 		"en": [
-			"From \"30 MINUTES FANTASY \", where you can create your own fantasy job, \" Class Up Armor (Dragoneer Road)\" is now available!",
+			"From \"30 MINUTES FANTASY\", where you can create your own fantasy job, \"Class Up Armor (Dragoneer Road)\" is now available!",
 			"• “Armor Cross” [Armor Replacement] A set of armor and weapons that can be “classed up” to a higher-level job.",
-			"• By combining with the separately sold \"30MF Dragoneer Knight \", it is possible to \" class up \" to \" Dragoneer Road\".",
+			"• By combining with the separately sold \"30MF Dragoneer Knight\", it is possible to \"class up\" to \"Dragoneer Road\".",
 			"• The attribute of “element core” is “lightning”.",
 			"• Comes with 3 types of face parts for customization."
 		]
 	},
-	"accessories": {
-		"ja": ["アーマーパーツ×1式", "武装パーツ×1式"],
-		"en": ["Armor parts x 1 set", "Armed parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "アーマーパーツ",
+				"en": "armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "武装パーツ",
+				"en": "armed parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6776_0.jpg",
 				"path": "/images/items/01_6776/01_6776_0.jpg",
 				"hash": "2cd49a409d47e2208eb391189349b3c3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6776_1.jpg",
 				"path": "/images/items/01_6776/01_6776_1.jpg",
 				"hash": "712c371f48e6a1c0a83d77d79f475a5b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6776_10.jpg",
-				"path": "/images/items/01_6776/01_6776_10.jpg",
-				"hash": "a481fa2240ae8b24c574f2cebe6626e5"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_6776_11.jpg",
-				"path": "/images/items/01_6776/01_6776_11.jpg",
-				"hash": "07a96b948f7024f422031039b1c638a8"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_6776_2.jpg",
 				"path": "/images/items/01_6776/01_6776_2.jpg",
 				"hash": "8305b90b4c23d6027a92adabcc2b64e0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6776_3.jpg",
 				"path": "/images/items/01_6776/01_6776_3.jpg",
 				"hash": "6a610c1d5b0adfc1abc14823d9b0f17a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6776_4.jpg",
 				"path": "/images/items/01_6776/01_6776_4.jpg",
 				"hash": "794e9d9ab40069ca9c441496bf7675cf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6776_5.jpg",
 				"path": "/images/items/01_6776/01_6776_5.jpg",
 				"hash": "630e60c55c088695d6dd0dd45b52b3d2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6776_6.jpg",
 				"path": "/images/items/01_6776/01_6776_6.jpg",
 				"hash": "e640335c195f7c301b61b3e28d1ac7b5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6776_7.jpg",
 				"path": "/images/items/01_6776/01_6776_7.jpg",
 				"hash": "234292d516826a4558fd09754bb99516"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6776_8.jpg",
 				"path": "/images/items/01_6776/01_6776_8.jpg",
 				"hash": "e3c96b7ac0361b4e1a3691930e25ee24"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6776_9.jpg",
 				"path": "/images/items/01_6776/01_6776_9.jpg",
 				"hash": "d94ba885d8130cb01057c8165be01a7d"
+			},
+			{
+				"path": "/images/items/01_6776/01_6776_10.jpg",
+				"hash": "a481fa2240ae8b24c574f2cebe6626e5"
+			},
+			{
+				"path": "/images/items/01_6776/01_6776_11.jpg",
+				"hash": "07a96b948f7024f422031039b1c638a8"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6776/",
-	"brandIds": ["30mf"],
-	"seriesIds": [],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_6768", "01_6769", "01_5978", "01_5979"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6776/"
 }

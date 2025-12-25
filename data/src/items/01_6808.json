@@ -5,6 +5,33 @@
 		"ja": "王蟲とナウシカ",
 		"en": "Omushi and Nausicaa"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "nausicaa",
+			"url": "https://bandai-hobby.net/series/nausicaa/",
+			"ja": "風の谷のナウシカ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6805",
+			"url": "https://bandai-hobby.net/item/01_6805/",
+			"ja": "カイに乗るナウシカ"
+		},
+		{
+			"id": "01_6807",
+			"url": "https://bandai-hobby.net/item/01_6807/",
+			"ja": "メーヴェとナウシカ"
+		}
+	],
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -22,27 +49,22 @@
 			"「風の谷のナウシカ」から1/20スケール「王蟲とナウシカ」のプラモデルが登場です。スナップフィット(接着剤一部使用)、イロプラ(成形色分け)で復刻しています。ナウシカの眼は水転写デカールで再現できます。"
 		],
 		"en": [
-			"From \"Nausicaa of the Valley of the Wind \" comes a 1/20 Scale \" Omushi to Nausicaa\" plastic model. Reprinted with snap fit (partially uses adhesive) and Iropla (color-coded molding). Nausicaa's eyes can be reproduced with water transfer decals."
+			"From \"Nausicaa of the Valley of the Wind\" comes a 1/20 Scale \"Omushi to Nausicaa\" plastic model. Reprinted with snap fit (partially uses adhesive) and Iropla (color-coded molding). Nausicaa's eyes can be reproduced with water transfer decals."
 		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6808_1.jpg",
-				"path": "/images/items/01_6808/01_6808_1.jpg",
-				"hash": "4314a02910d0ebc594726ffc30a6d358"
-			},
-			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000072484_1.jpg",
 				"path": "/images/items/01_6808/1000072484_1.jpg",
 				"hash": "2bc5b1bdf6740bd11513361a1e7af03e"
+			},
+			{
+				"path": "/images/items/01_6808/01_6808_1.jpg",
+				"hash": "4314a02910d0ebc594726ffc30a6d358"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6808/",
-	"brandIds": [],
-	"seriesIds": ["nausicaa"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_6805", "01_6807"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6808/"
 }
