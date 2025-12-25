@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "プラノサウルス ティラノサウルス ペインティングVer.",
-		"en": "PLANNOSAURUS Tyrannosaurus Painting Ver."
+		"en": "Planosaurus Tyrannosaurus Painting Ver."
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "plannosaurus",
+			"url": "https://bandai-hobby.net/series/plannosaurus/",
+			"ja": "プラノサウルス"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5501",
+			"url": "https://bandai-hobby.net/item/01_5501/",
+			"ja": "プラノサウルス テリジノサウルス"
+		},
+		{
+			"id": "01_5390",
+			"url": "https://bandai-hobby.net/item/01_5390/",
+			"ja": "プラノサウルス 陸海空恐竜セット"
+		},
+		{
+			"id": "01_5389",
+			"url": "https://bandai-hobby.net/item/01_5389/",
+			"ja": "プラノサウルス ブラキオサウルス"
+		},
+		{
+			"id": "01_5248",
+			"url": "https://bandai-hobby.net/item/01_5248/",
+			"ja": "プラノサウルス パラサウロロフス"
+		}
+	],
 	"price": {
 		"amount": 1430,
 		"currency": "JPY",
@@ -21,14 +58,14 @@
 	"description": {
 		"ja": [
 			"自分の手で恐竜を“知りつくす”ブランド『プラノサウルス』から、最強のハンター「ティラノサウルス」が紙パウダーを配合した新素材を採用してペインティングVer.で登場！",
-			"■「骨格ビルド」で恐竜の内部構造から知ることができる。",
-			"■「恐竜ビルド」で骨格の上から外皮パーツを取り付けるプラモデルならではの仕様で恐竜の姿を復元。",
-			"■ニッパー等の道具や接着剤が必要ないから簡単に組み立てられる。",
-			"■パーツの選択で最新の学説に基づいた羽毛が生えた状態を再現可能。",
-			"■原材料のプラスチックの一部に紙パウダーを配合した新素材を採用！きみ色に楽しく塗ろう！",
-			"■アクリルガッシュなど、おうちにあるもので気軽に塗り体験！",
-			"■大きな身体を支える足の構造や特徴的な歯や爪の形状など細かなディテールも再現。",
-			"■口の開閉や前肢、後肢、首や尾など各所が可動し、好みのポージングでディスプレイが可能。",
+			"• 「骨格ビルド」で恐竜の内部構造から知ることができる。",
+			"• 「恐竜ビルド」で骨格の上から外皮パーツを取り付けるプラモデルならではの仕様で恐竜の姿を復元。",
+			"• ニッパー等の道具や接着剤が必要ないから簡単に組み立てられる。",
+			"• パーツの選択で最新の学説に基づいた羽毛が生えた状態を再現可能。",
+			"• 原材料のプラスチックの一部に紙パウダーを配合した新素材を採用！きみ色に楽しく塗ろう！",
+			"• アクリルガッシュなど、おうちにあるもので気軽に塗り体験！",
+			"• 大きな身体を支える足の構造や特徴的な歯や爪の形状など細かなディテールも再現。",
+			"• 口の開閉や前肢、後肢、首や尾など各所が可動し、好みのポージングでディスプレイが可能。",
 			"※本商品に使用できる身近な道具は、アクリル系絵の具が推奨です。",
 			"※アクリル系の絵の具はあまり水で薄めずに塗ってください。薄めすぎると絵の具が弾いてしまい塗れません。",
 			"※塗装したパーツは、触ったり擦ったりすると色が移る場合があります。"
@@ -48,31 +85,32 @@
 			"*Color may transfer if painted parts are touched or rubbed."
 		]
 	},
-	"accessories": {
-		"ja": ["外皮パーツ(羽毛)×1式", "台座×1"],
-		"en": ["Outer skin parts (feathers) x 1 set", "Pedestal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "外皮パーツ(羽毛)",
+				"en": "Outer skin parts (feathers)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209864_1.jpg",
 				"path": "/images/items/01_5249/1000209864_1.jpg",
 				"hash": "087c034f81408f726ecf9b3e01af171b"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209864_10.jpg",
-				"path": "/images/items/01_5249/1000209864_10.jpg",
-				"hash": "9ee4e6a23ff02e2baa20cda8b3a0ab48"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209864_11.jpg",
-				"path": "/images/items/01_5249/1000209864_11.jpg",
-				"hash": "c73f43ac1bda2498596e7881e5c2d47a"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209864_12.jpg",
-				"path": "/images/items/01_5249/1000209864_12.jpg",
-				"hash": "5f74821394b8425e78758b2d4f6463b7"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209864_2.jpg",
@@ -113,13 +151,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209864_9.jpg",
 				"path": "/images/items/01_5249/1000209864_9.jpg",
 				"hash": "a39707393aad1432ce8659ee734277b6"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209864_10.jpg",
+				"path": "/images/items/01_5249/1000209864_10.jpg",
+				"hash": "9ee4e6a23ff02e2baa20cda8b3a0ab48"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209864_11.jpg",
+				"path": "/images/items/01_5249/1000209864_11.jpg",
+				"hash": "c73f43ac1bda2498596e7881e5c2d47a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209864_12.jpg",
+				"path": "/images/items/01_5249/1000209864_12.jpg",
+				"hash": "5f74821394b8425e78758b2d4f6463b7"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5249/",
-	"brandIds": [],
-	"seriesIds": ["plannosaurus"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5501", "01_5390", "01_5389", "01_5248"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5249/"
 }

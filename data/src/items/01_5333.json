@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 リ・ガズィ (逆襲のシャアVer.)",
-		"en": "MG 1/100 Re-GZ (Char’s Counterattack Ver.)"
+		"en": "MG 1/100 Re-Gazi (Char's Counterattack Ver.)"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_5969",
+			"url": "https://bandai-hobby.net/item/01_5969/",
+			"ja": "ガンダムデカールNo.141 機動戦士ガンダムSEED FREEDOM汎用①"
+		},
+		{
+			"id": "01_5970",
+			"url": "https://bandai-hobby.net/item/01_5970/",
+			"ja": "ガンダムデカールNo.142 機動戦士ガンダムSEED FREEDOM汎用②"
+		},
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 7040,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「MG 1/100 リ・ガズィ（ユニコーンVer.）」が新たに『機動戦士ガンダム 逆襲のシャア』登場時のカラーリングで登場！",
@@ -28,8 +71,8 @@
 			"• プラモデルオリジナルの水転写デカールが付属。"
 		],
 		"en": [
-			"\"MG 1/100 Re-Gazi (Unicorn Ver.)\" is now available in the coloring used in \" Mobile Suit Gundam: Char's Counterattack\"!",
-			"• The characteristic coloring when ``Mobile Suit Gundam: Char's Counterattack'' appeared is reproduced with molded colors.",
+			"\"MG 1/100 Re-Gazi (Unicorn Ver.)\" is now available in the coloring used in \"Mobile Suit Gundam: Char's Counterattack\"!",
+			"• The characteristic coloring when \"Mobile Suit Gundam: Char's Counterattack\" appeared is reproduced with molded colors.",
 			"• Reproduce various parts of the aircraft's exterior with new modeling. New parts are used for the internal frame and each joint.",
 			"• MA morphology can be reproduced by BWS. A display base is also included.",
 			"• Includes plastic model original water slide decal."
@@ -75,13 +118,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5333/",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam-cca"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5968", "01_5969", "01_5970", "01_5986"],
-	"tag": {
-		"ja": "GUNDAM SIDE-F",
-		"en": "GUNDAM SIDE-F"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5333/"
 }

@@ -2,9 +2,53 @@
 	"id": "01_5257",
 	"type": "item",
 	"name": {
-		"ja": "MG 1/100 Z ガンダム Ver.2.0",
-		"en": "MG 1/100 Z Gundam Ver.2.0"
+		"ja": "MG 1/100 Zガンダム Ver.2.0",
+		"en": "MG 1/100 ZGundam Ver.2.0"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000145352",
+			"url": "https://p-bandai.jp/item/item-1000145352/",
+			"ja": "ＭＧ 1/100 RMS-179 ジムII（エゥーゴカラーＶｅｒ．）"
+		},
+		{
+			"id": "item-1000131596",
+			"url": "https://p-bandai.jp/item/item-1000131596",
+			"ja": "ＭＧ 1/100 ジム・キャノン ［レッド・ヘッド］（ジャブロー防衛隊仕様）"
+		},
+		{
+			"id": "01_4270",
+			"url": "https://bandai-hobby.net/item/01_4270/",
+			"ja": "MG 1/100 百式 Ver.2.0 [メカニカルクリア]"
+		},
+		{
+			"id": "item-1000112091",
+			"url": "http://p-bandai.jp/item/item-1000112091/",
+			"ja": "ＭＧ 1/100 RMS-179 ジムＩＩ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -18,39 +62,38 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"劇場版「機動戦士Ｚガンダム II－恋人たち－」で話題のＺガンダムのマスターグレードプラモデルが最新のver.2.0になって登場です。従来キットの変形ギミックを進化させ、モビルスーツ、ウェーブライダー両形態でのプロポーションを両立。両形態でディスプレイ可能なカタパルト型ディスプレイスタンドが付属します。"
+			"劇場版「機動戦士ＺガンダムII－恋人たち－」で話題のＺガンダムのマスターグレードプラモデルが最新のver.2.0になって登場です。従来キットの変形ギミックを進化させ、モビルスーツ、ウェーブライダー両形態でのプロポーションを両立。両形態でディスプレイ可能なカタパルト型ディスプレイスタンドが付属します。"
 		],
 		"en": [
-			"Z Gundam's master grade plastic model, which is popular in the movie \"Mobile Suit Z Gundam II - Lovers\", is now available in the latest version 2.0. The conventional kit's transformation gimmick has been evolved to achieve proportions for both mobile suit and wave rider forms. Comes with a catapult-type display stand that can be displayed in both forms."
+			"ZGundam's master grade plastic model, which is popular in the movie \"Mobile Suit ZGundam II - Lovers\", is now available in the latest version 2.0. The conventional kit's transformation gimmick has been evolved to achieve proportions for both mobile suit and wave rider forms. Comes with a catapult-type display stand that can be displayed in both forms."
 		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_610.jpg",
+				"src": "https://bandai-hobby.net/images/153_610_s_c9axyyim7vff4ghhc06iuw26idvg.jpg",
 				"path": "/images/items/01_5257/153_610.jpg",
 				"hash": "9af33bafddcfba9269e933f21da77e18"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_610.jpg",
+				"src": "https://bandai-hobby.net/images/155_610_s_g1kne6gvra7sws41v428lqrnd2gw.jpg",
 				"path": "/images/items/01_5257/155_610.jpg",
 				"hash": "14f5214aa293d2d377c11b20ef0ef13e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_610.jpg",
+				"src": "https://bandai-hobby.net/images/156_610_s_1elwi7o1v9q6ghuw53x5jtxhki01.jpg",
 				"path": "/images/items/01_5257/156_610.jpg",
 				"hash": "4c8c197f4fa4a5408a993384702d09f1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_610.jpg",
+				"src": "https://bandai-hobby.net/images/157_610_s_6k4wmsne4sgmfzfiwydqxhxhazel.jpg",
 				"path": "/images/items/01_5257/157_610.jpg",
 				"hash": "9e06a191fae4fded354168b8810e40aa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_610.jpg",
+				"src": "https://bandai-hobby.net/images/158_610_s_5ll18ycl26ej2alkxt4w4havvbg8.jpg",
 				"path": "/images/items/01_5257/158_610.jpg",
 				"hash": "a0922221f4c4762149c083ea9ca012a9"
 			}
@@ -58,10 +101,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5257/",
-	"brandIds": ["mg"],
-	"seriesIds": ["z-gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000145352", "item-1000131596", "01_4270", "item-1000112091"],
 	"manual": {
 		"id": "538",
 		"url": "https://manual.bandai-hobby.net/menus/detail/538/"

@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MS オプションボディパーツ アームパーツ&レッグパーツ[ブラウン]",
-		"en": "30MS OPTION BODY PARTS ARM PARTS & LEG PARTS [BROWN]"
+		"en": "30MS Optional Body Parts Arm Parts & Leg Parts [Brown]"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5975",
+			"url": "https://bandai-hobby.net/item/01_5975/",
+			"ja": "30MS 和泉愛依"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5954",
+			"url": "https://bandai-hobby.net/item/01_5954/",
+			"ja": "30MS オプションヘアスタイルパーツVol.12 全4種 ミディアムヘア2[イエロー4]"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -36,74 +78,106 @@
 			"• Decorative parts inspired by fishnet stockings are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"腕・脚パーツ(ブラウン)×1式",
-			"ハンドパーツ(ブラウン)×1式",
-			"フェイスパーツ(カラーA、B、C)×1式",
-			"装飾パーツ×1式"
-		],
-		"en": [
-			"Arm/leg parts (brown) x 1 set",
-			"Hand parts (brown) x 1 set",
-			"Face parts (color A, B, C) x 1 set",
-			"Decorative parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "腕・脚パーツ(ブラウン)",
+				"en": "Arm/leg parts (brown)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ(ブラウン)",
+				"en": "Hand parts (brown)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "フェイスパーツ(カラーA、B、C)",
+				"en": "Face parts (color A, B, C)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "装飾パーツ",
+				"en": "decorative parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6121.jpg",
+				"src": "https://bandai-hobby.net/images/153_6121_s_igk2bkqoulbn4ugzegjyfyr042o1.jpg",
 				"path": "/images/items/01_5270/153_6121.jpg",
 				"hash": "2daec8006eeb57f513b20aed459347e7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6121.jpg",
+				"src": "https://bandai-hobby.net/images/155_6121_s_fdab1b6if1ocy9k0tnc7fmy2umgg.jpg",
 				"path": "/images/items/01_5270/155_6121.jpg",
 				"hash": "c093d8b9f92f1df6fc6496b2fe200d5d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6121.jpg",
+				"src": "https://bandai-hobby.net/images/156_6121_s_p61aeygtkpfuj5sm6nxip29dsq6s.jpg",
 				"path": "/images/items/01_5270/156_6121.jpg",
 				"hash": "b8114e30b6f77da4a3203fe38207aee1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6121.jpg",
+				"src": "https://bandai-hobby.net/images/157_6121_s_j0jtx1ojdc48259vdvp6t0u1q8cx.jpg",
 				"path": "/images/items/01_5270/157_6121.jpg",
 				"hash": "51a28ed368f70405b4c6f886a5a97424"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6121.jpg",
+				"src": "https://bandai-hobby.net/images/158_6121_s_c55f8c92webmy82a8y1ggqel44p3.jpg",
 				"path": "/images/items/01_5270/158_6121.jpg",
 				"hash": "f6a4c4ec2991c9a6bd3f151256662ce0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6121.jpg",
+				"src": "https://bandai-hobby.net/images/159_6121_s_y9z194ate0r4eb5i7du2a9wuw2yv.jpg",
 				"path": "/images/items/01_5270/159_6121.jpg",
 				"hash": "92122d98dd34f5740adf6409d05a926a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6121.jpg",
+				"src": "https://bandai-hobby.net/images/189_6121_s_dpd3a1k5ixuettheww467euentfk.jpg",
 				"path": "/images/items/01_5270/189_6121.jpg",
 				"hash": "1340b69b6917b839eee2ae005b909c9c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6121.jpg",
+				"src": "https://bandai-hobby.net/images/190_6121_s_evouyph4uamvbfotpmp64szrnh35.jpg",
 				"path": "/images/items/01_5270/190_6121.jpg",
 				"hash": "67bc7163e639f34ae1886c761a3533d4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6121.jpg",
+				"src": "https://bandai-hobby.net/images/191_6121_s_qj9cn5dskazci1ptq407gjxe174u.jpg",
 				"path": "/images/items/01_5270/191_6121.jpg",
 				"hash": "667ba74496c8706ad850111b9a4d2db6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_6121.jpg",
+				"src": "https://bandai-hobby.net/images/192_6121_s_ewnqhwrszzg8mv9avw1dk9cu2zl9.jpg",
 				"path": "/images/items/01_5270/192_6121.jpg",
 				"hash": "6eba703fbc34880767eaabd7a40d99f0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_6121.jpg",
+				"src": "https://bandai-hobby.net/images/193_6121_s_qavqwngp01ravdg8d10zfc8qdcr2.jpg",
 				"path": "/images/items/01_5270/193_6121.jpg",
 				"hash": "8d44271e1eb749f2e329603d510b5cb3"
 			}
@@ -111,10 +185,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5270/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3590",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3590/"

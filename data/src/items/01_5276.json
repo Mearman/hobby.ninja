@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard 仮面ライダークウガ アルティメットフォーム",
-		"en": "Figure-rise Standard MASKED RIDER KUUGA ULTIMATE FORM"
+		"en": "Figure-rise Standard Kamen Rider Kuuga Ultimate Form"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "rider",
+			"url": "https://bandai-hobby.net/series/rider/",
+			"ja": "仮面ライダーシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
 	"price": {
 		"amount": 5390,
 		"currency": "JPY",
@@ -30,7 +73,7 @@
 			"• アクションベース6が付属し、幅広いポージングをサポート。"
 		],
 		"en": [
-			"The strongest form \"Ultimate Form \" from the first Heisei Kamen Rider work \" Kamen Rider Kuuga\" is now available as Figure-rise Standard!",
+			"The strongest form \"Ultimate Form\" from the first Heisei Kamen Rider work \"Kamen Rider Kuuga\" is now available as Figure-rise Standard!",
 			"Reproduce the ultimate \"Kuuga\" with carefully selected details!",
 			"• The gold line uses gold-plated parts and is reproduced by dividing the parts. Gray lines are expressed by showing differences in surface roughness.",
 			"• Reproduce the lint characters unique to Ultimate Form with mold.",
@@ -40,22 +83,51 @@
 			"• Action base 6 is included to support a wide range of poses."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"手首用エフェクトパーツ×1",
-			"クリアブラック複眼パーツ×1",
-			"ハンドパーツ×1式",
-			"アクションベース6×1",
-			"シール×1式"
-		],
-		"en": [
-			"Wrist effect parts x 1",
-			"Clear black compound eye parts x 1",
-			"Hand parts x 1 set",
-			"action base 6×1",
-			"Seal×1 type"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "手首用エフェクトパーツ",
+				"en": "Effect parts for wrist"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "クリアブラック複眼パーツ",
+				"en": "Clear black compound eye parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "アクションベース6",
+				"en": "action base 6"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -101,9 +173,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5276/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["rider"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5276/"
 }

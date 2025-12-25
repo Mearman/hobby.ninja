@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 bEXM-21 ヴェルデノヴァ[ネイビー]",
-		"en": "30MM 1/144 bEXM-21 VERDENOVA [NAVY]"
+		"en": "30MM 1/144 bEXM-21 Verdenova [Navy]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1848,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 24
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「30 MINUTES MISSIONS」より、バイロン軍初となる飛行タイプの新型機「bEXM-21 ヴェルデノヴァ［ネイビー］」が1/144スケールで登場！",
@@ -29,7 +71,7 @@
 			"• カスタマイズ時に便利なマルチジョイントが付属。"
 		],
 		"en": [
-			"From \"30 MINUTES MISSIONS \", the Byron army's first new flying type aircraft \" bEXM-21 Verdenova [Navy]\" is now available in 1/144 Scale!",
+			"From \"30 MINUTES MISSIONS\", the Byron army's first new flying type aircraft \"bEXM-21 Verdenova [Navy]\" is now available in 1/144 Scale!",
 			"• Two interchangeable head parts can be produced.",
 			"• The rifle can be attached to backpacks and other 3mm joints using the included joint parts.",
 			"• The backpack and chest part can be separated and used as a flight unit.",
@@ -37,31 +79,61 @@
 			"• Comes with multi-joints that are convenient for customization."
 		]
 	},
-	"accessories": {
-		"ja": ["ライフル×2", "シールド×2", "差し替え用頭部パーツ×1式", "ハンドパーツ×1式", "マルチジョイント×1式"],
-		"en": ["Rifle x 2", "Seal × 2", "Replacement head parts x 1 set", "Hand parts x 1 set", "Multi-joint x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ライフル",
+				"en": "rifle"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "差し替え用頭部パーツ",
+				"en": "Replacement head parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "マルチジョイント",
+				"en": "multi joint"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209868_1.jpg",
 				"path": "/images/items/01_5253/1000209868_1.jpg",
 				"hash": "8e140735c4e6e155679ef24a0f3da620"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209868_10.jpg",
-				"path": "/images/items/01_5253/1000209868_10.jpg",
-				"hash": "f6f788c87031cb0287a8c11545bb8baf"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209868_11.jpg",
-				"path": "/images/items/01_5253/1000209868_11.jpg",
-				"hash": "f7c55df9651f0b998cab2a13c8402421"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209868_12.jpg",
-				"path": "/images/items/01_5253/1000209868_12.jpg",
-				"hash": "0863290e2f58614d174ead8032054b10"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209868_2.jpg",
@@ -102,15 +174,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209868_9.jpg",
 				"path": "/images/items/01_5253/1000209868_9.jpg",
 				"hash": "e0f34706c00e747b3977f4a42892c0f2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209868_10.jpg",
+				"path": "/images/items/01_5253/1000209868_10.jpg",
+				"hash": "f6f788c87031cb0287a8c11545bb8baf"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209868_11.jpg",
+				"path": "/images/items/01_5253/1000209868_11.jpg",
+				"hash": "f7c55df9651f0b998cab2a13c8402421"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209868_12.jpg",
+				"path": "/images/items/01_5253/1000209868_12.jpg",
+				"hash": "0863290e2f58614d174ead8032054b10"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5253/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3784",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3784/"

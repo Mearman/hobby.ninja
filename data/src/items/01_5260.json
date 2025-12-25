@@ -3,7 +3,49 @@
 	"type": "item",
 	"name": {
 		"ja": "オプションパーツセット ガンプラ 12 (大型レールガン)",
-		"en": "OPTION PARTS SET GUNPLA 12 (LARGE RAILGUN)"
+		"en": "Optional parts set Gunpla 12 (large railgun)"
+	},
+	"brands": [
+		{
+			"id": "optionpartsset",
+			"url": "https://bandai-hobby.net/brand/optionpartsset/",
+			"ja": "オプションパーツセット"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5937",
+			"url": "https://bandai-hobby.net/item/01_5937/",
+			"ja": "オプションパーツセット ガンプラ 17 (バインダーガン)"
+		},
+		{
+			"id": "01_5545",
+			"url": "https://bandai-hobby.net/item/01_5545/",
+			"ja": "オプションパーツセット ガンプラ 16 (メテオホッパー)"
+		},
+		{
+			"id": "01_5453",
+			"url": "https://bandai-hobby.net/item/01_5453/",
+			"ja": "オプションパーツセット ガンプラ 15 (キャバリアーアイフリッド)"
+		}
+	],
+	"manual": {
+		"id": "1718",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1718"
 	},
 	"price": {
 		"amount": 660,
@@ -32,26 +74,65 @@
 			"• Comes with a flat hand part with facial expressions for Gundam Vidar."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ショートバレルキャノン×2",
-			"アサルトナイフ×2",
-			"長距離レールガン×1",
-			"大型レールガン×1",
-			"ガンダムヴィダール用表情付き平手×1式",
-			"ジョイントパーツ×1式",
-			"シール×1"
-		],
-		"en": [
-			"Short barrel cannon x2",
-			"Assault knife x 2",
-			"Long range railgun x1",
-			"Large rail gun x 1",
-			"Open hand with expression for Gundam Vidar x 1 set",
-			"Joint parts x 1 set",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ショートバレルキャノン",
+				"en": "short barrel cannon"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "アサルトナイフ",
+				"en": "assault knife"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "長距離レールガン",
+				"en": "long range railgun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "大型レールガン",
+				"en": "large railgun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ガンダムヴィダール用表情付き平手",
+				"en": "Open hand with expression for Gundam Vidar"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -92,13 +173,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5260/",
-	"brandIds": ["optionpartsset"],
-	"seriesIds": ["tekketsu"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5937", "01_5545", "01_5453"],
-	"manual": {
-		"id": "1718",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1718/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5260/"
 }

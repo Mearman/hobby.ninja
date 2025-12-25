@@ -5,6 +5,60 @@
 		"ja": "ＨＧ 1/144 ガンダムキャリバーン パーメットスコア・ファイブ",
 		"en": "HG 1/144 Gundam Caliburn Parmet Score Five"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216474",
+			"url": "https://p-bandai.jp/item/item-1000216474/",
+			"ja": "ＨＧ 1/144 デスルター"
+		},
+		{
+			"id": "item-1000211616",
+			"url": "https://p-bandai.jp/item/item-1000211616/",
+			"ja": "ＨＧ 1/144 ベギルベウトルシュ(ケナンジ小隊所属機/リドリック小隊所属機)"
+		},
+		{
+			"id": "01_5422",
+			"url": "https://bandai-hobby.net/item/01_5422/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムキャリバーン [クリアカラー]"
+		},
+		{
+			"id": "item-1000203130",
+			"url": "https://p-bandai.jp/item/item-1000203130/",
+			"ja": "FULL MECHANICS 1/100 ガンダムエアリアル パーメットスコア・シックス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -62,7 +115,7 @@
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"I'm here to stop you two!",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
-			"\"Gundam Caliburn \" from \" Mobile Suit Gundam Mercury Witch\" is now available in Permet Score 5 coloring!",
+			"\"Gundam Caliburn\" from \"Mobile Suit Gundam Mercury Witch\" is now available in Permet Score 5 coloring!",
 			"The glowing red chest shell unit from the movie is reproduced with in-mold molding!",
 			"A 1/144 Scale item that is easy to make.",
 			"● Reproduces Parmet Score Five's Gundam Caliburn that appeared during the final battle in Quiet Zero.",
@@ -98,59 +151,75 @@
 			"・Product specifications are as of 20243. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["バリアブルロッドライフル", "ビームサーベル", "シールド一式"],
-		"en": ["variable rod rifle", "beam saber", "Seal set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "バリアブルロッドライフル",
+				"en": "variable rod rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "beam saber"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド一式",
+				"en": "Seal set"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6186.jpg",
+				"src": "https://bandai-hobby.net/images/153_6186_s_acar7gk1f7v701vo4etnn8b2lunu.jpg",
 				"path": "/images/items/01_5334/153_6186.jpg",
 				"hash": "1912ea433bbdd1b134433912afdb7227"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6186.jpg",
+				"src": "https://bandai-hobby.net/images/155_6186_s_0u0ao4fs4j9shtibkvuv03norzoe.jpg",
 				"path": "/images/items/01_5334/155_6186.jpg",
 				"hash": "b74735c0b03c652e45f9d77d3f6adf57"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6186.jpg",
+				"src": "https://bandai-hobby.net/images/156_6186_s_511yu98jv0550w11sdry8biihle9.jpg",
 				"path": "/images/items/01_5334/156_6186.jpg",
 				"hash": "15f6cc8280eaf8bedf52528b16b367d2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6186.jpg",
+				"src": "https://bandai-hobby.net/images/157_6186_s_1fsxvf6pmaccxh9yyd2k7neu0ce5.jpg",
 				"path": "/images/items/01_5334/157_6186.jpg",
 				"hash": "5f8bf09730a6bd8899c23ebc5dbee350"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6186.jpg",
+				"src": "https://bandai-hobby.net/images/158_6186_s_h389qlpo75pn3n9mf1j3y2hvh4vj.jpg",
 				"path": "/images/items/01_5334/158_6186.jpg",
 				"hash": "1034216e6a07579bec27a1d9a602e9f9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6186.jpg",
+				"src": "https://bandai-hobby.net/images/159_6186_s_ispt7mlg4jabqkuv2zxe26m2a8x3.jpg",
 				"path": "/images/items/01_5334/159_6186.jpg",
 				"hash": "df15a11772137618a916e01de9c49584"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6186.jpg",
+				"src": "https://bandai-hobby.net/images/189_6186_s_orj1shpjoza77w6do8ee9smxp9m0.jpg",
 				"path": "/images/items/01_5334/189_6186.jpg",
 				"hash": "d1422de1365fac7c8f630a7392924438"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6186.jpg",
+				"src": "https://bandai-hobby.net/images/190_6186_s_6nu0vpaus85j1zue05vdmazbymqs.jpg",
 				"path": "/images/items/01_5334/190_6186.jpg",
 				"hash": "be9b19e029c496e51831c33d281d210f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6186.jpg",
+				"src": "https://bandai-hobby.net/images/191_6186_s_4fpryya64xtqyt9475ptrpgt32tg.jpg",
 				"path": "/images/items/01_5334/191_6186.jpg",
 				"hash": "cf192f18ecbfb2f960a7b1b9813090a5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_6186.jpg",
+				"src": "https://bandai-hobby.net/images/192_6186_s_mbxjoaagy747a1ik207onnldw5xy.jpg",
 				"path": "/images/items/01_5334/192_6186.jpg",
 				"hash": "cbbbb67872cdfc071e8a2b80806e2d64"
 			}
@@ -158,14 +227,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5334/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203130"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2519",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2519/"

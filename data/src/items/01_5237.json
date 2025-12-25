@@ -3,7 +3,39 @@
 	"type": "item",
 	"name": {
 		"ja": "オプションパーツセット ガンプラ 05 (ユニバースブースター プラフスキーパワーゲート)",
-		"en": "OPTION PARTS SET GUNPLA 05 (UNIVERSE BOOSTER PLAVSKY POWER GATE)"
+		"en": "Option parts set Gunpla 05 (Universe Booster Plavsky Power Gate)"
+	},
+	"brands": [
+		{
+			"id": "optionpartsset",
+			"url": "https://bandai-hobby.net/brand/optionpartsset/",
+			"ja": "オプションパーツセット"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6765",
+			"url": "https://bandai-hobby.net/item/01_6765/",
+			"ja": "オプションパーツセット ガンプラ 18 (ビルドブースターセット)"
+		}
+	],
+	"manual": {
+		"id": "1655",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1655"
 	},
 	"price": {
 		"amount": 880,
@@ -32,24 +64,62 @@
 			"• Includes parts that can be used when assembling the separately sold \"HGBF 1/144 Build Strike Gundam Full Package\"."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ユニバースブースター×1",
-			"エフェクトパーツ×1式",
-			"ジョイントパーツ×1式",
-			"HGBF 1/144 ビルドストライクガンダム フルパッケージ用パーツ×1式",
-			"台座×1",
-			"シール×1"
-		],
-		"en": [
-			"Universe booster x1",
-			"Effect parts x 1",
-			"Joint parts x 1 set",
-			"HGBF 1/144 Build Strike Gundam full package parts x 1 set",
-			"Pedestal x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ユニバースブースター",
+				"en": "universe booster"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "エフェクトパーツ",
+				"en": "effect parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "HGBF 1/144 ビルドストライクガンダム フルパッケージ用パーツ",
+				"en": "HGBF 1/144 Build Strike Gundam Full Package Parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -100,13 +170,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5237/",
-	"brandIds": ["optionpartsset"],
-	"seriesIds": ["buildfighters"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6765"],
-	"manual": {
-		"id": "1655",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1655/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5237/"
 }

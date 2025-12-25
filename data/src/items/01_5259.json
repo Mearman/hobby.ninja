@@ -3,7 +3,33 @@
 	"type": "item",
 	"name": {
 		"ja": "オプションパーツセット ガンプラ 11 (バルバトス用滑空砲)",
-		"en": "OPTION PARTS SET GUNPLA 11 (SMOOTHBORE GUN FOR BARBATOS)"
+		"en": "Optional parts set Gunpla 11 (slide gun for Barbatos)"
+	},
+	"brands": [
+		{
+			"id": "optionpartsset",
+			"url": "https://bandai-hobby.net/brand/optionpartsset/",
+			"ja": "オプションパーツセット"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"manual": {
+		"id": "1717",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1717"
 	},
 	"price": {
 		"amount": 660,
@@ -32,24 +58,50 @@
 			"• Mobile worker (CGS/ground use) is included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"バルバトス用滑空砲×1",
-			"ライフル(ショートバレル)×1",
-			"シュヴァルベ・グレイズ用ランス×1",
-			"グレイズ用シールド×1",
-			"モビルワーカー(CGS/地上用)×1",
-			"シール×1"
-		],
-		"en": [
-			"Barbatos smooth cannon x 1",
-			"Rifle (short barrel) x 1",
-			"Lance for Schwalbe Glaze x 1",
-			"Seal for Glaze x 1",
-			"Mobile worker (CGS/ground use) x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "バルバトス用滑空砲",
+				"en": "Barbatos smooth cannon"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ライフル(ショートバレル)",
+				"en": "Rifle (short barrel)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シュヴァルベ・グレイズ用ランス",
+				"en": "Lance for Schwalbe Glaze"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "グレイズ用シールド",
+				"en": "Seal for Glaze"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "モビルワーカー(CGS/地上用)",
+				"en": "Mobile worker (CGS/ground use)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -90,13 +142,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5259/",
-	"brandIds": ["optionpartsset"],
-	"seriesIds": ["tekketsu"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": [],
-	"manual": {
-		"id": "1717",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1717/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5259/"
 }

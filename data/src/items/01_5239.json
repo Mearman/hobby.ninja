@@ -3,7 +3,49 @@
 	"type": "item",
 	"name": {
 		"ja": "オプションパーツセット ガンプラ 07 (パワードアームズパワーダー)",
-		"en": "OPTION PARTS SET GUNPLA 07 (POWERED ARMS POWEREDER)"
+		"en": "Option parts set Gunpla 07 (Powered Arms Powerder)"
+	},
+	"brands": [
+		{
+			"id": "optionpartsset",
+			"url": "https://bandai-hobby.net/brand/optionpartsset/",
+			"ja": "オプションパーツセット"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6765",
+			"url": "https://bandai-hobby.net/item/01_6765/",
+			"ja": "オプションパーツセット ガンプラ 18 (ビルドブースターセット)"
+		},
+		{
+			"id": "01_5237",
+			"url": "https://bandai-hobby.net/item/01_5237/",
+			"ja": "オプションパーツセット ガンプラ 05 (ユニバースブースター プラフスキーパワーゲート)"
+		},
+		{
+			"id": "01_5238",
+			"url": "https://bandai-hobby.net/item/01_5238/",
+			"ja": "オプションパーツセット ガンプラ 06 (ヴァリュアブルポッド)"
+		}
+	],
+	"manual": {
+		"id": "1657",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1657"
 	},
 	"price": {
 		"amount": 660,
@@ -29,31 +71,66 @@
 		"en": [
 			"An extremely versatile Weapon set that allows you to customize your aircraft to original specifications with a variety of weapons is now available as an optional parts set!",
 			"• Can be rearranged from three types of weapons: large rifle, Gatling gun, and missile.",
-			"• Each part of the arm can be moved, and various weapons can be attached.",
+			"• Each part of the arm can be moved, and various weapons can be attached to it.",
 			"• Can also be attached to some HG series by using the included joint parts.",
 			"• The opening and closing of the Gatling gun is reproduced by replacement."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"大型ライフル×2",
-			"ミサイル×2",
-			"ガトリングガン(2種)×2",
-			"ビームマシンガン×1",
-			"アーム(2種)×2",
-			"バックパック×1",
-			"ジョイントパーツ×1式"
-		],
-		"en": [
-			"Large rifle x2",
-			"Missile x2",
-			"Gatling gun (2 types) x 2",
-			"Beam machine gun x 1",
-			"Arm (2 types) x 2",
-			"Backpack x 1",
-			"Joint parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "大型ライフル",
+				"en": "large rifle"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ミサイル",
+				"en": "missile"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ガトリングガン(2種)",
+				"en": "Gatling gun (2 types)"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビームマシンガン",
+				"en": "beam machine gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アーム(2種)",
+				"en": "Arm (2 types)"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "バックパック",
+				"en": "backpack"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -104,13 +181,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5239/",
-	"brandIds": ["optionpartsset"],
-	"seriesIds": ["buildfighters"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6765", "01_5237", "01_5238"],
-	"manual": {
-		"id": "1657",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1657/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5239/"
 }

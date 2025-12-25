@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "1/1000 地球防衛軍アスカ級補給母艦/強襲揚陸艦 DX",
-		"en": "1/1000 EFCF Asuka Class Fast Combat Support Tender/Amphibious Assault Ship DX"
+		"en": "1/1000 Earth Defense Force Asuka class supply carrier/amphibious assault ship DX"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "yamato",
+			"url": "https://bandai-hobby.net/series/yamato/",
+			"ja": "宇宙戦艦ヤマトシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5971",
+			"url": "https://bandai-hobby.net/item/01_5971/",
+			"ja": "1/1000 地球防衛軍 ヒュウガ級 戦闘航宙母艦 DCV-01ヒュウガ"
+		},
+		{
+			"id": "01_5498",
+			"url": "https://bandai-hobby.net/item/01_5498/",
+			"ja": "メカコレクションDX 1式空間戦闘攻撃機 コスモタイガーII(単座型/銃座型) [2機セット]"
+		},
+		{
+			"id": "01_5500",
+			"url": "https://bandai-hobby.net/item/01_5500/",
+			"ja": "メカコレクションDX 試製空間戦闘攻撃機 コスモパイソン [2機セット]"
+		},
+		{
+			"id": "01_5388",
+			"url": "https://bandai-hobby.net/item/01_5388/",
+			"ja": "1/1000 宇宙戦艦ヤマト3199（第3次改装型：参戦章叙勲式典記念塗装）"
+		}
+	],
+	"scale": "1/1000",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"scale": "1/1000",
 	"description": {
 		"ja": [
 			"『ヤマトよ永遠に REBEL3199』より選択式で7隻のアスカ級を再現可能なDXセットが1/1000シリーズで登場！",
@@ -29,37 +66,52 @@
 		],
 		"en": [
 			"From \"Yamato Forever REBEL3199\", a DX set that can selectively reproduce seven Asuka class ships is now available in the 1/1000 series!",
-			"• Includes color parts that can be selectively reproduced as supply carrier type or amphibious assault ship type.",
+			"• Comes with color parts that can be selected to reproduce supply carrier type or amphibious assault ship type.",
 			"• Accurate details and water transfer decals recreate the lines of the hull deck.",
 			"• The water slide decal also includes the ship name and type number. Seven Asuka class ships can be reproduced with a selection formula.",
 			"• Includes display pedestal."
 		]
 	},
-	"accessories": {
-		"ja": ["選択式カラーパーツ×3種", "ディスプレイベース×1", "水転写式デカール×1", "シール×1"],
-		"en": ["Selectable color parts x 3 types", "Display base x 1", "Water transfer decal x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "選択式カラーパーツ",
+				"en": "Selectable color parts"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース",
+				"en": "display base"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209860_1.jpg",
 				"path": "/images/items/01_5243/1000209860_1.jpg",
 				"hash": "d9b1c15c5124f675c1f6c27342c72122"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209860_10.jpg",
-				"path": "/images/items/01_5243/1000209860_10.jpg",
-				"hash": "e4e1b7a6608487fdd382b309d2357e98"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209860_11.jpg",
-				"path": "/images/items/01_5243/1000209860_11.jpg",
-				"hash": "6b0ad583abd673ca35d0290a96268725"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209860_12.jpg",
-				"path": "/images/items/01_5243/1000209860_12.jpg",
-				"hash": "82e7177f888c7f37ae58917d74f5cd5e"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209860_2.jpg",
@@ -100,13 +152,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209860_9.jpg",
 				"path": "/images/items/01_5243/1000209860_9.jpg",
 				"hash": "f09c3a812539035f67cd4ff9c20a7132"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209860_10.jpg",
+				"path": "/images/items/01_5243/1000209860_10.jpg",
+				"hash": "e4e1b7a6608487fdd382b309d2357e98"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209860_11.jpg",
+				"path": "/images/items/01_5243/1000209860_11.jpg",
+				"hash": "6b0ad583abd673ca35d0290a96268725"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000209860_12.jpg",
+				"path": "/images/items/01_5243/1000209860_12.jpg",
+				"hash": "82e7177f888c7f37ae58917d74f5cd5e"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5243/",
-	"brandIds": [],
-	"seriesIds": ["yamato"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5971", "01_5498", "01_5500", "01_5388"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5243/"
 }

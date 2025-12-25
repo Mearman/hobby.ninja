@@ -3,7 +3,48 @@
 	"type": "item",
 	"name": {
 		"ja": "アクションベース7 [クリアカラー] ミラーシールセット",
-		"en": "ACTION BASE 7 [CLEAR COLOR] MIRROR STICKERS SET"
+		"en": "Action Base 7 [Clear Color] Mirror Seal Set"
+	},
+	"brands": [
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		},
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5934",
+			"url": "https://bandai-hobby.net/item/01_5934/",
+			"ja": "アクションベース7 [クリアカラー] 機動戦士Gundam GQuuuuuuXシールセット"
+		},
+		{
+			"id": "01_5256",
+			"url": "https://bandai-hobby.net/item/01_5256/",
+			"ja": "アクションベース6 [クリアカラー] ミラーシールセット"
+		},
+		{
+			"id": "01_5165",
+			"url": "https://bandai-hobby.net/item/01_5165/",
+			"ja": "アクションベース8 [クリアカラー]"
+		}
+	],
+	"manual": {
+		"id": "1751",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1751"
 	},
 	"price": {
 		"amount": 1540,
@@ -34,10 +75,47 @@
 			"• 2 sets included in 1 product, perfect for collection."
 		]
 	},
-	"accessories": {
-		"ja": ["ミラーシール×1", "ベースパーツ×2", "支柱パーツ×2", "C型アーム×2", "ジョイントパーツ×1式"],
-		"en": ["Mirror Seal×1", "Base parts x 2", "Strut parts x 2", "C type arm x 2", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ミラーシール",
+				"en": "mirror seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ベースパーツ",
+				"en": "base parts"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "支柱パーツ",
+				"en": "Strut parts"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "C型アーム",
+				"en": "C type arm"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -83,13 +161,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5258/",
-	"brandIds": ["actionbase"],
-	"seriesIds": [],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5934", "01_5256", "01_5165"],
-	"manual": {
-		"id": "1751",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1751/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5258/"
 }

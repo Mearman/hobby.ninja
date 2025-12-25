@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "RG 1/144 RX-78-2 ガンダム Ver.2.0",
-		"en": "RG 1/144 RX-78-2 GUNDAM Ver.2.0"
+		"en": "RG 1/144 RX-78-2 Gundam Ver.2.0"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3792",
+			"url": "https://bandai-hobby.net/item/01_3792/",
+			"ja": "RG 1/144 ガンダムベース限定 ジオング[クリアカラー]"
+		},
+		{
+			"id": "01_4769",
+			"url": "https://bandai-hobby.net/item/01_4769/",
+			"ja": "RG 1/144 RX-78-2 ガンダム & エールストライクガンダム セット [ガンダムワールドコントラストカラー]"
+		},
+		{
+			"id": "01_3307",
+			"url": "https://bandai-hobby.net/item/01_3307/",
+			"ja": "RG 1/144 機動戦士ガンダム ラストシューティング ジオングエフェクトセット"
+		},
+		{
+			"id": "01_3306",
+			"url": "https://bandai-hobby.net/item/01_3306/",
+			"ja": "RG 1/144 ジオング"
+		}
+	],
+	"manual": {
+		"id": "1585",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1585"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -18,12 +66,11 @@
 		"day": 10
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• モビルスーツの建造を追体験できる、セミモノコック構造をイメージした最新設計の内部フレーム。",
 			"• オリジナルデザインへの回帰を果たす関節構造は、可動軸の再解釈により「関節に見える部分がきちんと曲がる」新構造を採用。",
-			"• 脚部は「白兵戦用MS ガンダム」を再考証し、可動した際にも人間に近いアウトラインを描くよう、複合フレームによる関節を採用。",
+			"• 脚部は「白兵戦用MSガンダム」を再考証し、可動した際にも人間に近いアウトラインを描くよう、複合フレームによる関節を採用。",
 			"• 接合部やパーツ裏など、外からは見えない部分にもディテールを彫刻。目立つ取り付け穴を排除し、デザインと一体化させた隙のない設計となっている。",
 			"• 複雑なカラーの頭部は成形色による色分けで徹底再現。ツインアイ / メインカメラ / マガジンドラム / 頬のダクトなど細部に至るまでディテールを追加している。",
 			"• 機構からの裏づけを反映させたパネルラインは、機能ブロックごとに分割。実際の分割ラインをイメージして設計している。",
@@ -32,9 +79,9 @@
 			"• RGオリジナルのギミックとして、コクピットを覆う胸部装甲が上下に開閉する機構を採用。"
 		],
 		"en": [
-			"• An internal frame with the latest design inspired by a semi-monocoque structure that allows you to relive the construction of a mobile suit.",
+			"• A state-of-the-art designed internal frame inspired by a semi-monocoque structure that allows you to relive the construction of a mobile suit.",
 			"• The joint structure, which returns to the original design, adopts a new structure in which \"the parts that look like joints bend properly\" by reinterpreting the axis of movement.",
-			"• The legs are a reconsideration of the \"hand-to-hand combat MS Gundam\" and have joints using a composite frame so that the outline resembles that of a human when it moves.",
+			"• The legs are a reconsideration of the \"hand-to-hand combat MSGundam\" and use composite frame joints to draw an outline similar to that of a human when it moves.",
 			"• Engraved details on parts that are not visible from the outside, such as joints and backs of parts. It has a seamless design that eliminates conspicuous mounting holes and integrates it with the design.",
 			"• The intricately colored head is thoroughly reproduced by color coding based on the molding color. Details have been added down to the smallest details such as the twin eyes, main camera, magazine drum, and cheek duct.",
 			"• Panel lines that reflect the support from the mechanism are divided into functional blocks. It is designed with the image of the actual dividing line in mind.",
@@ -43,47 +90,58 @@
 			"• As an original RG gimmick, the chest armor covering the cockpit opens and closes up and down."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×１",
-			"ビーム・サーベル×2",
-			"シールド×１",
-			"ハイパー・バズーカ×1",
-			"コア・ファイター用ランディングギアパーツ×１式",
-			"ハンドパーツ×１式",
-			"リアリスティックデカール×１"
-		],
-		"en": [
-			"Beam rifle x1",
-			"Beam saber x2",
-			"Seal de x1",
-			"Hyper bazooka x1",
-			"Landing gear parts for Core Fighter x 1 set",
-			"Hand parts x 1 set",
-			"Realistic decal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル×１",
+				"en": "Beam rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド×１",
+				"en": "Seal de x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハイパー・バズーカ",
+				"en": "hyper bazooka"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "コア・ファイター用ランディングギアパーツ×１式",
+				"en": "Landing gear parts for Core Fighter x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール×１",
+				"en": "Realistic decal x 1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000215609_1.jpg",
 				"path": "/images/items/01_5261/1000215609_1.jpg",
 				"hash": "4fb8b0e175fd91dce2266288ba1c9a00"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000215609_10.jpg",
-				"path": "/images/items/01_5261/1000215609_10.jpg",
-				"hash": "c1f11e19d6403c7f1aeed74212748a37"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000215609_11.jpg",
-				"path": "/images/items/01_5261/1000215609_11.jpg",
-				"hash": "bcca436605d120a1f87df4469204065c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000215609_12.jpg",
-				"path": "/images/items/01_5261/1000215609_12.jpg",
-				"hash": "ff95fea8ec09fa09ba846251873f105b"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000215609_2.jpg",
@@ -124,17 +182,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000215609_9.jpg",
 				"path": "/images/items/01_5261/1000215609_9.jpg",
 				"hash": "dd04cd04ac1d58d5ca6bcfbec1700081"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000215609_10.jpg",
+				"path": "/images/items/01_5261/1000215609_10.jpg",
+				"hash": "c1f11e19d6403c7f1aeed74212748a37"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000215609_11.jpg",
+				"path": "/images/items/01_5261/1000215609_11.jpg",
+				"hash": "bcca436605d120a1f87df4469204065c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000215609_12.jpg",
+				"path": "/images/items/01_5261/1000215609_12.jpg",
+				"hash": "ff95fea8ec09fa09ba846251873f105b"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5261/",
-	"brandIds": ["rg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_3792", "01_4769", "01_3307", "01_3306"],
-	"manual": {
-		"id": "1585",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1585/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5261/"
 }

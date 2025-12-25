@@ -2,9 +2,57 @@
 	"id": "01_5266",
 	"type": "item",
 	"name": {
-		"ja": "30MM ARMORED CORE VI FIRES OF RUBICON RaD CC-2000 ORBITER ナイトフォール",
-		"en": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON RaD CC-2000 ORBITER NIGHTFALL"
+		"ja": "30MM ARMORED CORE VI FIRES OF RUBICON  RaD CC-2000 ORBITER ナイトフォール",
+		"en": "30MM ARMORED CORE VI FIRES OF RUBICON RaD CC-2000 ORBITER Nightfall"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [
+		{
+			"id": "armoredcore",
+			"url": "https://bandai-hobby.net/series/armoredcore/",
+			"ja": "ARMORED CORE Ⅵ FIRES OF RUBICON"
+		}
+	],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5573",
+			"url": "https://bandai-hobby.net/item/01_5573/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON RaD CC-3000 WRECKER ミルクトゥース"
+		},
+		{
+			"id": "01_5574",
+			"url": "https://bandai-hobby.net/item/01_5574/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON BALAM INDUSTRIES BD-011 MELANDER"
+		}
+	],
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -29,38 +77,57 @@
 		],
 		"en": [
 			"\"ARMORED CORE VI FIRES OF RUBICON\" items are commercialized in the 30 MINUTES MISSIONS series.",
-			"Based on the series' key concepts of \"simple assembly \" and \" custom play,\" the impressive AC \" Nightfall\", driven by Raven, is now available.",
+			"Based on the series' key concepts of \"simple assembly\" and \"custom play,\" the impressive AC \"Nightfall\", driven by Raven, is now available.",
 			"• The head, core, arms, and legs each have a common structure in the series, allowing you to enjoy ``assemble'' with the plastic model just like in the game.",
 			"• 3mm joints are used to attach both shoulder weapons and some left-handed weapons, allowing for a variety of assemblies.",
 			"• The left hand weapon \"PB-033M ASHMEAD\" comes with replacement parts that can reproduce the ejection state.",
 			"• Includes head parts to recreate assault boost."
 		]
 	},
-	"accessories": {
-		"ja": ["ナイトフォール 武器×1式", "PB-033M ASHMEAD 射出状態再現用パーツ×1式", "頭部パーツ×1", "シール×1"],
-		"en": [
-			"Nightfall weapon x 1",
-			"PB-033M ASHMEAD injection state reproduction parts x 1 set",
-			"Head parts x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ナイトフォール 武器",
+				"en": "nightfall weapons"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "PB-033M ASHMEAD 射出状態再現用パーツ",
+				"en": "PB-033M ASHMEAD Injection state reproduction parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "頭部パーツ",
+				"en": "head parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217436_1.jpg",
 				"path": "/images/items/01_5266/1000217436_1.jpg",
 				"hash": "e3ce996ebc9e791e927947ad855d3ab7"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217436_10.jpg",
-				"path": "/images/items/01_5266/1000217436_10.jpg",
-				"hash": "35a3207476df223f7b8e5263f90690c7"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217436_11.jpg",
-				"path": "/images/items/01_5266/1000217436_11.jpg",
-				"hash": "92a3996c2d3691fe57596f16e9cfdc0f"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217436_2.jpg",
@@ -101,13 +168,19 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217436_9.jpg",
 				"path": "/images/items/01_5266/1000217436_9.jpg",
 				"hash": "c05e5fbd109b6959abb8bc863c054603"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217436_10.jpg",
+				"path": "/images/items/01_5266/1000217436_10.jpg",
+				"hash": "35a3207476df223f7b8e5263f90690c7"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217436_11.jpg",
+				"path": "/images/items/01_5266/1000217436_11.jpg",
+				"hash": "92a3996c2d3691fe57596f16e9cfdc0f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5266/",
-	"brandIds": ["30mm"],
-	"seriesIds": ["armoredcore"],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5973", "01_5974", "01_5573", "01_5574"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5266/"
 }

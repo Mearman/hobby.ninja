@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MF アイテムショップ1 (ナイトオプション)",
-		"en": "30MF ITEM SHOP 1 (KNIGHT OPTION)"
+		"en": "30MF Item Shop 1 (Night Option)"
 	},
+	"brands": [
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		},
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5978",
+			"url": "https://bandai-hobby.net/item/01_5978/",
+			"ja": "30MF ローザンウィザード"
+		},
+		{
+			"id": "01_5979",
+			"url": "https://bandai-hobby.net/item/01_5979/",
+			"ja": "30MF クラスアップアーマー (ローザンソーサラー)"
+		},
+		{
+			"id": "01_5980",
+			"url": "https://bandai-hobby.net/item/01_5980/",
+			"ja": "30MF クラスアップアーマー (ローザンエンチャンター)"
+		},
+		{
+			"id": "01_5981",
+			"url": "https://bandai-hobby.net/item/01_5981/",
+			"ja": "30MF アイテムショップ4(クエストオプション)"
+		}
+	],
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -28,53 +70,84 @@
 			"• 30MFアイテムと別売りの30MSアイテムとのミキシングに便利な「30MS用ジョイントパーツ」が付属。"
 		],
 		"en": [
-			"\"30MF Item Shop 1 (Night Option)\" is now available from the new plastic model series \" 30 MINUTES FANTASY\" where you can create your own fantasy job!",
+			"\"30MF Item Shop 1 (Night Option)\" is now available from the new plastic model series \"30 MINUTES FANTASY\" where you can create your own fantasy job!",
 			"• A set packed with weapons and items that expand the range of “Armor Cloth” [Armor Replacement].",
 			"• Two different designs of face, shoulder, and chest armor parts are included.",
 			"• Comes with Seal, which is lighter than the knight's equipment.",
-			"• Two types of \"treasure box \" and \" potion \" are included: gray and clear blue. The \" treasure box\" has a lid that can be opened and closed.",
+			"• Two types of \"treasure box\" and \"potion\" are included: gray and clear blue. The \"treasure box\" has a lid that can be opened and closed.",
 			"• \"Joint parts for 30MS\" are included, which is convenient for mixing 30MF items and 30MS items (sold separately)."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"カイトシールド×1",
-			"アーマーパーツ×1式",
-			"ポーション×2種",
-			"宝箱×2種",
-			"ジョイントパーツ×1式",
-			"30MS用ジョイントパーツ×1式"
-		],
-		"en": [
-			"Kite Seal × 1",
-			"Armor parts x 1 set",
-			"Potion x 2 types",
-			"Treasure chest x 2 types",
-			"Joint parts x 1 set",
-			"Joint parts for 30MS x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "カイトシールド",
+				"en": "Kite Seal Do"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アーマーパーツ",
+				"en": "armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ポーション",
+				"en": "potion"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "宝箱",
+				"en": "treasure chest"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "30MS用ジョイントパーツ",
+				"en": "Joint parts for 30MS"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217702_1.jpg",
 				"path": "/images/items/01_5265/1000217702_1.jpg",
 				"hash": "b4c1f69866ad4694d99beb0aa42f6808"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217702_10.jpg",
-				"path": "/images/items/01_5265/1000217702_10.jpg",
-				"hash": "5c70a8de68dfadf63d10c4a991f475bb"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217702_11.jpg",
-				"path": "/images/items/01_5265/1000217702_11.jpg",
-				"hash": "17bff1086c1f8a35e96f37894f307aff"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217702_12.jpg",
-				"path": "/images/items/01_5265/1000217702_12.jpg",
-				"hash": "56db44694a02a8aa698f0b536a4431f2"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217702_2.jpg",
@@ -115,15 +188,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217702_9.jpg",
 				"path": "/images/items/01_5265/1000217702_9.jpg",
 				"hash": "a53ff2591a3ba40de13d4f594f6c1f88"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217702_10.jpg",
+				"path": "/images/items/01_5265/1000217702_10.jpg",
+				"hash": "5c70a8de68dfadf63d10c4a991f475bb"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217702_11.jpg",
+				"path": "/images/items/01_5265/1000217702_11.jpg",
+				"hash": "17bff1086c1f8a35e96f37894f307aff"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000217702_12.jpg",
+				"path": "/images/items/01_5265/1000217702_12.jpg",
+				"hash": "56db44694a02a8aa698f0b536a4431f2"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5265/",
-	"brandIds": ["30mf"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5978", "01_5979", "01_5980", "01_5981"],
 	"manual": {
 		"id": "3404",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3404/"

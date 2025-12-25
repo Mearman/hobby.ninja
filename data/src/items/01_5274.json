@@ -3,8 +3,61 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ライトニングバスターガンダム",
-		"en": "HG 1/144 LIGHTNING BUSTER GUNDAM"
+		"en": "HG 1/144 Lightning Buster Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hgce",
+			"url": "https://bandai-hobby.net/brand/hgce/",
+			"ja": "HG COSMIC ERA"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-freedom",
+			"url": "https://bandai-hobby.net/series/seed-freedom/",
+			"ja": "機動戦士ガンダムSEED FREEDOM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5452",
+			"url": "https://bandai-hobby.net/item/01_5452/",
+			"ja": "HG 1/144 ズゴック(SEED FREEDOM Ver.)"
+		},
+		{
+			"id": "01_5374",
+			"url": "https://bandai-hobby.net/item/01_5374/",
+			"ja": "HG 1/144 デスティニーガンダムSpecII&ゼウスシルエット"
+		},
+		{
+			"id": "01_5363",
+			"url": "https://bandai-hobby.net/item/01_5363/",
+			"ja": "HG 1/144 ブラックナイトスコードカルラ"
+		},
+		{
+			"id": "01_5362",
+			"url": "https://bandai-hobby.net/item/01_5362/",
+			"ja": "HG 1/144 ムラサメ改"
+		}
+	],
+	"manual": {
+		"id": "1783",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1783"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -18,11 +71,10 @@
 		"day": 21
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED FREEDOM』にて、ディアッカ・エルスマンが駆る「ライトニングバスターガンダム」をHGで立体化！",
-			"• 「機動戦士ガンダム SEEDシリーズ」で印象的なアクションポーズ再現に特化した内部構造「SEEDアクションシステム」を搭載。",
+			"『機動戦士ガンダムSEED FREEDOM』にて、ディアッカ・エルスマンが駆る「ライトニングバスターガンダム」をHGで立体化！",
+			"• 「機動戦士ガンダムSEEDシリーズ」で印象的なアクションポーズ再現に特化した内部構造「SEEDアクションシステム」を搭載。",
 			"• 両脚の股関節の接続軸が左右別々で上下にスライド可動することで、大胆なアクションポーズに対応。",
 			"• 腰のビームキャノンは銃身の差し替えパーツで展開状態を再現可能。",
 			"• 大型キャノンは折り畳んだ状態から展開が可能。アームパーツの可動により肩、腰の位置それぞれに構えることができる。",
@@ -30,19 +82,31 @@
 			"• 全身の細かな色分けはパーツの分割により再現。"
 		],
 		"en": [
-			"In \"Mobile Suit Gundam SEED FREEDOM \", the \" Lightning Buster Gundam\" driven by Dearka Elsman is made into a three-dimensional HG!",
-			"• Equipped with the internal structure \"SEED Action System \" specialized for reproducing impressive action poses from \" Mobile Suit Gundam SEED Series\".",
-			"• The connecting axes of the hip joints of both legs can slide up and down separately on the left and right sides, allowing for bold action poses.",
+			"In \"Mobile Suit GundamSEED FREEDOM\", the \"Lightning Buster Gundam\" driven by Dearka Elsman is made into a three-dimensional HG!",
+			"• Equipped with the internal structure \"SEED Action System\" that specializes in reproducing impressive action poses from the \"Mobile Suit Gundam SEED Series\".",
+			"• The connecting shafts of the hip joints of both legs can be moved up and down separately, allowing for bold action poses.",
 			"• The beam cannon on the waist can be recreated in its deployed state with replacement parts for the barrel.",
 			"• Large cannon can be unfolded from the folded state. The arm parts are movable so that it can be held at the shoulder and waist positions.",
 			"• The stored missile warhead is exposed by opening and closing the hatch on the back of the aircraft.",
 			"• Detailed color coding of the whole body is reproduced by dividing the parts."
 		]
 	},
-	"accessories": {
-		"ja": ["銃身パーツ×2", "シール×1"],
-		"en": ["Gun barrel parts x 2", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "銃身パーツ",
+				"en": "gun barrel parts"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -93,13 +157,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5274/",
-	"brandIds": ["hg", "hgce"],
-	"seriesIds": ["seed-freedom"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5452", "01_5374", "01_5363", "01_5362"],
-	"manual": {
-		"id": "1783",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1783/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5274/"
 }

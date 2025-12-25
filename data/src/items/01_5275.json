@@ -2,8 +2,34 @@
 	"id": "01_5275",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム クロスシルエット マイティーストライクフリーダムガンダム",
-		"en": "SD GUNDAM CROSS SILHOUETTE MIGHTY STRIKE FREEDOM GUNDAM"
+		"ja": "SDガンダム クロスシルエット マイティーストライクフリーダムガンダム",
+		"en": "SDGundam Cross Silhouette Mighty Strike Freedom Gundam"
+	},
+	"brands": [
+		{
+			"id": "sdcs",
+			"url": "https://bandai-hobby.net/brand/sdcs/",
+			"ja": "SDガンダム クロスシルエット"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-freedom",
+			"url": "https://bandai-hobby.net/series/seed-freedom/",
+			"ja": "機動戦士ガンダムSEED FREEDOM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"manual": {
+		"id": "1784",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1784"
 	},
 	"price": {
 		"amount": 1980,
@@ -20,7 +46,7 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED FREEDOM』に登場の「マイティーストライクフリーダムガンダム」をSDCSで立体化！",
+			"『機動戦士ガンダムSEED FREEDOM』に登場の「マイティーストライクフリーダムガンダム」をSDCSで立体化！",
 			"• SDCSならではの高頭身(CS)、低頭身(SD)の２種のフレームが付属。ゴールドの成形色で機体の特徴を再現。",
 			"• 頭部内のパーツを差し替えることで瞳の有無を選択可能。",
 			"• 「プラウドディフェンダー」は飛行状態を再現可能。羽の装甲はスライド可動し展開状態を再現。",
@@ -30,7 +56,7 @@
 			"• ビームサーベル、ビームライフルはともに連結ギミックを再現。"
 		],
 		"en": [
-			"\"Mighty Strike Freedom Gundam \" appearing in \" Mobile Suit Gundam SEED FREEDOM\" is made into a three-dimensional SDCS!",
+			"\"Mighty Strike Freedom Gundam\" appearing in \"Mobile Suit GundamSEED FREEDOM\" is made into a three-dimensional SDCS!",
 			"• Comes with two types of frames unique to SDCS: high head (CS) and low head and body (SD). Reproduce the characteristics of the aircraft with gold molding color.",
 			"• You can choose whether or not there are eyes by replacing the parts inside the head.",
 			"• \"Proud Defender\" can reproduce flight conditions. The wing armor can be slid to reproduce the deployed state.",
@@ -40,67 +66,92 @@
 			"• Both the beam saber and beam rifle reproduce the connected gimmick."
 		]
 	},
-	"accessories": {
-		"ja": ["対艦刀（フツノミタマ）×1", "ビームライフル×2", "ビームサーベル×2", "ヘッドパーツ×1", "シール×1"],
-		"en": ["Anti-ship sword (futsunomitama) x 1", "Beam rifle x2", "Beam saber x2", "Head parts x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "対艦刀（フツノミタマ）",
+				"en": "Anti-ship sword (futsunomitama)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "beam rifle"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "beam saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ヘッドパーツ",
+				"en": "head parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6126.jpg",
+				"src": "https://bandai-hobby.net/images/153_6126_s_5sh0wcy94zqt6nglwz4wahrjozz0.jpg",
 				"path": "/images/items/01_5275/153_6126.jpg",
 				"hash": "eced85f5805236316c9c1e369345c7f9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6126.jpg",
+				"src": "https://bandai-hobby.net/images/155_6126_s_saw24vpxn87nrb259rqf27tjhtjc.jpg",
 				"path": "/images/items/01_5275/155_6126.jpg",
 				"hash": "dfc70b18da89d153936a2ac6a6ed12f5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6126.jpg",
+				"src": "https://bandai-hobby.net/images/156_6126_s_1c42bxdawb6ysszhdbcnh119x3td.jpg",
 				"path": "/images/items/01_5275/156_6126.jpg",
 				"hash": "ec5e02901a9652a74cd99d8d11287c4d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6126.jpg",
+				"src": "https://bandai-hobby.net/images/157_6126_s_7t2gs4ne4713yb798ne5d5bngzzp.jpg",
 				"path": "/images/items/01_5275/157_6126.jpg",
 				"hash": "c129045c112c4b45fd8e03ed6f4f907b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6126.jpg",
+				"src": "https://bandai-hobby.net/images/158_6126_s_91ge3kqi6cntov5q7sblo6wnjr05.jpg",
 				"path": "/images/items/01_5275/158_6126.jpg",
 				"hash": "4a217780c55f4961e9ae095ebfa7205c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6126.jpg",
+				"src": "https://bandai-hobby.net/images/159_6126_s_8mhqeg0s6ti08hnnt0k2dsh9fzru.jpg",
 				"path": "/images/items/01_5275/159_6126.jpg",
 				"hash": "e93ebbfdccf3522b560c1470586fc8a5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6126.jpg",
+				"src": "https://bandai-hobby.net/images/189_6126_s_571fzwk8f41zyve98sfc3bgjvmkf.jpg",
 				"path": "/images/items/01_5275/189_6126.jpg",
 				"hash": "704df412dc823bbe67bc2d9c6426edb8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6126.jpg",
+				"src": "https://bandai-hobby.net/images/190_6126_s_8apbg67ndwtdesjqfdis9d2dk07j.jpg",
 				"path": "/images/items/01_5275/190_6126.jpg",
 				"hash": "6639c52d5bbfa0973c91c083b641441b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6126.jpg",
+				"src": "https://bandai-hobby.net/images/191_6126_s_dbkqrcepzq2tnsrbfbwekq58o6jl.jpg",
 				"path": "/images/items/01_5275/191_6126.jpg",
 				"hash": "369665fd516aea6f8f95dbf2483c809c"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5275/",
-	"brandIds": ["sdcs"],
-	"seriesIds": ["seed-freedom"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": [],
-	"manual": {
-		"id": "1784",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1784/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5275/"
 }
