@@ -88,3 +88,37 @@ export {
 	upsertEntities,
 	getEntityDir,
 } from "./data-merger.js";
+
+// Timing utilities
+export {
+	createTimer,
+	printTimings,
+	formatAge,
+} from "./timing-utils.js";
+
+// Item resolver
+export {
+	getAllItemIds,
+	getItemsToProcess,
+	getOrphanManualIds,
+} from "./item-resolver.js";
+
+// Item processing
+export {
+	type ItemProcessResult,
+	type ItemProcessDeps,
+	processItemComplete,
+	updateItemTranslations,
+	updateItemWithManualLink,
+	cleanupBlogItem,
+	fetchPage,
+} from "./item-processor.js";
+
+// Manual processing
+export {
+	type ManualProcessResult,
+	type ManualProcessDeps,
+	processManualComplete,
+	fetchManualPage,
+	getManualsNeedingFormatMigration,
+} from "./manual-processor.js";
