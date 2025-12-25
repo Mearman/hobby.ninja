@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard Amplified ベルゼブモン",
 		"en": "Figure-rise Standard Amplified Beelzebumon"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard-amp",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard-amp/",
+			"ja": "Figure-rise Standard Amplified[フィギュアライズ スタンダード アンプリファイド]"
+		}
+	],
+	"series": [
+		{
+			"id": "digimon",
+			"url": "https://bandai-hobby.net/series/digimon/",
+			"ja": "デジモンシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5983",
+			"url": "https://bandai-hobby.net/item/01_5983/",
+			"ja": "Figure-rise Standard Amplified カイゼルグレイモン"
+		},
+		{
+			"id": "item-1000216437",
+			"url": "https://p-bandai.jp/item/item-1000216437/",
+			"ja": "Figure-rise Standard Amplified オメガモン(Ｘ抗体) [リミテッドカラー]"
+		},
+		{
+			"id": "01_5277",
+			"url": "https://bandai-hobby.net/item/01_5277/",
+			"ja": "Figure-rise Standard Amplified パイルドラモン"
+		},
+		{
+			"id": "item-1000198198",
+			"url": "https://p-bandai.jp/item/item-1000198198/",
+			"ja": "Figure-rise Standard Amplified デュークモン[スペシャルコーティング]"
+		}
+	],
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -21,14 +64,14 @@
 	"description": {
 		"ja": [
 			"『デジモンテイマーズ』より、魔王型デジモン「ベルゼブモン」がFigure-rise Standard Amplifiedシリーズにラインアップ！",
-			"■ベレンヘーナは、コードを絡ませたような特徴的な背中へのマウント状態を再現。ジョイントパーツを使用すれば脚部にも取り付けが可能。",
-			"■髪と尻尾のパーツにはリード線を採用。細かな表情をつけることが可能。",
-			"■２種類の指パーツの差し替えにより平手状態と武器持ち状態を再現。",
-			"■プラモデルとしての拡張性を考慮し、各所に拡張用の接続穴を配置。",
-			"■全高約170mm。別売りの「Figure-rise Standard Amplified デュークモン」と並べることで、劇中シーンのイメージを再現可能。"
+			"• ベレンヘーナは、コードを絡ませたような特徴的な背中へのマウント状態を再現。ジョイントパーツを使用すれば脚部にも取り付けが可能。",
+			"• 髪と尻尾のパーツにはリード線を採用。細かな表情をつけることが可能。",
+			"• ２種類の指パーツの差し替えにより平手状態と武器持ち状態を再現。",
+			"• プラモデルとしての拡張性を考慮し、各所に拡張用の接続穴を配置。",
+			"• 全高約170mm。別売りの「Figure-rise Standard Amplified デュークモン」と並べることで、劇中シーンのイメージを再現可能。"
 		],
 		"en": [
-			"From \"Digimon Tamers \", the demon king type Digimon \" Beelzebumon\" is added to the Figure-rise Standard Amplified series!",
+			"From \"Digimon Tamers\", the demon king type Digimon \"Beelzebumon\" is added to the Figure-rise Standard Amplified series!",
 			"• Berenjena reproduces the characteristic mounting state on the back that looks like entwined cords. It can also be attached to the legs using joint parts.",
 			"• Lead wires are used for the hair and tail parts. It is possible to add detailed facial expressions.",
 			"• Reproduce the open-handed state and weapon-holding state by replacing two types of finger parts.",
@@ -36,69 +79,91 @@
 			"• Overall height approximately 170mm. By lining it up with the separately sold \"Figure-rise Standard Amplified Dukemon\", you can recreate the image of the scene in the play."
 		]
 	},
-	"accessories": {
-		"ja": ["ベレンヘーナ×2", "表情手再現パーツ（左右）×各1", "リード線(細)×1", "リード線(太)×1", "シール×1"],
-		"en": [
-			"Belenjena x2",
-			"Facial expression hand reproduction parts (left and right) x 1 each",
-			"Lead wire (thin) x 1",
-			"Lead wire (thick) x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ベレンヘーナ",
+				"en": "berenjena"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "表情手再現パーツ（左右）×各1",
+				"en": "Facial expression hand reproduction parts (left and right) x 1 each"
+			}
+		},
+		{
+			"name": {
+				"ja": "リード線(細)",
+				"en": "Lead wire (thin)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リード線(太)",
+				"en": "Lead wire (thick)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4705.jpg",
+				"src": "https://bandai-hobby.net/images/153_4705_s_hvcgpwbvgwh92v9r7fsfb0e4iyuw.jpg",
 				"path": "/images/items/01_3753/153_4705.jpg",
 				"hash": "9059b70129bab3d38a20f4eba96e2b21"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4705.jpg",
+				"src": "https://bandai-hobby.net/images/155_4705_s_5zj7xu53j3rtdwhji4q9gpx6igk4.jpg",
 				"path": "/images/items/01_3753/155_4705.jpg",
 				"hash": "801438fcb6c6e1d38ef433ce2abd6034"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4705.jpg",
+				"src": "https://bandai-hobby.net/images/156_4705_s_bsmay7mxf17e9ant8ojwn7m6gnfr.jpg",
 				"path": "/images/items/01_3753/156_4705.jpg",
 				"hash": "f7772d656c4e30596437a38c4c1deaa9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4705.jpg",
+				"src": "https://bandai-hobby.net/images/157_4705_s_ke1vtyg2vs85zr8dayqzecwi282v.jpg",
 				"path": "/images/items/01_3753/157_4705.jpg",
 				"hash": "e03c89c8ef42c7eff84bec5c691948fd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4705.jpg",
+				"src": "https://bandai-hobby.net/images/158_4705_s_7z3w5xffl0lof5rx6vz2e7fgynl8.jpg",
 				"path": "/images/items/01_3753/158_4705.jpg",
 				"hash": "681604a0efa67b89949cd3222cb1a27f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4705.jpg",
+				"src": "https://bandai-hobby.net/images/159_4705_s_wi5jwdsgptbhb46lcydpxl162ci0.jpg",
 				"path": "/images/items/01_3753/159_4705.jpg",
 				"hash": "ccba4c89b620540ceb3f9d396391158a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4705.jpg",
+				"src": "https://bandai-hobby.net/images/189_4705_s_vkw6s871rgmgmig3rsopwk76o9kc.jpg",
 				"path": "/images/items/01_3753/189_4705.jpg",
 				"hash": "80ad606f69e46ab60734336a6fda03f5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4705.jpg",
+				"src": "https://bandai-hobby.net/images/190_4705_s_7faou33eur0rxb8v4y9ujkrkjnl5.jpg",
 				"path": "/images/items/01_3753/190_4705.jpg",
 				"hash": "df467789b4001c1c0db7cfa876df0254"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4705.jpg",
+				"src": "https://bandai-hobby.net/images/191_4705_s_fk51dhjlmv232njsrzz4svapw6nu.jpg",
 				"path": "/images/items/01_3753/191_4705.jpg",
 				"hash": "63bbc5a382abb4f9c8561dffe6395b9a"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3753/",
-	"brandIds": ["figurerise-standard-amp"],
-	"seriesIds": ["digimon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5983", "item-1000216437", "01_5277", "item-1000198198"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3753/"
 }

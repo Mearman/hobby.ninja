@@ -2,9 +2,63 @@
 	"id": "01_3823",
 	"type": "item",
 	"name": {
-		"ja": "ＭＧ 1/100 小説版ユニコーンガンダム 2号機バンシィVer.Ka 最終決戦仕様",
-		"en": "MG 1/100 Novel version Unicorn Gundam Unit 02 Banshee Ver.Ka final battle specification"
+		"ja": "ＭＧ 1/100 小説版ユニコーンガンダム2号機バンシィVer.Ka 最終決戦仕様",
+		"en": "MG 1/100 Novel version Unicorn Gundam Unit 2 Banshee Ver.Ka final battle specification"
 	},
+	"brands": [
+		{
+			"id": "mgka",
+			"url": "https://bandai-hobby.net/brand/mgka/",
+			"ja": "MG Ver.Ka［マスターグレード バージョンカトキ］"
+		},
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216106",
+			"url": "https://p-bandai.jp/item/item-1000216106/",
+			"ja": "RG 1/144 ユニコーンガンダム２号機 バンシィ・ノルン (最終決戦仕様) [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000183366",
+			"url": "https://p-bandai.jp/item/item-1000183366/",
+			"ja": "ＭＧ 1/100 スタークジェガン"
+		},
+		{
+			"id": "item-1000164780",
+			"url": "https://p-bandai.jp/item/item-1000164780/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム ペルフェクティビリティ用 ディバイン拡張セット"
+		},
+		{
+			"id": "item-1000164779",
+			"url": "https://p-bandai.jp/item/item-1000164779/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム ペルフェクティビリティ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 3
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"小説版バンシィが最終決戦時の仕様でＭＧ（マスターグレード）Ver.Kaで登場!!",
@@ -55,9 +108,9 @@
 		],
 		"en": [
 			"The novel version of Banshee appears in MG (Master Grade) Ver.Ka with the specifications from the final battle!!",
-			"This is the novel version of Banshee that is the companion of MG 1/100 Full Armor Unicorn Gundam Ver.Ka’ (12 store release products)!",
+			"This is the novel version of Banshee that is the companion of MG 1/100 Full Armor Unicorn GundamVer.Ka’ (12 in-store release products)!",
 			"Recommended points)",
-			"●Psycho frame is green like Full Armor Unicorn Gundam Ver.Ka!",
+			"●Psycho frame is green like Full Armor Unicorn GundamVer.Ka!",
 			"●Designed by Hajime Katoki! “Ver.Ka” marking using foil is included!",
 			"●The corners are matte plated on both sides! !",
 			"The body shape is partially different from the ‘MG Unicorn Gundam 2nd Banshee’ (3 stores Release Scheduled),",
@@ -76,7 +129,7 @@
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"*The finished product in the photo is painted. The actual product may differ slightly.",
-			"*‘MG Full Armor Unicorn Gundam Ver.Ka’ (in-store release) and ‘MG Unicorn Gundam 02 Banshee’ (20123 in-store release Scheduled) are",
+			"*‘MG Full Armor Unicorn GundamVer.Ka’ (in-store release) and ‘MG Unicorn Gundam 02 Banshee’ (20123 in-store release Scheduled) are",
 			"Not available for sale at Premium Bandai.",
 			"(remarks)",
 			"・This product is a limited edition item.",
@@ -88,44 +141,66 @@
 			"- Product specifications are scheduled as of 20121. Please note that there may be changes."
 		]
 	},
-	"accessories": {
-		"ja": ["ビーム・マグナム", "シールド", "ハイパー・バズーカ", "ビーム・サーベル"],
-		"en": ["beam magnum", "Seal de", "hyper bazooka", "beam saber"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・マグナム",
+				"en": "beam magnum"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハイパー・バズーカ",
+				"en": "hyper bazooka"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4771.jpg",
+				"src": "https://bandai-hobby.net/images/153_4771_s_ssnujsmx16jks9gbtlthurxsc6v8.jpg",
 				"path": "/images/items/01_3823/153_4771.jpg",
 				"hash": "236e1770e8717091159f916c84abd67d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4771.jpg",
+				"src": "https://bandai-hobby.net/images/155_4771_s_msbw4eb11l3la1vucc2p2sgs5xo3.jpg",
 				"path": "/images/items/01_3823/155_4771.jpg",
 				"hash": "d25ed625762c878f2c2a76e6780180f1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4771.jpg",
+				"src": "https://bandai-hobby.net/images/156_4771_s_d64niwc42mb7oti8ub953xuzc8xy.jpg",
 				"path": "/images/items/01_3823/156_4771.jpg",
 				"hash": "09e294c50c84158a122044f83ae33e81"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4771.jpg",
+				"src": "https://bandai-hobby.net/images/157_4771_s_lgzrp4ah9apd7wmb0qmjsr1nheh9.jpg",
 				"path": "/images/items/01_3823/157_4771.jpg",
 				"hash": "a12114da44a6ec5ea8b4b897fa8b95eb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4771.jpg",
+				"src": "https://bandai-hobby.net/images/158_4771_s_q49f540tdkwdw67rggenp2sw4v8z.jpg",
 				"path": "/images/items/01_3823/158_4771.jpg",
 				"hash": "ce4677d6727fb055f5e72945a6b0b4a7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4771.jpg",
+				"src": "https://bandai-hobby.net/images/159_4771_s_4bozttiroyh3ko7f2atj0mnz3dgt.jpg",
 				"path": "/images/items/01_3823/159_4771.jpg",
 				"hash": "5bf3b0faa55105a9a5a592ce2ca1cabe"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4771.jpg",
+				"src": "https://bandai-hobby.net/images/189_4771_s_142ovfezf4qec8hqp5xrpcva0w60.jpg",
 				"path": "/images/items/01_3823/189_4771.jpg",
 				"hash": "4aa9ec9af49c1001a5424f41eed51be5"
 			}
@@ -133,14 +208,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3823/",
-	"brandIds": ["mgka", "mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216106", "item-1000183366", "item-1000164780", "item-1000164779"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2127",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2127/"

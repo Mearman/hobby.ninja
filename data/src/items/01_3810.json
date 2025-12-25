@@ -5,6 +5,54 @@
 		"ja": "HG 1/144 ダブルオークアンタクリアカラーＶｅｒ．",
 		"en": "HG 1/144 Double Oakanta Clear Color Ver."
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1700,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 1
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"劇場版ガンダム００から、ガンプラＨＧ 限定クリアカラーＶｅｒ．発売！",
@@ -47,7 +94,7 @@
 			"・ この商品は‘プレミアムバンダイ’での販売準備数に限りがございます。品切れの際はご了承ください。"
 		],
 		"en": [
-			"From the movie Gundam 00, GunplaHG limited clear color Ver. Release!",
+			"From the movie Gundam00, GunplaHG limited clear color Ver. Release!",
 			"Appearing in the popular \"Mobile Suit Gundam 00 the Movie -A wakening of the Trailblazer-\"",
 			"Clear color version of Double O Quanta.",
 			"Colorful clear molding specifications that follow the image of the aircraft give it a premium feel! !",
@@ -55,7 +102,7 @@
 			"◆◆Great deals◆◆",
 			"Simultaneous release of 4 aircraft (Double Au Quanta/Gundam Sabaña/Gundam Harut/Rafael Gundam)",
 			"If purchased as a set,",
-			"``[If you buy 4 items here, you get double points! ]\"HG 1/144 00 the Movie Clear Color Ver. \" Bulk Purchase\"",
+			"``[If you buy 4 items here, you get double points! ]\"HG 1/144 00 the Movie Clear Color Ver. \"Bulk Purchase\"",
 			"If you apply from the page, the \"Premium Bandai Points\" return rate will be twice the normal rate!",
 			"*If you purchase 4 units at the same time from each individual page (combined purchase using a cart),",
 			"Points will not be doubled. please note.",
@@ -63,7 +110,7 @@
 			"1/144 Scale Assembly plastic model",
 			"Target age: 8 years old and above",
 			"Product material: PS/PE/ABS",
-			"No glue is used for assembly",
+			"No glue used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"Various weapons included",
 			"*The package design of this product is \"Theatrical Limited HG 00 Qanta\" using the key visual of the movie version.",
@@ -77,22 +124,22 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4759.jpg",
+				"src": "https://bandai-hobby.net/images/153_4759_s_o3ya4815hi2nvfegyqdisxkihx5t.jpg",
 				"path": "/images/items/01_3810/153_4759.jpg",
 				"hash": "566c606afb2b52bb1fa0db39d2b54f0e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4759.jpg",
+				"src": "https://bandai-hobby.net/images/155_4759_s_bzy8w6u6lvwitzbjzz0ql8ve3so8.jpg",
 				"path": "/images/items/01_3810/155_4759.jpg",
 				"hash": "468a54a6e1e3bc0136f8e1c37feb7c39"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4759.jpg",
+				"src": "https://bandai-hobby.net/images/156_4759_s_si93kq4w8mhv91enjbonkc0f4ufl.jpg",
 				"path": "/images/items/01_3810/156_4759.jpg",
 				"hash": "ee35c70dbeb5c1b04421d46969977475"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4759.jpg",
+				"src": "https://bandai-hobby.net/images/157_4759_s_ftfuw91dfhf5vo7nnpzn40lrpta0.jpg",
 				"path": "/images/items/01_3810/157_4759.jpg",
 				"hash": "8dc75d69c89e6e9033c8db2d646eb379"
 			}
@@ -100,14 +147,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3810/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5963", "01_5961", "01_5951"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "312",
 		"url": "https://manual.bandai-hobby.net/menus/detail/312/"

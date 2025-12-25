@@ -5,6 +5,50 @@
 		"ja": "HG 1/72 メイレスジョウガン改",
 		"en": "HG 1/72 Meires Jougan Kai"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -18,15 +62,14 @@
 		"day": 21
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"KEN OKUYAMA DESIGNによる構造検証を経て、ジョウガンの改良機、「ジョウガン改」をHGで立体化！",
-			"■「境界戦機」第二部より、鉄塚ガシンが搭乗。自律思考型AI ケイを移植し、大火力を有する機体に生まれ変わった。",
-			"■機体正面に向けて大型のガトリング、背部には大型のドラムマガジンを装着、圧倒的な火力で敵を制圧する。",
-			"■リアスカートにはガトリングの反動から機体を支える為、バイポットを内蔵。パーツ差替えにより設置状態に展開可能。",
-			"■両肩のシールドはガトリング基部の装甲と連結し、防御力の高い状態を再現。",
-			"■本体前面の装甲には携行短機関砲２丁を収納可能。",
+			"• 「境界戦機」第二部より、鉄塚ガシンが搭乗。自律思考型AI ケイを移植し、大火力を有する機体に生まれ変わった。",
+			"• 機体正面に向けて大型のガトリング、背部には大型のドラムマガジンを装着、圧倒的な火力で敵を制圧する。",
+			"• リアスカートにはガトリングの反動から機体を支える為、バイポットを内蔵。パーツ差替えにより設置状態に展開可能。",
+			"• 両肩のシールドはガトリング基部の装甲と連結し、防御力の高い状態を再現。",
+			"• 本体前面の装甲には携行短機関砲２丁を収納可能。",
 			"TVアニメ「境界戦機」第二部は４月開始！！第一部のエピソードはBANDAI SPIRITS 公式 YouTubeにて全話無料配信中！"
 		],
 		"en": [
@@ -39,80 +82,92 @@
 			"The second part of the TV anime \"Kyoukai Senki\" starts in 4! ! All episodes of the first part are available for free on BANDAI SPIRITS official YouTube!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"45mm回転式装甲機関砲×１",
-			"肩用シールド(左右)×１",
-			"40mm携行短機関砲×２",
-			"ハンドパーツ平手（左右）、握り手(左右)、銃持ち手(左右)",
-			"ホイルシール×１"
-		],
-		"en": [
-			"45mm rotary armored machine gun x 1",
-			"Shoulder Seal (left and right) x 1",
-			"40mm portable submachine gun x 2",
-			"Hand parts Open hand (left and right), grip hand (left and right), gun handle (left and right)",
-			"Foil Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "45mm回転式装甲機関砲×１",
+				"en": "45mm rotary armored machine gun x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "肩用シールド(左右)×１",
+				"en": "Shoulder Seal (left and right) x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "40mm携行短機関砲×２",
+				"en": "40mm portable submachine gun x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ平手（左右）、握り手(左右)、銃持ち手(左右)",
+				"en": "Hand parts Open hand (left and right), grip hand (left and right), gun handle (left and right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール×１",
+				"en": "Foil Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4727.jpg",
+				"src": "https://bandai-hobby.net/images/153_4727_s_rvxn5halw4m4nce6oo688160pjbg.jpg",
 				"path": "/images/items/01_3777/153_4727.jpg",
 				"hash": "7a1580607eae162fe688559d42f3be5b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4727.jpg",
+				"src": "https://bandai-hobby.net/images/155_4727_s_whw8mr5c5dy5g5o5xxsia5g6482a.jpg",
 				"path": "/images/items/01_3777/155_4727.jpg",
 				"hash": "f5e32a75310500f6098d94b0c6d08834"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4727.jpg",
+				"src": "https://bandai-hobby.net/images/156_4727_s_6hgcmobxxgr423g665p19vkzbpbs.jpg",
 				"path": "/images/items/01_3777/156_4727.jpg",
 				"hash": "446de82f41e5389044a9e0f9506803f4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4727.jpg",
+				"src": "https://bandai-hobby.net/images/157_4727_s_iksriyfv577g324omc8cv8sxnffi.jpg",
 				"path": "/images/items/01_3777/157_4727.jpg",
 				"hash": "4fd289f437670d6583a4436697f68e18"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4727.jpg",
+				"src": "https://bandai-hobby.net/images/158_4727_s_q8vrum83kzl6y585euefd2ht30qz.jpg",
 				"path": "/images/items/01_3777/158_4727.jpg",
 				"hash": "d2f5b6b0d6bbcd7399102ee032f2858c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4727.jpg",
+				"src": "https://bandai-hobby.net/images/159_4727_s_b6nz5tjg54ekfsn345vdwaojik2p.jpg",
 				"path": "/images/items/01_3777/159_4727.jpg",
 				"hash": "74ae54e96113fd422e0cfd306d9c6e71"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4727.jpg",
+				"src": "https://bandai-hobby.net/images/189_4727_s_na5sxeosnneehih0zkz8joj37cpi.jpg",
 				"path": "/images/items/01_3777/189_4727.jpg",
 				"hash": "a73f43921e2a12b8d41247d736be2a10"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4727.jpg",
+				"src": "https://bandai-hobby.net/images/190_4727_s_dxe8szmra4jgmgiq87qzlykm9814.jpg",
 				"path": "/images/items/01_3777/190_4727.jpg",
 				"hash": "1b6f09d922072dae4d4b8f62f04501ef"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4727.jpg",
+				"src": "https://bandai-hobby.net/images/191_4727_s_eg7qb60v859nmm4dv6l3ovsieydr.jpg",
 				"path": "/images/items/01_3777/191_4727.jpg",
 				"hash": "a04ea26e12d38f7f9d65064fb612174b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4727.jpg",
+				"src": "https://bandai-hobby.net/images/192_4727_s_j7ecbudbnf5itziy72c4oy31g1f2.jpg",
 				"path": "/images/items/01_3777/192_4727.jpg",
 				"hash": "93cf5167173ca9410eac192a53ee2e69"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3777/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3777/"
 }

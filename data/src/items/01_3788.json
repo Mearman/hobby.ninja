@@ -5,6 +5,45 @@
 		"ja": "ENTRY GRADE 1/144 ストライクガンダム(ライトパッケージVer.)",
 		"en": "ENTRY GRADE 1/144 Strike Gundam (Light Package Ver.)"
 	},
+	"brands": [
+		{
+			"id": "entry_grade_g",
+			"url": "https://bandai-hobby.net/brand/entry_grade_g/",
+			"ja": "ENTRY GRADE"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5440",
+			"url": "https://bandai-hobby.net/item/01_5440/",
+			"ja": "ENTRY GRADE 1/144 ストライクルージュ"
+		},
+		{
+			"id": "01_4211",
+			"url": "https://bandai-hobby.net/item/01_4211/",
+			"ja": "ENTRY GRADE 1/144 ガンダムベース限定 ストライクガンダム [ペインティング モデル]"
+		},
+		{
+			"id": "01_3744",
+			"url": "https://bandai-hobby.net/item/01_3744/",
+			"ja": "ENTRY GRADE 1/144 ストライクガンダム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,71 +57,74 @@
 		"day": 17
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"“次世代のファーストガンプラ”第二弾に「ストライクガンダム」が登場！",
-			"■大胆かつ秀逸なパーツ分割。全79パーツを組み立てるだけで色分けを再現。塗装はもちろんシール貼りも不要。",
-			"■部位ごとにパーツがまとまっていて、わかりやすいランナー配置。ニッパーを使わず手でパチパチと簡単に外せるタッチゲート仕様。",
-			"■胴体をはじめ、脚部、腕部の可動箇所は大きな可動範囲を確保。大胆なアクションポーズに対応可能。",
-			"■カメラアイの黒い輪郭は、パーツ同士のクリアランスにできる影で表現。■装備にアーマーシュナイダーが２本付属。"
+			"• 大胆かつ秀逸なパーツ分割。全79パーツを組み立てるだけで色分けを再現。塗装はもちろんシール貼りも不要。",
+			"• 部位ごとにパーツがまとまっていて、わかりやすいランナー配置。ニッパーを使わず手でパチパチと簡単に外せるタッチゲート仕様。",
+			"• 胴体をはじめ、脚部、腕部の可動箇所は大きな可動範囲を確保。大胆なアクションポーズに対応可能。",
+			"• カメラアイの黒い輪郭は、パーツ同士のクリアランスにできる影で表現。■装備にアーマーシュナイダーが２本付属。"
 		],
 		"en": [
-			"\"Strike Gundam \" is now available in the second installment of \" Next Generation's First Gunpla\"!",
+			"\"Strike Gundam\" is now available in the second installment of \"Next Generation's First Gunpla\"!",
 			"• Bold and excellent parts division. Reproduce color coding just by assembling all 79 parts. No painting or sealing required.",
 			"• Easy-to-understand runner layout with parts grouped by area. Touch gate design that can be easily removed by hand without using nippers.",
 			"• The torso, legs, and arms have a wide range of motion. Can accommodate bold action poses.",
-			"• The black outline of the camera eye is expressed by the shadow created by the clearance between parts. • Two armor schneiders are included in the equipment."
+			"• The black outline of the camera eye is expressed by the shadow created by the clearance between parts. ■Two armor schneiders are included as equipment."
 		]
 	},
-	"accessories": {
-		"ja": ["アーマーシュナイダー×２"],
-		"en": ["Armor Schneider x2"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "アーマーシュナイダー×２",
+				"en": "Armor Schneider x2"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4738.jpg",
+				"src": "https://bandai-hobby.net/images/153_4738_s_hay6dftfe1g8pi6xrun6mdo9kobo.jpg",
 				"path": "/images/items/01_3788/153_4738.jpg",
 				"hash": "14a49b3837da0caf8045e1e00ba404d2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4738.jpg",
+				"src": "https://bandai-hobby.net/images/155_4738_s_m4iqkqf5z86on6fkkyeltv522gi7.jpg",
 				"path": "/images/items/01_3788/155_4738.jpg",
 				"hash": "e1c1f880cd8af0053d6e2a35c2c18476"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4738.jpg",
+				"src": "https://bandai-hobby.net/images/156_4738_s_mqb6dcqcrmgm2ov6opgturt2le3w.jpg",
 				"path": "/images/items/01_3788/156_4738.jpg",
 				"hash": "ca081eb075b4c9c61133f819262bc0bb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4738.jpg",
+				"src": "https://bandai-hobby.net/images/157_4738_s_0bhgafp600ypouxkfnlvairg56uw.jpg",
 				"path": "/images/items/01_3788/157_4738.jpg",
 				"hash": "8b93243f692b868d676e2065a0bd0099"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4738.jpg",
+				"src": "https://bandai-hobby.net/images/158_4738_s_0tt1pwaxpgywlj2042f6hah03q6y.jpg",
 				"path": "/images/items/01_3788/158_4738.jpg",
 				"hash": "2ee3853087f8fd2154b89615298b9161"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4738.jpg",
+				"src": "https://bandai-hobby.net/images/159_4738_s_31p4jo8lrhztkzkn15ewmxrw3pr6.jpg",
 				"path": "/images/items/01_3788/159_4738.jpg",
 				"hash": "f4048b9e53d525a590ff61c66e94ae15"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4738.jpg",
+				"src": "https://bandai-hobby.net/images/189_4738_s_fopv4aq5q6g3mr2ifq8c3ju9r1gs.jpg",
 				"path": "/images/items/01_3788/189_4738.jpg",
 				"hash": "e46961d5ae6bfe2c7853ed5fcb6dd5d0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4738.jpg",
+				"src": "https://bandai-hobby.net/images/190_4738_s_ktkuiieqwzydcl583zhcqxamzy54.jpg",
 				"path": "/images/items/01_3788/190_4738.jpg",
 				"hash": "1f62e47e8d7bfe818e8fe9e6146d12c6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4738.jpg",
+				"src": "https://bandai-hobby.net/images/191_4738_s_0b4ycun96s3ruczppy962lllizyo.jpg",
 				"path": "/images/items/01_3788/191_4738.jpg",
 				"hash": "a36b260c63e292cc9a8dd0b13f91cbca"
 			}
@@ -90,10 +132,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3788/",
-	"brandIds": ["entry_grade"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5440", "01_4211", "01_3744"],
 	"manual": {
 		"id": "1050",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1050/"

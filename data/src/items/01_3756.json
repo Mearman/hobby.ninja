@@ -5,6 +5,28 @@
 		"ja": "SDW HEROES ナイトストライクガンダム",
 		"en": "SDW HEROES Night Strike Gundam"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 990,
 		"currency": "JPY",
@@ -21,29 +43,41 @@
 	"description": {
 		"ja": [
 			"（11/8記載）諸般の都合により、商品の発売月を変更させていただきました。",
-			"～『SD ガンダムワールド ヒーローズ』外伝始動！～",
-			"『SD ガンダムワールド ヒーローズ』に続く、新たな物語が始動！主役キャラクター「ナイトストライクガンダム」を商品化！",
-			"• 新外伝の主役キャラクター。往年のナイトガンダムの要素とSD ガンダムワールドシリーズのデザインが織りなす新世代のナイトガンダム！",
+			"～『SDガンダムワールド ヒーローズ』外伝始動！～",
+			"『SDガンダムワールド ヒーローズ』に続く、新たな物語が始動！主役キャラクター「ナイトストライクガンダム」を商品化！",
+			"• 新外伝の主役キャラクター。往年のナイトガンダムの要素とSDガンダムワールドシリーズのデザインが織りなす新世代のナイトガンダム！",
 			"• クリアパーツとの組み合わせにより、密度の高い全身の武装を表現。",
 			"• 武装にはナイトガンダムの意匠を盛り込んだ大剣が付属。大剣は背面に取り付け可能。",
 			"• ナイトガンダムの特徴的なマントを表情豊かな形状で再現。",
 			"• 一部パーツの着脱により、別売りのトリニティバイクや軍馬にも搭乗可能。"
 		],
 		"en": [
-			"(Posted on 11/8) Due to various circumstances, we have changed the product release.",
+			"(Posted on November 8th) Due to various circumstances, we have changed the product release.",
 			"~ “SD Gundam World Heroes” side story starts! ～",
-			"A new story following \"SD Gundam World Heroes \" has begun! Commercialization of the main character \" Night Strike Gundam\"!",
-			"• Main character of Shin Gaiden. A new generation of Knight Gundam that combines elements of the old Knight Gundam and the design of the SD Gundam World Series!",
+			"A new story following “SD Gundam World Heroes” has started! Commercialization of the main character \"Night Strike Gundam\"!",
+			"• Main character of Shin Gaiden. A new generation of Knight Gundam that combines elements of the old Knight Gundam and the design of the SDGundam World Series!",
 			"• By combining with clear parts, a highly dense whole body armament is expressed.",
 			"• The weapon comes with a large sword that incorporates the design of Knight Gundam. The large sword can be attached to the back.",
 			"• Reproduce Knight Gundam's characteristic cloak with a richly expressive shape.",
 			"• By attaching and detaching some parts, you can also ride the optional Trinity Bike and War Horse."
 		]
 	},
-	"accessories": {
-		"ja": ["剣×1", "ホイルシール×1"],
-		"en": ["Sword x1", "Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "剣",
+				"en": "sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -79,9 +113,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3756/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_3756/"
 }

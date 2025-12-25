@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 EXM-E7c スピナティア (コマンド仕様)",
 		"en": "30MM 1/144 EXM-E7c Spinatia (Command specification)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1408,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMシリーズ 第３勢力「マクシオン軍」の女性型の新機体「スピナティア」にコマンド仕様が登場！人気のミリタリーモチーフの機体を複数組み合わせて小隊を編成しよう！",
@@ -29,7 +71,7 @@
 			"• 既存の30MMシリーズのアイテムともミキシングできる共通関節構造、３mmジョイントを採用し多彩なカスタマイズを実現。"
 		],
 		"en": [
-			"30MM series The command version of the new female aircraft \"Spinatia \" of the third force \" Maxion Army\" is now available! Create a platoon by combining multiple aircraft with popular military motifs!",
+			"30MM series The command version of the new female aircraft \"Spinatia\" of the third force \"Maxion Army\" is now available! Create a platoon by combining multiple aircraft with popular military motifs!",
 			"• A new female body has been added to the 30MM series.",
 			"• An all-in-one item that includes the main body, armor parts, and weapon parts.",
 			"• While taking advantage of the range of motion, there is no pinching during assembly.",
@@ -37,45 +79,63 @@
 			"• Adopts a 3mm joint, a common joint structure that can be mixed with existing 30MM series items, allowing for a variety of customizations."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"チェーンガン×1",
-			"シールド×1",
-			"コンバットナイフ×1",
-			"ハンドパーツ 武器持ち手(左右)、平手(左右)、表情武器持ち手(右)",
-			"アーマー×1式",
-			"ジョイントパーツ×1式"
-		],
-		"en": [
-			"Chain gun x 1",
-			"Seal × 1",
-			"Combat knife x 1",
-			"Hand parts Weapon holder (left and right), open hand (left and right), facial expression weapon holder (right)",
-			"Armor x 1 set",
-			"Joint parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "チェーンガン",
+				"en": "chain gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "コンバットナイフ",
+				"en": "combat knife"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ 武器持ち手(左右)、平手(左右)、表情武器持ち手(右)",
+				"en": "Hand parts: weapon holder (left and right), open hand (left and right), facial expression weapon holder (right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "アーマー",
+				"en": "armor"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000172098_1.jpg",
 				"path": "/images/items/01_3775/1000172098_1.jpg",
 				"hash": "9dd197eb05d4de663ef468646df9492b"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000172098_10.jpg",
-				"path": "/images/items/01_3775/1000172098_10.jpg",
-				"hash": "3f2dc4f000303c2635d4fcb4e5af87bb"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000172098_11.jpg",
-				"path": "/images/items/01_3775/1000172098_11.jpg",
-				"hash": "8e283df272344172d166d5fd6c7c538b"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000172098_12.jpg",
-				"path": "/images/items/01_3775/1000172098_12.jpg",
-				"hash": "80d0c4babc93f96921994f7e2f328206"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000172098_2.jpg",
@@ -116,15 +176,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000172098_9.jpg",
 				"path": "/images/items/01_3775/1000172098_9.jpg",
 				"hash": "616bbc7c7e457912b2d126202d092c9e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000172098_10.jpg",
+				"path": "/images/items/01_3775/1000172098_10.jpg",
+				"hash": "3f2dc4f000303c2635d4fcb4e5af87bb"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000172098_11.jpg",
+				"path": "/images/items/01_3775/1000172098_11.jpg",
+				"hash": "8e283df272344172d166d5fd6c7c538b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000172098_12.jpg",
+				"path": "/images/items/01_3775/1000172098_12.jpg",
+				"hash": "80d0c4babc93f96921994f7e2f328206"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3775/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3735",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3735/"

@@ -5,6 +5,48 @@
 		"ja": "30MS オプションパーツセット4(ステルスアーマー)",
 		"en": "30MS Option Parts Set 4 (Stealth Armor)"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6777",
+			"url": "https://bandai-hobby.net/item/01_6777/",
+			"ja": "30MS SIS-K00 ミコルル[カラーB]"
+		},
+		{
+			"id": "01_6778",
+			"url": "https://bandai-hobby.net/item/01_6778/",
+			"ja": "30MS オプションパーツセット22(ターボコスチュームα)[カラーB]"
+		},
+		{
+			"id": "01_6770",
+			"url": "https://bandai-hobby.net/item/01_6770/",
+			"ja": "30MS ティアーシャ(ダリアウエア)[カラーB]"
+		},
+		{
+			"id": "01_6771",
+			"url": "https://bandai-hobby.net/item/01_6771/",
+			"ja": "30MS オプションパーツセット21(スプリントコスチューム)[カラーB]"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -30,10 +72,26 @@
 			"• Includes a general-purpose joint runner common to the 30 MINUTES series that expands the range of customization."
 		]
 	},
-	"accessories": {
-		"ja": ["オプションアーマー×1式", "30MINUTES汎用ジョイントランナー×1"],
-		"en": ["Optional armor x 1 set", "30MINUTES General purpose joint Runner x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "オプションアーマー",
+				"en": "optional armor"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "30MINUTES汎用ジョイントランナー",
+				"en": "30MINUTES General Purpose Joint Runner"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -70,10 +128,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3763/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_6777", "01_6778", "01_6770", "01_6771"],
 	"manual": {
 		"id": "3455",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3455/"

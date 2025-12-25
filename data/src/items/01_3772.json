@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 リック・ドム",
 		"en": "MG 1/100 Rick Dom"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		},
+		{
+			"id": "01_4066",
+			"url": "https://bandai-hobby.net/item/01_4066/",
+			"ja": "MG 1/100 RX-78-2 ガンダム Ver.3.0 [リサーキュレーションカラー/ネオングリーン]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 12
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、「MG 1/100 リック・ドム」が外装・内部構造をアップグレードして登場！",
@@ -28,23 +71,50 @@
 			"• ビーム・バズーカをはじめ、ジャイアント・バズ、ヒート・サーベルが付属。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam \", \" MG 1/100 Rick Dom\" appears with upgraded exterior and internal structure!",
+			"From \"Mobile Suit Gundam\", \"MG 1/100 Rick Dom\" appears with upgraded exterior and internal structure!",
 			"• The blue-purple fuselage, which has a darker tone compared to \"MG 1/100 Dom\", is reproduced in molding color.",
 			"• The larger backpack, rear skirt, and internal vernier unit are also reproduced.",
 			"• The soles of Rick Dom's feet are precisely expressed, including the mechanical details of a space vernier.",
 			"• Includes beam bazooka, giant buzz, and heat saber."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ヒート・サーベル×1",
-			"ジャイアント・バズ×1",
-			"ビーム・バズーカ×1",
-			"水転写式デカール×1",
-			"ジュエルシール×1"
-		],
-		"en": ["Heat saber x1", "Giant Buzz x1", "Beam bazooka x 1", "Water transfer decal x 1", "Jewel Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヒート・サーベル",
+				"en": "heat saber"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジャイアント・バズ",
+				"en": "giant buzz"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・バズーカ",
+				"en": "beam bazooka"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジュエルシール",
+				"en": "Jewel Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -96,10 +166,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3772/",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5509", "01_4977", "01_3754", "01_4066"],
 	"manual": {
 		"id": "641",
 		"url": "https://manual.bandai-hobby.net/menus/detail/641/"

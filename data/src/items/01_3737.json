@@ -5,6 +5,35 @@
 		"ja": "MG 1/100 ガンダムベース限定 ボール Ver.Ka[メカニカルクリア]",
 		"en": "MG 1/100 Gundam Base Limited Ball Ver.Ka [Mechanical Clear]"
 	},
+	"brands": [
+		{
+			"id": "mgka",
+			"url": "https://bandai-hobby.net/brand/mgka/",
+			"ja": "MG Ver.Ka［マスターグレード バージョンカトキ］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2226",
+			"url": "https://bandai-hobby.net/item/01_2226/",
+			"ja": "MG 1/100 RX-78-2 ガンダム Ver.Ka"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3410,
 		"currency": "JPY",
@@ -18,7 +47,6 @@
 		"day": 11
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
@@ -62,13 +90,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3737/",
-	"brandIds": ["mgka"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_2226"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3737/"
 }

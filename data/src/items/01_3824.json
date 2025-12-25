@@ -5,6 +5,60 @@
 		"ja": "MG 1/100 MSA-003 ネモ ユニコーンデザートカラーVer.",
 		"en": "MG 1/100 MSA-003 Nemo Unicorn Desert Color Ver."
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216106",
+			"url": "https://p-bandai.jp/item/item-1000216106/",
+			"ja": "RG 1/144 ユニコーンガンダム２号機 バンシィ・ノルン (最終決戦仕様) [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000183366",
+			"url": "https://p-bandai.jp/item/item-1000183366/",
+			"ja": "ＭＧ 1/100 スタークジェガン"
+		},
+		{
+			"id": "01_4271",
+			"url": "https://bandai-hobby.net/item/01_4271/",
+			"ja": "MG 1/100 ガンダムベース限定 ユニコーンガンダム(光の結晶体)"
+		},
+		{
+			"id": "item-1000164780",
+			"url": "https://p-bandai.jp/item/item-1000164780/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム ペルフェクティビリティ用 ディバイン拡張セット"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 4
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダムＵＣ』ｅｐｉｓｏｄｅ４に登場する数々のモビルスーツの中から、",
@@ -67,32 +120,32 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4772.jpg",
+				"src": "https://bandai-hobby.net/images/153_4772_s_yj6hsg4128l7fvft0d0ddkma2xfo.jpg",
 				"path": "/images/items/01_3824/153_4772.jpg",
 				"hash": "ff30ece115fdf51329e88e919f41160e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4772.jpg",
+				"src": "https://bandai-hobby.net/images/155_4772_s_40d6k5ty4wwkv4jvt4h1j30kv6r5.jpg",
 				"path": "/images/items/01_3824/155_4772.jpg",
 				"hash": "a477b374174a363972f34f84b684d9f2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4772.jpg",
+				"src": "https://bandai-hobby.net/images/156_4772_s_untno6lugzyh4sz2tv7lzynehabm.jpg",
 				"path": "/images/items/01_3824/156_4772.jpg",
 				"hash": "500e157df47887eb992f9ad41ff24622"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4772.jpg",
+				"src": "https://bandai-hobby.net/images/157_4772_s_pgg4hh2zn0eoxjpp3i5wox6ydtpd.jpg",
 				"path": "/images/items/01_3824/157_4772.jpg",
 				"hash": "73cda76aff2cf6ab7d8afae088201aa3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4772.jpg",
+				"src": "https://bandai-hobby.net/images/158_4772_s_brdxzahbtod0v8666hbo9scfd1g5.jpg",
 				"path": "/images/items/01_3824/158_4772.jpg",
 				"hash": "80f9ec99d5874cba45aacc0ec88addf2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4772.jpg",
+				"src": "https://bandai-hobby.net/images/159_4772_s_2k26t8w3ugvxozm1qmb8nfptktc4.jpg",
 				"path": "/images/items/01_3824/159_4772.jpg",
 				"hash": "ba4d9bf1948250f4fca42cfd2e530b5d"
 			}
@@ -100,14 +153,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3824/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216106", "item-1000183366", "01_4271", "item-1000164780"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2125",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2125/"

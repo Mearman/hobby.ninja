@@ -5,6 +5,49 @@
 		"ja": "SDW HEROES 軍馬 ナイトワールド Ver.",
 		"en": "SDW HEROES Warhorse Night World Ver."
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		},
+		{
+			"id": "01_4634",
+			"url": "https://bandai-hobby.net/item/01_4634/",
+			"ja": "SDW HEROES クリアカラーセットIII"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -21,56 +64,57 @@
 	"description": {
 		"ja": [
 			"『SDガンダムワールド ヒーローズ』より、大好評の軍馬が「ナイトワールドVer.」で登場！",
-			"■脚部は関節が可動し、歩行などの表情付けが可能。",
-			"■別売りの英雄たちが安定して騎乗出来るよう背中が展開。",
-			"■ボディには各所に３mm径の穴が配置。ジョイントパーツを介して別売りの英雄たちの鎧パーツが取り付け可能。",
-			"■アクションベースと互換性のある軸を胴体に内蔵。"
+			"• 脚部は関節が可動し、歩行などの表情付けが可能。",
+			"• 別売りの英雄たちが安定して騎乗出来るよう背中が展開。",
+			"• ボディには各所に３mm径の穴が配置。ジョイントパーツを介して別売りの英雄たちの鎧パーツが取り付け可能。",
+			"• アクションベースと互換性のある軸を胴体に内蔵。"
 		],
 		"en": [
-			"From \"SD Gundam World Heroes \", the popular warhorse appears in \" Night World Ver.\"!",
+			"From \"SD Gundam World Heroes\", the popular warhorse appears in \"Night World Ver.\"!",
 			"• The joints of the legs are movable, allowing for expressions such as walking.",
 			"• The back can be expanded so that heroes (sold separately) can ride stably.",
 			"• 3mm diameter holes are placed in various places on the body. Heroes' armor parts (sold separately) can be attached via joint parts.",
 			"• Built-in shaft compatible with action base."
 		]
 	},
-	"accessories": {
-		"ja": ["ジョイントパーツ×1"],
-		"en": ["Joint parts x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4724.jpg",
+				"src": "https://bandai-hobby.net/images/153_4724_s_nouor0iaztbm8xjwr8503cavogfr.jpg",
 				"path": "/images/items/01_3774/153_4724.jpg",
 				"hash": "e058566ddb36c13b801cd6680b974f91"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4724.jpg",
+				"src": "https://bandai-hobby.net/images/155_4724_s_2uijd1l3qq440uzdkvlhslzbpqcg.jpg",
 				"path": "/images/items/01_3774/155_4724.jpg",
 				"hash": "542079789f79d7f379544d4e01ea6f24"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4724.jpg",
+				"src": "https://bandai-hobby.net/images/156_4724_s_jqg79tmb5v33hblaukll92mzj5ii.jpg",
 				"path": "/images/items/01_3774/156_4724.jpg",
 				"hash": "097fe0d0dcf4044d6ddb3c4a68cd11e0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4724.jpg",
+				"src": "https://bandai-hobby.net/images/157_4724_s_mo9njmhzzmvjrtegbzi7kl4f8l0i.jpg",
 				"path": "/images/items/01_3774/157_4724.jpg",
 				"hash": "eed4b2615e08da6411bfa22c72626e2c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4724.jpg",
+				"src": "https://bandai-hobby.net/images/158_4724_s_3jfau6nmlz9sv3ybdtmemqchp4ua.jpg",
 				"path": "/images/items/01_3774/158_4724.jpg",
 				"hash": "b0fa22d8b50b29f9aa01951ed1634a84"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3774/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3774/"
 }

@@ -5,6 +5,49 @@
 		"ja": "SDW HEROES シーザーレジェンドガンダム",
 		"en": "SDW HEROES Caesar Legend Gundam"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		},
+		{
+			"id": "01_4634",
+			"url": "https://bandai-hobby.net/item/01_4634/",
+			"ja": "SDW HEROES クリアカラーセットIII"
+		}
+	],
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -21,64 +64,104 @@
 	"description": {
 		"ja": [
 			"『SDガンダムワールド ヒーローズ』より、威厳と迫力を併せ持つレジーナワールドの王「シーザーレジェンドガンダム」が登場！",
-			"■剣やクリアパーツなど豊富な武装が付属。",
-			"■バックパックは真紅の獅子の姿に変形が可能。",
-			"■クリアの仮面と表情手(左)が付属。"
+			"• 剣やクリアパーツなど豊富な武装が付属。",
+			"• バックパックは真紅の獅子の姿に変形が可能。",
+			"• クリアの仮面と表情手(左)が付属。"
 		],
 		"en": [
-			"From \"SD Gundam World Heroes \" comes the King of Regina World, \" Caesar Legend Gundam\", who has both majesty and power!",
+			"From \"SD Gundam World Heroes\" comes \"Caesar Legend Gundam\", the king of Regina World who has both majesty and power!",
 			"• Comes with a variety of weapons such as swords and clear parts.",
 			"• The backpack can transform into the appearance of a crimson lion.",
 			"• A clear mask and facial expression hand (left) are included."
 		]
 	},
-	"accessories": {
-		"ja": ["剣×1", "鞘×1", "仮面×1", "表情手（左）×1", "クリアパーツ×1式", "ホイルシール×1"],
-		"en": ["Sword x1", "Scabbard x 1", "Mask x1", "Expression hand (left) x 1", "Clear parts x 1 set", "Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "剣",
+				"en": "sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "鞘",
+				"en": "sheath"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "仮面",
+				"en": "mask"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "表情手（左）",
+				"en": "Expression hand (left)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "クリアパーツ",
+				"en": "clear parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4700.jpg",
+				"src": "https://bandai-hobby.net/images/153_4700_s_t1ysrw8j4or1wicdl4wktykyhawt.jpg",
 				"path": "/images/items/01_3748/153_4700.jpg",
 				"hash": "b15a65d05d6a4ce39b358454233fafb4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4700.jpg",
+				"src": "https://bandai-hobby.net/images/155_4700_s_gbv8bsx3imjcogcnqmq3h3vtafxm.jpg",
 				"path": "/images/items/01_3748/155_4700.jpg",
 				"hash": "797c69b779e5dfdd7ce331c55024cca3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4700.jpg",
+				"src": "https://bandai-hobby.net/images/156_4700_s_szp0lwx980pcnzouachnnhflu1wx.jpg",
 				"path": "/images/items/01_3748/156_4700.jpg",
 				"hash": "6826266d054ec61875ec3b7372f47f89"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4700.jpg",
+				"src": "https://bandai-hobby.net/images/157_4700_s_jvp9wpmw7k09mfks99m9c1txad0u.jpg",
 				"path": "/images/items/01_3748/157_4700.jpg",
 				"hash": "b72de4a7fc608f4617b85350e071528a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4700.jpg",
+				"src": "https://bandai-hobby.net/images/158_4700_s_ydjhmd3cpto0zpisa4mbiufp2y4n.jpg",
 				"path": "/images/items/01_3748/158_4700.jpg",
 				"hash": "9d7e34832f1cefb183d123127185cf4d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4700.jpg",
+				"src": "https://bandai-hobby.net/images/159_4700_s_i3lv598lfazmsie8i5yxpdzlwuiw.jpg",
 				"path": "/images/items/01_3748/159_4700.jpg",
 				"hash": "bb76bd8da10fb353fafb37bfda73331d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4700.jpg",
+				"src": "https://bandai-hobby.net/images/189_4700_s_s109p9os163lug4b9m14py9bcj4k.jpg",
 				"path": "/images/items/01_3748/189_4700.jpg",
 				"hash": "db5486c2c8301e9161f381d63abf98aa"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3748/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3748/"
 }

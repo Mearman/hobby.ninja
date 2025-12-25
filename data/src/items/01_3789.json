@@ -5,6 +5,54 @@
 		"ja": "ＭＧ 1/100 真武者頑駄無 戦国の陣 黒衣大鎧",
 		"en": "MG 1/100 Shinmusha Gundam Sengoku Jin Black Clothes Large Armor"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "item-1000220190",
+			"url": "https://p-bandai.jp/item/item-1000220190/",
+			"ja": "ＨＧ 1/144 ザク・デザートタイプ ピンクパンサー隊機"
+		},
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "item-1000216105",
+			"url": "https://p-bandai.jp/item/item-1000216105/",
+			"ja": "RG 1/144 ソードインパルスガンダムＳｐｅｃＩＩ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 10890,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 1
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"―　―　―　―　―　―　―　―　―　―　―",
@@ -116,11 +163,6 @@
 				"hash": "18ee7696224c15a6bb32e2ae49764d8e"
 			},
 			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163466_10.jpg",
-				"path": "/images/items/01_3789/1000163466_10.jpg",
-				"hash": "5419dfd687353c823eff2e4427de8099"
-			},
-			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163466_2.jpg",
 				"path": "/images/items/01_3789/1000163466_2.jpg",
 				"hash": "fc6be6fdb6956e360301f031450fe964"
@@ -159,17 +201,14 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163466_9.jpg",
 				"path": "/images/items/01_3789/1000163466_9.jpg",
 				"hash": "a8832a60ec2d037325490d87cd149275"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000163466_10.jpg",
+				"path": "/images/items/01_3789/1000163466_10.jpg",
+				"hash": "5419dfd687353c823eff2e4427de8099"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3789/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5994", "item-1000220190", "item-1000220189", "item-1000216105"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3789/"
 }

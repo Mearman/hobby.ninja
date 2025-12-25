@@ -5,6 +5,50 @@
 		"ja": "HG 1/72 ニュウレン",
 		"en": "HG 1/72 Newren"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -18,16 +62,15 @@
 		"day": 19
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"2021年10月より放送開始の『境界戦機』より、アジア自由貿易協商に所属する真紅の量産機ニュウレンが登場！複数機体を組み合わせる事で劇中のイメージを再現。",
-			"■形部一平氏デザインのアメイン ニュウレンがHGにて登場。",
-			"■ライフル、アックス、ミサイルランチャー、シールドなど豊富な武装が付属。",
-			"■ライフルはマガジンが着脱式で、シールド裏にも収納可能。",
-			"■ハンドパーツはライフル用武器持ち手、平手、握り手の３種が付属。",
-			"■腕部に装備したミサイルランチャーは、パーツを分割し色分け再現。",
-			"■複数機を組み合わせる事で部隊で行動する劇中イメージを再現可能。"
+			"• 形部一平氏デザインのアメイン ニュウレンがHGにて登場。",
+			"• ライフル、アックス、ミサイルランチャー、シールドなど豊富な武装が付属。",
+			"• ライフルはマガジンが着脱式で、シールド裏にも収納可能。",
+			"• ハンドパーツはライフル用武器持ち手、平手、握り手の３種が付属。",
+			"• 腕部に装備したミサイルランチャーは、パーツを分割し色分け再現。",
+			"• 複数機を組み合わせる事で部隊で行動する劇中イメージを再現可能。"
 		],
 		"en": [
 			"From \"Kyoukai Senki\" which will start broadcasting from 202110, the crimson mass-produced machine Nyuren belonging to the Asian Free Trade Entente appears! Recreate the image from the play by combining multiple aircraft.",
@@ -39,74 +82,100 @@
 			"• By combining multiple aircraft, it is possible to reproduce the image from the play in which the unit acts as a unit."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ライフル×1",
-			"アックス×1",
-			"ミサイルランチャー×2",
-			"シールド×1",
-			"ハンドパーツ 平手(左右)、握り手(左右)、武器持ち手(左右)",
-			"ホイルシール×1",
-			"マーキングシール×1"
-		],
-		"en": [
-			"Rifle x 1",
-			"Ax x1",
-			"Missile launcher x2",
-			"Seal × 1",
-			"Hand parts Open hand (left and right), grip hand (left and right), weapon handle (left and right)",
-			"Foil Seal×1",
-			"MarkingSeal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ライフル",
+				"en": "rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アックス",
+				"en": "ax"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ミサイルランチャー",
+				"en": "missile launcher"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ 平手(左右)、握り手(左右)、武器持ち手(左右)",
+				"en": "Hand parts Open hand (left and right), grip hand (left and right), weapon handle (left and right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4716.jpg",
+				"src": "https://bandai-hobby.net/images/153_4716_s_7u6nbqy0oh6xbpelnh53rhhlnflu.jpg",
 				"path": "/images/items/01_3765/153_4716.jpg",
 				"hash": "c1b336619a815239acb975b5e81a233d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4716.jpg",
+				"src": "https://bandai-hobby.net/images/155_4716_s_1fcmxqmqqpjmu2w0mincsqx4ljal.jpg",
 				"path": "/images/items/01_3765/155_4716.jpg",
 				"hash": "5abd2ba0421e83b2157a2955461d6999"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4716.jpg",
+				"src": "https://bandai-hobby.net/images/156_4716_s_1jipzq4tr58a7cn4vqlj37a51z0a.jpg",
 				"path": "/images/items/01_3765/156_4716.jpg",
 				"hash": "4f340c591f757b769e8728b144fc149d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4716.jpg",
+				"src": "https://bandai-hobby.net/images/157_4716_s_wsh64gvd16uq7t9gynkqc7c6mljo.jpg",
 				"path": "/images/items/01_3765/157_4716.jpg",
 				"hash": "946186375fa98cde36c799f440416397"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4716.jpg",
+				"src": "https://bandai-hobby.net/images/158_4716_s_zfu6p110bdfsx9rdwpzumnc0nxev.jpg",
 				"path": "/images/items/01_3765/158_4716.jpg",
 				"hash": "0d3d8130a68b181c45217343140622a7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4716.jpg",
+				"src": "https://bandai-hobby.net/images/159_4716_s_b1g5u95fq19kqum98k5x0vizh2e2.jpg",
 				"path": "/images/items/01_3765/159_4716.jpg",
 				"hash": "31ecc552ee0f96d8bb19c8fde5fe76d5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4716.jpg",
+				"src": "https://bandai-hobby.net/images/189_4716_s_717wwnxifxzgbfif5a6jb9x9wie3.jpg",
 				"path": "/images/items/01_3765/189_4716.jpg",
 				"hash": "7c207a19e537c06579a1d2197be241b5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4716.jpg",
+				"src": "https://bandai-hobby.net/images/190_4716_s_mkmflzyjn6gphfb8nfj516pxd3ng.jpg",
 				"path": "/images/items/01_3765/190_4716.jpg",
 				"hash": "3ea770b4b3b3df5902017cee6030d6f0"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3765/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3765/"
 }

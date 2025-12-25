@@ -5,6 +5,28 @@
 		"ja": "エクスプローリングラボネイチャー マンモス",
 		"en": "Exploring Lab Nature Mammoth"
 	},
+	"brands": [
+		{
+			"id": "exploringlab_nature",
+			"url": "https://bandai-hobby.net/brand/exploringlab_nature/",
+			"ja": "Exploring Lab Nature[エクスプローリングラボネイチャー]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4115",
+			"url": "https://bandai-hobby.net/item/01_4115/",
+			"ja": "エクスプローリングラボネイチャー ホホジロザメ"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -21,11 +43,11 @@
 	"description": {
 		"ja": [
 			"冷蔵庫で冷やすと…マンモスが復元される！精密骨格と温感変色樹脂が生み出した新感覚プラモデル！",
-			"■「Exploring Lab Nature (エクスプローリングラボネイチャー)」プラモデルシリーズが新登場！",
-			"■樹脂の温度が約１０℃を下回ると色味を帯びる特殊成形材料を採用。氷河期を思わせる冷蔵庫の冷気によってマンモスの毛皮を茶色く変化させよう！",
-			"■“発掘フェーズ”で骨格状態を組み立てた後、毛皮パーツを取り付け“復元フェーズ”に移行することで、組み立て工程も楽しめる。",
-			"■取扱説明書は、組み立て後にミニ図鑑に作り変える事ができる！",
-			"■“学研の図鑑LIVE”とのコラボレーション商品も企画進行中！詳細は後日公開予定！"
+			"• 「Exploring Lab Nature (エクスプローリングラボネイチャー)」プラモデルシリーズが新登場！",
+			"• 樹脂の温度が約１０℃を下回ると色味を帯びる特殊成形材料を採用。氷河期を思わせる冷蔵庫の冷気によってマンモスの毛皮を茶色く変化させよう！",
+			"• “発掘フェーズ”で骨格状態を組み立てた後、毛皮パーツを取り付け“復元フェーズ”に移行することで、組み立て工程も楽しめる。",
+			"• 取扱説明書は、組み立て後にミニ図鑑に作り変える事ができる！",
+			"• “学研の図鑑LIVE”とのコラボレーション商品も企画進行中！詳細は後日公開予定！"
 		],
 		"en": [
 			"If you cool it in the refrigerator...the mammoth will be restored! A new sensation plastic model created by precision skeleton and thermosensitive color-changing resin!",
@@ -36,31 +58,21 @@
 			"• Collaboration products with “Gakken Picture Book LIVE” are also being planned! Details scheduled to be released later!"
 		]
 	},
-	"accessories": {
-		"ja": ["取扱説明書×1"],
-		"en": ["Handling manual×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "取扱説明書",
+				"en": "Handling manual"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170134_1.jpg",
 				"path": "/images/items/01_3770/1000170134_1.jpg",
 				"hash": "24f26fb6f23cd015ebc86b77dcfdb324"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170134_10.jpg",
-				"path": "/images/items/01_3770/1000170134_10.jpg",
-				"hash": "0e66c94fed6057e73a6d49ef84409301"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170134_11.jpg",
-				"path": "/images/items/01_3770/1000170134_11.jpg",
-				"hash": "f65b2fca2929d62414777906c1908301"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170134_12.jpg",
-				"path": "/images/items/01_3770/1000170134_12.jpg",
-				"hash": "26e1f6cffd60cf66fde1cfb1326f701f"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170134_2.jpg",
@@ -101,13 +113,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170134_9.jpg",
 				"path": "/images/items/01_3770/1000170134_9.jpg",
 				"hash": "0b96e42673de4dde31fb1639d6193206"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170134_10.jpg",
+				"path": "/images/items/01_3770/1000170134_10.jpg",
+				"hash": "0e66c94fed6057e73a6d49ef84409301"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170134_11.jpg",
+				"path": "/images/items/01_3770/1000170134_11.jpg",
+				"hash": "f65b2fca2929d62414777906c1908301"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170134_12.jpg",
+				"path": "/images/items/01_3770/1000170134_12.jpg",
+				"hash": "26e1f6cffd60cf66fde1cfb1326f701f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3770/",
-	"brandIds": ["exploringlab_nature"],
-	"seriesIds": [],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_4115"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3770/"
 }

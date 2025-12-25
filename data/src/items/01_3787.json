@@ -5,6 +5,43 @@
 		"ja": "SDW HEROES 龍尊劉備ユニコーンガンダム",
 		"en": "SDW HEROES Ryuson Liu Bei Unicorn Gundam"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5470",
+			"url": "https://bandai-hobby.net/item/01_5470/",
+			"ja": "SDW HEROES キャプテンクアンタ GF"
+		},
+		{
+			"id": "01_5471",
+			"url": "https://bandai-hobby.net/item/01_5471/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-B"
+		},
+		{
+			"id": "01_5472",
+			"url": "https://bandai-hobby.net/item/01_5472/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-F"
+		},
+		{
+			"id": "01_5347",
+			"url": "https://bandai-hobby.net/item/01_5347/",
+			"ja": "SDW HEROES スペリオルフォーミュラー ファイナルドラゴン[クリアカラー]"
+		}
+	],
 	"price": {
 		"amount": 990,
 		"currency": "JPY",
@@ -21,7 +58,7 @@
 	"description": {
 		"ja": [
 			"（10/21記載）諸般の都合により、商品の発売月を変更させていただきました。",
-			"『SD ガンダムワールド ヒーローズ』より、「劉備ユニコーンガンダム」の最終決戦形態「龍尊劉備ユニコーンガンダム」を商品化！",
+			"『SDガンダムワールド ヒーローズ』より、「劉備ユニコーンガンダム」の最終決戦形態「龍尊劉備ユニコーンガンダム」を商品化！",
 			"• 右腕に装備された刀は展開可能。",
 			"• 爪は左右２本それぞれで可動。",
 			"• 左腕のガントレット部には最大３枚のメモリが着脱可能（メモリは１商品につき１枚付属）",
@@ -29,17 +66,22 @@
 		],
 		"en": [
 			"(Posted on 10/21) Due to various circumstances, we have changed the product release.",
-			"From \"SD Gundam World Heroes \", the final battle form of \" Liu Bei Unicorn Gundam \" \" Ryuson Liu Bei Unicorn Gundam\" is commercialized!",
+			"From \"SD Gundam World Heroes\", the final battle form of \"Liu Bei Unicorn Gundam\" \"Ryuson Liu Bei Unicorn Gundam\" is commercialized!",
 			"• The sword equipped on the right arm can be deployed.",
 			"• Two claws on the left and right can be moved.",
-			"• Up to 3 memories can be attached to and removed from the left arm gauntlet (1 memory is included with each product).",
+			"• Up to 3 pieces of memory can be attached to and removed from the gauntlet part of the left arm (1 piece of memory is included with each product).",
 			"• It is compatible with the separately sold \"SD Sangoku Soketsuden Ryuken Liu Bei Unicorn Gundam\", allowing you to enjoy and reproduce the original color."
 		]
 	},
-	"accessories": {
-		"ja": ["ホイルシール×1"],
-		"en": ["Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -70,9 +112,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3787/",
-	"brandIds": [],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3787/"
 }

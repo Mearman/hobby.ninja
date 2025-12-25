@@ -5,6 +5,50 @@
 		"ja": "HG 1/72 ブレイディハウンド",
 		"en": "HG 1/72 Brady Hound"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -18,14 +62,13 @@
 		"day": 22
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"2021年10月より放送開始の『境界戦機』から、海老川兼武氏デザインの北米同盟軍量産機ブレイディハウンドが早くもHGにラインアップ！",
-			"■専用ナイフが２本付属、専用ライフルはマガジンとグレネードが着脱可能。",
-			"■ハンドパーツは２種付属。武器持ち手は手甲パーツをスライドしナックルモードを再現。",
-			"■駐機状態用の頭部パーツも付属し、差し替えで再現可能。",
-			"■「HG 1/72 V-33 ストークキャリー」(別売り)と組み合わせて輸送状態を再現。"
+			"• 専用ナイフが２本付属、専用ライフルはマガジンとグレネードが着脱可能。",
+			"• ハンドパーツは２種付属。武器持ち手は手甲パーツをスライドしナックルモードを再現。",
+			"• 駐機状態用の頭部パーツも付属し、差し替えで再現可能。",
+			"• 「HG 1/72 V-33 ストークキャリー」(別売り)と組み合わせて輸送状態を再現。"
 		],
 		"en": [
 			"From \"Kyoukai Senki\" which started broadcasting from 202110, the North American Alliance Army mass-produced machine Brady Hound designed by Kanetake Ebikawa is already available in the HG lineup!",
@@ -35,70 +78,86 @@
 			"• Reproduce the transportation condition in combination with \"HG 1/72 V-33 Stalk Carry\" (sold separately)."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ハンドパーツ 武器持ち手(左右)、平手(左右)",
-			"専用ライフル(グレネードランチャー装備)×1",
-			"専用ナイフ×2",
-			"ホイルシール×1",
-			"頭部差し替えパーツ×1"
-		],
-		"en": [
-			"Hand parts Weapon handle (left and right), open hand (left and right)",
-			"Special rifle (equipped with grenade launcher) x 1",
-			"Special knife x 2",
-			"Foil Seal×1",
-			"Head replacement parts x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハンドパーツ 武器持ち手(左右)、平手(左右)",
+				"en": "Hand parts Weapon handle (left and right), open hand (left and right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "専用ライフル(グレネードランチャー装備)",
+				"en": "Special rifle (equipped with grenade launcher)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "専用ナイフ",
+				"en": "special knife"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "頭部差し替えパーツ",
+				"en": "head replacement parts"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4702.jpg",
+				"src": "https://bandai-hobby.net/images/153_4702_s_57g192rzyj57atcvy60sgcp47fg4.jpg",
 				"path": "/images/items/01_3750/153_4702.jpg",
 				"hash": "48c588405dd9bebceb3807045e65b5ef"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4702.jpg",
+				"src": "https://bandai-hobby.net/images/155_4702_s_gu4tzmi9tow5o7fkoruosfcy3p2d.jpg",
 				"path": "/images/items/01_3750/155_4702.jpg",
 				"hash": "d33df1472422647591e17db1228bd04d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4702.jpg",
+				"src": "https://bandai-hobby.net/images/156_4702_s_i1ui90mu7dagzij3vzc4shiec6pb.jpg",
 				"path": "/images/items/01_3750/156_4702.jpg",
 				"hash": "9ce08b01d1ae19f409eec20f35c8d9af"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4702.jpg",
+				"src": "https://bandai-hobby.net/images/157_4702_s_age0lj7qow9brnoxsabpyt5n6bn2.jpg",
 				"path": "/images/items/01_3750/157_4702.jpg",
 				"hash": "7cc7fba439dcd162a8e47e8353fb0ffe"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4702.jpg",
+				"src": "https://bandai-hobby.net/images/158_4702_s_q8i5bzd77g7cv5gccn2u3n37rn5h.jpg",
 				"path": "/images/items/01_3750/158_4702.jpg",
 				"hash": "d93c5964185fc82b338c849ab0a021de"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4702.jpg",
+				"src": "https://bandai-hobby.net/images/159_4702_s_0ah9am9a8qzdd1mbodbcx40pibia.jpg",
 				"path": "/images/items/01_3750/159_4702.jpg",
 				"hash": "f3c5e5e7a7bc8bf14752cca15ef4f953"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4702.jpg",
+				"src": "https://bandai-hobby.net/images/189_4702_s_pr6uz9wsvg2cx1dn9oxhjs8xidjd.jpg",
 				"path": "/images/items/01_3750/189_4702.jpg",
 				"hash": "2794639d24e10b383f4da8727e32b9ba"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4702.jpg",
+				"src": "https://bandai-hobby.net/images/190_4702_s_vmi6b8ilv58gmoi98vecaiwecijo.jpg",
 				"path": "/images/items/01_3750/190_4702.jpg",
 				"hash": "5a76f54e06b50bf8c8f95cfe11064421"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3750/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3750/"
 }

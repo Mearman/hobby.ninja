@@ -2,9 +2,52 @@
 	"id": "01_3755",
 	"type": "item",
 	"name": {
-		"ja": "SDW HEROES ロビンフッドガンダム AGE-2",
-		"en": "SDW HEROES Robin Hood Gundam AGE-2"
+		"ja": "SDW HEROES ロビンフッドガンダムAGE-2",
+		"en": "SDW HEROES Robin Hood GundamAGE-2"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		},
+		{
+			"id": "01_4634",
+			"url": "https://bandai-hobby.net/item/01_4634/",
+			"ja": "SDW HEROES クリアカラーセットIII"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -21,56 +64,82 @@
 	"description": {
 		"ja": [
 			"『SDガンダムワールド ヒーローズ』より、「アーサーガンダムMk-III」の側近であり弓の名手である「ロビンフッドガンダムAGE-2」が登場！",
-			"■特徴的な弓形態を再現した武装、エレメントアームズが付属。",
-			"■パーツを組み合わせることで鳥型支援メカを再現。ディスプレイ用の台座も付属。",
-			"■鳥型支援メカとエレメントアームズを組み合わせることが可能。",
-			"■クリア成形を使用した仮面パーツが付属。"
+			"• 特徴的な弓形態を再現した武装、エレメントアームズが付属。",
+			"• パーツを組み合わせることで鳥型支援メカを再現。ディスプレイ用の台座も付属。",
+			"• 鳥型支援メカとエレメントアームズを組み合わせることが可能。",
+			"• クリア成形を使用した仮面パーツが付属。"
 		],
 		"en": [
-			"From \"SD Gundam World Heroes \" comes \" Robin Hood Gundam AGE-2 \", a close aide of \" Arthur Gundam Mk-III\" and a master archer!",
+			"From \"SD Gundam World Heroes\" comes \"Robin Hood GundamAGE-2\", a close aide of \"Arthur GundamMk-III\" and a master archer!",
 			"• Comes with Element Arms, a weapon that reproduces the characteristic bow form.",
 			"• Reproduce the bird-type support mechanism by combining parts. A pedestal for display is also included.",
 			"• Possible to combine bird-type support mechanism and element arms.",
 			"• Mask parts using clear molding are included."
 		]
 	},
-	"accessories": {
-		"ja": ["弓×1", "仮面×1", "クリアパーツ×1式", "ホイルシール×1"],
-		"en": ["Bow x 1", "Mask x1", "Clear parts x 1 set", "Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "弓",
+				"en": "bow"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "仮面",
+				"en": "mask"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "クリアパーツ",
+				"en": "clear parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4707.jpg",
+				"src": "https://bandai-hobby.net/images/153_4707_s_akbpece0huumba4my73vgeazvqf9.jpg",
 				"path": "/images/items/01_3755/153_4707.jpg",
 				"hash": "daf43ddcfa39fbbd0bde6d5f6a50b4f2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4707.jpg",
+				"src": "https://bandai-hobby.net/images/155_4707_s_7m4a8w04p13jkwmz0pv7dfd83vk1.jpg",
 				"path": "/images/items/01_3755/155_4707.jpg",
 				"hash": "53f3b3aef1fb7febd52dce7ec5f038da"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4707.jpg",
+				"src": "https://bandai-hobby.net/images/156_4707_s_1ixpsriarf3lvrye4939t15dsbo4.jpg",
 				"path": "/images/items/01_3755/156_4707.jpg",
 				"hash": "6b8aa18fe1bbabe20c44332a993e6a9d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4707.jpg",
+				"src": "https://bandai-hobby.net/images/157_4707_s_nt3c7ggj947b124kc0sbm9iq1z7k.jpg",
 				"path": "/images/items/01_3755/157_4707.jpg",
 				"hash": "4e31ed520b7207e4dcfa5746c6dd918a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4707.jpg",
+				"src": "https://bandai-hobby.net/images/158_4707_s_ffpcajbajxuyxet3w7jlpd96e61m.jpg",
 				"path": "/images/items/01_3755/158_4707.jpg",
 				"hash": "904779ae5234cd13ccf9b933d9734a89"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3755/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3755/"
 }

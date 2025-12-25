@@ -5,6 +5,48 @@
 		"ja": "30MS SIS-Ac25g ファル=ファリーナ(コンダクターフォーム)",
 		"en": "30MS SIS-Ac25g Falfarina (Conductor Form)"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5975",
+			"url": "https://bandai-hobby.net/item/01_5975/",
+			"ja": "30MS 和泉愛依"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5954",
+			"url": "https://bandai-hobby.net/item/01_5954/",
+			"ja": "30MS オプションヘアスタイルパーツVol.12 全4種 ミディアムヘア2[イエロー4]"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -20,59 +62,81 @@
 	"targetAge": 15,
 	"description": {
 		"ja": [
-			"■キャラクター素体、３種類の表情パーツ、アーマーパーツがセットになったオールインワンアイテム。",
-			"■組み立て易さ、作業導線を意識し、「最適」を追求したランナーのパーツ配置により、スムーズな組み立てが可能。",
-			"■フェイスパーツにはタンポ印刷を採用。シーンに合わせた表情の付け替えを楽しめる。",
-			"■フェイスパーツ/ヘアスタイルパーツ/ボディパーツは部位ごとにラインアップを展開。別売りのパーツと組み替えて自分好みのシスターを創ることができる。",
-			"■別売りの各種オプションパーツを装着し“盛りカスタマイズ”も楽しめる。",
-			"■30 MINUTESシリーズ共通の3mm径の軸を採用。「30 MINUTES MISSIONS」のパーツもオプションとして装着が可能。(※「30 MINUTES MISSIONS」キットの対象年齢は8才以上です)"
+			"• キャラクター素体、３種類の表情パーツ、アーマーパーツがセットになったオールインワンアイテム。",
+			"• 組み立て易さ、作業導線を意識し、「最適」を追求したランナーのパーツ配置により、スムーズな組み立てが可能。",
+			"• フェイスパーツにはタンポ印刷を採用。シーンに合わせた表情の付け替えを楽しめる。",
+			"• フェイスパーツ/ヘアスタイルパーツ/ボディパーツは部位ごとにラインアップを展開。別売りのパーツと組み替えて自分好みのシスターを創ることができる。",
+			"• 別売りの各種オプションパーツを装着し“盛りカスタマイズ”も楽しめる。",
+			"• 30 MINUTESシリーズ共通の3mm径の軸を採用。「30 MINUTES MISSIONS」のパーツもオプションとして装着が可能。(※「30 MINUTES MISSIONS」キットの対象年齢は8才以上です)"
 		],
 		"en": [
 			"• An all-in-one item that includes a character body, three types of expression parts, and armor parts.",
-			"• Smooth assembly is possible due to the ``optimum'' Runner parts arrangement, with consideration for ease of assembly and work flow.",
+			"• Smooth assembly is possible due to the ``optimal'' Runner parts arrangement, with consideration for ease of assembly and work flow.",
 			"• Face parts use tampo printing. You can enjoy changing the facial expressions according to the scene.",
 			"• Face parts/hairstyle parts/body parts are lined up by body part. You can create your own sister by combining parts sold separately.",
 			"• You can also enjoy “extensive customization” by installing various optional parts sold separately.",
-			"• Adopts a 3mm diameter shaft common to the 30 MINUTES series. \"30 MINUTES MISSIONS \" parts can also be installed as options. (*\" 30 MINUTES MISSIONS\" Kit is for ages 8 and up)"
+			"• Adopts a 3mm diameter shaft common to the 30 MINUTES series. \"30 MINUTES MISSIONS\" parts can also be installed as options. (*\"30 MINUTES MISSIONS\" Kit is for ages 8 and up)"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"フェイスパーツ×3種",
-			"アーマーパーツ×1式",
-			"ハンドパーツ×1式",
-			"30MMアーマー用ジョイントパーツ×1式",
-			"ディスプレイ台座×1"
-		],
-		"en": [
-			"Face parts x 3 types",
-			"Armor parts x 1 set",
-			"Hand parts x 1 set",
-			"30MM armor joint parts x 1 set",
-			"Display pedestal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フェイスパーツ",
+				"en": "face parts"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "アーマーパーツ",
+				"en": "armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "30MMアーマー用ジョイントパーツ",
+				"en": "Joint parts for 30MM armor"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座",
+				"en": "display pedestal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175017_1.jpg",
 				"path": "/images/items/01_3776/1000175017_1.jpg",
 				"hash": "ab410d25ade3705a54518114a04f77a0"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175017_10.jpg",
-				"path": "/images/items/01_3776/1000175017_10.jpg",
-				"hash": "2fdecdbac4b0f8f2a379b63eb7b87a26"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175017_11.jpg",
-				"path": "/images/items/01_3776/1000175017_11.jpg",
-				"hash": "69110355e9942eb354980d191f1f683e"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175017_12.jpg",
-				"path": "/images/items/01_3776/1000175017_12.jpg",
-				"hash": "a36174682e64eefb5f4951e4a9710617"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175017_2.jpg",
@@ -113,15 +177,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175017_9.jpg",
 				"path": "/images/items/01_3776/1000175017_9.jpg",
 				"hash": "dbea6a9609cd3c968ed134e5fd2a5eae"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175017_10.jpg",
+				"path": "/images/items/01_3776/1000175017_10.jpg",
+				"hash": "2fdecdbac4b0f8f2a379b63eb7b87a26"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175017_11.jpg",
+				"path": "/images/items/01_3776/1000175017_11.jpg",
+				"hash": "69110355e9942eb354980d191f1f683e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175017_12.jpg",
+				"path": "/images/items/01_3776/1000175017_12.jpg",
+				"hash": "a36174682e64eefb5f4951e4a9710617"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3776/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3468",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3468/"

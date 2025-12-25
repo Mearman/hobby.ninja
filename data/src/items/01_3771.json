@@ -5,6 +5,29 @@
 		"ja": "ハイレゾリューションモデル 1/100 ガンダムアストレイ レッドフレーム パワードレッド",
 		"en": "High Resolution Model 1/100 Gundam Astray Red Frame Powered Red"
 	},
+	"brands": [
+		{
+			"id": "hirm",
+			"url": "https://bandai-hobby.net/brand/hirm/",
+			"ja": "Hi-Resolution Model[ハイレゾリューションモデル]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/100",
 	"price": {
 		"amount": 17600,
 		"currency": "JPY",
@@ -18,20 +41,19 @@
 		"day": 12
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダムSEED ASTRAY』より、強化型駆動システム「パワーシリンダー」を組み込んだガンダムアストレイ レッドフレーム パワードレッドが、ハイレゾリューションシリーズ最大ボリュームで登場！",
-			"■ハイレゾリューションモデルならではの高精細表現はそのままに、パワードレッドの特徴である肩部、腕部を新規造形。",
-			"■ハイレゾリューションモデルの特徴である完成品フレームが付属。",
-			"■ガーベラ・ストレートをマウントするサブアームは回転し、抜刀スタイルが可能に。",
-			"■ガーベラ・ストレートの刃にはシボとメッキ加工で刃紋を表現。茎には菊一文字の銘が刻まれている。",
-			"■上腕、肘、手首の各所装甲は、関節に連動して可動。隆起したちからコブを思わせる演出が組み込まれている。",
-			"■出力全開時のフルパワーモードを再現できる肩部展開ギミックを再現。",
-			"■システムインジェクションを使用した巨大なマニピュレーターが付属。"
+			"• ハイレゾリューションモデルならではの高精細表現はそのままに、パワードレッドの特徴である肩部、腕部を新規造形。",
+			"• ハイレゾリューションモデルの特徴である完成品フレームが付属。",
+			"• ガーベラ・ストレートをマウントするサブアームは回転し、抜刀スタイルが可能に。",
+			"• ガーベラ・ストレートの刃にはシボとメッキ加工で刃紋を表現。茎には菊一文字の銘が刻まれている。",
+			"• 上腕、肘、手首の各所装甲は、関節に連動して可動。隆起したちからコブを思わせる演出が組み込まれている。",
+			"• 出力全開時のフルパワーモードを再現できる肩部展開ギミックを再現。",
+			"• システムインジェクションを使用した巨大なマニピュレーターが付属。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam SEED ASTRAY \", the Gundam Astray Red Frame Powered Red, which incorporates the enhanced drive system \" Power Cylinder\", is now available in the highest volume of the high resolution series!",
+			"From \"Mobile Suit GundamSEED ASTRAY\", the Gundam Astray Red Frame Powered Red, which incorporates the enhanced drive system \"Power Cylinder\", is now available in the highest volume of the high resolution series!",
 			"• While maintaining the high-definition expression unique to high-resolution models, the distinctive shoulders and arms of Power Dread are newly sculpted.",
 			"• Features of the high-resolution model: Comes with a complete frame.",
 			"• The sub-arm that mounts the Gerbera Straight rotates, allowing for a sword-drawing style.",
@@ -41,58 +63,80 @@
 			"• Comes with a huge manipulator that uses system injection."
 		]
 	},
-	"accessories": {
-		"ja": ["ガーベラ・ストレート×1", "ビームサーベル×2", "完成品フレーム×1", "マーキングシール×1"],
-		"en": ["Gerbera Straight×1", "Beam saber x2", "Finished product frame x 1", "MarkingSeal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ガーベラ・ストレート",
+				"en": "gerbera straight"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "beam saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "完成品フレーム",
+				"en": "finished product frame"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4721.jpg",
+				"src": "https://bandai-hobby.net/images/153_4721_s_hd860zb53gyfzudcktmhsjf55fm3.jpg",
 				"path": "/images/items/01_3771/153_4721.jpg",
 				"hash": "af07094e179324ed1b7eda5b3bd1a2ae"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4721.jpg",
+				"src": "https://bandai-hobby.net/images/155_4721_s_nw7a9qa1xg7zq6lez0h9rlinip7k.jpg",
 				"path": "/images/items/01_3771/155_4721.jpg",
 				"hash": "969d84cb1ab1b43c60954ed620b9682f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4721.jpg",
+				"src": "https://bandai-hobby.net/images/156_4721_s_96oc3qmi6r0206jwziqdmues9f1m.jpg",
 				"path": "/images/items/01_3771/156_4721.jpg",
 				"hash": "6e45feb1f0448ed351e3415dbc1bcda0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4721.jpg",
+				"src": "https://bandai-hobby.net/images/157_4721_s_3izltj6fg9505kz1pisriy6f16o7.jpg",
 				"path": "/images/items/01_3771/157_4721.jpg",
 				"hash": "99d46f36451638f4365f256104816f8a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4721.jpg",
+				"src": "https://bandai-hobby.net/images/158_4721_s_y6so8mws9dxee6imm60xohf7zpht.jpg",
 				"path": "/images/items/01_3771/158_4721.jpg",
 				"hash": "8a7ab6430c355e9df58f319ea18cac37"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4721.jpg",
+				"src": "https://bandai-hobby.net/images/159_4721_s_h38drl4mpoer6abyjs9th831j7e5.jpg",
 				"path": "/images/items/01_3771/159_4721.jpg",
 				"hash": "00a9ac1a2bbcb7c83edefdddd84f7e8a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4721.jpg",
+				"src": "https://bandai-hobby.net/images/189_4721_s_tudh0hkk8de2h43sdbss3mwk2h9j.jpg",
 				"path": "/images/items/01_3771/189_4721.jpg",
 				"hash": "8b085882f943be608f30a3422c63e351"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4721.jpg",
+				"src": "https://bandai-hobby.net/images/190_4721_s_87z3fgb3xa4dcgidymolphd0spju.jpg",
 				"path": "/images/items/01_3771/190_4721.jpg",
 				"hash": "f47f0ba7275ca15617d3ae4f287f8de5"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3771/",
-	"brandIds": ["hirm"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_3771/"
 }

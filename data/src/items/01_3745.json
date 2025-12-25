@@ -2,9 +2,52 @@
 	"id": "01_3745",
 	"type": "item",
 	"name": {
-		"ja": "SDW HEROES アーサーガンダム Mk-III",
-		"en": "SDW HEROES Arthur Gundam Mk-III"
+		"ja": "SDW HEROES アーサーガンダムMk-III",
+		"en": "SDW HEROES Arthur GundamMk-III"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		},
+		{
+			"id": "01_4634",
+			"url": "https://bandai-hobby.net/item/01_4634/",
+			"ja": "SDW HEROES クリアカラーセットIII"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -21,23 +64,53 @@
 	"description": {
 		"ja": [
 			"（11/8記載）諸般の都合により、商品の発売月を変更させていただきました。",
-			"『SD ガンダムワールド ヒーローズ』より、ナイトワールドを治める若き騎士王「アーサーガンダム Mk-III」が登場！",
+			"『SDガンダムワールド ヒーローズ』より、ナイトワールドを治める若き騎士王「アーサーガンダムMk-III」が登場！",
 			"• クリアパーツにより騎士系デザインの造形が表現された巨大剣「エクスカリバー」が付属。",
 			"• クリアパーツは剣・鎧のどちらにも取り付けが可能。",
 			"• 表情手(右)が付属。"
 		],
 		"en": [
-			"(Posted on 11/8) Due to various circumstances, we have changed the product release.",
-			"From \"SD Gundam World Heroes \" comes \" Arthur Gundam Mk-III\", the young knight king who rules the Night World!",
+			"(Posted on November 8th) Due to various circumstances, we have changed the product release.",
+			"From \"SD Gundam World Heroes\" comes the young knight king \"Arthur Gundam Mk-III\" who rules the Night World!",
 			"• Includes a giant sword \"Excalibur\" whose knight-like design is expressed using clear parts.",
 			"• Clear parts can be attached to both swords and armor.",
 			"• Expression hand (right) is included."
 		]
 	},
-	"accessories": {
-		"ja": ["剣×1", "表情手（右）×1", "クリアパーツ×1式", "ホイルシール×1"],
-		"en": ["Sword x1", "Expression hand (right) x 1", "Clear parts x 1 set", "Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "剣",
+				"en": "sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "表情手（右）",
+				"en": "Expression hand (right)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "クリアパーツ",
+				"en": "clear parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -73,9 +146,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3745/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3745/"
 }

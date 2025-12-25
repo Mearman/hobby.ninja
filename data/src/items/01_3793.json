@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 RX-77 ガンキャノン",
 		"en": "HGUC 1/144 RX-77 Guncannon"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 1
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダムのサポートメカとしてガンタンクとともに出撃するガンキャノンが一年戦争の世界観を演出します。オープニングでおなじみのキャノン発射体勢を、平手パーツと腹部可動により再現可能にしました。武器は両肩の240mmキャノンのマウント部にスプレーミサイルランチャーも交換装着が可能です。またビームライフルも付いています。"
@@ -30,22 +78,22 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4742.jpg",
+				"src": "https://bandai-hobby.net/images/153_4742_s_xxhnvf4j2i4y0livbya4nseuwoz0.jpg",
 				"path": "/images/items/01_3793/153_4742.jpg",
 				"hash": "19fa6b6c5e596b65cb26df5c8a3753af"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4742.jpg",
+				"src": "https://bandai-hobby.net/images/155_4742_s_zbfhlee5mrl2df8dw44se7mffebr.jpg",
 				"path": "/images/items/01_3793/155_4742.jpg",
 				"hash": "ca118690a2cd45744dc308f553958a61"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4742.jpg",
+				"src": "https://bandai-hobby.net/images/156_4742_s_s2eitp436gzrjklugonszwer7bxm.jpg",
 				"path": "/images/items/01_3793/156_4742.jpg",
 				"hash": "c1d591e739cc1006376fc4a9eb54a348"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4742.jpg",
+				"src": "https://bandai-hobby.net/images/157_4742_s_hqtwgahtpw23b3b1i0q74fpvkaw0.jpg",
 				"path": "/images/items/01_3793/157_4742.jpg",
 				"hash": "3aeb780556721c081ef14f389b3efc52"
 			}
@@ -53,10 +101,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3793/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"manual": {
 		"id": "204",
 		"url": "https://manual.bandai-hobby.net/menus/detail/204/"

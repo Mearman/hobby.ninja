@@ -3,8 +3,61 @@
 	"type": "item",
 	"name": {
 		"ja": "ＨＧ　ＲＸ－７８－２ガンダムＶｅｒ．Ｇ３０ｔｈ　プレミアムゴールドＶｅｒ．",
-		"en": "HG RX-78-2 Gundam Ver. G30th Premium Gold Ver."
+		"en": "HG RX-78-2 GundamVer. G30th Premium Gold Ver."
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000209098",
+			"url": "https://p-bandai.jp/item/item-1000209098/",
+			"ja": "ＲＧ 1/144 RX-78-2 ガンダム Ver.2.0用武器セット"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		}
+	],
 	"price": {
 		"amount": 3000,
 		"currency": "JPY",
@@ -48,25 +101,17 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4749.jpg",
+				"src": "https://bandai-hobby.net/images/153_4749_s_f9r333smlatbspfte9ag4ygsl5kb.jpg",
 				"path": "/images/items/01_3800/153_4749.jpg",
 				"hash": "29540581d1f3a33d74382b0fae2e3236"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4749.jpg",
+				"src": "https://bandai-hobby.net/images/155_4749_s_k5w8kvpzxo9r06sns4cr1ra3z4tb.jpg",
 				"path": "/images/items/01_3800/155_4749.jpg",
 				"hash": "a76f00c533ab3a338dea94373f241645"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3800/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000209098", "01_4985", "01_4971", "01_4365"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3800/"
 }

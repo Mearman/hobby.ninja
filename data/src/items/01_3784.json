@@ -5,6 +5,43 @@
 		"ja": "BANDAI SPIRITS スティックヤスリセット",
 		"en": "BANDAI SPIRITS stick file set"
 	},
+	"brands": [
+		{
+			"id": "tool",
+			"url": "https://bandai-hobby.net/brand/tool/",
+			"ja": "BANDAI SPIRITS ツール"
+		},
+		{
+			"id": "tool",
+			"url": "https://bandai-hobby.net/brand/tool/",
+			"ja": "BANDAI SPIRITS ツール"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4930",
+			"url": "https://bandai-hobby.net/item/01_4930/",
+			"ja": "マルチビルダーズケース"
+		},
+		{
+			"id": "01_4931",
+			"url": "https://bandai-hobby.net/item/01_4931/",
+			"ja": "マルチビルダーズランナースタンド"
+		},
+		{
+			"id": "01_4305",
+			"url": "https://bandai-hobby.net/item/01_4305/",
+			"ja": "BANDAI SPIRITS エントリーツールセット"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -34,10 +71,19 @@
 			"• There are three types of file coarseness: #400, #600, and #1000."
 		]
 	},
-	"accessories": {
-		"ja": ["スティックヤスリ×3種"],
-		"en": ["Stick file x 3 types"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "スティックヤスリ",
+				"en": "stick file"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -68,9 +114,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3784/",
-	"brandIds": ["tool"],
-	"seriesIds": [],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_4930", "01_4931", "01_4305"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3784/"
 }

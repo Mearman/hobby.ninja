@@ -5,6 +5,49 @@
 		"ja": "SDW HEROES 才蔵ガンダムデルタカイ",
 		"en": "SDW HEROES Saizo Gundam Delta Kai"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		},
+		{
+			"id": "01_4634",
+			"url": "https://bandai-hobby.net/item/01_4634/",
+			"ja": "SDW HEROES クリアカラーセットIII"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -21,52 +64,78 @@
 	"description": {
 		"ja": [
 			"『SDガンダムワールド ヒーローズ』より、「佐助デルタガンダム」の宿命のライバル「才蔵ガンダムデルタカイ」が登場！",
-			"■手裏剣や刀など豊富な武装が付属。",
-			"■巨大な手裏剣が複数付属！手裏剣はキットオリジナルの組み合わせも可能！"
+			"• 手裏剣や刀など豊富な武装が付属。",
+			"• 巨大な手裏剣が複数付属！手裏剣はキットオリジナルの組み合わせも可能！"
 		],
 		"en": [
-			"From \"SD Gundam World Heroes \" comes \" Saizo Gundam Delta Kai \", the destined rival of \" Sasuke Delta Gundam\"!",
+			"From \"SD Gundam World Heroes\" comes \"Saizo Gundam Delta Kai\", the fateful rival of \"Sasuke Delta Gundam\"!",
 			"• Comes with a variety of weapons such as shuriken and swords.",
 			"• Multiple giant shuriken included! Kit original combinations of shuriken are also possible!"
 		]
 	},
-	"accessories": {
-		"ja": ["刀×1", "手裏剣×1式", "仮面×1", "ホイルシール×1"],
-		"en": ["Sword x1", "Shuriken x 1 set", "Mask x1", "Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "刀",
+				"en": "sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "手裏剣",
+				"en": "Shuriken"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "仮面",
+				"en": "mask"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4723.jpg",
+				"src": "https://bandai-hobby.net/images/153_4723_s_sbfvjm7gfrtkd40pvtpgugqehg4r.jpg",
 				"path": "/images/items/01_3773/153_4723.jpg",
 				"hash": "b7c6672b865ec9505ec3eb1957e09c12"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4723.jpg",
+				"src": "https://bandai-hobby.net/images/155_4723_s_5vw4z8oabwg0zqquzq61eg0agl6g.jpg",
 				"path": "/images/items/01_3773/155_4723.jpg",
 				"hash": "a91fc345db5ae90f5accc91a01ca426b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4723.jpg",
+				"src": "https://bandai-hobby.net/images/156_4723_s_yvws5l0vagekj17enio62vp9j97z.jpg",
 				"path": "/images/items/01_3773/156_4723.jpg",
 				"hash": "c1c7ca5130406b65a662718cfb0c72d0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4723.jpg",
+				"src": "https://bandai-hobby.net/images/157_4723_s_n16q49xzvsxkv0tal6juf8syhtu6.jpg",
 				"path": "/images/items/01_3773/157_4723.jpg",
 				"hash": "f955d096a42727e8ad64add5e0fbd1d6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4723.jpg",
+				"src": "https://bandai-hobby.net/images/158_4723_s_bn9tixko2mr4xcqokr8ma81ajn95.jpg",
 				"path": "/images/items/01_3773/158_4723.jpg",
 				"hash": "fbb116ee6219e361d2d30ff62cd1bb40"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3773/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3773/"
 }

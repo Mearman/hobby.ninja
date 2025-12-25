@@ -5,6 +5,50 @@
 		"ja": "HG 1/72 メイレスケンブ斬",
 		"en": "HG 1/72 Meireskenbuzan"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -18,15 +62,14 @@
 		"day": 16
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"KEN OKUYAMA DESIGNによる構造検証を経て立体化された第二部主人公機を最速立体化！",
-			"■巨大な武装を操る為、マッシブなシルエットに生まれ変わった。",
-			"■腕部の機関砲は着脱可能。ケンブと武装の共有を想定したアタッチメントを搭載。",
-			"■人体における大胸筋のような構造を模した胸部シリンダーギミックは、伸縮可動を再現。",
-			"■ケンブ斬の全高ほどもある、迫力の大型の超熱振式戦闘長刀が付属。",
-			"■背部ウェポンラックには各種武装を着脱可能。",
+			"• 巨大な武装を操る為、マッシブなシルエットに生まれ変わった。",
+			"• 腕部の機関砲は着脱可能。ケンブと武装の共有を想定したアタッチメントを搭載。",
+			"• 人体における大胸筋のような構造を模した胸部シリンダーギミックは、伸縮可動を再現。",
+			"• ケンブ斬の全高ほどもある、迫力の大型の超熱振式戦闘長刀が付属。",
+			"• 背部ウェポンラックには各種武装を着脱可能。",
 			"TVアニメ「境界戦機」第二部は４月開始！！第一部のエピソードはBANDAI SPIRITS 公式 YouTubeにて全話無料配信中！"
 		],
 		"en": [
@@ -34,92 +77,108 @@
 			"• Reborn with a massive silhouette in order to control huge weapons.",
 			"• The machine gun on the arm is removable. Equipped with an attachment designed to share weapons with Kenbu.",
 			"• The chest cylinder gimmick, which mimics the structure of the pectoralis major muscle in the human body, reproduces the ability to expand and contract.",
-			"• Comes with an impressively large super heat wave fighting long sword that is as tall as Kenbuzan.",
+			"• Comes with an impressively large super-heat-swing fighting long sword that is as tall as Kenbuzan.",
 			"• Various weapons can be attached and detached from the back weapon rack.",
 			"The second part of the TV anime \"Kyoukai Senki\" starts in 4! ! All episodes of the first part are available for free on BANDAI SPIRITS official YouTube!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"超熱振式戦闘長刀×１",
-			"40mm腕部機関砲×１",
-			"60mm携行機関砲×１",
-			"ウェポンラック×１",
-			"ハンドパーツ 平手（左右）&#8203;、武器持ち手（左右）&#8203;、銃持ち手（右）",
-			"シール×１"
-		],
-		"en": [
-			"Super heat wave combat long sword x 1",
-			"40mm arm cannon x 1",
-			"60mm portable machine gun x 1",
-			"Weapon rack x 1",
-			"Hand parts: open hand (left and right), weapon handle (left and right), gun handle (right)",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "超熱振式戦闘長刀×１",
+				"en": "Super heat wave combat long sword x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "40mm腕部機関砲×１",
+				"en": "40mm arm cannon x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "60mm携行機関砲×１",
+				"en": "60mm portable machine gun x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ウェポンラック×１",
+				"en": "Weapon rack x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ 平手（左右）&#8203;、武器持ち手（左右）&#8203;、銃持ち手（右）",
+				"en": "Hand parts: open hand (left and right), weapon handle (left and right), gun handle (right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4715.jpg",
+				"src": "https://bandai-hobby.net/images/153_4715_s_zrx06ys7lkrps68sq90ifhwue11l.jpg",
 				"path": "/images/items/01_3764/153_4715.jpg",
 				"hash": "decb0b029f541cb81fa2270ead9b04c0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4715.jpg",
+				"src": "https://bandai-hobby.net/images/155_4715_s_9qmt6xgqir3u3mboyppiu41x02wj.jpg",
 				"path": "/images/items/01_3764/155_4715.jpg",
 				"hash": "7a29aff38443a98e13f9eaf547a1f537"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4715.jpg",
+				"src": "https://bandai-hobby.net/images/156_4715_s_23i4kt65x8qjqqbrdrufskj27bxz.jpg",
 				"path": "/images/items/01_3764/156_4715.jpg",
 				"hash": "19dbc66c85e20cf30b00bc7e5ce96f3d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4715.jpg",
+				"src": "https://bandai-hobby.net/images/157_4715_s_fp4qv5wojnh4a0b2p4ypkcrad5n4.jpg",
 				"path": "/images/items/01_3764/157_4715.jpg",
 				"hash": "bd00118bc73a610ab2abe241fad5004c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4715.jpg",
+				"src": "https://bandai-hobby.net/images/158_4715_s_jdua7ou5du6na67jkkrx2id9ai86.jpg",
 				"path": "/images/items/01_3764/158_4715.jpg",
 				"hash": "802bcf8a874fffbabe3c60242c7207f9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4715.jpg",
+				"src": "https://bandai-hobby.net/images/159_4715_s_0az5l521u41hgbpzdeis2kcujjio.jpg",
 				"path": "/images/items/01_3764/159_4715.jpg",
 				"hash": "4106fdeef5605e2c560e1018415a5feb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4715.jpg",
+				"src": "https://bandai-hobby.net/images/189_4715_s_1c5vazj9qy6thqcmll0iu4kcoali.jpg",
 				"path": "/images/items/01_3764/189_4715.jpg",
 				"hash": "3f48aadcb7f3d3ce37f36f5a7bc4503d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4715.jpg",
+				"src": "https://bandai-hobby.net/images/190_4715_s_4e57itvu29xrq3ujanbiih4bgj1u.jpg",
 				"path": "/images/items/01_3764/190_4715.jpg",
 				"hash": "b1592c9a541c8268cf0c459fde421b05"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4715.jpg",
+				"src": "https://bandai-hobby.net/images/191_4715_s_qd6r0okc5ez6k8kavczki7yqyxop.jpg",
 				"path": "/images/items/01_3764/191_4715.jpg",
 				"hash": "661afb73c7aef576732a96300b9265de"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4715.jpg",
+				"src": "https://bandai-hobby.net/images/192_4715_s_hp6qg7d9abnkz8opd0y3m3yfb3k5.jpg",
 				"path": "/images/items/01_3764/192_4715.jpg",
 				"hash": "927f2c8dc5ef61d6bf4c760a2d49b326"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_4715.jpg",
+				"src": "https://bandai-hobby.net/images/193_4715_s_p5z2tufe5zf7k5wgag1v9i2l0bru.jpg",
 				"path": "/images/items/01_3764/193_4715.jpg",
 				"hash": "c240e7ba98394402414e11a6a2392916"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3764/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3764/"
 }

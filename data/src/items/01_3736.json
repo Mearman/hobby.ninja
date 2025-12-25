@@ -5,6 +5,60 @@
 		"ja": "ＲＧ 1/144 Hi-νガンダム専用ハイパー・メガ・バズーカ・ランチャー",
 		"en": "RG 1/144 Hi-νGundam Hyper Mega Bazooka Launcher"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4121",
+			"url": "https://bandai-hobby.net/item/01_4121/",
+			"ja": "RG 1/144 ガンダムベース限定 Hi-νガンダム[チタニウムフィニッシュ]"
+		},
+		{
+			"id": "01_3524",
+			"url": "https://bandai-hobby.net/item/01_3524/",
+			"ja": "RG 1/144 Hi-νガンダム"
+		},
+		{
+			"id": "01_3496",
+			"url": "https://bandai-hobby.net/item/01_3496/",
+			"ja": "RG 1/144 νガンダム[クリアカラー]"
+		},
+		{
+			"id": "01_2995",
+			"url": "https://bandai-hobby.net/item/01_2995/",
+			"ja": "RG 1/144 νガンダム[クリアカラー] 初回生産限定パッケージ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 9
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－　「ＲＧ 1/144 Hi-νガンダム」（別売り　2021年9月店頭販売商品）連動アイテムが登場！　－－－",
@@ -71,7 +124,7 @@
 			"● Sophisticated shape with completely new design",
 			"Based on the setting drawings by mechanical designer Noriyuki Yanase, the characteristic shape of the Hyper Mega Bazooka Launcher is thoroughly reproduced in every detail.",
 			"Supplemented with precision and sharp modeling unique to the RG series.",
-			"● Experience the long gun barrel with a total length of over 300mm with 1/144 Scale",
+			"● Experience the long gun barrel with a total length of over 300mm in 1/144 Scale",
 			"Thorough reproduction of details such as the shoulder docking arm and cooling cylinder.",
 			"● Comes with optional parts to recreate the scene in the play.",
 			"Reproduces the energy tube and injection unit ejected from the mothership Ra Kailum. The injection unit can be connected to the included action base.",
@@ -84,7 +137,7 @@
 			"This product is combined with \"RG 1/144 Hi-νGundam\" (sold separately 20219 in-store sales product),",
 			"A product to reproduce the equipped state of \"Hyper Mega Bazooka Launcher\".",
 			"*The MS body is not included with this product.",
-			"* To reproduce the published photo, this product and \"RG 1/144 Hi-νGundam\" (sold separately, 20219 over-the-counter product) are required.",
+			"* To reproduce the published photo, this product and \"RG 1/144 Hi-νGundam\" (sold separately, 20219 in-store sales product) are required.",
 			"* Due to the weight of this product, please display it in a stable location, referring to the poses in the photo.",
 			"*Depending on sales conditions, the quantity that can be purchased may change in the future.",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -112,11 +165,6 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161850_1.jpg",
 				"path": "/images/items/01_3736/1000161850_1.jpg",
 				"hash": "a5eb9282af45d911f3ecda158fb44986"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161850_10.jpg",
-				"path": "/images/items/01_3736/1000161850_10.jpg",
-				"hash": "225fe42728e066a197752c33c2e00a17"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161850_2.jpg",
@@ -157,19 +205,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161850_9.jpg",
 				"path": "/images/items/01_3736/1000161850_9.jpg",
 				"hash": "f48873f952e27fb41f082c91e50a8891"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000161850_10.jpg",
+				"path": "/images/items/01_3736/1000161850_10.jpg",
+				"hash": "225fe42728e066a197752c33c2e00a17"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3736/",
-	"brandIds": ["rg", "pb_rg", "pb_gunpla"],
-	"seriesIds": ["gundam-cca"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4121", "01_3524", "01_3496", "01_2995"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2342",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2342/"

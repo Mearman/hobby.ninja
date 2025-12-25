@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ドム",
 		"en": "MG 1/100 Dom"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_4066",
+			"url": "https://bandai-hobby.net/item/01_4066/",
+			"ja": "MG 1/100 RX-78-2 ガンダム Ver.3.0 [リサーキュレーションカラー/ネオングリーン]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -18,18 +62,17 @@
 		"day": 11
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム』より、根強い人気を誇る「MG 1/100 ドム」を新規金型やパーツ更新によりアップグレード！",
-			"■新規金型で腰部や腕部などの外装部分を改良。特に腕部は、肩と前腕の繋がりが自然に見えるよう形状修正しつつ、肘の関節構造も刷新。",
-			"■肩と胴体の接続部に前方へのスイング機構を実装。ジャイアント・バズを構える印象的なポーズが各部の干渉を軽減しスムーズに決まる。",
-			"■股関節には新たにスイング可動構造を採用。さらに太腿の接続部に軸可動を追加、腰サイドアーマー更新により、脚部の可動域が大幅に拡大。",
-			"■ドムの特徴的な屈んだポージングを再現するため、足首の内部フレームを変更。",
-			"■ジャイアント・バズをはじめ、ラケーテン・バズ、シュツルム・ファウストなど豊富な武装が付属。"
+			"• 新規金型で腰部や腕部などの外装部分を改良。特に腕部は、肩と前腕の繋がりが自然に見えるよう形状修正しつつ、肘の関節構造も刷新。",
+			"• 肩と胴体の接続部に前方へのスイング機構を実装。ジャイアント・バズを構える印象的なポーズが各部の干渉を軽減しスムーズに決まる。",
+			"• 股関節には新たにスイング可動構造を採用。さらに太腿の接続部に軸可動を追加、腰サイドアーマー更新により、脚部の可動域が大幅に拡大。",
+			"• ドムの特徴的な屈んだポージングを再現するため、足首の内部フレームを変更。",
+			"• ジャイアント・バズをはじめ、ラケーテン・バズ、シュツルム・ファウストなど豊富な武装が付属。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam \", the ever-popular \" MG 1/100 Dom\" has been upgraded with new molds and updated parts!",
+			"From \"Mobile Suit Gundam\", the ever-popular \"MG 1/100 Dom\" has been upgraded with new molds and updated parts!",
 			"• Improved exterior parts such as the waist and arms using new molds. In particular, the shape of the arms has been revised so that the connection between the shoulders and forearms looks natural, while the joint structure of the elbows has also been redesigned.",
 			"• A forward swing mechanism is implemented at the connection between the shoulder and torso. The impressive pose of holding the Giant Buzz is achieved smoothly by reducing interference between various parts.",
 			"• A new swing movable structure has been adopted for the hip joint. Additionally, axis movement has been added to the thigh joints, and the waist side armor has been updated to greatly expand the range of motion of the legs.",
@@ -37,63 +80,88 @@
 			"• Comes with a variety of weapons including Giant Buzz, Raketen Buzz, and Sturm Faust."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ヒート・サーベル×1",
-			"ジャイアント・バズ×１",
-			"ラケーテン・バズ×1",
-			"シュツルム・ファウスト×2",
-			"90mmマシンガン×1",
-			"水転写式デカール×1"
-		],
-		"en": [
-			"Heat saber x1",
-			"Giant Buzz x1",
-			"Raketen Buzz×1",
-			"Sturm Faust x2",
-			"90mm machine gun x 1",
-			"Water transfer decal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヒート・サーベル",
+				"en": "heat saber"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジャイアント・バズ×１",
+				"en": "Giant Buzz x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ラケーテン・バズ",
+				"en": "Raketen Buzz"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シュツルム・ファウスト",
+				"en": "Sturm Faust"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "90mmマシンガン",
+				"en": "90mm machine gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4706.jpg",
+				"src": "https://bandai-hobby.net/images/153_4706_s_8f7igxlx6blmt7dg964m57fgbgtm.jpg",
 				"path": "/images/items/01_3754/153_4706.jpg",
 				"hash": "9222cba1e99295f9223979aa59c19927"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4706.jpg",
+				"src": "https://bandai-hobby.net/images/155_4706_s_w9ntt5c6v9vwbcj8egiowkf42xhp.jpg",
 				"path": "/images/items/01_3754/155_4706.jpg",
 				"hash": "38e456a3189bb56583206ac24260e154"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4706.jpg",
+				"src": "https://bandai-hobby.net/images/156_4706_s_izznsifoo6mpuhfbhe87gk6w8x9i.jpg",
 				"path": "/images/items/01_3754/156_4706.jpg",
 				"hash": "03989576b588ab5cebfa4469405295fd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4706.jpg",
+				"src": "https://bandai-hobby.net/images/157_4706_s_a04yhcdt76m2ts4sf2ojtx9u58by.jpg",
 				"path": "/images/items/01_3754/157_4706.jpg",
 				"hash": "18a2997195b329ffae7c09ae21d7d2d8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4706.jpg",
+				"src": "https://bandai-hobby.net/images/158_4706_s_s0uu2v0els5eyb2zghnfyy3zlc3s.jpg",
 				"path": "/images/items/01_3754/158_4706.jpg",
 				"hash": "0cbe35dee853640f9ef3f9b6c8ae31ba"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4706.jpg",
+				"src": "https://bandai-hobby.net/images/159_4706_s_z7p0kxmuhld5dyrq8kww5i6inedb.jpg",
 				"path": "/images/items/01_3754/159_4706.jpg",
 				"hash": "4d4763d948f6f2a1db312c74c54043f3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4706.jpg",
+				"src": "https://bandai-hobby.net/images/189_4706_s_k05pr74b35yd5m7jaw74raxd6r02.jpg",
 				"path": "/images/items/01_3754/189_4706.jpg",
 				"hash": "d1be56cf90b5269dcfd5f9bdacf9c483"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4706.jpg",
+				"src": "https://bandai-hobby.net/images/190_4706_s_z2oi349n1jtex9wqcxd4lgxs3r5q.jpg",
 				"path": "/images/items/01_3754/190_4706.jpg",
 				"hash": "ece51810d178774c1f9af895f481e4cc"
 			}
@@ -101,10 +169,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3754/",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_4066"],
 	"manual": {
 		"id": "640",
 		"url": "https://manual.bandai-hobby.net/menus/detail/640/"
