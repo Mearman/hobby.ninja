@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 リゼルC型(ディフェンサーa+bユニット/ゼネラル・レビル配備機)",
 		"en": "MG 1/100 Rezel C type (Defensor a+b unit/General Revil deployment machine)"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000183366",
+			"url": "https://p-bandai.jp/item/item-1000183366/",
+			"ja": "ＭＧ 1/100 スタークジェガン"
+		},
+		{
+			"id": "01_4271",
+			"url": "https://bandai-hobby.net/item/01_4271/",
+			"ja": "MG 1/100 ガンダムベース限定 ユニコーンガンダム(光の結晶体)"
+		},
+		{
+			"id": "01_2670",
+			"url": "https://bandai-hobby.net/item/01_2670/",
+			"ja": "MG 1/100 ジェスタ・キャノン[クリアカラー]"
+		},
+		{
+			"id": "item-1000138934",
+			"url": "https://p-bandai.jp/item/item-1000138934/",
+			"ja": "ＭＧ 1/100 リ・ガズィ（ユニコーンＶｅｒ．）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 7150,
 		"currency": "JPY",
@@ -18,10 +62,9 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"• 『機動戦士ガンダム UC　episode 6』に登場するゼネラル・レビル仕様のリゼル。",
+			"• 『機動戦士ガンダムUC　episode 6』に登場するゼネラル・レビル仕様のリゼル。",
 			"• ミサイル装備のaユニット、ランチャー仕様のbユニットは、コンパチ式で換装可能。",
 			"• ゼネラル・レビル仕様の特徴であるグレーとオレンジのカラーリングは成形色で再現。"
 		],
@@ -34,17 +77,17 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_852.jpg",
+				"src": "https://bandai-hobby.net/images/153_852_s_5169mej8hx7nurhw6j4jk79w59mf.jpg",
 				"path": "/images/items/01_5786/153_852.jpg",
 				"hash": "40a042cde62f78abefa71cda170f232b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_852.jpg",
+				"src": "https://bandai-hobby.net/images/155_852_s_lobsjyfg7tsfgwbqy1a2gkzy8r76.jpg",
 				"path": "/images/items/01_5786/155_852.jpg",
 				"hash": "090ff324bd0bce0993fef4d0bb27d5ec"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_852.jpg",
+				"src": "https://bandai-hobby.net/images/156_852_s_k78u5rq81r0b57hd05exm9xohfml.jpg",
 				"path": "/images/items/01_5786/156_852.jpg",
 				"hash": "b52006b592908e0c60bfeb61fdc077d0"
 			}
@@ -52,10 +95,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5786/",
-	"brandIds": ["mg"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000183366", "01_4271", "01_2670", "item-1000138934"],
 	"manual": {
 		"id": "607",
 		"url": "https://manual.bandai-hobby.net/menus/detail/607/"

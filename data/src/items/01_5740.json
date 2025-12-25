@@ -5,6 +5,40 @@
 		"ja": "RG 1/144 スカイグラスパー[ランチャー・ソードパック]",
 		"en": "RG 1/144 Sky Grasper [Launcher Sword Pack]"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3721",
+			"url": "https://bandai-hobby.net/item/01_3721/",
+			"ja": "RG 1/144 ZGMF-X10A フリーダムガンダム"
+		},
+		{
+			"id": "01_3720",
+			"url": "https://bandai-hobby.net/item/01_3720/",
+			"ja": "RG 1/144 エールストライクガンダム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -18,7 +52,6 @@
 		"day": 29
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• RGエールストライクガンダムに完全対応。",
@@ -38,17 +71,17 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_805.jpg",
+				"src": "https://bandai-hobby.net/images/153_805_s_wu44v0g68y1w9h16tsssnw1t3muy.jpg",
 				"path": "/images/items/01_5740/153_805.jpg",
 				"hash": "f0c701d0037cfa5d89dc0936fd409a2f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_805.jpg",
+				"src": "https://bandai-hobby.net/images/155_805_s_0sv2csick2to1539wr43sjwdapwu.jpg",
 				"path": "/images/items/01_5740/155_805.jpg",
 				"hash": "6ebabf362c699bc1e3a986c981963d04"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_805.jpg",
+				"src": "https://bandai-hobby.net/images/156_805_s_bgxafzzlbjp7mgth731myh46gjct.jpg",
 				"path": "/images/items/01_5740/156_805.jpg",
 				"hash": "4b1554368c4ea65e2e6ee2ce1f5e85b6"
 			}
@@ -56,10 +89,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5740/",
-	"brandIds": ["rg"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_3721", "01_3720"],
 	"manual": {
 		"id": "845",
 		"url": "https://manual.bandai-hobby.net/menus/detail/845/"

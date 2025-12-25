@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 Gサイフォス",
 		"en": "HG 1/144 G Xiphos"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "age",
+			"url": "https://bandai-hobby.net/series/age/",
+			"ja": "機動戦士ガンダムAGE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000170540",
+			"url": "https://p-bandai.jp/item/item-1000170540/",
+			"ja": "ＨＧ 1/144 フォーンファルシア"
+		},
+		{
+			"id": "item-1000169836",
+			"url": "https://p-bandai.jp/item/item-1000169836/",
+			"ja": "ＨＧ 1/144 ガンダムＡＧＥ-１ レイザー＆ガンダムＡＧＥ-２ アルティメス セット"
+		},
+		{
+			"id": "01_3738",
+			"url": "https://bandai-hobby.net/item/01_3738/",
+			"ja": "HG 1/144 「機動戦士ガンダムAGE」 MSセット[クリアカラー]"
+		},
+		{
+			"id": "item-1000082540",
+			"url": "https://p-bandai.jp/item/item-1000082540",
+			"ja": "ＨＧ 1/144 ガンダムレギルス〔MEMORY OF EDEN〕"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,15 +62,14 @@
 		"day": 16
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 公式外伝『機動戦士ガンダム AGE～追憶のシド～』で、主人公ウィービック・ランブロが搭乗するMS。",
+			"• 公式外伝『機動戦士ガンダムAGE～追憶のシド～』で、主人公ウィービック・ランブロが搭乗するMS。",
 			"• 高出力ヒートソードとドッズバスターHが付属。",
 			"• ドッズバスターは左手ハンドパーツと差し替え可能。"
 		],
 		"en": [
-			"• The mobile suit piloted by the main character Weavik Lambro in the official side story \"Mobile Suit Gundam AGE ~Sid Reminiscence~\".",
+			"• An MS piloted by the main character, Weavik Lambro, in the official side story \"Mobile Suit GundamAGE ~Sid Reminiscence~\".",
 			"• High power heat sword and Dods Buster H are included.",
 			"• Dods Buster can be replaced with left hand parts."
 		]
@@ -34,17 +77,17 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_846.jpg",
+				"src": "https://bandai-hobby.net/images/153_846_s_nlwghqmln35olpqrka4t3xg550hi.jpg",
 				"path": "/images/items/01_5783/153_846.jpg",
 				"hash": "eef6aa23c4eed54dfdc4fc5e9973ce0e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_846.jpg",
+				"src": "https://bandai-hobby.net/images/155_846_s_d0yea0s98whdnlvoelx5amtvl1ng.jpg",
 				"path": "/images/items/01_5783/155_846.jpg",
 				"hash": "29ab6b966c62256f9edab21cba98c4f2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_846.jpg",
+				"src": "https://bandai-hobby.net/images/156_846_s_x3yb3gfwsaj30o7ic4yhqvb4gs39.jpg",
 				"path": "/images/items/01_5783/156_846.jpg",
 				"hash": "156ff2be2cffcb3e9aaacaa99b59f2a7"
 			}
@@ -52,10 +95,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5783/",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "6",
 		"url": "https://manual.bandai-hobby.net/menus/detail/6/"

@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC 1/144 MS-06R-1A シン・マツナガ専用ザク",
-		"en": "HGUC 1/144 MS-06R-1A Shin Matsunaga Zaku"
+		"en": "HGUC 1/144 MS-06R-1A Zaku for Shin Matsunaga"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 高機動型ザクが、「白狼」と称されるエースパイロット、シン・マツナガの仕様となって登場。",
@@ -36,23 +78,23 @@
 			"• Reproduces equipment unique to high-mobility models such as backpacks and leg verniers.",
 			"• In addition to a bazooka and machine gun, a variety of options are included, such as a heat hawk and a weapon rack for Seal.",
 			"• Comes with dedicated markings.",
-			"• You can recreate the \"Giant Bazooka \" by combining the dedicated bazooka with the separately sold \" HGUC Dom\" bazooka. Can also be hung on a Seal weapon rack."
+			"• You can recreate the \"Giant Bazooka\" by combining the dedicated bazooka with the separately sold \"HGUC Dom\" bazooka. Can also be hung on a Seal weapon rack."
 		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_843.jpg",
+				"src": "https://bandai-hobby.net/images/153_843_s_l6vep8pp2bas5lyha130ynlnumz6.jpg",
 				"path": "/images/items/01_5782/153_843.jpg",
 				"hash": "73cc8a0860a5e0a587d1dfaa2be958c7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_843.jpg",
+				"src": "https://bandai-hobby.net/images/155_843_s_5olx7h4vl2437npjlk174vdmdmaa.jpg",
 				"path": "/images/items/01_5782/155_843.jpg",
 				"hash": "775daf0b641d7f016bf8abe88a7f245b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_843.jpg",
+				"src": "https://bandai-hobby.net/images/156_843_s_6os1wi0icih10n8vr5d14v6t2jlj.jpg",
 				"path": "/images/items/01_5782/156_843.jpg",
 				"hash": "ed00838eb6950431a19815c71809bf8b"
 			}
@@ -60,10 +102,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5782/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5963", "01_5961", "01_5951"],
 	"manual": {
 		"id": "381",
 		"url": "https://manual.bandai-hobby.net/menus/detail/381/"

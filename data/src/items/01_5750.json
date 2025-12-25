@@ -3,8 +3,57 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC 1/144 ジュアッグ(ユニコーンVer.)",
-		"en": "1/144 HGUC JUAGGU (UNICORN VER.)"
+		"en": "HGUC 1/144 Juag (Unicorn Ver.)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1870,
 		"currency": "JPY",
@@ -18,16 +67,12 @@
 		"day": 30
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 『機動戦士ガンダム UC』より、30年の刻を越え、完全リニューアルしたジュアッグがHGUCシリーズに登場。 • episode４で登場した姿で再現。 • ノーズとアームのキャノンが可動。 • ポージングも自在。 成形品×7、ホイルシール×1、リード線×1、マーキングシール×1、PETシート×1、組立説明書×1"
+			"• 『機動戦士ガンダムUC』より、30年の刻を越え、完全リニューアルしたジュアッグがHGUCシリーズに登場。 ■episode４で登場した姿で再現。 ■ノーズとアームのキャノンが可動。 ■ポージングも自在。 成形品×7、ホイルシール×1、リード線×1、マーキングシール×1、PETシート×1、組立説明書×1"
 		],
 		"en": [
-			"■ From \"MOBILE SUIT GUNDAM UC\", a completely renewed Juag appears in the HGUC series after more than 30 years.",
-			"■ Reproduced in the appearance that appeared in episode 4.",
-			"■ The nose and arm cannons are movable.",
-			"■ Posing is also free. Molded product ×7, foil seal ×1, lead wire ×1, marking seal ×1, PET sheet ×1, assembly instruction ×1"
+			"• From ``Mobile Suit GundamUC'', Juag, which has been completely renewed for over 30 years, is now available in the HGUC series. ■Reproduced in the appearance that appeared in episode 4. ■The nose and arm cannons are movable. ■Posing is also possible. Molded product x 7, foil seal x 1, lead wire x 1, marking seal x 1, PET sheet x 1, assembly manual x 1"
 		]
 	},
 	"images": {
@@ -56,10 +101,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5750/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "363",
 		"url": "https://manual.bandai-hobby.net/menus/detail/363/"

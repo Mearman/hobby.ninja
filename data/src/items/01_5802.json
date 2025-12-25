@@ -3,8 +3,31 @@
 	"type": "item",
 	"name": {
 		"ja": "RG 1/144 ZGMF-X42S デスティニーガンダム",
-		"en": "RG 1/144 DESTINY GUNDAM"
+		"en": "RG 1/144 ZGMF-X42S Destiny Gundam"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/144",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -18,10 +41,9 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 『機動戦士ガンダム SEED DESTINY』の主役機が登場。",
+			"• 『機動戦士ガンダムSEED DESTINY』の主役機が登場。",
 			"• アドヴァンスドMSジョイントを採用。SEEDならではの空中でのダイナミックなポージングを再現できる。",
 			"• RGならではの実機を考慮した細かな装甲分割。",
 			"• 関節部などは、リアリスティックデカールを貼ることで金属のような質感を再現。",
@@ -30,13 +52,13 @@
 			"• 長射程ビーム砲、ビームシールドなど多彩な武器が付属。"
 		],
 		"en": [
-			"■ The main machine of \"MOBILE SUIT GUNDAM SEED DESTINY\" is now available.",
-			"■ Advanced MS joint is adopted. SEED can reproduce dynamic poses in the air that are unique to the aircraft.",
-			"■ Fine armor division that takes into account the actual machine unique to RG.",
-			"■ The joints have a metal-like texture by applying realistic decals.",
-			"■ The characteristic wings are three-dimensional based on actual machine examination.",
-			"■ Wings and weapon deployment gimmicks can also be reproduced.",
-			"■ Comes with a variety of weapons such as long-range beam cannons and beam shields."
+			"• The main character of \"Mobile Suit GundamSEED DESTINY\" has appeared.",
+			"• Adopts advanced MS joint. You can reproduce the dynamic poses in the air that are unique to SEED.",
+			"• Detailed armor division that takes into consideration the actual machine unique to RG.",
+			"• Realistic decals are applied to the joints to create a metal-like texture.",
+			"• The characteristic wings have been made into three-dimensional models based on actual aircraft research.",
+			"• Deployment gimmicks of wings and weapons can also be reproduced.",
+			"• Comes with a variety of weapons such as a long-range beam cannon and beam seal."
 		]
 	},
 	"images": {
@@ -60,10 +82,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5802/",
-	"brandIds": ["rg"],
-	"seriesIds": ["seed-d"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": [],
 	"manual": {
 		"id": "663",
 		"url": "https://manual.bandai-hobby.net/menus/detail/663/"

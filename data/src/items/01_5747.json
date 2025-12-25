@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 マラサイ(ユニコーンVer.)",
 		"en": "HGUC 1/144 Marasai (Unicorn Ver.)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,39 +67,38 @@
 		"day": 24
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• ジオン軍仕様のUC版マラサイ。 • episode４で登場した緑の成型色で再現。 • 武装のひとつ「海ヘビ」はリード線で射出状態を再現可能。 • 新規造形のフェダーイン・ライフルが付属。スピア状態も再現できる。 成形品×5、ホイルシール×1、リード線×1、組立説明書×1"
+			"• ジオン軍仕様のUC版マラサイ。 ■episode４で登場した緑の成型色で再現。 ■武装のひとつ「海ヘビ」はリード線で射出状態を再現可能。 ■新規造形のフェダーイン・ライフルが付属。スピア状態も再現できる。 成形品×5、ホイルシール×1、リード線×1、組立説明書×1"
 		],
 		"en": [
-			"• Zeon military specification UC version Marasai. • Reproduced with the green molding color that appeared in episode 4. • One of the weapons, the \"sea snake\", can reproduce the ejection state with the lead wire. • Includes a newly designed Federin rifle. The spear state can also be reproduced. Molded product x 5, foil seal x 1, lead wire x 1, assembly manual x 1"
+			"• Zeon military specification UC version Marasai. ■Reproduced in the green molding color that appeared in episode 4. ■One of the weapons, \"Sea Snake\", can reproduce the ejection state with the lead wire. ■A newly designed federin rifle is included. The spear state can also be reproduced. Molded product x 5, foil seal x 1, lead wire x 1, assembly manual x 1"
 		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_811.jpg",
+				"src": "https://bandai-hobby.net/images/153_811_s_prmivgubhfqpty4ug1r6i7y13d8a.jpg",
 				"path": "/images/items/01_5747/153_811.jpg",
 				"hash": "f8c92d810b745d6303755063d7ebf8e7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_811.jpg",
+				"src": "https://bandai-hobby.net/images/155_811_s_emnmk7vgiis3ms1nt30be5xp6vq5.jpg",
 				"path": "/images/items/01_5747/155_811.jpg",
 				"hash": "a9de6b350e34d13f67ffd1bd58b04732"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_811.jpg",
+				"src": "https://bandai-hobby.net/images/156_811_s_1a2f2c8qaqyhqk67yd8wxh6p4hju.jpg",
 				"path": "/images/items/01_5747/156_811.jpg",
 				"hash": "3cf28b72c514913133ead137f96fc44e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_811.jpg",
+				"src": "https://bandai-hobby.net/images/157_811_s_w23vcjzkcoysanh48kwpaura4880.jpg",
 				"path": "/images/items/01_5747/157_811.jpg",
 				"hash": "a667fcd5920f179039def87dd127179d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_811.jpg",
+				"src": "https://bandai-hobby.net/images/158_811_s_9dunxagmgkog951se6atjnhkaa17.jpg",
 				"path": "/images/items/01_5747/158_811.jpg",
 				"hash": "37f20fe5f82b755ee5b08b5ac25672c2"
 			}
@@ -58,10 +106,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5747/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "368",
 		"url": "https://manual.bandai-hobby.net/menus/detail/368/"

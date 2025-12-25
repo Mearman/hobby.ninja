@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ジェスタ・キャノン",
 		"en": "HGUC 1/144 Jesta Cannon"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,15 +67,14 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 『機動戦士ガンダム UC　ep　6』で活躍する、ジェスタの重装備仕様となるジェスタ・キャノンをHGUC化。",
+			"• 『機動戦士ガンダムUC　ep　6』で活躍する、ジェスタの重装備仕様となるジェスタ・キャノンをHGUC化。",
 			"• 特徴的な両肩のビーム・キャノンと４連マルチ・ランチャーは、上下の可動ギミックを搭載。",
 			"• 武器やハンドパーツが付属。ノーマルのジェスタへの換装も可能。"
 		],
 		"en": [
-			"• HGUC version of Jesta Cannon, which is Jesta's heavily armed version that plays an active role in \"Mobile Suit Gundam UC ep 6\".",
+			"• HGUC version of Jesta Cannon, which is Jesta's heavily armed version that plays an active role in \"Mobile Suit GundamUC ep 6\".",
 			"• The characteristic beam cannons on both shoulders and the 4-unit multi-launcher are equipped with vertical movable gimmicks.",
 			"• Weapons and hand parts are included. It is also possible to replace it with the normal Jesta."
 		]
@@ -34,22 +82,22 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_839.jpg",
+				"src": "https://bandai-hobby.net/images/153_839_s_xz5uxpq6nkys92yirhq12qwq76l6.jpg",
 				"path": "/images/items/01_5777/153_839.jpg",
 				"hash": "54e4f74d33f50282dec49a5184a43e3c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_839.jpg",
+				"src": "https://bandai-hobby.net/images/155_839_s_m5tdealyq7e41vzgfda6bd1b807q.jpg",
 				"path": "/images/items/01_5777/155_839.jpg",
 				"hash": "d49f07c9cc9fd4c487436529f3b7d896"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_839.jpg",
+				"src": "https://bandai-hobby.net/images/156_839_s_yx8j6ebojbx056twu6wk7gdk3jx8.jpg",
 				"path": "/images/items/01_5777/156_839.jpg",
 				"hash": "b9561dccf1db8d2c902f805fb51dd6bb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_839.jpg",
+				"src": "https://bandai-hobby.net/images/157_839_s_3gp4xsoq2oktftzx6xtx2q7cbplr.jpg",
 				"path": "/images/items/01_5777/157_839.jpg",
 				"hash": "c679c8d07f8242a67ab47745a6bbfc62"
 			}
@@ -57,10 +105,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5777/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "438",
 		"url": "https://manual.bandai-hobby.net/menus/detail/438/"

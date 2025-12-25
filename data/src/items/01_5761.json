@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ザク・マリナー",
 		"en": "HGUC 1/144 Zaku Mariner"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-zz",
+			"url": "https://bandai-hobby.net/series/gundam-zz/",
+			"ja": "機動戦士ガンダムＺＺ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_2079",
+			"url": "https://bandai-hobby.net/item/01_2079/",
+			"ja": "HGUC 1/144 R・ジャジャ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -18,10 +67,9 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 「機動戦士ガンダム UC episode 4」にも登場のザク・マリナーがZZ版で登場。",
+			"• 「機動戦士ガンダムUC episode 4」にも登場のザク・マリナーがZZ版で登場。",
 			"• 水中で曳航してもらうためのマグネット・ハーケンが付属。",
 			"• 曳航シーンも付属のリードで再現可能。",
 			"• 頭部アンテナは一般機用のほか指揮官機用も付属。",
@@ -29,7 +77,7 @@
 			"成形品×5、リード線×１、ホイルシール×1、マーキングシール×1、組立説明書×1"
 		],
 		"en": [
-			"• Zaku Mariner, who also appeared in \"Mobile Suit Gundam UC episode 4\", appears in the ZZ version.",
+			"• Zaku Mariner, who also appeared in \"Mobile Suit GundamUC episode 4\", appears in the ZZ version.",
 			"• Comes with a magnetic harken for towing underwater.",
 			"• The towing scene can also be recreated with the included leash.",
 			"• Head antennas are included for both general aircraft and commander aircraft.",
@@ -40,22 +88,22 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_824.jpg",
+				"src": "https://bandai-hobby.net/images/153_824_s_ua6clj6rfgsjdph3nirltohtz4mr.jpg",
 				"path": "/images/items/01_5761/153_824.jpg",
 				"hash": "72f241eaa4e36b95da0c0fcf17674337"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_824.jpg",
+				"src": "https://bandai-hobby.net/images/155_824_s_3anau1sfcazt9619wt3naaugexux.jpg",
 				"path": "/images/items/01_5761/155_824.jpg",
 				"hash": "dce6f221cbed230715f8b389a7070745"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_824.jpg",
+				"src": "https://bandai-hobby.net/images/156_824_s_m8mbblwu9qqggngg90k1r7r95mry.jpg",
 				"path": "/images/items/01_5761/156_824.jpg",
 				"hash": "927b0cd7e4a59b86b74b167d388653aa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_824.jpg",
+				"src": "https://bandai-hobby.net/images/157_824_s_d6aku63oop9glaeb0shleq4eig2d.jpg",
 				"path": "/images/items/01_5761/157_824.jpg",
 				"hash": "536e292edd2e4e9023b5c9ff8f8da542"
 			}
@@ -63,10 +111,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5761/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["gundam-zz"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5963", "01_4985", "01_4971", "01_2079"],
 	"manual": {
 		"id": "372",
 		"url": "https://manual.bandai-hobby.net/menus/detail/372/"

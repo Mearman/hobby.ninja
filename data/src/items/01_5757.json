@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 リゼルC型（ディフェンサーbユニット／ゼネラル・レビル配備機）",
 		"en": "HGUC 1/144 Rezel C type (Defensor b unit/General Revil deployment machine)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -18,16 +67,15 @@
 		"day": 16
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 「機動戦士ガンダム UC　バンデシネ」に登場したディフェンサー仕様のリゼルが登場。",
+			"• 「機動戦士ガンダムUC　バンデシネ」に登場したディフェンサー仕様のリゼルが登場。",
 			"• 「bユニット」の特徴であるビームキャノンは可動式。",
 			"• リゼルの変形機構を差し替えパーツで再現できる。",
 			"成形品×14、ホイルシール×1、マーキングシール×1、組立説明書"
 		],
 		"en": [
-			"• Defender version of Lisel that appeared in \"Mobile Suit Gundam UC Bandescinet\" is now available.",
+			"• Defender version of Lisel that appeared in \"Mobile Suit GundamUC Bandescinet\" is now available.",
 			"• Features of \"B Unit\" The beam cannon is movable.",
 			"• Liesel's transformation mechanism can be reproduced with replacement parts.",
 			"Molded product x 14, foil seal x 1, marking seal x 1, assembly manual"
@@ -36,22 +84,22 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_820.jpg",
+				"src": "https://bandai-hobby.net/images/153_820_s_5fzew8pv16483vfjh4l02vjxbub4.jpg",
 				"path": "/images/items/01_5757/153_820.jpg",
 				"hash": "f93b4d27bdf162bd5edaea2e8b13f183"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_820.jpg",
+				"src": "https://bandai-hobby.net/images/155_820_s_43mlxauehz93yhyerhwsododwkw1.jpg",
 				"path": "/images/items/01_5757/155_820.jpg",
 				"hash": "251c4ef39e46b24276ed9fb6bfd44e21"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_820.jpg",
+				"src": "https://bandai-hobby.net/images/156_820_s_z6ocljf8tbsuqr8oi5vqkwx49qpg.jpg",
 				"path": "/images/items/01_5757/156_820.jpg",
 				"hash": "e7003be0ddb0344407dda3afb642916a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_820.jpg",
+				"src": "https://bandai-hobby.net/images/157_820_s_idymcwxjx4lvj3uog93x8niqh2gb.jpg",
 				"path": "/images/items/01_5757/157_820.jpg",
 				"hash": "fb4ff7329ef95d17181de7352b72fd96"
 			}
@@ -59,10 +107,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5757/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "370",
 		"url": "https://manual.bandai-hobby.net/menus/detail/370/"

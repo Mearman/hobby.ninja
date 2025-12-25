@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ジェスタ",
 		"en": "HGUC 1/144 Jesta"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,34 +67,33 @@
 		"day": 17
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 「機動戦士ガンダム UC」より、ジェガンの最強上位機をHGUC化。 • 完全新規金型で広い可動範囲を実現。 • シールド基部のフレーム可動を再現。 • 多彩な武器、ハンドパーツが付属。 成形品×8、ホイルシール×1、テトロンシール×1、組立説明書×1"
+			"• 「機動戦士ガンダムUC」より、ジェガンの最強上位機をHGUC化。 ■完全新規金型で広い可動範囲を実現。 ■シールド基部のフレーム可動を再現。 ■多彩な武器、ハンドパーツが付属。 成形品×8、ホイルシール×1、テトロンシール×1、組立説明書×1"
 		],
 		"en": [
-			"• From \"Mobile Suit Gundam UC\", Jegan's strongest high-end machine is transformed into HGUC. • Completely new mold realizes a wide range of motion. • Reproduce the frame movement of the seal base. • Comes with a variety of weapons and hand parts. Molded product x 8, foil seal x 1, Tetron seal x 1, assembly manual x 1"
+			"• From \"Mobile Suit GundamUC\", Jegan's strongest high-end machine has been transformed into HGUC. ■Completely new mold realizes a wide range of motion. ■Reproduce the frame movement of the Seal base. ■A variety of weapons and hand parts are included. Molded product x 8, foil seal x 1, Tetron seal x 1, assembly manual x 1"
 		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_784.jpg",
+				"src": "https://bandai-hobby.net/images/153_784_s_9p6pupigsqhp4t7cshog0lqookkq.jpg",
 				"path": "/images/items/01_5717/153_784.jpg",
 				"hash": "df75883708dedfaa51920e2136c0350d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_784.jpg",
+				"src": "https://bandai-hobby.net/images/155_784_s_sf34895psbvp0l2tzae23smlk2vg.jpg",
 				"path": "/images/items/01_5717/155_784.jpg",
 				"hash": "87bda8ed7d5a81884feeea38a06f4f2c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_784.jpg",
+				"src": "https://bandai-hobby.net/images/156_784_s_kpvs7i0be7qj4io1omdgzd64ycrj.jpg",
 				"path": "/images/items/01_5717/156_784.jpg",
 				"hash": "72919cff8b47984e410f3f8e4ffb7067"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_784.jpg",
+				"src": "https://bandai-hobby.net/images/157_784_s_lo7cm33xbav9pk1gccx0k8ynim0d.jpg",
 				"path": "/images/items/01_5717/157_784.jpg",
 				"hash": "60d55396ccae62cfee6c803e4b55d67c"
 			}
@@ -53,10 +101,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5717/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "936",
 		"url": "https://manual.bandai-hobby.net/menus/detail/936/"

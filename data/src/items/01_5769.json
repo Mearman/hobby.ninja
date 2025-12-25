@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 バイアラン・カスタム",
 		"en": "HGUC 1/144 Byarun Custom"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -18,10 +67,9 @@
 		"day": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 『機動戦士ガンダム UC episode 4』に登場のバイアラン・カスタムをHGUC化。",
+			"• 『機動戦士ガンダムUC episode 4』に登場のバイアラン・カスタムをHGUC化。",
 			"• 飛行形態に特化した独特なフォルムを忠実に再現。",
 			"• 通常のMSより大きい機体は、1/144スケールでも全高約170mmで、存在感抜群。",
 			"• プロペラントタンクは開閉ギミックを再現。",
@@ -30,7 +78,7 @@
 			"• 付属の専用マウントパーツでアクションベースにも対応。"
 		],
 		"en": [
-			"• HGUC version of Byarran Custom that appeared in \"Mobile Suit Gundam UC episode 4\".",
+			"• HGUC version of Byarran Custom that appeared in \"Mobile Suit GundamUC episode 4\".",
 			"• Faithfully reproduces the unique form specialized for flight mode.",
 			"• The aircraft, which is larger than a normal MS, has a total height of approximately 170mm even in 1/144 Scale, giving it an outstanding presence.",
 			"• The propellant tank reproduces the opening and closing gimmick.",
@@ -42,17 +90,17 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_831.jpg",
+				"src": "https://bandai-hobby.net/images/153_831_s_82b8ut5ldec0qa03c1fs2kq0xan6.jpg",
 				"path": "/images/items/01_5769/153_831.jpg",
 				"hash": "c759fe32226f8d07512a575cba10a8d1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_831.jpg",
+				"src": "https://bandai-hobby.net/images/155_831_s_3wit4i12use0qk1yaqda8wg5cqt8.jpg",
 				"path": "/images/items/01_5769/155_831.jpg",
 				"hash": "243e0123f1170f9309f03cad96e82577"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_831.jpg",
+				"src": "https://bandai-hobby.net/images/156_831_s_syw1tuhanpfwgglgtk3w7zg47bhg.jpg",
 				"path": "/images/items/01_5769/156_831.jpg",
 				"hash": "88d07d9399a47371b20015b4e04654a3"
 			}
@@ -60,10 +108,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5769/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "375",
 		"url": "https://manual.bandai-hobby.net/menus/detail/375/"

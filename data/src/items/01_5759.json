@@ -2,9 +2,52 @@
 	"id": "01_5759",
 	"type": "item",
 	"name": {
-		"ja": "リアルSD ガンダム BB戦士372 ガンダム AGE-3(ノーマル フォートレス オービタル)",
-		"en": "Real SD Gundam BB Senshi 372 Gundam AGE-3 (Normal Fortress Orbital)"
+		"ja": "リアルSDガンダム BB戦士372 ガンダムAGE-3(ノーマル フォートレス オービタル)",
+		"en": "Real SDGundam BB Senshi 372 GundamAGE-3 (Normal Fortress Orbital)"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "age",
+			"url": "https://bandai-hobby.net/series/age/",
+			"ja": "機動戦士ガンダムAGE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2834",
+			"url": "https://bandai-hobby.net/item/01_2834/",
+			"ja": "BB戦士376 ガンダムAGE-FX"
+		},
+		{
+			"id": "01_2833",
+			"url": "https://bandai-hobby.net/item/01_2833/",
+			"ja": "BB戦士374 ガンダムレギルス"
+		},
+		{
+			"id": "01_5753",
+			"url": "https://bandai-hobby.net/item/01_5753/",
+			"ja": "BB戦士371 ガンダムAGE-2（ノーマル・ダブルバレット）"
+		},
+		{
+			"id": "01_4605",
+			"url": "https://bandai-hobby.net/item/01_4605/",
+			"ja": "BB戦士369 ガンダムAGE-1"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -35,26 +78,22 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_822.jpg",
+				"src": "https://bandai-hobby.net/images/153_822_s_7k89q7vqrsu2n68o0akcb55yv3qt.jpg",
 				"path": "/images/items/01_5759/153_822.jpg",
 				"hash": "40d1fb36c1a36be13349d79db1a65095"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_822.jpg",
+				"src": "https://bandai-hobby.net/images/155_822_s_c49aacw1ybti80mdngv0vvty7mry.jpg",
 				"path": "/images/items/01_5759/155_822.jpg",
 				"hash": "2a7a134ac09384fa5e32655019c00514"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_822.jpg",
+				"src": "https://bandai-hobby.net/images/156_822_s_8zeawe0114c2l3ildi1lf7sl7673.jpg",
 				"path": "/images/items/01_5759/156_822.jpg",
 				"hash": "6b9a242d2ca16d80d4455c06a5a865e3"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5759/",
-	"brandIds": ["bb"],
-	"seriesIds": ["age"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_2834", "01_2833", "01_5753", "01_4605"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5759/"
 }

@@ -2,9 +2,53 @@
 	"id": "01_5789",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 ガンダム AGE-1 フルグランサ",
-		"en": "HG 1/144 Gundam AGE-1 Full Grancer"
+		"ja": "HG 1/144 ガンダムAGE-1 フルグランサ",
+		"en": "HG 1/144 GundamAGE-1 Full Grancer"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "age",
+			"url": "https://bandai-hobby.net/series/age/",
+			"ja": "機動戦士ガンダムAGE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000170540",
+			"url": "https://p-bandai.jp/item/item-1000170540/",
+			"ja": "ＨＧ 1/144 フォーンファルシア"
+		},
+		{
+			"id": "item-1000169836",
+			"url": "https://p-bandai.jp/item/item-1000169836/",
+			"ja": "ＨＧ 1/144 ガンダムＡＧＥ-１ レイザー＆ガンダムＡＧＥ-２ アルティメス セット"
+		},
+		{
+			"id": "01_3738",
+			"url": "https://bandai-hobby.net/item/01_3738/",
+			"ja": "HG 1/144 「機動戦士ガンダムAGE」 MSセット[クリアカラー]"
+		},
+		{
+			"id": "item-1000082540",
+			"url": "https://p-bandai.jp/item/item-1000082540",
+			"ja": "ＨＧ 1/144 ガンダムレギルス〔MEMORY OF EDEN〕"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,17 +62,16 @@
 		"day": 13
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 初回生産分に「ガンダムトライエイジスペシャルカードパック5」が付属。",
-			"• 『機動戦士ガンダム AGE』のクライマックスに登場したAGE-1フルグランサをHG化。",
+			"• 『機動戦士ガンダムAGE』のクライマックスに登場したAGE-1フルグランサをHG化。",
 			"• フルグランサの特徴となるグラストロランチャーは90度回転して発射形態を再現。グリップを持つことも可能。",
 			"• グラストロランチャーを外せばAGE-1グランサ、装甲を外せばAGE-1フラットを再現できる。"
 		],
 		"en": [
 			"• \"Gundam Try Age Special Card Pack 5\" is included with the first production.",
-			"• HG version of the AGE-1 Full Grancer that appeared in the climax of \"Mobile Suit Gundam AGE\".",
+			"• HG version of the AGE-1 Furgulantha that appeared in the climax of \"Mobile Suit GundamAGE\".",
 			"• The Glastro launcher, which is a feature of Furuglansa, rotates 90 degrees to reproduce the firing form. It is also possible to have a grip.",
 			"• If you remove the Glastro Launcher, you can recreate AGE-1 Gransa, and if you remove the armor, you can recreate AGE-1 Flat."
 		]
@@ -36,17 +79,17 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_855.jpg",
+				"src": "https://bandai-hobby.net/images/153_855_s_lrsgn03ybqvgtgu03nh62va7yb55.jpg",
 				"path": "/images/items/01_5789/153_855.jpg",
 				"hash": "3828165eececb1613901c2ab57b8ceb4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_855.jpg",
+				"src": "https://bandai-hobby.net/images/155_855_s_ca45kqw40pt239pqb8yzgsv2f4gc.jpg",
 				"path": "/images/items/01_5789/155_855.jpg",
 				"hash": "dc0a775d42464669c6e7d06ff9e48fbf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_855.jpg",
+				"src": "https://bandai-hobby.net/images/156_855_s_38vf8wtp6ipvre0hxu1s45jcr0jf.jpg",
 				"path": "/images/items/01_5789/156_855.jpg",
 				"hash": "6dfd684cb684a54c3b629c7534673f0c"
 			}
@@ -54,10 +97,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5789/",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "3",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3/"

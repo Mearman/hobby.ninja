@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ジェスタ",
 		"en": "MG 1/100 Jesta"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000183366",
+			"url": "https://p-bandai.jp/item/item-1000183366/",
+			"ja": "ＭＧ 1/100 スタークジェガン"
+		},
+		{
+			"id": "01_4271",
+			"url": "https://bandai-hobby.net/item/01_4271/",
+			"ja": "MG 1/100 ガンダムベース限定 ユニコーンガンダム(光の結晶体)"
+		},
+		{
+			"id": "01_2670",
+			"url": "https://bandai-hobby.net/item/01_2670/",
+			"ja": "MG 1/100 ジェスタ・キャノン[クリアカラー]"
+		},
+		{
+			"id": "item-1000138934",
+			"url": "https://p-bandai.jp/item/item-1000138934/",
+			"ja": "ＭＧ 1/100 リ・ガズィ（ユニコーンＶｅｒ．）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 20
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"• ロンド・ベル隊配備の高性能機ジェスタをMGで立体化。",
@@ -31,7 +74,7 @@
 			"さらに詳しく"
 		],
 		"en": [
-			"• Three-dimensional MG version of the high-performance Jesta aircraft deployed by the Londo Bell Corps.",
+			"• Three-dimensional MG version of the high-performance aircraft Jesta deployed by Londo Bell Corps.",
 			"• Complete reproduction of the characteristic special Seal movable gimmick.",
 			"• The articulation and proportions are of the quality unique to the latest MG.",
 			"• The grenade mounting part of the waist side armor is reproduced with a movable rocker arm.",
@@ -44,17 +87,17 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_862.jpg",
+				"src": "https://bandai-hobby.net/images/153_862_s_0u9nca80ap184yq8p76v5dj4nzak.jpg",
 				"path": "/images/items/01_5797/153_862.jpg",
 				"hash": "07acfef9ab1375c8b05765860a6e974f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_862.jpg",
+				"src": "https://bandai-hobby.net/images/155_862_s_uoonj8qcj910q68pvjfpe0kde2pu.jpg",
 				"path": "/images/items/01_5797/155_862.jpg",
 				"hash": "454e7f42d72dec1e7772813f5ccca826"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_862.jpg",
+				"src": "https://bandai-hobby.net/images/156_862_s_2olfpln4iou3wx9y47upd1d0d3ed.jpg",
 				"path": "/images/items/01_5797/156_862.jpg",
 				"hash": "8d103a89832021c6dafe77f23e18b797"
 			}
@@ -62,10 +105,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5797/",
-	"brandIds": ["mg"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000183366", "01_4271", "01_2670", "item-1000138934"],
 	"manual": {
 		"id": "609",
 		"url": "https://manual.bandai-hobby.net/menus/detail/609/"

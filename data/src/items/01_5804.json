@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 フルアーマー・ユニコーンガンダム(ユニコーンモード)",
 		"en": "HGUC 1/144 Full Armor Unicorn Gundam (Unicorn Mode)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 2
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• ユニコーンモードの「フルアーマー・ユニコーンガンダム」がHGUCで登場。",
@@ -36,38 +84,29 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_874.jpg",
+				"src": "https://bandai-hobby.net/images/153_874_s_b0cos754zu6rriia4t2nymbus7aw.jpg",
 				"path": "/images/items/01_5804/153_874.jpg",
 				"hash": "70563608360e9ef95baed326efb4ddab"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_874.jpg",
+				"src": "https://bandai-hobby.net/images/155_874_s_djthm4qk8mqqz0lhwf3nz74073cz.jpg",
 				"path": "/images/items/01_5804/155_874.jpg",
 				"hash": "24bfaab292f1a84e1edf61c9e1061382"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_874.jpg",
+				"src": "https://bandai-hobby.net/images/156_874_s_3x2gp63hvljqhg7a6cwymi8hgnyl.jpg",
 				"path": "/images/items/01_5804/156_874.jpg",
 				"hash": "68a76dd7e5032a874170241a760a02e8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_874.jpg",
+				"src": "https://bandai-hobby.net/images/157_874_s_00ziuv1ic1lxj91ku99fu62eg8e7.jpg",
 				"path": "/images/items/01_5804/157_874.jpg",
 				"hash": "dace64acc60a89c193afe38d8f3d8889"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5804_inst_0.jpg",
-				"path": "/images/items/01_5804/01_5804_inst_0.jpg",
-				"hash": "b8d339aad30982824e1932287e6b801b"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5804/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "382",
 		"url": "https://manual.bandai-hobby.net/menus/detail/382/"
