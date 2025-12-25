@@ -5,6 +5,50 @@
 		"ja": "HG 1/100 VF-31E ジークフリード(チャック・マスタング機) 専用水転写式デカール",
 		"en": "HG 1/100 VF-31E Siegfried (Chuck Mustang machine) exclusive water slide decal"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "macross",
+			"url": "https://bandai-hobby.net/series/macross/",
+			"ja": "マクロスシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7035",
+			"url": "https://bandai-hobby.net/item/01_7035/",
+			"ja": "HG 1/100 VF-31E ジークフリード(チャック・マスタング機)"
+		},
+		{
+			"id": "01_7037",
+			"url": "https://bandai-hobby.net/item/01_7037/",
+			"ja": "HG 1/100 VF-31E ジークフリード(チャック・マスタング機)デラックスセット"
+		},
+		{
+			"id": "01_6869",
+			"url": "https://bandai-hobby.net/item/01_6869/",
+			"ja": "HG 1/100 VF-25F メサイアバルキリー(早乙女アルト機) 専用水転写式デカール"
+		},
+		{
+			"id": "01_6870",
+			"url": "https://bandai-hobby.net/item/01_6870/",
+			"ja": "HG 1/100 VF-25F メサイアバルキリー(早乙女アルト機)デラックスセット"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -17,41 +61,39 @@
 		"month": 6
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『マクロスΔ』に登場する「HG 1/100 VF-31E ジークフリード(チャック・マスタング機）」の劇中再現度を追求した専用水転写式デカールが登場！",
-			"■「HG 1/100 VF-31E ジークフリード(チャック・マスタング機）」/同デラックスセット専用。",
-			"■コーションマーク等も豊富に収録。"
+			"• 「HG 1/100 VF-31E ジークフリード(チャック・マスタング機）」/同デラックスセット専用。",
+			"• コーションマーク等も豊富に収録。"
 		],
 		"en": [
-			"Introducing a special water slide decal that pursues the reproduction of the \"HG 1/100 VF-31E Siegfried (Chuck Mustang machine)\" that appears in \" Macross Delta\"!",
-			"• \"HG 1/100 VF-31E Siegfried (Chuck Mustang Machine)\"/Exclusively for the same deluxe set.",
+			"Introducing a special water slide decal that pursues the reproduction of the \"HG 1/100 VF-31E Siegfried (Chuck Mustang machine)\" that appears in \"Macross Delta\"!",
+			"• \"HG 1/100 VF-31E Siegfried (Chuck Mustang machine)\"/Exclusively for the same deluxe set.",
 			"• Includes a wealth of caution marks, etc."
 		]
 	},
-	"accessories": {
-		"ja": ["水転写式デカール×1"],
-		"en": ["Water transfer decal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_7036_0.jpg",
 				"path": "/images/items/01_7036/01_7036_0.jpg",
 				"hash": "9d3c8dc35dffe889c385db88f301b6f8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7036_1.jpg",
 				"path": "/images/items/01_7036/01_7036_1.jpg",
 				"hash": "6b01495ce107208921ee93e855f514c4"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_7036/",
-	"brandIds": ["hg"],
-	"seriesIds": ["macross"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_7035", "01_7037", "01_6869", "01_6870"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_7036/"
 }

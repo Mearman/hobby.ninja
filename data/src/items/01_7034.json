@@ -2,9 +2,31 @@
 	"id": "01_7034",
 	"type": "item",
 	"name": {
-		"ja": "HG 新ケロロロボ(仮)",
-		"en": "HG New Keroro Robo (tentative)"
+		"ja": "HG Newケロロロボ",
+		"en": "HG New Keroro Robo"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "keroro",
+			"url": "https://bandai-hobby.net/series/keroro/",
+			"ja": "ケロロ軍曹"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -20,9 +42,9 @@
 	"description": {
 		"ja": [
 			"新たなデザインのケロロロボをHGにて商品化であります！",
-			"■「ケロロアクションシステム」を搭載し、躍動感のあるポージングが可能",
-			"■クリアカラーのエフェクトパーツが付属",
-			"■シールド、ライフルが付属"
+			"• 「ケロロアクションシステム」を搭載し、躍動感のあるポージングが可能",
+			"• クリアカラーのエフェクトパーツが付属",
+			"• シールド、ライフルが付属"
 		],
 		"en": [
 			"A new design of Keroro Robo will be commercialized at HG!",
@@ -31,38 +53,74 @@
 			"• Seal and rifle included"
 		]
 	},
-	"accessories": {
-		"ja": ["バックパック×1式", "武装×1式", "エフェクトパーツ×1式", "自立用パーツ", "シール×1"],
-		"en": ["Backpack x 1 set", "Armed x 1 type", "Effect parts x 1", "Freestanding parts", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "バックパック",
+				"en": "backpack"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "武装",
+				"en": "armed"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "エフェクトパーツ",
+				"en": "effect parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "自立用パーツ",
+				"en": "Freestanding parts"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_7034_0.jpg",
 				"path": "/images/items/01_7034/01_7034_0.jpg",
 				"hash": "daf42b248a3205382cb1a45a5977a66e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7034_1.jpg",
 				"path": "/images/items/01_7034/01_7034_1.jpg",
 				"hash": "d71a176703c54a1c77bd5180620aea8a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7034_2.jpg",
 				"path": "/images/items/01_7034/01_7034_2.jpg",
 				"hash": "ce04afec0bb9d3122b10bbdc1cc27995"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7034_3.jpg",
 				"path": "/images/items/01_7034/01_7034_3.jpg",
 				"hash": "254f87a6704ca091e9833d6f966ebc34"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_7034/",
-	"brandIds": ["hg"],
-	"seriesIds": ["keroro"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_7034/"
 }

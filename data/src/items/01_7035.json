@@ -5,6 +5,50 @@
 		"ja": "HG 1/100 VF-31E ジークフリード(チャック・マスタング機)",
 		"en": "HG 1/100 VF-31E Siegfried (Chuck Mustang machine)"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "macross",
+			"url": "https://bandai-hobby.net/series/macross/",
+			"ja": "マクロスシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7036",
+			"url": "https://bandai-hobby.net/item/01_7036/",
+			"ja": "HG 1/100 VF-31E ジークフリード(チャック・マスタング機) 専用水転写式デカール"
+		},
+		{
+			"id": "01_7037",
+			"url": "https://bandai-hobby.net/item/01_7037/",
+			"ja": "HG 1/100 VF-31E ジークフリード(チャック・マスタング機)デラックスセット"
+		},
+		{
+			"id": "01_6869",
+			"url": "https://bandai-hobby.net/item/01_6869/",
+			"ja": "HG 1/100 VF-25F メサイアバルキリー(早乙女アルト機) 専用水転写式デカール"
+		},
+		{
+			"id": "01_6870",
+			"url": "https://bandai-hobby.net/item/01_6870/",
+			"ja": "HG 1/100 VF-25F メサイアバルキリー(早乙女アルト機)デラックスセット"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -17,24 +61,23 @@
 		"month": 6
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『マクロスΔ(デルタ)』より「VF-31E ジークフリード(チャック・マスタング機)」を最新のHG『マクロス』プラモデル シリーズで商品化！マクロスΔ10周年目に向け、「Δ小隊」完結まであと一歩！！",
-			"■一部に差し替えパーツを使用することで変形シークエンスを簡略化する「差替三段変形（ショートカットチェンジ）」を採用。HGシリーズならではの組み立てやすさと広い可動域、各形態の洗練されたフォルムを実現。",
-			"■変形機構の一部に差し替えパーツを取り入れたことで、変形シークエンスの簡略化を実現。バトロイド、ガウォーク、ファイターへの簡単変形が可能。",
-			"■「差替三段変形（ショートカットチェンジ）」の採用により、設定画をイメージした各形態のフォルムを追求。",
-			"■複雑な構造を除外し、ポージングを意識した最適な可動ポイントを設けることで新次元の可動性能を実現。",
-			"■「インサート成形」を採用することで、色分けが複雑な部分もパーツを切り離すだけで再現し、ハイクオリティと組み立てやすさを両立。",
-			"■レドーム、腕部ミニガンポッドは収納状態、展開状態を再現。",
-			"■ランディングギアが付属し駐機状態を再現。",
-			"■コックピットを再現しパイロットフィギュアが付属。",
-			"■後部座席にはヘルメットを装着したワルキューレ（着座姿勢）が付属。",
-			"■ワルキューレステージ衣装のレイナ（立ちポーズ）が付属。"
+			"• 一部に差し替えパーツを使用することで変形シークエンスを簡略化する「差替三段変形（ショートカットチェンジ）」を採用。HGシリーズならではの組み立てやすさと広い可動域、各形態の洗練されたフォルムを実現。",
+			"• 変形機構の一部に差し替えパーツを取り入れたことで、変形シークエンスの簡略化を実現。バトロイド、ガウォーク、ファイターへの簡単変形が可能。",
+			"• 「差替三段変形（ショートカットチェンジ）」の採用により、設定画をイメージした各形態のフォルムを追求。",
+			"• 複雑な構造を除外し、ポージングを意識した最適な可動ポイントを設けることで新次元の可動性能を実現。",
+			"• 「インサート成形」を採用することで、色分けが複雑な部分もパーツを切り離すだけで再現し、ハイクオリティと組み立てやすさを両立。",
+			"• レドーム、腕部ミニガンポッドは収納状態、展開状態を再現。",
+			"• ランディングギアが付属し駐機状態を再現。",
+			"• コックピットを再現しパイロットフィギュアが付属。",
+			"• 後部座席にはヘルメットを装着したワルキューレ（着座姿勢）が付属。",
+			"• ワルキューレステージ衣装のレイナ（立ちポーズ）が付属。"
 		],
 		"en": [
-			"\"VF-31E Siegfried (Chuck Mustang machine)\" from \" Macross Delta \" is commercialized in the latest HG \" Macross \" plastic model series! As we approach the 10th lap of Macross Delta, we are one step closer to completing the \"Δ Platoon\"! !",
-			"• Adopts \"replacement three-stage transformation (shortcut change)\" that simplifies the transformation sequence by using some replacement parts. The ease of assembly, wide range of motion, and sophisticated form of each form that are unique to the HG series are realized.",
+			"\"VF-31E Siegfried (Chuck Mustang machine)\" from \"Macross Delta\" is commercialized in the latest HG \"Macross\" plastic model series! As we approach the 10th lap of Macross Delta, we are one step closer to completing the \"Δ Platoon\"! !",
+			"• Adopts \"replacement three-stage transformation (shortcut change)\" that simplifies the transformation sequence by using some replacement parts. The HG series offers ease of assembly, a wide range of motion, and sophisticated forms in each form.",
 			"• By incorporating replacement parts into part of the transformation mechanism, the transformation sequence has been simplified. Can be easily transformed into Battroid, Gerwalk, and Fighter.",
 			"• By adopting \"replacement three-stage transformation (shortcut change)\", we pursue the form of each form based on the image of the setting image.",
 			"• A new dimension of movable performance has been achieved by eliminating complicated structures and creating optimal movable points with posing in mind.",
@@ -46,46 +89,92 @@
 			"• Reina (standing pose) in Valkyrie stage costume is included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ナイフ×2",
-			"ランディングギア×1式",
-			"ファイター形態再現用パーツ×1式",
-			"ジョイントパーツ×1",
-			"ハンドパーツ×1式",
-			"フィギュア×3種",
-			"フィギュア用台座×1",
-			"シール×1"
-		],
-		"en": [
-			"Knife x 2",
-			"Landing gear x 1 set",
-			"Fighter form reproduction parts x 1 set",
-			"Joint parts x 1",
-			"Hand parts x 1 set",
-			"Figures x 3 types",
-			"Figure pedestal x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ナイフ",
+				"en": "knife"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ランディングギア",
+				"en": "landing gear"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ファイター形態再現用パーツ",
+				"en": "Fighter form reproduction parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "フィギュア",
+				"en": "figure"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "フィギュア用台座",
+				"en": "pedestal for figures"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_7035_0.jpg",
 				"path": "/images/items/01_7035/01_7035_0.jpg",
 				"hash": "e3abd6fd8f3608f2f979945329fed449"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7035_1.jpg",
 				"path": "/images/items/01_7035/01_7035_1.jpg",
 				"hash": "8eb35eade092ba348180fafe16b9f8ad"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_7035/",
-	"brandIds": ["hg"],
-	"seriesIds": ["macross"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_7036", "01_7037", "01_6869", "01_6870"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_7035/"
 }

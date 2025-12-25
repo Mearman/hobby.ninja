@@ -5,6 +5,43 @@
 		"ja": "ポケモンプラモコレクション 62 セレクトシリーズ カイオーガ",
 		"en": "Pokemon Plastic Model Collection 62 Select Series Kyogre"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7015",
+			"url": "https://bandai-hobby.net/item/01_7015/",
+			"ja": "ポケモンプラモコレクション クイック!! 27 シャワーズ"
+		},
+		{
+			"id": "01_7010",
+			"url": "https://bandai-hobby.net/item/01_7010/",
+			"ja": "ポケモンプラモコレクション クイック!! 26 サンダース"
+		},
+		{
+			"id": "01_6895",
+			"url": "https://bandai-hobby.net/item/01_6895/",
+			"ja": "ポケモンプラモコレクション クイック!! Lite ピカチュウ"
+		},
+		{
+			"id": "01_6897",
+			"url": "https://bandai-hobby.net/item/01_6897/",
+			"ja": "ポケモンプラモコレクション クイック!! Lite ヒトカゲ"
+		}
+	],
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -20,10 +57,10 @@
 	"description": {
 		"ja": [
 			"道具不要で簡単組み立て！ポケモンプラモコレクション セレクトシリーズからカイオーガが登場！",
-			"■全長約180mmの迫力あるサイズ！",
-			"■各所可動によりカッコイイポーズが再現可能！",
-			"■口の開閉を差し替えパーツで再現。",
-			"■波をイメージした専用台座が付属。"
+			"• 全長約180mmの迫力あるサイズ！",
+			"• 各所可動によりカッコイイポーズが再現可能！",
+			"• 口の開閉を差し替えパーツで再現。",
+			"• 波をイメージした専用台座が付属。"
 		],
 		"en": [
 			"Easy assembly with no tools required! Kyogre appears from the Pokemon Plastic Model Collection Select Series!",
@@ -33,33 +70,45 @@
 			"• Comes with a special pedestal inspired by waves."
 		]
 	},
-	"accessories": {
-		"ja": ["口差し替えパーツ×1", "ディスプレイ台座×1", "シール×1"],
-		"en": ["Mouth replacement parts x 1", "Display pedestal x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "口差し替えパーツ",
+				"en": "Mouth replacement parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座",
+				"en": "display pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_7038_0.jpg",
 				"path": "/images/items/01_7038/01_7038_0.jpg",
 				"hash": "814f65f7efea82ee26874c05c5a8c5d4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7038_1.jpg",
 				"path": "/images/items/01_7038/01_7038_1.jpg",
 				"hash": "dae87b5b2176ef6bb964877a926f4d90"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7038_2.jpg",
 				"path": "/images/items/01_7038/01_7038_2.jpg",
 				"hash": "04a8d3feff65f02bca2015f0a4db3ace"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_7038/",
-	"brandIds": [],
-	"seriesIds": ["pokemon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_7015", "01_7010", "01_6895", "01_6897"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_7038/"
 }

@@ -5,6 +5,39 @@
 		"ja": "RG 1/144 ガンダムアストレイ レッドドラゴン",
 		"en": "RG 1/144 Gundam Astray Red Dragon"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "astrays-r",
+			"url": "https://bandai-hobby.net/series/astrays-r/",
+			"ja": "機動戦士ガンダムSEED DESTINY ASTRAY R"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/144",
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -17,7 +50,6 @@
 		"month": 2
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－見せてやるぜ！ オレの真骨頂をな！－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -29,94 +61,109 @@
 		],
 		"en": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－I'll show you! Show me your true worth! －－－－－－－－－－－－－－－－－－－－－－－－",
-			"From \"Mobile Suit Gundam SEED DESTINY ASTRAY R \", \" Gundam Astray Red Dragon\" is now available in real grade. Calet Wruff, flight unit, draigue head, etc. are reproduced with new modeling. Can be recombined into real grade original weapon form.",
+			"From \"Mobile Suit Gundam SEED DESTINY ASTRAY R\", \"Gundam Astray Red Dragon\" is now available in real grade. Calet Wruff, flight unit, draigue head, etc. are reproduced with new modeling. Can be recombined into real grade original weapon form.",
 			"- Gundam Astray Red Dragon is reproduced with detailed expression unique to RG - Caletwluff that can be transformed in a wide variety of ways - Ambidextrous Halberd By using a general-purpose joint, two Caletwluffs can be connected. ・Build Cutter ・Build Knife Can be separated and recombined into twin swords. ・Cannon Mode Kaleto Wruff's wide range of motion allows for dynamic poses. A pedestal is included for stable display. ●Real grade unique recombination is possible By using a general-purpose joint, it is possible to recombine the build cutter and build knife into a combination of three. -Comes with a newly designed realistic decal!",
 			"Attached weapons: Caletwruff / Beam Rifle / Sealdo / Gerbera Straight / Beam Saber Accessories: 1 set of hand parts / various joints / head beam effect / low figure / pedestal",
 			"－－－－－－－－－－－－－－－－－－－1/144ScaleAssembly式プラModel対象齢：１５才以上主な製品素材：ＰＳ・ＰＰ・ＡＢＳ・Assemblyに接着剤は使用しません－－－－－－－－－－－－－－－－－－－",
 			"*The finished product in the photo is a painted product. Also, a prototype that is still under development. The actual product may differ. *When using clear parts, there may be air bubbles in the clear parts due to the manufacturing process. *There may be variations in plated parts due to the painting process. Thank you for your understanding. *Product materials may change depending on production time. Thank you for your understanding. *Depending on sales conditions, the quantity that can be purchased may change in the future."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"カレトヴルッフ",
-			"ビームライフル",
-			"シールド",
-			"ガーベラ・ストレート",
-			"ビームサーベル付属品　：ハンドパーツ1式",
-			"ジョイント各種",
-			"頭部ビームエフェクト",
-			"ロウフィギュア",
-			"台座"
-		],
-		"en": [
-			"Karetwruch",
-			"beam rifle",
-			"Seal de",
-			"gerbera straight",
-			"Beam saber accessories: 1 set of hand parts",
-			"Various joints",
-			"head beam effect",
-			"row figure",
-			"pedestal"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "カレトヴルッフ",
+				"en": "Karetwruch"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "beam rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		},
+		{
+			"name": {
+				"ja": "ガーベラ・ストレート",
+				"en": "gerbera straight"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル付属品　：ハンドパーツ1式",
+				"en": "Beam saber accessories: 1 set of hand parts"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイント各種",
+				"en": "Various joints"
+			}
+		},
+		{
+			"name": {
+				"ja": "頭部ビームエフェクト",
+				"en": "head beam effect"
+			}
+		},
+		{
+			"name": {
+				"ja": "ロウフィギュア",
+				"en": "row figure"
+			}
+		},
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_7047_0.jpg",
 				"path": "/images/items/01_7047/01_7047_0.jpg",
 				"hash": "8048f3db1bc3e324c8bc3d7c7bf1483e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7047_1.jpg",
 				"path": "/images/items/01_7047/01_7047_1.jpg",
 				"hash": "843fcb27e74f00d558589c1274413368"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7047_2.jpg",
 				"path": "/images/items/01_7047/01_7047_2.jpg",
 				"hash": "ed4974d0186872e9e8b3ef638ca262fe"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7047_3.jpg",
 				"path": "/images/items/01_7047/01_7047_3.jpg",
 				"hash": "3ed10a4f7b0245652c98ec684925271c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7047_4.jpg",
 				"path": "/images/items/01_7047/01_7047_4.jpg",
 				"hash": "55868c9e51de16cf5c9908053bb4e91c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7047_5.jpg",
 				"path": "/images/items/01_7047/01_7047_5.jpg",
 				"hash": "0e08ad58bdce8f5290d020c2b8537d7e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7047_6.jpg",
 				"path": "/images/items/01_7047/01_7047_6.jpg",
 				"hash": "72d23798e84393fcb6585e06bd680a24"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7047_7.jpg",
 				"path": "/images/items/01_7047/01_7047_7.jpg",
 				"hash": "06728600bc61306d6b6299e2111f88e0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_7047_8.jpg",
 				"path": "/images/items/01_7047/01_7047_8.jpg",
 				"hash": "553a362b0a9d52e8062df234151dc133"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_7047/",
-	"brandIds": ["rg", "pb_rg", "pb_gunpla"],
-	"seriesIds": ["astrays-r"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": [],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_7047/"
 }
