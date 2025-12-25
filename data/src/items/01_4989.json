@@ -5,6 +5,39 @@
 		"ja": "Figure-rise Standard ウマ娘 プリティーダービー スペシャルウィーク",
 		"en": "Figure-rise Standard Uma Musume Pretty Derby Special Week"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "umamusume",
+			"url": "https://bandai-hobby.net/series/umamusume/",
+			"ja": "ウマ娘 プリティーダービー"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5417",
+			"url": "https://bandai-hobby.net/item/01_5417/",
+			"ja": "Figure-rise Standard ウマ娘 プリティーダービー サイレンススズカ"
+		},
+		{
+			"id": "01_4118",
+			"url": "https://bandai-hobby.net/item/01_4118/",
+			"ja": "Figure-rise Standard ウマ娘 プリティーダービー トウカイテイオー"
+		}
+	],
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -42,45 +75,55 @@
 			"• Comes with a clear molded base. By connecting the pillar to the back, you can hold the body while running."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"表情パーツ(タンポ印刷)×1種",
-			"表情パーツ(水転写式デカール)×２種",
-			"ハンドパーツ×１式",
-			"専用台座×１式",
-			"水転写式デカール×１",
-			"シール×１"
-		],
-		"en": [
-			"Facial expression parts (tampo printing) x 1 type",
-			"Facial expression parts (water transfer decal) x 2 types",
-			"Hand parts x 1 set",
-			"Dedicated pedestal x 1 set",
-			"Water transfer decal x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情パーツ(タンポ印刷)",
+				"en": "Facial expression parts (tampo printing)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "表情パーツ(水転写式デカール)×２種",
+				"en": "Facial expression parts (water transfer decal) x 2 types"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "専用台座×１式",
+				"en": "Dedicated pedestal x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール×１",
+				"en": "Water transfer decal x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204332_1.jpg",
 				"path": "/images/items/01_4989/1000204332_1.jpg",
 				"hash": "a314da2aaef29b1f418529c38a063b2b"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204332_10.jpg",
-				"path": "/images/items/01_4989/1000204332_10.jpg",
-				"hash": "51c6af736b52f6b88433d3fee8f827fb"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204332_11.jpg",
-				"path": "/images/items/01_4989/1000204332_11.jpg",
-				"hash": "6566088279c70d00b4bb1397f36c4421"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204332_12.jpg",
-				"path": "/images/items/01_4989/1000204332_12.jpg",
-				"hash": "44ad61fe4d8fc74530e1d5373f41157b"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204332_2.jpg",
@@ -121,13 +164,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204332_9.jpg",
 				"path": "/images/items/01_4989/1000204332_9.jpg",
 				"hash": "521ab7f8e2e2b541179256eaddea4c5f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204332_10.jpg",
+				"path": "/images/items/01_4989/1000204332_10.jpg",
+				"hash": "51c6af736b52f6b88433d3fee8f827fb"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204332_11.jpg",
+				"path": "/images/items/01_4989/1000204332_11.jpg",
+				"hash": "6566088279c70d00b4bb1397f36c4421"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204332_12.jpg",
+				"path": "/images/items/01_4989/1000204332_12.jpg",
+				"hash": "44ad61fe4d8fc74530e1d5373f41157b"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4989/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["umamusume"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5417", "01_4118"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4989/"
 }

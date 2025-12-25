@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "SDW HEROES ヒーロー再臨! 復活の悟空インパルスガンダム & 三蔵ストライクフリーダムガンダム セット",
-		"en": "SDW HEROES REVIVAL OF THE HEROES! WUKONG IMPULSE GUNDAM (CHILDHOOD Ver.) & SANZANG STRIKE FREEDOM GUNDAM SET"
+		"en": "SDW HEROES Hero Second Coming! Resurrection of Goku Impulse Gundam & Sanzo Strike Freedom Gundam Set"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5470",
+			"url": "https://bandai-hobby.net/item/01_5470/",
+			"ja": "SDW HEROES キャプテンクアンタ GF"
+		},
+		{
+			"id": "01_5471",
+			"url": "https://bandai-hobby.net/item/01_5471/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-B"
+		},
+		{
+			"id": "01_5472",
+			"url": "https://bandai-hobby.net/item/01_5472/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-F"
+		},
+		{
+			"id": "01_5347",
+			"url": "https://bandai-hobby.net/item/01_5347/",
+			"ja": "SDW HEROES スペリオルフォーミュラー ファイナルドラゴン[クリアカラー]"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -21,42 +58,39 @@
 	"description": {
 		"ja": [
 			"『SDガンダムワールド ヒーローズ』シリーズより、アニメ本編でも印象的なキャラクターをセットで商品化！",
-			"■幼少期の悟空インパルスガンダムは完全新規造形。",
-			"■三蔵ストライクフリーダムガンダムも一部新規造形にて立体化。武装には錫杖が付属。",
-			"■ゴールドやクリアカラーの成形色で、高密度で色鮮やかな機体のディテールを表現。"
+			"• 幼少期の悟空インパルスガンダムは完全新規造形。",
+			"• 三蔵ストライクフリーダムガンダムも一部新規造形にて立体化。武装には錫杖が付属。",
+			"• ゴールドやクリアカラーの成形色で、高密度で色鮮やかな機体のディテールを表現。"
 		],
 		"en": [
-			"From the \"SD Gundam World Heroes\" series, a set of impressive characters from the main anime is now available!",
+			"From the \"SD Gundam World Heroes\" series, a set of impressive characters from the main anime will be commercialized!",
 			"• Childhood Goku Impulse Gundam is completely new model.",
 			"• Sanzo Strike Freedom Gundam is also three-dimensional with some new modeling. A tin cane is included as a weapon.",
 			"• High-density and vivid details of the aircraft are expressed using gold and clear molding colors."
 		]
 	},
-	"accessories": {
-		"ja": ["錫杖×1", "シール×1"],
-		"en": ["Cane x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "錫杖",
+				"en": "tin cane"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202157_1.jpg",
 				"path": "/images/items/01_4995/1000202157_1.jpg",
 				"hash": "92a42fd81bdfd7da8666368642083a24"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202157_10.jpg",
-				"path": "/images/items/01_4995/1000202157_10.jpg",
-				"hash": "dca316032c2619740f84c95250f7288e"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202157_11.jpg",
-				"path": "/images/items/01_4995/1000202157_11.jpg",
-				"hash": "54b029e4b0d5dbd015f4b0772234ce0d"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202157_12.jpg",
-				"path": "/images/items/01_4995/1000202157_12.jpg",
-				"hash": "4f6ce64d043dee115be00e01b24028a6"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202157_2.jpg",
@@ -97,13 +131,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202157_9.jpg",
 				"path": "/images/items/01_4995/1000202157_9.jpg",
 				"hash": "63f96113afe4509ee49d7c8971e7ef69"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202157_10.jpg",
+				"path": "/images/items/01_4995/1000202157_10.jpg",
+				"hash": "dca316032c2619740f84c95250f7288e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202157_11.jpg",
+				"path": "/images/items/01_4995/1000202157_11.jpg",
+				"hash": "54b029e4b0d5dbd015f4b0772234ce0d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202157_12.jpg",
+				"path": "/images/items/01_4995/1000202157_12.jpg",
+				"hash": "4f6ce64d043dee115be00e01b24028a6"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4995/",
-	"brandIds": [],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4995/"
 }

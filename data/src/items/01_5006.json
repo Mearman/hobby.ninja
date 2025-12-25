@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard ULTRAMAN SUIT ZERO〈SC仕様〉 -ACTION-",
-		"en": "Figure-rise Standard ULTRAMAN SUIT ZERO〈SC Ver.〉 -ACTION-"
+		"en": "Figure-rise Standard ULTRAMAN SUIT ZERO〈SC specification〉 -ACTION-"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "ultraman",
+			"url": "https://bandai-hobby.net/series/ultraman/",
+			"ja": "ウルトラマン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5371",
+			"url": "https://bandai-hobby.net/item/01_5371/",
+			"ja": "Figure-rise Standard ウルトラマンティガ マルチタイプ"
+		},
+		{
+			"id": "01_5198",
+			"url": "https://bandai-hobby.net/item/01_5198/",
+			"ja": "Figure-rise Standard ウルトラマンジード プリミティブ"
+		},
+		{
+			"id": "01_5096",
+			"url": "https://bandai-hobby.net/item/01_5096/",
+			"ja": "Figure-rise Standard ULTRAMAN SUIT JACK -ACTION-"
+		},
+		{
+			"id": "01_5046",
+			"url": "https://bandai-hobby.net/item/01_5046/",
+			"ja": "Figure-rise Standard ウルトラマンブレーザー"
+		}
+	],
 	"price": {
 		"amount": 4070,
 		"currency": "JPY",
@@ -21,14 +64,14 @@
 	"description": {
 		"ja": [
 			"ULTRAMAN外伝企画『ULTRAMAN SUIT ANOTHER UNIVERSE Episode:ZERO』より、時空突入のためにコーティングを施されたZERO SUITの新たな姿、「ULTRAMAN SUIT ZERO<SC仕様>」が広域可動の-ACTION-仕様で商品化！",
-			"■清水栄一先生監修デザインのプラモデルオリジナル武装「ワイドゼロショット」が付属。",
-			"■「ワイドゼロショット」はグリップの収納が可能。",
-			"■腹部に複数のボールジョイントを設け、可動域をアップ。前屈や腹部のひねりに対応。",
-			"■腹部パーツは可動優先タイプと別売りLED内蔵タイプの2タイプから選択可能。",
-			"■ゼロランスやディスプレイ用台座など、豊富なパーツが付属。"
+			"• 清水栄一先生監修デザインのプラモデルオリジナル武装「ワイドゼロショット」が付属。",
+			"• 「ワイドゼロショット」はグリップの収納が可能。",
+			"• 腹部に複数のボールジョイントを設け、可動域をアップ。前屈や腹部のひねりに対応。",
+			"• 腹部パーツは可動優先タイプと別売りLED内蔵タイプの2タイプから選択可能。",
+			"• ゼロランスやディスプレイ用台座など、豊富なパーツが付属。"
 		],
 		"en": [
-			"From the ULTRAMAN Gaiden project \"ULTRAMAN SUIT ANOTHER UNIVERSE Episode: ZERO \", a new form of ZERO SUIT coated for space-time entry, \" ULTRAMAN SUIT ZERO <SC specification>\" is commercialized in -ACTION- specification with wide range movement!",
+			"From the ULTRAMAN Gaiden project \"ULTRAMAN SUIT ANOTHER UNIVERSE Episode: ZERO\", a new form of ZERO SUIT coated for space-time entry, \"ULTRAMAN SUIT ZERO <SC specification>\" is commercialized in -ACTION- specification with wide range movement!",
 			"• Comes with a plastic model original weapon \"Wide Zero Shot\" designed under the supervision of Eiichi Shimizu.",
 			"• \"Wide Zero Shot\" allows the grip to be stored.",
 			"• Multiple ball joints in the abdomen increase range of motion. Supports forward bends and abdominal twists.",
@@ -36,74 +79,100 @@
 			"• Comes with a variety of parts such as zero lance and display pedestal."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ワイドゼロショット×1",
-			"ゼロランス×1",
-			"ハンドパーツ（左右）×各2種",
-			"ディスプレイ用台座×1",
-			"ジョイントパーツ×1",
-			"シール×1",
-			"マーキングシール×1"
-		],
-		"en": [
-			"Wide zero shot x 1",
-			"Zero Lance x 1",
-			"Hand parts (left and right) x 2 types each",
-			"Display pedestal x 1",
-			"Joint parts x 1",
-			"Seal×1",
-			"MarkingSeal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ワイドゼロショット",
+				"en": "wide zero shot"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ゼロランス",
+				"en": "zero lance"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ（左右）×各2種",
+				"en": "Hand parts (left and right) x 2 types each"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ用台座",
+				"en": "display pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5874.jpg",
+				"src": "https://bandai-hobby.net/images/153_5874_s_6g8666my1tmyd4qitu750dsnx4qq.jpg",
 				"path": "/images/items/01_5006/153_5874.jpg",
 				"hash": "c3c0b2df99dc9c9780ffeb5bf62bbe95"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5874.jpg",
+				"src": "https://bandai-hobby.net/images/155_5874_s_zjk0394fche0s57uco5zzqc167na.jpg",
 				"path": "/images/items/01_5006/155_5874.jpg",
 				"hash": "6797a6cc243a313d0db973f9b659c390"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5874.jpg",
+				"src": "https://bandai-hobby.net/images/156_5874_s_rww5v46jqqpgc84jff1n0ij4kocj.jpg",
 				"path": "/images/items/01_5006/156_5874.jpg",
 				"hash": "8a67fa2749f8c39bd4e384037da4e5f3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5874.jpg",
+				"src": "https://bandai-hobby.net/images/157_5874_s_v98hf9f1thmg9cz6vu2ml5scasm2.jpg",
 				"path": "/images/items/01_5006/157_5874.jpg",
 				"hash": "839a97fa9db6624534dcd4dbb9d582fa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5874.jpg",
+				"src": "https://bandai-hobby.net/images/158_5874_s_p6wb8lbsrryzmqq9qy4roqhf56j6.jpg",
 				"path": "/images/items/01_5006/158_5874.jpg",
 				"hash": "8cf3e31e39dc2ae730ebd0a2e6344bd1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5874.jpg",
+				"src": "https://bandai-hobby.net/images/159_5874_s_ev1qp72ve0djt9ba8boeeliu5c01.jpg",
 				"path": "/images/items/01_5006/159_5874.jpg",
 				"hash": "ed17e7d363c5a4cb59ff0b330da48b54"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5874.jpg",
+				"src": "https://bandai-hobby.net/images/189_5874_s_lib5dq1f2fnc7q5lg9swbky9msd8.jpg",
 				"path": "/images/items/01_5006/189_5874.jpg",
 				"hash": "510dd4239d31e763c74310ad740c7eff"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5874.jpg",
+				"src": "https://bandai-hobby.net/images/190_5874_s_q7eb778eaqgze4s69riw87c1hjdp.jpg",
 				"path": "/images/items/01_5006/190_5874.jpg",
 				"hash": "3449214335a4c028a77cbff7824691ba"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5006/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["ultraman"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5371", "01_5198", "01_5096", "01_5046"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5006/"
 }

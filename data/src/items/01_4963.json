@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ベアッガイIII「セブン-イレブンカラー」",
 		"en": "HG 1/144 Beargguy III \"Seven-Eleven Color\""
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,20 +62,23 @@
 		"day": 31
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["HG 1/144 ベアッガイIII「セブン-イレブンカラー」登場！"],
-		"en": ["HG 1/144 Beargguy III \"7-Eleven Color\" now available!"]
+		"ja": [
+			"HG 1/144 ベアッガイIII「セブン-イレブンカラー」登場！"
+		],
+		"en": [
+			"HG 1/144 Beargguy III \"7-Eleven Color\" now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5834.jpg",
+				"src": "https://bandai-hobby.net/images/153_5834_s_7fka6irde77jovfeyf2pncz0w3xt.jpg",
 				"path": "/images/items/01_4963/153_5834.jpg",
 				"hash": "6da9fcbda0fc9d95abaa86276c0f9a42"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5834.jpg",
+				"src": "https://bandai-hobby.net/images/155_5834_s_5rqn6bvxpag5pvtd3taha3o4kvxi.jpg",
 				"path": "/images/items/01_4963/155_5834.jpg",
 				"hash": "937f624884340c20adc7fbf661d636f7"
 			}
@@ -39,14 +86,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4963/",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5057", "01_1942", "01_1288", "01_1261"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	},
 	"manual": {
 		"id": "11",
 		"url": "https://manual.bandai-hobby.net/menus/detail/11/"

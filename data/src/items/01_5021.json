@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/72 境界戦機ウェポンセット7",
-		"en": "HG 1/72 AMAIM Warrior at the Borderline Weapon Set7"
+		"en": "HG 1/72 Kyoukai Senki Weapon Set 7"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,12 +62,11 @@
 		"day": 18
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"『境界戦機 極鋼ノ装鬼』（きょうかいせんき きょっこうのそうき）より、北米軍系機体や局地戦向けの武装を収録した「境界戦機ウェポンセット7」が登場！",
-			"■ジャベリン、フレイムスロワー、ガトリングガン、ショートバレルライフル、アサルトライフル、ブレード等の武装をまとめたセット。",
-			"■スラスターユニットやガードユニット等のカスタマイズパーツやジョイントパーツが付属。"
+			"• ジャベリン、フレイムスロワー、ガトリングガン、ショートバレルライフル、アサルトライフル、ブレード等の武装をまとめたセット。",
+			"• スラスターユニットやガードユニット等のカスタマイズパーツやジョイントパーツが付属。"
 		],
 		"en": [
 			"From ``Kyokai Senki Kyokko no Souki'' comes ``Kyoukai Senki Weapon Set 7'', which includes North American military aircraft and weapons for local battles!",
@@ -31,83 +74,132 @@
 			"• Customized parts and joint parts such as thruster units and guard units are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ガトリングガン×1",
-			"ショートバレルライフル×1",
-			"アサルトライフル×1",
-			"フレイムスロワー×1",
-			"ジャベリン×1",
-			"ブレード×1",
-			"スラスターユニット×1式",
-			"ガードユニット×1式",
-			"ジョイントパーツ×1式"
-		],
-		"en": [
-			"Gatling gun x 1",
-			"Short barrel rifle x 1",
-			"Assault rifle x 1",
-			"Flame thrower x1",
-			"Javelin×1",
-			"Blade x 1",
-			"Thruster unit x 1 set",
-			"Guard unit x 1 set",
-			"Joint parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ガトリングガン",
+				"en": "gatling gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ショートバレルライフル",
+				"en": "short barrel rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アサルトライフル",
+				"en": "assault rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "フレイムスロワー",
+				"en": "flame thrower"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジャベリン",
+				"en": "javelin"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ブレード",
+				"en": "blade"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "スラスターユニット",
+				"en": "thruster unit"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ガードユニット",
+				"en": "guard unit"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5888.jpg",
+				"src": "https://bandai-hobby.net/images/153_5888_s_udhr2pvyv48144s28t0lw5s8gnhk.jpg",
 				"path": "/images/items/01_5021/153_5888.jpg",
 				"hash": "96ecdd6e886895c530774f7de70cb6ce"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5888.jpg",
+				"src": "https://bandai-hobby.net/images/155_5888_s_o0y1ewxc591uo15z5jvl5thbgihe.jpg",
 				"path": "/images/items/01_5021/155_5888.jpg",
 				"hash": "723b0a431c667d1018d61c41c4a6c935"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5888.jpg",
+				"src": "https://bandai-hobby.net/images/156_5888_s_px69mj9h69rl39c1azuulnux2tmq.jpg",
 				"path": "/images/items/01_5021/156_5888.jpg",
 				"hash": "36e5dc26ea414df0376d015b423f75a2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5888.jpg",
+				"src": "https://bandai-hobby.net/images/157_5888_s_6i4l51h8wviyglgk41qwssjhypxn.jpg",
 				"path": "/images/items/01_5021/157_5888.jpg",
 				"hash": "20065dcd664fb8a9796c8d8acc37c9f4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5888.jpg",
+				"src": "https://bandai-hobby.net/images/158_5888_s_fsc0psdf0y3xfd8ig5ql6sae1zph.jpg",
 				"path": "/images/items/01_5021/158_5888.jpg",
 				"hash": "7cd9844ecaa4c90c1a9b4457746f6c62"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5888.jpg",
+				"src": "https://bandai-hobby.net/images/159_5888_s_qbikwbogl959becfuc0w65bk5fco.jpg",
 				"path": "/images/items/01_5021/159_5888.jpg",
 				"hash": "492cc09a9af82c4c8025f6270471e101"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5888.jpg",
+				"src": "https://bandai-hobby.net/images/189_5888_s_eydik051o1mswixovbfdjmyup3i1.jpg",
 				"path": "/images/items/01_5021/189_5888.jpg",
 				"hash": "cf7532597ad027184ff7c4b5efb2104b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5888.jpg",
+				"src": "https://bandai-hobby.net/images/190_5888_s_h0pt9v5rdnnszhtaovnx6ogglenh.jpg",
 				"path": "/images/items/01_5021/190_5888.jpg",
 				"hash": "f48b7eff48b8b83e98e6445d36e1e715"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5888.jpg",
+				"src": "https://bandai-hobby.net/images/191_5888_s_19a8jmqlhq4c1kmszrqsiqmquskg.jpg",
 				"path": "/images/items/01_5021/191_5888.jpg",
 				"hash": "7051e9c056a92810f6016a1c8e6bfdc7"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5021/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5021/"
 }

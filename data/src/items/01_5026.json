@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 オプションパーツセット14 (マルチクロス)",
-		"en": "30MM 1/144 OPTION PARTS SET 14 (MULTI CLOTH / MULTI-JOINT)"
+		"en": "30MM 1/144 Option Parts Set 14 (Multi Cross)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1078,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMオプションパーツセットに、カスタマイズの幅が広がる「マルチクロス」のセットが登場！",
@@ -33,21 +75,32 @@
 			"• Two types of muffler parts are included."
 		]
 	},
-	"accessories": {
-		"ja": ["マントパーツ×１式", "襟巻パーツ×２種", "マフラーパーツ×２種"],
-		"en": ["Cloak parts x 1 set", "Collar parts x 2 types", "Muffler parts x 2 types"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "マントパーツ×１式",
+				"en": "Cloak parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "襟巻パーツ×２種",
+				"en": "Collar parts x 2 types"
+			}
+		},
+		{
+			"name": {
+				"ja": "マフラーパーツ×２種",
+				"en": "Muffler parts x 2 types"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204175_1.jpg",
 				"path": "/images/items/01_5026/1000204175_1.jpg",
 				"hash": "c29502f2f9e6bba367386a8620352e96"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204175_10.jpg",
-				"path": "/images/items/01_5026/1000204175_10.jpg",
-				"hash": "47e1588febdc20b24fbfebc76fe010c2"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204175_2.jpg",
@@ -88,15 +141,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204175_9.jpg",
 				"path": "/images/items/01_5026/1000204175_9.jpg",
 				"hash": "57ed926316b3b361bc8d1855cc63b61d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000204175_10.jpg",
+				"path": "/images/items/01_5026/1000204175_10.jpg",
+				"hash": "47e1588febdc20b24fbfebc76fe010c2"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5026/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3769",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3769/"

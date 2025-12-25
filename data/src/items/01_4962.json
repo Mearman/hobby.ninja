@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 MS-06S シャア専用ザク Ver.2.0 メカニカルクリア",
 		"en": "MG 1/100 MS-06S Char's Zaku Ver.2.0 Mechanical Clear"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3871,
 		"currency": "JPY",
@@ -18,38 +62,33 @@
 		"day": 12
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
-		"ja": ["MG 1/100 MS-06S シャア専用ザク Ver.2.0 メカニカルクリア登場！"],
-		"en": ["MG 1/100 MS-06S Char's Zaku Ver.2.0 mechanical clear now available!"]
+		"ja": [
+			"MG 1/100 MS-06S シャア専用ザク Ver.2.0 メカニカルクリア登場！"
+		],
+		"en": [
+			"MG 1/100 MS-06S Char's Zaku Ver.2.0 mechanical clear now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5833.jpg",
+				"src": "https://bandai-hobby.net/images/153_5833_s_b8w70exekhv1pwkh2va9jy5irnao.jpg",
 				"path": "/images/items/01_4962/153_5833.jpg",
 				"hash": "a6693fcc163e2ec63518e3232bd790a3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5833.jpg",
+				"src": "https://bandai-hobby.net/images/155_5833_s_8w2eo28xi3tz2ud7ahxl014ow5o2.jpg",
 				"path": "/images/items/01_4962/155_5833.jpg",
 				"hash": "b204981aac4ef6178c98e30bd253b453"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5833.jpg",
+				"src": "https://bandai-hobby.net/images/156_5833_s_2xmw4qfxwnshqw4xn10dn1j9seqf.jpg",
 				"path": "/images/items/01_4962/156_5833.jpg",
 				"hash": "9432aa2388dd525c43ca3fbc520f12ea"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4962/",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4962/"
 }

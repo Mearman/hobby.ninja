@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "HG スコープドッグ",
-		"en": "HG SCOPEDOG"
+		"en": "HG Scopedog"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "votoms",
+			"url": "https://bandai-hobby.net/series/votoms/",
+			"ja": "装甲騎兵ボトムズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000223037",
+			"url": "https://p-bandai.jp/item/item-1000223037/",
+			"ja": "ＨＧ スコープドッグ用拡張パーツセット6"
+		},
+		{
+			"id": "01_5553",
+			"url": "https://bandai-hobby.net/item/01_5553/",
+			"ja": "HG スコープドッグターボカスタム"
+		},
+		{
+			"id": "item-1000209959",
+			"url": "https://p-bandai.jp/item/item-1000209959/",
+			"ja": "ＨＧ スコープドッグ用拡張パーツセット3"
+		},
+		{
+			"id": "item-1000209960",
+			"url": "https://p-bandai.jp/item/item-1000209960/",
+			"ja": "ＨＧ スコープドッグ用拡張パーツセット4"
+		}
+	],
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -40,31 +83,46 @@
 			"• Includes heavy machine gun and various hand parts."
 		]
 	},
-	"accessories": {
-		"ja": ["ヘビィマシンガン×1", "３Dメタリックシール×1", "ジョイントパーツ×1", "ハンドパーツ×1式"],
-		"en": ["Heavy machine gun x1", "3D metallic seal×1", "Joint parts x 1", "Hand parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヘビィマシンガン",
+				"en": "heavy machine gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "３Dメタリックシール",
+				"en": "3D Metallic Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000194520_1.jpg",
 				"path": "/images/items/01_5004/1000194520_1.jpg",
 				"hash": "68642d127a5243fba377072f4f7df20a"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000194520_10.jpg",
-				"path": "/images/items/01_5004/1000194520_10.jpg",
-				"hash": "872ac45c65eb4cef1cac799e58905cd0"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000194520_11.jpg",
-				"path": "/images/items/01_5004/1000194520_11.jpg",
-				"hash": "b72fc47054d0f8fb14df3e216dfab5ae"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000194520_12.jpg",
-				"path": "/images/items/01_5004/1000194520_12.jpg",
-				"hash": "7cb4421a45ec331321a6a14008ffd9e8"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000194520_2.jpg",
@@ -105,13 +163,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000194520_9.jpg",
 				"path": "/images/items/01_5004/1000194520_9.jpg",
 				"hash": "901c2f30fab21a7eba010d9bb23c39d2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000194520_10.jpg",
+				"path": "/images/items/01_5004/1000194520_10.jpg",
+				"hash": "872ac45c65eb4cef1cac799e58905cd0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000194520_11.jpg",
+				"path": "/images/items/01_5004/1000194520_11.jpg",
+				"hash": "b72fc47054d0f8fb14df3e216dfab5ae"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000194520_12.jpg",
+				"path": "/images/items/01_5004/1000194520_12.jpg",
+				"hash": "7cb4421a45ec331321a6a14008ffd9e8"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5004/",
-	"brandIds": ["hg"],
-	"seriesIds": ["votoms"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["item-1000223037", "01_5553", "item-1000209959", "item-1000209960"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5004/"
 }

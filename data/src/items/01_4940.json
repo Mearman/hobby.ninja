@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 シャア専用 リック・ドム(コーティングバージョン)",
 		"en": "MG 1/100 Char's Rick Dom (coated version)"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 6600,
 		"currency": "JPY",
@@ -18,15 +62,18 @@
 		"day": 1
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
-		"ja": ["MG 1/100 シャア専用 リック・ドム(コーティングバージョン)登場！"],
-		"en": ["MG 1/100 Char's exclusive Rick Dom (coated version) now available!"]
+		"ja": [
+			"MG 1/100 シャア専用 リック・ドム(コーティングバージョン)登場！"
+		],
+		"en": [
+			"MG 1/100 Char's exclusive Rick Dom (coated version) now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5813.jpg",
+				"src": "https://bandai-hobby.net/images/153_5813_s_7bs2tzg4xi2tlhe2s7777f5zgtih.jpg",
 				"path": "/images/items/01_4940/153_5813.jpg",
 				"hash": "8d415046efaf0425a6b54763fd7c115a"
 			}
@@ -34,14 +81,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4940/",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	},
 	"manual": {
 		"id": "447",
 		"url": "https://manual.bandai-hobby.net/menus/detail/447/"

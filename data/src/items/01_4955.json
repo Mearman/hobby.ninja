@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ビルドアカツキガンダム(川口克己プロデュース)",
 		"en": "HG 1/144 Build Akatsuki Gundam (produced by Katsumi Kawaguchi)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,25 +62,28 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["HG 1/144 ビルドアカツキガンダム(川口克己プロデュース)登場！"],
-		"en": ["HG 1/144 Build Akatsuki Gundam (produced by Katsumi Kawaguchi) is now available!"]
+		"ja": [
+			"HG 1/144 ビルドアカツキガンダム(川口克己プロデュース)登場！"
+		],
+		"en": [
+			"HG 1/144 Build Akatsuki Gundam (produced by Katsumi Kawaguchi) is now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5827.jpg",
+				"src": "https://bandai-hobby.net/images/153_5827_s_ltxai0lp50pg5v67jwnfsmfni2v1.jpg",
 				"path": "/images/items/01_4955/153_5827.jpg",
 				"hash": "c8a0308d3aaef2c8cca25f9bb402f17c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5827.jpg",
+				"src": "https://bandai-hobby.net/images/155_5827_s_o7paiyw4sbl2q6nuq2frw90gzodq.jpg",
 				"path": "/images/items/01_4955/155_5827.jpg",
 				"hash": "6a8def24fc5e3cde74a7bcbf3c649f75"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5827.jpg",
+				"src": "https://bandai-hobby.net/images/156_5827_s_doitmedbvhz2hflzm021cbi5iqc7.jpg",
 				"path": "/images/items/01_4955/156_5827.jpg",
 				"hash": "6d0c465dcfc596cbc4562b05949c083b"
 			}
@@ -44,14 +91,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4955/",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5057", "01_1942", "01_1288", "01_1261"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	},
 	"manual": {
 		"id": "704",
 		"url": "https://manual.bandai-hobby.net/menus/detail/704/"

@@ -5,6 +5,54 @@
 		"ja": "HG 1/144 量産型リコ専用ザク",
 		"en": "HG 1/144 Mass-produced Rico exclusive Zaku"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ドラマ『量産型リコ -もう1人のプラモ女子の人生組み立て記-』公式プラモデル！",
@@ -30,55 +77,72 @@
 		],
 		"en": [
 			"Official plastic model of the drama \"Mass-produced Rico -Another Plastic Model Girl's Life Assembly-\"!",
-			"• A coloring based on the logo color of \"Mass-Produced Rico -Another Plastic Model Girl's Life Assembly-\" and the Zaku design that was painted on the right shoulder of the main character Rico's first assembly in episode 1 of the previous work \" Mass-Produced Rico -Another Plastic Model Girl's Life Assembly-\"!",
-			"• In addition to the drama title logo, the logos of the start-up company \"Dream Crazy \" launched by the main character Riko Komukai (Riko) who appears in the drama, and the plastic model shop \" Yajima Model Store\", a limited marking seal that matches the design of the aircraft is also included.",
+			"• A coloring based on the logo color of \"Mass-Produced Rico -Another Plastic Model Girl's Life Assembly-\" and the Zaku design that was painted on the right shoulder of the main character Rico's first assembly in episode 1 of the previous work \"Mass-Produced Rico -Another Plastic Model Girl's Life Assembly-\"!",
+			"• In addition to the drama title logo, the logos of the start-up company \"Dream Crazy\" launched by the main character Riko Komukai (Riko) who appears in the drama, and the plastic model shop \"Yajima Model Store\", a limited marking seal that matches the design of the aircraft is also included.",
 			"• The package design is a collaboration limited design using drama key visuals!",
 			"• Each part of the main body uses movable gimmicks that match the form of the aircraft.",
 			"• Includes typical weapons equipped by Zaku II.",
 			"• The school bag is shaped to match the Zaku II settings."
 		]
 	},
-	"accessories": {
-		"ja": ["ザク・マシンガン×1", "ザク・バズーカ×1", "ヒート・ホーク×1", "マーキングシール"],
-		"en": ["Zaku machine gun x1", "Zaku Bazooka×1", "Heat Hawk x1", "MarkingSeal"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ザク・マシンガン",
+				"en": "zaku machine gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ザク・バズーカ",
+				"en": "Zaku Bazooka"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ヒート・ホーク",
+				"en": "heat hawk"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5899.jpeg",
+				"src": "https://bandai-hobby.net/images/153_5899_o_1i9dv97k0fpi3981r9msr4l8j28.jpeg",
 				"path": "/images/items/01_5032/153_5899.jpeg",
 				"hash": "6f48d4e2d214e738a3e4eeb5cc753ff1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5899.jpeg",
+				"src": "https://bandai-hobby.net/images/155_5899_o_1i9dva93a1r6t1omq14r01q19bnn2d.jpeg",
 				"path": "/images/items/01_5032/155_5899.jpeg",
 				"hash": "409aaa93e774d1dcb6de17cd819a006e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5899.jpeg",
+				"src": "https://bandai-hobby.net/images/156_5899_o_1h3jl5belusj1iau1ch3hj01mfe2i.jpeg",
 				"path": "/images/items/01_5032/156_5899.jpeg",
 				"hash": "45c8eca59b751619ba04dfd5afa59e92"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5899.jpeg",
+				"src": "https://bandai-hobby.net/images/157_5899_o_1h3jl5eqnpfm1sne1n031o18j6q2n.jpeg",
 				"path": "/images/items/01_5032/157_5899.jpeg",
 				"hash": "4b6c9b1cf2db6ab314d5f2ea4c1deec9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5899.jpeg",
+				"src": "https://bandai-hobby.net/images/158_5899_o_1i9dv83e654lii1au8dr8166p23.jpeg",
 				"path": "/images/items/01_5032/158_5899.jpeg",
 				"hash": "c2d5beac20f4a349280605322569ca52"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5032/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5032/"
 }

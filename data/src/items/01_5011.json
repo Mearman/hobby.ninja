@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "鬼滅模型 嘴平伊之助",
-		"en": "Demon Slayer Model Kit HASHIBIRA INOSUKE"
+		"en": "Demon Slayer Model Inosuke Tsukihira"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "kimetsu",
+			"url": "https://bandai-hobby.net/series/kimetsu/",
+			"ja": "鬼滅の刃"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5101",
+			"url": "https://bandai-hobby.net/item/01_5101/",
+			"ja": "鬼滅模型 我妻善逸"
+		},
+		{
+			"id": "01_4391",
+			"url": "https://bandai-hobby.net/item/01_4391/",
+			"ja": "鬼滅模型 竈門禰豆子"
+		},
+		{
+			"id": "01_3889",
+			"url": "https://bandai-hobby.net/item/01_3889/",
+			"ja": "鬼滅模型 煉獄杏寿郎"
+		},
+		{
+			"id": "01_3521",
+			"url": "https://bandai-hobby.net/item/01_3521/",
+			"ja": "鬼滅模型 竈門炭治郎[ヒノカミ神楽]"
+		}
+	],
 	"price": {
 		"amount": 4620,
 		"currency": "JPY",
@@ -21,10 +58,10 @@
 	"description": {
 		"ja": [
 			"簡単組み立て×ハイクオリティが融合した鬼滅模型に嘴平伊之助がラインアップ！",
-			"■頭部の差し替えで素顔の状態も再現。瞳や眉はタンポ印刷を採用。",
-			"■猪頭の瞳や耳はシール、鼻は彩色パーツで表現。",
-			"■髪の“うねり“や“なびき“の様子を立体的に表現。毛先の色分けは塗装済パーツで再現。",
-			"■日輪刀の刀身も再現。筋肉や毛皮も細部までこだわりの造形で追求。"
+			"• 頭部の差し替えで素顔の状態も再現。瞳や眉はタンポ印刷を採用。",
+			"• 猪頭の瞳や耳はシール、鼻は彩色パーツで表現。",
+			"• 髪の“うねり“や“なびき“の様子を立体的に表現。毛先の色分けは塗装済パーツで再現。",
+			"• 日輪刀の刀身も再現。筋肉や毛皮も細部までこだわりの造形で追求。"
 		],
 		"en": [
 			"Inosuke Tsukihira is now available as a Demon Slayer model that combines easy assembly and high quality!",
@@ -34,73 +71,88 @@
 			"• The blade of the ring sword is also reproduced. Muscles and fur are also sculpted with great attention to detail."
 		]
 	},
-	"accessories": {
-		"ja": ["日輪刀×2", "素顔パーツ(タンポ印刷)×1", "シール×1"],
-		"en": ["Ring sword x2", "Real face parts (tampo printing) x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "日輪刀",
+				"en": "ring sword"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "素顔パーツ(タンポ印刷)",
+				"en": "Real face parts (tampo printing)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5879.jpg",
+				"src": "https://bandai-hobby.net/images/153_5879_s_zi7qhmcfzye3j2ul9fpjegm6iuak.jpg",
 				"path": "/images/items/01_5011/153_5879.jpg",
 				"hash": "d2515a5affd055dbe433399f98b9f853"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5879.jpg",
+				"src": "https://bandai-hobby.net/images/155_5879_s_oduhd4p6znx3fzkniuuvf2p1ra4u.jpg",
 				"path": "/images/items/01_5011/155_5879.jpg",
 				"hash": "729a0e3516cf4424e71783c097408fdd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5879.jpg",
+				"src": "https://bandai-hobby.net/images/156_5879_s_fi42yyg4c80dcf1beznnj9d6o9bq.jpg",
 				"path": "/images/items/01_5011/156_5879.jpg",
 				"hash": "5519fa68b97fab9f7aad04d0122afa4a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5879.jpg",
+				"src": "https://bandai-hobby.net/images/157_5879_s_iznurf4g523dksstfn5xphbtu52l.jpg",
 				"path": "/images/items/01_5011/157_5879.jpg",
 				"hash": "66aaf326899173dd47ab7856c9345280"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5879.jpg",
+				"src": "https://bandai-hobby.net/images/158_5879_s_hsjn6ssiqmwi8navz8w7dz9q160o.jpg",
 				"path": "/images/items/01_5011/158_5879.jpg",
 				"hash": "8b533747f5337a4deac530d965bbad13"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5879.jpg",
+				"src": "https://bandai-hobby.net/images/159_5879_s_ka5rku56e77ej5rvkdvow4vavjyl.jpg",
 				"path": "/images/items/01_5011/159_5879.jpg",
 				"hash": "b76d89e76e962dd6f0cdcd0ff0024382"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5879.jpg",
+				"src": "https://bandai-hobby.net/images/189_5879_s_su5hojdjhveknbswkq7m55cbo6gq.jpg",
 				"path": "/images/items/01_5011/189_5879.jpg",
 				"hash": "5a475baafe656b9fed3b9d2c503b0191"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5879.jpg",
+				"src": "https://bandai-hobby.net/images/190_5879_s_babz48hqyg1jfprqtyhthosk64np.jpg",
 				"path": "/images/items/01_5011/190_5879.jpg",
 				"hash": "4c5d33f1712d8165e78139b5b3e0ffc7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5879.jpg",
+				"src": "https://bandai-hobby.net/images/191_5879_s_6bwpbgr99jwocd3quf6axt5ak0h5.jpg",
 				"path": "/images/items/01_5011/191_5879.jpg",
 				"hash": "e18349c0ba45fed881bec1a8d7146237"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5879.jpg",
+				"src": "https://bandai-hobby.net/images/192_5879_s_7ghbpc15xtlwaa34dsgr3m9dsnwb.jpg",
 				"path": "/images/items/01_5011/192_5879.jpg",
 				"hash": "5d277dcec3e222c9ef53448f55acec17"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_5879.jpg",
+				"src": "https://bandai-hobby.net/images/193_5879_s_wfx7r3nu0b9liay325tbu93urbtl.jpg",
 				"path": "/images/items/01_5011/193_5879.jpg",
 				"hash": "ee15ae153ea67d6a171f6bc0fe4ae49d"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5011/",
-	"brandIds": [],
-	"seriesIds": ["kimetsu"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5101", "01_4391", "01_3889", "01_3521"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5011/"
 }

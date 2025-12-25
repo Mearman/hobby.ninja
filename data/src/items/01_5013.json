@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "プラノサウルス アンキロサウルス",
-		"en": "PLANNOSAURUS Ankylosaurus"
+		"en": "planosaurus ankylosaurus"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "plannosaurus",
+			"url": "https://bandai-hobby.net/series/plannosaurus/",
+			"ja": "プラノサウルス"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5501",
+			"url": "https://bandai-hobby.net/item/01_5501/",
+			"ja": "プラノサウルス テリジノサウルス"
+		},
+		{
+			"id": "01_5389",
+			"url": "https://bandai-hobby.net/item/01_5389/",
+			"ja": "プラノサウルス ブラキオサウルス"
+		},
+		{
+			"id": "01_5390",
+			"url": "https://bandai-hobby.net/item/01_5390/",
+			"ja": "プラノサウルス 陸海空恐竜セット"
+		},
+		{
+			"id": "01_5248",
+			"url": "https://bandai-hobby.net/item/01_5248/",
+			"ja": "プラノサウルス パラサウロロフス"
+		}
+	],
 	"price": {
 		"amount": 1595,
 		"currency": "JPY",
@@ -31,7 +68,7 @@
 			"• 口の開閉や前肢、後肢、首など各所が可動し、好みのポージングでディスプレイが可能。"
 		],
 		"en": [
-			"The Cretaceous heavy tank \"Ankylosaurus \" appears in the 6th edition of \" Planosaurus \", a brand that lets you \" know everything about dinosaurs\" with your own hands!",
+			"The Cretaceous heavy tank \"Ankylosaurus\" appears in the 6th edition of \"Planosaurus\", a brand that lets you \"know everything about dinosaurs\" with your own hands!",
 			"• \"Skeleton Build\" allows you to learn about the internal structure of dinosaurs.",
 			"• \"Dinosaur Build\" allows you to restore the dinosaur's appearance using specifications unique to plastic models, where the skin parts are attached to the top of the skeleton.",
 			"• Easy to assemble as there is no need for tools such as nippers or adhesives.",
@@ -39,34 +76,31 @@
 			"• The hammer-shaped protrusion at the tip of the tail, which is thought to have been able to crush the shin bones of attacking Tyrannosaurus, is also faithfully reproduced.",
 			"• It also depicts the bony tendon that connects to the bony mass at the tip of the tail.",
 			"• Faithfully reproduces the characteristic solid skull of Ankylosaurus with no gaps.",
-			"• Various parts such as opening and closing the mouth, front legs, hind legs, and neck can be moved, allowing you to display your favorite poses."
+			"• Various parts such as the opening and closing of the mouth, front legs, hind legs, and neck can be moved, allowing you to display your favorite poses."
 		]
 	},
-	"accessories": {
-		"ja": ["シール×1", "台座×1"],
-		"en": ["Seal×1", "Pedestal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201563_1.jpg",
 				"path": "/images/items/01_5013/1000201563_1.jpg",
 				"hash": "d4e543529df26048aced6b80005ead38"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201563_10.jpg",
-				"path": "/images/items/01_5013/1000201563_10.jpg",
-				"hash": "055ba6f72b7efeef899d848a7560ecd9"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201563_11.jpg",
-				"path": "/images/items/01_5013/1000201563_11.jpg",
-				"hash": "269a8c9fdb9977e17f01b013253db3e7"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201563_12.jpg",
-				"path": "/images/items/01_5013/1000201563_12.jpg",
-				"hash": "74f55b09bd93797607257e18b14abe9f"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201563_2.jpg",
@@ -107,13 +141,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201563_9.jpg",
 				"path": "/images/items/01_5013/1000201563_9.jpg",
 				"hash": "093d73cac16d3d197ce606e71ec60433"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201563_10.jpg",
+				"path": "/images/items/01_5013/1000201563_10.jpg",
+				"hash": "055ba6f72b7efeef899d848a7560ecd9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201563_11.jpg",
+				"path": "/images/items/01_5013/1000201563_11.jpg",
+				"hash": "269a8c9fdb9977e17f01b013253db3e7"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201563_12.jpg",
+				"path": "/images/items/01_5013/1000201563_12.jpg",
+				"hash": "74f55b09bd93797607257e18b14abe9f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5013/",
-	"brandIds": [],
-	"seriesIds": ["plannosaurus"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5501", "01_5389", "01_5390", "01_5248"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5013/"
 }

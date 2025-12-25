@@ -5,6 +5,54 @@
 		"ja": "ＭＧ 1/100 ケンプファー・シュヴェーア",
 		"en": "MG 1/100 Kaempfer Schwer"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "item-1000220190",
+			"url": "https://p-bandai.jp/item/item-1000220190/",
+			"ja": "ＨＧ 1/144 ザク・デザートタイプ ピンクパンサー隊機"
+		},
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "item-1000216105",
+			"url": "https://p-bandai.jp/item/item-1000216105/",
+			"ja": "RG 1/144 ソードインパルスガンダムＳｐｅｃＩＩ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 6270,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 8
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"―　―　―　―　―　―　―　―　―　―　―",
@@ -71,7 +118,7 @@
 			"\"Gundam Build Divers Genius Head Line\"",
 			"― ― ― ― ― ― ― ― ― ― ―",
 			"From \"Gundam Build Divers Genius Head Line\"",
-			"Gunpla of the mysterious solo diver \"Kokuyo \" who suddenly appeared, \" Kampfer Schwer\" is commercialized in the MG series.",
+			"Gunpla of the mysterious solo diver \"Kokuyo\" who suddenly appeared, \"Kampfer Schwer\" is commercialized in the MG series.",
 			"● Based on Kaempfer, additional armor has been added to greatly strengthen the aircraft!",
 			"While inheriting the characteristics of Kaempfer, the customized aircraft shape is reproduced with new molded parts.",
 			"New parts added to the whole body have evolved into an even more massive design!",
@@ -92,7 +139,7 @@
 			"Attached weapons: Shotgun x 2 / Giant Buzz x 2 / Sturm Faust x 2 / Beam saber x 2",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/100 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS/PE/ABS",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -112,59 +159,81 @@
 			"・Product specifications are as of 20235. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["ショットガン×２", "ジャイアント・バズ×２", "シュツルム・ファウスト×２", "ビーム・サーベル×２"],
-		"en": ["Shotgun x2", "Giant Buzz x2", "Sturm Faust x2", "Beam saber x2"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ショットガン×２",
+				"en": "Shotgun x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジャイアント・バズ×２",
+				"en": "Giant Buzz x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "シュツルム・ファウスト×２",
+				"en": "Sturm Faust x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル×２",
+				"en": "Beam saber x2"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5857.jpg",
+				"src": "https://bandai-hobby.net/images/153_5857_s_ioezbeubysg0a9duthptaywicot4.jpg",
 				"path": "/images/items/01_4987/153_5857.jpg",
 				"hash": "bb264822459998404575c96c1ae98a5d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5857.jpg",
+				"src": "https://bandai-hobby.net/images/155_5857_s_6pqay7sv6jglp8zw7avil5ob4zsg.jpg",
 				"path": "/images/items/01_4987/155_5857.jpg",
 				"hash": "5b99a8909f821e7374011e892aaf8c3b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5857.jpg",
+				"src": "https://bandai-hobby.net/images/156_5857_s_tnxs0hb1dblvj7ib7w4uxfcbobzf.jpg",
 				"path": "/images/items/01_4987/156_5857.jpg",
 				"hash": "0c745b3ae73bd4e6c1f6b4d60882dac9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5857.jpg",
+				"src": "https://bandai-hobby.net/images/157_5857_s_jx9u79fpr39a2ebx8ln2bxlhr3m2.jpg",
 				"path": "/images/items/01_4987/157_5857.jpg",
 				"hash": "a34bbefae5fc888022f476b0a4cba7bf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5857.jpg",
+				"src": "https://bandai-hobby.net/images/158_5857_s_5d4dxep5670csp04lly8v67122l2.jpg",
 				"path": "/images/items/01_4987/158_5857.jpg",
 				"hash": "73cfcb615582662fd2d7dbae47faeb40"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5857.jpg",
+				"src": "https://bandai-hobby.net/images/159_5857_s_d6ailgw1sqyucumiv2vmqlqfcnoh.jpg",
 				"path": "/images/items/01_4987/159_5857.jpg",
 				"hash": "08fe8a94afb697aaf745ed280f4982f4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5857.jpg",
+				"src": "https://bandai-hobby.net/images/189_5857_s_hu52ivp53alc5ropkmsmnk16ocha.jpg",
 				"path": "/images/items/01_4987/189_5857.jpg",
 				"hash": "b5cc6d3024ecc26a4142b257973baeb3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5857.jpg",
+				"src": "https://bandai-hobby.net/images/190_5857_s_uoegqwkd3megd8g1p5fw19ebjw2z.jpg",
 				"path": "/images/items/01_4987/190_5857.jpg",
 				"hash": "5245f63f0438cf0db5f134bd63b0d63c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5857.jpg",
+				"src": "https://bandai-hobby.net/images/191_5857_s_14t7vrjjew5b96xglng7temlz3vs.jpg",
 				"path": "/images/items/01_4987/191_5857.jpg",
 				"hash": "72d5cb1a40e346b94cef579902890d9c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5857.jpg",
+				"src": "https://bandai-hobby.net/images/192_5857_s_kurv4nyzcn31yqjm4ufjln3ikh7v.jpg",
 				"path": "/images/items/01_4987/192_5857.jpg",
 				"hash": "bc41e7156a02a1f24fb52caee14ec043"
 			}
@@ -172,14 +241,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4987/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5994", "item-1000220190", "item-1000220189", "item-1000216105"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2484",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2484/"

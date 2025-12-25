@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "SDW HEROES 信長専用軍馬",
-		"en": "SDW HEROES NOBUNAGA'S WAR HORSE"
+		"en": "SDW HEROES Nobunaga's War Horse"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5470",
+			"url": "https://bandai-hobby.net/item/01_5470/",
+			"ja": "SDW HEROES キャプテンクアンタ GF"
+		},
+		{
+			"id": "01_5471",
+			"url": "https://bandai-hobby.net/item/01_5471/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-B"
+		},
+		{
+			"id": "01_5472",
+			"url": "https://bandai-hobby.net/item/01_5472/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-F"
+		},
+		{
+			"id": "01_5347",
+			"url": "https://bandai-hobby.net/item/01_5347/",
+			"ja": "SDW HEROES スペリオルフォーミュラー ファイナルドラゴン[クリアカラー]"
+		}
+	],
 	"price": {
 		"amount": 1045,
 		"currency": "JPY",
@@ -21,56 +58,62 @@
 	"description": {
 		"ja": [
 			"『SDガンダムワールド ヒーローズ』シリーズより、豪華な鎧を纏った「信長専用軍馬」が新登場！二人乗りが可能な鞍パーツが付属！",
-			"■付属の鞍パーツを装着することで、二人での騎乗が可能。",
-			"■脚部は関節が可動し、歩行などの表情付けが可能。",
-			"■別売りの英雄たちが安定して騎乗出来るよう背中が展開。",
-			"■別売りのアクションベースと互換性のある軸を胴体に内蔵。"
+			"• 付属の鞍パーツを装着することで、二人での騎乗が可能。",
+			"• 脚部は関節が可動し、歩行などの表情付けが可能。",
+			"• 別売りの英雄たちが安定して騎乗出来るよう背中が展開。",
+			"• 別売りのアクションベースと互換性のある軸を胴体に内蔵。"
 		],
 		"en": [
-			"From the \"SD Gundam World Heroes \" series, \" Nobunaga's personal warhorse\" wearing luxurious armor is now available! Includes saddle parts that allow two people to ride!",
+			"From the \"SD Gundam World Heroes\" series, \"Nobunaga's personal warhorse\" wearing luxurious armor is now available! Includes saddle parts that allow two people to ride!",
 			"• By attaching the included saddle parts, it can be ridden by two people.",
 			"• The joints of the legs are movable, allowing for expressions such as walking.",
 			"• The back can be expanded so that heroes (sold separately) can ride stably.",
 			"• Built-in axis compatible with action base (sold separately)."
 		]
 	},
-	"accessories": {
-		"ja": ["二人乗り用鞍パーツ×１式", "シール×１"],
-		"en": ["Two-seater saddle parts x 1 set", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "二人乗り用鞍パーツ×１式",
+				"en": "Two-seater saddle parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5884.jpg",
+				"src": "https://bandai-hobby.net/images/153_5884_s_eqm9mnnbkh4ua2efm6r2lf0denqh.jpg",
 				"path": "/images/items/01_5017/153_5884.jpg",
 				"hash": "278cee1b8ef2a9674d7be2c07fe45ade"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5884.jpg",
+				"src": "https://bandai-hobby.net/images/155_5884_s_djjf9j4iezi6xr2l0ddhycxqoiz9.jpg",
 				"path": "/images/items/01_5017/155_5884.jpg",
 				"hash": "baa42451301c48788f6353bf928cf5fa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5884.jpg",
+				"src": "https://bandai-hobby.net/images/156_5884_s_4kx0aj153c4lq5lwv67fwig9kea8.jpg",
 				"path": "/images/items/01_5017/156_5884.jpg",
 				"hash": "7456ce2c7c016c82d64d9ddf4949bcee"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5884.jpg",
+				"src": "https://bandai-hobby.net/images/157_5884_s_h5yxkh14nbiym36y5h00w0nwng4j.jpg",
 				"path": "/images/items/01_5017/157_5884.jpg",
 				"hash": "fc7955ca6fcf335cce9363ab60dfa0bc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5884.jpg",
+				"src": "https://bandai-hobby.net/images/158_5884_s_eeh9bthhymlbyuez5h1wjzias5ed.jpg",
 				"path": "/images/items/01_5017/158_5884.jpg",
 				"hash": "20ff818cd7c9dbcda9aac5fd394f0977"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5017/",
-	"brandIds": [],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5017/"
 }

@@ -5,6 +5,50 @@
 		"ja": "RG 1/144 RX-78-2 ガンダム カラークリア",
 		"en": "RG 1/144 RX-78-2 Gundam color clear"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_151",
+			"url": "https://bandai-hobby.net/item/01_151/",
+			"ja": "RG 1/144 MSM-07S シャア専用ズゴック"
+		},
+		{
+			"id": "01_4775",
+			"url": "https://bandai-hobby.net/item/01_4775/",
+			"ja": "RG 1/144 MS-06S ザクII Ver.GFT"
+		},
+		{
+			"id": "01_2224",
+			"url": "https://bandai-hobby.net/item/01_2224/",
+			"ja": "RG 1/144 MS-06F 量産型ザク"
+		},
+		{
+			"id": "01_2230",
+			"url": "https://bandai-hobby.net/item/01_2230/",
+			"ja": "RG 1/144 MS-06S シャア専用ザク"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -18,28 +62,23 @@
 		"day": 18
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
-		"ja": ["RG 1/144 RX-78-2 ガンダム カラークリア登場！"],
-		"en": ["RG 1/144 RX-78-2 Gundam color clear now available!"]
+		"ja": [
+			"RG 1/144 RX-78-2 ガンダム カラークリア登場！"
+		],
+		"en": [
+			"RG 1/144 RX-78-2 Gundam color clear now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5838.jpg",
+				"src": "https://bandai-hobby.net/images/153_5838_s_ley2pqol4d6dm9144qzhfj59xi4c.jpg",
 				"path": "/images/items/01_4967/153_5838.jpg",
 				"hash": "4ef353eb3c0a696c17459b7917c2292a"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4967/",
-	"brandIds": ["rg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_151", "01_4775", "01_2224", "01_2230"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4967/"
 }

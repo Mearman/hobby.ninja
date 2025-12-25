@@ -5,6 +5,50 @@
 		"ja": "ＨＧ 1/144 ジム (モロッコ戦線仕様)",
 		"en": "HG 1/144 Jim (Moroccan front specification)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "g-doan",
+			"url": "https://bandai-hobby.net/series/g-doan/",
+			"ja": "機動戦士ガンダム ククルス・ドアンの島"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "01_5514",
+			"url": "https://bandai-hobby.net/item/01_5514/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムFSD (試作型ロングレンジ・ビームライフル装備)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"映画『機動戦士ガンダム ククルス・ドアンの島』より、カサブランカの町で登場するRGM-79 ジム（モロッコ戦線仕様）がＨＧで商品化。",
@@ -71,7 +114,7 @@
 			"- Comes with weapons such as shoulder cannon and beam spray gun (early model).",
 			"In addition to the back shoulder cannon, beam rifle, beam saber, and seal, a beam spray gun (early model) is included.",
 			"Hand parts such as weapon holders and open hands are also included to expand the range of poses.",
-			"-New water transfer decal included.",
+			"- New water transfer decal included.",
 			"A water slide decal is included that includes a number mark indicating that it is a platoon aircraft that appeared in the play.",
 			"Attached weapons: Beam spray gun (early model) / Beam rifle / Seal / Beam saber / Shoulder cannon",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -96,65 +139,87 @@
 			"・Product specifications are as of 20233. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・スプレーガン（前期型）",
-			"ビーム・ライフル",
-			"シールド",
-			"ビーム・サーベル",
-			"ショルダー・キャノン"
-		],
-		"en": ["Beam spray gun (early model)", "beam rifle", "Seal de", "beam saber", "shoulder cannon"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・スプレーガン（前期型）",
+				"en": "Beam spray gun (early model)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・ライフル",
+				"en": "beam rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			}
+		},
+		{
+			"name": {
+				"ja": "ショルダー・キャノン",
+				"en": "shoulder cannon"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5808.jpg",
+				"src": "https://bandai-hobby.net/images/153_5808_s_79uo0yyc4ig1lclr8s0cy1behfb3.jpg",
 				"path": "/images/items/01_4935/153_5808.jpg",
 				"hash": "f5044110094ce4f622e323a627f60bc3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5808.jpg",
+				"src": "https://bandai-hobby.net/images/155_5808_s_bwwazoitdga0tyt19l785ka2g2wv.jpg",
 				"path": "/images/items/01_4935/155_5808.jpg",
 				"hash": "a536693f8541437fedc6302fc36d2269"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5808.jpg",
+				"src": "https://bandai-hobby.net/images/156_5808_s_mjoxbqas1uebflyleut5syrum145.jpg",
 				"path": "/images/items/01_4935/156_5808.jpg",
 				"hash": "619db3c93fd3947264f6d0a765edfddc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5808.jpg",
+				"src": "https://bandai-hobby.net/images/157_5808_s_5qm51nnnaa5tjihp1172sgv4p42r.jpg",
 				"path": "/images/items/01_4935/157_5808.jpg",
 				"hash": "a01b073afa74ed34f3f486cba31286d8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5808.jpg",
+				"src": "https://bandai-hobby.net/images/158_5808_s_i88zr2dht9c1ipo54e0f1k6yt4tt.jpg",
 				"path": "/images/items/01_4935/158_5808.jpg",
 				"hash": "b740abd1e8491225ab543645c6b5f0d5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5808.jpg",
+				"src": "https://bandai-hobby.net/images/159_5808_s_14hddsptur3tkjtooi01r9kasc24.jpg",
 				"path": "/images/items/01_4935/159_5808.jpg",
 				"hash": "ea88c967077f6dc4dc8d1eb9450e5b3e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5808.jpg",
+				"src": "https://bandai-hobby.net/images/189_5808_s_xa896hirg472chu7m8f84t9gcrjs.jpg",
 				"path": "/images/items/01_4935/189_5808.jpg",
 				"hash": "40cdd3cc148149864fc1895a88ebe2c5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5808.jpg",
+				"src": "https://bandai-hobby.net/images/190_5808_s_304wqjpw5azrzclzokbl0oaci6ed.jpg",
 				"path": "/images/items/01_4935/190_5808.jpg",
 				"hash": "21a9df35f12b9a0472c96ec0f47cdb80"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5808.jpg",
+				"src": "https://bandai-hobby.net/images/191_5808_s_66qipa7wxst8kvi089kbsyjbn5e4.jpg",
 				"path": "/images/items/01_4935/191_5808.jpg",
 				"hash": "7ecd7d3cc0b1e202ce2ae6c9f208c2b0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5808.jpg",
+				"src": "https://bandai-hobby.net/images/192_5808_s_dl6qasvnswqg8bxh0r4qy3l8yv73.jpg",
 				"path": "/images/items/01_4935/192_5808.jpg",
 				"hash": "e4d0353799432d3de51fc9e069d74eca"
 			}
@@ -162,14 +227,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4935/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["g-doan"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000220189", "01_5514"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2488",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2488/"

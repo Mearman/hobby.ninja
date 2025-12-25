@@ -3,7 +3,33 @@
 	"type": "item",
 	"name": {
 		"ja": "MGSD ガンダムバルバトス",
-		"en": "MGSD GUNDAM BARBATOS"
+		"en": "MGSD Gundam Barbatos"
+	},
+	"brands": [
+		{
+			"id": "mgsd",
+			"url": "https://bandai-hobby.net/brand/mgsd/",
+			"ja": "MASTER GRADE SD"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"manual": {
+		"id": "1100",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1100"
 	},
 	"price": {
 		"amount": 4290,
@@ -20,7 +46,7 @@
 	"targetAge": 15,
 	"description": {
 		"ja": [
-			"SD ガンダムの躯体にMGの技術を集約した新次元のSDハイエンドブランド「MGSD」より、ガンダム・バルバトスが登場！",
+			"SDガンダムの躯体にMGの技術を集約した新次元のSDハイエンドブランド「MGSD」より、ガンダム・バルバトスが登場！",
 			"• 全高約115mm。ガンダム・バルバトスの特徴である「ガンダム・フレーム」をSDスケールで実現。",
 			"• 頭部・首は４軸で可動し、顎を引く、大きく上を向くなどの演出が可能。",
 			"• 胴体内部に可動軸を設けることで左右のスイングと前傾・後傾の広域な可動を実現。胸の動きに連動し、脇腹の左右のシリンダーが伸縮可動。",
@@ -34,7 +60,7 @@
 			"• メイスには、柄を押し込むことで先端が伸び、４枚の刃が連動展開するMGSDオリジナルギミックを搭載。"
 		],
 		"en": [
-			"Gundam Barbatos is now available from MGSD, a new dimension SD high-end brand that integrates MG technology into the SD Gundam body!",
+			"Gundam Barbatos is now available from \"MGSD\", a new dimension SD high-end brand that integrates MG technology into the SDGundam structure!",
 			"• Overall height approximately 115mm. The characteristic \"Gundam frame\" of Gundam Barbatos is realized with SDScale.",
 			"• The head and neck can move on 4 axes, allowing you to pull your jaw, look upwards, etc.",
 			"• By providing a movable axis inside the torso, a wide range of movement including left and right swing and forward and backward tilts is achieved. The left and right cylinders on the flanks can expand and contract in conjunction with the movement of the chest.",
@@ -48,31 +74,53 @@
 			"• The mace is equipped with an MGSD original gimmick in which the tip extends when the handle is pushed in, and the four blades expand in conjunction with each other."
 		]
 	},
-	"accessories": {
-		"ja": ["メイス×1", "太刀×1", "300mm滑腔砲×1", "ジョイントパーツ×1式", "マーキングシール×1"],
-		"en": ["Mace x 1", "Long sword x1", "300mm smoothbore gun x 1", "Joint parts x 1 set", "MarkingSeal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "メイス",
+				"en": "mace"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "太刀",
+				"en": "long sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "300mm滑腔砲",
+				"en": "300mm smoothbore gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201209_1.jpg",
 				"path": "/images/items/01_4994/1000201209_1.jpg",
 				"hash": "edfaf1416ea17fff7bc9e471ed9029c9"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201209_10.jpg",
-				"path": "/images/items/01_4994/1000201209_10.jpg",
-				"hash": "8da635f88017aab15ac46bf7c57fc883"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201209_11.jpg",
-				"path": "/images/items/01_4994/1000201209_11.jpg",
-				"hash": "455033037883e8cc2397e8b3c207b114"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201209_12.jpg",
-				"path": "/images/items/01_4994/1000201209_12.jpg",
-				"hash": "ca41fd408039ada93bc3f07c545ef3c7"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201209_2.jpg",
@@ -113,17 +161,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201209_9.jpg",
 				"path": "/images/items/01_4994/1000201209_9.jpg",
 				"hash": "0d57e2a25220ab7c1b2f5c24eb560d8b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201209_10.jpg",
+				"path": "/images/items/01_4994/1000201209_10.jpg",
+				"hash": "8da635f88017aab15ac46bf7c57fc883"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201209_11.jpg",
+				"path": "/images/items/01_4994/1000201209_11.jpg",
+				"hash": "455033037883e8cc2397e8b3c207b114"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201209_12.jpg",
+				"path": "/images/items/01_4994/1000201209_12.jpg",
+				"hash": "ca41fd408039ada93bc3f07c545ef3c7"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4994/",
-	"brandIds": ["mgsd"],
-	"seriesIds": ["tekketsu"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": [],
-	"manual": {
-		"id": "1100",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1100/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4994/"
 }

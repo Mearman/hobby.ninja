@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガンダムダブルオーダイバーアーク",
-		"en": "HG 1/144 GUNDAM 00 DIVER ARC"
+		"en": "HG 1/144 Gundam 00 Diver Arc"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundambuildmetaverse",
+			"url": "https://bandai-hobby.net/series/gundambuildmetaverse/",
+			"ja": "ガンダムビルドメタバース"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5236",
+			"url": "https://bandai-hobby.net/item/01_5236/",
+			"ja": "HG 1/144 ガンダムアメイジングバルバトスルプス"
+		},
+		{
+			"id": "01_5235",
+			"url": "https://bandai-hobby.net/item/01_5235/",
+			"ja": "HG 1/144 ガンダムダブルオーコマンドクアンタ・デザートタイプ"
+		},
+		{
+			"id": "01_5083",
+			"url": "https://bandai-hobby.net/item/01_5083/",
+			"ja": "HG 1/144 ベアッガイオハナ & アロハロ セット"
+		},
+		{
+			"id": "01_5071",
+			"url": "https://bandai-hobby.net/item/01_5071/",
+			"ja": "HG 1/144 ガンダムパーフェクトストライクフリーダムルージュ"
+		}
+	],
+	"manual": {
+		"id": "1222",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1222"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -18,82 +66,114 @@
 		"day": 2
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"2023年10月配信予定、『ガンダムビルドシリーズ』10周年記念映像『ガンダムビルドメタバース』より、「ガンダムダブルオーダイバーアーク」が登場！",
-			"■「集光樹脂」を使用したエフェクトパーツが付属。外部からの光を吸収して表面や端面から放出。自ら発光するような演出を実現。",
-			"■GNドライヴは新規造形で伸縮ギミックを搭載。3Dメタリックシールを使用し立体感と光沢を演出。",
-			"■肩部パーツは着脱・変形ギミックを搭載。エフェクトを纏う展開状態やソード形態への組み替えが可能。"
+			"• 「集光樹脂」を使用したエフェクトパーツが付属。外部からの光を吸収して表面や端面から放出。自ら発光するような演出を実現。",
+			"• GNドライヴは新規造形で伸縮ギミックを搭載。3Dメタリックシールを使用し立体感と光沢を演出。",
+			"• 肩部パーツは着脱・変形ギミックを搭載。エフェクトを纏う展開状態やソード形態への組み替えが可能。"
 		],
 		"en": [
-			"\"Gundam 00 Diver Arc \" appears from the 202310 distribution scheduled, \" Gundam Build Series \" 10th anniversary commemorative video \" Gundam Build Metaverse\"!",
+			"\"Gundam 00 Diver Arc\" appears from the 202310 distribution scheduled, \"Gundam Build Series\" 10th anniversary commemorative video \"Gundam Build Metaverse\"!",
 			"• Effect parts using \"light-condensing resin\" are included. Absorbs light from the outside and emits it from the surface or edge. Achieves a performance that appears to emit light on its own.",
 			"• GN Drive is newly designed and equipped with a telescopic gimmick. 3D metallic seal is used to create a three-dimensional effect and luster.",
 			"• The shoulder parts are equipped with detachable and deformable gimmicks. It can be rearranged into an expanded state with effects or a sword form."
 		]
 	},
-	"accessories": {
-		"ja": ["エフェクトパーツ×1式", "GNソードII×2", "ハンドパーツ(左右)×3種", "3Dメタリックシール×1", "シール×1"],
-		"en": ["Effect parts x 1", "GN Sword II×2", "Hand parts (left and right) x 3 types", "3D metallic seal×1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "エフェクトパーツ",
+				"en": "effect parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "GNソードII",
+				"en": "GN Sword II"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ(左右)",
+				"en": "Hand parts (left and right)"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "3Dメタリックシール",
+				"en": "3D Metallic Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5890.jpg",
+				"src": "https://bandai-hobby.net/images/153_5890_s_lfsdgtm66mydwfefxwekvjh0tm6m.jpg",
 				"path": "/images/items/01_5023/153_5890.jpg",
 				"hash": "68e97f58ad65a80c3488e7cd995bebfb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5890.jpg",
+				"src": "https://bandai-hobby.net/images/155_5890_s_2yyke5tn4iko3irbubdpf3j023eq.jpg",
 				"path": "/images/items/01_5023/155_5890.jpg",
 				"hash": "cc7b8557948d6fc95684c9f6966a3bf0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5890.jpg",
+				"src": "https://bandai-hobby.net/images/156_5890_s_nqnav1gn4rizvk1puukcffvutg27.jpg",
 				"path": "/images/items/01_5023/156_5890.jpg",
 				"hash": "e274562db3c2b8fd0b3a009887023892"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5890.jpg",
+				"src": "https://bandai-hobby.net/images/157_5890_s_jtwbc4bi26q40zxzeo7agqmg05xi.jpg",
 				"path": "/images/items/01_5023/157_5890.jpg",
 				"hash": "d40b80f34941b8a4dad003340096ec62"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5890.jpg",
+				"src": "https://bandai-hobby.net/images/158_5890_s_skhuxi3615oisk52uckdafc38e39.jpg",
 				"path": "/images/items/01_5023/158_5890.jpg",
 				"hash": "1708ee39ce80ef31d3314540fc725aa7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5890.jpg",
+				"src": "https://bandai-hobby.net/images/159_5890_s_td27ij5os3mu2d54pspxa33episj.jpg",
 				"path": "/images/items/01_5023/159_5890.jpg",
 				"hash": "b2b519e37a5acc9286e832b9625eb4dc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5890.jpg",
+				"src": "https://bandai-hobby.net/images/189_5890_s_2hhzelltu3nq3c84bp0ezxxakh58.jpg",
 				"path": "/images/items/01_5023/189_5890.jpg",
 				"hash": "2fde9d285620b0d6a8fde01f36b46598"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5890.jpg",
+				"src": "https://bandai-hobby.net/images/190_5890_s_ioxts3leqjf575w7dfw5bho9l9za.jpg",
 				"path": "/images/items/01_5023/190_5890.jpg",
 				"hash": "94b698c6f4d5f63bbd5a6cdbee082fc0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5890.jpg",
+				"src": "https://bandai-hobby.net/images/191_5890_s_ztg47gwxv9ueshz10ap16icqst5j.jpg",
 				"path": "/images/items/01_5023/191_5890.jpg",
 				"hash": "eb7fdf8b6bbda154933b3772535fb183"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5023/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundambuildmetaverse"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5236", "01_5235", "01_5083", "01_5071"],
-	"manual": {
-		"id": "1222",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1222/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5023/"
 }

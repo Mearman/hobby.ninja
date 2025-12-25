@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 リック・ドム クリアメッキバージョン",
 		"en": "MG 1/100 Rick Dom clear plated version"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 6600,
 		"currency": "JPY",
@@ -18,28 +62,23 @@
 		"day": 1
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
-		"ja": ["MG 1/100 リック・ドム クリアメッキバージョン登場！"],
-		"en": ["MG 1/100 Rick Dom clear plated version now available!"]
+		"ja": [
+			"MG 1/100 リック・ドム クリアメッキバージョン登場！"
+		],
+		"en": [
+			"MG 1/100 Rick Dom clear plated version now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5812.jpg",
+				"src": "https://bandai-hobby.net/images/153_5812_s_er6sknljnhhgdxhi4comxa2w39dh.jpg",
 				"path": "/images/items/01_4939/153_5812.jpg",
 				"hash": "caba82277f6a8acb9e4112c4a4b54844"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4939/",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4939/"
 }

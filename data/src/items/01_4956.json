@@ -5,6 +5,49 @@
 		"ja": "HGUC ユニコーンガンダム(デストロイモード)「セブン-イレブンカラー」",
 		"en": "HGUC Unicorn Gundam (Destroy Mode) \"7-Eleven Color\""
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -19,31 +62,27 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": ["HGUC ユニコーンガンダム(デストロイモード)「セブン-イレブンカラー」登場！"],
-		"en": ["HGUC Unicorn Gundam (Destroy Mode) \"7-Eleven Color\" now available!"]
+		"ja": [
+			"HGUC ユニコーンガンダム(デストロイモード)「セブン-イレブンカラー」登場！"
+		],
+		"en": [
+			"HGUC Unicorn Gundam (Destroy Mode) \"7-Eleven Color\" now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5828.jpg",
+				"src": "https://bandai-hobby.net/images/153_5828_s_pa2a3au535hr9tppves112zg7a8l.jpg",
 				"path": "/images/items/01_4956/153_5828.jpg",
 				"hash": "0b0105f46890fb1ceca0c98c98c8edb2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5828.jpg",
+				"src": "https://bandai-hobby.net/images/155_5828_s_i8llfdaumjbt6s5kepelh99w2jj2.jpg",
 				"path": "/images/items/01_4956/155_5828.jpg",
 				"hash": "db5634447c47d97e87336b3c2fd1b53f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4956/",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4956/"
 }

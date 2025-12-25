@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-",
-		"en": "HG THE GUNDAM BASE LIMITED TOLRO-800 -TOROHACHI-"
+		"en": "HG Gundam Base Limited TOLRO-800 -Torohachi-"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		},
+		{
+			"id": "item-1000164004",
+			"url": "https://p-bandai.jp/item/item-1000164004/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム2号機バンシィ（デストロイモード） Ver.NIKE SB"
+		}
+	],
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -21,18 +64,19 @@
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"『機動戦士ガンダム UC』より、トルロ社製プチモビルスーツ「TOLRO-800 -トロハチ-」が完全新規造形で登場！",
+			"『機動戦士ガンダムUC』より、トルロ社製プチモビルスーツ「TOLRO-800 -トロハチ-」が完全新規造形で登場！",
 			"• コックピットハッチはクリアパーツで開閉が可能、コックピット内部は形状を精密に再現。",
 			"• 肩関節レール可動、アームの伸縮ギミック、クローの可動を再現。",
 			"• スラスターノズル、脚部裏面ディティールも再現。",
 			"• 各所の可動に加えて、専用のパーツを用いて別売りのアクションベース5と接続し、様々なアクションが再現可能。"
 		],
 		"en": [
-			"■ For GUNPLA fans around the world, this is a limited edition GUNPLA at the official GUNPLA complex \"GUNDAM Base\". From \"MOBILE SUIT GUNDAM UC\", Truro's petit mobile suit \"TOLRO-800 -Torohachi-\" is now available in a completely new model!",
-			"■ The cockpit hatch can be opened and closed with clear parts, and the shape of the inside of the cockpit is precisely reproduced.",
-			"■ Reproduce the movable shoulder joint rail, the telescopic gimmick of the arm, and the movement of the claw.",
-			"■ The details of the thruster nozzle and the back of the legs are also reproduced.",
-			"■ In addition to the movement of various parts, various actions can be reproduced by connecting to the ACTION BASE 5 sold separately using special parts."
+			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
+			"From \"Mobile Suit Gundam UC\", the Truro company's petit mobile suit \"TOLRO-800 -Torohachi-\" is now available in a completely new model!",
+			"• The cockpit hatch can be opened and closed using clear parts, and the shape of the inside of the cockpit is precisely reproduced.",
+			"• Shoulder joint rail movement, arm extension gimmick, and claw movement are reproduced.",
+			"• The details of the thruster nozzle and back of the legs are also reproduced.",
+			"• In addition to movable parts, it can be connected to Action Base 5 (sold separately) using special parts to reproduce various actions."
 		]
 	},
 	"images": {
@@ -75,13 +119,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4986/",
-	"brandIds": ["hg"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5527", "01_4971", "item-1000163998", "item-1000164004"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4986/"
 }

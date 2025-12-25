@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ジム (ショルダー・キャノン装備/ミサイルポッド装備)",
-		"en": "HG 1/144 GM (SHOULDER CANNON / MISSILE POD)"
+		"en": "HG 1/144 Jim (shoulder cannon equipped/missile pod equipped)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-doan",
+			"url": "https://bandai-hobby.net/series/g-doan/",
+			"ja": "機動戦士ガンダム ククルス・ドアンの島"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "01_5514",
+			"url": "https://bandai-hobby.net/item/01_5514/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムFSD (試作型ロングレンジ・ビームライフル装備)"
+		}
+	],
+	"manual": {
+		"id": "1104",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1104"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -18,72 +56,123 @@
 		"day": 18
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム MSD』より「ジム」が2種の武装バリエーションで商品化！",
-			"■ショルダー・キャノン装備状態、ミサイルポッド装備状態を差し替えで再現可能。",
-			"■豊富な武装とハンドパーツが付属。",
-			"■ビーム・ライフル、ハイパー・バズーカ、サーベルラックはリアスカートへ取付け可能。",
-			"■カトキハジメ氏デザインのプラモデルオリジナルマーキングシールが付属。"
+			"• ショルダー・キャノン装備状態、ミサイルポッド装備状態を差し替えで再現可能。",
+			"• 豊富な武装とハンドパーツが付属。",
+			"• ビーム・ライフル、ハイパー・バズーカ、サーベルラックはリアスカートへ取付け可能。",
+			"• カトキハジメ氏デザインのプラモデルオリジナルマーキングシールが付属。"
 		],
 		"en": [
-			"\"Jim \" from \" Mobile Suit Gundam MSD\" is commercialized with two types of armed variations!",
+			"\"Jim\" from \"Mobile Suit Gundam MSD\" is commercialized with two types of armed variations!",
 			"• Shoulder cannon equipped state and missile pod equipped state can be reproduced by replacing.",
 			"• Comes with a variety of weapons and hand parts.",
 			"• Beam rifle, hyper bazooka, and saber rack can be attached to the rear skirt.",
 			"• Includes plastic model original MarkingSeal designed by Hajime Katoki."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"シールド×1",
-			"ショルダー・キャノン×1",
-			"ミサイルポッド×1式",
-			"ビーム・ライフル×1",
-			"ビーム・スプレーガン×2種",
-			"ハイパー・バズーカ×1",
-			"ビーム・サーベル×2",
-			"サーベルラック×1",
-			"ハンドパーツ(左右)×3種",
-			"ジョイントパーツ×1式",
-			"シール×2"
-		],
-		"en": [
-			"Seal × 1",
-			"Shoulder cannon x 1",
-			"Missile pod x 1",
-			"Beam rifle x1",
-			"Beam spray gun x 2 types",
-			"Hyper bazooka x1",
-			"Beam saber x2",
-			"Saber rack x 1",
-			"Hand parts (left and right) x 3 types",
-			"Joint parts x 1 set",
-			"Seal×2"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ショルダー・キャノン",
+				"en": "shoulder cannon"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ミサイルポッド",
+				"en": "missile pod"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・ライフル",
+				"en": "beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・スプレーガン",
+				"en": "beam spray gun"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハイパー・バズーカ",
+				"en": "hyper bazooka"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "サーベルラック",
+				"en": "saber rack"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ(左右)",
+				"en": "Hand parts (left and right)"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 2
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202156_1.jpg",
 				"path": "/images/items/01_5016/1000202156_1.jpg",
 				"hash": "f22b5a9929e989526d2dc23a36e802fb"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202156_10.jpg",
-				"path": "/images/items/01_5016/1000202156_10.jpg",
-				"hash": "50ec1e4bf8ec329c658409e16c7b9fba"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202156_11.jpg",
-				"path": "/images/items/01_5016/1000202156_11.jpg",
-				"hash": "3975134347ada96cb98158734d611c0f"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202156_12.jpg",
-				"path": "/images/items/01_5016/1000202156_12.jpg",
-				"hash": "55c711a69e8a4aa19cc0fa2f94b414a6"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202156_2.jpg",
@@ -124,17 +213,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202156_9.jpg",
 				"path": "/images/items/01_5016/1000202156_9.jpg",
 				"hash": "05bb3c9fb222f7e17b73ebe1253b8fe1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202156_10.jpg",
+				"path": "/images/items/01_5016/1000202156_10.jpg",
+				"hash": "50ec1e4bf8ec329c658409e16c7b9fba"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202156_11.jpg",
+				"path": "/images/items/01_5016/1000202156_11.jpg",
+				"hash": "3975134347ada96cb98158734d611c0f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202156_12.jpg",
+				"path": "/images/items/01_5016/1000202156_12.jpg",
+				"hash": "55c711a69e8a4aa19cc0fa2f94b414a6"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5016/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-doan"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000220189", "01_5514"],
-	"manual": {
-		"id": "1104",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1104/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5016/"
 }

@@ -5,6 +5,50 @@
 		"ja": "ＨＧ 1/144 高機動型ザク 地上用 (セルマ機)",
 		"en": "HG 1/144 High Mobility Type Zaku Ground Use (Selma Machine)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "g-doan",
+			"url": "https://bandai-hobby.net/series/g-doan/",
+			"ja": "機動戦士ガンダム ククルス・ドアンの島"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "01_5514",
+			"url": "https://bandai-hobby.net/item/01_5514/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムFSD (試作型ロングレンジ・ビームライフル装備)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2970,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"― 南 十 字 星 （ サ ザ ン ク ロ ス） の 紅 一 点  ――",
@@ -65,7 +108,7 @@
 		],
 		"en": [
 			"―The solitary red dot of the Southern Cross―",
-			"From the movie \"Mobile Suit Gundam Cucurrus Doan's Island \", Selma Levens, the only red member of the \" Brown Southern Cross Squad\", will be on board.",
+			"From the movie \"Mobile Suit Gundam Cucurrus Doan's Island\", Selma Levens, the only red member of the \"Brown Southern Cross Squad\", will be on board.",
 			"High mobility type Zaku ground version now available in the HG series. General machine head and weapons are newly included.",
 			"The characteristic camouflage pattern coloring is reproduced with molded colors and water transfer decals. Contains unit insignia and caution marks of the Zeon Principality Army Southern Cross Corps.",
 			"● Reproduce the head shape of a general machine!",
@@ -108,59 +151,69 @@
 			"・Product specifications are as of 20234. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["バズーカＢ２型", "銃剣（ヒート・ダガー）"],
-		"en": ["Bazooka B2 type", "Bayonet (heat dagger)"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "バズーカＢ２型",
+				"en": "Bazooka B2 type"
+			}
+		},
+		{
+			"name": {
+				"ja": "銃剣（ヒート・ダガー）",
+				"en": "Bayonet (heat dagger)"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5851.jpg",
+				"src": "https://bandai-hobby.net/images/153_5851_s_vx67pui68j0w7p3xkwb0359dynfg.jpg",
 				"path": "/images/items/01_4981/153_5851.jpg",
 				"hash": "d2a51ea341025855b6c2d520a124e59a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5851.jpg",
+				"src": "https://bandai-hobby.net/images/155_5851_s_p0kuz331hokpq704vjdore4hlq29.jpg",
 				"path": "/images/items/01_4981/155_5851.jpg",
 				"hash": "a55559f3f8061cbde07be6ed4f84b620"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5851.jpg",
+				"src": "https://bandai-hobby.net/images/156_5851_s_2jhujtj89n1s1afy2bx40di6ky2q.jpg",
 				"path": "/images/items/01_4981/156_5851.jpg",
 				"hash": "1bff47781accc5b5fc6da64b6ad2cd45"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5851.jpg",
+				"src": "https://bandai-hobby.net/images/157_5851_s_nt7c18d6c8t9ufqfsxgouhbiodmw.jpg",
 				"path": "/images/items/01_4981/157_5851.jpg",
 				"hash": "364c08e8aeee022e1e72809920639cff"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5851.jpg",
+				"src": "https://bandai-hobby.net/images/158_5851_s_y184l1yohhcfcr65v95m7pvi1v5d.jpg",
 				"path": "/images/items/01_4981/158_5851.jpg",
 				"hash": "009305ec1406bd8a5ad3dabbaa237b58"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5851.jpg",
+				"src": "https://bandai-hobby.net/images/159_5851_s_icwfn1r5a2vn1vzz2nt342opkd9p.jpg",
 				"path": "/images/items/01_4981/159_5851.jpg",
 				"hash": "8fa4a6431c80aedc017b564d2c2b5586"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5851.jpg",
+				"src": "https://bandai-hobby.net/images/189_5851_s_vb8183y1g2q3am2dxw94304s8uir.jpg",
 				"path": "/images/items/01_4981/189_5851.jpg",
 				"hash": "74dda7d6f341ad1127483d313cef3b27"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5851.jpg",
+				"src": "https://bandai-hobby.net/images/190_5851_s_2n6rnz24b0w3oustn592fqm7ske8.jpg",
 				"path": "/images/items/01_4981/190_5851.jpg",
 				"hash": "ccc9e0b49b4182ba27f24465ab30b0f9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5851.jpg",
+				"src": "https://bandai-hobby.net/images/191_5851_s_3n0g4j4l3hqa41wcvoquernsc2wq.jpg",
 				"path": "/images/items/01_4981/191_5851.jpg",
 				"hash": "c8dd02fbd394d9c833e9bb0eb176283f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5851.jpg",
+				"src": "https://bandai-hobby.net/images/192_5851_s_48z02vlm93w1ubfod5nkbqfrqm07.jpg",
 				"path": "/images/items/01_4981/192_5851.jpg",
 				"hash": "aff1afcc22f0a748f38c9bcfd8683c86"
 			}
@@ -168,14 +221,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4981/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["g-doan"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000220189", "01_5514"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2491",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2491/"

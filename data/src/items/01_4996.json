@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 EXM-H15A アチェルビー (TYPE-A)",
-		"en": "30MM 1/144 EXM-H15A ACERBY (TYPE-A)"
+		"en": "30MM 1/144 EXM-H15A Achelby (TYPE-A)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1848,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"マクシオン軍の新EXAMACS「アチェルビー」が登場!",
@@ -37,31 +79,56 @@
 			"• Comes with a chest part that allows you to customize the armor that comes with Spinatia (sold separately)."
 		]
 	},
-	"accessories": {
-		"ja": ["サブマシンガン×1", "ビームソード×1", "ハンドパーツ×１式", "アーマー×1式", "ジョイントパーツ×1式"],
-		"en": ["Submachine gun x 1", "Beam sword x1", "Hand parts x 1 set", "Armor x 1 set", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "サブマシンガン",
+				"en": "submachine gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームソード",
+				"en": "beam sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "アーマー",
+				"en": "armor"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201188_1.jpg",
 				"path": "/images/items/01_4996/1000201188_1.jpg",
 				"hash": "234c55d933d96f1a9ab93c42a64ca515"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201188_10.jpg",
-				"path": "/images/items/01_4996/1000201188_10.jpg",
-				"hash": "6e7dca0d6298203eee44ad44b70c1434"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201188_11.jpg",
-				"path": "/images/items/01_4996/1000201188_11.jpg",
-				"hash": "1c213bac9cbe5accb1cd180894057427"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201188_12.jpg",
-				"path": "/images/items/01_4996/1000201188_12.jpg",
-				"hash": "a1d74bbb0e9fc90c1331cb6d4f848397"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201188_2.jpg",
@@ -102,15 +169,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201188_9.jpg",
 				"path": "/images/items/01_4996/1000201188_9.jpg",
 				"hash": "4664ee92cc6090ee9508fe9b825fbcc2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201188_10.jpg",
+				"path": "/images/items/01_4996/1000201188_10.jpg",
+				"hash": "6e7dca0d6298203eee44ad44b70c1434"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201188_11.jpg",
+				"path": "/images/items/01_4996/1000201188_11.jpg",
+				"hash": "1c213bac9cbe5accb1cd180894057427"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201188_12.jpg",
+				"path": "/images/items/01_4996/1000201188_12.jpg",
+				"hash": "a1d74bbb0e9fc90c1331cb6d4f848397"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4996/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3765",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3765/"

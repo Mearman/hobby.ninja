@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard Amplified メタルグレイモン（ワクチン種）",
-		"en": "Figure-rise Standard Amplified METALGREYMON (VACCINE)"
+		"en": "Figure-rise Standard Amplified Metal Greymon (vaccine type)"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard-amp",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard-amp/",
+			"ja": "Figure-rise Standard Amplified[フィギュアライズ スタンダード アンプリファイド]"
+		}
+	],
+	"series": [
+		{
+			"id": "digimon",
+			"url": "https://bandai-hobby.net/series/digimon/",
+			"ja": "デジモンシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5983",
+			"url": "https://bandai-hobby.net/item/01_5983/",
+			"ja": "Figure-rise Standard Amplified カイゼルグレイモン"
+		},
+		{
+			"id": "item-1000216437",
+			"url": "https://p-bandai.jp/item/item-1000216437/",
+			"ja": "Figure-rise Standard Amplified オメガモン(Ｘ抗体) [リミテッドカラー]"
+		},
+		{
+			"id": "01_5277",
+			"url": "https://bandai-hobby.net/item/01_5277/",
+			"ja": "Figure-rise Standard Amplified パイルドラモン"
+		},
+		{
+			"id": "item-1000198198",
+			"url": "https://p-bandai.jp/item/item-1000198198/",
+			"ja": "Figure-rise Standard Amplified デュークモン[スペシャルコーティング]"
+		}
+	],
 	"price": {
 		"amount": 6600,
 		"currency": "JPY",
@@ -21,93 +64,132 @@
 	"description": {
 		"ja": [
 			"『デジモンアドベンチャー：』より「メタルグレイモン（ワクチン種）」がFigure-rise Standard Amplifiedシリーズにラインアップ！",
-			"■機械と肉体のコントラストをAmplifiedならではの造形で徹底増幅。",
-			"■胸部ハッチが開き、有機体系ミサイル「ギガデストロイヤー」の発射体勢をとることが可能。",
-			"■背部ウィングは、模様を印刷したPETシートを使用しシャープ＆鮮やかに表現。",
-			"■尻尾は分割と内部のリード線による接続で柔軟に可動。",
-			"■アルタラウスモードを再現可能なパーツやディスプレイベースなど大ボリュームなセット。",
-			"■各所にアクセントとして貼り付け可能な３Dメタリックシールが付属。",
-			"■プラモデルとしての拡張性を考慮し、各所に拡張用の接続穴を配置。"
+			"• 機械と肉体のコントラストをAmplifiedならではの造形で徹底増幅。",
+			"• 胸部ハッチが開き、有機体系ミサイル「ギガデストロイヤー」の発射体勢をとることが可能。",
+			"• 背部ウィングは、模様を印刷したPETシートを使用しシャープ＆鮮やかに表現。",
+			"• 尻尾は分割と内部のリード線による接続で柔軟に可動。",
+			"• アルタラウスモードを再現可能なパーツやディスプレイベースなど大ボリュームなセット。",
+			"• 各所にアクセントとして貼り付け可能な３Dメタリックシールが付属。",
+			"• プラモデルとしての拡張性を考慮し、各所に拡張用の接続穴を配置。"
 		],
 		"en": [
-			"\"Metal Greymon (vaccine type)\" from \" Digimon Adventure:\" is now available in the Figure-rise Standard Amplified series!",
+			"\"Metal Greymon (vaccine type)\" from \"Digimon Adventure:\" is now available in the Figure-rise Standard Amplified series!",
 			"• The contrast between the machine and the body is thoroughly amplified with Amplified's unique modeling.",
 			"• The chest hatch opens, allowing it to take the firing position for the organic missile \"Giga Destroyer\".",
-			"• The back wing uses a PET sheet with a printed pattern to create a sharp and vivid appearance.",
+			"• The back wing uses PET sheet with a pattern printed on it to give it a sharp and vivid appearance.",
 			"• The tail can be flexibly moved by splitting it and connecting it with internal lead wires.",
 			"• A large set including parts and display base that can reproduce Altarous mode.",
 			"• Comes with 3D metallic seals that can be pasted as accents in various places.",
 			"• Considering expandability as a plastic model, connection holes for expansion are placed in various places."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"武装パーツ×1式",
-			"ディスプレイベース×1",
-			"ジョイントパーツ×1式",
-			"シール×1",
-			"３Dメタリックシール×1",
-			"PETシート×1",
-			"リード線×2種"
-		],
-		"en": [
-			"Armed parts x 1 set",
-			"Display base x 1",
-			"Joint parts x 1 set",
-			"Seal×1",
-			"3D metallic seal×1",
-			"PET sheet x 1",
-			"Lead wire x 2 types"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "武装パーツ",
+				"en": "armed parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース",
+				"en": "display base"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "３Dメタリックシール",
+				"en": "3D Metallic Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "PETシート",
+				"en": "PET sheet"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リード線",
+				"en": "lead wire"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5889.jpg",
+				"src": "https://bandai-hobby.net/images/153_5889_s_rzmib9crceojmlb3uq80csg1h5k1.jpg",
 				"path": "/images/items/01_5022/153_5889.jpg",
 				"hash": "2dcbfdcd7d72fab72120c262f4f6af2c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5889.jpg",
+				"src": "https://bandai-hobby.net/images/155_5889_s_rqi7qo8jjf5zbq3dv4rmjjisuxsp.jpg",
 				"path": "/images/items/01_5022/155_5889.jpg",
 				"hash": "d279952b7e3fef77ebb96c1731027f9c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5889.jpg",
+				"src": "https://bandai-hobby.net/images/156_5889_s_s2xskm2doli3julps2fa0h5if4sn.jpg",
 				"path": "/images/items/01_5022/156_5889.jpg",
 				"hash": "fbad1ba307e597d525d03761b37a3aaa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5889.jpg",
+				"src": "https://bandai-hobby.net/images/157_5889_s_z1uno618jgdmii12j89tf7fttp92.jpg",
 				"path": "/images/items/01_5022/157_5889.jpg",
 				"hash": "45d075368d0cfeb27d5b4a3298d525a1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5889.jpg",
+				"src": "https://bandai-hobby.net/images/158_5889_s_csr19vt70k5onrybubnuhfhe0ahh.jpg",
 				"path": "/images/items/01_5022/158_5889.jpg",
 				"hash": "f6fb8b7f4ad176333115b75bdf4c3154"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5889.jpg",
+				"src": "https://bandai-hobby.net/images/159_5889_s_0si5wnc1sxz9vldb6ony6e22xjgf.jpg",
 				"path": "/images/items/01_5022/159_5889.jpg",
 				"hash": "4ad3556f37c47ee7a5c263ea5324549b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5889.jpg",
+				"src": "https://bandai-hobby.net/images/189_5889_s_cub4mpxu88u8hpgww3twvqt35wfi.jpg",
 				"path": "/images/items/01_5022/189_5889.jpg",
 				"hash": "ca13ab130bf9bee7b5554a6865667e64"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5889.jpg",
+				"src": "https://bandai-hobby.net/images/190_5889_s_xnivykzsykwc2n59dofatkbyuotj.jpg",
 				"path": "/images/items/01_5022/190_5889.jpg",
 				"hash": "51cf0d80e8e6c1e1d45ac39a9f5c03c8"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5022/",
-	"brandIds": ["figurerise-standard-amp"],
-	"seriesIds": ["digimon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5983", "item-1000216437", "01_5277", "item-1000198198"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5022/"
 }

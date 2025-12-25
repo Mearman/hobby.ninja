@@ -5,6 +5,44 @@
 		"ja": "ENTRY GRADE 1/144 ビルドストライク エクシードギャラクシー",
 		"en": "ENTRY GRADE 1/144 Build Strike Exceed Galaxy"
 	},
+	"brands": [
+		{
+			"id": "entry_grade_g",
+			"url": "https://bandai-hobby.net/brand/entry_grade_g/",
+			"ja": "ENTRY GRADE"
+		}
+	],
+	"series": [
+		{
+			"id": "gundambuildmetaverse",
+			"url": "https://bandai-hobby.net/series/gundambuildmetaverse/",
+			"ja": "ガンダムビルドメタバース"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5105",
+			"url": "https://bandai-hobby.net/item/01_5105/",
+			"ja": "ENTRY GRADE 1/144 ガンダムベース限定 ラーガンダム 試作壱型"
+		},
+		{
+			"id": "01_4992",
+			"url": "https://bandai-hobby.net/item/01_4992/",
+			"ja": "ENTRY GRADE 1/144 ラーガンダム"
+		}
+	],
+	"manual": {
+		"id": "1099",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1099"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 1210,
 		"currency": "JPY",
@@ -18,18 +56,17 @@
 		"day": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"2023年10月配信予定、『ガンダムビルドシリーズ』10周年記念映像『ガンダムビルドメタバース』より、シリーズ屈指の人気機体「ビルドストライク」新機体が“簡単組み立て×ハイクオリティ”のENTRY GRADEで登場！",
-			"■シール不要！洗練されたパーツ分割により、ディテールの色分けも組み立てるだけで再現可能。",
-			"■パーツ数を抑えつつも抜群の可動！自由自在にポージングが決められる。",
-			"■ニッパーを使わず手でパチパチと簡単に外せるタッチゲート仕様。",
-			"■各所にハードポイントを搭載。多彩なガンプラカスタマイズを楽しめる。",
-			"■付属するブースターは腕や脚にも装着可能。"
+			"• シール不要！洗練されたパーツ分割により、ディテールの色分けも組み立てるだけで再現可能。",
+			"• パーツ数を抑えつつも抜群の可動！自由自在にポージングが決められる。",
+			"• ニッパーを使わず手でパチパチと簡単に外せるタッチゲート仕様。",
+			"• 各所にハードポイントを搭載。多彩なガンプラカスタマイズを楽しめる。",
+			"• 付属するブースターは腕や脚にも装着可能。"
 		],
 		"en": [
-			"From the 202310 distribution Scheduled 10th anniversary video of \"Gundam Build Series \" \" Gundam Build Metaverse \", the new \" Build Strike \" aircraft, one of the most popular aircraft in the series, is now available in the \" Easy Assembly x High Quality\" ENTRY GRADE!",
+			"From the 202310 distribution Scheduled 10th anniversary video of \"Gundam Build Series\" \"Gundam Build Metaverse\", the new \"Build Strike\" aircraft, one of the most popular aircraft in the series, is now available in the \"Easy Assembly x High Quality\" ENTRY GRADE!",
 			"• No seal required! Thanks to sophisticated parts division, color-coding of details can be reproduced using only assembly.",
 			"• Excellent movement while keeping the number of parts low! Poses can be decided freely.",
 			"• Touch gate design that allows you to easily remove it by hand without using nippers.",
@@ -37,31 +74,53 @@
 			"• The included booster can also be attached to the arms and legs."
 		]
 	},
-	"accessories": {
-		"ja": ["シールド×1", "ビームライフル×1", "ソードエフェクト×1", "ブースター×1", "ジョイントパーツ×1式"],
-		"en": ["Seal × 1", "Beam rifle x 1", "Sword effect x1", "Booster x 1", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ソードエフェクト",
+				"en": "sword effect"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ブースター",
+				"en": "booster"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201186_1.jpg",
 				"path": "/images/items/01_4993/1000201186_1.jpg",
 				"hash": "d908290803347227e7f4addfd738ca54"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201186_10.jpg",
-				"path": "/images/items/01_4993/1000201186_10.jpg",
-				"hash": "a9d288fee5368dd6e769f56e52d2691b"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201186_11.jpg",
-				"path": "/images/items/01_4993/1000201186_11.jpg",
-				"hash": "73810a8e0fe6f67834e19918bbf157da"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201186_12.jpg",
-				"path": "/images/items/01_4993/1000201186_12.jpg",
-				"hash": "58a0f1fbee8ccb31c49d4d75a04182b1"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201186_2.jpg",
@@ -102,17 +161,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201186_9.jpg",
 				"path": "/images/items/01_4993/1000201186_9.jpg",
 				"hash": "a3bd494ec7bab0bf3433f03ca28e4cd8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201186_10.jpg",
+				"path": "/images/items/01_4993/1000201186_10.jpg",
+				"hash": "a9d288fee5368dd6e769f56e52d2691b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201186_11.jpg",
+				"path": "/images/items/01_4993/1000201186_11.jpg",
+				"hash": "73810a8e0fe6f67834e19918bbf157da"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201186_12.jpg",
+				"path": "/images/items/01_4993/1000201186_12.jpg",
+				"hash": "58a0f1fbee8ccb31c49d4d75a04182b1"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4993/",
-	"brandIds": ["entry_grade"],
-	"seriesIds": ["gundambuildmetaverse"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5105", "01_4992"],
-	"manual": {
-		"id": "1099",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1099/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4993/"
 }

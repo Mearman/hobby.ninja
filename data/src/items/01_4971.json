@@ -5,6 +5,55 @@
 		"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1",
 		"en": "Gundam Decal Gundam Base Limited HG 1/144 Universal Century Emblem Set 1"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5594",
+			"url": "https://bandai-hobby.net/item/01_5594/",
+			"ja": "HG 1/144 メッサーF01型 [クリアカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,12 +67,11 @@
 		"day": 22
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定商品です。",
 			"1/144スケールに対応した水転写式ガンダムデカールが登場！",
-			"• 『機動戦士ガンダム』『機動戦士ガンダム ククルス・ドアンの島』『機動戦士ガンダム 逆襲のシャア』『機動戦士ガンダム 閃光のハサウェイ』『機動戦士Z ガンダム』『機動戦士ガンダム ZZ』『機動戦士ガンダム UC』の1/144スケールキットなどの各種キットに対応したエンブレムのデカールセットです。対応キット以外にもこだわりに応じて、自由にお貼りください。"
+			"• 『機動戦士ガンダム』『機動戦士ガンダム ククルス・ドアンの島』『機動戦士ガンダム 逆襲のシャア』『機動戦士ガンダム 閃光のハサウェイ』『機動戦士Zガンダム』『機動戦士ガンダムZZ』『機動戦士ガンダムUC』の1/144スケールキットなどの各種キットに対応したエンブレムのデカールセットです。対応キット以外にもこだわりに応じて、自由にお貼りください。"
 		],
 		"en": [
 			"A limited edition product from the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
@@ -34,30 +82,22 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5842.jpg",
+				"src": "https://bandai-hobby.net/images/153_5842_s_ivukshkbfe03zq1y75gemvwiz35q.jpg",
 				"path": "/images/items/01_4971/153_5842.jpg",
 				"hash": "ab6ffbdda62b97317f8f3b39e2c5a50a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5842.jpg",
+				"src": "https://bandai-hobby.net/images/155_5842_s_7zn1rfsatgjkz1g706ljhdyk06fq.jpg",
 				"path": "/images/items/01_4971/155_5842.jpg",
 				"hash": "a78c701e1f3a72476d9ef8612badd153"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5842.jpg",
+				"src": "https://bandai-hobby.net/images/156_5842_s_icgktrbddkt2puiss3kkaabaihhl.jpg",
 				"path": "/images/items/01_4971/156_5842.jpg",
 				"hash": "0be8f3db8d55def84ae0a0cb742d16ed"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4971/",
-	"brandIds": ["hg", "gundam_decal"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5963", "item-1000220189", "01_5468", "01_5594"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4971/"
 }

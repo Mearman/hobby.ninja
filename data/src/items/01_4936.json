@@ -5,6 +5,60 @@
 		"ja": "ＨＧ 1/144 ガンダムエアリアル パーメットスコア・シックス",
 		"en": "HG 1/144 Gundam Aerial Permet Score Six"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216474",
+			"url": "https://p-bandai.jp/item/item-1000216474/",
+			"ja": "ＨＧ 1/144 デスルター"
+		},
+		{
+			"id": "item-1000211616",
+			"url": "https://p-bandai.jp/item/item-1000211616/",
+			"ja": "ＨＧ 1/144 ベギルベウトルシュ(ケナンジ小隊所属機/リドリック小隊所属機)"
+		},
+		{
+			"id": "01_5422",
+			"url": "https://bandai-hobby.net/item/01_5422/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムキャリバーン [クリアカラー]"
+		},
+		{
+			"id": "item-1000203130",
+			"url": "https://p-bandai.jp/item/item-1000203130/",
+			"ja": "FULL MECHANICS 1/100 ガンダムエアリアル パーメットスコア・シックス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -66,11 +119,11 @@
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"······good . I wanted to",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
-			"The main character machine \"Gundam Aerial \" from \" Mobile Suit Gundam Mercury Witch\" is now available in the coloring that has reached Permet Score Six!",
+			"The main character machine \"Gundam Aerial\" from \"Mobile Suit Gundam Mercury Witch\" is now available in the coloring that has reached Permet Score Six!",
 			"The shining blue chest shell unit from the movie is reproduced with in-mold molding!",
 			"A 1/144 Scale item that is easy to make.",
 			"● Reproduce the Gundam Aerial, which reached Permet Score Six during the duel with Grassley Dormitory, in molded color!",
-			"The shining blue chest shell unit with a permet score of 6 is reproduced by in-mold molding.",
+			"The shining blue chest shell unit with a permet score of 6 is reproduced using in-mold molding.",
 			"Two types of double side seals are included that reproduce the shell units of the head, back, shoulders, and thighs.",
 			"The clear parts are molded with metallic blue glitter!",
 			"The exterior is blue and yellow, and the joints use metallic molding.",
@@ -106,59 +159,75 @@
 			"・Product specifications are as of 20233. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["ビームライフル", "ビームサーベル", "シールド"],
-		"en": ["beam rifle", "beam saber", "Seal de"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "beam rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "beam saber"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5809.jpg",
+				"src": "https://bandai-hobby.net/images/153_5809_s_ovww3aw2v4nn60ms8odupc3f04if.jpg",
 				"path": "/images/items/01_4936/153_5809.jpg",
 				"hash": "9d3c26ffcd5f3c1066860fdafe3c9d34"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5809.jpg",
+				"src": "https://bandai-hobby.net/images/155_5809_s_0bsefuiesoydt8d9ai63yrl0sgk6.jpg",
 				"path": "/images/items/01_4936/155_5809.jpg",
 				"hash": "92b52a779ea8b3690c93d708a786b971"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5809.jpg",
+				"src": "https://bandai-hobby.net/images/156_5809_s_4tw9k2pskcoi0igitd5eqxihj1ux.jpg",
 				"path": "/images/items/01_4936/156_5809.jpg",
 				"hash": "29de274a4e8377ad2df0ec2d9edd88c9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5809.jpg",
+				"src": "https://bandai-hobby.net/images/157_5809_s_dwzvk59wakkw09gbenpozb7mbur5.jpg",
 				"path": "/images/items/01_4936/157_5809.jpg",
 				"hash": "e50305753c08575c5dba40011b124f75"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5809.jpg",
+				"src": "https://bandai-hobby.net/images/158_5809_s_314751d5ic6x85jx00zbjw07vl1f.jpg",
 				"path": "/images/items/01_4936/158_5809.jpg",
 				"hash": "65ed6d1336c948c1b06908b33173d482"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5809.jpg",
+				"src": "https://bandai-hobby.net/images/159_5809_s_vzy53hkilwzs0r071u8fkgczvx4w.jpg",
 				"path": "/images/items/01_4936/159_5809.jpg",
 				"hash": "bd68946f05f027c2092b4bb858a599b8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5809.jpg",
+				"src": "https://bandai-hobby.net/images/189_5809_s_bssdwtlsk9e7sffff8sjl8aotz7o.jpg",
 				"path": "/images/items/01_4936/189_5809.jpg",
 				"hash": "e1fa43e1e01a106d1e5be899dfacfa0e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5809.jpg",
+				"src": "https://bandai-hobby.net/images/190_5809_s_2c9sa1f3t43ftsqel5wcl72j16ci.jpg",
 				"path": "/images/items/01_4936/190_5809.jpg",
 				"hash": "ed861abae2d4acddc473c0058c737893"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5809.jpg",
+				"src": "https://bandai-hobby.net/images/191_5809_s_xgodag6cpsrwqxpdrm5z0q9szk0x.jpg",
 				"path": "/images/items/01_4936/191_5809.jpg",
 				"hash": "a970b2ca7e577e4f2d82c38142844976"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5809.jpg",
+				"src": "https://bandai-hobby.net/images/192_5809_s_5rx377pf0fpmqj292m7cqkjc3rp6.jpg",
 				"path": "/images/items/01_4936/192_5809.jpg",
 				"hash": "e18f515bcf74661a8f361ad41e686d04"
 			}
@@ -166,14 +235,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4936/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203130"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2502",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2502/"

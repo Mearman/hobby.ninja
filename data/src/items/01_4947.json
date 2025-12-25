@@ -5,6 +5,35 @@
 		"ja": "PG 1/60 ストライクルージュ＋スカイグラスパー",
 		"en": "PG 1/60 Strike Rouge + Sky Grasper"
 	},
+	"brands": [
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2878",
+			"url": "https://bandai-hobby.net/item/01_2878/",
+			"ja": "PG 1/60 ストライクフリーダムガンダム"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 20900,
 		"currency": "JPY",
@@ -18,10 +47,9 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム SEED DESTINY」に登場するストライクルージュのPGシリーズプラモデルです。",
+			"「機動戦士ガンダムSEED DESTINY」に登場するストライクルージュのPGシリーズプラモデルです。",
 			"パイロットフィギュアとしてMS内にデスティニー版新コスチュームのカガリを付属しています。",
 			"可動する両手の５本の指は今まで５本ばらばらだったにものが一つになり容易な組立てを実現しました。",
 			"過去のPG同様内部可動骨格付きモデルで頭部カメラアイもLEDにより発光します。",
@@ -30,7 +58,7 @@
 			"劇中ポーズを再現できるスタンド付きです。"
 		],
 		"en": [
-			"A PG series plastic model of Strike Rouge that appears in \"Mobile Suit Gundam SEED DESTINY\".",
+			"A PG series plastic model of Strike Rouge that appears in \"Mobile Suit GundamSEED DESTINY\".",
 			"A new Destiny version costume, Cagalli, is included in the MS as a pilot figure.",
 			"The five movable fingers on both hands, which used to be five separate fingers, are now integrated into one, making it easy to assemble.",
 			"Like the past PGs, this model has an internal movable skeleton, and the head camera eye also lights up with LEDs.",
@@ -45,26 +73,6 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000070593_1.jpg",
 				"path": "/images/items/01_4947/1000070593_1.jpg",
 				"hash": "0a5429db0fa309cdd85ad1b7b5e995d6"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000070593_10.jpg",
-				"path": "/images/items/01_4947/1000070593_10.jpg",
-				"hash": "3f690a3d6012eb9763352dd29be00811"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000070593_11.jpg",
-				"path": "/images/items/01_4947/1000070593_11.jpg",
-				"hash": "4ade2f65fc227124f65c26fbd13376c8"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000070593_12.jpg",
-				"path": "/images/items/01_4947/1000070593_12.jpg",
-				"hash": "1cd7b7858a6e41da25e1bd3e7add4010"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000070593_13.jpg",
-				"path": "/images/items/01_4947/1000070593_13.jpg",
-				"hash": "7da4bb7be6322dedcb0df856c91058c7"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000070593_2.jpg",
@@ -105,15 +113,31 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000070593_9.jpg",
 				"path": "/images/items/01_4947/1000070593_9.jpg",
 				"hash": "92a460324de448f90d771d7e46a862ab"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000070593_10.jpg",
+				"path": "/images/items/01_4947/1000070593_10.jpg",
+				"hash": "3f690a3d6012eb9763352dd29be00811"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000070593_11.jpg",
+				"path": "/images/items/01_4947/1000070593_11.jpg",
+				"hash": "4ade2f65fc227124f65c26fbd13376c8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000070593_12.jpg",
+				"path": "/images/items/01_4947/1000070593_12.jpg",
+				"hash": "1cd7b7858a6e41da25e1bd3e7add4010"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000070593_13.jpg",
+				"path": "/images/items/01_4947/1000070593_13.jpg",
+				"hash": "7da4bb7be6322dedcb0df856c91058c7"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4947/",
-	"brandIds": ["pg"],
-	"seriesIds": ["seed-d"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_2878"],
 	"manual": {
 		"id": "654",
 		"url": "https://manual.bandai-hobby.net/menus/detail/654/"

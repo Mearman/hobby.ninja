@@ -5,6 +5,50 @@
 		"ja": "ＨＧ 1/144 高機動型ザク 地上用 (ウォルド機)",
 		"en": "HG 1/144 High Mobility Type Zaku Ground Use (Waldo Machine)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "g-doan",
+			"url": "https://bandai-hobby.net/series/g-doan/",
+			"ja": "機動戦士ガンダム ククルス・ドアンの島"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "01_5514",
+			"url": "https://bandai-hobby.net/item/01_5514/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムFSD (試作型ロングレンジ・ビームライフル装備)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3080,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"― 南 十 字 星 （ サ ザ ン ク ロ ス） の 狩 人 ―",
@@ -66,7 +109,7 @@
 		],
 		"en": [
 			"- Hunter of the Southern Cross -",
-			"From the movie \"Mobile Suit Gundam Cucurrus Doan's Island \", Waldo Wren, the vice-captain of the \" Brown Southern Cross\", will be on board.",
+			"From the movie \"Mobile Suit Gundam Cucurrus Doan's Island\", Waldo Wren, the vice-captain of the \"Brown Southern Cross\", will be on board.",
 			"High mobility type Zaku ground version now available in the HG series. General machine head and weapons are newly included.",
 			"The characteristic camouflage pattern coloring is reproduced with molded colors and water transfer decals. Contains unit insignia and caution marks of the Zeon Principality Army Southern Cross Corps.",
 			"● Reproduce the head shape of a general machine!",
@@ -110,59 +153,75 @@
 			"・Product specifications are as of 20234. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["対艦ライフル・ショーティー", "対艦ライフル", "ヒート・ホーク"],
-		"en": ["anti-ship rifle shorty", "anti-ship rifle", "heat hawk"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "対艦ライフル・ショーティー",
+				"en": "anti-ship rifle shorty"
+			}
+		},
+		{
+			"name": {
+				"ja": "対艦ライフル",
+				"en": "anti-ship rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヒート・ホーク",
+				"en": "heat hawk"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5850.jpg",
+				"src": "https://bandai-hobby.net/images/153_5850_s_ag1kz85k9lwqi03k1s3cabgnknzo.jpg",
 				"path": "/images/items/01_4980/153_5850.jpg",
 				"hash": "ee7e65f6125a4dbbabff255f5b9044c6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5850.jpg",
+				"src": "https://bandai-hobby.net/images/155_5850_s_zkgbiqdbcw4a70fe8clu2zlfrbri.jpg",
 				"path": "/images/items/01_4980/155_5850.jpg",
 				"hash": "7d404f0620ea98ad21f46b3e0900af02"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5850.jpg",
+				"src": "https://bandai-hobby.net/images/156_5850_s_ooxe5mtrdh2cm5k7yzm97eyzrat7.jpg",
 				"path": "/images/items/01_4980/156_5850.jpg",
 				"hash": "ed5153525c33bde0b9e13d8e6f0aefdc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5850.jpg",
+				"src": "https://bandai-hobby.net/images/157_5850_s_1vtm1hr7fykmgux5i97pob1513pf.jpg",
 				"path": "/images/items/01_4980/157_5850.jpg",
 				"hash": "b363a114ded3c963a4a9319477dbd838"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5850.jpg",
+				"src": "https://bandai-hobby.net/images/158_5850_s_wbkcnbnwkdktvyfsvp3e5kp6ea9o.jpg",
 				"path": "/images/items/01_4980/158_5850.jpg",
 				"hash": "29f253916cf1f7b8f9aa5ddc424bdc17"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5850.jpg",
+				"src": "https://bandai-hobby.net/images/159_5850_s_17vgyakamva4pcdhcpt4qxt9txvc.jpg",
 				"path": "/images/items/01_4980/159_5850.jpg",
 				"hash": "177b17c171496d85203bd694abc4eada"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5850.jpg",
+				"src": "https://bandai-hobby.net/images/189_5850_s_jbfoctphes9tikymb3o4pajsrc8z.jpg",
 				"path": "/images/items/01_4980/189_5850.jpg",
 				"hash": "6987b08a4f6bf0c9b07cd50fb44deb94"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5850.jpg",
+				"src": "https://bandai-hobby.net/images/190_5850_s_no6zm3mmqd2wrb2emgvtvlaphpwh.jpg",
 				"path": "/images/items/01_4980/190_5850.jpg",
 				"hash": "fe1285f2b6dcd7a41ef86a38ed99c15e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5850.jpg",
+				"src": "https://bandai-hobby.net/images/191_5850_s_qr0kabmgp84cn6kaqpmdtj9bmg41.jpg",
 				"path": "/images/items/01_4980/191_5850.jpg",
 				"hash": "e35f6ad025043e7a6d6d79f77698e5d1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5850.jpg",
+				"src": "https://bandai-hobby.net/images/192_5850_s_t8lxwvhs6rwbnyi4xk2n1urnp5f0.jpg",
 				"path": "/images/items/01_4980/192_5850.jpg",
 				"hash": "9182655a20665b721c207fa7495e2dc5"
 			}
@@ -170,14 +229,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4980/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["g-doan"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000220189", "01_5514"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2487",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2487/"

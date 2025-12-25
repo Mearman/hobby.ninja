@@ -3,8 +3,57 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 V2アサルトバスターガンダム [クリアカラー]",
-		"en": "HG 1/144 VICTORY TWO ASSAULT BUSTER GUNDAM [CLEAR COLOR]"
+		"en": "HG 1/144 V2 Assault Buster Gundam [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "v-gundam",
+			"url": "https://bandai-hobby.net/series/v-gundam/",
+			"ja": "機動戦士Vガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3311",
+			"url": "https://bandai-hobby.net/item/01_3311/",
+			"ja": "HG 1/144 ガンダムベース限定 セカンドV[クリアカラー]"
+		},
+		{
+			"id": "item-1000137105",
+			"url": "https://p-bandai.jp/item/item-1000137105",
+			"ja": "ＨＧ 1/144 セカンドＶ"
+		},
+		{
+			"id": "01_333",
+			"url": "https://bandai-hobby.net/item/01_333/",
+			"ja": "HGUC 1/144 V2アサルトバスターガンダム"
+		},
+		{
+			"id": "item-1000098694",
+			"url": "https://p-bandai.jp/item/item-1000098694/",
+			"ja": "HGUC 1/144 Ｖ２ガンダム用拡張エフェクトユニット“光の翼”"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -18,21 +67,22 @@
 		"day": 3
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"更新日：2023年5月2日",
 			"記載価格に誤りがございましたので訂正いたしました。",
-			"『機動戦士V ガンダム 』より、「HGUC 1/144 V2アサルトバスターガンダム」がクリアカラーになって登場！",
+			"『機動戦士Vガンダム 』より、「HGUC 1/144 V2アサルトバスターガンダム」がクリアカラーになって登場！",
 			"• 成形色がクリアカラーに変更されており、ブルーやイエローが映える仕上がりに。",
 			"• アサルトパーツとバスターパーツがそれぞれ一式付属。組み合わせにより「V2アサルトガンダム」「V2アサルトバスターガンダム」「V2バスターガンダム」を再現可能。",
 			"• メガビーム・ライフル、メガビーム・シールドなど多彩な武装が付属。"
 		],
 		"en": [
-			"■ Updated on: May 2, 2023 There was an error in the listed price, so we have corrected it.  From \"MOBILE SUIT V GUNDAM\", \"1/144 HGUC V2 ASSAULT BUSTER GUNDAM\" is now available in clear color!",
-			"■ The molding color has been changed to a clear color, and the finish looks good in blue and yellow.",
-			"■ A set of assault parts and buster parts is included. By combination, \"V2 Assault GUNDAM\", \"V2 Assault Buster GUNDAM\", and \"V2 Buster GUNDAM\" can be reproduced.",
-			"■ Comes with a variety of weapons such as a Mega Beam Rifle and a Mega Beam Shield."
+			"Updated: 202352",
+			"There was an error in the listed price, so we have corrected it.",
+			"From \"Mobile Suit V Gundam\", \"HGUC 1/144 V2 Assault Buster Gundam\" is now available in clear color!",
+			"• The molding color has been changed to clear color, making the blue and yellow colors stand out.",
+			"• A set of assault parts and buster parts are included. \"V2 Assault Gundam\", \"V2 Assault Buster Gundam\", and \"V2 Buster Gundam\" can be reproduced by combining.",
+			"• Comes with a variety of weapons such as Mega Beam Rifle and Mega Beam Seal."
 		]
 	},
 	"images": {
@@ -55,13 +105,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4978/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["v-gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_3311", "item-1000137105", "01_333", "item-1000098694"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4978/"
 }

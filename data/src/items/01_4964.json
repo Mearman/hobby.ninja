@@ -5,6 +5,50 @@
 		"ja": "HGUC 1/144 ボール ツインセット ｢セブン-イレブン カラー｣",
 		"en": "HGUC 1/144 Ball Twin Set \"7-Eleven Color\""
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -18,20 +62,23 @@
 		"day": 31
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["HGUC 1/144 ボール ツインセット ｢セブン-イレブン カラー｣登場！"],
-		"en": ["HGUC 1/144 Ball Twin Set “7-Eleven Color” now available!"]
+		"ja": [
+			"HGUC 1/144 ボール ツインセット ｢セブン-イレブン カラー｣登場！"
+		],
+		"en": [
+			"HGUC 1/144 Ball Twin Set “7-Eleven Color” now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5835.jpg",
+				"src": "https://bandai-hobby.net/images/153_5835_s_5p2l4c1fnvq5xl107ztesgrzq62f.jpg",
 				"path": "/images/items/01_4964/153_5835.jpg",
 				"hash": "114464197ec063c4abd640af8f2ebe72"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5835.jpg",
+				"src": "https://bandai-hobby.net/images/155_5835_s_slpusd8isch39x0r1sgzv7mz9m7m.jpg",
 				"path": "/images/items/01_4964/155_5835.jpg",
 				"hash": "28099fc8cd03d29740c8f83ba2d293c7"
 			}
@@ -39,14 +86,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4964/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	},
 	"manual": {
 		"id": "424",
 		"url": "https://manual.bandai-hobby.net/menus/detail/424/"

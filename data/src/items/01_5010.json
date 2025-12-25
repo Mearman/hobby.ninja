@@ -5,6 +5,43 @@
 		"ja": "ポケモンプラモコレクション セレクトシリーズ 黒いレックウザ",
 		"en": "Pokemon Plastic Model Collection Select Series Black Rayquaza"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5984",
+			"url": "https://bandai-hobby.net/item/01_5984/",
+			"ja": "ポケモンプラモコレクション 60 セレクトシリーズ コライドン"
+		},
+		{
+			"id": "01_5958",
+			"url": "https://bandai-hobby.net/item/01_5958/",
+			"ja": "ポケモンプラモコレクション 59 セレクトシリーズ ミライドン"
+		},
+		{
+			"id": "01_5947",
+			"url": "https://bandai-hobby.net/item/01_5947/",
+			"ja": "ポケモンプラモコレクション クイック!! 23 ジラーチ"
+		},
+		{
+			"id": "01_5568",
+			"url": "https://bandai-hobby.net/item/01_5568/",
+			"ja": "ポケモンプラモコレクション 58 セレクトシリーズ グレンアルマ"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -32,31 +69,28 @@
 			"• Comes with a special pedestal."
 		]
 	},
-	"accessories": {
-		"ja": ["台座×1", "シール×1"],
-		"en": ["Pedestal x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201215_1.jpg",
 				"path": "/images/items/01_5010/1000201215_1.jpg",
 				"hash": "589fedab8df9e08a163a9580eaaa61e4"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201215_10.jpg",
-				"path": "/images/items/01_5010/1000201215_10.jpg",
-				"hash": "4232a34e7531c7e1fdb7342eaf717900"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201215_11.jpg",
-				"path": "/images/items/01_5010/1000201215_11.jpg",
-				"hash": "de071b272354dc0d3a8fb3c16251c554"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201215_12.jpg",
-				"path": "/images/items/01_5010/1000201215_12.jpg",
-				"hash": "2dbb7ca393d81c54eba3447fe2231baf"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201215_2.jpg",
@@ -97,13 +131,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201215_9.jpg",
 				"path": "/images/items/01_5010/1000201215_9.jpg",
 				"hash": "132bb221233e3634a4a0ef6148547c01"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201215_10.jpg",
+				"path": "/images/items/01_5010/1000201215_10.jpg",
+				"hash": "4232a34e7531c7e1fdb7342eaf717900"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201215_11.jpg",
+				"path": "/images/items/01_5010/1000201215_11.jpg",
+				"hash": "de071b272354dc0d3a8fb3c16251c554"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201215_12.jpg",
+				"path": "/images/items/01_5010/1000201215_12.jpg",
+				"hash": "2dbb7ca393d81c54eba3447fe2231baf"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5010/",
-	"brandIds": [],
-	"seriesIds": ["pokemon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5010/"
 }

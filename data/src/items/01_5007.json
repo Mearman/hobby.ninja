@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/100 YF-29 デュランダルバルキリー(マクシミリアン・ジーナス機)フルセットパック",
-		"en": "HG 1/100 YF-29 DURANDAL VALKYRIE (MAXIMILIAN JENIUS USE) FULL SET PACK"
+		"en": "HG 1/100 YF-29 Durandal Valkyrie (Maximilian Genus machine) full set pack"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "macross",
+			"url": "https://bandai-hobby.net/series/macross/",
+			"ja": "マクロスシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5944",
+			"url": "https://bandai-hobby.net/item/01_5944/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機)"
+		},
+		{
+			"id": "01_5946",
+			"url": "https://bandai-hobby.net/item/01_5946/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) デラックスセット"
+		},
+		{
+			"id": "01_5465",
+			"url": "https://bandai-hobby.net/item/01_5465/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(マクシミリアン・ジーナス機)"
+		},
+		{
+			"id": "01_5448",
+			"url": "https://bandai-hobby.net/item/01_5448/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(ミリア・ファリーナ・ジーナス機)"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5610,
 		"currency": "JPY",
@@ -18,25 +62,24 @@
 		"day": 7
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『劇場版マクロスΔ 絶対LIVE!!!!!!』よりマックスが搭乗する「YF-29 デュランダルバルキリー」がスーパーパーツを付属したフルセットで登場！",
-			"■一部に差替パーツを使用することで変形シークエンスを簡略化する「差替三段変形（ショートカットチェンジ）」を採用。HGシリーズならではの組み立てやすさと広い可動域、各形態の洗練されたフォルムを実現。",
-			"■スーパーパーツは差し替えで着脱が可能。さらに「ミサイルハッチ」「フォールドウェーブプロジェクター」の展開もパーツの差し替えで再現。",
-			"■ブースターのノズルには伸縮ギミックを搭載。",
-			"■ファイターモード時の前進翼の曲線美やガウォークモード時の特徴的なシルエットも忠実に再現。",
-			"■バトロイドモードは劇中を意識したスマートなボディライン。",
-			"■肩を引き出し式にすることで腕部の可動域を拡大。",
-			"■胸部の３軸可動を内蔵することで前後左右への広域な可動を実現。",
-			"■股関節の可動範囲も広く、ダイナミックかつ自然なポージングが可能に。",
-			"■フォールドクォーツやキャノピー等の表現にこだわり、光の当たり方で変化する「偏光成形」を計３色使用。",
-			"■極薄ながらも優れた隠蔽性を発揮するネーマーシールを採用。"
+			"• 一部に差替パーツを使用することで変形シークエンスを簡略化する「差替三段変形（ショートカットチェンジ）」を採用。HGシリーズならではの組み立てやすさと広い可動域、各形態の洗練されたフォルムを実現。",
+			"• スーパーパーツは差し替えで着脱が可能。さらに「ミサイルハッチ」「フォールドウェーブプロジェクター」の展開もパーツの差し替えで再現。",
+			"• ブースターのノズルには伸縮ギミックを搭載。",
+			"• ファイターモード時の前進翼の曲線美やガウォークモード時の特徴的なシルエットも忠実に再現。",
+			"• バトロイドモードは劇中を意識したスマートなボディライン。",
+			"• 肩を引き出し式にすることで腕部の可動域を拡大。",
+			"• 胸部の３軸可動を内蔵することで前後左右への広域な可動を実現。",
+			"• 股関節の可動範囲も広く、ダイナミックかつ自然なポージングが可能に。",
+			"• フォールドクォーツやキャノピー等の表現にこだわり、光の当たり方で変化する「偏光成形」を計３色使用。",
+			"• 極薄ながらも優れた隠蔽性を発揮するネーマーシールを採用。"
 		],
 		"en": [
-			"\"YF-29 Durandal Valkyrie \" piloted by Max from \" Macross Delta the Movie: Absolute LIVE!!!!!!\" is now available as a full set with super parts!",
-			"• Adopts \"replacement three-stage transformation (shortcut change)\" that simplifies the transformation sequence by using some replacement parts. The ease of assembly, wide range of motion, and sophisticated form of each form that are unique to the HG series are realized.",
-			"• Super parts can be replaced and removed. Furthermore, the deployment of the \"missile hatch \" and \" fold wave projector\" is also reproduced by replacing parts.",
+			"\"YF-29 Durandal Valkyrie\" piloted by Max from \"Macross Delta the Movie: Absolute LIVE!!!!!!\" is now available as a full set with super parts!",
+			"• Adopts \"replacement three-stage transformation (shortcut change)\" that simplifies the transformation sequence by using some replacement parts. The HG series offers ease of assembly, a wide range of motion, and sophisticated forms in each form.",
+			"• Super parts can be replaced and removed. Furthermore, the deployment of the \"missile hatch\" and \"fold wave projector\" is also reproduced by replacing parts.",
 			"• The booster nozzle is equipped with a telescopic gimmick.",
 			"• The beautiful curves of the forward-swept wings in fighter mode and the distinctive silhouette in gerwalk mode are also faithfully reproduced.",
 			"• Battroid mode has a smart body line that is inspired by the movie.",
@@ -47,55 +90,107 @@
 			"• Adopts Nehmar Seal, which is extremely thin but has excellent concealment properties."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ガンポッド×1",
-			"シールド×1",
-			"ナイフ×1",
-			"ミサイル展開用パーツ（左右）×2",
-			"ランディングギア×1式",
-			"フォールドウェーブプロジェクター展開用パーツ×2",
-			"ファイター形態再現用パーツ×1式",
-			"ジョイントパーツ×1式",
-			"ハンドパーツ×1式",
-			"台座×1",
-			"ネーマーシール×1"
-		],
-		"en": [
-			"Gun pod x 1",
-			"Seal × 1",
-			"Knife x 1",
-			"Missile deployment parts (left and right) x 2",
-			"Landing gear x 1 set",
-			"Fold wave projector deployment parts x 2",
-			"Fighter form reproduction parts x 1 set",
-			"Joint parts x 1 set",
-			"Hand parts x 1 set",
-			"Pedestal x 1",
-			"Namer Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ガンポッド",
+				"en": "gun pod"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ナイフ",
+				"en": "knife"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ミサイル展開用パーツ（左右）",
+				"en": "Missile deployment parts (left and right)"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ランディングギア",
+				"en": "landing gear"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "フォールドウェーブプロジェクター展開用パーツ",
+				"en": "Fold wave projector deployment parts"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ファイター形態再現用パーツ",
+				"en": "Fighter form reproduction parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ネーマーシール",
+				"en": "Namer Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201199_1.jpg",
 				"path": "/images/items/01_5007/1000201199_1.jpg",
 				"hash": "7911d02eb929604a10a38c3fffd109b2"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201199_10.jpg",
-				"path": "/images/items/01_5007/1000201199_10.jpg",
-				"hash": "d5183f2efb7410e06f2c872ad983b160"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201199_11.jpg",
-				"path": "/images/items/01_5007/1000201199_11.jpg",
-				"hash": "6d845a41adc942198071823aa3764a57"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201199_12.jpg",
-				"path": "/images/items/01_5007/1000201199_12.jpg",
-				"hash": "5e11abaddab896936b6ebf3193ad1b44"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201199_2.jpg",
@@ -136,13 +231,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201199_9.jpg",
 				"path": "/images/items/01_5007/1000201199_9.jpg",
 				"hash": "428f2affcc8d97c03411a80eeaadee55"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201199_10.jpg",
+				"path": "/images/items/01_5007/1000201199_10.jpg",
+				"hash": "d5183f2efb7410e06f2c872ad983b160"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201199_11.jpg",
+				"path": "/images/items/01_5007/1000201199_11.jpg",
+				"hash": "6d845a41adc942198071823aa3764a57"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000201199_12.jpg",
+				"path": "/images/items/01_5007/1000201199_12.jpg",
+				"hash": "5e11abaddab896936b6ebf3193ad1b44"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5007/",
-	"brandIds": ["hg"],
-	"seriesIds": ["macross"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5944", "01_5946", "01_5465", "01_5448"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5007/"
 }

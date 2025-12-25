@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "30MS オプションボディパーツ アルファシスターズファンタズム1[カラーA]",
-		"en": "30MS OPTION BODY PARTS ALPHA SISTERS PHANTASM 1 [COLOR A]"
+		"en": "30MS Option Body Parts Alpha Sisters Phantasm 1 [Color A]"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [
+		{
+			"id": "idolmaster",
+			"url": "https://bandai-hobby.net/series/idolmaster/",
+			"ja": "アイドルマスターシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6755",
+			"url": "https://bandai-hobby.net/item/01_6755/",
+			"ja": "30MS 芹沢あさひ"
+		},
+		{
+			"id": "01_6756",
+			"url": "https://bandai-hobby.net/item/01_6756/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム3[カラーB]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		}
+	],
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -21,16 +69,16 @@
 	"description": {
 		"ja": [
 			"アイドルマスター シャイニーカラーズと30MSのコラボオリジナルのコスチュームがオプションボディパーツに登場！",
-			"■30MSオリジナルの「衣装」と「腕・脚」「ハンドパーツ」などをセット。",
-			"■別売りの「30MS 櫻木真乃」ほか、既存の30MSシリーズとの組み合わせが可能。",
-			"■島田フミカネ氏によるクリアパーツと左右非対称のデザインが特徴的な30MSオリジナルスペシャル衣装。胸元デザインは選択式で２種付属。",
-			"■肌パーツは仕上げの際に金型表面に艶消し処理を施し、柔らかく光を反射する演出がされている。",
-			"■オリジナルデザインのマイクと衣装に合わせた白黒のハンドパーツ(左右)が３種付属。",
-			"■衣装の各所にジョイント用の３mm穴やピンが設置され、ホルダーパーツを組み合わせたマイクなどが装着可能。"
+			"• 30MSオリジナルの「衣装」と「腕・脚」「ハンドパーツ」などをセット。",
+			"• 別売りの「30MS 櫻木真乃」ほか、既存の30MSシリーズとの組み合わせが可能。",
+			"• 島田フミカネ氏によるクリアパーツと左右非対称のデザインが特徴的な30MSオリジナルスペシャル衣装。胸元デザインは選択式で２種付属。",
+			"• 肌パーツは仕上げの際に金型表面に艶消し処理を施し、柔らかく光を反射する演出がされている。",
+			"• オリジナルデザインのマイクと衣装に合わせた白黒のハンドパーツ(左右)が３種付属。",
+			"• 衣装の各所にジョイント用の３mm穴やピンが設置され、ホルダーパーツを組み合わせたマイクなどが装着可能。"
 		],
 		"en": [
 			"The Idolmaster Shiny Colors and 30MS collaboration original costume is now available as optional body parts!",
-			"• Set includes 30MS original \"costume \", \" arms/legs \", \" hand parts\", etc.",
+			"• Set includes 30MS original \"costume\", \"arms/legs\", \"hand parts\", etc.",
 			"• Can be combined with the existing 30MS series, including the separately sold \"30MS Mano Sakuragi\".",
 			"• 30MS original special costume featuring clear parts and asymmetrical design by Fumikane Shimada. Two types of chest designs are available to choose from.",
 			"• When finishing the skin parts, a matte treatment is applied to the mold surface to create a soft, light-reflecting effect.",
@@ -38,68 +86,91 @@
 			"• 3mm holes and pins for joints are installed in various parts of the costume, and microphones etc. can be attached by combining holder parts."
 		]
 	},
-	"accessories": {
-		"ja": ["ボディパーツ×１式", "ハンドパーツ×１式", "胸部パーツ×2種（選択式）", "マイク×１"],
-		"en": ["Body parts x 1 set", "Hand parts x 1 set", "Chest parts x 2 types (selectable)", "Microphone x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ボディパーツ×１式",
+				"en": "Body parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "胸部パーツ",
+				"en": "chest parts"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種（選択式）",
+				"en": "Species (selective)"
+			}
+		},
+		{
+			"name": {
+				"ja": "マイク×１",
+				"en": "Microphone x 1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5871.jpg",
+				"src": "https://bandai-hobby.net/images/153_5871_s_7bbry9rvd63qwshdz2da69lcyxpw.jpg",
 				"path": "/images/items/01_5003/153_5871.jpg",
 				"hash": "374bb6e5f35f960fee895b45d543b7ca"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5871.jpg",
+				"src": "https://bandai-hobby.net/images/155_5871_s_0rhdy8lxrln9wdw623hrkl0cdi60.jpg",
 				"path": "/images/items/01_5003/155_5871.jpg",
 				"hash": "126325441129f88eaf8f9dcc440de5b8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5871.jpg",
+				"src": "https://bandai-hobby.net/images/156_5871_s_t7iu77adz3dfj2efarakcnijo69z.jpg",
 				"path": "/images/items/01_5003/156_5871.jpg",
 				"hash": "8fa09c32eb78be165daed174d24a7360"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5871.jpg",
+				"src": "https://bandai-hobby.net/images/157_5871_s_6ndqs1fde9mr02tgg1grlfr7sqfu.jpg",
 				"path": "/images/items/01_5003/157_5871.jpg",
 				"hash": "d04b2e0adca5c5e31e8fe32628465d84"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5871.jpg",
+				"src": "https://bandai-hobby.net/images/158_5871_s_lgr1klfed3hqubufc0zeldc3db1m.jpg",
 				"path": "/images/items/01_5003/158_5871.jpg",
 				"hash": "60406c77df55c5e278a6325c24d29b58"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5871.jpg",
+				"src": "https://bandai-hobby.net/images/159_5871_s_4srgq3myn638o666zg676uh59waa.jpg",
 				"path": "/images/items/01_5003/159_5871.jpg",
 				"hash": "3138bdca5825d666695c3f3641e4d94d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5871.jpg",
+				"src": "https://bandai-hobby.net/images/189_5871_s_oijwzzc8s7sfbe9dug377lvl2nhc.jpg",
 				"path": "/images/items/01_5003/189_5871.jpg",
 				"hash": "9d7b57afa33f7c5bdcbe1324dfc2025a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5871.jpg",
+				"src": "https://bandai-hobby.net/images/190_5871_s_l2j1wh2obu6874emhy0lc1hkahuc.jpg",
 				"path": "/images/items/01_5003/190_5871.jpg",
 				"hash": "80a7baf5e4ab841f57ef6fa6fa0b8126"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5871.jpg",
+				"src": "https://bandai-hobby.net/images/191_5871_s_pc2ppyhla4oh8s9sdavbh9e317a7.jpg",
 				"path": "/images/items/01_5003/191_5871.jpg",
 				"hash": "b7b167733c06547e9c3b1aa9966d6b7d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5871.jpg",
+				"src": "https://bandai-hobby.net/images/192_5871_s_0y1hlapkwvqre1dl1t4e32afltty.jpg",
 				"path": "/images/items/01_5003/192_5871.jpg",
 				"hash": "5c7ad70a337cbb473d214703b4e5c7ff"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5003/",
-	"brandIds": ["30ms"],
-	"seriesIds": ["idolmaster"],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_6755", "01_6756", "01_5977", "01_5976"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5003/"
 }

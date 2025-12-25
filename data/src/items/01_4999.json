@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "30MS 櫻木真乃",
-		"en": "30MS MANO SAKURAGI"
+		"en": "30MS Mano Sakuragi"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [
+		{
+			"id": "idolmaster",
+			"url": "https://bandai-hobby.net/series/idolmaster/",
+			"ja": "アイドルマスターシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6755",
+			"url": "https://bandai-hobby.net/item/01_6755/",
+			"ja": "30MS 芹沢あさひ"
+		},
+		{
+			"id": "01_6756",
+			"url": "https://bandai-hobby.net/item/01_6756/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム3[カラーB]"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5975",
+			"url": "https://bandai-hobby.net/item/01_5975/",
+			"ja": "30MS 和泉愛依"
+		}
+	],
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -21,12 +69,12 @@
 	"description": {
 		"ja": [
 			"アイドルマスター シャイニーカラーズより、イルミネーションスターズ「櫻木真乃」を 30MS フォーマットで立体化！",
-			"■表情パーツはタンポ印刷を施した３種が付属。前髪はパーツ交換で髪飾りの無い状態を再現可能。",
-			"■衣装の胸部パーツは限界まで追求したパーツ構成で、そのまま組み立てるだけでカラフルな色分けや精密なディテールを再現。背中の小さな羽もパーツ形状で再現。",
-			"■胸元のハートはプラスチックシールでクリアな質感を表現。",
-			"■スカートは模様をプリントしたシートで波打った形状を表現。一部のパーツにはラメ入りのスモーククリア素材を採用。",
-			"■肌パーツは仕上げの際に金型表面に艶消し処理を施し、柔らかく光を反射する演出がされている。",
-			"■表情付きハンドパーツに加えマイクが保持できるハンドパーツが３種付属。"
+			"• 表情パーツはタンポ印刷を施した３種が付属。前髪はパーツ交換で髪飾りの無い状態を再現可能。",
+			"• 衣装の胸部パーツは限界まで追求したパーツ構成で、そのまま組み立てるだけでカラフルな色分けや精密なディテールを再現。背中の小さな羽もパーツ形状で再現。",
+			"• 胸元のハートはプラスチックシールでクリアな質感を表現。",
+			"• スカートは模様をプリントしたシートで波打った形状を表現。一部のパーツにはラメ入りのスモーククリア素材を採用。",
+			"• 肌パーツは仕上げの際に金型表面に艶消し処理を施し、柔らかく光を反射する演出がされている。",
+			"• 表情付きハンドパーツに加えマイクが保持できるハンドパーツが３種付属。"
 		],
 		"en": [
 			"From THE IDOLM@STER Shiny Colors, Illumination Stars \"Mano Sakuragi\" is three-dimensionalized in 30MS format!",
@@ -38,85 +86,97 @@
 			"• In addition to hand parts with facial expressions, 3 types of hand parts that can hold a microphone are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"フェイスパーツ(タンポ印刷)×３種",
-			"ハンドパーツ×１式",
-			"前髪パーツ(髪飾りなし)×１",
-			"マイク×１",
-			"シール×１"
-		],
-		"en": [
-			"Face parts (tampo printing) x 3 types",
-			"Hand parts x 1 set",
-			"Bangs parts (no hair ornament) x 1",
-			"Microphone x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フェイスパーツ(タンポ印刷)×３種",
+				"en": "Face parts (tampo printing) x 3 types"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "前髪パーツ(髪飾りなし)×１",
+				"en": "Bangs parts (no hair ornament) x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "マイク×１",
+				"en": "Microphone x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5868.jpg",
+				"src": "https://bandai-hobby.net/images/153_5868_s_r2b20lpjgvrh1ppv8carynz7vv0z.jpg",
 				"path": "/images/items/01_4999/153_5868.jpg",
 				"hash": "83b5e64d2f01d07c2c982e5ac2cfdbae"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5868.jpg",
+				"src": "https://bandai-hobby.net/images/155_5868_s_c5pml0tj99btpx8e0ta5erc89w4e.jpg",
 				"path": "/images/items/01_4999/155_5868.jpg",
 				"hash": "45ac4b93f12c039ed558e2efd2e88510"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5868.jpg",
+				"src": "https://bandai-hobby.net/images/156_5868_s_tgpj35a7ccaq2xvubfgckv7e83xk.jpg",
 				"path": "/images/items/01_4999/156_5868.jpg",
 				"hash": "b75183a04ebdda35804a46043ed71f84"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5868.jpg",
+				"src": "https://bandai-hobby.net/images/157_5868_s_p4sr3m1mftg7aa56ta42opiclkdb.jpg",
 				"path": "/images/items/01_4999/157_5868.jpg",
 				"hash": "9d364059df9e96e5fcd8c0b0708749f2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5868.jpg",
+				"src": "https://bandai-hobby.net/images/158_5868_s_6ulq62ng6fidyyog84g5eaumvs7m.jpg",
 				"path": "/images/items/01_4999/158_5868.jpg",
 				"hash": "a7ef3a3a472c4729ef7edea6a31873c4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5868.jpg",
+				"src": "https://bandai-hobby.net/images/159_5868_s_1jrn7ysyq6xxi1xxiyb3ca3afc3u.jpg",
 				"path": "/images/items/01_4999/159_5868.jpg",
 				"hash": "d24bb7d796865288ccb5d1395dadb91e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5868.jpg",
+				"src": "https://bandai-hobby.net/images/189_5868_s_mhqld7deljix1klqjbaxzlpopu69.jpg",
 				"path": "/images/items/01_4999/189_5868.jpg",
 				"hash": "6d649bcd235ce30856d5d521fc04bbdf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5868.jpg",
+				"src": "https://bandai-hobby.net/images/190_5868_s_2g4c3yx9crryt6znr8rkjgjhc555.jpg",
 				"path": "/images/items/01_4999/190_5868.jpg",
 				"hash": "4c2e94fcedddbab6539efb1bddc8d9f3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5868.jpg",
+				"src": "https://bandai-hobby.net/images/191_5868_s_n9qnapm9ofc6myvgmjbekpanc500.jpg",
 				"path": "/images/items/01_4999/191_5868.jpg",
 				"hash": "046b375238186d2ce9261c223bba9ed4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5868.jpg",
+				"src": "https://bandai-hobby.net/images/192_5868_s_vaflhyiz5yxpcw5km2oidw918djl.jpg",
 				"path": "/images/items/01_4999/192_5868.jpg",
 				"hash": "bddbd3723dfcea2533a6480a16737277"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_5868.jpg",
+				"src": "https://bandai-hobby.net/images/193_5868_s_yo8jawtstaq7a72w1l91nwcxisua.jpg",
 				"path": "/images/items/01_4999/193_5868.jpg",
 				"hash": "7fc72dcde611131389c3d7b4bad64bca"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4999/",
-	"brandIds": ["30ms"],
-	"seriesIds": ["idolmaster"],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_6755", "01_6756", "01_5976", "01_5975"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4999/"
 }

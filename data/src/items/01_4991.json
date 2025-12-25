@@ -5,6 +5,54 @@
 		"ja": "ＨＧ 1/144 オルトリンデ",
 		"en": "HG 1/144 Ortlinde"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -62,7 +109,7 @@
 			"- The time-buying process is over. Let's go, Astaroth! ―",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"Managed by the Nadira family from \"Mobile Suit Gundam: Iron-Blooded Orphans Steel\"",
-			"The Valkyria frame aircraft \"Ortlinde \", piloted by the internal control unit commander \" Jigiru Jijin\", appears!",
+			"The Valkyria frame aircraft \"Ortlinde\", piloted by the internal control unit commander \"Jigiru Jijin\", appears!",
 			"The exterior and special weapon \"Valkyria Double Blade\" are reproduced with new modeling!",
 			"● Thoroughly reproduce the exterior of Ortlinde!",
 			"Each exterior attached to the Valkyria frame is three-dimensionalized with new modeling!",
@@ -96,59 +143,63 @@
 			"・Product specifications are as of 20236. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["ヴァルキュリアダブルブレード"],
-		"en": ["valkyria double blade"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヴァルキュリアダブルブレード",
+				"en": "valkyria double blade"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5860.jpg",
+				"src": "https://bandai-hobby.net/images/153_5860_s_s453pundlsz21th8gba6mj33old0.jpg",
 				"path": "/images/items/01_4991/153_5860.jpg",
 				"hash": "4e03fc4cc2bd0cce1fffb9d103c317e5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5860.jpg",
+				"src": "https://bandai-hobby.net/images/155_5860_s_qpubtyef1263nx23mn3wyt6l3biw.jpg",
 				"path": "/images/items/01_4991/155_5860.jpg",
 				"hash": "756929326587c4e712eb2b646ba06408"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5860.jpg",
+				"src": "https://bandai-hobby.net/images/156_5860_s_qa9oy2pvf00rncuadvxwohym049r.jpg",
 				"path": "/images/items/01_4991/156_5860.jpg",
 				"hash": "a49ebc820b1f83dea04ce538d30a717f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5860.jpg",
+				"src": "https://bandai-hobby.net/images/157_5860_s_ma53zozrmrcknatqxrg73wkmlxha.jpg",
 				"path": "/images/items/01_4991/157_5860.jpg",
 				"hash": "f7db565a037c5f0c4a790faf22c46fb9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5860.jpg",
+				"src": "https://bandai-hobby.net/images/158_5860_s_7lsb5j54d2wkfwpa1haddixod9tr.jpg",
 				"path": "/images/items/01_4991/158_5860.jpg",
 				"hash": "07c227aa31f989e1b7767e8e5289de42"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5860.jpg",
+				"src": "https://bandai-hobby.net/images/159_5860_s_d873dteocthbuuyiup9mrp91fyae.jpg",
 				"path": "/images/items/01_4991/159_5860.jpg",
 				"hash": "bbc9b3154ec4f93bd08e058ee1a63c10"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5860.jpg",
+				"src": "https://bandai-hobby.net/images/189_5860_s_psxa8zxbidq5p7r34aazaexgjc42.jpg",
 				"path": "/images/items/01_4991/189_5860.jpg",
 				"hash": "971e6fc555563b01d2e798cfd46035e6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5860.jpg",
+				"src": "https://bandai-hobby.net/images/190_5860_s_4o7oy922xu78ictao5fqucwkgt9s.jpg",
 				"path": "/images/items/01_4991/190_5860.jpg",
 				"hash": "d4ac9444bbfed563d0a31aea3b311894"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5860.jpg",
+				"src": "https://bandai-hobby.net/images/191_5860_s_ppdvlkf4oakl1tl346ewnk38554f.jpg",
 				"path": "/images/items/01_4991/191_5860.jpg",
 				"hash": "b6dd379fc339def837ddc21cace05e47"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5860.jpg",
+				"src": "https://bandai-hobby.net/images/192_5860_s_23hkqq1e3254tf8njkn0ssoc555p.jpg",
 				"path": "/images/items/01_4991/192_5860.jpg",
 				"hash": "3067639456a8a2cba7332688fbd04b34"
 			}
@@ -156,14 +207,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4991/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2496",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2496/"

@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 オプションパーツセット13 (レッグブースター/ワイヤレスウェポンパック)",
-		"en": "30MM 1/144 OPTION PARTS SET 13 (LEG BOOSTER UNIT / WIRELESS WEAPON PACK)"
+		"en": "30MM 1/144 Option Parts Set 13 (Leg Booster/Wireless Weapon Pack)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1078,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 28
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMのオプションパーツセットに遠隔武装・飛行アーマーのセットが登場！",
@@ -37,22 +79,59 @@
 			"• Comes with a Runner set that includes multi-joints essential for customization, such as 3mm joints, C-type joints, and detail cover parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ワイヤレスウェポンパック×1式",
-			"レッグブースター×2",
-			"ヘッドアクセサリー×1式",
-			"ショルダーアーマー×1式",
-			"マルチジョイント×1式"
-		],
-		"en": [
-			"Wireless Weapon Pack x 1 set",
-			"Leg booster x2",
-			"Head Accessory x 1 set",
-			"Shoulder armor x 1 set",
-			"Multi-joint x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ワイヤレスウェポンパック",
+				"en": "Wireless Weapon Pack"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "レッグブースター",
+				"en": "leg booster"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ヘッドアクセサリー",
+				"en": "HeadAccessory"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ショルダーアーマー",
+				"en": "shoulder armor"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "マルチジョイント",
+				"en": "multi joint"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -89,10 +168,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4997/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3766",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3766/"
