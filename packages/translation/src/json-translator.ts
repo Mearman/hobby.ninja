@@ -21,7 +21,7 @@ interface TranslatableObject {
 	[key: string]: TranslatableValue;
 }
 
-type TranslatableArray = Array<TranslatableValue>;
+type TranslatableArray = TranslatableValue[];
 
 /**
  * JSON translation utility for translating objects and arrays
@@ -369,7 +369,7 @@ export class JsonTranslator {
 				);
 
 				// Preserve original indentation
-				const indentation = line.match(/^\s*/)?.[0] || "";
+				const indentation = (/^\s*/.exec(line))?.[0] || "";
 				translatedLines.push(indentation + result.translated);
 			} catch (error) {
 				log.warn(`Failed to translate line: "${trimmedLine}"`, error, "JSON Translation");

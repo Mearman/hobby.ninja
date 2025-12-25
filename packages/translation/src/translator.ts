@@ -1,11 +1,13 @@
 import { TranslationCache, defaultCache } from "./cache";
 import { GOOGLE_TRANSLATE_API_URL, MAX_TEXT_LENGTH, GUNDAM_TEXT_REPLACEMENTS, DEFAULT_TRANSLATION_OPTIONS } from "./constants";
+import { lookupPhrase, addPhrase, isDictionaryLoaded } from "./dictionary";
 import {
 	TranslationServiceError,
 	CircuitBreaker,
 	ErrorHandler,
 	retryWithBackoff,
 } from "./errors";
+import { TranslationStore, type StoreConfiguration } from "./store/translation-store";
 import {
 	TranslationOptions,
 	TranslationResult,
@@ -14,8 +16,6 @@ import {
 	BatchTranslationResult,
 	TranslationErrorCode,
 } from "./types";
-import { TranslationStore, type StoreConfiguration } from "./store/translation-store";
-import { lookupPhrase, addPhrase, isDictionaryLoaded } from "./dictionary";
 
 // Browser globals
 declare const fetch: typeof globalThis.fetch;
@@ -74,7 +74,7 @@ export class TranslationService {
 			// Check dictionary first (O(1) lookup, no I/O)
 			if (isDictionaryLoaded()) {
 				const dictEntry = lookupPhrase(text);
-				if (dictEntry && finalOptions.targetLanguage === 'en') {
+				if (dictEntry && finalOptions.targetLanguage === "en") {
 					return {
 						original: text,
 						translated: dictEntry.en,
@@ -87,12 +87,12 @@ export class TranslationService {
 			}
 
 			// Check persistent store next (if available)
-			if (this.translationStore && this.translationStore.isReady()) {
+			if (this.translationStore?.isReady()) {
 				try {
 					const storeEntry = await this.translationStore.getByText(
 						text,
 						finalOptions.sourceLanguage as SupportedLanguage,
-						finalOptions.targetLanguage as SupportedLanguage
+						finalOptions.targetLanguage as SupportedLanguage,
 					);
 
 					if (storeEntry) {
@@ -107,7 +107,7 @@ export class TranslationService {
 					}
 				} catch (storeError) {
 					// Log store error but continue with translation
-					console.warn('TranslationStore lookup failed, falling back to API:', storeError);
+					console.warn("TranslationStore lookup failed, falling back to API:", storeError);
 				}
 			}
 
@@ -141,7 +141,7 @@ export class TranslationService {
 			};
 
 			// Cache the result in persistent store (if available)
-			if (this.translationStore && this.translationStore.isReady()) {
+			if (this.translationStore?.isReady()) {
 				try {
 					await this.translationStore.set(
 						text,
@@ -149,18 +149,18 @@ export class TranslationService {
 						finalOptions.sourceLanguage as SupportedLanguage,
 						finalOptions.targetLanguage as SupportedLanguage,
 						{
-							apiProvider: 'google-translate',
+							apiProvider: "google-translate",
 							ttl: finalOptions.cacheTtl,
-						}
+						},
 					);
 				} catch (storeError) {
 					// Log store error but don't fail the translation
-					console.warn('Failed to store translation in TranslationStore:', storeError);
+					console.warn("Failed to store translation in TranslationStore:", storeError);
 				}
 			}
 
 			// Add to in-memory dictionary for future lookups
-			if (isDictionaryLoaded() && finalOptions.targetLanguage === 'en') {
+			if (isDictionaryLoaded() && finalOptions.targetLanguage === "en") {
 				addPhrase(text, translation);
 			}
 
@@ -246,7 +246,7 @@ export class TranslationService {
 		return retryWithBackoff(
 			async () => {
 				const controller = new AbortController();
-				const timeoutId = setTimeout(() => controller.abort(), options.timeout);
+				const timeoutId = setTimeout(() => { controller.abort(); }, options.timeout);
 
 				try {
 					const response = await fetch(url, {
@@ -561,7 +561,7 @@ export async function createTranslationServiceWithStore(
 
 	if (storeConfig) {
 		// Import dynamically to avoid circular dependencies
-		const { createTranslationStore } = await import('./store/translation-store-factory');
+		const { createTranslationStore } = await import("./store/translation-store-factory");
 		store = await createTranslationStore(storeConfig);
 	}
 

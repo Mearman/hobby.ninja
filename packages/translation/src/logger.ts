@@ -22,7 +22,7 @@ export interface LoggerConfig {
  * Default logger configuration
  */
 const DEFAULT_CONFIG: LoggerConfig = {
-	enabled: typeof process !== "undefined" && process.env?.["NODE_ENV"] !== "production",
+	enabled: typeof process !== "undefined" && process.env["NODE_ENV"] !== "production",
 	level: "info",
 	timestamp: true,
 	prefix: "[Translation]",
@@ -171,8 +171,8 @@ export const logger = new Logger();
  * Convenience functions for direct logger usage
  */
 export const log = {
-	debug: (message: string, data?: unknown, context?: string) => logger.debug(message, data, context),
-	info: (message: string, data?: unknown, context?: string) => logger.info(message, data, context),
-	warn: (message: string, data?: unknown, context?: string) => logger.warn(message, data, context),
-	error: (message: string, data?: unknown, context?: string) => logger.error(message, data, context),
+	debug: (message: string, data?: unknown, context?: string) => { logger.debug(message, data, context); },
+	info: (message: string, data?: unknown, context?: string) => { logger.info(message, data, context); },
+	warn: (message: string, data?: unknown, context?: string) => { logger.warn(message, data, context); },
+	error: (message: string, data?: unknown, context?: string) => { logger.error(message, data, context); },
 };

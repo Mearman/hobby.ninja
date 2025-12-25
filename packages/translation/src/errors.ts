@@ -199,11 +199,11 @@ export class TranslationServiceError extends Error {
  */
 export async function retryWithBackoff<T>(
 	operation: () => Promise<T>,
-	maxAttempts: number = 3,
-	baseDelay: number = 1000,
-	maxDelay: number = 30_000,
-	backoffFactor: number = 2,
-	jitter: boolean = true,
+	maxAttempts = 3,
+	baseDelay = 1000,
+	maxDelay = 30_000,
+	backoffFactor = 2,
+	jitter = true,
 ): Promise<T> {
 	let lastError: unknown;
 
@@ -275,8 +275,8 @@ export class CircuitBreaker {
 	private state: "CLOSED" | "OPEN" | "HALF_OPEN" = "CLOSED";
 
 	constructor(
-    private failureThreshold: number = 5,
-    private recoveryTimeout: number = 60_000, // 1 minute
+    private failureThreshold = 5,
+    private recoveryTimeout = 60_000, // 1 minute
 	) {}
 
 	/**
@@ -342,7 +342,7 @@ export class CircuitBreaker {
  * Error handler for logging and monitoring
  */
 export class ErrorHandler {
-	private errorCounts: Map<TranslationErrorCode, number> = new Map();
+	private errorCounts = new Map<TranslationErrorCode, number>();
 
 	/**
    * Handle and log errors
@@ -365,7 +365,7 @@ export class ErrorHandler {
 		}, context);
 
 		// Send to monitoring service in production
-		if (process["env"]["NODE_ENV"] === "production") {
+		if (process.env["NODE_ENV"] === "production") {
 			this.sendToMonitoring(translationError);
 		}
 	}

@@ -1,12 +1,13 @@
+/* eslint-disable sonarjs/no-duplicate-string, @typescript-eslint/no-magic-numbers */
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
-
-// Timer globals for test environment
-declare const setTimeout: typeof globalThis.setTimeout;
 
 import { TranslationCache } from "./cache";
 import { GOOGLE_TRANSLATE_API_URL } from "./constants";
 import { TranslationServiceError, TranslationErrorCode } from "./errors";
 import { TranslationService, translateText } from "./translator";
+
+// Timer globals for test environment
+declare const setTimeout: typeof globalThis.setTimeout;
 
 // Mock fetch
 globalThis.fetch = vi.fn();
@@ -123,7 +124,7 @@ describe("TranslationService", () => {
 		it("should handle timeout", async () => {
 			(globalThis.fetch as any).mockImplementation(() => {
 				return new Promise((_, reject) => {
-					setTimeout(() => reject(new DOMException("AbortError", "AbortError")), 100);
+					setTimeout(() => { reject(new DOMException("AbortError", "AbortError")); }, 100);
 				});
 			});
 

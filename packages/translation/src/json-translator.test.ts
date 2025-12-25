@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string, @typescript-eslint/no-magic-numbers */
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
 import { JsonTranslator, translateJson } from "./json-translator";
@@ -19,7 +20,7 @@ describe("JsonTranslator", () => {
 	beforeEach(() => {
 		vi.clearAllMocks();
 		jsonTranslator = new JsonTranslator();
-		mockTranslateText = (vi.mocked(TranslationService).mock.results[0].value as any).translateText;
+		mockTranslateText = (vi.mocked(TranslationService).mock.results[0].value).translateText;
 	});
 
 	describe("translateJson", () => {
@@ -356,7 +357,7 @@ describe("convenience functions", () => {
 	});
 
 	it("translateJson should work with default translator", async () => {
-		const mockTranslateText = (vi.mocked(TranslationService).mock.results[0].value as any).translateText;
+		const mockTranslateText = (vi.mocked(TranslationService).mock.results[0].value).translateText;
 		mockTranslateText.mockResolvedValue({
 			original: "こんにちは",
 			translated: "Hello",

@@ -6,10 +6,11 @@
  * the dictionary with new translations.
  */
 
-import { promises as fs } from 'node:fs';
-import { join } from 'node:path';
-import { TRANSLATION_CACHE_DIR, TRANSLATION_DICTIONARY_PATH } from './constants';
-import type { TranslationDictionary, PhraseMapping, WordMapping, DiscoveredPattern } from './dictionary';
+import { promises as fs } from "node:fs";
+import path from "node:path";
+
+import { TRANSLATION_CACHE_DIR, TRANSLATION_DICTIONARY_PATH } from "./constants";
+import type { TranslationDictionary, PhraseMapping, WordMapping, DiscoveredPattern } from "./dictionary";
 
 // ============================================================================
 // Types
@@ -29,6 +30,18 @@ interface TranslationCacheEntry {
 	compressed: boolean;
 	size: number;
 	apiProvider: string;
+}
+
+function isTranslationCacheEntry(value: unknown): value is TranslationCacheEntry {
+	if (typeof value !== "object" || value === null) return false;
+	const obj = value as Record<string, unknown>;
+	return (
+		typeof obj["key"] === "string" &&
+		typeof obj["originalText"] === "string" &&
+		typeof obj["translatedText"] === "string" &&
+		typeof obj["sourceLanguage"] === "string" &&
+		typeof obj["targetLanguage"] === "string"
+	);
 }
 
 export interface DictionaryBuildResult {
@@ -53,8 +66,8 @@ export interface DictionaryBuildOptions {
 
 function normalizeFullWidth(text: string): string {
 	return text
-		.replace(/[\uFF21-\uFF3A]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0))
-		.replace(/[\uFF10-\uFF19]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0));
+		.replaceAll(/[\uFF21-\uFF3A]/g, (c) => String.fromCodePoint((c.codePointAt(0) ?? 0) - 0xfe_e0))
+		.replaceAll(/[\uFF10-\uFF19]/g, (c) => String.fromCodePoint((c.codePointAt(0) ?? 0) - 0xfe_e0));
 }
 
 function normalizeText(text: string): string {
@@ -70,11 +83,13 @@ async function loadTranslationCache(cacheDir: string): Promise<TranslationCacheE
 	const entries: TranslationCacheEntry[] = [];
 
 	for (const file of files) {
-		if (!file.endsWith('.json') || file === 'metadata.json') continue;
+		if (!file.endsWith(".json") || file === "metadata.json") continue;
 		try {
-			const content = await fs.readFile(join(cacheDir, file), 'utf-8');
-			const entry: TranslationCacheEntry = JSON.parse(content);
-			entries.push(entry);
+			const content = await fs.readFile(path.join(cacheDir, file), "utf8");
+			const parsed: unknown = JSON.parse(content);
+			if (isTranslationCacheEntry(parsed)) {
+				entries.push(parsed);
+			}
 		} catch {
 			// Skip invalid files
 		}
@@ -99,7 +114,7 @@ function buildPhraseDictionary(entries: TranslationCacheEntry[]): PhraseMapping[
 		}
 	}
 
-	return Array.from(seen.values());
+	return [...seen.values()];
 }
 
 // ============================================================================
@@ -111,17 +126,17 @@ function tokenizeJapanese(text: string): string[] {
 	const normalized = normalizeText(text);
 
 	// Katakana words
-	const katakana = normalized.match(/[ァ-ヶー]{2,}/g) || [];
+	const katakana = normalized.match(/[ァ-ヶー]{2,}/g) ?? [];
 	tokens.push(...katakana);
 
 	// Kanji compounds
-	const kanji = normalized.match(/[一-龯]{2,}/g) || [];
+	const kanji = normalized.match(/[一-龯]{2,}/g) ?? [];
 	tokens.push(...kanji);
 
 	// Single meaningful kanji
-	const singleKanji = normalized.match(/[一-龯]/g) || [];
+	const singleKanji = normalized.match(/[一-龯]/g) ?? [];
 	for (const k of singleKanji) {
-		if (['型', '機', '専', '用', '改', '量', '産'].includes(k)) {
+		if (["型", "機", "専", "用", "改", "量", "産"].includes(k)) {
 			tokens.push(k);
 		}
 	}
@@ -161,7 +176,7 @@ function extractWordMappings(entries: TranslationCacheEntry[]): WordMapping[] {
 			const stats = wordStats.get(ja)!;
 
 			for (const en of enTokens) {
-				stats.translations.set(en, (stats.translations.get(en) || 0) + 1);
+				stats.translations.set(en, (stats.translations.get(en) ?? 0) + 1);
 			}
 
 			if (stats.contexts.length < 3) {
@@ -173,7 +188,7 @@ function extractWordMappings(entries: TranslationCacheEntry[]): WordMapping[] {
 	const words: WordMapping[] = [];
 
 	for (const [ja, stats] of wordStats) {
-		let bestEn = '';
+		let bestEn = "";
 		let bestCount = 0;
 		let totalFreq = 0;
 
@@ -187,7 +202,7 @@ function extractWordMappings(entries: TranslationCacheEntry[]): WordMapping[] {
 
 		const isNumeric = /^\d+$/.test(bestEn);
 		const lowerEn = bestEn.toLowerCase();
-		const isStopWord = ['for', 'the', 'and', 'with', 'ver', 'type', 'of', 'in'].includes(lowerEn);
+		const isStopWord = ["for", "the", "and", "with", "ver", "type", "of", "in"].includes(lowerEn);
 
 		if (totalFreq >= 2 && bestEn.length >= 2 && !isNumeric && !isStopWord) {
 			words.push({
@@ -199,7 +214,7 @@ function extractWordMappings(entries: TranslationCacheEntry[]): WordMapping[] {
 		}
 	}
 
-	return words.sort((a, b) => b.frequency - a.frequency);
+	return words.toSorted((a, b) => b.frequency - a.frequency);
 }
 
 // ============================================================================
@@ -215,9 +230,9 @@ function discoverPatterns(entries: TranslationCacheEntry[]): DiscoveredPattern[]
 
 	for (const entry of entries) {
 		const normalized = normalizeText(entry.originalText);
-		const match = normalized.match(gradeRegex);
+		const match = gradeRegex.exec(normalized);
 		if (match) {
-			const grade = match[1]?.toUpperCase() || '';
+			const grade = match[1]?.toUpperCase() ?? "";
 			if (grade) {
 				if (!gradeCounter.has(grade)) {
 					gradeCounter.set(grade, { count: 0, examples: [] });
@@ -235,7 +250,7 @@ function discoverPatterns(entries: TranslationCacheEntry[]): DiscoveredPattern[]
 		if (count >= 3) {
 			patterns.push({
 				name: `grade_${grade}`,
-				pattern: `^${grade}\\s`,
+				pattern: String.raw`^${grade}\s`,
 				examples,
 				frequency: count,
 			});
@@ -245,16 +260,16 @@ function discoverPatterns(entries: TranslationCacheEntry[]): DiscoveredPattern[]
 	// Scale patterns
 	const scaleCounter = new Map<string, number>();
 	for (const entry of entries) {
-		const scaleMatch = entry.originalText.match(/1\/(\d+)/);
+		const scaleMatch = /1\/(\d+)/.exec(entry.originalText);
 		if (scaleMatch) {
 			const scale = `1/${scaleMatch[1]}`;
-			scaleCounter.set(scale, (scaleCounter.get(scale) || 0) + 1);
+			scaleCounter.set(scale, (scaleCounter.get(scale) ?? 0) + 1);
 		}
 	}
 
 	for (const [scale, count] of scaleCounter) {
 		patterns.push({
-			name: `scale_${scale.replace('/', '_')}`,
+			name: `scale_${scale.replace("/", "_")}`,
 			pattern: scale,
 			examples: [],
 			frequency: count,
@@ -279,14 +294,14 @@ function discoverPatterns(entries: TranslationCacheEntry[]): DiscoveredPattern[]
 
 	for (const [ja, { en, count }] of seriesKeywords) {
 		patterns.push({
-			name: 'series_keyword',
+			name: "series_keyword",
 			pattern: ja,
 			examples: [{ ja, en }],
 			frequency: count,
 		});
 	}
 
-	return patterns.sort((a, b) => b.frequency - a.frequency);
+	return patterns.toSorted((a, b) => b.frequency - a.frequency);
 }
 
 // ============================================================================
@@ -294,16 +309,16 @@ function discoverPatterns(entries: TranslationCacheEntry[]): DiscoveredPattern[]
 // ============================================================================
 
 function categorizePhrases(phrases: PhraseMapping[], patterns: DiscoveredPattern[]): void {
-	const gradePatterns = patterns.filter((p) => p.name.startsWith('grade_'));
-	const seriesPatterns = patterns.filter((p) => p.name === 'series_keyword');
+	const gradePatterns = patterns.filter((p) => p.name.startsWith("grade_"));
+	const seriesPatterns = patterns.filter((p) => p.name === "series_keyword");
 
 	for (const phrase of phrases) {
 		const normalized = normalizeText(phrase.ja);
 
 		for (const gp of gradePatterns) {
-			const gradeCode = gp.name.replace('grade_', '');
+			const gradeCode = gp.name.replace("grade_", "");
 			if (normalized.startsWith(gradeCode)) {
-				phrase.category = 'kit_name';
+				phrase.category = "kit_name";
 				break;
 			}
 		}
@@ -311,22 +326,20 @@ function categorizePhrases(phrases: PhraseMapping[], patterns: DiscoveredPattern
 		if (!phrase.category) {
 			for (const sp of seriesPatterns) {
 				if (phrase.ja.includes(sp.pattern)) {
-					phrase.category = 'series_name';
+					phrase.category = "series_name";
 					break;
 				}
 			}
 		}
 
-		if (!phrase.category) {
-			if (
-				phrase.ja.includes('オプション') ||
-				phrase.ja.includes('ウェポン') ||
-				phrase.ja.includes('パーツセット') ||
-				phrase.ja.includes('アクションベース') ||
-				phrase.ja.includes('ディスプレイ')
-			) {
-				phrase.category = 'accessory';
-			}
+		if (!phrase.category && (
+			phrase.ja.includes("オプション") ||
+				phrase.ja.includes("ウェポン") ||
+				phrase.ja.includes("パーツセット") ||
+				phrase.ja.includes("アクションベース") ||
+				phrase.ja.includes("ディスプレイ")
+		)) {
+			phrase.category = "accessory";
 		}
 	}
 }
@@ -350,11 +363,11 @@ export async function buildDictionary(options: DictionaryBuildOptions = {}): Pro
 
 	try {
 		// Resolve paths relative to cwd if not absolute
-		const resolvedCacheDir = cacheDir.startsWith('/') ? cacheDir : join(process.cwd(), cacheDir);
-		const resolvedOutputPath = outputPath.startsWith('/') ? outputPath : join(process.cwd(), outputPath);
+		const resolvedCacheDir = cacheDir.startsWith("/") ? cacheDir : path.join(process.cwd(), cacheDir);
+		const resolvedOutputPath = outputPath.startsWith("/") ? outputPath : path.join(process.cwd(), outputPath);
 
 		if (verbose) {
-			console.log('[DictionaryBuilder] Loading translation cache...');
+			console.log("[DictionaryBuilder] Loading translation cache...");
 		}
 
 		// Check if cache directory exists
@@ -373,7 +386,7 @@ export async function buildDictionary(options: DictionaryBuildOptions = {}): Pro
 		if (entries.length === 0) {
 			return {
 				success: false,
-				error: 'No translation cache entries found',
+				error: "No translation cache entries found",
 			};
 		}
 
@@ -391,7 +404,7 @@ export async function buildDictionary(options: DictionaryBuildOptions = {}): Pro
 
 		// Create dictionary
 		const dictionary: TranslationDictionary = {
-			version: '1.0.0',
+			version: "1.0.0",
 			stats: {
 				totalFiles: entries.length,
 				uniquePhrases: phrases.length,
@@ -405,7 +418,7 @@ export async function buildDictionary(options: DictionaryBuildOptions = {}): Pro
 		};
 
 		// Write output
-		await fs.writeFile(resolvedOutputPath, JSON.stringify(dictionary, null, 2), 'utf-8');
+		await fs.writeFile(resolvedOutputPath, JSON.stringify(dictionary, null, 2), "utf8");
 
 		if (verbose) {
 			console.log(`[DictionaryBuilder] Dictionary written to: ${resolvedOutputPath}`);
@@ -431,7 +444,7 @@ export async function buildDictionary(options: DictionaryBuildOptions = {}): Pro
  * Convenience function for use after translation runs
  */
 export async function rebuildAndReloadDictionary(options: DictionaryBuildOptions = {}): Promise<DictionaryBuildResult> {
-	const { clearDictionaryCache, loadDictionary } = await import('./dictionary');
+	const { clearDictionaryCache, loadDictionary } = await import("./dictionary");
 
 	// Build the dictionary
 	const result = await buildDictionary(options);
@@ -444,7 +457,7 @@ export async function rebuildAndReloadDictionary(options: DictionaryBuildOptions
 		try {
 			await loadDictionary(options.outputPath);
 			if (options.verbose) {
-				console.log('[DictionaryBuilder] Dictionary reloaded into memory');
+				console.log("[DictionaryBuilder] Dictionary reloaded into memory");
 			}
 		} catch {
 			// Not critical if reload fails - will load on next use

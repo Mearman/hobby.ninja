@@ -1,19 +1,10 @@
+/* eslint-disable @typescript-eslint/restrict-template-expressions, sonarjs/no-duplicate-string */
 /**
  * Example usage of the translation package for Gunpla data
  */
 
 // Node.js globals for when this file is executed directly
-declare const require: {
-	main: {
-		module: unknown;
-	} | undefined;
-};
-declare const module: {
-	exports: unknown;
-} | undefined;
-
 import { logger } from "./logger";
-
 import {
 	translateText,
 	translateJson,
@@ -22,6 +13,15 @@ import {
 	createCache,
 	TranslationServiceError,
 } from "./mod";
+
+declare const require: {
+	main: {
+		module: unknown;
+	} | undefined;
+};
+declare const module: {
+	exports: unknown;
+} | undefined;
 
 // Configure logger for examples - always enabled for demo purposes
 logger.updateConfig({

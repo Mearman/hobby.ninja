@@ -2,21 +2,21 @@
  * Factory functions and utilities for TranslationStore setup and management
  */
 
-import { TranslationStore, type StoreConfiguration, TranslationStoreError } from './translation-store';
+import { TranslationStore, type StoreConfiguration, TranslationStoreError } from "./translation-store";
 
 /**
  * Default configuration for TranslationStore
  */
 export const DEFAULT_STORE_CONFIG: StoreConfiguration = {
 	// Storage settings
-	storagePath: './translations',
-	maxEntries: 10000,
+	storagePath: "./translations",
+	maxEntries: 10_000,
 	maxSizeBytes: 100 * 1024 * 1024, // 100MB
 	compressionThreshold: 1024, // 1KB
 
 	// Performance settings
 	memoryCacheSize: 1000,
-	syncInterval: 60000, // 1 minute
+	syncInterval: 60_000, // 1 minute
 	lockTimeout: 5000, // 5 seconds
 
 	// Behavior settings
@@ -68,9 +68,9 @@ export async function createTranslationStore(
 		}
 
 		throw new TranslationStoreError(
-			'FACTORY_INIT_FAILED',
-			'Failed to create and initialize TranslationStore',
-			error
+			"FACTORY_INIT_FAILED",
+			"Failed to create and initialize TranslationStore",
+			error,
 		);
 	}
 }
@@ -94,7 +94,7 @@ export async function createServerTranslationStore(
 	return createTranslationStore({
 		...config,
 		storagePath,
-		maxEntries: 50000, // Larger for server use
+		maxEntries: 50_000, // Larger for server use
 		maxSizeBytes: 1024 * 1024 * 1024, // 1GB
 		memoryCacheSize: 5000, // Larger memory cache
 		defaultTTL: 30 * 24 * 60 * 60 * 1000, // 30 days
@@ -116,7 +116,7 @@ export async function createServerTranslationStore(
  * ```
  */
 export async function createBrowserTranslationStore(
-	storagePath = './translations',
+	storagePath = "./translations",
 	config?: Partial<StoreConfiguration>,
 ): Promise<TranslationStore> {
 	return createTranslationStore({
@@ -147,7 +147,7 @@ export async function createTestTranslationStore(
 	storagePath?: string,
 ): Promise<TranslationStore> {
 	return createTranslationStore({
-		storagePath: storagePath || './test-translations',
+		storagePath: storagePath || "./test-translations",
 		maxEntries: 100,
 		maxSizeBytes: 1024 * 1024, // 1MB
 		memoryCacheSize: 10,
@@ -168,62 +168,60 @@ export async function createTestTranslationStore(
 export function validateStoreConfig(config: Partial<StoreConfiguration>): boolean {
 	try {
 		// Check storage path
-		if (config.storagePath !== undefined) {
-			if (!config.storagePath || typeof config.storagePath !== 'string' || config.storagePath.trim().length === 0) {
-				throw new TranslationStoreError(
-					'INVALID_CONFIG',
-					'storagePath must be a non-empty string'
-				);
-			}
+		if (config.storagePath !== undefined && (!config.storagePath || typeof config.storagePath !== "string" || config.storagePath.trim().length === 0)) {
+			throw new TranslationStoreError(
+				"INVALID_CONFIG",
+				"storagePath must be a non-empty string",
+			);
 		}
 
 		// Check numeric values
 		if (config.maxEntries !== undefined && config.maxEntries <= 0) {
 			throw new TranslationStoreError(
-				'INVALID_CONFIG',
-				'maxEntries must be positive'
+				"INVALID_CONFIG",
+				"maxEntries must be positive",
 			);
 		}
 
 		if (config.maxSizeBytes !== undefined && config.maxSizeBytes <= 0) {
 			throw new TranslationStoreError(
-				'INVALID_CONFIG',
-				'maxSizeBytes must be positive'
+				"INVALID_CONFIG",
+				"maxSizeBytes must be positive",
 			);
 		}
 
 		if (config.memoryCacheSize !== undefined && config.memoryCacheSize < 0) {
 			throw new TranslationStoreError(
-				'INVALID_CONFIG',
-				'memoryCacheSize cannot be negative'
+				"INVALID_CONFIG",
+				"memoryCacheSize cannot be negative",
 			);
 		}
 
 		if (config.defaultTTL !== undefined && config.defaultTTL < 0) {
 			throw new TranslationStoreError(
-				'INVALID_CONFIG',
-				'defaultTTL cannot be negative'
+				"INVALID_CONFIG",
+				"defaultTTL cannot be negative",
 			);
 		}
 
 		if (config.syncInterval !== undefined && config.syncInterval <= 0) {
 			throw new TranslationStoreError(
-				'INVALID_CONFIG',
-				'syncInterval must be positive'
+				"INVALID_CONFIG",
+				"syncInterval must be positive",
 			);
 		}
 
 		if (config.lockTimeout !== undefined && config.lockTimeout <= 0) {
 			throw new TranslationStoreError(
-				'INVALID_CONFIG',
-				'lockTimeout must be positive'
+				"INVALID_CONFIG",
+				"lockTimeout must be positive",
 			);
 		}
 
 		if (config.compressionThreshold !== undefined && config.compressionThreshold < 0) {
 			throw new TranslationStoreError(
-				'INVALID_CONFIG',
-				'compressionThreshold cannot be negative'
+				"INVALID_CONFIG",
+				"compressionThreshold cannot be negative",
 			);
 		}
 
@@ -234,9 +232,9 @@ export function validateStoreConfig(config: Partial<StoreConfiguration>): boolea
 		}
 
 		throw new TranslationStoreError(
-			'VALIDATION_FAILED',
-			'Configuration validation failed',
-			error
+			"VALIDATION_FAILED",
+			"Configuration validation failed",
+			error,
 		);
 	}
 }

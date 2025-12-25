@@ -9,15 +9,16 @@
  * - File integrity verification
  */
 
-import * as crypto from 'node:crypto';
-import * as fs from 'node:fs/promises';
-import * as path from 'node:path';
-import * as lockfile from 'proper-lockfile';
+import { createHash } from "node:crypto";
+import { access, mkdir, readFile, rename, unlink, writeFile } from "node:fs/promises";
+import path from "node:path";
+
+import { lock as lockfileLock } from "proper-lockfile";
 
 /**
  * Compression format options for stored data.
  */
-type CompressionFormat = 'none' | 'gzip' | 'brotli';
+type CompressionFormat = "none" | "gzip" | "brotli";
 
 /**
  * Configuration for JSON storage operations.
@@ -126,7 +127,7 @@ export class JSONStorageError extends Error {
 
 	constructor(code: string, message: string, filePath?: string, originalError?: unknown) {
 		super(message);
-		this.name = 'JSONStorageError';
+		this.name = "JSONStorageError";
 		this.code = code;
 		this.filePath = filePath;
 		this.originalError = originalError;
@@ -174,10 +175,10 @@ export class JSONStorage {
 			lockTimeout: 5000, // 5 seconds
 			lockRetryInterval: 100, // 100ms
 			maxLockRetries: 50,
-			tempFilePrefix: '.tmp-',
+			tempFilePrefix: ".tmp-",
 			verifyIntegrity: true,
 			cleanupStaleLocks: true,
-			...config
+			...config,
 		};
 
 		this.statistics = this.createStatistics();
@@ -211,30 +212,30 @@ export class JSONStorage {
 
 			// Serialize data to plain JSON (human-readable with indentation)
 			const jsonString = JSON.stringify(data, null, 2);
-			const originalBuffer = Buffer.from(jsonString, 'utf8');
+			const originalBuffer = Buffer.from(jsonString, "utf8");
 
 			// Generate temporary file path in same directory for atomic rename
 			const dirPath = path.dirname(filePath);
 			const fileExt = path.extname(filePath);
 			const fileName = path.basename(filePath, fileExt);
-			const tempSuffix = `${this.config.tempFilePrefix}${fileName}-${Date.now()}-${Math.random().toString(36).substring(2)}${fileExt}`;
+			const tempSuffix = `${this.config.tempFilePrefix}${fileName}-${Date.now()}-${Math.random().toString(36).slice(2)}${fileExt}`;
 			tempFilePath = path.join(dirPath, tempSuffix);
 
 			// Write plain JSON to temporary file
-			await fs.writeFile(tempFilePath, jsonString, 'utf8');
+			await writeFile(tempFilePath, jsonString, "utf8");
 
 			// Atomic rename to target file
-			await fs.rename(tempFilePath, filePath);
+			await rename(tempFilePath, filePath);
 
 			const result: FileOperationResult = {
 				filePath,
 				compressed: false,
-				compressionFormat: 'none',
+				compressionFormat: "none",
 				fileSize: originalBuffer.length,
 				originalSize: originalBuffer.length,
-				compressionRatio: 1.0,
+				compressionRatio: 1,
 				timestamp: Date.now(),
-				checksum: this.calculateChecksum(originalBuffer)
+				checksum: this.calculateChecksum(originalBuffer),
 			};
 
 			// Update statistics
@@ -246,18 +247,18 @@ export class JSONStorage {
 			// Cleanup temporary file on failure
 			if (tempFilePath) {
 				try {
-					await fs.unlink(tempFilePath);
+					await unlink(tempFilePath);
 				} catch (cleanupError) {
 					// Log cleanup error but don't override original error
-					console.error('Failed to cleanup temporary file:', tempFilePath, cleanupError);
+					console.error("Failed to cleanup temporary file:", tempFilePath, cleanupError);
 				}
 			}
 
 			throw new JSONStorageError(
-				'WRITE_FAILED',
+				"WRITE_FAILED",
 				`Failed to write JSON file: ${filePath}`,
 				filePath,
-				error
+				error,
 			);
 		} finally {
 			// Release file lock
@@ -265,7 +266,7 @@ export class JSONStorage {
 				try {
 					await lockRelease();
 				} catch (lockError) {
-					console.error('Failed to release file lock:', filePath, lockError);
+					console.error("Failed to release file lock:", filePath, lockError);
 				}
 			}
 
@@ -298,9 +299,9 @@ export class JSONStorage {
 			const exists = await this.fileExists(filePath);
 			if (!exists) {
 				throw new JSONStorageError(
-					'FILE_NOT_FOUND',
+					"FILE_NOT_FOUND",
 					`File not found: ${filePath}`,
-					filePath
+					filePath,
 				);
 			}
 
@@ -308,7 +309,7 @@ export class JSONStorage {
 			lockRelease = await this.acquireLock(filePath);
 
 			// Read plain JSON file
-			const jsonString = await fs.readFile(filePath, 'utf8');
+			const jsonString = await readFile(filePath, "utf8");
 
 			// Parse JSON data
 			const data = JSON.parse(jsonString);
@@ -326,10 +327,10 @@ export class JSONStorage {
 			}
 
 			throw new JSONStorageError(
-				'READ_FAILED',
+				"READ_FAILED",
 				`Failed to read JSON file: ${filePath}`,
 				filePath,
-				error
+				error,
 			);
 		} finally {
 			// Release file lock
@@ -337,7 +338,7 @@ export class JSONStorage {
 				try {
 					await lockRelease();
 				} catch (lockError) {
-					console.error('Failed to release file lock:', filePath, lockError);
+					console.error("Failed to release file lock:", filePath, lockError);
 				}
 			}
 		}
@@ -351,13 +352,13 @@ export class JSONStorage {
 	 */
 	async ensureDirectory(dirPath: string): Promise<void> {
 		try {
-			await fs.mkdir(dirPath, { recursive: true });
+			await mkdir(dirPath, { recursive: true });
 		} catch (error) {
 			throw new JSONStorageError(
-				'DIR_CREATE_FAILED',
+				"DIR_CREATE_FAILED",
 				`Failed to create directory: ${dirPath}`,
 				dirPath,
-				error
+				error,
 			);
 		}
 	}
@@ -382,17 +383,17 @@ export class JSONStorage {
 			lockRelease = await this.acquireLock(filePath);
 
 			// Delete file
-			await fs.unlink(filePath);
+			await unlink(filePath);
 
 			// Update statistics
 			this.statistics.totalOperations++;
 
 		} catch (error) {
 			throw new JSONStorageError(
-				'DELETE_FAILED',
+				"DELETE_FAILED",
 				`Failed to delete file: ${filePath}`,
 				filePath,
-				error
+				error,
 			);
 		} finally {
 			// Release file lock
@@ -400,7 +401,7 @@ export class JSONStorage {
 				try {
 					await lockRelease();
 				} catch (lockError) {
-					console.error('Failed to release file lock:', filePath, lockError);
+					console.error("Failed to release file lock:", filePath, lockError);
 				}
 			}
 		}
@@ -414,7 +415,7 @@ export class JSONStorage {
 	 */
 	async fileExists(filePath: string): Promise<boolean> {
 		try {
-			await fs.access(filePath);
+			await access(filePath);
 			return true;
 		} catch {
 			return false;
@@ -450,10 +451,10 @@ export class JSONStorage {
 
 		for (let attempt = 0; attempt < maxAttempts; attempt++) {
 			try {
-				const release = await lockfile.lock(filePath, {
+				const release = await lockfileLock(filePath, {
 					realpath: false,
 					stale: this.config.cleanupStaleLocks ? this.config.lockTimeout : undefined,
-					update: this.config.lockTimeout / 2
+					update: this.config.lockTimeout / 2,
 				});
 
 				this.statistics.lockAcquisitions++;
@@ -463,10 +464,10 @@ export class JSONStorage {
 				if (attempt === maxAttempts - 1) {
 					this.statistics.lockTimeouts++;
 					throw new JSONStorageError(
-						'LOCK_TIMEOUT',
+						"LOCK_TIMEOUT",
 						`Failed to acquire lock after ${maxAttempts} attempts: ${filePath}`,
 						filePath,
-						error
+						error,
 					);
 				}
 
@@ -477,9 +478,9 @@ export class JSONStorage {
 
 		// Should never reach here
 		throw new JSONStorageError(
-			'LOCK_FAILED',
+			"LOCK_FAILED",
 			`Unexpected lock acquisition failure: ${filePath}`,
-			filePath
+			filePath,
 		);
 	}
 
@@ -491,7 +492,7 @@ export class JSONStorage {
 	 * @private
 	 */
 	private calculateChecksum(data: Buffer): string {
-		return crypto.createHash('sha256').update(data).digest('hex');
+		return createHash("sha256").update(data).digest("hex");
 	}
 
 	/**
@@ -531,11 +532,11 @@ export class JSONStorage {
 			lockTimeouts: 0,
 			compressionOperations: 0,
 			decompressionOperations: 0,
-			averageCompressionRatio: 0.0,
+			averageCompressionRatio: 0,
 			totalBytesWritten: 0,
 			totalBytesRead: 0,
 			integrityVerifications: 0,
-			integrityFailures: 0
+			integrityFailures: 0,
 		};
 	}
 }

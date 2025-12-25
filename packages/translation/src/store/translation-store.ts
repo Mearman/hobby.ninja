@@ -5,13 +5,16 @@
  * with content-addressable file organization and comprehensive error handling.
  */
 
-import * as crypto from 'node:crypto';
-import * as fs from 'node:fs/promises';
-import * as path from 'node:path';
-import { z } from 'zod';
-import { JSONStorage, type JSONStorageConfig, type FileOperationResult } from './json-storage';
-import { generateKey, validateKey, extractKeyComponents } from './hashing';
-import { SupportedLanguage } from '../types';
+import * as crypto from "node:crypto";
+import * as fs from "node:fs/promises";
+import * as path from "node:path";
+
+import { z } from "zod";
+
+import { SupportedLanguage } from "../types";
+
+import { generateKey, validateKey, extractKeyComponents } from "./hashing";
+import { JSONStorage, type JSONStorageConfig, type FileOperationResult } from "./json-storage";
 
 /**
  * Represents a single translation with full metadata and lifecycle information.
@@ -97,14 +100,14 @@ export interface StoreStatistics {
  * Health monitoring and error tracking for the store.
  */
 export interface StoreHealth {
-	status: 'healthy' | 'degraded' | 'corrupted' | 'readonly';
+	status: "healthy" | "degraded" | "corrupted" | "readonly";
 	errors: StoreError[];
 	warnings: StoreWarning[];
 
 	// Health indicators
 	diskSpaceAvailable: number;    // Available disk space in bytes
 	fragmentationLevel: number;     // Database fragmentation level
-	lockStatus: 'unlocked' | 'locked' | 'stuck';
+	lockStatus: "unlocked" | "locked" | "stuck";
 
 	lastHealthCheck: number;       // Last health check timestamp
 }
@@ -116,7 +119,7 @@ export interface StoreError {
 	code: string;
 	message: string;
 	timestamp: number;
-	severity: 'low' | 'medium' | 'high' | 'critical';
+	severity: "low" | "medium" | "high" | "critical";
 	resolved: boolean;
 }
 
@@ -218,7 +221,7 @@ export class TranslationStoreError extends Error {
 
 	constructor(code: string, message: string, originalError?: unknown) {
 		super(message);
-		this.name = 'TranslationStoreError';
+		this.name = "TranslationStoreError";
 		this.code = code;
 		this.originalError = originalError;
 	}
@@ -244,9 +247,9 @@ export class TranslationStore {
 	private readonly storage: JSONStorage;
 
 	// File system constants
-	private readonly METADATA_FILENAME = 'metadata.json';
-	private readonly STORE_VERSION = '1.0.0';
-	private readonly HASH_ALGORITHM = 'sha256';
+	private readonly METADATA_FILENAME = "metadata.json";
+	private readonly STORE_VERSION = "1.0.0";
+	private readonly HASH_ALGORITHM = "sha256";
 
 	/**
 	 * Create a new TranslationStore instance.
@@ -264,7 +267,7 @@ export class TranslationStore {
 			lockTimeout: config.lockTimeout,
 			lockRetryInterval: 100, // 100ms
 			maxLockRetries: 50,
-			tempFilePrefix: '.tmp-',
+			tempFilePrefix: ".tmp-",
 			verifyIntegrity: true,
 			cleanupStaleLocks: true,
 		};
@@ -300,9 +303,9 @@ export class TranslationStore {
 			this.updateLastActivity();
 		} catch (error) {
 			const storeError = new TranslationStoreError(
-				'INIT_FAILED',
-				'Failed to initialize TranslationStore',
-				error
+				"INIT_FAILED",
+				"Failed to initialize TranslationStore",
+				error,
 			);
 			this.addError(storeError);
 			throw storeError;
@@ -316,7 +319,7 @@ export class TranslationStore {
 	 * @returns Hexadecimal hash string
 	 */
 	private generateHash(content: string): string {
-		return crypto.createHash(this.HASH_ALGORITHM).update(content, 'utf8').digest('hex');
+		return crypto.createHash(this.HASH_ALGORITHM).update(content, "utf8").digest("hex");
 	}
 
 	/**
@@ -334,7 +337,7 @@ export class TranslationStore {
 			this.config.storagePath,
 			components.sourceLang,
 			components.targetLang,
-			`${components.hash}.json`
+			`${components.hash}.json`,
 		);
 	}
 
@@ -348,9 +351,9 @@ export class TranslationStore {
 			await fs.mkdir(this.config.storagePath, { recursive: true });
 		} catch (error) {
 			throw new TranslationStoreError(
-				'DIR_CREATE_FAILED',
+				"DIR_CREATE_FAILED",
 				`Failed to create storage directory: ${this.config.storagePath}`,
-				error
+				error,
 			);
 		}
 	}
@@ -364,7 +367,7 @@ export class TranslationStore {
 		const metadataPath = path.join(this.config.storagePath, this.METADATA_FILENAME);
 
 		try {
-			const metadataData = await fs.readFile(metadataPath, 'utf8');
+			const metadataData = await fs.readFile(metadataPath, "utf8");
 			const loadedMetadata = JSON.parse(metadataData) as StorageMetadata;
 
 			// Validate loaded metadata
@@ -376,14 +379,14 @@ export class TranslationStore {
 				this.metadata.previousVersion = loadedMetadata.version;
 			}
 		} catch (error) {
-			if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
+			if ((error as NodeJS.ErrnoException).code === "ENOENT") {
 				// File doesn't exist, create new metadata
 				await this.saveMetadata();
 			} else {
 				throw new TranslationStoreError(
-					'METADATA_LOAD_FAILED',
-					'Failed to load store metadata',
-					error
+					"METADATA_LOAD_FAILED",
+					"Failed to load store metadata",
+					error,
 				);
 			}
 		}
@@ -402,12 +405,12 @@ export class TranslationStore {
 			this.metadata.checksum = this.generateMetadataChecksum();
 
 			const metadataData = JSON.stringify(this.metadata, null, 2);
-			await fs.writeFile(metadataPath, metadataData, 'utf8');
+			await fs.writeFile(metadataPath, metadataData, "utf8");
 		} catch (error) {
 			throw new TranslationStoreError(
-				'METADATA_SAVE_FAILED',
-				'Failed to save store metadata',
-				error
+				"METADATA_SAVE_FAILED",
+				"Failed to save store metadata",
+				error,
 			);
 		}
 	}
@@ -432,36 +435,36 @@ export class TranslationStore {
 	private validateConfiguration(config: StoreConfiguration): void {
 		if (!config.storagePath || config.storagePath.trim().length === 0) {
 			throw new TranslationStoreError(
-				'INVALID_CONFIG',
-				'storagePath must be a non-empty string'
+				"INVALID_CONFIG",
+				"storagePath must be a non-empty string",
 			);
 		}
 
 		if (config.maxEntries <= 0) {
 			throw new TranslationStoreError(
-				'INVALID_CONFIG',
-				'maxEntries must be positive'
+				"INVALID_CONFIG",
+				"maxEntries must be positive",
 			);
 		}
 
 		if (config.maxSizeBytes <= 0) {
 			throw new TranslationStoreError(
-				'INVALID_CONFIG',
-				'maxSizeBytes must be positive'
+				"INVALID_CONFIG",
+				"maxSizeBytes must be positive",
 			);
 		}
 
 		if (config.memoryCacheSize < 0) {
 			throw new TranslationStoreError(
-				'INVALID_CONFIG',
-				'memoryCacheSize cannot be negative'
+				"INVALID_CONFIG",
+				"memoryCacheSize cannot be negative",
 			);
 		}
 
 		if (config.defaultTTL < 0) {
 			throw new TranslationStoreError(
-				'INVALID_CONFIG',
-				'defaultTTL cannot be negative'
+				"INVALID_CONFIG",
+				"defaultTTL cannot be negative",
 			);
 		}
 	}
@@ -475,15 +478,15 @@ export class TranslationStore {
 	private validateMetadata(metadata: StorageMetadata): void {
 		if (!metadata.storeId || !metadata.version || !metadata.createdAt) {
 			throw new TranslationStoreError(
-				'INVALID_METADATA',
-				'Metadata missing required fields'
+				"INVALID_METADATA",
+				"Metadata missing required fields",
 			);
 		}
 
-		if (typeof metadata.createdAt !== 'number' || metadata.createdAt <= 0) {
+		if (typeof metadata.createdAt !== "number" || metadata.createdAt <= 0) {
 			throw new TranslationStoreError(
-				'INVALID_METADATA',
-				'Invalid createdAt timestamp'
+				"INVALID_METADATA",
+				"Invalid createdAt timestamp",
 			);
 		}
 	}
@@ -506,7 +509,7 @@ export class TranslationStore {
 				metrics: this.config.enableMetrics,
 				healthMonitoring: true,
 			},
-			checksum: '',
+			checksum: "",
 			encrypted: false,
 		};
 	}
@@ -523,10 +526,10 @@ export class TranslationStore {
 			activeEntries: 0,
 			expiredEntries: 0,
 			diskUsageBytes: 0,
-			compressionRatio: 1.0,
-			hitRate: 0.0,
-			averageLookupTime: 0.0,
-			averageWriteTime: 0.0,
+			compressionRatio: 1,
+			hitRate: 0,
+			averageLookupTime: 0,
+			averageWriteTime: 0,
 			totalLookups: 0,
 			totalWrites: 0,
 			totalHits: 0,
@@ -544,12 +547,12 @@ export class TranslationStore {
 	 */
 	private createHealth(): StoreHealth {
 		return {
-			status: 'healthy',
+			status: "healthy",
 			errors: [],
 			warnings: [],
 			diskSpaceAvailable: 0,
-			fragmentationLevel: 0.0,
-			lockStatus: 'unlocked',
+			fragmentationLevel: 0,
+			lockStatus: "unlocked",
 			lastHealthCheck: Date.now(),
 		};
 	}
@@ -567,14 +570,14 @@ export class TranslationStore {
 			// Get disk space (simplified - in production you'd use more sophisticated methods)
 			this.health.diskSpaceAvailable = Number.MAX_SAFE_INTEGER; // Placeholder
 
-			this.health.status = 'healthy';
+			this.health.status = "healthy";
 			this.health.lastHealthCheck = Date.now();
 		} catch (error) {
-			this.health.status = 'degraded';
+			this.health.status = "degraded";
 			this.addError(new TranslationStoreError(
-				'HEALTH_CHECK_FAILED',
-				'Initial health check failed',
-				error
+				"HEALTH_CHECK_FAILED",
+				"Initial health check failed",
+				error,
 			));
 		}
 	}
@@ -590,7 +593,7 @@ export class TranslationStore {
 			code: error.code,
 			message: error.message,
 			timestamp: Date.now(),
-			severity: 'medium',
+			severity: "medium",
 			resolved: false,
 		};
 
@@ -598,7 +601,7 @@ export class TranslationStore {
 
 		// Update health status based on errors
 		if (this.health.errors.length > 10) {
-			this.health.status = 'degraded';
+			this.health.status = "degraded";
 		}
 	}
 
@@ -696,7 +699,7 @@ export class TranslationStore {
 			confidence?: number;
 			apiProvider?: string;
 			ttl?: number;
-		}
+		},
 	): Promise<string> {
 		const startTime = Date.now();
 
@@ -713,8 +716,8 @@ export class TranslationStore {
 			// Check if store is initialized
 			if (!this.isInitialized) {
 				throw new TranslationStoreError(
-					'STORE_NOT_INITIALIZED',
-					'Store must be initialized before operations'
+					"STORE_NOT_INITIALIZED",
+					"Store must be initialized before operations",
 				);
 			}
 
@@ -722,7 +725,7 @@ export class TranslationStore {
 			const key = generateKey(
 				validatedParams.sourceLang as SupportedLanguage,
 				validatedParams.targetLang as SupportedLanguage,
-				validatedParams.sourceText
+				validatedParams.sourceText,
 			);
 
 			// Get file path for the translation
@@ -775,9 +778,9 @@ export class TranslationStore {
 		} catch (error) {
 			if (error instanceof z.ZodError) {
 				throw new TranslationStoreError(
-					'VALIDATION_ERROR',
-					'Invalid input parameters',
-					error
+					"VALIDATION_ERROR",
+					"Invalid input parameters",
+					error,
 				);
 			}
 
@@ -786,9 +789,9 @@ export class TranslationStore {
 			}
 
 			throw new TranslationStoreError(
-				'SET_FAILED',
-				'Failed to store translation',
-				error
+				"SET_FAILED",
+				"Failed to store translation",
+				error,
 			);
 		}
 	}
@@ -821,16 +824,16 @@ export class TranslationStore {
 			// Check if store is initialized
 			if (!this.isInitialized) {
 				throw new TranslationStoreError(
-					'STORE_NOT_INITIALIZED',
-					'Store must be initialized before operations'
+					"STORE_NOT_INITIALIZED",
+					"Store must be initialized before operations",
 				);
 			}
 
 			// Validate key format using hashing utilities
 			if (!validateKey(validatedParams.key)) {
 				throw new TranslationStoreError(
-					'INVALID_KEY',
-					'Invalid translation key format'
+					"INVALID_KEY",
+					"Invalid translation key format",
 				);
 			}
 
@@ -864,18 +867,18 @@ export class TranslationStore {
 		} catch (error) {
 			if (error instanceof z.ZodError) {
 				throw new TranslationStoreError(
-					'VALIDATION_ERROR',
-					'Invalid input parameters',
-					error
+					"VALIDATION_ERROR",
+					"Invalid input parameters",
+					error,
 				);
 			}
 
-			if (error instanceof TranslationStoreError && error.code === 'INVALID_KEY') {
+			if (error instanceof TranslationStoreError && error.code === "INVALID_KEY") {
 				throw error;
 			}
 
 			// Check if file doesn't exist (not an error for get operations)
-			if ((error as any)?.code === 'FILE_NOT_FOUND') {
+			if ((error as any)?.code === "FILE_NOT_FOUND") {
 				return null;
 			}
 
@@ -884,9 +887,9 @@ export class TranslationStore {
 			}
 
 			throw new TranslationStoreError(
-				'GET_FAILED',
-				'Failed to retrieve translation',
-				error
+				"GET_FAILED",
+				"Failed to retrieve translation",
+				error,
 			);
 		}
 	}
@@ -914,7 +917,7 @@ export class TranslationStore {
 	async getByText(
 		sourceText: string,
 		sourceLang: SupportedLanguage,
-		targetLang: SupportedLanguage
+		targetLang: SupportedLanguage,
 	): Promise<TranslationEntry | null> {
 		try {
 			// Input validation
@@ -928,7 +931,7 @@ export class TranslationStore {
 			const key = generateKey(
 				validatedParams.sourceLang as SupportedLanguage,
 				validatedParams.targetLang as SupportedLanguage,
-				validatedParams.sourceText
+				validatedParams.sourceText,
 			);
 
 			// Delegate to get() method
@@ -937,16 +940,16 @@ export class TranslationStore {
 		} catch (error) {
 			if (error instanceof z.ZodError) {
 				throw new TranslationStoreError(
-					'VALIDATION_ERROR',
-					'Invalid input parameters',
-					error
+					"VALIDATION_ERROR",
+					"Invalid input parameters",
+					error,
 				);
 			}
 
 			throw new TranslationStoreError(
-				'GET_BY_TEXT_FAILED',
-				'Failed to retrieve translation by text',
-				error
+				"GET_BY_TEXT_FAILED",
+				"Failed to retrieve translation by text",
+				error,
 			);
 		}
 	}

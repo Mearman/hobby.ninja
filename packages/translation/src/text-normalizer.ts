@@ -39,7 +39,7 @@ const DEFAULT_OPTIONS: NormalizerOptions = {
  */
 export function normalizeText(
 	text: string,
-	options: NormalizerOptions = DEFAULT_OPTIONS
+	options: NormalizerOptions = DEFAULT_OPTIONS,
 ): string {
 	if (!text) return text;
 
@@ -77,14 +77,14 @@ function normalizeGundamSpacing(text: string): string {
 
 	// Add space BEFORE "Gundam" if preceded by alphanumeric
 	// Negative lookbehind for space, positive lookbehind for alphanumeric
-	result = result.replace(/([A-Za-z0-9])Gundam/g, '$1 Gundam');
+	result = result.replaceAll(/([A-Za-z0-9])Gundam/g, "$1 Gundam");
 
 	// Add space AFTER "Gundam" if followed by alphanumeric
 	// But not if it's part of a hyphenated word that starts with letter (like Mk-II)
-	result = result.replace(/Gundam([A-Za-z0-9])/g, 'Gundam $1');
+	result = result.replaceAll(/Gundam([A-Za-z0-9])/g, "Gundam $1");
 
 	// Clean up any double spaces created
-	result = result.replace(/ {2,}/g, ' ');
+	result = result.replaceAll(/ {2,}/g, " ");
 
 	return result;
 }
@@ -101,13 +101,13 @@ function normalizeGundamJaSpacing(text: string): string {
 	let result = text;
 
 	// Add space BEFORE "ガンダム" if preceded by ASCII letter/number
-	result = result.replace(/([A-Za-z0-9])ガンダム/g, '$1 ガンダム');
+	result = result.replaceAll(/([A-Za-z0-9])ガンダム/g, "$1 ガンダム");
 
 	// Add space AFTER "ガンダム" if followed by ASCII letter/number
-	result = result.replace(/ガンダム([A-Za-z0-9])/g, 'ガンダム $1');
+	result = result.replaceAll(/ガンダム([A-Za-z0-9])/g, "ガンダム $1");
 
 	// Clean up any double spaces created
-	result = result.replace(/ {2,}/g, ' ');
+	result = result.replaceAll(/ {2,}/g, " ");
 
 	return result;
 }
@@ -123,13 +123,13 @@ function normalizeQuoteSpacing(text: string): string {
 	let result = text;
 
 	// Add space after closing quote if followed by alphanumeric
-	result = result.replace(/"([^"]+)"([A-Za-z0-9])/g, '"$1" $2');
+	result = result.replaceAll(/"([^"]+)"([A-Za-z0-9])/g, '"$1" $2');
 
 	// Add space before opening quote if preceded by alphanumeric
-	result = result.replace(/([A-Za-z0-9])"([^"]*")/g, '$1 "$2');
+	result = result.replaceAll(/([A-Za-z0-9])"([^"]*")/g, '$1 "$2');
 
 	// Clean up any double spaces created
-	result = result.replace(/ {2,}/g, ' ');
+	result = result.replaceAll(/ {2,}/g, " ");
 
 	return result;
 }
@@ -147,11 +147,11 @@ function normalizeBullets(text: string): string {
 
 	// Replace ■ with • and ensure space follows
 	// First handle case where space already exists
-	result = result.replace(/■ /g, '• ');
+	result = result.replaceAll("■ ", "• ");
 	// Then handle case where no space exists
-	result = result.replace(/■([^ ])/g, '• $1');
+	result = result.replaceAll(/■([^ ])/g, "• $1");
 	// Handle trailing ■ at end of string
-	result = result.replace(/■$/g, '•');
+	result = result.replaceAll(/■$/g, "•");
 
 	return result;
 }
@@ -161,7 +161,7 @@ function normalizeBullets(text: string): string {
  */
 export function normalizeTexts(
 	texts: string[],
-	options?: NormalizerOptions
+	options?: NormalizerOptions,
 ): string[] {
 	return texts.map((t) => normalizeText(t, options));
 }
