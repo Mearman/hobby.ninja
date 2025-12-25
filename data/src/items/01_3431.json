@@ -5,6 +5,43 @@
 		"ja": "ENTRY GRADE カービィ",
 		"en": "ENTRY GRADE Kirby"
 	},
+	"brands": [
+		{
+			"id": "entry_grade",
+			"url": "https://bandai-hobby.net/brand/entry_grade/",
+			"ja": "ENTRY GRADE"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5584",
+			"url": "https://bandai-hobby.net/item/01_5584/",
+			"ja": "EXPO2025 ENTRY GRADE 1/144 RX-78F00/E ガンダム"
+		},
+		{
+			"id": "01_5585",
+			"url": "https://bandai-hobby.net/item/01_5585/",
+			"ja": "EXPO2025 ENTRY GRADE 1/144 RX-78F00/E ガンダム用オプションパーツセット (EX-001 グラスフェザー装備)"
+		},
+		{
+			"id": "01_5440",
+			"url": "https://bandai-hobby.net/item/01_5440/",
+			"ja": "ENTRY GRADE 1/144 ストライクルージュ"
+		},
+		{
+			"id": "01_5244",
+			"url": "https://bandai-hobby.net/item/01_5244/",
+			"ja": "ENTRY GRADE ULTRAMAN(ULTRAMAN: RISING)"
+		}
+	],
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -21,11 +58,11 @@
 	"description": {
 		"ja": [
 			"全てのプラモデル未経験者に贈る入門用シリーズ「ENTRY GRADE」にカービィが登場！",
-			"■顔の色分けパーツはマキシムトマトやおにぎりパーツなどで再現！カービィが食べ物をすいこんだイメージで組み立てられる「まんぷくビルド」が楽しい！",
-			"■タッチゲートだからパーツは手で\"プチッ！\"と取れる。",
-			"■接着剤や工具は不要。説明書は見やすい色付き。",
-			"■少ないパーツ数なので、プラモデルを初めてつくる方でもサクサクと組み立てが可能。",
-			"■ワープスター型の台座が付属。"
+			"• 顔の色分けパーツはマキシムトマトやおにぎりパーツなどで再現！カービィが食べ物をすいこんだイメージで組み立てられる「まんぷくビルド」が楽しい！",
+			"• タッチゲートだからパーツは手で\"プチッ！\"と取れる。",
+			"• 接着剤や工具は不要。説明書は見やすい色付き。",
+			"• 少ないパーツ数なので、プラモデルを初めてつくる方でもサクサクと組み立てが可能。",
+			"• ワープスター型の台座が付属。"
 		],
 		"en": [
 			"Kirby appears in the introductory series \"ENTRY GRADE\" given to all plastic model inexperienced people!",
@@ -36,53 +73,68 @@
 			"• A warp star-shaped pedestal is included."
 		]
 	},
-	"accessories": {
-		"ja": ["ランナー×4", "取扱説明書×1", "ホイルシール×1"],
-		"en": ["Runner×4", "Handling manual×1", "Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ランナー",
+				"en": "Runner"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "取扱説明書",
+				"en": "Handling manual"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4385.jpg",
+				"src": "https://bandai-hobby.net/images/153_4385_s_t3xv7qcv1xdu2i6gkinirlnit0hj.jpg",
 				"path": "/images/items/01_3431/153_4385.jpg",
 				"hash": "777b26d8f84848a12a613948631e74a6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4385.jpg",
+				"src": "https://bandai-hobby.net/images/155_4385_s_72dz907g51y3m2p4cyhm1rlt002c.jpg",
 				"path": "/images/items/01_3431/155_4385.jpg",
 				"hash": "8bc2cd87659657c16aa83d1874cca62c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4385.jpg",
+				"src": "https://bandai-hobby.net/images/156_4385_s_504ybv4mr7wguraicrg1e9f6augd.jpg",
 				"path": "/images/items/01_3431/156_4385.jpg",
 				"hash": "5f3b2ce38b6ab9fae3901e5cec3b51bc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4385.jpg",
+				"src": "https://bandai-hobby.net/images/157_4385_s_zmw89a0anvokvjepjxyqvh4iu0sf.jpg",
 				"path": "/images/items/01_3431/157_4385.jpg",
 				"hash": "12ca6a209ca4f2d8f16db2bf9faff7ab"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4385.jpg",
+				"src": "https://bandai-hobby.net/images/158_4385_s_q6k54qsethztplza7xk0fwog08p8.jpg",
 				"path": "/images/items/01_3431/158_4385.jpg",
 				"hash": "4cc612c006b4862bd4ede768e19e90dd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4385.jpg",
+				"src": "https://bandai-hobby.net/images/159_4385_s_h9ox3naoff243qrlwg7ai7azyncc.jpg",
 				"path": "/images/items/01_3431/159_4385.jpg",
 				"hash": "082c0f7749bd2a2d46d3e06c3d9c809c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4385.jpg",
+				"src": "https://bandai-hobby.net/images/189_4385_s_u34lsz1otqytjcaplc1lvas7axng.jpg",
 				"path": "/images/items/01_3431/189_4385.jpg",
 				"hash": "9954ec377242050fd786195f3c5c1406"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3431/",
-	"brandIds": ["entry_grade"],
-	"seriesIds": [],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5584", "01_5585", "01_5440", "01_5244"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3431/"
 }

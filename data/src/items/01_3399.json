@@ -5,6 +5,50 @@
 		"ja": "HG 1/24 霊子戦闘機・無限(東雲初穂機)",
 		"en": "HG 1/24 Reiko Fighter Mugen (Shinonome Hatsuho Machine)"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "shinsakura_wars",
+			"url": "https://bandai-hobby.net/series/shinsakura_wars/",
+			"ja": "新サクラ大戦"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3344",
+			"url": "https://bandai-hobby.net/item/01_3344/",
+			"ja": "HG 1/24 霊子戦闘機・試製桜武(天宮さくら機)"
+		},
+		{
+			"id": "01_3331",
+			"url": "https://bandai-hobby.net/item/01_3331/",
+			"ja": "HG 1/24 霊子戦闘機・無限(クラリス機)"
+		},
+		{
+			"id": "01_2975",
+			"url": "https://bandai-hobby.net/item/01_2975/",
+			"ja": "HG 1/24 霊子戦闘機・無限(アナスタシア・パルマ機)"
+		},
+		{
+			"id": "01_2773",
+			"url": "https://bandai-hobby.net/item/01_2773/",
+			"ja": "HG 1/24 霊子戦闘機・無限(望月あざみ機)"
+		}
+	],
+	"scale": "1/24",
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -18,48 +62,58 @@
 		"day": 10
 	},
 	"targetAge": 15,
-	"scale": "1/24",
 	"description": {
 		"ja": [
 			"『新サクラ大戦』より、「霊子戦闘機・無限（東雲初穂機）」が参戦！",
-			"■劇中で印象的なコックピットハッチの開閉を再現。搭乗姿の東雲初穂のフィギュアが付属。",
-			"■コックピット内部も設定に忠実に再現。",
-			"■手・足の関節部分に伸縮を可能とする延長ギミックを搭載。アクションポーズの幅が広がる。",
-			"■初穂機の特徴的な武装である巨大なハンマーが付属。"
+			"• 劇中で印象的なコックピットハッチの開閉を再現。搭乗姿の東雲初穂のフィギュアが付属。",
+			"• コックピット内部も設定に忠実に再現。",
+			"• 手・足の関節部分に伸縮を可能とする延長ギミックを搭載。アクションポーズの幅が広がる。",
+			"• 初穂機の特徴的な武装である巨大なハンマーが付属。"
 		],
 		"en": [
-			"From \"New Sakura Wars \", \" Reiko Fighter Mugen (Shinonome Hatsuho Machine)\" joins the battle!",
+			"From \"New Sakura Wars\", \"Reiko Fighter Mugen (Shinonome Hatsuho Machine)\" joins the battle!",
 			"• Reproduces the impressive opening and closing of the cockpit hatch in the movie. A figure of Hatsuho Shinonome in her riding form is included.",
 			"• The interior of the cockpit is also faithfully reproduced.",
 			"• Equipped with an extension gimmick that allows the joints of the hands and feet to expand and contract. Expands the range of action poses.",
 			"• Comes with Hatsuho's characteristic armament, a huge hammer."
 		]
 	},
-	"accessories": {
-		"ja": ["ハンマー×1", "ホイルシール×1", "ジュエルシール×1", "水転写式デカール×1"],
-		"en": ["Hammer x 1", "Foil Seal×1", "Jewel Seal×1", "Water transfer decal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハンマー",
+				"en": "hammer"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジュエルシール",
+				"en": "Jewel Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157325_1.jpg",
 				"path": "/images/items/01_3399/1000157325_1.jpg",
 				"hash": "a0cbbda148ffc6b840d1ea4ca5067dc5"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157325_10.jpg",
-				"path": "/images/items/01_3399/1000157325_10.jpg",
-				"hash": "071e2a2dd740f1058da148444843d5b3"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157325_11.jpg",
-				"path": "/images/items/01_3399/1000157325_11.jpg",
-				"hash": "db36f79e8fb08a8648e776c5504f63b1"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157325_12.jpg",
-				"path": "/images/items/01_3399/1000157325_12.jpg",
-				"hash": "720918b8abd536a9836cd70a5291230c"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157325_2.jpg",
@@ -100,13 +154,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157325_9.jpg",
 				"path": "/images/items/01_3399/1000157325_9.jpg",
 				"hash": "91588c9c02a64c6ef8ca69cd1b70a22f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157325_10.jpg",
+				"path": "/images/items/01_3399/1000157325_10.jpg",
+				"hash": "071e2a2dd740f1058da148444843d5b3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157325_11.jpg",
+				"path": "/images/items/01_3399/1000157325_11.jpg",
+				"hash": "db36f79e8fb08a8648e776c5504f63b1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157325_12.jpg",
+				"path": "/images/items/01_3399/1000157325_12.jpg",
+				"hash": "720918b8abd536a9836cd70a5291230c"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3399/",
-	"brandIds": ["hg"],
-	"seriesIds": ["shinsakura_wars"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_3344", "01_3331", "01_2975", "01_2773"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3399/"
 }

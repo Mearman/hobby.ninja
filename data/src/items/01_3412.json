@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard Amplified デュークモン",
 		"en": "Figure-rise Standard Amplified Dukemon"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard-amp",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard-amp/",
+			"ja": "Figure-rise Standard Amplified[フィギュアライズ スタンダード アンプリファイド]"
+		}
+	],
+	"series": [
+		{
+			"id": "digimon",
+			"url": "https://bandai-hobby.net/series/digimon/",
+			"ja": "デジモンシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5983",
+			"url": "https://bandai-hobby.net/item/01_5983/",
+			"ja": "Figure-rise Standard Amplified カイゼルグレイモン"
+		},
+		{
+			"id": "item-1000216437",
+			"url": "https://p-bandai.jp/item/item-1000216437/",
+			"ja": "Figure-rise Standard Amplified オメガモン(Ｘ抗体) [リミテッドカラー]"
+		},
+		{
+			"id": "01_5277",
+			"url": "https://bandai-hobby.net/item/01_5277/",
+			"ja": "Figure-rise Standard Amplified パイルドラモン"
+		},
+		{
+			"id": "item-1000198198",
+			"url": "https://p-bandai.jp/item/item-1000198198/",
+			"ja": "Figure-rise Standard Amplified デュークモン[スペシャルコーティング]"
+		}
+	],
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -21,44 +64,55 @@
 	"description": {
 		"ja": [
 			"20周年を迎える「デジモンテイマーズ」の大人気デジモン「デュークモン」を商品化！",
-			"■As'まりあ氏のデザインによるAmplifiedされたデュークモンを公式監修のもと立体化。",
-			"■聖盾イージス・聖槍グラムにプラモデルオリジナルギミックを搭載。",
-			"■関節部の伸縮をはじめとしたギミックによる広範囲な可動により自然なポーズを演出。",
-			"■特徴的なマントは成形品、PETシートとシールを使用した新規構造を採用。"
+			"• As'まりあ氏のデザインによるAmplifiedされたデュークモンを公式監修のもと立体化。",
+			"• 聖盾イージス・聖槍グラムにプラモデルオリジナルギミックを搭載。",
+			"• 関節部の伸縮をはじめとしたギミックによる広範囲な可動により自然なポーズを演出。",
+			"• 特徴的なマントは成形品、PETシートとシールを使用した新規構造を採用。"
 		],
 		"en": [
-			"The popular Digimon \"Dukemon \" of \" Digimon Tamers\", which is celebrating its 20th anniversary, has been commercialized!",
+			"The popular Digimon \"Dukemon\" of \"Digimon Tamers\", which is celebrating its 20th anniversary, has been commercialized!",
 			"• Amplified Dukemon designed by As'Maria has been made into a three-dimensional model under official supervision.",
 			"• Holy Shield Aegis and Holy Spear Gram are equipped with Pla Model original gimmicks.",
 			"• A wide range of movement using gimmicks, including the expansion and contraction of joints, creates natural poses.",
 			"• The distinctive cloak uses a new structure using molded products, PET sheets and Seal."
 		]
 	},
-	"accessories": {
-		"ja": ["聖槍グラム×1", "聖盾イージス×1", "聖盾イージス用台座×1", "シール×1"],
-		"en": ["Holy Spear Gram x1", "Holy Shield Aegis x1", "Holy shield Aegis pedestal x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "聖槍グラム",
+				"en": "holy spear gram"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "聖盾イージス",
+				"en": "Holy Shield Aegis"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "聖盾イージス用台座",
+				"en": "Pedestal for Holy Shield Aegis"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159987_1.jpg",
 				"path": "/images/items/01_3412/1000159987_1.jpg",
 				"hash": "0fbd8b33b799f167467f855343aec66e"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159987_10.jpg",
-				"path": "/images/items/01_3412/1000159987_10.jpg",
-				"hash": "ecf4cd2f371a703ce4457d14b6e5f08a"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159987_11.jpg",
-				"path": "/images/items/01_3412/1000159987_11.jpg",
-				"hash": "8e62b6c0eccdc93a0c4a1224da2c9a2b"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159987_12.jpg",
-				"path": "/images/items/01_3412/1000159987_12.jpg",
-				"hash": "ca76d35d4b031c359868967817cf53d5"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159987_2.jpg",
@@ -99,13 +153,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159987_9.jpg",
 				"path": "/images/items/01_3412/1000159987_9.jpg",
 				"hash": "2d7d29ee187cf760ef9c842c2dcf7365"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159987_10.jpg",
+				"path": "/images/items/01_3412/1000159987_10.jpg",
+				"hash": "ecf4cd2f371a703ce4457d14b6e5f08a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159987_11.jpg",
+				"path": "/images/items/01_3412/1000159987_11.jpg",
+				"hash": "8e62b6c0eccdc93a0c4a1224da2c9a2b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159987_12.jpg",
+				"path": "/images/items/01_3412/1000159987_12.jpg",
+				"hash": "ca76d35d4b031c359868967817cf53d5"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3412/",
-	"brandIds": ["figurerise-standard-amp"],
-	"seriesIds": ["digimon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5983", "item-1000216437", "01_5277", "item-1000198198"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3412/"
 }

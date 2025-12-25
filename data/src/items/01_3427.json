@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 bEXM-15 ポルタノヴァ(宇宙仕様)[ダークパープル]",
 		"en": "30MM 1/144 bEXM-15 Portanova (space specification) [Dark Purple]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,44 +61,55 @@
 		"day": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMシリーズに局地戦用改装タイプ、ポルタノヴァ（宇宙仕様）にダークパープルが登場！",
-			"■新腰部パーツで拡張性増大。バックパックと、2体目のポルタノヴァ(宇宙仕様)[ダークパープル]脚部を組み合わせれば、四脚型が実現。",
-			"■アームユニット ライフル／大型クロ―が付属。"
+			"• 新腰部パーツで拡張性増大。バックパックと、2体目のポルタノヴァ(宇宙仕様)[ダークパープル]脚部を組み合わせれば、四脚型が実現。",
+			"• アームユニット ライフル／大型クロ―が付属。"
 		],
 		"en": [
-			"Dark purple is now available in the 30MM series, a modified type for local warfare, and Portanova (space version)!",
-			"• New waist parts increase expandability. If you combine the backpack with the legs of the second Portanova (space version) [dark purple], you can create a quadruped type.",
+			"Dark purple is now available in the 30MM series, a modified type for local warfare, and Portanova (space specification)!",
+			"• New waist parts increase expandability. If you combine the backpack with the legs of the second Portanova (space version) [dark purple], you can create a quadruped model.",
 			"• Arm unit rifle/large claw included."
 		]
 	},
-	"accessories": {
-		"ja": ["宇宙用バックパック/装甲×1式", "アームユニット ライフル/大型クロー×1式", "マーキングシール×1"],
-		"en": ["Space backpack/armor x 1 set", "Arm unit rifle/large claw x 1 set", "MarkingSeal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "宇宙用バックパック/装甲",
+				"en": "space backpack/armor"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "アームユニット ライフル/大型クロー",
+				"en": "Arm unit rifle/large claw"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159978_1.jpg",
 				"path": "/images/items/01_3427/1000159978_1.jpg",
 				"hash": "ead613d2a61311753636270640860947"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159978_10.jpg",
-				"path": "/images/items/01_3427/1000159978_10.jpg",
-				"hash": "079e406538b08f70ca30fe7e59197d71"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159978_11.jpg",
-				"path": "/images/items/01_3427/1000159978_11.jpg",
-				"hash": "8b4d8d45bbc5ce8d104e599fc0b0904c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159978_12.jpg",
-				"path": "/images/items/01_3427/1000159978_12.jpg",
-				"hash": "04f685b5f52591a3b3bb9b8b814a0c4b"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159978_2.jpg",
@@ -96,15 +150,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159978_9.jpg",
 				"path": "/images/items/01_3427/1000159978_9.jpg",
 				"hash": "7b9ec14cc0b9e1d12b534658a59ea31b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159978_10.jpg",
+				"path": "/images/items/01_3427/1000159978_10.jpg",
+				"hash": "079e406538b08f70ca30fe7e59197d71"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159978_11.jpg",
+				"path": "/images/items/01_3427/1000159978_11.jpg",
+				"hash": "8b4d8d45bbc5ce8d104e599fc0b0904c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159978_12.jpg",
+				"path": "/images/items/01_3427/1000159978_12.jpg",
+				"hash": "04f685b5f52591a3b3bb9b8b814a0c4b"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3427/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3718",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3718/"

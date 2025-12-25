@@ -5,6 +5,55 @@
 		"ja": "HG 1/144 ダガーL",
 		"en": "HG 1/144 Dagger L"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hgce",
+			"url": "https://bandai-hobby.net/brand/hgce/",
+			"ja": "HG COSMIC ERA"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000203308",
+			"url": "https://p-bandai.jp/item/item-1000203308/",
+			"ja": "ＨＧ 1/144 ダークダガーＬ"
+		},
+		{
+			"id": "01_5097",
+			"url": "https://bandai-hobby.net/item/01_5097/",
+			"ja": "HG 1/144 デストロイガンダム"
+		},
+		{
+			"id": "01_3739",
+			"url": "https://bandai-hobby.net/item/01_3739/",
+			"ja": "HG 1/144 デスティニーガンダム(ハイネ専用機)[クリアカラー]"
+		},
+		{
+			"id": "item-1000157417",
+			"url": "https://p-bandai.jp/item/item-1000157417/",
+			"ja": "ＨＧ 1/144 ウィンダム（ネオ・ロアノーク専用機）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -18,59 +67,77 @@
 		"day": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダムSEED DESTINY』より量産機「ダガーL」を新規造形で初プラモデル化！",
-			"■複数機集めたくなる「簡単組み立て」＆「換装ギミック」",
-			"■同一規格の装備換装システム「ストライカーパックシステム」を採用。別売りの「ジェットストライカー」や「エールストライカー」の装備にも対応可能。",
-			"■ビームカービン、ビームサーベル、シールド付属。"
+			"• 複数機集めたくなる「簡単組み立て」＆「換装ギミック」",
+			"• 同一規格の装備換装システム「ストライカーパックシステム」を採用。別売りの「ジェットストライカー」や「エールストライカー」の装備にも対応可能。",
+			"• ビームカービン、ビームサーベル、シールド付属。"
 		],
 		"en": [
-			"The mass-produced machine \"Dagger L \" from \" Mobile Suit Gundam SEED DESTINY\" has been made into a new plastic model for the first time!",
-			"• \"Easy assembly \" & \" replacement gimmick\" that will make you want to collect multiple machines",
-			"• Adopts the same standard equipment replacement system \"Striker Pack System \". It can also be used with the separately sold \" Jet Striker \" and \" Ale Striker\" equipment.",
+			"The mass-produced machine \"Dagger L\" from \"Mobile Suit GundamSEED DESTINY\" is made into a new plastic model for the first time!",
+			"• \"Easy assembly\" & \"replacement gimmick\" that will make you want to collect multiple machines",
+			"• Adopts the same standard equipment replacement system \"Striker Pack System\". It can also be used with the separately sold \"Jet Striker\" and \"Ale Striker\" equipment.",
 			"• Beam carbine, beam saber, and seal included."
 		]
 	},
-	"accessories": {
-		"ja": ["ビームカービン×1", "ビームサーベル×2", "シールド×1"],
-		"en": ["Beam carbine x 1", "Beam saber x2", "Seal × 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームカービン",
+				"en": "beam carbine"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "beam saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4341.jpg",
+				"src": "https://bandai-hobby.net/images/153_4341_s_mw8s4kct6ob2mvi7g234ea1a63w0.jpg",
 				"path": "/images/items/01_3388/153_4341.jpg",
 				"hash": "3350cab4049e454370eba5251aa93789"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4341.jpg",
+				"src": "https://bandai-hobby.net/images/155_4341_s_dhfmu0yyimnc5npcan6t9a21sf4y.jpg",
 				"path": "/images/items/01_3388/155_4341.jpg",
 				"hash": "985472985e36fcb4d06f2eb3d80279b9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4341.jpg",
+				"src": "https://bandai-hobby.net/images/156_4341_s_b8h4kv0bgkds71ihpp9fyob0lwab.jpg",
 				"path": "/images/items/01_3388/156_4341.jpg",
 				"hash": "43fdad6cc4d23439d258fcd8248b9a23"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4341.jpg",
+				"src": "https://bandai-hobby.net/images/157_4341_s_rkqd8pdmjwxr9sg3m1j3j63e851y.jpg",
 				"path": "/images/items/01_3388/157_4341.jpg",
 				"hash": "3ba07753f79b668d58246bc723c4e979"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4341.jpg",
+				"src": "https://bandai-hobby.net/images/158_4341_s_qaamm1z32moxjhssdoq5pma9nwus.jpg",
 				"path": "/images/items/01_3388/158_4341.jpg",
 				"hash": "25028268c9c942be776f9651bd3c52c2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4341.jpg",
+				"src": "https://bandai-hobby.net/images/159_4341_s_w2ulogoynii4uk4t2hc1oclb8qbc.jpg",
 				"path": "/images/items/01_3388/159_4341.jpg",
 				"hash": "969d5c2508e24646918d0c0121f082d0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4341.jpg",
+				"src": "https://bandai-hobby.net/images/189_4341_s_4o506x9rd5seeufyu0v8tqtsa1ll.jpg",
 				"path": "/images/items/01_3388/189_4341.jpg",
 				"hash": "816b3478639cbbeb0b22dba603cd0b71"
 			}
@@ -78,10 +145,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3388/",
-	"brandIds": ["hg", "hgce"],
-	"seriesIds": ["seed-d"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000203308", "01_5097", "01_3739", "item-1000157417"],
 	"manual": {
 		"id": "505",
 		"url": "https://manual.bandai-hobby.net/menus/detail/505/"

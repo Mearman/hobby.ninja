@@ -5,6 +5,59 @@
 		"ja": "ＨＧ 1/144 ガンダムＭｋ－ＩＩＩ",
 		"en": "HG 1/144 Gundam Mk-III"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -17,7 +70,6 @@
 		"month": 4
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガ ン ダ ム Ｍ ｋ - ＩＩＩ 、 Ｈ Ｇ シ リ ー ズ で 参 戦 ！ ―",
@@ -106,59 +158,81 @@
 			"・Product specifications are as of 202012. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["ビーム・ライフル（２種）", "ビーム・サーベル（ビーム・キャノン）", "シールド", "ビーム・サーベル"],
-		"en": ["Beam rifle (2 types)", "Beam saber (beam cannon)", "Seal de", "beam saber"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル（２種）",
+				"en": "Beam rifle (2 types)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル（ビーム・キャノン）",
+				"en": "Beam saber (beam cannon)"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4335.jpg",
+				"src": "https://bandai-hobby.net/images/153_4335_s_8zv31w84zlw3nu2cuospm3olvviu.jpg",
 				"path": "/images/items/01_3384/153_4335.jpg",
 				"hash": "7a0c8bb195cb31d2b97eb7433c5b64cc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4335.jpg",
+				"src": "https://bandai-hobby.net/images/155_4335_s_8jbwuc1wb404gxggiraseqlcpfjh.jpg",
 				"path": "/images/items/01_3384/155_4335.jpg",
 				"hash": "681a263e61dceb36baa44243067e270a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4335.jpg",
+				"src": "https://bandai-hobby.net/images/156_4335_s_918h9zqcgimp4xb64cbaj84o9ofm.jpg",
 				"path": "/images/items/01_3384/156_4335.jpg",
 				"hash": "abdbc00201a7e928202e1e63d48bcf19"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4335.jpg",
+				"src": "https://bandai-hobby.net/images/157_4335_s_znflojbm42lv9aku0pvk3ciggsml.jpg",
 				"path": "/images/items/01_3384/157_4335.jpg",
 				"hash": "6c0f753d40b80a0a5af8ff182427ffd1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4335.jpg",
+				"src": "https://bandai-hobby.net/images/158_4335_s_s4g8wsgk0m40vcd90e05zyd6iogm.jpg",
 				"path": "/images/items/01_3384/158_4335.jpg",
 				"hash": "caf5c4e2391feabd9404adb38ac6d7e5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4335.jpg",
+				"src": "https://bandai-hobby.net/images/159_4335_s_kq8i6342tg7pm41o7ucd4txa29c0.jpg",
 				"path": "/images/items/01_3384/159_4335.jpg",
 				"hash": "e37762226fbdba4efdff505e4720d415"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4335.jpg",
+				"src": "https://bandai-hobby.net/images/189_4335_s_iu82ojjnwba1tqi611wmb7offl4l.jpg",
 				"path": "/images/items/01_3384/189_4335.jpg",
 				"hash": "a22e897893162eba2a4133af4a78c107"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4335.jpg",
+				"src": "https://bandai-hobby.net/images/190_4335_s_q4cgrcqpinpxj5agm5qj6bfd0vvm.jpg",
 				"path": "/images/items/01_3384/190_4335.jpg",
 				"hash": "c33de0af7c596085005ee0b8c342e9dd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4335.jpg",
+				"src": "https://bandai-hobby.net/images/191_4335_s_fg4w0nkvm8jm9esw1x84fli7850l.jpg",
 				"path": "/images/items/01_3384/191_4335.jpg",
 				"hash": "c1d6f4bf1c6528b7f8271a98f252361c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4335.jpg",
+				"src": "https://bandai-hobby.net/images/192_4335_s_cx19g105iqg3c3qiz6j8ort5kd2o.jpg",
 				"path": "/images/items/01_3384/192_4335.jpg",
 				"hash": "0a74121577d480bf9290ea44b6a2b770"
 			}
@@ -166,14 +240,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3384/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla", "hguc"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5963", "01_5961", "01_5951"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2332",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2332/"

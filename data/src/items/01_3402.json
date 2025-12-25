@@ -5,6 +5,43 @@
 		"ja": "SDW HEROES 佐助デルタガンダム",
 		"en": "SDW HEROES Sasuke Delta Gundam"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5470",
+			"url": "https://bandai-hobby.net/item/01_5470/",
+			"ja": "SDW HEROES キャプテンクアンタ GF"
+		},
+		{
+			"id": "01_5471",
+			"url": "https://bandai-hobby.net/item/01_5471/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-B"
+		},
+		{
+			"id": "01_5472",
+			"url": "https://bandai-hobby.net/item/01_5472/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-F"
+		},
+		{
+			"id": "01_5347",
+			"url": "https://bandai-hobby.net/item/01_5347/",
+			"ja": "SDW HEROES スペリオルフォーミュラー ファイナルドラゴン[クリアカラー]"
+		}
+	],
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -20,7 +57,7 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"2021年４月より全世界にてアニメがスタート予定の『SD ガンダムワールド ヒーローズ』より、信長に忠義を尽くす忍、佐助デルタガンダムが登場！",
+			"2021年４月より全世界にてアニメがスタート予定の『SDガンダムワールド ヒーローズ』より、信長に忠義を尽くす忍、佐助デルタガンダムが登場！",
 			"• クリアパーツを全身にまとう、パーツ構成。",
 			"• 忍の特徴である印を結ぶ指先が付属。",
 			"• 背面は忍の装備を全身にまとった意匠。",
@@ -30,14 +67,32 @@
 			"Anime starts worldwide in 20214 From Scheduled's \"SD Gundam World Heroes\", Sasuke Delta Gundam, a ninja who is loyal to Nobunaga, appears!",
 			"• Parts composition that covers the whole body with clear parts.",
 			"• Includes fingertips to connect Shinobu's characteristic seal.",
-			"• The back features a design that depicts the entire body covered in ninja equipment.",
+			"• The back has a design that shows the entire body covered in ninja equipment.",
 			"• Wearing a bewitching fox mask."
 		]
 	},
-	"accessories": {
-		"ja": ["刀×1", "仮面×１", "ホイルシール×1"],
-		"en": ["Sword x1", "Mask x1", "Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "刀",
+				"en": "sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "仮面×１",
+				"en": "Mask x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -83,9 +138,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3402/",
-	"brandIds": [],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3402/"
 }

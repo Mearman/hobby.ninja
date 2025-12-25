@@ -2,9 +2,48 @@
 	"id": "01_3415",
 	"type": "item",
 	"name": {
-		"ja": "RG 1/144 クロスボーン・ガンダム X1[クリアカラー]",
-		"en": "RG 1/144 Crossbone Gundam X1 [Clear color]"
+		"ja": "RG 1/144 クロスボーン・ガンダムX1[クリアカラー]",
+		"en": "RG 1/144 Crossbone GundamX1 [Clear color]"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "crossbone",
+			"url": "https://bandai-hobby.net/series/crossbone/",
+			"ja": "機動戦士クロスボーン・ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3456",
+			"url": "https://bandai-hobby.net/item/01_3456/",
+			"ja": "RG 1/144 クロスボーン・ガンダムX1[チタニウムフィニッシュ]"
+		},
+		{
+			"id": "item-1000142961",
+			"url": "https://p-bandai.jp/item/item-1000142961/",
+			"ja": "ＲＧ 1/144 クロスボーン・ガンダムＸ２"
+		},
+		{
+			"id": "01_2251",
+			"url": "https://bandai-hobby.net/item/01_2251/",
+			"ja": "RG 1/144 クロスボーン・ガンダムX1"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -17,10 +56,9 @@
 		"month": 2
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士クロスボーン・ガンダム』に登場するクロスボーン・ガンダム X1が、クリアカラーの限定仕様で登場！",
+			"『機動戦士クロスボーン・ガンダム』に登場するクロスボーン・ガンダムX1が、クリアカラーの限定仕様で登場！",
 			"• 小型の機体ながら、ディテール、ギミックを極限まで再現！最高峰の“凝縮”を体感せよ！",
 			"• アドヴァンスドMSジョイントにより、小型MSながらコア・ファイターの変形、ドッキングを再現！",
 			"• 頭部は細かなパーツ構成で再現され、バルカンやドクロの形状、アイパッチ（選択式）なども再現！",
@@ -30,9 +68,9 @@
 			"• 特徴的なマントやエフェクトパーツは躍動感のある造形で再現！"
 		],
 		"en": [
-			"Crossbone Gundam X1 that appears in \"Mobile Suit Crossbone Gundam\" is now available in a limited edition clear color!",
+			"Crossbone GundamX1 that appears in \"Mobile Suit Crossbone Gundam\" is now available in a limited edition clear color!",
 			"• Although it is a small aircraft, details and gimmicks are reproduced to the utmost! Experience the highest level of “condensation”!",
-			"• Advanced MS joint reproduces the deformation and docking of the Core Fighter even though it is a small MS!",
+			"• Advanced MS joint reproduces the transformation and docking of the Core Fighter even though it is a small MS!",
 			"• The head is recreated with detailed parts, including the vulcan and skull shapes, as well as the eye patch (selectable)!",
 			"• Accurately reproduced down to the gimmick of the heat dissipating fins on the jaw!",
 			"• You can recreate Zanbuster by combining Beam Zanbar and Buster Gun! Color coding is also reproduced to the utmost.",
@@ -43,30 +81,22 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4369.jpg",
+				"src": "https://bandai-hobby.net/images/153_4369_s_beo6pvlaaj6mrq06vpvfrm2p9srl.jpg",
 				"path": "/images/items/01_3415/153_4369.jpg",
 				"hash": "0bfaeebab6782c40f4731f89a4882f62"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4369.jpg",
+				"src": "https://bandai-hobby.net/images/155_4369_s_8btnht932kmxtg87rke9eodgioqh.jpg",
 				"path": "/images/items/01_3415/155_4369.jpg",
 				"hash": "d7499fcd551f056af351aba246bfabb6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4369.jpg",
+				"src": "https://bandai-hobby.net/images/156_4369_s_kwxb67pwqbe31jtjuegaj68ux4t9.jpg",
 				"path": "/images/items/01_3415/156_4369.jpg",
 				"hash": "ee54309dbd578d2fa94e910d183e644b"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3415/",
-	"brandIds": ["rg"],
-	"seriesIds": ["crossbone"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_3456", "item-1000142961", "01_2251"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3415/"
 }

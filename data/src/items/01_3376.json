@@ -5,6 +5,39 @@
 		"ja": "ＭＧ 1/100 ガンダムＦ９０用 ミッションパック Ｉタイプ（木星決戦仕様）",
 		"en": "Mission pack I type for MG 1/100 Gundam F90 (Jupiter decisive battle specification)"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "crossbone-koutetsu7",
+			"url": "https://bandai-hobby.net/series/crossbone-koutetsu7/",
+			"ja": "機動戦士クロスボーン・ガンダム 鋼鉄の7人"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/100",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -17,7 +50,6 @@
 		"month": 3
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「 鋼 鉄 の ７ 人 」 が 一 人",
@@ -58,13 +90,13 @@
 		],
 		"en": [
 			"There is one \"Seven of Steel\"",
-			"Reproducing Minoru Suzuki's F90I type -",
+			"Reproduction of Minoru Suzuki's F90I type -",
 			"---",
-			"Jointed with \"MG 1/100 Gundam F90\" (sold separately),",
+			"Jointed with \"MG 1/100 GundamF90\" (sold separately),",
 			"A mission pack that allows you to reproduce the Gundam F90 I type (Jupiter battle specification) that appeared in \"Mobile Suit Crossbone Gundam Seven of Steel\" is now available!",
 			"---",
 			"*The MS body is not included with this product.",
-			"* To reproduce the posted photo, this product and \"MG 1/100 Gundam F90\" (sold separately/Premium Bandai sales item) are required.",
+			"* To reproduce the posted photo, this product and \"MG 1/100 GundamF90\" (sold separately/Premium Bandai sales item) are required.",
 			"● Reproduce Shot Lancer with new modeling.",
 			"A shot lancer and beam rifle equipped with a small nuclear missile is included with a new model.",
 			"The lance part at the tip can be removed to reproduce the injection state.",
@@ -76,7 +108,7 @@
 			"Attached weapons: Shot Lancer / I type equipment set",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/100 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -94,21 +126,26 @@
 			"・Product specifications are as of 202012. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["ショット・ランサー", "Iタイプ装備一式"],
-		"en": ["shot lancer", "I type equipment set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ショット・ランサー",
+				"en": "shot lancer"
+			}
+		},
+		{
+			"name": {
+				"ja": "Iタイプ装備一式",
+				"en": "I type equipment set"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152314_1.jpg",
 				"path": "/images/items/01_3376/1000152314_1.jpg",
 				"hash": "114e383c41deebd8a0d46b0d6632655b"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152314_10.jpg",
-				"path": "/images/items/01_3376/1000152314_10.jpg",
-				"hash": "a034c6e5a8f13f68d8ead4b10dbe0c5e"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152314_2.jpg",
@@ -149,19 +186,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152314_9.jpg",
 				"path": "/images/items/01_3376/1000152314_9.jpg",
 				"hash": "6a8b144e6ca09584484b162d2de3e7db"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152314_10.jpg",
+				"path": "/images/items/01_3376/1000152314_10.jpg",
+				"hash": "a034c6e5a8f13f68d8ead4b10dbe0c5e"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3376/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": ["crossbone-koutetsu7"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": [],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2395",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2395/"

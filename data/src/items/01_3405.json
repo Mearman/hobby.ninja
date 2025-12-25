@@ -5,6 +5,43 @@
 		"ja": "SDW HEROES 悟空インパルスガンダム",
 		"en": "SDW HEROES Goku Impulse Gundam"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5470",
+			"url": "https://bandai-hobby.net/item/01_5470/",
+			"ja": "SDW HEROES キャプテンクアンタ GF"
+		},
+		{
+			"id": "01_5471",
+			"url": "https://bandai-hobby.net/item/01_5471/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-B"
+		},
+		{
+			"id": "01_5472",
+			"url": "https://bandai-hobby.net/item/01_5472/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-F"
+		},
+		{
+			"id": "01_5347",
+			"url": "https://bandai-hobby.net/item/01_5347/",
+			"ja": "SDW HEROES スペリオルフォーミュラー ファイナルドラゴン[クリアカラー]"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -21,11 +58,11 @@
 	"description": {
 		"ja": [
 			"2021年４月より全世界にてアニメがスタート予定の『SDガンダムワールド ヒーローズ』より悟空インパルスガンダムが登場！",
-			"■組み替えで３段階にシルエットが変化！脚部可動で大胆アクションが決まるスペシャルキット！",
-			"■多数のクリアエフェクトパーツが付属し、組み替え演出が可能。",
-			"■悟空シルエット、剛猿形態、紅蓮爪は、それぞれクリアパーツと装備の組み替えで再現。",
-			"■悟空インパルスの蹴り技アクションを強化する足首関節パーツが付属！",
-			"■「仮面」パーツはクリア成形で付属。"
+			"• 組み替えで３段階にシルエットが変化！脚部可動で大胆アクションが決まるスペシャルキット！",
+			"• 多数のクリアエフェクトパーツが付属し、組み替え演出が可能。",
+			"• 悟空シルエット、剛猿形態、紅蓮爪は、それぞれクリアパーツと装備の組み替えで再現。",
+			"• 悟空インパルスの蹴り技アクションを強化する足首関節パーツが付属！",
+			"• 「仮面」パーツはクリア成形で付属。"
 		],
 		"en": [
 			"Goku Impulse Gundam appears from Scheduled's \"SD Gundam World Heroes\", which will be released worldwide in 20214!",
@@ -36,53 +73,72 @@
 			"• \"Mask\" parts are included in clear molding."
 		]
 	},
-	"accessories": {
-		"ja": ["如意棒×1", "クリアエフェクトパーツ(仮面/紅蓮爪他)×1式", "ホイルシール×1"],
-		"en": ["Nyoi stick x1", "Clear effect parts (mask/crimson claw, etc.) x 1 set", "Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "如意棒",
+				"en": "Nyoi stick"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "クリアエフェクトパーツ(仮面/紅蓮爪他)",
+				"en": "Clear effect parts (mask/crimson claw, etc.)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4359.jpg",
+				"src": "https://bandai-hobby.net/images/153_4359_s_pgq05klzwrtvcmo1jktm6hdmhhk4.jpg",
 				"path": "/images/items/01_3405/153_4359.jpg",
 				"hash": "489f15eea27059aa45ee164ad6050efc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4359.jpg",
+				"src": "https://bandai-hobby.net/images/155_4359_s_lar7go6nbxba7pvd1iunxu8jfqlc.jpg",
 				"path": "/images/items/01_3405/155_4359.jpg",
 				"hash": "29c648c44818bb872396e831d81a2e52"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4359.jpg",
+				"src": "https://bandai-hobby.net/images/156_4359_s_pvl57h1fu7yypuy4ded3wcblc1x7.jpg",
 				"path": "/images/items/01_3405/156_4359.jpg",
 				"hash": "9ad230b03db587de3fe43b1944fb3f0d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4359.jpg",
+				"src": "https://bandai-hobby.net/images/157_4359_s_jvs6ek9bjxt5tyuskh2ue0o3k4df.jpg",
 				"path": "/images/items/01_3405/157_4359.jpg",
 				"hash": "8093c41889319b18a1ee73fe8077e61d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4359.jpg",
+				"src": "https://bandai-hobby.net/images/158_4359_s_s88avno3v247l2hbzye4e969lpkz.jpg",
 				"path": "/images/items/01_3405/158_4359.jpg",
 				"hash": "64383a45d5102e3a12518c05940dbfa2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4359.jpg",
+				"src": "https://bandai-hobby.net/images/159_4359_s_6tjertkbxzmxlhj93vl9gn6hxexb.jpg",
 				"path": "/images/items/01_3405/159_4359.jpg",
 				"hash": "62daa86e4aef23d13a32ccc38dccf1b3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4359.jpg",
+				"src": "https://bandai-hobby.net/images/189_4359_s_2ywcqynze3a4y4e25x6ffoypozus.jpg",
 				"path": "/images/items/01_3405/189_4359.jpg",
 				"hash": "4be889e93dfa62ea4677dd5740c7b676"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3405/",
-	"brandIds": [],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3405/"
 }

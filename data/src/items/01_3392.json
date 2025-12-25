@@ -5,6 +5,50 @@
 		"ja": "HG 1/48 ジャガーノート(汎用仕様)",
 		"en": "HG 1/48 Juggernaut (general purpose)"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "eightysix",
+			"url": "https://bandai-hobby.net/series/eightysix/",
+			"ja": "86-エイティシックス-"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3665",
+			"url": "https://bandai-hobby.net/item/01_3665/",
+			"ja": "HG 1/48 レギンレイヴ（クレナ/アンジュ搭乗機）"
+		},
+		{
+			"id": "01_3647",
+			"url": "https://bandai-hobby.net/item/01_3647/",
+			"ja": "HG 1/48 レギンレイヴ（シン搭乗機）"
+		},
+		{
+			"id": "01_3648",
+			"url": "https://bandai-hobby.net/item/01_3648/",
+			"ja": "HG 1/48 レギンレイヴ（ライデン/セオ搭乗機）"
+		},
+		{
+			"id": "01_3400",
+			"url": "https://bandai-hobby.net/item/01_3400/",
+			"ja": "HG 1/48 ジャガーノート(遠距離砲撃仕様)"
+		}
+	],
+	"scale": "1/48",
 	"price": {
 		"amount": 2970,
 		"currency": "JPY",
@@ -18,18 +62,17 @@
 		"day": 17
 	},
 	"targetAge": 15,
-	"scale": "1/48",
 	"description": {
 		"ja": [
 			"2021年４月に地上波にてアニメ放送開始の『86－エイティシックス－』より、主人公達が搭乗する戦闘機械「ジャガーノート」が1/48スケールで登場！",
-			"■原作ベースのハイディテール表現",
-			"■各部の可動で多彩なアクションが可能",
-			"■ジャガーノートの特徴的な「滑腔砲」は標準装備。",
-			"■汎用機には「重機関銃」が付属。",
-			"■ジャガーノートと同スケールで支援機スカベンジャーと、カイエとレーナのフィギュアが付属。"
+			"• 原作ベースのハイディテール表現",
+			"• 各部の可動で多彩なアクションが可能",
+			"• ジャガーノートの特徴的な「滑腔砲」は標準装備。",
+			"• 汎用機には「重機関銃」が付属。",
+			"• ジャガーノートと同スケールで支援機スカベンジャーと、カイエとレーナのフィギュアが付属。"
 		],
 		"en": [
-			"From \"86-Eighty Six-\", which will begin airing on terrestrial TV in 20214, the fighting machine \" Juggernaut\" piloted by the main characters is now available in 1/48 scale!",
+			"From \"86-Eighty Six-\", which will begin airing on terrestrial TV in 20214, the fighting machine \"Juggernaut\" piloted by the main characters is now available in 1/48 scale!",
 			"• High-detail expression based on the original work",
 			"• Each part is movable, allowing for a variety of actions.",
 			"• Juggernaut's characteristic \"smoothbore cannon\" is standard equipment.",
@@ -37,84 +80,111 @@
 			"• Comes with support aircraft Scavenger in the same scale as Juggernaut, and figures of Kaie and Lena."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"滑腔砲×1",
-			"重機関銃×2",
-			"リード線×2",
-			"スカベンジャー×1",
-			"フィギュア×2種（カイエ［座り］、レーナ［立ち］）",
-			"専用台座×1",
-			"マーキングシール×1"
-		],
-		"en": [
-			"Smoothbore gun x 1",
-			"Heavy machine gun x 2",
-			"Lead wire x 2",
-			"Scavenger x1",
-			"Figures x 2 types (Kaie [sitting], Lena [standing])",
-			"Dedicated pedestal x 1",
-			"MarkingSeal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "滑腔砲",
+				"en": "smoothbore gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "重機関銃",
+				"en": "heavy machine gun"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "リード線",
+				"en": "lead wire"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "スカベンジャー",
+				"en": "scavenger"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "フィギュア",
+				"en": "figure"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "専用台座",
+				"en": "Dedicated pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4346.jpg",
+				"src": "https://bandai-hobby.net/images/153_4346_s_9avtft5qq5ae37lufwku5l4e9dem.jpg",
 				"path": "/images/items/01_3392/153_4346.jpg",
 				"hash": "77f3a68ccd76222974eded16589e1a1f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4346.jpg",
+				"src": "https://bandai-hobby.net/images/155_4346_s_qxtkr2i6w2fv133ndszqqhcjdkjl.jpg",
 				"path": "/images/items/01_3392/155_4346.jpg",
 				"hash": "b0412aea65099a1aee9affd313895ee7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4346.jpg",
+				"src": "https://bandai-hobby.net/images/156_4346_s_8qrtukmovkhpszkqbrevhx5fdiig.jpg",
 				"path": "/images/items/01_3392/156_4346.jpg",
 				"hash": "db5bc0040f8f9bccf9a036e9d7aecb86"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4346.jpg",
+				"src": "https://bandai-hobby.net/images/157_4346_s_7xqqdzq0qqf56rt9qelfg65y5lwf.jpg",
 				"path": "/images/items/01_3392/157_4346.jpg",
 				"hash": "6e63da7a5d9eb63caf4aede6ced744b9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4346.jpg",
+				"src": "https://bandai-hobby.net/images/158_4346_s_i9dclcv4c48ddfqzoapxoa8fmc39.jpg",
 				"path": "/images/items/01_3392/158_4346.jpg",
 				"hash": "5cc1d86cb2f8639ae547304aa51e2b20"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4346.jpg",
+				"src": "https://bandai-hobby.net/images/159_4346_s_buvhn8cee3flwgfkmvso992ezn52.jpg",
 				"path": "/images/items/01_3392/159_4346.jpg",
 				"hash": "347788402e88866f20ba9a225be8bf5c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4346.jpg",
+				"src": "https://bandai-hobby.net/images/189_4346_s_eghwlvdvzof6ts5y4wnq0cqz3hn9.jpg",
 				"path": "/images/items/01_3392/189_4346.jpg",
 				"hash": "249b456c17f9fa7ab27b8f4ca38195a8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4346.jpg",
+				"src": "https://bandai-hobby.net/images/190_4346_s_n68n255i3eh8zstumgk4g5gj17jh.jpg",
 				"path": "/images/items/01_3392/190_4346.jpg",
 				"hash": "8f545514fbb634b80c2bde940210aacb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4346.jpg",
+				"src": "https://bandai-hobby.net/images/191_4346_s_2g9k3nonb9bahxnozkf0phpntxen.jpg",
 				"path": "/images/items/01_3392/191_4346.jpg",
 				"hash": "e2f1e5cf80bccf02057d358482f4ce10"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4346.jpg",
+				"src": "https://bandai-hobby.net/images/192_4346_s_hnm7hg6aha1u52oh2xj2m4bcae5y.jpg",
 				"path": "/images/items/01_3392/192_4346.jpg",
 				"hash": "532b1dd28baea3d1ecb24b31999c345f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3392/",
-	"brandIds": ["hg"],
-	"seriesIds": ["eightysix"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_3665", "01_3647", "01_3648", "01_3400"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3392/"
 }

@@ -5,6 +5,49 @@
 		"ja": "RG エヴァンゲリオン Mark.06",
 		"en": "RG Evangelion Mark.06"
 	},
+	"brands": [
+		{
+			"id": "rg-c",
+			"url": "https://bandai-hobby.net/brand/rg-c/",
+			"ja": "RG［ リアルグレード ］"
+		}
+	],
+	"series": [
+		{
+			"id": "evangelion",
+			"url": "https://bandai-hobby.net/series/evangelion/",
+			"ja": "エヴァンゲリオン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000163344",
+			"url": "https://p-bandai.jp/item/item-1000163344/",
+			"ja": "ＲＧ エヴァンゲリオン専用拘束兼移動式射出台セット"
+		},
+		{
+			"id": "01_3617",
+			"url": "https://bandai-hobby.net/item/01_3617/",
+			"ja": "RG 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン 正規実用型 3号機 ESVシールド セット"
+		},
+		{
+			"id": "01_2855",
+			"url": "https://bandai-hobby.net/item/01_2855/",
+			"ja": "RG 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン 正規実用型 2号機（先行量産機）"
+		},
+		{
+			"id": "01_2765",
+			"url": "https://bandai-hobby.net/item/01_2765/",
+			"ja": "RG 汎用ヒト型決戦兵器 人造人間エヴァンゲリオン試作零号機DX 陽電子砲セット"
+		}
+	],
 	"price": {
 		"amount": 5280,
 		"currency": "JPY",
@@ -21,10 +64,10 @@
 	"description": {
 		"ja": [
 			"「ヱヴァンゲリヲン新劇場版」よりエヴァンゲリオンMark.06を商品化！",
-			"■「人造人間」という劇中の設定をもとに、ヒトとして自然なアクションポーズの再現を追求。",
-			"■アンテナ、頭部の球体、瞳の色分けを、インサート成形により再現。",
-			"■劇中で印象深い「カシウスの槍」を新規造形にて再現。",
-			"■頭部にいただく光輪はPET素材を採用し再現。"
+			"• 「人造人間」という劇中の設定をもとに、ヒトとして自然なアクションポーズの再現を追求。",
+			"• アンテナ、頭部の球体、瞳の色分けを、インサート成形により再現。",
+			"• 劇中で印象深い「カシウスの槍」を新規造形にて再現。",
+			"• 頭部にいただく光輪はPET素材を採用し再現。"
 		],
 		"en": [
 			"Commercialize Evangelion Mark.06 from \"Evangelion New Theatrical Version\"!",
@@ -34,31 +77,46 @@
 			"• The halo on the head is reproduced using PET material."
 		]
 	},
-	"accessories": {
-		"ja": ["カシウスの槍×1", "光輪シート×1", "リアリスティックデカール×1", "ハンドパーツ×1式"],
-		"en": ["Spear of Cassius x1", "Halo sheet x 1", "Realistic decal x 1", "Hand parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "カシウスの槍",
+				"en": "Spear of Cassius"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "光輪シート",
+				"en": "halo sheet"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール",
+				"en": "realistic decals"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159985_1.jpg",
 				"path": "/images/items/01_3413/1000159985_1.jpg",
 				"hash": "db58cfc5a49f9d75e94325d569e55eee"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159985_10.jpg",
-				"path": "/images/items/01_3413/1000159985_10.jpg",
-				"hash": "474a60573df01c4358b47c08644e3de1"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159985_11.jpg",
-				"path": "/images/items/01_3413/1000159985_11.jpg",
-				"hash": "759ff42b5589414278e71eff8a3cf147"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159985_12.jpg",
-				"path": "/images/items/01_3413/1000159985_12.jpg",
-				"hash": "26320977b7a68bc61a607edcf42ef19d"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159985_2.jpg",
@@ -99,13 +157,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159985_9.jpg",
 				"path": "/images/items/01_3413/1000159985_9.jpg",
 				"hash": "9a91f5101d706ed1c2aaff4cf21d7aad"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159985_10.jpg",
+				"path": "/images/items/01_3413/1000159985_10.jpg",
+				"hash": "474a60573df01c4358b47c08644e3de1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159985_11.jpg",
+				"path": "/images/items/01_3413/1000159985_11.jpg",
+				"hash": "759ff42b5589414278e71eff8a3cf147"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159985_12.jpg",
+				"path": "/images/items/01_3413/1000159985_12.jpg",
+				"hash": "26320977b7a68bc61a607edcf42ef19d"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3413/",
-	"brandIds": ["rg"],
-	"seriesIds": ["evangelion"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["item-1000163344", "01_3617", "01_2855", "01_2765"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3413/"
 }

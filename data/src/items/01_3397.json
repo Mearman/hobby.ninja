@@ -5,6 +5,43 @@
 		"ja": "ポケモンプラモコレクション クイック!! 06 ポッチャマ",
 		"en": "Pokemon Plastic Model Collection Quick!! 06 Piplup"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5984",
+			"url": "https://bandai-hobby.net/item/01_5984/",
+			"ja": "ポケモンプラモコレクション 60 セレクトシリーズ コライドン"
+		},
+		{
+			"id": "01_5958",
+			"url": "https://bandai-hobby.net/item/01_5958/",
+			"ja": "ポケモンプラモコレクション 59 セレクトシリーズ ミライドン"
+		},
+		{
+			"id": "01_5947",
+			"url": "https://bandai-hobby.net/item/01_5947/",
+			"ja": "ポケモンプラモコレクション クイック!! 23 ジラーチ"
+		},
+		{
+			"id": "01_5568",
+			"url": "https://bandai-hobby.net/item/01_5568/",
+			"ja": "ポケモンプラモコレクション 58 セレクトシリーズ グレンアルマ"
+		}
+	],
 	"price": {
 		"amount": 715,
 		"currency": "JPY",
@@ -28,7 +65,7 @@
 			"• シールの使用箇所も最小限に。"
 		],
 		"en": [
-			"Easy and simple assembly! Piplup appears in \"PokéPla Quick!!\", which is perfect for your first plastic model experience!",
+			"Easy and simple assembly! Piplup appears in \"PokePla Quick!!\", which is perfect for your first plastic model experience!",
 			"• Piplup with a total length of about 75mm made of 12 parts.",
 			"• Easy assembly and colorful finish achieved by carefully dividing parts.",
 			"• Simple specifications that make you imagine the finished product the moment you see the Runner.",
@@ -36,10 +73,15 @@
 			"• Minimize the number of seals used."
 		]
 	},
-	"accessories": {
-		"ja": ["ホイルシール×1"],
-		"en": ["Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -80,9 +122,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3397/",
-	"brandIds": [],
-	"seriesIds": ["pokemon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3397/"
 }

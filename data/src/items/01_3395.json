@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard ULTRAMAN SUIT Ver7.5(強行突入型) -ACTION-",
 		"en": "Figure-rise Standard ULTRAMAN SUIT Ver7.5 (forced entry type) -ACTION-"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "ultraman",
+			"url": "https://bandai-hobby.net/series/ultraman/",
+			"ja": "ウルトラマン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5371",
+			"url": "https://bandai-hobby.net/item/01_5371/",
+			"ja": "Figure-rise Standard ウルトラマンティガ マルチタイプ"
+		},
+		{
+			"id": "01_5198",
+			"url": "https://bandai-hobby.net/item/01_5198/",
+			"ja": "Figure-rise Standard ウルトラマンジード プリミティブ"
+		},
+		{
+			"id": "01_5096",
+			"url": "https://bandai-hobby.net/item/01_5096/",
+			"ja": "Figure-rise Standard ULTRAMAN SUIT JACK -ACTION-"
+		},
+		{
+			"id": "01_5046",
+			"url": "https://bandai-hobby.net/item/01_5046/",
+			"ja": "Figure-rise Standard ウルトラマンブレーザー"
+		}
+	],
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -21,14 +64,14 @@
 	"description": {
 		"ja": [
 			"「月刊ホビージャパン」連載の外伝ストーリー『ULTRAMAN SUIT ANOTHER UNIVERSE』より、「ULTRAMAN SUIT Ver.7.5」の強行突入型が登場！",
-			"■成形色にはブラックメタリックとダークグレーを採用し、重厚感を表現。",
-			"■LEDを排除し、複数のボールジョイントで胸部と腹部を連結し可動させる独自の新技術を採用したことで、ひねり方向の可動域が大幅アップ。",
-			"■原作者・清水栄一氏によるオリジナルデザインの武器EYE SLUGGERが付属。",
-			"■WIDE SHOT、EX-RIFLEに加えて、二刀流を再現できるSPECIUM SWORDが２本付属。",
-			"■EX-RIFLEはプラモデルオリジナルの銃身拡張パーツ付き。"
+			"• 成形色にはブラックメタリックとダークグレーを採用し、重厚感を表現。",
+			"• LEDを排除し、複数のボールジョイントで胸部と腹部を連結し可動させる独自の新技術を採用したことで、ひねり方向の可動域が大幅アップ。",
+			"• 原作者・清水栄一氏によるオリジナルデザインの武器EYE SLUGGERが付属。",
+			"• WIDE SHOT、EX-RIFLEに加えて、二刀流を再現できるSPECIUM SWORDが２本付属。",
+			"• EX-RIFLEはプラモデルオリジナルの銃身拡張パーツ付き。"
 		],
 		"en": [
-			"From the side story \"ULTRAMAN SUIT ANOTHER UNIVERSE \" serialized in \" Hobby Japan \", a forced entry version of \" ULTRAMAN SUIT Ver.7.5\" is now available!",
+			"From the side story \"ULTRAMAN SUIT ANOTHER UNIVERSE\" serialized in \"Hobby Japan\", a forced entry version of \"ULTRAMAN SUIT Ver.7.5\" is now available!",
 			"• The molding colors are black metallic and dark gray to create a solid feel.",
 			"• By eliminating LEDs and adopting a unique new technology that connects and moves the chest and abdomen using multiple ball joints, the range of motion in the twisting direction has been greatly increased.",
 			"• Comes with the original designed weapon EYE SLUGGER by the original author, Eiichi Shimizu.",
@@ -36,94 +79,135 @@
 			"• EX-RIFLE comes with plastic model original barrel extension parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"SPACIUM SWORD×2",
-			"SPACIUM SWORD用鞘×2",
-			"KNIFE×２",
-			"WIDE SHOT×２",
-			"オリジナル武器「EYE SLUGGER」×２",
-			"オリジナル武器「EX-RIFLE」×２",
-			"オリジナル武器「EX-RIFLE拡張バレル」×２",
-			"ハンドパーツ　平手（左右）、握り手（左右）、EX-RIFLE持ち手（左右）",
-			"Figure-rise Effect 台座×１",
-			"台座用ジョイントパーツ×１",
-			"マーキングシール×１",
-			"ホイルシール×１"
-		],
-		"en": [
-			"SPACIUM SWORD×2",
-			"Sheath for SPACIUM SWORD x 2",
-			"KNIFE×2",
-			"WIDE SHOT×2",
-			"Original weapon \"EYE SLUGGER\" x 2",
-			"Original weapon \"EX-RIFLE\" x 2",
-			"Original weapon \"EX-RIFLE expansion barrel\" x 2",
-			"Hand parts Open hand (left and right), grip hand (left and right), EX-RIFLE handle (left and right)",
-			"Figure-rise Effect pedestal x 1",
-			"Joint parts for pedestal x 1",
-			"MarkingSeal×1",
-			"Foil Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "SPACIUM SWORD"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "SPACIUM SWORD用鞘",
+				"en": "Scabbard for SPACIUM SWORD"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "KNIFE×２",
+				"en": "KNIFE×2"
+			}
+		},
+		{
+			"name": {
+				"ja": "WIDE SHOT×２",
+				"en": "WIDE SHOT×2"
+			}
+		},
+		{
+			"name": {
+				"ja": "オリジナル武器「EYE SLUGGER」×２",
+				"en": "Original weapon \"EYE SLUGGER\" x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "オリジナル武器「EX-RIFLE」×２",
+				"en": "Original weapon \"EX-RIFLE\" x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "オリジナル武器「EX-RIFLE拡張バレル」×２",
+				"en": "Original weapon \"EX-RIFLE expansion barrel\" x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ　平手（左右）、握り手（左右）、EX-RIFLE持ち手（左右）",
+				"en": "Hand parts Open hand (left and right), grip hand (left and right), EX-RIFLE handle (left and right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "Figure-rise Effect 台座×１",
+				"en": "Figure-rise Effect pedestal x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "台座用ジョイントパーツ×１",
+				"en": "Joint parts for pedestal x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール×１",
+				"en": "MarkingSeal×1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール×１",
+				"en": "Foil Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4349.jpg",
+				"src": "https://bandai-hobby.net/images/153_4349_s_abctapsrsficwh3o50y4vmvd4idt.jpg",
 				"path": "/images/items/01_3395/153_4349.jpg",
 				"hash": "19ab7dd2f6d3a90e4f961183cc5f263b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4349.jpg",
+				"src": "https://bandai-hobby.net/images/155_4349_s_jara2sukncf7szow4j6g07ohxcsh.jpg",
 				"path": "/images/items/01_3395/155_4349.jpg",
 				"hash": "cddf42b7c73b21a89c7046c016e0dd33"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4349.jpg",
+				"src": "https://bandai-hobby.net/images/156_4349_s_tml668ynzlezj1vjcusgt2nd3j6u.jpg",
 				"path": "/images/items/01_3395/156_4349.jpg",
 				"hash": "5ae1e8f61c2ba0a675d2a8779dfc28de"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4349.jpg",
+				"src": "https://bandai-hobby.net/images/157_4349_s_orhqcueqmlpp5bgrfbt9a9rkchvm.jpg",
 				"path": "/images/items/01_3395/157_4349.jpg",
 				"hash": "c4223f3a4547d6116f9415e0c49dbe4f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4349.jpg",
+				"src": "https://bandai-hobby.net/images/158_4349_s_rox4whcq6q21440eljmfmgz9tf8n.jpg",
 				"path": "/images/items/01_3395/158_4349.jpg",
 				"hash": "c41ef5db42b605f01e8b9e610a7c166e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4349.jpg",
+				"src": "https://bandai-hobby.net/images/159_4349_s_q8wdp4vk2eep3khnsagoic4fglve.jpg",
 				"path": "/images/items/01_3395/159_4349.jpg",
 				"hash": "a954856c82c2ba4f3199eb5a4375a907"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4349.jpg",
+				"src": "https://bandai-hobby.net/images/189_4349_s_xlpkzm8oo7a4lkl3nf121s25nuco.jpg",
 				"path": "/images/items/01_3395/189_4349.jpg",
 				"hash": "cb661b1a93ce7573392655981cc61fc7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4349.jpg",
+				"src": "https://bandai-hobby.net/images/190_4349_s_jmijdpvo16cn37ebxnoxfgi73duj.jpg",
 				"path": "/images/items/01_3395/190_4349.jpg",
 				"hash": "5f43624ce2e25221728241a4e7e78964"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4349.jpg",
+				"src": "https://bandai-hobby.net/images/191_4349_s_267wcujetcij2csvdvtss5okvch1.jpg",
 				"path": "/images/items/01_3395/191_4349.jpg",
 				"hash": "de62ea10eae61d82280cb29c246927c6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4349.jpg",
+				"src": "https://bandai-hobby.net/images/192_4349_s_015xhmtspa7h3qkv4p0dip2ln36q.jpg",
 				"path": "/images/items/01_3395/192_4349.jpg",
 				"hash": "fbeebc2a8484ae94959fe260b75f758b"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3395/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["ultraman"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5371", "01_5198", "01_5096", "01_5046"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3395/"
 }

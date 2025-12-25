@@ -5,6 +5,43 @@
 		"ja": "ポケモンプラモコレクション BIG 01 コイキング",
 		"en": "Pokemon plastic model collection BIG 01 Magikarp"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5984",
+			"url": "https://bandai-hobby.net/item/01_5984/",
+			"ja": "ポケモンプラモコレクション 60 セレクトシリーズ コライドン"
+		},
+		{
+			"id": "01_5958",
+			"url": "https://bandai-hobby.net/item/01_5958/",
+			"ja": "ポケモンプラモコレクション 59 セレクトシリーズ ミライドン"
+		},
+		{
+			"id": "01_5947",
+			"url": "https://bandai-hobby.net/item/01_5947/",
+			"ja": "ポケモンプラモコレクション クイック!! 23 ジラーチ"
+		},
+		{
+			"id": "01_5568",
+			"url": "https://bandai-hobby.net/item/01_5568/",
+			"ja": "ポケモンプラモコレクション 58 セレクトシリーズ グレンアルマ"
+		}
+	],
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -21,46 +58,57 @@
 	"description": {
 		"ja": [
 			"ポケモンの魅力をつめこんだとにかく大きいプラモデル！第一弾は「さかなポケモン」のコイキングが登場！",
-			"■組み立てやすい大きな全30パーツ。全長約20センチ。",
-			"■パーツによる色分け再現で、シールの使用は最小限に。",
-			"■特徴的なひげは、本体とは異なる折れにくい素材で再現。",
-			"■パーツの差し替えで、わざ「はねる」の躍動感あるポージングも表現可能。",
-			"■専用ディスプレイベースが付属。"
+			"• 組み立てやすい大きな全30パーツ。全長約20センチ。",
+			"• パーツによる色分け再現で、シールの使用は最小限に。",
+			"• 特徴的なひげは、本体とは異なる折れにくい素材で再現。",
+			"• パーツの差し替えで、わざ「はねる」の躍動感あるポージングも表現可能。",
+			"• 専用ディスプレイベースが付属。"
 		],
 		"en": [
 			"A really big plastic model packed with the charm of Pokemon! The first one is the \"Fish Pokemon\" Magikarp!",
 			"• 30 large parts that are easy to assemble. Total length approximately 20cm.",
 			"• Color-coded reproduction by parts minimizes the use of seals.",
-			"• The characteristic whiskers are made of a material that is different from the main body and is difficult to break.",
+			"• The characteristic whiskers are made of a material that is different from the main body and is hard to break.",
 			"• By replacing parts, you can create dynamic poses with the \"bouncing\" move.",
 			"• Comes with a dedicated display base."
 		]
 	},
-	"accessories": {
-		"ja": ["ランナー×6", "ホイルシール×1", "専用ベース×1", "取扱説明書×1"],
-		"en": ["Runner×6", "Foil Seal×1", "Dedicated base x 1", "Handling manual×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ランナー",
+				"en": "Runner"
+			},
+			"count": 6
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "専用ベース",
+				"en": "dedicated base"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "取扱説明書",
+				"en": "Handling manual"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156204_1.jpg",
 				"path": "/images/items/01_3358/1000156204_1.jpg",
 				"hash": "29ad45b591e4e39f41008eade2f8b8ee"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156204_10.jpg",
-				"path": "/images/items/01_3358/1000156204_10.jpg",
-				"hash": "17866dcf68b16eb1ba7aa0925cc1284c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156204_11.jpg",
-				"path": "/images/items/01_3358/1000156204_11.jpg",
-				"hash": "b3baa7c81b14833519f04d92f489c232"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156204_12.jpg",
-				"path": "/images/items/01_3358/1000156204_12.jpg",
-				"hash": "adf4d09caf17a0edb829a907d19af0d9"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156204_2.jpg",
@@ -101,13 +149,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156204_9.jpg",
 				"path": "/images/items/01_3358/1000156204_9.jpg",
 				"hash": "85d048558b454f7302de5ba6eaaf5961"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156204_10.jpg",
+				"path": "/images/items/01_3358/1000156204_10.jpg",
+				"hash": "17866dcf68b16eb1ba7aa0925cc1284c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156204_11.jpg",
+				"path": "/images/items/01_3358/1000156204_11.jpg",
+				"hash": "b3baa7c81b14833519f04d92f489c232"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156204_12.jpg",
+				"path": "/images/items/01_3358/1000156204_12.jpg",
+				"hash": "adf4d09caf17a0edb829a907d19af0d9"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3358/",
-	"brandIds": [],
-	"seriesIds": ["pokemon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3358/"
 }

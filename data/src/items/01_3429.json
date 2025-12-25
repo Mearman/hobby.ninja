@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 エグザビークル(キャノンバイクVer.)",
 		"en": "30MM 1/144 Exer Vehicle (Cannon Bike Ver.)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 858,
 		"currency": "JPY",
@@ -18,15 +61,14 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"カスタマイズの幅を広げる30MM「エグザビークルシリーズ」に、第3勢力からバイクVer.が登場！",
-			"■1輪バイク型のビークル。",
-			"■分解すれば第3勢力のロイロイ、大型キャノンとしても変形可能。",
-			"■ロイロイはボディに接続し、カスタマイズパーツとしても使える。",
-			"■アルト、ポルタノヴァ、ラビオット、シエルノヴァ、既存機体もライド可能。",
-			"■複数購入すれば、2輪バイクにカスタマイズが可能。"
+			"• 1輪バイク型のビークル。",
+			"• 分解すれば第3勢力のロイロイ、大型キャノンとしても変形可能。",
+			"• ロイロイはボディに接続し、カスタマイズパーツとしても使える。",
+			"• アルト、ポルタノヴァ、ラビオット、シエルノヴァ、既存機体もライド可能。",
+			"• 複数購入すれば、2輪バイクにカスタマイズが可能。"
 		],
 		"en": [
 			"A motorcycle version from the third force is now available in the 30MM \"Exa Vehicle Series\" that expands the range of customization!",
@@ -37,31 +79,32 @@
 			"• If you purchase multiple items, you can customize your two-wheeled bike."
 		]
 	},
-	"accessories": {
-		"ja": ["ビークル×1体", "ホイルシール×1"],
-		"en": ["Vehicle x 1", "Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビークル",
+				"en": "vehicle"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "体",
+				"en": "body"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159982_1.jpg",
 				"path": "/images/items/01_3429/1000159982_1.jpg",
 				"hash": "29ae0c679e987457992c67d8a2b033d6"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159982_10.jpg",
-				"path": "/images/items/01_3429/1000159982_10.jpg",
-				"hash": "e1a8479cde5c01f987a0e5b0e5247342"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159982_11.jpg",
-				"path": "/images/items/01_3429/1000159982_11.jpg",
-				"hash": "23a1c0b012ada1349c66bc90297d6a95"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159982_12.jpg",
-				"path": "/images/items/01_3429/1000159982_12.jpg",
-				"hash": "ea91c44571723e2bf78df5518a9a2ef8"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159982_2.jpg",
@@ -102,15 +145,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159982_9.jpg",
 				"path": "/images/items/01_3429/1000159982_9.jpg",
 				"hash": "41b91d16c069ba152ee8504f6450cc77"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159982_10.jpg",
+				"path": "/images/items/01_3429/1000159982_10.jpg",
+				"hash": "e1a8479cde5c01f987a0e5b0e5247342"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159982_11.jpg",
+				"path": "/images/items/01_3429/1000159982_11.jpg",
+				"hash": "23a1c0b012ada1349c66bc90297d6a95"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159982_12.jpg",
+				"path": "/images/items/01_3429/1000159982_12.jpg",
+				"hash": "ea91c44571723e2bf78df5518a9a2ef8"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3429/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3720",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3720/"

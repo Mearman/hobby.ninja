@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 モビルジン",
 		"en": "MG 1/100 Mobile Jin"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "01_5221",
+			"url": "https://bandai-hobby.net/item/01_5221/",
+			"ja": "MG 1/100 イージスガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_4272",
+			"url": "https://bandai-hobby.net/item/01_4272/",
+			"ja": "MG 1/100 ガンダムベース限定 パーフェクトストライクガンダム グランドスラム装備型"
+		},
+		{
+			"id": "01_4195",
+			"url": "https://bandai-hobby.net/item/01_4195/",
+			"ja": "MG 1/100 ガンダムベース限定 エクリプスガンダム[クリアカラー]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4730,
 		"currency": "JPY",
@@ -18,19 +62,18 @@
 		"day": 17
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダムSEED』より、コズミック・イラの量産機「モビルジン」がMGで登場！",
-			"■最新のMG SEEDシリーズの意匠を踏襲したプロポーションとデザイン。MGならではの内部フレーム構成で、モビルジンの特徴的なバックパックをメカニカルに表現。",
-			"■別売りの「MG 1/100 ガナーザクウォーリア（ルナマリア・ホーク専用機）」と同規格のZ.A.F.T.フレームを内蔵。実際の工業製品のような解釈によりフレームを共通採用することで、他のMSと共有可能な量産機特有のデザインを表現。",
-			"■バックパックは上下に軸可動するほか、後方にもスイングし、広範囲な可動を実現。",
-			"■重斬刀は新規設計でシャープなフォルムの刀形状を再現。ディテールも施されている。",
-			"■３連装短距離誘導弾発射筒（ミサイルポッド）は、持ち手の引き出しが可能。精密なパーツ分割によるミサイルの色分けに加え、グリップを引き出す動きも演出できる。",
-			"■マガジン４個、マガジンラック1個付属。マガジンは１個はライフルに、残る３個はマガジンラックに装着できる。"
+			"• 最新のMG SEEDシリーズの意匠を踏襲したプロポーションとデザイン。MGならではの内部フレーム構成で、モビルジンの特徴的なバックパックをメカニカルに表現。",
+			"• 別売りの「MG 1/100 ガナーザクウォーリア（ルナマリア・ホーク専用機）」と同規格のZ.A.F.T.フレームを内蔵。実際の工業製品のような解釈によりフレームを共通採用することで、他のMSと共有可能な量産機特有のデザインを表現。",
+			"• バックパックは上下に軸可動するほか、後方にもスイングし、広範囲な可動を実現。",
+			"• 重斬刀は新規設計でシャープなフォルムの刀形状を再現。ディテールも施されている。",
+			"• ３連装短距離誘導弾発射筒（ミサイルポッド）は、持ち手の引き出しが可能。精密なパーツ分割によるミサイルの色分けに加え、グリップを引き出す動きも演出できる。",
+			"• マガジン４個、マガジンラック1個付属。マガジンは１個はライフルに、残る３個はマガジンラックに装着できる。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam SEED \", Cosmic Ira's mass-produced machine \" Mobile Jin\" is now available in MG!",
+			"From \"Mobile Suit GundamSEED\", Cosmic Ira's mass-produced machine \"Mobile Jin\" is now available in MG!",
 			"• Proportions and design follow the design of the latest MG SEED series. The internal frame structure unique to MG mechanically expresses Mobiljin's distinctive backpack.",
 			"• Built-in Z.A.F.T. frame of the same standard as the separately sold \"MG 1/100 Gunner Zaku Warrior (Luna Maria Hawk exclusive machine)\". By using a common frame that looks like an actual industrial product, it expresses a design unique to mass-produced machines that can be shared with other MSs.",
 			"• The backpack not only pivots up and down, but also swings backwards, allowing for a wide range of movement.",
@@ -39,49 +82,68 @@
 			"• Comes with 4 magazines and 1 magazine rack. One magazine can be attached to the rifle, and the remaining three can be attached to the magazine rack."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"重斬刀×1",
-			"76mm重突撃機銃×1",
-			"マガジンラック×1",
-			"ミサイルポッド×2",
-			"ハンドパーツ（左右）×１種",
-			"表情手再現パーツ（左右）×各3種",
-			"ホイルシール×1",
-			"マーキングシール×1"
-		],
-		"en": [
-			"Heavy sword x1",
-			"76mm heavy assault machine gun x 1",
-			"Magazine rack x 1",
-			"Missile pod x2",
-			"Hand parts (left and right) x 1 type",
-			"Expression hand reproduction parts (left and right) x 3 types each",
-			"Foil Seal×1",
-			"MarkingSeal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "重斬刀",
+				"en": "heavy sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "76mm重突撃機銃",
+				"en": "76mm heavy assault machine gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マガジンラック",
+				"en": "magazine rack"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ミサイルポッド",
+				"en": "missile pod"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ（左右）×１種",
+				"en": "Hand parts (left and right) x 1 type"
+			}
+		},
+		{
+			"name": {
+				"ja": "表情手再現パーツ（左右）×各3種",
+				"en": "Expression hand reproduction parts (left and right) x 3 types each"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156718_1.jpg",
 				"path": "/images/items/01_3389/1000156718_1.jpg",
 				"hash": "b63e7f7feb99f15e0bb7a8e16546d7a2"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156718_10.jpg",
-				"path": "/images/items/01_3389/1000156718_10.jpg",
-				"hash": "ce08c4b9e73d2e969d55132d80394551"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156718_11.jpg",
-				"path": "/images/items/01_3389/1000156718_11.jpg",
-				"hash": "ef5b3b6afac4efa614d97e5a03211b0a"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156718_12.jpg",
-				"path": "/images/items/01_3389/1000156718_12.jpg",
-				"hash": "6648a2eca529abd7ed58c226bc72e307"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156718_2.jpg",
@@ -122,15 +184,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156718_9.jpg",
 				"path": "/images/items/01_3389/1000156718_9.jpg",
 				"hash": "40d603f62c11cf9dde21faa9a493662e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156718_10.jpg",
+				"path": "/images/items/01_3389/1000156718_10.jpg",
+				"hash": "ce08c4b9e73d2e969d55132d80394551"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156718_11.jpg",
+				"path": "/images/items/01_3389/1000156718_11.jpg",
+				"hash": "ef5b3b6afac4efa614d97e5a03211b0a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156718_12.jpg",
+				"path": "/images/items/01_3389/1000156718_12.jpg",
+				"hash": "6648a2eca529abd7ed58c226bc72e307"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3389/",
-	"brandIds": ["mg"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5994", "01_5221", "01_4272", "01_4195"],
 	"manual": {
 		"id": "643",
 		"url": "https://manual.bandai-hobby.net/menus/detail/643/"

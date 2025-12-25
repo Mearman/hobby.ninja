@@ -2,9 +2,51 @@
 	"id": "01_3430",
 	"type": "item",
 	"name": {
-		"ja": "Figure-rise Standard ULTRAMAN SUIT TIGA SKY TYPE -ACTION-",
-		"en": "Figure-rise Standard ULTRAMAN SUIT TIGA SKY TYPE -ACTION-"
+		"ja": "Figure-rise Standard ULTRAMAN SUIT TIGA SKY TYPE -ACTION-"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "ultraman",
+			"url": "https://bandai-hobby.net/series/ultraman/",
+			"ja": "ウルトラマン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5371",
+			"url": "https://bandai-hobby.net/item/01_5371/",
+			"ja": "Figure-rise Standard ウルトラマンティガ マルチタイプ"
+		},
+		{
+			"id": "01_5198",
+			"url": "https://bandai-hobby.net/item/01_5198/",
+			"ja": "Figure-rise Standard ウルトラマンジード プリミティブ"
+		},
+		{
+			"id": "01_5096",
+			"url": "https://bandai-hobby.net/item/01_5096/",
+			"ja": "Figure-rise Standard ULTRAMAN SUIT JACK -ACTION-"
+		},
+		{
+			"id": "01_5046",
+			"url": "https://bandai-hobby.net/item/01_5046/",
+			"ja": "Figure-rise Standard ウルトラマンブレーザー"
+		}
+	],
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -21,89 +63,112 @@
 	"description": {
 		"ja": [
 			"月刊ホビージャパン連載の『ULTRAMAN SUIT ANOTHER UNIVERSE』より、ティガスーツの人気バリエーションタイプ「ティガスーツ スカイタイプ」を-ACTION-シリーズで商品化！",
-			"■清水先生×下口先生描きおろしデザインのスラスターは、側面と背面のパーツに可動ギミックを搭載。",
-			"■腹部および首関節パーツを-ACTION-仕様に形状を改善し、可動範囲を拡大。",
-			"■広範囲な可動域で必殺技ゼペリオン光線の構えポーズを再現可能。",
-			"■プラモデルオリジナル武器のゼペリオンスピアはクリアパーツで付属。",
-			"■LEDユニット（別売り）を胸部に収め、胸と目を光らせることができる。"
+			"• 清水先生×下口先生描きおろしデザインのスラスターは、側面と背面のパーツに可動ギミックを搭載。",
+			"• 腹部および首関節パーツを-ACTION-仕様に形状を改善し、可動範囲を拡大。",
+			"• 広範囲な可動域で必殺技ゼペリオン光線の構えポーズを再現可能。",
+			"• プラモデルオリジナル武器のゼペリオンスピアはクリアパーツで付属。",
+			"• LEDユニット（別売り）を胸部に収め、胸と目を光らせることができる。"
 		],
 		"en": [
-			"From \"ULTRAMAN SUIT ANOTHER UNIVERSE \" serialized in Hobby Japan, the popular variation type of Tiga suit \" Tiga Suit Sky Type\" is commercialized in the -ACTION- series!",
+			"From \"ULTRAMAN SUIT ANOTHER UNIVERSE\" serialized in Hobby Japan, the popular variation type of Tiga suit \"Tiga Suit Sky Type\" is commercialized in the -ACTION- series!",
 			"• The thruster designed by Mr. Shimizu and Mr. Shimoguchi is equipped with movable gimmicks on the side and back parts.",
-			"• The shape of the abdominal and neck joint parts has been improved to -ACTION- specifications and the range of motion has been expanded.",
+			"• The shape of the abdominal and neck joint parts has been improved to -ACTION- specifications, expanding the range of motion.",
 			"• A wide range of motion allows you to recreate the stance pose of the special move Zeperion Ray.",
 			"• Zeperion Spear, a plastic model original weapon, is included as a clear part.",
 			"• An LED unit (sold separately) can be placed in the chest to make the chest and eyes shine."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ゼペリオン光線×1",
-			"ゼペリオンスピア×1",
-			"Figure-rise Effect台座×1",
-			"ホイルシール×1",
-			"マーキングシール×1"
-		],
-		"en": ["Zeperion ray x1", "Zeperion Spear x 1", "Figure-rise Effect pedestal x 1", "Foil Seal×1", "MarkingSeal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ゼペリオン光線",
+				"en": "zeperion ray"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ゼペリオンスピア",
+				"en": "Zeperion Spear"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "Figure-rise Effect台座",
+				"en": "Figure-rise Effect pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4384.jpg",
+				"src": "https://bandai-hobby.net/images/153_4384_s_5qjbpvwmn97n5hq8mrzjgh5w6b4g.jpg",
 				"path": "/images/items/01_3430/153_4384.jpg",
 				"hash": "99b59ebe1cef09b260d5d3cddbe79682"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4384.jpg",
+				"src": "https://bandai-hobby.net/images/155_4384_s_ey8p9o60ch3m4x11hh5vr6wjdg90.jpg",
 				"path": "/images/items/01_3430/155_4384.jpg",
 				"hash": "2f9bc8deb7feaefdfd33353a732463da"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4384.jpg",
+				"src": "https://bandai-hobby.net/images/156_4384_s_pjmpm62apcivh8lqdw6hlmctb42h.jpg",
 				"path": "/images/items/01_3430/156_4384.jpg",
 				"hash": "4775d2a5e3e3a00549e33635960a06a3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4384.jpg",
+				"src": "https://bandai-hobby.net/images/157_4384_s_uzjmji4sznuih7lligulwe4j1enx.jpg",
 				"path": "/images/items/01_3430/157_4384.jpg",
 				"hash": "feab2445d8ef5edb36dd2cbcd41ae523"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4384.jpg",
+				"src": "https://bandai-hobby.net/images/158_4384_s_amvuuxdc6qlg6ljbv4fhxp0ncfm8.jpg",
 				"path": "/images/items/01_3430/158_4384.jpg",
 				"hash": "5e8fa6682f3375ec146a3cdf3ed7452f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4384.jpg",
+				"src": "https://bandai-hobby.net/images/159_4384_s_l8k65rehgxja34jido0n0rdu8l0p.jpg",
 				"path": "/images/items/01_3430/159_4384.jpg",
 				"hash": "0e3ce19d58154fa5fd121e18b9cc3254"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4384.jpg",
+				"src": "https://bandai-hobby.net/images/189_4384_s_qv3i1ecn761opg9vghm5vprw2ucw.jpg",
 				"path": "/images/items/01_3430/189_4384.jpg",
 				"hash": "aca430f5bb2ce3c442e071e46dd407ef"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4384.jpg",
+				"src": "https://bandai-hobby.net/images/190_4384_s_vojt47my7z82qgguvyz4996pyxyj.jpg",
 				"path": "/images/items/01_3430/190_4384.jpg",
 				"hash": "a77ec89db9e02b59e0bde0c20b3b6c52"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4384.jpg",
+				"src": "https://bandai-hobby.net/images/191_4384_s_8v0cdkhhc82xaj3zta9cdhln2fyf.jpg",
 				"path": "/images/items/01_3430/191_4384.jpg",
 				"hash": "8673f6d240d7c784a91685d722e787b0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4384.jpg",
+				"src": "https://bandai-hobby.net/images/192_4384_s_zru9q6vrszwtyditg21149qd2n72.jpg",
 				"path": "/images/items/01_3430/192_4384.jpg",
 				"hash": "103eecf4189901e4a78b449fc0e8a5fa"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3430/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["ultraman"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5371", "01_5198", "01_5096", "01_5046"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3430/"
 }

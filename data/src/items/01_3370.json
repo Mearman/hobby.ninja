@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 インフィニットジャスティスガンダム[クリアカラー]",
 		"en": "HG 1/144 Infinite Justice Gundam [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000203308",
+			"url": "https://p-bandai.jp/item/item-1000203308/",
+			"ja": "ＨＧ 1/144 ダークダガーＬ"
+		},
+		{
+			"id": "01_5097",
+			"url": "https://bandai-hobby.net/item/01_5097/",
+			"ja": "HG 1/144 デストロイガンダム"
+		},
+		{
+			"id": "01_3739",
+			"url": "https://bandai-hobby.net/item/01_3739/",
+			"ja": "HG 1/144 デスティニーガンダム(ハイネ専用機)[クリアカラー]"
+		},
+		{
+			"id": "item-1000157417",
+			"url": "https://p-bandai.jp/item/item-1000157417/",
+			"ja": "ＨＧ 1/144 ウィンダム（ネオ・ロアノーク専用機）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -18,10 +62,9 @@
 		"day": 18
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED DESTINY』より、インフィニットジャスティスガンダムがクリアカラーになって登場！",
+			"『機動戦士ガンダムSEED DESTINY』より、インフィニットジャスティスガンダムがクリアカラーになって登場！",
 			"• クリアピンク、クリアパープルで彩られ、より鮮やかな仕上がりに！",
 			"• 腰部には可動域の拡大及びポージング保持を可能にする内部構造を採用。",
 			"• ファトゥム-01の両翼は反り上がるよう可動ギミックを搭載し、空中戦時のシルエットを再現可能。",
@@ -40,7 +83,6 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_3370_0.jpg",
 				"path": "/images/items/01_3370/01_3370_0.jpg",
 				"hash": "f5d3d2a43f10ea1d866144abc6d57f9e"
 			},
@@ -57,13 +99,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3370/",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed-d"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000203308", "01_5097", "01_3739", "item-1000157417"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3370/"
 }

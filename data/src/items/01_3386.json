@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 Ξガンダム",
 		"en": "HGUC 1/144 ΞGundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "hathaway",
+			"url": "https://bandai-hobby.net/series/hathaway/",
+			"ja": "機動戦士ガンダム 閃光のハサウェイ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5594",
+			"url": "https://bandai-hobby.net/item/01_5594/",
+			"ja": "HG 1/144 メッサーF01型 [クリアカラー]"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4269",
+			"url": "https://bandai-hobby.net/item/01_4269/",
+			"ja": "HG 1/144 ペーネロペー[クリアカラー]"
+		},
+		{
+			"id": "item-1000157737",
+			"url": "https://p-bandai.jp/item/item-1000157737/",
+			"ja": "ＨＧ 1/144 メッサーＦ０２型"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 6600,
 		"currency": "JPY",
@@ -18,102 +67,107 @@
 		"day": 24
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム 閃光のハサウェイ』の主人公機「Ξ（クスィー）ガンダム」をプラモデル化！",
-			"■カトキハジメ氏の最新画稿により、劇中では26ｍを超える大型MSを1/144スケールで徹底再現。細かいディテールまで各パーツに反映させることで密度感とボリューム感を演出。",
-			"■ビーム・サーベル、ビーム・ライフル、シールドの各武装及びハンドパーツ付属。シールドは腕の六角形のパーツを外し、取り付けることができる。",
-			"■ボディ背面のウイング、脚部側面のブレード、ミノフスキー・フライト・ユニットの展開可動を再現。脚部や大型パーツの変形により「MSフォーム」から「フライト・フォーム」への変形が可能。"
+			"• カトキハジメ氏の最新画稿により、劇中では26ｍを超える大型MSを1/144スケールで徹底再現。細かいディテールまで各パーツに反映させることで密度感とボリューム感を演出。",
+			"• ビーム・サーベル、ビーム・ライフル、シールドの各武装及びハンドパーツ付属。シールドは腕の六角形のパーツを外し、取り付けることができる。",
+			"• ボディ背面のウイング、脚部側面のブレード、ミノフスキー・フライト・ユニットの展開可動を再現。脚部や大型パーツの変形により「MSフォーム」から「フライト・フォーム」への変形が可能。"
 		],
 		"en": [
-			"The main character \"Ξ Gundam \" from \" Mobile Suit Gundam: Flash of Hathaway\" has been made into a plastic model!",
+			"The main character \"Ξ Gundam\" from \"Mobile Suit Gundam: Flash of Hathaway\" has been made into a plastic model!",
 			"• Based on Hajime Katoki's latest drawings, the large MS over 26 meters in the play is thoroughly reproduced in 1/144 Scale. By reflecting even the smallest details on each part, a sense of density and volume is created.",
 			"• Beam saber, beam rifle, Seal weapons and hand parts included. The hexagonal parts of Seal's arms can be removed and attached.",
-			"• The wing on the back of the body, the blade on the side of the leg, and the deployment movement of the Minovsky flight unit are reproduced. It is possible to transform from \"MS form \" to \" flight form\" by deforming the legs and large parts."
+			"• The wing on the back of the body, the blade on the side of the leg, and the deployment movement of the Minovsky flight unit are reproduced. It is possible to transform from \"MS form\" to \"flight form\" by deforming the legs and large parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"ビーム・サーベル×2",
-			"シールド×1",
-			"ハンドパーツ　平手（左右）、握り手（左右）、ライフル持ち手（右）",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Beam rifle x1",
-			"Beam saber x2",
-			"Seal × 1",
-			"Hand parts Open hand (left and right), grip hand (left and right), rifle handle (right)",
-			"Foil Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル",
+				"en": "beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ　平手（左右）、握り手（左右）、ライフル持ち手（右）",
+				"en": "Hand parts Open hand (left and right), grip hand (left and right), rifle handle (right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4339.jpg",
+				"src": "https://bandai-hobby.net/images/153_4339_s_fmx3wxhvzgqx942e7cvohy4wepzs.jpg",
 				"path": "/images/items/01_3386/153_4339.jpg",
 				"hash": "ca0c4c09ddde28cc5910931e70f5a8ac"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4339.jpg",
+				"src": "https://bandai-hobby.net/images/155_4339_s_9l9itmoe18irdd68lil1rw1i25e0.jpg",
 				"path": "/images/items/01_3386/155_4339.jpg",
 				"hash": "1b096a8465d0acc2fa6b95b09b7fc6a7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4339.jpg",
+				"src": "https://bandai-hobby.net/images/156_4339_s_w2w3eb2ff0u3enoppu0ab4ouaypm.jpg",
 				"path": "/images/items/01_3386/156_4339.jpg",
 				"hash": "4700dc8888428a9ff03070daeb0bacf1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4339.jpg",
+				"src": "https://bandai-hobby.net/images/157_4339_s_vti9bfxtzj2sm6rybqdfbh6bue6h.jpg",
 				"path": "/images/items/01_3386/157_4339.jpg",
 				"hash": "389ef80c82c4b752488f51d090a4faab"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4339.jpg",
+				"src": "https://bandai-hobby.net/images/158_4339_s_323b7uppql2g3n4qgv4efuc4hiwy.jpg",
 				"path": "/images/items/01_3386/158_4339.jpg",
 				"hash": "515d0efa94e6755a8698d4eee4cd296d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4339.jpg",
+				"src": "https://bandai-hobby.net/images/159_4339_s_l851zouy2cpf2mi01rfwln3z6ban.jpg",
 				"path": "/images/items/01_3386/159_4339.jpg",
 				"hash": "e56bb26c84b0b7039f0cbc1129a00670"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4339.jpg",
+				"src": "https://bandai-hobby.net/images/189_4339_s_3t66b9xfdihujvsk8b1hjxs93rbz.jpg",
 				"path": "/images/items/01_3386/189_4339.jpg",
 				"hash": "bb516294aba2e2c44dfb8aa413d337bc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4339.jpg",
+				"src": "https://bandai-hobby.net/images/190_4339_s_dv0ruswb6cyoat2z7q8whw8wjc2v.jpg",
 				"path": "/images/items/01_3386/190_4339.jpg",
 				"hash": "428ac08afe7038b3720fecb11a674e6e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4339.jpg",
+				"src": "https://bandai-hobby.net/images/191_4339_s_p9yiywrllne29ftorhuo0ntp3qx6.jpg",
 				"path": "/images/items/01_3386/191_4339.jpg",
 				"hash": "ac06481b69652dd97c4f0699d8ba3e84"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_3386_inst_0.jpg",
-				"path": "/images/items/01_3386/01_3386_inst_0.jpg",
-				"hash": "95defe747fc4ebd1cbc42f836f8219f5"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_3386_inst_1.jpg",
-				"path": "/images/items/01_3386/01_3386_inst_1.jpg",
-				"hash": "a44a59ae2287e8740369f3f2ce031d3a"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3386/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["hathaway"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5594", "01_4971", "01_4269", "item-1000157737"],
 	"manual": {
 		"id": "502",
 		"url": "https://manual.bandai-hobby.net/menus/detail/502/"

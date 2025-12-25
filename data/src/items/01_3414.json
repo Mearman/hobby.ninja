@@ -5,6 +5,50 @@
 		"ja": "RG 1/144 ガンダムベース限定 ストライクルージュ グランドスラム装備型",
 		"en": "RG 1/144 Gundam base limited Strike Rouge Grand Slam equipped type"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5160",
+			"url": "https://bandai-hobby.net/item/01_5160/",
+			"ja": "RG 1/144  ガンダムベース限定 ZGMF-X10A フリーダムガンダム Ver.GCP"
+		},
+		{
+			"id": "item-1000136194",
+			"url": "https://p-bandai.jp/item/item-1000136194",
+			"ja": "ＲＧ 1/144 パーフェクトストライクガンダム"
+		},
+		{
+			"id": "item-1000114754",
+			"url": "https://p-bandai.jp/item/item-1000114754",
+			"ja": "ＲＧ 1/144 ストライクルージュ＋ＨＧ 1/144  Ｉ.Ｗ.Ｓ.Ｐ."
+		},
+		{
+			"id": "item-1000132011",
+			"url": "https://p-bandai.jp/item/item-1000132011",
+			"ja": "RG 1/144 ZGMF-X09A ジャスティスガンダム ディアクティブモード"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,17 +61,16 @@
 		"month": 2
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"『機動戦士ガンダム SEED』より、カガリ・ユラ・アスハが搭乗するストライクルージュが、RGシリーズにて登場！",
+			"『機動戦士ガンダムSEED』より、カガリ・ユラ・アスハが搭乗するストライクルージュが、RGシリーズにて登場！",
 			"• 大剣「グランドスラム」をRG準拠のクオリティでで立体化！メッキ加工を施し、重厚感のある仕上がりに！",
 			"• ストライクルージュを象徴するデカールが付属！"
 		],
 		"en": [
 			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"From \"Mobile Suit Gundam SEED\", Strike Rouge, piloted by Cagalli, Yura, and Athha, is now available in the RG series!",
+			"From \"Mobile Suit GundamSEED\", Strike Rouge, piloted by Cagalli, Yura, and Athha, is now available in the RG series!",
 			"• The great sword \"Grand Slam\" is made into 3D with RG-compliant quality! Plated for a solid finish!",
 			"• Comes with a decal symbolizing Strike Rouge!"
 		]
@@ -35,35 +78,27 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4368.jpg",
+				"src": "https://bandai-hobby.net/images/153_4368_s_ecx4e5yvqc95aburbvpgabbesa8l.jpg",
 				"path": "/images/items/01_3414/153_4368.jpg",
 				"hash": "be1f102c7cfc1edc9c2eba612aa3abca"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4368.jpg",
+				"src": "https://bandai-hobby.net/images/155_4368_s_qr93uzz60524zx6cjatjnv97aa2r.jpg",
 				"path": "/images/items/01_3414/155_4368.jpg",
 				"hash": "5ebef0e0917d25ec4fabd1694271b564"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4368.jpg",
+				"src": "https://bandai-hobby.net/images/156_4368_s_eap1svn7unr0m2u91ng5yevzq3qd.jpg",
 				"path": "/images/items/01_3414/156_4368.jpg",
 				"hash": "f46ed4dd6547c1447c13bbe093c5a684"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4368.jpg",
+				"src": "https://bandai-hobby.net/images/157_4368_s_37b73thxlwo37vi0bdthhyt62oby.jpg",
 				"path": "/images/items/01_3414/157_4368.jpg",
 				"hash": "67d41f5386ae00ffe1b81c0f16ef5f83"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3414/",
-	"brandIds": ["rg"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5160", "item-1000136194", "item-1000114754", "item-1000132011"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3414/"
 }

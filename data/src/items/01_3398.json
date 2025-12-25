@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard 仮面ライダー龍騎",
 		"en": "Figure-rise Standard Kamen Rider Ryuki"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "rider",
+			"url": "https://bandai-hobby.net/series/rider/",
+			"ja": "仮面ライダーシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5451",
+			"url": "https://bandai-hobby.net/item/01_5451/",
+			"ja": "Figure-rise Standard 仮面ライダーゼロワン ライジングホッパー"
+		},
+		{
+			"id": "item-1000215369",
+			"url": "https://p-bandai.jp/item/item-1000215369/",
+			"ja": "Figure-rise Standard 仮面ライダーファイズ ブラスターフォーム"
+		},
+		{
+			"id": "01_5276",
+			"url": "https://bandai-hobby.net/item/01_5276/",
+			"ja": "Figure-rise Standard 仮面ライダークウガ アルティメットフォーム"
+		},
+		{
+			"id": "01_5175",
+			"url": "https://bandai-hobby.net/item/01_5175/",
+			"ja": "Figure-rise Standard 仮面ライダーキバ キバフォーム"
+		}
+	],
 	"price": {
 		"amount": 4730,
 		"currency": "JPY",
@@ -36,51 +79,73 @@
 			"• Comes with 5 advent cards made of PET material. The top of the drag visor slides forward, allowing you to load advent cards.",
 			"• A handle for cards is included, allowing you to recreate the loading image.",
 			"• Comes with a drag redder with a total length of approximately 630mm.",
-			"• \"Sword Bent \" and \" Guard Bent \" can be reproduced by using some parts of Dragredder. For the \" Strike Bent\", special drag claw parts have been created in pursuit of the atmosphere when installed.",
+			"• \"Sword Bent\" and \"Guard Bent\" can be reproduced by using some parts of Dragredder. For the \"Strike Bent\", special drag claw parts have been created in pursuit of the atmosphere when installed.",
 			"• The movable joints and drag pedestal make it possible to create displays based on scenes from the movie."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ドラグレッダー×1式",
-			"ドラグクロー×1",
-			"手首パーツ 決め手（右）、 カード持ち手（右）、握り手（左右）、武器持ち手（左右）、平手（左右）",
-			"アドベントカード×5種",
-			"ドラグレッダー用台座×2",
-			"Figure-rise Effect 台座×１",
-			"ホイルシール×1"
-		],
-		"en": [
-			"Drag redder x 1 set",
-			"Drag claw x1",
-			"Wrist parts Decisive hand (right), card holder (right), grasping hand (left and right), weapon holder (left and right), open hand (left and right)",
-			"Advent cards x 5 types",
-			"Drag redder pedestal x 2",
-			"Figure-rise Effect pedestal x 1",
-			"Foil Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ドラグレッダー",
+				"en": "drag redder"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ドラグクロー",
+				"en": "drag claw"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "手首パーツ  決め手（右）、 カード持ち手（右）、握り手（左右）、武器持ち手（左右）、平手（左右）",
+				"en": "Wrist parts Decisive hand (right), card holder (right), grasping hand (left and right), weapon holder (left and right), open hand (left and right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "アドベントカード",
+				"en": "advent cards"
+			},
+			"count": 5,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ドラグレッダー用台座",
+				"en": "Pedestal for drag redder"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "Figure-rise Effect 台座×１",
+				"en": "Figure-rise Effect pedestal x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157485_1.jpg",
 				"path": "/images/items/01_3398/1000157485_1.jpg",
 				"hash": "e70968210723a4f81468260823a3b673"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157485_10.jpg",
-				"path": "/images/items/01_3398/1000157485_10.jpg",
-				"hash": "a7ccfa1729ea82fface9459cbb62a49d"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157485_11.jpg",
-				"path": "/images/items/01_3398/1000157485_11.jpg",
-				"hash": "224c078c20216a669a5dc50ea4b2a517"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157485_12.jpg",
-				"path": "/images/items/01_3398/1000157485_12.jpg",
-				"hash": "dfe054b618a8d7529bad60918c7845e3"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157485_2.jpg",
@@ -121,13 +186,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157485_9.jpg",
 				"path": "/images/items/01_3398/1000157485_9.jpg",
 				"hash": "9f9bed38f578ddf8a0e5eb510f95cc99"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157485_10.jpg",
+				"path": "/images/items/01_3398/1000157485_10.jpg",
+				"hash": "a7ccfa1729ea82fface9459cbb62a49d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157485_11.jpg",
+				"path": "/images/items/01_3398/1000157485_11.jpg",
+				"hash": "224c078c20216a669a5dc50ea4b2a517"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157485_12.jpg",
+				"path": "/images/items/01_3398/1000157485_12.jpg",
+				"hash": "dfe054b618a8d7529bad60918c7845e3"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3398/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["rider"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5451", "item-1000215369", "01_5276", "01_5175"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3398/"
 }

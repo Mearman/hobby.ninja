@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 オプションパーツセット 3",
 		"en": "30MM 1/144 Option parts set 3"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 20
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"オプションパーツセットで30MMシリーズにさらなるカスタマイズを！",
@@ -35,20 +77,32 @@
 			"• If you purchase more than one, you can connect an unlimited number of large Seals."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"大型ランス用パーツ×１式",
-			"大型ドリル用パーツ×１式",
-			"大型ソード用パーツ×１式",
-			"大型シールド用パーツ×１式"
-		],
-		"en": [
-			"Large lance parts x 1 set",
-			"Large drill parts x 1 set",
-			"Large sword parts x 1 set",
-			"Large Seal parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "大型ランス用パーツ×１式",
+				"en": "Large lance parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "大型ドリル用パーツ×１式",
+				"en": "Large drill parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "大型ソード用パーツ×１式",
+				"en": "Large sword parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "大型シールド用パーツ×１式",
+				"en": "Large Seal parts x 1 set"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -85,10 +139,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3360/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3712",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3712/"

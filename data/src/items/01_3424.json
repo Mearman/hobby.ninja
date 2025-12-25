@@ -5,6 +5,58 @@
 		"ja": "カスタマイズウェポンズ (戦国兵装)",
 		"en": "Customized Weapons (Sengoku Weapons)"
 	},
+	"brands": [
+		{
+			"id": "customize_scenebase",
+			"url": "https://bandai-hobby.net/brand/customize_scenebase/",
+			"ja": "カスタマイズシーンベース/エフェクト/マテリアル/ウェポンズ"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "customize_scenebase",
+			"url": "https://bandai-hobby.net/brand/customize_scenebase/",
+			"ja": "カスタマイズシーンベース/エフェクト/マテリアル/ウェポンズ"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -34,38 +86,101 @@
 			"• By combining multiple pieces, you can recreate a huge bow by connecting the sheath to the bow and arrow relay unit."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"矢×1",
-			"弓矢中継ユニット×1",
-			"太刀×1",
-			"小太刀×1",
-			"鞘×1",
-			"鞘(短)×1",
-			"ビームライフル×1",
-			"ライフル拡張パーツ×2種",
-			"ショートブレード×2",
-			"柄×1",
-			"先端パーツ(槍、薙刀)×各１",
-			"水蜘蛛×2",
-			"ハンドパーツ　忍者手（右）"
-		],
-		"en": [
-			"Arrow x1",
-			"Bow and arrow relay unit x 1",
-			"Long sword x1",
-			"Kodachi×1",
-			"Scabbard x 1",
-			"Scabbard (short) x 1",
-			"Beam rifle x 1",
-			"Rifle expansion parts x 2 types",
-			"Short blade x2",
-			"Pattern x 1",
-			"Tip parts (spear, naginata) x 1 each",
-			"Water spider x2",
-			"Hand parts Ninja hand (right)"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "矢",
+				"en": "arrow"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "弓矢中継ユニット",
+				"en": "bow and arrow relay unit"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "太刀",
+				"en": "long sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "小太刀",
+				"en": "Kodachi"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "鞘",
+				"en": "sheath"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "鞘(短)",
+				"en": "Scabbard (short)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ライフル拡張パーツ",
+				"en": "rifle extension parts"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ショートブレード",
+				"en": "short braid"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "柄",
+				"en": "pattern"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "先端パーツ(槍、薙刀)×各１",
+				"en": "Tip parts (spear, naginata) x 1 each"
+			}
+		},
+		{
+			"name": {
+				"ja": "水蜘蛛",
+				"en": "water spider"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ　忍者手（右）",
+				"en": "Hand parts Ninja hand (right)"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -97,10 +212,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3424/",
-	"brandIds": ["customize_scenebase", "30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3717",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3717/"

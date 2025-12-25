@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 EXM-A9n スピナティオ (忍者仕様)",
 		"en": "30MM 1/144 EXM-A9n Spinatio (Ninja specification)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1408,
 		"currency": "JPY",
@@ -18,13 +61,12 @@
 		"day": 22
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMシリーズに新たに加わった、第３勢力の量産機「スピナティオ」に忍者仕様が登場！",
-			"■素体となる本体のほか、アーマーパーツ、武器パーツがひとつになったオールインワンアイテム。",
-			"■更に組み立てやすくなった新構造！可動範囲を活かしつつも組み立ての際の挟み込みは一切なし。",
-			"■既存アイテムともミキシングできる共通関節構造、３mmジョイントを採用。"
+			"• 素体となる本体のほか、アーマーパーツ、武器パーツがひとつになったオールインワンアイテム。",
+			"• 更に組み立てやすくなった新構造！可動範囲を活かしつつも組み立ての際の挟み込みは一切なし。",
+			"• 既存アイテムともミキシングできる共通関節構造、３mmジョイントを採用。"
 		],
 		"en": [
 			"A ninja version of the third force's mass-produced machine \"Spinatio\", newly added to the 30MM series, is now available!",
@@ -33,43 +75,47 @@
 			"• Adopts a 3mm joint, a common joint structure that can be mixed with existing items."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームライフル×1",
-			"ショートブレード×2",
-			"ハンドパーツ　武器持ち手（左右）、平手（左右）、ライフル持ち手（右）",
-			"忍者アーマー×１式",
-			"ジョイントパーツ×1"
-		],
-		"en": [
-			"Beam rifle x 1",
-			"Short blade x2",
-			"Hand parts Weapon handle (left and right), open hand (left and right), rifle handle (right)",
-			"Ninja armor x 1 set",
-			"Joint parts x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ショートブレード",
+				"en": "short braid"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ　武器持ち手（左右）、平手（左右）、ライフル持ち手（右）",
+				"en": "Hand parts Weapon handle (left and right), open hand (left and right), rifle handle (right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "忍者アーマー×１式",
+				"en": "Ninja armor x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158646_1.jpg",
 				"path": "/images/items/01_3421/1000158646_1.jpg",
 				"hash": "414e81a3dc49c5c55b6c18d633d606cc"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158646_10.jpg",
-				"path": "/images/items/01_3421/1000158646_10.jpg",
-				"hash": "9c7682aaf54b72cebe018916c0a00fbf"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158646_11.jpg",
-				"path": "/images/items/01_3421/1000158646_11.jpg",
-				"hash": "a6cb351b2e6e7bc958fbd1070a52d02e"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158646_12.jpg",
-				"path": "/images/items/01_3421/1000158646_12.jpg",
-				"hash": "61d185622a1af22485969447ffe1533e"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158646_2.jpg",
@@ -110,15 +156,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158646_9.jpg",
 				"path": "/images/items/01_3421/1000158646_9.jpg",
 				"hash": "7113bdaed1cad7ba3c0a58bb74eb8055"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158646_10.jpg",
+				"path": "/images/items/01_3421/1000158646_10.jpg",
+				"hash": "9c7682aaf54b72cebe018916c0a00fbf"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158646_11.jpg",
+				"path": "/images/items/01_3421/1000158646_11.jpg",
+				"hash": "a6cb351b2e6e7bc958fbd1070a52d02e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000158646_12.jpg",
+				"path": "/images/items/01_3421/1000158646_12.jpg",
+				"hash": "61d185622a1af22485969447ffe1533e"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3421/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3714",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3714/"

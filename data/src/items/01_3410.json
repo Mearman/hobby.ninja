@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ガンダムデスサイズヘル EW[スペシャルコーティング]",
 		"en": "MG 1/100 Gundam Death Scythe Hell EW [Special Coating]"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000194972",
+			"url": "https://p-bandai.jp/item/item-1000194972/",
+			"ja": "ＭＧ 1/100 ガンダムエピオン EW (シュトゥルム・ウント・ドラング装備)"
+		},
+		{
+			"id": "item-1000171722",
+			"url": "https://p-bandai.jp/item/item-1000171722/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムエピオン EW[スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000142325",
+			"url": "https://p-bandai.jp/item/item-1000142325/",
+			"ja": "ＭＧ 1/100 ガンダムデスサイズ EW（ルーセット装備）"
+		},
+		{
+			"id": "01_2703",
+			"url": "https://bandai-hobby.net/item/01_2703/",
+			"ja": "MG 1/100 トールギスIII [スペシャルコーティング]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 10890,
 		"currency": "JPY",
@@ -18,17 +62,16 @@
 		"day": 22
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"『新機動戦記ガンダム W Endless Waltz』より、大鎌を携えたガンダムデスサイズヘルが、重厚なメッキ加工を施した限定仕様で登場！",
+			"『新機動戦記ガンダムW Endless Waltz』より、大鎌を携えたガンダムデスサイズヘルが、重厚なメッキ加工を施した限定仕様で登場！",
 			"• デスサイズヘルを象徴する翼をはじめ、外装の一部パーツには、重厚な輝きを放つメッキ加工を採用！",
 			"• 頭部アンテナには艶消し金メッキ加工を採用し、高級感を演出！",
 			"• 翼には展開&ロック機構を搭載。はばたく姿やクローズ状態を自然に再現可能！",
 			"• カトキハジメ氏によるマーキングシールが付属！"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam W Endless Waltz\", Gundam Death Scythe Hell carrying a scythe is now available in a limited edition with heavy plating!",
+			"From \"Mobile Suit Gundam W Endless Waltz\" comes the Gundam Death Scythe Hell with a scythe in a limited edition with heavy plating!",
 			"• Some of the exterior parts, including the wings that symbolize Death Scythe Hell, are plated to give off a deep shine!",
 			"• The head antenna uses matte gold plating to create a luxurious look!",
 			"• The wings are equipped with a deployment and locking mechanism. It is possible to naturally reproduce the flapping appearance and closed state!",
@@ -38,30 +81,22 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4364.jpg",
+				"src": "https://bandai-hobby.net/images/153_4364_s_cix9qbbzjwhuju2ihmcg5u1bjhfv.jpg",
 				"path": "/images/items/01_3410/153_4364.jpg",
 				"hash": "315346e7394acd8133ac18711af325d1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4364.jpg",
+				"src": "https://bandai-hobby.net/images/155_4364_s_p440gw6xk8vgcvsc6tp8kso14xf0.jpg",
 				"path": "/images/items/01_3410/155_4364.jpg",
 				"hash": "a23208c10464fef53efaec6d7f78c6a9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4364.jpg",
+				"src": "https://bandai-hobby.net/images/156_4364_s_clebmhct919y94mc5gcrmbhsswac.jpg",
 				"path": "/images/items/01_3410/156_4364.jpg",
 				"hash": "65e1ae1f76daa459355e5016c89dbf60"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3410/",
-	"brandIds": ["mg"],
-	"seriesIds": ["endlesswaltz"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000194972", "item-1000171722", "item-1000142325", "01_2703"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3410/"
 }

@@ -5,6 +5,50 @@
 		"ja": "FULL MECHANICS 1/100 カラミティガンダム",
 		"en": "FULL MECHANICS 1/100 Calamity Gundam"
 	},
+	"brands": [
+		{
+			"id": "fullmechanics",
+			"url": "https://bandai-hobby.net/brand/fullmechanics/",
+			"ja": "FULL MECHANICS[フルメカニクス]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5209",
+			"url": "https://bandai-hobby.net/item/01_5209/",
+			"ja": "FULL MECHANICS 1/100 カラミティガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_4906",
+			"url": "https://bandai-hobby.net/item/01_4906/",
+			"ja": "FULL MECHANICS 1/100 フォビドゥンガンダム"
+		},
+		{
+			"id": "01_4096",
+			"url": "https://bandai-hobby.net/item/01_4096/",
+			"ja": "FULL MECHANICS 1/100 レイダーガンダム"
+		},
+		{
+			"id": "01_3573",
+			"url": "https://bandai-hobby.net/item/01_3573/",
+			"ja": "フルメカニクス 1/100 ガンダムベース限定 ZGMF-X10A フリーダムガンダム Ver.GCP"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -18,19 +62,18 @@
 		"day": 26
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダムSEED』より、新たなシリーズとして刷新する「FULL MECHANICS」第一弾として、完全新規造形のカラミティガンダムが登場！",
-			"■頭部は胴体から引き出し、襟との緩衝を緩和するギミックを内蔵。",
-			"■腹部の可動軸は前後・左右にスイングするギミックを搭載。股間軸も下方向へスイングし、スタンスの広い迫力あるポーズを演出できる。",
-			"■前屈した際に、胴体の左右方向の回転を妨げないようフロントスカートが手前に傾く連動可動を搭載。フロントブロックは胴体が反る際には、引き上げる動きでブロックの隙間を隠す構造となっている。",
-			"■腕は肩アーマーとボールジョイントで接続。肩スイング、肘二重関節、手首二重関節の組み合わせで可動。",
-			"■手持ち武器として「トーデスブロック」が付属。グリップが手前にスイングする可動ギミックを搭載。",
-			"■砲身がスイング可動する「ケーファー・ツヴァイ」（シールド）が付属。ジョイントパーツを使用して前腕に取り付けが可能。"
+			"• 頭部は胴体から引き出し、襟との緩衝を緩和するギミックを内蔵。",
+			"• 腹部の可動軸は前後・左右にスイングするギミックを搭載。股間軸も下方向へスイングし、スタンスの広い迫力あるポーズを演出できる。",
+			"• 前屈した際に、胴体の左右方向の回転を妨げないようフロントスカートが手前に傾く連動可動を搭載。フロントブロックは胴体が反る際には、引き上げる動きでブロックの隙間を隠す構造となっている。",
+			"• 腕は肩アーマーとボールジョイントで接続。肩スイング、肘二重関節、手首二重関節の組み合わせで可動。",
+			"• 手持ち武器として「トーデスブロック」が付属。グリップが手前にスイングする可動ギミックを搭載。",
+			"• 砲身がスイング可動する「ケーファー・ツヴァイ」（シールド）が付属。ジョイントパーツを使用して前腕に取り付けが可能。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam SEED \", a completely new model of Calamity Gundam appears as the first installment of the new \" FULL MECHANICS\" series!",
+			"From \"Mobile Suit GundamSEED\", the completely new model Calamity Gundam appears as the first installment of the new \"FULL MECHANICS\" series!",
 			"• The head is pulled out from the body and has a built-in gimmick that reduces the buffering effect between the head and the collar.",
 			"• The movable axis of the abdomen is equipped with a gimmick that swings back and forth and left and right. The groin axis also swings downward, allowing you to create powerful poses with a wide stance.",
 			"• Equipped with an interlocking movable mechanism that allows the front skirt to tilt forward when bending forward so as not to impede the left-right rotation of the torso. The front block is structured so that when the fuselage warps, it is pulled up to hide the gap between the blocks.",
@@ -39,41 +82,42 @@
 			"• \"Käfer Zwei\" (Seal) with swingable gun barrel is included. Can be attached to the forearm using joint parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"337mmプラズマサボット・バズーカ砲 「トーデスブロック」×1",
-			"115mm 2連装衝角砲 「ケーファー・ツヴァイ」（シールド）×1",
-			"ホイルシール×1",
-			"マーキングシール×1"
-		],
-		"en": [
-			"337mm plasma sabot bazooka \"Todes Block\" x 1",
-			"115mm twin ram gun \"Käfer Zwei\" (Seal) x 1",
-			"Foil Seal×1",
-			"MarkingSeal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "337mmプラズマサボット・バズーカ砲 「トーデスブロック」",
+				"en": "337mm plasma sabot bazooka \"Todes Block\""
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "115mm 2連装衝角砲 「ケーファー・ツヴァイ」（シールド）",
+				"en": "115mm twin ram gun \"Käfer Zwei\" (Seal)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159977_1.jpg",
 				"path": "/images/items/01_3426/1000159977_1.jpg",
 				"hash": "c9086e7c0ac3cf339330f56d60c83c80"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159977_10.jpg",
-				"path": "/images/items/01_3426/1000159977_10.jpg",
-				"hash": "280ab1333c8d9e1e5d5be30551d7abf8"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159977_11.jpg",
-				"path": "/images/items/01_3426/1000159977_11.jpg",
-				"hash": "718823ebc9dd8b0574c9771e6f48083e"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159977_12.jpg",
-				"path": "/images/items/01_3426/1000159977_12.jpg",
-				"hash": "cd0fb4aa4b1c69254a92e2f0c8bd5788"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159977_2.jpg",
@@ -114,15 +158,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159977_9.jpg",
 				"path": "/images/items/01_3426/1000159977_9.jpg",
 				"hash": "3aad28de77b51cfa3594e3e53f37a539"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159977_10.jpg",
+				"path": "/images/items/01_3426/1000159977_10.jpg",
+				"hash": "280ab1333c8d9e1e5d5be30551d7abf8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159977_11.jpg",
+				"path": "/images/items/01_3426/1000159977_11.jpg",
+				"hash": "718823ebc9dd8b0574c9771e6f48083e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159977_12.jpg",
+				"path": "/images/items/01_3426/1000159977_12.jpg",
+				"hash": "cd0fb4aa4b1c69254a92e2f0c8bd5788"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3426/",
-	"brandIds": ["fullmechanics"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5209", "01_4906", "01_4096", "01_3573"],
 	"manual": {
 		"id": "1095",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1095/"

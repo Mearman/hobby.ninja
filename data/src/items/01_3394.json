@@ -5,6 +5,44 @@
 		"ja": "1/72 Xウイング・スターファイター RED5 (スター・ウォーズ/スカイウォーカーの夜明け)",
 		"en": "1/72 X-Wing Starfighter RED5 (Star Wars/The Rise of Skywalker)"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3513",
+			"url": "https://bandai-hobby.net/item/01_3513/",
+			"ja": "ビークルモデル レイザー・クレスト"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 2970,
 		"currency": "JPY",
@@ -18,16 +56,15 @@
 		"day": 17
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"『スター・ウォーズ／スカイウォーカーの夜明け』でルークからレイが継承したXウイング・スターファイターが1/72スケールで登場！",
-			"■イロプラ成形と水転写式デカール、マーキングシールにより、ディテールとカラーリングを忠実に再現。",
-			"■後部上面のメカディテールやノーズ・コーン内部の各種センサーなど、特徴的な内部のディテールを再現。",
-			"■レイのパイロットパーツを新規造形で再現。",
-			"■着床脚パーツが付属し展開時と収納時を差し替えで再現。",
-			"■キャノピーは、クリア素材のものとフレームのみのもの、２種が付属。",
-			"■Xウイングを隠していた海域をイメージしたクリアグリーンの台座と、シンプルなホワイトの台座が付属。"
+			"• イロプラ成形と水転写式デカール、マーキングシールにより、ディテールとカラーリングを忠実に再現。",
+			"• 後部上面のメカディテールやノーズ・コーン内部の各種センサーなど、特徴的な内部のディテールを再現。",
+			"• レイのパイロットパーツを新規造形で再現。",
+			"• 着床脚パーツが付属し展開時と収納時を差し替えで再現。",
+			"• キャノピーは、クリア素材のものとフレームのみのもの、２種が付属。",
+			"• Xウイングを隠していた海域をイメージしたクリアグリーンの台座と、シンプルなホワイトの台座が付属。"
 		],
 		"en": [
 			"The X-wing starfighter inherited by Rey from Luke in \"Star Wars: The Rise of Skywalker\" is now available in 1/72 Scale!",
@@ -39,45 +76,64 @@
 			"• Comes with a clear green pedestal inspired by the ocean area where the X-Wing was hidden, and a simple white pedestal."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用ディスプレイベース×2種（クリアグリーン、ホワイト）",
-			"パイロットパーツ×1種（レイ［座り］）",
-			"着床脚×1式",
-			"キャノピー×2種（クリアパーツ×1、フレームパーツ×1）",
-			"水転写式デカール×1",
-			"マーキングシール×1"
-		],
-		"en": [
-			"Dedicated display base x 2 types (clear green, white)",
-			"Pilot parts x 1 type (Rei [sitting])",
-			"Implantation leg x 1 set",
-			"Canopy x 2 types (clear parts x 1, frame parts x 1)",
-			"Water transfer decal x 1",
-			"MarkingSeal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ディスプレイベース",
+				"en": "Dedicated display base"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "パイロットパーツ",
+				"en": "pilot parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "種（レイ［座り］）",
+				"en": "Seed (Rei [sitting])"
+			}
+		},
+		{
+			"name": {
+				"ja": "着床脚",
+				"en": "implantation leg"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "キャノピー",
+				"en": "canopy"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157494_1.jpg",
 				"path": "/images/items/01_3394/1000157494_1.jpg",
 				"hash": "76b8c77b7e028ec06f7977c879e5b80c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157494_10.jpg",
-				"path": "/images/items/01_3394/1000157494_10.jpg",
-				"hash": "baf21e7f15c2f65088efe34955ea90da"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157494_11.jpg",
-				"path": "/images/items/01_3394/1000157494_11.jpg",
-				"hash": "19e661fd478b7f2e18ee192688f9642c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157494_12.jpg",
-				"path": "/images/items/01_3394/1000157494_12.jpg",
-				"hash": "8934175f979ff05be812068af374f14f"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157494_2.jpg",
@@ -118,13 +174,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157494_9.jpg",
 				"path": "/images/items/01_3394/1000157494_9.jpg",
 				"hash": "fb5191ee89a8dad4a99680e3ade5d24d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157494_10.jpg",
+				"path": "/images/items/01_3394/1000157494_10.jpg",
+				"hash": "baf21e7f15c2f65088efe34955ea90da"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157494_11.jpg",
+				"path": "/images/items/01_3394/1000157494_11.jpg",
+				"hash": "19e661fd478b7f2e18ee192688f9642c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157494_12.jpg",
+				"path": "/images/items/01_3394/1000157494_12.jpg",
+				"hash": "8934175f979ff05be812068af374f14f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3394/",
-	"brandIds": [],
-	"seriesIds": ["starwars"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_4153", "01_4154", "01_3514", "01_3513"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3394/"
 }

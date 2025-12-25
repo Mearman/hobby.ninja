@@ -5,6 +5,65 @@
 		"ja": "ＨＧ 1/144 ペイルライダー・キャバルリー",
 		"en": "HG 1/144 Pale Rider Cavalry"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "missinglink",
+			"url": "https://bandai-hobby.net/series/missinglink/",
+			"ja": "機動戦士ガンダム外伝 ミッシングリンク"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000148541",
+			"url": "https://p-bandai.jp/item/item-1000148541/",
+			"ja": "ＨＧ 1/144 トーリスリッター"
+		},
+		{
+			"id": "item-1000140759",
+			"url": "https://p-bandai.jp/item/item-1000140759/",
+			"ja": "ＨＧ 1/144 イフリート（ダグ・シュナイド機）"
+		},
+		{
+			"id": "item-1000140492",
+			"url": "https://p-bandai.jp/item/item-1000140492/",
+			"ja": "ＨＧ 1/144 陸戦型ジム（スレイヴ・レイス隊仕様）（パラシュート・パック仕様）"
+		},
+		{
+			"id": "item-1000140220",
+			"url": "https://p-bandai.jp/item/item-1000140220/",
+			"ja": "ＨＧ 1/144 スレイヴ・レイス（パラシュート・パック仕様）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -17,7 +76,6 @@
 		"month": 4
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「 ペ イ ル ラ イ ダ ー 計 画 」 、 集 大 成 ―",
@@ -65,7 +123,7 @@
 		],
 		"en": [
 			"\"Pale Rider Plan\", Collection",
-			"From \"Mobile Suit Gundam Gaiden Missing Link \", the aircraft was redesigned for mass production as the culmination of the \" Pale Rider Project\".",
+			"From \"Mobile Suit Gundam Gaiden Missing Link\", the aircraft was redesigned for mass production as the culmination of the \"Pale Rider Project\".",
 			"Commercialize Pale Rider Cavalry in the HG series.",
 			"Reproduce the shape and coloring based on HG Pale Rider. The characteristic composite special weapon \"Shekinah\" is reproduced with a new model, and a variety of equipment is included.",
 			"● Reproduce the distinctive body exterior shape.",
@@ -77,7 +135,7 @@
 			"The backpack with six thrusters and a propellant tank is reproduced with new modeling. The propellant tank is removable.",
 			"right lumbar unit",
 			"The unit pack equipped on the right waist can be attached or detached to suit the battle image.",
-			"● Special weapons \"Shekinah \" and \" Beam Javelin\" are now three-dimensional with new modeling!",
+			"● Special weapons \"Shekinah\" and \"Beam Javelin\" are now three-dimensional with new modeling!",
 			"Complex special weapon Shekinah",
 			"The special weapon equipped on the right arm is reproduced with new modeling. Details are precisely reproduced and equipped with a detachable gimmick.",
 			"By replacing parts, it is possible to reproduce the opening and closing of the hatch of the micro missile launcher.",
@@ -108,21 +166,44 @@
 			"・Product specifications are as of 202012. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["シェキナー", "ビーム・ジャベリン", "ビーム・サーベル", "ハイパー・ビーム・ライフル", "シールド"],
-		"en": ["Shekinah", "beam javelin", "beam saber", "hyper beam rifle", "Seal de"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シェキナー",
+				"en": "Shekinah"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・ジャベリン",
+				"en": "beam javelin"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハイパー・ビーム・ライフル",
+				"en": "hyper beam rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152855_1.jpg",
 				"path": "/images/items/01_3380/1000152855_1.jpg",
 				"hash": "6dcc9811cee7407839aa5da84a05fecb"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152855_10.jpg",
-				"path": "/images/items/01_3380/1000152855_10.jpg",
-				"hash": "65aa2a481953dcc322f3bdfcf0f8d8d1"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152855_2.jpg",
@@ -163,17 +244,14 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152855_9.jpg",
 				"path": "/images/items/01_3380/1000152855_9.jpg",
 				"hash": "206e01248a4de00967bbf86d66ddbc58"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152855_10.jpg",
+				"path": "/images/items/01_3380/1000152855_10.jpg",
+				"hash": "65aa2a481953dcc322f3bdfcf0f8d8d1"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3380/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla", "hguc"],
-	"seriesIds": ["missinglink"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000148541", "item-1000140759", "item-1000140492", "item-1000140220"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3380/"
 }

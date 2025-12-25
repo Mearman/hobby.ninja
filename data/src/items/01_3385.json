@@ -5,6 +5,54 @@
 		"ja": "ＨＧ 1/144 RX-78-02 ガンダム ロールアウトカラー（GUNDAM THE ORIGIN版）",
 		"en": "HG 1/144 RX-78-02 Gundam Rollout Color (GUNDAM THE ORIGIN version)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 4
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"RX-78-02 ガンダム、幻の姿を再現－",
@@ -57,7 +104,7 @@
 			"・ 商品仕様は2020年12月現在のものです。パッケージ、ロゴ及び商品の仕様は、予告なく変更する場合がございます。"
 		],
 		"en": [
-			"RX-78-02 Gundam, reproducing its phantom appearance -",
+			"RX-78-02 Gundam, reproducing its phantom appearance-",
 			"From \"Mobile Suit Gundam THE ORIGIN\" MSD (Mobile Suit Discovery),",
 			"RX-78-02 Gundam Rollout Color (GUNDAM THE ORIGIN version) is commercialized with HGKit.",
 			"Revealed in the TV anime \"Mobile Suit Gundam THE ORIGIN Eve of the Red Comet\"",
@@ -94,59 +141,87 @@
 			"・Product specifications are as of 202012. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["ビーム・ライフル（前期型", "中期型）", "ハイパー・バズーカ", "ビーム・サーベル", "シールド"],
-		"en": ["Beam rifle (early model)", "mid-term type)", "hyper bazooka", "beam saber", "Seal de"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル（前期型",
+				"en": "Beam rifle (early model)"
+			}
+		},
+		{
+			"name": {
+				"ja": "中期型）",
+				"en": "mid-term type)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハイパー・バズーカ",
+				"en": "hyper bazooka"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4336.jpg",
+				"src": "https://bandai-hobby.net/images/153_4336_s_ml1z0a1lu91gkamgkd0cakxee0ia.jpg",
 				"path": "/images/items/01_3385/153_4336.jpg",
 				"hash": "b086880caddc48ca0e7df218801237e8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4336.jpg",
+				"src": "https://bandai-hobby.net/images/155_4336_s_p1e9fhsz8f86su05utrg1us4qbjs.jpg",
 				"path": "/images/items/01_3385/155_4336.jpg",
 				"hash": "cec3bc2447646ff84ece129001f05d82"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4336.jpg",
+				"src": "https://bandai-hobby.net/images/156_4336_s_awcpt1fft9vdwnwe9ak4n6eiouo0.jpg",
 				"path": "/images/items/01_3385/156_4336.jpg",
 				"hash": "b14a2a30e23f1df8423a247672e22241"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4336.jpg",
+				"src": "https://bandai-hobby.net/images/157_4336_s_9vzkv78vvawe34oid9u8h5k9w8ir.jpg",
 				"path": "/images/items/01_3385/157_4336.jpg",
 				"hash": "ff3d07dba0153de0a68ff3ce2be2dda6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4336.jpg",
+				"src": "https://bandai-hobby.net/images/158_4336_s_9y6ho12slf0tj62ahn9cju95bnwb.jpg",
 				"path": "/images/items/01_3385/158_4336.jpg",
 				"hash": "70ecdfc1c5ff1f5097143f81c14203d6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4336.jpg",
+				"src": "https://bandai-hobby.net/images/159_4336_s_cuzcepi2f9lljfwqnsgr7c2aey4k.jpg",
 				"path": "/images/items/01_3385/159_4336.jpg",
 				"hash": "e2093a83233d4ea9d83df23ee5bf3a98"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4336.jpg",
+				"src": "https://bandai-hobby.net/images/189_4336_s_11k28cayshig0dbckaj45ybvpn3j.jpg",
 				"path": "/images/items/01_3385/189_4336.jpg",
 				"hash": "2ef8dbe221e13045e33e4ce4249c2ea3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4336.jpg",
+				"src": "https://bandai-hobby.net/images/190_4336_s_wylzu177ry4ciqkg9mmodbz9c3qb.jpg",
 				"path": "/images/items/01_3385/190_4336.jpg",
 				"hash": "e28d5987e78e8616e886a3bd22378052"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4336.jpg",
+				"src": "https://bandai-hobby.net/images/191_4336_s_76d0ztg5b7o0jo63bzxkojhmyulk.jpg",
 				"path": "/images/items/01_3385/191_4336.jpg",
 				"hash": "5536eec7dd6be764b3b9f39738763be9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4336.jpg",
+				"src": "https://bandai-hobby.net/images/192_4336_s_dlixkyzpooo536f26pbb8urb4l1m.jpg",
 				"path": "/images/items/01_3385/192_4336.jpg",
 				"hash": "1a1b51f62a3e385bfabd6a462ab4185e"
 			}
@@ -154,14 +229,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3385/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5963", "01_5961", "01_5951"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2329",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2329/"

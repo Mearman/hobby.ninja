@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 eEXM-21 ラビオット [グリーン]",
 		"en": "30MM 1/144 eEXM-21 Rabiot [Green]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1518,
 		"currency": "JPY",
@@ -18,13 +61,12 @@
 		"day": 29
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMシリーズ地球連合軍の「eEXM-21 ラビオット」にグリーンが登場！",
-			"■外装にCタイプジョイント構造を追加。新たなカスタマイズが可能に。",
-			"■近接戦闘用、長距離狙撃用、指揮官機用など胸部パーツはアルトと連動。",
-			"■これまでのウェポンセットとの連動が可能。グリップパーツを分離し付属の中継パーツを使用することで、アルト用オプションウェポン１と組み合わせることができる。"
+			"• 外装にCタイプジョイント構造を追加。新たなカスタマイズが可能に。",
+			"• 近接戦闘用、長距離狙撃用、指揮官機用など胸部パーツはアルトと連動。",
+			"• これまでのウェポンセットとの連動が可能。グリップパーツを分離し付属の中継パーツを使用することで、アルト用オプションウェポン１と組み合わせることができる。"
 		],
 		"en": [
 			"Green appears in the 30MM series Earth Allied Forces' \"eEXM-21 Rabiot\"!",
@@ -33,59 +75,78 @@
 			"• Can be linked with previous Weapon sets. By separating the grip parts and using the included relay parts, it can be combined with the optional Weapon 1 for Alto."
 		]
 	},
-	"accessories": {
-		"ja": ["ショットガン×1", "バックパック×1", "マーキングシール×1"],
-		"en": ["Shotgun x 1", "Backpack x 1", "MarkingSeal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ショットガン",
+				"en": "shotgun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バックパック",
+				"en": "backpack"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4377.jpg",
+				"src": "https://bandai-hobby.net/images/153_4377_s_vn90vg579k9ydb942b2vkaduztu5.jpg",
 				"path": "/images/items/01_3423/153_4377.jpg",
 				"hash": "c454ce03d375f11d68af1e5912196db5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4377.jpg",
+				"src": "https://bandai-hobby.net/images/155_4377_s_xs3luxautgzk5k7igh7wt5uto3jg.jpg",
 				"path": "/images/items/01_3423/155_4377.jpg",
 				"hash": "63145310b0dc453d3f4800bf15704f15"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4377.jpg",
+				"src": "https://bandai-hobby.net/images/156_4377_s_fawxoxpvgc96ihr713ce2puktgwg.jpg",
 				"path": "/images/items/01_3423/156_4377.jpg",
 				"hash": "d04bbd060bc20ed8c2c24407086bd616"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4377.jpg",
+				"src": "https://bandai-hobby.net/images/157_4377_s_3spr229c8svv2xh3bdkfyodu4q1i.jpg",
 				"path": "/images/items/01_3423/157_4377.jpg",
 				"hash": "579e30c0f4db335475c70d7135422abb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4377.jpg",
+				"src": "https://bandai-hobby.net/images/158_4377_s_32x5asqv0inv2xmvsjc5e8bkiq64.jpg",
 				"path": "/images/items/01_3423/158_4377.jpg",
 				"hash": "515596df1a95967c84ca3147c9634f7a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4377.jpg",
+				"src": "https://bandai-hobby.net/images/159_4377_s_vxwhhuz5udoexxeundfq5b5x16n3.jpg",
 				"path": "/images/items/01_3423/159_4377.jpg",
 				"hash": "b8687ecedbb1c46f444d43b616d3c4c4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4377.jpg",
+				"src": "https://bandai-hobby.net/images/189_4377_s_qxxt7xdacidmkonh3mi7cr0g5jko.jpg",
 				"path": "/images/items/01_3423/189_4377.jpg",
 				"hash": "7ec65b8ffdd61dba714dea9bb8eec9e1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4377.jpg",
+				"src": "https://bandai-hobby.net/images/190_4377_s_6mrulx86u64b7nu1obp5ztc1dmxo.jpg",
 				"path": "/images/items/01_3423/190_4377.jpg",
 				"hash": "a58c51dbf73d124acf02742bf317b23b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4377.jpg",
+				"src": "https://bandai-hobby.net/images/191_4377_s_6ue3juqc5yqy4qaf3iurmyef70ea.jpg",
 				"path": "/images/items/01_3423/191_4377.jpg",
 				"hash": "25f46de50c63176cf60b8c54680f249d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4377.jpg",
+				"src": "https://bandai-hobby.net/images/192_4377_s_ud5yg1pkp9gwrwooi4zuotztawf9.jpg",
 				"path": "/images/items/01_3423/192_4377.jpg",
 				"hash": "558294b60a4be99ab98548ffc216d346"
 			}
@@ -93,10 +154,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3423/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3716",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3716/"

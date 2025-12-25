@@ -5,6 +5,34 @@
 		"ja": "Figure-riseLABO 式波・アスカ・ラングレー",
 		"en": "Figure-riseLABO Shikinami Asuka Langley"
 	},
+	"brands": [
+		{
+			"id": "figurerise-labo",
+			"url": "https://bandai-hobby.net/brand/figurerise-labo/",
+			"ja": "Figure-riseLABO[フィギュアライズラボ]"
+		}
+	],
+	"series": [
+		{
+			"id": "evangelion",
+			"url": "https://bandai-hobby.net/series/evangelion/",
+			"ja": "エヴァンゲリオン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000151306",
+			"url": "https://p-bandai.jp/item/item-1000151306/",
+			"ja": "Figure-riseLABO 式波・アスカ・ラングレー［スペシャルコーティング］"
+		}
+	],
 	"price": {
 		"amount": 7700,
 		"currency": "JPY",
@@ -22,15 +50,15 @@
 		"ja": [
 			"プラモデルの新しい表現に挑むFigure-riseLABOシリーズ。第４弾の研究テーマは「肌と密着した透明スーツ表現」！",
 			"映画『ヱヴァンゲリヲン新劇場版：破』より、エヴァ３号機搭乗テストのために「テスト用プラグスーツ」を着用したアスカが登場！",
-			"■成形技術を駆使した陰影によるボディ表現。",
-			"■肌に密着したスーツのクリアオレンジ部を、約3mm～最も薄い箇所で約0.3mmの特殊成形で再現。徹底的なこだわりで選定した素材の重ね合わせで圧倒的な実在感を追求。",
-			"■アイトラッキングインジェクション（瞳のインサート成形）で、あたかもアスカがこちらを見つめているかのような視線の追従を実現。",
-			"■複雑に重なり合う様々なパーツの性質・素材感を考慮して金型を加工。",
-			"■原型は「ALTER様」とのコラボレーションが実現。"
+			"• 成形技術を駆使した陰影によるボディ表現。",
+			"• 肌に密着したスーツのクリアオレンジ部を、約3mm～最も薄い箇所で約0.3mmの特殊成形で再現。徹底的なこだわりで選定した素材の重ね合わせで圧倒的な実在感を追求。",
+			"• アイトラッキングインジェクション（瞳のインサート成形）で、あたかもアスカがこちらを見つめているかのような視線の追従を実現。",
+			"• 複雑に重なり合う様々なパーツの性質・素材感を考慮して金型を加工。",
+			"• 原型は「ALTER様」とのコラボレーションが実現。"
 		],
 		"en": [
 			"The Figure-rise LABO series challenges new expressions of plastic models. The 4th research theme is \"Representation of a transparent suit that is in close contact with the skin\"!",
-			"From the movie \"Rebuild of Evangelion: Destruction \", Asuka appears wearing a \" test plug suit\" for the Eva Unit 3 boarding test!",
+			"From the movie \"Rebuild of Evangelion: Destruction\", Asuka appears wearing a \"test plug suit\" for the Eva Unit 3 boarding test!",
 			"• Body expression through shading using molding technology.",
 			"• The clear orange part of the suit that is in close contact with the skin is reproduced with special molding from approximately 3mm to approximately 0.3mm at its thinnest point. We pursue an overwhelming sense of reality through the layering of carefully selected materials.",
 			"• Eye tracking injection (insert molding of the eyes) realizes tracking of Asuka's line of sight as if she were staring at you.",
@@ -38,31 +66,27 @@
 			"• The prototype was realized in collaboration with \"ALTER\"."
 		]
 	},
-	"accessories": {
-		"ja": ["ディスプレイベース×1", "マーキングシール×１"],
-		"en": ["Display base x 1", "MarkingSeal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ディスプレイベース",
+				"en": "display base"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール×１",
+				"en": "MarkingSeal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156203_1.jpg",
 				"path": "/images/items/01_3357/1000156203_1.jpg",
 				"hash": "244f079e2be5534f441a4b73afe047c7"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156203_10.jpg",
-				"path": "/images/items/01_3357/1000156203_10.jpg",
-				"hash": "7719b2c01661689afb9c5d34c2237c25"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156203_11.jpg",
-				"path": "/images/items/01_3357/1000156203_11.jpg",
-				"hash": "cc197549d92f0725dd50888cc123b5a0"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156203_12.jpg",
-				"path": "/images/items/01_3357/1000156203_12.jpg",
-				"hash": "6a347d79804293cfe4f3d3b81e69cc33"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156203_2.jpg",
@@ -103,13 +127,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156203_9.jpg",
 				"path": "/images/items/01_3357/1000156203_9.jpg",
 				"hash": "9b46732a37c485c2e036d63d13b842c5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156203_10.jpg",
+				"path": "/images/items/01_3357/1000156203_10.jpg",
+				"hash": "7719b2c01661689afb9c5d34c2237c25"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156203_11.jpg",
+				"path": "/images/items/01_3357/1000156203_11.jpg",
+				"hash": "cc197549d92f0725dd50888cc123b5a0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156203_12.jpg",
+				"path": "/images/items/01_3357/1000156203_12.jpg",
+				"hash": "6a347d79804293cfe4f3d3b81e69cc33"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3357/",
-	"brandIds": ["figurerise-labo"],
-	"seriesIds": ["evangelion"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["item-1000151306"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3357/"
 }

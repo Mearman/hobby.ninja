@@ -5,6 +5,60 @@
 		"ja": "ＭＧ 1/100 ガンダムＦ９０ ２号機",
 		"en": "MG 1/100 Gundam F90 Unit 2"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "f90",
+			"url": "https://bandai-hobby.net/series/f90/",
+			"ja": "機動戦士ガンダムF90"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7056",
+			"url": "https://bandai-hobby.net/item/01_7056/",
+			"ja": "MG 1/100 F90IIIY クラスターガンダム用 ミッションパック Xタイプ"
+		},
+		{
+			"id": "item-1000224327",
+			"url": "https://p-bandai.jp/item/item-1000224327/",
+			"ja": "ＭＧ 1/100 Ｆ８０ ガンレイド"
+		},
+		{
+			"id": "item-1000223368",
+			"url": "https://p-bandai.jp/item/item-1000223368/",
+			"ja": "ＭＧ 1/100 ガンダムＦ９０用 ミッションパック Ａタイプ&Ｌタイプ"
+		},
+		{
+			"id": "item-1000223367",
+			"url": "https://p-bandai.jp/item/item-1000223367/",
+			"ja": "ＭＧ 1/100 ガンダムＦ９０用 ミッションパック Ｊタイプ&Ｑタイプ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4840,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 3
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"－－－－－",
@@ -59,7 +112,7 @@
 			"The prototype MS Gundam F90 No. 2 developed under the \"Formula Project\" by Sanary (S・N・R・I) is now available in master grade!",
 			"The impressive dark blue body color of Unit 2 is reproduced with molding color. Features of the Gundam F90 series Mission packs can be replaced.",
 			"● Reproduce the impressive coloring of Unit 2",
-			"The impressive two-tone navy blue and white color of Gundam F90 Unit 2 is reproduced with molded colors. The colors of the chest armor and thrusters of each part are also reproduced.",
+			"The impressive two-tone navy blue and white color of Gundam F90 Unit 2 is reproduced with molded colors. The color of the chest armor and thrusters of each part is also reproduced.",
 			"● Each mission pack can be replaced.",
 			"Mission packs (sold separately) can be attached to hard points throughout the body, including the shoulders, arms, and waist.",
 			"● Water transfer decal included",
@@ -68,7 +121,7 @@
 			"*This product only includes one \"MG 1/100 Gundam F90 Unit 2\". Mission pack not included.",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/100 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS/ABS/PVC/PET",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -86,21 +139,32 @@
 			"・Product specifications are as of 202012. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["ビーム・ライフル", "シールド", "ビーム・サーベル"],
-		"en": ["beam rifle", "Seal de", "beam saber"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル",
+				"en": "beam rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152341_1.jpg",
 				"path": "/images/items/01_3375/1000152341_1.jpg",
 				"hash": "73896fb3b75969517f101bc145812dfc"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152341_10.jpg",
-				"path": "/images/items/01_3375/1000152341_10.jpg",
-				"hash": "6a4661e73dbfffc2ecf0cb6c7208ba22"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152341_2.jpg",
@@ -141,17 +205,14 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152341_9.jpg",
 				"path": "/images/items/01_3375/1000152341_9.jpg",
 				"hash": "b46aa21bd373ffedbbd60eaa947625d5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152341_10.jpg",
+				"path": "/images/items/01_3375/1000152341_10.jpg",
+				"hash": "6a4661e73dbfffc2ecf0cb6c7208ba22"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3375/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": ["f90"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_7056", "item-1000224327", "item-1000223368", "item-1000223367"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3375/"
 }

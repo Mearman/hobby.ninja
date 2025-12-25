@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ガンダムベース限定 ガンダムエピオン EW[スペシャルコーティング]",
 		"en": "MG 1/100 Gundam Base Limited Gundam Epyon EW [Special Coating]"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000194972",
+			"url": "https://p-bandai.jp/item/item-1000194972/",
+			"ja": "ＭＧ 1/100 ガンダムエピオン EW (シュトゥルム・ウント・ドラング装備)"
+		},
+		{
+			"id": "01_3410",
+			"url": "https://bandai-hobby.net/item/01_3410/",
+			"ja": "MG 1/100 ガンダムデスサイズヘル EW[スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000142325",
+			"url": "https://p-bandai.jp/item/item-1000142325/",
+			"ja": "ＭＧ 1/100 ガンダムデスサイズ EW（ルーセット装備）"
+		},
+		{
+			"id": "01_2703",
+			"url": "https://bandai-hobby.net/item/01_2703/",
+			"ja": "MG 1/100 トールギスIII [スペシャルコーティング]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 9350,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 8
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
@@ -62,13 +105,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3381/",
-	"brandIds": ["mg"],
-	"seriesIds": ["endlesswaltz"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000194972", "01_3410", "item-1000142325", "01_2703"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3381/"
 }

@@ -5,6 +5,50 @@
 		"ja": "1/48 RX-78F00 ガンダム [BUST MODEL]",
 		"en": "1/48 RX-78F00 Gundam [BUST MODEL]"
 	},
+	"brands": [
+		{
+			"id": "gfy",
+			"url": "https://bandai-hobby.net/brand/gfy/",
+			"ja": "GUNDAM FACTORY YOKOHAMA"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5035",
+			"url": "https://bandai-hobby.net/item/01_5035/",
+			"ja": "1/144 RX-78F00 HMT ガンダム高機動型(G-3イメージカラー)"
+		},
+		{
+			"id": "01_4239",
+			"url": "https://bandai-hobby.net/item/01_4239/",
+			"ja": "1/144 RX-78F00 HMT ガンダム高機動型"
+		},
+		{
+			"id": "01_3472",
+			"url": "https://bandai-hobby.net/item/01_3472/",
+			"ja": "ハロプラ ハロ [クリームホワイト]"
+		},
+		{
+			"id": "01_3841",
+			"url": "https://bandai-hobby.net/item/01_3841/",
+			"ja": "1/144 RX-78F00 ガンダム[チタニウムフィニッシュ]"
+		}
+	],
+	"scale": "1/48",
 	"price": {
 		"amount": 5280,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/48",
 	"description": {
 		"ja": [
 			"『GUNDAM FACTORY YOKOHAMA』の動く実物大ガンダムの限定商品！",
@@ -32,58 +75,70 @@
 			"• It is possible to express the form of a life-sized Gundam by attaching optional parts."
 		]
 	},
-	"accessories": {
-		"ja": ["LEDユニット", "ホイルシール", "マーキングシール"],
-		"en": ["LED unit", "foil seal", "MarkingSeal"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "LEDユニット",
+				"en": "LED unit"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4321.jpg",
+				"src": "https://bandai-hobby.net/images/153_4321_o_1end9l3e663q1kgi4s1nqg19ab23.jpg",
 				"path": "/images/items/01_3369/153_4321.jpg",
 				"hash": "ea01effedd1170030c53f2014bea5607"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4321.jpg",
+				"src": "https://bandai-hobby.net/images/155_4321_o_1end9ldes1ib1mo2u41ag31va22d.jpg",
 				"path": "/images/items/01_3369/155_4321.jpg",
 				"hash": "6e8b2fd26aa1912b89fed5392c448ca3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4321.jpg",
+				"src": "https://bandai-hobby.net/images/156_4321_o_1end9lruoo4s13ov1bgb1s6bi0r2i.jpg",
 				"path": "/images/items/01_3369/156_4321.jpg",
 				"hash": "4d938e011047b984a85abe3ddeb864cc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4321.jpg",
+				"src": "https://bandai-hobby.net/images/157_4321_o_1end9m18qnhc1s1r1s54vi8pku2n.jpg",
 				"path": "/images/items/01_3369/157_4321.jpg",
 				"hash": "8c87a6a4d6e4c61b43965133daffb94f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4321.jpg",
+				"src": "https://bandai-hobby.net/images/158_4321_o_1end9m718bbg14vo1m6dr6r1gqp2s.jpg",
 				"path": "/images/items/01_3369/158_4321.jpg",
 				"hash": "0952d88f0bf34ccdec04ace3a6855295"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4321.jpg",
+				"src": "https://bandai-hobby.net/images/159_4321_o_1end9ng4up4t4nrrl81e3f1tip31.jpg",
 				"path": "/images/items/01_3369/159_4321.jpg",
 				"hash": "b34dc392bcec71a93d9611a01d0349f9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4321.jpg",
+				"src": "https://bandai-hobby.net/images/189_4321_o_1end9nlg64hcdubm02iq11sf936.jpg",
 				"path": "/images/items/01_3369/189_4321.jpg",
 				"hash": "97fbcfc6a5980285e0d4a6ec5f9d7697"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4321.jpg",
+				"src": "https://bandai-hobby.net/images/190_4321_o_1end9nqku7nh5me2r6igj1c1g3b.jpg",
 				"path": "/images/items/01_3369/190_4321.jpg",
 				"hash": "309a1e49c2cfce60d2cfc53a5f992cd0"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3369/",
-	"brandIds": ["gfy"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5035", "01_4239", "01_3472", "01_3841"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3369/"
 }

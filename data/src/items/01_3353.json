@@ -5,6 +5,44 @@
 		"ja": "1/72 VF-31F ジークフリード/リル・ドラケン装備(ハヤテ・インメルマン搭乗機)",
 		"en": "1/72 VF-31F Siegfried/Lil Draken equipment (Hayate Immelmann aircraft)"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "macross",
+			"url": "https://bandai-hobby.net/series/macross/",
+			"ja": "マクロスシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5944",
+			"url": "https://bandai-hobby.net/item/01_5944/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機)"
+		},
+		{
+			"id": "01_5945",
+			"url": "https://bandai-hobby.net/item/01_5945/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) 専用水転写式デカール"
+		},
+		{
+			"id": "01_5946",
+			"url": "https://bandai-hobby.net/item/01_5946/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) デラックスセット"
+		},
+		{
+			"id": "01_5465",
+			"url": "https://bandai-hobby.net/item/01_5465/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(マクシミリアン・ジーナス機)"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 8140,
 		"currency": "JPY",
@@ -18,14 +56,13 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"『マクロスΔ』よりジークフリードにリル・ドラケンを付属したスペシャルパックが登場！",
-			"■新設計のジョイントパーツで、リル・ドラケンを装着可能！",
-			"■各形態で最適なプロポーションを実現。",
-			"■ロック機構の搭載により、各形態で安定したポージングが可能。",
-			"■ハヤテ・インメルマンのパイロットフィギュア、ランディングギア、各種武装など豊富なオプションパーツが付属。"
+			"• 新設計のジョイントパーツで、リル・ドラケンを装着可能！",
+			"• 各形態で最適なプロポーションを実現。",
+			"• ロック機構の搭載により、各形態で安定したポージングが可能。",
+			"• ハヤテ・インメルマンのパイロットフィギュア、ランディングギア、各種武装など豊富なオプションパーツが付属。"
 		],
 		"en": [
 			"From \"Macross Delta\" comes a special pack that includes Siegfried with Lil' Draken!",
@@ -35,63 +72,84 @@
 			"• Includes a variety of optional parts such as Hayate Immelman's pilot figure, landing gear, and various weapons."
 		]
 	},
-	"accessories": {
-		"ja": ["パイロットパーツ（ハヤテ・インメルマン）", "リル・ドラケン×2", "ホイルシール×2", "水転写式デカール×2"],
-		"en": ["Pilot parts (Hayate Immelman)", "Lil Draken×2", "Foil Seal×2", "Water transfer decal x 2"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "パイロットパーツ（ハヤテ・インメルマン）",
+				"en": "Pilot parts (Hayate Immelman)"
+			}
+		},
+		{
+			"name": {
+				"ja": "リル・ドラケン",
+				"en": "lil draken"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 2
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4307.jpg",
+				"src": "https://bandai-hobby.net/images/153_4307_s_60z50vori5q4356gpynm10j4f818.jpg",
 				"path": "/images/items/01_3353/153_4307.jpg",
 				"hash": "9c3cc64abf0091fb0fa39cff971e6275"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4307.jpg",
+				"src": "https://bandai-hobby.net/images/155_4307_s_wv9ajrc9ufndbf06hs5r3m5z6nwv.jpg",
 				"path": "/images/items/01_3353/155_4307.jpg",
 				"hash": "02b24565a5b4f97b57978a911266275c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4307.jpg",
+				"src": "https://bandai-hobby.net/images/156_4307_s_e9ju2zbeiqctlssxytximi2ei5x5.jpg",
 				"path": "/images/items/01_3353/156_4307.jpg",
 				"hash": "573596127907515f4ff28ad420d74841"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4307.jpg",
+				"src": "https://bandai-hobby.net/images/157_4307_s_wfxpof83ce3oie9373lmuxuqn750.jpg",
 				"path": "/images/items/01_3353/157_4307.jpg",
 				"hash": "098b616290ba8522243a68e766bc6a29"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4307.jpg",
+				"src": "https://bandai-hobby.net/images/158_4307_s_msuwreslq7p31g8h4rzglk8yzok4.jpg",
 				"path": "/images/items/01_3353/158_4307.jpg",
 				"hash": "335d3b145efe95c0283289d0b6ca575b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4307.jpg",
+				"src": "https://bandai-hobby.net/images/159_4307_s_h9p2073ebbeql1vlq5yfnvjdnul4.jpg",
 				"path": "/images/items/01_3353/159_4307.jpg",
 				"hash": "9b2223925c5ad987a084740916c68eed"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4307.jpg",
+				"src": "https://bandai-hobby.net/images/189_4307_s_x3ozb10ne0lzxxaz6ybtfno5r2md.jpg",
 				"path": "/images/items/01_3353/189_4307.jpg",
 				"hash": "ebdc4ee22e00770b0c4d67d2660cd3fc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4307.jpg",
+				"src": "https://bandai-hobby.net/images/190_4307_s_l7kgvhm49jpxol6rug8i3iyta07z.jpg",
 				"path": "/images/items/01_3353/190_4307.jpg",
 				"hash": "604a322d8f09fb6c66a84f5841f1ef74"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4307.jpg",
+				"src": "https://bandai-hobby.net/images/191_4307_s_w9b2uxckrvgmgg0n5q5c0lpfvg7t.jpg",
 				"path": "/images/items/01_3353/191_4307.jpg",
 				"hash": "093b6d12e00b92225a449fe6a2ad354e"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3353/",
-	"brandIds": [],
-	"seriesIds": ["macross"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5944", "01_5945", "01_5946", "01_5465"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3353/"
 }

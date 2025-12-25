@@ -5,6 +5,55 @@
 		"ja": "ＨＧ 1/144 エルガイムMk-II",
 		"en": "HG 1/144 L-Gaim Mk-II"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		},
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "lgaim",
+			"url": "https://bandai-hobby.net/series/lgaim/",
+			"ja": "重戦機エルガイム"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216436",
+			"url": "https://p-bandai.jp/item/item-1000216436/",
+			"ja": "ＨＧ 1/144 エルガイム [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000207143",
+			"url": "https://p-bandai.jp/item/item-1000207143/",
+			"ja": "重戦機エルガイムセット 2"
+		},
+		{
+			"id": "item-1000207142",
+			"url": "https://p-bandai.jp/item/item-1000207142/",
+			"ja": "重戦機エルガイムセット 1"
+		},
+		{
+			"id": "item-1000205639",
+			"url": "https://p-bandai.jp/item/item-1000205639/",
+			"ja": "ＨＧ 1/144 バッシュ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -16,7 +65,6 @@
 		"year": 2021,
 		"month": 3
 	},
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -71,7 +119,7 @@
 			"After a long time,",
 			"LG MK-II becomes HG.",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－．",
-			"From \"Heavy Battle Machine L-Gaim \", \" L-Gaim Mk-II\" is commercialized in the HG series with a completely new model.",
+			"From \"Heavy Battle Machine L-Gaim\", \"L-Gaim Mk-II\" is commercialized in the HG series with a completely new model.",
 			"Accurately reproduces various weapons such as the buster launcher and transformation into prowler form.",
 			"A wide variety of optional parts are included, including head parts that can be selected to recreate the damaged state.",
 			"● \"L-Gaim Mk-II\" is now three-dimensional with a completely new model!",
@@ -93,11 +141,11 @@
 			"Includes optional parts for the head that can be selected to recreate the damaged state.",
 			"● Strongly linked with the upgraded \"HG L-Gaim\"!",
 			"Two types of joint parts are included that can reproduce the suspended state of \"HG 1/144 L-Gaim\" (sold separately, scheduled for 20213 in-store sales).",
-			"A handle part on the shoulder of \"L-Gaim Mk-II \" and a joint part to hold \" L-Gaim\" are included.",
+			"A handle part on the shoulder of \"L-Gaim Mk-II\" and a joint part to hold \"L-Gaim\" are included.",
 			"Attached weapons: Buster Launcher / Power Launcher / Saber",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/144 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Main product materials: PS, PE, TPE",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -115,21 +163,32 @@
 			"・Product specifications are as of 202011. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["バスターランチャー", "パワーランチャー", "セイバー"],
-		"en": ["buster launcher", "power launcher", "Saber"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "バスターランチャー",
+				"en": "buster launcher"
+			}
+		},
+		{
+			"name": {
+				"ja": "パワーランチャー",
+				"en": "power launcher"
+			}
+		},
+		{
+			"name": {
+				"ja": "セイバー",
+				"en": "Saber"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151412_1.jpg",
 				"path": "/images/items/01_3363/1000151412_1.jpg",
 				"hash": "f20be2481ad020b1146e6ac1382b88f7"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151412_10.jpg",
-				"path": "/images/items/01_3363/1000151412_10.jpg",
-				"hash": "e80c801947db76ef0a0a62a08fe2c523"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151412_2.jpg",
@@ -170,17 +229,14 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151412_9.jpg",
 				"path": "/images/items/01_3363/1000151412_9.jpg",
 				"hash": "ec50e10253470b31d3cedf9020e8a94b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151412_10.jpg",
+				"path": "/images/items/01_3363/1000151412_10.jpg",
+				"hash": "e80c801947db76ef0a0a62a08fe2c523"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3363/",
-	"brandIds": ["pb_charapla", "hg"],
-	"seriesIds": ["lgaim"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["item-1000216436", "item-1000207143", "item-1000207142", "item-1000205639"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3363/"
 }

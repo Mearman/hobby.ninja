@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard Amplified ムゲンドラモン",
 		"en": "Figure-rise Standard Amplified Mugendramon"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard-amp",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard-amp/",
+			"ja": "Figure-rise Standard Amplified[フィギュアライズ スタンダード アンプリファイド]"
+		}
+	],
+	"series": [
+		{
+			"id": "digimon",
+			"url": "https://bandai-hobby.net/series/digimon/",
+			"ja": "デジモンシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5983",
+			"url": "https://bandai-hobby.net/item/01_5983/",
+			"ja": "Figure-rise Standard Amplified カイゼルグレイモン"
+		},
+		{
+			"id": "item-1000216437",
+			"url": "https://p-bandai.jp/item/item-1000216437/",
+			"ja": "Figure-rise Standard Amplified オメガモン(Ｘ抗体) [リミテッドカラー]"
+		},
+		{
+			"id": "01_5277",
+			"url": "https://bandai-hobby.net/item/01_5277/",
+			"ja": "Figure-rise Standard Amplified パイルドラモン"
+		},
+		{
+			"id": "item-1000198198",
+			"url": "https://p-bandai.jp/item/item-1000198198/",
+			"ja": "Figure-rise Standard Amplified デュークモン[スペシャルコーティング]"
+		}
+	],
 	"price": {
 		"amount": 6600,
 		"currency": "JPY",
@@ -21,44 +64,41 @@
 	"description": {
 		"ja": [
 			"『デジモンアドベンチャー』より、デジタルワールドマシーン型デジモン「ムゲンドラモン」がFigure-rise Standard Amplifiedシリーズに登場！",
-			"■シリーズ最大級の大型キット！劇中の圧倒的なパワーを全長2５0mmの大型プラモデルで再現。",
-			"■ボディ各部を引き出すことで可動範囲が広がり、多彩なポージングを表現できる。",
-			"■首と尾はリード線を通した蛇腹構造を採用し、表情豊かに再現。",
-			"■「ギガデストロイヤー」イメージの胸部開閉ギミックを搭載。"
+			"• シリーズ最大級の大型キット！劇中の圧倒的なパワーを全長2５0mmの大型プラモデルで再現。",
+			"• ボディ各部を引き出すことで可動範囲が広がり、多彩なポージングを表現できる。",
+			"• 首と尾はリード線を通した蛇腹構造を採用し、表情豊かに再現。",
+			"• 「ギガデストロイヤー」イメージの胸部開閉ギミックを搭載。"
 		],
 		"en": [
-			"From \"Digimon Adventure \", the Digital World Machine Digimon \" Mugendramon\" appears in the Figure-rise Standard Amplified series!",
+			"From \"Digimon Adventure\", the Digital World Machine Digimon \"Mugendramon\" appears in the Figure-rise Standard Amplified series!",
 			"• Largest kit in the series! The overwhelming power in the play is reproduced with a large plastic model with a total length of 250mm.",
 			"• By pulling out each part of the body, the range of motion is expanded and a variety of poses can be expressed.",
 			"• The neck and tail have a bellows structure with lead wires passed through them, giving a richly expressive look.",
 			"• Equipped with a chest opening/closing gimmick with a \"Giga Destroyer\" image."
 		]
 	},
-	"accessories": {
-		"ja": ["リード線×2", "シール×1"],
-		"en": ["Lead wire x 2", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "リード線",
+				"en": "lead wire"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156201_1.jpg",
 				"path": "/images/items/01_3355/1000156201_1.jpg",
 				"hash": "63aae1345b19354ce01b1e499fc5f681"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156201_10.jpg",
-				"path": "/images/items/01_3355/1000156201_10.jpg",
-				"hash": "006268253a98fb76b238c7045a034848"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156201_11.jpg",
-				"path": "/images/items/01_3355/1000156201_11.jpg",
-				"hash": "041201848c09f61d5d3de5f9c1d901ee"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156201_12.jpg",
-				"path": "/images/items/01_3355/1000156201_12.jpg",
-				"hash": "5cb6fba3d940eec5b2ba4fb65ebebdad"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156201_2.jpg",
@@ -99,13 +139,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156201_9.jpg",
 				"path": "/images/items/01_3355/1000156201_9.jpg",
 				"hash": "83e37f13aba0940e9c870b863faab13a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156201_10.jpg",
+				"path": "/images/items/01_3355/1000156201_10.jpg",
+				"hash": "006268253a98fb76b238c7045a034848"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156201_11.jpg",
+				"path": "/images/items/01_3355/1000156201_11.jpg",
+				"hash": "041201848c09f61d5d3de5f9c1d901ee"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000156201_12.jpg",
+				"path": "/images/items/01_3355/1000156201_12.jpg",
+				"hash": "5cb6fba3d940eec5b2ba4fb65ebebdad"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3355/",
-	"brandIds": ["figurerise-standard-amp"],
-	"seriesIds": ["digimon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5983", "item-1000216437", "01_5277", "item-1000198198"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3355/"
 }

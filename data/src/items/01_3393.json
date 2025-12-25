@@ -5,6 +5,28 @@
 		"ja": "Figure-rise Standard レーナ",
 		"en": "Figure-rise Standard Lena"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "eightysix",
+			"url": "https://bandai-hobby.net/series/eightysix/",
+			"ja": "86-エイティシックス-"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 3630,
 		"currency": "JPY",
@@ -21,62 +43,82 @@
 	"description": {
 		"ja": [
 			"2021年４月に地上波にてアニメ放送開始の『86－エイティシックス－』より、ヒロイン「レーナ」を立体化！",
-			"■表情パーツは「通常顔」「笑顔」「怒り顔」の３種類選択式。ポージングに合わせた表情を楽しめる。",
-			"■髪の毛の一部を折れにくい素材（AFX）で成形し、長髪ながら自然なポージングが可能。ポーズに合わせて髪の形状を変化させることができる。",
-			"■「レーナ」が被っている印象的な帽子はあり/なしの状態をパーツの選択式で再現できる。",
-			"■「バインダー」が付属。"
+			"• 表情パーツは「通常顔」「笑顔」「怒り顔」の３種類選択式。ポージングに合わせた表情を楽しめる。",
+			"• 髪の毛の一部を折れにくい素材（AFX）で成形し、長髪ながら自然なポージングが可能。ポーズに合わせて髪の形状を変化させることができる。",
+			"• 「レーナ」が被っている印象的な帽子はあり/なしの状態をパーツの選択式で再現できる。",
+			"• 「バインダー」が付属。"
 		],
 		"en": [
-			"The heroine \"Lena \" from \" 86-Eighty Six-\", which will start airing on terrestrial TV in 20214, has been made into a three-dimensional figure!",
-			"• There are three types of facial expressions to choose from: \"normal face,\" \" smiling face,\" and \" angry face.\" You can enjoy the expressions that match the poses.",
+			"The heroine \"Lena\" from \"86-Eighty Six-\", which will start airing on terrestrial TV in 20214, has been made into a three-dimensional figure!",
+			"• There are three types of facial expressions to choose from: \"normal face,\" \"smiling face,\" and \"angry face.\" You can enjoy the expressions that match the poses.",
 			"• Part of the hair is molded from break-resistant material (AFX), allowing for natural poses even with long hair. You can change the shape of your hair to match the pose.",
 			"• The impressive hat worn by \"Lena\" can be reproduced with or without by selecting parts.",
 			"• \"Binder\" included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"表情パーツ×3",
-			"手首パーツ　平手（左右）、バインダー用持ち手（左）、帽子用持ち手（左）",
-			"帽子×1",
-			"バインダー×1",
-			"ホイルシール×1",
-			"マーキングシール×1",
-			"Figure-rise Effect台座×1",
-			"台座ジョイントパーツ×1"
-		],
-		"en": [
-			"Facial expression parts x 3",
-			"Wrist parts Open hands (left and right), binder handle (left), hat handle (left)",
-			"Hat x 1",
-			"Binder x 1",
-			"Foil Seal×1",
-			"MarkingSeal×1",
-			"Figure-rise Effect pedestal x 1",
-			"Pedestal joint parts x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情パーツ",
+				"en": "facial expression parts"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "手首パーツ　平手（左右）、バインダー用持ち手（左）、帽子用持ち手（左）",
+				"en": "Wrist parts Open hands (left and right), binder handle (left), hat handle (left)"
+			}
+		},
+		{
+			"name": {
+				"ja": "帽子",
+				"en": "hat"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "バインダー",
+				"en": "binder"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "Figure-rise Effect台座",
+				"en": "Figure-rise Effect pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "台座ジョイントパーツ",
+				"en": "Pedestal joint parts"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157481_1.jpg",
 				"path": "/images/items/01_3393/1000157481_1.jpg",
 				"hash": "bc6fddfcd54448a3a5ead59ba99f904b"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157481_10.jpg",
-				"path": "/images/items/01_3393/1000157481_10.jpg",
-				"hash": "41529ad17d3acdf50462255a52d79fc1"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157481_11.jpg",
-				"path": "/images/items/01_3393/1000157481_11.jpg",
-				"hash": "1975d0113e3b5bedf01e12fca887592d"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157481_12.jpg",
-				"path": "/images/items/01_3393/1000157481_12.jpg",
-				"hash": "ab082da8e7f9b21c1315029cb9c67284"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157481_2.jpg",
@@ -117,13 +159,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157481_9.jpg",
 				"path": "/images/items/01_3393/1000157481_9.jpg",
 				"hash": "d0a75d5c4005aaf4a6400ff5cda4a914"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157481_10.jpg",
+				"path": "/images/items/01_3393/1000157481_10.jpg",
+				"hash": "41529ad17d3acdf50462255a52d79fc1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157481_11.jpg",
+				"path": "/images/items/01_3393/1000157481_11.jpg",
+				"hash": "1975d0113e3b5bedf01e12fca887592d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000157481_12.jpg",
+				"path": "/images/items/01_3393/1000157481_12.jpg",
+				"hash": "ab082da8e7f9b21c1315029cb9c67284"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3393/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["eightysix"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_3393/"
 }

@@ -5,6 +5,60 @@
 		"ja": "ＰＧ ＵＮＬＥＡＳＨＥＤ 1/60 RX-78-2 ガンダム クリアカラーボディ",
 		"en": "PG UNLEASHED 1/60 RX-78-2 Gundam Clear Color Body"
 	},
+	"brands": [
+		{
+			"id": "pb_pg",
+			"url": "https://bandai-hobby.net/brand/pb_pg/",
+			"ja": "PG［パーフェクトグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000209098",
+			"url": "https://p-bandai.jp/item/item-1000209098/",
+			"ja": "ＲＧ 1/144 RX-78-2 ガンダム Ver.2.0用武器セット"
+		},
+		{
+			"id": "item-1000161796",
+			"url": "https://p-bandai.jp/item/item-1000161796/",
+			"ja": "ＨＧ 1/144 RX-78-2 ガンダム［2020年ドバイ国際博覧会 日本館PRアンバサダー］"
+		},
+		{
+			"id": "01_3328",
+			"url": "https://bandai-hobby.net/item/01_3328/",
+			"ja": "PG UNLEASHED 1/60 RX-78-2 ガンダム"
+		},
+		{
+			"id": "item-1000148308",
+			"url": "https://p-bandai.jp/item/item-1000148308/",
+			"ja": "ガンダリウム合金モデル 1/144 RX-78-2 ガンダム"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 5720,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 3
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
 			"ＧＵＮＰＬＡ ４０ｔｈ ＡＮＮＩＶＥＲＳＡＲＹ ＰＲＯＤＵＣＴ",
@@ -88,7 +141,7 @@
 			"* To reproduce the posted photo, you will need \"PG UNLEASHED 1/60 RX-78-2 Gundam\" (sold separately) before assembly with this product.",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/60 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -112,11 +165,6 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152182_1.jpg",
 				"path": "/images/items/01_3373/1000152182_1.jpg",
 				"hash": "891330c390a002ad7133d9ed770d2e41"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152182_10.jpg",
-				"path": "/images/items/01_3373/1000152182_10.jpg",
-				"hash": "9c94307fff4c57bc6076b1462191c141"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152182_2.jpg",
@@ -157,17 +205,14 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152182_9.jpg",
 				"path": "/images/items/01_3373/1000152182_9.jpg",
 				"hash": "b292284c1755fff2b9b6ba26752170fd"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000152182_10.jpg",
+				"path": "/images/items/01_3373/1000152182_10.jpg",
+				"hash": "9c94307fff4c57bc6076b1462191c141"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3373/",
-	"brandIds": ["pg", "pb_pg", "pb_gunpla"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000209098", "item-1000161796", "01_3328", "item-1000148308"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3373/"
 }
