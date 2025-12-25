@@ -2,9 +2,46 @@
 	"id": "01_4463",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム Gジェネレーション14 アムロ専用Ｚプラス",
-		"en": "SD Gundam G Generation 14 Amuro Z Plus"
+		"ja": "SDガンダムGジェネレーション14 アムロ専用Ｚプラス",
+		"en": "SDGundamG Generation 14 Amuro exclusive Z Plus"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4975",
+			"url": "https://bandai-hobby.net/item/01_4975/",
+			"ja": "BB戦士 MSN-04FF サザビー"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		}
+	],
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,27 +55,27 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": ["「SD ガンダム Gジェネレーション14 アムロ専用Ｚプラス」が登場！"],
-		"en": ["\"SD Gundam G Generation 14 Amuro Z Plus\" is now available!"]
+		"ja": [
+			"「SDガンダムGジェネレーション14 アムロ専用Ｚプラス」が登場！"
+		],
+		"en": [
+			"\"SD GundamG Generation 14 Amuro Z Plus\" is now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5368.jpg",
+				"src": "https://bandai-hobby.net/images/153_5368_s_fgaqgikw3uyoqi9pywh3w6slwbr5.jpg",
 				"path": "/images/items/01_4463/153_5368.jpg",
 				"hash": "cba8912acfe09c086f33ca7d0756c4ae"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5368.jpg",
+				"src": "https://bandai-hobby.net/images/155_5368_s_muhx0xc6pvca520duc53fg1s7qr6.jpg",
 				"path": "/images/items/01_4463/155_5368.jpg",
 				"hash": "e72024a86ddee9b1669a452c703a469e"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4463/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4463/"
 }

@@ -2,9 +2,47 @@
 	"id": "01_4487",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム Gジェネレーション51 ガンダム GP04",
-		"en": "SD Gundam G Generation 51 Gundam GP04"
+		"ja": "SDガンダムGジェネレーション51 ガンダムGP04",
+		"en": "SDGundamG Generation 51 GundamGP04"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "g-0083",
+			"url": "https://bandai-hobby.net/series/g-0083/",
+			"ja": "機動戦士ガンダム0083 STARDUST MEMORY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1396",
+			"url": "https://bandai-hobby.net/item/01_1396/",
+			"ja": "BB戦士224 ノイエ・ジール"
+		},
+		{
+			"id": "01_4465",
+			"url": "https://bandai-hobby.net/item/01_4465/",
+			"ja": "SDガンダムGジェネレーション18 ジムカスタム"
+		},
+		{
+			"id": "01_1604",
+			"url": "https://bandai-hobby.net/item/01_1604/",
+			"ja": "BB戦士 193GP-01Fb"
+		}
+	],
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,27 +56,27 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": ["「SD ガンダム Gジェネレーション51 ガンダムＧＰ０４」が登場！"],
-		"en": ["\"SD Gundam G Generation 51 Gundam GP04\" is now available!"]
+		"ja": [
+			"「SDガンダムGジェネレーション51 ガンダムＧＰ０４」が登場！"
+		],
+		"en": [
+			"\"SD GundamG Generation 51 GundamGP04\" is now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5391.jpg",
+				"src": "https://bandai-hobby.net/images/153_5391_s_wx72170z6nzgme3peuw33pt34ybu.jpg",
 				"path": "/images/items/01_4487/153_5391.jpg",
 				"hash": "2f033f27d0a83c7b98fc73fa2dfd738a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5391.jpg",
+				"src": "https://bandai-hobby.net/images/155_5391_s_lwzhpf465oeys6mg2lzs3msxqp99.jpg",
 				"path": "/images/items/01_4487/155_5391.jpg",
 				"hash": "6042a1294a327ba4fdd9d20b6821ca13"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4487/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["g-0083"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_1396", "01_4465", "01_1604"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4487/"
 }

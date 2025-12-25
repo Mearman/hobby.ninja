@@ -2,9 +2,46 @@
 	"id": "01_4488",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム Gジェネレーション52 ブルーディスティニー3号機",
-		"en": "SD Gundam G Generation 52 Blue Destiny Unit 3"
+		"ja": "SDガンダムGジェネレーション52 ブルーディスティニー3号機",
+		"en": "SDGundamG Generation 52 Blue Destiny Unit 3"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4975",
+			"url": "https://bandai-hobby.net/item/01_4975/",
+			"ja": "BB戦士 MSN-04FF サザビー"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		}
+	],
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,27 +55,27 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": ["「SD ガンダム Gジェネレーション52 ブルーディスティニー３号機」が登場！"],
-		"en": ["\"SD Gundam G Generation 52 Blue Destiny Unit 3\" is now available!"]
+		"ja": [
+			"「SDガンダムGジェネレーション52 ブルーディスティニー３号機」が登場！"
+		],
+		"en": [
+			"\"SD GundamG Generation 52 Blue Destiny Unit 3\" is now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5392.jpg",
+				"src": "https://bandai-hobby.net/images/153_5392_s_rbp6tfg1darijg391e3zwf4rken8.jpg",
 				"path": "/images/items/01_4488/153_5392.jpg",
 				"hash": "a4343715f95642f80a5934ddb03ba7e0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5392.jpg",
+				"src": "https://bandai-hobby.net/images/155_5392_s_jxjtf5eu9eji77uwyoblwav27uxw.jpg",
 				"path": "/images/items/01_4488/155_5392.jpg",
 				"hash": "ad708e04c4d84c4fb0c405786d791041"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4488/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4488/"
 }

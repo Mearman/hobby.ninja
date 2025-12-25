@@ -5,6 +5,44 @@
 		"ja": "HGUC 1/144 ザク地上戦セット",
 		"en": "HGUC 1/144 Zaku ground battle set"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -18,25 +56,28 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["「ＨＧ 1/144 ザク地上戦セット」が登場！"],
-		"en": ["\"HG 1/144 Zaku Ground Combat Set\" is now available!"]
+		"ja": [
+			"「ＨＧ 1/144 ザク地上戦セット」が登場！"
+		],
+		"en": [
+			"\"HG 1/144 Zaku Ground Combat Set\" is now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5427.jpg",
+				"src": "https://bandai-hobby.net/images/153_5427_s_ewng0815wzmfhkme2nwq4h0ny98o.jpg",
 				"path": "/images/items/01_4526/153_5427.jpg",
 				"hash": "1bdf216baa4d64bf58d9c9969a452d1a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5427.jpg",
+				"src": "https://bandai-hobby.net/images/155_5427_s_3kediz6llcb8ikhdigm1nfk6rujm.jpg",
 				"path": "/images/items/01_4526/155_5427.jpg",
 				"hash": "c37cb8f71245bff1903881f8d46ada8d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5427.jpg",
+				"src": "https://bandai-hobby.net/images/156_5427_s_5qw6m5ub3g8bi2uk29lj8y1axq3d.jpg",
 				"path": "/images/items/01_4526/156_5427.jpg",
 				"hash": "cf88c76c559f62681ffd5636fd8b790e"
 			}
@@ -44,10 +85,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4526/",
-	"brandIds": ["hg"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
 	"manual": {
 		"id": "997",
 		"url": "https://manual.bandai-hobby.net/menus/detail/997/"

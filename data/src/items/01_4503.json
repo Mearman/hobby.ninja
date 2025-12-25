@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "アクションベース2 グレー",
-		"en": "ACTION BASE2 GRAY"
+		"en": "action base 2 gray"
 	},
+	"brands": [
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		},
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5934",
+			"url": "https://bandai-hobby.net/item/01_5934/",
+			"ja": "アクションベース7 [クリアカラー] 機動戦士Gundam GQuuuuuuXシールセット"
+		},
+		{
+			"id": "01_5256",
+			"url": "https://bandai-hobby.net/item/01_5256/",
+			"ja": "アクションベース6 [クリアカラー] ミラーシールセット"
+		},
+		{
+			"id": "01_5258",
+			"url": "https://bandai-hobby.net/item/01_5258/",
+			"ja": "アクションベース7 [クリアカラー] ミラーシールセット"
+		}
+	],
 	"price": {
 		"amount": 495,
 		"currency": "JPY",
@@ -40,9 +77,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4503/",
-	"brandIds": ["actionbase"],
-	"seriesIds": [],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5934", "01_5256", "01_5258"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4503/"
 }

@@ -2,9 +2,47 @@
 	"id": "01_4432",
 	"type": "item",
 	"name": {
-		"ja": "1/60 Z ガンダム",
-		"en": "1/60 Z Gundam"
+		"ja": "1/60 Zガンダム",
+		"en": "1/60 ZGundam"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -18,24 +56,23 @@
 		"day": 1
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
-		"ja": ["「1/60 Z ガンダム」登場！"],
-		"en": ["\"1/60 Z Gundam\" now available!"]
+		"ja": [
+			"「1/60 Zガンダム」登場！"
+		],
+		"en": [
+			"\"1/60 ZGundam\" now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5339.jpg",
+				"src": "https://bandai-hobby.net/images/153_5339_s_2vqvoqjnramlvhd0v1hj9x1hwel7.jpg",
 				"path": "/images/items/01_4432/153_5339.jpg",
 				"hash": "8c22ec2de154eb456fd2d3511c560ffa"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4432/",
-	"brandIds": [],
-	"seriesIds": ["z-gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4432/"
 }

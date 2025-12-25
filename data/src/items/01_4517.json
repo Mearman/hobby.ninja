@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムアストレイ グリーンフレーム(トロヤ・ノワレ専用機)",
 		"en": "HG 1/144 Gundam Astray Green Frame (Troya Noire exclusive machine)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181726",
+			"url": "https://p-bandai.jp/item/item-1000181726/",
+			"ja": "ＨＧ 1/144 ストライクダガー"
+		},
+		{
+			"id": "01_1930",
+			"url": "https://bandai-hobby.net/item/01_1930/",
+			"ja": "HG 1/144 ガンダムベース限定 フリーダムガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_384",
+			"url": "https://bandai-hobby.net/item/01_384/",
+			"ja": "HGCE 1/144 フリーダムガンダム"
+		},
+		{
+			"id": "01_83",
+			"url": "https://bandai-hobby.net/item/01_83/",
+			"ja": "HGCE 1/144 ストライクルージュ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -18,29 +62,28 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"電撃ホビーマガジンに連載中の「機動戦士ガンダム SEED FRAME ASTRAYS」より“ガンダムアストレイ グリーンフレーム”がキット化 付属の専用ビーム・ライフルはビームサーベル部が前方へスライド変形 トロヤ・ノワレの専用マーキングシールが付属"
+			"電撃ホビーマガジンに連載中の「機動戦士ガンダムSEED FRAME ASTRAYS」より“ガンダムアストレイ グリーンフレーム”がキット化 付属の専用ビーム・ライフルはビームサーベル部が前方へスライド変形 トロヤ・ノワレの専用マーキングシールが付属"
 		],
 		"en": [
-			"\"Gundam Astray Green Frame \" from \" Mobile Suit Gundam SEED FRAME ASTRAYS\" currently being serialized in Dengeki Hobby Magazine has been made into a kit. The included special beam rifle has a beam saber section that slides forward. Troya Noiret's special marking seal is included."
+			"\"Gundam Astray Green Frame\" from \"Mobile Suit GundamSEED FRAME ASTRAYS\" currently being serialized in Dengeki Hobby Magazine has been made into a kit. The attached special beam rifle has a beam saber section that slides forward. Troya Noiret's special marking seal is included."
 		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5419.jpg",
+				"src": "https://bandai-hobby.net/images/153_5419_s_78moqzhrk1qn4bfb7gndi0ynfiro.jpg",
 				"path": "/images/items/01_4517/153_5419.jpg",
 				"hash": "305dd4cee26438887426677c4d9df1b4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5419.jpg",
+				"src": "https://bandai-hobby.net/images/155_5419_s_nf9md3jeed1qdal38lflvm9w1egt.jpg",
 				"path": "/images/items/01_4517/155_5419.jpg",
 				"hash": "0da4b5a4e2ba4a33c0ee76427654bcb8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5419.jpg",
+				"src": "https://bandai-hobby.net/images/156_5419_s_y7ddwanzdmjkc01qofcnxs2qmfaa.jpg",
 				"path": "/images/items/01_4517/156_5419.jpg",
 				"hash": "19ae4d694f4b54a754400c018210ced1"
 			}
@@ -48,10 +91,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4517/",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000181726", "01_1930", "01_384", "01_83"],
 	"manual": {
 		"id": "277",
 		"url": "https://manual.bandai-hobby.net/menus/detail/277/"

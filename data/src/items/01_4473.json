@@ -2,9 +2,46 @@
 	"id": "01_4473",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム Gジェネレーション37 ガンダムサンドロック",
-		"en": "SD Gundam G Generation 37 Gundam Sandrock"
+		"ja": "SDガンダムGジェネレーション37 ガンダムサンドロック",
+		"en": "SDGundamG Generation 37 Gundam Sandrock"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4975",
+			"url": "https://bandai-hobby.net/item/01_4975/",
+			"ja": "BB戦士 MSN-04FF サザビー"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		}
+	],
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,27 +55,27 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": ["「SD ガンダム Gジェネレーション37 ガンダムサンドロック」が登場！"],
-		"en": ["\"SD Gundam G Generation 37 Gundam Sandrock\" is now available!"]
+		"ja": [
+			"「SDガンダムGジェネレーション37 ガンダムサンドロック」が登場！"
+		],
+		"en": [
+			"\"SD GundamG Generation 37 Gundam Sandrock\" is now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5378.jpg",
+				"src": "https://bandai-hobby.net/images/153_5378_s_x841p65fu7hkntkdblr0nw30u1wl.jpg",
 				"path": "/images/items/01_4473/153_5378.jpg",
 				"hash": "86ed8a7dec46b610a791c7aa6d404539"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5378.jpg",
+				"src": "https://bandai-hobby.net/images/155_5378_s_u2xehfcicainjootezxlu0j6vi3p.jpg",
 				"path": "/images/items/01_4473/155_5378.jpg",
 				"hash": "022edcdb031db5dfa32c765aba5b8fd4"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4473/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4473/"
 }
