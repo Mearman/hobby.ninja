@@ -2,9 +2,50 @@
 	"id": "01_5383",
 	"type": "item",
 	"name": {
-		"ja": "30MS オプションパーツセット14(スポッターコスチューム)[カラーB]",
-		"en": "30MS OPTION PARTS SET 14 (SPOTTER COSTUME) [COLOR B]"
+		"ja": "30MS オプションパーツセット14(スポッターコスチューム)[カラーB]"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -26,54 +67,79 @@
 			"• バイザー部分はクリアグリーンのPETシートで再現。",
 			"• 「30 MINUTES SISTERS」はフェイスパーツ/ヘアスタイルパーツ/ボディパーツを部位ごとにラインアップ展開。別売りのパーツと組み替えて自分好みのシスターを創ることができる。",
 			"• 30 MINUTESシリーズ共通の3mmジョイントを採用。「30 MINUTES MISSIONS」のパーツもオプションとして装着が可能。(※「30 MINUTES MISSIONS」キットの対象年齢は8才以上です)"
-		],
-		"en": [
-			"• Smooth assembly is possible due to the ``optimum'' Runner parts arrangement, with consideration for ease of assembly and work flow.",
-			"• In addition to 2 unprinted face parts, 2 types of head parts (FP-I type) are included. In combination with \"30 MINUTES SISTERS Water Transfer Decal General Purpose\" (sold separately), you can create expressive characters!",
-			"• Hairstyle parts and headgear parts are included, and two types of chest parts are included.",
-			"• The visor part is reproduced with clear green PET sheet.",
-			"• \"30 MINUTES SISTERS\" offers a lineup of face parts, hairstyle parts, and body parts by body part. You can create your own sister by combining parts sold separately.",
-			"• Adopts a 3mm joint common to the 30 MINUTES series. \"30 MINUTES MISSIONS \" parts can also be installed as options. (*\" 30 MINUTES MISSIONS\" Kit is for ages 8 and up)"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ボディパーツ×1式",
-			"胸部パーツ(差替え)×2種",
-			"ジョイントパーツ×1式",
-			"無塗装フェイスパーツ×2",
-			"頭部パーツ×2種",
-			"ヘアスタイルパーツ×1",
-			"首パーツ×1式",
-			"PETシート×1"
-		],
-		"en": [
-			"Body parts x 1 set",
-			"Chest parts (replacement) x 2 types",
-			"Joint parts x 1 set",
-			"Unpainted face parts x 2",
-			"Head parts x 2 types",
-			"Hair style parts x 1",
-			"Neck parts x 1 set",
-			"PET sheet x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ボディパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "胸部パーツ(差替え)"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "無塗装フェイスパーツ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "頭部パーツ"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヘアスタイルパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "首パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "PETシート"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221750_1.jpg",
 				"path": "/images/items/01_5383/1000221750_1.jpg",
 				"hash": "6ecb4fdee7611f6a31fbf6d3058b6dfa"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221750_10.jpg",
-				"path": "/images/items/01_5383/1000221750_10.jpg",
-				"hash": "2190fbdfc627e740f7f1eddc91ad8337"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221750_11.jpg",
-				"path": "/images/items/01_5383/1000221750_11.jpg",
-				"hash": "0c15282f114a8e010371bed419f36e56"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221750_2.jpg",
@@ -114,15 +180,21 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221750_9.jpg",
 				"path": "/images/items/01_5383/1000221750_9.jpg",
 				"hash": "2d1afcd3f4aefda24ece9dd26c5f32bd"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221750_10.jpg",
+				"path": "/images/items/01_5383/1000221750_10.jpg",
+				"hash": "2190fbdfc627e740f7f1eddc91ad8337"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221750_11.jpg",
+				"path": "/images/items/01_5383/1000221750_11.jpg",
+				"hash": "0c15282f114a8e010371bed419f36e56"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5383/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"],
 	"manual": {
 		"id": "3592",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3592/"

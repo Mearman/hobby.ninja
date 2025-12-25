@@ -2,9 +2,56 @@
 	"id": "01_5384",
 	"type": "item",
 	"name": {
-		"ja": "30MS オプションヘアスタイル&フェイスパーツセット(三峰結華/幽谷霧子)",
-		"en": "30MS OPTION HAIR STYLE & FACE PARTS SET (YUIKA MITSUMINE/KIRIKO YUKOKU)"
+		"ja": "30MS オプションヘアスタイル&フェイスパーツセット(三峰結華/幽谷霧子)"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [
+		{
+			"id": "idolmaster",
+			"url": "https://bandai-hobby.net/series/idolmaster/",
+			"ja": "アイドルマスターシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6755",
+			"url": "https://bandai-hobby.net/item/01_6755/",
+			"ja": "30MS 芹沢あさひ"
+		},
+		{
+			"id": "01_6756",
+			"url": "https://bandai-hobby.net/item/01_6756/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム3[カラーB]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		}
+	],
 	"price": {
 		"amount": 3080,
 		"currency": "JPY",
@@ -22,61 +69,56 @@
 		"ja": [
 			"「三峰結華」「幽谷霧子」のヘアスタイルパーツとフェイスパーツのセット商品。",
 			"別売りの30MSオプションボディパーツと組み合わせてアイドルたちを様々なコスチュームに着せ替え可能。",
-			"■繊細な髪の流れを丁寧に立体化、ポーズに合わせてなびく動きを表現。",
-			"■衣装のデザインに合わせて髪飾りの着脱が可能。パーツの着脱で髪飾りの無い状態も再現。",
-			"■三峰結華の前髪パーツは髪と一体で造型されたメガネパーツが付属。着脱が可能。",
-			"■幽谷霧子は包帯デザインの施された右腕、右脚が付属。左腕、左脚の絆創膏は立体的なシールで再現。",
-			"■表情パーツはタンポ印刷を施し、各2種類ずつ付属。",
-			"■別売りの「30MS オプションボディパーツ ビヨンドザブルースカイ1[カラーA]」、「30MS オプションボディパーツ アルファシスターズファンタズム1[カラーA]」、「30MS オプションボディパーツ シグマシスターズパラドクス1[カラーA]」と組み合わせることができる。"
-		],
-		"en": [
-			"A set product of \"Yuka Mitsumine \" and \" Kiriko Yuya\" hairstyle parts and face parts.",
-			"Idols can be dressed up in various costumes by combining with the 30MS optional body parts (sold separately).",
-			"• The delicate flow of her hair has been carefully sculpted into three-dimensional form to express fluttering movements that match the pose.",
-			"• Hair accessories can be attached and removed to match the costume design. By attaching and detaching parts, you can also recreate the state without the hair ornament.",
-			"• Yuka Mitsumine's bangs parts come with glasses parts that are molded as one with her hair. Can be attached and detached.",
-			"• Kiriko Yuya comes with a right arm and right leg with a bandage design. The bandages on the left arm and left leg are reproduced with three-dimensional Seals.",
-			"• Two types of facial expression parts are included with tampo printing.",
-			"• Can be combined with the separately sold \"30MS Optional Body Parts Beyond the Blue Sky 1 [Color A]\", \" 30MS Optional Body Parts Alpha Sisters Phantasm 1 [Color A]\", and \" 30MS Optional Body Parts Sigma Sisters Paradox 1 [Color A]\"."
+			"• 繊細な髪の流れを丁寧に立体化、ポーズに合わせてなびく動きを表現。",
+			"• 衣装のデザインに合わせて髪飾りの着脱が可能。パーツの着脱で髪飾りの無い状態も再現。",
+			"• 三峰結華の前髪パーツは髪と一体で造型されたメガネパーツが付属。着脱が可能。",
+			"• 幽谷霧子は包帯デザインの施された右腕、右脚が付属。左腕、左脚の絆創膏は立体的なシールで再現。",
+			"• 表情パーツはタンポ印刷を施し、各2種類ずつ付属。",
+			"• 別売りの「30MS オプションボディパーツ ビヨンドザブルースカイ1[カラーA]」、「30MS オプションボディパーツ アルファシスターズファンタズム1[カラーA]」、「30MS オプションボディパーツ シグマシスターズパラドクス1[カラーA]」と組み合わせることができる。"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"三峰結華フェイスパーツ(タンポ印刷)×2種",
-			"幽谷霧子フェイスパーツ(タンポ印刷)×2種",
-			"幽谷霧子(包帯腕脚パーツ)×各1種",
-			"ヘアスタイルパーツ×各1セット",
-			"シール×1"
-		],
-		"en": [
-			"Yuka Mitsumine face parts (tampo printing) x 2 types",
-			"Kiriko Yuya face parts (tampo printing) x 2 types",
-			"Kiriko Yuya (bandaged arm and leg parts) x 1 type each",
-			"Hair style parts x 1 set each",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "三峰結華フェイスパーツ(タンポ印刷)"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "幽谷霧子フェイスパーツ(タンポ印刷)"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "幽谷霧子(包帯腕脚パーツ)×各1種"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヘアスタイルパーツ×各1セット"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220950_1.jpg",
 				"path": "/images/items/01_5384/1000220950_1.jpg",
 				"hash": "194b24a72b331f14cd431a04efdc089f"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220950_10.jpg",
-				"path": "/images/items/01_5384/1000220950_10.jpg",
-				"hash": "239ea435e6e530bdfa5c669713136f8d"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220950_11.jpg",
-				"path": "/images/items/01_5384/1000220950_11.jpg",
-				"hash": "2654f0bbd03185758a4765b6143893e3"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220950_12.jpg",
-				"path": "/images/items/01_5384/1000220950_12.jpg",
-				"hash": "ed390a991c57b5f39a70105b88e9860f"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220950_2.jpg",
@@ -117,13 +159,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220950_9.jpg",
 				"path": "/images/items/01_5384/1000220950_9.jpg",
 				"hash": "8e4916acdfd24605aa5d167a3faefc9d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220950_10.jpg",
+				"path": "/images/items/01_5384/1000220950_10.jpg",
+				"hash": "239ea435e6e530bdfa5c669713136f8d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220950_11.jpg",
+				"path": "/images/items/01_5384/1000220950_11.jpg",
+				"hash": "2654f0bbd03185758a4765b6143893e3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220950_12.jpg",
+				"path": "/images/items/01_5384/1000220950_12.jpg",
+				"hash": "ed390a991c57b5f39a70105b88e9860f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5384/",
-	"brandIds": ["30ms"],
-	"seriesIds": ["idolmaster"],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_6755", "01_6756", "01_5977", "01_5976"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5384/"
 }

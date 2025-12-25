@@ -2,9 +2,57 @@
 	"id": "01_5361",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 ガンダム EX (復讐のレクイエム)",
-		"en": "HG 1/144 GUNDAM EX (RFV)"
+		"ja": "HG 1/144 ガンダムEX (復讐のレクイエム)",
+		"en": "HG 1/144 GundamEX (Requiem of Vengeance)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "requiem",
+			"url": "https://bandai-hobby.net/series/requiem/",
+			"ja": "機動戦士ガンダム 復讐のレクイエム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_5969",
+			"url": "https://bandai-hobby.net/item/01_5969/",
+			"ja": "ガンダムデカールNo.141 機動戦士ガンダムSEED FREEDOM汎用①"
+		},
+		{
+			"id": "01_5970",
+			"url": "https://bandai-hobby.net/item/01_5970/",
+			"ja": "ガンダムデカールNo.142 機動戦士ガンダムSEED FREEDOM汎用②"
+		},
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		}
+	],
+	"manual": {
+		"id": "1883",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1883"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -18,11 +66,10 @@
 		"day": 19
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"（2024年6月4日）　仕様表記修正",
-			"Netflixにて世界独占配信の『機動戦士ガンダム 復讐のレクイエム』から「ガンダム EX」を商品化！",
+			"Netflixにて世界独占配信の『機動戦士ガンダム 復讐のレクイエム』から「ガンダムEX」を商品化！",
 			"フルCGで描かれるMSの高密度なディテールや柔軟なアクションポーズを1/144スケールで再現！",
 			"• 全身に施された特徴的な精密なディテールや形状をプラモデルならではのパーツ構成で再現。",
 			"• ショルダー・ガトリングにつながっている給弾ベルトは軟質パーツを採用、柔軟な動きに追従。",
@@ -31,31 +78,46 @@
 			"• シールドは表裏ともに高密度なディテール表現を再現。",
 			"• 別売りのアクションベースを使用することでダイナミックなディスプレイが可能。",
 			"• マーキングシールによって各部のマーキングや部隊マークを再現可能。"
-		],
-		"en": [
-			"(202464) Specification notation correction",
-			"\"Gundam EX \" from \" Mobile Suit Gundam: Requiem for Vengeance\", which is exclusively distributed worldwide on Netflix, is commercialized!",
-			"The high-density details and flexible action poses of the MS drawn in full CG are reproduced in 1/144 Scale!",
-			"• The characteristic precise details and shapes throughout the body are reproduced with a parts configuration unique to plastic models.",
-			"• The bullet feeding belt connected to the shoulder gatling uses soft parts and follows flexible movements.",
-			"• Three beam saber grips are equipped in the backpack, and the movement of pulling it out can be reproduced.",
-			"• The beam rifle can be suspended on the back via joint parts.",
-			"• Seal reproduces high-density detail expression on both the front and back sides.",
-			"• Dynamic display is possible by using an action base (sold separately).",
-			"• MarkingSeal allows you to reproduce the markings of each part and unit marks."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・ライフル×1",
-			"ビーム・サーベル(グリップ)×3",
-			"シールド×1",
-			"ハンドパーツ×1",
-			"ジョイントパーツ×1",
-			"シール×2"
-		],
-		"en": ["Beam rifle x1", "Beam saber (grip) x 3", "Seal × 1", "Hand parts x 1", "Joint parts x 1", "Seal×2"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル(グリップ)"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 2
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -101,13 +163,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5361/",
-	"brandIds": ["hg"],
-	"seriesIds": ["requiem"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5968", "01_5969", "01_5970", "01_5986"],
-	"manual": {
-		"id": "1883",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1883/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5361/"
 }

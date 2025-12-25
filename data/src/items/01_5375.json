@@ -2,9 +2,56 @@
 	"id": "01_5375",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 ボリノーク・サマーン",
-		"en": "HG 1/144 PMX-002 BOLINOAK-SAMMAHN"
+		"ja": "HG 1/144 ボリノーク・サマーン"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4972",
+			"url": "https://bandai-hobby.net/item/01_4972/",
+			"ja": "HG 1/144 ガンダムベース限定 ゼータガンダム[U.C.0088]/百式/ガンダムMk-II(エゥーゴ仕様)セット [グリプス戦役スペシャルカラー]"
+		}
+	],
+	"manual": {
+		"id": "1949",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1949"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -18,7 +65,6 @@
 		"day": 30
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士Ｚガンダム』より、「ボリノーク・サマーン」を最新ギミックを搭載しHGで商品化！",
@@ -29,74 +75,84 @@
 			"• 頭部はボール可動に加え、首の基部に可動軸を設けることで、大きく前後へスイングが可能。",
 			"• 肩に引き出し機構を搭載し、腕部の可動範囲を拡大。",
 			"• 高い機動性の要となるバックパックは、複数のボールジョイントにより個別に可動。"
-		],
-		"en": [
-			"From \"Mobile Suit Z Gundam \", \" Borinok Samaan\" is commercialized in HG with the latest gimmick!",
-			"• In addition to the movable gimmick of the claw part, the \"Special Seal Do\" also reproduces fine details such as the beam output part at the tip.",
-			"• \"Beam Tomahawk \" and \" Beam Saber \" can be reproduced by attaching effect parts to the grip stored on the back of the \" Special Seal\".",
-			"• Equipped with a deployment gimmick on the shoulder armor to reproduce the firing of the \"explosive bullet launcher\".",
-			"• A head part is included to express the radome's \"light-emitting state \". \" Reflection cut \" and \" Seal\" reproduce the characteristic shine of the radome with replacement.",
-			"• In addition to the ball movable head, a movable axis is provided at the base of the neck, allowing it to swing back and forth.",
-			"• Equipped with a pull-out mechanism on the shoulder to expand the range of motion of the arm.",
-			"• The backpack, which is the key to high mobility, can be moved individually using multiple ball joints."
 		]
 	},
-	"accessories": {
-		"ja": ["頭部パーツ（発光状態）×1", "エフェクトパーツ×1式", "ハンドパーツ×1式", "シール×1"],
-		"en": ["Head parts (light emitting state) x 1", "Effect parts x 1", "Hand parts x 1 set", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "頭部パーツ（発光状態）"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "エフェクトパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6225.jpg",
+				"src": "https://bandai-hobby.net/images/153_6225_s_eo8t3ljpq8q9t9o7jzk38gcv9koa.jpg",
 				"path": "/images/items/01_5375/153_6225.jpg",
 				"hash": "9bf9aa08403f95cb67e5148b8ab34659"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6225.jpg",
+				"src": "https://bandai-hobby.net/images/155_6225_s_1xmcjv0gs018uya6qvrfpegr2716.jpg",
 				"path": "/images/items/01_5375/155_6225.jpg",
 				"hash": "a4288f0c22025dee36ab2ce7fbe27ed3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6225.jpg",
+				"src": "https://bandai-hobby.net/images/156_6225_s_yiiv8asz13k1hnt0kxx7n0j8hbpy.jpg",
 				"path": "/images/items/01_5375/156_6225.jpg",
 				"hash": "3a22fc15f88519f31540a00c17bf0f3f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6225.jpg",
+				"src": "https://bandai-hobby.net/images/157_6225_s_59ift87l5epycxdyj78t5qj2tw1j.jpg",
 				"path": "/images/items/01_5375/157_6225.jpg",
 				"hash": "a19363a413579a978ba3f34145b9cf66"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6225.jpg",
+				"src": "https://bandai-hobby.net/images/158_6225_s_p0axihwju5i4850gu6gbcwc0mxju.jpg",
 				"path": "/images/items/01_5375/158_6225.jpg",
 				"hash": "4b4608cf4ec6066a903ea2ace8104d07"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6225.jpg",
+				"src": "https://bandai-hobby.net/images/159_6225_s_bnx1yxlsd6bn783g0hkdbn9lx0tl.jpg",
 				"path": "/images/items/01_5375/159_6225.jpg",
 				"hash": "a5be65b968d154e2661b853f01a259f9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6225.jpg",
+				"src": "https://bandai-hobby.net/images/189_6225_s_i9cgtbzagluy5v9t46czilithouw.jpg",
 				"path": "/images/items/01_5375/189_6225.jpg",
 				"hash": "4bc8995646de51d8d4b207a2d1028d24"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6225.jpg",
+				"src": "https://bandai-hobby.net/images/190_6225_s_eavta45i8i811y7826doi7e1nb4x.jpg",
 				"path": "/images/items/01_5375/190_6225.jpg",
 				"hash": "73b2a5f74e6957741c01dfdb5ee13a5f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5375/",
-	"brandIds": ["hg"],
-	"seriesIds": ["z-gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5468", "01_5162", "01_4985", "01_4972"],
-	"manual": {
-		"id": "1949",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1949/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5375/"
 }

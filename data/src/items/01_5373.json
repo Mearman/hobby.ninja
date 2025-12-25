@@ -2,9 +2,50 @@
 	"id": "01_5373",
 	"type": "item",
 	"name": {
-		"ja": "ベストメカコレクション 1/144 RX-78-2 ガンダム (REVIVAL Ver.)",
-		"en": "BEST MECHA COLLECTION 1/144 RX-78-2 GUNDAM (REVIVAL Ver.)"
+		"ja": "ベストメカコレクション 1/144 RX-78-2 ガンダム (REVIVAL Ver.)"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_5969",
+			"url": "https://bandai-hobby.net/item/01_5969/",
+			"ja": "ガンダムデカールNo.141 機動戦士ガンダムSEED FREEDOM汎用①"
+		},
+		{
+			"id": "01_5970",
+			"url": "https://bandai-hobby.net/item/01_5970/",
+			"ja": "ガンダムデカールNo.142 機動戦士ガンダムSEED FREEDOM汎用②"
+		},
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		}
+	],
+	"manual": {
+		"id": "1684",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1684"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -18,48 +59,44 @@
 		"day": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"レトロ感あふれるフォルムに、進化の過程で培った技術を詰め込んだベストメカコレクションRX-78-2 ガンダム。40年以上の時を経てリバイバル商品として新登場！",
+			"レトロ感あふれるフォルムに、進化の過程で培った技術を詰め込んだベストメカコレクションRX-78-2ガンダム。40年以上の時を経てリバイバル商品として新登場！",
 			"• 発売当時のカタチはそのままに、イロプラ、タッチゲート、スナップフィットなど、発売後40年以上にわたって培った技術が1/144スケールの随所に盛り込まれている。",
 			"• パーツ単位の形状を追求し、洗練されたパーツ構成により全身の色分けを細部まで再現。",
 			"• 正面からはパーツの合わせ目が見えない構造設計。",
 			"• ビーム・サーベルは、長さの異なる２種と、バック・パックに装着した状態が同梱。"
-		],
-		"en": [
-			"The best mechanical collection RX-78-2 Gundam packs the technology cultivated through the evolution process into a retro-looking form. Introducing a revival product after more than 40 years!",
-			"• The 1/144 Scale retains the same shape as when it was released, but the technologies cultivated over 40 years after release, such as Eloplast, touch gate, and snap fit, are incorporated throughout the 1/144 Scale.",
-			"• Pursuing the shape of each part, the sophisticated parts configuration reproduces the color coding of the whole body in detail.",
-			"• Structural design that makes the joints of parts invisible from the front.",
-			"• The beam saber comes in two types with different lengths and one attached to the back pack."
 		]
 	},
-	"accessories": {
-		"ja": ["ビーム・ライフル×1", "ビーム・サーベル×2種", "シールド×1"],
-		"en": ["Beam rifle x1", "Beam saber x 2 types", "Seal × 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000218731_1.jpg",
 				"path": "/images/items/01_5373/1000218731_1.jpg",
 				"hash": "581c4c98850b0639c99056b2e1aefff9"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000218731_10.jpg",
-				"path": "/images/items/01_5373/1000218731_10.jpg",
-				"hash": "3ec8e49ccbd839223ba3e23d47cf0a58"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000218731_11.jpg",
-				"path": "/images/items/01_5373/1000218731_11.jpg",
-				"hash": "4a1f1b032dfd6cacf82c07b44b1f7655"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000218731_12.jpg",
-				"path": "/images/items/01_5373/1000218731_12.jpg",
-				"hash": "15c6686ebe7802f093d8cd75df525dc6"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000218731_2.jpg",
@@ -100,17 +137,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000218731_9.jpg",
 				"path": "/images/items/01_5373/1000218731_9.jpg",
 				"hash": "2bc2b867932fd299824f5e4a64fd5833"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000218731_10.jpg",
+				"path": "/images/items/01_5373/1000218731_10.jpg",
+				"hash": "3ec8e49ccbd839223ba3e23d47cf0a58"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000218731_11.jpg",
+				"path": "/images/items/01_5373/1000218731_11.jpg",
+				"hash": "4a1f1b032dfd6cacf82c07b44b1f7655"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000218731_12.jpg",
+				"path": "/images/items/01_5373/1000218731_12.jpg",
+				"hash": "15c6686ebe7802f093d8cd75df525dc6"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5373/",
-	"brandIds": [],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5968", "01_5969", "01_5970", "01_5986"],
-	"manual": {
-		"id": "1684",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1684/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5373/"
 }

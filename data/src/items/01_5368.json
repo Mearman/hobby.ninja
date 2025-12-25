@@ -2,9 +2,56 @@
 	"id": "01_5368",
 	"type": "item",
 	"name": {
-		"ja": "30MS オプションボディパーツ シグマシスターズパラドクス1[カラーA]",
-		"en": "30MS OPTION BODY PARTS SIGMA SISTERS PARADOX 1 [COLOR A]"
+		"ja": "30MS オプションボディパーツ シグマシスターズパラドクス1[カラーA]"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [
+		{
+			"id": "idolmaster",
+			"url": "https://bandai-hobby.net/series/idolmaster/",
+			"ja": "アイドルマスターシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6755",
+			"url": "https://bandai-hobby.net/item/01_6755/",
+			"ja": "30MS 芹沢あさひ"
+		},
+		{
+			"id": "01_6756",
+			"url": "https://bandai-hobby.net/item/01_6756/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム3[カラーB]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		}
+	],
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -21,53 +68,58 @@
 	"description": {
 		"ja": [
 			"30MSシリーズと組み合わせ可能な、汎用性の高い新デザインのオプションボディパーツが登場！",
-			"■島田フミカネ氏による30MSオリジナルデザイン。特徴的な「衣装」、「腕・脚」、「ハンドパーツ」など[カラーＡ]のボディユニット一式をセット。ハンドパーツにはマイクを保持可能な握り手が付属。",
-			"■別売りの「30MS 月岡恋鐘」ほか、既存の30MSシリーズとの組み合わせが可能。",
-			"■胸部パーツは選択式で、2種類の異なるデザインが付属。",
-			"■腹部には[カラーＡ]の選択式のボディパーツを同梱。",
-			"■脚部バインダーは展開し、飛行ポーズをイメージしたディスプレイが演出できる。",
-			"■衣装の各所にジョイント用の3mm穴やピンが設置され、他シリーズ商品と組み合わせてキャラメイキングが可能。"
-		],
-		"en": [
-			"Introducing highly versatile newly designed optional body parts that can be combined with the 30MS series!",
-			"• 30MS original design by Fumikane Shimada. A set of body units in [Color A] including the characteristic \"costume \", \" arms/legs \", \" hand parts\", etc. are included. The hand parts include a grip that can hold the microphone.",
-			"• Can be combined with the existing 30MS series, including the separately sold \"30MS Okakoi Bell\".",
-			"• Chest parts are selectable and come with two different designs.",
-			"• Selectable body parts of [Color A] are included for the abdomen.",
-			"• The leg binders can be unfolded to create a display inspired by a flight pose.",
-			"• 3mm holes and pins for joints are installed in various parts of the costume, allowing for character creation by combining with other series products."
+			"• 島田フミカネ氏による30MSオリジナルデザイン。特徴的な「衣装」、「腕・脚」、「ハンドパーツ」など[カラーＡ]のボディユニット一式をセット。ハンドパーツにはマイクを保持可能な握り手が付属。",
+			"• 別売りの「30MS 月岡恋鐘」ほか、既存の30MSシリーズとの組み合わせが可能。",
+			"• 胸部パーツは選択式で、2種類の異なるデザインが付属。",
+			"• 腹部には[カラーＡ]の選択式のボディパーツを同梱。",
+			"• 脚部バインダーは展開し、飛行ポーズをイメージしたディスプレイが演出できる。",
+			"• 衣装の各所にジョイント用の3mm穴やピンが設置され、他シリーズ商品と組み合わせてキャラメイキングが可能。"
 		]
 	},
-	"accessories": {
-		"ja": ["ボディパーツ×1式", "腹部パーツ×2種（選択式）", "ハンドパーツ×1式", "胸部パーツ×2種（選択式）"],
-		"en": [
-			"Body parts x 1 set",
-			"Abdominal parts x 2 types (selectable)",
-			"Hand parts x 1 set",
-			"Chest parts x 2 types (selectable)"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ボディパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "腹部パーツ"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種（選択式）"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "胸部パーツ"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種（選択式）"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219432_1.jpg",
 				"path": "/images/items/01_5368/1000219432_1.jpg",
 				"hash": "00a7f43c41e2e820334158d3c490bb07"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219432_10.jpg",
-				"path": "/images/items/01_5368/1000219432_10.jpg",
-				"hash": "fae9dbfe9339875a26e38cffdf0be492"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219432_11.jpg",
-				"path": "/images/items/01_5368/1000219432_11.jpg",
-				"hash": "d8be57af3580c309e83404d5c73b0f3b"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219432_12.jpg",
-				"path": "/images/items/01_5368/1000219432_12.jpg",
-				"hash": "7647d54deef0b5768b2781a58bb6cdc9"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219432_2.jpg",
@@ -108,13 +160,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219432_9.jpg",
 				"path": "/images/items/01_5368/1000219432_9.jpg",
 				"hash": "742e9fcf4353099fa9f0f5f3f9bd80b8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219432_10.jpg",
+				"path": "/images/items/01_5368/1000219432_10.jpg",
+				"hash": "fae9dbfe9339875a26e38cffdf0be492"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219432_11.jpg",
+				"path": "/images/items/01_5368/1000219432_11.jpg",
+				"hash": "d8be57af3580c309e83404d5c73b0f3b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219432_12.jpg",
+				"path": "/images/items/01_5368/1000219432_12.jpg",
+				"hash": "7647d54deef0b5768b2781a58bb6cdc9"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5368/",
-	"brandIds": ["30ms"],
-	"seriesIds": ["idolmaster"],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_6755", "01_6756", "01_5977", "01_5976"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5368/"
 }

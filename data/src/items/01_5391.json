@@ -5,6 +5,49 @@
 		"ja": "HG ムラサメ(量産機)",
 		"en": "HG Murasame (mass production machine)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000203308",
+			"url": "https://p-bandai.jp/item/item-1000203308/",
+			"ja": "ＨＧ 1/144 ダークダガーＬ"
+		},
+		{
+			"id": "01_5097",
+			"url": "https://bandai-hobby.net/item/01_5097/",
+			"ja": "HG 1/144 デストロイガンダム"
+		},
+		{
+			"id": "01_3739",
+			"url": "https://bandai-hobby.net/item/01_3739/",
+			"ja": "HG 1/144 デスティニーガンダム(ハイネ専用機)[クリアカラー]"
+		},
+		{
+			"id": "item-1000157417",
+			"url": "https://p-bandai.jp/item/item-1000157417/",
+			"ja": "ＨＧ 1/144 ウィンダム（ネオ・ロアノーク専用機）"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -20,7 +63,7 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム SEED DESTINY」に登場するムラサメ量産機のHGシリーズプラモデルです。攻撃シーンを演出する大型ミサイルと、複数機での編隊を意識させるナンバリングシール付属。ポリキャップを使用した一部パーツ差替えによりスムーズな変形が可能です。離着陸時の形態をリアルに再現するタイヤも付属しています。付属のHGシリーズ専用台座に股間のポリキャップを接続して、斜め飛行、背面飛行など飛行状態を再現可能。"
+			"「機動戦士ガンダムSEED DESTINY」に登場するムラサメ量産機のHGシリーズプラモデルです。攻撃シーンを演出する大型ミサイルと、複数機での編隊を意識させるナンバリングシール付属。ポリキャップを使用した一部パーツ差替えによりスムーズな変形が可能です。離着陸時の形態をリアルに再現するタイヤも付属しています。付属のHGシリーズ専用台座に股間のポリキャップを接続して、斜め飛行、背面飛行など飛行状態を再現可能。"
 		],
 		"en": [
 			"HG series plastic model of the Murasame mass-produced machine that appears in \"Mobile Suit Gundam SEED DESTINY\". Includes a large missile to create an attack scene and a numbered seal to remind you of a formation with multiple aircraft. Smooth transformation is possible by replacing some parts using polycaps. Also included are tires that realistically reproduce the configuration during takeoff and landing. By connecting the crotch polycap to the included HG series dedicated pedestal, flight conditions such as diagonal flight and inverted flight can be reproduced."
@@ -29,22 +72,22 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_623.jpg",
+				"src": "https://bandai-hobby.net/images/153_623_s_55ul3hoeauivwps97wuxef5f9jle.jpg",
 				"path": "/images/items/01_5391/153_623.jpg",
 				"hash": "daf567f76863f074508c7a1ec1500618"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_623.jpg",
+				"src": "https://bandai-hobby.net/images/155_623_s_r9jlilvyfdahrbsl0h8xj08zgp43.jpg",
 				"path": "/images/items/01_5391/155_623.jpg",
 				"hash": "b77c26635bea14bceced385ac83b8b1b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_623.jpg",
+				"src": "https://bandai-hobby.net/images/156_623_s_tsc7grl9lhbkgrfp9dkfdk1iessl.jpg",
 				"path": "/images/items/01_5391/156_623.jpg",
 				"hash": "480d55493ce4afa01f1a7e450bad5ea3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_623.jpg",
+				"src": "https://bandai-hobby.net/images/157_623_s_yfcf1opx4efeli78k4isi13ek4ns.jpg",
 				"path": "/images/items/01_5391/157_623.jpg",
 				"hash": "f45f85546284af5991bda6cb456c6cb0"
 			}
@@ -52,10 +95,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5391/",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed-d"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000203308", "01_5097", "01_3739", "item-1000157417"],
 	"manual": {
 		"id": "177",
 		"url": "https://manual.bandai-hobby.net/menus/detail/177/"

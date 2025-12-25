@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 EXM-H15E アチェルビー(TYPE-E)",
-		"en": "30MM 1/144 EXM-H15E ACERBY (TYPE-E)"
+		"en": "30MM 1/144 EXM-H15E Achelby (TYPE-E)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1958,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 21
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"マクシオン軍の新EXAMACS「アチェルビー」シリーズに新規造形のブレードを携えた「TYPE-E」が登場！",
@@ -30,7 +72,7 @@
 			"• 別売りのスピナティアに付属するアーマーを、カスタマイズ可能な胸部パーツが付属。"
 		],
 		"en": [
-			"\"TYPE-E \" with a newly shaped blade is now available in Maxion's new EXAMACS \" Achelby\" series!",
+			"\"TYPE-E\" with a newly shaped blade is now available in Maxion's new EXAMACS \"Achelby\" series!",
 			"• An all-in-one item that includes the main body, armor parts, and weapon parts.",
 			"• Two types of armor that can be connected to the shoulders and waist are included.",
 			"• The head visor can be replaced and its vertical position adjusted.",
@@ -39,37 +81,61 @@
 			"• Comes with a chest part that allows you to customize the armor that comes with Spinatia (sold separately)."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"エネルギーブレード×1",
-			"ブレードサブマシンガン×1",
-			"ハンドパーツ×1式",
-			"アーマー×1式",
-			"ジョイントパーツ×1式"
-		],
-		"en": ["Energy blade x1", "Blade submachine gun x 1", "Hand parts x 1 set", "Armor x 1 set", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "エネルギーブレード",
+				"en": "energy blade"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ブレードサブマシンガン",
+				"en": "blade submachine gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "アーマー",
+				"en": "armor"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223038_1.jpg",
 				"path": "/images/items/01_5396/1000223038_1.jpg",
 				"hash": "30e5db1d51625130a7702d3687c8361c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223038_10.jpg",
-				"path": "/images/items/01_5396/1000223038_10.jpg",
-				"hash": "20e9fa8f0f2ca8bc7e8b0688362219c9"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223038_11.jpg",
-				"path": "/images/items/01_5396/1000223038_11.jpg",
-				"hash": "9ab8268e732801d52bb227d681304193"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223038_12.jpg",
-				"path": "/images/items/01_5396/1000223038_12.jpg",
-				"hash": "5f6f9fac0f08524093738944bb0122fc"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223038_2.jpg",
@@ -110,15 +176,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223038_9.jpg",
 				"path": "/images/items/01_5396/1000223038_9.jpg",
 				"hash": "ce27c2299bfbd674249c4c60cbad79c5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223038_10.jpg",
+				"path": "/images/items/01_5396/1000223038_10.jpg",
+				"hash": "20e9fa8f0f2ca8bc7e8b0688362219c9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223038_11.jpg",
+				"path": "/images/items/01_5396/1000223038_11.jpg",
+				"hash": "9ab8268e732801d52bb227d681304193"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223038_12.jpg",
+				"path": "/images/items/01_5396/1000223038_12.jpg",
+				"hash": "5f6f9fac0f08524093738944bb0122fc"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5396/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"],
 	"manual": {
 		"id": "3790",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3790/"

@@ -2,8 +2,54 @@
 	"id": "01_5376",
 	"type": "item",
 	"name": {
-		"ja": "オプションパーツセット ガンプラ 13 (ガンプラバトルアームアームズ)",
-		"en": "OPTION PARTS SET GUNPLA 13 (GUNPLA BATTLE ARM ARMS)"
+		"ja": "オプションパーツセット ガンプラ 13 (ガンプラバトルアームアームズ)"
+	},
+	"brands": [
+		{
+			"id": "optionpartsset",
+			"url": "https://bandai-hobby.net/brand/optionpartsset/",
+			"ja": "オプションパーツセット"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6765",
+			"url": "https://bandai-hobby.net/item/01_6765/",
+			"ja": "オプションパーツセット ガンプラ 18 (ビルドブースターセット)"
+		},
+		{
+			"id": "01_5240",
+			"url": "https://bandai-hobby.net/item/01_5240/",
+			"ja": "オプションパーツセット ガンプラ 08 (ボールデンアームアームズ)"
+		},
+		{
+			"id": "01_5241",
+			"url": "https://bandai-hobby.net/item/01_5241/",
+			"ja": "オプションパーツセット ガンプラ 09 (ジャイアントガトリング)"
+		},
+		{
+			"id": "01_5242",
+			"url": "https://bandai-hobby.net/item/01_5242/",
+			"ja": "オプションパーツセット ガンプラ 10 (ギャラクシーブースター)"
+		}
+	],
+	"manual": {
+		"id": "1950",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1950"
 	},
 	"price": {
 		"amount": 880,
@@ -26,44 +72,79 @@
 			"• アックスとソードは、ライフルとしても装備可能。",
 			"• バックパックが変形して、ミサイルランチャーが展開。",
 			"• アームの関節を利用すれば、「変形」や「可動」ギミックを搭載したカスタマイズも可能。"
-		],
-		"en": [
-			"The support mech disassembles and becomes a weapon! A set of abundant joint parts and weapons that can be moved in various ways by combining them.",
-			"• Full set of rich weapons and joint parts.",
-			"• Combine Seal and Stabilizer to create a huge and powerful melee weapon.",
-			"• Ax and sword can also be equipped as rifles.",
-			"• Backpack transforms and missile launcher deploys.",
-			"• By using the arm joints, you can customize it with \"transformation \" and \" movable\" gimmicks."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ソード×1",
-			"アックス×1",
-			"ブースター×2",
-			"ミサイルランチャー×2",
-			"スタビライザー×2",
-			"シールド×1",
-			"マルチマウント×1",
-			"ウエストアーマー×1",
-			"インテーク×2",
-			"ジョイントパーツ×1式",
-			"シール×1"
-		],
-		"en": [
-			"Sword x1",
-			"Ax x1",
-			"Booster x 2",
-			"Missile launcher x2",
-			"Stabilizer x 2",
-			"Seal × 1",
-			"Multi mount x 1",
-			"Waist armor x 1",
-			"Intake x 2",
-			"Joint parts x 1 set",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ソード"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アックス"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ブースター"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ミサイルランチャー"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "スタビライザー"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マルチマウント"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ウエストアーマー"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "インテーク"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -109,13 +190,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5376/",
-	"brandIds": ["optionpartsset"],
-	"seriesIds": ["buildfighters"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6765", "01_5240", "01_5241", "01_5242"],
-	"manual": {
-		"id": "1950",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1950/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5376/"
 }

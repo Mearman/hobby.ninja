@@ -2,8 +2,33 @@
 	"id": "01_5377",
 	"type": "item",
 	"name": {
-		"ja": "MGSD ウイングガンダムゼロ EW",
-		"en": "MGSD WING GUNDAM ZERO EW"
+		"ja": "MGSD ウイングガンダムゼロ EW"
+	},
+	"brands": [
+		{
+			"id": "mgsd",
+			"url": "https://bandai-hobby.net/brand/mgsd/",
+			"ja": "MASTER GRADE SD"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"manual": {
+		"id": "1816",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1816"
 	},
 	"price": {
 		"amount": 4950,
@@ -20,7 +45,7 @@
 	"targetAge": 15,
 	"description": {
 		"ja": [
-			"SD ガンダムの常識を凌駕する“新次元の翼”！SDハイエンドブランド「MGSD」より「ウイングガンダムゼロ EW」が登場！",
+			"SDガンダムの常識を凌駕する“新次元の翼”！SDハイエンドブランド「MGSD」より「ウイングガンダムゼロ EW」が登場！",
 			"• 可動性と美しさを兼ね備えた「ウイングバインダー」の主翼は展開することで内部のシルバーパーツと“リフレクションカット”を施したクリアパーツが露出。副翼は上部の羽を引き上げると連動して下部の羽が連動して展開する。",
 			"• 「ウイングバインダー」の可動を駆使することで、大気圏突入ポーズを再現可能。",
 			"• MGSDシリーズ初の可変機構を搭載。主翼を畳んだ「大気圏外モード」と、主翼を展開した「大気圏内モード」の2形態の「ネオバード形態」を再現可能。",
@@ -29,44 +54,40 @@
 			"• 「ツインバスターライフル」には合体ギミックに加え、銃身の伸縮ギミックや、腕と接続して保持力をアップするジョイントの展開ギミックを搭載。",
 			"• MGSD独自のフレーム構造により、SDサイズで内部フレームを再現。内部フレームを核になめらかな可動表現を実現。",
 			"• カメラディテールを二重構造で表現。ディテールを施した内部パーツとクリアパーツを重ねることで、リアルな多層構造感を演出。"
-		],
-		"en": [
-			"“Wings of a new dimension” that surpass the common sense of SD Gundam! \"Wing Gundam Zero EW \" is now available from the SD high-end brand \" MGSD\"!",
-			"• The main wing of the \"Wing Binder \", which combines mobility and beauty, unfolds to expose the internal silver parts and clear parts with \" reflection cuts\". When the upper wing of the secondary wing is pulled up, the lower wing unfolds.",
-			"• By making full use of the movement of the \"wing binder\", it is possible to recreate the pose of entering the atmosphere.",
-			"• Equipped with the first variable mechanism in the MGSD series. Two types of \"Neobird mode \" can be reproduced: \" extraatmospheric mode \" with the main wings folded, and \" intraatmospheric mode\" with the main wings expanded.",
-			"• Equipped with deployment gimmicks on each part of the armor. In addition to deploying the units on the sides of the head, when the upper part of the shoulder armor is raised, the lower part of the armor unfolds, exposing the silver parts inside.",
-			"• The base of the front skirt expands forward, so it does not impede the range of motion of the skirt and legs.",
-			"• In addition to the combination gimmick, the \"Twin Buster Rifle\" is equipped with a barrel extension gimmick and a joint deployment gimmick that connects with the arm to increase holding power.",
-			"• MGSD's unique frame structure reproduces the internal frame in SD size. Realizes smooth movement using the internal frame as the core.",
-			"• Camera details are expressed with a double structure. By layering detailed internal parts and clear parts, it creates a realistic multi-layered structure."
 		]
 	},
-	"accessories": {
-		"ja": ["ツインバスターライフル×1", "シールド×1", "エフェクトパーツ×2", "マーキングシール×1"],
-		"en": ["Twin buster rifle x1", "Seal × 1", "Effect parts x 2", "MarkingSeal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ツインバスターライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "エフェクトパーツ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "マーキングシール"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221746_1.jpg",
 				"path": "/images/items/01_5377/1000221746_1.jpg",
 				"hash": "1e44859fcf95b6090c875dab600c66fc"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221746_10.jpg",
-				"path": "/images/items/01_5377/1000221746_10.jpg",
-				"hash": "38a88c70ccd3d18e617beb533d050843"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221746_11.jpg",
-				"path": "/images/items/01_5377/1000221746_11.jpg",
-				"hash": "eec9bc59d5e4bc5113d6865c494961ae"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221746_12.jpg",
-				"path": "/images/items/01_5377/1000221746_12.jpg",
-				"hash": "f0792acadb0d382cdda9340c67fbc365"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221746_2.jpg",
@@ -107,17 +128,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221746_9.jpg",
 				"path": "/images/items/01_5377/1000221746_9.jpg",
 				"hash": "59fb7fb5967cb87a0a6a7fa8f1d53d19"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221746_10.jpg",
+				"path": "/images/items/01_5377/1000221746_10.jpg",
+				"hash": "38a88c70ccd3d18e617beb533d050843"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221746_11.jpg",
+				"path": "/images/items/01_5377/1000221746_11.jpg",
+				"hash": "eec9bc59d5e4bc5113d6865c494961ae"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221746_12.jpg",
+				"path": "/images/items/01_5377/1000221746_12.jpg",
+				"hash": "f0792acadb0d382cdda9340c67fbc365"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5377/",
-	"brandIds": ["mgsd"],
-	"seriesIds": ["endlesswaltz"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": [],
-	"manual": {
-		"id": "1816",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1816/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5377/"
 }

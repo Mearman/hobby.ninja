@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "BB戦士 C.E.73 -STARGAZER- セット",
-		"en": "BB SENSHI C.E.73 -STARGAZER- SET"
+		"en": "BB Senshi C.E.73 -STARGAZER- Set"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5456",
+			"url": "https://bandai-hobby.net/item/01_5456/",
+			"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット"
+		},
+		{
+			"id": "01_5442",
+			"url": "https://bandai-hobby.net/item/01_5442/",
+			"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット"
+		},
+		{
+			"id": "01_5378",
+			"url": "https://bandai-hobby.net/item/01_5378/",
+			"ja": "BB戦士 ZGMFザクシリーズセット"
+		},
+		{
+			"id": "01_5365",
+			"url": "https://bandai-hobby.net/item/01_5365/",
+			"ja": "BB戦士 C.E.運命の対決セット"
+		}
+	],
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -20,51 +57,48 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED C.E.73 -STARGAZER-』より、人気のSD ガンダムがセットになって復活！",
+			"『機動戦士ガンダムSEED C.E.73 -STARGAZER-』より、人気のSDガンダムがセットになって復活！",
 			"• 「ストライクノワールガンダム」「ヴェルデバスターガンダム」「ブルデュエルガンダム」「スターゲイザーガンダム」がセットになって登場。"
-		],
-		"en": [
-			"From \"Mobile Suit Gundam SEED C.E.73 -STARGAZER-\", the popular SD Gundam is back as a set!",
-			"• \"Strike Noir Gundam \", \" Verde Buster Gundam \", \" Bull Duel Gundam \" and \" Stargazer Gundam\" are now available as a set."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"BB戦士293 ストライクノワールガンダム×1",
-			"BB戦士294 ヴェルデバスターガンダム×1",
-			"BB戦士295 ブルデュエルガンダム×1",
-			"BB戦士297 スターゲイザーガンダム×1",
-			"シール×4"
-		],
-		"en": [
-			"BB Senshi 293 Strike Noir Gundam×1",
-			"BB Senshi 294 Verde Buster Gundam×1",
-			"BB Senshi 295 Bull Duel Gundam×1",
-			"BB Senshi 297 Stargazer Gundam×1",
-			"Seal×4"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "BB戦士293 ストライクノワールガンダム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "BB戦士294 ヴェルデバスターガンダム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "BB戦士295 ブルデュエルガンダム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "BB戦士297 スターゲイザーガンダム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 4
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222429_1.jpg",
 				"path": "/images/items/01_5395/1000222429_1.jpg",
 				"hash": "6d935bd35422af283dd2b34fbb84044d"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222429_10.jpg",
-				"path": "/images/items/01_5395/1000222429_10.jpg",
-				"hash": "b8bbd3e2dc0e7aa8bf38c4410940a7f5"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222429_11.jpg",
-				"path": "/images/items/01_5395/1000222429_11.jpg",
-				"hash": "3262b44c92e6c624f5a2e86511fd4ec3"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222429_12.jpg",
-				"path": "/images/items/01_5395/1000222429_12.jpg",
-				"hash": "70ee53f4021f56c285332baa96dca26b"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222429_2.jpg",
@@ -105,13 +139,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222429_9.jpg",
 				"path": "/images/items/01_5395/1000222429_9.jpg",
 				"hash": "a9a1f70652d53be0cd8e74c3a2a7150a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222429_10.jpg",
+				"path": "/images/items/01_5395/1000222429_10.jpg",
+				"hash": "b8bbd3e2dc0e7aa8bf38c4410940a7f5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222429_11.jpg",
+				"path": "/images/items/01_5395/1000222429_11.jpg",
+				"hash": "3262b44c92e6c624f5a2e86511fd4ec3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222429_12.jpg",
+				"path": "/images/items/01_5395/1000222429_12.jpg",
+				"hash": "70ee53f4021f56c285332baa96dca26b"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5395/",
-	"brandIds": ["bb"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5456", "01_5442", "01_5378", "01_5365"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5395/"
 }

@@ -2,9 +2,56 @@
 	"id": "01_5360",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 ザクII F型 ソラリ機 (復讐のレクイエム)",
-		"en": "HG 1/144 ZAKUⅡ F TYPE SOLARI (RFV)"
+		"ja": "HG 1/144 ザクII F型 ソラリ機 (復讐のレクイエム)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "requiem",
+			"url": "https://bandai-hobby.net/series/requiem/",
+			"ja": "機動戦士ガンダム 復讐のレクイエム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_5969",
+			"url": "https://bandai-hobby.net/item/01_5969/",
+			"ja": "ガンダムデカールNo.141 機動戦士ガンダムSEED FREEDOM汎用①"
+		},
+		{
+			"id": "01_5970",
+			"url": "https://bandai-hobby.net/item/01_5970/",
+			"ja": "ガンダムデカールNo.142 機動戦士ガンダムSEED FREEDOM汎用②"
+		},
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		}
+	],
+	"manual": {
+		"id": "1882",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1882"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -18,7 +65,6 @@
 		"day": 19
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"Netflixにて世界独占配信の『機動戦士ガンダム 復讐のレクイエム』から「ザクII F型 ソラリ機 」を商品化！",
@@ -30,23 +76,43 @@
 			"• 右肩に装備されているシールドは表裏ともに高密度なディテール表現を再現。",
 			"• 別売りのアクションベースを使用することでダイナミックなディスプレイが可能。",
 			"• 部隊マークに加え、全身のモールドや汚しを再現できるマーキングシールが付属。"
-		],
-		"en": [
-			"\"Zaku II F-type Solari \" is commercialized from \" Mobile Suit Gundam: Requiem of Vengeance\", which is distributed exclusively on Netflix worldwide!",
-			"The details and dirty expressions of the MS drawn in full CG are reproduced with high density in 1/144 Scale!",
-			"• The characteristic precise details and shapes throughout the body are reproduced with a parts configuration unique to plastic models.",
-			"• Leg movable pipes follow the movement of the legs by providing movable axes at the joints.",
-			"• The position of the mono-eye can be adjusted by sliding the rib on the back of the head.",
-			"• Heat Hawk and Zaku Machine Gun can be suspended on the back via joint parts.",
-			"• The Seal equipped on the right shoulder reproduces high-density detail expression on both the front and back.",
-			"• Dynamic display is possible by using an action base (sold separately).",
-			"• In addition to the unit mark, MarkingSeal is included to reproduce the mold and dirt on the whole body."
 		]
 	},
-	"accessories": {
-		"ja": ["ザクマシンガン×1", "ヒートホーク×1", "ハンドパーツ×2", "ジョイントパーツ×1式", "シール×1"],
-		"en": ["Zaku machine gun x1", "Heat Hawk x1", "Hand parts x 2", "Joint parts x 1 set", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ザクマシンガン"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ヒートホーク"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -82,13 +148,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5360/",
-	"brandIds": ["hg"],
-	"seriesIds": ["requiem"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5968", "01_5969", "01_5970", "01_5986"],
-	"manual": {
-		"id": "1882",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1882/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5360/"
 }

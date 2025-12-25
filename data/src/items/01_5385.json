@@ -2,9 +2,50 @@
 	"id": "01_5385",
 	"type": "item",
 	"name": {
-		"ja": "30MF リーベルファイター",
-		"en": "30MF LIBER FIGHTER"
+		"ja": "30MF リーベルファイター"
 	},
+	"brands": [
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		},
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -32,26 +73,49 @@
 			"• 「アックス」や「ラウンドシールド」はジョイントパーツを使⽤することで背中や腰にマウント可能。",
 			"• “エレメントコア”の属性は「地」。",
 			"• 別売りのローザン帝国の「シルエット」「ファイター」とは異なるフェイスデザインとカラーリング。"
-		],
-		"en": [
-			"\"Liber Fighter \" is now available from \" 30 MINUTES FANTASY\", where you can create your own fantasy job!",
-			"• A starter set that includes armor and armed parts in addition to the base \"silhouette\" [elementary body].",
-			"• The “silhouette” [elementary body] is capable of flexible human-like actions and is adaptable to any job.",
-			"• By providing movable axes in the head and neck, it is possible to pull the chin, stick out the face, etc.",
-			"• The shoulder joint has a carefully designed structure that maintains the body's line even in bold poses.",
-			"• The movable axes of the chest, torso, and waist work together with the sliding mechanism at the base of the waist joint to create natural poses.",
-			"• Compared to the separately sold \"30MF Liber Knight \", the \" silhouette\" [base body] has a more solid form.",
-			"• Comes with armor and armed parts to “job change” to “Liber Fighter” in combination with “Silhouette” [base body].",
-			"• Flexible movement is achieved by attaching the shoulder and waist armor via the joints on the back.",
-			"• \"Ax \" and \" Round Seal\" can be mounted on the back or waist by using joint parts.",
-			"• The attribute of “element core” is “earth”.",
-			"• Face design and coloring different from Rozan Empire's \"Silhouette \" and \" Fighter\" sold separately."
 		]
 	},
-	"accessories": {
-		"ja": ["アックス×1", "ラウンドシールド×1", "アーマーパーツ×1式", "ハンドパーツ×1式", "ジョイントパーツ×1式"],
-		"en": ["Ax x1", "Round Seal × 1", "Armor parts x 1 set", "Hand parts x 1 set", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "アックス"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ラウンドシールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アーマーパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -98,10 +162,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5385/",
-	"brandIds": ["30mf"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"],
 	"manual": {
 		"id": "3405",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3405/"

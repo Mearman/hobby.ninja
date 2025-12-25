@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "30MS オプションヘアスタイル＆フェイスパーツセット(田中摩美々/白瀬咲耶)",
-		"en": "30MS OPTION HAIR STYLE & FACE PARTS SET (MAMIMI TANAKA/SAKUYA SHIRASE)"
+		"en": "30MS Optional Hairstyle & Face Parts Set (Mami Tanaka/Sakuya Shirase)"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [
+		{
+			"id": "idolmaster",
+			"url": "https://bandai-hobby.net/series/idolmaster/",
+			"ja": "アイドルマスターシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6755",
+			"url": "https://bandai-hobby.net/item/01_6755/",
+			"ja": "30MS 芹沢あさひ"
+		},
+		{
+			"id": "01_6756",
+			"url": "https://bandai-hobby.net/item/01_6756/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム3[カラーB]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		}
+	],
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -22,97 +70,111 @@
 		"ja": [
 			"「田中摩美々」「白瀬咲耶」のヘアスタイルパーツとフェイスパーツのセット商品。",
 			"別売りの30MSオプションボディパーツと組み合わせてアイドルたちを様々なコスチュームに着せ替え可能。",
-			"■繊細な髪の流れを丁寧に立体化、ポーズに合わせてなびく動きを表現。",
-			"■衣装のデザインに合わせて、パーツの着脱で髪飾りの無い状態も再現可能。",
-			"■田中摩美々、白瀬咲耶ともにピアスの形状を造型で再現。",
-			"■表情パーツはタンポ印刷を施し、各2種類ずつ付属。",
-			"■別売りの「30MS オプションボディパーツ ビヨンドザブルースカイ1[カラーA]」、「30MS オプションボディパーツ アルファシスターズファンタズム1[カラーA]」、「30MS オプションボディパーツ シグマシスターズパラドクス1[カラーA]」と組み合わせることができる。"
+			"• 繊細な髪の流れを丁寧に立体化、ポーズに合わせてなびく動きを表現。",
+			"• 衣装のデザインに合わせて、パーツの着脱で髪飾りの無い状態も再現可能。",
+			"• 田中摩美々、白瀬咲耶ともにピアスの形状を造型で再現。",
+			"• 表情パーツはタンポ印刷を施し、各2種類ずつ付属。",
+			"• 別売りの「30MS オプションボディパーツ ビヨンドザブルースカイ1[カラーA]」、「30MS オプションボディパーツ アルファシスターズファンタズム1[カラーA]」、「30MS オプションボディパーツ シグマシスターズパラドクス1[カラーA]」と組み合わせることができる。"
 		],
 		"en": [
-			"A set product of \"Mami Tanaka \" and \" Sakuya Shirase\" hairstyle parts and face parts.",
+			"A set product of \"Mami Tanaka\" and \"Sakuya Shirase\" hairstyle parts and face parts.",
 			"Idols can be dressed up in various costumes by combining with the 30MS optional body parts (sold separately).",
 			"• The delicate flow of her hair has been carefully sculpted into three-dimensional form to express fluttering movements that match the pose.",
 			"• Depending on the costume design, you can also recreate the state without the hair ornament by attaching and detaching parts.",
 			"• Both Mami Tanaka and Sakuya Shirase have recreated the shape of their earrings.",
 			"• Two types of facial expression parts are included with tampo printing.",
-			"• Can be combined with the separately sold \"30MS Optional Body Parts Beyond the Blue Sky 1 [Color A]\", \" 30MS Optional Body Parts Alpha Sisters Phantasm 1 [Color A]\", and \" 30MS Optional Body Parts Sigma Sisters Paradox 1 [Color A]\"."
+			"• Can be combined with the separately sold \"30MS Optional Body Parts Beyond the Blue Sky 1 [Color A]\", \"30MS Optional Body Parts Alpha Sisters Phantasm 1 [Color A]\", and \"30MS Optional Body Parts Sigma Sisters Paradox 1 [Color A]\"."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"田中摩美々フェイスパーツ(タンポ印刷)×2種",
-			"白瀬咲耶フェイスパーツ(タンポ印刷)×2種",
-			"ヘアスタイルパーツ×各1セット"
-		],
-		"en": [
-			"Mami Tanaka face parts (tampo printing) x 2 types",
-			"Sakuya Shirase face parts (tampo printing) x 2 types",
-			"Hair style parts x 1 set each"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "田中摩美々フェイスパーツ(タンポ印刷)",
+				"en": "Mami Tanaka face parts (tampo printing)"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "白瀬咲耶フェイスパーツ(タンポ印刷)",
+				"en": "Sakuya Shirase face parts (tampo printing)"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヘアスタイルパーツ×各1セット",
+				"en": "Hair style parts x 1 set each"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6249.jpg",
+				"src": "https://bandai-hobby.net/images/153_6249_s_9w0cliotjgpfk3uj04v6w4ovlp7f.jpg",
 				"path": "/images/items/01_5401/153_6249.jpg",
 				"hash": "43e3611df2fe10b926f859526536ff5c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6249.jpg",
+				"src": "https://bandai-hobby.net/images/155_6249_s_i267hoiz8o79oszk5wa971wuy8k1.jpg",
 				"path": "/images/items/01_5401/155_6249.jpg",
 				"hash": "86f68c5b7b13a27f58ab39bed13b0552"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6249.jpg",
+				"src": "https://bandai-hobby.net/images/156_6249_s_riolsotg6wsj6ivkgk12ikqigde6.jpg",
 				"path": "/images/items/01_5401/156_6249.jpg",
 				"hash": "f404495324740d72c69f98add617d26c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6249.jpg",
+				"src": "https://bandai-hobby.net/images/157_6249_s_ecsibak3uln6lpz8enwkfqujojly.jpg",
 				"path": "/images/items/01_5401/157_6249.jpg",
 				"hash": "e29cd8c8761eb1e0dc768a9430316463"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6249.jpg",
+				"src": "https://bandai-hobby.net/images/158_6249_s_j7o4fg6xzmam66pkghyf6xwmnj36.jpg",
 				"path": "/images/items/01_5401/158_6249.jpg",
 				"hash": "498c66c8498c456128ee0bd2db5c77aa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6249.jpg",
+				"src": "https://bandai-hobby.net/images/159_6249_s_lcwn4s2naqlg4asnhnhrt0noemfn.jpg",
 				"path": "/images/items/01_5401/159_6249.jpg",
 				"hash": "57d7048e17664f17af48a609a6bb10de"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6249.jpg",
+				"src": "https://bandai-hobby.net/images/189_6249_s_64mcnbmrypr93etnfepoxom070gv.jpg",
 				"path": "/images/items/01_5401/189_6249.jpg",
 				"hash": "360960d7a0ef2ecda61be6961815fabc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6249.jpg",
+				"src": "https://bandai-hobby.net/images/190_6249_s_fol8s59w3ud273yvun5ferziangi.jpg",
 				"path": "/images/items/01_5401/190_6249.jpg",
 				"hash": "ec16db54ad39af385b211f87c925c67b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6249.jpg",
+				"src": "https://bandai-hobby.net/images/191_6249_s_tp2sw07q5y2yrejxtf1yawxohhnf.jpg",
 				"path": "/images/items/01_5401/191_6249.jpg",
 				"hash": "54393cb48579c87eb5fb67e39298db9d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_6249.jpg",
+				"src": "https://bandai-hobby.net/images/192_6249_s_5lqnvbyxqgu7winjsv70ux2hlye6.jpg",
 				"path": "/images/items/01_5401/192_6249.jpg",
 				"hash": "f33d2148ce5f1778392e2cb19c555bb8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_6249.jpg",
+				"src": "https://bandai-hobby.net/images/193_6249_s_859kkplljjhw1ev4lfgp9rvswmep.jpg",
 				"path": "/images/items/01_5401/193_6249.jpg",
 				"hash": "aed7ad05b35baa2ccc984b54ec90d5db"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5401/",
-	"brandIds": ["30ms"],
-	"seriesIds": ["idolmaster"],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_6755", "01_6756", "01_5977", "01_5976"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5401/"
 }

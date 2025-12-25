@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "1/1000 宇宙戦艦ヤマト3199（第3次改装型：参戦章叙勲式典記念塗装）",
-		"en": "1/1000 SPACE BATTLESHIP YAMATO 3199"
+		"en": "1/1000 Space Battleship Yamato 3199 (Third Renovation Type: Painting to Commemorate the Battle Medal Awarding Ceremony)"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "yamato",
+			"url": "https://bandai-hobby.net/series/yamato/",
+			"ja": "宇宙戦艦ヤマトシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
+	"scale": "1/1000",
 	"price": {
 		"amount": 6050,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 30
 	},
 	"targetAge": 15,
-	"scale": "1/1000",
 	"description": {
 		"ja": [
 			"『ヤマトよ永遠に REBEL3199』から第3次改装型：参戦章叙勲式典記念塗装のヤマトが1/1000スケールでいよいよ登場！",
@@ -37,47 +74,63 @@
 			"• It is possible to reproduce the 2205 version by selecting parts and decals."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"錨レリーフ艦首パーツ×1",
-			"無装飾艦首パーツ×1",
-			"ディスプレイベース×1",
-			"コスモタイガーII(単座)×2",
-			"コスモタイガーII(三座)×2",
-			"水転写式デカール×1",
-			"シール×1"
-		],
-		"en": [
-			"Anchor relief bow parts x 1",
-			"Undecorated bow parts x 1",
-			"Display base x 1",
-			"Cosmo Tiger II (single seat) x 2",
-			"Cosmo Tiger II (three seats) x 2",
-			"Water transfer decal x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "錨レリーフ艦首パーツ",
+				"en": "Anchor relief bow parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "無装飾艦首パーツ",
+				"en": "Undecorated bow parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース",
+				"en": "display base"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "コスモタイガーII(単座)",
+				"en": "Cosmo Tiger II (single seat)"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "コスモタイガーII(三座)",
+				"en": "Cosmo Tiger II (three seats)"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221751_1.jpg",
 				"path": "/images/items/01_5388/1000221751_1.jpg",
 				"hash": "03e6a0b703f25d18e89f83963c4139e1"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221751_10.jpg",
-				"path": "/images/items/01_5388/1000221751_10.jpg",
-				"hash": "2fdf1947f20e2a957f89d4c884733ca5"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221751_11.jpg",
-				"path": "/images/items/01_5388/1000221751_11.jpg",
-				"hash": "3db912e2e3725b53a219e2c43f050548"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221751_12.jpg",
-				"path": "/images/items/01_5388/1000221751_12.jpg",
-				"hash": "a06709c36ae6755e4970fc1666c746e9"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221751_2.jpg",
@@ -118,13 +171,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221751_9.jpg",
 				"path": "/images/items/01_5388/1000221751_9.jpg",
 				"hash": "81e4a65d8bae9c5b98870ae24b87abcb"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221751_10.jpg",
+				"path": "/images/items/01_5388/1000221751_10.jpg",
+				"hash": "2fdf1947f20e2a957f89d4c884733ca5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221751_11.jpg",
+				"path": "/images/items/01_5388/1000221751_11.jpg",
+				"hash": "3db912e2e3725b53a219e2c43f050548"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000221751_12.jpg",
+				"path": "/images/items/01_5388/1000221751_12.jpg",
+				"hash": "a06709c36ae6755e4970fc1666c746e9"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5388/",
-	"brandIds": [],
-	"seriesIds": ["yamato"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5388/"
 }

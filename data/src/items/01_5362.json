@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ムラサメ改",
-		"en": "HG 1/144 MURASAME KAI"
+		"en": "HG 1/144 Murasame Kai"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-freedom",
+			"url": "https://bandai-hobby.net/series/seed-freedom/",
+			"ja": "機動戦士ガンダムSEED FREEDOM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5452",
+			"url": "https://bandai-hobby.net/item/01_5452/",
+			"ja": "HG 1/144 ズゴック(SEED FREEDOM Ver.)"
+		},
+		{
+			"id": "01_5374",
+			"url": "https://bandai-hobby.net/item/01_5374/",
+			"ja": "HG 1/144 デスティニーガンダムSpecII&ゼウスシルエット"
+		},
+		{
+			"id": "01_5363",
+			"url": "https://bandai-hobby.net/item/01_5363/",
+			"ja": "HG 1/144 ブラックナイトスコードカルラ"
+		},
+		{
+			"id": "item-1000211615",
+			"url": "https://p-bandai.jp/item/item-1000211615/",
+			"ja": "ＨＧ 1/144 ゲルググメナース"
+		}
+	],
+	"manual": {
+		"id": "1884",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1884"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -18,7 +66,6 @@
 		"day": 19
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム SEED FREEDOM』でも複数機で活躍！専用パーツの差替えによりMA形態への変形も再現したオーブの量産型可変MSが商品化！",
@@ -26,93 +73,105 @@
 			"• ビームライフルのフォアグリップは収納・展開が可能。MA形態時にはライフルを主翼に接続することができる。",
 			"• 全身の差し色をはじめ、頭部の色分けなどはパーツ分割で細部まで再現。",
 			"• 複数機を揃えることで、編隊を組んだ作戦行動を再現することも可能。"
-		],
-		"en": [
-			"Also active in multiple aircraft in \"Mobile Suit Gundam SEED FREEDOM\"! Orb's mass-produced variable MS that reproduces the transformation to MA form by replacing special parts has been commercialized!",
-			"• In order to beautifully express the silhouette of the fighter plane, the deformation mechanism has been removed and the MA form has been reproduced by replacing parts.",
-			"• The beam rifle's foregrip can be stored and expanded. When in MA mode, the rifle can be connected to the main wing.",
-			"• The coloring of the whole body and the color-coding of the head are reproduced in detail by dividing the parts.",
-			"• By arranging multiple aircraft, it is also possible to reproduce operations in formation."
 		]
 	},
-	"accessories": {
-		"ja": ["ビームサーベル×1", "ビームライフル×1", "シールド×1", "MA変形用パーツ×1", "増槽パーツ×2", "シール×1"],
-		"en": [
-			"Beam saber x 1",
-			"Beam rifle x 1",
-			"Seal × 1",
-			"MA transformation parts x 1",
-			"Additional tank parts x 2",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームサーベル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームライフル"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "MA変形用パーツ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "増槽パーツ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6212.jpg",
+				"src": "https://bandai-hobby.net/images/153_6212_s_xc6mlmla1in62acgnp3l8myczqi8.jpg",
 				"path": "/images/items/01_5362/153_6212.jpg",
 				"hash": "ee895b043e2242b79d9f24cc6813aef2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6212.jpg",
+				"src": "https://bandai-hobby.net/images/155_6212_s_vzxvaa9he5ty0hlg30awdld601nw.jpg",
 				"path": "/images/items/01_5362/155_6212.jpg",
 				"hash": "b096ced3e982f86da9b5cfcbee8934de"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6212.jpg",
+				"src": "https://bandai-hobby.net/images/156_6212_s_8dmlrr4ywq0rzgsiq14xn8yzrgwc.jpg",
 				"path": "/images/items/01_5362/156_6212.jpg",
 				"hash": "26ea58f986fbe58b79d3ef5d1e5b5a06"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6212.jpg",
+				"src": "https://bandai-hobby.net/images/157_6212_s_id1ll392wp5th4mt5jqkka15cno8.jpg",
 				"path": "/images/items/01_5362/157_6212.jpg",
 				"hash": "96f4d83661616732f53d4d3acddb05ba"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6212.jpg",
+				"src": "https://bandai-hobby.net/images/158_6212_s_ze1f9ntrvmakveuouq9k14onydxl.jpg",
 				"path": "/images/items/01_5362/158_6212.jpg",
 				"hash": "3c9454911c16ab792d59b300e75162c1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6212.jpg",
+				"src": "https://bandai-hobby.net/images/159_6212_s_2lhlwlm13d6tzrlivylkm2dhngp5.jpg",
 				"path": "/images/items/01_5362/159_6212.jpg",
 				"hash": "0cbd801f16fd47120fe0a5be9e68c3a1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6212.jpg",
+				"src": "https://bandai-hobby.net/images/189_6212_s_vom83kyy9cdp48vd1xkggfjwmb57.jpg",
 				"path": "/images/items/01_5362/189_6212.jpg",
 				"hash": "f3f8196e3a2b9a06cb84de863bd305dd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6212.jpg",
+				"src": "https://bandai-hobby.net/images/190_6212_s_c4ih5vmyawnovuwpjo7w8mji0vti.jpg",
 				"path": "/images/items/01_5362/190_6212.jpg",
 				"hash": "18bea6a5c2036b1fb78e11f760f6cbfb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6212.jpg",
+				"src": "https://bandai-hobby.net/images/191_6212_s_og71v3dzly2q06rqx2dzzuku4iyp.jpg",
 				"path": "/images/items/01_5362/191_6212.jpg",
 				"hash": "a02cf27afaa9c0bbb0b14ef3175ea965"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_6212.jpg",
+				"src": "https://bandai-hobby.net/images/192_6212_s_pmwshfkjku0yp03xpqzsepz5zyaj.jpg",
 				"path": "/images/items/01_5362/192_6212.jpg",
 				"hash": "0ac59517cce23851f7645af8097b7b2e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_6212.jpg",
+				"src": "https://bandai-hobby.net/images/193_6212_s_z8uizgc7xyiwte382ztr0e68s8ws.jpg",
 				"path": "/images/items/01_5362/193_6212.jpg",
 				"hash": "70913e04d1426010507d495f05882bf8"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5362/",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed-freedom"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5452", "01_5374", "01_5363", "item-1000211615"],
-	"manual": {
-		"id": "1884",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1884/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5362/"
 }

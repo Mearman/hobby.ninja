@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "プラノサウルス ブラキオサウルス",
-		"en": "PLANNOSAURUS Brachiosaurus"
+		"en": "planosaurus brachiosaurus"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "plannosaurus",
+			"url": "https://bandai-hobby.net/series/plannosaurus/",
+			"ja": "プラノサウルス"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
 	"price": {
 		"amount": 1870,
 		"currency": "JPY",
@@ -38,37 +75,34 @@
 			"• Easy to assemble as there is no need for tools such as nippers or adhesives.",
 			"• The huge nasal cavity on the top of the head and the rows of sharp chisel-like teeth that chew through plants are three-dimensional based on fossils.",
 			"• The long forelimbs that extend from the shoulders, which are higher than the waist, are three-dimensional based on fossils.",
-			"• Although it is short for a sauropod, the tail is thought to have been a powerful weapon against predators.",
+			"• The tail, which is short for a sauropod, is thought to have been a powerful weapon against predators.",
 			"• The unique skeletal shape of the neck is also realistically expressed, including neural spines that firmly support the long neck muscles, increased strength due to overlapping bones, and gaps on the sides of the neck.",
 			"• Since the neck moves smoothly, it is possible to reproduce the movement of lowering the neck from the base to drink water or eat grass on the ground.",
 			"• The sharp claws on the thumbs of the forelimbs and the tip-toe shape of the hind legs, which cannot be seen from the outer skin, are also expressed based on the skeleton."
 		]
 	},
-	"accessories": {
-		"ja": ["シール×1", "台座×1"],
-		"en": ["Seal×1", "Pedestal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220613_1.jpg",
 				"path": "/images/items/01_5389/1000220613_1.jpg",
 				"hash": "b36047f66b50679e6e115644598a10d2"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220613_10.jpg",
-				"path": "/images/items/01_5389/1000220613_10.jpg",
-				"hash": "2cd79777e323f35113076b83cc7d7143"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220613_11.jpg",
-				"path": "/images/items/01_5389/1000220613_11.jpg",
-				"hash": "84f09f874f3058637373b205cf625731"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220613_12.jpg",
-				"path": "/images/items/01_5389/1000220613_12.jpg",
-				"hash": "d2b98086a132929fc7dbddaebb69ace4"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220613_2.jpg",
@@ -109,13 +143,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220613_9.jpg",
 				"path": "/images/items/01_5389/1000220613_9.jpg",
 				"hash": "9f4b65ac5f6dd2e01c880e202145ec52"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220613_10.jpg",
+				"path": "/images/items/01_5389/1000220613_10.jpg",
+				"hash": "2cd79777e323f35113076b83cc7d7143"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220613_11.jpg",
+				"path": "/images/items/01_5389/1000220613_11.jpg",
+				"hash": "84f09f874f3058637373b205cf625731"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220613_12.jpg",
+				"path": "/images/items/01_5389/1000220613_12.jpg",
+				"hash": "d2b98086a132929fc7dbddaebb69ace4"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5389/",
-	"brandIds": [],
-	"seriesIds": ["plannosaurus"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5389/"
 }

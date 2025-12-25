@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM ARMORED CORE VI FIRES OF RUBICON BALAM INDUSTRIES BD-011 MELANDER ライガーテイル",
-		"en": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON BALAM INDUSTRIES BD-011 MELANDER LIGER TAIL"
+		"en": "30MM ARMORED CORE VI FIRES OF RUBICON BALAM INDUSTRIES BD-011 MELANDER Liger Tail"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [
+		{
+			"id": "armoredcore",
+			"url": "https://bandai-hobby.net/series/armoredcore/",
+			"ja": "ARMORED CORE Ⅵ FIRES OF RUBICON"
+		}
+	],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5573",
+			"url": "https://bandai-hobby.net/item/01_5573/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON RaD CC-3000 WRECKER ミルクトゥース"
+		},
+		{
+			"id": "01_5574",
+			"url": "https://bandai-hobby.net/item/01_5574/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON BALAM INDUSTRIES BD-011 MELANDER"
+		}
+	],
 	"price": {
 		"amount": 5280,
 		"currency": "JPY",
@@ -27,42 +75,75 @@
 			"• 武器は「DF-GA-08 HU-BEN」「DF-ET-09 TAI-YANG-SHOU」「BML-G2/P17SPL-16」「SONGBIRDS」が付属。"
 		],
 		"en": [
-			"\"ARMORED CORE VI FIRES OF RUBICON \" items are commercialized in the \" 30 MINUTES MISSIONS\" series.",
-			"Based on the series' key concepts of \"simple assembly \" and \" custom play,\" the AC \" Liger Tail\" operated by G1 Michigan is now available.",
+			"\"ARMORED CORE VI FIRES OF RUBICON\" items are commercialized in the \"30 MINUTES MISSIONS\" series.",
+			"Based on the series' key concepts of \"simple assembly\" and \"custom play,\" the AC \"Liger Tail\" operated by G1 Michigan is now available.",
 			"• The head, core, arms, and legs each use the same structure as the series, allowing you to enjoy \"assembling\" the plastic model just like in the game.",
 			"• 3mm joints are used to attach both shoulder weapons and some left-handed weapons, allowing for a variety of assemblies.",
-			"• Weapons include \"DF-GA-08 HU-BEN \", \" DF-ET-09 TAI-YANG-SHOU \", \" BML-G2/P17SPL-16 \", and \" SONGBIRDS\"."
+			"• Weapons include \"DF-GA-08 HU-BEN\", \"DF-ET-09 TAI-YANG-SHOU\", \"BML-G2/P17SPL-16\", and \"SONGBIRDS\"."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"DF-GA-08 HU-BEN×1",
-			"DF-ET-09 TAI-YANG-SHOU×1",
-			"BML-G2/P17SPL-16×1式",
-			"SONGBIRDS×1式",
-			"ジョイントパーツ×1式",
-			"シール×2種"
-		],
-		"en": [
-			"DF-GA-08 HU-BEN×1",
-			"DF-ET-09 TAI-YANG-SHOU×1",
-			"BML-G2/P17SPL-16×1 set",
-			"SONGBIRDS×1 set",
-			"Joint parts x 1 set",
-			"Seal×2 types"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "DF-GA-08 HU-BEN"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "DF-ET-09 TAI-YANG-SHOU"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "BML-G2/P17SPL-16"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "SONGBIRDS"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223045_1.jpg",
 				"path": "/images/items/01_5399/1000223045_1.jpg",
 				"hash": "9a072cd10d7e6c81fed39a199342a2e9"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223045_10.jpg",
-				"path": "/images/items/01_5399/1000223045_10.jpg",
-				"hash": "348d1f4118818db2563bbe277dd8e978"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223045_2.jpg",
@@ -103,13 +184,14 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223045_9.jpg",
 				"path": "/images/items/01_5399/1000223045_9.jpg",
 				"hash": "8de159b407b84a0f014ddf2c35cb49e3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223045_10.jpg",
+				"path": "/images/items/01_5399/1000223045_10.jpg",
+				"hash": "348d1f4118818db2563bbe277dd8e978"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5399/",
-	"brandIds": ["30mm"],
-	"seriesIds": ["armoredcore"],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5973", "01_5974", "01_5573", "01_5574"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5399/"
 }

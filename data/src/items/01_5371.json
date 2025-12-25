@@ -2,9 +2,51 @@
 	"id": "01_5371",
 	"type": "item",
 	"name": {
-		"ja": "Figure-rise Standard ウルトラマンティガ マルチタイプ",
-		"en": "Figure-rise Standard ULTRAMAN TIGA MULTI TYPE"
+		"ja": "Figure-rise Standard ウルトラマンティガ マルチタイプ"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "ultraman",
+			"url": "https://bandai-hobby.net/series/ultraman/",
+			"ja": "ウルトラマン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -26,20 +68,37 @@
 			"• ゼペリオン光線の溜め/発射を再現するエフェクトパーツが付属。",
 			"• ボディに内蔵された複数の可動軸により、ダイナミックなアクションポーズを再現可能。",
 			"• 首パーツが内側に入りこむことで頭部の可動が向上。"
-		],
-		"en": [
-			"\"Ultraman Tiga Multi Type \" from \" Ultraman Tiga\" is now available in the Figure-rise Standard series!",
-			"• The characteristic body color can be reproduced by dividing the parts and can be assembled without seals.",
-			"• The color coding is thoroughly reproduced, including the clear ears, back of the head, and forehead.",
-			"• Comes with effect parts that reproduce the charging/firing of Zeperion's rays.",
-			"• Multiple movable axes built into the body allow for dynamic action poses.",
-			"• Head movement is improved by moving the neck part inward."
 		]
 	},
-	"accessories": {
-		"ja": ["ゼペリオン光線用エフェクト×1式", "カラータイマー×2種", "ハンドパーツ×1式"],
-		"en": ["Zeperion ray effect x 1", "Color timer x 2 types", "Hand parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ゼペリオン光線用エフェクト"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "カラータイマー"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -85,9 +144,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5371/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["ultraman"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5371/"
 }

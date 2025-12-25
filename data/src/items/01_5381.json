@@ -2,9 +2,51 @@
 	"id": "01_5381",
 	"type": "item",
 	"name": {
-		"ja": "30MM 1/144 オプションパーツセット17(ウィングユニット1)",
-		"en": "30MM 1/144 OPTION PARTS SET 17 (WING UNIT 1)"
+		"ja": "30MM 1/144 オプションパーツセット17(ウィングユニット1)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 968,
 		"currency": "JPY",
@@ -18,7 +60,6 @@
 		"day": 16
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"人気の30MMオプションパーツセットに、様々な機体へ取り付け可能な「ウィングユニット」が登場！",
@@ -27,31 +68,28 @@
 			"• 同梱のジョイントパーツを使用することで様々な機体に取り付けが可能。",
 			"• 各連結箇所が可動し表情付けが可能。",
 			"• 分離してカスタマイズパーツとしても活用できる。"
-		],
-		"en": [
-			"A \"wing unit\" that can be attached to various aircraft is now available in the popular 30MM optional parts set!",
-			"• Various variations can be created depending on how they are connected.",
-			"• By using \"Action Base 7\" (sold separately), it is possible to reproduce the state of flying alone.",
-			"• Can be attached to various aircraft by using the included joint parts.",
-			"• Each connection point can be moved to create different expressions.",
-			"• Can be separated and used as customized parts."
 		]
 	},
-	"accessories": {
-		"ja": ["ウィングユニット×1", "ジョイントパーツ×2"],
-		"en": ["Wing unit x 1", "Joint parts x 2"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ウィングユニット"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ"
+			},
+			"count": 2
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220612_1.jpg",
 				"path": "/images/items/01_5381/1000220612_1.jpg",
 				"hash": "6b4a6944abe3adaf3b8d1d077bef19bc"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220612_10.jpg",
-				"path": "/images/items/01_5381/1000220612_10.jpg",
-				"hash": "9dcca3472a40f7f0052c548c02fa66b2"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220612_2.jpg",
@@ -92,15 +130,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220612_9.jpg",
 				"path": "/images/items/01_5381/1000220612_9.jpg",
 				"hash": "62245f8800211c29e6e049807325f29f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220612_10.jpg",
+				"path": "/images/items/01_5381/1000220612_10.jpg",
+				"hash": "9dcca3472a40f7f0052c548c02fa66b2"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5381/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"],
 	"manual": {
 		"id": "3788",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3788/"

@@ -2,9 +2,51 @@
 	"id": "01_5379",
 	"type": "item",
 	"name": {
-		"ja": "30MM 1/144 エグザビークル(ホースメカVer.)[ホワイト]",
-		"en": "30MM 1/144 Extended Armament Vehicle (HORSE MECHA Ver.) [WHITE]"
+		"ja": "30MM 1/144 エグザビークル(ホースメカVer.)[ホワイト]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1188,
 		"currency": "JPY",
@@ -18,7 +60,6 @@
 		"day": 16
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"馬モチーフのエグザビークル、「ホースメカ」にホワイトが新たに登場！",
@@ -28,32 +69,31 @@
 			"• 「カスタマイズマテリアル（パイプパーツ/マルチジョイント）」など別売りのアイテムに付属するジョイントパーツを使用することで、騎乗する機体を固定しディスプレイが可能。",
 			"• 「30MM 1/144 EXM-H15C アチェルビー (TYPE-C)」などの別売りの機体とカスタマイズ用のジョイントパーツが付属。",
 			"• 脚パーツは別売り機体の脚パーツとしても使用できる。"
-		],
-		"en": [
-			"A new white version of the \"Horse Mecha\", a horse-themed vehicle, is now available!",
-			"• Each joint from the head to the legs can move flexibly.",
-			"• The tail parts are foldable.",
-			"• It is possible to ride various aircraft sold separately.",
-			"• By using joint parts that come with separately sold items such as \"Customized Materials (Pipe Parts/Multi-Joint)\", you can fix and display the aircraft you are riding.",
-			"• Includes separately sold aircraft such as \"30MM 1/144 EXM-H15C Achelby (TYPE-C)\" and joint parts for customization.",
-			"• The leg parts can also be used as leg parts for the aircraft sold separately."
 		]
 	},
-	"accessories": {
-		"ja": ["ビークル×1式", "ジョイントパーツ×1"],
-		"en": ["Vehicle x 1 set", "Joint parts x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビークル"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220611_1.jpg",
 				"path": "/images/items/01_5379/1000220611_1.jpg",
 				"hash": "4eea0955efa154f332118da95811e1c3"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220611_10.jpg",
-				"path": "/images/items/01_5379/1000220611_10.jpg",
-				"hash": "cb956aabb9500b9156bae632eb9e3bc9"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220611_2.jpg",
@@ -94,15 +134,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220611_9.jpg",
 				"path": "/images/items/01_5379/1000220611_9.jpg",
 				"hash": "7d15db0c6d2306dcb97b6342861ebba7"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220611_10.jpg",
+				"path": "/images/items/01_5379/1000220611_10.jpg",
+				"hash": "cb956aabb9500b9156bae632eb9e3bc9"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5379/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"],
 	"manual": {
 		"id": "3787",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3787/"

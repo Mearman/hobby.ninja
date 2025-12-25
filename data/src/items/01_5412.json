@@ -2,9 +2,62 @@
 	"id": "01_5412",
 	"type": "item",
 	"name": {
-		"ja": "ＨＧ 1/144 ガンダム TR-6[バーザムII]レジオン鹵獲仕様(A.O.Z RE-BOOT版)",
-		"en": "HG 1/144 Gundam TR-6 [Barzam II] Re-Zeon capture specification (A.O.Z RE-BOOT version)"
+		"ja": "ＨＧ 1/144 ガンダムTR-6[バーザムII]レジオン鹵獲仕様(A.O.Z RE-BOOT版)",
+		"en": "HG 1/144 GundamTR-6 [Barzam II] Re-Zeon capture specification (A.O.Z RE-BOOT version)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 5280,
 		"currency": "JPY",
@@ -17,7 +70,6 @@
 		"month": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -70,10 +122,10 @@
 			"― Starting the Elephant Satellite Link System ―",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－．",
 			"From “A.O.Z RE-BOOT Gundam・Inre-The dream that the black rabbit saw-”",
-			"\"Barzam II \" is commercialized in the HG series! Reproduce the red \" Les Zeon specification\" with new modeling.",
+			"\"Barzam II\" is commercialized in the HG series! Reproduce the red \"Les Zeon specification\" with new modeling.",
 			"Includes head parts and grenade launcher when Eleanor Satellite Link System is activated!",
 			"Equipped with a mechanism for linking with the HG series!",
-			"● Reproduce the Gundam TR-6 [Barzam II] form with new modeling",
+			"● Reproduce the GundamTR-6 [Barzam II] form with new modeling",
 			"Reproduce the Gundam TR-6 part with new modeling.",
 			"The blade antenna on the head, which is the main feature of this machine, comes in both a retracted state and an expanded state.",
 			"Replace the head to reproduce the activation state of Eleanor Satellite Link System.",
@@ -112,59 +164,69 @@
 			"・Product specifications are as of 20246. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["グレネード・ランチャー付きビーム・ライフル", "ビーム・サーベル"],
-		"en": ["Beam rifle with grenade launcher", "beam saber"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "グレネード・ランチャー付きビーム・ライフル",
+				"en": "Beam rifle with grenade launcher"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6259.jpg",
+				"src": "https://bandai-hobby.net/images/153_6259_s_5mkki2jlh8chj8i0xkikso3sn6ug.jpg",
 				"path": "/images/items/01_5412/153_6259.jpg",
 				"hash": "afa7f670ba6bb1ec7d335ea994c10112"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6259.jpg",
+				"src": "https://bandai-hobby.net/images/155_6259_s_ipyow2a11uca8i9nexbh67qsix5q.jpg",
 				"path": "/images/items/01_5412/155_6259.jpg",
 				"hash": "0c28e065eaee51682cfae2c1ba5a8c33"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6259.jpg",
+				"src": "https://bandai-hobby.net/images/156_6259_s_uji5kwiw4rwbx4zvm6tj6vzu4m1r.jpg",
 				"path": "/images/items/01_5412/156_6259.jpg",
 				"hash": "d53da422a9c5dfba8d0f40dafc0f20cf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6259.jpg",
+				"src": "https://bandai-hobby.net/images/157_6259_s_txyof3tkhfxxd5iyjext4xmj4prm.jpg",
 				"path": "/images/items/01_5412/157_6259.jpg",
 				"hash": "1dd7e25652709a32685ade06ea142856"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6259.jpg",
+				"src": "https://bandai-hobby.net/images/158_6259_s_90x4fnuoh5wl1vvf2vd9t6msvwen.jpg",
 				"path": "/images/items/01_5412/158_6259.jpg",
 				"hash": "403e3d0c11b71c9436c7ca4e0fb24a12"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6259.jpg",
+				"src": "https://bandai-hobby.net/images/159_6259_s_qvvpu4bxtdhd716e32t1cui4q7o1.jpg",
 				"path": "/images/items/01_5412/159_6259.jpg",
 				"hash": "1272ee932aa9daa98398a2b8a64414d7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6259.jpg",
+				"src": "https://bandai-hobby.net/images/189_6259_s_5azz6qyicdns86820p5ra9x7u5bt.jpg",
 				"path": "/images/items/01_5412/189_6259.jpg",
 				"hash": "aa5850407bb27d04e3f6df7c2cf5e545"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6259.jpg",
+				"src": "https://bandai-hobby.net/images/190_6259_s_1n5jwsz8pjqu5c5dfidik3ihxg4x.jpg",
 				"path": "/images/items/01_5412/190_6259.jpg",
 				"hash": "08c98a2adc2802f0c416e3b9a43c332b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6259.jpg",
+				"src": "https://bandai-hobby.net/images/191_6259_s_98h2hw7rl7yibnchyv57trtocb09.jpg",
 				"path": "/images/items/01_5412/191_6259.jpg",
 				"hash": "7e90783e8598ecae5ea884fb99847952"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_6259.jpg",
+				"src": "https://bandai-hobby.net/images/192_6259_s_ii2r96zo1cy932wdygg382l33tzz.jpg",
 				"path": "/images/items/01_5412/192_6259.jpg",
 				"hash": "959828050bc9e0221e933f6985aa0eb3"
 			}
@@ -172,14 +234,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5412/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla", "hguc"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2518",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2518/"

@@ -5,6 +5,43 @@
 		"ja": "プラノサウルス 陸海空恐竜セット",
 		"en": "Planosaurus Land, Sea, and Air Dinosaur Set"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "plannosaurus",
+			"url": "https://bandai-hobby.net/series/plannosaurus/",
+			"ja": "プラノサウルス"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5501",
+			"url": "https://bandai-hobby.net/item/01_5501/",
+			"ja": "プラノサウルス テリジノサウルス"
+		},
+		{
+			"id": "01_5389",
+			"url": "https://bandai-hobby.net/item/01_5389/",
+			"ja": "プラノサウルス ブラキオサウルス"
+		},
+		{
+			"id": "01_5248",
+			"url": "https://bandai-hobby.net/item/01_5248/",
+			"ja": "プラノサウルス パラサウロロフス"
+		},
+		{
+			"id": "01_5249",
+			"url": "https://bandai-hobby.net/item/01_5249/",
+			"ja": "プラノサウルス ティラノサウルス ペインティングVer."
+		}
+	],
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -26,47 +63,57 @@
 		],
 		"en": [
 			"The first set item from Planosaurus, a brand that helps you get to know dinosaurs with your own hands! The champions of land, sea, and air from the Cretaceous period are now available as a set!",
-			"• \"Tyrannosaurus \", \" Mosasaurus \" and \" Pteranodon\" are now available as a set.",
+			"• \"Tyrannosaurus\", \"Mosasaurus\" and \"Pteranodon\" are now available as a set.",
 			"• Includes background illustrations for fun decoration!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"プラノサウルス ティラノサウルス×1",
-			"プラノサウルス モササウルス×1",
-			"プラノサウルス プテラノドン×1",
-			"シール×3",
-			"台座×3種"
-		],
-		"en": [
-			"Planosaurus Tyrannosaurus x1",
-			"Planosaurus Mosasaurus × 1",
-			"Planosaurus Pteranodon×1",
-			"Seal×3",
-			"Pedestal x 3 types"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "プラノサウルス ティラノサウルス",
+				"en": "planosaurus tyrannosaurus"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "プラノサウルス モササウルス",
+				"en": "planosaurus mosasaurus"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "プラノサウルス プテラノドン",
+				"en": "planosaurus pteranodon"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220614_1.jpg",
 				"path": "/images/items/01_5390/1000220614_1.jpg",
 				"hash": "9099b8a5e2b9410515ef29464af86af4"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220614_10.jpg",
-				"path": "/images/items/01_5390/1000220614_10.jpg",
-				"hash": "e7581f4f24465a5461d87ee548596c5d"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220614_11.jpg",
-				"path": "/images/items/01_5390/1000220614_11.jpg",
-				"hash": "4641553e65d275aa73aaf2e25f34221a"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220614_12.jpg",
-				"path": "/images/items/01_5390/1000220614_12.jpg",
-				"hash": "b4676e8ea212de2c0daa6f13816d6feb"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220614_2.jpg",
@@ -107,13 +154,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220614_9.jpg",
 				"path": "/images/items/01_5390/1000220614_9.jpg",
 				"hash": "8b078eb09ce057a3d309c3b3d1763f4a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220614_10.jpg",
+				"path": "/images/items/01_5390/1000220614_10.jpg",
+				"hash": "e7581f4f24465a5461d87ee548596c5d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220614_11.jpg",
+				"path": "/images/items/01_5390/1000220614_11.jpg",
+				"hash": "4641553e65d275aa73aaf2e25f34221a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220614_12.jpg",
+				"path": "/images/items/01_5390/1000220614_12.jpg",
+				"hash": "b4676e8ea212de2c0daa6f13816d6feb"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5390/",
-	"brandIds": [],
-	"seriesIds": ["plannosaurus"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5501", "01_5389", "01_5248", "01_5249"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5390/"
 }

@@ -2,9 +2,51 @@
 	"id": "01_5365",
 	"type": "item",
 	"name": {
-		"ja": "BB戦士 C.E.運命の対決セット",
-		"en": "BB SENSHI C.E. BATTLES OF DESTINY SET"
+		"ja": "BB戦士 C.E.運命の対決セット"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_5969",
+			"url": "https://bandai-hobby.net/item/01_5969/",
+			"ja": "ガンダムデカールNo.141 機動戦士ガンダムSEED FREEDOM汎用①"
+		},
+		{
+			"id": "01_5970",
+			"url": "https://bandai-hobby.net/item/01_5970/",
+			"ja": "ガンダムデカールNo.142 機動戦士ガンダムSEED FREEDOM汎用②"
+		},
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		}
+	],
 	"price": {
 		"amount": 3630,
 		"currency": "JPY",
@@ -20,51 +62,48 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED』、『機動戦士ガンダム SEED DESTINY』より、人気のSD ガンダムがセットになって復活！",
+			"『機動戦士ガンダムSEED』、『機動戦士ガンダムSEED DESTINY』より、人気のSDガンダムがセットになって復活！",
 			"• 「フリーダムガンダム」「フォースインパルスガンダム」「ストライクフリーダムガンダム」「デスティニーガンダム」がセットになって登場。"
-		],
-		"en": [
-			"From \"Mobile Suit Gundam SEED \" and \" Mobile Suit Gundam SEED DESTINY\", the popular SD Gundam is back as a set!",
-			"• \"Freedom Gundam \", \" Force Impulse Gundam \", \" Strike Freedom Gundam \" and \" Destiny Gundam\" are now available as a set."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"BB戦士257 フリーダムガンダム×1",
-			"BB戦士280 フォースインパルスガンダム×1",
-			"BB戦士288 ストライクフリーダムガンダム×1",
-			"BB戦士290 デスティニーガンダム×1",
-			"シール×4"
-		],
-		"en": [
-			"BB Senshi 257 Freedom Gundam×1",
-			"BB Senshi 280 Force Impulse Gundam×1",
-			"BB Senshi 288 Strike Freedom Gundam×1",
-			"BB Senshi 290 Destiny Gundam×1",
-			"Seal×4"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "BB戦士257 フリーダムガンダム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "BB戦士280 フォースインパルスガンダム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "BB戦士288 ストライクフリーダムガンダム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "BB戦士290 デスティニーガンダム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 4
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219423_1.jpg",
 				"path": "/images/items/01_5365/1000219423_1.jpg",
 				"hash": "1bef9f5ab5368cdf23a64b6e1f3b2f01"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219423_10.jpg",
-				"path": "/images/items/01_5365/1000219423_10.jpg",
-				"hash": "2b5f24d8ca1d4600cbe451b320cf2a93"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219423_11.jpg",
-				"path": "/images/items/01_5365/1000219423_11.jpg",
-				"hash": "5ddd1aee0822b7f3e548c788ca9c7db6"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219423_12.jpg",
-				"path": "/images/items/01_5365/1000219423_12.jpg",
-				"hash": "faa858f0b36393f89f2b46046f4e8f2b"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219423_2.jpg",
@@ -105,13 +144,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219423_9.jpg",
 				"path": "/images/items/01_5365/1000219423_9.jpg",
 				"hash": "08a85656460f26647c10d5303cc269ae"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219423_10.jpg",
+				"path": "/images/items/01_5365/1000219423_10.jpg",
+				"hash": "2b5f24d8ca1d4600cbe451b320cf2a93"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219423_11.jpg",
+				"path": "/images/items/01_5365/1000219423_11.jpg",
+				"hash": "5ddd1aee0822b7f3e548c788ca9c7db6"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219423_12.jpg",
+				"path": "/images/items/01_5365/1000219423_12.jpg",
+				"hash": "faa858f0b36393f89f2b46046f4e8f2b"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5365/",
-	"brandIds": ["bb"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5968", "01_5969", "01_5970", "01_5986"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5365/"
 }

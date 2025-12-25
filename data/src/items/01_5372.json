@@ -2,9 +2,45 @@
 	"id": "01_5372",
 	"type": "item",
 	"name": {
-		"ja": "ポケモンプラモコレクション クイック!! 20 ホゲータ",
-		"en": "Pokémon Model Kit QUICK!! 20 FUECOCO"
+		"ja": "ポケモンプラモコレクション クイック!! 20 ホゲータ"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
 	"price": {
 		"amount": 715,
 		"currency": "JPY",
@@ -25,19 +61,16 @@
 			"• こだわりのパーツ分割で簡単組み立て＆カラフルな仕上がりを両立。",
 			"• ランナーを見た瞬間、出来上がりが思い浮かぶシンプル仕様。",
 			"• 道具を使わないタッチゲート方式。"
-		],
-		"en": [
-			"Easy assembly without any tools! Hogeta joins the \"Pokepla Quick!!\" that can be easily assembled even for the first time!",
-			"• Overall height approximately 88mm. Enjoy the cute poses that make you want to collect them.",
-			"• Easy assembly and colorful finish achieved by carefully dividing parts.",
-			"• Simple specifications that make you imagine the finished product the moment you see the Runner.",
-			"• Touch gate method without tools."
 		]
 	},
-	"accessories": {
-		"ja": ["シール×1"],
-		"en": ["Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -88,9 +121,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5372/",
-	"brandIds": [],
-	"seriesIds": ["pokemon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5372/"
 }

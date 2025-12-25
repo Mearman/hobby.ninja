@@ -2,9 +2,51 @@
 	"id": "01_5369",
 	"type": "item",
 	"name": {
-		"ja": "HG ガンレオン",
-		"en": "HG GUNLEON"
+		"ja": "HG ガンレオン"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "superrobot_og",
+			"url": "https://bandai-hobby.net/series/superrobot_og/",
+			"ja": "スーパーロボット大戦OG"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5578",
+			"url": "https://bandai-hobby.net/item/01_5578/",
+			"ja": "HG アシュセイヴァー"
+		},
+		{
+			"id": "01_5491",
+			"url": "https://bandai-hobby.net/item/01_5491/",
+			"ja": "HG ヴァイスリッター"
+		},
+		{
+			"id": "item-1000214961",
+			"url": "https://p-bandai.jp/item/item-1000214961/",
+			"ja": "ＨＧ ヒュッケバインＭｋ－ＩＩトロンベ"
+		},
+		{
+			"id": "item-1000208235",
+			"url": "https://p-bandai.jp/item/item-1000208235/",
+			"ja": "ＨＧ ヒュッケバインボクサー"
+		}
+	],
 	"price": {
 		"amount": 6050,
 		"currency": "JPY",
@@ -27,66 +69,94 @@
 			"• 「ギーグ・ガン」は背部可変ブームへ、「デッカー・スパナ」は脚部への収納ができる。",
 			"• 腰のレッド部にはジュエルシール、「チェイン・デカッター」側面のブラック・オレンジ部にはプラスチックシールを採用。",
 			"• ポージングの幅を広げるアクションベース7が付属。"
-		],
-		"en": [
-			"From the \"Super Robot Wars OG \" series, the long-awaited \" Gunleon\", which can be replaced to reproduce Magna mode, is now available!",
-			"• Magna mode can be reproduced by deforming each part and replacing parts.",
-			"• Comes with a variety of weapons, including the 230mm long Riot Jalenti, which is longer than the entire length of the aircraft.",
-			"• \"Riot Jalenti\" partially unfolds and can transform into Magna mode.",
-			"• The \"Giegue Gun \" can be stored in the adjustable boom on the back, and the \" Decker Spanner\" can be stored in the legs.",
-			"• A jewel seal is used on the red part of the waist, and a plastic seal is used on the black and orange parts on the sides of the \"Chain Decutter\".",
-			"• Action base 7 is included to expand the range of poses."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"デッカー・スパナ×2",
-			"ライアット・ジャレンチ×1",
-			"ギーグ・ガン×2",
-			"チェイン・デカッター展開状態パーツ×1式",
-			"頭部用選択式パーツ×1式",
-			"マグナモード用パーツ×1式",
-			"ハンドパーツ×1式",
-			"アクションベース7×1",
-			"プラスチックシール×1",
-			"ジュエルシール×1",
-			"シール×1"
-		],
-		"en": [
-			"Decker spanner x 2",
-			"Riot Jalenti x1",
-			"Gieg Gun x2",
-			"Chain decutter expanded state parts x 1 set",
-			"Selectable parts for the head x 1 set",
-			"Magna mode parts x 1 set",
-			"Hand parts x 1 set",
-			"action base 7×1",
-			"Plastic Seal×1",
-			"Jewel Seal×1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "デッカー・スパナ"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ライアット・ジャレンチ"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ギーグ・ガン"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "チェイン・デカッター展開状態パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "頭部用選択式パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "マグナモード用パーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "アクションベース7"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "プラスチックシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジュエルシール"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219433_1.jpg",
 				"path": "/images/items/01_5369/1000219433_1.jpg",
 				"hash": "bf7b62d644faa4203610dedb4e98eb26"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219433_10.jpg",
-				"path": "/images/items/01_5369/1000219433_10.jpg",
-				"hash": "e03b249cb494597c1a9d0b5a312b5668"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219433_11.jpg",
-				"path": "/images/items/01_5369/1000219433_11.jpg",
-				"hash": "fdf1db73a7aa35ace1de124d59353495"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219433_12.jpg",
-				"path": "/images/items/01_5369/1000219433_12.jpg",
-				"hash": "59d2a41f8e35380e86dd5ca07e6aeda7"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219433_2.jpg",
@@ -127,13 +197,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219433_9.jpg",
 				"path": "/images/items/01_5369/1000219433_9.jpg",
 				"hash": "210381cb5465f4f16adc1a195a2a9c09"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219433_10.jpg",
+				"path": "/images/items/01_5369/1000219433_10.jpg",
+				"hash": "e03b249cb494597c1a9d0b5a312b5668"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219433_11.jpg",
+				"path": "/images/items/01_5369/1000219433_11.jpg",
+				"hash": "fdf1db73a7aa35ace1de124d59353495"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000219433_12.jpg",
+				"path": "/images/items/01_5369/1000219433_12.jpg",
+				"hash": "59d2a41f8e35380e86dd5ca07e6aeda7"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5369/",
-	"brandIds": ["hg"],
-	"seriesIds": ["superrobot_og"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5578", "01_5491", "item-1000214961", "item-1000208235"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5369/"
 }

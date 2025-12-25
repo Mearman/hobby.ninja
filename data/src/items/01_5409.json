@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "チョッパーロボ1号&2号(チョッパータンク&チョッパーウイング)",
-		"en": "CHOPPER ROBO 1&2 (CHOPPER TANK&CHOPPER WING)"
+		"en": "Chopper Robo No. 1 & No. 2 (Chopper Tank & Chopper Wing)"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "onepiece",
+			"url": "https://bandai-hobby.net/series/onepiece/",
+			"ja": "ワンピース"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5410",
+			"url": "https://bandai-hobby.net/item/01_5410/",
+			"ja": "チョッパーロボ3号&5号(チョッパーサブマリン&チョッパークレーン)"
+		},
+		{
+			"id": "01_4236",
+			"url": "https://bandai-hobby.net/item/01_4236/",
+			"ja": "ワンピース偉大なる船(グランドシップ)コレクション オーロ・ジャクソン号"
+		},
+		{
+			"id": "01_4170",
+			"url": "https://bandai-hobby.net/item/01_4170/",
+			"ja": "ワンピース偉大なる船コレクション サウザンド・サニー号「FILM RED」公開記念カラーVer."
+		},
+		{
+			"id": "01_4171",
+			"url": "https://bandai-hobby.net/item/01_4171/",
+			"ja": "ワンピース偉大なる船コレクション レッド・フォース号「FILM RED」公開記念カラーVer."
+		}
+	],
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -26,37 +63,41 @@
 			"• 別売りの「チョッパーロボ3号&5号(チョッパーサブマリン＆チョッパークレーン)」、「チョッパーロボ4号 チョッパードリル」を組み合わせれば、「ジャイアントチョッパーロボ」へ合体可能。"
 		],
 		"en": [
-			"The original mecha \"Chopper Robo \" is now available as a set of \" Chopper Robo No. 1 Chopper Tank \" and \" Chopper Robo No. 2 Chopper Wing\"!",
+			"The original mecha \"Chopper Robo\" is now available as a set of \"Chopper Robo No. 1 Chopper Tank\" and \"Chopper Robo No. 2 Chopper Wing\"!",
 			"• Chopper comes with two types of faces, one in a standing pose and one in a sitting pose. You can create various expressions with a wide variety of seals.",
 			"• \"Chopper Flight 1×2\" can be assembled by combining No. 1 and No. 2.",
-			"• If you combine \"Chopper Robo No. 3 & No. 5 (Chopper Submarine & Chopper Crane)\" and \" Chopper Robo No. 4 Chopper Drill \" (sold separately), it can be combined into \" Giant Chopper Robo\"."
+			"• If you combine \"Chopper Robo No. 3 & No. 5 (Chopper Submarine & Chopper Crane)\" and \"Chopper Robo No. 4 Chopper Drill\" (sold separately), it can be combined into \"Giant Chopper Robo\"."
 		]
 	},
-	"accessories": {
-		"ja": ["チョッパーロボ1号 チョッパータンク×1", "チョッパーロボ2号 チョッパーウイング×1", "シール×2"],
-		"en": ["Chopper Robo No. 1 Chopper Tank x 1", "Chopper Robo No. 2 Chopper Wing x 1", "Seal×2"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "チョッパーロボ1号 チョッパータンク",
+				"en": "Chopper Robo No. 1 Chopper Tank"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "チョッパーロボ2号 チョッパーウイング",
+				"en": "Chopper Robo No. 2 Chopper Wing"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 2
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222433_1.jpg",
 				"path": "/images/items/01_5409/1000222433_1.jpg",
 				"hash": "43bfa2fa9dfc2516f942448f7408b6c9"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222433_10.jpg",
-				"path": "/images/items/01_5409/1000222433_10.jpg",
-				"hash": "9911c8181d11b2165a7a9abf89e19c3d"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222433_11.jpg",
-				"path": "/images/items/01_5409/1000222433_11.jpg",
-				"hash": "b24c145523c871086d50997b6cf7a540"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222433_12.jpg",
-				"path": "/images/items/01_5409/1000222433_12.jpg",
-				"hash": "4bcb382e58d4fd347b7c8e897f4db0ea"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222433_2.jpg",
@@ -97,13 +138,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222433_9.jpg",
 				"path": "/images/items/01_5409/1000222433_9.jpg",
 				"hash": "9d42020ae5979a6941b7efa7e61429ab"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222433_10.jpg",
+				"path": "/images/items/01_5409/1000222433_10.jpg",
+				"hash": "9911c8181d11b2165a7a9abf89e19c3d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222433_11.jpg",
+				"path": "/images/items/01_5409/1000222433_11.jpg",
+				"hash": "b24c145523c871086d50997b6cf7a540"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000222433_12.jpg",
+				"path": "/images/items/01_5409/1000222433_12.jpg",
+				"hash": "4bcb382e58d4fd347b7c8e897f4db0ea"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5409/",
-	"brandIds": [],
-	"seriesIds": ["onepiece"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5410", "01_4236", "01_4170", "01_4171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5409/"
 }

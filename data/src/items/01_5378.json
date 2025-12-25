@@ -2,9 +2,51 @@
 	"id": "01_5378",
 	"type": "item",
 	"name": {
-		"ja": "BB戦士 ZGMFザクシリーズセット",
-		"en": "BB SENSHI ZGMF ZAKU SERIES SET"
+		"ja": "BB戦士 ZGMFザクシリーズセット"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5365",
+			"url": "https://bandai-hobby.net/item/01_5365/",
+			"ja": "BB戦士 C.E.運命の対決セット"
+		},
+		{
+			"id": "01_4648",
+			"url": "https://bandai-hobby.net/item/01_4648/",
+			"ja": "BB戦士 ストライクフリーダムガンダムVSデスティニーガンダム"
+		},
+		{
+			"id": "01_1662",
+			"url": "https://bandai-hobby.net/item/01_1662/",
+			"ja": "BB戦士296 ブレイズザクウォーリア"
+		},
+		{
+			"id": "01_5402",
+			"url": "https://bandai-hobby.net/item/01_5402/",
+			"ja": "BB戦士288 ストライクフリーダムガンダム"
+		}
+	],
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -20,51 +62,48 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED DESTINY』より、人気のSD ガンダムがセットになって復活！",
+			"『機動戦士ガンダムSEED DESTINY』より、人気のSDガンダムがセットになって復活！",
 			"• 「ガナーザクウォーリア(ルナマリア・ホーク専用機)」「ブレイズザクファントム(レイ・ザ・バレル専用機)」「ブレイズザクウォーリア」「ブレイズザクファントム(ハイネ・ヴェステンフルス専用機)」がセットになって登場。"
-		],
-		"en": [
-			"From \"Mobile Suit Gundam SEED DESTINY\", the popular SD Gundam is back as a set!",
-			"• \"Gunner Zaku Warrior (Luna Maria Hawk exclusive machine)\", \" Blaze Zaku Phantom (Ray the Barrel exclusive machine)\", \" Blaze Zaku Warrior \", and \" Blaze Zaku Phantom (Heine Westenflus exclusive machine)\" are now available as a set."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"BB戦士281 ガナーザクウォーリア(ルナマリア・ホーク専用機)×1",
-			"BB戦士285 ブレイズザクファントム(レイ・ザ・バレル専用機)×1",
-			"BB戦士296 ブレイズザクウォーリア×1",
-			"BB戦士298 ブレイズザクファントム(ハイネ・ヴェステンフルス専用機)×1",
-			"シール×4"
-		],
-		"en": [
-			"BB Senshi 281 Gunner Zaku Warrior (Luna Maria Hawk exclusive machine) x 1",
-			"BB Senshi 285 Blaze Zaku Phantom (Ray the Barrel exclusive machine) x 1",
-			"BB Senshi 296 Blaze Zaku Warrior x1",
-			"BB Senshi 298 Blaze Zaku Phantom (Heine Westenflus exclusive machine) x 1",
-			"Seal×4"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "BB戦士281 ガナーザクウォーリア(ルナマリア・ホーク専用機)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "BB戦士285 ブレイズザクファントム(レイ・ザ・バレル専用機)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "BB戦士296 ブレイズザクウォーリア"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "BB戦士298 ブレイズザクファントム(ハイネ・ヴェステンフルス専用機)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 4
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220946_1.jpg",
 				"path": "/images/items/01_5378/1000220946_1.jpg",
 				"hash": "eac4cb7681920f4cd076379fef28feab"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220946_10.jpg",
-				"path": "/images/items/01_5378/1000220946_10.jpg",
-				"hash": "dcb42acc249342178e13099c09ea3551"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220946_11.jpg",
-				"path": "/images/items/01_5378/1000220946_11.jpg",
-				"hash": "55c8b9cf9fe6b6c547f9651393212000"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220946_12.jpg",
-				"path": "/images/items/01_5378/1000220946_12.jpg",
-				"hash": "45bcd6b34e57825ccc6c100829d10025"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220946_2.jpg",
@@ -105,13 +144,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220946_9.jpg",
 				"path": "/images/items/01_5378/1000220946_9.jpg",
 				"hash": "e93c7d9a0ffb8f9001d40862c098d410"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220946_10.jpg",
+				"path": "/images/items/01_5378/1000220946_10.jpg",
+				"hash": "dcb42acc249342178e13099c09ea3551"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220946_11.jpg",
+				"path": "/images/items/01_5378/1000220946_11.jpg",
+				"hash": "55c8b9cf9fe6b6c547f9651393212000"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220946_12.jpg",
+				"path": "/images/items/01_5378/1000220946_12.jpg",
+				"hash": "45bcd6b34e57825ccc6c100829d10025"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5378/",
-	"brandIds": ["bb"],
-	"seriesIds": ["seed-d"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5365", "01_4648", "01_1662", "01_5402"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5378/"
 }

@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ブラックナイトスコードカルラ",
-		"en": "HG 1/144 BLACK KNIGHT SQUAD Cal-re.A"
+		"en": "HG 1/144 Black Knight Squad Carla"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-freedom",
+			"url": "https://bandai-hobby.net/series/seed-freedom/",
+			"ja": "機動戦士ガンダムSEED FREEDOM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_5969",
+			"url": "https://bandai-hobby.net/item/01_5969/",
+			"ja": "ガンダムデカールNo.141 機動戦士ガンダムSEED FREEDOM汎用①"
+		},
+		{
+			"id": "01_5970",
+			"url": "https://bandai-hobby.net/item/01_5970/",
+			"ja": "ガンダムデカールNo.142 機動戦士ガンダムSEED FREEDOM汎用②"
+		},
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		}
+	],
+	"manual": {
+		"id": "1885",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1885"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 4070,
 		"currency": "JPY",
@@ -18,39 +66,70 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED FREEDOM』の終盤に登場した、オルフェ＆イングリットが駆るMS、ブラックナイトスコードカルラが大ボリュームの商品仕様でHGシリーズに降臨！",
-			"• 「機動戦士ガンダム SEEDシリーズ」で印象的なアクションポーズ再現に特化した内部構造「SEEDアクションシステム」を搭載。",
+			"『機動戦士ガンダムSEED FREEDOM』の終盤に登場した、オルフェ＆イングリットが駆るMS、ブラックナイトスコードカルラが大ボリュームの商品仕様でHGシリーズに降臨！",
+			"• 「機動戦士ガンダムSEEDシリーズ」で印象的なアクションポーズ再現に特化した内部構造「SEEDアクションシステム」を搭載。",
 			"• 専用パーツを使用することでバックパックの展開状態を再現、光の翼は模様を印刷したPETシートを装着して再現することができる。",
 			"• 全身の装甲に施された金色のエングレービングは、金属光沢感をアップさせた素材であるリアルメタリックグロスインジェクションを採用。"
 		],
 		"en": [
-			"Black Knight Squad Karra, the MS driven by Orpheus and Ingrid that appeared at the end of \"Mobile Suit Gundam SEED FREEDOM\", has arrived in the HG series with a large volume of product specifications!",
-			"• Equipped with the internal structure \"SEED Action System \" specialized for reproducing impressive action poses from \" Mobile Suit Gundam SEED Series\".",
+			"Black Knight Squad Karra, the MS driven by Orpheus and Ingrid that appeared at the end of \"Mobile Suit GundamSEED FREEDOM\", has arrived in the HG series with a large volume of product specifications!",
+			"• Equipped with the internal structure \"SEED Action System\" that specializes in reproducing impressive action poses from the \"Mobile Suit Gundam SEED Series\".",
 			"• By using special parts, the unfolded state of the backpack can be reproduced, and the wings of light can be reproduced by attaching a PET sheet with a pattern printed on it.",
 			"• The golden engravings on the entire body armor are made of real metallic gloss injection material that enhances the metallic luster."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームライフル×1",
-			"対艦刀×2",
-			"光の翼エフェクト用PETシート×1式",
-			"バックパック展開用パーツ×1式",
-			"ドラグーン用ビームパーツ×16",
-			"シール×1"
-		],
-		"en": [
-			"Beam rifle x 1",
-			"Anti-ship sword x2",
-			"PET sheet for wing of light effect x 1 set",
-			"Backpack deployment parts x 1 set",
-			"Beam parts for Dragoon x 16",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "対艦刀",
+				"en": "anti-ship sword"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "光の翼エフェクト用PETシート",
+				"en": "PET sheet for wing of light effect"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "バックパック展開用パーツ",
+				"en": "Backpack deployment parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ドラグーン用ビームパーツ"
+			},
+			"count": 16
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -101,13 +180,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5363/",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed-freedom"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5968", "01_5969", "01_5970", "01_5986"],
-	"manual": {
-		"id": "1885",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1885/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5363/"
 }

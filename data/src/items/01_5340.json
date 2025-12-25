@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 シェンロンガンダム [クリアカラー]",
-		"en": "HG 1/144 SHENLONG GUNDAM [CLEAR COLOR]"
+		"en": "HG 1/144 Shenron Gundam [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_5969",
+			"url": "https://bandai-hobby.net/item/01_5969/",
+			"ja": "ガンダムデカールNo.141 機動戦士ガンダムSEED FREEDOM汎用①"
+		},
+		{
+			"id": "01_5970",
+			"url": "https://bandai-hobby.net/item/01_5970/",
+			"ja": "ガンダムデカールNo.142 機動戦士ガンダムSEED FREEDOM汎用②"
+		},
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -18,21 +62,20 @@
 		"day": 27
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『新機動戦記ガンダム W』より、「張五飛」の搭乗機「シェンロンガンダム」がクリアカラーになって登場！",
+			"『新機動戦記ガンダムW』より、「張五飛」の搭乗機「シェンロンガンダム」がクリアカラーになって登場！",
 			"• 胸ブロックの内部に設けられた可動軸により側屈・前後屈が可能。前後屈時にはコックピットブロックが上下に可動。",
 			"• 肩関節のスライド機構により可動域が向上。胸の可動と相まってダイナミックなポージングに対応。",
 			"• 特徴的な武装「ドラゴンハング」は展開・格納状態の再現に加え、付属の延長用パーツによりアーム伸長も再現可能。",
 			"• シールドやビームグレイブといった武装のほか、各種ハンドパーツが付属。"
 		],
 		"en": [
-			"■ From \"MOBILE SUIT GUNDAM WING\", \"Zhang Wufei's\" boarding aircraft \"Shenron GUNDAM\" is now available in clear color!",
-			"■ The movable axis provided inside the chest block allows lateral bending and anteroposterior bending. When bending back and forth, the cockpit block can be moved up and down.",
-			"■ Improved range of motion due to the sliding mechanism of the shoulder joint. Combined with the movement of the chest, it supports dynamic posing.",
-			"■ In addition to reproducing the deployment and retracted state of the characteristic weapon \"Dragon Hang\", the arm extension can also be reproduced with the included extension parts.",
-			"■ In addition to weapons such as shields and beam glaives, various hand parts are included."
+			"From \"Mobile Suit GundamW\", \"Zhang Wufei\"'s aircraft \"Shenlong Gundam\" is now available in clear color!",
+			"• A movable axis installed inside the chest block allows for side bending and forward/backward bending. The cockpit block moves up and down when bending forward and backward.",
+			"• The sliding mechanism of the shoulder joint improves the range of motion. Coupled with the movable chest, it supports dynamic poses.",
+			"• The characteristic weapon \"Dragon Hang\" can be reproduced in its deployed and retracted states, as well as its arm extension using the included extension parts.",
+			"• In addition to weapons such as Seal and Beam Glaive, various hand parts are included."
 		]
 	},
 	"images": {
@@ -55,13 +98,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5340/",
-	"brandIds": ["hg"],
-	"seriesIds": ["endlesswaltz"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5968", "01_5969", "01_5970", "01_5986"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5340/"
 }
