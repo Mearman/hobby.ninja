@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "ドラゴンボールDAIMA プラモデル 孫悟空 (ミニ) & ベジータ (ミニ)",
-		"en": "DRAGON BALL DAIMA MODEL KIT SON GOKU (MINI) & VEGETA (MINI)"
+		"en": "Dragon Ball DAIMA Plastic Model Son Goku (mini) & Vegeta (mini)"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "dragonball",
+			"url": "https://bandai-hobby.net/series/dragonball/",
+			"ja": "ドラゴンボールシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5569",
+			"url": "https://bandai-hobby.net/item/01_5569/",
+			"ja": "ドラゴンボールDAIMA プラモデル 孫悟空 (ミニ) & ピッコロ (ミニ)"
+		},
+		{
+			"id": "01_4901",
+			"url": "https://bandai-hobby.net/item/01_4901/",
+			"ja": "Figure-rise Standard ベジータ (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_4219",
+			"url": "https://bandai-hobby.net/item/01_4219/",
+			"ja": "Figure-rise Standard 孫悟空 (NEW SPEC Ver.)"
+		},
+		{
+			"id": "01_2974",
+			"url": "https://bandai-hobby.net/item/01_2974/",
+			"ja": "Figure-rise Standard アルティメット孫悟飯"
+		}
+	],
 	"price": {
 		"amount": 2970,
 		"currency": "JPY",
@@ -38,78 +75,78 @@
 			"• Background displays can be connected by lining up with items sold separately."
 		]
 	},
-	"accessories": {
-		"ja": ["ジョイントパーツ×1式", "シール×1"],
-		"en": ["Joint parts x 1 set", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5570_0.jpg",
 				"path": "/images/items/01_5570/01_5570_0.jpg",
 				"hash": "402ee228016142a828ebbc8d1fefdf76"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5570_1.jpg",
 				"path": "/images/items/01_5570/01_5570_1.jpg",
 				"hash": "c2db5cf8d3a51a0322cac5ed9529ac8c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5570_10.jpg",
-				"path": "/images/items/01_5570/01_5570_10.jpg",
-				"hash": "e58681c2ecd5c064ceb1ad43f1d842ae"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5570_11.jpg",
-				"path": "/images/items/01_5570/01_5570_11.jpg",
-				"hash": "72f3b2e73a89527f04436f4c0bc1085e"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5570_2.jpg",
 				"path": "/images/items/01_5570/01_5570_2.jpg",
 				"hash": "d924cf461b83b4457f418b8afd1d6939"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5570_3.jpg",
 				"path": "/images/items/01_5570/01_5570_3.jpg",
 				"hash": "2ff62c3fd4dce1824c8d5f88fdecaa76"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5570_4.jpg",
 				"path": "/images/items/01_5570/01_5570_4.jpg",
 				"hash": "94e1d1b74208eab4afc7b796e0dd394a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5570_5.jpg",
 				"path": "/images/items/01_5570/01_5570_5.jpg",
 				"hash": "b215a368958ccfd40d904f5a4f6923a6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5570_6.jpg",
 				"path": "/images/items/01_5570/01_5570_6.jpg",
 				"hash": "cb430035d204724267bddb72f16d1840"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5570_7.jpg",
 				"path": "/images/items/01_5570/01_5570_7.jpg",
 				"hash": "3d7a30fd9a844d69ef526a2f6afd228d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5570_8.jpg",
 				"path": "/images/items/01_5570/01_5570_8.jpg",
 				"hash": "47aa977a6ce94b4774b348910c495fd4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5570_9.jpg",
 				"path": "/images/items/01_5570/01_5570_9.jpg",
 				"hash": "6996e049e4507e5398df069ad0d4a0f9"
+			},
+			{
+				"path": "/images/items/01_5570/01_5570_10.jpg",
+				"hash": "e58681c2ecd5c064ceb1ad43f1d842ae"
+			},
+			{
+				"path": "/images/items/01_5570/01_5570_11.jpg",
+				"hash": "72f3b2e73a89527f04436f4c0bc1085e"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5570/",
-	"brandIds": [],
-	"seriesIds": ["dragonball"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5569", "01_4901", "01_4219", "01_2974"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5570/"
 }

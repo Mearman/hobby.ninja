@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "RG 1/144 シャイニングガンダム",
-		"en": "RG 1/144 SHINING GUNDAM"
+		"en": "RG 1/144 Shining Gundam"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "ggundam",
+			"url": "https://bandai-hobby.net/series/ggundam/",
+			"ja": "機動武闘伝Ｇガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5995",
+			"url": "https://bandai-hobby.net/item/01_5995/",
+			"ja": "RG 1/144 ガンダムベース限定 ゴッドガンダム ハイパーモード"
+		},
+		{
+			"id": "item-1000177309",
+			"url": "https://p-bandai.jp/item/item-1000177309/",
+			"ja": "ＲＧ 1/144 ゴッドガンダム用 拡張セット"
+		},
+		{
+			"id": "01_4104",
+			"url": "https://bandai-hobby.net/item/01_4104/",
+			"ja": "RG 1/144 ゴッドガンダム"
+		}
+	],
+	"manual": {
+		"id": "3169",
+		"url": "https://manual.bandai-hobby.net/menus/detail/3169"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -18,11 +61,10 @@
 		"day": 28
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"（2024/12/20記載）諸般の都合により、商品の発売月を変更させていただきました。",
-			"『機動武闘伝G ガンダム』より、「シャイニングガンダム」をリアルな外観と可動機構を追求したRGならではの“スーパーモード”への変形を搭載し商品化！",
+			"『機動武闘伝Gガンダム』より、「シャイニングガンダム」をリアルな外観と可動機構を追求したRGならではの“スーパーモード”への変形を搭載し商品化！",
 			"• 全身の可動機構を追求し、“スーパーモード”を差し替えなしで再現。",
 			"• 頭部の“スーパーモード”への変形も差し替え不要。",
 			"• ショルダーカバーの展開をリアルな質感やディテールで演出。",
@@ -33,84 +75,103 @@
 			"• 首には3軸可動に加え、スイング機構を搭載することで躍動感あるポーズ演出が可能に。",
 			"• 「シャイニングフィンガー」用のハンドパーツが付属。その他にもポージングの幅を広げる表情豊かなハンドパーツが付属。"
 		],
-		"en": ["■ (2024/12/20)Due to various reasons, we have changed the release month of the product."]
+		"en": [
+			"(Posted on 2024/12/20) Due to various circumstances, we have changed the product release.",
+			"From \"Mobile Fighter GGundam\", \"Shining Gundam\" is commercialized with a transformation to \"Super Mode\" unique to RG, which pursues a realistic appearance and movable mechanism!",
+			"• Pursuing the movable mechanism of the whole body, \"Super mode\" is reproduced without replacement.",
+			"• There is no need to replace the head to transform it into “super mode”.",
+			"• The shoulder cover unfolds with realistic texture and detail.",
+			"• The arm cover is equipped with a drawer and an unfolding gimmick.",
+			"• The internal vernier is exposed as the leg cover unfolds.",
+			"• The ankle cover rotates backwards while the toes extend forward, increasing the sense of stability.",
+			"• Thorough pursuit of human movement. Adopts a frame structure optimized for movement, allowing for more flexible posing.",
+			"• In addition to 3-axis movement, the neck is equipped with a swing mechanism, making it possible to create dynamic poses.",
+			"• Hand parts for \"Shining Finger\" are included. In addition, expressive hand parts are included to expand the range of poses."
+		]
 	},
-	"accessories": {
-		"ja": ["ビームソード×2種", "ハンドパーツ×1式", "リアリスティックデカール×1"],
-		"en": ["Beam sword x 2 types", "Hand parts x 1 set", "Realistic decal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームソード",
+				"en": "beam sword"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール",
+				"en": "realistic decals"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5544_0.jpg",
 				"path": "/images/items/01_5544/01_5544_0.jpg",
 				"hash": "cb025b3cc2816ab8ed65815e315ed090"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5544_1.jpg",
 				"path": "/images/items/01_5544/01_5544_1.jpg",
 				"hash": "7d29cdf026318a914cd830c28abb6100"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5544_10.jpg",
-				"path": "/images/items/01_5544/01_5544_10.jpg",
-				"hash": "cf50a12b086947f187c306225124e480"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5544_11.jpg",
-				"path": "/images/items/01_5544/01_5544_11.jpg",
-				"hash": "0728b5852a9c7b675ddc98eab66139df"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5544_2.jpg",
 				"path": "/images/items/01_5544/01_5544_2.jpg",
 				"hash": "9a45560f14299b506158a317731598f7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5544_3.jpg",
 				"path": "/images/items/01_5544/01_5544_3.jpg",
 				"hash": "91f7471f5dbc6e79db436b614fdcd9f7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5544_4.jpg",
 				"path": "/images/items/01_5544/01_5544_4.jpg",
 				"hash": "426802bae284dca05a14800b4cfbd2cb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5544_5.jpg",
 				"path": "/images/items/01_5544/01_5544_5.jpg",
 				"hash": "d065b57ca14d4c468f5f08bbabd2fbd9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5544_6.jpg",
 				"path": "/images/items/01_5544/01_5544_6.jpg",
 				"hash": "9100f9a3d5bf2de5c8366188a10e10ee"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5544_7.jpg",
 				"path": "/images/items/01_5544/01_5544_7.jpg",
 				"hash": "37f53ef399c6006e16f3f8f26afaf1a7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5544_8.jpg",
 				"path": "/images/items/01_5544/01_5544_8.jpg",
 				"hash": "3c927127f664c648444550473dbb51bd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5544_9.jpg",
 				"path": "/images/items/01_5544/01_5544_9.jpg",
 				"hash": "8de4d3c5c2f5aca5b57412f739838419"
+			},
+			{
+				"path": "/images/items/01_5544/01_5544_10.jpg",
+				"hash": "cf50a12b086947f187c306225124e480"
+			},
+			{
+				"path": "/images/items/01_5544/01_5544_11.jpg",
+				"hash": "0728b5852a9c7b675ddc98eab66139df"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5544/",
-	"brandIds": ["rg"],
-	"seriesIds": ["ggundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5995", "item-1000177309", "01_4104"],
-	"manual": {
-		"id": "3169",
-		"url": "https://manual.bandai-hobby.net/menus/detail/3169/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5544/"
 }

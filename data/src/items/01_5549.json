@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MF リーベルアサシン",
-		"en": "30MF LIBER ASSASSIN"
+		"en": "30MF Liber Assassin"
 	},
+	"brands": [
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		},
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5978",
+			"url": "https://bandai-hobby.net/item/01_5978/",
+			"ja": "30MF ローザンウィザード"
+		},
+		{
+			"id": "01_5979",
+			"url": "https://bandai-hobby.net/item/01_5979/",
+			"ja": "30MF クラスアップアーマー (ローザンソーサラー)"
+		},
+		{
+			"id": "01_5980",
+			"url": "https://bandai-hobby.net/item/01_5980/",
+			"ja": "30MF クラスアップアーマー (ローザンエンチャンター)"
+		},
+		{
+			"id": "01_5981",
+			"url": "https://bandai-hobby.net/item/01_5981/",
+			"ja": "30MF アイテムショップ4(クエストオプション)"
+		}
+	],
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -35,57 +77,98 @@
 			"• 別売りのローザン帝国の「シルエット」「アサシン」とは異なるフェイスデザインとカラーリング。"
 		],
 		"en": [
-			"■ (Date posted: 12/20/2024) Due to various considerations, the release date of this product has been delayed."
+			"(Posted on 2024/12/20) Due to various circumstances, we have changed the product release.",
+			"\"Liber Assassin\" is now available from \"30 MINUTES FANTASY\", where you can create your own fantasy job!",
+			"• A starter set that includes armor and armed parts in addition to the base \"silhouette\" [elementary body].",
+			"• A “silhouette” [body] with the same form as the separately sold “30MF Liber Knight” is included.",
+			"• The “silhouette” [elementary body] is capable of flexible human-like actions and is adaptable to any job.",
+			"• By providing movable axes in the head and neck, it is possible to pull the chin, stick out the face, etc.",
+			"• The shoulder joint has a carefully designed structure that maintains the body's line even in bold poses.",
+			"• The movable axes of the chest, torso, and waist work together with the sliding mechanism at the base of the waist joint to create natural poses.",
+			"• Comes with armor and armed parts to “job change” to “Liberal Assassin” in combination with “Silhouette” [body].",
+			"• Two \"daggers\" are included as weapons.",
+			"• Flexible movement is achieved by attaching the shoulder and waist armor via the joints on the back.",
+			"• The attribute of “element core” is “water”.",
+			"• Face design and coloring different from Rozan Empire's \"Silhouette\" and \"Assassin\" sold separately."
 		]
 	},
-	"accessories": {
-		"ja": ["ダガー×2", "アーマーパーツ×1式", "ハンドパーツ×1式", "ジョイントパーツ×1式"],
-		"en": ["Dagger x 2", "Armor parts x 1 set", "Hand parts x 1 set", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ダガー",
+				"en": "dagger"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "アーマーパーツ",
+				"en": "armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5549_0.jpg",
 				"path": "/images/items/01_5549/01_5549_0.jpg",
 				"hash": "b1d02e5ca38539d40c0568a6e7d04e4a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5549_1.jpg",
 				"path": "/images/items/01_5549/01_5549_1.jpg",
 				"hash": "b5221dbb040c0c6415a68c8190a8914b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5549_2.jpg",
 				"path": "/images/items/01_5549/01_5549_2.jpg",
 				"hash": "70d3ad1c08d5a0439910dce5f83d239d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5549_3.jpg",
 				"path": "/images/items/01_5549/01_5549_3.jpg",
 				"hash": "5fedef2b6c7009e7edf52959e679740c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5549_4.jpg",
 				"path": "/images/items/01_5549/01_5549_4.jpg",
 				"hash": "5be1a54ccd1d098352c3a8eb95c084ec"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5549_5.jpg",
 				"path": "/images/items/01_5549/01_5549_5.jpg",
 				"hash": "256be71c97d1e888046ea9eaf79477fd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5549_6.jpg",
 				"path": "/images/items/01_5549/01_5549_6.jpg",
 				"hash": "586c5e33ee623cfdaa73f6c41908db39"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5549_7.jpg",
 				"path": "/images/items/01_5549/01_5549_7.jpg",
 				"hash": "1d582504e9ecb17f1352baa34307d9ce"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5549_8.jpg",
 				"path": "/images/items/01_5549/01_5549_8.jpg",
 				"hash": "a8d700a7e5abbcfed3943d01dc8ba016"
 			}
@@ -93,10 +176,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5549/",
-	"brandIds": ["30mf"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5978", "01_5979", "01_5980", "01_5981"],
 	"manual": {
 		"id": "3418",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3418/"

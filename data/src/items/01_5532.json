@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "RG 1/144 νガンダム(ダブル・フィン・ファンネル装備型)",
-		"en": "RG 1/144 νGUNDAM (with double fin funnel)"
+		"en": "RG 1/144 νGundam (equipped with double fin funnel)"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5423",
+			"url": "https://bandai-hobby.net/item/01_5423/",
+			"ja": "RG 1/144 RX-93ff νガンダム [クリアカラー]"
+		},
+		{
+			"id": "01_5163",
+			"url": "https://bandai-hobby.net/item/01_5163/",
+			"ja": "RG 1/144 GUNDAM SIDE-F限定 νガンダム (ファーストロットカラーVer.)"
+		},
+		{
+			"id": "item-1000190277",
+			"url": "https://p-bandai.jp/item/item-1000190277/",
+			"ja": "ＲＧ 1/144 Hi-νガンダム用 フィン・ファンネルエフェクト"
+		},
+		{
+			"id": "01_4933",
+			"url": "https://bandai-hobby.net/item/01_4933/",
+			"ja": "RG 1/144 MSN-04FF サザビー"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 5940,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 21
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「RG 1/144 νガンダム」が二つの翼を持つνガンダムの強化プランである機体、νガンダム(ダブル・フィン・ファンネル装備型)になって登場！",
@@ -26,8 +69,9 @@
 			"• 設定に合わせ各部位とビーム・ライフル、シールドを新規造形で再現。"
 		],
 		"en": [
-			"■ \"RG 1/144 νGUNDAM\" is now available as a ν GUNDAM (double-finnel equipped type), which is an enhanced plan for ν GUNDAM with two wings! It will be available for pre-sale at \"GUNDAM SIDE-F\".",
-			"■ Each part, beam, rifle, and shield are reproduced in a new form according to the setting."
+			"\"RG 1/144 νGundam\" is now available as νGundam (double fin funnel equipped type), a strengthened version of νGundam with two wings!",
+			"Pre-sale at \"GUNDAM SIDE-F\".",
+			"• Reproduce each part, beam rifle, and Seal with new modeling according to the setting."
 		]
 	},
 	"images": {
@@ -60,13 +104,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5532/",
-	"brandIds": ["rg"],
-	"seriesIds": ["gundam-cca"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5423", "01_5163", "item-1000190277", "01_4933"],
-	"tag": {
-		"ja": "GUNDAM SIDE-F",
-		"en": "GUNDAM SIDE-F"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5532/"
 }

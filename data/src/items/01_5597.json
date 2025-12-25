@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 YMS-15 ギャン",
-		"en": "MG 1/100 GYAN"
+		"en": "MG 1/100 YMS-15 Gyan"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -18,13 +62,12 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム」に登場する白兵戦用モビルスーツ“ギャン”がマスターグレード1/100スケールのプラモデルで登場しました。ボディメカはガンダムに匹敵する大出力ジェネレーターを再現しています。さらに、主力武器であるビーム・サーベルはコイン電池内蔵で発光します。壷を持ったマ・クベの1/20フィギュアが付属されています。"
 		],
 		"en": [
-			"■ The hand-to-hand combat mobile suit \"Gann\" that appears in \"MOBILE SUIT GUNDAM\" is now available as a master grade 1/100 scale plastic model. The body mech reproduces a high-power generator comparable to the GUNDAM. In addition, the main weapon, the beam saber, is a built-in coin cell that emits light. A 1/20 figure of Ma Kube holding a urn is included."
+			"The hand-to-hand combat mobile suit \"Gyan\" that appears in \"Mobile Suit Gundam\" is now available as a master grade 1/100 scale plastic model. The body mechanism reproduces a high output generator comparable to Gundam. Furthermore, its main weapon, the beam saber, has a built-in coin battery and emits light. A 1/20 figure of Ma Kube holding a jar is included."
 		]
 	},
 	"images": {
@@ -53,10 +96,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5597/",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
 	"manual": {
 		"id": "540",
 		"url": "https://manual.bandai-hobby.net/menus/detail/540/"

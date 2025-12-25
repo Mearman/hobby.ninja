@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MF アイテムショップ3(ウェポンオプション)",
-		"en": "30MF ITEM SHOP 3 (WEPON OPTION)"
+		"en": "30MF Item Shop 3 (Weapon option)"
 	},
+	"brands": [
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		},
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5978",
+			"url": "https://bandai-hobby.net/item/01_5978/",
+			"ja": "30MF ローザンウィザード"
+		},
+		{
+			"id": "01_5979",
+			"url": "https://bandai-hobby.net/item/01_5979/",
+			"ja": "30MF クラスアップアーマー (ローザンソーサラー)"
+		},
+		{
+			"id": "01_5980",
+			"url": "https://bandai-hobby.net/item/01_5980/",
+			"ja": "30MF クラスアップアーマー (ローザンエンチャンター)"
+		},
+		{
+			"id": "01_5981",
+			"url": "https://bandai-hobby.net/item/01_5981/",
+			"ja": "30MF アイテムショップ4(クエストオプション)"
+		}
+	],
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -28,77 +70,122 @@
 			"• 武装は「ナイフ」「シミター」「ロングソード」「メイス」が付属。",
 			"• 「メイス」はパーツの差し替えで「ホースマンズフレイル」への変形可能。"
 		],
-		"en": ["■ (Updated 12/20/2024) The release date has been changed due to a few circumstances."]
+		"en": [
+			"(Posted on 2024/12/20) Due to various circumstances, we have changed the product release.",
+			"\"30MF Item Shop 3 (Weapon Option)\" is now available from \"30 MINUTES FANTASY\" where you can create your own fantasy job!",
+			"• A set packed with weapons and items that expand the range of “Armor Cloth” [Armor Replacement].",
+			"• The \"weapon rack\" can display various parts such as faces, armor, and weapons (sold separately).",
+			"• Weapon racks can be combined up, down, left, right, front and back.",
+			"• Comes with a knife, scimitar, long sword, and mace.",
+			"• \"Mace\" can be transformed into \"Horseman's Flail\" by replacing parts."
+		]
 	},
-	"accessories": {
-		"ja": ["ロングソード×1", "シミター×1", "ナイフ×1", "メイス×1式", "武器ラック×1式", "ジョイントパーツ×1式"],
-		"en": ["Long sword x1", "Scimitar x 1", "Knife x 1", "Mace x 1", "Weapon rack x 1", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ロングソード",
+				"en": "long sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シミター",
+				"en": "scimitar"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ナイフ",
+				"en": "knife"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "メイス",
+				"en": "mace"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "武器ラック",
+				"en": "weapon rack"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5567_0.jpg",
 				"path": "/images/items/01_5567/01_5567_0.jpg",
 				"hash": "56d97e7ba11af87ca1498a9aff0bc8e9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5567_1.jpg",
 				"path": "/images/items/01_5567/01_5567_1.jpg",
 				"hash": "bdca059535b92b45b910cf577ff799e5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5567_10.jpg",
-				"path": "/images/items/01_5567/01_5567_10.jpg",
-				"hash": "7b3e610eb59b28217333c0e42d2ae6a1"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5567_2.jpg",
 				"path": "/images/items/01_5567/01_5567_2.jpg",
 				"hash": "aa9839facc7b2f73a4faa0f2d7ed1d4b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5567_3.jpg",
 				"path": "/images/items/01_5567/01_5567_3.jpg",
 				"hash": "23390fff8db893aa2294c59b7b6e71f8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5567_4.jpg",
 				"path": "/images/items/01_5567/01_5567_4.jpg",
 				"hash": "cda4b44290bdb8b3176519c5735bd5aa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5567_5.jpg",
 				"path": "/images/items/01_5567/01_5567_5.jpg",
 				"hash": "4df3816bd51ce30c9254aedd42b61a05"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5567_6.jpg",
 				"path": "/images/items/01_5567/01_5567_6.jpg",
 				"hash": "2ef0aadb9fc0c4652e9ef7d957519fe2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5567_7.jpg",
 				"path": "/images/items/01_5567/01_5567_7.jpg",
 				"hash": "55a555a0b1f64ae77d00c1f3906cb569"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5567_8.jpg",
 				"path": "/images/items/01_5567/01_5567_8.jpg",
 				"hash": "d99a207c8d682683f3583b116fa98840"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5567_9.jpg",
 				"path": "/images/items/01_5567/01_5567_9.jpg",
 				"hash": "1c2d163dc6df28b1425c7b26fee1ca60"
+			},
+			{
+				"path": "/images/items/01_5567/01_5567_10.jpg",
+				"hash": "7b3e610eb59b28217333c0e42d2ae6a1"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5567/",
-	"brandIds": ["30mf"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5978", "01_5979", "01_5980", "01_5981"],
 	"manual": {
 		"id": "3424",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3424/"

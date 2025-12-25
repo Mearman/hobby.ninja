@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "HG アシュセイヴァー",
-		"en": "HG ASHSAVIOUR"
+		"en": "HG Ashsavior"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "superrobot_og",
+			"url": "https://bandai-hobby.net/series/superrobot_og/",
+			"ja": "スーパーロボット大戦OG"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5491",
+			"url": "https://bandai-hobby.net/item/01_5491/",
+			"ja": "HG ヴァイスリッター"
+		},
+		{
+			"id": "item-1000214961",
+			"url": "https://p-bandai.jp/item/item-1000214961/",
+			"ja": "ＨＧ ヒュッケバインＭｋ－ＩＩトロンベ"
+		},
+		{
+			"id": "01_5369",
+			"url": "https://bandai-hobby.net/item/01_5369/",
+			"ja": "HG ガンレオン"
+		},
+		{
+			"id": "item-1000208235",
+			"url": "https://p-bandai.jp/item/item-1000208235/",
+			"ja": "ＨＧ ヒュッケバインボクサー"
+		}
+	],
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -32,95 +75,128 @@
 			"• The tip of the \"Sword Breaker\" can be expanded. A display base for the sword breaker is included, allowing you to enjoy displaying it in its ejected state.",
 			"• The barrel of the \"Halbert Launcher\" unfolds to recreate the firing scene.",
 			"• Includes warhead parts to reproduce the firing of \"Fire Dagger\".",
-			"• Complete set includes a \"Gun Rapier \" and \" Laser Blade\".",
-			"• Action base 7 is included to expand the range of poses."
+			"• Complete set includes a \"Gun Rapier\" and \"Laser Blade\".",
+			"• Includes Action Base 7 that expands the range of poses."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ハルバート・ランチャー×1",
-			"ガンレイピア×1",
-			"レーザーブレード×2",
-			"ソードブレイカー用ディスプレイベース×1式",
-			"ファイア・ダガー発射再現用弾頭パーツ×1式",
-			"ハンドパーツ×1式",
-			"アクションベース7×1",
-			"シール×1"
-		],
-		"en": [
-			"Halberd launcher x 1",
-			"Gun rapier x 1",
-			"Laser blade x2",
-			"Display base for sword breaker x 1 set",
-			"Warhead parts for reproducing fire dagger firing x 1 set",
-			"Hand parts x 1 set",
-			"action base 7×1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハルバート・ランチャー",
+				"en": "halberd launcher"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ガンレイピア",
+				"en": "gun rapier"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "レーザーブレード",
+				"en": "laser blade"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ソードブレイカー用ディスプレイベース",
+				"en": "Display base for sword breaker"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ファイア・ダガー発射再現用弾頭パーツ",
+				"en": "Warhead parts for reproducing fire dagger firing"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "アクションベース7",
+				"en": "action base 7"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5578_0.jpg",
 				"path": "/images/items/01_5578/01_5578_0.jpg",
 				"hash": "41e132a7f17fd4b3b0d2ed1012249b63"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5578_1.jpg",
 				"path": "/images/items/01_5578/01_5578_1.jpg",
 				"hash": "ee622da9059ac6ab7aa2be6f093bd096"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5578_10.jpg",
-				"path": "/images/items/01_5578/01_5578_10.jpg",
-				"hash": "edf6277bce0d85a7b83492c4fbf58b63"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5578_2.jpg",
 				"path": "/images/items/01_5578/01_5578_2.jpg",
 				"hash": "3911f5328e3beaa3ac16921eb1e08264"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5578_3.jpg",
 				"path": "/images/items/01_5578/01_5578_3.jpg",
 				"hash": "61d37679727fe86b318441840c6e6b5b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5578_4.jpg",
 				"path": "/images/items/01_5578/01_5578_4.jpg",
 				"hash": "6cec21b0d75abf566f6c3540189cf7bd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5578_5.jpg",
 				"path": "/images/items/01_5578/01_5578_5.jpg",
 				"hash": "e6aebbdea17bcc0bf79977da0713ed09"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5578_6.jpg",
 				"path": "/images/items/01_5578/01_5578_6.jpg",
 				"hash": "3f91aa0fa5db67c0b2a12fdde690b120"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5578_7.jpg",
 				"path": "/images/items/01_5578/01_5578_7.jpg",
 				"hash": "5527ab4640abbfea014e3a317d0df710"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5578_8.jpg",
 				"path": "/images/items/01_5578/01_5578_8.jpg",
 				"hash": "f9dbffa66d18c00ba1eaef41ccdee352"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5578_9.jpg",
 				"path": "/images/items/01_5578/01_5578_9.jpg",
 				"hash": "a204cddaea1d572258d6ad4f9fd4ad97"
+			},
+			{
+				"path": "/images/items/01_5578/01_5578_10.jpg",
+				"hash": "edf6277bce0d85a7b83492c4fbf58b63"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5578/",
-	"brandIds": ["hg"],
-	"seriesIds": ["superrobot_og"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5491", "item-1000214961", "01_5369", "item-1000208235"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5578/"
 }

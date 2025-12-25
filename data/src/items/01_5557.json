@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 bEXM-6 ラウンドノヴァII",
-		"en": "30MM 1/144 bEXM-6 ROUNDNOVA Ⅱ"
+		"en": "30MM 1/144 bEXM-6 Round Nova II"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1628,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"（2024/12/20記載）諸般の都合により、商品の発売月を変更させていただきました。",
@@ -29,82 +71,115 @@
 			"• 新デザインのロイロイが付属。ロイロイは腰部に取り付け可能。",
 			"• シリーズ機体と同様に各部がフレキシブルに可動。"
 		],
-		"en": ["■ (2024/12/20)Due to various reasons, we have changed the release month of the product."]
+		"en": [
+			"(Posted on 2024/12/20) Due to various circumstances, we have changed the product release.",
+			"Introducing the Examax \"Round Nova\", which specializes in planetary exploration!",
+			"• Comes with uniquely shaped hand parts for the weapon handle and open hand.",
+			"• Ski-like parts can be attached to the soles of the feet. The ski-shaped parts can also be attached to the arms.",
+			"• Includes bag parts that can be attached to the chest etc.",
+			"• Newly designed Loi Loi is included. Loi Loi can be attached to the waist.",
+			"• Like the series aircraft, each part is flexible and movable."
+		]
 	},
-	"accessories": {
-		"ja": ["パルスライフル×1", "スキー板状パーツ×2", "バッグパーツ×1式", "ハンドパーツ×1式", "ロイロイ×1"],
-		"en": ["Pulse rifle x1", "Ski plate-shaped parts x 2", "Bag parts x 1 set", "Hand parts x 1 set", "Loi Loi x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "パルスライフル",
+				"en": "pulse rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "スキー板状パーツ",
+				"en": "ski plate parts"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "バッグパーツ",
+				"en": "bag parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ロイロイ",
+				"en": "Loi Loi"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5557_0.jpg",
 				"path": "/images/items/01_5557/01_5557_0.jpg",
 				"hash": "d039aca5f4b3162c5bed1bcdfb683315"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5557_1.jpg",
 				"path": "/images/items/01_5557/01_5557_1.jpg",
 				"hash": "d4f5a129d0bc9f4cc76a708f33033a31"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5557_10.jpg",
-				"path": "/images/items/01_5557/01_5557_10.jpg",
-				"hash": "ac1e1de4350e8711e0937d855500af54"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5557_11.jpg",
-				"path": "/images/items/01_5557/01_5557_11.jpg",
-				"hash": "c0335019f4d9be45d73c7af7dc8838bd"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5557_2.jpg",
 				"path": "/images/items/01_5557/01_5557_2.jpg",
 				"hash": "ab9a111394c03b4353ac52d0be646bf6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5557_3.jpg",
 				"path": "/images/items/01_5557/01_5557_3.jpg",
 				"hash": "f9748dfbca0e1fda88f35a9920b37dd2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5557_4.jpg",
 				"path": "/images/items/01_5557/01_5557_4.jpg",
 				"hash": "1f081a7d903920f8f859051769789f4b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5557_5.jpg",
 				"path": "/images/items/01_5557/01_5557_5.jpg",
 				"hash": "ac27f00c6be2031db3d4492c13c90147"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5557_6.jpg",
 				"path": "/images/items/01_5557/01_5557_6.jpg",
 				"hash": "131f6180170c262bcd35b7491cb6a18f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5557_7.jpg",
 				"path": "/images/items/01_5557/01_5557_7.jpg",
 				"hash": "2ec2cc621fc7925231828a1cf8bcbd3b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5557_8.jpg",
 				"path": "/images/items/01_5557/01_5557_8.jpg",
 				"hash": "f94070a1daca0f4b295a7d647eacf1ca"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5557_9.jpg",
 				"path": "/images/items/01_5557/01_5557_9.jpg",
 				"hash": "178a36b19ca005fc3454ba6c447380f3"
+			},
+			{
+				"path": "/images/items/01_5557/01_5557_10.jpg",
+				"hash": "ac1e1de4350e8711e0937d855500af54"
+			},
+			{
+				"path": "/images/items/01_5557/01_5557_11.jpg",
+				"hash": "c0335019f4d9be45d73c7af7dc8838bd"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5557/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3801",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3801/"

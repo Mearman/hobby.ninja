@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MF ローザンランサー",
-		"en": "30MF ROSAN LANCER"
+		"en": "30MF Rose Lancer"
 	},
+	"brands": [
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		},
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5978",
+			"url": "https://bandai-hobby.net/item/01_5978/",
+			"ja": "30MF ローザンウィザード"
+		},
+		{
+			"id": "01_5979",
+			"url": "https://bandai-hobby.net/item/01_5979/",
+			"ja": "30MF クラスアップアーマー (ローザンソーサラー)"
+		},
+		{
+			"id": "01_5980",
+			"url": "https://bandai-hobby.net/item/01_5980/",
+			"ja": "30MF クラスアップアーマー (ローザンエンチャンター)"
+		},
+		{
+			"id": "01_5981",
+			"url": "https://bandai-hobby.net/item/01_5981/",
+			"ja": "30MF アイテムショップ4(クエストオプション)"
+		}
+	],
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -34,56 +76,101 @@
 			"• “エレメントコア”の属性は「雷」。",
 			"• 別売りのリーベル共和国の「シルエット」「ランサー」とは異なるフェイスデザインとカラーリング。"
 		],
-		"en": ["■ (Updated 12/20/2024) The release date has been changed due to a few circumstances."]
+		"en": [
+			"(Posted on 2024/12/20) Due to various circumstances, we have changed the product release.",
+			"From \"30 MINUTES FANTASY\", where you can create your own fantasy job, \"Rosa Lancer\" is now available!",
+			"• A starter set that includes armor and armed parts in addition to the base \"silhouette\" [elementary body].",
+			"• A “silhouette” [body] with the same form as the separately sold “30MF Rose Night” is included.",
+			"• The “silhouette” [elementary body] is capable of flexible human-like actions and is adaptable to any job.",
+			"• By providing movable axes in the head and neck, it is possible to pull the chin, stick out the face, etc.",
+			"• The shoulder joint has a carefully designed structure that maintains the body's line even in bold poses.",
+			"• The movable axes of the chest, torso, and waist work together with the sliding mechanism at the base of the waist joint to create natural poses.",
+			"• Comes with armor and armed parts to “job change” to “Rosa Lancer” in combination with “Silhouette” [base body].",
+			"• \"Lance\" and \"Seal\" are included as weapons.",
+			"• Flexible movement is achieved by attaching the shoulder and waist armor via the joints on the back.",
+			"• The attribute of “element core” is “lightning”.",
+			"• The face design and coloring are different from Liber Republic's \"Silhouette\" and \"Lancer\" sold separately."
+		]
 	},
-	"accessories": {
-		"ja": ["ランス×1", "シールド×1", "アーマーパーツ×１式", "ハンドパーツ×1式", "ジョイントパーツ×1式"],
-		"en": ["Lance x1", "Seal × 1", "Armor parts x 1 set", "Hand parts x 1 set", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ランス",
+				"en": "Lance"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アーマーパーツ×１式",
+				"en": "Armor parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5565_0.jpg",
 				"path": "/images/items/01_5565/01_5565_0.jpg",
 				"hash": "d60d526ec49d46a75888efdf347dee3a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5565_1.jpg",
 				"path": "/images/items/01_5565/01_5565_1.jpg",
 				"hash": "3613887b021f5a1b646c7afda1721634"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5565_2.jpg",
 				"path": "/images/items/01_5565/01_5565_2.jpg",
 				"hash": "7dab91e6083d43661080ee34931e886a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5565_3.jpg",
 				"path": "/images/items/01_5565/01_5565_3.jpg",
 				"hash": "3b1373e652cfd38120775886a0844c19"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5565_4.jpg",
 				"path": "/images/items/01_5565/01_5565_4.jpg",
 				"hash": "45bc693f7f40e6158099ee44dd236bae"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5565_5.jpg",
 				"path": "/images/items/01_5565/01_5565_5.jpg",
 				"hash": "c0c6e485ef67c522d91f9fa6e6d5d5a6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5565_6.jpg",
 				"path": "/images/items/01_5565/01_5565_6.jpg",
 				"hash": "78051db7b6d7459626807494e0f93a67"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5565_7.jpg",
 				"path": "/images/items/01_5565/01_5565_7.jpg",
 				"hash": "ac40c5072a9a4c6054fc95bd96b9d083"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5565_8.jpg",
 				"path": "/images/items/01_5565/01_5565_8.jpg",
 				"hash": "fe3d2228b859b85a7dce7885323fa575"
 			}
@@ -91,10 +178,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5565/",
-	"brandIds": ["30mf"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5978", "01_5979", "01_5980", "01_5981"],
 	"manual": {
 		"id": "3422",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3422/"

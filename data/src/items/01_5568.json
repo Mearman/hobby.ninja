@@ -3,8 +3,24 @@
 	"type": "item",
 	"name": {
 		"ja": "ポケモンプラモコレクション 58 セレクトシリーズ グレンアルマ",
-		"en": "Pokémon Model Kit ARMAROUGE"
+		"en": "Pokemon Plastic Model Collection 58 Select Series Glen Alma"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 1870,
 		"currency": "JPY",
@@ -32,78 +48,81 @@
 			"• Use the included pedestal to play with your favorite poses!"
 		]
 	},
-	"accessories": {
-		"ja": ["左右の肩当て差し替えパーツ×1", "シール×1", "台座×1"],
-		"en": ["Left and right shoulder rest replacement parts x 1", "Seal×1", "Pedestal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "左右の肩当て差し替えパーツ",
+				"en": "Left and right shoulder rest replacement parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5568_0.jpg",
 				"path": "/images/items/01_5568/01_5568_0.jpg",
 				"hash": "14fa664d552651f9c5e3c177c0bb5ee6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5568_1.jpg",
 				"path": "/images/items/01_5568/01_5568_1.jpg",
 				"hash": "fef97edeb25c1de410fab7be26e21e9b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5568_10.jpg",
-				"path": "/images/items/01_5568/01_5568_10.jpg",
-				"hash": "b6cf11008a260ad250a68021c616ccf5"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5568_11.jpg",
-				"path": "/images/items/01_5568/01_5568_11.jpg",
-				"hash": "edacb5050de56257d2331a6fa851a688"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5568_2.jpg",
 				"path": "/images/items/01_5568/01_5568_2.jpg",
 				"hash": "a506a0ab94df8f32ade192f22d1d44e9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5568_3.jpg",
 				"path": "/images/items/01_5568/01_5568_3.jpg",
 				"hash": "4bf905a2fcaef27a30fbdd96bc5aaead"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5568_4.jpg",
 				"path": "/images/items/01_5568/01_5568_4.jpg",
 				"hash": "dece2342805fb83fbd4d5600cdf58a17"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5568_5.jpg",
 				"path": "/images/items/01_5568/01_5568_5.jpg",
 				"hash": "2878dafaa1c26e5c35eff3e7128b85a3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5568_6.jpg",
 				"path": "/images/items/01_5568/01_5568_6.jpg",
 				"hash": "81803c53272124080d6b297500fe8bf0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5568_7.jpg",
 				"path": "/images/items/01_5568/01_5568_7.jpg",
 				"hash": "363fbd427323c39c7f78132b2e9c550c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5568_8.jpg",
 				"path": "/images/items/01_5568/01_5568_8.jpg",
 				"hash": "137a09dad23cc8dc16987e4452bca7e4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5568_9.jpg",
 				"path": "/images/items/01_5568/01_5568_9.jpg",
 				"hash": "62ec1cdbbd0e734b7b15cb905e4d9ce3"
+			},
+			{
+				"path": "/images/items/01_5568/01_5568_10.jpg",
+				"hash": "b6cf11008a260ad250a68021c616ccf5"
+			},
+			{
+				"path": "/images/items/01_5568/01_5568_11.jpg",
+				"hash": "edacb5050de56257d2331a6fa851a688"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5568/",
-	"brandIds": [],
-	"seriesIds": ["pokemon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_5568/"
 }

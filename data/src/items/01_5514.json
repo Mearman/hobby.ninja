@@ -2,9 +2,43 @@
 	"id": "01_5514",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 ガンダムベース限定 ガンダム FSD (試作型ロングレンジ・ビームライフル装備)",
-		"en": "HG 1/144 THE GUNDAM BASE LIMITED GUNDAM FSD (with PROTOTYPE LONG-RANGE BEAM RIFLE)"
+		"ja": "HG 1/144 ガンダムベース限定 ガンダムFSD (試作型ロングレンジ・ビームライフル装備)",
+		"en": "HG 1/144 Gundam base limited GundamFSD (prototype long range beam rifle equipped)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-doan",
+			"url": "https://bandai-hobby.net/series/g-doan/",
+			"ja": "機動戦士ガンダム ククルス・ドアンの島"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "item-1000190747",
+			"url": "https://p-bandai.jp/item/item-1000190747/",
+			"ja": "ＨＧ 1/144 高機動型ザク 地上用 (ウォルド機)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -18,20 +52,20 @@
 		"day": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定アイテム。",
 			"『THE ORIGIN』外伝漫画「ククルス・ドアンの島」に登場する局地型ガンダム（北米戦仕様）の改良型MSが「試作型ロングレンジ・ビームライフル」を携えて登場！",
 			"• 機体はHG 1/144 局地型ガンダム（北米戦仕様）に追加パーツで再現。",
 			"• 武器の組み換えで「ロングレンジ形態」と「ショートレンジ形態」の再現が可能。",
-			"• HGオリジンシリーズ「局地型ガンダム」「ガンダム FSD」専用の仕様として、バレル部分にシールドを懸架する事が可能。"
+			"• HGオリジンシリーズ「局地型ガンダム」「ガンダムFSD」専用の仕様として、バレル部分にシールドを懸架する事が可能。"
 		],
 		"en": [
-			"■ For GUNPLA fans around the world, this is a limited edition item at the official GUNPLA complex \"GUNDAM Base\". The improved MS of the local GUNDAM (North American battle specification) that appears in the \"THE ORIGIN\" Gaiden manga \"Cucuruz Doan's Island\" is now available with a \"Prototype Long Range Beam Rifle\"!",
-			"■ The aircraft is reproduced with additional parts on the HG 1/144 GUNDAM LOCAL TYPE (North American battle specification).",
-			"■ By recombining weapons, it is possible to reproduce the \"long range form\" and the \"short range form\".",
-			"■ As a specification dedicated to the HG Origin series \"Local Type GUNDAM\" and \"GUNDAM FSD\", it is possible to suspend a shield on the barrel part."
+			"A limited edition item from the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
+			"An improved version of the local Gundam (North American war spec) that appears in the \"THE ORIGIN\" side story \"The Island of Cucurrus Doan\" appears with a \"prototype long-range beam rifle\"!",
+			"• The aircraft is reproduced using additional parts of the HG 1/144 local type Gundam (North American war specification).",
+			"• By rearranging weapons, it is possible to reproduce \"long range form\" and \"short range form\".",
+			"• As a special specification for the HG Origin series \"Local Gundam\" and \"GundamFSD\", it is possible to suspend a Seal on the barrel part."
 		]
 	},
 	"images": {
@@ -64,13 +98,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5514/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-doan"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000220189", "item-1000190747"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5514/"
 }

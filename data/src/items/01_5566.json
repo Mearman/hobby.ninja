@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MF クラスアップアーマー(ローザンアサシンスラッシュ)",
-		"en": "30MF CLASS UP ARMOR(ROSAN ASSASSIN SLASH)"
+		"en": "30MF Class Up Armor (Lozan Assassin Slash)"
 	},
+	"brands": [
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		},
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5978",
+			"url": "https://bandai-hobby.net/item/01_5978/",
+			"ja": "30MF ローザンウィザード"
+		},
+		{
+			"id": "01_5979",
+			"url": "https://bandai-hobby.net/item/01_5979/",
+			"ja": "30MF クラスアップアーマー (ローザンソーサラー)"
+		},
+		{
+			"id": "01_5980",
+			"url": "https://bandai-hobby.net/item/01_5980/",
+			"ja": "30MF クラスアップアーマー (ローザンエンチャンター)"
+		},
+		{
+			"id": "01_5981",
+			"url": "https://bandai-hobby.net/item/01_5981/",
+			"ja": "30MF アイテムショップ4(クエストオプション)"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -28,36 +70,84 @@
 			"• “エレメントコア”の属性は「水」。",
 			"• 別売りのリーベル共和国の「アサシンスラッシュ」とは異なるフェイスデザインとカラーリング。"
 		],
-		"en": ["■ (Updated 12/20/2024) The release date has been changed due to a few circumstances."]
+		"en": [
+			"(Posted on 2024/12/20) Due to various circumstances, we have changed the product release.",
+			"\"Class Up Armor (Rozan Assassin Slash)\" is now available from \"30 MINUTES FANTASY\" where you can create your own fantasy job!",
+			"• “Armor Cross” [Armor Replacement] A set of armor and weapons that can be “classed up” to a higher-level job.",
+			"• By combining with the separately sold \"30MF Rozan Assassin\", it is possible to \"class up\" to the \"Lozan Assassin Slash\".",
+			"• Two weapons are included: a \"long sword\" and a \"short sword.\"",
+			"• The attribute of “element core” is “water”.",
+			"• The face design and coloring are different from Liber Republic's \"Assassin Slash\", which is sold separately."
+		]
 	},
-	"accessories": {
-		"ja": ["ロングソード×1", "ショートソード×2", "アーマーパーツ×1式", "武装パーツ×1式", "ジョイントパーツ×1式"],
-		"en": ["Long sword x1", "Short sword x2", "Armor parts x 1 set", "Armed parts x 1 set", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ロングソード",
+				"en": "long sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ショートソード",
+				"en": "short sword"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "アーマーパーツ",
+				"en": "armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "武装パーツ",
+				"en": "armed parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5566_0.jpg",
 				"path": "/images/items/01_5566/01_5566_0.jpg",
 				"hash": "6b7a065e85376a98f5d6822504d01214"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5566_1.jpg",
 				"path": "/images/items/01_5566/01_5566_1.jpg",
 				"hash": "9ec89028eac8193db10f52d0dba0a7a0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5566_2.jpg",
 				"path": "/images/items/01_5566/01_5566_2.jpg",
 				"hash": "843d8bb06ca4649450c5709e0d68ac64"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5566_3.jpg",
 				"path": "/images/items/01_5566/01_5566_3.jpg",
 				"hash": "e21cb128192fd94aadeb8ae2e2b52be5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5566_4.jpg",
 				"path": "/images/items/01_5566/01_5566_4.jpg",
 				"hash": "9d6979d958aeed01cb9a9cb246d404e6"
 			}
@@ -65,10 +155,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5566/",
-	"brandIds": ["30mf"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5978", "01_5979", "01_5980", "01_5981"],
 	"manual": {
 		"id": "3423",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3423/"

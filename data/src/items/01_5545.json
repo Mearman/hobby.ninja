@@ -3,7 +3,54 @@
 	"type": "item",
 	"name": {
 		"ja": "オプションパーツセット ガンプラ 16 (メテオホッパー)",
-		"en": "OPTION PARTS SET GUNPLA 16 (METEOR HOPPER)"
+		"en": "Option parts set Gunpla 16 (Meteor Hopper)"
+	},
+	"brands": [
+		{
+			"id": "optionpartsset",
+			"url": "https://bandai-hobby.net/brand/optionpartsset/",
+			"ja": "オプションパーツセット"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6765",
+			"url": "https://bandai-hobby.net/item/01_6765/",
+			"ja": "オプションパーツセット ガンプラ 18 (ビルドブースターセット)"
+		},
+		{
+			"id": "01_5376",
+			"url": "https://bandai-hobby.net/item/01_5376/",
+			"ja": "オプションパーツセット ガンプラ 13 (ガンプラバトルアームアームズ)"
+		},
+		{
+			"id": "01_5240",
+			"url": "https://bandai-hobby.net/item/01_5240/",
+			"ja": "オプションパーツセット ガンプラ 08 (ボールデンアームアームズ)"
+		},
+		{
+			"id": "01_5241",
+			"url": "https://bandai-hobby.net/item/01_5241/",
+			"ja": "オプションパーツセット ガンプラ 09 (ジャイアントガトリング)"
+		}
+	],
+	"manual": {
+		"id": "2972",
+		"url": "https://manual.bandai-hobby.net/menus/detail/2972"
 	},
 	"price": {
 		"amount": 880,
@@ -34,67 +81,69 @@
 			"• Various HG series can be boarded."
 		]
 	},
-	"accessories": {
-		"ja": ["メテオホッパー×1", "ジョイントパーツ×1", "専用スタンド×1"],
-		"en": ["Meteor hopper x 1", "Joint parts x 1", "Dedicated stand x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "メテオホッパー",
+				"en": "meteor hopper"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "専用スタンド",
+				"en": "dedicated stand"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5545_0.jpg",
 				"path": "/images/items/01_5545/01_5545_0.jpg",
 				"hash": "55c254f5197a412a9a5d3cfb107a8661"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5545_1.jpg",
 				"path": "/images/items/01_5545/01_5545_1.jpg",
 				"hash": "15e11b58268348f154ec60779ec546f9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5545_2.jpg",
 				"path": "/images/items/01_5545/01_5545_2.jpg",
 				"hash": "fcba5fb3f4f5cd708692908718b3189d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5545_3.jpg",
 				"path": "/images/items/01_5545/01_5545_3.jpg",
 				"hash": "0fc0100e64244eac8e0567e0f96c2cb5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5545_4.jpg",
 				"path": "/images/items/01_5545/01_5545_4.jpg",
 				"hash": "a6d3b8c6933aeefa3bcd8cdb525e2ddb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5545_5.jpg",
 				"path": "/images/items/01_5545/01_5545_5.jpg",
 				"hash": "dc8d2fa53aeefdd7709b7b7231a58eaf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5545_6.jpg",
 				"path": "/images/items/01_5545/01_5545_6.jpg",
 				"hash": "f5bead55609b92ed45165114b7358cc5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5545_7.jpg",
 				"path": "/images/items/01_5545/01_5545_7.jpg",
 				"hash": "c4833b66a28d8172cfdaf92fb73d5fd9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5545_8.jpg",
 				"path": "/images/items/01_5545/01_5545_8.jpg",
 				"hash": "a41dc0331fda8b1043a375add6b7a868"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5545/",
-	"brandIds": ["optionpartsset"],
-	"seriesIds": ["buildfighters"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6765", "01_5376", "01_5240", "01_5241"],
-	"manual": {
-		"id": "2972",
-		"url": "https://manual.bandai-hobby.net/menus/detail/2972/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5545/"
 }

@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 GQuuuuuuX",
-		"en": "HG 1/144 GQuuuuuuX"
+		"en": "HG 1/144 GQuuuuuu"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gquuuuuux",
+			"url": "https://bandai-hobby.net/series/gquuuuuux/",
+			"ja": "機動戦士Gundam GQuuuuuuX"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		},
+		{
+			"id": "01_5952",
+			"url": "https://bandai-hobby.net/item/01_5952/",
+			"ja": "HG 1/144 エグザベ専用ギャン(ハクジ装備)"
+		}
+	],
+	"manual": {
+		"id": "2081",
+		"url": "https://manual.bandai-hobby.net/menus/detail/2081"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,7 +66,6 @@
 		"day": 17
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"新たな映像作品『機動戦士Gundam GQuuuuuuX』（読み：ジークアクス）が始動！",
@@ -37,86 +84,116 @@
 			"• Comes with a wide variety of weapons."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"武装×1式",
-			"バックパック×1式",
-			"頭部差し替えパーツ×1",
-			"ハンドパーツ×1式",
-			"シール×1",
-			"マーキングシール×1"
-		],
-		"en": [
-			"Armed x 1 type",
-			"Backpack x 1 set",
-			"Head replacement parts x 1",
-			"Hand parts x 1 set",
-			"Seal×1",
-			"MarkingSeal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "武装",
+				"en": "armed"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "バックパック",
+				"en": "backpack"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "頭部差し替えパーツ",
+				"en": "head replacement parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6417.jpg",
+				"src": "https://bandai-hobby.net/images/153_6417_s_kz2yefczmulhwm0t3d3gll8ap5bf.jpg",
 				"path": "/images/items/01_5582/153_6417.jpg",
 				"hash": "92174f0a29ad4f7a4e16cc192b1c30dc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6417.jpg",
+				"src": "https://bandai-hobby.net/images/155_6417_s_cu7tgrtsjo3g0whgxx33p1dbky2t.jpg",
 				"path": "/images/items/01_5582/155_6417.jpg",
 				"hash": "adc7b892d1605278bec6a42dc4f787bb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6417.jpg",
+				"src": "https://bandai-hobby.net/images/156_6417_s_yy5h46jjedepaocem0wk1whqlwox.jpg",
 				"path": "/images/items/01_5582/156_6417.jpg",
 				"hash": "b987d1419442291648b57a3e663392fa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6417.jpg",
+				"src": "https://bandai-hobby.net/images/157_6417_s_c94llasbl7g6uis2v9l86rlfbhsf.jpg",
 				"path": "/images/items/01_5582/157_6417.jpg",
 				"hash": "25bf6956e9b7c0a0d4f084c1fa3ee9c5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6417.jpg",
+				"src": "https://bandai-hobby.net/images/158_6417_s_oj2pffjoaezupnabkunkphkpcjrt.jpg",
 				"path": "/images/items/01_5582/158_6417.jpg",
 				"hash": "1d358c831310022835ef6d31575caa5f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6417.jpg",
+				"src": "https://bandai-hobby.net/images/159_6417_s_lxu9fr28x3c243ekp09n024tkrhe.jpg",
 				"path": "/images/items/01_5582/159_6417.jpg",
 				"hash": "9fbc0df7319ca010894a7a750d99abeb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6417.jpg",
+				"src": "https://bandai-hobby.net/images/189_6417_s_2hi6fkpctlusawrpwbg8cf3ykryx.jpg",
 				"path": "/images/items/01_5582/189_6417.jpg",
 				"hash": "dabf543f55b43bdd87557bd14dfb460d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6417.jpg",
+				"src": "https://bandai-hobby.net/images/190_6417_s_fo4chlxjeinnmc9nkvijqgimt6ok.jpg",
 				"path": "/images/items/01_5582/190_6417.jpg",
 				"hash": "cc9c02add977593652e1a6138e19d2e0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6417.jpg",
+				"src": "https://bandai-hobby.net/images/191_6417_s_ofx6fj65rlbi3z7nctz16ovbzoct.jpg",
 				"path": "/images/items/01_5582/191_6417.jpg",
 				"hash": "2f20a831bbe6624c03daa62ee496551f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_6417.jpg",
+				"src": "https://bandai-hobby.net/images/192_6417_s_kmbh2zxmn6ni9793hi157tdyecxi.jpg",
 				"path": "/images/items/01_5582/192_6417.jpg",
 				"hash": "3d683316e72650f74d1c3a35f405015f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5582/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gquuuuuux"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5961", "01_5951", "01_5952"],
-	"manual": {
-		"id": "2081",
-		"url": "https://manual.bandai-hobby.net/menus/detail/2081/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5582/"
 }

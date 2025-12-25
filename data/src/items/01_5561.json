@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MS オプションパーツセット19(ダッシュユニット)[カラーA]",
-		"en": "30MS OPTION PARTS SET 19(DASH UNIT) [COLOR A]"
+		"en": "30MS Option Parts Set 19 (Dash Unit) [Color A]"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5975",
+			"url": "https://bandai-hobby.net/item/01_5975/",
+			"ja": "30MS 和泉愛依"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5954",
+			"url": "https://bandai-hobby.net/item/01_5954/",
+			"ja": "30MS オプションヘアスタイルパーツVol.12 全4種 ミディアムヘア2[イエロー4]"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -30,80 +72,117 @@
 			"• Many ring-type joint parts that can be attached to arms and legs are also included, further expanding the range of character creation!"
 		]
 	},
-	"accessories": {
-		"ja": ["腕パーツ×1式", "脚パーツ×1式", "シューズパーツ×1式", "ハンドパーツ×1式", "ジョイントパーツ×1式"],
-		"en": ["Arm parts x 1 set", "Leg parts x 1 set", "Shoe parts x 1 set", "Hand parts x 1 set", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "腕パーツ",
+				"en": "arm parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "脚パーツ",
+				"en": "leg parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シューズパーツ",
+				"en": "shoe parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5561_0.jpg",
 				"path": "/images/items/01_5561/01_5561_0.jpg",
 				"hash": "5d35b1756d2e59f343c9ef35e7a95724"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5561_1.jpg",
 				"path": "/images/items/01_5561/01_5561_1.jpg",
 				"hash": "31ecf5306e6968b02c10dc7ad6b78761"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5561_10.jpg",
-				"path": "/images/items/01_5561/01_5561_10.jpg",
-				"hash": "ac60cf7ca512fe7525ecf1c8ec71b1cf"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5561_11.jpg",
-				"path": "/images/items/01_5561/01_5561_11.jpg",
-				"hash": "42e307e30bd5497503758d54c1456d0f"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5561_2.jpg",
 				"path": "/images/items/01_5561/01_5561_2.jpg",
 				"hash": "a162789ee080a9a220a31de65000393c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5561_3.jpg",
 				"path": "/images/items/01_5561/01_5561_3.jpg",
 				"hash": "f0e955842e2e4ed31718f77628392dd9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5561_4.jpg",
 				"path": "/images/items/01_5561/01_5561_4.jpg",
 				"hash": "c73052e40780eb7c8cb97a8259c551ad"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5561_5.jpg",
 				"path": "/images/items/01_5561/01_5561_5.jpg",
 				"hash": "ce89bcb8882788ce808b0a70b0211750"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5561_6.jpg",
 				"path": "/images/items/01_5561/01_5561_6.jpg",
 				"hash": "df20028972423ba2c40275b95f50b5cd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5561_7.jpg",
 				"path": "/images/items/01_5561/01_5561_7.jpg",
 				"hash": "85053c304bc46a76c323a0b3975f9dea"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5561_8.jpg",
 				"path": "/images/items/01_5561/01_5561_8.jpg",
 				"hash": "e795f4e9d1491568688cdbd912783b43"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5561_9.jpg",
 				"path": "/images/items/01_5561/01_5561_9.jpg",
 				"hash": "31e42bffc827f2da34544bef38bda82c"
+			},
+			{
+				"path": "/images/items/01_5561/01_5561_10.jpg",
+				"hash": "ac60cf7ca512fe7525ecf1c8ec71b1cf"
+			},
+			{
+				"path": "/images/items/01_5561/01_5561_11.jpg",
+				"hash": "42e307e30bd5497503758d54c1456d0f"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5561/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3606",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3606/"

@@ -3,8 +3,60 @@
 	"type": "item",
 	"name": {
 		"ja": "カスタマイズウェポンズ(プラズマ武装)",
-		"en": "CUSTOMIZE WEAPONS (PLASMA WEAPON)"
+		"en": "Customized Weapons (Plasma Armed)"
 	},
+	"brands": [
+		{
+			"id": "customize_scenebase",
+			"url": "https://bandai-hobby.net/brand/customize_scenebase/",
+			"ja": "カスタマイズシーンベース/エフェクト/マテリアル/ウェポンズ"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "customize_scenebase",
+			"url": "https://bandai-hobby.net/brand/customize_scenebase/",
+			"ja": "カスタマイズシーンベース/エフェクト/マテリアル/ウェポンズ"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
 	"price": {
 		"amount": 968,
 		"currency": "JPY",
@@ -32,48 +84,89 @@
 			"• Hirate parts included in \"30MM 1/144 Option Backpack 1\" etc. are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"プラズマソー×1式",
-			"プラズマカッター×1式",
-			"プラズマナイフ×1式",
-			"スタンバトン×1式",
-			"ロンググリップ×1",
-			"ハンドパーツ×1式"
-		],
-		"en": [
-			"Plasma saw x 1 set",
-			"Plasma cutter x 1 set",
-			"Plasma knife x 1 set",
-			"Stun baton x 1 set",
-			"Long grip x 1",
-			"Hand parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "プラズマソー",
+				"en": "plasma saw"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "プラズマカッター",
+				"en": "plasma cutter"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "プラズマナイフ",
+				"en": "plasma knife"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "スタンバトン",
+				"en": "stun baton"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ロンググリップ",
+				"en": "long grip"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5572_0.jpg",
 				"path": "/images/items/01_5572/01_5572_0.jpg",
 				"hash": "47e1a162d4520d81e9e225f2958afe7d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5572_1.jpg",
 				"path": "/images/items/01_5572/01_5572_1.jpg",
 				"hash": "df720b8c2cc75413a4c5fde25e132c5a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5572_2.jpg",
 				"path": "/images/items/01_5572/01_5572_2.jpg",
 				"hash": "c7339cb0a5c8cac6139450e31eabe07c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5572_3.jpg",
 				"path": "/images/items/01_5572/01_5572_3.jpg",
 				"hash": "44738be7c8fa2abd0b36b7d62c87bce4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5572_4.jpg",
 				"path": "/images/items/01_5572/01_5572_4.jpg",
 				"hash": "adabcf0e064dd31d7a586fee587891fa"
 			}
@@ -81,10 +174,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5572/",
-	"brandIds": ["customize_scenebase", "30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3800",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3800/"

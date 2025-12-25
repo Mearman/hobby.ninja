@@ -3,8 +3,18 @@
 	"type": "item",
 	"name": {
 		"ja": "HG スコープドッグターボカスタム",
-		"en": "HG SCOPE DOG TURBO CUSTOM"
+		"en": "HG Scope Dog Turbo Custom"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "votoms",
+			"url": "https://bandai-hobby.net/series/votoms/",
+			"ja": "装甲騎兵ボトムズ"
+		}
+	],
+	"categories": [],
+	"relatedItems": [],
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -34,80 +44,99 @@
 			"• Equipped with movable legs that reproduce the landing mechanism in HG size."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ヘビィマシンガン×1",
-			"ハンドパーツ×1式",
-			"カスタマイズ用外装パーツ×1式",
-			"ジョイントパーツ×1式",
-			"3Dメタリックシール×1"
-		],
-		"en": [
-			"Heavy machine gun x1",
-			"Hand parts x 1 set",
-			"Exterior parts for customization x 1 set",
-			"Joint parts x 1 set",
-			"3D metallic seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヘビィマシンガン",
+				"en": "heavy machine gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "カスタマイズ用外装パーツ",
+				"en": "Exterior parts for customization"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "3Dメタリックシール",
+				"en": "3D Metallic Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5553_0.jpg",
 				"path": "/images/items/01_5553/01_5553_0.jpg",
 				"hash": "f5612eb9aecda9f17e1fa34568499d9f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5553_1.jpg",
 				"path": "/images/items/01_5553/01_5553_1.jpg",
 				"hash": "5245feab36eec8f571f355bf2d3fa0f2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5553_2.jpg",
 				"path": "/images/items/01_5553/01_5553_2.jpg",
 				"hash": "f9828811568018a1c7be6a711523a929"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5553_3.jpg",
 				"path": "/images/items/01_5553/01_5553_3.jpg",
 				"hash": "46fa4b82e9a2fea8d9816d225e76dadb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5553_4.jpg",
 				"path": "/images/items/01_5553/01_5553_4.jpg",
 				"hash": "e86c64e967007bdc011bf51e2bd1b69b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5553_5.jpg",
 				"path": "/images/items/01_5553/01_5553_5.jpg",
 				"hash": "589f49542aa21641186bab7db140c321"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5553_6.jpg",
 				"path": "/images/items/01_5553/01_5553_6.jpg",
 				"hash": "332ccfdf48851b46dd3bfdd7c72debc8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5553_7.jpg",
 				"path": "/images/items/01_5553/01_5553_7.jpg",
 				"hash": "a6d52c7582bce109dbc208575cbb5f48"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5553_8.jpg",
 				"path": "/images/items/01_5553/01_5553_8.jpg",
 				"hash": "922f32451957234d75063a2c006971a7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5553_9.jpg",
 				"path": "/images/items/01_5553/01_5553_9.jpg",
 				"hash": "4e6295bbec23c7a94d5996948014f4dd"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5553/",
-	"brandIds": [],
-	"seriesIds": ["votoms"],
-	"categoryIds": [],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_5553/"
 }

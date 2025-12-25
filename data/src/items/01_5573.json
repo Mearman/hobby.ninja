@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON RaD CC-3000 WRECKER ミルクトゥース",
-		"en": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON RaD CC-3000 WRECKER MILK TOOTH"
+		"en": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON RaD CC-3000 WRECKER Milktooth"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [
+		{
+			"id": "armoredcore",
+			"url": "https://bandai-hobby.net/series/armoredcore/",
+			"ja": "ARMORED CORE Ⅵ FIRES OF RUBICON"
+		}
+	],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5574",
+			"url": "https://bandai-hobby.net/item/01_5574/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON BALAM INDUSTRIES BD-011 MELANDER"
+		},
+		{
+			"id": "01_5482",
+			"url": "https://bandai-hobby.net/item/01_5482/",
+			"ja": "30MM オプションパーツセット ARMORED CORE Ⅵ FIRES OF RUBICON WEAPON SET 04"
+		}
+	],
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -28,90 +76,102 @@
 			"• 「WB-0010 DOUBLE TROUBLE」のチェーンソーは格納状態と展開状態の2種類が付属。"
 		],
 		"en": [
-			"\"ARMORED CORE Ⅵ FIRES OF RUBICON \" items are commercialized in the \" 30 MINUTES MISSIONS\" series.",
-			"Based on the series' key concepts of \"simple assembly \" and \" custom play,\" \" Milktooth\", operated by Honest Bluetooth, is now available.",
+			"\"ARMORED CORE Ⅵ FIRES OF RUBICON\" items are commercialized in the \"30 MINUTES MISSIONS\" series.",
+			"Based on the series' key concepts of \"simple assembly\" and \"custom play,\" \"Milktooth\", operated by Honest Bluetooth, is now available.",
 			"• The head, core, arms, and legs each use the same structure as the series, allowing you to enjoy \"assembling\" the plastic model just like in the game.",
 			"• 3mm joints are used to attach both shoulder weapons and some left-handed weapons, allowing for a variety of assemblies.",
-			"• Weapons include \"WB-0000 BAD COOK \", \" WB-0010 DOUBLE TROUBLE \", \" BML-G2/P19SPL-12 \", and \" SB-033M MORLEY\".",
+			"• Weapons include \"WB-0000 BAD COOK\", \"WB-0010 DOUBLE TROUBLE\", \"BML-G2/P19SPL-12\", and \"SB-033M MORLEY\".",
 			"• \"WB-0010 DOUBLE TROUBLE\" chainsaw comes in two types: retracted state and expanded state."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"WB-0000 BAD COOK×1",
-			"WB-0010 DOUBLE TROUBLE×1",
-			"BML-G2/P19SPL-12×1",
-			"SB-033M MORLEY×1",
-			"ジョイントパーツ×1式",
-			"シール×1"
-		],
-		"en": [
-			"WB-0000 BAD COOK×1",
-			"WB-0010 DOUBLE TROUBLE×1",
-			"BML-G2/P19SPL-12×1",
-			"SB-033M MORLEY×1",
-			"Joint parts x 1 set",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "WB-0000 BAD COOK"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "WB-0010 DOUBLE TROUBLE"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "BML-G2/P19SPL-12"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "SB-033M MORLEY"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5573_0.jpg",
 				"path": "/images/items/01_5573/01_5573_0.jpg",
 				"hash": "6665f388e3e97c93cb63511d3c1e50f9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5573_1.jpg",
 				"path": "/images/items/01_5573/01_5573_1.jpg",
 				"hash": "f006beca1744be45b0cf5e3496d020e3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5573_2.jpg",
 				"path": "/images/items/01_5573/01_5573_2.jpg",
 				"hash": "7a3b59f723c2df9a9de954f3a462b284"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5573_3.jpg",
 				"path": "/images/items/01_5573/01_5573_3.jpg",
 				"hash": "9a06ef7242e9cb5785959bfa3748b7e2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5573_4.jpg",
 				"path": "/images/items/01_5573/01_5573_4.jpg",
 				"hash": "216801ed163d2bb7c775a562fc7836ac"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5573_5.jpg",
 				"path": "/images/items/01_5573/01_5573_5.jpg",
 				"hash": "430d249e824f4555bc793dd3fa3133a5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5573_6.jpg",
 				"path": "/images/items/01_5573/01_5573_6.jpg",
 				"hash": "f9f889fae34fb30930929d1b73d47fcf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5573_7.jpg",
 				"path": "/images/items/01_5573/01_5573_7.jpg",
 				"hash": "67cee43e1cb727ec847b35c38fed7bcd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5573_8.jpg",
 				"path": "/images/items/01_5573/01_5573_8.jpg",
 				"hash": "278efb192da5f0d03fdd5e322dbc654d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5573_9.jpg",
 				"path": "/images/items/01_5573/01_5573_9.jpg",
 				"hash": "dbcca57061208a909611489d19c0203b"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5573/",
-	"brandIds": ["30mm"],
-	"seriesIds": ["armoredcore"],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5973", "01_5974", "01_5574", "01_5482"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5573/"
 }

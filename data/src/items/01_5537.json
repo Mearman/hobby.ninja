@@ -5,6 +5,55 @@
 		"ja": "ＨＧ 1/144 エルガイム [スペシャルコーティング]",
 		"en": "HG 1/144 L-Gaim [Special Coating]"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		},
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "lgaim",
+			"url": "https://bandai-hobby.net/series/lgaim/",
+			"ja": "重戦機エルガイム"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000207143",
+			"url": "https://p-bandai.jp/item/item-1000207143/",
+			"ja": "重戦機エルガイムセット 2"
+		},
+		{
+			"id": "item-1000207142",
+			"url": "https://p-bandai.jp/item/item-1000207142/",
+			"ja": "重戦機エルガイムセット 1"
+		},
+		{
+			"id": "item-1000205639",
+			"url": "https://p-bandai.jp/item/item-1000205639/",
+			"ja": "ＨＧ 1/144 バッシュ"
+		},
+		{
+			"id": "01_3350",
+			"url": "https://bandai-hobby.net/item/01_3350/",
+			"ja": "HG 1/144 オージ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 5830,
 		"currency": "JPY",
@@ -17,7 +66,6 @@
 		"month": 1
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -55,15 +103,15 @@
 			"Smoke of counterattack -",
 			"Elgaim appears wearing white and silver armor!",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
-			"A special coating version of \"HG 1/144 L-Gaim \" from \" Heavy Battle Machine L-Gaim\" is now available!",
+			"A special coating version of \"HG 1/144 L-Gaim\" from \"Heavy Battle Machine L-Gaim\" is now available!",
 			"● Glossy white plating gives it a luxurious finish.",
 			"Metallic molding is used for the gray parts of the body, expressing a texture suitable for Pentagona World's HM.",
 			"● The shoulders have ball axes that allow for a wide range of poses.",
 			"● New joint parts that can be attached to Action Base 5 are included.",
-			"Attached weapons: Buster Launcher / Saber / Power Launcher x 2 / Binder",
+			"Attached weapons: Buster launcher / Saber / Power launcher x 2 / Binder",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/144 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Main product materials: PS/PE",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -82,72 +130,86 @@
 			"・Product information is current as of 202410. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["バスターランチャー", "セイバー", "パワーランチャー×２", "バインダー"],
-		"en": ["buster launcher", "Saber", "Power launcher x2", "binder"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "バスターランチャー",
+				"en": "buster launcher"
+			}
+		},
+		{
+			"name": {
+				"ja": "セイバー",
+				"en": "Saber"
+			}
+		},
+		{
+			"name": {
+				"ja": "パワーランチャー×２",
+				"en": "Power launcher x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "バインダー",
+				"en": "binder"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6376.jpg",
+				"src": "https://bandai-hobby.net/images/153_6376_s_5sn8c1nszogz1w5t38uix2h4vnh8.jpg",
 				"path": "/images/items/01_5537/153_6376.jpg",
 				"hash": "90c2e8ad15c6ec9a088655c487ca257f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6376.jpg",
+				"src": "https://bandai-hobby.net/images/155_6376_s_dth4qwo2xebrvaicr416gnlnjmtk.jpg",
 				"path": "/images/items/01_5537/155_6376.jpg",
 				"hash": "97a36f641911b2824c94ea58ccaa4c0c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6376.jpg",
+				"src": "https://bandai-hobby.net/images/156_6376_s_h3pck5bwv5xsw202b7c4ax2fsdd7.jpg",
 				"path": "/images/items/01_5537/156_6376.jpg",
 				"hash": "1150dddd619aebc228828b9671741f91"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6376.jpg",
+				"src": "https://bandai-hobby.net/images/157_6376_s_v5p03latedflsdqmzfijltrynxxa.jpg",
 				"path": "/images/items/01_5537/157_6376.jpg",
 				"hash": "d630158a3227f6ffe8fd4403de21b9bc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6376.jpg",
+				"src": "https://bandai-hobby.net/images/158_6376_s_2xtpei0y6cdsmyq8brud87c6e6fa.jpg",
 				"path": "/images/items/01_5537/158_6376.jpg",
 				"hash": "4156eca0a35ff1eddd1399ddaf626ab2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6376.jpg",
+				"src": "https://bandai-hobby.net/images/159_6376_s_1im10t1oiqcrr9uye1hifci9fsrj.jpg",
 				"path": "/images/items/01_5537/159_6376.jpg",
 				"hash": "13f2b98ede7a77d75df4120ae720b0ff"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6376.jpg",
+				"src": "https://bandai-hobby.net/images/189_6376_s_i21dw9x8zpz8f4mfauhzyzp0aa4t.jpg",
 				"path": "/images/items/01_5537/189_6376.jpg",
 				"hash": "db7bdaceffc171b7a9580e1f928bd231"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6376.jpg",
+				"src": "https://bandai-hobby.net/images/190_6376_s_3b3qq534q20faqx2v6fi5bdjqrc1.jpg",
 				"path": "/images/items/01_5537/190_6376.jpg",
 				"hash": "709cfdba0969fb4ccd5ee5c95ec0fe00"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6376.jpg",
+				"src": "https://bandai-hobby.net/images/191_6376_s_virjabh9ayuh2tly5ignfxmx6s6y.jpg",
 				"path": "/images/items/01_5537/191_6376.jpg",
 				"hash": "2d4e02cd93e515a7ecbb032de88287c1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_6376.jpg",
+				"src": "https://bandai-hobby.net/images/192_6376_s_p2bbzjpqmqe8uw6w03lh4ukgjgrv.jpg",
 				"path": "/images/items/01_5537/192_6376.jpg",
 				"hash": "4340c50a24ee60efe9ab8c758dce81be"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5537/",
-	"brandIds": ["pb_charapla", "hg"],
-	"seriesIds": ["lgaim"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["item-1000207143", "item-1000207142", "item-1000205639", "01_3350"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5537/"
 }

@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "1/1 ザクプラくんDXセット(ランナーVer.再現パーツ付き)",
-		"en": "1/1 ZAKUPLA-KUN DX SET (WITH RUNNER Ver. RECREATION PARTS)"
+		"en": "1/1 Zakupla-kun DX set (Runner Ver. with reproduction parts)"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gunplakun",
+			"url": "https://bandai-hobby.net/series/gunplakun/",
+			"ja": "ガンプラくん"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5571",
+			"url": "https://bandai-hobby.net/item/01_5571/",
+			"ja": "1/1 シャアザクくんDXセット(ランナーVer.再現パーツ付き)"
+		},
+		{
+			"id": "01_5556",
+			"url": "https://bandai-hobby.net/item/01_5556/",
+			"ja": "1/1 ザクプラくんDXセット(ランナーVer.再現パーツ付き)"
+		},
+		{
+			"id": "01_5478",
+			"url": "https://bandai-hobby.net/item/01_5478/",
+			"ja": "νガンプラくん 立体ラバーマスコットキーチェーン"
+		},
+		{
+			"id": "01_5473",
+			"url": "https://bandai-hobby.net/item/01_5473/",
+			"ja": "ガンプラくん 立体ラバーマスコットキーチェーン"
+		}
+	],
+	"scale": "1/1",
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 10
 	},
 	"targetAge": 8,
-	"scale": "1/1",
 	"description": {
 		"ja": [
 			"ガンプラの楽しさを伝える『ガンプラくん』から「ザクプラくん」が登場！",
@@ -29,86 +66,103 @@
 			"• 別売りの「ガンプラくん」シリーズプラモデルを揃えて劇中をイメージしたディスプレイをしよう！"
 		],
 		"en": [
-			"\"Zakupla-kun \" appears from \" Gunpla-kun\" which conveys the fun of Gunpla!",
+			"\"Zakupla-kun\" appears from \"Gunpla-kun\" which conveys the fun of Gunpla!",
 			"You can also display it in RunnerVer. by selecting it! Familiar equipment is also included.",
 			"• Display Zakupla-kun's normal Ver. and Runner Ver. in a selection format.",
-			"• This time, the main body is made of PS material and the familiar equipment \"Heat Hawk \", \" Zaku Machine Gun \", and \" Zaku Bazooka\" are included.",
+			"• This time, the main body is made of PS material and the familiar equipment \"Heat Hawk\", \"Zaku Machine Gun\", and \"Zaku Bazooka\" are included.",
 			"• Monoeye can move left and right.",
 			"• Create a display inspired by the movie by arranging the \"Gunpla-kun\" series plastic models (sold separately)!"
 		]
 	},
-	"accessories": {
-		"ja": ["ランナーパーツ×1", "ヒート・ホーク×1", "ザク・マシンガン×1", "ザク・バズーカ×1", "ディスプレイ用台座×1"],
-		"en": ["Runner parts x 1", "Heat Hawk x1", "Zaku machine gun x1", "Zaku Bazooka×1", "Display pedestal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ランナーパーツ",
+				"en": "Runner parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ヒート・ホーク",
+				"en": "heat hawk"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ザク・マシンガン",
+				"en": "zaku machine gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ザク・バズーカ",
+				"en": "Zaku Bazooka"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ用台座",
+				"en": "display pedestal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5556_0.jpg",
 				"path": "/images/items/01_5556/01_5556_0.jpg",
 				"hash": "501f233b768681553f3db21038c3a210"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5556_1.jpg",
 				"path": "/images/items/01_5556/01_5556_1.jpg",
 				"hash": "967bb7582f7fb090ed1ac8c123741aee"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5556_10.jpg",
-				"path": "/images/items/01_5556/01_5556_10.jpg",
-				"hash": "0cb9e96c4e372865d68f56b00784f064"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5556_11.jpg",
-				"path": "/images/items/01_5556/01_5556_11.jpg",
-				"hash": "98c4c01b2c089e931f8b68052d52c31d"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5556_2.jpg",
 				"path": "/images/items/01_5556/01_5556_2.jpg",
 				"hash": "7356fc07c1bfcd1c5e2e1d1ea94c5bf1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5556_3.jpg",
 				"path": "/images/items/01_5556/01_5556_3.jpg",
 				"hash": "3c545dfa7fd05fadf41aba900cc14c85"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5556_4.jpg",
 				"path": "/images/items/01_5556/01_5556_4.jpg",
 				"hash": "a605e4257bbbd7a671cd5db1c000926f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5556_5.jpg",
 				"path": "/images/items/01_5556/01_5556_5.jpg",
 				"hash": "a2ecccca76560fae4b0e3697c8a3894c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5556_6.jpg",
 				"path": "/images/items/01_5556/01_5556_6.jpg",
 				"hash": "e9584cbed2d5d4a871966eb118c1488c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5556_7.jpg",
 				"path": "/images/items/01_5556/01_5556_7.jpg",
 				"hash": "e88099aa1e8175055a20f2cf6ac79164"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5556_8.jpg",
 				"path": "/images/items/01_5556/01_5556_8.jpg",
 				"hash": "a7b633444aaa87db7421927aba889e0a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5556_9.jpg",
 				"path": "/images/items/01_5556/01_5556_9.jpg",
 				"hash": "8bcd9b070aa9be9c21c6027b8bebb8d8"
+			},
+			{
+				"path": "/images/items/01_5556/01_5556_10.jpg",
+				"hash": "0cb9e96c4e372865d68f56b00784f064"
+			},
+			{
+				"path": "/images/items/01_5556/01_5556_11.jpg",
+				"hash": "98c4c01b2c089e931f8b68052d52c31d"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5556/",
-	"brandIds": [],
-	"seriesIds": ["gunplakun"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5571", "01_5556", "01_5478", "01_5473"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5556/"
 }

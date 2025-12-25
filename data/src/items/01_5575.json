@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM オプションパーツセット ARMORED CORE Ⅵ FIRES OF RUBICON WEAPON SET 05",
-		"en": "30MM OPTION PARTS SET ARMORED CORE Ⅵ FIRES OF RUBICON WEAPON SET 05"
+		"en": "30MM Option parts set ARMORED CORE Ⅵ FIRES OF RUBICON WEAPON SET 05"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [
+		{
+			"id": "armoredcore",
+			"url": "https://bandai-hobby.net/series/armoredcore/",
+			"ja": "ARMORED CORE Ⅵ FIRES OF RUBICON"
+		}
+	],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5573",
+			"url": "https://bandai-hobby.net/item/01_5573/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON RaD CC-3000 WRECKER ミルクトゥース"
+		},
+		{
+			"id": "01_5574",
+			"url": "https://bandai-hobby.net/item/01_5574/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON BALAM INDUSTRIES BD-011 MELANDER"
+		}
+	],
 	"price": {
 		"amount": 1870,
 		"currency": "JPY",
@@ -28,62 +76,89 @@
 			"• 「SI-24：SU-Q5」のパルスシールドの展開状態を再現可能なPETシートが付属。"
 		],
 		"en": [
-			"\"ARMORED CORE Ⅵ FIRES OF RUBICON \" items are commercialized in the \" 30 MINUTES MISSIONS\" series.",
-			"Based on the series' key concepts of \"simple assembly \" and \" custom play,\" we have commercialized a set of weapons, including a pulse blade that can be recreated in its deployed state.",
-			"• The contents of the weapon are \"RF-024 TURNER \", \" HI-32: BU-TT/A \", \" BML-G1/P07VTC-12 \", and \" SI-24: SU-Q5\".",
+			"\"ARMORED CORE Ⅵ FIRES OF RUBICON\" items are commercialized in the \"30 MINUTES MISSIONS\" series.",
+			"Based on the series' key concepts of \"simple assembly\" and \"custom play,\" we have commercialized a set of weapons, including a pulse blade that can be recreated in its deployed state.",
+			"• The contents of the weapon are \"RF-024 TURNER\", \"HI-32: BU-TT/A\", \"BML-G1/P07VTC-12\", and \"SI-24: SU-Q5\".",
 			"• Weapons that change shape on the left and right when equipped come with parts for reproduction, and can be assembled selectively.",
 			"• Reproduce the expanded state of the pulse blade of \"HI-32: BU-TT/A\" by replacing parts.",
 			"• A PET sheet that can reproduce the deployment state of the pulse seal of \"SI-24:SU-Q5\" is included."
 		]
 	},
-	"accessories": {
-		"ja": ["RF-024 TURNER×1", "HI-32：BU-TT/A×1式", "BML-G1/P07VTC-12×1式", "SI-24：SU-Q5×1式", "PETシート×1"],
-		"en": [
-			"RF-024 TURNER×1",
-			"HI-32: BU-TT/A x 1 set",
-			"BML-G1/P07VTC-12×1 set",
-			"SI-24: SU-Q5 x 1 set",
-			"PET sheet x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "RF-024 TURNER"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "HI-32：BU-TT/A",
+				"en": "HI-32:BU-TT/A"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "BML-G1/P07VTC-12"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "SI-24：SU-Q5",
+				"en": "SI-24:SU-Q5"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "PETシート",
+				"en": "PET sheet"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5575_0.jpg",
 				"path": "/images/items/01_5575/01_5575_0.jpg",
 				"hash": "5f6f5a2294fe7d71d9c9ddf1b39d24d8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5575_1.jpg",
 				"path": "/images/items/01_5575/01_5575_1.jpg",
 				"hash": "2e45c9a1219bcbf661e302aff2421b2b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5575_2.jpg",
 				"path": "/images/items/01_5575/01_5575_2.jpg",
 				"hash": "f870788406a129e12ed9e9b092ccf41c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5575_3.jpg",
 				"path": "/images/items/01_5575/01_5575_3.jpg",
 				"hash": "5224098083ac7824233cffef57b4c03c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5575_4.jpg",
 				"path": "/images/items/01_5575/01_5575_4.jpg",
 				"hash": "e51b910dd7be1ae44feb068799165254"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5575_5.jpg",
 				"path": "/images/items/01_5575/01_5575_5.jpg",
 				"hash": "02e7644dfa6d3995eb7427b122c6b691"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5575/",
-	"brandIds": ["30mm"],
-	"seriesIds": ["armoredcore"],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5973", "01_5974", "01_5573", "01_5574"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5575/"
 }

@@ -2,9 +2,53 @@
 	"id": "01_5593",
 	"type": "item",
 	"name": {
-		"ja": "MG 1/100 ガンダム Mk-V [クリアカラー]",
-		"en": "MG 1/100 Gundam Mk-V [Clear Color]"
+		"ja": "MG 1/100 ガンダムMk-V [クリアカラー]",
+		"en": "MG 1/100 GundamMk-V [Clear color]"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "sentinel",
+			"url": "https://bandai-hobby.net/series/sentinel/",
+			"ja": "ガンダム・センチネル"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3408",
+			"url": "https://bandai-hobby.net/item/01_3408/",
+			"ja": "ＭＧ 1/100 ガンダムＭｋ-Ｖ"
+		},
+		{
+			"id": "01_2176",
+			"url": "https://bandai-hobby.net/item/01_2176/",
+			"ja": "MG 1/100 Ex-Sガンダム/Sガンダム"
+		},
+		{
+			"id": "01_1291",
+			"url": "https://bandai-hobby.net/item/01_1291/",
+			"ja": "MG 1/100 PLAN303E ディープストライカー"
+		},
+		{
+			"id": "item-1000089611",
+			"url": "https://p-bandai.jp/item/item-1000089611",
+			"ja": "ＭＧ 1/100 Ｓガンダム ブースター・ユニット装着型"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 9460,
 		"currency": "JPY",
@@ -18,16 +62,15 @@
 		"day": 8
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"MG 1/100 ガンダム Mk-Vがクリアカラーになって登場！",
+			"MG 1/100 ガンダムMk-Vがクリアカラーになって登場！",
 			"• Mk-Vの特徴的な機体各部形状とディテールをマスターグレードならではの精密かつ細やかな造形で再現。",
 			"• 機体カラーをクリアブルーで再現。頭部、胸部、脚部などの印象的な白いラインはパーツ分割による色分け再現。",
 			"• インコムを始めとした各種武装ギミックを忠実に再現。"
 		],
 		"en": [
-			"MG 1/100 Gundam Mk-V now available in clear color!",
+			"MG 1/100 GundamMk-V now available in clear color!",
 			"• The Mk-V's characteristic fuselage shape and details are reproduced with precision and detailed modeling unique to Master Grade.",
 			"• The aircraft color is reproduced in clear blue. The impressive white lines on the head, chest, legs, etc. are reproduced by color-coding by dividing the parts.",
 			"• Faithfully reproduces various armed gimmicks including Incom."
@@ -36,30 +79,22 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6428.jpg",
+				"src": "https://bandai-hobby.net/images/153_6428_s_53bdc2qe71uhnxsh1r9iy3dpww4x.jpg",
 				"path": "/images/items/01_5593/153_6428.jpg",
 				"hash": "00a763141b0b2eb9d09bfb538c728357"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6428.jpg",
+				"src": "https://bandai-hobby.net/images/155_6428_s_j5f7uadvptwjzzbf3vciph8vrak7.jpg",
 				"path": "/images/items/01_5593/155_6428.jpg",
 				"hash": "c7153b146957467d8ac20bb71156acb7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6428.jpg",
+				"src": "https://bandai-hobby.net/images/156_6428_s_63vn5e72oj7heylze0d40ai2s9u3.jpg",
 				"path": "/images/items/01_5593/156_6428.jpg",
 				"hash": "5dbe161a4c0d1e1f7203af0f9a1595b1"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5593/",
-	"brandIds": ["mg"],
-	"seriesIds": ["sentinel"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_3408", "01_2176", "01_1291", "item-1000089611"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5593/"
 }

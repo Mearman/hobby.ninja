@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MS SIS-Y00 シュレミ[カラーB]",
-		"en": "30MS SIS-Y00 SHUREMI [COLOR B]"
+		"en": "30MS SIS-Y00 Shremi [Color B]"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5975",
+			"url": "https://bandai-hobby.net/item/01_5975/",
+			"ja": "30MS 和泉愛依"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5954",
+			"url": "https://bandai-hobby.net/item/01_5954/",
+			"ja": "30MS オプションヘアスタイルパーツVol.12 全4種 ミディアムヘア2[イエロー4]"
+		}
+	],
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -29,101 +71,118 @@
 			"• 30 MINUTES LABEL共通の3mmジョイントを採用。「30 MINUTES MISSIONS」のパーツもオプションとして装着が可能。(※「30 MINUTES MISSIONS」キットの対象年齢は8才以上です)"
 		],
 		"en": [
-			"A new sister \"30MS SIS-Y00 Shremi [Color B]\" is now available in the \" 30 MINUTES SISTERS\" series!",
+			"A new sister \"30MS SIS-Y00 Shremi [Color B]\" is now available in the \"30 MINUTES SISTERS\" series!",
 			"• Set includes character body, 3 types of expression parts [Color B] with tampo printing, and armed parts.",
 			"• Hair style parts express two different hair colors by dividing the parts. By replacing parts, you can express the presence or absence of corner parts.",
 			"• Part of the costume is reproduced with a hole design.",
 			"• The flame effect on the head is reproduced with clear parts.",
 			"• \"30 MINUTES SISTERS\" offers a lineup of face parts, hairstyle parts, and body parts by body part. You can create your own sister by combining parts sold separately.",
-			"• Adopts 3mm joint common to 30 MINUTES LABEL. \"30 MINUTES MISSIONS \" parts can also be installed as options. (*\" 30 MINUTES MISSIONS\" Kit is for ages 8 and up)"
+			"• Adopts 3mm joint common to 30 MINUTES LABEL. \"30 MINUTES MISSIONS\" parts can also be installed as options. (*\"30 MINUTES MISSIONS\" Kit is for ages 8 and up)"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"フェイスパーツ(タンポ印刷)×3",
-			"クリアエフェクトパーツ×1式",
-			"前髪パーツ(角無し)×1",
-			"ハンドパーツ×1式",
-			"武装パーツ×1式"
-		],
-		"en": [
-			"Face parts (tampo printing) x 3",
-			"Clear effect parts x 1 set",
-			"Bangs parts (no horns) x 1",
-			"Hand parts x 1 set",
-			"Armed parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フェイスパーツ(タンポ印刷)",
+				"en": "Face parts (tampo printing)"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "クリアエフェクトパーツ",
+				"en": "clear effect parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "前髪パーツ(角無し)",
+				"en": "Bangs parts (no horns)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "武装パーツ",
+				"en": "armed parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5576_0.jpg",
 				"path": "/images/items/01_5576/01_5576_0.jpg",
 				"hash": "bc60a77423d4d1e3704df916f5551894"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5576_1.jpg",
 				"path": "/images/items/01_5576/01_5576_1.jpg",
 				"hash": "ee732b0e2d2cf63af1677a7022c8f4b2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5576_10.jpg",
-				"path": "/images/items/01_5576/01_5576_10.jpg",
-				"hash": "fc2a4e48638f45f0840537ce76872329"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5576_11.jpg",
-				"path": "/images/items/01_5576/01_5576_11.jpg",
-				"hash": "c028e78aa48b6987fdcd14f9d3df3b38"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5576_2.jpg",
 				"path": "/images/items/01_5576/01_5576_2.jpg",
 				"hash": "728cd51c4d74a0877735c50412edbffc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5576_3.jpg",
 				"path": "/images/items/01_5576/01_5576_3.jpg",
 				"hash": "0f5953ef561be2865a9cb32b70e6bee6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5576_4.jpg",
 				"path": "/images/items/01_5576/01_5576_4.jpg",
 				"hash": "e0763046e2e1369d5010b6706e69fae0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5576_5.jpg",
 				"path": "/images/items/01_5576/01_5576_5.jpg",
 				"hash": "d8a7c2393d08df0c5ba4b104f4a2eb7b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5576_6.jpg",
 				"path": "/images/items/01_5576/01_5576_6.jpg",
 				"hash": "fc4c92beda68b2af37785760ef03ea47"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5576_7.jpg",
 				"path": "/images/items/01_5576/01_5576_7.jpg",
 				"hash": "1850799c9540e02abbb3743ff0d1fd80"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5576_8.jpg",
 				"path": "/images/items/01_5576/01_5576_8.jpg",
 				"hash": "8638aa9c8e4456e75d4c8bb49c24be20"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5576_9.jpg",
 				"path": "/images/items/01_5576/01_5576_9.jpg",
 				"hash": "a2a5c5ffb2872fe71d1133dbe1596437"
+			},
+			{
+				"path": "/images/items/01_5576/01_5576_10.jpg",
+				"hash": "fc2a4e48638f45f0840537ce76872329"
+			},
+			{
+				"path": "/images/items/01_5576/01_5576_11.jpg",
+				"hash": "c028e78aa48b6987fdcd14f9d3df3b38"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5576/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3607",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3607/"
