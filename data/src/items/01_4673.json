@@ -2,9 +2,46 @@
 	"id": "01_4673",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム Gジェネレーション02 サザビー",
-		"en": "SD Gundam G Generation 02 Sazabi"
+		"ja": "SDガンダムGジェネレーション02 サザビー",
+		"en": "SDGundamG Generation 02 Sozabi"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4975",
+			"url": "https://bandai-hobby.net/item/01_4975/",
+			"ja": "BB戦士 MSN-04FF サザビー"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		}
+	],
 	"price": {
 		"amount": 440,
 		"currency": "JPY",
@@ -18,27 +55,27 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": ["SD ガンダム Gジェネレーション02 サザビー登場！"],
-		"en": ["SD Gundam G Generation 02 Sazabi is here!"]
+		"ja": [
+			"SDガンダムGジェネレーション02 サザビー登場！"
+		],
+		"en": [
+			"SDGundamG Generation 02 Sazabi is here!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5563.jpg",
+				"src": "https://bandai-hobby.net/images/153_5563_o_1go8rje2tn7ni7v1a0u1tvhpt423.jpg",
 				"path": "/images/items/01_4673/153_5563.jpg",
 				"hash": "9b1e4ba8f6b15a5228bb2fdd8137abb5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5563.jpg",
+				"src": "https://bandai-hobby.net/images/155_5563_o_1goivb09o1detob1bgco6q2sf23.jpg",
 				"path": "/images/items/01_4673/155_5563.jpg",
 				"hash": "5165bbe2acb83e7e4eff7fede0b120ff"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4673/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4673/"
 }

@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガンダムキャリバーン",
-		"en": "HG 1/144 GUNDAM CALIBARN"
+		"en": "HG 1/144 Gundam Caliburn"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216474",
+			"url": "https://p-bandai.jp/item/item-1000216474/",
+			"ja": "ＨＧ 1/144 デスルター"
+		},
+		{
+			"id": "item-1000211616",
+			"url": "https://p-bandai.jp/item/item-1000211616/",
+			"ja": "ＨＧ 1/144 ベギルベウトルシュ(ケナンジ小隊所属機/リドリック小隊所属機)"
+		},
+		{
+			"id": "01_5422",
+			"url": "https://bandai-hobby.net/item/01_5422/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムキャリバーン [クリアカラー]"
+		},
+		{
+			"id": "item-1000203899",
+			"url": "https://p-bandai.jp/item/item-1000203899/",
+			"ja": "ＨＧ 1/144 ガンドノード"
+		}
+	],
+	"manual": {
+		"id": "1092",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1092"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,7 +66,6 @@
 		"day": 15
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、ガンダム・キャリバーンがHGで立体化！",
@@ -29,37 +76,52 @@
 			"• 本体ディスプレイ用の台座が付属。"
 		],
 		"en": [
-			"In-mold molding reproduces the iridescent brilliance of the chest shell unit and antenna.",
-			"Gambit is THE WITCH FROM MERCURY WEAPON DISPLAY BASE (sold separately) and can be displayed in combination with 2 sets.",
-			"Comes with a long portable firearm and a variable rod rifle as the main weapon.",
-			"Comes with a white escutcheon.",
-			"Comes with a pedestal for the main body display. [Accessories]",
-			"Beam Rifle ×1",
-			"Shield ×1 set",
-			"Beam Saber ×2",
-			"Display pedestal×1"
+			"From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\", Gundam Caliburn is now three-dimensional in HG!",
+			"• In-mold molding reproduces the iridescent glow of the chest shell unit and antenna.",
+			"• Gambit can be displayed in combination with 2 sets of Mercury Witch Weapon display bases (sold separately).",
+			"• Includes a long portable firearm and variable rod rifle as the main weapon.",
+			"• Comes with white escutcheon.",
+			"• Comes with a pedestal for display."
 		]
 	},
-	"accessories": {
-		"ja": ["ビームライフル×１", "シールド×１式", "ビームサーベル×２", "ディスプレイ台座×１", "シール×１"],
-		"en": ["Beam rifle x1", "Seal de x 1 set", "Beam saber x2", "Display pedestal x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル×１",
+				"en": "Beam rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド×１式",
+				"en": "Seal de x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル×２",
+				"en": "Beam saber x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座×１",
+				"en": "Display pedestal x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195247_1.jpg",
 				"path": "/images/items/01_4633/1000195247_1.jpg",
 				"hash": "81ce469bef1576680fc9239ed52c5166"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195247_10.jpg",
-				"path": "/images/items/01_4633/1000195247_10.jpg",
-				"hash": "1be0fec4b51047796de8dac0becbb4a2"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195247_11.jpg",
-				"path": "/images/items/01_4633/1000195247_11.jpg",
-				"hash": "b8b6c63b1f983444bfd37c6caa73338f"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195247_2.jpg",
@@ -102,20 +164,17 @@
 				"hash": "e907457ccb92e28002c80ec6f26d4eef"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4633_inst_0.jpg",
-				"path": "/images/items/01_4633/01_4633_inst_0.jpg",
-				"hash": "4115e348f1dfabc9923104dbee476429"
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195247_10.jpg",
+				"path": "/images/items/01_4633/1000195247_10.jpg",
+				"hash": "1be0fec4b51047796de8dac0becbb4a2"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000195247_11.jpg",
+				"path": "/images/items/01_4633/1000195247_11.jpg",
+				"hash": "b8b6c63b1f983444bfd37c6caa73338f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4633/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203899"],
-	"manual": {
-		"id": "1092",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1092/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4633/"
 }

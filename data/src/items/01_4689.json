@@ -5,6 +5,44 @@
 		"ja": "ビルダーズパーツ 1/144 システムウェポン004",
 		"en": "Builders Parts 1/144 System Weapon004"
 	},
+	"brands": [
+		{
+			"id": "parts",
+			"url": "https://bandai-hobby.net/brand/parts/",
+			"ja": "ビルダーズパーツ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3582",
+			"url": "https://bandai-hobby.net/item/01_3582/",
+			"ja": "1/100 ガンダムベース限定 MSエフェクト01(クリアブルー)"
+		},
+		{
+			"id": "01_3563",
+			"url": "https://bandai-hobby.net/item/01_3563/",
+			"ja": "1/100 ガンダムベース限定 MSバーニア01&エモーションマニピュレーター(連邦系)"
+		},
+		{
+			"id": "01_3564",
+			"url": "https://bandai-hobby.net/item/01_3564/",
+			"ja": "1/100 ガンダムベース限定 MSスパイク01&エモーションマニピュレーター(ジオン系)"
+		},
+		{
+			"id": "01_636",
+			"url": "https://bandai-hobby.net/item/01_636/",
+			"ja": "BPHD ノンスケール MSサイトレンズ01(レッド)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -18,29 +56,28 @@
 		"day": 29
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["「ビルダーズパーツ 1/144 システムウェポン004」登場！"],
-		"en": ["\"Builders Parts 1/144 System Weapon004\" now available!"]
+		"ja": [
+			"「ビルダーズパーツ 1/144 システムウェポン004」登場！"
+		],
+		"en": [
+			"\"Builders Parts 1/144 System Weapon004\" now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5578.jpg",
+				"src": "https://bandai-hobby.net/images/153_5578_o_1gob872hg1pfgkd9ssnkf5pbd23.jpg",
 				"path": "/images/items/01_4689/153_5578.jpg",
 				"hash": "f23d4f30a57c575943c989254309a5e8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5578.jpg",
+				"src": "https://bandai-hobby.net/images/155_5578_o_1goiv4vjh1s2ouul1bqitg02i23.jpg",
 				"path": "/images/items/01_4689/155_5578.jpg",
 				"hash": "f1063a35f08415345273f5a005bd3f71"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4689/",
-	"brandIds": ["parts"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_3582", "01_3563", "01_3564", "01_636"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4689/"
 }

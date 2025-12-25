@@ -2,9 +2,37 @@
 	"id": "01_4682",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム Gジェネレーション25 シャイニングガンダム(シャイニングフィンガーモード)",
-		"en": "SD Gundam G Generation 25 Shining Gundam (Shining Finger Mode)"
+		"ja": "SDガンダムGジェネレーション25 シャイニングガンダム(シャイニングフィンガーモード)",
+		"en": "SDGundamG Generation 25 Shining Gundam (Shining Finger Mode)"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "ggundam",
+			"url": "https://bandai-hobby.net/series/ggundam/",
+			"ja": "機動武闘伝Ｇガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1003",
+			"url": "https://bandai-hobby.net/item/01_1003/",
+			"ja": "SDガンダムGジェネレーション58 マスターガンダム"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,27 +46,27 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": ["• SD ガンダム Gジェネレーションにシャイニングガンダム(シャイニングフィンガーモード)が登場！"],
-		"en": ["• Shining Gundam (Shining Finger Mode) is now available in SD Gundam G Generation!"]
+		"ja": [
+			"• SDガンダムGジェネレーションにシャイニングガンダム(シャイニングフィンガーモード)が登場！"
+		],
+		"en": [
+			"• Shining Gundam (Shining Finger Mode) is now available in SDGundamG generation!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5571.jpg",
+				"src": "https://bandai-hobby.net/images/153_5571_o_1go8sp3n91k48i9p63r1f9u9ug23.jpg",
 				"path": "/images/items/01_4682/153_5571.jpg",
 				"hash": "e17cd3c1530a331bdc3ef7f0567c6d0f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5571.JPG",
+				"src": "https://bandai-hobby.net/images/155_5571_o_1goivn9p9g9c1b1csp174hufl23.JPG",
 				"path": "/images/items/01_4682/155_5571.JPG",
 				"hash": "5ddafdf676168282de5e1e55d4b3a2cd"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4682/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["ggundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_1003"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4682/"
 }

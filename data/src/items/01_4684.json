@@ -2,9 +2,46 @@
 	"id": "01_4684",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム Gジェネレーション27 ガンダムマックスター(ファイティングナックルモード)",
-		"en": "SD Gundam G Generation 27 Gundam Maxter (Fighting Knuckle Mode)"
+		"ja": "SDガンダムGジェネレーション27 ガンダムマックスター(ファイティングナックルモード)",
+		"en": "SDGundamG Generation 27 Gundam Maxter (Fighting Knuckle Mode)"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4975",
+			"url": "https://bandai-hobby.net/item/01_4975/",
+			"ja": "BB戦士 MSN-04FF サザビー"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4312",
+			"url": "https://bandai-hobby.net/item/01_4312/",
+			"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,27 +55,27 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": ["• SD ガンダム Gジェネレーションにガンダムマックスター(ファイティングナックルモード)が登場！"],
-		"en": ["• Gundam Max Star (Fighting Knuckle Mode) is now available in SD Gundam G Generation!"]
+		"ja": [
+			"• SDガンダムGジェネレーションにガンダムマックスター(ファイティングナックルモード)が登場！"
+		],
+		"en": [
+			"• Gundam Max Star (Fighting Knuckle Mode) is now available in SDGundamG generation!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5573.jpg",
+				"src": "https://bandai-hobby.net/images/153_5573_o_1go8sv2n231iform6u1vmk1apu23.jpg",
 				"path": "/images/items/01_4684/153_5573.jpg",
 				"hash": "a54fbcf1b8d67f09d4960464f575f7f3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5573.JPG",
+				"src": "https://bandai-hobby.net/images/155_5573_o_1goiv8env12p382e37u30kurm23.JPG",
 				"path": "/images/items/01_4684/155_5573.JPG",
 				"hash": "77c6f60f60c0fcd61a107c77840345a3"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4684/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4684/"
 }

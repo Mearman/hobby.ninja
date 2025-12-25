@@ -5,6 +5,50 @@
 		"ja": "PG 1/60 スカイグラスパー+エールストライカー",
 		"en": "PG 1/60 Sky Grasper + Ale Striker"
 	},
+	"brands": [
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2583",
+			"url": "https://bandai-hobby.net/item/01_2583/",
+			"ja": "PG 1/60 パーフェクトストライクガンダム"
+		},
+		{
+			"id": "item-1000140845",
+			"url": "https://p-bandai.jp/item/item-1000140845/",
+			"ja": "ＰＧ 1/60 ストライクガンダム用 パーフェクトストライクガンダム拡張パーツ"
+		},
+		{
+			"id": "01_1913",
+			"url": "https://bandai-hobby.net/item/01_1913/",
+			"ja": "PG 1/60 ガンダムベース限定 ガンダムアストレイ レッドフレーム[メタリック]"
+		},
+		{
+			"id": "01_4873",
+			"url": "https://bandai-hobby.net/item/01_4873/",
+			"ja": "PG 1/60 エールストライクガンダム+スカイグラスパー(クリアパールシフトバージョン)"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -18,16 +62,15 @@
 		"day": 11
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム SEED」に登場する「ストライクガンダム」を”拡張”させる「スカイグラスパー（エールストライカー装備）」をPG商品化。",
+			"「機動戦士ガンダムSEED」に登場する「ストライクガンダム」を”拡張”させる「スカイグラスパー（エールストライカー装備）」をPG商品化。",
 			"ストライクのビームライフルをサイドパックに装着可能。",
 			"ストライカーパックは着脱式、2004年11月発売のPGストライクガンダムの背面マウントを利用して合体させることが可能です。",
 			"（PG ストライクガンダムは別売りです）"
 		],
 		"en": [
-			"The \"Sky Grasper (Ale Striker equipment)\" that \" expands \" the \" Strike Gundam \" that appears in \" Mobile Suit Gundam SEED\" has been made into a PG product.",
+			"PG commercialization of the \"Sky Grasper (Ale Striker equipment)\" that \"expands\" the \"Strike Gundam\" that appears in \"Mobile Suit Gundam SEED\".",
 			"Strike beam rifle can be attached to the side pack.",
 			"The Striker pack is removable and can be combined using the back mount of 200411Release PG Strike Gundam.",
 			"(PG Strike Gundam sold separately)"
@@ -36,27 +79,27 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_555.jpg",
+				"src": "https://bandai-hobby.net/images/153_555_s_jy3meb7r4jm2nlr5wv8lax9ksbj2.jpg",
 				"path": "/images/items/01_4669/153_555.jpg",
 				"hash": "69017f911b5ff4bac97c52e7673535bf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_555.jpg",
+				"src": "https://bandai-hobby.net/images/155_555_s_o4ls561cr405pj16m766h21avdzg.jpg",
 				"path": "/images/items/01_4669/155_555.jpg",
 				"hash": "6ac02b09a75e889915dc81e714e7935b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_555.jpg",
+				"src": "https://bandai-hobby.net/images/156_555_s_yk5a9r3dt7zhn74qwswshd3ssl6t.jpg",
 				"path": "/images/items/01_4669/156_555.jpg",
 				"hash": "309e27035c4cf160e030fd63dba064ec"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_555.jpg",
+				"src": "https://bandai-hobby.net/images/157_555_s_4r4ruua4e2xla9a7hqgh172twrgq.jpg",
 				"path": "/images/items/01_4669/157_555.jpg",
 				"hash": "e77384d3a2a235b8ddaa91c5253e3d4a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_555.jpg",
+				"src": "https://bandai-hobby.net/images/158_555_s_ykmyrecad8kgncsw82feefz7m1b4.jpg",
 				"path": "/images/items/01_4669/158_555.jpg",
 				"hash": "8a55659819cc780afc66a0c4a5c43633"
 			}
@@ -64,10 +107,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4669/",
-	"brandIds": ["pg"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_2583", "item-1000140845", "01_1913", "01_4873"],
 	"manual": {
 		"id": "653",
 		"url": "https://manual.bandai-hobby.net/menus/detail/653/"

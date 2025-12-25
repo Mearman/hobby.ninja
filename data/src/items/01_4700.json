@@ -2,9 +2,47 @@
 	"id": "01_4700",
 	"type": "item",
 	"name": {
-		"ja": "1/144 ハイパーモード G ガンダム",
-		"en": "1/144 Hypermode G Gundam"
+		"ja": "1/144 ハイパーモード Gガンダム",
+		"en": "1/144 Hyper Mode GGundam"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "ggundam",
+			"url": "https://bandai-hobby.net/series/ggundam/",
+			"ja": "機動武闘伝Ｇガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5544",
+			"url": "https://bandai-hobby.net/item/01_5544/",
+			"ja": "RG 1/144 シャイニングガンダム"
+		},
+		{
+			"id": "01_5995",
+			"url": "https://bandai-hobby.net/item/01_5995/",
+			"ja": "RG 1/144 ガンダムベース限定 ゴッドガンダム ハイパーモード"
+		},
+		{
+			"id": "item-1000213247",
+			"url": "https://p-bandai.jp/item/item-1000213247/",
+			"ja": "ＨＧ 1/144 ドラゴンガンダム"
+		},
+		{
+			"id": "item-1000194970",
+			"url": "https://p-bandai.jp/item/item-1000194970/",
+			"ja": "ＨＧ 1/144 ガンダムマックスター"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -17,24 +55,23 @@
 		"month": 5
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
-		"ja": ["『機動武闘伝G ガンダム』より、1/144スケールで、ハイパーモードG ガンダムが登場。"],
-		"en": ["From \"Mobile Fighter G Gundam\", 1/144 Scale Hyper Mode G Gundam is now available."]
+		"ja": [
+			"『機動武闘伝Gガンダム』より、1/144スケールで、ハイパーモードGガンダムが登場。"
+		],
+		"en": [
+			"From \"Mobile Fighter GGundam\", 1/144 Scale Hyper Mode GGundam is now available."
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5589.jpg",
+				"src": "https://bandai-hobby.net/images/153_5589_s_jjqd7vk41feurpq63zynhgmz83zt.jpg",
 				"path": "/images/items/01_4700/153_5589.jpg",
 				"hash": "14bd4ac8d89b8dbc52689746920a0d36"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4700/",
-	"brandIds": [],
-	"seriesIds": ["ggundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5544", "01_5995", "item-1000213247", "item-1000194970"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4700/"
 }

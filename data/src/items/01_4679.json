@@ -2,9 +2,31 @@
 	"id": "01_4679",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム Gジェネレーション22 ガンダム F90 A/P/V タイプ",
-		"en": "SD Gundam G Generation 22 Gundam F90 A/P/V Type"
+		"ja": "SDガンダムGジェネレーション22 ガンダムF90 A/P/V タイプ",
+		"en": "SDGundamG Generation 22 GundamF90 A/P/V Type"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "f90",
+			"url": "https://bandai-hobby.net/series/f90/",
+			"ja": "機動戦士ガンダムF90"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,27 +40,27 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": ["SDガンダムGジェネレーションにガンダムF90 A/P/V タイプが登場！"],
-		"en": ["Gundam F90 A/P/V type is now available in SD Gundam G generation!"]
+		"ja": [
+			"SDガンダムGジェネレーションにガンダムF90 A/P/V タイプが登場！"
+		],
+		"en": [
+			"GundamF90 A/P/V type is now available in SDGundamG generation!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5569.jpg",
+				"src": "https://bandai-hobby.net/images/153_5569_o_1go8sk4l1a8k58q1lid9fj102323.jpg",
 				"path": "/images/items/01_4679/153_5569.jpg",
 				"hash": "e7403f1393c319a39c65843d700eaf44"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5569.JPG",
+				"src": "https://bandai-hobby.net/images/155_5569_o_1goive44p1h281d0q1c2i1g7vrc23.JPG",
 				"path": "/images/items/01_4679/155_5569.JPG",
 				"hash": "c773fd67b55fd67b549c910ea0d7cd12"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4679/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["f90"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_4679/"
 }

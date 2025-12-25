@@ -3,8 +3,57 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC 1/144 アッシマー",
-		"en": "HGUC 1/144 ASSHIMAR"
+		"en": "HGUC 1/144 Assimar"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -18,14 +67,13 @@
 		"day": 18
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「機動戦士Ｚガンダム」に登場するＭＳ”アッシマー”のＨＧユニバーサルセンチュリーシリーズプラモデル。",
 			"イロプラの使用により設定色をリアルに再現。カトキハジメ氏の協力により、バランスを崩すことなくモビルアーマー形態への完全変形が可能。ライフルの持ち手や握り拳の手首パーツには精巧なディテールを再現。付属のビームライフルは、ＭＳ／ＭＡ形態どちらでも腰部に取り付け可能。専用のディスプレイスタンドが付属し、空中をイメージしたポーズで飾ることが出来ます。"
 		],
 		"en": [
-			"HG Universal Century Series plastic model of the MS \"Assimar \" that appears in \" Mobile Suit Z Gundam\".",
+			"HG Universal Century Series plastic model of the MS \"Assimar\" that appears in \"Mobile Suit Z Gundam\".",
 			"The setting colors are realistically reproduced by using Iropla. With the cooperation of Hajime Katoki, it is possible to completely transform into mobile armor form without losing balance. Elaborate details are reproduced on the rifle handle and fist wrist parts. The included beam rifle can be attached to the waist in either MS or MA form. A special display stand is included, allowing you to display it in a pose inspired by the air."
 		]
 	},
@@ -60,10 +108,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4701/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["z-gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"],
 	"manual": {
 		"id": "892",
 		"url": "https://manual.bandai-hobby.net/menus/detail/892/"

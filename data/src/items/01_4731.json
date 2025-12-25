@@ -5,6 +5,60 @@
 		"ja": "ＨＧ 1/144 ガンダムデスサイズヘル",
 		"en": "HG 1/144 Gundam Death Scythe Hell"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5590",
+			"url": "https://bandai-hobby.net/item/01_5590/",
+			"ja": "HG 1/144 ウイングガンダムゼロ [クリアカラー]"
+		},
+		{
+			"id": "item-1000213249",
+			"url": "https://p-bandai.jp/item/item-1000213249/",
+			"ja": "ＨＧ 1/144 アルトロンガンダム"
+		},
+		{
+			"id": "01_5340",
+			"url": "https://bandai-hobby.net/item/01_5340/",
+			"ja": "HG 1/144 シェンロンガンダム [クリアカラー]"
+		},
+		{
+			"id": "item-1000194972",
+			"url": "https://p-bandai.jp/item/item-1000194972/",
+			"ja": "ＭＧ 1/100 ガンダムエピオン EW (シュトゥルム・ウント・ドラング装備)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 5
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－ 闇 に 潜 む、 死 神 の 鎌 －",
@@ -104,59 +157,75 @@
 			"・Package, logo, and product specifications are subject to change without notice. note that."
 		]
 	},
-	"accessories": {
-		"ja": ["ツインビームサイズ", "バスターシールド", "ツインビームサイズ（収納状態）"],
-		"en": ["twin beam size", "Buster Seal", "Twin beam size (stored)"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ツインビームサイズ",
+				"en": "twin beam size"
+			}
+		},
+		{
+			"name": {
+				"ja": "バスターシールド",
+				"en": "Buster Seal"
+			}
+		},
+		{
+			"name": {
+				"ja": "ツインビームサイズ（収納状態）",
+				"en": "Twin beam size (stored)"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5616.jpg",
+				"src": "https://bandai-hobby.net/images/153_5616_s_qv40ypc3n7ywl9wsq5u2qnr8y1d4.jpg",
 				"path": "/images/items/01_4731/153_5616.jpg",
 				"hash": "0982156c3d937b83295371847963541f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5616.jpg",
+				"src": "https://bandai-hobby.net/images/155_5616_s_vkk9bx3bfkthqtn7h6shzbq2rmww.jpg",
 				"path": "/images/items/01_4731/155_5616.jpg",
 				"hash": "e8925fdd224443bd386d01cfccbcadc2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5616.jpg",
+				"src": "https://bandai-hobby.net/images/156_5616_s_66d19ujixm9eo9f95dsfmw22gjqf.jpg",
 				"path": "/images/items/01_4731/156_5616.jpg",
 				"hash": "cc396dfc8d5c8cff19ebc1e90b9f2df7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5616.jpg",
+				"src": "https://bandai-hobby.net/images/157_5616_s_opgz9j8b9r8sx4k4k04xvm7a5u31.jpg",
 				"path": "/images/items/01_4731/157_5616.jpg",
 				"hash": "a772ba065849ed9b93168bc4b80f5fae"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5616.jpg",
+				"src": "https://bandai-hobby.net/images/158_5616_s_be1e1waehsm7ea0lrij5f7alfr15.jpg",
 				"path": "/images/items/01_4731/158_5616.jpg",
 				"hash": "93d9776940b4c39aea2f9c8993f4bd98"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5616.jpg",
+				"src": "https://bandai-hobby.net/images/159_5616_s_qnjvxbvpfwoy0p92kajao7pv0baa.jpg",
 				"path": "/images/items/01_4731/159_5616.jpg",
 				"hash": "3873973a1173d3b457e8a1962a98aec9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5616.jpg",
+				"src": "https://bandai-hobby.net/images/189_5616_s_3eu7tf5xbcxoo82ryxka7gy5ljag.jpg",
 				"path": "/images/items/01_4731/189_5616.jpg",
 				"hash": "3f18922edf66e86157db56c42e67e142"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5616.jpg",
+				"src": "https://bandai-hobby.net/images/190_5616_s_ysjh6j4bj7trzrsyychuq3sd3b0r.jpg",
 				"path": "/images/items/01_4731/190_5616.jpg",
 				"hash": "4d7b51ee3fff81258952f66bd71e234f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5616.jpg",
+				"src": "https://bandai-hobby.net/images/191_5616_s_otinrcfc0a1u9pxohdyj17phx3qm.jpg",
 				"path": "/images/items/01_4731/191_5616.jpg",
 				"hash": "f5653f991e7b0c85b067ff0e5b50985b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5616.jpg",
+				"src": "https://bandai-hobby.net/images/192_5616_s_w4ru3wdgpnf02mz5kqj64vychpwb.jpg",
 				"path": "/images/items/01_4731/192_5616.jpg",
 				"hash": "86cbe8f2b3dd590da6dcde86602ca72f"
 			}
@@ -164,14 +233,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4731/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["endlesswaltz"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5590", "item-1000213249", "01_5340", "item-1000194972"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2466",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2466/"
