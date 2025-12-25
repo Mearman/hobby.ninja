@@ -167,55 +167,67 @@ get_changed_pbandai_ids() {
     printf '%s\n' "${ids[@]}" | sort -u
 }
 
-# Stage all files for a given item ID
+# Stage all files for a given item ID (including deletions)
 stage_item_files() {
     local id=$1
     local staged=0
 
-    # JSON file
+    # JSON file (add if exists, or stage deletion)
     if [[ -f "data/src/items/${id}.json" ]]; then
         git add "data/src/items/${id}.json" 2>/dev/null && staged=1
+    else
+        git add -u "data/src/items/${id}.json" 2>/dev/null && staged=1
     fi
 
-    # Asset directory
+    # Asset directory (add if exists, or stage deletions)
     if [[ -d "assets/images/items/${id}" ]]; then
         git add "assets/images/items/${id}" 2>/dev/null && staged=1
+    else
+        git add -u "assets/images/items/${id}" 2>/dev/null && staged=1
     fi
 
     return $((1 - staged))
 }
 
-# Stage all files for a given manual ID
+# Stage all files for a given manual ID (including deletions)
 stage_manual_files() {
     local id=$1
     local staged=0
 
-    # JSON file
+    # JSON file (add if exists, or stage deletion)
     if [[ -f "data/src/manuals/${id}.json" ]]; then
         git add "data/src/manuals/${id}.json" 2>/dev/null && staged=1
+    else
+        git add -u "data/src/manuals/${id}.json" 2>/dev/null && staged=1
     fi
 
-    # Asset directory
+    # Asset directory (add if exists, or stage deletions)
     if [[ -d "assets/manuals/${id}" ]]; then
         git add "assets/manuals/${id}" 2>/dev/null && staged=1
+    else
+        git add -u "assets/manuals/${id}" 2>/dev/null && staged=1
     fi
 
     return $((1 - staged))
 }
 
-# Stage all files for a given P-Bandai item ID
+# Stage all files for a given P-Bandai item ID (including deletions)
 stage_pbandai_files() {
     local id=$1
     local staged=0
 
-    # JSON file
+    # JSON file (add if exists, or stage deletion)
     if [[ -f "data/src/pbandai/en/items/${id}.json" ]]; then
         git add "data/src/pbandai/en/items/${id}.json" 2>/dev/null && staged=1
+    else
+        git add -u "data/src/pbandai/en/items/${id}.json" 2>/dev/null && staged=1
     fi
 
-    # Asset directory
+    # Asset directory (add if exists, or stage deletions)
     if [[ -d "assets/pbandai/en/items/${id}" ]]; then
         git add "assets/pbandai/en/items/${id}" 2>/dev/null && staged=1
+    else
+        git add -u "assets/pbandai/en/items/${id}" 2>/dev/null && staged=1
     fi
 
     # Always include index.json if it has changes
