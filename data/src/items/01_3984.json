@@ -5,6 +5,54 @@
 		"ja": "ＭＧ 1/100 アルトロンガンダム ＥＷ",
 		"en": "MG 1/100 Altron Gundam EW"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "item-1000220190",
+			"url": "https://p-bandai.jp/item/item-1000220190/",
+			"ja": "ＨＧ 1/144 ザク・デザートタイプ ピンクパンサー隊機"
+		},
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "item-1000216105",
+			"url": "https://p-bandai.jp/item/item-1000216105/",
+			"ja": "RG 1/144 ソードインパルスガンダムＳｐｅｃＩＩ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -17,19 +65,88 @@
 		"month": 10
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"プレミアムバンダイはこちら",
-			"※プレミアムバンダイのトップページに遷移します。",
-			"※一部のエリアでは販売していません。",
-			"※エリアにより申込開始の日時は異なります。"
+			"『新機動戦記ガンダムＷ Ｅｎｄｌｅｓｓ Ｗａｌｔｚ』より、ＭＧ 1/100 アルトロンガンダム、いよいよキット化！！",
+			"モ ビ ル ス ー ツ Ｘ Ｘ Ｘ Ｇ － ０ １ Ｓ ２",
+			"五  飛  は  こ  の  機  体  を  “  ナ  タ  ク  ”と  呼  ぶ  。",
+			"『新機動戦記ガンダムＷ Ｅｎｄｌｅｓｓ Ｗａｌｔｚ』より、シェンロンガンダムの強化型ＭＳ・アルトロンガンダムを",
+			"マスターグレードシリーズで商品化。",
+			"両腕に装備された「ドラゴンハング」から「二頭龍＝アルトロン」の名前がつけられたとされる機体の",
+			"特徴的な武器を、マスターグレード準拠の新規造形で再現！",
+			"● 特徴的な２種の武装を新規造形で徹底再現！",
+			"ドラゴンハング、ツインビームトライデントを、マスターグレード準拠の新規造形で付属。",
+			"〔　ドラゴンハング　〕",
+			"腕部収納時から攻撃時の展開ギミックを再現。",
+			"先端のクローは引出式の二軸可動で、展開、開閉可能。",
+			"延長用のアームブロックが付属し、シーンに合わせた迫力あるポージングディスプレイが可能。",
+			"攻撃時のドラゴンハングを安定してディスプレイできる補助スタンドが２本付属。",
+			"〔　ツインビームトライデント　〕",
+			"柄部は、ディテールも豊かな新規パーツ。",
+			"両端に出力口を持ち、クリア成形のビーム刃を両側に取り付け可能。",
+			"ビーム刃は取り外してビームトライデントは、バックパックにジョイントし、携行可能。",
+			"● 新規のフィギュア付属！",
+			"マリーメイア軍の制服姿の張五飛の同スケールフィギュアが、新規造形で付属。（立ち ／ 座り）",
+			"● 新規デザインの水転写デカール付属！",
+			"付属武装 ： ドラゴンハング × ２ ／ ツインビームトライデント",
+			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
+			"１／１００スケール組み立て式プラモデル",
+			"対象年齢：１５才以上",
+			"製品素材：ＰＳ・ＰＥ・ＡＢＳ",
+			"・組み立てに接着剤は使用しません",
+			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
+			"※写真の完成品は開発途中の試作品です。また、塗装してあります。実際の商品とは多少異なる場合がございます。",
+			"※クリアパーツの中には、製造工程上、気泡が入る場合がございますがご了承ください。",
+			"（備考）",
+			"・ この商品は、プラモデルお取り扱い店舗店頭ではお買い求めいただけません。",
+			"・ この商品は、弊社主催イベントや他の企画などおよび海外で販売をさせていただく場合がございます。",
+			"・ この商品は‘プレミアムバンダイ’での販売準備数に限りがございます。品切れの際はご了承ください。",
+			"・ この商品は、生産準備数の都合により、お一人様につきご購入いただける数量を限らせていただいております。",
+			"ご了承ください。",
+			"・ この商品は、お申込状況、生産の都合により、発送日が変更となる場合がございます。予めご了承ください。",
+			"・ 商品画像は開発途中のものであり、実際の商品とは異なる場合がございます。",
+			"・ 商品仕様は2015年8月現在の予定です。変更の場合もございますがご了承ください。"
 		],
 		"en": [
-			"Click here for Premium Bandai",
-			"*Transition to the Premium Bandai top page.",
-			"*Not available in some areas.",
-			"*Application start times vary depending on the area."
+			"From \"Mobile Suit GundamW Endless Waltz\", MG 1/100 Altron Gundam is finally available as a kit! !",
+			"Mobile Suit X X X G - 0 1 S 2",
+			"Gohi calls this aircraft ``Nataku''.",
+			"From \"New Mobile Report GundamW Endless Waltz\", Shenron Gundam's enhanced MS, Altron Gundam",
+			"Commercialized in the Master Grade series.",
+			"The aircraft is said to have been given the name \"Two-Headed Dragon = Altron\" from the \"dragon hangs\" equipped on both arms.",
+			"The characteristic weapon is reproduced with a new model that complies with master grade!",
+			"● Thoroughly reproduce the two distinctive types of weapons with new modeling!",
+			"Dragon hang and twin beam trident are included with new moldings that comply with master grade.",
+			"[Dragon Hung]",
+			"Reproduce the deployment gimmick from when the arm is stored to when attacking.",
+			"The claw at the tip is a pull-out type that can be moved on two axes and can be expanded, opened and closed.",
+			"An arm block for extension is included, allowing for impressive posing displays to match the scene.",
+			"Two auxiliary stands are included that allow you to stably display the dragon hang during attacks.",
+			"[Twin Beam Trident]",
+			"The handle is a new part with rich details.",
+			"It has output ports on both ends, and clear molded beam blades can be attached to both sides.",
+			"The beam blade can be removed and the beam trident can be attached to a backpack and carried.",
+			"● New figure included!",
+			"The same scale figure of Zhang Wufei in the uniform of the Marie Meia army is included with a new model. (standing/sitting)",
+			"● Newly designed water transfer decal included!",
+			"Attached weapons: Dragon hang x 2 / twin beam trident",
+			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
+			"1/100 Scale Assembly plastic model",
+			"Target age: 15 years old or older",
+			"Product material: PS/PE/ABS",
+			"・No adhesive is used for assembly",
+			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
+			"*The finished product in the photo is a prototype that is still under development. It is also painted. There may be slight differences from the actual product.",
+			"*Please note that some of the clear parts may contain air bubbles due to the manufacturing process.",
+			"(remarks)",
+			"・This product cannot be purchased at stores that carry plastic models.",
+			"・This product may be sold at events sponsored by our company or other projects, or overseas.",
+			"・ There is a limited number of this product available for sale at 'Premium Bandai'. Please note that the item may be out of stock.",
+			"・Due to production availability, we are limiting the quantity of this product that can be purchased per person.",
+			"note that.",
+			"- Shipping of this product may change depending on the application status and production circumstances. Thank you for your understanding.",
+			"・Product images are under development and may differ from the actual product.",
+			"- Product specifications are scheduled as of 20158. Please note that there may be changes."
 		]
 	},
 	"images": {
@@ -38,11 +155,6 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000099146_1.jpg",
 				"path": "/images/items/01_3984/1000099146_1.jpg",
 				"hash": "1b2b76e850d8400aacb7171c324d3749"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000099146_10.jpg",
-				"path": "/images/items/01_3984/1000099146_10.jpg",
-				"hash": "fdf0dfc8e1a97fae52a8841f6244dc69"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000099146_2.jpg",
@@ -83,19 +195,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000099146_9.jpg",
 				"path": "/images/items/01_3984/1000099146_9.jpg",
 				"hash": "9ad960871365a81814148b8e16704153"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000099146_10.jpg",
+				"path": "/images/items/01_3984/1000099146_10.jpg",
+				"hash": "fdf0dfc8e1a97fae52a8841f6244dc69"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3984/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5994", "item-1000220190", "item-1000220189", "item-1000216105"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2265",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2265/"

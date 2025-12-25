@@ -5,6 +5,45 @@
 		"ja": "ＲＧ 1/144 ガンダムアストレア タイプ-Ｆ",
 		"en": "RG 1/144 Gundam Astrea Type-F"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "00-f",
+			"url": "https://bandai-hobby.net/series/00-f/",
+			"ja": "機動戦士ガンダム00Ｆ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000224328",
+			"url": "https://p-bandai.jp/item/item-1000224328/",
+			"ja": "ＨＧ 1/144 ガンダムプルトーネブラック"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4840,
 		"currency": "JPY",
@@ -17,19 +56,76 @@
 		"month": 10
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"プレミアムバンダイはこちら",
-			"※プレミアムバンダイのトップページに遷移します。",
-			"※一部のエリアでは販売していません。",
-			"※エリアにより申込開始の日時は異なります。"
+			"－－－　　リ ア ル グ レ ー ド で 登 場 ！ ガ ン ダ ム ア ス ト レ ア タ イ プ - Ｆ　　－－－",
+			"1/144では類をみない細密表現と “リアル”を追及したＲＧシリーズで、ガンダムアストレア タイプ-Ｆを再現！",
+			"公式外伝『機動戦士ガンダム００ Ｆ』より、赤いカラーが特徴的なガンダムアストレア タイプ-Ｆを商品化。",
+			"● 特徴的な本体形状を新規造形で再現!!",
+			"ガンダムエクシアとは形状が異なる頭部、襟部、首元部、胸部、肩部、腹部、フロントアーマー、リアアーマー、",
+			"腕部側面、膝部側面を新規造形で再現。",
+			"● パーツの選択で、タイプＦとタイプＦ２が再現可能な選択式キット!!",
+			"顔部は、両タイプともに、マスクあり、なしを再現可能。",
+			"● ＲＧ基準で設計された数々の武装を同梱!!",
+			"ＧＮランチャー、プロトＧＮソード、ＧＮビームライフル、ＧＮシールドが新規で付属。",
+			"プロトＧＮソードを腕部に装着した状態で、ＧＮビームライフルを構えるポーズが可能なジョイントパーツが付属。",
+			"● ガンダムアストレア タイプ-Ｆ用の新規のリアリスティックデカールが付属。",
+			"● 遊びの幅が広がる多彩な武装が付属。",
+			"● ＨＧシリーズキットの各武装も装備可能。　　※「HG 1/144 ガンダムアストレア タイプ-Ｆ」は別売です。",
+			"付属武装 ： ＧＮランチャー、プロトＧＮソード、ＧＮビームライフル、ＧＮビームサーベル、ＧＮビームダガー、ＧＮシールド",
+			"（ ＧＮソード、ＧＮロングブレイド、ＧＮショートブレイド、ＧＮシールド（ＲＧ ガンダムエクシア用形状） ）",
+			"※（　）内は ガンダムエクシア使用時の設定色とは異なります。",
+			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
+			"１／１４４スケール組み立て式プラモデル",
+			"対象年齢：15才以上",
+			"製品素材：ＰＳ・ＰＰ・ＰＥＴ・ＡＢＳ",
+			"・組み立てに接着剤は使用しません",
+			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
+			"※写真の完成品は開発途中の試作品です。また塗装品です。実際の商品とは多少異なります。",
+			"（備考）",
+			"・ この商品は、プラモデルお取り扱い店舗店頭ではお買い求めいただけません。",
+			"・ この商品は、弊社主催イベントや他の企画などで販売をさせていただく場合がございます。",
+			"・ この商品は‘プレミアムバンダイ’での販売準備数に限りがございます。",
+			"品切れの際はご了承ください。",
+			"・ この商品は、お申込状況、生産準備数の都合により、お一人様につきご購入いただける数量を",
+			"限らせていただいております。予めご了承ください。",
+			"・ 商品画像は開発途中のものであり、実際の商品とは異なる場合がございます。",
+			"・ 商品仕様は2014年7月現在の予定です。変更の場合もございますがご了承ください。"
 		],
 		"en": [
-			"Click here for Premium Bandai",
-			"*Transition to the Premium Bandai top page.",
-			"*Not available in some areas.",
-			"*Application start times vary depending on the area."
+			"--- Now available in Real Grade! GUNDAM ASTRAY TYPE - F ---",
+			"The Gundam Astraea Type-F is reproduced in the RG series, which pursues unparalleled detail and \"realism\" in 1/144!",
+			"From the official side story \"Mobile Suit Gundam 00 F\", we have commercialized the Gundam Astrea Type-F, which has a distinctive red color.",
+			"● Reproduce the characteristic body shape with new modeling!!",
+			"The head, collar, neck, chest, shoulders, abdomen, front armor, rear armor, which has a different shape from Gundam Exia,",
+			"The sides of the arms and knees are reproduced with new modeling.",
+			"● Selectable kit that allows you to reproduce type F and type F2 by selecting parts!!",
+			"The face can be reproduced with or without a mask for both types.",
+			"● Includes numerous weapons designed according to RG standards!!",
+			"Newly included GN Launcher, Proto GN Sword, GN Beam Rifle, and GNSeal.",
+			"Comes with joint parts that allow you to pose with the Proto GN Sword attached to your arm and the GN Beam Rifle.",
+			"● New realistic decal for Gundam Astrea Type-F is included.",
+			"● Comes with a variety of weapons that expand the range of play.",
+			"● Each weapon of the HG series kit can also be equipped. *\"HG 1/144 Gundam Astrea Type-F\" is sold separately.",
+			"Attached weapons: GN launcher, proto GN sword, GN beam rifle, GN beam saber, GN beam dagger, GN Seal sword",
+			"(GN Sword, GN Long Blade, GN Short Blade, GNSeal (shape for RG Gundam Exia))",
+			"*The color in parentheses is different from the color set when using Gundam Exia.",
+			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
+			"1/144 Scale Assembly plastic model",
+			"Target age: 15 years old or older",
+			"Product material: PS, PP, PET, ABS",
+			"・No adhesive is used for assembly",
+			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
+			"*The finished product in the photo is a prototype that is still under development. Also a painted item. The actual product may differ slightly.",
+			"(remarks)",
+			"・This product cannot be purchased at stores that carry plastic models.",
+			"・This product may be sold at events sponsored by our company or other projects.",
+			"・ There is a limited number of this product available for sale at 'Premium Bandai'.",
+			"Please note that the item may be out of stock.",
+			"・Depending on the application status and the number of production preparations, the quantity that can be purchased per person for this product may be limited.",
+			"It is limited. Thank you for your understanding.",
+			"・Product images are under development and may differ from the actual product.",
+			"- Product specifications are scheduled as of 20147. Please note that there may be changes."
 		]
 	},
 	"images": {
@@ -38,11 +134,6 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000090644_1.jpg",
 				"path": "/images/items/01_3944/1000090644_1.jpg",
 				"hash": "a250aa6f488be535994db27f650877ab"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000090644_10.jpg",
-				"path": "/images/items/01_3944/1000090644_10.jpg",
-				"hash": "fdec22ad1a68e85834887c13be8127b0"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000090644_2.jpg",
@@ -83,19 +174,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000090644_9.jpg",
 				"path": "/images/items/01_3944/1000090644_9.jpg",
 				"hash": "e412692b18f659255d4ead0e8edac95a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000090644_10.jpg",
+				"path": "/images/items/01_3944/1000090644_10.jpg",
+				"hash": "fdec22ad1a68e85834887c13be8127b0"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3944/",
-	"brandIds": ["rg", "pb_rg", "pb_gunpla"],
-	"seriesIds": ["00-f"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000224328"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2261",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2261/"

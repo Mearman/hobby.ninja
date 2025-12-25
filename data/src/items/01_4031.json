@@ -5,6 +5,55 @@
 		"ja": "RE/100 1/100 イフリート・シュナイド",
 		"en": "RE/100 1/100 Ifrit Schneid"
 	},
+	"brands": [
+		{
+			"id": "re100",
+			"url": "https://bandai-hobby.net/brand/re100/",
+			"ja": "RE/100[リボーンワンハンドレッド]"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216106",
+			"url": "https://p-bandai.jp/item/item-1000216106/",
+			"ja": "RG 1/144 ユニコーンガンダム２号機 バンシィ・ノルン (最終決戦仕様) [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000183366",
+			"url": "https://p-bandai.jp/item/item-1000183366/",
+			"ja": "ＭＧ 1/100 スタークジェガン"
+		},
+		{
+			"id": "item-1000164780",
+			"url": "https://p-bandai.jp/item/item-1000164780/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム ペルフェクティビリティ用 ディバイン拡張セット"
+		},
+		{
+			"id": "item-1000164779",
+			"url": "https://p-bandai.jp/item/item-1000164779/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム ペルフェクティビリティ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -17,19 +66,82 @@
 		"month": 9
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"プレミアムバンダイはこちら",
-			"※プレミアムバンダイのトップページに遷移します。",
-			"※一部のエリアでは販売していません。",
-			"※エリアにより申込開始の日時は異なります。"
+			"－－－－－",
+			"いよいよ登場！ １４本のヒート・ダートを装備したイフリート・シュナイドを立体化！！",
+			"－－－－－",
+			"『機動戦士ガンダムＵＣ』より、１４本のヒート・ダートを携えたイフリート・シュナイドをRE/100シリーズで商品化。",
+			"特徴的な武装に加え、ＭＳ本体形状も徹底再現！　ジャイアント・バズも付属！",
+			"●　特徴的な武装を再現！",
+			"印象的な１４本のヒート・ダートは、刃にモールドを施した新規造形で再現し、各アーマーへのマウントが可能。",
+			"大型のジャイアント・バズも付属。",
+			"• ■ ヒート・ダート",
+			"投擲武器としても使用可能な短剣‘ヒート・ダート’の形状をリアルに再現。",
+			"キットでも、肩アーマーに左右それぞれ４本ずつ、左腕に４本、背面腰部に２本、携行装備可能。",
+			"それぞれのヒート・ダートは、とりはずしが可能。",
+			"※当商品の１４本のヒート・ダートは、１２本がマウント用、２本がマウント兼手持ち用です。",
+			"※掲載写真は塗装してあります。",
+			"• ■ ジャイアント・バズ",
+			"遠距離戦に対応する武器として、全長約１８０ｍｍ大型武器 ジャイアント・バズが付属。専用の持ち手パーツも同梱。",
+			"●　ＭＳ本体形状、徹底再現！",
+			"イフリート改と異なる、後頭部アーマー、胸部アーマー、腕部アーマー、バックパックの形状変更に加え、",
+			"肩アーマー内部のディテールも新規デザインで再現。",
+			"付属武装　：　ヒート・ダート ／ ジャイアント・バズ",
+			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
+			"１／１００スケール組み立て式プラモデル",
+			"対象年齢：１５才以上",
+			"製品素材：ＰＳ・ＰＥ",
+			"・組み立てに接着剤は使用しません",
+			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
+			"※写真の完成品は塗装してあります。また、開発途中の試作品です。実際の商品とは多少異なる場合がございます。",
+			"（備考）",
+			"・ この商品は、プラモデルお取り扱い店舗店頭ではお買い求めいただけません。",
+			"・ この商品は、弊社主催イベントや他の企画などおよび海外で販売をさせていただく場合がございます。",
+			"・ この商品は‘プレミアムバンダイ’での販売準備数に限りがございます。品切れの際はご了承ください。",
+			"・ この商品は、生産準備数の都合により、お一人様につきご購入いただける数量を限らせていただいております。",
+			"ご了承ください。",
+			"・ この商品は、お申込状況、生産の都合により、発送日が変更となる場合がございます。予めご了承ください。",
+			"・ 商品画像は開発途中のものであり、実際の商品とは異なる場合がございます。",
+			"・ 商品仕様は2016年6月現在の予定です。変更の場合もございますがご了承ください。"
 		],
 		"en": [
-			"Click here for Premium Bandai",
-			"*Transition to the Premium Bandai top page.",
-			"*Not available in some areas.",
-			"*Application start times vary depending on the area."
+			"－－－－－",
+			"It's finally here! A three-dimensional version of Ifrit Schneid equipped with 14 heat darts! !",
+			"－－－－－",
+			"From \"Mobile Suit Gundam UC\", Ifrit Schneid, who carries 14 heat darts, is commercialized in the RE/100 series.",
+			"In addition to the distinctive weapons, the shape of the MS body is also thoroughly reproduced! Giant Buzz is also included!",
+			"● Reproduce the characteristic weapons!",
+			"The impressive 14 heat darts are reproduced with a new molded blade, and can be mounted on each armor.",
+			"A large giant buzz is also included.",
+			"• ■ Heat Dirt",
+			"Realistic reproduction of the shape of the dagger 'Heat Dart' which can also be used as a throwing weapon.",
+			"Even in the kit, it can be carried and equipped with 4 on each side on the shoulder armor, 4 on the left arm, and 2 on the back waist.",
+			"Each heat dart can be removed.",
+			"*Of the 14 heat darts in this product, 12 are for mounting, and 2 are for mounting and holding.",
+			"*The photo shown is painted.",
+			"• ■ Giant Buzz",
+			"A large weapon with a total length of approximately 180mm, Giant Buzz, is included as a weapon for long-range combat. Special handle parts are also included.",
+			"● MS body shape, thoroughly reproduced!",
+			"In addition to changing the shape of the back of the head armor, chest armor, arm armor, and backpack, which are different from Ifrit Kai,",
+			"The details inside the shoulder armor are also reproduced with a new design.",
+			"Attached weapons: Heat Dart / Giant Buzz",
+			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
+			"1/100 Scale Assembly plastic model",
+			"Target age: 15 years old or older",
+			"Product material: PS/PE",
+			"・No adhesive is used for assembly",
+			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
+			"*The finished product in the photo is painted. Also, a prototype that is still under development. There may be slight differences from the actual product.",
+			"(remarks)",
+			"・This product cannot be purchased at stores that carry plastic models.",
+			"・This product may be sold at events sponsored by our company or other projects, or overseas.",
+			"・ There is a limited number of this product available for sale at 'Premium Bandai'. Please note that the item may be out of stock.",
+			"・Due to production availability, we are limiting the quantity of this product that can be purchased per person.",
+			"note that.",
+			"- Shipping of this product may change depending on the application status and production circumstances. Thank you for your understanding.",
+			"・Product images are under development and may differ from the actual product.",
+			"- Product specifications are scheduled as of 20166. Please note that there may be changes."
 		]
 	},
 	"images": {
@@ -38,11 +150,6 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000105137_1.jpg",
 				"path": "/images/items/01_4031/1000105137_1.jpg",
 				"hash": "ef238e2a35a5e3ea1cdd0e64bdd49c6d"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000105137_10.jpg",
-				"path": "/images/items/01_4031/1000105137_10.jpg",
-				"hash": "e5148d4fd57cddf3b108aa4a49a37565"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000105137_2.jpg",
@@ -83,19 +190,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000105137_9.jpg",
 				"path": "/images/items/01_4031/1000105137_9.jpg",
 				"hash": "525eee0a8829f183f49cf0ea701a8cf9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000105137_10.jpg",
+				"path": "/images/items/01_4031/1000105137_10.jpg",
+				"hash": "e5148d4fd57cddf3b108aa4a49a37565"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4031/",
-	"brandIds": ["re100", "pb_gunpla"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216106", "item-1000183366", "item-1000164780", "item-1000164779"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2795",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2795/"

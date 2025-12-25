@@ -5,6 +5,60 @@
 		"ja": "HGUC 1/144 ペイルライダー（陸戦重装備仕様）",
 		"en": "HGUC 1/144 Pale Rider (Land combat heavy equipment specification)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "missinglink",
+			"url": "https://bandai-hobby.net/series/missinglink/",
+			"ja": "機動戦士ガンダム外伝 ミッシングリンク"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000152855",
+			"url": "https://p-bandai.jp/item/item-1000152855/",
+			"ja": "ＨＧ 1/144 ペイルライダー・キャバルリー"
+		},
+		{
+			"id": "item-1000148541",
+			"url": "https://p-bandai.jp/item/item-1000148541/",
+			"ja": "ＨＧ 1/144 トーリスリッター"
+		},
+		{
+			"id": "item-1000140759",
+			"url": "https://p-bandai.jp/item/item-1000140759/",
+			"ja": "ＨＧ 1/144 イフリート（ダグ・シュナイド機）"
+		},
+		{
+			"id": "item-1000140492",
+			"url": "https://p-bandai.jp/item/item-1000140492/",
+			"ja": "ＨＧ 1/144 陸戦型ジム（スレイヴ・レイス隊仕様）（パラシュート・パック仕様）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 4
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ゲームソフト『機動戦士ガンダム サイドストーリーズ』に収録されるエピソード「機動戦士ガンダム外伝 ミッシングリンク」より、",
@@ -55,7 +108,7 @@
 			"・ 商品仕様は2015年1月現在の予定です。変更の場合もございますがご了承ください。"
 		],
 		"en": [
-			"From the episode \"Mobile Suit Gundam Gaiden Missing Link \" included in the game software \" Mobile Suit Gundam Side Stories\",",
+			"From the episode \"Mobile Suit Gundam Gaiden Missing Link\" included in the game software \"Mobile Suit Gundam Side Stories\",",
 			"Pale Rider (Land combat heavy equipment specification) GunplaKit version! !",
 			"From \"Mobile Suit Gundam Gaiden Missing Link\", Pale Rider appears as an assassin to the Slave Wraith Corps.",
 			"Commercialized in the 1/144 Scale HGUC series.",
@@ -67,7 +120,7 @@
 			"The large 180mm cannon can be mounted on the waist and unfolded to recreate a shooting pose, and when carried it can be folded and mounted on the back.",
 			"Also included is a spike/Seal with a telescopic gimmick attached to the pile driver at the tip.",
 			"● You can reproduce the appearance when HADES is activated!",
-			"Comes with two colored visors, clear green molded and clear red molded,",
+			"Comes with two colored visors, clear green molded and clear red molded.",
 			"Normal state and HADES activation state can be reproduced by selecting the visor and seal.",
 			"Attached weapons: 180mm cannon / 90mm bullpup machine gun / leg missile pod / beam saber /",
 			"Spike Seal",
@@ -96,11 +149,6 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000095833_1.jpg",
 				"path": "/images/items/01_3955/1000095833_1.jpg",
 				"hash": "43d5e618870a940851d1bf8f39fec921"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000095833_10.jpg",
-				"path": "/images/items/01_3955/1000095833_10.jpg",
-				"hash": "a023aebf4f23ac8fef761ca7852e11d2"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000095833_2.jpg",
@@ -141,19 +189,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000095833_9.jpg",
 				"path": "/images/items/01_3955/1000095833_9.jpg",
 				"hash": "ceb9c8ab02e638308e16c8145f259c1a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000095833_10.jpg",
+				"path": "/images/items/01_3955/1000095833_10.jpg",
+				"hash": "a023aebf4f23ac8fef761ca7852e11d2"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3955/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["missinglink"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000152855", "item-1000148541", "item-1000140759", "item-1000140492"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2208",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2208/"
