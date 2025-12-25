@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "炎上丸",
-		"en": "ENJOHMARU"
+		"en": "Flame Maru"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "wataru",
+			"url": "https://bandai-hobby.net/series/wataru/",
+			"ja": "ワタルシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5504",
+			"url": "https://bandai-hobby.net/item/01_5504/",
+			"ja": "神龍王丸"
+		},
+		{
+			"id": "01_5503",
+			"url": "https://bandai-hobby.net/item/01_5503/",
+			"ja": "炎上丸"
+		},
+		{
+			"id": "01_5502",
+			"url": "https://bandai-hobby.net/item/01_5502/",
+			"ja": "雷神丸"
+		},
+		{
+			"id": "01_5495",
+			"url": "https://bandai-hobby.net/item/01_5495/",
+			"ja": "龍王丸"
+		}
+	],
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -34,63 +71,54 @@
 			"• The flaming wings on the back and the flaming dark sword are recreated using PET sheets!"
 		]
 	},
-	"accessories": {
-		"ja": ["炎上暗剣"],
-		"en": ["flaming dark sword"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "炎上暗剣",
+				"en": "flaming dark sword"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5503_0.jpg",
 				"path": "/images/items/01_5503/01_5503_0.jpg",
 				"hash": "9c416b001aa27be763abd0a0c4210f4d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5503_1.jpg",
 				"path": "/images/items/01_5503/01_5503_1.jpg",
 				"hash": "e721dcb77c30feab71f5f5491cb7335d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5503_2.jpg",
 				"path": "/images/items/01_5503/01_5503_2.jpg",
 				"hash": "ba6ca9bba6d61fc8ef9c0ab3af9c6ca9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5503_3.jpg",
 				"path": "/images/items/01_5503/01_5503_3.jpg",
 				"hash": "1ee9843c2392b82b7f06db45e40174d7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5503_4.jpg",
 				"path": "/images/items/01_5503/01_5503_4.jpg",
 				"hash": "abf6192fe9347016dfe83cd4fe37902b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5503_5.jpg",
 				"path": "/images/items/01_5503/01_5503_5.jpg",
 				"hash": "c16038de033e3c2a351a76eebbf4c7b7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5503_6.jpg",
 				"path": "/images/items/01_5503/01_5503_6.jpg",
 				"hash": "3d082653b432cc1864461085353943ba"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5503_7.jpg",
 				"path": "/images/items/01_5503/01_5503_7.jpg",
 				"hash": "5fff896d3b386c8bd9d5d88633f0546d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5503_8.jpg",
 				"path": "/images/items/01_5503/01_5503_8.jpg",
 				"hash": "fc6e1b5ca54df954142cb85dfe360c1e"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5503/",
-	"brandIds": [],
-	"seriesIds": ["wataru"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5504", "01_5503", "01_5502", "01_5495"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5503/"
 }

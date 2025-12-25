@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "BB戦士 機動戦士ガンダム ジオン公国軍MSセット",
-		"en": "BB SENSHI MOBILE SUIT GUNDAM PRINCIPALITY OF ZEON MOBILE SUIT SET"
+		"en": "BB Senshi Mobile Suit Gundam Zeon Principality Army MS Set"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4789",
+			"url": "https://bandai-hobby.net/item/01_4789/",
+			"ja": "SD ゴッグ&アッガイ&ゾック Ver.GFT トリコロールペイント"
+		},
+		{
+			"id": "01_4783",
+			"url": "https://bandai-hobby.net/item/01_4783/",
+			"ja": "SD RX-78-2 ガンダム Ver.GFT"
+		},
+		{
+			"id": "01_2038",
+			"url": "https://bandai-hobby.net/item/01_2038/",
+			"ja": "BB戦士240 神武兜頑駄無（カブトガンダム）"
+		},
+		{
+			"id": "01_1916",
+			"url": "https://bandai-hobby.net/item/01_1916/",
+			"ja": "BB戦士238 ゴッグ&アッガイ&ゾック"
+		}
+	],
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -20,86 +63,103 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム』より、人気のSD ガンダムがセットになって復活！",
+			"『機動戦士ガンダム』より、人気のSDガンダムがセットになって復活！",
 			"• 「ザクII F型」「ザクII S型」「ゴッグ&アッガイ&ゾック」がセットになって登場。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam\", the popular SD Gundam is back as a set!",
-			"• \"Zaku II F type \", \" Zaku II S type \", and \" Gog & Acguy & Zock\" are now available as a set."
+			"From \"Mobile Suit Gundam\", the popular SDGundam is back as a set!",
+			"• \"Zaku II F type\", \"Zaku II S type\", and \"Gog & Acguy & Zock\" are now available as a set."
 		]
 	},
-	"accessories": {
-		"ja": ["BB戦士218 ザクII F型×1", "BB戦士231 ザクII S型×1", "BB戦士238 ゴッグ&アッガイ&ゾック×1", "シール×3"],
-		"en": [
-			"BB Senshi 218 Zaku II F type x 1",
-			"BB Senshi 231 Zaku II S type x 1",
-			"BB Senshi 238 Gog & Acguy & Zock x 1",
-			"Seal×3"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "BB戦士218 ザクII F型",
+				"en": "BB Senshi 218 Zaku II F type"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "BB戦士231 ザクII S型",
+				"en": "BB Senshi 231 Zaku II S type"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "BB戦士238 ゴッグ&アッガイ&ゾック",
+				"en": "BB Senshi 238 Gog & Acguy & Zock"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 3
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6300.jpg",
+				"src": "https://bandai-hobby.net/images/153_6300_s_djnltubxqdzbhli955dmssbncm9h.jpg",
 				"path": "/images/items/01_5456/153_6300.jpg",
 				"hash": "6e63909127daf815d928699405b8124b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6300.jpg",
+				"src": "https://bandai-hobby.net/images/155_6300_s_24ojrjpbxjxp8mn8lbalk53tn6hy.jpg",
 				"path": "/images/items/01_5456/155_6300.jpg",
 				"hash": "76bd4ed5b022071245267554b71c73b6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6300.jpg",
+				"src": "https://bandai-hobby.net/images/156_6300_s_b0p2s6f3uydi6bwutmffdlpkgnum.jpg",
 				"path": "/images/items/01_5456/156_6300.jpg",
 				"hash": "fe8ea4a04d420ed35671274d0aa633d4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6300.jpg",
+				"src": "https://bandai-hobby.net/images/157_6300_s_vadhvxvcna8tbxqnfqv3i4wnjhie.jpg",
 				"path": "/images/items/01_5456/157_6300.jpg",
 				"hash": "fdcd1095f317dc1101a2e8047528048c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6300.jpg",
+				"src": "https://bandai-hobby.net/images/158_6300_s_zl5t433tlrkpue9zv81fyy30jenb.jpg",
 				"path": "/images/items/01_5456/158_6300.jpg",
 				"hash": "d3c16843c2fb85f6e0265ed4771c643b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6300.jpg",
+				"src": "https://bandai-hobby.net/images/159_6300_s_an3h3dbyeg4auf3qyqu0fd34mtsi.jpg",
 				"path": "/images/items/01_5456/159_6300.jpg",
 				"hash": "b92623e0a1cd9a4bc3f22353dc27e13a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6300.jpg",
+				"src": "https://bandai-hobby.net/images/189_6300_s_j18pnd7380pu49hkwfyvvw1fw6ei.jpg",
 				"path": "/images/items/01_5456/189_6300.jpg",
 				"hash": "ce9c840f83b069d3d32badf9c6be56d3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6300.jpg",
+				"src": "https://bandai-hobby.net/images/190_6300_s_xwozp9vj3kqqkhp91un39q5j40o6.jpg",
 				"path": "/images/items/01_5456/190_6300.jpg",
 				"hash": "7860099ac39df279863caf2b7b8bbae3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6300.jpg",
+				"src": "https://bandai-hobby.net/images/191_6300_s_hxen7jzb84mf9jdcpzuuws9r6mn3.jpg",
 				"path": "/images/items/01_5456/191_6300.jpg",
 				"hash": "17a2426d696676464fc149b1754f3df0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_6300.jpg",
+				"src": "https://bandai-hobby.net/images/192_6300_s_kvx9t5r4e18vm4vvugov2wpadfsh.jpg",
 				"path": "/images/items/01_5456/192_6300.jpg",
 				"hash": "736b59f7a3b00af4ae7cd20403aeaf2e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_6300.jpg",
+				"src": "https://bandai-hobby.net/images/193_6300_s_imdoc5ycml5ds8d4fmmpv0skjppx.jpg",
 				"path": "/images/items/01_5456/193_6300.jpg",
 				"hash": "d677bd286af0718edc292201294c7f58"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5456/",
-	"brandIds": ["bb"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4789", "01_4783", "01_2038", "01_1916"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5456/"
 }

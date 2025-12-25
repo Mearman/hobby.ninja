@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "ENTRY GRADE 1/144 ストライクルージュ",
-		"en": "ENTRY GRADE 1/144 STRIKE ROUGE"
+		"en": "ENTRY GRADE 1/144 Strike Rouge"
 	},
+	"brands": [
+		{
+			"id": "entry_grade_g",
+			"url": "https://bandai-hobby.net/brand/entry_grade_g/",
+			"ja": "ENTRY GRADE"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4211",
+			"url": "https://bandai-hobby.net/item/01_4211/",
+			"ja": "ENTRY GRADE 1/144 ガンダムベース限定 ストライクガンダム [ペインティング モデル]"
+		},
+		{
+			"id": "01_3744",
+			"url": "https://bandai-hobby.net/item/01_3744/",
+			"ja": "ENTRY GRADE 1/144 ストライクガンダム"
+		},
+		{
+			"id": "01_3788",
+			"url": "https://bandai-hobby.net/item/01_3788/",
+			"ja": "ENTRY GRADE 1/144 ストライクガンダム(ライトパッケージVer.)"
+		}
+	],
+	"manual": {
+		"id": "2082",
+		"url": "https://manual.bandai-hobby.net/menus/detail/2082"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -18,86 +61,96 @@
 		"day": 17
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED』より、カガリの搭乗機であるストライクルージュが“簡単組み立て×ハイクオリティ”のENTRY GRADEで登場！",
+			"『機動戦士ガンダムSEED』より、カガリの搭乗機であるストライクルージュが“簡単組み立て×ハイクオリティ”のENTRY GRADEで登場！",
 			"• 各種武装が付属。また、カガリのパーソナルマークなどのマーキングシールが付属。",
 			"• 少ないパーツ数ながらも秀逸な色分け再現。",
 			"• 大胆なアクションにも対応可能な可動域。",
-			"• 別売りの「オプションパーツセット ガンプラ 15 (キャバリアーアイフリッド) 」が装着可能。『機動戦士ガンダム SEED FREEDOM』の劇中再現ができる。",
+			"• 別売りの「オプションパーツセット ガンプラ 15 (キャバリアーアイフリッド) 」が装着可能。『機動戦士ガンダムSEED FREEDOM』の劇中再現ができる。",
 			"• 別売りの「オプションパーツセット ガンプラ 01 (エールストライカー)」が装着可能。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam SEED \", Cagalli's aircraft Strike Rouge is now available as an \" easy assembly x high quality\" ENTRY GRADE!",
+			"From \"Mobile Suit GundamSEED\", Kagalli's aircraft Strike Rouge is now available as an \"easy assembly x high quality\" ENTRY GRADE!",
 			"• Various weapons are included. Also included is a MarkingSeal such as Cagalli's personal mark.",
 			"• Excellent color-coded reproduction despite the small number of parts.",
 			"• Range of motion that allows for bold actions.",
-			"• \"Optional parts set Gunpla 15 (Cavalier Aifrid)\" sold separately can be installed. You can recreate the movie from ``Mobile Suit Gundam SEED FREEDOM''.",
+			"• \"Optional parts set Gunpla 15 (Cavalier Aifrid)\" sold separately can be installed. You can recreate the movie from ``Mobile Suit GundamSEED FREEDOM.''",
 			"• \"Optional parts set Gunpla 01 (Ale Striker)\" sold separately can be installed."
 		]
 	},
-	"accessories": {
-		"ja": ["ビームライフル×1", "シールド×1", "シール×1"],
-		"en": ["Beam rifle x 1", "Seal × 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6285.jpg",
+				"src": "https://bandai-hobby.net/images/153_6285_s_tdnjgewom78wvefi174rks4zsnqo.jpg",
 				"path": "/images/items/01_5440/153_6285.jpg",
 				"hash": "903f52f5f68bf41c5f69b030c43775f1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6285.jpg",
+				"src": "https://bandai-hobby.net/images/155_6285_s_zweh40t7qyskbe4u4jfwh0fya2rt.jpg",
 				"path": "/images/items/01_5440/155_6285.jpg",
 				"hash": "56a33f1670dd22b8ffaf08a1d00135d6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6285.jpg",
+				"src": "https://bandai-hobby.net/images/156_6285_s_b76o836u9rq4r3ku3zeqjc0g4b56.jpg",
 				"path": "/images/items/01_5440/156_6285.jpg",
 				"hash": "09d564895067b6cd940e0590dd29463a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6285.jpg",
+				"src": "https://bandai-hobby.net/images/157_6285_s_pzs9lz6rfkbi5v7acm27zw0feor3.jpg",
 				"path": "/images/items/01_5440/157_6285.jpg",
 				"hash": "abe0461f8149318c593b07bd4f2e4341"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6285.jpg",
+				"src": "https://bandai-hobby.net/images/158_6285_s_t2pjmk19tfdsu9y8dmpgc5dpqbs0.jpg",
 				"path": "/images/items/01_5440/158_6285.jpg",
 				"hash": "be822f76314a503c40e6461aa6b7bbe5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6285.jpg",
+				"src": "https://bandai-hobby.net/images/159_6285_s_nq2o2hlaqendo3vwcnmesjt0dez7.jpg",
 				"path": "/images/items/01_5440/159_6285.jpg",
 				"hash": "e17a8a0c394487e04fc8bf3f54fa7972"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6285.jpg",
+				"src": "https://bandai-hobby.net/images/189_6285_s_7gqp6q5x264e74otmx1sp0n4pdd6.jpg",
 				"path": "/images/items/01_5440/189_6285.jpg",
 				"hash": "0d29737558ace79054ea302a142147c6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6285.jpg",
+				"src": "https://bandai-hobby.net/images/190_6285_s_2po5mh2fjg7sbxgq8ypfkqjvjbkn.jpg",
 				"path": "/images/items/01_5440/190_6285.jpg",
 				"hash": "0e09254cdca0bebd4092eddcdc36607a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6285.jpg",
+				"src": "https://bandai-hobby.net/images/191_6285_s_jgvt2f7zwip3jv5a5fqy0lh0wktw.jpg",
 				"path": "/images/items/01_5440/191_6285.jpg",
 				"hash": "c8c9d6c8e069f676f358115218235a68"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5440/",
-	"brandIds": ["entry_grade"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4211", "01_3744", "01_3788"],
-	"manual": {
-		"id": "2082",
-		"url": "https://manual.bandai-hobby.net/menus/detail/2082/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5440/"
 }

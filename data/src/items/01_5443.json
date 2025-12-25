@@ -2,9 +2,52 @@
 	"id": "01_5443",
 	"type": "item",
 	"name": {
-		"ja": "30MM 1/144 eEXM-17FA フルアーマーアルト",
-		"en": "30MM 1/144 eEXM-17FA FULL ARMOR ALTO"
+		"ja": "30MM 1/144 eEXM-17FA  フルアーマーアルト",
+		"en": "30MM 1/144 eEXM-17FA Full Armor Alto"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2178,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMシリーズを代表する機体「アルト」が待望のフルアーマー化！強力な武装を携え再び戦場に降り立つ！",
@@ -39,69 +81,93 @@
 			"• The armor parts that come with the Premium Bandai exclusive product \"30MM 1/144 eEXM-17A Alto (X777 unit affiliation machine)\" are included in a new coloring."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"フルアーマー用バックパック/アーマー×1式",
-			"可変式大型武装×2",
-			"ロイロイ×1",
-			"30ＭＭ 1/144 eEXM-17A アルト（Ｘ７７７部隊所属機）アーマー×1式"
-		],
-		"en": [
-			"Full armor backpack/armor x 1 set",
-			"Variable large armament x 2",
-			"Loi Loi x 1",
-			"30MM 1/144 eEXM-17A Alto (X777 unit belonging machine) Armor x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フルアーマー用バックパック/アーマー",
+				"en": "Full armor backpack/armor"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "可変式大型武装",
+				"en": "Variable large armament"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ロイロイ",
+				"en": "Loi Loi"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "30ＭＭ 1/144 eEXM-17A アルト（Ｘ７７７部隊所属機）アーマー",
+				"en": "30MM 1/144 eEXM-17A Alto (X777 unit belonging machine) Armor"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6288.jpg",
+				"src": "https://bandai-hobby.net/images/153_6288_s_dadbakyu06isjoumuy412cpuky23.jpg",
 				"path": "/images/items/01_5443/153_6288.jpg",
 				"hash": "b0486f4c4c52ccbfc0346ab025df57bd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6288.jpg",
+				"src": "https://bandai-hobby.net/images/155_6288_s_pazadsm06i4m4zfxpe24w8n8fknl.jpg",
 				"path": "/images/items/01_5443/155_6288.jpg",
 				"hash": "6e1a19bf21dba3068b173dc2a65421ef"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6288.jpg",
+				"src": "https://bandai-hobby.net/images/156_6288_s_o9v4b0wuh70ygbknt9xid7zfi1bp.jpg",
 				"path": "/images/items/01_5443/156_6288.jpg",
 				"hash": "bef3dce0e53368c2d53f182dcc8ecf1c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6288.jpg",
+				"src": "https://bandai-hobby.net/images/157_6288_s_xty0x6xrcjxatv3fpy0xabl3rnla.jpg",
 				"path": "/images/items/01_5443/157_6288.jpg",
 				"hash": "646fe745a509a2db25bad0c43975a5c4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6288.jpg",
+				"src": "https://bandai-hobby.net/images/158_6288_s_zlzice9rgepkr0fzd1h4c0iygxkj.jpg",
 				"path": "/images/items/01_5443/158_6288.jpg",
 				"hash": "dc82ad43d136c88de8535421d6141b6a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6288.jpg",
+				"src": "https://bandai-hobby.net/images/159_6288_s_e2692voizqdb8x2cvlcpiiz1r1ok.jpg",
 				"path": "/images/items/01_5443/159_6288.jpg",
 				"hash": "0f6fec04b181eecd04b0fc28a0cc5b79"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6288.jpg",
+				"src": "https://bandai-hobby.net/images/189_6288_s_puvzx0ml5ez62ffxnq43pp0vke9r.jpg",
 				"path": "/images/items/01_5443/189_6288.jpg",
 				"hash": "72c277395ff89fdb222be3b833a27437"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6288.jpg",
+				"src": "https://bandai-hobby.net/images/190_6288_s_cv0ur5xlidwr5n0sr7c1c86ix3gt.jpg",
 				"path": "/images/items/01_5443/190_6288.jpg",
 				"hash": "f9d43bb4330e107bdf2dd26d00f05a9c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6288.jpg",
+				"src": "https://bandai-hobby.net/images/191_6288_s_2uo6e4bm4d1mm0fcxpjwaim1a4z5.jpg",
 				"path": "/images/items/01_5443/191_6288.jpg",
 				"hash": "c87c161899c3dfc762e82802c542ca55"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_6288.jpg",
+				"src": "https://bandai-hobby.net/images/192_6288_s_ff3qqrs9rxb0n7yenr7sttx4s27p.jpg",
 				"path": "/images/items/01_5443/192_6288.jpg",
 				"hash": "af3eb1fb4a898f200150e52abfc98740"
 			}
@@ -109,10 +175,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5443/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3792",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3792/"

@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "龍王丸",
-		"en": "RYUOHMARU"
+		"en": "Ryuomaru"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "wataru",
+			"url": "https://bandai-hobby.net/series/wataru/",
+			"ja": "ワタルシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -34,58 +71,50 @@
 			"• Star Dragon Sword is reproduced with blue clear parts!"
 		]
 	},
-	"accessories": {
-		"ja": ["星龍剣"],
-		"en": ["Star Dragon Sword"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "星龍剣",
+				"en": "Star Dragon Sword"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5495_0.jpg",
 				"path": "/images/items/01_5495/01_5495_0.jpg",
 				"hash": "b814fb11f39b2a8153cb3680bb81f52d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5495_1.jpg",
 				"path": "/images/items/01_5495/01_5495_1.jpg",
 				"hash": "42ec93d7616cd146862b4d245bf10aca"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5495_2.jpg",
 				"path": "/images/items/01_5495/01_5495_2.jpg",
 				"hash": "cdde61efe5f133b245e07e214543bff4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5495_3.jpg",
 				"path": "/images/items/01_5495/01_5495_3.jpg",
 				"hash": "823ad6af4f85d2188871bf70d62d2cf2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5495_4.jpg",
 				"path": "/images/items/01_5495/01_5495_4.jpg",
 				"hash": "4885651bd16e749869da3e46b25fd46e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5495_5.jpg",
 				"path": "/images/items/01_5495/01_5495_5.jpg",
 				"hash": "63c052b42c2693bf405ca195096e0e6f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5495_6.jpg",
 				"path": "/images/items/01_5495/01_5495_6.jpg",
 				"hash": "acee05c1433f6aaf10c16da052102bcf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5495_7.jpg",
 				"path": "/images/items/01_5495/01_5495_7.jpg",
 				"hash": "f2139c40f04f4dc28844572174da674b"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5495/",
-	"brandIds": [],
-	"seriesIds": ["wataru"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5495/"
 }

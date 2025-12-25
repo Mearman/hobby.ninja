@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 MSA-005 メタス",
 		"en": "HGUC 1/144 MSA-005 Metas"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 18
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「機動戦士Ｚガンダム」に登場するメタスのHGUCシリーズプラモデルです。一部差替えでモビルアーマー形態に変形可能です。百式＋メガバズーカランチャーとの連結シーンを演出するコネクトパーツ付属。"
@@ -30,22 +78,22 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_626.jpg",
+				"src": "https://bandai-hobby.net/images/153_626_s_mi6xk5ya3dmuo0sw7ghuaskya6uk.jpg",
 				"path": "/images/items/01_5424/153_626.jpg",
 				"hash": "8cb20ed833e94661d129a525e3103709"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_626.jpg",
+				"src": "https://bandai-hobby.net/images/155_626_s_pqu83x5ovowr6bfi2qvlt9xpgkd3.jpg",
 				"path": "/images/items/01_5424/155_626.jpg",
 				"hash": "2ae7f2ec79629065e26bd7c7591ae36f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_626.jpg",
+				"src": "https://bandai-hobby.net/images/156_626_s_bzacmpjkcv9wb3ev79jwuciogllz.jpg",
 				"path": "/images/items/01_5424/156_626.jpg",
 				"hash": "9e88895025924707cbc21e9d45c65a68"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_626.jpg",
+				"src": "https://bandai-hobby.net/images/157_626_s_9tds2a2d8uf0j13txcs0ozp04tzk.jpg",
 				"path": "/images/items/01_5424/157_626.jpg",
 				"hash": "50cee1f79874ec0d47a03d1d78676b71"
 			}
@@ -53,10 +101,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5424/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["z-gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"],
 	"manual": {
 		"id": "896",
 		"url": "https://manual.bandai-hobby.net/menus/detail/896/"

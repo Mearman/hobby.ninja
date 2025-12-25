@@ -3,8 +3,36 @@
 	"type": "item",
 	"name": {
 		"ja": "オプションパーツセット ガンプラ 15 (キャバリアーアイフリッド)",
-		"en": "OPTION PARTS SET GUNPLA 15 (CAVALIER AIFRID)"
+		"en": "Option parts set Gunpla 15 (Cavalier Aifrid)"
 	},
+	"brands": [
+		{
+			"id": "optionpartsset",
+			"url": "https://bandai-hobby.net/brand/optionpartsset/",
+			"ja": "オプションパーツセット"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-freedom",
+			"url": "https://bandai-hobby.net/series/seed-freedom/",
+			"ja": "機動戦士ガンダムSEED FREEDOM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5453",
+			"url": "https://bandai-hobby.net/item/01_5453/",
+			"ja": "オプションパーツセット ガンプラ 15 (キャバリアーアイフリッド)"
+		}
+	],
 	"price": {
 		"amount": 2970,
 		"currency": "JPY",
@@ -20,7 +48,7 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED FREEDOM』に登場したキャバリアーアイフリッドがオプションパーツセットで立体化！",
+			"『機動戦士ガンダムSEED FREEDOM』に登場したキャバリアーアイフリッドがオプションパーツセットで立体化！",
 			"• 各種ジョイントパーツが付属。様々な機体へ装着できる。",
 			"• 試製35式改レールガンが付属。",
 			"• ミサイルポッドはハッチが開閉。",
@@ -29,98 +57,113 @@
 			"• 「アクションベース7」が付属。単体でもディスプレイが可能。"
 		],
 		"en": [
-			"The Cavalier Aifrid that appeared in \"Mobile Suit Gundam SEED FREEDOM\" is now three-dimensional with an optional parts set!",
+			"The Cavalier Aifrid that appeared in \"Mobile Suit GundamSEED FREEDOM\" is now three-dimensional with an optional parts set!",
 			"• Various joint parts are included. Can be attached to various aircraft.",
-			"• A prototype Type 35 modified railgun is included.",
+			"• A prototype Type 35 modified rail gun is included.",
 			"• Missile pod hatch opens and closes.",
 			"• Wing part can be expanded. Flight form can be reproduced.",
 			"• Comes with an expansion joint that allows you to equip various backpacks such as the separately sold \"HG 1/144 Z'Gok (SEED FREEDOM Ver.)\" and an expansion joint that allows you to mount a railgun on other kits.",
 			"• \"Action Base 7\" is included. Can be displayed alone."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"キャバリアーアイフリッド×1",
-			"試製35式改レールガン×1",
-			"ジョイントパーツ×1式",
-			"アクションベース7×1",
-			"プラスチックシール×1",
-			"シール×1"
-		],
-		"en": [
-			"Cavalier Aifrid x1",
-			"Prototype 35 modified railgun x 1",
-			"Joint parts x 1 set",
-			"action base 7×1",
-			"Plastic Seal×1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "キャバリアーアイフリッド",
+				"en": "cavalier aifrid"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "試製35式改レールガン",
+				"en": "Prototype 35 modified railgun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "アクションベース7",
+				"en": "action base 7"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "プラスチックシール",
+				"en": "Plastic Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5453_0.jpg",
 				"path": "/images/items/01_5453/01_5453_0.jpg",
 				"hash": "bc8e5a74dda39858f935b271772a8bd7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5453_1.jpg",
 				"path": "/images/items/01_5453/01_5453_1.jpg",
 				"hash": "bb70442845852e72481b85a4012b2784"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5453_10.jpg",
-				"path": "/images/items/01_5453/01_5453_10.jpg",
-				"hash": "ee36eb9dfc69a741f513250fb12ac4fd"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5453_2.jpg",
 				"path": "/images/items/01_5453/01_5453_2.jpg",
 				"hash": "e7ff021259b52f05e63f060dfecc5366"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5453_3.jpg",
 				"path": "/images/items/01_5453/01_5453_3.jpg",
 				"hash": "748bde336ebcc04b5566710f0772f0e8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5453_4.jpg",
 				"path": "/images/items/01_5453/01_5453_4.jpg",
 				"hash": "9a6b32b77f01061b5d5df611351f0ba0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5453_5.jpg",
 				"path": "/images/items/01_5453/01_5453_5.jpg",
 				"hash": "307d71ea5ece3783281173d17fd33ade"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5453_6.jpg",
 				"path": "/images/items/01_5453/01_5453_6.jpg",
 				"hash": "f5a6652820275ed532f75b5c139409dd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5453_7.jpg",
 				"path": "/images/items/01_5453/01_5453_7.jpg",
 				"hash": "979a6a28e55c9b3797155a5cc535fdb6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5453_8.jpg",
 				"path": "/images/items/01_5453/01_5453_8.jpg",
 				"hash": "0e590f7e774835b05881e22a1e84adbe"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5453_9.jpg",
 				"path": "/images/items/01_5453/01_5453_9.jpg",
 				"hash": "c31f799c3d9eb94982778abe000b080d"
+			},
+			{
+				"path": "/images/items/01_5453/01_5453_10.jpg",
+				"hash": "ee36eb9dfc69a741f513250fb12ac4fd"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5453/",
-	"brandIds": ["optionpartsset"],
-	"seriesIds": ["seed-freedom"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5453"],
 	"manual": {
 		"id": "2668",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2668/"

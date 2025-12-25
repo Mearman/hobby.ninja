@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ズゴック(SEED FREEDOM Ver.)",
-		"en": "HG 1/144 Z’GOK (SEED FREEDOM Ver.)"
+		"en": "HG 1/144 Z'Gok (SEED FREEDOM Ver.)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-freedom",
+			"url": "https://bandai-hobby.net/series/seed-freedom/",
+			"ja": "機動戦士ガンダムSEED FREEDOM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5452",
+			"url": "https://bandai-hobby.net/item/01_5452/",
+			"ja": "HG 1/144 ズゴック(SEED FREEDOM Ver.)"
+		},
+		{
+			"id": "01_5374",
+			"url": "https://bandai-hobby.net/item/01_5374/",
+			"ja": "HG 1/144 デスティニーガンダムSpecII&ゼウスシルエット"
+		},
+		{
+			"id": "01_5363",
+			"url": "https://bandai-hobby.net/item/01_5363/",
+			"ja": "HG 1/144 ブラックナイトスコードカルラ"
+		},
+		{
+			"id": "01_5362",
+			"url": "https://bandai-hobby.net/item/01_5362/",
+			"ja": "HG 1/144 ムラサメ改"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -18,10 +62,9 @@
 		"day": 22
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED FREEDOM』で印象的な活躍をする「ズゴック」が、HGで待望の立体化！",
+			"『機動戦士ガンダムSEED FREEDOM』で印象的な活躍をする「ズゴック」が、HGで待望の立体化！",
 			"• 独自の「SEEDアクションシステム」を内蔵。躍動感あふれるダイナミックなポージングを再現可能。",
 			"• HGズゴック独自の「SEEDアクションシステム」により、腕・脚の蛇腹のしなりや腹部の大きな動きなどが再現可能。",
 			"• パーツの差し替えで、頭部装甲のダメージ状態を再現可能。",
@@ -29,67 +72,90 @@
 			"• 内部フレームの形状は「インフィニットジャスティスガンダム弐式」を模している。選択式で別売りの「HG 1/144 インフィニットジャスティスガンダム弐式」の一部を組み込むことも可能。"
 		],
 		"en": [
-			"\"Z'Gok \", who played an impressive role in \" Mobile Suit Gundam SEED FREEDOM\", has been made into a long-awaited HG figure!",
+			"\"Z'Gok\", who played an impressive role in \"Mobile Suit GundamSEED FREEDOM\", has been made into a long-awaited HG figure!",
 			"• Built-in unique \"SEED action system\". It is possible to reproduce dynamic poses full of dynamism.",
 			"• HG Z'Gok's unique \"SEED Action System\" allows you to reproduce the bellows of the arms and legs and the large movements of the abdomen.",
 			"• By replacing parts, it is possible to reproduce the damage state of the head armor.",
 			"• Claw parts for red heat are included. By replacing it with a regular claw, you can recreate the image from the movie.",
-			"• The shape of the internal frame is modeled after \"Infinite Justice Gundam Type 2 \". It is also possible to incorporate a part of the optional \" HG 1/144 Infinite Justice Gundam Type 2\" sold separately."
+			"• The shape of the internal frame is modeled after \"Infinite Justice Gundam Type 2\". It is also possible to incorporate a part of the optional \"HG 1/144 Infinite Justice Gundam Type 2\" sold separately."
 		]
 	},
-	"accessories": {
-		"ja": ["バックパック×1", "赤熱時クロー×2", "ダメージ頭部装甲×1", "ビームエフェクト×4", "シール×1"],
-		"en": ["Backpack x 1", "Red heat claw x2", "Damage head armor x1", "Beam effect x 4", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "バックパック",
+				"en": "backpack"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "赤熱時クロー",
+				"en": "red hot claw"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ダメージ頭部装甲",
+				"en": "damage head armor"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームエフェクト",
+				"en": "beam effect"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5452_0.jpg",
 				"path": "/images/items/01_5452/01_5452_0.jpg",
 				"hash": "56f14fe35835a88b1be926e9a7aafa02"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5452_1.jpg",
 				"path": "/images/items/01_5452/01_5452_1.jpg",
 				"hash": "8414bf4cd72697481af13e966a997d93"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5452_2.jpg",
 				"path": "/images/items/01_5452/01_5452_2.jpg",
 				"hash": "0ae7cb784df3d199cb69675409db1ebe"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5452_3.jpg",
 				"path": "/images/items/01_5452/01_5452_3.jpg",
 				"hash": "d9109fc22e78a4635d336f385488158f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5452_4.jpg",
 				"path": "/images/items/01_5452/01_5452_4.jpg",
 				"hash": "03ec99974521e92727313deb4c0e7c77"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5452_5.jpg",
 				"path": "/images/items/01_5452/01_5452_5.jpg",
 				"hash": "cf3df88a1773c6416f5c229cce208281"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5452_6.jpg",
 				"path": "/images/items/01_5452/01_5452_6.jpg",
 				"hash": "47c79929064aa67f2655d9a9dad3f2b3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5452_7.jpg",
 				"path": "/images/items/01_5452/01_5452_7.jpg",
 				"hash": "4c5d3013fda8b1c957b6d423c50c5b47"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5452_8.jpg",
 				"path": "/images/items/01_5452/01_5452_8.jpg",
 				"hash": "522d25af7659a240a72488fef9b7711a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5452_9.jpg",
 				"path": "/images/items/01_5452/01_5452_9.jpg",
 				"hash": "d8d666f50ca9943a6765fbb9eeb82315"
 			}
@@ -97,10 +163,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5452/",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed-freedom"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5452", "01_5374", "01_5363", "01_5362"],
 	"manual": {
 		"id": "2667",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2667/"

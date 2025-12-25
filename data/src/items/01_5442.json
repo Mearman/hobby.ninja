@@ -2,9 +2,52 @@
 	"id": "01_5442",
 	"type": "item",
 	"name": {
-		"ja": "BB戦士 機動戦士ガンダム 0083 STARDUST MEMORYセット",
-		"en": "BB SENSHI MOBILE SUIT GUNDAM 0083 STARDUST MEMORY SET"
+		"ja": "BB戦士 機動戦士ガンダム0083 STARDUST MEMORYセット",
+		"en": "BB Senshi Mobile Suit Gundam0083 STARDUST MEMORY Set"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "g-0083",
+			"url": "https://bandai-hobby.net/series/g-0083/",
+			"ja": "機動戦士ガンダム0083 STARDUST MEMORY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4547",
+			"url": "https://bandai-hobby.net/item/01_4547/",
+			"ja": "BB戦士 ガンダムRX-78NT-1＆ガンダムGP01Fb"
+		},
+		{
+			"id": "01_1396",
+			"url": "https://bandai-hobby.net/item/01_1396/",
+			"ja": "BB戦士224 ノイエ・ジール"
+		},
+		{
+			"id": "01_1631",
+			"url": "https://bandai-hobby.net/item/01_1631/",
+			"ja": "BB戦士 202ガンダムGP02A"
+		},
+		{
+			"id": "01_1604",
+			"url": "https://bandai-hobby.net/item/01_1604/",
+			"ja": "BB戦士 193GP-01Fb"
+		}
+	],
 	"price": {
 		"amount": 4510,
 		"currency": "JPY",
@@ -20,53 +63,64 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム 0083 STARDUST MEMORY』より、人気のSD ガンダムがセットになって復活！",
-			"• 「ガンダム GP01Fb」「ガンダム GP02A」「ガンダム GP03D」「ノイエ・ジール」がセットになって登場。"
+			"『機動戦士ガンダム0083 STARDUST MEMORY』より、人気のSDガンダムがセットになって復活！",
+			"• 「ガンダムGP01Fb」「ガンダムGP02A」「ガンダムGP03D」「ノイエ・ジール」がセットになって登場。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam 0083 STARDUST MEMORY\", the popular SD Gundam is back as a set!",
-			"• \"Gundam GP01Fb \", \" Gundam GP02A \", \" Gundam GP03D \", and \" Neue Zeer\" are now available as a set."
+			"From \"Mobile Suit Gundam0083 STARDUST MEMORY\", the popular SDGundam is back as a set!",
+			"• \"GundamGP01Fb\", \"GundamGP02A\", \"GundamGP03D\", and \"Neue Zeer\" are now available as a set."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"BB戦士193 ガンダム GP01Fb×1",
-			"BB戦士202 ガンダム GP02A×1",
-			"BB戦士207 ガンダム GP03D×1",
-			"BB戦士224 ノイエ・ジール×1",
-			"シール×4",
-			"リード線×1"
-		],
-		"en": [
-			"BB Senshi 193 Gundam GP01Fb×1",
-			"BB Senshi 202 Gundam GP02A×1",
-			"BB Senshi 207 Gundam GP03D×1",
-			"BB Senshi 224 Neue Zeal x1",
-			"Seal×4",
-			"Lead wire x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "BB戦士193 ガンダムGP01Fb",
+				"en": "BB Senshi 193 GundamGP01Fb"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "BB戦士202 ガンダムGP02A",
+				"en": "BB Senshi 202 GundamGP02A"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "BB戦士207 ガンダムGP03D",
+				"en": "BB Senshi 207 GundamGP03D"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "BB戦士224 ノイエ・ジール",
+				"en": "BB Senshi 224 Neue Zeel"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "リード線",
+				"en": "lead wire"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223824_1.jpg",
 				"path": "/images/items/01_5442/1000223824_1.jpg",
 				"hash": "7c07a25a0837c16281d1c9d71b3aea4b"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223824_10.jpg",
-				"path": "/images/items/01_5442/1000223824_10.jpg",
-				"hash": "838db3ccdef4b028978427ba3633c73a"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223824_11.jpg",
-				"path": "/images/items/01_5442/1000223824_11.jpg",
-				"hash": "8f6651d035d477173ee3555b169d9859"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223824_12.jpg",
-				"path": "/images/items/01_5442/1000223824_12.jpg",
-				"hash": "716130c304dbd260bfcebab777f57f05"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223824_2.jpg",
@@ -107,13 +161,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223824_9.jpg",
 				"path": "/images/items/01_5442/1000223824_9.jpg",
 				"hash": "9c8f5eb806014a28100613e0b6e9f140"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223824_10.jpg",
+				"path": "/images/items/01_5442/1000223824_10.jpg",
+				"hash": "838db3ccdef4b028978427ba3633c73a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223824_11.jpg",
+				"path": "/images/items/01_5442/1000223824_11.jpg",
+				"hash": "8f6651d035d477173ee3555b169d9859"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223824_12.jpg",
+				"path": "/images/items/01_5442/1000223824_12.jpg",
+				"hash": "716130c304dbd260bfcebab777f57f05"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5442/",
-	"brandIds": ["bb"],
-	"seriesIds": ["g-0083"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4547", "01_1396", "01_1631", "01_1604"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5442/"
 }

@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 エグザビークル(メタルキャノンバイクVer.)",
-		"en": "30MM 1/144 Extended Armament Vehicle (METAL CANNON BIKE Ver.)"
+		"en": "30MM 1/144 Exer Vehicle (Metal Cannon Bike Ver.)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1298,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 15
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「30MM カラバリグランプリ-マクシオンとの約束-」第2位！「シルバー」を基調とした「エグザビークル(メタルキャノンバイクVer.)」が登場！",
@@ -30,7 +72,7 @@
 			"• 新規3Dメタリックシールが付属。ビークルを手軽にディテールアップできる。"
 		],
 		"en": [
-			"\"30MM Color Variation Grand Prix-Promise with Maxion-\" 2nd place! \" Exer Vehicle (Metal Cannon Bike Ver.)\" based on \" Silver\" is now available!",
+			"\"30MM Color Variation Grand Prix-Promise with Maxion-\" 2nd place! \"Exer Vehicle (Metal Cannon Bike Ver.)\" based on \"Silver\" is now available!",
 			"• A one-wheeled motorcycle type vehicle.",
 			"• If disassembled, it can be transformed into the third force's Loi Loi and a large cannon.",
 			"• Loi Loi can be connected to the body and used as a customized part.",
@@ -39,80 +81,87 @@
 			"• New 3D metallic seal included. You can easily add details to your vehicle."
 		]
 	},
-	"accessories": {
-		"ja": ["ビークル×1体", "3Dメタリックシール×1", "ホイルシール×1"],
-		"en": ["Vehicle x 1", "3D metallic seal×1", "Foil Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビークル",
+				"en": "vehicle"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "体",
+				"en": "body"
+			}
+		},
+		{
+			"name": {
+				"ja": "3Dメタリックシール",
+				"en": "3D Metallic Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5480_0.jpg",
 				"path": "/images/items/01_5480/01_5480_0.jpg",
 				"hash": "fad1ee41fea9f8187f513da50bbc1111"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5480_1.jpg",
 				"path": "/images/items/01_5480/01_5480_1.jpg",
 				"hash": "ec9eb153714dac93eb065da84094fecb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5480_10.jpg",
-				"path": "/images/items/01_5480/01_5480_10.jpg",
-				"hash": "855f1c457ff295664ff82d59da1b0dfa"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5480_11.jpg",
-				"path": "/images/items/01_5480/01_5480_11.jpg",
-				"hash": "078b0533421e7f82dacc46bd1d6cdfd5"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5480_2.jpg",
 				"path": "/images/items/01_5480/01_5480_2.jpg",
 				"hash": "5b4e6a0ed583e471efd4bfc90902ad83"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5480_3.jpg",
 				"path": "/images/items/01_5480/01_5480_3.jpg",
 				"hash": "97be5a28e44e051d7a403754c962b351"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5480_4.jpg",
 				"path": "/images/items/01_5480/01_5480_4.jpg",
 				"hash": "8a1ca502fd0846fa67a6190c0a14bf21"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5480_5.jpg",
 				"path": "/images/items/01_5480/01_5480_5.jpg",
 				"hash": "83057477bbd2c0487f9d13f2e30ea35b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5480_6.jpg",
 				"path": "/images/items/01_5480/01_5480_6.jpg",
 				"hash": "f60af806f7f2e67bbecfe1609d2ef093"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5480_7.jpg",
 				"path": "/images/items/01_5480/01_5480_7.jpg",
 				"hash": "944e737ae0b42e5dc40cda51eee7cfb8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5480_8.jpg",
 				"path": "/images/items/01_5480/01_5480_8.jpg",
 				"hash": "e0b0d98302123dfedd645ace27980fb5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5480_9.jpg",
 				"path": "/images/items/01_5480/01_5480_9.jpg",
 				"hash": "102c035fd5b90d00cc3db99bb2a91ce0"
+			},
+			{
+				"path": "/images/items/01_5480/01_5480_10.jpg",
+				"hash": "855f1c457ff295664ff82d59da1b0dfa"
+			},
+			{
+				"path": "/images/items/01_5480/01_5480_11.jpg",
+				"hash": "078b0533421e7f82dacc46bd1d6cdfd5"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5480/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"],
 	"manual": {
 		"id": "3796",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3796/"

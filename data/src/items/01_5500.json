@@ -5,6 +5,49 @@
 		"ja": "メカコレクションDX 試製空間戦闘攻撃機 コスモパイソン [2機セット]",
 		"en": "Mecha Collection DX Prototype Space Combat Attack Aircraft Cosmo Python [Set of 2]"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "yamato",
+			"url": "https://bandai-hobby.net/series/yamato/",
+			"ja": "宇宙戦艦ヤマトシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5498",
+			"url": "https://bandai-hobby.net/item/01_5498/",
+			"ja": "メカコレクションDX 1式空間戦闘攻撃機 コスモタイガーII(単座型/銃座型) [2機セット]"
+		},
+		{
+			"id": "01_3667",
+			"url": "https://bandai-hobby.net/item/01_3667/",
+			"ja": "メカコレクション ガイペロン級多層式航宙母艦 バルメス(外洋機動艦隊仕様)"
+		},
+		{
+			"id": "01_3650",
+			"url": "https://bandai-hobby.net/item/01_3650/",
+			"ja": "メカコレクション デウスーラIII世"
+		},
+		{
+			"id": "01_2854",
+			"url": "https://bandai-hobby.net/item/01_2854/",
+			"ja": "メカコレクション 自律無人戦闘艦BBB アンドロメダブラック"
+		}
+	],
 	"price": {
 		"amount": 1870,
 		"currency": "JPY",
@@ -37,59 +80,86 @@
 			"• Water transfer decals containing various markings are included."
 		]
 	},
-	"accessories": {
-		"ja": ["共通パーツ×1式", "通常戦闘モードボディ×2", "高機動モードボディ×2", "台座×2", "水転写式デカール×1"],
-		"en": [
-			"Common parts x 1 set",
-			"Normal battle mode body x 2",
-			"High mobility mode body x 2",
-			"Pedestal x 2",
-			"Water transfer decal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "共通パーツ",
+				"en": "common parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "通常戦闘モードボディ",
+				"en": "Normal battle mode body"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "高機動モードボディ",
+				"en": "High mobility mode body"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6340.jpeg",
+				"src": "https://bandai-hobby.net/images/153_6340_o_1i69ioc0blcc18upoqp7bs1fkv23.jpeg",
 				"path": "/images/items/01_5500/153_6340.jpeg",
 				"hash": "e4dd7ec1a652d36ac7c942ed9f820253"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6340.jpeg",
+				"src": "https://bandai-hobby.net/images/155_6340_o_1i69ioifj1g9v1tg11f8414lunli2d.jpeg",
 				"path": "/images/items/01_5500/155_6340.jpeg",
 				"hash": "190d182ce155503987d8f1dd7f35ec23"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6340.jpeg",
+				"src": "https://bandai-hobby.net/images/156_6340_o_1i69iolcvo0i115j66vfc2j592i.jpeg",
 				"path": "/images/items/01_5500/156_6340.jpeg",
 				"hash": "28a01428e3c6f8a87039a53e125df60e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6340.jpeg",
+				"src": "https://bandai-hobby.net/images/157_6340_o_1i69ioo7d17qicnk147f8o01h9m2n.jpeg",
 				"path": "/images/items/01_5500/157_6340.jpeg",
 				"hash": "f34436a39b975192934a242503548290"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6340.jpeg",
+				"src": "https://bandai-hobby.net/images/158_6340_o_1i69iorvt1jn11duur97vdb8q92s.jpeg",
 				"path": "/images/items/01_5500/158_6340.jpeg",
 				"hash": "e79aa560f361517e03f12c31e5fcb8e5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6340.jpeg",
+				"src": "https://bandai-hobby.net/images/159_6340_o_1i69iov8210ujifh13rgbis1gq931.jpeg",
 				"path": "/images/items/01_5500/159_6340.jpeg",
 				"hash": "cf7ec656f2cdc3ee7514576e33294442"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6340.jpeg",
+				"src": "https://bandai-hobby.net/images/189_6340_o_1i69ip2h5qhgqct18m01jup189f36.jpeg",
 				"path": "/images/items/01_5500/189_6340.jpeg",
 				"hash": "d329287552b85f236090d85466ff12a2"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5500/",
-	"brandIds": ["mecha-colle"],
-	"seriesIds": ["yamato"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5498", "01_3667", "01_3650", "01_2854"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5500/"
 }

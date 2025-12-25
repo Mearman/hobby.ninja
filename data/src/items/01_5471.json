@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "SDW HEROES GF ガンダムアストレア タイプ-B",
-		"en": "SDW HEROES GF GUNDAM ASTRAEA TYPE-B"
+		"en": "SDW HEROES GF Gundam Astrea Type-B"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_5969",
+			"url": "https://bandai-hobby.net/item/01_5969/",
+			"ja": "ガンダムデカールNo.141 機動戦士ガンダムSEED FREEDOM汎用①"
+		},
+		{
+			"id": "01_5970",
+			"url": "https://bandai-hobby.net/item/01_5970/",
+			"ja": "ガンダムデカールNo.142 機動戦士ガンダムSEED FREEDOM汎用②"
+		},
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		}
+	],
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -22,55 +59,65 @@
 		"ja": [
 			"SDW HEROESガンプラシリーズに新たなヒーローのキットが登場‼",
 			"• 背部には超ボリュームの大型武装を装備。",
-			"• SD ガンダムならではの高密度なメカニカルデザインを、精密な造形で細部まで表現。",
+			"• SDガンダムならではの高密度なメカニカルデザインを、精密な造形で細部まで表現。",
 			"• ビームサーベルはシールドへ取り付けが可能。",
 			"• 別売りの「SDW HEROESキャプテンクアンタ GF」「SDW HEROES GF ガンダムアストレアタイプ－F」を揃えることで更なるギミックも!?"
 		],
 		"en": [
 			"A new hero Kit has arrived in the SDW HEROESGunpla series!",
 			"• Equipped with a super-volume large weapon on the back.",
-			"• The high-density mechanical design unique to SD Gundam is expressed in detail with precise modeling.",
+			"• The high-density mechanical design unique to SDGundam is expressed in detail with precise modeling.",
 			"• Beam saber can be attached to Seal.",
-			"• Even more gimmicks can be made by arranging the separately sold \"SDW HEROES Captain Quanta GF \" and \" SDW HEROES GF Gundam Astrea Type-F\"!?"
+			"• Even more gimmicks can be made by arranging the separately sold \"SDW HEROES Captain Quanta GF\" and \"SDW HEROES GF Gundam Astrea Type-F\"!?"
 		]
 	},
-	"accessories": {
-		"ja": ["ビームサーベル×1", "シールド×1", "シール×1"],
-		"en": ["Beam saber x 1", "Seal × 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "beam saber"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5471_0.jpg",
 				"path": "/images/items/01_5471/01_5471_0.jpg",
 				"hash": "ed26d9ab2d7f3e43e671e48e331b9206"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5471_1.jpg",
 				"path": "/images/items/01_5471/01_5471_1.jpg",
 				"hash": "05e86add38dbf67c8e3d266ae65273bd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5471_2.jpg",
 				"path": "/images/items/01_5471/01_5471_2.jpg",
 				"hash": "792c13910d4285245860e88b19afd607"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5471_3.jpg",
 				"path": "/images/items/01_5471/01_5471_3.jpg",
 				"hash": "f51707c475f1a47c181bd0004039efed"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5471_4.jpg",
 				"path": "/images/items/01_5471/01_5471_4.jpg",
 				"hash": "5675a99a7a8d03164f9ec98011302694"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5471/",
-	"brandIds": [],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5968", "01_5969", "01_5970", "01_5986"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5471/"
 }

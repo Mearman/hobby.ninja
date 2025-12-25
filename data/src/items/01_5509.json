@@ -2,9 +2,53 @@
 	"id": "01_5509",
 	"type": "item",
 	"name": {
-		"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3 ガンダム Ver.3.0",
-		"en": "MG 1/100 Gundam Base Limited RX-78-3 G-3 Gundam Ver.3.0"
+		"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0",
+		"en": "MG 1/100 Gundam Base Limited RX-78-3 G-3Gundam Ver.3.0"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		},
+		{
+			"id": "01_4066",
+			"url": "https://bandai-hobby.net/item/01_4066/",
+			"ja": "MG 1/100 RX-78-2 ガンダム Ver.3.0 [リサーキュレーションカラー/ネオングリーン]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5720,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 14
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定アイテム。",
@@ -44,40 +87,32 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6349.jpg",
+				"src": "https://bandai-hobby.net/images/153_6349_s_3d9xs5kfnq1beczz6u2iqxx6gql5.jpg",
 				"path": "/images/items/01_5509/153_6349.jpg",
 				"hash": "83dd2b6833f67a204225259a3b8eb7be"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6349.jpg",
+				"src": "https://bandai-hobby.net/images/155_6349_s_3vuep2liau6wlgpou2vmbz8rm293.jpg",
 				"path": "/images/items/01_5509/155_6349.jpg",
 				"hash": "ed6149fa585ac2148acb3101e780e7d4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6349.jpg",
+				"src": "https://bandai-hobby.net/images/156_6349_s_uo9himphu45sp4vu5gpj41250f6l.jpg",
 				"path": "/images/items/01_5509/156_6349.jpg",
 				"hash": "3d60e7ab98d09bc38da0e22e985e56c2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6349.jpg",
+				"src": "https://bandai-hobby.net/images/157_6349_s_wmk9emzucrnxvkzc2crkoxsib726.jpg",
 				"path": "/images/items/01_5509/157_6349.jpg",
 				"hash": "6748b0b45d23d300bc115821f3c769af"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6349.jpg",
+				"src": "https://bandai-hobby.net/images/158_6349_s_x0bv4s68wffpa35m9a3soua9n35j.jpg",
 				"path": "/images/items/01_5509/158_6349.jpg",
 				"hash": "2c376dbcb237c44b0a45d0baac0f2909"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5509/",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4977", "01_3772", "01_3754", "01_4066"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5509/"
 }

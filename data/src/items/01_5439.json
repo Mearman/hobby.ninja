@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "風神丸",
-		"en": "FUJINMARU"
+		"en": "Fujinmaru"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "wataru",
+			"url": "https://bandai-hobby.net/series/wataru/",
+			"ja": "ワタルシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5504",
+			"url": "https://bandai-hobby.net/item/01_5504/",
+			"ja": "神龍王丸"
+		},
+		{
+			"id": "01_5502",
+			"url": "https://bandai-hobby.net/item/01_5502/",
+			"ja": "雷神丸"
+		},
+		{
+			"id": "01_5503",
+			"url": "https://bandai-hobby.net/item/01_5503/",
+			"ja": "炎上丸"
+		},
+		{
+			"id": "01_5493",
+			"url": "https://bandai-hobby.net/item/01_5493/",
+			"ja": "天翔丸"
+		}
+	],
 	"price": {
 		"amount": 1925,
 		"currency": "JPY",
@@ -27,38 +64,28 @@
 			"• 頭部などはメタリックなゴールド成形色で再現。"
 		],
 		"en": [
-			"Production of the new TV anime “Mashin Souzouden Wataru” has been decided! Fujinmaru, the demon god of Ofurain, goes on an adventure with the main character, Wataru Hoshibe!",
+			"Production of the new TV anime “Mashin Souzouden Wataru” has been decided! Fujinmaru, the genie of Ofurain, goes on an adventure with the main character, Wataru Hoshibe!",
 			"• Adopts a common frame across the series that allows parts to be separated by area. Let's play in combination with other genies!",
 			"• Touch gate design that can be removed by hand. Can be assembled without adhesive!",
 			"• The sword can be stored in the scabbard. The scabbard can be attached to the back.",
 			"• The head and other parts are reproduced in metallic gold molding color."
 		]
 	},
-	"accessories": {
-		"ja": ["刀×2"],
-		"en": ["Sword x2"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "刀",
+				"en": "sword"
+			},
+			"count": 2
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223341_1.jpg",
 				"path": "/images/items/01_5439/1000223341_1.jpg",
 				"hash": "002b7249aa0760ceca6c9fbfa4785db6"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223341_10.jpg",
-				"path": "/images/items/01_5439/1000223341_10.jpg",
-				"hash": "2fbb0c9aeeb6dfc1d908d34eea8a9958"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223341_11.jpg",
-				"path": "/images/items/01_5439/1000223341_11.jpg",
-				"hash": "f712f3839a87143f16a8985cb39ebad1"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223341_12.jpg",
-				"path": "/images/items/01_5439/1000223341_12.jpg",
-				"hash": "141ba3d2534f06b49c6dcc479e7259c7"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223341_2.jpg",
@@ -99,13 +126,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223341_9.jpg",
 				"path": "/images/items/01_5439/1000223341_9.jpg",
 				"hash": "c19cd03e3e8d852e7682707354c30524"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223341_10.jpg",
+				"path": "/images/items/01_5439/1000223341_10.jpg",
+				"hash": "2fbb0c9aeeb6dfc1d908d34eea8a9958"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223341_11.jpg",
+				"path": "/images/items/01_5439/1000223341_11.jpg",
+				"hash": "f712f3839a87143f16a8985cb39ebad1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223341_12.jpg",
+				"path": "/images/items/01_5439/1000223341_12.jpg",
+				"hash": "141ba3d2534f06b49c6dcc479e7259c7"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5439/",
-	"brandIds": [],
-	"seriesIds": ["wataru"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5504", "01_5502", "01_5503", "01_5493"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5439/"
 }

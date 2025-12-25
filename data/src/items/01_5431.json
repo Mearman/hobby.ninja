@@ -5,6 +5,54 @@
 		"ja": "ＭＧ 1/100 Ｆ９０IIIＹ クラスターガンダム",
 		"en": "MG 1/100 F90IIIY Cluster Gundam"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "item-1000220190",
+			"url": "https://p-bandai.jp/item/item-1000220190/",
+			"ja": "ＨＧ 1/144 ザク・デザートタイプ ピンクパンサー隊機"
+		},
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "item-1000216105",
+			"url": "https://p-bandai.jp/item/item-1000216105/",
+			"ja": "RG 1/144 ソードインパルスガンダムＳｐｅｃＩＩ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 6600,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 10
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"---------------------------------------------------------------",
@@ -77,10 +124,10 @@
 			"---------------------------------------------------------------",
 			"F90's new look - Cluster Gundam -",
 			"---------------------------------------------------------------",
-			"Sanary (S.N.R.I.)'s \"Formula Plan \" prototype MS Gundam F90IIIY \" Cluster Gundam\" is",
+			"Sanary (S.N.R.I.)'s \"Formula Plan\" prototype MS GundamF90IIIY \"Cluster Gundam\" is",
 			"Finally released with new modeling! Reproduce various gimmicks such as docking with Core Fighter F90III and mission pack equipment!",
 			"● Y (Young Star) type equipped with Core Fighter F90III",
-			"The new \"Gundam F90 \" bearing the name \" YOUNG STAR\" is reproduced with new modeling.",
+			"The new \"Gundam F90\" bearing the name \"YOUNG STAR\" is reproduced with new modeling.",
 			"Core Fighter F90III/Core Booster F90III",
 			"The Core Fighter F90III can be equipped with a landing gear that also serves as the Core Booster F90III and can open and close the canopy.",
 			"The Core Booster F90III is reproduced by storing the tail and attaching a backpack.",
@@ -109,9 +156,9 @@
 			"Accessories: Mission pack replacement parts set",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/100 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS/ABS/PVC/PET",
-			"No glue is used for assembly",
+			"No glue used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"*The finished product in the photo is painted. Also, a prototype that is still under development. The actual product may differ.",
 			"*Product materials may change depending on the production period of the sold product. Thank you for your understanding.",
@@ -128,59 +175,81 @@
 			"・Product information is current as of 20248. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["ビーム・ライフル", "ビーム・サーベル×２", "メガ・ビーム・バズーカ×２", "ビーム・シールド"],
-		"en": ["beam rifle", "Beam saber x2", "Mega beam bazooka x2", "Beam Seal"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル",
+				"en": "beam rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル×２",
+				"en": "Beam saber x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "メガ・ビーム・バズーカ×２",
+				"en": "Mega beam bazooka x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・シールド",
+				"en": "Beam Seal"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6276.jpg",
+				"src": "https://bandai-hobby.net/images/153_6276_s_iy9vl66bf48vghutsdsi8tjjo569.jpg",
 				"path": "/images/items/01_5431/153_6276.jpg",
 				"hash": "523388ca597dfc41530f6725084ba7b4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6276.jpg",
+				"src": "https://bandai-hobby.net/images/155_6276_s_qvygevwym2c24wj0z6cs4o78oip0.jpg",
 				"path": "/images/items/01_5431/155_6276.jpg",
 				"hash": "7e9eae1990ffe2599403aba3eb90f8f9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6276.jpg",
+				"src": "https://bandai-hobby.net/images/156_6276_s_0fiddz783m18t7bsd41o5s8iezwq.jpg",
 				"path": "/images/items/01_5431/156_6276.jpg",
 				"hash": "06e3ad271b8d9aac6e3536e665ff9986"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6276.jpg",
+				"src": "https://bandai-hobby.net/images/157_6276_s_yin0on7s42vwn4gyg7kmaqxnosi0.jpg",
 				"path": "/images/items/01_5431/157_6276.jpg",
 				"hash": "dc8874194c37d4b2678f4d5918878c0d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6276.jpg",
+				"src": "https://bandai-hobby.net/images/158_6276_s_md8y531prtemoig2jqoonbcq5ovn.jpg",
 				"path": "/images/items/01_5431/158_6276.jpg",
 				"hash": "03ccbfec6420cfbd4faa813bc1aa8a12"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6276.jpg",
+				"src": "https://bandai-hobby.net/images/159_6276_s_24asx8vfot20syywqjl3cvtmbl6x.jpg",
 				"path": "/images/items/01_5431/159_6276.jpg",
 				"hash": "224b75f93d8dcd11424d08a3ef14f5ac"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6276.jpg",
+				"src": "https://bandai-hobby.net/images/189_6276_s_a6fy7xobz58xejyg123evij5gjvh.jpg",
 				"path": "/images/items/01_5431/189_6276.jpg",
 				"hash": "7842ed5cef6164fc4d0d8ab8f4e37c63"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6276.jpg",
+				"src": "https://bandai-hobby.net/images/190_6276_s_5j2hkrb06i0covam2d4toenc1sc7.jpg",
 				"path": "/images/items/01_5431/190_6276.jpg",
 				"hash": "b384143f8499f2ce2945a300336833a2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6276.jpg",
+				"src": "https://bandai-hobby.net/images/191_6276_s_u38pxkoqi6vb939ipab85aso4cd9.jpg",
 				"path": "/images/items/01_5431/191_6276.jpg",
 				"hash": "bf90447b4c2b96f12b5a8e10e4853892"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_6276.jpg",
+				"src": "https://bandai-hobby.net/images/192_6276_s_lx42uqrziw9hp6i10dk1t92rj6mr.jpg",
 				"path": "/images/items/01_5431/192_6276.jpg",
 				"hash": "a81ac5c147be31e40344f62b86f53f0b"
 			}
@@ -188,14 +257,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5431/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5994", "item-1000220190", "item-1000220189", "item-1000216105"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2506",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2506/"

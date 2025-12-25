@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 ガンダムベース限定 デスティニーガンダム (ハイネ専用機)",
-		"en": "MG 1/100 THE GUNDAM BASE LIMITED DESTINY GUNDAM (HEINE WESTENFLUSS CUSTOM)"
+		"en": "MG 1/100 Gundam Base Limited Destiny Gundam (Heine exclusive machine)"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000183862",
+			"url": "https://p-bandai.jp/item/item-1000183862/",
+			"ja": "ＭＧ 1/100 ガナーウィザード／スラッシュウィザード／ブレイズウィザードセット"
+		},
+		{
+			"id": "01_3712",
+			"url": "https://bandai-hobby.net/item/01_3712/",
+			"ja": "MG 1/100 ガナーザクウォーリア(ルナマリア・ホーク専用機)[クリアカラー]"
+		},
+		{
+			"id": "item-1000155441",
+			"url": "https://p-bandai.jp/item/item-1000155441/",
+			"ja": "ＭＧ 1/100 ブレイズザクファントム（レイ・ザ・バレル専用機）"
+		},
+		{
+			"id": "01_3454",
+			"url": "https://bandai-hobby.net/item/01_3454/",
+			"ja": "MG 1/100 ガンダムベース限定 ザクウォーリア(ライブコンサート Ver.)"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 7590,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定アイテム。",
@@ -30,12 +73,13 @@
 			"• ハイネ専用機カラーの光の翼も付属した豪華仕様！"
 		],
 		"en": [
-			"■ For GUNPLA fans around the world, this is a limited edition item at the official GUNPLA complex \"GUNDAM Base\". \"MG Destiny GUNDAM\" is now available in the livery of Heine's exclusive machine!",
-			"■ Orange molding color inspired by Heine Westenfurs' personal color.",
-			"■ Comes with a wide range of weapons, including the Arondite Beam Sword, High-Energy Long-Range Beam Cannon, Flush Edge 2-Beam Boomerang, and more!",
-			"■ Comes with a wide variety of effect parts and a dedicated pedestal to color the powerful pose!",
-			"■ Comes with plastic model's original water transfer decal.",
-			"■ A luxurious specification that also comes with light wings in the color of Heine's exclusive aircraft!"
+			"A limited edition item from the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
+			"\"MG Destiny Gundam\" is now available in the coloring of Heine's exclusive machine!",
+			"• Adopts orange molding color, inspired by Heine Westenfurth's personal color.",
+			"• Comes with a wealth of armaments including the Arondite Beam Sword, High Energy Long Range Beam Cannon, Flash Edge 2 Beam Boomerang, and more!",
+			"• Comes with a variety of effect parts and a special pedestal to color the powerful poses!",
+			"• Includes plastic model original water slide decal.",
+			"• A luxurious specification that also includes wings of light in the color of Heine's special machine!"
 		]
 	},
 	"images": {
@@ -73,13 +117,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5421/",
-	"brandIds": ["mg"],
-	"seriesIds": ["seed-d"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000183862", "01_3712", "item-1000155441", "01_3454"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5421/"
 }

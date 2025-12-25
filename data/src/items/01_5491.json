@@ -5,6 +5,49 @@
 		"ja": "HG ヴァイスリッター",
 		"en": "HG Weissritter"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "superrobot_og",
+			"url": "https://bandai-hobby.net/series/superrobot_og/",
+			"ja": "スーパーロボット大戦OG"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5578",
+			"url": "https://bandai-hobby.net/item/01_5578/",
+			"ja": "HG アシュセイヴァー"
+		},
+		{
+			"id": "item-1000214961",
+			"url": "https://p-bandai.jp/item/item-1000214961/",
+			"ja": "ＨＧ ヒュッケバインＭｋ－ＩＩトロンベ"
+		},
+		{
+			"id": "01_5369",
+			"url": "https://bandai-hobby.net/item/01_5369/",
+			"ja": "HG ガンレオン"
+		},
+		{
+			"id": "item-1000208235",
+			"url": "https://p-bandai.jp/item/item-1000208235/",
+			"ja": "ＨＧ ヒュッケバインボクサー"
+		}
+	],
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -21,93 +64,124 @@
 	"description": {
 		"ja": [
 			"『スーパーロボット大戦OG』から、「ヴァイスリッター」がHGで登場！「オクスタン・ランチャー」や「プラズマカッター」が付属！",
-			"■武装は、オクスタン・ランチャー、プラズマカッター、3連ビームキャノンが付属。",
-			"■3連ビームキャノンの銃身は差し替えで再現。",
-			"■背部テスラ・ドライブ（翼）とスタビライザーはフレキシブルに可動し、躍動感のあるポーズを表現可能。",
-			"■腰は内部のボールジョイントと軸で前後左右に可動。",
-			"■肩は2軸で可動し、上下可動と前後可動ができる。",
-			"■別売りの「HG ゲシュペンスト」に付属するスプリットミサイルを取り付けできるジョイントパーツが付属。",
-			"■ポージングの幅を広げるアクションベース7が付属。"
+			"• 武装は、オクスタン・ランチャー、プラズマカッター、3連ビームキャノンが付属。",
+			"• 3連ビームキャノンの銃身は差し替えで再現。",
+			"• 背部テスラ・ドライブ（翼）とスタビライザーはフレキシブルに可動し、躍動感のあるポーズを表現可能。",
+			"• 腰は内部のボールジョイントと軸で前後左右に可動。",
+			"• 肩は2軸で可動し、上下可動と前後可動ができる。",
+			"• 別売りの「HG ゲシュペンスト」に付属するスプリットミサイルを取り付けできるジョイントパーツが付属。",
+			"• ポージングの幅を広げるアクションベース7が付属。"
 		],
 		"en": [
-			"\"Weiss Ritter \" from \" Super Robot Wars OG \" appears in HG! \" Oxtan Launcher \" and \" Plasma Cutter\" are included!",
+			"\"Weiss Ritter\" from \"Super Robot Wars OG\" appears in HG! \"Oxtan Launcher\" and \"Plasma Cutter\" are included!",
 			"• Armed with an oxtan launcher, plasma cutter, and triple beam cannon.",
 			"• The barrel of the triple beam cannon is reproduced by replacing it.",
 			"• The Tesla Drive (wings) and stabilizer on the back can be flexibly moved, allowing for dynamic poses.",
 			"• The waist can be moved forward, backward, left and right using an internal ball joint and axis.",
 			"• The shoulder can move in two axes, and can move up and down and back and forth.",
 			"• Comes with joint parts that allow you to attach the split missile that comes with the separately sold \"HG Gespenst\".",
-			"• Action base 7 is included to expand the range of poses."
+			"• Includes Action Base 7 that expands the range of poses."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"オクスタン・ランチャー×1",
-			"3連ビームキャノン×1式",
-			"プラズマカッター×1",
-			"ハンドパーツ×1式",
-			"ジョイントパーツ×1式",
-			"アクションベース7×1",
-			"シール×1"
-		],
-		"en": [
-			"Octane launcher x1",
-			"Triple beam cannon x 1 set",
-			"Plasma cutter x 1",
-			"Hand parts x 1 set",
-			"Joint parts x 1 set",
-			"action base 7×1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "オクスタン・ランチャー",
+				"en": "oxtan launcher"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "3連ビームキャノン",
+				"en": "triple beam cannon"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "プラズマカッター",
+				"en": "plasma cutter"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "アクションベース7",
+				"en": "action base 7"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5491_0.jpg",
 				"path": "/images/items/01_5491/01_5491_0.jpg",
 				"hash": "8f27c5e30f368623b776166b2f129e3c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5491_1.jpg",
 				"path": "/images/items/01_5491/01_5491_1.jpg",
 				"hash": "2e556e2d99ff4e85564e9252b16844ef"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5491_2.jpg",
 				"path": "/images/items/01_5491/01_5491_2.jpg",
 				"hash": "d5f90fd76aa2baea81ecdc9fba6d68d3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5491_3.jpg",
 				"path": "/images/items/01_5491/01_5491_3.jpg",
 				"hash": "e435f015e84ef1769171a0c3c1cb2f46"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5491_4.jpg",
 				"path": "/images/items/01_5491/01_5491_4.jpg",
 				"hash": "4baef75ad8919e62ebb43a2616b0841d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5491_5.jpg",
 				"path": "/images/items/01_5491/01_5491_5.jpg",
 				"hash": "405d0aef69c440161c0e6162f1cf688c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5491_6.jpg",
 				"path": "/images/items/01_5491/01_5491_6.jpg",
 				"hash": "0b0050f577603568961e37198c763c05"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5491_7.jpg",
 				"path": "/images/items/01_5491/01_5491_7.jpg",
 				"hash": "5d11578c6f4ebf3c8cc5a0cb374e04c2"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5491/",
-	"brandIds": ["hg"],
-	"seriesIds": ["superrobot_og"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5578", "item-1000214961", "01_5369", "item-1000208235"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5491/"
 }

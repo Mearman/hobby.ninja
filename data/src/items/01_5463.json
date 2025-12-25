@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MF クラスアップアーマー (ローザンビショップ)",
-		"en": "30MF CLASS UP ARMOR (ROSAN BISHOP)"
+		"en": "30MF Class Up Armor (Rosain Bishop)"
 	},
+	"brands": [
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		},
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -27,17 +69,37 @@
 			"• 別売りのリーベル共和国の「ビショップ」とは異なるフェイスデザインとカラーリング。"
 		],
 		"en": [
-			"From \"30 MINUTES FANTASY \", where you can create your own fantasy job, \" Class Up Armor (Rosain Bishop)\" is now available!",
+			"From \"30 MINUTES FANTASY\", where you can create your own fantasy job, \"Class Up Armor (Rosain Bishop)\" is now available!",
 			"• “Armor Cross” [Armor Replacement] A set of armor and weapons that can be “classed up” to a higher-level job.",
-			"• By combining with the separately sold \"30MF Rosan Priest \", it is possible to \" class up \" to \" Rosain Bishop\".",
+			"• By combining with the separately sold \"30MF Rosan Priest\", it is possible to \"class up\" to \"Rosain Bishop\".",
 			"• The attribute of “element core” is “fire”.",
 			"• Face design and coloring different from Liber Republic's \"Bishop\" sold separately."
 		]
 	},
-	"accessories": {
-		"ja": ["アーマーパーツ×1式", "武装パーツ×1式"],
-		"en": ["Armor parts x 1 set", "Armed parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "アーマーパーツ",
+				"en": "armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "武装パーツ",
+				"en": "armed parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -69,10 +131,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5463/",
-	"brandIds": ["30mf"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"],
 	"manual": {
 		"id": "3415",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3415/"

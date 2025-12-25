@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(マクシミリアン・ジーナス機)",
-		"en": "HG 1/100 VF-22S STÜRMVOGEL Ⅱ MAXIMILIAN JENIUS USE"
+		"en": "HG 1/100 VF-22S Sturmvogel II (Maximilian Genus machine)"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "macross",
+			"url": "https://bandai-hobby.net/series/macross/",
+			"ja": "マクロスシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5944",
+			"url": "https://bandai-hobby.net/item/01_5944/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機)"
+		},
+		{
+			"id": "01_5946",
+			"url": "https://bandai-hobby.net/item/01_5946/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) デラックスセット"
+		},
+		{
+			"id": "01_5448",
+			"url": "https://bandai-hobby.net/item/01_5448/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(ミリア・ファリーナ・ジーナス機)"
+		},
+		{
+			"id": "01_5449",
+			"url": "https://bandai-hobby.net/item/01_5449/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII 専用水転写式デカール"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4730,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 22
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"最強の夫婦「マックス」と「ミリア」が搭乗するVF-22Sが、HG『マクロス』プラモシリーズに参戦！",
@@ -34,8 +77,8 @@
 			"• 極薄ながらも優れた隠蔽性を発揮するネーマーシールが付属。"
 		],
 		"en": [
-			"The VF-22S piloted by the strongest couple \"Max \" and \" Milia \" joins the HG \" Macross\" plastic model series!",
-			"• \"VF-22S Sturmvogel II (Maximilian Genus aircraft)\", which Max flies, is commercialized in the HG \" Macross\" plastic model series.",
+			"The VF-22S piloted by the strongest couple \"Max\" and \"Milia\" joins the HG \"Macross\" plastic model series!",
+			"• \"VF-22S Sturmvogel II (Maximilian Genus aircraft)\", which Max flies, is commercialized in the HG \"Macross\" plastic model series.",
 			"• By incorporating replacement parts into part of the transformation mechanism, the transformation sequence has been simplified. Can be easily transformed into Battroid, Gerwalk, and Fighter.",
 			"• By adopting \"replacement three-stage transformation (shortcut change)\", we pursue the form of each form based on the image of the setting image.",
 			"• A new dimension of movable performance has been achieved by eliminating complicated structures and creating optimal movable points with posing in mind.",
@@ -47,42 +90,79 @@
 			"• Includes Namer Seal, which is extremely thin but has excellent concealment properties."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ガンポッド×1",
-			"エフェクトパーツ×1",
-			"ランディングギア×1式",
-			"ファイター形態再現用パーツ×1式",
-			"ジョイントパーツ×1式",
-			"ハンドパーツ×1式",
-			"ネーマーシール×1"
-		],
-		"en": [
-			"Gun pod x 1",
-			"Effect parts x 1",
-			"Landing gear x 1 set",
-			"Fighter form reproduction parts x 1 set",
-			"Joint parts x 1 set",
-			"Hand parts x 1 set",
-			"Namer Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ガンポッド",
+				"en": "gun pod"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "エフェクトパーツ",
+				"en": "effect parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ランディングギア",
+				"en": "landing gear"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ファイター形態再現用パーツ",
+				"en": "Fighter form reproduction parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ネーマーシール",
+				"en": "Namer Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000226160_1.jpg",
 				"path": "/images/items/01_5465/1000226160_1.jpg",
 				"hash": "2201c43896b0f9efc2648cfc95a3f2d1"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000226160_10.jpg",
-				"path": "/images/items/01_5465/1000226160_10.jpg",
-				"hash": "8122ac6dae3913f0f1d621904146e626"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000226160_11.jpg",
-				"path": "/images/items/01_5465/1000226160_11.jpg",
-				"hash": "b623e17b315ba8424ab8521eda71a25c"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000226160_2.jpg",
@@ -123,13 +203,19 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000226160_9.jpg",
 				"path": "/images/items/01_5465/1000226160_9.jpg",
 				"hash": "c5a0483895bb98e06a5ae217f1142c6c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000226160_10.jpg",
+				"path": "/images/items/01_5465/1000226160_10.jpg",
+				"hash": "8122ac6dae3913f0f1d621904146e626"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000226160_11.jpg",
+				"path": "/images/items/01_5465/1000226160_11.jpg",
+				"hash": "b623e17b315ba8424ab8521eda71a25c"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5465/",
-	"brandIds": ["hg"],
-	"seriesIds": ["macross"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5944", "01_5946", "01_5448", "01_5449"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5465/"
 }

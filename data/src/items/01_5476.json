@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "ジムプラくん 立体ラバーマスコットキーチェーン",
-		"en": "GMPLA-KUN 3D RUBBER MASCOT KEYCHAIN"
+		"en": "Jimpura-kun 3D rubber mascot key chain"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
 	"price": {
 		"amount": 990,
 		"currency": "JPY",
@@ -31,21 +68,15 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5476_0.jpg",
 				"path": "/images/items/01_5476/01_5476_0.jpg",
 				"hash": "52501264b222340a7750ccf7bec1c722"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5476_1.jpg",
 				"path": "/images/items/01_5476/01_5476_1.jpg",
 				"hash": "7b2093299b4ba7c3e129fc2c4c02c6f1"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5476/",
-	"brandIds": [],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5476/"
 }

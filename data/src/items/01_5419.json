@@ -5,6 +5,60 @@
 		"ja": "ＨＧ 1/144 ベギルベウトルシュ(ケナンジ小隊所属機/リドリック小隊所属機)",
 		"en": "HG 1/144 Beguilbeutrush (Machine belonging to Kenanji Platoon/Machine belonging to Ridric Platoon)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216474",
+			"url": "https://p-bandai.jp/item/item-1000216474/",
+			"ja": "ＨＧ 1/144 デスルター"
+		},
+		{
+			"id": "01_5422",
+			"url": "https://bandai-hobby.net/item/01_5422/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムキャリバーン [クリアカラー]"
+		},
+		{
+			"id": "item-1000203130",
+			"url": "https://p-bandai.jp/item/item-1000203130/",
+			"ja": "FULL MECHANICS 1/100 ガンダムエアリアル パーメットスコア・シックス"
+		},
+		{
+			"id": "item-1000203129",
+			"url": "https://p-bandai.jp/item/item-1000203129/",
+			"ja": "ＨＧ 1/144 ガンダムキャリバーン パーメットスコア・ファイブ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -64,7 +117,7 @@
 			"\"The Witch's Relic\" is -",
 			"I don't want to bury everything.",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－．",
-			"From the official side story comic \"Mobile Suit Gundam: Witch of Mercury Vanadis Heart \", \" Begilbeu Torsch\" appears!",
+			"From the official side story comic \"Mobile Suit Gundam: Witch of Mercury Vanadis Heart\", \"Begilbeu Torsch\" appears!",
 			"The characteristic exterior and armament are reproduced with new modeling. A 1/144 Scale item that is easy to make.",
 			"● Faithfully reproduces the exterior of the Dominicos unit's ground battle version aircraft, \"Begilbeu Torsch.\"",
 			"Faithfully reproduces the exterior of Begilbeu Torsch with new modeling!",
@@ -100,59 +153,83 @@
 			"・Product specifications are as of 20247. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["ビームライフル", "ビームガンユニット", "ビームサーベル×2", "ノンキネティックポッド×2"],
-		"en": ["beam rifle", "beam gun unit", "Beam saber x2", "Non-kinetic pod x 2"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "beam rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームガンユニット",
+				"en": "beam gun unit"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "beam saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ノンキネティックポッド",
+				"en": "non-kinetic pod"
+			},
+			"count": 2
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6265.jpg",
+				"src": "https://bandai-hobby.net/images/153_6265_s_9e2bx7gzt51oep19adrulw8674xf.jpg",
 				"path": "/images/items/01_5419/153_6265.jpg",
 				"hash": "be9ad83af3e4cea51fc685a649acbb8e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6265.jpg",
+				"src": "https://bandai-hobby.net/images/155_6265_s_2dyrkbt8snq1t22dmh3thaog6z7l.jpg",
 				"path": "/images/items/01_5419/155_6265.jpg",
 				"hash": "5127f4605b5a64cc74c6ff8d3bf07752"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6265.jpg",
+				"src": "https://bandai-hobby.net/images/156_6265_s_zyxvmqt24tuecl1mdblvjeqirxwu.jpg",
 				"path": "/images/items/01_5419/156_6265.jpg",
 				"hash": "e40a0f28be76759b5badd690655b86f3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6265.jpg",
+				"src": "https://bandai-hobby.net/images/157_6265_s_fnm5kwzpg4gt8vykvy1e57mch2pb.jpg",
 				"path": "/images/items/01_5419/157_6265.jpg",
 				"hash": "69aa466ff9a3a930ba3faead0ab5e5b3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6265.jpg",
+				"src": "https://bandai-hobby.net/images/158_6265_s_jbtj0hpjl4ugqarjcmbud62kqmuz.jpg",
 				"path": "/images/items/01_5419/158_6265.jpg",
 				"hash": "cfcae8b2967c91ce60de5347736270a2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6265.jpg",
+				"src": "https://bandai-hobby.net/images/159_6265_s_tqly0n99ykuqdftj4epkoisqclzx.jpg",
 				"path": "/images/items/01_5419/159_6265.jpg",
 				"hash": "258e673b1f7a35841d5f2b753057145e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6265.jpg",
+				"src": "https://bandai-hobby.net/images/189_6265_s_qvsfoa9gv3ifi2zrjno0a2ealry3.jpg",
 				"path": "/images/items/01_5419/189_6265.jpg",
 				"hash": "46acea47ed186c8d91b08fa201046e7b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6265.jpg",
+				"src": "https://bandai-hobby.net/images/190_6265_s_aiokfvedi9s9v46pllw8gwsf9s2p.jpg",
 				"path": "/images/items/01_5419/190_6265.jpg",
 				"hash": "a71a3b9d4141f7324a4a8627c73f0f24"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6265.jpg",
+				"src": "https://bandai-hobby.net/images/191_6265_s_l2bcnqylewtkj6l3m22oto8g2rdm.jpg",
 				"path": "/images/items/01_5419/191_6265.jpg",
 				"hash": "70e167352cc12ab80131db0eea287ad6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_6265.jpg",
+				"src": "https://bandai-hobby.net/images/192_6265_s_dzrl3hvb039rkfjizo0lcrxi0sv4.jpg",
 				"path": "/images/items/01_5419/192_6265.jpg",
 				"hash": "8a20b78512aea761fd7ae65d4028fe05"
 			}
@@ -160,14 +237,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5419/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216474", "01_5422", "item-1000203130", "item-1000203129"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2521",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2521/"

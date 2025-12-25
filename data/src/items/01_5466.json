@@ -2,9 +2,53 @@
 	"id": "01_5466",
 	"type": "item",
 	"name": {
-		"ja": "MG 1/100 RX-178 ガンダム Mk-II Ver.2.0（ティターンズ）",
-		"en": "MG 1/100 RX-178 Gundam Mk-II Ver.2.0 (Titans)"
+		"ja": "MG 1/100 RX-178 ガンダムMk-II Ver.2.0（ティターンズ）",
+		"en": "MG 1/100 RX-178 GundamMk-II Ver.2.0 (Titans)"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000145352",
+			"url": "https://p-bandai.jp/item/item-1000145352/",
+			"ja": "ＭＧ 1/100 RMS-179 ジムII（エゥーゴカラーＶｅｒ．）"
+		},
+		{
+			"id": "item-1000131596",
+			"url": "https://p-bandai.jp/item/item-1000131596",
+			"ja": "ＭＧ 1/100 ジム・キャノン ［レッド・ヘッド］（ジャブロー防衛隊仕様）"
+		},
+		{
+			"id": "01_4270",
+			"url": "https://bandai-hobby.net/item/01_4270/",
+			"ja": "MG 1/100 百式 Ver.2.0 [メカニカルクリア]"
+		},
+		{
+			"id": "item-1000112091",
+			"url": "http://p-bandai.jp/item/item-1000112091/",
+			"ja": "ＭＧ 1/100 RMS-179 ジムＩＩ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -18,34 +62,33 @@
 		"day": 25
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"「機動戦士Ｚガンダム」に登場するティターンズの黒いガンダム Mk-IIのＭＧ（マスターグレード）Ver.2.0シリーズプラモデルです。腰の回転ギミックを追加し、より大胆なポーズが可能になりました。付属のガンダムデカールにより１～３号機を再現可能。"
+			"「機動戦士Ｚガンダム」に登場するティターンズの黒いガンダムMk-IIのＭＧ（マスターグレード）Ver.2.0シリーズプラモデルです。腰の回転ギミックを追加し、より大胆なポーズが可能になりました。付属のガンダムデカールにより１～３号機を再現可能。"
 		],
 		"en": [
-			"MG (Master Grade) Ver. 2.0 series plastic model of the Titans' black Gundam Mk-II that appears in \"Mobile Suit Z Gundam\". A hip rotation gimmick has been added, allowing for even bolder poses. Units 1 to 3 can be reproduced with the included Gundam decal."
+			"MG (Master Grade) Ver.2.0 series plastic model of the Titans' black Gundam Mk-II that appears in \"Mobile Suit Z Gundam\". A hip rotation gimmick has been added, allowing for even bolder poses. Units 1 to 3 can be reproduced with the included Gundam decal."
 		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_630.jpg",
+				"src": "https://bandai-hobby.net/images/153_630_s_5czcmfkvldi6amin1z2c4y0im1c5.jpg",
 				"path": "/images/items/01_5466/153_630.jpg",
 				"hash": "2da5fb654cefefac8c470904a372b599"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_630.jpg",
+				"src": "https://bandai-hobby.net/images/155_630_s_x8uoyqdlmvt3ipm5nnl1vfamafph.jpg",
 				"path": "/images/items/01_5466/155_630.jpg",
 				"hash": "9f1218780359b336ac9c2f5eec29db51"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_630.jpg",
+				"src": "https://bandai-hobby.net/images/156_630_s_cnxvwxsu99irb8ig6xer6dh3xphi.jpg",
 				"path": "/images/items/01_5466/156_630.jpg",
 				"hash": "fca83e4d6e503034e13d79b8ecf768ac"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_630.jpg",
+				"src": "https://bandai-hobby.net/images/157_630_s_bx20s3gaz6ckncliussvb04w7qzs.jpg",
 				"path": "/images/items/01_5466/157_630.jpg",
 				"hash": "5a0f08f825a7ba851cd937eeaa8733d4"
 			}
@@ -53,10 +96,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5466/",
-	"brandIds": ["mg"],
-	"seriesIds": ["z-gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000145352", "item-1000131596", "01_4270", "item-1000112091"],
 	"manual": {
 		"id": "824",
 		"url": "https://manual.bandai-hobby.net/menus/detail/824/"

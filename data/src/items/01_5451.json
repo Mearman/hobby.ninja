@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard 仮面ライダーゼロワン ライジングホッパー",
-		"en": "Figure-rise Standard KAMEN RIDER ZERO-ONE RISING HOPPER"
+		"en": "Figure-rise Standard Kamen Rider Zero-One Rising Hopper"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "rider",
+			"url": "https://bandai-hobby.net/series/rider/",
+			"ja": "仮面ライダーシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000215369",
+			"url": "https://p-bandai.jp/item/item-1000215369/",
+			"ja": "Figure-rise Standard 仮面ライダーファイズ ブラスターフォーム"
+		},
+		{
+			"id": "01_5276",
+			"url": "https://bandai-hobby.net/item/01_5276/",
+			"ja": "Figure-rise Standard 仮面ライダークウガ アルティメットフォーム"
+		},
+		{
+			"id": "01_5175",
+			"url": "https://bandai-hobby.net/item/01_5175/",
+			"ja": "Figure-rise Standard 仮面ライダーキバ キバフォーム"
+		},
+		{
+			"id": "01_5068",
+			"url": "https://bandai-hobby.net/item/01_5068/",
+			"ja": "Figure-rise Standard 仮面ライダー鎧武 オレンジアームズ"
+		}
+	],
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -30,7 +73,7 @@
 			"• プログライズキーを保持する専用のハンドパーツが付属。"
 		],
 		"en": [
-			"\"Kamen Rider Zero-One Rising Hopper \", which is particular about detail and surface treatment from Reiwa's first Kamen Rider \" Kamen Rider Zero-One\", has been commercialized!",
+			"\"Kamen Rider Zero-One Rising Hopper\", which is particular about detail and surface treatment from Reiwa's first Kamen Rider \"Kamen Rider Zero-One\", has been commercialized!",
 			"• Wide range of motion allows you to freely recreate dynamic poses from the movie.",
 			"• The abdomen can be pulled out to improve range of motion for forward bending.",
 			"• A double ball joint connects the neck and head to ensure distance and range of motion.",
@@ -40,70 +83,95 @@
 			"• Comes with a special hand part to hold the progression key."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"プログライズキー（キーモード）×1",
-			"プログライズキー（カードディスクモード）×1",
-			"アタッシュカリバー×1式",
-			"ハンドパーツ×1式",
-			"アクションベース6×1"
-		],
-		"en": [
-			"Progress key (key mode) x 1",
-			"Progress key (card disk mode) x 1",
-			"Attache Calibur x 1 set",
-			"Hand parts x 1 set",
-			"action base 6×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "プログライズキー（キーモード）",
+				"en": "Progress key (key mode)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "プログライズキー（カードディスクモード）",
+				"en": "Progress key (card disk mode)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アタッシュカリバー",
+				"en": "attache caliber"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "アクションベース6",
+				"en": "action base 6"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6296.jpg",
+				"src": "https://bandai-hobby.net/images/153_6296_s_1f8zzrrkq8c27buk2goos2mgo3bq.jpg",
 				"path": "/images/items/01_5451/153_6296.jpg",
 				"hash": "35132d09a148cc11d49d5bf38658e25e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6296.jpg",
+				"src": "https://bandai-hobby.net/images/155_6296_s_5xaueiwd8767n8mua3kxpmc5ea3r.jpg",
 				"path": "/images/items/01_5451/155_6296.jpg",
 				"hash": "9f76232c1e8eeb7baac61bb2ed127497"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6296.jpg",
+				"src": "https://bandai-hobby.net/images/156_6296_s_jsk6v96nqre3e4cpjtg1gs0nbavd.jpg",
 				"path": "/images/items/01_5451/156_6296.jpg",
 				"hash": "50b088548cc76c1289c020bf1181011c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6296.jpg",
+				"src": "https://bandai-hobby.net/images/157_6296_s_z3wvgqhy50mnzx04zlwkj4mohik9.jpg",
 				"path": "/images/items/01_5451/157_6296.jpg",
 				"hash": "2f06285160ecc0fa6e061387950b8f90"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6296.jpg",
+				"src": "https://bandai-hobby.net/images/158_6296_s_uyvbqlyb5xi303x64u0a067nkosl.jpg",
 				"path": "/images/items/01_5451/158_6296.jpg",
 				"hash": "b5bc25be15228127ba2664671aa456c5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6296.jpg",
+				"src": "https://bandai-hobby.net/images/159_6296_s_8wzchdeufuc7ro1uw349b1bc7c3e.jpg",
 				"path": "/images/items/01_5451/159_6296.jpg",
 				"hash": "8fa0f5299652a5e7a3a0a1d182aad092"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6296.jpg",
+				"src": "https://bandai-hobby.net/images/189_6296_s_9bo9ehc7cvr4bxk3pc5fur989j8h.jpg",
 				"path": "/images/items/01_5451/189_6296.jpg",
 				"hash": "c7da469237d6cfd669d603252a09a647"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6296.jpg",
+				"src": "https://bandai-hobby.net/images/190_6296_s_pobnh9s4hj0bpddg17k1pj8yvi3d.jpg",
 				"path": "/images/items/01_5451/190_6296.jpg",
 				"hash": "94099a5b78b587a3b29284851a1cae05"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5451/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["rider"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["item-1000215369", "01_5276", "01_5175", "01_5068"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5451/"
 }

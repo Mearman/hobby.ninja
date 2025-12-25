@@ -3,8 +3,30 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard プルツー",
-		"en": "Figure-rise Standard PLE TWO"
+		"en": "Figure-rise Standard Pull Two"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-zz",
+			"url": "https://bandai-hobby.net/series/gundam-zz/",
+			"ja": "機動戦士ガンダムＺＺ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -20,65 +42,107 @@
 	"targetAge": 15,
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム ZZ』より、パイロットスーツ姿の「プルツー」をFigure-rise Standardで立体化！",
+			"『機動戦士ガンダムZZ』より、パイロットスーツ姿の「プルツー」をFigure-rise Standardで立体化！",
 			"• 頭部はヘルメットやヘッドギアを装着可能。表情パーツの組み替えにも対応。",
 			"• ヘルメットのバイザーは着脱が可能。",
 			"• 胸部パーツは「襟元オープン状態」と「通常状態」の2種類付属。",
 			"• 表情はタンポ印刷済みパーツ1種と、水転写式デカール用パーツ2種で再現。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam ZZ \", \" Purutsu\" in a pilot suit is made into a figure-rise Standard!",
+			"From \"Mobile Suit GundamZZ\", \"Puru Two\" in a pilot suit is made into a figure-rise Standard!",
 			"• A helmet or headgear can be attached to the head. Also supports rearrangement of facial parts.",
 			"• Helmet visor is removable.",
-			"• Two types of chest parts are included: \"neck open state \" and \" normal state\".",
+			"• Two types of chest parts are included: \"neck open state\" and \"normal state\".",
 			"• The facial expressions are reproduced with one type of pad-printed part and two types of water transfer decal parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"表情パーツ(タンポ印刷)×1種",
-			"表情パーツ(水転写式デカール)×2種",
-			"ヘルメット×1",
-			"ヘッドギア付頭部パーツ×1",
-			"ハンドガン×1",
-			"胸部パーツ×2種",
-			"ハンドパーツ×1式",
-			"水転写式デカール×1",
-			"シール×1"
-		],
-		"en": [
-			"Facial expression parts (tampo printing) x 1 type",
-			"Facial expression parts (water transfer decal) x 2 types",
-			"Helmet x 1",
-			"Head parts with headgear x 1",
-			"Hand gun x 1",
-			"Chest parts x 2 types",
-			"Hand parts x 1 set",
-			"Water transfer decal x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情パーツ(タンポ印刷)",
+				"en": "Facial expression parts (tampo printing)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "表情パーツ(水転写式デカール)",
+				"en": "Facial expression parts (water transfer decal)"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヘルメット",
+				"en": "helmet"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ヘッドギア付頭部パーツ",
+				"en": "Head parts with headgear"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドガン",
+				"en": "hand gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "胸部パーツ",
+				"en": "chest parts"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225494_1.jpg",
 				"path": "/images/items/01_5454/1000225494_1.jpg",
 				"hash": "d427305cbb8d807142cd8ab3922bfd17"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225494_10.jpg",
-				"path": "/images/items/01_5454/1000225494_10.jpg",
-				"hash": "b15df6fc92472e7d3bfa286819457e4f"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225494_11.jpg",
-				"path": "/images/items/01_5454/1000225494_11.jpg",
-				"hash": "7f99b960a799364ffc3e6ac546b69424"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225494_12.jpg",
-				"path": "/images/items/01_5454/1000225494_12.jpg",
-				"hash": "9a87c4c1da40bb17d7623ab6c106d9dd"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225494_2.jpg",
@@ -119,15 +183,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225494_9.jpg",
 				"path": "/images/items/01_5454/1000225494_9.jpg",
 				"hash": "7c8b3e1a321411583f05a2e8c21759d7"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225494_10.jpg",
+				"path": "/images/items/01_5454/1000225494_10.jpg",
+				"hash": "b15df6fc92472e7d3bfa286819457e4f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225494_11.jpg",
+				"path": "/images/items/01_5454/1000225494_11.jpg",
+				"hash": "7f99b960a799364ffc3e6ac546b69424"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225494_12.jpg",
+				"path": "/images/items/01_5454/1000225494_12.jpg",
+				"hash": "9a87c4c1da40bb17d7623ab6c106d9dd"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5454/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["gundam-zz"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": [],
 	"manual": {
 		"id": "2146",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2146/"

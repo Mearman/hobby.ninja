@@ -2,9 +2,57 @@
 	"id": "01_5468",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 サイコ・ガンダム Mk-II",
-		"en": "HG 1/144 PSYCHO GUNDAM Mk-Ⅱ"
+		"ja": "HG 1/144 サイコ・ガンダムMk-II",
+		"en": "HG 1/144 Psycho GundamMk-II"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
+	"manual": {
+		"id": "2939",
+		"url": "https://manual.bandai-hobby.net/menus/detail/2939"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 11000,
 		"currency": "JPY",
@@ -18,10 +66,9 @@
 		"day": 22
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士Z ガンダム』主要MS立体化のラストを飾るシリーズ最大級の「サイコ・ガンダム Mk-II」がHGで立体化!!",
+			"『機動戦士Zガンダム』主要MS立体化のラストを飾るシリーズ最大級の「サイコ・ガンダムMk-II」がHGで立体化!!",
 			"• 全高約270mm。迫力のサイズ感。",
 			"• モビル・フォートレス状態への変形が可能。",
 			"• 細かな色分けはパーツ分割により再現。",
@@ -29,80 +76,112 @@
 			"• 劇中シーンをイメージした半壊状態の頭部パーツも付属。"
 		],
 		"en": [
-			"\"Psycho Gundam Mk-II \", the largest in the series that marks the last of the major MS three-dimensional versions of \" Mobile Suit Z Gundam\", is now three-dimensional in HG!",
+			"\"Psycho Gundam Mk-II\", the largest in the series that marks the last major MS three-dimensional version of \"Mobile Suit Z Gundam\", is now three-dimensional in HG!",
 			"• Overall height approximately 270mm. Impressive size.",
 			"• Can transform into Mobile Fortress state.",
 			"• Detailed color coding is reproduced by dividing the parts.",
-			"• \"Action Base 4 \" and \" Weapon Display Base\" are included. You can create a display inspired by the movie.",
+			"• \"Action Base 4\" and \"Weapon Display Base\" are included. You can create a display inspired by the movie.",
 			"• A half-destructed head part inspired by the scene in the movie is also included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"シールド×1",
-			"頭部(半壊状態)×1",
-			"腕用リード線ユニット×2",
-			"リフレクター・ビット(収納状態)×1式",
-			"リフレクター・ビット(展開状態)×1式",
-			"ビームエフェクト×1式",
-			"アクションベース4×1",
-			"ウェポンディスプレイベース×1式",
-			"シール×1"
-		],
-		"en": [
-			"Seal × 1",
-			"Head (half-broken) x 1",
-			"Arm lead wire unit x 2",
-			"Reflector bit (stored) x 1 set",
-			"Reflector bit (expanded) x 1",
-			"Beam effect x 1",
-			"action base 4×1",
-			"Weapon display base x 1 set",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "頭部(半壊状態)",
+				"en": "Head (half destroyed)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "腕用リード線ユニット"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "リフレクター・ビット(収納状態)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "リフレクター・ビット(展開状態)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームエフェクト"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "アクションベース4"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ウェポンディスプレイベース"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5468_0.jpg",
 				"path": "/images/items/01_5468/01_5468_0.jpg",
 				"hash": "8366434686eb2c694d952dc226a551df"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5468_1.jpg",
 				"path": "/images/items/01_5468/01_5468_1.jpg",
 				"hash": "10ea997dcc6711e3161e919e753a036e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5468_2.jpg",
 				"path": "/images/items/01_5468/01_5468_2.jpg",
 				"hash": "4842f2403ca79957d1d9167aa1508a79"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5468_3.jpg",
 				"path": "/images/items/01_5468/01_5468_3.jpg",
 				"hash": "5c84b92ade0738990eb33a0e3df2fbcb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5468_4.jpg",
 				"path": "/images/items/01_5468/01_5468_4.jpg",
 				"hash": "10ef2b9968fb7ef150791eb66eb73c43"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5468_5.jpg",
 				"path": "/images/items/01_5468/01_5468_5.jpg",
 				"hash": "2090b8691b533a3e18ca9b2ce51c2776"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5468/",
-	"brandIds": ["hg"],
-	"seriesIds": ["z-gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"],
-	"manual": {
-		"id": "2939",
-		"url": "https://manual.bandai-hobby.net/menus/detail/2939/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5468/"
 }

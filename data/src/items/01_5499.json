@@ -3,8 +3,57 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC 1/144 ガザC ハマーン専用機",
-		"en": "HGUC 1/144 GAZA C (HAMAN KARN'S MOBILE SUIT)"
+		"en": "HGUC 1/144 Gaza C Haman special machine"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,13 +67,12 @@
 		"day": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「機動戦士Ｚガンダム」に登場するアクシズのモビルスーツ、ガザＣのハマーン・カーン専用機のHGUCシリーズプラモデルです。モビルアーマーへの変形を一部パーツ差替えで再現可能です。各動力パイプは稼動の妨げにならないようにエラストマーで再現。"
 		],
 		"en": [
-			"■ This is an HGUC series plastic model of the Axes mobile suit that appears in \"MOBILE SUIT Z GUNDAM\", the Haman Khan machine of Gaza C. It is possible to reproduce the transformation to mobile armor by replacing some parts. Each power pipe is reproduced with elastomer so as not to interfere with operation."
+			"HGUC series plastic model of Haman Khan's machine from Gaza C, the Axis mobile suit that appears in \"Mobile Suit Z Gundam\". Transformation into mobile armor can be reproduced by replacing some parts. Each power pipe is reproduced with elastomer so as not to interfere with operation."
 		]
 	},
 	"images": {
@@ -58,10 +106,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5499/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["z-gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"],
 	"manual": {
 		"id": "897",
 		"url": "https://manual.bandai-hobby.net/menus/detail/897/"

@@ -3,7 +3,39 @@
 	"type": "item",
 	"name": {
 		"ja": "オプションパーツセット ガンプラ14(ガンバレルストライカー)",
-		"en": "OPTION PARTS SET GUNPLA 14 (GUNBARREL STRIKER)"
+		"en": "Optional parts set Gunpla14 (gun barrel striker)"
+	},
+	"brands": [
+		{
+			"id": "optionpartsset",
+			"url": "https://bandai-hobby.net/brand/optionpartsset/",
+			"ja": "オプションパーツセット"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5178",
+			"url": "https://bandai-hobby.net/item/01_5178/",
+			"ja": "オプションパーツセット ガンプラ 01 (エールストライカー)"
+		}
+	],
+	"manual": {
+		"id": "2080",
+		"url": "https://manual.bandai-hobby.net/menus/detail/2080"
 	},
 	"price": {
 		"amount": 1320,
@@ -20,45 +52,60 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"カスタマイズ遊びを促進する「オプションパーツセットシリーズ」から、『機動戦士ガンダム SEED MSV』に登場した「ガンバレルストライカー」が登場！",
+			"カスタマイズ遊びを促進する「オプションパーツセットシリーズ」から、『機動戦士ガンダムSEED MSV』に登場した「ガンバレルストライカー」が登場！",
 			"• 戦闘機形態からバックパック形態へ変形し、各種機体へ装着できる。",
 			"• パーツの差し替えでガンバレルの展開状態が再現可能。キャノピーはクリアパーツで再現。",
 			"• キットに応じて選べる1軸と2軸のジョイントパーツが付属。ガンプラオリジナルのカスタマイズ遊びが可能。",
 			"• 別売りの「ENTRY GRADE 1/144 ストライクガンダム」等と組み合わせてガンバレルストライクガンダムを再現可能。"
 		],
 		"en": [
-			"From the \"Optional Parts Set Series \" that promotes customization play, the \" Gun Barrel Striker \" that appeared in \" Mobile Suit Gundam SEED MSV\" is now available!",
+			"The \"Gun Barrel Striker\" that appeared in \"Mobile Suit GundamSEED MSV\" is now available from the \"Option Parts Set Series\" that promotes customization play!",
 			"• Transforms from fighter jet form to backpack form and can be attached to various aircraft.",
 			"• The expanded state of the gun barrel can be reproduced by replacing parts. The canopy is reproduced with clear parts.",
 			"• Comes with 1-axis and 2-axis joint parts that can be selected depending on the kit. Gunpla original customization play is possible.",
 			"• Gunbarrel Strike Gundam can be reproduced by combining with the separately sold \"ENTRY GRADE 1/144 Strike Gundam\" etc."
 		]
 	},
-	"accessories": {
-		"ja": ["ガンバレルストライカー×1", "ガトリングガン×1", "ガンバレル実弾砲塔×4", "ジョイントパーツ×1式"],
-		"en": ["Gun barrel striker x1", "Gatling gun x 1", "Gun barrel live ammunition turret x 4", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ガンバレルストライカー",
+				"en": "gun barrel striker"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ガトリングガン",
+				"en": "gatling gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ガンバレル実弾砲塔",
+				"en": "gun barrel live turret"
+			},
+			"count": 4
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224145_1.jpg",
 				"path": "/images/items/01_5441/1000224145_1.jpg",
 				"hash": "224541d5deaacf292be2df803783b4a9"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224145_10.jpg",
-				"path": "/images/items/01_5441/1000224145_10.jpg",
-				"hash": "afcebfe2d84206d96194d279770d837a"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224145_11.jpg",
-				"path": "/images/items/01_5441/1000224145_11.jpg",
-				"hash": "921e052052c2bc7f8bf102a32acf1229"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224145_12.jpg",
-				"path": "/images/items/01_5441/1000224145_12.jpg",
-				"hash": "99de518d178a49a313c0a971749b534b"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224145_2.jpg",
@@ -99,17 +146,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224145_9.jpg",
 				"path": "/images/items/01_5441/1000224145_9.jpg",
 				"hash": "4127b8e613fb0b96efaff1c5411a1aae"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224145_10.jpg",
+				"path": "/images/items/01_5441/1000224145_10.jpg",
+				"hash": "afcebfe2d84206d96194d279770d837a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224145_11.jpg",
+				"path": "/images/items/01_5441/1000224145_11.jpg",
+				"hash": "921e052052c2bc7f8bf102a32acf1229"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224145_12.jpg",
+				"path": "/images/items/01_5441/1000224145_12.jpg",
+				"hash": "99de518d178a49a313c0a971749b534b"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5441/",
-	"brandIds": ["optionpartsset"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5178"],
-	"manual": {
-		"id": "2080",
-		"url": "https://manual.bandai-hobby.net/menus/detail/2080/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5441/"
 }

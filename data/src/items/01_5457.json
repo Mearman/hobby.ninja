@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 EXM-A9rk スピナティオ(ロイヤルナイト仕様)",
-		"en": "30MM 1/144 EXM-A9rk SPINATIO (ROYAL KNIGHT TYPE)"
+		"en": "30MM 1/144 EXM-A9rk Spinatio (Royal Knight specification)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2068,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 15
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「30MM カラバリグランプリ-マクシオンとの約束-」第1位！「ホワイト」を基調とした「スピナティオ (ロイヤルナイト仕様)」が登場！",
@@ -31,7 +73,7 @@
 			"• 新規エングレービングシールが付属。機体を手軽にディテールアップできる。"
 		],
 		"en": [
-			"\"30MM Color Variation Grand Prix-Promise with Maxion-\" 1st place! \" Spinatio (Royal Knight specification)\" based on \" white\" is now available!",
+			"\"30MM Color Variation Grand Prix-Promise with Maxion-\" 1st place! \"Spinatio (Royal Knight specification)\" based on \"white\" is now available!",
 			"• An all-in-one item that includes the main body, armor parts, and weapon parts.",
 			"• While taking advantage of the range of motion, there is no pinching during assembly.",
 			"• Includes weapons and armor unique to knight specifications.",
@@ -41,35 +83,68 @@
 			"• New engraved seal included. You can easily add details to the aircraft."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ナイトソード×1",
-			"シールド×1",
-			"ハンドパーツ×1式",
-			"アーマー×1式",
-			"ジョイントパーツ×1式",
-			"エングレービングシール×1"
-		],
-		"en": [
-			"Night sword x1",
-			"Seal × 1",
-			"Hand parts x 1 set",
-			"Armor x 1 set",
-			"Joint parts x 1 set",
-			"Engraving Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ナイトソード",
+				"en": "night sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "アーマー",
+				"en": "armor"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "エングレービングシール",
+				"en": "Engraving Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225844_1.jpg",
 				"path": "/images/items/01_5457/1000225844_1.jpg",
 				"hash": "08162e22f469139be60defd57cf528a5"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225844_10.jpg",
-				"path": "/images/items/01_5457/1000225844_10.jpg",
-				"hash": "f78c9548108121d623afc35fc84fc99a"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225844_2.jpg",
@@ -110,15 +185,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225844_9.jpg",
 				"path": "/images/items/01_5457/1000225844_9.jpg",
 				"hash": "b9d5925440c515825399e7b5246175f6"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225844_10.jpg",
+				"path": "/images/items/01_5457/1000225844_10.jpg",
+				"hash": "f78c9548108121d623afc35fc84fc99a"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5457/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3794",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3794/"

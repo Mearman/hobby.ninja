@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM オプションパーツセット ARMORED CORE Ⅵ FIRES OF RUBICON WEAPON SET 04",
-		"en": "30MM OPTION PARTS SET ARMORED CORE Ⅵ FIRES OF RUBICON WEAPON SET 04"
+		"en": "30MM Option parts set ARMORED CORE Ⅵ FIRES OF RUBICON WEAPON SET 04"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [
+		{
+			"id": "armoredcore",
+			"url": "https://bandai-hobby.net/series/armoredcore/",
+			"ja": "ARMORED CORE Ⅵ FIRES OF RUBICON"
+		}
+	],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5573",
+			"url": "https://bandai-hobby.net/item/01_5573/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON RaD CC-3000 WRECKER ミルクトゥース"
+		},
+		{
+			"id": "01_5574",
+			"url": "https://bandai-hobby.net/item/01_5574/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON BALAM INDUSTRIES BD-011 MELANDER"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -27,48 +75,73 @@
 		],
 		"en": [
 			"“ARMORED CORE Ⅵ FIRES OF RUBICON” items are commercialized in the “30 MINUTES MISSIONS” series!",
-			"Based on the series' key concepts of \"simple assembly \" and \" custom play,\" weapons including the Gatling gun are now available as optional parts sets!",
-			"• Weapons include \"DF-GA-08 HU-BEN \", \" DF-ET-09 TAI-YANG-SHOU \", \" BML-G2/P17SPL-16 \", and \" BML-G1/P20MLT-04\".",
+			"Based on the series' key concepts of \"simple assembly\" and \"custom play,\" weapons including the Gatling gun are now available as optional parts sets!",
+			"• Weapons include \"DF-GA-08 HU-BEN\", \"DF-ET-09 TAI-YANG-SHOU\", \"BML-G2/P17SPL-16\", and \"BML-G1/P20MLT-04\".",
 			"• Weapons that change shape on the left and right when equipped come with parts for reproduction, and can be assembled selectively."
 		]
 	},
-	"accessories": {
-		"ja": ["DF-GA-08 HU-BEN×1式", "DF-ET-09 TAI-YANG-SHOU×1", "BML-G2/P17SPL-16×1式", "BML-G1/P20MLT-04×1式"],
-		"en": ["DF-GA-08 HU-BEN×1 set", "DF-ET-09 TAI-YANG-SHOU×1", "BML-G2/P17SPL-16×1 set", "BML-G1/P20MLT-04×1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "DF-GA-08 HU-BEN"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "DF-ET-09 TAI-YANG-SHOU"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "BML-G2/P17SPL-16"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "BML-G1/P20MLT-04"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5482_0.jpg",
 				"path": "/images/items/01_5482/01_5482_0.jpg",
 				"hash": "93455e62df2dbad0ac04ad94b9851abf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5482_1.jpg",
 				"path": "/images/items/01_5482/01_5482_1.jpg",
 				"hash": "0856883ad8f53df5704755cf29fa614d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5482_2.jpg",
 				"path": "/images/items/01_5482/01_5482_2.jpg",
 				"hash": "c175841e79923f89aa5d93415d953a7c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5482_3.jpg",
 				"path": "/images/items/01_5482/01_5482_3.jpg",
 				"hash": "14551b64e245874ffb50a2a496107ed2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5482_4.jpg",
 				"path": "/images/items/01_5482/01_5482_4.jpg",
 				"hash": "f4a734159740cc24b36bcbf6b1ede30d"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5482/",
-	"brandIds": ["30mm"],
-	"seriesIds": ["armoredcore"],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5973", "01_5974", "01_5573", "01_5574"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5482/"
 }

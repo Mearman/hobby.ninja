@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 エグザビークル(ウィングモービルVer.)",
-		"en": "30MM 1/144 Extended Armament Vehicle (WING MOBILE Ver.)"
+		"en": "30MM 1/144 Exer Vehicle (Wingmobile Ver.)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1188,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 25
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMエグザビークルシリーズにカスタマイズ性の高いモービル型の「ウィングモービルVer.」が登場！",
@@ -37,26 +79,25 @@
 			"• A dynamic display is possible by using the separately sold \"Action Base 7\"."
 		]
 	},
-	"accessories": {
-		"ja": ["ビークル×1式"],
-		"en": ["Vehicle x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビークル",
+				"en": "vehicle"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224477_1.jpg",
 				"path": "/images/items/01_5444/1000224477_1.jpg",
 				"hash": "23835d54a4ac086c59c90e59463a020d"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224477_10.jpg",
-				"path": "/images/items/01_5444/1000224477_10.jpg",
-				"hash": "0c9954ae60b5072012dd36cd81903e2a"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224477_11.jpg",
-				"path": "/images/items/01_5444/1000224477_11.jpg",
-				"hash": "25bfc63239b8d8b98d0d0d40d3fe7575"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224477_2.jpg",
@@ -97,15 +138,21 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224477_9.jpg",
 				"path": "/images/items/01_5444/1000224477_9.jpg",
 				"hash": "17abc8b350f173d785ee1ebf52cf1382"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224477_10.jpg",
+				"path": "/images/items/01_5444/1000224477_10.jpg",
+				"hash": "0c9954ae60b5072012dd36cd81903e2a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224477_11.jpg",
+				"path": "/images/items/01_5444/1000224477_11.jpg",
+				"hash": "25bfc63239b8d8b98d0d0d40d3fe7575"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5444/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"],
 	"manual": {
 		"id": "3793",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3793/"

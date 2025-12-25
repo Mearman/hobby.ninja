@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "メカコレクションDX 1式空間戦闘攻撃機 コスモタイガーII(単座型/銃座型) [2機セット]",
-		"en": "MECHA COLLE DX TYPE 1 SPACE STRIKE FIGHTER COSMO TIGER II (Single Seater / Two Seater) [2 item set]"
+		"en": "Mecha Collection DX Type 1 space combat attack aircraft Cosmo Tiger II (single seat type/gun turret type) [2 aircraft set]"
 	},
+	"brands": [
+		{
+			"id": "mecha-colle",
+			"url": "https://bandai-hobby.net/brand/mecha-colle/",
+			"ja": "メカコレクション"
+		}
+	],
+	"series": [
+		{
+			"id": "yamato",
+			"url": "https://bandai-hobby.net/series/yamato/",
+			"ja": "宇宙戦艦ヤマトシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5500",
+			"url": "https://bandai-hobby.net/item/01_5500/",
+			"ja": "メカコレクションDX 試製空間戦闘攻撃機 コスモパイソン [2機セット]"
+		},
+		{
+			"id": "01_3667",
+			"url": "https://bandai-hobby.net/item/01_3667/",
+			"ja": "メカコレクション ガイペロン級多層式航宙母艦 バルメス(外洋機動艦隊仕様)"
+		},
+		{
+			"id": "01_3650",
+			"url": "https://bandai-hobby.net/item/01_3650/",
+			"ja": "メカコレクション デウスーラIII世"
+		},
+		{
+			"id": "01_2854",
+			"url": "https://bandai-hobby.net/item/01_2854/",
+			"ja": "メカコレクション 自律無人戦闘艦BBB アンドロメダブラック"
+		}
+	],
 	"price": {
 		"amount": 1870,
 		"currency": "JPY",
@@ -20,13 +63,13 @@
 	"description": {
 		"ja": [
 			"『ヤマトよ永遠に REBEL3199』より、選択式で4種のコスモタイガーIIを再現可能なセットがメカコレクションDXとして新登場！",
-			"■新規造形パーツにより通常フォルムのコスモタイガーIIを再現。",
-			"■キャノピーは極薄の偏光成形を採用。劇中のイメージを表現。",
-			"■イロプラにより機体設定のカラーリングを追求。",
-			"■単座ボディ、銃座付きボディ、通常フォルム機首、イメージフォルム機首のパーツ選択により、4種類の内からコスモタイガーIIを2機作成可能。",
+			"• 新規造形パーツにより通常フォルムのコスモタイガーIIを再現。",
+			"• キャノピーは極薄の偏光成形を採用。劇中のイメージを表現。",
+			"• イロプラにより機体設定のカラーリングを追求。",
+			"• 単座ボディ、銃座付きボディ、通常フォルム機首、イメージフォルム機首のパーツ選択により、4種類の内からコスモタイガーIIを2機作成可能。",
 			"※銃座付きを2機同時に作ることは出来ません。",
-			"■ディスプレイベースにより姿勢調整を行った展示が可能。",
-			"■各種マーキングを収録した水転写式デカールが付属。"
+			"• ディスプレイベースにより姿勢調整を行った展示が可能。",
+			"• 各種マーキングを収録した水転写式デカールが付属。"
 		],
 		"en": [
 			"From \"Yamato Forever REBEL 3199\", a set that allows you to select and reproduce 4 types of Cosmo Tiger II is now available as Mecha Collection DX!",
@@ -39,67 +82,89 @@
 			"• Water transfer decals containing various markings are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"通常フォルム機首×2",
-			"イメージフォルム機首×2",
-			"単座ボディ×2",
-			"銃座付きボディ×1",
-			"台座×2",
-			"水転写式デカール×1"
-		],
-		"en": [
-			"Normal form nose x 2",
-			"Image form nose x 2",
-			"Single seat body x 2",
-			"Body with gun mount x 1",
-			"Pedestal x 2",
-			"Water transfer decal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "通常フォルム機首",
+				"en": "Normal form nose"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "イメージフォルム機首",
+				"en": "image form nose"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "単座ボディ",
+				"en": "single seat body"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "銃座付きボディ",
+				"en": "body with gun turret"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6339.jpeg",
+				"src": "https://bandai-hobby.net/images/153_6339_o_1i69il22jui77udi3i9hk2f623.jpeg",
 				"path": "/images/items/01_5498/153_6339.jpeg",
 				"hash": "ec88a1c407adfb31050e01a5c17a9893"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6339.jpeg",
+				"src": "https://bandai-hobby.net/images/155_6339_o_1i69il97d39guh4b21mtq18ge2d.jpeg",
 				"path": "/images/items/01_5498/155_6339.jpeg",
 				"hash": "5c2aabe70fb720c39930831bf02a65df"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6339.jpeg",
+				"src": "https://bandai-hobby.net/images/156_6339_o_1i69ild6ulvm1qdh1l8t6sr10li2i.jpeg",
 				"path": "/images/items/01_5498/156_6339.jpeg",
 				"hash": "bc833ee57fa422de6c8294d9acdcafb1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6339.jpeg",
+				"src": "https://bandai-hobby.net/images/157_6339_o_1i69ilgic1kpcj2n80s1o5211jh2n.jpeg",
 				"path": "/images/items/01_5498/157_6339.jpeg",
 				"hash": "97d2636799240dbcb231de523c4c1ea3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6339.jpeg",
+				"src": "https://bandai-hobby.net/images/158_6339_o_1i69ilkdkl4as1g1c418gjuij2s.jpeg",
 				"path": "/images/items/01_5498/158_6339.jpeg",
 				"hash": "d9fd066ff3dab1e7410182e2465fe942"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6339.jpeg",
+				"src": "https://bandai-hobby.net/images/159_6339_o_1i69ilodp1h0luq8hebhl81o6d31.jpeg",
 				"path": "/images/items/01_5498/159_6339.jpeg",
 				"hash": "4de8e0f21177880c158da6245b0e4e04"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6339.jpeg",
+				"src": "https://bandai-hobby.net/images/189_6339_o_1i69ilrc1b211c8c2356kgta536.jpeg",
 				"path": "/images/items/01_5498/189_6339.jpeg",
 				"hash": "0b3ba99a310a711b10828747d0789436"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5498/",
-	"brandIds": ["mecha-colle"],
-	"seriesIds": ["yamato"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5500", "01_3667", "01_3650", "01_2854"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5498/"
 }

@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "麒麟丸",
-		"en": "KIRINMARU"
+		"en": "Kirinmaru"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "wataru",
+			"url": "https://bandai-hobby.net/series/wataru/",
+			"ja": "ワタルシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5504",
+			"url": "https://bandai-hobby.net/item/01_5504/",
+			"ja": "神龍王丸"
+		},
+		{
+			"id": "01_5502",
+			"url": "https://bandai-hobby.net/item/01_5502/",
+			"ja": "雷神丸"
+		},
+		{
+			"id": "01_5503",
+			"url": "https://bandai-hobby.net/item/01_5503/",
+			"ja": "炎上丸"
+		},
+		{
+			"id": "01_5493",
+			"url": "https://bandai-hobby.net/item/01_5493/",
+			"ja": "天翔丸"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -29,33 +66,39 @@
 		],
 		"en": [
 			"Production of the new TV anime “Mashin Souzouden Wataru” has been decided!",
-			"The main character \"Wataru Hoshibe \"'s cousin \" Kakeru Amabe \"'s demon \" Kirinmaru\" is now available in the lineup!",
+			"The lineup includes the demon \"Kirinmaru\" of the main character \"Wataru Hoshibe\"'s cousin \"Kakeru Amabe\"!",
 			"• Adopts a common frame across the series that allows parts to be separated by area. Let's play in combination with other genies!",
 			"• Touch gate design that can be removed by hand. Can be assembled without adhesive!",
 			"• Chakram-type weapons can be attached to the back.",
 			"• Weapons and heads are reproduced in metallic gold molding color."
 		]
 	},
-	"accessories": {
-		"ja": ["チャクラム型の武器×2", "カスタムパーツ×1式"],
-		"en": ["Chakram type weapon x2", "Custom parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "チャクラム型の武器",
+				"en": "chakram type weapon"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "カスタムパーツ",
+				"en": "custom parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223340_1.jpg",
 				"path": "/images/items/01_5438/1000223340_1.jpg",
 				"hash": "90a57396a73507eb13a82eec1dc7be94"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223340_10.jpg",
-				"path": "/images/items/01_5438/1000223340_10.jpg",
-				"hash": "2254211a93fd4b4db0c3bdff5941b2ae"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223340_11.jpg",
-				"path": "/images/items/01_5438/1000223340_11.jpg",
-				"hash": "654d16e3f776b92b3407f8276c89f15b"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223340_2.jpg",
@@ -96,13 +139,19 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223340_9.jpg",
 				"path": "/images/items/01_5438/1000223340_9.jpg",
 				"hash": "dcb4556c9c80666f16586a7fc5d36603"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223340_10.jpg",
+				"path": "/images/items/01_5438/1000223340_10.jpg",
+				"hash": "2254211a93fd4b4db0c3bdff5941b2ae"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223340_11.jpg",
+				"path": "/images/items/01_5438/1000223340_11.jpg",
+				"hash": "654d16e3f776b92b3407f8276c89f15b"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5438/",
-	"brandIds": [],
-	"seriesIds": ["wataru"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5504", "01_5502", "01_5503", "01_5493"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5438/"
 }

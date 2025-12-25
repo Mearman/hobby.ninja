@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 ガンダムヴィダール",
-		"en": "MG 1/100 GUNDAM VIDAR"
+		"en": "MG 1/100 Gundam Vidar"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6764",
+			"url": "https://bandai-hobby.net/item/01_6764/",
+			"ja": "MG 1/100 ガンダムバルバトスルプス"
+		},
+		{
+			"id": "01_4255",
+			"url": "https://bandai-hobby.net/item/01_4255/",
+			"ja": "MG 1/100 ガンダムバルバトス [リサーキュレーションカラー/ネオンブルー]"
+		},
+		{
+			"id": "01_4214",
+			"url": "https://bandai-hobby.net/item/01_4214/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムバルバトス用 拡張パーツセット[クリアカラー］"
+		},
+		{
+			"id": "01_3842",
+			"url": "https://bandai-hobby.net/item/01_3842/",
+			"ja": "MG 1/100 ガンダムバルバトス[アイアンブラッドコーティング]"
+		}
+	],
+	"manual": {
+		"id": "2938",
+		"url": "https://manual.bandai-hobby.net/menus/detail/2938"
+	},
+	"scale": "1/100",
 	"price": {
 		"amount": 6600,
 		"currency": "JPY",
@@ -18,84 +66,119 @@
 		"day": 22
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム 鉄血のオルフェンズ』より「ガンダム・ヴィダール」がアップデートした“ガンダム・フレーム”を内蔵し、メカデザインを担当する形部一平氏の監修のもとMGにて商品化！",
-			"■ガンダム・フレームのアップデートにより肩関節の可動域が拡大。■つま先や踵のハンターエッジは展開が可能。■脚を曲げる動きに合わせ膝裏のアーマー、バーニアが連動可動。■ハンドガンにはブローバック可動をイメージした「ＭＧオリジナルギミック」搭載。■ライフルのマガジンは着脱が可能。■バーストサーベルはパージ時の端部形状を再現した刃パーツが付属。■パーツ選択で「阿頼耶識 Type-E」発動・非発動状態のコックピットを再現可能。"
+			"• ガンダム・フレームのアップデートにより肩関節の可動域が拡大。■つま先や踵のハンターエッジは展開が可能。■脚を曲げる動きに合わせ膝裏のアーマー、バーニアが連動可動。■ハンドガンにはブローバック可動をイメージした「ＭＧオリジナルギミック」搭載。■ライフルのマガジンは着脱が可能。■バーストサーベルはパージ時の端部形状を再現した刃パーツが付属。■パーツ選択で「阿頼耶識 Type-E」発動・非発動状態のコックピットを再現可能。"
 		],
 		"en": [
-			"Built-in \"Gundam Frame \" updated by \" Gundam Vidar \" from \" Mobile Suit Gundam Iron-Blooded Orphans\", commercialized by MG under the supervision of Ippei Gatabe, who is in charge of mechanical design!",
-			"• The range of motion of the shoulder joint has been expanded by updating the Gundam frame. • Hunter edges on the toe and heel can be expanded. • The armor and vernier on the back of the knees move in conjunction with the movement of bending the legs. • The handgun is equipped with an \"MG original gimmick \" that simulates blowback movement. • Rifle magazine is removable. • The burst saber comes with blade parts that reproduce the shape of the end when purging. • By selecting parts, it is possible to reproduce the cockpit with and without \" Arayashi Type-E\" activated."
+			"Built-in \"Gundam Frame\" updated by \"Gundam Vidar\" from \"Mobile Suit Gundam Iron-Blooded Orphans\", commercialized by MG under the supervision of Ippei Gatabe, who is in charge of mechanical design!",
+			"• The range of motion of the shoulder joint has been expanded by updating the Gundam frame. ■Hunter edges on the toes and heel can be expanded. ■The armor and vernier behind the knees move in conjunction with the movement of bending the legs. ■The handgun is equipped with an \"MG original gimmick\" that has the image of movable blowback. ■The magazine of the rifle is removable. ■The burst saber comes with blade parts that reproduce the shape of the end when purging. ■By selecting parts, it is possible to reproduce the cockpit with and without \"Ariyashi Type-E\" activated."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"バーストサーベル×1式",
-			"ライフル×1",
-			"ハンドガン×2",
-			"フィギュア×2種",
-			"ジョイントパーツ×1式",
-			"ハンドパーツ×1式",
-			"シール×2種"
-		],
-		"en": [
-			"Burst saber x 1 set",
-			"Rifle x 1",
-			"Hand gun x 2",
-			"Figure x 2 types",
-			"Joint parts x 1 set",
-			"Hand parts x 1 set",
-			"Seal×2 types"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "バーストサーベル",
+				"en": "burst saber"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ライフル",
+				"en": "rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドガン",
+				"en": "hand gun"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "フィギュア",
+				"en": "figure"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5469_0.jpg",
 				"path": "/images/items/01_5469/01_5469_0.jpg",
 				"hash": "9a3cdf2a424bf8914245d14d7511524f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5469_1.jpg",
 				"path": "/images/items/01_5469/01_5469_1.jpg",
 				"hash": "a4e5758ee2a732f60d44b042beeade02"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5469_2.jpg",
 				"path": "/images/items/01_5469/01_5469_2.jpg",
 				"hash": "4a7bf1424998c9fb86326236822fd8eb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5469_3.jpg",
 				"path": "/images/items/01_5469/01_5469_3.jpg",
 				"hash": "856a698a50937c8e3604ba33cbf9917e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5469_4.jpg",
 				"path": "/images/items/01_5469/01_5469_4.jpg",
 				"hash": "0de75531ca7bb4a5c31e4b0c4fbd458e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5469_5.jpg",
 				"path": "/images/items/01_5469/01_5469_5.jpg",
 				"hash": "8ebd6369b0c49741dacc061e618077dd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5469_6.jpg",
 				"path": "/images/items/01_5469/01_5469_6.jpg",
 				"hash": "166be0a7255eae9cecf110c76e04f17d"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5469/",
-	"brandIds": ["mg"],
-	"seriesIds": ["tekketsu"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6764", "01_4255", "01_4214", "01_3842"],
-	"manual": {
-		"id": "2938",
-		"url": "https://manual.bandai-hobby.net/menus/detail/2938/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5469/"
 }

@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MF ローザンアーチャー",
-		"en": "30MF ROSAN ARCHER"
+		"en": "30MF Rosan Archer"
 	},
+	"brands": [
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		},
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -34,7 +76,7 @@
 			"• 別売りのリーベル共和国の「シルエット」「アーチャー」とは異なるフェイスデザインとカラーリング。"
 		],
 		"en": [
-			"From \"30 MINUTES FANTASY \", where you can create your own fantasy job, \" Rozan Archer\" is now available!",
+			"From \"30 MINUTES FANTASY\", where you can create your own fantasy job, \"Rozan Archer\" is now available!",
 			"• A starter set that includes armor and armed parts in addition to the base \"silhouette\" [elementary body].",
 			"• A “silhouette” [body] with the same form as the separately sold “30MF Rose Night” is included.",
 			"• The “silhouette” [elementary body] is capable of flexible human-like actions and is adaptable to any job.",
@@ -45,75 +87,113 @@
 			"• Flexible movement is achieved by attaching the shoulder and waist armor via the joints on the back.",
 			"• The string of the longbow uses a special ultra-fine seal with strong adhesive processing only on both ends. The shaft of the arrow uses metal parts to express the texture.",
 			"• The attribute of “element core” is “wind”.",
-			"• The face design and coloring are different from Liber Republic's \"Silhouette \" and \" Archer\", which are sold separately."
+			"• The face design and coloring are different from Liber Republic's \"Silhouette\" and \"Archer\", which are sold separately."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"大弓×1",
-			"矢×１式",
-			"矢筒×1",
-			"アーマーパーツ×1式",
-			"ハンドパーツ×1式",
-			"ジョイントパーツ×1式",
-			"金属パーツ×1",
-			"シール×1"
-		],
-		"en": [
-			"Large bow x1",
-			"Arrow x 1 set",
-			"Quiver x 1",
-			"Armor parts x 1 set",
-			"Hand parts x 1 set",
-			"Joint parts x 1 set",
-			"Metal parts x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "大弓",
+				"en": "large bow"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "矢×１式",
+				"en": "Arrow x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "矢筒",
+				"en": "quiver"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アーマーパーツ",
+				"en": "armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "金属パーツ",
+				"en": "metal parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5490_0.jpg",
 				"path": "/images/items/01_5490/01_5490_0.jpg",
 				"hash": "aa6e1e16b019bd93fd9ccb2424ab2e76"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5490_1.jpg",
 				"path": "/images/items/01_5490/01_5490_1.jpg",
 				"hash": "d2627fad59107fa714611611fc27e48e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5490_2.jpg",
 				"path": "/images/items/01_5490/01_5490_2.jpg",
 				"hash": "66cdba9140a87e34e94011344e8f3f37"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5490_3.jpg",
 				"path": "/images/items/01_5490/01_5490_3.jpg",
 				"hash": "da87136274a1f92c15cece9e47567219"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5490_4.jpg",
 				"path": "/images/items/01_5490/01_5490_4.jpg",
 				"hash": "4ee4eede8d9dff81330b62ae563c08fb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5490_5.jpg",
 				"path": "/images/items/01_5490/01_5490_5.jpg",
 				"hash": "fcb0fa4347ff8257bfec9321f24224dc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5490_6.jpg",
 				"path": "/images/items/01_5490/01_5490_6.jpg",
 				"hash": "86aaf6fb648e478a37ec18ea4eb5070e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5490_7.jpg",
 				"path": "/images/items/01_5490/01_5490_7.jpg",
 				"hash": "f8d03c347c60d8e8c40944a904acb5c2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5490_8.jpg",
 				"path": "/images/items/01_5490/01_5490_8.jpg",
 				"hash": "64c62343765bbbae07fe09763c4f85a0"
 			}
@@ -121,10 +201,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5490/",
-	"brandIds": ["30mf"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"],
 	"manual": {
 		"id": "3417",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3417/"

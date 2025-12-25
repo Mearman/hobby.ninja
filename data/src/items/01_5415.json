@@ -3,8 +3,62 @@
 	"type": "item",
 	"name": {
 		"ja": "ＨＧ 1/144 アルトロンガンダム",
-		"en": "HG 1/144 ALTRON GUNDAM"
+		"en": "HG 1/144 Altron Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5590",
+			"url": "https://bandai-hobby.net/item/01_5590/",
+			"ja": "HG 1/144 ウイングガンダムゼロ [クリアカラー]"
+		},
+		{
+			"id": "01_5340",
+			"url": "https://bandai-hobby.net/item/01_5340/",
+			"ja": "HG 1/144 シェンロンガンダム [クリアカラー]"
+		},
+		{
+			"id": "item-1000194972",
+			"url": "https://p-bandai.jp/item/item-1000194972/",
+			"ja": "ＭＧ 1/100 ガンダムエピオン EW (シュトゥルム・ウント・ドラング装備)"
+		},
+		{
+			"id": "item-1000183318",
+			"url": "https://p-bandai.jp/item/item-1000183318/",
+			"ja": "ＨＧ 1/144 ガンダムデスサイズヘル"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－",
@@ -62,24 +115,80 @@
 			"・ パッケージ、ロゴ及び商品の仕様は、予告なく変更する場合がございます。ご了承ください。"
 		],
 		"en": [
-			"■ －－－－－－－－－－－－－－－－－－－－ 　 Two-headed dragon Seek righteousness and come out! 　 －－－－－－－－－－－－－－－－－－－－　 　 From \"Mobile Suit GUNDAM W\", the Altron GUNDAM, which is a modified version of the Shenron GUNDAM, is now available in the HG series. The characteristic fuselage shape and impressive dragon hang are reproduced in a new model. 　 -Reproduce the characteristic aircraft shape with a new modeling 　 --Reproduce the backpack with a new modeling The wing part has multiple movable axes, and various expressions can be added. The beam cannon can be angled with three rotation axes, and the base part rotates horizontally. -Characteristic weapons are newly included Twin Beam Trident 　 The twin beam trident comes with a stowed handle and can be suspended. 　 Dragon Hang 　 The dragon hang has fangs and jaws that can be moved by joint parts with the arms and a movable shaft, making it possible to add expressions. The included extension parts can be assembled in two joints. Reproduce further elongation state. 　　 By providing a movable axis at the joint, the retractment and deployment of the arm in the shoulder is reproduced. 　 -Reproduce various actions with a wide range of movement in the image of the play 　 Armament Included: Dragon Hang / Beam Cannon / Twin Beam Trident / Shield 　 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ 1/144 scale prefabricated plastic model Target age: 8 years old or older Product material: PS / PE ・No adhesive is used for assembly －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ 　 * The finished product in the photo has been painted. In addition, it is a prototype under development. It may differ slightly from the actual product. * Please note that air bubbles may enter the clear parts due to the manufacturing process. * Plated parts may vary in the painting process. Thank you for your understanding. * Product materials are subject to change depending on the production time of the products sold. Thank you for your understanding. * Depending on the sales situation, the quantity that can be purchased may change in the future. 　 (Remarks) 　・ This product cannot be purchased at stores that carry plastic models. 　・ This product may be sold at events sponsored by our company or other projects, and overseas. 　・ The number of items available for sale at 'Premium Bandai' is limited. Please note that it is out of stock. 　・ Due to the number of products prepared for production, the quantity that can be purchased per person is limited. 　　 Thank you for your understanding. 　・ The shipping date of this product is subject to change depending on the application status and production reasons. Thank you for your understanding. 　・ Product images are under development and may differ from the actual product. 　・ Product specifications are scheduled as of June 2024. Please note that it is subject to change. 　・ Packaging, logos, and product specifications are subject to change without notice. Thank you for your understanding."
+			"－－－－－－－－－－－－－－－－－－－－",
+			"Gundam with two dragons",
+			"Come out in search of justice!",
+			"－－－－－－－－－－－－－－－－－－－－",
+			"From \"Mobile Suit Gundam W\", Altron Gundam, a modified version of Shenron Gundam, is now available in the HG series.",
+			"The characteristic fuselage shape and impressive dragon hang are reproduced with new modeling.",
+			"-Reproduce the characteristic aircraft shape with new modeling",
+			"-Reproduce the backpack with new modeling",
+			"The wing part has multiple movable axes, allowing for various expressions.",
+			"The beam cannon can be angled with three rotation axes, and the base rotates horizontally.",
+			"-New unique weapons included",
+			"twin beam trident",
+			"The twin beam trident comes with a stowed handle and can be suspended.",
+			"dragon hang",
+			"Dragon Hang's fangs and jaws can be moved using joint parts with the arm and a movable shaft, allowing for expressions.",
+			"The included extension parts can be attached to two joints. Reproduce the further elongated state.",
+			"By providing a movable axis in the joint, it is possible to store and deploy the arm to the shoulder.",
+			"- Reproduce various actions based on the image of the play with a wide range of movement",
+			"Attached weapons: Dragon Hang / Beam Cannon / Twin Beam Trident / Seal",
+			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
+			"1/144 Scale Assembly plastic model",
+			"Target age: 8 years old and above",
+			"Product material: PS/PE",
+			"・No adhesive is used for assembly",
+			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
+			"*The finished product in the photo is painted. Also, a prototype that is still under development. There may be slight differences from the actual product.",
+			"*Please note that some of the clear parts may contain air bubbles due to the manufacturing process.",
+			"*There may be variations in plated parts due to the painting process. Thank you for your understanding.",
+			"*Product materials may change depending on the production period of the sold product. Thank you for your understanding.",
+			"*Depending on sales conditions, the quantity that can be purchased may change in the future.",
+			"(remarks)",
+			"・This product cannot be purchased at stores that carry plastic models.",
+			"・This product may be sold at events sponsored by our company or other projects, or overseas.",
+			"・ There is a limited number of this product available for sale at 'Premium Bandai'. Please note that the item may be out of stock.",
+			"・Due to production availability, we are limiting the quantity of this product that can be purchased per person.",
+			"note that.",
+			"- Shipping of this product may change depending on the application status and production circumstances. Thank you for your understanding.",
+			"・Product images are under development and may differ from the actual product.",
+			"- Product specifications are scheduled as of 20246. Please note that there may be changes.",
+			"・Package, logo, and product specifications are subject to change without notice. note that."
 		]
 	},
-	"accessories": {
-		"ja": ["ドラゴンハング", "ビームキャノン", "ツインビームトライデント", "シールド"],
-		"en": ["dragon hang", "beam cannon", "twin beam trident", "Seal de"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ドラゴンハング",
+				"en": "dragon hang"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームキャノン",
+				"en": "beam cannon"
+			}
+		},
+		{
+			"name": {
+				"ja": "ツインビームトライデント",
+				"en": "twin beam trident"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000213249_1.jpg",
 				"path": "/images/items/01_5415/1000213249_1.jpg",
 				"hash": "f9378c61ab4cf1e80b8a278ffa8aae2a"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000213249_10.jpg",
-				"path": "/images/items/01_5415/1000213249_10.jpg",
-				"hash": "f0721306f884852225ea5d6df04ff740"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000213249_2.jpg",
@@ -120,19 +229,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000213249_9.jpg",
 				"path": "/images/items/01_5415/1000213249_9.jpg",
 				"hash": "ef5321c52a795f054c612b7e662fa70a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000213249_10.jpg",
+				"path": "/images/items/01_5415/1000213249_10.jpg",
+				"hash": "f0721306f884852225ea5d6df04ff740"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5415/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["endlesswaltz"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5590", "01_5340", "item-1000194972", "item-1000183318"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2482",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2482/"

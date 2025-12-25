@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "ポケモンプラモコレクション クイック!! 21 コダック",
-		"en": "Pokémon Model Kit QUICK!! 21 PSYDUCK"
+		"en": "Pokemon Plastic Model Collection Quick!! 21 Kodak"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
 	"price": {
 		"amount": 715,
 		"currency": "JPY",
@@ -36,26 +73,21 @@
 			"• Three types of eye seals are included."
 		]
 	},
-	"accessories": {
-		"ja": ["シール×1"],
-		"en": ["Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224483_1.jpg",
 				"path": "/images/items/01_5450/1000224483_1.jpg",
 				"hash": "f96bd3d5ea68fa3e81cb4346060e0a5a"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224483_10.jpg",
-				"path": "/images/items/01_5450/1000224483_10.jpg",
-				"hash": "1b9d8161dc6ebae2d987a90995977d01"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224483_11.jpg",
-				"path": "/images/items/01_5450/1000224483_11.jpg",
-				"hash": "8831fed3cab4d821d4e6a874130cc28d"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224483_2.jpg",
@@ -96,13 +128,19 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224483_9.jpg",
 				"path": "/images/items/01_5450/1000224483_9.jpg",
 				"hash": "7c21627700ce9443c7287dfe49cd1ea7"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224483_10.jpg",
+				"path": "/images/items/01_5450/1000224483_10.jpg",
+				"hash": "1b9d8161dc6ebae2d987a90995977d01"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224483_11.jpg",
+				"path": "/images/items/01_5450/1000224483_11.jpg",
+				"hash": "8831fed3cab4d821d4e6a874130cc28d"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5450/",
-	"brandIds": [],
-	"seriesIds": ["pokemon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5450/"
 }

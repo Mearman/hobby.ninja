@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "雷神丸",
-		"en": "RAIJINMARU"
+		"en": "Raijinmaru"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "wataru",
+			"url": "https://bandai-hobby.net/series/wataru/",
+			"ja": "ワタルシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5504",
+			"url": "https://bandai-hobby.net/item/01_5504/",
+			"ja": "神龍王丸"
+		},
+		{
+			"id": "01_5503",
+			"url": "https://bandai-hobby.net/item/01_5503/",
+			"ja": "炎上丸"
+		},
+		{
+			"id": "01_5495",
+			"url": "https://bandai-hobby.net/item/01_5495/",
+			"ja": "龍王丸"
+		},
+		{
+			"id": "01_5496",
+			"url": "https://bandai-hobby.net/item/01_5496/",
+			"ja": "皇龍丸"
+		}
+	],
 	"price": {
 		"amount": 1925,
 		"currency": "JPY",
@@ -36,63 +73,55 @@
 			"• Two thunder swords can be connected and transformed into a long sword!"
 		]
 	},
-	"accessories": {
-		"ja": ["雷鳴剣×2"],
-		"en": ["Thunder sword x2"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "雷鳴剣",
+				"en": "thunder sword"
+			},
+			"count": 2
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5502_0.jpg",
 				"path": "/images/items/01_5502/01_5502_0.jpg",
 				"hash": "1098118058dd36bfae710855f75a1e02"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5502_1.jpg",
 				"path": "/images/items/01_5502/01_5502_1.jpg",
 				"hash": "91fa325dea64b0a8905b05e101d972f6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5502_2.jpg",
 				"path": "/images/items/01_5502/01_5502_2.jpg",
 				"hash": "97aedec2ec46dcd045f902d2b7a10532"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5502_3.jpg",
 				"path": "/images/items/01_5502/01_5502_3.jpg",
 				"hash": "3b3261259ba62d76855f9a21ffb54e0b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5502_4.jpg",
 				"path": "/images/items/01_5502/01_5502_4.jpg",
 				"hash": "30613c32b75e177f00ad5aae9d62dd29"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5502_5.jpg",
 				"path": "/images/items/01_5502/01_5502_5.jpg",
 				"hash": "4d96894a6a70572d9658468cdbfca96d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5502_6.jpg",
 				"path": "/images/items/01_5502/01_5502_6.jpg",
 				"hash": "a5efaf19acd3f07a0aca983004d28acc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5502_7.jpg",
 				"path": "/images/items/01_5502/01_5502_7.jpg",
 				"hash": "9250ccd95a40cf9c92652eb9b4e51374"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5502_8.jpg",
 				"path": "/images/items/01_5502/01_5502_8.jpg",
 				"hash": "d44aef37c255a8f79e753d84e2a3d228"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5502/",
-	"brandIds": [],
-	"seriesIds": ["wataru"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5504", "01_5503", "01_5495", "01_5496"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5502/"
 }

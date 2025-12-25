@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "重號丸",
-		"en": "JYUGOHMARU"
+		"en": "Jugomaru"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "wataru",
+			"url": "https://bandai-hobby.net/series/wataru/",
+			"ja": "ワタルシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
 	"price": {
 		"amount": 1925,
 		"currency": "JPY",
@@ -34,63 +71,55 @@
 			"• Two knife-shaped weapons can be stored in the forearm."
 		]
 	},
-	"accessories": {
-		"ja": ["ナイフ型の武器×2"],
-		"en": ["Knife weapon x2"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ナイフ型の武器",
+				"en": "knife-shaped weapon"
+			},
+			"count": 2
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5494_0.jpg",
 				"path": "/images/items/01_5494/01_5494_0.jpg",
 				"hash": "53befa66f6833afd4201697aca2c1d70"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5494_1.jpg",
 				"path": "/images/items/01_5494/01_5494_1.jpg",
 				"hash": "05663e6f8ff200f706359092a0d42db0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5494_2.jpg",
 				"path": "/images/items/01_5494/01_5494_2.jpg",
 				"hash": "aa1a6120c696ba3365c5959684e0ef6c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5494_3.jpg",
 				"path": "/images/items/01_5494/01_5494_3.jpg",
 				"hash": "4793323c5d8c7394af54a373d23c9efc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5494_4.jpg",
 				"path": "/images/items/01_5494/01_5494_4.jpg",
 				"hash": "356052be47f5c8315879796ddf6cdb94"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5494_5.jpg",
 				"path": "/images/items/01_5494/01_5494_5.jpg",
 				"hash": "5d32dd6581304967dfdca2c6e4034668"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5494_6.jpg",
 				"path": "/images/items/01_5494/01_5494_6.jpg",
 				"hash": "111ec29f606398c3872099a2b81df603"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5494_7.jpg",
 				"path": "/images/items/01_5494/01_5494_7.jpg",
 				"hash": "201cd6f34dc99430d19dcbf2dd8c7d8e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5494_8.jpg",
 				"path": "/images/items/01_5494/01_5494_8.jpg",
 				"hash": "2d2f45a7fa755d2118ba096f586a5c09"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5494/",
-	"brandIds": [],
-	"seriesIds": ["wataru"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5494/"
 }

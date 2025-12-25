@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 03",
-		"en": "30MM OPTION PARTS SET ARMORED CORE Ⅵ FIRES OF RUBICON WEAPON SET 03"
+		"en": "30MM Option parts set ARMORED CORE VI FIRES OF RUBICON WEAPON SET 03"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [
+		{
+			"id": "armoredcore",
+			"url": "https://bandai-hobby.net/series/armoredcore/",
+			"ja": "ARMORED CORE Ⅵ FIRES OF RUBICON"
+		}
+	],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5573",
+			"url": "https://bandai-hobby.net/item/01_5573/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON RaD CC-3000 WRECKER ミルクトゥース"
+		},
+		{
+			"id": "01_5574",
+			"url": "https://bandai-hobby.net/item/01_5574/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON BALAM INDUSTRIES BD-011 MELANDER"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -28,16 +76,54 @@
 		],
 		"en": [
 			"“ARMORED CORE VI FIRES OF RUBICON” items are commercialized in the “30 MINUTES MISSIONS” series!",
-			"Based on the series' key concepts of \"simple assembly \" and \" custom play,\" a group of weapons including a live bullet orbit that can reproduce the deployed state is now available as an optional parts set!",
-			"• Weapons include \"HG-003 COQUILLETT \", \" SG-027 ZIMMERMAN \", \" BO-044 HUXLEY \", and \" BML-G3/P04ACT-01\".",
+			"Based on the series' key concepts of \"simple assembly\" and \"custom play,\" a group of weapons including a live bullet orbit that can reproduce the deployed state is now available as an optional parts set!",
+			"• Weapons include \"HG-003 COQUILLETT\", \"SG-027 ZIMMERMAN\", \"BO-044 HUXLEY\", and \"BML-G3/P04ACT-01\".",
 			"• Weapons that change shape on the left and right when equipped come with parts for reproduction, and can be assembled selectively.",
-			"• \"BO-044 HUXLEY \" can be selectively reproduced in its unfolded state. By using the separately sold \" Action Base 6\", it can be displayed in the unfolded state."
+			"• \"BO-044 HUXLEY\" can be selectively reproduced in its unfolded state. By using the separately sold \"Action Base 6\", it can be displayed in the unfolded state."
 		]
 	},
-	"accessories": {
-		"ja": ["HG-003 COQUILLETT×1式", "SG-027 ZIMMERMAN×1式", "BO-044 HUXLEY×1式", "BML-G3/P04ACT-01×1式"],
-		"en": ["HG-003 COQUILLETT×1 set", "SG-027 ZIMMERMAN×1 set", "BO-044 HUXLEY×1 set", "BML-G3/P04ACT-01×1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "HG-003 COQUILLETT"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "SG-027 ZIMMERMAN"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "BO-044 HUXLEY"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "BML-G3/P04ACT-01"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -78,9 +164,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5459/",
-	"brandIds": ["30mm"],
-	"seriesIds": ["armoredcore"],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5973", "01_5974", "01_5573", "01_5574"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5459/"
 }

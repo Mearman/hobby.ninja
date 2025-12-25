@@ -5,6 +5,54 @@
 		"ja": "ＨＧ 1/144 ジム・ナイトシーカーＩＩ",
 		"en": "HG 1/144 Jim Nightseeker II"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2860,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"高 速 の 狩 人  ―",
@@ -108,59 +155,81 @@
 			"・Product specifications are as of 20246. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["ビーム・ガン", "100mmマシンガン", "ビーム・スプレーガン", "ビーム・サーベル"],
-		"en": ["beam gun", "100mm machine gun", "beam spray gun", "beam saber"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ガン",
+				"en": "beam gun"
+			}
+		},
+		{
+			"name": {
+				"ja": "100mmマシンガン",
+				"en": "100mm machine gun"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・スプレーガン",
+				"en": "beam spray gun"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6262.jpg",
+				"src": "https://bandai-hobby.net/images/153_6262_s_djzkwe1q15623p0ddhpgg55diz71.jpg",
 				"path": "/images/items/01_5416/153_6262.jpg",
 				"hash": "6107287b9dd1fdf27aa22f4fbab05ffb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6262.jpg",
+				"src": "https://bandai-hobby.net/images/155_6262_s_wu464fp47vlzazj0co7avxipsysn.jpg",
 				"path": "/images/items/01_5416/155_6262.jpg",
 				"hash": "ffa122bf42c0d3f46a5ff21f9804622b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6262.jpg",
+				"src": "https://bandai-hobby.net/images/156_6262_s_xpjbkx90dc5x4r7ndrj672u4cz7v.jpg",
 				"path": "/images/items/01_5416/156_6262.jpg",
 				"hash": "5311b4f768364f2d8ba9a7b752e09566"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6262.jpg",
+				"src": "https://bandai-hobby.net/images/157_6262_s_5ngn7bd2wyt9wa8tfob8zfk24qts.jpg",
 				"path": "/images/items/01_5416/157_6262.jpg",
 				"hash": "4e429a2088c76ebd2374a41204a17a57"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_6262.jpg",
+				"src": "https://bandai-hobby.net/images/158_6262_s_v3rzct4x1r4cqe3co8hnv16mg0ig.jpg",
 				"path": "/images/items/01_5416/158_6262.jpg",
 				"hash": "02134e3ce2f65f8defc73db513d2508d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_6262.jpg",
+				"src": "https://bandai-hobby.net/images/159_6262_s_58gmsfs1i4c4n3ta1j9y97g3jfpy.jpg",
 				"path": "/images/items/01_5416/159_6262.jpg",
 				"hash": "98a7089445a4b67822f9db15c061e170"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_6262.jpg",
+				"src": "https://bandai-hobby.net/images/189_6262_s_cas3yl08obpy06bmiiz4ow8f5lk2.jpg",
 				"path": "/images/items/01_5416/189_6262.jpg",
 				"hash": "783ed228625ed1880e20f4d7946183d4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_6262.jpg",
+				"src": "https://bandai-hobby.net/images/190_6262_s_ts1ixk17hbvohxlc6qlqkahuikye.jpg",
 				"path": "/images/items/01_5416/190_6262.jpg",
 				"hash": "edc7afd79ccfc51cfae2f40a3d02ab51"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_6262.jpg",
+				"src": "https://bandai-hobby.net/images/191_6262_s_zph1w1idzv66l7jwra3o45fardrw.jpg",
 				"path": "/images/items/01_5416/191_6262.jpg",
 				"hash": "22106ce663f3bb77a39f9ce6863c121a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_6262.jpg",
+				"src": "https://bandai-hobby.net/images/192_6262_s_il4wqt3lwmkjomo2jpdcxsqzy77q.jpg",
 				"path": "/images/items/01_5416/192_6262.jpg",
 				"hash": "6529e392666346c44d2a6551b67510ce"
 			}
@@ -168,14 +237,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5416/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2469",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2469/"

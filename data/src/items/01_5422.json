@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガンダムベース限定 ガンダムキャリバーン [クリアカラー]",
-		"en": "HG 1/144 THE GUNDAM BASE LIMITED GUNDAM CALIBARN [CLEAR COLOR]"
+		"en": "HG 1/144 Gundam Base Limited Gundam Caliburn [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216474",
+			"url": "https://p-bandai.jp/item/item-1000216474/",
+			"ja": "ＨＧ 1/144 デスルター"
+		},
+		{
+			"id": "item-1000211616",
+			"url": "https://p-bandai.jp/item/item-1000211616/",
+			"ja": "ＨＧ 1/144 ベギルベウトルシュ(ケナンジ小隊所属機/リドリック小隊所属機)"
+		},
+		{
+			"id": "item-1000203129",
+			"url": "https://p-bandai.jp/item/item-1000203129/",
+			"ja": "ＨＧ 1/144 ガンダムキャリバーン パーメットスコア・ファイブ"
+		},
+		{
+			"id": "item-1000203899",
+			"url": "https://p-bandai.jp/item/item-1000203899/",
+			"ja": "ＨＧ 1/144 ガンドノード"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 27
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定アイテム。",
@@ -29,11 +72,12 @@
 			"• 本体ディスプレイ用の台座が付属。"
 		],
 		"en": [
-			"■ For GUNPLA fans around the world, this is a limited edition item at the official GUNPLA complex \"GUNDAM Base\". \"HG GUNDAM Caliburn\" is now available in clear color!",
-			"■ Gambit can be displayed in combination with 2 sets of THE WITCH FROM MERCURY WEAPON DISPLAY BASE (sold separately).",
-			"■ Comes with a long portable firearm and a variable rod rifle as the main weapon.",
-			"■ Comes with a clear-colored escutcheon.",
-			"■ Comes with a pedestal for the main body display."
+			"A limited edition item from the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
+			"\"HG Gundam Caliburn\" now available in clear color!",
+			"• Gambit can be displayed in combination with 2 sets of Mercury Witch Weapon display bases (sold separately).",
+			"• Includes a long portable firearm and variable rod rifle as the main weapon.",
+			"• Comes with clear colored escutcheon.",
+			"• Comes with a pedestal for display."
 		]
 	},
 	"images": {
@@ -71,13 +115,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5422/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216474", "item-1000211616", "item-1000203129", "item-1000203899"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5422/"
 }

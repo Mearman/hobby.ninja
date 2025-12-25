@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "神龍王丸",
-		"en": "SAINT-RYUOHMARU"
+		"en": "Shinryuomaru"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "wataru",
+			"url": "https://bandai-hobby.net/series/wataru/",
+			"ja": "ワタルシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5504",
+			"url": "https://bandai-hobby.net/item/01_5504/",
+			"ja": "神龍王丸"
+		},
+		{
+			"id": "01_5503",
+			"url": "https://bandai-hobby.net/item/01_5503/",
+			"ja": "炎上丸"
+		},
+		{
+			"id": "01_5502",
+			"url": "https://bandai-hobby.net/item/01_5502/",
+			"ja": "雷神丸"
+		},
+		{
+			"id": "01_5495",
+			"url": "https://bandai-hobby.net/item/01_5495/",
+			"ja": "龍王丸"
+		}
+	],
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -23,61 +60,53 @@
 			"『魔神創造伝ワタル』より二人の救世主がともに創りあげた究極の魔神「神龍王丸」が登場！■部位ごとにパーツを分けられるシリーズ共通フレームを採用。他の魔神と組み合わせて遊ぼう！■パチパチと手で外せるタッチゲート仕様。接着剤無しで組み立てられる！■両肩の双龍紋などはゴールドメタリックパーツで再現！■背中の神環光輪や神創龍剣はライトブルーのクリアパーツで再現！"
 		],
 		"en": [
-			"From \"Mashin Souzouden Wataru \" comes the ultimate demon \" Shinryuomaru\" created by two saviors together! • Adopts a common frame across the series that allows parts to be separated by area. Let's play in combination with other genies! • Touch gate design that can be removed by hand. Can be assembled without adhesive! • The twin dragon crests on both shoulders are reproduced with gold metallic parts! • The divine ring halo and divine dragon sword on the back are reproduced with light blue clear parts!"
+			"From \"Mashin Souzouden Wataru\" comes the ultimate demon \"Shinryuomaru\" created by two saviors together! ■Uses a common frame in the series that allows parts to be separated by area. Let's play in combination with other genies! ■Touch gate specification that can be removed by hand. Can be assembled without adhesive! ■The twin dragon crests on both shoulders are reproduced with gold metallic parts! ■The divine ring halo and divine dragon sword on the back are reproduced with light blue clear parts!"
 		]
 	},
-	"accessories": {
-		"ja": ["神創龍剣（しんそうりゅうけん）"],
-		"en": ["Divine Dragon Sword"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "神創龍剣（しんそうりゅうけん）",
+				"en": "Divine Dragon Sword"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5504_0.jpg",
 				"path": "/images/items/01_5504/01_5504_0.jpg",
 				"hash": "d7b39a94c3df91a3129920d498b316aa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5504_1.jpg",
 				"path": "/images/items/01_5504/01_5504_1.jpg",
 				"hash": "713b3630fe53492cd4aecf5f771b28fc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5504_2.jpg",
 				"path": "/images/items/01_5504/01_5504_2.jpg",
 				"hash": "57efe8dc3da08bb72527cdde141e88ff"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5504_3.jpg",
 				"path": "/images/items/01_5504/01_5504_3.jpg",
 				"hash": "e15052fdaa3db6a55c0db0dfbedfbbc2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5504_4.jpg",
 				"path": "/images/items/01_5504/01_5504_4.jpg",
 				"hash": "08fdfaaabf61bbe50107e573a8e71f6a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5504_5.jpg",
 				"path": "/images/items/01_5504/01_5504_5.jpg",
 				"hash": "a3d65835aeddd3f3420fae7dbe5665a2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5504_6.jpg",
 				"path": "/images/items/01_5504/01_5504_6.jpg",
 				"hash": "105d15947bc0cc7a69eec5d117bd7033"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5504_7.jpg",
 				"path": "/images/items/01_5504/01_5504_7.jpg",
 				"hash": "126453e6a0c1ca0cd2be876acf940989"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5504/",
-	"brandIds": [],
-	"seriesIds": ["wataru"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5504", "01_5503", "01_5502", "01_5495"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5504/"
 }

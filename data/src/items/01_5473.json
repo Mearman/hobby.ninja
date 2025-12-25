@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "ガンプラくん 立体ラバーマスコットキーチェーン",
-		"en": "GUNPLA-KUN 3D RUBBER MASCOT KEYCHAIN"
+		"en": "Gunpla-kun 3D Rubber Mascot Keychain"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5968",
+			"url": "https://bandai-hobby.net/item/01_5968/",
+			"ja": "RG 1/144 ウイングガンダムゼロ"
+		},
+		{
+			"id": "01_5969",
+			"url": "https://bandai-hobby.net/item/01_5969/",
+			"ja": "ガンダムデカールNo.141 機動戦士ガンダムSEED FREEDOM汎用①"
+		},
+		{
+			"id": "01_5970",
+			"url": "https://bandai-hobby.net/item/01_5970/",
+			"ja": "ガンダムデカールNo.142 機動戦士ガンダムSEED FREEDOM汎用②"
+		},
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		}
+	],
 	"price": {
 		"amount": 990,
 		"currency": "JPY",
@@ -31,21 +68,15 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5473_0.jpg",
 				"path": "/images/items/01_5473/01_5473_0.jpg",
 				"hash": "eef567704402f6449aec9767094a1498"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5473_1.jpg",
 				"path": "/images/items/01_5473/01_5473_1.jpg",
 				"hash": "2e16696b5fa963748ff590fb0b0acc61"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5473/",
-	"brandIds": [],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5968", "01_5969", "01_5970", "01_5986"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5473/"
 }

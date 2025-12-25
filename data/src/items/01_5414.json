@@ -5,6 +5,54 @@
 		"ja": "ＭＧ 1/100 量産型リコ専用ザク",
 		"en": "MG 1/100 mass-produced Rico exclusive Zaku"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5994",
+			"url": "https://bandai-hobby.net/item/01_5994/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムアストレイ レッドフレーム [リサーキュレーションカラー/ネオンピンク］"
+		},
+		{
+			"id": "item-1000220190",
+			"url": "https://p-bandai.jp/item/item-1000220190/",
+			"ja": "ＨＧ 1/144 ザク・デザートタイプ ピンクパンサー隊機"
+		},
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "item-1000216105",
+			"url": "https://p-bandai.jp/item/item-1000216105/",
+			"ja": "RG 1/144 ソードインパルスガンダムＳｐｅｃＩＩ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4620,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"ドラマ『量産型リコ -最後のプラモ女子の人生組み立て記-』公式プラモデル！",
@@ -38,48 +85,70 @@
 			"• Includes typical weapons equipped by Zaku II."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ザク・マシンガン×1",
-			"ザク・バズーカ×1",
-			"ヒート・ホーク×1",
-			"３連装ミサイルポッド×1式",
-			"マーキングシール"
-		],
-		"en": ["Zaku machine gun x1", "Zaku Bazooka×1", "Heat Hawk x1", "Triple missile pod x 1", "MarkingSeal"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ザク・マシンガン",
+				"en": "zaku machine gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ザク・バズーカ",
+				"en": "Zaku Bazooka"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ヒート・ホーク",
+				"en": "heat hawk"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "３連装ミサイルポッド",
+				"en": "triple missile pod"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_6260.jpeg",
+				"src": "https://bandai-hobby.net/images/153_6260_o_1i7sq966j1nlm1q32963h1p1k2623.jpeg",
 				"path": "/images/items/01_5414/153_6260.jpeg",
 				"hash": "43e21a6d51fbd64ab8db1f737a8f7224"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_6260.jpeg",
+				"src": "https://bandai-hobby.net/images/155_6260_o_1i7t5agpbj1b1urr1uq4151814n523.jpeg",
 				"path": "/images/items/01_5414/155_6260.jpeg",
 				"hash": "8b0428a8f4c7c41a8bca99fa88b6a20b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_6260.jpeg",
+				"src": "https://bandai-hobby.net/images/156_6260_o_1i7spfttd1qgdmug1nblb8r1j4n23.jpeg",
 				"path": "/images/items/01_5414/156_6260.jpeg",
 				"hash": "5431169e46ac369fb52c49b8b0287fdc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_6260.jpeg",
+				"src": "https://bandai-hobby.net/images/157_6260_o_1i7sl2u501i8uiu11bsl12s66qr23.jpeg",
 				"path": "/images/items/01_5414/157_6260.jpeg",
 				"hash": "a7371816e7846414436cfd9b04f46991"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5414/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5994", "item-1000220190", "item-1000220189", "item-1000216105"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5414/"
 }

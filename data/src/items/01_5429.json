@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "HG ガンダムベース限定 ドラケンE",
-		"en": "HG THE GUNDAM BASE LIMITED DRAKEN E"
+		"en": "HG Gundam Base Limited Draken E"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-0080",
+			"url": "https://bandai-hobby.net/series/g-0080/",
+			"ja": "機動戦士ガンダム0080 ポケットの中の戦争"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5768",
+			"url": "https://bandai-hobby.net/item/01_5768/",
+			"ja": "HGUC 1/144 ジム・スナイパーII"
+		},
+		{
+			"id": "01_2436",
+			"url": "https://bandai-hobby.net/item/01_2436/",
+			"ja": "HGUC 1/144 リック・ドムII ライトグリーンバージョン"
+		},
+		{
+			"id": "01_1686",
+			"url": "https://bandai-hobby.net/item/01_1686/",
+			"ja": "HGUC 1/144 ケンプファー"
+		},
+		{
+			"id": "01_1635",
+			"url": "https://bandai-hobby.net/item/01_1635/",
+			"ja": "HGUC 1/144 ジム寒冷地仕様"
+		}
+	],
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -27,10 +70,11 @@
 			"• クレーン・アームは各部がスライド可動。"
 		],
 		"en": [
-			"■ For GUNPLA fans around the world, this is a limited edition item at the official GUNPLA complex \"GUNDAM Base\". From \"MOBILE SUIT GUNDAM 0080 War in the Pocket\", Draken E is now available in a completely new model!",
-			"■ The shape of the inside of the cockpit is precisely reproduced.",
-			"■ Parts can be selected to reproduce the aircraft belonging to the Zeon Army.",
-			"■ Each part of the crane arm can be moved by slide."
+			"A limited edition item from the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
+			"From \"Mobile Suit Gundam 0080: War in the Pocket\", Draken E appears with a completely new model!",
+			"• Precisely reproduce the shape of the cockpit interior.",
+			"• Zeon military machines can be reproduced by selecting parts.",
+			"• Each part of the crane arm can slide."
 		]
 	},
 	"images": {
@@ -58,13 +102,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5429/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-0080"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5768", "01_2436", "01_1686", "01_1635"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5429/"
 }

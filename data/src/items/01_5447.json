@@ -3,8 +3,30 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 超竜神",
-		"en": "HG CHORYUJIN"
+		"en": "HG Choryujin"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gaogaigar",
+			"url": "https://bandai-hobby.net/series/gaogaigar/",
+			"ja": "勇者王ガオガイガー"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 6600,
 		"currency": "JPY",
@@ -31,7 +53,7 @@
 			"• 付属のプラスチックシールとクリアパーツの採用により全身の細かな色分けを再現。"
 		],
 		"en": [
-			"From \"King of Braves GaoGaiGar \", \" Chouryujin \", which pursues dynamic pose expression, is commercialized in the HG series! Ice dragon and flame dragon can be symmetrically docked to \" Chouryujin\" by rearranging the parts!",
+			"From \"King of Braves GaoGaiGar\", \"Chouryujin\", which pursues dynamic pose expression, is commercialized in the HG series! Ice dragon and flame dragon can be symmetrically docked to \"Chouryujin\" by rearranging the parts!",
 			"• Replacement parts for reproducing each form are included to maximize the action production of the Choryujin, Ice Dragon, and Fire Dragon robot forms!",
 			"• The Ice Dragon and Fire Dragon can be transformed from robot mode to vehicle mode by changing the system using special parts! The crane unit and ladder unit in vehicle mode reproduce telescopic movement with a sliding mechanism!",
 			"• The Ice Dragon comes with a freezing rifle and a freezing gun. Enryu comes with a melting rifle, melting gun, and mirror seal. Both machines are equipped with deformation mechanisms and can be posed in dynamic poses!",
@@ -42,47 +64,75 @@
 			"• The detailed color coding of the whole body is reproduced by using the included plastic seal and clear parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"フェイスパーツ２種(氷竜／炎竜)×1式",
-			"フリージングガン×1",
-			"メルティングガン×1",
-			"ミラーシールド×1",
-			"超竜神用表情付き握り手(左右)×1",
-			"各種差し替えパーツ×1式",
-			"シール×2種"
-		],
-		"en": [
-			"2 types of face parts (ice dragon/flame dragon) x 1 set",
-			"Freezing gun x 1",
-			"Melting gun x 1",
-			"Mirror Seal × 1",
-			"Hands with facial expressions for Super Dragon God (left and right) x 1",
-			"Various replacement parts x 1 set",
-			"Seal×2 types"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フェイスパーツ２種(氷竜／炎竜)",
+				"en": "2 types of face parts (ice dragon/flame dragon)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "フリージングガン",
+				"en": "freezing gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "メルティングガン",
+				"en": "melting gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ミラーシールド",
+				"en": "mirror seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "超竜神用表情付き握り手(左右)",
+				"en": "Hands with facial expressions for Super Dragon God (left and right)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "各種差し替えパーツ",
+				"en": "Various replacement parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224478_1.jpg",
 				"path": "/images/items/01_5447/1000224478_1.jpg",
 				"hash": "5f1f8190532f4c3adfffd5858dca322d"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224478_10.jpg",
-				"path": "/images/items/01_5447/1000224478_10.jpg",
-				"hash": "a5424ad216db47fabf90c1b5a79a31ae"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224478_11.jpg",
-				"path": "/images/items/01_5447/1000224478_11.jpg",
-				"hash": "0f4d513be6eb567c1c738fbf44fef37c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224478_12.jpg",
-				"path": "/images/items/01_5447/1000224478_12.jpg",
-				"hash": "6c4a080cb580a5bb50a3bc768214af36"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224478_2.jpg",
@@ -123,13 +173,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224478_9.jpg",
 				"path": "/images/items/01_5447/1000224478_9.jpg",
 				"hash": "87e2b1426606662130a8650b774b4637"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224478_10.jpg",
+				"path": "/images/items/01_5447/1000224478_10.jpg",
+				"hash": "a5424ad216db47fabf90c1b5a79a31ae"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224478_11.jpg",
+				"path": "/images/items/01_5447/1000224478_11.jpg",
+				"hash": "0f4d513be6eb567c1c738fbf44fef37c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000224478_12.jpg",
+				"path": "/images/items/01_5447/1000224478_12.jpg",
+				"hash": "6c4a080cb580a5bb50a3bc768214af36"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5447/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gaogaigar"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_5447/"
 }

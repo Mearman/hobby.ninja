@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MP 後藤ひとり",
-		"en": "30MP HITORI GOTOH"
+		"en": "30MP Goto Hitori"
 	},
+	"brands": [
+		{
+			"id": "30mp",
+			"url": "https://bandai-hobby.net/brand/30mp/",
+			"ja": "30 MINUTES PREFERENCE"
+		},
+		{
+			"id": "30mp",
+			"url": "https://bandai-hobby.net/brand/30mp/",
+			"ja": "30 MINUTES PREFERENCE"
+		}
+	],
+	"series": [
+		{
+			"id": "bocchi-rocks",
+			"url": "https://bandai-hobby.net/series/bocchi-rocks/",
+			"ja": "ぼっち・ざ・ろっく！"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_7032",
+			"url": "https://bandai-hobby.net/item/01_7032/",
+			"ja": "30MP 伊地知虹夏"
+		},
+		{
+			"id": "01_6953",
+			"url": "https://bandai-hobby.net/item/01_6953/",
+			"ja": "30MP 山田リョウ"
+		},
+		{
+			"id": "01_5982",
+			"url": "https://bandai-hobby.net/item/01_5982/",
+			"ja": "30MP 喜多郁代"
+		}
+	],
 	"price": {
 		"amount": 4840,
 		"currency": "JPY",
@@ -32,11 +75,11 @@
 			"• 差し替え式でSTARRYライブ、文化祭ライブの衣装を再現可能。"
 		],
 		"en": [
-			"From the new 30 MINUTES LABEL brand \"30 MINUTES PREFERENCE \", Hitori Goto from the anime \" Bocchi Za Rock!\" is commercialized with a variety of accessory parts!",
+			"From the new 30 MINUTES LABEL brand \"30 MINUTES PREFERENCE\", Hitori Goto from the anime \"Bocchi Za Rock!\" is commercialized with a variety of accessory parts!",
 			"• Two types of face parts with tampo printing are included.",
 			"• Comes with unprinted face parts and water transfer decals that allow you to choose from a variety of facial expressions.",
 			"• A skirt with movement that matches the posture during performance is included as a replacement part.",
-			"• In addition to the torso structure that can express a forward-bent playing posture, the bangs in a bowed position are reproduced with replacement parts.",
+			"• In addition to the torso structure that can express a forward-bent playing posture, the bowed bangs are reproduced with replacement parts.",
 			"• The guitar strap is made of materials that can be flexibly changed to suit different poses.",
 			"• The \"cable band\" strap part on the left wrist is removable.",
 			"• Empty bottle parts are included to recreate bottleneck playing techniques.",
@@ -44,108 +87,155 @@
 			"• Replaceable costumes allow you to recreate the costumes from STARRY Live and School Festival Live."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"フェイスパーツ(タンポ印刷済み)×2種",
-			"フェイスパーツ(印刷無し)×1式",
-			"前髪パーツ×2種",
-			"脚部パーツ×2種",
-			"ハンドパーツ×1式",
-			"ギター・エフェクター×1式",
-			"交換用スカートパーツ×1",
-			"その他劇中再現用交換パーツ×1式",
-			"水転写式デカール×1"
-		],
-		"en": [
-			"Face parts (tampo printed) x 2 types",
-			"Face parts (no printing) x 1 set",
-			"Bangs parts x 2 types",
-			"Leg parts x 2 types",
-			"Hand parts x 1 set",
-			"Guitar effector x 1 set",
-			"Replacement skirt parts x 1",
-			"Other replacement parts for reproduction in the play x 1 set",
-			"Water transfer decal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フェイスパーツ(タンポ印刷済み)",
+				"en": "Face parts (tampo printed)"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "フェイスパーツ(印刷無し)",
+				"en": "Face parts (no printing)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "前髪パーツ",
+				"en": "bangs parts"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "脚部パーツ",
+				"en": "leg parts"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ギター・エフェクター",
+				"en": "guitar effector"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "交換用スカートパーツ",
+				"en": "replacement skirt parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "その他劇中再現用交換パーツ",
+				"en": "Other replacement parts for reproduction in the play"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5492_0.jpg",
 				"path": "/images/items/01_5492/01_5492_0.jpg",
 				"hash": "cd0835c1ece48bcb3de518abde018d9a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5492_1.jpg",
 				"path": "/images/items/01_5492/01_5492_1.jpg",
 				"hash": "f2cd17bf67fae7e2ca9c5123fd40897b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5492_10.jpg",
-				"path": "/images/items/01_5492/01_5492_10.jpg",
-				"hash": "488b2682297574eb9cbdf976065224d0"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5492_11.jpg",
-				"path": "/images/items/01_5492/01_5492_11.jpg",
-				"hash": "188069a517cab2d30c8fc7ffef75fde0"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5492_12.jpg",
-				"path": "/images/items/01_5492/01_5492_12.jpg",
-				"hash": "86cc4b02f56e3a04733a37d2b646c1f4"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5492_2.jpg",
 				"path": "/images/items/01_5492/01_5492_2.jpg",
 				"hash": "1708b861ad6f5127b2af9996bbaf835f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5492_3.jpg",
 				"path": "/images/items/01_5492/01_5492_3.jpg",
 				"hash": "5a88e7f4c12e777f8c3584ebaafd0a2b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5492_4.jpg",
 				"path": "/images/items/01_5492/01_5492_4.jpg",
 				"hash": "1c7b8e6a73d41b58312ad2bb861f7495"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5492_5.jpg",
 				"path": "/images/items/01_5492/01_5492_5.jpg",
 				"hash": "2cebcf2fdb4cebccd5640e4444c3ea67"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5492_6.jpg",
 				"path": "/images/items/01_5492/01_5492_6.jpg",
 				"hash": "fef409d4726c01e462c1f6d9fa5f507f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5492_7.jpg",
 				"path": "/images/items/01_5492/01_5492_7.jpg",
 				"hash": "c2c2ab0a8dfe11dafd3309df1ddf15dd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5492_8.jpg",
 				"path": "/images/items/01_5492/01_5492_8.jpg",
 				"hash": "43c4cde86c73d8479265507a3c8b2b23"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5492_9.jpg",
 				"path": "/images/items/01_5492/01_5492_9.jpg",
 				"hash": "bb33c2a9488bc328249aa5eb50aaaadc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5492_inst_0.jpg",
-				"path": "/images/items/01_5492/01_5492_inst_0.jpg",
-				"hash": "345bd726849fd25259c743f6bbe7a50d"
+				"path": "/images/items/01_5492/01_5492_10.jpg",
+				"hash": "488b2682297574eb9cbdf976065224d0"
+			},
+			{
+				"path": "/images/items/01_5492/01_5492_11.jpg",
+				"hash": "188069a517cab2d30c8fc7ffef75fde0"
+			},
+			{
+				"path": "/images/items/01_5492/01_5492_12.jpg",
+				"hash": "86cc4b02f56e3a04733a37d2b646c1f4"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5492/",
-	"brandIds": ["30mp"],
-	"seriesIds": ["bocchi-rocks"],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5982"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5492/"
 }

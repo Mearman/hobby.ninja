@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MF リーベルプリースト",
-		"en": "30MF LIBER PRIEST"
+		"en": "30MF Liber Priest"
 	},
+	"brands": [
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		},
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		}
+	],
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -33,7 +75,7 @@
 			"• 別売りのローザン帝国の「シルエット」「プリースト」とは異なるフェイスデザインとカラーリング。"
 		],
 		"en": [
-			"From \"30 MINUTES FANTASY \", where you can create your own fantasy job, \" Libel Priest\" is now available!",
+			"From \"30 MINUTES FANTASY\", where you can create your own fantasy job, \"Libel Priest\" is now available!",
 			"• A starter set that includes armor and armed parts in addition to the base \"silhouette\" [elementary body].",
 			"• A “silhouette” [body] with the same form as the separately sold “30MF Liber Knight” is included.",
 			"• The “silhouette” [elementary body] is capable of flexible human-like actions and is adaptable to any job.",
@@ -43,13 +85,51 @@
 			"• Comes with armor and armed parts to “job change” to “Libel Priest” in combination with “Silhouette” [base body].",
 			"• Flexible movement is achieved by attaching the shoulder and waist armor via the joints on the back.",
 			"• The attribute of “element core” is “water”.",
-			"• The face design and coloring are different from Rozan Empire's \"Silhouette \" and \" Priest\" which are sold separately."
+			"• The face design and coloring are different from Rozan Empire's \"Silhouette\" and \"Priest\" which are sold separately."
 		]
 	},
-	"accessories": {
-		"ja": ["杖×1", "アーマーパーツ×1式", "ハンドパーツ×1式", "ジョイントパーツ×1式"],
-		"en": ["Cane x 1", "Armor parts x 1 set", "Hand parts x 1 set", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "杖",
+				"en": "cane"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アーマーパーツ",
+				"en": "armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -91,10 +171,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5445/",
-	"brandIds": ["30mf"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"],
 	"manual": {
 		"id": "3412",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3412/"
