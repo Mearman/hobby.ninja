@@ -189,6 +189,17 @@ export async function mergeWithExistingManual(filePath: string, newData: ManualD
 		// Image should come from HTML parsing OR from files on disk.
 		// The downloadManualImage() function handles finding images on disk.
 
+		// Preserve itemIds from existing data and merge with new ones
+		if (existing["itemIds"] && Array.isArray(existing["itemIds"])) {
+			const existingItemIds = existing["itemIds"] as string[];
+			const newItemIds = newData.itemIds ?? [];
+			// Merge and dedupe
+			const mergedIds = [...new Set([...existingItemIds, ...newItemIds])];
+			if (mergedIds.length > 0) {
+				newData.itemIds = mergedIds;
+			}
+		}
+
 		return newData;
 	} catch {
 		// File doesn't exist or can't be read, use new data as-is

@@ -193,7 +193,11 @@ export async function processManualComplete(
 
 		// Establish bidirectional link if item was discovered via shared image
 		if (discoveredItemId) {
-			manualData.itemId = discoveredItemId;
+			// Add to itemIds array (preserving any existing links)
+			const existingIds = manualData.itemIds ?? [];
+			if (!existingIds.includes(discoveredItemId)) {
+				manualData.itemIds = [...existingIds, discoveredItemId];
+			}
 			const msg = imageDeduplicated ? `Linked to item (via hash): ${discoveredItemId}` : `Linked to item: ${discoveredItemId}`;
 			console.log(`    ${msg}`);
 		}
