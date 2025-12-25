@@ -175,7 +175,7 @@ export class BrowserManager {
 
 	/**
 	 * Extract article image URLs after triggering lazy-load
-	 * Article images use data-src for lazy loading - need to scroll and wait
+	 * Article images use data-src for lazy loading - need to scroll and poll until loaded
 	 * @param url - Page URL to extract images from
 	 * @returns Array of loaded image URLs
 	 */
@@ -188,32 +188,47 @@ export class BrowserManager {
 		try {
 			await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30_000 });
 
-			// Extract article image URLs after scrolling to trigger lazy-load
+			// Extract article image URLs by scrolling and polling until lazy-load completes
 			const imageUrls = await page.evaluate(async () => {
-				const LAZY_LOAD_WAIT_MS = 2000;
-				const urls: string[] = [];
+				const MAX_WAIT_MS = 5000;
+				const POLL_INTERVAL_MS = 100;
 
-				// Find article section and scroll to it
+				// Find article section
 				const articleSection = document.querySelector(".pg-products__article");
 				if (!articleSection) {
-					return urls;
+					return [];
+				}
+
+				// Find lazy-loaded images (have data-src attribute)
+				const lazyImages =
+					articleSection.querySelectorAll<HTMLImageElement>("img[data-src]");
+				if (lazyImages.length === 0) {
+					return [];
 				}
 
 				// Scroll article into view to trigger lazy loading
 				articleSection.scrollIntoView({ behavior: "instant" });
-				await new Promise(resolve => setTimeout(resolve, LAZY_LOAD_WAIT_MS));
 
-				// Extract loaded image URLs (src, not data-src)
-				const images = articleSection.querySelectorAll("img");
-				for (const img of images) {
-					const src = img.src;
-					// Only include fully loaded http URLs (not data: or relative paths)
-					if (src && src.startsWith("http") && !src.includes("/common/")) {
-						urls.push(src);
+				// Poll until images have loaded src URLs (not data: or empty)
+				const startTime = Date.now();
+				while (Date.now() - startTime < MAX_WAIT_MS) {
+					const loadedUrls: string[] = [];
+					for (const img of lazyImages) {
+						const src = img.src;
+						if (src.startsWith("http") && !src.includes("/common/")) {
+							loadedUrls.push(src);
+						}
 					}
+
+					// Return once we have at least one loaded image
+					if (loadedUrls.length > 0) {
+						return loadedUrls;
+					}
+
+					await new Promise(r => setTimeout(r, POLL_INTERVAL_MS));
 				}
 
-				return urls;
+				return []; // Timeout - no images loaded
 			});
 
 			return imageUrls;
