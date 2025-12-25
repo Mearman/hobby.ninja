@@ -5,6 +5,50 @@
 		"ja": "HGUC 1/144 MSZ-006 ゼータガンダム グロスインジェクションバージョン",
 		"en": "HGUC 1/144 MSZ-006 Zeta Gundam gross injection version"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1676,
 		"currency": "JPY",
@@ -18,25 +62,28 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["「HGUC 1/144 MSZ-006 ゼータガンダム グロスインジェクションバージョン」登場！"],
-		"en": ["\"HGUC 1/144 MSZ-006 Zeta Gundam Gloss Injection Version\" now available!"]
+		"ja": [
+			"「HGUC 1/144 MSZ-006 ゼータガンダム グロスインジェクションバージョン」登場！"
+		],
+		"en": [
+			"\"HGUC 1/144 MSZ-006 Zeta Gundam Gloss Injection Version\" now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5713.jpg",
+				"src": "https://bandai-hobby.net/images/153_5713_s_v0ic3einiiqvhl95qy379vib83gi.jpg",
 				"path": "/images/items/01_4831/153_5713.jpg",
 				"hash": "6bde687abddebb0369904903bc46a0d4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5713.jpg",
+				"src": "https://bandai-hobby.net/images/155_5713_s_vn2xhpkm14xd9d8lgxfcpkc0gj71.jpg",
 				"path": "/images/items/01_4831/155_5713.jpg",
 				"hash": "9bbb25ea4b6baed816a6b241c43c18ff"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5713.jpg",
+				"src": "https://bandai-hobby.net/images/156_5713_s_snqjf0g8xi07qi38ahmbkia5kxqx.jpg",
 				"path": "/images/items/01_4831/156_5713.jpg",
 				"hash": "6a352575236ee42e7d4a487759d67a9e"
 			}
@@ -44,14 +91,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4831/",
-	"brandIds": ["hg"],
-	"seriesIds": ["z-gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	},
 	"manual": {
 		"id": "249",
 		"url": "https://manual.bandai-hobby.net/menus/detail/249/"

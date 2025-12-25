@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ガンダムフェニーチェリナーシタ [クリアカラー]",
 		"en": "MG 1/100 Gundam Fenice Linacita [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000106283",
+			"url": "https://p-bandai.jp/item/item-1000106283",
+			"ja": "ＭＧ 1/100 スタービルドストライクガンダム（ＲＧシステムＶｅｒ．）"
+		},
+		{
+			"id": "item-1000106282",
+			"url": "https://p-bandai.jp/item/item-1000106282",
+			"ja": "ＭＧ 1/100 ガンダムアメイジングエクシア"
+		},
+		{
+			"id": "01_395",
+			"url": "https://bandai-hobby.net/item/01_395/",
+			"ja": "MG 1/100 ガンダムアメイジングレッドウォーリア"
+		},
+		{
+			"id": "01_356",
+			"url": "https://bandai-hobby.net/item/01_356/",
+			"ja": "MG 1/100 ガンダムフェニーチェリナーシタ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5940,
 		"currency": "JPY",
@@ -18,20 +62,23 @@
 		"day": 15
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
-		"ja": ["MG 1/100 ガンダムフェニーチェリナーシタ [クリアカラー]登場！"],
-		"en": ["MG 1/100 Gundam Fenice Linacita [Clear Color] now available!"]
+		"ja": [
+			"MG 1/100 ガンダムフェニーチェリナーシタ [クリアカラー]登場！"
+		],
+		"en": [
+			"MG 1/100 Gundam Fenice Linacita [Clear Color] now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5644.jpg",
+				"src": "https://bandai-hobby.net/images/153_5644_s_2fhqzur0f9ymvdzd207qhab1f0oe.jpg",
 				"path": "/images/items/01_4760/153_5644.jpg",
 				"hash": "e8bcfc586511818a91c867a6c83f4437"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5644.jpg",
+				"src": "https://bandai-hobby.net/images/155_5644_s_a1vqbz36u7e0u4ktsk5w40s2ttth.jpg",
 				"path": "/images/items/01_4760/155_5644.jpg",
 				"hash": "2ef2d3260fa3f05475352810524901d4"
 			}
@@ -39,14 +86,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4760/",
-	"brandIds": ["mg"],
-	"seriesIds": ["buildfighters"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000106283", "item-1000106282", "01_395", "01_356"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	},
 	"manual": {
 		"id": "967",
 		"url": "https://manual.bandai-hobby.net/menus/detail/967/"

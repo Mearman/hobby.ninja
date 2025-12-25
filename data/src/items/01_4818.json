@@ -5,6 +5,45 @@
 		"ja": "MG 1/100 FA-93-ν2HWS Hi-νガンダム H.W.S. Ver.Ka メカニカルクリア",
 		"en": "MG 1/100 FA-93-ν2HWS Hi-νGundam H.W.S. Ver.Ka Mechanical Clear"
 	},
+	"brands": [
+		{
+			"id": "mgka",
+			"url": "https://bandai-hobby.net/brand/mgka/",
+			"ja": "MG Ver.Ka［マスターグレード バージョンカトキ］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4275",
+			"url": "https://bandai-hobby.net/item/01_4275/",
+			"ja": "MG 1/100 GUNDAM SIDE-F限定 RX-93 νガンダム Ver.Ka (サイコフレーム発動イメージカラー)"
+		},
+		{
+			"id": "01_1997",
+			"url": "https://bandai-hobby.net/item/01_1997/",
+			"ja": "MG 1/100 ガンダムベース限定 MSN-04 サザビーVer.Ka[スペシャルコーティング]"
+		},
+		{
+			"id": "01_183",
+			"url": "https://bandai-hobby.net/item/01_183/",
+			"ja": "MG 1/100 Ｈｉ-νガンダム Ver.Ka"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 11550,
 		"currency": "JPY",
@@ -18,15 +57,18 @@
 		"day": 20
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
-		"ja": ["MG 1/100 FA-93-ν2HWS Hi-νガンダム H.W.S. Ver.Ka メカニカルクリア登場！"],
-		"en": ["MG 1/100 FA-93-ν2HWS Hi-νGundam H.W.S. Ver.Ka mechanical clear now available!"]
+		"ja": [
+			"MG 1/100 FA-93-ν2HWS Hi-νガンダム H.W.S. Ver.Ka メカニカルクリア登場！"
+		],
+		"en": [
+			"MG 1/100 FA-93-ν2HWS Hi-νGundam H.W.S. Ver.Ka mechanical clear now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5701.jpg",
+				"src": "https://bandai-hobby.net/images/153_5701_s_khhiyve2z1fc4szwi8dmzs0bl996.jpg",
 				"path": "/images/items/01_4818/153_5701.jpg",
 				"hash": "dcad46cae815d8bbbea635990bdcad29"
 			}
@@ -34,14 +76,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4818/",
-	"brandIds": ["mgka"],
-	"seriesIds": ["gundam-cca"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4275", "01_1997", "01_183"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	},
 	"manual": {
 		"id": "953",
 		"url": "https://manual.bandai-hobby.net/menus/detail/953/"

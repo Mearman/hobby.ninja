@@ -3,8 +3,57 @@
 	"type": "item",
 	"name": {
 		"ja": "HGPG 1/144 量産型プチッガイ",
-		"en": "HG 1/144 PETIT'GUY MASS PRODUCTION TYPE"
+		"en": "HGPG 1/144 mass-produced Petit'gguy"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "petitgguy",
+			"url": "https://bandai-hobby.net/brand/petitgguy/",
+			"ja": "プチッガイ/ベアッガイ"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,10 +67,13 @@
 		"day": 22
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["HGPG 1/144 量産型プチッガイ登場！"],
-		"en": ["HGPG 1/144 mass-produced Petit'gguy now available!"]
+		"ja": [
+			"HGPG 1/144 量産型プチッガイ登場！"
+		],
+		"en": [
+			"HGPG 1/144 mass-produced Petit'gguy now available!"
+		]
 	},
 	"images": {
 		"product": [
@@ -39,14 +91,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4757/",
-	"brandIds": ["hg", "petitgguy"],
-	"seriesIds": ["buildfighters"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5057", "01_1942", "01_1288", "01_1261"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	},
 	"manual": {
 		"id": "30",
 		"url": "https://manual.bandai-hobby.net/menus/detail/30/"

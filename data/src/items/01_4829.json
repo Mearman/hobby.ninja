@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ギャン エクストラフィニッシュバージョン",
 		"en": "MG 1/100 Gyan Extra Finish Version"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 7334,
 		"currency": "JPY",
@@ -18,28 +62,23 @@
 		"day": 19
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
-		"ja": ["「MG 1/100 ギャン エクストラフィニッシュバージョン」登場！"],
-		"en": ["\"MG 1/100 Gyan Extra Finish Version\" now available!"]
+		"ja": [
+			"「MG 1/100 ギャン エクストラフィニッシュバージョン」登場！"
+		],
+		"en": [
+			"\"MG 1/100 Gyan Extra Finish Version\" now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5711.jpg",
+				"src": "https://bandai-hobby.net/images/153_5711_s_hsgxa6y44207bb54yvsq77awakxr.jpg",
 				"path": "/images/items/01_4829/153_5711.jpg",
 				"hash": "c49035944d0394adc91bb66ede0e04e5"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4829/",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4829/"
 }

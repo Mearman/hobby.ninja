@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 RX-0 ユニコーンガンダム 2号機バンシィ(デストロイモード) Ver.GFT",
 		"en": "HGUC 1/144 RX-0 Unicorn Gundam Unit 2 Banshee (Destroy Mode) Ver.GFT"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2096,
 		"currency": "JPY",
@@ -18,38 +67,33 @@
 		"day": 1
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["HGUC 1/144 RX-0 ユニコーンガンダム 2号機バンシィ(デストロイモード) Ver.GFT　登場！"],
-		"en": ["HGUC 1/144 RX-0 Unicorn Gundam Unit 2 Banshee (Destroy Mode) Ver.GFT is now available!"]
+		"ja": [
+			"HGUC 1/144 RX-0 ユニコーンガンダム 2号機バンシィ(デストロイモード) Ver.GFT　登場！"
+		],
+		"en": [
+			"HGUC 1/144 RX-0 Unicorn Gundam Unit 2 Banshee (Destroy Mode) Ver.GFT is now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5659.jpg",
+				"src": "https://bandai-hobby.net/images/153_5659_s_ttx12ap2cmsz267so9uwjm483ah9.jpg",
 				"path": "/images/items/01_4776/153_5659.jpg",
 				"hash": "24b0f3d9174ccf4a8189101b690ee05c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5659.jpg",
+				"src": "https://bandai-hobby.net/images/155_5659_s_sje44j4vjxpgpsaa0z027ati129o.jpg",
 				"path": "/images/items/01_4776/155_5659.jpg",
 				"hash": "b983aa474f6fedacf1afb603311697d7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5659.jpg",
+				"src": "https://bandai-hobby.net/images/156_5659_s_v9ykwn8e8j0ajvi9n4el748llqtj.jpg",
 				"path": "/images/items/01_4776/156_5659.jpg",
 				"hash": "2bc5e3f8ffa027e0f98793e3ad99f09e"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4776/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4776/"
 }

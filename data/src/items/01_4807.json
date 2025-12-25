@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 シャア専用ザク Ver.2.0 クリアカラーバージョン",
 		"en": "MG 1/100 Char's Zaku Ver.2.0 Clear color version"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3666,
 		"currency": "JPY",
@@ -18,33 +62,28 @@
 		"day": 10
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
-		"ja": ["MG 1/100 シャア専用ザク Ver.2.0 クリアカラーバージョン登場！！"],
-		"en": ["MG 1/100 Char's Zaku Ver.2.0 Clear color version now available! !"]
+		"ja": [
+			"MG 1/100 シャア専用ザク Ver.2.0 クリアカラーバージョン登場！！"
+		],
+		"en": [
+			"MG 1/100 Char's Zaku Ver.2.0 Clear color version now available! !"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5687.jpg",
+				"src": "https://bandai-hobby.net/images/153_5687_s_0c96a1cuhx578t7b40mys508wf2n.jpg",
 				"path": "/images/items/01_4807/153_5687.jpg",
 				"hash": "b1a0e5c89280050bcf61498418a45d57"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5687.jpg",
+				"src": "https://bandai-hobby.net/images/155_5687_s_loh726qzvivyv5b7t1f4namnqsmp.jpg",
 				"path": "/images/items/01_4807/155_5687.jpg",
 				"hash": "ce53adbc00bc49ad64071bcf2c240d89"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4807/",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4807/"
 }

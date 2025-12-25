@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 MSZ-010 ZZ ガンダム クリアカラーバージョン",
 		"en": "HGUC 1/144 MSZ-010 ZZ Gundam Clear Color Version"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-zz",
+			"url": "https://bandai-hobby.net/series/gundam-zz/",
+			"ja": "機動戦士ガンダムＺＺ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_2079",
+			"url": "https://bandai-hobby.net/item/01_2079/",
+			"ja": "HGUC 1/144 R・ジャジャ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2409,
 		"currency": "JPY",
@@ -18,20 +67,23 @@
 		"day": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["HGUC 1/144 MSZ-010 ZZ ガンダム クリアカラーバージョン登場！"],
-		"en": ["HGUC 1/144 MSZ-010 ZZ Gundam clear color version now available!"]
+		"ja": [
+			"HGUC 1/144 MSZ-010 ZZ ガンダム クリアカラーバージョン登場！"
+		],
+		"en": [
+			"HGUC 1/144 MSZ-010 ZZ Gundam clear color version now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5684.jpg",
+				"src": "https://bandai-hobby.net/images/153_5684_s_bi5a8ax64putmbx5fyqtgqf6z177.jpg",
 				"path": "/images/items/01_4804/153_5684.jpg",
 				"hash": "f7ff1fdd98af62151ea913b056f2275e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5684.jpg",
+				"src": "https://bandai-hobby.net/images/155_5684_s_c4jyrbifufcvro1jobpwks4fdnxu.jpg",
 				"path": "/images/items/01_4804/155_5684.jpg",
 				"hash": "1b23a2a41aa30d6594f093b745b33189"
 			}
@@ -39,14 +91,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4804/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["gundam-zz"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5963", "01_4985", "01_4971", "01_2079"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	},
 	"manual": {
 		"id": "396",
 		"url": "https://manual.bandai-hobby.net/menus/detail/396/"

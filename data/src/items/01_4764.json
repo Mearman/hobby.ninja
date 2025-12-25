@@ -5,6 +5,55 @@
 		"ja": "HGPG 1/144 プチッガイ ユニコーンホワイト＆プラカード",
 		"en": "HGPG 1/144 Petitgguy Unicorn White & Placard"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "petitgguy",
+			"url": "https://bandai-hobby.net/brand/petitgguy/",
+			"ja": "プチッガイ/ベアッガイ"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,15 +67,18 @@
 		"day": 30
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["HGPG 1/144 プチッガイ ユニコーンホワイト＆プラカード登場！"],
-		"en": ["HGPG 1/144 Petitgguy Unicorn White & Placard now available!"]
+		"ja": [
+			"HGPG 1/144 プチッガイ ユニコーンホワイト＆プラカード登場！"
+		],
+		"en": [
+			"HGPG 1/144 Petitgguy Unicorn White & Placard now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5648.jpg",
+				"src": "https://bandai-hobby.net/images/153_5648_s_1596askmgwky1cyd8587ol32y5yq.jpg",
 				"path": "/images/items/01_4764/153_5648.jpg",
 				"hash": "9ffeaf3d114a5ec0ec9534bf673c6a2a"
 			}
@@ -34,14 +86,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4764/",
-	"brandIds": ["hg", "petitgguy"],
-	"seriesIds": ["buildfighters"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5057", "01_1942", "01_1288", "01_1261"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	},
 	"manual": {
 		"id": "751",
 		"url": "https://manual.bandai-hobby.net/menus/detail/751/"

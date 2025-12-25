@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "MG MSM-04 アッガイ",
-		"en": "MG 1/100 ACGUY"
+		"en": "MG MSM-04 Acguy"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		},
+		{
+			"id": "01_3754",
+			"url": "https://bandai-hobby.net/item/01_3754/",
+			"ja": "MG 1/100 ドム"
+		}
+	],
 	"price": {
 		"amount": 5060,
 		"currency": "JPY",
@@ -23,7 +66,7 @@
 			"「機動戦士ガンダム」に登場するアッガイのＭＧシリーズプラモデルです。腕部にプラモデル史上初となる機構を採用、伸縮ギミックと肘関節の可動を再現しました。右前腕部のツメ伸縮収納ギミックも再現し、バルカン砲にスイッチの機能を持たせスプリングアクションによって展開可能です。左腕の魚雷には発射シーン表現用パーツを装着可能。水中で活動するシーンが再現できるディスプレイスタンドが付属。ホワイトベースに乗り合わせていた子供、カツ、レツ、キッカのフィギュアが付属。"
 		],
 		"en": [
-			"Acguy's MG series plastic model that appears in \"Mobile Suit Gundam\". The arm part uses a mechanism for the first time in plastic model history, reproducing the telescopic gimmick and the movement of the elbow joint. The claw extension storage gimmick on the right forearm is also reproduced, and the Vulcan cannon has a switch function and can be deployed with a spring action. Parts to express the firing scene can be attached to the torpedo on the left arm. A display stand is included that allows you to recreate underwater scenes. Figures of the children who were on board the White Base, Katsu, Retsu, and Kikka are included."
+			"Acguy's MG series plastic model that appears in \"Mobile Suit Gundam\". The arms are equipped with a mechanism for the first time in the history of plastic models, reproducing the telescopic gimmick and the movement of the elbow joints. The claw extension storage gimmick on the right forearm is also reproduced, and the Vulcan cannon has a switch function and can be deployed with a spring action. Parts to express the firing scene can be attached to the torpedo on the left arm. A display stand is included that allows you to recreate underwater scenes. Figures of the children who were on board the White Base, Katsu, Retsu, and Kikka are included."
 		]
 	},
 	"images": {
@@ -52,10 +95,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4827/",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
 	"manual": {
 		"id": "535",
 		"url": "https://manual.bandai-hobby.net/menus/detail/535/"

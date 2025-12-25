@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ユニコーンガンダム［メタリックグロスインジェクション］",
 		"en": "MG 1/100 Unicorn Gundam [Metallic Gloss Injection]"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000183366",
+			"url": "https://p-bandai.jp/item/item-1000183366/",
+			"ja": "ＭＧ 1/100 スタークジェガン"
+		},
+		{
+			"id": "01_4271",
+			"url": "https://bandai-hobby.net/item/01_4271/",
+			"ja": "MG 1/100 ガンダムベース限定 ユニコーンガンダム(光の結晶体)"
+		},
+		{
+			"id": "01_2670",
+			"url": "https://bandai-hobby.net/item/01_2670/",
+			"ja": "MG 1/100 ジェスタ・キャノン[クリアカラー]"
+		},
+		{
+			"id": "item-1000138934",
+			"url": "https://p-bandai.jp/item/item-1000138934/",
+			"ja": "ＭＧ 1/100 リ・ガズィ（ユニコーンＶｅｒ．）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5500,
 		"currency": "JPY",
@@ -18,38 +62,33 @@
 		"day": 22
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
-		"ja": ["MG 1/100 ユニコーンガンダム［メタリックグロスインジェクション］登場！"],
-		"en": ["MG 1/100 Unicorn Gundam [Metallic Gloss Injection] now available!"]
+		"ja": [
+			"MG 1/100 ユニコーンガンダム［メタリックグロスインジェクション］登場！"
+		],
+		"en": [
+			"MG 1/100 Unicorn Gundam [Metallic Gloss Injection] now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5647.jpg",
+				"src": "https://bandai-hobby.net/images/153_5647_s_2yi3eu0pmrmkqaw82dec1ylx5lro.jpg",
 				"path": "/images/items/01_4763/153_5647.jpg",
 				"hash": "d44c78dba25aaf43a8c51039643f7a09"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5647.jpg",
+				"src": "https://bandai-hobby.net/images/155_5647_s_776wwudu28vi9clfo42kteje2d2u.jpg",
 				"path": "/images/items/01_4763/155_5647.jpg",
 				"hash": "127089dcba236507ade36eb7bc5a99aa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5647.jpg",
+				"src": "https://bandai-hobby.net/images/156_5647_s_lrf0ytoj7tt76ltuf7wi465uq2ly.jpg",
 				"path": "/images/items/01_4763/156_5647.jpg",
 				"hash": "dce99d4931fc7f41a050e1c6417ef638"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4763/",
-	"brandIds": ["mg"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000183366", "01_4271", "01_2670", "item-1000138934"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4763/"
 }

@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 シャア専用ズゴック VS ジム Ver.GFT",
 		"en": "HGUC 1/144 Char's Z'Gok VS Jim Ver.GFT"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1572,
 		"currency": "JPY",
@@ -18,15 +67,18 @@
 		"day": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["HGUC 1/144 シャア専用ズゴック VS ジム Ver.GFT　登場！"],
-		"en": ["HGUC 1/144 Char's Z'Gok VS Jim Ver.GFT now available!"]
+		"ja": [
+			"HGUC 1/144 シャア専用ズゴック VS ジム Ver.GFT　登場！"
+		],
+		"en": [
+			"HGUC 1/144 Char's Z'Gok VS Jim Ver.GFT now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5669.jpg",
+				"src": "https://bandai-hobby.net/images/153_5669_s_rma3170j3b2hwpvdceuy0jvp6p3m.jpg",
 				"path": "/images/items/01_4787/153_5669.jpg",
 				"hash": "928422e35af4ab1fc3a430f41bc5ef6e"
 			}
@@ -34,14 +86,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4787/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	},
 	"manual": {
 		"id": "2141",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2141/"

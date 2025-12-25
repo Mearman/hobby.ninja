@@ -5,6 +5,50 @@
 		"ja": "HGUC 1/144 グフ クリアカラーVer.",
 		"en": "HGUC 1/144 Gouf Clear Color Ver."
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,15 +62,18 @@
 		"day": 19
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["HGUC 1/144 グフ クリアカラーVer.登場！"],
-		"en": ["HGUC 1/144 Gouf Clear Color Ver. now available!"]
+		"ja": [
+			"HGUC 1/144 グフ クリアカラーVer.登場！"
+		],
+		"en": [
+			"HGUC 1/144 Gouf Clear Color Ver. now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5707.jpg",
+				"src": "https://bandai-hobby.net/images/153_5707_s_i176ut647sgdfdbjrryhj8x0ib4x.jpg",
 				"path": "/images/items/01_4824/153_5707.jpg",
 				"hash": "164cfae9d987162929721d4b1f6f3659"
 			}
@@ -34,14 +81,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4824/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	},
 	"manual": {
 		"id": "464",
 		"url": "https://manual.bandai-hobby.net/menus/detail/464/"

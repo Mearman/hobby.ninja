@@ -5,6 +5,44 @@
 		"ja": "HGBF 1/144 すーぱーふみな エゥーゴメイドVer.",
 		"en": "HGBF 1/144 Super Fumina Eugo Maid Ver."
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -18,25 +56,28 @@
 		"day": 19
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["HGBF 1/144 すーぱーふみな エゥーゴメイドVer.登場！"],
-		"en": ["HGBF 1/144 Super Fumina Eugo Maid Ver. is now available!"]
+		"ja": [
+			"HGBF 1/144 すーぱーふみな エゥーゴメイドVer.登場！"
+		],
+		"en": [
+			"HGBF 1/144 Super Fumina Eugo Maid Ver. is now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5708.jpg",
+				"src": "https://bandai-hobby.net/images/153_5708_s_wo0duklor8opz0tt3imzxtbokk8x.jpg",
 				"path": "/images/items/01_4825/153_5708.jpg",
 				"hash": "9cb82de78ec17699e97f388c5d1173d2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5708.jpg",
+				"src": "https://bandai-hobby.net/images/155_5708_s_p7e85y4wfnmetxpg9nnmrd4nprg1.jpg",
 				"path": "/images/items/01_4825/155_5708.jpg",
 				"hash": "92055d686f5943974d53bb2f1582bc97"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5708.jpg",
+				"src": "https://bandai-hobby.net/images/156_5708_s_dvqk1rejqfrtvpeurxt6ydkx9ozh.jpg",
 				"path": "/images/items/01_4825/156_5708.jpg",
 				"hash": "882cfe48b1336a238056e86c3ae058e6"
 			}
@@ -44,14 +85,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4825/",
-	"brandIds": ["hg"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	},
 	"manual": {
 		"id": "741",
 		"url": "https://manual.bandai-hobby.net/menus/detail/741/"

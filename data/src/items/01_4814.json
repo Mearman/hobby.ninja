@@ -2,9 +2,53 @@
 	"id": "01_4814",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 ガンダム G-セルフ（大気圏用パック装備型）カラークリアVer.",
-		"en": "HG 1/144 Gundam G-Self (equipped with atmosphere pack) Color Clear Ver."
+		"ja": "HG 1/144 ガンダムG-セルフ（大気圏用パック装備型）カラークリアVer.",
+		"en": "HG 1/144 GundamG-Self (equipped with atmosphere pack) Color Clear Ver."
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-reco",
+			"url": "https://bandai-hobby.net/series/g-reco/",
+			"ja": "ガンダム Gのレコンギスタ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5515",
+			"url": "https://bandai-hobby.net/item/01_5515/",
+			"ja": "HG 1/144 ガンダムベース限定 G-セルフ (パーフェクトパック装備型) (劇場版『Gのレコンギスタ』Ver.)"
+		},
+		{
+			"id": "item-1000098380",
+			"url": "https://p-bandai.jp/item/item-1000098380",
+			"ja": "ＨＧ 1/144 ガンダムG-セルフ(リフレクターパック装備型)"
+		},
+		{
+			"id": "01_390",
+			"url": "https://bandai-hobby.net/item/01_390/",
+			"ja": "HG 1/144 ガンダム G-セルフ(パーフェクトパック装備型)"
+		},
+		{
+			"id": "01_363",
+			"url": "https://bandai-hobby.net/item/01_363/",
+			"ja": "HG 1/144 カバカーリー"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,15 +62,18 @@
 		"day": 27
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["HG 1/144 ガンダム G-セルフ（大気圏用パック装備型）カラークリアVer.登場！"],
-		"en": ["HG 1/144 Gundam G-Self (equipped with atmosphere pack) Color Clear Ver. is now available!"]
+		"ja": [
+			"HG 1/144 ガンダムG-セルフ（大気圏用パック装備型）カラークリアVer.登場！"
+		],
+		"en": [
+			"HG 1/144 GundamG-Self (equipped with atmospheric pack) Color Clear Ver. is now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5698.jpg",
+				"src": "https://bandai-hobby.net/images/153_5698_s_w6923ym9wofswmo2gu6v4w1dy0k0.jpg",
 				"path": "/images/items/01_4814/153_5698.jpg",
 				"hash": "5fe6b17cd20e09679a4ba8b47fc863a7"
 			}
@@ -34,14 +81,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4814/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-reco"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5515", "item-1000098380", "01_390", "01_363"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	},
 	"manual": {
 		"id": "41",
 		"url": "https://manual.bandai-hobby.net/menus/detail/41/"

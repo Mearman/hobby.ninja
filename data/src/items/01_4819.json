@@ -2,9 +2,47 @@
 	"id": "01_4819",
 	"type": "item",
 	"name": {
-		"ja": "HGUC 1/144 G-3 ガンダム",
-		"en": "HGUC 1/144 G-3 Gundam"
+		"ja": "HGUC 1/144 G-3ガンダム",
+		"en": "HGUC 1/144 G-3Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -18,20 +56,23 @@
 		"day": 20
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["HGUC 1/144 G-3 ガンダム登場！"],
-		"en": ["HGUC 1/144 G-3 Gundam is here!"]
+		"ja": [
+			"HGUC 1/144 G-3ガンダム登場！"
+		],
+		"en": [
+			"HGUC 1/144 G-3 Gundam is here!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5702.jpg",
+				"src": "https://bandai-hobby.net/images/153_5702_s_chwk6orln39qxcxknxl3twe1fums.jpg",
 				"path": "/images/items/01_4819/153_5702.jpg",
 				"hash": "95913b0b65e571f82e5e217758cfdecb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5702.jpg",
+				"src": "https://bandai-hobby.net/images/155_5702_s_gx8wy5q9j8savpip0nn274fe2ox1.jpg",
 				"path": "/images/items/01_4819/155_5702.jpg",
 				"hash": "86789754c91abb6087937984beb8032b"
 			}
@@ -39,14 +80,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4819/",
-	"brandIds": ["hg"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	},
 	"manual": {
 		"id": "1006",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1006/"

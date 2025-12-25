@@ -2,9 +2,53 @@
 	"id": "01_4810",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 ガンダム AGE-3 ノーマル フルカラーメッキVer.",
-		"en": "HG 1/144 Gundam AGE-3 Normal Full Color Plating Ver."
+		"ja": "HG 1/144 ガンダムAGE-3 ノーマル フルカラーメッキVer.",
+		"en": "HG 1/144 GundamAGE-3 Normal Full Color Plating Ver."
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "age",
+			"url": "https://bandai-hobby.net/series/age/",
+			"ja": "機動戦士ガンダムAGE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000170540",
+			"url": "https://p-bandai.jp/item/item-1000170540/",
+			"ja": "ＨＧ 1/144 フォーンファルシア"
+		},
+		{
+			"id": "item-1000169836",
+			"url": "https://p-bandai.jp/item/item-1000169836/",
+			"ja": "ＨＧ 1/144 ガンダムＡＧＥ-１ レイザー＆ガンダムＡＧＥ-２ アルティメス セット"
+		},
+		{
+			"id": "01_3738",
+			"url": "https://bandai-hobby.net/item/01_3738/",
+			"ja": "HG 1/144 「機動戦士ガンダムAGE」 MSセット[クリアカラー]"
+		},
+		{
+			"id": "item-1000082540",
+			"url": "https://p-bandai.jp/item/item-1000082540",
+			"ja": "ＨＧ 1/144 ガンダムレギルス〔MEMORY OF EDEN〕"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3666,
 		"currency": "JPY",
@@ -18,38 +62,33 @@
 		"day": 21
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["HG 1/144 ガンダム AGE-3 ノーマル フルカラーメッキVer.登場！"],
-		"en": ["HG 1/144 Gundam AGE-3 Normal Full Color Plated Ver. now available!"]
+		"ja": [
+			"HG 1/144 ガンダムAGE-3 ノーマル フルカラーメッキVer.登場！"
+		],
+		"en": [
+			"HG 1/144 GundamAGE-3 Normal Full Color Plated Ver. now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5691.jpg",
+				"src": "https://bandai-hobby.net/images/153_5691_s_obpbchg1iqz322rgrlqah6btg14v.jpg",
 				"path": "/images/items/01_4810/153_5691.jpg",
 				"hash": "1fbee763917f734b892197f3d3f0bef8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5691.jpg",
+				"src": "https://bandai-hobby.net/images/155_5691_s_9kuztd4dt6z9bgoqfxez58g9qd99.jpg",
 				"path": "/images/items/01_4810/155_5691.jpg",
 				"hash": "0a1b702aa06bf94eafa00621a11430ab"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5691.jpg",
+				"src": "https://bandai-hobby.net/images/156_5691_s_emvaealgwp7mz9n3kqwprlxkghgm.jpg",
 				"path": "/images/items/01_4810/156_5691.jpg",
 				"hash": "31bf591075349befd06823be5cc4002a"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4810/",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4810/"
 }

@@ -5,6 +5,55 @@
 		"ja": "HGPG 1/144 プチッガイ トランザムレッド",
 		"en": "HGPG 1/144 Petitgguy Trans Am Red"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "petitgguy",
+			"url": "https://bandai-hobby.net/brand/petitgguy/",
+			"ja": "プチッガイ/ベアッガイ"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -18,28 +67,23 @@
 		"day": 3
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["HGPG 1/144 プチッガイ トランザムレッド登場！"],
-		"en": ["HGPG 1/144 Petitgguy Trans Am Red now available!"]
+		"ja": [
+			"HGPG 1/144 プチッガイ トランザムレッド登場！"
+		],
+		"en": [
+			"HGPG 1/144 Petitgguy Trans Am Red now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5645.jpg",
+				"src": "https://bandai-hobby.net/images/153_5645_s_8dayxfxjtf9j8n7v8wb5drm87rsh.jpg",
 				"path": "/images/items/01_4761/153_5645.jpg",
 				"hash": "daa33c2a6de265ed101104516b10a532"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4761/",
-	"brandIds": ["hg", "petitgguy"],
-	"seriesIds": ["buildfighters"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5057", "01_1942", "01_1288", "01_1261"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4761/"
 }
