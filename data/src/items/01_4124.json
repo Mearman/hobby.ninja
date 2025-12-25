@@ -5,6 +5,54 @@
 		"ja": "ＨＧ 1/144 ロードアストレイΩ",
 		"en": "HG 1/144 Road Astray Ω"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 4
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「Ω」の名を冠したアストレイ――",
@@ -61,8 +108,8 @@
 		],
 		"en": [
 			"Astray named after \"Ω\"――",
-			"From \"Mobile Suit Gundam SEED ASTRAY: Princess of the Sky\", Lord Astray Ω is commercialized in the HG series.",
-			"The characteristic fuselage structure of each part and the special armed road long sword are reproduced with new modeling parts.",
+			"From \"Mobile Suit GundamSEED ASTRAY: Princess of the Sky\", Lord Astray Ω is commercialized in the HG series.",
+			"The characteristic fuselage structure of each part and the special armed road long sword are reproduced with new molded parts.",
 			"The red lines on the arms and legs are made of metallic molding color.",
 			"●Reproduce the details of Lord Astray Ω with new parts!",
 			"A head with a unique shape, a back unit such as a backpack that mounts a special weapon, a road long sword,",
@@ -100,59 +147,63 @@
 			"・Product specifications are as of 20221. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["ロードロングソード"],
-		"en": ["Lord long sword"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ロードロングソード",
+				"en": "Lord long sword"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5051.jpg",
+				"src": "https://bandai-hobby.net/images/153_5051_s_4srrwiz1mjb7wfv96cj3fvgim6ve.jpg",
 				"path": "/images/items/01_4124/153_5051.jpg",
 				"hash": "5dff82761589ed680bfac3e7acc1bab2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5051.jpg",
+				"src": "https://bandai-hobby.net/images/155_5051_s_l3ltzn8nfq4hirbgsrdu0y0abq4f.jpg",
 				"path": "/images/items/01_4124/155_5051.jpg",
 				"hash": "9b9951aaa614a0672eae720b0353afc1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5051.jpg",
+				"src": "https://bandai-hobby.net/images/156_5051_s_ynyju021vicw69mmd843tw6qc1l8.jpg",
 				"path": "/images/items/01_4124/156_5051.jpg",
 				"hash": "7f7cd2359a2813d3b634f5989106bbe5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5051.jpg",
+				"src": "https://bandai-hobby.net/images/157_5051_s_okf6u5eev6szedvbrqzak8g3qb19.jpg",
 				"path": "/images/items/01_4124/157_5051.jpg",
 				"hash": "eab882ec4d490d2e9ce0cc28a007a50d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5051.jpg",
+				"src": "https://bandai-hobby.net/images/158_5051_s_dv2cgkyyw19pp7qm0ag1u6nvbxri.jpg",
 				"path": "/images/items/01_4124/158_5051.jpg",
 				"hash": "c944b9f0bb432b6f710520969a00b99a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5051.jpg",
+				"src": "https://bandai-hobby.net/images/159_5051_s_qqqcx4ifahq41j6kxc9iydg8e76s.jpg",
 				"path": "/images/items/01_4124/159_5051.jpg",
 				"hash": "930f5c3967d46566bfeaaffa77a4cda7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5051.jpg",
+				"src": "https://bandai-hobby.net/images/189_5051_s_ev1g0eoyexsg0ynkxeb1phmqlfs2.jpg",
 				"path": "/images/items/01_4124/189_5051.jpg",
 				"hash": "4dad3ddf7c3e169450d4c2671c68434d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5051.jpg",
+				"src": "https://bandai-hobby.net/images/190_5051_s_y3gp6of3n65vj7pl066w268lyo9r.jpg",
 				"path": "/images/items/01_4124/190_5051.jpg",
 				"hash": "a9a3b89a3b6de500d6547f2e22e17a75"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5051.jpg",
+				"src": "https://bandai-hobby.net/images/191_5051_s_1ocmzpo4cqfofo4y6bl0miwb3lv6.jpg",
 				"path": "/images/items/01_4124/191_5051.jpg",
 				"hash": "88a46f35dcb1202900ffb4bb80f983d6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5051.jpg",
+				"src": "https://bandai-hobby.net/images/192_5051_s_136nlabyq8z5quqeloxdla0g0wy2.jpg",
 				"path": "/images/items/01_4124/192_5051.jpg",
 				"hash": "da8056f9ee6bcbcc9ba1d7d82de17529"
 			}
@@ -160,14 +211,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4124/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2350",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2350/"

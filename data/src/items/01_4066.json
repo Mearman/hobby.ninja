@@ -5,6 +5,55 @@
 		"ja": "MG 1/100 RX-78-2 ガンダム Ver.3.0 [リサーキュレーションカラー/ネオングリーン]",
 		"en": "MG 1/100 RX-78-2 Gundam Ver.3.0 [Recirculation Color/Neon Green]"
 	},
+	"brands": [
+		{
+			"id": "ecoplaproject_g",
+			"url": "https://bandai-hobby.net/brand/ecoplaproject_g/",
+			"ja": "エコプラプロジェクト"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "01_5045",
+			"url": "https://bandai-hobby.net/item/01_5045/",
+			"ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム [リサーキュレーションカラー/ネオンブルー]"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5720,
 		"currency": "JPY",
@@ -17,10 +66,9 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"MG 1/100 RX-78-2 ガンダム Ver.3.0 が、特別カラーで登場！",
+			"MG 1/100 RX-78-2 ガンダムVer.3.0 が、特別カラーで登場！",
 			"• ボディやシールド等、エコプラリサーキュレーションのスペシャルマーキングシールが付属。",
 			"• 「ムーバブルアーマーシステム」を搭載。装甲パーツ内部と連動した可動性を付加。",
 			"• 肩アーマーやバックパックカバーも可動することで、腕部可動の自由度が向上。",
@@ -31,7 +79,7 @@
 			"フューチャリスティックな装いは、循環する未来への象徴となる。"
 		],
 		"en": [
-			"MG 1/100 RX-78-2 Gundam Ver.3.0 is now available in special colors!",
+			"MG 1/100 RX-78-2 GundamVer.3.0 is now available in special colors!",
 			"• Comes with special marking seals from Ecoprali Circulation on the body, seals, etc.",
 			"• Equipped with a \"movable armor system\". Added mobility linked to the inside of the armored parts.",
 			"• The shoulder armor and backpack cover are also movable, increasing the freedom of arm movement.",
@@ -45,55 +93,44 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_4066_4.jpg",
-				"path": "/images/items/01_4066/01_4066_4.jpg",
-				"hash": "0795079f61eb4ea1e4ed3968a0136810"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4066_5.jpg",
-				"path": "/images/items/01_4066/01_4066_5.jpg",
-				"hash": "24e3b6e3d4792ad1a91687d532b1575a"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4066_6.jpg",
-				"path": "/images/items/01_4066/01_4066_6.jpg",
-				"hash": "e2994281def4a5b21b4662eb964be46e"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/153_4994.jpg",
+				"src": "https://bandai-hobby.net/images/153_4994_o_1flqrhvcb1bek1fnf80319bk1omj23.jpg",
 				"path": "/images/items/01_4066/153_4994.jpg",
 				"hash": "3f4dc6acd4a1268cbacf5dcef0aef8ec"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4994.jpg",
+				"src": "https://bandai-hobby.net/images/155_4994_o_1flqricr57p0guqt851mu51j7c2d.jpg",
 				"path": "/images/items/01_4066/155_4994.jpg",
 				"hash": "b8966e6dc039afbd518c5faf010ee5e5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4994.jpg",
+				"src": "https://bandai-hobby.net/images/156_4994_o_1flqrim5r1le81jol11eq1466qoo2i.jpg",
 				"path": "/images/items/01_4066/156_4994.jpg",
 				"hash": "62908716fee97a290fad1d7bf4953a4a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4994.jpg",
+				"src": "https://bandai-hobby.net/images/157_4994_o_1flqrivd9h7b14v61g8e1idf1rec2n.jpg",
 				"path": "/images/items/01_4066/157_4994.jpg",
 				"hash": "65521181916225d3c9accccdd2f462c3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4994.jpg",
+				"path": "/images/items/01_4066/01_4066_4.jpg",
+				"hash": "0795079f61eb4ea1e4ed3968a0136810"
+			},
+			{
+				"path": "/images/items/01_4066/01_4066_5.jpg",
+				"hash": "24e3b6e3d4792ad1a91687d532b1575a"
+			},
+			{
+				"path": "/images/items/01_4066/01_4066_6.jpg",
+				"hash": "e2994281def4a5b21b4662eb964be46e"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/190_4994_o_1flqrl6126m31snnqnmb4qvuq3b.jpg",
 				"path": "/images/items/01_4066/190_4994.jpg",
 				"hash": "968be4aa4fe6647f0b0e19694e80f5c0"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4066/",
-	"brandIds": ["ecoplaproject_g", "mg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5509", "01_5045", "01_4977", "01_3772"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4066/"
 }

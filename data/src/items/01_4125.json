@@ -5,6 +5,54 @@
 		"ja": "ＨＧ サイバスター［エクストラフィニッシュ］",
 		"en": "HG Cybuster [Extra Finish]"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		},
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "superrobot_og",
+			"url": "https://bandai-hobby.net/series/superrobot_og/",
+			"ja": "スーパーロボット大戦OG"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5578",
+			"url": "https://bandai-hobby.net/item/01_5578/",
+			"ja": "HG アシュセイヴァー"
+		},
+		{
+			"id": "01_5491",
+			"url": "https://bandai-hobby.net/item/01_5491/",
+			"ja": "HG ヴァイスリッター"
+		},
+		{
+			"id": "item-1000214961",
+			"url": "https://p-bandai.jp/item/item-1000214961/",
+			"ja": "ＨＧ ヒュッケバインＭｋ－ＩＩトロンベ"
+		},
+		{
+			"id": "01_5369",
+			"url": "https://bandai-hobby.net/item/01_5369/",
+			"ja": "HG ガンレオン"
+		}
+	],
 	"price": {
 		"amount": 7700,
 		"currency": "JPY",
@@ -80,7 +128,7 @@
 			"Accessories: Display pedestal/High Familiar pedestal",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"Non-Scale Assembly type plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Main product material: PS",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -99,72 +147,80 @@
 			"・Product specifications are as of 20221. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["バニティリッパー", "ディスカッター", "ハイファミリア"],
-		"en": ["vanity ripper", "Discutter", "High Familia"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "バニティリッパー",
+				"en": "vanity ripper"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスカッター",
+				"en": "Discutter"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハイファミリア",
+				"en": "High Familia"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5052.jpg",
+				"src": "https://bandai-hobby.net/images/153_5052_s_1z2fpczjo58xggr1bkr623oeihkt.jpg",
 				"path": "/images/items/01_4125/153_5052.jpg",
 				"hash": "b8eb130412e45b17349f684784f8d93d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5052.jpg",
+				"src": "https://bandai-hobby.net/images/155_5052_s_mio2fbpnwqfw3lkpd3jti6xjxba6.jpg",
 				"path": "/images/items/01_4125/155_5052.jpg",
 				"hash": "2486edc115dd7785c31630b519f99e17"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5052.jpg",
+				"src": "https://bandai-hobby.net/images/156_5052_s_rt0vqrtuinlq6774etzhb8u8bw1l.jpg",
 				"path": "/images/items/01_4125/156_5052.jpg",
 				"hash": "7c77158976c8f033f6a80e9e6e3508c7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5052.jpg",
+				"src": "https://bandai-hobby.net/images/157_5052_s_x5ojhs7s31kgjutz8zio9qjw4mxq.jpg",
 				"path": "/images/items/01_4125/157_5052.jpg",
 				"hash": "c82a22468f6cce880cd8d20538691a14"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5052.jpg",
+				"src": "https://bandai-hobby.net/images/158_5052_s_zxy4q19jpouydo3z3uttomx2uebk.jpg",
 				"path": "/images/items/01_4125/158_5052.jpg",
 				"hash": "13ece11f2caf19d89cc8bf52fa167832"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5052.jpg",
+				"src": "https://bandai-hobby.net/images/159_5052_s_z4vt9457mm37o2bbkmhg8vuzkoad.jpg",
 				"path": "/images/items/01_4125/159_5052.jpg",
 				"hash": "ca560ab41a0b35edfa9323ea8b8c9e10"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5052.jpg",
+				"src": "https://bandai-hobby.net/images/189_5052_s_x2aqupxynnuutafmqbfir3snj6ae.jpg",
 				"path": "/images/items/01_4125/189_5052.jpg",
 				"hash": "f92c022eb1a2992bc455193af37f50fe"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5052.jpg",
+				"src": "https://bandai-hobby.net/images/190_5052_s_d0cbq24fc66neohogl26xrjsle1j.jpg",
 				"path": "/images/items/01_4125/190_5052.jpg",
 				"hash": "47de0a7ddf9e3b85f4208e190370a9bd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5052.jpg",
+				"src": "https://bandai-hobby.net/images/191_5052_s_t75z8hdh595naca275xn2rj9cvct.jpg",
 				"path": "/images/items/01_4125/191_5052.jpg",
 				"hash": "dcf890aaea19189b65bf204bb10c45b3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5052.jpg",
+				"src": "https://bandai-hobby.net/images/192_5052_s_vk6m7pmqb0cplhe7zhwo7meq9cmr.jpg",
 				"path": "/images/items/01_4125/192_5052.jpg",
 				"hash": "743a0fdc21b7a238029f932517570471"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4125/",
-	"brandIds": ["pb_charapla", "hg"],
-	"seriesIds": ["superrobot_og"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5578", "01_5491", "item-1000214961", "01_5369"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4125/"
 }

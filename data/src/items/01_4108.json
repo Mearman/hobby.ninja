@@ -3,8 +3,60 @@
 	"type": "item",
 	"name": {
 		"ja": "カスタマイズウェポンズ(ガトリングユニット)",
-		"en": "CUSTOMIZE WEAPONS (GATLING UNIT)"
+		"en": "Customized Weapons (Gatling Unit)"
 	},
+	"brands": [
+		{
+			"id": "customize_scenebase",
+			"url": "https://bandai-hobby.net/brand/customize_scenebase/",
+			"ja": "カスタマイズシーンベース/エフェクト/マテリアル/ウェポンズ"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "customize_scenebase",
+			"url": "https://bandai-hobby.net/brand/customize_scenebase/",
+			"ja": "カスタマイズシーンベース/エフェクト/マテリアル/ウェポンズ"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -21,10 +73,10 @@
 	"description": {
 		"ja": [
 			"ガトリングユニットがセットになったカスタマイズウェポンズが登場！",
-			"■ガトリングモード、レールガンモードなどパーツの組み替えで様々な形態へ組み立て可能。",
-			"■ガンベルトは軟質素材を使用。",
-			"■レヴェルノヴァ、ガルドノヴァに付属の武装パーツも同梱。",
-			"■ハードポイント（3mm軸）が設置されており、各種オプションパーツを装着可能。"
+			"• ガトリングモード、レールガンモードなどパーツの組み替えで様々な形態へ組み立て可能。",
+			"• ガンベルトは軟質素材を使用。",
+			"• レヴェルノヴァ、ガルドノヴァに付属の武装パーツも同梱。",
+			"• ハードポイント（3mm軸）が設置されており、各種オプションパーツを装着可能。"
 		],
 		"en": [
 			"Customized Weapons with Gatling units are now available!",
@@ -34,59 +86,92 @@
 			"• A hard point (3mm axis) is installed, and various optional parts can be attached."
 		]
 	},
-	"accessories": {
-		"ja": ["コアライフル×１", "ガトリングユニット×１式", "レールガンユニット×１", "マガジン×2種", "バレルユニット×2種"],
-		"en": ["Core rifle x1", "Gatling unit x 1 set", "Railgun unit x 1", "Magazine x 2 types", "Barrel unit x 2 types"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "コアライフル×１",
+				"en": "Core rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ガトリングユニット×１式",
+				"en": "Gatling unit x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "レールガンユニット×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "マガジン"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種"
+			}
+		},
+		{
+			"name": {
+				"ja": "バレルユニット"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5035.jpg",
+				"src": "https://bandai-hobby.net/images/153_5035_s_pi7vg70rpstyxio994iudlq4oz3w.jpg",
 				"path": "/images/items/01_4108/153_5035.jpg",
 				"hash": "d0335967bc5c73386aa24e0088b00ae3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5035.jpg",
+				"src": "https://bandai-hobby.net/images/155_5035_s_4ynlc7khccu72f9gn4pfxqrpdfdv.jpg",
 				"path": "/images/items/01_4108/155_5035.jpg",
 				"hash": "b05df362371ffc8b66317232401790c5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5035.jpg",
+				"src": "https://bandai-hobby.net/images/156_5035_s_j22549kznxb3agpr3nk49a2mt02g.jpg",
 				"path": "/images/items/01_4108/156_5035.jpg",
 				"hash": "94cde12ab42582afca5b532a8a68d361"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5035.jpg",
+				"src": "https://bandai-hobby.net/images/157_5035_s_idlc2zsog1vmibz55ze46xjl37ff.jpg",
 				"path": "/images/items/01_4108/157_5035.jpg",
 				"hash": "37ed274b04a0ac654fa083a457fce847"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5035.jpg",
+				"src": "https://bandai-hobby.net/images/158_5035_s_btny3xm20l03fvc1hy3rupe149zk.jpg",
 				"path": "/images/items/01_4108/158_5035.jpg",
 				"hash": "a774236ae1d9eb72502e9243b0a2f0d4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5035.jpg",
+				"src": "https://bandai-hobby.net/images/159_5035_s_73kylx1joakusgh7lrakoggpbfhv.jpg",
 				"path": "/images/items/01_4108/159_5035.jpg",
 				"hash": "2329a97883caef10e79a7e44948bd77f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5035.jpg",
+				"src": "https://bandai-hobby.net/images/189_5035_s_l25jebz3w3gm5u2oqohtuwxq9uvp.jpg",
 				"path": "/images/items/01_4108/189_5035.jpg",
 				"hash": "1f01e0c765ae73776a20075213d04125"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5035.jpg",
+				"src": "https://bandai-hobby.net/images/190_5035_s_4yy200i4gyftl9cewcblmnrgi5g9.jpg",
 				"path": "/images/items/01_4108/190_5035.jpg",
 				"hash": "278f3a21b0f50cf0fca87ecda26531af"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5035.jpg",
+				"src": "https://bandai-hobby.net/images/191_5035_s_1t9zyv77zw7m8pvkyl4b3nbcvct3.jpg",
 				"path": "/images/items/01_4108/191_5035.jpg",
 				"hash": "fe97d45ce2948b06a97e212a2e8c53a2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5035.jpg",
+				"src": "https://bandai-hobby.net/images/192_5035_s_2fryzrxcqudtziq33yz90r8b5cbu.jpg",
 				"path": "/images/items/01_4108/192_5035.jpg",
 				"hash": "1ae1f1295587e5bb34c0f30da1954eb6"
 			}
@@ -94,10 +179,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4108/",
-	"brandIds": ["customize_scenebase", "30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3740",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3740/"

@@ -2,9 +2,31 @@
 	"id": "01_4073",
 	"type": "item",
 	"name": {
-		"ja": "ＢＢ戦士 96 ガンダム F90",
-		"en": "BB Senshi 96 Gundam F90"
+		"ja": "ＢＢ戦士 96ガンダムF90",
+		"en": "BB Senshi 96GundamF90"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "f90",
+			"url": "https://bandai-hobby.net/series/f90/",
+			"ja": "機動戦士ガンダムF90"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -21,16 +43,12 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_49.jpg",
+				"src": "https://bandai-hobby.net/images/153_49_s_6ca7psf5y46nrmjym64hinyiqf4j.jpg",
 				"path": "/images/items/01_4073/153_49.jpg",
 				"hash": "4b67ad5294447ea0725130fc27a225f1"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4073/",
-	"brandIds": ["bb"],
-	"seriesIds": ["f90"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_4073/"
 }

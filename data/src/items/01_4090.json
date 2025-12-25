@@ -5,6 +5,50 @@
 		"ja": "HG 1/72 境界戦機ウェポンセット",
 		"en": "HG 1/72 Kyoukai Senki Weapon Set"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,13 +62,12 @@
 		"day": 9
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"『境界戦機』シリーズの各専用武装を集約したウェポンセットが登場！自由な組み合わせで装備させ、プラモデルオリジナルの武装アレンジが充実！",
-			"■HG境界戦機のプラモデルをシリーズ通して楽しめる、１０種に及ぶ武装セット。",
-			"■各武装を保持可能な、ウェポンラックやハンドパーツも同梱。",
-			"■劇中の武器により、HGメイレスビャクチもバリエーションに富んだ装備の組み合わせアレンジが可能！"
+			"• HG境界戦機のプラモデルをシリーズ通して楽しめる、１０種に及ぶ武装セット。",
+			"• 各武装を保持可能な、ウェポンラックやハンドパーツも同梱。",
+			"• 劇中の武器により、HGメイレスビャクチもバリエーションに富んだ装備の組み合わせアレンジが可能！"
 		],
 		"en": [
 			"Introducing a Weapon set that aggregates each special weapon from the \"Kyoukai Senki\" series! Equip it in any combination, and the original armament arrangement of the plastic model is enriched!",
@@ -33,98 +76,159 @@
 			"• Depending on the weapons in the play, HG Meiresbyakuchi can also be arranged with a wide variety of equipment combinations!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"60mm携行機関砲(多弾倉型)×１",
-			"腕部超熱振式戦闘爪×１",
-			"戦闘短刀×１",
-			"120mm二連装狙撃砲×１",
-			"装甲擲弾砲×2",
-			"装甲擲弾砲用ジョイントパーツ×2",
-			"45mm速射拳銃×2",
-			"左手銃持ち手×1",
-			"超熱振式薙刀×1",
-			"ブレイディハウンド専用ライフル(グレネードラン",
-			"チャー装備)×1",
-			"ブレイディハウンド専用ナイフ×1",
-			"ブレイディハウンド専用ソード×1",
-			"ウェポンラック×1式"
-		],
-		"en": [
-			"60mm portable machine gun (multi-magazine type) x 1",
-			"Arm super heat wave fighting claw x 1",
-			"Combat dagger x1",
-			"120mm dual sniper gun x 1",
-			"Armored grenade gun x 2",
-			"Joint parts for armored grenade gun x 2",
-			"45mm rapid-fire pistol x 2",
-			"Left hand gun holder x 1",
-			"Super heat wave type naginata x 1",
-			"Brady Hound Rifle (Grenade Run)",
-			"Char equipment)×1",
-			"Brady Hound knife x 1",
-			"Brady Hound special sword x1",
-			"Weapon rack x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "60mm携行機関砲(多弾倉型)×１",
+				"en": "60mm portable machine gun (multi-magazine type) x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "腕部超熱振式戦闘爪×１",
+				"en": "Arm super heat wave fighting claw x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "戦闘短刀×１",
+				"en": "Combat dagger x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "120mm二連装狙撃砲×１",
+				"en": "120mm dual sniper gun x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "装甲擲弾砲",
+				"en": "armored grenade gun"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "装甲擲弾砲用ジョイントパーツ",
+				"en": "Joint parts for armored grenade gun"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "45mm速射拳銃",
+				"en": "45mm rapid-fire pistol"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "左手銃持ち手",
+				"en": "left hand gun holder"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "超熱振式薙刀",
+				"en": "Super heat wave type naginata"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ブレイディハウンド専用ライフル(グレネードラン",
+				"en": "Brady Hound Rifle (Grenade Run)"
+			}
+		},
+		{
+			"name": {
+				"ja": "チャー装備)",
+				"en": "Char equipment)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ブレイディハウンド専用ナイフ",
+				"en": "Brady Hound knife"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ブレイディハウンド専用ソード",
+				"en": "Sword for Brady Hound"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ウェポンラック",
+				"en": "Weapon rack"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5014.jpg",
+				"src": "https://bandai-hobby.net/images/153_5014_s_p4v76yi6ghxtb88x170o3nkyxns7.jpg",
 				"path": "/images/items/01_4090/153_5014.jpg",
 				"hash": "e84cd8cb89019378a4ffc40ae64557ce"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5014.jpg",
+				"src": "https://bandai-hobby.net/images/155_5014_s_pcfj24eu79ch7ov9lo95pqw5n19a.jpg",
 				"path": "/images/items/01_4090/155_5014.jpg",
 				"hash": "e3d141c99ddf446e91ade90a83a24bfd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5014.jpg",
+				"src": "https://bandai-hobby.net/images/156_5014_s_5t2qql8vl7ztv4jkazf5r2chtguv.jpg",
 				"path": "/images/items/01_4090/156_5014.jpg",
 				"hash": "329c8413ebb0bba354f808d38cee0948"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5014.jpg",
+				"src": "https://bandai-hobby.net/images/157_5014_s_asmdqfg4h1xtex4ff619gmmr3qoe.jpg",
 				"path": "/images/items/01_4090/157_5014.jpg",
 				"hash": "0daff09fb2a8f73b20c85aea4931cdab"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5014.jpg",
+				"src": "https://bandai-hobby.net/images/158_5014_s_q4uag45q23yh6wwnorocr63hmn7c.jpg",
 				"path": "/images/items/01_4090/158_5014.jpg",
 				"hash": "d2332ded6a1b2f17af31095ae0adb62a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5014.jpg",
+				"src": "https://bandai-hobby.net/images/159_5014_s_640laccit6ugdwkoylnrsc67elf8.jpg",
 				"path": "/images/items/01_4090/159_5014.jpg",
 				"hash": "bfcb6ce790400de5f29b575a6f35ad28"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5014.jpg",
+				"src": "https://bandai-hobby.net/images/189_5014_s_kfy1rwkudyrfst89iezllcv7mere.jpg",
 				"path": "/images/items/01_4090/189_5014.jpg",
 				"hash": "ef50b891af9144eb67022794723d895b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5014.jpg",
+				"src": "https://bandai-hobby.net/images/190_5014_s_k631f1eoqqzzybmlmp7ljy2e0w0v.jpg",
 				"path": "/images/items/01_4090/190_5014.jpg",
 				"hash": "77c3a30fadee592310604c67844c07b3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5014.jpg",
+				"src": "https://bandai-hobby.net/images/191_5014_s_i8gjzrjngzjy5qttwz8wwz2tydjv.jpg",
 				"path": "/images/items/01_4090/191_5014.jpg",
 				"hash": "1ffeb13217f3da510c1898751e102354"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5014.jpg",
+				"src": "https://bandai-hobby.net/images/192_5014_s_3327pvqllf4702vn2l7zzvu5qxme.jpg",
 				"path": "/images/items/01_4090/192_5014.jpg",
 				"hash": "f74b2b68ec178e9a800800fa13cb6fab"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4090/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4090/"
 }

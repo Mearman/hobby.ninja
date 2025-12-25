@@ -5,6 +5,44 @@
 		"ja": "1/144 機甲戦記ドラグナーセット2",
 		"en": "1/144 Meki Senki Dragonar Set 2"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "dragonar",
+			"url": "https://bandai-hobby.net/series/dragonar/",
+			"ja": "機甲戦記ドラグナー"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000212946",
+			"url": "https://p-bandai.jp/item/item-1000212946/",
+			"ja": "1/144 機甲戦記ドラグナーセット３"
+		},
+		{
+			"id": "item-1000212721",
+			"url": "https://p-bandai.jp/item/item-1000212721/",
+			"ja": "ＨＧ 1/144 ドラグナー3 リフター3装備タイプ"
+		},
+		{
+			"id": "01_4087",
+			"url": "https://bandai-hobby.net/item/01_4087/",
+			"ja": "1/144 機甲戦記ドラグナーセット1"
+		},
+		{
+			"id": "01_3902",
+			"url": "https://bandai-hobby.net/item/01_3902/",
+			"ja": "ＨＧ 1/144 ドラグナー1 リフター１装備タイプ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -18,44 +56,39 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"懐かしの『機甲戦記ドラグナー』より、“ギガノスの蒼き鷹”が率いるギガノス帝国軍のメタルアーマーがセットで登場！",
-			"■マイヨ・プラート大尉が搭乗する「ファルゲン」と主力機「ゲルフ」３体が、成形色を刷新しセットになって復活。",
-			"■「ゲルフ」キットはパーツの組み合わせにより「ゲルフ」「ヤクトゲルフ」「レビゲルフ」の３タイプを再現可能。"
+			"• マイヨ・プラート大尉が搭乗する「ファルゲン」と主力機「ゲルフ」３体が、成形色を刷新しセットになって復活。",
+			"• 「ゲルフ」キットはパーツの組み合わせにより「ゲルフ」「ヤクトゲルフ」「レビゲルフ」の３タイプを再現可能。"
 		],
 		"en": [
 			"From the nostalgic ``Dragoner'', the metal armor of the Giganos Empire led by the ``Blue Hawk of Giganos'' is now available as a set!",
-			"• The \"Falgen \" piloted by Captain Maillot Prato and the main aircraft \" Guelf\" are back as a set with new molding colors.",
-			"• The \"Guelf \" Kit can reproduce three types: \" Guelf \", \" Jacht Gelf \", and \" Rebigelf\" by combining parts."
+			"• The \"Falgen\" piloted by Captain Maillot Prato and the main aircraft \"Guelf\" are back as a set with new molding colors.",
+			"• The \"Guelf\" Kit can reproduce three types: \"Guelf\", \"Jacht Gelf\", and \"Rebigelf\" by combining parts."
 		]
 	},
-	"accessories": {
-		"ja": ["1/144 ファルゲン×１", "1/144 ゲルフ×3"],
-		"en": ["1/144 Falgen x 1", "1/144 Guelph x3"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "1/144 ファルゲン×１",
+				"en": "1/144 Falgen x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "1/144 ゲルフ",
+				"en": "1/144 Guelph"
+			},
+			"count": 3
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168182_1.jpg",
 				"path": "/images/items/01_4088/1000168182_1.jpg",
 				"hash": "9000dfa00293a8d39bdcd3300e9a75de"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168182_10.jpg",
-				"path": "/images/items/01_4088/1000168182_10.jpg",
-				"hash": "4390ad5c51ca2caf235b988affa68143"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168182_11.jpg",
-				"path": "/images/items/01_4088/1000168182_11.jpg",
-				"hash": "c935ffc417287ee59f822463aef92a8d"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168182_12.jpg",
-				"path": "/images/items/01_4088/1000168182_12.jpg",
-				"hash": "649a75fb8497c239f68e35b982dddbc1"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168182_2.jpg",
@@ -96,13 +129,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168182_9.jpg",
 				"path": "/images/items/01_4088/1000168182_9.jpg",
 				"hash": "740efde65dadc2968741695186287e7b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168182_10.jpg",
+				"path": "/images/items/01_4088/1000168182_10.jpg",
+				"hash": "4390ad5c51ca2caf235b988affa68143"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168182_11.jpg",
+				"path": "/images/items/01_4088/1000168182_11.jpg",
+				"hash": "c935ffc417287ee59f822463aef92a8d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168182_12.jpg",
+				"path": "/images/items/01_4088/1000168182_12.jpg",
+				"hash": "649a75fb8497c239f68e35b982dddbc1"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4088/",
-	"brandIds": [],
-	"seriesIds": ["dragonar"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["item-1000212946", "item-1000212721", "01_4087", "01_3902"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4088/"
 }

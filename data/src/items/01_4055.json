@@ -5,6 +5,54 @@
 		"ja": "HGBD 1/144 ビルドガンマガンダム",
 		"en": "HGBD 1/144 Build Gamma Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 1
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"一 発 必 中 ―",
@@ -66,8 +113,8 @@
 		"en": [
 			"One shot required -",
 			"Leader machine that leads Force \"Konta\"",
-			"The favorite machine of the diver \"Onoko \" based on Rick Diaz that appears in \" Gundam Build Divers Break\" has been commercialized!",
-			"In addition to special parts such as the head and weapons, some new modeling parts are included to faithfully reproduce the styling.",
+			"The favorite machine of the diver \"Onoko\" based on Rick Diaz that appears in \"Gundam Build Divers Break\" has been commercialized!",
+			"In addition to special parts such as the head and weapons, some new modeling parts are added to the body to faithfully reproduce the styling.",
 			"Furthermore, the joint parts have been updated, and the movement performance has been greatly improved!",
 			"● Adopts new parts in various places and faithfully reproduces the styling!",
 			"Based on HGUC Rick Diaz, the head, Seal binder, beam gatling buzz, and various characteristic details are reproduced with new modeling.",
@@ -108,59 +155,81 @@
 			"- Product specifications are scheduled as of 201910. Please note that there may be changes."
 		]
 	},
-	"accessories": {
-		"ja": ["ビームガトリングバズ", "ビーム・ピストル", "ビーム・サーベル", "シールドバインダー"],
-		"en": ["beam gatling buzz", "beam pistol", "beam saber", "Seal binder"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームガトリングバズ",
+				"en": "beam gatling buzz"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・ピストル",
+				"en": "beam pistol"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールドバインダー",
+				"en": "Seal binder"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4984.jpg",
+				"src": "https://bandai-hobby.net/images/153_4984_s_108tsdy56p9bax5lck7twe29b2z6.jpg",
 				"path": "/images/items/01_4055/153_4984.jpg",
 				"hash": "26ea5b21ccd4e6eaca6cd7cb89402409"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4984.jpg",
+				"src": "https://bandai-hobby.net/images/155_4984_s_c7o4shp43njhjxf9paqbf04319qj.jpg",
 				"path": "/images/items/01_4055/155_4984.jpg",
 				"hash": "bd290763b0e07b53496187b124e9773a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4984.jpg",
+				"src": "https://bandai-hobby.net/images/156_4984_s_kowqk34lgean9ajfqlvm1eg64mn6.jpg",
 				"path": "/images/items/01_4055/156_4984.jpg",
 				"hash": "932d1287421c6208fccd2bb96a1061a4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4984.jpg",
+				"src": "https://bandai-hobby.net/images/157_4984_s_rvv7ll5k3ojdyd46ivoavxvv3m04.jpg",
 				"path": "/images/items/01_4055/157_4984.jpg",
 				"hash": "b6dad241e563628071509743d763a5ef"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4984.jpg",
+				"src": "https://bandai-hobby.net/images/158_4984_s_btxc09dwiyeow4j0pg4mn9lbhyt4.jpg",
 				"path": "/images/items/01_4055/158_4984.jpg",
 				"hash": "7219c21e9b71a6502a567c060dbace37"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4984.jpg",
+				"src": "https://bandai-hobby.net/images/159_4984_s_vje7lxufyo74s28tde0q4m87687b.jpg",
 				"path": "/images/items/01_4055/159_4984.jpg",
 				"hash": "918cbc0158a5a2086bcb2e2bea6490d6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4984.jpg",
+				"src": "https://bandai-hobby.net/images/189_4984_s_5udiixjr9xbkyzvx7oma8y0sks4p.jpg",
 				"path": "/images/items/01_4055/189_4984.jpg",
 				"hash": "cb033689d727c19fed8845947306aec8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4984.jpg",
+				"src": "https://bandai-hobby.net/images/190_4984_s_au5aevjf3pcnrikhzrys1cvc5gmp.jpg",
 				"path": "/images/items/01_4055/190_4984.jpg",
 				"hash": "ed53f1f546867ee95cf01301da7f1bea"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4984.jpg",
+				"src": "https://bandai-hobby.net/images/191_4984_s_jqcfingo3zvz4m7r3rmzgne2qk7z.jpg",
 				"path": "/images/items/01_4055/191_4984.jpg",
 				"hash": "0fd162cc7bfe7b1fe9b4502fb9167ae6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4984.jpg",
+				"src": "https://bandai-hobby.net/images/192_4984_s_f7nwi16zub07d4crpnfh76r2q1y7.jpg",
 				"path": "/images/items/01_4055/192_4984.jpg",
 				"hash": "0054a1d93e275c462895fb04f5ae0cc7"
 			}
@@ -168,14 +237,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4055/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2573",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2573/"

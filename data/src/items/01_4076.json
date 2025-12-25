@@ -2,9 +2,57 @@
 	"id": "01_4076",
 	"type": "item",
 	"name": {
-		"ja": "リアルSD ガンダム BHC専用エコプラ ザクⅡF型",
-		"en": "Real SD Gundam BHC exclusive Ecopla Zaku IIF type"
+		"ja": "リアルSDガンダム BHC専用エコプラ ザクⅡF型",
+		"en": "Real SDGundam BHC exclusive Ecopla Zaku IIF type"
 	},
+	"brands": [
+		{
+			"id": "ecoplaproject_g",
+			"url": "https://bandai-hobby.net/brand/ecoplaproject_g/",
+			"ja": "エコプラプロジェクト"
+		},
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5045",
+			"url": "https://bandai-hobby.net/item/01_5045/",
+			"ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム [リサーキュレーションカラー/ネオンブルー]"
+		},
+		{
+			"id": "01_4066",
+			"url": "https://bandai-hobby.net/item/01_4066/",
+			"ja": "MG 1/100 RX-78-2 ガンダム Ver.3.0 [リサーキュレーションカラー/ネオングリーン]"
+		},
+		{
+			"id": "01_4951",
+			"url": "https://bandai-hobby.net/item/01_4951/",
+			"ja": "SD RX-78-2 ガンダム Ver.G30th REAL GRADE 1/1 GUNDAM PROJECT"
+		},
+		{
+			"id": "01_3699",
+			"url": "https://bandai-hobby.net/item/01_3699/",
+			"ja": "リアルSDガンダム BHC専用エコプラ RX-78-2ガンダム"
+		}
+	],
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -19,27 +67,27 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": ["●SD ガンダムシリーズからエコプラでキット化"],
-		"en": ["-Kit from SD Gundam series with eco plastic"]
+		"ja": [
+			"●SDガンダムシリーズからエコプラでキット化"
+		],
+		"en": [
+			"-Kit from SDGundam series with Ecopla"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5001.jpg",
+				"src": "https://bandai-hobby.net/images/153_5001_s_pza1ax2fhrnm23dx0ro5zi3yl3ko.jpg",
 				"path": "/images/items/01_4076/153_5001.jpg",
 				"hash": "7425cc2871f520ae1c247ef1b2a15bf5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5001.jpg",
+				"src": "https://bandai-hobby.net/images/155_5001_s_vkv16b3utx4ui0u0n0m1414awjr9.jpg",
 				"path": "/images/items/01_4076/155_5001.jpg",
 				"hash": "b715de44429a1230eb3be2add3be3e70"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4076/",
-	"brandIds": ["ecoplaproject_g", "sdgundamseries"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5045", "01_4066", "01_4951", "01_3699"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4076/"
 }

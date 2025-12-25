@@ -5,6 +5,45 @@
 		"ja": "ＨＧ 1/35 ランスロット・アルビオン",
 		"en": "HG 1/35 Lancelot Albion"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		},
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "geass",
+			"url": "https://bandai-hobby.net/series/geass/",
+			"ja": "コードギアスシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000203132",
+			"url": "https://p-bandai.jp/item/item-1000203132/",
+			"ja": "ＨＧ 1/35 ガウェイン"
+		},
+		{
+			"id": "item-1000187724",
+			"url": "https://p-bandai.jp/item/item-1000187724/",
+			"ja": "ＨＧ 1/35 紅蓮聖天八極式"
+		}
+	],
+	"scale": "1/35",
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -17,7 +56,6 @@
 		"month": 4
 	},
 	"targetAge": 15,
-	"scale": "1/35",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－",
@@ -93,7 +131,7 @@
 			"Attached weapons: Energy Wing / Super Valis / Maser Vibration Sword / Blaze Luminous / Slash Harken",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/35 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS, PE, PVC, PET",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -112,78 +150,92 @@
 			"・Product specifications are as of 202112. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"エナジー・ウイング",
-			"スーパーヴァリス",
-			"メーザーバイブレーションソード",
-			"ブレイズ・ルミナス",
-			"スラッシュハーケン"
-		],
-		"en": ["energy wing", "Super Valis", "maser vibration sword", "Blaze Luminous", "Slash Harken"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "エナジー・ウイング",
+				"en": "energy wing"
+			}
+		},
+		{
+			"name": {
+				"ja": "スーパーヴァリス",
+				"en": "Super Valis"
+			}
+		},
+		{
+			"name": {
+				"ja": "メーザーバイブレーションソード",
+				"en": "maser vibration sword"
+			}
+		},
+		{
+			"name": {
+				"ja": "ブレイズ・ルミナス",
+				"en": "Blaze Luminous"
+			}
+		},
+		{
+			"name": {
+				"ja": "スラッシュハーケン",
+				"en": "Slash Harken"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5044.jpg",
+				"src": "https://bandai-hobby.net/images/153_5044_s_avzjizakmjdhvom1sm2xfx4sqt5o.jpg",
 				"path": "/images/items/01_4116/153_5044.jpg",
 				"hash": "389e250dcfaaf8e05237cffb80ae2bae"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5044.jpg",
+				"src": "https://bandai-hobby.net/images/155_5044_s_b5kj28swptxx14000zni9cmrq3h2.jpg",
 				"path": "/images/items/01_4116/155_5044.jpg",
 				"hash": "a23cf1336ad1162a860f628771eeeadc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5044.jpg",
+				"src": "https://bandai-hobby.net/images/156_5044_s_xg4g9ii6t9ax9aa8gusrnp3hn6gt.jpg",
 				"path": "/images/items/01_4116/156_5044.jpg",
 				"hash": "8ee658a4b651788df12b6f236d270798"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5044.jpg",
+				"src": "https://bandai-hobby.net/images/157_5044_s_uu024to764m4a2xug8yik0pvlmcg.jpg",
 				"path": "/images/items/01_4116/157_5044.jpg",
 				"hash": "9888265e3e2ae5921007b51accce1571"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5044.jpg",
+				"src": "https://bandai-hobby.net/images/158_5044_s_7vyeuozvox07tmhrwlcsnbq6qc2u.jpg",
 				"path": "/images/items/01_4116/158_5044.jpg",
 				"hash": "29cee4f9195870f85d0bdd855fb64af4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5044.jpg",
+				"src": "https://bandai-hobby.net/images/159_5044_s_kfvuu083qopgdvc7uue23gsc79dm.jpg",
 				"path": "/images/items/01_4116/159_5044.jpg",
 				"hash": "f79bd8843be6b0b86efb41ca6875c59c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5044.jpg",
+				"src": "https://bandai-hobby.net/images/189_5044_s_i28pgfky8d2e0i93nkkfjngte7mu.jpg",
 				"path": "/images/items/01_4116/189_5044.jpg",
 				"hash": "93d4dfd3660b93589d58d44d9754d82a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5044.jpg",
+				"src": "https://bandai-hobby.net/images/190_5044_s_g39fd3xs03h93htg9jxc5kb3y1wf.jpg",
 				"path": "/images/items/01_4116/190_5044.jpg",
 				"hash": "4094cc948c9a0cbc1f07b62de97a93b6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5044.jpg",
+				"src": "https://bandai-hobby.net/images/191_5044_s_4yifk4ex1jsipizab1xppf0qc3hz.jpg",
 				"path": "/images/items/01_4116/191_5044.jpg",
 				"hash": "3ffe0319e29f1cdf8f59a2896ef81652"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5044.jpg",
+				"src": "https://bandai-hobby.net/images/192_5044_s_e9gl41nhfrd8oku9m5sw3vjcr0iq.jpg",
 				"path": "/images/items/01_4116/192_5044.jpg",
 				"hash": "ac733251fde82542da2fd102b55db1f4"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4116/",
-	"brandIds": ["pb_charapla", "hg"],
-	"seriesIds": ["geass"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["item-1000203132", "item-1000187724"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4116/"
 }

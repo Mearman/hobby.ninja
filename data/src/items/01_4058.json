@@ -5,6 +5,49 @@
 		"ja": "ＲＥ/100 1/100 ガンイージ・プロトタイプ（ロールアウトカラー）",
 		"en": "RE/100 1/100 Gunigi Prototype (rollout color)"
 	},
+	"brands": [
+		{
+			"id": "re100",
+			"url": "https://bandai-hobby.net/brand/re100/",
+			"ja": "RE/100[リボーンワンハンドレッド]"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000220190",
+			"url": "https://p-bandai.jp/item/item-1000220190/",
+			"ja": "ＨＧ 1/144 ザク・デザートタイプ ピンクパンサー隊機"
+		},
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "item-1000216105",
+			"url": "https://p-bandai.jp/item/item-1000216105/",
+			"ja": "RG 1/144 ソードインパルスガンダムＳｐｅｃＩＩ"
+		},
+		{
+			"id": "item-1000216110",
+			"url": "https://p-bandai.jp/item/item-1000216110/",
+			"ja": "ＨＧ 1/144 ザクＩＩ Ｆ型 チャブス機 ＆ ケイル機 + 無識別型ザクＩＩ ソラリ機 再現パーツセット(復讐のレクイエム)"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -17,7 +60,6 @@
 		"month": 1
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"反 撃 の 徒 、 立 つ ―",
@@ -69,7 +111,7 @@
 			"Attached weapons: Beam Rifle / Beam Saber / Beam Bazooka / Beam Seal",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/100 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS/PE/PET",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -86,72 +128,86 @@
 			"- Product specifications are scheduled as of 201910. Please note that there may be changes."
 		]
 	},
-	"accessories": {
-		"ja": ["ビーム・ライフル", "ビーム・サーベル", "ビーム・バズーカ", "ビーム・シールド"],
-		"en": ["beam rifle", "beam saber", "beam bazooka", "Beam Seal"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル",
+				"en": "beam rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・バズーカ",
+				"en": "beam bazooka"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・シールド",
+				"en": "Beam Seal"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4987.jpg",
+				"src": "https://bandai-hobby.net/images/153_4987_s_dmzonrpyoh5wln92upjpxh21jvss.jpg",
 				"path": "/images/items/01_4058/153_4987.jpg",
 				"hash": "61999e9c759f3ebcc10d9c1f63ad06f9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4987.jpg",
+				"src": "https://bandai-hobby.net/images/155_4987_s_ojxqb9b39gb3hbr8bevvo3uz7xqp.jpg",
 				"path": "/images/items/01_4058/155_4987.jpg",
 				"hash": "86bbad51aaae1a4ec4bf17baaaaad7a5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4987.jpg",
+				"src": "https://bandai-hobby.net/images/156_4987_s_xrgmurn0pqoa0v9fqm3hmo9drxpj.jpg",
 				"path": "/images/items/01_4058/156_4987.jpg",
 				"hash": "19368529ceb214dec125fabf64f01641"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4987.jpg",
+				"src": "https://bandai-hobby.net/images/157_4987_s_rvdc4jz5ta1sw9g1quzjeeqwu3ny.jpg",
 				"path": "/images/items/01_4058/157_4987.jpg",
 				"hash": "eef7a9f8f0393337e1e22983db212a15"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4987.jpg",
+				"src": "https://bandai-hobby.net/images/158_4987_s_t5jj2hgpnmaf92ti2ppe22yu12de.jpg",
 				"path": "/images/items/01_4058/158_4987.jpg",
 				"hash": "1838019c25909415e95ff024187a3a67"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4987.jpg",
+				"src": "https://bandai-hobby.net/images/159_4987_s_gsm2zlxjgx0v6mr4eqhu5z7ri8ui.jpg",
 				"path": "/images/items/01_4058/159_4987.jpg",
 				"hash": "059c902104e721708ee811e35e486e16"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4987.jpg",
+				"src": "https://bandai-hobby.net/images/189_4987_s_kwd51kdrsl4531ag8lq32duh5lut.jpg",
 				"path": "/images/items/01_4058/189_4987.jpg",
 				"hash": "b3964e40e4f23e6e123ca3b535ee7871"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4987.jpg",
+				"src": "https://bandai-hobby.net/images/190_4987_s_htkv7v7lybzhmjkxcq5gmqjnpzu9.jpg",
 				"path": "/images/items/01_4058/190_4987.jpg",
 				"hash": "b3a0e2a25a65834eff59b29a8f93afac"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4987.jpg",
+				"src": "https://bandai-hobby.net/images/191_4987_s_ms2bq1nbn48pz046z7q42f4rkn9w.jpg",
 				"path": "/images/items/01_4058/191_4987.jpg",
 				"hash": "7cf3bcdd858a5a624d06fce676c8efd9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4987.jpg",
+				"src": "https://bandai-hobby.net/images/192_4987_s_d2p5gz9avvtclnkht5rlopux2qiz.jpg",
 				"path": "/images/items/01_4058/192_4987.jpg",
 				"hash": "868482d9764226633a4047b6d1b0ea15"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4058/",
-	"brandIds": ["re100", "pb_gunpla"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000220190", "item-1000220189", "item-1000216105", "item-1000216110"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4058/"
 }

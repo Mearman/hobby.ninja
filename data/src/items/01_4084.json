@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 オプションパーツセット7(カスタマイズヘッドB)",
 		"en": "30MM 1/144 Option parts set 7 (customized head B)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -18,14 +61,13 @@
 		"day": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMオプションパーツセットにカスタマイズの幅が広がるヘッドパーツが登場！",
-			"■カスタマイズのベースとなるヘッドパーツが付属。ベースを土台にパーツを組み合わせられる。",
-			"■複数のカスタマイズパーツを組み合わせることで、マスク部分だけでなく頭部全体をさまざまな形にカスタマイズできる。",
-			"■同梱される「カスタムジョイント」でさらに組み合わせの幅が広がる。",
-			"■別売りの30MMアイテムとの連動し、自分だけのヘッドカスタマイズを楽しもう！"
+			"• カスタマイズのベースとなるヘッドパーツが付属。ベースを土台にパーツを組み合わせられる。",
+			"• 複数のカスタマイズパーツを組み合わせることで、マスク部分だけでなく頭部全体をさまざまな形にカスタマイズできる。",
+			"• 同梱される「カスタムジョイント」でさらに組み合わせの幅が広がる。",
+			"• 別売りの30MMアイテムとの連動し、自分だけのヘッドカスタマイズを楽しもう！"
 		],
 		"en": [
 			"Head parts that expand the range of customization are now available in the 30MM optional parts set!",
@@ -35,31 +77,50 @@
 			"• Enjoy customizing your own head by linking it with the 30MM item sold separately!"
 		]
 	},
-	"accessories": {
-		"ja": ["ヘッドパーツ×1", "カスタマイズヘッドパーツ×1式", "カスタムジョイント×1式", "シール×1"],
-		"en": ["Head parts x 1", "Customized head parts x 1 set", "Custom joint x 1 set", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヘッドパーツ",
+				"en": "head parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "カスタマイズヘッドパーツ",
+				"en": "customized head parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "カスタムジョイント",
+				"en": "custom joint"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173205_1.jpg",
 				"path": "/images/items/01_4084/1000173205_1.jpg",
 				"hash": "4ec0ae8db789c9e8578a45e121a2cd40"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173205_10.jpg",
-				"path": "/images/items/01_4084/1000173205_10.jpg",
-				"hash": "408bbe7df80e96b0c295e9a40e642c0d"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173205_11.jpg",
-				"path": "/images/items/01_4084/1000173205_11.jpg",
-				"hash": "e976c3dfb20b101c92b15d3f653ae8bb"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173205_12.jpg",
-				"path": "/images/items/01_4084/1000173205_12.jpg",
-				"hash": "f78ff1516f058563580bb0f85ff5090b"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173205_2.jpg",
@@ -100,15 +161,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173205_9.jpg",
 				"path": "/images/items/01_4084/1000173205_9.jpg",
 				"hash": "df062af0835e8c536d5a7da2567e6fbc"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173205_10.jpg",
+				"path": "/images/items/01_4084/1000173205_10.jpg",
+				"hash": "408bbe7df80e96b0c295e9a40e642c0d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173205_11.jpg",
+				"path": "/images/items/01_4084/1000173205_11.jpg",
+				"hash": "e976c3dfb20b101c92b15d3f653ae8bb"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000173205_12.jpg",
+				"path": "/images/items/01_4084/1000173205_12.jpg",
+				"hash": "f78ff1516f058563580bb0f85ff5090b"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4084/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3737",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3737/"

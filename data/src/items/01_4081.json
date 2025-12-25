@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムアスモデウス",
 		"en": "HG 1/144 Gundam Asmodeus"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6773",
+			"url": "https://bandai-hobby.net/item/01_6773/",
+			"ja": "HG 1/144 ガンダムザガン"
+		},
+		{
+			"id": "01_6763",
+			"url": "https://bandai-hobby.net/item/01_6763/",
+			"ja": "HG 1/144 モンキーロディ(598機)/モンキークラブロディ"
+		},
+		{
+			"id": "01_4103",
+			"url": "https://bandai-hobby.net/item/01_4103/",
+			"ja": "HG 1/144 ジークルーネ"
+		},
+		{
+			"id": "01_4240",
+			"url": "https://bandai-hobby.net/item/01_4240/",
+			"ja": "HG 1/144 ガンダム端白星[クリアカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -18,18 +62,17 @@
 		"day": 16
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム 鉄血のオルフェンズ ウルズハント』より、「ガンダム・アスモデウス」を初立体化！",
-			"■新規外装パーツに加え、ガンダム・フレームの一部新造により外観形状を再現。",
-			"■足底のクローの展開ギミックを、各部の可動とパーツ差し替えで表現。",
-			"■差し替えにより腕部のグラン・トンファーの伸縮ギミックを再現。",
-			"■ギガント・ジャベリンのアンカーギミックをリード線で表現。",
-			"■リアスカートにライフルのマウントが可能。背部スラスターは可動式。"
+			"• 新規外装パーツに加え、ガンダム・フレームの一部新造により外観形状を再現。",
+			"• 足底のクローの展開ギミックを、各部の可動とパーツ差し替えで表現。",
+			"• 差し替えにより腕部のグラン・トンファーの伸縮ギミックを再現。",
+			"• ギガント・ジャベリンのアンカーギミックをリード線で表現。",
+			"• リアスカートにライフルのマウントが可能。背部スラスターは可動式。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam: Iron-Blooded Orphans Ur's Hunt \", \" Gundam Asmodeus\" is made into a three-dimensional figure for the first time!",
+			"From \"Mobile Suit Gundam: Iron-Blooded Orphans Ur's Hunt\", \"Gundam Asmodeus\" is made into a three-dimensional figure for the first time!",
 			"• In addition to new exterior parts, the exterior shape has been reproduced by partially new construction of the Gundam frame.",
 			"• The expansion gimmick of the claw on the sole of the foot is expressed by movable parts and replacement parts.",
 			"• Reproduce the Gran Tonfa's expansion and contraction gimmick on the arm by replacing it.",
@@ -37,75 +80,93 @@
 			"• Rifle can be mounted on the rear skirt. The back thruster is movable."
 		]
 	},
-	"accessories": {
-		"ja": ["ライフル×1", "ギガント・ジャベリン×1", "グラン・トンファー×2", "リード線×１", "シール×1"],
-		"en": ["Rifle x 1", "Gigant Javelin×1", "Grand Tonfa x2", "Lead wire x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ライフル",
+				"en": "rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ギガント・ジャベリン",
+				"en": "Gigant Javelin"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "グラン・トンファー",
+				"en": "Grand Tonfa"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "リード線×１",
+				"en": "Lead wire x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5006.jpg",
+				"src": "https://bandai-hobby.net/images/153_5006_s_xr1m87anpmdug8t1ptfxprr9twmw.jpg",
 				"path": "/images/items/01_4081/153_5006.jpg",
 				"hash": "a8bdfada75945fc82c506d2781ac9407"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5006.jpg",
+				"src": "https://bandai-hobby.net/images/155_5006_s_vslvt25fncfsa9re2fzf66773clz.jpg",
 				"path": "/images/items/01_4081/155_5006.jpg",
 				"hash": "6690befc4e074ca82c325f3d2d8f6fe1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5006.jpg",
+				"src": "https://bandai-hobby.net/images/156_5006_s_zdzd4tqlz13xwhnlzvc19apj5x15.jpg",
 				"path": "/images/items/01_4081/156_5006.jpg",
 				"hash": "ec2b60b22055aae111a1495114856538"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5006.jpg",
+				"src": "https://bandai-hobby.net/images/157_5006_s_bfgdbwod83r78zc6wv68wuylj27g.jpg",
 				"path": "/images/items/01_4081/157_5006.jpg",
 				"hash": "ef12e998cffb301e1026c83f1b5c603b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5006.jpg",
+				"src": "https://bandai-hobby.net/images/158_5006_s_0noyn5rcur19o8ldkwgwt49t6av3.jpg",
 				"path": "/images/items/01_4081/158_5006.jpg",
 				"hash": "b1b3ce71c0dced71311eb55971725f0e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5006.jpg",
+				"src": "https://bandai-hobby.net/images/159_5006_s_ncq5dioau2n364x680vzmie2z21d.jpg",
 				"path": "/images/items/01_4081/159_5006.jpg",
 				"hash": "a99477fed8d13270e0472de921a53309"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5006.jpg",
+				"src": "https://bandai-hobby.net/images/189_5006_s_d2fhputdepvj7v5ds4c7bulfwdhj.jpg",
 				"path": "/images/items/01_4081/189_5006.jpg",
 				"hash": "f947e80e5105cd9d1749eaa5da5550a7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5006.jpg",
+				"src": "https://bandai-hobby.net/images/190_5006_s_1laegmz3ackljnam4xizw48yax2u.jpg",
 				"path": "/images/items/01_4081/190_5006.jpg",
 				"hash": "11c1577b6fc685c53b8e193ccc4c2f76"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5006.jpg",
+				"src": "https://bandai-hobby.net/images/191_5006_s_gjzb2poce2wrtap1swt9t966yg6g.jpg",
 				"path": "/images/items/01_4081/191_5006.jpg",
 				"hash": "bfb81d9f130b85fd1c05ffb4a4db30db"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4081_inst_0.jpg",
-				"path": "/images/items/01_4081/01_4081_inst_0.jpg",
-				"hash": "9a889f4a9514e452561f3cb0d23bfcae"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4081_inst_1.jpg",
-				"path": "/images/items/01_4081/01_4081_inst_1.jpg",
-				"hash": "819fbb848f2de3bb0d78a89ab7d0fc96"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4081/",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4103", "01_4240", "01_4188", "01_4094"],
 	"manual": {
 		"id": "115",
 		"url": "https://manual.bandai-hobby.net/menus/detail/115/"

@@ -5,6 +5,40 @@
 		"ja": "ENTRY GRADE 1/144 νガンダム",
 		"en": "ENTRY GRADE 1/144 νGundam"
 	},
+	"brands": [
+		{
+			"id": "entry_grade_g",
+			"url": "https://bandai-hobby.net/brand/entry_grade_g/",
+			"ja": "ENTRY GRADE"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4974",
+			"url": "https://bandai-hobby.net/item/01_4974/",
+			"ja": "ENTRY GRADE 1/144 ガンダムベース限定 νガンダム [ペインティング モデル]"
+		},
+		{
+			"id": "01_4191",
+			"url": "https://bandai-hobby.net/item/01_4191/",
+			"ja": "ENTRY GRADE 1/144 RX-93ff νガンダム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -18,7 +52,6 @@
 		"day": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"“次世代のファーストガンプラ”第三弾に「νガンダム」が登場！",
@@ -29,7 +62,7 @@
 			"• 「HGUC 1/144 RX-93νガンダム」（別売り）の武装を装備することが可能。"
 		],
 		"en": [
-			"\"νGundam \" appears in the third installment of \" Next Generation First Gunpla\"!",
+			"\"νGundam\" appears in the third installment of \"Next Generation First Gunpla\"!",
 			"• Touch gate design that allows you to easily remove it by hand without using nippers.",
 			"• Has a wide range of motion and can be posed freely.",
 			"• Color-coding of details can also be reproduced using Assembly alone.",
@@ -37,10 +70,29 @@
 			"• Can be equipped with the armament of \"HGUC 1/144 RX-93νGundam\" (sold separately)."
 		]
 	},
-	"accessories": {
-		"ja": ["ビーム・ライフル×1", "シールド×1", "マーキングシール×1"],
-		"en": ["Beam rifle x1", "Seal × 1", "MarkingSeal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・ライフル",
+				"en": "beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -92,10 +144,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4082/",
-	"brandIds": ["entry_grade"],
-	"seriesIds": ["gundam-cca"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4974", "01_4191"],
 	"manual": {
 		"id": "1051",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1051/"

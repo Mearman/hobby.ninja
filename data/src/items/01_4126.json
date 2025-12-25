@@ -3,8 +3,62 @@
 	"type": "item",
 	"name": {
 		"ja": "ＨＧ 1/144 ガンダムＡＧＥ-１ レイザー＆ガンダムＡＧＥ-２ アルティメス セット",
-		"en": "HG 1/144 Gundam AGE-1 Razor & Gundam AGE-2 Artimes Set"
+		"en": "HG 1/144 GundamAGE-1 Razor & GundamAGE-2 Artimes Set"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "age",
+			"url": "https://bandai-hobby.net/series/age/",
+			"ja": "機動戦士ガンダムAGE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181355",
+			"url": "https://p-bandai.jp/item/item-1000181355/",
+			"ja": "ＭＧ 1/100 ガンダムＡＧＥ－１ フルグランサ用 拡張パーツ"
+		},
+		{
+			"id": "item-1000181354",
+			"url": "https://p-bandai.jp/item/item-1000181354/",
+			"ja": "ＭＧ 1/100 ガンダムＡＧＥ－１ フルグランサ [デザイナーズカラーＶｅｒ．]"
+		},
+		{
+			"id": "item-1000170540",
+			"url": "https://p-bandai.jp/item/item-1000170540/",
+			"ja": "ＨＧ 1/144 フォーンファルシア"
+		},
+		{
+			"id": "01_3738",
+			"url": "https://bandai-hobby.net/item/01_3738/",
+			"ja": "HG 1/144 「機動戦士ガンダムAGE」 MSセット[クリアカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3960,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 3
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ＨＧ 1/144 ＡＧＥ-１ レイザー／ＡＧＥ-２ アルティメス",
@@ -60,14 +113,14 @@
 		"en": [
 			"HG 1/144 AGE-1 Razor/AGE-2 Artimes",
 			"Special set that includes 2 types of wear parts and base kit.",
-			"Hobby magazine supplement \"Gundam AGE\" 2 types of wear parts (Hobby Japan: Gundam AGE-1 Razor / Dengeki Hobby Magazine: Gundam AGE-2 Artimes)",
+			"Hobby magazine supplement \"GundamAGE\" 2 types of wear parts (Hobby Japan: GundamAGE-1 Razor / Dengeki Hobby Magazine: GundamAGE-2 Artimes)",
 			"Commercialized as a special set that comes with the base kit. Each new foil seal reproduces the color coding of detailed parts!",
-			"● Gundam AGE-1 Razor",
-			"The base kit + wear parts reproduce the styling in which each part is equipped with a physical sword \"Razor Blade\". The new foil seal reproduces the color coding of detailed parts.",
+			"● GundamAGE-1 Razor",
+			"The base kit + wear parts reproduce the styling equipped with a physical sword \"Razor Blade\" in each part. The new foil seal reproduces the color coding of detailed parts.",
 			"Razor Blade/Razor Boomerang",
 			"A razor boomerang can be recreated by combining the left and right razor blades.",
-			"● Gundam AGE-2 Artimes",
-			"The base kit + wear parts reproduce the styling of Gundam AGE-2's reconnaissance type wear \"Artimes\". The new foil seal reproduces the color coding of detailed parts.",
+			"● GundamAGE-2 Artimes",
+			"The base kit + wear parts reproduce the styling of GundamAGE-2's reconnaissance type wear \"Artimes\". The new foil seal reproduces the color coding of detailed parts.",
 			"Artimes Long Range Rifle/Artimes Beam Saber",
 			"The binder part is movable, allowing for free posing.",
 			"Artimes Beam Saber can be connected to a beam blade.",
@@ -96,59 +149,75 @@
 			"・Product specifications are as of 20221. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["レイザーブレイド", "アルティメス・ビームサーベル", "ツインドッズライフル"],
-		"en": ["razor blade", "Artimes Beam Saber", "twin dods rifle"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "レイザーブレイド",
+				"en": "razor blade"
+			}
+		},
+		{
+			"name": {
+				"ja": "アルティメス・ビームサーベル",
+				"en": "Artimes Beam Saber"
+			}
+		},
+		{
+			"name": {
+				"ja": "ツインドッズライフル",
+				"en": "twin dods rifle"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5053.jpg",
+				"src": "https://bandai-hobby.net/images/153_5053_s_x71du0ty3wfq74szye20rk63abpt.jpg",
 				"path": "/images/items/01_4126/153_5053.jpg",
 				"hash": "7fbf1d05478c82f3c4cd9d4dcf73df16"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5053.jpg",
+				"src": "https://bandai-hobby.net/images/155_5053_s_rftyymqwrxa5vgatq90c5p4ydpai.jpg",
 				"path": "/images/items/01_4126/155_5053.jpg",
 				"hash": "1fe2675e7acd15e56f28096c1c6141c1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5053.jpg",
+				"src": "https://bandai-hobby.net/images/156_5053_s_x652pau9rkmkmatuemxtu952k42t.jpg",
 				"path": "/images/items/01_4126/156_5053.jpg",
 				"hash": "0ad7fbb33e1e66d5ecb35349b039f7c4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5053.jpg",
+				"src": "https://bandai-hobby.net/images/157_5053_s_2f788uln1brwm1yhwor2h4wbim4b.jpg",
 				"path": "/images/items/01_4126/157_5053.jpg",
 				"hash": "235de540c6d0d06ac53a574e2ea5b366"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5053.jpg",
+				"src": "https://bandai-hobby.net/images/158_5053_s_m9hqthpenbqw7afiicyok6rt5ihi.jpg",
 				"path": "/images/items/01_4126/158_5053.jpg",
 				"hash": "de324e5e6572dccdf413dca1fe4e1668"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5053.jpg",
+				"src": "https://bandai-hobby.net/images/159_5053_s_0lcanhuh2w708vzzavzs72s6mh73.jpg",
 				"path": "/images/items/01_4126/159_5053.jpg",
 				"hash": "1902a734d964e122415c32556be8208f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5053.jpg",
+				"src": "https://bandai-hobby.net/images/189_5053_s_k5093ckbslahfly04u1u9h2kx97s.jpg",
 				"path": "/images/items/01_4126/189_5053.jpg",
 				"hash": "88d3031289faffa8f64f2976c3c3e1cd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5053.jpg",
+				"src": "https://bandai-hobby.net/images/190_5053_s_xv8mwc2bv3mv5i4euplqlszkf7yz.jpg",
 				"path": "/images/items/01_4126/190_5053.jpg",
 				"hash": "f5b94be5b73c6ab7ab75e20a2cccac88"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5053.jpg",
+				"src": "https://bandai-hobby.net/images/191_5053_s_9dbzfd5aolv24cjv0yy9bqgq4wg4.jpg",
 				"path": "/images/items/01_4126/191_5053.jpg",
 				"hash": "ec56c540b48bd8ff563745903fa8400c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5053.jpg",
+				"src": "https://bandai-hobby.net/images/192_5053_s_dynorv957gwxni4lh9iuvki8cgnh.jpg",
 				"path": "/images/items/01_4126/192_5053.jpg",
 				"hash": "0a55998beb8bff1bfe89879f6abca6ce"
 			}
@@ -156,14 +225,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4126/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["age"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000181355", "item-1000181354", "item-1000170540", "01_3738"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2368",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2368/"

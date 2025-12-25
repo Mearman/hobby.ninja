@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard ウマ娘 プリティーダービー トウカイテイオー",
-		"en": "Figure-rise Standard Umamusume: Pretty Derby Tokai Teio"
+		"en": "Figure-rise Standard Uma Musume Pretty Derby Tokai Teio"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "umamusume",
+			"url": "https://bandai-hobby.net/series/umamusume/",
+			"ja": "ウマ娘 プリティーダービー"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5417",
+			"url": "https://bandai-hobby.net/item/01_5417/",
+			"ja": "Figure-rise Standard ウマ娘 プリティーダービー サイレンススズカ"
+		},
+		{
+			"id": "01_4989",
+			"url": "https://bandai-hobby.net/item/01_4989/",
+			"ja": "Figure-rise Standard ウマ娘 プリティーダービー スペシャルウィーク"
+		}
+	],
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -21,22 +54,22 @@
 	"description": {
 		"ja": [
 			"『ウマ娘プリティーダービー』トウカイテイオーがFigure-rise Standardで走りだす&#8252;",
-			"■前傾姿勢で走る、ウマ娘ならではの疾走ポーズを再現。",
+			"• 前傾姿勢で走る、ウマ娘ならではの疾走ポーズを再現。",
 			"スカートは側面がスリット構造になっており、跳ね上げるように動かすことが可能。",
 			"重なったパーツが目隠しになり、シルエットを崩さずに前傾姿勢で走る姿が決まる。",
-			"■特徴的なテイオーステップも再現可能。",
-			"■弾ける笑顔と、元気いっぱいの動きも魅力的に演出。",
-			"■表情の異なる３種の顔パーツが付属。笑顔の瞳は「タンポ印刷」で再現。",
+			"• 特徴的なテイオーステップも再現可能。",
+			"• 弾ける笑顔と、元気いっぱいの動きも魅力的に演出。",
+			"• 表情の異なる３種の顔パーツが付属。笑顔の瞳は「タンポ印刷」で再現。",
 			"他の２種は水転写式デカールを採用。",
-			"■１パーツ単位で構造を追求することにより、“勝負服”や頭部などが組み立てるだけでカラフルに仕上がる。",
-			"■靴裏の蹄鉄はシールで再現。靴の前後をパーツ分けすることで、地面を蹴る姿もしなやかに表現。",
-			"■頭部は、動きを付けられる耳やリボン、風になびいて抑揚のあるポニーテールを演出。",
-			"■左右で色の異なるハンドパーツが付属。右手は表情のある平手と合わせて合計６種類をセット。",
-			"■背中に支柱を接続し、クリア成形の台座でボディを保持。走る姿を演出する。"
+			"• １パーツ単位で構造を追求することにより、“勝負服”や頭部などが組み立てるだけでカラフルに仕上がる。",
+			"• 靴裏の蹄鉄はシールで再現。靴の前後をパーツ分けすることで、地面を蹴る姿もしなやかに表現。",
+			"• 頭部は、動きを付けられる耳やリボン、風になびいて抑揚のあるポニーテールを演出。",
+			"• 左右で色の異なるハンドパーツが付属。右手は表情のある平手と合わせて合計６種類をセット。",
+			"• 背中に支柱を接続し、クリア成形の台座でボディを保持。走る姿を演出する。"
 		],
 		"en": [
 			"“Uma Musume Pretty Derby” Tokai Teio starts running with Figure-rise Standard!!",
-			"• Reproduces the sprinting pose unique to Uma Musume, which runs with a forward leaning position.",
+			"• Reproduces the running pose unique to Uma Musume, where she runs with a forward leaning position.",
 			"The skirt has a slit structure on the side and can be flipped up.",
 			"The overlapping parts act as a blindfold, allowing you to lean forward while running without compromising your silhouette.",
 			"• The characteristic Teio step can also be reproduced.",
@@ -50,37 +83,45 @@
 			"• Connect the post to the back and hold the body with a clear molded base. Produce the appearance of running."
 		]
 	},
-	"accessories": {
-		"ja": ["表情パーツ×３種", "ハンドパーツ×１式", "専用台座×１式", "水転写式デカール×1", "シール×１"],
-		"en": [
-			"Facial expression parts x 3 types",
-			"Hand parts x 1 set",
-			"Dedicated pedestal x 1 set",
-			"Water transfer decal x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情パーツ×３種",
+				"en": "Facial expression parts x 3 types"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "専用台座×１式",
+				"en": "Dedicated pedestal x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_1.jpg",
 				"path": "/images/items/01_4118/1000175029_1.jpg",
 				"hash": "35690169efef7c98da337d741d6e8c66"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_10.jpg",
-				"path": "/images/items/01_4118/1000175029_10.jpg",
-				"hash": "0d2e64d6ac82a1cb6c642503b446234c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_11.jpg",
-				"path": "/images/items/01_4118/1000175029_11.jpg",
-				"hash": "f9cf68b87d78ac131b2270987dfa0bda"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_12.jpg",
-				"path": "/images/items/01_4118/1000175029_12.jpg",
-				"hash": "0d7c38679a5a599aa3dd0a8c34ee5aa3"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_2.jpg",
@@ -121,13 +162,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_9.jpg",
 				"path": "/images/items/01_4118/1000175029_9.jpg",
 				"hash": "8f99f0e60023aab7502a6855c535971c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_10.jpg",
+				"path": "/images/items/01_4118/1000175029_10.jpg",
+				"hash": "0d2e64d6ac82a1cb6c642503b446234c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_11.jpg",
+				"path": "/images/items/01_4118/1000175029_11.jpg",
+				"hash": "f9cf68b87d78ac131b2270987dfa0bda"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_12.jpg",
+				"path": "/images/items/01_4118/1000175029_12.jpg",
+				"hash": "0d7c38679a5a599aa3dd0a8c34ee5aa3"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4118/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["umamusume"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5417", "01_4989"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4118/"
 }

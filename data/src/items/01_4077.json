@@ -5,6 +5,54 @@
 		"ja": "ＨＧ 1/144 ホワイトライダー",
 		"en": "HG 1/144 White Rider"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 2
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「ペイルライダー計画」",
@@ -71,7 +118,7 @@
 			"\"Pale Rider Plan\"",
 			"RX-80WR",
 			"White Rider now available as a kit!",
-			"From \"Mobile Suit Gundam Battle Operation Code Fairy \", the first prototype White Rider developed in the \" Pale Rider Project\" is made into a three-dimensional model in the HG series.",
+			"From \"Mobile Suit Gundam Battle Operation Code Fairy\", the first prototype White Rider developed in the \"Pale Rider Project\" is made into a three-dimensional model in the HG series.",
 			"Reproduce the shape and coloring based on HG Pale Rider. Characteristic weapons such as the special weapon \"Prototype Shekinah\" are reproduced with new modeling.",
 			"● Experimental aircraft equipped with a fire control system and large weapons.",
 			"The White Rider's shape, including the impressive head, chest, arms, and waist, has been recreated with new modeling.",
@@ -84,9 +131,9 @@
 			"back",
 			"The connecting arm and wing for the prototype Shekinah are reproduced with new modeling.",
 			"The wing is equipped with a deployment gimmick.",
-			"● Reproduce the special weapons \"Prototype Shekinah \" and \" Heat Rapier\" with new modeling!",
+			"● Reproduce the special weapons \"Prototype Shekinah\" and \"Heat Rapier\" with new modeling!",
 			"Prototype Shekinah",
-			"Composite special armament The special armament that is the prototype of Shekinah is reproduced with new modeling.",
+			"Composite special armament The prototype special armament of Shekinah is reproduced with new modeling.",
 			"The new connecting arm is movable so it can be attached to the right arm.",
 			"By replacing parts, the Mega Beam Launcher bombardment mode can be reproduced.",
 			"The heat dissipation light emission state during bombardment mode can be expressed by selecting Seal.",
@@ -94,7 +141,7 @@
 			"A new model of the exclusive close-range weapon Heat Rapier is included. Can be mounted on the waist.",
 			"● It is possible to reproduce the appearance when ZEUS is activated!",
 			"Normal state and ZEUS activation state can be reproduced by selecting Seal.",
-			"● Seal containing unit emblem marks etc. is included.",
+			"● Seal containing unit emblem marks, etc. is included.",
 			"Attached weapons: Prototype Shekinah / Heat Rapier",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/144 Scale Assembly plastic model",
@@ -116,59 +163,69 @@
 			"・Product specifications are as of 202112. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["試作型シェキナー", "ヒート・レイピア"],
-		"en": ["Prototype Shekinah", "heat rapier"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "試作型シェキナー",
+				"en": "Prototype Shekinah"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヒート・レイピア",
+				"en": "heat rapier"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5002.jpg",
+				"src": "https://bandai-hobby.net/images/153_5002_s_691ye4fv6dcwzyfzd0dlfwfo6k1m.jpg",
 				"path": "/images/items/01_4077/153_5002.jpg",
 				"hash": "b7d839e5abc904949c64b555272c774c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5002.jpg",
+				"src": "https://bandai-hobby.net/images/155_5002_s_w46ok4bglwaokqpovwzdvrfzw9eo.jpg",
 				"path": "/images/items/01_4077/155_5002.jpg",
 				"hash": "b4daee709fbb1179a26e2d1e3859fe73"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5002.jpg",
+				"src": "https://bandai-hobby.net/images/156_5002_s_kd3w8j1x24sdzqbnqudz5icfewd5.jpg",
 				"path": "/images/items/01_4077/156_5002.jpg",
 				"hash": "ebbfafa115f0ac473f68a780a26c0818"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5002.jpg",
+				"src": "https://bandai-hobby.net/images/157_5002_s_icuegib0hab4prg3s3wxronie9b2.jpg",
 				"path": "/images/items/01_4077/157_5002.jpg",
 				"hash": "511866b2d1aa5b7462332f4ac0c3d54e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5002.jpg",
+				"src": "https://bandai-hobby.net/images/158_5002_s_v2exbuk8znzu2we7f9q3gcqe9y6s.jpg",
 				"path": "/images/items/01_4077/158_5002.jpg",
 				"hash": "3ea2277dd73b398200fb2da061d537fd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5002.jpg",
+				"src": "https://bandai-hobby.net/images/159_5002_s_cvzkl0cvf6uglg98x3p33rsupv06.jpg",
 				"path": "/images/items/01_4077/159_5002.jpg",
 				"hash": "6746ba155ce2ea807d090698a20cbe2d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5002.jpg",
+				"src": "https://bandai-hobby.net/images/189_5002_s_ee8sbq0sgasfp0nkpziihg9apvne.jpg",
 				"path": "/images/items/01_4077/189_5002.jpg",
 				"hash": "6e59b62cdae966ccd6cd404c0c70806f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5002.jpg",
+				"src": "https://bandai-hobby.net/images/190_5002_s_592ogts5xp7woalmkz9fya8nf65x.jpg",
 				"path": "/images/items/01_4077/190_5002.jpg",
 				"hash": "86e20531768ac134fbc0444c6f7d9ba1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5002.jpg",
+				"src": "https://bandai-hobby.net/images/191_5002_s_rmfvpprg6gajbej5i9ctemazff0w.jpg",
 				"path": "/images/items/01_4077/191_5002.jpg",
 				"hash": "ba9d10c5949b67ac3095f032dad491f0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5002.jpg",
+				"src": "https://bandai-hobby.net/images/192_5002_s_tktx754rsuhjcirwdrdfq5j597hq.jpg",
 				"path": "/images/items/01_4077/192_5002.jpg",
 				"hash": "474a6410d9f904c54ad2a041a319b92b"
 			}
@@ -176,14 +233,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4077/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2385",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2385/"

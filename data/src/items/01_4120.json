@@ -2,9 +2,52 @@
 	"id": "01_4120",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 ガンダム 5号機[クリアカラー]",
+		"ja": "HG 1/144 ガンダム5号機[クリアカラー]",
 		"en": "HG 1/144 Gundam Unit 5 [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2475,
 		"currency": "JPY",
@@ -18,10 +61,9 @@
 		"day": 15
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム外伝 宇宙、閃光の果てに・・・』に登場した、ガンダム 5号機がクリアカラーで登場！",
+			"『機動戦士ガンダム外伝 宇宙、閃光の果てに・・・』に登場した、ガンダム5号機がクリアカラーで登場！",
 			"• 組み換え式で「ノーマルモード」、増加装甲を装備した「[Bst]形態」を再現可能！",
 			"• 本機の特徴であるレッドのカラーリングを中心に、ホワイト、イエローの成形色をクリアパーツで再現。鮮やかな仕上がりに！",
 			"• 主兵装「ジャイアント・ガトリング」は、給弾ベルトを介して、大型ドラムマガジンと接続可能！",
@@ -29,8 +71,8 @@
 			"• 部隊章などを再現するマーキングシールが付属！"
 		],
 		"en": [
-			"Gundam Unit 5, which appeared in \"Mobile Suit Gundam Gaiden: At the End of the Flash...\", is now available in clear color!",
-			"• Can be recombined to reproduce \"normal mode \" and \"[Bst] form\" equipped with increased armor!",
+			"Gundam Unit 5 that appeared in \"Mobile Suit Gundam Gaiden: At the End of the Flash...\" is now available in clear color!",
+			"• Can be recombined to reproduce \"normal mode\" and \"[Bst] form\" equipped with increased armor!",
 			"• Mainly featuring the red coloring of this machine, the white and yellow molding colors are reproduced with clear parts. For a vivid finish!",
 			"• The main weapon \"Giant Gatling\" can be connected to a large drum magazine via the bullet feeding belt!",
 			"• Soft material is used for the bullet feeding belt. Can be flexibly adapted to various action poses!",
@@ -40,30 +82,22 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5048.jpg",
+				"src": "https://bandai-hobby.net/images/153_5048_s_hqe0za339z3k2315w8e7u434h87n.jpg",
 				"path": "/images/items/01_4120/153_5048.jpg",
 				"hash": "d816845c593dccd983475bd18a09b045"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5048.jpg",
+				"src": "https://bandai-hobby.net/images/155_5048_s_q0a3c5oyd9v3tghcrbe81epjboho.jpg",
 				"path": "/images/items/01_4120/155_5048.jpg",
 				"hash": "0e201d008018915552a2bddacb949852"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5048.jpg",
+				"src": "https://bandai-hobby.net/images/156_5048_s_rsdmrb81atsz8bx5e4pqkrignb0a.jpg",
 				"path": "/images/items/01_4120/156_5048.jpg",
 				"hash": "84443534e61d57f214c5ec1a81aea965"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4120/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4120/"
 }

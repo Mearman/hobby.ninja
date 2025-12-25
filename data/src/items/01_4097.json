@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 bEXM-29 ガルドノヴァ[ブラウン]",
 		"en": "30MM 1/144 bEXM-29 Gardonova [Brown]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1518,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 21
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMバイロン軍から待望の重量級量産機が登場！シリーズ初の量産機同士の合体機構を搭載！",
@@ -41,21 +83,21 @@
 			"• Can also be customized with existing aircraft and optional parts. Create your own mass-produced machine with unlimited customization!"
 		]
 	},
-	"accessories": {
-		"ja": ["ライフル×1"],
-		"en": ["Rifle x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ライフル",
+				"en": "rifle"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000174419_1.jpg",
 				"path": "/images/items/01_4097/1000174419_1.jpg",
 				"hash": "2b7ad4b60850c820593f877602aab3fb"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000174419_10.jpg",
-				"path": "/images/items/01_4097/1000174419_10.jpg",
-				"hash": "a266fb9dc49f26a58ee601ab260b2b13"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000174419_2.jpg",
@@ -96,15 +138,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000174419_9.jpg",
 				"path": "/images/items/01_4097/1000174419_9.jpg",
 				"hash": "9bc3dcca0ee7453bc2ed273e18f0ae16"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000174419_10.jpg",
+				"path": "/images/items/01_4097/1000174419_10.jpg",
+				"hash": "a266fb9dc49f26a58ee601ab260b2b13"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4097/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3738",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3738/"

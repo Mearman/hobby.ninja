@@ -5,6 +5,49 @@
 		"ja": "Figure-rise Standard 仮面ライダーゴースト オレ魂",
 		"en": "Figure-rise Standard Kamen Rider Ghost Ore Tamashii"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "rider",
+			"url": "https://bandai-hobby.net/series/rider/",
+			"ja": "仮面ライダーシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5451",
+			"url": "https://bandai-hobby.net/item/01_5451/",
+			"ja": "Figure-rise Standard 仮面ライダーゼロワン ライジングホッパー"
+		},
+		{
+			"id": "item-1000215369",
+			"url": "https://p-bandai.jp/item/item-1000215369/",
+			"ja": "Figure-rise Standard 仮面ライダーファイズ ブラスターフォーム"
+		},
+		{
+			"id": "01_5276",
+			"url": "https://bandai-hobby.net/item/01_5276/",
+			"ja": "Figure-rise Standard 仮面ライダークウガ アルティメットフォーム"
+		},
+		{
+			"id": "01_5175",
+			"url": "https://bandai-hobby.net/item/01_5175/",
+			"ja": "Figure-rise Standard 仮面ライダーキバ キバフォーム"
+		}
+	],
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -21,20 +64,20 @@
 	"description": {
 		"ja": [
 			"『仮面ライダーゴースト』より「仮面ライダーゴースト オレ魂」がFigure-rise Standardに登場！",
-			"■トランジェント形態の全身の緻密なラインは発色に優れるプラスチックシールで再現。",
-			"■特徴的な「ゴーストドライバー」はクリアパーツで表現。",
-			"■「トランジェント形態」に「オレゴースト」パーツを組み合わせて「オレ魂」状態へ。劇中の変身をイメージしながら組み立てが楽しめる！",
-			"■各種ハンドパーツ付属で印象的な必殺技発動時のポージングも表現可能。",
-			"■特徴的なパーカーも再現。",
-			"■ガンガンセイバーは、ブレードモードとガンモードが１つずつ付属。",
-			"■ネオディケイドライバーを装備するための専用パーツが付属。",
-			"■「オレゴースト」用台座が付属。"
+			"• トランジェント形態の全身の緻密なラインは発色に優れるプラスチックシールで再現。",
+			"• 特徴的な「ゴーストドライバー」はクリアパーツで表現。",
+			"• 「トランジェント形態」に「オレゴースト」パーツを組み合わせて「オレ魂」状態へ。劇中の変身をイメージしながら組み立てが楽しめる！",
+			"• 各種ハンドパーツ付属で印象的な必殺技発動時のポージングも表現可能。",
+			"• 特徴的なパーカーも再現。",
+			"• ガンガンセイバーは、ブレードモードとガンモードが１つずつ付属。",
+			"• ネオディケイドライバーを装備するための専用パーツが付属。",
+			"• 「オレゴースト」用台座が付属。"
 		],
 		"en": [
-			"\"Kamen Rider Ghost Ore Tamashii \" from \" Kamen Rider Ghost\" is now available in Figure-rise Standard!",
+			"\"Kamen Rider Ghost Ore Tamashii\" from \"Kamen Rider Ghost\" is now available in Figure-rise Standard!",
 			"• The delicate lines of the transient form of the whole body are reproduced with plastic Seal, which has excellent coloring.",
 			"• The characteristic \"ghost driver\" is expressed with clear parts.",
-			"• Combine the \"Transient Form \" with the \" Ore Ghost \" parts to create the \" Ore Soul\" state. You can enjoy assembly while imagining the transformation in the movie!",
+			"• Combine the \"Transient Form\" with the \"Ore Ghost\" parts to create the \"Ore Soul\" state. You can enjoy assembly while imagining the transformation in the movie!",
 			"• Various hand parts are included to create impressive poses when performing special moves.",
 			"• The distinctive hoodie is also reproduced.",
 			"• Gangan Saber comes with one blade mode and one gun mode.",
@@ -42,86 +85,124 @@
 			"• A pedestal for \"Ore Ghost\" is included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ガンガンセイバー（ブレードモード/ガンモード）×各1",
-			"オレゴースト用パーツ×1式",
-			"オレゴースト用台座×1",
-			"ジョイントパーツ×１式",
-			"ハンドパーツ×1式",
-			"Figure-rise Effect 台座×1",
-			"シール×1",
-			"プラスチックシール×1"
-		],
-		"en": [
-			"Gangan Saber (Blade Mode/Gun Mode) x 1 each",
-			"Oreghost parts x 1 set",
-			"Oreghost pedestal x 1",
-			"Joint parts x 1 set",
-			"Hand parts x 1 set",
-			"Figure-rise Effect pedestal x 1",
-			"Seal×1",
-			"Plastic Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ガンガンセイバー（ブレードモード/ガンモード）×各1",
+				"en": "Gangan Saber (Blade Mode/Gun Mode) x 1 each"
+			}
+		},
+		{
+			"name": {
+				"ja": "オレゴースト用パーツ",
+				"en": "parts for oreghost"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "オレゴースト用台座",
+				"en": "Pedestal for Oreghost"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ×１式",
+				"en": "Joint parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "Figure-rise Effect 台座",
+				"en": "Figure-rise Effect pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "プラスチックシール",
+				"en": "Plastic Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5017.jpg",
+				"src": "https://bandai-hobby.net/images/153_5017_s_02kdw6immewxdfc07poixai4ng3f.jpg",
 				"path": "/images/items/01_4093/153_5017.jpg",
 				"hash": "a6ed3e1fa705f0627e51213d2d27b331"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5017.jpg",
+				"src": "https://bandai-hobby.net/images/155_5017_s_st8irrmx2nu3d29b96m01lzxszwh.jpg",
 				"path": "/images/items/01_4093/155_5017.jpg",
 				"hash": "ff45b014df33850a37b1a3af46addf56"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5017.jpg",
+				"src": "https://bandai-hobby.net/images/156_5017_s_6yqwoiaa2qz0zslk9vwc32mtvlvc.jpg",
 				"path": "/images/items/01_4093/156_5017.jpg",
 				"hash": "9ad0217da1f9d6d5e122051207dafff8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5017.jpg",
+				"src": "https://bandai-hobby.net/images/157_5017_s_7yo9vvhdd904w0l2wg103ksldths.jpg",
 				"path": "/images/items/01_4093/157_5017.jpg",
 				"hash": "2b9ef3bb5afc92391683e42910a5467b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5017.jpg",
+				"src": "https://bandai-hobby.net/images/158_5017_s_d9ci4vd54hf1yf7131xns92sq95s.jpg",
 				"path": "/images/items/01_4093/158_5017.jpg",
 				"hash": "82d27f21ae18a90a7968a3df9e1e79dc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5017.jpg",
+				"src": "https://bandai-hobby.net/images/159_5017_s_r4u06lrbjurxck4m1v4qyydj5gsv.jpg",
 				"path": "/images/items/01_4093/159_5017.jpg",
 				"hash": "76712c3c7dbf9824c5ebf438780db885"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5017.jpg",
+				"src": "https://bandai-hobby.net/images/189_5017_s_5uaiaf2zjom97gpp1h7o41l7bikk.jpg",
 				"path": "/images/items/01_4093/189_5017.jpg",
 				"hash": "f494aae3fedc4dfb526e7d2c230d697f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5017.jpg",
+				"src": "https://bandai-hobby.net/images/190_5017_s_37vpfbpk0jeqpv9gt7363cnm938o.jpg",
 				"path": "/images/items/01_4093/190_5017.jpg",
 				"hash": "6f742b736602bda8f46ee4bd1c7e41ff"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5017.jpg",
+				"src": "https://bandai-hobby.net/images/191_5017_s_qpzw32ccx99g055r5y0chjcnfrlh.jpg",
 				"path": "/images/items/01_4093/191_5017.jpg",
 				"hash": "06815cb6e9799a03d3dc14d1db5d4ac1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5017.jpg",
+				"src": "https://bandai-hobby.net/images/192_5017_s_zp5d8a24pzx6oe1glar02y6xopop.jpg",
 				"path": "/images/items/01_4093/192_5017.jpg",
 				"hash": "00b2289204ce929eda21744aa3a513bc"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4093/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["rider"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5451", "item-1000215369", "01_5276", "01_5175"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4093/"
 }

@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 シュヴァルベカスタム(シクラーゼ機)",
 		"en": "HG 1/144 Schwalbe Custom (Cyclase machine)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6773",
+			"url": "https://bandai-hobby.net/item/01_6773/",
+			"ja": "HG 1/144 ガンダムザガン"
+		},
+		{
+			"id": "01_6763",
+			"url": "https://bandai-hobby.net/item/01_6763/",
+			"ja": "HG 1/144 モンキーロディ(598機)/モンキークラブロディ"
+		},
+		{
+			"id": "01_4103",
+			"url": "https://bandai-hobby.net/item/01_4103/",
+			"ja": "HG 1/144 ジークルーネ"
+		},
+		{
+			"id": "01_4240",
+			"url": "https://bandai-hobby.net/item/01_4240/",
+			"ja": "HG 1/144 ガンダム端白星[クリアカラー]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,73 +62,77 @@
 		"day": 21
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム 鉄血のオルフェンズ ウルズハント』より、シクラーゼが搭乗する「シュヴァルベ・カスタム」が登場！",
-			"■リアスカートに組み付いているバーニアブロックが２箇所で回転。バーニアブロックは着脱可能。",
-			"■専用ハンドガン、シールドなど特徴的な武装が付属。"
+			"• リアスカートに組み付いているバーニアブロックが２箇所で回転。バーニアブロックは着脱可能。",
+			"• 専用ハンドガン、シールドなど特徴的な武装が付属。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam: Iron-Blooded Orphans Uruz Hunt \" comes the \" Schwalbe Custom\" piloted by Cyclase!",
+			"From \"Mobile Suit Gundam: Iron-Blooded Orphans Uruz Hunt\" comes the \"Schwalbe Custom\" piloted by Cyclase!",
 			"• The vernier block attached to the rear skirt rotates in two places. Vernier block is removable.",
 			"• Comes with unique weapons such as a special handgun and Seal."
 		]
 	},
-	"accessories": {
-		"ja": ["専用ハンドガン×2", "シールド×1", "シール×1"],
-		"en": ["Dedicated handgun x 2", "Seal × 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ハンドガン",
+				"en": "dedicated handgun"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5018.jpg",
+				"src": "https://bandai-hobby.net/images/153_5018_s_k8b9jnbvnic5g2tt9saihbx06rim.jpg",
 				"path": "/images/items/01_4094/153_5018.jpg",
 				"hash": "b57fab159635c4f8496a742e745420b3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5018.jpg",
+				"src": "https://bandai-hobby.net/images/155_5018_s_bzx8s3alxa7pwlwty61dacplb74s.jpg",
 				"path": "/images/items/01_4094/155_5018.jpg",
 				"hash": "45e0fdeaacd2236004c6392df0108969"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5018.jpg",
+				"src": "https://bandai-hobby.net/images/156_5018_s_svig11f4wgqzj6qvhrkflxp48w96.jpg",
 				"path": "/images/items/01_4094/156_5018.jpg",
 				"hash": "3abb570c382e82440f1d30b7bdf6d5e1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5018.jpg",
+				"src": "https://bandai-hobby.net/images/157_5018_s_1w8xhmw4pjueqe72i9dn75jwlrpv.jpg",
 				"path": "/images/items/01_4094/157_5018.jpg",
 				"hash": "0af6d6fecaae166114dee5944b343b0d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5018.jpg",
+				"src": "https://bandai-hobby.net/images/158_5018_s_jf8wuix99fow1al4e1339y1ryz4j.jpg",
 				"path": "/images/items/01_4094/158_5018.jpg",
 				"hash": "828fe6d20c5d5f1c70a71d007bf848a3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5018.jpg",
+				"src": "https://bandai-hobby.net/images/159_5018_s_z3kw5c9667t8k86l4f94zzld6ysp.jpg",
 				"path": "/images/items/01_4094/159_5018.jpg",
 				"hash": "fec5b9cafa7a522ab7886780c9943143"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4094_inst_0.jpg",
-				"path": "/images/items/01_4094/01_4094_inst_0.jpg",
-				"hash": "a772ef9c8f13a5876c044e2233787c89"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4094_inst_1.jpg",
-				"path": "/images/items/01_4094/01_4094_inst_1.jpg",
-				"hash": "819fbb848f2de3bb0d78a89ab7d0fc96"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4094/",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4103", "01_4240", "01_4188", "01_4081"],
 	"manual": {
 		"id": "126",
 		"url": "https://manual.bandai-hobby.net/menus/detail/126/"

@@ -5,6 +5,55 @@
 		"ja": "ＨＧ 1/72 アメインゴーストＭｋ-ＩＩ",
 		"en": "HG 1/72 Amain Ghost Mk-II"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		},
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -17,7 +66,6 @@
 		"month": 4
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"復 活 の 黒 き A M A I M 、 襲 来 。",
@@ -66,7 +114,7 @@
 		],
 		"en": [
 			"The black AMAIM of resurrection is attacking.",
-			"From \"Kyoukai Senki \", the mysterious AMAIM \" Ghost \" enhanced machine \" Amain Ghost Mk-II\" is commercialized in the HG series.",
+			"From \"Kyoukai Senki\", the mysterious AMAIM \"Ghost\" enhanced machine \"Amain Ghost Mk-II\" is commercialized in the HG series.",
 			"The strengthened body shape, including the large symmetrical arms, is recreated with new molded parts.",
 			"The newly built sub-arm on the shoulder can be expanded. The cracking cable ejected from the arm is reproduced with a lead wire.",
 			"● Reproduce the jet-black mysterious AMAIM \"Ghost Mk-II\" aircraft shape.",
@@ -91,7 +139,7 @@
 			"Attached weapons: sub arm/cracking cable",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/72 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS/PVC",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -110,72 +158,74 @@
 			"・Product specifications are as of 202112. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["サブアーム", "クラッキングケーブル"],
-		"en": ["sub arm", "cracking cable"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "サブアーム",
+				"en": "sub arm"
+			}
+		},
+		{
+			"name": {
+				"ja": "クラッキングケーブル",
+				"en": "cracking cable"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5045.jpg",
+				"src": "https://bandai-hobby.net/images/153_5045_s_5crjqhhr9d1oeyw9qhqg5cp034cw.jpg",
 				"path": "/images/items/01_4117/153_5045.jpg",
 				"hash": "9f90d3bb280463ea2014353cbdb297ea"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5045.jpg",
+				"src": "https://bandai-hobby.net/images/155_5045_s_p9ds3mho58nzl7zuo3xk39zefyvs.jpg",
 				"path": "/images/items/01_4117/155_5045.jpg",
 				"hash": "f6cc78882cd9de34b1adfe5686a2a475"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5045.jpg",
+				"src": "https://bandai-hobby.net/images/156_5045_s_rjhutd36m5lt2z9rtu6bgu5n4jmq.jpg",
 				"path": "/images/items/01_4117/156_5045.jpg",
 				"hash": "b1f5049f7188f1a2c414e18309a4fa86"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5045.jpg",
+				"src": "https://bandai-hobby.net/images/157_5045_s_ko5r61h41g6elr6id1kigh5y17s3.jpg",
 				"path": "/images/items/01_4117/157_5045.jpg",
 				"hash": "3966fed3ab1400d94b625fdb779ea1e6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5045.jpg",
+				"src": "https://bandai-hobby.net/images/158_5045_s_xd7uwyq5hy2jm6riifqp17suk6lv.jpg",
 				"path": "/images/items/01_4117/158_5045.jpg",
 				"hash": "1f65793e39d0d10e3fdb87ad052203f9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5045.jpg",
+				"src": "https://bandai-hobby.net/images/159_5045_s_iwg44o675lioud42e2y8iishxxw7.jpg",
 				"path": "/images/items/01_4117/159_5045.jpg",
 				"hash": "74112ac9babbe01872ded48aa7ddbf08"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5045.jpg",
+				"src": "https://bandai-hobby.net/images/189_5045_s_itp5t2v98j67v69b5frly8qc9wlh.jpg",
 				"path": "/images/items/01_4117/189_5045.jpg",
 				"hash": "93227699b19ea5fdc988b66975a062fd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5045.jpg",
+				"src": "https://bandai-hobby.net/images/190_5045_s_ku7zu6y2ed5vn6pntgi4jza3eeb7.jpg",
 				"path": "/images/items/01_4117/190_5045.jpg",
 				"hash": "80022c76dcd442d3052a8e1fb2cd1f44"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5045.jpg",
+				"src": "https://bandai-hobby.net/images/191_5045_s_thhp6f76k8zifct4jwq3e9nmg2d9.jpg",
 				"path": "/images/items/01_4117/191_5045.jpg",
 				"hash": "8ca01fac3b53c37d09c9dca1e5e7430a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5045.jpg",
+				"src": "https://bandai-hobby.net/images/192_5045_s_tblxxtiimdj52er7y37ri5m4eeot.jpg",
 				"path": "/images/items/01_4117/192_5045.jpg",
 				"hash": "4c4f926dc1f3a55ff0328b67ada50197"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4117/",
-	"brandIds": ["pb_charapla", "hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4117/"
 }

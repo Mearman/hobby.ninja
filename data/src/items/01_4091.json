@@ -2,9 +2,51 @@
 	"id": "01_4091",
 	"type": "item",
 	"name": {
-		"ja": "Figure-rise Standard ULTRAMAN SUIT TARO -ACTION-",
-		"en": "Figure-rise Standard ULTRAMAN SUIT TARO -ACTION-"
+		"ja": "Figure-rise Standard ULTRAMAN SUIT TARO -ACTION-"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "ultraman",
+			"url": "https://bandai-hobby.net/series/ultraman/",
+			"ja": "ウルトラマン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5371",
+			"url": "https://bandai-hobby.net/item/01_5371/",
+			"ja": "Figure-rise Standard ウルトラマンティガ マルチタイプ"
+		},
+		{
+			"id": "01_5198",
+			"url": "https://bandai-hobby.net/item/01_5198/",
+			"ja": "Figure-rise Standard ウルトラマンジード プリミティブ"
+		},
+		{
+			"id": "01_5096",
+			"url": "https://bandai-hobby.net/item/01_5096/",
+			"ja": "Figure-rise Standard ULTRAMAN SUIT JACK -ACTION-"
+		},
+		{
+			"id": "01_5046",
+			"url": "https://bandai-hobby.net/item/01_5046/",
+			"ja": "Figure-rise Standard ウルトラマンブレーザー"
+		}
+	],
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -22,13 +64,13 @@
 		"ja": [
 			"コミック「ULTRAMAN」より、「ULTRAMAN SUIT TARO」が「-ACTION-」仕様で登場！",
 			"2022年4月より配信予定のアニメシーズン2での活躍も期待されています。",
-			"■複数のボールジョイントを胸部と腰部に設けることで、前傾への可動域を大きく確保。躍動感のあるポージングを楽しめる。",
-			"■炎をイメージしたエフェクトパーツが付属。手首、頭部から炎が噴射している特徴的な姿をエフェクトパーツにて再現できる。",
-			"■腹部パーツは可動重視タイプと別売りのLED装着タイプの２タイプから選択可能。",
-			"■プラモデルオリジナル武器「スペシウムランサー」が付属。"
+			"• 複数のボールジョイントを胸部と腰部に設けることで、前傾への可動域を大きく確保。躍動感のあるポージングを楽しめる。",
+			"• 炎をイメージしたエフェクトパーツが付属。手首、頭部から炎が噴射している特徴的な姿をエフェクトパーツにて再現できる。",
+			"• 腹部パーツは可動重視タイプと別売りのLED装着タイプの２タイプから選択可能。",
+			"• プラモデルオリジナル武器「スペシウムランサー」が付属。"
 		],
 		"en": [
-			"From the comic \"ULTRAMAN \", \" ULTRAMAN SUIT TARO \" is now available with \"-ACTION-\" specifications!",
+			"From the comic \"ULTRAMAN\", \"ULTRAMAN SUIT TARO\" is now available with \"-ACTION-\" specifications!",
 			"He is also expected to play an active role in the anime season 2 scheduled to be distributed from 20224.",
 			"• Multiple ball joints in the chest and lower back ensure a wide range of motion for forward leaning. Enjoy dynamic poses.",
 			"• Comes with effect parts that resemble flames. Effect parts can be used to recreate the characteristic figure with flames jetting from the wrists and head.",
@@ -36,81 +78,120 @@
 			"• Includes plastic model original weapon \"Specium Lancer\"."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"スペシウムランサー×1",
-			"炎エフェクトパーツ×2種",
-			"炎エフェクト用ジョイントパーツ×1式",
-			"LED内蔵用パーツ×1",
-			"ハンドパーツ　握り手（左右）、表情手（左右）、武器持ち手（右）",
-			"Figure-rise Effect台座×1",
-			"シール×1",
-			"マーキングシール×1"
-		],
-		"en": [
-			"Specium Lancer x1",
-			"Flame effect parts x 2 types",
-			"Joint parts for flame effect x 1 set",
-			"Built-in LED parts x 1",
-			"Hand parts Gripping hands (left and right), expression hands (left and right), weapon holders (right)",
-			"Figure-rise Effect pedestal x 1",
-			"Seal×1",
-			"MarkingSeal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "スペシウムランサー",
+				"en": "specium lancer"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "炎エフェクトパーツ",
+				"en": "flame effect parts"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "炎エフェクト用ジョイントパーツ",
+				"en": "Joint parts for flame effects"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "LED内蔵用パーツ",
+				"en": "Parts for built-in LED"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ　握り手（左右）、表情手（左右）、武器持ち手（右）",
+				"en": "Hand parts Gripping hands (left and right), expression hands (left and right), weapon holders (right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "Figure-rise Effect台座",
+				"en": "Figure-rise Effect pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5015.jpg",
+				"src": "https://bandai-hobby.net/images/153_5015_s_qlpwgrmzs2mjg80c7w6aujfi6cuz.jpg",
 				"path": "/images/items/01_4091/153_5015.jpg",
 				"hash": "96f643d88e9ed41edb17cd42d82ebcf0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5015.jpg",
+				"src": "https://bandai-hobby.net/images/155_5015_s_6fjrfjqm23a7yix9ppa6ab46q8od.jpg",
 				"path": "/images/items/01_4091/155_5015.jpg",
 				"hash": "f5b1c6fb5031ec1803b13937f6198c71"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5015.jpg",
+				"src": "https://bandai-hobby.net/images/156_5015_s_h72jcovu356qx1epn1749jgkhi41.jpg",
 				"path": "/images/items/01_4091/156_5015.jpg",
 				"hash": "1f909f76aa4d215f960caf870be3b4f8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5015.jpg",
+				"src": "https://bandai-hobby.net/images/157_5015_s_yfg3elfwfod097z5j11j9nwpsfk3.jpg",
 				"path": "/images/items/01_4091/157_5015.jpg",
 				"hash": "f62d130dd117b55df6eb518994ed9d86"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5015.jpg",
+				"src": "https://bandai-hobby.net/images/158_5015_s_zoc4kanvhztigmn6ftmpnm9h3gps.jpg",
 				"path": "/images/items/01_4091/158_5015.jpg",
 				"hash": "82eab6b4f320ce06e19bb70b8b28d5d8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5015.jpg",
+				"src": "https://bandai-hobby.net/images/159_5015_s_mcfbzp2qjanti0idsnw1smvpmiij.jpg",
 				"path": "/images/items/01_4091/159_5015.jpg",
 				"hash": "ebf7b1fda4e41e6202b445dc1aa4b7ac"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5015.jpg",
+				"src": "https://bandai-hobby.net/images/189_5015_s_2mnxs3vzrurtjdtq2nrjzums0yse.jpg",
 				"path": "/images/items/01_4091/189_5015.jpg",
 				"hash": "844bb41531708dc5deac268270e9dbf8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5015.jpg",
+				"src": "https://bandai-hobby.net/images/190_5015_s_640ox5uucg3jndsescjkq189zmja.jpg",
 				"path": "/images/items/01_4091/190_5015.jpg",
 				"hash": "ffcbde1ea08ccb4471f326b6e503de3d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5015.jpg",
+				"src": "https://bandai-hobby.net/images/191_5015_s_it8wzradrhr6fbscsnflcdd3ebrw.jpg",
 				"path": "/images/items/01_4091/191_5015.jpg",
 				"hash": "699785df72ab4366528b7400b0dedf10"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4091/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["ultraman"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5371", "01_5198", "01_5096", "01_5046"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4091/"
 }

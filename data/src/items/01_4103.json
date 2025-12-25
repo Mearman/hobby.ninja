@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ジークルーネ",
-		"en": "HG 1/144 SIGRÚN"
+		"en": "HG 1/144 Gclune"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6773",
+			"url": "https://bandai-hobby.net/item/01_6773/",
+			"ja": "HG 1/144 ガンダムザガン"
+		},
+		{
+			"id": "01_6763",
+			"url": "https://bandai-hobby.net/item/01_6763/",
+			"ja": "HG 1/144 モンキーロディ(598機)/モンキークラブロディ"
+		},
+		{
+			"id": "01_4240",
+			"url": "https://bandai-hobby.net/item/01_4240/",
+			"ja": "HG 1/144 ガンダム端白星[クリアカラー]"
+		},
+		{
+			"id": "01_4188",
+			"url": "https://bandai-hobby.net/item/01_4188/",
+			"ja": "HG 1/144 ガンダムマルコシアス[アイアンブラッドコーティング]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,13 +62,12 @@
 		"day": 18
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム 鉄血のオルフェンズG』より、ゲームオリジナルの機体が登場！",
-			"■ヴァルキュリア・フレーム機体のジークルーネを立体化。",
-			"■ヴァルキュリアレイピア、ヴァルキュリアラウンドシールドといった専用武装が付属。",
-			"■レイピア用の持ち手や平手などのハンドパーツが付属。"
+			"• ヴァルキュリア・フレーム機体のジークルーネを立体化。",
+			"• ヴァルキュリアレイピア、ヴァルキュリアラウンドシールドといった専用武装が付属。",
+			"• レイピア用の持ち手や平手などのハンドパーツが付属。"
 		],
 		"en": [
 			"From \"Mobile Suit Gundam Iron-Blooded Orphans G\", a game original aircraft appears!",
@@ -33,71 +76,82 @@
 			"• Hand parts such as a rapier handle and open hand are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ヴァルキュリアレイピア×1",
-			"ヴァルキュリアラウンドシールド×1",
-			"ハンドパーツ×1式",
-			"リード線×１式",
-			"シール×1"
-		],
-		"en": ["Valkyria Rapier x1", "Valkyria Round Seal × 1", "Hand parts x 1 set", "Lead wire x 1 set", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヴァルキュリアレイピア",
+				"en": "valkyria rapier"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ヴァルキュリアラウンドシールド",
+				"en": "Valkyrie Round Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "リード線×１式",
+				"en": "Lead wire x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5031.jpg",
+				"src": "https://bandai-hobby.net/images/153_5031_s_n9i6hsw8zoosb8fm1vmlyt88s7kl.jpg",
 				"path": "/images/items/01_4103/153_5031.jpg",
 				"hash": "95f5950c8e5489d77dfb10bde0d31df6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5031.jpg",
+				"src": "https://bandai-hobby.net/images/155_5031_s_4ntcl67v120p8alproe9w5shrqdp.jpg",
 				"path": "/images/items/01_4103/155_5031.jpg",
 				"hash": "238eee110fccd7a97d0c4d6f86a2407c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5031.jpg",
+				"src": "https://bandai-hobby.net/images/156_5031_s_anul8mnkyqtjfdfrywq0kbg0wp6g.jpg",
 				"path": "/images/items/01_4103/156_5031.jpg",
 				"hash": "554d60fc975f92b057f2edd1663a077c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5031.jpg",
+				"src": "https://bandai-hobby.net/images/157_5031_s_w57nou8jg93hvfefow4j77klutxr.jpg",
 				"path": "/images/items/01_4103/157_5031.jpg",
 				"hash": "f90a64034e8147ae09889dc1cd935f65"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5031.jpg",
+				"src": "https://bandai-hobby.net/images/158_5031_s_hpckq6w55hhi90jxlmc3aaf3502d.jpg",
 				"path": "/images/items/01_4103/158_5031.jpg",
 				"hash": "5bef5c28d189ba7ec69b37cbfa0bf8ad"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5031.jpg",
+				"src": "https://bandai-hobby.net/images/159_5031_s_4fzg3aux4ch34ou99tddazehaw63.jpg",
 				"path": "/images/items/01_4103/159_5031.jpg",
 				"hash": "21ff68ede26d6451b49322a89247e82c"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4103_inst_0.jpg",
-				"path": "/images/items/01_4103/01_4103_inst_0.jpg",
-				"hash": "55812dd94b80d4437706810a44c66a33"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4103_inst_1.jpg",
-				"path": "/images/items/01_4103/01_4103_inst_1.jpg",
-				"hash": "819fbb848f2de3bb0d78a89ab7d0fc96"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4103_inst_2.jpg",
-				"path": "/images/items/01_4103/01_4103_inst_2.jpg",
-				"hash": "80b1cbffc43131ee4284ade04a007170"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4103/",
-	"brandIds": ["hg"],
-	"seriesIds": ["tekketsu"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6773", "01_6763", "01_4240", "01_4188"],
 	"manual": {
 		"id": "139",
 		"url": "https://manual.bandai-hobby.net/menus/detail/139/"

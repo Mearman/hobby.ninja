@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard 仮面ライダーBLACK",
-		"en": "Figure-rise Standard MASKED RIDER BLACK"
+		"en": "Figure-rise Standard Kamen Rider BLACK"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "rider",
+			"url": "https://bandai-hobby.net/series/rider/",
+			"ja": "仮面ライダーシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5451",
+			"url": "https://bandai-hobby.net/item/01_5451/",
+			"ja": "Figure-rise Standard 仮面ライダーゼロワン ライジングホッパー"
+		},
+		{
+			"id": "item-1000215369",
+			"url": "https://p-bandai.jp/item/item-1000215369/",
+			"ja": "Figure-rise Standard 仮面ライダーファイズ ブラスターフォーム"
+		},
+		{
+			"id": "01_5276",
+			"url": "https://bandai-hobby.net/item/01_5276/",
+			"ja": "Figure-rise Standard 仮面ライダークウガ アルティメットフォーム"
+		},
+		{
+			"id": "01_5175",
+			"url": "https://bandai-hobby.net/item/01_5175/",
+			"ja": "Figure-rise Standard 仮面ライダーキバ キバフォーム"
+		}
+	],
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -25,35 +68,46 @@
 			"• 特徴的な「赤」「黄」のラインと胸のパーツなどのディテールはパーツ分割により表現。",
 			"• ツヤありの鏡面仕上げによる光沢表現や、シルバー部分のエクストラフィニッシュなど、パーツごとの質感の違いを徹底追及。",
 			"• さまざまなアクションシーンに対応できるよう、表情豊かなハンドパーツ左右各５種とジョイントパーツが付属。"
-		],
-		"en": [
-			"\"Kamen Rider BLACK\" is now available in Figure-rise Standard!",
-			"• The knee joint can move until the calf and thigh touch. A powerful action pose inspired by the movie has been decided.",
-			"• Details such as the characteristic \"red \" and \" yellow\" lines and chest parts are expressed by dividing the parts.",
-			"• We have thoroughly investigated the differences in texture of each part, such as the glossy mirror finish and extra finish on the silver parts.",
-			"• Comes with 5 types of expressive hand parts (left and right) and joint parts to accommodate various action scenes."
 		]
 	},
-	"accessories": {
-		"ja": ["ハンドパーツ×1式", "Figure-rise Effect 台座×1", "ジョイントパーツ×1式", "シール×1"],
-		"en": ["Hand parts x 1 set", "Figure-rise Effect pedestal x 1", "Joint parts x 1 set", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハンドパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "Figure-rise Effect 台座"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175026_1.jpg",
 				"path": "/images/items/01_4114/1000175026_1.jpg",
 				"hash": "d8fef421b1764919e030f9f17c1cef7a"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175026_10.jpg",
-				"path": "/images/items/01_4114/1000175026_10.jpg",
-				"hash": "81e44e7d397810e836a20330f06ae625"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175026_11.jpg",
-				"path": "/images/items/01_4114/1000175026_11.jpg",
-				"hash": "d583c725dc2a32f798532bce0f002b67"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175026_2.jpg",
@@ -94,13 +148,19 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175026_9.jpg",
 				"path": "/images/items/01_4114/1000175026_9.jpg",
 				"hash": "61c20c32244c4bac5cee053e5f1c01eb"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175026_10.jpg",
+				"path": "/images/items/01_4114/1000175026_10.jpg",
+				"hash": "81e44e7d397810e836a20330f06ae625"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175026_11.jpg",
+				"path": "/images/items/01_4114/1000175026_11.jpg",
+				"hash": "d583c725dc2a32f798532bce0f002b67"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4114/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["rider"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5451", "item-1000215369", "01_5276", "01_5175"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4114/"
 }

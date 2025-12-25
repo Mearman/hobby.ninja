@@ -5,6 +5,49 @@
 		"ja": "HG ゲシュペンスト",
 		"en": "HG Gespenst"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "superrobot_og",
+			"url": "https://bandai-hobby.net/series/superrobot_og/",
+			"ja": "スーパーロボット大戦OG"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5578",
+			"url": "https://bandai-hobby.net/item/01_5578/",
+			"ja": "HG アシュセイヴァー"
+		},
+		{
+			"id": "01_5491",
+			"url": "https://bandai-hobby.net/item/01_5491/",
+			"ja": "HG ヴァイスリッター"
+		},
+		{
+			"id": "item-1000214961",
+			"url": "https://p-bandai.jp/item/item-1000214961/",
+			"ja": "ＨＧ ヒュッケバインＭｋ－ＩＩトロンベ"
+		},
+		{
+			"id": "01_5369",
+			"url": "https://bandai-hobby.net/item/01_5369/",
+			"ja": "HG ガンレオン"
+		}
+	],
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -21,84 +64,104 @@
 	"description": {
 		"ja": [
 			"『スーパーロボット大戦OG』より、パーソナルトルーパーの元祖「ゲシュペンスト」がHGシリーズに登場！",
-			"■腕部、股関節、フロントアーマーに可動ギミックを搭載。可動範囲が拡大し、劇中イメージの大胆なポージングが可能。",
-			"■腹部のスライドギミックにより内部のパーツが左右に動き、隙間が見えない仕様。",
-			"■PETシートでエフェクトを再現した「スラッシュ・リッパー」の他に「ニュートロンビーム」「プラズマカッター」など豊富な武装が付属。",
-			"■ジョイントパーツを使用することで、スプリットミサイルやスラッシュ・リッパーのスタビライザーへの着脱が可能。",
-			"■ディスプレイ用の台座が付属。"
+			"• 腕部、股関節、フロントアーマーに可動ギミックを搭載。可動範囲が拡大し、劇中イメージの大胆なポージングが可能。",
+			"• 腹部のスライドギミックにより内部のパーツが左右に動き、隙間が見えない仕様。",
+			"• PETシートでエフェクトを再現した「スラッシュ・リッパー」の他に「ニュートロンビーム」「プラズマカッター」など豊富な武装が付属。",
+			"• ジョイントパーツを使用することで、スプリットミサイルやスラッシュ・リッパーのスタビライザーへの着脱が可能。",
+			"• ディスプレイ用の台座が付属。"
 		],
 		"en": [
-			"From \"Super Robot Wars OG \", the original personal trooper \" Gespenst\" appears in the HG series!",
+			"From \"Super Robot Wars OG\", the original personal trooper \"Gespenst\" appears in the HG series!",
 			"• Equipped with movable gimmicks on the arms, hip joints, and front armor. The range of motion has been expanded, allowing bold poses similar to those in the play.",
 			"• The internal parts move left and right due to the abdominal slide gimmick, making it impossible to see any gaps.",
-			"• In addition to the \"Slash Ripper \" whose effects are recreated using PET sheets, it comes with a wealth of weapons such as the \" Neutron Beam \" and \" Plasma Cutter\".",
+			"• In addition to the \"Slash Ripper\" whose effects are recreated using PET sheets, it comes with a wealth of weapons such as the \"Neutron Beam\" and \"Plasma Cutter\".",
 			"• By using joint parts, it is possible to attach and detach split missiles and slash rippers to the stabilizer.",
 			"• Includes display pedestal."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ハンドパーツ×１式",
-			"ニュートロンビーム×１",
-			"スプリットミサイル×１式",
-			"プラズマカッターエフェクト×１式",
-			"スラッシュ・リッパーエフェクトPETシート×１式",
-			"ディスプレイベース×１式",
-			"シール×１"
-		],
-		"en": [
-			"Hand parts x 1 set",
-			"Neutron beam x1",
-			"Split missile x 1",
-			"Plasma cutter effect x 1 set",
-			"Slash ripper effect PET sheet x 1 set",
-			"Display base x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ニュートロンビーム×１",
+				"en": "Neutron beam x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "スプリットミサイル×１式",
+				"en": "Split missile x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "プラズマカッターエフェクト×１式",
+				"en": "Plasma cutter effect x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "スラッシュ・リッパーエフェクトPETシート×１式",
+				"en": "Slash ripper effect PET sheet x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース×１式",
+				"en": "Display base x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5024.jpg",
+				"src": "https://bandai-hobby.net/images/153_5024_s_8u8ki7un1chva6utfd42sqywx58q.jpg",
 				"path": "/images/items/01_4100/153_5024.jpg",
 				"hash": "fa76a9f79a0da4935b30f7c977c34a9f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5024.jpg",
+				"src": "https://bandai-hobby.net/images/155_5024_s_r6080wd8b9jx56gljnr6hkrushp6.jpg",
 				"path": "/images/items/01_4100/155_5024.jpg",
 				"hash": "41263de0b007ef0a3ae365a10104207c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5024.jpg",
+				"src": "https://bandai-hobby.net/images/156_5024_s_hn3tsbgwuk4y1jtu2c7ok2wshb05.jpg",
 				"path": "/images/items/01_4100/156_5024.jpg",
 				"hash": "ba1969190c1d5b1e7a59ca6c3c5dcd0d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5024.jpg",
+				"src": "https://bandai-hobby.net/images/157_5024_s_ylmhpukmot34d8wscofymau4r59o.jpg",
 				"path": "/images/items/01_4100/157_5024.jpg",
 				"hash": "7c0501d8252c4bbfeeab07c58188fb7e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5024.jpg",
+				"src": "https://bandai-hobby.net/images/158_5024_s_6b0mn48ut9vuudfgr1251x9w5d35.jpg",
 				"path": "/images/items/01_4100/158_5024.jpg",
 				"hash": "8e82d18469f4c0dcc45dc95c12d0bb70"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5024.jpg",
+				"src": "https://bandai-hobby.net/images/159_5024_s_huuigjxremhr2wssg33zubmfimia.jpg",
 				"path": "/images/items/01_4100/159_5024.jpg",
 				"hash": "5414feae43890905831ed967c0340103"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5024.jpg",
+				"src": "https://bandai-hobby.net/images/189_5024_s_cxjg5ve4q014libppbipyygftf38.jpg",
 				"path": "/images/items/01_4100/189_5024.jpg",
 				"hash": "f8db013550c1b8ce374f49b2d6f077e3"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4100/",
-	"brandIds": ["hg"],
-	"seriesIds": ["superrobot_og"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5578", "01_5491", "item-1000214961", "01_5369"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4100/"
 }

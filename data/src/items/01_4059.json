@@ -5,6 +5,60 @@
 		"ja": "HGBD:R 1/144 エルドラドートレス",
 		"en": "HGBD:R 1/144 Eldoradotress"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers-rerise",
+			"url": "https://bandai-hobby.net/series/builddivers-rerise/",
+			"ja": "ガンダムビルドダイバーズ Re:RISE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5054",
+			"url": "https://bandai-hobby.net/item/01_5054/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム＆コアガンダムII コアチェンジセット(リアルタイプカラー)"
+		},
+		{
+			"id": "01_3562",
+			"url": "https://bandai-hobby.net/item/01_3562/",
+			"ja": "HG 1/144 ユーラヴェンガンダム[ダイブイントゥディメンションクリア]"
+		},
+		{
+			"id": "01_3565",
+			"url": "https://bandai-hobby.net/item/01_3565/",
+			"ja": "HG 1/144 ガンダムベース限定 コアガンダム&コアガンダムII&アルスコアガンダム[ロービジビリティVer.]"
+		},
+		{
+			"id": "01_3291",
+			"url": "https://bandai-hobby.net/item/01_3291/",
+			"ja": "HGBD:R 1/144 コアガンダムII(G-3カラー)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1430,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 2
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"規 格 外 の パ ワ ー を 秘 め た",
@@ -57,7 +110,7 @@
 			"A custom aircraft built based on Dotress.",
 			"The characteristic large armed multiple barrel rifle is equipped with an expansion gimmick and can reproduce the state of maximum beam release.",
 			"● Three-dimensional with completely new modeling",
-			"The Eldorado Torres, which was built based on the mass-produced Dotorres that appears in \"Mobile New Century Gundam X\", is now three-dimensional with a completely new model.",
+			"The Eldorado Torres, which was built based on the mass-produced Dotorres that appears in \"Mobile New Century GundamX\", has been made into a three-dimensional model with a completely new model.",
 			"The color division of gray shades is reproduced with molded colors. The purple part of the head, seal, and multiple barrel rifle are reproduced with foil seals.",
 			"● Thorough reproduction of multiple barrel rifle",
 			"The characteristic large armed multiple barrel rifle is equipped with a movable gimmick and thoroughly reproduced.",
@@ -82,59 +135,69 @@
 			"- Product specifications are scheduled as of 201911. Please note that there may be changes."
 		]
 	},
-	"accessories": {
-		"ja": ["マルチプルバレルライフル", "シールド"],
-		"en": ["multiple barrel rifle", "Seal de"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "マルチプルバレルライフル",
+				"en": "multiple barrel rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4988.jpg",
+				"src": "https://bandai-hobby.net/images/153_4988_s_0bo2aqgrt9y7t8tkvpznyxwul2ws.jpg",
 				"path": "/images/items/01_4059/153_4988.jpg",
 				"hash": "7f71f7d7235e81afb93534e926a8be3d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4988.jpg",
+				"src": "https://bandai-hobby.net/images/155_4988_s_fqwrmykg4spujo2kj530m7p89b0b.jpg",
 				"path": "/images/items/01_4059/155_4988.jpg",
 				"hash": "365df8fcdc31a2071e8cc3439d8bba77"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4988.jpg",
+				"src": "https://bandai-hobby.net/images/156_4988_s_ngylveenyp2hyfmbpf3wxegvreeh.jpg",
 				"path": "/images/items/01_4059/156_4988.jpg",
 				"hash": "5b84510ab889b8a388cc037a4a86f9e3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4988.jpg",
+				"src": "https://bandai-hobby.net/images/157_4988_s_4i8ihf6bmn6mx03azushc8yadcfm.jpg",
 				"path": "/images/items/01_4059/157_4988.jpg",
 				"hash": "8e6c001d27913d832bf963b5f62ad92e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4988.jpg",
+				"src": "https://bandai-hobby.net/images/158_4988_s_zchz9wdcfqzy6jniu54ipz99c92u.jpg",
 				"path": "/images/items/01_4059/158_4988.jpg",
 				"hash": "c1a1533597e2b131292f094fd9f5f760"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4988.jpg",
+				"src": "https://bandai-hobby.net/images/159_4988_s_lph675ou4dcld5dxh95cyapxwzi5.jpg",
 				"path": "/images/items/01_4059/159_4988.jpg",
 				"hash": "c2cc165a9fd3f1410dce8c2bafc9db71"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4988.jpg",
+				"src": "https://bandai-hobby.net/images/189_4988_s_o0ps8jtmbnc18s1rol4xuv24pfnn.jpg",
 				"path": "/images/items/01_4059/189_4988.jpg",
 				"hash": "01fae36e4ff95fcffd7bfd4b185c1862"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4988.jpg",
+				"src": "https://bandai-hobby.net/images/190_4988_s_3440zj0o994xybihd8ysuwe9y8ju.jpg",
 				"path": "/images/items/01_4059/190_4988.jpg",
 				"hash": "023c397e0ea8cbc29cdc2d7c498abd79"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4988.jpg",
+				"src": "https://bandai-hobby.net/images/191_4988_s_s5urm03q1ib1f7iobvt7or1eksuf.jpg",
 				"path": "/images/items/01_4059/191_4988.jpg",
 				"hash": "c2013a11874d2b763189194922d951f9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4988.jpg",
+				"src": "https://bandai-hobby.net/images/192_4988_s_29ebt95oflwyp5gdq2uxyqunwv04.jpg",
 				"path": "/images/items/01_4059/192_4988.jpg",
 				"hash": "019bd9129f248c42950ef6e8cdd7dbf8"
 			}
@@ -142,14 +205,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4059/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["builddivers-rerise"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5054", "01_3562", "01_3565", "01_3291"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2569",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2569/"

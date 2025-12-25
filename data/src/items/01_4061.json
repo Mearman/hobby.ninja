@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ジム・コマンド(宇宙仕様)",
 		"en": "HGUC 1/144 Jim Command (Space specification)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "g-0080",
+			"url": "https://bandai-hobby.net/series/g-0080/",
+			"ja": "機動戦士ガンダム0080 ポケットの中の戦争"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5429",
+			"url": "https://bandai-hobby.net/item/01_5429/",
+			"ja": "HG ガンダムベース限定 ドラケンE"
+		},
+		{
+			"id": "01_5768",
+			"url": "https://bandai-hobby.net/item/01_5768/",
+			"ja": "HGUC 1/144 ジム・スナイパーII"
+		},
+		{
+			"id": "01_2436",
+			"url": "https://bandai-hobby.net/item/01_2436/",
+			"ja": "HGUC 1/144 リック・ドムII ライトグリーンバージョン"
+		},
+		{
+			"id": "01_1686",
+			"url": "https://bandai-hobby.net/item/01_1686/",
+			"ja": "HGUC 1/144 ケンプファー"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1210,
 		"currency": "JPY",
@@ -17,13 +66,12 @@
 		"month": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"「機動戦士ガンダム 0080」に登場する「ジムコマンド(宇宙仕様)」のHGUC仕様のプラモデル。ジムコマンド(コロニー仕様)とは異なるバックパックを搭載しています。専用ビームガンも追加で付属します。肘にABS関節を採用しており、デザインを崩さずに様々な可動を再現可能です。頭部カメラにはクリアパーツを使用しています。"
+			"「機動戦士ガンダム0080」に登場する「ジムコマンド(宇宙仕様)」のHGUC仕様のプラモデル。ジムコマンド(コロニー仕様)とは異なるバックパックを搭載しています。専用ビームガンも追加で付属します。肘にABS関節を採用しており、デザインを崩さずに様々な可動を再現可能です。頭部カメラにはクリアパーツを使用しています。"
 		],
 		"en": [
-			"HGUC specification plastic model of \"Gym Command (space specification)\" that appears in \" Mobile Suit Gundam 0080\". It is equipped with a backpack different from the Jim Command (colony specification). A special beam gun is also included. ABS joints are used in the elbows, allowing various movements to be made without compromising the design. Clear parts are used for the head camera."
+			"HGUC specification plastic model of \"Gym Command (space specification)\" that appears in \"Mobile Suit Gundam 0080\". It is equipped with a backpack different from the Jim Command (colony specification). A special beam gun is also included. ABS joints are used in the elbows, allowing various movements to be made without compromising the design. Clear parts are used for the head camera."
 		]
 	},
 	"images": {
@@ -67,10 +115,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4061/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["g-0080"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5429", "01_5768", "01_2436", "01_1686"],
 	"manual": {
 		"id": "245",
 		"url": "https://manual.bandai-hobby.net/menus/detail/245/"

@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard デュークモン",
-		"en": "Figure-rise Standard DUKEMON / GALLANTMON"
+		"en": "Figure-rise Standard Dukemon"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "digimon",
+			"url": "https://bandai-hobby.net/series/digimon/",
+			"ja": "デジモンシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4917",
+			"url": "https://bandai-hobby.net/item/01_4917/",
+			"ja": "Figure-rise Standard ブラックウォーグレイモン"
+		},
+		{
+			"id": "01_4302",
+			"url": "https://bandai-hobby.net/item/01_4302/",
+			"ja": "Figure-rise Standard エンジェモン"
+		},
+		{
+			"id": "01_3766",
+			"url": "https://bandai-hobby.net/item/01_3766/",
+			"ja": "Figure-rise Standard マグナモン"
+		},
+		{
+			"id": "01_3637",
+			"url": "https://bandai-hobby.net/item/01_3637/",
+			"ja": "Figure-rise Standard メタルガルルモン"
+		}
+	],
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -21,85 +64,99 @@
 	"description": {
 		"ja": [
 			"『デジモンテイマーズ』より聖騎士型デジモン「デュークモン」をアニメ設定に準拠したデザインとプロポーションで立体化！",
-			"■こだわりのパーツ分割で、組み立てるだけで満足のいく仕上がり。",
-			"■関節パーツが広範囲に可動し、劇中さながらのアクションポーズが再現可能。",
-			"■武装には銀色の成形色を使用し、劇中同様の質感を表現。",
-			"■細部にまでこだわり、「聖盾イージス」に刻まれたデジ文字も再現。",
-			"■ハンドパーツの他に「聖盾イージス」を保持するための台座も付属。",
-			"■デュークモンのマントには布素材を使用。"
-		],
-		"en": [
-			"From \"Digimon Tamers \", the Holy Knight Digimon \" Dukemon\" has been made into a three-dimensional figure with a design and proportions that conform to the anime settings!",
-			"• Carefully divided parts allow for a satisfying finish just by assembling.",
-			"• Joint parts can move over a wide range, allowing you to recreate action poses just like in the movie.",
-			"• The armament uses silver molding color to express the same texture as in the play.",
-			"• With attention to detail, the digital characters engraved on the \"Holy Shield Aegis\" are also reproduced.",
-			"• In addition to the hand parts, a pedestal to hold the \"Holy Shield Aegis\" is also included.",
-			"• Dukemon's cloak uses cloth material."
+			"• こだわりのパーツ分割で、組み立てるだけで満足のいく仕上がり。",
+			"• 関節パーツが広範囲に可動し、劇中さながらのアクションポーズが再現可能。",
+			"• 武装には銀色の成形色を使用し、劇中同様の質感を表現。",
+			"• 細部にまでこだわり、「聖盾イージス」に刻まれたデジ文字も再現。",
+			"• ハンドパーツの他に「聖盾イージス」を保持するための台座も付属。",
+			"• デュークモンのマントには布素材を使用。"
 		]
 	},
-	"accessories": {
-		"ja": ["聖槍グラム×1", "聖盾イージス×1", "聖盾イージス用台座×1", "マント×１", "シール×1"],
-		"en": ["Holy Spear Gram x1", "Holy Shield Aegis x1", "Holy shield Aegis pedestal x 1", "Cloak x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "聖槍グラム"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "聖盾イージス"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "聖盾イージス用台座"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マント×１"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5040.jpg",
+				"src": "https://bandai-hobby.net/images/153_5040_s_dweo4t6h0bae1ujahkjimjka6erm.jpg",
 				"path": "/images/items/01_4113/153_5040.jpg",
 				"hash": "39bc415ef3b15c2db27b52680888ce59"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5040.jpg",
+				"src": "https://bandai-hobby.net/images/155_5040_s_6hhsyzxajwf2ccxnacxes9s5y2th.jpg",
 				"path": "/images/items/01_4113/155_5040.jpg",
 				"hash": "3e3f9c4e5cd506fed8f6d4a3293fa98c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5040.jpg",
+				"src": "https://bandai-hobby.net/images/156_5040_s_tma4x56uckmprsix76woqfetfkc3.jpg",
 				"path": "/images/items/01_4113/156_5040.jpg",
 				"hash": "d5a560d9b8c0d696f9f9d78d25c66023"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5040.jpg",
+				"src": "https://bandai-hobby.net/images/157_5040_s_qgmnu5jo7l8d0lkb0abj09w5k1fl.jpg",
 				"path": "/images/items/01_4113/157_5040.jpg",
 				"hash": "7662c08ce7055581c0b5e8d0c8b59314"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5040.jpg",
+				"src": "https://bandai-hobby.net/images/158_5040_s_vjljhszkhrbbf71j7tdbv4hjealh.jpg",
 				"path": "/images/items/01_4113/158_5040.jpg",
 				"hash": "b9fb669adb1f5a42b0e8e693dde75c58"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5040.jpg",
+				"src": "https://bandai-hobby.net/images/159_5040_s_z12k8hzapjjtv3pojoynpdzqpfql.jpg",
 				"path": "/images/items/01_4113/159_5040.jpg",
 				"hash": "bcc2d483d942a0239c24ccf6ef709a84"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5040.jpg",
+				"src": "https://bandai-hobby.net/images/189_5040_s_tte8ndo65gr9i9ntjdipvt5z59et.jpg",
 				"path": "/images/items/01_4113/189_5040.jpg",
 				"hash": "fdae7cb82581f5a2a40e98c9e1c5aa61"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5040.jpg",
+				"src": "https://bandai-hobby.net/images/190_5040_s_4mmj7pueqgoxllowt3f028gm0qm5.jpg",
 				"path": "/images/items/01_4113/190_5040.jpg",
 				"hash": "a645b6c82401ceddb966f981729bf6a5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5040.jpg",
+				"src": "https://bandai-hobby.net/images/191_5040_s_itjwers87eg3c9t31cg8g1vo32fe.jpg",
 				"path": "/images/items/01_4113/191_5040.jpg",
 				"hash": "6f0a185339904b04565c14697aaa4e4d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5040.jpg",
+				"src": "https://bandai-hobby.net/images/192_5040_s_rsctq3yta9zujrfcpsetz9vlo4pd.jpg",
 				"path": "/images/items/01_4113/192_5040.jpg",
 				"hash": "4778cfc0cc3e70e8a04a5ea383b4a099"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4113/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["digimon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_4917", "01_4302", "01_3766", "01_3637"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4113/"
 }

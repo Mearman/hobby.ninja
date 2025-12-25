@@ -5,6 +5,65 @@
 		"ja": "ＨＧ 1/144 ゼータプラス（テスト機イメージカラー）",
 		"en": "HG 1/144 Zeta Plus (test machine image color)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "sentinel",
+			"url": "https://bandai-hobby.net/series/sentinel/",
+			"ja": "ガンダム・センチネル"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3408",
+			"url": "https://bandai-hobby.net/item/01_3408/",
+			"ja": "ＭＧ 1/100 ガンダムＭｋ-Ｖ"
+		},
+		{
+			"id": "item-1000143361",
+			"url": "https://p-bandai.jp/item/item-1000143361/",
+			"ja": "HGUC 1/144 ゼータプラスＣ１"
+		},
+		{
+			"id": "item-1000089611",
+			"url": "https://p-bandai.jp/item/item-1000089611",
+			"ja": "ＭＧ 1/100 Ｓガンダム ブースター・ユニット装着型"
+		},
+		{
+			"id": "01_1247",
+			"url": "https://bandai-hobby.net/item/01_1247/",
+			"ja": "HGUC 1/144 MSA-0011 Sガンダム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2970,
 		"currency": "JPY",
@@ -17,7 +76,6 @@
 		"month": 4
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－",
@@ -96,11 +154,6 @@
 				"hash": "c8c642d8fe5b8e49bdc6e55d17b126c8"
 			},
 			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000141702_10.jpg",
-				"path": "/images/items/01_4064/1000141702_10.jpg",
-				"hash": "c2fdaaf2c0c349c171652e5717bc8183"
-			},
-			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000141702_2.jpg",
 				"path": "/images/items/01_4064/1000141702_2.jpg",
 				"hash": "4de912e866691222ecd3f499ec9e8c3a"
@@ -139,17 +192,14 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000141702_9.jpg",
 				"path": "/images/items/01_4064/1000141702_9.jpg",
 				"hash": "7870776a0a07a0b3d794b2e2929e7ad9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000141702_10.jpg",
+				"path": "/images/items/01_4064/1000141702_10.jpg",
+				"hash": "c2fdaaf2c0c349c171652e5717bc8183"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4064/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla", "hguc"],
-	"seriesIds": ["sentinel"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_3408", "item-1000143361", "item-1000089611", "01_1247"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4064/"
 }

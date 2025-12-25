@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/72 メイレスレイキ改",
-		"en": "HG 1/72 MAILeS REIKI KAI"
+		"en": "HG 1/72 Meires Reiki Kai"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -18,102 +62,109 @@
 		"day": 18
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"KEN OKUYAMA DESIGNによる構造検証を経て、レイキが改修された機体「レイキ改」をHGシリーズで最速立体化。",
-			"■「境界戦機」第二部で紫々部シオンが搭乗する「レイキ改」。自律思考型AI ナユタを移植し元の機体であるレイキの飛行能力を大幅に上回る機体に進化した。",
-			"■リアスカートに装備されているウイングは折り畳み式で展開収納可能。各部スラスターも回転可動し、展開時には機体の全高を上回る大型のシルエットを形成。",
-			"■超熱振式薙刀改はスライドギミックを搭載。携行しやすい構造に改良されている。",
-			"■背部にはミサイルコンテナが付属。全方位に向けた攻撃が可能となっている。",
+			"• 「境界戦機」第二部で紫々部シオンが搭乗する「レイキ改」。自律思考型AI ナユタを移植し元の機体であるレイキの飛行能力を大幅に上回る機体に進化した。",
+			"• リアスカートに装備されているウイングは折り畳み式で展開収納可能。各部スラスターも回転可動し、展開時には機体の全高を上回る大型のシルエットを形成。",
+			"• 超熱振式薙刀改はスライドギミックを搭載。携行しやすい構造に改良されている。",
+			"• 背部にはミサイルコンテナが付属。全方位に向けた攻撃が可能となっている。",
 			"TVアニメ「境界戦機」第二部は４月開始！！第一部のエピソードはBANDAI SPIRITS 公式 YouTubeにて全話無料配信中！"
 		],
 		"en": [
 			"After structural verification by KEN OKUYAMA DESIGN, the Reiki modified aircraft \"Reiki Kai\" is the fastest three-dimensional version of the HG series.",
-			"• \"Reiki Kai \" piloted by Shion Shirabe in the second part of \" Kyoukai Senki\". By implanting the autonomous thinking AI Nayuta, it has evolved into a machine that greatly exceeds the flight capabilities of the original Reiki aircraft.",
+			"• \"Reiki Kai\" piloted by Shion Shirabe in the second part of \"Kyoukai Senki\". By implanting the autonomous thinking AI Nayuta, it has evolved into a machine that greatly exceeds the flight capabilities of the original Reiki aircraft.",
 			"• The wing installed on the rear skirt can be folded and stored. The thrusters of each part also rotate and move, forming a large silhouette that exceeds the overall height of the aircraft when deployed.",
 			"• The Super Heat Shaking Type Naginata Kai is equipped with a slide gimmick. The structure has been improved to make it easier to carry.",
 			"• A missile container is included on the back. Attacks from all directions are possible.",
 			"The second part of the TV anime \"Kyoukai Senki\" starts in 4! ! All episodes of the first part are available for free on BANDAI SPIRITS official YouTube!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"超熱振式薙刀改×１",
-			"ハンドパーツ 平手（左右）&#8203;、武器持ち手（左右）&#8203;、銃持ち手（右）",
-			"（背部懸架型）多連装小型誘導弾発射機×１式",
-			"ホイルシール×１"
-		],
-		"en": [
-			"Super heat wave type naginata Kai x 1",
-			"Hand parts: open hand (left and right), weapon handle (left and right), gun handle (right)",
-			"(back suspension type) multiple small guided missile launcher x 1 set",
-			"Foil Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "超熱振式薙刀改×１",
+				"en": "Super heat wave type naginata Kai x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ 平手（左右）&#8203;、武器持ち手（左右）&#8203;、銃持ち手（右）",
+				"en": "Hand parts: open hand (left and right), weapon handle (left and right), gun handle (right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "（背部懸架型）多連装小型誘導弾発射機×１式",
+				"en": "(back suspension type) multiple small guided missile launcher x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール×１",
+				"en": "Foil Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5034.jpg",
+				"src": "https://bandai-hobby.net/images/153_5034_s_z16qpwqxsofbs95sdpvxt46h2cxe.jpg",
 				"path": "/images/items/01_4107/153_5034.jpg",
 				"hash": "2402b6cae8a76f23f8577ee6d67ee028"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5034.jpg",
+				"src": "https://bandai-hobby.net/images/155_5034_s_zzihnwk13ppxdvl6woqeefnv0uxi.jpg",
 				"path": "/images/items/01_4107/155_5034.jpg",
 				"hash": "ad087e39702db3c7c36f63f90858db05"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5034.jpg",
+				"src": "https://bandai-hobby.net/images/156_5034_s_8211ekeeivrm1ccive2iqq122xer.jpg",
 				"path": "/images/items/01_4107/156_5034.jpg",
 				"hash": "50f7830049f2b7f2f87f941cd2d4e1bd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5034.jpg",
+				"src": "https://bandai-hobby.net/images/157_5034_s_s5jc0a2o62ysgdg3nf981hwlexjy.jpg",
 				"path": "/images/items/01_4107/157_5034.jpg",
 				"hash": "346e002cbe5e9abbfad9fcd818753d0c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5034.jpg",
+				"src": "https://bandai-hobby.net/images/158_5034_s_f2q051hgjfxfpq9661n32wk1imcb.jpg",
 				"path": "/images/items/01_4107/158_5034.jpg",
 				"hash": "4328f332f19d3215a43ed5ea9e1e3169"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5034.jpg",
+				"src": "https://bandai-hobby.net/images/159_5034_s_97to7vobhr8ue47spjx5ik7acowo.jpg",
 				"path": "/images/items/01_4107/159_5034.jpg",
 				"hash": "b4d0cfa59e13550d1a20df45bd603d4d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5034.jpg",
+				"src": "https://bandai-hobby.net/images/189_5034_s_492vf00bsum1uxexhbb3auf8rbbq.jpg",
 				"path": "/images/items/01_4107/189_5034.jpg",
 				"hash": "ae33cd9d98e12fb723d6014bbb868941"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5034.jpg",
+				"src": "https://bandai-hobby.net/images/190_5034_s_3d2ae2esgj0rmo7tkhseg1gkhdx8.jpg",
 				"path": "/images/items/01_4107/190_5034.jpg",
 				"hash": "238d8a455c4fd6f6b0250f66e802e150"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5034.jpg",
+				"src": "https://bandai-hobby.net/images/191_5034_s_w3or2g22o68lt62qvr4k5r1erw90.jpg",
 				"path": "/images/items/01_4107/191_5034.jpg",
 				"hash": "538083a703dabfd429c16282d1ace878"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5034.jpg",
+				"src": "https://bandai-hobby.net/images/192_5034_s_6e67qc1s4zoy2oftstbxmbxk1lar.jpg",
 				"path": "/images/items/01_4107/192_5034.jpg",
 				"hash": "c6739e51b2173c23dceeb39aa74cf419"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_5034.jpg",
+				"src": "https://bandai-hobby.net/images/193_5034_s_ziuwbuimlgqxb3im17nrpx2e4nwx.jpg",
 				"path": "/images/items/01_4107/193_5034.jpg",
 				"hash": "02a033086a077a54be2598a8963c466e"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4107/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4107/"
 }

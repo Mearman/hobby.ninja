@@ -3,8 +3,47 @@
 	"type": "item",
 	"name": {
 		"ja": "RG 1/144 ゴッドガンダム",
-		"en": "RG 1/144 GOD GUNDAM"
+		"en": "RG 1/144 God Gundam"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "ggundam",
+			"url": "https://bandai-hobby.net/series/ggundam/",
+			"ja": "機動武闘伝Ｇガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5544",
+			"url": "https://bandai-hobby.net/item/01_5544/",
+			"ja": "RG 1/144 シャイニングガンダム"
+		},
+		{
+			"id": "01_5995",
+			"url": "https://bandai-hobby.net/item/01_5995/",
+			"ja": "RG 1/144 ガンダムベース限定 ゴッドガンダム ハイパーモード"
+		},
+		{
+			"id": "item-1000177309",
+			"url": "https://p-bandai.jp/item/item-1000177309/",
+			"ja": "ＲＧ 1/144 ゴッドガンダム用 拡張セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -18,11 +57,9 @@
 		"day": 13
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"（3/24記載）諸般の都合により、商品の発売月を変更させていただきました。",
-			"『機動武闘伝G ガンダム』より、「ゴッドガンダム」がRGで登場！実機考証として人体構造を落とし込み、RG史上最大級の可動域を追求！",
+			"『機動武闘伝Gガンダム』より、「ゴッドガンダム」がRGで登場！実機考証として人体構造を落とし込み、RG史上最大級の可動域を追求！",
 			"• モビルファイターならではの人体をトレースするかのような動きを追求。",
 			"• 肩と手首部分に導入したアドヴァンスドMSジョイントなどにより、特徴的な「腕組み」ポーズを再現できる。",
 			"• 胴体には前後及び左右へ大きく可動する機構を導入。肩には伸縮ギミックを搭載し、脇の可動域も確保。",
@@ -35,8 +72,7 @@
 			"• オリジナルアレンジの日輪エフェクトが付属。"
 		],
 		"en": [
-			"(Posted on 3/24) Due to various circumstances, we have changed the product release.",
-			"From \"Mobile Fighter G Gundam \", \" God Gundam\" appears in RG! Incorporating the human body structure as an actual machine study, we pursue the largest range of motion in RG history!",
+			"From \"Mobile Fighter GGundam\", \"God Gundam\" appears in RG! Incorporating the human body structure as an actual machine study, we pursue the largest range of motion in RG history!",
 			"• Pursuing movements that seem to trace the human body unique to Mobile Fighter.",
 			"• Advanced MS joints introduced in the shoulders and wrists allow you to recreate the characteristic \"arms folded\" pose.",
 			"• The fuselage has a mechanism that allows it to move significantly forward and backward and left and right. Equipped with a telescopic gimmick on the shoulders to ensure range of motion in the armpits.",
@@ -49,43 +85,53 @@
 			"• Comes with an original arranged ring effect."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ゴッドスラッシュ×2",
-			"ハンドパーツ×1式",
-			"日輪エフェクト接続用ジョイント×1",
-			"PETシート（日輪エフェクト）×1",
-			"リアリスティックデカール×1"
-		],
-		"en": [
-			"God Slash x2",
-			"Hand parts x 1 set",
-			"Ring effect connection joint x 1",
-			"PET sheet (ring effect) x 1",
-			"Realistic decal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ゴッドスラッシュ",
+				"en": "god slash"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "日輪エフェクト接続用ジョイント",
+				"en": "Joint for ring effect connection"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "PETシート（日輪エフェクト）",
+				"en": "PET sheet (ring effect)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール",
+				"en": "realistic decals"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175254_1.jpg",
 				"path": "/images/items/01_4104/1000175254_1.jpg",
 				"hash": "8faea34e20392b32703515db988c71cb"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175254_10.jpg",
-				"path": "/images/items/01_4104/1000175254_10.jpg",
-				"hash": "2a133e15f8cffaf5936d91cffe29c7e5"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175254_11.jpg",
-				"path": "/images/items/01_4104/1000175254_11.jpg",
-				"hash": "0c0c73b195ab609c7c6d36ea90a5a7dc"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175254_12.jpg",
-				"path": "/images/items/01_4104/1000175254_12.jpg",
-				"hash": "ad78aa850bfafa5a4864ba2378937581"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175254_2.jpg",
@@ -126,15 +172,25 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175254_9.jpg",
 				"path": "/images/items/01_4104/1000175254_9.jpg",
 				"hash": "dfe5f25e92a65bb03afdb0b2acfe4446"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175254_10.jpg",
+				"path": "/images/items/01_4104/1000175254_10.jpg",
+				"hash": "2a133e15f8cffaf5936d91cffe29c7e5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175254_11.jpg",
+				"path": "/images/items/01_4104/1000175254_11.jpg",
+				"hash": "0c0c73b195ab609c7c6d36ea90a5a7dc"
+			},
+			{
+				"path": "/images/items/01_4104/M45G2JtqkzhVLGmx.jpg",
+				"hash": "b457b838c571e0e981f1568b86040801"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4104/",
-	"brandIds": ["rg"],
-	"seriesIds": ["ggundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": [],
 	"manual": {
 		"id": "685",
 		"url": "https://manual.bandai-hobby.net/menus/detail/685/"

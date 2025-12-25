@@ -5,6 +5,49 @@
 		"ja": "30MM 1/144 オプションパーツセット8(マルチバックパック)",
 		"en": "30MM 1/144 Option parts set 8 (multi backpack)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -18,21 +61,20 @@
 		"day": 28
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMオプションパーツセットに、汎用パーツが揃ったマルチバックパックが登場！",
-			"■バックパック、キャリングケース、ミサイル、爆薬などのセット。",
-			"■大型ラックは展開し、内部をセパレートすることで多数のユニットを収納することができる。",
-			"■リュック風可動ブースターはバックパックとして背部に装備し、バーニアパーツを展開も可能。",
-			"■手首の延長パーツが付属。",
-			"■各種パーツはジョイントパーツと組み合わせることで連結ユニットを構成できる。",
-			"■大型ライフルは折り畳み構造で携帯可能。",
-			"■カスタマイズの幅を広げる30 MINUTESシリーズ共通の汎用ジョイントランナーが付属。"
+			"• バックパック、キャリングケース、ミサイル、爆薬などのセット。",
+			"• 大型ラックは展開し、内部をセパレートすることで多数のユニットを収納することができる。",
+			"• リュック風可動ブースターはバックパックとして背部に装備し、バーニアパーツを展開も可能。",
+			"• 手首の延長パーツが付属。",
+			"• 各種パーツはジョイントパーツと組み合わせることで連結ユニットを構成できる。",
+			"• 大型ライフルは折り畳み構造で携帯可能。",
+			"• カスタマイズの幅を広げる30 MINUTESシリーズ共通の汎用ジョイントランナーが付属。"
 		],
 		"en": [
 			"A multi-backpack with general-purpose parts is now available in the 30MM optional parts set!",
-			"• A set of backpacks, carrying cases, missiles, explosives, etc.",
+			"• Sets of backpacks, carrying cases, missiles, explosives, etc.",
 			"• The large rack can be expanded and separated internally to accommodate multiple units.",
 			"• The backpack-like movable booster is equipped on the back as a backpack, and the vernier parts can also be expanded.",
 			"• Includes wrist extension parts.",
@@ -41,81 +83,138 @@
 			"• Includes a general-purpose joint runner common to the 30 MINUTES series that expands the range of customization."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"フォールディングキャノン×1式",
-			"ミサイル×2",
-			"キャリングケース×1式",
-			"バッテリーパック×2",
-			"爆薬×２",
-			"ポーチ×2",
-			"手首延長パーツ×2",
-			"リュック風可動ブースター×1",
-			"大型ラック×1式",
-			"30 MINUTES汎用ジョイントランナー×1"
-		],
-		"en": [
-			"Folding cannon x 1",
-			"Missile x2",
-			"Carrying case x 1 set",
-			"Battery pack x 2",
-			"Explosives x2",
-			"Pouch x 2",
-			"Wrist extension parts x 2",
-			"Backpack style movable booster x 1",
-			"Large rack x 1 set",
-			"30 MINUTES General purpose joint Runner×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フォールディングキャノン",
+				"en": "folding cannon"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ミサイル",
+				"en": "missile"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "キャリングケース",
+				"en": "carrying case"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "バッテリーパック",
+				"en": "battery pack"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "爆薬×２",
+				"en": "Explosives x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "ポーチ",
+				"en": "pouch"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "手首延長パーツ",
+				"en": "wrist extension parts"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "リュック風可動ブースター",
+				"en": "Backpack style movable booster"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "大型ラック",
+				"en": "large rack"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "30 MINUTES汎用ジョイントランナー",
+				"en": "30 MINUTES General Purpose Joint Runner"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5022.jpg",
+				"src": "https://bandai-hobby.net/images/153_5022_s_hhhe5owfsx5rqyqe1e1bvpu9gm5a.jpg",
 				"path": "/images/items/01_4098/153_5022.jpg",
 				"hash": "62a97adb781e24b4263b9c2e643cb2c8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5022.jpg",
+				"src": "https://bandai-hobby.net/images/155_5022_s_iguoktn0k580t1wno94xtjxz7cox.jpg",
 				"path": "/images/items/01_4098/155_5022.jpg",
 				"hash": "fa5c83333614739a388d746309ea0710"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5022.jpg",
+				"src": "https://bandai-hobby.net/images/156_5022_s_2lbvoipb7qu0fo86cxggtstdqdu7.jpg",
 				"path": "/images/items/01_4098/156_5022.jpg",
 				"hash": "0f58f2a300614ed25ccbef4646e67a31"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5022.jpg",
+				"src": "https://bandai-hobby.net/images/157_5022_s_6832hpm6u2tofkzz61cx9zv832cn.jpg",
 				"path": "/images/items/01_4098/157_5022.jpg",
 				"hash": "0764fe139bde1e8c95b6264415ffbd8c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5022.jpg",
+				"src": "https://bandai-hobby.net/images/158_5022_s_oe0f2ltuu6orm35mzmkq7pj9bqae.jpg",
 				"path": "/images/items/01_4098/158_5022.jpg",
 				"hash": "c615a391b00ac39e0be7f417795c4a1a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5022.jpg",
+				"src": "https://bandai-hobby.net/images/159_5022_s_3nlz7dfz4npvtd5mi7a4i1u3ks9n.jpg",
 				"path": "/images/items/01_4098/159_5022.jpg",
 				"hash": "8bc37b9a15377a1038876a4f08764392"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5022.jpg",
+				"src": "https://bandai-hobby.net/images/189_5022_s_s53rgpaz303snwwbdz6r0ost1bia.jpg",
 				"path": "/images/items/01_4098/189_5022.jpg",
 				"hash": "9f971cd3f52c215f7ceec1eaca15b065"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5022.jpg",
+				"src": "https://bandai-hobby.net/images/190_5022_s_461or2ijmary7a0ec5zje955ug4a.jpg",
 				"path": "/images/items/01_4098/190_5022.jpg",
 				"hash": "61a79bf16b1c5704bb3fb16201e37c14"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5022.jpg",
+				"src": "https://bandai-hobby.net/images/191_5022_s_6xwe68efvkc01omzosml9tbe8bz5.jpg",
 				"path": "/images/items/01_4098/191_5022.jpg",
 				"hash": "4b48d6cb083b2bd04e267f81ac52c9db"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5022.jpg",
+				"src": "https://bandai-hobby.net/images/192_5022_s_jsyznhuhkeo7c83ix0g8bmaev0kg.jpg",
 				"path": "/images/items/01_4098/192_5022.jpg",
 				"hash": "227cf74e375aa13325005b100b8b0834"
 			}
@@ -123,10 +222,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4098/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3739",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3739/"

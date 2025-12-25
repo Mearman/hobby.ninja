@@ -5,6 +5,54 @@
 		"ja": "ＨＧ 1/144 ブラックライダー",
 		"en": "HG 1/144 Black Rider"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 2
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「ペイルライダー計画」",
@@ -70,8 +117,8 @@
 			"\"Pale Rider Plan\"",
 			"RX-80BR",
 			"Black Rider now available as a kit!",
-			"From \"Mobile Suit Gundam Battle Operation Code Fairy \", the prototype Unit 3 Black Rider developed in the \" Pale Rider Project\" has been made into a three-dimensional model in the HG series.",
-			"Added newly designed parts based on HG Pale Rider. Characteristic equipment such as the \"prototype tactical unit \" steelyard \"\" is reproduced with new modeling.",
+			"From \"Mobile Suit Gundam Battle Operation Code Fairy\", the prototype Unit 3 Black Rider developed in the \"Pale Rider Project\" has been made into a three-dimensional model in the HG series.",
+			"Added newly designed parts based on HG Pale Rider. Characteristic equipment such as the \"prototype tactical unit \"steelyard\"\" is reproduced with new modeling.",
 			"● Tactical experimental aircraft equipped with stealth and electronic warfare equipment",
 			"The Black Rider's shape and body color, including its characteristic head, chest, arms, and waist, are reproduced with new modeling.",
 			"head",
@@ -92,7 +139,7 @@
 			"A new reproduction of the rail cannon carried by Black Rider. The grip part is movable.",
 			"● You can reproduce the appearance when THEMIS is activated!",
 			"Normal state and THEMIS activation state can be reproduced by selecting Seal.",
-			"● Seal containing unit emblem marks etc. is included.",
+			"● Seal containing unit emblem marks, etc. is included.",
 			"Attached weapons: Rail Cannon / Heat Knife / Stun Anchor",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/144 Scale Assembly plastic model",
@@ -114,59 +161,75 @@
 			"・Product specifications are as of 202112. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["レール・キャノン", "ヒート・ナイフ", "スタン・アンカー"],
-		"en": ["rail cannon", "heat knife", "stan anchor"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "レール・キャノン",
+				"en": "rail cannon"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヒート・ナイフ",
+				"en": "heat knife"
+			}
+		},
+		{
+			"name": {
+				"ja": "スタン・アンカー",
+				"en": "stan anchor"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5003.jpg",
+				"src": "https://bandai-hobby.net/images/153_5003_s_1q0ylqog4hoquxkcuowsmib9mtg0.jpg",
 				"path": "/images/items/01_4078/153_5003.jpg",
 				"hash": "bf254b0e260aff4df0b3e536d84be208"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5003.jpg",
+				"src": "https://bandai-hobby.net/images/155_5003_s_kki9oy66ui694n1tivnfi8352f49.jpg",
 				"path": "/images/items/01_4078/155_5003.jpg",
 				"hash": "017e78f81626092715dfcc59b7447f37"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5003.jpg",
+				"src": "https://bandai-hobby.net/images/156_5003_s_rf9axj96htg8uqej3likj9i8pou3.jpg",
 				"path": "/images/items/01_4078/156_5003.jpg",
 				"hash": "3654a5fd1b6f0e62a500eb1227c9ff7b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5003.jpg",
+				"src": "https://bandai-hobby.net/images/157_5003_s_lqs7n18ltuxouy6253oexf0wc2pa.jpg",
 				"path": "/images/items/01_4078/157_5003.jpg",
 				"hash": "36499caa096ec33fc3fc8ea35059dfc2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5003.jpg",
+				"src": "https://bandai-hobby.net/images/158_5003_s_2mjea41xzndadwbhcvmfa4xf2bng.jpg",
 				"path": "/images/items/01_4078/158_5003.jpg",
 				"hash": "4071f0064854c3cc8c9e20669c4152c6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5003.jpg",
+				"src": "https://bandai-hobby.net/images/159_5003_s_ilysvihc1f5lzjzva9jf2ygs0esh.jpg",
 				"path": "/images/items/01_4078/159_5003.jpg",
 				"hash": "ed4a91285e67e6587dd37e89481c1344"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5003.jpg",
+				"src": "https://bandai-hobby.net/images/189_5003_s_ki72xcvzi3aqnnzxku0002pytht5.jpg",
 				"path": "/images/items/01_4078/189_5003.jpg",
 				"hash": "76521a97fba7ee6136cc93687e2487ff"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5003.jpg",
+				"src": "https://bandai-hobby.net/images/190_5003_s_stcdi96ihnj4ovzpn8e85g5bpr5v.jpg",
 				"path": "/images/items/01_4078/190_5003.jpg",
 				"hash": "496ca04d83025bccf02c6b72b9571d4c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5003.jpg",
+				"src": "https://bandai-hobby.net/images/191_5003_s_ojg63f4lg3ojb1fnhn9zjdtnzaa9.jpg",
 				"path": "/images/items/01_4078/191_5003.jpg",
 				"hash": "0935b19380cee013dd80b2ccb9ea76e8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5003.jpg",
+				"src": "https://bandai-hobby.net/images/192_5003_s_rc6pvrcy475gcobtudecniwc21bt.jpg",
 				"path": "/images/items/01_4078/192_5003.jpg",
 				"hash": "96b44bda696b6ee125a6bd9d16bc9fd3"
 			}
@@ -174,14 +237,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4078/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2338",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2338/"

@@ -5,6 +5,48 @@
 		"ja": "30MS オプションパーツセット5(ヘビーアーマー)",
 		"en": "30MS Option Parts Set 5 (Heavy Armor)"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5975",
+			"url": "https://bandai-hobby.net/item/01_5975/",
+			"ja": "30MS 和泉愛依"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5954",
+			"url": "https://bandai-hobby.net/item/01_5954/",
+			"ja": "30MS オプションヘアスタイルパーツVol.12 全4種 ミディアムヘア2[イエロー4]"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -21,9 +63,9 @@
 	"description": {
 		"ja": [
 			"30MS素体との組み合わせで世界観が広がる！オプションパーツセットにヘビーアーマーがラインアップ！",
-			"■アーマーパーツでキャラをカスタマイズ。",
-			"■全身に装備可能なアイボリーカラーの重武装。",
-			"■カスタマイズの幅を広げる30MINUTESシリーズ共通の汎用ジョイントランナーが付属。"
+			"• アーマーパーツでキャラをカスタマイズ。",
+			"• 全身に装備可能なアイボリーカラーの重武装。",
+			"• カスタマイズの幅を広げる30MINUTESシリーズ共通の汎用ジョイントランナーが付属。"
 		],
 		"en": [
 			"The world view expands when combined with the 30MS body! Heavy armor is now available as an optional parts set!",
@@ -32,39 +74,55 @@
 			"• Includes a general-purpose joint runner common to the 30 MINUTES series that expands the range of customization."
 		]
 	},
-	"accessories": {
-		"ja": ["オプションアーマー×1式", "30MINUTES汎用ジョイントランナー×1"],
-		"en": ["Optional armor x 1 set", "30MINUTES General purpose joint Runner x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "オプションアーマー",
+				"en": "optional armor"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "30MINUTES汎用ジョイントランナー",
+				"en": "30MINUTES General Purpose Joint Runner"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5010.jpg",
+				"src": "https://bandai-hobby.net/images/153_5010_s_ivleyzg0ksdjf93wxboqnlg1i8fy.jpg",
 				"path": "/images/items/01_4086/153_5010.jpg",
 				"hash": "b0c9fea8d76e4044b5f22888d225debf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5010.jpg",
+				"src": "https://bandai-hobby.net/images/155_5010_s_tc6md1e4wtdjedrpr1g63ldym3dx.jpg",
 				"path": "/images/items/01_4086/155_5010.jpg",
 				"hash": "3e13cf75ebb5f2ba64308ffcbe354f1d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5010.jpg",
+				"src": "https://bandai-hobby.net/images/156_5010_s_bu6a8lx2s07tumcbnv9pwcl15mdc.jpg",
 				"path": "/images/items/01_4086/156_5010.jpg",
 				"hash": "81818ee64527e39370dd4ff98cf86032"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5010.jpg",
+				"src": "https://bandai-hobby.net/images/157_5010_s_p1xarotsj4h5f0zl94gv66w5a7r8.jpg",
 				"path": "/images/items/01_4086/157_5010.jpg",
 				"hash": "af3e900c4743297578d2da63139aae6b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5010.jpg",
+				"src": "https://bandai-hobby.net/images/158_5010_s_p7l3578uqlh0bht3o5dznzlw4vcn.jpg",
 				"path": "/images/items/01_4086/158_5010.jpg",
 				"hash": "0b6509f45e5fc18a801d29dcd3107504"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5010.jpg",
+				"src": "https://bandai-hobby.net/images/159_5010_s_2mxrc4velp0k80ogqldxj5izgkbr.jpg",
 				"path": "/images/items/01_4086/159_5010.jpg",
 				"hash": "6e572ea1574421fa3e2334229bfca573"
 			}
@@ -72,10 +130,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4086/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3465",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3465/"
