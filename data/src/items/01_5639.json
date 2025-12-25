@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC ジム・ストライカー",
-		"en": "HGUC 1/144 GM STRIKER"
+		"en": "HGUC Jim Striker"
 	},
+	"brands": [
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2163",
+			"url": "https://bandai-hobby.net/item/01_2163/",
+			"ja": "HG 1/144 ブルーディスティニー3号機“EXAM”[メタリックグロスインジェクション]"
+		},
+		{
+			"id": "01_2161",
+			"url": "https://bandai-hobby.net/item/01_2161/",
+			"ja": "HG 1/144 ガンダムベース限定 イフリート改[メタリックグロスインジェクション]"
+		},
+		{
+			"id": "01_2162",
+			"url": "https://bandai-hobby.net/item/01_2162/",
+			"ja": "HG 1/144 ブルーディスティニー2号機“EXAM”[メタリックグロスインジェクション]"
+		},
+		{
+			"id": "01_2144",
+			"url": "https://bandai-hobby.net/item/01_2144/",
+			"ja": "HG 1/144 ガンダムベース限定 ブルーディスティニー1号機“EXAM”[メタリックグロスインジェクション]"
+		}
+	],
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -28,7 +71,12 @@
 			"●シールド先端のスパイクは伸縮ギミック搭載"
 		],
 		"en": [
-			"■ --Arcade game [MOBILE SUIT GUNDAM Battlefield Bonds] and other Harmony of GUNDAM Source Latest MS [Jim Striker] lineup in the HGUC series -Rivets on the armor part of the whole body, reproduce the mold of welding and pursue a realistic feeling -Double joints are used for the elbows, and various poses are possible. -Comes with characteristic weapon [Twin Beam Spear], machine gun, shield -The beam part of the twin beam spear is reproduced with clear parts, and the saber part can be moved as set -The spike at the tip of the shield is equipped with a telescopic gimmick"
+			"-The latest MS “Gym Striker” based on Harmony of Gundam such as the arcade game “Mobile Suit Gundam Battlefield Bonds” is now available in the HGUC series",
+			"-Reproduce the rivets and welding molds on the armor part of the whole body to pursue a realistic feel",
+			"-The elbows have double joints, allowing for various poses.",
+			"-Includes distinctive weapon “Twin Beam Spear”, machine gun, and Seal.",
+			"-The beam part of the twin beam spear is reproduced with clear parts, and the saber part is movable as set.",
+			"-The spike at the tip of the Seal is equipped with a telescopic gimmick."
 		]
 	},
 	"images": {
@@ -57,8 +105,8 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5639/",
-	"brandIds": ["hguc"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_2163", "01_2161", "01_2162", "01_2144"]
+	"manual": {
+		"id": "258",
+		"url": "https://manual.bandai-hobby.net/menus/detail/258/"
+	}
 }

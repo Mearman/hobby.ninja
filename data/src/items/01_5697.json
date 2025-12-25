@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 シナンジュ チタニウムフィニッシュ",
 		"en": "HGUC 1/144 Sinanju Titanium Finish"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 5720,
 		"currency": "JPY",
@@ -18,9 +67,10 @@
 		"day": 19
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["• HGUCシナンジュが、重厚感のあるチタニウムフィニッシュ仕様で登場。 成形品×10、ホイルシール×1、組立説明書"],
+		"ja": [
+			"• HGUCシナンジュが、重厚感のあるチタニウムフィニッシュ仕様で登場。 成形品×10、ホイルシール×1、組立説明書"
+		],
 		"en": [
 			"• HGUC Sinanju is now available with a heavy titanium finish. Molded product x 10, foil seal x 1, assembly manual"
 		]
@@ -28,26 +78,22 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_762.jpg",
+				"src": "https://bandai-hobby.net/images/153_762_s_vnhu2dxcrzedidye3qit2gmlilm2.jpg",
 				"path": "/images/items/01_5697/153_762.jpg",
 				"hash": "c9b238a1c17b487e6820e8972152c573"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_762.jpg",
+				"src": "https://bandai-hobby.net/images/155_762_s_9esdbeyjlczvv54wox2zt4dvpzpn.jpg",
 				"path": "/images/items/01_5697/155_762.jpg",
 				"hash": "5bf1329084d9ccb0672773b33baaaa6c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_762.jpg",
+				"src": "https://bandai-hobby.net/images/156_762_s_f6xr1trpa150nj53cbvaq5chcy55.jpg",
 				"path": "/images/items/01_5697/156_762.jpg",
 				"hash": "18124e4325aff55ccacd82344411cea3"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5697/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5697/"
 }

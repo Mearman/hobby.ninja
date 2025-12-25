@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ギャプラン TR-5［フライルー］",
 		"en": "HGUC 1/144 Gaplan TR-5 [Flyroux]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5468",
+			"url": "https://bandai-hobby.net/item/01_5468/",
+			"ja": "HG 1/144 サイコ・ガンダムMk-II"
+		},
+		{
+			"id": "01_5375",
+			"url": "https://bandai-hobby.net/item/01_5375/",
+			"ja": "HG 1/144 ボリノーク・サマーン"
+		},
+		{
+			"id": "01_5162",
+			"url": "https://bandai-hobby.net/item/01_5162/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムMk-II(ティターンズ仕様)(21st CENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『アドバンス・オブ・ゼータ』よりギャプランTR-5［フライルー］が登場。",
@@ -37,59 +85,69 @@
 			"Attached weapons: long blade rifle/beam pistol"
 		]
 	},
-	"accessories": {
-		"ja": ["ロング・ブレード・ライフル", "ビーム・ピストル"],
-		"en": ["long blade rifle", "beam pistol"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ロング・ブレード・ライフル",
+				"en": "long blade rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・ピストル",
+				"en": "beam pistol"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_706.jpg",
+				"src": "https://bandai-hobby.net/images/153_706_s_z7xahyo0eb17z3kacjofifm6jg7l.jpg",
 				"path": "/images/items/01_5644/153_706.jpg",
 				"hash": "c79677ce8c8f359c50de9b5aefc33e70"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_706.jpg",
+				"src": "https://bandai-hobby.net/images/155_706_s_8g33bo3u7ktja6b6cckqkqgmdvgw.jpg",
 				"path": "/images/items/01_5644/155_706.jpg",
 				"hash": "456ce8ba4816e3ad0d6c3f38c024ba81"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_706.jpg",
+				"src": "https://bandai-hobby.net/images/156_706_s_ennsva07wkb4ukvb1ez87knd9auy.jpg",
 				"path": "/images/items/01_5644/156_706.jpg",
 				"hash": "e3e34cc01485c7305cbefffdc5545861"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_706.jpg",
+				"src": "https://bandai-hobby.net/images/157_706_s_iipvmll3qphucyk6rtotlgonpanh.jpg",
 				"path": "/images/items/01_5644/157_706.jpg",
 				"hash": "22a56a248004d91ee4a756ce1691ff4c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_706.jpg",
+				"src": "https://bandai-hobby.net/images/158_706_s_ezw8h2jpi6amjfol8c6zq7b5eykw.jpg",
 				"path": "/images/items/01_5644/158_706.jpg",
 				"hash": "5b01ceb3170e19f30602e6a56e78ed2f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_706.jpg",
+				"src": "https://bandai-hobby.net/images/159_706_s_z2vpyqwwv1kt9r1x286klniym73n.jpg",
 				"path": "/images/items/01_5644/159_706.jpg",
 				"hash": "4adf8c95c3193d5f971a47fcf9d7b56a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_706.jpg",
+				"src": "https://bandai-hobby.net/images/189_706_s_z9xx7rns56vu2c8bt6kh2osiukfk.jpg",
 				"path": "/images/items/01_5644/189_706.jpg",
 				"hash": "e53fe2340c8cf92d36c67bc14216b88d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_706.jpg",
+				"src": "https://bandai-hobby.net/images/190_706_s_jwhxt4dc0fkie2iow8991xxj3xdg.jpg",
 				"path": "/images/items/01_5644/190_706.jpg",
 				"hash": "19481f502ac126c54852b8233ad7c512"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_706.jpg",
+				"src": "https://bandai-hobby.net/images/191_706_s_vyibgw8klvwg7yrvs7jb0dexs4ad.jpg",
 				"path": "/images/items/01_5644/191_706.jpg",
 				"hash": "c9c8624cb6f874b30d2dbd6e7ccbe49e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_706.jpg",
+				"src": "https://bandai-hobby.net/images/192_706_s_737e1ptjxlh61ii5ah3qvl8ucp9p.jpg",
 				"path": "/images/items/01_5644/192_706.jpg",
 				"hash": "87ad6717d22ad886f6f998cc418f104a"
 			}
@@ -97,10 +155,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5644/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["z-gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"],
 	"manual": {
 		"id": "259",
 		"url": "https://manual.bandai-hobby.net/menus/detail/259/"

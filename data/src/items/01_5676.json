@@ -3,8 +3,57 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC 1/144 シナンジュ",
-		"en": "HGUC 1/144 SINANJU"
+		"en": "HGUC 1/144 Sinanju"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3080,
 		"currency": "JPY",
@@ -18,16 +67,12 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 機動戦士ガンダム UCからシナンジュをHGでリリース。 • シナンジュの特徴である各部スラスターの可動を再現。 • 複雑なエングレービングも再現。 • 豊富な武器パーツで、組替により劇中仕様を再現可能。 成形品×10、ホイルシール×1、組立説明書"
+			"• 機動戦士ガンダムUCからシナンジュをHGでリリース。 ■シナンジュの特徴である各部スラスターの可動を再現。 ■複雑なエングレービングも再現。 ■豊富な武器パーツで、組替により劇中仕様を再現可能。 成形品×10、ホイルシール×1、組立説明書"
 		],
 		"en": [
-			"■ MOBILE SUIT GUNDAM UC releases Sinanju in HG.",
-			"■ Reproduce the movement of each part thruster, which is a characteristic of Sinanju.",
-			"■ Complex engraving is also reproduced.",
-			"■ With a wide variety of weapon parts, it is possible to reproduce the specifications in the play by rearranging. Molded part ×10, foil seal ×1, assembly instructions"
+			"• Sinanju from Mobile Suit Gundam UC is released in HG. ■Characteristics of Sinanju Reproduce the movement of each thruster. ■Complicated engravings are also reproduced. ■With a wide variety of weapon parts, it is possible to reproduce the specifications in the play by rearranging them. Molded product x 10, foil seal x 1, assembly manual"
 		]
 	},
 	"images": {
@@ -51,10 +96,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5676/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "420",
 		"url": "https://manual.bandai-hobby.net/menus/detail/420/"

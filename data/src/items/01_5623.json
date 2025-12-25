@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 シャア専用ゲルググ",
 		"en": "HGUC 1/144 Char's Gelgoog"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム」に登場する“シャア専用ゲルググ”がHGUCシリーズに遂に登場！",
@@ -29,29 +77,29 @@
 		"en": [
 			"“Char’s Gelgoog” that appears in “Mobile Suit Gundam” is finally available in the HGUC series!",
 			"The head mono-eye can move left and right, the symbol horn is reproduced in the anime version design, and there are movable points above and below the abdominal block, allowing you to reproduce actions such as warping and twisting the upper body.",
-			"In addition to the waist skirt being divided into parts, the crotch axis can be moved to improve the reproducibility of action poses.",
+			"In addition to dividing the waist skirt into parts, the crotch axis can be moved to improve the reproducibility of action poses.",
 			"Molds are engraved on the inside of the rear skirt and leg armor, and weapons include a beam rifle, beam naginata, and seal."
 		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_681.jpg",
+				"src": "https://bandai-hobby.net/images/153_681_s_1l2uw4gdtml15srmdmloztf6jtqx.jpg",
 				"path": "/images/items/01_5623/153_681.jpg",
 				"hash": "d59601afee285fc7ff56d9227cafca3a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_681.jpg",
+				"src": "https://bandai-hobby.net/images/155_681_s_uagaj3exz5n9uj5td5rjaqbe88lf.jpg",
 				"path": "/images/items/01_5623/155_681.jpg",
 				"hash": "c811aeac4e2cee3127d14abb8705862c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_681.jpg",
+				"src": "https://bandai-hobby.net/images/156_681_s_cc29pzh9fhotjuy7e0x2w0o8q7zt.jpg",
 				"path": "/images/items/01_5623/156_681.jpg",
 				"hash": "80d9a5be502757ac7d057ff781ee223c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_681.jpg",
+				"src": "https://bandai-hobby.net/images/157_681_s_xkzjdzjjb1qtrsu1xp3ebtx6u5zi.jpg",
 				"path": "/images/items/01_5623/157_681.jpg",
 				"hash": "797455ca2bd0301b9f11991442b86017"
 			}
@@ -59,10 +107,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5623/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"manual": {
 		"id": "828",
 		"url": "https://manual.bandai-hobby.net/menus/detail/828/"

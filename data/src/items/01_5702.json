@@ -3,8 +3,57 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC 1/144 ドライセン（ユニコーンVer.）",
-		"en": "HGUC 1/144 DREISSEN (Unicorn Ver.)"
+		"en": "HGUC 1/144 Dreissen (Unicorn Ver.)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -18,16 +67,12 @@
 		"day": 21
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 機動戦士ガンダム UC版ドライセンがHGUC化。 • ガンダム UC登場時の武装であるヒート・サーベルとバズーカが付属。さらに、ZZで登場したビーム・トマホーク、ビームランサーも付属。 • ドライセンの特徴である袖内部のガトリングを再現。 • 背中にはドライセンの専用武装であるトライブレードを３つ装備。 成形品×8、ホイルシール×1、組立説明書"
+			"• 機動戦士ガンダムUC版ドライセンがHGUC化。 ■ガンダムUC登場時の武装であるヒート・サーベルとバズーカが付属。さらに、ZZで登場したビーム・トマホーク、ビームランサーも付属。 ■ドライセンの特徴である袖内部のガトリングを再現。 ■背中にはドライセンの専用武装であるトライブレードを３つ装備。 成形品×8、ホイルシール×1、組立説明書"
 		],
 		"en": [
-			"■ MOBILE SUIT GUNDAM UC version of Driessen is now HGUC.",
-			"■ Includes the Heat Saber and Bazooka, which were the weapons of the GUNDAM UC. In addition, the Beam Tomahawk and Beam Lancer, which appeared in ZZ, are also included.",
-			"■ Reproduce the gatling inside the sleeve, which is a characteristic of Driessen.",
-			"■ The back is equipped with three Tri-Blades, which are exclusive weapons for Driessen. Molded product ×8, foil seal ×1, assembly instructions"
+			"• Mobile Suit Gundam UC version of Dreysen is now HGUC. ■Includes the weapon heat saber and bazooka when GundamUC appears. Furthermore, the beam tomahawk and beam lancer that appeared in ZZ are also included. ■Characteristics of Dreissen Reproduce the Gatling inside the sleeve. ■Equipped with three Dreissen's special armed tri-blades on its back. Molded product x 8, foil seal x 1, assembly manual"
 		]
 	},
 	"images": {
@@ -56,10 +101,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5702/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "1074",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1074/"

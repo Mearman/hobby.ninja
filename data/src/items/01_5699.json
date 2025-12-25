@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ジェガン（エコーズ仕様）",
 		"en": "HGUC 1/144 Jegan (Echoes specification)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,29 +67,28 @@
 		"day": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 『機動戦士ガンダムユニコーン』より、ジェガンのカスタム機、エコーズ仕様がHGUCで登場。 • 頭部バイザーの開閉ギミックを差し替えで再現。 • 汎用バズーガ、シールド、ライフルが付属し劇中のシーン再現が可能。 • 胸体部の追加装甲も設定に忠実に再現。 成形品×8、マーキングシール×1、組立説明書"
+			"• 『機動戦士ガンダムユニコーン』より、ジェガンのカスタム機、エコーズ仕様がHGUCで登場。 ■頭部バイザーの開閉ギミックを差し替えで再現。 ■汎用バズーガ、シールド、ライフルが付属し劇中のシーン再現が可能。 ■胸体部の追加装甲も設定に忠実に再現。 成形品×8、マーキングシール×1、組立説明書"
 		],
 		"en": [
-			"• From ``Mobile Suit Gundam Unicorn'', Jegan's custom machine, Echoes specification, is now available in HGUC. • Reproduce the opening/closing gimmick of the head visor by replacing it. • Comes with a general-purpose bazouga, seal, and rifle, allowing you to recreate scenes from the movie. • Additional armor on the chest is also faithfully reproduced. Molded product x 8, MarkingSeal x 1, assembly manual"
+			"• From ``Mobile Suit Gundam Unicorn'', Jegan's custom machine, Echoes specification, is now available in HGUC. ■Reproduce the opening/closing gimmick of the head visor by replacing it. ■A general-purpose bazouga, seal, and rifle are included, allowing you to recreate scenes from the play. ■Additional armor on the chest is also faithfully reproduced. Molded product x 8, MarkingSeal x 1, assembly manual"
 		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_764.jpg",
+				"src": "https://bandai-hobby.net/images/153_764_s_m6qpkufa2wo5yzcc9io5s0exjww1.jpg",
 				"path": "/images/items/01_5699/153_764.jpg",
 				"hash": "3c6e3bae34087baa3d78a446c097b2bd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_764.jpg",
+				"src": "https://bandai-hobby.net/images/155_764_s_g90vpv4d0yozw1d6vr1wq9smshvi.jpg",
 				"path": "/images/items/01_5699/155_764.jpg",
 				"hash": "34a365850ad4ca512c0e986dca6fd94a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_764.jpg",
+				"src": "https://bandai-hobby.net/images/156_764_s_xbl33shh0nbyyvnfkgo228digk25.jpg",
 				"path": "/images/items/01_5699/156_764.jpg",
 				"hash": "ab189f192b6dd33d408c6044b845dc1d"
 			}
@@ -48,10 +96,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5699/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "429",
 		"url": "https://manual.bandai-hobby.net/menus/detail/429/"

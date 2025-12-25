@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "MG ガンダムＦ９１（ハリソン・マディン専用機）",
-		"en": "MG Gundam F91 (Harrison Maddin special machine)"
+		"en": "MG GundamF91 (Harrison Maddin special machine)"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "crossbone",
+			"url": "https://bandai-hobby.net/series/crossbone/",
+			"ja": "機動戦士クロスボーン・ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000136952",
+			"url": "https://p-bandai.jp/item/item-1000136952",
+			"ja": "ＭＧ 1/100 ガンダムＦ９１ Ｖｅｒ．２．０（ハリソン・マディン専用機）"
+		},
+		{
+			"id": "01_1941",
+			"url": "https://bandai-hobby.net/item/01_1941/",
+			"ja": "MG 1/100 ガンダムベース限定 クロスボーンガンダムX-1 フルクロス [エクストラフィニッシュ]"
+		},
+		{
+			"id": "01_5649",
+			"url": "https://bandai-hobby.net/item/01_5649/",
+			"ja": "MG 1/100 クロスボーンガンダムX-1フルクロス"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -20,7 +58,7 @@
 	"targetAge": 15,
 	"description": {
 		"ja": [
-			"「機動戦士クロスボーンガンダム」よりクロスボーンガンダムのライバル機として登場した青いガンダム F91がマスターグレードシリーズに登場！",
+			"「機動戦士クロスボーンガンダム」よりクロスボーンガンダムのライバル機として登場した青いガンダムF91がマスターグレードシリーズに登場！",
 			"組み立てるだけでハリソン機の機体色を再現、右下腕にもパーツを追加。",
 			"ポリキャップレス構造で、従来より小柄なMSのプロポーションと可動の両立を実現。",
 			"ヴェスバーは設定通り回転、展開可能。",
@@ -37,12 +75,12 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_689.jpg",
+				"src": "https://bandai-hobby.net/images/153_689_s_4yhhd9qfjhj22z0gph8k2c739ddn.jpg",
 				"path": "/images/items/01_5629/153_689.jpg",
 				"hash": "4989642e91ed9fb3f4c66ae3685db1e4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_689.jpg",
+				"src": "https://bandai-hobby.net/images/155_689_o_1h36thngr50q5h11nhg1vt1gbc23.jpg",
 				"path": "/images/items/01_5629/155_689.jpg",
 				"hash": "ad0d792f9151858facc1d341483389fd"
 			}
@@ -50,10 +88,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5629/",
-	"brandIds": ["mg"],
-	"seriesIds": ["crossbone"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000136952", "01_1941", "01_5649"],
 	"manual": {
 		"id": "544",
 		"url": "https://manual.bandai-hobby.net/menus/detail/544/"

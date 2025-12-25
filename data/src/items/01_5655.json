@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムデュナメス",
 		"en": "HG 1/144 Gundam Dynames"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1954",
+			"url": "https://bandai-hobby.net/item/01_1954/",
+			"ja": "HG 1/144 「機動戦士ガンダム00」 2nd Season MSセット[クリアカラー]"
+		},
+		{
+			"id": "01_1953",
+			"url": "https://bandai-hobby.net/item/01_1953/",
+			"ja": "HG 1/144 「機動戦士ガンダム00」 1st Season MSセット[クリアカラー]"
+		},
+		{
+			"id": "item-1000114085",
+			"url": "https://p-bandai.jp/item/item-1000114085",
+			"ja": "ＨＧ 1/144 ＧＮアームズ ＴＹＰＥ-Ｅ（リアルカラーＶｅｒ．）"
+		},
+		{
+			"id": "01_957",
+			"url": "https://bandai-hobby.net/item/01_957/",
+			"ja": "HG 1/144 ブレイヴ指揮官用試験機"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -17,10 +61,9 @@
 		"month": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 「機動戦士ガンダム OO」より“ガンダムデュナメス”がHGシリーズにラインナップ",
+			"• 「機動戦士ガンダムOO」より“ガンダムデュナメス”がHGシリーズにラインナップ",
 			"• 頭部アンテナのスライド可動でスナイプモードを再現可能",
 			"• GNフル・シールドは3分割されておりパーツごとに可動、機体前面を覆った状態でも一部を展開させて武器を構えることが可能",
 			"• 股関節部には新機構“3ボールジョイント”を採用！",
@@ -28,7 +71,7 @@
 			"• GNスナイパーライフル、GNフル・シールド×2、GNシールド×2、ビームサーベル×2（柄のみ）が付属"
 		],
 		"en": [
-			"• “Gundam Dynames” from “Mobile Suit Gundam OO” is added to the HG series",
+			"• “Gundam Dynames” from “Mobile Suit GundamOO” is added to the HG series",
 			"• Snipe mode can be reproduced by sliding the head antenna.",
 			"• GN Full Seal is divided into 3 parts and each part can be moved, so even if the front of the aircraft is covered, a portion can be deployed to hold a weapon.",
 			"• A new mechanism “3 ball joint” is adopted for the hip joint!",
@@ -39,27 +82,27 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_722.jpg",
+				"src": "https://bandai-hobby.net/images/153_722_s_qnsym2o0dcib7qhdcu4ldutlw9qh.jpg",
 				"path": "/images/items/01_5655/153_722.jpg",
 				"hash": "9204f9c33a13dc74315c6d601320f176"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_722.jpg",
+				"src": "https://bandai-hobby.net/images/155_722_s_gh69pm9innew1zcuqbcucl8qp3hb.jpg",
 				"path": "/images/items/01_5655/155_722.jpg",
 				"hash": "f8e29c8aca274404eaf1a706f5722a02"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_722.jpg",
+				"src": "https://bandai-hobby.net/images/156_722_s_92c3qyt64x39wczflwtv0d9wn6rq.jpg",
 				"path": "/images/items/01_5655/156_722.jpg",
 				"hash": "cac68bde1edf67c78c101f5d7b73511a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_722.jpg",
+				"src": "https://bandai-hobby.net/images/157_722_s_irwqf8oiw0j9fhbq381oq3id7g6h.jpg",
 				"path": "/images/items/01_5655/157_722.jpg",
 				"hash": "92144bc2da2917b0dcdd77ef3656044b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_722.jpg",
+				"src": "https://bandai-hobby.net/images/158_722_s_qun2q1bbu57cxps7nfky0uc8jowi.jpg",
 				"path": "/images/items/01_5655/158_722.jpg",
 				"hash": "6c514c8713d72d23f0af31bee96fb697"
 			}
@@ -67,10 +110,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5655/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-00"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_1954", "01_1953", "item-1000114085", "01_957"],
 	"manual": {
 		"id": "187",
 		"url": "https://manual.bandai-hobby.net/menus/detail/187/"

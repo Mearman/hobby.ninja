@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガンダムエクシア",
-		"en": "HG 1/144 EXIA"
+		"en": "HG 1/144 Gundam Exia"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1954",
+			"url": "https://bandai-hobby.net/item/01_1954/",
+			"ja": "HG 1/144 「機動戦士ガンダム00」 2nd Season MSセット[クリアカラー]"
+		},
+		{
+			"id": "01_1953",
+			"url": "https://bandai-hobby.net/item/01_1953/",
+			"ja": "HG 1/144 「機動戦士ガンダム00」 1st Season MSセット[クリアカラー]"
+		},
+		{
+			"id": "item-1000114085",
+			"url": "https://p-bandai.jp/item/item-1000114085",
+			"ja": "ＨＧ 1/144 ＧＮアームズ ＴＹＰＥ-Ｅ（リアルカラーＶｅｒ．）"
+		},
+		{
+			"id": "01_957",
+			"url": "https://bandai-hobby.net/item/01_957/",
+			"ja": "HG 1/144 ブレイヴ指揮官用試験機"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -17,21 +61,20 @@
 		"month": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• ガンダム 00HGシリーズ第1弾は、7本の剣を装備する高機動MS“ガンダムエクシア”が登場！",
+			"• ガンダム00HGシリーズ第1弾は、7本の剣を装備する高機動MS“ガンダムエクシア”が登場！",
 			"• 特徴的な機体各部のレンズ状パーツや肩ベルト部は各々別素材で再現",
 			"• 股関節部には新機構“3ボールジョイント”を採用！",
 			"• 可動軸が上下・前後に可動し、スムーズなポージングが可能",
 			"• 武器はGNソード、GNロングブレイド、GNショートブレイド、GNシールド、GNビームサーベル×2、GNビームダガー×2が付属"
 		],
 		"en": [
-			"■ The first installment of the GUNDAM 00HG series features the highly mobile MS \"GUNDAM Exia\" equipped with seven swords!",
-			"■ The lenticular parts and shoulder belts of each part of the characteristic fuselage are reproduced with different materials.",
-			"■ The hip joint uses a new mechanism \"3-ball joint\"!",
-			"■ The movable shaft can be moved up and down, back and forth, enabling smooth posing.",
-			"■ Weapons include GN Sword, GN Long Blade, GN Short Blade, GN Shield, GN Beam Saber ×2, GN Beam Dagger ×2"
+			"• The first Gundam00HG series features the highly mobile MS “Gundam Exia” equipped with seven swords!",
+			"• Characteristic lens-like parts and shoulder belt parts of each part of the aircraft are reproduced with different materials.",
+			"• A new mechanism “3 ball joint” is adopted for the hip joint!",
+			"• The movable axis moves up and down and back and forth, allowing for smooth posing.",
+			"• Weapons include GN Sword, GN Long Blade, GN Short Blade, GNSeal, GN Beam Saber x2, and GN Beam Dagger x2"
 		]
 	},
 	"images": {
@@ -65,10 +108,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5654/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-00"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_1954", "01_1953", "item-1000114085", "01_957"],
 	"manual": {
 		"id": "186",
 		"url": "https://manual.bandai-hobby.net/menus/detail/186/"

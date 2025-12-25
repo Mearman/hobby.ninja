@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ガンダムキュリオス",
 		"en": "HG 1/144 Gundam Curios"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1954",
+			"url": "https://bandai-hobby.net/item/01_1954/",
+			"ja": "HG 1/144 「機動戦士ガンダム00」 2nd Season MSセット[クリアカラー]"
+		},
+		{
+			"id": "01_1953",
+			"url": "https://bandai-hobby.net/item/01_1953/",
+			"ja": "HG 1/144 「機動戦士ガンダム00」 1st Season MSセット[クリアカラー]"
+		},
+		{
+			"id": "item-1000114085",
+			"url": "https://p-bandai.jp/item/item-1000114085",
+			"ja": "ＨＧ 1/144 ＧＮアームズ ＴＹＰＥ-Ｅ（リアルカラーＶｅｒ．）"
+		},
+		{
+			"id": "01_957",
+			"url": "https://bandai-hobby.net/item/01_957/",
+			"ja": "HG 1/144 ブレイヴ指揮官用試験機"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -17,10 +61,9 @@
 		"month": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 「機動戦士ガンダム OO」より“ガンダムキュリオス”が1/144スケールHGモデルでキット化",
+			"• 「機動戦士ガンダムOO」より“ガンダムキュリオス”が1/144スケールHGモデルでキット化",
 			"• 劇中同様、飛行形態への変形を再現",
 			"• シールドの先端が左右に割れるギミックを再現",
 			"• 股関節部には新機構“3ボールジョイント”を採用！",
@@ -28,7 +71,7 @@
 			"• GNサブマシンガン、シールド、対MSナイフ、ビームサーベル×2（柄のみ）が付属"
 		],
 		"en": [
-			"• “Gundam Kyrios” from “Mobile Suit Gundam OO” is made into a kit with 1/144 Scale HG Model",
+			"• “Gundam Kyrios” from “Mobile Suit GundamOO” is made into a kit with 1/144 Scale HG Model",
 			"• Reproduces the transformation to flight form just like in the movie",
 			"• Reproduce the gimmick in which the tip of the seal splits to the left and right.",
 			"• A new mechanism “3 ball joint” is adopted for the hip joint!",
@@ -39,27 +82,27 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_723.jpg",
+				"src": "https://bandai-hobby.net/images/153_723_s_cg9u0ank4t7p9p60f6wlm749nmv4.jpg",
 				"path": "/images/items/01_5656/153_723.jpg",
 				"hash": "5a105477d99e8a4293cfd4dff2510381"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_723.jpg",
+				"src": "https://bandai-hobby.net/images/155_723_s_340e615rslridkhqlypn3owzid87.jpg",
 				"path": "/images/items/01_5656/155_723.jpg",
 				"hash": "0e5a48e6dba89d14c014c62a17514eb9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_723.jpg",
+				"src": "https://bandai-hobby.net/images/156_723_s_9wgec2ammswbkviryl6p8jzkizic.jpg",
 				"path": "/images/items/01_5656/156_723.jpg",
 				"hash": "645fafda6ed7094e838369a11465cc9d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_723.jpg",
+				"src": "https://bandai-hobby.net/images/157_723_s_cg3ci010q7meplhgtp9jofdudjyh.jpg",
 				"path": "/images/items/01_5656/157_723.jpg",
 				"hash": "fab9105c6e1a402448094ae88f061406"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_723.jpg",
+				"src": "https://bandai-hobby.net/images/158_723_s_5owu59309l1wum6vyynq01i6wzr0.jpg",
 				"path": "/images/items/01_5656/158_723.jpg",
 				"hash": "254dbc929556579666afe779816cc43e"
 			}
@@ -67,10 +110,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5656/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-00"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_1954", "01_1953", "item-1000114085", "01_957"],
 	"manual": {
 		"id": "188",
 		"url": "https://manual.bandai-hobby.net/menus/detail/188/"

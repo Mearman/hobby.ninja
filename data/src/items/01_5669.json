@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 ロト ツインセット",
 		"en": "HGUC 1/144 Loto Twin Set"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,39 +67,38 @@
 		"day": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 「機動戦士ガンダム UC」から、小型変形MSロトが2体セットで登場！ • HGUC最小サイズ（全高約85mm）ながら、タンク形態への完全変形が可能！ • 肩部センサー、ロングキャノン、メガマシンキャノンが付属。組み立て後に交換可能！ 成形品×6、組立説明書×1"
+			"• 「機動戦士ガンダムUC」から、小型変形MSロトが2体セットで登場！ ■HGUC最小サイズ（全高約85mm）ながら、タンク形態への完全変形が可能！ ■肩部センサー、ロングキャノン、メガマシンキャノンが付属。組み立て後に交換可能！ 成形品×6、組立説明書×1"
 		],
 		"en": [
-			"• From \"Mobile Suit Gundam UC\", a small transformed MS Roto is now available in a set of 2! • Despite being the smallest HGUC (total height approximately 85mm), it can be completely transformed into tank form! • Includes shoulder sensor, long cannon, and mega machine cannon. Can be replaced after assembly! Molded product x 6, assembly manual x 1"
+			"• From \"Mobile Suit GundamUC\", a small transformed MS Roto is now available in a set of 2! ■Although it is HGUC's smallest size (approximately 85mm in total height), it can be completely transformed into tank form! ■Shoulder sensor, long cannon, and mega machine cannon are included. Can be replaced after assembly! Molded product x 6, assembly manual x 1"
 		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_736.jpg",
+				"src": "https://bandai-hobby.net/images/153_736_s_rope5otkaet9a329gnhp3fphbta8.jpg",
 				"path": "/images/items/01_5669/153_736.jpg",
 				"hash": "0e7b3c433ee37639bba860fdef2f3344"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_736.jpg",
+				"src": "https://bandai-hobby.net/images/155_736_s_fnrznhxz24v1jc8fp0yzg9he6b1m.jpg",
 				"path": "/images/items/01_5669/155_736.jpg",
 				"hash": "b3526f45c19f9f28ac007f172dc6e579"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_736.jpg",
+				"src": "https://bandai-hobby.net/images/156_736_s_4219gtggtmopbolury54jxtegifs.jpg",
 				"path": "/images/items/01_5669/156_736.jpg",
 				"hash": "3b5f0051d75f3034c1381b70b207885a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_736.jpg",
+				"src": "https://bandai-hobby.net/images/157_736_s_s8daazjbiv8yc1ilmmf6ofhek093.jpg",
 				"path": "/images/items/01_5669/157_736.jpg",
 				"hash": "bbbb6bec79580ad5586ff4ca7d364405"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_736.jpg",
+				"src": "https://bandai-hobby.net/images/158_736_s_1vzxd5av7tvycaics9h2qohz7bh0.jpg",
 				"path": "/images/items/01_5669/158_736.jpg",
 				"hash": "856012427778f5a0c8e39070bd44a592"
 			}
@@ -58,10 +106,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5669/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "927",
 		"url": "https://manual.bandai-hobby.net/menus/detail/927/"
