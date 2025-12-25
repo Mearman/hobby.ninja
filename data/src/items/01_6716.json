@@ -5,6 +5,44 @@
 		"ja": "1/12 クローン・トルーパー LIMITED Ver.",
 		"en": "1/12 Clone Trooper LIMITED Ver."
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "starwars",
+			"url": "https://bandai-hobby.net/series/starwars/",
+			"ja": "STAR WARS"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4153",
+			"url": "https://bandai-hobby.net/item/01_4153/",
+			"ja": "1/12 ボバ・フェット（マンダロリアン）"
+		},
+		{
+			"id": "01_4154",
+			"url": "https://bandai-hobby.net/item/01_4154/",
+			"ja": "1/4 グローグー"
+		},
+		{
+			"id": "01_3514",
+			"url": "https://bandai-hobby.net/item/01_3514/",
+			"ja": "ビークルモデル レイザー・クレスト(シルバーコーティングVer.)"
+		},
+		{
+			"id": "01_3515",
+			"url": "https://bandai-hobby.net/item/01_3515/",
+			"ja": "1/12 ザ・マンダロリアン(ベスカーアーマー)"
+		}
+	],
+	"scale": "1/12",
 	"price": {
 		"amount": 3630,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 18
 	},
 	"targetAge": 15,
-	"scale": "1/12",
 	"description": {
 		"ja": [
 			"「スター・ウォーズ エピソード２／クローンの攻撃」「スター・ウォーズ エピソード３／シスの復讐」に登場した",
@@ -34,7 +71,7 @@
 			"専用のディスプレイベースが付属。ジョイントパーツで複数連結させることが可能。"
 		],
 		"en": [
-			"Appeared in \"Star Wars Episode II: Attack of the Clones \" and \" Star Wars Episode III: Revenge of the Sith\"",
+			"Appeared in \"Star Wars Episode II: Attack of the Clones\" and \"Star Wars Episode III: Revenge of the Sith\"",
 			"\"Clone Trooper\" is now available in limited edition!",
 			"● Details have been reproduced through thorough verification of materials and condensed into 1/12 Scale.",
 			"● Two types of head parts are included. It is possible to assemble Phase I and II clone troopers.",
@@ -50,75 +87,55 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6716_0.jpg",
 				"path": "/images/items/01_6716/01_6716_0.jpg",
 				"hash": "46d8e9a81e4a2d4821c34a87422341c5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6716_1.jpg",
 				"path": "/images/items/01_6716/01_6716_1.jpg",
 				"hash": "d0e4bbcab0c221335cc333d03206a3aa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6716_10.jpg",
-				"path": "/images/items/01_6716/01_6716_10.jpg",
-				"hash": "ced152a1bb0a4bc9c5c55a2d1d7a7dbd"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_6716_11.jpg",
-				"path": "/images/items/01_6716/01_6716_11.jpg",
-				"hash": "a701ed5d655cf393996e23172138fa09"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_6716_2.jpg",
 				"path": "/images/items/01_6716/01_6716_2.jpg",
 				"hash": "37c1297b3f87f036fab58712177d6c84"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6716_3.jpg",
 				"path": "/images/items/01_6716/01_6716_3.jpg",
 				"hash": "b9054f35456b4ad0760365bc046cd398"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6716_4.jpg",
 				"path": "/images/items/01_6716/01_6716_4.jpg",
 				"hash": "fbefdeeb83bd66a97d26401453a11fd3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6716_5.jpg",
 				"path": "/images/items/01_6716/01_6716_5.jpg",
 				"hash": "cde710c3de5e5700e7860e7e1f062ed8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6716_6.jpg",
 				"path": "/images/items/01_6716/01_6716_6.jpg",
 				"hash": "90baab0d6c26f223d060b167148392e3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6716_7.jpg",
 				"path": "/images/items/01_6716/01_6716_7.jpg",
 				"hash": "e0db33c7eef9d0bdbdf490552f51faf6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6716_8.jpg",
 				"path": "/images/items/01_6716/01_6716_8.jpg",
 				"hash": "f3f8d40eb1c40a309beec0999fcc507a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6716_9.jpg",
 				"path": "/images/items/01_6716/01_6716_9.jpg",
 				"hash": "bbe1d2c0128dff68127a9264be38d638"
+			},
+			{
+				"path": "/images/items/01_6716/01_6716_10.jpg",
+				"hash": "ced152a1bb0a4bc9c5c55a2d1d7a7dbd"
+			},
+			{
+				"path": "/images/items/01_6716/01_6716_11.jpg",
+				"hash": "a701ed5d655cf393996e23172138fa09"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6716/",
-	"brandIds": [],
-	"seriesIds": ["starwars"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_4153", "01_4154", "01_3514", "01_3515"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6716/"
 }

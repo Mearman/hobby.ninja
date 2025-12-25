@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "龍神丸",
-		"en": "RYUJINMARU"
+		"en": "Ryujinmaru"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "wataru",
+			"url": "https://bandai-hobby.net/series/wataru/",
+			"ja": "ワタルシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5504",
+			"url": "https://bandai-hobby.net/item/01_5504/",
+			"ja": "神龍王丸"
+		},
+		{
+			"id": "01_5502",
+			"url": "https://bandai-hobby.net/item/01_5502/",
+			"ja": "雷神丸"
+		},
+		{
+			"id": "01_5503",
+			"url": "https://bandai-hobby.net/item/01_5503/",
+			"ja": "炎上丸"
+		},
+		{
+			"id": "01_5493",
+			"url": "https://bandai-hobby.net/item/01_5493/",
+			"ja": "天翔丸"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -29,38 +66,46 @@
 		],
 		"en": [
 			"Production of the new TV anime “Mashin Souzouden Wataru” has been decided!",
-			"The main character \"Wataru Hoshibe \"'s demon \" Ryujinmaru\" appears!",
+			"The main character \"Wataru Hoshibe\"'s demon \"Ryujinmaru\" appears!",
 			"• Adopts a common frame across the series that allows parts to be separated by area. Let's play in combination with other genies!",
 			"• Touch gate design that can be removed by hand. Can be assembled without adhesive!",
 			"• Weapons can be attached to the back via joint parts.",
 			"• The head and dragon sword are reproduced in metallic gold molding color."
 		]
 	},
-	"accessories": {
-		"ja": ["登龍剣×1", "シールド×1", "ジョイントパーツ×1式"],
-		"en": ["Toryu sword x1", "Seal × 1", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "登龍剣",
+				"en": "Toryuken"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223338_1.jpg",
 				"path": "/images/items/01_6639/1000223338_1.jpg",
 				"hash": "67764d4f67bac2815a718cc2d697080f"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223338_10.jpg",
-				"path": "/images/items/01_6639/1000223338_10.jpg",
-				"hash": "0706593e195f5002309d11b2db1405b9"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223338_11.jpg",
-				"path": "/images/items/01_6639/1000223338_11.jpg",
-				"hash": "9b672a55c46f4f2bfc20c577a8e7e0cd"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223338_12.jpg",
-				"path": "/images/items/01_6639/1000223338_12.jpg",
-				"hash": "57c14ed4fde0e1cbbb2e991820943000"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223338_2.jpg",
@@ -101,13 +146,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223338_9.jpg",
 				"path": "/images/items/01_6639/1000223338_9.jpg",
 				"hash": "047c1554bdcd4243c2bf90e311426d7b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223338_10.jpg",
+				"path": "/images/items/01_6639/1000223338_10.jpg",
+				"hash": "0706593e195f5002309d11b2db1405b9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223338_11.jpg",
+				"path": "/images/items/01_6639/1000223338_11.jpg",
+				"hash": "9b672a55c46f4f2bfc20c577a8e7e0cd"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000223338_12.jpg",
+				"path": "/images/items/01_6639/1000223338_12.jpg",
+				"hash": "57c14ed4fde0e1cbbb2e991820943000"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6639/",
-	"brandIds": [],
-	"seriesIds": ["wataru"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5504", "01_5502", "01_5503", "01_5493"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_6639/"
 }

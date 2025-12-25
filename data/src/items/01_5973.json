@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス",
-		"en": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON ARQUEBUS ADD VE-40A OPEN FAITH"
+		"en": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A Open Face"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [
+		{
+			"id": "armoredcore",
+			"url": "https://bandai-hobby.net/series/armoredcore/",
+			"ja": "ARMORED CORE Ⅵ FIRES OF RUBICON"
+		}
+	],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5573",
+			"url": "https://bandai-hobby.net/item/01_5573/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON RaD CC-3000 WRECKER ミルクトゥース"
+		},
+		{
+			"id": "01_5574",
+			"url": "https://bandai-hobby.net/item/01_5574/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON BALAM INDUSTRIES BD-011 MELANDER"
+		},
+		{
+			"id": "01_5482",
+			"url": "https://bandai-hobby.net/item/01_5482/",
+			"ja": "30MM オプションパーツセット ARMORED CORE Ⅵ FIRES OF RUBICON WEAPON SET 04"
+		}
+	],
 	"price": {
 		"amount": 5280,
 		"currency": "JPY",
@@ -29,88 +77,110 @@
 			"• 別売りの「アクションベース7」等に接続可能なアーマーパーツが付属。"
 		],
 		"en": [
-			"\"ARMORED CORE VI FIRES OF RUBICON \" items are commercialized in the \" 30 MINUTES MISSIONS\" series.",
-			"Based on the series' key concepts of \"simple assembly \" and \" custom play,\" the \" Open Face\" operated by V.II Snail is now available.",
+			"\"ARMORED CORE VI FIRES OF RUBICON\" items are commercialized in the \"30 MINUTES MISSIONS\" series.",
+			"Based on the series' key concepts of \"simple assembly\" and \"custom play,\" the \"Open Face\" operated by V.II Snail is now available.",
 			"• The head, core, arms, and legs each use the same structure as the series, allowing you to enjoy \"assembling\" the plastic model just like in the game.",
 			"• 3mm joints are used to attach both shoulder weapons and some left-handed weapons, allowing for a variety of assemblies.",
-			"• Weapons include \"VP-66EG \", \" VE-67LLA \", \" VE-60SNA \", and \" Vvc-70VPM\".",
+			"• Weapons include \"VP-66EG\", \"VE-67LLA\", \"VE-60SNA\", and \"Vvc-70VPM\".",
 			"• \"VE-67LLA\" comes in two types: retracted state and expanded state, as well as effect parts.",
 			"• Comes with armor parts that can be connected to \"Action Base 7\" etc. sold separately."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"VP-66EG×1",
-			"VE-67LLA×1式",
-			"VE-60SNA×1",
-			"Vvc-70VPM×1",
-			"ジョイントパーツ×1式",
-			"アクションベース接続用パーツ×1",
-			"シール×1"
-		],
-		"en": [
-			"VP-66EG×1",
-			"VE-67LLA×1 set",
-			"VE-60SNA×1",
-			"Vvc-70VPM×1",
-			"Joint parts x 1 set",
-			"Action base connection parts x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "VP-66EG"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "VE-67LLA"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "VE-60SNA"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "Vvc-70VPM"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "アクションベース接続用パーツ",
+				"en": "Action base connection parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5973_0.jpg",
 				"path": "/images/items/01_5973/01_5973_0.jpg",
 				"hash": "bf804b1e67d164d053896c5f612e228b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5973_1.jpg",
 				"path": "/images/items/01_5973/01_5973_1.jpg",
 				"hash": "be6e34789cc98e480a6006b917e35fc3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5973_2.jpg",
 				"path": "/images/items/01_5973/01_5973_2.jpg",
 				"hash": "0a6542aefbcb3a75c38aeda53e17b65f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5973_3.jpg",
 				"path": "/images/items/01_5973/01_5973_3.jpg",
 				"hash": "5262c01870c26cdeddf185dccc8d8da8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5973_4.jpg",
 				"path": "/images/items/01_5973/01_5973_4.jpg",
 				"hash": "b134ce8e7099dd542fae7fb76c00fb22"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5973_5.jpg",
 				"path": "/images/items/01_5973/01_5973_5.jpg",
 				"hash": "6cfe465c69cde259d85204d971b4506f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5973_6.jpg",
 				"path": "/images/items/01_5973/01_5973_6.jpg",
 				"hash": "b25085b225bfb9248bbce46a7fa9f134"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5973_7.jpg",
 				"path": "/images/items/01_5973/01_5973_7.jpg",
 				"hash": "02c1dfa154ed7853e2225f4405137c0a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5973_8.jpg",
 				"path": "/images/items/01_5973/01_5973_8.jpg",
 				"hash": "ea2f64f096c2c4c9f2b5ace9e1fd5783"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5973/",
-	"brandIds": ["30mm"],
-	"seriesIds": ["armoredcore"],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5974", "01_5573", "01_5574", "01_5482"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5973/"
 }

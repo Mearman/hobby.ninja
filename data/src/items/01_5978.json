@@ -3,7 +3,53 @@
 	"type": "item",
 	"name": {
 		"ja": "30MF ローザンウィザード",
-		"en": "30MF ROSAN WIZARD"
+		"en": "30MF Losan Wizard"
+	},
+	"brands": [
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		},
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5979",
+			"url": "https://bandai-hobby.net/item/01_5979/",
+			"ja": "30MF クラスアップアーマー (ローザンソーサラー)"
+		},
+		{
+			"id": "01_5980",
+			"url": "https://bandai-hobby.net/item/01_5980/",
+			"ja": "30MF クラスアップアーマー (ローザンエンチャンター)"
+		},
+		{
+			"id": "01_5981",
+			"url": "https://bandai-hobby.net/item/01_5981/",
+			"ja": "30MF アイテムショップ4(クエストオプション)"
+		},
+		{
+			"id": "01_5941",
+			"url": "https://bandai-hobby.net/item/01_5941/",
+			"ja": "30MF リーベルウィザード"
+		}
+	],
+	"manual": {
+		"id": "3862",
+		"url": "https://manual.bandai-hobby.net/menus/detail/3862"
 	},
 	"price": {
 		"amount": 2200,
@@ -33,75 +79,97 @@
 			"• 別売りのリーベル共和国の「シルエット」「ウィザード」とは異なるフェイスデザインとカラーリング。"
 		],
 		"en": [
-			"From \"30 MINUTES FANTASY \", where you can create your own fantasy job, \" Lozan Wizard\" is now available!",
+			"From \"30 MINUTES FANTASY\", where you can create your own fantasy job, \"Lozan Wizard\" is now available!",
 			"• A starter set that includes armor and armed parts in addition to the base \"silhouette\" [elementary body].",
 			"• The “silhouette” [elementary body] is capable of flexible human-like actions and is adaptable to any job.",
 			"• By providing movable axes in the head and neck, it is possible to pull the chin, stick out the face, etc.",
 			"• The shoulder joint has a carefully designed structure that maintains the body's line even in bold poses.",
-			"• Compared to the separately sold \"30MF Rose Night \", the \" silhouette\" [base body] has a smarter form.",
+			"• Compared to the separately sold \"30MF Rose Night\", the \"silhouette\" [base body] has a smarter form.",
 			"• The movable axes of the chest, torso, and waist work together with the sliding mechanism at the base of the waist joint to create natural poses.",
 			"• Comes with armor and armed parts to “job change” to “Lozan Wizard” in combination with “Silhouette” [base body].",
 			"• Flexible movement is achieved by attaching the shoulder and waist armor via the joints on the back.",
 			"• The attribute of “element core” is “lightning”.",
-			"• The face design and coloring are different from Liber Republic's \"Silhouette \" and \" Wizard\", which are sold separately."
+			"• The face design and coloring are different from Liber Republic's \"Silhouette\" and \"Wizard\", which are sold separately."
 		]
 	},
-	"accessories": {
-		"ja": ["魔杖×1", "アーマーパーツ×1式", "ハンドパーツ×1式", "ジョイントパーツ×1式"],
-		"en": ["Magic wand x1", "Armor parts x 1 set", "Hand parts x 1 set", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "魔杖",
+				"en": "magic wand"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アーマーパーツ",
+				"en": "armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5978_0.jpg",
 				"path": "/images/items/01_5978/01_5978_0.jpg",
 				"hash": "0ebd01e3a9cb56db2d186727e977cba4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5978_1.jpg",
 				"path": "/images/items/01_5978/01_5978_1.jpg",
 				"hash": "34b38568dc85b53db5c7deffe2369f36"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5978_2.jpg",
 				"path": "/images/items/01_5978/01_5978_2.jpg",
 				"hash": "dcc40c282858e3f034ab826b6318b35b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5978_3.jpg",
 				"path": "/images/items/01_5978/01_5978_3.jpg",
 				"hash": "a4bfc878af0e444bc7736c520cd9dead"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5978_4.jpg",
 				"path": "/images/items/01_5978/01_5978_4.jpg",
 				"hash": "9ee4c9f1bc4fd6b0450fe620c80bc29f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5978_5.jpg",
 				"path": "/images/items/01_5978/01_5978_5.jpg",
 				"hash": "ba9be986cf7999d5d3afcc3d35eb2dd4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5978_6.jpg",
 				"path": "/images/items/01_5978/01_5978_6.jpg",
 				"hash": "30257e0166a12a8768966cab983a3ece"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5978_7.jpg",
 				"path": "/images/items/01_5978/01_5978_7.jpg",
 				"hash": "7128ec616246337438700a3cec529e65"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5978/",
-	"brandIds": ["30mf"],
-	"seriesIds": [],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5979", "01_5980", "01_5981", "01_5941"],
-	"manual": {
-		"id": "3862",
-		"url": "https://manual.bandai-hobby.net/menus/detail/3862/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5978/"
 }

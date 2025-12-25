@@ -2,9 +2,37 @@
 	"id": "01_5969",
 	"type": "item",
 	"name": {
-		"ja": "ガンダムデカールNo.141 機動戦士ガンダム SEED FREEDOM汎用①",
-		"en": "GUNDAM DECAL141 MOBILE SUIT GUNDAM SEED FREEDOM MULTIUSE ①"
+		"ja": "ガンダムデカールNo.141 機動戦士ガンダムSEED FREEDOM汎用①",
+		"en": "Gundam Decal No.141 Mobile Suit GundamSEED FREEDOM General Purpose ①"
 	},
+	"brands": [
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-freedom",
+			"url": "https://bandai-hobby.net/series/seed-freedom/",
+			"ja": "機動戦士ガンダムSEED FREEDOM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5970",
+			"url": "https://bandai-hobby.net/item/01_5970/",
+			"ja": "ガンダムデカールNo.142 機動戦士ガンダムSEED FREEDOM汎用②"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -21,32 +49,32 @@
 	"description": {
 		"ja": [
 			"「ガンダムデカール」新ラインアップ！1/144スケールに使用できる水転写式デカールが登場！",
-			"• 『機動戦士ガンダム SEED FREEDOM』に対応した汎用性の高い水転写式デカール。",
+			"• 『機動戦士ガンダムSEED FREEDOM』に対応した汎用性の高い水転写式デカール。",
 			"• 「HG 1/144 ライジングフリーダムガンダム」「HG 1/144 イモータルジャスティスガンダム」「HG 1/144 ブラックナイトスコードシヴァ」等に対応したデカールが付属。"
 		],
 		"en": [
 			"\"Gundam Decal\" new lineup! Introducing water transfer decals that can be used on 1/144 Scale!",
-			"• A highly versatile water transfer decal compatible with \"Mobile Suit Gundam SEED FREEDOM\".",
-			"• Decals compatible with \"HG 1/144 Rising Freedom Gundam \", \" HG 1/144 Immortal Justice Gundam \", \" HG 1/144 Black Knight Squad Shiva\", etc. are included."
+			"• A highly versatile water transfer decal compatible with \"Mobile Suit GundamSEED FREEDOM\".",
+			"• Decals compatible with \"HG 1/144 Rising Freedom Gundam\", \"HG 1/144 Immortal Justice Gundam\", \"HG 1/144 Black Knight Squad Shiva\", etc. are included."
 		]
 	},
-	"accessories": {
-		"ja": ["水転写式デカール×1"],
-		"en": ["Water transfer decal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5969_0.jpg",
 				"path": "/images/items/01_5969/01_5969_0.jpg",
 				"hash": "17eeb07b0b4d7d86bd554b2bac383d50"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5969/",
-	"brandIds": ["gundam_decal"],
-	"seriesIds": ["seed-freedom"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5970"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5969/"
 }

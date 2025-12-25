@@ -3,8 +3,55 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 eEXM-40 イグライト 02",
-		"en": "30MM 1/144 eEXM-40 IGLIGHT 02"
+		"en": "30MM 1/144 eEXM-40 Iglite 02"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		},
+		{
+			"id": "01_5965",
+			"url": "https://bandai-hobby.net/item/01_5965/",
+			"ja": "30MM 1/144 オプションパーツセット21(マルチミサイル1)"
+		}
+	],
+	"manual": {
+		"id": "3895",
+		"url": "https://manual.bandai-hobby.net/menus/detail/3895"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -18,7 +65,6 @@
 		"day": 20
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"地球連合軍から、機能性と生産性を兼ね備えた新たな主力量産機「イグライト」がロールアウト！！",
@@ -35,7 +81,7 @@
 		"en": [
 			"The Earth Allied Forces has rolled out the new flagship mass-produced machine \"Iglight\", which combines functionality and productivity! !",
 			"• The 30MM series introduces a new entry model that is easier to reach. Product specifications that can be recommended as a starter for beginners.",
-			"• The series' signature aircraft was changed from \"Alto \" to \" Iglite.\"",
+			"• The series' signature aircraft was changed from \"Alto\" to \"Iglite.\"",
 			"• Simplify parts and joints for faster and easier assembly.",
 			"• First touch gate adopted in the 30MM series. Pursuing specifications that allow easier, faster assembly without nippers.",
 			"• Many 3mm joints common to the series are placed in the slim design.",
@@ -45,38 +91,39 @@
 			"• By replacing parts of the head, it is possible to reproduce the visor down state of the night vision scope image."
 		]
 	},
-	"accessories": {
-		"ja": ["ロイロイ×2種"],
-		"en": ["Loi Loi x 2 types"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ロイロイ",
+				"en": "Loi Loi"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5972_0.jpg",
 				"path": "/images/items/01_5972/01_5972_0.jpg",
 				"hash": "6e72c1fac93583adf2c9af460796fc9e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5972_1.jpg",
 				"path": "/images/items/01_5972/01_5972_1.jpg",
 				"hash": "8789f1b3135e43aecec802a75ec07fd4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5972_2.jpg",
 				"path": "/images/items/01_5972/01_5972_2.jpg",
 				"hash": "81af18e05189c8e5fd2bd9d230f46fff"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5972_3.jpg",
 				"path": "/images/items/01_5972/01_5972_3.jpg",
 				"hash": "0f4fa0debbb86be95ec729e185bfe528"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5972/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5973", "01_5974", "01_5964", "01_5965"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5972/"
 }

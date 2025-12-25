@@ -5,6 +5,59 @@
 		"ja": "ＨＧ 1/144 レオン",
 		"en": "HG 1/144 Leon"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hgac",
+			"url": "https://bandai-hobby.net/brand/hgac/",
+			"ja": "HG AFTER COLONY"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "g-unit",
+			"url": "https://bandai-hobby.net/series/g-unit/",
+			"ja": "新機動戦記ガンダムW デュアルストーリー G-UNIT"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "item-1000217501",
+			"url": "https://p-bandai.jp/item/item-1000217501/",
+			"ja": "ＨＧ 1/144 レオール"
+		},
+		{
+			"id": "item-1000209099",
+			"url": "https://p-bandai.jp/item/item-1000209099/",
+			"ja": "ＨＧ 1/144 ガンダムバーンレプオス"
+		},
+		{
+			"id": "01_4393",
+			"url": "https://bandai-hobby.net/item/01_4393/",
+			"ja": "ＨＧ 1/144 ヴァイエイト・シュイヴァン & メリクリウス・シュイヴァン"
+		},
+		{
+			"id": "item-1000176706",
+			"url": "https://p-bandai.jp/item/item-1000176706/",
+			"ja": "ＨＧ 1/144 ガンダムエルオーブースター"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -17,46 +70,37 @@
 		"month": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6690_0.jpg",
 				"path": "/images/items/01_6690/01_6690_0.jpg",
 				"hash": "413068586003dadc02bcb97ddc93dbae"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6690_1.jpg",
-				"path": "/images/items/01_6690/01_6690_1.jpg",
+				"path": "/images/items/01_6690/01_6690_0.jpg",
 				"hash": "413068586003dadc02bcb97ddc93dbae"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6690_2.jpg",
 				"path": "/images/items/01_6690/01_6690_2.jpg",
 				"hash": "cd90c6647391c9e45d93df84256f204a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6690_3.jpg",
 				"path": "/images/items/01_6690/01_6690_3.jpg",
 				"hash": "a2bfc215f7d641749632bee3ea2f8a4d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6690_4.jpg",
 				"path": "/images/items/01_6690/01_6690_4.jpg",
 				"hash": "c59c0ec7fee9d32f300f4ad18b0356bb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6690_5.jpg",
 				"path": "/images/items/01_6690/01_6690_5.jpg",
 				"hash": "f12a194a3ab2b177cc9b84774a187121"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6690_6.jpg",
 				"path": "/images/items/01_6690/01_6690_6.jpg",
 				"hash": "62ae2c6715fc7b28420bcf2d176a80f4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6690_7.jpg",
 				"path": "/images/items/01_6690/01_6690_7.jpg",
 				"hash": "60de7aaba999edaf9600be12bc99b586"
 			}
@@ -64,14 +108,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6690/",
-	"brandIds": ["hg", "hgac", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["g-unit"],
-	"categoryIds": [],
-	"relatedItemIds": ["item-1000217501", "item-1000209099", "01_4393", "item-1000176706"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "3208",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3208/"

@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガルスJ",
-		"en": "HG 1/144 GALLUSS-J"
+		"en": "HG 1/144 Gallus J"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-zz",
+			"url": "https://bandai-hobby.net/series/gundam-zz/",
+			"ja": "機動戦士ガンダムＺＺ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_2079",
+			"url": "https://bandai-hobby.net/item/01_2079/",
+			"ja": "HGUC 1/144 R・ジャジャ"
+		},
+		{
+			"id": "01_2077",
+			"url": "https://bandai-hobby.net/item/01_2077/",
+			"ja": "ＨＧ 1/144 ガズ Ｒ／Ｌ"
+		}
+	],
+	"manual": {
+		"id": "3302",
+		"url": "https://manual.bandai-hobby.net/menus/detail/3302"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -18,10 +66,9 @@
 		"day": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム ZZ』より、特徴的なフォルムと武装を再現した「ガルスJ」がHGで待望の立体化！",
+			"『機動戦士ガンダムZZ』より、特徴的なフォルムと武装を再現した「ガルスJ」がHGで待望の立体化！",
 			"• ガルスJの特有の武装であるエネルギー・ガンが付属。",
 			"• 頭部はモノアイパーツを差し替えて目線移動が可能。",
 			"• 肩部ミサイルハッチはパーツの差し替えでハッチ展開状態を再現可能。",
@@ -30,7 +77,7 @@
 			"• 股関節軸は軸位置を下げることで脚部の可動範囲が拡大。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam ZZ \", the long-awaited HG \" Gallus J\", which reproduces its distinctive form and armament, is now in 3D form!",
+			"From \"Mobile Suit GundamZZ\", the long-awaited HG \"Gallus J\", which reproduces its distinctive form and armament, has been made into a three-dimensional figure!",
 			"• Garrus J's unique weapon energy gun is included.",
 			"• The head can change the line of sight by replacing the mono eye parts.",
 			"• The shoulder missile hatch can reproduce the hatch deployment state by replacing parts.",
@@ -39,73 +86,97 @@
 			"• The range of motion of the legs is expanded by lowering the hip joint axis position."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"エネルギー・ガン×1",
-			"モノアイ差し替えパーツ×1",
-			"アーム・パンチ用差し替えパーツ×1式",
-			"指先パーツ(左)×1",
-			"肩ミサイルハッチ展開差し替えパーツ×1式",
-			"ビーム・サーベル×1",
-			"シール×1"
-		],
-		"en": [
-			"Energy gun x1",
-			"Monoeye replacement parts x 1",
-			"Replacement parts for arm punch x 1 set",
-			"Fingertip parts (left) x 1",
-			"Shoulder missile hatch deployment replacement parts x 1 set",
-			"Beam saber x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "エネルギー・ガン",
+				"en": "energy gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "モノアイ差し替えパーツ",
+				"en": "Monoeye replacement parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アーム・パンチ用差し替えパーツ",
+				"en": "Replacement parts for arm punch"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "指先パーツ(左)",
+				"en": "Fingertip parts (left)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "肩ミサイルハッチ展開差し替えパーツ",
+				"en": "Shoulder missile hatch deployment replacement parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5963_0.jpg",
 				"path": "/images/items/01_5963/01_5963_0.jpg",
 				"hash": "15660889be60ac4370cf999e5e092fc7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5963_1.jpg",
 				"path": "/images/items/01_5963/01_5963_1.jpg",
 				"hash": "cca7a4a4141f54f3af4d71eff741e736"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5963_2.jpg",
 				"path": "/images/items/01_5963/01_5963_2.jpg",
 				"hash": "2e035b84306e19fab9d792d7ec384198"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5963_3.jpg",
 				"path": "/images/items/01_5963/01_5963_3.jpg",
 				"hash": "258fb0dce45d17ca3ed22e96ca5ff56a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5963_4.jpg",
 				"path": "/images/items/01_5963/01_5963_4.jpg",
 				"hash": "bf38cf8cfb6013094517e2014f06eac1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5963_5.jpg",
 				"path": "/images/items/01_5963/01_5963_5.jpg",
 				"hash": "a658635644e9a6cc7fd4e806281edacf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5963_6.jpg",
 				"path": "/images/items/01_5963/01_5963_6.jpg",
 				"hash": "0e85a11d2a7d8e2570992d0cd3ca8113"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5963/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam-zz"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4985", "01_4971", "01_2079", "01_2077"],
-	"manual": {
-		"id": "3302",
-		"url": "https://manual.bandai-hobby.net/menus/detail/3302/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5963/"
 }

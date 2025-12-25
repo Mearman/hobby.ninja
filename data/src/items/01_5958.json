@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "ポケモンプラモコレクション 59 セレクトシリーズ ミライドン",
-		"en": "Pokémon Model Kit MIRAIDON"
+		"en": "Pokemon Plastic Model Collection 59 Select Series Miraidon"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6780",
+			"url": "https://bandai-hobby.net/item/01_6780/",
+			"ja": "ポケモンプラモコレクション 61 セレクトシリーズ メガレックウザ"
+		},
+		{
+			"id": "01_6762",
+			"url": "https://bandai-hobby.net/item/01_6762/",
+			"ja": "ポケモンプラモコレクション クイック!! 24 ピチュー"
+		},
+		{
+			"id": "01_5984",
+			"url": "https://bandai-hobby.net/item/01_5984/",
+			"ja": "ポケモンプラモコレクション 60 セレクトシリーズ コライドン"
+		},
+		{
+			"id": "01_5947",
+			"url": "https://bandai-hobby.net/item/01_5947/",
+			"ja": "ポケモンプラモコレクション クイック!! 23 ジラーチ"
+		}
+	],
 	"price": {
 		"amount": 2310,
 		"currency": "JPY",
@@ -30,48 +67,49 @@
 			"• Includes display pedestal."
 		]
 	},
-	"accessories": {
-		"ja": ["シール", "ディスプレイ台座×1"],
-		"en": ["Seal", "Display pedestal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座",
+				"en": "display pedestal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5958_0.jpg",
 				"path": "/images/items/01_5958/01_5958_0.jpg",
 				"hash": "3d16944abf5988160a69ae87c1f0604f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5958_1.jpg",
 				"path": "/images/items/01_5958/01_5958_1.jpg",
 				"hash": "e0eb486882036e047a79eaf50eca0fda"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5958_2.jpg",
 				"path": "/images/items/01_5958/01_5958_2.jpg",
 				"hash": "664c8cc06b64632d64a88e2797ac8794"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5958_3.jpg",
 				"path": "/images/items/01_5958/01_5958_3.jpg",
 				"hash": "ad60948c28658146994e50bbd3ec1623"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5958_4.jpg",
 				"path": "/images/items/01_5958/01_5958_4.jpg",
 				"hash": "8f9434cd9aebb75606427b350a7972b2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5958_5.jpg",
 				"path": "/images/items/01_5958/01_5958_5.jpg",
 				"hash": "6d6edb340da7c1956e8f61b366c5efb2"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5958/",
-	"brandIds": [],
-	"seriesIds": ["pokemon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_6780", "01_6762", "01_5984", "01_5947"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5958/"
 }

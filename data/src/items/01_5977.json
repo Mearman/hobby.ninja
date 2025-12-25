@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)",
-		"en": "30MS MIKI HOSHII (20th Anniv.YOU AND i！)"
+		"en": "30MS Miki Hoshii (20th Anniv. YOU AND Ai!)"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [
+		{
+			"id": "idolmaster",
+			"url": "https://bandai-hobby.net/series/idolmaster/",
+			"ja": "アイドルマスターシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6755",
+			"url": "https://bandai-hobby.net/item/01_6755/",
+			"ja": "30MS 芹沢あさひ"
+		},
+		{
+			"id": "01_6756",
+			"url": "https://bandai-hobby.net/item/01_6756/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム3[カラーB]"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5975",
+			"url": "https://bandai-hobby.net/item/01_5975/",
+			"ja": "30MS 和泉愛依"
+		}
+	],
 	"price": {
 		"amount": 5060,
 		"currency": "JPY",
@@ -28,7 +76,7 @@
 			"• 表情付きハンドパーツに加えマイクが保持できるハンドパーツが付属。"
 		],
 		"en": [
-			"\"Miki Hoshii \" from \" THE IDOLM@STER \" is made into 3D in 30MS format! An all-in-one item that includes the 20th lap commemorative costume \" YOU AND I!\" and full body parts.",
+			"\"Miki Hoshii\" from \"THE IDOLM@STER\" is made into 3D in 30MS format! An all-in-one item that includes the 20th lap commemorative costume \"YOU AND I!\" and full body parts.",
 			"• Three types of facial expression parts with tampo printing are included. The color coding inside the mouth is reproduced by dividing the parts. The hair can be recreated without any hair ornaments by rearranging the parts.",
 			"• The costume uses clear parts for details such as hair ornaments and collars, and reproduces colorful color coding and precise details just by assembling.",
 			"• The skirt is reproduced with a sheet with a pattern printed on it.",
@@ -36,83 +84,100 @@
 			"• In addition to hand parts with facial expressions, hand parts that can hold a microphone are included."
 		]
 	},
-	"accessories": {
-		"ja": ["フェイスパーツ(タンポ印刷)×3種", "ハンドパーツ×1式", "髪パーツ(髪飾りなし)×1式", "マイク×1"],
-		"en": [
-			"Face parts (tampo printing) x 3 types",
-			"Hand parts x 1 set",
-			"Hair parts (no hair ornaments) x 1 set",
-			"Microphone x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フェイスパーツ(タンポ印刷)",
+				"en": "Face parts (tampo printing)"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "髪パーツ(髪飾りなし)",
+				"en": "Hair parts (no hair ornaments)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "マイク",
+				"en": "microphone"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5977_0.jpg",
 				"path": "/images/items/01_5977/01_5977_0.jpg",
 				"hash": "33513f2c2f8293f0e50220db39e0999d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5977_1.jpg",
 				"path": "/images/items/01_5977/01_5977_1.jpg",
 				"hash": "3ddebbf3628c4d1988bff38f0384093f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5977_10.jpg",
-				"path": "/images/items/01_5977/01_5977_10.jpg",
-				"hash": "965f6525eb08d426ea25c89f1952d225"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5977_11.jpg",
-				"path": "/images/items/01_5977/01_5977_11.jpg",
-				"hash": "b56b30c384a01f09e8e728a3730f1952"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5977_2.jpg",
 				"path": "/images/items/01_5977/01_5977_2.jpg",
 				"hash": "629a54c5564d71afec304d53d68964e4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5977_3.jpg",
 				"path": "/images/items/01_5977/01_5977_3.jpg",
 				"hash": "91779339f5cfe84ab6df24d841f65b2c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5977_4.jpg",
 				"path": "/images/items/01_5977/01_5977_4.jpg",
 				"hash": "bbfc14373e88f7aeb4cfe4a1ab092df1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5977_5.jpg",
 				"path": "/images/items/01_5977/01_5977_5.jpg",
 				"hash": "a0193b8144c1507e12159bbbb41dc5e4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5977_6.jpg",
 				"path": "/images/items/01_5977/01_5977_6.jpg",
 				"hash": "73d7b66e893d3a8acb8a7247e99253f3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5977_7.jpg",
 				"path": "/images/items/01_5977/01_5977_7.jpg",
 				"hash": "ce5eafab40b7dd844a933b5c6829db49"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5977_8.jpg",
 				"path": "/images/items/01_5977/01_5977_8.jpg",
 				"hash": "932d1f7e056e3bcefd2f0d2bf3000018"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5977_9.jpg",
 				"path": "/images/items/01_5977/01_5977_9.jpg",
 				"hash": "593f6be163c08fc828bb38f6837ae54c"
+			},
+			{
+				"path": "/images/items/01_5977/01_5977_10.jpg",
+				"hash": "965f6525eb08d426ea25c89f1952d225"
+			},
+			{
+				"path": "/images/items/01_5977/01_5977_11.jpg",
+				"hash": "b56b30c384a01f09e8e728a3730f1952"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5977/",
-	"brandIds": ["30ms"],
-	"seriesIds": ["idolmaster"],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_6755", "01_6756", "01_5976", "01_5975"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5977/"
 }

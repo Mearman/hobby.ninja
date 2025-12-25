@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "ＭＧ 1/100 ガンダムＴＲ－１ ［ヘイズル改］用 シールド・ブースター拡張セット",
-		"en": "Seal Booster Expansion Set for MG 1/100 Gundam TR-1 [Hazel Kai]"
+		"en": "Seal Booster Expansion Set for MG 1/100 GundamTR-1 [Hazel Kai]"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "advance-of-z",
+			"url": "https://bandai-hobby.net/series/advance-of-z/",
+			"ja": "ADVANCE OF Z"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/100",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -17,11 +50,9 @@
 		"month": 7
 	},
 	"targetAge": 10,
-	"scale": "1/100",
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6692_0.jpg",
 				"path": "/images/items/01_6692/01_6692_0.jpg",
 				"hash": "94df269f7b6b5f262928a4daa660268c"
 			}
@@ -29,14 +60,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6692/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": ["advance-of-z"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": [],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2458",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2458/"

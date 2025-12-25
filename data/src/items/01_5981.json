@@ -3,7 +3,53 @@
 	"type": "item",
 	"name": {
 		"ja": "30MF アイテムショップ4(クエストオプション)",
-		"en": "30MF ITEM SHOP 4 (QUEST OPTION)"
+		"en": "30MF Item Shop 4 (Quest Option)"
+	},
+	"brands": [
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		},
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5978",
+			"url": "https://bandai-hobby.net/item/01_5978/",
+			"ja": "30MF ローザンウィザード"
+		},
+		{
+			"id": "01_5979",
+			"url": "https://bandai-hobby.net/item/01_5979/",
+			"ja": "30MF クラスアップアーマー (ローザンソーサラー)"
+		},
+		{
+			"id": "01_5980",
+			"url": "https://bandai-hobby.net/item/01_5980/",
+			"ja": "30MF クラスアップアーマー (ローザンエンチャンター)"
+		},
+		{
+			"id": "01_5941",
+			"url": "https://bandai-hobby.net/item/01_5941/",
+			"ja": "30MF リーベルウィザード"
+		}
+	],
+	"manual": {
+		"id": "3865",
+		"url": "https://manual.bandai-hobby.net/menus/detail/3865"
 	},
 	"price": {
 		"amount": 880,
@@ -21,80 +67,100 @@
 	"description": {
 		"ja": [
 			"自分だけのファンタジージョブを創り出すことが出来る『30 MINUTES FANTASY』より、「30MF アイテムショップ4(クエストオプション)」が登場！",
-			"■冒険や探検にかかせない遊びの幅を広げるアイテムが詰まったセット。",
-			"■アイテムの内容は「焚火」「トーチ」「ランタン」「魔導書」。",
-			"■「トーチ」は各所に取り付け可能なジョイントパーツが付属。",
-			"■「魔導書」は可動式で開く・閉じることが可能。"
+			"• 冒険や探検にかかせない遊びの幅を広げるアイテムが詰まったセット。",
+			"• アイテムの内容は「焚火」「トーチ」「ランタン」「魔導書」。",
+			"• 「トーチ」は各所に取り付け可能なジョイントパーツが付属。",
+			"• 「魔導書」は可動式で開く・閉じることが可能。"
 		],
 		"en": [
-			"\"30MF Item Shop 4 (Quest Option)\" is now available from \" 30 MINUTES FANTASY\" where you can create your own fantasy job!",
+			"\"30MF Item Shop 4 (Quest Option)\" is now available from \"30 MINUTES FANTASY\" where you can create your own fantasy job!",
 			"• A set packed with items that expand the range of play essential for adventure and exploration.",
-			"• Item contents include \"bonfire \", \" torch \", \" lantern \", and \" spellbook\".",
+			"• Item contents include \"bonfire\", \"torch\", \"lantern\", and \"spellbook\".",
 			"• \"Torch\" comes with joint parts that can be attached to various places.",
 			"• The \"Magic Book\" is movable and can be opened and closed."
 		]
 	},
-	"accessories": {
-		"ja": ["焚火×1式", "トーチ×1", "ランタン×1", "魔導書×1", "ジョイントパーツ×1"],
-		"en": ["Bonfire x 1 set", "Torch x 1", "Lantern x 1", "Magic book x1", "Joint parts x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "焚火",
+				"en": "bonfire"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "トーチ",
+				"en": "torch"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ランタン",
+				"en": "lanthanum"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "魔導書",
+				"en": "magic book"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5981_0.jpg",
 				"path": "/images/items/01_5981/01_5981_0.jpg",
 				"hash": "befe61b6805bb854a8d8072c2aee5f8a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5981_1.jpg",
 				"path": "/images/items/01_5981/01_5981_1.jpg",
 				"hash": "8756870e458167c4055b89e40590e18c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5981_2.jpg",
 				"path": "/images/items/01_5981/01_5981_2.jpg",
 				"hash": "cfd28b6f24330c75aa7174cf55a67b38"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5981_3.jpg",
 				"path": "/images/items/01_5981/01_5981_3.jpg",
 				"hash": "251d20b60529c9cfc4315a1a8ecc0155"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5981_4.jpg",
 				"path": "/images/items/01_5981/01_5981_4.jpg",
 				"hash": "b87c13acaff731dfbced3db8d3c37266"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5981_5.jpg",
 				"path": "/images/items/01_5981/01_5981_5.jpg",
 				"hash": "61d55645a020021c36c1df2fb729caad"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5981_6.jpg",
 				"path": "/images/items/01_5981/01_5981_6.jpg",
 				"hash": "fa11154503d5f874f05df9d149e45e78"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5981_7.jpg",
 				"path": "/images/items/01_5981/01_5981_7.jpg",
 				"hash": "22383eb16c2936857e90768e8f41a9fa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5981_8.jpg",
 				"path": "/images/items/01_5981/01_5981_8.jpg",
 				"hash": "7f52305a194809ebe1e653d4608af2bb"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5981/",
-	"brandIds": ["30mf"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5978", "01_5979", "01_5980", "01_5941"],
-	"manual": {
-		"id": "3865",
-		"url": "https://manual.bandai-hobby.net/menus/detail/3865/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5981/"
 }

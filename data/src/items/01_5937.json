@@ -3,7 +3,44 @@
 	"type": "item",
 	"name": {
 		"ja": "オプションパーツセット ガンプラ 17 (バインダーガン)",
-		"en": "OPTION PARTS SET GUNPLA 17 (BINDER GUN)"
+		"en": "Option parts set Gunpla 17 (binder gun)"
+	},
+	"brands": [
+		{
+			"id": "optionpartsset",
+			"url": "https://bandai-hobby.net/brand/optionpartsset/",
+			"ja": "オプションパーツセット"
+		}
+	],
+	"series": [
+		{
+			"id": "builddivers",
+			"url": "https://bandai-hobby.net/series/builddivers/",
+			"ja": "ガンダムビルドダイバーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5189",
+			"url": "https://bandai-hobby.net/item/01_5189/",
+			"ja": "オプションパーツセット ガンプラ 04 (ビルドハンズ 丸型)"
+		},
+		{
+			"id": "01_5190",
+			"url": "https://bandai-hobby.net/item/01_5190/",
+			"ja": "オプションパーツセット ガンプラ 03 (ビルドハンズ 角型)"
+		}
+	],
+	"manual": {
+		"id": "3237",
+		"url": "https://manual.bandai-hobby.net/menus/detail/3237"
 	},
 	"price": {
 		"amount": 660,
@@ -27,74 +64,79 @@
 			"• 様々なバトルをイメージしてHGシリーズに取り付けてみよう。"
 		],
 		"en": [
-			"The 17th installment of the \"Option Parts Set Series \" is the \" Binder Gun\"! By using the included joint parts, you can change the mode to a variety of weapons! !",
+			"The 17th installment of the \"Option Parts Set Series\" is the \"Binder Gun\"! By using the included joint parts, you can change the mode to a variety of weapons! !",
 			"• Can be equipped as a binder that enhances posture control ability by attaching it to a backpack.",
 			"• By attaching a grip to the binder part, it can be switched to sword mode and rifle mode.",
 			"• Many joint parts are included and can be combined to create a binder gun.",
 			"• Imagine various battles and try attaching it to the HG series."
 		]
 	},
-	"accessories": {
-		"ja": ["バインダーパーツ（大小）×各2", "ガンパーツ×1", "ジョイントパーツ×1式"],
-		"en": ["Binder parts (large and small) x 2 each", "Gun parts x 1", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "バインダーパーツ（大小）×各2",
+				"en": "Binder parts (large and small) x 2 each"
+			}
+		},
+		{
+			"name": {
+				"ja": "ガンパーツ",
+				"en": "gun parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5937_0.jpg",
 				"path": "/images/items/01_5937/01_5937_0.jpg",
 				"hash": "667d42ca0dd034747bf818ab4cb7d4d1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5937_1.jpg",
 				"path": "/images/items/01_5937/01_5937_1.jpg",
 				"hash": "0af01979a24b10df1b13238136168fff"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5937_2.jpg",
 				"path": "/images/items/01_5937/01_5937_2.jpg",
 				"hash": "fdce4a43df5572dfec36cab746d272ae"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5937_3.jpg",
 				"path": "/images/items/01_5937/01_5937_3.jpg",
 				"hash": "8a9f32dd762f2588593f0eea7cc9e75b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5937_4.jpg",
 				"path": "/images/items/01_5937/01_5937_4.jpg",
 				"hash": "7885f9d74670a023a66d49385cd48c1b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5937_5.jpg",
 				"path": "/images/items/01_5937/01_5937_5.jpg",
 				"hash": "4a8a4a3b59df5240b5ec435fca8814fb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5937_6.jpg",
 				"path": "/images/items/01_5937/01_5937_6.jpg",
 				"hash": "9df693dd77776615c888a7df4b23ad40"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5937_7.jpg",
 				"path": "/images/items/01_5937/01_5937_7.jpg",
 				"hash": "e4525ddfaaa4e06485d9a5c6e8c51dd6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5937_8.jpg",
 				"path": "/images/items/01_5937/01_5937_8.jpg",
 				"hash": "32a3a3da0b7db9cf370b97d72ac34d68"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5937/",
-	"brandIds": ["optionpartsset"],
-	"seriesIds": ["builddivers"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5189", "01_5190"],
-	"manual": {
-		"id": "3237",
-		"url": "https://manual.bandai-hobby.net/menus/detail/3237/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5937/"
 }

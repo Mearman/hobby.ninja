@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "30MS 和泉愛依",
-		"en": "30MS MEI IZUMI"
+		"en": "30MS Ai Izumi"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [
+		{
+			"id": "idolmaster",
+			"url": "https://bandai-hobby.net/series/idolmaster/",
+			"ja": "アイドルマスターシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6755",
+			"url": "https://bandai-hobby.net/item/01_6755/",
+			"ja": "30MS 芹沢あさひ"
+		},
+		{
+			"id": "01_6756",
+			"url": "https://bandai-hobby.net/item/01_6756/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム3[カラーB]"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		}
+	],
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -21,13 +69,13 @@
 	"description": {
 		"ja": [
 			"アイドルマスター シャイニーカラーズより、ストレイライトの「和泉愛依」を30MSフォーマットで立体化！全身のパーツが同梱されているオールインワンアイテム。",
-			"■表情パーツはタンポ印刷を施した3種が付属。口の中の色分けはパーツ分割で再現。髪はパーツの組み替えで髪飾りのない状態を再現可能。",
-			"■両耳のピアスの形状を造型で再現。",
-			"■衣装の胸部パーツは限界まで追求したパーツ構成で、そのまま組み立てるだけでカラフルな色分けや精密なディテールを再現。背中の小さな羽もパーツ形状で再現。",
-			"■胸元のハートはプラスチックシールでクリアな質感を表現。",
-			"■スカートは模様をプリントしたシートで波打った形状を表現。一部のパーツにはラメ入りのスモーククリア素材を採用。",
-			"■肌パーツは仕上げの際に金型表面に艶消し処理を施し、柔らかく光を反射する演出がされている。",
-			"■表情付きハンドパーツに加えマイクが保持できるハンドパーツが3種付属。"
+			"• 表情パーツはタンポ印刷を施した3種が付属。口の中の色分けはパーツ分割で再現。髪はパーツの組み替えで髪飾りのない状態を再現可能。",
+			"• 両耳のピアスの形状を造型で再現。",
+			"• 衣装の胸部パーツは限界まで追求したパーツ構成で、そのまま組み立てるだけでカラフルな色分けや精密なディテールを再現。背中の小さな羽もパーツ形状で再現。",
+			"• 胸元のハートはプラスチックシールでクリアな質感を表現。",
+			"• スカートは模様をプリントしたシートで波打った形状を表現。一部のパーツにはラメ入りのスモーククリア素材を採用。",
+			"• 肌パーツは仕上げの際に金型表面に艶消し処理を施し、柔らかく光を反射する演出がされている。",
+			"• 表情付きハンドパーツに加えマイクが保持できるハンドパーツが3種付属。"
 		],
 		"en": [
 			"From THE IDOLM@STER Shiny Colors, Stray Light's \"Ai Izumi\" is now three-dimensional in 30MS format! All-in-one item that includes all parts of the whole body.",
@@ -40,84 +88,107 @@
 			"• In addition to hand parts with facial expressions, 3 types of hand parts that can hold a microphone are included."
 		]
 	},
-	"accessories": {
-		"ja": ["フェイスパーツ(タンポ印刷)×3種", "ハンドパーツ×1式", "髪パーツ(髪飾りなし)×1式", "マイク×1", "シール×1"],
-		"en": [
-			"Face parts (tampo printing) x 3 types",
-			"Hand parts x 1 set",
-			"Hair parts (no hair ornaments) x 1 set",
-			"Microphone x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フェイスパーツ(タンポ印刷)",
+				"en": "Face parts (tampo printing)"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "髪パーツ(髪飾りなし)",
+				"en": "Hair parts (no hair ornaments)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "マイク",
+				"en": "microphone"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5975_0.jpg",
 				"path": "/images/items/01_5975/01_5975_0.jpg",
 				"hash": "7f22038e6c94fe2847033db934cee03f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5975_1.jpg",
 				"path": "/images/items/01_5975/01_5975_1.jpg",
 				"hash": "63b41e9692afa7869eb02b751c4759f6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5975_10.jpg",
-				"path": "/images/items/01_5975/01_5975_10.jpg",
-				"hash": "98746d8762d37a4e2bc24a8b2db1e93d"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5975_11.jpg",
-				"path": "/images/items/01_5975/01_5975_11.jpg",
-				"hash": "5a5ed2148378865c02b0026d5adaa248"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5975_2.jpg",
 				"path": "/images/items/01_5975/01_5975_2.jpg",
 				"hash": "96ab5d5907d457270136493c33923639"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5975_3.jpg",
 				"path": "/images/items/01_5975/01_5975_3.jpg",
 				"hash": "5a4b9ec63acaa745438f051b0eb67e3a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5975_4.jpg",
 				"path": "/images/items/01_5975/01_5975_4.jpg",
 				"hash": "89d83f7fe60544088be20afd9f8a36ee"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5975_5.jpg",
 				"path": "/images/items/01_5975/01_5975_5.jpg",
 				"hash": "b47f17d5bc201d37d7dc83eebb608e70"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5975_6.jpg",
 				"path": "/images/items/01_5975/01_5975_6.jpg",
 				"hash": "08ecdcc5c16d0ab82b7542c5516bf328"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5975_7.jpg",
 				"path": "/images/items/01_5975/01_5975_7.jpg",
 				"hash": "3e1f4d6788f1c68f2a4df0e5a17cd003"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5975_8.jpg",
 				"path": "/images/items/01_5975/01_5975_8.jpg",
 				"hash": "d00fd620ed2ff383dc73c4a42746a15a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5975_9.jpg",
 				"path": "/images/items/01_5975/01_5975_9.jpg",
 				"hash": "d2a0814c7458e87431b061c701e2f63b"
+			},
+			{
+				"path": "/images/items/01_5975/01_5975_10.jpg",
+				"hash": "98746d8762d37a4e2bc24a8b2db1e93d"
+			},
+			{
+				"path": "/images/items/01_5975/01_5975_11.jpg",
+				"hash": "5a5ed2148378865c02b0026d5adaa248"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5975/",
-	"brandIds": ["30ms"],
-	"seriesIds": ["idolmaster"],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_6755", "01_6756", "01_5976", "01_5977"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5975/"
 }

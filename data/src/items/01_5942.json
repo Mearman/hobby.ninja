@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MF クラスアップアーマー (リーベルソーサラー)",
-		"en": "30MF CLASS UP ARMOR (LIBER SORCERER)"
+		"en": "30MF Class Up Armor (Liber Sorcerer)"
 	},
+	"brands": [
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		},
+		{
+			"id": "30mf",
+			"url": "https://bandai-hobby.net/brand/30mf/",
+			"ja": "30 MINUTES FANTASY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5978",
+			"url": "https://bandai-hobby.net/item/01_5978/",
+			"ja": "30MF ローザンウィザード"
+		},
+		{
+			"id": "01_5979",
+			"url": "https://bandai-hobby.net/item/01_5979/",
+			"ja": "30MF クラスアップアーマー (ローザンソーサラー)"
+		},
+		{
+			"id": "01_5980",
+			"url": "https://bandai-hobby.net/item/01_5980/",
+			"ja": "30MF クラスアップアーマー (ローザンエンチャンター)"
+		},
+		{
+			"id": "01_5981",
+			"url": "https://bandai-hobby.net/item/01_5981/",
+			"ja": "30MF アイテムショップ4(クエストオプション)"
+		}
+	],
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -27,41 +69,56 @@
 			"• 別売りのローザン帝国の「ソーサラー」とは異なるフェイスデザインとカラーリング。"
 		],
 		"en": [
-			"From \"30 MINUTES FANTASY \", where you can create your own fantasy job, \" Class Up Armor (Liber Sorcerer)\" is now available!",
+			"From \"30 MINUTES FANTASY\", where you can create your own fantasy job, \"Class Up Armor (Liber Sorcerer)\" is now available!",
 			"• “Armor Cross” [Armor Replacement] A set of armor and weapons that can be “classed up” to a higher-level job.",
-			"• By combining it with the separately sold \"30MF Liber Wizard \", it is possible to \" class up \" to \" Level Sorcerer\".",
+			"• By combining it with the separately sold \"30MF Liber Wizard\", it is possible to \"class up\" to \"Level Sorcerer\".",
 			"• The attribute of “element core” is “ice”.",
 			"• Face design and coloring different from the Rozan Empire's \"Sorcerer\" sold separately."
 		]
 	},
-	"accessories": {
-		"ja": ["アーマーパーツ×1式", "武装パーツ×1式"],
-		"en": ["Armor parts x 1 set", "Armed parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "アーマーパーツ",
+				"en": "armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "武装パーツ",
+				"en": "armed parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5942_0.jpg",
 				"path": "/images/items/01_5942/01_5942_0.jpg",
 				"hash": "f07f2bfa4952e4c9ab2f651bcddeeb6a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5942_1.jpg",
 				"path": "/images/items/01_5942/01_5942_1.jpg",
 				"hash": "4cf123f1fcf8dc642acf10d34da1047a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5942_2.jpg",
 				"path": "/images/items/01_5942/01_5942_2.jpg",
 				"hash": "93a49ecaf8e7f66019691fd5246e0c9a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5942_3.jpg",
 				"path": "/images/items/01_5942/01_5942_3.jpg",
 				"hash": "9f2c9ace0627c44157cad7f2ba19184d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5942_4.jpg",
 				"path": "/images/items/01_5942/01_5942_4.jpg",
 				"hash": "2fbe1a54f4d258549294edc951799f3f"
 			}
@@ -69,10 +126,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5942/",
-	"brandIds": ["30mf"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5978", "01_5979", "01_5980", "01_5981"],
 	"manual": {
 		"id": "3426",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3426/"

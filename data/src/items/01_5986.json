@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)",
-		"en": "HG 1/144 GAIA'S/ORTEGA’S RICK DOM(GQ)"
+		"en": "HG 1/144 Rick Dom Gaia machine/Ortega machine (GQ)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gquuuuuux",
+			"url": "https://bandai-hobby.net/series/gquuuuuux/",
+			"ja": "機動戦士Gundam GQuuuuuuX"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		},
+		{
+			"id": "01_5952",
+			"url": "https://bandai-hobby.net/item/01_5952/",
+			"ja": "HG 1/144 エグザベ専用ギャン(ハクジ装備)"
+		},
+		{
+			"id": "01_5935",
+			"url": "https://bandai-hobby.net/item/01_5935/",
+			"ja": "HG 1/144 ゲルググ ボカタ機(GQ)"
+		}
+	],
+	"manual": {
+		"id": "3896",
+		"url": "https://manual.bandai-hobby.net/menus/detail/3896"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 3630,
 		"currency": "JPY",
@@ -18,7 +66,6 @@
 		"day": 20
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士Gundam GQuuuuuuX』(ジークアクス)より、「リック・ドム ガイア機/オルテガ機」をHGで立体化！",
@@ -28,65 +75,91 @@
 			"• 電磁ハーケンにはリード線を使用。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam GQuuuuuuX \" (Zeke Ax), \" Rick Dom Gaia machine/Ortega machine\" is made into a three-dimensional HG!",
+			"From \"Mobile Suit Gundam GQuuuuuuX\" (Zeke Ax), \"Rick Dom Gaia machine/Ortega machine\" is made into a three-dimensional HG!",
 			"• Mobility that allows you to reproduce the movements in the play.",
 			"• Can be transformed into high mobility mode without replacement.",
 			"• Giant Buzz is included and the grip is movable.",
 			"• Use lead wire for electromagnetic Harken."
 		]
 	},
-	"accessories": {
-		"ja": ["武装×1式", "リード線×1式", "ハンドパーツ×1式", "マーキングシール×1"],
-		"en": ["Armed x 1 type", "Lead wire x 1 set", "Hand parts x 1 set", "MarkingSeal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "武装",
+				"en": "armed"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "リード線",
+				"en": "lead wire"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5986_0.jpg",
 				"path": "/images/items/01_5986/01_5986_0.jpg",
 				"hash": "9a59755adf5f5245147f8e4f80062ed3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5986_1.jpg",
 				"path": "/images/items/01_5986/01_5986_1.jpg",
 				"hash": "d1d5b2cffc2edbd0d216d6c325b27ac6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5986_2.jpg",
 				"path": "/images/items/01_5986/01_5986_2.jpg",
 				"hash": "064139f2d9a898af00e73253381fb09d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5986_3.jpg",
 				"path": "/images/items/01_5986/01_5986_3.jpg",
 				"hash": "11c81732388674f255460e782cb9e312"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5986_4.jpg",
 				"path": "/images/items/01_5986/01_5986_4.jpg",
 				"hash": "fb57d930fe16b073d581b5d8051eb526"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5986_5.jpg",
 				"path": "/images/items/01_5986/01_5986_5.jpg",
 				"hash": "39a1a26c1851dcbda3940bb72459be64"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5986_6.jpg",
 				"path": "/images/items/01_5986/01_5986_6.jpg",
 				"hash": "a4ef65c1a86793b8b383954ec4d7b956"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5986_7.jpg",
 				"path": "/images/items/01_5986/01_5986_7.jpg",
 				"hash": "947845a862102ea3e307e3ee965fcf7f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5986/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gquuuuuux"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5961", "01_5951", "01_5952", "01_5935"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5986/"
 }

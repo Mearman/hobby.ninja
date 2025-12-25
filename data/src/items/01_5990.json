@@ -5,6 +5,49 @@
 		"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1",
 		"en": "Clay ModelKit Unkosuru Days Super DX Set 1"
 	},
+	"brands": [
+		{
+			"id": "claymodelkit",
+			"url": "https://bandai-hobby.net/brand/claymodelkit/",
+			"ja": "クレイモデルキット"
+		}
+	],
+	"series": [
+		{
+			"id": "unkosuldays",
+			"url": "https://bandai-hobby.net/series/unkosuldays/",
+			"ja": "ウンコスルデイズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5959",
+			"url": "https://bandai-hobby.net/item/01_5959/",
+			"ja": "クレイモデルキット あにまるうんちセット1 ねこ&くま"
+		},
+		{
+			"id": "01_5960",
+			"url": "https://bandai-hobby.net/item/01_5960/",
+			"ja": "クレイモデルキット サラリーマンうんこ"
+		},
+		{
+			"id": "01_5985",
+			"url": "https://bandai-hobby.net/item/01_5985/",
+			"ja": "クレイモデルキット 大剣使いうんこ"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -23,112 +66,126 @@
 			"プラモと粘土でキミだけのうんこキャラを作り出そう！",
 			"『クレイモデルキット』より、「ウンコスルデイズ スーパーDXセット1」が登場！",
 			"4キャラクター分のパーツと4色の紙ねんどが付属したDXセット！",
-			"■サイバー戦士、アイドル、ねこ、くまが色違いで登場。",
-			"■こちらのDXセットだけで様々な組み合わせで遊ぶことができる。",
-			"■こちらは対象年齢6才以上の商品です。"
+			"• サイバー戦士、アイドル、ねこ、くまが色違いで登場。",
+			"• こちらのDXセットだけで様々な組み合わせで遊ぶことができる。",
+			"• こちらは対象年齢6才以上の商品です。"
 		],
 		"en": [
 			"Create your own poop character using plastic models and clay!",
-			"\"Unkosuru Days Super DX Set 1 \" is now available from \" Clay ModelKit\"!",
+			"\"Unkosuru Days Super DX Set 1\" is now available from \"Clay ModelKit\"!",
 			"A DX set that comes with parts for 4 characters and paper clay in 4 colors!",
 			"• Cyber ​​warriors, idols, cats, and bears come in different colors.",
 			"• You can play with various combinations with just this DX set.",
 			"• This product is for ages 6 and up."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ウンコ型(大)×1",
-			"ウンチ型(小)×1",
-			"紙ねんど 赤（30g）×1",
-			"紙ねんど 青（30g）×1",
-			"紙ねんど 黒（30g）×1",
-			"紙ねんど 白（30g）×1",
-			"シール×1"
-		],
-		"en": [
-			"Poop type (large) x 1",
-			"Poop mold (small) x 1",
-			"Paper clay red (30g) x 1",
-			"Paper clay blue (30g) x 1",
-			"Paper clay black (30g) x 1",
-			"Paper clay white (30g) x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ウンコ型(大)",
+				"en": "Poop type (large)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ウンチ型(小)",
+				"en": "Poop type (small)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "紙ねんど 赤（30g）",
+				"en": "Paper clay red (30g)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "紙ねんど 青（30g）",
+				"en": "Paper clay blue (30g)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "紙ねんど 黒（30g）",
+				"en": "Paper clay black (30g)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "紙ねんど 白（30g）",
+				"en": "Paper clay white (30g)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5990_0.jpg",
 				"path": "/images/items/01_5990/01_5990_0.jpg",
 				"hash": "e4e5f28ec7ef380fd9bce65f4119dfb8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5990_1.jpg",
 				"path": "/images/items/01_5990/01_5990_1.jpg",
 				"hash": "80281df069557b3ab5011abdbb1e63fb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5990_10.jpg",
-				"path": "/images/items/01_5990/01_5990_10.jpg",
-				"hash": "e313f9d79ddf6cdf1565e1c26d8ff1a0"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5990_11.jpg",
-				"path": "/images/items/01_5990/01_5990_11.jpg",
-				"hash": "8b0904fe999ece221a68a3eb97fad549"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5990_12.jpg",
-				"path": "/images/items/01_5990/01_5990_12.jpg",
-				"hash": "06a3f501dc321218515ccc3bc14c2550"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5990_2.jpg",
 				"path": "/images/items/01_5990/01_5990_2.jpg",
 				"hash": "b92a9183ae139f9bdca53b0b03cc7943"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5990_3.jpg",
 				"path": "/images/items/01_5990/01_5990_3.jpg",
 				"hash": "644912b7bc0c248cb952d6ec0fbfe794"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5990_4.jpg",
 				"path": "/images/items/01_5990/01_5990_4.jpg",
 				"hash": "5327ad31f39099115755f6527e4f5cba"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5990_5.jpg",
 				"path": "/images/items/01_5990/01_5990_5.jpg",
 				"hash": "a7d1b943834ada6fe6e68bb544527bb6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5990_6.jpg",
 				"path": "/images/items/01_5990/01_5990_6.jpg",
 				"hash": "c59aa89ab6391ded7282fa7cba176934"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5990_7.jpg",
 				"path": "/images/items/01_5990/01_5990_7.jpg",
 				"hash": "995dcd3b2a70f4dda7dd82c35b2b6ca8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5990_8.jpg",
 				"path": "/images/items/01_5990/01_5990_8.jpg",
 				"hash": "42ab2f493aa9b3176446b2a0e8a9e016"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5990_9.jpg",
 				"path": "/images/items/01_5990/01_5990_9.jpg",
 				"hash": "aae962768438f446ed0f56a1a535c01d"
+			},
+			{
+				"path": "/images/items/01_5990/01_5990_10.jpg",
+				"hash": "e313f9d79ddf6cdf1565e1c26d8ff1a0"
+			},
+			{
+				"path": "/images/items/01_5990/01_5990_11.jpg",
+				"hash": "8b0904fe999ece221a68a3eb97fad549"
+			},
+			{
+				"path": "/images/items/01_5990/01_5990_12.jpg",
+				"hash": "06a3f501dc321218515ccc3bc14c2550"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5990/",
-	"brandIds": ["claymodelkit"],
-	"seriesIds": ["unkosuldays"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5959", "01_5960", "01_5985", "01_5989"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5990/"
 }

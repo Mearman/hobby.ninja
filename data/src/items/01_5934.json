@@ -3,7 +3,38 @@
 	"type": "item",
 	"name": {
 		"ja": "アクションベース7 [クリアカラー] 機動戦士Gundam GQuuuuuuXシールセット",
-		"en": "ACTION BASE 7 [CLEAR COLOR] Mobile Suit Gundam GQuuuuuuX STICKERS SET"
+		"en": "Action Base 7 [Clear Color] Mobile Suit Gundam GQuuuuuuXSeal Set"
+	},
+	"brands": [
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		},
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		}
+	],
+	"series": [
+		{
+			"id": "gquuuuuux",
+			"url": "https://bandai-hobby.net/series/gquuuuuux/",
+			"ja": "機動戦士Gundam GQuuuuuuX"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [],
+	"manual": {
+		"id": "3070",
+		"url": "https://manual.bandai-hobby.net/menus/detail/3070"
 	},
 	"price": {
 		"amount": 1540,
@@ -36,57 +67,79 @@
 			"• Two sets of base parts are included."
 		]
 	},
-	"accessories": {
-		"ja": ["ベースパーツ×2", "支柱パーツ×2", "C型アーム×2", "ジョイントパーツ×1式", "プラスチックシール×1"],
-		"en": ["Base parts x 2", "Strut parts x 2", "C type arm x 2", "Joint parts x 1 set", "Plastic Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ベースパーツ",
+				"en": "base parts"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "支柱パーツ",
+				"en": "Strut parts"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "C型アーム",
+				"en": "C type arm"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "プラスチックシール",
+				"en": "Plastic Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5934_0.jpg",
 				"path": "/images/items/01_5934/01_5934_0.jpg",
 				"hash": "6a01336a0647923aad3a168a96e3f62a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5934_1.jpg",
 				"path": "/images/items/01_5934/01_5934_1.jpg",
 				"hash": "f5dffdbc03a2d381681d20e97efd7a90"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5934_2.jpg",
 				"path": "/images/items/01_5934/01_5934_2.jpg",
 				"hash": "01a163c68afb67970804d1293ae5b45d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5934_3.jpg",
 				"path": "/images/items/01_5934/01_5934_3.jpg",
 				"hash": "8c1c9a808f7d7521421f04d1a6434201"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5934_4.jpg",
 				"path": "/images/items/01_5934/01_5934_4.jpg",
 				"hash": "c70b104f4d245567458ae13b4fde0f9f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5934_5.jpg",
 				"path": "/images/items/01_5934/01_5934_5.jpg",
 				"hash": "b6e4a2e2fa1eb3154417230229f6e013"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5934_6.jpg",
 				"path": "/images/items/01_5934/01_5934_6.jpg",
 				"hash": "e6c74f9b9cd2d0ccca09a15f5590be4d"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5934/",
-	"brandIds": ["actionbase"],
-	"seriesIds": ["gquuuuuux"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": [],
-	"manual": {
-		"id": "3070",
-		"url": "https://manual.bandai-hobby.net/menus/detail/3070/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5934/"
 }

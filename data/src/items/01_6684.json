@@ -5,6 +5,50 @@
 		"ja": "GUNDAM NEXT FUTURE限定 HG 1/144 ガンダムエアリアル [リサーキュレーションカラー/ネオンブルー]",
 		"en": "GUNDAM NEXT FUTURE Limited HG 1/144 Gundam Aerial [Recirculation Color/Neon Blue]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216474",
+			"url": "https://p-bandai.jp/item/item-1000216474/",
+			"ja": "ＨＧ 1/144 デスルター"
+		},
+		{
+			"id": "item-1000211616",
+			"url": "https://p-bandai.jp/item/item-1000211616/",
+			"ja": "ＨＧ 1/144 ベギルベウトルシュ(ケナンジ小隊所属機/リドリック小隊所属機)"
+		},
+		{
+			"id": "01_5422",
+			"url": "https://bandai-hobby.net/item/01_5422/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムキャリバーン [クリアカラー]"
+		},
+		{
+			"id": "item-1000203129",
+			"url": "https://p-bandai.jp/item/item-1000203129/",
+			"ja": "ＨＧ 1/144 ガンダムキャリバーン パーメットスコア・ファイブ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1430,
 		"currency": "JPY",
@@ -18,82 +62,97 @@
 		"day": 19
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"※この商品は後日THE GUNDAM BASE各店、各種イベント、海外などでの販売も予定しております。※販売方法は予告なく変更になる場合がございます。『機動戦士ガンダム 水星の魔女』より、主人公機である「HG 1/144 ガンダムエアリアル」が特別カラーになって登場！■エコプラリサーキュレーションのスペシャルマーキングシールが付属。■シールドは11のビットステイヴに分離可能。機体各所に接続が可能。■シェルユニットはダブルサイドシールとクリアパーツの組み合わせにより再現。発光状態と非発光状態を選択式で組み立てることができる。■粘着面に絵柄が印刷されたダブルサイドシールは、透明パーツの内側から貼ることで透明感と奥行を表現。"
 		],
 		"en": [
-			"*This product is scheduled to be sold at THE GUNDAM BASE stores, various events, and overseas. *Sales methods are subject to change without notice. From \"Mobile Suit Gundam Witch of Mercury \", the main character's machine \" HG 1/144 Gundam Aerial\" is now available in a special color! • Comes with a special MarkingSeal from Ecopurari Circulation. • Seal can be separated into 11 bit staves. Can be connected to various parts of the aircraft. • The shell unit is reproduced by a combination of double side seal and clear parts. It is possible to selectively assemble the light-emitting state and non-light-emitting state. • The double-sided seal, which has a pattern printed on the adhesive side, creates a sense of transparency and depth by applying it from the inside of the transparent part."
+			"*This product is scheduled to be sold at THE GUNDAM BASE stores, various events, and overseas. *Sales methods are subject to change without notice. From \"Mobile Suit Gundam Witch of Mercury\", the main character's machine \"HG 1/144 Gundam Aerial\" is now available in a special color! ■Special MarkingSeal of Ecopurari Circulation is included. ■Seal can be separated into 11 bit staves. Can be connected to various parts of the aircraft. ■The shell unit is reproduced by a combination of double side seal and clear parts. It is possible to selectively assemble the light-emitting state and non-light-emitting state. ■Double-sided Seal with a pattern printed on the adhesive side expresses transparency and depth by applying it from the inside of the transparent part."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームサーベル×2",
-			"ビームライフル×1",
-			"シールド×1",
-			"ビームライフル用エフェクトパーツ×1",
-			"ジョイントパーツ×1",
-			"シール×1",
-			"スペシャルマーキングシール×1【リサーキュレーションカラーとは】循環から生まれたブラックの中に、鮮烈なネオンカラーが存在感を発揮するスタイリッシュなカラーリング。フューチャリスティックな装いは、循環する未来への象徴となる。"
-		],
-		"en": [
-			"Beam saber x2",
-			"Beam rifle x 1",
-			"Seal × 1",
-			"Beam rifle effect parts x 1",
-			"Joint parts x 1",
-			"Seal×1",
-			"Special Marking Seal x 1 [What is recirculation color] Stylish coloring with a vivid neon color that makes its presence felt in the black created from circulation. Futuristic attire becomes a symbol of a cyclical future."
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "beam saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームライフル用エフェクトパーツ",
+				"en": "Effect parts for beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "スペシャルマーキングシール",
+				"en": "Special MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6684_0.jpg",
 				"path": "/images/items/01_6684/01_6684_0.jpg",
 				"hash": "2f9ad171419382ef37181583cf1e4cb2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6684_1.jpg",
 				"path": "/images/items/01_6684/01_6684_1.jpg",
 				"hash": "3279b67ab2f9bb0ea7431e5df303983d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6684_2.jpg",
 				"path": "/images/items/01_6684/01_6684_2.jpg",
 				"hash": "f925fee3dc67a16aca387fc76ee2c64e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6684_3.jpg",
 				"path": "/images/items/01_6684/01_6684_3.jpg",
 				"hash": "0472dd19fb0b13c76fb80846925c5a0d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6684_4.jpg",
 				"path": "/images/items/01_6684/01_6684_4.jpg",
 				"hash": "f41b7e1d01abcc56a0763906bd0af319"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6684_5.jpg",
 				"path": "/images/items/01_6684/01_6684_5.jpg",
 				"hash": "70cf1c6051d28a1dd4fb6146ddfa0417"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6684_6.jpg",
 				"path": "/images/items/01_6684/01_6684_6.jpg",
 				"hash": "a54b34eb2708a946233a772b6c44ddd0"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6684/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203129"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6684/"
 }

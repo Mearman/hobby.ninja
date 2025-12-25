@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "RG 1/144 ウイングガンダムゼロ",
-		"en": "RG 1/144 WING GUNDAM ZERO"
+		"en": "RG 1/144 Wing Gundam Zero"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4923",
+			"url": "https://bandai-hobby.net/item/01_4923/",
+			"ja": "RG 1/144 ガンダムエピオン"
+		},
+		{
+			"id": "01_3425",
+			"url": "https://bandai-hobby.net/item/01_3425/",
+			"ja": "RG 1/144 ウイングガンダム"
+		},
+		{
+			"id": "item-1000154310",
+			"url": "https://p-bandai.jp/item/item-1000154310/",
+			"ja": "ＲＧ 1/144 トールギスＩＩＩ［チタニウムフィニッシュ］"
+		},
+		{
+			"id": "item-1000142878",
+			"url": "https://p-bandai.jp/item/item-1000142878/",
+			"ja": "ＲＧ 1/144 トールギス（ＴＶアニメカラーVer.）"
+		}
+	],
+	"manual": {
+		"id": "3897",
+		"url": "https://manual.bandai-hobby.net/menus/detail/3897"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 4620,
 		"currency": "JPY",
@@ -18,7 +66,6 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「ウイングガンダムゼロ」を完全新規造形で立体化！圧倒的な機動性､飛行能力の要となる“ウイングバインダー”にRGならではのオリジナルギミック搭載！",
@@ -35,7 +82,7 @@
 			"• 武器持ち手にロック機構を搭載し、ツインバスターライフルを構えた際の保持力をアップ。"
 		],
 		"en": [
-			"\"Wing Gundam Zero \" is three-dimensional with completely new modeling! The \" wing binder\", which is the key to overwhelming maneuverability and flight ability, is equipped with an original gimmick unique to RG!",
+			"\"Wing Gundam Zero\" is now three-dimensional with a completely new model! The \"wing binder\", which is the key to overwhelming maneuverability and flight ability, is equipped with an original gimmick unique to RG!",
 			"• The joint part of the \"Wing Binder\" is equipped with 5-axis movable points, allowing for flexible posing.",
 			"• The vernier inside the \"wing binder\" has a built-in interlocking gimmick that allows the unit to rotate, internal nozzle to extend, and fins to deploy at the same time.",
 			"• Can be transformed into Neobird form by rearranging parts. Equipped with a deformation gimmick at the end of the legs inspired by the movie.",
@@ -46,91 +93,102 @@
 			"• Equipped with a gimmick that expands the knee armor and shin armor in conjunction with the bending of the knee. Achieves smooth knee bending.",
 			"• Twin buster rifles can be combined/separated. As an RG original gimmick, the barrel expands and contracts, creating a powerful shooting experience.",
 			"• Seal is equipped with an extended movable nose block and an interlocking movable small wing as an RG original gimmick.",
-			"• Equipped with a locking mechanism on the weapon handle, increasing the holding power when holding the Twin Buster Rifle."
+			"• Equipped with a locking mechanism on the weapon handle to increase holding power when holding the Twin Buster Rifle."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ツインバスターライフル×1",
-			"ビームサーベル×2",
-			"シールド×1",
-			"ハンドパーツ×1式",
-			"リアリスティックデカール×1"
-		],
-		"en": ["Twin buster rifle x1", "Beam saber x2", "Seal × 1", "Hand parts x 1 set", "Realistic decal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ツインバスターライフル",
+				"en": "twin buster rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "beam saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール",
+				"en": "realistic decals"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5968_0.jpg",
 				"path": "/images/items/01_5968/01_5968_0.jpg",
 				"hash": "e8c8ff4b95ee9f5335163b97c2ed66bf"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5968_1.jpg",
 				"path": "/images/items/01_5968/01_5968_1.jpg",
 				"hash": "b9633608c80717646ace336f608cc647"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5968_10.jpg",
-				"path": "/images/items/01_5968/01_5968_10.jpg",
-				"hash": "97c3c5b74a7264f8b6c334f07c69f616"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5968_11.jpg",
-				"path": "/images/items/01_5968/01_5968_11.jpg",
-				"hash": "2624fc381808183e497a120a9b34de1b"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5968_2.jpg",
 				"path": "/images/items/01_5968/01_5968_2.jpg",
 				"hash": "ceac773e43c63973d944549b0bbd0fab"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5968_3.jpg",
 				"path": "/images/items/01_5968/01_5968_3.jpg",
 				"hash": "f03353546ff2f597b2ef794e1a0752ab"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5968_4.jpg",
 				"path": "/images/items/01_5968/01_5968_4.jpg",
 				"hash": "02f81b3a28ab85d3ce8e18022c39ddca"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5968_5.jpg",
 				"path": "/images/items/01_5968/01_5968_5.jpg",
 				"hash": "3f239c53f54328b7c19a9f9ad76578a5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5968_6.jpg",
 				"path": "/images/items/01_5968/01_5968_6.jpg",
 				"hash": "7e9366abb93ed00b60c4b621420b3e73"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5968_7.jpg",
 				"path": "/images/items/01_5968/01_5968_7.jpg",
 				"hash": "cf1a30a3f51a581c52fc4051f056cfcd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5968_8.jpg",
 				"path": "/images/items/01_5968/01_5968_8.jpg",
 				"hash": "9e8ac7d28d14d3f6671f459595fe35d3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5968_9.jpg",
 				"path": "/images/items/01_5968/01_5968_9.jpg",
 				"hash": "7eca54d2019cd9c2d1e22cd93c23dbc5"
+			},
+			{
+				"path": "/images/items/01_5968/01_5968_10.jpg",
+				"hash": "97c3c5b74a7264f8b6c334f07c69f616"
+			},
+			{
+				"path": "/images/items/01_5968/01_5968_11.jpg",
+				"hash": "2624fc381808183e497a120a9b34de1b"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5968/",
-	"brandIds": ["rg"],
-	"seriesIds": ["endlesswaltz"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4923", "01_3425", "item-1000154310", "item-1000142878"],
-	"manual": {
-		"id": "1073",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1073/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5968/"
 }

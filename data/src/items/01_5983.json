@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard Amplified カイゼルグレイモン",
-		"en": "Figure-rise Standard Amplified KAISERGREYMON"
+		"en": "Figure-rise Standard Amplified Kaiser Greymon"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard-amp",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard-amp/",
+			"ja": "Figure-rise Standard Amplified[フィギュアライズ スタンダード アンプリファイド]"
+		}
+	],
+	"series": [
+		{
+			"id": "digimon",
+			"url": "https://bandai-hobby.net/series/digimon/",
+			"ja": "デジモンシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216437",
+			"url": "https://p-bandai.jp/item/item-1000216437/",
+			"ja": "Figure-rise Standard Amplified オメガモン(Ｘ抗体) [リミテッドカラー]"
+		},
+		{
+			"id": "01_5277",
+			"url": "https://bandai-hobby.net/item/01_5277/",
+			"ja": "Figure-rise Standard Amplified パイルドラモン"
+		},
+		{
+			"id": "item-1000198198",
+			"url": "https://p-bandai.jp/item/item-1000198198/",
+			"ja": "Figure-rise Standard Amplified デュークモン[スペシャルコーティング]"
+		},
+		{
+			"id": "01_5022",
+			"url": "https://bandai-hobby.net/item/01_5022/",
+			"ja": "Figure-rise Standard Amplified メタルグレイモン（ワクチン種）"
+		}
+	],
 	"price": {
 		"amount": 6050,
 		"currency": "JPY",
@@ -26,79 +69,87 @@
 			"• メイン武装の「龍魂剣」にはAmplifiedオリジナルのギミックを搭載。"
 		],
 		"en": [
-			"\"Kaiser Greymon \" from the TV anime \" Digimon Frontier\" appears in an amplified arrangement!",
-			"• Arranged design with \"amplified \" charm by \" As'Maria\".",
+			"\"Kaiser Greymon\" from the TV anime \"Digimon Frontier\" appears in an amplified arrangement!",
+			"• Arranged design with \"amplified\" charm by \"As'Maria\".",
 			"• The whole body is made into a three-dimensional model with new proportions and arrangements based on Amplified interpretation.",
 			"• The main weapon \"Dragon Soul Sword\" is equipped with Amplified's original gimmick."
 		]
 	},
-	"accessories": {
-		"ja": ["龍魂剣×1", "シール×1", "ジュエルシール×3種"],
-		"en": ["Dragon soul sword x1", "Seal×1", "Jewel Seal x 3 types"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "龍魂剣",
+				"en": "dragon soul sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ジュエルシール",
+				"en": "Jewel Seal"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5983_0.jpg",
 				"path": "/images/items/01_5983/01_5983_0.jpg",
 				"hash": "d40d5e803906fc4c746a1296abdc398c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5983_1.jpg",
 				"path": "/images/items/01_5983/01_5983_1.jpg",
 				"hash": "96eda57e719c4cda9cbb11af5e8aef39"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5983_10.jpg",
-				"path": "/images/items/01_5983/01_5983_10.jpg",
-				"hash": "ca9d826427fad7a3098f87dee2bf048d"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5983_2.jpg",
 				"path": "/images/items/01_5983/01_5983_2.jpg",
 				"hash": "b1b874404186f43a57f874586c22ed49"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5983_3.jpg",
 				"path": "/images/items/01_5983/01_5983_3.jpg",
 				"hash": "0c0ea21788f056b141ab24b4fde3de49"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5983_4.jpg",
 				"path": "/images/items/01_5983/01_5983_4.jpg",
 				"hash": "d2e9956003ecda79352e9e7f927d6162"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5983_5.jpg",
 				"path": "/images/items/01_5983/01_5983_5.jpg",
 				"hash": "d76ae5849ec8bc302d5f9ded72aae340"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5983_6.jpg",
 				"path": "/images/items/01_5983/01_5983_6.jpg",
 				"hash": "9220f544ab69159888c2cf49a1773dc1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5983_7.jpg",
 				"path": "/images/items/01_5983/01_5983_7.jpg",
 				"hash": "e12284d07b4c296f1d111f83a72d20e0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5983_8.jpg",
 				"path": "/images/items/01_5983/01_5983_8.jpg",
 				"hash": "f32ef4bc9822e0cc1a32b385c121f1a0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5983_9.jpg",
 				"path": "/images/items/01_5983/01_5983_9.jpg",
 				"hash": "19705d19d13ba8f9d201f2b07fcf0b18"
+			},
+			{
+				"path": "/images/items/01_5983/01_5983_10.jpg",
+				"hash": "ca9d826427fad7a3098f87dee2bf048d"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5983/",
-	"brandIds": ["figurerise-standard-amp"],
-	"seriesIds": ["digimon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["item-1000216437", "01_5277", "item-1000198198", "01_5022"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5983/"
 }

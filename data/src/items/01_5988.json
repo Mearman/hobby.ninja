@@ -3,8 +3,36 @@
 	"type": "item",
 	"name": {
 		"ja": "ガンダムデカールNo.140 機動戦士Gundam GQuuuuuuX汎用2",
-		"en": "GUNDAM DECAL140 Mobile Suit Gundam GQuuuuuuX MULTIUSE ②"
+		"en": "Gundam Decal No.140 Mobile Suit Gundam GQuuuuuuX General Purpose 2"
 	},
+	"brands": [
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "gquuuuuux",
+			"url": "https://bandai-hobby.net/series/gquuuuuux/",
+			"ja": "機動戦士Gundam GQuuuuuuX"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5987",
+			"url": "https://bandai-hobby.net/item/01_5987/",
+			"ja": "ガンダムデカールNo.139 機動戦士Gundam GQuuuuuuX汎用1"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -30,23 +58,23 @@
 			"• Decals corresponding to \"Red Gundam\" etc. are also included."
 		]
 	},
-	"accessories": {
-		"ja": ["水転写式デカール×1"],
-		"en": ["Water transfer decal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5988_0.jpg",
 				"path": "/images/items/01_5988/01_5988_0.jpg",
 				"hash": "103c06f73593487a0645210c7a2e50f5"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5988/",
-	"brandIds": ["gundam_decal"],
-	"seriesIds": ["gquuuuuux"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5987"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5988/"
 }

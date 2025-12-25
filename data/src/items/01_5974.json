@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06",
-		"en": "30MM OPTION PARTS SET ARMORED CORE Ⅵ FIRES OF RUBICON WEAPON SET 06"
+		"en": "30MM Option parts set ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [
+		{
+			"id": "armoredcore",
+			"url": "https://bandai-hobby.net/series/armoredcore/",
+			"ja": "ARMORED CORE Ⅵ FIRES OF RUBICON"
+		}
+	],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5573",
+			"url": "https://bandai-hobby.net/item/01_5573/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON RaD CC-3000 WRECKER ミルクトゥース"
+		},
+		{
+			"id": "01_5574",
+			"url": "https://bandai-hobby.net/item/01_5574/",
+			"ja": "30MM ARMORED CORE Ⅵ FIRES OF RUBICON BALAM INDUSTRIES BD-011 MELANDER"
+		},
+		{
+			"id": "01_5482",
+			"url": "https://bandai-hobby.net/item/01_5482/",
+			"ja": "30MM オプションパーツセット ARMORED CORE Ⅵ FIRES OF RUBICON WEAPON SET 04"
+		}
+	],
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -28,70 +76,102 @@
 			"• 腕武器を肩部へ装備可能にする左右の「ウェポンハンガー」が付属。"
 		],
 		"en": [
-			"\"ARMORED CORE Ⅵ FIRES OF RUBICON \" items are commercialized in the \" 30 MINUTES MISSIONS\" series.",
-			"Based on the series' key concepts of \"simple assembly \" and \" custom play,\" we have commercialized a set of weapons, including a laser slicer with a distinctive double-edged blade.",
-			"• The contents of the weapons are \"MA-E-211 SAMPU \", \" Vvc-774LS \", \" Vvc-703PM \", and \" MA-J-200 RANSETSU-RF\".",
+			"\"ARMORED CORE Ⅵ FIRES OF RUBICON\" items are commercialized in the \"30 MINUTES MISSIONS\" series.",
+			"Based on the series' key concepts of \"simple assembly\" and \"custom play,\" we have commercialized a set of weapons, including a laser slicer with a distinctive double-edged blade.",
+			"• The contents of the weapons are \"MA-E-211 SAMPU\", \"Vvc-774LS\", \"Vvc-703PM\", and \"MA-J-200 RANSETSU-RF\".",
 			"• Weapons that change shape on the left and right when equipped come with parts for reproduction, and can be assembled selectively.",
 			"• Replacement parts that can reproduce the unfolded state of \"Vvc-774LS\" are included.",
 			"• Comes with left and right \"Weapon hangers\" that allow arm weapons to be mounted on the shoulders."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"MA-E-211 SAMPU×1式",
-			"Vvc-774LS×1式",
-			"Vvc-703PM×1",
-			"MA-J-200 RANSETSU-RF×1式",
-			"ウェポンハンガー（左右）×1式",
-			"ジョイントパーツ×1式"
-		],
-		"en": [
-			"MA-E-211 SAMPU×1 set",
-			"Vvc-774LS×1 set",
-			"Vvc-703PM×1",
-			"MA-J-200 RANSETSU-RF×1 set",
-			"Weapon hanger (left and right) x 1 set",
-			"Joint parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "MA-E-211 SAMPU"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "Vvc-774LS"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "Vvc-703PM"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "MA-J-200 RANSETSU-RF"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ウェポンハンガー（左右）",
+				"en": "Weapon hanger (left and right)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5974_0.jpg",
 				"path": "/images/items/01_5974/01_5974_0.jpg",
 				"hash": "48570e626ddad6b0d67b09240dfce5a8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5974_1.jpg",
 				"path": "/images/items/01_5974/01_5974_1.jpg",
 				"hash": "64d3ee2dc61a3fe88f471001b45fe2a8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5974_2.jpg",
 				"path": "/images/items/01_5974/01_5974_2.jpg",
 				"hash": "0c71b1fd33d77dbcf607d10b9a339fed"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5974_3.jpg",
 				"path": "/images/items/01_5974/01_5974_3.jpg",
 				"hash": "db5e0453f8fbfda26a46438f7d7cee47"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5974_4.jpg",
 				"path": "/images/items/01_5974/01_5974_4.jpg",
 				"hash": "7c01e2b7ca06cffba6a7b2b7b6d0c749"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5974_5.jpg",
 				"path": "/images/items/01_5974/01_5974_5.jpg",
 				"hash": "1762994b0793b2fd0f9dd1916c404be7"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5974/",
-	"brandIds": ["30mm"],
-	"seriesIds": ["armoredcore"],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5973", "01_5573", "01_5574", "01_5482"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5974/"
 }

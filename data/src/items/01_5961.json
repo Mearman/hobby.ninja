@@ -2,9 +2,56 @@
 	"id": "01_5961",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 GFreD",
-		"en": "HG 1/144 GFreD"
+		"ja": "HG 1/144 GFreD"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gquuuuuux",
+			"url": "https://bandai-hobby.net/series/gquuuuuux/",
+			"ja": "機動戦士Gundam GQuuuuuuX"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6781",
+			"url": "https://bandai-hobby.net/item/01_6781/",
+			"ja": "HG 1/144 白いガンダム"
+		},
+		{
+			"id": "01_6782",
+			"url": "https://bandai-hobby.net/item/01_6782/",
+			"ja": "HG 1/144 シャア専用ザク(GQ)"
+		},
+		{
+			"id": "01_6772",
+			"url": "https://bandai-hobby.net/item/01_6772/",
+			"ja": "HG 1/144 ザク(GQ)"
+		},
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		}
+	],
+	"manual": {
+		"id": "3303",
+		"url": "https://manual.bandai-hobby.net/menus/detail/3303"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -18,98 +65,118 @@
 		"day": 2
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士Gundam GQuuuuuuX』(ジークアクス)より、「GFreD」をHGで立体化！",
-			"■特徴的な機体フォルムを忠実に再現。",
-			"■頭部は差し替えで「非展開状態」と「展開状態」をそれぞれ再現可能。",
-			"■胴体、股関節など各部関節の可動によりダイナミックなアクションポーズが可能。",
-			"■バックパックはフレキシブルに可動し、様々な角度で表情がつけられる。"
+			"• 特徴的な機体フォルムを忠実に再現。",
+			"• 頭部は差し替えで「非展開状態」と「展開状態」をそれぞれ再現可能。",
+			"• 胴体、股関節など各部関節の可動によりダイナミックなアクションポーズが可能。",
+			"• バックパックはフレキシブルに可動し、様々な角度で表情がつけられる。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam GQuuuuuuX \" (Sieg Ax), \" GFreD\" is made into HG!",
+			"From \"Mobile Suit Gundam GQuuuuuuX\" (Sieg Ax), \"GFreD\" is made into HG!",
 			"• Faithfully reproduces the characteristic aircraft form.",
-			"• The head can be replaced to reproduce both the \"unexpanded state \" and the \" expanded state\".",
+			"• The head can be replaced to reproduce both the \"unexpanded state\" and the \"expanded state\".",
 			"• Dynamic action poses are possible by movable joints such as the torso and hip joints.",
 			"• The backpack is flexible and can be viewed from various angles."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"武装×1式",
-			"バックパック×1式",
-			"頭部差し替えパーツ×1",
-			"ハンドパーツ×1式",
-			"シール×1",
-			"マーキングシール×1"
-		],
-		"en": [
-			"Armed x 1 type",
-			"Backpack x 1 set",
-			"Head replacement parts x 1",
-			"Hand parts x 1 set",
-			"Seal×1",
-			"MarkingSeal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "武装",
+				"en": "armed"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "バックパック",
+				"en": "backpack"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "頭部差し替えパーツ",
+				"en": "head replacement parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5961_0.jpg",
 				"path": "/images/items/01_5961/01_5961_0.jpg",
 				"hash": "a3212504d01d0b0c24d3964c9d6a775f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5961_1.jpg",
 				"path": "/images/items/01_5961/01_5961_1.jpg",
 				"hash": "e2fdc14bb7751ae006b91edc3de30e9d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5961_2.jpg",
 				"path": "/images/items/01_5961/01_5961_2.jpg",
 				"hash": "1342c7b5c59a78524ee5a0130947677b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5961_3.jpg",
 				"path": "/images/items/01_5961/01_5961_3.jpg",
 				"hash": "3ef02a9aea31e671e52a253ebf2a6adb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5961_4.jpg",
 				"path": "/images/items/01_5961/01_5961_4.jpg",
 				"hash": "94a8a45fabd3ee7bf371dc8ea1c7c420"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5961_5.jpg",
 				"path": "/images/items/01_5961/01_5961_5.jpg",
 				"hash": "5caba2775fa921cb817b7ee8939b4527"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5961_6.jpg",
 				"path": "/images/items/01_5961/01_5961_6.jpg",
 				"hash": "3d645302009e926cb606cb45408e716a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5961_7.jpg",
 				"path": "/images/items/01_5961/01_5961_7.jpg",
 				"hash": "595de0b284986f639c55006c6adde587"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5961_8.jpg",
 				"path": "/images/items/01_5961/01_5961_8.jpg",
 				"hash": "063f82b727cd5dbd62fd4c9d14835e5e"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5961/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gquuuuuux"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6781", "01_6782", "01_6772", "01_5986"],
-	"manual": {
-		"id": "3303",
-		"url": "https://manual.bandai-hobby.net/menus/detail/3303/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5961/"
 }

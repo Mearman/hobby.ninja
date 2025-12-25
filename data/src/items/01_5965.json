@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 オプションパーツセット21(マルチミサイル1)",
-		"en": "30MM 1/144 OPTION PARTS SET 21 (MULTI MISSILE 1)"
+		"en": "30MM 1/144 Option parts set 21 (Multi missile 1)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 968,
 		"currency": "JPY",
@@ -18,7 +61,6 @@
 		"day": 30
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ミサイルに特化したオプションパーツセットが登場！組み替え可能なミサイルに加えてエフェクトパーツも付属！",
@@ -39,44 +81,82 @@
 			"• It is also possible to reproduce long-distance trajectories by combining smoke effect parts."
 		]
 	},
-	"accessories": {
-		"ja": ["ミサイル×1式", "煙エフェクトパーツ×1式", "砲台用支柱×1式", "グリップ×2", "パイロン×2"],
-		"en": ["Missile x 1 type", "Smoke effect parts x 1 set", "Battery strut x 1 set", "Grip x 2", "Pylon x 2"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ミサイル",
+				"en": "missile"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "煙エフェクトパーツ",
+				"en": "smoke effect parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "砲台用支柱",
+				"en": "turret support"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "グリップ",
+				"en": "grip"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "パイロン",
+				"en": "pylon"
+			},
+			"count": 2
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5965_0.jpg",
 				"path": "/images/items/01_5965/01_5965_0.jpg",
 				"hash": "7d0044396610b073a5e9552bd01a96c4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5965_1.jpg",
 				"path": "/images/items/01_5965/01_5965_1.jpg",
 				"hash": "3a316f86c432c638f0cd65d13d700a80"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5965_2.jpg",
 				"path": "/images/items/01_5965/01_5965_2.jpg",
 				"hash": "9afecafbc6dd386072177142b9ef6e0f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5965_3.jpg",
 				"path": "/images/items/01_5965/01_5965_3.jpg",
 				"hash": "ad05773f7e1536407509695db88458f5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5965_4.jpg",
 				"path": "/images/items/01_5965/01_5965_4.jpg",
 				"hash": "9ab98d5d7de4b878f130cf685b6e65a0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5965_5.jpg",
 				"path": "/images/items/01_5965/01_5965_5.jpg",
 				"hash": "0d5cd1afd7d9cac75c843cf2f12ffa33"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5965_6.jpg",
 				"path": "/images/items/01_5965/01_5965_6.jpg",
 				"hash": "a926386ee176db21e06fdcc082a125f8"
 			}
@@ -84,10 +164,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5965/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3806",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3806/"

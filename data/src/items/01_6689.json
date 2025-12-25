@@ -5,6 +5,39 @@
 		"ja": "ＭＧ 1/100 Ｆ８０ ガンレイド",
 		"en": "MG 1/100 F80 Gunraid"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "f90",
+			"url": "https://bandai-hobby.net/series/f90/",
+			"ja": "機動戦士ガンダムF90"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/100",
 	"price": {
 		"amount": 5280,
 		"currency": "JPY",
@@ -17,51 +50,41 @@
 		"month": 6
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6689_0.jpg",
 				"path": "/images/items/01_6689/01_6689_0.jpg",
 				"hash": "20749a048e4666f18100be217f5cfa90"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6689_1.jpg",
 				"path": "/images/items/01_6689/01_6689_1.jpg",
 				"hash": "bbdabe101c7107d6b7563179561c212f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6689_2.jpg",
 				"path": "/images/items/01_6689/01_6689_2.jpg",
 				"hash": "015d1d6e210c1871de4cebe04b280c25"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6689_3.jpg",
 				"path": "/images/items/01_6689/01_6689_3.jpg",
 				"hash": "4a2b9678392ff8bf17cd01fc7a157856"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6689_4.jpg",
 				"path": "/images/items/01_6689/01_6689_4.jpg",
 				"hash": "66cd2b0874ad005954e244b7b449ff1c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6689_5.jpg",
 				"path": "/images/items/01_6689/01_6689_5.jpg",
 				"hash": "d27e04a89927869fd149388899a9dc1a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6689_6.jpg",
 				"path": "/images/items/01_6689/01_6689_6.jpg",
 				"hash": "ad28b2eed3f5aa8e7ce1efa7e335ad00"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6689_7.jpg",
 				"path": "/images/items/01_6689/01_6689_7.jpg",
 				"hash": "16c1ff304727a35b36bc962728448849"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6689_8.jpg",
 				"path": "/images/items/01_6689/01_6689_8.jpg",
 				"hash": "f13c9184befb76aa8ff9832864562f38"
 			}
@@ -69,14 +92,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6689/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": ["f90"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": [],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "3209",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3209/"

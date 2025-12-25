@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ゲルググ スガイ機(GQ)",
-		"en": "HG 1/144 SUGAI'S GELGOOG(GQ)"
+		"en": "HG 1/144 Gelgoog Sugai Machine (GQ)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gquuuuuux",
+			"url": "https://bandai-hobby.net/series/gquuuuuux/",
+			"ja": "機動戦士Gundam GQuuuuuuX"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		},
+		{
+			"id": "01_5952",
+			"url": "https://bandai-hobby.net/item/01_5952/",
+			"ja": "HG 1/144 エグザベ専用ギャン(ハクジ装備)"
+		}
+	],
+	"manual": {
+		"id": "3071",
+		"url": "https://manual.bandai-hobby.net/menus/detail/3071"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -18,7 +66,6 @@
 		"day": 3
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士Gundam GQuuuuuuX』(ジークアクス)より、「ゲルググ スガイ機」をHGで立体化！",
@@ -29,7 +76,7 @@
 			"• サーベルはHGオリジナルギミックで上下両方へ取り付け可能"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam GQuuuuuuX \" (Sieg Ax), \" Gelgoog Sugai Machine\" is made into a three-dimensional HG!",
+			"From \"Mobile Suit Gundam GQuuuuuuX\" (Sieg Ax), \"Gelgoog Sugai Machine\" is made into a three-dimensional HG!",
 			"• The Sugai machine is now three-dimensional with the coloring that appeared in the movie.",
 			"• Rifle and saber can be equipped in both hands",
 			"• Rear thruster can be moved flexibly",
@@ -37,57 +84,76 @@
 			"• The saber is an HG original gimmick and can be attached to both the top and bottom."
 		]
 	},
-	"accessories": {
-		"ja": ["武装×1式", "ハンドパーツ×1式", "マーキングシール×1", "リード線×1"],
-		"en": ["Armed x 1 type", "Hand parts x 1 set", "MarkingSeal×1", "Lead wire x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "武装",
+				"en": "armed"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "リード線",
+				"en": "lead wire"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5932_0.jpg",
 				"path": "/images/items/01_5932/01_5932_0.jpg",
 				"hash": "9a297811f2517cd860b3df08bbb23074"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5932_1.jpg",
 				"path": "/images/items/01_5932/01_5932_1.jpg",
 				"hash": "9ee32f6bcc6af33d82afb4421840050c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5932_2.jpg",
 				"path": "/images/items/01_5932/01_5932_2.jpg",
 				"hash": "31053a66c50cecf4fb16279a408a8f37"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5932_3.jpg",
 				"path": "/images/items/01_5932/01_5932_3.jpg",
 				"hash": "e92780777e1be6662b25e39ed01697ff"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5932_4.jpg",
 				"path": "/images/items/01_5932/01_5932_4.jpg",
 				"hash": "53502aa10ec3e2f02dc925956fd1f841"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5932_5.jpg",
 				"path": "/images/items/01_5932/01_5932_5.jpg",
 				"hash": "fd7b644ef5f2339dd91a455d00d0c90f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5932_6.jpg",
 				"path": "/images/items/01_5932/01_5932_6.jpg",
 				"hash": "326b90dd05f9476c19705172499036ba"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5932/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gquuuuuux"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5961", "01_5951", "01_5952"],
-	"manual": {
-		"id": "3071",
-		"url": "https://manual.bandai-hobby.net/menus/detail/3071/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5932/"
 }

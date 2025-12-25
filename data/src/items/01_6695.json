@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 RX-78-2 ガンダム [アースカラー]",
 		"en": "HG 1/144 RX-78-2 Gundam [Earth color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -17,17 +61,16 @@
 		"month": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダム45周年を記念してアースカラーのガンダムが登場！",
-			"■洗練されたプロポーション",
-			"■フレキシブルな稼働で自由度の高いアクションポーズが可能",
-			"■ランナーは組みやすさを考慮した配置を実現",
-			"■モビルスーツ本体に貼ることのできるオリジナルデザインのステッカー付属"
+			"• 洗練されたプロポーション",
+			"• フレキシブルな稼働で自由度の高いアクションポーズが可能",
+			"• ランナーは組みやすさを考慮した配置を実現",
+			"• モビルスーツ本体に貼ることのできるオリジナルデザインのステッカー付属"
 		],
 		"en": [
-			"In commemoration of Gundam's 45th lap, earth-colored Gundam is now available!",
+			"Earth-colored Gundam is now available to commemorate Gundam's 45th anniversary!",
 			"• Sophisticated proportions",
 			"• Flexible operation allows for a high degree of freedom in action poses.",
 			"• Runner is arranged with consideration for ease of assembly.",
@@ -37,40 +80,27 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6695_0.jpg",
 				"path": "/images/items/01_6695/01_6695_0.jpg",
 				"hash": "c2ffd324dbbb2f04d2bcf5f286bef4fa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6695_1.jpg",
 				"path": "/images/items/01_6695/01_6695_1.jpg",
 				"hash": "ae1895d6829f4e1ed465aa7b9d2c8a9e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6695_2.jpg",
 				"path": "/images/items/01_6695/01_6695_2.jpg",
 				"hash": "28764be14f1cdf6f6afd21e8fd0a49b3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6695_3.jpg",
 				"path": "/images/items/01_6695/01_6695_3.jpg",
 				"hash": "a53f30842812a078b2b229ac27d3b860"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6695_4.jpg",
 				"path": "/images/items/01_6695/01_6695_4.jpg",
 				"hash": "f43dedd0c6ee0692fa4381e4acf3cc62"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6695/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6695/"
 }

@@ -5,6 +5,50 @@
 		"ja": "ガンダムデカール RG 1/144 RX-93ff νガンダム用 SP Ver.",
 		"en": "Gundam Decal RG 1/144 RX-93ff νGundam SP Ver."
 	},
+	"brands": [
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_3672",
+			"url": "https://bandai-hobby.net/item/01_3672/",
+			"ja": "ガンダムデカールNo.129 HG 1/144 ナイチンゲール用"
+		},
+		{
+			"id": "01_3675",
+			"url": "https://bandai-hobby.net/item/01_3675/",
+			"ja": "ガンダムデカールNo.132 RG 1/144 Hi-νガンダム用"
+		},
+		{
+			"id": "01_3504",
+			"url": "https://bandai-hobby.net/item/01_3504/",
+			"ja": "ガンダムデカールNo.125 RG 1/144 νガンダム用"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「RG 1/144 RX-93ff νガンダム」専用の水転写式メタリックガンダムデカールが登場！",
@@ -32,30 +75,19 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6719_0.jpg",
 				"path": "/images/items/01_6719/01_6719_0.jpg",
 				"hash": "f0b545e3d27b6211841962bfcf457f10"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6719_1.jpg",
 				"path": "/images/items/01_6719/01_6719_1.jpg",
 				"hash": "238dfe87056f29ecdfeb1d93b411a5e8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6719_2.jpg",
 				"path": "/images/items/01_6719/01_6719_2.jpg",
 				"hash": "020114ea2d47fa19ffa42da4f6072282"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6719/",
-	"brandIds": ["gundam_decal"],
-	"seriesIds": ["gundam-cca"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4971", "01_3672", "01_3675", "01_3504"],
-	"tag": {
-		"ja": "GUNDAM SIDE-F",
-		"en": "GUNDAM SIDE-F"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6719/"
 }

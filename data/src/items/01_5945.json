@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) 専用水転写式デカール",
-		"en": "HG 1/100 VF-31J SIEGFRIED (HAYATE IMMELMANN USE) WATER DECALS"
+		"en": "HG 1/100 VF-31J Siegfried (Hayate Immelman machine) exclusive water slide decal"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "macross",
+			"url": "https://bandai-hobby.net/series/macross/",
+			"ja": "マクロスシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5944",
+			"url": "https://bandai-hobby.net/item/01_5944/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機)"
+		},
+		{
+			"id": "01_5946",
+			"url": "https://bandai-hobby.net/item/01_5946/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) デラックスセット"
+		},
+		{
+			"id": "01_5465",
+			"url": "https://bandai-hobby.net/item/01_5465/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(マクシミリアン・ジーナス機)"
+		},
+		{
+			"id": "01_5448",
+			"url": "https://bandai-hobby.net/item/01_5448/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(ミリア・ファリーナ・ジーナス機)"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -18,34 +56,33 @@
 		"day": 26
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機)」の航空機モデルとしてのクオリティを追求する専用の「水転写式デカール」が登場！",
-			"■「HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機)」専用。"
+			"• 「HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機)」専用。"
 		],
 		"en": [
-			"Introducing a special \"water slide decal \" that pursues the quality of \" HG 1/100 VF-31J Siegfried (Hayate Immelman aircraft)\" as an aircraft model!",
+			"Introducing a special \"water slide decal\" that pursues the quality of \"HG 1/100 VF-31J Siegfried (Hayate Immelman aircraft)\" as an aircraft model!",
 			"• Exclusively for \"HG 1/100 VF-31J Siegfried (Hayate Immelman machine)\"."
 		]
 	},
-	"accessories": {
-		"ja": ["水転写式デカール×1"],
-		"en": ["Water transfer decal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5945_0.jpg",
 				"path": "/images/items/01_5945/01_5945_0.jpg",
 				"hash": "9a3e27ecef00afb6079a20c980493700"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5945/",
-	"brandIds": [],
-	"seriesIds": ["macross"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5944", "01_5946", "01_5465", "01_5448"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5945/"
 }

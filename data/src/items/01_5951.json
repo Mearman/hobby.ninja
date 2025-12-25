@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 軽キャノン",
-		"en": "HG 1/144 LIGHT-TYPE GUNCANNON"
+		"en": "HG 1/144 light cannon"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gquuuuuux",
+			"url": "https://bandai-hobby.net/series/gquuuuuux/",
+			"ja": "機動戦士Gundam GQuuuuuuX"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5952",
+			"url": "https://bandai-hobby.net/item/01_5952/",
+			"ja": "HG 1/144 エグザベ専用ギャン(ハクジ装備)"
+		},
+		{
+			"id": "01_5935",
+			"url": "https://bandai-hobby.net/item/01_5935/",
+			"ja": "HG 1/144 ゲルググ ボカタ機(GQ)"
+		}
+	],
+	"manual": {
+		"id": "3235",
+		"url": "https://manual.bandai-hobby.net/menus/detail/3235"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,7 +66,6 @@
 		"day": 5
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士Gundam GQuuuuuuX』(ジークアクス)より、「軽キャノン」をHGで立体化！",
@@ -28,59 +75,72 @@
 			"• 平手のハンドパーツが付属。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam GQuuuuuuX \" (Sieg Ax), \" Light Cannon\" is made into HG!",
+			"From \"Mobile Suit Gundam GQuuuuuuX\" (Sieg Ax), \"Light Cannon\" is made into HG!",
 			"• Pursuing movable performance that can reproduce the movements in the play.",
 			"• Armed with a rifle and saber.",
 			"• The cannon part moves on one axis.",
 			"• Comes with flat hand parts."
 		]
 	},
-	"accessories": {
-		"ja": ["武装×1式", "ハンドパーツ×1式", "シール×1"],
-		"en": ["Armed x 1 type", "Hand parts x 1 set", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "武装",
+				"en": "armed"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5951_0.jpg",
 				"path": "/images/items/01_5951/01_5951_0.jpg",
 				"hash": "6c026e588b89f825e80bb497c1a824d7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5951_1.jpg",
 				"path": "/images/items/01_5951/01_5951_1.jpg",
 				"hash": "1f24a607362fdbaa76ca359aa5f6568c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5951_2.jpg",
 				"path": "/images/items/01_5951/01_5951_2.jpg",
 				"hash": "97ccd0b7ee3343e56cdcf519507c33d6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5951_3.jpg",
 				"path": "/images/items/01_5951/01_5951_3.jpg",
 				"hash": "2a253c128bd8da6f277654e9940f23ec"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5951_4.jpg",
 				"path": "/images/items/01_5951/01_5951_4.jpg",
 				"hash": "7584c046f7cd6806fc16f0120886082d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5951_5.jpg",
 				"path": "/images/items/01_5951/01_5951_5.jpg",
 				"hash": "57987d35b6c038d476a648439c96fa2b"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5951/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gquuuuuux"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5961", "01_5952", "01_5935"],
-	"manual": {
-		"id": "3235",
-		"url": "https://manual.bandai-hobby.net/menus/detail/3235/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5951/"
 }

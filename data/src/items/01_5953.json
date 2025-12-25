@@ -3,7 +3,39 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard ニャアン",
-		"en": "Figure-rise Standard NYAAN"
+		"en": "Figure-rise Standard Nyaan"
+	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gquuuuuux",
+			"url": "https://bandai-hobby.net/series/gquuuuuux/",
+			"ja": "機動戦士Gundam GQuuuuuuX"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5936",
+			"url": "https://bandai-hobby.net/item/01_5936/",
+			"ja": "Figure-rise Standard アマテ・ユズリハ(マチュ)"
+		}
+	],
+	"manual": {
+		"id": "3238",
+		"url": "https://manual.bandai-hobby.net/menus/detail/3238"
 	},
 	"price": {
 		"amount": 4180,
@@ -29,7 +61,7 @@
 			"• スマホパーツと専用の持ち手、イヤホン、サングラスパーツが付属。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam GQuuuuuuX \" (Sieg Ax), \" Nyaan\" is added to the Figure-rise Standard series!",
+			"From \"Mobile Suit Gundam GQuuuuuuX\" (Sieg Ax), \"Nyaan\" is added to the Figure-rise Standard series!",
 			"• Comes with 1 type of tampo-printed part and 3 types of water transfer decal parts for a rich variety of expressions.",
 			"• Hair highlights are reproduced by dividing the parts.",
 			"• Replacement parts for the uniform and skirt parts for action are included.",
@@ -38,110 +70,170 @@
 			"• Includes smartphone parts, special handle, earphones, and sunglasses parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"表情パーツ(タンポ印刷)×1種",
-			"表情パーツ(水転写式デカール用)×3種",
-			"リュック×1",
-			"制服パーツ×1式",
-			"アクション用スカート×１",
-			"ヘアスタイルパーツ×1式",
-			"コンチ×1",
-			"スマホパーツ×1",
-			"イヤホン×1",
-			"サングラス×1",
-			"ハンドパーツ×1式",
-			"水転写式デカール×1",
-			"シール×1"
-		],
-		"en": [
-			"Facial expression parts (tampo printing) x 1 type",
-			"Facial expression parts (for water transfer decals) x 3 types",
-			"Backpack x 1",
-			"Uniform parts x 1 set",
-			"Action skirt x1",
-			"Hair style parts x 1 set",
-			"Conti x 1",
-			"Smartphone parts x 1",
-			"Earphone x 1",
-			"Sunglasses x 1",
-			"Hand parts x 1 set",
-			"Water transfer decal x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情パーツ(タンポ印刷)",
+				"en": "Facial expression parts (tampo printing)"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "表情パーツ(水転写式デカール用)",
+				"en": "Facial expression parts (for water transfer decals)"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "リュック",
+				"en": "backpack"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "制服パーツ",
+				"en": "uniform parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "アクション用スカート×１",
+				"en": "Action skirt x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヘアスタイルパーツ",
+				"en": "hairstyle parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "コンチ",
+				"en": "Conti"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "スマホパーツ",
+				"en": "smartphone parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "イヤホン",
+				"en": "earphones"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "サングラス",
+				"en": "sunglasses"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5953_0.jpg",
 				"path": "/images/items/01_5953/01_5953_0.jpg",
 				"hash": "9126fb6e534376ad11e2d2dfef15d62f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5953_1.jpg",
 				"path": "/images/items/01_5953/01_5953_1.jpg",
 				"hash": "0ff020516c244b6dcd4d397fa668e160"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5953_10.jpg",
-				"path": "/images/items/01_5953/01_5953_10.jpg",
-				"hash": "b691c20ac08b747d9f8e6473453eb590"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5953_11.jpg",
-				"path": "/images/items/01_5953/01_5953_11.jpg",
-				"hash": "d1d612f297c27e78b1624a2ee47aa3c4"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5953_2.jpg",
 				"path": "/images/items/01_5953/01_5953_2.jpg",
 				"hash": "7774e57db12117de5cb7abeebb818561"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5953_3.jpg",
 				"path": "/images/items/01_5953/01_5953_3.jpg",
 				"hash": "c4f83446f2793ea8da9f260f4f0a1918"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5953_4.jpg",
 				"path": "/images/items/01_5953/01_5953_4.jpg",
 				"hash": "cfb64da2679f7912429ec64ac9e5d486"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5953_5.jpg",
 				"path": "/images/items/01_5953/01_5953_5.jpg",
 				"hash": "90b3380a08b4a53eb5ad1c97ca8d7489"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5953_6.jpg",
 				"path": "/images/items/01_5953/01_5953_6.jpg",
 				"hash": "8a766ebe3c8f84f8787cab7fd0ca7b94"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5953_7.jpg",
 				"path": "/images/items/01_5953/01_5953_7.jpg",
 				"hash": "cd84103900996509297788b7e0b8c39c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5953_8.jpg",
 				"path": "/images/items/01_5953/01_5953_8.jpg",
 				"hash": "6d1aea8147ccebf9e0558eeb33907962"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5953_9.jpg",
 				"path": "/images/items/01_5953/01_5953_9.jpg",
 				"hash": "58a5048696a04a4907a20510548e8b03"
+			},
+			{
+				"path": "/images/items/01_5953/01_5953_10.jpg",
+				"hash": "b691c20ac08b747d9f8e6473453eb590"
+			},
+			{
+				"path": "/images/items/01_5953/01_5953_11.jpg",
+				"hash": "d1d612f297c27e78b1624a2ee47aa3c4"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5953/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["gquuuuuux"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5936"],
-	"manual": {
-		"id": "3238",
-		"url": "https://manual.bandai-hobby.net/menus/detail/3238/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5953/"
 }

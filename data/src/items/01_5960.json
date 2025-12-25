@@ -5,6 +5,49 @@
 		"ja": "クレイモデルキット サラリーマンうんこ",
 		"en": "Clay ModelKit Salaryman Poop"
 	},
+	"brands": [
+		{
+			"id": "claymodelkit",
+			"url": "https://bandai-hobby.net/brand/claymodelkit/",
+			"ja": "クレイモデルキット"
+		}
+	],
+	"series": [
+		{
+			"id": "unkosuldays",
+			"url": "https://bandai-hobby.net/series/unkosuldays/",
+			"ja": "ウンコスルデイズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5959",
+			"url": "https://bandai-hobby.net/item/01_5959/",
+			"ja": "クレイモデルキット あにまるうんちセット1 ねこ&くま"
+		},
+		{
+			"id": "01_5985",
+			"url": "https://bandai-hobby.net/item/01_5985/",
+			"ja": "クレイモデルキット 大剣使いうんこ"
+		},
+		{
+			"id": "01_5989",
+			"url": "https://bandai-hobby.net/item/01_5989/",
+			"ja": "クレイモデルキット あにまるうんちセット2 ティラノサウルス&ライオン"
+		},
+		{
+			"id": "01_5990",
+			"url": "https://bandai-hobby.net/item/01_5990/",
+			"ja": "クレイモデルキット ウンコスルデイズ スーパーDXセット1"
+		}
+	],
 	"price": {
 		"amount": 990,
 		"currency": "JPY",
@@ -23,76 +66,82 @@
 			"プラモと粘土でキミだけのうんこキャラを作り出そう！",
 			"『クレイモデルキット』より、「ウンコスルデイズ サラリーマンうんこ」が登場！",
 			"紙ねんど/ ウンコ型/手足パーツ入りの1商品で楽しめるフルセットアイテム！",
-			"■着せ替えアイテムが多数収録。",
-			"■付属のパーツで刑事（デカ）うんこも再現可能。",
-			"■こちらは対象年齢6才以上の商品です。"
+			"• 着せ替えアイテムが多数収録。",
+			"• 付属のパーツで刑事（デカ）うんこも再現可能。",
+			"• こちらは対象年齢6才以上の商品です。"
 		],
 		"en": [
 			"Create your own poop character using plastic models and clay!",
-			"From \"Clay ModelKit \", \" Unkosuru Days Office Worker Poop\" is now available!",
+			"From \"Clay ModelKit\", \"Unkosuru Days Office Worker Poop\" is now available!",
 			"A full set item that includes paper clay, poop shape, and limb parts!",
 			"• Contains many dress-up items.",
 			"• Detective (big) poop can also be recreated using the included parts.",
 			"• This product is for ages 6 and up."
 		]
 	},
-	"accessories": {
-		"ja": ["ウンコ型×1", "紙ねんど 青（30g）×1", "シール×1"],
-		"en": ["Poop type x 1", "Paper clay blue (30g) x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ウンコ型",
+				"en": "poop type"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "紙ねんど 青（30g）",
+				"en": "Paper clay blue (30g)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5960_0.jpg",
 				"path": "/images/items/01_5960/01_5960_0.jpg",
 				"hash": "114064fa84a058b83bfc92cf8f840176"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5960_1.jpg",
 				"path": "/images/items/01_5960/01_5960_1.jpg",
 				"hash": "7ede644bc80e24a525d4ed399a293b64"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5960_2.jpg",
 				"path": "/images/items/01_5960/01_5960_2.jpg",
 				"hash": "85b41e21c0982b359757e1e60a4017ee"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5960_3.jpg",
 				"path": "/images/items/01_5960/01_5960_3.jpg",
 				"hash": "2b2a903918735012b9a1bf2ae2f2d209"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5960_4.jpg",
 				"path": "/images/items/01_5960/01_5960_4.jpg",
 				"hash": "0b315e1508d8b559d13f9a3654fa1886"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5960_5.jpg",
 				"path": "/images/items/01_5960/01_5960_5.jpg",
 				"hash": "7f42eab995e616ffaca7c460d8f44d22"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5960_6.jpg",
 				"path": "/images/items/01_5960/01_5960_6.jpg",
 				"hash": "a211f6d967830d41d6f2cd0da53d9e01"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5960_7.jpg",
 				"path": "/images/items/01_5960/01_5960_7.jpg",
 				"hash": "0860fbb4e367cd0e8b737f10b95a3e3d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5960_8.jpg",
 				"path": "/images/items/01_5960/01_5960_8.jpg",
 				"hash": "992be291ca3260de75944e252f25a94c"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5960/",
-	"brandIds": ["claymodelkit"],
-	"seriesIds": ["unkosuldays"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5959", "01_5985", "01_5989", "01_5990"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5960/"
 }

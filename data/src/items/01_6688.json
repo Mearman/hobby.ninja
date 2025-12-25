@@ -5,6 +5,60 @@
 		"ja": "RG 1/144 MS-06S ザクII [初音ミクVer.]",
 		"en": "RG 1/144 MS-06S Zaku II [Hatsune Miku Ver.]"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5992",
+			"url": "https://bandai-hobby.net/item/01_5992/",
+			"ja": "RG 1/144 ガンダムベース限定 RX-78-2 ガンダム Ver.2.0 [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_5428",
+			"url": "https://bandai-hobby.net/item/01_5428/",
+			"ja": "RG 1/144 ガンダムベース限定 ジオング [スペシャルコーティング]"
+		},
+		{
+			"id": "01_5261",
+			"url": "https://bandai-hobby.net/item/01_5261/",
+			"ja": "RG 1/144 RX-78-2 ガンダム Ver.2.0"
+		},
+		{
+			"id": "item-1000209098",
+			"url": "https://p-bandai.jp/item/item-1000209098/",
+			"ja": "ＲＧ 1/144 RX-78-2 ガンダム Ver.2.0用武器セット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 8
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"●　初音ミクをイメージした特徴的なカラーリングを成形色にて再現●　初音ミクVer.オリジナルのリアリスティックデカールが付属",
@@ -32,39 +85,49 @@
 			"*The finished product in the photo is painted. Also, a prototype that is still under development. The actual product may differ. *Due to the manufacturing process, air bubbles may appear in the clear parts. *Product materials may change depending on the production period of the sold product. Thank you for your understanding. *There may be variations in plated parts due to the painting process. Thank you for your understanding. *Depending on sales conditions, the quantity that can be purchased may change in the future."
 		]
 	},
-	"accessories": {
-		"ja": ["ザク・マシンガン", "ザク・バズーカ", "ヒート・ホーク"],
-		"en": ["zaku machine gun", "Zaku Bazooka", "heat hawk"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ザク・マシンガン",
+				"en": "zaku machine gun"
+			}
+		},
+		{
+			"name": {
+				"ja": "ザク・バズーカ",
+				"en": "Zaku Bazooka"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヒート・ホーク",
+				"en": "heat hawk"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6688_0.jpg",
 				"path": "/images/items/01_6688/01_6688_0.jpg",
 				"hash": "e1158e4fb5715f2c2e37338e5f91a988"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6688_1.jpg",
 				"path": "/images/items/01_6688/01_6688_1.jpg",
 				"hash": "0c1e99a370713a9cf6991d9da9f1d94d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6688_2.jpg",
 				"path": "/images/items/01_6688/01_6688_2.jpg",
 				"hash": "07a0ba356af75d7556edc81ec74a105f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6688_3.jpg",
 				"path": "/images/items/01_6688/01_6688_3.jpg",
 				"hash": "9b53e232fca239e85e4914992ff8661b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6688_4.jpg",
 				"path": "/images/items/01_6688/01_6688_4.jpg",
 				"hash": "8dedb477749445196cbab6389b21f839"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6688_5.jpg",
 				"path": "/images/items/01_6688/01_6688_5.jpg",
 				"hash": "1315807a5239a0f8046475e6a68ea086"
 			}
@@ -72,14 +135,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_6688/",
-	"brandIds": ["rg", "pb_rg", "pb_gunpla"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5992", "01_5428", "01_5261", "item-1000209098"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "3336",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3336/"

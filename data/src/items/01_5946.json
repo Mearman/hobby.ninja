@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) デラックスセット",
-		"en": "HG 1/100 VF-31J SIEGFRIED(HAYATE IMMELMANN USE) Deluxe Set"
+		"en": "HG 1/100 VF-31J Siegfried (Hayate Immelman machine) Deluxe set"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "macross",
+			"url": "https://bandai-hobby.net/series/macross/",
+			"ja": "マクロスシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5944",
+			"url": "https://bandai-hobby.net/item/01_5944/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機)"
+		},
+		{
+			"id": "01_5465",
+			"url": "https://bandai-hobby.net/item/01_5465/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(マクシミリアン・ジーナス機)"
+		},
+		{
+			"id": "01_5448",
+			"url": "https://bandai-hobby.net/item/01_5448/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(ミリア・ファリーナ・ジーナス機)"
+		},
+		{
+			"id": "01_5449",
+			"url": "https://bandai-hobby.net/item/01_5449/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII 専用水転写式デカール"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 8250,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 26
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機)」本体に加え「専用水転写式デカール」とフレイア・ヴィオンの「アクリルスタンド」が付属したデラックスセットも登場！",
@@ -35,12 +78,12 @@
 			"• 『マクロスΔ』キャラクター原案 実田千聖氏（CAPCOM）新規描き下ろしイラストを使用したフレイア・ヴィオンの「アクリルスタンド」と「水転写式デカール」が付属。アクリルスタンドの背面には後ろ姿のイラストを印刷。"
 		],
 		"en": [
-			"In addition to the \"HG 1/100 VF-31J Siegfried (Hayate Immelman Machine)\", a deluxe set is also available that includes \" exclusive water transfer decals \" and Freya Wion's \" acrylic stand\"!",
-			"• Adopts \"replacement three-stage transformation (shortcut change)\" that simplifies the transformation sequence by using some replacement parts. The ease of assembly, wide range of motion, and sophisticated form of each form that are unique to the HG series are realized.",
+			"In addition to the \"HG 1/100 VF-31J Siegfried (Hayate Immelman Machine)\", a deluxe set is also available that includes \"exclusive water transfer decals\" and Freya Wion's \"acrylic stand\"!",
+			"• Adopts \"replacement three-stage transformation (shortcut change)\" that simplifies the transformation sequence by using some replacement parts. The HG series offers ease of assembly, a wide range of motion, and sophisticated forms in each form.",
 			"• By incorporating replacement parts into part of the transformation mechanism, the transformation sequence has been simplified. Can be easily transformed into Battroid, Gerwalk, and Fighter.",
 			"• By adopting \"replacement three-stage transformation (shortcut change)\", we pursue the form of each form based on the image of the setting image.",
 			"• A new dimension of movable performance has been achieved by eliminating complicated structures and creating optimal movable points with posing in mind.",
-			"• Adopts \"insert molding \" for the first time in the HG \" Macross\" plastic model series. Parts with complex color coding can be reproduced by simply separating the parts, achieving both high quality and ease of assembly.",
+			"• Adopts \"insert molding\" for the first time in the HG \"Macross\" plastic model series. Parts with complex color coding can be reproduced by simply separating the parts, achieving both high quality and ease of assembly.",
 			"• Container unit can reproduce storage condition by replacing parts.",
 			"• The mini gun pod can be deployed forward with a movable axis.",
 			"• In addition to 2 knives, 2 types of pilot figures, a Freya Vion figure, and a multi-drone type pedestal are included.",
@@ -49,100 +92,146 @@
 			"• An acrylic stand and water transfer decal of Freya Vion using a newly drawn illustration by Macross Delta character designer Chisato Mita (CAPCOM) are included. An illustration of the back view is printed on the back of the acrylic stand."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ナイフ×2",
-			"ランディングギア×1式",
-			"ファイター形態再現用パーツ×1式",
-			"ジョイントパーツ×1",
-			"ハンドパーツ×1式",
-			"フィギュア×3種",
-			"フィギュア用台座×1",
-			"シール×1",
-			"水転写式デカール×1",
-			"アクリルスタンド×1"
-		],
-		"en": [
-			"Knife x 2",
-			"Landing gear x 1 set",
-			"Fighter form reproduction parts x 1 set",
-			"Joint parts x 1",
-			"Hand parts x 1 set",
-			"Figures x 3 types",
-			"Figure pedestal x 1",
-			"Seal×1",
-			"Water transfer decal x 1",
-			"Acrylic stand x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ナイフ",
+				"en": "knife"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ランディングギア",
+				"en": "landing gear"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ファイター形態再現用パーツ",
+				"en": "Fighter form reproduction parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "フィギュア",
+				"en": "figure"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "フィギュア用台座",
+				"en": "pedestal for figures"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アクリルスタンド",
+				"en": "acrylic stand"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5946_0.jpg",
 				"path": "/images/items/01_5946/01_5946_0.jpg",
 				"hash": "14ad8c22303e81a9f5489099275459d4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5946_1.jpg",
 				"path": "/images/items/01_5946/01_5946_1.jpg",
 				"hash": "61c83ba473c9f49f1fd40754dad245d8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5946_10.jpg",
-				"path": "/images/items/01_5946/01_5946_10.jpg",
-				"hash": "1619b0e01616b4913cf8a0a121f7b02b"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5946_11.jpg",
-				"path": "/images/items/01_5946/01_5946_11.jpg",
-				"hash": "5beb7c8aef0e5b96d235c4a6c41f1c02"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5946_2.jpg",
 				"path": "/images/items/01_5946/01_5946_2.jpg",
 				"hash": "32480da4bf39692fa4895bd19e2689e9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5946_3.jpg",
 				"path": "/images/items/01_5946/01_5946_3.jpg",
 				"hash": "058c6ebf199ced78d44d51738bd669f5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5946_4.jpg",
 				"path": "/images/items/01_5946/01_5946_4.jpg",
 				"hash": "fb85531ea8c30b8b0040268505d761fb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5946_5.jpg",
 				"path": "/images/items/01_5946/01_5946_5.jpg",
 				"hash": "8e5da57bb5e6995a6c58e5fb8d28967f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5946_6.jpg",
 				"path": "/images/items/01_5946/01_5946_6.jpg",
 				"hash": "c479f5cad2be8f6de535aab429aafa77"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5946_7.jpg",
 				"path": "/images/items/01_5946/01_5946_7.jpg",
 				"hash": "d585a9434715151e266cb63d9fd14bb7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5946_8.jpg",
 				"path": "/images/items/01_5946/01_5946_8.jpg",
 				"hash": "52992248588ae9e53cd025b532c03714"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5946_9.jpg",
 				"path": "/images/items/01_5946/01_5946_9.jpg",
 				"hash": "6d4a58c9ad200d373b000e24c71dca6a"
+			},
+			{
+				"path": "/images/items/01_5946/01_5946_10.jpg",
+				"hash": "1619b0e01616b4913cf8a0a121f7b02b"
+			},
+			{
+				"path": "/images/items/01_5946/01_5946_11.jpg",
+				"hash": "5beb7c8aef0e5b96d235c4a6c41f1c02"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5946/",
-	"brandIds": ["hg"],
-	"seriesIds": ["macross"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5944", "01_5465", "01_5448", "01_5449"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5946/"
 }

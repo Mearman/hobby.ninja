@@ -5,6 +5,50 @@
 		"ja": "ガンダムデカール RG 1/144 MSN-04FF サザビー用 SP Ver.",
 		"en": "Gundam Decal RG 1/144 MSN-04FF SP Ver. for Sazabi."
 	},
+	"brands": [
+		{
+			"id": "gundam_decal",
+			"url": "https://bandai-hobby.net/brand/gundam_decal/",
+			"ja": "ガンダムデカール"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6719",
+			"url": "https://bandai-hobby.net/item/01_6719/",
+			"ja": "ガンダムデカール RG 1/144 RX-93ff νガンダム用 SP Ver."
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_3672",
+			"url": "https://bandai-hobby.net/item/01_3672/",
+			"ja": "ガンダムデカールNo.129 HG 1/144 ナイチンゲール用"
+		},
+		{
+			"id": "01_3675",
+			"url": "https://bandai-hobby.net/item/01_3675/",
+			"ja": "ガンダムデカールNo.132 RG 1/144 Hi-νガンダム用"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 990,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「RG 1/144 MSN-04FF サザビー」専用の水転写式メタリックガンダムデカールが登場！",
@@ -32,25 +75,15 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_6720_0.jpg",
 				"path": "/images/items/01_6720/01_6720_0.jpg",
 				"hash": "9fa53c6085047bc6b222613a39b17d5f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_6720_1.jpg",
 				"path": "/images/items/01_6720/01_6720_1.jpg",
 				"hash": "7027900569e7dc02b3c4f8e99d4863f9"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_6720/",
-	"brandIds": ["gundam_decal"],
-	"seriesIds": ["gundam-cca"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6719", "01_4971", "01_3672", "01_3675"],
-	"tag": {
-		"ja": "GUNDAM SIDE-F",
-		"en": "GUNDAM SIDE-F"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_6720/"
 }

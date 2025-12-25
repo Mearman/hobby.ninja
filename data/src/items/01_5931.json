@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 軍警ザク",
-		"en": "HG 1/144 POLICE ZAKU"
+		"en": "HG 1/144 Military Police Zaku"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gquuuuuux",
+			"url": "https://bandai-hobby.net/series/gquuuuuux/",
+			"ja": "機動戦士Gundam GQuuuuuuX"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5952",
+			"url": "https://bandai-hobby.net/item/01_5952/",
+			"ja": "HG 1/144 エグザベ専用ギャン(ハクジ装備)"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"manual": {
+		"id": "2971",
+		"url": "https://manual.bandai-hobby.net/menus/detail/2971"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -18,7 +66,6 @@
 		"day": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士Gundam GQuuuuuuX』(ジークアクス)より、「軍警ザク」をHGで立体化！",
@@ -28,69 +75,76 @@
 			"• 劇中イメージを再現するマーキングシールが付属。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam GQuuuuuuX \" (Sieg Ax), \" Military Police Zaku\" is made into a three-dimensional HG!",
+			"From \"Mobile Suit Gundam GQuuuuuuX\" (Sieg Ax), \"Military Police Zaku\" is made into a three-dimensional HG!",
 			"• The shoulder lights are reproduced with clear parts.",
 			"• The shoulder blocks can move independently, allowing for dynamic action poses.",
 			"• Monoeye is movable.",
 			"• Comes with a MarkingSeal that reproduces the image from the play."
 		]
 	},
-	"accessories": {
-		"ja": ["武装×1式", "ハンドパーツ×1", "マーキングシール×1"],
-		"en": ["Armed x 1 type", "Hand parts x 1", "MarkingSeal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "武装",
+				"en": "armed"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_5931_0.jpg",
 				"path": "/images/items/01_5931/01_5931_0.jpg",
 				"hash": "9a0e5d8db97fcc9f9a55160cdc8134a1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5931_1.jpg",
 				"path": "/images/items/01_5931/01_5931_1.jpg",
 				"hash": "f3f81254434a594973e878d73b66dca6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5931_2.jpg",
 				"path": "/images/items/01_5931/01_5931_2.jpg",
 				"hash": "988f0218404074689b8f9b2faa5b7f9d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5931_3.jpg",
 				"path": "/images/items/01_5931/01_5931_3.jpg",
 				"hash": "e58a7c7e784056b4d7532dd8d0eb1454"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5931_4.jpg",
 				"path": "/images/items/01_5931/01_5931_4.jpg",
 				"hash": "25074a58309f95d42182093faec3093b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5931_5.jpg",
 				"path": "/images/items/01_5931/01_5931_5.jpg",
 				"hash": "a5f34a40eb4c343d7ce71f1826c40a88"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5931_6.jpg",
 				"path": "/images/items/01_5931/01_5931_6.jpg",
 				"hash": "716191e4333b8cfbd26217113ceaf6d8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_5931_7.jpg",
 				"path": "/images/items/01_5931/01_5931_7.jpg",
 				"hash": "e7d68593d041a23eff52a3913a24b4d3"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5931/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gquuuuuux"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5961", "01_5952", "01_5951"],
-	"manual": {
-		"id": "2971",
-		"url": "https://manual.bandai-hobby.net/menus/detail/2971/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5931/"
 }
