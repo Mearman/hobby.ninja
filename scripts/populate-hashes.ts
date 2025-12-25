@@ -9,6 +9,7 @@ import { join } from "node:path";
 const WORKSPACE_ROOT = process.cwd();
 const ITEMS_DIR = join(WORKSPACE_ROOT, "data/src/items");
 const MANUALS_DIR = join(WORKSPACE_ROOT, "data/src/manuals");
+const PBANDAI_DIR = join(WORKSPACE_ROOT, "data/src/pbandai/en/items");
 const ASSETS_DIR = join(WORKSPACE_ROOT, "assets");
 
 function computeHash(filePath: string): string | undefined {
@@ -49,10 +50,23 @@ interface ManualData {
 	image?: ImageData;
 }
 
+interface PBandaiImageData {
+	order: number;
+	src?: string;
+	path: string;
+	hash?: string;
+}
+
+interface PBandaiItemData {
+	images?: PBandaiImageData[];
+}
+
 let itemsUpdated = 0;
 let itemsSkipped = 0;
 let manualsUpdated = 0;
 let manualsSkipped = 0;
+let pbandaiUpdated = 0;
+let pbandaiSkipped = 0;
 let hashesAdded = 0;
 
 // Process items
@@ -135,4 +149,46 @@ for (const file of manualFiles) {
 }
 
 console.log(`Manuals: ${manualsUpdated} updated, ${manualsSkipped} skipped`);
+
+// Process P-Bandai US items
+console.log("\nProcessing P-Bandai US items...");
+let pbandaiFiles: string[] = [];
+try {
+	pbandaiFiles = readdirSync(PBANDAI_DIR).filter((f) => f.endsWith(".json") && f !== "index.json");
+} catch {
+	console.log("  P-Bandai directory not found, skipping...");
+}
+
+for (const file of pbandaiFiles) {
+	const filePath = join(PBANDAI_DIR, file);
+	const data: PBandaiItemData = JSON.parse(readFileSync(filePath, "utf8"));
+	let modified = false;
+
+	if (data.images) {
+		for (const img of data.images) {
+			if (img.path && !img.hash) {
+				const absPath = resolveImagePath(img.path);
+				const hash = computeHash(absPath);
+				if (hash) {
+					img.hash = hash;
+					modified = true;
+					hashesAdded++;
+				}
+			}
+		}
+	}
+
+	if (modified) {
+		writeFileSync(filePath, JSON.stringify(data, null, "\t"));
+		pbandaiUpdated++;
+	} else {
+		pbandaiSkipped++;
+	}
+
+	if ((pbandaiUpdated + pbandaiSkipped) % 100 === 0) {
+		console.log(`  P-Bandai: ${pbandaiUpdated + pbandaiSkipped}/${pbandaiFiles.length}`);
+	}
+}
+
+console.log(`P-Bandai: ${pbandaiUpdated} updated, ${pbandaiSkipped} skipped`);
 console.log(`\nTotal hashes added: ${hashesAdded}`);
