@@ -19,176 +19,59 @@ import path from "node:path";
 import {
 	TranslationService,
 	loadDictionary,
-	addPhraseSync,
-	lookupPhrase,
 	rebuildAndReloadDictionary,
 } from "@hobby-ninja/translation";
-import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
-import { chromium, type Browser, type BrowserContext, type Route } from "playwright";
 
+import { writeJsonIfChanged } from "../utils/file-utils.js";
 
-import { computeBufferHash, computeFileHash, writeJsonIfChanged } from "../utils/file-utils.js";
-import { findExistingItemImage, stripEphemeralImageUrls } from "../utils/image-utils.js";
-
-
-import { BandaiCatalogParser, type EntityData, type Item, type ItemImage, type ParsedAccessoryItem } from "./bandai-catalog-parser.js";
-import { parseCountedItems } from "./count-parser.js";
-import { extractFilenameFromUrl } from "./download-command.js";
+import { BandaiCatalogParser, type Item } from "./bandai-catalog-parser.js";
 import { GlobalSiteLookup, type GlobalSiteData } from "./global-site-lookup.js";
 import { ItemsIndexUpdater } from "./items-index-updater.js";
-import { ManualParser, type ManualData } from "./manual-parser.js";
+import { ManualParser } from "./manual-parser.js";
 import { ManualsIndexUpdater } from "./manuals-index-updater.js";
-
-
-export interface ScrapeOptions {
-	language: string;
-	output: string;
-	cache: boolean;
-	resume: boolean;
-	dryRun: boolean;
-	maxAgeDays: number;
-	/** Single specific ID to process (e.g., "01_1234") */
-	id?: string;
-	/** Start ID for range (e.g., "01_1000") */
-	start?: string;
-	/** End ID for range (e.g., "01_2000") */
-	end?: string;
-	/** Number of items to process from start */
-	count?: number;
-	/** Profile timing for each step */
-	profile?: boolean;
-}
-
-/** Timing data for profiling */
-interface StepTiming {
-	name: string;
-	durationMs: number;
-}
-
-export interface ScrapeResult {
-	totalProcessed: number;
-	successful: number;
-	failed: number;
-	cached: number;
-	new: number;
-	errors: string[];
-	duration: number;
-	/** Manual IDs discovered during item scraping */
-	discoveredManuals: number;
-	/** Orphan manuals processed (not linked to items) */
-	orphanManuals: {
-		total: number;
-		processed: number;
-		failed: number;
-	};
-	/** Images downloaded */
-	imagesDownloaded: number;
-	/** Translations updated in existing items */
-	translationsUpdated: number;
-}
-
-// Constants
-const UNKNOWN_ERROR = "Unknown error";
-const MAX_ITEM_ID = 9999;
-const DEFAULT_USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36";
-const FETCH_TIMEOUT_MS = 30_000; // 30 second timeout for HTTP requests
-const MAX_FETCH_RETRIES = 3;
-const RETRY_DELAY_MS = 2000; // Base delay between retries (exponential backoff)
-
-/**
- * Promise with a hard timeout
- * Rejects if the operation doesn't complete within timeoutMs
- */
-async function withTimeout<T>(
-	promise: Promise<T>,
-	timeoutMs: number,
-	timeoutMsg = "Operation timed out",
-): Promise<T> {
-	let timeoutId: ReturnType<typeof setTimeout>;
-	const timeoutPromise = new Promise<never>((_, reject) => {
-		timeoutId = setTimeout(() => { reject(new Error(timeoutMsg)); }, timeoutMs);
-	});
-
-	try {
-		return await Promise.race([promise, timeoutPromise]);
-	} finally {
-		clearTimeout(timeoutId!);
-	}
-}
-
-/**
- * Fetch with timeout and retry logic
- * Uses hard timeout that covers the entire operation including body reading
- */
-async function fetchWithRetry(
-	url: string,
-	options: RequestInit,
-	maxRetries = MAX_FETCH_RETRIES,
-): Promise<Response> {
-	let lastError: Error | undefined;
-
-	for (let attempt = 1; attempt <= maxRetries; attempt++) {
-		try {
-			const response = await withTimeout(
-				fetch(url, options),
-				FETCH_TIMEOUT_MS,
-				`Fetch timeout after ${FETCH_TIMEOUT_MS}ms`,
-			);
-			return response;
-		} catch (error) {
-			lastError = error instanceof Error ? error : new Error(UNKNOWN_ERROR);
-			const isTimeout = lastError.message.includes("timeout") || lastError.message.includes("Timeout");
-			const isAbort = lastError.name === "AbortError";
-
-			if (attempt < maxRetries && (isTimeout || isAbort)) {
-				const delay = RETRY_DELAY_MS * Math.pow(2, attempt - 1); // Exponential backoff
-				console.log(`    Retry ${attempt}/${maxRetries} after ${delay}ms (${lastError.message})`);
-				await new Promise(resolve => setTimeout(resolve, delay));
-			} else {
-				// Throw on final attempt OR non-retryable errors
-				throw lastError;
-			}
-		}
-	}
-
-	throw lastError ?? new Error("Fetch failed after retries");
-}
-
-// Data directories
-const ITEMS_DATA_DIR = resolveWorkspacePath("data/src/items");
-const MANUALS_DATA_DIR = resolveWorkspacePath("data/src/manuals");
-
-/**
- * Normalize manual ID to 4-digit zero-padded format for filenames
- * e.g., "106" -> "0106", "1234" -> "1234"
- */
-function padManualId(id: string): string {
-	return id.replace(/^0+/, "").padStart(4, "0");
-}
-
-/**
- * Get canonical (unpadded) manual ID for URLs and data
- * e.g., "0106" -> "106", "1234" -> "1234"
- */
-function unpadManualId(id: string): string {
-	return id.replace(/^0+/, "") || "0";
-}
-const BRANDS_DATA_DIR = resolveWorkspacePath("data/src/brands");
-const SERIES_DATA_DIR = resolveWorkspacePath("data/src/series");
-const CATEGORIES_DATA_DIR = resolveWorkspacePath("data/src/categories");
-const ASSETS_DIR = resolveWorkspacePath("assets/images/items");
-const MANUALS_ASSETS_DIR = resolveWorkspacePath("assets/manuals");
+import {
+	type ScrapeOptions,
+	type ScrapeResult,
+	type StepTiming,
+	UNKNOWN_ERROR,
+	MAX_ITEM_ID,
+	DEFAULT_USER_AGENT,
+	FETCH_TIMEOUT_MS,
+	MS_PER_SECOND,
+	SECONDS_PER_MINUTE,
+	MINUTES_PER_HOUR,
+	HOURS_PER_DAY,
+	ITEMS_DATA_DIR,
+	MANUALS_DATA_DIR,
+	ASSETS_DIR,
+	padManualId,
+	unpadManualId,
+	parseItemIdSuffix,
+	formatItemId,
+	withTimeout,
+	fetchWithRetry,
+	BrowserManager,
+	downloadItemImages,
+	downloadManualPdfs,
+	downloadManualImage,
+	findImageSrcFromHtml,
+	mergeEnglishTranslation,
+	saveItemJson,
+	saveManualJson,
+	upsertEntities,
+	storeCanonicalTranslations,
+	translateItemFallback,
+	translateManualFallback,
+} from "./scrape/index.js";
 
 export class ScrapeCommand {
 	private parser: BandaiCatalogParser;
 	private manualParser: ManualParser;
 	private globalLookup: GlobalSiteLookup;
 	private translator: TranslationService;
+	private browserManager: BrowserManager;
 	/** Manual IDs discovered during item scraping (linked to items) */
 	private discoveredManualIds = new Set<string>();
-	/** Playwright browser instance */
-	private browser: Browser | null = null;
-	private browserContext: BrowserContext | null = null;
 	/** Track if new translations were added (need dictionary rebuild) */
 	private translationsAdded = false;
 
@@ -197,40 +80,7 @@ export class ScrapeCommand {
 		this.manualParser = new ManualParser();
 		this.globalLookup = new GlobalSiteLookup();
 		this.translator = new TranslationService();
-	}
-
-	private async initializeBrowser(): Promise<void> {
-		this.browser = await chromium.launch({
-			headless: true,
-			args: ["--no-sandbox", "--disable-setuid-sandbox"],
-		});
-		this.browserContext = await this.browser.newContext({
-			userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-			extraHTTPHeaders: {
-				"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-				"Accept-Language": "ja,en-US,en;q=0.5",
-			},
-		});
-
-		// Block unnecessary resources to speed up page loads
-		await this.browserContext.route("**/*", (route: Route) => {
-			const resourceType = route.request().resourceType();
-			if (["image", "stylesheet", "font", "media"].includes(resourceType)) {
-				return route.abort();
-			}
-			return route.continue();
-		});
-	}
-
-	private async cleanupBrowser(): Promise<void> {
-		if (this.browserContext) {
-			await this.browserContext.close();
-			this.browserContext = null;
-		}
-		if (this.browser) {
-			await this.browser.close();
-			this.browser = null;
-		}
+		this.browserManager = new BrowserManager();
 	}
 
 	async execute(options: ScrapeOptions): Promise<ScrapeResult> {
@@ -290,11 +140,12 @@ export class ScrapeCommand {
 
 			// Initialize browser for scraping (site requires JS rendering)
 			console.log("Initializing browser...");
-			await this.initializeBrowser();
-			if (!this.browserContext) {
+			await this.browserManager.initializeBrowser();
+			const browserContext = this.browserManager.getBrowserContext();
+			if (!browserContext) {
 				throw new Error("Browser context failed to initialize");
 			}
-			this.globalLookup.setBrowserContext(this.browserContext);
+			this.globalLookup.setBrowserContext(browserContext);
 
 			// Phase 1: Process each item - scrape if needed, then ensure translations
 			for (let i = 0; i < allItemIds.length; i++) {
@@ -433,7 +284,7 @@ export class ScrapeCommand {
 			return result;
 		} finally {
 			// Always cleanup browser
-			await this.cleanupBrowser();
+			await this.browserManager.cleanupBrowser();
 		}
 	}
 
@@ -450,29 +301,6 @@ export class ScrapeCommand {
 		return allItemIds.filter((id) => !ItemsIndexUpdater.wasPageRecentlyScraped(id, maxAgeHours));
 	}
 
-	/**
-	 * Parse an item ID and return the numeric suffix
-	 * Accepts: "01_1234", "1234", "01_0001", "0001", "1"
-	 * All resolve to the numeric value (e.g., 1234 or 1)
-	 */
-	private parseItemIdSuffix(id: string): number {
-		// If contains underscore, extract suffix
-		if (id.includes("_")) {
-			const parts = id.split("_");
-			if (parts.length !== 2 || !parts[1]) return 0;
-			return Number.parseInt(parts[1], 10);
-		}
-		// Otherwise treat entire string as the numeric ID
-		return Number.parseInt(id, 10);
-	}
-
-	/**
-	 * Format a numeric suffix into a padded item ID
-	 * e.g., 1234 -> "01_1234", 1 -> "01_0001"
-	 */
-	private formatItemId(suffix: number): string {
-		return `01_${suffix.toString().padStart(4, "0")}`;
-	}
 
 	/**
 	 * Get item IDs to process based on options
@@ -481,28 +309,28 @@ export class ScrapeCommand {
 	private getAllItemIds(options: ScrapeOptions): string[] {
 		// Single specific ID
 		if (options.id) {
-			const id = this.formatItemId(this.parseItemIdSuffix(options.id));
+			const id = formatItemId(parseItemIdSuffix(options.id));
 			return [id];
 		}
 
 		// Range specified by start (and optionally end or count)
 		if (options.start) {
-			const startSuffix = this.parseItemIdSuffix(options.start);
+			const startSuffix = parseItemIdSuffix(options.start);
 			let endSuffix: number;
 
 			if (options.end) {
-				endSuffix = this.parseItemIdSuffix(options.end);
+				endSuffix = parseItemIdSuffix(options.end);
 			} else if (options.count) {
 				endSuffix = startSuffix + options.count - 1;
 			} else {
 				// Just start specified - process that single item
-				return [this.formatItemId(startSuffix)];
+				return [formatItemId(startSuffix)];
 			}
 
 			// Generate range
 			const itemIds: string[] = [];
 			for (let i = startSuffix; i <= endSuffix && i <= MAX_ITEM_ID; i++) {
-				const id = this.formatItemId(i);
+				const id = formatItemId(i);
 				const status = ItemsIndexUpdater.isIndexed(id);
 				if (status.indexed && status.hasPage) {
 					itemIds.push(id);
@@ -514,7 +342,7 @@ export class ScrapeCommand {
 		// Default: all items with pages
 		const itemIds: string[] = [];
 		for (let i = 1; i <= MAX_ITEM_ID; i++) {
-			const id = this.formatItemId(i);
+			const id = formatItemId(i);
 			const status = ItemsIndexUpdater.isIndexed(id);
 			if (status.indexed && status.hasPage) {
 				itemIds.push(id);
@@ -636,11 +464,6 @@ export class ScrapeCommand {
 		return needsMigration;
 	}
 
-	// Time conversion constants
-	private static readonly MS_PER_SECOND = 1000;
-	private static readonly SECONDS_PER_MINUTE = 60;
-	private static readonly MINUTES_PER_HOUR = 60;
-	private static readonly HOURS_PER_DAY = 24;
 
 	/**
 	 * Print timing summary for profiling
@@ -693,9 +516,9 @@ export class ScrapeCommand {
 			try {
 				const htmlStat = await time("cache-stat", () => fs.stat(htmlPath));
 				const ageMs = Date.now() - htmlStat.mtimeMs;
-				const maxAgeMs = options.maxAgeDays * ScrapeCommand.HOURS_PER_DAY * ScrapeCommand.MINUTES_PER_HOUR * ScrapeCommand.SECONDS_PER_MINUTE * ScrapeCommand.MS_PER_SECOND;
-				const ageMinutes = Math.round(ageMs / ScrapeCommand.MS_PER_SECOND / ScrapeCommand.SECONDS_PER_MINUTE);
-				const ageHours = Math.round(ageMs / ScrapeCommand.MS_PER_SECOND / ScrapeCommand.SECONDS_PER_MINUTE / ScrapeCommand.MINUTES_PER_HOUR);
+				const maxAgeMs = options.maxAgeDays * HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE * MS_PER_SECOND;
+				const ageMinutes = Math.round(ageMs / MS_PER_SECOND / SECONDS_PER_MINUTE);
+				const ageHours = Math.round(ageMs / MS_PER_SECOND / SECONDS_PER_MINUTE / MINUTES_PER_HOUR);
 
 				if (maxAgeMs === 0 || ageMs < maxAgeMs) {
 					html = await time("cache-read", () => fs.readFile(htmlPath, "utf8"));
@@ -716,7 +539,7 @@ export class ScrapeCommand {
 				html = await time("fetch-html", () => this.fetchPage(url));
 
 				// Save HTML file
-				await time("save-html", () => fs.writeFile(htmlPath, html, "utf8"));
+				await time("save-html", () => fs.writeFile(htmlPath, html!, "utf8"));
 			} catch (fetchError) {
 				const errorMsg = fetchError instanceof Error ? fetchError.message : "Unknown fetch error";
 				this.printTimings(options, timings);
@@ -746,7 +569,7 @@ export class ScrapeCommand {
 				try {
 					const enHtmlStat = await time("en-cache-stat", () => fs.stat(enHtmlPath));
 					const ageMs = Date.now() - enHtmlStat.mtimeMs;
-					const maxAgeMs = options.maxAgeDays * ScrapeCommand.HOURS_PER_DAY * ScrapeCommand.MINUTES_PER_HOUR * ScrapeCommand.SECONDS_PER_MINUTE * ScrapeCommand.MS_PER_SECOND;
+					const maxAgeMs = options.maxAgeDays * HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE * MS_PER_SECOND;
 
 					if (maxAgeMs === 0 || ageMs < maxAgeMs) {
 						const enHtml = await time("en-cache-read", () => fs.readFile(enHtmlPath, "utf8"));
@@ -769,11 +592,13 @@ export class ScrapeCommand {
 			}
 
 			if (globalData.hasPage) {
-				itemData = this.mergeEnglishTranslation(itemData, globalData);
+				itemData = mergeEnglishTranslation(itemData, globalData);
 				hasGlobalTranslation = true;
 
 				// Store canonical translations in dictionary (persisted immediately)
-				this.storeCanonicalTranslations(itemData, globalData);
+				if (storeCanonicalTranslations(itemData, globalData)) {
+					this.translationsAdded = true;
+				}
 
 				const source = usedEnCache ? "cached" : "fetched";
 				console.log(`  ✓ English translation (${source}): ${globalData.name ?? "(name)"}`);
@@ -790,7 +615,7 @@ export class ScrapeCommand {
 		// Step 2c: Fallback translation for items without global page
 		if (!hasGlobalTranslation && !itemData.name.en) {
 			try {
-				itemData = await time("fallback-translate", () => this.translateItemFallback(itemData));
+				itemData = await time("fallback-translate", () => translateItemFallback(itemData, this.translator));
 				if (itemData.name.en) {
 					console.log(`  ✓ Fallback translation: ${itemData.name.en}`);
 				}
@@ -801,7 +626,7 @@ export class ScrapeCommand {
 		}
 
 		// Step 3: Save item JSON
-		const itemWritten = await time("save-json", () => this.saveItemJson(jsonPath, itemData));
+		const itemWritten = await time("save-json", () => saveItemJson(jsonPath, itemData));
 		if (itemWritten) {
 			console.log(`  ✓ Item JSON saved`);
 		} else {
@@ -811,7 +636,7 @@ export class ScrapeCommand {
 		// Step 3b: Upsert discovered entities (brands, series, categories)
 		const entities = parseResult.entities;
 		if (entities && entities.length > 0) {
-			const newEntities = await time("upsert-entities", () => this.upsertEntities(entities));
+			const newEntities = await time("upsert-entities", () => upsertEntities(entities));
 			if (newEntities > 0) {
 				console.log(`  ✓ ${newEntities} new entities added`);
 			}
@@ -848,7 +673,7 @@ export class ScrapeCommand {
 		if (itemData.images && !options.dryRun) {
 			try {
 				const downloadResult = await time("download-images", () =>
-					this.downloadItemImages(itemId, itemData, jsonPath),
+					downloadItemImages(itemId, itemData, jsonPath, this.browserManager.getBrowserContext(), async (p, d) => { await saveItemJson(p, d); }),
 				);
 				if (downloadResult.downloaded > 0) {
 					console.log(`  ✓ Images: ${downloadResult.downloaded} downloaded, ${downloadResult.skipped} skipped`);
@@ -902,9 +727,9 @@ export class ScrapeCommand {
 			try {
 				const htmlStat = await time("cache-stat", () => fs.stat(htmlPath));
 				const ageMs = Date.now() - htmlStat.mtimeMs;
-				const maxAgeMs = options.maxAgeDays * ScrapeCommand.HOURS_PER_DAY * ScrapeCommand.MINUTES_PER_HOUR * ScrapeCommand.SECONDS_PER_MINUTE * ScrapeCommand.MS_PER_SECOND;
-				const ageMinutes = Math.round(ageMs / ScrapeCommand.MS_PER_SECOND / ScrapeCommand.SECONDS_PER_MINUTE);
-				const ageHours = Math.round(ageMs / ScrapeCommand.MS_PER_SECOND / ScrapeCommand.SECONDS_PER_MINUTE / ScrapeCommand.MINUTES_PER_HOUR);
+				const maxAgeMs = options.maxAgeDays * HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE * MS_PER_SECOND;
+				const ageMinutes = Math.round(ageMs / MS_PER_SECOND / SECONDS_PER_MINUTE);
+				const ageHours = Math.round(ageMs / MS_PER_SECOND / SECONDS_PER_MINUTE / MINUTES_PER_HOUR);
 
 				if (maxAgeMs === 0 || ageMs < maxAgeMs) {
 					html = await time("cache-read", () => fs.readFile(htmlPath, "utf8"));
@@ -925,7 +750,7 @@ export class ScrapeCommand {
 
 				// Save HTML file
 				await fs.mkdir(path.dirname(htmlPath), { recursive: true });
-				await time("save-html", () => fs.writeFile(htmlPath, html, "utf8"));
+				await time("save-html", () => fs.writeFile(htmlPath, html!, "utf8"));
 			} catch (error) {
 				const errorMsg = error instanceof Error ? error.message : UNKNOWN_ERROR;
 				ManualsIndexUpdater.recordChecked(canonicalId);
@@ -949,7 +774,7 @@ export class ScrapeCommand {
 		// Step 3: Download PDFs (use padded ID for asset directories)
 		if (manualData.pdfs.length > 0 && !options.dryRun) {
 			const downloadResult = await time("download-pdfs", () =>
-				this.downloadManualPdfs(paddedId, manualData),
+				downloadManualPdfs(paddedId, manualData),
 			);
 			if (downloadResult.downloaded > 0) {
 				console.log(`  ✓ PDFs: ${downloadResult.downloaded} downloaded, ${downloadResult.skipped} skipped`);
@@ -962,14 +787,14 @@ export class ScrapeCommand {
 		if (!options.dryRun) {
 			if (manualData.image?.src) {
 				// Parser found image in HTML - download or find existing (use padded ID for assets)
-				discoveredItemId = await time("download-image", () => this.downloadManualImage(paddedId, manualData));
+				discoveredItemId = await time("download-image", () => downloadManualImage(paddedId, manualData));
 			} else {
 				// Parser didn't find image - try to get src from cached HTML
-				const srcUrl = await time("find-src", () => this.findImageSrcFromHtml(htmlPath, ""));
+				const srcUrl = await time("find-src", () => findImageSrcFromHtml(htmlPath, ""));
 				if (srcUrl) {
 					// Found src in HTML - use the standard download flow
 					manualData.image = { src: srcUrl };
-					discoveredItemId = await time("download-image", () => this.downloadManualImage(paddedId, manualData));
+					discoveredItemId = await time("download-image", () => downloadManualImage(paddedId, manualData));
 				}
 			}
 
@@ -987,7 +812,7 @@ export class ScrapeCommand {
 		// Step 3c: Translate manual if missing English
 		if (!manualData.name.en) {
 			try {
-				await time("translate", () => this.translateManualFallback(manualData));
+				await time("translate", () => translateManualFallback(manualData, this.translator));
 				if (manualData.name.en) {
 					console.log(`  ✓ Translated: ${manualData.name.en}`);
 				}
@@ -998,7 +823,7 @@ export class ScrapeCommand {
 		}
 
 		// Step 4: Save manual JSON
-		await time("save-json", () => this.saveManualJson(jsonPath, manualData));
+		await time("save-json", () => saveManualJson(jsonPath, manualData));
 		console.log(`  ✓ Manual JSON saved`);
 
 		// Record in index (valid status + extraction timestamp) using canonical unpadded ID
@@ -1030,251 +855,6 @@ export class ScrapeCommand {
 	}
 
 	/**
-	 * Download PDFs for a manual and update paths
-	 */
-	private async downloadManualPdfs(
-		manualId: string,
-		manualData: ManualData,
-	): Promise<{ downloaded: number; skipped: number }> {
-		const stats = { downloaded: 0, skipped: 0 };
-
-		// Create manual's PDF directory
-		const manualPdfDir = path.join(MANUALS_ASSETS_DIR, manualId);
-		await fs.mkdir(manualPdfDir, { recursive: true });
-
-		for (const pdf of manualData.pdfs) {
-			if (!pdf.url) continue;
-
-			// Extract filename from URL (e.g., "1.pdf" from ".../pdf/1.pdf")
-			const urlPath = new URL(pdf.url).pathname;
-			const filename = path.basename(urlPath);
-
-			// Check for existing file with either unpadded or padded name
-			// URLs use unpadded (1.pdf) but existing files may be padded (0001.pdf)
-			const existingPath = await this.findExistingPdf(manualPdfDir, filename);
-			if (existingPath) {
-				const existingFilename = path.basename(existingPath);
-				pdf.path = `/manuals/${manualId}/${existingFilename}`;
-				stats.skipped++;
-				continue;
-			}
-
-			// Download the PDF using the URL filename
-			const localPath = path.join(manualPdfDir, filename);
-			const relativePath = `/manuals/${manualId}/${filename}`;
-
-			try {
-				const pdfBuffer = await this.downloadPdf(pdf.url);
-				await fs.writeFile(localPath, pdfBuffer);
-				pdf.path = relativePath;
-				stats.downloaded++;
-				console.log(`    Downloaded: ${filename}`);
-			} catch (error) {
-				const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
-				console.log(`    Failed: ${filename} - ${msg}`);
-			}
-		}
-
-		return stats;
-	}
-
-	/**
-	 * Find existing PDF file, checking both unpadded and padded filenames
-	 * e.g., for "1.pdf", also checks "0001.pdf", "001.pdf", "01.pdf"
-	 */
-	private async findExistingPdf(dir: string, filename: string): Promise<string | null> {
-		// Try exact filename first
-		const exactPath = path.join(dir, filename);
-		try {
-			await fs.access(exactPath);
-			return exactPath;
-		} catch {
-			// Not found, try padded versions
-		}
-
-		// Extract base name and extension (e.g., "1" and ".pdf")
-		const ext = path.extname(filename);
-		const base = path.basename(filename, ext);
-
-		// If base is numeric, try padded versions
-		const num = Number.parseInt(base, 10);
-		if (!Number.isNaN(num)) {
-			const paddedVersions = [
-				num.toString().padStart(4, "0"), // 0001
-				num.toString().padStart(3, "0"), // 001
-				num.toString().padStart(2, "0"), // 01
-			];
-
-			for (const padded of paddedVersions) {
-				if (padded === base) continue; // Skip if same as original
-				const paddedPath = path.join(dir, `${padded}${ext}`);
-				try {
-					await fs.access(paddedPath);
-					return paddedPath;
-				} catch {
-					// Not found, try next
-				}
-			}
-		}
-
-		return null;
-	}
-
-	/**
-	 * Download a PDF from URL with retry on timeout
-	 */
-	private async downloadPdf(url: string): Promise<Buffer> {
-		const response = await fetchWithRetry(url, {
-			headers: {
-				"User-Agent": DEFAULT_USER_AGENT,
-				"Accept": "application/pdf,*/*;q=0.8",
-				"Referer": "https://manual.bandai-hobby.net/",
-			},
-		});
-
-		if (!response.ok) {
-			throw new Error(`HTTP ${response.status}`);
-		}
-
-		// Wrap body reading in timeout (PDFs can be large and hang during transfer)
-		const arrayBuffer = await withTimeout(
-			response.arrayBuffer(),
-			FETCH_TIMEOUT_MS * 2, // 60s for PDF downloads (they can be large)
-			"PDF download timeout",
-		);
-		return Buffer.from(arrayBuffer);
-	}
-
-	/**
-	 * Download or locate manual image
-	 * Prefers existing item assets over manual assets to avoid duplication.
-	 * If image exists in items, removes any manual copies (even incorrectly named ones).
-	 * @returns The item ID if an existing item image was found, undefined otherwise
-	 */
-	private async downloadManualImage(
-		manualId: string,
-		manualData: ManualData,
-	): Promise<string | undefined> {
-		if (!manualData.image?.src) return undefined;
-
-		const imageUrl = manualData.image.src;
-		const filename = extractFilenameFromUrl(imageUrl);
-		// Extract base filename without extension or Bandai hash suffix (_s_xxxxx)
-		// e.g., "155_303_s_kwjuc0ri80ktzu3ahk5r92ecrdr4.jpg" -> "155_303"
-		const filenameWithoutExt = filename.replace(/\.[^.]+$/, "");
-		const filenamePrefix = filenameWithoutExt.replace(/_s_[a-z0-9]+$/i, "");
-		// Clean filename for local storage (without hash suffix)
-		const ext = path.extname(filename);
-		const cleanFilename = `${filenamePrefix}${ext}`;
-
-		// Manual asset paths
-		const manualImageDir = path.join(MANUALS_ASSETS_DIR, manualId);
-
-		// Check for existing image in items (preferred location)
-		const existingItemPath = await findExistingItemImage(filenamePrefix);
-		if (existingItemPath) {
-			manualData.image.path = existingItemPath;
-			// Compute hash from the existing item image file
-			const absoluteItemPath = resolveWorkspacePath(`assets${existingItemPath}`);
-			manualData.image.hash = await computeFileHash(absoluteItemPath);
-			console.log(`    Found existing image: ${existingItemPath}`);
-
-			// Remove ALL image files from manual assets (they're duplicates)
-			await this.cleanupManualImages(manualImageDir);
-
-			// Extract item ID from path: /images/items/01_5771/157_833.jpg -> 01_5771
-			const itemIdMatch = /\/images\/items\/([^/]+)\//.exec(existingItemPath);
-			return itemIdMatch?.[1];
-		}
-
-		// No item image found - check/download to manuals directory
-		await fs.mkdir(manualImageDir, { recursive: true });
-		const manualLocalPath = path.join(manualImageDir, cleanFilename);
-		const relativePath = `/manuals/${manualId}/${cleanFilename}`;
-
-		// Check if already downloaded to manuals (with correct filename)
-		try {
-			await fs.access(manualLocalPath);
-			manualData.image.path = relativePath;
-			manualData.image.hash = await computeFileHash(manualLocalPath);
-			console.log(`    Image already exists: ${cleanFilename}`);
-			// Clean up any incorrectly named duplicates
-			await this.cleanupManualImages(manualImageDir, cleanFilename);
-			return undefined;
-		} catch {
-			// File doesn't exist, download it
-		}
-
-		// Clean up any incorrectly named files before downloading
-		await this.cleanupManualImages(manualImageDir);
-
-		try {
-			const response = await fetchWithRetry(imageUrl, {
-				headers: {
-					"User-Agent": DEFAULT_USER_AGENT,
-					"Accept": "image/*",
-					"Referer": "https://manual.bandai-hobby.net/",
-				},
-			});
-
-			if (!response.ok) throw new Error(`HTTP ${response.status}`);
-
-			// Wrap body reading in timeout
-			const arrayBuffer = await withTimeout(
-				response.arrayBuffer(),
-				FETCH_TIMEOUT_MS,
-				"Image download timeout",
-			);
-			const buffer = Buffer.from(arrayBuffer);
-			await fs.writeFile(manualLocalPath, buffer);
-			manualData.image.path = relativePath;
-			manualData.image.hash = computeBufferHash(buffer);
-			console.log(`    Downloaded image: ${cleanFilename}`);
-		} catch (error) {
-			const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
-			console.log(`    Failed to download image: ${msg}`);
-		}
-
-		return undefined;
-	}
-
-	/**
-	 * Remove image files from manual directory
-	 * @param keepFilename If specified, keep this file and remove others
-	 */
-	private async cleanupManualImages(manualImageDir: string, keepFilename?: string): Promise<void> {
-		try {
-			const files = await fs.readdir(manualImageDir);
-			for (const file of files) {
-				if (/\.(jpg|jpeg|png|gif|webp)$/i.test(file)) {
-					if (keepFilename && file === keepFilename) continue;
-					const filePath = path.join(manualImageDir, file);
-					await fs.unlink(filePath);
-					console.log(`    Removed duplicate: ${file}`);
-				}
-			}
-			// Clean up empty directory
-			await this.removeEmptyDir(manualImageDir);
-		} catch {
-			// Directory doesn't exist or can't be read
-		}
-	}
-
-	/**
-	 * Remove directory if empty
-	 */
-	private async removeEmptyDir(dirPath: string): Promise<void> {
-		try {
-			const files = await fs.readdir(dirPath);
-			if (files.length === 0) {
-				await fs.rmdir(dirPath);
-			}
-		} catch {
-			// Directory doesn't exist or can't be read
-		}
-	}
-
-	/**
 	 * Update an item JSON with a manual link reference
 	 * Only updates if the item doesn't already have a manual link
 	 */
@@ -1297,655 +877,6 @@ export class ScrapeCommand {
 			}
 		} catch {
 			// Item file doesn't exist or is invalid - skip
-		}
-	}
-
-	/**
-	 * Search HTML file for a product image URL
-	 * Used when we found an image on disk but parser didn't extract the src
-	 * Looks for the main product image (from bandai-hobby.net, not common assets)
-	 */
-	private async findImageSrcFromHtml(htmlPath: string, _imagePath: string): Promise<string | null> {
-		try {
-			const html = await fs.readFile(htmlPath, "utf8");
-
-			// Look for product images from bandai-hobby.net (the main catalog images)
-			// Pattern: src="https://bandai-hobby.net/images/{product_id}_{variant}.jpg"
-			const productImgPattern = /src="(https:\/\/bandai-hobby\.net\/images\/\d+_\d+[^"]+\.(?:jpg|png|webp))"/gi;
-			const matches = [...html.matchAll(productImgPattern)];
-
-			// Filter out common/logo images, prefer product images
-			for (const match of matches) {
-				const url = match[1];
-				if (url && !url.includes("/common/") && !url.includes("logo")) {
-					return url;
-				}
-			}
-
-			// Fallback: look for ecms_img images from bandai-hobby.net (newer image hosting)
-			// Pattern: src="https://bandai-hobby.net/ecms_img/web/{id}.jpg"
-			const ecmsImgPattern = /src="(https:\/\/bandai-hobby\.net\/ecms_img\/[^"]+\.(?:jpg|png|webp))"/gi;
-			const ecmsMatches = [...html.matchAll(ecmsImgPattern)];
-			for (const match of ecmsMatches) {
-				const url = match[1];
-				if (url && !url.includes("/common/") && !url.includes("logo")) {
-					return url;
-				}
-			}
-
-		} catch {
-			// HTML file doesn't exist or can't be read
-		}
-		return null;
-	}
-
-	/**
-	 * Save manual data to JSON file, merging with existing data to preserve translations
-	 */
-	private async saveManualJson(filePath: string, data: ManualData): Promise<void> {
-		await fs.mkdir(path.dirname(filePath), { recursive: true });
-
-		// Merge with existing data to preserve English translations and metadata
-		const mergedData = await this.mergeWithExistingManual(filePath, data);
-
-		await fs.writeFile(filePath, JSON.stringify(mergedData, null, "\t"), "utf8");
-	}
-
-	/**
-	 * Merge new manual data with existing file to preserve translations and metadata
-	 */
-	private async mergeWithExistingManual(filePath: string, newData: ManualData): Promise<ManualData> {
-		try {
-			const existingContent = await fs.readFile(filePath, "utf8");
-			const existing = JSON.parse(existingContent) as Record<string, unknown>;
-
-			// Preserve English name if not in new data
-			if (existing["name"] && typeof existing["name"] === "object") {
-				const existingName = existing["name"] as Record<string, string>;
-				if (existingName["en"] && !newData.name.en) {
-					newData.name.en = existingName["en"];
-				}
-			}
-
-			// Preserve English PDF names
-			if (existing["pdfs"] && Array.isArray(existing["pdfs"])) {
-				for (let i = 0; i < newData.pdfs.length; i++) {
-					const existingPdf = existing["pdfs"][i] as Record<string, unknown> | undefined;
-					if (existingPdf?.["name"] && typeof existingPdf["name"] === "object") {
-						const existingPdfName = existingPdf["name"] as Record<string, string>;
-						if (existingPdfName["en"] && !newData.pdfs[i]?.name.en) {
-							newData.pdfs[i].name.en = existingPdfName["en"];
-						}
-					}
-				}
-			}
-
-			// Preserve English brand/series translations
-			if (existing["brand"] && typeof existing["brand"] === "object") {
-				const existingBrand = existing["brand"] as Record<string, unknown>;
-				if (existingBrand["en"] && newData.brand && !newData.brand.en) {
-					newData.brand.en = existingBrand["en"] as string;
-				}
-			}
-			if (existing["series"] && typeof existing["series"] === "object") {
-				const existingSeries = existing["series"] as Record<string, unknown>;
-				if (existingSeries["en"] && newData.series && !newData.series.en) {
-					newData.series.en = existingSeries["en"] as string;
-				}
-			}
-
-			// NOTE: We intentionally do NOT preserve image from existing JSON.
-			// Image should come from HTML parsing OR from files on disk.
-			// The downloadManualImage() function handles finding images on disk.
-
-			return newData;
-		} catch {
-			// File doesn't exist or can't be read, use new data as-is
-			return newData;
-		}
-	}
-
-	/**
-	 * Save item data to JSON file
-	 * Note: Timing fields (extractedAt, pageScrapedAt) are stored in the
-	 * centralized index.json, not in individual item files
-	 */
-	private async saveItemJson(filePath: string, data: Item): Promise<boolean> {
-		// Merge with existing data to preserve local image paths
-		const mergedData = await this.mergeWithExistingItem(filePath, data);
-
-		// Strip ephemeral URLs before saving (CloudFront signed URLs expire)
-		const outputData: Record<string, unknown> = { ...mergedData };
-		if (mergedData.images && "product" in mergedData.images) {
-			outputData["images"] = stripEphemeralImageUrls(mergedData.images);
-		}
-
-		return writeJsonIfChanged(filePath, outputData);
-	}
-
-	/**
-	 * Merge new item data with existing file to preserve local image paths
-	 */
-	private async mergeWithExistingItem(filePath: string, newData: Item): Promise<Item> {
-		try {
-			const existingContent = await fs.readFile(filePath, "utf8");
-			const existingItem = JSON.parse(existingContent) as Item;
-
-			// Merge image paths from existing data
-			if (existingItem.images && newData.images) {
-				newData.images = this.mergeImagePaths(newData.images, existingItem.images);
-			}
-
-			// Preserve globalSiteUrls if global lookup failed but existing data has it
-			if (existingItem.globalSiteUrls && !newData.globalSiteUrls) {
-				newData.globalSiteUrls = existingItem.globalSiteUrls;
-			}
-
-			return newData;
-		} catch {
-			// File doesn't exist or can't be read, use new data as-is
-			return newData;
-		}
-	}
-
-	/**
-	 * Merge local paths from existing images into new images
-	 * Matches images by src URL to preserve downloaded paths
-	 */
-	private mergeImagePaths(newImages: Item["images"], existingImages: Item["images"]): Item["images"] {
-		if (!newImages || !existingImages) return newImages;
-
-		// Build a map of src -> path from existing images
-		const pathMap = new Map<string, string>();
-		for (const img of existingImages.product) {
-			if (img.src && img.path) {
-				pathMap.set(img.src, img.path);
-			}
-		}
-		for (const img of existingImages.instructions) {
-			if (img.src && img.path) {
-				pathMap.set(img.src, img.path);
-			}
-		}
-
-		// Apply existing paths to new images
-		const mergeArray = (images: ItemImage[]): ItemImage[] => {
-			return images.map((img) => {
-				if (img.src && !img.path) {
-					const existingPath = pathMap.get(img.src);
-					if (existingPath) {
-						return { ...img, path: existingPath };
-					}
-				}
-				return img;
-			});
-		};
-
-		return {
-			product: mergeArray(newImages.product),
-			instructions: mergeArray(newImages.instructions),
-		};
-	}
-
-	/**
-	 * Upsert entities (brands, series, categories) - only creates new ones
-	 * Preserves all existing fields in entity files
-	 * @returns Number of new entities created
-	 */
-	private async upsertEntities(entities: EntityData[]): Promise<number> {
-		let newCount = 0;
-
-		for (const entity of entities) {
-			const dir = this.getEntityDir(entity.type);
-			const filePath = path.join(dir, `${entity.id}.json`);
-
-			// Check if entity already exists
-			try {
-				await fs.access(filePath);
-				// File exists, skip (don't overwrite existing data)
-				continue;
-			} catch {
-				// File doesn't exist, create it
-			}
-
-			// Create new entity file with base structure
-			const entityData = {
-				id: entity.id,
-				type: entity.type,
-				name: entity.name,
-				url: entity.url,
-			};
-
-			await fs.writeFile(filePath, JSON.stringify(entityData, null, "\t"), "utf8");
-			newCount++;
-		}
-
-		return newCount;
-	}
-
-	/**
-	 * Get directory for entity type
-	 */
-	private getEntityDir(type: "brand" | "series" | "category"): string {
-		switch (type) {
-			case "brand": {
-				return BRANDS_DATA_DIR;
-			}
-			case "series": {
-				return SERIES_DATA_DIR;
-			}
-			case "category": {
-				return CATEGORIES_DATA_DIR;
-			}
-		}
-	}
-
-	/**
-	 * Download images for an item and update the JSON with local paths
-	 */
-	private async downloadItemImages(
-		itemId: string,
-		itemData: Item,
-		jsonPath: string,
-	): Promise<{ downloaded: number; skipped: number }> {
-		const stats = { downloaded: 0, skipped: 0 };
-
-		if (!itemData.images) {
-			return stats;
-		}
-
-		// Create item's image directory
-		const itemImagesDir = path.join(ASSETS_DIR, itemId);
-		await fs.mkdir(itemImagesDir, { recursive: true });
-
-		// Collect all images to download
-		const allImages: Array<{ image: ItemImage; type: "product" | "instruction" }> = [];
-
-		for (const img of itemData.images.product) {
-			allImages.push({ image: img, type: "product" });
-		}
-		for (const img of itemData.images.instructions) {
-			allImages.push({ image: img, type: "instruction" });
-		}
-
-		// Download each image
-		for (const { image, type } of allImages) {
-			if (!image.src) {
-				continue;
-			}
-
-			// Extract filename from URL (preserves original naming like 153_1.jpg)
-			const baseFilename = this.extractImageFilename(image.src);
-			const prefix = type === "instruction" ? "inst_" : "";
-			const filename = `${prefix}${baseFilename}`;
-			const localPath = path.join(itemImagesDir, filename);
-			const relativePath = `/images/items/${itemId}/${filename}`;
-
-			// Check if already downloaded
-			try {
-				await fs.access(localPath);
-				// File exists, update path and compute hash
-				image.path = relativePath;
-				image.hash = await computeFileHash(localPath);
-				stats.skipped++;
-				continue;
-			} catch {
-				// File doesn't exist, download it
-			}
-
-			// Download the image
-			try {
-				const imageBuffer = await this.downloadImage(image.src);
-				await fs.writeFile(localPath, imageBuffer);
-				image.path = relativePath;
-				image.hash = computeBufferHash(imageBuffer);
-				stats.downloaded++;
-				console.log(`    Downloaded: ${filename}`);
-			} catch (error) {
-				const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
-				console.log(`    Failed: ${filename} - ${msg}`);
-			}
-		}
-
-		// Update JSON with local paths if any images were processed (downloaded or already existed)
-		if (stats.downloaded > 0 || stats.skipped > 0) {
-			await this.saveItemJson(jsonPath, itemData);
-		}
-
-		return stats;
-	}
-
-	/**
-	 * Download an image from URL
-	 */
-	private async downloadImage(url: string): Promise<Buffer> {
-		// Try plain fetch first with hard timeout
-		try {
-			const response = await withTimeout(
-				fetch(url, {
-					headers: {
-						"User-Agent": DEFAULT_USER_AGENT,
-						"Accept": "image/webp,image/apng,image/*,*/*;q=0.8",
-						"Referer": "https://bandai-hobby.net/",
-					},
-				}),
-				FETCH_TIMEOUT_MS,
-				"Image fetch timeout",
-			);
-
-			if (response.ok) {
-				const arrayBuffer = await withTimeout(
-					response.arrayBuffer(),
-					FETCH_TIMEOUT_MS,
-					"Image download timeout",
-				);
-				return Buffer.from(arrayBuffer);
-			}
-		} catch {
-			// Fall back to Playwright
-		}
-
-		// Use Playwright for signed/protected URLs
-		if (!this.browserContext) {
-			throw new Error("Browser not initialized");
-		}
-
-		const page = await this.browserContext.newPage();
-		try {
-			const response = await page.goto(url, { waitUntil: "load", timeout: 30_000 });
-			if (!response) {
-				throw new Error("No response received");
-			}
-			if (!response.ok()) {
-				throw new Error(`HTTP ${String(response.status())}`);
-			}
-			return await response.body();
-		} finally {
-			await page.close();
-		}
-	}
-
-	/**
-	 * Extract clean filename from image URL
-	 * - bandai-hobby.net: "153_1_s_{hash}.jpg" → "153_1.jpg"
-	 * - akamaihd.net: "1000085708_1.jpg" → "1000085708_1.jpg" (unchanged)
-	 */
-	private extractImageFilename(url: string): string {
-		const urlPath = new URL(url).pathname;
-		const fullFilename = path.basename(urlPath);
-		const ext = path.extname(fullFilename);
-		const nameWithoutExt = fullFilename.slice(0, -ext.length);
-
-		// Pattern for bandai-hobby.net CDN: {num}_{num}_s_{hash} or {num}_{num}_{letter}_{hash}
-		// Examples: 153_1_s_1l14qctcn4r6fhud4l6u8ilrw9iv, 153_1008_s_maqcpwjhzdqc3zkmb8jg5lymakct
-		const bandaiPattern = /^(\d+_\d+)_[a-z]_[a-z0-9]+$/i;
-		const match = bandaiPattern.exec(nameWithoutExt);
-		if (match?.[1]) {
-			return `${match[1]}${ext}`;
-		}
-
-		// For other URLs (Akamai, etc.), use the original filename
-		return fullFilename;
-	}
-
-	/**
-	 * Merge English translation data into Item
-	 * Updates name.en, description.en, brands[].en, series[].en, accessories[].name.en, and globalSiteUrls
-	 */
-	private mergeEnglishTranslation(item: Item, globalData: GlobalSiteData): Item {
-		// Set English name
-		if (globalData.name) {
-			item.name.en = globalData.name;
-		}
-
-		// Set English description
-		if (globalData.description && globalData.description.length > 0) {
-			item.description ??= { ja: [] };
-			item.description.en = globalData.description;
-		}
-
-		// Update brand with English name if found
-		if (globalData.brand && item.brands.length > 0) {
-			// Match by looking for the first brand (usually just one)
-			const brand = item.brands[0];
-			if (brand) {
-				brand.en = globalData.brand;
-			}
-		}
-
-		// Update series with English name if found
-		if (globalData.series && item.series.length > 0) {
-			const series = item.series[0];
-			if (series) {
-				series.en = globalData.series;
-			}
-		}
-
-		// Merge English accessories if found
-		if (globalData.accessories && globalData.accessories.length > 0 && item.accessories) {
-			item.accessories = this.mergeEnglishAccessories(item.accessories, globalData.accessories);
-		}
-
-		// Set globalSiteUrls
-		if (globalData.url) {
-			item.globalSiteUrls = {
-				enUs: globalData.url,
-			};
-		}
-
-		return item;
-	}
-
-	/**
-	 * Merge English accessory strings into existing Japanese accessories
-	 * Matches by position (index) since accessories are listed in the same order
-	 */
-	private mergeEnglishAccessories(
-		jaAccessories: ParsedAccessoryItem[],
-		enStrings: string[],
-	): ParsedAccessoryItem[] {
-		// Parse English strings to extract names and counts
-		const enParsed = parseCountedItems(enStrings);
-
-		// Merge by position
-		return jaAccessories.map((jaItem, index) => {
-			const enItem = enParsed[index];
-			if (enItem) {
-				const merged: ParsedAccessoryItem = {
-					...jaItem,
-					name: {
-						ja: jaItem.name.ja,
-						en: enItem.name,
-					},
-				};
-				// Merge EN unit if present
-				if (enItem.unit) {
-					merged.unit = {
-						ja: jaItem.unit?.ja ?? enItem.unit,
-						en: enItem.unit,
-					};
-				}
-				return merged;
-			}
-			return jaItem;
-		});
-	}
-
-	/**
-	 * Store canonical translations from global site in dictionary
-	 * These are official Bandai translations and should be preferred
-	 * Persists immediately to disk for crash safety
-	 */
-	private storeCanonicalTranslations(item: Item, globalData: GlobalSiteData): void {
-		// Store product name translation
-		if (globalData.name && item.name.ja) {
-			addPhraseSync(item.name.ja, globalData.name, "product-name");
-			this.translationsAdded = true;
-		}
-
-		// Store brand translation
-		if (globalData.brand && item.brands[0]?.ja) {
-			addPhraseSync(item.brands[0].ja, globalData.brand, "brand");
-			this.translationsAdded = true;
-		}
-
-		// Store series translation
-		if (globalData.series && item.series[0]?.ja) {
-			addPhraseSync(item.series[0].ja, globalData.series, "series");
-			this.translationsAdded = true;
-		}
-	}
-
-	/**
-	 * Fallback translation for items without global site page
-	 * Checks dictionary first (for canonical translations from other items),
-	 * then falls back to TranslationService (Google Translate)
-	 */
-	private async translateItemFallback(item: Item): Promise<Item> {
-		// Translate name - check dictionary first
-		if (item.name.ja && !item.name.en) {
-			const cached = lookupPhrase(item.name.ja);
-			if (cached) {
-				item.name.en = cached.en;
-			} else {
-				const result = await this.translator.translateText(item.name.ja, "en", "ja");
-				if (result.translated && result.translated !== item.name.ja) {
-					item.name.en = result.translated;
-				}
-			}
-		}
-
-		// Translate description bullets - check dictionary first for each
-		if (item.description?.ja && !item.description.en) {
-			const translatedBullets: string[] = [];
-			for (const bullet of item.description.ja) {
-				const cached = lookupPhrase(bullet);
-				if (cached) {
-					translatedBullets.push(cached.en);
-				} else {
-					const result = await this.translator.translateText(bullet, "en", "ja");
-					translatedBullets.push(result.translated);
-				}
-			}
-			item.description.en = translatedBullets;
-		}
-
-		// Translate accessories (name and unit)
-		if (item.accessories) {
-			for (const accessory of item.accessories) {
-				if (accessory.name.ja && !accessory.name.en) {
-					const cached = lookupPhrase(accessory.name.ja);
-					if (cached) {
-						accessory.name.en = cached.en;
-					} else {
-						const result = await this.translator.translateText(accessory.name.ja, "en", "ja");
-						if (result.translated && result.translated !== accessory.name.ja) {
-							accessory.name.en = result.translated;
-						}
-					}
-				}
-				if (accessory.unit?.ja && !accessory.unit.en) {
-					const cached = lookupPhrase(accessory.unit.ja);
-					if (cached) {
-						accessory.unit.en = cached.en;
-					} else {
-						const result = await this.translator.translateText(accessory.unit.ja, "en", "ja");
-						if (result.translated && result.translated !== accessory.unit.ja) {
-							accessory.unit.en = result.translated;
-						}
-					}
-				}
-			}
-		}
-
-		// Translate contents (name and unit)
-		if (item.contents) {
-			for (const content of item.contents) {
-				if (content.name.ja && !content.name.en) {
-					const cached = lookupPhrase(content.name.ja);
-					if (cached) {
-						content.name.en = cached.en;
-					} else {
-						const result = await this.translator.translateText(content.name.ja, "en", "ja");
-						if (result.translated && result.translated !== content.name.ja) {
-							content.name.en = result.translated;
-						}
-					}
-				}
-				if (content.unit?.ja && !content.unit.en) {
-					const cached = lookupPhrase(content.unit.ja);
-					if (cached) {
-						content.unit.en = cached.en;
-					} else {
-						const result = await this.translator.translateText(content.unit.ja, "en", "ja");
-						if (result.translated && result.translated !== content.unit.ja) {
-							content.unit.en = result.translated;
-						}
-					}
-				}
-			}
-		}
-
-		return item;
-	}
-
-	/**
-	 * Fallback translation for manuals without English
-	 * Checks dictionary first, then uses translation service
-	 */
-	private async translateManualFallback(manual: ManualData): Promise<void> {
-		// Translate name - check dictionary first
-		if (manual.name.ja && !manual.name.en) {
-			const cached = lookupPhrase(manual.name.ja);
-			if (cached) {
-				manual.name.en = cached.en;
-			} else {
-				const result = await this.translator.translateText(manual.name.ja, "en", "ja");
-				if (result.translated && result.translated !== manual.name.ja) {
-					manual.name.en = result.translated;
-				}
-			}
-		}
-
-		// Translate PDF names
-		for (const pdf of manual.pdfs) {
-			if (pdf.name.ja && !pdf.name.en) {
-				const cached = lookupPhrase(pdf.name.ja);
-				if (cached) {
-					pdf.name.en = cached.en;
-				} else {
-					const result = await this.translator.translateText(pdf.name.ja, "en", "ja");
-					if (result.translated && result.translated !== pdf.name.ja) {
-						pdf.name.en = result.translated;
-					}
-				}
-			}
-		}
-
-		// Translate brand if present
-		if (manual.brand?.ja && !manual.brand.en) {
-			const cached = lookupPhrase(manual.brand.ja);
-			if (cached) {
-				manual.brand.en = cached.en;
-			} else {
-				const result = await this.translator.translateText(manual.brand.ja, "en", "ja");
-				if (result.translated && result.translated !== manual.brand.ja) {
-					manual.brand.en = result.translated;
-				}
-			}
-		}
-
-		// Translate series if present
-		if (manual.series?.ja && !manual.series.en) {
-			const cached = lookupPhrase(manual.series.ja);
-			if (cached) {
-				manual.series.en = cached.en;
-			} else {
-				const result = await this.translator.translateText(manual.series.ja, "en", "ja");
-				if (result.translated && result.translated !== manual.series.ja) {
-					manual.series.en = result.translated;
-				}
-			}
 		}
 	}
 
@@ -1994,7 +925,9 @@ export class ScrapeCommand {
 				}
 
 				// Store canonical translations (persisted immediately)
-				this.storeCanonicalTranslations(itemData, globalData);
+				if (storeCanonicalTranslations(itemData, globalData)) {
+					this.translationsAdded = true;
+				}
 
 				// Update globalSiteUrls if not set
 				if (!itemData.globalSiteUrls && globalData.url) {
@@ -2016,7 +949,7 @@ export class ScrapeCommand {
 
 		if (stillMissingName || stillMissingDescription) {
 			try {
-				itemData = await this.translateItemFallback(itemData);
+				itemData = await translateItemFallback(itemData, this.translator);
 				updated = true;
 				console.log(`  ✓ Used fallback translation`);
 			} catch {
@@ -2026,7 +959,7 @@ export class ScrapeCommand {
 
 		// Save updated JSON if changes were made
 		if (updated) {
-			await this.saveItemJson(jsonPath, itemData);
+			await saveItemJson(jsonPath, itemData);
 		}
 
 		return updated;
@@ -2061,27 +994,6 @@ export class ScrapeCommand {
 		}
 
 		// Fall back to Playwright for JS-rendered pages
-		return this.fetchPageWithPlaywright(url);
-	}
-
-	private async fetchPageWithPlaywright(url: string): Promise<string> {
-		if (!this.browserContext) {
-			throw new Error("Browser not initialized. Call initializeBrowser() first.");
-		}
-
-		const page = await this.browserContext.newPage();
-		try {
-			await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30_000 });
-
-			// Check for 404 page
-			const title = await page.title();
-			if (title.includes("404") || title.includes("NOT FOUND")) {
-				throw new Error("Page not found (404)");
-			}
-
-			return await page.content();
-		} finally {
-			await page.close();
-		}
+		return this.browserManager.fetchPageWithPlaywright(url);
 	}
 }
