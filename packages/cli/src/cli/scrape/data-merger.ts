@@ -48,6 +48,7 @@ export async function saveItemJson(filePath: string, data: Item): Promise<boolea
 
 /**
  * Merge new item data with existing file to preserve local image paths
+ * and fields established through other means (hash matching, manual linking)
  */
 export async function mergeWithExistingItem(filePath: string, newData: Item): Promise<Item> {
 	try {
@@ -62,6 +63,20 @@ export async function mergeWithExistingItem(filePath: string, newData: Item): Pr
 		// Preserve globalSiteUrls if global lookup failed but existing data has it
 		if (existingItem.globalSiteUrls && !newData.globalSiteUrls) {
 			newData.globalSiteUrls = existingItem.globalSiteUrls;
+		}
+
+		// Preserve manual reference if not found in new scrape
+		// (may have been established via image hash matching or other means)
+		if (existingItem.manual && !newData.manual) {
+			newData.manual = existingItem.manual;
+		}
+
+		// Preserve pbandaiIds if not in new scrape
+		// (established via image hash matching with P-Bandai items)
+		const existingRecord = existingItem as Record<string, unknown>;
+		const newRecord = newData as Record<string, unknown>;
+		if (existingRecord["pbandaiIds"] && !newRecord["pbandaiIds"]) {
+			newRecord["pbandaiIds"] = existingRecord["pbandaiIds"];
 		}
 
 		return newData;
