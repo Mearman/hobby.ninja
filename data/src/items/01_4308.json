@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ハインドリー",
-		"en": "HG 1/144 HEINDREE"
+		"en": "HG 1/144 Hindley"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216474",
+			"url": "https://p-bandai.jp/item/item-1000216474/",
+			"ja": "ＨＧ 1/144 デスルター"
+		},
+		{
+			"id": "item-1000211616",
+			"url": "https://p-bandai.jp/item/item-1000211616/",
+			"ja": "ＨＧ 1/144 ベギルベウトルシュ(ケナンジ小隊所属機/リドリック小隊所属機)"
+		},
+		{
+			"id": "01_5422",
+			"url": "https://bandai-hobby.net/item/01_5422/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムキャリバーン [クリアカラー]"
+		},
+		{
+			"id": "item-1000203129",
+			"url": "https://p-bandai.jp/item/item-1000203129/",
+			"ja": "ＨＧ 1/144 ガンダムキャリバーン パーメットスコア・ファイブ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,15 +62,14 @@
 		"day": 18
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、ハインドリーが商品化！",
-			"■挟み込みを避け、後はめ加工をメインとするパーツ構成により組み立てやすさに配慮。",
-			"■首・腰部のボールジョイントは空間を設けた構造で前後傾の姿勢にも対応。",
-			"■マッシブなフォルムに加え、回転可動を備えた全高ほどもある長さの専用武器を装備。",
-			"■左腕には専用シールドを保持。シールドは正面に向けられるようにアーム部分が可動。",
-			"■背部には３本のノズルで構成されたバックパックを装備、高い機動性能を有する。"
+			"• 挟み込みを避け、後はめ加工をメインとするパーツ構成により組み立てやすさに配慮。",
+			"• 首・腰部のボールジョイントは空間を設けた構造で前後傾の姿勢にも対応。",
+			"• マッシブなフォルムに加え、回転可動を備えた全高ほどもある長さの専用武器を装備。",
+			"• 左腕には専用シールドを保持。シールドは正面に向けられるようにアーム部分が可動。",
+			"• 背部には３本のノズルで構成されたバックパックを装備、高い機動性能を有する。"
 		],
 		"en": [
 			"Hindley is commercialized from the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\"!",
@@ -37,70 +80,78 @@
 			"• Equipped with a backpack consisting of three nozzles on its back, giving it high maneuverability."
 		]
 	},
-	"accessories": {
-		"ja": ["専用シールド×１", "専用武器×１", "シール×1"],
-		"en": ["Dedicated Seal × 1", "Special weapon x1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用シールド×１",
+				"en": "Dedicated Seal × 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "専用武器×１",
+				"en": "Special weapon x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5220.jpg",
+				"src": "https://bandai-hobby.net/images/153_5220_s_t9lpns0ru4u58z4ypr8cn9iednrj.jpg",
 				"path": "/images/items/01_4308/153_5220.jpg",
 				"hash": "a80ab50f0bae2a86da9958d3eaa32aba"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5220.jpg",
+				"src": "https://bandai-hobby.net/images/155_5220_s_pzwb6sm0eq0375mwqeb6gyd0z4ca.jpg",
 				"path": "/images/items/01_4308/155_5220.jpg",
 				"hash": "bd5e2c7586f0976c583c487247b2d13b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5220.jpg",
+				"src": "https://bandai-hobby.net/images/156_5220_s_nzu6wd8uwhm6z8qcdjx0nffh7xbw.jpg",
 				"path": "/images/items/01_4308/156_5220.jpg",
 				"hash": "efcaddc4e85cee0d70909743e7f3bb0b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5220.jpg",
+				"src": "https://bandai-hobby.net/images/157_5220_s_fuim3yt71jwfv45tgn456r8bdzi6.jpg",
 				"path": "/images/items/01_4308/157_5220.jpg",
 				"hash": "010a609e8728f04d8b20c6d01769ac4a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5220.jpg",
+				"src": "https://bandai-hobby.net/images/158_5220_s_py3rmv2z2odrx4gi9qh84zksmqvi.jpg",
 				"path": "/images/items/01_4308/158_5220.jpg",
 				"hash": "9c879134ccf869c0c6debbdd6fd6c9c5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5220.jpg",
+				"src": "https://bandai-hobby.net/images/159_5220_s_3kxoc3c33qdgi30hwfnyyrnfv0tb.jpg",
 				"path": "/images/items/01_4308/159_5220.jpg",
 				"hash": "bb17da2139a12a8c01e2afadea8f4754"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5220.jpg",
+				"src": "https://bandai-hobby.net/images/189_5220_s_bn2y923f8b14y9m13voo1yzer2e0.jpg",
 				"path": "/images/items/01_4308/189_5220.jpg",
 				"hash": "23f2eafe9ecc55225f9e10bb8d9fbf65"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5220.jpg",
+				"src": "https://bandai-hobby.net/images/190_5220_s_46g604vtkwqvdp42vzkq9gr4nyww.jpg",
 				"path": "/images/items/01_4308/190_5220.jpg",
 				"hash": "c8a5f9e07bf8b11cfd46a75004acc03d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5220.jpg",
+				"src": "https://bandai-hobby.net/images/191_5220_s_x9lp4s3mhqkc28q7wwop2f0hiwr6.jpg",
 				"path": "/images/items/01_4308/191_5220.jpg",
 				"hash": "944e308d5a1e5f95fb45b3c7ce4e27f7"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4308_inst_0.jpg",
-				"path": "/images/items/01_4308/01_4308_inst_0.jpg",
-				"hash": "fcad1dc97a4c96d6e9d2d1b4ba05e161"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4308/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203129"],
 	"manual": {
 		"id": "146",
 		"url": "https://manual.bandai-hobby.net/menus/detail/146/"

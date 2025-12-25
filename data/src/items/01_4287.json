@@ -3,8 +3,57 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガンダムベース限定 フルアーマー・ガンダム VS サイコ・ザク セット(機動戦士ガンダム サンダーボルト10周年記念Ver.)",
-		"en": "HG 1/144 THE GUNDAM BASE LIMITED FULL ARMOR GUNDAM VS PSYCHO ZAKU SET (GUNDAM THUNDERBOLT 10th Anniversary Ver.)"
+		"en": "HG 1/144 Gundam Base Limited Full Armor Gundam VS Psycho Zaku Set (Mobile Suit Gundam Thunderbolt 10th Anniversary Ver.)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "thunderbolt",
+			"url": "https://bandai-hobby.net/series/thunderbolt/",
+			"ja": "機動戦士ガンダム サンダーボルト"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000119386",
+			"url": "http://p-bandai.jp/item/item-1000119386/",
+			"ja": "ＨＧ 1/144 アトラスガンダム（GUNDAM THUNDERBOLT BANDIT FLOWER Ver.）"
+		},
+		{
+			"id": "01_998",
+			"url": "https://bandai-hobby.net/item/01_998/",
+			"ja": "HG 1/144 陸戦型ガンダムS型（GUNDAM THUNDERBOLT Ver.）"
+		},
+		{
+			"id": "01_830",
+			"url": "https://bandai-hobby.net/item/01_830/",
+			"ja": "HG 1/144 アトラスガンダム（GUNDAM THUNDERBOLT Ver.）"
+		},
+		{
+			"id": "01_566",
+			"url": "https://bandai-hobby.net/item/01_566/",
+			"ja": "HG 1/144 ザクI“旧ザク”(GUNDAM THUNDERBOLT Ver.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 7040,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 30
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム サンダーボルト』連載10周年を記念して、劇中で死闘を演じた「HG 1/144 フルアーマーガンダム(ガンダムサンダーボルト版)」と「HG 1/144 高機動型ザク “サイコ・ザク”（ガンダムサンダーボルト版）」のセットが特別仕様になってガンダムベース限定商品として登場！",
@@ -28,7 +76,7 @@
 			"• それぞれ専用の台座が付属。"
 		],
 		"en": [
-			"To commemorate the 10th anniversary of \"Mobile Suit Gundam Thunderbolt \", the set of \" HG 1/144 Full Armor Gundam (Gundam Thunderbolt version)\" and \" HG 1/144 High Mobility Type Zaku \"Psycho Zaku \" (Gundam Thunderbolt version)\" that fought in the deadly battle in the movie has been made into a special edition and is now available as a Gundam base limited product!",
+			"To commemorate the 10th serialization of \"Mobile Suit Gundam Thunderbolt\", the set of \"HG 1/144 Full Armor Gundam (Gundam Thunderbolt version)\" and \"HG 1/144 High Mobility Type Zaku \"Psycho Zaku\" (Gundam Thunderbolt version)\", which fought to the death in the movie, has been made into a special edition and is now available as a Gundam base limited product!",
 			"• The package illustration is a new original drawing by Yasuo Otagaki to commemorate the 10th anniversary of the series.",
 			"• In addition to the voluminous contents such as a large number of weapons and sub-arms, it has a special coloring that resembles a real type.",
 			"• Includes plastic model original water slide decal.",
@@ -41,11 +89,6 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180983_1.jpg",
 				"path": "/images/items/01_4287/1000180983_1.jpg",
 				"hash": "4af330d968313471722f625601eafc13"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180983_10.jpg",
-				"path": "/images/items/01_4287/1000180983_10.jpg",
-				"hash": "d3b5679a975752d9816bd811a34be3c2"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180983_2.jpg",
@@ -86,17 +129,14 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180983_9.jpg",
 				"path": "/images/items/01_4287/1000180983_9.jpg",
 				"hash": "17a868c47e01c3553d04b42b50921198"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180983_10.jpg",
+				"path": "/images/items/01_4287/1000180983_10.jpg",
+				"hash": "d3b5679a975752d9816bd811a34be3c2"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4287/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["thunderbolt"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000119386", "01_998", "01_830", "01_566"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4287/"
 }

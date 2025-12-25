@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ミラソウル社製フライトユニット装備",
-		"en": "HG 1/144 MIRASOUL FLIGHT UNIT"
+		"en": "HG 1/144 Equipped with Mirasoul flight unit"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216474",
+			"url": "https://p-bandai.jp/item/item-1000216474/",
+			"ja": "ＨＧ 1/144 デスルター"
+		},
+		{
+			"id": "item-1000211616",
+			"url": "https://p-bandai.jp/item/item-1000211616/",
+			"ja": "ＨＧ 1/144 ベギルベウトルシュ(ケナンジ小隊所属機/リドリック小隊所属機)"
+		},
+		{
+			"id": "01_5422",
+			"url": "https://bandai-hobby.net/item/01_5422/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムキャリバーン [クリアカラー]"
+		},
+		{
+			"id": "item-1000203129",
+			"url": "https://p-bandai.jp/item/item-1000203129/",
+			"ja": "ＨＧ 1/144 ガンダムキャリバーン パーメットスコア・ファイブ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 880,
 		"currency": "JPY",
@@ -18,82 +62,88 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』で、ガンダム・エアリアルが装備するミラソウル社製のフライトユニットが商品化！",
-			"■バックパックから伸びるアームは先端、基部ともにボールジョイントで接続。左右にフレキシブルな可動を有したフライトユニット。",
-			"■一部に露出するメカパーツが内蔵されており、内部のメカモールドも表現されている。",
-			"■「HG 1/144 ガンダムエアリアル」(別売り)にも使用可能な、表情付きの平手が付属。",
-			"■ユニット内には、「HG 1/144 ガンダムエアリアル」(別売り)のビームサーベルのグリップを取り付け可能。"
+			"• バックパックから伸びるアームは先端、基部ともにボールジョイントで接続。左右にフレキシブルな可動を有したフライトユニット。",
+			"• 一部に露出するメカパーツが内蔵されており、内部のメカモールドも表現されている。",
+			"• 「HG 1/144 ガンダムエアリアル」(別売り)にも使用可能な、表情付きの平手が付属。",
+			"• ユニット内には、「HG 1/144 ガンダムエアリアル」(別売り)のビームサーベルのグリップを取り付け可能。"
 		],
 		"en": [
 			"In the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\", the flight unit manufactured by Mirasoul equipped by Gundam Aerial is commercialized!",
-			"• The arm that extends from the backpack is connected at the tip and base with a ball joint. A flight unit with flexible movement left and right.",
+			"• The arm that extends from the backpack is connected with a ball joint at both the tip and base. A flight unit with flexible movement left and right.",
 			"• It has some internal mechanical parts that are exposed, and the internal mechanical mold is also expressed.",
 			"• Comes with a flat hand with expressions that can also be used with \"HG 1/144 Gundam Aerial\" (sold separately).",
 			"• A beam saber grip from \"HG 1/144 Gundam Aerial\" (sold separately) can be installed inside the unit."
 		]
 	},
-	"accessories": {
-		"ja": ["ハンドパーツ×1式", "シール×1"],
-		"en": ["Hand parts x 1 set", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5204.jpg",
+				"src": "https://bandai-hobby.net/images/153_5204_s_0bqw3fo4wffdquwr8dwol48j1341.jpg",
 				"path": "/images/items/01_4291/153_5204.jpg",
 				"hash": "d1b653eb97004bc15abed24fd00e6abc"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5204.jpg",
+				"src": "https://bandai-hobby.net/images/155_5204_s_1ql0jmwmzrf17sqzea1ap2vgto9e.jpg",
 				"path": "/images/items/01_4291/155_5204.jpg",
 				"hash": "e10b1532a4087669280ce464e9f47429"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5204.jpg",
+				"src": "https://bandai-hobby.net/images/156_5204_s_n1k4va7ew2zhe1jba76t07lfpquk.jpg",
 				"path": "/images/items/01_4291/156_5204.jpg",
 				"hash": "83cdb4d542072a085dee22646d481c62"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5204.jpg",
+				"src": "https://bandai-hobby.net/images/157_5204_s_awa2hvky5052oka5oxl1lvqmpga9.jpg",
 				"path": "/images/items/01_4291/157_5204.jpg",
 				"hash": "5f20ec602a6d419f1526188c89af138b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5204.jpg",
+				"src": "https://bandai-hobby.net/images/158_5204_s_0nq1cf8mlq2zfd5kod78qbwnjhj5.jpg",
 				"path": "/images/items/01_4291/158_5204.jpg",
 				"hash": "fe7750c961ffef86c2fbc73977c657f2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5204.jpg",
+				"src": "https://bandai-hobby.net/images/159_5204_s_jgwyrb8wdhbs8g4lvc2qqocxohc8.jpg",
 				"path": "/images/items/01_4291/159_5204.jpg",
 				"hash": "9c15cc0ca48fe8d0dda0b20866d67d97"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5204.jpg",
+				"src": "https://bandai-hobby.net/images/189_5204_s_5jnapcapz1s9f7ns5z4xcez1p7le.jpg",
 				"path": "/images/items/01_4291/189_5204.jpg",
 				"hash": "bbeea926321550bb4ee3451e11cb3ca1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5204.jpg",
+				"src": "https://bandai-hobby.net/images/190_5204_s_5bmjpuvvpsz7wimqfjxpazizkqcq.jpg",
 				"path": "/images/items/01_4291/190_5204.jpg",
 				"hash": "0ef05e6848cb7210d133ce2d4cc95318"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4291_inst_0.jpg",
-				"path": "/images/items/01_4291/01_4291_inst_0.jpg",
-				"hash": "56688bbd4da29cbe5f71b04003c4b4ff"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4291/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203129"],
 	"manual": {
 		"id": "138",
 		"url": "https://manual.bandai-hobby.net/menus/detail/138/"

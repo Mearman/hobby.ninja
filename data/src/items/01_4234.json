@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 マジンガーZERO(INFINITISM)",
 		"en": "HG 1/144 Mazinger ZERO(INFINITISM)"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dynamic_characters",
+			"url": "https://bandai-hobby.net/series/dynamic_characters/",
+			"ja": "ダイナミックキャラクターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3528",
+			"url": "https://bandai-hobby.net/item/01_3528/",
+			"ja": "HG ゲッターアーク"
+		},
+		{
+			"id": "01_3332",
+			"url": "https://bandai-hobby.net/item/01_3332/",
+			"ja": "HG 1/144 鋼鉄ジーグ(INFINITISM)"
+		},
+		{
+			"id": "01_2853",
+			"url": "https://bandai-hobby.net/item/01_2853/",
+			"ja": "HG 1/144 ゲッタードラゴン(INFINITISM）"
+		},
+		{
+			"id": "item-1000139230",
+			"url": "https://p-bandai.jp/item/item-1000139230/",
+			"ja": "ＨＧ 1/144 マジンガーＺ ブラックＶｅｒ．（マジンガーＺ ＩＮＦＩＮＩＴＹ Ｖｅｒ．）"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 6050,
 		"currency": "JPY",
@@ -18,19 +62,18 @@
 		"day": 10
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『真マジンガーZEROvs暗黒大将軍』より、「マジンガーZERO」が「INFINITISM」第５弾として登場！",
-			"■メカデザイナー柳瀬敬之氏によるリデザイン。",
-			"■パーツ分割や成形色にこだわり、組み立てるだけで満足できる仕様。",
-			"■口には開閉ギミックを搭載。特徴的な形相を再現できる。",
-			"■背中のZEROスクランダーは着脱が可能。さらに支柱パーツとの組み合わせでZEROスクランダー搭乗状態をイメージしたディスプレイが可能。",
-			"■付属の支柱パーツとエフェクトパーツを組み合わせることで腕部の発射状態を表現。",
-			"■「INFINITISM」シリーズ全てに使用可能な、柳瀬敬之氏デザインのオリジナル汎用水転写式デカールが付属。"
+			"• メカデザイナー柳瀬敬之氏によるリデザイン。",
+			"• パーツ分割や成形色にこだわり、組み立てるだけで満足できる仕様。",
+			"• 口には開閉ギミックを搭載。特徴的な形相を再現できる。",
+			"• 背中のZEROスクランダーは着脱が可能。さらに支柱パーツとの組み合わせでZEROスクランダー搭乗状態をイメージしたディスプレイが可能。",
+			"• 付属の支柱パーツとエフェクトパーツを組み合わせることで腕部の発射状態を表現。",
+			"• 「INFINITISM」シリーズ全てに使用可能な、柳瀬敬之氏デザインのオリジナル汎用水転写式デカールが付属。"
 		],
 		"en": [
-			"From \"Shin Mazinger ZERO vs Dark General \", \" Mazinger ZERO \" appears as the 5th \" INFINITISM\"!",
+			"From \"Shin Mazinger ZERO vs Dark General\", \"Mazinger ZERO\" appears as the 5th \"INFINITISM\"!",
 			"• Redesigned by mechanical designer Noriyuki Yanase.",
 			"• We are particular about parts division and molding color, and specifications that can be satisfied with just assembly.",
 			"• The mouth is equipped with an opening and closing gimmick. Can reproduce characteristic shapes.",
@@ -39,45 +82,68 @@
 			"• Comes with an original general-purpose water transfer decal designed by Noriyuki Yanase that can be used with all \"INFINITISM\" series."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"エフェクトパーツ×1式",
-			"ハンドパーツ×1式",
-			"支柱パーツ×1式",
-			"ディスプレイベース×1",
-			"シール×1",
-			"水転写式デカール×1"
-		],
-		"en": [
-			"Effect parts x 1",
-			"Hand parts x 1 set",
-			"Strut parts x 1 set",
-			"Display base x 1",
-			"Seal×1",
-			"Water transfer decal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "エフェクトパーツ",
+				"en": "effect parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "支柱パーツ",
+				"en": "Strut parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイベース",
+				"en": "display base"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180195_1.jpg",
 				"path": "/images/items/01_4234/1000180195_1.jpg",
 				"hash": "fe6d70fc802a45d022ef392b76dabc1c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180195_10.jpg",
-				"path": "/images/items/01_4234/1000180195_10.jpg",
-				"hash": "132641ed2d4749d7c17836d5dad3526a"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180195_11.jpg",
-				"path": "/images/items/01_4234/1000180195_11.jpg",
-				"hash": "7accb6eb9f0e9475761000d61c43ddca"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180195_12.jpg",
-				"path": "/images/items/01_4234/1000180195_12.jpg",
-				"hash": "b5248ce83806126e62f3ae83f051caf3"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180195_2.jpg",
@@ -118,13 +184,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180195_9.jpg",
 				"path": "/images/items/01_4234/1000180195_9.jpg",
 				"hash": "58df18c64a68c7c612a2dfc41b04c834"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180195_10.jpg",
+				"path": "/images/items/01_4234/1000180195_10.jpg",
+				"hash": "132641ed2d4749d7c17836d5dad3526a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180195_11.jpg",
+				"path": "/images/items/01_4234/1000180195_11.jpg",
+				"hash": "7accb6eb9f0e9475761000d61c43ddca"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180195_12.jpg",
+				"path": "/images/items/01_4234/1000180195_12.jpg",
+				"hash": "b5248ce83806126e62f3ae83f051caf3"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4234/",
-	"brandIds": ["hg"],
-	"seriesIds": ["dynamic_characters"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_3528", "01_3332", "01_2853", "item-1000139230"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4234/"
 }

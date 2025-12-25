@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ベギルベウ",
-		"en": "HG 1/144 BEGUIR-BEU"
+		"en": "HG 1/144 Begilbeu"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216474",
+			"url": "https://p-bandai.jp/item/item-1000216474/",
+			"ja": "ＨＧ 1/144 デスルター"
+		},
+		{
+			"id": "item-1000211616",
+			"url": "https://p-bandai.jp/item/item-1000211616/",
+			"ja": "ＨＧ 1/144 ベギルベウトルシュ(ケナンジ小隊所属機/リドリック小隊所属機)"
+		},
+		{
+			"id": "01_5422",
+			"url": "https://bandai-hobby.net/item/01_5422/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムキャリバーン [クリアカラー]"
+		},
+		{
+			"id": "item-1000203899",
+			"url": "https://p-bandai.jp/item/item-1000203899/",
+			"ja": "ＨＧ 1/144 ガンドノード"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』に先駆けて発進！！本編の前日譚「PROLOGUE」で活躍する2機のMSが一足早く登場！！",
@@ -29,7 +72,7 @@
 			"• こだわりのパーツ分割により、組み立てるだけでカラフルな仕上がり。"
 		],
 		"en": [
-			"Launching ahead of the latest Gundam series \"Mobile Suit Gundam: Witch of Mercury \"! ! Two MSs that are active in the main story's prequel \" PROLOGUE\" are now available! !",
+			"Launching ahead of the latest Gundam series \"Mobile Suit Gundam: Witch of Mercury\"! ! Two MSs that are active in the main story's prequel \"PROLOGUE\" are now available! !",
 			"• Comes with a portable anti-MS weapon \"Bayonet\" that can be equipped on both arms.",
 			"• Includes one pedestal and one lead wire for non-kinetic pod. Display is possible in the injection state.",
 			"• Reproduces the backpack's flight unit deployment mechanism.",
@@ -37,26 +80,39 @@
 			"• Carefully divided parts allow for a colorful finish just by assembling."
 		]
 	},
-	"accessories": {
-		"ja": ["ベイオネット×2", "リード線×１", "シール×１", "ノンキネティックポッド用台座×１"],
-		"en": ["Bayonet x2", "Lead wire x 1", "Seal×1", "Non-kinetic pod pedestal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ベイオネット",
+				"en": "Bayonet"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "リード線×１",
+				"en": "Lead wire x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ノンキネティックポッド用台座×１",
+				"en": "Non-kinetic pod pedestal x 1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000178668_1.jpg",
 				"path": "/images/items/01_4244/1000178668_1.jpg",
 				"hash": "8038d389becb7d799bb3d023a40e5589"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000178668_10.jpg",
-				"path": "/images/items/01_4244/1000178668_10.jpg",
-				"hash": "44fef2a6f4284b23826fe987bd3f38e0"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000178668_11.jpg",
-				"path": "/images/items/01_4244/1000178668_11.jpg",
-				"hash": "358fea3ce1bd3e101bdd9a90dc22e304"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000178668_2.jpg",
@@ -99,18 +155,19 @@
 				"hash": "0118969eb8c1b1e05d0de582f8fbeb9d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4244_inst_0.jpg",
-				"path": "/images/items/01_4244/01_4244_inst_0.jpg",
-				"hash": "37c5b18640841d15a8e9f7e8be3d8739"
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000178668_10.jpg",
+				"path": "/images/items/01_4244/1000178668_10.jpg",
+				"hash": "44fef2a6f4284b23826fe987bd3f38e0"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000178668_11.jpg",
+				"path": "/images/items/01_4244/1000178668_11.jpg",
+				"hash": "358fea3ce1bd3e101bdd9a90dc22e304"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4244/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203899"],
 	"manual": {
 		"id": "128",
 		"url": "https://manual.bandai-hobby.net/menus/detail/128/"

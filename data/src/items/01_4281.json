@@ -5,6 +5,50 @@
 		"ja": "ＨＧ 1/144 ジム (スレッガー搭乗機)",
 		"en": "HG 1/144 Jim (Slegger boarding machine)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "g-doan",
+			"url": "https://bandai-hobby.net/series/g-doan/",
+			"ja": "機動戦士ガンダム ククルス・ドアンの島"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000220189",
+			"url": "https://p-bandai.jp/item/item-1000220189/",
+			"ja": "ＨＧ 1/144 シャア専用高機動型ザクII"
+		},
+		{
+			"id": "01_5514",
+			"url": "https://bandai-hobby.net/item/01_5514/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムFSD (試作型ロングレンジ・ビームライフル装備)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -17,7 +61,6 @@
 		"month": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"映画『機動戦士ガンダム ククルス・ドアンの島』より、ホワイトベースに配備されたスレッガー・ロウ中尉が搭乗するRGM-79 ジムを完全新規造形で商品化。",
@@ -59,10 +102,10 @@
 			"From the movie ``Mobile Suit Gundam Cucurrus Doan Island'', the RGM-79 Jim, piloted by Lieutenant Slegger Lowe, deployed to the White Base, is commercialized with a completely new model.",
 			"Impressive personal colors are reproduced with molded colors. New weapons such as beam spray gun (early model) and Seal are included. An original water slide decal is included.",
 			"-Earth Federation military mass-produced main MS, reproduced with completely new modeling",
-			"RX-78-02 A mass-produced main MS gym developed based on Gundam data.",
+			"A mass-produced main MS gym developed based on data from RX-78-02Gundam.",
 			"The chest, shoulders, leg shapes, etc. are reproduced in rich detail. The impressive personal color of Lieutenant Slegger Lowe is faithfully reproduced by color-coding by dividing parts.",
 			"-The distinctive head uses blue clear parts for the main camera. Even the details of the internal sensor are expressed in detail.",
-			"-In addition to faithfully reproducing the shape of each part of the armor and thruster, the parts are divided according to the panel lines. Even details such as ankle guards are color-coded.",
+			"- In addition to faithfully reproducing the shape of each part of the armor and thruster, the parts are divided according to the panel lines. Even details such as ankle guards are color-coded.",
 			"・The latest HG format provides high articulation performance, creating dynamic poses.",
 			"- New armed beam spray gun (early model) and Seal are included.",
 			"The beam spray gun (early model) and Seal that Jim is equipped with are included as new models.",
@@ -92,59 +135,81 @@
 			"・Product specifications are as of 20228. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["ビーム・スプレーガン（前期型）", "ビーム・ライフル", "シールド", "ビーム・サーベル"],
-		"en": ["Beam spray gun (early model)", "beam rifle", "Seal de", "beam saber"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・スプレーガン（前期型）",
+				"en": "Beam spray gun (early model)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・ライフル",
+				"en": "beam rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5196.jpg",
+				"src": "https://bandai-hobby.net/images/153_5196_s_nwaq1br8ushnsbnrvdirmj1aoh9p.jpg",
 				"path": "/images/items/01_4281/153_5196.jpg",
 				"hash": "3c7e29486ef953e619a23b99afa662d6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5196.jpg",
+				"src": "https://bandai-hobby.net/images/155_5196_s_404yh2kee3k4uzuib9dixz30bflz.jpg",
 				"path": "/images/items/01_4281/155_5196.jpg",
 				"hash": "b297a6c8196c7f6efc06555f49f6e79e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5196.jpg",
+				"src": "https://bandai-hobby.net/images/156_5196_s_2swl55en444medwih2fskbxkitgm.jpg",
 				"path": "/images/items/01_4281/156_5196.jpg",
 				"hash": "2c1c34866a99b536ad2db9aedc18336f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5196.jpg",
+				"src": "https://bandai-hobby.net/images/157_5196_s_qmvhkyav1zcetytdu16nxoj13k59.jpg",
 				"path": "/images/items/01_4281/157_5196.jpg",
 				"hash": "84e037b70b01e37b8bcc7339d2941637"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5196.jpg",
+				"src": "https://bandai-hobby.net/images/158_5196_s_4cw7fkrfyzkmnppbijh3qvjf8phe.jpg",
 				"path": "/images/items/01_4281/158_5196.jpg",
 				"hash": "67a9b7febb4c3faef6e58cf16e707ae2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5196.jpg",
+				"src": "https://bandai-hobby.net/images/159_5196_s_gzf2x3kpah8od1p91v8aetv5tmri.jpg",
 				"path": "/images/items/01_4281/159_5196.jpg",
 				"hash": "051412ea6b42672dfa4b77bfcd2d43e2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5196.jpg",
+				"src": "https://bandai-hobby.net/images/189_5196_s_ukgzkiulzo2fjezauk41kuwl8aao.jpg",
 				"path": "/images/items/01_4281/189_5196.jpg",
 				"hash": "88106389a3fbb8edb47c0a95acc672f8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5196.jpg",
+				"src": "https://bandai-hobby.net/images/190_5196_s_fk60jx8coukj5bf8f3tcrhu08a9m.jpg",
 				"path": "/images/items/01_4281/190_5196.jpg",
 				"hash": "129df937ca2ea7777a9f395297f983b1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5196.jpg",
+				"src": "https://bandai-hobby.net/images/191_5196_s_ftpwv6eol9na83uz7f0og84z6aqe.jpg",
 				"path": "/images/items/01_4281/191_5196.jpg",
 				"hash": "64564fde14181fa84a856e3b876a19b4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5196.jpg",
+				"src": "https://bandai-hobby.net/images/192_5196_s_nnju1faikcb4dz2nedzxuqkadlw7.jpg",
 				"path": "/images/items/01_4281/192_5196.jpg",
 				"hash": "47b06712e0a6c31c1828ee9e87f300f7"
 			}
@@ -152,14 +217,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4281/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["g-doan"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000220189", "01_5514"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2374",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2374/"

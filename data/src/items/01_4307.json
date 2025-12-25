@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "プラノサウルス トリケラトプス",
-		"en": "PLANNOSAURUS Triceratops"
+		"en": "planosaurus triceratops"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "plannosaurus",
+			"url": "https://bandai-hobby.net/series/plannosaurus/",
+			"ja": "プラノサウルス"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5501",
+			"url": "https://bandai-hobby.net/item/01_5501/",
+			"ja": "プラノサウルス テリジノサウルス"
+		},
+		{
+			"id": "01_5389",
+			"url": "https://bandai-hobby.net/item/01_5389/",
+			"ja": "プラノサウルス ブラキオサウルス"
+		},
+		{
+			"id": "01_5390",
+			"url": "https://bandai-hobby.net/item/01_5390/",
+			"ja": "プラノサウルス 陸海空恐竜セット"
+		},
+		{
+			"id": "01_5248",
+			"url": "https://bandai-hobby.net/item/01_5248/",
+			"ja": "プラノサウルス パラサウロロフス"
+		}
+	],
 	"price": {
 		"amount": 1595,
 		"currency": "JPY",
@@ -35,36 +72,33 @@
 			"• \"Dinosaur Build\" allows you to restore the dinosaur's appearance using specifications unique to plastic models, where the skin parts are attached to the top of the skeleton.",
 			"• Easy to assemble as there is no need for tools such as nippers or adhesives.",
 			"• Faithfully reproduces the structure of the forelimbs, with the backs of the hands facing outward, as if doing a \"small forward march.\"",
-			"• Fine details such as the \"dental battery\" characteristic of plant-eating dinosaurs are also expressed.",
+			"• Small details such as the \"dental battery\" characteristic of plant-eating dinosaurs are also expressed.",
 			"• The direction in which the hair grows on the back has been precisely reproduced based on theory.",
-			"• Various parts such as opening and closing the mouth, front legs, hind legs, and neck can be moved, allowing you to display your favorite poses."
+			"• Various parts such as the opening and closing of the mouth, front legs, hind legs, and neck can be moved, allowing you to display your favorite poses."
 		]
 	},
-	"accessories": {
-		"ja": ["シール×1", "台座×1"],
-		"en": ["Seal×1", "Pedestal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182217_1.jpg",
 				"path": "/images/items/01_4307/1000182217_1.jpg",
 				"hash": "a6ff203d32498934f5ee780c76d817ea"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182217_10.jpg",
-				"path": "/images/items/01_4307/1000182217_10.jpg",
-				"hash": "94e33dd1c953195b4906d5fdbe672656"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182217_11.jpg",
-				"path": "/images/items/01_4307/1000182217_11.jpg",
-				"hash": "e95e547ddae87961b872c1d8b7e0465a"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182217_12.jpg",
-				"path": "/images/items/01_4307/1000182217_12.jpg",
-				"hash": "96d73a32d1f09d43e7774a446d058a25"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182217_2.jpg",
@@ -105,13 +139,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182217_9.jpg",
 				"path": "/images/items/01_4307/1000182217_9.jpg",
 				"hash": "0e40737c53dd55564aac1ad7789daee5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182217_10.jpg",
+				"path": "/images/items/01_4307/1000182217_10.jpg",
+				"hash": "94e33dd1c953195b4906d5fdbe672656"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182217_11.jpg",
+				"path": "/images/items/01_4307/1000182217_11.jpg",
+				"hash": "e95e547ddae87961b872c1d8b7e0465a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182217_12.jpg",
+				"path": "/images/items/01_4307/1000182217_12.jpg",
+				"hash": "96d73a32d1f09d43e7774a446d058a25"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4307/",
-	"brandIds": [],
-	"seriesIds": ["plannosaurus"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5501", "01_5389", "01_5390", "01_5248"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4307/"
 }

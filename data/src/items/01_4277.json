@@ -3,8 +3,62 @@
 	"type": "item",
 	"name": {
 		"ja": "ＲＧ 1/144 ゴッドガンダム用 拡張セット",
-		"en": "RG 1/144 EXPANSION SET for GOD GUNDAM"
+		"en": "RG 1/144 God Gundam expansion set"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "ggundam",
+			"url": "https://bandai-hobby.net/series/ggundam/",
+			"ja": "機動武闘伝Ｇガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000213247",
+			"url": "https://p-bandai.jp/item/item-1000213247/",
+			"ja": "ＨＧ 1/144 ドラゴンガンダム"
+		},
+		{
+			"id": "item-1000194970",
+			"url": "https://p-bandai.jp/item/item-1000194970/",
+			"ja": "ＨＧ 1/144 ガンダムマックスター"
+		},
+		{
+			"id": "item-1000182906",
+			"url": "https://p-bandai.jp/item/item-1000182906/",
+			"ja": "ＨＧ 1/144 ガンダムローズ"
+		},
+		{
+			"id": "01_4104",
+			"url": "https://bandai-hobby.net/item/01_4104/",
+			"ja": "RG 1/144 ゴッドガンダム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3080,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 9
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－　2022年8月店頭販売アイテム「ＲＧ 1/144 ゴッドガンダム」（別売り）連動アイテムが登場！　－－－",
@@ -82,7 +135,7 @@
 			"--- 20228 In-store sales item \"RG 1/144 God Gundam\" (sold separately) linked items are now available! ---",
 			"*This product does not include the RG God Gundam body.",
 			"Reproduce the fierce attack scene performed by God Gundam in the movie!",
-			"Effect parts and optional parts are now available as an expansion set to further enjoy RG 1/144 God Gundam!",
+			"Effect parts and optional parts are now available as an expansion set to make the RG 1/144 God Gundam even more enjoyable!",
 			"Recreate many impressive scenes with powerful effect parts!",
 			"〈Set contents〉",
 			"● A set of effect parts for Godfinger / Ishiba Tenkyouken / Blow",
@@ -104,7 +157,7 @@
 			"Comes with 4 effect parts, large and small, and can be combined with special joint parts to create intense consecutive attacks.",
 			"<Includes frame and action base for ring display>",
 			"By attaching the ring that comes with RG God Gundam to the special connection parts.",
-			"A \"display frame \" and \" action base\" are included to enjoy decorations that match the release state and pose.",
+			"A \"display frame\" and \"action base\" are included to enjoy decorations that match the release state and pose.",
 			"The display frame is equipped with a gimmick that slides back and forth. It is possible to express how the ring unfolds according to the scene.",
 			"You can enjoy a dynamic display by combining it with the included clear color action base.",
 			"<Jinba Ittai! Comes with Fuun Saokai>",
@@ -146,11 +199,6 @@
 				"hash": "861081938beafe5eb59280015c7aaf2c"
 			},
 			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000177309_10.jpg",
-				"path": "/images/items/01_4277/1000177309_10.jpg",
-				"hash": "e0cbea2031278e93483c71247c5de6ef"
-			},
-			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000177309_2.jpg",
 				"path": "/images/items/01_4277/1000177309_2.jpg",
 				"hash": "38a7e8f1e7bb6d2dc0a6d3d2817e1403"
@@ -189,17 +237,14 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000177309_9.jpg",
 				"path": "/images/items/01_4277/1000177309_9.jpg",
 				"hash": "0671edd834ae7e762cef851a134d710e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000177309_10.jpg",
+				"path": "/images/items/01_4277/1000177309_10.jpg",
+				"hash": "e0cbea2031278e93483c71247c5de6ef"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4277/",
-	"brandIds": ["rg", "pb_rg", "pb_gunpla"],
-	"seriesIds": ["ggundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000213247", "item-1000194970", "item-1000182906", "01_4104"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4277/"
 }

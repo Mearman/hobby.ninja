@@ -5,6 +5,54 @@
 		"ja": "ＨＧ 1/144 赤い三巨星チームセット【特典対象】",
 		"en": "HG 1/144 Red Three Giants Team Set [Bonus Target]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 6050,
 		"currency": "JPY",
@@ -17,7 +65,6 @@
 		"month": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"アーケードゲーム「機動戦士ガンダム 戦場の絆II」×月刊『ガンダムエース』×ガンプラ大型連動企画『機動戦士ガンダム　赤い三巨星』より、赤い三巨星チームの3機を商品化。各機の専用装備を新規造形で再現！",
@@ -65,11 +112,11 @@
 			"・ 商品仕様は2022年6月現在のものです。パッケージ、ロゴ及び商品の仕様は、予告なく変更する場合がございます。"
 		],
 		"en": [
-			"From the arcade game \"Mobile Suit Gundam Battlefield Bonds II \" x publication \" Gundam Ace \" x Gunpla large-scale linked project \" Mobile Suit Gundam Red Three Giants\", three machines of the Red Three Giants team are commercialized. Reproduce the special equipment of each machine with new modeling!",
+			"From the arcade game \"Mobile Suit Gundam Battlefield Bonds II\" x publication \"Gundam Ace\" x Gunpla large-scale linked project \"Mobile Suit Gundam Red Three Giants\", three machines of the Red Three Giants team are commercialized. Reproduce the special equipment of each machine with new modeling!",
 			"● Reproduce the three-machine platoon of the “Red Three Giants” with new modeling!",
 			"The distinctive aircraft, which has been modified based on the ground combat type Gundam and ground combat type GM, is reproduced with new modeling parts. The impressive red fuselage color is meticulously reproduced with molded color.",
 			"The unit emblem marking showing off the three giant red stars is included as a water transfer decal.",
-			"・RX-79[G]RR Gundam RR (Relage)",
+			"・RX-79[G]RR GundamRR (Relage)",
 			"A commander aircraft based on the ground combat type Gundam and equipped with powerful large weapons.",
 			"The characteristic head is reproduced with new parts.",
 			"The visor unit is equipped with an opening/closing gimmick, and the visor part uses clear parts.",
@@ -77,7 +124,7 @@
 			"Various equipment is equipped with movable gimmicks. A spare magazine is set in the main body side armor.",
 			"・RX-79[G]RR Jim RR (Reds)",
 			"A locally refurbished machine based on the ground combat type gym equipped with close-range weapons.",
-			"Newly reproduced visor unit etc. that is different from Gundam RR. The antenna and visor parts are reproduced in different molding colors.",
+			"Newly reproduced visor unit etc. that is different from GundamRR. The antenna and visor parts are reproduced in different molding colors.",
 			"Heat spike equipment",
 			"A weapon that fires an iron spear from an electromagnetic acceleration unit.",
 			"The iron spear can be removed from the unit. A red-hot iron spear in normal form and clear parts is included.",
@@ -110,83 +157,123 @@
 			"・Product specifications are as of 20226. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ガトリング・リボルバズ",
-			"アイアン・バンカー",
-			"ヒート・スパイク",
-			"ロケット・ランチャー",
-			"ミサイル・ランチャー",
-			"ネットガン",
-			"１８０ｍｍキャノン",
-			"１００ｍｍマシンガン",
-			"ビーム・ライフル",
-			"ビーム・サーベル",
-			"シールド"
-		],
-		"en": [
-			"gatling revolvers",
-			"iron bunker",
-			"heat spike",
-			"rocket launcher",
-			"missile launcher",
-			"net gun",
-			"180mm cannon",
-			"100mm machine gun",
-			"beam rifle",
-			"beam saber",
-			"Seal de"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ガトリング・リボルバズ",
+				"en": "gatling revolvers"
+			}
+		},
+		{
+			"name": {
+				"ja": "アイアン・バンカー",
+				"en": "iron bunker"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヒート・スパイク",
+				"en": "heat spike"
+			}
+		},
+		{
+			"name": {
+				"ja": "ロケット・ランチャー",
+				"en": "rocket launcher"
+			}
+		},
+		{
+			"name": {
+				"ja": "ミサイル・ランチャー",
+				"en": "missile launcher"
+			}
+		},
+		{
+			"name": {
+				"ja": "ネットガン",
+				"en": "net gun"
+			}
+		},
+		{
+			"name": {
+				"ja": "１８０ｍｍキャノン",
+				"en": "180mm cannon"
+			}
+		},
+		{
+			"name": {
+				"ja": "１００ｍｍマシンガン",
+				"en": "100mm machine gun"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・ライフル",
+				"en": "beam rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5165.jpg",
+				"src": "https://bandai-hobby.net/images/153_5165_s_g2c7sjib7fulsjz3beh4evg7j1aq.jpg",
 				"path": "/images/items/01_4247/153_5165.jpg",
 				"hash": "74faa0f2b670707ce8907c63ae6f2887"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5165.jpg",
+				"src": "https://bandai-hobby.net/images/155_5165_s_70tg7liiw8rvbcnruc8a519rwizd.jpg",
 				"path": "/images/items/01_4247/155_5165.jpg",
 				"hash": "ad5fafb1e142dabe017abc1babde95e8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5165.jpg",
+				"src": "https://bandai-hobby.net/images/156_5165_s_r96rh65zt0xmzr44f0xvbu4xa81b.jpg",
 				"path": "/images/items/01_4247/156_5165.jpg",
 				"hash": "12672cb61281e35c3fb5ca61ebecf977"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5165.jpg",
+				"src": "https://bandai-hobby.net/images/157_5165_s_ywlko4599k4u2s3ih77hip4ryjq5.jpg",
 				"path": "/images/items/01_4247/157_5165.jpg",
 				"hash": "43b9baabe014e32deb4d1c58826b18ed"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5165.jpg",
+				"src": "https://bandai-hobby.net/images/158_5165_s_ufzd576npwvjjssqt2f66ztjy78p.jpg",
 				"path": "/images/items/01_4247/158_5165.jpg",
 				"hash": "0857ed52b253b45a2502957142d2ffb1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5165.jpg",
+				"src": "https://bandai-hobby.net/images/159_5165_s_inlqgaoo6kyj1oj82h3p35nmxtxm.jpg",
 				"path": "/images/items/01_4247/159_5165.jpg",
 				"hash": "5cbc4f7a163e3c895957f1bd397e00f9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5165.jpg",
+				"src": "https://bandai-hobby.net/images/189_5165_s_r1hbewqahfqc7whhrud135l67efn.jpg",
 				"path": "/images/items/01_4247/189_5165.jpg",
 				"hash": "e76523517671e0263acca7c9ffc7674d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5165.jpg",
+				"src": "https://bandai-hobby.net/images/190_5165_s_mgpan4km24dlgm6mqq152p25qh6a.jpg",
 				"path": "/images/items/01_4247/190_5165.jpg",
 				"hash": "5774a4d5c98ff305bf789389f7422285"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5165.jpg",
+				"src": "https://bandai-hobby.net/images/191_5165_s_wowudz7qdthypiib7s4u55k0b6kk.jpg",
 				"path": "/images/items/01_4247/191_5165.jpg",
 				"hash": "888bbed47ddf2f2110de5d2320fc3ac4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5165.jpg",
+				"src": "https://bandai-hobby.net/images/192_5165_s_fjrwgc9gfd9tnj8uhh96kj52unhj.jpg",
 				"path": "/images/items/01_4247/192_5165.jpg",
 				"hash": "e32cf272cd449d11b5862d418cf9cd16"
 			}
@@ -194,14 +281,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4247/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2376",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2376/"

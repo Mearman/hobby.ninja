@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガンダムルブリス",
-		"en": "HG 1/144 GUNDAM LFRITH"
+		"en": "HG 1/144 Gundam Rubris"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216474",
+			"url": "https://p-bandai.jp/item/item-1000216474/",
+			"ja": "ＨＧ 1/144 デスルター"
+		},
+		{
+			"id": "item-1000211616",
+			"url": "https://p-bandai.jp/item/item-1000211616/",
+			"ja": "ＨＧ 1/144 ベギルベウトルシュ(ケナンジ小隊所属機/リドリック小隊所属機)"
+		},
+		{
+			"id": "01_5422",
+			"url": "https://bandai-hobby.net/item/01_5422/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムキャリバーン [クリアカラー]"
+		},
+		{
+			"id": "item-1000203899",
+			"url": "https://p-bandai.jp/item/item-1000203899/",
+			"ja": "ＨＧ 1/144 ガンドノード"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』に先駆けて発進！！本編の前日譚「PROLOGUE」で活躍する2機のMSが一足早く登場！！",
@@ -28,54 +71,63 @@
 			"• こだわりのパーツ分割により、組み立てるだけでカラフルな仕上がり。"
 		],
 		"en": [
-			"Launching ahead of the latest Gundam series \"Mobile Suit Gundam: Witch of Mercury \"! ! Two MSs that are active in the main story's prequel \" PROLOGUE\" are now available! !",
+			"Launching ahead of the latest Gundam series \"Mobile Suit Gundam: Witch of Mercury\"! ! Two MSs that are active in the main story's prequel \"PROLOGUE\" are now available! !",
 			"• The shell unit has a selection of in-mold parts and clear parts. In-mold parts can express the shine of the chest shell unit and reproduce the light-emitting state, while clear parts can reproduce the non-light-emitting state.",
 			"• Seal can be separated into 7 bit staves and connected to backpack and receiver gun.",
 			"• A huge beam blade effect part can be attached to the receiver gun.",
 			"• Carefully divided parts allow for a colorful finish just by assembling."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームサーベル×２",
-			"レシーバーガン×１",
-			"シールド×１",
-			"シェルユニットクリアパーツ×１式",
-			"ビームブレイド用エフェクトパーツ×１",
-			"ジョイントパーツ×１",
-			"シール×１"
-		],
-		"en": [
-			"Beam saber x2",
-			"Receiver gun x 1",
-			"Seal de x1",
-			"Shell unit clear parts x 1 set",
-			"Effect parts for beam blade x 1",
-			"Joint parts x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームサーベル×２",
+				"en": "Beam saber x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "レシーバーガン×１",
+				"en": "Receiver gun x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド×１",
+				"en": "Seal de x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シェルユニットクリアパーツ×１式",
+				"en": "Shell unit clear parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームブレイド用エフェクトパーツ×１",
+				"en": "Effect parts for beam blade x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ×１",
+				"en": "Joint parts x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000178667_1.jpg",
 				"path": "/images/items/01_4243/1000178667_1.jpg",
 				"hash": "e702d8ba9975445c5da39e258a6d553f"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000178667_10.jpg",
-				"path": "/images/items/01_4243/1000178667_10.jpg",
-				"hash": "289cee4b65825712b3d8f36c6ddb6101"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000178667_11.jpg",
-				"path": "/images/items/01_4243/1000178667_11.jpg",
-				"hash": "e04dae95b1361b9b93529f754d4370ec"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000178667_12.jpg",
-				"path": "/images/items/01_4243/1000178667_12.jpg",
-				"hash": "52bdc9863f84d326f3d01ee707c4ccfc"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000178667_2.jpg",
@@ -118,18 +170,24 @@
 				"hash": "f88fc66ac876b769a2571bc91de0d6ec"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4243_inst_0.jpg",
-				"path": "/images/items/01_4243/01_4243_inst_0.jpg",
-				"hash": "abcb8917dbfd398f625e785405c378be"
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000178667_10.jpg",
+				"path": "/images/items/01_4243/1000178667_10.jpg",
+				"hash": "289cee4b65825712b3d8f36c6ddb6101"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000178667_11.jpg",
+				"path": "/images/items/01_4243/1000178667_11.jpg",
+				"hash": "e04dae95b1361b9b93529f754d4370ec"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000178667_12.jpg",
+				"path": "/images/items/01_4243/1000178667_12.jpg",
+				"hash": "52bdc9863f84d326f3d01ee707c4ccfc"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4243/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203899"],
 	"manual": {
 		"id": "127",
 		"url": "https://manual.bandai-hobby.net/menus/detail/127/"

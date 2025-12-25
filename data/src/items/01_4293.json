@@ -3,8 +3,36 @@
 	"type": "item",
 	"name": {
 		"ja": "MGSD フリーダムガンダム",
-		"en": "MASTER GRADE SD FREEDOM GUNDAM"
+		"en": "MGSD Freedom Gundam"
 	},
+	"brands": [
+		{
+			"id": "mgsd",
+			"url": "https://bandai-hobby.net/brand/mgsd/",
+			"ja": "MASTER GRADE SD"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5332",
+			"url": "https://bandai-hobby.net/item/01_5332/",
+			"ja": "MGSD ガンダムベース限定 フリーダムガンダム [クリアカラー]"
+		}
+	],
 	"price": {
 		"amount": 4290,
 		"currency": "JPY",
@@ -20,7 +48,7 @@
 	"targetAge": 15,
 	"description": {
 		"ja": [
-			"SD ガンダムの躰にMGの技術を集約！",
+			"SDガンダムの躰にMGの技術を集約！",
 			"SDシリーズ史上最高の可動性能及びギミック、圧倒的なディテール表現を詰め込んだ、新次元のSDハイエンドブランド「MGSD」より、フリーダムガンダムが登場！",
 			"• 全高約115mm。内部フレームの多くの部位に可動ギミックを搭載し、なめらかな可動を実現。",
 			"• メインカメラ、ツインアイをクリアパーツを使用した二重構造で表現。",
@@ -34,45 +62,56 @@
 			"• 太ももに連動＆延長ギミック搭載。脚を曲げる際に膝アーマーや膝裏バーニアが連動し可動域を確保。さらに、つま先の可動によりSDながらも自然な膝立ちを実現。"
 		],
 		"en": [
-			"MG technology is integrated into the body of SD Gundam!",
+			"MG technology is integrated into the body of SDGundam!",
 			"Freedom Gundam is now available from the new SD high-end brand \"MGSD\", packed with the best movement performance and gimmicks in the history of the SD series, and overwhelming detail expression!",
 			"• Overall height approximately 115mm. Many parts of the internal frame are equipped with movable gimmicks to achieve smooth movement.",
 			"• The main camera and twin eyes are expressed with a double structure using clear parts.",
 			"• New technology \"Real Metallic Gloss Injection\" is adopted in various places to pursue metallic expression.",
 			"• The clear parts inside the wing binder are equipped with a reflective mechanism using the new technology \"Reflection Cut\".",
 			"• Further precision is added by making the molding color of the external armor a two-tone color composition.",
-			"• The head is highly movable on 3 axes. The internal structure allows for effects such as pulling the chin or protruding the face.",
+			"• The head is highly movable on 3 axes. Internal structure that allows for effects such as pulling the chin or protruding the face.",
 			"• Multiple movable axes built into the torso allow a wide range of movement including left and right swing, forward and backward tilts.",
 			"• The swing movement of the hip joint greatly increases the range of motion of the legs.",
 			"• The shoulder joint is equipped with a swing mechanism to enhance the range of motion of the arm. The forearm is equipped with an extension gimmick, making it possible to bend the arm deeply.",
 			"• Equipped with an interlocking and extension gimmick on the thighs. When bending the legs, the knee armor and knee vernier work together to ensure range of motion. Furthermore, the toe movement allows for a natural kneeling position even though it is SD."
 		]
 	},
-	"accessories": {
-		"ja": ["ビームライフル×1", "シールド×1", "ビームサーベル刃×2", "マーキングシール×1"],
-		"en": ["Beam rifle x 1", "Seal × 1", "Beam saber blade x2", "MarkingSeal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル刃",
+				"en": "beam saber blade"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182205_1.jpg",
 				"path": "/images/items/01_4293/1000182205_1.jpg",
 				"hash": "e62a3b9913269ccfb4b8c3afbb06fa69"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182205_10.jpg",
-				"path": "/images/items/01_4293/1000182205_10.jpg",
-				"hash": "bd6260478f2ff621dd7bc4fd08c55b80"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182205_11.jpg",
-				"path": "/images/items/01_4293/1000182205_11.jpg",
-				"hash": "06e173aec5a4d773c750ba67474b3d3a"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182205_12.jpg",
-				"path": "/images/items/01_4293/1000182205_12.jpg",
-				"hash": "f1d3b7003fca2474307dcab556574ac9"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182205_2.jpg",
@@ -113,15 +152,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182205_9.jpg",
 				"path": "/images/items/01_4293/1000182205_9.jpg",
 				"hash": "e0abbad3d66b1c6726af12bf78d5aa62"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182205_10.jpg",
+				"path": "/images/items/01_4293/1000182205_10.jpg",
+				"hash": "bd6260478f2ff621dd7bc4fd08c55b80"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182205_11.jpg",
+				"path": "/images/items/01_4293/1000182205_11.jpg",
+				"hash": "06e173aec5a4d773c750ba67474b3d3a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182205_12.jpg",
+				"path": "/images/items/01_4293/1000182205_12.jpg",
+				"hash": "f1d3b7003fca2474307dcab556574ac9"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4293/",
-	"brandIds": ["mgsd"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5332"],
 	"manual": {
 		"id": "648",
 		"url": "https://manual.bandai-hobby.net/menus/detail/648/"

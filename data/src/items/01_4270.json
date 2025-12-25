@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 百式 Ver.2.0 [メカニカルクリア]",
 		"en": "MG 1/100 Hyakushiki Ver.2.0 [Mechanical Clear]"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000145352",
+			"url": "https://p-bandai.jp/item/item-1000145352/",
+			"ja": "ＭＧ 1/100 RMS-179 ジムII（エゥーゴカラーＶｅｒ．）"
+		},
+		{
+			"id": "item-1000131596",
+			"url": "https://p-bandai.jp/item/item-1000131596",
+			"ja": "ＭＧ 1/100 ジム・キャノン ［レッド・ヘッド］（ジャブロー防衛隊仕様）"
+		},
+		{
+			"id": "item-1000112091",
+			"url": "http://p-bandai.jp/item/item-1000112091/",
+			"ja": "ＭＧ 1/100 RMS-179 ジムＩＩ"
+		},
+		{
+			"id": "item-1000112040",
+			"url": "https://p-bandai.jp/item/item-1000112040",
+			"ja": "ＭＧ 1/100 メガ・バズーカ・ランチャー"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 6380,
 		"currency": "JPY",
@@ -17,20 +61,23 @@
 		"month": 11
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
-		"ja": ["MG 1/100 百式 Ver.2.0 [メカニカルクリア]で登場！"],
-		"en": ["MG 1/100 Hyakushiki Ver.2.0 [Mechanical Clear] now available!"]
+		"ja": [
+			"MG 1/100 百式 Ver.2.0 [メカニカルクリア]で登場！"
+		],
+		"en": [
+			"MG 1/100 Hyakushiki Ver.2.0 [Mechanical Clear] now available!"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5186.jpg",
+				"src": "https://bandai-hobby.net/images/153_5186_s_h9eqx5ymu5ctic4lyjxmr90m6uiw.jpg",
 				"path": "/images/items/01_4270/153_5186.jpg",
 				"hash": "dbd50a528534bc8ba139e1aca06461cb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5186.jpg",
+				"src": "https://bandai-hobby.net/images/155_5186_s_p1o6bfi1qt2ke2f4bkjfmpbodsxd.jpg",
 				"path": "/images/items/01_4270/155_5186.jpg",
 				"hash": "804518e038bb22a773f172611a46d58b"
 			}
@@ -38,14 +85,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4270/",
-	"brandIds": ["mg"],
-	"seriesIds": ["z-gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000145352", "item-1000131596", "item-1000112091", "item-1000112040"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	},
 	"manual": {
 		"id": "853",
 		"url": "https://manual.bandai-hobby.net/menus/detail/853/"

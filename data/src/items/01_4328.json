@@ -3,8 +3,37 @@
 	"type": "item",
 	"name": {
 		"ja": "FULL MECHANICS 1/100 ガンダムエアリアル",
-		"en": "FULL MECHANICS 1/100 GUNDAM AERIAL"
+		"en": "FULL MECHANICS 1/100 Gundam Aerial"
 	},
+	"brands": [
+		{
+			"id": "fullmechanics",
+			"url": "https://bandai-hobby.net/brand/fullmechanics/",
+			"ja": "FULL MECHANICS[フルメカニクス]"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000203130",
+			"url": "https://p-bandai.jp/item/item-1000203130/",
+			"ja": "FULL MECHANICS 1/100 ガンダムエアリアル パーメットスコア・シックス"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -18,7 +47,6 @@
 		"day": 22
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、ガンダム・エアリアルが1/100スケールのスタンダードシリーズ、「FULL MECHANICS」で商品化！",
@@ -29,7 +57,7 @@
 			"• 別売りの「水星の魔女 ウェポンディスプレイベース」を使用することでガンビット展開状態でのディスプレイも再現可能。"
 		],
 		"en": [
-			"From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury \", Gundam Aerial is commercialized in the 1/100 Scale standard series \" FULL MECHANICS\"!",
+			"From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\", Gundam Aerial is commercialized in the 1/100 Scale standard series \"FULL MECHANICS\"!",
 			"• The main body has a dense layered structure that could only be reproduced in 1/100 scale.",
 			"• The shell unit, which was not reproduced in HG, has a three-dimensional uneven mechanical shape and plated parts to create a luminous effect. The layered structure with the clear exterior creates a gorgeous parts configuration.",
 			"• The legs have a sliding mechanism. The knee and thigh parts can move in conjunction with the movement of the knee. The toe parts also have a split structure to reproduce natural contact with the ground.",
@@ -37,47 +65,61 @@
 			"• By using the \"Mercury Witch Weapon Display Base\" (sold separately), you can also reproduce Gambit's display in its expanded state."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ハンドパーツ×1式",
-			"ビームサーベル×２",
-			"ビームライフル×１",
-			"シールド×１",
-			"ビームライフル用エフェクトパーツ×１",
-			"ジョイントパーツ×１式",
-			"シール×１"
-		],
-		"en": [
-			"Hand parts x 1 set",
-			"Beam saber x2",
-			"Beam rifle x1",
-			"Seal de x1",
-			"Effect parts for beam rifle x 1",
-			"Joint parts x 1 set",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル×２",
+				"en": "Beam saber x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームライフル×１",
+				"en": "Beam rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド×１",
+				"en": "Seal de x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームライフル用エフェクトパーツ×１",
+				"en": "Effect parts for beam rifle x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ×１式",
+				"en": "Joint parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182365_1.jpg",
 				"path": "/images/items/01_4328/1000182365_1.jpg",
 				"hash": "655e4fda2ccf412af1057723b7f8d1fa"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182365_10.jpg",
-				"path": "/images/items/01_4328/1000182365_10.jpg",
-				"hash": "ef3c85911bce17092739ef9715036ac7"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182365_11.jpg",
-				"path": "/images/items/01_4328/1000182365_11.jpg",
-				"hash": "55ff028f373cecf9936755bd743658e8"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182365_12.jpg",
-				"path": "/images/items/01_4328/1000182365_12.jpg",
-				"hash": "b462d3e5b1cc77c0f530874d34edda74"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182365_2.jpg",
@@ -118,15 +160,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182365_9.jpg",
 				"path": "/images/items/01_4328/1000182365_9.jpg",
 				"hash": "156527c540491748a77a54a37d45c367"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182365_10.jpg",
+				"path": "/images/items/01_4328/1000182365_10.jpg",
+				"hash": "ef3c85911bce17092739ef9715036ac7"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182365_11.jpg",
+				"path": "/images/items/01_4328/1000182365_11.jpg",
+				"hash": "55ff028f373cecf9936755bd743658e8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182365_12.jpg",
+				"path": "/images/items/01_4328/1000182365_12.jpg",
+				"hash": "b462d3e5b1cc77c0f530874d34edda74"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4328/",
-	"brandIds": ["fullmechanics"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000203130"],
 	"manual": {
 		"id": "1093",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1093/"

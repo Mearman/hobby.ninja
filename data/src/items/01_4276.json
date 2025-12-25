@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "RG ゴルディーマーグ",
-		"en": "RG GOLDYMARG"
+		"en": "RG Goldie Marg"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		},
+		{
+			"id": "rg-c",
+			"url": "https://bandai-hobby.net/brand/rg-c/",
+			"ja": "RG［ リアルグレード ］"
+		}
+	],
+	"series": [
+		{
+			"id": "gaogaigar",
+			"url": "https://bandai-hobby.net/series/gaogaigar/",
+			"ja": "勇者王ガオガイガー"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4181",
+			"url": "https://bandai-hobby.net/item/01_4181/",
+			"ja": "RG ガオガイガー"
+		}
+	],
 	"price": {
 		"amount": 4840,
 		"currency": "JPY",
@@ -78,7 +111,7 @@
 			"・The six-wheeled tires achieve smooth rotation due to their internal structure.",
 			"・You can adjust the elevation angle of the Marg Cannon and reproduce the bombardment scene!",
 			"<Marg hand & Gordion hammer form>",
-			"By combining it with \"RG Gaogaigar \" (sold separately), you can create the strongest special move \" Hammer Hell and Heaven\" activated!",
+			"By combining it with \"RG Gaogaigar\" (sold separately), you can create the strongest special move \"Hammer Hell and Heaven\" activated!",
 			"- All fingers of the hand parts that hold the Gordion Hammer are movable, allowing for a wide range of poses.",
 			"-Comes with Hammer Hell effect (nail-shaped tool). Reproduced with clear yellow parts with sparkling glitter.",
 			"-The deployment gimmick during Hammer Heaven is also reproduced.",
@@ -113,11 +146,6 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000177466_1.jpg",
 				"path": "/images/items/01_4276/1000177466_1.jpg",
 				"hash": "1b9418ff79954b0fab9fa0b93945b102"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000177466_10.jpg",
-				"path": "/images/items/01_4276/1000177466_10.jpg",
-				"hash": "69891d06458262d5646de26be82786bd"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000177466_2.jpg",
@@ -158,17 +186,14 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000177466_9.jpg",
 				"path": "/images/items/01_4276/1000177466_9.jpg",
 				"hash": "4d18c404c270ab929de9f0b5db98e9ff"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000177466_10.jpg",
+				"path": "/images/items/01_4276/1000177466_10.jpg",
+				"hash": "69891d06458262d5646de26be82786bd"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4276/",
-	"brandIds": ["pb_charapla", "rg"],
-	"seriesIds": ["gaogaigar"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_4181"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4276/"
 }

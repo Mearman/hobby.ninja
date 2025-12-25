@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 ガンダムベース限定 ユニコーンガンダム(光の結晶体)",
-		"en": "MG 1/100 THE GUNDAM BASE LIMITED UNICORN GUNDAM (LUMINOUS CRYSTAL BODY)"
+		"en": "MG 1/100 Gundam Base Limited Unicorn Gundam (Crystal of Light)"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000183366",
+			"url": "https://p-bandai.jp/item/item-1000183366/",
+			"ja": "ＭＧ 1/100 スタークジェガン"
+		},
+		{
+			"id": "01_2670",
+			"url": "https://bandai-hobby.net/item/01_2670/",
+			"ja": "MG 1/100 ジェスタ・キャノン[クリアカラー]"
+		},
+		{
+			"id": "item-1000138934",
+			"url": "https://p-bandai.jp/item/item-1000138934/",
+			"ja": "ＭＧ 1/100 リ・ガズィ（ユニコーンＶｅｒ．）"
+		},
+		{
+			"id": "01_2437",
+			"url": "https://bandai-hobby.net/item/01_2437/",
+			"ja": "MG 1/100 ガンダムベース限定 ユニコーンガンダム ペルフェクティビリティ"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 8140,
 		"currency": "JPY",
@@ -18,21 +62,20 @@
 		"day": 22
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた公式ガンプラ総合施設「ガンダムベース」の限定商品。",
 			"ガンダムベースの5周年を記念し、『機動戦士ガンダムUC』の最終局面で登場した形態、ユニコーンガンダム（光の結晶体）がついにMGでキット化。",
-			"■機体には劇中をイメージしたメタリックカラーの成型色を採用、全身には煌めく結晶体を新規造形で再現。",
+			"• 機体には劇中をイメージしたメタリックカラーの成型色を採用、全身には煌めく結晶体を新規造形で再現。",
 			"加えて機体各部装甲のダメージ表現によってまさしく光の結晶体と呼ぶにふさわしい仕上がりに。",
-			"■宇宙をイメージしたラメ入りのアクションベース４が同梱。劇中のシーン再現が可能となっている。",
-			"■全関節可動のエモーションマニピュレーターSPが付属。様々な表現が可能となっている。",
-			"■劇中の最終局面を彷彿させるパッケージアートは圧巻。",
+			"• 宇宙をイメージしたラメ入りのアクションベース４が同梱。劇中のシーン再現が可能となっている。",
+			"• 全関節可動のエモーションマニピュレーターSPが付属。様々な表現が可能となっている。",
+			"• 劇中の最終局面を彷彿させるパッケージアートは圧巻。",
 			"※本商品はデストロイモード（光の結晶体）のみ再現可能です。ユニコーンモードへの変形およびデストロイモード（通常）の再現はできません。"
 		],
 		"en": [
 			"A limited edition product from the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
-			"To commemorate Gundam Base's 5th anniversary, Unicorn Gundam (Crystal of Light), the form that appeared in the final phase of \"Mobile Suit Gundam UC\", has finally been made into an MG kit.",
+			"To commemorate Gundam base's 5th anniversary, Unicorn Gundam (crystal of light), the form that appeared in the final phase of \"Mobile Suit Gundam UC\", has finally been made into an MG kit.",
 			"• The fuselage uses a metallic molding color inspired by the movie, and the sparkling crystals on the whole body are reproduced with new modeling.",
 			"In addition, the damage expressed on the armor of each part of the aircraft gives it a finish worthy of being called a crystal of light.",
 			"• Includes action base 4 with glitter inspired by space. It is possible to recreate scenes from the play.",
@@ -81,13 +124,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4271/",
-	"brandIds": ["mg"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000183366", "01_2670", "item-1000138934", "01_2437"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4271/"
 }

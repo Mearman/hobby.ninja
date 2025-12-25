@@ -2,9 +2,52 @@
 	"id": "01_4303",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/100 YF-19",
-		"en": "HG 1/100 YF-19"
+		"ja": "HG 1/100 YF-19"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "macross",
+			"url": "https://bandai-hobby.net/series/macross/",
+			"ja": "マクロスシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5944",
+			"url": "https://bandai-hobby.net/item/01_5944/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機)"
+		},
+		{
+			"id": "01_5946",
+			"url": "https://bandai-hobby.net/item/01_5946/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) デラックスセット"
+		},
+		{
+			"id": "01_5465",
+			"url": "https://bandai-hobby.net/item/01_5465/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(マクシミリアン・ジーナス機)"
+		},
+		{
+			"id": "01_5448",
+			"url": "https://bandai-hobby.net/item/01_5448/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(ミリア・ファリーナ・ジーナス機)"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -18,23 +61,22 @@
 		"day": 28
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"アニメ『マクロス』40周年に合わせ、BANDAI SPIRITS 「マクロス」プラモデル新シリーズがHGにて始動！第１弾は",
 			"「YF-19」！",
-			"■「変形」「フォルム」「可動」を再検証し生み出した、新たなシステム「差替三段変形（ショートカットチェンジ）」を新たに搭載。",
-			"■パーツ差し替えを取り入れた新たな変形機構を採用することで、変形シークエンスの簡略化を実現。バトロイド、ガウォーク、ファイターへ簡単に変形が可能。",
-			"■「差替三段変形（ショートカットチェンジ）」により、変形機構を再現した際に生じる造形の制約に左右されず、各形態のフォルム、設定イメージを追求し立体化。",
-			"■複雑な構造を排除することで本体内部に可動域を設け、今までにない新次元の可動性能を実現。",
-			"■キャノピー部分には「偏光成形」を採用。光の当たり方で変化する色合いを楽しめる。",
-			"■「ピンポイントバリアパンチ」再現用エフェクトパーツが付属。",
-			"■極薄ながらも優れた隠蔽性を発揮し、濃い成形色のパーツの上からでも、鮮やかなカラー再現が可能なネーマーシールが付属。"
+			"• 「変形」「フォルム」「可動」を再検証し生み出した、新たなシステム「差替三段変形（ショートカットチェンジ）」を新たに搭載。",
+			"• パーツ差し替えを取り入れた新たな変形機構を採用することで、変形シークエンスの簡略化を実現。バトロイド、ガウォーク、ファイターへ簡単に変形が可能。",
+			"• 「差替三段変形（ショートカットチェンジ）」により、変形機構を再現した際に生じる造形の制約に左右されず、各形態のフォルム、設定イメージを追求し立体化。",
+			"• 複雑な構造を排除することで本体内部に可動域を設け、今までにない新次元の可動性能を実現。",
+			"• キャノピー部分には「偏光成形」を採用。光の当たり方で変化する色合いを楽しめる。",
+			"• 「ピンポイントバリアパンチ」再現用エフェクトパーツが付属。",
+			"• 極薄ながらも優れた隠蔽性を発揮し、濃い成形色のパーツの上からでも、鮮やかなカラー再現が可能なネーマーシールが付属。"
 		],
 		"en": [
-			"To coincide with the 40th episode of the anime \"Macross \", the new BANDAI SPIRITS \" Macross\" plastic model series has started at HG! The first part is",
+			"To coincide with the 40th episode of the anime \"Macross\", the new BANDAI SPIRITS \"Macross\" plastic model series has started at HG! The first part is",
 			"\"YF-19\"!",
-			"• Equipped with a new system, \"Shortcut Change \", a new system created by reexamining \" transformation \", \" form \", and \" movability\".",
+			"• Equipped with a new system, \"Shortcut Change\", a new system created by reexamining \"transformation\", \"form\", and \"movability\".",
 			"• By adopting a new transformation mechanism that incorporates parts replacement, the transformation sequence has been simplified. Easily transforms into Battroid, Gerwalk, and Fighter.",
 			"• With \"3-step replacement transformation (shortcut change)\", we pursue the form and setting image of each form and make it three-dimensional, without being influenced by the modeling constraints that occur when reproducing the transformation mechanism.",
 			"• By eliminating complicated structures, we have created a range of movement inside the main body, achieving a new dimension of movement performance never seen before.",
@@ -43,51 +85,76 @@
 			"• Comes with Naemar Seal, which is extremely thin but has excellent concealment properties, and allows for vivid color reproduction even over dark molded parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ガンポッド×1",
-			"シールド×1",
-			"エフェクトパーツ×１",
-			"ランディングギア×１式",
-			"ファイター形態再現用パーツ×１式",
-			"ガウォーク形態再現用パーツ×１式",
-			"ジョイントパーツ×１式",
-			"ハンドパーツ×1式",
-			"ネーマーシール×2"
-		],
-		"en": [
-			"Gun pod x 1",
-			"Seal × 1",
-			"Effect parts x 1",
-			"Landing gear x 1 set",
-			"Fighter form reproduction parts x 1 set",
-			"Gerwalk form reproduction parts x 1 set",
-			"Joint parts x 1 set",
-			"Hand parts x 1 set",
-			"Namer Seal×2"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ガンポッド",
+				"en": "gun pod"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "エフェクトパーツ×１",
+				"en": "Effect parts x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ランディングギア×１式",
+				"en": "Landing gear x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ファイター形態再現用パーツ×１式",
+				"en": "Fighter form reproduction parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ガウォーク形態再現用パーツ×１式",
+				"en": "Gerwalk form reproduction parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ×１式",
+				"en": "Joint parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ネーマーシール",
+				"en": "Namer Seal"
+			},
+			"count": 2
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182212_1.jpg",
 				"path": "/images/items/01_4303/1000182212_1.jpg",
 				"hash": "6d9440111252aa239c8ccf6c1a3d9815"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182212_10.jpg",
-				"path": "/images/items/01_4303/1000182212_10.jpg",
-				"hash": "06d1d7b126c08c96dc7479ea63528b99"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182212_11.jpg",
-				"path": "/images/items/01_4303/1000182212_11.jpg",
-				"hash": "73b176d71a9160560257a84f6c1a9fad"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182212_12.jpg",
-				"path": "/images/items/01_4303/1000182212_12.jpg",
-				"hash": "30c1be9837634e32826f0c933a8c7216"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182212_2.jpg",
@@ -128,13 +195,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182212_9.jpg",
 				"path": "/images/items/01_4303/1000182212_9.jpg",
 				"hash": "1411678c50002d9130d857b5f48d1e4c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182212_10.jpg",
+				"path": "/images/items/01_4303/1000182212_10.jpg",
+				"hash": "06d1d7b126c08c96dc7479ea63528b99"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182212_11.jpg",
+				"path": "/images/items/01_4303/1000182212_11.jpg",
+				"hash": "73b176d71a9160560257a84f6c1a9fad"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182212_12.jpg",
+				"path": "/images/items/01_4303/1000182212_12.jpg",
+				"hash": "30c1be9837634e32826f0c933a8c7216"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4303/",
-	"brandIds": ["hg"],
-	"seriesIds": ["macross"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5944", "01_5946", "01_5465", "01_5448"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4303/"
 }

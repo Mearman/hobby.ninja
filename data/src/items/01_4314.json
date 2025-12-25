@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "カスタマイズマテリアル（サイバーエフェクト/マルチジョイント）",
-		"en": "CUSTOMIZE MATERIAL (CYBER EFFECT/MULTI-JOINT)"
+		"en": "Customized material (cyber effect/multi joint)"
 	},
+	"brands": [
+		{
+			"id": "customize_scenebase",
+			"url": "https://bandai-hobby.net/brand/customize_scenebase/",
+			"ja": "カスタマイズシーンベース/エフェクト/マテリアル/ウェポンズ"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
 	"price": {
 		"amount": 748,
 		"currency": "JPY",
@@ -30,16 +72,49 @@
 		"en": [
 			"BANDAI SPIRITS official new brand of material parts \"Customized Material\"!",
 			"\"Cyber ​​Effect/Multi Joint\" is now available in the customization material series that is perfect for 1/144 Scale Models, allowing even beginners to easily improve details!",
-			"• Comes with an effect sheet of the cyber motif \"feathers \" and \" circle\".",
+			"• Comes with an effect sheet of the cyber motif \"feathers\" and \"circle\".",
 			"• Comes with a Runner set that includes multi-joints essential for customization, such as 3mm joints, C-type joints, and detail cover parts.",
 			"• By using the included joint parts, you can easily attach the effect sheet to a 3mm diameter hole.",
 			"• Includes 4 detail cover parts of 3 types (round, hexagonal, and roll bar) to cover the 3mm holes."
 		]
 	},
-	"accessories": {
-		"ja": ["羽エフェクト×1式", "羽エフェクト用ジョイントパーツ×１式", "サークルエフェクト×1", "マルチジョイント×1式"],
-		"en": ["Feather effect x 1", "Joint parts for wing effect x 1 set", "Circle effect x1", "Multi-joint x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "羽エフェクト",
+				"en": "feather effect"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "羽エフェクト用ジョイントパーツ×１式",
+				"en": "Joint parts for wing effect x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "サークルエフェクト",
+				"en": "circle effect"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "マルチジョイント",
+				"en": "multi joint"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -76,10 +151,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4314/",
-	"brandIds": ["customize_scenebase", "30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3753",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3753/"

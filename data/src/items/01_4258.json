@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ディランザ (グエル専用機)",
-		"en": "HG 1/144 GUEL'S DILANZA"
+		"en": "HG 1/144 Dilanza (Guell exclusive machine)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216474",
+			"url": "https://p-bandai.jp/item/item-1000216474/",
+			"ja": "ＨＧ 1/144 デスルター"
+		},
+		{
+			"id": "item-1000211616",
+			"url": "https://p-bandai.jp/item/item-1000211616/",
+			"ja": "ＨＧ 1/144 ベギルベウトルシュ(ケナンジ小隊所属機/リドリック小隊所属機)"
+		},
+		{
+			"id": "01_5422",
+			"url": "https://bandai-hobby.net/item/01_5422/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムキャリバーン [クリアカラー]"
+		},
+		{
+			"id": "item-1000203899",
+			"url": "https://p-bandai.jp/item/item-1000203899/",
+			"ja": "ＨＧ 1/144 ガンドノード"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 8
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、グエル・ジェタークの専用機ディランザ（グエル専用機）がHGで登場！",
@@ -43,21 +86,38 @@
 			"• Beam Partisan, Beam Torch, and Beam Rifle are included."
 		]
 	},
-	"accessories": {
-		"ja": ["ビームパルチザン×１", "ビームトーチ×１", "ビームライフル×１", "シール×１"],
-		"en": ["Beam partisan x1", "Beam torch x1", "Beam rifle x1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームパルチザン×１",
+				"en": "Beam partisan x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームトーチ×１",
+				"en": "Beam torch x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームライフル×１",
+				"en": "Beam rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180055_1.jpg",
 				"path": "/images/items/01_4258/1000180055_1.jpg",
 				"hash": "979d392cb4234790549e9883ba231717"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180055_10.jpg",
-				"path": "/images/items/01_4258/1000180055_10.jpg",
-				"hash": "ca918d66f3d1a2530ea2f10d8342f922"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180055_2.jpg",
@@ -100,18 +160,14 @@
 				"hash": "6dd8828d2bdb6449594cd7b870ea514c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4258_inst_0.jpg",
-				"path": "/images/items/01_4258/01_4258_inst_0.jpg",
-				"hash": "0b37b98185247026b1b236fc74cadd41"
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180055_10.jpg",
+				"path": "/images/items/01_4258/1000180055_10.jpg",
+				"hash": "ca918d66f3d1a2530ea2f10d8342f922"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4258/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203899"],
 	"manual": {
 		"id": "130",
 		"url": "https://manual.bandai-hobby.net/menus/detail/130/"

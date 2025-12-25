@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "水星の魔女 ウェポンディスプレイベース",
-		"en": "THE WITCH FROM MERCURY WEAPON DISPLAY BASE"
+		"en": "Mercury Witch Weapon Display Base"
 	},
+	"brands": [
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4794",
+			"url": "https://bandai-hobby.net/item/01_4794/",
+			"ja": "アクションベース6 [クリアカラー] 機動戦士ガンダム 水星の魔女シールセット"
+		},
+		{
+			"id": "01_4350",
+			"url": "https://bandai-hobby.net/item/01_4350/",
+			"ja": "ガンダムベース限定 アクションベース5 [水星の魔女イメージカラー]"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -29,31 +62,43 @@
 		"en": [
 			"From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\", a general-purpose pedestal that can display the Gambit used in the work is now available!",
 			"• All parts are made of clear parts. Six pillars are included.",
-			"• By combining the separately sold \"HG 1/144 Gundam Aerial \" and \" HG 1/144 Gundam Lubris\" with MS equipped with Gambit in the work, it is possible to reproduce the image of Gambit deployment just like in the movie.",
+			"• By combining the separately sold \"HG 1/144 Gundam Aerial\" and \"HG 1/144 Gundam Lubris\" with MS equipped with Gambit in the work, it is possible to reproduce the image of Gambit deployment just like in the movie.",
 			"• Also includes joint parts that can be connected to an action base (sold separately).",
 			"• By using 2 sets, you can also display the Gambit consisting of 11 parts of the separately sold \"HG 1/144 Gundam Aerial\" in its expanded state."
 		]
 	},
-	"accessories": {
-		"ja": ["台座×２", "アーム(短)×３", "アーム(長)×３", "ジョイントパーツ×１式"],
-		"en": ["Pedestal x 2", "Arm (short) x 3", "Arm (long) x 3", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "台座×２",
+				"en": "Pedestal x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "アーム(短)×３",
+				"en": "Arm (short) x 3"
+			}
+		},
+		{
+			"name": {
+				"ja": "アーム(長)×３",
+				"en": "Arm (long) x 3"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ×１式",
+				"en": "Joint parts x 1 set"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182204_1.jpg",
 				"path": "/images/items/01_4292/1000182204_1.jpg",
 				"hash": "783ec1847635a199029fc9b103d41124"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182204_10.jpg",
-				"path": "/images/items/01_4292/1000182204_10.jpg",
-				"hash": "7fd895bea071a99a3977a5aa39216212"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182204_11.jpg",
-				"path": "/images/items/01_4292/1000182204_11.jpg",
-				"hash": "973409517623cd35ae81cc1241ba663a"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182204_2.jpg",
@@ -94,15 +139,21 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182204_9.jpg",
 				"path": "/images/items/01_4292/1000182204_9.jpg",
 				"hash": "3c3a071f28b2c4a182e04e8cd36e3618"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182204_10.jpg",
+				"path": "/images/items/01_4292/1000182204_10.jpg",
+				"hash": "7fd895bea071a99a3977a5aa39216212"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182204_11.jpg",
+				"path": "/images/items/01_4292/1000182204_11.jpg",
+				"hash": "973409517623cd35ae81cc1241ba663a"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4292/",
-	"brandIds": ["actionbase"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4794", "01_4350"],
 	"manual": {
 		"id": "981",
 		"url": "https://manual.bandai-hobby.net/menus/detail/981/"

@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ディランザ（一般機/ラウダ専用機）",
-		"en": "HG 1/144 DILANZA STANDARD TYPE/LAUDA'S DILANZA"
+		"en": "HG 1/144 Dilanza (general machine/Lauda special machine)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216474",
+			"url": "https://p-bandai.jp/item/item-1000216474/",
+			"ja": "ＨＧ 1/144 デスルター"
+		},
+		{
+			"id": "item-1000211616",
+			"url": "https://p-bandai.jp/item/item-1000211616/",
+			"ja": "ＨＧ 1/144 ベギルベウトルシュ(ケナンジ小隊所属機/リドリック小隊所属機)"
+		},
+		{
+			"id": "01_5422",
+			"url": "https://bandai-hobby.net/item/01_5422/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムキャリバーン [クリアカラー]"
+		},
+		{
+			"id": "item-1000203899",
+			"url": "https://p-bandai.jp/item/item-1000203899/",
+			"ja": "ＨＧ 1/144 ガンドノード"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 5
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、ディランザがHGで登場！",
@@ -39,31 +82,44 @@
 			"• The torch can be stored behind the shoulder seal for both general and Lauda machines."
 		]
 	},
-	"accessories": {
-		"ja": ["大型アックス×１", "ビームトーチ×１", "ビームライフル×１", "キャラクターA用パーツ×１", "シール×１"],
-		"en": ["Large ax x1", "Beam torch x1", "Beam rifle x1", "Character A parts x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "大型アックス×１",
+				"en": "Large ax x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームトーチ×１",
+				"en": "Beam torch x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームライフル×１",
+				"en": "Beam rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "キャラクターA用パーツ×１",
+				"en": "Character A parts x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180178_1.jpg",
 				"path": "/images/items/01_4261/1000180178_1.jpg",
 				"hash": "60660f63c935556c0b5dbf9fc4c9a481"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180178_10.jpg",
-				"path": "/images/items/01_4261/1000180178_10.jpg",
-				"hash": "2d6c77ab61d0828ec7faf34319ceec35"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180178_11.jpg",
-				"path": "/images/items/01_4261/1000180178_11.jpg",
-				"hash": "d2cdf0a617d8aa8178198471ae9c4e16"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180178_12.jpg",
-				"path": "/images/items/01_4261/1000180178_12.jpg",
-				"hash": "707a313c592b361d90eafab7ce4b9f1f"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180178_2.jpg",
@@ -106,18 +162,24 @@
 				"hash": "656cfc6c8c05cb0c6fa25207871ff8c1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4261_inst_0.jpg",
-				"path": "/images/items/01_4261/01_4261_inst_0.jpg",
-				"hash": "7f38a7f4385b0da4d05dde0f9434b977"
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180178_10.jpg",
+				"path": "/images/items/01_4261/1000180178_10.jpg",
+				"hash": "2d6c77ab61d0828ec7faf34319ceec35"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180178_11.jpg",
+				"path": "/images/items/01_4261/1000180178_11.jpg",
+				"hash": "d2cdf0a617d8aa8178198471ae9c4e16"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180178_12.jpg",
+				"path": "/images/items/01_4261/1000180178_12.jpg",
+				"hash": "707a313c592b361d90eafab7ce4b9f1f"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4261/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203899"],
 	"manual": {
 		"id": "132",
 		"url": "https://manual.bandai-hobby.net/menus/detail/132/"

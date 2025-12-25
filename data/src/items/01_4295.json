@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 オプションパーツセット11(大型キャノン/アームユニット)",
-		"en": "30MM 1/144 OPTION PARTS SET 11 (LARGE CANNON / ARM UNIT)"
+		"en": "30MM 1/144 Option parts set 11 (large cannon/arm unit)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 968,
 		"currency": "JPY",
@@ -18,84 +56,95 @@
 		"day": 21
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMオプションパーツセットに、各機体へ装着可能な大型キャノン＆アームユニットが登場！",
-			"■大型キャノン、アームユニット、大型ハンドパーツ、カスタマイズヘッドパーツが付属。",
-			"■大型キャノン、アームユニットは、別売りの「30MM 1/144 オプションパーツセット9(大型ブースターユニット)」「30MM 1/144 オプションパーツセット10(大型プロペラントタンクユニット)」と組み合わせることで、フルアーマー形態にスタマイズが可能。",
-			"■付属するカスタマイズヘッドパーツは、別売りの「30MM 1/144 オプションパーツセット6(カスタマイズヘッドA)」「30MM 1/144 オプションパーツセット7(カスタマイズヘッドB)」等のアイテムとの組み合わせが楽しめる。"
+			"• 大型キャノン、アームユニット、大型ハンドパーツ、カスタマイズヘッドパーツが付属。",
+			"• 大型キャノン、アームユニットは、別売りの「30MM 1/144 オプションパーツセット9(大型ブースターユニット)」「30MM 1/144 オプションパーツセット10(大型プロペラントタンクユニット)」と組み合わせることで、フルアーマー形態にスタマイズが可能。",
+			"• 付属するカスタマイズヘッドパーツは、別売りの「30MM 1/144 オプションパーツセット6(カスタマイズヘッドA)」「30MM 1/144 オプションパーツセット7(カスタマイズヘッドB)」等のアイテムとの組み合わせが楽しめる。"
 		],
 		"en": [
 			"A large cannon and arm unit that can be attached to each aircraft is now available in the 30MM optional parts set!",
 			"• Includes large cannon, arm unit, large hand parts, and customized head parts.",
-			"• The large cannon and arm unit can be customized into full armor form by combining them with the separately sold \"30MM 1/144 Option Parts Set 9 (Large Booster Unit)\" and \" 30MM 1/144 Option Parts Set 10 (Large Propellant Tank Unit).\"",
-			"• The included customized head parts can be combined with items such as \"30MM 1/144 Option Parts Set 6 (Customized Head A)\" ​​and \" 30MM 1/144 Option Parts Set 7 (Customized Head B)\" which are sold separately."
+			"• The large cannon and arm unit can be customized into full armor form by combining them with the separately sold \"30MM 1/144 Option Parts Set 9 (Large Booster Unit)\" and \"30MM 1/144 Option Parts Set 10 (Large Propellant Tank Unit).\"",
+			"• The included customized head parts can be combined with items such as \"30MM 1/144 Option Parts Set 6 (Customized Head A)\" ​​and \"30MM 1/144 Option Parts Set 7 (Customized Head B)\" which are sold separately."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"大型キャノン×１",
-			"アームユニット(左右)×１式",
-			"大型ハンドパーツ平手(左右)、握り手(左右)",
-			"カスタマイズヘッドパーツ(マスク×１、ベースパーツ×２)"
-		],
-		"en": [
-			"Large cannon x 1",
-			"Arm unit (left and right) x 1 set",
-			"Large hand parts Open hands (left and right), grip hands (left and right)",
-			"Customized head parts (mask x 1, base parts x 2)"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "大型キャノン×１",
+				"en": "Large cannon x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "アームユニット(左右)×１式",
+				"en": "Arm unit (left and right) x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "大型ハンドパーツ平手(左右)、握り手(左右)",
+				"en": "Large hand parts Open hands (left and right), grip hands (left and right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "カスタマイズヘッドパーツ(マスク×１、ベースパーツ×２)",
+				"en": "Customized head parts (mask x 1, base parts x 2)"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5208.jpg",
+				"src": "https://bandai-hobby.net/images/153_5208_s_t82t1a5fa8jy9s58h3abu15gldop.jpg",
 				"path": "/images/items/01_4295/153_5208.jpg",
 				"hash": "fd1b0788e4734f4238ca838d1df2c5da"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5208.jpg",
+				"src": "https://bandai-hobby.net/images/155_5208_s_q2qsybx7xr67v7ohkbjyhj9il0d1.jpg",
 				"path": "/images/items/01_4295/155_5208.jpg",
 				"hash": "fb3c190008f5686fc444a976e964ee72"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5208.jpg",
+				"src": "https://bandai-hobby.net/images/156_5208_s_t0yhvrp92i6zta7expcdv940pk5j.jpg",
 				"path": "/images/items/01_4295/156_5208.jpg",
 				"hash": "f73c17a697674bfbae2b97b20aaa0a58"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5208.jpg",
+				"src": "https://bandai-hobby.net/images/157_5208_s_8kjvq845z0n981kum2gmzhn12uz9.jpg",
 				"path": "/images/items/01_4295/157_5208.jpg",
 				"hash": "317d91dc4ecc193401183d35fb638711"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5208.jpg",
+				"src": "https://bandai-hobby.net/images/158_5208_s_t2lrmro8kgnl4ad8lh961s14r4nx.jpg",
 				"path": "/images/items/01_4295/158_5208.jpg",
 				"hash": "bce47c6a8f61d05a2931b74ea28aecec"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5208.jpg",
+				"src": "https://bandai-hobby.net/images/159_5208_s_kw70krtk89jz6hsk9vyondf2w80f.jpg",
 				"path": "/images/items/01_4295/159_5208.jpg",
 				"hash": "fc84a5c9c5672f72e0eb97a83259aab8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5208.jpg",
+				"src": "https://bandai-hobby.net/images/189_5208_s_l7psab3pq1wp8xoq7ujhrfl5mt9a.jpg",
 				"path": "/images/items/01_4295/189_5208.jpg",
 				"hash": "297683fa2bda0b1296cacb506b7d7031"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5208.jpg",
+				"src": "https://bandai-hobby.net/images/190_5208_s_6vvkfa4tsokjsp6lq3mjsgssvacr.jpg",
 				"path": "/images/items/01_4295/190_5208.jpg",
 				"hash": "d2e5548e671d0d1714b5999d1ef8ae54"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5208.jpg",
+				"src": "https://bandai-hobby.net/images/191_5208_s_cjpoyex7v5d8ppt6sjc3zqpsyu7z.jpg",
 				"path": "/images/items/01_4295/191_5208.jpg",
 				"hash": "e5a2bb6158623e3cc9f9ee7ab3d94669"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5208.jpg",
+				"src": "https://bandai-hobby.net/images/192_5208_s_5jah7sy09o65wzay1l75xggrs0kd.jpg",
 				"path": "/images/items/01_4295/192_5208.jpg",
 				"hash": "54bab2be5ac4f629ebbec23de09d5392"
 			}
@@ -103,10 +152,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4295/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3750",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3750/"

@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard スレッタ・マーキュリー",
-		"en": "Figure-rise Standard SULETTA MERCURY"
+		"en": "Figure-rise Standard Thretta Mercury"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5364",
+			"url": "https://bandai-hobby.net/item/01_5364/",
+			"ja": "Figure-rise Standard ニカ・ナナウラ"
+		},
+		{
+			"id": "01_5082",
+			"url": "https://bandai-hobby.net/item/01_5082/",
+			"ja": "Figure-rise Standard チュアチュリー・パンランチ"
+		},
+		{
+			"id": "item-1000194221",
+			"url": "https://p-bandai.jp/item/item-1000194221/",
+			"ja": "Figure-rise Standard スレッタ・マーキュリー(一般制服Ver.)"
+		},
+		{
+			"id": "01_4264",
+			"url": "https://bandai-hobby.net/item/01_4264/",
+			"ja": "Figure-rise Standard ミオリネ・レンブラン"
+		}
+	],
 	"price": {
 		"amount": 3520,
 		"currency": "JPY",
@@ -21,17 +64,17 @@
 	"description": {
 		"ja": [
 			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、主人公のスレッタ・マーキュリーがFigure-rise Standardシリーズにラインアップ！",
-			"■豊富な表情はタンポ印刷済みパーツ１種と、水転写式デカール用パーツ2種で再現。スレッタの表情を自然に演出できるよう、細部まで徹底追求。",
-			"■制服の色分けはパーツ分割で再現。襟の模様や胸元のマークは付属シールで装飾。",
-			"■髪パーツは、パーツ構成を考慮し立体的な形状で再現。",
-			"■脚部の関節は自然なシルエットを意識しつつ、可動域を確保。",
-			"■ブーツ表面のシワの凹凸感も造形。",
-			"■耳パーツの開閉を再現できるハロや、スレッタのポージングを支えるディスプレイ用台座も同梱。",
-			"■ハンドパーツは繊細な指先まで表現。ハロを持つことができる専用ハンドパーツも含め、左右４種が付属。"
+			"• 豊富な表情はタンポ印刷済みパーツ１種と、水転写式デカール用パーツ2種で再現。スレッタの表情を自然に演出できるよう、細部まで徹底追求。",
+			"• 制服の色分けはパーツ分割で再現。襟の模様や胸元のマークは付属シールで装飾。",
+			"• 髪パーツは、パーツ構成を考慮し立体的な形状で再現。",
+			"• 脚部の関節は自然なシルエットを意識しつつ、可動域を確保。",
+			"• ブーツ表面のシワの凹凸感も造形。",
+			"• 耳パーツの開閉を再現できるハロや、スレッタのポージングを支えるディスプレイ用台座も同梱。",
+			"• ハンドパーツは繊細な指先まで表現。ハロを持つことができる専用ハンドパーツも含め、左右４種が付属。"
 		],
 		"en": [
 			"From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\", the main character Sureta Mercury is now available in the Figure-rise Standard series!",
-			"• The rich expressions are reproduced with one type of tampo-printed part and two types of water transfer decal parts. Thorough attention has been paid to every detail so that Sletta's facial expressions can be produced naturally.",
+			"• The rich expressions are reproduced with one type of pad-printed part and two types of water-slide decal parts. Thorough attention has been paid to every detail so that Sletta's facial expressions can be produced naturally.",
 			"• The color coding of the uniform is reproduced by dividing it into parts. The collar pattern and chest mark are decorated with the included seal.",
 			"• The hair parts are reproduced in a three-dimensional shape, taking into consideration the part composition.",
 			"• The leg joints maintain a natural silhouette while ensuring range of motion.",
@@ -40,78 +83,98 @@
 			"• Hand parts depict delicate fingertips. Comes with 4 types for left and right, including special hand parts that can hold a halo."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ハロ×１",
-			"フェイスパーツ×３種",
-			"ハンドパーツ×１式",
-			"ディスプレイ用台座×１",
-			"シール×２種",
-			"水転写式デカール×１"
-		],
-		"en": [
-			"Haro x 1",
-			"Face parts x 3 types",
-			"Hand parts x 1 set",
-			"Display pedestal x 1",
-			"Seal x 2 types",
-			"Water transfer decal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ハロ×１",
+				"en": "Haro x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "フェイスパーツ×３種",
+				"en": "Face parts x 3 types"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ用台座×１",
+				"en": "Display pedestal x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×２種",
+				"en": "Seal x 2 types"
+			}
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール×１",
+				"en": "Water transfer decal x 1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5176.jpg",
+				"src": "https://bandai-hobby.net/images/153_5176_s_q75wv84aj9ba2gxn7j98f1fsujj9.jpg",
 				"path": "/images/items/01_4259/153_5176.jpg",
 				"hash": "6e28b435699ae3b4b5e70bf9d8f71755"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5176.jpg",
+				"src": "https://bandai-hobby.net/images/155_5176_s_me1c6039l4lrce2ishn5nr3hy9an.jpg",
 				"path": "/images/items/01_4259/155_5176.jpg",
 				"hash": "324408e6fd42228b63f8583308077a24"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5176.jpg",
+				"src": "https://bandai-hobby.net/images/156_5176_s_1k2ao8p14aj7964ia1hxu1dvx6r6.jpg",
 				"path": "/images/items/01_4259/156_5176.jpg",
 				"hash": "dbb92d11d670725af87d6426abf0e9c3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5176.jpg",
+				"src": "https://bandai-hobby.net/images/157_5176_s_rhf6j0hcinlpvfzdgqkgz0zjk1u0.jpg",
 				"path": "/images/items/01_4259/157_5176.jpg",
 				"hash": "ca6797f400ced18a3cafbc0e613b33c8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5176.jpg",
+				"src": "https://bandai-hobby.net/images/158_5176_s_3uhthw0hwv1v4zf1wl7ghup552dk.jpg",
 				"path": "/images/items/01_4259/158_5176.jpg",
 				"hash": "0c4c4c4ea7e60c5ee7894f4f01442740"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5176.jpg",
+				"src": "https://bandai-hobby.net/images/159_5176_s_w037q0imh2um0zo1ej4gm2ne0unq.jpg",
 				"path": "/images/items/01_4259/159_5176.jpg",
 				"hash": "b70889233fe695a63052cc141495be5a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5176.jpg",
+				"src": "https://bandai-hobby.net/images/189_5176_s_dv0b7nfztg2cm6kwm8glr5p4l53y.jpg",
 				"path": "/images/items/01_4259/189_5176.jpg",
 				"hash": "afa10228b70d76949630a21724fd5e61"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5176.jpg",
+				"src": "https://bandai-hobby.net/images/190_5176_s_jneoobuh70f3wakhx4sntyyztvyu.jpg",
 				"path": "/images/items/01_4259/190_5176.jpg",
 				"hash": "92a4b79f3c37ffe594d5287f01188625"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5176.jpg",
+				"src": "https://bandai-hobby.net/images/191_5176_s_e9cul5q7se2r1tif1m7b4sux06b0.jpg",
 				"path": "/images/items/01_4259/191_5176.jpg",
 				"hash": "09b16631bdc5d7e668414ec5f35bbde8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5176.jpg",
+				"src": "https://bandai-hobby.net/images/192_5176_s_ey5atv6pb0v9bpiga8il8rjmiwdz.jpg",
 				"path": "/images/items/01_4259/192_5176.jpg",
 				"hash": "fd13920a82e2a7851f55a00b74cdca2d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_5176.jpg",
+				"src": "https://bandai-hobby.net/images/193_5176_s_chu9uqr7jj9b2jw6ky6s3nna5tnw.jpg",
 				"path": "/images/items/01_4259/193_5176.jpg",
 				"hash": "386534e751756d333334c54119f94fbd"
 			}
@@ -119,10 +182,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4259/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5364", "01_5082", "item-1000194221", "01_4264"],
 	"manual": {
 		"id": "140",
 		"url": "https://manual.bandai-hobby.net/menus/detail/140/"

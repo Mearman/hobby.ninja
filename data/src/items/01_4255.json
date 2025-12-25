@@ -5,6 +5,55 @@
 		"ja": "MG 1/100 ガンダムバルバトス [リサーキュレーションカラー/ネオンブルー]",
 		"en": "MG 1/100 Gundam Barbatos [Recirculation Color/Neon Blue]"
 	},
+	"brands": [
+		{
+			"id": "ecoplaproject_g",
+			"url": "https://bandai-hobby.net/brand/ecoplaproject_g/",
+			"ja": "エコプラプロジェクト"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5469",
+			"url": "https://bandai-hobby.net/item/01_5469/",
+			"ja": "MG 1/100 ガンダムヴィダール"
+		},
+		{
+			"id": "01_4214",
+			"url": "https://bandai-hobby.net/item/01_4214/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムバルバトス用 拡張パーツセット[クリアカラー］"
+		},
+		{
+			"id": "01_3842",
+			"url": "https://bandai-hobby.net/item/01_3842/",
+			"ja": "MG 1/100 ガンダムバルバトス[アイアンブラッドコーティング]"
+		},
+		{
+			"id": "01_3458",
+			"url": "https://bandai-hobby.net/item/01_3458/",
+			"ja": "MG 1/100 ガンダムバルバトス[チタニウムフィニッシュ］"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5720,
 		"currency": "JPY",
@@ -18,7 +67,6 @@
 		"day": 16
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"MG 1/100 ガンダムバルバトスが特別カラーで登場！",
@@ -36,7 +84,7 @@
 			"• The Ahab reactor on the chest is equipped with a rotating gimmick for the first time as an MG.",
 			"• The internal frame, cylinder, and armor are linked by a movable axis built into the upper body. This allows you to create dynamic poses.",
 			"• The cylinder on the shoulder reproduces the mechanical structure that follows the pulling movement. You can express Barbatos' aggressive pose.",
-			"• The knees are movable by linking the frame and cylinder. By pulling out the parts on the back of the knee, the range of motion is expanded, allowing for a natural standing knee position.",
+			"• The knees move in conjunction with the frame and cylinder. By pulling out the parts on the back of the knee, the range of motion is expanded, allowing for a natural standing knee position.",
 			"[What is recirculation color]",
 			"Stylish coloring with vivid neon colors that make their presence felt in the black created from circulation. Futuristic attire becomes a symbol of a cyclical future."
 		]
@@ -44,35 +92,27 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5172.jpg",
+				"src": "https://bandai-hobby.net/images/153_5172_s_tz6zyqsbw4qsls4uumjd2tpeqsyt.jpg",
 				"path": "/images/items/01_4255/153_5172.jpg",
 				"hash": "fab25d500fc2128d924bdb5131532c3a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5172.jpg",
+				"src": "https://bandai-hobby.net/images/155_5172_s_wkof0tuu2eginfccmoks75dr0opm.jpg",
 				"path": "/images/items/01_4255/155_5172.jpg",
 				"hash": "8eaa2510a7741443def0ab0f3939582e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5172.jpg",
+				"src": "https://bandai-hobby.net/images/156_5172_s_qvwpil2wczuap1q26pmu2fyrfbah.jpg",
 				"path": "/images/items/01_4255/156_5172.jpg",
 				"hash": "586bb732a8fc0e33e8ecf0308da6b625"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5172.jpg",
+				"src": "https://bandai-hobby.net/images/157_5172_s_kazl3mwap7r0rbl9u90cbf084cvm.jpg",
 				"path": "/images/items/01_4255/157_5172.jpg",
 				"hash": "b64bbad5275ec27deb9cb8aacd455288"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4255/",
-	"brandIds": ["ecoplaproject_g", "mg"],
-	"seriesIds": ["tekketsu"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5469", "01_4214", "01_3842", "01_3458"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4255/"
 }

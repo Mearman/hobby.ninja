@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "SDW HEROES オルタナティブジャスティス インフィニットドラゴン",
-		"en": "SDW HEROES ALTERNATIVE JUSTICE ∞ DRAGON"
+		"en": "SDW HEROES Alternative Justice Infinite Dragon"
 	},
+	"brands": [
+		{
+			"id": "sdgundamseries",
+			"url": "https://bandai-hobby.net/brand/sdgundamseries/",
+			"ja": "SDガンダムシリーズ"
+		}
+	],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000193966",
+			"url": "https://p-bandai.jp/item/item-1000193966/",
+			"ja": "ＳＤＷ ＨＥＲＯＥＳ スペリオルフォーミュラー ファイナルドラゴン"
+		},
+		{
+			"id": "01_4336",
+			"url": "https://bandai-hobby.net/item/01_4336/",
+			"ja": "SDW HEROES ドミナントスペリオル ダークネスドラゴン"
+		},
+		{
+			"id": "01_4634",
+			"url": "https://bandai-hobby.net/item/01_4634/",
+			"ja": "SDW HEROES クリアカラーセットIII"
+		},
+		{
+			"id": "01_4294",
+			"url": "https://bandai-hobby.net/item/01_4294/",
+			"ja": "SDW HEROES スペリオルストライク フリーダムドラゴン"
+		}
+	],
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -21,47 +64,47 @@
 	"description": {
 		"ja": [
 			"外伝プロジェクト『SDガンダムワールド ヒーローズ THE LEGEND OF DRAGON KNIGHT』より、「SDW HEROES オルタナティブジャスティス インフィニットドラゴン」が登場",
-			"■羽部分と尻尾パーツはボールジョイントにより可動し、表情をつけてディスプレイが可能。",
-			"■別売りのアクションベースに取り付け可能。"
+			"• 羽部分と尻尾パーツはボールジョイントにより可動し、表情をつけてディスプレイが可能。",
+			"• 別売りのアクションベースに取り付け可能。"
 		],
 		"en": [
-			"\"SDW HEROES Alternative Justice Infinite Dragon \" appears from the side story project \" SD Gundam World Heroes THE LEGEND OF DRAGON KNIGHT\"",
+			"\"SDW HEROES Alternative Justice Infinite Dragon\" appears from the side story project \"SD Gundam World Heroes THE LEGEND OF DRAGON KNIGHT\"",
 			"• The wings and tail parts can be moved using ball joints, allowing you to display different expressions.",
 			"• Can be attached to an action base (sold separately)."
 		]
 	},
-	"accessories": {
-		"ja": ["シール×１"],
-		"en": ["Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5224.jpg",
+				"src": "https://bandai-hobby.net/images/153_5224_s_l1il812otrlggrdy7jpluiul8u0v.jpg",
 				"path": "/images/items/01_4312/153_5224.jpg",
 				"hash": "996b62c54ab66658c9a671da44c94a15"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5224.jpg",
+				"src": "https://bandai-hobby.net/images/155_5224_s_zru7zslfn8b8pyjpd7qi9aaibvg0.jpg",
 				"path": "/images/items/01_4312/155_5224.jpg",
 				"hash": "78032a38cdbd9a376a340fadf676d999"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5224.jpg",
+				"src": "https://bandai-hobby.net/images/156_5224_s_ozxlyr4zsavp2yjt9zbugug61jt4.jpg",
 				"path": "/images/items/01_4312/156_5224.jpg",
 				"hash": "56c64d240d71043032aa53cef422cb66"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5224.jpg",
+				"src": "https://bandai-hobby.net/images/157_5224_s_e2yqwa18rzqfswzmtft0rigg9bn3.jpg",
 				"path": "/images/items/01_4312/157_5224.jpg",
 				"hash": "a63832e91b9367e7435eed5624c76415"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4312/",
-	"brandIds": ["sdgundamseries"],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000193966", "01_4336", "01_4634", "01_4294"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4312/"
 }

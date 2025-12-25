@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "BANDAI SPIRITS エントリーツールセット",
-		"en": "BANDAI SPIRITS ENTRY TOOL SET"
+		"en": "BANDAI SPIRITS Entry Tool Set"
 	},
+	"brands": [
+		{
+			"id": "tool",
+			"url": "https://bandai-hobby.net/brand/tool/",
+			"ja": "BANDAI SPIRITS ツール"
+		},
+		{
+			"id": "tool",
+			"url": "https://bandai-hobby.net/brand/tool/",
+			"ja": "BANDAI SPIRITS ツール"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4930",
+			"url": "https://bandai-hobby.net/item/01_4930/",
+			"ja": "マルチビルダーズケース"
+		},
+		{
+			"id": "01_4931",
+			"url": "https://bandai-hobby.net/item/01_4931/",
+			"ja": "マルチビルダーズランナースタンド"
+		},
+		{
+			"id": "01_4101",
+			"url": "https://bandai-hobby.net/item/01_4101/",
+			"ja": "BANDAI SPIRITS パーツセパレーター"
+		},
+		{
+			"id": "01_3784",
+			"url": "https://bandai-hobby.net/item/01_3784/",
+			"ja": "BANDAI SPIRITS スティックヤスリセット"
+		}
+	],
 	"price": {
 		"amount": 1430,
 		"currency": "JPY",
@@ -27,17 +69,34 @@
 			"• ピンセットとパーツセパレーターはシールやパーツを傷つけにくい樹脂製。"
 		],
 		"en": [
-			"Introducing a set of \"nippers \", \" tweezers \", and \" parts separators\" that are essential for plastic model production!",
+			"Introducing a set of \"nippers\", \"tweezers\" and \"parts separator\" that are essential for plastic model production!",
 			"• Basic specifications recommended for beginners to plastic models.",
 			"• Nippers for those who are purchasing a plastic model for the first time are designed specifically for plastic models with a focus on comfort.",
 			"• Includes tweezers, an essential tool for applying the Seal neatly, and a parts separator that can be used to disassemble parts that have been inserted by mistake.",
 			"• The tweezers and parts separator are made of resin that won't easily damage the seal or parts."
 		]
 	},
-	"accessories": {
-		"ja": ["BANDAI SPIRITS エントリーニッパー（ブルー）×１", "ピンセット×１", "パーツセパレーター×1"],
-		"en": ["BANDAI SPIRITS Entry nipper (blue) x 1", "Tweezers x 1", "Parts separator x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "BANDAI SPIRITS エントリーニッパー（ブルー）×１",
+				"en": "BANDAI SPIRITS Entry nipper (blue) x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ピンセット×１",
+				"en": "Tweezers x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "パーツセパレーター",
+				"en": "parts separator"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -83,9 +142,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4305/",
-	"brandIds": ["tool"],
-	"seriesIds": [],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_4930", "01_4931", "01_4101", "01_3784"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4305/"
 }

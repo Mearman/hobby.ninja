@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "プラノサウルス ティラノサウルス",
-		"en": "PLANNOSAURUS Tyrannosaurus"
+		"en": "planosaurus tyrannosaurus"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "plannosaurus",
+			"url": "https://bandai-hobby.net/series/plannosaurus/",
+			"ja": "プラノサウルス"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5501",
+			"url": "https://bandai-hobby.net/item/01_5501/",
+			"ja": "プラノサウルス テリジノサウルス"
+		},
+		{
+			"id": "01_5389",
+			"url": "https://bandai-hobby.net/item/01_5389/",
+			"ja": "プラノサウルス ブラキオサウルス"
+		},
+		{
+			"id": "01_5390",
+			"url": "https://bandai-hobby.net/item/01_5390/",
+			"ja": "プラノサウルス 陸海空恐竜セット"
+		},
+		{
+			"id": "01_5248",
+			"url": "https://bandai-hobby.net/item/01_5248/",
+			"ja": "プラノサウルス パラサウロロフス"
+		}
+	],
 	"price": {
 		"amount": 1430,
 		"currency": "JPY",
@@ -29,7 +66,7 @@
 			"• 口の開閉や前肢、後肢、首や尾など各所が可動し、好みのポージングでディスプレイが可能。"
 		],
 		"en": [
-			"The strongest hunter \"Tyrannosaurus \" is now available from \" Planosaurus \", a brand that allows you to \" know everything about dinosaurs\" by assembling them by yourself while checking each dinosaur's skeleton and skin one by one!",
+			"The strongest hunter \"Tyrannosaurus\" is now available from \"Planosaurus\", a brand that allows you to \"know everything about dinosaurs\" by assembling them by yourself while checking each dinosaur's skeleton and skin one by one!",
 			"• \"Skeleton Build\" allows you to learn about the internal structure of dinosaurs.",
 			"• \"Dinosaur Build\" allows you to restore the dinosaur's appearance using specifications unique to plastic models, where the skin parts are attached to the top of the skeleton.",
 			"• Easy to assemble as there is no need for tools such as nippers or adhesives.",
@@ -38,31 +75,34 @@
 			"• Various parts such as the opening and closing of the mouth, front legs, hind legs, neck and tail can be moved, allowing you to display your favorite poses."
 		]
 	},
-	"accessories": {
-		"ja": ["外皮パーツ（羽毛）×１", "シール×1", "台座×1"],
-		"en": ["Outer skin parts (feathers) x 1", "Seal×1", "Pedestal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "外皮パーツ（羽毛）×１",
+				"en": "Outer skin parts (feathers) x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182216_1.jpg",
 				"path": "/images/items/01_4306/1000182216_1.jpg",
 				"hash": "fb67300d873a000638007751e7db60a5"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182216_10.jpg",
-				"path": "/images/items/01_4306/1000182216_10.jpg",
-				"hash": "cf817550cb586c525fa2be103442743f"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182216_11.jpg",
-				"path": "/images/items/01_4306/1000182216_11.jpg",
-				"hash": "bb364e29a066c73e44d1c8ac8461f238"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182216_12.jpg",
-				"path": "/images/items/01_4306/1000182216_12.jpg",
-				"hash": "e372a915e17dd6c7f56151d698dd5bd2"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182216_2.jpg",
@@ -103,13 +143,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182216_9.jpg",
 				"path": "/images/items/01_4306/1000182216_9.jpg",
 				"hash": "6068ca8a07d18b4cb46f7f3e0d042a48"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182216_10.jpg",
+				"path": "/images/items/01_4306/1000182216_10.jpg",
+				"hash": "cf817550cb586c525fa2be103442743f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182216_11.jpg",
+				"path": "/images/items/01_4306/1000182216_11.jpg",
+				"hash": "bb364e29a066c73e44d1c8ac8461f238"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182216_12.jpg",
+				"path": "/images/items/01_4306/1000182216_12.jpg",
+				"hash": "e372a915e17dd6c7f56151d698dd5bd2"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4306/",
-	"brandIds": [],
-	"seriesIds": ["plannosaurus"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5501", "01_5389", "01_5390", "01_5248"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4306/"
 }

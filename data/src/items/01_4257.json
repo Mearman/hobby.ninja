@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガンダムエアリアル",
-		"en": "HG 1/144 GUNDAM AERIAL"
+		"en": "HG 1/144 Gundam Aerial"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216474",
+			"url": "https://p-bandai.jp/item/item-1000216474/",
+			"ja": "ＨＧ 1/144 デスルター"
+		},
+		{
+			"id": "item-1000211616",
+			"url": "https://p-bandai.jp/item/item-1000211616/",
+			"ja": "ＨＧ 1/144 ベギルベウトルシュ(ケナンジ小隊所属機/リドリック小隊所属機)"
+		},
+		{
+			"id": "01_5422",
+			"url": "https://bandai-hobby.net/item/01_5422/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムキャリバーン [クリアカラー]"
+		},
+		{
+			"id": "item-1000203899",
+			"url": "https://p-bandai.jp/item/item-1000203899/",
+			"ja": "ＨＧ 1/144 ガンドノード"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 1
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、主人公機ガンダム・エアリアルをHGシリーズで立体化！",
@@ -35,42 +78,56 @@
 			"• The double-sided seal, which has a pattern printed on the adhesive side, creates a sense of transparency and depth by applying it from the inside of the transparent part."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームサーベル×２",
-			"ビームライフル×１",
-			"シールド×１",
-			"シェルユニットクリアパーツ×１式",
-			"ビームライフル用エフェクトパーツ×１",
-			"ジョイントパーツ×１",
-			"シール×１"
-		],
-		"en": [
-			"Beam saber x2",
-			"Beam rifle x1",
-			"Seal de x1",
-			"Shell unit clear parts x 1 set",
-			"Effect parts for beam rifle x 1",
-			"Joint parts x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームサーベル×２",
+				"en": "Beam saber x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームライフル×１",
+				"en": "Beam rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド×１",
+				"en": "Seal de x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シェルユニットクリアパーツ×１式",
+				"en": "Shell unit clear parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームライフル用エフェクトパーツ×１",
+				"en": "Effect parts for beam rifle x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ×１",
+				"en": "Joint parts x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000179163_1.jpg",
 				"path": "/images/items/01_4257/1000179163_1.jpg",
 				"hash": "1340adcd89748e6226689258a80fe890"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000179163_10.jpg",
-				"path": "/images/items/01_4257/1000179163_10.jpg",
-				"hash": "5b2685d51760b5490e3960f3e18d5a78"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000179163_11.jpg",
-				"path": "/images/items/01_4257/1000179163_11.jpg",
-				"hash": "609d35d914c6bc096c21ca7a7bb14de4"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000179163_2.jpg",
@@ -113,18 +170,19 @@
 				"hash": "eed0b1b6a38cc1906e8e18742b4f8a99"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4257_inst_0.jpg",
-				"path": "/images/items/01_4257/01_4257_inst_0.jpg",
-				"hash": "35f883ab1825608c3de1c7713b0f16b5"
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000179163_10.jpg",
+				"path": "/images/items/01_4257/1000179163_10.jpg",
+				"hash": "5b2685d51760b5490e3960f3e18d5a78"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000179163_11.jpg",
+				"path": "/images/items/01_4257/1000179163_11.jpg",
+				"hash": "609d35d914c6bc096c21ca7a7bb14de4"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4257/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203899"],
 	"manual": {
 		"id": "129",
 		"url": "https://manual.bandai-hobby.net/menus/detail/129/"

@@ -3,8 +3,35 @@
 	"type": "item",
 	"name": {
 		"ja": "銀河漂流バイファムセット1",
-		"en": "ROUND VERNIAN VIFAM SET 1"
+		"en": "Galaxy Drifting Vifam Set 1"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "vifam",
+			"url": "https://bandai-hobby.net/series/vifam/",
+			"ja": "銀河漂流バイファム"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4301",
+			"url": "https://bandai-hobby.net/item/01_4301/",
+			"ja": "銀河漂流バイファムセット2"
+		},
+		{
+			"id": "item-1000179682",
+			"url": "https://p-bandai.jp/item/item-1000179682/",
+			"ja": "ＨＧ 1/144 バイファム スリング・パニアー装備型"
+		}
+	],
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -21,82 +48,95 @@
 	"description": {
 		"ja": [
 			"懐かしの『銀河漂流バイファム』のプラモデルキットが当時の記憶をそのままに、豪華セットになって復活！",
-			"■「バイファム スリング・パニアー装備型」「ディルファム」「ウグ」「オールオーバー」がセットになって登場。",
-			"■当時の商品をベースに、設定に合わせ一部の成形色を再選定。"
+			"• 「バイファム スリング・パニアー装備型」「ディルファム」「ウグ」「オールオーバー」がセットになって登場。",
+			"• 当時の商品をベースに、設定に合わせ一部の成形色を再選定。"
 		],
 		"en": [
 			"The nostalgic \"Galaxy Drifting Vifam\" plastic ModelKit is back as a luxurious set with the memories of those days intact!",
-			"• \"Vifam sling/pannier equipped type \", \" Dilfam \", \" Ug \", and \" Allover\" are now available as a set.",
+			"• \"Vifam sling pannier equipped type\", \"Dilfam\", \"Ug\", and \"Allover\" are now available as a set.",
 			"• Based on the product at the time, some molding colors were reselected to match the settings."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"1/144 バイファム スリング・パニアー装備型×１",
-			"1/144 ディルファム×１",
-			"1/144 ウグ×１",
-			"1/24 オールオーバー×１"
-		],
-		"en": ["1/144 Vifam sling pannier equipped type x 1", "1/144 Dilfam x 1", "1/144 Ugu×1", "1/24 Allover x1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "1/144 バイファム スリング・パニアー装備型×１",
+				"en": "1/144 Vifam sling pannier equipped type x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "1/144 ディルファム×１",
+				"en": "1/144 Dilfam x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "1/144 ウグ×１",
+				"en": "1/144 Ugu x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "1/24 オールオーバー×１",
+				"en": "1/24 Allover x1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5212.jpg",
+				"src": "https://bandai-hobby.net/images/153_5212_s_z2gjnmkw8wgb94ubl0vy06o49rza.jpg",
 				"path": "/images/items/01_4300/153_5212.jpg",
 				"hash": "306f3d4a4f79905a5718e9bab648d024"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5212.jpg",
+				"src": "https://bandai-hobby.net/images/155_5212_s_9iq6zm7jpigcma1ywwe8ma8ziyxi.jpg",
 				"path": "/images/items/01_4300/155_5212.jpg",
 				"hash": "fc6e749116a8b62bbb30cddaacc17eba"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5212.jpg",
+				"src": "https://bandai-hobby.net/images/156_5212_s_t0luoqovuduf25n0vvuc9rprq4tg.jpg",
 				"path": "/images/items/01_4300/156_5212.jpg",
 				"hash": "7fdecdc943ce17933a49e386bda4a98f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5212.jpg",
+				"src": "https://bandai-hobby.net/images/157_5212_s_vqczsucuxnma682n2bn7ce2sr4rc.jpg",
 				"path": "/images/items/01_4300/157_5212.jpg",
 				"hash": "53a02e66873aa5cb762a264256d1acb8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5212.jpg",
+				"src": "https://bandai-hobby.net/images/158_5212_s_gtxter3azl0t3em4i2k1l280nmo6.jpg",
 				"path": "/images/items/01_4300/158_5212.jpg",
 				"hash": "5b2f7d2edccee15237b15fdb6216ef58"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5212.jpg",
+				"src": "https://bandai-hobby.net/images/159_5212_s_x9qf5s3gv9gv90w1ep9bsoqav85g.jpg",
 				"path": "/images/items/01_4300/159_5212.jpg",
 				"hash": "0be83b7f263bbfb4edc059f426dd7d79"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5212.jpg",
+				"src": "https://bandai-hobby.net/images/189_5212_s_cehp9lx87e784oheljpdkatgqri2.jpg",
 				"path": "/images/items/01_4300/189_5212.jpg",
 				"hash": "216a2cfa32ea960ae0111a7b4817cad6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5212.jpg",
+				"src": "https://bandai-hobby.net/images/190_5212_s_28lckb5pgmow3iv8l90t0qixo59o.jpg",
 				"path": "/images/items/01_4300/190_5212.jpg",
 				"hash": "cad34e971c764c503e12a47b94063d9a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5212.jpg",
+				"src": "https://bandai-hobby.net/images/191_5212_s_rz29fj0o8zasjldximoo9ewtocg7.jpg",
 				"path": "/images/items/01_4300/191_5212.jpg",
 				"hash": "f71465d0108fec837560aa41df6fc6d0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5212.jpg",
+				"src": "https://bandai-hobby.net/images/192_5212_s_qpyscctmub9jga04fzhuasm2ss9d.jpg",
 				"path": "/images/items/01_4300/192_5212.jpg",
 				"hash": "219b6d4966dc67da47ddd41d5bc1afb5"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4300/",
-	"brandIds": [],
-	"seriesIds": ["vifam"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_4301", "item-1000179682"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4300/"
 }

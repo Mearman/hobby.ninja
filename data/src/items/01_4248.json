@@ -5,6 +5,59 @@
 		"ja": "ＨＧ 1/144 レッドライダー",
 		"en": "HG 1/144 Red Rider"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2585,
 		"currency": "JPY",
@@ -17,7 +70,6 @@
 		"month": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「ペイルライダー計画」",
@@ -61,7 +113,7 @@
 			"\"Pale Rider Plan\"",
 			"RX-80RR",
 			"Red Rider now available as a kit!",
-			"The Red Rider that appears in \"Mobile Suit Gundam Aggressor \" is commercialized in the HG series. Based on the HG Pale Rider, the distinctive shape of the aircraft is reproduced, and you can also recreate dynamic poses where you wield the special weapon \" Zwei Hander\"!",
+			"The Red Rider that appears in \"Mobile Suit Gundam Aggressor\" is commercialized in the HG series. Based on the HG Pale Rider, the distinctive shape of the aircraft is reproduced, and you can also recreate dynamic poses where you wield the special weapon \"Zwei Hander\"!",
 			"● Reproduce the aircraft shape and special weapons with new modeling!!",
 			"Reproduces the shape of the aircraft such as the head, chest, legs, etc. The structure of the shoulder joint has been updated to ensure a range of motion suitable for posing. The shoulders move forward.",
 			"zwei hander",
@@ -96,59 +148,87 @@
 			"・Product specifications are as of 20227. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["ツヴァイ・ハンダー", "試作型100ｍｍマシンガン", "100ｍｍマシンガン", "ビーム・サーベル", "シールド"],
-		"en": ["zwei hander", "Prototype 100mm machine gun", "100mm machine gun", "beam saber", "Seal de"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ツヴァイ・ハンダー",
+				"en": "zwei hander"
+			}
+		},
+		{
+			"name": {
+				"ja": "試作型100ｍｍマシンガン",
+				"en": "Prototype 100mm machine gun"
+			}
+		},
+		{
+			"name": {
+				"ja": "100ｍｍマシンガン",
+				"en": "100mm machine gun"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5166.jpg",
+				"src": "https://bandai-hobby.net/images/153_5166_s_2joukhcf2iqof2ndhmfh8ntpeu88.jpg",
 				"path": "/images/items/01_4248/153_5166.jpg",
 				"hash": "eb043c15fdaf8f72d6097a9475d96c2a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5166.jpg",
+				"src": "https://bandai-hobby.net/images/155_5166_s_mu55fxo7w1hzvl4z3hercffc1prz.jpg",
 				"path": "/images/items/01_4248/155_5166.jpg",
 				"hash": "0e7a6a290930be9ffeb27fda26baf019"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5166.jpg",
+				"src": "https://bandai-hobby.net/images/156_5166_s_36wvcvm98z8b9kb5k37uu0rur39r.jpg",
 				"path": "/images/items/01_4248/156_5166.jpg",
 				"hash": "973c83eeca6cf7d2e6975e19e6bdf853"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5166.jpg",
+				"src": "https://bandai-hobby.net/images/157_5166_s_twh634s1loxtuyo424fes9agyme2.jpg",
 				"path": "/images/items/01_4248/157_5166.jpg",
 				"hash": "abaf5f6fe7d8d952aaec0d8cf58961ab"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5166.jpg",
+				"src": "https://bandai-hobby.net/images/158_5166_s_2tic144e1y8zxbz1oo2yx3ygss33.jpg",
 				"path": "/images/items/01_4248/158_5166.jpg",
 				"hash": "143a28ba715194651b6080f45c92a607"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5166.jpg",
+				"src": "https://bandai-hobby.net/images/159_5166_s_sc9crmb4avjwckh4o9jo7pmm1bhr.jpg",
 				"path": "/images/items/01_4248/159_5166.jpg",
 				"hash": "a640858f7accf513cd743dd43575290d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5166.jpg",
+				"src": "https://bandai-hobby.net/images/189_5166_s_t1van4xlly1oen6dgdmd4ru18bi5.jpg",
 				"path": "/images/items/01_4248/189_5166.jpg",
 				"hash": "8b0b6cea280b8ca35c7aca35c558aa40"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5166.jpg",
+				"src": "https://bandai-hobby.net/images/190_5166_s_pjkeigwkqgibu8d2n3uhiemkh6qf.jpg",
 				"path": "/images/items/01_4248/190_5166.jpg",
 				"hash": "179d6e34be758d76b0712c94666237f7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5166.jpg",
+				"src": "https://bandai-hobby.net/images/191_5166_s_1kf9cvasqjcveqr9zakqyfvgexsx.jpg",
 				"path": "/images/items/01_4248/191_5166.jpg",
 				"hash": "49cfa1feac9b40fe920204415ff9b342"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5166.jpg",
+				"src": "https://bandai-hobby.net/images/192_5166_s_r9diaqnzgge10gs2hjmh8dc4i2pk.jpg",
 				"path": "/images/items/01_4248/192_5166.jpg",
 				"hash": "33742c9b825678cc84e4e29be2bb1461"
 			}
@@ -156,14 +236,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4248/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla", "hguc"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2364",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2364/"

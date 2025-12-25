@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard エンジェモン",
-		"en": "Figure-rise Standard ANGEMON"
+		"en": "Figure-rise Standard Angemon"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "digimon",
+			"url": "https://bandai-hobby.net/series/digimon/",
+			"ja": "デジモンシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4917",
+			"url": "https://bandai-hobby.net/item/01_4917/",
+			"ja": "Figure-rise Standard ブラックウォーグレイモン"
+		},
+		{
+			"id": "01_4113",
+			"url": "https://bandai-hobby.net/item/01_4113/",
+			"ja": "Figure-rise Standard デュークモン"
+		},
+		{
+			"id": "01_3766",
+			"url": "https://bandai-hobby.net/item/01_3766/",
+			"ja": "Figure-rise Standard マグナモン"
+		},
+		{
+			"id": "01_3637",
+			"url": "https://bandai-hobby.net/item/01_3637/",
+			"ja": "Figure-rise Standard メタルガルルモン"
+		}
+	],
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -21,11 +64,11 @@
 	"description": {
 		"ja": [
 			"Figure-rise Standardデジモンシリーズ第５弾！天使型デジモン「エンジェモン」がアニメ設定に準拠したデザインとプロポーションで登場！",
-			"■翼は６枚全てが個別に可動。各翼は根元のボールジョイントの接続により、ポージングの際に細かな表情づけが可能。",
-			"■髪パーツはボールジョイントを軸に上下左右に可動。",
-			"■左腕と右脚の特徴的な布パーツは軟質素材を使用することで、腕や脚の可動を妨げず大胆なポージングを可能に。",
-			"■フロントの布パーツの根元は、スライド可動することで脚部の可動域を拡大。",
-			"■ホーリーロッドとヘブンズナックル再現用のエフェクトパーツが付属。"
+			"• 翼は６枚全てが個別に可動。各翼は根元のボールジョイントの接続により、ポージングの際に細かな表情づけが可能。",
+			"• 髪パーツはボールジョイントを軸に上下左右に可動。",
+			"• 左腕と右脚の特徴的な布パーツは軟質素材を使用することで、腕や脚の可動を妨げず大胆なポージングを可能に。",
+			"• フロントの布パーツの根元は、スライド可動することで脚部の可動域を拡大。",
+			"• ホーリーロッドとヘブンズナックル再現用のエフェクトパーツが付属。"
 		],
 		"en": [
 			"Figure-rise Standard Digimon series 5th edition! Angel-type Digimon \"Angemon\" appears with a design and proportions that conform to the anime settings!",
@@ -36,68 +79,82 @@
 			"• Comes with effect parts to recreate Holy Rod and Heaven's Knuckle."
 		]
 	},
-	"accessories": {
-		"ja": ["ホーリーロッド×1", "ヘブンズナックルエフェクト× １", "シール×1"],
-		"en": ["Holy rod x1", "Heaven's Knuckle Effect x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ホーリーロッド",
+				"en": "holy rod"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ヘブンズナックルエフェクト× １",
+				"en": "Heaven's Knuckle Effect x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5214.jpg",
+				"src": "https://bandai-hobby.net/images/153_5214_s_62ky21pbiq4x9wcpy9tul527hf5b.jpg",
 				"path": "/images/items/01_4302/153_5214.jpg",
 				"hash": "9d7fd266a17b62817bccb526baec0b42"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5214.jpg",
+				"src": "https://bandai-hobby.net/images/155_5214_s_hfg3mlu0v7leh80oaolvo4y15ils.jpg",
 				"path": "/images/items/01_4302/155_5214.jpg",
 				"hash": "e7c266823359db6252ad2c5ae21d23a7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5214.jpg",
+				"src": "https://bandai-hobby.net/images/156_5214_s_0ogh2txwl3q4qlqbjej07gvz17w0.jpg",
 				"path": "/images/items/01_4302/156_5214.jpg",
 				"hash": "0afa89cc59e56d21556c8b7d5fbec7b0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5214.jpg",
+				"src": "https://bandai-hobby.net/images/157_5214_s_7ant35nl2rm418ftfaugajmlz7p2.jpg",
 				"path": "/images/items/01_4302/157_5214.jpg",
 				"hash": "99c0a2fd87c0def93455a41df5681bf6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5214.jpg",
+				"src": "https://bandai-hobby.net/images/158_5214_s_hpzhl64q41o1ks0alv9qzep06tv0.jpg",
 				"path": "/images/items/01_4302/158_5214.jpg",
 				"hash": "6e67eaff69122d5d8e020e117a3a37c6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5214.jpg",
+				"src": "https://bandai-hobby.net/images/159_5214_s_cbmtr53seocbkxkl2nwe7nb7mmcy.jpg",
 				"path": "/images/items/01_4302/159_5214.jpg",
 				"hash": "f3e6194e00f969d1257ef2a98957894d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5214.jpg",
+				"src": "https://bandai-hobby.net/images/189_5214_s_xehlvogcwnt1l1xm9pszjhgcf4a0.jpg",
 				"path": "/images/items/01_4302/189_5214.jpg",
 				"hash": "feac912c6565303053a2a3c47e725187"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5214.jpg",
+				"src": "https://bandai-hobby.net/images/190_5214_s_vscbwwekchizpriadv1owij2686r.jpg",
 				"path": "/images/items/01_4302/190_5214.jpg",
 				"hash": "e27eae3c214abf11eef11dab90385a8e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5214.jpg",
+				"src": "https://bandai-hobby.net/images/191_5214_s_u8oeputfooii0ky771cztkmm325p.jpg",
 				"path": "/images/items/01_4302/191_5214.jpg",
 				"hash": "c4802dd8215ea52683444ea9e02fb689"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5214.jpg",
+				"src": "https://bandai-hobby.net/images/192_5214_s_xyj7h17582kc6ktx81z1xdpef060.jpg",
 				"path": "/images/items/01_4302/192_5214.jpg",
 				"hash": "238174114d0113519b92c89bc7742da4"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4302/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["digimon"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_4917", "01_4113", "01_3766", "01_3637"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4302/"
 }

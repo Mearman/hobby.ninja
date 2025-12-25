@@ -3,8 +3,57 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 ガンダムエクシア [リサーキュレーションカラー/ネオンパープル]",
-		"en": "MG 1/100 GUNDAM EXIA [RECIRCULATION COLOR/NEON PURPLE]"
+		"en": "MG 1/100 Gundam Exia [Recirculation Color/Neon Purple]"
 	},
+	"brands": [
+		{
+			"id": "ecoplaproject_g",
+			"url": "https://bandai-hobby.net/brand/ecoplaproject_g/",
+			"ja": "エコプラプロジェクト"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "g-00",
+			"url": "https://bandai-hobby.net/series/g-00/",
+			"ja": "機動戦士ガンダム00[ダブルオー]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216602",
+			"url": "https://p-bandai.jp/item/item-1000216602/",
+			"ja": "ＭＧ 1/100 ガンダムアストレア＋プロトＧＮツインブロードブレイド"
+		},
+		{
+			"id": "01_5526",
+			"url": "https://bandai-hobby.net/item/01_5526/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムエクシア [クリアカラー]"
+		},
+		{
+			"id": "01_5102",
+			"url": "https://bandai-hobby.net/item/01_5102/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムナドレ"
+		},
+		{
+			"id": "01_4422",
+			"url": "https://bandai-hobby.net/item/01_4422/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムキュリオス[クリアカラー］"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4950,
 		"currency": "JPY",
@@ -17,7 +66,6 @@
 		"month": 6
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"MG 1/100 ガンダムエクシアが、特別カラーで登場！",
@@ -43,35 +91,26 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_4242_2.jpg",
-				"path": "/images/items/01_4242/01_4242_2.jpg",
-				"hash": "1cdae7575172e539da026755cd0a0349"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/153_5160.jpg",
+				"src": "https://bandai-hobby.net/images/153_5160_o_1g5lhq9ua1282172p6qldjsria23.jpg",
 				"path": "/images/items/01_4242/153_5160.jpg",
 				"hash": "a6b5228eb01331b7ee760e2d7c6c4a2d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5160.jpg",
+				"src": "https://bandai-hobby.net/images/155_5160_o_1g5lhqm101jucobd1u081lch1b872d.jpg",
 				"path": "/images/items/01_4242/155_5160.jpg",
 				"hash": "08b31880912b18154a1b0db52c2c7ad4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5160.jpg",
+				"path": "/images/items/01_4242/01_4242_2.jpg",
+				"hash": "1cdae7575172e539da026755cd0a0349"
+			},
+			{
+				"src": "https://bandai-hobby.net/images/157_5160_o_1g5lhr3hp1u4run71okc119n7122n.jpg",
 				"path": "/images/items/01_4242/157_5160.jpg",
 				"hash": "1f049887306f90ba5cf8c282c38fe3e2"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4242/",
-	"brandIds": ["ecoplaproject_g", "mg"],
-	"seriesIds": ["g-00"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216602", "01_5526", "01_5102", "01_4422"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4242/"
 }

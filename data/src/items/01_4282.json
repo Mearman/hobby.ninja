@@ -3,8 +3,61 @@
 	"type": "item",
 	"name": {
 		"ja": "ＨＧ 1/144 ジム・スパルタン",
-		"en": "HG 1/144 GM SPARTAN"
+		"en": "HG 1/144 Jim Spartan"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -17,7 +70,6 @@
 		"month": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"地 球 連 邦 軍 機 甲 海 兵 師 団 に 配 備 さ れ た",
@@ -36,8 +88,8 @@
 			"ミニガン",
 			"銃身下部にハンドガンを装備する専用武装を徹底再現。",
 			"細分化されたパーツ分割により色分けを実現し、銃身の回転ギミックといった各所可動ギミックを搭載。",
-			"■フォアグリップやサイトスコープはスイング機能を搭載。",
-			"■側面のマガジンアームは可動し、予備マガジンとの交換を演出可能。マガジンは背部アーマーにも懸架可能。",
+			"• フォアグリップやサイトスコープはスイング機能を搭載。",
+			"• 側面のマガジンアームは可動し、予備マガジンとの交換を演出可能。マガジンは背部アーマーにも懸架可能。",
 			"ＷＡＭＭ（有線式対ＭＳミサイル）",
 			"肩部装甲上部に接続されたマウントラックに、ＷＡＭＭやビーム・サーベルをマウント可能。",
 			"マウントラックは前腕部への取り付けもできる。",
@@ -75,7 +127,7 @@
 		"en": [
 			"Deployed to the Earth Federation Armored Marine Division.",
 			"“Phantom aircraft” appears -",
-			"Jim Spartan is commercialized in the HG series from the 1989 \"Monthly Bandai Making Journal \" project \" F.M.S\".",
+			"Jim Spartan is commercialized in the HG series from the 1989 \"Monthly Bandai Making Journal\" project \"F.M.S\".",
 			"The characteristic aircraft shape and weapons in the latest HG format are thoroughly reproduced with new modeling.",
 			"Equipped with armed gimmicks and movable performance that expand the range of action and production.",
 			"● Pursuing high-detail modeling using modern formats",
@@ -126,21 +178,38 @@
 			"・Product specifications are as of 20229. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["ミニガン", "ヒート・ナイフ", "ＷＡＭＭ", "ビーム・サーベル"],
-		"en": ["minigun", "heat knife", "WAMM", "beam saber"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ミニガン",
+				"en": "minigun"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヒート・ナイフ",
+				"en": "heat knife"
+			}
+		},
+		{
+			"name": {
+				"ja": "ＷＡＭＭ",
+				"en": "WAMM"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル",
+				"en": "beam saber"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180148_1.jpg",
 				"path": "/images/items/01_4282/1000180148_1.jpg",
 				"hash": "f00eae96302cb00670ea485575595c4e"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180148_10.jpg",
-				"path": "/images/items/01_4282/1000180148_10.jpg",
-				"hash": "eb3ef6734cf667aaf9f814d3a8b1ad67"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180148_2.jpg",
@@ -181,19 +250,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180148_9.jpg",
 				"path": "/images/items/01_4282/1000180148_9.jpg",
 				"hash": "ff1fc21af615b77197cb07542e14455b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180148_10.jpg",
+				"path": "/images/items/01_4282/1000180148_10.jpg",
+				"hash": "eb3ef6734cf667aaf9f814d3a8b1ad67"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4282/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla", "hguc"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5963", "01_5961", "01_5951"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2371",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2371/"

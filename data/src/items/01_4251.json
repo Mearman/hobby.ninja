@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ジェガン (アクシズ・ショックイメージカラー)",
-		"en": "HG 1/144 JEGAN (AXIS SHOCK IMAGE COLOR)"
+		"en": "HG 1/144 Jegan (Axis Shock Image Color)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5346",
+			"url": "https://bandai-hobby.net/item/01_5346/",
+			"ja": "HG 1/144 ジムIII(アクシズ・ショックイメージカラー)"
+		},
+		{
+			"id": "01_5210",
+			"url": "https://bandai-hobby.net/item/01_5210/",
+			"ja": "HG 1/144 ギラ・ドーガ(アクシズ・ショックイメージカラー)"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4408",
+			"url": "https://bandai-hobby.net/item/01_4408/",
+			"ja": "HG 1/144 サイコ・ドーガ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 16
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"HGUC 1/144 ジェガンが『機動戦士ガンダム 逆襲のシャア』劇中のアクシズ落下阻止時をイメージしたカラーになって登場！",
@@ -79,13 +122,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4251/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundam-cca"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5346", "01_5210", "01_4971", "01_4408"],
-	"tag": {
-		"ja": "GUNDAM SIDE-F",
-		"en": "GUNDAM SIDE-F"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4251/"
 }

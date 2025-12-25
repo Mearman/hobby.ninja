@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガンダムルブリスウル",
-		"en": "HG 1/144 GUNDAM LFRITH UR"
+		"en": "HG 1/144 Gundam Rubrisur"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216474",
+			"url": "https://p-bandai.jp/item/item-1000216474/",
+			"ja": "ＨＧ 1/144 デスルター"
+		},
+		{
+			"id": "item-1000211616",
+			"url": "https://p-bandai.jp/item/item-1000211616/",
+			"ja": "ＨＧ 1/144 ベギルベウトルシュ(ケナンジ小隊所属機/リドリック小隊所属機)"
+		},
+		{
+			"id": "01_5422",
+			"url": "https://bandai-hobby.net/item/01_5422/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムキャリバーン [クリアカラー]"
+		},
+		{
+			"id": "item-1000203129",
+			"url": "https://p-bandai.jp/item/item-1000203129/",
+			"ja": "ＨＧ 1/144 ガンダムキャリバーン パーメットスコア・ファイブ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -18,12 +62,11 @@
 		"day": 4
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、ガンダム・ルブリス・ウルが商品化！",
-			"■大型のバックパックを背部に装着。",
-			"■専用武器、ビームサーベルを装備。"
+			"• 大型のバックパックを背部に装着。",
+			"• 専用武器、ビームサーベルを装備。"
 		],
 		"en": [
 			"From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\", Gundam Rubris Ur is commercialized!",
@@ -31,65 +74,80 @@
 			"• Equipped with a special weapon, beam saber."
 		]
 	},
-	"accessories": {
-		"ja": ["専用武器×１", "ビームサーベル×2", "ハンドパーツ×１式", "シール×1"],
-		"en": ["Special weapon x1", "Beam saber x2", "Hand parts x 1 set", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用武器×１",
+				"en": "Special weapon x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "beam saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5236.jpg",
+				"src": "https://bandai-hobby.net/images/153_5236_s_h8s552obt3fuq1g5kcg3r663vagw.jpg",
 				"path": "/images/items/01_4325/153_5236.jpg",
 				"hash": "a9a05569940845c07711e6959cfad75c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5236.jpg",
+				"src": "https://bandai-hobby.net/images/155_5236_s_6w3y3twlwq1p5bh1s31hyxake5fa.jpg",
 				"path": "/images/items/01_4325/155_5236.jpg",
 				"hash": "06220eca18a203123d9dcf1861ae8ff6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5236.jpg",
+				"src": "https://bandai-hobby.net/images/156_5236_s_hw6wh8n2slvocw854qkl4b2goevk.jpg",
 				"path": "/images/items/01_4325/156_5236.jpg",
 				"hash": "42a3a83f25f778e7e7d52d0d75265d3a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5236.jpg",
+				"src": "https://bandai-hobby.net/images/157_5236_s_iqgx7fon9zbxoz2igpnk5z336n9k.jpg",
 				"path": "/images/items/01_4325/157_5236.jpg",
 				"hash": "842062103151bfb424bed70afc34bdd4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5236.jpg",
+				"src": "https://bandai-hobby.net/images/158_5236_s_098kpt8hjzuuv78oglyq63s1n3rn.jpg",
 				"path": "/images/items/01_4325/158_5236.jpg",
 				"hash": "a03d5921b5be58058bb12b359a0e5667"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5236.jpg",
+				"src": "https://bandai-hobby.net/images/159_5236_s_b1ysaefmqwa0xvf8d5f1ww5vx5iz.jpg",
 				"path": "/images/items/01_4325/159_5236.jpg",
 				"hash": "c3b00c1eda7bc6d9fa995e8b4907c6fb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5236.jpg",
+				"src": "https://bandai-hobby.net/images/189_5236_s_3tbd02ge53zxwtwwgznihxrp3mun.jpg",
 				"path": "/images/items/01_4325/189_5236.jpg",
 				"hash": "c3ab790ee2d482ac1ab627f76de54570"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5236.jpg",
+				"src": "https://bandai-hobby.net/images/190_5236_s_6ayfb80mq4ma54siz6wrp6wapu1f.jpg",
 				"path": "/images/items/01_4325/190_5236.jpg",
 				"hash": "bd7dab0d3e4f6a647d5e9985600ebe40"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4325_inst_0.jpg",
-				"path": "/images/items/01_4325/01_4325_inst_0.jpg",
-				"hash": "4cef9b52975c4bde113523f98e46a17d"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4325/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203129"],
 	"manual": {
 		"id": "145",
 		"url": "https://manual.bandai-hobby.net/menus/detail/145/"

@@ -3,8 +3,31 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 ゼータガンダム Ver.Ka",
-		"en": "MG 1/100 ZETA GUNDAM Ver.Ka"
+		"en": "MG 1/100 Zeta Gundam Ver.Ka"
 	},
+	"brands": [
+		{
+			"id": "mgka",
+			"url": "https://bandai-hobby.net/brand/mgka/",
+			"ja": "MG Ver.Ka［マスターグレード バージョンカトキ］"
+		}
+	],
+	"series": [
+		{
+			"id": "z-gundam",
+			"url": "https://bandai-hobby.net/series/z-gundam/",
+			"ja": "機動戦士Ｚガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"scale": "1/100",
 	"price": {
 		"amount": 7150,
 		"currency": "JPY",
@@ -18,7 +41,6 @@
 		"day": 29
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"MASTER GRADE Ver.Ka20周年！『機動戦士Ζガンダム』より「MG 1/100 ゼータガンダム Ver.Ka」が登場。",
@@ -28,58 +50,75 @@
 			"• 機体各所にはメタリックなエクストラフィニッシュ加工を採用、カトキハジメ氏デザインの水転写式デカールが付属。"
 		],
 		"en": [
-			"MASTER GRADE Ver.Ka 20 laps! \"MG 1/100 Zeta Gundam Ver.Ka \" appears from \" Mobile Suit Zeta Gundam\".",
+			"MASTER GRADE Ver.Ka 20 laps! \"MG 1/100 Zeta Gundam Ver.Ka\" appears from \"Mobile Suit Zeta Gundam\".",
 			"• Kazumi Fujita's setting drawing for the anime, pursuing the proportions in the play.",
 			"• The structure and shape of each unit have been refined to ensure that both MS form and Wave Rider form do not fail, and a deformation mechanism has been constructed. Achieved an updated transformation by simplifying a complicated gimmick.",
 			"• In MS form, the reproducibility of poses in the play is improved by ensuring a wide range of motion. By providing a locking mechanism for each part, the Wave Rider form allows for a stable display like a fixed aircraft model.",
 			"• Metallic extra finish is applied to various parts of the aircraft, and water transfer decals designed by Hajime Katoki are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"シールド×１",
-			"ビーム・ライフル×１",
-			"ビーム・サーベル×２",
-			"グレネード・ランチャーカートリッジ×２",
-			"ハンドパーツ×１式",
-			"ディスプレイ用ジョイント×２種(MS用/WR用)",
-			"フィギュア×２種",
-			"ホイルシール×１",
-			"水転写式デカール×１"
-		],
-		"en": [
-			"Seal de x1",
-			"Beam rifle x1",
-			"Beam saber x2",
-			"Grenade launcher cartridge x 2",
-			"Hand parts x 1 set",
-			"Display joint x 2 types (for MS/WR)",
-			"Figure x 2 types",
-			"Foil Seal×1",
-			"Water transfer decal x 1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シールド×１",
+				"en": "Seal de x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・ライフル×１",
+				"en": "Beam rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・サーベル×２",
+				"en": "Beam saber x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "グレネード・ランチャーカートリッジ×２",
+				"en": "Grenade launcher cartridge x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ用ジョイント×２種(MS用/WR用)",
+				"en": "Display joint x 2 types (for MS/WR)"
+			}
+		},
+		{
+			"name": {
+				"ja": "フィギュア×２種",
+				"en": "Figure x 2 types"
+			}
+		},
+		{
+			"name": {
+				"ja": "ホイルシール×１",
+				"en": "Foil Seal×1"
+			}
+		},
+		{
+			"name": {
+				"ja": "水転写式デカール×１",
+				"en": "Water transfer decal x 1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182284_1.jpg",
 				"path": "/images/items/01_4311/1000182284_1.jpg",
 				"hash": "70facd17d78766f28a5afcc72b9e475c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182284_10.jpg",
-				"path": "/images/items/01_4311/1000182284_10.jpg",
-				"hash": "2813bc3a8e8a91965ffb54021f0ed0f5"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182284_11.jpg",
-				"path": "/images/items/01_4311/1000182284_11.jpg",
-				"hash": "3bcaf2571323bf6b219c4b5ca01f92b4"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182284_12.jpg",
-				"path": "/images/items/01_4311/1000182284_12.jpg",
-				"hash": "548720e91f45b89c9997704ac4935df4"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182284_2.jpg",
@@ -120,15 +159,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182284_9.jpg",
 				"path": "/images/items/01_4311/1000182284_9.jpg",
 				"hash": "fa39e17c3964311f6c1bf6fd515b008b"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182284_10.jpg",
+				"path": "/images/items/01_4311/1000182284_10.jpg",
+				"hash": "2813bc3a8e8a91965ffb54021f0ed0f5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182284_11.jpg",
+				"path": "/images/items/01_4311/1000182284_11.jpg",
+				"hash": "3bcaf2571323bf6b219c4b5ca01f92b4"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182284_12.jpg",
+				"path": "/images/items/01_4311/1000182284_12.jpg",
+				"hash": "548720e91f45b89c9997704ac4935df4"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4311/",
-	"brandIds": ["mgka"],
-	"seriesIds": ["z-gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": [],
 	"manual": {
 		"id": "647",
 		"url": "https://manual.bandai-hobby.net/menus/detail/647/"

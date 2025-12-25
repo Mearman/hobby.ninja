@@ -3,8 +3,50 @@
 	"type": "item",
 	"name": {
 		"ja": "30MS SIS-T00 ララネル[カラーB]",
-		"en": "30MS SIS-T00 LARANEL[COLOR B]"
+		"en": "30MS SIS-T00 Lalanel [Color B]"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5975",
+			"url": "https://bandai-hobby.net/item/01_5975/",
+			"ja": "30MS 和泉愛依"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5954",
+			"url": "https://bandai-hobby.net/item/01_5954/",
+			"ja": "30MS オプションヘアスタイルパーツVol.12 全4種 ミディアムヘア2[イエロー4]"
+		}
+	],
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -20,14 +62,14 @@
 	"targetAge": 15,
 	"description": {
 		"ja": [
-			"■全高約125mm。シリーズ最小サイズの可愛らしいシスター。",
-			"■ボディの構造を新規で開発。ペタッと地面に座るポーズでのディスプレイが楽しめる。",
-			"■胴体を上下に分割することで体をひねるような動きが可能。",
-			"■黒ウサギをイメージしたアーマーが付属。",
-			"■複数パーツを使用したカラフルなウサミミ型カチューシャが付属。",
-			"■フェイスパーツは「通常」「ムス顔」「叫び」の３種から付け替え可能。ポージングに合わせた表情を楽しめる。",
-			"■「30MS SIS-T00 リリネル[カラーA]」（別売り）と隣り合わせで並べることで、交わる視線を演出できる。",
-			"■「30MS SIS-T00 リリネル[カラーA]」(別売り）の武装を取り付けることでフル装備状態のカスタマイズが可能！"
+			"• 全高約125mm。シリーズ最小サイズの可愛らしいシスター。",
+			"• ボディの構造を新規で開発。ペタッと地面に座るポーズでのディスプレイが楽しめる。",
+			"• 胴体を上下に分割することで体をひねるような動きが可能。",
+			"• 黒ウサギをイメージしたアーマーが付属。",
+			"• 複数パーツを使用したカラフルなウサミミ型カチューシャが付属。",
+			"• フェイスパーツは「通常」「ムス顔」「叫び」の３種から付け替え可能。ポージングに合わせた表情を楽しめる。",
+			"• 「30MS SIS-T00 リリネル[カラーA]」（別売り）と隣り合わせで並べることで、交わる視線を演出できる。",
+			"• 「30MS SIS-T00 リリネル[カラーA]」(別売り）の武装を取り付けることでフル装備状態のカスタマイズが可能！"
 		],
 		"en": [
 			"• Overall height approximately 125mm. The smallest cute sister in the series.",
@@ -35,109 +77,133 @@
 			"• By dividing the torso into upper and lower parts, it is possible to twist the body.",
 			"• Comes with armor inspired by a black rabbit.",
 			"• Comes with a colorful rabbit ear headband that uses multiple parts.",
-			"• Face parts can be changed from three types: \"normal \", \" musical face \", and \" screaming\". You can enjoy the expressions that match the poses.",
+			"• Face parts can be changed from three types: \"normal\", \"musical face\", and \"screaming\". You can enjoy the expressions that match the poses.",
 			"• By lining it up next to \"30MS SIS-T00 Lilinel [Color A]\" (sold separately), you can create an intersecting line of sight.",
 			"• You can customize the fully equipped state by attaching the armament of \"30MS SIS-T00 Lilinel [Color A]\" (sold separately)!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"フェイスパーツ×3種",
-			"アーマーパーツ×1式",
-			"前髪パーツ(リリネル(別売り)付属ヘッドギア装着用)×1",
-			"ヘアパーツ×1",
-			"ハンドパーツ×1式",
-			"ジョイントパーツ×1式"
-		],
-		"en": [
-			"Face parts x 3 types",
-			"Armor parts x 1 set",
-			"Bangs parts (for attaching headgear included with Lilinel (sold separately)) x 1",
-			"Hair parts x 1",
-			"Hand parts x 1 set",
-			"Joint parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フェイスパーツ",
+				"en": "face parts"
+			},
+			"count": 3,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "アーマーパーツ",
+				"en": "armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "前髪パーツ(リリネル(別売り)付属ヘッドギア装着用)",
+				"en": "Bangs parts (for attaching headgear included with Lilinel (sold separately))"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ヘアパーツ",
+				"en": "hair parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_4233_0.jpg",
 				"path": "/images/items/01_4233/01_4233_0.jpg",
 				"hash": "96e3e74aaa440dc9a007bf8efccf814b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4233_1.jpg",
 				"path": "/images/items/01_4233/01_4233_1.jpg",
 				"hash": "3de5a33e9cd083e20595179d635fa5a7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4233_10.jpg",
-				"path": "/images/items/01_4233/01_4233_10.jpg",
-				"hash": "ad22ba2900d998c44df23963209b3a9f"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4233_11.jpg",
-				"path": "/images/items/01_4233/01_4233_11.jpg",
-				"hash": "2f820bc017998908dfc082090a4d3e40"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4233_12.jpg",
-				"path": "/images/items/01_4233/01_4233_12.jpg",
-				"hash": "689fe2fe1abb9731c45be2f11778a9da"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4233_13.jpg",
-				"path": "/images/items/01_4233/01_4233_13.jpg",
-				"hash": "50be65e9af66951162c2afb58203913a"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4233_2.jpg",
 				"path": "/images/items/01_4233/01_4233_2.jpg",
 				"hash": "a6e48be91d33fe1ae8359c0c9c88528a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4233_3.jpg",
 				"path": "/images/items/01_4233/01_4233_3.jpg",
 				"hash": "11bbd7da36ca72326985b873c4ec4ccb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4233_4.jpg",
 				"path": "/images/items/01_4233/01_4233_4.jpg",
 				"hash": "7b78d1e01e85924f7651705ef4d10364"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4233_5.jpg",
 				"path": "/images/items/01_4233/01_4233_5.jpg",
 				"hash": "3d8c8d5d9b1b8eb05303d9b51c7a7398"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4233_6.jpg",
 				"path": "/images/items/01_4233/01_4233_6.jpg",
 				"hash": "d18f3adbedd1f45d229ebd8257f44dbb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4233_7.jpg",
 				"path": "/images/items/01_4233/01_4233_7.jpg",
 				"hash": "a21a700b3ee320b40fdfbc3f919658b3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4233_8.jpg",
 				"path": "/images/items/01_4233/01_4233_8.jpg",
 				"hash": "7d48d24adbdb0aa0d54e3431cecbce23"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4233_9.jpg",
 				"path": "/images/items/01_4233/01_4233_9.jpg",
 				"hash": "66aeed46c7922e9335370f1f8a367bba"
+			},
+			{
+				"path": "/images/items/01_4233/01_4233_10.jpg",
+				"hash": "ad22ba2900d998c44df23963209b3a9f"
+			},
+			{
+				"path": "/images/items/01_4233/01_4233_11.jpg",
+				"hash": "2f820bc017998908dfc082090a4d3e40"
+			},
+			{
+				"path": "/images/items/01_4233/01_4233_12.jpg",
+				"hash": "689fe2fe1abb9731c45be2f11778a9da"
+			},
+			{
+				"path": "/images/items/01_4233/01_4233_13.jpg",
+				"hash": "50be65e9af66951162c2afb58203913a"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4233/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3484",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3484/"

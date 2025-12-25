@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/72 メイレスビャクチ(ドリル＆クローアーム)",
-		"en": "HG 1/72 MAILeS BYAKUCHI(DRILL ARM＆CLOW ARM)"
+		"en": "HG 1/72 Meires Byakuchi (Drill & Claw Arm)"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -18,88 +62,111 @@
 		"day": 18
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"公式外伝『境界戦機 フロストフラワー』に登場した「メイレスビャクチ」のカスタム機体がHGで登場！",
-			"■拡張性の高さを誇る「メイレスビャクチ」に新規造形の大型武装を両腕にカスタマイズ。",
-			"■ビャクチの全高ほどもある大型のドリルアームが付属。ドリル部分は３ヶ所が個別に可動。",
-			"■フォークバケットタイプの大型クローアームが付属。先端部分はシリンダーパーツと連動しつつ、個別に大きく可動。",
-			"■カスタマイズ用の接続穴を各所に配置。"
+			"• 拡張性の高さを誇る「メイレスビャクチ」に新規造形の大型武装を両腕にカスタマイズ。",
+			"• ビャクチの全高ほどもある大型のドリルアームが付属。ドリル部分は３ヶ所が個別に可動。",
+			"• フォークバケットタイプの大型クローアームが付属。先端部分はシリンダーパーツと連動しつつ、個別に大きく可動。",
+			"• カスタマイズ用の接続穴を各所に配置。"
 		],
 		"en": [
-			"The custom aircraft of \"Meires Byakuchi \" that appeared in the official Gaiden \" Kyoukai Senki Frost Flower\" is now available in HG!",
+			"The custom aircraft of \"Meires Byakuchi\" that appeared in the official Gaiden \"Kyoukai Senki Frost Flower\" is now available in HG!",
 			"• \"Meiresbyakuchi\", which boasts high expandability, has been customized with newly designed large weapons on both arms.",
 			"• Comes with a large drill arm that is as tall as a sandalwood tree. Three parts of the drill part can be moved individually.",
 			"• Comes with a large fork bucket type claw arm. The tip part is linked with the cylinder parts and can be moved individually.",
 			"• Connection holes are placed throughout for customization."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ドリルアーム×１",
-			"クローアーム（フォークバケットタイプ）×１",
-			"四連装誘導弾携行発射機×１",
-			"汎用携行盾×１",
-			"前腕パーツ（左右）",
-			"ハンドパーツ 平手（左右）、武器持ち手（左右）、銃持ち手（右）",
-			"シール×１",
-			"マーキングシール×１"
-		],
-		"en": [
-			"Drill arm x 1",
-			"Claw arm (fork bucket type) x 1",
-			"Quadruple guided missile portable launcher x 1",
-			"General-purpose carrying shield x 1",
-			"Forearm parts (left and right)",
-			"Hand parts Open hands (left and right), weapon handles (left and right), gun handles (right)",
-			"Seal×1",
-			"MarkingSeal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ドリルアーム×１",
+				"en": "Drill arm x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "クローアーム（フォークバケットタイプ）×１",
+				"en": "Claw arm (fork bucket type) x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "四連装誘導弾携行発射機×１",
+				"en": "Quadruple guided missile portable launcher x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "汎用携行盾×１",
+				"en": "General-purpose carrying shield x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "前腕パーツ（左右）",
+				"en": "Forearm parts (left and right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ 平手（左右）、武器持ち手（左右）、銃持ち手（右）",
+				"en": "Hand parts Open hands (left and right), weapon handles (left and right), gun handles (right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール×１",
+				"en": "MarkingSeal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5233.jpg",
+				"src": "https://bandai-hobby.net/images/153_5233_s_0xc2ruksn6tq8jdf1f3u6y78osbs.jpg",
 				"path": "/images/items/01_4322/153_5233.jpg",
 				"hash": "37b85f7e839199013531c0b3616cb986"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5233.jpg",
+				"src": "https://bandai-hobby.net/images/155_5233_s_u1oupxn1ozjqmsp5rw8ymb2h3nes.jpg",
 				"path": "/images/items/01_4322/155_5233.jpg",
 				"hash": "629ab0c93f0a53043005edd1384fcd79"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5233.jpg",
+				"src": "https://bandai-hobby.net/images/156_5233_s_hdhcumzt2zlqbfvrmm38hwri03yo.jpg",
 				"path": "/images/items/01_4322/156_5233.jpg",
 				"hash": "e657ba5edfc837f408aecf42d12d2ad1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5233.jpg",
+				"src": "https://bandai-hobby.net/images/157_5233_s_ridm0g434v48b9u1ja8vg7tjisgh.jpg",
 				"path": "/images/items/01_4322/157_5233.jpg",
 				"hash": "3c2ee74e690f876ac6550a12c0bd8057"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5233.jpg",
+				"src": "https://bandai-hobby.net/images/158_5233_s_rv1z03l4s8yqavqmpso1sk4hx7jr.jpg",
 				"path": "/images/items/01_4322/158_5233.jpg",
 				"hash": "88b2e6b226eede6b5169aaafe6983858"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5233.jpg",
+				"src": "https://bandai-hobby.net/images/159_5233_s_v60j4zup4r9e35zhvbwhjeb8d2zl.jpg",
 				"path": "/images/items/01_4322/159_5233.jpg",
 				"hash": "dd251db1746728559519dd251a5f7826"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5233.jpg",
+				"src": "https://bandai-hobby.net/images/189_5233_s_9xyp4p64zublmx5ushxfvnowa5j5.jpg",
 				"path": "/images/items/01_4322/189_5233.jpg",
 				"hash": "5280ff95ab54eca6babc65ae49c414cc"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4322/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4322/"
 }

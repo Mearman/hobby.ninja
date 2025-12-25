@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ウイングガンダム [クリアカラー]",
-		"en": "HG 1/144 WING GUNDAM [CLEAR COLOR]"
+		"en": "HG 1/144 Wing Gundam [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5590",
+			"url": "https://bandai-hobby.net/item/01_5590/",
+			"ja": "HG 1/144 ウイングガンダムゼロ [クリアカラー]"
+		},
+		{
+			"id": "item-1000213249",
+			"url": "https://p-bandai.jp/item/item-1000213249/",
+			"ja": "ＨＧ 1/144 アルトロンガンダム"
+		},
+		{
+			"id": "01_5340",
+			"url": "https://bandai-hobby.net/item/01_5340/",
+			"ja": "HG 1/144 シェンロンガンダム [クリアカラー]"
+		},
+		{
+			"id": "item-1000183318",
+			"url": "https://p-bandai.jp/item/item-1000183318/",
+			"ja": "ＨＧ 1/144 ガンダムデスサイズヘル"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2090,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『新機動戦記ガンダムＷ』より、主人公ヒイロ・ユイの駆るウイングガンダムがクリアカラーになって登場！",
@@ -38,30 +81,20 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/01_4280_1.jpg",
+				"src": "https://bandai-hobby.net/images/153_5195_s_kbqvlij5batc1euboiz27oguooiv.jpg",
+				"path": "/images/items/01_4280/153_5195.jpg",
+				"hash": "48699a8a9a42750927b09013be5ce334"
+			},
+			{
 				"path": "/images/items/01_4280/01_4280_1.jpg",
 				"hash": "9d2739f453a82ea5afad23d81e8c8bb7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/01_4280_2.jpg",
 				"path": "/images/items/01_4280/01_4280_2.jpg",
 				"hash": "6bd76a50b61f7bbdbe696e5bfc6adcc5"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/153_5195.jpg",
-				"path": "/images/items/01_4280/153_5195.jpg",
-				"hash": "48699a8a9a42750927b09013be5ce334"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4280/",
-	"brandIds": ["hg"],
-	"seriesIds": ["endlesswaltz"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5590", "item-1000213249", "01_5340", "item-1000183318"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_4280/"
 }

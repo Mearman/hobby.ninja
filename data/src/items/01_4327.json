@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガンダムエアリアル(改修型)",
-		"en": "HG 1/144 GUNDAM AERIAL REBUILD"
+		"en": "HG 1/144 Gundam Aerial (modified type)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216474",
+			"url": "https://p-bandai.jp/item/item-1000216474/",
+			"ja": "ＨＧ 1/144 デスルター"
+		},
+		{
+			"id": "item-1000211616",
+			"url": "https://p-bandai.jp/item/item-1000211616/",
+			"ja": "ＨＧ 1/144 ベギルベウトルシュ(ケナンジ小隊所属機/リドリック小隊所属機)"
+		},
+		{
+			"id": "01_5422",
+			"url": "https://bandai-hobby.net/item/01_5422/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムキャリバーン [クリアカラー]"
+		},
+		{
+			"id": "item-1000203899",
+			"url": "https://p-bandai.jp/item/item-1000203899/",
+			"ja": "ＨＧ 1/144 ガンドノード"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1870,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 18
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、主人公機ガンダム・エアリアルの改修型を新規金型によってHGシリーズで立体化！",
@@ -35,26 +78,44 @@
 			"• The length of the barrel of the beam rifle, which is a new type of dedicated portable firearm, can be changed and selected. Gambit rifles with all bit staves connected to the barrel can also be reproduced."
 		]
 	},
-	"accessories": {
-		"ja": ["ビームサーベル×２", "ビームライフル×１", "シールド×１", "シェルユニットクリアパーツ×１式", "シール×１"],
-		"en": ["Beam saber x2", "Beam rifle x1", "Seal de x1", "Shell unit clear parts x 1 set", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームサーベル×２",
+				"en": "Beam saber x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームライフル×１",
+				"en": "Beam rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド×１",
+				"en": "Seal de x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シェルユニットクリアパーツ×１式",
+				"en": "Shell unit clear parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182363_1.jpg",
 				"path": "/images/items/01_4327/1000182363_1.jpg",
 				"hash": "8e091c4776782bf772336ceedc5ba47d"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182363_10.jpg",
-				"path": "/images/items/01_4327/1000182363_10.jpg",
-				"hash": "85107bea0ff4ea957916ffad034f580c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182363_11.jpg",
-				"path": "/images/items/01_4327/1000182363_11.jpg",
-				"hash": "21223caa2452c90e166c1c2a03775272"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182363_2.jpg",
@@ -95,15 +156,21 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182363_9.jpg",
 				"path": "/images/items/01_4327/1000182363_9.jpg",
 				"hash": "6b8bcdd705e7f3dccaf8793d3ced7b43"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182363_10.jpg",
+				"path": "/images/items/01_4327/1000182363_10.jpg",
+				"hash": "85107bea0ff4ea957916ffad034f580c"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000182363_11.jpg",
+				"path": "/images/items/01_4327/1000182363_11.jpg",
+				"hash": "21223caa2452c90e166c1c2a03775272"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4327/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203899"],
 	"manual": {
 		"id": "147",
 		"url": "https://manual.bandai-hobby.net/menus/detail/147/"

@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "アクションベース6 [クリアカラー]",
-		"en": "ACTION BASE 6 [CLEAR COLOR]"
+		"en": "Action Base 6 [Clear Color]"
 	},
+	"brands": [
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		},
+		{
+			"id": "actionbase",
+			"url": "https://bandai-hobby.net/brand/actionbase/",
+			"ja": "アクションベース"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5934",
+			"url": "https://bandai-hobby.net/item/01_5934/",
+			"ja": "アクションベース7 [クリアカラー] 機動戦士Gundam GQuuuuuuXシールセット"
+		},
+		{
+			"id": "01_5256",
+			"url": "https://bandai-hobby.net/item/01_5256/",
+			"ja": "アクションベース6 [クリアカラー] ミラーシールセット"
+		},
+		{
+			"id": "01_5258",
+			"url": "https://bandai-hobby.net/item/01_5258/",
+			"ja": "アクションベース7 [クリアカラー] ミラーシールセット"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -36,10 +73,44 @@
 			"• 2 sets included in 1 product, perfect for collection!"
 		]
 	},
-	"accessories": {
-		"ja": ["ベースパーツ×2", "支柱パーツ×1式", "C型アーム×2", "ジョイントパーツ×1式"],
-		"en": ["Base parts x 2", "Strut parts x 1 set", "C type arm x 2", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ベースパーツ",
+				"en": "base parts"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "支柱パーツ",
+				"en": "Strut parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "C型アーム",
+				"en": "C type arm"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -76,10 +147,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4245/",
-	"brandIds": ["actionbase"],
-	"seriesIds": [],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5934", "01_5256", "01_5258"],
 	"manual": {
 		"id": "1188",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1188/"

@@ -2,9 +2,31 @@
 	"id": "01_4260",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム EXスタンダード ガンダムエアリアル",
-		"en": "SD GUNDAM EX-STANDARD GUNDAM AERIAL"
+		"ja": "SDガンダム EXスタンダード ガンダムエアリアル",
+		"en": "SDGundam EX Standard Gundam Aerial"
 	},
+	"brands": [
+		{
+			"id": "SDEX",
+			"url": "https://bandai-hobby.net/brand/SDEX/",
+			"ja": "SDEXスタンダード"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -21,23 +43,45 @@
 	"description": {
 		"ja": [
 			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、主人公機ガンダム・エアリアルを、SDEXスタンダードシリーズで立体化！",
-			"• SD ガンダム EXスタンダードならではのデザインアレンジ。",
+			"• SDガンダムEXスタンダードならではのデザインアレンジ。",
 			"• 大胆なアクションポーズを実現する可動範囲を確保。",
 			"• ディテールや造形の密度感をスタイリッシュに演出。",
 			"• ビームライフル、ビームサーベル、シールドが付属。ライフルは背中に組み付け可能。シールドは分離させて本体肩に接続可能。"
 		],
 		"en": [
 			"From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\", the main character Gundam Aerial has been made into a three-dimensional version of the SDEX Standard Series!",
-			"• Design arrangement unique to SD Gundam EX Standard.",
+			"• Design arrangement unique to SDGundamEX standard.",
 			"• Ensures a range of motion that allows for bold action poses.",
 			"• Stylishly creates a sense of detail and density.",
 			"• Beam rifle, beam saber, and Seal are included. The rifle can be attached to the back. Seal can be separated and connected to the main body shoulder."
 		]
 	},
-	"accessories": {
-		"ja": ["ビームサーベル×１", "ビームライフル×１", "シールド×１", "シール×１"],
-		"en": ["Beam saber x1", "Beam rifle x1", "Seal de x1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームサーベル×１",
+				"en": "Beam saber x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームライフル×１",
+				"en": "Beam rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド×１",
+				"en": "Seal de x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -79,10 +123,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4260/",
-	"brandIds": ["SDEX"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": [],
 	"manual": {
 		"id": "1052",
 		"url": "https://manual.bandai-hobby.net/menus/detail/1052/"

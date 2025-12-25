@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ザウォート",
-		"en": "HG 1/144 ZOWORT"
+		"en": "HG 1/144 Zawort"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216474",
+			"url": "https://p-bandai.jp/item/item-1000216474/",
+			"ja": "ＨＧ 1/144 デスルター"
+		},
+		{
+			"id": "item-1000211616",
+			"url": "https://p-bandai.jp/item/item-1000211616/",
+			"ja": "ＨＧ 1/144 ベギルベウトルシュ(ケナンジ小隊所属機/リドリック小隊所属機)"
+		},
+		{
+			"id": "01_5422",
+			"url": "https://bandai-hobby.net/item/01_5422/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムキャリバーン [クリアカラー]"
+		},
+		{
+			"id": "item-1000203129",
+			"url": "https://p-bandai.jp/item/item-1000203129/",
+			"ja": "ＨＧ 1/144 ガンダムキャリバーン パーメットスコア・ファイブ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -18,16 +62,15 @@
 		"day": 11
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、ペイル社製モビルスーツ ザウォートが商品化！",
-			"■挟み込みを避け、あとはめ加工をメインとするパーツ構成により組み立てやすさに配慮。",
-			"■首は引き出して可動範囲を拡張、腰部のボールジョイントは空間を設けた構造で前後の姿勢にも対応。",
-			"■前腕部にビームサーベルのグリップを格納。",
-			"■特徴的なフォルムを持つ専用武装が付属。",
-			"■ビームサーベル用にクリアグリーンのビームパーツが付属。",
-			"■フライトシステム「HG 1/144 ティックバラン」(別売り)への搭乗状態も再現。別売りのアクションベースと組み合わせることにより懸架状態での展示も演出できる。"
+			"• 挟み込みを避け、あとはめ加工をメインとするパーツ構成により組み立てやすさに配慮。",
+			"• 首は引き出して可動範囲を拡張、腰部のボールジョイントは空間を設けた構造で前後の姿勢にも対応。",
+			"• 前腕部にビームサーベルのグリップを格納。",
+			"• 特徴的なフォルムを持つ専用武装が付属。",
+			"• ビームサーベル用にクリアグリーンのビームパーツが付属。",
+			"• フライトシステム「HG 1/144 ティックバラン」(別売り)への搭乗状態も再現。別売りのアクションベースと組み合わせることにより懸架状態での展示も演出できる。"
 		],
 		"en": [
 			"From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\", Pale's mobile suit Zawort is commercialized!",
@@ -39,70 +82,72 @@
 			"• The state of boarding the flight system \"HG 1/144 Tikbalan\" (sold separately) is also reproduced. By combining it with an action base (sold separately), you can create a suspended display."
 		]
 	},
-	"accessories": {
-		"ja": ["ビームサーベル×２", "武装×1"],
-		"en": ["Beam saber x2", "Armed x1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームサーベル×２",
+				"en": "Beam saber x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "武装",
+				"en": "armed"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5221.jpg",
+				"src": "https://bandai-hobby.net/images/153_5221_s_himsauu12rnkvmbq037udyweftn1.jpg",
 				"path": "/images/items/01_4309/153_5221.jpg",
 				"hash": "ec27ace3e958b660c511a0d392d2ef98"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5221.jpg",
+				"src": "https://bandai-hobby.net/images/155_5221_s_c965d6p89rd7v319qcov7a3t05n4.jpg",
 				"path": "/images/items/01_4309/155_5221.jpg",
 				"hash": "a575ed47403ce0e4d48367ee7b52d7b6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5221.jpg",
+				"src": "https://bandai-hobby.net/images/156_5221_s_q34x483v6vkou8cczkf6jc4lbemt.jpg",
 				"path": "/images/items/01_4309/156_5221.jpg",
 				"hash": "b4451467ebd2e2e1a9da93438707c72f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5221.jpg",
+				"src": "https://bandai-hobby.net/images/157_5221_s_7n5u36v4r8depvej9ann0eett6a6.jpg",
 				"path": "/images/items/01_4309/157_5221.jpg",
 				"hash": "fdaa244e4ba45c1c00279550fd481db4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5221.jpg",
+				"src": "https://bandai-hobby.net/images/158_5221_s_3ci8t4anler1wjylpzcpt4tqseo7.jpg",
 				"path": "/images/items/01_4309/158_5221.jpg",
 				"hash": "d5343ff7e24240caddb75d32db2085fa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5221.jpg",
+				"src": "https://bandai-hobby.net/images/159_5221_s_5ukft179ovxawh7i1uednvtrlte6.jpg",
 				"path": "/images/items/01_4309/159_5221.jpg",
 				"hash": "aebe00247616f49dc4016c36d48692e8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5221.jpg",
+				"src": "https://bandai-hobby.net/images/189_5221_s_1yjgy7mgk39sh7tnr6p5sw0t4n9d.jpg",
 				"path": "/images/items/01_4309/189_5221.jpg",
 				"hash": "56fafce16b9d6cfa1508ef44bc6d479b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5221.jpg",
+				"src": "https://bandai-hobby.net/images/190_5221_s_7t02oaga5nvqbzoa6kp24xqowi93.jpg",
 				"path": "/images/items/01_4309/190_5221.jpg",
 				"hash": "e577060628e85af320d85c15640a2046"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5221.jpg",
+				"src": "https://bandai-hobby.net/images/191_5221_s_10vwem550ms6iopr2v51ue42slv3.jpg",
 				"path": "/images/items/01_4309/191_5221.jpg",
 				"hash": "868337f28b12579e1bf89ce922808c31"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_4309_inst_0.jpg",
-				"path": "/images/items/01_4309/01_4309_inst_0.jpg",
-				"hash": "f81edbacb9670c2c74af85fa7da1a9f5"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4309/",
-	"brandIds": ["hg"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203129"],
 	"manual": {
 		"id": "143",
 		"url": "https://manual.bandai-hobby.net/menus/detail/143/"

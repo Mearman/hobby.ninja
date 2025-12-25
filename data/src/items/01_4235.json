@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard ウルトラマンゼロ",
-		"en": "Figure-rise Standard ULTRAMAN ZERO"
+		"en": "Figure-rise Standard Ultraman Zero"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "ultraman",
+			"url": "https://bandai-hobby.net/series/ultraman/",
+			"ja": "ウルトラマン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5371",
+			"url": "https://bandai-hobby.net/item/01_5371/",
+			"ja": "Figure-rise Standard ウルトラマンティガ マルチタイプ"
+		},
+		{
+			"id": "01_5198",
+			"url": "https://bandai-hobby.net/item/01_5198/",
+			"ja": "Figure-rise Standard ウルトラマンジード プリミティブ"
+		},
+		{
+			"id": "01_5096",
+			"url": "https://bandai-hobby.net/item/01_5096/",
+			"ja": "Figure-rise Standard ULTRAMAN SUIT JACK -ACTION-"
+		},
+		{
+			"id": "01_5046",
+			"url": "https://bandai-hobby.net/item/01_5046/",
+			"ja": "Figure-rise Standard ウルトラマンブレーザー"
+		}
+	],
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -34,32 +77,80 @@
 			"• The distinctive chest and shoulder designs are reproduced by dividing into parts.",
 			"• \"Ultimate Bracelet\" can be put on and taken off depending on the situation.",
 			"• Two types of color timer and Zero Twin Shoot reproduction parts are included, blue and red, and can be replaced.",
-			"• \"Zero Twin Sword \" and \" Zero Slugger\" are included. The head when using Zero Slugger can also be reproduced by replacing parts.",
+			"• \"Zero Twin Sword\" and \"Zero Slugger\" are included. The head when using Zero Slugger can also be reproduced by replacing parts.",
 			"• Comes with a variety of hand parts that can be used in a variety of poses."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ゼロツインソード×1",
-			"ゼロスラッガー×2",
-			"頭部パーツ（ゼロスラッガー使用時）×1",
-			"ゼロツインシュート用パーツ×2種",
-			"カラータイマー×2種",
-			"ウルティメイトブレスレット×1",
-			"ハンドパーツ×1式",
-			"シール×1"
-		],
-		"en": [
-			"Zero twin sword x1",
-			"Zero Slugger x2",
-			"Head parts (when using Zero Slugger) x 1",
-			"Zero twin shoot parts x 2 types",
-			"Color timer x 2 types",
-			"Ultimate bracelet x1",
-			"Hand parts x 1 set",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ゼロツインソード",
+				"en": "zero twin sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ゼロスラッガー",
+				"en": "zero slugger"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "頭部パーツ（ゼロスラッガー使用時）",
+				"en": "Head parts (when using Zero Slugger)"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ゼロツインシュート用パーツ",
+				"en": "Parts for Zero Twin Shoot"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "カラータイマー",
+				"en": "color timer"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ウルティメイトブレスレット",
+				"en": "ultimate bracelet"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -105,9 +196,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4235/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["ultraman"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5371", "01_5198", "01_5096", "01_5046"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4235/"
 }
