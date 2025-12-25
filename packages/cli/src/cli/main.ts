@@ -6,7 +6,8 @@ import { Command } from "commander";
 import { WaybackSource } from "../types/wayback.js";
 
 import { CacheCommand } from "./cache.js";
-import { ScrapeCommand, ScrapeOptions } from "./scrape.js";
+import type { ScrapeOptions } from "./scrape/index.js";
+import { ScrapeCommand } from "./scrape.js";
 import { SingleUrlCommand } from "./single-url.js";
 import { ValidateCommand } from "./validate.js";
 import { WaybackCommand } from "./wayback.js";
