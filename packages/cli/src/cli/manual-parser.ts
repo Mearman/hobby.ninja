@@ -190,14 +190,23 @@ export class ManualParser {
 
 	/**
 	 * Extract product image
-	 * The manual site has the product image right after the h2 heading
+	 * The manual site has the product image in .bl_detail_img container
+	 * or right after the h2 heading
 	 */
 	private extractImage($: CheerioAPI): ItemImage | undefined {
-		// Try to find img immediately after the h2 heading (manual site structure)
+		// Primary: Look for image in .bl_detail_img container (current manual site structure)
+		const detailImg = $(".bl_detail_img img").first();
+		let src = detailImg.attr("src") ?? detailImg.attr("data-src");
+		if (src && !src.includes("/common/") && !src.includes("ogp.jpg")) {
+			const fullSrc = src.startsWith("http") ? src : `https://bandai-hobby.net${src}`;
+			return { src: fullSrc };
+		}
+
+		// Try to find img immediately after the h2 heading (older manual site structure)
 		const h2 = $("h2").first();
 		if (h2.length > 0) {
 			const nextImg = h2.next("img");
-			const src = nextImg.attr("src") ?? nextImg.attr("data-src");
+			src = nextImg.attr("src") ?? nextImg.attr("data-src");
 			if (src && !src.includes("/common/") && !src.includes("ogp.jpg")) {
 				const fullSrc = src.startsWith("http") ? src : `https://manual.bandai-hobby.net${src}`;
 				return { src: fullSrc };
@@ -206,7 +215,7 @@ export class ManualParser {
 
 		// Look for main product image with class selectors
 		const img = $(".product-image img, .main-image img, .p-mainimg img").first();
-		const src = img.attr("src") ?? img.attr("data-src");
+		src = img.attr("src") ?? img.attr("data-src");
 
 		if (src) {
 			const fullSrc = src.startsWith("http") ? src : `https://manual.bandai-hobby.net${src}`;

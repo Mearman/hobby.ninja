@@ -1322,14 +1322,17 @@ export class ScrapeCommand {
 				}
 			}
 
-			// Fallback: look for any non-common image from manual.bandai-hobby.net
-			const manualImgPattern = /src="(https:\/\/manual\.bandai-hobby\.net\/images\/(?!common\/)[^"]+\.(?:jpg|png|webp))"/gi;
-			const manualMatches = [...html.matchAll(manualImgPattern)];
-			for (const match of manualMatches) {
-				if (match[1]) {
-					return match[1];
+			// Fallback: look for ecms_img images from bandai-hobby.net (newer image hosting)
+			// Pattern: src="https://bandai-hobby.net/ecms_img/web/{id}.jpg"
+			const ecmsImgPattern = /src="(https:\/\/bandai-hobby\.net\/ecms_img\/[^"]+\.(?:jpg|png|webp))"/gi;
+			const ecmsMatches = [...html.matchAll(ecmsImgPattern)];
+			for (const match of ecmsMatches) {
+				const url = match[1];
+				if (url && !url.includes("/common/") && !url.includes("logo")) {
+					return url;
 				}
 			}
+
 		} catch {
 			// HTML file doesn't exist or can't be read
 		}
