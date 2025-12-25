@@ -3,8 +3,57 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC 1/144 89式ベースジャバー",
-		"en": "1/144 HGUC BASE JABBER TYPE 89"
+		"en": "HGUC 1/144 Type 89 Base Jabber"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -18,21 +67,20 @@
 		"day": 15
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 『機動戦士ガンダム UC ep 6』に登場した宇宙用サブ・フライト・システムのベースジャバーをHGUC化。",
+			"• 『機動戦士ガンダムUC ep 6』に登場した宇宙用サブ・フライト・システムのベースジャバーをHGUC化。",
 			"• ジェスタ、ジムｌｌ、ジェガンなど別売りのHGUC版MSを搭載できる。",
 			"• 裏面のタンクを取り外すと、MS搭載面が露出。MSを表裏両面に搭載できる。",
 			"• 細部のモールドはもちろん、ランディングギアやフットレストなども忠実に再現。",
 			"• アクションベース１対応ジョイントが付属。アクションベース２にも対応でき、空中でのディスプレイが可能。"
 		],
 		"en": [
-			"■ The base jabber of the space sub-flight system that appeared in \"MOBILE SUIT GUNDAM UC ep 6\" has been converted to HGUC.",
-			"■ It can be equipped with HGUC version MS (sold separately) such as Jesta, Jim ll, Jegan, etc.",
-			"■ When the tank on the back side is removed, the MS mounting surface is exposed. MS can be mounted on both the front and back.",
-			"■ Not only the detailed mold, but also the landing gear and footrest are faithfully reproduced.",
-			"■ Comes with a ACTION BASE 1 compatible joint. It is also compatible with ACTION BASE 2 and can be displayed in the air."
+			"• Base Jabber, the space sub-flight system that appeared in \"Mobile Suit GundamUC ep 6\", has been converted into HGUC.",
+			"• Can be equipped with optional HGUC version MS such as Jesta, Jim II, and Jegan.",
+			"• When the tank on the back is removed, the MS mounting surface is exposed. MS can be installed on both the front and back sides.",
+			"• Not only the detailed molds, but also the landing gear and footrests are faithfully reproduced.",
+			"• A joint compatible with Action Base 1 is included. It is also compatible with Action Base 2 and can be displayed in the air."
 		]
 	},
 	"images": {
@@ -56,10 +104,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5817/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "380",
 		"url": "https://manual.bandai-hobby.net/menus/detail/380/"

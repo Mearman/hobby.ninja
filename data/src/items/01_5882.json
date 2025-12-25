@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 ウイングガンダム プロトゼロ EW",
-		"en": "MG 1/100 WING GUNDAM PROTO-ZERO EW"
+		"en": "MG 1/100 Wing Gundam Proto Zero EW"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000194972",
+			"url": "https://p-bandai.jp/item/item-1000194972/",
+			"ja": "ＭＧ 1/100 ガンダムエピオン EW (シュトゥルム・ウント・ドラング装備)"
+		},
+		{
+			"id": "01_3410",
+			"url": "https://bandai-hobby.net/item/01_3410/",
+			"ja": "MG 1/100 ガンダムデスサイズヘル EW[スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000171722",
+			"url": "https://p-bandai.jp/item/item-1000171722/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムエピオン EW[スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000142325",
+			"url": "https://p-bandai.jp/item/item-1000142325/",
+			"ja": "ＭＧ 1/100 ガンダムデスサイズ EW（ルーセット装備）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5280,
 		"currency": "JPY",
@@ -18,10 +62,9 @@
 		"day": 26
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"• 『新機動戦記ガンダム W Endless Waltz 敗者たちの栄光』よりウイングガンダムプロトゼロがMGとなって登場。",
+			"• 『新機動戦記ガンダムW Endless Waltz 敗者たちの栄光』よりウイングガンダムプロトゼロがMGとなって登場。",
 			"• 完全新規金型で変形機構を搭載。新素材を使用した可動フレームは塗装も可能。",
 			"• 頭部と下半身が180度回転するなど、各部ギミックによりMS⇔ネオバードの完全変形を再現。",
 			"• 特徴的なウイングには連動開閉や可動などさまざまなギミックを搭載。腰部のサイドアーマーフィンは可動式。",
@@ -32,15 +75,15 @@
 			"• 専用台座付属。専用ジョイントによりMS形態、ネオバード形態ともに空中ディスプレイが可能。成形品×18、ホイルシール×1、ドライデカール×1、テトロンシール×1、組立説明書×1"
 		],
 		"en": [
-			"■ From \"MOBILE SUIT GUNDAM WING Endless Waltz Glory of the Loser\", Wing GUNDAM Protozero appears as MG.",
-			"■ Completely new mold equipped with a deformation mechanism. The movable frame made of new material can also be painted.",
-			"■ The head and lower body rotate 180 degrees, and the complete transformation of the MS⇔ Neobird is reproduced by each part gimmick.",
-			"■ The characteristic wing is equipped with various gimmicks such as interlocking opening and closing and movability. The side armor fins at the waist are movable.",
-			"■ The hatch of the machine cannon on the shoulder can be opened and closed. The four-barreled Vulcan reproduces the details in detail.",
-			"■ Shoulder armor opens and closes with a double structure. Storage of the beam saber, faithfully reproducing the vernier inside.",
-			"■ The Twin Buster Rifle is reproduced with an overwhelming sense of scale. It can also be divided into left and right.",
-			"■ Original marking by Hajime Katoki is included.",
-			"■ Dedicated pedestal included. With a special joint, both MS and Neobird forms can be displayed in the air. Molded ×18, Foil Seal ×1, Dry Decal×1, Tetoron Seal ×1, Assembly Instructions ×1"
+			"• Wing Gundam Proto Zero from ``Mobile Suit GundamW Endless Waltz Glory of the Losers'' appears as an MG.",
+			"• Equipped with a deformation mechanism using a completely new mold. The movable frame made of new material can also be painted.",
+			"• Each part's gimmicks, such as the head and lower body rotating 180 degrees, reproduce the complete transformation of MS⇔Neobard.",
+			"• The characteristic wings are equipped with various gimmicks such as interlocking opening/closing and movability. The side armor fins on the waist are movable.",
+			"• The machine cannon hatch on the shoulder can be opened and closed. The 4-barrel Vulcan reproduces the details in detail.",
+			"• The shoulder armor has a double structure that opens and closes. Beam saber storage and internal vernier are faithfully reproduced.",
+			"• The Twin Buster Rifle is reproduced with an overwhelming sense of scale. It can also be divided into left and right.",
+			"• Comes with original markings by Hajime Katoki.",
+			"• Comes with a special pedestal. A special joint allows for aerial display in both MS and Neobird forms. Molded product x 18, foil seal x 1, dry decal x 1, Tetron Seal x 1, assembly manual x 1"
 		]
 	},
 	"images": {
@@ -64,10 +107,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5882/",
-	"brandIds": ["mg"],
-	"seriesIds": ["endlesswaltz"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000194972", "01_3410", "item-1000171722", "item-1000142325"],
 	"manual": {
 		"id": "608",
 		"url": "https://manual.bandai-hobby.net/menus/detail/608/"

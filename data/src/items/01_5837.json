@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ギラ・ドーガ",
 		"en": "MG 1/100 Gira Doga"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000219110",
+			"url": "https://p-bandai.jp/item/item-1000219110/",
+			"ja": "MG 1/100 リ・ガズィ (逆襲のシャアVer.)"
+		},
+		{
+			"id": "01_1394",
+			"url": "https://bandai-hobby.net/item/01_1394/",
+			"ja": "MG 1/100 ジェガン"
+		},
+		{
+			"id": "item-1000097986",
+			"url": "https://p-bandai.jp/item/item-1000097986",
+			"ja": "ＭＧ 1/100 サザビー Ver.Ka & ＲＥ/100 1/100 ナイチンゲール用 拡張ファンネルエフェクトセット"
+		},
+		{
+			"id": "item-1000128400",
+			"url": "https://p-bandai.jp/item/item-1000128400",
+			"ja": "ＭＧ 1/100 ギラ・ドーガ（レズン・シュナイダー専用機）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5720,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 20
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"• 『機動戦士ガンダム 逆襲のシャア』より、第２次ネオ・ジオン戦争の主力MSがMGで登場。",
@@ -44,17 +87,17 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_908.jpg",
+				"src": "https://bandai-hobby.net/images/153_908_s_yljvfxfaz29bavxothibl6a9hyxx.jpg",
 				"path": "/images/items/01_5837/153_908.jpg",
 				"hash": "e83f68264ca9330c2c33fbe706b6abce"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_908.jpg",
+				"src": "https://bandai-hobby.net/images/155_908_s_ow9vj3u8yylj5splx8117b6nlbmh.jpg",
 				"path": "/images/items/01_5837/155_908.jpg",
 				"hash": "930e933e9ee7b8090eef0803c62dcf81"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_908.jpg",
+				"src": "https://bandai-hobby.net/images/156_908_s_k0hhv7eb3qn98uj9dfwzhhdt59je.jpg",
 				"path": "/images/items/01_5837/156_908.jpg",
 				"hash": "3a2509bcd768011d96c3b386af0f4cdf"
 			}
@@ -62,10 +105,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5837/",
-	"brandIds": ["mg"],
-	"seriesIds": ["gundam-cca"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000219110", "01_1394", "item-1000097986", "item-1000128400"],
 	"manual": {
 		"id": "850",
 		"url": "https://manual.bandai-hobby.net/menus/detail/850/"

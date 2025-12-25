@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "MG 1/100 ストライクルージュ オオトリ装備 Ver.RM",
-		"en": "MG 1/100 STRIKE ROUGE (OOTORI UNIT) Ver.RM"
+		"en": "MG 1/100 Strike Rouge Otori Equipment Ver.RM"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5421",
+			"url": "https://bandai-hobby.net/item/01_5421/",
+			"ja": "MG 1/100 ガンダムベース限定 デスティニーガンダム (ハイネ専用機)"
+		},
+		{
+			"id": "item-1000183862",
+			"url": "https://p-bandai.jp/item/item-1000183862/",
+			"ja": "ＭＧ 1/100 ガナーウィザード／スラッシュウィザード／ブレイズウィザードセット"
+		},
+		{
+			"id": "01_3712",
+			"url": "https://bandai-hobby.net/item/01_3712/",
+			"ja": "MG 1/100 ガナーザクウォーリア(ルナマリア・ホーク専用機)[クリアカラー]"
+		},
+		{
+			"id": "item-1000155441",
+			"url": "https://p-bandai.jp/item/item-1000155441/",
+			"ja": "ＭＧ 1/100 ブレイズザクファントム（レイ・ザ・バレル専用機）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4620,
 		"currency": "JPY",
@@ -18,22 +62,22 @@
 		"day": 28
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"• ストライクルージュがVer.RMとなってMG化。",
 			"• Ver.RMならではのプロポーションと可動域を再現。",
 			"• ストライカーパックは大河原邦男氏による新規設定の「オオトリ」を装備。統合兵器ストライカーとして多彩なギミックを搭載。",
 			"• 「オオトリ」のウイングはX状に展開。MGオリジナルギミックとして尾翼の折り畳みも可能。",
-			"• 「オオトリ」は、別売りのMGランチャー/ソードストライクガンダムに付属するランチャーパックとソードパック、及びMGエールストライクガンダム Ver.RMに付属するエールストライクパックと連結可能。",
+			"• 「オオトリ」は、別売りのMGランチャー/ソードストライクガンダムに付属するランチャーパックとソードパック、及びMGエールストライクガンダムVer.RMに付属するエールストライクパックと連結可能。",
 			"• 空中でのアクションポーズを再現できる専用台座が付属。"
 		],
 		"en": [
-			"■ Strike Rouge became Ver.RM and became MG. Reproduce the proportions and range of motion unique to",
-			"■ The Striker Pack is equipped with a new \"Otori\" by Kunio Okawara. It is equipped with a variety of gimmicks as an integrated weapon striker.",
-			"■ The wings of \"Otori\" are developed in an X shape. As an MG original gimmick, the tail can be folded.",
-			"■ \"Otori\" can be connected to the Launcher Pack and Sword Pack that come with the MG Launcher/Sword Strike GUNDAM (sold separately) and the Yale Strike Pack that comes with the MG Ale Strike GUNDAM Ver.RM.",
-			"■ Comes with a dedicated pedestal that can reproduce action poses in the air."
+			"• Strike Rouge becomes Ver.RM and becomes MG.",
+			"• Reproduces the proportions and range of motion unique to Ver.RM.",
+			"• The Striker Pack is equipped with a newly designed \"Otori\" by Kunio Okawara. Equipped with various gimmicks as a unified weapon striker.",
+			"• \"Otori\"'s wings unfold in an X-shape. The tail can also be folded as an MG original gimmick.",
+			"• \"Ootori\" can be connected with the launcher pack and sword pack that come with the MG Launcher/Sword Strike Gundam (sold separately), and the Ale Strike Pack that comes with the MG Ale Strike GundamVer.RM.",
+			"• Comes with a special pedestal that allows you to recreate action poses in the air."
 		]
 	},
 	"images": {
@@ -67,10 +111,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5869/",
-	"brandIds": ["mg"],
-	"seriesIds": ["seed-d"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5421", "item-1000183862", "01_3712", "item-1000155441"],
 	"manual": {
 		"id": "617",
 		"url": "https://manual.bandai-hobby.net/menus/detail/617/"

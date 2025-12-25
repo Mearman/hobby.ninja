@@ -2,9 +2,52 @@
 	"id": "01_5828",
 	"type": "item",
 	"name": {
-		"ja": "ＢＢ戦士 136 ガンダムマックスター",
+		"ja": "ＢＢ戦士 136ガンダムマックスター",
 		"en": "BB Senshi 136 Gundam Maxter"
 	},
+	"brands": [
+		{
+			"id": "bb",
+			"url": "https://bandai-hobby.net/brand/bb/",
+			"ja": "SDガンダムBB戦士"
+		}
+	],
+	"series": [
+		{
+			"id": "ggundam",
+			"url": "https://bandai-hobby.net/series/ggundam/",
+			"ja": "機動武闘伝Ｇガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_2322",
+			"url": "https://bandai-hobby.net/item/01_2322/",
+			"ja": "BB戦士245 デビルガンダム"
+		},
+		{
+			"id": "01_1980",
+			"url": "https://bandai-hobby.net/item/01_1980/",
+			"ja": "BB戦士239 シャイニングガンダム"
+		},
+		{
+			"id": "01_5846",
+			"url": "https://bandai-hobby.net/item/01_5846/",
+			"ja": "ＢＢ戦士 138Gガンダム"
+		},
+		{
+			"id": "01_5807",
+			"url": "https://bandai-hobby.net/item/01_5807/",
+			"ja": "ＢＢ戦士 134ドラゴンガンダム"
+		}
+	],
 	"price": {
 		"amount": 550,
 		"currency": "JPY",
@@ -21,16 +64,12 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_89.jpg",
+				"src": "https://bandai-hobby.net/images/153_89_s_oarqy8dt9e5ws3ujeagajfzknhmr.jpg",
 				"path": "/images/items/01_5828/153_89.jpg",
 				"hash": "b2928b1982d8d4d9f5b74cbe803de74c"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5828/",
-	"brandIds": ["bb"],
-	"seriesIds": ["ggundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_2322", "01_1980", "01_5846", "01_5807"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5828/"
 }

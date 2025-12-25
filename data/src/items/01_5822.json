@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "ビルダーズパーツHD-22 1/144 MSハンド03（連邦系・Sサイズ）",
-		"en": "Builder's Parts HD-22 1/144 MS Hand 03 (Federal, S size)"
+		"en": "Builders Parts HD-22 1/144 MS Hand 03 (Federal/S size)"
 	},
+	"brands": [
+		{
+			"id": "parts",
+			"url": "https://bandai-hobby.net/brand/parts/",
+			"ja": "ビルダーズパーツ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3582",
+			"url": "https://bandai-hobby.net/item/01_3582/",
+			"ja": "1/100 ガンダムベース限定 MSエフェクト01(クリアブルー)"
+		},
+		{
+			"id": "01_3563",
+			"url": "https://bandai-hobby.net/item/01_3563/",
+			"ja": "1/100 ガンダムベース限定 MSバーニア01&エモーションマニピュレーター(連邦系)"
+		},
+		{
+			"id": "01_3564",
+			"url": "https://bandai-hobby.net/item/01_3564/",
+			"ja": "1/100 ガンダムベース限定 MSスパイク01&エモーションマニピュレーター(ジオン系)"
+		},
+		{
+			"id": "01_636",
+			"url": "https://bandai-hobby.net/item/01_636/",
+			"ja": "BPHD ノンスケール MSサイトレンズ01(レッド)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 21
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• 細部にまでこだわったガンプラ公式改造パーツ。ディテールアップでガンプラをさらに楽しめる。",
@@ -26,9 +63,9 @@
 			"• 大きさは、対MSハンド（連邦系）01比90％。"
 		],
 		"en": [
-			"■ Attention to detail GUNPLA official mods. You can enjoy GUNPLA even more with more details.",
-			"■ Small size to match small MS and SEED systems.",
-			"■ The size is 90% compared to the MS Hand (Federal) 01."
+			"• Officially detailed Gunpla modified parts. You can enjoy Gunpla even more by improving the details.",
+			"• Small size that matches small MS and SEED type.",
+			"• Size is 90% compared to MS Hand (Federation system) 01."
 		]
 	},
 	"images": {
@@ -61,9 +98,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5822/",
-	"brandIds": ["parts"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_3582", "01_3563", "01_3564", "01_636"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5822/"
 }

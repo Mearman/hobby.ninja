@@ -5,6 +5,49 @@
 		"ja": "HGBC ビルドカスタム GPベース",
 		"en": "HGBC Build Custom GP Base"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5057",
+			"url": "https://bandai-hobby.net/item/01_5057/",
+			"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]"
+		},
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -39,33 +82,24 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_966.jpg",
+				"src": "https://bandai-hobby.net/images/153_966_s_81mx0o3u2xdxvxz9uhu86txt05aa.jpg",
 				"path": "/images/items/01_5888/153_966.jpg",
 				"hash": "17419e9bc06848766266d6d9bd44ec41"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_966.jpg",
+				"src": "https://bandai-hobby.net/images/155_966_s_6gt55gjwej8cb9v7gk3oef3fh14t.jpg",
 				"path": "/images/items/01_5888/155_966.jpg",
 				"hash": "8d390e10f130ba8a1273454659eabde3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_966.jpg",
+				"src": "https://bandai-hobby.net/images/156_966_s_2l4hl1w4de805peim527ac16x89h.jpg",
 				"path": "/images/items/01_5888/156_966.jpg",
 				"hash": "97f78154fd961dbd2dd26e2aff609376"
-			},
-			{
-				"src": "https://bandai-hobby.net/images/01_5888_inst_1.jpg",
-				"path": "/images/items/01_5888/01_5888_inst_1.jpg",
-				"hash": "74ed46dbc9eae32cc1c725ddaf95332c"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5888/",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5057", "01_1942", "01_1288", "01_1261"],
 	"manual": {
 		"id": "724",
 		"url": "https://manual.bandai-hobby.net/menus/detail/724/"

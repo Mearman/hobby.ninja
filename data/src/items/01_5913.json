@@ -5,6 +5,45 @@
 		"ja": "MG 1/100 RX-93 νガンダム 〔Ver.Ka〕 チタニウムフィニッシュ",
 		"en": "MG 1/100 RX-93 νGundam [Ver.Ka] Titanium finish"
 	},
+	"brands": [
+		{
+			"id": "mgka",
+			"url": "https://bandai-hobby.net/brand/mgka/",
+			"ja": "MG Ver.Ka［マスターグレード バージョンカトキ］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4275",
+			"url": "https://bandai-hobby.net/item/01_4275/",
+			"ja": "MG 1/100 GUNDAM SIDE-F限定 RX-93 νガンダム Ver.Ka (サイコフレーム発動イメージカラー)"
+		},
+		{
+			"id": "01_1997",
+			"url": "https://bandai-hobby.net/item/01_1997/",
+			"ja": "MG 1/100 ガンダムベース限定 MSN-04 サザビーVer.Ka[スペシャルコーティング]"
+		},
+		{
+			"id": "01_4818",
+			"url": "https://bandai-hobby.net/item/01_4818/",
+			"ja": "MG 1/100 FA-93-ν2HWS Hi-νガンダム H.W.S. Ver.Ka メカニカルクリア"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 17600,
 		"currency": "JPY",
@@ -18,15 +57,14 @@
 		"day": 30
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"• MG νガンダム Ver.Kaがチタニウムフィニッシュの豪華仕様で登場。",
+			"• MG νガンダムVer.Kaがチタニウムフィニッシュの豪華仕様で登場。",
 			"• 装甲がスライド展開。フレームが拡張し、各部に配置されたサイコフレームが露出するギミックを搭載。",
 			"成形品×25、シール×3、取扱説明書×1"
 		],
 		"en": [
-			"• MG νGundam Ver.Ka is now available in a luxurious titanium finish.",
+			"• MG νGundamVer.Ka is now available in a luxurious titanium finish.",
 			"• Armor slides out. Equipped with a gimmick that expands the frame and exposes the psycho frame placed in each part.",
 			"Molded product x 25, Seal x 3, Instruction manual x 1"
 		]
@@ -34,22 +72,22 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_991.jpg",
+				"src": "https://bandai-hobby.net/images/153_991_s_8mb15ae7q20gdk9j8y34h34b83k7.jpg",
 				"path": "/images/items/01_5913/153_991.jpg",
 				"hash": "668836a196a56c0b76e5f4f989a199d3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_991.jpg",
+				"src": "https://bandai-hobby.net/images/155_991_s_wfnc89nh0g0ml61w30jvyq08yb6q.jpg",
 				"path": "/images/items/01_5913/155_991.jpg",
 				"hash": "89ced8061456c7ba27ed542219eded32"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_991.jpg",
+				"src": "https://bandai-hobby.net/images/156_991_s_7t07i5yhlvwj7420j5c6ngumtyl4.jpg",
 				"path": "/images/items/01_5913/156_991.jpg",
 				"hash": "e8e39938597d41e5cb907aaf5d1f4679"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_991.jpg",
+				"src": "https://bandai-hobby.net/images/157_991_s_ahleiljc8bnjk5k1xka20fa3g1rr.jpg",
 				"path": "/images/items/01_5913/157_991.jpg",
 				"hash": "ae7302148e5e2a179c20bb8b6323db62"
 			}
@@ -57,10 +95,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5913/",
-	"brandIds": ["mgka"],
-	"seriesIds": ["gundam-cca"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4275", "01_1997", "01_4818"],
 	"manual": {
 		"id": "949",
 		"url": "https://manual.bandai-hobby.net/menus/detail/949/"

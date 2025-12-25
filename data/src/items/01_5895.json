@@ -5,6 +5,40 @@
 		"ja": "RG 1/144 ストライクフリーダムガンダム",
 		"en": "RG 1/144 Strike Freedom Gundam"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3893",
+			"url": "https://bandai-hobby.net/item/01_3893/",
+			"ja": "ＲＧ 1/144 ストライクフリーダムガンダム用 拡張エフェクトユニット“天空の翼”"
+		},
+		{
+			"id": "01_5802",
+			"url": "https://bandai-hobby.net/item/01_5802/",
+			"ja": "RG 1/144 ZGMF-X42S デスティニーガンダム"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3300,
 		"currency": "JPY",
@@ -18,7 +52,6 @@
 		"day": 21
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"• エールストライクガンダム、フリーダムガンダム、ジャスティスガンダム、デスティニーガンダムと続いたSEED系MSのRGシリーズにストライクフリーダムガンダムが登場。",
@@ -49,21 +82,6 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000084970_1.jpg",
 				"path": "/images/items/01_5895/1000084970_1.jpg",
 				"hash": "f23d55373633ad8f7a0f77e9c2bb7085"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000084970_10.jpg",
-				"path": "/images/items/01_5895/1000084970_10.jpg",
-				"hash": "37f225ec7618b91a838541e98e65085a"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000084970_11.jpg",
-				"path": "/images/items/01_5895/1000084970_11.jpg",
-				"hash": "7b1597823f5142e122e8ec50eeb2e2c3"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000084970_12.jpg",
-				"path": "/images/items/01_5895/1000084970_12.jpg",
-				"hash": "e4cbf5973622fc59e233218dfa6e4b97"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000084970_2.jpg",
@@ -104,15 +122,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000084970_9.jpg",
 				"path": "/images/items/01_5895/1000084970_9.jpg",
 				"hash": "f7716c3ad9b4cce0ebacd16ef2deb621"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000084970_10.jpg",
+				"path": "/images/items/01_5895/1000084970_10.jpg",
+				"hash": "37f225ec7618b91a838541e98e65085a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000084970_11.jpg",
+				"path": "/images/items/01_5895/1000084970_11.jpg",
+				"hash": "7b1597823f5142e122e8ec50eeb2e2c3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000084970_12.jpg",
+				"path": "/images/items/01_5895/1000084970_12.jpg",
+				"hash": "e4cbf5973622fc59e233218dfa6e4b97"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5895/",
-	"brandIds": ["rg"],
-	"seriesIds": ["seed-d"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_3893", "01_5802"],
 	"manual": {
 		"id": "950",
 		"url": "https://manual.bandai-hobby.net/menus/detail/950/"

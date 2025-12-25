@@ -2,9 +2,53 @@
 	"id": "01_5821",
 	"type": "item",
 	"name": {
-		"ja": "MG 1/100 ガンダム AGE-2 ダブルバレット",
-		"en": "MG 1/100 Gundam AGE-2 Double Bullet"
+		"ja": "MG 1/100 ガンダムAGE-2 ダブルバレット",
+		"en": "MG 1/100 GundamAGE-2 Double Bullet"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "age",
+			"url": "https://bandai-hobby.net/series/age/",
+			"ja": "機動戦士ガンダムAGE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181355",
+			"url": "https://p-bandai.jp/item/item-1000181355/",
+			"ja": "ＭＧ 1/100 ガンダムＡＧＥ－１ フルグランサ用 拡張パーツ"
+		},
+		{
+			"id": "item-1000181354",
+			"url": "https://p-bandai.jp/item/item-1000181354/",
+			"ja": "ＭＧ 1/100 ガンダムＡＧＥ－１ フルグランサ [デザイナーズカラーＶｅｒ．]"
+		},
+		{
+			"id": "01_4196",
+			"url": "https://bandai-hobby.net/item/01_4196/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムAGE-1 ウェアシステムセット[クリアカラー]"
+		},
+		{
+			"id": "item-1000128729",
+			"url": "https://p-bandai.jp/item/item-1000128729",
+			"ja": "ＭＧ 1/100 ガンダムＡＧＥ-２ノーマル 特務隊仕様"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4620,
 		"currency": "JPY",
@@ -18,10 +62,9 @@
 		"day": 21
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
-			"• ガンダム AGE-2の進化形態「ダブルバレット」がMGで登場。",
+			"• ガンダムAGE-2の進化形態「ダブルバレット」がMGで登場。",
 			"• 魅せるための内部構造、完成度と作りやすさの両立など、MG AGEシリーズならではの特徴をそのままに、変形機構も再現。",
 			"• MG独自のディテールアップを採用。",
 			"• ランディングギアや、キャノンの取り付け位置調整機構などMGシリーズならではのギミックを搭載。",
@@ -30,7 +73,7 @@
 			"• 同スケールのアセムフィギュアが付属。"
 		],
 		"en": [
-			"• Gundam AGE-2's evolved form \"Double Bullet\" is now available in MG.",
+			"• GundamAGE-2's evolved form \"Double Bullet\" is now available in MG.",
 			"• The deformation mechanism has been recreated while retaining the unique features of the MG AGE series, such as the internal structure designed to impress, and the combination of perfection and ease of production.",
 			"• Adopts MG's unique detail enhancement.",
 			"• Equipped with gimmicks unique to the MG series, such as landing gear and cannon mounting position adjustment mechanism.",
@@ -42,17 +85,17 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_893.jpg",
+				"src": "https://bandai-hobby.net/images/153_893_s_9zy3df3heg0ikg1je1lf4d030ufi.jpg",
 				"path": "/images/items/01_5821/153_893.jpg",
 				"hash": "1ea80d0bfc0ef8da0f8906d46cf80182"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_893.jpg",
+				"src": "https://bandai-hobby.net/images/155_893_s_wffwgxv739p5pgdh5yd7fnoj4ydg.jpg",
 				"path": "/images/items/01_5821/155_893.jpg",
 				"hash": "4b568cbf253a61f56169799553150d4b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_893.jpg",
+				"src": "https://bandai-hobby.net/images/156_893_s_4606fq0tts9l33jsooj4xpig2s4y.jpg",
 				"path": "/images/items/01_5821/156_893.jpg",
 				"hash": "768aa441fc18f00ad74a4e488fd6a35a"
 			}
@@ -60,10 +103,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5821/",
-	"brandIds": ["mg"],
-	"seriesIds": ["age"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000181355", "item-1000181354", "01_4196", "item-1000128729"],
 	"manual": {
 		"id": "612",
 		"url": "https://manual.bandai-hobby.net/menus/detail/612/"

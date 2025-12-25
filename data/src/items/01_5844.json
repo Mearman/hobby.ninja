@@ -3,8 +3,57 @@
 	"type": "item",
 	"name": {
 		"ja": "HGUC 1/144 ドーベン・ウルフ（ユニコーンVer.）",
-		"en": "HGUC 1/144 Dauben Wolf (Unicorn Ver.)"
+		"en": "HGUC 1/144 Doben Wolf (Unicorn Ver.)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -18,10 +67,9 @@
 		"day": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 『機動戦士ZZ ガンダム』や『機動戦士ガンダム UC』にも登場するドーベン・ウルフをユニコーンVer.でHGUC化。",
+			"• 『機動戦士ZZガンダム』や『機動戦士ガンダムUC』にも登場するドーベン・ウルフをユニコーンVer.でHGUC化。",
 			"• 袖付き仕様、特徴的な「エングレービング」のデザインを再現。",
 			"• 設定通り、通常のMSよりひと回り大きい迫力サイズ。",
 			"• メガランチャー発射形態が再現できる。メガランチャーはスライドギミックでビーム・ライフル形態に変形可能。",
@@ -29,11 +77,12 @@
 			"• 専用スタンドで前腕部射出シーンを再現可能。"
 		],
 		"en": [
-			"■ Dauben Wolf, who also appears in \"Mobile Suit ZZ GUNDAM\" and \"MOBILE SUIT GUNDAM UC\", has been converted into a unicorn version in HGUC.",
-			"■ Sleeve specification, reproducing the characteristic \"engraving\" design.",
-			"■ As set, it is a powerful size that is one size larger than a normal MS.",
-			"■ Mega launcher launch form can be reproduced. The Mega Launcher can be transformed into a beam rifle form with a slide gimmick. The backpack can be equipped with large missiles. It can reproduce the storage of the Incom, the hatch deployment of the missile launcher, and the beam cannon ejection form.",
-			"■ The forearm injection scene can be reproduced with a dedicated stand."
+			"• Doben Wolf, who also appears in \"Mobile Suit ZZ Gundam\" and \"Mobile Suit Gundam UC\", has been transformed into a unicorn version of HGUC.",
+			"• Specification with sleeves, reproduces the characteristic \"engraved\" design.",
+			"• As set, the impressive size is one size larger than a normal MS.",
+			"• Mega launcher firing form can be reproduced. Mega launcher can be transformed into beam rifle form with a slide gimmick.",
+			"• The backpack can be equipped with large missiles. Incom storage, missile launcher hatch deployment, and beam cannon ejection mode can be reproduced.",
+			"• The forearm injection scene can be reproduced with the special stand."
 		]
 	},
 	"images": {
@@ -57,10 +106,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5844/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5527", "01_4986", "01_4971", "item-1000163998"],
 	"manual": {
 		"id": "384",
 		"url": "https://manual.bandai-hobby.net/menus/detail/384/"
