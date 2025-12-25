@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ドラド",
 		"en": "HG 1/144 Dorado"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "age",
+			"url": "https://bandai-hobby.net/series/age/",
+			"ja": "機動戦士ガンダムAGE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000170540",
+			"url": "https://p-bandai.jp/item/item-1000170540/",
+			"ja": "ＨＧ 1/144 フォーンファルシア"
+		},
+		{
+			"id": "item-1000169836",
+			"url": "https://p-bandai.jp/item/item-1000169836/",
+			"ja": "ＨＧ 1/144 ガンダムＡＧＥ-１ レイザー＆ガンダムＡＧＥ-２ アルティメス セット"
+		},
+		{
+			"id": "01_3738",
+			"url": "https://bandai-hobby.net/item/01_3738/",
+			"ja": "HG 1/144 「機動戦士ガンダムAGE」 MSセット[クリアカラー]"
+		},
+		{
+			"id": "item-1000082540",
+			"url": "https://p-bandai.jp/item/item-1000082540",
+			"ja": "ＨＧ 1/144 ガンダムレギルス〔MEMORY OF EDEN〕"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -18,25 +62,28 @@
 		"day": 28
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
-		"ja": ["• 新たなるUE、HGに現る。 成形品×4、ホイルシール×1、組立説明書"],
-		"en": ["• A new UE appears in HG. Molded product x 4, foil seal x 1, assembly manual"]
+		"ja": [
+			"• 新たなるUE、HGに現る。 成形品×4、ホイルシール×1、組立説明書"
+		],
+		"en": [
+			"• A new UE appears in HG. Molded product x 4, foil seal x 1, assembly manual"
+		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5494.jpg",
+				"src": "https://bandai-hobby.net/images/153_5494_s_iysz3up5f0zubpn3msvris350hal.jpg",
 				"path": "/images/items/01_4596/153_5494.jpg",
 				"hash": "dc1b199f0b65454f46b6b58b72c3bed1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5494.jpg",
+				"src": "https://bandai-hobby.net/images/155_5494_s_x55aipm4a9xtdqswlyfvruly5bpn.jpg",
 				"path": "/images/items/01_4596/155_5494.jpg",
 				"hash": "eea26d03ab16bc0755e1835afb721776"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5494.jpg",
+				"src": "https://bandai-hobby.net/images/156_5494_s_yqejs3ipil7ci99d4n5519pqo0b5.jpg",
 				"path": "/images/items/01_4596/156_5494.jpg",
 				"hash": "53f48e397a8f11bf4eb796f7ef58d90e"
 			}
@@ -44,10 +91,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4596/",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "328",
 		"url": "https://manual.bandai-hobby.net/menus/detail/328/"

@@ -2,9 +2,53 @@
 	"id": "01_4620",
 	"type": "item",
 	"name": {
-		"ja": "HG 1/144 ガンダム AGE-2 ダークハウンド",
-		"en": "HG 1/144 Gundam AGE-2 Dark Hound"
+		"ja": "HG 1/144 ガンダムAGE-2 ダークハウンド",
+		"en": "HG 1/144 GundamAGE-2 Dark Hound"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "age",
+			"url": "https://bandai-hobby.net/series/age/",
+			"ja": "機動戦士ガンダムAGE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000170540",
+			"url": "https://p-bandai.jp/item/item-1000170540/",
+			"ja": "ＨＧ 1/144 フォーンファルシア"
+		},
+		{
+			"id": "item-1000169836",
+			"url": "https://p-bandai.jp/item/item-1000169836/",
+			"ja": "ＨＧ 1/144 ガンダムＡＧＥ-１ レイザー＆ガンダムＡＧＥ-２ アルティメス セット"
+		},
+		{
+			"id": "01_3738",
+			"url": "https://bandai-hobby.net/item/01_3738/",
+			"ja": "HG 1/144 「機動戦士ガンダムAGE」 MSセット[クリアカラー]"
+		},
+		{
+			"id": "item-1000082540",
+			"url": "https://p-bandai.jp/item/item-1000082540",
+			"ja": "ＨＧ 1/144 ガンダムレギルス〔MEMORY OF EDEN〕"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,29 +62,28 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 宇宙海賊ビシディアン キャプテンアッシュのMS。 • 左右の羽に装備された特徴的なアンカーは付属のリード線で射出シーンを再現できる。 • ドッズランサー付属。 成形品×7、ホイルシール×1、リード線×1、組立説明書×1"
+			"• 宇宙海賊ビシディアン キャプテンアッシュのMS。 ■左右の羽に装備された特徴的なアンカーは付属のリード線で射出シーンを再現できる。 ■ドッズランサー付属。 成形品×7、ホイルシール×1、リード線×1、組立説明書×1"
 		],
 		"en": [
-			"• Space Pirate Visidian Captain Ash's MS. • The unique anchors on the left and right wings can be used to recreate the ejection scene using the included lead wires. • Dods Lancer included. Molded product x 7, foil seal x 1, lead wire x 1, assembly manual x 1"
+			"• Space Pirate Visidian Captain Ash's MS. ■The characteristic anchors equipped on the left and right wings can reproduce the ejection scene with the included lead wires. ■Dods Lancer included. Molded product x 7, foil seal x 1, lead wire x 1, assembly manual x 1"
 		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5515.jpg",
+				"src": "https://bandai-hobby.net/images/153_5515_s_x7v88k18jjdczj9cu8czi7ogsp25.jpg",
 				"path": "/images/items/01_4620/153_5515.jpg",
 				"hash": "2a30e40c0166b02b8a3e67f117cd2a97"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5515.jpg",
+				"src": "https://bandai-hobby.net/images/155_5515_s_4hwa0nw09h979p3ts82jesrpnzrz.jpg",
 				"path": "/images/items/01_4620/155_5515.jpg",
 				"hash": "8c4b33cfbd2bb9cdff8310e1b0f20eed"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5515.jpg",
+				"src": "https://bandai-hobby.net/images/156_5515_s_jpsadi57atssx3i9c0419wbqtirg.jpg",
 				"path": "/images/items/01_4620/156_5515.jpg",
 				"hash": "fbb5d37752bea2e1cbaa03d413439df9"
 			}
@@ -48,10 +91,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4620/",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "323",
 		"url": "https://manual.bandai-hobby.net/menus/detail/323/"

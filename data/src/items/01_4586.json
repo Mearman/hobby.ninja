@@ -2,9 +2,38 @@
 	"id": "01_4586",
 	"type": "item",
 	"name": {
-		"ja": "1/48 メガサイズモデル ガンダム AGE-1 ノーマル",
-		"en": "1/48 Mega Size Model Gundam AGE-1 Normal"
+		"ja": "1/48 メガサイズモデル ガンダムAGE-1 ノーマル",
+		"en": "1/48 Mega Size Model GundamAGE-1 Normal"
 	},
+	"brands": [
+		{
+			"id": "megasize",
+			"url": "https://bandai-hobby.net/brand/megasize/",
+			"ja": "メガサイズモデル"
+		}
+	],
+	"series": [
+		{
+			"id": "age",
+			"url": "https://bandai-hobby.net/series/age/",
+			"ja": "機動戦士ガンダムAGE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4607",
+			"url": "https://bandai-hobby.net/item/01_4607/",
+			"ja": "1/48 メガサイズモデル ガンダムAGE-2 ノーマル"
+		}
+	],
+	"scale": "1/48",
 	"price": {
 		"amount": 9350,
 		"currency": "JPY",
@@ -18,40 +47,35 @@
 		"day": 10
 	},
 	"targetAge": 8,
-	"scale": "1/48",
 	"description": {
 		"ja": [
-			"■AGE-1ノーマルが全高375mmのビッグサイズで登場。■カメラアイと胸のコアパーツが発光するなど、ギミックも充実。■1/48スケールに合わせ、外装パネルのディテールを新規設定。■ディテールはメカデザイナー・海老川兼武氏による描き起こし。",
+			"• AGE-1ノーマルが全高375mmのビッグサイズで登場。■カメラアイと胸のコアパーツが発光するなど、ギミックも充実。■1/48スケールに合わせ、外装パネルのディテールを新規設定。■ディテールはメカデザイナー・海老川兼武氏による描き起こし。",
 			"成形品×20、水転写デカール×1、ホイルシール×1、小冊子×1、組立説明書、テスト用電池（LR41）×2"
 		],
 		"en": [
-			"• AGE-1 normal is now available in a big size with a total height of 375mm. • There are also plenty of gimmicks, such as the camera eye and core parts of the chest that emit light. • New exterior panel details set to match 1/48 Scale. • Details are drawn by mechanical designer Kanetake Ebikawa.",
+			"• AGE-1 normal is now available in a big size with a total height of 375mm. ■There are also plenty of gimmicks, such as the camera eye and the core parts of the chest that emit light. ■New exterior panel details set to match 1/48 Scale. ■Details are drawn by mechanical designer Kanetake Ebikawa.",
 			"Molded product x 20, water transfer decal x 1, foil seal x 1, booklet x 1, assembly manual, test battery (LR41) x 2"
 		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5484.jpg",
+				"src": "https://bandai-hobby.net/images/153_5484_s_2wadeggr2a16bz5g26owobohpb0a.jpg",
 				"path": "/images/items/01_4586/153_5484.jpg",
 				"hash": "df93586144cd1aaf775fb488933614d1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5484.jpg",
+				"src": "https://bandai-hobby.net/images/155_5484_s_iw9eo4461r2sgwkch28huupot1uw.jpg",
 				"path": "/images/items/01_4586/155_5484.jpg",
 				"hash": "61963286de39a0b09c2446a3f2bbb8a3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5484.jpg",
+				"src": "https://bandai-hobby.net/images/156_5484_s_goh4q1u3rn8nelzqoo144gxmoqrg.jpg",
 				"path": "/images/items/01_4586/156_5484.jpg",
 				"hash": "db582e3692c750d15b499e13e2c2c08a"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4586/",
-	"brandIds": ["megasize"],
-	"seriesIds": ["age"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4607"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4586/"
 }

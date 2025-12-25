@@ -3,8 +3,46 @@
 	"type": "item",
 	"name": {
 		"ja": "ビルダーズパーツHD-08 1/100 MSハンド02（ジオン系）",
-		"en": "BUILDERS PARTS HD 1/100 MS HAND 02 (ZEON)"
+		"en": "Builders Parts HD-08 1/100 MS Hand 02 (Zeon series)"
 	},
+	"brands": [
+		{
+			"id": "parts",
+			"url": "https://bandai-hobby.net/brand/parts/",
+			"ja": "ビルダーズパーツ"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3582",
+			"url": "https://bandai-hobby.net/item/01_3582/",
+			"ja": "1/100 ガンダムベース限定 MSエフェクト01(クリアブルー)"
+		},
+		{
+			"id": "01_3563",
+			"url": "https://bandai-hobby.net/item/01_3563/",
+			"ja": "1/100 ガンダムベース限定 MSバーニア01&エモーションマニピュレーター(連邦系)"
+		},
+		{
+			"id": "01_3564",
+			"url": "https://bandai-hobby.net/item/01_3564/",
+			"ja": "1/100 ガンダムベース限定 MSスパイク01&エモーションマニピュレーター(ジオン系)"
+		},
+		{
+			"id": "01_636",
+			"url": "https://bandai-hobby.net/item/01_636/",
+			"ja": "BPHD ノンスケール MSサイトレンズ01(レッド)"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -18,7 +56,6 @@
 		"day": 28
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"• 細部にまでこだわった公式改造パーツ。ディテールアップでガンプラをさらに楽しめる。",
@@ -27,8 +64,10 @@
 			"手(左右)×各2、手甲パーツ×12"
 		],
 		"en": [
-			"Official mods with attention to detail. You can enjoy GUNPLA even more with more detail.",
-			"Reproduce the rounded fingers that are a characteristic of the Zeon system. 2 each × handshake (left and right), 2 each × flat hand (left and right), weapon holding Hands (left and right) × 2 each, hand back parts×12"
+			"• Officially modified parts with great attention to detail. You can enjoy Gunpla even more by improving the details.",
+			"• Reproduces the characteristic rounded fingers of the Zeon series.",
+			"Gripping hands (left and right) x 2 each, flat hands (left and right) x 2 each, weapon holder",
+			"Hands (left and right) x 2 each, back parts x 12"
 		]
 	},
 	"images": {
@@ -61,9 +100,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4628/",
-	"brandIds": ["parts"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_3582", "01_3563", "01_3564", "01_636"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_4628/"
 }

@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ゼダスR",
 		"en": "HG 1/144 Zedas R"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "age",
+			"url": "https://bandai-hobby.net/series/age/",
+			"ja": "機動戦士ガンダムAGE"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000170540",
+			"url": "https://p-bandai.jp/item/item-1000170540/",
+			"ja": "ＨＧ 1/144 フォーンファルシア"
+		},
+		{
+			"id": "item-1000169836",
+			"url": "https://p-bandai.jp/item/item-1000169836/",
+			"ja": "ＨＧ 1/144 ガンダムＡＧＥ-１ レイザー＆ガンダムＡＧＥ-２ アルティメス セット"
+		},
+		{
+			"id": "01_3738",
+			"url": "https://bandai-hobby.net/item/01_3738/",
+			"ja": "HG 1/144 「機動戦士ガンダムAGE」 MSセット[クリアカラー]"
+		},
+		{
+			"id": "item-1000082540",
+			"url": "https://p-bandai.jp/item/item-1000082540",
+			"ja": "ＨＧ 1/144 ガンダムレギルス〔MEMORY OF EDEN〕"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -18,29 +62,28 @@
 		"day": 28
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"• 高機動型ゼダスがHGになって登場。 • カラーリングを成形色で再現。 • 尻尾型ソードの可動や変形機構などのギミックを搭載。 成形品×5、ホイルシール×1、組立説明書"
+			"• 高機動型ゼダスがHGになって登場。 ■カラーリングを成形色で再現。 ■尻尾型ソードの可動や変形機構などのギミックを搭載。 成形品×5、ホイルシール×1、組立説明書"
 		],
 		"en": [
-			"• High-mobility Zedas now available as HG. • Reproduce the coloring with molded colors. • Equipped with gimmicks such as a movable tail-shaped sword and a deformation mechanism. Molded product x 5, foil seal x 1, assembly manual"
+			"• High-mobility Zedas now available as HG. ■Reproduce the coloring with molded colors. ■Equipped with gimmicks such as movable tail-shaped sword and deformation mechanism. Molded product x 5, foil seal x 1, assembly manual"
 		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5493.jpg",
+				"src": "https://bandai-hobby.net/images/153_5493_s_084v82vlre7gg5u6trzs2lv86lpm.jpg",
 				"path": "/images/items/01_4595/153_5493.jpg",
 				"hash": "206795236638794015b72d8d06a170b2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5493.jpg",
+				"src": "https://bandai-hobby.net/images/155_5493_s_2o26qux6s0mncyo1qu16g5809kgf.jpg",
 				"path": "/images/items/01_4595/155_5493.jpg",
 				"hash": "97fe607d2d7c35c43f8c77bd6225488e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5493.jpg",
+				"src": "https://bandai-hobby.net/images/156_5493_s_w6fnakrs7s36ddhnh8b7u6ubki37.jpg",
 				"path": "/images/items/01_4595/156_5493.jpg",
 				"hash": "2590972461210d98bd511f8c0957a604"
 			}
@@ -48,10 +91,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4595/",
-	"brandIds": ["hg"],
-	"seriesIds": ["age"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"],
 	"manual": {
 		"id": "327",
 		"url": "https://manual.bandai-hobby.net/menus/detail/327/"
