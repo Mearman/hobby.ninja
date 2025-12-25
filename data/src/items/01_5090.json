@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 エグザビークル (ホースメカVer.) [ダークグレー]",
-		"en": "30MM 1/144 Extended Armament Vehicle (HORSE MECHA Ver.) [DARK GRAY]"
+		"en": "30MM 1/144 Exer Vehicle (Horse Mecha Ver.) [Dark Gray]"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1188,
 		"currency": "JPY",
@@ -18,16 +61,15 @@
 		"day": 16
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MMエグザビークルシリーズに「ホースメカVer.」が登場！",
-			"■頭部から脚先まで各関節がフレキシブルに可動。",
-			"■尻尾のパーツは折りたたみ式。",
-			"■別売りの各種機体を騎乗させることが可能。",
-			"■「カスタマイズマテリアル（パイプパーツ/マルチジョイント）」など別売りのアイテムに付属するジョイントパーツを使用することで、騎乗する機体を固定しディスプレイが可能。",
-			"■「30MM 1/144 EXM-A9s スピナティオ (戦国仕様)」などの別売りの機体とカスタマイズ用のジョイントパーツが付属。",
-			"■脚部パーツは別売りアイテム付属のポリキャップを介して３mm軸の創出が可能。"
+			"• 頭部から脚先まで各関節がフレキシブルに可動。",
+			"• 尻尾のパーツは折りたたみ式。",
+			"• 別売りの各種機体を騎乗させることが可能。",
+			"• 「カスタマイズマテリアル（パイプパーツ/マルチジョイント）」など別売りのアイテムに付属するジョイントパーツを使用することで、騎乗する機体を固定しディスプレイが可能。",
+			"• 「30MM 1/144 EXM-A9s スピナティオ (戦国仕様)」などの別売りの機体とカスタマイズ用のジョイントパーツが付属。",
+			"• 脚部パーツは別売りアイテム付属のポリキャップを介して３mm軸の創出が可能。"
 		],
 		"en": [
 			"\"Horse Mecha Ver.\" is now available in the 30MM Exa Vehicle Series!",
@@ -39,31 +81,32 @@
 			"• It is possible to create a 3mm axis for the leg parts using the polycap that is sold separately."
 		]
 	},
-	"accessories": {
-		"ja": ["ビークル×1式", "ジョイントパーツ×1"],
-		"en": ["Vehicle x 1 set", "Joint parts x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビークル",
+				"en": "vehicle"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205442_1.jpg",
 				"path": "/images/items/01_5090/1000205442_1.jpg",
 				"hash": "bba10a00f38b494515a1d21f80e7dc42"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205442_10.jpg",
-				"path": "/images/items/01_5090/1000205442_10.jpg",
-				"hash": "37199e7a85789326c0873f52a705bfe7"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205442_11.jpg",
-				"path": "/images/items/01_5090/1000205442_11.jpg",
-				"hash": "8b6aff3a7f0ac5d832247c6ce6a90388"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205442_12.jpg",
-				"path": "/images/items/01_5090/1000205442_12.jpg",
-				"hash": "27d5ccfc31ba50da7d24805448e8aa7c"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205442_2.jpg",
@@ -104,15 +147,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205442_9.jpg",
 				"path": "/images/items/01_5090/1000205442_9.jpg",
 				"hash": "0e79bba1854efb6944309fc566c2aafc"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205442_10.jpg",
+				"path": "/images/items/01_5090/1000205442_10.jpg",
+				"hash": "37199e7a85789326c0873f52a705bfe7"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205442_11.jpg",
+				"path": "/images/items/01_5090/1000205442_11.jpg",
+				"hash": "8b6aff3a7f0ac5d832247c6ce6a90388"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205442_12.jpg",
+				"path": "/images/items/01_5090/1000205442_12.jpg",
+				"hash": "27d5ccfc31ba50da7d24805448e8aa7c"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5090/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3776",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3776/"

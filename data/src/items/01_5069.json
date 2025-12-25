@@ -3,8 +3,41 @@
 	"type": "item",
 	"name": {
 		"ja": "HG デイジーオーガ アルター",
-		"en": "HG DAISYOGRE ALTER"
+		"en": "HG Daisy Auger Alter"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "synduality",
+			"url": "https://bandai-hobby.net/series/synduality/",
+			"ja": "SYNDUALITY(シンデュアリティ)"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4921",
+			"url": "https://bandai-hobby.net/item/01_4921/",
+			"ja": "HG ギルボウ"
+		},
+		{
+			"id": "01_4904",
+			"url": "https://bandai-hobby.net/item/01_4904/",
+			"ja": "HG デイジーオーガ"
+		}
+	],
 	"price": {
 		"amount": 4620,
 		"currency": "JPY",
@@ -21,15 +54,15 @@
 	"description": {
 		"ja": [
 			"TVアニメ『SYNDUALITY Noir』から、主人公カナタが搭乗するメカ「デイジーオーガ」のバージョンアップ機体「デイジーオーガ アルター」が新たな武装ガミラントブレード、ソーランチャーや強化型アサルトライフルが付属してHGシリーズで早くもリリース！",
-			"■全長約109.5mmの強化型アサルトライフルが付属。フロントグリップが展開し両手持ちも可能。",
-			"■腕部に装備したガミラントブレードは収納状態、展開状態が再現可能。",
-			"■新規武装のソーランチャーは刃が回転可能。刃は取り外して付属の台座や別売りのアクションベースに接続してディスプレイすることもできる。",
-			"■細部までディテールを造形されたコックピットとコフィンはスライド・オープンギミックを搭載。主人公カナタとノワールのフィギュアが付属し搭乗状態を再現できる。",
-			"■劇中の歩行状態、ローラーダッシュ状態を再現できる脚部形態変形用パーツも付属。",
-			"■印象的なマーキングを再現できるシールが付属。アイセンサーシールの選択で様々な表情演出が可能。"
+			"• 全長約109.5mmの強化型アサルトライフルが付属。フロントグリップが展開し両手持ちも可能。",
+			"• 腕部に装備したガミラントブレードは収納状態、展開状態が再現可能。",
+			"• 新規武装のソーランチャーは刃が回転可能。刃は取り外して付属の台座や別売りのアクションベースに接続してディスプレイすることもできる。",
+			"• 細部までディテールを造形されたコックピットとコフィンはスライド・オープンギミックを搭載。主人公カナタとノワールのフィギュアが付属し搭乗状態を再現できる。",
+			"• 劇中の歩行状態、ローラーダッシュ状態を再現できる脚部形態変形用パーツも付属。",
+			"• 印象的なマーキングを再現できるシールが付属。アイセンサーシールの選択で様々な表情演出が可能。"
 		],
 		"en": [
-			"From the TV anime \"SYNDUALITY Noir \", the \" Daisy Ogre Alter \", an upgraded version of the mecha \" Daisy Ogre\" piloted by the main character Kanata, comes with new weapons such as Gamilant Blade, Saw Launcher and enhanced assault rifle, and will be released in the HG series as soon as possible!",
+			"From the TV anime \"SYNDUALITY Noir\", the \"Daisy Ogre Alter\", an upgraded version of the mecha \"Daisy Ogre\" piloted by the main character Kanata, comes with new weapons such as Gamilant Blade, Saw Launcher and enhanced assault rifle, and will be released in the HG series as soon as possible!",
 			"• Comes with a reinforced assault rifle with a total length of approximately 109.5mm. The front grip expands and can be held with both hands.",
 			"• The Gamilant blade equipped on the arm can be reproduced in its stored and expanded states.",
 			"• The new weapon Saw Launcher has a rotatable blade. The blade can also be removed and displayed by connecting it to the included pedestal or action base (sold separately).",
@@ -38,49 +71,68 @@
 			"• Comes with a seal that can reproduce impressive markings. Various facial expressions are possible by selecting the eye sensor Seal."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"強化型アサルトライフル×１",
-			"ガミラントブレード×１",
-			"ソーランチャー×１",
-			"ハンドパーツ×１式",
-			"脚部形態変形用パーツ×1式",
-			"ディスプレイ台座×1",
-			"フィギュア×２種(カナタ、ノワール)",
-			"シール×２種"
-		],
-		"en": [
-			"Enhanced assault rifle x1",
-			"Gamirant blade x 1",
-			"Thor launcher x1",
-			"Hand parts x 1 set",
-			"Leg shape transformation parts x 1 set",
-			"Display pedestal x 1",
-			"Figure x 2 types (Kanata, Noir)",
-			"Seal x 2 types"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "強化型アサルトライフル×１",
+				"en": "Enhanced assault rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ガミラントブレード×１",
+				"en": "Gamirant blade x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ソーランチャー×１",
+				"en": "Thor launcher x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "脚部形態変形用パーツ",
+				"en": "Leg shape transformation parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座",
+				"en": "display pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "フィギュア×２種(カナタ、ノワール)",
+				"en": "Figure x 2 types (Kanata, Noir)"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×２種",
+				"en": "Seal x 2 types"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205370_1.jpg",
 				"path": "/images/items/01_5069/1000205370_1.jpg",
 				"hash": "a1a3a85fee25ed2973f079e56f2d5842"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205370_10.jpg",
-				"path": "/images/items/01_5069/1000205370_10.jpg",
-				"hash": "5c463c0e0750ca1e32a062fa1a514a9e"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205370_11.jpg",
-				"path": "/images/items/01_5069/1000205370_11.jpg",
-				"hash": "9b257da11e6d02de55460d3aa7c4285a"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205370_12.jpg",
-				"path": "/images/items/01_5069/1000205370_12.jpg",
-				"hash": "d5233294dbb6d7ea76c956af9ff683f9"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205370_2.jpg",
@@ -121,13 +173,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205370_9.jpg",
 				"path": "/images/items/01_5069/1000205370_9.jpg",
 				"hash": "17db762b05fde663157efa3ce8367fee"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205370_10.jpg",
+				"path": "/images/items/01_5069/1000205370_10.jpg",
+				"hash": "5c463c0e0750ca1e32a062fa1a514a9e"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205370_11.jpg",
+				"path": "/images/items/01_5069/1000205370_11.jpg",
+				"hash": "9b257da11e6d02de55460d3aa7c4285a"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205370_12.jpg",
+				"path": "/images/items/01_5069/1000205370_12.jpg",
+				"hash": "d5233294dbb6d7ea76c956af9ff683f9"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5069/",
-	"brandIds": ["hg"],
-	"seriesIds": ["synduality"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_4921", "01_4904"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5069/"
 }

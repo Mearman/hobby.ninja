@@ -3,8 +3,61 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ゲルググメナース（ルナマリア・ホーク専用機）",
-		"en": "HG 1/144 GELGOOG Menace (LUNAMARIA HAWKE CUSTOM)"
+		"en": "HG 1/144 Gelgoogmen Nurse (Lunamaria Hawk exclusive machine)"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hgce",
+			"url": "https://bandai-hobby.net/brand/hgce/",
+			"ja": "HG COSMIC ERA"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-freedom",
+			"url": "https://bandai-hobby.net/series/seed-freedom/",
+			"ja": "機動戦士ガンダムSEED FREEDOM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5452",
+			"url": "https://bandai-hobby.net/item/01_5452/",
+			"ja": "HG 1/144 ズゴック(SEED FREEDOM Ver.)"
+		},
+		{
+			"id": "01_5374",
+			"url": "https://bandai-hobby.net/item/01_5374/",
+			"ja": "HG 1/144 デスティニーガンダムSpecII&ゼウスシルエット"
+		},
+		{
+			"id": "01_5363",
+			"url": "https://bandai-hobby.net/item/01_5363/",
+			"ja": "HG 1/144 ブラックナイトスコードカルラ"
+		},
+		{
+			"id": "01_5362",
+			"url": "https://bandai-hobby.net/item/01_5362/",
+			"ja": "HG 1/144 ムラサメ改"
+		}
+	],
+	"manual": {
+		"id": "1422",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1422"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 3190,
 		"currency": "JPY",
@@ -18,11 +71,10 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED FREEDOM』に登場する「HG 1/144 ゲルググメナース（ルナマリア・ホーク専用機）」をHGで立体化！",
-			"• 「機動戦士ガンダム SEEDシリーズ」で印象的なアクションポーズ再現に特化した内部構造「SEEDアクションシステム」を搭載｡",
+			"『機動戦士ガンダムSEED FREEDOM』に登場する「HG 1/144 ゲルググメナース（ルナマリア・ホーク専用機）」をHGで立体化！",
+			"• 「機動戦士ガンダムSEEDシリーズ」で印象的なアクションポーズ再現に特化した内部構造「SEEDアクションシステム」を搭載｡",
 			"• ウイングが可動しリニア砲、ミサイルランチャーを前方に構えることが可能。",
 			"• 肩部の広域な可動によりレールガンの両手持ちがスムーズに決まる。",
 			"• 近接戦闘用のビームナギナタは収納用のグリップが付属し腰部へのマウントが可能。",
@@ -31,8 +83,8 @@
 			"• 成形色による細かなパーツの色分けにより、組み立てるだけで満足な仕上がり。"
 		],
 		"en": [
-			"The \"HG 1/144 Gelgoogmen Nurse (Lunamaria Hawk exclusive machine)\" that appears in \" Mobile Suit Gundam SEED FREEDOM\" is made into a three-dimensional HG!",
-			"• Equipped with the internal structure \"SEED Action System \" that specializes in reproducing impressive action poses from the \" Mobile Suit Gundam SEED Series\".",
+			"The \"HG 1/144 Gelgoogmen Nurse (Lunamaria Hawk exclusive machine)\" that appears in \"Mobile Suit GundamSEED FREEDOM\" is made into a three-dimensional HG!",
+			"• Equipped with the internal structure \"SEED Action System\" that specializes in reproducing impressive action poses from the \"Mobile Suit Gundam SEED Series\".",
 			"• The wings are movable and the linear cannon and missile launcher can be held in front.",
 			"• The wide range of shoulder movement allows for smooth holding of the railgun with both hands.",
 			"• Beam Naginata for close combat comes with a grip for storage and can be mounted on the waist.",
@@ -41,17 +93,45 @@
 			"• Color-coding of small parts by molding color allows for a satisfactory finish with just the assembly."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームナギナタ×１式",
-			"ビームライフル×１",
-			"レールガン×１",
-			"ビームシールド×１",
-			"ジョイントパーツ×１",
-			"シール×1"
-		],
-		"en": ["Beam Naginata x 1 set", "Beam rifle x1", "Railgun x1", "Beam Seal×1", "Joint parts x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームナギナタ×１式",
+				"en": "Beam Naginata x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームライフル×１",
+				"en": "Beam rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "レールガン×１",
+				"en": "Railgun x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームシールド×１",
+				"en": "Beam Seal×1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ×１",
+				"en": "Joint parts x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -97,13 +177,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5100/",
-	"brandIds": ["hg", "hgce"],
-	"seriesIds": ["seed-freedom"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5452", "01_5374", "01_5363", "01_5362"],
-	"manual": {
-		"id": "1422",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1422/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5100/"
 }

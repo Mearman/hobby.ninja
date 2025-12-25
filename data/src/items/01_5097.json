@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 デストロイガンダム",
-		"en": "HG 1/144 DESTROY GUNDAM"
+		"en": "HG 1/144 Destroy Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000203308",
+			"url": "https://p-bandai.jp/item/item-1000203308/",
+			"ja": "ＨＧ 1/144 ダークダガーＬ"
+		},
+		{
+			"id": "01_3739",
+			"url": "https://bandai-hobby.net/item/01_3739/",
+			"ja": "HG 1/144 デスティニーガンダム(ハイネ専用機)[クリアカラー]"
+		},
+		{
+			"id": "item-1000157417",
+			"url": "https://p-bandai.jp/item/item-1000157417/",
+			"ja": "ＨＧ 1/144 ウィンダム（ネオ・ロアノーク専用機）"
+		},
+		{
+			"id": "item-1000156577",
+			"url": "https://p-bandai.jp/item/item-1000156577/",
+			"ja": "ＨＧ 1/144 ウィンダム＆ダガーＬ用 拡張セット"
+		}
+	],
+	"manual": {
+		"id": "1321",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1321"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 14300,
 		"currency": "JPY",
@@ -18,20 +66,19 @@
 		"day": 9
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"TVアニメ『機動戦士ガンダムSEED DESTINY』より、巨大可変MS「デストロイガンダム」がHGシリーズで立体化！",
-			"■全高約390mm。迫力のサイズでありながらMA形態への変形が可能。",
-			"■ビッグスケールならではの緻密なモールド表現。",
-			"■本体随所に設けられた関節機構がダイナミックなポージングに対応。",
-			"■頭部、腕部、脚部、背面など各所にMS/MAそれぞれの形態の安定性を向上させるロック機構を採用。",
-			"■五指は各関節で可動し、表情付けが可能。人差し指から小指はランナーに付いた状態で組み立てが可能。",
-			"■全長約260mmの大型ビームエフェクトが付属。偏光成形の採用により、光源の角度による色調の変化が楽しめる。",
-			"■腕部は別売りのアクションベースに接続可能。"
+			"• 全高約390mm。迫力のサイズでありながらMA形態への変形が可能。",
+			"• ビッグスケールならではの緻密なモールド表現。",
+			"• 本体随所に設けられた関節機構がダイナミックなポージングに対応。",
+			"• 頭部、腕部、脚部、背面など各所にMS/MAそれぞれの形態の安定性を向上させるロック機構を採用。",
+			"• 五指は各関節で可動し、表情付けが可能。人差し指から小指はランナーに付いた状態で組み立てが可能。",
+			"• 全長約260mmの大型ビームエフェクトが付属。偏光成形の採用により、光源の角度による色調の変化が楽しめる。",
+			"• 腕部は別売りのアクションベースに接続可能。"
 		],
 		"en": [
-			"From the TV anime \"Mobile Suit Gundam SEED DESTINY \", the giant variable MS \" Destroy Gundam\" is now three-dimensional in the HG series!",
+			"From the TV anime \"Mobile Suit Gundam SEED DESTINY\", the giant variable MS \"Destroy Gundam\" is now three-dimensional in the HG series!",
 			"• Overall height approximately 390mm. Despite its impressive size, it can transform into MA form.",
 			"• Precise mold expression unique to Big Scale.",
 			"• Joint mechanisms installed throughout the main body support dynamic posing.",
@@ -41,31 +88,38 @@
 			"• The arms can be connected to an action base (sold separately)."
 		]
 	},
-	"accessories": {
-		"ja": ["ビームエフェクト×１式", "ジョイントパーツ×１式", "ディスプレイ台座×１式", "シール×１"],
-		"en": ["Beam effect x 1", "Joint parts x 1 set", "Display pedestal x 1 set", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームエフェクト×１式",
+				"en": "Beam effect x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ×１式",
+				"en": "Joint parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座×１式",
+				"en": "Display pedestal x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205451_1.jpg",
 				"path": "/images/items/01_5097/1000205451_1.jpg",
 				"hash": "4c5a4bedd46862aaac2f15806df2633c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205451_10.jpg",
-				"path": "/images/items/01_5097/1000205451_10.jpg",
-				"hash": "5ff27a1dc3470b65d1ccbed1be8a54d8"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205451_11.jpg",
-				"path": "/images/items/01_5097/1000205451_11.jpg",
-				"hash": "dfdc3513c34c18240995db6b516253cc"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205451_12.jpg",
-				"path": "/images/items/01_5097/1000205451_12.jpg",
-				"hash": "9fa0ed6d05622bee868462a7763568f6"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205451_2.jpg",
@@ -106,17 +160,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205451_9.jpg",
 				"path": "/images/items/01_5097/1000205451_9.jpg",
 				"hash": "2564b3512cd6b3500f18aa3bc32a091f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205451_10.jpg",
+				"path": "/images/items/01_5097/1000205451_10.jpg",
+				"hash": "5ff27a1dc3470b65d1ccbed1be8a54d8"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205451_11.jpg",
+				"path": "/images/items/01_5097/1000205451_11.jpg",
+				"hash": "dfdc3513c34c18240995db6b516253cc"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205451_12.jpg",
+				"path": "/images/items/01_5097/1000205451_12.jpg",
+				"hash": "9fa0ed6d05622bee868462a7763568f6"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5097/",
-	"brandIds": ["hg"],
-	"seriesIds": ["seed-d"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000203308", "01_3739", "item-1000157417", "item-1000156577"],
-	"manual": {
-		"id": "1321",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1321/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5097/"
 }

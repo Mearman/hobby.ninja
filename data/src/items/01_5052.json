@@ -5,6 +5,60 @@
 		"ja": "ＭＧ 1/100 ガンダムエピオン EW (シュトゥルム・ウント・ドラング装備)",
 		"en": "MG 1/100 Gundam Epyon EW (equipped with Sturm und Drang)"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "endlesswaltz",
+			"url": "https://bandai-hobby.net/series/endlesswaltz/",
+			"ja": "新機動戦記ガンダムWシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000213249",
+			"url": "https://p-bandai.jp/item/item-1000213249/",
+			"ja": "ＨＧ 1/144 アルトロンガンダム"
+		},
+		{
+			"id": "item-1000183318",
+			"url": "https://p-bandai.jp/item/item-1000183318/",
+			"ja": "ＨＧ 1/144 ガンダムデスサイズヘル"
+		},
+		{
+			"id": "item-1000170382",
+			"url": "https://p-bandai.jp/item/item-1000170382/",
+			"ja": "ＨＧ 1/144 ガンダムヘビーアームズ改"
+		},
+		{
+			"id": "01_3410",
+			"url": "https://bandai-hobby.net/item/01_3410/",
+			"ja": "MG 1/100 ガンダムデスサイズヘル EW[スペシャルコーティング]"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 7480,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 12
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『新機動戦記ガンダムＷ Ｅｎｄｌｅｓｓ Ｗａｌｔｚ 敗者たちの栄光』に登場する",
@@ -57,7 +110,7 @@
 			"・ 商品情報は2023年8月現在のものです。パッケージ、ロゴ及び商品の仕様は、予告なく変更するする場合がございます。"
 		],
 		"en": [
-			"Appearing in \"Mobile Suit Gundam W Endless Waltz: Glory of the Losers\"",
+			"Appearing in \"Mobile Suit GundamW Endless Waltz: Glory of the Losers\"",
 			"Gundam Epyon EW, which comes with the original weapon \"Sturm und Drang\", is commercialized in the Master Grade series.",
 			"● Sturm und Drang, which was newly set in \"The Glory of the Losers\", is reproduced with a new model!",
 			"Defensor mode/Zweihänder mode can be reproduced by rearranging parts.",
@@ -76,7 +129,7 @@
 			"Accessories: Action base",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/100 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS, PE, ABS, PVC",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -97,20 +150,12 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5918.jpg",
+				"src": "https://bandai-hobby.net/images/153_5918_o_1h926ofda1s9jgffd71hci1jb523.jpg",
 				"path": "/images/items/01_5052/153_5918.jpg",
 				"hash": "62dcd7d3a3bf17a8826b8ddd2669631d"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5052/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": ["endlesswaltz"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000213249", "item-1000183318", "item-1000170382", "01_3410"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5052/"
 }

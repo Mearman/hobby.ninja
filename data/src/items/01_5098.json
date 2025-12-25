@@ -3,7 +3,33 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard あばたーふみな",
-		"en": "Figure-rise Standard AVATAR FUMINA"
+		"en": "Figure-rise Standard Abata Fumina"
+	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundambuildmetaverse",
+			"url": "https://bandai-hobby.net/series/gundambuildmetaverse/",
+			"ja": "ガンダムビルドメタバース"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"manual": {
+		"id": "1420",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1420"
 	},
 	"price": {
 		"amount": 4180,
@@ -21,60 +47,70 @@
 	"description": {
 		"ja": [
 			"2023年10月6日より、いよいよ配信開始！「ガンダムビルドシリーズ」10周年記念映像『ガンダムビルドメタバース』より、メタバース空間で活躍する「あばたーふみな」がFigure-rise Standardで登場！",
-			"■『ガンダムビルドメタバース』時と『ガンダムビルドファイターズトライ』時、2種類の前髪パーツが付属。",
-			"■タンポ印刷を施したフェイスパーツが3種類付属。あばたーふみなの活き活きとした表情を再現。",
-			"■アーマーを外した状態も再現可能。",
-			"■ライフル持ち手や平手など表情豊かなハンドパーツが付属。",
-			"■Figure-rise Standardならではの表現力で、しなやかなポージングも表現可能。"
+			"• 『ガンダムビルドメタバース』時と『ガンダムビルドファイターズトライ』時、2種類の前髪パーツが付属。",
+			"• タンポ印刷を施したフェイスパーツが3種類付属。あばたーふみなの活き活きとした表情を再現。",
+			"• アーマーを外した状態も再現可能。",
+			"• ライフル持ち手や平手など表情豊かなハンドパーツが付属。",
+			"• Figure-rise Standardならではの表現力で、しなやかなポージングも表現可能。"
 		],
 		"en": [
-			"Distribution starts from 2023106! From the 10th anniversary video of the \"Gundam Build Series \" \" Gundam Build Metaverse \", \" Fumina Abata\", who is active in the Metaverse space, appears in Figure-rise Standard!",
-			"• Two types of bangs parts are included for \"Gundam Build Metaverse \" and \" Gundam Build Fighters Try\".",
+			"Distribution starts from 2023106! From the 10th anniversary video of the \"Gundam Build Series\" \"Gundam Build Metaverse\", \"Fumina Abata\", who is active in the Metaverse space, appears in Figure-rise Standard!",
+			"• Two types of bangs parts are included for \"Gundam Build Metaverse\" and \"Gundam Build Fighters Try\".",
 			"• Three types of face parts with tampo printing are included. Reproduces Abata Fumina's lively expression.",
 			"• Can also be recreated without armor.",
 			"• Comes with expressive hand parts such as a rifle handle and open hand.",
 			"• With the expressive power unique to Figure-rise Standard, flexible poses can be expressed."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"フェイスパーツ(タンポ印刷)×３種",
-			"差し替え用前髪パーツ×１",
-			"ハンドパーツ×１式",
-			"アーマーパーツ×1式",
-			"ライフル×１",
-			"シール×１"
-		],
-		"en": [
-			"Face parts (tampo printing) x 3 types",
-			"Replacement bangs parts x 1",
-			"Hand parts x 1 set",
-			"Armor parts x 1 set",
-			"Rifle x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "フェイスパーツ(タンポ印刷)×３種",
+				"en": "Face parts (tampo printing) x 3 types"
+			}
+		},
+		{
+			"name": {
+				"ja": "差し替え用前髪パーツ×１",
+				"en": "Replacement bangs parts x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "アーマーパーツ",
+				"en": "armor parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ライフル×１",
+				"en": "Rifle x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205452_1.jpg",
 				"path": "/images/items/01_5098/1000205452_1.jpg",
 				"hash": "db8f1934edf4f5d2af88898cae1c7852"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205452_10.jpg",
-				"path": "/images/items/01_5098/1000205452_10.jpg",
-				"hash": "ac365df9022b63835b635b258e0c62a9"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205452_11.jpg",
-				"path": "/images/items/01_5098/1000205452_11.jpg",
-				"hash": "cc90595a9bff477176a66fac2b7df41f"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205452_12.jpg",
-				"path": "/images/items/01_5098/1000205452_12.jpg",
-				"hash": "573c927d7b8bd75032fc7e4e3fd2c279"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205452_2.jpg",
@@ -115,17 +151,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205452_9.jpg",
 				"path": "/images/items/01_5098/1000205452_9.jpg",
 				"hash": "c7fb59f92ce40ff633cee215ed773dd4"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205452_10.jpg",
+				"path": "/images/items/01_5098/1000205452_10.jpg",
+				"hash": "ac365df9022b63835b635b258e0c62a9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205452_11.jpg",
+				"path": "/images/items/01_5098/1000205452_11.jpg",
+				"hash": "cc90595a9bff477176a66fac2b7df41f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205452_12.jpg",
+				"path": "/images/items/01_5098/1000205452_12.jpg",
+				"hash": "573c927d7b8bd75032fc7e4e3fd2c279"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5098/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["gundambuildmetaverse"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": [],
-	"manual": {
-		"id": "1420",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1420/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5098/"
 }

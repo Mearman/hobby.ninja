@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "Figure-rise Standard ウルトラマンブレーザー",
-		"en": "Figure-rise Standard ULTRAMAN BLAZAR"
+		"en": "Figure-rise Standard Ultraman Blazer"
 	},
+	"brands": [
+		{
+			"id": "figurerise-standard",
+			"url": "https://bandai-hobby.net/brand/figurerise-standard/",
+			"ja": "Figure-rise Standard[フィギュアライズ スタンダード]"
+		}
+	],
+	"series": [
+		{
+			"id": "ultraman",
+			"url": "https://bandai-hobby.net/series/ultraman/",
+			"ja": "ウルトラマン"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5371",
+			"url": "https://bandai-hobby.net/item/01_5371/",
+			"ja": "Figure-rise Standard ウルトラマンティガ マルチタイプ"
+		},
+		{
+			"id": "01_5198",
+			"url": "https://bandai-hobby.net/item/01_5198/",
+			"ja": "Figure-rise Standard ウルトラマンジード プリミティブ"
+		},
+		{
+			"id": "01_5096",
+			"url": "https://bandai-hobby.net/item/01_5096/",
+			"ja": "Figure-rise Standard ULTRAMAN SUIT JACK -ACTION-"
+		},
+		{
+			"id": "01_5006",
+			"url": "https://bandai-hobby.net/item/01_5006/",
+			"ja": "Figure-rise Standard ULTRAMAN SUIT ZERO〈SC仕様〉 -ACTION-"
+		}
+	],
 	"price": {
 		"amount": 3740,
 		"currency": "JPY",
@@ -39,13 +82,47 @@
 			"• The parts on the back of the neck are movable, allowing for poses such as facing upwards.",
 			"• Two types of parts for the \"Color Timer\" are included, and you can create a production in the play by replacing the parts.",
 			"• Expressive hand parts are also included.",
-			"• The blade of the included \"Tilsonite Sword \" uses \" polarized molding\" whose color changes like a gradation depending on how the light hits it."
+			"• The blade of the included \"Tilsonite Sword\" uses \"polarized molding\" whose color changes like a gradation depending on how the light hits it."
 		]
 	},
-	"accessories": {
-		"ja": ["カラータイマー用パーツ×2種", "ハンドパーツ×1式", "チルソナイトソード×1", "シール×1"],
-		"en": ["Color timer parts x 2 types", "Hand parts x 1 set", "Chilsonite sword x1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "カラータイマー用パーツ",
+				"en": "Color timer parts"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "チルソナイトソード",
+				"en": "chilsonite sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -91,9 +168,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5046/",
-	"brandIds": ["figurerise-standard"],
-	"seriesIds": ["ultraman"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5371", "01_5198", "01_5096", "01_5006"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5046/"
 }

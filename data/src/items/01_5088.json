@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 eEXM-30 エスポジット γ",
-		"en": "30MM 1/144 eEXM-30 ESPOSSITO γ"
+		"en": "30MM 1/144 eEXM-30 Esposito γ"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1628,
 		"currency": "JPY",
@@ -18,50 +61,68 @@
 		"day": 16
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MM カラバリグランプリ第２位！カラー「レッド」の「エスポジット」が登場！",
-			"■「30MM カラバリグランプリ」にて過去最大級の投票数で選ばれた、30MMファン注目のアイテム第２位。",
-			"■機体をコアユニット化することで、可変機カスタマイズのベースとなる機構を搭載。",
-			"■パーツの差し替えで飛行形態への変形が可能。",
-			"■カスタマイズ用のアーマーと武装パーツが付属。",
-			"■エスポジット同士や別売りのエグザビークル等と組み合わせることで、さらに強化が可能。"
+			"• 「30MM カラバリグランプリ」にて過去最大級の投票数で選ばれた、30MMファン注目のアイテム第２位。",
+			"• 機体をコアユニット化することで、可変機カスタマイズのベースとなる機構を搭載。",
+			"• パーツの差し替えで飛行形態への変形が可能。",
+			"• カスタマイズ用のアーマーと武装パーツが付属。",
+			"• エスポジット同士や別売りのエグザビークル等と組み合わせることで、さらに強化が可能。"
 		],
 		"en": [
-			"30MM Color Variation Grand Prix 2nd place! \"Esposito \" in color \" red\" is now available!",
+			"30MM Color Variation Grand Prix 2nd place! \"Esposito\" in color \"red\" is now available!",
 			"• The second most popular item among 30MM fans, chosen with the largest number of votes ever at the \"30MM Color Variation Grand Prix.\"",
 			"• By making the aircraft a core unit, it is equipped with a mechanism that becomes the basis for variable machine customization.",
-			"• Can be transformed into flight mode by replacing parts.",
+			"• Can be transformed into flight form by replacing parts.",
 			"• Comes with armor and weapon parts for customization.",
 			"• It can be further strengthened by combining Esposits with each other or with separately sold Exa Vehicles."
 		]
 	},
-	"accessories": {
-		"ja": ["ウィングライフル×2", "ダブルバレルライフル×1", "アーマー×1式", "ショイントパーツ×1式"],
-		"en": ["Wing rifle x2", "Double barrel rifle x 1", "Armor x 1 set", "Point parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ウィングライフル",
+				"en": "wing rifle"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ダブルバレルライフル",
+				"en": "double barrel rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "アーマー",
+				"en": "armor"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ショイントパーツ",
+				"en": "point parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205432_1.jpg",
 				"path": "/images/items/01_5088/1000205432_1.jpg",
 				"hash": "ef03124790d8aeac5fad476aba6cd42b"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205432_10.jpg",
-				"path": "/images/items/01_5088/1000205432_10.jpg",
-				"hash": "212064d408264669132557eb100349d5"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205432_11.jpg",
-				"path": "/images/items/01_5088/1000205432_11.jpg",
-				"hash": "d3e4eac4b860408b00adf6c052ef3c6f"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205432_12.jpg",
-				"path": "/images/items/01_5088/1000205432_12.jpg",
-				"hash": "460a4506eb6668712b60c4269fd2f2c0"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205432_2.jpg",
@@ -102,15 +163,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205432_9.jpg",
 				"path": "/images/items/01_5088/1000205432_9.jpg",
 				"hash": "c89abf1e6c53eba46af0d31397179c72"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205432_10.jpg",
+				"path": "/images/items/01_5088/1000205432_10.jpg",
+				"hash": "212064d408264669132557eb100349d5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205432_11.jpg",
+				"path": "/images/items/01_5088/1000205432_11.jpg",
+				"hash": "d3e4eac4b860408b00adf6c052ef3c6f"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205432_12.jpg",
+				"path": "/images/items/01_5088/1000205432_12.jpg",
+				"hash": "460a4506eb6668712b60c4269fd2f2c0"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5088/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3774",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3774/"

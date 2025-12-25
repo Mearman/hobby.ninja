@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガンダムパーフェクトストライクフリーダムルージュ",
-		"en": "HG 1/144 GUNDAM PERFECT STRIKE FREEDOM ROUGE"
+		"en": "HG 1/144 Gundam Perfect Strike Freedom Rouge"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundambuildmetaverse",
+			"url": "https://bandai-hobby.net/series/gundambuildmetaverse/",
+			"ja": "ガンダムビルドメタバース"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5236",
+			"url": "https://bandai-hobby.net/item/01_5236/",
+			"ja": "HG 1/144 ガンダムアメイジングバルバトスルプス"
+		},
+		{
+			"id": "01_5235",
+			"url": "https://bandai-hobby.net/item/01_5235/",
+			"ja": "HG 1/144 ガンダムダブルオーコマンドクアンタ・デザートタイプ"
+		},
+		{
+			"id": "01_5083",
+			"url": "https://bandai-hobby.net/item/01_5083/",
+			"ja": "HG 1/144 ベアッガイオハナ & アロハロ セット"
+		},
+		{
+			"id": "01_5025",
+			"url": "https://bandai-hobby.net/item/01_5025/",
+			"ja": "HG 1/144 ティフォエウスガンダム・キメラ"
+		}
+	],
+	"manual": {
+		"id": "1289",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1289"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 2530,
 		"currency": "JPY",
@@ -18,97 +66,123 @@
 		"day": 13
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"2023年10月6日より、いよいよ配信開始！「ガンダムビルドシリーズ」10周年記念映像『ガンダムビルドメタバース』より、「ガンダムパーフェクトストライクフリーダムルージュ」がパーフェクト装備を携えてHGで登場！",
-			"■レーザー対艦刀［シュベルトゲベール］と超高インパルス砲［アグニ］は分離・合体が可能。合体により、大型武装であるスーパーシュベルトゲベールやスーパーアグニを再現できる。",
-			"■ロケットアンカー［パンツァーアイゼン］の射出状態はリード線で表現。",
-			"■機動兵装ウイングに装着されたスーパードラグーンは着脱が可能。",
-			"■各種のビームエフェクトをクリアパーツで再現。"
+			"• レーザー対艦刀［シュベルトゲベール］と超高インパルス砲［アグニ］は分離・合体が可能。合体により、大型武装であるスーパーシュベルトゲベールやスーパーアグニを再現できる。",
+			"• ロケットアンカー［パンツァーアイゼン］の射出状態はリード線で表現。",
+			"• 機動兵装ウイングに装着されたスーパードラグーンは着脱が可能。",
+			"• 各種のビームエフェクトをクリアパーツで再現。"
 		],
 		"en": [
-			"Distribution starts from 2023106! From the \"Gundam Build Series \" 10th anniversary video \" Gundam Build Metaverse \", \" Gundam Perfect Strike Freedom Rouge\" appears in HG with perfect equipment!",
-			"• Laser anti-ship sword [Schwert Geber] and super high impulse cannon [Agni] can be separated and combined. By combining, you can reproduce the large armed Super Schwertgeber and Super Agni.",
+			"Distribution starts from 2023106! From the \"Gundam Build Series\" 10th anniversary video \"Gundam Build Metaverse\", \"Gundam Perfect Strike Freedom Rouge\" appears in HG with perfect equipment!",
+			"• Laser anti-ship sword [Schwertgeber] and super high impulse cannon [Agni] can be separated and combined. By combining, you can reproduce the large armed Super Schwertgeber and Super Agni.",
 			"• The ejection state of the rocket anchor [Panzer Eisen] is expressed with lead wires.",
 			"• The super dragoon attached to the mobile weapon wing can be attached and detached.",
 			"• Reproduce various beam effects with clear parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"レーザー対艦刀[シュベルトゲベール]×１",
-			"超高インパルス砲[アグニ]×１",
-			"ビームシールド×１",
-			"ビームエフェクト×1式",
-			"ハンドパーツ×１式",
-			"ジョイントパーツ×１",
-			"リード線×1",
-			"シール×1"
-		],
-		"en": [
-			"Laser anti-ship sword [Schwertgeber] x 1",
-			"Super high impulse cannon [Agni] x 1",
-			"Beam Seal×1",
-			"Beam effect x 1",
-			"Hand parts x 1 set",
-			"Joint parts x 1",
-			"Lead wire x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "レーザー対艦刀[シュベルトゲベール]×１",
+				"en": "Laser anti-ship sword [Schwertgeber] x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "超高インパルス砲[アグニ]×１",
+				"en": "Super high impulse cannon [Agni] x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームシールド×１",
+				"en": "Beam Seal×1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームエフェクト",
+				"en": "beam effect"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ×１",
+				"en": "Joint parts x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "リード線",
+				"en": "lead wire"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5936.jpg",
+				"src": "https://bandai-hobby.net/images/153_5936_s_hfx82xoxl3wfd5vk2njmiscffv8c.jpg",
 				"path": "/images/items/01_5071/153_5936.jpg",
 				"hash": "e48c33648993339c82578498ef034661"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5936.jpg",
+				"src": "https://bandai-hobby.net/images/155_5936_s_0mt3sa8jnkrpabikb5250jl0y8g5.jpg",
 				"path": "/images/items/01_5071/155_5936.jpg",
 				"hash": "932978764200d6a37ea50e0006207885"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5936.jpg",
+				"src": "https://bandai-hobby.net/images/156_5936_s_e823vppck0yt010eug6t1ikgqeg8.jpg",
 				"path": "/images/items/01_5071/156_5936.jpg",
 				"hash": "b8e87c7740d793369c35da896a42c1e2"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5936.jpg",
+				"src": "https://bandai-hobby.net/images/157_5936_s_4in0m4tf68mxz5t6bdubb0rjkeq3.jpg",
 				"path": "/images/items/01_5071/157_5936.jpg",
 				"hash": "a07275e20cba948becfd35d80497d85d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5936.jpg",
+				"src": "https://bandai-hobby.net/images/158_5936_s_ztgoqpswewxly2lo1bgxsxp3dd6b.jpg",
 				"path": "/images/items/01_5071/158_5936.jpg",
 				"hash": "96a8292389280f318ec3716d13e08f8f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5936.jpg",
+				"src": "https://bandai-hobby.net/images/159_5936_s_mh7n52bcak6n3ynfjy4qbgp1qrl8.jpg",
 				"path": "/images/items/01_5071/159_5936.jpg",
 				"hash": "58b3af76c9b9c58d618de4d7b755de4d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5936.jpg",
+				"src": "https://bandai-hobby.net/images/189_5936_s_pc199myk6wvjp8ond45dm3bqgpji.jpg",
 				"path": "/images/items/01_5071/189_5936.jpg",
 				"hash": "a015dfe7a2f6fe70be46086c937e5b0d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5936.jpg",
+				"src": "https://bandai-hobby.net/images/190_5936_s_m2gah56ayuzfg1taqu6fq9v41iyw.jpg",
 				"path": "/images/items/01_5071/190_5936.jpg",
 				"hash": "9c42ac3bdcf0d7fdd96d1db077bbcd7b"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5071/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundambuildmetaverse"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5236", "01_5235", "01_5083", "01_5025"],
-	"manual": {
-		"id": "1289",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1289/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5071/"
 }

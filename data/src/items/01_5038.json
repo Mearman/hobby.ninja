@@ -5,6 +5,50 @@
 		"ja": "HG 1/144 ナラティブガンダム A装備 [クリアカラー]",
 		"en": "HG 1/144 Narrative Gundam A equipment [Clear color]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "narrative",
+			"url": "https://bandai-hobby.net/series/narrative/",
+			"ja": "機動戦士ガンダムNT[ナラティブ]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5039",
+			"url": "https://bandai-hobby.net/item/01_5039/",
+			"ja": "HG 1/144 ナラティブガンダム C装備 [覚醒イメージカラー]"
+		},
+		{
+			"id": "01_3460",
+			"url": "https://bandai-hobby.net/item/01_3460/",
+			"ja": "HG 1/144 シルヴァ・バレト・サプレッサー[クリアカラー]"
+		},
+		{
+			"id": "01_2666",
+			"url": "https://bandai-hobby.net/item/01_2666/",
+			"ja": "HG 1/144 ガンダムベース限定 ナラティブガンダム B装備"
+		},
+		{
+			"id": "01_2604",
+			"url": "https://bandai-hobby.net/item/01_2604/",
+			"ja": "HG 1/144 ガンダムベース限定 ナラティブガンダム C装備[チタニウムフィニッシュ]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 6050,
 		"currency": "JPY",
@@ -18,10 +62,9 @@
 		"day": 29
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム NT』より、「HGUC 1/144 ナラティブガンダム A装備」がクリアカラーになって登場！",
+			"『機動戦士ガンダムNT』より、「HGUC 1/144 ナラティブガンダム A装備」がクリアカラーになって登場！",
 			"• 超大型武装「A装備」をクリアカラーの成形色に変更。また素体状態もクリアカラーで再現。",
 			"• 胸部の展開ギミックにより、ダイナミックなアクションにも対応。",
 			"• 股関節の軸にはスイング機構を採用し、脚部の広範囲可動を実現。",
@@ -30,8 +73,8 @@
 			"• 大型装備を支持するスタンドが付属。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam NT \", \" HGUC 1/144 Narrative Gundam A Equipment\" is now available in clear color!",
-			"• Changed the super large weapon \"A equipment\" to a clear molding color. The body condition is also reproduced in clear color.",
+			"From \"Mobile Suit Gundam NT\", \"HGUC 1/144 Narrative Gundam A Equipment\" is now available in clear color!",
+			"• The super large weapon \"A equipment\" has been changed to a clear molding color. The body condition is also reproduced in clear color.",
 			"• The chest expansion gimmick allows for dynamic actions.",
 			"• A swing mechanism is used for the hip joint axis, allowing for a wide range of leg movement.",
 			"• Reproduces a large volume propellant tank.",
@@ -39,37 +82,55 @@
 			"• Comes with a stand to support large equipment."
 		]
 	},
-	"accessories": {
-		"ja": ["ビームサーベル×2", "大型ビームサーベル×2", "ディスプレイ台座×1", "キャノン用スタンド×2"],
-		"en": ["Beam saber x2", "Large beam saber x2", "Display pedestal x 1", "Canon stand x 2"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "beam saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "大型ビームサーベル",
+				"en": "large beam saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "ディスプレイ台座",
+				"en": "display pedestal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "キャノン用スタンド",
+				"en": "stand for canon"
+			},
+			"count": 2
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5904.jpg",
+				"src": "https://bandai-hobby.net/images/153_5904_s_4cjrlr8de3f1099m819cm4rbwxgj.jpg",
 				"path": "/images/items/01_5038/153_5904.jpg",
 				"hash": "d93c87cbebdf1d6a004405b1c2970331"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5904.jpg",
+				"src": "https://bandai-hobby.net/images/155_5904_s_7zwbrfuhemmhi6l4nzd7n48dvfhc.jpg",
 				"path": "/images/items/01_5038/155_5904.jpg",
 				"hash": "ac9f200a651d4b5862f05e3023301564"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5904.jpg",
+				"src": "https://bandai-hobby.net/images/156_5904_s_myq2mxs2fiyqmhzjbw2ym8msy5o8.jpg",
 				"path": "/images/items/01_5038/156_5904.jpg",
 				"hash": "55805726d8728768752376e353c1bebc"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5038/",
-	"brandIds": ["hg"],
-	"seriesIds": ["narrative"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5039", "01_3460", "01_2666", "01_2604"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5038/"
 }

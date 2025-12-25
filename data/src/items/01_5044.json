@@ -5,6 +5,59 @@
 		"ja": "HG 1/144 ゴーストガンダム",
 		"en": "HG 1/144 Ghost Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5986",
+			"url": "https://bandai-hobby.net/item/01_5986/",
+			"ja": "HG 1/144 リック・ドム ガイア機/オルテガ機(GQ)"
+		},
+		{
+			"id": "01_5961",
+			"url": "https://bandai-hobby.net/item/01_5961/",
+			"ja": "HG 1/144 GFreD"
+		},
+		{
+			"id": "01_5963",
+			"url": "https://bandai-hobby.net/item/01_5963/",
+			"ja": "HG 1/144 ガルスJ"
+		},
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/",
+			"ja": "HG 1/144 軽キャノン"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 6930,
 		"currency": "JPY",
@@ -17,7 +70,6 @@
 		"month": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"紫 炎 の 「 幽 霊 （ ゴ ー ス ト ） 」、 飛 来",
@@ -109,15 +161,15 @@
 			"Comes with clear effect parts that can be used to recreate the state in which the \"phantom light\" overflowing from the entire body is activated by replacing parts.",
 			"The mold, surface shape, and fluctuating shape create a flame-like shimmer throughout the entire body.",
 			"Head parts can be selected from two out of three types.",
-			"\"Forced heat dissipation mode \" and \" one eye damage state\" can be produced by replacing them.",
+			"\"Forced heat dissipation mode\" and \"one eye damage state\" can be produced by replacing them.",
 			"The characteristic face mask is expressed in a rich mold.",
 			"Two types of slashing effect parts that can reproduce the flame sword are also included.",
 			"Reproduces two types of slashing effects.",
-			"● Equipped with a mechanism to transform into a mirage bird (Mirage Wazo) form.",
+			"● Equipped with a mechanism that transforms into a mirage bird (Mirage Wazo) form.",
 			"Can transform into interplanetary cruising form \"Mirage Bird\". Adopts a deformation method using replacement parts,",
 			"Pursuing proportions during transformation. Phantom light activation state can also be reproduced.",
 			"A special joint is also included that allows you to display it in mirage bird form by combining it with the action base (sold separately).",
-			"● In combination with the action base (sold separately), you can display HG 1/144 Crossbone Gundam X-0 Full Cross (sold separately)!",
+			"● In combination with the action base (sold separately), you can display HG 1/144 Crossbone GundamX-0 Full Cross (sold separately)!",
 			"Attached weapons:",
 			"Multi-purpose attack weapon \"Peacock\"/Flame Rifle/Flame Sword",
 			"accessories:",
@@ -144,59 +196,75 @@
 			"・Product specifications are as of 20237. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["多目的攻撃兵装「クジャク」", "フレイム・ライフル", "フレイム・ソード"],
-		"en": ["Multi-purpose attack weapon \"Peacock\"", "flame rifle", "flame sword"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "多目的攻撃兵装「クジャク」",
+				"en": "Multi-purpose attack weapon \"Peacock\""
+			}
+		},
+		{
+			"name": {
+				"ja": "フレイム・ライフル",
+				"en": "flame rifle"
+			}
+		},
+		{
+			"name": {
+				"ja": "フレイム・ソード",
+				"en": "flame sword"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5910.jpg",
+				"src": "https://bandai-hobby.net/images/153_5910_s_28egh9tsx2aoipd9qdz5bsciba33.jpg",
 				"path": "/images/items/01_5044/153_5910.jpg",
 				"hash": "e74d0e7209d4eac7d1028d7d1e1a7b16"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5910.jpg",
+				"src": "https://bandai-hobby.net/images/155_5910_s_5w7vrj1pvv7yon20nuvrst9bd10g.jpg",
 				"path": "/images/items/01_5044/155_5910.jpg",
 				"hash": "f6cf5ff4c5ef5687ef35631e81a18d22"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5910.jpg",
+				"src": "https://bandai-hobby.net/images/156_5910_s_4doizbf1girxskg055ctg2b8hf1c.jpg",
 				"path": "/images/items/01_5044/156_5910.jpg",
 				"hash": "c96c04b2c47908f43f8253f7aacc07e3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5910.jpg",
+				"src": "https://bandai-hobby.net/images/157_5910_s_skmcq5gs0jnkromzcjccvyblgdyx.jpg",
 				"path": "/images/items/01_5044/157_5910.jpg",
 				"hash": "5b7a661fe1b90c6fb8a5e7ebc6217126"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5910.jpg",
+				"src": "https://bandai-hobby.net/images/158_5910_s_xrdlg76ru9e3ma451tvci4nf0ceo.jpg",
 				"path": "/images/items/01_5044/158_5910.jpg",
 				"hash": "bbbd9f0ca0fa93cd7a9befef597fff2b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5910.jpg",
+				"src": "https://bandai-hobby.net/images/159_5910_s_210jnv29ditmc9tj2juirizd4kv9.jpg",
 				"path": "/images/items/01_5044/159_5910.jpg",
 				"hash": "499bc65b99e782d79130c167ff3a0447"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5910.jpg",
+				"src": "https://bandai-hobby.net/images/189_5910_s_tnlfuhadrnf72l33p2kptpb5eb93.jpg",
 				"path": "/images/items/01_5044/189_5910.jpg",
 				"hash": "a8103ff2e61ffbbb3f4046ca3c51b441"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5910.jpg",
+				"src": "https://bandai-hobby.net/images/190_5910_s_wggcio4xork7cyqtce5dob9sxzoe.jpg",
 				"path": "/images/items/01_5044/190_5910.jpg",
 				"hash": "26076357aeae34fe914bfb2eaf16f350"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5910.jpg",
+				"src": "https://bandai-hobby.net/images/191_5910_s_yu0dzrusq3hiqo6j8wep6efleakv.jpg",
 				"path": "/images/items/01_5044/191_5910.jpg",
 				"hash": "79e44f9465086a060ab215c375c36e68"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5910.jpg",
+				"src": "https://bandai-hobby.net/images/192_5910_s_qj9oa7eol5917nrlmy5f8jhcvsqq.jpg",
 				"path": "/images/items/01_5044/192_5910.jpg",
 				"hash": "08d16966c851965ce1e7d6dd27550d67"
 			}
@@ -204,14 +272,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5044/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla", "hguc"],
-	"seriesIds": [],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5986", "01_5961", "01_5963", "01_5951"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2495",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2495/"

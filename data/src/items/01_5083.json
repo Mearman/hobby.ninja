@@ -3,8 +3,56 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ベアッガイオハナ & アロハロ セット",
-		"en": "HG 1/144 BEARGGUY OHANA & ALOHARO SET"
+		"en": "HG 1/144 Bearggai Ohana & Alohalo Set"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "gundambuildmetaverse",
+			"url": "https://bandai-hobby.net/series/gundambuildmetaverse/",
+			"ja": "ガンダムビルドメタバース"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5236",
+			"url": "https://bandai-hobby.net/item/01_5236/",
+			"ja": "HG 1/144 ガンダムアメイジングバルバトスルプス"
+		},
+		{
+			"id": "01_5235",
+			"url": "https://bandai-hobby.net/item/01_5235/",
+			"ja": "HG 1/144 ガンダムダブルオーコマンドクアンタ・デザートタイプ"
+		},
+		{
+			"id": "01_5071",
+			"url": "https://bandai-hobby.net/item/01_5071/",
+			"ja": "HG 1/144 ガンダムパーフェクトストライクフリーダムルージュ"
+		},
+		{
+			"id": "01_5025",
+			"url": "https://bandai-hobby.net/item/01_5025/",
+			"ja": "HG 1/144 ティフォエウスガンダム・キメラ"
+		}
+	],
+	"manual": {
+		"id": "1354",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1354"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 3190,
 		"currency": "JPY",
@@ -18,18 +66,17 @@
 		"day": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"2023年10月6日より、いよいよ配信開始！「ガンダムビルドシリーズ」10周年記念映像『ガンダムビルドメタバース』より、可愛らしいマスコットキャラクターのセットが南国仕様で登場！",
-			"■ベアッガイオハナ、プチッガイ、アロハロのセット商品。",
-			"■ベアッガイオハナはフェイスパーツとアームパーツが差し替え可能。耳や口など細部も可動しポーズに表情付けができる。",
-			"■ベアッガイオハナとプチッガイとの連動用ジョイントが付属。手つなぎ状態やおんぶ状態を表現可能。",
-			"■カスタマイズ用ジョイントや武器持ち手が付属。別売り商品とのカスタマイズを楽しめる。",
-			"■南国をイメージしたマーキングシールが付属。デコレーションを楽しもう！"
+			"• ベアッガイオハナ、プチッガイ、アロハロのセット商品。",
+			"• ベアッガイオハナはフェイスパーツとアームパーツが差し替え可能。耳や口など細部も可動しポーズに表情付けができる。",
+			"• ベアッガイオハナとプチッガイとの連動用ジョイントが付属。手つなぎ状態やおんぶ状態を表現可能。",
+			"• カスタマイズ用ジョイントや武器持ち手が付属。別売り商品とのカスタマイズを楽しめる。",
+			"• 南国をイメージしたマーキングシールが付属。デコレーションを楽しもう！"
 		],
 		"en": [
-			"Distribution starts from 2023106! From the 10th anniversary video of the \"Gundam Build Series \" \" Gundam Build Metaverse\", a set of cute mascot characters is now available in tropical style!",
+			"Distribution starts from 2023106! From the 10th anniversary video of the \"Gundam Build Series\" \"Gundam Build Metaverse\", a set of cute mascot characters is now available in tropical style!",
 			"• Set products of Bearggai Ohana, Petitgguy, and Alohalo.",
 			"• Bearggai Ohana's face parts and arm parts can be replaced. Details such as ears and mouth can be moved to add expression to the pose.",
 			"• Comes with an interlocking joint for Bearggai Ohana and Petit'gguy. It is possible to express the state of holding hands or carrying a piggyback state.",
@@ -37,55 +84,80 @@
 			"• Comes with a marking seal inspired by a tropical country. Let's enjoy decoration!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"差し替え用フェイスパーツ×１",
-			"差し替え用アームパーツ×１",
-			"手つなぎ用ジョイント×１",
-			"おんぶ用ジョイント×１",
-			"武器持ち手×２",
-			"カスタマイズ用ジョイント×１式",
-			"ウクレレ×１",
-			"手足パーツ(ハロ)×１式",
-			"プチッガイ用台座×１",
-			"ハロ用台座×１",
-			"シール×１"
-		],
-		"en": [
-			"Replacement face parts x 1",
-			"Replacement arm parts x 1",
-			"Joint for holding hands x 1",
-			"Piggyback joint x 1",
-			"Weapon handle x2",
-			"Customization joint x 1 set",
-			"Ukulele x 1",
-			"Limb parts (halo) x 1 set",
-			"Pedestal for Petitgguy x 1",
-			"Halo pedestal x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "差し替え用フェイスパーツ×１",
+				"en": "Replacement face parts x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "差し替え用アームパーツ×１",
+				"en": "Replacement arm parts x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "手つなぎ用ジョイント×１",
+				"en": "Joint for holding hands x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "おんぶ用ジョイント×１",
+				"en": "Piggyback joint x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "武器持ち手×２",
+				"en": "Weapon handle x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "カスタマイズ用ジョイント×１式",
+				"en": "Customization joint x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ウクレレ×１",
+				"en": "Ukulele x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "手足パーツ(ハロ)×１式",
+				"en": "Limb parts (halo) x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "プチッガイ用台座×１",
+				"en": "Pedestal for Petitgguy x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハロ用台座×１",
+				"en": "Halo pedestal x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205423_1.jpg",
 				"path": "/images/items/01_5083/1000205423_1.jpg",
 				"hash": "3eedb8319f456eb2d0e7428f91b6407c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205423_10.jpg",
-				"path": "/images/items/01_5083/1000205423_10.jpg",
-				"hash": "171450cccfc5a4de778f4a8b288c0117"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205423_11.jpg",
-				"path": "/images/items/01_5083/1000205423_11.jpg",
-				"hash": "aa6d12128a46fb501f4a0366999293d9"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205423_12.jpg",
-				"path": "/images/items/01_5083/1000205423_12.jpg",
-				"hash": "db34fce80ddc2438ca555dd66711841c"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205423_2.jpg",
@@ -126,17 +198,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205423_9.jpg",
 				"path": "/images/items/01_5083/1000205423_9.jpg",
 				"hash": "19436fdf402511ddbf1c3f7b3393b9bd"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205423_10.jpg",
+				"path": "/images/items/01_5083/1000205423_10.jpg",
+				"hash": "171450cccfc5a4de778f4a8b288c0117"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205423_11.jpg",
+				"path": "/images/items/01_5083/1000205423_11.jpg",
+				"hash": "aa6d12128a46fb501f4a0366999293d9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205423_12.jpg",
+				"path": "/images/items/01_5083/1000205423_12.jpg",
+				"hash": "db34fce80ddc2438ca555dd66711841c"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5083/",
-	"brandIds": ["hg"],
-	"seriesIds": ["gundambuildmetaverse"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5236", "01_5235", "01_5071", "01_5025"],
-	"manual": {
-		"id": "1354",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1354/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5083/"
 }

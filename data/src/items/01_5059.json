@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 eEXM GIG-C02 プロヴェデル (type-COMMAND 02)",
-		"en": "30MM 1/144 eEXM GIG-C02 PROVEDEL (type-COMMAND 02)"
+		"en": "30MM 1/144 eEXM GIG-C02 Provedel (type-COMMAND 02)"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4400,
 		"currency": "JPY",
@@ -18,18 +61,17 @@
 		"day": 20
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"地球連合軍より30MM史上最大スケールの大型エグザマクスが登場！",
 			"既存のアイテムを搭乗させる“ライドオンカスタマイズ”が可能！",
-			"■頭部パーツは新規造形。",
-			"■全高約200mm～を誇る迫力のスケール感。",
-			"■エグザマクス搭乗形態とREX形態への差し替え式の変形ギミックを搭載。",
-			"■エグザマクス搭乗形態では付属するバックパックとワニスチューブを既存アイテムにつないで搭乗させることが可能。",
-			"■付属のヘビービームマグナムは分解して搭乗部への接続が可能。",
-			"■腕部・脚部関節は挟み込み構造により保持力が向上。別売りアイテムに付属するポリキャップをはめて3mm軸を創出することもできる。",
-			"■3mmジョイント、Cタイプジョイント、ディテールカバーパーツ等、カスタマイズに欠かせないマルチジョイントがセットになったランナーが付属。"
+			"• 頭部パーツは新規造形。",
+			"• 全高約200mm～を誇る迫力のスケール感。",
+			"• エグザマクス搭乗形態とREX形態への差し替え式の変形ギミックを搭載。",
+			"• エグザマクス搭乗形態では付属するバックパックとワニスチューブを既存アイテムにつないで搭乗させることが可能。",
+			"• 付属のヘビービームマグナムは分解して搭乗部への接続が可能。",
+			"• 腕部・脚部関節は挟み込み構造により保持力が向上。別売りアイテムに付属するポリキャップをはめて3mm軸を創出することもできる。",
+			"• 3mmジョイント、Cタイプジョイント、ディテールカバーパーツ等、カスタマイズに欠かせないマルチジョイントがセットになったランナーが付属。"
 		],
 		"en": [
 			"From the Earth Allied Forces, a large 30MM Examax with the largest scale in history is now available!",
@@ -43,67 +85,100 @@
 			"• Comes with a Runner set that includes multi-joints essential for customization, such as 3mm joints, C-type joints, and detail cover parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ヘビービームマグナム×１",
-			"ハンドパーツ　平手(左右)、握り手(左右)",
-			"搭乗機体用バックパック×１",
-			"ライド用中継パーツ×１",
-			"ワニスチューブ×２",
-			"リード線×２",
-			"マルチジョイント×1式",
-			"シール×１"
-		],
-		"en": [
-			"Heavy beam magnum x 1",
-			"Hand parts Open hands (left and right), grip hands (left and right)",
-			"Backpack for boarding aircraft x 1",
-			"Ride relay parts x 1",
-			"Varnish tube x 2",
-			"Lead wire x 2",
-			"Multi-joint x 1 set",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ヘビービームマグナム×１",
+				"en": "Heavy beam magnum x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ　平手(左右)、握り手(左右)",
+				"en": "Hand parts Open hands (left and right), grip hands (left and right)"
+			}
+		},
+		{
+			"name": {
+				"ja": "搭乗機体用バックパック×１",
+				"en": "Backpack for boarding aircraft x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ライド用中継パーツ×１",
+				"en": "Ride relay parts x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ワニスチューブ×２",
+				"en": "Varnish tube x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "リード線×２",
+				"en": "Lead wire x 2"
+			}
+		},
+		{
+			"name": {
+				"ja": "マルチジョイント",
+				"en": "multi joint"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール×１",
+				"en": "Seal×1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5925.jpg",
+				"src": "https://bandai-hobby.net/images/153_5925_s_6kh2odyqbahallrjylixv5m9c497.jpg",
 				"path": "/images/items/01_5059/153_5925.jpg",
 				"hash": "3461fc7fdcf6efa5bb1a417825a94054"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5925.jpg",
+				"src": "https://bandai-hobby.net/images/155_5925_s_elkt8e2n8tqlzqvhw9l7ezu65dxq.jpg",
 				"path": "/images/items/01_5059/155_5925.jpg",
 				"hash": "a01c34a3e803f0a601740ca70cf7d43f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5925.jpg",
+				"src": "https://bandai-hobby.net/images/156_5925_s_g38phoej4z37evz07v0qgrcrbqgi.jpg",
 				"path": "/images/items/01_5059/156_5925.jpg",
 				"hash": "f383cbfc9e5a15639496cf65ca7515f8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5925.jpg",
+				"src": "https://bandai-hobby.net/images/157_5925_s_fsu60122aaznge357vclqf2mi498.jpg",
 				"path": "/images/items/01_5059/157_5925.jpg",
 				"hash": "b09853d3f06c79d221e5b49e842d4c6d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5925.jpg",
+				"src": "https://bandai-hobby.net/images/158_5925_s_rx1pvb5xtv2zxmmbgb46zlgcb46m.jpg",
 				"path": "/images/items/01_5059/158_5925.jpg",
 				"hash": "9616550abc24ca193e3f275565134f35"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5925.jpg",
+				"src": "https://bandai-hobby.net/images/159_5925_s_f7jzso4c8ivn43un1uuxcvjl6xjk.jpg",
 				"path": "/images/items/01_5059/159_5925.jpg",
 				"hash": "0c2a2bfb63faa3192b1495fe5c7b0e40"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5925.jpg",
+				"src": "https://bandai-hobby.net/images/189_5925_s_hte6k0yj5065zlsqd7l94r7rw4zu.jpg",
 				"path": "/images/items/01_5059/189_5925.jpg",
 				"hash": "ba879a2433a07b73b0e290c26176604a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5925.jpg",
+				"src": "https://bandai-hobby.net/images/190_5925_s_dczbnq169j4cz9vzb0k5v0rhq2m5.jpg",
 				"path": "/images/items/01_5059/190_5925.jpg",
 				"hash": "5467b4ab86aa27222a64723e89e16740"
 			}
@@ -111,10 +186,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5059/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3771",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3771/"

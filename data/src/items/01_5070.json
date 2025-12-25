@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "プラノサウルス プテラノドン",
-		"en": "PLANNOSAURUS Pteranodon"
+		"en": "planosaurus pteranodon"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "plannosaurus",
+			"url": "https://bandai-hobby.net/series/plannosaurus/",
+			"ja": "プラノサウルス"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5501",
+			"url": "https://bandai-hobby.net/item/01_5501/",
+			"ja": "プラノサウルス テリジノサウルス"
+		},
+		{
+			"id": "01_5389",
+			"url": "https://bandai-hobby.net/item/01_5389/",
+			"ja": "プラノサウルス ブラキオサウルス"
+		},
+		{
+			"id": "01_5390",
+			"url": "https://bandai-hobby.net/item/01_5390/",
+			"ja": "プラノサウルス 陸海空恐竜セット"
+		},
+		{
+			"id": "01_5248",
+			"url": "https://bandai-hobby.net/item/01_5248/",
+			"ja": "プラノサウルス パラサウロロフス"
+		}
+	],
 	"price": {
 		"amount": 1595,
 		"currency": "JPY",
@@ -38,37 +75,40 @@
 			"• Easy to assemble as there is no need for tools such as nippers or adhesives.",
 			"• The giant beak, which has a delicate skeleton covered with tough keratin, has been sculpted into three-dimensional form based on the latest theory, including the structure of its mouth.",
 			"• The wing membrane, which symbolizes pterosaurs, realistically expresses the flow of strong muscular fibers on the surface.",
-			"• The unique \"wing bones\" of pterosaurs, which are said to have been used as elevators, are recreated using the latest reconstruction.",
-			"• The special skeletal structure where the shoulder blades and torso vertebrae act as joints to produce powerful wing flapping has also been faithfully reproduced.",
+			"• The pterosaur-specific \"wing span\", which is said to have been used as an elevator, is recreated using the latest reconstruction.",
+			"• The special skeletal structure where the shoulder blades and torso vertebrae form joints to create powerful flapping wings is also faithfully reproduced.",
 			"• \"Landing condition\" can be reproduced by selecting parts. It is possible to reproduce the wrinkles in the wing membrane when the wings are folded and the state in which the feet are in contact with the heel on the ground.",
 			"• By using the pedestal, it is possible to display it in its flying form."
 		]
 	},
-	"accessories": {
-		"ja": ["着地状態用パーツ×１式", "シール×1", "台座×1"],
-		"en": ["Parts for landing condition x 1 set", "Seal×1", "Pedestal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "着地状態用パーツ×１式",
+				"en": "Parts for landing condition x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "台座",
+				"en": "pedestal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205371_1.jpg",
 				"path": "/images/items/01_5070/1000205371_1.jpg",
 				"hash": "38ce66834084855dc07f944face2947f"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205371_10.jpg",
-				"path": "/images/items/01_5070/1000205371_10.jpg",
-				"hash": "5c087d9327ec72aec20358eb13f27beb"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205371_11.jpg",
-				"path": "/images/items/01_5070/1000205371_11.jpg",
-				"hash": "eac2ac4e32ed6ea0be0cf13e4ab18c59"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205371_12.jpg",
-				"path": "/images/items/01_5070/1000205371_12.jpg",
-				"hash": "0185dfd05852178c679798d71b816925"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205371_2.jpg",
@@ -109,13 +149,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205371_9.jpg",
 				"path": "/images/items/01_5070/1000205371_9.jpg",
 				"hash": "448b63be7646efbfcf22dfa9d4f789e3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205371_10.jpg",
+				"path": "/images/items/01_5070/1000205371_10.jpg",
+				"hash": "5c087d9327ec72aec20358eb13f27beb"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205371_11.jpg",
+				"path": "/images/items/01_5070/1000205371_11.jpg",
+				"hash": "eac2ac4e32ed6ea0be0cf13e4ab18c59"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205371_12.jpg",
+				"path": "/images/items/01_5070/1000205371_12.jpg",
+				"hash": "0185dfd05852178c679798d71b816925"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5070/",
-	"brandIds": [],
-	"seriesIds": ["plannosaurus"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5501", "01_5389", "01_5390", "01_5248"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5070/"
 }

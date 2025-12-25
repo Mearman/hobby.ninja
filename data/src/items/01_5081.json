@@ -3,8 +3,39 @@
 	"type": "item",
 	"name": {
 		"ja": "ポケモンプラモコレクション クイック!! 17 ゼニガメ",
-		"en": "Pokémon Model Kit QUICK!! 17 SQUIRTLE"
+		"en": "Pokemon Plastic Model Collection Quick!! 17 Squirtle"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "pokemon",
+			"url": "https://bandai-hobby.net/series/pokemon/",
+			"ja": "ポケットモンスター"
+		}
+	],
+	"categories": [],
+	"relatedItems": [
+		{
+			"id": "01_5984",
+			"url": "https://bandai-hobby.net/item/01_5984/",
+			"ja": "ポケモンプラモコレクション 60 セレクトシリーズ コライドン"
+		},
+		{
+			"id": "01_5958",
+			"url": "https://bandai-hobby.net/item/01_5958/",
+			"ja": "ポケモンプラモコレクション 59 セレクトシリーズ ミライドン"
+		},
+		{
+			"id": "01_5947",
+			"url": "https://bandai-hobby.net/item/01_5947/",
+			"ja": "ポケモンプラモコレクション クイック!! 23 ジラーチ"
+		},
+		{
+			"id": "01_5568",
+			"url": "https://bandai-hobby.net/item/01_5568/",
+			"ja": "ポケモンプラモコレクション 58 セレクトシリーズ グレンアルマ"
+		}
+	],
 	"price": {
 		"amount": 715,
 		"currency": "JPY",
@@ -35,13 +66,18 @@
 			"• Simple specifications that make you imagine the finished product the moment you see the Runner.",
 			"• Touch gate method without tools.",
 			"• Pursue a cute form that can only be achieved through fixed poses.",
-			"• Enjoy displaying the three partner Pokémon you meet at the beginning of your journey together with the separately sold \"Pokémon Plastic Model Collection Quick!! 11 Charmander \" and \" Pokémon Plastic Model Collection Quick!! 13 Bulbasaur\"!"
+			"• Enjoy displaying the three partner Pokémon you meet at the beginning of your journey together with the separately sold \"Pokémon Plastic Model Collection Quick!! 11 Charmander\" and \"Pokémon Plastic Model Collection Quick!! 13 Bulbasaur\"!"
 		]
 	},
-	"accessories": {
-		"ja": ["シール×1"],
-		"en": ["Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -87,9 +123,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5081/",
-	"brandIds": [],
-	"seriesIds": ["pokemon"],
-	"categoryIds": [],
-	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5081/"
 }

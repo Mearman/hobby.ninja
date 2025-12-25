@@ -5,6 +5,60 @@
 		"ja": "ＨＧ 1/144 デミギャリソン",
 		"en": "HG 1/144 Demi Garrison"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "g-witch",
+			"url": "https://bandai-hobby.net/series/g-witch/",
+			"ja": "機動戦士ガンダム 水星の魔女"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216474",
+			"url": "https://p-bandai.jp/item/item-1000216474/",
+			"ja": "ＨＧ 1/144 デスルター"
+		},
+		{
+			"id": "item-1000211616",
+			"url": "https://p-bandai.jp/item/item-1000211616/",
+			"ja": "ＨＧ 1/144 ベギルベウトルシュ(ケナンジ小隊所属機/リドリック小隊所属機)"
+		},
+		{
+			"id": "01_5422",
+			"url": "https://bandai-hobby.net/item/01_5422/",
+			"ja": "HG 1/144 ガンダムベース限定 ガンダムキャリバーン [クリアカラー]"
+		},
+		{
+			"id": "item-1000203130",
+			"url": "https://p-bandai.jp/item/item-1000203130/",
+			"ja": "FULL MECHANICS 1/100 ガンダムエアリアル パーメットスコア・シックス"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 12
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -124,59 +177,75 @@
 			"・Product specifications are as of 20238. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["ビームライフル2種", "バズーカ", "ビームサーベル"],
-		"en": ["2 types of beam rifles", "bazooka", "beam saber"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル2種",
+				"en": "2 types of beam rifles"
+			}
+		},
+		{
+			"name": {
+				"ja": "バズーカ",
+				"en": "bazooka"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "beam saber"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5915.jpg",
+				"src": "https://bandai-hobby.net/images/153_5915_s_oubwgr04eqhilh5s2sxt6c0flpz8.jpg",
 				"path": "/images/items/01_5049/153_5915.jpg",
 				"hash": "77ecad2f6ac4e98e832e3b2b2f228ac9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5915.jpg",
+				"src": "https://bandai-hobby.net/images/155_5915_s_x2wpx3faz26jj1ne4ad10lisjza0.jpg",
 				"path": "/images/items/01_5049/155_5915.jpg",
 				"hash": "6a1dd1e96997678e00ad4257f38b2963"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5915.jpg",
+				"src": "https://bandai-hobby.net/images/156_5915_s_509pt9ysdek8w427pex0f4hyrfnq.jpg",
 				"path": "/images/items/01_5049/156_5915.jpg",
 				"hash": "f3828a13fa439379390b35b3392f297a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5915.jpg",
+				"src": "https://bandai-hobby.net/images/157_5915_s_gteqygwyq9nsdi0tqhnok0lvwev8.jpg",
 				"path": "/images/items/01_5049/157_5915.jpg",
 				"hash": "38ab53b54b964d0287b29dfd2fea2ea8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5915.jpg",
+				"src": "https://bandai-hobby.net/images/158_5915_s_caqv6wqlsyi8ittvg53f2c5k3wt2.jpg",
 				"path": "/images/items/01_5049/158_5915.jpg",
 				"hash": "02f356798f445693266579604c460613"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5915.jpg",
+				"src": "https://bandai-hobby.net/images/159_5915_s_6stbvwq1xc1bllrt35dda120sxxf.jpg",
 				"path": "/images/items/01_5049/159_5915.jpg",
 				"hash": "b350d0a0274b4d5724f143785986afcd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5915.jpg",
+				"src": "https://bandai-hobby.net/images/189_5915_s_7p2bc629ibagaveymh6tsuo04f07.jpg",
 				"path": "/images/items/01_5049/189_5915.jpg",
 				"hash": "4cd0ba0ce547cbfbf213cb3e72b91cc6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5915.jpg",
+				"src": "https://bandai-hobby.net/images/190_5915_s_dw86419dftsqv69rir8howzrzqtc.jpg",
 				"path": "/images/items/01_5049/190_5915.jpg",
 				"hash": "8fa8c52d2b38877645f22a28e23cb6d4"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5915.jpg",
+				"src": "https://bandai-hobby.net/images/191_5915_s_h5igh366t1h2d151e1pieylic5rb.jpg",
 				"path": "/images/items/01_5049/191_5915.jpg",
 				"hash": "07a8575c31fc47dddc8dd2d3a8426b1c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5915.jpg",
+				"src": "https://bandai-hobby.net/images/192_5915_s_vdrvkx3tb2b242szk3ynltgxvs67.jpg",
 				"path": "/images/items/01_5049/192_5915.jpg",
 				"hash": "5ecc40e6776af294cf9904f7b6470046"
 			}
@@ -184,14 +253,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5049/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["g-witch"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203130"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2504",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2504/"

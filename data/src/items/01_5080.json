@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/72 アーロンライノ(グレイディ専用機)",
-		"en": "HG 1/72 Aaron Rhino (Grady Exclusive)"
+		"en": "HG 1/72 Aaron Rhino (Grady exclusive machine)"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "kyoukaisenki",
+			"url": "https://bandai-hobby.net/series/kyoukaisenki/",
+			"ja": "境界戦機"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5196",
+			"url": "https://bandai-hobby.net/item/01_5196/",
+			"ja": "HG 1/72 バンイップジンガー"
+		},
+		{
+			"id": "01_5183",
+			"url": "https://bandai-hobby.net/item/01_5183/",
+			"ja": "HG 1/72 アーロンライノ"
+		},
+		{
+			"id": "01_5170",
+			"url": "https://bandai-hobby.net/item/01_5170/",
+			"ja": "HG 1/72 メイレス ゴウヨウカスタム"
+		},
+		{
+			"id": "01_5171",
+			"url": "https://bandai-hobby.net/item/01_5171/",
+			"ja": "HG 1/72 境界戦機ウェポンセット8"
+		}
+	],
+	"scale": "1/72",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -18,66 +62,88 @@
 		"day": 10
 	},
 	"targetAge": 15,
-	"scale": "1/72",
 	"description": {
 		"ja": [
 			"シリーズ最新作『境界戦機 極鋼ノ装鬼』（きょうかいせんき きょっこうのそうき）より、ライバル機体「アーロンライノ(グレイディ専用機)」が登場！",
-			"■拡張性を重視しカスタマイズ用の３mm径の接続穴を各所に配置。別売りのウェポンセットシリーズと組み合わせればプラモデルオリジナルアレンジも可能。",
-			"■専用ブレード、ショートバレルライフル、チェーンガンなど多彩な武装を搭載。",
-			"■脇下には専用ブレードをマウント可能。",
-			"■ショートバレルライフルをマウントするためのジョイントパーツが付属。",
-			"■頭部パーツの差し替えで「戦闘モード」と「索敵モード」を再現可能。",
-			"■別売りの「HG 1/72 V-33 ストークキャリー」と組み合わせて輸送状態を再現可能。"
+			"• 拡張性を重視しカスタマイズ用の３mm径の接続穴を各所に配置。別売りのウェポンセットシリーズと組み合わせればプラモデルオリジナルアレンジも可能。",
+			"• 専用ブレード、ショートバレルライフル、チェーンガンなど多彩な武装を搭載。",
+			"• 脇下には専用ブレードをマウント可能。",
+			"• ショートバレルライフルをマウントするためのジョイントパーツが付属。",
+			"• 頭部パーツの差し替えで「戦闘モード」と「索敵モード」を再現可能。",
+			"• 別売りの「HG 1/72 V-33 ストークキャリー」と組み合わせて輸送状態を再現可能。"
 		],
 		"en": [
-			"From the latest series \"Kyoukai Senki Kyokko no Souki \" comes the rival aircraft \" Aaron Rhino (Grady's exclusive machine)\"!",
+			"From the latest series \"Kyoukai Senki Kyokko no Souki\" comes the rival aircraft \"Aaron Rhino (Grady's exclusive machine)\"!",
 			"• 3mm diameter connection holes are placed in various locations for customization with emphasis on expandability. If you combine it with the separately sold Weapon set series, you can create an original plastic model arrangement.",
 			"• Equipped with a variety of weapons including a special blade, short barrel rifle, and chain gun.",
 			"• A special blade can be mounted under the armpit.",
 			"• Comes with joint parts for mounting a short barrel rifle.",
-			"• \"Battle mode \" and \" enemy search mode\" can be reproduced by replacing the head parts.",
+			"• \"Battle mode\" and \"enemy search mode\" can be reproduced by replacing the head parts.",
 			"• Transport conditions can be reproduced by combining with the separately sold \"HG 1/72 V-33 Stalk Carry\"."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"専用ブレード×1",
-			"ショートバレルライフル×1",
-			"頭部差し替えパーツ×1",
-			"ハンドパーツ×1式",
-			"ジョイントパーツ×1式",
-			"シール×2種"
-		],
-		"en": [
-			"Dedicated blade x 1",
-			"Short barrel rifle x 1",
-			"Head replacement parts x 1",
-			"Hand parts x 1 set",
-			"Joint parts x 1 set",
-			"Seal×2 types"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "専用ブレード",
+				"en": "Special blade"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ショートバレルライフル",
+				"en": "short barrel rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "頭部差し替えパーツ",
+				"en": "head replacement parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205419_1.jpg",
 				"path": "/images/items/01_5080/1000205419_1.jpg",
 				"hash": "8845686db45136e876adf3f8e047a088"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205419_10.jpg",
-				"path": "/images/items/01_5080/1000205419_10.jpg",
-				"hash": "b5590bcaa7f6cae29de2253463c1a657"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205419_11.jpg",
-				"path": "/images/items/01_5080/1000205419_11.jpg",
-				"hash": "38d8e0d40a24b019c6cca01cfcf07c42"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205419_12.jpg",
-				"path": "/images/items/01_5080/1000205419_12.jpg",
-				"hash": "043d9bab043b1351a583cfcb2923fd66"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205419_2.jpg",
@@ -118,13 +184,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205419_9.jpg",
 				"path": "/images/items/01_5080/1000205419_9.jpg",
 				"hash": "177785dd3e4f8aa12e82fe702447fabf"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205419_10.jpg",
+				"path": "/images/items/01_5080/1000205419_10.jpg",
+				"hash": "b5590bcaa7f6cae29de2253463c1a657"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205419_11.jpg",
+				"path": "/images/items/01_5080/1000205419_11.jpg",
+				"hash": "38d8e0d40a24b019c6cca01cfcf07c42"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205419_12.jpg",
+				"path": "/images/items/01_5080/1000205419_12.jpg",
+				"hash": "043d9bab043b1351a583cfcb2923fd66"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5080/",
-	"brandIds": ["hg"],
-	"seriesIds": ["kyoukaisenki"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5080/"
 }

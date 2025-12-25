@@ -3,8 +3,40 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 EXM-H15C アチェルビー (TYPE-C)",
-		"en": "30MM 1/144 EXM-H15C ACERBY (TYPE-C)"
+		"en": "30MM 1/144 EXM-H15C Achelby (TYPE-C)"
 	},
+	"brands": [],
+	"series": [],
+	"categories": [
+		{
+			"id": "item_all",
+			"url": "https://bandai-hobby.net/item_all",
+			"ja": "商品一覧"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1958,
 		"currency": "JPY",
@@ -18,7 +50,6 @@
 		"day": 17
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"マクシオン軍の新EXAMACS「アチェルビー」シリーズに「TYPE-C」が登場！",
@@ -30,7 +61,7 @@
 			"• 別売りのスピナティアに付属するアーマーを、カスタマイズ可能な胸部パーツが付属。"
 		],
 		"en": [
-			"\"TYPE-C \" is now available in Maxion's new EXAMACS \" Achelby\" series!",
+			"\"TYPE-C\" is now available in Maxion's new EXAMACS \"Achelby\" series!",
 			"• An all-in-one item that includes the main body, armor parts, and weapon parts.",
 			"• Two types of armor that can be connected to the shoulders and waist are included.",
 			"• The silhouette changes by unfolding the head binder from side to side.",
@@ -39,31 +70,49 @@
 			"• Comes with a chest part that allows you to customize the armor that comes with Spinatia (sold separately)."
 		]
 	},
-	"accessories": {
-		"ja": ["ブレードサブマシンガン×1", "ハンドパーツ×１式", "アーマー×1式", "ジョイントパーツ×1式"],
-		"en": ["Blade submachine gun x 1", "Hand parts x 1 set", "Armor x 1 set", "Joint parts x 1 set"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ブレードサブマシンガン",
+				"en": "blade submachine gun"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "アーマー",
+				"en": "armor"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205417_1.jpg",
 				"path": "/images/items/01_5078/1000205417_1.jpg",
 				"hash": "e688151651d311ddcc2dc4c783dc2c10"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205417_10.jpg",
-				"path": "/images/items/01_5078/1000205417_10.jpg",
-				"hash": "63410f506015a0d647c70ad128ceb192"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205417_11.jpg",
-				"path": "/images/items/01_5078/1000205417_11.jpg",
-				"hash": "6d80721bb2630562f96617f658c3016d"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205417_12.jpg",
-				"path": "/images/items/01_5078/1000205417_12.jpg",
-				"hash": "34d016b1d4c64608246184bb8dcf390f"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205417_2.jpg",
@@ -104,15 +153,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205417_9.jpg",
 				"path": "/images/items/01_5078/1000205417_9.jpg",
 				"hash": "99bdd750081806328ed6d68b861e5df1"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205417_10.jpg",
+				"path": "/images/items/01_5078/1000205417_10.jpg",
+				"hash": "63410f506015a0d647c70ad128ceb192"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205417_11.jpg",
+				"path": "/images/items/01_5078/1000205417_11.jpg",
+				"hash": "6d80721bb2630562f96617f658c3016d"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205417_12.jpg",
+				"path": "/images/items/01_5078/1000205417_12.jpg",
+				"hash": "34d016b1d4c64608246184bb8dcf390f"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5078/",
-	"brandIds": [],
-	"seriesIds": [],
-	"categoryIds": ["product-list"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3773",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3773/"

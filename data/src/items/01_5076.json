@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "SDW HEROES 隠密ガンダムエアリアル",
-		"en": "SDW HEROES ONMITSU GUNDAM AERIAL"
+		"en": "SDW HEROES Covert Gundam Aerial"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5470",
+			"url": "https://bandai-hobby.net/item/01_5470/",
+			"ja": "SDW HEROES キャプテンクアンタ GF"
+		},
+		{
+			"id": "01_5471",
+			"url": "https://bandai-hobby.net/item/01_5471/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-B"
+		},
+		{
+			"id": "01_5472",
+			"url": "https://bandai-hobby.net/item/01_5472/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-F"
+		},
+		{
+			"id": "01_5347",
+			"url": "https://bandai-hobby.net/item/01_5347/",
+			"ja": "SDW HEROES スペリオルフォーミュラー ファイナルドラゴン[クリアカラー]"
+		}
+	],
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -22,15 +59,15 @@
 		"ja": [
 			"「ガンダム・エアリアル」×往年の名キャラクター「隠密頑駄無」×復活の輝羅鋼",
 			"待望の新旧要素を詰め込んだ新世代忍者、参上！",
-			"■輝羅鋼とは、射出成形とフィルムの貼り付けを同時に行うインモールド成形技術の応用。",
-			"■充実の装備品が付属。",
-			"■武装の組み替えで手裏剣を再現可能。",
-			"■可動に特化した内部フレームを内蔵。",
-			"■肘の可動範囲により二刀流の構えが決まる。",
-			"■別売りの「SDW HEROES 天下無双大将軍」との連動パーツが付属。"
+			"• 輝羅鋼とは、射出成形とフィルムの貼り付けを同時に行うインモールド成形技術の応用。",
+			"• 充実の装備品が付属。",
+			"• 武装の組み替えで手裏剣を再現可能。",
+			"• 可動に特化した内部フレームを内蔵。",
+			"• 肘の可動範囲により二刀流の構えが決まる。",
+			"• 別売りの「SDW HEROES 天下無双大将軍」との連動パーツが付属。"
 		],
 		"en": [
-			"\"Gundam Aerial \" x Famous Character of the Past \" Kikkushi Gundam\" x Revival of Kira Steel",
+			"\"Gundam Aerial\" x Famous Character of the Past \"Kikkushi Gundam\" x Revival of Kira Steel",
 			"The long-awaited new generation ninja packed with new and old elements has arrived!",
 			"• Kirakko is an application of in-mold molding technology that performs injection molding and film attachment at the same time.",
 			"• Comes with a full range of equipment.",
@@ -40,68 +77,98 @@
 			"• Includes interlocking parts with \"SDW HEROES Tenka Musou Taishogun\" (sold separately)."
 		]
 	},
-	"accessories": {
-		"ja": ["刀×2種", "鞘×1", "連動パーツ×1式", "シール×1"],
-		"en": ["Sword x 2 types", "Scabbard x 1", "Interlocking parts x 1 set", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "刀",
+				"en": "sword"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "種",
+				"en": "seed"
+			}
+		},
+		{
+			"name": {
+				"ja": "鞘",
+				"en": "sheath"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "連動パーツ",
+				"en": "interlocking parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5940.jpg",
+				"src": "https://bandai-hobby.net/images/153_5940_s_67ho7v08t67gvvxt2d0t6655ffqs.jpg",
 				"path": "/images/items/01_5076/153_5940.jpg",
 				"hash": "782a233add4bb835bf7579717ae56e12"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5940.jpg",
+				"src": "https://bandai-hobby.net/images/155_5940_s_yss15lntix5jkwzzm8ufaua7g4tt.jpg",
 				"path": "/images/items/01_5076/155_5940.jpg",
 				"hash": "47c164a009984972b6a7d23401614d5d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5940.jpg",
+				"src": "https://bandai-hobby.net/images/156_5940_s_ic21pdah3m79r9py1ohslgtybbpy.jpg",
 				"path": "/images/items/01_5076/156_5940.jpg",
 				"hash": "1e514cafc53a6b6fe3c400ea076cb953"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5940.jpg",
+				"src": "https://bandai-hobby.net/images/157_5940_s_il7qytv0wiwa88wb3d1eukzarpos.jpg",
 				"path": "/images/items/01_5076/157_5940.jpg",
 				"hash": "0282792aaca5c8dbd30ccb9efc8b1652"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5940.jpg",
+				"src": "https://bandai-hobby.net/images/158_5940_s_5hsetrd21slvaqirpm5jzbeo4auh.jpg",
 				"path": "/images/items/01_5076/158_5940.jpg",
 				"hash": "6ddd3eb768c2d6285630ab1876ea596f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5940.jpg",
+				"src": "https://bandai-hobby.net/images/159_5940_s_jvb5lr38x74dhwtiin935zb72lg2.jpg",
 				"path": "/images/items/01_5076/159_5940.jpg",
 				"hash": "770e5ca1e816974777da0f33141df16e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5940.jpg",
+				"src": "https://bandai-hobby.net/images/189_5940_s_2wxf4xs1hsd0ya4is1abxm3p4kvn.jpg",
 				"path": "/images/items/01_5076/189_5940.jpg",
 				"hash": "26a688ebf9705fb04c862a4f6760c5e3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5940.jpg",
+				"src": "https://bandai-hobby.net/images/190_5940_s_2l2kt96ylyo4q1l7ws05kqd30ajj.jpg",
 				"path": "/images/items/01_5076/190_5940.jpg",
 				"hash": "936b36cc7fb0040cb6424f5e07cec8ac"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5940.jpg",
+				"src": "https://bandai-hobby.net/images/191_5940_s_7ohy2bmbnh8o8lno8d9k3ws4zfzd.jpg",
 				"path": "/images/items/01_5076/191_5940.jpg",
 				"hash": "c47a5561adfabf00131062305f045914"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5940.jpg",
+				"src": "https://bandai-hobby.net/images/192_5940_s_mn8om7t5ok2g2vm9fya076xm4l18.jpg",
 				"path": "/images/items/01_5076/192_5940.jpg",
 				"hash": "652393abde0e7b74e782ba38424a55c4"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5076/",
-	"brandIds": [],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5076/"
 }

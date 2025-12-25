@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガンダムベース限定 ビルドストライクギャラクシーコスモス [プラフスキーパーティクルクリア]",
-		"en": "HG 1/144 THE GUNDAM BASE LIMITED BUILD STRIKE GALAXY COSMOS [PLAVSKY PARTICLE CLEAR]"
+		"en": "HG 1/144 Gundam Base Limited Build Strike Galaxy Cosmos [Plavsky Particle Clear]"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "buildfighters",
+			"url": "https://bandai-hobby.net/series/buildfighters/",
+			"ja": "ガンダムビルドファイターズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_1942",
+			"url": "https://bandai-hobby.net/item/01_1942/",
+			"ja": "HG 1/144 ガンダムベース限定 ういにんぐふみな [ガンダムベースカラー]"
+		},
+		{
+			"id": "01_1288",
+			"url": "https://bandai-hobby.net/item/01_1288/",
+			"ja": "HGBF 1/144 ミセス.ローエングリン子"
+		},
+		{
+			"id": "01_1261",
+			"url": "https://bandai-hobby.net/item/01_1261/",
+			"ja": "HGBF 1/144 ビルドストライクギャラクシーコスモス"
+		},
+		{
+			"id": "01_1262",
+			"url": "https://bandai-hobby.net/item/01_1262/",
+			"ja": "HGBC 1/144 ギャラクシーブースター"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2420,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
@@ -29,11 +72,12 @@
 			"• 銃身の変形ギミックを再現。"
 		],
 		"en": [
-			"■ For GUNPLA fans around the world, this is a limited edition GUNPLA at the official GUNPLA complex \"GUNDAM Base\". From \"GUNDAM BUILD FIGHTERS Battlogue\", \"HG 1/144 BUILD STRIKE GALAXY COSMOS\" is now available as a special specification of glitter clear!",
-			"■ Glitter clear color is used as the molding color, and the finish is inspired by the luminescence of Plavsky particles.",
-			"■ The backpack has 12 wings that can be transformed into various shapes, transforming into a galaxy booster, and reproducing a style reminiscent of a star or cosmos!",
-			"■ Comes with various parts such as beam saber, beam rifle, shield and pedestal.",
-			"■ Reproduce the barrel deformation gimmick."
+			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
+			"From \"Gundam Build Fighters Battlogue\", \"HGBF 1/144 Build Strike Galaxy Cosmos\" is now available in a special glitter clear specification!",
+			"• A glitter clear color is used for the molding color, creating a finish that resembles the luminescence of Plavsky particles.",
+			"• The backpack has 12 wings that can be changed into various shapes, transforming it into a galaxy booster, or creating a style that resembles a star or cosmos!",
+			"• Includes various parts such as beam saber, beam rifle, seal and pedestal.",
+			"• Reproduce the gun barrel deformation gimmick."
 		]
 	},
 	"images": {
@@ -66,13 +110,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5057/",
-	"brandIds": ["hg"],
-	"seriesIds": ["buildfighters"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_1942", "01_1288", "01_1261", "01_1262"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5057/"
 }

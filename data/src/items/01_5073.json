@@ -3,8 +3,61 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 イモータルジャスティスガンダム",
-		"en": "HG 1/144 IMMORTAL JUSTICE GUNDAM"
+		"en": "HG 1/144 Immortal Justice Gundam"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hgce",
+			"url": "https://bandai-hobby.net/brand/hgce/",
+			"ja": "HG COSMIC ERA"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-freedom",
+			"url": "https://bandai-hobby.net/series/seed-freedom/",
+			"ja": "機動戦士ガンダムSEED FREEDOM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5452",
+			"url": "https://bandai-hobby.net/item/01_5452/",
+			"ja": "HG 1/144 ズゴック(SEED FREEDOM Ver.)"
+		},
+		{
+			"id": "01_5374",
+			"url": "https://bandai-hobby.net/item/01_5374/",
+			"ja": "HG 1/144 デスティニーガンダムSpecII&ゼウスシルエット"
+		},
+		{
+			"id": "01_5363",
+			"url": "https://bandai-hobby.net/item/01_5363/",
+			"ja": "HG 1/144 ブラックナイトスコードカルラ"
+		},
+		{
+			"id": "01_5362",
+			"url": "https://bandai-hobby.net/item/01_5362/",
+			"ja": "HG 1/144 ムラサメ改"
+		}
+	],
+	"manual": {
+		"id": "1291",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1291"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 2640,
 		"currency": "JPY",
@@ -18,11 +71,10 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED FREEDOM』に登場する「イモータルジャスティスガンダム」をHGで立体化！",
-			"• 「機動戦士ガンダム SEEDシリーズ」で印象的なアクションポーズ再現に特化した内部構造「SEEDアクションシステム」を搭載。",
+			"『機動戦士ガンダムSEED FREEDOM』に登場する「イモータルジャスティスガンダム」をHGで立体化！",
+			"• 「機動戦士ガンダムSEEDシリーズ」で印象的なアクションポーズ再現に特化した内部構造「SEEDアクションシステム」を搭載。",
 			"• 一部パーツの差し替えによりMA形態への変形が可能。",
 			"• 攻守を兼ね備えた新シールドが付属。展開後にクリアのエフェクトパーツを装着することで劇中イメージを再現可能。",
 			"• 両腰の装甲にマウントされたブーメランには、エフェクトパーツが取り付け可能。",
@@ -31,8 +83,8 @@
 			"• 成形色による細かなパーツの色分けにより、組み立てるだけで満足な仕上がり。"
 		],
 		"en": [
-			"\"Immortal Justice Gundam \" appearing in \" Mobile Suit Gundam SEED FREEDOM\" is made into HG!",
-			"• Equipped with the internal structure \"SEED Action System \" specialized for reproducing impressive action poses from \" Mobile Suit Gundam SEED Series\".",
+			"\"Immortal Justice Gundam\" that appears in \"Mobile Suit GundamSEED FREEDOM\" is made into a three-dimensional HG!",
+			"• Equipped with the internal structure \"SEED Action System\" that specializes in reproducing impressive action poses from the \"Mobile Suit Gundam SEED Series\".",
 			"• Can be transformed into MA form by replacing some parts.",
 			"• Comes with a new Seal that combines offense and defense. After deployment, you can reproduce the image from the play by attaching clear effect parts.",
 			"• Effect parts can be attached to the boomerangs mounted on the armor on both hips.",
@@ -41,28 +93,58 @@
 			"• Color-coding of small parts by molding color allows for a satisfactory finish with just the assembly."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームライフル×１",
-			"シールド×１",
-			"ブーメラン×2",
-			"エフェクトパーツ×1式",
-			"ジョイントパーツ×1",
-			"シール×1"
-		],
-		"en": ["Beam rifle x1", "Seal de x1", "Boomerang x2", "Effect parts x 1", "Joint parts x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル×１",
+				"en": "Beam rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド×１",
+				"en": "Seal de x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ブーメラン",
+				"en": "boomerang"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "エフェクトパーツ",
+				"en": "effect parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205374_1.jpg",
 				"path": "/images/items/01_5073/1000205374_1.jpg",
 				"hash": "cc92629850d89220621abfa418606929"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205374_10.jpg",
-				"path": "/images/items/01_5073/1000205374_10.jpg",
-				"hash": "884c563ef969777228f6916f918944c8"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205374_2.jpg",
@@ -103,17 +185,14 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205374_9.jpg",
 				"path": "/images/items/01_5073/1000205374_9.jpg",
 				"hash": "0c6b1d13e1933c5f92a82d8ee40818d5"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205374_10.jpg",
+				"path": "/images/items/01_5073/1000205374_10.jpg",
+				"hash": "884c563ef969777228f6916f918944c8"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5073/",
-	"brandIds": ["hg", "hgce"],
-	"seriesIds": ["seed-freedom"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5452", "01_5374", "01_5363", "01_5362"],
-	"manual": {
-		"id": "1291",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1291/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5073/"
 }

@@ -3,8 +3,45 @@
 	"type": "item",
 	"name": {
 		"ja": "SDW HEROES 天下無双大将軍",
-		"en": "SDW HEROES TENKAMUSODAISHOGUN"
+		"en": "SDW HEROES Tenka Musou Taishogun"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "sdgundamworld_heroes",
+			"url": "https://bandai-hobby.net/series/sdgundamworld_heroes/",
+			"ja": "SDガンダムワールド ヒーローズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5470",
+			"url": "https://bandai-hobby.net/item/01_5470/",
+			"ja": "SDW HEROES キャプテンクアンタ GF"
+		},
+		{
+			"id": "01_5471",
+			"url": "https://bandai-hobby.net/item/01_5471/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-B"
+		},
+		{
+			"id": "01_5472",
+			"url": "https://bandai-hobby.net/item/01_5472/",
+			"ja": "SDW HEROES GF ガンダムアストレア タイプ-F"
+		},
+		{
+			"id": "01_5347",
+			"url": "https://bandai-hobby.net/item/01_5347/",
+			"ja": "SDW HEROES スペリオルフォーミュラー ファイナルドラゴン[クリアカラー]"
+		}
+	],
 	"price": {
 		"amount": 1760,
 		"currency": "JPY",
@@ -21,73 +58,92 @@
 	"description": {
 		"ja": [
 			"豪華絢爛、大ボリュームの新将軍が見参！",
-			"■超絶鳳凰(ウルトラフェニックス)への変形が可能。さらに武装・バックパックのみの組み替えでサポートメカ、絶令鳳凰（ゼロフェニックス）にも変形可能。",
-			"■刀はバスターに収納可能。",
-			"■バックパックのキャノンが展開可能。",
-			"■肘の可動範囲により、多彩なポージングが可能。",
-			"■別売りの「SDW HEROES 隠密ガンダムエアリアル」に付属の輝羅鋼パーツを装備可能。"
+			"• 超絶鳳凰(ウルトラフェニックス)への変形が可能。さらに武装・バックパックのみの組み替えでサポートメカ、絶令鳳凰（ゼロフェニックス）にも変形可能。",
+			"• 刀はバスターに収納可能。",
+			"• バックパックのキャノンが展開可能。",
+			"• 肘の可動範囲により、多彩なポージングが可能。",
+			"• 別売りの「SDW HEROES 隠密ガンダムエアリアル」に付属の輝羅鋼パーツを装備可能。"
 		],
 		"en": [
 			"A gorgeous, large-volume new general is here!",
-			"• Can transform into Ultra Phoenix. Furthermore, it can be transformed into a support mecha, Zero Phoenix, by rearranging only its weapons and backpack.",
+			"• Can transform into Ultra Phoenix. Furthermore, it can be transformed into a support mecha, Zero Phoenix, by changing only its weapons and backpack.",
 			"• The sword can be stored in the buster.",
 			"• Backpack cannon can be deployed.",
 			"• The range of motion of the elbows allows for a variety of poses.",
-			"• Can be equipped with the Kira Steel parts included with the separately sold \"SDW HEROES Covert Gundam Aerial\"."
+			"• Can be equipped with the Kira Steel parts that come with the separately sold \"SDW HEROES Covert Gundam Aerial\"."
 		]
 	},
-	"accessories": {
-		"ja": ["刀×1", "武装×1式", "シール×1"],
-		"en": ["Sword x1", "Armed x 1 type", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "刀",
+				"en": "sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "武装",
+				"en": "armed"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5950.jpg",
+				"src": "https://bandai-hobby.net/images/153_5950_s_3lca5sqs1xsu8p4q7mwdk00ojtli.jpg",
 				"path": "/images/items/01_5087/153_5950.jpg",
 				"hash": "29a1039d525257221fb84daad669568c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5950.jpg",
+				"src": "https://bandai-hobby.net/images/155_5950_s_7lpzrbqqjce384zykrtfjj3n1zc2.jpg",
 				"path": "/images/items/01_5087/155_5950.jpg",
 				"hash": "1e92472e4f75eb122748343c31ab74fe"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5950.jpg",
+				"src": "https://bandai-hobby.net/images/156_5950_s_3z6v31lcwtw2xwjwodeu46hoj1uv.jpg",
 				"path": "/images/items/01_5087/156_5950.jpg",
 				"hash": "76126a5a6d0f9f81d842c51565eb7a4d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5950.jpg",
+				"src": "https://bandai-hobby.net/images/157_5950_s_od5lc56amlnnikwuo5jjiqbzx17x.jpg",
 				"path": "/images/items/01_5087/157_5950.jpg",
 				"hash": "e9c75e8abb80f4ac80c739fe7ceebbeb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5950.jpg",
+				"src": "https://bandai-hobby.net/images/158_5950_s_3a1yoz8mj0p6jyjpsqmse1j7l7p5.jpg",
 				"path": "/images/items/01_5087/158_5950.jpg",
 				"hash": "4be863657b5f9cce2df14b0ff2e3a5ca"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5950.jpg",
+				"src": "https://bandai-hobby.net/images/159_5950_s_awo4n3we5xp1r5fl6g5pqd2w0j19.jpg",
 				"path": "/images/items/01_5087/159_5950.jpg",
 				"hash": "65681855fb72a843d6ce45e1cd395bfd"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5950.jpg",
+				"src": "https://bandai-hobby.net/images/189_5950_s_u1lqrsb9knde526uc25zsrbdky8k.jpg",
 				"path": "/images/items/01_5087/189_5950.jpg",
 				"hash": "a5e92958c1e1b7529af5fda25a699411"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5950.jpg",
+				"src": "https://bandai-hobby.net/images/190_5950_s_fav4tol6svydtzfcgcjbq3ius5v2.jpg",
 				"path": "/images/items/01_5087/190_5950.jpg",
 				"hash": "36ec6f0b1975d272f92fc893ce8f7125"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5087/",
-	"brandIds": [],
-	"seriesIds": ["sdgundamworld_heroes"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5087/"
 }

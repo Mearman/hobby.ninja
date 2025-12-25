@@ -3,8 +3,51 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 eEXM-S03H フォレスティエリ 03",
-		"en": "30MM 1/144 eEXM-S03H FORESTIERI 03"
+		"en": "30MM 1/144 eEXM-S03H Forestieri 03"
 	},
+	"brands": [
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		},
+		{
+			"id": "30mm",
+			"url": "https://bandai-hobby.net/brand/30mm/",
+			"ja": "30 MINUTES MISSIONS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5972",
+			"url": "https://bandai-hobby.net/item/01_5972/",
+			"ja": "30MM 1/144 eEXM-40 イグライト 02"
+		},
+		{
+			"id": "01_5973",
+			"url": "https://bandai-hobby.net/item/01_5973/",
+			"ja": "30MM ARMORED CORE VI FIRES OF RUBICON ARQUEBUS ADD VE-40A オープンフェイス"
+		},
+		{
+			"id": "01_5974",
+			"url": "https://bandai-hobby.net/item/01_5974/",
+			"ja": "30MM オプションパーツセット ARMORED CORE VI FIRES OF RUBICON WEAPON SET 06"
+		},
+		{
+			"id": "01_5964",
+			"url": "https://bandai-hobby.net/item/01_5964/",
+			"ja": "30MM 1/144 エグザビークル(ブーストブレイブバイクVer.)"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1320,
 		"currency": "JPY",
@@ -18,18 +61,17 @@
 		"day": 16
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"30MM カラバリグランプリ第１位！カラー「ブルー」の「フォレスティエリ」が登場！",
-			"■「30MM カラバリグランプリ」にて過去最大級の投票数で選ばれた、30MMファン注目のアイテム第１位。",
-			"■30MMシリーズのコンセプト、組み立てやすさを徹底追求した「ブロックアッセンブルシステム」を採用。",
-			"■カスタマイズ用の胸部アーマーとフロントスカートパーツが付属。",
-			"■既存の30MMシリーズのアイテムともミキシングできる共通関節構造、3mmジョイントを採用し多彩なカスタマイズを実現。",
-			"■武装の他に各種ハンドパーツとロイロイが付属。"
+			"• 「30MM カラバリグランプリ」にて過去最大級の投票数で選ばれた、30MMファン注目のアイテム第１位。",
+			"• 30MMシリーズのコンセプト、組み立てやすさを徹底追求した「ブロックアッセンブルシステム」を採用。",
+			"• カスタマイズ用の胸部アーマーとフロントスカートパーツが付属。",
+			"• 既存の30MMシリーズのアイテムともミキシングできる共通関節構造、3mmジョイントを採用し多彩なカスタマイズを実現。",
+			"• 武装の他に各種ハンドパーツとロイロイが付属。"
 		],
 		"en": [
-			"30MM Color Variation Grand Prix 1st place! \"Forestieri \" in color \" blue\" is now available!",
+			"30MM Color Variation Grand Prix 1st place! \"Forestieri\" in color \"blue\" is now available!",
 			"• The #1 most popular item among 30MM fans, chosen with the largest number of votes ever at the \"30MM Color Variation Grand Prix.\"",
 			"• The concept of the 30MM series is a \"block assembly system\" that thoroughly pursues ease of assembly.",
 			"• Comes with chest armor and front skirt parts for customization.",
@@ -37,73 +79,111 @@
 			"• In addition to weapons, various hand parts and Roy Roy are included."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビームライフル×1",
-			"プラズマビームソード×1",
-			"ロイロイ×1",
-			"ハンドパーツ×1式",
-			"アーマー×1式",
-			"ショイントパーツ×1式"
-		],
-		"en": [
-			"Beam rifle x 1",
-			"Plasma beam sword x1",
-			"Loi Loi x 1",
-			"Hand parts x 1 set",
-			"Armor x 1 set",
-			"Point parts x 1 set"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル",
+				"en": "beam rifle"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "プラズマビームソード",
+				"en": "plasma beam sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ロイロイ",
+				"en": "Loi Loi"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ",
+				"en": "hand parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "アーマー",
+				"en": "armor"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ショイントパーツ",
+				"en": "point parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5952.jpg",
+				"src": "https://bandai-hobby.net/images/153_5952_s_71v7t7a95a3iyi7rk5y8dr9dw61u.jpg",
 				"path": "/images/items/01_5089/153_5952.jpg",
 				"hash": "76a577842b24906eefab9ff0c143b568"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5952.jpg",
+				"src": "https://bandai-hobby.net/images/155_5952_s_ur1p6sco3say3urvn8pupzx4le3n.jpg",
 				"path": "/images/items/01_5089/155_5952.jpg",
 				"hash": "ba093e568ccd5331cb77fe54cf98d0e1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5952.jpg",
+				"src": "https://bandai-hobby.net/images/156_5952_s_d5d034r8h2o25mfmafjz39knd3f0.jpg",
 				"path": "/images/items/01_5089/156_5952.jpg",
 				"hash": "de7533bfafc15c39f69738c48e495e69"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5952.jpg",
+				"src": "https://bandai-hobby.net/images/157_5952_s_syjwk4gjxt8q65rsmvxws9nd9saa.jpg",
 				"path": "/images/items/01_5089/157_5952.jpg",
 				"hash": "95a92fb24422a56f9d3e4c90d02b1206"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5952.jpg",
+				"src": "https://bandai-hobby.net/images/158_5952_s_yongv7dsqvke873s08pay6g9i0fq.jpg",
 				"path": "/images/items/01_5089/158_5952.jpg",
 				"hash": "4e82b21eb1b68d34a85d0eaed050cde6"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5952.jpg",
+				"src": "https://bandai-hobby.net/images/159_5952_s_zq3mnex5u7ius9zyrp76fh1l7x40.jpg",
 				"path": "/images/items/01_5089/159_5952.jpg",
 				"hash": "9c1255c53e2cb7e9ff8f3d33c1fdff96"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5952.jpg",
+				"src": "https://bandai-hobby.net/images/189_5952_s_mrs0ggsid9tm32946d8rrauad8hb.jpg",
 				"path": "/images/items/01_5089/189_5952.jpg",
 				"hash": "64b112f4f9a8ad87a6541ba26f2308da"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5952.jpg",
+				"src": "https://bandai-hobby.net/images/190_5952_s_zjkigiizxtxh7ekm8kt0kmbyy9bv.jpg",
 				"path": "/images/items/01_5089/190_5952.jpg",
 				"hash": "7a4d16e94e1cb4d37cf38098d35204e0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5952.jpg",
+				"src": "https://bandai-hobby.net/images/191_5952_s_vj3mgw1tq68drntcmglkfo31xoum.jpg",
 				"path": "/images/items/01_5089/191_5952.jpg",
 				"hash": "c4b1653e3f23ecfdd121fe9547b6f1c5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5952.jpg",
+				"src": "https://bandai-hobby.net/images/192_5952_s_sg86wdbio0f54uvemi4jp2nlclru.jpg",
 				"path": "/images/items/01_5089/192_5952.jpg",
 				"hash": "90da1128d5db9121304b20df4e863181"
 			}
@@ -111,10 +191,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_5089/",
-	"brandIds": ["30mm"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manual": {
 		"id": "3775",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3775/"

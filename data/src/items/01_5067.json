@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/100 YF-21 専用水転写式デカール",
-		"en": "HG 1/100 YF-21 WATER DECALS"
+		"en": "HG 1/100 YF-21 exclusive water slide decal"
 	},
+	"brands": [
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "macross",
+			"url": "https://bandai-hobby.net/series/macross/",
+			"ja": "マクロスシリーズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5944",
+			"url": "https://bandai-hobby.net/item/01_5944/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機)"
+		},
+		{
+			"id": "01_5946",
+			"url": "https://bandai-hobby.net/item/01_5946/",
+			"ja": "HG 1/100 VF-31J ジークフリード (ハヤテ･インメルマン機) デラックスセット"
+		},
+		{
+			"id": "01_5465",
+			"url": "https://bandai-hobby.net/item/01_5465/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(マクシミリアン・ジーナス機)"
+		},
+		{
+			"id": "01_5448",
+			"url": "https://bandai-hobby.net/item/01_5448/",
+			"ja": "HG 1/100 VF-22S シュトゥルムフォーゲルII(ミリア・ファリーナ・ジーナス機)"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -18,59 +62,59 @@
 		"day": 20
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"「HG 1/100 YF-21」の航空機モデルとしてのクオリティを追求する水転写式デカールが登場！",
-			"■「HG 1/100 YF-21」専用。"
+			"• 「HG 1/100 YF-21」専用。"
 		],
 		"en": [
 			"Introducing a water slide decal that pursues the quality of the \"HG 1/100 YF-21\" aircraft model!",
 			"• For \"HG 1/100 YF-21\" only."
 		]
 	},
-	"accessories": {
-		"ja": ["水転写式デカール×1"],
-		"en": ["Water transfer decal x 1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "水転写式デカール",
+				"en": "water transfer decal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5932.jpg",
+				"src": "https://bandai-hobby.net/images/153_5932_s_gwlim2247ig9njco791q4bnz7brn.jpg",
 				"path": "/images/items/01_5067/153_5932.jpg",
 				"hash": "4c4b0712a1bebbd15256e5bfd0e99880"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5932.jpg",
+				"src": "https://bandai-hobby.net/images/155_5932_s_3oznqn4iff6zt9yc56w09qc0jkxs.jpg",
 				"path": "/images/items/01_5067/155_5932.jpg",
 				"hash": "16d42d89acba3d51a3134fd3b76183fe"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5932.jpg",
+				"src": "https://bandai-hobby.net/images/156_5932_s_sni1c56pebz6elkbwmvvn6x7rua5.jpg",
 				"path": "/images/items/01_5067/156_5932.jpg",
 				"hash": "97ead59d11555eae6f90cdb055690f83"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5932.jpg",
+				"src": "https://bandai-hobby.net/images/157_5932_s_8q346zpk7b2h6wyv4d0356zbrzek.jpg",
 				"path": "/images/items/01_5067/157_5932.jpg",
 				"hash": "3e017ed9822be8071dbbadaeae782876"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5932.jpg",
+				"src": "https://bandai-hobby.net/images/158_5932_s_91sygjlc98jc22p5j4v3c9hdg3vo.jpg",
 				"path": "/images/items/01_5067/158_5932.jpg",
 				"hash": "1aef8305c65f863776ed0e65b8481886"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5932.jpg",
+				"src": "https://bandai-hobby.net/images/159_5932_s_3bk3fscid4522m9qt25px31ofiby.jpg",
 				"path": "/images/items/01_5067/159_5932.jpg",
 				"hash": "34d644972d9f849ada6690c7651a6309"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5067/",
-	"brandIds": ["hg"],
-	"seriesIds": ["macross"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5944", "01_5946", "01_5465", "01_5448"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_5067/"
 }

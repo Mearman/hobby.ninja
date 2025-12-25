@@ -3,8 +3,52 @@
 	"type": "item",
 	"name": {
 		"ja": "RG 1/144 ガンダムベース限定 RX-0 ユニコーンガンダム (最終決戦仕様) [スペシャルコーティング]",
-		"en": "RG 1/144 THE GUNDAM BASE LIMITED RX-0 UNICORN GUNDAM (FINAL BATTLE Ver.) [SPECIAL COATING]"
+		"en": "RG 1/144 Gundam Base Limited RX-0 Unicorn Gundam (Final Battle Specification) [Special Coating]"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_3060",
+			"url": "https://bandai-hobby.net/item/01_3060/",
+			"ja": "RG 1/144 ガンダムベース限定 ユニコーンガンダム ペルフェクティビリティ"
+		},
+		{
+			"id": "01_2821",
+			"url": "https://bandai-hobby.net/item/01_2821/",
+			"ja": "ＲＧ 1/144 シナンジュ［スペシャルコーティング］"
+		},
+		{
+			"id": "01_2292",
+			"url": "https://bandai-hobby.net/item/01_2292/",
+			"ja": "RG 1/144 ガンダムベース限定 ユニコーンガンダム2号機 バンシィ・ノルン (デストロイモード) (LIGHTING MODEL)"
+		},
+		{
+			"id": "item-1000133044",
+			"url": "https://p-bandai.jp/item/item-1000133044",
+			"ja": "ＲＧ 1/144 拡張ユニット アームド・アーマーＶＮ／ＢＳ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 13200,
 		"currency": "JPY",
@@ -18,19 +62,20 @@
 		"day": 29
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"『機動戦士ガンダム UC』より、「RG 1/144 ユニコーンガンダム」が劇中の最終決戦をイメージした仕様に加えて豪華なスペシャルコーティングとなって登場！",
+			"『機動戦士ガンダムUC』より、「RG 1/144 ユニコーンガンダム」が劇中の最終決戦をイメージした仕様に加えて豪華なスペシャルコーティングとなって登場！",
 			"• ビーム・マグナム、ハイパー・バズーカ、ビーム・ガトリングガン、シールドなど、豊富な武器類が付属。",
 			"• 専用の台座とハンドパーツ各種が付属。",
 			"• “アドヴァンスドMSフレームワーク”により、組み立て後の高い安定性と各部の可動を両立。"
 		],
 		"en": [
-			"■ For GUNPLA fans around the world, this is a limited edition GUNPLA at the official GUNPLA complex \"GUNDAM Base\". From \"MOBILE SUIT GUNDAM UC\", \"RG 1/144 UNICORN GUNDAM\" is now available as a luxurious special coating in addition to the specifications inspired by the final battle in the play! Includes a wide range of weapons, including the Beam Magnum, Hyper Bazooka, Beam Gatling Gun, and Shield.",
-			"■ Comes with a dedicated pedestal and various hand parts.",
-			"■ The \"Advanced MS Framework\" achieves both high stability after assembly and the movement of each part."
+			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
+			"From \"Mobile Suit Gundam UC\", \"RG 1/144 Unicorn Gundam\" is now available with a luxurious special coating in addition to specifications inspired by the final battle in the movie!",
+			"• Comes with a variety of weapons such as Beam Magnum, Hyper Bazooka, Beam Gatling Gun, and Seal.",
+			"• A special pedestal and various hand parts are included.",
+			"• “Advanced MS Framework” achieves both high stability after assembly and movability of each part."
 		]
 	},
 	"images": {
@@ -78,13 +123,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5037/",
-	"brandIds": ["rg"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_3060", "01_2821", "01_2292", "item-1000133044"],
-	"tag": {
-		"ja": "ガンダムベース",
-		"en": "Gundam Base"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5037/"
 }

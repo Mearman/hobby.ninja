@@ -3,8 +3,57 @@
 	"type": "item",
 	"name": {
 		"ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム [リサーキュレーションカラー/ネオンブルー]",
-		"en": "ENTRY GRADE 1/144 RX-78-2 GUNDAM [RECIRCULATION COLOR/NEON BLUE]"
+		"en": "ENTRY GRADE 1/144 RX-78-2 Gundam [Recirculation Color/Neon Blue]"
 	},
+	"brands": [
+		{
+			"id": "ecoplaproject_g",
+			"url": "https://bandai-hobby.net/brand/ecoplaproject_g/",
+			"ja": "エコプラプロジェクト"
+		},
+		{
+			"id": "entry_grade_g",
+			"url": "https://bandai-hobby.net/brand/entry_grade_g/",
+			"ja": "ENTRY GRADE"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4066",
+			"url": "https://bandai-hobby.net/item/01_4066/",
+			"ja": "MG 1/100 RX-78-2 ガンダム Ver.3.0 [リサーキュレーションカラー/ネオングリーン]"
+		},
+		{
+			"id": "01_3699",
+			"url": "https://bandai-hobby.net/item/01_3699/",
+			"ja": "リアルSDガンダム BHC専用エコプラ RX-78-2ガンダム"
+		},
+		{
+			"id": "01_3700",
+			"url": "https://bandai-hobby.net/item/01_3700/",
+			"ja": "HGUC 1/144 BHC専用エコプラ ガンキャノン"
+		},
+		{
+			"id": "01_3701",
+			"url": "https://bandai-hobby.net/item/01_3701/",
+			"ja": "HGUC 1/144 BHC専用エコプラ ガンタンク"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -18,42 +67,60 @@
 		"day": 19
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"※イナズマロック フェス 2023にて販売を予定しております。",
 			"※この商品は後日THE GUNDAM BASE各店、各種イベント、海外などでの販売も予定しております。",
 			"※販売方法は予告なく変更になる場合がございます。",
 			"ENTRY GRADE 1/144 RX-78-2 ガンダム が、特別カラーで登場！",
-			"■積み重ねた技術により少数パーツでありながら抜群の可動！",
-			"■パーツを組み立てるだけで完成！塗装はもちろん、シール貼りも不要！",
-			"■ニッパーを使わず手でパチパチと簡単に折れるタッチゲート仕様！",
-			"■部位ごとにまとまったランナー配置！"
+			"• 積み重ねた技術により少数パーツでありながら抜群の可動！",
+			"• パーツを組み立てるだけで完成！塗装はもちろん、シール貼りも不要！",
+			"• ニッパーを使わず手でパチパチと簡単に折れるタッチゲート仕様！",
+			"• 部位ごとにまとまったランナー配置！"
 		],
 		"en": [
-			"■ *This product will be sold at THE GUNDAM BASE stores, various events, and overseas at a later date. * Sales methods are subject to change without notice.  ENTRY GRADE 1/144 RX-78-2 GUNDAM is now available in a special color!",
-			"■ Outstanding mobility despite the small number of parts due to accumulated technology!",
-			"■ Just assemble the parts and you're done! No need to paint or even apply stickers!",
-			"■ Touch gate specification that can be easily folded by hand without using nippers!",
-			"■ Runner placement for each part! [Accessories] Shield ×1 Rifle ×1 [What is Recirculation Color?] In the black born from circulation, the vivid neon color makes its presence felt. The futuristic outfit becomes a symbol of a circular future."
+			"*Sale is scheduled for Inazuma Rock Festival 2023.",
+			"*This product is scheduled to be sold at THE GUNDAM BASE stores, various events, and overseas.",
+			"*Sales methods are subject to change without notice.",
+			"ENTRY GRADE 1/144 RX-78-2 Gundam is now available in special colors!",
+			"• Thanks to accumulated technology, it is extremely movable despite having a small number of parts!",
+			"• Complete by simply assembling the parts! No painting or sealing required!",
+			"• Touch gate design that allows you to easily fold by hand without using nippers!",
+			"• Runner arrangement organized by body part!"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"シールド×１",
-			"ライフル×１",
-			"【リサーキュレーションカラーとは】",
-			"循環から生まれたブラックの中に、鮮烈なネオンカラーが存在感を発揮するスタイリッシュなカラーリング。",
-			"フューチャリスティックな装いは、循環する未来への象徴となる。"
-		],
-		"en": [
-			"Seal de x1",
-			"Rifle x 1",
-			"[What is recirculation color]",
-			"Stylish coloring with vivid neon colors that make their presence felt in the black created from circulation.",
-			"Futuristic attire becomes a symbol of a cyclical future."
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "シールド×１",
+				"en": "Seal de x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ライフル×１",
+				"en": "Rifle x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "【リサーキュレーションカラーとは】",
+				"en": "[What is recirculation color]"
+			}
+		},
+		{
+			"name": {
+				"ja": "循環から生まれたブラックの中に、鮮烈なネオンカラーが存在感を発揮するスタイリッシュなカラーリング。",
+				"en": "Stylish coloring with vivid neon colors that make their presence felt in the black created from circulation."
+			}
+		},
+		{
+			"name": {
+				"ja": "フューチャリスティックな装いは、循環する未来への象徴となる。",
+				"en": "Futuristic attire becomes a symbol of a cyclical future."
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -79,13 +146,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5045/",
-	"brandIds": ["ecoplaproject_g", "entry_grade"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4066", "01_3699", "01_3700", "01_3701"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5045/"
 }

@@ -3,8 +3,35 @@
 	"type": "item",
 	"name": {
 		"ja": "RG 1/144 フォースインパルスガンダム SpecII",
-		"en": "RG 1/144 FORCE IMPULSE GUNDAM SpecⅡ"
+		"en": "RG 1/144 Force Impulse Gundam SpecII"
 	},
+	"brands": [
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-freedom",
+			"url": "https://bandai-hobby.net/series/seed-freedom/",
+			"ja": "機動戦士ガンダムSEED FREEDOM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
+	"manual": {
+		"id": "1356",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1356"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 3410,
 		"currency": "JPY",
@@ -18,10 +45,9 @@
 		"day": 10
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED FREEDOM』に登場する「フォースインパルスガンダム」を劇場版仕様で商品化！",
+			"『機動戦士ガンダムSEED FREEDOM』に登場する「フォースインパルスガンダム」を劇場版仕様で商品化！",
 			"• コアスプレンダー、チェストフライヤー、レッグフライヤー、フォースシルエットの合体でMS形態となる機構を再現。",
 			"• コアスプレンダー及び胴体にインサート成形が施されたアドヴァンスドMSジョイントを採用。内部フレーム、ボディフレームは組み上がった状態でランナーから切り離すことができ、精密なディテールと変形・可動ギミックを実現。",
 			"• パーツ分割により色再現も向上し、隣接したアーマーの微細な色分けまで精密に表現。",
@@ -33,7 +59,7 @@
 			"• 新規のリアリスティックデカールが付属"
 		],
 		"en": [
-			"The \"Force Impulse Gundam \" that appears in \" Mobile Suit Gundam SEED FREEDOM\" is commercialized with movie version specifications!",
+			"\"Force Impulse Gundam\" that appears in \"Mobile Suit GundamSEED FREEDOM\" is commercialized in the movie version specifications!",
 			"• Reproduces the mechanism that becomes MS form by combining Core Splendor, Chest Flyer, Leg Flyer, and Force Silhouette.",
 			"• Adopts advanced MS joint with insert molding on core splendor and fuselage. The internal frame and body frame can be separated from the Runner in the assembled state, allowing for precise details and deformation/movable gimmicks.",
 			"• Color reproduction is also improved by dividing the parts, and even the minute color coding of adjacent armor is precisely expressed.",
@@ -45,53 +71,74 @@
 			"• Includes new realistic decals"
 		]
 	},
-	"accessories": {
-		"ja": [
-			"高エネルギービームライフル×１",
-			"機動防盾×１",
-			"ヴァジュラビームサーベル×２",
-			"フォールディングレイザー対装甲ナイフ×２",
-			"シルエットフライヤー×１",
-			"コアスプレンダー用パーツ×１式",
-			"ハンドパーツ×１式",
-			"ジョイントパーツ×１",
-			"リアリスティックデカール×１",
-			"フィギュア×１"
-		],
-		"en": [
-			"High energy beam rifle x1",
-			"Mobile mantlet x1",
-			"Vajra beam saber x2",
-			"Folding Razor Anti-Armor Knife x2",
-			"Silhouette flyer x 1",
-			"Core Splendor parts x 1 set",
-			"Hand parts x 1 set",
-			"Joint parts x 1",
-			"Realistic decal x 1",
-			"Figure x1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "高エネルギービームライフル×１",
+				"en": "High energy beam rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "機動防盾×１",
+				"en": "Mobile mantlet x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ヴァジュラビームサーベル×２",
+				"en": "Vajra beam saber x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "フォールディングレイザー対装甲ナイフ×２",
+				"en": "Folding Razor Anti-Armor Knife x2"
+			}
+		},
+		{
+			"name": {
+				"ja": "シルエットフライヤー×１",
+				"en": "Silhouette flyer x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "コアスプレンダー用パーツ×１式",
+				"en": "Core Splendor parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハンドパーツ×１式",
+				"en": "Hand parts x 1 set"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ×１",
+				"en": "Joint parts x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "リアリスティックデカール×１",
+				"en": "Realistic decal x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "フィギュア×１",
+				"en": "Figure x1"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205425_1.jpg",
 				"path": "/images/items/01_5085/1000205425_1.jpg",
 				"hash": "630360e2ff763b0cdffd4e06bf8e41cd"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205425_10.jpg",
-				"path": "/images/items/01_5085/1000205425_10.jpg",
-				"hash": "07064778a571a79be7e5b0e3bf605a64"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205425_11.jpg",
-				"path": "/images/items/01_5085/1000205425_11.jpg",
-				"hash": "4920bb7939a57eee8fbadc5db9951754"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205425_12.jpg",
-				"path": "/images/items/01_5085/1000205425_12.jpg",
-				"hash": "863f0bb48b8796a220a2dc75f6397a06"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205425_2.jpg",
@@ -132,17 +179,24 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205425_9.jpg",
 				"path": "/images/items/01_5085/1000205425_9.jpg",
 				"hash": "78c902f96069b01d73bd5236488c39a9"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205425_10.jpg",
+				"path": "/images/items/01_5085/1000205425_10.jpg",
+				"hash": "07064778a571a79be7e5b0e3bf605a64"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205425_11.jpg",
+				"path": "/images/items/01_5085/1000205425_11.jpg",
+				"hash": "4920bb7939a57eee8fbadc5db9951754"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000205425_12.jpg",
+				"path": "/images/items/01_5085/1000205425_12.jpg",
+				"hash": "863f0bb48b8796a220a2dc75f6397a06"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5085/",
-	"brandIds": ["rg"],
-	"seriesIds": ["seed-freedom"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": [],
-	"manual": {
-		"id": "1356",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1356/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5085/"
 }

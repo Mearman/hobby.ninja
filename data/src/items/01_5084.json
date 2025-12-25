@@ -3,8 +3,61 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ブラックナイトスコードシヴァ",
-		"en": "HG 1/144 BLACK KNIGHT SQUAD Shi-ve.A"
+		"en": "HG 1/144 Black Knight Squad Shiva"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hgce",
+			"url": "https://bandai-hobby.net/brand/hgce/",
+			"ja": "HG COSMIC ERA"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-freedom",
+			"url": "https://bandai-hobby.net/series/seed-freedom/",
+			"ja": "機動戦士ガンダムSEED FREEDOM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5452",
+			"url": "https://bandai-hobby.net/item/01_5452/",
+			"ja": "HG 1/144 ズゴック(SEED FREEDOM Ver.)"
+		},
+		{
+			"id": "01_5374",
+			"url": "https://bandai-hobby.net/item/01_5374/",
+			"ja": "HG 1/144 デスティニーガンダムSpecII&ゼウスシルエット"
+		},
+		{
+			"id": "01_5363",
+			"url": "https://bandai-hobby.net/item/01_5363/",
+			"ja": "HG 1/144 ブラックナイトスコードカルラ"
+		},
+		{
+			"id": "01_5362",
+			"url": "https://bandai-hobby.net/item/01_5362/",
+			"ja": "HG 1/144 ムラサメ改"
+		}
+	],
+	"manual": {
+		"id": "1355",
+		"url": "https://manual.bandai-hobby.net/menus/detail/1355"
+	},
+	"scale": "1/144",
 	"price": {
 		"amount": 2970,
 		"currency": "JPY",
@@ -18,11 +71,10 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED FREEDOM』に登場する「ブラックナイトスコードシヴァ」をHGで立体化！",
-			"• 「機動戦士ガンダム SEEDシリーズ」で印象的なアクションポーズ再現に特化した内部構造「SEEDアクションシステム」を搭載。",
+			"『機動戦士ガンダムSEED FREEDOM』に登場する「ブラックナイトスコードシヴァ」をHGで立体化！",
+			"• 「機動戦士ガンダムSEEDシリーズ」で印象的なアクションポーズ再現に特化した内部構造「SEEDアクションシステム」を搭載。",
 			"• パーツの差し替えによりシールドの射出状態を再現可能。シールドの射出状態を再現するリード線が付属。",
 			"• 胸部のアーマーを開閉することで劇中の演出を再現可能。",
 			"• ビームマントにはグラデーション印刷が施された軟質素材を採用。",
@@ -31,8 +83,8 @@
 			"• 成形色による細かなパーツの色分けにより、組み立てるだけで満足な仕上がり。"
 		],
 		"en": [
-			"\"Black Knight Squad Shiva \" appearing in \" Mobile Suit Gundam SEED FREEDOM\" is made into a three-dimensional HG!",
-			"• Equipped with the internal structure \"SEED Action System \" specialized for reproducing impressive action poses from \" Mobile Suit Gundam SEED Series\".",
+			"\"Black Knight Squad Shiva\" appearing in \"Mobile Suit GundamSEED FREEDOM\" is made into a three-dimensional HG!",
+			"• Equipped with the internal structure \"SEED Action System\" that specializes in reproducing impressive action poses from the \"Mobile Suit Gundam SEED Series\".",
 			"• Seal injection state can be reproduced by replacing parts. Comes with a lead wire that reproduces the Seal injection state.",
 			"• You can recreate the effects from the movie by opening and closing the chest armor.",
 			"• The beam cloak is made of soft material with gradation printing.",
@@ -41,95 +93,127 @@
 			"• Color-coding of small parts by molding color allows for a satisfactory finish with just the assembly."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ソード×１",
-			"シールド×１",
-			"ビームサーベル×3",
-			"エフェクトパーツ×1式",
-			"ジョイントパーツ×1式",
-			"クリアシート×１",
-			"リード線×１",
-			"シール×1"
-		],
-		"en": [
-			"Sword x1",
-			"Seal de x1",
-			"Beam saber x3",
-			"Effect parts x 1",
-			"Joint parts x 1 set",
-			"Clear sheet x 1",
-			"Lead wire x 1",
-			"Seal×1"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ソード×１",
+				"en": "Sword x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド×１",
+				"en": "Seal de x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "beam saber"
+			},
+			"count": 3
+		},
+		{
+			"name": {
+				"ja": "エフェクトパーツ",
+				"en": "effect parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "ジョイントパーツ",
+				"en": "joint parts"
+			},
+			"count": 1,
+			"unit": {
+				"ja": "式",
+				"en": "formula"
+			}
+		},
+		{
+			"name": {
+				"ja": "クリアシート×１",
+				"en": "Clear sheet x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "リード線×１",
+				"en": "Lead wire x 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_5948.jpg",
+				"src": "https://bandai-hobby.net/images/153_5948_s_ejtqgllchnxzz8vur9lzzx25mmxt.jpg",
 				"path": "/images/items/01_5084/153_5948.jpg",
 				"hash": "485489997ebf5ea7a92058b568ab8b7b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_5948.jpg",
+				"src": "https://bandai-hobby.net/images/155_5948_s_595qlxo1ftmle24lqrijv4tdfqqv.jpg",
 				"path": "/images/items/01_5084/155_5948.jpg",
 				"hash": "19b8fbe971dbc1b2d50ee4f34f04c794"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_5948.jpg",
+				"src": "https://bandai-hobby.net/images/156_5948_s_48xjpf9ww3lda6rn0axc6459w66c.jpg",
 				"path": "/images/items/01_5084/156_5948.jpg",
 				"hash": "d672a8fb9db4088adeafdb03ff622bfa"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_5948.jpg",
+				"src": "https://bandai-hobby.net/images/157_5948_s_hhsb35y9bkqb7efuqnr6psufop8k.jpg",
 				"path": "/images/items/01_5084/157_5948.jpg",
 				"hash": "ace4db2773f2b1d5910aa062383b468c"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_5948.jpg",
+				"src": "https://bandai-hobby.net/images/158_5948_s_d2o35vin53j7r8df7lb8t1b68z7z.jpg",
 				"path": "/images/items/01_5084/158_5948.jpg",
 				"hash": "f0229d11123707f2d7843dcc8f758d53"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_5948.jpg",
+				"src": "https://bandai-hobby.net/images/159_5948_s_jab483xdcwgxu09npks2kp34pdv0.jpg",
 				"path": "/images/items/01_5084/159_5948.jpg",
 				"hash": "bd3d7a81d5bb474eeb05d5211ab1f508"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_5948.jpg",
+				"src": "https://bandai-hobby.net/images/189_5948_s_2qc43cp6gukznsr83zza5xnemccd.jpg",
 				"path": "/images/items/01_5084/189_5948.jpg",
 				"hash": "c2ecef39fd546ab117fb6705712e680f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_5948.jpg",
+				"src": "https://bandai-hobby.net/images/190_5948_s_759unoqaozykesz691tbl11me5et.jpg",
 				"path": "/images/items/01_5084/190_5948.jpg",
 				"hash": "7659630463ad6e896c0ed4512b704802"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_5948.jpg",
+				"src": "https://bandai-hobby.net/images/191_5948_s_1nst513yb3zgeboyj2gptxc9bo1w.jpg",
 				"path": "/images/items/01_5084/191_5948.jpg",
 				"hash": "4230bf3af4221bb1888e91b756579c21"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_5948.jpg",
+				"src": "https://bandai-hobby.net/images/192_5948_s_qdr8mpc6kb0l7q1xwph0ewy70xjj.jpg",
 				"path": "/images/items/01_5084/192_5948.jpg",
 				"hash": "c5789d2016cf637f77cc1ec16f11b2c8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/193_5948.jpg",
+				"src": "https://bandai-hobby.net/images/193_5948_s_asi0cvff4qjpfi7g1ra5w7e0s4da.jpg",
 				"path": "/images/items/01_5084/193_5948.jpg",
 				"hash": "4054da890bc10b583bafd40eed3df51f"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5084/",
-	"brandIds": ["hg", "hgce"],
-	"seriesIds": ["seed-freedom"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5452", "01_5374", "01_5363", "01_5362"],
-	"manual": {
-		"id": "1355",
-		"url": "https://manual.bandai-hobby.net/menus/detail/1355/"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_5084/"
 }

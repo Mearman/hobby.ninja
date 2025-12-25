@@ -2,9 +2,31 @@
 	"id": "01_5074",
 	"type": "item",
 	"name": {
-		"ja": "SD ガンダム EXスタンダード ライジングフリーダムガンダム",
-		"en": "SD GUNDAM EX-STANDARD RISING FREEDOM GUNDAM"
+		"ja": "SDガンダム EXスタンダード ライジングフリーダムガンダム",
+		"en": "SDGundam EX Standard Rising Freedom Gundam"
 	},
+	"brands": [
+		{
+			"id": "SDEX",
+			"url": "https://bandai-hobby.net/brand/SDEX/",
+			"ja": "SDEXスタンダード"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-freedom",
+			"url": "https://bandai-hobby.net/series/seed-freedom/",
+			"ja": "機動戦士ガンダムSEED FREEDOM"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -20,26 +42,50 @@
 	"targetAge": 8,
 	"description": {
 		"ja": [
-			"『機動戦士ガンダム SEED FREEDOM』に登場する「ライジングフリーダムガンダム」を、SD ガンダム EXスタンダードで立体化！",
-			"• SD ガンダム EXスタンダードならではのデザインアレンジ。",
+			"『機動戦士ガンダムSEED FREEDOM』に登場する「ライジングフリーダムガンダム」を、SDガンダムEXスタンダードで立体化！",
+			"• SDガンダムEXスタンダードならではのデザインアレンジ。",
 			"• 一部パーツの差し替えによりMA形態への簡易変形が可能。",
 			"• 大胆なアクションポーズを実現する可動範囲を確保。",
 			"• ビームライフル、ビームサーベル、シールドが付属。",
 			"• 装備を組み合わせることでHGシリーズとのカスタマイズ遊びが可能。"
 		],
 		"en": [
-			"The \"Rising Freedom Gundam \" that appears in \" Mobile Suit Gundam SEED FREEDOM\" is now three-dimensional with SD Gundam EX Standard!",
-			"• Design arrangement unique to SD Gundam EX Standard.",
+			"The \"Rising Freedom Gundam\" that appears in \"Mobile Suit GundamSEED FREEDOM\" is now three-dimensional with SDGundamEX standard!",
+			"• Design arrangement unique to SDGundamEX standard.",
 			"• Can be easily transformed into MA form by replacing some parts.",
 			"• Ensures a range of motion that allows for bold action poses.",
 			"• Beam rifle, beam saber, and Seal are included.",
 			"• Customize play with the HG series by combining equipment."
 		]
 	},
-	"accessories": {
-		"ja": ["ビームライフル×１", "ビームサーベル×2", "シールド×１", "シール×1"],
-		"en": ["Beam rifle x1", "Beam saber x2", "Seal de x1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビームライフル×１",
+				"en": "Beam rifle x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビームサーベル",
+				"en": "beam saber"
+			},
+			"count": 2
+		},
+		{
+			"name": {
+				"ja": "シールド×１",
+				"en": "Seal de x1"
+			}
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
@@ -85,9 +131,5 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_5074/",
-	"brandIds": ["SDEX"],
-	"seriesIds": ["seed-freedom"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": []
+	"sourceUrl": "https://bandai-hobby.net/item/01_5074/"
 }
