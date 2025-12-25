@@ -10,6 +10,7 @@
  *   --max-pages <n>     Maximum pages to fetch (default: unlimited)
  *   --incremental       Only fetch new items not in index
  *   --skip-images       Skip downloading images
+ *   --skip-hash-index   Skip building hash index for image deduplication
  *   --page-delay <ms>   Delay between pages (default: 2000)
  *   --image-delay <ms>  Delay between image downloads (default: 500)
  *
@@ -22,6 +23,8 @@
  *     --url "https://p-bandai.com/us/search?limit=10000&_f_categories=04-004&_f_productStatuses=End,On,Waiting"
  */
 
+import { ImageHashIndex } from "../utils/image-utils.js";
+
 import { PBandaiUSListParser } from "./pbandai-us-list-parser.js";
 
 async function main(): Promise<void> {
@@ -29,6 +32,7 @@ async function main(): Promise<void> {
 
 	// Parse CLI arguments
 	const customUrl = getArgValue(args, "--url", String);
+	const skipHashIndex = args.includes("--skip-hash-index");
 	const options = {
 		maxPages: getArgValue(args, "--max-pages", Number.parseInt),
 		incrementalOnly: args.includes("--incremental"),
@@ -51,6 +55,14 @@ async function main(): Promise<void> {
 	const parser = new PBandaiUSListParser();
 
 	try {
+		// Initialize hash index for image deduplication (item assets are authoritative)
+		if (!skipHashIndex && !options.skipImages) {
+			console.log("Building image hash index...");
+			const hashIndex = new ImageHashIndex();
+			await hashIndex.initialize();
+			parser.setHashIndex(hashIndex);
+		}
+
 		console.log("Initializing browser...");
 		await parser.init();
 

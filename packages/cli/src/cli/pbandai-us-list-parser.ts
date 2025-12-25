@@ -25,7 +25,8 @@ import path from "node:path";
 import { load, type CheerioAPI } from "cheerio";
 import { chromium, type Browser, type BrowserContext, type Page } from "playwright";
 
-import { writeJsonIfChanged } from "../utils/file-utils.js";
+import { computeBufferHash, writeJsonIfChanged } from "../utils/file-utils.js";
+import { ImageHashIndex } from "../utils/image-utils.js";
 
 /** Image entry matching main item structure */
 export interface PBandaiUSImage {
@@ -136,6 +137,7 @@ export class PBandaiUSListParser {
 	private context: BrowserContext | null = null;
 	private page: Page | null = null;
 	private sessionTokens: SessionTokens | null = null;
+	private hashIndex: ImageHashIndex | null = null;
 
 	private readonly dataDir: string;
 	private readonly assetsDir: string;
@@ -151,6 +153,14 @@ export class PBandaiUSListParser {
 		this.dataDir = path.join(projectRoot, "data/src/pbandai/en/items");
 		this.assetsDir = path.join(projectRoot, "assets/pbandai/en/items");
 		this.indexPath = path.join(projectRoot, "data/src/pbandai/en/index.json");
+	}
+
+	/**
+	 * Set the hash index for image deduplication
+	 * Item assets are authoritative - P-Bandai images will be deduplicated against them
+	 */
+	setHashIndex(hashIndex: ImageHashIndex): void {
+		this.hashIndex = hashIndex;
 	}
 
 	/**
@@ -679,24 +689,31 @@ export class PBandaiUSListParser {
 	/**
 	 * Download images for an item
 	 * Iterates through item.images, downloads from src, and updates path
-	 * Uses original filename from URL
+	 * Uses hash-based deduplication when hashIndex is available
 	 */
 	private async downloadImages(item: PBandaiUSListItem, delay: number): Promise<number> {
 		const itemDir = path.join(this.assetsDir, item.id);
-		await mkdir(itemDir, { recursive: true });
-
 		let downloaded = 0;
 
 		for (let i = 0; i < item.images.length; i++) {
 			const img = item.images[i];
-			if (!img.src) continue;
+			if (!img?.src) continue;
 
 			const filename = this.getFilenameFromUrl(img.src);
 			const filePath = path.join(itemDir, filename);
 			const relativePath = `/pbandai/en/items/${item.id}/${filename}`;
 
-			// Skip if already exists
+			// Skip if already exists locally
 			if (existsSync(filePath)) {
+				// Compute hash for existing file if we have an index
+				if (this.hashIndex && !img.hash) {
+					try {
+						const buffer = await readFile(filePath);
+						img.hash = computeBufferHash(buffer);
+					} catch {
+						// Ignore hash computation errors
+					}
+				}
 				img.path = relativePath;
 				continue;
 			}
@@ -705,9 +722,25 @@ export class PBandaiUSListParser {
 				const response = await fetch(img.src);
 				if (response.ok) {
 					const buffer = Buffer.from(await response.arrayBuffer());
-					await writeFile(filePath, buffer);
-					img.path = relativePath;
-					downloaded++;
+					const hash = computeBufferHash(buffer);
+					img.hash = hash;
+
+					// Check if image already exists in item assets (deduplicate)
+					const existingPath = this.hashIndex?.findByHash(hash);
+					if (existingPath) {
+						// Use existing path from item assets - don't save duplicate
+						img.path = existingPath;
+						console.log(`    Deduplicated: ${item.id} image → ${existingPath}`);
+					} else {
+						// Save new image
+						await mkdir(itemDir, { recursive: true });
+						await writeFile(filePath, buffer);
+						img.path = relativePath;
+						downloaded++;
+
+						// Add to index for future deduplication
+						this.hashIndex?.add(hash, relativePath);
+					}
 
 					if (delay > 0 && i < item.images.length - 1) {
 						await this.delay(delay);
