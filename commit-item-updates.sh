@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Script to commit and push item/manual updates in batches
+# Script to commit and push item/manual/pbandai updates in batches
 # Usage: ./commit-item-updates.sh [OPTIONS]
-# Processes both items and manuals sequentially
+# Processes items, manuals, and P-Bandai items sequentially
 # Uses fixed batch sizes (number of files) rather than ID ranges
 
 set -e  # Exit on any error
@@ -34,7 +34,7 @@ while [[ $# -gt 0 ]]; do
             echo "Each ID includes its JSON file and associated assets (images/PDFs)."
             echo ""
             echo "Examples:"
-            echo "  $0                              # Commit all changed items and manuals in batches of 100"
+            echo "  $0                              # Commit all changed items, manuals, and pbandai in batches of 100"
             echo "  $0 --batch-size 50              # Use smaller batches of 50 IDs"
             echo "  $0 --dry-run                    # Preview batches without committing"
             exit 0
@@ -137,6 +137,36 @@ get_changed_manual_ids() {
     printf '%s\n' "${ids[@]}" | sort -u
 }
 
+# Get all changed IDs for P-Bandai items (from JSON files and asset directories)
+get_changed_pbandai_ids() {
+    local ids=()
+
+    # From JSON files in data/src/pbandai/en/items/
+    for f in $(git diff --name-only data/src/pbandai/en/items/ 2>/dev/null | grep '\.json$' | grep -v 'index\.json$'); do
+        ids+=($(basename "$f" .json))
+    done
+    for f in $(git diff --cached --name-only data/src/pbandai/en/items/ 2>/dev/null | grep '\.json$' | grep -v 'index\.json$'); do
+        ids+=($(basename "$f" .json))
+    done
+    for f in $(git ls-files --others --exclude-standard data/src/pbandai/en/items/ 2>/dev/null | grep '\.json$' | grep -v 'index\.json$'); do
+        ids+=($(basename "$f" .json))
+    done
+
+    # From asset directories in assets/pbandai/en/items/
+    for d in $(git diff --name-only assets/pbandai/en/items/ 2>/dev/null | cut -d'/' -f5 | sort -u); do
+        [[ -n "$d" ]] && ids+=("$d")
+    done
+    for d in $(git diff --cached --name-only assets/pbandai/en/items/ 2>/dev/null | cut -d'/' -f5 | sort -u); do
+        [[ -n "$d" ]] && ids+=("$d")
+    done
+    for d in $(git ls-files --others --exclude-standard assets/pbandai/en/items/ 2>/dev/null | cut -d'/' -f5 | sort -u); do
+        [[ -n "$d" ]] && ids+=("$d")
+    done
+
+    # Deduplicate and sort
+    printf '%s\n' "${ids[@]}" | sort -u
+}
+
 # Stage all files for a given item ID
 stage_item_files() {
     local id=$1
@@ -168,6 +198,29 @@ stage_manual_files() {
     # Asset directory
     if [[ -d "assets/manuals/${id}" ]]; then
         git add "assets/manuals/${id}" 2>/dev/null && staged=1
+    fi
+
+    return $((1 - staged))
+}
+
+# Stage all files for a given P-Bandai item ID
+stage_pbandai_files() {
+    local id=$1
+    local staged=0
+
+    # JSON file
+    if [[ -f "data/src/pbandai/en/items/${id}.json" ]]; then
+        git add "data/src/pbandai/en/items/${id}.json" 2>/dev/null && staged=1
+    fi
+
+    # Asset directory
+    if [[ -d "assets/pbandai/en/items/${id}" ]]; then
+        git add "assets/pbandai/en/items/${id}" 2>/dev/null && staged=1
+    fi
+
+    # Always include index.json if it has changes
+    if [[ -f "data/src/pbandai/en/index.json" ]]; then
+        git add "data/src/pbandai/en/index.json" 2>/dev/null
     fi
 
     return $((1 - staged))
@@ -209,8 +262,10 @@ process_batch() {
     for id in "${ids[@]}"; do
         if [[ "$data_type" == "items" ]]; then
             stage_item_files "$id"
-        else
+        elif [[ "$data_type" == "manuals" ]]; then
             stage_manual_files "$id"
+        elif [[ "$data_type" == "pbandai" ]]; then
+            stage_pbandai_files "$id"
         fi
     done
 
@@ -243,10 +298,14 @@ process_data_type() {
         while IFS= read -r id; do
             [[ -n "$id" ]] && all_ids+=("$id")
         done < <(get_changed_item_ids)
-    else
+    elif [[ "$data_type" == "manuals" ]]; then
         while IFS= read -r id; do
             [[ -n "$id" ]] && all_ids+=("$id")
         done < <(get_changed_manual_ids)
+    elif [[ "$data_type" == "pbandai" ]]; then
+        while IFS= read -r id; do
+            [[ -n "$id" ]] && all_ids+=("$id")
+        done < <(get_changed_pbandai_ids)
     fi
 
     local total_ids=${#all_ids[@]}
@@ -316,6 +375,11 @@ main() {
 
     # Then process manuals
     process_data_type "manuals"
+
+    echo ""
+
+    # Then process P-Bandai items
+    process_data_type "pbandai"
 
     echo ""
     print_status "========================================="
