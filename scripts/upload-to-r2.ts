@@ -66,6 +66,7 @@ const DATA_DIR = './assets';
 const BATCH_SIZE = 25; // Smaller batches for better reliability
 const DRY_RUN = process.argv.includes('--dry-run');
 const RESUME = !process.argv.includes('--force'); // Resume by default, --force to upload all
+const SYNC_DELETE = process.argv.includes('--delete') || process.argv.includes('--sync');
 const STATE_FILE = './upload-state.json';
 
 // Utility functions
@@ -192,6 +193,118 @@ async function cleanupVariants(normalizedPath: string): Promise<number> {
   return deleted;
 }
 
+interface R2Object {
+  key: string;
+  size: number;
+}
+
+async function listR2Objects(prefix: string = ''): Promise<R2Object[]> {
+  const objects: R2Object[] = [];
+  let cursor: string | undefined;
+
+  console.log('📡 Fetching R2 object list...');
+
+  do {
+    try {
+      const args = ['r2', 'object', 'list', BUCKET_NAME, '--remote', '--json'];
+      if (prefix) {
+        args.push('--prefix', prefix);
+      }
+      if (cursor) {
+        args.push('--cursor', cursor);
+      }
+
+      const output = await execCommand('wrangler', args);
+      const result = JSON.parse(output) as {
+        objects: Array<{ key: string; size: number }>;
+        truncated: boolean;
+        cursor?: string;
+      };
+
+      objects.push(...result.objects.map(obj => ({
+        key: obj.key,
+        size: obj.size
+      })));
+
+      cursor = result.truncated ? result.cursor : undefined;
+
+      if (objects.length % 1000 === 0 && objects.length > 0) {
+        process.stdout.write(`\r   Found ${objects.length} objects...`);
+      }
+    } catch (error) {
+      console.error('Error listing R2 objects:', (error as Error).message);
+      break;
+    }
+  } while (cursor);
+
+  console.log(`\r   Found ${objects.length} objects in R2`);
+  return objects;
+}
+
+async function deleteOrphanedObjects(localFiles: FileInfo[]): Promise<{ deleted: number; failed: number }> {
+  console.log('');
+  console.log('🔍 Checking for orphaned objects in R2...');
+
+  // Build set of all valid remote paths (normalized)
+  const validPaths = new Set<string>();
+  for (const file of localFiles) {
+    validPaths.add(file.remotePath);
+    // Also add the original path in case it wasn't normalized yet
+    validPaths.add(file.originalRemotePath);
+  }
+
+  // Get all objects in R2
+  const r2Objects = await listR2Objects();
+
+  // Find orphaned objects (in R2 but not in local files)
+  const orphaned = r2Objects.filter(obj => {
+    const normalizedKey = normalizeExtension(obj.key);
+    return !validPaths.has(obj.key) && !validPaths.has(normalizedKey);
+  });
+
+  if (orphaned.length === 0) {
+    console.log('✅ No orphaned objects found');
+    return { deleted: 0, failed: 0 };
+  }
+
+  console.log(`🗑️  Found ${orphaned.length} orphaned objects to delete`);
+  console.log(`   Total size: ${formatBytes(orphaned.reduce((sum, o) => sum + o.size, 0))}`);
+
+  if (DRY_RUN) {
+    console.log('');
+    console.log('🧪 DRY RUN - Would delete:');
+    for (const obj of orphaned.slice(0, 10)) {
+      console.log(`   - ${obj.key} (${formatBytes(obj.size)})`);
+    }
+    if (orphaned.length > 10) {
+      console.log(`   ... and ${orphaned.length - 10} more`);
+    }
+    return { deleted: 0, failed: 0 };
+  }
+
+  let deleted = 0;
+  let failed = 0;
+
+  for (let i = 0; i < orphaned.length; i++) {
+    const obj = orphaned[i];
+    try {
+      await deleteR2Object(obj.key);
+      deleted++;
+
+      if (deleted % 10 === 0) {
+        process.stdout.write(`\r   Deleted ${deleted}/${orphaned.length} orphaned objects...`);
+      }
+    } catch {
+      failed++;
+      console.error(`\n❌ Failed to delete: ${obj.key}`);
+    }
+  }
+
+  console.log(`\r   Deleted ${deleted}/${orphaned.length} orphaned objects    `);
+
+  return { deleted, failed };
+}
+
 // Main upload function
 async function uploadFiles(): Promise<void> {
   console.log('🚀 Starting R2 upload to hobby-ninja bucket...');
@@ -202,7 +315,7 @@ async function uploadFiles(): Promise<void> {
   console.log('');
 
   if (DRY_RUN) {
-    console.log('🧪 DRY RUN MODE - No files will be uploaded');
+    console.log('🧪 DRY RUN MODE - No files will be uploaded or deleted');
     console.log('');
   }
 
@@ -212,6 +325,11 @@ async function uploadFiles(): Promise<void> {
     console.log('');
   } else {
     console.log('🔄 FORCE MODE - Will upload all files from scratch');
+    console.log('');
+  }
+
+  if (SYNC_DELETE) {
+    console.log('🗑️  SYNC MODE - Will delete R2 objects that no longer exist locally');
     console.log('');
   }
 
@@ -259,6 +377,11 @@ async function uploadFiles(): Promise<void> {
     console.log('');
     console.log('Example commands that would be executed:');
     console.log(`wrangler r2 object put "${BUCKET_NAME}/path/to/file.jpg" --file="./assets/path/to/file.jpg"`);
+
+    // In dry-run mode with sync, show what would be deleted
+    if (SYNC_DELETE) {
+      await deleteOrphanedObjects(allFiles);
+    }
     return;
   }
 
@@ -347,6 +470,15 @@ async function uploadFiles(): Promise<void> {
   // Save final state
   saveState(state);
 
+  // Handle deletions if sync mode is enabled
+  let orphanedDeleted = 0;
+  let orphanedFailed = 0;
+  if (SYNC_DELETE) {
+    const deleteResult = await deleteOrphanedObjects(allFiles);
+    orphanedDeleted = deleteResult.deleted;
+    orphanedFailed = deleteResult.failed;
+  }
+
   // Final report
   const totalTime = (Date.now() - startTime) / 1000;
   const totalProcessed = alreadyProcessed + uploaded + failed;
@@ -362,8 +494,14 @@ async function uploadFiles(): Promise<void> {
   if (variantsCleaned > 0) {
     console.log(`   🧹 Old variants cleaned: ${variantsCleaned} files`);
   }
+  if (orphanedDeleted > 0) {
+    console.log(`   🗑️  Orphaned objects deleted: ${orphanedDeleted} files`);
+  }
   if (failed > 0) {
     console.log(`   ❌ Failed uploads: ${failed} files`);
+  }
+  if (orphanedFailed > 0) {
+    console.log(`   ❌ Failed deletions: ${orphanedFailed} files`);
   }
   console.log(`   📁 Total processed: ${totalProcessed}/${allFiles.length} files (${((totalProcessed / allFiles.length) * 100).toFixed(1)}%)`);
 
