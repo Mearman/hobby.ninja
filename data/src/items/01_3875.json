@@ -5,6 +5,60 @@
 		"ja": "ＭＧ 1/100 マラサイ（ユニコーンカラーVer.）",
 		"en": "MG 1/100 Marasai (Unicorn color Ver.)"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216106",
+			"url": "https://p-bandai.jp/item/item-1000216106/",
+			"ja": "RG 1/144 ユニコーンガンダム２号機 バンシィ・ノルン (最終決戦仕様) [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000183366",
+			"url": "https://p-bandai.jp/item/item-1000183366/",
+			"ja": "ＭＧ 1/100 スタークジェガン"
+		},
+		{
+			"id": "01_4271",
+			"url": "https://bandai-hobby.net/item/01_4271/",
+			"ja": "MG 1/100 ガンダムベース限定 ユニコーンガンダム(光の結晶体)"
+		},
+		{
+			"id": "item-1000164780",
+			"url": "https://p-bandai.jp/item/item-1000164780/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム ペルフェクティビリティ用 ディバイン拡張セット"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 4620,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 7
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"ＭＧマラサイが『機動戦士ガンダムＵＣ』に登場する仕様で登場！",
@@ -53,7 +106,7 @@
 			"Attached weapons: Federin rifle, sea snake, beam rifle, beam saber",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/100 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS/PE",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -71,32 +124,32 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4818.jpg",
+				"src": "https://bandai-hobby.net/images/153_4818_s_drrzyq16oejvduk1dsb8elyyptqs.jpg",
 				"path": "/images/items/01_3875/153_4818.jpg",
 				"hash": "bec8f04238447219352cd36780ddea17"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4818.jpg",
+				"src": "https://bandai-hobby.net/images/155_4818_s_bkkc6aan88kr2rfcqqulvf4folw5.jpg",
 				"path": "/images/items/01_3875/155_4818.jpg",
 				"hash": "44b54627be596b21e4295df05c08eec9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4818.jpg",
+				"src": "https://bandai-hobby.net/images/156_4818_s_3yh2w3d15isd4gew3da5c7eynqud.jpg",
 				"path": "/images/items/01_3875/156_4818.jpg",
 				"hash": "287d351afbc838de516767e4e928bb61"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4818.jpg",
+				"src": "https://bandai-hobby.net/images/157_4818_s_bjxtn7e0ntrzwz6dk7p2gh6gfbdb.jpg",
 				"path": "/images/items/01_3875/157_4818.jpg",
 				"hash": "9f537b05ee88f9793ebb906cb93cd5b5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4818.jpg",
+				"src": "https://bandai-hobby.net/images/158_4818_s_x1vzktfvb5lajt0b1y2tfowkf7y8.jpg",
 				"path": "/images/items/01_3875/158_4818.jpg",
 				"hash": "c128691b153144d85b57ddc9aeec6e7e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4818.jpg",
+				"src": "https://bandai-hobby.net/images/159_4818_s_wwuk2qm6yqk1xdvdkvecleiblrpn.jpg",
 				"path": "/images/items/01_3875/159_4818.jpg",
 				"hash": "9d539aaa30c75b9727c009ec88629c8a"
 			}
@@ -104,14 +157,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3875/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216106", "item-1000183366", "01_4271", "item-1000164780"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2182",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2182/"

@@ -5,6 +5,50 @@
 		"ja": "MG 1/100 ガンダムバルバトス[アイアンブラッドコーティング]",
 		"en": "MG 1/100 Gundam Barbatos [Iron Blood Coating]"
 	},
+	"brands": [
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "tekketsu",
+			"url": "https://bandai-hobby.net/series/tekketsu/",
+			"ja": "機動戦士ガンダム 鉄血のオルフェンズ"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5469",
+			"url": "https://bandai-hobby.net/item/01_5469/",
+			"ja": "MG 1/100 ガンダムヴィダール"
+		},
+		{
+			"id": "01_4255",
+			"url": "https://bandai-hobby.net/item/01_4255/",
+			"ja": "MG 1/100 ガンダムバルバトス [リサーキュレーションカラー/ネオンブルー]"
+		},
+		{
+			"id": "01_4214",
+			"url": "https://bandai-hobby.net/item/01_4214/",
+			"ja": "MG 1/100 ガンダムベース限定 ガンダムバルバトス用 拡張パーツセット[クリアカラー］"
+		},
+		{
+			"id": "01_3458",
+			"url": "https://bandai-hobby.net/item/01_3458/",
+			"ja": "MG 1/100 ガンダムバルバトス[チタニウムフィニッシュ］"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 10340,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 13
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム 鉄血のオルフェンズ』から、MG 1/100 ガンダムバルバトスが、重厚感あふれるアイアンブラッドコーティング仕様になって登場！",
@@ -40,7 +83,7 @@
 			"• The Ahab reactor on the chest is equipped with a rotating gimmick.",
 			"• The internal frame, cylinder, and armor are linked by a movable axis built into the upper body. This allows you to create dynamic poses.",
 			"• The cylinder on the shoulder reproduces the mechanical structure that follows the pulling movement. You can express Barbatos' aggressive pose.",
-			"• The knees are movable by linking the frame and cylinder. By pulling out the parts on the back of the knee, the range of motion is expanded, allowing for a natural standing knee position.",
+			"• The knees move in conjunction with the frame and cylinder. By pulling out the parts on the back of the knee, the range of motion is expanded, allowing for a natural standing knee position.",
 			"• In the standby position, swings from side to side and movement of the hip joint axis are reproduced. You can enjoy the characteristic looking down waiting pose.",
 			"• Three types of interchangeable hand parts are included. The weapon is attached to the palm of the hand along with the fingers of the weapon holder.",
 			"• The grip and tip of the mace can be slid.",
@@ -50,30 +93,22 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4789.jpg",
+				"src": "https://bandai-hobby.net/images/153_4789_s_srarfukpiltp07k6r60wk1vj8zqb.jpg",
 				"path": "/images/items/01_3842/153_4789.jpg",
 				"hash": "f28fa099dfc18cfa5eba6152e52c81fb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4789.jpg",
+				"src": "https://bandai-hobby.net/images/155_4789_s_v1on7kqyds28ie6gghezc06qzo2s.jpg",
 				"path": "/images/items/01_3842/155_4789.jpg",
 				"hash": "2f6a336ca9c31e56fdad4eb10ccea76d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4789.jpg",
+				"src": "https://bandai-hobby.net/images/156_4789_s_ezg7netm7izmo986ggr0b39wy470.jpg",
 				"path": "/images/items/01_3842/156_4789.jpg",
 				"hash": "90390e87f2001253f58d70c141cb70cc"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3842/",
-	"brandIds": ["mg"],
-	"seriesIds": ["tekketsu"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5469", "01_4255", "01_4214", "01_3458"],
-	"tag": {
-		"ja": "イベント",
-		"en": "Event"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3842/"
 }

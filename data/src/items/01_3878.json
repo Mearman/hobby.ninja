@@ -2,9 +2,63 @@
 	"id": "01_3878",
 	"type": "item",
 	"name": {
-		"ja": "ＭＧ 1/100 RX-78-2 ガンダム Ver.3.0用 拡張セット",
-		"en": "MG 1/100 RX-78-2 Gundam Ver.3.0 expansion set"
+		"ja": "ＭＧ 1/100 RX-78-2ガンダムVer.3.0用 拡張セット",
+		"en": "Expansion set for MG 1/100 RX-78-2GundamVer.3.0"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5509",
+			"url": "https://bandai-hobby.net/item/01_5509/",
+			"ja": "MG 1/100 ガンダムべース限定 RX-78-3 G-3ガンダム Ver.3.0"
+		},
+		{
+			"id": "item-1000209098",
+			"url": "https://p-bandai.jp/item/item-1000209098/",
+			"ja": "ＲＧ 1/144 RX-78-2 ガンダム Ver.2.0用武器セット"
+		},
+		{
+			"id": "01_4977",
+			"url": "https://bandai-hobby.net/item/01_4977/",
+			"ja": "MG 1/100 ガンダムベース限定 ドム[クリアカラー]"
+		},
+		{
+			"id": "01_3772",
+			"url": "https://bandai-hobby.net/item/01_3772/",
+			"ja": "MG 1/100 リック・ドム"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 8
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"劇中の数々の名シーンを拡張セットで再現！",
@@ -69,7 +122,7 @@
 			"This product will be released in 20138 in-store Release Scheduled \"MG 1/100 RX-78-2 Gundam Ver.3.0\" (sold separately)",
 			"An expansion set that you can enjoy by wearing it and recreating various scenes.",
 			"<Set contents>",
-			"● Gunpla LED unit (yellow) × 1",
+			"● Gunpla LED unit (yellow) x 1",
 			"● Hyper Bazooka × 1",
 			"● Beam Javelin × 1",
 			"● Gundam Hammer × 1",
@@ -103,32 +156,32 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4820.jpg",
+				"src": "https://bandai-hobby.net/images/153_4820_s_exvyprsf06mesl715w0s6ce33pea.jpg",
 				"path": "/images/items/01_3878/153_4820.jpg",
 				"hash": "65cef24f67a2efca95064b72423c5d0a"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4820.jpg",
+				"src": "https://bandai-hobby.net/images/155_4820_s_db9kjpajy8xg83umqv4qwyn60c8l.jpg",
 				"path": "/images/items/01_3878/155_4820.jpg",
 				"hash": "1559d54d774b7b816755cc7661359fed"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4820.jpg",
+				"src": "https://bandai-hobby.net/images/156_4820_s_9sxyidk91bhrrdmu34asgd0efwe9.jpg",
 				"path": "/images/items/01_3878/156_4820.jpg",
 				"hash": "5aa13421c8f85421b64cff06d021b35e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4820.jpg",
+				"src": "https://bandai-hobby.net/images/157_4820_s_hxkut18a30gqeryswt6bcqj72631.jpg",
 				"path": "/images/items/01_3878/157_4820.jpg",
 				"hash": "7f6d315381ecb7ff351842ea9ebdfbba"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4820.jpg",
+				"src": "https://bandai-hobby.net/images/158_4820_s_ts20dn5xa5sbd5h5t67gr0vnsqzm.jpg",
 				"path": "/images/items/01_3878/158_4820.jpg",
 				"hash": "4c8f0b4abba31021312c891a0fce0a31"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4820.jpg",
+				"src": "https://bandai-hobby.net/images/159_4820_s_7j2m3vxlooh4xtsm4il1nyagyppv.jpg",
 				"path": "/images/items/01_3878/159_4820.jpg",
 				"hash": "94575b4ccc2bb8ad213d69779664b436"
 			}
@@ -136,14 +189,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3878/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5509", "item-1000209098", "01_4977", "01_3772"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2191",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2191/"

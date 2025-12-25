@@ -5,6 +5,45 @@
 		"ja": "ＨＧ 1/144 ドラグナー1 リフター１装備タイプ",
 		"en": "HG 1/144 Dragoner 1 Lifter 1 equipped type"
 	},
+	"brands": [
+		{
+			"id": "pb_charapla",
+			"url": "https://bandai-hobby.net/brand/pb_charapla/",
+			"ja": "プレバンキャラプラ"
+		},
+		{
+			"id": "hg-c",
+			"url": "https://bandai-hobby.net/brand/hg-c/",
+			"ja": "ＨＧ[ハイグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "dragonar",
+			"url": "https://bandai-hobby.net/series/dragonar/",
+			"ja": "機甲戦記ドラグナー"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000212946",
+			"url": "https://p-bandai.jp/item/item-1000212946/",
+			"ja": "1/144 機甲戦記ドラグナーセット３"
+		},
+		{
+			"id": "item-1000212721",
+			"url": "https://p-bandai.jp/item/item-1000212721/",
+			"ja": "ＨＧ 1/144 ドラグナー3 リフター3装備タイプ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -17,7 +56,6 @@
 		"month": 2
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『機甲戦記ドラグナー』より、ドラグナー１ リフター１装備タイプが完全新規造形のＨＧシリーズで商品化。",
@@ -119,7 +157,7 @@
 			"Laser sword for mortar combat / Assault knife for mortar combat / Throwing bomb / Anti-MA grenade",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/144 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS/PE",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -138,72 +176,86 @@
 			"・Product specifications are as of 202111. Package, logo and product specifications are subject to change without notice."
 		]
 	},
-	"accessories": {
-		"ja": ["リフター１", "75mmハンドレールガンLPS9型", "ハイブリットシールド", "2蓮105mmハンドレールキャノン"],
-		"en": ["lifter 1", "75mm hand rail gun LPS9 type", "Hybrid Seal", "2 lotus 105mm handrail cannon"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "リフター１",
+				"en": "lifter 1"
+			}
+		},
+		{
+			"name": {
+				"ja": "75mmハンドレールガンLPS9型",
+				"en": "75mm hand rail gun LPS9 type"
+			}
+		},
+		{
+			"name": {
+				"ja": "ハイブリットシールド",
+				"en": "Hybrid Seal"
+			}
+		},
+		{
+			"name": {
+				"ja": "2蓮105mmハンドレールキャノン",
+				"en": "2 lotus 105mm handrail cannon"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4843.jpg",
+				"src": "https://bandai-hobby.net/images/153_4843_s_jw58aqj4ruz5n06k811u4kd4pkh9.jpg",
 				"path": "/images/items/01_3902/153_4843.jpg",
 				"hash": "610f02f4b7332c5fee973531646ee466"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4843.jpg",
+				"src": "https://bandai-hobby.net/images/155_4843_s_wj5l6klz5ihp3z1h20ygjj07y6tj.jpg",
 				"path": "/images/items/01_3902/155_4843.jpg",
 				"hash": "cd9a34b9e25836baaabb03c81ad135f9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4843.jpg",
+				"src": "https://bandai-hobby.net/images/156_4843_s_jsf661jbv0pvaogyuq8jjay4lb31.jpg",
 				"path": "/images/items/01_3902/156_4843.jpg",
 				"hash": "04dbb7caca8ed79ea899c91f39b97b9f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4843.jpg",
+				"src": "https://bandai-hobby.net/images/157_4843_s_d2ko1h5ws10xmd94qkn6pw7288a1.jpg",
 				"path": "/images/items/01_3902/157_4843.jpg",
 				"hash": "e5ecf3e3549a047000e2f115b43dc35e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4843.jpg",
+				"src": "https://bandai-hobby.net/images/158_4843_s_f8nxqo9zif4mvkk9r9btcgc6mjej.jpg",
 				"path": "/images/items/01_3902/158_4843.jpg",
 				"hash": "f2fd99dead063cbabb651c39c425e450"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4843.jpg",
+				"src": "https://bandai-hobby.net/images/159_4843_s_ccsbn8mdfjypblaqdhdiadzvj7zp.jpg",
 				"path": "/images/items/01_3902/159_4843.jpg",
 				"hash": "a33a019a6cb6fc2eac842b7518b39e46"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4843.jpg",
+				"src": "https://bandai-hobby.net/images/189_4843_s_4n5lg3lk041z9nce4jdv9lhh5l45.jpg",
 				"path": "/images/items/01_3902/189_4843.jpg",
 				"hash": "11791beaa9841dfd9aa0dbe6713fde42"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4843.jpg",
+				"src": "https://bandai-hobby.net/images/190_4843_s_xljeq8jlu272k74jc9293jcogwkf.jpg",
 				"path": "/images/items/01_3902/190_4843.jpg",
 				"hash": "89953dee83b1aab19c467d85668d2777"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4843.jpg",
+				"src": "https://bandai-hobby.net/images/191_4843_s_h3j9457awafuv7c11840qrn4815u.jpg",
 				"path": "/images/items/01_3902/191_4843.jpg",
 				"hash": "e15d0ed0ded18f37efb31c6f0bb5a939"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/192_4843.jpg",
+				"src": "https://bandai-hobby.net/images/192_4843_s_sg5s6jqne8hfj6rasm1533je0wo0.jpg",
 				"path": "/images/items/01_3902/192_4843.jpg",
 				"hash": "0eecc308a5f4d20f4cf45423076e00d8"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3902/",
-	"brandIds": ["pb_charapla", "hg"],
-	"seriesIds": ["dragonar"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["item-1000212946", "item-1000212721"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	}
+	"sourceUrl": "https://bandai-hobby.net/item/01_3902/"
 }

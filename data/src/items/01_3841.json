@@ -5,6 +5,50 @@
 		"ja": "1/144 RX-78F00 ガンダム[チタニウムフィニッシュ]",
 		"en": "1/144 RX-78F00 Gundam [Titanium Finish]"
 	},
+	"brands": [
+		{
+			"id": "gfy",
+			"url": "https://bandai-hobby.net/brand/gfy/",
+			"ja": "GUNDAM FACTORY YOKOHAMA"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5035",
+			"url": "https://bandai-hobby.net/item/01_5035/",
+			"ja": "1/144 RX-78F00 HMT ガンダム高機動型(G-3イメージカラー)"
+		},
+		{
+			"id": "01_4239",
+			"url": "https://bandai-hobby.net/item/01_4239/",
+			"ja": "1/144 RX-78F00 HMT ガンダム高機動型"
+		},
+		{
+			"id": "01_3472",
+			"url": "https://bandai-hobby.net/item/01_3472/",
+			"ja": "ハロプラ ハロ [クリームホワイト]"
+		},
+		{
+			"id": "01_3471",
+			"url": "https://bandai-hobby.net/item/01_3471/",
+			"ja": "ハロプラ ハロ [マロンブラウン]"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 4180,
 		"currency": "JPY",
@@ -18,7 +62,6 @@
 		"day": 6
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"『GUNDAM FACTORY YOKOHAMA』の動く実物大ガンダムのオリジナル商品。チタニウムフィニッシュを施した特別仕様で登場！",
@@ -35,53 +78,59 @@
 			"• Rifle and Seal included"
 		]
 	},
-	"accessories": {
-		"ja": ["ホイルシール", "マーキングシール"],
-		"en": ["foil seal", "MarkingSeal"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ホイルシール",
+				"en": "Foil Seal"
+			}
+		},
+		{
+			"name": {
+				"ja": "マーキングシール",
+				"en": "MarkingSeal"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4788.jpg",
+				"src": "https://bandai-hobby.net/images/153_4788_o_1fj0fkrd5psc1c8u1p1d1s84u5u23.jpg",
 				"path": "/images/items/01_3841/153_4788.jpg",
 				"hash": "a962732f208522b68c74ee3d2ba6275e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4788.jpg",
+				"src": "https://bandai-hobby.net/images/155_4788_o_1fj0fl4bugrs1b5pm27di191f2d.jpg",
 				"path": "/images/items/01_3841/155_4788.jpg",
 				"hash": "9315d7f2df2e0a86bf7ebc6b1ac3012e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4788.jpg",
+				"src": "https://bandai-hobby.net/images/156_4788_o_1fj0fl7aolbe8fg1mk5oc319qf2i.jpg",
 				"path": "/images/items/01_3841/156_4788.jpg",
 				"hash": "50193a87bebccaeb7a5c40b235b7d0b3"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4788.jpg",
+				"src": "https://bandai-hobby.net/images/157_4788_o_1fj0flnsd1q3mmbievbtrk1ok62n.jpg",
 				"path": "/images/items/01_3841/157_4788.jpg",
 				"hash": "0ee1b03043f08fd609abfb81034bbcb9"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4788.jpg",
+				"src": "https://bandai-hobby.net/images/158_4788_o_1fj0flqq580uvik4erats3212s.jpg",
 				"path": "/images/items/01_3841/158_4788.jpg",
 				"hash": "80e47dfbfd3221c758b62ba74504297d"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4788.jpg",
+				"src": "https://bandai-hobby.net/images/159_4788_o_1fj0fltnbl2n1dhc1gq91487ju131.jpg",
 				"path": "/images/items/01_3841/159_4788.jpg",
 				"hash": "a9dbbeb6ab2727d36bf7645f4c2533ca"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4788.jpg",
+				"src": "https://bandai-hobby.net/images/189_4788_o_1fj0fm0qc6gn1digatoof11qb36.jpg",
 				"path": "/images/items/01_3841/189_4788.jpg",
 				"hash": "3a824e67e09d68db1bc97b59b51108d8"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3841/",
-	"brandIds": ["gfy"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_5035", "01_4239", "01_3472", "01_3471"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3841/"
 }

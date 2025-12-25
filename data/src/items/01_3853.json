@@ -5,6 +5,60 @@
 		"ja": "ＨＧ 1/144 ミーティアユニット",
 		"en": "HG 1/144 Meteor unit"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "seed",
+			"url": "https://bandai-hobby.net/series/seed/",
+			"ja": "機動戦士ガンダムSEED"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000181726",
+			"url": "https://p-bandai.jp/item/item-1000181726/",
+			"ja": "ＨＧ 1/144 ストライクダガー"
+		},
+		{
+			"id": "01_3573",
+			"url": "https://bandai-hobby.net/item/01_3573/",
+			"ja": "フルメカニクス 1/100 ガンダムベース限定 ZGMF-X10A フリーダムガンダム Ver.GCP"
+		},
+		{
+			"id": "01_3574",
+			"url": "https://bandai-hobby.net/item/01_3574/",
+			"ja": "SDガンダムEXスタンダード ガンダムベース限定 ZGMF-X10A フリーダムガンダム Ver.GCP"
+		},
+		{
+			"id": "item-1000146930",
+			"url": "https://p-bandai.jp/item/item-1000146930/",
+			"ja": "ＭＧ 1/100 エールストライクガンダム Ver.ＲＭ用 ランチャーストライカー/ソードストライカーパック"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 8030,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"2012年アニメ放映10周年を迎えた「機動戦士ガンダムSEED」より、大迫力のＨＧミーティアユニットが単品アイテムとして登場！",
@@ -51,10 +104,10 @@
 			"・ 商品仕様は2012年8月現在の予定です。変更の場合もございますがご了承ください。"
 		],
 		"en": [
-			"From \"Mobile Suit Gundam SEED\", which celebrated its 10th anniversary in 2012, the powerful HG Meteor unit is now available as a single item!",
+			"From \"Mobile Suit GundamSEED\", which celebrated its 10th anniversary in 2012, the powerful HG Meteor unit is now available as a single item!",
 			"“Have fun in conjunction with RG series products!!”",
 			"Real Gray Series MS (sold separately) can be docked!",
-			"●● Comes with a newly designed 'realistic decal' that has a sense of unity with RG! Some molding colors have also been changed! ! ●●",
+			"●● Comes with a newly designed 'Realistic Decal' that has a sense of unity with RG! Some molding colors have also been changed! ! ●●",
 			"*No foil is used in the realistic decals included with this product.",
 			"- Newly designed realistic decal included. (*There is no marking using foil.)",
 			"-In addition to a large beam sword with clear parts, the opening/closing/deployment gimmicks of cannons, missile pods, etc. are reproduced.",
@@ -88,11 +141,6 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000077001_1.jpg",
 				"path": "/images/items/01_3853/1000077001_1.jpg",
 				"hash": "049dee0777b639703ada6a49383d778c"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000077001_10.jpg",
-				"path": "/images/items/01_3853/1000077001_10.jpg",
-				"hash": "da9890acc7df7c36ae9d2e5c26485303"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000077001_2.jpg",
@@ -133,19 +181,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000077001_9.jpg",
 				"path": "/images/items/01_3853/1000077001_9.jpg",
 				"hash": "dd6b12ea6d284455d8355e33224a49d7"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000077001_10.jpg",
+				"path": "/images/items/01_3853/1000077001_10.jpg",
+				"hash": "da9890acc7df7c36ae9d2e5c26485303"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3853/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["seed"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000181726", "01_3573", "01_3574", "item-1000146930"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2222",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2222/"

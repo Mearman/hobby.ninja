@@ -5,6 +5,60 @@
 		"ja": "RG 1/144 デスティニーガンダム ディアクティブモード",
 		"en": "RG 1/144 Destiny Gundam Deactive Mode"
 	},
+	"brands": [
+		{
+			"id": "pb_rg",
+			"url": "https://bandai-hobby.net/brand/pb_rg/",
+			"ja": "RG［リアルグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "rg",
+			"url": "https://bandai-hobby.net/brand/rg/",
+			"ja": "RG［リアルグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "seed-d",
+			"url": "https://bandai-hobby.net/series/seed-d/",
+			"ja": "機動戦士ガンダムSEED DESTINY"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_6800",
+			"url": "https://bandai-hobby.net/item/01_6800/",
+			"ja": "MG 1/100 ブレイズザクファントム (ディアッカ・エルスマン専用機)"
+		},
+		{
+			"id": "item-1000214960",
+			"url": "https://p-bandai.jp/item/item-1000214960/",
+			"ja": "ＲＧ 1/144 アカツキガンダム用シラヌイパック & ＨＧゼウスシルエット用接続パーツ"
+		},
+		{
+			"id": "item-1000203308",
+			"url": "https://p-bandai.jp/item/item-1000203308/",
+			"ja": "ＨＧ 1/144 ダークダガーＬ"
+		},
+		{
+			"id": "item-1000183862",
+			"url": "https://p-bandai.jp/item/item-1000183862/",
+			"ja": "ＭＧ 1/100 ガナーウィザード／スラッシュウィザード／ブレイズウィザードセット"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2750,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 9
 	},
 	"targetAge": 15,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ＲＧシリーズの新作デスティニーガンダムが、ディアクティブモードで早くも登場！",
@@ -42,7 +95,7 @@
 			"・ 商品仕様は2013年6月現在の予定です。変更の場合もございますがご了承ください。"
 		],
 		"en": [
-			"The new Destiny Gundam from the RG series is now available in deactive mode!",
+			"The new Destiny Gundam from the RG series is now available in inactive mode!",
 			"The RG series features color reproduction that is unparalleled in 1/144,",
 			"Deactive image color is thoroughly reproduced with molded color.",
 			"Comes with realistic decals that pursue realistic expression.",
@@ -67,27 +120,27 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4824.jpg",
+				"src": "https://bandai-hobby.net/images/153_4824_s_5mhdt7axltd0q95k47c9cg1yfaq5.jpg",
 				"path": "/images/items/01_3882/153_4824.jpg",
 				"hash": "3b65e54f4f47b04e4a2359fc51213ea0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4824.jpg",
+				"src": "https://bandai-hobby.net/images/155_4824_s_tjoot0x65ty88ewb73v6zbcvzw3j.jpg",
 				"path": "/images/items/01_3882/155_4824.jpg",
 				"hash": "003c654dfc1db19877a93f356db53541"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4824.jpg",
+				"src": "https://bandai-hobby.net/images/156_4824_s_igld4qk08jacjlwl7i4ixlxusap4.jpg",
 				"path": "/images/items/01_3882/156_4824.jpg",
 				"hash": "746f4d1899aa7db253517775fe9ddf72"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4824.jpg",
+				"src": "https://bandai-hobby.net/images/157_4824_s_5flv1da59s4fgjjraykrqanoibo9.jpg",
 				"path": "/images/items/01_3882/157_4824.jpg",
 				"hash": "d9c4bb3fcefd95c3b5171ec239e711d7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4824.jpg",
+				"src": "https://bandai-hobby.net/images/158_4824_s_mn6dxxkdd958mue6xkd5xz4l4djr.jpg",
 				"path": "/images/items/01_3882/158_4824.jpg",
 				"hash": "7283cfd59a0c3a0d708688f850a11e7f"
 			}
@@ -95,14 +148,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3882/",
-	"brandIds": ["rg", "pb_rg", "pb_gunpla"],
-	"seriesIds": ["seed-d"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_6800", "item-1000214960", "item-1000203308", "item-1000183862"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2773",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2773/"

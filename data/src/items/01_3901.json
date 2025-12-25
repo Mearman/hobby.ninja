@@ -5,6 +5,60 @@
 		"ja": "ＰＧ 1/60 ユニコーンガンダム ペルフェクティビリティ",
 		"en": "PG 1/60 Unicorn Gundam Perfectibility"
 	},
+	"brands": [
+		{
+			"id": "pb_pg",
+			"url": "https://bandai-hobby.net/brand/pb_pg/",
+			"ja": "PG［パーフェクトグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "pg",
+			"url": "https://bandai-hobby.net/brand/pg/",
+			"ja": "PG［パーフェクトグレード］"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216106",
+			"url": "https://p-bandai.jp/item/item-1000216106/",
+			"ja": "RG 1/144 ユニコーンガンダム２号機 バンシィ・ノルン (最終決戦仕様) [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000183366",
+			"url": "https://p-bandai.jp/item/item-1000183366/",
+			"ja": "ＭＧ 1/100 スタークジェガン"
+		},
+		{
+			"id": "item-1000164780",
+			"url": "https://p-bandai.jp/item/item-1000164780/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム ペルフェクティビリティ用 ディバイン拡張セット"
+		},
+		{
+			"id": "item-1000163998",
+			"url": "https://p-bandai.jp/item/item-1000163998/",
+			"ja": "【抽選販売】ＨＧ 1/144 ユニコーンガンダム（デストロイモード） Ver.NIKE SB"
+		}
+	],
+	"scale": "1/60",
 	"price": {
 		"amount": 34100,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 1
 	},
 	"targetAge": 15,
-	"scale": "1/60",
 	"description": {
 		"ja": [
 			"－－－－－－－－－－－－",
@@ -80,7 +133,7 @@
 			"The blue psycho frame is reproduced with clear blue molding and equipped with 5 types of armed armor series.",
 			"● Blue psycho frame",
 			"The main body exterior is white, and each psycho frame is reproduced with clear blue molding of light-concentrating material.",
-			"By installing an LED unit (sold separately), you can enjoy a different lighting expression from previous Unicorn Gundam s.",
+			"By installing an LED unit (sold separately), you can enjoy a different lighting expression from previous Unicorn Gundams.",
 			"● 5 types of armed armor series",
 			"Increased psycho frame weapon \"Armed Armor\"",
 			"Includes 5 types of armed armor including Armed Armor HJ, BS, VN, XC, and DE.",
@@ -101,7 +154,7 @@
 			"Accessories: Special stand",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/60 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS, PE, ABS, POM, PP, PVC",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -126,11 +179,6 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164779_1.jpg",
 				"path": "/images/items/01_3901/1000164779_1.jpg",
 				"hash": "9107a2d91437058ec444160d84e76aff"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164779_10.jpg",
-				"path": "/images/items/01_3901/1000164779_10.jpg",
-				"hash": "7540c7e6252d88f3b625b0919ee96e4f"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164779_2.jpg",
@@ -171,19 +219,16 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164779_9.jpg",
 				"path": "/images/items/01_3901/1000164779_9.jpg",
 				"hash": "a33334cc9a7aa411d508d257fce9b698"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000164779_10.jpg",
+				"path": "/images/items/01_3901/1000164779_10.jpg",
+				"hash": "7540c7e6252d88f3b625b0919ee96e4f"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3901/",
-	"brandIds": ["pg", "pb_pg", "pb_gunpla"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216106", "item-1000183366", "item-1000164780", "item-1000163998"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2359",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2359/"

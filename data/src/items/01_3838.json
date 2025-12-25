@@ -5,6 +5,60 @@
 		"ja": "HGUC 1/144 ギラ・ドーガ（フル・フロンタル専用機）",
 		"en": "HGUC 1/144 Gira Doga (Full Frontal machine)"
 	},
+	"brands": [
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216106",
+			"url": "https://p-bandai.jp/item/item-1000216106/",
+			"ja": "RG 1/144 ユニコーンガンダム２号機 バンシィ・ノルン (最終決戦仕様) [スペシャルコーティング]"
+		},
+		{
+			"id": "item-1000183366",
+			"url": "https://p-bandai.jp/item/item-1000183366/",
+			"ja": "ＭＧ 1/100 スタークジェガン"
+		},
+		{
+			"id": "item-1000164780",
+			"url": "https://p-bandai.jp/item/item-1000164780/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム ペルフェクティビリティ用 ディバイン拡張セット"
+		},
+		{
+			"id": "item-1000164779",
+			"url": "https://p-bandai.jp/item/item-1000164779/",
+			"ja": "ＰＧ 1/60 ユニコーンガンダム ペルフェクティビリティ"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 2200,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 7
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"ＰＳ３ソフト『機動戦士ガンダムＵＣ』（バンダイナムコゲームス）より、",
@@ -79,37 +132,37 @@
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4785.jpg",
+				"src": "https://bandai-hobby.net/images/153_4785_s_5ndoflq2rio74gc1gffjx8ma4euh.jpg",
 				"path": "/images/items/01_3838/153_4785.jpg",
 				"hash": "f966485867580483d1478bf376783a39"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4785.jpg",
+				"src": "https://bandai-hobby.net/images/155_4785_s_cnkacxcgxk632jk9e3dn7nh8shnd.jpg",
 				"path": "/images/items/01_3838/155_4785.jpg",
 				"hash": "b9be4d21995e61aad034a4157abf6e96"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4785.jpg",
+				"src": "https://bandai-hobby.net/images/156_4785_s_akih8vpe57kz7ilbl36bnx5siljj.jpg",
 				"path": "/images/items/01_3838/156_4785.jpg",
 				"hash": "d622b7c6510a43335491ccaeab1d3e87"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4785.jpg",
+				"src": "https://bandai-hobby.net/images/157_4785_s_qcgspe91tjk0u5iyp1wzlz9t9fxx.jpg",
 				"path": "/images/items/01_3838/157_4785.jpg",
 				"hash": "6a277e274be3e45b0ac2e90ef8444c38"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4785.jpg",
+				"src": "https://bandai-hobby.net/images/158_4785_s_4k8vyxh0rmi7j9xwp3ecfeugwbyi.jpg",
 				"path": "/images/items/01_3838/158_4785.jpg",
 				"hash": "7439474b6d33aecd259e96d44bfc4a3f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4785.jpg",
+				"src": "https://bandai-hobby.net/images/159_4785_s_citbm69ixlf1gyu1t0ssjdhqpw7y.jpg",
 				"path": "/images/items/01_3838/159_4785.jpg",
 				"hash": "18fd5fd18f6fdde4c023ee1cd5fc17eb"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4785.jpg",
+				"src": "https://bandai-hobby.net/images/189_4785_s_78sw607h21dxjkl1go3iq5erqo06.jpg",
 				"path": "/images/items/01_3838/189_4785.jpg",
 				"hash": "c36e13e43d4bd5cadb3a160f0d1d3381"
 			}
@@ -117,14 +170,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3838/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla", "hguc"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216106", "item-1000183366", "item-1000164780", "item-1000164779"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2129",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2129/"

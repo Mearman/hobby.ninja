@@ -5,6 +5,48 @@
 		"ja": "30MS オプションハンドパーツ ［ホワイト/ブラック］",
 		"en": "30MS Optional hand parts [White/Black]"
 	},
+	"brands": [
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		},
+		{
+			"id": "30ms",
+			"url": "https://bandai-hobby.net/brand/30ms/",
+			"ja": "30 MINUTES SISTERS"
+		}
+	],
+	"series": [],
+	"categories": [
+		{
+			"id": "30ML",
+			"url": "https://bandai-hobby.net/30ML/",
+			"ja": "30 MINUTES LABEL"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5975",
+			"url": "https://bandai-hobby.net/item/01_5975/",
+			"ja": "30MS 和泉愛依"
+		},
+		{
+			"id": "01_5976",
+			"url": "https://bandai-hobby.net/item/01_5976/",
+			"ja": "30MS オプションボディパーツ アルファシスターズファンタズム2[カラーC]"
+		},
+		{
+			"id": "01_5977",
+			"url": "https://bandai-hobby.net/item/01_5977/",
+			"ja": "30MS 星井美希 (20th Anniv. YOU AND アイ！)"
+		},
+		{
+			"id": "01_5954",
+			"url": "https://bandai-hobby.net/item/01_5954/",
+			"ja": "30MS オプションヘアスタイルパーツVol.12 全4種 ミディアムヘア2[イエロー4]"
+		}
+	],
 	"price": {
 		"amount": 660,
 		"currency": "JPY",
@@ -21,50 +63,53 @@
 	"description": {
 		"ja": [
 			"豊富な種類のハンドパーツと、可動の広がりを実現した新規の首パーツで、各キャラクターの仕草を表情豊かに表現！",
-			"■4種の表情手が白、黒の各色で付属。",
-			"■「左右の可動」「前後の可動」を実現する可動方向の異なる首パーツが2種付属。",
-			"■素体の表情パーツを取り付ける頭部パーツが2点付属。"
+			"• 4種の表情手が白、黒の各色で付属。",
+			"• 「左右の可動」「前後の可動」を実現する可動方向の異なる首パーツが2種付属。",
+			"• 素体の表情パーツを取り付ける頭部パーツが2点付属。"
 		],
 		"en": [
 			"With a wide variety of hand parts and a new neck part that offers greater range of movement, each character's gestures can be expressively expressed!",
 			"• 4 types of expression hands are included in each color, white and black.",
-			"• Two types of neck parts with different movable directions are included to achieve \"left and right movement \" and \" front and back movement.\"",
+			"• Two types of neck parts with different movable directions are included to achieve \"left and right movement\" and \"front and back movement.\"",
 			"• Two head parts are included to attach the body's expression parts."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"表情付きハンドパーツ(左右)「4種×2色(黒・白)」",
-			"可動方向の異なる首パーツ(カラーA)「2種×2点」",
-			"素体(カラーA)共通の頭部パーツ「2点」"
-		],
-		"en": [
-			"Hand parts with expressions (left and right) \"4 types x 2 colors (black and white)\"",
-			"Neck parts with different movable directions (color A) \"2 types x 2 pieces\"",
-			"2 common head parts for body (color A)"
-		]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "表情付きハンドパーツ(左右)「4種",
+				"en": "4 types of hand parts with expressions (left and right)"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "色(黒・白)」",
+				"en": "Color (black/white)"
+			}
+		},
+		{
+			"name": {
+				"ja": "可動方向の異なる首パーツ(カラーA)「2種",
+				"en": "2 types of neck parts with different movable directions (color A)"
+			},
+			"count": 2,
+			"unit": {
+				"ja": "点」",
+				"en": "point\""
+			}
+		},
+		{
+			"name": {
+				"ja": "素体(カラーA)共通の頭部パーツ「2点」",
+				"en": "2 common head parts for body (color A)"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000169098_1.jpg",
 				"path": "/images/items/01_3891/1000169098_1.jpg",
 				"hash": "38856e6526dc9e6f49c994588e532815"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000169098_10.jpg",
-				"path": "/images/items/01_3891/1000169098_10.jpg",
-				"hash": "35243018d906d2beb970a4ee0a6fe459"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000169098_11.jpg",
-				"path": "/images/items/01_3891/1000169098_11.jpg",
-				"hash": "bdd35314a20daca5fb870b12dbeacac3"
-			},
-			{
-				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000169098_12.jpg",
-				"path": "/images/items/01_3891/1000169098_12.jpg",
-				"hash": "66cc4f4d843a992e5af0772d6ea3c968"
 			},
 			{
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000169098_2.jpg",
@@ -105,15 +150,26 @@
 				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000169098_9.jpg",
 				"path": "/images/items/01_3891/1000169098_9.jpg",
 				"hash": "15e476f77711047dc6b74c2fea946822"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000169098_10.jpg",
+				"path": "/images/items/01_3891/1000169098_10.jpg",
+				"hash": "35243018d906d2beb970a4ee0a6fe459"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000169098_11.jpg",
+				"path": "/images/items/01_3891/1000169098_11.jpg",
+				"hash": "bdd35314a20daca5fb870b12dbeacac3"
+			},
+			{
+				"src": "https://bandai-a.akamaihd.net/bc/img/model/xl/1000169098_12.jpg",
+				"path": "/images/items/01_3891/1000169098_12.jpg",
+				"hash": "66cc4f4d843a992e5af0772d6ea3c968"
 			}
 		],
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3891/",
-	"brandIds": ["30ms"],
-	"seriesIds": [],
-	"categoryIds": ["30-minutes-label"],
-	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manual": {
 		"id": "3454",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3454/"

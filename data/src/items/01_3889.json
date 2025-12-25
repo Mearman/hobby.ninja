@@ -5,6 +5,43 @@
 		"ja": "鬼滅模型 煉獄杏寿郎",
 		"en": "Demon Slayer Model Rengoku Anjuro"
 	},
+	"brands": [],
+	"series": [
+		{
+			"id": "kimetsu",
+			"url": "https://bandai-hobby.net/series/kimetsu/",
+			"ja": "鬼滅の刃"
+		}
+	],
+	"categories": [
+		{
+			"id": "characterplastic",
+			"url": "https://bandai-hobby.net/characterplastic/",
+			"ja": "キャラクタープラモデル"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_5101",
+			"url": "https://bandai-hobby.net/item/01_5101/",
+			"ja": "鬼滅模型 我妻善逸"
+		},
+		{
+			"id": "01_5011",
+			"url": "https://bandai-hobby.net/item/01_5011/",
+			"ja": "鬼滅模型 嘴平伊之助"
+		},
+		{
+			"id": "01_4391",
+			"url": "https://bandai-hobby.net/item/01_4391/",
+			"ja": "鬼滅模型 竈門禰豆子"
+		},
+		{
+			"id": "01_3521",
+			"url": "https://bandai-hobby.net/item/01_3521/",
+			"ja": "鬼滅模型 竈門炭治郎[ヒノカミ神楽]"
+		}
+	],
 	"price": {
 		"amount": 3850,
 		"currency": "JPY",
@@ -22,10 +59,10 @@
 		"ja": [
 			"<font color=\"#FD0307\">（6/24記載）生産の都合により、商品の発売月を変更させていただきました。</font>",
 			"初心者でも簡単に組み立てられる「鬼滅模型」に、無限列車編で活躍した煉獄杏寿郎がラインアップ！",
-			"■特徴的な髪型や隊服のシワ、羽織の翻った表現など、固定モデルだからこそできるこだわりの造型。",
-			"■顔や髪パーツ、羽織の炎模様などは、塗装済みパーツを採用し組み立てるだけでカラフルな仕上がりに。",
-			"■目や眉はタンポ印刷で再現。",
-			"■日輪刀に刻まれた「悪鬼滅殺」の文字に加え、刀身に浮かび上がる炎のような刃紋は彩色により再現。",
+			"• 特徴的な髪型や隊服のシワ、羽織の翻った表現など、固定モデルだからこそできるこだわりの造型。",
+			"• 顔や髪パーツ、羽織の炎模様などは、塗装済みパーツを採用し組み立てるだけでカラフルな仕上がりに。",
+			"• 目や眉はタンポ印刷で再現。",
+			"• 日輪刀に刻まれた「悪鬼滅殺」の文字に加え、刀身に浮かび上がる炎のような刃紋は彩色により再現。",
 			"<font color=\"#FD0307\">※煉獄の「煉」は「火＋東」が正しい表記となります。</font>"
 		],
 		"en": [
@@ -35,66 +72,74 @@
 			"• Pre-painted parts are used for the face, hair parts, flame pattern on the jacket, etc., and you can create a colorful finish just by assembling it.",
 			"• Eyes and eyebrows are reproduced with pad printing.",
 			"• In addition to the words \"Demon Slayer\" engraved on the ring sword, the flame-like blade crest that appears on the blade is reproduced by coloring.",
-			"<font color=\"#FD0307 \">*The correct spelling for \" bren \" in purgatory is \" fire + east.\" </font>"
+			"<font color=\"#FD0307\">*The correct spelling for \"bren\" in purgatory is \"fire + east.\" </font>"
 		]
 	},
-	"accessories": {
-		"ja": ["日輪刀×1", "シール×1"],
-		"en": ["Ring sword x 1", "Seal×1"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "日輪刀",
+				"en": "ring sword"
+			},
+			"count": 1
+		},
+		{
+			"name": {
+				"ja": "シール",
+				"en": "Seal"
+			},
+			"count": 1
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4830.jpg",
+				"src": "https://bandai-hobby.net/images/153_4830_s_ootrdwofdewjj458vh1j76vp8ikg.jpg",
 				"path": "/images/items/01_3889/153_4830.jpg",
 				"hash": "c809e03406e0a1ef3bfc2a0dcfb26cd1"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4830.jpg",
+				"src": "https://bandai-hobby.net/images/155_4830_s_avizjw29mch7wvn0rrhwane0rfg8.jpg",
 				"path": "/images/items/01_3889/155_4830.jpg",
 				"hash": "2f5779497fe4db8e18a6f5ede84ea1a8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4830.jpg",
+				"src": "https://bandai-hobby.net/images/156_4830_s_mcrsrd55cn4eha80tm2z15q3jr7n.jpg",
 				"path": "/images/items/01_3889/156_4830.jpg",
 				"hash": "c6e2996e446fada60ac48980ae7c7bf7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4830.jpg",
+				"src": "https://bandai-hobby.net/images/157_4830_s_2nc3t7fp3n2lxumqpkzk14kuteto.jpg",
 				"path": "/images/items/01_3889/157_4830.jpg",
 				"hash": "d82fd6f6b3e2d454908763fb7af91947"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4830.jpg",
+				"src": "https://bandai-hobby.net/images/158_4830_s_fyqsmx3u3ft96d806rif8lgrudmq.jpg",
 				"path": "/images/items/01_3889/158_4830.jpg",
 				"hash": "38ea75bfc6f5478ef7eff4ade9bfde37"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4830.jpg",
+				"src": "https://bandai-hobby.net/images/159_4830_s_n3n77hxujfyahzlk8hfcuxbtq5ey.jpg",
 				"path": "/images/items/01_3889/159_4830.jpg",
 				"hash": "06c47e469116bd95922313eb00f61a37"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4830.jpg",
+				"src": "https://bandai-hobby.net/images/189_4830_s_kaz2eqyagstvr5j9saarxl7eew1a.jpg",
 				"path": "/images/items/01_3889/189_4830.jpg",
 				"hash": "6410d64a37f06cca0b97770353f6874e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/190_4830.jpg",
+				"src": "https://bandai-hobby.net/images/190_4830_s_gmo8b5eyx3b4o5t2uo12oq6l2ros.jpg",
 				"path": "/images/items/01_3889/190_4830.jpg",
 				"hash": "7702557dd21633874d705cf0d3274f4f"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/191_4830.jpg",
+				"src": "https://bandai-hobby.net/images/191_4830_s_zo8j4t42sb8p35t1a962xv1yqdwt.jpg",
 				"path": "/images/items/01_3889/191_4830.jpg",
 				"hash": "28bdaada9087d02db9c741ea7f436459"
 			}
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_3889/",
-	"brandIds": [],
-	"seriesIds": ["kimetsu"],
-	"categoryIds": ["character-plastic-model"],
-	"relatedItemIds": ["01_5101", "01_5011", "01_4391", "01_3521"]
+	"sourceUrl": "https://bandai-hobby.net/item/01_3889/"
 }

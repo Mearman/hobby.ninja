@@ -5,6 +5,60 @@
 		"ja": "ＭＧ 1/100 ギラ・ドーガ（レズン・シュナイダー専用機）",
 		"en": "MG 1/100 Gira Doga (Rezun Schneider exclusive machine)"
 	},
+	"brands": [
+		{
+			"id": "pb_mg",
+			"url": "https://bandai-hobby.net/brand/pb_mg/",
+			"ja": "MG [マスターグレード]／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		},
+		{
+			"id": "mg",
+			"url": "https://bandai-hobby.net/brand/mg/",
+			"ja": "MG [マスターグレード]"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam-cca",
+			"url": "https://bandai-hobby.net/series/gundam-cca/",
+			"ja": "機動戦士ガンダム　逆襲のシャア"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000219110",
+			"url": "https://p-bandai.jp/item/item-1000219110/",
+			"ja": "MG 1/100 リ・ガズィ (逆襲のシャアVer.)"
+		},
+		{
+			"id": "item-1000136789",
+			"url": "https://p-bandai.jp/item/item-1000136789",
+			"ja": "ＲＧ 1/144 νガンダム用ダブル・フィン・ファンネル拡張ユニット"
+		},
+		{
+			"id": "01_2336",
+			"url": "https://bandai-hobby.net/item/01_2336/",
+			"ja": "ＲＧ 1/144 サザビー［スペシャルコーティング］"
+		},
+		{
+			"id": "item-1000129742",
+			"url": "http://p-bandai.jp/item/item-1000129742",
+			"ja": "ＲＥ/100 1/100 ヤクト・ドーガ（クェス・エア機）"
+		}
+	],
+	"scale": "1/100",
 	"price": {
 		"amount": 5280,
 		"currency": "JPY",
@@ -17,7 +71,6 @@
 		"month": 10
 	},
 	"targetAge": 15,
-	"scale": "1/100",
 	"description": {
 		"ja": [
 			"『機動戦士ガンダム 逆襲のシャア』より、レズン・シュナイダーが操る青いギラ・ドーガがマスターグレードで登場！",
@@ -57,7 +110,7 @@
 			"Attached weapons: Beam machine gun (2 types) / Sturm Faust / Beam sword ax (3 types of beam effects) / Seal de",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
 			"1/100 Scale Assembly plastic model",
-			"Target age: 15 years old and above",
+			"Target age: 15 years old or older",
 			"Product material: PS/PE/synthetic rubber",
 			"・No adhesive is used for assembly",
 			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
@@ -72,49 +125,66 @@
 			"- Product specifications are scheduled as of 20137. Please note that there may be changes."
 		]
 	},
-	"accessories": {
-		"ja": [
-			"ビーム・マシンガン（２種）",
-			"シュツルム・ファウスト",
-			"ビーム・ソード・アックス（ビームエフェクト３種）",
-			"シールド"
-		],
-		"en": ["Beam machine gun (2 types)", "Sturm Faust", "Beam sword ax (3 types of beam effects)", "Seal de"]
-	},
+	"accessories": [
+		{
+			"name": {
+				"ja": "ビーム・マシンガン（２種）",
+				"en": "Beam machine gun (2 types)"
+			}
+		},
+		{
+			"name": {
+				"ja": "シュツルム・ファウスト",
+				"en": "Sturm Faust"
+			}
+		},
+		{
+			"name": {
+				"ja": "ビーム・ソード・アックス（ビームエフェクト３種）",
+				"en": "Beam sword ax (3 types of beam effects)"
+			}
+		},
+		{
+			"name": {
+				"ja": "シールド",
+				"en": "Seal de"
+			}
+		}
+	],
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_4828.jpg",
+				"src": "https://bandai-hobby.net/images/153_4828_s_urj1kd31yb342to4o4s5pzakedpn.jpg",
 				"path": "/images/items/01_3886/153_4828.jpg",
 				"hash": "c33c919497b5503141f89e17107d7145"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_4828.jpg",
+				"src": "https://bandai-hobby.net/images/155_4828_s_isr9qj9sny867afnt9c0iad4tu7f.jpg",
 				"path": "/images/items/01_3886/155_4828.jpg",
 				"hash": "083b1dad19d65507fd77226895f55eb0"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_4828.jpg",
+				"src": "https://bandai-hobby.net/images/156_4828_s_gm6l3w9glkq29hxqtlr3qb4ulgur.jpg",
 				"path": "/images/items/01_3886/156_4828.jpg",
 				"hash": "5935d30240618ea4a7f59db7c4464ea5"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_4828.jpg",
+				"src": "https://bandai-hobby.net/images/157_4828_s_rydokh99788sbi4aykmh31r9w5w6.jpg",
 				"path": "/images/items/01_3886/157_4828.jpg",
 				"hash": "0722283a9838238ca7c6c14f5267a14e"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_4828.jpg",
+				"src": "https://bandai-hobby.net/images/158_4828_s_kbwqunmandv72udjiyd1wiya54ly.jpg",
 				"path": "/images/items/01_3886/158_4828.jpg",
 				"hash": "ebe5a7fb8d643f13c96ecf137f55fba8"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/159_4828.jpg",
+				"src": "https://bandai-hobby.net/images/159_4828_s_pthfqbo7cni546clo2eq6ij0gbm9.jpg",
 				"path": "/images/items/01_3886/159_4828.jpg",
 				"hash": "c6ea7f68df0f3877bf345570fda1fe10"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/189_4828.jpg",
+				"src": "https://bandai-hobby.net/images/189_4828_s_y38ah9cyeb8754z5cblbr6rk0r3n.jpg",
 				"path": "/images/items/01_3886/189_4828.jpg",
 				"hash": "57b6b4f51abdd8fafa5b1285de559562"
 			}
@@ -122,14 +192,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3886/",
-	"brandIds": ["mg", "pb_mg", "pb_gunpla"],
-	"seriesIds": ["gundam-cca"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000219110", "item-1000136789", "01_2336", "item-1000129742"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
 		"id": "2192",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2192/"

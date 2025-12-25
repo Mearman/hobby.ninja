@@ -5,6 +5,60 @@
 		"ja": "HGUC 1/144 RGM-89D ジェガンＤ型",
 		"en": "HGUC 1/144 RGM-89D Jegan D type"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "pb_hg",
+			"url": "https://bandai-hobby.net/brand/pb_hg/",
+			"ja": "HG［ハイグレード］／プレバンガンプラ"
+		},
+		{
+			"id": "pb_gunpla",
+			"url": "https://bandai-hobby.net/brand/pb_gunpla/",
+			"ja": "プレバンガンプラ"
+		}
+	],
+	"series": [
+		{
+			"id": "unicorn",
+			"url": "https://bandai-hobby.net/series/unicorn/",
+			"ja": "機動戦士ガンダムUC[ユニコーン]"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "item-1000216106",
+			"url": "https://p-bandai.jp/item/item-1000216106/",
+			"ja": "RG 1/144 ユニコーンガンダム２号機 バンシィ・ノルン (最終決戦仕様) [スペシャルコーティング]"
+		},
+		{
+			"id": "01_5527",
+			"url": "https://bandai-hobby.net/item/01_5527/",
+			"ja": "HG 1/144 ガンダムベース福岡限定 シナンジュ Ver.GSF"
+		},
+		{
+			"id": "01_4986",
+			"url": "https://bandai-hobby.net/item/01_4986/",
+			"ja": "HG ガンダムベース限定 TOLRO-800 -トロハチ-"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 1980,
 		"currency": "JPY",
@@ -17,19 +71,62 @@
 		"month": 5
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
-			"プレミアムバンダイはこちら",
-			"※プレミアムバンダイのトップページに遷移します。",
-			"※一部のエリアでは販売していません。",
-			"※エリアにより申込開始の日時は異なります。"
+			"『機動戦士ガンダムＵＣ』から、数々の戦闘シーン再現に欠かせないジェガンＤ型がＨＧＵＣシリーズで登場！",
+			"劇中に登場のＭ.Ｓ.を揃えて、ユニコーンの世界観を堪能しよう！",
+			"『機動戦士ガンダムＵＣ』に登場するジェガンＤ型をコレクションに最適な１／１４４スケールＨＧＵＣシリーズで商品化。",
+			"●独特なカラーを成形色で再現。",
+			"●特徴的な頭部側面のバルカン・ポッド・システムを、新規造形で再現。",
+			"●様々なポージングが楽しめる豊富な武器が付属。",
+			"●マーキングシール付属。",
+			"●アクションベース２（別売）や、８９式ベースジャバー（別売）と連動して、動きのあるポージングが可能。",
+			"付属武装 ： バズーカ、ビーム・ライフル、ビーム・サーベル、ハンド・グレネード、シールド",
+			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
+			"１／１４４スケール組み立て式プラモデル",
+			"対象年齢：８才以上",
+			"製品素材：ＰＳ・ＰＥ・ＡＢＳ",
+			"・組み立てに接着剤は使用しません",
+			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
+			"※写真の完成品は塗装してあります。また、開発途中の試作品です。実際の商品とは多少異なる場合がございます。",
+			"〔 販売価格に関して 〕",
+			"※消費税増税に伴い、２０１４年４月以降の発送商品の税率は税８％となります。",
+			"（備考）",
+			"・ この商品は、プラモデルお取り扱い店舗店頭ではお買い求めいただけません。",
+			"・ この商品は、弊社主催イベントや他の企画などで販売をさせていただく場合がございます。",
+			"・ この商品は‘プレミアムバンダイ’での販売準備数に限りがございます。品切れの際はご了承ください。",
+			"・ この商品は、お申込状況、生産準備数の都合により、お一人様につきご購入いただける数量を限らせていただいております。",
+			"予めご了承ください。",
+			"・ 商品画像は開発途中のものであり、実際の商品とは異なる場合がございます。",
+			"・ 商品仕様は2014年2月現在の予定です。変更の場合もございますがご了承ください。"
 		],
 		"en": [
-			"Click here for Premium Bandai",
-			"*Transition to the Premium Bandai top page.",
-			"*Not available in some areas.",
-			"*Application start times vary depending on the area."
+			"From \"Mobile Suit Gundam UC\", the Jegan D type, which is indispensable for reproducing numerous battle scenes, is now available in the HGUC series!",
+			"Get the MS that appears in the movie and enjoy the world of unicorns!",
+			"The Jegan D type that appears in \"Mobile Suit Gundam UC\" is commercialized in the 1/144 Scale HGUC series, which is perfect for collection.",
+			"- Reproduce unique colors with molded colors.",
+			"-The characteristic Vulcan pod system on the side of the head is reproduced with new modeling.",
+			"-Comes with a variety of weapons that allow you to enjoy various poses.",
+			"●MarkingSeal included.",
+			"●In conjunction with Action Base 2 (sold separately) and Type 89 Base Jabber (sold separately), dynamic poses are possible.",
+			"Attached weapons: Bazooka, beam rifle, beam saber, hand grenade, seal",
+			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
+			"1/144 Scale Assembly plastic model",
+			"Target age: 8 years old and above",
+			"Product material: PS/PE/ABS",
+			"・No adhesive is used for assembly",
+			"－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－",
+			"*The finished product in the photo is painted. Also, a prototype that is still under development. There may be slight differences from the actual product.",
+			"[About sales price]",
+			"*Due to the consumption tax increase, the tax rate for products shipped after 20144 will be 8%.",
+			"(remarks)",
+			"・This product cannot be purchased at stores that carry plastic models.",
+			"・This product may be sold at events sponsored by our company or other projects.",
+			"・ There is a limited number of this product available for sale at 'Premium Bandai'. Please note that the item may be out of stock.",
+			"・Due to the application status and the number of production preparations, the quantity that can be purchased per person is limited for this product.",
+			"Thank you for your understanding.",
+			"・Product images are under development and may differ from the actual product.",
+			"- Product specifications are scheduled as of 20142. Please note that there may be changes."
 		]
 	},
 	"images": {
@@ -78,16 +175,8 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3917/",
-	"brandIds": ["hg", "pb_hg", "pb_gunpla"],
-	"seriesIds": ["unicorn"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["item-1000216106", "01_5527", "01_4986", "01_4971"],
-	"tag": {
-		"ja": "ホビーオンライン",
-		"en": "Hobby Online"
-	},
 	"manual": {
-		"id": "454",
-		"url": "https://manual.bandai-hobby.net/menus/detail/454/"
+		"id": "2202",
+		"url": "https://manual.bandai-hobby.net/menus/detail/2202/"
 	}
 }

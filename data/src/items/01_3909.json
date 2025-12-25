@@ -5,6 +5,55 @@
 		"ja": "HGUC 1/144 Gアーマー",
 		"en": "HGUC 1/144 G Armor"
 	},
+	"brands": [
+		{
+			"id": "hg",
+			"url": "https://bandai-hobby.net/brand/hg/",
+			"ja": "HG［ハイグレード］"
+		},
+		{
+			"id": "hguc",
+			"url": "https://bandai-hobby.net/brand/hguc/",
+			"ja": "HG UNIVERSAL CENTURY"
+		}
+	],
+	"series": [
+		{
+			"id": "gundam",
+			"url": "https://bandai-hobby.net/series/gundam/",
+			"ja": "機動戦士ガンダム"
+		}
+	],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ"
+		}
+	],
+	"relatedItems": [
+		{
+			"id": "01_4985",
+			"url": "https://bandai-hobby.net/item/01_4985/",
+			"ja": "HG 1/144 ガンダムベース限定 ジム/ジムII/ジムIII セット"
+		},
+		{
+			"id": "01_4971",
+			"url": "https://bandai-hobby.net/item/01_4971/",
+			"ja": "ガンダムデカール ガンダムベース限定 HG 1/144 ユニバーサルセンチュリーエンブレムセット 1"
+		},
+		{
+			"id": "01_4365",
+			"url": "https://bandai-hobby.net/item/01_4365/",
+			"ja": "HG 1/144 ガンダムベース限定 シャア専用ザクII(21stCENTURY REAL TYPE Ver.)"
+		},
+		{
+			"id": "01_3669",
+			"url": "https://bandai-hobby.net/item/01_3669/",
+			"ja": "HGUC 1/144 ザクII"
+		}
+	],
+	"scale": "1/144",
 	"price": {
 		"amount": 3080,
 		"currency": "JPY",
@@ -17,39 +66,38 @@
 		"month": 10
 	},
 	"targetAge": 8,
-	"scale": "1/144",
 	"description": {
 		"ja": [
 			"「機動戦士ガンダム」に登場する人気の「Gアーマー」のHGUC仕様のプラモデル。専用のガンダムのキットを付属し、ガンダム本体もGファイターとのドッキング用に胴体と足首を変更しています。キャタピラユニットは機首側Gメカにスイングアームで連結し、収納や各形態時の移動を着脱することなく再現できます。Gアーマー、Gブル、Gブルイージー、Gスカイ、Gスカイイージー、Gファイターの全形態を再現可能です。ディスプレイ台座が付属し、飛行形態のキットを飾ることが可能です。"
 		],
 		"en": [
-			"An HGUC plastic model of the popular \"G Armor \" that appears in \" Mobile Suit Gundam\". A dedicated Gundam kit is included, and the Gundam itself has its torso and ankles modified for docking with the G Fighter. The caterpillar unit is connected to the G-mechanism on the nose side with a swing arm, allowing storage and movement in each configuration to be reproduced without the need for attachment or detachment. All forms of G Armor, G Bull, G Blue Easy, G Sky, G Sky Easy, and G Fighter can be reproduced. A display pedestal is included, allowing you to display Kit in flight form."
+			"An HGUC plastic model of the popular \"G Armor\" that appears in \"Mobile Suit Gundam\". A dedicated Gundam kit is included, and the Gundam itself has its torso and ankles modified for docking with the G Fighter. The caterpillar unit is connected to the G-mechanism on the nose side with a swing arm, allowing storage and movement in each configuration to be reproduced without the need for attachment or detachment. All forms of G Armor, G Bull, G Blue Easy, G Sky, G Sky Easy, and G Fighter can be reproduced. A display pedestal is included, allowing you to display Kit in flight form."
 		]
 	},
 	"images": {
 		"product": [
 			{
-				"src": "https://bandai-hobby.net/images/153_484.jpg",
+				"src": "https://bandai-hobby.net/images/153_484_s_wtoi7wu6w7x183teibhax754ympk.jpg",
 				"path": "/images/items/01_3909/153_484.jpg",
 				"hash": "8ab674a4cb4fbcf2fd077f11d66aa8f7"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/155_484.jpg",
+				"src": "https://bandai-hobby.net/images/155_484_s_qm67ydytp7aa4d9tc9f7pfbk4tp2.jpg",
 				"path": "/images/items/01_3909/155_484.jpg",
 				"hash": "7efc196d12d86e69aeb87d79ad523f45"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/156_484.jpg",
+				"src": "https://bandai-hobby.net/images/156_484_s_05zalp05d5oghupqeuwfq7a8nuax.jpg",
 				"path": "/images/items/01_3909/156_484.jpg",
 				"hash": "6867585086f16f01fa3bdbbab89dbd5b"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/157_484.jpg",
+				"src": "https://bandai-hobby.net/images/157_484_s_999gg0u5klau3ixuwgpm02c8l9r6.jpg",
 				"path": "/images/items/01_3909/157_484.jpg",
 				"hash": "b700f9047d3271ca3f49eba4b64d9067"
 			},
 			{
-				"src": "https://bandai-hobby.net/images/158_484.jpg",
+				"src": "https://bandai-hobby.net/images/158_484_s_s4cgpfmodm0c74mh6xteadq7r7vm.jpg",
 				"path": "/images/items/01_3909/158_484.jpg",
 				"hash": "82e909c360a671323873c3fa32da25b8"
 			}
@@ -57,10 +105,6 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3909/",
-	"brandIds": ["hg", "hguc"],
-	"seriesIds": ["gundam"],
-	"categoryIds": ["gunpla"],
-	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"manual": {
 		"id": "244",
 		"url": "https://manual.bandai-hobby.net/menus/detail/244/"
