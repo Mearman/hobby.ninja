@@ -35,6 +35,8 @@ export interface PBandaiUSImage {
 	src?: string;
 	/** Local path relative to assets root */
 	path: string;
+	/** MD5 hash of image file contents */
+	hash?: string;
 }
 
 /** Base item data */
@@ -93,6 +95,7 @@ interface PageParseResult {
 	items: PBandaiUSListItem[];
 	totalResults: number;
 	hasMore: boolean;
+	needsPlaywright?: boolean;
 }
 
 /** Session tokens captured from Playwright */
@@ -394,7 +397,15 @@ export class PBandaiUSListParser {
 				return await this.fetchAndParsePageWithPlaywright(url);
 			}
 
-			return this.parseSearchResults(html);
+			const result = this.parseSearchResults(html);
+
+			// If both JSON and DOM parsing failed, retry with Playwright
+			if (result.needsPlaywright) {
+				console.warn("  HTTP response parsing failed - retrying with Playwright");
+				return await this.fetchAndParsePageWithPlaywright(url);
+			}
+
+			return result;
 		} catch (error) {
 			console.error(`Error fetching ${url}:`, error);
 			return null;
@@ -443,7 +454,14 @@ export class PBandaiUSListParser {
 
 		// Fallback to DOM parsing if embedded JSON not found
 		console.log("  Falling back to DOM parsing...");
-		return this.parseSearchResultsDom(html);
+		const domResult = this.parseSearchResultsDom(html);
+
+		// If DOM parsing also fails, return empty with flag to retry with Playwright
+		if (domResult.items.length === 0) {
+			return { items: [], totalResults: 0, hasMore: false, needsPlaywright: true };
+		}
+
+		return domResult;
 	}
 
 	/**
@@ -460,18 +478,39 @@ export class PBandaiUSListParser {
 		}
 
 		try {
-			// Handle nested objects more robustly - find the complete array
+			// Find complete array with proper string handling
 			let bracketCount = 0;
+			let inString = false;
+			let escapeNext = false;
 			const matchIndex = html.indexOf(productsMatch[0]);
 			const startIndex = matchIndex + productsMatch[0].length - 1; // Position of '['
 			let endIndex = startIndex;
 
 			for (let i = startIndex; i < html.length; i++) {
-				if (html[i] === "[") bracketCount++;
-				if (html[i] === "]") bracketCount--;
-				if (bracketCount === 0) {
-					endIndex = i + 1;
-					break;
+				const char = html[i];
+
+				if (escapeNext) {
+					escapeNext = false;
+					continue;
+				}
+
+				if (char === "\\") {
+					escapeNext = true;
+					continue;
+				}
+
+				if (char === '"') {
+					inString = !inString;
+					continue;
+				}
+
+				if (!inString) {
+					if (char === "[") bracketCount++;
+					if (char === "]") bracketCount--;
+					if (bracketCount === 0) {
+						endIndex = i + 1;
+						break;
+					}
 				}
 			}
 
@@ -755,6 +794,112 @@ export class PBandaiUSListParser {
 	 */
 	private delay(ms: number): Promise<void> {
 		return new Promise((resolve) => setTimeout(resolve, ms));
+	}
+
+	/**
+	 * Scrape from a custom search URL
+	 * Paginates automatically in batches of 100
+	 */
+	async scrapeFromUrl(
+		searchUrl: string,
+		options: Pick<PBandaiUSListParserOptions, "skipImages" | "imageDelay" | "incrementalOnly" | "pageDelay"> = {},
+	): Promise<{
+		newItems: number;
+		updatedItems: number;
+		totalItems: number;
+		imagesDownloaded: number;
+	}> {
+		const { imageDelay = 500, skipImages = false, incrementalOnly = false, pageDelay = 2000 } = options;
+		const batchSize = 40; // Matches default scraper, more reliable than larger batches
+
+		// Ensure directories exist
+		await mkdir(this.dataDir, { recursive: true });
+		await mkdir(this.assetsDir, { recursive: true });
+
+		// Load existing index
+		const existingIndex = await this.loadIndex();
+		const existingIds = new Set(Object.keys(existingIndex ?? {}));
+
+		const processedItems: Array<{ item: PBandaiUSListItem; isNew: boolean }> = [];
+		let imagesDownloaded = 0;
+		let newItemCount = 0;
+		let updatedItemCount = 0;
+
+		// Parse base URL and override limit/offset for pagination
+		const baseUrl = new URL(searchUrl);
+		let offset = 0;
+		let pageNum = 0;
+		let hasMore = true;
+
+		console.log(`Scraping from custom URL with pagination (batch size: ${batchSize})`);
+		console.log(`Base URL: ${baseUrl.origin}${baseUrl.pathname}`);
+		console.log(`Filters: ${baseUrl.search}`);
+
+		while (hasMore) {
+			// Build paginated URL
+			baseUrl.searchParams.set("limit", String(batchSize));
+			baseUrl.searchParams.set("offset", String(offset));
+			const pageUrl = baseUrl.toString();
+
+			console.log(`\nFetching page ${pageNum + 1} (offset: ${offset})...`);
+
+			const result = await this.fetchAndParsePage(pageUrl);
+
+			if (!result || result.items.length === 0) {
+				console.log("No more items found");
+				break;
+			}
+
+			console.log(`  Found ${result.items.length} items`);
+
+			// Process items
+			for (const item of result.items) {
+				const isNew = !existingIds.has(item.id);
+
+				if (incrementalOnly && !isNew) {
+					continue;
+				}
+
+				// Download images if not skipping
+				if (!skipImages) {
+					const downloaded = await this.downloadImages(item, imageDelay);
+					imagesDownloaded += downloaded;
+				}
+
+				// Save item JSON
+				await this.saveItem(item, isNew);
+
+				if (isNew) {
+					newItemCount++;
+					existingIds.add(item.id);
+				} else {
+					updatedItemCount++;
+				}
+
+				processedItems.push({ item, isNew });
+			}
+
+			hasMore = result.items.length >= batchSize;
+			offset += batchSize;
+			pageNum++;
+
+			if (hasMore && pageDelay > 0) {
+				await this.delay(pageDelay);
+			}
+		}
+
+		// Update index with metadata
+		await this.updateIndex(processedItems, existingIndex);
+
+		const totalItems = existingIds.size;
+		console.log(`\nScrape complete:`);
+		console.log(`  Pages fetched: ${pageNum}`);
+		console.log(`  New items: ${newItemCount}`);
+		console.log(`  Updated items: ${updatedItemCount}`);
+		console.log(`  Total items in index: ${totalItems}`);
+		console.log(`  Images downloaded: ${imagesDownloaded}`);
+
+		return { newItems: newItemCount, updatedItems: updatedItemCount, totalItems, imagesDownloaded };
 	}
 
 	/**
