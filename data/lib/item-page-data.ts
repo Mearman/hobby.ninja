@@ -63,6 +63,8 @@ export interface ItemPageData {
 	scale?: string;
 	targetAge?: number;
 	sourceUrl?: string;
+	globalSiteUrls?: { enUs?: string };
+	pbandaiUs?: Array<{ id: string; url: string }>;
 	primaryGrade: string | null;
 
 	// Formatted values
@@ -170,6 +172,8 @@ export function getItemPageData(id: string): ItemPageData | undefined {
 		scale: item.scale,
 		targetAge: item.targetAge,
 		sourceUrl: item.sourceUrl,
+		globalSiteUrls: item.globalSiteUrls,
+		pbandaiUs: item.pbandaiUs,
 		primaryGrade: getNodePrimaryGrade(item),
 		price: item.price,
 		releaseDate: item.releaseDate,
