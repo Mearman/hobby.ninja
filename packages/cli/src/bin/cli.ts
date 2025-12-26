@@ -13,6 +13,7 @@ import { config } from "dotenv";
  
 import type { DownloadSource } from "../cli/download-command.js";
 import type { NormalizeOptions } from "../cli/normalize-command.js";
+import { sitemapSync } from "../cli/sitemap-sync.js";
 import type { TranslateOptions, TranslateSource } from "../cli/translate-command.js";
 import { CLI_COMMANDS, MESSAGES, FILES } from "../constants/index.js";
 import type { WaybackSource } from "../types/wayback.js";
@@ -116,10 +117,26 @@ program
 	.option("--end <id>", "End ID for range (e.g., 01_2000)")
 	.option("--count <n>", "Number of items to process from start")
 	.option("--profile", "Enable step timing profiling", false)
+	.option("--skip-sitemap-sync", "Skip automatic sitemap sync before scraping", false)
 	.action(async (options: unknown) => {
 		try {
 			const { ScrapeCommand } = await import("../cli/scrape.js");
 			const rawOptions = options as Record<string, unknown>;
+
+			// Run sitemap sync first to discover new items (unless skipped)
+			if (!rawOptions["skipSitemapSync"]) {
+				console.log("=== Sitemap Sync ===\n");
+				try {
+					const syncResult = await sitemapSync({ verbose: false });
+					if (syncResult.newItemIds.length > 0) {
+						console.log(`\nDiscovered ${syncResult.newItemIds.length} new items from sitemap.\n`);
+					}
+				} catch (syncError) {
+					const errorMessage = syncError instanceof Error ? syncError.message : String(syncError);
+					console.warn(`⚠️  Sitemap sync failed (continuing with scrape): ${errorMessage}\n`);
+				}
+				console.log("=== Scrape ===\n");
+			}
 
 			const maxAgeValue = rawOptions["maxAge"];
 			const maxAgeStr = typeof maxAgeValue === "string" ? maxAgeValue : "7";
@@ -251,6 +268,36 @@ program
 		} catch (error: unknown) {
 			const errorMessage = error instanceof Error ? error.message : String(error);
 			console.error(ERROR_PREFIX.replace("%s", "link"), errorMessage);
+			if ((options as Record<string, unknown>)[VERBOSE_STRING]) {
+				const errorStack = error instanceof Error ? error.stack : String(error);
+				console.error(errorStack);
+			}
+			process.exit(1);
+		}
+	});
+
+// Sitemap sync command - discover new items from Bandai sitemap
+program
+	.command("sitemap-sync")
+	.description("Discover new items from Bandai sitemap and add to index")
+	.option("--sitemap-url <url>", "Override sitemap URL", "https://bandai-hobby.net/sitemap.xml")
+	.option(DRY_RUN_OPTION, "Show what would be added without modifying index", false)
+	.option(VERBOSE_OPTION, VERBOSE_OUTPUT_DESC, false)
+	.action(async (options: unknown) => {
+		try {
+			const { sitemapSync } = await import("../cli/sitemap-sync.js");
+			const rawOptions = options as Record<string, unknown>;
+
+			await sitemapSync({
+				sitemapUrl: rawOptions["sitemapUrl"] as string | undefined,
+				dryRun: rawOptions["dryRun"] === true,
+				verbose: rawOptions["verbose"] === true,
+			});
+
+			process.exit(0);
+		} catch (error: unknown) {
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error(GENERIC_ERROR_PREFIX.replace("%s", "Sitemap sync"), errorMessage);
 			if ((options as Record<string, unknown>)[VERBOSE_STRING]) {
 				const errorStack = error instanceof Error ? error.stack : String(error);
 				console.error(errorStack);
