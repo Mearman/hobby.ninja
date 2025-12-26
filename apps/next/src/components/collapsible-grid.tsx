@@ -1,6 +1,6 @@
 "use client";
 
-import { Collapse, Group, SimpleGrid, Stack, Text, Title, UnstyledButton } from "@mantine/core";
+import { Box, Group, SimpleGrid, Stack, Text, Title, UnstyledButton } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
 
@@ -11,6 +11,8 @@ interface CollapsibleGridProps {
 	totalCount: number;
 	cols?: { base: number; sm: number; md: number; lg: number };
 	initialCount?: number;
+	/** Width of each card when in horizontal scroll mode */
+	cardWidth?: number;
 }
 
 export function CollapsibleGrid({
@@ -20,6 +22,7 @@ export function CollapsibleGrid({
 	totalCount,
 	cols = { base: 1, sm: 2, md: 3, lg: 4 },
 	initialCount = 4,
+	cardWidth = 180,
 }: CollapsibleGridProps): React.ReactElement {
 	const [opened, { toggle }] = useDisclosure(false);
 	const hasMore = totalCount > initialCount;
@@ -42,16 +45,38 @@ export function CollapsibleGrid({
 				</Group>
 			</UnstyledButton>
 
-			<SimpleGrid cols={cols} spacing="md">
-				{children}
-			</SimpleGrid>
-
-			{hasMore && (
-				<Collapse in={opened}>
-					<SimpleGrid cols={cols} spacing="md">
-						{collapsedChildren}
-					</SimpleGrid>
-				</Collapse>
+			{opened ? (
+				// Expanded: show all items in a grid
+				<SimpleGrid cols={cols} spacing="md">
+					{children}
+					{collapsedChildren}
+				</SimpleGrid>
+			) : (
+				// Collapsed: horizontal scroll with all items
+				<Box
+					style={{
+						overflowX: "auto",
+						overflowY: "hidden",
+						marginInline: "calc(-1 * var(--mantine-spacing-md))",
+						paddingInline: "var(--mantine-spacing-md)",
+						scrollbarWidth: "thin",
+					}}
+				>
+					<Box
+						style={{
+							display: "flex",
+							gap: "var(--mantine-spacing-md)",
+							paddingBottom: "var(--mantine-spacing-xs)",
+						}}
+					>
+						{/* Wrap each child in a fixed-width container */}
+						{[children, collapsedChildren].flat().map((child, index) => (
+							<Box key={index} style={{ flexShrink: 0, width: cardWidth }}>
+								{child}
+							</Box>
+						))}
+					</Box>
+				</Box>
 			)}
 		</Stack>
 	);
