@@ -5,8 +5,8 @@ import { useState, useCallback, useRef, useEffect } from "react";
 import { PAGINATION } from "@/lib/constants";
 
 const MAX_CACHED_ITEMS = 1000;
-const LOADING_DELAY = 300;
-const INTERSECTION_DEBOUNCE = 100;
+const LOADING_DELAY = 0; // Instant item rendering - images load lazily in background
+const INTERSECTION_DEBOUNCE = 50; // Faster trigger for smoother scrolling
 
 export interface InfiniteScrollOptions<T> {
 	items: T[];
