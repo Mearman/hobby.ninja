@@ -206,11 +206,13 @@ export default function HomePage() {
 					<CollapsibleGrid
 						title="Categories"
 						totalCount={allCategories.length}
-						collapsedChildren={allCategories.slice(4).map((category) => (
+						cols={{ base: 2, sm: 3, md: 4, lg: 6 }}
+						initialCount={6}
+						collapsedChildren={allCategories.slice(6).map((category) => (
 							<CategoryCard key={category.id} category={category} />
 						))}
 					>
-						{allCategories.slice(0, 4).map((category) => (
+						{allCategories.slice(0, 6).map((category) => (
 							<CategoryCard key={category.id} category={category} />
 						))}
 					</CollapsibleGrid>
@@ -220,11 +222,13 @@ export default function HomePage() {
 					<CollapsibleGrid
 						title="Series"
 						totalCount={allSeries.length}
-						collapsedChildren={allSeries.slice(4).map((s) => (
+						cols={{ base: 2, sm: 3, md: 4, lg: 6 }}
+						initialCount={6}
+						collapsedChildren={allSeries.slice(6).map((s) => (
 							<SeriesCard key={s.id} seriesItem={s} />
 						))}
 					>
-						{allSeries.slice(0, 4).map((s) => (
+						{allSeries.slice(0, 6).map((s) => (
 							<SeriesCard key={s.id} seriesItem={s} />
 						))}
 					</CollapsibleGrid>
@@ -234,11 +238,13 @@ export default function HomePage() {
 					<CollapsibleGrid
 						title="Brands"
 						totalCount={allBrands.length}
-						collapsedChildren={allBrands.slice(4).map((brand) => (
+						cols={{ base: 2, sm: 3, md: 4, lg: 6 }}
+						initialCount={6}
+						collapsedChildren={allBrands.slice(6).map((brand) => (
 							<BrandCard key={brand.id} brand={brand} />
 						))}
 					>
-						{allBrands.slice(0, 4).map((brand) => (
+						{allBrands.slice(0, 6).map((brand) => (
 							<BrandCard key={brand.id} brand={brand} />
 						))}
 					</CollapsibleGrid>
