@@ -1,4 +1,4 @@
-import { brands, categories as allCategoriesData, homepage, series } from "@hobby-ninja/data";
+import { brands, categories as allCategoriesData, items, series } from "@hobby-ninja/data";
 import {
 	Container,
 	Divider,
@@ -12,23 +12,11 @@ import Link from "next/link";
 
 import { CollapsibleGrid } from "@/components/collapsible-grid";
 import { EntityCard } from "@/components/entity-card";
-import { FeaturedItemsGrid } from "@/components/featured-items-grid";
-
-// Convert release date to comparable number (YYYYMMDD)
-function releaseDateToNumber(releaseDate?: { year?: number | null; month?: number | null; day?: number | null }): number {
-	if (!releaseDate?.year) return 0;
-	const year = releaseDate.year;
-	const month = releaseDate.month ?? 1;
-	const day = releaseDate.day ?? 1;
-	return year * 10_000 + month * 100 + day;
-}
+import { ExploreSection } from "@/components/explore-section";
 
 export default function HomePage() {
-	// Use pre-computed homepage data for featured items, sorted by release date (newest first)
-	const { featuredItems } = homepage;
-	const sortedFeaturedItems = [...featuredItems].toSorted(
-		(a, b) => releaseDateToNumber(b.releaseDate) - releaseDateToNumber(a.releaseDate),
-	);
+	// Get all items for the Explore section
+	const allItems = Object.values(items);
 
 	// Get all categories sorted by item count
 	const allCategories = Object.values(allCategoriesData)
@@ -113,7 +101,7 @@ export default function HomePage() {
 						</Link>
 					</Group>
 
-					<FeaturedItemsGrid items={sortedFeaturedItems} count={8} />
+					<ExploreSection items={allItems} />
 				</Stack>
 			</Container>
 		</>
