@@ -33,6 +33,13 @@ export function generateStaticParams() {
 	return itemIds.map(id => ({ id }));
 }
 
+// Format price for OG description
+function formatPriceString(price?: { amount: number; currency: string }): string {
+	if (!price) return "";
+	const symbol = price.currency === "JPY" ? "¥" : price.currency;
+	return `${symbol}${price.amount.toLocaleString()}`;
+}
+
 // Generate metadata for each item with type-safe data
 export async function generateMetadata({ params }: ItemPageProps): Promise<Metadata> {
 	const { id } = await params;
@@ -44,9 +51,29 @@ export async function generateMetadata({ params }: ItemPageProps): Promise<Metad
 		};
 	}
 
+	// Build description with brand, grade, scale, and price
+	const parts: string[] = [];
+	const brand = item.brands[0]?.name;
+	if (brand) parts.push(brand);
+	if (item.primaryGrade) parts.push(item.primaryGrade);
+	if (item.scale) parts.push(item.scale);
+	const price = formatPriceString(item.price);
+	if (price) parts.push(price);
+	const ogDescription = parts.length > 0 ? parts.join(" · ") : `Details about ${item.name}`;
+
 	return {
 		title: `${item.name} - hobby.ninja`,
-		description: `Details about ${item.name} from the hobby.ninja database`,
+		description: item.description[0] ?? `Details about ${item.name} from the hobby.ninja database`,
+		openGraph: {
+			title: item.name,
+			description: ogDescription,
+			type: "website",
+		},
+		twitter: {
+			card: "summary_large_image",
+			title: item.name,
+			description: ogDescription,
+		},
 	};
 }
 
