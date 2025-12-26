@@ -84,6 +84,7 @@ export function CollapsibleGrid({
 					<Box
 						style={{
 							display: "flex",
+							alignItems: "flex-start",
 							gap: "var(--mantine-spacing-md)",
 							paddingBottom: "var(--mantine-spacing-xs)",
 						}}
