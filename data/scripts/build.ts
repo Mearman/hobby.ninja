@@ -19,7 +19,8 @@
  *   pnpm tsx data/scripts/build.ts
  */
 
-import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync } from "node:fs";
+import { readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import Fuse from "fuse.js";
@@ -228,21 +229,34 @@ function ensureDir(dir: string) {
 	}
 }
 
-function readJsonDir<T>(dirPath: string): Map<string, T> {
-	const map = new Map<string, T>();
-	if (!existsSync(dirPath)) return map;
+const BATCH_SIZE = 500; // Batch size for parallel file reading
 
-	const files = readdirSync(dirPath).filter((f) => f.endsWith(".json") && f !== "index.json");
-	for (const file of files) {
-		const content = readFileSync(path.join(dirPath, file), "utf8");
-		const data = JSON.parse(content) as T & { id: string };
-		map.set(data.id, data);
+async function readJsonDirAsync<T>(dirPath: string): Promise<Map<string, T>> {
+	if (!existsSync(dirPath)) return new Map();
+
+	const files = await readdir(dirPath);
+	const jsonFiles = files.filter((f) => f.endsWith(".json") && f !== "index.json");
+
+	const entries: [string, T][] = [];
+
+	// Read in batches to avoid file descriptor limits
+	for (let i = 0; i < jsonFiles.length; i += BATCH_SIZE) {
+		const batch = jsonFiles.slice(i, i + BATCH_SIZE);
+		const batchResults = await Promise.all(
+			batch.map(async (file) => {
+				const content = await readFile(path.join(dirPath, file), "utf8");
+				const data = JSON.parse(content) as T & { id: string };
+				return [data.id, data] as [string, T];
+			})
+		);
+		entries.push(...batchResults);
 	}
-	return map;
+
+	return new Map(entries);
 }
 
-function writeJson(filePath: string, data: unknown): void {
-	writeFileSync(filePath, JSON.stringify(data, null, "\t"), "utf8");
+async function writeJsonAsync(filePath: string, data: unknown): Promise<void> {
+	await writeFile(filePath, JSON.stringify(data, null, "\t"), "utf8");
 }
 
 // Compute displayImage for each item (first image or manual.productImage fallback)
@@ -629,18 +643,20 @@ function validateItemManualRelationships(items: Map<string, Item>, manuals: Map<
 	}
 }
 
-function main() {
+async function main(): Promise<void> {
 	console.log("=== Building @hobby-ninja/data (JSON output) ===\n");
 
 	ensureDir(DIST_PATH);
 
-	// Read all source data
+	// Read all source data in parallel
 	console.log("Reading source data...");
-	const items = readJsonDir<Item>(path.join(SRC_PATH, "items"));
-	const brands = readJsonDir<Brand>(path.join(SRC_PATH, "brands"));
-	const series = readJsonDir<Series>(path.join(SRC_PATH, "series"));
-	const categories = readJsonDir<Category>(path.join(SRC_PATH, "categories"));
-	const manuals = readJsonDir<Manual>(path.join(SRC_PATH, "manuals"));
+	const [items, brands, series, categories, manuals] = await Promise.all([
+		readJsonDirAsync<Item>(path.join(SRC_PATH, "items")),
+		readJsonDirAsync<Brand>(path.join(SRC_PATH, "brands")),
+		readJsonDirAsync<Series>(path.join(SRC_PATH, "series")),
+		readJsonDirAsync<Category>(path.join(SRC_PATH, "categories")),
+		readJsonDirAsync<Manual>(path.join(SRC_PATH, "manuals")),
+	]);
 
 	console.log(`  Items: ${items.size}`);
 	console.log(`  Brands: ${brands.size}`);
@@ -711,42 +727,29 @@ function main() {
 	const homepageData = buildHomepageData(items, brands, categories, series);
 	console.log(`  Homepage data: ${homepageData.featuredItems.length} featured items`);
 
-	// Write JSON files
+	// Write JSON files in parallel
 	console.log("\nWriting JSON files...");
 
-	writeJson(path.join(DIST_PATH, "items.json"), Object.fromEntries(items));
-	console.log("  items.json");
+	await Promise.all([
+		writeJsonAsync(path.join(DIST_PATH, "items.json"), Object.fromEntries(items)),
+		writeJsonAsync(path.join(DIST_PATH, "brands.json"), Object.fromEntries(brands)),
+		writeJsonAsync(path.join(DIST_PATH, "series.json"), Object.fromEntries(series)),
+		writeJsonAsync(path.join(DIST_PATH, "categories.json"), Object.fromEntries(categories)),
+		writeJsonAsync(path.join(DIST_PATH, "manuals.json"), Object.fromEntries(manuals)),
+		writeJsonAsync(path.join(DIST_PATH, "grades.json"), Object.fromEntries(grades)),
+		writeJsonAsync(path.join(DIST_PATH, "scales.json"), Object.fromEntries(scales)),
+		writeJsonAsync(path.join(DIST_PATH, "tags.json"), Object.fromEntries(tags)),
+		writeJsonAsync(path.join(DIST_PATH, "search.json"), searchData),
+		writeJsonAsync(path.join(DIST_PATH, "homepage.json"), homepageData),
+	]);
 
-	writeJson(path.join(DIST_PATH, "brands.json"), Object.fromEntries(brands));
-	console.log("  brands.json");
-
-	writeJson(path.join(DIST_PATH, "series.json"), Object.fromEntries(series));
-	console.log("  series.json");
-
-	writeJson(path.join(DIST_PATH, "categories.json"), Object.fromEntries(categories));
-	console.log("  categories.json");
-
-	writeJson(path.join(DIST_PATH, "manuals.json"), Object.fromEntries(manuals));
-	console.log("  manuals.json");
-
-	writeJson(path.join(DIST_PATH, "grades.json"), Object.fromEntries(grades));
-	console.log("  grades.json");
-
-	writeJson(path.join(DIST_PATH, "scales.json"), Object.fromEntries(scales));
-	console.log("  scales.json");
-
-	writeJson(path.join(DIST_PATH, "tags.json"), Object.fromEntries(tags));
-	console.log("  tags.json");
-
-	writeJson(path.join(DIST_PATH, "search.json"), searchData);
-	console.log("  search.json");
-
-	writeJson(path.join(DIST_PATH, "homepage.json"), homepageData);
-	console.log("  homepage.json");
+	console.log("  items.json, brands.json, series.json, categories.json");
+	console.log("  manuals.json, grades.json, scales.json, tags.json");
+	console.log("  search.json, homepage.json");
 
 	console.log("\n=== Build Complete ===");
 	console.log(`Output: ${DIST_PATH}`);
 	console.log("Note: TypeScript modules should be hand-written in lib/");
 }
 
-main();
+main().catch(console.error);
