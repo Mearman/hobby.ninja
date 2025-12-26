@@ -17,6 +17,7 @@ const inter = Inter({
 const APP_TITLE = "Hobby Ninja";
 
 export const metadata: Metadata = {
+	metadataBase: new URL("https://hobby.ninja"),
 	title: "hobby.ninja - Static Collection Management",
 	description: "Comprehensive hobby collection management with 8,485+ items, search, and tracking features",
 	keywords: ["gunpla", "hobby", "collection", "database", "model kits", "figure-rise"],
