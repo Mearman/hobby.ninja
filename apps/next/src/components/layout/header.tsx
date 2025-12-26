@@ -7,6 +7,7 @@ import {
 	IconDeviceDesktop,
 	IconFolder,
 	IconHome,
+	IconInfoCircle,
 	IconMenu2,
 	IconMoon,
 	IconSearch,
@@ -166,6 +167,19 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 							aria-label="Collections"
 						>
 							<IconFolder size={UI.ICON_SIZE_LG} />
+						</ActionIcon>
+					</Tooltip>
+
+					{/* About */}
+					<Tooltip label="About hobby.ninja">
+						<ActionIcon
+							size="lg"
+							variant={isActive("/about") ? "filled" : "subtle"}
+							component={Link}
+							href="/about"
+							aria-label="About"
+						>
+							<IconInfoCircle size={UI.ICON_SIZE_LG} />
 						</ActionIcon>
 					</Tooltip>
 
