@@ -147,6 +147,37 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 		return [...selected, ...unselected];
 	}, [gradeHierarchy, filters.grades]);
 
+	// Count visible selected grade cards (accounts for expanded families showing multiple cards)
+	const visibleSelectedGradeCount = useMemo(() => {
+		let count = 0;
+		const hierarchy = expandedSections.grades ? gradeHierarchy : sortedGradeHierarchy;
+		for (const entry of hierarchy) {
+			const { root, children } = entry;
+			const hasChildren = children.length > 0;
+			const isExpanded = expandedFamilies.has(root.id);
+			const familyIds = getGradeFamilyIds(root.id);
+			const anySelectedInFamily = familyIds.some((id) => filters.grades.includes(id));
+
+			if (!isExpanded || !hasChildren) {
+				// Collapsed family or no children: 1 card visible
+				if (hasChildren ? anySelectedInFamily : filters.grades.includes(root.id)) {
+					count++;
+				}
+			} else {
+				// Expanded family: root + "root only" + children cards
+				// Root card - selected if any in family selected
+				if (anySelectedInFamily) count++;
+				// "Root only" card - selected if root.id specifically selected
+				if (filters.grades.includes(root.id)) count++;
+				// Child cards - each selected if that child.id selected
+				for (const child of children) {
+					if (filters.grades.includes(child.id)) count++;
+				}
+			}
+		}
+		return count;
+	}, [gradeHierarchy, sortedGradeHierarchy, expandedSections.grades, expandedFamilies, filters.grades]);
+
 	// Count items without categories/series/brands for "Other" option
 	const otherCounts = useMemo(() => ({
 		categories: items.filter((item) => item.categories.length === 0).length,
@@ -230,7 +261,7 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 					<CollapsibleGrid
 						title="Grades"
 						totalCount={grades.length}
-						selectedCount={filters.grades.length}
+						selectedCount={visibleSelectedGradeCount}
 						expanded={expandedSections.grades}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, grades: exp })); }}
 					>
