@@ -116,6 +116,12 @@ jobs:
         with:
           path: apps/next/out
 
+      - name: Clean build output for cache save
+        run: |
+          echo "=== Cleaning build output to free disk space ==="
+          rm -rf apps/next/out apps/next/.next
+          df -h /
+
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
