@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { Navigation } from "@/components/layout/navigation";
 import { PWAInstall } from "@/components/pwa/pwa-install";
@@ -27,7 +28,7 @@ export function LayoutClient({ children }: LayoutClientProps) {
 		<MantineThemeProvider>
 			<SearchProvider>
 				<CollectionProvider>
-					<div className={appShell}>
+					<div className={appShell} style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
 						<Header
 							onMenuToggle={handleMenuToggle}
 							mobileMenuOpen={mobileMenuOpen}
@@ -36,9 +37,10 @@ export function LayoutClient({ children }: LayoutClientProps) {
 							opened={mobileMenuOpen}
 							onClose={() => { setMobileMenuOpen(false); }}
 						/>
-						<main className={mainContent}>
+						<main className={mainContent} style={{ flex: 1 }}>
 							{children}
 						</main>
+						<Footer />
 					</div>
 					<PWAInstall />
 				</CollectionProvider>
