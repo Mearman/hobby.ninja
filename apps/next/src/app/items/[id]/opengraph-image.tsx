@@ -17,6 +17,20 @@ export const size = {
 
 export const contentType = "image/png";
 
+// Fetch Noto Sans JP font for Japanese text and special characters like ∀
+async function loadFont(): Promise<ArrayBuffer> {
+	const cssResponse = await fetch(
+		"https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap",
+	);
+	const css = await cssResponse.text();
+	const fontUrlMatch = /src: url\(([^)]+)\)/.exec(css);
+	if (!fontUrlMatch?.[1]) {
+		throw new Error("Could not find font URL in CSS");
+	}
+	const fontResponse = await fetch(fontUrlMatch[1]);
+	return fontResponse.arrayBuffer();
+}
+
 // Format price for display
 function formatPrice(price?: { amount: number; currency: string }): string | null {
 	if (!price) return null;
@@ -78,6 +92,7 @@ export default async function Image({ params }: Props) {
 					flexDirection: "column",
 					backgroundColor: "#1a1b1e",
 					padding: 48,
+					fontFamily: "Noto Sans JP",
 				}}
 			>
 				{/* Header with branding */}
@@ -250,6 +265,14 @@ export default async function Image({ params }: Props) {
 		),
 		{
 			...size,
+			fonts: [
+				{
+					name: "Noto Sans JP",
+					data: await loadFont(),
+					weight: 700,
+					style: "normal",
+				},
+			],
 		},
 	);
 }
