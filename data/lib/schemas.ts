@@ -220,6 +220,8 @@ export const ItemSchema = z.object({
 
 	// Source tracking
 	sourceUrl: z.string().url().optional(),
+	globalSiteUrls: z.object({ enUs: z.string().url().optional() }).optional(),
+	pbandaiUs: z.array(z.object({ id: z.string(), url: z.string().url() })).optional(),
 	extractedAt: z.string().datetime().optional(),
 	created: z.string().optional(),
 	modified: z.string().optional(),
