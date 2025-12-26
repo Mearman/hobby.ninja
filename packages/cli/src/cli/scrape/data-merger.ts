@@ -79,6 +79,45 @@ export async function mergeWithExistingItem(filePath: string, newData: Item): Pr
 			newRecord["pbandaiIds"] = existingRecord["pbandaiIds"];
 		}
 
+		// Preserve English translations if new scrape doesn't have them
+		// (translations come from global site lookup or fallback translator)
+		if (existingItem.name.en && !newData.name.en) {
+			newData.name.en = existingItem.name.en;
+		}
+		if (existingItem.description?.en && !newData.description?.en) {
+			if (newData.description) {
+				newData.description.en = existingItem.description.en;
+			} else {
+				newData.description = { ja: [], en: existingItem.description.en };
+			}
+		}
+
+		// Preserve English translations in brands array
+		for (const brand of newData.brands) {
+			const existingBrand = existingItem.brands.find(b => b.ja === brand.ja);
+			if (existingBrand?.en && !brand.en) {
+				brand.en = existingBrand.en;
+			}
+		}
+
+		// Preserve English translations in series array
+		for (const series of newData.series) {
+			const existingSeries = existingItem.series.find(s => s.ja === series.ja);
+			if (existingSeries?.en && !series.en) {
+				series.en = existingSeries.en;
+			}
+		}
+
+		// Preserve English translations in accessories
+		if (existingItem.accessories && newData.accessories) {
+			for (const accessory of newData.accessories) {
+				const existingAcc = existingItem.accessories.find(a => a.name.ja === accessory.name.ja);
+				if (existingAcc?.name.en && !accessory.name.en) {
+					accessory.name.en = existingAcc.name.en;
+				}
+			}
+		}
+
 		return newData;
 	} catch {
 		// File doesn't exist or can't be read, use new data as-is
