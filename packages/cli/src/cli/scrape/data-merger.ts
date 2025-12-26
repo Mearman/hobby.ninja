@@ -93,18 +93,35 @@ export async function mergeWithExistingItem(filePath: string, newData: Item): Pr
 		}
 
 		// Preserve English translations in brands array
+		// Prefer existing translations over page-extracted values (which are often worse)
 		for (const brand of newData.brands) {
-			const existingBrand = existingItem.brands.find(b => b.ja === brand.ja);
-			if (existingBrand?.en && !brand.en) {
+			const existingBrand = existingItem.brands.find(b => b.ja === brand.ja || b.id === brand.id);
+			if (existingBrand?.en) {
 				brand.en = existingBrand.en;
 			}
 		}
 
 		// Preserve English translations in series array
 		for (const series of newData.series) {
-			const existingSeries = existingItem.series.find(s => s.ja === series.ja);
-			if (existingSeries?.en && !series.en) {
+			const existingSeries = existingItem.series.find(s => s.ja === series.ja || s.id === series.id);
+			if (existingSeries?.en) {
 				series.en = existingSeries.en;
+			}
+		}
+
+		// Preserve English translations in categories array
+		for (const category of newData.categories) {
+			const existingCategory = existingItem.categories.find(c => c.ja === category.ja || c.id === category.id);
+			if (existingCategory?.en) {
+				category.en = existingCategory.en;
+			}
+		}
+
+		// Preserve English translations in relatedItems array
+		for (const related of newData.relatedItems) {
+			const existingRelated = existingItem.relatedItems.find(r => r.id === related.id);
+			if (existingRelated?.en) {
+				related.en = existingRelated.en;
 			}
 		}
 
