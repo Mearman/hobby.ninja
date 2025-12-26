@@ -17,9 +17,14 @@ function formatPrice(price?: { amount: number; currency: string }): string {
 	}).format(price.amount);
 }
 
-function ItemCard({ item }: { item: Item }): React.ReactElement {
+// First 12 images load eagerly (above the fold), rest lazy load
+const EAGER_LOAD_COUNT = 12;
+
+function ItemCard({ item, index }: { item: Item; index: number }): React.ReactElement {
 	const [hasImageError, setHasImageError] = useState(false);
-	const [imageLoaded, setImageLoaded] = useState(false);
+	const shouldLazyLoad = index >= EAGER_LOAD_COUNT;
+	// Eager images start as "loaded" so they show immediately
+	const [imageLoaded, setImageLoaded] = useState(!shouldLazyLoad);
 	const images = getNodeImages(item);
 	const displayName = getNodeDisplayName(item);
 	const hasValidImage = !hasImageError && images.length > 0;
@@ -67,7 +72,7 @@ function ItemCard({ item }: { item: Item }): React.ReactElement {
 						<img
 							src={resolveCdnUrl(images[0])}
 							alt={displayName}
-							loading="lazy"
+							loading={shouldLazyLoad ? "lazy" : "eager"}
 							decoding="async"
 							onLoad={() => { setImageLoaded(true); }}
 							onError={() => { setHasImageError(true); }}
@@ -210,7 +215,7 @@ export function ExploreSection({ items, filters, totalCount }: ExploreSectionPro
 					const isLast = index === visibleItems.length - 1;
 					return (
 						<Box key={item.id} ref={isLast ? lastItemRef : undefined}>
-							<ItemCard item={item} />
+							<ItemCard item={item} index={index} />
 						</Box>
 					);
 				})}
