@@ -147,11 +147,25 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 		return [...selected, ...unselected];
 	}, [gradeHierarchy, filters.grades]);
 
-	// Count visible selected grade cards (accounts for expanded families showing multiple cards)
+	// Count visible selected grade cards
+	// When section collapsed: count root families with any selection (1 card per family)
+	// When section expanded: count all visible selected cards including expanded children
 	const visibleSelectedGradeCount = useMemo(() => {
+		if (!expandedSections.grades) {
+			// Section collapsed: only root cards shown, count families with any selection
+			return sortedGradeHierarchy.filter((entry) => {
+				const { root, children } = entry;
+				if (children.length === 0) {
+					return filters.grades.includes(root.id);
+				}
+				const familyIds = getGradeFamilyIds(root.id);
+				return familyIds.some((id) => filters.grades.includes(id));
+			}).length;
+		}
+
+		// Section expanded: count each visible selected card
 		let count = 0;
-		const hierarchy = expandedSections.grades ? gradeHierarchy : sortedGradeHierarchy;
-		for (const entry of hierarchy) {
+		for (const entry of gradeHierarchy) {
 			const { root, children } = entry;
 			const hasChildren = children.length > 0;
 			const isExpanded = expandedFamilies.has(root.id);
@@ -268,11 +282,12 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 						{(expandedSections.grades ? gradeHierarchy : sortedGradeHierarchy).flatMap((entry) => {
 							const { root, children } = entry;
 							const hasChildren = children.length > 0;
-							const isExpanded = expandedFamilies.has(root.id);
+							// Only show expanded families when the section itself is expanded
+							const isExpanded = expandedSections.grades && expandedFamilies.has(root.id);
 							const familyIds = getGradeFamilyIds(root.id);
 							const selectedInFamily = familyIds.filter((id) => filters.grades.includes(id)).length;
 
-							// When collapsed or no children: just show root grade
+							// When section collapsed, family collapsed, or no children: just show root grade
 							if (!isExpanded || !hasChildren) {
 								return (
 									<EntityCard
