@@ -67,9 +67,7 @@ export default async function Image({ params }: Props) {
 	// Get the display image URL - use absolute URL for OG image (fallback is always GitHub raw)
 	// item.images contains paths like "/images/items/01_0001/153_1.jpg"
 	const firstImage = item.images[0];
-	const imageUrl = firstImage
-		? getCdnUrls(firstImage).fallback
-		: null;
+	const imageUrl = firstImage ? getCdnUrls(firstImage).fallback : null;
 	const brand = item.brands[0]?.name;
 	const grade = item.primaryGrade;
 	const scale = item.scale;
