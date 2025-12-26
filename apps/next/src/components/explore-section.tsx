@@ -17,14 +17,17 @@ function formatPrice(price?: { amount: number; currency: string }): string {
 	}).format(price.amount);
 }
 
-// First 12 images load eagerly (above the fold), rest lazy load
-const EAGER_LOAD_COUNT = 12;
+// First page of images load eagerly to avoid lazy loading issues for visible items
+// Native loading="lazy" can fail for images already in viewport at render time
+const EAGER_LOAD_COUNT = 24;
 
 function ItemCard({ item, index }: { item: Item; index: number }): React.ReactElement {
 	const [hasImageError, setHasImageError] = useState(false);
-	const shouldLazyLoad = index >= EAGER_LOAD_COUNT;
-	// Eager images start as "loaded" so they show immediately
-	const [imageLoaded, setImageLoaded] = useState(!shouldLazyLoad);
+	// First batch loads eagerly for fastest initial paint
+	// Subsequent batches still use eager loading since native lazy doesn't work reliably
+	// for dynamically-added images near the viewport
+	const isFirstBatch = index < EAGER_LOAD_COUNT;
+	const [imageLoaded, setImageLoaded] = useState(isFirstBatch);
 	const images = getNodeImages(item);
 	const displayName = getNodeDisplayName(item);
 	const hasValidImage = !hasImageError && images.length > 0;
@@ -72,7 +75,7 @@ function ItemCard({ item, index }: { item: Item; index: number }): React.ReactEl
 						<img
 							src={resolveCdnUrl(images[0])}
 							alt={displayName}
-							loading={shouldLazyLoad ? "lazy" : "eager"}
+							loading="eager"
 							decoding="async"
 							onLoad={() => { setImageLoaded(true); }}
 							onError={() => { setHasImageError(true); }}
