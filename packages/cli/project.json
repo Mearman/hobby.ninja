@@ -57,6 +57,13 @@
 				"cwd": "{workspaceRoot}"
 			}
 		},
+		"translate": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "npx tsx packages/cli/src/bin/cli.ts translate {args}",
+				"cwd": "{workspaceRoot}"
+			}
+		},
 		"check": {
 			"dependsOn": ["typecheck", "lint", "test", "build"],
 			"cache": true

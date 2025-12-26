@@ -26,8 +26,8 @@ import { TranslationProgressRenderer } from "./ui/TranslationProgress";
 
 const BATCH_SIZE = 50;
 
-const DEFAULT_CATALOG_DIR = resolveWorkspacePath("data/bandai/items");
-const DEFAULT_MANUALS_DIR = resolveWorkspacePath("data/bandai/manuals");
+const DEFAULT_CATALOG_DIR = resolveWorkspacePath("data/src/items");
+const DEFAULT_MANUALS_DIR = resolveWorkspacePath("data/src/manuals");
 
 // Constants for source types
 const SOURCE_ALL = "all" as const;

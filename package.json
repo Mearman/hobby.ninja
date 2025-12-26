@@ -38,6 +38,7 @@
 		"next:serve": "pnpm nx run next:serve",
 		"prepare": "husky install || true",
 		"scrape": "nx run cli:scrape",
+		"translate": "nx run cli:translate",
 		"serve": "nx serve web",
 		"show:projects": "nx show projects",
 		"show:web": "nx show project web --web",
