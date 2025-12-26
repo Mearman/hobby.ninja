@@ -169,11 +169,25 @@ export default async function ItemPage({ params }: ItemPageProps) {
 									)}
 								</SimpleGrid>
 
-								{/* Source Link */}
-								{item.sourceUrl && (
-									<Anchor href={item.sourceUrl} target="_blank" size="sm">
-										View on Bandai Hobby
-									</Anchor>
+								{/* Source Links */}
+								{(item.sourceUrl ?? item.globalSiteUrls?.enUs ?? (item.pbandaiUs && item.pbandaiUs.length > 0)) && (
+									<Group gap="md">
+										{item.sourceUrl && (
+											<Anchor href={item.sourceUrl} target="_blank" size="sm">
+												Bandai Hobby (JP)
+											</Anchor>
+										)}
+										{item.globalSiteUrls?.enUs && (
+											<Anchor href={item.globalSiteUrls.enUs} target="_blank" size="sm">
+												Bandai Hobby (Global)
+											</Anchor>
+										)}
+										{item.pbandaiUs && item.pbandaiUs.length > 0 && (
+											<Anchor href={item.pbandaiUs[0].url} target="_blank" size="sm">
+												P-Bandai (US)
+											</Anchor>
+										)}
+									</Group>
 								)}
 							</Stack>
 						</Card>
