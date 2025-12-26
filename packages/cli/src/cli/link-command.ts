@@ -8,10 +8,10 @@
  * 3. Creates bidirectional links between items, manuals, and P-Bandai US items using image hashes
  * 4. Propagates transitive relationships (Manual ↔ P-Bandai US through Item hub)
  *
- * Relationship structure:
- *    - Items get: manual (singular), pbandaiUsIds[]
- *    - Manuals get: itemIds[], pbandaiUsIds[] (transitive)
- *    - P-Bandai US get: linkedItemIds[], manualIds[] (transitive)
+ * Relationship structure (all arrays use EntityRef objects with {id, url}):
+ *    - Items get: manual (singular ManualRef), pbandaiUs[] (EntityRef[])
+ *    - Manuals get: items[] (EntityRef[]), pbandaiUs[] (transitive EntityRef[])
+ *    - P-Bandai US get: items[] (EntityRef[]), manuals[] (transitive EntityRef[])
  *
  * Usage:
  *   pnpm link-data [options]
@@ -78,21 +78,26 @@ interface ItemData {
 		instructions: ImageWithHash[];
 	};
 	manual?: ManualRef; // Singular - each item has at most one manual
-	pbandaiUsIds?: string[]; // P-Bandai US item IDs (separate from future pbandaiJpIds)
+	pbandaiUs?: EntityRef[]; // P-Bandai US items (separate from future pbandaiJp)
+}
+
+interface EntityRef {
+	id: string;
+	url: string;
 }
 
 interface ManualData {
 	id: string;
 	image?: ImageWithHash;
-	itemIds?: string[];
-	pbandaiUsIds?: string[]; // Transitive: P-Bandai US items for the same linked items
+	items?: EntityRef[];
+	pbandaiUs?: EntityRef[]; // Transitive: P-Bandai US items for the same linked items
 }
 
 interface PBandaiData {
 	id: string;
 	images: Array<{ order: number; src?: string; path: string; hash?: string }>;
-	linkedItemIds?: string[];
-	manualIds?: string[]; // Transitive: manuals for the same linked items
+	items?: EntityRef[];
+	manuals?: EntityRef[]; // Transitive: manuals for the same linked items
 }
 
 /**
@@ -220,11 +225,12 @@ async function populateManualHashes(options: LinkOptions): Promise<number> {
 			const manualDir = path.join(MANUALS_ASSETS_DIR, manualId.padStart(4, "0"));
 			if (!existsSync(manualDir)) continue;
 
-			const imageFiles = readdirSync(manualDir).filter(f => /\.(jpg|jpeg|png|webp|gif)$/i.test(f));
-			if (imageFiles.length === 0) continue;
+			const imageFile_ = readdirSync(manualDir).find(f => /\.(jpg|jpeg|png|webp|gif)$/i.test(f));
+			const imageFile = imageFile_;
+			if (!imageFile) continue;
 
 			// Use the first image (should match path)
-			const imagePath = path.join(manualDir, imageFiles[0]);
+			const imagePath = path.join(manualDir, imageFile);
 			const hash = await calculateFileHash(imagePath);
 
 			if (hash) {
@@ -337,11 +343,17 @@ function linkManualsToItems(
 			const { path: existingPath, itemId } = match;
 			let modified = false;
 
-			// Update manual's itemIds
-			const existingItemIds = manual.itemIds ?? [];
-			if (!existingItemIds.includes(itemId)) {
+			// Build item reference
+			const itemRef: EntityRef = {
+				id: itemId,
+				url: `https://bandai-hobby.net/item/${itemId}/`,
+			};
+
+			// Update manual's items array
+			const existingItems = manual.items ?? [];
+			if (!existingItems.some(i => i.id === itemId)) {
 				if (!options.dryRun) {
-					manual.itemIds = [...existingItemIds, itemId];
+					manual.items = [...existingItems, itemRef];
 					modified = true;
 				}
 				manualToItem++;
@@ -482,25 +494,30 @@ function linkPBandaiUsToItems(
 				}
 			}
 
-			// Update P-Bandai's linkedItemIds
+			// Update P-Bandai's items array
 			if (discoveredItemIds.size > 0) {
-				const existingIds = pbandai.linkedItemIds ?? [];
-				const newIds = [...discoveredItemIds].filter(id => !existingIds.includes(id));
+				const existingItems = pbandai.items ?? [];
+				const existingItemIds = new Set(existingItems.map(i => i.id));
+				const newItemIds = [...discoveredItemIds].filter(id => !existingItemIds.has(id));
 
-				if (newIds.length > 0) {
+				if (newItemIds.length > 0) {
+					const newItemRefs = newItemIds.map(id => ({
+						id,
+						url: `https://bandai-hobby.net/item/${id}/`,
+					}));
 					if (!options.dryRun) {
-						pbandai.linkedItemIds = [...existingIds, ...newIds];
+						pbandai.items = [...existingItems, ...newItemRefs];
 						modified = true;
 					}
-					pbandaiUsToItem += newIds.length;
+					pbandaiUsToItem += newItemIds.length;
 
 					if (options.verbose) {
-						console.log(`  P-Bandai ${pbandaiId} -> Items: ${newIds.join(", ")}`);
+						console.log(`  P-Bandai ${pbandaiId} -> Items: ${newItemIds.join(", ")}`);
 					}
 				}
 
 				// Track item updates for ALL discovered items (not just new ones)
-				// This ensures items get pbandaiUsIds even if P-Bandai already has linkedItemIds
+				// This ensures items get pbandaiUs even if P-Bandai already has items
 				for (const itemId of discoveredItemIds) {
 					const pbandaiSet = itemUpdates.get(itemId) ?? new Set<string>();
 					pbandaiSet.add(pbandaiId);
@@ -525,12 +542,17 @@ function linkPBandaiUsToItems(
 			const content = readFileSync(itemPath, "utf8");
 			const item = JSON.parse(content) as ItemData;
 
-			const existingPBandaiUsIds = item.pbandaiUsIds ?? [];
-			const newPBandaiUsIds = [...pbandaiUsIdSet].filter(id => !existingPBandaiUsIds.includes(id));
+			const existingPBandaiUs = item.pbandaiUs ?? [];
+			const existingIds = new Set(existingPBandaiUs.map(p => p.id));
+			const newPBandaiUsIds = [...pbandaiUsIdSet].filter(id => !existingIds.has(id));
 
 			if (newPBandaiUsIds.length > 0) {
+				const newPBandaiUsRefs = newPBandaiUsIds.map(id => ({
+					id,
+					url: `https://p-bandai.com/us/item/${id}`,
+				}));
 				if (!options.dryRun) {
-					item.pbandaiUsIds = [...existingPBandaiUsIds, ...newPBandaiUsIds];
+					item.pbandaiUs = [...existingPBandaiUs, ...newPBandaiUsRefs];
 					writeFileSync(itemPath, JSON.stringify(item, null, "\t") + "\n");
 				}
 				itemToPBandaiUs += newPBandaiUsIds.length;
@@ -554,7 +576,7 @@ function propagateTransitiveLinks(
 	let pbandaiUsToManual = 0;
 
 	// Step 1: Build item relationship map
-	const itemRelations = new Map<string, { manualId?: string; pbandaiUsIds: string[] }>();
+	const itemRelations = new Map<string, { manualId?: string; pbandaiUs: EntityRef[] }>();
 
 	const itemFiles = readdirSync(ITEMS_DATA_DIR)
 		.filter(f => f.endsWith(".json") && f.startsWith("01_"))
@@ -565,10 +587,10 @@ function propagateTransitiveLinks(
 			const content = readFileSync(path.join(ITEMS_DATA_DIR, file), "utf8");
 			const item = JSON.parse(content) as ItemData;
 
-			if (item.manual?.id || item.pbandaiUsIds?.length) {
+			if (item.manual?.id || item.pbandaiUs?.length) {
 				itemRelations.set(item.id, {
 					manualId: item.manual?.id,
-					pbandaiUsIds: item.pbandaiUsIds ?? [],
+					pbandaiUs: item.pbandaiUs ?? [],
 				});
 			}
 		} catch {
@@ -580,7 +602,7 @@ function propagateTransitiveLinks(
 		console.log(`  Built relationship map for ${itemRelations.size} items with links`);
 	}
 
-	// Step 2: Update manuals with pbandaiUsIds (transitive through items)
+	// Step 2: Update manuals with pbandaiUs (transitive through items)
 	const manualFiles = readdirSync(MANUALS_DATA_DIR)
 		.filter(f => f.endsWith(".json") && f !== INDEX_JSON)
 		.toSorted();
@@ -592,34 +614,35 @@ function propagateTransitiveLinks(
 			const content = readFileSync(jsonPath, "utf8");
 			const manual = JSON.parse(content) as ManualData;
 
-			if (!manual.itemIds?.length) continue;
+			if (!manual.items?.length) continue;
 
-			// Collect all pbandaiUsIds from linked items
-			const allPBandaiUsIds = new Set<string>();
-			for (const itemId of manual.itemIds) {
-				const relations = itemRelations.get(itemId);
-				if (relations?.pbandaiUsIds) {
-					for (const pbId of relations.pbandaiUsIds) {
-						allPBandaiUsIds.add(pbId);
+			// Collect all pbandaiUs refs from linked items
+			const allPBandaiUsRefs = new Map<string, EntityRef>();
+			for (const itemRef of manual.items) {
+				const relations = itemRelations.get(itemRef.id);
+				if (relations?.pbandaiUs) {
+					for (const pbRef of relations.pbandaiUs) {
+						allPBandaiUsRefs.set(pbRef.id, pbRef);
 					}
 				}
 			}
 
-			if (allPBandaiUsIds.size === 0) continue;
+			if (allPBandaiUsRefs.size === 0) continue;
 
 			// Check for new links
-			const existingIds = manual.pbandaiUsIds ?? [];
-			const newIds = [...allPBandaiUsIds].filter(id => !existingIds.includes(id));
+			const existingRefs = manual.pbandaiUs ?? [];
+			const existingIds = new Set(existingRefs.map(r => r.id));
+			const newRefs = [...allPBandaiUsRefs.values()].filter(r => !existingIds.has(r.id));
 
-			if (newIds.length > 0) {
+			if (newRefs.length > 0) {
 				if (!options.dryRun) {
-					manual.pbandaiUsIds = [...existingIds, ...newIds].toSorted();
+					manual.pbandaiUs = [...existingRefs, ...newRefs].toSorted((a, b) => a.id.localeCompare(b.id));
 					writeFileSync(jsonPath, JSON.stringify(manual, null, "\t") + "\n");
 				}
-				manualToPBandaiUs += newIds.length;
+				manualToPBandaiUs += newRefs.length;
 
 				if (options.verbose) {
-					console.log(`  Manual ${manual.id} -> P-Bandai US: ${newIds.join(", ")}`);
+					console.log(`  Manual ${manual.id} -> P-Bandai US: ${newRefs.map(r => r.id).join(", ")}`);
 				}
 			}
 		} catch {
@@ -627,7 +650,7 @@ function propagateTransitiveLinks(
 		}
 	}
 
-	// Step 3: Update P-Bandai US with manualIds (transitive through items)
+	// Step 3: Update P-Bandai US with manuals (transitive through items)
 	if (!existsSync(PBANDAI_DATA_DIR)) {
 		return { manualToPBandaiUs, pbandaiUsToManual };
 	}
@@ -643,32 +666,36 @@ function propagateTransitiveLinks(
 			const content = readFileSync(jsonPath, "utf8");
 			const pbandai = JSON.parse(content) as PBandaiData;
 
-			if (!pbandai.linkedItemIds?.length) continue;
+			if (!pbandai.items?.length) continue;
 
-			// Collect all manualIds from linked items (each item has at most one manual)
-			const allManualIds = new Set<string>();
-			for (const itemId of pbandai.linkedItemIds) {
-				const relations = itemRelations.get(itemId);
+			// Collect all manual refs from linked items (each item has at most one manual)
+			const allManualRefs = new Map<string, EntityRef>();
+			for (const itemRef of pbandai.items) {
+				const relations = itemRelations.get(itemRef.id);
 				if (relations?.manualId) {
-					allManualIds.add(relations.manualId);
+					allManualRefs.set(relations.manualId, {
+						id: relations.manualId,
+						url: `https://manual.bandai-hobby.net/menus/detail/${relations.manualId}/`,
+					});
 				}
 			}
 
-			if (allManualIds.size === 0) continue;
+			if (allManualRefs.size === 0) continue;
 
 			// Check for new links
-			const existingIds = pbandai.manualIds ?? [];
-			const newIds = [...allManualIds].filter(id => !existingIds.includes(id));
+			const existingRefs = pbandai.manuals ?? [];
+			const existingIds = new Set(existingRefs.map(r => r.id));
+			const newRefs = [...allManualRefs.values()].filter(r => !existingIds.has(r.id));
 
-			if (newIds.length > 0) {
+			if (newRefs.length > 0) {
 				if (!options.dryRun) {
-					pbandai.manualIds = [...existingIds, ...newIds].toSorted();
+					pbandai.manuals = [...existingRefs, ...newRefs].toSorted((a, b) => a.id.localeCompare(b.id));
 					writeFileSync(jsonPath, JSON.stringify(pbandai, null, "\t") + "\n");
 				}
-				pbandaiUsToManual += newIds.length;
+				pbandaiUsToManual += newRefs.length;
 
 				if (options.verbose) {
-					console.log(`  P-Bandai US ${pbandai.id} -> Manuals: ${newIds.join(", ")}`);
+					console.log(`  P-Bandai US ${pbandai.id} -> Manuals: ${newRefs.map(r => r.id).join(", ")}`);
 				}
 			}
 		} catch {
