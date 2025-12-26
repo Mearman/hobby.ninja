@@ -1,6 +1,6 @@
 "use client";
 
-import type { Brand, Category, Item, Series } from "@hobby-ninja/data";
+import type { Brand, Category, GradeData, Item, Series } from "@hobby-ninja/data";
 import {
 	Button,
 	Container,
@@ -21,11 +21,12 @@ import { ExploreSection, OTHER_FILTER_ID, type FilterState } from "@/components/
 interface HomepageClientProps {
 	categories: Category[];
 	series: Series[];
+	grades: GradeData[];
 	brands: Brand[];
 	items: Item[];
 }
 
-export function HomepageClient({ categories, series, brands, items }: HomepageClientProps): React.ReactElement {
+export function HomepageClient({ categories, series, grades, brands, items }: HomepageClientProps): React.ReactElement {
 	const [filters, setFilters] = useState<FilterState>({
 		categories: [],
 		series: [],
@@ -36,6 +37,7 @@ export function HomepageClient({ categories, series, brands, items }: HomepageCl
 	const [expandedSections, setExpandedSections] = useState({
 		categories: false,
 		series: false,
+		grades: false,
 		brands: false,
 	});
 
@@ -161,6 +163,28 @@ export function HomepageClient({ categories, series, brands, items }: HomepageCl
 							isSelected={filters.series.includes(OTHER_FILTER_ID)}
 							onToggle={() => { toggleFilter("series", OTHER_FILTER_ID); }}
 						/>
+					</CollapsibleGrid>
+
+					<Divider />
+
+					<CollapsibleGrid
+						title="Grades"
+						totalCount={grades.length}
+						selectedCount={0}
+						expanded={expandedSections.grades}
+						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, grades: exp })); }}
+					>
+						{grades.map((grade) => (
+							<EntityCard
+								key={grade.id}
+								id={grade.id}
+								name={grade.name}
+								itemIds={grade.itemIds}
+								image={grade.image}
+								type="grade"
+								asFilter={false}
+							/>
+						))}
 					</CollapsibleGrid>
 
 					<Divider />

@@ -1,4 +1,4 @@
-import { brands, categories as allCategoriesData, items, series } from "@hobby-ninja/data";
+import { brands, categories as allCategoriesData, getGradesSorted, items, series } from "@hobby-ninja/data";
 
 import { HomepageClient } from "@/components/homepage-client";
 
@@ -16,15 +16,20 @@ export default function HomePage() {
 		.filter((s) => s.itemIds.length > 0)
 		.toSorted((a, b) => b.itemIds.length - a.itemIds.length);
 
-	// Get all brands sorted by item count
+	// Get grades sorted by sort order (EG, SD, HG, etc.)
+	const allGrades = getGradesSorted()
+		.filter((g) => g.itemIds.length > 0);
+
+	// Get non-grade brands sorted by item count
 	const allBrands = Object.values(brands)
-		.filter((b) => b.itemIds.length > 0)
+		.filter((b) => b.itemIds.length > 0 && !b.isGrade)
 		.toSorted((a, b) => b.itemIds.length - a.itemIds.length);
 
 	return (
 		<HomepageClient
 			categories={allCategories}
 			series={allSeries}
+			grades={allGrades}
 			brands={allBrands}
 			items={allItems}
 		/>
