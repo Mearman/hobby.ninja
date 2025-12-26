@@ -3,6 +3,7 @@ export * from "./schemas.js";
 
 // Re-export data modules
 export * from "./items.js";
+export * from "./item-page-data.js";
 export * from "./brands.js";
 export * from "./series.js";
 export * from "./categories.js";
