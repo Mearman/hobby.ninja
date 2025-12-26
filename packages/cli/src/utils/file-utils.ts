@@ -84,3 +84,31 @@ export function computeFileHashSync(filePath: string): string {
 	const buffer = readFileSync(filePath);
 	return computeBufferHash(buffer);
 }
+
+/**
+ * Normalize image file extension to lowercase standard form
+ * - .JPEG, .jpeg → .jpg
+ * - .JPG → .jpg
+ * - .PNG → .png
+ * - .WEBP → .webp
+ * - .GIF → .gif
+ *
+ * @param filename - Filename with extension
+ * @returns Filename with normalized extension
+ */
+export function normalizeImageExtension(filename: string): string {
+	// Find the last dot for extension
+	const lastDot = filename.lastIndexOf(".");
+	if (lastDot === -1) return filename;
+
+	const base = filename.slice(0, lastDot);
+	const ext = filename.slice(lastDot).toLowerCase();
+
+	// Normalize .jpeg to .jpg
+	if (ext === ".jpeg") {
+		return `${base}.jpg`;
+	}
+
+	// Return with lowercase extension
+	return `${base}${ext}`;
+}
