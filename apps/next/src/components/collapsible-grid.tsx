@@ -13,6 +13,8 @@ interface CollapsibleGridProps {
 	initialCount?: number;
 	/** Width of each card when in horizontal scroll mode */
 	cardWidth?: number;
+	/** Number of selected items (for filter mode) */
+	selectedCount?: number;
 }
 
 export function CollapsibleGrid({
@@ -23,6 +25,7 @@ export function CollapsibleGrid({
 	cols = { base: 1, sm: 2, md: 3, lg: 4 },
 	initialCount = 4,
 	cardWidth = 180,
+	selectedCount = 0,
 }: CollapsibleGridProps): React.ReactElement {
 	const [opened, { toggle }] = useDisclosure(false);
 	const hasMore = totalCount > initialCount;
@@ -31,9 +34,16 @@ export function CollapsibleGrid({
 		<Stack gap="lg">
 			<UnstyledButton onClick={hasMore ? toggle : undefined} style={{ cursor: hasMore ? "pointer" : "default" }}>
 				<Group justify="space-between" align="center">
-					<Title order={2} size="h2" fw={600}>
-						{title}
-					</Title>
+					<Group gap="sm">
+						<Title order={2} size="h2" fw={600}>
+							{title}
+						</Title>
+						{selectedCount > 0 && (
+							<Text size="sm" c="blue" fw={500}>
+								({selectedCount} selected)
+							</Text>
+						)}
+					</Group>
 					{hasMore && (
 						<Group gap="xs" c="blue">
 							<Text size="sm" fw={500}>
