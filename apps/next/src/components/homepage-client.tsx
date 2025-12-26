@@ -1,6 +1,7 @@
 "use client";
 
 import type { Brand, Category, GradeData, Item, Series } from "@hobby-ninja/data";
+import { getGradeFamilyIds, getGradesHierarchy } from "@hobby-ninja/data";
 import {
 	Button,
 	Container,
@@ -31,6 +32,7 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 		categories: [],
 		series: [],
 		brands: [],
+		grades: [],
 	});
 
 	// Track expanded state for each section
@@ -40,6 +42,12 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 		grades: false,
 		brands: false,
 	});
+
+	// Track which grade families are expanded to show children
+	const [expandedFamilies, setExpandedFamilies] = useState<Set<string>>(new Set());
+
+	// Get grade hierarchy for expand/collapse behavior
+	const gradeHierarchy = useMemo(() => getGradesHierarchy(), []);
 
 	const toggleFilter = useCallback((type: keyof FilterState, id: string) => {
 		setFilters((prev) => {
@@ -55,15 +63,53 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 	}, []);
 
 	const clearFilters = useCallback(() => {
-		setFilters({ categories: [], series: [], brands: [] });
+		setFilters({ categories: [], series: [], brands: [], grades: [] });
+	}, []);
+
+	// Toggle all grades in a family (select/deselect entire family)
+	// Also handles auto-expand when selecting, auto-collapse when deselecting
+	const toggleGradeFamily = useCallback((rootId: string) => {
+		const familyIds = getGradeFamilyIds(rootId);
+		setFilters((prev) => {
+			const currentGrades = prev.grades;
+			const anySelected = familyIds.some((id) => currentGrades.includes(id));
+
+			if (anySelected) {
+				// Deselect all family grades and collapse
+				setExpandedFamilies((prevExp) => {
+					const next = new Set(prevExp);
+					next.delete(rootId);
+					return next;
+				});
+				return {
+					...prev,
+					grades: currentGrades.filter((id) => !familyIds.includes(id)),
+				};
+			} else {
+				// Select all family grades and expand
+				setExpandedFamilies((prevExp) => {
+					const next = new Set(prevExp);
+					next.add(rootId);
+					return next;
+				});
+				const newGrades = [...currentGrades];
+				for (const id of familyIds) {
+					if (!newGrades.includes(id)) {
+						newGrades.push(id);
+					}
+				}
+				return { ...prev, grades: newGrades };
+			}
+		});
 	}, []);
 
 	const hasActiveFilters =
 		filters.categories.length > 0 ||
 		filters.series.length > 0 ||
-		filters.brands.length > 0;
+		filters.brands.length > 0 ||
+		filters.grades.length > 0;
 
-	const selectedCount = filters.categories.length + filters.series.length + filters.brands.length;
+	const selectedCount = filters.categories.length + filters.series.length + filters.brands.length + filters.grades.length;
 
 	// Sort items with selected ones first (for collapsed horizontal scroll view)
 	const sortedCategories = useMemo(() => {
@@ -170,21 +216,82 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 					<CollapsibleGrid
 						title="Grades"
 						totalCount={grades.length}
-						selectedCount={0}
+						selectedCount={filters.grades.length}
 						expanded={expandedSections.grades}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, grades: exp })); }}
 					>
-						{grades.map((grade) => (
-							<EntityCard
-								key={grade.id}
-								id={grade.id}
-								name={grade.name}
-								itemIds={grade.itemIds}
-								image={grade.image}
-								type="grade"
-								asFilter={false}
-							/>
-						))}
+						{gradeHierarchy.flatMap((entry) => {
+							const { root, children } = entry;
+							const hasChildren = children.length > 0;
+							const isExpanded = expandedFamilies.has(root.id);
+							const familyIds = getGradeFamilyIds(root.id);
+							const selectedInFamily = familyIds.filter((id) => filters.grades.includes(id)).length;
+
+							// When collapsed or no children: just show root grade
+							if (!isExpanded || !hasChildren) {
+								return (
+									<EntityCard
+										key={root.id}
+										id={root.id}
+										name={root.name}
+										itemIds={root.itemIds}
+										image={root.image}
+										type="grade"
+										asFilter={true}
+										isSelected={hasChildren ? selectedInFamily > 0 : filters.grades.includes(root.id)}
+										onToggle={() => {
+											if (hasChildren) {
+												toggleGradeFamily(root.id);
+											} else {
+												toggleFilter("grades", root.id);
+											}
+										}}
+									/>
+								);
+							}
+
+							// Expanded with children: return array of cards (each gets own grid cell)
+							return [
+								// Root grade - clicking toggles family selection + collapses
+								<EntityCard
+									key={root.id}
+									id={root.id}
+									name={root.name}
+									itemIds={root.itemIds}
+									image={root.image}
+									type="grade"
+									asFilter={true}
+									isSelected={selectedInFamily > 0}
+									onToggle={() => { toggleGradeFamily(root.id); }}
+								/>,
+								// Root-only option - toggle just the root grade
+								<EntityCard
+									key={`${root.id}-root-only`}
+									id={`${root.id}-root-only`}
+									name={`${typeof root.name === "string" ? root.name : root.name.en ?? root.name.ja} only`}
+									itemIds={root.itemIds}
+									image={root.image}
+									type="grade"
+									asFilter={true}
+									isSelected={filters.grades.includes(root.id)}
+									onToggle={() => { toggleFilter("grades", root.id); }}
+								/>,
+								// Child grades
+								...children.map((child) => (
+									<EntityCard
+										key={child.id}
+										id={child.id}
+										name={child.name}
+										itemIds={child.itemIds}
+										image={child.image}
+										type="grade"
+										asFilter={true}
+										isSelected={filters.grades.includes(child.id)}
+										onToggle={() => { toggleFilter("grades", child.id); }}
+									/>
+								)),
+							];
+						})}
 					</CollapsibleGrid>
 
 					<Divider />
