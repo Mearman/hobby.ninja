@@ -12,6 +12,11 @@
 		"month": 9,
 		"day": 6
 	},
+	"image": {
+		"src": "https://bandai-hobby.net/images/3863.jpg",
+		"path": "/images/items/01_5979/01_5979_4.jpg",
+		"hash": "c07e0e1f0e925c7d5c9b283bbda61bd0"
+	},
 	"brand": {
 		"ja": "30 MINUTES LABEL",
 		"en": "30 MINUTES LABEL"
@@ -31,12 +36,10 @@
 		}
 	],
 	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3863/",
-	"image": {
-		"src": "https://bandai-hobby.net/images/3863.jpg",
-		"hash": "c07e0e1f0e925c7d5c9b283bbda61bd0",
-		"path": "/images/items/01_5979/01_5979_4.jpg"
-	},
-	"itemIds": [
-		"01_5979"
+	"items": [
+		{
+			"id": "01_5979",
+			"url": "https://bandai-hobby.net/item/01_5979/"
+		}
 	]
 }

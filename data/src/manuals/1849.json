@@ -11,6 +11,11 @@
 		"year": 1980,
 		"month": 7
 	},
+	"image": {
+		"src": "https://bandai-hobby.net/images/155_4052_s_inct47w9mrthhscbxpfwoqan0kkq.jpg",
+		"path": "/images/items/01_3084/1000091520_2.jpg",
+		"hash": "c966673f9c648547c20c4fc44b66b148"
+	},
 	"scale": "1/144",
 	"brand": {
 		"ja": "その他",
@@ -20,9 +25,6 @@
 		"ja": "機動戦士ガンダム",
 		"en": "MOBILE SUIT GUNDAM"
 	},
-	"itemIds": [
-		"01_3084"
-	],
 	"pdfs": [
 		{
 			"url": "https://manual.bandai-hobby.net/pdf/1849.pdf",
@@ -34,9 +36,10 @@
 		}
 	],
 	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1849/",
-	"image": {
-		"src": "https://bandai-hobby.net/images/155_4052_s_inct47w9mrthhscbxpfwoqan0kkq.jpg",
-		"hash": "c966673f9c648547c20c4fc44b66b148",
-		"path": "/images/items/01_3084/1000091520_2.jpg"
-	}
+	"items": [
+		{
+			"id": "01_3084",
+			"url": "https://bandai-hobby.net/item/01_3084/"
+		}
+	]
 }

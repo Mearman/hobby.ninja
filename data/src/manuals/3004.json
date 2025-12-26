@@ -12,13 +12,18 @@
 		"month": 8,
 		"day": 23
 	},
+	"image": {
+		"src": "https://bandai-hobby.net/images/3004.jpg",
+		"path": "/images/items/01_5962/01_5962_11.jpg",
+		"hash": "b48efc3df5e3a6b41e76fcb96f0c93a4"
+	},
 	"brand": {
 		"ja": "MGSD",
 		"en": "MGSD"
 	},
 	"series": {
 		"ja": "機動戦士ガンダム 水星の魔女",
-		"en": "Mobile Suit Gundam Witch of Mercury"
+		"en": "MOBILE SUIT GUNDAM the Witch from Mercury"
 	},
 	"pdfs": [
 		{
@@ -39,12 +44,10 @@
 		}
 	],
 	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3004/",
-	"image": {
-		"src": "https://bandai-hobby.net/images/3004.jpg",
-		"hash": "b48efc3df5e3a6b41e76fcb96f0c93a4",
-		"path": "/images/items/01_5962/01_5962_11.jpg"
-	},
-	"itemIds": [
-		"01_5962"
+	"items": [
+		{
+			"id": "01_5962",
+			"url": "https://bandai-hobby.net/item/01_5962/"
+		}
 	]
 }

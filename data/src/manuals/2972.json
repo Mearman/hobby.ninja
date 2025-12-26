@@ -12,13 +12,18 @@
 		"month": 4,
 		"day": 26
 	},
+	"image": {
+		"src": "https://bandai-hobby.net/images/option_parts_set_gunpla16_meteor_hopper_PAC.jpg",
+		"path": "/images/items/01_5545/01_5545_8.jpg",
+		"hash": "a41dc0331fda8b1043a375add6b7a868"
+	},
 	"brand": {
 		"ja": "オプションパーツセット",
-		"en": "Optional parts set"
+		"en": "OPTION PARTS SET"
 	},
 	"series": {
 		"ja": "ガンダムビルドファイターズ",
-		"en": "Gundam Build Fighters"
+		"en": "GUNDAM BUILD FIGHTERS"
 	},
 	"pdfs": [
 		{
@@ -31,12 +36,10 @@
 		}
 	],
 	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2972/",
-	"image": {
-		"src": "https://bandai-hobby.net/images/option_parts_set_gunpla16_meteor_hopper_PAC.jpg",
-		"hash": "a41dc0331fda8b1043a375add6b7a868",
-		"path": "/images/items/01_5545/01_5545_8.jpg"
-	},
-	"itemIds": [
-		"01_5545"
+	"items": [
+		{
+			"id": "01_5545",
+			"url": "https://bandai-hobby.net/item/01_5545/"
+		}
 	]
 }

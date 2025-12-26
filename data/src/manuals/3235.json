@@ -12,6 +12,11 @@
 		"month": 7,
 		"day": 5
 	},
+	"image": {
+		"src": "https://bandai-hobby.net/images/3235.jpg",
+		"path": "/images/items/01_5951/01_5951_5.jpg",
+		"hash": "57987d35b6c038d476a648439c96fa2b"
+	},
 	"scale": "1/144",
 	"brand": {
 		"ja": "HG",
@@ -32,12 +37,10 @@
 		}
 	],
 	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3235/",
-	"image": {
-		"src": "https://bandai-hobby.net/images/3235.jpg",
-		"hash": "57987d35b6c038d476a648439c96fa2b",
-		"path": "/images/items/01_5951/01_5951_5.jpg"
-	},
-	"itemIds": [
-		"01_5951"
+	"items": [
+		{
+			"id": "01_5951",
+			"url": "https://bandai-hobby.net/item/01_5951/"
+		}
 	]
 }

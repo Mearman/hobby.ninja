@@ -12,6 +12,11 @@
 		"month": 5,
 		"day": 3
 	},
+	"image": {
+		"src": "https://bandai-hobby.net/images/9VRCm4BxNsbS0IaI.jpg",
+		"path": "/images/items/01_5934/01_5934_6.jpg",
+		"hash": "e6c74f9b9cd2d0ccca09a15f5590be4d"
+	},
 	"brand": {
 		"ja": "アクションベース",
 		"en": "action base"
@@ -31,12 +36,10 @@
 		}
 	],
 	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3070/",
-	"image": {
-		"src": "https://bandai-hobby.net/images/9VRCm4BxNsbS0IaI.jpg",
-		"hash": "e6c74f9b9cd2d0ccca09a15f5590be4d",
-		"path": "/images/items/01_5934/01_5934_6.jpg"
-	},
-	"itemIds": [
-		"01_5934"
+	"items": [
+		{
+			"id": "01_5934",
+			"url": "https://bandai-hobby.net/item/01_5934/"
+		}
 	]
 }

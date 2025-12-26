@@ -12,6 +12,11 @@
 		"month": 4,
 		"day": 12
 	},
+	"image": {
+		"src": "https://bandai-hobby.net/images/hg_police_zaku_PAC.jpg",
+		"path": "/images/items/01_5931/01_5931_7.jpg",
+		"hash": "e7d68593d041a23eff52a3913a24b4d3"
+	},
 	"scale": "1/144",
 	"brand": {
 		"ja": "HG",
@@ -32,12 +37,10 @@
 		}
 	],
 	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2971/",
-	"image": {
-		"src": "https://bandai-hobby.net/images/hg_police_zaku_PAC.jpg",
-		"hash": "e7d68593d041a23eff52a3913a24b4d3",
-		"path": "/images/items/01_5931/01_5931_7.jpg"
-	},
-	"itemIds": [
-		"01_5931"
+	"items": [
+		{
+			"id": "01_5931",
+			"url": "https://bandai-hobby.net/item/01_5931/"
+		}
 	]
 }

@@ -12,9 +12,14 @@
 		"month": 7,
 		"day": 12
 	},
+	"image": {
+		"src": "https://bandai-hobby.net/images/3237.jpg",
+		"path": "/images/items/01_5937/01_5937_8.jpg",
+		"hash": "32a3a3da0b7db9cf370b97d72ac34d68"
+	},
 	"brand": {
 		"ja": "オプションパーツセット",
-		"en": "Optional parts set"
+		"en": "OPTION PARTS SET"
 	},
 	"series": {
 		"ja": "ガンダムビルドダイバーズ",
@@ -31,12 +36,10 @@
 		}
 	],
 	"sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3237/",
-	"image": {
-		"src": "https://bandai-hobby.net/images/3237.jpg",
-		"hash": "32a3a3da0b7db9cf370b97d72ac34d68",
-		"path": "/images/items/01_5937/01_5937_8.jpg"
-	},
-	"itemIds": [
-		"01_5937"
+	"items": [
+		{
+			"id": "01_5937",
+			"url": "https://bandai-hobby.net/item/01_5937/"
+		}
 	]
 }
