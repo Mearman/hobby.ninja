@@ -19,7 +19,6 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { FallbackImage } from "./fallback-image";
 import { ItemImageGallery } from "./item-image-gallery";
 import { PdfAccordion } from "./pdf-accordion";
 
@@ -236,52 +235,39 @@ export default async function ItemPage({ params }: ItemPageProps) {
 						})}
 						header={
 							<Group justify="space-between" align="flex-start" wrap="wrap">
-								<Group gap="md" align="flex-start">
-									<FallbackImage
-										urls={getManualCdnUrls(`${item.manual.id}/${item.manual.id}.jpg`, item.manual.thumbnailImage)}
-										alt={item.manual.name}
-										style={{
-											width: 80,
-											height: 80,
-											objectFit: "cover",
-											borderRadius: 4,
-											border: "1px solid var(--mantine-color-gray-3)",
-										}}
-									/>
-									<Stack gap={4}>
-										<Title order={3} size="h4">Assembly Manual</Title>
-										<Text fw={500}>{item.manual.name}</Text>
-										<Group gap="xs">
-											{item.manual.productNumber && (
-												<Badge variant="light" color="gray" size="sm">
-													Product #{item.manual.productNumber}
-												</Badge>
-											)}
-											{item.manual.scale && (
-												<Badge variant="light" color="orange" size="sm">
-													{item.manual.scale}
-												</Badge>
-											)}
-											{item.manual.releaseDate?.year && (
-												<Badge variant="light" color="blue" size="sm">
-													{item.manual.releaseDate.year}
-													{item.manual.releaseDate.month != null && `/${String(item.manual.releaseDate.month).padStart(2, "0")}`}
-													{item.manual.releaseDate.day != null && `/${String(item.manual.releaseDate.day).padStart(2, "0")}`}
-												</Badge>
-											)}
-										</Group>
-										{item.manual.brands.length > 0 && (
-											<Text size="xs" c="dimmed">
-												Brand: {item.manual.brands.map(b => b.name).join(", ")}
-											</Text>
+								<Stack gap={4}>
+									<Title order={3} size="h4">Assembly Manual</Title>
+									<Text fw={500}>{item.manual.name}</Text>
+									<Group gap="xs">
+										{item.manual.productNumber && (
+											<Badge variant="light" color="gray" size="sm">
+												Product #{item.manual.productNumber}
+											</Badge>
 										)}
-										{item.manual.series.length > 0 && (
-											<Text size="xs" c="dimmed">
-												Series: {item.manual.series.map(s => s.name).join(", ")}
-											</Text>
+										{item.manual.scale && (
+											<Badge variant="light" color="orange" size="sm">
+												{item.manual.scale}
+											</Badge>
 										)}
-									</Stack>
-								</Group>
+										{item.manual.releaseDate?.year && (
+											<Badge variant="light" color="blue" size="sm">
+												{item.manual.releaseDate.year}
+												{item.manual.releaseDate.month != null && `/${String(item.manual.releaseDate.month).padStart(2, "0")}`}
+												{item.manual.releaseDate.day != null && `/${String(item.manual.releaseDate.day).padStart(2, "0")}`}
+											</Badge>
+										)}
+									</Group>
+									{item.manual.brands.length > 0 && (
+										<Text size="xs" c="dimmed">
+											Brand: {item.manual.brands.map(b => b.name).join(", ")}
+										</Text>
+									)}
+									{item.manual.series.length > 0 && (
+										<Text size="xs" c="dimmed">
+											Series: {item.manual.series.map(s => s.name).join(", ")}
+										</Text>
+									)}
+								</Stack>
 								<Group gap="md">
 									<Anchor
 										href={`https://manual.bandai-hobby.net/menus/detail/${item.manual.id}/`}
