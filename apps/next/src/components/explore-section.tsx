@@ -19,6 +19,7 @@ function formatPrice(price?: { amount: number; currency: string }): string {
 
 function ItemCard({ item }: { item: Item }): React.ReactElement {
 	const [hasImageError, setHasImageError] = useState(false);
+	const [imageLoaded, setImageLoaded] = useState(false);
 	const images = getNodeImages(item);
 	const displayName = getNodeDisplayName(item);
 	const hasValidImage = !hasImageError && images.length > 0;
@@ -42,30 +43,46 @@ function ItemCard({ item }: { item: Item }): React.ReactElement {
 						display: "flex",
 						alignItems: "center",
 						justifyContent: "center",
+						position: "relative",
 					}}
 				>
-					{hasValidImage ? (
-						<img
-							src={resolveCdnUrl(images[0])}
-							alt={displayName}
-							onError={() => { setHasImageError(true); }}
-							style={{
-								width: "100%",
-								height: "100%",
-								objectFit: "cover",
-							}}
-						/>
-					) : (
+					{/* Always show placeholder text until image loads */}
+					{(!imageLoaded || !hasValidImage) && (
 						<Text
 							size="lg"
 							fw={600}
 							c="dimmed"
 							ta="center"
 							p="md"
-							style={{ wordBreak: "break-word" }}
+							style={{
+								wordBreak: "break-word",
+								position: hasValidImage ? "absolute" : "static",
+								zIndex: 0,
+							}}
 						>
 							{displayName}
 						</Text>
+					)}
+					{hasValidImage && (
+						<img
+							src={resolveCdnUrl(images[0])}
+							alt={displayName}
+							loading="lazy"
+							decoding="async"
+							onLoad={() => { setImageLoaded(true); }}
+							onError={() => { setHasImageError(true); }}
+							style={{
+								width: "100%",
+								height: "100%",
+								objectFit: "cover",
+								position: "absolute",
+								top: 0,
+								left: 0,
+								opacity: imageLoaded ? 1 : 0,
+								transition: "opacity 0.2s ease-in-out",
+								zIndex: 1,
+							}}
+						/>
 					)}
 				</Box>
 
