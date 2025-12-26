@@ -10,6 +10,7 @@ interface CollapsibleGridProps {
 	collapsedChildren: React.ReactNode;
 	totalCount: number;
 	cols?: { base: number; sm: number; md: number; lg: number };
+	initialCount?: number;
 }
 
 export function CollapsibleGrid({
@@ -18,9 +19,10 @@ export function CollapsibleGrid({
 	collapsedChildren,
 	totalCount,
 	cols = { base: 1, sm: 2, md: 3, lg: 4 },
+	initialCount = 4,
 }: CollapsibleGridProps): React.ReactElement {
 	const [opened, { toggle }] = useDisclosure(false);
-	const hasMore = totalCount > 4;
+	const hasMore = totalCount > initialCount;
 
 	return (
 		<Stack gap="lg">
