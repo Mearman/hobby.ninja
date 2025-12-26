@@ -102,6 +102,26 @@ export async function translateItemFallback(
 		item.description.en = translatedBullets;
 	}
 
+	// Translate brands
+	for (const brand of item.brands) {
+		if (brand.ja && !brand.en) {
+			const translated = await translateWithFallback(brand.ja, translator);
+			if (translated) {
+				brand.en = translated;
+			}
+		}
+	}
+
+	// Translate series
+	for (const series of item.series) {
+		if (series.ja && !series.en) {
+			const translated = await translateWithFallback(series.ja, translator);
+			if (translated) {
+				series.en = translated;
+			}
+		}
+	}
+
 	// Translate accessories (name and unit)
 	if (item.accessories) {
 		for (const accessory of item.accessories) {
