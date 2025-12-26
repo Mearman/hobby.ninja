@@ -100,7 +100,6 @@ export function HomepageClient({ categories, series, brands, items }: HomepageCl
 					<CollapsibleGrid
 						title="Categories"
 						totalCount={categories.length + 1}
-						cols={{ base: 2, sm: 3, md: 4, lg: 6 }}
 						selectedCount={filters.categories.length}
 						expanded={expandedSections.categories}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, categories: exp })); }}
@@ -135,7 +134,6 @@ export function HomepageClient({ categories, series, brands, items }: HomepageCl
 					<CollapsibleGrid
 						title="Series"
 						totalCount={series.length + 1}
-						cols={{ base: 2, sm: 3, md: 4, lg: 6 }}
 						selectedCount={filters.series.length}
 						expanded={expandedSections.series}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, series: exp })); }}
@@ -170,7 +168,6 @@ export function HomepageClient({ categories, series, brands, items }: HomepageCl
 					<CollapsibleGrid
 						title="Brands"
 						totalCount={brands.length + 1}
-						cols={{ base: 2, sm: 3, md: 4, lg: 6 }}
 						selectedCount={filters.brands.length}
 						expanded={expandedSections.brands}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, brands: exp })); }}
