@@ -420,4 +420,43 @@ export const ItemsIndexUpdater = {
 			pageScrapedAt: entry.pageScrapedAt,
 		};
 	},
+
+	/**
+	 * Check if an item exists in the index (regardless of page check status)
+	 */
+	hasItem(itemId: string): boolean {
+		if (!itemsIndex) this.load();
+		if (!itemsIndex) return false;
+
+		const paddedId = padItemId(itemId);
+		return paddedId in itemsIndex.items;
+	},
+
+	/**
+	 * Record an item discovered from sitemap (pending page check)
+	 */
+	recordFromSitemap(itemId: string): void {
+		if (!itemsIndex) this.load();
+		if (!itemsIndex) return;
+
+		const paddedId = padItemId(itemId);
+
+		// Only add if not already in index
+		if (paddedId in itemsIndex.items) return;
+
+		itemsIndex.items[paddedId] = {
+			// japaneseSite will be populated when page is checked during scrape
+		};
+		isDirty = true;
+	},
+
+	/**
+	 * Get all item IDs in the index
+	 */
+	getAllItemIds(): string[] {
+		if (!itemsIndex) this.load();
+		if (!itemsIndex) return [];
+
+		return Object.keys(itemsIndex.items);
+	},
 };
