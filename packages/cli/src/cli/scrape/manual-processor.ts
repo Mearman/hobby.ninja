@@ -19,6 +19,7 @@ import {
 	downloadManualImage,
 	findImageSrcFromHtml,
 } from "./image-processor.js";
+import { updateItemWithManualLink } from "./item-processor.js";
 import { downloadManualPdfs } from "./pdf-processor.js";
 import { createTimer, printTimings } from "./timing-utils.js";
 import { translateManualFallback } from "./translation-handler.js";
@@ -200,6 +201,10 @@ export async function processManualComplete(
 			}
 			const msg = imageDeduplicated ? `Linked to item (via hash): ${discoveredItemId}` : `Linked to item: ${discoveredItemId}`;
 			console.log(`    ${msg}`);
+
+			// Update item with reverse link to manual (bidirectional)
+			const itemId = discoveredItemId; // Capture for closure (TS narrowing)
+			await time("link-item", () => updateItemWithManualLink(itemId, canonicalId));
 		}
 	}
 

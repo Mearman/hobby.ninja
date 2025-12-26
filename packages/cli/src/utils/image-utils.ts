@@ -1,15 +1,18 @@
 import { promises as fs } from "node:fs";
-import path from "node:path";
 
+import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
 import { glob } from "glob";
+
 
 import type { Item, ItemImage, ItemImages } from "../cli/bandai-catalog-parser.js";
 
-const ITEMS_IMAGES_DIR = path.join(process.cwd(), "assets/images/items");
-const ITEMS_DATA_DIR = path.join(process.cwd(), "data/src/items");
+const ITEMS_IMAGES_DIR = resolveWorkspacePath("assets/images/items");
+const ITEMS_DATA_DIR = resolveWorkspacePath("data/src/items");
 
 /**
- * Index mapping image hashes to their canonical paths in item assets
+ * Index mapping image hashes to their canonical paths
+ * Items are loaded at initialization (authoritative source)
+ * Manuals and P-Bandai are added incrementally as they're processed
  * Used for deduplication during image downloads
  */
 export class ImageHashIndex {
@@ -17,14 +20,16 @@ export class ImageHashIndex {
 	private initialized = false;
 
 	/**
-	 * Build the hash index from all item JSON files
-	 * Scans data/src/items/*.json and extracts hash→path mappings
+	 * Build the hash index from item JSON files
+	 * Items are the authoritative source; manuals/P-Bandai are added as processed
 	 */
 	async initialize(): Promise<void> {
 		if (this.initialized) return;
 
+		let itemImages = 0;
+
+		// Load item images (authoritative source)
 		const itemFiles = await glob(`${ITEMS_DATA_DIR}/01_*.json`);
-		let totalImages = 0;
 
 		for (const file of itemFiles) {
 			try {
@@ -37,7 +42,7 @@ export class ImageHashIndex {
 				for (const img of item.images.product) {
 					if (img.hash && img.path) {
 						this.hashToPath.set(img.hash, img.path);
-						totalImages++;
+						itemImages++;
 					}
 				}
 
@@ -45,7 +50,7 @@ export class ImageHashIndex {
 				for (const img of item.images.instructions) {
 					if (img.hash && img.path) {
 						this.hashToPath.set(img.hash, img.path);
-						totalImages++;
+						itemImages++;
 					}
 				}
 			} catch {
@@ -54,7 +59,7 @@ export class ImageHashIndex {
 		}
 
 		this.initialized = true;
-		console.log(`  Hash index: ${this.hashToPath.size} unique hashes from ${totalImages} images`);
+		console.log(`  Hash index: ${this.hashToPath.size} unique hashes from ${itemImages} item images`);
 	}
 
 	/**
