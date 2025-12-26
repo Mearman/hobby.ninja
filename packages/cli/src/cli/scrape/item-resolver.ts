@@ -51,19 +51,21 @@ export function getAllItemIds(options: ScrapeOptions): string[] {
 		for (let i = startSuffix; i <= endSuffix && i <= MAX_ITEM_ID; i++) {
 			const id = formatItemId(i);
 			const status = ItemsIndexUpdater.isIndexed(id);
-			if (status.indexed && status.hasPage) {
+			// Include items with pages OR items not yet checked (from sitemap discovery)
+			if (status.indexed && (status.hasPage || status.hasPage === undefined)) {
 				itemIds.push(id);
 			}
 		}
 		return itemIds;
 	}
 
-	// Default: all items with pages
+	// Default: all items with pages OR unchecked items (from sitemap discovery)
 	const itemIds: string[] = [];
 	for (let i = 1; i <= MAX_ITEM_ID; i++) {
 		const id = formatItemId(i);
 		const status = ItemsIndexUpdater.isIndexed(id);
-		if (status.indexed && status.hasPage) {
+		// Include items with pages OR items not yet checked (from sitemap discovery)
+		if (status.indexed && (status.hasPage || status.hasPage === undefined)) {
 			itemIds.push(id);
 		}
 	}
