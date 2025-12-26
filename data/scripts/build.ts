@@ -197,30 +197,34 @@ interface HomepageData {
 
 
 // Grade definitions with hierarchy and sort order
-// Sort order by builder complexity: EG (100) → SD (200) → HG (300) → Mega Size (350) → FM (400) → Figure-rise (450) → RE/100 (500) → RG (600) → MG (700) → PG (900)
-// Note: Mega Size is large (1/48) but simpler construction than FM/RG/MG, so placed after HG
+// Main Gunpla progression: EG → HG → FM → RG → MG → PG
+// Other Gunpla grades: SD, Mega Size, RE/100
+// Non-Gunpla: Figure-rise
 const GRADE_DEFINITIONS: Record<string, { name: string; parent: string | null; children: string[]; sortOrder: number }> = {
+	// Main progression (by complexity/scale)
 	"eg": { name: "Entry Grade", parent: null, children: [], sortOrder: 100 },
-	"sd": { name: "Super Deformed", parent: null, children: ["sd-cs", "sd-bb", "sd-bb-warrior", "sdex"], sortOrder: 200 },
-	"sdex": { name: "SD EX-Standard", parent: "sd", children: [], sortOrder: 210 },
-	"sd-cs": { name: "SD Cross Silhouette", parent: "sd", children: [], sortOrder: 220 },
-	"sd-bb": { name: "SD BB Senshi", parent: "sd", children: [], sortOrder: 230 },
-	"sd-bb-warrior": { name: "SD BB Warrior", parent: "sd", children: [], sortOrder: 240 },
-	"hg": { name: "High Grade", parent: null, children: ["hg-uc", "hg-ce", "hg-ac", "hg-amplified"], sortOrder: 300 },
-	"hg-uc": { name: "HG Universal Century", parent: "hg", children: [], sortOrder: 310 },
-	"hg-ce": { name: "HG Cosmic Era", parent: "hg", children: [], sortOrder: 320 },
-	"hg-ac": { name: "HG After Colony", parent: "hg", children: [], sortOrder: 330 },
-	"hg-amplified": { name: "HG Amplified", parent: "hg", children: [], sortOrder: 340 },
-	"mega-size": { name: "Mega Size Model", parent: null, children: [], sortOrder: 350 },
-	"fm": { name: "Full Mechanics", parent: null, children: [], sortOrder: 400 },
-	"figure-rise": { name: "Figure-rise Standard", parent: null, children: [], sortOrder: 450 },
-	"re-100": { name: "RE/100", parent: null, children: [], sortOrder: 500 },
-	"rg": { name: "Real Grade", parent: null, children: [], sortOrder: 600 },
-	"mg": { name: "Master Grade", parent: null, children: ["mgsd", "mg-ver-ka", "mgex"], sortOrder: 700 },
-	"mgsd": { name: "Master Grade SD", parent: "mg", children: [], sortOrder: 705 },
-	"mg-ver-ka": { name: "MG Ver.Ka", parent: "mg", children: [], sortOrder: 710 },
-	"mgex": { name: "Master Grade Extreme", parent: "mg", children: [], sortOrder: 720 },
-	"pg": { name: "Perfect Grade", parent: null, children: [], sortOrder: 900 },
+	"hg": { name: "High Grade", parent: null, children: ["hg-uc", "hg-ce", "hg-ac", "hg-amplified"], sortOrder: 200 },
+	"hg-uc": { name: "HG Universal Century", parent: "hg", children: [], sortOrder: 210 },
+	"hg-ce": { name: "HG Cosmic Era", parent: "hg", children: [], sortOrder: 220 },
+	"hg-ac": { name: "HG After Colony", parent: "hg", children: [], sortOrder: 230 },
+	"hg-amplified": { name: "HG Amplified", parent: "hg", children: [], sortOrder: 240 },
+	"fm": { name: "Full Mechanics", parent: null, children: [], sortOrder: 300 },
+	"rg": { name: "Real Grade", parent: null, children: [], sortOrder: 400 },
+	"mg": { name: "Master Grade", parent: null, children: ["mgsd", "mg-ver-ka", "mgex"], sortOrder: 500 },
+	"mgsd": { name: "Master Grade SD", parent: "mg", children: [], sortOrder: 510 },
+	"mg-ver-ka": { name: "MG Ver.Ka", parent: "mg", children: [], sortOrder: 520 },
+	"mgex": { name: "Master Grade Extreme", parent: "mg", children: [], sortOrder: 530 },
+	"pg": { name: "Perfect Grade", parent: null, children: [], sortOrder: 600 },
+	// Other Gunpla-specific grades
+	"sd": { name: "Super Deformed", parent: null, children: ["sd-cs", "sd-bb", "sd-bb-warrior", "sdex"], sortOrder: 700 },
+	"sdex": { name: "SD EX-Standard", parent: "sd", children: [], sortOrder: 710 },
+	"sd-cs": { name: "SD Cross Silhouette", parent: "sd", children: [], sortOrder: 720 },
+	"sd-bb": { name: "SD BB Senshi", parent: "sd", children: [], sortOrder: 730 },
+	"sd-bb-warrior": { name: "SD BB Warrior", parent: "sd", children: [], sortOrder: 740 },
+	"mega-size": { name: "Mega Size Model", parent: null, children: [], sortOrder: 800 },
+	"re-100": { name: "RE/100", parent: null, children: [], sortOrder: 850 },
+	// Non-Gunpla grades
+	"figure-rise": { name: "Figure-rise Standard", parent: null, children: [], sortOrder: 900 },
 };
 
 function ensureDir(dir: string) {
