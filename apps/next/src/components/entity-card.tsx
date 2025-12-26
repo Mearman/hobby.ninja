@@ -5,7 +5,7 @@ import { Box, Card, Text, UnstyledButton } from "@mantine/core";
 import Link from "next/link";
 import { useState } from "react";
 
-import { ImageWithFallback } from "@/components/image-with-fallback";
+import { FittedText, ImageWithFallback } from "@/components/image-with-fallback";
 
 interface EntityCardProps {
 	id: string;
@@ -63,9 +63,7 @@ export function EntityCard({ id, name, itemIds, image, type, asFilter, isSelecte
 						fallbackText={displayName}
 					/>
 				) : (
-					<Text size="xl" fw={600} c="dimmed" ta="center" p="md">
-						{displayName}
-					</Text>
+					<FittedText text={displayName} />
 				)}
 
 				{/* Selected overlay */}
