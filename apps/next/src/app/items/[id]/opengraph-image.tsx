@@ -31,13 +31,6 @@ async function loadFont(): Promise<ArrayBuffer> {
 	return fontResponse.arrayBuffer();
 }
 
-// Format price for display
-function formatPrice(price?: { amount: number; currency: string }): string | null {
-	if (!price) return null;
-	const { amount, currency } = price;
-	const symbol = currency === "JPY" ? "¥" : currency;
-	return `${symbol}${amount.toLocaleString()}`;
-}
 
 interface Props {
 	params: Promise<{ id: string }>;
@@ -77,7 +70,6 @@ export default async function Image({ params }: Props) {
 	const imageUrl = firstImage
 		? getCdnUrls(firstImage).fallback
 		: null;
-	const price = formatPrice(item.price);
 	const brand = item.brands[0]?.name;
 	const grade = item.primaryGrade;
 	const scale = item.scale;
@@ -215,20 +207,6 @@ export default async function Image({ params }: Props) {
 							</div>
 						)}
 					</div>
-
-					{/* Price */}
-					{price && (
-						<div
-							style={{
-								fontSize: 28,
-								fontWeight: 700,
-								color: "#339af0",
-								marginTop: 16,
-							}}
-						>
-							{price}
-						</div>
-					)}
 
 					{/* Bottom accent bar */}
 					<div
