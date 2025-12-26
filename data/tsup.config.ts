@@ -1,5 +1,7 @@
 import { defineConfig } from "tsup";
 
+const isCI = process.env.CI === "true";
+
 export default defineConfig({
 	entry: {
 		index: "lib/index.ts",
@@ -19,8 +21,16 @@ export default defineConfig({
 	format: ["esm"],
 	dts: true,
 	clean: false, // Don't clean - build.ts outputs JSON to dist/ first
-	sourcemap: true,
+	// Disable sourcemaps in CI to reduce memory usage (files are 40+ MB each)
+	sourcemap: !isCI,
 	splitting: false,
 	treeshake: true,
 	external: ["zod", "fuse.js"],
+	// esbuild options to reduce memory in CI
+	esbuildOptions(options) {
+		if (isCI) {
+			// Disable parallel processing to reduce memory usage
+			options.logLevel = "info";
+		}
+	},
 });
