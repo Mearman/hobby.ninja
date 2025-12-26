@@ -32,6 +32,13 @@ export function HomepageClient({ categories, series, brands, items }: HomepageCl
 		brands: [],
 	});
 
+	// Track expanded state for each section
+	const [expandedSections, setExpandedSections] = useState({
+		categories: false,
+		series: false,
+		brands: false,
+	});
+
 	const toggleFilter = useCallback((type: keyof FilterState, id: string) => {
 		setFilters((prev) => {
 			const current = prev[type];
@@ -85,11 +92,13 @@ export function HomepageClient({ categories, series, brands, items }: HomepageCl
 				<Stack gap="xl">
 					<CollapsibleGrid
 						title="Categories"
-						totalCount={sortedCategories.length}
+						totalCount={categories.length}
 						cols={{ base: 2, sm: 3, md: 4, lg: 6 }}
 						selectedCount={filters.categories.length}
+						expanded={expandedSections.categories}
+						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, categories: exp })); }}
 					>
-						{sortedCategories.map((category) => (
+						{(expandedSections.categories ? categories : sortedCategories).map((category) => (
 							<EntityCard
 								key={category.id}
 								id={category.id}
@@ -108,11 +117,13 @@ export function HomepageClient({ categories, series, brands, items }: HomepageCl
 
 					<CollapsibleGrid
 						title="Series"
-						totalCount={sortedSeries.length}
+						totalCount={series.length}
 						cols={{ base: 2, sm: 3, md: 4, lg: 6 }}
 						selectedCount={filters.series.length}
+						expanded={expandedSections.series}
+						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, series: exp })); }}
 					>
-						{sortedSeries.map((s) => (
+						{(expandedSections.series ? series : sortedSeries).map((s) => (
 							<EntityCard
 								key={s.id}
 								id={s.id}
@@ -131,11 +142,13 @@ export function HomepageClient({ categories, series, brands, items }: HomepageCl
 
 					<CollapsibleGrid
 						title="Brands"
-						totalCount={sortedBrands.length}
+						totalCount={brands.length}
 						cols={{ base: 2, sm: 3, md: 4, lg: 6 }}
 						selectedCount={filters.brands.length}
+						expanded={expandedSections.brands}
+						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, brands: exp })); }}
 					>
-						{sortedBrands.map((brand) => (
+						{(expandedSections.brands ? brands : sortedBrands).map((brand) => (
 							<EntityCard
 								key={brand.id}
 								id={brand.id}
