@@ -60,6 +60,7 @@ interface TranslationProgress {
 interface FilteredManualData {
 	id: string;
 	name: { ja: string; en?: string };
+	brand?: { ja: string; en?: string };
 	series: { ja: string; en?: string };
 	pdfs?: Array<{
 		url: string;
@@ -492,8 +493,21 @@ async function translateManualItem(
 			}
 		}
 
+		// Translate brand if not already translated
+		if (manual.brand?.ja && !manual.brand.en) {
+			try {
+				const result = await translator.translateText(manual.brand.ja, "en", "ja");
+				manual.brand.en = result.translated;
+				fieldsTranslated++;
+			} catch (error) {
+				if (verbose) {
+					console.error(`  Failed to translate brand for ${manual.id}:`, error);
+				}
+			}
+		}
+
 		// Translate series if not already translated
-		if (manual.series.ja && !manual.series.en) {
+		if (manual.series?.ja && !manual.series.en) {
 			try {
 				const result = await translator.translateText(manual.series.ja, "en", "ja");
 				manual.series.en = result.translated;
