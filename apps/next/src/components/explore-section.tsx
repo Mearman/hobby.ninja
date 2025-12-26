@@ -1,15 +1,13 @@
 "use client";
 
 import { getNodeDisplayName, getNodeImages, getNodePrimaryGrade, resolveCdnUrl, type Item } from "@hobby-ninja/data";
-import { Box, Card, Flex, SimpleGrid, Stack, Text } from "@mantine/core";
-import { IconDatabase } from "@tabler/icons-react";
+import { Box, Card, SimpleGrid, Stack, Text } from "@mantine/core";
 import Link from "next/link";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 
 import { Badge } from "@/components/ui/badge";
 import { InfiniteScrollLoader } from "@/components/ui/infinite-scroll-loader";
 import { useInfiniteScroll } from "@/hooks/use-infinite-scroll";
-import { UI } from "@/lib/constants";
 
 function formatPrice(price?: { amount: number; currency: string }): string {
 	if (!price) return "";
@@ -20,62 +18,71 @@ function formatPrice(price?: { amount: number; currency: string }): string {
 }
 
 function ItemCard({ item }: { item: Item }): React.ReactElement {
+	const [hasImageError, setHasImageError] = useState(false);
+	const images = getNodeImages(item);
+	const displayName = getNodeDisplayName(item);
+	const hasValidImage = !hasImageError && images.length > 0;
+
 	return (
 		<Link href={`/items/${item.id}`} style={{ textDecoration: "none", color: "inherit" }}>
 			<Card
 				shadow="sm"
-				padding="md"
+				padding={0}
 				radius="md"
 				withBorder={true}
 				h="100%"
-				style={{ cursor: "pointer" }}
+				style={{ cursor: "pointer", overflow: "hidden" }}
 				className="item-card-hover"
 			>
-				<Stack gap="xs">
-					<Box
-						h={UI.THUMBNAIL_HEIGHT}
-						bg="gray.0"
-						style={{
-							borderRadius: "var(--mantine-radius-sm)",
-							background: "linear-gradient(135deg, var(--mantine-color-gray-0) 0%, var(--mantine-color-gray-1) 100%)",
-						}}
-					>
-						{(() => {
-							const images = getNodeImages(item);
-							return images.length > 0 ? (
-								<img
-									src={resolveCdnUrl(images[0])}
-									alt={getNodeDisplayName(item)}
-									style={{
-										width: "100%",
-										height: "100%",
-										objectFit: "cover",
-										borderRadius: "var(--mantine-radius-sm)",
-									}}
-								/>
-							) : (
-								<Flex justify="center" align="center" h="100%">
-									<IconDatabase size={40} color="var(--mantine-color-gray-4)" />
-								</Flex>
-							);
-						})()}
-					</Box>
-
-					<Stack gap={4}>
-						<Text size="sm" fw={600} lineClamp={2} c="var(--mantine-color-gray-8)">
-							{getNodeDisplayName(item)}
+				<Box
+					bg="gray.1"
+					style={{
+						aspectRatio: "1 / 1",
+						background: "linear-gradient(135deg, var(--mantine-color-gray-1) 0%, var(--mantine-color-gray-2) 100%)",
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "center",
+					}}
+				>
+					{hasValidImage ? (
+						<img
+							src={resolveCdnUrl(images[0])}
+							alt={displayName}
+							onError={() => { setHasImageError(true); }}
+							style={{
+								width: "100%",
+								height: "100%",
+								objectFit: "cover",
+							}}
+						/>
+					) : (
+						<Text
+							size="lg"
+							fw={600}
+							c="dimmed"
+							ta="center"
+							p="md"
+							style={{ wordBreak: "break-word" }}
+						>
+							{displayName}
 						</Text>
+					)}
+				</Box>
 
-						<Badge size="xs" variant="light" color="blue">
-							{getNodePrimaryGrade(item) ?? "N/A"}
-						</Badge>
+				<Stack gap={4} p="sm">
+					<Text size="sm" fw={600} lineClamp={2}>
+						{displayName}
+					</Text>
 
-						{item.price && (
-							<Text size="sm" fw={700} c="blue.6">
-								{formatPrice(item.price)}
-							</Text>
-						)}
-					</Stack>
+					<Badge size="xs" variant="light" color="blue">
+						{getNodePrimaryGrade(item) ?? "N/A"}
+					</Badge>
+
+					{item.price && (
+						<Text size="sm" fw={700} c="blue.6">
+							{formatPrice(item.price)}
+						</Text>
+					)}
 				</Stack>
 			</Card>
 		</Link>
