@@ -133,6 +133,20 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 		return [...selected, ...unselected];
 	}, [brands, filters.brands]);
 
+	// Sort grade hierarchy so selected families come first (for collapsed view)
+	const sortedGradeHierarchy = useMemo(() => {
+		if (filters.grades.length === 0) return gradeHierarchy;
+		const selected = gradeHierarchy.filter((entry) => {
+			const familyIds = getGradeFamilyIds(entry.root.id);
+			return familyIds.some((id) => filters.grades.includes(id));
+		});
+		const unselected = gradeHierarchy.filter((entry) => {
+			const familyIds = getGradeFamilyIds(entry.root.id);
+			return !familyIds.some((id) => filters.grades.includes(id));
+		});
+		return [...selected, ...unselected];
+	}, [gradeHierarchy, filters.grades]);
+
 	// Count items without categories/series/brands for "Other" option
 	const otherCounts = useMemo(() => ({
 		categories: items.filter((item) => item.categories.length === 0).length,
@@ -220,7 +234,7 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 						expanded={expandedSections.grades}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, grades: exp })); }}
 					>
-						{gradeHierarchy.flatMap((entry) => {
+						{(expandedSections.grades ? gradeHierarchy : sortedGradeHierarchy).flatMap((entry) => {
 							const { root, children } = entry;
 							const hasChildren = children.length > 0;
 							const isExpanded = expandedFamilies.has(root.id);
