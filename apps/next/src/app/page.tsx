@@ -1,7 +1,5 @@
-import { brands, categories as allCategoriesData, homepage, resolveCdnUrl, series } from "@hobby-ninja/data";
+import { brands, categories as allCategoriesData, homepage, series } from "@hobby-ninja/data";
 import {
-	Box,
-	Card,
 	Container,
 	Divider,
 	Group,
@@ -13,159 +11,8 @@ import { IconArrowNarrowRight } from "@tabler/icons-react";
 import Link from "next/link";
 
 import { CollapsibleGrid } from "@/components/collapsible-grid";
+import { EntityCard } from "@/components/entity-card";
 import { FeaturedItemsGrid } from "@/components/featured-items-grid";
-import { ImageWithFallback } from "@/components/image-with-fallback";
-
-// Constants
-const STYLE_NO_DECORATION_INHERIT = { textDecoration: "none", color: "inherit" };
-const STYLE_CURSOR_POINTER = { cursor: "pointer" };
-const STYLE_BORDER_RADIUS_TOP = "var(--mantine-radius-md) var(--mantine-radius-md) 0 0";
-const STYLE_IMAGE_CONTAINER = {
-	aspectRatio: "300 / 170",
-	borderRadius: STYLE_BORDER_RADIUS_TOP,
-	overflow: "hidden",
-	backgroundColor: "white",
-	display: "flex",
-	alignItems: "center",
-	justifyContent: "center",
-	position: "relative", // Required for next/image fill mode
-} as const;
-
-// Category Card Component
-interface CategoryCardProps {
-	category: { id: string; name?: string | { ja: string; en?: string }; itemIds?: string[]; image?: string };
-}
-
-function CategoryCard({ category }: CategoryCardProps): React.ReactElement {
-	const displayName = typeof category.name === "string" ? category.name : (category.name?.en ?? category.name?.ja ?? "Category");
-	const itemCount = category.itemIds?.length ?? 0;
-
-	return (
-		<Link href={`/categories/${category.id}`} style={STYLE_NO_DECORATION_INHERIT}>
-			<Card
-				shadow="sm"
-				padding={0}
-				radius="md"
-				withBorder={true}
-				h="100%"
-				style={STYLE_CURSOR_POINTER}
-			>
-				<div style={STYLE_IMAGE_CONTAINER}>
-					{category.image ? (
-						<ImageWithFallback
-							src={resolveCdnUrl(category.image)}
-							alt={displayName}
-							fallbackText={displayName}
-						/>
-					) : (
-						<Text size="xl" fw={600} c="dimmed" ta="center" p="md">
-							{displayName}
-						</Text>
-					)}
-				</div>
-				<Box p="sm">
-					<Text size="sm" fw={600} lineClamp={1}>
-						{displayName}
-					</Text>
-					<Text size="xs" c="dimmed">
-						{itemCount.toLocaleString()} items
-					</Text>
-				</Box>
-			</Card>
-		</Link>
-	);
-}
-
-// Brand Card Component
-interface BrandCardProps {
-	brand: { id: string; name?: string | { ja: string; en?: string }; itemIds?: string[]; image?: string };
-}
-
-function BrandCard({ brand }: BrandCardProps): React.ReactElement {
-	const displayName = typeof brand.name === "string" ? brand.name : (brand.name?.en ?? brand.name?.ja ?? "Brand");
-	const itemCount = brand.itemIds?.length ?? 0;
-
-	return (
-		<Link href={`/brands/${brand.id}`} style={STYLE_NO_DECORATION_INHERIT}>
-			<Card
-				shadow="sm"
-				padding={0}
-				radius="md"
-				withBorder={true}
-				h="100%"
-				style={STYLE_CURSOR_POINTER}
-			>
-				<div style={STYLE_IMAGE_CONTAINER}>
-					{brand.image ? (
-						<ImageWithFallback
-							src={resolveCdnUrl(brand.image)}
-							alt={displayName}
-							fallbackText={displayName}
-						/>
-					) : (
-						<Text size="xl" fw={600} c="dimmed" ta="center" p="md">
-							{displayName}
-						</Text>
-					)}
-				</div>
-				<Box p="sm">
-					<Text size="sm" fw={600} lineClamp={1}>
-						{displayName}
-					</Text>
-					<Text size="xs" c="dimmed">
-						{itemCount.toLocaleString()} items
-					</Text>
-				</Box>
-			</Card>
-		</Link>
-	);
-}
-
-
-// Series Card Component
-interface SeriesCardProps {
-	seriesItem: { id: string; name?: string | { ja: string; en?: string }; itemIds?: string[]; image?: string };
-}
-
-function SeriesCard({ seriesItem }: SeriesCardProps): React.ReactElement {
-	const displayName = typeof seriesItem.name === "string" ? seriesItem.name : (seriesItem.name?.en ?? seriesItem.name?.ja ?? "Series");
-	const itemCount = seriesItem.itemIds?.length ?? 0;
-
-	return (
-		<Link href={`/series/${seriesItem.id}`} style={STYLE_NO_DECORATION_INHERIT}>
-			<Card
-				shadow="sm"
-				padding={0}
-				radius="md"
-				withBorder={true}
-				h="100%"
-				style={STYLE_CURSOR_POINTER}
-			>
-				<div style={STYLE_IMAGE_CONTAINER}>
-					{seriesItem.image ? (
-						<ImageWithFallback
-							src={resolveCdnUrl(seriesItem.image)}
-							alt={displayName}
-							fallbackText={displayName}
-						/>
-					) : (
-						<Text size="xl" fw={600} c="dimmed" ta="center" p="md">
-							{displayName}
-						</Text>
-					)}
-				</div>
-				<Box p="sm">
-					<Text size="sm" fw={600} lineClamp={1}>
-						{displayName}
-					</Text>
-					<Text size="xs" c="dimmed">
-						{itemCount.toLocaleString()} items
-					</Text>
-				</Box>
-			</Card>
-		</Link>
-	);
-}
 
 // Convert release date to comparable number (YYYYMMDD)
 function releaseDateToNumber(releaseDate?: { year?: number | null; month?: number | null; day?: number | null }): number {
@@ -209,11 +56,11 @@ export default function HomePage() {
 						cols={{ base: 2, sm: 3, md: 4, lg: 6 }}
 						initialCount={6}
 						collapsedChildren={allCategories.slice(6).map((category) => (
-							<CategoryCard key={category.id} category={category} />
+							<EntityCard key={category.id} type="category" {...category} />
 						))}
 					>
 						{allCategories.slice(0, 6).map((category) => (
-							<CategoryCard key={category.id} category={category} />
+							<EntityCard key={category.id} type="category" {...category} />
 						))}
 					</CollapsibleGrid>
 
@@ -225,11 +72,11 @@ export default function HomePage() {
 						cols={{ base: 2, sm: 3, md: 4, lg: 6 }}
 						initialCount={6}
 						collapsedChildren={allSeries.slice(6).map((s) => (
-							<SeriesCard key={s.id} seriesItem={s} />
+							<EntityCard key={s.id} type="series" {...s} />
 						))}
 					>
 						{allSeries.slice(0, 6).map((s) => (
-							<SeriesCard key={s.id} seriesItem={s} />
+							<EntityCard key={s.id} type="series" {...s} />
 						))}
 					</CollapsibleGrid>
 
@@ -241,11 +88,11 @@ export default function HomePage() {
 						cols={{ base: 2, sm: 3, md: 4, lg: 6 }}
 						initialCount={6}
 						collapsedChildren={allBrands.slice(6).map((brand) => (
-							<BrandCard key={brand.id} brand={brand} />
+							<EntityCard key={brand.id} type="brand" {...brand} />
 						))}
 					>
 						{allBrands.slice(0, 6).map((brand) => (
-							<BrandCard key={brand.id} brand={brand} />
+							<EntityCard key={brand.id} type="brand" {...brand} />
 						))}
 					</CollapsibleGrid>
 				</Stack>
