@@ -1,16 +1,15 @@
 "use client";
 
-import { Box, Group, SimpleGrid, Stack, Text, Title, UnstyledButton } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { Box, Group, Stack, Text, Title, UnstyledButton } from "@mantine/core";
+import { useDisclosure, useElementSize } from "@mantine/hooks";
 import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
-import React from "react";
+import React, { useMemo } from "react";
 
 interface CollapsibleGridProps {
 	title: string;
 	children: React.ReactNode;
 	totalCount: number;
-	cols?: { base: number; sm: number; md: number; lg: number };
-	/** Width of each card when in horizontal scroll mode */
+	/** Width of each card */
 	cardWidth?: number;
 	/** Number of selected items (for filter mode) */
 	selectedCount?: number;
@@ -20,17 +19,29 @@ interface CollapsibleGridProps {
 	onExpandedChange?: (expanded: boolean) => void;
 }
 
+const GAP = 16; // var(--mantine-spacing-md) in pixels
+
 export function CollapsibleGrid({
 	title,
 	children,
 	totalCount,
-	cols = { base: 1, sm: 2, md: 3, lg: 4 },
-	cardWidth = 180,
+	cardWidth: minCardWidth = 180,
 	selectedCount = 0,
 	expanded: controlledExpanded,
 	onExpandedChange,
 }: CollapsibleGridProps): React.ReactElement {
 	const [internalExpanded, { toggle: internalToggle }] = useDisclosure(false);
+	const { ref: containerRef, width: containerWidth } = useElementSize();
+
+	// Calculate exact card width to fill container with no gap
+	const cardWidth = useMemo(() => {
+		if (containerWidth === 0) return minCardWidth;
+		// Calculate how many cards fit
+		const cols = Math.floor((containerWidth + GAP) / (minCardWidth + GAP));
+		if (cols <= 0) return minCardWidth;
+		// Calculate exact width to fill the space
+		return (containerWidth - (cols - 1) * GAP) / cols;
+	}, [containerWidth, minCardWidth]);
 
 	// Use controlled state if provided, otherwise use internal state
 	const expanded = controlledExpanded ?? internalExpanded;
@@ -65,38 +76,45 @@ export function CollapsibleGrid({
 				</Group>
 			</UnstyledButton>
 
-			{expanded ? (
-				// Expanded: show all items in a grid
-				<SimpleGrid cols={cols} spacing="md">
-					{children}
-				</SimpleGrid>
-			) : (
-				// Collapsed: horizontal scroll
-				<Box
-					style={{
-						overflowX: "auto",
-						overflowY: "hidden",
-						marginInline: "calc(-1 * var(--mantine-spacing-md))",
-						paddingInline: "var(--mantine-spacing-md)",
-						scrollbarWidth: "thin",
-					}}
-				>
+			<Box ref={containerRef}>
+				{expanded ? (
+					// Expanded: grid with calculated card width (fills container exactly)
 					<Box
 						style={{
-							display: "flex",
-							alignItems: "flex-start",
-							gap: "var(--mantine-spacing-md)",
-							paddingBottom: "var(--mantine-spacing-xs)",
+							display: "grid",
+							gridTemplateColumns: `repeat(auto-fill, ${cardWidth}px)`,
+							gap: GAP,
 						}}
 					>
-						{React.Children.map(children, (child, index) => (
-							<Box key={index} style={{ flexShrink: 0, width: cardWidth }}>
-								{child}
-							</Box>
-						))}
+						{children}
 					</Box>
-				</Box>
-			)}
+				) : (
+					// Collapsed: horizontal scroll with same card width
+					<Box
+						style={{
+							overflowX: "auto",
+							overflowY: "hidden",
+							marginInline: "calc(-1 * var(--mantine-spacing-md))",
+							paddingInline: "var(--mantine-spacing-md)",
+							scrollbarWidth: "thin",
+						}}
+					>
+						<Box
+							style={{
+								display: "flex",
+								gap: GAP,
+								paddingBottom: "var(--mantine-spacing-xs)",
+							}}
+						>
+							{React.Children.map(children, (child, index) => (
+								<Box key={index} style={{ flexShrink: 0, width: cardWidth }}>
+									{child}
+								</Box>
+							))}
+						</Box>
+					</Box>
+				)}
+			</Box>
 		</Stack>
 	);
 }
