@@ -61,17 +61,19 @@ export async function generateMetadata({ params }: ItemPageProps): Promise<Metad
 	if (price) parts.push(price);
 	const ogDescription = parts.length > 0 ? parts.join(" · ") : `Details about ${item.name}`;
 
+	const ogTitle = `${item.name} | Hobby.Ninja`;
+
 	return {
 		title: `${item.name} - hobby.ninja`,
 		description: item.description[0] ?? `Details about ${item.name} from the hobby.ninja database`,
 		openGraph: {
-			title: item.name,
+			title: ogTitle,
 			description: ogDescription,
 			type: "website",
 		},
 		twitter: {
 			card: "summary_large_image",
-			title: item.name,
+			title: ogTitle,
 			description: ogDescription,
 		},
 	};
