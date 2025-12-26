@@ -60,10 +60,12 @@ export function CollapsibleGrid({
 	// Use controlled state if provided, otherwise use internal state
 	const expanded = controlledExpanded ?? internalExpanded;
 
-	// Calculate collapsed height (one row of cards)
+	// Calculate collapsed height - enough rows to show all selected items (min 1 row)
 	const collapsedHeight = useMemo(() => {
-		return cardWidth * CARD_ASPECT_RATIO + 8; // card height + bottom padding
-	}, [cardWidth]);
+		const cardHeight = cardWidth * CARD_ASPECT_RATIO;
+		const rowsNeeded = selectedCount > 0 ? Math.ceil(selectedCount / numCols) : 1;
+		return rowsNeeded * cardHeight + (rowsNeeded - 1) * GAP + 8; // cards + gaps + bottom padding
+	}, [cardWidth, selectedCount, numCols]);
 
 	const toggle = () => {
 		const toExpanded = !expanded;
@@ -152,26 +154,22 @@ export function CollapsibleGrid({
 						})}
 					</Box>
 				) : (
-					// Collapsed: horizontal scroll with same card width
+					// Collapsed: grid clipped to show only rows needed for selected items
 					<Box
 						style={{
-							overflowX: "auto",
-							overflowY: "hidden",
-							marginInline: "calc(-1 * var(--mantine-spacing-md))",
-							paddingInline: "var(--mantine-spacing-md)",
-							scrollbarWidth: "thin",
+							height: collapsedHeight,
+							overflow: "hidden",
 						}}
 					>
 						<Box
 							style={{
-								display: "flex",
-								alignItems: "flex-start",
+								display: "grid",
+								gridTemplateColumns: `repeat(auto-fill, ${cardWidth}px)`,
 								gap: GAP,
-								paddingBottom: "var(--mantine-spacing-xs)",
 							}}
 						>
 							{React.Children.map(children, (child, index) => (
-								<Box key={index} style={{ flexShrink: 0, width: cardWidth }}>
+								<Box key={index}>
 									{child}
 								</Box>
 							))}
