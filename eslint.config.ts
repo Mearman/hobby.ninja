@@ -778,6 +778,8 @@ export default [
 			"**/app/**/not-found.tsx",
 			"**/app/**/template.tsx",
 			"**/app/**/default.tsx",
+			"**/app/**/sitemap.ts",
+			"**/app/**/robots.ts",
 		],
 		rules: {
 			"import/no-default-export": "off",
