@@ -94,9 +94,6 @@ const nextConfig: NextConfig = {
 	// Set trailing slash for consistent URLs
 	trailingSlash: true,
 
-	// Disable server-side features for static export
-	distDir: "out",
-
 	// Use src directory
 	pageExtensions: ["ts", "tsx", "js", "jsx"],
 
