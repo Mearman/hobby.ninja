@@ -33,13 +33,6 @@ export function generateStaticParams() {
 	return itemIds.map(id => ({ id }));
 }
 
-// Format price for OG description
-function formatPriceString(price?: { amount: number; currency: string }): string {
-	if (!price) return "";
-	const symbol = price.currency === "JPY" ? "¥" : price.currency;
-	return `${symbol}${price.amount.toLocaleString()}`;
-}
-
 // Generate metadata for each item with type-safe data
 export async function generateMetadata({ params }: ItemPageProps): Promise<Metadata> {
 	const { id } = await params;
@@ -61,8 +54,6 @@ export async function generateMetadata({ params }: ItemPageProps): Promise<Metad
 		if (brand) parts.push(brand);
 		if (item.primaryGrade) parts.push(item.primaryGrade);
 		if (item.scale) parts.push(item.scale);
-		const price = formatPriceString(item.price);
-		if (price) parts.push(price);
 		ogDescription = parts.length > 0 ? parts.join(" · ") : `Details about ${item.name}`;
 	}
 
