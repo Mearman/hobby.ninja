@@ -195,6 +195,7 @@ export function ExploreSection({ items, filters, totalCount }: ExploreSectionPro
 		items: sortedItems,
 		itemsPerPage: 24,
 		autoLoad: true,
+		rootMargin: "600px", // Load next batch well before reaching the bottom
 	});
 
 	const hasActiveFilters = filters && (
