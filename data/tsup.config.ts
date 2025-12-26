@@ -6,6 +6,7 @@ export default defineConfig({
 	entry: {
 		index: "lib/index.ts",
 		items: "lib/items.ts",
+		"item-page-data": "lib/item-page-data.ts",
 		brands: "lib/brands.ts",
 		series: "lib/series.ts",
 		categories: "lib/categories.ts",
