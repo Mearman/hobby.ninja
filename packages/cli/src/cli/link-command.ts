@@ -9,7 +9,7 @@
  * 4. Propagates transitive relationships (Manual ↔ P-Bandai US through Item hub)
  *
  * Relationship structure:
- *    - Items get: manualIds[], pbandaiUsIds[]
+ *    - Items get: manual (singular), pbandaiUsIds[]
  *    - Manuals get: itemIds[], pbandaiUsIds[] (transitive)
  *    - P-Bandai US get: linkedItemIds[], manualIds[] (transitive)
  *
@@ -66,13 +66,18 @@ interface ImageWithHash {
 	hash?: string;
 }
 
+interface ManualRef {
+	id: string;
+	url: string;
+}
+
 interface ItemData {
 	id: string;
 	images?: {
 		product: ImageWithHash[];
 		instructions: ImageWithHash[];
 	};
-	manualIds?: string[];
+	manual?: ManualRef; // Singular - each item has at most one manual
 	pbandaiUsIds?: string[]; // P-Bandai US item IDs (separate from future pbandaiJpIds)
 }
 
@@ -313,8 +318,8 @@ function linkManualsToItems(
 
 	if (options.verbose) console.log(`Linking ${manualFiles.length} manuals to items...`);
 
-	// Track item updates to batch them
-	const itemUpdates = new Map<string, Set<string>>(); // itemId -> Set<manualId>
+	// Track item updates to batch them (singular - each item has at most one manual)
+	const itemUpdates = new Map<string, ManualRef>(); // itemId -> ManualRef
 
 	for (const file of manualFiles) {
 		const jsonPath = path.join(MANUALS_DATA_DIR, file);
@@ -322,7 +327,7 @@ function linkManualsToItems(
 
 		try {
 			const content = readFileSync(jsonPath, "utf8");
-			const manual = JSON.parse(content) as ManualData;
+			const manual = JSON.parse(content) as ManualData & { sourceUrl?: string };
 
 			if (!manual.image?.hash) continue;
 
@@ -346,10 +351,13 @@ function linkManualsToItems(
 				}
 			}
 
-			// Track item update
-			const manualSet = itemUpdates.get(itemId) ?? new Set<string>();
-			manualSet.add(manualId);
-			itemUpdates.set(itemId, manualSet);
+			// Track item update (only if not already tracked - first match wins)
+			if (!itemUpdates.has(itemId)) {
+				// Use manual's id (canonical unpadded format) and sourceUrl
+				const canonicalId = manual.id;
+				const url = manual.sourceUrl ?? `https://manual.bandai-hobby.net/menus/detail/${canonicalId}/`;
+				itemUpdates.set(itemId, { id: canonicalId, url });
+			}
 
 			// Update image path to reference existing item image
 			if (manual.image.path !== existingPath) {
@@ -383,8 +391,8 @@ function linkManualsToItems(
 		}
 	}
 
-	// Apply item updates
-	for (const [itemId, manualIds] of itemUpdates) {
+	// Apply item updates (set singular manual property)
+	for (const [itemId, manualRef] of itemUpdates) {
 		const itemPath = path.join(ITEMS_DATA_DIR, `${itemId}.json`);
 		if (!existsSync(itemPath)) continue;
 
@@ -392,15 +400,17 @@ function linkManualsToItems(
 			const content = readFileSync(itemPath, "utf8");
 			const item = JSON.parse(content) as ItemData;
 
-			const existingManualIds = item.manualIds ?? [];
-			const newManualIds = [...manualIds].filter(id => !existingManualIds.includes(id));
-
-			if (newManualIds.length > 0) {
+			// Only set if item doesn't already have a manual (preserve existing)
+			if (!item.manual) {
 				if (!options.dryRun) {
-					item.manualIds = [...existingManualIds, ...newManualIds];
+					item.manual = manualRef;
 					writeFileSync(itemPath, JSON.stringify(item, null, "\t") + "\n");
 				}
-				itemToManual += newManualIds.length;
+				itemToManual++;
+
+				if (options.verbose) {
+					console.log(`  Item ${itemId} -> Manual ${manualRef.id}`);
+				}
 			}
 		} catch {
 			// Skip files that can't be parsed
@@ -544,7 +554,7 @@ function propagateTransitiveLinks(
 	let pbandaiUsToManual = 0;
 
 	// Step 1: Build item relationship map
-	const itemRelations = new Map<string, { manualIds: string[]; pbandaiUsIds: string[] }>();
+	const itemRelations = new Map<string, { manualId?: string; pbandaiUsIds: string[] }>();
 
 	const itemFiles = readdirSync(ITEMS_DATA_DIR)
 		.filter(f => f.endsWith(".json") && f.startsWith("01_"))
@@ -555,9 +565,9 @@ function propagateTransitiveLinks(
 			const content = readFileSync(path.join(ITEMS_DATA_DIR, file), "utf8");
 			const item = JSON.parse(content) as ItemData;
 
-			if (item.manualIds?.length || item.pbandaiUsIds?.length) {
+			if (item.manual?.id || item.pbandaiUsIds?.length) {
 				itemRelations.set(item.id, {
-					manualIds: item.manualIds ?? [],
+					manualId: item.manual?.id,
 					pbandaiUsIds: item.pbandaiUsIds ?? [],
 				});
 			}
@@ -635,14 +645,12 @@ function propagateTransitiveLinks(
 
 			if (!pbandai.linkedItemIds?.length) continue;
 
-			// Collect all manualIds from linked items
+			// Collect all manualIds from linked items (each item has at most one manual)
 			const allManualIds = new Set<string>();
 			for (const itemId of pbandai.linkedItemIds) {
 				const relations = itemRelations.get(itemId);
-				if (relations?.manualIds) {
-					for (const manualId of relations.manualIds) {
-						allManualIds.add(manualId);
-					}
+				if (relations?.manualId) {
+					allManualIds.add(relations.manualId);
 				}
 			}
 
