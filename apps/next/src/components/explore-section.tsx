@@ -98,15 +98,63 @@ function releaseDateToNumber(releaseDate?: { year?: number | null; month?: numbe
 	return year * 10_000 + month * 100 + day;
 }
 
-interface ExploreSectionProps {
-	items: Item[];
+export interface FilterState {
+	categories: string[];
+	series: string[];
+	brands: string[];
 }
 
-export function ExploreSection({ items }: ExploreSectionProps): React.ReactElement {
+interface ExploreSectionProps {
+	items: Item[];
+	filters?: FilterState;
+	totalCount?: number;
+}
+
+export function ExploreSection({ items, filters, totalCount }: ExploreSectionProps): React.ReactElement {
+	// Filter items based on selected filters
+	const filteredItems = useMemo(() => {
+		if (!filters) return items;
+
+		const hasActiveFilters =
+			filters.categories.length > 0 ||
+			filters.series.length > 0 ||
+			filters.brands.length > 0;
+
+		if (!hasActiveFilters) return items;
+
+		return items.filter((item) => {
+			// Check categories (OR within type)
+			if (filters.categories.length > 0) {
+				const itemCategoryIds = new Set(item.categories.map((c) => c.id));
+				if (!filters.categories.some((id) => itemCategoryIds.has(id))) {
+					return false;
+				}
+			}
+
+			// Check series (OR within type)
+			if (filters.series.length > 0) {
+				const itemSeriesIds = new Set(item.series.map((s) => s.id));
+				if (!filters.series.some((id) => itemSeriesIds.has(id))) {
+					return false;
+				}
+			}
+
+			// Check brands (OR within type)
+			if (filters.brands.length > 0) {
+				const itemBrandIds = new Set(item.brands.map((b) => b.id));
+				if (!filters.brands.some((id) => itemBrandIds.has(id))) {
+					return false;
+				}
+			}
+
+			return true;
+		});
+	}, [items, filters]);
+
 	// Sort items by release date (newest first)
 	const sortedItems = useMemo(
-		() => [...items].toSorted((a, b) => releaseDateToNumber(b.releaseDate) - releaseDateToNumber(a.releaseDate)),
-		[items],
+		() => [...filteredItems].toSorted((a, b) => releaseDateToNumber(b.releaseDate) - releaseDateToNumber(a.releaseDate)),
+		[filteredItems],
 	);
 
 	const { visibleItems, isLoading, hasMore, loadMore, lastItemRef } = useInfiniteScroll({
@@ -115,8 +163,19 @@ export function ExploreSection({ items }: ExploreSectionProps): React.ReactEleme
 		autoLoad: true,
 	});
 
+	const hasActiveFilters = filters && (
+		filters.categories.length > 0 ||
+		filters.series.length > 0 ||
+		filters.brands.length > 0
+	);
+
 	return (
 		<>
+			{hasActiveFilters && (
+				<Text size="sm" c="dimmed" mb="md">
+					Showing {filteredItems.length.toLocaleString()} of {(totalCount ?? items.length).toLocaleString()} items
+				</Text>
+			)}
 			<SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing="lg">
 				{visibleItems.map((item, index) => {
 					const isLast = index === visibleItems.length - 1;
