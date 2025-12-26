@@ -14,6 +14,10 @@ interface CollapsibleGridProps {
 	cardWidth?: number;
 	/** Number of selected items (for filter mode) */
 	selectedCount?: number;
+	/** Controlled expanded state */
+	expanded?: boolean;
+	/** Callback when expanded state changes */
+	onExpandedChange?: (expanded: boolean) => void;
 }
 
 export function CollapsibleGrid({
@@ -23,8 +27,20 @@ export function CollapsibleGrid({
 	cols = { base: 1, sm: 2, md: 3, lg: 4 },
 	cardWidth = 180,
 	selectedCount = 0,
+	expanded: controlledExpanded,
+	onExpandedChange,
 }: CollapsibleGridProps): React.ReactElement {
-	const [expanded, { toggle }] = useDisclosure(false);
+	const [internalExpanded, { toggle: internalToggle }] = useDisclosure(false);
+
+	// Use controlled state if provided, otherwise use internal state
+	const expanded = controlledExpanded ?? internalExpanded;
+	const toggle = () => {
+		if (onExpandedChange) {
+			onExpandedChange(!expanded);
+		} else {
+			internalToggle();
+		}
+	};
 
 	return (
 		<Stack gap="lg">
