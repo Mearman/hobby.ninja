@@ -249,15 +249,17 @@ export const ItemsIndexUpdater = {
 
 		const paddedId = padItemId(itemId);
 		const entry = itemsIndex.items[paddedId];
-		if (!entry?.japaneseSite) {
+		if (!entry) {
 			return { indexed: false };
 		}
 
+		// Item exists in index - may or may not have been page-checked yet
+		// (items from sitemap discovery won't have japaneseSite until first scrape)
 		return {
 			indexed: true,
-			hasPage: entry.japaneseSite.hasPage,
+			hasPage: entry.japaneseSite?.hasPage,
 			hasFile: itemFileExists(itemId),
-			productName: entry.japaneseSite.productName,
+			productName: entry.japaneseSite?.productName,
 		};
 	},
 
