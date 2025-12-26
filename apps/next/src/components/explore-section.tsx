@@ -1,6 +1,6 @@
 "use client";
 
-import { getNodeDisplayName, getNodeImages, getNodePrimaryGrade, resolveCdnUrl, type Item } from "@hobby-ninja/data";
+import { getNodeDisplayName, getNodeImages, getNodePrimaryGrade, itemHasGrade, resolveCdnUrl, type Item } from "@hobby-ninja/data";
 import { Box, Card, SimpleGrid, Stack, Text } from "@mantine/core";
 import Link from "next/link";
 import { useMemo, useState } from "react";
@@ -127,6 +127,7 @@ export interface FilterState {
 	categories: string[];
 	series: string[];
 	brands: string[];
+	grades: string[];
 }
 
 interface ExploreSectionProps {
@@ -143,7 +144,8 @@ export function ExploreSection({ items, filters, totalCount }: ExploreSectionPro
 		const hasActiveFilters =
 			filters.categories.length > 0 ||
 			filters.series.length > 0 ||
-			filters.brands.length > 0;
+			filters.brands.length > 0 ||
+			filters.grades.length > 0;
 
 		if (!hasActiveFilters) return items;
 
@@ -181,6 +183,23 @@ export function ExploreSection({ items, filters, totalCount }: ExploreSectionPro
 				}
 			}
 
+			// Check grades (OR within type)
+			if (filters.grades.length > 0) {
+				const hasOther = filters.grades.includes(OTHER_FILTER_ID);
+				const hasNoGrade = Object.keys(item.grades).length === 0;
+
+				if (hasNoGrade) {
+					if (!hasOther) return false;
+				} else {
+					// Check if item has any of the selected grades (root or specific variant)
+					const matchesGrade = filters.grades.some((selectedGradeId) => {
+						if (selectedGradeId === OTHER_FILTER_ID) return false;
+						return itemHasGrade(item, selectedGradeId);
+					});
+					if (!matchesGrade) return false;
+				}
+			}
+
 			return true;
 		});
 	}, [items, filters]);
@@ -201,7 +220,8 @@ export function ExploreSection({ items, filters, totalCount }: ExploreSectionPro
 	const hasActiveFilters = filters && (
 		filters.categories.length > 0 ||
 		filters.series.length > 0 ||
-		filters.brands.length > 0
+		filters.brands.length > 0 ||
+		filters.grades.length > 0
 	);
 
 	return (
