@@ -89,178 +89,157 @@ export default async function Image({ params }: Props) {
 					width: "100%",
 					height: "100%",
 					display: "flex",
-					flexDirection: "column",
 					backgroundColor: "#1a1b1e",
-					padding: 48,
 					fontFamily: "Noto Sans JP",
 				}}
 			>
-				{/* Header with branding */}
+				{/* Product image - full height left side */}
 				<div
 					style={{
+						width: 630,
+						height: "100%",
 						display: "flex",
 						alignItems: "center",
-						marginBottom: 32,
+						justifyContent: "center",
+						backgroundColor: "#25262b",
+						overflow: "hidden",
 					}}
 				>
+					{imageUrl ? (
+						<img
+							src={imageUrl}
+							alt={item.name}
+							style={{
+								width: "100%",
+								height: "100%",
+								objectFit: "cover",
+							}}
+						/>
+					) : (
+						<div
+							style={{
+								fontSize: 64,
+								color: "#5c5f66",
+							}}
+						>
+							?
+						</div>
+					)}
+				</div>
+
+				{/* Right content panel */}
+				<div
+					style={{
+						flex: 1,
+						display: "flex",
+						flexDirection: "column",
+						padding: 40,
+					}}
+				>
+					{/* Branding */}
 					<div
 						style={{
-							fontSize: 28,
+							fontSize: 24,
 							fontWeight: 700,
 							color: "#339af0",
+							marginBottom: 24,
 						}}
 					>
 						hobby.ninja
 					</div>
-				</div>
 
-				{/* Main content area */}
-				<div
-					style={{
-						display: "flex",
-						flex: 1,
-						gap: 48,
-					}}
-				>
-					{/* Product image */}
+					{/* Item name */}
 					<div
 						style={{
-							width: 400,
-							height: 400,
-							display: "flex",
-							alignItems: "center",
-							justifyContent: "center",
-							backgroundColor: "#25262b",
-							borderRadius: 16,
-							overflow: "hidden",
-						}}
-					>
-						{imageUrl ? (
-							<img
-								src={imageUrl}
-								alt={item.name}
-								style={{
-									maxWidth: "100%",
-									maxHeight: "100%",
-									objectFit: "contain",
-								}}
-							/>
-						) : (
-							<div
-								style={{
-									fontSize: 64,
-									color: "#5c5f66",
-								}}
-							>
-								?
-							</div>
-						)}
-					</div>
-
-					{/* Text content */}
-					<div
-						style={{
+							fontSize: 36,
+							fontWeight: 700,
+							color: "#fff",
+							lineHeight: 1.2,
 							flex: 1,
 							display: "flex",
-							flexDirection: "column",
-							justifyContent: "center",
-							gap: 16,
+							alignItems: "center",
 						}}
 					>
-						{/* Item name */}
-						<div
-							style={{
-								fontSize: 42,
-								fontWeight: 700,
-								color: "#fff",
-								lineHeight: 1.2,
-								overflow: "hidden",
-								display: "-webkit-box",
-								WebkitLineClamp: 3,
-								WebkitBoxOrient: "vertical",
-							}}
-						>
-							{item.name}
-						</div>
+						{item.name}
+					</div>
 
-						{/* Badges row */}
-						<div
-							style={{
-								display: "flex",
-								gap: 12,
-								flexWrap: "wrap",
-								marginTop: 8,
-							}}
-						>
-							{brand && (
-								<div
-									style={{
-										backgroundColor: "#1c7ed6",
-										color: "#fff",
-										padding: "8px 16px",
-										borderRadius: 8,
-										fontSize: 20,
-										fontWeight: 600,
-									}}
-								>
-									{brand}
-								</div>
-							)}
-							{grade && (
-								<div
-									style={{
-										backgroundColor: "#37b24d",
-										color: "#fff",
-										padding: "8px 16px",
-										borderRadius: 8,
-										fontSize: 20,
-										fontWeight: 600,
-									}}
-								>
-									{grade}
-								</div>
-							)}
-							{scale && (
-								<div
-									style={{
-										backgroundColor: "#f76707",
-										color: "#fff",
-										padding: "8px 16px",
-										borderRadius: 8,
-										fontSize: 20,
-										fontWeight: 600,
-									}}
-								>
-									{scale}
-								</div>
-							)}
-						</div>
-
-						{/* Price */}
-						{price && (
+					{/* Badges row */}
+					<div
+						style={{
+							display: "flex",
+							gap: 10,
+							flexWrap: "wrap",
+							marginTop: 16,
+						}}
+					>
+						{brand && (
 							<div
 								style={{
-									fontSize: 36,
-									fontWeight: 700,
-									color: "#339af0",
-									marginTop: 16,
+									backgroundColor: "#1c7ed6",
+									color: "#fff",
+									padding: "6px 12px",
+									borderRadius: 6,
+									fontSize: 16,
+									fontWeight: 600,
 								}}
 							>
-								{price}
+								{brand}
+							</div>
+						)}
+						{grade && (
+							<div
+								style={{
+									backgroundColor: "#37b24d",
+									color: "#fff",
+									padding: "6px 12px",
+									borderRadius: 6,
+									fontSize: 16,
+									fontWeight: 600,
+								}}
+							>
+								{grade}
+							</div>
+						)}
+						{scale && (
+							<div
+								style={{
+									backgroundColor: "#f76707",
+									color: "#fff",
+									padding: "6px 12px",
+									borderRadius: 6,
+									fontSize: 16,
+									fontWeight: 600,
+								}}
+							>
+								{scale}
 							</div>
 						)}
 					</div>
-				</div>
 
-				{/* Bottom accent bar */}
-				<div
-					style={{
-						height: 6,
-						backgroundColor: "#339af0",
-						borderRadius: 3,
-						marginTop: 32,
-					}}
-				/>
+					{/* Price */}
+					{price && (
+						<div
+							style={{
+								fontSize: 28,
+								fontWeight: 700,
+								color: "#339af0",
+								marginTop: 16,
+							}}
+						>
+							{price}
+						</div>
+					)}
+
+					{/* Bottom accent bar */}
+					<div
+						style={{
+							height: 4,
+							backgroundColor: "#339af0",
+							borderRadius: 2,
+							marginTop: 24,
+						}}
+					/>
+				</div>
 			</div>
 		),
 		{
