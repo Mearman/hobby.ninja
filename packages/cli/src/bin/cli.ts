@@ -227,6 +227,38 @@ program
 		}
 	});
 
+// Link command - establish relationships between items, manuals, and P-Bandai
+program
+	.command("link")
+	.description("Establish and propagate relationships between items, manuals, and P-Bandai using image hashes")
+	.option(DRY_RUN_OPTION, PREVIEW_CHANGES, false)
+	.option(VERBOSE_OPTION, VERBOSE_OUTPUT_DESC, false)
+	.option("--skip-hashes", "Skip hash population step", false)
+	.option("--skip-dedup", "Skip deduplication step", false)
+	.action(async (options: unknown) => {
+		try {
+			const { linkData } = await import("../cli/link-command.js");
+			const rawOptions = options as Record<string, unknown>;
+
+			await linkData({
+				dryRun: rawOptions["dryRun"] === true,
+				verbose: rawOptions["verbose"] === true,
+				skipHashes: rawOptions["skipHashes"] === true,
+				skipDedup: rawOptions["skipDedup"] === true,
+			});
+
+			process.exit(0);
+		} catch (error: unknown) {
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error(ERROR_PREFIX.replace("%s", "link"), errorMessage);
+			if ((options as Record<string, unknown>)[VERBOSE_STRING]) {
+				const errorStack = error instanceof Error ? error.stack : String(error);
+				console.error(errorStack);
+			}
+			process.exit(1);
+		}
+	});
+
 // Global lookup command implementation
 program
 	.command("global-lookup")

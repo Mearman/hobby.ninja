@@ -64,6 +64,13 @@
 				"cwd": "{workspaceRoot}"
 			}
 		},
+		"link": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "npx tsx packages/cli/src/bin/cli.ts link {args}",
+				"cwd": "{workspaceRoot}"
+			}
+		},
 		"check": {
 			"dependsOn": ["typecheck", "lint", "test", "build"],
 			"cache": true

@@ -39,6 +39,7 @@
 		"prepare": "husky install || true",
 		"scrape": "nx run cli:scrape",
 		"translate": "nx run cli:translate",
+		"link-data": "nx run cli:link",
 		"serve": "nx serve web",
 		"show:projects": "nx show projects",
 		"show:web": "nx show project web --web",
