@@ -98,6 +98,9 @@ function releaseDateToNumber(releaseDate?: { year?: number | null; month?: numbe
 	return year * 10_000 + month * 100 + day;
 }
 
+/** Special ID for filtering items with no category/series/brand */
+export const OTHER_FILTER_ID = "__other__";
+
 export interface FilterState {
 	categories: string[];
 	series: string[];
@@ -126,7 +129,10 @@ export function ExploreSection({ items, filters, totalCount }: ExploreSectionPro
 			// Check categories (OR within type)
 			if (filters.categories.length > 0) {
 				const itemCategoryIds = new Set(item.categories.map((c) => c.id));
-				if (!filters.categories.some((id) => itemCategoryIds.has(id))) {
+				const hasOther = filters.categories.includes(OTHER_FILTER_ID);
+				const hasNoCategories = item.categories.length === 0;
+				const matchesCategory = filters.categories.some((id) => id !== OTHER_FILTER_ID && itemCategoryIds.has(id));
+				if (!matchesCategory && !(hasOther && hasNoCategories)) {
 					return false;
 				}
 			}
@@ -134,7 +140,10 @@ export function ExploreSection({ items, filters, totalCount }: ExploreSectionPro
 			// Check series (OR within type)
 			if (filters.series.length > 0) {
 				const itemSeriesIds = new Set(item.series.map((s) => s.id));
-				if (!filters.series.some((id) => itemSeriesIds.has(id))) {
+				const hasOther = filters.series.includes(OTHER_FILTER_ID);
+				const hasNoSeries = item.series.length === 0;
+				const matchesSeries = filters.series.some((id) => id !== OTHER_FILTER_ID && itemSeriesIds.has(id));
+				if (!matchesSeries && !(hasOther && hasNoSeries)) {
 					return false;
 				}
 			}
@@ -142,7 +151,10 @@ export function ExploreSection({ items, filters, totalCount }: ExploreSectionPro
 			// Check brands (OR within type)
 			if (filters.brands.length > 0) {
 				const itemBrandIds = new Set(item.brands.map((b) => b.id));
-				if (!filters.brands.some((id) => itemBrandIds.has(id))) {
+				const hasOther = filters.brands.includes(OTHER_FILTER_ID);
+				const hasNoBrands = item.brands.length === 0;
+				const matchesBrand = filters.brands.some((id) => id !== OTHER_FILTER_ID && itemBrandIds.has(id));
+				if (!matchesBrand && !(hasOther && hasNoBrands)) {
 					return false;
 				}
 			}

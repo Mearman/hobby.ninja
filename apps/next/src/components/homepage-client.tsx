@@ -16,7 +16,7 @@ import { useCallback, useMemo, useState } from "react";
 
 import { CollapsibleGrid } from "@/components/collapsible-grid";
 import { EntityCard } from "@/components/entity-card";
-import { ExploreSection, type FilterState } from "@/components/explore-section";
+import { ExploreSection, OTHER_FILTER_ID, type FilterState } from "@/components/explore-section";
 
 interface HomepageClientProps {
 	categories: Category[];
@@ -85,6 +85,13 @@ export function HomepageClient({ categories, series, brands, items }: HomepageCl
 		return [...selected, ...unselected];
 	}, [brands, filters.brands]);
 
+	// Count items without categories/series/brands for "Other" option
+	const otherCounts = useMemo(() => ({
+		categories: items.filter((item) => item.categories.length === 0).length,
+		series: items.filter((item) => item.series.length === 0).length,
+		brands: items.filter((item) => item.brands.length === 0).length,
+	}), [items]);
+
 	return (
 		<>
 			{/* Categories, Series & Brands */}
@@ -92,7 +99,7 @@ export function HomepageClient({ categories, series, brands, items }: HomepageCl
 				<Stack gap="xl">
 					<CollapsibleGrid
 						title="Categories"
-						totalCount={categories.length}
+						totalCount={categories.length + 1}
 						cols={{ base: 2, sm: 3, md: 4, lg: 6 }}
 						selectedCount={filters.categories.length}
 						expanded={expandedSections.categories}
@@ -111,13 +118,23 @@ export function HomepageClient({ categories, series, brands, items }: HomepageCl
 								onToggle={() => { toggleFilter("categories", category.id); }}
 							/>
 						))}
+						<EntityCard
+							key={OTHER_FILTER_ID}
+							id={OTHER_FILTER_ID}
+							name="Other"
+							itemIds={Array.from({ length: otherCounts.categories }, () => "")}
+							type="category"
+							asFilter={true}
+							isSelected={filters.categories.includes(OTHER_FILTER_ID)}
+							onToggle={() => { toggleFilter("categories", OTHER_FILTER_ID); }}
+						/>
 					</CollapsibleGrid>
 
 					<Divider />
 
 					<CollapsibleGrid
 						title="Series"
-						totalCount={series.length}
+						totalCount={series.length + 1}
 						cols={{ base: 2, sm: 3, md: 4, lg: 6 }}
 						selectedCount={filters.series.length}
 						expanded={expandedSections.series}
@@ -136,13 +153,23 @@ export function HomepageClient({ categories, series, brands, items }: HomepageCl
 								onToggle={() => { toggleFilter("series", s.id); }}
 							/>
 						))}
+						<EntityCard
+							key={OTHER_FILTER_ID}
+							id={OTHER_FILTER_ID}
+							name="Other"
+							itemIds={Array.from({ length: otherCounts.series }, () => "")}
+							type="series"
+							asFilter={true}
+							isSelected={filters.series.includes(OTHER_FILTER_ID)}
+							onToggle={() => { toggleFilter("series", OTHER_FILTER_ID); }}
+						/>
 					</CollapsibleGrid>
 
 					<Divider />
 
 					<CollapsibleGrid
 						title="Brands"
-						totalCount={brands.length}
+						totalCount={brands.length + 1}
 						cols={{ base: 2, sm: 3, md: 4, lg: 6 }}
 						selectedCount={filters.brands.length}
 						expanded={expandedSections.brands}
@@ -161,6 +188,16 @@ export function HomepageClient({ categories, series, brands, items }: HomepageCl
 								onToggle={() => { toggleFilter("brands", brand.id); }}
 							/>
 						))}
+						<EntityCard
+							key={OTHER_FILTER_ID}
+							id={OTHER_FILTER_ID}
+							name="Other"
+							itemIds={Array.from({ length: otherCounts.brands }, () => "")}
+							type="brand"
+							asFilter={true}
+							isSelected={filters.brands.includes(OTHER_FILTER_ID)}
+							onToggle={() => { toggleFilter("brands", OTHER_FILTER_ID); }}
+						/>
 					</CollapsibleGrid>
 				</Stack>
 			</Container>
