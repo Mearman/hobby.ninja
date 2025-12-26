@@ -51,15 +51,20 @@ export async function generateMetadata({ params }: ItemPageProps): Promise<Metad
 		};
 	}
 
-	// Build description with brand, grade, scale, and price
-	const parts: string[] = [];
-	const brand = item.brands[0]?.name;
-	if (brand) parts.push(brand);
-	if (item.primaryGrade) parts.push(item.primaryGrade);
-	if (item.scale) parts.push(item.scale);
-	const price = formatPriceString(item.price);
-	if (price) parts.push(price);
-	const ogDescription = parts.length > 0 ? parts.join(" · ") : `Details about ${item.name}`;
+	// Use actual description if available, otherwise build from metadata
+	let ogDescription: string;
+	if (item.description.length > 0) {
+		ogDescription = item.description.join(" ");
+	} else {
+		const parts: string[] = [];
+		const brand = item.brands[0]?.name;
+		if (brand) parts.push(brand);
+		if (item.primaryGrade) parts.push(item.primaryGrade);
+		if (item.scale) parts.push(item.scale);
+		const price = formatPriceString(item.price);
+		if (price) parts.push(price);
+		ogDescription = parts.length > 0 ? parts.join(" · ") : `Details about ${item.name}`;
+	}
 
 	const ogTitle = `${item.name} | Hobby.Ninja`;
 
