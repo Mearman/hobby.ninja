@@ -163,7 +163,7 @@ function deduplicateManuals(
 			const content = readFileSync(jsonPath, "utf8");
 			const manual = JSON.parse(content) as {
 				image?: { src?: string; path?: string; hash?: string };
-				itemIds?: string[];
+				items?: Array<{ id: string; url: string }>;
 			};
 
 			if (!manual.image?.path || !manual.image.hash) {
@@ -192,11 +192,11 @@ function deduplicateManuals(
 					// Update JSON to reference existing path
 					manual.image.path = existingPath;
 
-					// Add item ID to itemIds array if found
+					// Add item to items array if found
 					if (itemId) {
-						const existingIds = manual.itemIds ?? [];
-						if (!existingIds.includes(itemId)) {
-							manual.itemIds = [...existingIds, itemId];
+						const existingItems = manual.items ?? [];
+						if (!existingItems.some(i => i.id === itemId)) {
+							manual.items = [...existingItems, { id: itemId, url: `https://bandai-hobby.net/item/${itemId}/` }];
 							stats.linksCreated++;
 						}
 					}
@@ -218,8 +218,8 @@ function deduplicateManuals(
 					}
 				} else if (itemId) {
 					// Dry run - still count potential links
-					const existingIds = manual.itemIds ?? [];
-					if (!existingIds.includes(itemId)) {
+					const existingItems = manual.items ?? [];
+					if (!existingItems.some(i => i.id === itemId)) {
 						stats.linksCreated++;
 					}
 				}
@@ -273,7 +273,7 @@ function deduplicatePBandai(
 			const item = JSON.parse(content) as {
 				id: string;
 				images: Array<{ order: number; src?: string; path: string; hash?: string }>;
-				linkedItemIds?: string[];
+				items?: Array<{ id: string; url: string }>;
 			};
 
 			let itemModified = false;
@@ -321,16 +321,18 @@ function deduplicatePBandai(
 				}
 			}
 
-			// Add discovered item IDs to linkedItemIds array
+			// Add discovered items to items array
 			if (discoveredItemIds.length > 0) {
-				const existingIds = item.linkedItemIds ?? [];
-				const newIds = discoveredItemIds.filter(id => !existingIds.includes(id));
+				const existingItems = item.items ?? [];
+				const existingIds = new Set(existingItems.map(i => i.id));
+				const newIds = discoveredItemIds.filter(id => !existingIds.has(id));
 
 				if (newIds.length > 0) {
 					if (options.dryRun) {
 						stats.linksCreated += newIds.length;
 					} else {
-						item.linkedItemIds = [...existingIds, ...newIds];
+						const newItemRefs = newIds.map(id => ({ id, url: `https://bandai-hobby.net/item/${id}/` }));
+						item.items = [...existingItems, ...newItemRefs];
 						itemModified = true;
 						stats.linksCreated += newIds.length;
 

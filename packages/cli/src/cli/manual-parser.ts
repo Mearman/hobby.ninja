@@ -45,6 +45,12 @@ export interface ManualSeries {
 	en?: string;
 }
 
+/** Entity reference with ID and URL */
+export interface EntityRef {
+	id: string;
+	url: string;
+}
+
 /** Parsed manual data */
 export interface ManualData {
 	id: string;
@@ -61,8 +67,10 @@ export interface ManualData {
 	series?: ManualSeries;
 	pdfs: ManualPdf[];
 	sourceUrl: string;
-	/** Linked product item IDs (discovered via shared image or manual linking) */
-	itemIds?: string[];
+	/** Linked product items (discovered via shared image or manual linking) */
+	items?: EntityRef[];
+	/** Linked P-Bandai US items (transitive through items) */
+	pbandaiUs?: EntityRef[];
 }
 
 /** Parse result */

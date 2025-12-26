@@ -194,10 +194,10 @@ export async function processManualComplete(
 
 		// Establish bidirectional link if item was discovered via shared image
 		if (discoveredItemId) {
-			// Add to itemIds array (preserving any existing links)
-			const existingIds = manualData.itemIds ?? [];
-			if (!existingIds.includes(discoveredItemId)) {
-				manualData.itemIds = [...existingIds, discoveredItemId];
+			// Add to items array (preserving any existing links)
+			const existingItems = manualData.items ?? [];
+			if (!existingItems.some(i => i.id === discoveredItemId)) {
+				manualData.items = [...existingItems, { id: discoveredItemId, url: `https://bandai-hobby.net/item/${discoveredItemId}/` }];
 			}
 			const msg = imageDeduplicated ? `Linked to item (via hash): ${discoveredItemId}` : `Linked to item: ${discoveredItemId}`;
 			console.log(`    ${msg}`);

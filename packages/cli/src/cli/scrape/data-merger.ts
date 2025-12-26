@@ -245,14 +245,37 @@ export async function mergeWithExistingManual(filePath: string, newData: ManualD
 		// Image should come from HTML parsing OR from files on disk.
 		// The downloadManualImage() function handles finding images on disk.
 
-		// Preserve itemIds from existing data and merge with new ones
-		if (existing["itemIds"] && Array.isArray(existing["itemIds"])) {
-			const existingItemIds = existing["itemIds"] as string[];
-			const newItemIds = newData.itemIds ?? [];
-			// Merge and dedupe
-			const mergedIds = [...new Set([...existingItemIds, ...newItemIds])];
-			if (mergedIds.length > 0) {
-				newData.itemIds = mergedIds;
+		// Preserve items from existing data and merge with new ones
+		if (existing["items"] && Array.isArray(existing["items"])) {
+			const existingItems = existing["items"] as Array<{ id: string; url: string }>;
+			const newItems = newData.items ?? [];
+			// Merge and dedupe by ID
+			const itemMap = new Map<string, { id: string; url: string }>();
+			for (const item of existingItems) {
+				itemMap.set(item.id, item);
+			}
+			for (const item of newItems) {
+				itemMap.set(item.id, item);
+			}
+			if (itemMap.size > 0) {
+				newData.items = [...itemMap.values()];
+			}
+		}
+
+		// Preserve pbandaiUs from existing data and merge with new ones
+		if (existing["pbandaiUs"] && Array.isArray(existing["pbandaiUs"])) {
+			const existingPBandai = existing["pbandaiUs"] as Array<{ id: string; url: string }>;
+			const newPBandai = newData.pbandaiUs ?? [];
+			// Merge and dedupe by ID
+			const pbandaiMap = new Map<string, { id: string; url: string }>();
+			for (const item of existingPBandai) {
+				pbandaiMap.set(item.id, item);
+			}
+			for (const item of newPBandai) {
+				pbandaiMap.set(item.id, item);
+			}
+			if (pbandaiMap.size > 0) {
+				newData.pbandaiUs = [...pbandaiMap.values()];
 			}
 		}
 
