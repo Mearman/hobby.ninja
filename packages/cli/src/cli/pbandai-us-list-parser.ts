@@ -19,13 +19,13 @@
  */
 
 import { existsSync } from "node:fs";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readdir, readFile, rmdir, unlink, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import { load, type CheerioAPI } from "cheerio";
 import { chromium, type Browser, type BrowserContext, type Page } from "playwright";
 
-import { computeBufferHash, writeJsonIfChanged } from "../utils/file-utils.js";
+import { computeBufferHash, normalizeImageExtension, writeJsonIfChanged } from "../utils/file-utils.js";
 import { ImageHashIndex } from "../utils/image-utils.js";
 
 /** Image entry matching main item structure */
@@ -703,16 +703,41 @@ export class PBandaiUSListParser {
 			const filePath = path.join(itemDir, filename);
 			const relativePath = `/pbandai/en/items/${item.id}/${filename}`;
 
-			// Skip if already exists locally
+			// Check if already exists locally
 			if (existsSync(filePath)) {
-				// Compute hash for existing file if we have an index
-				if (this.hashIndex && !img.hash) {
+				// Compute hash for existing file
+				if (this.hashIndex) {
 					try {
 						const buffer = await readFile(filePath);
-						img.hash = computeBufferHash(buffer);
+						const hash = computeBufferHash(buffer);
+						img.hash = hash;
+
+						// Check if this image is a duplicate of an item image
+						const existingPath = this.hashIndex.findByHash(hash);
+						if (existingPath && existingPath !== relativePath) {
+							// Use existing item path and delete the duplicate P-Bandai file
+							img.path = existingPath;
+							await unlink(filePath);
+							console.log(`    Deduplicated existing: ${item.id}/${filename} → ${existingPath}`);
+
+							// Try to remove empty directory
+							try {
+								const files = await readdir(itemDir);
+								if (files.length === 0) {
+									await rmdir(itemDir);
+								}
+							} catch {
+								// Directory doesn't exist or not empty
+							}
+							continue;
+						}
 					} catch {
-						// Ignore hash computation errors
+						// Ignore errors, keep existing file
 					}
+				}
+				// Add to index for cross-entity deduplication
+				if (img.hash) {
+					this.hashIndex?.add(img.hash, relativePath);
 				}
 				img.path = relativePath;
 				continue;
@@ -755,13 +780,14 @@ export class PBandaiUSListParser {
 	}
 
 	/**
-	 * Extract original filename from URL
+	 * Extract original filename from URL with normalized extension
 	 * e.g., https://p-bandai.com/files/.../geiWmsGA4QVN1phJ0mmy.webp -> geiWmsGA4QVN1phJ0mmy.webp
+	 * Also normalizes extensions: .JPEG -> .jpg, .PNG -> .png
 	 */
 	private getFilenameFromUrl(url: string): string {
 		const urlPath = new URL(url).pathname;
 		const filename = urlPath.split("/").pop();
-		return filename ?? "image.jpg";
+		return normalizeImageExtension(filename ?? "image.jpg");
 	}
 
 	/**

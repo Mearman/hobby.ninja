@@ -14,7 +14,7 @@ import path from "node:path";
 
 import type { Browser, BrowserContext, Page } from "playwright";
 
-import { writeJsonIfChanged } from "../utils/file-utils.js";
+import { normalizeImageExtension, writeJsonIfChanged } from "../utils/file-utils.js";
 
 import { ItemsIndexUpdater } from "./items-index-updater.js";
 
@@ -76,19 +76,19 @@ const HOURS_PER_DAY = 24; // Hours in a day
  * - Other URLs: uses basename as-is (e.g., 1000171644_1.jpg → 1000171644_1.jpg)
  */
 export function extractFilenameFromUrl(url: string): string {
-	const basename = url.split("/").pop()?.split("?")[0] ?? "";   
+	const basename = url.split("/").pop()?.split("?")[0] ?? "";
 
 	// For bandai-hobby.net URLs, strip patterns
 	if (url.includes("bandai-hobby.net")) {
 		// Handle ecms_ prefix: ecms_154_3389_o_<hash>.jpg -> 154_3389.jpg
 		if (basename.startsWith("ecms_")) {
-			return basename.replace(/^ecms_(\d+_\d+)_[a-z]_[a-z0-9]+\./, "$1.");
+			return normalizeImageExtension(basename.replace(/^ecms_(\d+_\d+)_[a-z]_[a-z0-9]+\./, "$1."));
 		}
 		// Handle standard pattern: 192_5060_s_<hash>.jpg -> 192_5060.jpg
-		return basename.replace(/_[a-z]_[a-z0-9]+\./, ".");
+		return normalizeImageExtension(basename.replace(/_[a-z]_[a-z0-9]+\./, "."));
 	}
 
-	return basename;
+	return normalizeImageExtension(basename);
 }
 
 /**

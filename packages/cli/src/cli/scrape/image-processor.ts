@@ -9,7 +9,7 @@ import path from "node:path";
 import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
 import type { BrowserContext } from "playwright";
 
-import { computeBufferHash, computeFileHash } from "../../utils/file-utils.js";
+import { computeBufferHash, computeFileHash, normalizeImageExtension } from "../../utils/file-utils.js";
 import { findExistingItemImage, ImageHashIndex } from "../../utils/image-utils.js";
 import type { Item, ItemImage } from "../bandai-catalog-parser.js";
 import { extractFilenameFromUrl } from "../download-command.js";
@@ -285,11 +285,11 @@ export function extractImageFilename(url: string): string {
 	const bandaiPattern = /^(\d+_\d+)_[a-z]_[a-z0-9]+$/i;
 	const match = bandaiPattern.test(nameWithoutExt) ? (bandaiPattern.exec(nameWithoutExt)) : null;
 	if (match?.[1]) {
-		return `${match[1]}${ext}`;
+		return normalizeImageExtension(`${match[1]}${ext}`);
 	}
 
-	// For other URLs (Akamai, etc.), use the original filename
-	return fullFilename;
+	// For other URLs (Akamai, etc.), use the original filename with normalized extension
+	return normalizeImageExtension(fullFilename);
 }
 
 /**
@@ -394,8 +394,30 @@ export async function downloadManualImage(
 	// Check if already downloaded to manuals (with correct filename)
 	try {
 		await fs.access(manualLocalPath);
+		const hash = await computeFileHash(manualLocalPath);
+
+		// Check hash index - item images may have different filenames (Akamai vs Bandai CDN)
+		const existingPath = hashIndex?.findByHash(hash);
+		if (existingPath && existingPath !== relativePath) {
+			// Found matching item image - use that instead of manual copy
+			manualData.image.path = existingPath;
+			manualData.image.hash = hash;
+			console.log(`    Deduplicated existing: ${cleanFilename} → ${existingPath}`);
+
+			// Clean up ALL manual images (including this one)
+			await cleanupManualImages(manualImageDir);
+
+			// Extract item ID from path
+			const itemIdMatch = /\/images\/items\/([^/]+)\//.test(existingPath)
+				? /\/images\/items\/([^/]+)\//.exec(existingPath)
+				: null;
+			return { itemId: itemIdMatch?.[1], deduplicated: true };
+		}
+
+		// No matching item - use manual path and add to index for cross-entity deduplication
 		manualData.image.path = relativePath;
-		manualData.image.hash = await computeFileHash(manualLocalPath);
+		manualData.image.hash = hash;
+		hashIndex?.add(hash, relativePath);
 		console.log(`    Image already exists: ${cleanFilename}`);
 		// Clean up any incorrectly named duplicates
 		await cleanupManualImages(manualImageDir, cleanFilename);
@@ -445,10 +467,11 @@ export async function downloadManualImage(
 			return { itemId: itemIdMatch?.[1], deduplicated: true };
 		}
 
-		// No duplicate found - save new image
+		// No duplicate found - save new image and add to index for cross-entity deduplication
 		await fs.writeFile(manualLocalPath, buffer);
 		manualData.image.path = relativePath;
 		manualData.image.hash = hash;
+		hashIndex?.add(hash, relativePath);
 		console.log(`    Downloaded image: ${cleanFilename}`);
 	} catch (error) {
 		const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
