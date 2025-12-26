@@ -12,7 +12,7 @@ import {
 } from "@mantine/core";
 import { IconArrowNarrowRight, IconX } from "@tabler/icons-react";
 import Link from "next/link";
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 
 import { CollapsibleGrid } from "@/components/collapsible-grid";
 import { EntityCard } from "@/components/entity-card";
@@ -56,6 +56,28 @@ export function HomepageClient({ categories, series, brands, items }: HomepageCl
 
 	const selectedCount = filters.categories.length + filters.series.length + filters.brands.length;
 
+	// Sort items with selected ones first (for collapsed horizontal scroll view)
+	const sortedCategories = useMemo(() => {
+		if (filters.categories.length === 0) return categories;
+		const selected = categories.filter((c) => filters.categories.includes(c.id));
+		const unselected = categories.filter((c) => !filters.categories.includes(c.id));
+		return [...selected, ...unselected];
+	}, [categories, filters.categories]);
+
+	const sortedSeries = useMemo(() => {
+		if (filters.series.length === 0) return series;
+		const selected = series.filter((s) => filters.series.includes(s.id));
+		const unselected = series.filter((s) => !filters.series.includes(s.id));
+		return [...selected, ...unselected];
+	}, [series, filters.series]);
+
+	const sortedBrands = useMemo(() => {
+		if (filters.brands.length === 0) return brands;
+		const selected = brands.filter((b) => filters.brands.includes(b.id));
+		const unselected = brands.filter((b) => !filters.brands.includes(b.id));
+		return [...selected, ...unselected];
+	}, [brands, filters.brands]);
+
 	return (
 		<>
 			{/* Categories, Series & Brands */}
@@ -63,25 +85,11 @@ export function HomepageClient({ categories, series, brands, items }: HomepageCl
 				<Stack gap="xl">
 					<CollapsibleGrid
 						title="Categories"
-						totalCount={categories.length}
+						totalCount={sortedCategories.length}
 						cols={{ base: 2, sm: 3, md: 4, lg: 6 }}
-						initialCount={6}
 						selectedCount={filters.categories.length}
-						collapsedChildren={categories.slice(6).map((category) => (
-							<EntityCard
-								key={category.id}
-								id={category.id}
-								name={category.name}
-								itemIds={category.itemIds}
-								image={category.image}
-								type="category"
-								asFilter={true}
-								isSelected={filters.categories.includes(category.id)}
-								onToggle={() => { toggleFilter("categories", category.id); }}
-							/>
-						))}
 					>
-						{categories.slice(0, 6).map((category) => (
+						{sortedCategories.map((category) => (
 							<EntityCard
 								key={category.id}
 								id={category.id}
@@ -100,25 +108,11 @@ export function HomepageClient({ categories, series, brands, items }: HomepageCl
 
 					<CollapsibleGrid
 						title="Series"
-						totalCount={series.length}
+						totalCount={sortedSeries.length}
 						cols={{ base: 2, sm: 3, md: 4, lg: 6 }}
-						initialCount={6}
 						selectedCount={filters.series.length}
-						collapsedChildren={series.slice(6).map((s) => (
-							<EntityCard
-								key={s.id}
-								id={s.id}
-								name={s.name}
-								itemIds={s.itemIds}
-								image={s.image}
-								type="series"
-								asFilter={true}
-								isSelected={filters.series.includes(s.id)}
-								onToggle={() => { toggleFilter("series", s.id); }}
-							/>
-						))}
 					>
-						{series.slice(0, 6).map((s) => (
+						{sortedSeries.map((s) => (
 							<EntityCard
 								key={s.id}
 								id={s.id}
@@ -137,25 +131,11 @@ export function HomepageClient({ categories, series, brands, items }: HomepageCl
 
 					<CollapsibleGrid
 						title="Brands"
-						totalCount={brands.length}
+						totalCount={sortedBrands.length}
 						cols={{ base: 2, sm: 3, md: 4, lg: 6 }}
-						initialCount={6}
 						selectedCount={filters.brands.length}
-						collapsedChildren={brands.slice(6).map((brand) => (
-							<EntityCard
-								key={brand.id}
-								id={brand.id}
-								name={brand.name}
-								itemIds={brand.itemIds}
-								image={brand.image}
-								type="brand"
-								asFilter={true}
-								isSelected={filters.brands.includes(brand.id)}
-								onToggle={() => { toggleFilter("brands", brand.id); }}
-							/>
-						))}
 					>
-						{brands.slice(0, 6).map((brand) => (
+						{sortedBrands.map((brand) => (
 							<EntityCard
 								key={brand.id}
 								id={brand.id}
