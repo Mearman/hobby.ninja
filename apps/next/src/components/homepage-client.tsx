@@ -19,6 +19,9 @@ import { CollapsibleGrid } from "@/components/collapsible-grid";
 import { EntityCard } from "@/components/entity-card";
 import { ExploreSection, OTHER_FILTER_ID, type FilterState } from "@/components/explore-section";
 
+// P-Bandai child brand IDs - these are hidden from the UI, replaced by "pb"
+const PBANDAI_CHILD_IDS = new Set(["pb_gunpla", "pb_hg", "pb_mg", "pb_rg", "pb_pg", "pb_bb", "pb_others", "pb_charapla"]);
+
 interface HomepageClientProps {
 	categories: Category[];
 	series: Series[];
@@ -48,6 +51,12 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 
 	// Get grade hierarchy for expand/collapse behavior
 	const gradeHierarchy = useMemo(() => getGradesHierarchy(), []);
+
+	// Filter out P-Bandai child brands (pb_*) - only show the parent "pb" brand
+	const displayBrands = useMemo(
+		() => brands.filter((b) => !PBANDAI_CHILD_IDS.has(b.id)),
+		[brands],
+	);
 
 	const toggleFilter = useCallback((type: keyof FilterState, id: string) => {
 		setFilters((prev) => {
@@ -144,11 +153,11 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 	}, [series, filters.series]);
 
 	const sortedBrands = useMemo(() => {
-		if (filters.brands.length === 0) return brands;
-		const selected = brands.filter((b) => filters.brands.includes(b.id));
-		const unselected = brands.filter((b) => !filters.brands.includes(b.id));
+		if (filters.brands.length === 0) return displayBrands;
+		const selected = displayBrands.filter((b) => filters.brands.includes(b.id));
+		const unselected = displayBrands.filter((b) => !filters.brands.includes(b.id));
 		return [...selected, ...unselected];
-	}, [brands, filters.brands]);
+	}, [displayBrands, filters.brands]);
 
 	// Sort grade hierarchy so selected families come first (for collapsed view)
 	const sortedGradeHierarchy = useMemo(() => {
@@ -343,13 +352,13 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 
 					<CollapsibleGrid
 						title="Brands"
-						totalCount={brands.length + 1}
+						totalCount={displayBrands.length + 1}
 						selectedCount={filters.brands.length}
 						expanded={expandedSections.brands}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, brands: exp })); }}
 						onClear={clearBrands}
 					>
-						{(expandedSections.brands ? brands : sortedBrands).map((brand) => (
+						{(expandedSections.brands ? displayBrands : sortedBrands).map((brand) => (
 							<EntityCard
 								key={brand.id}
 								id={brand.id}

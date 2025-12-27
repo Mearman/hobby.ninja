@@ -126,6 +126,9 @@ function releaseDateToNumber(releaseDate?: { year?: number | null; month?: numbe
 /** Special ID for filtering items with no category/series/brand */
 export const OTHER_FILTER_ID = "__other__";
 
+/** P-Bandai child brand IDs - "pb" filter matches any of these */
+const PBANDAI_CHILD_IDS = ["pb_gunpla", "pb_hg", "pb_mg", "pb_rg", "pb_pg", "pb_bb", "pb_others", "pb_charapla"];
+
 export interface FilterState {
 	categories: string[];
 	series: string[];
@@ -176,12 +179,22 @@ export function ExploreSection({ items, filters, totalCount }: ExploreSectionPro
 			}
 
 			// Check brands (OR within type)
+			// Special handling: "pb" filter matches any pb_* brand
 			if (filters.brands.length > 0) {
 				const itemBrandIds = new Set(item.brands.map((b) => b.id));
 				const hasOther = filters.brands.includes(OTHER_FILTER_ID);
 				const hasNoBrands = item.brands.length === 0;
-				const matchesBrand = filters.brands.some((id) => id !== OTHER_FILTER_ID && itemBrandIds.has(id));
-				if (!matchesBrand && !(hasOther && hasNoBrands)) {
+
+				// Check if "pb" is selected and item has any P-Bandai brand
+				const pbSelected = filters.brands.includes("pb");
+				const hasPbandaiBrand = pbSelected && PBANDAI_CHILD_IDS.some((id) => itemBrandIds.has(id));
+
+				// Check other selected brands (excluding "pb" and OTHER_FILTER_ID)
+				const matchesBrand = filters.brands.some((id) =>
+					id !== OTHER_FILTER_ID && id !== "pb" && itemBrandIds.has(id),
+				);
+
+				if (!matchesBrand && !hasPbandaiBrand && !(hasOther && hasNoBrands)) {
 					return false;
 				}
 			}
