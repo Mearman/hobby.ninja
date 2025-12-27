@@ -79,12 +79,14 @@ export function EntityCard({ id, name, itemIds, image, type, asFilter, isSelecte
 					/>
 				)}
 
-				{/* Hover overlay */}
+				{/* Hover overlay - only show title when there's an image (FittedText already shows title) */}
 				<Box
 					style={{
 						position: "absolute",
 						inset: 0,
-						background: "linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 100%)",
+						background: image
+							? "linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 100%)"
+							: "linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 40%)",
 						display: "flex",
 						flexDirection: "column",
 						justifyContent: "flex-end",
@@ -93,10 +95,12 @@ export function EntityCard({ id, name, itemIds, image, type, asFilter, isSelecte
 						transition: "opacity 0.2s ease-in-out",
 					}}
 				>
-					<Text size="sm" fw={600} c="white" lineClamp={1}>
-						{displayName}
-					</Text>
-					<Text size="xs" c="gray.3">
+					{image && (
+						<Text size="sm" fw={600} c="white" lineClamp={1}>
+							{displayName}
+						</Text>
+					)}
+					<Text size="xs" c={image ? "gray.3" : "white"}>
 						{itemCount.toLocaleString()} items
 					</Text>
 				</Box>
