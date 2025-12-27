@@ -234,7 +234,7 @@ export type Item = z.infer<typeof ItemSchema>;
  */
 export const BrandSchema = z.object({
 	id: z.string(),
-	type: z.literal("brand"),
+	type: z.union([z.literal("brand"), z.literal("grade")]),
 	name: z.union([z.string(), LocalizedStringSchema]),
 
 	// Computed by build process
@@ -247,11 +247,6 @@ export const BrandSchema = z.object({
 	website: z.string().url().optional(),
 	description: z.string().optional(),
 	itemCount: z.number().optional(),
-
-	// Grade relationship
-	gradeId: z.string().optional(),
-	grade: z.boolean().optional(),
-	isGrade: z.boolean().optional(),
 
 	// Source tracking
 	sourceUrl: z.string().url().optional(),
