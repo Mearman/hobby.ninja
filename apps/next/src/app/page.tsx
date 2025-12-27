@@ -22,7 +22,7 @@ export default function HomePage() {
 
 	// Get non-grade brands sorted by item count
 	const allBrands = Object.values(brands)
-		.filter((b) => b.itemIds.length > 0 && !b.isGrade)
+		.filter((b) => b.itemIds.length > 0 && b.type !== "grade")
 		.toSorted((a, b) => b.itemIds.length - a.itemIds.length);
 
 	return (

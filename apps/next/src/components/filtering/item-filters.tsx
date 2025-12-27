@@ -741,7 +741,7 @@ export function ItemFilters({
 		return availableOptions.brands.filter(brandId => {
 			const brand = getBrandById(brandId);
 			// Filter out if the brand is marked as a grade
-			return !brand?.isGrade;
+			return brand?.type !== "grade";
 		});
 	};
 
