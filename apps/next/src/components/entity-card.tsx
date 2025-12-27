@@ -35,12 +35,12 @@ export function EntityCard({ id, name, itemIds, image, type, asFilter, isSelecte
 			shadow="sm"
 			padding={0}
 			radius="md"
-			withBorder={true}
+			withBorder={false}
 			h="100%"
 			style={{
 				cursor: "pointer",
-				borderColor: isSelected ? "var(--mantine-color-blue-5)" : undefined,
-				borderWidth: isSelected ? 2 : undefined,
+				border: isSelected ? "2px solid var(--mantine-color-blue-5)" : "2px solid transparent",
+				borderRadius: "var(--mantine-radius-md)",
 			}}
 			onMouseEnter={() => { setIsHovered(true); }}
 			onMouseLeave={() => { setIsHovered(false); }}
@@ -48,7 +48,7 @@ export function EntityCard({ id, name, itemIds, image, type, asFilter, isSelecte
 			<Box
 				style={{
 					aspectRatio: "300 / 170",
-					borderRadius: "var(--mantine-radius-md)",
+					borderRadius: "calc(var(--mantine-radius-md) - 2px)",
 					overflow: "hidden",
 					backgroundColor: "white",
 					display: "flex",
