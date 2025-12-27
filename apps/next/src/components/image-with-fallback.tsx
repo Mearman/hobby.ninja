@@ -80,7 +80,7 @@ export function ImageWithFallback({
 			src={src}
 			alt={alt}
 			fill={true}
-			style={{ objectFit: "contain" }}
+			style={{ objectFit: "cover" }}
 			onError={() => { setHasError(true); }}
 		/>
 	);
