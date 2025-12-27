@@ -218,7 +218,7 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 
 	return (
 		<>
-			{/* Categories, Series & Brands */}
+			{/* Categories, Grades, Brands & Series */}
 			<Container size="xl" py="xl" w="100%">
 				<Stack gap="xl">
 					<CollapsibleGrid
@@ -251,41 +251,6 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 							asFilter={true}
 							isSelected={filters.categories.includes(OTHER_FILTER_ID)}
 							onToggle={() => { toggleFilter("categories", OTHER_FILTER_ID); }}
-						/>
-					</CollapsibleGrid>
-
-					<Divider />
-
-					<CollapsibleGrid
-						title="Series"
-						totalCount={series.length + 1}
-						selectedCount={filters.series.length}
-						onClear={clearSeries}
-						expanded={expandedSections.series}
-						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, series: exp })); }}
-					>
-						{(expandedSections.series ? series : sortedSeries).map((s) => (
-							<EntityCard
-								key={s.id}
-								id={s.id}
-								name={s.name}
-								itemIds={s.itemIds}
-								image={s.image}
-								type="series"
-								asFilter={true}
-								isSelected={filters.series.includes(s.id)}
-								onToggle={() => { toggleFilter("series", s.id); }}
-							/>
-						))}
-						<EntityCard
-							key={OTHER_FILTER_ID}
-							id={OTHER_FILTER_ID}
-							name="Other"
-							itemIds={Array.from({ length: otherCounts.series }, () => "")}
-							type="series"
-							asFilter={true}
-							isSelected={filters.series.includes(OTHER_FILTER_ID)}
-							onToggle={() => { toggleFilter("series", OTHER_FILTER_ID); }}
 						/>
 					</CollapsibleGrid>
 
@@ -406,6 +371,41 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 							asFilter={true}
 							isSelected={filters.brands.includes(OTHER_FILTER_ID)}
 							onToggle={() => { toggleFilter("brands", OTHER_FILTER_ID); }}
+						/>
+					</CollapsibleGrid>
+
+					<Divider />
+
+					<CollapsibleGrid
+						title="Series"
+						totalCount={series.length + 1}
+						selectedCount={filters.series.length}
+						onClear={clearSeries}
+						expanded={expandedSections.series}
+						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, series: exp })); }}
+					>
+						{(expandedSections.series ? series : sortedSeries).map((s) => (
+							<EntityCard
+								key={s.id}
+								id={s.id}
+								name={s.name}
+								itemIds={s.itemIds}
+								image={s.image}
+								type="series"
+								asFilter={true}
+								isSelected={filters.series.includes(s.id)}
+								onToggle={() => { toggleFilter("series", s.id); }}
+							/>
+						))}
+						<EntityCard
+							key={OTHER_FILTER_ID}
+							id={OTHER_FILTER_ID}
+							name="Other"
+							itemIds={Array.from({ length: otherCounts.series }, () => "")}
+							type="series"
+							asFilter={true}
+							isSelected={filters.series.includes(OTHER_FILTER_ID)}
+							onToggle={() => { toggleFilter("series", OTHER_FILTER_ID); }}
 						/>
 					</CollapsibleGrid>
 				</Stack>
