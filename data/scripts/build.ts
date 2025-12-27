@@ -707,6 +707,24 @@ async function main(): Promise<void> {
 	for (const [id, brand] of brands) {
 		brand.itemIds = brandItemIds.get(id) ?? [];
 	}
+
+	// Special handling: aggregate P-Bandai child brand itemIds into "pb" parent
+	const PBANDAI_CHILD_IDS = ["pb_gunpla", "pb_hg", "pb_mg", "pb_rg", "pb_pg", "pb_bb", "pb_others", "pb_charapla"];
+	const pbBrand = brands.get("pb");
+	if (pbBrand) {
+		const pbItemIds = new Set<string>();
+		for (const childId of PBANDAI_CHILD_IDS) {
+			const childBrand = brands.get(childId);
+			if (childBrand?.itemIds) {
+				for (const itemId of childBrand.itemIds) {
+					pbItemIds.add(itemId);
+				}
+			}
+		}
+		pbBrand.itemIds = [...pbItemIds];
+		console.log(`  P-Bandai (pb) aggregated: ${pbBrand.itemIds.length} items from ${PBANDAI_CHILD_IDS.length} child brands`);
+	}
+
 	for (const [id, s] of series) {
 		s.itemIds = seriesItemIds.get(id) ?? [];
 	}
