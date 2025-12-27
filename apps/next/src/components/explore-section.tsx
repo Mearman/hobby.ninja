@@ -1,25 +1,53 @@
 "use client";
 
-import { getNodeDisplayName, getNodeImages, getNodePrimaryGrade, itemHasGrade, resolveCdnUrl, type Item } from "@hobby-ninja/data";
-import { Box, Card, SimpleGrid, Stack, Text } from "@mantine/core";
+import { getBrandById, getGradeById, getNodeDisplayName, getNodeImages, getSeriesById, itemHasGrade, resolveCdnUrl, type Item } from "@hobby-ninja/data";
+import { Box, Card, Group, SimpleGrid, Stack, Text, Tooltip } from "@mantine/core";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
-import { Badge } from "@/components/ui/badge";
 import { InfiniteScrollLoader } from "@/components/ui/infinite-scroll-loader";
 import { useInfiniteScroll } from "@/hooks/use-infinite-scroll";
 
-function formatPrice(price?: { amount: number; currency: string }): string {
-	if (!price) return "";
-	return new Intl.NumberFormat("ja-JP", {
-		style: "currency",
-		currency: price.currency || "JPY",
-	}).format(price.amount);
+function formatReleaseDate(releaseDate?: { year?: number | null; month?: number | null; day?: number | null }): string {
+	if (!releaseDate?.year) return "";
+	const parts = [String(releaseDate.year)];
+	if (releaseDate.month) {
+		parts.push(String(releaseDate.month).padStart(2, "0"));
+		if (releaseDate.day) {
+			parts.push(String(releaseDate.day).padStart(2, "0"));
+		}
+	}
+	return parts.join("-");
 }
 
 // First page of images load eagerly to avoid lazy loading issues for visible items
 // Native loading="lazy" can fail for images already in viewport at render time
 const EAGER_LOAD_COUNT = 24;
+
+/** Small image badge for brand/series/grade - same 300:170 ratio as filter cards */
+function EntityBadge({ image, name }: { image: string; name: string }): React.ReactElement {
+	return (
+		<Tooltip label={name} withArrow={true}>
+			<Box
+				style={{
+					height: 20,
+					aspectRatio: "300 / 170",
+					borderRadius: 4,
+					overflow: "hidden",
+					backgroundColor: "white",
+					border: "1px solid var(--mantine-color-gray-3)",
+					flexShrink: 0,
+				}}
+			>
+				<img
+					src={resolveCdnUrl(image)}
+					alt={name}
+					style={{ width: "100%", height: "100%", objectFit: "contain" }}
+				/>
+			</Box>
+		</Tooltip>
+	);
+}
 
 function ItemCard({ item, index }: { item: Item; index: number }): React.ReactElement {
 	const [hasImageError, setHasImageError] = useState(false);
@@ -31,6 +59,15 @@ function ItemCard({ item, index }: { item: Item; index: number }): React.ReactEl
 	const images = getNodeImages(item);
 	const displayName = getNodeDisplayName(item);
 	const hasValidImage = !hasImageError && images.length > 0;
+
+	// Get entity images for badges
+	const gradeIds = Object.keys(item.grades);
+	const primaryGrade = gradeIds.length > 0 ? getGradeById(gradeIds[0]) : undefined;
+	// Find first non-grade brand (brands with type: "grade" are shown as grades, not brands)
+	const primaryBrand = item.brands
+		.map(b => getBrandById(b.id))
+		.find(b => b && b.type !== "grade");
+	const primarySeries = item.series.length > 0 ? getSeriesById(item.series[0].id) : undefined;
 
 	return (
 		<Link href={`/items/${item.id}`} style={{ textDecoration: "none", color: "inherit" }}>
@@ -99,15 +136,22 @@ function ItemCard({ item, index }: { item: Item; index: number }): React.ReactEl
 						{displayName}
 					</Text>
 
-					<Badge size="xs" variant="light" color="blue">
-						{getNodePrimaryGrade(item) ?? "N/A"}
-					</Badge>
-
-					{item.price && (
-						<Text size="sm" fw={700} c="blue.6">
-							{formatPrice(item.price)}
-						</Text>
-					)}
+					<Group gap={4} wrap="nowrap">
+						{primaryGrade?.image && (
+							<EntityBadge image={primaryGrade.image} name={typeof primaryGrade.name === "string" ? primaryGrade.name : primaryGrade.name.en ?? primaryGrade.name.ja} />
+						)}
+						{primaryBrand?.image && (
+							<EntityBadge image={primaryBrand.image} name={typeof primaryBrand.name === "string" ? primaryBrand.name : primaryBrand.name.en ?? primaryBrand.name.ja} />
+						)}
+						{primarySeries?.image && (
+							<EntityBadge image={primarySeries.image} name={typeof primarySeries.name === "string" ? primarySeries.name : primarySeries.name.en ?? primarySeries.name.ja} />
+						)}
+						{item.releaseDate?.year && (
+							<Text size="xs" c="dimmed" ml="auto">
+								{formatReleaseDate(item.releaseDate)}
+							</Text>
+						)}
+					</Group>
 				</Stack>
 			</Card>
 		</Link>
