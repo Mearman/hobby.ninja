@@ -1,7 +1,7 @@
 "use client";
 
 import type { Brand, Category, GradeData, Item, Series } from "@hobby-ninja/data";
-import { getGradeFamilyIds, getGradesHierarchy } from "@hobby-ninja/data";
+import { getGradeFamilyIds, getGradeFamilyItemIds, getGradesHierarchy } from "@hobby-ninja/data";
 import {
 	Button,
 	Container,
@@ -279,7 +279,7 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 										key={root.id}
 										id={root.id}
 										name={root.name}
-										itemIds={root.itemIds}
+										itemIds={hasChildren ? getGradeFamilyItemIds(root.id) : root.itemIds}
 										image={root.image}
 										type="grade"
 										asFilter={true}
@@ -302,7 +302,7 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 									key={root.id}
 									id={root.id}
 									name={root.name}
-									itemIds={root.itemIds}
+									itemIds={getGradeFamilyItemIds(root.id)}
 									image={root.image}
 									type="grade"
 									asFilter={true}

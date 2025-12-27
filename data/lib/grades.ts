@@ -141,4 +141,22 @@ export function getGradeFamilyIds(rootGradeId: string): string[] {
 	return [root.id, ...root.children];
 }
 
+/**
+ * Get all unique item IDs in a grade family (root + all children)
+ * Returns deduplicated array since items may have multiple grades in the same family
+ */
+export function getGradeFamilyItemIds(rootGradeId: string): string[] {
+	const familyGradeIds = getGradeFamilyIds(rootGradeId);
+	const allItemIds = new Set<string>();
+	for (const gradeId of familyGradeIds) {
+		const grade = gradesMap.get(gradeId);
+		if (grade) {
+			for (const itemId of grade.itemIds) {
+				allItemIds.add(itemId);
+			}
+		}
+	}
+	return Array.from(allItemIds);
+}
+
 export type { GradeData } from "./schemas.js";
