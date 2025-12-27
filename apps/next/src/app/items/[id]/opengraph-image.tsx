@@ -1,5 +1,9 @@
-import { getCdnUrls, getItemIds, getItemPageData } from "@hobby-ninja/data";
+import { getItemIds, getItemPageData } from "@hobby-ninja/data";
 import { ImageResponse } from "next/og";
+
+// jsDelivr serves GitHub content with proper content-type headers (image/jpeg vs text/plain)
+// Satori requires correct content-type to determine image dimensions
+const JSDELIVR_BASE = "https://cdn.jsdelivr.net/gh/Mearman/hobby.ninja@main/assets";
 
 // Required for static export
 export const dynamic = "force-static";
@@ -64,10 +68,10 @@ export default async function Image({ params }: Props) {
 		);
 	}
 
-	// Get the display image URL - use absolute URL for OG image (fallback is always GitHub raw)
+	// Get the display image URL using jsDelivr (serves proper content-type headers)
 	// item.images contains paths like "/images/items/01_0001/153_1.jpg"
 	const firstImage = item.images[0];
-	const imageUrl = firstImage ? getCdnUrls(firstImage).fallback : null;
+	const imageUrl = firstImage ? `${JSDELIVR_BASE}${firstImage}` : null;
 	const brand = item.brands[0]?.name;
 	const grade = item.primaryGrade;
 	const scale = item.scale;
