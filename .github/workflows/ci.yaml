@@ -81,7 +81,7 @@ jobs:
           cache: "pnpm"
 
       - name: Restore Nx cache
-        uses: actions/cache@v4
+        uses: actions/cache/restore@v4
         with:
           path: .nx/cache
           key: nx-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ github.sha }}
@@ -90,7 +90,7 @@ jobs:
             nx-${{ runner.os }}-
 
       - name: Restore Next.js build cache
-        uses: actions/cache@v4
+        uses: actions/cache/restore@v4
         with:
           path: apps/next/.next/cache
           key: nextjs-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ hashFiles('apps/next/**/*.ts', 'apps/next/**/*.tsx') }}
@@ -130,6 +130,7 @@ jobs:
           path: apps/next/out
 
       - name: Clean build output for cache save
+        if: always()
         run: |
           echo "=== Cleaning build output to free disk space ==="
           # Keep .next/cache for Next.js build caching, remove the rest
@@ -139,6 +140,20 @@ jobs:
           du -sh apps/next/.next/cache 2>/dev/null || echo "Cache directory empty or missing"
           ls -la apps/next/.next/cache 2>/dev/null || true
           df -h /
+
+      - name: Save Nx cache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .nx/cache
+          key: nx-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ github.sha }}
+
+      - name: Save Next.js build cache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: apps/next/.next/cache
+          key: nextjs-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ hashFiles('apps/next/**/*.ts', 'apps/next/**/*.tsx') }}
 
   deploy:
     name: Deploy
