@@ -101,6 +101,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Ensure Next.js cache directory exists
+        run: mkdir -p apps/next/.next/cache
+
       - name: Type check
         run: pnpm nx typecheck next
 
