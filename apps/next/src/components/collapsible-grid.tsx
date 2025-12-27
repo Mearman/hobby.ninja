@@ -100,43 +100,40 @@ export function CollapsibleGrid({
 	return (
 		<Stack gap="lg">
 			<Group justify="space-between" align="center">
-				<UnstyledButton onClick={toggle} style={{ cursor: "pointer", flex: 1 }}>
-					<Group gap="sm">
+				<Group gap="sm">
+					<UnstyledButton onClick={toggle} style={{ cursor: "pointer" }}>
 						<Title order={2} size="h2" fw={600}>
 							{title}
 						</Title>
-						{selectedCount > 0 && (
+					</UnstyledButton>
+					{selectedCount > 0 && (
+						<Group gap={4}>
 							<Text size="sm" c="blue" fw={500}>
 								({selectedCount} selected)
 							</Text>
-						)}
+							{onClear && (
+								<Tooltip label={`Clear ${title.toLowerCase()}`}>
+									<ActionIcon
+										variant="subtle"
+										color="gray"
+										size="xs"
+										onClick={onClear}
+									>
+										<IconX size={12} />
+									</ActionIcon>
+								</Tooltip>
+							)}
+						</Group>
+					)}
+				</Group>
+				<UnstyledButton onClick={toggle} style={{ cursor: "pointer" }}>
+					<Group gap="xs" c="blue">
+						<Text size="sm" fw={500}>
+							{expanded ? "Collapse" : `Show all ${totalCount}`}
+						</Text>
+						{expanded ? <IconChevronUp size={16} /> : <IconChevronDown size={16} />}
 					</Group>
 				</UnstyledButton>
-				<Group gap="xs">
-					{selectedCount > 0 && onClear && (
-						<Tooltip label={`Clear ${title.toLowerCase()}`}>
-							<ActionIcon
-								variant="subtle"
-								color="gray"
-								size="sm"
-								onClick={(e) => {
-									e.stopPropagation();
-									onClear();
-								}}
-							>
-								<IconX size={14} />
-							</ActionIcon>
-						</Tooltip>
-					)}
-					<UnstyledButton onClick={toggle} style={{ cursor: "pointer" }}>
-						<Group gap="xs" c="blue">
-							<Text size="sm" fw={500}>
-								{expanded ? "Collapse" : `Show all ${totalCount}`}
-							</Text>
-							{expanded ? <IconChevronUp size={16} /> : <IconChevronDown size={16} />}
-						</Group>
-					</UnstyledButton>
-				</Group>
 			</Group>
 
 			<Box
