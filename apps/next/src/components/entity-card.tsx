@@ -96,7 +96,7 @@ export function EntityCard({ id, name, itemIds, image, type, asFilter, isSelecte
 					}}
 				>
 					{image && (
-						<Text size="sm" fw={600} c="white" lineClamp={1}>
+						<Text size="sm" fw={600} c="white">
 							{displayName}
 						</Text>
 					)}
