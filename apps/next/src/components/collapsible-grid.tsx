@@ -63,16 +63,14 @@ export function CollapsibleGrid({
 	// Use controlled state if provided, otherwise use internal state
 	const expanded = controlledExpanded ?? internalExpanded;
 
-	// Calculate collapsed height - enough rows to show all selected items (min 1 row)
-	const rowsInCollapsedView = selectedCount > 0 ? Math.ceil(selectedCount / numCols) : 1;
+	// Calculate collapsed height (single row for horizontal scroll)
 	const collapsedHeight = useMemo(() => {
 		const cardHeight = cardWidth * CARD_ASPECT_RATIO;
-		return rowsInCollapsedView * cardHeight + (rowsInCollapsedView - 1) * GAP + 8; // cards + gaps + bottom padding
-	}, [cardWidth, rowsInCollapsedView]);
+		return cardHeight + 8; // one card height + padding for scrollbar
+	}, [cardWidth]);
 
-	// Determine if expand button should be shown (more items than fit in collapsed view)
-	const itemsInCollapsedView = numCols * rowsInCollapsedView;
-	const showExpandButton = totalCount > itemsInCollapsedView;
+	// Show expand button if more items than fit in one row
+	const showExpandButton = totalCount > numCols;
 
 	const toggle = () => {
 		const toExpanded = !expanded;
@@ -185,26 +183,20 @@ export function CollapsibleGrid({
 						})}
 					</Box>
 				) : (
-					// Collapsed: grid clipped to show only rows needed for selected items
+					// Collapsed: horizontal scroll row
 					<Box
 						style={{
-							height: collapsedHeight,
-							overflow: "hidden",
+							display: "flex",
+							gap: GAP,
+							overflowX: "auto",
+							paddingBottom: 8,
 						}}
 					>
-						<Box
-							style={{
-								display: "grid",
-								gridTemplateColumns: `repeat(auto-fill, ${cardWidth}px)`,
-								gap: GAP,
-							}}
-						>
-							{React.Children.map(children, (child, index) => (
-								<Box key={index}>
-									{child}
-								</Box>
-							))}
-						</Box>
+						{React.Children.map(children, (child, index) => (
+							<Box key={index} style={{ flexShrink: 0, width: cardWidth }}>
+								{child}
+							</Box>
+						))}
 					</Box>
 				)}
 			</Box>
