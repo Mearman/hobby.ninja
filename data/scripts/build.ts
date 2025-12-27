@@ -197,7 +197,7 @@ interface HomepageData {
 
 
 // Grade definitions with hierarchy and sort order
-// Main Gunpla progression: EG → HG → FM → RG → MG → PG
+// Main Gunpla progression: EG → HG → RG → FM → MG → PG
 // Other Gunpla grades: SD, Mega Size, RE/100
 // Non-Gunpla: Figure-rise
 const GRADE_DEFINITIONS: Record<string, { name: string; parent: string | null; children: string[]; sortOrder: number }> = {
@@ -208,8 +208,8 @@ const GRADE_DEFINITIONS: Record<string, { name: string; parent: string | null; c
 	"hg-ce": { name: "HG Cosmic Era", parent: "hg", children: [], sortOrder: 220 },
 	"hg-ac": { name: "HG After Colony", parent: "hg", children: [], sortOrder: 230 },
 	"hg-amplified": { name: "HG Amplified", parent: "hg", children: [], sortOrder: 240 },
-	"fm": { name: "Full Mechanics", parent: null, children: [], sortOrder: 300 },
-	"rg": { name: "Real Grade", parent: null, children: [], sortOrder: 400 },
+	"rg": { name: "Real Grade", parent: null, children: [], sortOrder: 300 },
+	"fm": { name: "Full Mechanics", parent: null, children: [], sortOrder: 400 },
 	"mg": { name: "Master Grade", parent: null, children: ["mgsd", "mg-ver-ka", "mgex"], sortOrder: 500 },
 	"mgsd": { name: "Master Grade SD", parent: "mg", children: [], sortOrder: 510 },
 	"mg-ver-ka": { name: "MG Ver.Ka", parent: "mg", children: [], sortOrder: 520 },
