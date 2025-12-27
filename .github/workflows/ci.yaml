@@ -43,9 +43,9 @@ jobs:
           df -h /
           echo ""
           echo "=== Removing unnecessary files ==="
-          # Remove Android SDK
+          # Remove Android SDK (~14GB)
           sudo rm -rf /usr/local/lib/android || true
-          # Remove .NET
+          # Remove .NET (~3GB)
           sudo rm -rf /usr/share/dotnet || true
           # Remove Haskell
           sudo rm -rf /opt/ghc || true
@@ -54,12 +54,23 @@ jobs:
           sudo rm -rf /usr/share/swift || true
           # Remove Go
           sudo rm -rf /usr/local/go || true
-          # Remove CodeQL
+          # Remove CodeQL (~5GB)
           sudo rm -rf /opt/hostedtoolcache/CodeQL || true
           # Remove large tool caches
           sudo rm -rf /opt/hostedtoolcache/Java* || true
           sudo rm -rf /opt/hostedtoolcache/PyPy* || true
           sudo rm -rf /opt/hostedtoolcache/Ruby* || true
+          sudo rm -rf /opt/hostedtoolcache/go || true
+          # Remove additional large directories
+          sudo rm -rf /usr/share/miniconda || true
+          sudo rm -rf /usr/local/share/powershell || true
+          sudo rm -rf /usr/local/share/chromium || true
+          sudo rm -rf /usr/share/az* || true
+          sudo rm -rf /opt/az || true
+          sudo rm -rf /opt/microsoft || true
+          sudo rm -rf /usr/local/julia* || true
+          # Clean Docker images
+          docker system prune -af || true
           # Clean apt cache
           sudo apt-get clean || true
           # Remove swap
