@@ -66,6 +66,23 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 		setFilters({ categories: [], series: [], brands: [], grades: [] });
 	}, []);
 
+	const clearCategories = useCallback(() => {
+		setFilters((prev) => ({ ...prev, categories: [] }));
+	}, []);
+
+	const clearSeries = useCallback(() => {
+		setFilters((prev) => ({ ...prev, series: [] }));
+	}, []);
+
+	const clearBrands = useCallback(() => {
+		setFilters((prev) => ({ ...prev, brands: [] }));
+	}, []);
+
+	const clearGrades = useCallback(() => {
+		setFilters((prev) => ({ ...prev, grades: [] }));
+		setExpandedFamilies(new Set());
+	}, []);
+
 	// Toggle all grades in a family (select/deselect entire family)
 	// Also handles auto-expand when selecting, auto-collapse when deselecting
 	const toggleGradeFamily = useCallback((rootId: string) => {
@@ -210,6 +227,7 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 						selectedCount={filters.categories.length}
 						expanded={expandedSections.categories}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, categories: exp })); }}
+						onClear={clearCategories}
 					>
 						{(expandedSections.categories ? categories : sortedCategories).map((category) => (
 							<EntityCard
@@ -242,6 +260,7 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 						title="Series"
 						totalCount={series.length + 1}
 						selectedCount={filters.series.length}
+						onClear={clearSeries}
 						expanded={expandedSections.series}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, series: exp })); }}
 					>
@@ -278,6 +297,7 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 						selectedCount={visibleSelectedGradeCount}
 						expanded={expandedSections.grades}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, grades: exp })); }}
+						onClear={clearGrades}
 					>
 						{(expandedSections.grades ? gradeHierarchy : sortedGradeHierarchy).flatMap((entry) => {
 							const { root, children } = entry;
@@ -362,6 +382,7 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 						selectedCount={filters.brands.length}
 						expanded={expandedSections.brands}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, brands: exp })); }}
+						onClear={clearBrands}
 					>
 						{(expandedSections.brands ? brands : sortedBrands).map((brand) => (
 							<EntityCard

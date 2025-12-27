@@ -1,8 +1,8 @@
 "use client";
 
-import { Box, Group, Stack, Text, Title, UnstyledButton } from "@mantine/core";
+import { ActionIcon, Box, Group, Stack, Text, Title, Tooltip, UnstyledButton } from "@mantine/core";
 import { useDisclosure, useElementSize } from "@mantine/hooks";
-import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
+import { IconChevronDown, IconChevronUp, IconX } from "@tabler/icons-react";
 import React, { useMemo, useRef, useState } from "react";
 
 interface CollapsibleGridProps {
@@ -17,6 +17,8 @@ interface CollapsibleGridProps {
 	expanded?: boolean;
 	/** Callback when expanded state changes */
 	onExpandedChange?: (expanded: boolean) => void;
+	/** Callback to clear selections for this filter type */
+	onClear?: () => void;
 }
 
 const GAP = 16; // var(--mantine-spacing-md) in pixels
@@ -32,6 +34,7 @@ export function CollapsibleGrid({
 	selectedCount = 0,
 	expanded: controlledExpanded,
 	onExpandedChange,
+	onClear,
 }: CollapsibleGridProps): React.ReactElement {
 	const [internalExpanded, { toggle: internalToggle }] = useDisclosure(false);
 	const { ref: containerRef, width: containerWidth } = useElementSize();
@@ -96,8 +99,8 @@ export function CollapsibleGrid({
 
 	return (
 		<Stack gap="lg">
-			<UnstyledButton onClick={toggle} style={{ cursor: "pointer" }}>
-				<Group justify="space-between" align="center">
+			<Group justify="space-between" align="center">
+				<UnstyledButton onClick={toggle} style={{ cursor: "pointer", flex: 1 }}>
 					<Group gap="sm">
 						<Title order={2} size="h2" fw={600}>
 							{title}
@@ -108,14 +111,33 @@ export function CollapsibleGrid({
 							</Text>
 						)}
 					</Group>
-					<Group gap="xs" c="blue">
-						<Text size="sm" fw={500}>
-							{expanded ? "Collapse" : `Show all ${totalCount}`}
-						</Text>
-						{expanded ? <IconChevronUp size={16} /> : <IconChevronDown size={16} />}
-					</Group>
+				</UnstyledButton>
+				<Group gap="xs">
+					{selectedCount > 0 && onClear && (
+						<Tooltip label={`Clear ${title.toLowerCase()}`}>
+							<ActionIcon
+								variant="subtle"
+								color="gray"
+								size="sm"
+								onClick={(e) => {
+									e.stopPropagation();
+									onClear();
+								}}
+							>
+								<IconX size={14} />
+							</ActionIcon>
+						</Tooltip>
+					)}
+					<UnstyledButton onClick={toggle} style={{ cursor: "pointer" }}>
+						<Group gap="xs" c="blue">
+							<Text size="sm" fw={500}>
+								{expanded ? "Collapse" : `Show all ${totalCount}`}
+							</Text>
+							{expanded ? <IconChevronUp size={16} /> : <IconChevronDown size={16} />}
+						</Group>
+					</UnstyledButton>
 				</Group>
-			</UnstyledButton>
+			</Group>
 
 			<Box
 				ref={containerRef}
