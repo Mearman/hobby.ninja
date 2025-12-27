@@ -5,6 +5,30 @@ import { ImageResponse } from "next/og";
 // Satori requires correct content-type to determine image dimensions
 const JSDELIVR_BASE = "https://cdn.jsdelivr.net/gh/Mearman/hobby.ninja@main/assets";
 
+// Validate image by checking magic bytes (some "images" are actually 404 HTML pages)
+async function validateImageUrl(url: string): Promise<string | null> {
+	try {
+		const response = await fetch(url);
+		if (!response.ok) return null;
+
+		const buffer = await response.arrayBuffer();
+		const bytes = new Uint8Array(buffer);
+
+		// Check magic bytes for JPEG (FFD8FF) or PNG (89504E47)
+		const isJpeg = bytes[0] === 0xFF && bytes[1] === 0xD8 && bytes[2] === 0xFF;
+		const isPng = bytes[0] === 0x89 && bytes[1] === 0x50 && bytes[2] === 0x4E && bytes[3] === 0x47;
+
+		if (!isJpeg && !isPng) return null;
+
+		// Convert to base64 data URL for Satori
+		const base64 = Buffer.from(buffer).toString("base64");
+		const mimeType = isJpeg ? "image/jpeg" : "image/png";
+		return `data:${mimeType};base64,${base64}`;
+	} catch {
+		return null;
+	}
+}
+
 // Required for static export
 export const dynamic = "force-static";
 
@@ -70,8 +94,10 @@ export default async function Image({ params }: Props) {
 
 	// Get the display image URL using jsDelivr (serves proper content-type headers)
 	// item.images contains paths like "/images/items/01_0001/153_1.jpg"
+	// Validate the image is actually an image (some are 404 HTML pages saved as .jpg)
 	const firstImage = item.images[0];
-	const imageUrl = firstImage ? `${JSDELIVR_BASE}${firstImage}` : null;
+	const rawImageUrl = firstImage ? `${JSDELIVR_BASE}${firstImage}` : null;
+	const imageUrl = rawImageUrl ? await validateImageUrl(rawImageUrl) : null;
 	const brand = item.brands[0]?.name;
 	const grade = item.primaryGrade;
 	const scale = item.scale;
