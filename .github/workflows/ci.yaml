@@ -135,6 +135,9 @@ jobs:
           # Keep .next/cache for Next.js build caching, remove the rest
           rm -rf apps/next/out
           find apps/next/.next -mindepth 1 -maxdepth 1 ! -name 'cache' -exec rm -rf {} +
+          echo "=== Next.js cache contents ==="
+          du -sh apps/next/.next/cache 2>/dev/null || echo "Cache directory empty or missing"
+          ls -la apps/next/.next/cache 2>/dev/null || true
           df -h /
 
   deploy:
