@@ -30,7 +30,7 @@ export function CollapsibleGrid({
 	title,
 	children,
 	totalCount,
-	cardWidth: minCardWidth = 180,
+	cardWidth: minCardWidth = 140,
 	selectedCount = 0,
 	expanded: controlledExpanded,
 	onExpandedChange,
@@ -64,11 +64,15 @@ export function CollapsibleGrid({
 	const expanded = controlledExpanded ?? internalExpanded;
 
 	// Calculate collapsed height - enough rows to show all selected items (min 1 row)
+	const rowsInCollapsedView = selectedCount > 0 ? Math.ceil(selectedCount / numCols) : 1;
 	const collapsedHeight = useMemo(() => {
 		const cardHeight = cardWidth * CARD_ASPECT_RATIO;
-		const rowsNeeded = selectedCount > 0 ? Math.ceil(selectedCount / numCols) : 1;
-		return rowsNeeded * cardHeight + (rowsNeeded - 1) * GAP + 8; // cards + gaps + bottom padding
-	}, [cardWidth, selectedCount, numCols]);
+		return rowsInCollapsedView * cardHeight + (rowsInCollapsedView - 1) * GAP + 8; // cards + gaps + bottom padding
+	}, [cardWidth, rowsInCollapsedView]);
+
+	// Determine if expand button should be shown (more items than fit in collapsed view)
+	const itemsInCollapsedView = numCols * rowsInCollapsedView;
+	const showExpandButton = totalCount > itemsInCollapsedView;
 
 	const toggle = () => {
 		const toExpanded = !expanded;
@@ -101,11 +105,17 @@ export function CollapsibleGrid({
 		<Stack gap="lg">
 			<Group justify="space-between" align="center">
 				<Group gap="sm">
-					<UnstyledButton onClick={toggle} style={{ cursor: "pointer" }}>
+					{showExpandButton ? (
+						<UnstyledButton onClick={toggle} style={{ cursor: "pointer" }}>
+							<Title order={2} size="h2" fw={600}>
+								{title}
+							</Title>
+						</UnstyledButton>
+					) : (
 						<Title order={2} size="h2" fw={600}>
 							{title}
 						</Title>
-					</UnstyledButton>
+					)}
 					{selectedCount > 0 && (
 						<Group gap={4}>
 							<Text size="sm" c="blue" fw={500}>
@@ -126,14 +136,16 @@ export function CollapsibleGrid({
 						</Group>
 					)}
 				</Group>
-				<UnstyledButton onClick={toggle} style={{ cursor: "pointer" }}>
-					<Group gap="xs" c="blue">
-						<Text size="sm" fw={500}>
-							{expanded ? "Collapse" : `Show all ${totalCount}`}
-						</Text>
-						{expanded ? <IconChevronUp size={16} /> : <IconChevronDown size={16} />}
-					</Group>
-				</UnstyledButton>
+				{showExpandButton && (
+					<UnstyledButton onClick={toggle} style={{ cursor: "pointer" }}>
+						<Group gap="xs" c="blue">
+							<Text size="sm" fw={500}>
+								{expanded ? "Collapse" : `Show all ${totalCount}`}
+							</Text>
+							{expanded ? <IconChevronUp size={16} /> : <IconChevronDown size={16} />}
+						</Group>
+					</UnstyledButton>
+				)}
 			</Group>
 
 			<Box
