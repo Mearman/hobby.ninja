@@ -28,6 +28,7 @@ import Fuse from "fuse.js";
 const ROOT = path.join(import.meta.dirname, "..");
 const SRC_PATH = path.join(ROOT, "src");
 const DIST_PATH = path.join(ROOT, "dist");
+const ASSETS_PATH = path.join(ROOT, "..", "assets");
 
 interface LocalizedString {
 	ja: string;
@@ -109,8 +110,6 @@ interface Brand {
 	name: LocalizedString;
 	url?: string;
 	itemIds?: string[];
-	gradeId?: string;
-	isGrade?: boolean;
 	[key: string]: unknown;
 }
 
@@ -197,34 +196,34 @@ interface HomepageData {
 
 
 // Grade definitions with hierarchy and sort order
+// IDs match brand file IDs for direct lookup
 // Main Gunpla progression: EG → HG → RG → FM → MG → PG
 // Other Gunpla grades: SD, Mega Size, RE/100
 // Non-Gunpla: Figure-rise
 const GRADE_DEFINITIONS: Record<string, { name: string; parent: string | null; children: string[]; sortOrder: number }> = {
 	// Main progression (by complexity/scale)
-	"eg": { name: "Entry Grade", parent: null, children: [], sortOrder: 100 },
-	"hg": { name: "High Grade", parent: null, children: ["hg-uc", "hg-ce", "hg-ac", "hg-amplified"], sortOrder: 200 },
-	"hg-uc": { name: "HG Universal Century", parent: "hg", children: [], sortOrder: 210 },
-	"hg-ce": { name: "HG Cosmic Era", parent: "hg", children: [], sortOrder: 220 },
-	"hg-ac": { name: "HG After Colony", parent: "hg", children: [], sortOrder: 230 },
-	"hg-amplified": { name: "HG Amplified", parent: "hg", children: [], sortOrder: 240 },
+	"entry_grade": { name: "Entry Grade", parent: null, children: [], sortOrder: 100 },
+	"hg": { name: "High Grade", parent: null, children: ["hguc", "hgce", "hgac", "hgamplifiedimgn"], sortOrder: 200 },
+	"hguc": { name: "HG Universal Century", parent: "hg", children: [], sortOrder: 210 },
+	"hgce": { name: "HG Cosmic Era", parent: "hg", children: [], sortOrder: 220 },
+	"hgac": { name: "HG After Colony", parent: "hg", children: [], sortOrder: 230 },
+	"hgamplifiedimgn": { name: "HG Amplified", parent: "hg", children: [], sortOrder: 240 },
 	"rg": { name: "Real Grade", parent: null, children: [], sortOrder: 300 },
-	"fm": { name: "Full Mechanics", parent: null, children: [], sortOrder: 400 },
-	"mg": { name: "Master Grade", parent: null, children: ["mgsd", "mg-ver-ka", "mgex"], sortOrder: 500 },
+	"fullmechanics": { name: "Full Mechanics", parent: null, children: [], sortOrder: 400 },
+	"mg": { name: "Master Grade", parent: null, children: ["mgsd", "mgka", "mgex"], sortOrder: 500 },
 	"mgsd": { name: "Master Grade SD", parent: "mg", children: [], sortOrder: 510 },
-	"mg-ver-ka": { name: "MG Ver.Ka", parent: "mg", children: [], sortOrder: 520 },
+	"mgka": { name: "MG Ver.Ka", parent: "mg", children: [], sortOrder: 520 },
 	"mgex": { name: "Master Grade Extreme", parent: "mg", children: [], sortOrder: 530 },
 	"pg": { name: "Perfect Grade", parent: null, children: [], sortOrder: 600 },
 	// Other Gunpla-specific grades
-	"sd": { name: "Super Deformed", parent: null, children: ["sd-cs", "sd-bb", "sd-bb-warrior", "sdex"], sortOrder: 700 },
-	"sdex": { name: "SD EX-Standard", parent: "sd", children: [], sortOrder: 710 },
-	"sd-cs": { name: "SD Cross Silhouette", parent: "sd", children: [], sortOrder: 720 },
-	"sd-bb": { name: "SD BB Senshi", parent: "sd", children: [], sortOrder: 730 },
-	"sd-bb-warrior": { name: "SD BB Warrior", parent: "sd", children: [], sortOrder: 740 },
-	"mega-size": { name: "Mega Size Model", parent: null, children: [], sortOrder: 800 },
-	"re-100": { name: "RE/100", parent: null, children: [], sortOrder: 850 },
+	"sdgundamseries": { name: "Super Deformed", parent: null, children: ["sdcs", "bb", "SDEX"], sortOrder: 700 },
+	"SDEX": { name: "SD EX-Standard", parent: "sdgundamseries", children: [], sortOrder: 710 },
+	"sdcs": { name: "SD Cross Silhouette", parent: "sdgundamseries", children: [], sortOrder: 720 },
+	"bb": { name: "SD BB Senshi", parent: "sdgundamseries", children: [], sortOrder: 730 },
+	"megasize": { name: "Mega Size Model", parent: null, children: [], sortOrder: 800 },
+	"re100": { name: "RE/100", parent: null, children: [], sortOrder: 850 },
 	// Non-Gunpla grades
-	"figure-rise": { name: "Figure-rise Standard", parent: null, children: [], sortOrder: 900 },
+	"figurerise-standard": { name: "Figure-rise Standard", parent: null, children: [], sortOrder: 900 },
 };
 
 function ensureDir(dir: string) {
@@ -290,29 +289,28 @@ function computeDisplayImages(items: Map<string, Item>, manuals: Map<string, Man
 	}
 }
 
-// Grade patterns for extraction
+// Grade patterns for extraction - grade values match brand IDs
 const GRADE_PATTERNS: Array<{ pattern: RegExp; grade: string }> = [
-	{ pattern: /\bhg\s*uc\b|\bhguc\b|\bhigh grade universal century\b/, grade: "hg-uc" },
-	{ pattern: /\bhg\s*ce\b|\bhgce\b|\bhigh grade cosmic era\b/, grade: "hg-ce" },
-	{ pattern: /\bhg\s*ac\b|\bhgac\b|\bhigh grade after colony\b/, grade: "hg-ac" },
-	{ pattern: /\bhg\s*amplified\b/, grade: "hg-amplified" },
-	{ pattern: /\bmg\s*ver\.?\s*ka\b|\bver\.?\s*ka\b/, grade: "mg-ver-ka" },
+	{ pattern: /\bhg\s*uc\b|\bhguc\b|\bhigh grade universal century\b/, grade: "hguc" },
+	{ pattern: /\bhg\s*ce\b|\bhgce\b|\bhigh grade cosmic era\b/, grade: "hgce" },
+	{ pattern: /\bhg\s*ac\b|\bhgac\b|\bhigh grade after colony\b/, grade: "hgac" },
+	{ pattern: /\bhg\s*amplified\b/, grade: "hgamplifiedimgn" },
+	{ pattern: /\bmg\s*ver\.?\s*ka\b|\bver\.?\s*ka\b/, grade: "mgka" },
 	{ pattern: /\bmgex\b/, grade: "mgex" },
 	{ pattern: /\bmgsd\b|\bmg\s*sd\b/, grade: "mgsd" },
-	{ pattern: /\bsd\s*cs\b|\bsdcs\b|\bcross silhouette\b/, grade: "sd-cs" },
-	{ pattern: /\bsd\s*bb\s*warrior\b/, grade: "sd-bb-warrior" },
-	{ pattern: /\bsd\s*bb\b|\bbb\s*senshi\b/, grade: "sd-bb" },
-	{ pattern: /\bsdex\b/, grade: "sdex" },
-	{ pattern: /\bre[/-]?100\b/, grade: "re-100" },
-	{ pattern: /\bmega\s*size\b/, grade: "mega-size" },
-	{ pattern: /\bfigure[- ]?rise\b/, grade: "figure-rise" },
+	{ pattern: /\bsd\s*cs\b|\bsdcs\b|\bcross silhouette\b/, grade: "sdcs" },
+	{ pattern: /\bsd\s*bb\b|\bbb\s*senshi\b|\bbb\s*warrior\b/, grade: "bb" },
+	{ pattern: /\bsdex\b/, grade: "SDEX" },
+	{ pattern: /\bre[/-]?100\b/, grade: "re100" },
+	{ pattern: /\bmega\s*size\b/, grade: "megasize" },
+	{ pattern: /\bfigure[- ]?rise\b/, grade: "figurerise-standard" },
 	{ pattern: /\bpg\b|\bperfect grade\b/, grade: "pg" },
 	{ pattern: /\bmg\b|\bmaster grade\b/, grade: "mg" },
 	{ pattern: /\brg\b|\breal grade\b/, grade: "rg" },
 	{ pattern: /\bhg\b|\bhigh grade\b/, grade: "hg" },
-	{ pattern: /\bsd\b|\bsuper deformed\b/, grade: "sd" },
-	{ pattern: /\beg\b|\bentry grade\b/, grade: "eg" },
-	{ pattern: /\bfm\b|\bfull mechanics\b/, grade: "fm" },
+	{ pattern: /\bsd\b|\bsuper deformed\b/, grade: "sdgundamseries" },
+	{ pattern: /\beg\b|\bentry grade\b/, grade: "entry_grade" },
+	{ pattern: /\bfm\b|\bfull mechanics\b/, grade: "fullmechanics" },
 ];
 
 // Extract grades from item name and brand names
@@ -399,16 +397,13 @@ function buildGrades(items: Map<string, Item>, brands: Map<string, Brand>): Map<
 	for (const [gradeId, definition] of Object.entries(GRADE_DEFINITIONS)) {
 		const itemIds = gradeItemIds.get(gradeId) ?? [];
 
-		// Find image reference from corresponding brand
+		// Find image reference from corresponding brand (brand.id matches grade ID)
 		let image: string | undefined;
-		// Look for a brand with this gradeId to get its image
-		for (const brand of brands.values()) {
-			if (brand.gradeId === gradeId) {
-				const brandImage = brand["image"] as string | undefined;
-				if (brandImage && typeof brandImage === "string") {
-					image = brandImage;
-					break;
-				}
+		const brand = brands.get(gradeId);
+		if (brand) {
+			const brandImage = brand["image"] as string | undefined;
+			if (brandImage && typeof brandImage === "string") {
+				image = brandImage;
 			}
 		}
 
@@ -647,6 +642,99 @@ function validateItemManualRelationships(items: Map<string, Item>, manuals: Map<
 	}
 }
 
+/**
+ * Validate that all image paths referenced in the data exist in the assets directory.
+ * Image paths start with "/" (e.g., "/images/items/01_0001/153_1.jpg")
+ * Also validates that items use the new object format, not the deprecated array format.
+ */
+function validateImagePaths(
+	items: Map<string, Item>,
+	brands: Map<string, Brand>,
+	series: Map<string, Series>,
+	categories: Map<string, Category>,
+): void {
+	const missingImages: Array<{ path: string; source: string }> = [];
+	const deprecatedFormatItems: string[] = [];
+
+	// Helper to check if image exists
+	const checkImage = (imagePath: string, source: string): void => {
+		if (!imagePath) return;
+		// Image paths start with "/" - convert to filesystem path
+		const fsPath = path.join(ASSETS_PATH, imagePath.replace(/^\//, ""));
+		if (!existsSync(fsPath)) {
+			missingImages.push({ path: imagePath, source });
+		}
+	};
+
+	// Check item images
+	for (const [itemId, item] of items) {
+		if (item.images) {
+			if (Array.isArray(item.images)) {
+				// Old format: array of strings - this is deprecated
+				deprecatedFormatItems.push(itemId);
+				for (const img of item.images) {
+					checkImage(img, `item:${itemId}`);
+				}
+			} else {
+				// New format: object with product/instructions
+				for (const img of item.images.product ?? []) {
+					checkImage(img.path ?? img.src, `item:${itemId}`);
+				}
+				for (const img of item.images.instructions ?? []) {
+					checkImage(img.path ?? img.src, `item:${itemId}`);
+				}
+			}
+		}
+	}
+
+	// Error if any items use deprecated array format
+	if (deprecatedFormatItems.length > 0) {
+		console.error("\n❌ Deprecated image format detected:\n");
+		for (const itemId of deprecatedFormatItems.slice(0, 20)) {
+			console.error(`  - item:${itemId} uses deprecated array format`);
+		}
+		if (deprecatedFormatItems.length > 20) {
+			console.error(`  ... and ${deprecatedFormatItems.length - 20} more`);
+		}
+		console.error("\n  Images should use object format: { product: [...], instructions: [...] }");
+		console.error("");
+		throw new Error(`Image format validation failed: ${deprecatedFormatItems.length} item(s) use deprecated array format`);
+	}
+
+	// Check brand images
+	for (const [brandId, brand] of brands) {
+		if (brand.image) {
+			checkImage(brand.image, `brand:${brandId}`);
+		}
+	}
+
+	// Check series images
+	for (const [seriesId, s] of series) {
+		if (s.image) {
+			checkImage(s.image, `series:${seriesId}`);
+		}
+	}
+
+	// Check category images
+	for (const [categoryId, category] of categories) {
+		if (category.image) {
+			checkImage(category.image, `category:${categoryId}`);
+		}
+	}
+
+	if (missingImages.length > 0) {
+		console.error("\n❌ Image path validation failed:\n");
+		for (const { path: imgPath, source } of missingImages.slice(0, 20)) {
+			console.error(`  - ${source}: ${imgPath}`);
+		}
+		if (missingImages.length > 20) {
+			console.error(`  ... and ${missingImages.length - 20} more`);
+		}
+		console.error("");
+		throw new Error(`Image validation failed: ${missingImages.length} missing image(s)`);
+	}
+}
+
 async function main(): Promise<void> {
 	console.log("=== Building @hobby-ninja/data (JSON output) ===\n");
 
@@ -678,6 +766,11 @@ async function main(): Promise<void> {
 	computeDisplayImages(items, manuals);
 	const itemsWithDisplayImage = [...items.values()].filter(i => i.displayImage).length;
 	console.log(`  Items with displayImage: ${itemsWithDisplayImage}`);
+
+	// Validate all referenced image paths exist in assets
+	console.log("\nValidating image paths...");
+	validateImagePaths(items, brands, series, categories);
+	console.log("  ✓ All image paths valid");
 
 	// Compute reverse relationships (itemIds for brands/series/categories)
 	console.log("\nComputing reverse relationships...");
