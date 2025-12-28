@@ -8,7 +8,7 @@
  */
 
 import { promises as fs } from "node:fs";
-import { dirname, join } from "node:path";
+import path from "node:path";
 
 import type {
 	ItemsIndex,
@@ -34,7 +34,7 @@ export class ItemsIndexManager {
 	private index: ItemsIndex;
 	private dirty = false;
 
-	constructor(private indexPath: string = "data/src/items/index.json") {
+	constructor(private indexPath = "data/src/items/index.json") {
 		this.index = this.createEmptyIndex();
 	}
 
@@ -79,7 +79,7 @@ export class ItemsIndexManager {
 	 * Update status for a specific site (JP or global)
 	 */
 	updateSiteStatus(itemId: string, site: SiteType, data: SiteUpdateData): void {
-		if (!this.index.items[itemId]) {
+		if (!(itemId in this.index.items)) {
 			this.index.items[itemId] = {};
 		}
 
@@ -104,21 +104,24 @@ export class ItemsIndexManager {
 	 * Get status for a specific item and site
 	 */
 	getSiteStatus(itemId: string, site: SiteType): SiteStatus | undefined {
-		return this.index.items[itemId]?.[site];
+		if (!(itemId in this.index.items)) {
+			return undefined;
+		}
+		return this.index.items[itemId][site];
 	}
 
 	/**
 	 * Check if an item has been checked on a specific site
 	 */
 	isChecked(itemId: string, site: SiteType): boolean {
-		return this.index.items[itemId]?.[site] !== undefined;
+		return itemId in this.index.items && this.index.items[itemId][site] !== undefined;
 	}
 
 	/**
 	 * Get items not yet checked on a specific site
 	 */
 	getUncheckedItems(allItemIds: string[], site: SiteType): string[] {
-		return allItemIds.filter((id) => !this.index.items[id]?.[site]);
+		return allItemIds.filter((id) => !(id in this.index.items) || !this.index.items[id][site]);
 	}
 
 	/**
@@ -173,9 +176,10 @@ export class ItemsIndexManager {
 		return {
 			checked: entries.filter((e) => e[site]).length,
 			withPage: entries.filter((e) => e[site]?.hasPage).length,
-			withoutPage: entries.filter(
-				(e) => e[site] && !e[site]?.hasPage && !e[site]?.error,
-			).length,
+			withoutPage: entries.filter((e) => {
+				const siteStatus = e[site];
+				return siteStatus && !siteStatus.hasPage && !siteStatus.error;
+			}).length,
 			errors: entries.filter((e) => e[site]?.error).length,
 		};
 	}
@@ -198,7 +202,7 @@ export class ItemsIndexManager {
 		this.index.updatedAt = new Date().toISOString();
 
 		// Ensure directory exists
-		const dir = dirname(this.indexPath);
+		const dir = path.dirname(this.indexPath);
 		try {
 			await fs.access(dir);
 		} catch {

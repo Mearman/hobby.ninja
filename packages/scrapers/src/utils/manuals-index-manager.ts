@@ -13,7 +13,7 @@
  */
 
 import { promises as fs } from "node:fs";
-import { dirname } from "node:path";
+import path from "node:path";
 
 import type {
 	ManualsIndex,
@@ -35,7 +35,7 @@ export class ManualsIndexManager {
 	private index: ManualsIndex;
 	private dirty = false;
 
-	constructor(private indexPath: string = "data/src/manuals/index.json") {
+	constructor(private indexPath = "data/src/manuals/index.json") {
 		this.index = this.createEmptyIndex();
 	}
 
@@ -76,7 +76,7 @@ export class ManualsIndexManager {
 	 * Pad manual ID to 4 digits (e.g., 1 -> "0001")
 	 */
 	private padId(id: number | string): string {
-		const numId = typeof id === "string" ? parseInt(id, 10) : id;
+		const numId = typeof id === "string" ? Number.parseInt(id, 10) : id;
 		return numId.toString().padStart(4, "0");
 	}
 
@@ -123,11 +123,9 @@ export class ManualsIndexManager {
 	 * Check if a manual has been checked (either in manuals map or invalid ranges)
 	 */
 	isChecked(id: number | string): boolean {
-		const numId = typeof id === "string" ? parseInt(id, 10) : id;
+		const numId = typeof id === "string" ? Number.parseInt(id, 10) : id;
 		const paddedId = this.padId(numId);
-		return (
-			this.index.manuals[paddedId] !== undefined || this.isKnownInvalid(numId)
-		);
+		return paddedId in this.index.manuals || this.isKnownInvalid(numId);
 	}
 
 	/**
@@ -158,7 +156,7 @@ export class ManualsIndexManager {
 		}
 
 		// Sort by start
-		const sorted = [...this.index.invalidRanges].sort(
+		const sorted = [...this.index.invalidRanges].toSorted(
 			(a, b) => a.start - b.start,
 		);
 
@@ -166,10 +164,11 @@ export class ManualsIndexManager {
 
 		for (let i = 1; i < sorted.length; i++) {
 			const current = sorted[i];
-			const last = merged[merged.length - 1];
+			const last = merged.at(-1);
 
 			// Check if ranges overlap or are adjacent
-			if (current.start <= last.end + 1) {
+			// Note: last is always defined since merged is initialized with sorted[0]
+			if (last && current.start <= last.end + 1) {
 				// Merge: extend the last range
 				last.end = Math.max(last.end, current.end);
 				// Use the more recent checkedAt
@@ -251,7 +250,7 @@ export class ManualsIndexManager {
 		this.index.updatedAt = new Date().toISOString();
 
 		// Ensure directory exists
-		const dir = dirname(this.indexPath);
+		const dir = path.dirname(this.indexPath);
 		try {
 			await fs.access(dir);
 		} catch {
