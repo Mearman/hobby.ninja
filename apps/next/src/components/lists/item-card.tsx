@@ -94,11 +94,11 @@ export function ItemCard({ item, viewMode }: ItemCardProps) {
 								{getNodePrimaryGrade(item)}
 							</Badge>
 						)}
-						{item.scale && (
-							<Badge className={itemCardBadge} variant="light">
-								{item.scale}
+						{item.scales.map(scale => (
+							<Badge key={scale} className={itemCardBadge} variant="light">
+								{scale}
 							</Badge>
-						)}
+						))}
 						<EntityList ids={item.brands.map(b => b.id)} entityType="brand" size="xs" clickable={false} />
 					</Box>
 				</Box>
@@ -147,11 +147,11 @@ export function ItemCard({ item, viewMode }: ItemCardProps) {
 									{getNodePrimaryGrade(item)}
 								</Badge>
 							)}
-							{item.scale && (
-								<Badge variant="light" size="sm">
-									{item.scale}
+							{item.scales.map(scale => (
+								<Badge key={scale} variant="light" size="sm">
+									{scale}
 								</Badge>
-							)}
+							))}
 							{itemHasManual(item) && (
 								<RelationshipBadge type="manual" viewMode="list" />
 							)}
@@ -195,7 +195,7 @@ export function ItemCard({ item, viewMode }: ItemCardProps) {
 			<Table.Td c="dimmed">{releaseDate ?? "-"}</Table.Td>
 			<Table.Td><EntityList ids={item.series.map(s => s.id)} entityType="series" size="sm" /></Table.Td>
 			<Table.Td>{getNodePrimaryGrade(item) ?? "-"}</Table.Td>
-			<Table.Td>{item.scale ?? "-"}</Table.Td>
+			<Table.Td>{item.scales.length > 0 ? item.scales.join(", ") : "-"}</Table.Td>
 			<Table.Td>
 				<EntityList ids={item.brands.map(b => b.id)} entityType="brand" size="sm" />
 			</Table.Td>

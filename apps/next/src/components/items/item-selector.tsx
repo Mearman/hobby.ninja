@@ -131,7 +131,7 @@ function ComparisonModal({ items, opened, onClose }: ComparisonModalProps) {
 								<Table.Td fw={500}>Scale</Table.Td>
 								{comparisonItems.map((item) => (
 									<Table.Td key={`scale-${item.id}`} ta="center">
-										<Text size="sm">{item.scale ?? "-"}</Text>
+										<Text size="sm">{item.scales.length > 0 ? item.scales.join(", ") : "-"}</Text>
 									</Table.Td>
 								))}
 							</Table.Tr>
@@ -317,7 +317,7 @@ export function SelectableItemCard({
 				</Table.Td>
 				<Table.Td><EntityList ids={item.series.map(s => s.id)} entityType="series" size="sm" /></Table.Td>
 				<Table.Td>{getNodePrimaryGrade(item) ?? "-"}</Table.Td>
-				<Table.Td>{item.scale ?? "-"}</Table.Td>
+				<Table.Td>{item.scales.length > 0 ? item.scales.join(", ") : "-"}</Table.Td>
 				<Table.Td>
 					<EntityList ids={item.brands.map(b => b.id)} entityType="brand" size="sm" />
 				</Table.Td>
@@ -377,9 +377,9 @@ export function SelectableItemCard({
 					{getNodePrimaryGrade(item) && (
 						<Badge size="xs" variant="light">{getNodePrimaryGrade(item)}</Badge>
 					)}
-					{item.scale && (
-						<Badge size="xs" variant="light">{item.scale}</Badge>
-					)}
+					{item.scales.map(scale => (
+						<Badge key={scale} size="xs" variant="light">{scale}</Badge>
+					))}
 					<EntityList ids={item.brands.map(b => b.id)} entityType="brand" size="xs" clickable={false} />
 				</Group>
 			</Box>
