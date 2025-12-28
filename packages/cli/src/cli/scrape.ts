@@ -223,50 +223,56 @@ export class ScrapeCommand {
 			console.log(`\n✓ Phase 1 complete: ${result.successful} items scraped, ${result.translationsUpdated} translations updated, ${this.discoveredManualIds.size} manuals discovered`);
 
 			// Phase 2: Process orphan manuals (not linked to any item)
-			console.log(`\n=== Phase 2: Processing Orphan Manuals ===`);
-			const orphanManualIds = getOrphanManualIds(
-				this.discoveredManualIds,
-				maxAgeHours,
-				getManualsNeedingFormatMigration,
-			);
-			result.orphanManuals.total = orphanManualIds.length;
-
-			if (orphanManualIds.length === 0) {
-				console.log("No orphan manuals to process");
+			// Skip orphan manual processing when filtering to specific items
+			const isFilteredScrape = Boolean(options.id) || Boolean(options.start) || Boolean(options.end);
+			if (isFilteredScrape) {
+				console.log(`\n=== Phase 2: Skipped (filtered scrape) ===`);
 			} else {
-				console.log(`Orphan manuals to process: ${orphanManualIds.length}`);
+				console.log(`\n=== Phase 2: Processing Orphan Manuals ===`);
+				const orphanManualIds = getOrphanManualIds(
+					this.discoveredManualIds,
+					maxAgeHours,
+					getManualsNeedingFormatMigration,
+				);
+				result.orphanManuals.total = orphanManualIds.length;
 
-				for (let i = 0; i < orphanManualIds.length; i++) {
-					const manualId = orphanManualIds[i];
-					if (!manualId) continue;
+				if (orphanManualIds.length === 0) {
+					console.log("No orphan manuals to process");
+				} else {
+					console.log(`Orphan manuals to process: ${orphanManualIds.length}`);
 
-					console.log(`\n--- [${i + 1}/${orphanManualIds.length}] Processing orphan manual ${manualId} ---`);
+					for (let i = 0; i < orphanManualIds.length; i++) {
+						const manualId = orphanManualIds[i];
+						if (!manualId) continue;
 
-					try {
-						const manualResult = await processManualComplete(manualId, options, manualDeps);
+						console.log(`\n--- [${i + 1}/${orphanManualIds.length}] Processing orphan manual ${manualId} ---`);
 
-						if (manualResult.success) {
-							result.orphanManuals.processed++;
-						} else {
-							result.orphanManuals.failed++;
-							if (manualResult.error) {
-								result.errors.push(`manual-${manualId}: ${manualResult.error}`);
+						try {
+							const manualResult = await processManualComplete(manualId, options, manualDeps);
+
+							if (manualResult.success) {
+								result.orphanManuals.processed++;
+							} else {
+								result.orphanManuals.failed++;
+								if (manualResult.error) {
+									result.errors.push(`manual-${manualId}: ${manualResult.error}`);
+								}
 							}
-						}
 
-						// Save index periodically
-						if (i % 10 === 0) {
-							ManualsIndexUpdater.save();
+							// Save index periodically
+							if (i % 10 === 0) {
+								ManualsIndexUpdater.save();
+							}
+						} catch (error) {
+							result.orphanManuals.failed++;
+							const errorMsg = error instanceof Error ? error.message : UNKNOWN_ERROR;
+							result.errors.push(`manual-${manualId}: ${errorMsg}`);
+							console.error(`  ✗ Error: ${errorMsg}`);
 						}
-					} catch (error) {
-						result.orphanManuals.failed++;
-						const errorMsg = error instanceof Error ? error.message : UNKNOWN_ERROR;
-						result.errors.push(`manual-${manualId}: ${errorMsg}`);
-						console.error(`  ✗ Error: ${errorMsg}`);
 					}
-				}
 
-				console.log(`\n✓ Phase 2 complete: ${result.orphanManuals.processed} orphan manuals processed`);
+					console.log(`\n✓ Phase 2 complete: ${result.orphanManuals.processed} orphan manuals processed`);
+				}
 			}
 
 			// Save final index state
