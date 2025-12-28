@@ -48,7 +48,7 @@ export default [
 			"**/*.json",
 			"**/*.md",
 			"*.mjs",
-			"*.cjs",
+			"**/*.cjs",
 			"**/*.config.{js,mjs,cjs,ts}",
 			// Build outputs and cache directories
 			"dist/**",
