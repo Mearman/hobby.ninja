@@ -69,12 +69,8 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"「PG 1/60 エールストライクガンダム+スカイグラスパー(クリアパールシフトバージョン)」登場！"
-		],
-		"en": [
-			"\"PG 1/60 Ale Strike Gundam + Sky Grasper (Clear Pearl Shift Version)\" is now available!"
-		]
+		"ja": ["「PG 1/60 エールストライクガンダム+スカイグラスパー(クリアパールシフトバージョン)」登場！"],
+		"en": ["\"PG 1/60 Ale Strike Gundam + Sky Grasper (Clear Pearl Shift Version)\" is now available!"]
 	},
 	"images": {
 		"product": [
@@ -87,7 +83,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4873/",
-	"scales": [
-		"1/60"
+	"scales": ["1/60"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

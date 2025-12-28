@@ -55,12 +55,8 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"1/100 MBF-P03 ガンダムアストレイ ブルーフレーム セカンドL(レッドバージョン)登場！"
-		],
-		"en": [
-			"1/100 MBF-P03 Gundam Astray Blue Frame Second L (Red Version) now available!"
-		]
+		"ja": ["1/100 MBF-P03 ガンダムアストレイ ブルーフレーム セカンドL(レッドバージョン)登場！"],
+		"en": ["1/100 MBF-P03 Gundam Astray Blue Frame Second L (Red Version) now available!"]
 	},
 	"images": {
 		"product": [
@@ -73,7 +69,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4943/",
-	"scales": [
-		"1/100"
+	"scales": ["1/100"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

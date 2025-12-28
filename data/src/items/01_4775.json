@@ -63,12 +63,8 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"RG 1/144 MS-06S ザクII Ver.GFT　登場！"
-		],
-		"en": [
-			"RG 1/144 MS-06S Zaku II Ver.GFT now available!"
-		]
+		"ja": ["RG 1/144 MS-06S ザクII Ver.GFT　登場！"],
+		"en": ["RG 1/144 MS-06S Zaku II Ver.GFT now available!"]
 	},
 	"images": {
 		"product": [
@@ -91,7 +87,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4775/",
-	"scales": [
-		"1/144"
+	"scales": ["1/144"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

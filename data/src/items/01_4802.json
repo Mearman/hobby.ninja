@@ -69,12 +69,8 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"MG 1/100 MS-06S シャア専用ザクVer.2.0 エクストラフィニッシュバージョン登場！"
-		],
-		"en": [
-			"MG 1/100 MS-06S Char's Zaku Ver.2.0 Extra Finish version now available!"
-		]
+		"ja": ["MG 1/100 MS-06S シャア専用ザクVer.2.0 エクストラフィニッシュバージョン登場！"],
+		"en": ["MG 1/100 MS-06S Char's Zaku Ver.2.0 Extra Finish version now available!"]
 	},
 	"images": {
 		"product": [
@@ -97,7 +93,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4802/",
-	"scales": [
-		"1/100"
+	"scales": ["1/100"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

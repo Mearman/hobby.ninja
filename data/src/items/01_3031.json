@@ -62,12 +62,8 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"「1/100 アタックトマホーク」が登場！"
-		],
-		"en": [
-			"\"1/100 Attack Tomahawk\" is now available!"
-		]
+		"ja": ["「1/100 アタックトマホーク」が登場！"],
+		"en": ["\"1/100 Attack Tomahawk\" is now available!"]
 	},
 	"images": {
 		"product": [
@@ -80,7 +76,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_3031/",
-	"scales": [
-		"1/100"
+	"scales": ["1/100"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

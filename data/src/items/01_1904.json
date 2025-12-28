@@ -71,9 +71,7 @@
 		"ja": [
 			"各種イベント会場等で販売を行う、イベント限定ガンプラです。HG バルバトス 第6形態のイベント限定、クリアカラーVer.です。"
 		],
-		"en": [
-			"Event-limited Gunpla sold at various event venues. HG Barbatos 6th form event limited, clear color Ver."
-		]
+		"en": ["Event-limited Gunpla sold at various event venues. HG Barbatos 6th form event limited, clear color Ver."]
 	},
 	"images": {
 		"product": [
@@ -86,7 +84,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1904/",
-	"scales": [
-		"1/144"
+	"scales": ["1/144"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

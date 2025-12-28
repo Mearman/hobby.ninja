@@ -68,12 +68,8 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。"
-		],
-		"en": [
-			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world."
-		]
+		"ja": ["全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。"],
+		"en": ["A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world."]
 	},
 	"images": {
 		"product": [
@@ -91,7 +87,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1902/",
-	"scales": [
-		"1/60"
+	"scales": ["1/60"],
+	"tags": [
+		{
+			"modifier": "gbase",
+			"ja": "ガンダムベース",
+			"en": "THE GUNDAM BASE"
+		}
 	]
 }

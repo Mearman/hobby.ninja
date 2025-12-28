@@ -69,12 +69,8 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"MG 1/100 MS-14A ガトー専用ゲルググ コーティングバージョン登場！"
-		],
-		"en": [
-			"MG 1/100 MS-14A Gelgoog coated version for Gato now available!"
-		]
+		"ja": ["MG 1/100 MS-14A ガトー専用ゲルググ コーティングバージョン登場！"],
+		"en": ["MG 1/100 MS-14A Gelgoog coated version for Gato now available!"]
 	},
 	"images": {
 		"product": [
@@ -87,7 +83,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4938/",
-	"scales": [
-		"1/100"
+	"scales": ["1/100"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

@@ -69,12 +69,8 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"「PG 1/60 MS-06F「ザクII」+ウエポンズ アニメーションカラーバージョン」登場！"
-		],
-		"en": [
-			"\"PG 1/60 MS-06F \"Zaku II\" + Weapons Animation Color Version\" now available!"
-		]
+		"ja": ["「PG 1/60 MS-06F「ザクII」+ウエポンズ アニメーションカラーバージョン」登場！"],
+		"en": ["\"PG 1/60 MS-06F \"Zaku II\" + Weapons Animation Color Version\" now available!"]
 	},
 	"images": {
 		"product": [
@@ -92,7 +88,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4875/",
-	"scales": [
-		"1/60"
+	"scales": ["1/60"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

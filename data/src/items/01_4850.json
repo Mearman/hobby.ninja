@@ -69,12 +69,8 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"「HGUC 1/144 RX-78-2 ガンダム クリアカラーバージョン」登場！"
-		],
-		"en": [
-			"\"HGUC 1/144 RX-78-2 Gundam Clear Color Version\" now available!"
-		]
+		"ja": ["「HGUC 1/144 RX-78-2 ガンダム クリアカラーバージョン」登場！"],
+		"en": ["\"HGUC 1/144 RX-78-2 Gundam Clear Color Version\" now available!"]
 	},
 	"images": {
 		"product": [
@@ -97,7 +93,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4850/",
-	"scales": [
-		"1/144"
+	"scales": ["1/144"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

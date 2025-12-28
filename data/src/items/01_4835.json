@@ -69,12 +69,8 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"「MG 1/100 フリーダムガンダム クリアカラーバージョン」登場！"
-		],
-		"en": [
-			"\"MG 1/100 Freedom Gundam Clear Color Version\" now available!"
-		]
+		"ja": ["「MG 1/100 フリーダムガンダム クリアカラーバージョン」登場！"],
+		"en": ["\"MG 1/100 Freedom Gundam Clear Color Version\" now available!"]
 	},
 	"images": {
 		"product": [
@@ -97,7 +93,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4835/",
-	"scales": [
-		"1/100"
+	"scales": ["1/100"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

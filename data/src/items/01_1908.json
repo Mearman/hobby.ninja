@@ -72,10 +72,7 @@
 			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
 			"RG ガンダムアストレイブルーフレームのベント限定メッキVer.です。"
 		],
-		"en": [
-			"Event-limited Gunpla sold at various event venues.",
-			"RG Gundam Astray Blue Frame Vent Limited Plated Ver."
-		]
+		"en": ["Event-limited Gunpla sold at various event venues.", "RG Gundam Astray Blue Frame Vent Limited Plated Ver."]
 	},
 	"images": {
 		"product": [
@@ -88,7 +85,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_1908/",
-	"scales": [
-		"1/144"
+	"scales": ["1/144"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

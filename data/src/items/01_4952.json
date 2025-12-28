@@ -62,12 +62,8 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"AG 1/144 ガンダムAGE-3 ノーマル[AGE-3]スーパークリアVer.登場！"
-		],
-		"en": [
-			"AG 1/144 GundamAGE-3 Normal [AGE-3] Super Clear Ver. now available!"
-		]
+		"ja": ["AG 1/144 ガンダムAGE-3 ノーマル[AGE-3]スーパークリアVer.登場！"],
+		"en": ["AG 1/144 GundamAGE-3 Normal [AGE-3] Super Clear Ver. now available!"]
 	},
 	"images": {
 		"product": [
@@ -90,7 +86,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4952/",
-	"scales": [
-		"1/144"
+	"scales": ["1/144"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

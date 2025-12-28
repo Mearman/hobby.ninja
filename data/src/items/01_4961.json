@@ -69,12 +69,8 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"メガサイズモデル 1/48 ガンダム カラークリアー登場！"
-		],
-		"en": [
-			"Mega size Model 1/48 Gundam color clear now available!"
-		]
+		"ja": ["メガサイズモデル 1/48 ガンダム カラークリアー登場！"],
+		"en": ["Mega size Model 1/48 Gundam color clear now available!"]
 	},
 	"images": {
 		"product": [
@@ -97,7 +93,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4961/",
-	"scales": [
-		"1/48"
+	"scales": ["1/48"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

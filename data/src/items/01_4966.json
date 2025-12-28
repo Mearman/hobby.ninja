@@ -62,12 +62,8 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"HG 1/144 ガンダムデュナメスアームアームズ(川口克己プロデュース プロショップ専用商品)登場！"
-		],
-		"en": [
-			"HG 1/144 Gundam Dynames Arms (pro shop exclusive product produced by Katsumi Kawaguchi) now available!"
-		]
+		"ja": ["HG 1/144 ガンダムデュナメスアームアームズ(川口克己プロデュース プロショップ専用商品)登場！"],
+		"en": ["HG 1/144 Gundam Dynames Arms (pro shop exclusive product produced by Katsumi Kawaguchi) now available!"]
 	},
 	"images": {
 		"product": [
@@ -85,7 +81,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4966/",
-	"scales": [
-		"1/144"
+	"scales": ["1/144"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

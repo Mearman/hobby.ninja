@@ -63,12 +63,8 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"「PG 1/60 RX-178 ガンダム Mk-II マルチコーティングバージョン」登場！"
-		],
-		"en": [
-			"\"PG 1/60 RX-178 Gundam Mk-II Multi-Coated Version\" now available!"
-		]
+		"ja": ["「PG 1/60 RX-178 ガンダム Mk-II マルチコーティングバージョン」登場！"],
+		"en": ["\"PG 1/60 RX-178 Gundam Mk-II Multi-Coated Version\" now available!"]
 	},
 	"images": {
 		"product": [
@@ -81,7 +77,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4870/",
-	"scales": [
-		"1/60"
+	"scales": ["1/60"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

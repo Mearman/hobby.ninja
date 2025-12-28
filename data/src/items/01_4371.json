@@ -96,9 +96,7 @@
 			"・ 商品画像は開発途中のものであり、実際の商品とは異なる場合がございます。",
 			"・ 商品仕様は2022年11月現在のものです。パッケージ、ロゴ及び商品の仕様は、予告なく変更する場合がございます。"
 		],
-		"en": [
-			"〈Remarks〉"
-		]
+		"en": ["〈Remarks〉"]
 	},
 	"images": {
 		"product": [
@@ -163,7 +161,12 @@
 		"id": "2467",
 		"url": "https://manual.bandai-hobby.net/menus/detail/2467/"
 	},
-	"scales": [
-		"1/144"
+	"scales": ["1/144"],
+	"tags": [
+		{
+			"modifier": "online",
+			"ja": "ホビーオンライン",
+			"en": "HOBBY ONLINE SHOP"
+		}
 	]
 }

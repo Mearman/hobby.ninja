@@ -69,12 +69,8 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"「PG 1/60 RX78-2 ガンダム(大河原邦男氏イラストイメージカラーバージョン) 」登場！"
-		],
-		"en": [
-			"\"PG 1/60 RX78-2 Gundam (Illustrated image color version by Kunio Okawara)\" is now available!"
-		]
+		"ja": ["「PG 1/60 RX78-2 ガンダム(大河原邦男氏イラストイメージカラーバージョン) 」登場！"],
+		"en": ["\"PG 1/60 RX78-2 Gundam (Illustrated image color version by Kunio Okawara)\" is now available!"]
 	},
 	"images": {
 		"product": [
@@ -92,7 +88,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4874/",
-	"scales": [
-		"1/60"
+	"scales": ["1/60"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

@@ -69,12 +69,8 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"「MG 1/100 MS-06J 量産型ザク Ver.2.0 リアルタイプカラー仕様」登場！"
-		],
-		"en": [
-			"\"MG 1/100 MS-06J Mass Production Zaku Ver.2.0 Real Type Color Specification\" now available!"
-		]
+		"ja": ["「MG 1/100 MS-06J 量産型ザク Ver.2.0 リアルタイプカラー仕様」登場！"],
+		"en": ["\"MG 1/100 MS-06J Mass Production Zaku Ver.2.0 Real Type Color Specification\" now available!"]
 	},
 	"images": {
 		"product": [
@@ -97,7 +93,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4852/",
-	"scales": [
-		"1/100"
+	"scales": ["1/100"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

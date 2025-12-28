@@ -62,12 +62,8 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"「MG 1/100 ウイングガンダム ゼロ(エンドレスワルツ版 パールミラーコーティングバージョン)」登場！"
-		],
-		"en": [
-			"\"MG 1/100 Wing Gundam Zero (Endless Waltz version Pearl Mirror Coating version)\" is now available!"
-		]
+		"ja": ["「MG 1/100 ウイングガンダム ゼロ(エンドレスワルツ版 パールミラーコーティングバージョン)」登場！"],
+		"en": ["\"MG 1/100 Wing Gundam Zero (Endless Waltz version Pearl Mirror Coating version)\" is now available!"]
 	},
 	"images": {
 		"product": [
@@ -80,7 +76,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4871/",
-	"scales": [
-		"1/100"
+	"scales": ["1/100"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

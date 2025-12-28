@@ -75,12 +75,8 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"HGUC 1/144 MSM-04 アッガイ  Ver.GFT トリコロールペイント　登場！"
-		],
-		"en": [
-			"HGUC 1/144 MSM-04 Acguy Ver.GFT tricolor paint now available!"
-		]
+		"ja": ["HGUC 1/144 MSM-04 アッガイ  Ver.GFT トリコロールペイント　登場！"],
+		"en": ["HGUC 1/144 MSM-04 Acguy Ver.GFT tricolor paint now available!"]
 	},
 	"images": {
 		"product": [
@@ -103,7 +99,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4786/",
-	"scales": [
-		"1/144"
+	"scales": ["1/144"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

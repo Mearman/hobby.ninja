@@ -69,12 +69,8 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"「MG 1/100 GAT-X207 ブリッツガンダム ミラージュコロイド（クリアーVer.）」登場！"
-		],
-		"en": [
-			"\"MG 1/100 GAT-X207 Blitz Gundam Mirage Colloid (Clear Ver.)\" now available!"
-		]
+		"ja": ["「MG 1/100 GAT-X207 ブリッツガンダム ミラージュコロイド（クリアーVer.）」登場！"],
+		"en": ["\"MG 1/100 GAT-X207 Blitz Gundam Mirage Colloid (Clear Ver.)\" now available!"]
 	},
 	"images": {
 		"product": [
@@ -92,7 +88,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4890/",
-	"scales": [
-		"1/100"
+	"scales": ["1/100"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

@@ -75,12 +75,8 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"HGUC 1/144 ユニコーンガンダム3号機フェネクス type RC (デストロイモード) Ver.GFT シルバー登場！"
-		],
-		"en": [
-			"HGUC 1/144 Unicorn Gundam Unit 3 Phenex type RC (Destroy Mode) Ver.GFT Silver now available!"
-		]
+		"ja": ["HGUC 1/144 ユニコーンガンダム3号機フェネクス type RC (デストロイモード) Ver.GFT シルバー登場！"],
+		"en": ["HGUC 1/144 Unicorn Gundam Unit 3 Phenex type RC (Destroy Mode) Ver.GFT Silver now available!"]
 	},
 	"images": {
 		"product": [
@@ -103,7 +99,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4792/",
-	"scales": [
-		"1/144"
+	"scales": ["1/144"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

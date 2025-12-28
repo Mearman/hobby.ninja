@@ -62,12 +62,8 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"「MG 1/100 RX-78-3 G-3ガンダム Ver.ONE YEAR WAR 0079」登場！"
-		],
-		"en": [
-			"\"MG 1/100 RX-78-3 G-3Gundam Ver.ONE YEAR WAR 0079\" is now available!"
-		]
+		"ja": ["「MG 1/100 RX-78-3 G-3ガンダム Ver.ONE YEAR WAR 0079」登場！"],
+		"en": ["\"MG 1/100 RX-78-3 G-3Gundam Ver.ONE YEAR WAR 0079\" is now available!"]
 	},
 	"images": {
 		"product": [
@@ -85,7 +81,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4856/",
-	"scales": [
-		"1/100"
+	"scales": ["1/100"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

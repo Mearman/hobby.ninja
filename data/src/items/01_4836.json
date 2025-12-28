@@ -69,12 +69,8 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"「PG 1/60MS-06S シャア専用ザク フルカラーコーティングバージョン」登場！"
-		],
-		"en": [
-			"\"PG 1/60MS-06S Char's Zaku full color coating version\" now available!"
-		]
+		"ja": ["「PG 1/60MS-06S シャア専用ザク フルカラーコーティングバージョン」登場！"],
+		"en": ["\"PG 1/60MS-06S Char's Zaku full color coating version\" now available!"]
 	},
 	"images": {
 		"product": [
@@ -87,7 +83,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4836/",
-	"scales": [
-		"1/60"
+	"scales": ["1/60"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

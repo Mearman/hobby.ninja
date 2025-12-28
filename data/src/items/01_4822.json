@@ -69,9 +69,7 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"HGUC 1/144 ペイルライダー（陸戦重装備仕様）HADES MODE エクストラフィニッシュVer.登場！"
-		],
+		"ja": ["HGUC 1/144 ペイルライダー（陸戦重装備仕様）HADES MODE エクストラフィニッシュVer.登場！"],
 		"en": [
 			"HGUC 1/144 Pale Rider (Land Combat Heavy Equipment Specification) HADES MODE Extra Finish Ver. is now available!"
 		]
@@ -92,7 +90,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4822/",
-	"scales": [
-		"1/144"
+	"scales": ["1/144"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

@@ -75,12 +75,8 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"HGUC 1/144 ユニコーンガンダム1号機&2号機 Ver.GFT [ストライクス オダイバセット]登場！"
-		],
-		"en": [
-			"HGUC 1/144 Unicorn Gundam Unit 1 & Unit 2 Ver.GFT [Strikes Odaiba Set] now available!"
-		]
+		"ja": ["HGUC 1/144 ユニコーンガンダム1号機&2号機 Ver.GFT [ストライクス オダイバセット]登場！"],
+		"en": ["HGUC 1/144 Unicorn Gundam Unit 1 & Unit 2 Ver.GFT [Strikes Odaiba Set] now available!"]
 	},
 	"images": {
 		"product": [
@@ -103,7 +99,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4779/",
-	"scales": [
-		"1/144"
+	"scales": ["1/144"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

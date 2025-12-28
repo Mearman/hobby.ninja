@@ -69,12 +69,8 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"HG 1/144 RX-78-2 GUNDAM Ver.G30th グリーン東京プロジェクト登場！"
-		],
-		"en": [
-			"HG 1/144 RX-78-2 GUNDAM Ver.G30th Green Tokyo Project is here!"
-		]
+		"ja": ["HG 1/144 RX-78-2 GUNDAM Ver.G30th グリーン東京プロジェクト登場！"],
+		"en": ["HG 1/144 RX-78-2 GUNDAM Ver.G30th Green Tokyo Project is here!"]
 	},
 	"images": {
 		"product": [
@@ -97,7 +93,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4948/",
-	"scales": [
-		"1/144"
+	"scales": ["1/144"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

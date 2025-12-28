@@ -62,12 +62,8 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"HGUC 1/144 G-3ガンダム登場！"
-		],
-		"en": [
-			"HGUC 1/144 G-3 Gundam is here!"
-		]
+		"ja": ["HGUC 1/144 G-3ガンダム登場！"],
+		"en": ["HGUC 1/144 G-3 Gundam is here!"]
 	},
 	"images": {
 		"product": [
@@ -85,7 +81,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4819/",
-	"scales": [
-		"1/144"
+	"scales": ["1/144"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

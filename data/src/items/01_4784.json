@@ -63,12 +63,8 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"1/48 メガサイズモデル シャア専用ザク Ver.GFT　登場！"
-		],
-		"en": [
-			"1/48 Mega Size Model Char's Zaku Ver.GFT now available!"
-		]
+		"ja": ["1/48 メガサイズモデル シャア専用ザク Ver.GFT　登場！"],
+		"en": ["1/48 Mega Size Model Char's Zaku Ver.GFT now available!"]
 	},
 	"images": {
 		"product": [
@@ -91,7 +87,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4784/",
-	"scales": [
-		"1/48"
+	"scales": ["1/48"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

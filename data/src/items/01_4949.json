@@ -69,12 +69,8 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"MG 1/100 ザクII Ver.2.0 ア・バオア・クー防衛隊仕様登場！"
-		],
-		"en": [
-			"MG 1/100 Zaku II Ver.2.0 A Baoa Ku Defense Force specification now available!"
-		]
+		"ja": ["MG 1/100 ザクII Ver.2.0 ア・バオア・クー防衛隊仕様登場！"],
+		"en": ["MG 1/100 Zaku II Ver.2.0 A Baoa Ku Defense Force specification now available!"]
 	},
 	"images": {
 		"product": [
@@ -98,7 +94,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4949/",
-	"scales": [
-		"1/100"
+	"scales": ["1/100"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

@@ -69,12 +69,8 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"「MG 1/100 デスティニーガンダム クリアカラーバージョン」登場！"
-		],
-		"en": [
-			"\"MG 1/100 Destiny Gundam Clear Color Version\" now available!"
-		]
+		"ja": ["「MG 1/100 デスティニーガンダム クリアカラーバージョン」登場！"],
+		"en": ["\"MG 1/100 Destiny Gundam Clear Color Version\" now available!"]
 	},
 	"images": {
 		"product": [
@@ -92,7 +88,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4862/",
-	"scales": [
-		"1/100"
+	"scales": ["1/100"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

@@ -69,12 +69,8 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"SD RX-78-2 ガンダム Ver.G30th REAL GRADE 1/1 GUNDAM PROJECT登場！"
-		],
-		"en": [
-			"SD RX-78-2 Gundam Ver.G30th REAL GRADE 1/1 GUNDAM PROJECT is now available!"
-		]
+		"ja": ["SD RX-78-2 ガンダム Ver.G30th REAL GRADE 1/1 GUNDAM PROJECT登場！"],
+		"en": ["SD RX-78-2 Gundam Ver.G30th REAL GRADE 1/1 GUNDAM PROJECT is now available!"]
 	},
 	"images": {
 		"product": [
@@ -102,7 +98,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4951/",
-	"scales": [
-		"1/1"
+	"scales": ["1/1"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

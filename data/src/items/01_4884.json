@@ -69,12 +69,8 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": [
-			"「MG 1/100 MSZ-006 Zガンダム Ver.2.0 エクストラフィニッシュVer.」登場！"
-		],
-		"en": [
-			"\"MG 1/100 MSZ-006 ZGundam Ver.2.0 Extra Finish Ver.\" now available!"
-		]
+		"ja": ["「MG 1/100 MSZ-006 Zガンダム Ver.2.0 エクストラフィニッシュVer.」登場！"],
+		"en": ["\"MG 1/100 MSZ-006 ZGundam Ver.2.0 Extra Finish Ver.\" now available!"]
 	},
 	"images": {
 		"product": [
@@ -87,7 +83,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4884/",
-	"scales": [
-		"1/100"
+	"scales": ["1/100"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

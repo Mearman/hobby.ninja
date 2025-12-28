@@ -62,12 +62,8 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"「1/60 ガンダムエクシア クリアカラーバージョン」登場！"
-		],
-		"en": [
-			"\"1/60 Gundam Exia Clear Color Version\" now available!"
-		]
+		"ja": ["「1/60 ガンダムエクシア クリアカラーバージョン」登場！"],
+		"en": ["\"1/60 Gundam Exia Clear Color Version\" now available!"]
 	},
 	"images": {
 		"product": [
@@ -90,7 +86,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4848/",
-	"scales": [
-		"1/60"
+	"scales": ["1/60"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

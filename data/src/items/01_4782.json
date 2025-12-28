@@ -69,12 +69,8 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"1/48 メガサイズモデル ガンダム Ver.GFT　登場！"
-		],
-		"en": [
-			"1/48 Mega Size Model Gundam Ver.GFT is now available!"
-		]
+		"ja": ["1/48 メガサイズモデル ガンダム Ver.GFT　登場！"],
+		"en": ["1/48 Mega Size Model Gundam Ver.GFT is now available!"]
 	},
 	"images": {
 		"product": [
@@ -97,7 +93,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4782/",
-	"scales": [
-		"1/48"
+	"scales": ["1/48"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }

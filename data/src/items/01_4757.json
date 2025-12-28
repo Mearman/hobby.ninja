@@ -75,12 +75,8 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": [
-			"HGPG 1/144 量産型プチッガイ登場！"
-		],
-		"en": [
-			"HGPG 1/144 mass-produced Petit'gguy now available!"
-		]
+		"ja": ["HGPG 1/144 量産型プチッガイ登場！"],
+		"en": ["HGPG 1/144 mass-produced Petit'gguy now available!"]
 	},
 	"images": {
 		"product": [
@@ -98,7 +94,12 @@
 		"instructions": []
 	},
 	"sourceUrl": "https://bandai-hobby.net/item/01_4757/",
-	"scales": [
-		"1/144"
+	"scales": ["1/144"],
+	"tags": [
+		{
+			"modifier": "event",
+			"ja": "イベント",
+			"en": "EVENT"
+		}
 	]
 }
