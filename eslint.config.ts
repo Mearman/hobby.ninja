@@ -71,6 +71,10 @@ export default [
 			"apps/web-app/**",
 			"data/**",
 			"**/*.d.ts",
+			// Files not included in TypeScript projects - causes parsing errors
+			"specs/**",
+			"scripts/*.js",
+			"packages/cli/tests/**",
 		],
 	},
 
@@ -797,8 +801,8 @@ export default [
 	{
 		// CLI tools and scripts need console output and emojis for user feedback
 		files: [
-			"packages/cli/**/*.ts",
-			"packages/scrapers/**/*.ts",
+			"packages/cli/**/*.{ts,tsx}",
+			"packages/scrapers/**/*.{ts,tsx}",
 			"tools/scripts/**/*.ts",
 			"scripts/**/*.ts",
 			"data/scripts/**/*.ts",
@@ -809,6 +813,7 @@ export default [
 			"no-emoji/no-emoji": "off",
 			"unicorn/no-process-exit": "off",
 			"unicorn/prefer-module": "off", // Allow require.main === module pattern
+			"unicorn/filename-case": "off", // CLI components use PascalCase
 			// CLI and scrapers have internal types/utils - relative imports within same package are valid
 			// The global no-restricted-imports rule is for cross-package imports only
 			"no-restricted-imports": "off",
