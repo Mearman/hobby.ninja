@@ -133,9 +133,9 @@ function CollectionItemCard({
 							{dbItem && getNodePrimaryGrade(dbItem) && (
 								<Badge size="sm">{getNodePrimaryGrade(dbItem)}</Badge>
 							)}
-							{dbItem?.scale && (
-								<Badge size="sm" variant="outline">{dbItem.scale}</Badge>
-							)}
+							{dbItem?.scales && dbItem.scales.length > 0 && dbItem.scales.map(scale => (
+								<Badge key={scale} size="sm" variant="outline">{scale}</Badge>
+							))}
 							<Badge
 								size="sm"
 								color={item.status === "completed" ? "green" : "blue"}
@@ -196,7 +196,7 @@ function CollectionItemCard({
 
 						<Group gap="xs">
 							{dbItem && getNodePrimaryGrade(dbItem) && <Text size="sm">{getNodePrimaryGrade(dbItem)}</Text>}
-							{dbItem?.scale && <Text size="sm">{dbItem.scale}</Text>}
+							{dbItem?.scales && dbItem.scales.length > 0 && <Text size="sm">{dbItem.scales.join(", ")}</Text>}
 						</Group>
 
 						<Menu shadow="md" width={MENU_WIDTH}>

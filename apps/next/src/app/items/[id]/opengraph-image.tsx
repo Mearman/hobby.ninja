@@ -100,7 +100,7 @@ export default async function Image({ params }: Props) {
 	const imageUrl = rawImageUrl ? await validateImageUrl(rawImageUrl) : null;
 	const brand = item.brands[0]?.name;
 	const grade = item.primaryGrade;
-	const scale = item.scale;
+	const scales = item.scales;
 
 	return new ImageResponse(
 		(
@@ -220,8 +220,9 @@ export default async function Image({ params }: Props) {
 								{grade}
 							</div>
 						)}
-						{scale && (
+						{scales.map((scale, index) => (
 							<div
+								key={index}
 								style={{
 									backgroundColor: "#f76707",
 									color: "#fff",
@@ -233,7 +234,7 @@ export default async function Image({ params }: Props) {
 							>
 								{scale}
 							</div>
-						)}
+						))}
 					</div>
 
 					{/* Bottom accent bar */}

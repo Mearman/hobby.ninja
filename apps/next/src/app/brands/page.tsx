@@ -108,7 +108,7 @@ function processBrandsWithStats(brandsData: Brand[], itemsData: EnrichedItem[]):
 					stats.prices.push(item.price.amount);
 				}
 				if (item.gradeName) stats.grades.add(item.gradeName);
-				if (item.scale) stats.scales.add(item.scale);
+				if (item.scaleName) stats.scales.add(item.scaleName);
 				if (item.categoryName) stats.categories.add(item.categoryName);
 				if (item.seriesName) stats.series.add(item.seriesName);
 			}

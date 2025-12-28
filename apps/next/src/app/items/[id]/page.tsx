@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: ItemPageProps): Promise<Metad
 		const brand = item.brands[0]?.name;
 		if (brand) parts.push(brand);
 		if (item.primaryGrade) parts.push(item.primaryGrade);
-		if (item.scale) parts.push(item.scale);
+		if (item.scales.length > 0) parts.push(item.scales.join(", "));
 		ogDescription = parts.length > 0 ? parts.join(" · ") : `Details about ${item.name}`;
 	}
 
@@ -159,9 +159,9 @@ export default async function ItemPage({ params }: ItemPageProps) {
 									{item.primaryGrade && (
 										<Badge color="green" variant="light">{item.primaryGrade}</Badge>
 									)}
-									{item.scale && (
-										<Badge color="orange" variant="light">{item.scale}</Badge>
-									)}
+									{item.scales.map(scale => (
+										<Badge key={scale} color="orange" variant="light">{scale}</Badge>
+									))}
 									{item.series.map(series => (
 										<Link key={series.id} href={`/series/${series.id}`} style={{ textDecoration: "none" }}>
 											<Badge color="violet" variant="light" style={{ cursor: "pointer" }}>

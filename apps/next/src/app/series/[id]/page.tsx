@@ -128,8 +128,8 @@ export default async function SeriesDetailPage({ params }: SeriesPageProps) {
 		if (grade) {
 			gradeDistribution.set(grade, (gradeDistribution.get(grade) ?? 0) + 1);
 		}
-		if (item.scale) {
-			scaleDistribution.set(item.scale, (scaleDistribution.get(item.scale) ?? 0) + 1);
+		for (const scale of item.scales) {
+			scaleDistribution.set(scale, (scaleDistribution.get(scale) ?? 0) + 1);
 		}
 		if (item.releaseDate?.year) {
 			minYear = Math.min(minYear, item.releaseDate.year);

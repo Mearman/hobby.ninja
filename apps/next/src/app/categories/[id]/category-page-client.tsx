@@ -84,7 +84,9 @@ export function CategoryPageClient({
 			}
 			const grade = getNodePrimaryGrade(item);
 			if (grade) grades.add(grade);
-			if (item.scale) scales.add(item.scale);
+			for (const scale of item.scales) {
+				scales.add(scale);
+			}
 			for (const s of item.series) {
 				series.add(s.id);
 			}
