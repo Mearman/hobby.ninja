@@ -1,55 +1,45 @@
 {
 	"name": "scripts",
-	"$schema": "../../node_modules/nx/schemas/project-schema.json",
-	"sourceRoot": "tools/scripts",
+	"$schema": "../../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "scripts/tools/scripts",
 	"projectType": "library",
 	"targets": {
 		"typecheck": {
 			"executor": "@nx/js:tsc",
 			"options": {
-				"tsConfig": "tools/scripts/tsconfig.json",
-				"main": "tools/scripts/index.ts",
+				"tsConfig": "scripts/tools/scripts/tsconfig.json",
+				"main": "scripts/tools/scripts/index.ts",
 				"outputPath": "dist/tools/scripts",
 				"noEmit": true
 			},
 			"cache": true,
-			"inputs": [
-				"{projectRoot}/**/*.ts",
-				"{projectRoot}/tsconfig.json",
-				"{workspaceRoot}/tsconfig.base.json"
-			]
+			"inputs": ["{projectRoot}/**/*.ts", "{projectRoot}/tsconfig.json", "{workspaceRoot}/tsconfig.base.json"]
 		},
 		"lint": {
 			"executor": "@nx/eslint:lint",
 			"outputs": ["{options.outputFile}"],
 			"cache": true,
 			"options": {
-				"lintFilePatterns": ["tools/scripts/**/*.ts"]
+				"lintFilePatterns": ["scripts/tools/scripts/**/*.ts"]
 			}
 		},
 		"count-tokens": {
 			"executor": "nx:run-commands",
 			"options": {
 				"command": "npx tsx count-markdown-tokens.ts",
-				"cwd": "tools/scripts"
+				"cwd": "scripts/tools/scripts"
 			},
 			"cache": true,
-			"inputs": [
-				"{workspaceRoot}/**/*.md"
-			]
+			"inputs": ["{workspaceRoot}/**/*.md"]
 		},
 		"check-claude-tokens": {
 			"executor": "nx:run-commands",
 			"options": {
-				"command": "npx tsx tools/scripts/count-claude-tokens.ts",
+				"command": "npx tsx scripts/tools/scripts/count-claude-tokens.ts",
 				"cwd": "."
 			},
 			"cache": true,
-			"inputs": [
-				"{workspaceRoot}/CLAUDE.md",
-				"{workspaceRoot}/README.md",
-				"{workspaceRoot}/.specify/memory/**/*.md"
-			]
+			"inputs": ["{workspaceRoot}/CLAUDE.md", "{workspaceRoot}/README.md", "{workspaceRoot}/.specify/memory/**/*.md"]
 		}
 	},
 	"tags": ["type:tooling", "scope:scripts"]

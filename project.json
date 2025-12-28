@@ -32,7 +32,7 @@
 			"options": {
 				"tsConfigPath": "./tsconfig.json",
 				"noEmit": true,
-				"main": "tools/scripts/index.ts",
+				"main": "scripts/tools/scripts/index.ts",
 				"outputPath": "dist/root"
 			},
 			"inputs": ["default", "{projectRoot}/*.config.ts"],
