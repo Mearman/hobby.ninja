@@ -507,7 +507,7 @@ async function translateManualItem(
 		}
 
 		// Translate series if not already translated
-		if (manual.series?.ja && !manual.series.en) {
+		if (manual.series.ja && !manual.series.en) {
 			try {
 				const result = await translator.translateText(manual.series.ja, "en", "ja");
 				manual.series.en = result.translated;
