@@ -1,8 +1,8 @@
 "use client";
 
-import { ActionIcon, Box, Group, Stack, Text, Title, Tooltip, UnstyledButton } from "@mantine/core";
+import { Box, Group, Stack, Text, Title, UnstyledButton } from "@mantine/core";
 import { useDisclosure, useElementSize } from "@mantine/hooks";
-import { IconChevronDown, IconChevronUp, IconX } from "@tabler/icons-react";
+import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
 import React, { useMemo, useRef, useState } from "react";
 
 interface CollapsibleGridProps {
@@ -17,8 +17,10 @@ interface CollapsibleGridProps {
 	expanded?: boolean;
 	/** Callback when expanded state changes */
 	onExpandedChange?: (expanded: boolean) => void;
-	/** Callback to clear selections for this filter type */
+	/** Callback to clear all selections for this filter type */
 	onClear?: () => void;
+	/** Callback to select all items for this filter type */
+	onSelectAll?: () => void;
 	/** Optional element to render in the header (e.g., sort toggle) */
 	headerRight?: React.ReactNode;
 }
@@ -37,6 +39,7 @@ export function CollapsibleGrid({
 	expanded: controlledExpanded,
 	onExpandedChange,
 	onClear,
+	onSelectAll,
 	headerRight,
 }: CollapsibleGridProps): React.ReactElement {
 	const [internalExpanded, { toggle: internalToggle }] = useDisclosure(false);
@@ -117,26 +120,22 @@ export function CollapsibleGrid({
 							{title}
 						</Title>
 					)}
-					{selectedCount > 0 && (
-						<Group gap={4}>
-							<Text size="sm" c="blue" fw={500}>
-								({selectedCount} selected)
-							</Text>
-							{onClear && (
-								<Tooltip label={`Clear ${title.toLowerCase()}`}>
-									<ActionIcon
-										variant="subtle"
-										color="gray"
-										size="xs"
-										onClick={onClear}
-									>
-										<IconX size={12} />
-									</ActionIcon>
-								</Tooltip>
-							)}
-						</Group>
-					)}
 					{headerRight}
+					{onClear != null && onSelectAll != null && (
+						<UnstyledButton
+							onClick={selectedCount === totalCount ? onClear : onSelectAll}
+							style={{ cursor: "pointer" }}
+						>
+							<Text size="sm" c="dimmed" fw={500}>
+								{selectedCount === totalCount ? "Select none" : "Select all"}
+							</Text>
+						</UnstyledButton>
+					)}
+					{selectedCount > 0 && (
+						<Text size="sm" c="blue" fw={500}>
+							({selectedCount} selected)
+						</Text>
+					)}
 				</Group>
 				{showExpandButton && (
 					<UnstyledButton onClick={toggle} style={{ cursor: "pointer" }}>

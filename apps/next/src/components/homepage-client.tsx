@@ -159,6 +159,39 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 		setFilters((prev) => ({ ...prev, years: [] }));
 	}, []);
 
+	// Select all callbacks
+	const selectAllCategories = useCallback(() => {
+		const allIds = categories.map((c) => c.id);
+		setFilters((prev) => ({ ...prev, categories: [...allIds, OTHER_FILTER_ID] }));
+	}, [categories]);
+
+	const selectAllSeries = useCallback(() => {
+		const allIds = series.map((s) => s.id);
+		setFilters((prev) => ({ ...prev, series: [...allIds, OTHER_FILTER_ID] }));
+	}, [series]);
+
+	const selectAllBrands = useCallback(() => {
+		const allIds = displayBrands.map((b) => b.id);
+		setFilters((prev) => ({ ...prev, brands: [...allIds, OTHER_FILTER_ID] }));
+	}, [displayBrands]);
+
+	const selectAllGrades = useCallback(() => {
+		const allIds = grades.map((g) => g.id);
+		setFilters((prev) => ({ ...prev, grades: [...allIds, OTHER_FILTER_ID] }));
+	}, [grades]);
+
+	const selectAllScales = useCallback(() => {
+		const allIds = scales.map((s) => s.id);
+		setFilters((prev) => ({ ...prev, scales: [...allIds, OTHER_FILTER_ID] }));
+	}, [scales]);
+
+	const selectAllYears = useCallback(() => {
+		const allIds = years.map((y) => y.id);
+		// Only include OTHER_FILTER_ID if there are items without years
+		const hasOther = items.some((item) => !item.releaseDate?.year || item.releaseDate.year <= 0);
+		setFilters((prev) => ({ ...prev, years: hasOther ? [...allIds, OTHER_FILTER_ID] : allIds }));
+	}, [years, items]);
+
 	// Toggle all grades in a family (select/deselect entire family)
 	// Also handles auto-expand when selecting, auto-collapse when deselecting
 	const toggleGradeFamily = useCallback((rootId: string) => {
@@ -393,6 +426,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 						expanded={expandedSections.categories}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, categories: exp })); }}
 						onClear={clearCategories}
+						onSelectAll={selectAllCategories}
 						headerRight={
 							<Tooltip label={sortModes.categories === "count" ? SORT_BY_NAME : SORT_BY_COUNT}>
 								<ActionIcon
@@ -439,6 +473,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 						expanded={expandedSections.grades}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, grades: exp })); }}
 						onClear={clearGrades}
+						onSelectAll={selectAllGrades}
 						headerRight={
 							<Tooltip label={sortModes.grades === "default" ? SORT_BY_COUNT : "Default order"}>
 								<ActionIcon
@@ -606,6 +641,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 						expanded={expandedSections.brands}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, brands: exp })); }}
 						onClear={clearBrands}
+						onSelectAll={selectAllBrands}
 						headerRight={
 							<Tooltip label={sortModes.brands === "count" ? SORT_BY_NAME : SORT_BY_COUNT}>
 								<ActionIcon
@@ -650,6 +686,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 						totalCount={series.length + 1}
 						selectedCount={filters.series.length}
 						onClear={clearSeries}
+						onSelectAll={selectAllSeries}
 						expanded={expandedSections.series}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, series: exp })); }}
 						headerRight={
@@ -698,6 +735,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 						expanded={expandedSections.scales}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, scales: exp })); }}
 						onClear={clearScales}
+						onSelectAll={selectAllScales}
 						headerRight={
 							<Tooltip label={sortModes.scales === "count" ? "Sort by size" : SORT_BY_COUNT}>
 								<ActionIcon
@@ -743,6 +781,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 						expanded={expandedSections.years}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, years: exp })); }}
 						onClear={clearYears}
+						onSelectAll={selectAllYears}
 						headerRight={
 							<Tooltip label={sortModes.years === "date" ? SORT_BY_COUNT : "Sort by date"}>
 								<ActionIcon
