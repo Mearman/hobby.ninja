@@ -5,9 +5,12 @@
  */
 
 import { promises as fs } from "node:fs";
-import { join } from "node:path";
+import path from "node:path";
 
-interface DownloaderOptions {
+/** User agent for HTTP requests */
+const USER_AGENT = "Mozilla/5.0 (compatible; ManualDownloader/1.0)";
+
+export interface DownloaderOptions {
   startId?: number;
   endId?: number;
   url?: string;
@@ -51,7 +54,7 @@ export class Downloader {
 
 	constructor(outputDir = "data/bandai/manuals") {
 		// Start fast
-		this.indexPath = join(outputDir, "index.json");
+		this.indexPath = path.join(outputDir, "index.json");
 		this.index = {
 			valid: {},
 			invalidRanges: [],
@@ -67,14 +70,14 @@ export class Downloader {
 	private async loadIndex(): Promise<void> {
 		try {
 			const data = await fs.readFile(this.indexPath, "utf8");
-			const parsed = JSON.parse(data);
+			const parsed: unknown = JSON.parse(data);
 
 			// Check if this is the old format (has direct id keys)
 			if (this.isOldIndexFormat(parsed)) {
 				this.index = this.migrateOldIndexToNewFormat(parsed);
 				console.log(`🔄 Migrated old index format (${Object.keys(parsed).length} entries) to compact format`);
 			} else {
-				this.index = parsed;
+				this.index = parsed as CompactManualIndex;
 			}
 		} catch {
 			// Index doesn't exist yet, start with empty
@@ -91,9 +94,11 @@ export class Downloader {
 	/**
    * Check if index is in old format
    */
-	private isOldIndexFormat(data: any): boolean {
+	private isOldIndexFormat(data: unknown): data is Record<string, IndexEntry> {
 		// Old format has direct id keys and no 'valid'/'invalidRanges' structure
-		return typeof data === "object" && !data.valid && !data.invalidRanges;
+		if (typeof data !== "object" || data === null) return false;
+		const record = data as Record<string, unknown>;
+		return !("valid" in record) && !("invalidRanges" in record);
 	}
 
 	/**
@@ -110,7 +115,7 @@ export class Downloader {
 
 		const sortedIds = Object.keys(oldIndex)
 			.map(id => Number.parseInt(id, 10))
-			.sort((a, b) => a - b);
+			.toSorted((a, b) => a - b);
 
 		let currentInvalidRange: number[] | null = null;
 
@@ -183,7 +188,7 @@ export class Downloader {
 			await fs.writeFile(this.indexPath, JSON.stringify(this.index, null, 2), "utf8");
 			console.log(`   ✅ Index saved successfully`);
 		} catch (error) {
-			console.warn(`⚠️  Failed to save index: ${error}`);
+			console.warn(`⚠️  Failed to save index: ${error instanceof Error ? error.message : String(error)}`);
 		}
 	}
 
@@ -192,8 +197,10 @@ export class Downloader {
    */
 	private isIdIndexed(id: number): IndexEntry | null {
 		// Check valid entries first
-		if (this.index.valid[id.toString()]) {
-			return this.index.valid[id.toString()];
+		const idKey = id.toString();
+		const validEntry = this.index.valid[idKey] as IndexEntry | undefined;
+		if (validEntry !== undefined) {
+			return validEntry;
 		}
 
 		// Check if ID falls within any invalid range
@@ -362,7 +369,7 @@ export class Downloader {
 		if (this.index.invalidSingles.length === 0) return;
 
 		// Sort singles for easier merging
-		const sortedSingles = [...this.index.invalidSingles].sort((a, b) => a - b);
+		const sortedSingles = [...this.index.invalidSingles].toSorted((a, b) => a - b);
 		console.log(`   🔍 Sorted singles: [${sortedSingles.join(", ")}]`);
 
 		const newRanges: InvalidRange[] = [];
@@ -451,13 +458,13 @@ export class Downloader {
 	}
 
 	async download(options: DownloaderOptions = {}) {
-		const startId = options.startId || 1;
-		const endId = options.endId || 10_000;
-		const baseUrl = options.url || "https://manual.bandai-hobby.net/menus/detail/";
-		const outputDir = options.output || "data/bandai/manuals";
+		const startId = options.startId ?? 1;
+		const endId = options.endId ?? 10_000;
+		const baseUrl = options.url ?? "https://manual.bandai-hobby.net/menus/detail/";
+		const outputDir = options.output ?? "data/bandai/manuals";
 
 		// Update constructor if output directory is different
-		this.indexPath = join(outputDir, "index.json");
+		this.indexPath = path.join(outputDir, "index.json");
 
 		console.log(`🚀 Smart download from ID ${startId} to ${endId}`);
 		console.log(`📁 Output: ${outputDir}`);
@@ -469,16 +476,14 @@ export class Downloader {
 		// Load existing index
 		await this.loadIndex();
 
-		// Ensure index properties are properly initialized
-		if (!this.index.invalidRanges) this.index.invalidRanges = [];
-		if (!this.index.invalidSingles) this.index.invalidSingles = [];
-
 		const validEntries = Object.keys(this.index.valid).length;
-		const invalidRanges = this.index.invalidRanges.length;
+		const invalidRangesCount = this.index.invalidRanges.length;
 		const invalidSingles = this.index.invalidSingles.length;
-		const totalInvalidIds = this.index.invalidRanges.reduce((sum, range) => sum + (range.end - range.start + 1), 0) + invalidSingles;
-		const rangeIds = invalidRanges > 0 ? this.index.invalidRanges.reduce((sum, r) => sum + (r.end - r.start + 1), 0) : 0;
-		console.log(`📊 Loaded compact index: ${validEntries} valid entries, ${invalidRanges} ranges (${rangeIds} IDs), ${invalidSingles} singles, ${this.index.totalChecked} total checked`);
+		let rangeIds = 0;
+		for (const range of this.index.invalidRanges) {
+			rangeIds += range.end - range.start + 1;
+		}
+		console.log(`📊 Loaded compact index: ${validEntries} valid entries, ${invalidRangesCount} ranges (${rangeIds} IDs), ${invalidSingles} singles, ${this.index.totalChecked} total checked`);
 
 		// Reset download tracking for this run
 		this.successCount = 0;
@@ -495,9 +500,9 @@ export class Downloader {
 				// Look for subdirectories that are numeric IDs
 				if (entry.isDirectory()) {
 					const id = Number.parseInt(entry.name, 10);
-					if (!isNaN(id)) {
+					if (!Number.isNaN(id)) {
 						// Check if the HTML file exists inside the subdirectory
-						const htmlPath = join(outputDir, entry.name, `${id}.html`);
+						const htmlPath = path.join(outputDir, entry.name, `${id}.html`);
 						try {
 							await fs.access(htmlPath);
 							existingFiles.add(id);
@@ -535,7 +540,7 @@ export class Downloader {
 				console.log(`🔍 Expanding around existing manuals...`);
 
 				// Use only boundary points of contiguous ranges as expansion seeds
-				const { boundaries: expansionSeeds, ranges } = this.getBoundarySeeds([...existingFiles]);
+				const { ranges } = this.getBoundarySeeds([...existingFiles]);
 
 				console.log(`📥 Discovering and downloading new manuals...`);
 				await this.expandAroundSamplesImmediate(baseUrl, startId, endId, ranges, existingFilesInRange, outputDir);
@@ -570,7 +575,7 @@ export class Downloader {
 			console.log(`\n🗺️  Exploring unexplored territories...`);
 			await this.exploreUnexploredTerritoriesImmediate(baseUrl, startId, endId, outputDir, existingFilesInRange);
 		} catch (error) {
-			console.error(`❌ CRITICAL ERROR during main discovery: ${error}`);
+			console.error(`❌ CRITICAL ERROR during main discovery: ${error instanceof Error ? error.message : String(error)}`);
 			throw error;
 		}
 
@@ -605,11 +610,12 @@ export class Downloader {
 			range.start <= endId && range.end >= startId,
 		);
 
-		const invalidIdsInRanges = invalidRangesInRange.reduce((sum, range) => {
+		let invalidIdsInRanges = 0;
+		for (const range of invalidRangesInRange) {
 			const overlapStart = Math.max(range.start, startId);
 			const overlapEnd = Math.min(range.end, endId);
-			return sum + Math.max(0, overlapEnd - overlapStart + 1);
-		}, 0);
+			invalidIdsInRanges += Math.max(0, overlapEnd - overlapStart + 1);
+		}
 
 		const invalidSinglesInRange = this.index.invalidSingles.filter(id =>
 			id >= startId && id <= endId,
@@ -653,8 +659,14 @@ export class Downloader {
 		console.log(`   HTTP requests made: ${this.index.totalChecked.toLocaleString()}`);
 
 		if (gaps.length > 0) {
-			const totalGapSize = gaps.reduce((sum, gap) => sum + gap.size, 0);
-			const largestGap = gaps.reduce((max, gap) => gap.size > max.size ? gap : max, gaps[0]);
+			let totalGapSize = 0;
+			let largestGap = gaps[0];
+			for (const gap of gaps) {
+				totalGapSize += gap.size;
+				if (gap.size > largestGap.size) {
+					largestGap = gap;
+				}
+			}
 
 			console.log(`   Unexplored gaps: ${gaps.length} (${totalGapSize.toLocaleString()} IDs)`);
 			console.log(`   Largest gap: ${largestGap.start.toLocaleString()}-${largestGap.end.toLocaleString()} (${largestGap.size.toLocaleString()} IDs)`);
@@ -680,13 +692,13 @@ export class Downloader {
 
 		const boundaries: number[] = [];
 		const ranges: Array<{start: number, end: number}> = [];
-		sortedIds.sort((a, b) => a - b);
+		const orderedIds = sortedIds.toSorted((a, b) => a - b);
 
-		let rangeStart = sortedIds[0];
-		let prevId = sortedIds[0];
+		let rangeStart = orderedIds[0];
+		let prevId = orderedIds[0];
 
-		for (let i = 1; i < sortedIds.length; i++) {
-			const currentId = sortedIds[i];
+		for (let i = 1; i < orderedIds.length; i++) {
+			const currentId = orderedIds[i];
 
 			// Gap of more than 1 indicates end of contiguous range
 			if (currentId > prevId + 1) {
@@ -705,7 +717,7 @@ export class Downloader {
 
 		// Remove redundant boundaries when ranges are adjacent
 		const optimizedBoundaries = [];
-		const sortedBoundaries = [...new Set(boundaries)].sort((a, b) => a - b);
+		const sortedBoundaries = [...new Set(boundaries)].toSorted((a, b) => a - b);
 
 		for (let i = 0; i < sortedBoundaries.length; i++) {
 			const boundary = sortedBoundaries[i];
@@ -766,7 +778,7 @@ export class Downloader {
 			samples.push(endId);
 		}
 
-		return samples.sort((a, b) => a - b);
+		return samples.toSorted((a, b) => a - b);
 	}
 
 	/**
@@ -790,13 +802,13 @@ export class Downloader {
 			// Count invalid singles that fall within this chunk
 			const chunkInvalidSingles = this.index.invalidSingles.filter(id => id >= chunkStart && id <= chunkEnd);
 
-			const coveredIds = chunkValidIds.length +
-        chunkInvalidRanges.reduce((sum, range) => {
-        	const overlapStart = Math.max(range.start, chunkStart);
-        	const overlapEnd = Math.min(range.end, chunkEnd);
-        	return sum + Math.max(0, overlapEnd - overlapStart + 1);
-        }, 0) +
-        chunkInvalidSingles.length;
+			let coveredRangeIds = 0;
+			for (const range of chunkInvalidRanges) {
+				const overlapStart = Math.max(range.start, chunkStart);
+				const overlapEnd = Math.min(range.end, chunkEnd);
+				coveredRangeIds += Math.max(0, overlapEnd - overlapStart + 1);
+			}
+			const coveredIds = chunkValidIds.length + coveredRangeIds + chunkInvalidSingles.length;
 
 			const chunkSizeActual = chunkEnd - chunkStart + 1;
 			const coveragePercentage = (coveredIds / chunkSizeActual) * 100;
@@ -805,11 +817,7 @@ export class Downloader {
 			if (chunkStart >= 4000 && coveredIds > 0) {
 				console.log(`   📊 Chunk ${chunkStart}-${chunkEnd} coverage breakdown:`);
 				console.log(`      - Valid IDs: ${chunkValidIds.length}`);
-				console.log(`      - Invalid ranges: ${chunkInvalidRanges.length} (${chunkInvalidRanges.reduce((sum, range) => {
-					const overlapStart = Math.max(range.start, chunkStart);
-					const overlapEnd = Math.min(range.end, chunkEnd);
-					return sum + Math.max(0, overlapEnd - overlapStart + 1);
-				}, 0)} IDs)`);
+				console.log(`      - Invalid ranges: ${chunkInvalidRanges.length} (${coveredRangeIds} IDs)`);
 				console.log(`      - Invalid singles: ${chunkInvalidSingles.length}`);
 				console.log(`      - Total covered: ${coveredIds}/${chunkSizeActual} (${coveragePercentage.toFixed(1)}%)`);
 			}
@@ -831,7 +839,7 @@ export class Downloader {
 					continue; // Skip already known IDs
 				}
 
-				if (await this.testUrl(baseUrl + sample + "/")) {
+				if (await this.testUrl(`${baseUrl}${sample}/`)) {
 					foundAny = true;
 					found.push(sample);
 					console.log(`   ✅ Found valid ID in chunk: ${sample}`);
@@ -871,7 +879,7 @@ export class Downloader {
 						continue;
 					}
 
-					const isValid = await this.testUrl(baseUrl + id + "/");
+					const isValid = await this.testUrl(`${baseUrl}${id}/`);
 					if (isValid) {
 						found.push(id);
 						linearScanFound++;
@@ -993,7 +1001,7 @@ export class Downloader {
 		await this.saveIndex();
 
 		console.log(`\n   ✅ Binary search complete: discovered ${found.length} new manuals`);
-		return found.sort((a, b) => a - b);
+		return found.toSorted((a, b) => a - b);
 	}
 
 	/**
@@ -1003,7 +1011,7 @@ export class Downloader {
 		const gapSeeds: Array<{seed: number, gapStart: number, gapEnd: number}> = [];
 
 		// Sort ranges by start ID
-		const sortedRanges = [...ranges].sort((a, b) => a.start - b.start);
+		const sortedRanges = [...ranges].toSorted((a, b) => a.start - b.start);
 
 		// Find gaps between existing ranges
 		for (let i = 0; i < sortedRanges.length - 1; i++) {
@@ -1110,7 +1118,6 @@ export class Downloader {
 		// Binary search only gives us potential boundaries - verify each ID individually
 		const finalStart = Math.max(rangeStart, minId);
 		const finalEnd = Math.min(rangeEnd, maxId);
-		const rangeSize = finalEnd - finalStart + 1;
 
 		// Verify each ID in the potential range to prevent fake ranges
 		const range: number[] = [];
@@ -1167,11 +1174,10 @@ export class Downloader {
 			}
 		}
 
-		const totalChecks = checksMade + verificationChecks;
 		console.log(`   ✅ Gap analysis complete: ${checksMade} binary search + ${verificationChecks} verification checks, found ${range.length} valid manuals`);
 
 		if (range.length > 0) {
-			console.log(`   📍 Found range ${range[0]}-${range.at(-1)} (${range.length} manuals)`);
+			console.log(`   📍 Found range ${range[0]}-${String(range.at(-1))} (${range.length} manuals)`);
 		}
 
 		return range;
@@ -1187,7 +1193,7 @@ export class Downloader {
 			try {
 				await this.testUrlAndDownload(id, baseUrl, outputDir, existingFiles);
 			} catch (error) {
-				console.log(`   ❌ Error testing ID ${id}: ${error}`);
+				console.log(`   ❌ Error testing ID ${id}: ${error instanceof Error ? error.message : String(error)}`);
 				this.failCount++;
 			}
 
@@ -1220,13 +1226,13 @@ export class Downloader {
 			// Count invalid singles that fall within this chunk
 			const chunkInvalidSingles = this.index.invalidSingles.filter(id => id >= chunkStart && id <= chunkEnd);
 
-			const coveredIds = chunkValidIds.length +
-        chunkInvalidRanges.reduce((sum, range) => {
-        	const overlapStart = Math.max(range.start, chunkStart);
-        	const overlapEnd = Math.min(range.end, chunkEnd);
-        	return sum + Math.max(0, overlapEnd - overlapStart + 1);
-        }, 0) +
-        chunkInvalidSingles.length;
+			let coveredRangeIdsImm = 0;
+			for (const range of chunkInvalidRanges) {
+				const overlapStart = Math.max(range.start, chunkStart);
+				const overlapEnd = Math.min(range.end, chunkEnd);
+				coveredRangeIdsImm += Math.max(0, overlapEnd - overlapStart + 1);
+			}
+			const coveredIds = chunkValidIds.length + coveredRangeIdsImm + chunkInvalidSingles.length;
 
 			const chunkSizeActual = chunkEnd - chunkStart + 1;
 			const coveragePercentage = (coveredIds / chunkSizeActual) * 100;
@@ -1283,7 +1289,7 @@ export class Downloader {
 
 			checked.add(mid);
 			checksMade++;
-			if (await this.testUrl(baseUrl + mid + "/")) {
+			if (await this.testUrl(`${baseUrl}${mid}/`)) {
 				upperBound = mid - 1;
 			} else {
 				lowerBound = mid + 1;
@@ -1304,7 +1310,7 @@ export class Downloader {
 
 			checked.add(mid);
 			checksMade++;
-			if (await this.testUrl(baseUrl + mid + "/")) {
+			if (await this.testUrl(`${baseUrl}${mid}/`)) {
 				lowerBound = mid + 1;
 			} else {
 				upperBound = mid - 1;
@@ -1315,7 +1321,6 @@ export class Downloader {
 		// Binary search only gives us potential boundaries - verify each ID individually
 		const finalStart = Math.max(rangeStart, minId);
 		const finalEnd = Math.min(rangeEnd, maxId);
-		const rangeSize = finalEnd - finalStart + 1;
 
 		// Verify each ID in the potential range to prevent fake ranges
 		const range: number[] = [];
@@ -1347,7 +1352,7 @@ export class Downloader {
 			for (let id = finalStart; id <= finalEnd; id++) {
 				if (!existingFiles.has(id)) {
 					verificationChecks++;
-					if (await this.testUrl(baseUrl + id + "/")) {
+					if (await this.testUrl(`${baseUrl}${id}/`)) {
 						range.push(id);
 					}
 				}
@@ -1372,11 +1377,10 @@ export class Downloader {
 			}
 		}
 
-		const totalChecks = checksMade + verificationChecks;
 		console.log(`   ✅ Gap analysis complete: ${checksMade} binary search + ${verificationChecks} verification checks, found ${range.length} valid manuals`);
 
 		if (range.length > 0) {
-			console.log(`   📍 Found range ${range[0]}-${range.at(-1)} (${range.length} manuals)`);
+			console.log(`   📍 Found range ${range[0]}-${String(range.at(-1))} (${range.length} manuals)`);
 		}
 
 		return range;
@@ -1408,7 +1412,7 @@ export class Downloader {
 			const fetchOptions = {
 				method: "HEAD", // Fast check first
 				headers: {
-					"User-Agent": "Mozilla/5.0 (compatible; ManualDownloader/1.0)",
+					"User-Agent": USER_AGENT,
 				},
 				redirect: "manual" as RequestRedirect, // Don't follow redirects automatically
 			};
@@ -1424,7 +1428,7 @@ export class Downloader {
 				// If HEAD fails, try GET (some servers don't support HEAD)
 				const getResponse = await fetch(url, {
 					headers: {
-						"User-Agent": "Mozilla/5.0 (compatible; ManualDownloader/1.0)",
+						"User-Agent": USER_AGENT,
 						"Accept": "text/html,application/xhtml+xml;q=0.9,*/*;q=0.8",
 					},
 					redirect: "manual" as RequestRedirect, // Don't follow redirects automatically
@@ -1482,7 +1486,7 @@ export class Downloader {
 			const response = await fetch(url, {
 				method: "GET",
 				headers: {
-					"User-Agent": "Mozilla/5.0 (compatible; ManualDownloader/1.0)",
+					"User-Agent": USER_AGENT,
 					"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 				},
 			});
@@ -1492,11 +1496,11 @@ export class Downloader {
 
 				if (data.length > 1000 && (data.includes("<html") || data.includes("<!DOCTYPE"))) {
 					// Create subdirectory for this manual
-					const idDir = join(outputDir, id.toString());
+					const idDir = path.join(outputDir, id.toString());
 					await fs.mkdir(idDir, { recursive: true });
 
 					// Save HTML file inside subdirectory
-					const filePath = join(idDir, `${id}.html`);
+					const filePath = path.join(idDir, `${id}.html`);
 					await fs.writeFile(filePath, data, "utf8");
 
 					console.log(`\n✅ Downloaded: ${id}/${id}.html (${data.length.toLocaleString()} bytes)`);
@@ -1545,7 +1549,7 @@ export class Downloader {
 				return true;
 			}
 			// If indexed as valid but no file, download it
-			if (indexedEntry.isValid && !indexedEntry.hasFile) {
+			if (indexedEntry.isValid) {
 				const downloaded = await this.downloadManual(id, url, outputDir);
 				if (downloaded) {
 					this.successCount++;
@@ -1566,7 +1570,7 @@ export class Downloader {
 			const fetchOptions = {
 				method: "HEAD",
 				headers: {
-					"User-Agent": "Mozilla/5.0 (compatible; ManualDownloader/1.0)",
+					"User-Agent": USER_AGENT,
 				},
 				redirect: "manual" as RequestRedirect,
 			};
@@ -1582,7 +1586,7 @@ export class Downloader {
 				// If HEAD fails, try GET (some servers don't support HEAD)
 				const getResponse = await fetch(url, {
 					headers: {
-						"User-Agent": "Mozilla/5.0 (compatible; ManualDownloader/1.0)",
+						"User-Agent": USER_AGENT,
 						"Accept": "text/html,application/xhtml+xml;q=0.9,*/*;q=0.8",
 					},
 					redirect: "manual" as RequestRedirect,
@@ -1649,7 +1653,7 @@ export class Downloader {
 			// Maintenance pages
 			/メンテナンス中|under maintenance|一時的に利用できません/,
 			// Redirect to main site detection
-			/manual\.bandai-hobby\.net\/[\/]?$/i,
+			/manual\.bandai-hobby\.net\/?$/i,
 			// Generic redirect patterns
 			/top\.html|index\.html|\/$/i,
 		];
@@ -1707,8 +1711,8 @@ export class Downloader {
 
 					if (idStr.length === oldPadding && /^\d+$/.test(idStr)) {
 						const paddedId = idStr.padStart(newPadding, "0");
-						const oldPath = join(outputDir, file);
-						const newPath = join(outputDir, `${paddedId}.html`);
+						const oldPath = path.join(outputDir, file);
+						const newPath = path.join(outputDir, `${paddedId}.html`);
 
 						await fs.rename(oldPath, newPath);
 					}
@@ -1790,6 +1794,6 @@ INTELLIGENCE:
 		}
 	}
 
-	downloader.download(options).catch(console.error);
+	void downloader.download(options);
 }
 

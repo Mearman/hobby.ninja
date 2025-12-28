@@ -172,7 +172,7 @@ export function createDownloadSession(config: {
   sessionConfig: SessionConfiguration;
 }): DownloadSession {
 	const now = new Date().toISOString();
-	const sessionId = config.sessionId || generateSessionId();
+	const sessionId = config.sessionId ?? generateSessionId();
 
 	return {
 		sessionId,
@@ -268,7 +268,7 @@ export function isSessionComplete(session: DownloadSession): boolean {
  * Get session duration in human readable format
  */
 export function getFormattedDuration(session: DownloadSession): string {
-	const duration = session.duration ||
+	const duration = session.duration ??
     (session.endTime ?
     	new Date(session.endTime).getTime() - new Date(session.startTime).getTime() :
     	Date.now() - new Date(session.startTime).getTime()

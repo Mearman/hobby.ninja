@@ -20,7 +20,6 @@ export abstract class ManualDownloaderError extends Error {
 	public readonly type: ErrorInfo["type"];
 	public readonly code: string;
 	public readonly timestamp: string;
-	public readonly retryCount: number;
 	public readonly recoverable: boolean;
 	public readonly suggestedAction?: string;
 
@@ -36,16 +35,25 @@ export abstract class ManualDownloaderError extends Error {
 		this.type = type;
 		this.code = code;
 		this.timestamp = new Date().toISOString();
-		this.retryCount = 0;
 		this.recoverable = recoverable;
 		this.suggestedAction = suggestedAction;
 	}
+
+	/** Mutable retry count for internal tracking */
+	private _retryCount = 0;
 
 	/**
    * Increment retry count
    */
 	incrementRetry(): void {
-		(this as any).retryCount++;
+		this._retryCount++;
+	}
+
+	/**
+   * Get current retry count
+   */
+	get retryCount(): number {
+		return this._retryCount;
 	}
 
 	/**
@@ -104,9 +112,9 @@ export class FileSystemError extends ManualDownloaderError {
  */
 export class ValidationError extends ManualDownloaderError {
 	public readonly field?: string;
-	public readonly value?: any;
+	public readonly value?: unknown;
 
-	constructor(code: string, message: string, field?: string, value?: any) {
+	constructor(code: string, message: string, field?: string, value?: unknown) {
 		super("validation", code, message, false, "Fix input data and retry");
 		this.field = field;
 		this.value = value;
@@ -153,7 +161,7 @@ export const ErrorFactory = {
 	/**
    * Create validation error
    */
-	validation(code: string, message: string, field?: string, value?: any): ValidationError {
+	validation(code: string, message: string, field?: string, value?: unknown): ValidationError {
 		return new ValidationError(code, message, field, value);
 	},
 
@@ -196,7 +204,9 @@ export const ErrorFactory = {
 			return new NetworkError("UNKNOWN_ERROR", message, true);
 		}
 
-		return new NetworkError("UNKNOWN_ERROR", String(error || "Unknown error"), true);
+		// Handle non-Error unknown values
+		const errorMessage = typeof error === "string" ? error : "Unknown error";
+		return new NetworkError("UNKNOWN_ERROR", errorMessage, true);
 	},
 };
 

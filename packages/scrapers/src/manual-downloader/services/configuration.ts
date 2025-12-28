@@ -8,8 +8,7 @@
  * @since 2025-12-05
  */
 
-import { readFileSync, existsSync } from "node:fs";
-import { resolve } from "node:path";
+import { readFileSync, existsSync, writeFileSync } from "node:fs";
 
 import { ManualDownloaderConfig, SessionConfiguration } from "../types/types";
 
@@ -74,7 +73,7 @@ export class ConfigurationService {
 
 			// Load from file if provided
 			if (configPath && existsSync(configPath)) {
-				const configData: ConfigurationFile = JSON.parse(readFileSync(configPath, "utf8"));
+				const configData = JSON.parse(readFileSync(configPath, "utf8")) as ConfigurationFile;
 
 				if (configData.downloader) {
 					this.config = { ...this.config, ...configData.downloader };
@@ -100,7 +99,7 @@ export class ConfigurationService {
    * Apply environment variable overrides
    */
 	private applyEnvironmentOverrides(): void {
-		const overrides: Record<string, any> = {};
+		const overrides: Record<string, string | number | boolean> = {};
 
 		// Map environment variables to config keys
 		const envMappings: Record<string, string> = {
@@ -132,18 +131,23 @@ export class ConfigurationService {
 	/**
    * Parse environment variable value to appropriate type
    */
-	private parseEnvironmentValue(value: string): any {
-		// Try to parse as JSON first
+	private parseEnvironmentValue(value: string): string | number | boolean {
+		// Try to parse as JSON first for complex types
 		try {
-			return JSON.parse(value);
+			const parsed: unknown = JSON.parse(value);
+			if (typeof parsed === "string" || typeof parsed === "number" || typeof parsed === "boolean") {
+				return parsed;
+			}
 		} catch {
-			// If not JSON, determine type
-			if (value === "true") return true;
-			if (value === "false") return false;
-			if (/^\d+$/.test(value)) return Number.parseInt(value, 10);
-			if (/^\d*\.\d+$/.test(value)) return Number.parseFloat(value);
-			return value;
+			// Not valid JSON, continue with type detection
 		}
+
+		// Determine type from string
+		if (value === "true") return true;
+		if (value === "false") return false;
+		if (/^\d+$/.test(value)) return Number.parseInt(value, 10);
+		if (/^\d*\.\d+$/.test(value)) return Number.parseFloat(value);
+		return value;
 	}
 
 	/**
@@ -204,15 +208,15 @@ export class ConfigurationService {
 	/**
    * Get specific configuration value
    */
-	get<T>(key: keyof ManualDownloaderConfig): T {
-		return this.config[key] as T;
+	get(key: keyof ManualDownloaderConfig): ManualDownloaderConfig[keyof ManualDownloaderConfig] {
+		return this.config[key];
 	}
 
 	/**
    * Get session configuration value
    */
-	getSession<T>(key: keyof SessionConfiguration): T {
-		return this.sessionConfig[key] as T;
+	getSession(key: keyof SessionConfiguration): SessionConfiguration[keyof SessionConfiguration] {
+		return this.sessionConfig[key];
 	}
 
 	/**
@@ -252,7 +256,6 @@ export class ConfigurationService {
    * Save configuration to file
    */
 	saveToFile(filePath: string): void {
-		const { writeFileSync } = require("node:fs");
 		writeFileSync(filePath, this.exportToJson(), "utf8");
 	}
 }

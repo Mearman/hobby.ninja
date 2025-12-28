@@ -2,7 +2,7 @@
  * Simple CLI for Manual Downloader
  */
 
-import { Downloader } from "../downloader";
+import { Downloader, DownloaderOptions } from "../downloader";
 
 export class ManualDownloaderCLI {
 	private downloader: Downloader;
@@ -12,7 +12,7 @@ export class ManualDownloaderCLI {
 	}
 
 	async run(args: string[]): Promise<void> {
-		const options: any = {};
+		const options: DownloaderOptions = {};
 
 		for (let i = 0; i < args.length; i++) {
 			switch (args[i]) {
@@ -82,6 +82,4 @@ export async function main(): Promise<void> {
 	}
 }
 
-if (require.main === module) {
-	main();
-}
+await main();

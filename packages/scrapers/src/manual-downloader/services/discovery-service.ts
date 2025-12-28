@@ -7,8 +7,11 @@
 
 import { DiscoveryResult, GapPattern, IdValidationResult, RangeExpansionResult } from "../types/types";
 
-import { ErrorFactory, NetworkError } from "./errors";
+import { ErrorFactory } from "./errors";
 import { HttpClient } from "./http-client";
+
+/** Custom validation rule function */
+type ValidationRule = (id: number, response: unknown) => boolean;
 
 export interface DiscoveryOptions {
   startId?: number;
@@ -18,7 +21,7 @@ export interface DiscoveryOptions {
   minConfidence?: number;
   timeLimit?: number;
   stopOnFirstRange?: boolean;
-  customValidation?: any[];
+  customValidation?: ValidationRule[];
 }
 
 export interface GapDetectionOptions {
@@ -35,7 +38,7 @@ export interface ValidationOptions {
   concurrency?: number;
   cache?: boolean;
   timeout?: number;
-  customRules?: any[];
+  customRules?: ValidationRule[];
 }
 
 export interface ExpansionOptions {
@@ -61,12 +64,12 @@ export class DiscoveryService {
 
 	async discoverRange(baseUrl: string, options: DiscoveryOptions = {}): Promise<DiscoveryResult> {
 		this.startTime = Date.now();
+		const DEFAULT_START_ID = 652;
 		const {
-			startId = 652,
+			startId = DEFAULT_START_ID,
 			strategy = "adaptive",
 			detectGaps = true,
 			minConfidence = 0.8,
-			timeLimit = 300_000, // 5 minutes
 			stopOnFirstRange = false,
 		} = options;
 
@@ -119,7 +122,6 @@ export class DiscoveryService {
 			sampleSize = 10,
 			minGapSize = 1,
 			confidenceThreshold = 0.7,
-			validateBoundaries = true,
 		} = options;
 
 		try {
@@ -149,9 +151,7 @@ export class DiscoveryService {
 							currentGapStart = null;
 						}
 					} else {
-						if (currentGapStart === null) {
-							currentGapStart = point;
-						}
+						currentGapStart ??= point;
 					}
 				}
 
@@ -188,7 +188,6 @@ export class DiscoveryService {
 			parallel = true,
 			concurrency = 5,
 			cache = true,
-			timeout = 30_000,
 		} = options;
 
 		const startTime = Date.now();
@@ -208,6 +207,7 @@ export class DiscoveryService {
 						if (result.status === "fulfilled") {
 							results.push(result.value);
 						} else {
+							const errorReason = result.reason as Error | undefined;
 							results.push({
 								id: chunk[index],
 								isValid: false,
@@ -216,7 +216,7 @@ export class DiscoveryService {
 								contentLength: 0,
 								responseTime: 0,
 								fromCache: false,
-								error: result.reason?.message || "Unknown error",
+								error: errorReason?.message ?? "Unknown error",
 								confidence: 0,
 							});
 						}
@@ -259,13 +259,12 @@ export class DiscoveryService {
 	}
 
 	async expandRange(baseUrl: string, startId: number, options: ExpansionOptions): Promise<RangeExpansionResult> {
+		const DEFAULT_MAX_STEPS = 50;
 		const {
 			direction = "both",
-			maxSteps = 50,
+			maxSteps = DEFAULT_MAX_STEPS,
 			stepStrategy = "adaptive",
 			baseStepSize = 1,
-			validateIntermediate = true,
-			confidenceThreshold = 0.7,
 		} = options;
 
 		const startTime = Date.now();
@@ -358,8 +357,11 @@ export class DiscoveryService {
 		const cacheKey = `validate:${url}`;
 
 		// Check cache first
-		if (useCache && this.cache.has(cacheKey)) {
-			return { ...this.cache.get(cacheKey)!, fromCache: true };
+		if (useCache) {
+			const cached = this.cache.get(cacheKey);
+			if (cached) {
+				return { ...cached, fromCache: true };
+			}
 		}
 
 		const startTime = Date.now();
@@ -416,10 +418,10 @@ export class DiscoveryService {
 			points.push(minId + (i * step));
 		}
 
-		return points.sort((a, b) => a - b);
+		return points.toSorted((a, b) => a - b);
 	}
 
-	private calculateGapConfidence(gapSize: number, startId: number, endId: number): number {
+	private calculateGapConfidence(gapSize: number, _startId: number, _endId: number): number {
 		if (gapSize <= 5) return 0.9;
 		if (gapSize <= 20) return 0.7;
 		if (gapSize <= 50) return 0.4;
@@ -458,8 +460,8 @@ export class DiscoveryService {
 			case "adaptive": {
 				return step <= 5 ? baseSize : baseSize * 2;
 			}
-			case "linear":
 			default: {
+				// includes "linear" strategy
 				return baseSize;
 			}
 		}
@@ -495,7 +497,7 @@ export class DiscoveryService {
 		return (totalSteps / rangeSize) * 100; // gaps per 100 IDs
 	}
 
-	private calculateValidationConfidence(response: any): number {
+	private calculateValidationConfidence(response: { isValid: boolean; contentLength: number; statusCode: number }): number {
 		if (response.isValid) {
 			// High confidence for successful responses with content
 			return response.contentLength > 1000 ? 0.95 : 0.8;
@@ -505,7 +507,7 @@ export class DiscoveryService {
 		return response.statusCode === 404 ? 0.9 : 0.5;
 	}
 
-	getDiscoveryStats(): any {
+	getDiscoveryStats(): { totalOperations: number; cacheSize: number; lastUpdated: string } {
 		return {
 			totalOperations: this.cache.size,
 			cacheSize: this.cache.size,

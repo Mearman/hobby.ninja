@@ -79,14 +79,14 @@ export class HttpClient {
 
 		// Merge options with defaults
 		const mergedOptions = {
-			timeout: options.timeout || this.config.defaultTimeout,
+			timeout: options.timeout ?? this.config.defaultTimeout,
 			headers: {
 				...this.config.defaultHeaders,
-				"User-Agent": options.userAgent || this.config.userAgent,
+				"User-Agent": options.userAgent ?? this.config.userAgent,
 				...options.headers,
 			},
 			followRedirects: options.followRedirects !== false,
-			maxRedirects: options.maxRedirects || 5,
+			maxRedirects: options.maxRedirects ?? 5,
 			signal: null as AbortSignal | null,
 		};
 
@@ -112,7 +112,7 @@ export class HttpClient {
 
 				// Get response data (only for non-HEAD requests)
 				let data: T;
-				const isHeadRequest = (options as any).headersOnly;
+				const isHeadRequest = options.headersOnly ?? false;
 
 				if (isHeadRequest) {
 					// For HEAD requests, return empty string
@@ -150,7 +150,7 @@ export class HttpClient {
 		}
 
 		// All retries failed
-		throw lastError || new Error("Request failed after maximum retries");
+		throw lastError ?? new Error("Request failed after maximum retries");
 	}
 
 	/**

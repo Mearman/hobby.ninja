@@ -18,7 +18,7 @@ export interface LogEntry {
   level: LogLevel;
   message: string;
   timestamp: string;
-  context?: any;
+  context?: Record<string, unknown>;
   error?: ErrorInfo;
 }
 
@@ -67,28 +67,28 @@ export class LoggingService {
 	/**
    * Log debug message
    */
-	debug(message: string, context?: any): void {
+	debug(message: string, context?: Record<string, unknown>): void {
 		this.log("debug", message, context);
 	}
 
 	/**
    * Log info message
    */
-	info(message: string, context?: any): void {
+	info(message: string, context?: Record<string, unknown>): void {
 		this.log("info", message, context);
 	}
 
 	/**
    * Log warning message
    */
-	warn(message: string, context?: any): void {
+	warn(message: string, context?: Record<string, unknown>): void {
 		this.log("warn", message, context);
 	}
 
 	/**
    * Log error message
    */
-	error(message: string, error?: ErrorInfo | Error, context?: any): void {
+	error(message: string, error?: ErrorInfo | Error, context?: Record<string, unknown>): void {
 		const errorInfo = error instanceof Error ? this.errorToErrorInfo(error) : error;
 		this.log("error", message, context, errorInfo);
 	}
@@ -96,7 +96,7 @@ export class LoggingService {
 	/**
    * Generic log method
    */
-	private log(level: LogLevel, message: string, context?: any, error?: ErrorInfo): void {
+	private log(level: LogLevel, message: string, context?: Record<string, unknown>, error?: ErrorInfo): void {
 		const entry: LogEntry = {
 			level,
 			message,
@@ -219,7 +219,7 @@ export class LoggingService {
 	/**
    * Output log entry to file (simplified)
    */
-	private outputToFile(entry: LogEntry): void {
+	private outputToFile(_entry: LogEntry): void {
 		// In a real implementation, this would write to a file
 		// For now, just collect entries for potential file output
 		if (this.logEntries.length > 1000) {

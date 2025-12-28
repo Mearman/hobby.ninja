@@ -59,6 +59,22 @@ export interface SessionConfiguration {
   enableMetrics?: boolean;
 }
 
+/** Statistics for a download session */
+export interface SessionStats {
+  totalProcessed: number;
+  successCount: number;
+  failureCount: number;
+  bytesDownloaded: number;
+  averageResponseTime: number;
+}
+
+/** Checkpoint for resuming sessions */
+export interface SessionCheckpoint {
+  lastProcessedId: number;
+  timestamp: string;
+  recoveredFromError: boolean;
+}
+
 export interface DownloadSession {
   sessionId: string;
   startTime: string;
@@ -73,15 +89,15 @@ export interface DownloadSession {
   failedIds: number[];
   queuedIds: number[];
   config: SessionConfiguration;
-  stats: any;
-  checkpoint: any;
+  stats: SessionStats;
+  checkpoint: SessionCheckpoint;
 }
 
 export interface DiscoveryResult {
   minId: number;
   maxId: number;
   validIds: number[];
-  gaps: any[];
+  gaps: GapPattern[];
   confidence: number;
   discoveryDuration: number;
   idsTested: number;
@@ -153,6 +169,15 @@ export interface CLIOptions {
   maxRuntime?: number;
 }
 
+/** Output statistics for a CLI run */
+export interface CLIStatistics {
+  totalDownloaded: number;
+  totalFailed: number;
+  totalSkipped: number;
+  bytesDownloaded: number;
+  duration: number;
+}
+
 export interface CLIOutput {
   status: "success" | "error" | "warning";
   message: string;
@@ -160,9 +185,12 @@ export interface CLIOutput {
     session: DownloadSession;
     downloadedFiles: string[];
     errors: string[];
-    statistics: any;
+    statistics: CLIStatistics;
   };
-  error?: any;
+  error?: {
+    code: string;
+    message: string;
+  };
 }
 
 export interface ProgressEvent {
@@ -186,11 +214,61 @@ export interface ProgressEvent {
   message?: string;
 }
 
+/** Discovery service options */
+export interface DiscoveryServiceOptions {
+  startId?: number;
+  maxRange?: number;
+  strategy?: "linear" | "exponential" | "adaptive" | "hybrid";
+  detectGaps?: boolean;
+  minConfidence?: number;
+  timeLimit?: number;
+}
+
+/** Gap detection options */
+export interface GapDetectionOptions {
+  strategy: "sequential" | "sampling" | "adaptive" | "statistical";
+  sampleSize?: number;
+  minGapSize?: number;
+  confidenceThreshold?: number;
+}
+
+/** ID validation options */
+export interface IdValidationOptions {
+  parallel?: boolean;
+  concurrency?: number;
+  cache?: boolean;
+  timeout?: number;
+}
+
+/** Validation result from the discovery service */
+export interface ValidationServiceResult {
+  results: IdValidationResult[];
+  summary: { total: number; valid: number; invalid: number; errors: number; cached: number };
+  performance: { duration: number; averageResponseTime: number; requestsPerSecond: number; cacheHitRate: number };
+}
+
+/** HTTP client validation options */
+export interface HttpValidationOptions {
+  timeout?: number;
+  headers?: Record<string, string>;
+}
+
+/** HTTP validation result */
+export interface HttpValidationResult {
+  statusCode: number;
+  contentLength: number;
+  isValid: boolean;
+  duration: number;
+  headers: Record<string, string>;
+  finalUrl: string;
+  fromCache: boolean;
+}
+
 // Service interfaces (simplified)
 export interface IDiscoveryService {
-  discoverRange(baseUrl: string, options?: any): Promise<DiscoveryResult>;
-  detectGaps(baseUrl: string, minId: number, maxId: number, options?: any): Promise<GapPattern[]>;
-  validateIds(baseUrl: string, ids: number[], options?: any): Promise<any>;
+  discoverRange(baseUrl: string, options?: DiscoveryServiceOptions): Promise<DiscoveryResult>;
+  detectGaps(baseUrl: string, minId: number, maxId: number, options?: GapDetectionOptions): Promise<GapPattern[]>;
+  validateIds(baseUrl: string, ids: number[], options?: IdValidationOptions): Promise<ValidationServiceResult>;
 }
 
 export interface IDownloaderService {
@@ -199,7 +277,7 @@ export interface IDownloaderService {
 }
 
 export interface IHttpClient {
-  validateUrl(url: string, options?: any): Promise<any>;
+  validateUrl(url: string, options?: HttpValidationOptions): Promise<HttpValidationResult>;
 }
 
 export interface ManualDownloaderConfig {
