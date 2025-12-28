@@ -99,8 +99,20 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 					</ActionIcon>
 
 					<Link href="/" className={logo}>
-            hobby.ninja
+						hobby.ninja
 					</Link>
+					<Box
+						component="a"
+						href={`https://github.com/Mearman/hobby.ninja/releases/tag/v${process.env.NEXT_PUBLIC_APP_VERSION ?? "0.0.1"}`}
+						target="_blank"
+						rel="noopener noreferrer"
+						c="dimmed"
+						fz="xs"
+						ml={4}
+						style={{ textDecoration: "none" }}
+					>
+						v{process.env.NEXT_PUBLIC_APP_VERSION ?? "0.0.1"}
+					</Box>
 
 					{/* Desktop navigation */}
 					<nav className={`${nav} ${desktopOnly}`}>
