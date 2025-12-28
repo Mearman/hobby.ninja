@@ -50,9 +50,9 @@ function FittedTitle({ text }: { text: string }): React.ReactElement {
 
 	return (
 		<Box
-			px="sm"
-			pt="sm"
-			pb="xs"
+			px="xs"
+			pt="xs"
+			pb={4}
 			style={{
 				height: TITLE_CONTAINER_HEIGHT,
 				overflow: "hidden",
