@@ -114,9 +114,20 @@ function ItemCard({ item, index }: { item: Item; index: number }): React.ReactEl
 	const displayName = getNodeDisplayName(item);
 	const hasValidImage = !hasImageError && images.length > 0;
 
-	// Get entity images for badges
-	const gradeIds = Object.keys(item.grades);
-	const primaryGrade = gradeIds.length > 0 ? getGradeById(gradeIds[0]) : undefined;
+	// Get entity images for badges - prefer specific child grade over root grade
+	const primaryGrade = useMemo(() => {
+		const rootGrades = Object.keys(item.grades);
+		if (rootGrades.length === 0) return;
+
+		const rootGrade = rootGrades[0];
+		const specificGrades = item.grades[rootGrade];
+
+		// Prefer the first specific grade if available, otherwise use the root
+		if (specificGrades.length > 0) {
+			return getGradeById(specificGrades[0]);
+		}
+		return getGradeById(rootGrade);
+	}, [item.grades]);
 	// Find first non-grade brand (brands with type: "grade" are shown as grades, not brands)
 	const primaryBrand = item.brands
 		.map(b => getBrandById(b.id))
