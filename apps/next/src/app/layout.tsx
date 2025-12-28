@@ -18,9 +18,17 @@ const APP_TITLE = "Hobby Ninja";
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://hobby.ninja"),
-	title: "hobby.ninja - Static Collection Management",
-	description: "Comprehensive hobby collection management with 8,485+ items, search, and tracking features",
-	keywords: ["gunpla", "hobby", "collection", "database", "model kits", "figure-rise"],
+	title: "hobby.ninja",
+	description:
+		"Comprehensive hobby collection management with 8,485+ items, search, and tracking features",
+	keywords: [
+		"gunpla",
+		"hobby",
+		"collection",
+		"database",
+		"model kits",
+		"figure-rise",
+	],
 	authors: [{ name: "hobby.ninja" }],
 	manifest: "/manifest.json",
 	appleWebApp: {
@@ -35,7 +43,8 @@ export const metadata: Metadata = {
 		type: "website",
 		siteName: APP_TITLE,
 		title: `${APP_TITLE} - Collection Manager`,
-		description: "Manage your hobby collections with advanced search and tracking features",
+		description:
+			"Manage your hobby collections with advanced search and tracking features",
 	},
 	twitter: {
 		card: "summary",
@@ -63,7 +72,7 @@ export const viewport: Viewport = {
 export default function RootLayout({
 	children,
 }: {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }) {
 	return (
 		<html lang="en" className={inter.variable} suppressHydrationWarning={true}>
