@@ -243,6 +243,7 @@ export interface FilterState {
 	brands: string[];
 	grades: string[];
 	scales: string[];
+	years: string[];
 }
 
 interface ExploreSectionProps {
@@ -261,7 +262,8 @@ export function ExploreSection({ items, filters, totalCount }: ExploreSectionPro
 			filters.series.length > 0 ||
 			filters.brands.length > 0 ||
 			filters.grades.length > 0 ||
-			filters.scales.length > 0;
+			filters.scales.length > 0 ||
+			filters.years.length > 0;
 
 		if (!hasActiveFilters) return items;
 
@@ -336,6 +338,17 @@ export function ExploreSection({ items, filters, totalCount }: ExploreSectionPro
 				}
 			}
 
+			// Check years (OR within type)
+			if (filters.years.length > 0) {
+				const itemYear = item.releaseDate?.year;
+				const hasOther = filters.years.includes(OTHER_FILTER_ID);
+				const hasNoYear = !itemYear || itemYear <= 0;
+				const matchesYear = itemYear && filters.years.includes(String(itemYear));
+				if (!matchesYear && !(hasOther && hasNoYear)) {
+					return false;
+				}
+			}
+
 			return true;
 		});
 	}, [items, filters]);
@@ -358,7 +371,8 @@ export function ExploreSection({ items, filters, totalCount }: ExploreSectionPro
 		filters.series.length > 0 ||
 		filters.brands.length > 0 ||
 		filters.grades.length > 0 ||
-		filters.scales.length > 0
+		filters.scales.length > 0 ||
+		filters.years.length > 0
 	);
 
 	return (

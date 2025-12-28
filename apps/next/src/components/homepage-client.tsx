@@ -13,7 +13,7 @@ import {
 	Title,
 	Tooltip,
 } from "@mantine/core";
-import { IconArrowNarrowRight, IconRuler2, IconSortAscendingLetters, IconSortDescendingNumbers, IconX } from "@tabler/icons-react";
+import { IconArrowNarrowRight, IconCalendar, IconRuler2, IconSortAscendingLetters, IconSortDescendingNumbers, IconX } from "@tabler/icons-react";
 import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
 
@@ -32,12 +32,22 @@ const SORT_BY_COUNT = "Sort by count";
 // - categories/series/brands: "count" (default) or "name" (alphabetical)
 // - grades: "default" (original data order) or "count"
 // - scales: "count" (default) or "size" (scale size order)
+// - years: "date" (default, newest first) or "count"
 interface FilterSortModes {
 	categories: "count" | "name";
 	series: "count" | "name";
 	brands: "count" | "name";
 	grades: "default" | "count";
 	scales: "count" | "size";
+	years: "date" | "count";
+}
+
+/** Year data for filtering */
+export interface YearData {
+	id: string;
+	name: string;
+	year: number;
+	itemIds: string[];
 }
 
 /** Get display name string from name that may be string or localized object */
@@ -61,16 +71,18 @@ interface HomepageClientProps {
 	grades: GradeData[];
 	brands: Brand[];
 	scales: ScaleData[];
+	years: YearData[];
 	items: Item[];
 }
 
-export function HomepageClient({ categories, series, grades, brands, scales, items }: HomepageClientProps): React.ReactElement {
+export function HomepageClient({ categories, series, grades, brands, scales, years, items }: HomepageClientProps): React.ReactElement {
 	const [filters, setFilters] = useState<FilterState>({
 		categories: [],
 		series: [],
 		brands: [],
 		grades: [],
 		scales: [],
+		years: [],
 	});
 
 	// Sort mode per filter type
@@ -80,6 +92,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 		brands: "count",
 		grades: "default",
 		scales: "count",
+		years: "date",
 	});
 
 	// Track expanded state for each section
@@ -89,6 +102,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 		grades: false,
 		brands: false,
 		scales: false,
+		years: false,
 	});
 
 	// Track which grade families are expanded to show children
@@ -117,7 +131,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 	}, []);
 
 	const clearFilters = useCallback(() => {
-		setFilters({ categories: [], series: [], brands: [], grades: [], scales: [] });
+		setFilters({ categories: [], series: [], brands: [], grades: [], scales: [], years: [] });
 	}, []);
 
 	const clearCategories = useCallback(() => {
@@ -139,6 +153,10 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 
 	const clearScales = useCallback(() => {
 		setFilters((prev) => ({ ...prev, scales: [] }));
+	}, []);
+
+	const clearYears = useCallback(() => {
+		setFilters((prev) => ({ ...prev, years: [] }));
 	}, []);
 
 	// Toggle all grades in a family (select/deselect entire family)
@@ -183,9 +201,10 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 		filters.series.length > 0 ||
 		filters.brands.length > 0 ||
 		filters.grades.length > 0 ||
-		filters.scales.length > 0;
+		filters.scales.length > 0 ||
+		filters.years.length > 0;
 
-	const selectedCount = filters.categories.length + filters.series.length + filters.brands.length + filters.grades.length + filters.scales.length;
+	const selectedCount = filters.categories.length + filters.series.length + filters.brands.length + filters.grades.length + filters.scales.length + filters.years.length;
 
 	// Sort categories by mode
 	const categoriesSorted = useMemo(() => {
@@ -251,6 +270,22 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 		const unselected = scalesSorted.filter((s) => !filters.scales.includes(s.id));
 		return [...selected, ...unselected];
 	}, [scalesSorted, filters.scales]);
+
+	// Sort years by mode (date = newest first, count = by item count)
+	const yearsSorted = useMemo(() => {
+		return years.toSorted((a, b) => {
+			if (sortModes.years === "date") {
+				return b.year - a.year; // Newest first
+			}
+			return b.itemIds.length - a.itemIds.length;
+		});
+	}, [years, sortModes.years]);
+	const yearsCollapsed = useMemo(() => {
+		if (filters.years.length === 0) return yearsSorted;
+		const selected = yearsSorted.filter((y) => filters.years.includes(y.id));
+		const unselected = yearsSorted.filter((y) => !filters.years.includes(y.id));
+		return [...selected, ...unselected];
+	}, [yearsSorted, filters.years]);
 
 	// Sort grade hierarchy by mode (default = original order, count = by item count)
 	const gradesSorted = useMemo(() => {
@@ -336,13 +371,14 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 		return count + otherSelected;
 	}, [gradesSorted, gradesCollapsed, expandedSections.grades, expandedFamilies, filters.grades]);
 
-	// Count items without categories/series/brands/grades/scales for "Other" option
+	// Count items without categories/series/brands/grades/scales/years for "Other" option
 	const otherCounts = useMemo(() => ({
 		categories: items.filter((item) => item.categories.length === 0).length,
 		series: items.filter((item) => item.series.length === 0).length,
 		brands: items.filter((item) => item.brands.length === 0).length,
 		grades: items.filter((item) => Object.keys(item.grades).length === 0).length,
 		scales: items.filter((item) => item.scales.length === 0).length,
+		years: items.filter((item) => !item.releaseDate?.year || item.releaseDate.year <= 0).length,
 	}), [items]);
 
 	return (
@@ -696,6 +732,53 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 							isSelected={filters.scales.includes(OTHER_FILTER_ID)}
 							onToggle={() => { toggleFilter("scales", OTHER_FILTER_ID); }}
 						/>
+					</CollapsibleGrid>
+
+					<Divider />
+
+					<CollapsibleGrid
+						title="Year"
+						totalCount={years.length + (otherCounts.years > 0 ? 1 : 0)}
+						selectedCount={filters.years.length}
+						expanded={expandedSections.years}
+						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, years: exp })); }}
+						onClear={clearYears}
+						headerRight={
+							<Tooltip label={sortModes.years === "date" ? SORT_BY_COUNT : "Sort by date"}>
+								<ActionIcon
+									variant="subtle"
+									size="sm"
+									onClick={() => { setSortModes((prev) => ({ ...prev, years: prev.years === "date" ? "count" : "date" })); }}
+								>
+									{sortModes.years === "date" ? <IconCalendar size={16} /> : <IconSortDescendingNumbers size={16} />}
+								</ActionIcon>
+							</Tooltip>
+						}
+					>
+						{(expandedSections.years ? yearsSorted : yearsCollapsed).map((year) => (
+							<EntityCard
+								key={year.id}
+								id={year.id}
+								name={year.name}
+								itemIds={year.itemIds}
+								type="year"
+								asFilter={true}
+								isSelected={filters.years.includes(year.id)}
+								onToggle={() => { toggleFilter("years", year.id); }}
+							/>
+						))}
+						{otherCounts.years > 0 && (
+							<EntityCard
+								key={OTHER_FILTER_ID}
+								id={OTHER_FILTER_ID}
+								name="Other"
+								itemIds={Array.from({ length: otherCounts.years }, () => "")}
+								type="year"
+								asFilter={true}
+								isSelected={filters.years.includes(OTHER_FILTER_ID)}
+								onToggle={() => { toggleFilter("years", OTHER_FILTER_ID); }}
+							/>
+						)}
 					</CollapsibleGrid>
 				</Stack>
 			</Container>

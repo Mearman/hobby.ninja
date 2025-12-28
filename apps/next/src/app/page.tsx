@@ -1,6 +1,6 @@
 import { brands, categories as allCategoriesData, getGradesSorted, getScalesBySize, items, series } from "@hobby-ninja/data";
 
-import { HomepageClient } from "@/components/homepage-client";
+import { HomepageClient, type YearData } from "@/components/homepage-client";
 
 export default function HomePage() {
 	// Get all items for the Explore section
@@ -29,6 +29,25 @@ export default function HomePage() {
 	const allScales = getScalesBySize()
 		.filter((s) => s.itemIds.length > 0);
 
+	// Group items by release year, sorted newest first
+	const yearMap = new Map<number, string[]>();
+	for (const item of allItems) {
+		const year = item.releaseDate?.year;
+		if (year && year > 0) {
+			const existing = yearMap.get(year) ?? [];
+			existing.push(item.id);
+			yearMap.set(year, existing);
+		}
+	}
+	const allYears: YearData[] = [...yearMap.entries()]
+		.map(([year, itemIds]) => ({
+			id: String(year),
+			name: String(year),
+			year,
+			itemIds,
+		}))
+		.toSorted((a, b) => b.year - a.year); // Newest first
+
 	return (
 		<HomepageClient
 			categories={allCategories}
@@ -36,6 +55,7 @@ export default function HomePage() {
 			grades={allGrades}
 			brands={allBrands}
 			scales={allScales}
+			years={allYears}
 			items={allItems}
 		/>
 	);
