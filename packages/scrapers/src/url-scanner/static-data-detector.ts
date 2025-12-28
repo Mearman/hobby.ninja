@@ -2,7 +2,17 @@
  * Static data detector for analyzing HTML content and determining data extraction viability
  */
 
-import { DetectionResult } from "./types.js";
+import { DetectionResult, ExtractedData, StructuredDataResult } from "./types.js";
+
+// Indicator string constants to avoid duplicates
+const INDICATOR_STATIC_TITLE = "static-title";
+const INDICATOR_META_DESCRIPTION = "meta-description";
+const INDICATOR_STRUCTURED_DATA = "structured-data";
+const INDICATOR_SKU_PATTERN_FOUND = "sku-pattern-found";
+const INDICATOR_IMAGE_ELEMENTS = "image-elements";
+const INDICATOR_EMPTY_CONTENT = "empty-content";
+const INDICATOR_LOADING_PLACEHOLDER = "loading-placeholder";
+const INDICATOR_SCRIPT_DATA_SOURCE = "script-data-source";
 
 export class StaticDataDetector {
 	private static readonly INDICATOR_PATTERNS = {
@@ -67,22 +77,22 @@ export class StaticDataDetector {
 	/**
    * Analyze HTML content to determine if essential Gundam data is statically available
    */
-	async detectStaticData(html: string, url: string, headers: Headers): Promise<DetectionResult> {
+	detectStaticData(html: string, _url: string, headers: Headers): DetectionResult {
 		if (!html || html.trim().length === 0) {
 			return {
 				hasStaticData: false,
 				dataType: "none",
 				confidence: 0,
-				indicators: ["empty-content"],
+				indicators: [INDICATOR_EMPTY_CONTENT],
 				extractedData: undefined,
 			};
 		}
 
 		const indicators: string[] = [];
-		const extractedData: any = {};
+		const extractedData: ExtractedData = {};
 
 		// Check content type
-		const contentType = headers.get("content-type") || "";
+		const contentType = headers.get("content-type") ?? "";
 		if (!contentType.includes("text/html")) {
 			indicators.push("non-html-content");
 			return {
@@ -97,7 +107,7 @@ export class StaticDataDetector {
 		// Extract static title
 		const titles = this.extractAllPatterns(html, StaticDataDetector.INDICATOR_PATTERNS.staticTitle);
 		if (titles.length > 0) {
-			indicators.push("static-title");
+			indicators.push(INDICATOR_STATIC_TITLE);
 			extractedData.title = this.cleanText(titles[0]);
 
 			// Check if this is a 404 error page
@@ -110,18 +120,18 @@ export class StaticDataDetector {
 		// Extract meta description
 		const descriptions = this.extractAllPatterns(html, StaticDataDetector.INDICATOR_PATTERNS.metaDescription);
 		if (descriptions.length > 0) {
-			indicators.push("meta-description");
+			indicators.push(INDICATOR_META_DESCRIPTION);
 			extractedData.description = this.cleanText(descriptions[0]);
 		}
 
 		// Extract structured data (JSON-LD)
 		const structuredDataResults = this.extractAllPatterns(html, StaticDataDetector.INDICATOR_PATTERNS.structuredData);
 		if (structuredDataResults.length > 0) {
-			indicators.push("structured-data");
+			indicators.push(INDICATOR_STRUCTURED_DATA);
 			const structuredData = this.parseStructuredData(structuredDataResults[0]);
 			if (structuredData) {
-				extractedData.title = extractedData.title || extractedData.title || extractedData.name;
-				extractedData.description = extractedData.description || extractedData.description;
+				extractedData.title ??= structuredData.title;
+				extractedData.description ??= structuredData.description;
 				if (structuredData.sku) {
 					extractedData.sku = structuredData.sku;
 				}
@@ -134,30 +144,28 @@ export class StaticDataDetector {
 		// Extract SKU patterns
 		const skuPatterns = this.extractAllPatterns(html, StaticDataDetector.INDICATOR_PATTERNS.skuPatterns);
 		if (skuPatterns.length > 0) {
-			indicators.push("sku-pattern-found");
-			if (!extractedData.sku) {
-				extractedData.sku = skuPatterns[0].trim();
-			}
+			indicators.push(INDICATOR_SKU_PATTERN_FOUND);
+			extractedData.sku ??= skuPatterns[0].trim();
 		}
 
-		// Extract images
-		const images = this.extractAllPatterns(html, StaticDataDetector.INDICATOR_PATTERNS.imageElements);
-		if (images.length > 0) {
-			indicators.push("image-elements");
-			extractedData.images = images.map(img => img[1] || img[0]); // alt text or src
+		// Extract images - extractAllPatterns returns src URLs from the first capture group
+		const imageUrls = this.extractAllPatterns(html, StaticDataDetector.INDICATOR_PATTERNS.imageElements);
+		if (imageUrls.length > 0) {
+			indicators.push(INDICATOR_IMAGE_ELEMENTS);
+			extractedData.images = imageUrls;
 		}
 
 		// Check for dynamic indicators
 		if (this.hasAnyPattern(html, StaticDataDetector.INDICATOR_PATTERNS.loadingPlaceholders)) {
-			indicators.push("loading-placeholder");
+			indicators.push(INDICATOR_LOADING_PLACEHOLDER);
 		}
 
 		if (this.hasAnyPattern(html, StaticDataDetector.INDICATOR_PATTERNS.scriptDataSources)) {
-			indicators.push("script-data-source");
+			indicators.push(INDICATOR_SCRIPT_DATA_SOURCE);
 		}
 
 		if (this.hasAnyPattern(html, StaticDataDetector.INDICATOR_PATTERNS.emptyContainers)) {
-			indicators.push("empty-content");
+			indicators.push(INDICATOR_EMPTY_CONTENT);
 		}
 
 		if (this.hasAnyPattern(html, StaticDataDetector.INDICATOR_PATTERNS.spaFrameworks)) {
@@ -194,13 +202,11 @@ export class StaticDataDetector {
 
 		for (const pattern of patterns) {
 			const matches = [...html.matchAll(pattern)];
-			if (matches) {
-				for (const match of matches) {
-					if (match[1]) {
-						results.push(match[1]);
-					} else if (match[0]) {
-						results.push(match[0]);
-					}
+			for (const match of matches) {
+				if (match[1]) {
+					results.push(match[1]);
+				} else if (match[0]) {
+					results.push(match[0]);
 				}
 			}
 		}
@@ -218,18 +224,18 @@ export class StaticDataDetector {
 	/**
    * Parse structured data from JSON-LD
    */
-	private parseStructuredData(jsonStr: string): any {
+	private parseStructuredData(jsonStr: string): StructuredDataResult | null {
 		try {
-			const data = JSON.parse(jsonStr);
+			const data: unknown = JSON.parse(jsonStr);
 
 			// Check if it's relevant Gundam/product data
 			if (this.isGundamProductData(data)) {
 				return {
-					title: data.name || data.title,
-					description: data.description,
+					title: this.getStringProperty(data, "name") ?? this.getStringProperty(data, "title"),
+					description: this.getStringProperty(data, "description"),
 					sku: this.extractSkuFromStructuredData(data),
-					brand: data.brand || data.manufacturer,
-					image: data.image || data.image?.[0] || data.imageUrl,
+					brand: this.getStringProperty(data, "brand") ?? this.getStringProperty(data, "manufacturer"),
+					image: this.getImageFromStructuredData(data),
 				};
 			}
 			return null;
@@ -239,13 +245,44 @@ export class StaticDataDetector {
 	}
 
 	/**
+   * Safely get a string property from an unknown object
+   */
+	private getStringProperty(obj: unknown, key: string): string | undefined {
+		if (typeof obj === "object" && obj !== null && key in obj) {
+			const value = (obj as Record<string, unknown>)[key];
+			return typeof value === "string" ? value : undefined;
+		}
+		return undefined;
+	}
+
+	/**
+   * Extract image URL from structured data
+   */
+	private getImageFromStructuredData(data: unknown): string | undefined {
+		if (typeof data !== "object" || data === null) return undefined;
+
+		const obj = data as Record<string, unknown>;
+		const imageField = obj.image;
+		const imageUrlField = obj.imageUrl;
+
+		if (typeof imageField === "string") return imageField;
+		if (Array.isArray(imageField) && typeof imageField[0] === "string") return imageField[0];
+		if (typeof imageUrlField === "string") return imageUrlField;
+
+		return undefined;
+	}
+
+	/**
    * Check if structured data represents Gundam product information
    */
-	private isGundamProductData(data: any): boolean {
-		if (!data) return false;
+	private isGundamProductData(data: unknown): data is Record<string, unknown> {
+		if (typeof data !== "object" || data === null) return false;
 
-		const name = (data.name || data.title || "").toLowerCase();
-		const description = (data.description || "").toLowerCase();
+		const obj = data as Record<string, unknown>;
+		const nameValue = obj.name ?? obj.title;
+		const name = (typeof nameValue === "string" ? nameValue : "").toLowerCase();
+		const descValue = obj.description;
+		const description = (typeof descValue === "string" ? descValue : "").toLowerCase();
 
 		return name.includes("gundam") ||
            name.includes("ガンダム") ||
@@ -258,15 +295,16 @@ export class StaticDataDetector {
 	/**
    * Extract SKU information from structured data
    */
-	private extractSkuFromStructuredData(data: any): string | undefined {
-		if (data.sku) return data.sku;
-		if (data.model) return data.model;
-		if (data.identifier) return data.identifier;
+	private extractSkuFromStructuredData(data: unknown): string | undefined {
+		if (typeof data !== "object" || data === null) return undefined;
 
-		// Look in other possible fields
-		for (const field of ["productId", "itemNumber", "partNumber", "catalogNumber"]) {
-			if (data[field]) {
-				return data[field];
+		const obj = data as Record<string, unknown>;
+
+		// Check primary SKU fields
+		for (const field of ["sku", "model", "identifier", "productId", "itemNumber", "partNumber", "catalogNumber"]) {
+			const value = obj[field];
+			if (typeof value === "string") {
+				return value;
 			}
 		}
 
@@ -276,13 +314,13 @@ export class StaticDataDetector {
 	/**
    * Determine if essential Gundam data is available
    */
-	private hasEssentialGundamData(extractedData: any, indicators: string[]): boolean {
+	private hasEssentialGundamData(extractedData: ExtractedData, indicators: string[]): boolean {
 		// Must have a title or description
-		const hasTitle = extractedData.title && extractedData.title.length > 0;
-		const hasDescription = extractedData.description && extractedData.description.length > 0;
+		const hasTitle = extractedData.title !== undefined && extractedData.title.length > 0;
+		const hasDescription = extractedData.description !== undefined && extractedData.description.length > 0;
 
 		// Consider content valuable if it has either title/description OR structured data
-		return hasTitle || hasDescription || indicators.includes("structured-data");
+		return hasTitle || hasDescription || indicators.includes(INDICATOR_STRUCTURED_DATA);
 	}
 
 	/**
@@ -293,16 +331,16 @@ export class StaticDataDetector {
 			return "none";
 		}
 
-		const hasStructuredData = indicators.includes("structured-data");
+		const hasStructuredData = indicators.includes(INDICATOR_STRUCTURED_DATA);
 		const hasAllKeyIndicators = [
-			"static-title",
-			"meta-description",
-			"image-elements",
+			INDICATOR_STATIC_TITLE,
+			INDICATOR_META_DESCRIPTION,
+			INDICATOR_IMAGE_ELEMENTS,
 		].every(indicator => indicators.includes(indicator));
 
 		const hasBasicIndicators = [
-			"static-title",
-			"meta-description",
+			INDICATOR_STATIC_TITLE,
+			INDICATOR_META_DESCRIPTION,
 		].every(indicator => indicators.includes(indicator));
 
 		if (hasStructuredData && hasAllKeyIndicators) {
@@ -329,19 +367,19 @@ export class StaticDataDetector {
 		);
 
 		// Add for strong positive indicators
-		if (indicators.includes("structured-data")) confidence += 0.4;
-		if (indicators.includes("static-title") && !is404Page) confidence += 0.3;
-		if (indicators.includes("meta-description")) confidence += 0.2;
-		if (indicators.includes("image-elements") && !is404Page) confidence += 0.1;
-		if (indicators.includes("sku-pattern-found")) confidence += 0.1;
+		if (indicators.includes(INDICATOR_STRUCTURED_DATA)) confidence += 0.4;
+		if (indicators.includes(INDICATOR_STATIC_TITLE) && !is404Page) confidence += 0.3;
+		if (indicators.includes(INDICATOR_META_DESCRIPTION)) confidence += 0.2;
+		if (indicators.includes(INDICATOR_IMAGE_ELEMENTS) && !is404Page) confidence += 0.1;
+		if (indicators.includes(INDICATOR_SKU_PATTERN_FOUND)) confidence += 0.1;
 
 		// Subtract for negative indicators
-		if (indicators.includes("loading-placeholder")) confidence -= 0.3;
-		if (indicators.includes("script-data-source")) confidence -= 0.2;
+		if (indicators.includes(INDICATOR_LOADING_PLACEHOLDER)) confidence -= 0.3;
+		if (indicators.includes(INDICATOR_SCRIPT_DATA_SOURCE)) confidence -= 0.2;
 		if (indicators.includes("spa-framework")) confidence -= 0.2;
 		if (indicators.includes("client-side-scripts")) confidence -= 0.1;
 		if (indicators.includes("minimal-content")) confidence -= 0.4;
-		if (indicators.includes("empty-content")) confidence -= 0.3;
+		if (indicators.includes(INDICATOR_EMPTY_CONTENT)) confidence -= 0.3;
 		if (indicators.includes("non-html-content")) confidence -= 0.5;
 
 		// Heavy penalty for 404 pages - they need JavaScript
@@ -350,9 +388,9 @@ export class StaticDataDetector {
 		}
 
 		// Heavy penalty for script-data-source without other real content
-		if (indicators.includes("script-data-source") &&
-        !indicators.includes("structured-data") &&
-        !indicators.includes("sku-pattern-found")) {
+		if (indicators.includes(INDICATOR_SCRIPT_DATA_SOURCE) &&
+        !indicators.includes(INDICATOR_STRUCTURED_DATA) &&
+        !indicators.includes(INDICATOR_SKU_PATTERN_FOUND)) {
 			confidence = Math.min(confidence, 0.3);
 		}
 

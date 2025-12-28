@@ -2,11 +2,23 @@
  * URL checker implementation for validating URLs and detecting static data availability
  */
 
-import { promises as fs } from "node:fs";
-import path from "node:path";
-
 import { StaticDataDetector } from "./static-data-detector.js";
 import { URLCheckResult, CheckOptions } from "./types.js";
+
+/**
+ * JSON-LD structured data format used by product pages
+ */
+interface JsonLdData {
+	"@type"?: string;
+	name?: string;
+}
+
+/**
+ * Type guard for JSON-LD data structure
+ */
+function isJsonLdData(value: unknown): value is JsonLdData {
+	return typeof value === "object" && value !== null;
+}
 
 export class URLChecker {
 	private staticDataDetector: StaticDataDetector;
@@ -68,7 +80,7 @@ export class URLChecker {
 			const response = await fetch(url, {
 				method: "GET",
 				headers: {
-					"User-Agent": options.userAgent || "GundamURLScanner/1.0",
+					"User-Agent": options.userAgent ?? "GundamURLScanner/1.0",
 					"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 					"Accept-Language": "ja,en-US,en;q=0.9",
 					"Cache-Control": "no-cache",
@@ -88,8 +100,8 @@ export class URLChecker {
 				);
 			}
 
-			const responseSize = Number.parseInt(response.headers.get("content-length") || "0");
-			const contentType = response.headers.get("content-type") || "";
+			const responseSize = Number.parseInt(response.headers.get("content-length") ?? "0");
+			const contentType = response.headers.get("content-type") ?? "";
 
 			let html = "";
 			try {
@@ -104,7 +116,7 @@ export class URLChecker {
 			}
 
 			// Use StaticDataDetector for comprehensive analysis
-			const staticDataResult = await this.staticDataDetector.detectStaticData(html, url, response.headers);
+			const staticDataResult = this.staticDataDetector.detectStaticData(html, url, response.headers);
 
 			return {
 				url,
@@ -169,11 +181,16 @@ export class URLChecker {
 		try {
 			// Parse JSON-LD to check if it's valid product data
 			const jsonStr = structuredData[0];
-			const data = JSON.parse(jsonStr);
-			return data["@type"] === "Product" ||
-             data["@type"] === "Toy" ||
-             (data.name && (data.name.toLowerCase().includes("gundam") ||
-                          data.name.toLowerCase().includes("ガンダム")));
+			const parsed: unknown = JSON.parse(jsonStr);
+			if (!isJsonLdData(parsed)) {
+				return false;
+			}
+			const type = parsed["@type"];
+			const name = parsed.name;
+			return type === "Product" ||
+             type === "Toy" ||
+             (typeof name === "string" && (name.toLowerCase().includes("gundam") ||
+                          name.toLowerCase().includes("ガンダム")));
 		} catch {
 			return false;
 		}
@@ -221,7 +238,7 @@ export class URLChecker {
 		}
 
 		// Check content type
-		const contentType = response.headers.get("content-type") || "";
+		const contentType = response.headers.get("content-type") ?? "";
 		if (!contentType.includes("text/html")) {
 			indicators.push("non-html-content");
 		}
@@ -273,11 +290,7 @@ export class URLChecker {
 			const matches = html.match(pattern);
 			if (matches) {
 				for (const match of matches) {
-					if (typeof match === "string") {
-						results.push(match);
-					} else if (match && match[1]) {
-						results.push(match[1]);
-					}
+					results.push(match);
 				}
 			}
 		}

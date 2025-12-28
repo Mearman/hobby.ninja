@@ -7,6 +7,8 @@ import { StaticDataDetector } from "./static-data-detector.js";
 import { ScanConfiguration, ScanResult, ProgressState, CheckOptions } from "./types.js";
 import { URLChecker } from "./url-checker.js";
 
+const SCANNER_NOT_INITIALIZED_ERROR = "Scanner not initialized. Call initialize() first.";
+
 /**
  * Main URL scanner implementation that coordinates URL checking and static data detection
  */
@@ -58,7 +60,7 @@ export class URLScanner {
    */
 	async scanUrl(url: string): Promise<ScanResult> {
 		if (!this.config) {
-			throw new Error("Scanner not initialized. Call initialize() first.");
+			throw new Error(SCANNER_NOT_INITIALIZED_ERROR);
 		}
 
 		try {
@@ -129,7 +131,7 @@ export class URLScanner {
    */
 	async scanUrls(urls: string[]): Promise<ScanResult[]> {
 		if (!this.config) {
-			throw new Error("Scanner not initialized. Call initialize() first.");
+			throw new Error(SCANNER_NOT_INITIALIZED_ERROR);
 		}
 
 		this.progress.status = "running";
@@ -146,11 +148,11 @@ export class URLScanner {
 			const batch = urls.slice(i, i + concurrency);
 
 			// Process batch concurrently
-			const batchPromises = batch.map((url, index) =>
+			const batchPromises = batch.map((url, _index) =>
 				this.scanUrl(url).then(result => {
 					results.push(result);
 					return result;
-				}).catch(error => {
+				}).catch((error: unknown) => {
 					const errorResult: ScanResult = {
 						url,
 						timestamp: new Date().toISOString(),
@@ -194,7 +196,7 @@ export class URLScanner {
 	/**
    * Get current progress state
    */
-	async getProgress(): Promise<ProgressState> {
+	getProgress(): ProgressState {
 		return { ...this.progress };
 	}
 
@@ -203,7 +205,7 @@ export class URLScanner {
    */
 	async writeResultToFiles(result: ScanResult): Promise<void> {
 		if (!this.config) {
-			throw new Error("Scanner not initialized. Call initialize() first.");
+			throw new Error(SCANNER_NOT_INITIALIZED_ERROR);
 		}
 
 		await FileManager.appendResult(this.config.outputDirectory, result);

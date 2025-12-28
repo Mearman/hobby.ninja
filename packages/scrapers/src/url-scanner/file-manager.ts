@@ -5,7 +5,7 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 
-import { ScanResult, ProgressState } from "./types.js";
+import { ScanResult, ProgressState, ScanResultsFile } from "./types.js";
 
 export const FileManager = {
 	/**
@@ -145,10 +145,10 @@ export const FileManager = {
 
 		try {
 			// Read existing results
-			let data;
+			let data: ScanResultsFile;
 			if (await this.fileExists(resultsFile)) {
 				const content = await this.readFile(resultsFile);
-				data = JSON.parse(content);
+				data = JSON.parse(content) as ScanResultsFile;
 			} else {
 				// Create new structure if file doesn't exist
 				data = {
@@ -186,7 +186,7 @@ export const FileManager = {
 	/**
    * Write JSON data to file atomically
    */
-	async writeJsonFile(filePath: string, data: any): Promise<void> {
+	async writeJsonFile(filePath: string, data: ScanResultsFile): Promise<void> {
 		const content = JSON.stringify(data, null, 2);
 		await this.writeFileAtomic(filePath, content);
 	},

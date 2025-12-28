@@ -225,3 +225,41 @@ export interface ScanSummary {
   statistics: ScanStatistics;
   outputFiles: string[];
 }
+
+export interface ScanResultsFile {
+  scanInfo: {
+    timestamp: string;
+    version: string;
+    scannerType: string;
+  };
+  results: ScanResultEntry[];
+}
+
+export interface ScanResultEntry {
+  url: string;
+  timestamp: string;
+  status: "valid" | "invalid";
+  hasStaticData: boolean;
+  dataType: "complete" | "partial" | "none";
+  confidence: number;
+  indicators: string[];
+  statusCode?: number;
+  finalUrl?: string;
+  error?: string;
+  title?: string;
+}
+
+export interface ExtractedData {
+  title?: string;
+  description?: string;
+  sku?: string;
+  images?: string[];
+}
+
+export interface StructuredDataResult {
+  title?: string;
+  description?: string;
+  sku?: string;
+  brand?: string;
+  image?: string;
+}
