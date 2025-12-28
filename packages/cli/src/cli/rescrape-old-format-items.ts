@@ -2,12 +2,26 @@
 /**
  * Re-scrape items that have old image format (array of strings)
  * and migrate them to the new format (object with product/instructions)
+ *
+ * Uses the exported scrape APIs directly instead of accessing private methods.
  */
 
 import { readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 
-import { ScrapeCommand } from "./scrape.js";
+import { TranslationService } from "@hobby-ninja/translation";
+
+import { BandaiCatalogParser } from "./bandai-catalog-parser.js";
+import { GlobalSiteLookup } from "./global-site-lookup.js";
+import { ManualParser } from "./manual-parser.js";
+import {
+	BrowserManager,
+	processItemComplete,
+	processManualComplete,
+	type ItemProcessDeps,
+	type ManualProcessDeps,
+	type ScrapeOptions,
+} from "./scrape/index.js";
 
 const ITEMS_DIR = "data/src/items";
 const PROGRESS_INTERVAL = 100;
@@ -51,12 +65,36 @@ async function main(): Promise<void> {
 		return;
 	}
 
-	const scraper = new ScrapeCommand();
+	// Initialize all dependencies directly using exported APIs
+	const browserManager = new BrowserManager();
+	const parser = new BandaiCatalogParser();
+	const globalLookup = new GlobalSiteLookup();
+	const translator = new TranslationService();
+	const manualParser = new ManualParser();
 
-	// @ts-expect-error - accessing private method
-	await scraper.initializeBrowser();
+	await browserManager.initializeBrowser();
 
-	const options = {
+	const browserContext = browserManager.getBrowserContext();
+	if (browserContext) {
+		globalLookup.setBrowserContext(browserContext);
+	}
+
+	// Set up manual processing dependencies
+	const manualDeps: ManualProcessDeps = {
+		manualParser,
+		translator,
+	};
+
+	// Set up item processing dependencies
+	const itemDeps: ItemProcessDeps = {
+		parser,
+		globalLookup,
+		translator,
+		browserManager,
+		processManualComplete: (manualId, opts) => processManualComplete(manualId, opts, manualDeps),
+	};
+
+	const options: ScrapeOptions = {
 		language: "en",
 		output: "./data/src",
 		cache: true, // Use cached HTML if available to avoid re-fetching
@@ -77,11 +115,7 @@ async function main(): Promise<void> {
 
 		console.log(`\n${progress} Processing ${item.id}`);
 		try {
-			// @ts-expect-error - accessing private method
-			const result = (await scraper.processItemComplete(item.id, options)) as {
-				success: boolean;
-				error?: string;
-			};
+			const result = await processItemComplete(item.id, options, itemDeps);
 			if (result.success) {
 				success++;
 				console.log(`  ✓ Migrated successfully`);
@@ -106,8 +140,7 @@ async function main(): Promise<void> {
 		}
 	}
 
-	// @ts-expect-error - accessing private method for cleanup
-	await (scraper.closeBrowser as () => Promise<void>)();
+	await browserManager.cleanupBrowser();
 
 	const elapsed = Math.round((Date.now() - startTime) / 1000);
 	console.log(`\n=== Migration Complete ===`);

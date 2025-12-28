@@ -1,9 +1,19 @@
 #!/usr/bin/env tsx
 /**
  * Re-scrape specific manuals that need image re-download
+ *
+ * Uses the exported scrape APIs directly instead of accessing private methods.
  */
 
-import { ScrapeCommand } from "./scrape.js";
+import { TranslationService } from "@hobby-ninja/translation";
+
+import { ManualParser } from "./manual-parser.js";
+import {
+	BrowserManager,
+	processManualComplete,
+	type ManualProcessDeps,
+	type ScrapeOptions,
+} from "./scrape/index.js";
 
 const AFFECTED_MANUALS = [
 	"157", "159", "162", "163", "176", "210", "211", "212", "215", "218",
@@ -16,12 +26,19 @@ const AFFECTED_MANUALS = [
 async function main(): Promise<void> {
 	console.log(`Re-scraping ${AFFECTED_MANUALS.length} manuals...\n`);
 
-	const scraper = new ScrapeCommand();
+	// Initialize dependencies directly using exported APIs
+	const browserManager = new BrowserManager();
+	const manualParser = new ManualParser();
+	const translator = new TranslationService();
 
-	// @ts-expect-error - accessing private method
-	await scraper.initializeBrowser();
+	await browserManager.initializeBrowser();
 
-	const options = {
+	const deps: ManualProcessDeps = {
+		manualParser,
+		translator,
+	};
+
+	const options: ScrapeOptions = {
 		language: "en",
 		output: "./data/src",
 		cache: false,
@@ -36,8 +53,7 @@ async function main(): Promise<void> {
 	for (const manualId of AFFECTED_MANUALS) {
 		console.log(`\n--- Processing manual ${manualId} ---`);
 		try {
-			// @ts-expect-error - accessing private method
-			const result = await scraper.processManualComplete(manualId, options);
+			const result = await processManualComplete(manualId, options, deps);
 			if (result.success) {
 				success++;
 				console.log(`  ✓ Success`);
@@ -52,8 +68,7 @@ async function main(): Promise<void> {
 		}
 	}
 
-	// @ts-expect-error - accessing private method for cleanup
-	await (scraper.closeBrowser as () => Promise<void>)();
+	await browserManager.cleanupBrowser();
 
 	console.log(`\n=== Complete ===`);
 	console.log(`Success: ${success}`);
