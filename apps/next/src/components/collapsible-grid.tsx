@@ -30,7 +30,8 @@ interface CollapsibleGridProps {
 }
 
 const GAP = 16; // var(--mantine-spacing-md) in pixels
-const CARD_ASPECT_RATIO = 170 / 300; // From EntityCard's aspectRatio
+const CARD_IMAGE_ASPECT_RATIO = 170 / 300; // From EntityCard's image aspectRatio
+const CARD_COUNT_HEIGHT = 24; // Height of the count section below the image
 const COLLAPSE_DURATION = 300; // ms
 const ROW_STAGGER_DELAY = 50; // ms delay between each row
 
@@ -76,8 +77,8 @@ export function CollapsibleGrid({
 
 	// Calculate collapsed height (single row for horizontal scroll)
 	const collapsedHeight = useMemo(() => {
-		const cardHeight = cardWidth * CARD_ASPECT_RATIO;
-		return cardHeight + 8; // one card height + padding for scrollbar
+		const cardImageHeight = cardWidth * CARD_IMAGE_ASPECT_RATIO;
+		return cardImageHeight + CARD_COUNT_HEIGHT + 8; // image + count section + scrollbar padding
 	}, [cardWidth]);
 
 	// Show expand button if more items than fit in one row
