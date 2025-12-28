@@ -77,7 +77,7 @@ function EntityBadge({ image, name }: { image?: string; name: string }): React.R
 		<Tooltip label={name} withArrow={true}>
 			<Box
 				style={{
-					flex: "0 0 30%",
+					flex: "0 0 20%",
 					aspectRatio: "300 / 170",
 					borderRadius: 4,
 					overflow: "hidden",
