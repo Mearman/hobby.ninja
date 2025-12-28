@@ -39,12 +39,12 @@ export abstract class BaseScraper {
 		cacheEnabled?: boolean;
 	}) {
 		this.baseUrl = config.baseUrl;
-		this.userAgent = config.userAgent || "GundamDataScraper/1.0";
-		this.delayMs = config.delayMs || 2000;
+		this.userAgent = config.userAgent ?? "GundamDataScraper/1.0";
+		this.delayMs = config.delayMs ?? 2000;
 		this.cacheEnabled = config.cacheEnabled ?? true;
 
 		// Initialize profile manager asynchronously
-		this.initializeProfileManager().catch(error => {
+		this.initializeProfileManager().catch((error: unknown) => {
 			logger.warn("⚠️  Profile manager initialization failed:", error);
 		});
 	}
@@ -64,7 +64,7 @@ export abstract class BaseScraper {
 		method?: "cheerio" | "playwright";
 		useCache?: boolean;
 	} = {}): Promise<{ html: string; method: "cheerio" | "playwright" }> {
-		const method = options.method || await this.determineOptimalMethod(url);
+		const method = options.method ?? await this.determineOptimalMethod(url);
 		const useCache = options.useCache ?? this.cacheEnabled;
 
 		if (useCache) {
@@ -165,10 +165,10 @@ export abstract class BaseScraper {
 		// Will be implemented in the cache manager utility
 	}
 
-	protected async getCachedPage(_url: string): Promise<string | null> {
+	protected getCachedPage(_url: string): Promise<string | null> {
 		// Placeholder for cache retrieval
 		// Will be implemented in the cache manager utility
-		return null;
+		return Promise.resolve(null);
 	}
 
 
@@ -199,16 +199,16 @@ export abstract class BaseScraper {
 	}
 
 	protected extractTextContentFromElement($: Cheerio<Element>): string {
-		return $?.text()?.trim() || "";
+		return $.text().trim();
 	}
 
 	protected extractAttribute($: CheerioAPI, selector: string, attribute: string): string {
 		const element = $(selector);
-		return element.length > 0 ? element.first().attr(attribute) || "" : "";
+		return element.length > 0 ? element.first().attr(attribute) ?? "" : "";
 	}
 
 	protected extractAttributeFromElement($: Cheerio<Element>, attribute: string): string {
-		return $?.first()?.attr(attribute) || "";
+		return $.first().attr(attribute) ?? "";
 	}
 
 	protected extractNumber($: CheerioAPI, selector: string): number | null {
@@ -226,8 +226,8 @@ export abstract class BaseScraper {
 		const priceMatch = /([¥$£€])\s*([\d,]+)/.exec(text);
 
 		if (priceMatch) {
-			const [, currency, amountStr] = priceMatch;
-			const amount = Number.parseInt(amountStr?.replaceAll(/[^\d]/g, "") || "", 10);
+			const [, currency, amountStr] = priceMatch as [string, string, string];
+			const amount = Number.parseInt(amountStr.replaceAll(/[^\d]/g, ""), 10);
 			return {
 				amount,
 				currency: currency === "¥" ? "JPY" : "USD",
