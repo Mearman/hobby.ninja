@@ -64,6 +64,8 @@ function FittedTitle({ text }: { text: string }): React.ReactElement {
 				style={{
 					height: "100%",
 					overflow: "hidden",
+					display: "flex",
+					alignItems: "center",
 				}}
 			>
 				<Text
