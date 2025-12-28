@@ -94,7 +94,7 @@ function EntityBadge({ image, name }: { image?: string; name: string }): React.R
 						style={{ width: "100%", height: "100%", objectFit: "contain" }}
 					/>
 				) : (
-					<Text size="8px" fw={600} c="dimmed" ta="center" px={2} style={{ wordBreak: WORD_BREAK_STYLE, lineHeight: 1.2 }}>
+					<Text size="10px" fw={600} c="gray.7" ta="center" px={2} style={{ wordBreak: WORD_BREAK_STYLE, lineHeight: 1.2 }}>
 						{name}
 					</Text>
 				)}
