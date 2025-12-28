@@ -129,9 +129,18 @@ function ItemCard({ item, index }: { item: Item; index: number }): React.ReactEl
 		return getGradeById(rootGrade);
 	}, [item.grades]);
 	// Find first non-grade brand (brands with type: "grade" are shown as grades, not brands)
-	const primaryBrand = item.brands
-		.map(b => getBrandById(b.id))
-		.find(b => b && b.type !== "grade");
+	// P-Bandai sub-brands (pb_gunpla, pb_hg, etc.) are shown as the parent "pb" brand
+	const primaryBrand = useMemo(() => {
+		const brand = item.brands
+			.map(b => getBrandById(b.id))
+			.find(b => b && b.type !== "grade");
+
+		// If it's a P-Bandai child brand, use the parent P-Bandai brand instead
+		if (brand?.id.startsWith("pb_")) {
+			return getBrandById("pb") ?? brand;
+		}
+		return brand;
+	}, [item.brands]);
 	const primarySeries = item.series.length > 0 ? getSeriesById(item.series[0].id) : undefined;
 
 	return (
