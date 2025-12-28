@@ -9,10 +9,10 @@ interface CollapsibleGridProps {
 	title: string;
 	children: React.ReactNode;
 	totalCount: number;
-	/** Minimum width of each card (used when columns not specified) */
+	/** Minimum width of each card */
 	cardWidth?: number;
-	/** Fixed number of columns (overrides cardWidth calculation) */
-	columns?: number;
+	/** Maximum number of columns (responsive, will use fewer on smaller screens) */
+	maxColumns?: number;
 	/** Number of selected items (for filter mode) */
 	selectedCount?: number;
 	/** Override for "all selected" state (when selectedCount doesn't reflect actual selection) */
@@ -39,7 +39,7 @@ export function CollapsibleGrid({
 	children,
 	totalCount,
 	cardWidth: minCardWidth = 140,
-	columns,
+	maxColumns,
 	selectedCount = 0,
 	isAllSelected,
 	expanded: controlledExpanded,
@@ -56,12 +56,12 @@ export function CollapsibleGrid({
 	// Track when we just expanded to trigger row animations
 	const [expandAnimationKey, setExpandAnimationKey] = useState(0);
 
-	// Calculate number of columns (fixed if specified, otherwise based on minCardWidth)
+	// Calculate number of columns based on minCardWidth, capped by maxColumns
 	const numCols = useMemo(() => {
-		if (columns != null) return columns;
 		if (containerWidth === 0) return 1;
-		return Math.max(1, Math.floor((containerWidth + GAP) / (minCardWidth + GAP)));
-	}, [containerWidth, minCardWidth, columns]);
+		const naturalCols = Math.max(1, Math.floor((containerWidth + GAP) / (minCardWidth + GAP)));
+		return maxColumns == null ? naturalCols : Math.min(naturalCols, maxColumns);
+	}, [containerWidth, minCardWidth, maxColumns]);
 
 	// Calculate exact card width to fill container
 	const cardWidth = useMemo(() => {
