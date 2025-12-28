@@ -182,6 +182,19 @@ export const ManualRefSchema = z.object({
 export type ManualRef = z.infer<typeof ManualRefSchema>;
 
 /**
+ * Tag reference with modifier and localized name
+ * Modifier is the CSS class suffix (e.g., "gbase", "online", "event")
+ * Used for distribution channel indicators: Hobby Online, Event, Gundam Base, etc.
+ */
+export const TagRefSchema = z.object({
+	modifier: z.string(),
+	ja: z.string(),
+	en: z.string().optional(),
+});
+
+export type TagRef = z.infer<typeof TagRefSchema>;
+
+/**
  * Item node schema with object-based relationships (source format)
  * Uses brands[], series[], categories[], relatedItems[] and manual object
  */
@@ -215,7 +228,7 @@ export const ItemSchema = z.object({
 	// accessories can be new format (array of objects) or old format (LocalizedTextArray)
 	accessories: z.union([AccessoriesSchema, LocalizedTextArraySchema]).optional(),
 	targetAge: z.number().optional(),
-	tags: z.array(z.string()).optional(),
+	tags: z.array(TagRefSchema).optional(),
 	specifications: z.record(z.string(), z.unknown()).optional(),
 
 	// Source tracking
@@ -382,10 +395,12 @@ export type ScaleData = z.infer<typeof ScaleDataSchema>;
 /**
  * Tag aggregation data with item counts
  * Tags are distribution channel indicators: Hobby Online, Event, Gundam Base, etc.
+ * ID is the modifier (e.g., "gbase", "online", "event")
  */
 export const TagDataSchema = z.object({
 	id: z.string(),
 	type: z.literal("tag"),
+	modifier: z.string(),
 	name: z.union([z.string(), LocalizedStringSchema]),
 	itemIds: z.array(z.string()).default([]),
 	itemCount: z.number(),
