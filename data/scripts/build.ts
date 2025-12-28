@@ -109,8 +109,8 @@ interface Brand {
 	type: string;
 	name: LocalizedString;
 	url?: string;
+	image?: string;
 	itemIds?: string[];
-	[key: string]: unknown;
 }
 
 interface Series {
@@ -118,8 +118,8 @@ interface Series {
 	type: string;
 	name: LocalizedString;
 	url?: string;
+	image?: string;
 	itemIds?: string[];
-	[key: string]: unknown;
 }
 
 interface Category {
@@ -127,8 +127,8 @@ interface Category {
 	type: string;
 	name: LocalizedString;
 	url?: string;
+	image?: string;
 	itemIds?: string[];
-	[key: string]: unknown;
 }
 
 interface Manual {
@@ -768,9 +768,15 @@ async function main(): Promise<void> {
 	console.log(`  Items with displayImage: ${itemsWithDisplayImage}`);
 
 	// Validate all referenced image paths exist in assets
-	console.log("\nValidating image paths...");
-	validateImagePaths(items, brands, series, categories);
-	console.log("  ✓ All image paths valid");
+	// Skip validation if assets/images directory doesn't exist (e.g., CI sparse checkout)
+	const imagesDir = path.join(ASSETS_PATH, "images");
+	if (existsSync(imagesDir)) {
+		console.log("\nValidating image paths...");
+		validateImagePaths(items, brands, series, categories);
+		console.log("  ✓ All image paths valid");
+	} else {
+		console.log("\nSkipping image validation (assets/images directory not present)");
+	}
 
 	// Compute reverse relationships (itemIds for brands/series/categories)
 	console.log("\nComputing reverse relationships...");
