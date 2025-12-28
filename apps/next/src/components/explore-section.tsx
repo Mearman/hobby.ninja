@@ -1,6 +1,6 @@
 "use client";
 
-import { getBrandById, getGradeById, getNodeDisplayName, getNodeImages, getSeriesById, itemHasGrade, resolveCdnUrl, type Item } from "@hobby-ninja/data";
+import { getBrandById, getCategoryById, getGradeById, getNodeDisplayName, getNodeImages, getSeriesById, itemHasGrade, resolveCdnUrl, type Item } from "@hobby-ninja/data";
 import { Box, Card, Group, SimpleGrid, Stack, Text, Tooltip } from "@mantine/core";
 import Link from "next/link";
 import { useLayoutEffect, useMemo, useRef, useState } from "react";
@@ -142,6 +142,7 @@ function ItemCard({ item, index }: { item: Item; index: number }): React.ReactEl
 		return brand;
 	}, [item.brands]);
 	const primarySeries = item.series.length > 0 ? getSeriesById(item.series[0].id) : undefined;
+	const primaryCategory = item.categories.length > 0 ? getCategoryById(item.categories[0].id) : undefined;
 
 	return (
 		<Link href={`/items/${item.id}`} style={{ textDecoration: "none", color: "inherit" }}>
@@ -234,6 +235,9 @@ function ItemCard({ item, index }: { item: Item; index: number }): React.ReactEl
 						)}
 						{primarySeries && (
 							<EntityBadge image={primarySeries.image} name={typeof primarySeries.name === "string" ? primarySeries.name : primarySeries.name.en ?? primarySeries.name.ja} />
+						)}
+						{primaryCategory && (
+							<EntityBadge image={primaryCategory.image} name={typeof primaryCategory.name === "string" ? primaryCategory.name : primaryCategory.name.en ?? primaryCategory.name.ja} />
 						)}
 					</Group>
 				</Stack>
