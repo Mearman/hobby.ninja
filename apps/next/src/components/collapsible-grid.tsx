@@ -9,8 +9,10 @@ interface CollapsibleGridProps {
 	title: string;
 	children: React.ReactNode;
 	totalCount: number;
-	/** Width of each card */
+	/** Minimum width of each card (used when columns not specified) */
 	cardWidth?: number;
+	/** Fixed number of columns (overrides cardWidth calculation) */
+	columns?: number;
 	/** Number of selected items (for filter mode) */
 	selectedCount?: number;
 	/** Override for "all selected" state (when selectedCount doesn't reflect actual selection) */
@@ -37,6 +39,7 @@ export function CollapsibleGrid({
 	children,
 	totalCount,
 	cardWidth: minCardWidth = 140,
+	columns,
 	selectedCount = 0,
 	isAllSelected,
 	expanded: controlledExpanded,
@@ -53,21 +56,20 @@ export function CollapsibleGrid({
 	// Track when we just expanded to trigger row animations
 	const [expandAnimationKey, setExpandAnimationKey] = useState(0);
 
-	// Calculate exact card width to fill container with no gap
-	const cardWidth = useMemo(() => {
-		if (containerWidth === 0) return minCardWidth;
-		// Calculate how many cards fit
-		const cols = Math.floor((containerWidth + GAP) / (minCardWidth + GAP));
-		if (cols <= 0) return minCardWidth;
-		// Calculate exact width to fill the space
-		return (containerWidth - (cols - 1) * GAP) / cols;
-	}, [containerWidth, minCardWidth]);
-
-	// Calculate number of columns for row-based animations
+	// Calculate number of columns (fixed if specified, otherwise based on minCardWidth)
 	const numCols = useMemo(() => {
+		if (columns != null) return columns;
 		if (containerWidth === 0) return 1;
 		return Math.max(1, Math.floor((containerWidth + GAP) / (minCardWidth + GAP)));
-	}, [containerWidth, minCardWidth]);
+	}, [containerWidth, minCardWidth, columns]);
+
+	// Calculate exact card width to fill container
+	const cardWidth = useMemo(() => {
+		if (containerWidth === 0) return minCardWidth;
+		if (numCols <= 0) return minCardWidth;
+		// Calculate exact width to fill the space with numCols columns
+		return (containerWidth - (numCols - 1) * GAP) / numCols;
+	}, [containerWidth, minCardWidth, numCols]);
 
 	// Use controlled state if provided, otherwise use internal state
 	const expanded = controlledExpanded ?? internalExpanded;

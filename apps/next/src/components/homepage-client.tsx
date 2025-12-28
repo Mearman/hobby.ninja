@@ -782,6 +782,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 						title="Year"
 						totalCount={years.length + (otherCounts.years > 0 ? 1 : 0)}
 						selectedCount={filters.years.length}
+						columns={10}
 						expanded={expandedSections.years}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, years: exp })); }}
 						onClear={clearYears}
