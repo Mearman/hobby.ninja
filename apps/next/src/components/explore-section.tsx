@@ -24,8 +24,8 @@ function formatReleaseDate(releaseDate?: { year?: number | null; month?: number 
 // Native loading="lazy" can fail for images already in viewport at render time
 const EAGER_LOAD_COUNT = 24;
 
-/** Font sizes to try for auto-fitting title text (largest to smallest) */
-const TITLE_FONT_SIZES_PX = [16, 14, 13, 12, 11, 10];
+/** Font sizes to try for auto-fitting title text (largest to smallest, more granular steps) */
+const TITLE_FONT_SIZES_PX = [16, 15, 14, 13, 12, 11, 10];
 const TITLE_CONTAINER_HEIGHT = 60;
 const WORD_BREAK_STYLE = "break-word" as const;
 
