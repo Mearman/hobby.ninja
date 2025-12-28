@@ -55,7 +55,6 @@
 			"en": "HG 1/144 Brave commander test machine"
 		}
 	],
-	"scale": "1/144",
 	"price": {
 		"amount": 2723,
 		"currency": "JPY",
@@ -70,8 +69,12 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": ["「HG 1/144 セラヴィーガンダム & セラフィムガンダム クリアカラーバージョン」登場！"],
-		"en": ["\"HG 1/144 Seravee Gundam & Seraphim Gundam Clear Color Version\" now available!"]
+		"ja": [
+			"「HG 1/144 セラヴィーガンダム & セラフィムガンダム クリアカラーバージョン」登場！"
+		],
+		"en": [
+			"\"HG 1/144 Seravee Gundam & Seraphim Gundam Clear Color Version\" now available!"
+		]
 	},
 	"images": {
 		"product": [
@@ -98,5 +101,8 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4864/"
+	"sourceUrl": "https://bandai-hobby.net/item/01_4864/",
+	"scales": [
+		"1/144"
+	]
 }

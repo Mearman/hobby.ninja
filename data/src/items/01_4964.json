@@ -55,7 +55,6 @@
 			"en": "HGUC 1/144 Zaku II"
 		}
 	],
-	"scale": "1/144",
 	"price": {
 		"amount": 1540,
 		"currency": "JPY",
@@ -70,8 +69,12 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": ["HGUC 1/144 ボール ツインセット ｢セブン-イレブン カラー｣登場！"],
-		"en": ["HGUC 1/144 Ball Twin Set “7-Eleven Color” now available!"]
+		"ja": [
+			"HGUC 1/144 ボール ツインセット ｢セブン-イレブン カラー｣登場！"
+		],
+		"en": [
+			"HGUC 1/144 Ball Twin Set “7-Eleven Color” now available!"
+		]
 	},
 	"images": {
 		"product": [
@@ -88,5 +91,8 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4964/"
+	"sourceUrl": "https://bandai-hobby.net/item/01_4964/",
+	"scales": [
+		"1/144"
+	]
 }

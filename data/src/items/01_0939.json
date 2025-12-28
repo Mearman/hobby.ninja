@@ -55,7 +55,6 @@
 			"en": "HG 1/144 Brave commander test machine"
 		}
 	],
-	"scale": "1/144",
 	"price": {
 		"amount": 1650,
 		"currency": "JPY",
@@ -70,7 +69,9 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": ["• カタギリも傑作MSのギミックを忠実にHGで再現。 成型品×7、リード線（黒）×1、ホイルシール×1、組立説明書×1"],
+		"ja": [
+			"• カタギリも傑作MSのギミックを忠実にHGで再現。 成型品×7、リード線（黒）×1、ホイルシール×1、組立説明書×1"
+		],
 		"en": [
 			"• Katagiri also faithfully reproduces the masterpiece MS gimmick in HG. Molded product x 7, lead wire (black) x 1, foil seal x 1, assembly manual x 1"
 		]
@@ -99,5 +100,8 @@
 	"manual": {
 		"id": "305",
 		"url": "https://manual.bandai-hobby.net/menus/detail/305/"
-	}
+	},
+	"scales": [
+		"1/144"
+	]
 }

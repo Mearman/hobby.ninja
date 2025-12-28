@@ -55,7 +55,6 @@
 			"en": "MG 1/100 Dom"
 		}
 	],
-	"scale": "1/100",
 	"price": {
 		"amount": 6600,
 		"currency": "JPY",
@@ -70,8 +69,12 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": ["MG 1/100 シャア専用 リック・ドム(コーティングバージョン)登場！"],
-		"en": ["MG 1/100 Char's exclusive Rick Dom (coated version) now available!"]
+		"ja": [
+			"MG 1/100 シャア専用 リック・ドム(コーティングバージョン)登場！"
+		],
+		"en": [
+			"MG 1/100 Char's exclusive Rick Dom (coated version) now available!"
+		]
 	},
 	"images": {
 		"product": [
@@ -83,5 +86,8 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4940/"
+	"sourceUrl": "https://bandai-hobby.net/item/01_4940/",
+	"scales": [
+		"1/100"
+	]
 }

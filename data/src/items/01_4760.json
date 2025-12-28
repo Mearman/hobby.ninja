@@ -55,7 +55,6 @@
 			"en": "MG 1/100 Gundam Fenice Rinascita"
 		}
 	],
-	"scale": "1/100",
 	"price": {
 		"amount": 5940,
 		"currency": "JPY",
@@ -70,8 +69,12 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": ["MG 1/100 ガンダムフェニーチェリナーシタ [クリアカラー]登場！"],
-		"en": ["MG 1/100 Gundam Fenice Linacita [Clear Color] now available!"]
+		"ja": [
+			"MG 1/100 ガンダムフェニーチェリナーシタ [クリアカラー]登場！"
+		],
+		"en": [
+			"MG 1/100 Gundam Fenice Linacita [Clear Color] now available!"
+		]
 	},
 	"images": {
 		"product": [
@@ -88,5 +91,8 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4760/"
+	"sourceUrl": "https://bandai-hobby.net/item/01_4760/",
+	"scales": [
+		"1/100"
+	]
 }

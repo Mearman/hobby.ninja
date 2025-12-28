@@ -55,7 +55,6 @@
 			"en": "HG 1/144 Brave commander test machine"
 		}
 	],
-	"scale": "1/144",
 	"price": {
 		"amount": 2304,
 		"currency": "JPY",
@@ -70,8 +69,12 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": ["「HG 1/144 ガンダムエクシア メタリックバージョン」登場！"],
-		"en": ["\"HG 1/144 Gundam Exia Metallic Version\" now available!"]
+		"ja": [
+			"「HG 1/144 ガンダムエクシア メタリックバージョン」登場！"
+		],
+		"en": [
+			"\"HG 1/144 Gundam Exia Metallic Version\" now available!"
+		]
 	},
 	"images": {
 		"product": [
@@ -93,5 +96,8 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4847/"
+	"sourceUrl": "https://bandai-hobby.net/item/01_4847/",
+	"scales": [
+		"1/144"
+	]
 }

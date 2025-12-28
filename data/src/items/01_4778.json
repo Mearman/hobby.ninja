@@ -55,7 +55,6 @@
 			"en": "MG 1/100 Dom"
 		}
 	],
-	"scale": "1/100",
 	"price": {
 		"amount": 4715,
 		"currency": "JPY",
@@ -70,8 +69,12 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": ["MG 1/100 RX-78-2 ガンダム Ver.3.0 G.F.T仕様　登場！"],
-		"en": ["MG 1/100 RX-78-2 Gundam Ver.3.0 G.F.T specification now available!"]
+		"ja": [
+			"MG 1/100 RX-78-2 ガンダム Ver.3.0 G.F.T仕様　登場！"
+		],
+		"en": [
+			"MG 1/100 RX-78-2 Gundam Ver.3.0 G.F.T specification now available!"
+		]
 	},
 	"images": {
 		"product": [
@@ -88,5 +91,8 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4778/"
+	"sourceUrl": "https://bandai-hobby.net/item/01_4778/",
+	"scales": [
+		"1/100"
+	]
 }

@@ -55,7 +55,6 @@
 			"en": "HG 1/144 Gundam Base Limited Gym/Gym II/Gym III Set"
 		}
 	],
-	"scale": "1/144",
 	"price": {
 		"amount": 1676,
 		"currency": "JPY",
@@ -70,8 +69,12 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": ["「HGUC 1/144 MSZ-006 ゼータガンダム グロスインジェクションバージョン」登場！"],
-		"en": ["\"HGUC 1/144 MSZ-006 Zeta Gundam Gloss Injection Version\" now available!"]
+		"ja": [
+			"「HGUC 1/144 MSZ-006 ゼータガンダム グロスインジェクションバージョン」登場！"
+		],
+		"en": [
+			"\"HGUC 1/144 MSZ-006 Zeta Gundam Gloss Injection Version\" now available!"
+		]
 	},
 	"images": {
 		"product": [
@@ -93,5 +96,8 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4831/"
+	"sourceUrl": "https://bandai-hobby.net/item/01_4831/",
+	"scales": [
+		"1/144"
+	]
 }

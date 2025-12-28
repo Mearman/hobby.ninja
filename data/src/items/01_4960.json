@@ -55,7 +55,6 @@
 			"en": "MG 1/100 Dom"
 		}
 	],
-	"scale": "1/100",
 	"price": {
 		"amount": 4992,
 		"currency": "JPY",
@@ -70,8 +69,12 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": ["MG 1/100 ガンダム Ver.3.0 メカニカルクリア登場！"],
-		"en": ["MG 1/100 Gundam Ver.3.0 Mechanical Clear now available!"]
+		"ja": [
+			"MG 1/100 ガンダム Ver.3.0 メカニカルクリア登場！"
+		],
+		"en": [
+			"MG 1/100 Gundam Ver.3.0 Mechanical Clear now available!"
+		]
 	},
 	"images": {
 		"product": [
@@ -93,5 +96,8 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4960/"
+	"sourceUrl": "https://bandai-hobby.net/item/01_4960/",
+	"scales": [
+		"1/100"
+	]
 }

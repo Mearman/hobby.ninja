@@ -48,7 +48,6 @@
 			"en": "HG 1/144 light cannon"
 		}
 	],
-	"scale": "1/144",
 	"price": {
 		"amount": 1100,
 		"currency": "JPY",
@@ -63,8 +62,12 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": ["HGUC 1/144 G-3ガンダム登場！"],
-		"en": ["HGUC 1/144 G-3 Gundam is here!"]
+		"ja": [
+			"HGUC 1/144 G-3ガンダム登場！"
+		],
+		"en": [
+			"HGUC 1/144 G-3 Gundam is here!"
+		]
 	},
 	"images": {
 		"product": [
@@ -81,5 +84,8 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4819/"
+	"sourceUrl": "https://bandai-hobby.net/item/01_4819/",
+	"scales": [
+		"1/144"
+	]
 }

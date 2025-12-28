@@ -55,7 +55,6 @@
 			"en": "MG 1/100 Dom"
 		}
 	],
-	"scale": "1/100",
 	"price": {
 		"amount": 6809,
 		"currency": "JPY",
@@ -70,8 +69,12 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": ["「MG 1/100 RX-78-2 ガンダム Ver.ONE YEAR WAR 0079 エクストラフィニッシュバージョン」登場！"],
-		"en": ["\"MG 1/100 RX-78-2 Gundam Ver.ONE YEAR WAR 0079 Extra Finish Version\" is now available!"]
+		"ja": [
+			"「MG 1/100 RX-78-2 ガンダム Ver.ONE YEAR WAR 0079 エクストラフィニッシュバージョン」登場！"
+		],
+		"en": [
+			"\"MG 1/100 RX-78-2 Gundam Ver.ONE YEAR WAR 0079 Extra Finish Version\" is now available!"
+		]
 	},
 	"images": {
 		"product": [
@@ -93,5 +96,8 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4834/"
+	"sourceUrl": "https://bandai-hobby.net/item/01_4834/",
+	"scales": [
+		"1/100"
+	]
 }

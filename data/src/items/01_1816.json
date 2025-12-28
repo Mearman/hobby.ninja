@@ -55,7 +55,6 @@
 			"en": "HG 1/144 Gundam Regillus [MEMORY OF EDEN]"
 		}
 	],
-	"scale": "1/144",
 	"price": {
 		"amount": 1430,
 		"currency": "JPY",
@@ -70,7 +69,9 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": ["• 第三期キオ編の新たなる敵エース機「ギラーガ」がHGで登場。 成形品×7、ホイルシール×1、組立説明書×1"],
+		"ja": [
+			"• 第三期キオ編の新たなる敵エース機「ギラーガ」がHGで登場。 成形品×7、ホイルシール×1、組立説明書×1"
+		],
 		"en": [
 			"• The new enemy ace machine \"Giraga\" from the third Kio arc is now available in HG. Molded product x 7, foil seal x 1, assembly manual x 1"
 		]
@@ -104,5 +105,8 @@
 	"manual": {
 		"id": "350",
 		"url": "https://manual.bandai-hobby.net/menus/detail/350/"
-	}
+	},
+	"scales": [
+		"1/144"
+	]
 }

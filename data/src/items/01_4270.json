@@ -55,7 +55,6 @@
 			"en": "MG 1/100 Mega Bazooka Launcher"
 		}
 	],
-	"scale": "1/100",
 	"price": {
 		"amount": 6380,
 		"currency": "JPY",
@@ -69,8 +68,12 @@
 	},
 	"targetAge": 15,
 	"description": {
-		"ja": ["MG 1/100 百式 Ver.2.0 [メカニカルクリア]で登場！"],
-		"en": ["MG 1/100 Hyakushiki Ver.2.0 [Mechanical Clear] now available!"]
+		"ja": [
+			"MG 1/100 百式 Ver.2.0 [メカニカルクリア]で登場！"
+		],
+		"en": [
+			"MG 1/100 Hyakushiki Ver.2.0 [Mechanical Clear] now available!"
+		]
 	},
 	"images": {
 		"product": [
@@ -87,5 +90,8 @@
 		],
 		"instructions": []
 	},
-	"sourceUrl": "https://bandai-hobby.net/item/01_4270/"
+	"sourceUrl": "https://bandai-hobby.net/item/01_4270/",
+	"scales": [
+		"1/100"
+	]
 }

@@ -54,7 +54,6 @@
 			"en": "30MM 1/144 Exer Vehicle (Boost Brave Bike Ver.)"
 		}
 	],
-	"scale": "1/144",
 	"price": {
 		"amount": 770,
 		"currency": "JPY",
@@ -69,8 +68,14 @@
 	},
 	"targetAge": 8,
 	"description": {
-		"ja": ["武器もカスタマイズ!!", "30MM 1/144用オプションウェポンが登場！", "• 大型クローとアームライフルのセット。"],
-		"en": ["Customize your weapons! OPTIONAL WEAPON FOR 30MM 1/144 IS AVAILABLE!"]
+		"ja": [
+			"武器もカスタマイズ!!",
+			"30MM 1/144用オプションウェポンが登場！",
+			"• 大型クローとアームライフルのセット。"
+		],
+		"en": [
+			"Customize your weapons! OPTIONAL WEAPON FOR 30MM 1/144 IS AVAILABLE!"
+		]
 	},
 	"accessories": [
 		{
@@ -139,5 +144,8 @@
 	"manual": {
 		"id": "3642",
 		"url": "https://manual.bandai-hobby.net/menus/detail/3642/"
-	}
+	},
+	"scales": [
+		"1/144"
+	]
 }
