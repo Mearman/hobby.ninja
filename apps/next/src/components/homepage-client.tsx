@@ -402,40 +402,6 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 					<Divider />
 
 					<CollapsibleGrid
-						title="Scale"
-						totalCount={scales.length + 1}
-						selectedCount={filters.scales.length}
-						expanded={expandedSections.scales}
-						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, scales: exp })); }}
-						onClear={clearScales}
-					>
-						{(expandedSections.scales ? scales : sortedScales).map((scale) => (
-							<EntityCard
-								key={scale.id}
-								id={scale.id}
-								name={scale.name}
-								itemIds={scale.itemIds}
-								type="scale"
-								asFilter={true}
-								isSelected={filters.scales.includes(scale.id)}
-								onToggle={() => { toggleFilter("scales", scale.id); }}
-							/>
-						))}
-						<EntityCard
-							key={OTHER_FILTER_ID}
-							id={OTHER_FILTER_ID}
-							name="Other"
-							itemIds={Array.from({ length: otherCounts.scales }, () => "")}
-							type="scale"
-							asFilter={true}
-							isSelected={filters.scales.includes(OTHER_FILTER_ID)}
-							onToggle={() => { toggleFilter("scales", OTHER_FILTER_ID); }}
-						/>
-					</CollapsibleGrid>
-
-					<Divider />
-
-					<CollapsibleGrid
 						title="Series"
 						totalCount={series.length + 1}
 						selectedCount={filters.series.length}
@@ -465,6 +431,40 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 							asFilter={true}
 							isSelected={filters.series.includes(OTHER_FILTER_ID)}
 							onToggle={() => { toggleFilter("series", OTHER_FILTER_ID); }}
+						/>
+					</CollapsibleGrid>
+
+					<Divider />
+
+					<CollapsibleGrid
+						title="Scale"
+						totalCount={scales.length + 1}
+						selectedCount={filters.scales.length}
+						expanded={expandedSections.scales}
+						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, scales: exp })); }}
+						onClear={clearScales}
+					>
+						{(expandedSections.scales ? scales : sortedScales).map((scale) => (
+							<EntityCard
+								key={scale.id}
+								id={scale.id}
+								name={scale.name}
+								itemIds={scale.itemIds}
+								type="scale"
+								asFilter={true}
+								isSelected={filters.scales.includes(scale.id)}
+								onToggle={() => { toggleFilter("scales", scale.id); }}
+							/>
+						))}
+						<EntityCard
+							key={OTHER_FILTER_ID}
+							id={OTHER_FILTER_ID}
+							name="Other"
+							itemIds={Array.from({ length: otherCounts.scales }, () => "")}
+							type="scale"
+							asFilter={true}
+							isSelected={filters.scales.includes(OTHER_FILTER_ID)}
+							onToggle={() => { toggleFilter("scales", OTHER_FILTER_ID); }}
 						/>
 					</CollapsibleGrid>
 				</Stack>
