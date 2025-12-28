@@ -111,7 +111,7 @@ export function CollapsibleGrid({
 	};
 
 	return (
-		<Stack gap="lg">
+		<Stack gap="xs">
 			<Group justify="space-between" align="center">
 				<Group gap="sm">
 					{showExpandButton ? (

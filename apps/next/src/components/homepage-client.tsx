@@ -6,7 +6,6 @@ import {
 	ActionIcon,
 	Button,
 	Container,
-	Divider,
 	Group,
 	Stack,
 	Text,
@@ -420,8 +419,8 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 	return (
 		<>
 			{/* Categories, Grades, Brands & Series */}
-			<Container size="xl" py="xl" w="100%">
-				<Stack gap="xl">
+			<Container size="xl" py="xs" w="100%">
+				<Stack gap="xs">
 					<CollapsibleGrid
 						title="Category"
 						totalCount={categories.length + 1}
@@ -466,8 +465,6 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 							onToggle={() => { toggleFilter("categories", OTHER_FILTER_ID); }}
 						/>
 					</CollapsibleGrid>
-
-					<Divider />
 
 					<CollapsibleGrid
 						title="Grade"
@@ -636,8 +633,6 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 						/>
 					</CollapsibleGrid>
 
-					<Divider />
-
 					<CollapsibleGrid
 						title="Brand"
 						totalCount={displayBrands.length + 1}
@@ -682,8 +677,6 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 							onToggle={() => { toggleFilter("brands", OTHER_FILTER_ID); }}
 						/>
 					</CollapsibleGrid>
-
-					<Divider />
 
 					<CollapsibleGrid
 						title="Series"
@@ -730,8 +723,6 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 						/>
 					</CollapsibleGrid>
 
-					<Divider />
-
 					<CollapsibleGrid
 						title="Scale"
 						totalCount={scales.length + 1}
@@ -775,8 +766,6 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 							onToggle={() => { toggleFilter("scales", OTHER_FILTER_ID); }}
 						/>
 					</CollapsibleGrid>
-
-					<Divider />
 
 					<CollapsibleGrid
 						title="Year"
