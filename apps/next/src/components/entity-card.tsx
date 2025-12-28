@@ -3,6 +3,7 @@
 import { resolveCdnUrl } from "@hobby-ninja/data";
 import { Box, Card, Text, UnstyledButton } from "@mantine/core";
 import Link from "next/link";
+import { useState } from "react";
 
 import { FittedText, ImageWithFallback } from "@/components/image-with-fallback";
 
@@ -29,6 +30,7 @@ const TYPE_TO_PATH: Record<EntityCardProps["type"], string> = {
 const INNER_BORDER_RADIUS = "calc(var(--mantine-radius-md) - 2px)";
 
 export function EntityCard({ id, name, itemIds, image, type, asFilter, isSelected, onToggle }: EntityCardProps): React.ReactElement {
+	const [isHovered, setIsHovered] = useState(false);
 	const displayName = typeof name === "string" ? name : (name?.en ?? name?.ja ?? type);
 	const itemCount = itemIds?.length ?? 0;
 
@@ -44,6 +46,8 @@ export function EntityCard({ id, name, itemIds, image, type, asFilter, isSelecte
 				border: isSelected ? "2px solid var(--mantine-primary-color-filled)" : "2px solid transparent",
 				borderRadius: "var(--mantine-radius-md)",
 			}}
+			onMouseEnter={() => { setIsHovered(true); }}
+			onMouseLeave={() => { setIsHovered(false); }}
 		>
 			<Box
 				style={{
@@ -78,6 +82,28 @@ export function EntityCard({ id, name, itemIds, image, type, asFilter, isSelecte
 							pointerEvents: "none",
 						}}
 					/>
+				)}
+
+				{/* Hover overlay - show title when there's an image */}
+				{image && (
+					<Box
+						style={{
+							position: "absolute",
+							inset: 0,
+							background: "linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 100%)",
+							display: "flex",
+							flexDirection: "column",
+							justifyContent: "flex-end",
+							padding: "var(--mantine-spacing-sm)",
+							opacity: isHovered ? 1 : 0,
+							transition: "opacity 0.2s ease-in-out",
+							pointerEvents: "none",
+						}}
+					>
+						<Text size="sm" fw={600} c="white">
+							{displayName}
+						</Text>
+					</Box>
 				)}
 			</Box>
 
