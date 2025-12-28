@@ -185,7 +185,7 @@ jobs:
         run: pnpm nx typecheck next
 
       - name: Lint
-        run: pnpm nx lint next --fix --quiet || true
+        run: pnpm nx lint next --quiet
 
       - name: Test
         run: pnpm nx test next --passWithNoTests
