@@ -3,6 +3,7 @@
 import type { Brand, Category, GradeData, Item, ScaleData, Series } from "@hobby-ninja/data";
 import { getGradeFamilyIds, getGradeFamilyItemIds, getGradesHierarchy } from "@hobby-ninja/data";
 import {
+	ActionIcon,
 	Button,
 	Container,
 	Divider,
@@ -10,8 +11,9 @@ import {
 	Stack,
 	Text,
 	Title,
+	Tooltip,
 } from "@mantine/core";
-import { IconArrowNarrowRight, IconSortAscendingLetters, IconSortDescendingNumbers, IconX } from "@tabler/icons-react";
+import { IconArrowNarrowRight, IconRuler2, IconSortAscendingLetters, IconSortDescendingNumbers, IconX } from "@tabler/icons-react";
 import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
 
@@ -22,7 +24,21 @@ import { ExploreSection, OTHER_FILTER_ID, type FilterState } from "@/components/
 // P-Bandai child brand IDs - these are hidden from the UI, replaced by "pb"
 const PBANDAI_CHILD_IDS = new Set(["pb_gunpla", "pb_hg", "pb_mg", "pb_rg", "pb_pg", "pb_bb", "pb_others", "pb_charapla"]);
 
-type SortMode = "count" | "name";
+// Sort toggle tooltip labels
+const SORT_BY_NAME = "Sort by name";
+const SORT_BY_COUNT = "Sort by count";
+
+// Sort modes per filter type
+// - categories/series/brands: "count" (default) or "name" (alphabetical)
+// - grades: "default" (original data order) or "count"
+// - scales: "count" (default) or "size" (scale size order)
+interface FilterSortModes {
+	categories: "count" | "name";
+	series: "count" | "name";
+	brands: "count" | "name";
+	grades: "default" | "count";
+	scales: "count" | "size";
+}
 
 /** Get display name string from name that may be string or localized object */
 function getDisplayName(name: string | { ja: string; en?: string }): string {
@@ -57,8 +73,14 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 		scales: [],
 	});
 
-	// Sort mode for filter sections (count = by item count, name = alphabetical/size)
-	const [sortMode, setSortMode] = useState<SortMode>("count");
+	// Sort mode per filter type
+	const [sortModes, setSortModes] = useState<FilterSortModes>({
+		categories: "count",
+		series: "count",
+		brands: "count",
+		grades: "default",
+		scales: "count",
+	});
 
 	// Track expanded state for each section
 	const [expandedSections, setExpandedSections] = useState({
@@ -165,21 +187,15 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 
 	const selectedCount = filters.categories.length + filters.series.length + filters.brands.length + filters.grades.length + filters.scales.length;
 
-	// Helper to sort by name or count
-	const sortByMode = useCallback(<T extends { itemIds: string[]; name: string | { ja: string; en?: string } }>(
-		items: T[],
-		mode: SortMode,
-	): T[] => {
-		return items.toSorted((a, b) => {
-			if (mode === "count") {
+	// Sort categories by mode
+	const categoriesSorted = useMemo(() => {
+		return categories.toSorted((a, b) => {
+			if (sortModes.categories === "count") {
 				return b.itemIds.length - a.itemIds.length;
 			}
 			return getDisplayName(a.name).localeCompare(getDisplayName(b.name));
 		});
-	}, []);
-
-	// Sort categories by mode (expanded: just sorted, collapsed: selected first then sorted)
-	const categoriesSorted = useMemo(() => sortByMode(categories, sortMode), [categories, sortMode, sortByMode]);
+	}, [categories, sortModes.categories]);
 	const categoriesCollapsed = useMemo(() => {
 		if (filters.categories.length === 0) return categoriesSorted;
 		const selected = categoriesSorted.filter((c) => filters.categories.includes(c.id));
@@ -188,7 +204,14 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 	}, [categoriesSorted, filters.categories]);
 
 	// Sort series by mode
-	const seriesSorted = useMemo(() => sortByMode(series, sortMode), [series, sortMode, sortByMode]);
+	const seriesSorted = useMemo(() => {
+		return series.toSorted((a, b) => {
+			if (sortModes.series === "count") {
+				return b.itemIds.length - a.itemIds.length;
+			}
+			return getDisplayName(a.name).localeCompare(getDisplayName(b.name));
+		});
+	}, [series, sortModes.series]);
 	const seriesCollapsed = useMemo(() => {
 		if (filters.series.length === 0) return seriesSorted;
 		const selected = seriesSorted.filter((s) => filters.series.includes(s.id));
@@ -197,7 +220,14 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 	}, [seriesSorted, filters.series]);
 
 	// Sort brands by mode
-	const brandsSorted = useMemo(() => sortByMode(displayBrands, sortMode), [displayBrands, sortMode, sortByMode]);
+	const brandsSorted = useMemo(() => {
+		return displayBrands.toSorted((a, b) => {
+			if (sortModes.brands === "count") {
+				return b.itemIds.length - a.itemIds.length;
+			}
+			return getDisplayName(a.name).localeCompare(getDisplayName(b.name));
+		});
+	}, [displayBrands, sortModes.brands]);
 	const brandsCollapsed = useMemo(() => {
 		if (filters.brands.length === 0) return brandsSorted;
 		const selected = brandsSorted.filter((b) => filters.brands.includes(b.id));
@@ -205,16 +235,16 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 		return [...selected, ...unselected];
 	}, [brandsSorted, filters.brands]);
 
-	// Sort scales by mode (name = size order)
+	// Sort scales by mode (size = scale size order)
 	const scalesSorted = useMemo(() => {
 		return scales.toSorted((a, b) => {
-			if (sortMode === "count") {
+			if (sortModes.scales === "count") {
 				return b.itemIds.length - a.itemIds.length;
 			}
 			// Sort by scale size (smaller denominator = larger scale = first)
 			return parseScaleSize(a.id) - parseScaleSize(b.id);
 		});
-	}, [scales, sortMode]);
+	}, [scales, sortModes.scales]);
 	const scalesCollapsed = useMemo(() => {
 		if (filters.scales.length === 0) return scalesSorted;
 		const selected = scalesSorted.filter((s) => filters.scales.includes(s.id));
@@ -222,17 +252,17 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 		return [...selected, ...unselected];
 	}, [scalesSorted, filters.scales]);
 
-	// Sort grade hierarchy by mode
+	// Sort grade hierarchy by mode (default = original order, count = by item count)
 	const gradesSorted = useMemo(() => {
+		if (sortModes.grades === "default") {
+			return gradeHierarchy;
+		}
 		return gradeHierarchy.toSorted((a, b) => {
-			if (sortMode === "count") {
-				const aCount = getGradeFamilyItemIds(a.root.id).length;
-				const bCount = getGradeFamilyItemIds(b.root.id).length;
-				return bCount - aCount;
-			}
-			return getDisplayName(a.root.name).localeCompare(getDisplayName(b.root.name));
+			const aCount = getGradeFamilyItemIds(a.root.id).length;
+			const bCount = getGradeFamilyItemIds(b.root.id).length;
+			return bCount - aCount;
 		});
-	}, [gradeHierarchy, sortMode]);
+	}, [gradeHierarchy, sortModes.grades]);
 	const gradesCollapsed = useMemo(() => {
 		if (filters.grades.length === 0) return gradesSorted;
 		const selected = gradesSorted.filter((entry) => {
@@ -320,17 +350,6 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 			{/* Categories, Grades, Brands & Series */}
 			<Container size="xl" py="xl" w="100%">
 				<Stack gap="xl">
-					<Group justify="flex-end">
-						<Button
-							variant="subtle"
-							size="xs"
-							leftSection={sortMode === "count" ? <IconSortDescendingNumbers size={14} /> : <IconSortAscendingLetters size={14} />}
-							onClick={() => { setSortMode((prev) => prev === "count" ? "name" : "count"); }}
-						>
-							{sortMode === "count" ? "By count" : "By name"}
-						</Button>
-					</Group>
-
 					<CollapsibleGrid
 						title="Category"
 						totalCount={categories.length + 1}
@@ -338,6 +357,17 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 						expanded={expandedSections.categories}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, categories: exp })); }}
 						onClear={clearCategories}
+						headerRight={
+							<Tooltip label={sortModes.categories === "count" ? SORT_BY_NAME : SORT_BY_COUNT}>
+								<ActionIcon
+									variant="subtle"
+									size="sm"
+									onClick={() => { setSortModes((prev) => ({ ...prev, categories: prev.categories === "count" ? "name" : "count" })); }}
+								>
+									{sortModes.categories === "count" ? <IconSortDescendingNumbers size={16} /> : <IconSortAscendingLetters size={16} />}
+								</ActionIcon>
+							</Tooltip>
+						}
 					>
 						{(expandedSections.categories ? categoriesSorted : categoriesCollapsed).map((category) => (
 							<EntityCard
@@ -373,6 +403,17 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 						expanded={expandedSections.grades}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, grades: exp })); }}
 						onClear={clearGrades}
+						headerRight={
+							<Tooltip label={sortModes.grades === "default" ? SORT_BY_COUNT : "Default order"}>
+								<ActionIcon
+									variant="subtle"
+									size="sm"
+									onClick={() => { setSortModes((prev) => ({ ...prev, grades: prev.grades === "default" ? "count" : "default" })); }}
+								>
+									{sortModes.grades === "default" ? <IconSortAscendingLetters size={16} /> : <IconSortDescendingNumbers size={16} />}
+								</ActionIcon>
+							</Tooltip>
+						}
 					>
 						{(expandedSections.grades ? gradesSorted : gradesCollapsed).flatMap((entry) => {
 							const { root, children } = entry;
@@ -529,6 +570,17 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 						expanded={expandedSections.brands}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, brands: exp })); }}
 						onClear={clearBrands}
+						headerRight={
+							<Tooltip label={sortModes.brands === "count" ? SORT_BY_NAME : SORT_BY_COUNT}>
+								<ActionIcon
+									variant="subtle"
+									size="sm"
+									onClick={() => { setSortModes((prev) => ({ ...prev, brands: prev.brands === "count" ? "name" : "count" })); }}
+								>
+									{sortModes.brands === "count" ? <IconSortDescendingNumbers size={16} /> : <IconSortAscendingLetters size={16} />}
+								</ActionIcon>
+							</Tooltip>
+						}
 					>
 						{(expandedSections.brands ? brandsSorted : brandsCollapsed).map((brand) => (
 							<EntityCard
@@ -564,6 +616,17 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 						onClear={clearSeries}
 						expanded={expandedSections.series}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, series: exp })); }}
+						headerRight={
+							<Tooltip label={sortModes.series === "count" ? SORT_BY_NAME : SORT_BY_COUNT}>
+								<ActionIcon
+									variant="subtle"
+									size="sm"
+									onClick={() => { setSortModes((prev) => ({ ...prev, series: prev.series === "count" ? "name" : "count" })); }}
+								>
+									{sortModes.series === "count" ? <IconSortDescendingNumbers size={16} /> : <IconSortAscendingLetters size={16} />}
+								</ActionIcon>
+							</Tooltip>
+						}
 					>
 						{(expandedSections.series ? seriesSorted : seriesCollapsed).map((s) => (
 							<EntityCard
@@ -599,6 +662,17 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 						expanded={expandedSections.scales}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, scales: exp })); }}
 						onClear={clearScales}
+						headerRight={
+							<Tooltip label={sortModes.scales === "count" ? "Sort by size" : SORT_BY_COUNT}>
+								<ActionIcon
+									variant="subtle"
+									size="sm"
+									onClick={() => { setSortModes((prev) => ({ ...prev, scales: prev.scales === "count" ? "size" : "count" })); }}
+								>
+									{sortModes.scales === "count" ? <IconSortDescendingNumbers size={16} /> : <IconRuler2 size={16} />}
+								</ActionIcon>
+							</Tooltip>
+						}
 					>
 						{(expandedSections.scales ? scalesSorted : scalesCollapsed).map((scale) => (
 							<EntityCard

@@ -19,6 +19,8 @@ interface CollapsibleGridProps {
 	onExpandedChange?: (expanded: boolean) => void;
 	/** Callback to clear selections for this filter type */
 	onClear?: () => void;
+	/** Optional element to render in the header (e.g., sort toggle) */
+	headerRight?: React.ReactNode;
 }
 
 const GAP = 16; // var(--mantine-spacing-md) in pixels
@@ -35,6 +37,7 @@ export function CollapsibleGrid({
 	expanded: controlledExpanded,
 	onExpandedChange,
 	onClear,
+	headerRight,
 }: CollapsibleGridProps): React.ReactElement {
 	const [internalExpanded, { toggle: internalToggle }] = useDisclosure(false);
 	const { ref: containerRef, width: containerWidth } = useElementSize();
@@ -133,6 +136,7 @@ export function CollapsibleGrid({
 							)}
 						</Group>
 					)}
+					{headerRight}
 				</Group>
 				{showExpandButton && (
 					<UnstyledButton onClick={toggle} style={{ cursor: "pointer" }}>
