@@ -250,6 +250,9 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 	// When section collapsed: count root families with any selection (1 card per family)
 	// When section expanded: count all visible selected cards including expanded children
 	const visibleSelectedGradeCount = useMemo(() => {
+		// Count "Other" option separately (always visible)
+		const otherSelected = filters.grades.includes(OTHER_FILTER_ID) ? 1 : 0;
+
 		if (!expandedSections.grades) {
 			// Section collapsed: only root cards shown, count families with any selection
 			return gradesCollapsed.filter((entry) => {
@@ -259,7 +262,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 				}
 				const familyIds = getGradeFamilyIds(root.id);
 				return familyIds.some((id) => filters.grades.includes(id));
-			}).length;
+			}).length + otherSelected;
 		}
 
 		// Section expanded: count each visible selected card
@@ -288,14 +291,15 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 				}
 			}
 		}
-		return count;
+		return count + otherSelected;
 	}, [gradesSorted, gradesCollapsed, expandedSections.grades, expandedFamilies, filters.grades]);
 
-	// Count items without categories/series/brands/scales for "Other" option
+	// Count items without categories/series/brands/grades/scales for "Other" option
 	const otherCounts = useMemo(() => ({
 		categories: items.filter((item) => item.categories.length === 0).length,
 		series: items.filter((item) => item.series.length === 0).length,
 		brands: items.filter((item) => item.brands.length === 0).length,
+		grades: items.filter((item) => Object.keys(item.grades).length === 0).length,
 		scales: items.filter((item) => item.scales.length === 0).length,
 	}), [items]);
 
@@ -352,7 +356,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 
 					<CollapsibleGrid
 						title="Grade"
-						totalCount={grades.length}
+						totalCount={grades.length + 1}
 						selectedCount={visibleSelectedGradeCount}
 						expanded={expandedSections.grades}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, grades: exp })); }}
@@ -431,6 +435,16 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 								)),
 							];
 						})}
+						<EntityCard
+							key={OTHER_FILTER_ID}
+							id={OTHER_FILTER_ID}
+							name="Other"
+							itemIds={Array.from({ length: otherCounts.grades }, () => "")}
+							type="grade"
+							asFilter={true}
+							isSelected={filters.grades.includes(OTHER_FILTER_ID)}
+							onToggle={() => { toggleFilter("grades", OTHER_FILTER_ID); }}
+						/>
 					</CollapsibleGrid>
 
 					<Divider />
