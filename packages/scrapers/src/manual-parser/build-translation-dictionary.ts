@@ -6,7 +6,7 @@
  */
 
 import { promises as fs } from "node:fs";
-import { join } from "node:path";
+import path from "node:path";
 
 // ============================================================================
 // Types
@@ -68,12 +68,23 @@ interface TranslationDictionary {
 // Full-width to half-width normalization (from json-filter.ts)
 // ============================================================================
 
+/** Unicode offset between full-width and half-width characters */
+const FULLWIDTH_OFFSET = 0xfe_e0;
+
 function normalizeFullWidth(text: string): string {
 	// Full-width letters A-Z (U+FF21 to U+FF3A) -> half-width (U+0041 to U+005A)
 	// Full-width digits 0-9 (U+FF10 to U+FF19) -> half-width (U+0030 to U+0039)
 	return text
-		.replaceAll(/[\uFF21-\uFF3A]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfe_e0))
-		.replaceAll(/[\uFF10-\uFF19]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfe_e0));
+		.replaceAll(/[\uFF21-\uFF3A]/g, (c) => {
+			const codePoint = c.codePointAt(0);
+			if (codePoint === undefined) return c;
+			return String.fromCodePoint(codePoint - FULLWIDTH_OFFSET);
+		})
+		.replaceAll(/[\uFF10-\uFF19]/g, (c) => {
+			const codePoint = c.codePointAt(0);
+			if (codePoint === undefined) return c;
+			return String.fromCodePoint(codePoint - FULLWIDTH_OFFSET);
+		});
 }
 
 function normalizeText(text: string): string {
@@ -84,6 +95,16 @@ function normalizeText(text: string): string {
 // Loading
 // ============================================================================
 
+function isTranslationCacheEntry(value: unknown): value is TranslationCacheEntry {
+	if (typeof value !== "object" || value === null) return false;
+	const obj = value as Record<string, unknown>;
+	return (
+		typeof obj.key === "string" &&
+		typeof obj.originalText === "string" &&
+		typeof obj.translatedText === "string"
+	);
+}
+
 async function loadTranslationCache(cacheDir: string): Promise<TranslationCacheEntry[]> {
 	const files = await fs.readdir(cacheDir);
 	const entries: TranslationCacheEntry[] = [];
@@ -91,9 +112,11 @@ async function loadTranslationCache(cacheDir: string): Promise<TranslationCacheE
 	for (const file of files) {
 		if (!file.endsWith(".json") || file === "metadata.json") continue;
 		try {
-			const content = await fs.readFile(join(cacheDir, file), "utf8");
-			const entry: TranslationCacheEntry = JSON.parse(content);
-			entries.push(entry);
+			const content = await fs.readFile(path.join(cacheDir, file), "utf8");
+			const parsed: unknown = JSON.parse(content);
+			if (isTranslationCacheEntry(parsed)) {
+				entries.push(parsed);
+			}
 		} catch {
 			// Skip invalid files
 		}
@@ -130,15 +153,15 @@ function tokenizeJapanese(text: string): string[] {
 	const normalized = normalizeText(text);
 
 	// Katakana words (product names, transliterations)
-	const katakana = normalized.match(/[ァ-ヶー]{2,}/g) || [];
+	const katakana = normalized.match(/[ァ-ヶー]{2,}/g) ?? [];
 	tokens.push(...katakana);
 
 	// Kanji compounds (2+ characters)
-	const kanji = normalized.match(/[一-龯]{2,}/g) || [];
+	const kanji = normalized.match(/[一-龯]{2,}/g) ?? [];
 	tokens.push(...kanji);
 
 	// Single meaningful kanji with context
-	const singleKanji = normalized.match(/[一-龯]/g) || [];
+	const singleKanji = normalized.match(/[一-龯]/g) ?? [];
 	for (const k of singleKanji) {
 		if (["型", "機", "専", "用", "改", "量", "産"].includes(k)) {
 			tokens.push(k);
@@ -150,7 +173,7 @@ function tokenizeJapanese(text: string): string[] {
 
 function tokenizeEnglish(text: string): string[] {
 	return text
-		.split(/[\s\-\/\(\)\[\],]+/)
+		.split(/[\s\-/()[\],]+/)
 		.filter((t) => t.length >= 2)
 		.map((t) => t.trim());
 }
@@ -159,14 +182,13 @@ function tokenizeEnglish(text: string): string[] {
 // Word Extraction with Co-occurrence
 // ============================================================================
 
+interface WordStats {
+	translations: Map<string, number>;
+	contexts: string[];
+}
+
 function extractWordMappings(entries: TranslationCacheEntry[]): WordMapping[] {
-	const wordStats = new Map<
-    string,
-    {
-      translations: Map<string, number>;
-      contexts: string[];
-    }
-  >();
+	const wordStats = new Map<string, WordStats>();
 
 	for (const entry of entries) {
 		const jaTokens = tokenizeJapanese(entry.originalText);
@@ -174,15 +196,15 @@ function extractWordMappings(entries: TranslationCacheEntry[]): WordMapping[] {
 
 		// Track co-occurrence: Japanese token appears with English tokens
 		for (const ja of jaTokens) {
-			if (!wordStats.has(ja)) {
-				wordStats.set(ja, { translations: new Map(), contexts: [] });
+			let stats = wordStats.get(ja);
+			if (!stats) {
+				stats = { translations: new Map(), contexts: [] };
+				wordStats.set(ja, stats);
 			}
-
-			const stats = wordStats.get(ja)!;
 
 			// Count each English token as potential translation
 			for (const en of enTokens) {
-				stats.translations.set(en, (stats.translations.get(en) || 0) + 1);
+				stats.translations.set(en, (stats.translations.get(en) ?? 0) + 1);
 			}
 
 			if (stats.contexts.length < 3) {
@@ -223,18 +245,28 @@ function extractWordMappings(entries: TranslationCacheEntry[]): WordMapping[] {
 		}
 	}
 
-	return words.sort((a, b) => b.frequency - a.frequency);
+	return words.toSorted((a, b) => b.frequency - a.frequency);
 }
 
 // ============================================================================
 // Pattern Discovery
 // ============================================================================
 
+interface GradeData {
+	count: number;
+	examples: Array<{ ja: string; en: string }>;
+}
+
+interface SeriesData {
+	en: string;
+	count: number;
+}
+
 function discoverPatterns(entries: TranslationCacheEntry[]): DiscoveredPattern[] {
 	const patterns: DiscoveredPattern[] = [];
 
 	// Grade patterns
-	const gradeCounter = new Map<string, { count: number; examples: Array<{ ja: string; en: string }> }>();
+	const gradeCounter = new Map<string, GradeData>();
 	const gradeRegex = /^(HG|MG|PG|RG|SD|EG|RE|FM|HGUC|HGCE|HGBF|HGBD|HGIBO|HGAC|HGAW|HGFC|HGWFM|HGTB|SDCS|SDEX|MGEX|30MM|30MS|30MF|ＨＧ|ＭＧ|ＰＧ|ＲＧ)/i;
 
 	for (const entry of entries) {
@@ -242,10 +274,11 @@ function discoverPatterns(entries: TranslationCacheEntry[]): DiscoveredPattern[]
 		const match = gradeRegex.exec(normalized);
 		if (match) {
 			const grade = match[1].toUpperCase();
-			if (!gradeCounter.has(grade)) {
-				gradeCounter.set(grade, { count: 0, examples: [] });
+			let data = gradeCounter.get(grade);
+			if (!data) {
+				data = { count: 0, examples: [] };
+				gradeCounter.set(grade, data);
 			}
-			const data = gradeCounter.get(grade)!;
 			data.count++;
 			if (data.examples.length < 3) {
 				data.examples.push({ ja: entry.originalText, en: entry.translatedText });
@@ -270,7 +303,7 @@ function discoverPatterns(entries: TranslationCacheEntry[]): DiscoveredPattern[]
 		const scaleMatch = /1\/(\d+)/.exec(entry.originalText);
 		if (scaleMatch) {
 			const scale = `1/${scaleMatch[1]}`;
-			scaleCounter.set(scale, (scaleCounter.get(scale) || 0) + 1);
+			scaleCounter.set(scale, (scaleCounter.get(scale) ?? 0) + 1);
 		}
 	}
 
@@ -284,17 +317,19 @@ function discoverPatterns(entries: TranslationCacheEntry[]): DiscoveredPattern[]
 	}
 
 	// Series patterns (detect from content)
-	const seriesKeywords = new Map<string, { en: string; count: number }>();
+	const seriesKeywords = new Map<string, SeriesData>();
 	const seriesRegex = /機動戦士|ガンダムビルド|鉄血のオルフェンズ|水星の魔女|ガンダムSEED|ガンダム00|ガンダムW|∀ガンダム/g;
 
 	for (const entry of entries) {
 		const matches = entry.originalText.match(seriesRegex);
 		if (matches) {
 			for (const m of matches) {
-				if (!seriesKeywords.has(m)) {
-					seriesKeywords.set(m, { en: entry.translatedText, count: 0 });
+				let seriesData = seriesKeywords.get(m);
+				if (!seriesData) {
+					seriesData = { en: entry.translatedText, count: 0 };
+					seriesKeywords.set(m, seriesData);
 				}
-        seriesKeywords.get(m)!.count++;
+				seriesData.count++;
 			}
 		}
 	}
@@ -308,7 +343,7 @@ function discoverPatterns(entries: TranslationCacheEntry[]): DiscoveredPattern[]
 		});
 	}
 
-	return patterns.sort((a, b) => b.frequency - a.frequency);
+	return patterns.toSorted((a, b) => b.frequency - a.frequency);
 }
 
 // ============================================================================
@@ -375,7 +410,7 @@ function printSummary(dict: TranslationDictionary): void {
 	const patternTypes = new Map<string, number>();
 	for (const p of dict.patterns) {
 		const type = p.name.split("_")[0];
-		patternTypes.set(type, (patternTypes.get(type) || 0) + 1);
+		patternTypes.set(type, (patternTypes.get(type) ?? 0) + 1);
 	}
 	for (const [type, count] of patternTypes) {
 		console.log(`  ${type}: ${count} patterns`);
@@ -384,8 +419,8 @@ function printSummary(dict: TranslationDictionary): void {
 	console.log(`\nPhrase Categories:`);
 	const categories = new Map<string, number>();
 	for (const p of dict.phrases) {
-		const cat = p.category || "uncategorized";
-		categories.set(cat, (categories.get(cat) || 0) + 1);
+		const cat = p.category ?? "uncategorized";
+		categories.set(cat, (categories.get(cat) ?? 0) + 1);
 	}
 	for (const [cat, count] of categories) {
 		console.log(`  ${cat}: ${count}`);
@@ -443,12 +478,12 @@ async function main() {
 	};
 
 	// 7. Write output
-	const outputPath = join(outputDir, "dictionary.json");
-	await fs.writeFile(outputPath, JSON.stringify(dictionary, null, 2), "utf-8");
+	const outputPath = path.join(outputDir, "dictionary.json");
+	await fs.writeFile(outputPath, JSON.stringify(dictionary, null, 2), "utf8");
 	console.log(`\nDictionary written to: ${outputPath}`);
 
 	// 8. Print summary
 	printSummary(dictionary);
 }
 
-main().catch(console.error);
+await main();

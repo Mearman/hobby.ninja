@@ -5,7 +5,7 @@
  */
 
 import { promises as fs } from "node:fs";
-import { join } from "node:path";
+import path from "node:path";
 
 import { filterJsonFile } from "./core/json-filter";
 
@@ -21,7 +21,7 @@ async function main() {
 	const ids = entries
 		.filter((e) => e.isDirectory())
 		.map((e) => e.name)
-		.sort();
+		.toSorted();
 
 	console.log(`Found ${ids.length} manuals to process\n`);
 
@@ -29,8 +29,8 @@ async function main() {
 	let errors = 0;
 
 	for (const id of ids) {
-		const inputPath = join(manualsDir, id, `${id}.html.json`);
-		const outputPath = join(manualsDir, id, `${id}.json`);
+		const inputPath = path.join(manualsDir, id, `${id}.html.json`);
+		const outputPath = path.join(manualsDir, id, `${id}.json`);
 
 		try {
 			await filterJsonFile(inputPath, outputPath, id);
@@ -50,4 +50,4 @@ async function main() {
 	console.log(`  Errors: ${errors}`);
 }
 
-main().catch(console.error);
+await main();

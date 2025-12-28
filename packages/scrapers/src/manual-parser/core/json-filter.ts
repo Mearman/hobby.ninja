@@ -9,25 +9,35 @@ import { promises as fs } from "node:fs";
 import type { LocalizedText } from "@hobby-ninja/types/manual";
 
 /**
+ * Content block from parsed HTML
+ */
+interface ContentBlock {
+	type: string;
+	content: {
+		text?: string;
+		ja?: string;
+		src?: string;
+		href?: string;
+	};
+}
+
+/**
  * Raw parsed HTML JSON structure (from SimpleHtmlParser)
  */
 interface RawParsedJson {
-  title?: string;
-  metadata: {
-    language: string;
-    encoding: string;
-    extractedAt: string;
-  };
-  content: {
-    blocks: Array<{
-      type: string;
-      content: Record<string, string>;
-    }>;
-  };
-  assets: {
-    images: string[];
-    links: string[];
-  };
+	title?: string;
+	metadata: {
+		language: string;
+		encoding: string;
+		extractedAt: string;
+	};
+	content: {
+		blocks: ContentBlock[];
+	};
+	assets: {
+		images: string[];
+		links: string[];
+	};
 }
 
 /**
@@ -105,9 +115,9 @@ function isNoise(text: string): boolean {
 /**
  * Extract product number (品番) from text
  */
-function extractProductNumber(blocks: RawParsedJson["content"]["blocks"]): string {
+function extractProductNumber(blocks: ContentBlock[]): string {
 	for (const block of blocks) {
-		const text = block.content?.text || block.content?.ja || "";
+		const text = block.content.text ?? block.content.ja ?? "";
 		// Look for pattern: 品番 followed by number
 		const match = /品番[^\d]*(\d+)/.exec(text);
 		if (match) {
@@ -120,9 +130,9 @@ function extractProductNumber(blocks: RawParsedJson["content"]["blocks"]): strin
 /**
  * Extract release date (発売日) from text
  */
-function extractReleaseDate(blocks: RawParsedJson["content"]["blocks"]): LocalizedDate {
+function extractReleaseDate(blocks: ContentBlock[]): LocalizedDate {
 	for (const block of blocks) {
-		const text = block.content?.text || block.content?.ja || "";
+		const text = block.content.text ?? block.content.ja ?? "";
 
 		// Try full date first: 2002年11月16日
 		const fullMatch = /発売日[^\d]*(\d{4})年(\d{1,2})月(\d{1,2})日/.exec(text);
@@ -183,11 +193,6 @@ const COMPOUND_GRADE_REGEX = new RegExp(
 );
 
 /**
- * Regex to match 30 Minutes series: 30MM, 30MF, 30MS
- */
-const THIRTY_MINUTES_REGEX = /30M[MFS]/g;
-
-/**
  * Derive base grade from a grade string
  * - Compound grades (HGUC, SDCS) → extract prefix (HG, SD)
  * - Base grades (HG, MG) → return as-is
@@ -245,7 +250,7 @@ const FULLWIDTH_TO_HALFWIDTH: Record<string, string> = {
  * Normalize text by converting full-width letters to half-width
  */
 function normalizeForGradeMatch(text: string): string {
-	return text.replaceAll(/[Ａ-Ｚ]/g, (char) => FULLWIDTH_TO_HALFWIDTH[char] || char);
+	return text.replaceAll(/[Ａ-Ｚ]/g, (char) => FULLWIDTH_TO_HALFWIDTH[char] ?? char);
 }
 
 /**
@@ -307,7 +312,7 @@ function findGradeInText(text: string): string | undefined {
 /**
  * Extract grade/brand (ブランド) from text
  */
-function extractGrade(blocks: RawParsedJson["content"]["blocks"]): {
+function extractGrade(blocks: ContentBlock[]): {
   grade?: GradeInfo;
   scale?: string;
 } {
@@ -318,20 +323,16 @@ function extractGrade(blocks: RawParsedJson["content"]["blocks"]): {
 	let brandValue: string | undefined;
 
 	for (const block of blocks) {
-		const text = block.content?.text || block.content?.ja || "";
+		const text = block.content.text ?? block.content.ja ?? "";
 
 		// Extract ブランド field value for later use
-		if (!brandValue) {
-			const brandMatch = /ブランド[\s\n]*([^\n品発作取]+)/.exec(text);
-			if (brandMatch) {
-				brandValue = brandMatch[1].trim();
-			}
+		const brandMatch = /ブランド[\s\n]*([^\n品発作取]+)/.exec(text);
+		if (brandMatch) {
+			brandValue ??= brandMatch[1].trim();
 		}
 
 		// Check product name for grade (priority - most accurate)
-		if (!grade) {
-			grade = findGradeInText(text);
-		}
+		grade ??= findGradeInText(text);
 
 		// Extract scale from product name (optional)
 		if (!scale) {
@@ -357,9 +358,7 @@ function extractGrade(blocks: RawParsedJson["content"]["blocks"]): {
 		}
 
 		// Try to find grade pattern in brand value itself
-		if (!grade) {
-			grade = findGradeInText(brandValue);
-		}
+		grade ??= findGradeInText(brandValue);
 	}
 
 	// Return with grade info if we found a grade
@@ -375,9 +374,9 @@ function extractGrade(blocks: RawParsedJson["content"]["blocks"]): {
 /**
  * Extract series/work (作品) from text
  */
-function extractSeries(blocks: RawParsedJson["content"]["blocks"]): LocalizedText {
+function extractSeries(blocks: ContentBlock[]): LocalizedText {
 	for (const block of blocks) {
-		const text = block.content?.text || block.content?.ja || "";
+		const text = block.content.text ?? block.content.ja ?? "";
 		// Look for pattern: 作品 followed by any text (Japanese + alphanumeric)
 		const match = /作品[\s\n]*([^\n取]{2,})/.exec(text);
 		if (match) {
@@ -395,12 +394,12 @@ function extractSeries(blocks: RawParsedJson["content"]["blocks"]): LocalizedTex
  */
 function extractProductName(
 	title: string | undefined,
-	blocks: RawParsedJson["content"]["blocks"],
+	blocks: ContentBlock[],
 ): LocalizedText {
 	// First try h2 blocks (most accurate)
 	for (const block of blocks) {
 		if (block.type === "h2") {
-			const text = (block.content?.text || block.content?.ja || "").trim();
+			const text = (block.content.text ?? block.content.ja ?? "").trim();
 			if (text && !isNoise(text) && text.length > 3) {
 				return { ja: text };
 			}
@@ -445,14 +444,14 @@ function isProductImage(url: string): boolean {
  * Extract product image URL
  */
 function extractProductImage(
-	blocks: RawParsedJson["content"]["blocks"],
+	blocks: ContentBlock[],
 	assets: RawParsedJson["assets"],
 ): { productImage: string; thumbnailImage: string } {
-	const productImages = assets.images.filter(isProductImage);
+	const productImages = assets.images.filter((url) => isProductImage(url));
 
 	// Also check img blocks
 	for (const block of blocks) {
-		if (block.type === "img" && block.content?.src) {
+		if (block.type === "img" && block.content.src) {
 			const src = block.content.src;
 			if (isProductImage(src) && !productImages.includes(src)) {
 				productImages.push(src);
@@ -541,9 +540,6 @@ export function filterManualJson(
 	if (blocks.length === 0) {
 		throw new Error("No content blocks found in raw JSON");
 	}
-	if (!assets) {
-		throw new Error("No assets found in raw JSON");
-	}
 
 	const name = extractProductName(rawJson.title, blocks);
 	const productNumber = extractProductNumber(blocks);
@@ -561,7 +557,7 @@ export function filterManualJson(
 		productImage,
 		thumbnailImage,
 		sourceUrl: buildSourceUrl(manualId),
-		extractedAt: rawJson.metadata?.extractedAt || new Date().toISOString(),
+		extractedAt: rawJson.metadata.extractedAt,
 		pdfs,
 	};
 
@@ -594,7 +590,7 @@ export async function filterJsonFile(
 
 	const filtered = filterManualJson(rawJson, manualId, pdfs);
 
-	await fs.writeFile(outputPath, JSON.stringify(filtered, null, 2), "utf-8");
+	await fs.writeFile(outputPath, JSON.stringify(filtered, null, 2), "utf8");
 
 	return filtered;
 }

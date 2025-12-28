@@ -2,31 +2,59 @@
  * Simple HTML parser using parse5
  */
 
-import { parse } from "parse5";
+import { parse, type DefaultTreeAdapterTypes } from "parse5";
+
+type Document = DefaultTreeAdapterTypes.Document;
+type Element = DefaultTreeAdapterTypes.Element;
+type Node = DefaultTreeAdapterTypes.Node;
+type TextNode = DefaultTreeAdapterTypes.TextNode;
 
 export interface ManualDocument {
-  title?: string;
-  metadata: {
-    language: string;
-    encoding: string;
-    extractedAt: string;
-  };
-  content: {
-    blocks: Array<{
-      type: string;
-      content: Record<string, string>;
-    }>;
-  };
-  assets: {
-    images: string[];
-    links: string[];
-  };
+	title?: string;
+	metadata: {
+		language: string;
+		encoding: string;
+		extractedAt: string;
+	};
+	content: {
+		blocks: ContentBlock[];
+	};
+	assets: {
+		images: string[];
+		links: string[];
+	};
+}
+
+export interface ContentBlock {
+	type: string;
+	content: Record<string, string>;
 }
 
 export interface ParseResult {
-  success: boolean;
-  data?: ManualDocument;
-  error?: string;
+	success: boolean;
+	data?: ManualDocument;
+	error?: string;
+}
+
+/**
+ * Type guard to check if node is an Element
+ */
+function isElement(node: Node): node is Element {
+	return "tagName" in node;
+}
+
+/**
+ * Type guard to check if node is a TextNode
+ */
+function isTextNode(node: Node): node is TextNode {
+	return node.nodeName === "#text";
+}
+
+/**
+ * Type guard to check if node has childNodes
+ */
+function hasChildNodes(node: Node): node is Document | Element {
+	return "childNodes" in node;
 }
 
 /**
@@ -46,7 +74,7 @@ export class SimpleHtmlParser {
 					title,
 					metadata: {
 						language: "ja",
-						encoding: "utf-8",
+						encoding: "utf8",
 						extractedAt: new Date().toISOString(),
 					},
 					content: {
@@ -63,7 +91,7 @@ export class SimpleHtmlParser {
 		}
 	}
 
-	private extractTitle(document: any): string | undefined {
+	private extractTitle(document: Document): string | undefined {
 		const titleElement = this.findElementByTag(document, "title");
 		if (titleElement?.childNodes) {
 			return this.getTextContent(titleElement).trim();
@@ -71,8 +99,8 @@ export class SimpleHtmlParser {
 		return undefined;
 	}
 
-	private extractContent(document: any): any[] {
-		const blocks: any[] = [];
+	private extractContent(document: Document): ContentBlock[] {
+		const blocks: ContentBlock[] = [];
 		const bodyElement = this.findElementByTag(document, "body");
 
 		if (!bodyElement) {
@@ -80,21 +108,19 @@ export class SimpleHtmlParser {
 		}
 
 		this.processNode(bodyElement, blocks);
-		return blocks.filter(block => block?.content && Object.keys(block.content).length > 0);
+		return blocks.filter((block) => Object.keys(block.content).length > 0);
 	}
 
-	private extractAssets(document: any): { images: string[]; links: string[] } {
+	private extractAssets(document: Document): { images: string[]; links: string[] } {
 		const assets = { images: [] as string[], links: [] as string[] };
 		this.extractAssetsFromNode(document, assets);
 		return assets;
 	}
 
-	private processNode(node: any, blocks: any[]): void {
-		if (!node) return;
-
+	private processNode(node: Node, blocks: ContentBlock[]): void {
 		// Process text nodes
-		if (node.nodeName === "#text") {
-			const text = node.value || "";
+		if (isTextNode(node)) {
+			const text = node.value;
 			if (text.trim() && this.hasJapaneseContent(text)) {
 				blocks.push({
 					type: "text",
@@ -108,7 +134,7 @@ export class SimpleHtmlParser {
 		}
 
 		// Process element nodes
-		if (node.tagName) {
+		if (isElement(node)) {
 			const tagName = node.tagName.toLowerCase();
 			const textContent = this.getTextContent(node);
 
@@ -141,10 +167,8 @@ export class SimpleHtmlParser {
 			}
 
 			// Process child nodes
-			if (node.childNodes) {
-				for (const child of node.childNodes) {
-					this.processNode(child, blocks);
-				}
+			for (const child of node.childNodes) {
+				this.processNode(child, blocks);
 			}
 		}
 	}
@@ -164,10 +188,8 @@ export class SimpleHtmlParser {
 		return this.hasJapaneseContent(textContent);
 	}
 
-	private extractAssetsFromNode(node: any, assets: { images: string[]; links: string[] }): void {
-		if (!node) return;
-
-		if (node.tagName) {
+	private extractAssetsFromNode(node: Node, assets: { images: string[]; links: string[] }): void {
+		if (isElement(node)) {
 			const tagName = node.tagName.toLowerCase();
 
 			if (tagName === "img") {
@@ -185,21 +207,19 @@ export class SimpleHtmlParser {
 			}
 		}
 
-		if (node.childNodes) {
+		if (hasChildNodes(node)) {
 			for (const child of node.childNodes) {
 				this.extractAssetsFromNode(child, assets);
 			}
 		}
 	}
 
-	private findElementByTag(node: any, tagName: string): any {
-		if (!node) return null;
-
-		if (node.tagName === tagName) {
+	private findElementByTag(node: Node, tagName: string): Element | null {
+		if (isElement(node) && node.tagName === tagName) {
 			return node;
 		}
 
-		if (node.childNodes) {
+		if (hasChildNodes(node)) {
 			for (const child of node.childNodes) {
 				const found = this.findElementByTag(child, tagName);
 				if (found) return found;
@@ -209,26 +229,25 @@ export class SimpleHtmlParser {
 		return null;
 	}
 
-	private getTextContent(node: any): string {
-		if (!node) return "";
-
-		if (node.nodeName === "#text") {
-			return node.value || "";
+	private getTextContent(node: Node): string {
+		if (isTextNode(node)) {
+			return node.value;
 		}
 
-		if (node.childNodes) {
-			return node.childNodes.map((child: any) => this.getTextContent(child)).join("");
+		if (hasChildNodes(node)) {
+			let result = "";
+			for (const child of node.childNodes) {
+				result += this.getTextContent(child);
+			}
+			return result;
 		}
 
 		return "";
 	}
 
-	private getAttribute(node: any, attributeName: string): string | undefined {
-		if (node.attrs) {
-			const attr = node.attrs.find((attr: any) => attr.name === attributeName);
-			return attr?.value;
-		}
-		return undefined;
+	private getAttribute(node: Element, attributeName: string): string | undefined {
+		const attr = node.attrs.find((a) => a.name === attributeName);
+		return attr?.value;
 	}
 
 	private hasJapaneseContent(text: string): boolean {

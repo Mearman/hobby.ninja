@@ -5,7 +5,7 @@
  */
 
 import { promises as fs } from "node:fs";
-import { join, dirname, basename, resolve } from "node:path";
+import path from "node:path";
 
 import { SimpleHtmlParser } from "./core/simple-html-parser";
 
@@ -15,7 +15,7 @@ const parser = new SimpleHtmlParser();
  * Extract manual ID from file path (e.g., /path/to/638.html -> 638)
  */
 function extractManualId(filePath: string): string {
-	const baseName = basename(filePath, ".html");
+	const baseName = path.basename(filePath, ".html");
 	return baseName;
 }
 
@@ -24,9 +24,9 @@ function extractManualId(filePath: string): string {
  */
 function createOutputPath(inputPath: string): string {
 	const manualId = extractManualId(inputPath);
-	const inputDir = dirname(inputPath);
-	const outputDir = join(inputDir, manualId);
-	return join(outputDir, `${manualId}.json`);
+	const inputDir = path.dirname(inputPath);
+	const outputDir = path.join(inputDir, manualId);
+	return path.join(outputDir, `${manualId}.json`);
 }
 
 /**
@@ -39,7 +39,7 @@ async function findHtmlFiles(dir: string): Promise<string[]> {
 		const entries = await fs.readdir(currentDir, { withFileTypes: true });
 
 		for (const entry of entries) {
-			const fullPath = join(currentDir, entry.name);
+			const fullPath = path.join(currentDir, entry.name);
 
 			if (entry.isDirectory()) {
 				await scan(fullPath);
@@ -101,19 +101,19 @@ async function processAllFiles(forceRecreate = false) {
 				}
 
 				const content = await fs.readFile(file, "utf8");
-				const parseResult = await parser.parse(content);
+				const parseResult = parser.parse(content);
 
 				if (!parseResult.success) {
-					console.error(`✗ Failed to parse ${file}: ${parseResult.error}`);
+					console.error(`✗ Failed to parse ${file}: ${parseResult.error ?? "Unknown error"}`);
 					errors++;
 					continue;
 				}
 
-				const outputDir = dirname(outputPath);
+				const outputDir = path.dirname(outputPath);
 				await fs.mkdir(outputDir, { recursive: true });
 
 				const jsonContent = JSON.stringify(parseResult.data, null, 2);
-				await fs.writeFile(outputPath, jsonContent, "utf-8");
+				await fs.writeFile(outputPath, jsonContent, "utf8");
 
 				processed++;
 				if (processed % 100 === 0) {
@@ -121,7 +121,8 @@ async function processAllFiles(forceRecreate = false) {
 				}
 
 			} catch (error) {
-				console.error(`✗ Failed to process ${file}: ${error}`);
+				const message = error instanceof Error ? error.message : String(error);
+				console.error(`✗ Failed to process ${file}: ${message}`);
 				errors++;
 			}
 		}
@@ -135,7 +136,8 @@ async function processAllFiles(forceRecreate = false) {
 		console.log(`📊 Total files found: ${files.length}`);
 
 	} catch (error) {
-		console.error(`Failed to process files: ${error}`);
+		const message = error instanceof Error ? error.message : String(error);
+		console.error(`Failed to process files: ${message}`);
 		process.exit(1);
 	}
 }
@@ -163,35 +165,34 @@ async function main() {
 	const inputFile = args[0];
 
 	// Resolve the input file path relative to current working directory
-	const resolvedInputPath = resolve(inputFile);
+	const resolvedInputPath = path.resolve(inputFile);
 	const outputPath = createOutputPath(resolvedInputPath);
 
 	try {
 		// Read and parse the input file
 		const content = await fs.readFile(resolvedInputPath, "utf8");
-		const result = await parser.parse(content);
+		const result = parser.parse(content);
 
 		if (!result.success) {
-			console.error(`Error: ${result.error}`);
+			console.error(`Error: ${result.error ?? "Unknown error"}`);
 			process.exit(1);
 		}
 
 		// Create output directory if it doesn't exist
-		const outputDir = dirname(outputPath);
+		const outputDir = path.dirname(outputPath);
 		await fs.mkdir(outputDir, { recursive: true });
 
 		// Write JSON output to file
 		const jsonContent = JSON.stringify(result.data, null, 2);
-		await fs.writeFile(outputPath, jsonContent, "utf-8");
+		await fs.writeFile(outputPath, jsonContent, "utf8");
 
 		console.log(`✓ Parsed ${resolvedInputPath} -> ${outputPath}`);
 
 	} catch (error) {
-		console.error(`Failed to process file: ${error}`);
+		const message = error instanceof Error ? error.message : String(error);
+		console.error(`Failed to process file: ${message}`);
 		process.exit(1);
 	}
 }
 
-if (require.main === module) {
-	main();
-}
+await main();

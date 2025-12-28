@@ -6,7 +6,7 @@ export const JAPANESE_PATTERNS = {
 	kanji: /[\u4E00-\u9FAF]/g,
 	fullWidth: /[\uFF00-\uFFEF]/g,
 	japanese: /[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF\u3000-\u303F\uFF00-\uFFEF]/g,
-	japaneseText: /[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF\u3000-\u303F\uFF00-\uFFEF\w\s\-\.,()]+/,
+	japaneseText: /[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF\u3000-\u303F\uFF00-\uFFEF\w\s\-.,()]+/,
 };
 
 /**
@@ -48,7 +48,7 @@ export function validateJapaneseText(text: string): boolean {
  */
 export function extractJapaneseText(text: string): string[] {
 	const matches = text.match(JAPANESE_PATTERNS.japanese);
-	return matches || [];
+	return matches ?? [];
 }
 
 /**
@@ -89,7 +89,7 @@ export function detectLanguage(text: string): "ja" | "en" | "mixed" {
 	}
 
 	const japaneseChars = countJapaneseCharacters(text);
-	const englishWords = (text.match(/[a-zA-Z]+/g) || []).length;
+	const englishWords = (text.match(/[a-zA-Z]+/g) ?? []).length;
 
 	if (japaneseChars === 0) {
 		return "en";
